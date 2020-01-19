@@ -717,7 +717,7 @@ bool	CvPathGenerator::groupMatches(CvSelectionGroup* pGroup, int iFlags, unsigne
 		return false;
 	}
 
-	return (m_iTurn == GC.getGameINLINE().getGameTurn() && m_currentGroupMembershipChecksum == iGroupMembershipChecksum && m_iFlags == iFlags);
+	return (m_iTurn == GC.getGame().getGameTurn() && m_currentGroupMembershipChecksum == iGroupMembershipChecksum && m_iFlags == iFlags);
 }
 
 bool	CvPathGenerator::haveRouteLength(const CvPlot* pTo, CvSelectionGroup* pGroup, int iFlags, int& iRouteLen)
@@ -954,7 +954,7 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 			{
 				m_nodeAllocationPool->reset();
 				m_plotInfo->reset();
-				m_iTurn = GC.getGameINLINE().getGameTurn();
+				m_iTurn = GC.getGame().getGameTurn();
 
 				m_pReplacedNonTerminalNode = NULL;
 				m_pBestTerminalNode = NULL;
@@ -981,14 +981,14 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 
 					FAssert(pFrom == root->m_plot);
 				}
-				//GC.getGameINLINE().logOOSSpecial(50, pGroup->getID(), root->m_iMovementRemaining);
+				//GC.getGame().logOOSSpecial(50, pGroup->getID(), root->m_iMovementRemaining);
 
 				ValidatePlotInfo(plotInfo);
 
 				VALIDATE_TREE(root, m_pReplacedNonTerminalNode, m_pBestTerminalNode);
 
-				//GC.getGameINLINE().logOOSSpecial(51, m_pBestTerminalNode->m_plot->getX(), m_pBestTerminalNode->m_plot->getY());
-				//GC.getGameINLINE().logOOSSpecial(52, pTo->getX(), pTo->getY());
+				//GC.getGame().logOOSSpecial(51, m_pBestTerminalNode->m_plot->getX(), m_pBestTerminalNode->m_plot->getY());
+				//GC.getGame().logOOSSpecial(52, pTo->getX(), pTo->getY());
 				if ( m_pBestTerminalNode != NULL && m_pBestTerminalNode->m_plot != pTo )
 				{
 					if ( m_pBestTerminalNode->m_plot != pFrom )
@@ -1047,12 +1047,12 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 					m_pReplacedNonTerminalNode = NULL;
 				}
 
-				//GC.getGameINLINE().logOOSSpecial(53, m_pBestTerminalNode->m_plot->getX(), m_pBestTerminalNode->m_plot->getY());
-				//GC.getGameINLINE().logOOSSpecial(54, pTo->getX(), pTo->getY());
+				//GC.getGame().logOOSSpecial(53, m_pBestTerminalNode->m_plot->getX(), m_pBestTerminalNode->m_plot->getY());
+				//GC.getGame().logOOSSpecial(54, pTo->getX(), pTo->getY());
 
 				CvPathGeneratorPlotInfo* terminalPlotInfo = m_plotInfo->getPlotInfo(pTo);
 
-				//GC.getGameINLINE().logOOSSpecial(55, pFrom->getX(), pFrom->getY());
+				//GC.getGame().logOOSSpecial(55, pFrom->getX(), pFrom->getY());
 				if ( terminalPlotInfo->pNode != NULL && pFrom != pTo && !terminalPlotInfo->pNode->m_bProcessedAsTerminus )
 				{
 					VALIDATE_TREE(root, NULL, terminalPlotInfo->pNode);
@@ -1116,8 +1116,8 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 #endif
 				}
 
-				//GC.getGameINLINE().logOOSSpecial(56, pFrom->getX(), pFrom->getY(), iFlags);
-				//GC.getGameINLINE().logOOSSpecial(57, iGroupMembershipChecksum, m_iSeq);
+				//GC.getGame().logOOSSpecial(56, pFrom->getX(), pFrom->getY(), iFlags);
+				//GC.getGame().logOOSSpecial(57, iGroupMembershipChecksum, m_iSeq);
 				m_iFlags = iFlags;
 				m_currentGroupMembershipChecksum = iGroupMembershipChecksum;
 				m_pFrom = pFrom;
@@ -1237,8 +1237,8 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 				int iIterations = 0;
 				int iMaxIterations = -1;
 
-				//GC.getGameINLINE().logOOSSpecial(58, pTo->getX(), pTo->getY(), iFlags);
-				//GC.getGameINLINE().logOOSSpecial(59, iGroupMembershipChecksum, m_iSeq);
+				//GC.getGame().logOOSSpecial(58, pTo->getX(), pTo->getY(), iFlags);
+				//GC.getGame().logOOSSpecial(59, iGroupMembershipChecksum, m_iSeq);
 				if ( iOptimizationLimit == -1 )
 				{
 					//	Set a default for optimization processing dependent on the step distance
@@ -1720,12 +1720,12 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 					}
 				}
 
-				//GC.getGameINLINE().logOOSSpecial(60, m_pBestTerminalNode->m_plot->getX(), m_pBestTerminalNode->m_plot->getY());
+				//GC.getGame().logOOSSpecial(60, m_pBestTerminalNode->m_plot->getX(), m_pBestTerminalNode->m_plot->getY());
 				VALIDATE_TREE(root, m_pReplacedNonTerminalNode, m_pBestTerminalNode);
 			}
 			else
 			{
-				//GC.getGameINLINE().logOOSSpecial(61, m_pBestTerminalNode->m_plot->getX(), m_pBestTerminalNode->m_plot->getY());
+				//GC.getGame().logOOSSpecial(61, m_pBestTerminalNode->m_plot->getX(), m_pBestTerminalNode->m_plot->getY());
 				root = plotInfo->pNode;
 
 				FAssert(pFrom == root->m_plot);
@@ -1733,7 +1733,7 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 				VALIDATE_TREE(root, m_pReplacedNonTerminalNode, m_pBestTerminalNode);
 			}
 
-			//GC.getGameINLINE().logOOSSpecial(62, pTo->getX(), pTo->getY(), iMaxTurns);
+			//GC.getGame().logOOSSpecial(62, pTo->getX(), pTo->getY(), iMaxTurns);
 			//	Have to check max turns here since even if we know a route it might be too far if it is known due to
 			//	caching of previous paths rather than freshly calculated
 			if ( m_pBestTerminalNode != NULL && m_pBestTerminalNode->m_iPathTurns <= iMaxTurns )
@@ -1774,7 +1774,7 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 
 					node->m_bIsKnownRoute = true;
 					descendantNode = node;
-					//GC.getGameINLINE().logOOSSpecial(63, node->m_plot->getX(), node->m_plot->getY(), node->m_iPathTurns);
+					//GC.getGame().logOOSSpecial(63, node->m_plot->getX(), node->m_plot->getY(), node->m_iPathTurns);
 #ifdef LIGHT_VALIDATION
 					if ( bValidate )
 					{
@@ -1787,7 +1787,7 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 				FAssert(descendantNode == root);
 
 				m_generatedPath.Set(descendantNode);
-				//GC.getGameINLINE().logOOSSpecial(64, descendantNode->m_plot->getX(), descendantNode->m_plot->getY(), descendantNode->m_iPathTurns);
+				//GC.getGame().logOOSSpecial(64, descendantNode->m_plot->getX(), descendantNode->m_plot->getY(), descendantNode->m_iPathTurns);
 
 				VALIDATE_TREE(root, m_pReplacedNonTerminalNode, m_pBestTerminalNode);
 				bResult = true;
@@ -1800,7 +1800,7 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 	}
 
 	PROFILE_END_CONDITIONAL(bResult);
-	//GC.getGameINLINE().logOOSSpecial(65, (int)bResult);
+	//GC.getGame().logOOSSpecial(65, (int)bResult);
 
 	return bResult;
 }

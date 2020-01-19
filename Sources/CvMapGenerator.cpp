@@ -154,7 +154,7 @@ bool CvMapGenerator::canPlaceGoodyAt(ImprovementTypes eImprovement, int iX, int 
 	FAssertMsg(eImprovement != NO_IMPROVEMENT, "Improvement is not assigned a valid value");
 	FAssertMsg(GC.getImprovementInfo(eImprovement).isGoody(), "ImprovementType eImprovement is expected to be a goody");
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_NO_GOODY_HUTS))
+	if (GC.getGame().isOption(GAMEOPTION_NO_GOODY_HUTS))
 	{
 		return false;
 	}
@@ -266,7 +266,7 @@ void CvMapGenerator::addLakes()
 			{
 				if (!(pLoopPlot->isRiver()))
 				{
-					if (GC.getGameINLINE().getMapRandNum(GC.getDefineINT("LAKE_PLOT_RAND"), "addLakes") == 0)
+					if (GC.getGame().getMapRandNum(GC.getDefineINT("LAKE_PLOT_RAND"), "addLakes") == 0)
 					{
 						pLoopPlot->setPlotType(PLOT_OCEAN);
 					}
@@ -317,7 +317,7 @@ void CvMapGenerator::addRivers()
 				continue;
 
 			if (((iPass == 0) && (pLoopPlot->isHills() || pLoopPlot->isPeak())) ||
-				((iPass == 1) && !(pLoopPlot->isCoastalLand()) && (GC.getGameINLINE().getMapRandNum(iRand, "addRivers") == 0)) ||
+				((iPass == 1) && !(pLoopPlot->isCoastalLand()) && (GC.getGame().getMapRandNum(iRand, "addRivers") == 0)) ||
 				((iPass == 2) && (pLoopPlot->isHills() || pLoopPlot->isPeak()) && (pLoopPlot->area()->getNumRiverEdges() < ((pLoopPlot->area()->getNumTiles() / iPPRE) + 1))) ||
 				((iPass == 3) && (pLoopPlot->area()->getNumRiverEdges() < ((pLoopPlot->area()->getNumTiles() / iPPRE) + 1))))
 			{
@@ -509,10 +509,10 @@ bool CvMapGenerator::addRiver(CvPlot* pFreshWaterPlot)
 
 	// randomize the order of directions
 	int aiShuffle[NUM_CARDINALDIRECTION_TYPES];
-	shuffleArray(aiShuffle, NUM_CARDINALDIRECTION_TYPES, GC.getGameINLINE().getMapRand());
+	shuffleArray(aiShuffle, NUM_CARDINALDIRECTION_TYPES, GC.getGame().getMapRand());
 
 	// make two passes, once for each flow direction of the river
-	int iNWFlowPass = GC.getGameINLINE().getMapRandNum(2, "addRiver");
+	int iNWFlowPass = GC.getGame().getMapRandNum(2, "addRiver");
 	for (int iPass = 0; !bSuccess && iPass <= 1; iPass++)
 	{
 		// try placing a river edge in each direction, in random order
@@ -615,7 +615,7 @@ void CvMapGenerator::addFeatures()
 		{
 			if (pPlot->canHaveFeature((FeatureTypes)iJ))
 			{
-				if (GC.getGameINLINE().getMapRandNum(10000, "addFeaturesAtPlot") < GC.getFeatureInfo((FeatureTypes)iJ).getAppearanceProbability())
+				if (GC.getGame().getMapRandNum(10000, "addFeaturesAtPlot") < GC.getFeatureInfo((FeatureTypes)iJ).getAppearanceProbability())
 				{
 					pPlot->setFeatureType((FeatureTypes)iJ);
 				}
@@ -670,7 +670,7 @@ void CvMapGenerator::addUniqueBonusType(BonusTypes eBonusType)
 
 	int iBonusCount = calculateNumBonusesToAdd(eBonusType);
 
-	bool bIgnoreLatitude = GC.getGameINLINE().pythonIsBonusIgnoreLatitudes();
+	bool bIgnoreLatitude = GC.getGame().pythonIsBonusIgnoreLatitudes();
 
 	FAssertMsg(pBonusInfo.isOneArea(), "addUniqueBonusType called with non-unique bonus type");
 
@@ -722,7 +722,7 @@ void CvMapGenerator::addUniqueBonusType(BonusTypes eBonusType)
 
 		// Place the bonuses:
 
-		int* piShuffle = shuffle(GC.getMap().numPlots(), GC.getGameINLINE().getMapRand());
+		int* piShuffle = shuffle(GC.getMap().numPlots(), GC.getGame().getMapRand());
 
 		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 		{
@@ -752,7 +752,7 @@ void CvMapGenerator::addUniqueBonusType(BonusTypes eBonusType)
 								{
 									if (canPlaceBonusAt(eBonusType, pLoopPlot->getX(), pLoopPlot->getY(), bIgnoreLatitude))
 									{
-										if (GC.getGameINLINE().getMapRandNum(100, "addUniqueBonusType") < pBonusInfo.getGroupRand())
+										if (GC.getGame().getMapRandNum(100, "addUniqueBonusType") < pBonusInfo.getGroupRand())
 										{
 											pLoopPlot->setBonusType(eBonusType);
 										}
@@ -780,11 +780,11 @@ void CvMapGenerator::addNonUniqueBonusType(BonusTypes eBonusType)
 		return;
 	}
 
-	int* piShuffle = shuffle(GC.getMap().numPlots(), GC.getGameINLINE().getMapRand());
+	int* piShuffle = shuffle(GC.getMap().numPlots(), GC.getGame().getMapRand());
 
 	CvBonusInfo& pBonusInfo = GC.getBonusInfo(eBonusType);
 
-	bool bIgnoreLatitude = GC.getGameINLINE().pythonIsBonusIgnoreLatitudes();
+	bool bIgnoreLatitude = GC.getGame().pythonIsBonusIgnoreLatitudes();
 
 	CvPlot* pPlot = NULL;
 	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
@@ -807,7 +807,7 @@ void CvMapGenerator::addNonUniqueBonusType(BonusTypes eBonusType)
 						{
 							if (canPlaceBonusAt(eBonusType, pLoopPlot->getX(), pLoopPlot->getY(), bIgnoreLatitude))
 							{
-								if (GC.getGameINLINE().getMapRandNum(100, "addNonUniqueBonusType") < pBonusInfo.getGroupRand())
+								if (GC.getGame().getMapRandNum(100, "addNonUniqueBonusType") < pBonusInfo.getGroupRand())
 								{
 									pLoopPlot->setBonusType(eBonusType);
 									iBonusCount--;
@@ -842,13 +842,13 @@ void CvMapGenerator::addGoodies()
 
 	gDLL->NiTextOut("Adding Goodies...");
 
-	if (GC.getEraInfo(GC.getGameINLINE().getStartEra()).isNoGoodies())
+	if (GC.getEraInfo(GC.getGame().getStartEra()).isNoGoodies())
 	{
 		return;
 	}
 
 	int iNumPlots = GC.getMap().numPlots();
-	int* piShuffle = shuffle(iNumPlots, GC.getGameINLINE().getMapRand());
+	int* piShuffle = shuffle(iNumPlots, GC.getGame().getMapRand());
 
 	for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
 	{
@@ -1090,17 +1090,17 @@ int CvMapGenerator::calculateNumBonusesToAdd(BonusTypes eBonusType)
 	int iBaseCount =
 	(
 		pBonusInfo.getConstAppearance() +
-		GC.getGameINLINE().getMapRandNum(pBonusInfo.getRandAppearance1(), "calculateNumBonusesToAdd-1") +
-		GC.getGameINLINE().getMapRandNum(pBonusInfo.getRandAppearance2(), "calculateNumBonusesToAdd-2") +
-		GC.getGameINLINE().getMapRandNum(pBonusInfo.getRandAppearance3(), "calculateNumBonusesToAdd-3") +
-		GC.getGameINLINE().getMapRandNum(pBonusInfo.getRandAppearance4(), "calculateNumBonusesToAdd-4")
+		GC.getGame().getMapRandNum(pBonusInfo.getRandAppearance1(), "calculateNumBonusesToAdd-1") +
+		GC.getGame().getMapRandNum(pBonusInfo.getRandAppearance2(), "calculateNumBonusesToAdd-2") +
+		GC.getGame().getMapRandNum(pBonusInfo.getRandAppearance3(), "calculateNumBonusesToAdd-3") +
+		GC.getGame().getMapRandNum(pBonusInfo.getRandAppearance4(), "calculateNumBonusesToAdd-4")
 	);
 	iBaseCount += iBaseCount * GC.getMap().getWorldSize() / 4; // Scale by map size
 
-	iBaseCount += GC.getGameINLINE().countCivPlayersAlive() * pBonusInfo.getPercentPerPlayer(); // Toffer: Should imo be removed.
+	iBaseCount += GC.getGame().countCivPlayersAlive() * pBonusInfo.getPercentPerPlayer(); // Toffer: Should imo be removed.
 
 	// Calculate iNumPossible, the number of plots that are eligible to have this bonus:
-	bool bIgnoreLatitude = GC.getGameINLINE().pythonIsBonusIgnoreLatitudes();
+	bool bIgnoreLatitude = GC.getGame().pythonIsBonusIgnoreLatitudes();
 
 	if (pBonusInfo.getTilesPer() > 0)
 	{

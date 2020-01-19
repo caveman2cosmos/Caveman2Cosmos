@@ -762,10 +762,10 @@ void CvTeam::addTeam(TeamTypes eTeam)
 	}
 
 	szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_PERMANENT_ALLIANCE", getName().GetCString(), GET_TEAM(eTeam).getName().GetCString());
-	GC.getGameINLINE().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getLeaderID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+	GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getLeaderID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
 
 
-	for (pLoopDeal = GC.getGameINLINE().firstDeal(&iLoop); pLoopDeal != NULL; pLoopDeal = GC.getGameINLINE().nextDeal(&iLoop))
+	for (pLoopDeal = GC.getGame().firstDeal(&iLoop); pLoopDeal != NULL; pLoopDeal = GC.getGame().nextDeal(&iLoop))
 	{
 		if (((GET_PLAYER(pLoopDeal->getFirstPlayer()).getTeam() == getID()) && (GET_PLAYER(pLoopDeal->getSecondPlayer()).getTeam() == eTeam)) ||
 			  ((GET_PLAYER(pLoopDeal->getFirstPlayer()).getTeam() == eTeam) && (GET_PLAYER(pLoopDeal->getSecondPlayer()).getTeam() == getID())))
@@ -1071,7 +1071,7 @@ void CvTeam::addTeam(TeamTypes eTeam)
 		}
 	}
 
-	GC.getGameINLINE().updatePlotGroups();
+	GC.getGame().updatePlotGroups();
 
 	for (iI = 0; iI < MAX_TEAMS; iI++)
 	{
@@ -1110,7 +1110,7 @@ void CvTeam::addTeam(TeamTypes eTeam)
 
 	AI_updateAreaStragies();
 
-	GC.getGameINLINE().updateScore(true);
+	GC.getGame().updateScore(true);
 }
 
 
@@ -1261,7 +1261,7 @@ void CvTeam::shareCounters(TeamTypes eTeam)
 		if (iExtraProjects > 0)
 		{
 			changeProjectCount((ProjectTypes)iI, iExtraProjects);
-			GC.getGameINLINE().incrementProjectCreatedCount((ProjectTypes)iI, -iExtraProjects);
+			GC.getGame().incrementProjectCreatedCount((ProjectTypes)iI, -iExtraProjects);
 		}
 
 		changeProjectMaking(((ProjectTypes)iI), GET_TEAM(eTeam).getProjectMaking((ProjectTypes)iI));
@@ -1427,7 +1427,7 @@ void CvTeam::doTurn()
 		}
 	}
 
-	if (!GC.getGameINLINE().isOption(GAMEOPTION_NO_TECH_BROKERING))
+	if (!GC.getGame().isOption(GAMEOPTION_NO_TECH_BROKERING))
 	{
 		for (iI = 0; iI < GC.getNumTechInfos(); iI++)
 		{
@@ -1699,7 +1699,7 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, 
 	bool bInFull = ((!GET_TEAM(eTeam).isNPC() || GET_TEAM(eTeam).isBarbarian()) && (!isNPC() || isBarbarian()));
 	if (!isAtWar(eTeam))
 	{
-		//FAssertMsg((isHuman() || isMinorCiv() || GET_TEAM(eTeam).isMinorCiv() || isBarbarian() || GET_TEAM(eTeam).isBarbarian() || AI_isSneakAttackReady(eTeam) || (GET_TEAM(eTeam).getAtWarCount(true) > 0) || !(GC.getGameINLINE().isFinalInitialized()) || gDLL->GetWorldBuilderMode() || getVassalCount() > 0  || isAVassal() || GET_TEAM(eTeam).getVassalCount() > 0  || GET_TEAM(eTeam).isAVassal() || getDefensivePactCount() > 0), "Possibly accidental AI war!!!");
+		//FAssertMsg((isHuman() || isMinorCiv() || GET_TEAM(eTeam).isMinorCiv() || isBarbarian() || GET_TEAM(eTeam).isBarbarian() || AI_isSneakAttackReady(eTeam) || (GET_TEAM(eTeam).getAtWarCount(true) > 0) || !(GC.getGame().isFinalInitialized()) || gDLL->GetWorldBuilderMode() || getVassalCount() > 0  || isAVassal() || GET_TEAM(eTeam).getVassalCount() > 0  || GET_TEAM(eTeam).isAVassal() || getDefensivePactCount() > 0), "Possibly accidental AI war!!!");
 
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      10/02/09                                jdog5000      */
@@ -1714,7 +1714,7 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, 
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
-		for (pLoopDeal = GC.getGameINLINE().firstDeal(&iLoop); pLoopDeal != NULL; pLoopDeal = GC.getGameINLINE().nextDeal(&iLoop))
+		for (pLoopDeal = GC.getGame().firstDeal(&iLoop); pLoopDeal != NULL; pLoopDeal = GC.getGame().nextDeal(&iLoop))
 		{
 			if (((GET_PLAYER(pLoopDeal->getFirstPlayer()).getTeam() == getID()) && (GET_PLAYER(pLoopDeal->getSecondPlayer()).getTeam() == eTeam)) ||
 					((GET_PLAYER(pLoopDeal->getFirstPlayer()).getTeam() == eTeam) && (GET_PLAYER(pLoopDeal->getSecondPlayer()).getTeam() == getID())))
@@ -1846,9 +1846,9 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, 
 			}
 		}
 
-		GC.getGameINLINE().AI_makeAssignWorkDirty();
+		GC.getGame().AI_makeAssignWorkDirty();
 
-		if ((getID() == GC.getGameINLINE().getActiveTeam()) || (eTeam == GC.getGameINLINE().getActiveTeam()))
+		if ((getID() == GC.getGame().getActiveTeam()) || (eTeam == GC.getGame().getActiveTeam()))
 		{
 			gDLL->getInterfaceIFace()->setDirty(Score_DIRTY_BIT, true);
 			gDLL->getInterfaceIFace()->setDirty(CityInfo_DIRTY_BIT, true);
@@ -1934,7 +1934,7 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, 
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-			if (GC.getGameINLINE().isOption(GAMEOPTION_RUTHLESS_AI))
+			if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI))
 			{
 				for (iI = 0; iI < MAX_PLAYERS; iI++)
 				{
@@ -2057,7 +2057,7 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, 
 /************************************************************************************************/
 		// From Sanguo Mod Performance, ie the CAR Mod
 		// Attitude cache
-		if (GC.getGameINLINE().isFinalInitialized())
+		if (GC.getGame().isFinalInitialized())
 		{
 			for (int iI = 0; iI < MAX_PLAYERS; iI++)
 			{
@@ -2085,7 +2085,7 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, 
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
-		if (GC.getGameINLINE().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
+		if (GC.getGame().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
 		{
 			if (bNewDiplo)
 			{
@@ -2142,7 +2142,7 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, 
 				}
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_DECLARES_WAR", getName().GetCString(), GET_TEAM(eTeam).getName().GetCString());
-				GC.getGameINLINE().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getLeaderID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT"));
+				GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getLeaderID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT"));
 			}
 		}
 
@@ -2161,7 +2161,7 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, 
 				{
 					if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
 					{
-						for (pLoopDeal = GC.getGameINLINE().firstDeal(&iLoop); pLoopDeal != NULL; pLoopDeal = GC.getGameINLINE().nextDeal(&iLoop))
+						for (pLoopDeal = GC.getGame().firstDeal(&iLoop); pLoopDeal != NULL; pLoopDeal = GC.getGame().nextDeal(&iLoop))
 						{
 							bCancelDeal = false;
 
@@ -2332,9 +2332,9 @@ void CvTeam::makePeace(TeamTypes eTeam, bool bBumpUnits)
 			GC.getMap().verifyUnitValidPlot();
 		}
 
-		GC.getGameINLINE().AI_makeAssignWorkDirty();
+		GC.getGame().AI_makeAssignWorkDirty();
 
-		if ((getID() == GC.getGameINLINE().getActiveTeam()) || (eTeam == GC.getGameINLINE().getActiveTeam()))
+		if ((getID() == GC.getGame().getActiveTeam()) || (eTeam == GC.getGame().getActiveTeam()))
 		{
 			gDLL->getInterfaceIFace()->setDirty(Score_DIRTY_BIT, true);
 			gDLL->getInterfaceIFace()->setDirty(CityInfo_DIRTY_BIT, true);
@@ -2380,7 +2380,7 @@ void CvTeam::makePeace(TeamTypes eTeam, bool bBumpUnits)
 /************************************************************************************************/
 		// From Sanguo Mod Performance, ie the CAR Mod
 		// Attitude cache
-		if (GC.getGameINLINE().isFinalInitialized())
+		if (GC.getGame().isFinalInitialized())
 		{
 			for (int iI = 0; iI < MAX_PLAYERS; iI++)
 			{
@@ -2437,7 +2437,7 @@ void CvTeam::makePeace(TeamTypes eTeam, bool bBumpUnits)
 		}
 
 		szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_MADE_PEACE", getName().GetCString(), GET_TEAM(eTeam).getName().GetCString());
-		GC.getGameINLINE().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getLeaderID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+		GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getLeaderID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
 */
 		// Silence announcement when one team has no units or cities
 		// Needed because civs are now set to peace with all when dieing since they keep at war state when being reborn
@@ -2513,7 +2513,7 @@ void CvTeam::makePeace(TeamTypes eTeam, bool bBumpUnits)
 				}
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_MADE_PEACE", getName().GetCString(), GET_TEAM(eTeam).getName().GetCString());
-				GC.getGameINLINE().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getLeaderID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+				GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getLeaderID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
 			}
 		}
 /************************************************************************************************/
@@ -2589,7 +2589,7 @@ void CvTeam::meet(TeamTypes eTeam, bool bNewDiplo)
 /************************************************************************************************/
 		if( gTeamLogLevel >= 2 )
 		{
-			if( GC.getGameINLINE().isFinalInitialized() )
+			if( GC.getGame().isFinalInitialized() )
 			{
 				if( eTeam != getID() && isAlive() && GET_TEAM(eTeam).isAlive() )
 				{
@@ -2625,7 +2625,7 @@ void CvTeam::signOpenBorders(TeamTypes eTeam)
 			ourList.insertAtEnd(item);
 			theirList.insertAtEnd(item);
 
-			GC.getGameINLINE().implementDeal(getLeaderID(), (GET_TEAM(eTeam).getLeaderID()), &ourList, &theirList);
+			GC.getGame().implementDeal(getLeaderID(), (GET_TEAM(eTeam).getLeaderID()), &ourList, &theirList);
 		}
 	}
 }
@@ -2651,7 +2651,7 @@ void CvTeam::signDefensivePact(TeamTypes eTeam)
 			ourList.insertAtEnd(item);
 			theirList.insertAtEnd(item);
 
-			GC.getGameINLINE().implementDeal(getLeaderID(), (GET_TEAM(eTeam).getLeaderID()), &ourList, &theirList);
+			GC.getGame().implementDeal(getLeaderID(), (GET_TEAM(eTeam).getLeaderID()), &ourList, &theirList);
 		}
 	}
 }
@@ -2663,7 +2663,7 @@ bool CvTeam::canSignDefensivePact(TeamTypes eTeam) const
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	if (GC.getGameINLINE().isOption(GAMEOPTION_ADVANCED_DIPLOMACY) && !isHasEmbassy(eTeam))
+	if (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY) && !isHasEmbassy(eTeam))
 	{
 		return false;
 	}
@@ -3131,7 +3131,7 @@ bool CvTeam::isMasterPlanningLandWar(CvArea* pArea) const
 					// Master has no presence here
 					if( (pArea->getNumCities() - countNumCitiesByArea(pArea)) > 2 )
 					{
-						return (GC.getGameINLINE().getSorenRandNum((isCapitulated() ? 6 : 4),"Vassal land war") == 0);
+						return (GC.getGame().getSorenRandNum((isCapitulated() ? 6 : 4),"Vassal land war") == 0);
 					}
 				}
 			}
@@ -3141,7 +3141,7 @@ bool CvTeam::isMasterPlanningLandWar(CvArea* pArea) const
 				{
 					if( (pArea->getNumCities() - countNumCitiesByArea(pArea) - GET_TEAM((TeamTypes)iI).countNumCitiesByArea(pArea)) > 2 )
 					{
-						return (GC.getGameINLINE().getSorenRandNum(4,"Vassal land war") == 0);
+						return (GC.getGame().getSorenRandNum(4,"Vassal land war") == 0);
 					}
 				}
 			}
@@ -3173,7 +3173,7 @@ bool CvTeam::isMasterPlanningSeaWar(CvArea* pArea) const
 			{
 				if( (pArea->getAreaAIType((TeamTypes)iI) == AREAAI_ASSAULT) || (pArea->getAreaAIType((TeamTypes)iI) == AREAAI_ASSAULT_ASSIST) || (pArea->getAreaAIType((TeamTypes)iI) == AREAAI_ASSAULT_MASSING) )
 				{
-					return (GC.getGameINLINE().getSorenRandNum((isCapitulated() ? 3 : 2),"Vassal sea war") == 0);
+					return (GC.getGame().getSorenRandNum((isCapitulated() ? 3 : 2),"Vassal sea war") == 0);
 				}
 				else if( pArea->getAreaAIType((TeamTypes)iI) == AREAAI_NEUTRAL )
 				{
@@ -3527,7 +3527,7 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 	iCost *= iModifier;
 	iCost /= 100;
 
-	iModifier = GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getResearchPercent();
+	iModifier = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent();
 	iCost *= iModifier;
 	iCost /= 100;	
 
@@ -3553,12 +3553,12 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 
 	if (!isHuman() && !isNPC())
 	{
-		iModifier = GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAIResearchPercent();
+		iModifier = GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIResearchPercent();
 		iCost *= iModifier;
 		iCost /= 100;
 	}
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_UPSCALED_RESEARCH_COSTS))
+	if (GC.getGame().isOption(GAMEOPTION_UPSCALED_RESEARCH_COSTS))
 	{
 		iModifier = GC.getUPSCALED_RESEARCH_COST_MODIFIER() + 100;
 		iCost *= iModifier;
@@ -3586,7 +3586,7 @@ bool CvTeam::hasHolyCity(ReligionTypes eReligion) const
 {
 	FAssertMsg(eReligion != NO_RELIGION, "Religion is not assigned a valid value");
 
-	const CvCity* pHolyCity = GC.getGameINLINE().getHolyCity(eReligion);
+	const CvCity* pHolyCity = GC.getGame().getHolyCity(eReligion);
 
 	if (pHolyCity != NULL)
 	{
@@ -3601,7 +3601,7 @@ bool CvTeam::hasHeadquarters(CorporationTypes eCorporation) const
 {
 	FAssertMsg(eCorporation != NO_CORPORATION, "Corporation is not assigned a valid value");
 
-	const CvCity* pHeadquarters = GC.getGameINLINE().getHeadquarters(eCorporation);
+	const CvCity* pHeadquarters = GC.getGame().getHeadquarters(eCorporation);
 
 	if (pHeadquarters != NULL)
 	{
@@ -3758,7 +3758,7 @@ void CvTeam::setIsMinorCiv( bool bNewValue, bool bDoBarbCivCheck )
 			}
 		}
 
-/*		if( !(GC.getGameINLINE().isOption(GAMEOPTION_START_AS_MINORS)) )
+/*		if( !(GC.getGame().isOption(GAMEOPTION_START_AS_MINORS)) )
 		{
 			logMsg("    Making peace with other players");
 			// Declare peace in either case, remove contact causes "Nice to meet you" diplo screens
@@ -3801,7 +3801,7 @@ void CvTeam::setIsMinorCiv( bool bNewValue, bool bDoBarbCivCheck )
 				{
 					if( abHasMet[iI] )
 					{
-						if( GC.getGameINLINE().isOption(GAMEOPTION_START_AS_MINORS) )
+						if( GC.getGame().isOption(GAMEOPTION_START_AS_MINORS) )
 						{
 							if( isAlive() && !isAtWar((TeamTypes)iI) )
 							{
@@ -4376,7 +4376,7 @@ int CvTeam::getPermanentAllianceTradingCount() const
 
 bool CvTeam::isPermanentAllianceTrading() const
 {
-	if (!(GC.getGameINLINE().isOption(GAMEOPTION_PERMANENT_ALLIANCES)))
+	if (!(GC.getGame().isOption(GAMEOPTION_PERMANENT_ALLIANCES)))
 	{
 		return false;
 	}
@@ -4400,7 +4400,7 @@ int CvTeam::getVassalTradingCount() const
 
 bool CvTeam::isVassalStateTrading() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_NO_VASSAL_STATES))
+	if (GC.getGame().isOption(GAMEOPTION_NO_VASSAL_STATES))
 	{
 		return false;
 	}
@@ -4563,7 +4563,7 @@ void CvTeam::setMapCentering(bool bNewValue)
 	{
 		m_bMapCentering = bNewValue;
 
-		if (getID() == GC.getGameINLINE().getActiveTeam())
+		if (getID() == GC.getGame().getActiveTeam())
 		{
 			gDLL->getInterfaceIFace()->setDirty(MinimapSection_DIRTY_BIT, true);
 		}
@@ -4765,7 +4765,7 @@ void CvTeam::changeCommerceFlexibleCount(CommerceTypes eIndex, int iChange)
 		m_aiCommerceFlexibleCount[eIndex] = (m_aiCommerceFlexibleCount[eIndex] + iChange);
 		FAssert(getCommerceFlexibleCount(eIndex) >= 0);
 
-		if (getID() == GC.getGameINLINE().getActiveTeam())
+		if (getID() == GC.getGame().getActiveTeam())
 		{
 			gDLL->getInterfaceIFace()->setDirty(PercentButtons_DIRTY_BIT, true);
 			gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
@@ -4861,7 +4861,7 @@ void CvTeam::makeHasMet(TeamTypes eIndex, bool bNewDiplo)
 			}
 		}
 
-		if ((getID() == GC.getGameINLINE().getActiveTeam()) || (eIndex == GC.getGameINLINE().getActiveTeam()))
+		if ((getID() == GC.getGame().getActiveTeam()) || (eIndex == GC.getGame().getActiveTeam()))
 		{
 			gDLL->getInterfaceIFace()->setDirty(Score_DIRTY_BIT, true);
 			// RevolutionDCM start - redraw espionage percent buttons
@@ -4872,7 +4872,7 @@ void CvTeam::makeHasMet(TeamTypes eIndex, bool bNewDiplo)
 		// report event to Python, along with some other key state
 		CvEventReporter::getInstance().firstContact(getID(), eIndex);
 
-		if (GC.getGameINLINE().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
+		if (GC.getGame().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
 		{
 			if (bNewDiplo)
 			{
@@ -4997,7 +4997,7 @@ bool CvTeam::isFreeTrade(TeamTypes eIndex) const
 		return true;
 	}
 	//If the secretary general voted for open markets
-	if (GC.getGameINLINE().isFreeTrade())
+	if (GC.getGame().isFreeTrade())
 	{
 		return true;
 	}
@@ -5049,7 +5049,7 @@ void CvTeam::setOpenBorders(TeamTypes eIndex, bool bNewValue)
 
 		GC.getMap().verifyUnitValidPlot();
 
-		if ((getID() == GC.getGameINLINE().getActiveTeam()) || (eIndex == GC.getGameINLINE().getActiveTeam()))
+		if ((getID() == GC.getGame().getActiveTeam()) || (eIndex == GC.getGame().getActiveTeam()))
 		{
 			gDLL->getInterfaceIFace()->setDirty(Score_DIRTY_BIT, true);
 		}
@@ -5087,7 +5087,7 @@ void CvTeam::setDefensivePact(TeamTypes eIndex, bool bNewValue)
 	{
 		m_abDefensivePact[eIndex] = bNewValue;
 
-		if ((getID() == GC.getGameINLINE().getActiveTeam()) || (eIndex == GC.getGameINLINE().getActiveTeam()))
+		if ((getID() == GC.getGame().getActiveTeam()) || (eIndex == GC.getGame().getActiveTeam()))
 		{
 			gDLL->getInterfaceIFace()->setDirty(Score_DIRTY_BIT, true);
 		}
@@ -5096,7 +5096,7 @@ void CvTeam::setDefensivePact(TeamTypes eIndex, bool bNewValue)
 		{
 			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYERS_SIGN_DEFENSIVE_PACT", getName().GetCString(), GET_TEAM(eIndex).getName().GetCString());
 
-			GC.getGameINLINE().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getLeaderID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+			GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getLeaderID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
 
 
 			for (int iI = 0; iI < MAX_PLAYERS; iI++)
@@ -5258,7 +5258,7 @@ void CvTeam::setVassal(TeamTypes eIndex, bool bNewValue, bool bCapitulated)
 			}
 		}
 
-		GC.getGameINLINE().updatePlotGroups();
+		GC.getGame().updatePlotGroups();
 
 		if (isVassal(eIndex))
 		{
@@ -5269,7 +5269,7 @@ void CvTeam::setVassal(TeamTypes eIndex, bool bNewValue, bool bCapitulated)
 			CLLNode<TradeData>* pNode;
 			bool bValid;
 
-			for (pLoopDeal = GC.getGameINLINE().firstDeal(&iLoop); pLoopDeal != NULL; pLoopDeal = GC.getGameINLINE().nextDeal(&iLoop))
+			for (pLoopDeal = GC.getGame().firstDeal(&iLoop); pLoopDeal != NULL; pLoopDeal = GC.getGame().nextDeal(&iLoop))
 			{
 				if ((GET_PLAYER(pLoopDeal->getFirstPlayer()).getTeam() == getID()) || (GET_PLAYER(pLoopDeal->getSecondPlayer()).getTeam() == getID()))
 				{
@@ -5382,7 +5382,7 @@ void CvTeam::setVassal(TeamTypes eIndex, bool bNewValue, bool bCapitulated)
 			setMasterPower(GET_TEAM(eIndex).getTotalLand());
 			setVassalPower(getTotalLand(false));
 
-			if (GC.getGameINLINE().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
+			if (GC.getGame().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
 			{
 				CvWString szReplayMessage;
 				
@@ -5394,7 +5394,7 @@ void CvTeam::setVassal(TeamTypes eIndex, bool bNewValue, bool bCapitulated)
 				{
 					szReplayMessage = gDLL->getText("TXT_KEY_MISC_VASSAL_AGREEMENT", getName().GetCString(), GET_TEAM(eIndex).getName().GetCString());
 				}
-				GC.getGameINLINE().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getLeaderID(), szReplayMessage, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+				GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getLeaderID(), szReplayMessage, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
 
 				for (int iI = 0; iI < MAX_PLAYERS; iI++)
 				{
@@ -5416,7 +5416,7 @@ void CvTeam::setVassal(TeamTypes eIndex, bool bNewValue, bool bCapitulated)
 			setMasterPower(0);
 			setVassalPower(0);
 
-			if (GC.getGameINLINE().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()) && isAlive() && GET_TEAM(eIndex).isAlive())
+			if (GC.getGame().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()) && isAlive() && GET_TEAM(eIndex).isAlive())
 			{
 				CvWString szReplayMessage;
 				
@@ -5429,7 +5429,7 @@ void CvTeam::setVassal(TeamTypes eIndex, bool bNewValue, bool bCapitulated)
 					szReplayMessage = gDLL->getText("TXT_KEY_MISC_VASSAL_REVOLT", getName().GetCString(), GET_TEAM(eIndex).getName().GetCString());
 				}
 
-				GC.getGameINLINE().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getLeaderID(), szReplayMessage, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+				GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getLeaderID(), szReplayMessage, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
 
 				for (int iI = 0; iI < MAX_PLAYERS; iI++)
 				{
@@ -5464,7 +5464,7 @@ void CvTeam::setVassal(TeamTypes eIndex, bool bNewValue, bool bCapitulated)
 			}
 		}
 
-		if (GC.getGameINLINE().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
+		if (GC.getGame().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
 		{
 			CvEventReporter::getInstance().vassalState(eIndex, getID(), bNewValue);
 		}
@@ -5527,7 +5527,7 @@ void CvTeam::assignVassal(TeamTypes eVassal, bool bSurrender) const
 			{
 				if (GET_PLAYER((PlayerTypes)jPlayer).getTeam() == getID() && GET_PLAYER((PlayerTypes)jPlayer).isAlive())
 				{
-					GC.getGameINLINE().implementDeal(((PlayerTypes)jPlayer), ((PlayerTypes)iPlayer), &ourList, &theirList, true);
+					GC.getGame().implementDeal(((PlayerTypes)jPlayer), ((PlayerTypes)iPlayer), &ourList, &theirList, true);
 				}
 			}
 		}
@@ -5542,7 +5542,7 @@ void CvTeam::freeVassal(TeamTypes eVassal) const
 	CLLNode<TradeData>* pNode;
 	bool bValid;
 
-	for (pLoopDeal = GC.getGameINLINE().firstDeal(&iLoop); pLoopDeal != NULL; pLoopDeal = GC.getGameINLINE().nextDeal(&iLoop))
+	for (pLoopDeal = GC.getGame().firstDeal(&iLoop); pLoopDeal != NULL; pLoopDeal = GC.getGame().nextDeal(&iLoop))
 	{
 		bValid = true;
 
@@ -5717,7 +5717,7 @@ void CvTeam::changeProjectCount(ProjectTypes eIndex, int iChange)
 
 	if (iChange != 0)
 	{
-		GC.getGameINLINE().incrementProjectCreatedCount(eIndex, iChange);
+		GC.getGame().incrementProjectCreatedCount(eIndex, iChange);
 
 		iOldProjectCount = getProjectCount(eIndex);
 		m_paiProjectCount[eIndex] = (m_paiProjectCount[eIndex] + iChange);
@@ -5741,11 +5741,11 @@ void CvTeam::changeProjectCount(ProjectTypes eIndex, int iChange)
 
 		if ( iChange > 0 )
 		{
-			if (GC.getGameINLINE().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
+			if (GC.getGame().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
 			{
 				CvProjectInfo& kProject = GC.getProjectInfo(eIndex);
 				szBuffer = gDLL->getText("TXT_KEY_MISC_COMPLETES_PROJECT", getName().GetCString(), kProject.getTextKeyWide());
-				GC.getGameINLINE().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getLeaderID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+				GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getLeaderID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
 
 				for (int iI = 0; iI < MAX_PLAYERS; iI++)
 				{
@@ -5780,7 +5780,7 @@ void CvTeam::processProjectChange(ProjectTypes eIndex, int iChange, int iOldProj
 	{
 		if (kProject.getVictoryThreshold(iVictory) > 0)
 		{
-			m_abCanLaunch[iVictory] = GC.getGameINLINE().testVictory((VictoryTypes)iVictory, getID());
+			m_abCanLaunch[iVictory] = GC.getGame().testVictory((VictoryTypes)iVictory, getID());
 		}
 	}
 
@@ -5788,17 +5788,17 @@ void CvTeam::processProjectChange(ProjectTypes eIndex, int iChange, int iOldProj
 	{
 		if (kProject.getEveryoneSpecialUnit() != NO_SPECIALUNIT)
 		{
-			GC.getGameINLINE().makeSpecialUnitValid((SpecialUnitTypes)(kProject.getEveryoneSpecialUnit()));
+			GC.getGame().makeSpecialUnitValid((SpecialUnitTypes)(kProject.getEveryoneSpecialUnit()));
 		}
 
 		if (kProject.getEveryoneSpecialBuilding() != NO_SPECIALBUILDING)
 		{
-			GC.getGameINLINE().makeSpecialBuildingValid((SpecialBuildingTypes)(kProject.getEveryoneSpecialBuilding()));
+			GC.getGame().makeSpecialBuildingValid((SpecialBuildingTypes)(kProject.getEveryoneSpecialBuilding()));
 		}
 //TB Nukefix
 //		if (kProject.isAllowsNukes())
 //		{
-//			GC.getGameINLINE().makeNukesValid(true);
+//			GC.getGame().makeNukesValid(true);
 //		}	
 
 		for (iI = 0; iI < MAX_PLAYERS; iI++)
@@ -5891,7 +5891,7 @@ bool CvTeam::isUnitClassMaxedOut(UnitClassTypes eIndex, int iExtra) const
 		return false;
 	}
 	
-	if (GC.getGameINLINE().isOption(GAMEOPTION_UNLIMITED_NATIONAL_UNITS) && !GC.getUnitClassInfo(eIndex).isUnlimitedException())
+	if (GC.getGame().isOption(GAMEOPTION_UNLIMITED_NATIONAL_UNITS) && !GC.getUnitClassInfo(eIndex).isUnlimitedException())
 	{
 		return false;
 	}
@@ -6029,7 +6029,7 @@ void CvTeam::setResearchProgress(TechTypes eIndex, int iNewValue, PlayerTypes eP
 		m_paiResearchProgress[eIndex] = iNewValue;
 		FAssert(getResearchProgress(eIndex) >= 0);
 
-		if (getID() == GC.getGameINLINE().getActiveTeam())
+		if (getID() == GC.getGame().getActiveTeam())
 		{
 			gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
 			gDLL->getInterfaceIFace()->setDirty(Score_DIRTY_BIT, true);
@@ -6049,7 +6049,7 @@ void CvTeam::setResearchProgress(TechTypes eIndex, int iNewValue, PlayerTypes eP
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
-			if (!GC.getGameINLINE().isMPOption(MPOPTION_SIMULTANEOUS_TURNS) && !GC.getGameINLINE().isOption(GAMEOPTION_NO_TECH_BROKERING))
+			if (!GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS) && !GC.getGame().isOption(GAMEOPTION_NO_TECH_BROKERING))
 			{
 				setNoTradeTech(eIndex, true);
 			}
@@ -6252,7 +6252,7 @@ int CvTeam::getVictoryDelay(VictoryTypes eVictory) const
 		}
 	}
 
-	return (GC.getGameINLINE().victoryDelay(eVictory)  * (100 + iExtraDelayPercent)) / 100;
+	return (GC.getGame().victoryDelay(eVictory)  * (100 + iExtraDelayPercent)) / 100;
 }
 
 void CvTeam::setCanLaunch(VictoryTypes eVictory, bool bCan)
@@ -6294,7 +6294,7 @@ void CvTeam::resetVictoryProgress()
 {
 	for (int iI = 0; iI < GC.getNumVictoryInfos(); ++iI)
 	{
-		if (getVictoryCountdown((VictoryTypes)iI) >= 0 && GC.getGameINLINE().getGameState() == GAMESTATE_ON)
+		if (getVictoryCountdown((VictoryTypes)iI) >= 0 && GC.getGame().getGameState() == GAMESTATE_ON)
 		{
 			setVictoryCountdown((VictoryTypes)iI, -1);
 
@@ -6313,7 +6313,7 @@ void CvTeam::resetVictoryProgress()
 			bool bValid = false;
 			for (int iJ = 0; iJ < GC.getNumVictoryInfos(); ++iJ)
 			{
-				if (GC.getGameINLINE().isVictoryValid((VictoryTypes)iJ))
+				if (GC.getGame().isVictoryValid((VictoryTypes)iJ))
 				{
 					if (GC.getVictoryInfo((VictoryTypes)iJ).isTotalVictory())
 					{
@@ -6348,7 +6348,7 @@ void CvTeam::resetVictoryProgress()
 					}
 				}
 
-				GC.getGameINLINE().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getLeaderID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+				GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getLeaderID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
 			}
 		}
 	}
@@ -6394,7 +6394,7 @@ bool CvTeam::isHasTech(TechTypes eIndex) const
 
 void CvTeam::announceTechToPlayers(TechTypes eIndex, bool bPartial)
 {
-	bool bSound = ((GC.getGameINLINE().isNetworkMultiPlayer() || gDLL->getInterfaceIFace()->noTechSplash()) && !bPartial);
+	bool bSound = ((GC.getGame().isNetworkMultiPlayer() || gDLL->getInterfaceIFace()->noTechSplash()) && !bPartial);
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
@@ -6474,7 +6474,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 			{
 				if (bAnnounce)
 				{
-					if (GC.getGameINLINE().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
+					if (GC.getGame().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
 					{
 						announceTechToPlayers(eIndex);
 					}
@@ -6575,17 +6575,17 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 /* OC_LIMITED_RELIGIONS                                                                         */
 /************************************************************************************************/
 
-				if(GC.getGameINLINE().countKnownTechNumTeams(eIndex) == 1)
+				if(GC.getGame().countKnownTechNumTeams(eIndex) == 1)
 				{
 					if (!Cy::call<bool>(PYGameModule, "doHolyCityTech", Cy::Args() << getID() << ePlayer << eIndex << bFirst))
 					{
-						if(!GC.getGameINLINE().isOption(GAMEOPTION_LIMITED_RELIGIONS))
+						if(!GC.getGame().isOption(GAMEOPTION_LIMITED_RELIGIONS))
 						{
 #ifdef C2C_BUILD
-							if(!GC.getGameINLINE().isOption(GAMEOPTION_DIVINE_PROPHETS))
+							if(!GC.getGame().isOption(GAMEOPTION_DIVINE_PROPHETS))
 							{
 #endif
-								if(GC.getGameINLINE().isTechCanFoundReligion(eIndex))
+								if(GC.getGame().isTechCanFoundReligion(eIndex))
 								{
 									for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
 									{
@@ -6595,7 +6595,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 										eSlotReligion = ReligionTypes(iI);
 
 										if( (GC.getReligionInfo(eSlotReligion).getTechPrereq() == eIndex)
-										&& (!GC.getGameINLINE().isReligionSlotTaken(eSlotReligion)))
+										&& (!GC.getGame().isReligionSlotTaken(eSlotReligion)))
 										{
 											for (iJ = 0; iJ < MAX_PLAYERS; iJ++)
 											{
@@ -6605,7 +6605,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 													if (kPlayer.canFoundReligion())
 													{
 														iValue = 10;
-														iValue += GC.getGameINLINE().getSorenRandNum(10, "Found Religion (Player)");
+														iValue += GC.getGame().getSorenRandNum(10, "Found Religion (Player)");
 
 														for (iK = 0; iK < GC.getNumReligionInfos(); iK++)
 														{
@@ -6636,12 +6636,12 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 											//		2) The above asserts it has not already been done (and that assertion failed)
 											//		3) The code below can actually choose a DIFFERENT religion anyway if
 											//		   the right game options are on!
-											//GC.getGameINLINE().setReligionSlotTaken((ReligionTypes)iI, true);
+											//GC.getGame().setReligionSlotTaken((ReligionTypes)iI, true);
 /************************************************************************************************/
 /* LIMITED_RELIGIONS               END                                                          */
 /************************************************************************************************/
 
-											if (GC.getGameINLINE().isOption(GAMEOPTION_PICK_RELIGION))
+											if (GC.getGame().isOption(GAMEOPTION_PICK_RELIGION))
 											{
 												if (GET_PLAYER(eBestPlayer).isHuman())
 												{
@@ -6657,7 +6657,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 													eReligion = GET_PLAYER(eBestPlayer).AI_chooseReligion();
 													if (NO_RELIGION != eReligion)
 													{
-														if(GC.getGameINLINE().isTechCanFoundReligion(eIndex))
+														if(GC.getGame().isTechCanFoundReligion(eIndex))
 														{
 															GET_PLAYER(eBestPlayer).foundReligion(eReligion, eSlotReligion, true);
 															bReligionFounded = true;
@@ -6667,7 +6667,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 											}
 											else if (NO_RELIGION != eReligion)
 											{
-												if(GC.getGameINLINE().isTechCanFoundReligion(eIndex) )
+												if(GC.getGame().isTechCanFoundReligion(eIndex) )
 												{
 													GET_PLAYER(eBestPlayer).foundReligion(eReligion, eSlotReligion, true);
 													bReligionFounded = true;
@@ -6685,13 +6685,13 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 #endif
 						}
 					}
-					if(GC.getGameINLINE().countKnownTechNumTeams(eIndex) == 1)
+					if(GC.getGame().countKnownTechNumTeams(eIndex) == 1)
 					{
 						for (iI = 0; iI < GC.getNumCorporationInfos(); ++iI)
 						{
 							if (GC.getCorporationInfo((CorporationTypes)iI).getTechPrereq() == eIndex)
 							{
-								if (!(GC.getGameINLINE().isCorporationFounded((CorporationTypes)iI)))
+								if (!(GC.getGame().isCorporationFounded((CorporationTypes)iI)))
 								{
 									iBestValue = MAX_INT;
 									eBestPlayer = NO_PLAYER;
@@ -6704,7 +6704,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 											{
 												iValue = 10;
 
-												iValue += GC.getGameINLINE().getSorenRandNum(10, "Found Corporation (Player)");
+												iValue += GC.getGame().getSorenRandNum(10, "Found Corporation (Player)");
 
 												if (GET_PLAYER((PlayerTypes)iJ).getCurrentResearch() != eIndex)
 												{
@@ -6731,9 +6731,9 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 					}
 				}
 			}
-			if(GC.getGameINLINE().isTechCanFoundReligion(eIndex) && GC.getGameINLINE().isOption(GAMEOPTION_LIMITED_RELIGIONS)
+			if(GC.getGame().isTechCanFoundReligion(eIndex) && GC.getGame().isOption(GAMEOPTION_LIMITED_RELIGIONS)
 #ifdef C2C_BUILD
-				&& !GC.getGameINLINE().isOption(GAMEOPTION_DIVINE_PROPHETS))
+				&& !GC.getGame().isOption(GAMEOPTION_DIVINE_PROPHETS))
 #else
 				)
 #endif
@@ -6746,7 +6746,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 						eBestPlayer = NO_PLAYER;
 						eReligion = NO_RELIGION;
 						eSlotReligion = ReligionTypes(iI);
-						if ((GC.getReligionInfo(eSlotReligion).getTechPrereq() == eIndex) && !GC.getGameINLINE().isReligionSlotTaken(eSlotReligion))
+						if ((GC.getReligionInfo(eSlotReligion).getTechPrereq() == eIndex) && !GC.getGame().isReligionSlotTaken(eSlotReligion))
 						{
 							for (iJ = 0; iJ < MAX_PLAYERS; iJ++)
 							{
@@ -6756,7 +6756,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 									if(kPlayer.canFoundReligion())
 									{
 										iValue = 10;
-										iValue += GC.getGameINLINE().getSorenRandNum(10, "Found Religion (Player)");
+										iValue += GC.getGame().getSorenRandNum(10, "Found Religion (Player)");
 										for (iK = 0; iK < GC.getNumReligionInfos(); iK++)
 										{
 											iValue += (kPlayer.getHasReligionCount((ReligionTypes)iK) * 10);
@@ -6776,7 +6776,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 										if (eBestPlayer != NO_PLAYER)
 										{
 									
-											if (GC.getGameINLINE().isOption(GAMEOPTION_PICK_RELIGION))
+											if (GC.getGame().isOption(GAMEOPTION_PICK_RELIGION))
 											{
 												if(GET_PLAYER(eBestPlayer).isHuman())
 												{
@@ -6800,7 +6800,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 													ReligionTypes eReligion = GET_PLAYER(eBestPlayer).AI_chooseReligion();
 													if (NO_RELIGION != eReligion)
 													{
-														if(GC.getGameINLINE().isTechCanFoundReligion(eIndex))
+														if(GC.getGame().isTechCanFoundReligion(eIndex))
 														{
 															GET_PLAYER(eBestPlayer).foundReligion(eReligion, eSlotReligion, true);
 															bReligionFounded = true;
@@ -6810,7 +6810,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 											}
 											else if (NO_RELIGION != eReligion)
 											{
-												if(GC.getGameINLINE().isTechCanFoundReligion(eIndex))
+												if(GC.getGame().isTechCanFoundReligion(eIndex))
 												{
 													GET_PLAYER(eBestPlayer).foundReligion(eReligion, eSlotReligion, true);
 													bReligionFounded = true;
@@ -6846,7 +6846,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 
 			if (bFirst)
 			{
-				if (GC.getGameINLINE().countKnownTechNumTeams(eIndex) == 1)
+				if (GC.getGame().countKnownTechNumTeams(eIndex) == 1)
 				{
 					eFreeUnit = GET_PLAYER(ePlayer).getTechFreeUnit(eIndex);
 					if (eFreeUnit != NO_UNIT)
@@ -6861,7 +6861,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 					}
 #ifdef C2C_BUILD
 					//TB Prophet Mod begin
-					if (GC.getGameINLINE().isOption(GAMEOPTION_DIVINE_PROPHETS) && !GC.getGameINLINE().isOption(GAMEOPTION_LIMITED_RELIGIONS))
+					if (GC.getGame().isOption(GAMEOPTION_DIVINE_PROPHETS) && !GC.getGame().isOption(GAMEOPTION_LIMITED_RELIGIONS))
 					{
 						eFreeProphet = GET_PLAYER(ePlayer).getTechFreeProphet(eIndex);
 						if (eFreeProphet != NO_UNIT)
@@ -6913,7 +6913,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 						}
 
 						szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_FIRST_TO_TECH", GET_PLAYER(ePlayer).getName(), GC.getTechInfo(eIndex).getTextKeyWide());
-						GC.getGameINLINE().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, ePlayer, szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+						GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, ePlayer, szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
 					}
 					
 					if (bFirstBonus)
@@ -6937,7 +6937,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 
 			if (bAnnounce)
 			{
-				if (GC.getGameINLINE().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
+				if (GC.getGame().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
 				{
 					announceTechToPlayers(eIndex);
 
@@ -7060,12 +7060,12 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 			{
 				if (bAnnounce)
 				{
-					if (GC.getGameINLINE().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
+					if (GC.getGame().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
 					{
 						FAssert(ePlayer != NO_PLAYER);
 						if (GET_PLAYER(ePlayer).isResearch() && (GET_PLAYER(ePlayer).getCurrentResearch() == NO_TECH))
 						{
-							if (ePlayer == GC.getGameINLINE().getActivePlayer())
+							if (ePlayer == GC.getGame().getActivePlayer())
 							{
 								GET_PLAYER(ePlayer).chooseTech(0, gDLL->getText("TXT_KEY_MISC_WHAT_TO_RESEARCH_NEXT"));
 							}
@@ -7074,7 +7074,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 				}
 			}
 
-			if (getID() == GC.getGameINLINE().getActiveTeam())
+			if (getID() == GC.getGame().getActiveTeam())
 			{
 				gDLL->getInterfaceIFace()->setDirty(MiscButtons_DIRTY_BIT, true);
 				gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
@@ -7145,7 +7145,7 @@ void CvTeam::doWarWeariness()
 /**																				*/
 /**																				*/
 /********************************************************************************/
-			//if (!(GET_TEAM((TeamTypes)iI).isAlive()) || !isAtWar((TeamTypes)iI) || GC.getGameINLINE().isOption(GAMEOPTION_ALWAYS_WAR) || GC.getGameINLINE().isOption(GAMEOPTION_NO_CHANGING_WAR_PEACE))
+			//if (!(GET_TEAM((TeamTypes)iI).isAlive()) || !isAtWar((TeamTypes)iI) || GC.getGame().isOption(GAMEOPTION_ALWAYS_WAR) || GC.getGame().isOption(GAMEOPTION_NO_CHANGING_WAR_PEACE))
 			// War weariness decays faster when enemy can't fight, usually a rebel with just spies
 			if ( ( !(GET_TEAM((TeamTypes)iI).isAlive()) || GET_TEAM((TeamTypes)iI).getNumMilitaryUnits() == 0 ) || !isAtWar((TeamTypes)iI))
 			{
@@ -7282,9 +7282,9 @@ void CvTeam::testCircumnavigated()
 		}
 	}
 
-	GC.getGameINLINE().makeCircumnavigated(getID());
+	GC.getGame().makeCircumnavigated(getID());
 
-	if (GC.getGameINLINE().getElapsedGameTurns() > 0)
+	if (GC.getGame().getElapsedGameTurns() > 0)
 	{
 		if (GC.getDefineINT("CIRCUMNAVIGATE_FREE_MOVES") != 0)
 		{
@@ -7313,7 +7313,7 @@ void CvTeam::testCircumnavigated()
 			}
 
 			szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_CIRC_GLOBE", getName().GetCString());
-			GC.getGameINLINE().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getLeaderID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+			GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getLeaderID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
 		}
 	}
 }
@@ -7349,7 +7349,7 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 /*                                                                                              */
 /************************************************************************************************/
 	CvTechInfo& kTech = GC.getTechInfo(eTech);
-	if (GC.getGameINLINE().isOption(GAMEOPTION_MOUNTAINS))
+	if (GC.getGame().isOption(GAMEOPTION_MOUNTAINS))
 	{
 		if (kTech.isCanPassPeaks())
 		{
@@ -7371,7 +7371,7 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 	{
 		ObsoletePromotions(eTech);
 		ObsoleteCorporations(eTech);
-		GC.getGameINLINE().makeTechDiscovered(eTech);
+		GC.getGame().makeTechDiscovered(eTech);
 	}
 
 	if (kTech.isEmbassyTrading())
@@ -7673,7 +7673,7 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 		{
 			if (eTech == GC.getSpecialBuildingInfo((SpecialBuildingTypes)iI).getTechPrereqAnyone())
 			{
-				GC.getGameINLINE().makeSpecialBuildingValid((SpecialBuildingTypes)iI, bAnnounce);
+				GC.getGame().makeSpecialBuildingValid((SpecialBuildingTypes)iI, bAnnounce);
 			}
 		}
 	}
@@ -7687,7 +7687,7 @@ void CvTeam::cancelDefensivePacts()
 	bool bCancelDeal;
 	int iLoop;
 
-	for (pLoopDeal = GC.getGameINLINE().firstDeal(&iLoop); pLoopDeal != NULL; pLoopDeal = GC.getGameINLINE().nextDeal(&iLoop))
+	for (pLoopDeal = GC.getGame().firstDeal(&iLoop); pLoopDeal != NULL; pLoopDeal = GC.getGame().nextDeal(&iLoop))
 	{
 		bCancelDeal = false;
 
@@ -7990,7 +7990,7 @@ int CvTeam::countNumHumanGameTurnActive() const
 
 void CvTeam::setTurnActive(bool bNewValue, bool bDoTurn)
 {
-	FAssert(GC.getGameINLINE().isSimultaneousTeamTurns());
+	FAssert(GC.getGame().isSimultaneousTeamTurns());
 
 	for (int iPlayer = 0; iPlayer < MAX_PLAYERS; ++iPlayer)
 	{
@@ -8004,7 +8004,7 @@ void CvTeam::setTurnActive(bool bNewValue, bool bDoTurn)
 
 bool CvTeam::isTurnActive() const
 {
-	FAssert(GC.getGameINLINE().isSimultaneousTeamTurns());
+	FAssert(GC.getGame().isSimultaneousTeamTurns());
 
 	for (int iPlayer = 0; iPlayer < MAX_PLAYERS; ++iPlayer)
 	{
@@ -8369,7 +8369,7 @@ bool CvTeam::hasShrine(ReligionTypes eReligion) const
 {	
 	if (eReligion != NO_RELIGION)
 	{
-		CvCity* pHolyCity = GC.getGameINLINE().getHolyCity(eReligion);
+		CvCity* pHolyCity = GC.getGame().getHolyCity(eReligion);
 
 		if (pHolyCity != NULL && GET_PLAYER(pHolyCity->getOwner()).getTeam() == getID())
 			return pHolyCity->hasShrine(eReligion);
@@ -8413,7 +8413,7 @@ int CvTeam::getProjectPartNumber(ProjectTypes eProject, bool bAssert) const
 
 bool CvTeam::hasLaunched() const
 {
-	VictoryTypes spaceVictory = GC.getGameINLINE().getSpaceVictory();
+	VictoryTypes spaceVictory = GC.getGame().getSpaceVictory();
 	if (spaceVictory != NO_VICTORY)
 	{
 		return (getVictoryCountdown(spaceVictory) >= 0);
@@ -8706,14 +8706,14 @@ void CvTeam::signLimitedBorders(TeamTypes eTeam)
 			ourList.insertAtEnd(item);
 			theirList.insertAtEnd(item);
 
-			GC.getGameINLINE().implementDeal(getLeaderID(), (GET_TEAM(eTeam).getLeaderID()), &ourList, &theirList);
+			GC.getGame().implementDeal(getLeaderID(), (GET_TEAM(eTeam).getLeaderID()), &ourList, &theirList);
 		}
 	}
 }
 
 bool CvTeam::canSignOpenBorders(TeamTypes eTeam) const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_ADVANCED_DIPLOMACY) && !isHasEmbassy(eTeam))
+	if (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY) && !isHasEmbassy(eTeam))
 	{
 		return false;
 	}
@@ -8741,7 +8741,7 @@ void CvTeam::sendAmbassador(TeamTypes eTeam)
 			ourList.insertAtEnd(item);
 			theirList.insertAtEnd(item);
 
-			GC.getGameINLINE().implementDeal(getLeaderID(), (GET_TEAM(eTeam).getLeaderID()), &ourList, &theirList);
+			GC.getGame().implementDeal(getLeaderID(), (GET_TEAM(eTeam).getLeaderID()), &ourList, &theirList);
 		}
 	}
 }
@@ -8887,9 +8887,9 @@ void CvTeam::ObsoleteCorporations(TechTypes eObsoleteTech)
 												pLoopCity->setNumRealBuilding((BuildingTypes)iJ, 0);
 											}
 										}
-										GC.getGameINLINE().setHeadquarters((CorporationTypes)iI, NULL, false);
+										GC.getGame().setHeadquarters((CorporationTypes)iI, NULL, false);
 										//Be Sure to Create a New Headquarters, ASAP
-										GC.getGameINLINE().doFoundCorporation((CorporationTypes)iI, true);
+										GC.getGame().doFoundCorporation((CorporationTypes)iI, true);
 									}
 								}
 							}
@@ -9413,7 +9413,7 @@ void CvTeam::setLimitedBorders(TeamTypes eIndex, bool bNewValue)
 
 		GC.getMap().verifyUnitValidPlot();
 
-		if ((getID() == GC.getGameINLINE().getActiveTeam()) || (eIndex == GC.getGameINLINE().getActiveTeam()))
+		if ((getID() == GC.getGame().getActiveTeam()) || (eIndex == GC.getGame().getActiveTeam()))
 		{
 			gDLL->getInterfaceIFace()->setDirty(Score_DIRTY_BIT, true);
 		}
@@ -9483,7 +9483,7 @@ int CvTeam::getUnitClassStrengthChange(UnitClassTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
 	FAssertMsg(eIndex < GC.getNumUnitClassInfos(), "eIndex expected to be < GC.getNumUnitClassInfos()");
-	if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		return m_paiUnitClassStrengthChange[eIndex] * 100;
 	}
@@ -9564,7 +9564,7 @@ void CvTeam::setFreeTradeAgreement(TeamTypes eIndex, bool bNewValue)
 
 		m_abFreeTrade[eIndex] = bNewValue;
 
-		if ((getID() == GC.getGameINLINE().getActiveTeam()) || (eIndex == GC.getGameINLINE().getActiveTeam()))
+		if ((getID() == GC.getGame().getActiveTeam()) || (eIndex == GC.getGame().getActiveTeam()))
 		{
 			gDLL->getInterfaceIFace()->setDirty(Score_DIRTY_BIT, true);
 		}
@@ -9771,7 +9771,7 @@ void CvTeam::recalculateModifiers()
 	}
 
 	//	Reapply circumnavigation bonus
-	if (GC.getGameINLINE().isCircumnavigated(getID()) && GC.getDefineINT("CIRCUMNAVIGATE_FREE_MOVES") != 0)
+	if (GC.getGame().isCircumnavigated(getID()) && GC.getDefineINT("CIRCUMNAVIGATE_FREE_MOVES") != 0)
 	{
 		changeExtraMoves(DOMAIN_SEA, GC.getDefineINT("CIRCUMNAVIGATE_FREE_MOVES"));
 	}
@@ -9803,7 +9803,7 @@ int CvTeam::getLastRoundOfValidImprovementCacheUpdate() const
 
 void CvTeam::setLastRoundOfValidImprovementCacheUpdate()
 {
-	m_iLastRoundOfValidImprovementCacheUpdate = GC.getGameINLINE().getGameTurn();
+	m_iLastRoundOfValidImprovementCacheUpdate = GC.getGame().getGameTurn();
 }
 
 // K-Mod

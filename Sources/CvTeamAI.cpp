@@ -252,7 +252,7 @@ void CvTeamAI::AI_updateAreaStragies(bool bTargets)
 	CvArea* pLoopArea;
 	int iLoop;
 
-	if (!(GC.getGameINLINE().isFinalInitialized()))
+	if (!(GC.getGame().isFinalInitialized()))
 	{
 		return;
 	}
@@ -638,7 +638,7 @@ AreaAITypes CvTeamAI::AI_calculateAreaAIType(CvArea* pArea, bool bPreparingTotal
 		{
 			if (iAreaCities > (getNumMembers() * 3))
 			{
-				if (GC.getGameINLINE().isOption(GAMEOPTION_AGGRESSIVE_AI) || (countPowerByArea(pArea) > ((countEnemyPowerByArea(pArea) * 3) / 2)))
+				if (GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI) || (countPowerByArea(pArea) > ((countEnemyPowerByArea(pArea) * 3) / 2)))
 				{
 					return AREAAI_MASSING;
 				}
@@ -1153,7 +1153,7 @@ int CvTeamAI::AI_chooseElection(const VoteSelectionData& kVoteSelectionData) con
 	VoteSourceTypes eVoteSource = kVoteSelectionData.eVoteSource;
 
 	FAssert(!isHuman());
-	FAssert(GC.getGameINLINE().getSecretaryGeneral(eVoteSource) == getID());
+	FAssert(GC.getGame().getSecretaryGeneral(eVoteSource) == getID());
 
 	int iBestVote = -1;
 	int iBestValue = 0;
@@ -1165,10 +1165,10 @@ int CvTeamAI::AI_chooseElection(const VoteSelectionData& kVoteSelectionData) con
 
 		FAssert(kVoteInfo.isVoteSourceType(eVoteSource));
 
-		FAssert(GC.getGameINLINE().isChooseElection(eVote));
+		FAssert(GC.getGame().isChooseElection(eVote));
 		bool bValid = true;
 
-		if (!GC.getGameINLINE().isTeamVote(eVote))
+		if (!GC.getGame().isTeamVote(eVote))
 		{
 			for (int iJ = 0; iJ < MAX_PLAYERS; iJ++)
 			{
@@ -1178,7 +1178,7 @@ int CvTeamAI::AI_chooseElection(const VoteSelectionData& kVoteSelectionData) con
 					{
 						PlayerVoteTypes eVote = GET_PLAYER((PlayerTypes)iJ).AI_diploVote(kVoteSelectionData.aVoteOptions[iI], eVoteSource, true);
 
-						if (eVote != PLAYER_VOTE_YES || eVote == GC.getGameINLINE().getVoteOutcome((VoteTypes)iI))
+						if (eVote != PLAYER_VOTE_YES || eVote == GC.getGame().getVoteOutcome((VoteTypes)iI))
 						{
 							bValid = false;
 							break;
@@ -1190,7 +1190,7 @@ int CvTeamAI::AI_chooseElection(const VoteSelectionData& kVoteSelectionData) con
 
 		if (bValid)
 		{
-			int iValue = (1 + GC.getGameINLINE().getSorenRandNum(10000, "AI Choose Vote"));
+			int iValue = (1 + GC.getGame().getSorenRandNum(10000, "AI Choose Vote"));
 
 			if (iValue > iBestValue)
 			{
@@ -1236,7 +1236,7 @@ int CvTeamAI::AI_startWarVal(TeamTypes eTeam) const
 	// Closeness values are much smaller after the fix to CvPlayerAI::AI_playerCloseness, no need to divide by 4
 	if (iClosenessValue == 0)
 	{
-		iValue /= (GC.getGameINLINE().isOption(GAMEOPTION_AGGRESSIVE_AI) ? 4 : 2);
+		iValue /= (GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI) ? 4 : 2);
 	}
 	iValue += iClosenessValue;
 
@@ -1247,7 +1247,7 @@ int CvTeamAI::AI_startWarVal(TeamTypes eTeam) const
 	{
 		iValue += 10;
 
-		bool bAggressive = GC.getGameINLINE().isOption(GAMEOPTION_AGGRESSIVE_AI);
+		bool bAggressive = GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI);
 		bool bConq4 = AI_isAnyMemberDoVictoryStrategy(AI_VICTORY_CONQUEST4);
 
 		// Prioritize targets closer to victory
@@ -1281,7 +1281,7 @@ int CvTeamAI::AI_startWarVal(TeamTypes eTeam) const
 	// as boost applies to all rivals
 	if( AI_isAnyMemberDoVictoryStrategy(AI_VICTORY_DOMINATION3) )
 	{
-		iValue *= (GC.getGameINLINE().isOption(GAMEOPTION_AGGRESSIVE_AI) ? 3 : 2);
+		iValue *= (GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI) ? 3 : 2);
 	}
 
 	// If occupied or conquest inclined and early/not strong, value weak opponents
@@ -1506,9 +1506,9 @@ int CvTeamAI::AI_endWarVal(TeamTypes eTeam) const
 		iTheirAttackers += countEnemyDangerByArea(pLoopArea, eTeam);
 	}
 
-	int iAttackerRatio = (100 * iOurAttackers) / std::max(1 + GC.getGameINLINE().getCurrentEra(), iTheirAttackers);
+	int iAttackerRatio = (100 * iOurAttackers) / std::max(1 + GC.getGame().getCurrentEra(), iTheirAttackers);
 		
-	if( GC.getGameINLINE().isOption(GAMEOPTION_AGGRESSIVE_AI) )
+	if( GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI) )
 	{
 		iValue *= 150;
 		iValue /= range(iAttackerRatio, 150, 900);
@@ -1581,11 +1581,11 @@ int CvTeamAI::AI_minorKeepWarVal(TeamTypes eTeam) const
 					iPower /= 3;
 				}
 
-				if( GET_TEAM(eTeam).AI_getWarSuccess(getID()) > GC.getDefineINT("WAR_SUCCESS_CITY_CAPTURING") || GC.getGameINLINE().getSorenRandNum(AI_maxWarRand()/100, "Keep war on minor") == 0 )
+				if( GET_TEAM(eTeam).AI_getWarSuccess(getID()) > GC.getDefineINT("WAR_SUCCESS_CITY_CAPTURING") || GC.getGame().getSorenRandNum(AI_maxWarRand()/100, "Keep war on minor") == 0 )
 				{
 					if (GET_TEAM(eTeam).getDefensivePower() < ((iPower * AI_maxWarNearbyPowerRatio()) / 100))
 					{
-						int iNoWarRoll = GC.getGameINLINE().getSorenRandNum(100, "AI No War") - 20;
+						int iNoWarRoll = GC.getGame().getSorenRandNum(100, "AI No War") - 20;
 						iNoWarRoll += (bAggressive ? 10 : 0);
 						iNoWarRoll += ((AI_getWarSuccess(eTeam) > GC.getDefineINT("WAR_SUCCESS_CITY_CAPTURING")) ? 10 : 0);
 						iNoWarRoll -= (bIsGetBetterUnits ? 15 : 0);
@@ -1699,10 +1699,10 @@ int CvTeamAI::AI_techTradeVal(TechTypes eTech, TeamTypes eTeam) const
 		pDoesNotHaveTeam = this;
 	}
 
-	if ( m_tradeTechValuesCachedTurn != GC.getGameINLINE().getGameTurn() )
+	if ( m_tradeTechValuesCachedTurn != GC.getGame().getGameTurn() )
 	{
 		m_tradeTechValueCache.clear();
-		m_tradeTechValuesCachedTurn = GC.getGameINLINE().getGameTurn();
+		m_tradeTechValuesCachedTurn = GC.getGame().getGameTurn();
 		//logBBAI("Flush trade value cache for team %d",
 		//		getID());
 	}
@@ -1883,7 +1883,7 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam) const
 	}
 	
 	
-	if (GC.getGameINLINE().isOption(GAMEOPTION_NO_TECH_BROKERING))
+	if (GC.getGame().isOption(GAMEOPTION_NO_TECH_BROKERING))
 	{
 		CvTeam& kTeam = GET_TEAM(eTeam);
 			
@@ -1891,7 +1891,7 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam) const
 		{
 			if (!kTeam.isHuman())
 			{
-				if ((eTech == eCurrentResearch) || (GC.getGameINLINE().isOption(GAMEOPTION_NO_TECH_DIFFUSION)))
+				if ((eTech == eCurrentResearch) || (GC.getGame().isOption(GAMEOPTION_NO_TECH_DIFFUSION)))
 				{
 					if (2 * kTeam.getResearchProgress(eTech) > kTeam.getResearchCost(eTech))
 					{
@@ -1941,7 +1941,7 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam) const
 /*                                                                                              */
 /* Ruthless AI: Attitude is irrelevant                                                          */
 /************************************************************************************************/
-					if (GC.getGameINLINE().isOption(GAMEOPTION_RUTHLESS_AI))
+					if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI))
 					{
 						if (eAttitude > ATTITUDE_FURIOUS)
 							continue;
@@ -1960,13 +1960,13 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam) const
 /*                                                                                              */
 /* Ruthless AI: Don't Sell Our Military Secrets                                                 */
 /************************************************************************************************/
-	if (GC.getGameINLINE().isOption(GAMEOPTION_RUTHLESS_AI))
+	if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI))
 	{
 		if (GC.getTechInfo(eTech).getFlavorValue(GC.getInfoTypeForString("FLAVOR_MILITARY")) > 3)
 		{
 			//We don't want to spread military techs when we are gearing for war
 			//If there is tech brokering, selling the tech to anyone could get it in the hands of our enemy. If there is no brokering, just worry about the current team.
-			if (getAnyWarPlanCount(true) > 0 && (!GC.getGameINLINE().isOption(GAMEOPTION_NO_TECH_BROKERING) || AI_getWarPlan(eTeam) != NO_WARPLAN))
+			if (getAnyWarPlanCount(true) > 0 && (!GC.getGame().isOption(GAMEOPTION_NO_TECH_BROKERING) || AI_getWarPlan(eTeam) != NO_WARPLAN))
 			{
 				return DENIAL_NO_GAIN;
 			}
@@ -1977,12 +1977,12 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam) const
 /************************************************************************************************/
 	if (eAttitude < ATTITUDE_FRIENDLY)
 	{
-		if ((GC.getGameINLINE().getTeamRank(getID()) < (GC.getGameINLINE().countCivTeamsEverAlive() / 2)) ||
-			  (GC.getGameINLINE().getTeamRank(eTeam) < (GC.getGameINLINE().countCivTeamsEverAlive() / 2)))
+		if ((GC.getGame().getTeamRank(getID()) < (GC.getGame().countCivTeamsEverAlive() / 2)) ||
+			  (GC.getGame().getTeamRank(eTeam) < (GC.getGame().countCivTeamsEverAlive() / 2)))
 		{
 			iNoTechTradeThreshold = AI_noTechTradeThreshold();
 
-			iNoTechTradeThreshold *= GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getResearchPercent();
+			iNoTechTradeThreshold *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent();
 			iNoTechTradeThreshold /= 100;
 
 			iNoTechTradeThreshold *= std::max(0, (GC.getHandicapInfo(GET_TEAM(eTeam).getHandicapType()).getNoTechTradeModifier() + 100));
@@ -2072,7 +2072,7 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam) const
 
 			for (iJ = 0; iJ < GC.getNumVictoryInfos(); iJ++)
 			{
-				if (GC.getGameINLINE().isVictoryValid((VictoryTypes)iJ))
+				if (GC.getGame().isVictoryValid((VictoryTypes)iJ))
 				{
 					if (GC.getProjectInfo((ProjectTypes)iI).getVictoryThreshold((VictoryTypes)iJ))
 					{
@@ -2118,7 +2118,7 @@ int CvTeamAI::AI_mapTradeVal(TeamTypes eTeam) const
 /*                                                                                              */
 /* Ruthless AI                                                                                  */
 /************************************************************************************************/
-	if (GC.getGameINLINE().isOption(GAMEOPTION_RUTHLESS_AI))
+	if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI))
 	{
 		//Planning war against the team, we need their map!
 		if (AI_getWarPlan(eTeam) != NO_WARPLAN)
@@ -2203,7 +2203,7 @@ DenialTypes CvTeamAI::AI_mapTrade(TeamTypes eTeam) const
 /*                                                                                              */
 /* Ruthless AI: Selling Maps right before we go to war is stupid                                */
 /************************************************************************************************/
-	if (GC.getGameINLINE().isOption(GAMEOPTION_RUTHLESS_AI))
+	if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI))
 	{
 		if (AI_getWarPlan(eTeam) != NO_WARPLAN)
 		{
@@ -2400,8 +2400,8 @@ DenialTypes CvTeamAI::AI_surrenderTrade(TeamTypes eTeam, int iPowerMultiplier) c
 /* War Strategy AI                                                                              */
 /************************************************************************************************/
 /* original BTS code
-		int iTotalPower = GC.getGameINLINE().countTotalCivPower();
-		int iAveragePower = iTotalPower / std::max(1, GC.getGameINLINE().countCivTeamsAlive());
+		int iTotalPower = GC.getGame().countTotalCivPower();
+		int iAveragePower = iTotalPower / std::max(1, GC.getGame().countCivTeamsAlive());
 */
 
 		int iTotalPower = 0;
@@ -2553,11 +2553,11 @@ DenialTypes CvTeamAI::AI_surrenderTrade(TeamTypes eTeam, int iPowerMultiplier) c
 		for (int i = 0; i < GC.getNumVictoryInfos(); i++)
 		{
 			bool bPopulationThreat = true;
-			if (GC.getGameINLINE().getAdjustedPopulationPercent((VictoryTypes)i) > 0)
+			if (GC.getGame().getAdjustedPopulationPercent((VictoryTypes)i) > 0)
 			{
 				bPopulationThreat = false;
 
-				int iThreshold = GC.getGameINLINE().getTotalPopulation() * GC.getGameINLINE().getAdjustedPopulationPercent((VictoryTypes)i);
+				int iThreshold = GC.getGame().getTotalPopulation() * GC.getGame().getAdjustedPopulationPercent((VictoryTypes)i);
 				if (400 * getTotalPopulation(!isAVassal()) > 3 * iThreshold)
 				{
 					return DENIAL_VICTORY;
@@ -2573,11 +2573,11 @@ DenialTypes CvTeamAI::AI_surrenderTrade(TeamTypes eTeam, int iPowerMultiplier) c
 			}
 
 			bool bLandThreat = true;
-			if (GC.getGameINLINE().getAdjustedLandPercent((VictoryTypes)i) > 0)
+			if (GC.getGame().getAdjustedLandPercent((VictoryTypes)i) > 0)
 			{
 				bLandThreat = false;
 
-				int iThreshold = GC.getMap().getLandPlots() * GC.getGameINLINE().getAdjustedLandPercent((VictoryTypes)i);
+				int iThreshold = GC.getMap().getLandPlots() * GC.getGame().getAdjustedLandPercent((VictoryTypes)i);
 				if (400 * getTotalLand(!isAVassal()) > 3 * iThreshold)
 				{
 					return DENIAL_VICTORY;
@@ -2592,7 +2592,7 @@ DenialTypes CvTeamAI::AI_surrenderTrade(TeamTypes eTeam, int iPowerMultiplier) c
 				}
 			}
 
-			if (GC.getGameINLINE().getAdjustedPopulationPercent((VictoryTypes)i) > 0 || GC.getGameINLINE().getAdjustedLandPercent((VictoryTypes)i) > 0)
+			if (GC.getGame().getAdjustedPopulationPercent((VictoryTypes)i) > 0 || GC.getGame().getAdjustedLandPercent((VictoryTypes)i) > 0)
 			{
 				if (bLandThreat && bPopulationThreat)
 				{
@@ -3045,8 +3045,8 @@ bool CvTeamAI::AI_acceptSurrender( TeamTypes eSurrenderTeam )
 
 	// If we're low on the totem poll, accept so enemies don't drag anyone else into war with us
 	// Top rank is 0, second is 1, etc.
-	int iTeamRank = GC.getGameINLINE().getTeamRank(getID());
-	if( iTeamRank > (1 + GC.getGameINLINE().countCivTeamsAlive()/3) )
+	int iTeamRank = GC.getGame().getTeamRank(getID());
+	if( iTeamRank > (1 + GC.getGame().countCivTeamsAlive()/3) )
 	{
 		return true;
 	}
@@ -3083,7 +3083,7 @@ bool CvTeamAI::AI_acceptSurrender( TeamTypes eSurrenderTeam )
 	}
 
 	// War weariness
-	int iWearinessThreshold = (GC.getGameINLINE().isOption(GAMEOPTION_AGGRESSIVE_AI) ? 300 : 240);
+	int iWearinessThreshold = (GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI) ? 300 : 240);
 	iWearinessThreshold += 10*iValuableCities + 20*iCitiesThreatenedByUs;
 
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
@@ -3214,7 +3214,7 @@ void CvTeamAI::AI_getWarThresholds( int &iTotalWarThreshold, int &iLimitedWarThr
 	int iHighUnitSpendingPercent = 0;
 	bool bConq2 = false;
 	bool bDom3 = false;
-	bool bAggressive = GC.getGameINLINE().isOption(GAMEOPTION_AGGRESSIVE_AI);
+	bool bAggressive = GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI);
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
@@ -3303,7 +3303,7 @@ int CvTeamAI::AI_makePeaceTradeVal(TeamTypes ePeaceTeam, TeamTypes eTeam) const
 	FAssertMsg(GET_TEAM(ePeaceTeam).isAlive(), "GET_TEAM(ePeaceTeam).isAlive is expected to be true");
 	FAssertMsg(atWar(ePeaceTeam, eTeam), "eTeam should be at war with ePeaceTeam");
 
-	iValue = (50 + GC.getGameINLINE().getGameTurn());
+	iValue = (50 + GC.getGame().getGameTurn());
 	iValue += ((GET_TEAM(eTeam).getNumCities() + GET_TEAM(ePeaceTeam).getNumCities()) * 8);
 
 	iModifier = 0;
@@ -3514,7 +3514,7 @@ int CvTeamAI::AI_declareWarTradeVal(TeamTypes eWarTeam, TeamTypes eTeam) const
 		}
 	}
 
-	iValue *= 60 + (140 * GC.getGameINLINE().getGameTurn()) / std::max(1, GC.getGameINLINE().getEstimateEndTurn());
+	iValue *= 60 + (140 * GC.getGame().getGameTurn()) / std::max(1, GC.getGame().getEstimateEndTurn());
 	iValue /= 100;
 
 	iValue -= (iValue % GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
@@ -3554,7 +3554,7 @@ DenialTypes CvTeamAI::AI_declareWarTrade(TeamTypes eWarTeam, TeamTypes eTeam, bo
 /*                                                                                              */
 /*  Ruthless AI: Refusing war when we are planning it anyway is silly                           */ 
 /************************************************************************************************/
-	if (AI_isChosenWar(eWarTeam) && (GC.getGameINLINE().isOption(GAMEOPTION_ADVANCED_DIPLOMACY) || GC.getGameINLINE().isOption(GAMEOPTION_RUTHLESS_AI)))
+	if (AI_isChosenWar(eWarTeam) && (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY) || GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI)))
 	{
 		return NO_DENIAL;
 	}
@@ -3582,7 +3582,7 @@ DenialTypes CvTeamAI::AI_declareWarTrade(TeamTypes eWarTeam, TeamTypes eTeam, bo
 		return DENIAL_TOO_MANY_WARS;
 	}
 */
-	if(!GC.getGameINLINE().isOption(GAMEOPTION_RUTHLESS_AI))
+	if(!GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI))
 	{
 		if (getAnyWarPlanCount(true) > 0)
 		{
@@ -3615,7 +3615,7 @@ DenialTypes CvTeamAI::AI_declareWarTrade(TeamTypes eWarTeam, TeamTypes eTeam, bo
 /*                                                                                              */
 /* Ruthless AI: Backstab enemies                                                                */
 /************************************************************************************************/
-	if ((AI_getMemoryCount(eWarTeam, MEMORY_DECLARED_WAR) > 0) && (GC.getGameINLINE().isOption(GAMEOPTION_ADVANCED_DIPLOMACY) || GC.getGameINLINE().isOption(GAMEOPTION_RUTHLESS_AI)))
+	if ((AI_getMemoryCount(eWarTeam, MEMORY_DECLARED_WAR) > 0) && (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY) || GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI)))
 	{
 		return NO_DENIAL;
 	}
@@ -3635,7 +3635,7 @@ DenialTypes CvTeamAI::AI_declareWarTrade(TeamTypes eWarTeam, TeamTypes eTeam, bo
 /*                                                                                              */
 /* Ruthless AI: Attitude Doesn't Matter                                                         */
 /************************************************************************************************/
-				if (GC.getGameINLINE().isOption(GAMEOPTION_RUTHLESS_AI) && eAttitude > ATTITUDE_FURIOUS)
+				if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI) && eAttitude > ATTITUDE_FURIOUS)
 				{
 					continue;
 				}
@@ -3679,7 +3679,7 @@ DenialTypes CvTeamAI::AI_declareWarTrade(TeamTypes eWarTeam, TeamTypes eTeam, bo
 /*                                                                                              */
 /* Diplomacy                                                                                    */
 /************************************************************************************************/
-	if (GC.getGameINLINE().isOption(GAMEOPTION_RUTHLESS_AI))
+	if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI))
 	{
 		if (getAnyWarPlanCount(true) > 0)
 		{
@@ -3705,7 +3705,7 @@ int CvTeamAI::AI_openBordersTradeVal(TeamTypes eTeam) const
 	int iValue;
 	iValue = (getNumCities() + GET_TEAM(eTeam).getNumCities());
 	
-	if (GC.getGameINLINE().isOption(GAMEOPTION_RUTHLESS_AI))
+	if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI))
 	{
 		//if we are planning war, but not against them
 		if (AI_getWarPlan(eTeam) == NO_WARPLAN && getAnyWarPlanCount(true) > 0)
@@ -3749,7 +3749,7 @@ DenialTypes CvTeamAI::AI_openBordersTrade(TeamTypes eTeam) const
 /*                                                                                              */
 /* Ruthless AI: Get Open Borders with Nearby Allies, reject them with enemies                   */
 /************************************************************************************************/
-	if (GC.getGameINLINE().isOption(GAMEOPTION_RUTHLESS_AI))
+	if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI))
 	{
 		bool bWarplans = getAnyWarPlanCount(true) > 0;
 		if (AI_getWarPlan(eTeam) == NO_WARPLAN && bWarplans)
@@ -3833,7 +3833,7 @@ DenialTypes CvTeamAI::AI_defensivePactTrade(TeamTypes eTeam) const
 		return NO_DENIAL;
 	}
 
-	if (GC.getGameINLINE().countCivTeamsAlive() == 2)
+	if (GC.getGame().countCivTeamsAlive() == 2)
 	{
 		return DENIAL_NO_GAIN;
 	}
@@ -3882,7 +3882,7 @@ DenialTypes CvTeamAI::AI_permanentAllianceTrade(TeamTypes eTeam) const
 		return DENIAL_WORST_ENEMY;
 	}
 
-	if ((getPower(true) + GET_TEAM(eTeam).getPower(true)) > (GC.getGameINLINE().countTotalCivPower() / 2))
+	if ((getPower(true) + GET_TEAM(eTeam).getPower(true)) > (GC.getGame().countTotalCivPower() / 2))
 	{
 		if (getPower(true) > GET_TEAM(eTeam).getPower(true))
 		{
@@ -3951,10 +3951,10 @@ void CvTeamAI::AI_updateWorstEnemy()
 /* Ruthless AI                                                                                  */
 /************************************************************************************************/
 //Our Worst enemy isn't just the person we hate the most, but the person we hate and is winning!
-						if (GC.getGameINLINE().isOption(GAMEOPTION_RUTHLESS_AI))
+						if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI))
 						{
-							iValue += GC.getGameINLINE().getPlayerRank(kLoopTeam.getLeaderID()) / 2;
-							iValue -= GC.getGameINLINE().countCivPlayersAlive() / 2;
+							iValue += GC.getGame().getPlayerRank(kLoopTeam.getLeaderID()) / 2;
+							iValue -= GC.getGame().countCivPlayersAlive() / 2;
 						}
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
@@ -4566,7 +4566,7 @@ int CvTeamAI::AI_noTechTradeThreshold(bool bRecalculate) const
 /*                                                                                              */
 /* Ruthless AI: Trade More Techs                                                                */
 /************************************************************************************************/
-	if (GC.getGameINLINE().isOption(GAMEOPTION_RUTHLESS_AI))
+	if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI))
 		iRand *= 3;
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
@@ -4618,7 +4618,7 @@ int CvTeamAI::AI_techTradeKnownPercent(bool bRecalculate) const
 /*                                                                                              */
 /* Ruthless AI: Trade More Techs, even techs that others haven't discovered                     */
 /************************************************************************************************/
-	if (GC.getGameINLINE().isOption(GAMEOPTION_RUTHLESS_AI))
+	if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI))
 		iRand /= 3;
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
@@ -4710,7 +4710,7 @@ int CvTeamAI::AI_maxWarNearbyPowerRatio(bool bRecalculate) const
 /*                                                                                              */
 /* Ruthless AI: Attack Weaker, Closer targets                                                   */
 /************************************************************************************************/
-	if (GC.getGameINLINE().isOption(GAMEOPTION_RUTHLESS_AI))
+	if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI))
 	{
 		iRand /= 2;
 	}
@@ -4764,7 +4764,7 @@ int CvTeamAI::AI_maxWarDistantPowerRatio(bool bRecalculate) const
 /*                                                                                              */
 /* Ruthless AI: Avoid Far Away targets                                                          */
 /************************************************************************************************/
-	if (GC.getGameINLINE().isOption(GAMEOPTION_RUTHLESS_AI))
+	if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI))
 		iRand /= 3;
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
@@ -4815,7 +4815,7 @@ int CvTeamAI::AI_maxWarMinAdjacentLandPercent(bool bRecalculate) const
 /*                                                                                              */
 /* Ruthless AI: The AI Favors closer targets                                                    */
 /************************************************************************************************/
-	if (GC.getGameINLINE().isOption(GAMEOPTION_RUTHLESS_AI))
+	if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI))
 		iRand /= 4;
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
@@ -5043,7 +5043,7 @@ int CvTeamAI::AI_noWarAttitudeProb(AttitudeTypes eAttitude) const
 /*                                                                                              */
 /* Ruthless AI: Friends are just enemies we haven't made yet.                                   */
 /************************************************************************************************/
-	if (GC.getGameINLINE().isOption(GAMEOPTION_RUTHLESS_AI))
+	if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI))
 		iProb /= 10;
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
@@ -5187,7 +5187,7 @@ void CvTeamAI::AI_doWar()
 	// Afforess 
 	int iExtraWarExpenses = GC.getDefineINT("ESTIMATED_EXTRA_WAR_COSTS_PER_ERA", 15) * (1 + GET_PLAYER(getLeaderID()).getCurrentEra());
 	//No revolutions means wars are a (bit) less risky, in terms of finances
-	if (GC.getGameINLINE().isOption(GAMEOPTION_NO_REVOLUTION))
+	if (GC.getGame().isOption(GAMEOPTION_NO_REVOLUTION))
 	{
 		iExtraWarExpenses *= 75;
 		iExtraWarExpenses /= 100;
@@ -5209,13 +5209,13 @@ void CvTeamAI::AI_doWar()
 						iTimeModifier /= iThreshold;
 					}
 					
-					iTimeModifier *= 50 + GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getTrainPercent();
+					iTimeModifier *= 50 + GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
 					iTimeModifier /= 150;
 					FAssert(iTimeModifier >= 0);
 				}
 
 				int iAbandonTimeModifier = 100;
-				iAbandonTimeModifier *= 50 + GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getTrainPercent();
+				iAbandonTimeModifier *= 50 + GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
 				iAbandonTimeModifier /= 150;
 
 				//Afforess - abandon plans more quickly in financial distress
@@ -5431,7 +5431,7 @@ void CvTeamAI::AI_doWar()
 	// if at war, check for making peace
 	if (getAtWarCount(true) > 0) // XXX
 	{
-		if (GC.getGameINLINE().getSorenRandNum(AI_makePeaceRand(), "AI Make Peace") == 0)
+		if (GC.getGame().getSorenRandNum(AI_makePeaceRand(), "AI Make Peace") == 0)
 		{
 			for (iI = 0; iI < MAX_PC_TEAMS; iI++)
 			{
@@ -5449,12 +5449,12 @@ void CvTeamAI::AI_doWar()
 								{
 									if (AI_isChosenWar((TeamTypes)iI))
 									{
-										if( AI_getAtWarCounter((TeamTypes)iI) > std::max(10, (14 * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getVictoryDelayPercent())/100) )
+										if( AI_getAtWarCounter((TeamTypes)iI) > std::max(10, (14 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent())/100) )
 										{
 											// If nothing is happening in war
 											if( AI_getWarSuccess((TeamTypes)iI) + GET_TEAM((TeamTypes)iI).AI_getWarSuccess(getID()) < 2*GC.getDefineINT("WAR_SUCCESS_ATTACKING") )
 											{
-												if( (GC.getGameINLINE().getSorenRandNum(8, "AI Make Peace 1") == 0) )
+												if( (GC.getGame().getSorenRandNum(8, "AI Make Peace 1") == 0) )
 												{
 													bool bValid = true;
 
@@ -5495,7 +5495,7 @@ void CvTeamAI::AI_doWar()
 											}
 
 											// Fought to a long draw
-											if (AI_getAtWarCounter((TeamTypes)iI) > ((((AI_getWarPlan((TeamTypes)iI) == WARPLAN_TOTAL) ? 40 : 30) * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getVictoryDelayPercent())/100) )
+											if (AI_getAtWarCounter((TeamTypes)iI) > ((((AI_getWarPlan((TeamTypes)iI) == WARPLAN_TOTAL) ? 40 : 30) * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent())/100) )
 											{
 												int iOurValue = AI_endWarVal((TeamTypes)iI);
 												int iTheirValue = GET_TEAM((TeamTypes)iI).AI_endWarVal(getID());
@@ -5542,7 +5542,7 @@ void CvTeamAI::AI_doWar()
 	// if no war plans, consider starting one!
 	if (getAnyWarPlanCount(true) == 0 || iEnemyPowerPercent < 45)
 	{
-		bool bAggressive = GC.getGameINLINE().isOption(GAMEOPTION_AGGRESSIVE_AI);
+		bool bAggressive = GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI);
 /************************************************************************************************/
 /* Afforess	                  Start		 07/27/10                                               */
 /*                                                                                              */
@@ -5555,7 +5555,7 @@ void CvTeamAI::AI_doWar()
 				// return;
 			// }
 			// CvCity* pCapital = GET_PLAYER(getLeaderID()).getCapitalCity();
-			//bool bEarlyGame = (100 * GC.getGameINLINE().getElapsedGameTurns()) / std::max(1, GC.getGameINLINE().getEstimateEndTurn()) < 20;
+			//bool bEarlyGame = (100 * GC.getGame().getElapsedGameTurns()) / std::max(1, GC.getGame().getEstimateEndTurn()) < 20;
 			// int iAverage = GC.getMap().getGridWidth() + GC.getMap().getGridHeight() / 2;
 			// bool bPrimaryArea = true;
 			// if (pCapital != NULL)
@@ -5704,7 +5704,7 @@ void CvTeamAI::AI_doWar()
 			if (bFinancialProWar || !bFinancesOpposeWar)
 			{
 				// random overall war chance (at noble+ difficulties this is 100%)
-				if (GC.getGameINLINE().getSorenRandNum(100, "AI Declare War 1") < GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAIDeclareWarProb())
+				if (GC.getGame().getSorenRandNum(100, "AI Declare War 1") < GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIDeclareWarProb())
 				{
 					bMakeWarChecks = true;
 				}
@@ -5725,9 +5725,9 @@ void CvTeamAI::AI_doWar()
 			iOurPower /= 100;
 
 			if ((bFinancesProTotalWar || !bFinancesOpposeWar) &&
-				(GC.getGameINLINE().getSorenRandNum(iTotalWarRand, "AI Maximum War") <= iTotalWarThreshold))
+				(GC.getGame().getSorenRandNum(iTotalWarRand, "AI Maximum War") <= iTotalWarThreshold))
 			{
-				iNoWarRoll = GC.getGameINLINE().getSorenRandNum(100, "AI No War");
+				iNoWarRoll = GC.getGame().getSorenRandNum(100, "AI No War");
 				iNoWarRoll = range(iNoWarRoll + (bAggressive ? 10 : 0) + (bFinancesProTotalWar ? 10 : 0) - (20*iGetBetterUnitsCount)/iNumMembers, 0, 99);
 
 				iBestValue = 0;
@@ -5805,12 +5805,12 @@ void CvTeamAI::AI_doWar()
 /* Bugfix                                                                                       */
 /************************************************************************************************/
 			else if ((bFinancesProLimitedWar || !bFinancesOpposeWar) &&
-				(GC.getGameINLINE().getSorenRandNum(iLimitedWarRand, "AI Limited War") <= iLimitedWarThreshold))
+				(GC.getGame().getSorenRandNum(iLimitedWarRand, "AI Limited War") <= iLimitedWarThreshold))
 /************************************************************************************************/
 /* UNOFFICIAL_PATCH                        END                                                  */
 /************************************************************************************************/
 			{
-				iNoWarRoll = GC.getGameINLINE().getSorenRandNum(100, "AI No War") - 10;
+				iNoWarRoll = GC.getGame().getSorenRandNum(100, "AI No War") - 10;
 				iNoWarRoll = range(iNoWarRoll + (bAggressive ? 10 : 0) + (bFinancesProLimitedWar ? 10 : 0), 0, 99);
 
 				iBestValue = 0;
@@ -5870,9 +5870,9 @@ void CvTeamAI::AI_doWar()
 				}
 			}
 			else if ((bFinancesProDogpileWar || !bFinancesOpposeWar) &&
-				(GC.getGameINLINE().getSorenRandNum(iDogpileWarRand, "AI Dogpile War") <= iDogpileWarThreshold))
+				(GC.getGame().getSorenRandNum(iDogpileWarRand, "AI Dogpile War") <= iDogpileWarThreshold))
 			{
-				iNoWarRoll = GC.getGameINLINE().getSorenRandNum(100, "AI No War") - 20;
+				iNoWarRoll = GC.getGame().getSorenRandNum(100, "AI No War") - 20;
 				iNoWarRoll = range(iNoWarRoll + (bAggressive ? 10 : 0) + (bFinancesProDogpileWar ? 10 : 0), 0, 99);
 
 				iBestValue = 0;
@@ -5963,12 +5963,12 @@ void CvTeamAI::AI_doWar()
 bool CvTeamAI::AI_performNoWarRolls(TeamTypes eTeam)
 {
 	
-	if (GC.getGameINLINE().getSorenRandNum(100, "AI Declare War 1") > GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAIDeclareWarProb())
+	if (GC.getGame().getSorenRandNum(100, "AI Declare War 1") > GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIDeclareWarProb())
 	{
 		return true;
 	}
 	
-	if (GC.getGameINLINE().getSorenRandNum(100, "AI No War") <= AI_noWarAttitudeProb(AI_getAttitude(eTeam)))
+	if (GC.getGame().getSorenRandNum(100, "AI No War") <= AI_noWarAttitudeProb(AI_getAttitude(eTeam)))
 	{
 		return true;		
 	}
@@ -6045,7 +6045,7 @@ int CvTeamAI::AI_getTechMonopolyValue(TechTypes eTech, TeamTypes eTeam) const
 				{
 					int iNavalValue = 0;
 					
-					int iCombatRatio = (GC.getUnitInfo(eLoopUnit).getCombat() * 100) / std::max(1, GC.getGameINLINE().getBestLandUnitCombat());
+					int iCombatRatio = (GC.getUnitInfo(eLoopUnit).getCombat() * 100) / std::max(1, GC.getGame().getBestLandUnitCombat());
 					if (iCombatRatio > 50)
 					{
 						iValue += ((bWarPlan ? 100 : 50) * (iCombatRatio - 40)) / 50;
@@ -6191,7 +6191,7 @@ int CvTeamAI::AI_getTechMonopolyValue(TechTypes eTech, TeamTypes eTeam) const
 			}
 			if (isWorldWonderClass((BuildingClassTypes)kLoopBuilding.getBuildingClassType()))
 			{
-				if (!(GC.getGameINLINE().isBuildingClassMaxedOut((BuildingClassTypes)kLoopBuilding.getBuildingClassType())))
+				if (!(GC.getGame().isBuildingClassMaxedOut((BuildingClassTypes)kLoopBuilding.getBuildingClassType())))
 				{
 					iValue += 50;
 				}
@@ -6205,7 +6205,7 @@ int CvTeamAI::AI_getTechMonopolyValue(TechTypes eTech, TeamTypes eTeam) const
 		{
 			if (isWorldProject((ProjectTypes)iI))
 			{
-				if (!(GC.getGameINLINE().isProjectMaxedOut((ProjectTypes)iI)))
+				if (!(GC.getGame().isProjectMaxedOut((ProjectTypes)iI)))
 				{
 					iValue += 100;
 				}
@@ -6374,12 +6374,12 @@ DenialTypes CvTeamAI::AI_contactTrade(TeamTypes eContactTeam, TeamTypes eTeam) c
 		return DENIAL_MYSTERY;
 	}
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_RUTHLESS_AI))
+	if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI))
 	{
 		//Planning war against the team , no need to complicate matters
 		if (AI_getWarPlan(eContactTeam) != NO_WARPLAN)
 		{
-			int iRand = GC.getGameINLINE().getElapsedGameTurns() % 3;
+			int iRand = GC.getGame().getElapsedGameTurns() % 3;
 			switch(iRand)
 			{
 				case 0:

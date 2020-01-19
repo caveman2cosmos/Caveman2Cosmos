@@ -1961,7 +1961,7 @@ void CvInitCore::write(FDataStreamBase* pStream)
 	//	those within the current viewport (and in viewport coordinates).  They are actually persisted via
 	//	Python anyway
 	GC.clearSigns();
-	GC.getGameINLINE().processGreatWall(false);
+	GC.getGame().processGreatWall(false);
 	GC.getCurrentViewport()->setActionState(VIEWPORT_ACTION_STATE_SAVING);
 
 	/*
@@ -2252,7 +2252,7 @@ void CvInitCore::reassignPlayerAdvanced(PlayerTypes eOldID, PlayerTypes eNewID)
 		// We may have a new active player id...
 		if (getActivePlayer() == eOldID)
 		{
-			GC.getGameINLINE().setActivePlayer(eNewID);
+			GC.getGame().setActivePlayer(eNewID);
 		}
 		else if (getActivePlayer() == eNewID)
 		{
@@ -2339,15 +2339,15 @@ void CvInitCore::checkVersions()
 		if (bAssetsChanged)
 		{
 			// DLL or assets changed, recommend modifier reloading
-			if ( NO_PLAYER != GC.getGameINLINE().getActivePlayer() )
+			if ( NO_PLAYER != GC.getGame().getActivePlayer() )
 			{
-				CvPlayer& kPlayer = GET_PLAYER(GC.getGameINLINE().getActivePlayer());
+				CvPlayer& kPlayer = GET_PLAYER(GC.getGame().getActivePlayer());
 				if (kPlayer.isAlive() && kPlayer.isHuman())
 				{
 					CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_MODIFIER_RECALCULATION);
 					if (NULL != pInfo)
 					{
-						gDLL->getInterfaceIFace()->addPopup(pInfo, GC.getGameINLINE().getActivePlayer(), true, true);
+						gDLL->getInterfaceIFace()->addPopup(pInfo, GC.getGame().getActivePlayer(), true, true);
 					}
 					m_uiSavegameAssetCheckSum = GC.getInitCore().getAssetCheckSum();
 					m_bRecalcRequestProcessed = true;

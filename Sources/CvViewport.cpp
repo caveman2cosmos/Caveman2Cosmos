@@ -457,7 +457,7 @@ void CvViewport::processActionState()
 		}
 		break;
 	case VIEWPORT_ACTION_STATE_SAVING:
-		GC.getGameINLINE().processGreatWall(true);
+		GC.getGame().processGreatWall(true);
 
 		setActionState(VIEWPORT_ACTION_STATE_NONE);
 		break;

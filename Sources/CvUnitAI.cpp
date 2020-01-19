@@ -435,7 +435,7 @@ void CvUnitAI::doUnitAIMove()
 		return;
 	}
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		if (!isAnimal() || isGatherHerd())
 		{
@@ -725,7 +725,7 @@ void CvUnitAI::AI_killed()
 	//	Increment the general danger count for this plot's vicinity
 	if ( getGroup()->AI_getMissionAIType() != MISSIONAI_DELIBERATE_KILL )
 	{
-		GET_PLAYER(getOwner()).addPlotDangerSource(plot(), GC.getGameINLINE().AI_combatValue(getUnitType()) + 100);
+		GET_PLAYER(getOwner()).addPlotDangerSource(plot(), GC.getGame().AI_combatValue(getUnitType()) + 100);
 
 	//	Killing units may change danger evaluation so clear the plot danger cache
 #ifdef PLOT_DANGER_CACHING
@@ -831,7 +831,7 @@ bool CvUnitAI::AI_upgrade()
 			{
 				if (canUpgrade(eLoopUnit))
 				{
-					int iValue = (1 + GC.getGameINLINE().getSorenRandNum(10000, "AI Upgrade"));
+					int iValue = (1 + GC.getGame().getSorenRandNum(10000, "AI Upgrade"));
 
 					if (iValue > iBestValue)
 					{
@@ -1869,16 +1869,16 @@ void CvUnitAI::AI_animalMove()
 	if (canAttack())
 	{
 		bool bReckless = GC.getGame().isOption(GAMEOPTION_RECKLESS_ANIMALS);
-		int iAttackProb = GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAnimalAttackProb();
+		int iAttackProb = GC.getHandicapInfo(GC.getGame().getHandicapType()).getAnimalAttackProb();
 		// Attack potential targets first. Animals are pretty good at assessing their chances of taking down prey, therefore 60% odds prereq.
-		if ((bReckless || iAttackProb > 99 || GC.getGameINLINE().getSorenRandNum(100, "Animal Attack") < iAttackProb)
+		if ((bReckless || iAttackProb > 99 || GC.getGame().getSorenRandNum(100, "Animal Attack") < iAttackProb)
 			&& AI_attackTargets(2, (bReckless ? 0 : 60), 0, false, true))
 		{
 			return;
 		}
 		// Then attack elsewhere, recklessness based on animal aggression.
 		// 5% odds assessment is there to account for some small understanding of likelihood of success even in an aggressive action.
-		if ((bReckless || GC.getGameINLINE().getSorenRandNum(10, "Animal Attack") < getMyAggression(iAttackProb))
+		if ((bReckless || GC.getGame().getSorenRandNum(10, "Animal Attack") < getMyAggression(iAttackProb))
 			&& AI_anyAttack(2, (bReckless ? 0 : 5), 0, false, true))
 		{
 			return;
@@ -1914,11 +1914,11 @@ void CvUnitAI::AI_settleMove()
 /*                                                                                              */
 /* Check for Good City Sites Near Starting Location                                             */
 /************************************************************************************************/
-		int iGameSpeedPercent = ( (2 * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getTrainPercent())
-			+ GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getConstructPercent()
-			+ GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getResearchPercent() ) / 4;
+		int iGameSpeedPercent = ( (2 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent())
+			+ GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent()
+			+ GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent() ) / 4;
 		int iMaxFoundTurn = (iGameSpeedPercent + 50) / 100; //quick 0, normal/epic 1, marathon 2
-		if ( canMove() && !GET_PLAYER(getOwner()).AI_isPlotCitySite(plot()) && GC.getGameINLINE().getElapsedGameTurns() <= iMaxFoundTurn )
+		if ( canMove() && !GET_PLAYER(getOwner()).AI_isPlotCitySite(plot()) && GC.getGame().getElapsedGameTurns() <= iMaxFoundTurn )
 		{
 			int iBestValue = 0;
 			int iBestFoundTurn = 0;
@@ -1938,7 +1938,7 @@ void CvUnitAI::AI_settleMove()
 						//Will this unit still have movement points left to found the city the same turn? (getPathLastNode()->m_iData1 > 0))
 						if (generatePath(pCitySite,0,false,&iPathTurns))
 						{
-							int iFoundTurn = GC.getGameINLINE().getElapsedGameTurns() + iPathTurns - ((getPathMovementRemaining() > 0)? 1 : 0);
+							int iFoundTurn = GC.getGame().getElapsedGameTurns() + iPathTurns - ((getPathMovementRemaining() > 0)? 1 : 0);
 							if (iFoundTurn <= iMaxFoundTurn)
 							{
 								iPlotValue *= 100; //more precision
@@ -2168,7 +2168,7 @@ void CvUnitAI::AI_settleMove()
 		
 		if ((iAreaBestFoundValue == 0) && (iOtherBestFoundValue == 0))
 		{
-			if ((GC.getGame().getGameTurn() - getGameTurnCreated()) > std::pow((float)GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getTrainPercent(), 0.6f))
+			if ((GC.getGame().getGameTurn() - getGameTurnCreated()) > std::pow((float)GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent(), 0.6f))
 			{
 				if (NULL != getTransportUnit())
 				{
@@ -2237,7 +2237,7 @@ void CvUnitAI::AI_settleMove()
 			//	If we're already in a city advertise for an escort
 			if (plot()->isCity() && (plot()->getOwner() == getOwner()) && !isCargo())
 			{
-				if ( m_contractsLastEstablishedTurn != GC.getGameINLINE().getGameTurn() )
+				if ( m_contractsLastEstablishedTurn != GC.getGame().getGameTurn() )
 				{
 					//	For now advertise the work as being here since we'll be holding position
 					//	while we wait for a defender.  It would be more optimal to 'meet' the defender
@@ -2262,7 +2262,7 @@ void CvUnitAI::AI_settleMove()
 																					UNITAI_CITY_DEFENSE, 
 																					AI_minSettlerDefense());
 
-					m_contractsLastEstablishedTurn = GC.getGameINLINE().getGameTurn();
+					m_contractsLastEstablishedTurn = GC.getGame().getGameTurn();
 					m_contractualState = CONTRACTUAL_STATE_AWAITING_ANSWER;
 
 					return;
@@ -2296,7 +2296,7 @@ void CvUnitAI::AI_settleMove()
 	/************************************************************************************************/
 	/* BETTER_BTS_AI_MOD                       END                                                  */
 	/************************************************************************************************/
-				&& (GC.getGameINLINE().getMaxCityElimination() > 0))
+				&& (GC.getGame().getMaxCityElimination() > 0))
 			{
 				if (getGroup()->getNumUnits() < 3)
 				{
@@ -2556,7 +2556,7 @@ void CvUnitAI::AI_workerMove()
 	// Afforess - worker financial trouble check
 	if (!(isHuman()) && (AI_getUnitAIType() == UNITAI_WORKER))
 	{
-		if (GC.getGameINLINE().getElapsedGameTurns() > 10 && GET_PLAYER(getOwner()).AI_isFinancialTrouble())
+		if (GC.getGame().getElapsedGameTurns() > 10 && GET_PLAYER(getOwner()).AI_isFinancialTrouble())
 		{
 			if (GET_PLAYER(getOwner()).AI_totalUnitAIs(UNITAI_WORKER) > GET_PLAYER(getOwner()).getNumCities())
 			{
@@ -2798,7 +2798,7 @@ void CvUnitAI::AI_workerMove()
 			}
 
 			// Avoid filling a galley which has just a settler in it, reduce chances for other ships
-			if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+			if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 			{
 				if (AI_load(UNITAI_SETTLER_SEA, MISSIONAI_LOAD_SETTLER, NO_UNITAI, -1, (2 * GET_PLAYER(getOwner()).getBestUnitTypeCargoVolume(UNITAI_WORKER)), -1, -1, MOVE_SAFE_TERRITORY))
 				{
@@ -2822,7 +2822,7 @@ void CvUnitAI::AI_workerMove()
 
 	if (!(isHuman()) && (AI_getUnitAIType() == UNITAI_WORKER))
 	{			
-		if (GC.getGameINLINE().getElapsedGameTurns() > 10)
+		if (GC.getGame().getElapsedGameTurns() > 10)
 		{
 			if (GET_PLAYER(getOwner()).AI_totalUnitAIs(UNITAI_WORKER) > GET_PLAYER(getOwner()).getNumCities())
 			{
@@ -2921,7 +2921,7 @@ void CvUnitAI::AI_barbAttackMove()
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/		
 
-	if (GC.getGameINLINE().getSorenRandNum(2, "AI Barb") == 0)
+	if (GC.getGame().getSorenRandNum(2, "AI Barb") == 0)
 	{
 		if (AI_pillageRange(1))
 		{
@@ -2934,7 +2934,7 @@ void CvUnitAI::AI_barbAttackMove()
 		return;
 	}	
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_RAGING_BARBARIANS))
+	if (GC.getGame().isOption(GAMEOPTION_RAGING_BARBARIANS))
 	{
 		if (AI_pillageRange(4))
 		{
@@ -2972,7 +2972,7 @@ void CvUnitAI::AI_barbAttackMove()
 /************************************************************************************************/		
 		}
 	}
-	else if (GC.getGameINLINE().getNumCivCities() > (GC.getGameINLINE().countCivPlayersAlive() * 3))
+	else if (GC.getGame().getNumCivCities() > (GC.getGame().countCivPlayersAlive() * 3))
 	{
 		if (AI_cityAttack(1, 15))
 		{
@@ -3015,7 +3015,7 @@ void CvUnitAI::AI_barbAttackMove()
 /************************************************************************************************/		
 		}
 	}
-	else if (GC.getGameINLINE().getNumCivCities() > (GC.getGameINLINE().countCivPlayersAlive() * 2))
+	else if (GC.getGame().getNumCivCities() > (GC.getGame().countCivPlayersAlive() * 2))
 	{
 		if (AI_pillageRange(2))
 		{
@@ -3327,7 +3327,7 @@ void CvUnitAI::AI_attackMove()
 					}
 
 					// Pick new transport which has space for other unit ai types to join
-					if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+					if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 					{
 						if (AI_load(UNITAI_ASSAULT_SEA, MISSIONAI_LOAD_ASSAULT, NO_UNITAI, -1, (2 * GET_PLAYER(getOwner()).getBestUnitTypeCargoVolume(UNITAI_ASSAULT_SEA)), -1, -1, MOVE_SAFE_TERRITORY, 4))
 						{
@@ -3529,7 +3529,7 @@ void CvUnitAI::AI_attackMove()
 		{
 			if (area()->getCitiesPerPlayer(BARBARIAN_PLAYER) > 0)
 			{
-				if (getGroup()->getNumUnits() >= GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getBarbarianInitialDefenders())
+				if (getGroup()->getNumUnits() >= GC.getHandicapInfo(GC.getGame().getHandicapType()).getBarbarianInitialDefenders())
 				{
 					if (AI_goToTargetBarbCity(10))
 					{
@@ -4174,7 +4174,7 @@ void CvUnitAI::AI_attackCityMove()
 			}
 
 			//	Also try to get a great commander if we don't have one
-			if ( GC.getGameINLINE().isOption(GAMEOPTION_GREAT_COMMANDERS) && !getGroup()->hasCommander() )
+			if ( GC.getGame().isOption(GAMEOPTION_GREAT_COMMANDERS) && !getGroup()->hasCommander() )
 			{
 				GET_PLAYER(getOwner()).getContractBroker().advertiseWork(bReadyToAttack ? HIGH_PRIORITY_ESCORT_PRIORITY : LOW_PRIORITY_ESCORT_PRIORITY,
 																			   NO_UNITCAPABILITIES,
@@ -5193,7 +5193,7 @@ void CvUnitAI::AI_reserveMove()
 	
 	if (plot()->getOwner() == getOwner())
 	{
-		if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 		{
 			if (AI_load(UNITAI_SETTLER_SEA, MISSIONAI_LOAD_SETTLER, UNITAI_SETTLE, -1, -1, ((SMCargoVolume()*2)-1), -1, MOVE_SAFE_TERRITORY))
 			{
@@ -5715,7 +5715,7 @@ void CvUnitAI::AI_cityDefenseMove()
 	{
 		if (plot()->getOwner() == getOwner())
 		{
-			if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+			if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 			{
 				if (AI_load(UNITAI_SETTLER_SEA, MISSIONAI_LOAD_SETTLER, UNITAI_SETTLE, -1, -1, ((SMCargoVolume()*2)-1), -1, MOVE_SAFE_TERRITORY, 1))
 				{
@@ -5780,7 +5780,7 @@ void CvUnitAI::AI_cityDefenseMove()
 
 		if (plot()->getOwner() == getOwner())
 		{
-			if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+			if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 			{
 				if (AI_load(UNITAI_SETTLER_SEA, MISSIONAI_LOAD_SETTLER, UNITAI_SETTLE, -1, -1, ((SMCargoVolume()*2)-1), -1, MOVE_SAFE_TERRITORY))
 				{
@@ -5923,7 +5923,7 @@ void CvUnitAI::AI_cityDefenseMove()
 	}
 
 	//This should make it so that if the AI accepts that the city is going to be overwhelmed then it starts splitting its units to buy time for more production and reinforcements.
-	if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS) && plot()->isCity(true))
+	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS) && plot()->isCity(true))
 	{
 		int iOurDefense = GET_TEAM(getTeam()).AI_getOurPlotStrength(plot(),0,true,false,true);
 		int iEnemyOffense = GET_PLAYER(getOwner()).AI_getEnemyPlotStrength(plot(),2,false,false);
@@ -6026,7 +6026,7 @@ void CvUnitAI::AI_cityDefenseExtraMove()
 		{
 			if (plot()->getOwner() == getOwner())
 			{
-				if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+				if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 				{
 					if (AI_load(UNITAI_SETTLER_SEA, MISSIONAI_LOAD_SETTLER, UNITAI_SETTLE, -1, -1, ((SMCargoVolume()*2)-1), -1, MOVE_SAFE_TERRITORY, 1))
 					{
@@ -6636,7 +6636,7 @@ void CvUnitAI::AI_prophetMove()
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
-		  (getGameTurnCreated() < (GC.getGameINLINE().getGameTurn() - 25)))
+		  (getGameTurnCreated() < (GC.getGame().getGameTurn() - 25)))
 	{
 		if (AI_discover())
 		{
@@ -6752,7 +6752,7 @@ void CvUnitAI::AI_artistMove()
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
-		  (getGameTurnCreated() < (GC.getGameINLINE().getGameTurn() - 25)))
+		  (getGameTurnCreated() < (GC.getGame().getGameTurn() - 25)))
 	{
 		if (AI_discover())
 		{
@@ -6873,7 +6873,7 @@ void CvUnitAI::AI_scientistMove()
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
-		  (getGameTurnCreated() < (GC.getGameINLINE().getGameTurn() - 25)))
+		  (getGameTurnCreated() < (GC.getGame().getGameTurn() - 25)))
 	{
 		if (AI_discover())
 		{
@@ -6923,7 +6923,7 @@ void CvUnitAI::AI_generalMove()
 	bool bCanDefend = getGroup()->canDefend();
 
 	//	Generals always try to get an escort before moving away from a city
-	if ( !bCanDefend && m_contractsLastEstablishedTurn != GC.getGameINLINE().getGameTurn() && !isCargo() )
+	if ( !bCanDefend && m_contractsLastEstablishedTurn != GC.getGame().getGameTurn() && !isCargo() )
 	{
 		//	For now advertise the work as being here since we'll be holding position
 		//	while we wait for a defender.  It would be more optimal to 'meet' the defender
@@ -6940,7 +6940,7 @@ void CvUnitAI::AI_generalMove()
 
 		GET_PLAYER(getOwner()).getContractBroker().advertiseWork(LOW_PRIORITY_ESCORT_PRIORITY, (unitCapabilities)(DEFENSIVE_UNITCAPABILITIES | OFFENSIVE_UNITCAPABILITIES), plot()->getX(), plot()->getY(), this);
 
-		m_contractsLastEstablishedTurn = GC.getGameINLINE().getGameTurn();
+		m_contractsLastEstablishedTurn = GC.getGame().getGameTurn();
 		m_contractualState = CONTRACTUAL_STATE_AWAITING_ANSWER;
 
 		//	Make sure we stay in charge when our escort joins us
@@ -6958,7 +6958,7 @@ void CvUnitAI::AI_generalMove()
 		//	for now (if we try to and happen to be last in the unit processing sequence out eventual request
 		//	can wind up not being processed by any units so always forces a city build request - when built that unit may also
 		//	not join us for exactly the same reason)
-		bool bLookForWork = ((GC.getGameINLINE().getGameTurn() % 2 == 0) && getLevel() < 10);
+		bool bLookForWork = ((GC.getGame().getGameTurn() % 2 == 0) && getLevel() < 10);
 
 		//	If we're reasonably trained up then break off for any request, otherwise
 		//	keep trying to train up unless there are high priority requests
@@ -7028,7 +7028,7 @@ void CvUnitAI::AI_generalMove()
 				return;
 			}
 			//try load on transport
-			if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+			if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 			{
 				if (AI_load(UNITAI_ASSAULT_SEA, MISSIONAI_LOAD_ASSAULT, NO_UNITAI, -1, (2 * GET_PLAYER(getOwner()).getBestUnitTypeCargoVolume(UNITAI_ASSAULT_SEA)), 0, ((bCanDefend ? MOVE_SAFE_TERRITORY : MOVE_OUR_TERRITORY) | MOVE_WITH_CAUTION))) 
 				{
@@ -7196,7 +7196,7 @@ void CvUnitAI::AI_generalMove()
 		return;
 	}
 	
-	if (GC.getGameINLINE().getSorenRandNum(3, "AI General Construct") == 0)
+	if (GC.getGame().getSorenRandNum(3, "AI General Construct") == 0)
 	{
 		if (AI_construct())
 		{
@@ -7250,7 +7250,7 @@ void CvUnitAI::AI_greatHunterMove()
 	bool bOffenseWar = (area()->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE);
 	bool bCanDefend = getGroup()->canDefend();
 
-	int iGHrandom = GC.getGameINLINE().getSorenRandNum(5, "AI Great Hunter Decision");
+	int iGHrandom = GC.getGame().getSorenRandNum(5, "AI Great Hunter Decision");
 	
 	if (iGHrandom == 0 && AI_leadLegend())
 	{
@@ -7351,7 +7351,7 @@ void CvUnitAI::AI_greatAdmiralMove()
 	bool bOffenseWar = (area()->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE);
 	bool bCanDefend = getGroup()->canDefend();
 
-	int iGArandom = GC.getGameINLINE().getSorenRandNum(4, "AI Great Admiral Decision");
+	int iGArandom = GC.getGame().getSorenRandNum(4, "AI Great Admiral Decision");
 	
 	if (iGArandom == 0)
 	{
@@ -7513,7 +7513,7 @@ void CvUnitAI::AI_merchantMove()
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
-		  (getGameTurnCreated() < (GC.getGameINLINE().getGameTurn() - 25)))
+		  (getGameTurnCreated() < (GC.getGame().getGameTurn() - 25)))
 	{
 		if (AI_discover())
 		{
@@ -7751,7 +7751,7 @@ void CvUnitAI::AI_engineerMove()
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
-		  (getGameTurnCreated() < (GC.getGameINLINE().getGameTurn() - 25)))
+		  (getGameTurnCreated() < (GC.getGame().getGameTurn() - 25)))
 	{
 		if (AI_discover())
 		{
@@ -7813,11 +7813,11 @@ void CvUnitAI::AI_spyMove()
 			break;
 
 		case ATTITUDE_CAUTIOUS:
-			iEspionageChance = (GC.getGameINLINE().isOption(GAMEOPTION_AGGRESSIVE_AI) ? 30 : 10);
+			iEspionageChance = (GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI) ? 30 : 10);
 			break;
 
 		case ATTITUDE_PLEASED:
-			iEspionageChance = (GC.getGameINLINE().isOption(GAMEOPTION_AGGRESSIVE_AI) ? 20 : 0);
+			iEspionageChance = (GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI) ? 20 : 0);
 			break;
 
 		case ATTITUDE_FRIENDLY:
@@ -7897,7 +7897,7 @@ void CvUnitAI::AI_spyMove()
 				}
 			}
 		}
-		else if (GC.getGameINLINE().getSorenRandNum(100, "AI Spy Espionage") < iEspionageChance)
+		else if (GC.getGame().getSorenRandNum(100, "AI Spy Espionage") < iEspionageChance)
 		{
 			// This applies only when not in an enemy city, so for destroying improvements
 			if (AI_espionageSpy())
@@ -8138,7 +8138,7 @@ void CvUnitAI::AI_workerSeaMove()
 			{
 				if (pCity->AI_neededSeaWorkers() == 0)
 				{
-					if (GC.getGameINLINE().getElapsedGameTurns() > 10)
+					if (GC.getGame().getElapsedGameTurns() > 10)
 					{
 						if (GET_PLAYER(getOwner()).calculateUnitCost() > 0)
 						{
@@ -8186,7 +8186,7 @@ void CvUnitAI::AI_barbAttackSeaMove()
 	/* 	Barbarian AI															*/
 	/********************************************************************************/
 	/* original BTS code
-	if (GC.getGameINLINE().getSorenRandNum(2, "AI Barb") == 0)
+	if (GC.getGame().getSorenRandNum(2, "AI Barb") == 0)
 	{
 		if (AI_pillageRange(1))
 		{
@@ -8245,7 +8245,7 @@ void CvUnitAI::AI_barbAttackSeaMove()
 		}
 	}
 
-	if( GC.getGameINLINE().getSorenRandNum(3, "AI Check trapped") == 0 )
+	if( GC.getGame().getSorenRandNum(3, "AI Check trapped") == 0 )
 	{
 		// If trapped in small hole in ice or around tiny island, disband to allow other units to be generated
 		bool bScrap = true;
@@ -8607,7 +8607,7 @@ void CvUnitAI::AI_attackSeaMove()
 			if (iAttackers > (iBlockaders + 2) || iAttackers >= 2*iBlockaders)
 			{
 				if( gUnitLogLevel > 2 ) logBBAI("      Found %d attackers and %d blockaders, proceeding to break blockade", iAttackers, iBlockaders);
-				if(true) /* (iAttackers > GC.getGameINLINE().getSorenRandNum(2*iBlockaders + 1, "AI - Break blockade")) */
+				if(true) /* (iAttackers > GC.getGame().getSorenRandNum(2*iBlockaders + 1, "AI - Break blockade")) */
 				{
 					// BBAI TODO: Make odds scale by # of blockaders vs number of attackers
 					if (baseMoves() >= iBlockadeRange)
@@ -9599,7 +9599,7 @@ void CvUnitAI::AI_assaultSeaMove()
 		{
 			if( pCity != NULL )
 			{
-				if( (GC.getGameINLINE().getGameTurn() - pCity->getGameTurnAcquired()) <= 1 )
+				if( (GC.getGame().getGameTurn() - pCity->getGameTurnAcquired()) <= 1 )
 				{
 					if( pCity->getPreviousOwner() != NO_PLAYER )
 					{
@@ -9702,8 +9702,8 @@ void CvUnitAI::AI_assaultSeaMove()
 			if( (eAreaAIType == AREAAI_ASSAULT) || (eAreaAIType == AREAAI_ASSAULT_ASSIST) )
 			{
 				if( (bFull && 
-					((iCargoVolume > SMcargoSpace() && GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
-					|| (iCargoVolume > cargoSpace() && !GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+					((iCargoVolume > SMcargoSpace() && GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+					|| (iCargoVolume > cargoSpace() && !GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 					|| (iCargoCount >= iTargetReinforcementSize) )))
 				{
 					bReinforce = true;
@@ -9767,7 +9767,7 @@ void CvUnitAI::AI_assaultSeaMove()
 			else if (plot()->getTeam() == getTeam() && getGroup()->getNumUnits() > 1)
 			{
 				CvCity* pCity = plot()->getPlotCity();
-				if( pCity != NULL && (GC.getGameINLINE().getGameTurn() - pCity->getGameTurnAcquired()) > 10 )
+				if( pCity != NULL && (GC.getGame().getGameTurn() - pCity->getGameTurnAcquired()) > 10 )
 				{
 					if( pCity->plot()->plotCount(PUF_isAvailableUnitAITypeGroupie, UNITAI_ATTACK_CITY, -1, NULL, getOwner()) < iTargetReinforcementSize )
 					{
@@ -9788,8 +9788,8 @@ void CvUnitAI::AI_assaultSeaMove()
 
 		if ((iCargoCount >= iTargetReinforcementSize)
 			|| (bFull 
-			&& ((iCargoVolume > cargoSpace() && !GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
-			|| (iCargoVolume > SMcargoSpace() && GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS)))))
+			&& ((iCargoVolume > cargoSpace() && !GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+			|| (iCargoVolume > SMcargoSpace() && GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS)))))
 		{
 			bReinforce = true;
 		}
@@ -9805,7 +9805,7 @@ void CvUnitAI::AI_assaultSeaMove()
 					CvCity* pAdjacentCity = pAdjacentPlot->getPlotCity();
 					if( pAdjacentCity != NULL && pAdjacentCity->getOwner() == getOwner() && pAdjacentCity->getPreviousOwner() != NO_PLAYER )
 					{
-						if( (GC.getGameINLINE().getGameTurn() - pAdjacentCity->getGameTurnAcquired()) < 5 )
+						if( (GC.getGame().getGameTurn() - pAdjacentCity->getGameTurnAcquired()) < 5 )
 						{
 							// If just captured city and we have some cargo, dump units in city
 							if ( getGroup()->pushMissionInternal(MISSION_MOVE_TO, pAdjacentPlot->getX(), pAdjacentPlot->getY(), 0, false, false, MISSIONAI_ASSAULT, pAdjacentPlot) )
@@ -10057,7 +10057,7 @@ void CvUnitAI::AI_assaultSeaMove()
 	else if( !bFull )
 	{
 		bool bHasOneLoad = false;
-		if (!GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+		if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 		{
 			bHasOneLoad = (getGroup()->getCargo() >= cargoSpace());
 		}
@@ -10374,14 +10374,14 @@ void CvUnitAI::AI_settlerSeaMove()
 				return;
 			}
 		}
-		else if(!GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS) && (cargoSpace() - 2 >= getCargo() + iWorkerCount))
+		else if(!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS) && (cargoSpace() - 2 >= getCargo() + iWorkerCount))
 		{
 			if (AI_pickup(UNITAI_SETTLE, true))
 			{
 				return;
 			}
 		}
-		else if(GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS) && (SMcargoSpace() - (2 * GET_PLAYER(getOwner()).getBestUnitTypeCargoVolume(UNITAI_WORKER)) >= SMgetCargo() + (iWorkerCount * GET_PLAYER(getOwner()).getBestUnitTypeCargoVolume(UNITAI_WORKER))))
+		else if(GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS) && (SMcargoSpace() - (2 * GET_PLAYER(getOwner()).getBestUnitTypeCargoVolume(UNITAI_WORKER)) >= SMgetCargo() + (iWorkerCount * GET_PLAYER(getOwner()).getBestUnitTypeCargoVolume(UNITAI_WORKER))))
 		{
 			if (AI_pickup(UNITAI_SETTLE, true))
 			{
@@ -10429,8 +10429,8 @@ void CvUnitAI::AI_settlerSeaMove()
 	//	escort unit also) and wound up giving no orders at all to this unit, then looping over this 100 times
 	//	a ta higher level before giving up and skipping moves for this unit.
 	//if( cargoSpace() - 2 < getCargo() + iWorkerCount )
-	if((!GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS) && (cargoSpace() > 1 && cargoSpace() - getCargo() < 2 && iWorkerCount > 0)) ||
-		(GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS) && (SMcargoSpace() > GET_PLAYER(getOwner()).getBestUnitTypeCargoVolume(UNITAI_SETTLE) && SMcargoSpace() - SMgetCargo() < (2 * GET_PLAYER(getOwner()).getBestUnitTypeCargoVolume(UNITAI_WORKER))&& iWorkerCount > 0)))
+	if((!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS) && (cargoSpace() > 1 && cargoSpace() - getCargo() < 2 && iWorkerCount > 0)) ||
+		(GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS) && (SMcargoSpace() > GET_PLAYER(getOwner()).getBestUnitTypeCargoVolume(UNITAI_SETTLE) && SMcargoSpace() - SMgetCargo() < (2 * GET_PLAYER(getOwner()).getBestUnitTypeCargoVolume(UNITAI_WORKER))&& iWorkerCount > 0)))
 	{
 		// If full of workers and not going anywhere, dump them if a settler is available
 		if( (iSettlerCount == 0) && (plot()->plotCount(PUF_isAvailableUnitAITypeGroupie, UNITAI_SETTLE, -1, NULL, getOwner(), NO_TEAM, PUF_isFiniteRange) > 0) )
@@ -11237,7 +11237,7 @@ void CvUnitAI::AI_attackAirMove()
 		return;
 	}
 
-	if (GC.getGameINLINE().getSorenRandNum(4, "AI Air Attack Move") == 0)
+	if (GC.getGame().getSorenRandNum(4, "AI Air Attack Move") == 0)
 	{
 		if (AI_airBombPlots())
 		{
@@ -11278,7 +11278,7 @@ void CvUnitAI::AI_attackAirMove()
 		bDefensive = pArea->getAreaAIType(getTeam()) == AREAAI_DEFENSIVE;
 	}
 
-	if (GC.getGameINLINE().getSorenRandNum(bDefensive ? 3 : 6, "AI Air Attack Move") == 0)
+	if (GC.getGame().getSorenRandNum(bDefensive ? 3 : 6, "AI Air Attack Move") == 0)
 	{
 		if( AI_defensiveAirStrike() )
 		{
@@ -11286,7 +11286,7 @@ void CvUnitAI::AI_attackAirMove()
 		}
 	}
 
-	if (GC.getGameINLINE().getSorenRandNum(4, "AI Air Attack Move") == 0)
+	if (GC.getGame().getSorenRandNum(4, "AI Air Attack Move") == 0)
 	{
 		// only moves unit in a fort
 		if (AI_travelToUpgradeCity())
@@ -11301,7 +11301,7 @@ void CvUnitAI::AI_attackAirMove()
 		return;
 	}
 
-	if (GC.getGameINLINE().getSorenRandNum(bDefensive ? 6 : 4, "AI Air Attack Move") == 0)
+	if (GC.getGame().getSorenRandNum(bDefensive ? 6 : 4, "AI Air Attack Move") == 0)
 	{
 		if (AI_airBombPlots())
 		{
@@ -11336,7 +11336,7 @@ void CvUnitAI::AI_attackAirMove()
 
 	if (canAirDefend())
 	{
-		if( bDefensive || GC.getGameINLINE().getSorenRandNum(2, "AI Air Attack Move") == 0 )
+		if( bDefensive || GC.getGame().getSorenRandNum(2, "AI Air Attack Move") == 0 )
 		{
 			getGroup()->pushMission(MISSION_AIRPATROL);
 			return;
@@ -11391,7 +11391,7 @@ void CvUnitAI::AI_defenseAirMove()
 		{
 			if (getDamage() > 0)
 			{
-				if( healTurns(plot()) > 1 + GC.getGameINLINE().getSorenRandNum(2, "AI Air Defense Move") )
+				if( healTurns(plot()) > 1 + GC.getGame().getSorenRandNum(2, "AI Air Defense Move") )
 				{
 					// Can't help current situation, only risk losing unit
 					if (AI_airDefensiveCity())
@@ -11417,7 +11417,7 @@ void CvUnitAI::AI_defenseAirMove()
 				// Consider adding extra defenders
 				if( !getGroup()->hasCollateralDamage() && (!pCity->AI_isAirDefended(false,-2)) )
 				{
-					if( GC.getGameINLINE().getSorenRandNum(3, "AI Air Defense Move") == 0 )
+					if( GC.getGame().getSorenRandNum(3, "AI Air Defense Move") == 0 )
 					{
 						getGroup()->pushMission(MISSION_AIRPATROL);
 						return;
@@ -11463,7 +11463,7 @@ void CvUnitAI::AI_defenseAirMove()
 /* 	Air AI																	*/
 /********************************************************************************/
 	/* original BTS code
-	if ((GC.getGameINLINE().getSorenRandNum(2, "AI Air Defense Move") == 0))
+	if ((GC.getGame().getSorenRandNum(2, "AI Air Defense Move") == 0))
 	{
 		if ((pCity != NULL) && pCity->AI_isDanger())
 		{
@@ -11517,7 +11517,7 @@ void CvUnitAI::AI_defenseAirMove()
 		return;
 	}
 	*/
-	if((GC.getGameINLINE().getSorenRandNum(4, "AI Air Defense Move") == 0))
+	if((GC.getGame().getSorenRandNum(4, "AI Air Defense Move") == 0))
 	{
 		// only moves unit in a fort
 		if (AI_travelToUpgradeCity())
@@ -11567,7 +11567,7 @@ void CvUnitAI::AI_defenseAirMove()
 				// Consider adding extra defenders
 				if( !(pCity->AI_isAirDefended(false,-1)) )
 				{
-					if ((GC.getGameINLINE().getSorenRandNum((bOffensive ? 3 : 2), "AI Air Defense Move") == 0))
+					if ((GC.getGame().getSorenRandNum((bOffensive ? 3 : 2), "AI Air Defense Move") == 0))
 					{
 						getGroup()->pushMission(MISSION_AIRPATROL);
 						return;
@@ -11576,7 +11576,7 @@ void CvUnitAI::AI_defenseAirMove()
 			}
 			else
 			{
-				if ((GC.getGameINLINE().getSorenRandNum((bOffensive ? 3 : 2), "AI Air Defense Move") == 0))
+				if ((GC.getGame().getSorenRandNum((bOffensive ? 3 : 2), "AI Air Defense Move") == 0))
 				{
 					getGroup()->pushMission(MISSION_AIRPATROL);
 					return;
@@ -11584,7 +11584,7 @@ void CvUnitAI::AI_defenseAirMove()
 			}
 		}
 
-		if((GC.getGameINLINE().getSorenRandNum(3, "AI Air Defense Move") > 0))
+		if((GC.getGame().getSorenRandNum(3, "AI Air Defense Move") > 0))
 		{
 			if (AI_defensiveAirStrike())
 			{
@@ -11599,7 +11599,7 @@ void CvUnitAI::AI_defenseAirMove()
 	}
 	else
 	{
-		if ((GC.getGameINLINE().getSorenRandNum(3, "AI Air Defense Move") > 0))
+		if ((GC.getGame().getSorenRandNum(3, "AI Air Defense Move") > 0))
 		{
 			// Clear out any enemy fighters, support offensive units
 			if (AI_airBombDefenses())
@@ -11607,7 +11607,7 @@ void CvUnitAI::AI_defenseAirMove()
 				return;
 			}
 
-			if (GC.getGameINLINE().getSorenRandNum(3, "AI Air Defense Move") == 0)
+			if (GC.getGame().getSorenRandNum(3, "AI Air Defense Move") == 0)
 			{
 				// Hit enemy land stacks near our cities
 				if (AI_defensiveAirStrike())
@@ -11676,7 +11676,7 @@ void CvUnitAI::AI_carrierAirMove()
 
 	if (isCargo())
 	{
-		int iRand = GC.getGameINLINE().getSorenRandNum(3, "AI Air Carrier Move");
+		int iRand = GC.getGame().getSorenRandNum(3, "AI Air Carrier Move");
 		
 		if (iRand == 2 && canAirDefend())
 		{
@@ -11778,7 +11778,7 @@ void CvUnitAI::AI_missileAirMove()
 	
 	if (isCargo())
 	{
-		int iRand = GC.getGameINLINE().getSorenRandNum(3, "AI Air Missile plot bombing");
+		int iRand = GC.getGame().getSorenRandNum(3, "AI Air Missile plot bombing");
 		if (iRand != 0)
 		{
 			if (AI_airBombPlots())
@@ -11787,7 +11787,7 @@ void CvUnitAI::AI_missileAirMove()
 			}
 		}
 
-		iRand = GC.getGameINLINE().getSorenRandNum(3, "AI Air Missile Carrier Move");
+		iRand = GC.getGame().getSorenRandNum(3, "AI Air Missile Carrier Move");
 		if (iRand == 0)
 		{
 			if (AI_airBombDefenses())
@@ -12905,7 +12905,7 @@ int CvUnitAI::AI_promotionValue(PromotionTypes ePromotion)
 //
 //		if (iValue > 0)
 //		{
-//			iValue += GC.getGameINLINE().getSorenRandNum(15, "AI Promote");
+//			iValue += GC.getGame().getSorenRandNum(15, "AI Promote");
 //		}
 //
 //		return iValue;
@@ -13919,7 +13919,7 @@ int CvUnitAI::AI_promotionValue(PromotionTypes ePromotion)
 //
 //	if (iValue > 0)
 //	{
-//		iValue += GC.getGameINLINE().getSorenRandNum(15, "AI Promote");
+//		iValue += GC.getGame().getSorenRandNum(15, "AI Promote");
 //	}
 //
 //	return iValue;
@@ -14318,7 +14318,7 @@ bool CvUnitAI::AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITyp
 
 	int iCurrentGroupSize = getGroup()->getNumUnits();
 	// Under Size Matters we need the volume of the group
-	if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		iCurrentGroupSize = getGroup()->getNumUnitCargoVolumeTotal();
 	}
@@ -14348,7 +14348,7 @@ bool CvUnitAI::AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITyp
 				{
 					int iCargoSpaceAvailable = pLoopUnit->cargoSpaceAvailable(getSpecialUnitType(), getDomainType());
 					// iCargoSpaceAvailable refers to the space (in unit counts here) available to load units on the transport under eval
-					if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+					if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 					{
 						iCargoSpaceAvailable = pLoopUnit->SMcargoSpaceAvailable(getSpecialUnitType(), getDomainType());
 						// here we make it refer to the space (in cargo volumes) available to load units on the transport instead
@@ -14483,7 +14483,7 @@ bool CvUnitAI::AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITyp
 			// BBAI TODO: To split or not to split?
 			//Here is where it gets complicated again...
 			int iCargoSpaceAvailable = bestTransportUnit->cargoSpaceAvailable(getSpecialUnitType(), getDomainType());
-			if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+			if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 			{//This is actually somewhat unnecessary as it's only going to ask for a count and otherwise split into individual units rather than a group that can then load just right
 				iCargoSpaceAvailable = bestTransportUnit->SMcargoSpaceAvailable(getSpecialUnitType(), getDomainType());
 			}
@@ -14493,7 +14493,7 @@ bool CvUnitAI::AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITyp
 			CvSelectionGroup* pOtherGroup = NULL;
 			//woooo... how to convert THIS???
 			CvSelectionGroup* pSplitGroup = NULL;
-			if (!GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+			if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 			{
 				pSplitGroup = getGroup()->splitGroup(iCargoSpaceAvailable, this, &pOtherGroup);
 			}
@@ -15689,7 +15689,7 @@ bool CvUnitAI::AI_guardSpy(int iRandomPercent)
 						int iPathTurns;
 						if (generatePath(pLoopCity->plot(), 0, true, &iPathTurns))
 						{
-							iValue *= 100 + GC.getGameINLINE().getSorenRandNum(iRandomPercent, "AI Guard Spy");
+							iValue *= 100 + GC.getGame().getSorenRandNum(iRandomPercent, "AI Guard Spy");
 							//iValue /= 100;
 							iValue /= iPathTurns + 1;
 
@@ -16123,7 +16123,7 @@ bool CvUnitAI::AI_heal(int iDamagePercent, int iMaxPath)
 				OutputDebugString("AI_heal: no adjacent defenders\n");
 				//	Koshling - this was causing more death than it was saving, especially now that
 				//	explorer and engineer callers do a safety check before attempting to heal
-				//if (!noDefensiveBonus() || GC.getGameINLINE().getSorenRandNum(3, "AI Heal"))
+				//if (!noDefensiveBonus() || GC.getGame().getSorenRandNum(3, "AI Heal"))
 				{
 					OutputDebugString(CvString::format("AI_heal: noDefensiveBonus()=%d, considering heal\n",noDefensiveBonus()).c_str());
 					if (plot()->getTeam() == NO_TEAM || !GET_TEAM(plot()->getTeam()).isAtWar(getTeam()))
@@ -17365,7 +17365,7 @@ namespace {
 	{
 		const CvUnitClassInfo& unitInfo = GC.getUnitClassInfo(unit->getUnitClassType());
 		return (unitInfo.getMaxGlobalInstances() > 0 && unitInfo.getMaxGlobalInstances() <= 3)
-			|| (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS) && unit->qualityRank() > 8);
+			|| (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS) && unit->qualityRank() > 8);
 	}
 }
 
@@ -19253,9 +19253,9 @@ bool CvUnitAI::AI_patrol(bool bIgnoreDanger)
 /**					Reduction in massive Random Spam in Logger files by using Map				**/
 /*************************************************************************************************/
 /**								---- Start Original Code ----									**
-						iValue = (1 + GC.getGameINLINE().getSorenRandNum(10000, "AI Patrol"));
+						iValue = (1 + GC.getGame().getSorenRandNum(10000, "AI Patrol"));
 /**								----  End Original Code  ----									**/
-						iValue = (1 + GC.getGameINLINE().getMapRandNum(10000, "AI Patrol"));
+						iValue = (1 + GC.getGame().getMapRandNum(10000, "AI Patrol"));
 /*************************************************************************************************/
 /**	Tweak									END													**/
 /*************************************************************************************************/
@@ -19352,7 +19352,7 @@ bool CvUnitAI::AI_defend()
 						{
 							if (!atPlot(pLoopPlot) && generatePath(pLoopPlot, 0, true, &iPathTurns, 1))
 							{
-								iValue = (1 + GC.getGameINLINE().getSorenRandNum(10000, "AI Defend"));
+								iValue = (1 + GC.getGame().getSorenRandNum(10000, "AI Defend"));
 
 								if (iValue > iBestValue)
 								{
@@ -19400,13 +19400,13 @@ bool CvUnitAI::AI_safety(int iRange)
 	bool bAnimalDanger = GET_PLAYER(getOwner()).AI_getVisiblePlotDanger(plot(),1,true);
 	int iImpassableCount = GET_PLAYER(getOwner()).AI_unitImpassableCount(getUnitType());
 
-	//GC.getGameINLINE().logOOSSpecial(3,iValue,getID());
+	//GC.getGame().logOOSSpecial(3,iValue,getID());
 	CvPlot* pBestPlot = NULL;
 	int iBestValue = 0;
 	int iPass = 0;
 	for (; iPass < 2 && pBestPlot == NULL; ++iPass)
 	{
-		if (!GC.getGameINLINE().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
+		if (!GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
 		{
 			CvReachablePlotSet plotSet(getGroup(), (iPass > 0) ? MOVE_IGNORE_DANGER : 0, iSearchRange);
 
@@ -19468,7 +19468,7 @@ bool CvUnitAI::AI_safety(int iRange)
 					}
 					else
 					{
-						iValue += GC.getGameINLINE().getSorenRandNum(50, "AI Safety");
+						iValue += GC.getGame().getSorenRandNum(50, "AI Safety");
 					}
 
 					int iTerrainDamage = pLoopPlot->getTotalTurnDamage(getGroup());
@@ -19511,18 +19511,18 @@ bool CvUnitAI::AI_safety(int iRange)
 				for (int iDY = -(iSearchRange); iDY <= iSearchRange; iDY++)
 				{
 					CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
-					//GC.getGameINLINE().logOOSSpecial(24,iValue,getID());
+					//GC.getGame().logOOSSpecial(24,iValue,getID());
 					if (pLoopPlot == NULL || !AI_plotValid(pLoopPlot))
 						continue;
 
-					//GC.getGameINLINE().logOOSSpecial(25, pLoopPlot->getX(), pLoopPlot->getY(), getID());
-					//GC.getGameINLINE().logOOSSpecial(26, pLoopPlot->getX(), pLoopPlot->getY(), getID());
+					//GC.getGame().logOOSSpecial(25, pLoopPlot->getX(), pLoopPlot->getY(), getID());
+					//GC.getGame().logOOSSpecial(26, pLoopPlot->getX(), pLoopPlot->getY(), getID());
 					int iPathTurns = 0;
 					if ((!pLoopPlot->isVisible(getTeam(),false) || !pLoopPlot->isVisibleEnemyUnit(this))
 						&& generatePath(pLoopPlot, ((iPass > 0) ? MOVE_IGNORE_DANGER : 0), true, &iPathTurns, iRange))
 					{
-						//GC.getGameINLINE().logOOSSpecial(27, iPass, iPathTurns, iRange);
-						//GC.getGameINLINE().logOOSSpecial(28, iPass, iPathTurns, iRange);
+						//GC.getGame().logOOSSpecial(27, iPass, iPathTurns, iRange);
+						//GC.getGame().logOOSSpecial(28, iPass, iPathTurns, iRange);
 						int iCount = 0;
 
 						for (CvPlot::unit_iterator itr = pLoopPlot->beginUnits(); itr != pLoopPlot->endUnits(); ++itr)
@@ -19560,11 +19560,11 @@ bool CvUnitAI::AI_safety(int iRange)
 								iValue += 50;
 							}
 						}
-						//GC.getGameINLINE().logOOSSpecial(4,iValue,getID());
+						//GC.getGame().logOOSSpecial(4,iValue,getID());
 
 						iValue += pLoopPlot->defenseModifier(getTeam(), false);
 
-						//GC.getGameINLINE().logOOSSpecial(5,iValue,getID());
+						//GC.getGame().logOOSSpecial(5,iValue,getID());
 
 						if (atPlot(pLoopPlot))
 						{
@@ -19572,8 +19572,8 @@ bool CvUnitAI::AI_safety(int iRange)
 						}
 						else
 						{
-							iValue += GC.getGameINLINE().getSorenRandNum(50, "AI Safety");
-							//GC.getGameINLINE().logOOSSpecial(6,iValue,getID());
+							iValue += GC.getGame().getSorenRandNum(50, "AI Safety");
+							//GC.getGame().logOOSSpecial(6,iValue,getID());
 						}
 
 						int iTerrainDamage = pLoopPlot->getTotalTurnDamage(getGroup());
@@ -19608,7 +19608,7 @@ bool CvUnitAI::AI_safety(int iRange)
 						}
 					}
 				}
-				//GC.getGameINLINE().logOOSSpecial(27,iDX,iDY, getID());
+				//GC.getGame().logOOSSpecial(27,iDX,iDY, getID());
 			}
 		}
 	}
@@ -19732,7 +19732,7 @@ bool CvUnitAI::AI_hide()
 								}
 								else
 								{
-									iValue += GC.getGameINLINE().getSorenRandNum(50, "AI Hide");
+									iValue += GC.getGame().getSorenRandNum(50, "AI Hide");
 								}
 
 								if (iValue > iBestValue)
@@ -19805,7 +19805,7 @@ bool CvUnitAI::AI_goody(int iRange)
 				{
 					if (iPathTurns <= iRange)
 					{
-						iValue = (1 + GC.getGameINLINE().getSorenRandNum(10000, "AI Goody"));
+						iValue = (1 + GC.getGame().getSorenRandNum(10000, "AI Goody"));
 
 						iValue /= (iPathTurns + 1);
 
@@ -19900,7 +19900,7 @@ bool CvUnitAI::AI_explore()
 	pBestPlot = NULL;
 	pBestExplorePlot = NULL;
 	
-	bool bNoContact = (GC.getGameINLINE().countCivTeamsAlive() > GET_TEAM(getTeam()).getHasMetCivCount(true));
+	bool bNoContact = (GC.getGame().countCivTeamsAlive() > GET_TEAM(getTeam()).getHasMetCivCount(true));
 
 	//	If we had previously selected a target make sure we include it in our evaluation this
 	//	time around else dithering between different plots can occur
@@ -19945,9 +19945,9 @@ bool CvUnitAI::AI_explore()
 /**					Reduction in massive Random Spam in Logger files by using Map				**/
 /*************************************************************************************************/
 /**								---- Start Original Code ----									**
-			if (iValue > 0 || GC.getGameINLINE().getSorenRandNum(4, "AI make explore faster ;)") == 0)
+			if (iValue > 0 || GC.getGame().getSorenRandNum(4, "AI make explore faster ;)") == 0)
 /**								----  End Original Code  ----									**/
-			if (iValue > 0 || pLoopPlot == pPreviouslySelectedPlot || GC.getGameINLINE().getMapRandNum(4, "AI make explore faster ;)") == 0)
+			if (iValue > 0 || pLoopPlot == pPreviouslySelectedPlot || GC.getGame().getMapRandNum(4, "AI make explore faster ;)") == 0)
 /*************************************************************************************************/
 /**	Tweak									END													**/
 /*************************************************************************************************/
@@ -19985,9 +19985,9 @@ bool CvUnitAI::AI_explore()
 /**					Reduction in massive Random Spam in Logger files by using Map				**/
 /*************************************************************************************************/
 /**								---- Start Original Code ----									**
-						iValue += GC.getGameINLINE().getSorenRandNum(250 * abs(xDistance(getX(), pLoopPlot->getX())) + abs(yDistance(getY(), pLoopPlot->getY())), "AI explore");
+						iValue += GC.getGame().getSorenRandNum(250 * abs(xDistance(getX(), pLoopPlot->getX())) + abs(yDistance(getY(), pLoopPlot->getY())), "AI explore");
 /**								----  End Original Code  ----									**/
-						iValue += GC.getGameINLINE().getMapRandNum(250 * abs(xDistance(getX(), pLoopPlot->getX())) + abs(yDistance(getY(), pLoopPlot->getY())), "AI explore");
+						iValue += GC.getGame().getMapRandNum(250 * abs(xDistance(getX(), pLoopPlot->getX())) + abs(yDistance(getY(), pLoopPlot->getY())), "AI explore");
 /*************************************************************************************************/
 /**	Tweak									END													**/
 /*************************************************************************************************/
@@ -20234,9 +20234,9 @@ bool CvUnitAI::AI_exploreRange(int iRange)
 /**					Reduction in massive Random Spam in Logger files by using Map				**/
 /*************************************************************************************************/
 /**								---- Start Original Code ----									**
-							iValue += GC.getGameINLINE().getSorenRandNum(10000, "AI Explore");
+							iValue += GC.getGame().getSorenRandNum(10000, "AI Explore");
 /**								----  End Original Code  ----									**/
-					iValue += GC.getGameINLINE().getMapRandNum(10000, "AI Explore");
+					iValue += GC.getGame().getMapRandNum(10000, "AI Explore");
 /*************************************************************************************************/
 /**	Tweak									END													**/
 /*************************************************************************************************/
@@ -20423,7 +20423,7 @@ bool CvUnitAI::AI_refreshExploreRange(int iRange, bool bIncludeVisibilityRefresh
 
 				if ( bIncludeVisibilityRefresh && !pLoopPlot->isVisible(getTeam(),false) )
 				{
-					iValue += (GC.getGameINLINE().getGameTurn() - pLoopPlot->getLastVisibleTurn(getTeam()));
+					iValue += (GC.getGame().getGameTurn() - pLoopPlot->getLastVisibleTurn(getTeam()));
 				}
 
 				for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
@@ -20488,7 +20488,7 @@ bool CvUnitAI::AI_refreshExploreRange(int iRange, bool bIncludeVisibilityRefresh
 							{
 								if (iPathTurns <= iRange)
 								{
-									iValue += GC.getGameINLINE().getMapRandNum(50, "AI Explore");
+									iValue += GC.getGame().getMapRandNum(50, "AI Explore");
 
 									if ( bValidAdjacentEnemyValue && iPathTurns <= 1 )
 									{
@@ -23773,7 +23773,7 @@ bool CvUnitAI::AI_assaultSeaTransport(bool bBarbarian)
 
 									if (pCity != NULL)
 									{
-										iThisTurnValueIncrement = GC.getGameINLINE().getSorenRandNum(50, "AI Assault");
+										iThisTurnValueIncrement = GC.getGame().getSorenRandNum(50, "AI Assault");
 
 										if (pCity->area()->getNumCities() > 1)
 										{
@@ -23856,7 +23856,7 @@ bool CvUnitAI::AI_assaultSeaTransport(bool bBarbarian)
 									// +/- 33%
 									if (iPathTurns > 3)
 									{
-										int iPathAdjustment = GC.getGameINLINE().getSorenRandNum(67, "AI Assault Target");
+										int iPathAdjustment = GC.getGame().getSorenRandNum(67, "AI Assault Target");
 
 										iPathTurns *= 66 + iPathAdjustment;
 										iPathTurns /= 100;
@@ -24137,7 +24137,7 @@ bool CvUnitAI::AI_assaultSeaReinforce(bool bBarbarian)
 														// +/- 33%
 														if (iPathTurns > 3)
 														{
-															int iPathAdjustment = GC.getGameINLINE().getSorenRandNum(67, "AI Assault Target");
+															int iPathAdjustment = GC.getGame().getSorenRandNum(67, "AI Assault Target");
 
 															iPathTurns *= 66 + iPathAdjustment;
 															iPathTurns /= 100;
@@ -24202,7 +24202,7 @@ bool CvUnitAI::AI_assaultSeaReinforce(bool bBarbarian)
 					if( iValue > 0 )
 					{
 						bool bCityDanger = pLoopCity->AI_isDanger();
-						if( (bCity && pLoopCity->area() != area()) || bCityDanger || ((GC.getGameINLINE().getGameTurn() - pLoopCity->getGameTurnAcquired()) < 10 && pLoopCity->getPreviousOwner() != NO_PLAYER) )
+						if( (bCity && pLoopCity->area() != area()) || bCityDanger || ((GC.getGame().getGameTurn() - pLoopCity->getGameTurnAcquired()) < 10 && pLoopCity->getPreviousOwner() != NO_PLAYER) )
 						{
 							int iOurPower = std::max(1, pLoopCity->area()->getPower(getOwner()));
 							// Enemy power includes barb power
@@ -24228,7 +24228,7 @@ bool CvUnitAI::AI_assaultSeaReinforce(bool bBarbarian)
 									// +/- 33%
 									if (iPathTurns > 3)
 									{
-										int iPathAdjustment = GC.getGameINLINE().getSorenRandNum(67, "AI Assault Target");
+										int iPathAdjustment = GC.getGame().getSorenRandNum(67, "AI Assault Target");
 
 										iPathTurns *= 66 + iPathAdjustment;
 										iPathTurns /= 100;
@@ -24321,7 +24321,7 @@ bool CvUnitAI::AI_assaultSeaReinforce(bool bBarbarian)
 													// +/- 33%
 													if (iPathTurns > 3)
 													{
-														int iPathAdjustment = GC.getGameINLINE().getSorenRandNum(67, "AI Assault Target");
+														int iPathAdjustment = GC.getGame().getSorenRandNum(67, "AI Assault Target");
 
 														iPathTurns *= 66 + iPathAdjustment;
 														iPathTurns /= 100;
@@ -26706,7 +26706,7 @@ bool CvUnitAI::AI_improveBonus(int iMinValue, CvPlot** ppBestPlot, BuildTypes* p
 
 bool CvUnitAI::AI_isAwaitingContract() const
 {
-	return (m_contractsLastEstablishedTurn == GC.getGameINLINE().getGameTurn() &&
+	return (m_contractsLastEstablishedTurn == GC.getGame().getGameTurn() &&
 			(m_contractualState == CONTRACTUAL_STATE_AWAITING_ANSWER || m_contractualState == CONTRACTUAL_STATE_AWAITING_WORK));
 }
 
@@ -26720,14 +26720,14 @@ bool CvUnitAI::processContracts(int iMinPriority)
 		return false;
 	}
 
-	bool bContractAlreadyEstablished = (m_contractsLastEstablishedTurn == GC.getGameINLINE().getGameTurn());
+	bool bContractAlreadyEstablished = (m_contractsLastEstablishedTurn == GC.getGame().getGameTurn());
 
 	//	Have we advertised ourselves as available yet?
 	if ( !bContractAlreadyEstablished )
 	{
 		GET_PLAYER(getOwner()).getContractBroker().lookingForWork(this, iMinPriority);
 
-		m_contractsLastEstablishedTurn = GC.getGameINLINE().getGameTurn();
+		m_contractsLastEstablishedTurn = GC.getGame().getGameTurn();
 		m_contractualState = CONTRACTUAL_STATE_AWAITING_WORK;
 		if( gUnitLogLevel >= 3 )
 		{
@@ -26930,7 +26930,7 @@ bool CvUnitAI::AI_workerNeedsDefender(CvPlot* pPlot) const
 bool CvUnitAI::AI_workerReleaseDefenderIfNotNeeded() const
 {
 	//	Never release on the same turn we contracted or an infinite loop can result
-	if ( m_contractsLastEstablishedTurn != GC.getGameINLINE().getGameTurn() )
+	if ( m_contractsLastEstablishedTurn != GC.getGame().getGameTurn() )
 	{
 		if ( getDomainType() != DOMAIN_LAND )
 		{
@@ -27860,7 +27860,7 @@ bool CvUnitAI::AI_pickup(UnitAITypes eUnitAI, bool bCountProduction, int iMaxPat
 				if ((AI_getUnitAIType() != UNITAI_ASSAULT_SEA) || pCity->AI_isDefended(-1))
 				{
 */
-			if( (GC.getGameINLINE().getGameTurn() - pCity->getGameTurnAcquired()) > 15 || (GET_TEAM(getTeam()).countEnemyPowerByArea(pCity->area()) == 0) )
+			if( (GC.getGame().getGameTurn() - pCity->getGameTurnAcquired()) > 15 || (GET_TEAM(getTeam()).countEnemyPowerByArea(pCity->area()) == 0) )
 			{
 				bool bConsider = false;
 
@@ -27913,7 +27913,7 @@ bool CvUnitAI::AI_pickup(UnitAITypes eUnitAI, bool bCountProduction, int iMaxPat
 						}
 					}
 
-					if (!GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+					if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 					{
 						if (GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pCity->plot(), MISSIONAI_PICKUP, getGroup()) < ((iCount + (getGroup()->getCargoSpace() - 1)) / std::max(1,getGroup()->getCargoSpace())))
 						{
@@ -27950,7 +27950,7 @@ bool CvUnitAI::AI_pickup(UnitAITypes eUnitAI, bool bCountProduction, int iMaxPat
 /*                                                                                              */
 /* Naval AI                                                                                     */
 /************************************************************************************************/
-			if( (GC.getGameINLINE().getGameTurn() - pLoopCity->getGameTurnAcquired()) > 15 || (GET_TEAM(getTeam()).countEnemyPowerByArea(pLoopCity->area()) == 0) )
+			if( (GC.getGame().getGameTurn() - pLoopCity->getGameTurnAcquired()) > 15 || (GET_TEAM(getTeam()).countEnemyPowerByArea(pLoopCity->area()) == 0) )
 			{
 				bool bConsider = false;
 
@@ -28010,7 +28010,7 @@ bool CvUnitAI::AI_pickup(UnitAITypes eUnitAI, bool bCountProduction, int iMaxPat
 						if (!(pLoopCity->plot()->isVisibleEnemyUnit(this)))
 						{
 							bool bCheck = false;
-							if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+							if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 							{
 								bCheck = (GET_PLAYER(getOwner()).AI_plotTargetMissionAIsinCargoVolume(pLoopCity->plot(), MISSIONAI_PICKUP, getGroup()) < (((iCount * 100) + (getGroup()->getCargoSpace() - 100)) / std::max(1,getGroup()->getCargoSpace())));
 							}
@@ -28837,9 +28837,9 @@ bool CvUnitAI::AI_airCarrier()
 				iValue += 10;
 			}
 
-			if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+			if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 			{
-				iValue /= (pLoopUnit->SMgetCargo() + GC.getGameINLINE().getBaseAirUnitIncrementsbyCargoVolume()) / GC.getGameINLINE().getBaseAirUnitIncrementsbyCargoVolume();
+				iValue /= (pLoopUnit->SMgetCargo() + GC.getGame().getBaseAirUnitIncrementsbyCargoVolume()) / GC.getGame().getBaseAirUnitIncrementsbyCargoVolume();
 			}
 			else
 			{
@@ -28892,9 +28892,9 @@ bool CvUnitAI::AI_missileLoad(UnitAITypes eTargetUnitAI, int iMaxOwnUnitAI, bool
 						
 						iValue += GC.getGame().getSorenRandNum(100, "AI missile load");
 
-						if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+						if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 						{
-							iValue *= (GC.getGameINLINE().getBaseMissileUnitIncrementsbyCargoVolume() + pLoopUnit->SMgetCargo()/GC.getGameINLINE().getBaseMissileUnitIncrementsbyCargoVolume());
+							iValue *= (GC.getGame().getBaseMissileUnitIncrementsbyCargoVolume() + pLoopUnit->SMgetCargo()/GC.getGame().getBaseMissileUnitIncrementsbyCargoVolume());
 						}
 						else
 						{
@@ -29293,7 +29293,7 @@ bool CvUnitAI::AI_airBombPlots()
 						{
 							iValue += AI_pillageValue(pLoopPlot, 15);
 
-							iValue += GC.getGameINLINE().getSorenRandNum(10, "AI Air Bomb");
+							iValue += GC.getGame().getSorenRandNum(10, "AI Air Bomb");
 						}
 						else if (isSuicide())
 						{
@@ -29985,12 +29985,12 @@ bool CvUnitAI::AI_reconSpy(int iRange)
 				int iValue = 0;
 				if (pLoopPlot->getPlotCity() != NULL)
 				{
-					iValue += GC.getGameINLINE().getSorenRandNum(4000, "AI Spy Scout City");
+					iValue += GC.getGame().getSorenRandNum(4000, "AI Spy Scout City");
 				}
 				
 				if (pLoopPlot->getBonusType(getTeam()) != NO_BONUS)
 				{
-					iValue += GC.getGameINLINE().getSorenRandNum(1000, "AI Spy Recon Bonus");
+					iValue += GC.getGame().getSorenRandNum(1000, "AI Spy Recon Bonus");
 				}
 				
 				for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
@@ -30019,7 +30019,7 @@ bool CvUnitAI::AI_reconSpy(int iRange)
 						if (iPathTurns <= iRange)
 						{
 							// don't give each and every plot in range a value before generating the patch (performance hit)
-							iValue += GC.getGameINLINE().getSorenRandNum(250, "AI Spy Scout Best Plot");
+							iValue += GC.getGame().getSorenRandNum(250, "AI Spy Scout Best Plot");
 
 							iValue *= iDistance;
 
@@ -30228,7 +30228,7 @@ bool CvUnitAI::AI_cityOffenseSpy(int iMaxPath, CvCity* pSkipCity)
 		if (kLoopPlayer.isAlive() && kLoopPlayer.getTeam() != getTeam() && !GET_TEAM(getTeam()).isVassal(kLoopPlayer.getTeam()))
 		{
 			// Only move to cities where we will run missions
-			if (GET_PLAYER(getOwner()).AI_getAttitudeWeight((PlayerTypes)iPlayer) < (GC.getGameINLINE().isOption(GAMEOPTION_AGGRESSIVE_AI) ? 51 : 1)
+			if (GET_PLAYER(getOwner()).AI_getAttitudeWeight((PlayerTypes)iPlayer) < (GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI) ? 51 : 1)
 				|| GET_TEAM(getTeam()).AI_getWarPlan(kLoopPlayer.getTeam()) != NO_WARPLAN
 				|| GET_TEAM(getTeam()).getBestKnownTechScorePercent() < 85 )
 			{
@@ -30299,7 +30299,7 @@ bool CvUnitAI::AI_bonusOffenseSpy(int iRange)
 				if( pLoopPlot->isOwned() && pLoopPlot->getTeam() != getTeam() )
 				{
 					// Only move to plots where we will run missions
-					if (GET_PLAYER(getOwner()).AI_getAttitudeWeight(pLoopPlot->getOwner()) < (GC.getGameINLINE().isOption(GAMEOPTION_AGGRESSIVE_AI) ? 51 : 1)
+					if (GET_PLAYER(getOwner()).AI_getAttitudeWeight(pLoopPlot->getOwner()) < (GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI) ? 51 : 1)
 						|| GET_TEAM(getTeam()).AI_getWarPlan(pLoopPlot->getTeam()) != NO_WARPLAN )
 					{
 						int iValue = AI_getEspionageTargetValue(pLoopPlot, iRange, iBestValue);
@@ -30460,7 +30460,7 @@ bool CvUnitAI::AI_moveToStagingCity()
 						// Attraction to cities which are serving as launch/pickup points
 						iValue += 3*pLoopCity->plot()->plotCount(PUF_isUnitAIType, UNITAI_ASSAULT_SEA, -1, NULL, getOwner());
 						iValue += 2*pLoopCity->plot()->plotCount(PUF_isUnitAIType, UNITAI_ESCORT_SEA, -1, NULL, getOwner());
-						if (!GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+						if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 						{
 							iValue += 5*GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pLoopCity->plot(), MISSIONAI_PICKUP);
 						}
@@ -30995,7 +30995,7 @@ int CvUnitAI::AI_nukeValue(const CvCity* pCity) const
 
 	int iValue = 1;
 
-	iValue += GC.getGameINLINE().getSorenRandNum((pCity->getPopulation() + 1), "AI Nuke City Value");
+	iValue += GC.getGame().getSorenRandNum((pCity->getPopulation() + 1), "AI Nuke City Value");
 	iValue += std::max(0, pCity->getPopulation() - 10);
 
 	iValue += ((pCity->getPopulation() * (100 + pCity->calculateCulturePercent(pCity->getOwner()))) / 100);
@@ -31502,7 +31502,7 @@ bool CvUnitAI::AI_artistCultureVictoryMove()
         bGreatWork = true;
     }
 
-	int iCultureCitiesNeeded = GC.getGameINLINE().culturalVictoryNumCultureCities();
+	int iCultureCitiesNeeded = GC.getGame().culturalVictoryNumCultureCities();
 	FAssertMsg(iCultureCitiesNeeded > 0, "CultureVictory Strategy should not be true");
 
 	CvCity* pLoopCity;
@@ -31907,7 +31907,7 @@ bool CvUnitAI::AI_allowGroup(const CvUnit* pUnit, UnitAITypes eUnitAI) const
 	}
 
 	//	Don't join a unit that was itself wondering what to do this turn
-	if ( (static_cast<const CvUnitAI*>(pUnit))->m_contractsLastEstablishedTurn == GC.getGameINLINE().getGameTurn() &&
+	if ( (static_cast<const CvUnitAI*>(pUnit))->m_contractsLastEstablishedTurn == GC.getGame().getGameTurn() &&
 		 (m_contractualState == CONTRACTUAL_STATE_AWAITING_WORK || m_contractualState == CONTRACTUAL_STATE_NO_WORK_FOUND))
 	{
 		return false;
@@ -32404,14 +32404,14 @@ bool CvUnitAI::AI_RbombardNaval()
 
 						if (pDefender != NULL && pDefender->canDefend() && iValue > 0)
 						{
-							//iDamage = GC.getGameINLINE().getSorenRandNum(rBombardDamage(), "AI Bombard");
+							//iDamage = GC.getGame().getSorenRandNum(rBombardDamage(), "AI Bombard");
 							//iValue = std::max(0, (std::min((pDefender->getDamage() + iDamage), rBombardDamage()) - pDefender->getDamage()));
 							//iValue += ((((iDamage * collateralDamage()) / 100) * std::min((pLoopPlot->getNumVisibleEnemyDefenders(this) - 1), collateralDamageMaxUnits())) / 2);
 							iValue *= (3 + iPotentialAttackers);
 							iValue /= 4;
 						}
 					}
-					iValue *= GC.getGameINLINE().getSorenRandNum(20, "AI Ranged Bombard Selection(Naval)");
+					iValue *= GC.getGame().getSorenRandNum(20, "AI Ranged Bombard Selection(Naval)");
 					if (iValue > iBestValue)
 					{
 						iBestValue = iValue;
@@ -32453,7 +32453,7 @@ bool CvUnitAI::AI_Abombard()
 	{
 		return false;
 	}
-	if (GC.getGameINLINE().getSorenRandNum(10, "Randomness") < 5)
+	if (GC.getGame().getSorenRandNum(10, "Randomness") < 5)
 	{
 		return false;
 	}
@@ -32482,7 +32482,7 @@ bool CvUnitAI::AI_Abombard()
 								iDamage = std::max(1, ((GC.getDefineINT("COMBAT_DAMAGE") * (currFirepower(NULL, NULL) + ((currFirepower(NULL, NULL) + pDefender->currFirepower(NULL, NULL) + 1) / 2))) / (pDefender->currFirepower(pLoopPlot, this) + ((currFirepower(NULL, NULL) + pDefender->currFirepower(NULL, NULL) + 1) / 2))));
 								iValue += (iDamage * iPotentialAttackers);
 
-								iValue *= GC.getGameINLINE().getSorenRandNum(5, "AI Bombard");
+								iValue *= GC.getGame().getSorenRandNum(5, "AI Bombard");
 								if (iValue > iBestValue)
 								{
 									iBestValue = iValue;
@@ -32529,7 +32529,7 @@ bool CvUnitAI::AI_FEngage()
 	{
 		return false;
 	}
-	if (GC.getGameINLINE().getSorenRandNum(10, "Randomness") < 5)
+	if (GC.getGame().getSorenRandNum(10, "Randomness") < 5)
 	{
 		return false;
 	}
@@ -32567,7 +32567,7 @@ bool CvUnitAI::AI_FEngage()
 							iDamage = std::max(1, ((GC.getDefineINT("COMBAT_DAMAGE") * (currFirepower(NULL, NULL) + ((currFirepower(NULL, NULL) + pDefender->currFirepower(NULL, NULL) + 1) / 2))) / (pDefender->currFirepower(pLoopPlot, this) + ((currFirepower(NULL, NULL) + pDefender->currFirepower(NULL, NULL) + 1) / 2))));
 							iValue += (iDamage * pLoopPlot->getNumVisiblePotentialEnemyDefenders(this));
 						}
-						iValue *= GC.getGameINLINE().getSorenRandNum(5, "AI FEngage");
+						iValue *= GC.getGame().getSorenRandNum(5, "AI FEngage");
 						if (iValue > iBestValue)
 						{
 //							for (int iPlayer = 0; iPlayer < MAX_CIV_PLAYERS; ++iPlayer)
@@ -32896,7 +32896,7 @@ bool CvUnitAI::AI_caravan(bool bAnyCity)
 
 							iTurnsLeft -= iPathTurns;
 							int iMinTurns = 2;
-							iMinTurns *= GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getAnarchyPercent();
+							iMinTurns *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getAnarchyPercent();
 							iMinTurns /= 100;
 							if (iTurnsLeft > iMinTurns)
 							{
@@ -32966,7 +32966,7 @@ bool CvUnitAI::AI_hurryFood()
 			&& GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pLoopCity->plot(), MISSIONAI_HURRY_FOOD, getGroup()) == 0
 			&& (
 				pLoopCity->foodDifference() < 0 
-				|| (GC.getGameINLINE().getSorenRandNum(100, "AI hurry with food") > 75 
+				|| (GC.getGame().getSorenRandNum(100, "AI hurry with food") > 75 
 					&& pLoopCity->findPopulationRank() > GC.getWorldInfo(GC.getMap().getWorldSize()).getTargetNumCities())
 				)
 			)
@@ -33029,7 +33029,7 @@ bool CvUnitAI::AI_hurryFood()
 
 bool CvUnitAI::AI_command()
 {
-	if (!GC.getGameINLINE().isOption(GAMEOPTION_GREAT_COMMANDERS))
+	if (!GC.getGame().isOption(GAMEOPTION_GREAT_COMMANDERS))
 	{
 		return false;
 	}
@@ -33264,7 +33264,7 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 			
 		if (plot()->getOwner() == getOwner()) /*group has no escort units and a counter unit can be built by this civilization*/
 		{
-			if ( m_contractsLastEstablishedTurn != GC.getGameINLINE().getGameTurn() )
+			if ( m_contractsLastEstablishedTurn != GC.getGame().getGameTurn() )
 			{
 				const int priority = HIGHEST_PRIORITY_ESCORT_PRIORITY;
 				GET_PLAYER(getOwner()).getContractBroker().advertiseWork(priority,
@@ -33274,7 +33274,7 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 					this,
 					UNITAI_HUNTER_ESCORT);
 
-				m_contractsLastEstablishedTurn = GC.getGameINLINE().getGameTurn();
+				m_contractsLastEstablishedTurn = GC.getGame().getGameTurn();
 				m_contractualState = CONTRACTUAL_STATE_AWAITING_ANSWER;
 
 				if( gUnitLogLevel > 2 )
@@ -33755,7 +33755,7 @@ bool	CvUnitAI::AI_moveToBorders()
 								{
 									if (!pAdjacentPlot->isWater() && pAdjacentPlot->getOwner() != getOwner())
 									{
-										iValue += GC.getGameINLINE().getSorenRandNum(300, "AI Move to Border");
+										iValue += GC.getGame().getSorenRandNum(300, "AI Move to Border");
 
 										if ( NO_PLAYER == pAdjacentPlot->getOwner() )
 										{
@@ -33763,7 +33763,7 @@ bool	CvUnitAI::AI_moveToBorders()
 										}
 										else if ( GET_TEAM(getTeam()).isAtWar(pAdjacentPlot->getTeam()) )
 										{
-											iValue += 200 + GC.getGameINLINE().getSorenRandNum(100, "AI Move to Border2");
+											iValue += 200 + GC.getGame().getSorenRandNum(100, "AI Move to Border2");
 										}
 									}
 								}
@@ -33847,14 +33847,14 @@ bool CvUnitAI::AI_patrolBorders()
 				if (canMoveInto(pLoopPlot, MoveCheck::IgnoreLoad))
 				{
 					DirectionTypes eNewDirection = estimateDirection(plot(), pLoopPlot);
-					iValue = GC.getGameINLINE().getSorenRandNum(10000, "AI Border Patrol");
+					iValue = GC.getGame().getSorenRandNum(10000, "AI Border Patrol");
 					if (pLoopPlot->isBorder(true))
 					{
-						iValue += GC.getGameINLINE().getSorenRandNum(10000, "AI Border Patrol");
+						iValue += GC.getGame().getSorenRandNum(10000, "AI Border Patrol");
 					}
 					else if (pLoopPlot->isBorder(false))
 					{
-						iValue += GC.getGameINLINE().getSorenRandNum(5000, "AI Border Patrol");
+						iValue += GC.getGame().getSorenRandNum(5000, "AI Border Patrol");
 					}
 					//Avoid heading backwards, we want to circuit our borders, if possible.
 					if (eNewDirection == getOppositeDirection(getFacingDirection(false)))
@@ -34076,7 +34076,7 @@ void CvUnitAI::AI_autoAirStrike()
 	}
 	if (kPlayer.isModderOption(MODDEROPTION_AUTO_AIR_CAN_REBASE) && kPlayer.isModderOption(MODDEROPTION_AUTO_AIR_CAN_DEFEND))
 	{
-		if (GC.getGameINLINE().getSorenRandNum(bDefensive ? 3 : 6, "AI Air Attack Move") == 0)
+		if (GC.getGame().getSorenRandNum(bDefensive ? 3 : 6, "AI Air Attack Move") == 0)
 		{
 			if( AI_defensiveAirStrike() )
 			{
@@ -34087,7 +34087,7 @@ void CvUnitAI::AI_autoAirStrike()
 
 	if (kPlayer.isModderOption(MODDEROPTION_AUTO_AIR_CAN_REBASE))
 	{
-		if (GC.getGameINLINE().getSorenRandNum(4, "AI Air Attack Move") == 0)
+		if (GC.getGame().getSorenRandNum(4, "AI Air Attack Move") == 0)
 		{
 			// only moves unit in a fort
 			if (AI_travelToUpgradeCity())
@@ -34123,7 +34123,7 @@ void CvUnitAI::AI_autoAirStrike()
 	
 	if (canAirDefend() && kPlayer.isModderOption(MODDEROPTION_AUTO_AIR_CAN_DEFEND))
 	{
-		if( bDefensive || GC.getGameINLINE().getSorenRandNum(2, "AI Air Attack Move") == 0 )
+		if( bDefensive || GC.getGame().getSorenRandNum(2, "AI Air Attack Move") == 0 )
 		{
 			getGroup()->pushMission(MISSION_AIRPATROL);
 			return;
@@ -35097,12 +35097,12 @@ bool CvUnitAI::AI_foundReligion()
 	iProphetCount = GET_PLAYER(getOwner()).AI_getNumAIUnits(UNITAI_PROPHET);
 	
 	ReligionTypes eFavorite = (ReligionTypes)GC.getLeaderHeadInfo(GET_PLAYER(getOwner()).getLeaderType()).getFavoriteReligion();
-	if (GC.getGameINLINE().isOption(GAMEOPTION_DIVINE_PROPHETS))
+	if (GC.getGame().isOption(GAMEOPTION_DIVINE_PROPHETS))
 	{
 		if (canSpread(plot(), eFavorite))
 		{
 		//if favorite religion of current player was not founded:
-			if (eFavorite != NO_RELIGION && !GC.getGameINLINE().isReligionFounded(eFavorite))
+			if (eFavorite != NO_RELIGION && !GC.getGame().isReligionFounded(eFavorite))
 			{
 //	push mission 'found religion' with parameter 'favorite religion' and return true
 				getGroup()->pushMission(MISSION_SPREAD, eFavorite);
@@ -35111,7 +35111,7 @@ bool CvUnitAI::AI_foundReligion()
 		}
 //if favorite religion was not founded and CAN'T yet be, hold on to one prophet.               GC.getLeaderHeadInfo(GET_PLAYER(getOwner()).getLeaderType()).getFavoriteReligion()(GC.getTechInfo((TechTypes)(GC.getBonusInfo((BonusTypes)iK).getTechCityTrade())).getEra()
 		if ((eFavorite != NO_RELIGION) && 
-			(!GC.getGameINLINE().isReligionFounded(eFavorite)) && 
+			(!GC.getGame().isReligionFounded(eFavorite)) && 
 			(((int)(GC.getTechInfo((TechTypes)GC.getReligionInfo((ReligionTypes)eFavorite).getTechPrereq()).getEra()) - (int)(GET_PLAYER(getOwner()).getCurrentEra()) < 2)) && 
 			(iProphetCount == 1))
 		{
@@ -35124,13 +35124,13 @@ bool CvUnitAI::AI_foundReligion()
 		eBestReligion = NO_RELIGION;
 
 //go over all religions that can be founded:
-		if (!GC.getGameINLINE().isOption(GAMEOPTION_LIMITED_RELIGIONS))
+		if (!GC.getGame().isOption(GAMEOPTION_LIMITED_RELIGIONS))
 		{
 			for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
 			{
 				if (canSpread(plot(), (ReligionTypes)iI))
 				{
-					if (!GC.getGameINLINE().isReligionFounded((ReligionTypes)iI))
+					if (!GC.getGame().isReligionFounded((ReligionTypes)iI))
 					{
 						for (iJ = 0; iJ < GC.getNumFlavorTypes(); iJ++)
 						{
@@ -35154,13 +35154,13 @@ bool CvUnitAI::AI_foundReligion()
 			}
 		}
 
-		if (GC.getGameINLINE().isOption(GAMEOPTION_LIMITED_RELIGIONS) && GC.getGameINLINE().isReligionFounded(eFavorite))
+		if (GC.getGame().isOption(GAMEOPTION_LIMITED_RELIGIONS) && GC.getGame().isReligionFounded(eFavorite))
 		{
 			for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
 			{
 				if (canSpread(plot(), (ReligionTypes)iI))
 				{
-					if (!GC.getGameINLINE().isReligionFounded((ReligionTypes)iI))
+					if (!GC.getGame().isReligionFounded((ReligionTypes)iI))
 					{
 						for (iJ = 0; iJ < GC.getNumFlavorTypes(); iJ++)
 						{
@@ -36318,7 +36318,7 @@ bool CvUnitAI::AI_establishStackSeeInvisibleCoverage()
 	CvUnitSelectionCriteria criteria;
 
 	InvisibleTypes eVisible = NO_INVISIBLE;
-	if (m_contractsLastEstablishedTurn != GC.getGameINLINE().getGameTurn())
+	if (m_contractsLastEstablishedTurn != GC.getGame().getGameTurn())
 	{
 		for (int iI = 0; iI < GC.getNumInvisibleInfos(); iI++)
 		{
@@ -36344,7 +36344,7 @@ bool CvUnitAI::AI_establishStackSeeInvisibleCoverage()
 							-1,
 							&criteria);
 
-						m_contractsLastEstablishedTurn = GC.getGameINLINE().getGameTurn();
+						m_contractsLastEstablishedTurn = GC.getGame().getGameTurn();
 						m_contractualState = CONTRACTUAL_STATE_AWAITING_ANSWER;
 						setToWaitOnUnitAI(UNITAI_SEE_INVISIBLE, true);
 
@@ -36374,7 +36374,7 @@ bool CvUnitAI::AI_establishStackSeeInvisibleCoverage()
 							-1,
 							&criteria);
 
-						m_contractsLastEstablishedTurn = GC.getGameINLINE().getGameTurn();
+						m_contractsLastEstablishedTurn = GC.getGame().getGameTurn();
 						m_contractualState = CONTRACTUAL_STATE_AWAITING_ANSWER;
 						setToWaitOnUnitAI(UNITAI_SEE_INVISIBLE_SEA, true);
 

@@ -1046,7 +1046,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 	}
 	if (m_eUnitType > NO_UNIT && !bUnitToCity)
 	{
-		CvUnit* pUnit = kPlayer.initUnit(m_eUnitType, kUnit.plot()->getX(), kUnit.plot()->getY(), (UnitAITypes)GC.getUnitInfo(m_eUnitType).getDefaultUnitAIType(), NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
+		CvUnit* pUnit = kPlayer.initUnit(m_eUnitType, kUnit.plot()->getX(), kUnit.plot()->getY(), (UnitAITypes)GC.getUnitInfo(m_eUnitType).getDefaultUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 		FAssertMsg(pUnit != NULL, "pUnit is expected to be assigned a valid unit object");
 		int iDmg = GC.getDefineINT("ANIMAL_DAMAGE_PERCENT_AFTER_SUBDUE");
 		iDmg = (iDmg * pUnit->maxHitPoints())/100;
@@ -1170,7 +1170,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 
 			if (bUnitToCity && m_eUnitType > NO_UNIT)
 			{
-				CvUnit* pUnit = kPlayer.initUnit(m_eUnitType, pCity->getX(), pCity->getY(), (UnitAITypes)GC.getUnitInfo(m_eUnitType).getDefaultUnitAIType(), NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
+				CvUnit* pUnit = kPlayer.initUnit(m_eUnitType, pCity->getX(), pCity->getY(), (UnitAITypes)GC.getUnitInfo(m_eUnitType).getDefaultUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 				FAssertMsg(pUnit != NULL, "pUnit is expected to be assigned a valid unit object");
 				int iDmg = GC.getDefineINT("ANIMAL_DAMAGE_PERCENT_AFTER_SUBDUE");
 				iDmg = (iDmg * pUnit->maxHitPoints())/100;

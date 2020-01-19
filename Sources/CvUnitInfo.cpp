@@ -381,7 +381,7 @@ m_bNoNonTypeProdMods(false),
 m_bGatherHerd(false)
 //TB Combat Mods end
 {
-	m_zobristValue = GC.getGameINLINE().getSorenRand().getInt();
+	m_zobristValue = GC.getGame().getSorenRand().getInt();
 }
 
 //------------------------------------------------------------------------------------------------------
@@ -709,7 +709,7 @@ int CvUnitInfo::getEvasionProbability() const
 
 int CvUnitInfo::getWithdrawalProbability(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_FIGHT_OR_FLIGHT) && m_iWithdrawalProbability > 0)
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT) && m_iWithdrawalProbability > 0)
 	{
 		if (hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_WILD")))
 		{
@@ -773,7 +773,7 @@ int CvUnitInfo::getBombardRate() const
 
 int CvUnitInfo::getSpecialCargo(bool bForLoad) const
 {
-	if (!bForLoad && GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (!bForLoad && GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		return m_iSMSpecialCargo;
 	}
@@ -2182,7 +2182,7 @@ int CvUnitInfo::getDefenseCombatModifier() const
 
 int CvUnitInfo::getPursuit(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
 	{
 		return 0;
 	}
@@ -2191,7 +2191,7 @@ int CvUnitInfo::getPursuit(bool bForLoad) const
 
 int CvUnitInfo::getEarlyWithdraw(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
 	{
 		return 0;
 	}
@@ -2215,7 +2215,7 @@ int CvUnitInfo::getPuncture() const
 
 int CvUnitInfo::getOverrun(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -2224,7 +2224,7 @@ int CvUnitInfo::getOverrun(bool bForLoad) const
 
 int CvUnitInfo::getRepel(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -2233,7 +2233,7 @@ int CvUnitInfo::getRepel(bool bForLoad) const
 
 int CvUnitInfo::getFortRepel(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -2242,7 +2242,7 @@ int CvUnitInfo::getFortRepel(bool bForLoad) const
 
 int CvUnitInfo::getRepelRetries(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -2251,7 +2251,7 @@ int CvUnitInfo::getRepelRetries(bool bForLoad) const
 
 int CvUnitInfo::getUnyielding(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -2260,7 +2260,7 @@ int CvUnitInfo::getUnyielding(bool bForLoad) const
 
 int CvUnitInfo::getKnockback(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -2269,7 +2269,7 @@ int CvUnitInfo::getKnockback(bool bForLoad) const
 
 int CvUnitInfo::getKnockbackRetries(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -2278,7 +2278,7 @@ int CvUnitInfo::getKnockbackRetries(bool bForLoad) const
 
 int CvUnitInfo::getStrAdjperRnd(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_BATTLEWORN))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_BATTLEWORN))
 	{
 		return 0;
 	}
@@ -2287,7 +2287,7 @@ int CvUnitInfo::getStrAdjperRnd(bool bForLoad) const
 
 int CvUnitInfo::getStrAdjperAtt(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_BATTLEWORN))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_BATTLEWORN))
 	{
 		return 0;
 	}
@@ -2296,7 +2296,7 @@ int CvUnitInfo::getStrAdjperAtt(bool bForLoad) const
 
 int CvUnitInfo::getStrAdjperDef(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_BATTLEWORN))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_BATTLEWORN))
 	{
 		return 0;
 	}
@@ -2305,7 +2305,7 @@ int CvUnitInfo::getStrAdjperDef(bool bForLoad) const
 
 int CvUnitInfo::getWithdrawAdjperAtt(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_BATTLEWORN))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_BATTLEWORN))
 	{
 		return 0;
 	}
@@ -2314,7 +2314,7 @@ int CvUnitInfo::getWithdrawAdjperAtt(bool bForLoad) const
 
 int CvUnitInfo::getUnnerve(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_SAD))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_SAD))
 	{
 		return 0;
 	}
@@ -2323,7 +2323,7 @@ int CvUnitInfo::getUnnerve(bool bForLoad) const
 
 int CvUnitInfo::getEnclose(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_SAD))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_SAD))
 	{
 		return 0;
 	}
@@ -2332,7 +2332,7 @@ int CvUnitInfo::getEnclose(bool bForLoad) const
 
 int CvUnitInfo::getLunge(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_SAD))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_SAD))
 	{
 		return 0;
 	}
@@ -2341,7 +2341,7 @@ int CvUnitInfo::getLunge(bool bForLoad) const
 
 int CvUnitInfo::getDynamicDefense(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_SAD))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_SAD))
 	{
 		return 0;
 	}
@@ -2350,7 +2350,7 @@ int CvUnitInfo::getDynamicDefense(bool bForLoad) const
 
 int CvUnitInfo::getFortitude(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
 	{
 		return 0;
 	}
@@ -2359,7 +2359,7 @@ int CvUnitInfo::getFortitude(bool bForLoad) const
 
 int CvUnitInfo::getFrontSupportPercent(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
@@ -2368,7 +2368,7 @@ int CvUnitInfo::getFrontSupportPercent(bool bForLoad) const
 
 int CvUnitInfo::getShortRangeSupportPercent(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
@@ -2377,7 +2377,7 @@ int CvUnitInfo::getShortRangeSupportPercent(bool bForLoad) const
 
 int CvUnitInfo::getMediumRangeSupportPercent(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
@@ -2386,7 +2386,7 @@ int CvUnitInfo::getMediumRangeSupportPercent(bool bForLoad) const
 
 int CvUnitInfo::getLongRangeSupportPercent(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
@@ -2395,7 +2395,7 @@ int CvUnitInfo::getLongRangeSupportPercent(bool bForLoad) const
 
 int CvUnitInfo::getFlankSupportPercent(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
@@ -2491,7 +2491,7 @@ int CvUnitInfo::getBreakdownDamage() const
 
 int CvUnitInfo::getTaunt(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
 	{
 		return 0;
 	}
@@ -2500,7 +2500,7 @@ int CvUnitInfo::getTaunt(bool bForLoad) const
 
 int CvUnitInfo::getMaxHP(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		return 100;
 	}
@@ -2538,7 +2538,7 @@ int CvUnitInfo::getRBombardDamageMaxUnits() const
 
 int CvUnitInfo::getCombatModifierPerSizeMore(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		return 0;
 	}
@@ -2547,7 +2547,7 @@ int CvUnitInfo::getCombatModifierPerSizeMore(bool bForLoad) const
 
 int CvUnitInfo::getCombatModifierPerSizeLess(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		return 0;
 	}
@@ -2556,7 +2556,7 @@ int CvUnitInfo::getCombatModifierPerSizeLess(bool bForLoad) const
 
 int CvUnitInfo::getCombatModifierPerVolumeMore(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		return 0;
 	}
@@ -2565,7 +2565,7 @@ int CvUnitInfo::getCombatModifierPerVolumeMore(bool bForLoad) const
 
 int CvUnitInfo::getCombatModifierPerVolumeLess(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		return 0;
 	}
@@ -2594,7 +2594,7 @@ int CvUnitInfo::getInvestigation() const
 
 int CvUnitInfo::getStealthStrikes(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_WITHOUT_WARNING))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING))
 	{
 		return 0;
 	}
@@ -2603,7 +2603,7 @@ int CvUnitInfo::getStealthStrikes(bool bForLoad) const
 
 int CvUnitInfo::getStealthCombatModifier(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_WITHOUT_WARNING))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING))
 	{
 		return 0;
 	}
@@ -2733,7 +2733,7 @@ bool CvUnitInfo::isAssassin() const
 
 bool CvUnitInfo::isStealthDefense(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_WITHOUT_WARNING))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING))
 	{
 		return 0;
 	}
@@ -3222,7 +3222,7 @@ int CvUnitInfo::getNumPursuitVSUnitCombatTypes() const
 
 int CvUnitInfo::getPursuitVSUnitCombatType(int iUnitCombat, bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
 	{
 		return 0;
 	}
@@ -3238,7 +3238,7 @@ int CvUnitInfo::getPursuitVSUnitCombatType(int iUnitCombat, bool bForLoad) const
 
 bool CvUnitInfo::isPursuitVSUnitCombatType(int iUnitCombat, bool bForLoad)
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
 	{
 		return false;
 	}
@@ -3264,7 +3264,7 @@ int CvUnitInfo::getNumRepelVSUnitCombatTypes() const
 
 int CvUnitInfo::getRepelVSUnitCombatType(int iUnitCombat, bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -3280,7 +3280,7 @@ int CvUnitInfo::getRepelVSUnitCombatType(int iUnitCombat, bool bForLoad) const
 
 bool CvUnitInfo::isRepelVSUnitCombatType(int iUnitCombat, bool bForLoad)
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return false;
 	}
@@ -3306,7 +3306,7 @@ int CvUnitInfo::getNumKnockbackVSUnitCombatTypes() const
 
 int CvUnitInfo::getKnockbackVSUnitCombatType(int iUnitCombat, bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -3322,7 +3322,7 @@ int CvUnitInfo::getKnockbackVSUnitCombatType(int iUnitCombat, bool bForLoad) con
 
 bool CvUnitInfo::isKnockbackVSUnitCombatType(int iUnitCombat, bool bForLoad)
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return false;
 	}

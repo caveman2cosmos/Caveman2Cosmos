@@ -26,20 +26,20 @@ void	CvContractBroker::reset()
 }
 
 //	Initialize
-void	CvContractBroker::init(PlayerTypes eOwner)
+void CvContractBroker::init(PlayerTypes eOwner)
 {
 	m_eOwner = eOwner;
 }
 
 //	Note a unit looking for work
-void	CvContractBroker::lookingForWork(CvUnit* pUnit, int iMinPriority)
+void CvContractBroker::lookingForWork(CvUnit* pUnit, int iMinPriority)
 {
 	PROFILE_FUNC();
 
 	advertisingUnit	unitDetails;
 	unitDetails.eUnitType = pUnit->getUnitType();
 
-	int	iUnitStr = GC.getGameINLINE().AI_combatValue(pUnit->getUnitType());
+	int	iUnitStr = GC.getGame().AI_combatValue(pUnit->getUnitType());
 
 	unitDetails.bIsWorker = (pUnit->AI_getUnitAIType() == UNITAI_WORKER);
 	unitDetails.bIsHealer = (pUnit->AI_getUnitAIType() == UNITAI_HEALER);
@@ -406,7 +406,7 @@ void CvContractBroker::finalizeTenderContracts()
 									}
 
 									//	Decrease the value 10% per (standard speed) turn
-									iValue *= 100 - 10*std::min((iTurns*100)/GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getTrainPercent(),10);
+									iValue *= 100 - 10*std::min((iTurns*100)/GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent(),10);
 									iValue /= 100;
 
 									if ( iValue > 0 )

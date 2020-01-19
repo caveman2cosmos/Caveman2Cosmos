@@ -278,7 +278,6 @@ public:
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/	
-	CvGameAI& getGameINLINE() { return *m_game; }
 	CvGameAI& getGame();
 	CvGameAI *getGamePointer();
 	CvRandom& getASyncRand();

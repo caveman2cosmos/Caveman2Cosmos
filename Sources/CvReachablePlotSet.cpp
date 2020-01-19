@@ -344,7 +344,7 @@ bool CvReachablePlotSet::canMoveBetweenWithFlags(const CvSelectionGroup* group, 
 		}
 	}
 
-	if (!GC.getGameINLINE().isOption(GAMEOPTION_NO_ZOC))
+	if (!GC.getGame().isOption(GAMEOPTION_NO_ZOC))
 	{
 		//	Need to handle ZOCs
 		//	ZOCs don't apply into cities of the unit owner
@@ -375,7 +375,7 @@ bool CvReachablePlotSet::canMoveBetweenWithFlags(const CvSelectionGroup* group, 
 			}
 		}
 		//Promotion ZoC
-		if (GC.getGameINLINE().isAnyoneHasUnitZoneOfControl())
+		if (GC.getGame().isAnyoneHasUnitZoneOfControl())
 		{
 			if (pFromPlot->isInUnitZoneOfControl(eOwner) && pToPlot->isInUnitZoneOfControl(eOwner) && !group->canIgnoreZoneofControl())
 			{

@@ -880,7 +880,7 @@ void CvPlot::doImprovement()
 /* original bts code
 					if (GC.getImprovementInfo(getImprovementType()).getImprovementBonusDiscoverRand(iI) > 0)
 					{
-						if (GC.getGameINLINE().getSorenRandNum(GC.getImprovementInfo(getImprovementType()).getImprovementBonusDiscoverRand(iI), "Bonus Discovery") == 0)
+						if (GC.getGame().getSorenRandNum(GC.getImprovementInfo(getImprovementType()).getImprovementBonusDiscoverRand(iI), "Bonus Discovery") == 0)
 						{
 */
 					//Afforess: check for valid terrains for this bonus before discovering it
@@ -892,10 +892,10 @@ void CvPlot::doImprovement()
 					
 					if( iOdds > 0 )
 					{
-						iOdds *= GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getVictoryDelayPercent();
+						iOdds *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent();
 						iOdds /= 100;
 
-						if( GC.getGameINLINE().getSorenRandNum(iOdds, "Bonus Discovery") == 0)
+						if( GC.getGame().getSorenRandNum(iOdds, "Bonus Discovery") == 0)
 						{
 /************************************************************************************************/
 /* UNOFFICIAL_PATCH                        END                                                  */
@@ -923,14 +923,14 @@ void CvPlot::doImprovement()
 /*                                                                                              */
 /*   Mine Depletion                                                                             */
 /************************************************************************************************/
-		if (GC.getGameINLINE().isModderGameOption(MODDERGAMEOPTION_RESOURCE_DEPLETION))
+		if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_RESOURCE_DEPLETION))
 		{
 			bool bObstruction = ((getBonusType(getTeam()) != NO_BONUS) && (GC.getImprovementInfo(getImprovementType()).isImprovementBonusMakesValid(getBonusType(getTeam()))));
 
 			if (!bObstruction)
 			{
 				int iDepletionOdds = GC.getImprovementInfo(getImprovementType()).getDepletionRand();
-				iDepletionOdds *= GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getResearchPercent();
+				iDepletionOdds *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent();
 				iDepletionOdds /= 100;
 				ImprovementTypes eDepletedMine;
 				eDepletedMine = findDepletedMine();
@@ -939,7 +939,7 @@ void CvPlot::doImprovement()
 				{
 					if (eDepletedMine != NO_IMPROVEMENT)
 					{
-						if( GC.getGameINLINE().getSorenRandNum(iDepletionOdds, "Mine Depletion") == 0)
+						if( GC.getGame().getSorenRandNum(iDepletionOdds, "Mine Depletion") == 0)
 						{
 							{
 								MEMORY_TRACK_EXEMPT();
@@ -950,7 +950,7 @@ void CvPlot::doImprovement()
 							setImprovementType(eDepletedMine);
 							setIsDepletedMine(true);
 							pCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
-							GC.getGameINLINE().logMsg("Mine Depleted!");
+							GC.getGame().logMsg("Mine Depleted!");
 							if (pCity != NULL)
 							{	
 								pCity->AI_setAssignWorkDirty(true);
@@ -1023,7 +1023,7 @@ void CvPlot::doImprovementUpgrade()
 					{
 						changeUpgradeProgressHundredths(GET_PLAYER(getOwner()).getImprovementUpgradeRateTimes100(getImprovementType()));
 
-						if (getUpgradeProgressHundredths() >= 100*GC.getGameINLINE().getImprovementUpgradeTime(getImprovementType()))
+						if (getUpgradeProgressHundredths() >= 100*GC.getGame().getImprovementUpgradeTime(getImprovementType()))
 						{
 							//here: new function - setImprovementUpgrade
 							setImprovementUpgrade();
@@ -1037,7 +1037,7 @@ void CvPlot::doImprovementUpgrade()
 					{
 						changeUpgradeProgressHundredths(GET_PLAYER(getOwner()).getImprovementUpgradeRateTimes100(getImprovementType()));
 
-						if (getUpgradeProgressHundredths() >= 100*GC.getGameINLINE().getImprovementUpgradeTime(getImprovementType()))
+						if (getUpgradeProgressHundredths() >= 100*GC.getGame().getImprovementUpgradeTime(getImprovementType()))
 						{
 							//here: new function - setImprovementUpgrade
 							setImprovementUpgrade();
@@ -1075,9 +1075,9 @@ void CvPlot::updateFog()
 		return;
 	}
 
-	FAssert(GC.getGameINLINE().getActiveTeam() != NO_TEAM);
+	FAssert(GC.getGame().getActiveTeam() != NO_TEAM);
 
-	if (isRevealed(GC.getGameINLINE().getActiveTeam(), false))
+	if (isRevealed(GC.getGame().getActiveTeam(), false))
 	{
 		if (gDLL->getInterfaceIFace()->isBareMapMode())
 		{
@@ -1209,7 +1209,7 @@ bool CvPlot::updateSymbolsInternal()
 	}
 	deleteAllSymbols();
 
-	if (isRevealed(GC.getGameINLINE().getActiveTeam(), true) && (isShowCitySymbols() || (gDLL->getInterfaceIFace()->isShowYields() && !(gDLL->getInterfaceIFace()->isCityScreenUp()))))
+	if (isRevealed(GC.getGame().getActiveTeam(), true) && (isShowCitySymbols() || (gDLL->getInterfaceIFace()->isShowYields() && !(gDLL->getInterfaceIFace()->isCityScreenUp()))))
 	{
 		int yieldAmounts[NUM_YIELD_TYPES];
 		int maxYield = 0;
@@ -1304,27 +1304,27 @@ CvUnit* CvPlot::getPreferredCenterUnit() const
 	{
 		return pNewCenterUnit;
 	}
-	pNewCenterUnit = getBestDefender(GC.getGameINLINE().getActivePlayer(), NO_PLAYER, NULL, false, false, true);
+	pNewCenterUnit = getBestDefender(GC.getGame().getActivePlayer(), NO_PLAYER, NULL, false, false, true);
 	if (pNewCenterUnit != NULL)
 	{
 		return pNewCenterUnit;
 	}
-	pNewCenterUnit = getBestDefender(GC.getGameINLINE().getActivePlayer());
+	pNewCenterUnit = getBestDefender(GC.getGame().getActivePlayer());
 	if (pNewCenterUnit != NULL)
 	{
 		return pNewCenterUnit;
 	}
-	pNewCenterUnit = getBestDefender(NO_PLAYER, GC.getGameINLINE().getActivePlayer(), gDLL->getInterfaceIFace()->getHeadSelectedUnit(), true);
+	pNewCenterUnit = getBestDefender(NO_PLAYER, GC.getGame().getActivePlayer(), gDLL->getInterfaceIFace()->getHeadSelectedUnit(), true);
 	if (pNewCenterUnit != NULL)
 	{
 		return pNewCenterUnit;
 	}
-	pNewCenterUnit = getBestDefender(NO_PLAYER, GC.getGameINLINE().getActivePlayer(), gDLL->getInterfaceIFace()->getHeadSelectedUnit());
+	pNewCenterUnit = getBestDefender(NO_PLAYER, GC.getGame().getActivePlayer(), gDLL->getInterfaceIFace()->getHeadSelectedUnit());
 	if (pNewCenterUnit != NULL)
 	{
 		return pNewCenterUnit;
 	}
-	pNewCenterUnit = getBestDefender(NO_PLAYER, GC.getGameINLINE().getActivePlayer());
+	pNewCenterUnit = getBestDefender(NO_PLAYER, GC.getGame().getActivePlayer());
 	return pNewCenterUnit;
 }
 
@@ -1515,7 +1515,7 @@ void CvPlot::nukeExplosion(int iRange, CvUnit* pNukeUnit)
 	int iDX, iDY;
 	int iI;
 
-	GC.getGameINLINE().changeNukesExploded(1);
+	GC.getGame().changeNukesExploded(1);
 
 	for (iDX = -(iRange); iDX <= iRange; iDX++)
 	{
@@ -1535,7 +1535,7 @@ void CvPlot::nukeExplosion(int iRange, CvUnit* pNukeUnit)
 					{
 						if (NO_FEATURE == pLoopPlot->getFeatureType() || !GC.getFeatureInfo(pLoopPlot->getFeatureType()).isNukeImmune())
 						{
-							if (GC.getGameINLINE().getSorenRandNum(100, "Nuke Fallout") < GC.getDefineINT("NUKE_FALLOUT_PROB"))
+							if (GC.getGame().getSorenRandNum(100, "Nuke Fallout") < GC.getDefineINT("NUKE_FALLOUT_PROB"))
 							{
 								pLoopPlot->setImprovementType(NO_IMPROVEMENT);
 								pLoopPlot->setFeatureType((FeatureTypes)(GC.getDefineINT("NUKE_FEATURE")));
@@ -1570,7 +1570,7 @@ void CvPlot::nukeExplosion(int iRange, CvUnit* pNukeUnit)
 						{
 							if (!pLoopUnit->isNukeImmune() && !pLoopUnit->isDelayedDeath())
 							{
-								iNukeDamage = (GC.getDefineINT("NUKE_UNIT_DAMAGE_BASE") + GC.getGameINLINE().getSorenRandNum(GC.getDefineINT("NUKE_UNIT_DAMAGE_RAND_1"), "Nuke Damage 1") + GC.getGameINLINE().getSorenRandNum(GC.getDefineINT("NUKE_UNIT_DAMAGE_RAND_2"), "Nuke Damage 2"));
+								iNukeDamage = (GC.getDefineINT("NUKE_UNIT_DAMAGE_BASE") + GC.getGame().getSorenRandNum(GC.getDefineINT("NUKE_UNIT_DAMAGE_RAND_1"), "Nuke Damage 1") + GC.getGame().getSorenRandNum(GC.getDefineINT("NUKE_UNIT_DAMAGE_RAND_2"), "Nuke Damage 2"));
 
 								if (pLoopCity != NULL)
 								{
@@ -1599,7 +1599,7 @@ void CvPlot::nukeExplosion(int iRange, CvUnit* pNukeUnit)
 						{
 							if (!(GC.getBuildingInfo((BuildingTypes) iI).isNukeImmune()))
 							{
-								if (GC.getGameINLINE().getSorenRandNum(100, "Building Nuked") < GC.getDefineINT("NUKE_BUILDING_DESTRUCTION_PROB"))
+								if (GC.getGame().getSorenRandNum(100, "Building Nuked") < GC.getDefineINT("NUKE_BUILDING_DESTRUCTION_PROB"))
 								{
 									pLoopCity->setNumRealBuilding(((BuildingTypes)iI), pLoopCity->getNumRealBuilding((BuildingTypes)iI) - 1);
 								}
@@ -1607,7 +1607,7 @@ void CvPlot::nukeExplosion(int iRange, CvUnit* pNukeUnit)
 						}
 					}
 
-					iNukedPopulation = ((pLoopCity->getPopulation() * (GC.getDefineINT("NUKE_POPULATION_DEATH_BASE") + GC.getGameINLINE().getSorenRandNum(GC.getDefineINT("NUKE_POPULATION_DEATH_RAND_1"), "Population Nuked 1") + GC.getGameINLINE().getSorenRandNum(GC.getDefineINT("NUKE_POPULATION_DEATH_RAND_2"), "Population Nuked 2"))) / 100);
+					iNukedPopulation = ((pLoopCity->getPopulation() * (GC.getDefineINT("NUKE_POPULATION_DEATH_BASE") + GC.getGame().getSorenRandNum(GC.getDefineINT("NUKE_POPULATION_DEATH_RAND_1"), "Population Nuked 1") + GC.getGame().getSorenRandNum(GC.getDefineINT("NUKE_POPULATION_DEATH_RAND_2"), "Population Nuked 2"))) / 100);
 
 					iNukedPopulation *= std::max(0, (pLoopCity->getNukeModifier() + 100));
 					iNukedPopulation /= 100;
@@ -1892,7 +1892,7 @@ bool CvPlot::isCoastalLand(int iMinWaterSize) const
 
 bool CvPlot::isVisibleWorked() const
 {
-	return isBeingWorked() && (getTeam() == GC.getGameINLINE().getActiveTeam() || GC.getGameINLINE().isDebugMode());
+	return isBeingWorked() && (getTeam() == GC.getGame().getActiveTeam() || GC.getGame().isDebugMode());
 }
 
 
@@ -2635,7 +2635,7 @@ void CvPlot::updateSight(bool bIncrement, bool bUpdatePlotGroups)
 		{
 			if (pCity->isHasReligion((ReligionTypes)iI))
 			{
-				pHolyCity = GC.getGameINLINE().getHolyCity((ReligionTypes)iI);
+				pHolyCity = GC.getGame().getHolyCity((ReligionTypes)iI);
 
 				if (pHolyCity != NULL)
 				{
@@ -2910,7 +2910,7 @@ bool CvPlot::canHaveImprovementAsUpgrade(ImprovementTypes eImprovement, TeamType
 	{
 		if (GET_TEAM(eTeam).getLastRoundOfValidImprovementCacheUpdate() > m_iCurrentRoundofUpgradeCache)
 		{
-			m_iCurrentRoundofUpgradeCache = GC.getGameINLINE().getGameTurn();
+			m_iCurrentRoundofUpgradeCache = GC.getGame().getGameTurn();
 		}
 		else
 		{
@@ -3206,7 +3206,7 @@ bool CvPlot::hasCachedCanBuildEntry(int iX, int iY, BuildTypes eBuild, PlayerTyp
 			
 			if ( lRealValue != entry->lResult )
 			{
-				OutputDebugString(CvString::format("Cache entry %08lx verification failed, turn is %d\n", entry, GC.getGameINLINE().getGameTurn()).c_str());
+				OutputDebugString(CvString::format("Cache entry %08lx verification failed, turn is %d\n", entry, GC.getGame().getGameTurn()).c_str());
 				FAssertMsg(false, "Can build value cache verification failure");
 			}
 #endif
@@ -3753,10 +3753,10 @@ int CvPlot::getBuildTime(BuildTypes eBuild) const
 	iTime *= std::max(0, (GC.getTerrainInfo(getTerrainType()).getBuildModifier() + 100));
 	iTime /= 100;
 
-	iTime *= GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getBuildPercent();
+	iTime *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getBuildPercent();
 	iTime /= 100;
 
-	iTime *= GC.getEraInfo(GC.getGameINLINE().getStartEra()).getBuildPercent();
+	iTime *= GC.getEraInfo(GC.getGame().getStartEra()).getBuildPercent();
 	iTime /= 100;
 
 	return iTime;
@@ -3870,7 +3870,7 @@ int CvPlot::getFeatureProduction(BuildTypes eBuild, TeamTypes eTeam, CvCity** pp
 	iProduction *= std::max(0, (GET_PLAYER((*ppCity)->getOwner()).getFeatureProductionModifier() + 100));
 	iProduction /= 100;
 
-	iProduction *= GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getFeatureProductionPercent();
+	iProduction *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getFeatureProductionPercent();
 	iProduction /= 100;
 
 	iProduction *= std::min((GC.getDefineINT("BASE_FEATURE_PRODUCTION_PERCENT") + (GC.getDefineINT("FEATURE_PRODUCTION_PERCENT_MULTIPLIER") * (*ppCity)->getPopulation())), 100);
@@ -4772,7 +4772,7 @@ int CvPlot::defenseModifier(TeamTypes eDefender, bool bIgnoreBuilding, bool bHel
 
 	if (bHelp)
 	{
-		eImprovement = getRevealedImprovementType(GC.getGameINLINE().getActiveTeam(), false);
+		eImprovement = getRevealedImprovementType(GC.getGame().getActiveTeam(), false);
 	}
 	else
 	{
@@ -5003,13 +5003,13 @@ int CvPlot::movementCost(const CvUnit* pUnit, const CvPlot* pFromPlot) const
 
 int CvPlot::getExtraMovePathCost() const
 {
-	return GC.getGameINLINE().getPlotExtraCost(getX(), getY());
+	return GC.getGame().getPlotExtraCost(getX(), getY());
 }
 
 
 void CvPlot::changeExtraMovePathCost(int iChange)
 {
-	GC.getGameINLINE().changePlotExtraCost(getX(), getY(), iChange);
+	GC.getGame().changePlotExtraCost(getX(), getY(), iChange);
 }
 
 int	CvPlot::getHasMountainLeader(TeamTypes eTeam) const
@@ -5452,7 +5452,7 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 	bool bOwnerHasUnit;
 
 	/* plots that are not forts and are adjacent to cities always belong to those cities' owners */
-	if (GC.getGameINLINE().isOption(GAMEOPTION_MIN_CITY_BORDER) && !isActsAsCity())
+	if (GC.getGame().isOption(GAMEOPTION_MIN_CITY_BORDER) && !isActsAsCity())
 	{
 		CvCity* adjacentCity = getAdjacentCity();
 		if (adjacentCity != NULL)
@@ -5815,13 +5815,13 @@ bool CvPlot::isHominid() const
 
 bool CvPlot::isRevealedBarbarian() const
 {
-	return (getRevealedOwner(GC.getGameINLINE().getActiveTeam(), true) == BARBARIAN_PLAYER);
+	return (getRevealedOwner(GC.getGame().getActiveTeam(), true) == BARBARIAN_PLAYER);
 }
 
 
 bool CvPlot::isVisible(TeamTypes eTeam, bool bDebug) const
 {
-	if (bDebug && GC.getGameINLINE().isDebugMode())
+	if (bDebug && GC.getGame().isDebugMode())
 	{
 		return true;
 	}
@@ -5839,7 +5839,7 @@ bool CvPlot::isVisible(TeamTypes eTeam, bool bDebug) const
 
 bool CvPlot::isActiveVisible(bool bDebug) const
 {
-	return isVisible(GC.getGameINLINE().getActiveTeam(), bDebug); 
+	return isVisible(GC.getGame().getActiveTeam(), bDebug); 
 }
 
 
@@ -7108,7 +7108,7 @@ int CvPlot::getUpgradeTimeLeft(ImprovementTypes eImprovement, PlayerTypes ePlaye
 	int iUpgradeRateTimes100;
 	int iTurnsLeft;
 
-	iUpgradeLeftTimes100 = (100*GC.getGameINLINE().getImprovementUpgradeTime(eImprovement) - ((getImprovementType() == eImprovement) ? getUpgradeProgressHundredths() : 0));
+	iUpgradeLeftTimes100 = (100*GC.getGame().getImprovementUpgradeTime(eImprovement) - ((getImprovementType() == eImprovement) ? getUpgradeProgressHundredths() : 0));
 
 	if (ePlayer == NO_PLAYER)
 	{
@@ -7343,7 +7343,7 @@ CvPlot* CvPlot::getInlandCorner() const
 	CvPlot* pRiverPlot = NULL; // will be a plot through whose SE corner we want the river to run
 	int aiShuffle[4];
 
-	shuffleArray(aiShuffle, 4, GC.getGameINLINE().getMapRand());
+	shuffleArray(aiShuffle, 4, GC.getGame().getMapRand());
 
 	for (int iI = 0; iI < 4; ++iI)
 	{
@@ -7450,7 +7450,7 @@ void CvPlot::updateIrrigated()
 		return;
 	}
 
-	if (!(GC.getGameINLINE().isFinalInitialized()))
+	if (!(GC.getGame().isFinalInitialized()))
 	{
 		return;
 	}
@@ -7639,7 +7639,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 	{
 		PROFILE("CvPlot::setOwner.changed");
 
-		GC.getGameINLINE().addReplayMessage(REPLAY_MESSAGE_PLOT_OWNER_CHANGE, eNewValue, (char*)NULL, getX(), getY());
+		GC.getGame().addReplayMessage(REPLAY_MESSAGE_PLOT_OWNER_CHANGE, eNewValue, (char*)NULL, getX(), getY());
 
 		pOldCity = getPlotCity();
 
@@ -7657,7 +7657,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 			}
 
 			szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_REVOLTS_JOINS", pOldCity->getNameKey(), GET_PLAYER(eNewValue).getCivilizationDescriptionKey());
-			GC.getGameINLINE().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getOwner(), szBuffer, getX(), getY(), (ColorTypes)GC.getInfoTypeForString("COLOR_ALT_HIGHLIGHT_TEXT"));
+			GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getOwner(), szBuffer, getX(), getY(), (ColorTypes)GC.getInfoTypeForString("COLOR_ALT_HIGHLIGHT_TEXT"));
 
 			FAssertMsg(pOldCity->getOwner() != eNewValue, "pOldCity->getOwner() is not expected to be equal with eNewValue");
 			GET_PLAYER(eNewValue).acquireCity(pOldCity, false, false, bUpdatePlotGroup); // will delete the pointer
@@ -7709,7 +7709,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 
 					for (iI = 0; iI < iFreeUnits; ++iI)
 					{
-						GET_PLAYER(eNewValue).initUnit(eBestUnit, getX(), getY(), UNITAI_CITY_DEFENSE, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
+						GET_PLAYER(eNewValue).initUnit(eBestUnit, getX(), getY(), UNITAI_CITY_DEFENSE, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 					}
 				}
 			}
@@ -7888,7 +7888,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 				}
 			}
 
-			if (GC.getGameINLINE().isDebugMode())
+			if (GC.getGame().isDebugMode())
 			{
 				updateMinimapColor();
 
@@ -8383,7 +8383,7 @@ void CvPlot::setFeatureType(FeatureTypes eNewValue, int iVariety, bool bImprovem
 /*                                                                                              */
 /************************************************************************************************/
 	//Feature Removed or Fallout
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PERSONALIZED_MAP))
+	if (GC.getGame().isOption(GAMEOPTION_PERSONALIZED_MAP))
 	{
 		if ((eNewValue == NO_FEATURE || GC.getFeatureInfo(eNewValue).getHealthPercent() < 0))
 		{
@@ -8921,7 +8921,7 @@ void CvPlot::setImprovementType(ImprovementTypes eNewValue)
 			verifyUnitValidPlot();
 		}
 
-		if (GC.getGameINLINE().isDebugMode())
+		if (GC.getGame().isDebugMode())
 		{
 			setLayoutDirty(true);
 		}
@@ -9032,7 +9032,7 @@ void CvPlot::setRouteType(RouteTypes eNewValue, bool bUpdatePlotGroups)
 			}
 		}
 
-		if (GC.getGameINLINE().isDebugMode())
+		if (GC.getGame().isDebugMode())
 		{
 			updateRouteSymbol(true, true);
 		}
@@ -9284,7 +9284,7 @@ void CvPlot::updateWorkingCity()
 		updateFog();
 		updateShowCitySymbols();
 
-		if (getOwner() == GC.getGameINLINE().getActivePlayer())
+		if (getOwner() == GC.getGame().getActivePlayer())
 		{
 			if (gDLL->getGraphicOption(GRAPHICOPTION_CITY_RADIUS))
 			{
@@ -9622,7 +9622,7 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 	bool bCity;
 	int iYield;
 
-	if (bDisplay && GC.getGameINLINE().isDebugMode())
+	if (bDisplay && GC.getGame().isDebugMode())
 	{
 		return getYield(eYield);
 	}
@@ -9641,13 +9641,13 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 
 	if (bDisplay)
 	{
-		ePlayer = getRevealedOwner(GC.getGameINLINE().getActiveTeam(), false);
-		eImprovement = getRevealedImprovementType(GC.getGameINLINE().getActiveTeam(), false);
-		eRoute = getRevealedRouteType(GC.getGameINLINE().getActiveTeam(), false);
+		ePlayer = getRevealedOwner(GC.getGame().getActiveTeam(), false);
+		eImprovement = getRevealedImprovementType(GC.getGame().getActiveTeam(), false);
+		eRoute = getRevealedRouteType(GC.getGame().getActiveTeam(), false);
 
 		if (ePlayer == NO_PLAYER)
 		{
-			ePlayer = GC.getGameINLINE().getActivePlayer();
+			ePlayer = GC.getGame().getActivePlayer();
 		}
 	}
 	else
@@ -9675,7 +9675,7 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 
 		if (pCity != NULL)
 		{
-			if (!bDisplay || pCity->isRevealed(GC.getGameINLINE().getActiveTeam(), false))
+			if (!bDisplay || pCity->isRevealed(GC.getGame().getActiveTeam(), false))
 			{
 				iYield += GC.getYieldInfo(eYield).getCityChange();
 				if (GC.getYieldInfo(eYield).getPopulationChangeDivisor() != 0)
@@ -9696,7 +9696,7 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 
 				if (pWorkingCity != NULL)
 				{
-					if (!bDisplay || pWorkingCity->isRevealed(GC.getGameINLINE().getActiveTeam(), false))
+					if (!bDisplay || pWorkingCity->isRevealed(GC.getGame().getActiveTeam(), false))
 					{
 						iYield += pWorkingCity->getSeaPlotYield(eYield);
 					}
@@ -9712,7 +9712,7 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 
 				if (NULL != pWorkingCity)
 				{
-					if (!bDisplay || pWorkingCity->isRevealed(GC.getGameINLINE().getActiveTeam(), false))
+					if (!bDisplay || pWorkingCity->isRevealed(GC.getGame().getActiveTeam(), false))
 					{
 						iYield += pWorkingCity->getRiverPlotYield(eYield);
 					}
@@ -9739,7 +9739,7 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 		//
 	}
 
-	iYield += GC.getGameINLINE().getPlotExtraYield(m_iX, m_iY, eYield);
+	iYield += GC.getGame().getPlotExtraYield(m_iX, m_iY, eYield);
 
 	if (ePlayer != NO_PLAYER)
 	{
@@ -9775,7 +9775,7 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 		
 		if (getLandmarkType() != NO_LANDMARK)
 		{
-			if (GC.getGameINLINE().isOption(GAMEOPTION_PERSONALIZED_MAP))
+			if (GC.getGame().isOption(GAMEOPTION_PERSONALIZED_MAP))
 			{
 				iYield += GET_PLAYER(ePlayer).getLandmarkYield(eYield);
 			}
@@ -10430,7 +10430,7 @@ void CvPlot::updatePlotGroup(PlayerTypes ePlayer, bool bRecalculate, bool bRecal
 	}
 #endif
 
-	if (!(GC.getGameINLINE().isFinalInitialized()))
+	if (!(GC.getGame().isFinalInitialized()))
 	{
 		return;
 	}
@@ -10626,7 +10626,7 @@ int CvPlot::getLastVisibleTurn(TeamTypes eTeam) const
 
 	if ( isVisible(eTeam, false) )
 	{
-		return GC.getGameINLINE().getGameTurn();
+		return GC.getGame().getGameTurn();
 	}
 
 	if (NULL == m_aiLastSeenTurn)
@@ -10770,7 +10770,7 @@ void CvPlot::changeVisibilityCount(TeamTypes eTeam, int iChange, InvisibleTypes 
 			}
 			else
 			{
-				setLastVisibleTurn( eTeam, GC.getGameINLINE().getGameTurn() - 1 );
+				setLastVisibleTurn( eTeam, GC.getGame().getGameTurn() - 1 );
 			}
 
 			pCity = getPlotCity();
@@ -10791,7 +10791,7 @@ void CvPlot::changeVisibilityCount(TeamTypes eTeam, int iChange, InvisibleTypes 
 				}
 			}
 
-			if (eTeam == GC.getGameINLINE().getActiveTeam())
+			if (eTeam == GC.getGame().getActiveTeam())
 			{
 				updateFog();
 				updateMinimapColor();
@@ -10848,7 +10848,7 @@ void CvPlot::changeStolenVisibilityCount(TeamTypes eTeam, int iChange)
 			}
 			else
 			{
-				setLastVisibleTurn( eTeam, GC.getGameINLINE().getGameTurn() - 1 );
+				setLastVisibleTurn( eTeam, GC.getGame().getGameTurn() - 1 );
 			}
 
 			pCity = getPlotCity();
@@ -10858,7 +10858,7 @@ void CvPlot::changeStolenVisibilityCount(TeamTypes eTeam, int iChange)
 				pCity->setInfoDirty(true);
 			}
 
-			if (eTeam == GC.getGameINLINE().getActiveTeam())
+			if (eTeam == GC.getGame().getActiveTeam())
 			{
 				updateFog();
 				updateMinimapColor();
@@ -10933,7 +10933,7 @@ void CvPlot::changeBlockadedCount(TeamTypes eTeam, int iChange)
 
 PlayerTypes CvPlot::getRevealedOwner(TeamTypes eTeam, bool bDebug) const
 {
-	if (bDebug && GC.getGameINLINE().isDebugMode())
+	if (bDebug && GC.getGame().isDebugMode())
 	{
 		return getOwner();
 	}
@@ -10988,7 +10988,7 @@ void CvPlot::setRevealedOwner(TeamTypes eTeam, PlayerTypes eNewValue)
 
 		m_aiRevealedOwner[eTeam] = eNewValue;
 
-		if (eTeam == GC.getGameINLINE().getActiveTeam())
+		if (eTeam == GC.getGame().getActiveTeam())
 		{
 			updateMinimapColor();
 
@@ -11230,7 +11230,7 @@ bool CvPlot::isRevealed(TeamTypes eTeam, bool bDebug) const
 	FAssertMsg(eTeam >= 0, "eTeam is expected to be non-negative (invalid Index)");
 	FAssertMsg(eTeam < MAX_TEAMS, "eTeam is expected to be within maximum bounds (invalid Index)");
 
-	if (bDebug && GC.getGameINLINE().isDebugMode())
+	if (bDebug && GC.getGame().isDebugMode())
 	{
 		return true;
 	}
@@ -11295,7 +11295,7 @@ void CvPlot::setRevealed(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly, Tea
 			}
 		}
 
-		if (eTeam == GC.getGameINLINE().getActiveTeam())
+		if (eTeam == GC.getGame().getActiveTeam())
 		{
 			if ( GC.viewportsEnabled() && shouldHaveGraphics() )
 			{
@@ -11504,7 +11504,7 @@ bool CvPlot::isAdjacentNonrevealed(TeamTypes eTeam) const
 
 ImprovementTypes CvPlot::getRevealedImprovementType(TeamTypes eTeam, bool bDebug) const
 {
-	if (bDebug && GC.getGameINLINE().isDebugMode())
+	if (bDebug && GC.getGame().isDebugMode())
 	{
 		return getImprovementType();
 	}
@@ -11541,7 +11541,7 @@ void CvPlot::setRevealedImprovementType(TeamTypes eTeam, ImprovementTypes eNewVa
 
 		m_aeRevealedImprovementType[eTeam] = eNewValue;
 
-		if (eTeam == GC.getGameINLINE().getActiveTeam())
+		if (eTeam == GC.getGame().getActiveTeam())
 		{
 			updateSymbols();
 			setLayoutDirty(true);
@@ -11553,7 +11553,7 @@ void CvPlot::setRevealedImprovementType(TeamTypes eTeam, ImprovementTypes eNewVa
 
 RouteTypes CvPlot::getRevealedRouteType(TeamTypes eTeam, bool bDebug) const
 {
-	if (bDebug && GC.getGameINLINE().isDebugMode())
+	if (bDebug && GC.getGame().isDebugMode())
 	{
 		return getRouteType();
 	}
@@ -11590,7 +11590,7 @@ void CvPlot::setRevealedRouteType(TeamTypes eTeam, RouteTypes eNewValue)
 
 		m_aeRevealedRouteType[eTeam] = eNewValue;
 
-		if (eTeam == GC.getGameINLINE().getActiveTeam())
+		if (eTeam == GC.getGame().getActiveTeam())
 		{
 			updateSymbols();
 			updateRouteSymbol(true, true);
@@ -11725,7 +11725,7 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 				{
 					int iPossible = (int)m_aBonusResult.size();
 					iPossible = std::max(iPossible, 100);
-					unsigned iResult = GC.getGameINLINE().getSorenRandNum(iPossible, "Select Bonus Placement Type");
+					unsigned iResult = GC.getGame().getSorenRandNum(iPossible, "Select Bonus Placement Type");
 					
 					if (iResult > m_aBonusResult.size())
 					{
@@ -11862,7 +11862,7 @@ void CvPlot::updateFeatureSymbolVisibility()
 	
 	if (m_pFeatureSymbol != NULL)
 	{
-		bool bVisible = isRevealed(GC.getGameINLINE().getActiveTeam(), true);
+		bool bVisible = isRevealed(GC.getGame().getActiveTeam(), true);
 		if(getFeatureType() != NO_FEATURE)
 		{
 			if(GC.getFeatureInfo(getFeatureType()).isVisibleAlways())
@@ -11960,7 +11960,7 @@ void CvPlot::updateRouteSymbol(bool bForce, bool bAdjacent)
 		}
 	}
 
-	eRoute = getRevealedRouteType(GC.getGameINLINE().getActiveTeam(), true);
+	eRoute = getRevealedRouteType(GC.getGame().getActiveTeam(), true);
 
 	if (eRoute == NO_ROUTE)
 	{
@@ -12128,11 +12128,11 @@ void CvPlot::updateFlagSymbol()
 	{
 		if(ePlayer == NO_PLAYER)
 		{
-			ePlayer = GC.getGameINLINE().getActivePlayer();
+			ePlayer = GC.getGame().getActivePlayer();
 		}
 		else
 		{
-			ePlayerOffset = GC.getGameINLINE().getActivePlayer();
+			ePlayerOffset = GC.getGame().getActivePlayer();
 		}
 	}
 
@@ -12219,7 +12219,7 @@ CvUnit* CvPlot::getDebugCenterUnit() const
 
 	if (pCenterUnit == NULL)
 	{
-		if (GC.getGameINLINE().isDebugMode())
+		if (GC.getGame().isDebugMode())
 		{
 			CLLNode<IDInfo>* pUnitNode = headUnitNode();
 			if(pUnitNode == NULL)
@@ -12451,7 +12451,7 @@ void CvPlot::changeInvisibleVisibilityCount(TeamTypes eTeam, InvisibleTypes eInv
 		}
 		if (bOldInvisibleVisible != isInvisibleVisible(eTeam, eInvisible))
 		{
-			if (eTeam == GC.getGameINLINE().getActiveTeam())
+			if (eTeam == GC.getGame().getActiveTeam())
 			{
 				updateCenterUnit();
 			}
@@ -12590,7 +12590,7 @@ void CvPlot::addUnit(CvUnit* pUnit, bool bUpdate)
 	FAssertMsg(pUnit->at(getX(), getY()), "pUnit is expected to be at getX and getY");
 
 	//DEBUG attempt
-	if (GC.getGameINLINE().isDebugMode())
+	if (GC.getGame().isDebugMode())
 	{
 		pUnitNode = headUnitNode();
 		while (pUnitNode != NULL)
@@ -12784,10 +12784,10 @@ void CvPlot::doFeature()
 /* Gamespeed scaling                                                                            */
 /************************************************************************************************/
 /* original bts code
-			if (GC.getGameINLINE().getSorenRandNum(10000, "Feature Disappearance") < iProbability)
+			if (GC.getGame().getSorenRandNum(10000, "Feature Disappearance") < iProbability)
 */
-			int iOdds = (10000*GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getVictoryDelayPercent())/100;
-			if (GC.getGameINLINE().getSorenRandNum(iOdds, "Feature Disappearance") < iProbability)
+			int iOdds = (10000*GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent())/100;
+			if (GC.getGame().getSorenRandNum(iOdds, "Feature Disappearance") < iProbability)
 /************************************************************************************************/
 /* UNOFFICIAL_PATCH                        END                                                  */
 /************************************************************************************************/
@@ -12804,7 +12804,7 @@ void CvPlot::doFeature()
 /*                                                                                              */
 /************************************************************************************************/
 		int iStorm = GC.getInfoTypeForString("FEATURE_STORM", true);
-		bool bNoStorms = GC.getGameINLINE().isModderGameOption(MODDERGAMEOPTION_NO_STORMS);
+		bool bNoStorms = GC.getGame().isModderGameOption(MODDERGAMEOPTION_NO_STORMS);
 		
 		for (iI = 0; iI < GC.getNumFeatureInfos(); ++iI)
 		{
@@ -12853,13 +12853,13 @@ void CvPlot::doFeature()
 
 								if (iProbability > 0)
 								{
-									int iOdds = (10000*GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getVictoryDelayPercent())/100;
-									if (GC.getGameINLINE().getSorenRandNum(iOdds, "Feature Growth") < iProbability)
+									int iOdds = (10000*GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent())/100;
+									if (GC.getGame().getSorenRandNum(iOdds, "Feature Growth") < iProbability)
 									{
 										setFeatureType((FeatureTypes)iI);
 										strcpy(szSound, kFeature.getGrowthSound());
 										pCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
-										//if (GC.getGameINLINE().getElapsedGameTurns() > 1)
+										//if (GC.getGame().getElapsedGameTurns() > 1)
 										//{
 											/*if (kFeature.isCanGrowAnywhere() && getImprovementType() != NO_IMPROVEMENT && !isWater())
 											{
@@ -12978,12 +12978,12 @@ void CvPlot::doCulture()
 			{
 				if (!(pCity->isOccupation()))
 				{
-					if (GC.getGameINLINE().getSorenRandNum(100, "Revolt #1") < pCity->getRevoltTestProbability())
+					if (GC.getGame().getSorenRandNum(100, "Revolt #1") < pCity->getRevoltTestProbability())
 					{
 						int iOriginal = 0;
 						iCityStrength = pCity->cultureStrength(eCulturalOwner, iOriginal);
 
-						if ((GC.getGameINLINE().getSorenRandNum(100, "Revolt #2") < iCityStrength) || pCity->isNPC())
+						if ((GC.getGame().getSorenRandNum(100, "Revolt #2") < iCityStrength) || pCity->isNPC())
 						{
 							CLinkList<IDInfo> oldUnits;
 
@@ -13022,15 +13022,15 @@ void CvPlot::doCulture()
 /* Change only applies when Revolution is running                                               */
 /************************************************************************************************/
 /* original code
-							if (pCity->isBarbarian() || (!(GC.getGameINLINE().isOption(GAMEOPTION_NO_CITY_FLIPPING)) && (GC.getGameINLINE().isOption(GAMEOPTION_FLIPPING_AFTER_CONQUEST) || !(pCity->isEverOwned(eCulturalOwner))) && (pCity->getNumRevolts(eCulturalOwner) >= GC.getDefineINT("NUM_WARNING_REVOLTS"))))
+							if (pCity->isBarbarian() || (!(GC.getGame().isOption(GAMEOPTION_NO_CITY_FLIPPING)) && (GC.getGame().isOption(GAMEOPTION_FLIPPING_AFTER_CONQUEST) || !(pCity->isEverOwned(eCulturalOwner))) && (pCity->getNumRevolts(eCulturalOwner) >= GC.getDefineINT("NUM_WARNING_REVOLTS"))))
 */
 							// Disable classic city flip by culture when Revolution is running
-							if ( pCity->isNPC() || (!GC.getGameINLINE().isOption(GAMEOPTION_NO_CITY_FLIPPING) && (GC.getGameINLINE().isOption(GAMEOPTION_FLIPPING_AFTER_CONQUEST) || !(pCity->isEverOwned(eCulturalOwner))) && (pCity->getNumRevolts(eCulturalOwner) >= GC.getDefineINT("NUM_WARNING_REVOLTS")))) 
+							if ( pCity->isNPC() || (!GC.getGame().isOption(GAMEOPTION_NO_CITY_FLIPPING) && (GC.getGame().isOption(GAMEOPTION_FLIPPING_AFTER_CONQUEST) || !(pCity->isEverOwned(eCulturalOwner))) && (pCity->getNumRevolts(eCulturalOwner) >= GC.getDefineINT("NUM_WARNING_REVOLTS")))) 
 /************************************************************************************************/
 /* REVOLUTION_MOD                          END                                                  */
 /************************************************************************************************/
 							{
-								if (GC.getGameINLINE().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) && GET_PLAYER(eCulturalOwner).isHuman())
+								if (GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) && GET_PLAYER(eCulturalOwner).isHuman())
 								{
 									pCity->kill(true);
 								}
@@ -13207,13 +13207,13 @@ ColorTypes CvPlot::plotMinimapColor()
 {
 	CvUnit* pCenterUnit;
 
-	if (GC.getGameINLINE().getActivePlayer() != NO_PLAYER)
+	if (GC.getGame().getActivePlayer() != NO_PLAYER)
 	{
 		CvCity* pCity;
 
 		pCity = getPlotCity();
 
-		if ((pCity != NULL) && pCity->isRevealed(GC.getGameINLINE().getActiveTeam(), true))
+		if ((pCity != NULL) && pCity->isRevealed(GC.getGame().getActiveTeam(), true))
 		{
 			return (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE");
 		}
@@ -13228,9 +13228,9 @@ ColorTypes CvPlot::plotMinimapColor()
 			}
 		}
 
-		if ((getRevealedOwner(GC.getGameINLINE().getActiveTeam(), true) != NO_PLAYER) && !isRevealedBarbarian())
+		if ((getRevealedOwner(GC.getGame().getActiveTeam(), true) != NO_PLAYER) && !isRevealedBarbarian())
 		{
-			return ((ColorTypes)(GC.getPlayerColorInfo(GET_PLAYER(getRevealedOwner(GC.getGameINLINE().getActiveTeam(), true)).getPlayerColor()).getColorTypePrimary()));
+			return ((ColorTypes)(GC.getPlayerColorInfo(GET_PLAYER(getRevealedOwner(GC.getGame().getActiveTeam(), true)).getPlayerColor()).getColorTypePrimary()));
 		}
 	}
 
@@ -14279,12 +14279,12 @@ void CvPlot::getVisibleImprovementState(ImprovementTypes& eType, bool& bWorked)
 	eType = NO_IMPROVEMENT;
 	bWorked = false;
 
-	if (GC.getGameINLINE().getActiveTeam() == NO_TEAM)
+	if (GC.getGame().getActiveTeam() == NO_TEAM)
 	{
 		return;
 	}
 
-	eType = getRevealedImprovementType(GC.getGameINLINE().getActiveTeam(), true);
+	eType = getRevealedImprovementType(GC.getGame().getActiveTeam(), true);
 
 	if (eType == NO_IMPROVEMENT)
 	{
@@ -14317,24 +14317,24 @@ void CvPlot::getVisibleBonusState(BonusTypes& eType, bool& bImproved, bool& bWor
 	bImproved = false;
 	bWorked = false;
 
-	if (GC.getGameINLINE().getActiveTeam() == NO_TEAM)
+	if (GC.getGame().getActiveTeam() == NO_TEAM)
 	{
 		return;
 	}
 
-	if (GC.getGameINLINE().isDebugMode())
+	if (GC.getGame().isDebugMode())
 	{
 		eType = getBonusType();
 	}
-	else if (isRevealed(GC.getGameINLINE().getActiveTeam(), false))
+	else if (isRevealed(GC.getGame().getActiveTeam(), false))
 	{
-		eType = getBonusType(GC.getGameINLINE().getActiveTeam());
+		eType = getBonusType(GC.getGame().getActiveTeam());
 	}
 
 	// improved and worked states ...
 	if (eType != NO_BONUS)
 	{
-		ImprovementTypes eRevealedImprovement = getRevealedImprovementType(GC.getGameINLINE().getActiveTeam(), true);
+		ImprovementTypes eRevealedImprovement = getRevealedImprovementType(GC.getGame().getActiveTeam(), true);
 
 		if ((eRevealedImprovement != NO_IMPROVEMENT) && GC.getImprovementInfo(eRevealedImprovement).isImprovementBonusTrade(eType))
 		{
@@ -14807,7 +14807,7 @@ void CvPlot::applyEvent(EventTypes eEvent)
 		int iChange = kEvent.getPlotExtraYield(i);
 		if (0 != iChange)
 		{
-			GC.getGameINLINE().setPlotExtraYield(m_iX, m_iY, (YieldTypes)i, iChange);
+			GC.getGame().setPlotExtraYield(m_iX, m_iY, (YieldTypes)i, iChange);
 		}
 	}
 }
@@ -15077,7 +15077,7 @@ int CvPlot::airUnitSpaceAvailable(TeamTypes eTeam) const
 	CvCity* pCity = getPlotCity();
 	if (NULL != pCity)
 	{
-		if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 		{
 			iMaxUnits = pCity->getSMAirUnitCapacity(getTeam());
 		}
@@ -15088,7 +15088,7 @@ int CvPlot::airUnitSpaceAvailable(TeamTypes eTeam) const
 	}
 	else
 	{
-		if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 		{
 			iMaxUnits = GC.getDefineINT("CITY_AIR_UNIT_CAPACITY") * 50;
 		}
@@ -15098,7 +15098,7 @@ int CvPlot::airUnitSpaceAvailable(TeamTypes eTeam) const
 		}
 	}
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		return (iMaxUnits - countNumAirUnitCargoVolume(eTeam));
 	}
@@ -15246,7 +15246,7 @@ bool CvPlot::checkLateEra() const
 	if (ePlayer == NO_PLAYER)
 	{
 		//find largest culture in this plot
-		ePlayer = GC.getGameINLINE().getActivePlayer();
+		ePlayer = GC.getGame().getActivePlayer();
 		int maxCulture = getCulture(ePlayer);
 		for (int i = 0; i < MAX_PLAYERS; i++)
 		{
@@ -15688,7 +15688,7 @@ void CvPlot::doResourceDepletion()
 		return;
 	}
 		
-	if (GC.getGameINLINE().isModderGameOption(MODDERGAMEOPTION_RESOURCE_DEPLETION))
+	if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_RESOURCE_DEPLETION))
 	{
 		if (getBonusType(getTeam()) != NO_BONUS && GC.getImprovementInfo(getImprovementType()).isImprovementBonusMakesValid(getBonusType(getTeam())))
 		{
@@ -15696,9 +15696,9 @@ void CvPlot::doResourceDepletion()
 			if (GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getBonusInfo(getBonusType()).getTechReveal())))
 			{
 				int iBonusOdds = GC.getImprovementInfo(getImprovementType()).getImprovementBonusDepletionRand(getBonusType());
-				iBonusOdds *= GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getConstructPercent();
+				iBonusOdds *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
 				iBonusOdds /= 100;
-				iBonusOdds *= GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getConstructPercent();
+				iBonusOdds *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getConstructPercent();
 				iBonusOdds /= 100;
 				
 				//Duel Maps are size 0.
@@ -15713,7 +15713,7 @@ void CvPlot::doResourceDepletion()
 				
 				if( iBonusOdds > 0 )
 				{
-					if( GC.getGameINLINE().getSorenRandNum(iBonusOdds, "Bonus Depletion") == 0)
+					if( GC.getGame().getSorenRandNum(iBonusOdds, "Bonus Depletion") == 0)
 					{
 						{
 							MEMORY_TRACK_EXEMPT();
@@ -15722,7 +15722,7 @@ void CvPlot::doResourceDepletion()
 							AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_FIRSTTOTECH", MESSAGE_TYPE_MINOR_EVENT, GC.getBonusInfo(getBonusType()).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX(), getY(), true, true);
 						}
 						pCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
-						GC.getGameINLINE().logMsg("Resource Depleted! Resource was %d, The odds were 1 in %d", getBonusType(), iBonusOdds);
+						GC.getGame().logMsg("Resource Depleted! Resource was %d, The odds were 1 in %d", getBonusType(), iBonusOdds);
 						setBonusType(NO_BONUS);
 						if (pCity != NULL)
 						{
@@ -15990,7 +15990,7 @@ int CvPlot::getTerrainTurnDamage(const CvUnit* pUnit) const
 	//PROFILE_FUNC();
 
 	int iDamagePercent = -GC.getTerrainInfo(getTerrainType()).getHealthPercent();
-	if (iDamagePercent == 0 || !GC.getGameINLINE().isModderGameOption(MODDERGAMEOPTION_TERRAIN_DAMAGE))
+	if (iDamagePercent == 0 || !GC.getGame().isModderGameOption(MODDERGAMEOPTION_TERRAIN_DAMAGE))
 	{
 		return 0;
 	}

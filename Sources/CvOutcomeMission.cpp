@@ -130,7 +130,7 @@ void CvOutcomeMission::buildDisplayString(CvWStringBuffer &szBuffer, CvUnit *pUn
 	if (m_iCost)
 	{
 		if (m_iCost->evaluate(pUnit->getGameObject())!=0)
-		{	/*GC.getGameINLINE().getGameObject()->adaptValueToGame(m_iID, m_pExpr->evaluate(GC.getGameINLINE().getGameObject())*/
+		{	/*GC.getGame().getGameObject()->adaptValueToGame(m_iID, m_pExpr->evaluate(GC.getGame().getGameObject())*/
 			CvWString szTempBuffer;
 
 			szBuffer.append(NEWLINE);

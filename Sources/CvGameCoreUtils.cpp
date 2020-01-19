@@ -288,7 +288,7 @@ bool isPromotionValid(PromotionTypes ePromotion, UnitTypes eUnit, bool bLeader)
 	{
 		if ((kPromotion.getCityAttackPercent() != 0) ||
 		//TB Combat Mod begin
-			  ((!GC.getGameINLINE().isModderGameOption(MODDERGAMEOPTION_DEFENDER_WITHDRAW))&&(kPromotion.getWithdrawalChange() != 0)) ||
+			  ((!GC.getGame().isModderGameOption(MODDERGAMEOPTION_DEFENDER_WITHDRAW))&&(kPromotion.getWithdrawalChange() != 0)) ||
 			  //TB Combat Mod end
 			  (kPromotion.getCollateralDamageChange() != 0) ||
 			  (kPromotion.isBlitz()) ||
@@ -746,7 +746,7 @@ int getCombatOdds(CvUnit* pAttacker, CvUnit* pDefender)
 	iDefenderFirepower = pDefender->currFirepower(pDefender->plot(), pAttacker);
 
 #ifdef STRENGTH_IN_NUMBERS
-	if (GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
 		int iAttackerSupportStrength = pAttacker->getAttackerSupportValue();
 		iAttackerStrength += iAttackerSupportStrength;
@@ -1086,7 +1086,7 @@ float getCombatOddsSpecific(CvUnit* pAttacker, CvUnit* pDefender, int n_A, int n
 	iDefenderFirepower = pDefender->currFirepower(pDefender->plot(), pAttacker);
 
 #ifdef STRENGTH_IN_NUMBERS
-	if (GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
 		int iDefenderSupportStrength = pDefender->getDefenderSupportValue(pAttacker);
 		int iAttackerSupportStrength = pAttacker->getAttackerSupportValue();
@@ -2035,7 +2035,7 @@ bool PUF_isUnitAITypeGroupie(const CvUnit* pUnit, int iData1, int iData2, const 
 
 bool PUF_isFiniteRangeAndNotJustProduced(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
-	return (PUF_isFiniteRange(pUnit,iData1,iData2) && ((GC.getGameINLINE().getGameTurn() - pUnit->getGameTurnCreated()) > 1));
+	return (PUF_isFiniteRange(pUnit,iData1,iData2) && ((GC.getGame().getGameTurn() - pUnit->getGameTurnCreated()) > 1));
 }
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
@@ -3972,7 +3972,7 @@ bool ContextFreeNewPathValidFunc(const CvSelectionGroup* pSelectionGroup, int iF
 			break;
 		}
 
-		if (!GC.getGameINLINE().isOption(GAMEOPTION_NO_ZOC))
+		if (!GC.getGame().isOption(GAMEOPTION_NO_ZOC))
 		{
 			//	Need to handle ZOCs
 			//	ZOCs don't apply into cities of the unit owner
@@ -4003,7 +4003,7 @@ bool ContextFreeNewPathValidFunc(const CvSelectionGroup* pSelectionGroup, int iF
 
 			}
 			//Promotion ZoC
-			if (GC.getGameINLINE().isAnyoneHasUnitZoneOfControl())
+			if (GC.getGame().isAnyoneHasUnitZoneOfControl())
 			{
 				if (pFromPlot->isInUnitZoneOfControl(eOwner) && pToPlot->isInUnitZoneOfControl(eOwner) && !pSelectionGroup->canIgnoreZoneofControl())
 				{
@@ -4583,9 +4583,9 @@ int getTurnYearForGame(int iGameTurn, int iStartYear, CalendarTypes eCalendar, G
 {
 	if (eCalendar == CALENDAR_DEFAULT)
 	{
-		if (iGameTurn == GC.getGameINLINE().getGameTurn())
+		if (iGameTurn == GC.getGame().getGameTurn())
 		{
-			return GC.getGameINLINE().getCurrentDate().getYear();
+			return GC.getGame().getCurrentDate().getYear();
 		}
 		return CvDate::getDate(iGameTurn, eSpeed).getYear();
 	}
@@ -4627,9 +4627,9 @@ int getTurnMonthForGame(int iGameTurn, int iStartYear, CalendarTypes eCalendar, 
 		{
 			iTurnMonth += (GC.getGameSpeedInfo(eSpeed).getGameTurnInfo(GC.getGameSpeedInfo(eSpeed).getNumTurnIncrements() - 1).iMonthIncrement * (iGameTurn - iTurnCount));
 		}*/
-		if (iGameTurn == GC.getGameINLINE().getGameTurn())
+		if (iGameTurn == GC.getGame().getGameTurn())
 		{
-			date = GC.getGameINLINE().getCurrentDate();
+			date = GC.getGame().getCurrentDate();
 		}
 		else
 		{
@@ -4994,7 +4994,7 @@ int calculateExperience(int iLevel, PlayerTypes ePlayer)
 	int iExperienceNeeded = iLevel*iLevel + 1;
 	
 	iExperienceNeeded = (iExperienceNeeded*(100+GET_PLAYER(ePlayer).getLevelExperienceModifier()) + 99)/100;
-	if (GC.getGameINLINE().isOption(GAMEOPTION_MORE_XP_TO_LEVEL))
+	if (GC.getGame().isOption(GAMEOPTION_MORE_XP_TO_LEVEL))
 	{
 		iExperienceNeeded *= GC.getDefineINT("MORE_XP_TO_LEVEL_MODIFIER");
 		iExperienceNeeded /= 100;
@@ -5143,7 +5143,7 @@ int getTreatyLength()
 {
 	int iResult = GC.getDefineINT("PEACE_TREATY_LENGTH");
 
-	iResult *= GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getGrowthPercent();
+	iResult *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getGrowthPercent();
 	iResult /= 100;
 
 	return std::max(1,iResult);

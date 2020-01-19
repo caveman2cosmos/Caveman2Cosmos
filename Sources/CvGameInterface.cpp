@@ -1901,7 +1901,7 @@ bool CvGame::canDoControl(ControlTypes eControl) const
 
 static void selectClosestCity(bool bAdd)
 {
-	CvCity* pSelectCity = GET_PLAYER(GC.getGameINLINE().getActivePlayer()).findClosestCity(gDLL->getInterfaceIFace()->getLookAtPlot());
+	CvCity* pSelectCity = GET_PLAYER(GC.getGame().getActivePlayer()).findClosestCity(gDLL->getInterfaceIFace()->getLookAtPlot());
 	if (pSelectCity != NULL)
 	{
 		if ( GC.getCurrentViewport()->isInViewport(pSelectCity->getX(), pSelectCity->getY(), GC.getViewportSelectionBorder()) )

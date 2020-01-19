@@ -1419,7 +1419,7 @@ void CyUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow)
 {
 	if (m_pUnit)
 	{
-		//GC.getGameINLINE().logOOSSpecial(23, m_pUnit->getID(), iX, iY);
+		//GC.getGame().logOOSSpecial(23, m_pUnit->getID(), iX, iY);
 		return m_pUnit->setXY(iX, iY, bGroup, bUpdate, bShow);
 	}
 }

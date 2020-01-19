@@ -116,7 +116,7 @@ CyPlayer* CyGlobalContext::getCyPlayer(int idx)
 
 CyPlayer* CyGlobalContext::getCyActivePlayer()
 {
-	PlayerTypes pt = GC.getGameINLINE().getActivePlayer();
+	PlayerTypes pt = GC.getGame().getActivePlayer();
 	return pt != NO_PLAYER ? getCyPlayer(pt) : NULL;
 }
 

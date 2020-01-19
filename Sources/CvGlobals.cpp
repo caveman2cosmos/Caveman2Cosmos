@@ -6295,7 +6295,7 @@ bool cvInternalGlobals::getGraphicalDetailPagingEnabled()
 
 int cvInternalGlobals::getGraphicalDetailPageInRange()
 {
-	return std::max(getGameINLINE().getXResolution(), getGameINLINE().getYResolution())/150;
+	return std::max(getGame().getXResolution(), getGame().getYResolution())/150;
 }
 
 /************************************************************************************************/

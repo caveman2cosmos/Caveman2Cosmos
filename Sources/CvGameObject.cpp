@@ -70,12 +70,12 @@ GameObjectTypes CvGameObjectPlot::getGameObjectType() const
 
 CvProperties* CvGameObjectGame::getProperties() const
 {
-	return GC.getGameINLINE().getProperties();
+	return GC.getGame().getProperties();
 }
 
 const CvProperties* CvGameObjectGame::getPropertiesConst() const
 {
-	return GC.getGameINLINE().getPropertiesConst();
+	return GC.getGame().getPropertiesConst();
 }
 
 CvProperties* CvGameObjectTeam::getProperties() const
@@ -185,7 +185,7 @@ void CvGameObjectTeam::foreach(GameObjectTypes eType, bst::function<void (CvGame
 	switch(eType)
 	{
 		case GAMEOBJECT_GAME:
-			func(GC.getGameINLINE().getGameObject());
+			func(GC.getGame().getGameObject());
 			break;
 
 		case GAMEOBJECT_PLAYER:
@@ -233,7 +233,7 @@ void CvGameObjectPlayer::foreach(GameObjectTypes eType, bst::function<void (CvGa
 	switch(eType)
 	{
 		case GAMEOBJECT_GAME:
-			func(GC.getGameINLINE().getGameObject());
+			func(GC.getGame().getGameObject());
 			break;
 
 		case GAMEOBJECT_TEAM:
@@ -276,7 +276,7 @@ void CvGameObjectCity::foreach(GameObjectTypes eType, bst::function<void (CvGame
 	switch(eType)
 	{
 		case GAMEOBJECT_GAME:
-			func(GC.getGameINLINE().getGameObject());
+			func(GC.getGame().getGameObject());
 			break;
 
 		case GAMEOBJECT_TEAM:
@@ -306,7 +306,7 @@ void CvGameObjectUnit::foreach(GameObjectTypes eType, bst::function<void (CvGame
 	switch(eType)
 	{
 		case GAMEOBJECT_GAME:
-			func(GC.getGameINLINE().getGameObject());
+			func(GC.getGame().getGameObject());
 			break;
 
 		case GAMEOBJECT_TEAM:
@@ -336,7 +336,7 @@ void CvGameObjectPlot::foreach(GameObjectTypes eType, bst::function<void (CvGame
 	switch(eType)
 	{
 		case GAMEOBJECT_GAME:
-			func(GC.getGameINLINE().getGameObject());
+			func(GC.getGame().getGameObject());
 			break;
 
 		case GAMEOBJECT_TEAM:
@@ -1064,7 +1064,7 @@ bool CvGameObjectGame::hasGOM(GOMTypes eType, int iID)
 		{
 			// If there is any building of that type created, return true
 			BuildingTypes eBuilding = (BuildingTypes) iID;
-			return GC.getGameINLINE().getBuildingClassCreatedCount((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType()) > 0;
+			return GC.getGame().getBuildingClassCreatedCount((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType()) > 0;
 			//break;
 		}
 
@@ -1090,7 +1090,7 @@ bool CvGameObjectGame::hasGOM(GOMTypes eType, int iID)
 		case GOM_OPTION:
 		{
 			GameOptionTypes eOption = (GameOptionTypes) iID;
-			return GC.getGameINLINE().isOption(eOption);
+			return GC.getGame().isOption(eOption);
 			//break;
 		}
 
@@ -1102,7 +1102,7 @@ bool CvGameObjectGame::hasGOM(GOMTypes eType, int iID)
 		case GOM_GAMESPEED:
 		{
 			GameSpeedTypes eSpeed = (GameSpeedTypes) iID;
-			return GC.getGameINLINE().getGameSpeedType() == eSpeed;
+			return GC.getGame().getGameSpeedType() == eSpeed;
 			//break;
 		}
 
@@ -1120,7 +1120,7 @@ bool CvGameObjectGame::hasGOM(GOMTypes eType, int iID)
 		{
 			// If there is any unit of that type created, return true
 			UnitTypes eUnit = (UnitTypes) iID;
-			return GC.getGameINLINE().getUnitClassCreatedCount((UnitClassTypes)GC.getUnitInfo(eUnit).getUnitClassType()) > 0;
+			return GC.getGame().getUnitClassCreatedCount((UnitClassTypes)GC.getUnitInfo(eUnit).getUnitClassType()) > 0;
 			//break;
 		}
 
@@ -1128,7 +1128,7 @@ bool CvGameObjectGame::hasGOM(GOMTypes eType, int iID)
 		{
 			// If any team has researched that tech, return true
 			TechTypes eTech = (TechTypes) iID;
-			return GC.getGameINLINE().countKnownTechNumTeams(eTech) > 0;
+			return GC.getGame().countKnownTechNumTeams(eTech) > 0;
 			//break;
 		}
 
@@ -1144,14 +1144,14 @@ bool CvGameObjectGame::hasGOM(GOMTypes eType, int iID)
 		case GOM_RELIGION:
 		{
 			// True if the religion has been founded
-			return GC.getGameINLINE().isReligionFounded((ReligionTypes) iID);
+			return GC.getGame().isReligionFounded((ReligionTypes) iID);
 			//break;
 		}
 
 		case GOM_CORPORATION:
 		{
 			// True if the corporation has been founded
-			return GC.getGameINLINE().isCorporationFounded((CorporationTypes) iID);
+			return GC.getGame().isCorporationFounded((CorporationTypes) iID);
 			//break;
 		}
 
@@ -1168,7 +1168,7 @@ bool CvGameObjectGame::hasGOM(GOMTypes eType, int iID)
 		case GOM_HANDICAP:
 		{
 			HandicapTypes eHandicap = (HandicapTypes) iID;
-			return GC.getGameINLINE().getHandicapType() == eHandicap;
+			return GC.getGame().getHandicapType() == eHandicap;
 			//break;
 		}
 	}
@@ -1209,7 +1209,7 @@ bool CvGameObjectTeam::hasGOM(GOMTypes eType, int iID)
 		case GOM_OPTION:
 		{
 			GameOptionTypes eOption = (GameOptionTypes) iID;
-			return GC.getGameINLINE().isOption(eOption);
+			return GC.getGame().isOption(eOption);
 			//break;
 		}
 
@@ -1221,7 +1221,7 @@ bool CvGameObjectTeam::hasGOM(GOMTypes eType, int iID)
 		case GOM_GAMESPEED:
 		{
 			GameSpeedTypes eSpeed = (GameSpeedTypes) iID;
-			return GC.getGameINLINE().getGameSpeedType() == eSpeed;
+			return GC.getGame().getGameSpeedType() == eSpeed;
 			//break;
 		}
 
@@ -1335,7 +1335,7 @@ bool CvGameObjectPlayer::hasGOM(GOMTypes eType, int iID)
 		case GOM_OPTION:
 		{
 			GameOptionTypes eOption = (GameOptionTypes) iID;
-			return GC.getGameINLINE().isOption(eOption);
+			return GC.getGame().isOption(eOption);
 			//break;
 		}
 
@@ -1347,7 +1347,7 @@ bool CvGameObjectPlayer::hasGOM(GOMTypes eType, int iID)
 		case GOM_GAMESPEED:
 		{
 			GameSpeedTypes eSpeed = (GameSpeedTypes) iID;
-			return GC.getGameINLINE().getGameSpeedType() == eSpeed;
+			return GC.getGame().getGameSpeedType() == eSpeed;
 			//break;
 		}
 
@@ -1462,7 +1462,7 @@ bool CvGameObjectCity::hasGOM(GOMTypes eType, int iID)
 		case GOM_OPTION:
 		{
 			GameOptionTypes eOption = (GameOptionTypes) iID;
-			return GC.getGameINLINE().isOption(eOption);
+			return GC.getGame().isOption(eOption);
 			//break;
 		}
 
@@ -1478,7 +1478,7 @@ bool CvGameObjectCity::hasGOM(GOMTypes eType, int iID)
 		case GOM_GAMESPEED:
 		{
 			GameSpeedTypes eSpeed = (GameSpeedTypes) iID;
-			return GC.getGameINLINE().getGameSpeedType() == eSpeed;
+			return GC.getGame().getGameSpeedType() == eSpeed;
 			//break;
 		}
 
@@ -1613,7 +1613,7 @@ bool CvGameObjectUnit::hasGOM(GOMTypes eType, int iID)
 		case GOM_OPTION:
 		{
 			GameOptionTypes eOption = (GameOptionTypes) iID;
-			return GC.getGameINLINE().isOption(eOption);
+			return GC.getGame().isOption(eOption);
 			//break;
 		}
 
@@ -1628,7 +1628,7 @@ bool CvGameObjectUnit::hasGOM(GOMTypes eType, int iID)
 		case GOM_GAMESPEED:
 		{
 			GameSpeedTypes eSpeed = (GameSpeedTypes) iID;
-			return GC.getGameINLINE().getGameSpeedType() == eSpeed;
+			return GC.getGame().getGameSpeedType() == eSpeed;
 			//break;
 		}
 
@@ -1772,7 +1772,7 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID)
 		case GOM_OPTION:
 		{
 			GameOptionTypes eOption = (GameOptionTypes) iID;
-			return GC.getGameINLINE().isOption(eOption);
+			return GC.getGame().isOption(eOption);
 			//break;
 		}
 
@@ -1787,7 +1787,7 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID)
 		case GOM_GAMESPEED:
 		{
 			GameSpeedTypes eSpeed = (GameSpeedTypes) iID;
-			return GC.getGameINLINE().getGameSpeedType() == eSpeed;
+			return GC.getGame().getGameSpeedType() == eSpeed;
 			//break;
 		}
 
@@ -1989,27 +1989,27 @@ void CvGameObjectPlot::disposePythonWrapper(void *pArgument)
 
 int CvGameObject::adaptValueToGame(int iID, int iValue) const
 {
-	iValue = (iValue * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getPercent(iID)) / 100;
+	iValue = (iValue * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getPercent(iID)) / 100;
 	return (iValue * GC.getWorldInfo(GC.getMap().getWorldSize()).getPercent(iID)) / 100;
 }
 
 int CvGameObjectPlayer::adaptValueToGame(int iID, int iValue) const
 {
-	iValue = (iValue * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getPercent(iID)) / 100;
+	iValue = (iValue * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getPercent(iID)) / 100;
 	iValue = (iValue * GC.getWorldInfo(GC.getMap().getWorldSize()).getPercent(iID)) / 100;
 	return (iValue * GC.getHandicapInfo(m_pPlayer->getHandicapType()).getPercent(iID)) / 100;
 }
 
 int CvGameObjectCity::adaptValueToGame(int iID, int iValue) const
 {
-	iValue = (iValue * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getPercent(iID)) / 100;
+	iValue = (iValue * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getPercent(iID)) / 100;
 	iValue = (iValue * GC.getWorldInfo(GC.getMap().getWorldSize()).getPercent(iID)) / 100;
 	return (iValue * GC.getHandicapInfo(GET_PLAYER(m_pCity->getOwner()).getHandicapType()).getPercent(iID)) / 100;
 }
 
 int CvGameObjectUnit::adaptValueToGame(int iID, int iValue) const
 {
-	iValue = (iValue * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getPercent(iID)) / 100;
+	iValue = (iValue * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getPercent(iID)) / 100;
 	iValue = (iValue * GC.getWorldInfo(GC.getMap().getWorldSize()).getPercent(iID)) / 100;
 	return (iValue * GC.getHandicapInfo(GET_PLAYER(m_pUnit->getOwner()).getHandicapType()).getPercent(iID)) / 100;
 }
