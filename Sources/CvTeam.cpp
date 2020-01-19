@@ -3699,29 +3699,6 @@ void CvTeam::setIsMinorCiv( bool bNewValue, bool bDoBarbCivCheck )
 	int iI;
 	if( bNewValue != isMinorCiv() )
 	{
-		if( isAlive() )
-		{
-			if( bNewValue )
-			{
-				logMsg( "Switching team %d to minor", getID() );
-			}
-			else
-			{
-				logMsg( "Switching minor team %d to full", getID() );
-			}
-		}
-		else
-		{
-			if( bNewValue )
-			{
-				logMsg( "Setting non-alive team %d to minor", getID() );
-			}
-			else
-			{
-				logMsg( "Setting non-alive minor team %d to full", getID() );
-			}
-		}
-
 		bool abHasMet[MAX_TEAMS];
 		TeamTypes eBarbCivVictim = NO_TEAM;
 
@@ -3743,7 +3720,6 @@ void CvTeam::setIsMinorCiv( bool bNewValue, bool bDoBarbCivCheck )
 						int iValue = GET_TEAM(getID()).AI_getBarbarianCivWarVal((TeamTypes)iJ, 12);
 						if( iValue > iMaxVal )
 						{
-							logMsg("    BarbCiv team %d is considering declaring war against victim Team %d", getID(), iJ);
 							CvCity* pCapital = GET_PLAYER(getLeaderID()).getCapitalCity();
 							if( pCapital == NULL || pCapital->plot()->isHasPathToPlayerCity(getID(),GET_TEAM((TeamTypes)iJ).getLeaderID()) )
 							{
@@ -3753,8 +3729,6 @@ void CvTeam::setIsMinorCiv( bool bNewValue, bool bDoBarbCivCheck )
 						}
 					}
 				}
-
-				logMsg("    BarbCiv team %d will declare war against victim Team %d", getID(), eBarbCivVictim);
 			}
 		}
 
@@ -3865,12 +3839,7 @@ void CvTeam::setIsMinorCiv( bool bNewValue, bool bDoBarbCivCheck )
 								if( bPlanWar )
 								{
 									GET_TEAM((TeamTypes)iI).AI_setWarPlan(getID(),WARPLAN_LIMITED);
-									logMsg("    Team %d decides to plan war against ex-minor", iI);
 								}
-							}
-							else
-							{
-								logMsg("    Team %d decides to keep war against ex-minor", iI);
 							}
 						}
 					}
@@ -3911,12 +3880,10 @@ void CvTeam::setIsMinorCiv( bool bNewValue, bool bDoBarbCivCheck )
 
 						if( iCount > 2 || GET_TEAM((TeamTypes)iI).AI_getWarSuccess(getID()) > GC.getDefineINT("WAR_SUCCESS_CITY_CAPTURING") )
 						{
-							logMsg("  Barb civ %d decides to keep war on victim Team %d", getID(), eBarbCivVictim);
 							declareWar((TeamTypes)iI, true, WARPLAN_TOTAL);
 						}
 						else
 						{
-							logMsg("  Barb civ %d begins preparing for war on victim Team %d", getID(), eBarbCivVictim);
 							// Prepare for war with victim
 							AI_setWarPlan(eBarbCivVictim,WARPLAN_TOTAL);
 						}

@@ -223,7 +223,7 @@ int ToroidalDistanceSq (int x1, int y1, int x2, int y2, int w, int h)
 void CvPlotPaging::UpdatePaging()
 {
 	// Check if the paging setting changed
-	bool bPagingEnabled = getBugOptionBOOL("MainInterface__EnableGraphicalPaging", true);
+	bool bPagingEnabled = GC.getBugOptionBOOL("MainInterface__EnableGraphicalPaging", true);
 	GC.setGraphicalDetailPagingEnabled(bPagingEnabled);
 	
 	if(bPagingEnabled || (!bPagingEnabled && g_bWasGraphicsPagingEnabled))

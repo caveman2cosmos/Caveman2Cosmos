@@ -2,7 +2,6 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvSelectionGroup.h"
-#include "CvBugOptions.h"
 #include "CvPathGenerator.h"
 
 #include "CvGameAI.h"
@@ -903,7 +902,7 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 
 			if ( !pGroup->AI_isControlled() )
 			{
-				m_useAIPathingAlways = getBugOptionBOOL("MainInterface__UseAIPathing", false);
+				m_useAIPathingAlways = GC.getBugOptionBOOL("MainInterface__UseAIPathing", false);
 			}
 		}
 

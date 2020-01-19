@@ -2532,7 +2532,7 @@ void CvGame::update()
 	MEMORY_TRACE_FUNCTION();
 
 #ifdef LOG_AI
-	gPlayerLogLevel = getBugOptionINT("Autolog__BBAILevel", 0);
+	gPlayerLogLevel = GC.getBugOptionINT("Autolog__BBAILevel", 0);
 	gTeamLogLevel = gPlayerLogLevel;
 	gCityLogLevel = gPlayerLogLevel;
 	gUnitLogLevel = gPlayerLogLevel;
@@ -2734,7 +2734,7 @@ again:
 	//OutputDebugString(CvString::format("Stop profiling(false) after CvGame::update()\n").c_str());
 	CvPlayerAI& kActivePlayer = GET_PLAYER(getActivePlayer());
 	if ( (!kActivePlayer.isTurnActive() || kActivePlayer.isAutoMoves()) && !kActivePlayer.hasBusyUnit() && !isGameMultiPlayer() &&
-		 getBugOptionBOOL("MainInterface__MinimizeAITurnSlices", false) )
+		 GC.getBugOptionBOOL("MainInterface__MinimizeAITurnSlices", false) )
 	{
 		updateTimers();
 
