@@ -660,14 +660,12 @@ void CvGame::updateColoredPlots()
 						{
 							if (pHeadSelectedUnit->canFound(pLoopPlot))
 							{
-// BUFFY - Don't Recommend Plots in Fog of War - start
-#ifdef _BUFFY
-								if (!pLoopPlot->isVisible(pHeadSelectedUnit->getTeam(), false))
-								{
-									continue;
-								}
-#endif
-// BUFFY - Don't Recommend Plots in Fog of War - end
+								// Don't Recommend Plots in Fog of War - start
+								//if (!pLoopPlot->isVisible(pHeadSelectedUnit->getTeam(), false))
+								//{
+								//	continue;
+								//}
+								// Don't Recommend Plots in Fog of War - end
 
 								if (GET_PLAYER(pHeadSelectedUnit->getOwner()).AI_isPlotCitySite(pLoopPlot))
 								{
