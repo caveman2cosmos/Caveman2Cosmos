@@ -213,7 +213,7 @@ public:
 		return iIndex >= 0 && iIndex < getGridWidth() * getGridHeight() ? &(m_pMapPlots[iIndex]) : NULL;
 	}
 
-	__forceinline CvPlot* plot(int iX, int iY) const
+	inline CvPlot* plot(int iX, int iY) const
 	{
 		if (iX == INVALID_PLOT_COORD || iY == INVALID_PLOT_COORD)
 		{
