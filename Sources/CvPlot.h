@@ -3,7 +3,6 @@
 #ifndef CvPlot_h__
 #define CvPlot_h__
 
-
 // CvPlot.h
 
 #include "LinkedList.h"
@@ -399,7 +398,7 @@ public:
 	CvCity* getAdjacentCity(PlayerTypes ePlayer = NO_PLAYER) const;
 	bool isDepletedMine() const;
 	void setIsDepletedMine(bool bNewValue);
-	ImprovementTypes findDepletedMine();
+	ImprovementTypes findDepletedMine() const;
 	bool changeBuildProgress(BuildTypes eBuild, int iChange, PlayerTypes ePlayer = NO_PLAYER);
 	void changeCultureRangeCities(PlayerTypes eOwnerIndex, int iRangeIndex, int iChange, bool bUpdatePlotGroups, bool bUpdateCulture = true);
 	bool isHasValidBonus() const;
@@ -1046,7 +1045,7 @@ protected:
 	DllExport int getSoundScriptId() const;
 	DllExport int get3DAudioScriptFootstepIndex(int iFootstepTag) const;
 	DllExport float getAqueductSourceWeight() const;  // used to place aqueducts on the map
-	DllExport bool shouldDisplayBridge(CvPlot* pToPlot, PlayerTypes ePlayer) const;
+	DllExport bool shouldDisplayBridge(const CvPlot* pToPlot, PlayerTypes ePlayer) const;
 	DllExport bool checkLateEra() const;
 
 	void read(FDataStreamBase* pStream);
@@ -1198,7 +1197,7 @@ protected:
 	void processArea(CvArea* pArea, int iChange);
 	void doImprovementUpgrade();
 
-	ColorTypes plotMinimapColor();
+	ColorTypes plotMinimapColor() const;
 
 	// added so under cheat mode we can access protected stuff
 	friend class CvGameTextMgr;
@@ -1209,7 +1208,6 @@ public:
 	bool hasStealthDefender(const CvUnit* pAttacker) const;
 	void revealBestStealthDefender(const CvUnit* pAttacker);
 	void doPreAttackTraps(CvUnit* pAttacker);
-
 
 #ifdef CAN_BUILD_VALUE_CACHING
 public:
@@ -1291,7 +1289,13 @@ public:
 	// Algorithm/range helpers
 	//
 	struct fn {
+		DECLARE_MAP_FUNCTOR(CvPlot, bool, isIrrigated);
+		DECLARE_MAP_FUNCTOR(CvPlot, bool, isOwned);
 		DECLARE_MAP_FUNCTOR(CvPlot, bool, isWater);
+
+		DECLARE_MAP_FUNCTOR(CvPlot, int, getArea);
+		DECLARE_MAP_FUNCTOR(CvPlot, FeatureTypes, getFeatureType);
+		DECLARE_MAP_FUNCTOR(CvPlot, PlayerTypes, getOwner);
 	}; 
 };
 
