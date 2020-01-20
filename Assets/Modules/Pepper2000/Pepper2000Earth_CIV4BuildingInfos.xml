@@ -8279,7 +8279,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ENCRYPTION_MACHINES</PrereqTech>
 			<iCost>990</iCost>
-			<ObsoleteTech>TECH_FLASHMEMORY</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 				<iCommerce>2</iCommerce>
@@ -15166,11 +15165,6 @@
 			</ReplaceBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CHARCOAL_FIRE</BuildingClass>
-			<Type>BUILDING_CHARCOAL_FIRE</Type>
-			<ObsoleteTech>TECH_ADVANCED_METALLURGY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_CHINAMPA</BuildingClass>
 			<Type>BUILDING_CHINAMPA</Type>
 			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
@@ -15315,11 +15309,6 @@
 			<ObsoleteTech>TECH_AUGMENT_CONSUMABLES</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FLINT_QUARRY</BuildingClass>
-			<Type>BUILDING_FLINT_QUARRY</Type>
-			<ObsoleteTech>TECH_IRON_WORKING</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_FLY_AGARIC</BuildingClass>
 			<Type>BUILDING_FLY_AGARIC</Type>
 			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
@@ -15420,11 +15409,6 @@
 			<BuildingClass>BUILDINGCLASS_JETSTREAM_POWER_PLANT</BuildingClass>
 			<Type>BUILDING_JETSTREAM_POWER_PLANT</Type>
 			<ObsoleteTech>TECH_ASTROENGINEERING</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_KEROSENE_DISTILLERY</BuildingClass>
-			<Type>BUILDING_KEROSENE_DISTILLERY</Type>
-			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_LEVEE</BuildingClass>
@@ -18523,11 +18507,6 @@
 			<ObsoleteTech>TECH_DMERCH</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SAIL_FACTORY</BuildingClass>
-			<Type>BUILDING_SAIL_FACTORY</Type>
-			<ObsoleteTech>TECH_MARINEARCHITECTURE</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_TRANSISTOR_FACTORY</BuildingClass>
 			<Type>BUILDING_TRANSISTOR_FACTORY</Type>
 			<ObsoleteTech>TECH_ADVANCED_COMPUTERS</ObsoleteTech>
@@ -18811,11 +18790,6 @@
 			<BuildingClass>BUILDINGCLASS_METEORITE_LAB</BuildingClass>
 			<Type>BUILDING_METEORITE_LAB</Type>
 			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_PALEONTOLOGY_LAB</BuildingClass>
-			<Type>BUILDING_PALEONTOLOGY_LAB</Type>
-			<ObsoleteTech>TECH_NOVOPALEONTOLOGY</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_QUANTUM_LAB</BuildingClass>
@@ -21903,76 +21877,6 @@
 			<BuildingClass>BUILDINGCLASS_STEWARDS_OFFICE</BuildingClass>
 			<Type>BUILDING_STEWARDS_OFFICE</Type>
 			<ObsoleteTech>TECH_MARXISM</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FOSSIL_AMMIONITE</BuildingClass>
-			<Type>BUILDING_FOSSIL_AMMIONITE</Type>
-			<ObsoleteTech>TECH_NOVOPALEONTOLOGY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FOSSIL_ARCHAEOPTERYX</BuildingClass>
-			<Type>BUILDING_FOSSIL_ARCHAEOPTERYX</Type>
-			<ObsoleteTech>TECH_NOVOPALEONTOLOGY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FOSSIL_DIMETRODON</BuildingClass>
-			<Type>BUILDING_FOSSIL_DIMETRODON</Type>
-			<ObsoleteTech>TECH_NOVOPALEONTOLOGY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FOSSIL_ICTHYOSTEGA</BuildingClass>
-			<Type>BUILDING_FOSSIL_ICTHYOSTEGA</Type>
-			<ObsoleteTech>TECH_NOVOPALEONTOLOGY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FOSSIL_MAMMOTH</BuildingClass>
-			<Type>BUILDING_FOSSIL_MAMMOTH</Type>
-			<ObsoleteTech>TECH_NOVOPALEONTOLOGY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FOSSIL_NEANDERTHAL</BuildingClass>
-			<Type>BUILDING_FOSSIL_NEANDERTHAL</Type>
-			<ObsoleteTech>TECH_NOVOPALEONTOLOGY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FOSSIL_PETRIFIEDFOREST</BuildingClass>
-			<Type>BUILDING_FOSSIL_PETRIFIEDFOREST</Type>
-			<ObsoleteTech>TECH_NOVOPALEONTOLOGY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FOSSIL_PLESIOSAUR</BuildingClass>
-			<Type>BUILDING_FOSSIL_PLESIOSAUR</Type>
-			<ObsoleteTech>TECH_NOVOPALEONTOLOGY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FOSSIL_PTERODACTYL</BuildingClass>
-			<Type>BUILDING_FOSSIL_PTERODACTYL</Type>
-			<ObsoleteTech>TECH_NOVOPALEONTOLOGY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FOSSIL_SHARKTEETH</BuildingClass>
-			<Type>BUILDING_FOSSIL_SHARKTEETH</Type>
-			<ObsoleteTech>TECH_NOVOPALEONTOLOGY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FOSSIL_SMILODON</BuildingClass>
-			<Type>BUILDING_FOSSIL_SMILODON</Type>
-			<ObsoleteTech>TECH_NOVOPALEONTOLOGY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FOSSIL_TRICERATOPS</BuildingClass>
-			<Type>BUILDING_FOSSIL_TRICERATOPS</Type>
-			<ObsoleteTech>TECH_NOVOPALEONTOLOGY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FOSSIL_TRILOBITE</BuildingClass>
-			<Type>BUILDING_FOSSIL_TRILOBITE</Type>
-			<ObsoleteTech>TECH_NOVOPALEONTOLOGY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FOSSIL_VELOCIRAPTOR</BuildingClass>
-			<Type>BUILDING_FOSSIL_VELOCIRAPTOR</Type>
-			<ObsoleteTech>TECH_NOVOPALEONTOLOGY</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_VIRTUAL_WORLD</BuildingClass>
