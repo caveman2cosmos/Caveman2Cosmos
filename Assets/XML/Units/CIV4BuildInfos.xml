@@ -13,7 +13,7 @@
 		<!-- Seed Camp (Kill) -->
 		<BuildInfo>
 			<Type>BUILD_GRAIN_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_GRAIN_GATHERER</Description>
+			<Description>TXT_KEY_BUILD_GRAIN_GATHERER_K</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
@@ -103,7 +103,7 @@
 		<!-- Stone Tools Workshop (Mine/Quarry) (Kill) -->
 		<BuildInfo>
 			<Type>BUILD_ROCK_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_ROCK_GATHERER</Description>
+			<Description>TXT_KEY_BUILD_ROCK_GATHERER_K</Description>
 			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
@@ -252,7 +252,7 @@
 		<!-- Tar Gatherer (Kill) -->
 		<BuildInfo>
 			<Type>BUILD_TAR_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_TAR_GATHERER</Description>
+			<Description>TXT_KEY_BUILD_TAR_GATHERER_K</Description>
 			<PrereqTech>TECH_ADHESIVES</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
@@ -1575,7 +1575,7 @@
 		<BuildInfo>
 			<Type>BUILD_3FACTORY_2</Type>
 			<bForceOverwrite>1</bForceOverwrite>
-			<Description>TXT_KEY_BUILD_FACTORY</Description>
+			<Description>TXT_KEY_BUILD_FACTORY_COLD</Description>
 			<PrereqTech>TECH_REFRIGERATION</PrereqTech>
 			<ObsoleteTech>TECH_MINIATURIZATION</ObsoleteTech>
 			<iTime>1000</iTime>
@@ -2325,7 +2325,7 @@
 		<!-- Salt Gatherer (Quarry) (Kill) -->
 		<BuildInfo>
 			<Type>BUILD_SALT_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_SALT_GATHERER</Description>
+			<Description>TXT_KEY_BUILD_SALT_GATHERER_K</Description>
 			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
@@ -4794,7 +4794,7 @@
 		<!-- Break Ice -->
 		<BuildInfo>
 			<Type>BUILD_BREAK_ICE</Type>
-			<Description>TXT_KEY_BUILD_BREAK_ICE</Description>
+			<Description>TXT_KEY_BUILD_BREAK_ICE_K</Description>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
@@ -4838,7 +4838,7 @@
 		<!-- Jungle Camp (Kill) -->
 		<BuildInfo>
 			<Type>BUILD_JUNGLE_CAMP_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_JUNGLE_CAMP</Description>
+			<Description>TXT_KEY_BUILD_JUNGLE_CAMP_K</Description>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>600</iTime>
@@ -4863,7 +4863,7 @@
 		<!-- Desert Camp (Kill) -->
 		<BuildInfo>
 			<Type>BUILD_DESERT_CAMP_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_DESERT_CAMP</Description>
+			<Description>TXT_KEY_BUILD_DESERT_CAMP_K</Description>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>600</iTime>
@@ -4888,7 +4888,7 @@
 		<!-- Wetlands Camp (Kill) -->
 		<BuildInfo>
 			<Type>BUILD_WETLANDS_CAMP_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_WETLANDS_CAMP</Description>
+			<Description>TXT_KEY_BUILD_WETLANDS_CAMP_K</Description>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>600</iTime>
@@ -4942,7 +4942,7 @@
 		<!-- Sanitize Water -->
 		<BuildInfo>
 			<Type>BUILD_SANITIZE_WATER</Type>
-			<Description>TXT_KEY_BUILD_SANITIZE</Description>
+			<Description>TXT_KEY_BUILD_SANITIZE_WATER</Description>
 			<PrereqTech>TECH_AQUACULTURE</PrereqTech>
 			<iTime>800</iTime>
 			<iCost>0</iCost>
@@ -8588,7 +8588,7 @@
 		<!-- Harvest Kelp (consumes unit) -->
 		<BuildInfo>
 			<Type>BUILD_HARVEST_KELP_2</Type>
-			<Description>TXT_KEY_BUILD_HARVEST_KELP</Description>
+			<Description>TXT_KEY_BUILD_HARVEST_KELP_K</Description>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>100</iTime>
 			<iCost>0</iCost>
@@ -8602,7 +8602,7 @@
 		<!-- Lighthouse -->
 		<BuildInfo>
 			<Type>BUILD_LIGHTHOUSE_CORAL</Type>
-			<Description>TXT_KEY_BUILD_LIGHTHOUSE</Description>
+			<Description>TXT_KEY_BUILD_LIGHTHOUSE_CORAL</Description>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<iTime>800</iTime>
 			<iCost>0</iCost>
@@ -8615,7 +8615,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_LIGHTHOUSE_REEF</Type>
-			<Description>TXT_KEY_BUILD_LIGHTHOUSE</Description>
+			<Description>TXT_KEY_BUILD_LIGHTHOUSE_REEF</Description>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<iTime>800</iTime>
 			<iCost>0</iCost>
@@ -8699,7 +8699,7 @@
 		<!-- Mushroom Gatherer (Kill) -->
 		<BuildInfo>
 			<Type>BUILD_MUSHROOM_GATHERER_0</Type>
-			<Description>TXT_KEY_BUILD_MUSHROOM_GATHERER</Description>
+			<Description>TXT_KEY_BUILD_MUSHROOM_GATHERER_K</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>

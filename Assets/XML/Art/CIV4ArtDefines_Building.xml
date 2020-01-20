@@ -4192,7 +4192,7 @@
 			<Type>ART_DEF_BUILDING_TAILOR_SHOP</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
-			<fScale>1</fScale>
+			<fScale>0.25</fScale>
 			<fInterfaceScale>1</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/tailor/ts_e_tav.nif</NIF>
 			<KFM/>

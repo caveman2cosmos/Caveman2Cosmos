@@ -7,17 +7,17 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_CIVILOPEDIA_BACKGROUND</Tag>
-		<English>Background:[PARAGRAPH:1]</English>
-		<French>Contexte:[PARAGRAPH:1]</French>
+		<English>Background:[NEWLINE]</English>
+		<French>Contexte:[NEWLINE]</French>
 		<German>Hintergrund:[NEWLINE]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILOPEDIA_STRATEGY</Tag>
-		<English>Strategy:[PARAGRAPH:1]</English>
-		<French>Stratégie:[PARAGRAPH:1]</French>
+		<English>Strategy:[NEWLINE]</English>
+		<French>Stratégie:[NEWLINE]</French>
 		<German>Strategie:[NEWLINE]</German>
-		<Italian>Strategia:[PARAGRAPH:1]</Italian>
-		<Spanish>Estrategia:[PARAGRAPH:1]</Spanish>
+		<Italian>Strategia:[NEWLINE]</Italian>
+		<Spanish>Estrategia:[NEWLINE]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_ATTITUDE</Tag>

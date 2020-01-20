@@ -339,7 +339,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_FARM_SLAVE</Type>
-			<Description>TXT_KEY_BUILD_FARM</Description>
+			<Description>TXT_KEY_BUILD_FARM_SLAVE</Description>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
 			<iTime>500</iTime>
 			<iCost>0</iCost>
@@ -1525,7 +1525,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_PASTURE_SLAVE</Type>
-			<Description>TXT_KEY_BUILD_PASTURE</Description>
+			<Description>TXT_KEY_BUILD_PASTURE_SLAVE</Description>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
 			<iTime>400</iTime>
 			<iCost>0</iCost>

@@ -47,7 +47,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_LIGHTHOUSE_GREAT_BARRIER</Type>
-			<Description>TXT_KEY_BUILD_LIGHTHOUSE</Description>
+			<Description>TXT_KEY_BUILD_LIGHTHOUSE_GREAT_BARRIER</Description>
 			<Help/>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<iTime>800</iTime>
