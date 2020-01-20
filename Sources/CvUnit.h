@@ -2040,6 +2040,7 @@ protected:
 	int m_iAnimalIgnoresBordersCount;
 	int m_iOnslaughtCount;
 	int m_iExtraFortitude;
+#ifdef STRENGTH_IN_NUMBERS
 	int m_iExtraFrontSupportPercent;
 	int m_iExtraShortRangeSupportPercent;
 	int m_iExtraMediumRangeSupportPercent;
@@ -2047,7 +2048,8 @@ protected:
 	int m_iExtraFlankSupportPercent;
 	int m_iSupportCount;
 	int m_iAttackFromPlotX;
-	int m_iAttackFromPlotY;	
+	int m_iAttackFromPlotY;
+#endif
 	int m_iExtraSelfHealModifier;
 	int m_iExtraNumHealSupport;
 	int m_iHealSupportUsed;
@@ -2081,6 +2083,7 @@ protected:
 	bool m_bHasAnyInvisibility;
 	bool m_bHasAnyInvisibilityAbility;
 	bool m_bRevealed;
+#ifdef STRENGTH_IN_NUMBERS
 	IDInfo afIUnit;
 	IDInfo afIIUnit;
 	IDInfo asrIUnit;
@@ -2101,6 +2104,7 @@ protected:
 	IDInfo dlrIIUnit;
 	IDInfo dflIUnit;
 	IDInfo dflIIUnit;
+#endif
 	int m_iExtraDodgeModifier;
 	int m_iExtraPrecisionModifier;
 	int m_iExtraPowerShots;
@@ -2403,12 +2407,6 @@ public:
 	int getCityRepel() const;
 
 #ifdef STRENGTH_IN_NUMBERS
-	int getCityFrontSupportPercentModifier() const;
-	int getCityShortRangeSupportPercentModifier() const;
-	int getCityMediumRangeSupportPercentModifier() const;
-	int getCityLongRangeSupportPercentModifier() const;
-	int getCityFlankSupportPercentModifier() const;
-
 	int getExtraFrontSupportPercent (bool bIgnoreCommanders = false) const;
 	void changeExtraFrontSupportPercent (int iChange);
 
@@ -2502,7 +2500,7 @@ public:
 	void setDefenderFirstFlankSupportingUnit(CvUnit* pBestUnit);
 	void setDefenderSecondFlankSupportingUnit(CvUnit* pBestUnit);
 
-	bool isSupporting();
+	bool isSupporting() const;
 	void setSupportCount(int iChange);
 	void ClearSupports();
 #endif
