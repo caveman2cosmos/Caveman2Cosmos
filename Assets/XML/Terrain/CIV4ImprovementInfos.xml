@@ -11826,7 +11826,6 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 			<iAirBombDefense>10</iAirBombDefense>
 			<iHealthPercent>-50</iHealthPercent>
 			<iPillageGold>40</iPillageGold>
-			<iDepletionRand>1000</iDepletionRand>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_ROCKY</TerrainType>

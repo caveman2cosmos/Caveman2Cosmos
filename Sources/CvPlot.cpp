@@ -305,7 +305,7 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	m_bDepletedMine = false;
+	m_bDepletedMine = false; // deleteMe
 	m_eClaimingOwner = NO_PLAYER;
 	m_bCounted = false;
 	m_eLandmarkType = NO_LANDMARK;
@@ -13299,7 +13299,7 @@ void CvPlot::read(FDataStreamBase* pStream)
 /*                                                                                              */
 /************************************************************************************************/
 
-	WRAPPER_READ(wrapper, "CvPlot", &m_bDepletedMine);
+	WRAPPER_READ(wrapper, "CvPlot", &m_bDepletedMine); // deleteMe
 	WRAPPER_READ_STRING(wrapper, "CvPlot", m_szLandmarkMessage);
 	WRAPPER_READ_STRING(wrapper, "CvPlot", m_szLandmarkName);
 	WRAPPER_READ(wrapper, "CvPlot", &m_eClaimingOwner);
@@ -13842,7 +13842,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	WRAPPER_WRITE(wrapper, "CvPlot", m_bDepletedMine);
+	WRAPPER_WRITE(wrapper, "CvPlot", m_bDepletedMine); // deleteMe
 	WRAPPER_WRITE_STRING(wrapper, "CvPlot", m_szLandmarkMessage);
 	WRAPPER_WRITE_STRING(wrapper, "CvPlot", m_szLandmarkName);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_eClaimingOwner);
