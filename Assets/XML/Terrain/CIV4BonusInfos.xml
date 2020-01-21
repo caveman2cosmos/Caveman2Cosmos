@@ -10034,7 +10034,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SALT</ArtDefineTag>
 			<TechReveal>TECH_MASONRY</TechReveal>
 			<TechCityTrade>TECH_MASONRY</TechCityTrade>
-			<TechObsolete>TECH_REFINING</TechObsolete>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>0</iYieldChange>
