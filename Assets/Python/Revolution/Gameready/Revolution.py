@@ -546,90 +546,76 @@ class Revolution:
 
 ##--- Standard Event handling functions -------------------------------------------
 
-	def onEndGameTurn( self, argsList ) :
+	def onEndGameTurn(self, argsList):
 
-		if( self.iNationalismTech == None ) :
+		if self.iNationalismTech == None:
 			self.loadInfo()
 
-		self.topCivAdjustments( )
+		self.topCivAdjustments()
 
 
-	def onBeginPlayerTurn( self, argsList ) :
-
+	def onBeginPlayerTurn(self, argsList):
 		iGameTurn, iPlayer = argsList
 
-		# Stuff at end of previous players turn
-		iPrevPlayer = iPlayer - 1
-		while( iPrevPlayer >= 0 and not GC.getPlayer(iPrevPlayer).isAlive() ) :
+		iMax = GC.getMAX_PC_PLAYERS()
+		if iPlayer >= iMax:
+			# iPlayer 40-44 does not exist in C2C currently
+			# Therefore we use the last NPC rather than the first NPC to check the last real civ in the game.
+			# If there is only one player vs NPC's, then there should still be 1 rev check per game turn.
+			if iPlayer == GC.getBARBARIAN_PLAYER():
+				iPrevPlayer = iMax - 1
+			else:
+				iPrevPlayer = -1
+		else:
+			iPrevPlayer = iPlayer - 1
+
+		while iPrevPlayer > -1:
+			if GC.getPlayer(iPrevPlayer).isAlive():
+				self.checkForRevReinforcement(iPrevPlayer)
+				self.checkCivics(iPrevPlayer)
+				break
 			iPrevPlayer -= 1
 
-		if( iPrevPlayer < 0 ) :
-			iPrevPlayer = GC.getMAX_CIV_PLAYERS()
 
-		if( iPrevPlayer >= 0 and iPrevPlayer < GC.getMAX_CIV_PLAYERS() ) :
-			self.checkForRevReinforcement( iPrevPlayer )
-			self.checkCivics( iPrevPlayer )
-
-		iNextPlayer = iPlayer + 1
-		while( iNextPlayer <= GC.getMAX_CIV_PLAYERS() and not GC.getPlayer(iNextPlayer).isAlive() ) :
-			iNextPlayer += 1
-
-		if( iNextPlayer > GC.getMAX_CIV_PLAYERS() ) :
-			iNextPlayer = 0
-			while( iNextPlayer < iPlayer and not GC.getPlayer(iNextPlayer).isAlive() ) :
-				iNextPlayer += 1
-
-		#if( self.LOG_DEBUG ) : CvUtil.pyPrint(" Beginning turn for player %d, %s"%(iPlayer, GC.getPlayer(iPlayer).getCivilizationDescription(0)))
-
-		# Stuff at beginning of this players turn
-		#self.updatePlayerRevolution( argsList )
-
-	def onEndPlayerTurn( self, argsList ) :
-
+	def onEndPlayerTurn(self, argsList):
 		iGameTurn, iPlayer = argsList
-		bDoLaunchRev = False
 
-		iNextPlayer = iPlayer + 1
-		while( iNextPlayer <= GC.getMAX_CIV_PLAYERS() ) :
-			if( RevData.revObjectExists(GC.getPlayer(iNextPlayer)) ) :
-				# RevolutionMP start - general fix thanks Init
-				spawnList = RevData.revObjectGetVal(GC.getPlayer(iNextPlayer), 'SpawnList' )
-				if( spawnList != None and len(spawnList) > 0 ) :
-				# RevolutionMP end - general fix thanks Init
-					bDoLaunchRev = True
-					break
+		iMax = GC.getMAX_PC_PLAYERS()
+		iBarb = GC.getBARBARIAN_PLAYER()
+		if iPlayer >= iMax:
+			if iPlayer == iBarb:
+				iNextPlayer = 0
+			else:
+				iNextPlayer = iPlayer
+		elif iPlayer + 1 == iMax:
+			iNextPlayer = iBarb
+		else:
+			iNextPlayer = iPlayer + 1
 
-			if( not GC.getPlayer(iNextPlayer).isAlive() ) :
-				iNextPlayer += 1
-			else :
+		while iNextPlayer != iPlayer:
+			CyPlayer = GC.getPlayer(iNextPlayer)
+
+			if RevData.revObjectExists(CyPlayer) and RevData.revObjectGetVal(CyPlayer, 'SpawnList'):
+				if CyPlayer.isAlive():
+					self.updatePlayerRevolution([iGameTurn, iNextPlayer])
+				self.launchRevolution(iNextPlayer)
 				break
 
-		if( iNextPlayer > GC.getMAX_CIV_PLAYERS() ) :
-			iGameTurn += 1
-			iNextPlayer = 0
-			while( iNextPlayer < iPlayer ) :
-				if( RevData.revObjectExists(GC.getPlayer(iNextPlayer)) ) :
-					# RevolutionMP start - general fix thanks Init
-					spawnList = RevData.revObjectGetVal(GC.getPlayer(iNextPlayer), 'SpawnList' )
-					if( spawnList != None and len(spawnList) > 0 ) :
-					# RevolutionMP end - general fix thanks Init
-						bDoLaunchRev = True
-						break
+			if CyPlayer.isAlive():
+				self.updatePlayerRevolution([iGameTurn, iNextPlayer])
+				break
 
-				if( not GC.getPlayer(iNextPlayer).isAlive() ) :
-					iNextPlayer += 1
-				else :
-					break
+			iNextPlayer += 1
+			if iNextPlayer == iMax:
+				# iPlayer 40-44 does not exist in C2C currently
+				# Therefore we check the last NPC, rather than the first, next.
+				# If there is only one player vs NPC's, then there should still be 1 rev check per game turn.
+				iNextPlayer = iBarb
 
-		#if( self.LOG_DEBUG ) : CvUtil.pyPrint(" Next player after %d (%s) is %d (%s) alive %d"%( iPlayer, GC.getPlayer(iPlayer).getCivilizationDescription(0), iNextPlayer, GC.getPlayer(iNextPlayer).getCivilizationDescription(0), GC.getPlayer(iNextPlayer).isAlive()))
+			elif iNextPlayer > iMax:
+				iGameTurn += 1
+				iNextPlayer = 0
 
-		# Stuff at beginning of this players turn
-		if( GC.getPlayer(iNextPlayer).isAlive() ) :
-			#if( self.LOG_DEBUG ) : CvUtil.pyPrint(" Beginning turn %d for player %d, %s"%(iGameTurn, iNextPlayer, GC.getPlayer(iNextPlayer).getCivilizationDescription(0)))
-			self.updatePlayerRevolution( [iGameTurn,iNextPlayer] )
-
-		if( bDoLaunchRev ) :
-			self.launchRevolution( iNextPlayer )
 
 	def onCityAcquired( self, argsList):
 		'City Acquired'
@@ -640,22 +626,17 @@ class Revolution:
 
 ##--- Player turn functions ---------------------------------------
 
-	def checkForRevReinforcement( self, iPlayer ) :
+	def checkForRevReinforcement(self, iPlayer):
 		# Checks iPlayer's cities for any rebel reinforcement units that should be spawned
 		# Should be called at end of player's turn
 
-		playerPy = PyPlayer( iPlayer )
+		playerPy = PyPlayer(iPlayer)
 		cityList = playerPy.getCityList()
 
-		#if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Checking player %d's cities for rebel reinforcement"%(iPlayer))
-
-		for city in cityList :
+		for city in cityList:
 			pCity = city.GetCy()
-			if( pCity.getReinforcementCounter() == 1 ) :
-				# Do something awesome
-				#if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Checking player %d's city %s for rebel reinforcement spawning"%(iPlayer,pCity.getName()))
-				self.doRevReinforcement( pCity )
-
+			if pCity.getReinforcementCounter() == 1:
+				self.doRevReinforcement(pCity)
 		return
 
 	def doRevReinforcement( self, pCity ) :
@@ -966,29 +947,24 @@ class Revolution:
 			pCity.setReinforcementCounter( 3 + 1 )
 
 
-	def checkCivics( self, iPlayer ) :
+	def checkCivics(self, iPlayer):
 
-		pPlayer = GC.getPlayer( iPlayer )
+		pPlayer = GC.getPlayer(iPlayer)
 
-		if( not pPlayer == None or pPlayer.getNumCities() == 0 or pPlayer.isNPC() ) :
+		if not pPlayer == None or pPlayer.getNumCities() == 0 or pPlayer.isNPC():
 			return
 
-		#if( iPlayer == GAME.getActivePlayer() ) :
-		#CvUtil.pyPrint("Rev - Checking civics for player %d"%(iPlayer))
-
-		curCivics = list()
-
+		curCivics = []
 		for i in range(GC.getNumCivicOptionInfos()):
-			curCivics.append( pPlayer.getCivics(i) )
+			curCivics.append(pPlayer.getCivics(i))
 
 		prevCivics = RevData.revObjectGetVal( pPlayer, "CivicList" )
 
-		if( prevCivics == None or not len(prevCivics) == len(curCivics) ) :
-			if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Setting civics for %s"%(pPlayer.getCivilizationDescription(0)))
-			RevEvents.recordCivics( iPlayer )
+		if prevCivics == None or not len(prevCivics) == len(curCivics):
+			RevEvents.recordCivics(pPlayer)
 			return
 
-		else :
+		else:
 			sumRevIdx = 0
 			bChanged = False
 			for [i,curCivic] in enumerate(curCivics) :
@@ -1055,19 +1031,14 @@ class Revolution:
 
 		iGameTurn, iPlayer = argsList
 
-		if( GC.getPlayer(iPlayer).isNPC() ) :
-			return
-
-		if( self.iNationalismTech == None ) :
+		if self.iNationalismTech == None:
 			self.loadInfo()
 
-		if( self.LOG_DEBUG and iGameTurn%25 == 0 and iPlayer == 0 ) : CvUtil.pyPrint("  Revolt - Rev index report for year %d"%(GAME.getGameTurnYear()))
-
-		self.updateRevolutionCounters( iGameTurn, iPlayer )
-		self.updateLocalRevIndices( iGameTurn, iPlayer )
-		self.updateCivStability( iGameTurn, iPlayer )
-		self.checkForBribes( iGameTurn, iPlayer )
-		self.checkForRevolution( iGameTurn, iPlayer )
+		self.updateRevolutionCounters(iGameTurn, iPlayer)
+		self.updateLocalRevIndices(iGameTurn, iPlayer)
+		self.updateCivStability(iGameTurn, iPlayer)
+		self.checkForBribes(iGameTurn, iPlayer)
+		self.checkForRevolution(iGameTurn, iPlayer)
 
 		self.incrementRevIdxHistory( iGameTurn, iPlayer )
 

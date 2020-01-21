@@ -8961,7 +8961,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			for (int iJ = 0; iJ < GC.getNumInvisibleInfos(); iJ++)
 			{
 				InvisibleTypes eInvisible = (InvisibleTypes)iJ;
-				for (int iK = 0; iK < MAX_CIV_TEAMS; iK++)
+				for (int iK = 0; iK < MAX_TEAMS; iK++)
 				{
 					TeamTypes eTeam = (TeamTypes)iK;
 					iVisibilityIntensity = pPlot->getHighestPlotTeamVisibilityIntensity(eInvisible, eTeam);
@@ -40829,7 +40829,7 @@ void CvGameTextMgr::getTerrainDataForWB(std::vector<CvWBData>& mapTerrainData, s
 
 void CvGameTextMgr::getTerritoryDataForWB(std::vector<CvWBData>& mapTerritoryData)
 {
-	for (int i = 0; i <= MAX_CIV_PLAYERS; i++)
+	for (int i = 0; i < MAX_PLAYERS; i++)
 	{
 		CvWString szName = gDLL->getText("TXT_KEY_MAIN_MENU_NONE");
 		CvString szButton = GC.getCivilizationInfo(GET_PLAYER(BARBARIAN_PLAYER).getCivilizationType()).getButton();
