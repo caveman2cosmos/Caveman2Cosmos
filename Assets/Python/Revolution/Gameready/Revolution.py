@@ -3905,24 +3905,22 @@ class Revolution:
 									pRevPlayer = GC.getPlayer(civIdx)
 
 		# Create new civ based on culture/owner of first city in list
-		if( pRevPlayer == None ) :
+		if pRevPlayer == None:
 
 			pCity = cityList[0]
-			owner = GC.getPlayer( pCity.getOwner() )
-			ownerTeam = GC.getTeam( owner.getTeam() )
+			owner = GC.getPlayer(pCity.getOwner())
+			ownerTeam = GC.getTeam(owner.getTeam())
 
 			# Search for empty slot
 			newPlayerIdx = -1
-			for i in xrange(GC.getMAX_PC_PLAYERS()) :
-				if( (not GC.getPlayer(i).isAlive()) and (not GC.getPlayer(i).isEverAlive()) and (not RevData.revObjectExists(GC.getPlayer(i))) ) :
+			for i in xrange(GC.getMAX_PC_PLAYERS()):
+				if not GC.getPlayer(i).isEverAlive() and not RevData.revObjectExists(GC.getPlayer(i)):
 					newPlayerIdx = i
-					if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Creating new player in slot %d"%(i))
+					print "  Revolt - Creating new player in slot " + str(i)
 					break
-
-			if( newPlayerIdx < 0 ) :
-				if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - No available slots, spawning as Barbarians")
-				pRevPlayer = GC.getPlayer( GC.getBARBARIAN_PLAYER() )
-				return [pRevPlayer, bIsJoinWar]
+			else:
+				print "  Revolt - No available slots, spawning as Barbarians"
+				return [GC.getPlayer(GC.getBARBARIAN_PLAYER()), bIsJoinWar]
 
 
 			# Create list of available civs and similar civ types
@@ -4006,37 +4004,30 @@ class Revolution:
 				newCivIdx = availableCivs[GAME.getSorenRandNum(len(availableCivs),'Revolution: pick unused civ type')]
 
 			leaderList = []
-			for leaderType in xrange(GC.getNumLeaderHeadInfos()) :
-				if( GC.getCivilizationInfo(newCivIdx).isLeaders(leaderType) or GAME.isOption( GameOptionTypes.GAMEOPTION_LEAD_ANY_CIV ) ) :
-					taken = False
-					for jdx in xrange(GC.getMAX_PLAYERS()) :
-						if( GC.getPlayer(jdx).getLeaderType() == leaderType and not newPlayerIdx == jdx  ) :
-							taken = True
+			for leaderType in xrange(GC.getNumLeaderHeadInfos()):
+				if GC.getCivilizationInfo(newCivIdx).isLeaders(leaderType) or GAME.isOption(GameOptionTypes.GAMEOPTION_LEAD_ANY_CIV):
+					for jdx in xrange(GC.getMAX_PC_PLAYERS()):
+						if GC.getPlayer(jdx).getLeaderType() == leaderType and not newPlayerIdx == jdx:
 							break
-					if( not taken ) : leaderList.append(leaderType)
+					else: leaderList.append(leaderType)
 
-			if( len(leaderList) < 1 ) :
-				if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Unexpected lack of possible leaders, spawning as Barbarians")
-				pRevPlayer = GC.getPlayer( GC.getBARBARIAN_PLAYER() )
+			if not leaderList:
+				print "[INFO] Unexpected lack of possible leaders, spawning as Barbarians"
+				pRevPlayer = GC.getPlayer(GC.getBARBARIAN_PLAYER())
 				return [pRevPlayer, bIsJoinWar]
 
-			newLeaderIdx = leaderList[GAME.getSorenRandNum(len(leaderList),'Revolution: pick leader')]
+			newLeaderIdx = leaderList[GAME.getSorenRandNum(len(leaderList), 'Revolution: pick leader')]
 
-			GAME.addPlayer( newPlayerIdx, newLeaderIdx, newCivIdx, False )
-
-			if( False ) :
-				if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - New civ creation failed, spawning as Barbarians")
-				pRevPlayer = GC.getPlayer( GC.getBARBARIAN_PLAYER() )
-				return [pRevPlayer, bIsJoinWar]
+			GAME.addPlayer(newPlayerIdx, newLeaderIdx, newCivIdx, False)
 
 			pRevPlayer = GC.getPlayer(newPlayerIdx)
 
-			if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Created the %s in slot %d"%(pRevPlayer.getCivilizationDescription(0),pRevPlayer.getID()))
+			print "  Revolt - Created the %s in slot %d" %(pRevPlayer.getCivilizationDescription(0), newPlayerIdx)
 
 		# Do special setup for non-living revolutionaries ...
 
-		if( giveTechs and not pRevPlayer.isAlive() and not pRevPlayer.isBarbarian() ) :
-			RevUtils.giveTechs( pRevPlayer, owner )
+		if giveTechs and not pRevPlayer.isAlive() and not pRevPlayer.isBarbarian():
+			RevUtils.giveTechs(pRevPlayer, owner)
 
 		if( not giveRelType == None and not pRevPlayer.isAlive() and not pRevPlayer.isBarbarian() ) :
 			if giveRelType >= 0:
@@ -4074,49 +4065,47 @@ class Revolution:
 		return [pRevPlayer, bIsJoinWar]
 
 
-	def chooseRevolutionLeader( self, cityList ) :
+	def chooseRevolutionLeader(self, cityList):
 
 		newLeaderType = None
 		newLeaderName = None
 
-		owner = GC.getPlayer( cityList[0].getOwner() )
+		owner = GC.getPlayer(cityList[0].getOwner())
 		ownerCivType = owner.getCivilizationType()
 		ownerLeaderType = owner.getLeaderType()
-		ownerCivInfo = GC.getCivilizationInfo( ownerCivType )
+		ownerCivInfo = GC.getCivilizationInfo(ownerCivType)
 
 		# Use new leader type
 		count = 0
 		availLeader = []
-		for i in xrange(GC.getNumLeaderHeadInfos()) :
-			if( ownerCivInfo.isLeaders(i) or GAME.isOption( GameOptionTypes.GAMEOPTION_LEAD_ANY_CIV ) ) :
-				taken = False
-				for jdx in xrange(GC.getMAX_PLAYERS()) :
-					if( GC.getPlayer(jdx).getLeaderType() == i ) :
-						taken = True
+		for i in xrange(GC.getNumLeaderHeadInfos()):
+			if ownerCivInfo.isLeaders(i) or GAME.isOption(GameOptionTypes.GAMEOPTION_LEAD_ANY_CIV):
+				for j in xrange(GC.getMAX_PC_PLAYERS()):
+					if GC.getPlayer(j).getLeaderType() == i:
 						break
-				if( not taken ) :
+				else:
 					count += 1
 					availLeader.append(i)
 
-		if( len(availLeader) > 0 ) :
-			newLeaderType = availLeader[GAME.getSorenRandNum(len(availLeader),'Revolution: pick leader')]
-			newLeaderName = GC.getLeaderHeadInfo( newLeaderType ).getDescription()
+		if availLeader:
+			newLeaderType = availLeader[GAME.getSorenRandNum(count,'Revolution: pick leader')]
+			newLeaderName = GC.getLeaderHeadInfo(newLeaderType).getDescription()
 
-		if( newLeaderType == None ) :
+		if newLeaderType == None:
 			# Use same leader type, but with new name
 			newLeaderType = ownerLeaderType
-			newLeaderName = GC.getLeaderHeadInfo( newLeaderType ).getDescription()
-			newLeaderName = CvUtil.convertToStr(newLeaderName)
-			if( newLeaderName == owner.getName() ) :
+			newLeaderName = CvUtil.convertToStr(GC.getLeaderHeadInfo( newLeaderType ).getDescription())
+
+			if newLeaderName == owner.getName():
 				# Hack Roman numeral naming
-				if( newLeaderName[-3:len(newLeaderName)] == ' II' ) :
+				if newLeaderName[-3:len(newLeaderName)] == ' II':
 					newLeaderName = newLeaderName + 'I'
-				elif( newLeaderName[-2:len(newLeaderName)] == ' I' ) :
+				elif newLeaderName[-2:len(newLeaderName)] == ' I':
 					newLeaderName = newLeaderName + 'I'
-				else :
+				else:
 					newLeaderName = newLeaderName + ' II'
 
-		return [newLeaderType,newLeaderName]
+		return [newLeaderType, newLeaderName]
 
 
 ##--- Revolution decision functions ------------------------------------------
