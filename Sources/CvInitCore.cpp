@@ -216,7 +216,7 @@ int CvInitCore::getNumHumans() const
 int CvInitCore::getNumDefinedPlayers() const
 {
 	int iCount = 0;
-	for (int i = 0; i < MAX_PC_PLAYERS; ++i)// MAX_CIV_PLAYERS was here previously.
+	for (int i = 0; i < MAX_PC_PLAYERS; ++i)
 	{
 		if ((getCiv((PlayerTypes)i) != NO_CIVILIZATION) && (getLeader((PlayerTypes)i) != NO_LEADER))
 		{
