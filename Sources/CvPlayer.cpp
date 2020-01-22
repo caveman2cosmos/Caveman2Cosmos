@@ -4557,12 +4557,12 @@ bool CvPlayer::isNPC() const
 
 bool CvPlayer::isHominid() const
 {
-	return (getID() == BARBARIAN_PLAYER || getID() == NPC7_PLAYER);
+	return (getID() == BARBARIAN_PLAYER || getID() == NEANDERTHAL_PLAYER);
 }
 
 bool CvPlayer::isAnimal() const
 {
-	return (getID() == AGGRESSIVE_ANIMAL_PLAYER || getID() == PASSIVE_ANIMAL_PLAYER || getID() == NPC8_PLAYER);
+	return (getID() == PREDATOR_PLAYER || getID() == PREY_PLAYER || getID() == BEAST_PLAYER);
 }
 
 bool CvPlayer::isInvasionCapablePlayer() const

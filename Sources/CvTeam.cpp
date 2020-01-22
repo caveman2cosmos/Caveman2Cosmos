@@ -3663,7 +3663,7 @@ bool CvTeam::isNPC() const
 
 bool CvTeam::isHominid() const
 {
-	return (getID() == BARBARIAN_TEAM || getID() == NPC7_TEAM);
+	return (getID() == BARBARIAN_TEAM || getID() == NEANDERTHAL_TEAM);
 }
 
 

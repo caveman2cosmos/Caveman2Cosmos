@@ -1,35 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Sid Meier's Civilization 4 -->
-<!-- -->
-<!-- <PlayerType></PlayerType> tag is now necessary to activate a spawn -->
-<!-- Valid NPC players for spawns: -->
-<!-- 50 = BARBARIAN_PLAYER - Barbarians -->
-<!-- 49 = PASSIVE_ANIMAL_PLAYER - Creatures -->
-<!-- 48 = AGGRESSIVE_ANIMAL_PLAYER - Pretators -->
-<!-- 47 = NPC8_PLAYER - Beasts -->
-<!-- 46 = NPC7_PLAYER - Neanderthals -->
-<!-- 45 = NPC6_PLAYER - Insectoids -->
-<!-- 44 = NPC5_PLAYER - Note here what that player means once it is defined -->
-<!-- 43 = NPC4_PLAYER - Note here what that player means once it is defined -->
-<!-- 42 = NPC3_PLAYER - Note here what that player means once it is defined -->
-<!-- 41 = NPC2_PLAYER - Note here what that player means once it is defined -->
-<!-- 40 = NPC1_PLAYER - Note here what that player means once it is defined -->
-<!-- Spawn Infos -->
-<Civ4SpawnInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
-	<SpawnInfos>
-		<SpawnInfo>
-			<Type>SPAWN_ANIMAL_JAGUAR_NATIVE</Type>
-			<UnitType>UNIT_ANIMAL_JAGUAR</UnitType>
-			<PlayerType>48</PlayerType>
-			<iTurns>400</iTurns>
 <!--
-	iMaxLocalDensity: range 1-49
+<PlayerType> tag is now necessary to activate a spawn
+Valid NPC players for spawns:
+	40 = BARBARIAN_PLAYER
+	41 = NEANDERTHAL_PLAYER
+	42 = BEAST_PLAYER
+	43 = PREDATOR_PLAYER
+	44 = PREY_PLAYER
+	45 = INSECT_PLAYER
+
+ <iMaxLocalDensity> Range: 1-49
 	Based on an area of 49 plots, 3 plots out in all directions.
 	Plots that is not of the same area as the spawn plot is not counted.
 	iAreaPlots (1-49) / iMaxLocalDensity (1-49) = Max units inside the Area. (Min. 1)
 	Set it to 1 for a max. limit of 49 units inside the area.
 	Set it to 49 for a max. limit of 1 unit inside the area.
 -->
+<Civ4SpawnInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
+	<SpawnInfos>
+		<SpawnInfo>
+			<Type>SPAWN_ANIMAL_JAGUAR_NATIVE</Type>
+			<UnitType>UNIT_ANIMAL_JAGUAR</UnitType>
+			<PlayerType>43</PlayerType>
+			<iTurns>400</iTurns>
 			<iMaxLocalDensity>49</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -46,7 +39,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_BISON_NATIVE</Type>
 			<UnitType>UNIT_BISON</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<iTurns>30</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -61,7 +54,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_BENGALTIGER_NATIVE</Type>
 			<UnitType>UNIT_BENGALTIGER</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<iTurns>480</iTurns>
 			<iMaxLocalDensity>49</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -75,7 +68,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_BROWN_BEAR_FOREST</Type>
 			<UnitType>UNIT_BEAR</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -95,7 +88,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_BLACKBEAR_NATIVE</Type>
 			<UnitType>UNIT_BLACKBEAR</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>8</iMaxLocalDensity>
@@ -112,7 +105,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_CAMEL_NATIVE</Type>
 			<UnitType>UNIT_CAMEL</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>30</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -129,7 +122,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_CAVEBEAR_NATIVE</Type>
 			<UnitType>UNIT_CAVEBEAR</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<iTurns>300</iTurns>
 			<iMaxLocalDensity>18</iMaxLocalDensity>
 			<ObsoleteTech>TECH_CHIEFDOM</ObsoleteTech>
@@ -147,7 +140,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_CAVE_LION_NATIVE</Type>
 			<UnitType>UNIT_CAVE_LION</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<iTurns>250</iTurns>
 			<iMaxLocalDensity>49</iMaxLocalDensity>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
@@ -168,7 +161,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_CHEETAH_NATIVE</Type>
 			<UnitType>UNIT_CHEETAH</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<iTurns>100</iTurns>
 			<iMaxLocalDensity>12</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -187,7 +180,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_COW_NATIVE</Type>
 			<UnitType>UNIT_COW</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<iTurns>30</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<ObsoleteTech>TECH_RENAISSANCE_LIFESTYLE</ObsoleteTech>
@@ -199,7 +192,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_DEER_NATIVE</Type>
 			<UnitType>UNIT_STAG_DEER</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>30</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -215,7 +208,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_DONKEY_NATIVE</Type>
 			<UnitType>UNIT_DONKEY</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>40</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -228,7 +221,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_DONKEY_NATIVE2</Type>
 			<UnitType>UNIT_DONKEY</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>250</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -241,7 +234,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_ELEPHANT_NATIVE</Type>
 			<UnitType>UNIT_ELEPHANT</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>25</iTurns>
 			<iMaxLocalDensity>21</iMaxLocalDensity>
@@ -257,7 +250,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_FLAMINGO_NATIVE</Type>
 			<UnitType>UNIT_FLAMINGO</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>125</iTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
@@ -276,7 +269,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_GORILLA_NATIVE</Type>
 			<UnitType>UNIT_GORILLA</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -300,7 +293,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_GRIZZLY_NATIVE</Type>
 			<UnitType>UNIT_GRIZZLY</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -317,7 +310,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_HORSE_NATIVE</Type>
 			<UnitType>UNIT_HORSE</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>50</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -330,7 +323,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_HYENA_NATIVE</Type>
 			<UnitType>UNIT_HYENA</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<iTurns>120</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -351,7 +344,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_LION_NATIVE</Type>
 			<UnitType>UNIT_LION</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<iTurns>160</iTurns>
 			<iMaxLocalDensity>20</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -371,7 +364,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_ORANGUTAN_NATIVE</Type>
 			<UnitType>UNIT_ORANGUTAN</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>240</iTurns>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
@@ -395,7 +388,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_PANDA_BEAR_NATIVE</Type>
 			<UnitType>UNIT_PANDA_BEAR</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>200</iTurns>
 			<iMaxLocalDensity>12</iMaxLocalDensity>
@@ -422,7 +415,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_PANTHER_NATIVE</Type>
 			<UnitType>UNIT_PANTHER</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<iTurns>150</iTurns>
 			<iMaxLocalDensity>12</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -437,7 +430,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_PANTHER_RANDOM</Type>
 			<UnitType>UNIT_PANTHER</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<iTurns>200</iTurns>
 			<iMaxLocalDensity>12</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -452,7 +445,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_PENGUIN_NATIVE</Type>
 			<UnitType>UNIT_PENGUIN</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>120</iTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
@@ -468,7 +461,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_POLARBEAR_NATIVE</Type>
 			<UnitType>UNIT_POLARBEAR</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<iTurns>60</iTurns>
 			<iMaxLocalDensity>14</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -483,7 +476,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_PUFFADDER_NATIVE</Type>
 			<UnitType>UNIT_PUFFADDER</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<iTurns>200</iTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -503,7 +496,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_RACCOON_NATIVE</Type>
 			<UnitType>UNIT_RACCOON</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>200</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -521,7 +514,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_REDPANDA_NATIVE</Type>
 			<UnitType>UNIT_REDPANDA</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>260</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -539,7 +532,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_SIBERIANTIGER_NATIVE</Type>
 			<UnitType>UNIT_SIBERIANTIGER</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<iTurns>400</iTurns>
 			<iMaxLocalDensity>49</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -557,7 +550,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_WARTHOG_NATIVE</Type>
 			<UnitType>UNIT_WARTHOG</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>45</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -574,7 +567,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_AARDVARK_NATIVE</Type>
 			<UnitType>UNIT_AARDVARK</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>240</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -597,7 +590,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_BADGER_NATIVE</Type>
 			<UnitType>UNIT_BADGER</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>330</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -613,7 +606,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_BALLPYTHON_NATIVE</Type>
 			<UnitType>UNIT_BALLPYTHON</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>200</iTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
@@ -629,7 +622,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_BEAVER_NATIVE</Type>
 			<UnitType>UNIT_BEAVER</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>30</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -645,7 +638,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_BONGO_NATIVE</Type>
 			<UnitType>UNIT_BONGO</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>200</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -667,7 +660,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_BUFFALO_NATIVE</Type>
 			<UnitType>UNIT_BUFFALO</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<iTurns>30</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -683,7 +676,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_BUFFALO_NATIVE2</Type>
 			<UnitType>UNIT_BUFFALO</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<iTurns>60</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -698,7 +691,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_CARIBOU_NATIVE</Type>
 			<UnitType>UNIT_CARIBOU</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>60</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -717,7 +710,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_CARIBOU_NATIVE2</Type>
 			<UnitType>UNIT_CARIBOU</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>90</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -733,7 +726,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_CASSOWARY_NATIVE</Type>
 			<UnitType>UNIT_CASSOWARY</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -755,7 +748,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_COBRA_NATIVE</Type>
 			<UnitType>UNIT_COBRA</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<iTurns>200</iTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -770,7 +763,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_DUCK_NATIVE</Type>
 			<UnitType>UNIT_DUCK</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>200</iTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
@@ -784,7 +777,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_DUCK_NATIVE2</Type>
 			<UnitType>UNIT_DUCK</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>100</iTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
@@ -797,7 +790,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_EAGLE_NATIVE</Type>
 			<UnitType>UNIT_EAGLE</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
@@ -811,7 +804,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_EAGLE_BALD_NATIVE</Type>
 			<UnitType>UNIT_EAGLE_BALD</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
@@ -828,7 +821,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_EMU_NATIVE</Type>
 			<UnitType>UNIT_EMU</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -846,7 +839,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_GEMSBOK_NATIVE</Type>
 			<UnitType>UNIT_GEMSBOK</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>210</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -866,7 +859,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_HAAST_EAGLE_NATIVE</Type>
 			<UnitType>UNIT_HAAST_EAGLE</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<iTurns>500</iTurns>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<ObsoleteTech>TECH_RENAISSANCE_LIFESTYLE</ObsoleteTech>
@@ -882,7 +875,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_HAWK_NATIVE</Type>
 			<UnitType>UNIT_HAWK</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>240</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -899,7 +892,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_HIPPO_NATIVE</Type>
 			<UnitType>UNIT_HIPPO</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<iTurns>280</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -917,7 +910,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_HORNEDOWL_NATIVE</Type>
 			<UnitType>UNIT_HORNEDOWL</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>12</iMaxLocalDensity>
@@ -935,7 +928,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_IBEX_NATIVE</Type>
 			<UnitType>UNIT_IBEX</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>210</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -953,7 +946,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_IGUANA_NATIVE</Type>
 			<UnitType>UNIT_IGUANA</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>350</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -969,7 +962,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_KANGAROO_RED_NATIVE</Type>
 			<UnitType>UNIT_KANGAROO_RED</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>260</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -987,7 +980,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_KANGAROO_RED_NATIVE2</Type>
 			<UnitType>UNIT_KANGAROO_RED</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>175</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -1000,7 +993,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_KANGAROO_GREY_NATIVE</Type>
 			<UnitType>UNIT_KANGAROO_GREY</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -1019,7 +1012,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_KANGAROO_GREY_NATIVE2</Type>
 			<UnitType>UNIT_KANGAROO_GREY</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>200</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -1035,7 +1028,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_KOALA_NATIVE</Type>
 			<UnitType>UNIT_KOALA</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -1053,7 +1046,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_KOMODO_NATIVE</Type>
 			<UnitType>UNIT_KOMODO_DRAGON</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<iTurns>160</iTurns>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -1067,7 +1060,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_MANDRILL_NATIVE</Type>
 			<UnitType>UNIT_MANDRILL</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -1084,7 +1077,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_MOA_NATIVE</Type>
 			<UnitType>UNIT_MOA</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
 			<iMaxLocalDensity>12</iMaxLocalDensity>
@@ -1102,7 +1095,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_MOOSE_NATIVE</Type>
 			<UnitType>UNIT_MOOSE</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>200</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -1124,7 +1117,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_MONITOR_NATIVE</Type>
 			<UnitType>UNIT_MONITOR</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>360</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -1144,7 +1137,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_MOUFLON_NATIVE</Type>
 			<UnitType>UNIT_MOUFLON</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>240</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -1163,7 +1156,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_MUSKOX_NATIVE</Type>
 			<UnitType>UNIT_MUSKOX</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>150</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -1179,7 +1172,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_OKAPI_NATIVE</Type>
 			<UnitType>UNIT_OKAPI</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>320</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -1197,7 +1190,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_OSTRICH_NATIVE</Type>
 			<UnitType>UNIT_OSTRICH</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>250</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -1215,7 +1208,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_PHEASANT_NATIVE</Type>
 			<UnitType>UNIT_PHEASANT</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -1231,7 +1224,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_RHEA_NATIVE</Type>
 			<UnitType>UNIT_RHEA</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -1252,7 +1245,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_ROCKHOPPER_NATIVE</Type>
 			<UnitType>UNIT_ROCKHOPPER</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>550</iTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
@@ -1270,7 +1263,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_SLOTHBEAR_NATIVE</Type>
 			<UnitType>UNIT_SLOTHBEAR</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -1287,7 +1280,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_SPECTACLEDBEAR_NATIVE</Type>
 			<UnitType>UNIT_SPECTACLEDBEAR</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
@@ -1304,7 +1297,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_SUNBEAR_NATIVE</Type>
 			<UnitType>UNIT_SUNBEAR</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -1320,7 +1313,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_TASMANIANDEVIL_NATIVE</Type>
 			<UnitType>UNIT_TASMANIANDEVIL</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -1338,7 +1331,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_DESERT_TORTOISE_NATIVE</Type>
 			<UnitType>UNIT_DESERT_TORTOISE</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -1353,7 +1346,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_GALAPOGOS_TORTOISE_NATIVE</Type>
 			<UnitType>UNIT_GALAPOGOS_TORTOISE</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>350</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -1370,7 +1363,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_TURKEY_NATIVE</Type>
 			<UnitType>UNIT_TURKEY</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>240</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -1387,7 +1380,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_VIPER_NATIVE</Type>
 			<UnitType>UNIT_VIPER</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<iTurns>460</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -1405,7 +1398,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_VIPER_CHAIN_NATIVE</Type>
 			<UnitType>UNIT_VIPER_CHAIN</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<iTurns>520</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -1426,7 +1419,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_VULTURE_NATIVE</Type>
 			<UnitType>UNIT_VULTURE</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>180</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -1447,7 +1440,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_WALLABY_NATIVE</Type>
 			<UnitType>UNIT_WALLABY</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>210</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -1465,7 +1458,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_WALLABY_NATIVE2</Type>
 			<UnitType>UNIT_WALLABY</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>100</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -1482,7 +1475,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_WALLAROO_NATIVE</Type>
 			<UnitType>UNIT_WALLAROO</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>340</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -1503,7 +1496,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_WALLAROO_NATIVE2</Type>
 			<UnitType>UNIT_WALLAROO</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>75</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -1520,7 +1513,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_GUANACO_NATIVE</Type>
 			<UnitType>UNIT_GUANACO</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>200</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -1541,7 +1534,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_GUANACO_NATIVE2</Type>
 			<UnitType>UNIT_GUANACO</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>130</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -1559,7 +1552,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_WILDEBEEST_NATIVE</Type>
 			<UnitType>UNIT_WILDEBEEST</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>170</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -1580,7 +1573,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_WILDEBEEST_NATIVE2</Type>
 			<UnitType>UNIT_WILDEBEEST</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>170</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -1598,7 +1591,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_KOOKABURRA_NATIVE</Type>
 			<UnitType>UNIT_KOOKABURRA</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>200</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -1616,7 +1609,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_MACAW_NATIVE</Type>
 			<UnitType>UNIT_MACAW</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>250</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -1633,7 +1626,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_CAPYBARA_NATIVE</Type>
 			<UnitType>UNIT_CAPYBARA</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>360</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -1652,7 +1645,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_GAZELLE_NATIVE</Type>
 			<UnitType>UNIT_GAZELLE</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>170</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -1673,7 +1666,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_RATEL_NATIVE</Type>
 			<UnitType>UNIT_RATEL</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -1692,7 +1685,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_SKUNK_NATIVE</Type>
 			<UnitType>UNIT_SKUNK</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -1709,7 +1702,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_WALRUS_NATIVE</Type>
 			<UnitType>UNIT_WALRUS</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>40</iTurns>
 			<iMaxLocalDensity>12</iMaxLocalDensity>
@@ -1724,7 +1717,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_WOLVERINE_NATIVE</Type>
 			<UnitType>UNIT_WOLVERINE</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>350</iTurns>
 			<iMaxLocalDensity>12</iMaxLocalDensity>
@@ -1741,7 +1734,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_OXPECKER_NATIVE</Type>
 			<UnitType>UNIT_OXPECKER</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -1759,7 +1752,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_TERN_NATIVE</Type>
 			<UnitType>UNIT_TERN</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -1774,7 +1767,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_CROW_NATIVE</Type>
 			<UnitType>UNIT_CROW</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>360</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -1792,7 +1785,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_GULL_NATIVE</Type>
 			<UnitType>UNIT_GULL</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>60</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -1810,7 +1803,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_BISON_HERD</Type>
 			<UnitType>UNIT_BISON</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<iTurns>360</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
@@ -1829,7 +1822,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_BOAR_NATIVE</Type>
 			<UnitType>UNIT_BOAR</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>60</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -1842,7 +1835,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_PIG_NEW_NATIVE</Type>
 			<UnitType>UNIT_PIG_NEW</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>60</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -1929,7 +1922,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_ANTEATER_NATIVE</Type>
 			<UnitType>UNIT_ANTEATER</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>250</iTurns>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
@@ -1951,7 +1944,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_LEMUR_NATIVE</Type>
 			<UnitType>UNIT_LEMUR</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>175</iTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
@@ -1969,7 +1962,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_LOON_NATIVE</Type>
 			<UnitType>UNIT_LOON</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -1987,7 +1980,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_PEACOCK_NATIVE</Type>
 			<UnitType>UNIT_PEACOCK</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -2008,7 +2001,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_PIGEON_NATIVE</Type>
 			<UnitType>UNIT_PIGEON</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
@@ -2024,7 +2017,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_GERENUK_NATIVE</Type>
 			<UnitType>UNIT_GERENUK</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -2042,7 +2035,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_IMPALA_NATIVE</Type>
 			<UnitType>UNIT_IMPALA</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -2059,7 +2052,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_IMPALA_NATIVE2</Type>
 			<UnitType>UNIT_IMPALA</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>60</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -2077,7 +2070,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_SAIGA_NATIVE</Type>
 			<UnitType>UNIT_SAIGA</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -2096,7 +2089,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_ASIANBEAR_NATIVE</Type>
 			<UnitType>UNIT_ASIANBEAR</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -2111,7 +2104,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_CHIMPANZEE_NATIVE</Type>
 			<UnitType>UNIT_CHIMPANZEE</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -2135,7 +2128,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_PLATYPUS_NATIVE</Type>
 			<UnitType>UNIT_PLATYPUS</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>240</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -2152,7 +2145,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_TOUCAN_NATIVE</Type>
 			<UnitType>UNIT_TOUCAN</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>90</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -2167,7 +2160,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_CAPUCHIN_NATIVE</Type>
 			<UnitType>UNIT_CAPUCHIN</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>120</iTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
@@ -2184,7 +2177,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_SEALION_LAND_NATIVE</Type>
 			<UnitType>UNIT_SEALION_LAND</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>120</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -2197,7 +2190,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_LYNX_NATIVE</Type>
 			<UnitType>UNIT_LYNX</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>340</iTurns>
 			<iMaxLocalDensity>12</iMaxLocalDensity>
@@ -2213,7 +2206,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_SNOWLEOPARD_NATIVE</Type>
 			<UnitType>UNIT_SNOWLEOPARD</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>150</iTurns>
 			<iMaxLocalDensity>12</iMaxLocalDensity>
@@ -2234,7 +2227,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_BARBARYAPE_NATIVE</Type>
 			<UnitType>UNIT_BARBARYAPE</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>175</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -2256,7 +2249,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_GELADA_NATIVE</Type>
 			<UnitType>UNIT_GELADA</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>175</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -2277,7 +2270,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_PROCOPTODON_NATIVE</Type>
 			<UnitType>UNIT_PROCOPTODON</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>160</iTurns>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
@@ -2294,7 +2287,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_PROCOPTODON_NATIVE1</Type>
 			<UnitType>UNIT_PROCOPTODON</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>260</iTurns>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
@@ -2312,7 +2305,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_QUOLL_NATIVE</Type>
 			<UnitType>UNIT_QUOLL</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -2337,7 +2330,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_GIRAFFE_NATIVE</Type>
 			<UnitType>UNIT_GIRAFFE</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>175</iTurns>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
@@ -2361,7 +2354,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_DARTFROG_NATIVE</Type>
 			<UnitType>UNIT_DARTFROG</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>200</iTurns>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
@@ -2378,7 +2371,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_ARCTICFOX_NATIVE</Type>
 			<UnitType>UNIT_ARCTICFOX</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>250</iTurns>
 			<iMaxLocalDensity>12</iMaxLocalDensity>
@@ -2394,7 +2387,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_DHOLE_NATIVE</Type>
 			<UnitType>UNIT_DHOLE</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -2416,7 +2409,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_DINGO_NATIVE</Type>
 			<UnitType>UNIT_DINGO</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>150</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -2436,7 +2429,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_DIREWOLF_NATIVE</Type>
 			<UnitType>UNIT_DIREWOLF</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<iTurns>200</iTurns>
 			<iMaxLocalDensity>12</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -2455,7 +2448,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_EWOLF_NATIVE</Type>
 			<UnitType>UNIT_EWOLF</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>150</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -2475,7 +2468,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_FENNECFOX_NATIVE</Type>
 			<UnitType>UNIT_FENNECFOX</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>150</iTurns>
 			<iMaxLocalDensity>12</iMaxLocalDensity>
@@ -2496,7 +2489,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_MANEDWOLF_NATIVE</Type>
 			<UnitType>UNIT_MANEDWOLF</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>260</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -2513,7 +2506,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_REDFOX_NATIVE</Type>
 			<UnitType>UNIT_REDFOX</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>400</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -2535,7 +2528,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_THYLACINE_NATIVE</Type>
 			<UnitType>UNIT_THYLACINE</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -2556,7 +2549,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_WOLF_NATIVE</Type>
 			<UnitType>UNIT_WOLF</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<iTurns>140</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -2575,7 +2568,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_WOLF_PACK</Type>
 			<UnitType>UNIT_WOLF</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<iTurns>3750</iTurns>
 			<iMaxLocalDensity>12</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -2599,7 +2592,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_RIVERCROC_LARGE_NATIVE</Type>
 			<UnitType>UNIT_RIVER_CROC_LARGE</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>14</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -2625,7 +2618,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_RIVERCROC_LARGE_NATIVE2</Type>
 			<UnitType>UNIT_RIVER_CROC_LARGE</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>14</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -2641,7 +2634,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_RIVERCROC_SMALL_NATIVE</Type>
 			<UnitType>UNIT_RIVER_CROC_SMALL</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -2667,7 +2660,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_RIVERCROC_SMALL_NATIVE2</Type>
 			<UnitType>UNIT_RIVER_CROC_SMALL</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -2685,7 +2678,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_CAIMAN_NATIVE</Type>
 			<UnitType>UNIT_CAIMAN</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<iTurns>240</iTurns>
 			<iMaxLocalDensity>14</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -2703,7 +2696,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_GHARIAL_NATIVE</Type>
 			<UnitType>UNIT_GHARIAL</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>150</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -2730,7 +2723,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_GHARIAL_NATIVE2</Type>
 			<UnitType>UNIT_GHARIAL</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>150</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -2747,7 +2740,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_GATOR_NATIVE</Type>
 			<UnitType>UNIT_GATOR</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>12</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -2769,7 +2762,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_GATOR_ASIAN_NATIVE</Type>
 			<UnitType>UNIT_GATOR_ASIAN</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<iTurns>360</iTurns>
 			<iMaxLocalDensity>12</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -2791,7 +2784,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_NILECROC_NATIVE</Type>
 			<UnitType>UNIT_NILECROC</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>14</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -2810,7 +2803,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_TAPIR_NATIVE</Type>
 			<UnitType>UNIT_TAPIR</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>14</iMaxLocalDensity>
@@ -2825,7 +2818,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_BRAZILIAN_TAPIR_NATIVE</Type>
 			<UnitType>UNIT_BRAZILIAN_TAPIR</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>200</iTurns>
 			<iMaxLocalDensity>14</iMaxLocalDensity>
@@ -2841,7 +2834,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_MALAYAN_TAPIR_NATIVE</Type>
 			<UnitType>UNIT_MALAYAN_TAPIR</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>200</iTurns>
 			<iMaxLocalDensity>14</iMaxLocalDensity>
@@ -2858,7 +2851,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_MOUNTAIN_TAPIR_NATIVE</Type>
 			<UnitType>UNIT_MOUNTAIN_TAPIR</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>200</iTurns>
 			<iMaxLocalDensity>14</iMaxLocalDensity>
@@ -2875,7 +2868,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_AFRICANGREY_NATIVE</Type>
 			<UnitType>UNIT_AFRICANGREY</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -2891,7 +2884,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_AFRICANELEPHANT_NATIVE</Type>
 			<UnitType>UNIT_AFRICANELEPHANT</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>40</iTurns>
 			<iMaxLocalDensity>21</iMaxLocalDensity>
@@ -2908,7 +2901,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_ARMADILLO_NATIVE</Type>
 			<UnitType>UNIT_ARMADILLO</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -2926,7 +2919,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_BABIRUSA_NATIVE</Type>
 			<UnitType>UNIT_BABIRUSA</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -2941,7 +2934,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_CUSCUS_NATIVE</Type>
 			<UnitType>UNIT_CUSCUS</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>120</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -2958,7 +2951,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_GLYPTO_NATIVE</Type>
 			<UnitType>UNIT_GLYPTO</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>360</iTurns>
 			<iMaxLocalDensity>20</iMaxLocalDensity>
@@ -2976,7 +2969,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_GROUNDSLOTH_NATIVE</Type>
 			<UnitType>UNIT_GROUNDSLOTH</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>100</iTurns>
 			<iMaxLocalDensity>20</iMaxLocalDensity>
@@ -2994,7 +2987,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_LIZARD_NATIVE</Type>
 			<UnitType>UNIT_LIZARD</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>240</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -3018,7 +3011,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_NUMBAT_NATIVE</Type>
 			<UnitType>UNIT_NUMBAT</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>100</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -3036,7 +3029,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_OPOSSUM_NATIVE</Type>
 			<UnitType>UNIT_OPOSSUM</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>175</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -3060,7 +3053,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_PARROT_NATIVE_AFRICA</Type>
 			<UnitType>UNIT_PARROT</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -3078,7 +3071,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_PARROT_NATIVE_ASIA</Type>
 			<UnitType>UNIT_PARROT</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -3093,7 +3086,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_PARROT_NATIVE_OCEANIA</Type>
 			<UnitType>UNIT_PARROT</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -3110,7 +3103,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_POSSUM_NATIVE</Type>
 			<UnitType>UNIT_POSSUM</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>200</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -3127,7 +3120,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_PYGMYHIPPO_NATIVE</Type>
 			<UnitType>UNIT_PYGMYHIPPO</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
@@ -3144,7 +3137,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_RAVEN_NATIVE</Type>
 			<UnitType>UNIT_RAVEN</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>175</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -3165,7 +3158,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_SECRETARYBIRD_NATIVE</Type>
 			<UnitType>UNIT_SECRETARYBIRD</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -3187,7 +3180,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_TREESLOTH_NATIVE</Type>
 			<UnitType>UNIT_TREESLOTH</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>125</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -3204,7 +3197,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_WOMBAT_NATIVE</Type>
 			<UnitType>UNIT_WOMBAT</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -3221,7 +3214,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_BOOBY_NATIVE</Type>
 			<UnitType>UNIT_BOOBY</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -3243,7 +3236,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_BARREDOWL_NATIVE</Type>
 			<UnitType>UNIT_BARREDOWL</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>12</iMaxLocalDensity>
@@ -3260,7 +3253,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_SEAEAGLE_NATIVE</Type>
 			<UnitType>UNIT_SEAEAGLE</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
@@ -3282,7 +3275,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_JUNGLE_TARANTULA_NATIVE</Type>
 			<UnitType>UNIT_JUNGLE_TARANTULA</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>280</iTurns>
 			<iStartDate>-200000</iStartDate>
@@ -3295,7 +3288,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_DESERT_TARANTULA_NATIVE</Type>
 			<UnitType>UNIT_DESERT_TARANTULA</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>280</iTurns>
 			<iStartDate>-200000</iStartDate>
@@ -3309,7 +3302,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_BARNOWL_AMERICA_EUROPE</Type>
 			<UnitType>UNIT_BARNOWL</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
 			<iMaxLocalDensity>12</iMaxLocalDensity>
@@ -3326,7 +3319,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_BARNOWL_AMERICA_ASIA</Type>
 			<UnitType>UNIT_BARNOWL</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
 			<iMaxLocalDensity>12</iMaxLocalDensity>
@@ -3343,7 +3336,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_BARNOWL_OCEANIA</Type>
 			<UnitType>UNIT_BARNOWL</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
 			<iMaxLocalDensity>12</iMaxLocalDensity>
@@ -3360,7 +3353,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_HARPYEAGLE_NATIVE</Type>
 			<UnitType>UNIT_HARPYEAGLE</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>360</iTurns>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
@@ -3377,7 +3370,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_AFRICAN_PENGUIN_NATIVE</Type>
 			<UnitType>UNIT_AFRICAN_PENGUIN</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -3400,7 +3393,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_GALAPAGOS_PENGUIN_NATIVE</Type>
 			<UnitType>UNIT_GALAPAGOS_PENGUIN</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -3420,7 +3413,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_RAZORBILL_NATIVE</Type>
 			<UnitType>UNIT_RAZORBILL</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -3443,7 +3436,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_SABRETOOTH_NATIVE</Type>
 			<UnitType>UNIT_SABRETOOTH</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<iTurns>460</iTurns>
 			<iMaxLocalDensity>49</iMaxLocalDensity>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
@@ -3462,7 +3455,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_BLACK_RHINO_NATIVE</Type>
 			<UnitType>UNIT_BLACK_RHINO</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -3486,7 +3479,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_INDIAN_RHINO_NATIVE</Type>
 			<UnitType>UNIT_INDIAN_RHINO</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -3510,7 +3503,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_JAVA_RHINO_NATIVE</Type>
 			<UnitType>UNIT_JAVA_RHINO</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
@@ -3534,7 +3527,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_WHITE_RHINO_NATIVE</Type>
 			<UnitType>UNIT_WHITE_RHINO</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>16</iMaxLocalDensity>
@@ -3559,7 +3552,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_ELASMOTHERIUM_NATIVE</Type>
 			<UnitType>UNIT_ELASMOTHERIUM</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<iTurns>270</iTurns>
 			<iMaxLocalDensity>20</iMaxLocalDensity>
 			<ObsoleteTech>TECH_TRIBALISM</ObsoleteTech>
@@ -3581,7 +3574,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_ZEBRA_NATIVE</Type>
 			<UnitType>UNIT_ZEBRA</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>45</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -3599,7 +3592,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_MAMMOTH_NATIVE1</Type>
 			<UnitType>UNIT_MAMMOTH</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 <!--
 iGlobalTurns translated to iTurns:
@@ -3617,7 +3610,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_MAMMOTH_NATIVE2</Type>
 			<UnitType>UNIT_MAMMOTH</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iGlobalTurns>1500</iGlobalTurns>
 			<iMaxLocalDensity>49</iMaxLocalDensity>
@@ -3631,7 +3624,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_MAMMOTH_NATIVE3</Type>
 			<UnitType>UNIT_MAMMOTH</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>20</iTurns>
 			<iMaxLocalDensity>49</iMaxLocalDensity>
@@ -3645,7 +3638,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BELUGA_NATIVE</Type>
 			<UnitType>UNIT_BELUGA</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>250</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -3660,7 +3653,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_COD_NATIVE</Type>
 			<UnitType>UNIT_COD</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>75</iTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
@@ -3683,7 +3676,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_CRAB_NATIVE</Type>
 			<UnitType>UNIT_CRAB</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>100</iTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
@@ -3696,7 +3689,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_DOLPHIN_NATIVE</Type>
 			<UnitType>UNIT_DOLPHIN</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>50</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -3709,7 +3702,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_DUGONG_NATIVE</Type>
 			<UnitType>UNIT_DUGONG</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>175</iTurns>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
@@ -3727,7 +3720,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_GIANT_SQUID_BASE</Type>
 			<UnitType>UNIT_GIANT_SQUID</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>250</iTurns>
 			<iMaxLocalDensity>49</iMaxLocalDensity>
@@ -3740,7 +3733,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_GREATWHITE_NATIVE</Type>
 			<UnitType>UNIT_GREATWHITE</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<iTurns>250</iTurns>
 			<iMaxLocalDensity>49</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
@@ -3762,7 +3755,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_HAMMERHEAD_NATIVE</Type>
 			<UnitType>UNIT_HAMMERHEAD</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>250</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -3782,7 +3775,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_HUMPBACK_WHALE_NATIVE</Type>
 			<UnitType>UNIT_HUMPBACK_WHALE</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>225</iTurns>
 			<iMaxLocalDensity>14</iMaxLocalDensity>
@@ -3796,7 +3789,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_MACKEREL_NATIVE</Type>
 			<UnitType>UNIT_MACKEREL</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>75</iTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
@@ -3812,7 +3805,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_MARLIN_NATIVE</Type>
 			<UnitType>UNIT_MARLIN</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>100</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -3826,7 +3819,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_NARWHAL_NATIVE</Type>
 			<UnitType>UNIT_NARWHAL</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>250</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -3841,7 +3834,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_ORCA_NATIVE</Type>
 			<UnitType>UNIT_ORCA</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>150</iTurns>
 			<iMaxLocalDensity>49</iMaxLocalDensity>
@@ -3855,7 +3848,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_RAY_EAGLE_NATIVE</Type>
 			<UnitType>UNIT_RAY_EAGLE</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>75</iTurns>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
@@ -3873,7 +3866,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_RAY_MANTA_NATIVE</Type>
 			<UnitType>UNIT_RAY_MANTA</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>75</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -3895,7 +3888,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_REEF_SHARK_NATIVE</Type>
 			<UnitType>UNIT_REEF_SHARK</UnitType>
-			<PlayerType>48</PlayerType>
+			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
 			<iMaxLocalDensity>14</iMaxLocalDensity>
@@ -3911,7 +3904,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_SALTCROC_LARGE_NATIVE</Type>
 			<UnitType>UNIT_SALTWATER_CROC_LARGE</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<iTurns>350</iTurns>
 			<iMaxLocalDensity>14</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
@@ -3927,7 +3920,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_SALTCROC_SMALL_NATIVE</Type>
 			<UnitType>UNIT_SALTWATER_CROC_SMALL</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<iTurns>300</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
@@ -3943,7 +3936,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_SEALION_SEA_NATIVE</Type>
 			<UnitType>UNIT_SEALION_SEA</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>100</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -3956,7 +3949,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_SEAOTTER_NATIVE</Type>
 			<UnitType>UNIT_SEAOTTER</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>225</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -3978,7 +3971,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_SEATURTLE_NATIVE</Type>
 			<UnitType>UNIT_SEATURTLE</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>100</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -3997,7 +3990,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_TUNA_NATIVE</Type>
 			<UnitType>UNIT_TUNA</UnitType>
-			<PlayerType>49</PlayerType>
+			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>75</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
@@ -4011,7 +4004,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_WHALE_MINKIE_NATIVE</Type>
 			<UnitType>UNIT_MINKIE_WHALE</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>150</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -4025,7 +4018,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_WHALESHARK_NATIVE</Type>
 			<UnitType>UNIT_WHALESHARK</UnitType>
-			<PlayerType>47</PlayerType>
+			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>75</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -4046,7 +4039,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_NEANDERTHAL_BASE</Type>
 			<UnitType>UNIT_NEANDERTHAL_BRUTE</UnitType>
-			<PlayerType>46</PlayerType>
+			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>50</iGlobalTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -4066,7 +4059,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_NEANDERTHAL_WANDERER</Type>
 			<UnitType>UNIT_NEANDERTHAL_WANDERER</UnitType>
-			<PlayerType>46</PlayerType>
+			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>200</iGlobalTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -4087,7 +4080,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_NEANDERTHAL_WAVE2</Type>
 			<UnitType>UNIT_NEANDERTHAL</UnitType>
-			<PlayerType>46</PlayerType>
+			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>50</iGlobalTurns>
 			<iMaxLocalDensity>40</iMaxLocalDensity>
@@ -4120,7 +4113,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_NEANDERTHAL_WAVE3</Type>
 			<UnitType>UNIT_NEANDERTHAL_WARRIOR</UnitType>
-			<PlayerType>46</PlayerType>
+			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>50</iGlobalTurns>
 			<iMaxLocalDensity>40</iMaxLocalDensity>
@@ -4142,7 +4135,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_NEANDERTHAL_RAFT</Type>
 			<UnitType>UNIT_NEANDERTHAL_RAFT</UnitType>
-			<PlayerType>46</PlayerType>
+			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
@@ -4161,7 +4154,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_NEANDERTHAL_WAR_CANOE</Type>
 			<UnitType>UNIT_NEANDERTHAL_WAR_CANOE</UnitType>
-			<PlayerType>46</PlayerType>
+			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
@@ -4180,7 +4173,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_NEANDERTHAL_KAYAK</Type>
 			<UnitType>UNIT_NEANDERTHAL_KAYAK</UnitType>
-			<PlayerType>46</PlayerType>
+			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
@@ -4199,7 +4192,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_NEANDERTHAL_OUTRIGGER</Type>
 			<UnitType>UNIT_NEANDERTHAL_OUTRIGGER</UnitType>
-			<PlayerType>46</PlayerType>
+			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
@@ -4218,7 +4211,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_NEANDERTHAL_ELEPHANT_RIDER</Type>
 			<UnitType>UNIT_NEANDERTHAL_ELEPHANT_RIDER</UnitType>
-			<PlayerType>46</PlayerType>
+			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>700</iGlobalTurns>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
@@ -4236,7 +4229,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_NEANDERTHAL_OBSIDIAN_SPEARMAN</Type>
 			<UnitType>UNIT_NEANDERTHAL_OBSIDIAN_SPEARMAN</UnitType>
-			<PlayerType>46</PlayerType>
+			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>700</iGlobalTurns>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
@@ -4261,7 +4254,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_NEANDERTHAL_OBSIDIAN_AXEMAN</Type>
 			<UnitType>UNIT_NEANDERTHAL_OBSIDIAN_AXEMAN</UnitType>
-			<PlayerType>46</PlayerType>
+			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>700</iGlobalTurns>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
@@ -4286,7 +4279,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_NEANDERTHAL_STONE_AGE_SPEARMAN</Type>
 			<UnitType>UNIT_NEANDERTHAL_STONE_AGE_SPEARMAN</UnitType>
-			<PlayerType>46</PlayerType>
+			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
@@ -4312,7 +4305,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_NEANDERTHAL_STONE_AGE_AXEMAN</Type>
 			<UnitType>UNIT_NEANDERTHAL_STONE_AGE_AXEMAN</UnitType>
-			<PlayerType>46</PlayerType>
+			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
@@ -4338,7 +4331,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_NEANDERTHAL_WOODEN_SPEARMAN</Type>
 			<UnitType>UNIT_NEANDERTHAL_WOODEN_SPEARMAN</UnitType>
-			<PlayerType>46</PlayerType>
+			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
@@ -4361,7 +4354,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_NEANDERTHAL_OBSIDIAN_SWORDSMAN</Type>
 			<UnitType>UNIT_NEANDERTHAL_OBSIDIAN_SWORDSMAN</UnitType>
-			<PlayerType>46</PlayerType>
+			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>800</iGlobalTurns>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
@@ -4386,7 +4379,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_NEANDERTHAL_OBSIDIAN_MACEMAN</Type>
 			<UnitType>UNIT_NEANDERTHAL_OBSIDIAN_MACEMAN</UnitType>
-			<PlayerType>46</PlayerType>
+			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>700</iGlobalTurns>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
@@ -4411,7 +4404,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_NEANDERTHAL_STONE_MACEMAN</Type>
 			<UnitType>UNIT_NEANDERTHAL_STONE_MACEMAN</UnitType>
-			<PlayerType>46</PlayerType>
+			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
@@ -4437,7 +4430,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_NEANDERTHAL_HUNTER</Type>
 			<UnitType>UNIT_NEANDERTHAL_HUNTER</UnitType>
-			<PlayerType>46</PlayerType>
+			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
@@ -4459,7 +4452,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_NEANDERTHAL_TRACKER</Type>
 			<UnitType>UNIT_NEANDERTHAL_TRACKER</UnitType>
-			<PlayerType>46</PlayerType>
+			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
@@ -4482,7 +4475,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_NEANDERTHAL_SCOUT</Type>
 			<UnitType>UNIT_NEANDERTHAL_SCOUT</UnitType>
-			<PlayerType>46</PlayerType>
+			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
@@ -4505,7 +4498,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_NEANDERTHAL_CHASER</Type>
 			<UnitType>UNIT_NEANDERTHAL_CHASER</UnitType>
-			<PlayerType>46</PlayerType>
+			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
 			<iMaxLocalDensity>2</iMaxLocalDensity>
@@ -4529,7 +4522,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_WANDERER</Type>
 			<UnitType>UNIT_WANDERER</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>750</iGlobalTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
@@ -4557,7 +4550,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_CHASER</Type>
 			<UnitType>UNIT_CHASER</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>700</iGlobalTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
@@ -4586,7 +4579,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_TRACKER</Type>
 			<UnitType>UNIT_TRACKER</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>650</iGlobalTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
@@ -4615,7 +4608,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_HUNTER</Type>
 			<UnitType>UNIT_HUNTER</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
@@ -4644,7 +4637,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_RANGER</Type>
 			<UnitType>UNIT_RANGER</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>650</iGlobalTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
@@ -4673,7 +4666,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_WARDEN</Type>
 			<UnitType>UNIT_WARDEN</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>700</iGlobalTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
@@ -4702,7 +4695,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_GAME_HUNTER</Type>
 			<UnitType>UNIT_GAME_HUNTER</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>750</iGlobalTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
@@ -4731,7 +4724,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_BIG_GAME_HUNTER</Type>
 			<UnitType>UNIT_BIG_GAME_HUNTER</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>800</iGlobalTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
@@ -4760,7 +4753,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_SCOUT</Type>
 			<UnitType>UNIT_SCOUT</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>800</iGlobalTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
@@ -4789,7 +4782,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_GUIDE</Type>
 			<UnitType>UNIT_GUIDE</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>850</iGlobalTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
@@ -4818,7 +4811,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_EXPLORER</Type>
 			<UnitType>UNIT_EXPLORER</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>900</iGlobalTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
@@ -4847,7 +4840,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_ADVENTURER</Type>
 			<UnitType>UNIT_ADVENTURER</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>950</iGlobalTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
@@ -4876,7 +4869,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_MOTORCYCLE</Type>
 			<UnitType>UNIT_MOTORCYCLE</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>1000</iGlobalTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
@@ -4905,7 +4898,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_UNMANNED_TRIKE</Type>
 			<UnitType>UNIT_UNMANNED_TRIKE</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>1100</iGlobalTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
@@ -4934,7 +4927,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_BRUTE</Type>
 			<UnitType>UNIT_BRUTE</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -4962,7 +4955,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_CLUBMAN</Type>
 			<UnitType>UNIT_CLUBMAN</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>450</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -4991,7 +4984,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_SPIKED_CLUBMAN</Type>
 			<UnitType>UNIT_SPIKED_CLUBMAN</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>400</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -5020,7 +5013,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_STONE_AGE_AXEMAN</Type>
 			<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>450</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -5049,7 +5042,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_OBSIDIAN_AXEMAN</Type>
 			<UnitType>UNIT_OBSIDIAN_AXEMAN</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -5064,7 +5057,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_AXEMAN</Type>
 			<UnitType>UNIT_AXEMAN</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>550</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -5093,7 +5086,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_HEAVY_AXEMAN</Type>
 			<UnitType>UNIT_HEAVY_AXEMAN</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>550</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -5122,7 +5115,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_OBSIDIAN_SWORDSMAN</Type>
 			<UnitType>UNIT_OBSIDIAN_SWORDSMAN</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -5137,7 +5130,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_LIGHT_SWORDSMAN</Type>
 			<UnitType>UNIT_LIGHT_SWORDSMAN</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>550</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -5166,7 +5159,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_SWORDSMAN</Type>
 			<UnitType>UNIT_SWORDSMAN</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -5195,7 +5188,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_HEAVY_SWORDSMAN</Type>
 			<UnitType>UNIT_HEAVY_SWORDSMAN</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>650</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -5224,7 +5217,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_STONE_MACEMAN</Type>
 			<UnitType>UNIT_STONE_MACEMAN</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -5253,7 +5246,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_OBSIDIAN_MACEMAN</Type>
 			<UnitType>UNIT_OBSIDIAN_MACEMAN</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>550</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -5268,7 +5261,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_EARLY_MACEMAN</Type>
 			<UnitType>UNIT_EARLY_MACEMAN</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -5297,7 +5290,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_MACEMAN</Type>
 			<UnitType>UNIT_MACEMAN</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>700</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -5326,7 +5319,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_WOODEN_SPEARMAN</Type>
 			<UnitType>UNIT_WOODEN_SPEARMAN</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>450</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -5355,7 +5348,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_STONE_AGE_SPEARMAN</Type>
 			<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -5384,7 +5377,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_OBSIDIAN_SPEARMAN</Type>
 			<UnitType>UNIT_OBSIDIAN_SPEARMAN</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>550</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -5399,7 +5392,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_SPEARMAN</Type>
 			<UnitType>UNIT_SPEARMAN</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -5428,7 +5421,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_PIKEMAN</Type>
 			<UnitType>UNIT_PIKEMAN</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>700</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -5457,7 +5450,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_HEAVY_PIKEMAN</Type>
 			<UnitType>UNIT_HEAVY_PIKEMAN</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>800</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -5486,7 +5479,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_ATLATL</Type>
 			<UnitType>UNIT_ATLATL</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -5515,7 +5508,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_JAVELINEER</Type>
 			<UnitType>UNIT_JAVELINEER</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>450</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -5544,7 +5537,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_SKIRMISHER</Type>
 			<UnitType>UNIT_SKIRMISHER</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -5573,7 +5566,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_MUSKETMAN</Type>
 			<UnitType>UNIT_MUSKETMAN</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -5602,7 +5595,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_TRENCH_INFANTRY</Type>
 			<UnitType>UNIT_TRENCH_INFANTRY</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>800</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -5631,7 +5624,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_INFANTRY</Type>
 			<UnitType>UNIT_INFANTRY</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>900</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -5660,7 +5653,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_MODERN_INFANTRY</Type>
 			<UnitType>UNIT_MODERN_INFANTRY</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>1000</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -5689,7 +5682,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_STONE_THROWER</Type>
 			<UnitType>UNIT_STONE_THROWER</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -5717,7 +5710,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_SLINGER</Type>
 			<UnitType>UNIT_SLINGER</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>550</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -5746,7 +5739,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_ARCHER</Type>
 			<UnitType>UNIT_ARCHER</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>550</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -5775,7 +5768,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_COMPOSITE_BOWMAN</Type>
 			<UnitType>UNIT_COMPOSITE_BOWMAN</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
@@ -5804,7 +5797,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_LONGBOWMAN</Type>
 			<UnitType>UNIT_LONGBOWMAN</UnitType>
-			<PlayerType>50</PlayerType>
+			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>650</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>

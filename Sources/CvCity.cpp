@@ -22808,7 +22808,7 @@ bool CvCity::isAutoRaze() const
 	/* Afforess	                     END                                                            */
 	/************************************************************************************************/
 		//Insectoids always raze
-	if (GET_PLAYER(getOwner()).getID() == NPC6_PLAYER)
+	if (GET_PLAYER(getOwner()).getID() == INSECT_PLAYER)
 	{
 		return true;
 	}

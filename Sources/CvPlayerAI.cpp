@@ -2138,7 +2138,7 @@ void CvPlayerAI::AI_conquerCity(CvCity* pCity)
 			{
 				if ( !(pCity->isHolyCity()) && !(pCity->hasActiveWorldWonder()))
 				{
-					if( (pCity->getPreviousOwner() != BARBARIAN_PLAYER && pCity->getPreviousOwner() != NPC7_PLAYER) && (pCity->getOriginalOwner() != BARBARIAN_PLAYER && pCity->getOriginalOwner() != NPC7_PLAYER) )
+					if( (pCity->getPreviousOwner() != BARBARIAN_PLAYER && pCity->getPreviousOwner() != NEANDERTHAL_PLAYER) && (pCity->getOriginalOwner() != BARBARIAN_PLAYER && pCity->getOriginalOwner() != NEANDERTHAL_PLAYER) )
 					{
 						iRazeValue += GC.getLeaderHeadInfo(getPersonalityType()).getRazeCityProb();
 						iRazeValue -= iCloseness;
@@ -2148,8 +2148,8 @@ void CvPlayerAI::AI_conquerCity(CvCity* pCity)
 			else
 			{
 				bool bFinancialTrouble = AI_isFinancialTrouble();
-				bool bBarbCity = (pCity->getPreviousOwner() == BARBARIAN_PLAYER || pCity->getPreviousOwner() == NPC7_PLAYER) && (pCity->getOriginalOwner() == BARBARIAN_PLAYER || pCity->getOriginalOwner() == NPC7_PLAYER);
-				bool bPrevOwnerBarb = (pCity->getPreviousOwner() == BARBARIAN_PLAYER || pCity->getPreviousOwner() == NPC7_PLAYER);
+				bool bBarbCity = (pCity->getPreviousOwner() == BARBARIAN_PLAYER || pCity->getPreviousOwner() == NEANDERTHAL_PLAYER) && (pCity->getOriginalOwner() == BARBARIAN_PLAYER || pCity->getOriginalOwner() == NEANDERTHAL_PLAYER);
+				bool bPrevOwnerBarb = (pCity->getPreviousOwner() == BARBARIAN_PLAYER || pCity->getPreviousOwner() == NEANDERTHAL_PLAYER);
 
 				if (GET_TEAM(getTeam()).countNumCitiesByArea(pCity->area()) == 0)
 				{
@@ -3976,17 +3976,9 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 			iValue *= 3;
 			iValue /= 2;
 		}
-		else if (pArea->getNumCities() == (iTeamAreaCities + GET_TEAM(BARBARIAN_TEAM).countNumCitiesByArea(pArea)
-		+ GET_TEAM(AGGRESSIVE_ANIMAL_TEAM).countNumCitiesByArea(pArea)
-		+ GET_TEAM(PASSIVE_ANIMAL_TEAM).countNumCitiesByArea(pArea)
-		+ GET_TEAM(NPC1_TEAM).countNumCitiesByArea(pArea)
-		+ GET_TEAM(NPC2_TEAM).countNumCitiesByArea(pArea)
-		+ GET_TEAM(NPC3_TEAM).countNumCitiesByArea(pArea)
-		+ GET_TEAM(NPC4_TEAM).countNumCitiesByArea(pArea)
-		+ GET_TEAM(NPC5_TEAM).countNumCitiesByArea(pArea)
-		+ GET_TEAM(NPC6_TEAM).countNumCitiesByArea(pArea)
-		+ GET_TEAM(NPC7_TEAM).countNumCitiesByArea(pArea)
-		+ GET_TEAM(NPC8_TEAM).countNumCitiesByArea(pArea)))
+		else if (pArea->getNumCities() == iTeamAreaCities
+			+ GET_TEAM(BARBARIAN_TEAM).countNumCitiesByArea(pArea)
+			+ GET_TEAM(NEANDERTHAL_TEAM).countNumCitiesByArea(pArea))
 		{
 			iValue *= 4;
 			iValue /= 3;
@@ -4094,19 +4086,9 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 
 bool CvPlayerAI::AI_isAreaAlone(CvArea* pArea) const
 {
-	return ((pArea->getNumCities() -
-	GET_TEAM(BARBARIAN_TEAM).countNumCitiesByArea(pArea)-
-	GET_TEAM(AGGRESSIVE_ANIMAL_TEAM).countNumCitiesByArea(pArea)-
-	GET_TEAM(BARBARIAN_TEAM).countNumCitiesByArea(pArea)-
-	GET_TEAM(PASSIVE_ANIMAL_TEAM).countNumCitiesByArea(pArea)-
-	GET_TEAM(NPC1_TEAM).countNumCitiesByArea(pArea)-
-	GET_TEAM(NPC2_TEAM).countNumCitiesByArea(pArea)-
-	GET_TEAM(NPC3_TEAM).countNumCitiesByArea(pArea)-
-	GET_TEAM(NPC4_TEAM).countNumCitiesByArea(pArea)-
-	GET_TEAM(NPC5_TEAM).countNumCitiesByArea(pArea)-
-	GET_TEAM(NPC6_TEAM).countNumCitiesByArea(pArea)-
-	GET_TEAM(NPC7_TEAM).countNumCitiesByArea(pArea)-
-	GET_TEAM(NPC8_TEAM).countNumCitiesByArea(pArea)) == GET_TEAM(getTeam()).countNumCitiesByArea(pArea));
+	return (GET_TEAM(getTeam()).countNumCitiesByArea(pArea) == pArea->getNumCities()
+		- GET_TEAM(BARBARIAN_TEAM).countNumCitiesByArea(pArea)
+		- GET_TEAM(NEANDERTHAL_TEAM).countNumCitiesByArea(pArea));
 }
 
 

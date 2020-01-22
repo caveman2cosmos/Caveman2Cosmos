@@ -4425,20 +4425,6 @@ void CvTeamAI::read(FDataStreamBase* pStream)
 	int iID = getID();
 
 	WRAPPER_READ_OBJECT_END(wrapper);
-
-	//if (getID() == MAX_PC_TEAMS)//May not need this any longer
-	//{
-	//	//Read NPC data
-	//	int iNum = (MAX_PC_TEAMS+1);
-	//	for (int iI = iNum; iI < MAX_TEAMS; iI++)
-	//	{
-	//		if (iI >= (int)FIRST_NPC_PLAYER)
-	//		{
-	//			TeamTypes eTeam = (TeamTypes)iI;
-	//			GET_TEAM(eTeam).read2(pStream);
-	//		}
-	//	}
-	//}
 }
 
 
@@ -4487,21 +4473,6 @@ void CvTeamAI::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvTeamAI", m_iMakePeaceRand);
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
-
-	//int iID = getID();
-	//if (getID() == MAX_PC_TEAMS)//May Not Need this anymore//confirmed
-	//{
-	//	//Read NPC data
-	//	int iNum = (MAX_PC_TEAMS+1);
-	//	for (int iI = iNum; iI < MAX_TEAMS; iI++)
-	//	{
-	//		TeamTypes eTeam = (TeamTypes)iI;
-	//		if (iI >= (int)FIRST_NPC_PLAYER)
-	//		{
-	//			GET_TEAM(eTeam).write2(pStream);
-	//		}
-	//	}
-	//}
 }
 
 

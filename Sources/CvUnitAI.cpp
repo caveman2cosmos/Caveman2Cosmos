@@ -3893,7 +3893,7 @@ void CvUnitAI::AI_attackCityMove()
 	bool bReadyToAttack = false;
 	if( isHominid() )
 	{
-		bLandWar = (area()->getNumCities() - area()->getCitiesPerPlayer(BARBARIAN_PLAYER) - area()->getCitiesPerPlayer(NPC7_PLAYER) > 0);
+		bLandWar = (area()->getNumCities() - area()->getCitiesPerPlayer(BARBARIAN_PLAYER) - area()->getCitiesPerPlayer(NEANDERTHAL_PLAYER) > 0);
 		bReadyToAttack = (getGroup()->getNumUnits() >= 3);
 	}
 	else if( !bTurtle )
@@ -15748,7 +15748,7 @@ bool CvUnitAI::AI_destroySpy()
 	pBestPlot = NULL;
 	pBestCity = NULL;
 
-	for (iI = 0; iI < MAX_CIV_PLAYERS; iI++)
+	for (iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -24194,7 +24194,7 @@ bool CvUnitAI::AI_assaultSeaReinforce(bool bBarbarian)
 					{
 						iValue = 1;
 					}
-					else if( bBarbarian && (pLoopCity->area()->getCitiesPerPlayer(NPC7_PLAYER) > 0) )
+					else if( bBarbarian && (pLoopCity->area()->getCitiesPerPlayer(NEANDERTHAL_PLAYER) > 0) )
 					{
 						iValue = 1;
 					}
@@ -32572,7 +32572,7 @@ bool CvUnitAI::AI_FEngage()
 						iValue *= GC.getGameINLINE().getSorenRandNum(5, "AI FEngage");
 						if (iValue > iBestValue)
 						{
-//							for (int iPlayer = 0; iPlayer < MAX_CIV_PLAYERS; ++iPlayer)
+//							for (int iPlayer = 0; iPlayer < MAX_PC_PLAYERS; ++iPlayer)
 //							{
 //								AddDLLMessage((PlayerTypes)iPlayer, true, GC.getDefineINT("EVENT_MESSAGE_TIME"), "Got here!", "AS2D_BOMB_FAILS", MESSAGE_TYPE_INFO, GC.getUnitInfo(getUnitType()).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX_INLINE(), plot()->getY_INLINE());
 //							}

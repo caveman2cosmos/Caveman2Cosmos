@@ -418,7 +418,7 @@ void CvGame::init(HandicapTypes eHandicap)
 	for (int iI = MAX_PC_PLAYERS; iI < MAX_PLAYERS; iI++)
 	{
 		PlayerTypes ePlayer = (PlayerTypes)iI;
-		if (!GET_PLAYER(ePlayer).isAlive() && GET_PLAYER(ePlayer).isNPC())
+		if (!GET_PLAYER(ePlayer).isAlive())
 		{
 			LeaderHeadTypes eLeader = NO_LEADER;
 			CivilizationTypes eCivilization = NO_CIVILIZATION;
@@ -432,100 +432,50 @@ void CvGame::init(HandicapTypes eHandicap)
 				GET_TEAM(eTeam).init(eTeam);
 				GC.getInitCore().setTeam(ePlayer, eTeam);
 			}
-			else if (ePlayer == PASSIVE_ANIMAL_PLAYER && GC.getDefineINT("PASSIVE_ANIMAL_CIVILIZATION") != GC.getDefineINT("BARBARIAN_CIVILIZATION"))
+			else if (ePlayer == NEANDERTHAL_PLAYER)
 			{
-				eLeader = (LeaderHeadTypes)GC.getDefineINT("PASSIVE_ANIMAL_LEADER");
-				eCivilization = (CivilizationTypes)GC.getDefineINT("PASSIVE_ANIMAL_CIVILIZATION");
+				eLeader = (LeaderHeadTypes)GC.getDefineINT("NEANDERTHAL_LEADER");
+				eCivilization = (CivilizationTypes)GC.getDefineINT("NEANDERTHAL_CIVILIZATION");
 				addPlayer(ePlayer, eLeader, eCivilization, false);
 				GET_PLAYER(ePlayer).setNewPlayerAlive(true);
 				TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
 				GET_TEAM(eTeam).init(eTeam);
 				GC.getInitCore().setTeam(ePlayer, eTeam);
 			}
-			else if (ePlayer == AGGRESSIVE_ANIMAL_PLAYER && GC.getDefineINT("AGGRESSIVE_ANIMAL_CIVILIZATION") != GC.getDefineINT("BARBARIAN_CIVILIZATION"))
+			else if (ePlayer == BEAST_PLAYER)
 			{
-				eLeader = (LeaderHeadTypes)GC.getDefineINT("AGGRESSIVE_ANIMAL_LEADER");
-				eCivilization = (CivilizationTypes)GC.getDefineINT("AGGRESSIVE_ANIMAL_CIVILIZATION");
+				eLeader = (LeaderHeadTypes)GC.getDefineINT("ANIMAL_LEADER");
+				eCivilization = (CivilizationTypes)GC.getDefineINT("BEAST_CIVILIZATION");
 				addPlayer(ePlayer, eLeader, eCivilization, false);
 				GET_PLAYER(ePlayer).setNewPlayerAlive(true);
 				TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
 				GET_TEAM(eTeam).init(eTeam);
 				GC.getInitCore().setTeam(ePlayer, eTeam);
 			}
-			else if (ePlayer == NPC8_PLAYER && GC.getDefineINT("NPC8_CIVILIZATION") != GC.getDefineINT("BARBARIAN_CIVILIZATION"))
+			else if (ePlayer == PREDATOR_PLAYER)
 			{
-				eLeader = (LeaderHeadTypes)GC.getDefineINT("NPC8_LEADER");
-				eCivilization = (CivilizationTypes)GC.getDefineINT("NPC8_CIVILIZATION");
+				eLeader = (LeaderHeadTypes)GC.getDefineINT("ANIMAL_LEADER");
+				eCivilization = (CivilizationTypes)GC.getDefineINT("PREDATOR_CIVILIZATION");
 				addPlayer(ePlayer, eLeader, eCivilization, false);
 				GET_PLAYER(ePlayer).setNewPlayerAlive(true);
 				TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
 				GET_TEAM(eTeam).init(eTeam);
 				GC.getInitCore().setTeam(ePlayer, eTeam);
 			}
-			else if (ePlayer == NPC7_PLAYER && GC.getDefineINT("NPC7_CIVILIZATION") != GC.getDefineINT("BARBARIAN_CIVILIZATION"))
+			else if (ePlayer == PREY_PLAYER)
 			{
-				eLeader = (LeaderHeadTypes)GC.getDefineINT("NPC7_LEADER");
-				eCivilization = (CivilizationTypes)GC.getDefineINT("NPC7_CIVILIZATION");
+				eLeader = (LeaderHeadTypes)GC.getDefineINT("ANIMAL_LEADER");
+				eCivilization = (CivilizationTypes)GC.getDefineINT("PREY_CIVILIZATION");
 				addPlayer(ePlayer, eLeader, eCivilization, false);
 				GET_PLAYER(ePlayer).setNewPlayerAlive(true);
 				TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
 				GET_TEAM(eTeam).init(eTeam);
 				GC.getInitCore().setTeam(ePlayer, eTeam);
 			}
-			else if (ePlayer == NPC6_PLAYER && GC.getDefineINT("NPC6_CIVILIZATION") != GC.getDefineINT("BARBARIAN_CIVILIZATION"))
+			else if (ePlayer == INSECT_PLAYER)
 			{
-				eLeader = (LeaderHeadTypes)GC.getDefineINT("NPC6_LEADER");
-				eCivilization = (CivilizationTypes)GC.getDefineINT("NPC6_CIVILIZATION");
-				addPlayer(ePlayer, eLeader, eCivilization, false);
-				GET_PLAYER(ePlayer).setNewPlayerAlive(true);
-				TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
-				GET_TEAM(eTeam).init(eTeam);
-				GC.getInitCore().setTeam(ePlayer, eTeam);
-			}
-			else if (ePlayer == NPC5_PLAYER && GC.getDefineINT("NPC5_CIVILIZATION") != GC.getDefineINT("BARBARIAN_CIVILIZATION"))
-			{
-				eLeader = (LeaderHeadTypes)GC.getDefineINT("NPC5_LEADER");
-				eCivilization = (CivilizationTypes)GC.getDefineINT("NPC5_CIVILIZATION");
-				addPlayer(ePlayer, eLeader, eCivilization, false);
-				GET_PLAYER(ePlayer).setNewPlayerAlive(true);
-				TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
-				GET_TEAM(eTeam).init(eTeam);
-				GC.getInitCore().setTeam(ePlayer, eTeam);
-			}
-			else if (ePlayer == NPC4_PLAYER && GC.getDefineINT("NPC4_CIVILIZATION") != GC.getDefineINT("BARBARIAN_CIVILIZATION"))
-			{
-				eLeader = (LeaderHeadTypes)GC.getDefineINT("NPC4_LEADER");
-				eCivilization = (CivilizationTypes)GC.getDefineINT("NPC4_CIVILIZATION");
-				addPlayer(ePlayer, eLeader, eCivilization, false);
-				GET_PLAYER(ePlayer).setNewPlayerAlive(true);
-				TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
-				GET_TEAM(eTeam).init(eTeam);
-				GC.getInitCore().setTeam(ePlayer, eTeam);
-			}
-			else if (ePlayer == NPC3_PLAYER && GC.getDefineINT("NPC3_CIVILIZATION") != GC.getDefineINT("BARBARIAN_CIVILIZATION"))
-			{
-				eLeader = (LeaderHeadTypes)GC.getDefineINT("NPC3_LEADER");
-				eCivilization = (CivilizationTypes)GC.getDefineINT("NPC3_CIVILIZATION");
-				addPlayer(ePlayer, eLeader, eCivilization, false);
-				GET_PLAYER(ePlayer).setNewPlayerAlive(true);
-				TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
-				GET_TEAM(eTeam).init(eTeam);
-				GC.getInitCore().setTeam(ePlayer, eTeam);
-			}
-			else if (ePlayer == NPC2_PLAYER && GC.getDefineINT("NPC2_CIVILIZATION") != GC.getDefineINT("BARBARIAN_CIVILIZATION"))
-			{
-				eLeader = (LeaderHeadTypes)GC.getDefineINT("NPC2_LEADER");
-				eCivilization = (CivilizationTypes)GC.getDefineINT("NPC2_CIVILIZATION");
-				addPlayer(ePlayer, eLeader, eCivilization, false);
-				GET_PLAYER(ePlayer).setNewPlayerAlive(true);
-				TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
-				GET_TEAM(eTeam).init(eTeam);
-				GC.getInitCore().setTeam(ePlayer, eTeam);
-			}
-			else if (ePlayer == NPC1_PLAYER && GC.getDefineINT("NPC1_CIVILIZATION") != GC.getDefineINT("BARBARIAN_CIVILIZATION"))
-			{
-				eLeader = (LeaderHeadTypes)GC.getDefineINT("NPC1_LEADER");
-				eCivilization = (CivilizationTypes)GC.getDefineINT("NPC1_CIVILIZATION");
+				eLeader = (LeaderHeadTypes)GC.getDefineINT("INSECT_LEADER");
+				eCivilization = (CivilizationTypes)GC.getDefineINT("INSECT_CIVILIZATION");
 				addPlayer(ePlayer, eLeader, eCivilization, false);
 				GET_PLAYER(ePlayer).setNewPlayerAlive(true);
 				TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
@@ -3542,7 +3492,7 @@ int CvGame::countHumanPlayersAlive() const
 /* Allow humans to control barbs                                                                */
 /************************************************************************************************/
 /* original code
-	for (int iI = 0; iI < MAX_CIV_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 */
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 /************************************************************************************************/
@@ -4256,17 +4206,8 @@ int CvGame::getNumCivCities() const
 {
 	int iAnswer = getNumCities();
 	iAnswer -= GET_PLAYER(BARBARIAN_PLAYER).getNumCities();
-	iAnswer -= GET_PLAYER(AGGRESSIVE_ANIMAL_PLAYER).getNumCities();
-	iAnswer -= GET_PLAYER(PASSIVE_ANIMAL_PLAYER).getNumCities();
-	iAnswer -= GET_PLAYER(NPC1_PLAYER).getNumCities();
-	iAnswer -= GET_PLAYER(NPC2_PLAYER).getNumCities();
-	iAnswer -= GET_PLAYER(NPC3_PLAYER).getNumCities();
-	iAnswer -= GET_PLAYER(NPC4_PLAYER).getNumCities();
-	iAnswer -= GET_PLAYER(NPC5_PLAYER).getNumCities();
-	iAnswer -= GET_PLAYER(NPC6_PLAYER).getNumCities();
-	iAnswer -= GET_PLAYER(NPC7_PLAYER).getNumCities();
-	iAnswer -= GET_PLAYER(NPC8_PLAYER).getNumCities();
-	return (iAnswer);
+	iAnswer -= GET_PLAYER(NEANDERTHAL_PLAYER).getNumCities();
+	return iAnswer;
 }
 
 
@@ -6683,7 +6624,7 @@ void CvGame::doTurn()
 
 	if (getElapsedGameTurns() > GC.getGameSpeedInfo(getGameSpeedType()).getGameTurnInfo(getStartEra()).iNumGameTurnsPerIncrement/80)
 	{
-		for (iI = FIRST_NPC_PLAYER; iI < MAX_PLAYERS; iI++)
+		for (iI = MAX_PC_PLAYERS; iI < MAX_PLAYERS; iI++)
 		{
 			if (GET_PLAYER((PlayerTypes)iI).isAlive())
 			{
@@ -7969,7 +7910,7 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 		return;
 	}
 
-	const PlayerTypes ePlayer = bNeanderthal ? NPC7_PLAYER : BARBARIAN_PLAYER;
+	const PlayerTypes ePlayer = bNeanderthal ? NEANDERTHAL_PLAYER : BARBARIAN_PLAYER;
 	
 	int iRand = getSorenRandNum(100, "Barb City Creation");
 	if (!isOption(GAMEOPTION_NO_BARBARIAN_CIV))
