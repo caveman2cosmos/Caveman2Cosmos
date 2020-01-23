@@ -4425,6 +4425,15 @@ void CvTeamAI::read(FDataStreamBase* pStream)
 	int iID = getID();
 
 	WRAPPER_READ_OBJECT_END(wrapper);
+
+	if (getID() == MAX_PC_TEAMS)
+	{
+		//Read NPC data
+		for (int iI = MAX_PC_TEAMS+1; iI < MAX_TEAMS; iI++)
+		{
+			GET_TEAM((TeamTypes)iI).read(pStream);
+		}
+	}
 }
 
 
@@ -4473,16 +4482,15 @@ void CvTeamAI::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvTeamAI", m_iMakePeaceRand);
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
-}
 
-
-void CvTeamAI::write2(FDataStreamBase* pStream)
-{
-	write(pStream);
-}
-void CvTeamAI::read2(FDataStreamBase* pStream)
-{
-	read(pStream);
+	if (getID() == MAX_PC_TEAMS)
+	{
+		//write NPC data
+		for (int iI = MAX_PC_TEAMS+1; iI < MAX_TEAMS; iI++)
+		{
+			GET_TEAM((TeamTypes)iI).write(pStream);
+		}
+	}
 }
 
 int CvTeamAI::AI_noTechTradeThreshold(bool bRecalculate) const

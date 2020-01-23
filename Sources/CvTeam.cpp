@@ -8361,14 +8361,6 @@ void CvTeam::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
 
-//void CvTeam::write2(FDataStreamBase* pStream)
-//{
-//	write(pStream);
-//}
-//void CvTeam::read2(FDataStreamBase* pStream)
-//{
-//	read(pStream);
-//}
 
 // CACHE: cache frequently used values
 ///////////////////////////////////////

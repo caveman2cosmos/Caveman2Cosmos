@@ -24505,20 +24505,14 @@ void CvPlayerAI::read(FDataStreamBase* pStream)
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
-	//if (getID() == MAX_PC_PLAYERS)//This MIGHT be unnecessary after making Max PC Players and Max Civ Players different.
-	//{
-	//	//Read NPC data
-	//	int iNum = (MAX_PC_PLAYERS+1);
-	//	for (int iI = iNum; iI < MAX_PLAYERS; iI++)
-	//	{
-	//		PlayerTypes ePlayer = (PlayerTypes)iI;
-	//		//GET_TEAM(eTeam).read2(pStream);
-	//		GET_PLAYER(ePlayer).read2(pStream);
-	//		//TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
-	//		//GET_TEAM(eTeam).init(eTeam);
-	//		//GC.getInitCore().setTeam(ePlayer, eTeam);
-	//	}
-	//}
+	if (getID() == MAX_PC_PLAYERS)
+	{
+		//Read NPC data
+		for (int iI = MAX_PC_PLAYERS+1; iI < MAX_PLAYERS; iI++)
+		{
+			GET_PLAYER((PlayerTypes)iI).read(pStream);
+		}
+	}
 }
 
 
@@ -24648,26 +24642,15 @@ void CvPlayerAI::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvPlayerAI", REMAPPED_CLASS_TYPE_TECHS, m_eBestResearchTarget);
 	}
 	WRAPPER_WRITE_OBJECT_END(wrapper);
-	//if (getID() == MAX_PC_PLAYERS)//Again, may be unnecessary now
-	//{
-	//	//Write NPC data
-	//	int iNum = (MAX_PC_PLAYERS+1);
-	//	for (int iI = iNum; iI < MAX_PLAYERS; iI++)
-	//	{
-	//		PlayerTypes ePlayer = (PlayerTypes)iI;
-	//		//TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
-	//		//GET_TEAM(eTeam).write2(pStream);
-	//		GET_PLAYER(ePlayer).write2(pStream);
-	//	}
-	//}
-}
-void CvPlayerAI::write2(FDataStreamBase* pStream)
-{
-	write(pStream);
-}
-void CvPlayerAI::read2(FDataStreamBase* pStream)
-{
-	read(pStream);
+
+	if (getID() == MAX_PC_PLAYERS)
+	{
+		//Write NPC data
+		for (int iI = MAX_PC_PLAYERS+1; iI < MAX_PLAYERS; iI++)
+		{
+			GET_PLAYER((PlayerTypes)iI).write(pStream);
+		}
+	}
 }
 
 
