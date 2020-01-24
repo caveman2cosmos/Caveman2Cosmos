@@ -1602,6 +1602,10 @@
 		<Polish>[ICON_BULLET]Splądrowanie daje %d1_Num[ICON_GOLD] złota.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_PLANT_FOREST_PEDIA</Tag>
+		<English>This is a pseudo improvement that, when built, creates a [LINK=FEATURE_FOREST_NEW]Young Forest[\LINK] on the plot without leaving an improvement behind.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_PLANT_GATHERER</Tag>
 		<English>Plant Gathering Camp</English>
 		<French>Installer un camp de récolte</French>
@@ -2198,30 +2202,6 @@
 		<Polish>Miasteczko (łac. oppidum, niem. Stadtlein, Stadtchen, Markt, Flecken, jid. sztetl) - prawno-administracyjna jednostka osadnicza o charakterze przejściowym między miastem a wsią, z charakterystycznym handlowo-przemysłowym (dawniej rzemieślniczym) wyodrębnieniem specjalności i analogiczną morfologią oraz infrastrukturą co (małe) miasto.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_TREE_NURSERY</Tag>
-		<English>Tree Nursery</English>
-		<French>
-			<Text>Pépinière d'Arbres</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Baumschule</German>
-		<Italian>Vivaio di alberi</Italian>
-		<Spanish>
-			<Text>Zona de reforestación</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Szkółka Leśna</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_TREE_NURSERY_PEDIA</Tag>
-		<English>The tree nursery improvement produces a forest after a period of time.</English>
-		<French>L'aménagement Pépinière va faire pousser une Forêt après un laps de temps.</French>
-		<Spanish>De la Zona de reforestación se producirá un Bosque tras pasar un tiempo.</Spanish>
-		<Polish>Szkółka leśna - obszar ziemi, często podzielony na poletka, z wysianymi lub wysadzonymi roślinami, w celu produkcji sadzonek drzew leśnych.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_TREEFARM</Tag>
 		<English>Treefarm</English>
 		<French>Verger</French>
@@ -2609,26 +2589,12 @@
 		<English>A workshop is a room or building which provides both the area and tools (or machinery) that may be required for the manufacture or repair of manufactured goods. Apart from the larger factories, workshops were the only places of production in the days before industrialisation. Wikipedia</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_YOUNG_FOREST</Tag>
-		<English>Young Forest</English>
-		<French>
-			<Text>Jeune Forêt</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Spanish>
-			<Text>Bosque joven</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Młody Las</Polish>
+		<Tag>TXT_KEY_IMPROVEMENT_GROW_FOREST</Tag>
+		<English>Grow Forest</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_YOUNG_FOREST_PEDIA</Tag>
-		<English>A young forest not ready for prime time.</English>
-		<French>Une jeune forêt, inapte pour de l'exploitation forestière.</French>
-		<Spanish>Un Bosque joven que no está preparado para ser talado.</Spanish>
-		<Polish>Młody Las nie nadaję się do wyrębu.</Polish>
+		<Tag>TXT_KEY_IMPROVEMENT_GROW_FOREST_PEDIA</Tag>
+		<English>Nurse a young forest into a mature one.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_ZIGGURAT</Tag>

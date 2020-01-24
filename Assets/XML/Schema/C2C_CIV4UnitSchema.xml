@@ -145,7 +145,7 @@
 		<element type="PrereqTech"/>
 		<element type="iTime"/>
 		<element type="iProduction"/>
-		<element type="bRemove"/>
+		<element type="bRemove" minOccurs="0"/>
 		<!--Afforess-->
 		<element type="bCanRemoveWithNoProductionGain" minOccurs="0"/>
 		<!--Afforess-->

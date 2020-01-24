@@ -372,7 +372,7 @@ class Pedia:
 		eWidMain	= WidgetTypes.WIDGET_PEDIA_MAIN
 		iFontTitle	= FontTypes.TITLE_FONT
 
-		HEAD_TEXT		= szfontEdge + "Wiki"
+		HEAD_TEXT		= szfontEdge + TRNSLTR.getText("TXT_KEY_MAIN_MENU_CIVILOPEDIA", ())
 		TOC_TEXT		= szfontEdge + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_CONTENTS", ())
 		INDEX_TEXT		= szfontEdge + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_INDEX", ())
 		BACK_TEXT		= szfontEdge + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_BACK", ())
