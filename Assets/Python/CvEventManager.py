@@ -256,8 +256,7 @@ class CvEventManager:
 					"GLADIATOR"	: GC.getInfoTypeForString("UNIT_GLADIATOR")
 				}
 				self.mapImpType = {
-					"IMPROVEMENT_TREE_NURSERY"	: GC.getInfoTypeForString('IMPROVEMENT_TREE_NURSERY'),
-					"IMPROVEMENT_YOUNG_FOREST"	: GC.getInfoTypeForString('IMPROVEMENT_YOUNG_FOREST'),
+					"IMPROVEMENT_GROW_FOREST"	: GC.getInfoTypeForString('IMPROVEMENT_GROW_FOREST'),
 					"IMPROVEMENT_PLANT_FOREST"	: GC.getInfoTypeForString('IMPROVEMENT_PLANT_FOREST'),
 					"IMPROVEMENT_PLANT_BAMBOO"	: GC.getInfoTypeForString('IMPROVEMENT_PLANT_BAMBOO'),
 					"IMPROVEMENT_PLANT_SAVANNA"	: GC.getInfoTypeForString('IMPROVEMENT_PLANT_SAVANNA'),
@@ -1175,59 +1174,51 @@ class CvEventManager:
 			return
 		# Worker placed feature
 		mapImpType = self.mapImpType
-		if iImprovement == mapImpType['IMPROVEMENT_TREE_NURSERY']:
+
+		if iImprovement == mapImpType['IMPROVEMENT_GROW_FOREST']:
 			CyPlot = GC.getMap().plot(iX, iY)
-			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_FOREST_NEW'), 0)
-
-		elif iImprovement == mapImpType['IMPROVEMENT_YOUNG_FOREST']:
-			CyPlot = GC.getMap().plot(iX, iY)
-			iFeatureNewForest = GC.getInfoTypeForString('FEATURE_FOREST_NEW')
-			if CyPlot.getFeatureType() == iFeatureNewForest:
-				CyPlot.setFeatureType(iFeatureNewForest, 0)
-
-			iFeatureForest = GC.getInfoTypeForString('FEATURE_FOREST')
-			iChance = GAME.getSorenRandNum(100, "FEATURE_FOREST")
-			lat = CyPlot.getLatitude()
-
-			if lat > 60: # POLAR
-				if CyPlot.getTerrainType() == GC.getInfoTypeForString('TERRAIN_TAIGA'):
-					CyPlot.setFeatureType(iFeatureForest, 2) # snowy forest
-				else:
-					CyPlot.setFeatureType(iFeatureForest, 1) # evergreen forest
-			elif lat > 25: # TEMPERATE
-				if iChance < 50:
-					CyPlot.setFeatureType(iFeatureForest, 0) # leafy forest
-				else:
-					CyPlot.setFeatureType(iFeatureForest, 1) # evergreen forest
-			else: # EQUATOR
-				if iChance < 30:
-					CyPlot.setFeatureType(iFeatureForest, 0) # leafy forest
-				elif iChance < 60:
-					CyPlot.setFeatureType(iFeatureForest, 1) # evergreen forest
-				else:
-					if CyPlot.getTerrainType() == GC.getInfoTypeForString('TERRAIN_GRASS'):
-						CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_JUNGLE'), 0) # jungle
-					else:
-						CyPlot.setFeatureType(iFeatureForest, 0) # leafy forest
 			CyPlot.setImprovementType(-1)
+
+			if CyPlot.getTerrainType() == GC.getInfoTypeForString('TERRAIN_TAIGA'):
+				CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_FOREST'), 2) # snowy forest
+			else:
+				lat = CyPlot.getLatitude()
+				iChance = GAME.getSorenRandNum(100, "FEATURE_FOREST")
+				if lat > 60: # POLAR
+					if iChance < 10:
+						CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_FOREST'), 0) # leafy forest
+					else:
+						CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_FOREST'), 1) # evergreen forest
+				elif lat > 25: # TEMPERATE
+					if iChance < 70:
+						CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_FOREST'), 0) # leafy forest
+					else:
+						CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_FOREST'), 1) # evergreen forest
+				else: # EQUATOR
+					if iChance < 10:
+						CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_FOREST'), 1) # evergreen forest
+					elif iChance < 70:
+						CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_FOREST'), 0) # leafy forest
+					else:
+						if CyPlot.getTerrainType() in (GC.getInfoTypeForString('TERRAIN_LUSH'), GC.getInfoTypeForString('TERRAIN_MUDDY')):
+							CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_JUNGLE'), 0)
+						else:
+							CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_BAMBOO'), 0)
 
 		elif iImprovement == mapImpType['IMPROVEMENT_PLANT_FOREST']:
 			CyPlot = GC.getMap().plot(iX, iY)
-			iFeatureNewForest = GC.getInfoTypeForString('FEATURE_FOREST_NEW')
-			if CyPlot.getFeatureType() == iFeatureNewForest:
-				CyPlot.setFeatureType(iFeatureNewForest, 0)
-			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_FOREST'), 0)
 			CyPlot.setImprovementType(-1)
+			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_FOREST_NEW'), 0)
 
 		elif iImprovement == mapImpType['IMPROVEMENT_PLANT_BAMBOO']:
 			CyPlot = GC.getMap().plot(iX, iY)
-			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_BAMBOO'), 0)
 			CyPlot.setImprovementType(-1)
+			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_BAMBOO'), 0)
 
 		elif iImprovement == mapImpType['IMPROVEMENT_PLANT_SAVANNA']:
 			CyPlot = GC.getMap().plot(iX, iY)
-			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_SAVANNA'), 0)
 			CyPlot.setImprovementType(-1)
+			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_SAVANNA'), 0)
 
 		elif iImprovement == mapImpType['IMPROVEMENT_FARM']:
 			iPlayer = GC.getMap().plot(iX, iY).getOwner()

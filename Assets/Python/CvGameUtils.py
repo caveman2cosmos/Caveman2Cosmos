@@ -125,8 +125,14 @@ class CvGameUtils:
 	def canBuild(self, argsList):
 		iX, iY, iBuild, iPlayer = argsList
 
-		aList = GC.getBuildInfo(iBuild).getType().split("_")
-
+		szType = GC.getBuildInfo(iBuild).getType()
+		''' Backup plan, remove if the grow forest build can be ordered where expected.
+		if szType == "BUILD_GROW_FOREST":
+			if GC.getMap().plot(iX, iY).getFeatureType() == GC.getInfoTypeForString('FEATURE_FOREST_NEW'):
+				return 1
+			return 0
+		'''
+		aList = szType.split("_")
 		# Bonus placing builds
 		if aList[1] == "BONUS":
 			iBonus = GC.getInfoTypeForString("BONUS_" + aList[2])
