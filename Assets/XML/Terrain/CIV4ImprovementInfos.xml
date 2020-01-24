@@ -6109,7 +6109,7 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_FOREST</ArtDefineTag>
 			<PrereqTech>TECH_GUILDS</PrereqTech>
-			<bChangeRemove>1</bChangeRemove>
+			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
@@ -6184,7 +6184,6 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<bChangeRemove>1</bChangeRemove>
 		</ImprovementInfo>
 		<!-- Plant Bamboo -->
 		<ImprovementInfo>
@@ -6224,7 +6223,6 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<bChangeRemove>1</bChangeRemove>
 		</ImprovementInfo>
 		<!-- Terraform Lush -->
 		<ImprovementInfo>
@@ -10553,7 +10551,7 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANTATION</ArtDefineTag>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<bChangeRemove>1</bChangeRemove>
+			<bActsAsCity>0</bActsAsCity>
 			<FeatureMakesValids>
 				<FeatureMakesValid>
 					<FeatureType>FEATURE_FOREST_NEW</FeatureType>

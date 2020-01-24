@@ -3625,6 +3625,10 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_GROW_FOREST</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_TERRAFORM_GRASS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -4014,6 +4018,10 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_GROW_FOREST</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_TERRAFORM_GRASS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -4400,6 +4408,10 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_PLANT_SAVANNA</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_GROW_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -53006,6 +53018,10 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_GROW_FOREST</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_NATURE_PRESERVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -53155,6 +53171,10 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_PLANT_SAVANNA</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_GROW_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
