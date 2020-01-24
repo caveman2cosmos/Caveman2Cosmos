@@ -20,6 +20,10 @@
 		<Spanish>Estrategia:[NEWLINE]</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PEDIA</Tag>
+		<English>Pedia</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PEDIA_ATTITUDE</Tag>
 		<English>Attitude: [BOLD]%d1%[\BOLD] (Base) + [BOLD]%d2%[\BOLD] (Warmonger Respect)[NEWLINE]</English>
 		<German>Attitüde: [BOLD]%d1%[\BOLD] (Basis) + [BOLD]%d2%[\BOLD] (gegenüber Kriegstreibern)[NEWLINE]</German>

@@ -270,6 +270,10 @@
 		<English>Your %s1_unit is on the run from the local law in %s2_city!</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_CIVILOPEDIA</Tag>
+		<English>Pedia</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MAP_CATEGORY_PREREQUISITE</Tag>
 		<English>[ICON_BULLET]May only exist on a %s1_MapCat.</English>
 		<German>[ICON_BULLET]kann nur auf einem %s1_MapCat existieren</German>

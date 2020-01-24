@@ -6103,8 +6103,8 @@
 		<!-- Plant Forest -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_PLANT_FOREST</Type>
-			<Description>TXT_KEY_BUILD_PLANT_FOREST</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
+			<Description>TXT_KEY_FEATURE_FOREST_NEW</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_PLANT_FOREST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_FOREST</ArtDefineTag>
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<bActsAsCity>0</bActsAsCity>
