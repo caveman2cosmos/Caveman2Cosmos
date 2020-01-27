@@ -5772,7 +5772,7 @@
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
                                     gc = CyGlobalContext()
                                     capital = gc.getPlayer(unit.getOwner()).getCapitalCity()
-                                    gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_INTERSTELLAR_REWARD'),capital.getX(),capital.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+                                    gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_GALACTIC_CORE_REWARD'),capital.getX(),capital.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
                                 def getDisplay(unit,plot):
                                     return u"Explore the galactic core."
                                 def getAIValue(unit, plot):
