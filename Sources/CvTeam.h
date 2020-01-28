@@ -551,7 +551,7 @@ public:
 	virtual void AI_doTurnPre() = 0;
 	virtual void AI_doTurnPost() = 0;
 	virtual void AI_makeAssignWorkDirty() = 0;
-	virtual void AI_updateAreaStragies(bool bTargets = true) = 0;
+	virtual void AI_updateAreaStragies(const bool bTargets = true) = 0;
 	virtual bool AI_shareWar(TeamTypes eTeam) const = 0;			// Exposed to Python
 	virtual void AI_updateWorstEnemy() = 0;
 	virtual int AI_getAtWarCounter(TeamTypes eIndex) const = 0;     // Exposed to Python

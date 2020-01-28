@@ -645,12 +645,12 @@ public:
 #endif
 	bool isInViewport() const;
 	bool at(int iX, int iY) const;																				// Exposed to Python
-	bool at(CvPlot* pPlot) const;																					// Exposed to Python - atPlot
+	bool at(const CvPlot* pPlot) const;																					// Exposed to Python - atPlot
 	CvPlot* plot() const;																	// Exposed to Python
 	DllExport CvPlot* plotExternal() const;																	// Exposed to Python
-	CvPlotGroup* plotGroup(PlayerTypes ePlayer) const;
-	bool isConnectedTo(CvCity* pCity) const;															// Exposed to Python
-	bool isConnectedToCapital(PlayerTypes ePlayer = NO_PLAYER) const;			// Exposed to Python
+	CvPlotGroup* plotGroup(const PlayerTypes ePlayer) const;
+	bool isConnectedTo(const CvCity* pCity) const;															// Exposed to Python
+	bool isConnectedToCapital(const PlayerTypes ePlayer = NO_PLAYER) const;			// Exposed to Python
 	int getArea() const;
 	CvArea* area() const;																						// Exposed to Python
 /************************************************************************************************/
@@ -658,9 +658,9 @@ public:
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	CvArea* waterArea(bool bNoImpassable = false) const;																			// Exposed to Python
+	CvArea* waterArea(const bool bNoImpassable = false) const;																			// Exposed to Python
 	CvArea* secondWaterArea() const;
-	CvArea* sharedWaterArea(CvCity* pCity) const;
+	CvArea* sharedWaterArea(const CvCity* pCity) const;
 	bool isBlockaded() const;
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
