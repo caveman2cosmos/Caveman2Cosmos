@@ -113,6 +113,7 @@ public:
 // BUG - Building Additional Health - start
 	bool setBuildingAdditionalHealthHelp(CvWStringBuffer &szBuffer, CvCity& city, const CvWString& szStart, bool bStarted = false);
 // BUG - Building Additional Health - end
+	void parseHappinessHelp(CvWStringBuffer& szBuffer);
 	void setAngerHelp(CvWStringBuffer &szBuffer, CvCity& city);
 	void setHappyHelp(CvWStringBuffer &szBuffer, CvCity& city);
 // BUG - Building Additional Happiness - start

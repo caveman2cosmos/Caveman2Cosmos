@@ -27585,7 +27585,7 @@ void CvGameTextMgr::setGoodHealthHelp(CvWStringBuffer &szBuffer, CvCity& city)
 	}
 }
 
-// BUG - Building Additional Health - start
+
 bool CvGameTextMgr::setBuildingAdditionalHealthHelp(CvWStringBuffer &szBuffer, CvCity& city, const CvWString& szStart, bool bStarted)
 {
 	CvWString szLabel;
@@ -27618,7 +27618,24 @@ bool CvGameTextMgr::setBuildingAdditionalHealthHelp(CvWStringBuffer &szBuffer, C
 
 	return bStarted;
 }
-// BUG - Building Additional Health - end
+
+
+void CvGameTextMgr::parseHappinessHelp(CvWStringBuffer &szBuffer)
+{
+	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
+
+	if (pHeadSelectedCity != NULL)
+	{
+		setAngerHelp(szBuffer, *pHeadSelectedCity);
+		szBuffer.append(L"\n=======================\n");
+		setHappyHelp(szBuffer, *pHeadSelectedCity);
+
+		if (pHeadSelectedCity->getOwnerINLINE() == GC.getGame().getActivePlayer() && getBugOptionBOOL("MiscHover__BuildingAdditionalHappiness", true, "BUG_BUILDING_ADDITIONAL_HAPPINESS_HOVER"))
+		{
+			setBuildingAdditionalHappinessHelp(szBuffer, *pHeadSelectedCity, DOUBLE_SEPARATOR);
+		}
+	}
+}
 
 void CvGameTextMgr::setAngerHelp(CvWStringBuffer &szBuffer, CvCity& city)
 {
@@ -27971,30 +27988,22 @@ void CvGameTextMgr::setAngerHelp(CvWStringBuffer &szBuffer, CvCity& city)
 
 void CvGameTextMgr::setHappyHelp(CvWStringBuffer &szBuffer, CvCity& city)
 {
-	int iHappy;
-	int iTotalHappy = 0;
 
-	if (city.isOccupation() || GET_PLAYER(city.getOwnerINLINE()).isAnarchy())
+	if (city.isDisorder())
 	{
 		return;
 	}
 	if (city.happyLevel() > 0)
 	{
-/************************************************************************************************/
-/* REVOLUTION_MOD                         04/28/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-		iHappy = city.getRevSuccessHappiness();
+		int iTotalHappy = 0;
+		int iHappy = city.getRevSuccessHappiness();
 		if (iHappy > 0)
 		{
 			iTotalHappy += iHappy;
 			szBuffer.append(gDLL->getText("TXT_KEY_REV_SUCCESS_HAPPINESS", iHappy));
 			szBuffer.append(NEWLINE);
 		}
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+
 		iHappy = city.getLargestCityHappiness();
 		if (iHappy > 0)
 		{
@@ -28002,11 +28011,7 @@ void CvGameTextMgr::setHappyHelp(CvWStringBuffer &szBuffer, CvCity& city)
 			szBuffer.append(gDLL->getText("TXT_KEY_HAPPY_BIG_CITY", iHappy));
 			szBuffer.append(NEWLINE);
 		}
-/************************************************************************************************/
-/* Afforess  Civic Happiness & Happy Per Military Percent           10/4/09                     */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 		iHappy = city.getCivicHappiness();
 		if (iHappy > 0)
 		{
@@ -28047,9 +28052,6 @@ void CvGameTextMgr::setHappyHelp(CvWStringBuffer &szBuffer, CvCity& city)
 				szBuffer.append(NEWLINE);
 			}
 		}
-/************************************************************************************************/
-/* Afforess	                         END                                                     */
-/************************************************************************************************/
 
 		iHappy = city.getMilitaryHappiness();
 		if (iHappy > 0)
@@ -28075,7 +28077,22 @@ void CvGameTextMgr::setHappyHelp(CvWStringBuffer &szBuffer, CvCity& city)
 			szBuffer.append(NEWLINE);
 		}
 
-		iHappy = (city.getBuildingGoodHappiness() + city.getExtraBuildingGoodHappiness());
+		iHappy = 0;
+		int iValue = city.area()->getBuildingHappiness(city.getOwnerINLINE());
+		if (iValue > 0)
+		{
+			iHappy += iValue;
+		}
+		iValue = GET_PLAYER(city.getOwnerINLINE()).getBuildingHappiness();
+		if (iValue > 0)
+		{
+			iHappy += iValue;
+		}
+		iValue = (city.getBuildingGoodHappiness() + city.getExtraBuildingGoodHappiness());
+		if (iValue > 0)
+		{
+			iHappy += iValue;
+		}
 		if (iHappy > 0)
 		{
 			iTotalHappy += iHappy;
@@ -28099,11 +28116,6 @@ void CvGameTextMgr::setHappyHelp(CvWStringBuffer &szBuffer, CvCity& city)
 			szBuffer.append(NEWLINE);
 		}
 
-/************************************************************************************************/
-/* Specialists Enhancements, by Supercheese 10/9/09                                                   */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 		iHappy = city.getSpecialistHappiness() / 100;
 		if (iHappy > 0)
 		{
@@ -28111,9 +28123,6 @@ void CvGameTextMgr::setHappyHelp(CvWStringBuffer &szBuffer, CvCity& city)
 			szBuffer.append(gDLL->getText("TXT_KEY_HAPPY_SPECIALISTS", iHappy));
 			szBuffer.append(NEWLINE);
 		}
-/************************************************************************************************/
-/* Specialists Enhancements                          END                                              */
-/************************************************************************************************/
 
 		iHappy = city.getReligionGoodHappiness();
 		if (iHappy > 0)
@@ -28128,22 +28137,6 @@ void CvGameTextMgr::setHappyHelp(CvWStringBuffer &szBuffer, CvCity& city)
 		{
 			iTotalHappy += iHappy;
 			szBuffer.append(gDLL->getText("TXT_KEY_HAPPY_ENTERTAINMENT", iHappy));
-			szBuffer.append(NEWLINE);
-		}
-
-		iHappy = city.area()->getBuildingHappiness(city.getOwnerINLINE());
-		if (iHappy > 0)
-		{
-			iTotalHappy += iHappy;
-			szBuffer.append(gDLL->getText("TXT_KEY_HAPPY_BUILDINGS", iHappy));
-			szBuffer.append(NEWLINE);
-		}
-
-		iHappy = GET_PLAYER(city.getOwnerINLINE()).getBuildingHappiness();
-		if (iHappy > 0)
-		{
-			iTotalHappy += iHappy;
-			szBuffer.append(gDLL->getText("TXT_KEY_HAPPY_BUILDINGS", iHappy));
 			szBuffer.append(NEWLINE);
 		}
 
@@ -28171,13 +28164,6 @@ void CvGameTextMgr::setHappyHelp(CvWStringBuffer &szBuffer, CvCity& city)
 			szBuffer.append(NEWLINE);
 		}
 
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre                                                                          **/
-/**  Date: 20.10.2009                                                                               **/
-/**  ModComp: TLOTags                                                                               **/
-/**  Reason Added: Display iCelebrityHappy in the City Screen happiness hovertext                   **/
-/**  Notes: Imported by TB                                                                          **/
-/*****************************************************************************************************/
 		iHappy = std::max(0, (city.getCelebrityHappiness()));
 		if (iHappy > 0)
 		{
@@ -28185,10 +28171,7 @@ void CvGameTextMgr::setHappyHelp(CvWStringBuffer &szBuffer, CvCity& city)
 			szBuffer.append(gDLL->getText("TXT_KEY_HAPPY_CELEBRITY", iHappy));
 			szBuffer.append(NEWLINE);
 		}
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 20.10.2009; TLOTags                                                             **/
-/*****************************************************************************************************/
-		//Team Project (1)
+
 		iHappy = city.getExtraTechHappinessTotal();
 		if (iHappy > 0)
 		{

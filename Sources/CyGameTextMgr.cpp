@@ -204,20 +204,21 @@ std::wstring CyGameTextMgr::parseLeaderTraits(int /*LeaderHeadTypes*/ iLeader, i
 	GAMETEXT.parseLeaderTraits(szBuffer, (LeaderHeadTypes)iLeader, (CivilizationTypes) iCivilization, bDawnOfMan, bCivilopediaText);
 	return szBuffer.getCString();
 }
-/************************************************************************************************/
-/* Afforess	                  Start		 08/26/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 std::wstring CyGameTextMgr::parseTraits(int /*TraitTypes*/ eTrait, int /*CivilizationTypes*/ eCivilization, bool bDawnOfMan, bool bEffectsOnly)
 {
 	CvWStringBuffer szBuffer;
 	GAMETEXT.parseTraits(szBuffer, (TraitTypes)eTrait, (CivilizationTypes)eCivilization, bDawnOfMan, bEffectsOnly);
 	return szBuffer.getCString();
 }
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
+std::wstring CyGameTextMgr::getHappinessHelp()
+{
+	CvWStringBuffer szBuffer;
+	GAMETEXT.parseHappinessHelp(szBuffer);
+	return szBuffer.getCString();
+}
+
 std::wstring CyGameTextMgr::getTradeString(TradeData* pTradeData, int iPlayer1, int iPlayer2)
 {
 	CvWStringBuffer szBuffer;
