@@ -198,11 +198,11 @@ public:
 
 				if ( iResult < 0 )
 				{
-					iResult += m_pMap->getGridWidth();
+					iResult += m_pMap->getGridWidthINLINE();
 				}
 				else if ( iResult >= m_iXSize )
 				{
-					iResult -= m_pMap->getGridWidth();
+					iResult -= m_pMap->getGridWidthINLINE();
 				}
 
 				FAssert(0 <= iResult);
@@ -217,7 +217,7 @@ public:
 		}
 		else if ( m_transformType == VIEWPORT_TRANSFORM_TYPE_SCALE )
 		{
-			return (iMapX * m_iXSize)/m_pMap->getGridWidth();
+			return (iMapX * m_iXSize)/m_pMap->getGridWidthINLINE();
 		}
 		else
 		{
@@ -235,11 +235,11 @@ public:
 
 				if ( iResult < 0 )
 				{
-					iResult += m_pMap->getGridHeight();
+					iResult += m_pMap->getGridHeightINLINE();
 				}
 				else if ( iResult >= m_iYSize )
 				{
-					iResult -= m_pMap->getGridHeight();
+					iResult -= m_pMap->getGridHeightINLINE();
 				}
 
 				FAssert(0 <= iResult);
@@ -254,7 +254,7 @@ public:
 		}
 		else if ( m_transformType == VIEWPORT_TRANSFORM_TYPE_SCALE )
 		{
-			return (iMapY * m_iYSize)/m_pMap->getGridHeight();
+			return (iMapY * m_iYSize)/m_pMap->getGridHeightINLINE();
 		}
 		else
 		{
@@ -276,12 +276,12 @@ public:
 			}
 			else
 			{
-				return (iViewportX + m_iXOffset + m_pMap->getGridWidth()) % m_pMap->getGridWidth();
+				return (iViewportX + m_iXOffset + m_pMap->getGridWidthINLINE()) % m_pMap->getGridWidthINLINE();
 			}
 		}
 		else if ( m_transformType == VIEWPORT_TRANSFORM_TYPE_SCALE )
 		{
-			return (iViewportX * m_pMap->getGridWidth() + m_iXSize - 1)/m_iXSize;
+			return (iViewportX * m_pMap->getGridWidthINLINE() + m_iXSize - 1)/m_iXSize;
 		}
 		else
 		{
@@ -303,12 +303,12 @@ public:
 			}
 			else
 			{
-				return (iViewportY + m_iYOffset + m_pMap->getGridHeight()) % m_pMap->getGridHeight();
+				return (iViewportY + m_iYOffset + m_pMap->getGridHeightINLINE()) % m_pMap->getGridHeightINLINE();
 			}
 		}
 		else if ( m_transformType == VIEWPORT_TRANSFORM_TYPE_SCALE )
 		{
-			return (iViewportY * m_pMap->getGridHeight() + m_iYSize - 1)/m_iYSize;
+			return (iViewportY * m_pMap->getGridHeightINLINE() + m_iYSize - 1)/m_iYSize;
 		}
 		else
 		{
@@ -321,15 +321,15 @@ public:
 		if ( m_transformType == VIEWPORT_TRANSFORM_TYPE_WINDOW )
 		{
 			//	Normalize for map wrappings
-			if ( m_pMap->isWrapX() )
+			if ( m_pMap->isWrapXINLINE() )
 			{
-				if ( m_iXOffset < 0 && iMapX >= m_pMap->getGridWidth() + m_iXOffset )
+				if ( m_iXOffset < 0 && iMapX >= m_pMap->getGridWidthINLINE() + m_iXOffset )
 				{
-					iMapX -= m_pMap->getGridWidth();
+					iMapX -= m_pMap->getGridWidthINLINE();
 				}
-				else if ( m_iXOffset > m_pMap->getGridWidth() - m_iXSize && iMapX < m_iXOffset - m_iXSize )
+				else if ( m_iXOffset > m_pMap->getGridWidthINLINE() - m_iXSize && iMapX < m_iXOffset - m_iXSize )
 				{
-					iMapX += m_pMap->getGridWidth();
+					iMapX += m_pMap->getGridWidthINLINE();
 				}
 			}
 			return (iMapX >= m_iXOffset && iMapX - m_iXOffset < m_iXSize);
@@ -350,15 +350,15 @@ public:
 		if ( m_transformType == VIEWPORT_TRANSFORM_TYPE_WINDOW )
 		{
 			//	Normalize for map wrappings
-			if ( m_pMap->isWrapY() )
+			if ( m_pMap->isWrapYINLINE() )
 			{
-				if ( m_iYOffset < 0 && iMapY >= m_pMap->getGridHeight() + m_iYOffset )
+				if ( m_iYOffset < 0 && iMapY >= m_pMap->getGridHeightINLINE() + m_iYOffset )
 				{
-					iMapY -= m_pMap->getGridHeight();
+					iMapY -= m_pMap->getGridHeightINLINE();
 				}
-				else if ( m_iYOffset > m_pMap->getGridHeight() - m_iYSize && iMapY < m_iYOffset - m_iYSize )
+				else if ( m_iYOffset > m_pMap->getGridHeightINLINE() - m_iYSize && iMapY < m_iYOffset - m_iYSize )
 				{
-					iMapY += m_pMap->getGridHeight();
+					iMapY += m_pMap->getGridHeightINLINE();
 				}
 			}
 			return (iMapY >= m_iYOffset && iMapY - m_iYOffset < m_iYSize);
@@ -382,10 +382,10 @@ public:
 		}
 		else if ( comfortBorderSize > 0 )
 		{
-			int iMinX = coordRange(iMapX - comfortBorderSize, m_pMap->getGridWidth(), m_pMap->isWrapX());
-			int iMaxX = coordRange(iMapX + comfortBorderSize, m_pMap->getGridWidth(), m_pMap->isWrapX());
-			int iMinY = coordRange(iMapY - comfortBorderSize, m_pMap->getGridHeight(), m_pMap->isWrapY());
-			int iMaxY = coordRange(iMapY + comfortBorderSize, m_pMap->getGridHeight(), m_pMap->isWrapY());
+			int iMinX = coordRange(iMapX - comfortBorderSize, m_pMap->getGridWidthINLINE(), m_pMap->isWrapXINLINE());
+			int iMaxX = coordRange(iMapX + comfortBorderSize, m_pMap->getGridWidthINLINE(), m_pMap->isWrapXINLINE());
+			int iMinY = coordRange(iMapY - comfortBorderSize, m_pMap->getGridHeightINLINE(), m_pMap->isWrapYINLINE());
+			int iMaxY = coordRange(iMapY + comfortBorderSize, m_pMap->getGridHeightINLINE(), m_pMap->isWrapYINLINE());
 
 			return isInViewportX(iMinX) && isInViewportX(iMaxX) && isInViewportY(iMinY) && isInViewportY(iMaxY);
 		}

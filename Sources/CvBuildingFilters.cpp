@@ -218,12 +218,12 @@ bool BuildingFilterIsCityDefense::isFilteredBuilding(CvPlayer *pPlayer, CvCity *
 	bool bSAD = false;
 	bool bSIN = false;
 
-	if (GC.getGame().isOption(GAMEOPTION_SAD))
+	if (GC.getGameINLINE().isOption(GAMEOPTION_SAD))
 	{
 		bSAD = (GC.getBuildingInfo(eBuilding).getLocalDynamicDefense() > 0);
 	}
 
-	if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
 		bSIN =  ((GC.getBuildingInfo(eBuilding).getFrontSupportPercentModifier() > 0) || 
 		(GC.getBuildingInfo(eBuilding).getShortRangeSupportPercentModifier() > 0) || 
@@ -329,7 +329,7 @@ void BuildingFilterList::init()
 	m_apBuildingFilters[BUILDING_FILTER_SHOW_AIR_POLLUTION] = new BuildingFilterIsProperty((PropertyTypes)GC.getInfoTypeForString("PROPERTY_AIR_POLLUTION"));
 	m_apBuildingFilters[BUILDING_FILTER_SHOW_WATER_POLLUTION] = new BuildingFilterIsProperty((PropertyTypes)GC.getInfoTypeForString("PROPERTY_WATER_POLLUTION"));
 	m_apBuildingFilters[BUILDING_FILTER_SHOW_TOURISM] = new BuildingFilterIsProperty((PropertyTypes)GC.getInfoTypeForString("PROPERTY_TOURISM"));
-	m_apBuildingFilters[BUILDING_FILTER_HIDE_UNBUILDABLE]->setActive(GC.getBugOptionBOOL("RoMSettings__HideUnconstructableBuildings", false));
+	m_apBuildingFilters[BUILDING_FILTER_HIDE_UNBUILDABLE]->setActive(getBugOptionBOOL("RoMSettings__HideUnconstructableBuildings", false));
 }
 
 BuildingFilterList::~BuildingFilterList()

@@ -36,6 +36,9 @@
     <ClCompile Include="CvArtFileMgr.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CvBugOptions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="CvBuildingFilters.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -504,6 +507,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CvArtFileMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CvBugOptions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CvBuildingFilters.h">

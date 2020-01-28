@@ -128,9 +128,10 @@ DECLARE_FLAGS(ECacheAccess::flags);
 //
 // Feature macros
 //
-#define THE_GREAT_WALL
 // #define STRENGTH_IN_NUMBERS
+// #define BARBARIAN_CITY_SPAWN_MAPCATEGORY_CHECK
 // #define GLOBAL_WARMING
+// #define THE_GREAT_WALL
 
 //
 // Cache feature macros
@@ -314,6 +315,7 @@ namespace python = boost::python;
 #include "CvInitCore.h"
 #include "CvArtFileMgr.h"
 #include "CvGameTextMgr.h"
+#include "CvBugOptions.h"
 #include "CvPopupInfo.h"
 #include "CvEventReporter.h"
 #include "CvMessageControl.h"
@@ -333,6 +335,7 @@ namespace python = boost::python;
 #include "CvTalkingHeadMessage.h"
 #include "FProfiler.h"
 #include "CvPathGenerator.h"
+#include "CvBugOptions.h"
 #include "CvPython.h"
 
 #include "SCvDebug.h"

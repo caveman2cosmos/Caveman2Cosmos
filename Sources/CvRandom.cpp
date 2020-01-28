@@ -58,14 +58,14 @@ unsigned short CvRandom::get(unsigned short usNum, const TCHAR* pszLog)
 #ifdef _DEBUG
 	if (pszLog != NULL)
 	{
-		if (GC.getLogging() && GC.getRandLogging() && GC.getGame().isNetworkMultiPlayer())
+		if (GC.getLogging() && GC.getRandLogging() && GC.getGameINLINE().isNetworkMultiPlayer())
 		{
-			if (GC.getGame().getTurnSlice() > 0)
+			if (GC.getGameINLINE().getTurnSlice() > 0)
 			{
 				TCHAR szOut[1024];
-				sprintf(szOut, "Player %d - Multiplayer RNG Log.log", GC.getGame().getActivePlayer());
+				sprintf(szOut, "Player %d - Multiplayer RNG Log.log", GC.getGameINLINE().getActivePlayer());
 				//gDLL->messageControlLog(szOut);
-				GC.getGame().logMsgTo(szOut, "Rand = %d (%d) on %d (%s)\n", getSeed(), usNum, GC.getGame().getTurnSlice(), pszLog);
+				GC.getGameINLINE().logMsgTo(szOut, "Rand = %d (%d) on %d (%s)\n", getSeed(), usNum, GC.getGameINLINE().getTurnSlice(), pszLog);
 			}
 		}
 	}

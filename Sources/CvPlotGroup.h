@@ -44,8 +44,13 @@ public:
 	int getID() const;
 	void setID(int iID);
 
-	inline PlayerTypes getOwner() const { return m_eOwner; }
-
+	PlayerTypes getOwner() const;
+#ifdef _USRDLL
+	inline PlayerTypes getOwnerINLINE() const
+	{
+		return m_eOwner;
+	}
+#endif
 	int getNumBonuses(BonusTypes eBonus) const;
 	bool hasBonus(BonusTypes eBonus);										
 	void changeNumBonuses(BonusTypes eBonus, int iChange);

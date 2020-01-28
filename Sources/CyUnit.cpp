@@ -1407,19 +1407,19 @@ void CyUnit::setHotKeyNumber(int iNewValue)
 
 int CyUnit::getX()
 {
-	return m_pUnit ? m_pUnit->getX() : -1;
+	return m_pUnit ? m_pUnit->getX_INLINE() : -1;
 }
 
 int CyUnit::getY()
 {
-	return m_pUnit ? m_pUnit->getY() : -1;
+	return m_pUnit ? m_pUnit->getY_INLINE() : -1;
 }
 
 void CyUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow)
 {
 	if (m_pUnit)
 	{
-		//GC.getGame().logOOSSpecial(23, m_pUnit->getID(), iX, iY);
+		//GC.getGameINLINE().logOOSSpecial(23, m_pUnit->getID(), iX, iY);
 		return m_pUnit->setXY(iX, iY, bGroup, bUpdate, bShow);
 	}
 }
@@ -1952,7 +1952,7 @@ void CyUnit::setPromotionReady(bool bNewValue)
 
 int CyUnit::getOwner()
 {
-	return m_pUnit ? m_pUnit->getOwner() : -1;
+	return m_pUnit ? m_pUnit->getOwnerINLINE() : -1;
 }
 
 int CyUnit::getVisualOwner()

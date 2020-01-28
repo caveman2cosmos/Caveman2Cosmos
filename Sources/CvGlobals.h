@@ -246,6 +246,8 @@ public:
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
+	CvMap& getMapINLINE();	//	Synonym for GetMap() currently as internal callers don't usually need the viewport
+// PARALLEL MAPS MODIFIED FUNCTION
 	CvMap& getMap();
 	CvViewport* getCurrentViewport();
 	int	getViewportSizeX() const;
@@ -278,6 +280,7 @@ public:
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/	
+	CvGameAI& getGameINLINE() { return *m_game; }
 	CvGameAI& getGame();
 	CvGameAI *getGamePointer();
 	CvRandom& getASyncRand();
@@ -1034,6 +1037,15 @@ public:
 	void cacheGlobals();
 
 	// ***** EXPOSED TO PYTHON *****
+/************************************************************************************************/
+/* MOD_COMPONENT_CONTROL                   08/02/07                            MRGENIE          */
+/*                                                                                              */
+/* Return true/false from                                                                       */
+/************************************************************************************************/
+	bool getDefineBOOL( const char * szName ) const;
+/************************************************************************************************/
+/* MOD_COMPONENT_CONTROL                   END                                                  */
+/************************************************************************************************/
 
 /************************************************************************************************/
 /* Mod Globals    Start                          09/13/10                           phungus420  */
@@ -1093,13 +1105,9 @@ public:
 	bool getGraphicalDetailPagingEnabled();
 	int getGraphicalDetailPageInRange();
 
-	bool getBugOptionBOOL(const char* id, bool bDefault = true, const char* xmlKey = NULL);
-	int getBugOptionINT(const char* id, int iDefault = 0, const char* xmlKey = NULL);
-
-	bool getDefineBOOL(const char* xmlKey, bool bDefault = false);
-	int getDefineINT(const char* xmlKey, int iDefault = 0);
-	float getDefineFLOAT(const char* xmlKey, float fDefault = 0.0);
-	const char* getDefineSTRING(const char* xmlKey, const char* szDefault = "");
+	int getDefineINT( const char * szName ) const;
+	float getDefineFLOAT( const char * szName ) const;
+	const char * getDefineSTRING( const char * szName ) const;
 /************************************************************************************************/
 /* Afforess	                  Start		 08/18/10                                               */
 /*                                                                                              */

@@ -5,8 +5,23 @@
 #ifndef CIV4_GAMECORE_UTILS_H
 #define CIV4_GAMECORE_UTILS_H
 
+
+//#include "CvStructs.h"
 #include "CvGlobals.h"
 #include "CvMap.h"
+
+#ifndef _USRDLL
+// use non inline functions when not in the dll
+#define getMapINLINE	getMap
+#define getGridHeightINLINE	getGridHeight
+#define getGridWidthINLINE	getGridWidth
+#define isWrapYINLINE	isWrapY
+#define isWrapXINLINE	isWrapX
+#define plotINLINE	plot
+#define getX_INLINE	getX
+#define getY_INLINE	getY
+
+#endif
 
 class CvPlot;
 class CvCity;
@@ -93,22 +108,22 @@ inline int wrapCoordDifference(int iDiff, int iRange, bool bWrap)
 
 inline int xDistance(int iFromX, int iToX)
 {
-	return coordDistance(iFromX, iToX, GC.getMap().getGridWidth(), GC.getMap().isWrapX());
+	return coordDistance(iFromX, iToX, GC.getMapINLINE().getGridWidthINLINE(), GC.getMapINLINE().isWrapXINLINE());
 }
 
 inline int yDistance(int iFromY, int iToY)
 {
-	return coordDistance(iFromY, iToY, GC.getMap().getGridHeight(), GC.getMap().isWrapY());
+	return coordDistance(iFromY, iToY, GC.getMapINLINE().getGridHeightINLINE(), GC.getMapINLINE().isWrapYINLINE());
 }
 
 inline int dxWrap(int iDX)																													// Exposed to Python
 {
-	return wrapCoordDifference(iDX, GC.getMap().getGridWidth(), GC.getMap().isWrapX());
+	return wrapCoordDifference(iDX, GC.getMapINLINE().getGridWidthINLINE(), GC.getMapINLINE().isWrapXINLINE());
 }
 
 inline int dyWrap(int iDY)																													// Exposed to Python
 {
-	return wrapCoordDifference(iDY, GC.getMap().getGridHeight(), GC.getMap().isWrapY());
+	return wrapCoordDifference(iDY, GC.getMapINLINE().getGridHeightINLINE(), GC.getMapINLINE().isWrapYINLINE());
 }
 
 // 4 | 4 | 3 | 3 | 3 | 4 | 4
@@ -161,27 +176,27 @@ inline CvPlot* plotDirection(int iX, int iY, DirectionTypes eDirection)							//
 {
 	if(eDirection == NO_DIRECTION)
 	{
-		return GC.getMap().plot(iX, iY);
+		return GC.getMapINLINE().plotINLINE(iX, iY);
 	}
 	else
 	{
-		return GC.getMap().plot((iX + GC.getPlotDirectionX()[eDirection]), (iY + GC.getPlotDirectionY()[eDirection]));
+		return GC.getMapINLINE().plotINLINE((iX + GC.getPlotDirectionX()[eDirection]), (iY + GC.getPlotDirectionY()[eDirection]));
 	}
 }
 
 inline CvPlot* plotDirection(CvPlot* pPlot, DirectionTypes eDirection)
 {
-	return plotDirection(pPlot->getX(), pPlot->getY(), eDirection);
+	return plotDirection(pPlot->getX_INLINE(), pPlot->getY_INLINE(), eDirection);
 }
 
 inline CvPlot* plotCardinalDirection(int iX, int iY, CardinalDirectionTypes eCardinalDirection)	// Exposed to Python
 {
-	return GC.getMap().plot((iX + GC.getPlotCardinalDirectionX()[eCardinalDirection]), (iY + GC.getPlotCardinalDirectionY()[eCardinalDirection]));
+	return GC.getMapINLINE().plotINLINE((iX + GC.getPlotCardinalDirectionX()[eCardinalDirection]), (iY + GC.getPlotCardinalDirectionY()[eCardinalDirection]));
 }
 
 inline CvPlot* plotXY(int iX, int iY, int iDX, int iDY)																// Exposed to Python
 {
-	return GC.getMap().plot((iX + iDX), (iY + iDY));
+	return GC.getMapINLINE().plotINLINE((iX + iDX), (iY + iDY));
 }
 
 inline DirectionTypes directionXY(int iDX, int iDY)																		// Exposed to Python
@@ -203,7 +218,7 @@ inline DirectionTypes reverseDirection(DirectionTypes iDirection)															
 
 inline DirectionTypes directionXY(const CvPlot* pFromPlot, const CvPlot* pToPlot)			// Exposed to Python
 {
-	return directionXY(dxWrap(pToPlot->getX() - pFromPlot->getX()), dyWrap(pToPlot->getY() - pFromPlot->getY()));
+	return directionXY(dxWrap(pToPlot->getX_INLINE() - pFromPlot->getX_INLINE()), dyWrap(pToPlot->getY_INLINE() - pFromPlot->getY_INLINE()));
 }
 
 inline DirectionTypes getAdjacentDirection(DirectionTypes eDirection, bool bClockwise)

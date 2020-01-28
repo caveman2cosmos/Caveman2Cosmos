@@ -100,10 +100,11 @@ int CvGameAI::AI_combatValue(UnitTypes eUnit)
 		// /UncutDragon
 		iValue /= 100;
 	}
-	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		iValue = CvUnit::applySMRank(iValue, GC.getUnitInfo(eUnit).getSMRankTotal() - 15, GC.getDefineINT("SIZE_MATTERS_MOST_MULTIPLIER"));
 	}
+
 
 	iValue /= getBestLandUnitCombat();
 

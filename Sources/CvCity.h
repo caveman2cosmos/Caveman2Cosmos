@@ -628,11 +628,21 @@ public:
 	void setID(int iID);
 
 	DllExport int getViewportX() const;																			// Exposed to Python
-	inline int getX() const { return m_iX; }
-
+	int getX() const;																			// Exposed to Python
+#ifdef _USRDLL
+	inline int getX_INLINE() const
+	{
+		return m_iX;
+	}
+#endif
 	DllExport int getViewportY() const;																			// Exposed to Python
-	inline int getY() const { return m_iY; }
-
+	int getY() const;																			// Exposed to Python
+#ifdef _USRDLL
+	inline int getY_INLINE() const
+	{
+		return m_iY;
+	}
+#endif
 	bool isInViewport() const;
 	bool at(int iX, int iY) const;																				// Exposed to Python
 	bool at(CvPlot* pPlot) const;																					// Exposed to Python - atPlot
@@ -777,6 +787,7 @@ public:
 	void changeEspionageHappinessCounter(int iChange);													// Exposed to Python
 
 	int getFreshWaterGoodHealth() const;																	// Exposed to Python
+	int getFreshWaterBadHealth() const;													// Exposed to Python
 	void updateFreshWaterHealth();
 
 	int getFeatureGoodHealth() const;																			// Exposed to Python
@@ -1052,7 +1063,13 @@ public:
 	bool isPlundered() const;																		// Exposed to Python
 	void setPlundered(bool bNewValue);																// Exposed to Python
 
-	DllExport inline PlayerTypes getOwner() const { return m_eOwner; } // Exposed to Python
+	DllExport PlayerTypes getOwner() const;																// Exposed to Python
+#ifdef _USRDLL
+	inline PlayerTypes getOwnerINLINE() const
+	{
+		return m_eOwner;
+	}
+#endif
 	DllExport TeamTypes getTeam() const;																	// Exposed to Python
 
 	PlayerTypes getPreviousOwner() const;																	// Exposed to Python
@@ -1848,6 +1865,7 @@ protected:
 	int m_iEspionageHealthCounter;
 	int m_iEspionageHappinessCounter;
 	int m_iFreshWaterGoodHealth;
+	int m_iFreshWaterBadHealth;
 	int m_iFeatureGoodHealth;
 	int m_iFeatureBadHealth;
 	int m_iBuildingGoodHealth;

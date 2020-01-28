@@ -37,7 +37,7 @@ void CvDeal::init(int iID, PlayerTypes eFirstPlayer, PlayerTypes eSecondPlayer)
 
 	//--------------------------------
 	// Init other game data
-	setInitialGameTurn(GC.getGame().getGameTurn());
+	setInitialGameTurn(GC.getGameINLINE().getGameTurn());
 }
 
 
@@ -105,7 +105,7 @@ void CvDeal::kill(bool bKillTeam)
 		endTrade(pNode->m_data, getSecondPlayer(), getFirstPlayer(), bKillTeam);
 	}
 
-	GC.getGame().deleteDeal(getID());
+	GC.getGameINLINE().deleteDeal(getID());
 }
 
 
@@ -863,7 +863,7 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 	case TRADE_WORKER:
 	case TRADE_MILITARY_UNIT: {
 
-		if (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY))
+		if (GC.getGameINLINE().isOption(GAMEOPTION_ADVANCED_DIPLOMACY))
 		{
 			CvUnit* pUnit = GET_PLAYER(eFromPlayer).getUnit(trade.m_iData);
 			if (pUnit != NULL)
@@ -926,9 +926,9 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 
 	case TRADE_MAPS: {
 
-		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+		for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
 		{
-			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
+			CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
 
 			if (pLoopPlot->isRevealed(GET_PLAYER(eFromPlayer).getTeam(), false))
 			{
@@ -1044,7 +1044,7 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 		/*                                                                                              */
 		/* Advanced Diplomacy                                                                           */
 		/************************************************************************************************/
-		if (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY))
+		if (GC.getGameINLINE().isOption(GAMEOPTION_ADVANCED_DIPLOMACY))
 		{
 			for (int iI = 0; iI < MAX_PLAYERS; iI++)
 			{
@@ -1186,7 +1186,7 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 /************************************************************************************************/
 	case TRADE_EMBASSY: {
 
-		if (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY))
+		if (GC.getGameINLINE().isOption(GAMEOPTION_ADVANCED_DIPLOMACY))
 		{
 			if (trade.m_iData == 0)
 			{
@@ -1203,7 +1203,7 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 
 	case TRADE_CONTACT: {
 
-		if (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY))
+		if (GC.getGameINLINE().isOption(GAMEOPTION_ADVANCED_DIPLOMACY))
 		{
 			GET_TEAM(GET_PLAYER(eToPlayer).getTeam()).meet((TeamTypes)trade.m_iData, false); //Was true...
 		}
@@ -1212,12 +1212,12 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 
 	case TRADE_CORPORATION: {
 
-		if (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY))
+		if (GC.getGameINLINE().isOption(GAMEOPTION_ADVANCED_DIPLOMACY))
 		{
-			CvCity* pOldHeadquarters = GC.getGame().getHeadquarters((CorporationTypes)trade.m_iData);
+			CvCity* pOldHeadquarters = GC.getGameINLINE().getHeadquarters((CorporationTypes)trade.m_iData);
 			CvCity* pNewHQCity = GET_PLAYER(eToPlayer).getBestHQCity((CorporationTypes)trade.m_iData);
 			pNewHQCity->setHasCorporation((CorporationTypes)trade.m_iData, true, false, false);
-			GC.getGame().setHeadquarters((CorporationTypes)trade.m_iData, pNewHQCity, true);
+			GC.getGameINLINE().setHeadquarters((CorporationTypes)trade.m_iData, pNewHQCity, true);
 			//Move the HQ building over to the new city.
 			for (int i = 0; i < GC.getNumBuildingInfos(); i++)
 			{
@@ -1254,7 +1254,7 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 
 	case TRADE_SECRETARY_GENERAL_VOTE: {
 
-		if (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY))
+		if (GC.getGameINLINE().isOption(GAMEOPTION_ADVANCED_DIPLOMACY))
 		{
 			GET_PLAYER(eFromPlayer).setPledgedSecretaryGeneralVote(GET_PLAYER(eToPlayer).getTeam());
 		}
@@ -1262,7 +1262,7 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 	}
 	case TRADE_PLEDGE_VOTE: {
 
-		if (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY))
+		if (GC.getGameINLINE().isOption(GAMEOPTION_ADVANCED_DIPLOMACY))
 		{
 			GET_PLAYER(eFromPlayer).setPledgedVote((PlayerVoteTypes)trade.m_iData);
 		}
@@ -1300,7 +1300,7 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 /************************************************************************************************/
 	case TRADE_RITE_OF_PASSAGE: {
 
-		if (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY))
+		if (GC.getGameINLINE().isOption(GAMEOPTION_ADVANCED_DIPLOMACY))
 		{
 			if (trade.m_iData == 0)
 			{
@@ -1316,7 +1316,7 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 	}
 	case TRADE_FREE_TRADE_ZONE: {
 
-		if (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY) && GC.getGame().isOption(GAMEOPTION_ADVANCED_ECONOMY))
+		if (GC.getGameINLINE().isOption(GAMEOPTION_ADVANCED_DIPLOMACY) && GC.getGameINLINE().isOption(GAMEOPTION_ADVANCED_ECONOMY))
 		{
 			if (trade.m_iData == 0)
 			{
@@ -1647,7 +1647,7 @@ void CvDeal::endTeamTrade(TradeableItems eItem, TeamTypes eFromTeam, TeamTypes e
 	int iLoop;
 	CLLNode<TradeData>* pNode;
 
-	for (pLoopDeal = GC.getGame().firstDeal(&iLoop); pLoopDeal != NULL; pLoopDeal = GC.getGame().nextDeal(&iLoop))
+	for (pLoopDeal = GC.getGameINLINE().firstDeal(&iLoop); pLoopDeal != NULL; pLoopDeal = GC.getGameINLINE().nextDeal(&iLoop))
 	{
 		if (pLoopDeal != this)
 		{
@@ -1710,7 +1710,7 @@ bool CvDeal::isCancelable(PlayerTypes eByPlayer, CvWString* pszReason)
 
 int CvDeal::turnsToCancel(PlayerTypes eByPlayer)
 {
-	return (getInitialGameTurn() + getTreatyLength() - GC.getGame().getGameTurn());
+	return (getInitialGameTurn() + getTreatyLength() - GC.getGameINLINE().getGameTurn());
 }
 
 // static
@@ -1778,7 +1778,7 @@ bool CvDeal::hasData(TradeableItems eItem)
 /*                                                                                              */
 /* Advanced Diplomacy                                                                           */
 /************************************************************************************************/
-	if (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY))
+	if (GC.getGameINLINE().isOption(GAMEOPTION_ADVANCED_DIPLOMACY))
 	{
 		return (eItem != TRADE_MAPS &&
 			eItem != TRADE_VASSAL &&

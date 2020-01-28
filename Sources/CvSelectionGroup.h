@@ -212,6 +212,12 @@ public:
 	bool isChoosingNewLeader() const { return m_bIsChoosingNewLeader; }
 
 	inline PlayerTypes getOwner() const { return m_eOwner; } // Exposed to Python
+#ifdef _USRDLL
+	inline PlayerTypes getOwnerINLINE() const
+	{
+		return m_eOwner;
+	}
+#endif
 	TeamTypes getTeam() const;																																					// Exposed to Python
 
 	ActivityTypes getActivityType() const;																															// Exposed to Python

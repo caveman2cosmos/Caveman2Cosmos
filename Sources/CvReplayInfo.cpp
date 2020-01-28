@@ -38,12 +38,18 @@ CvReplayInfo::~CvReplayInfo()
 
 void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 {
-	CvGame& game = GC.getGame();
-
+	CvGame& game = GC.getGameINLINE();
+/************************************************************************************************/
+/* Afforess	                  Start		 03/18/10                                               */
+/*                                                                                              */
+/*                                                                                              */
+/************************************************************************************************/
 	if (!game.isFinalInitialized())
 		return;
-
-	const CvMap& map = GC.getMap();
+/************************************************************************************************/
+/* Afforess	                     END                                                            */
+/************************************************************************************************/
+	CvMap& map = GC.getMapINLINE();
 	
 	if (ePlayer == NO_PLAYER)
 	{
@@ -93,17 +99,18 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 			m_eVictoryType = NO_VICTORY;
 		}
 
-		m_iNormalizedScore = player.calculateScore(true, player.getTeam() == GC.getGame().getWinner());
+		m_iNormalizedScore = player.calculateScore(true, player.getTeam() == GC.getGameINLINE().getWinner());
 	}
 
 	m_bMultiplayer = game.isGameMultiPlayer();
 
-	m_iInitialTurn = GC.getGame().getStartTurn();
-	m_iStartYear = GC.getGame().getStartYear();
-	m_iFinalTurn = game.getGameTurn();
-	GAMETEXT.setYearStr(m_szFinalDate, m_iFinalTurn, false, GC.getGame().getCalendar(), GC.getGame().getStartYear(), GC.getGame().getGameSpeedType());
 
-	m_eCalendar = GC.getGame().getCalendar();
+	m_iInitialTurn = GC.getGameINLINE().getStartTurn();
+	m_iStartYear = GC.getGameINLINE().getStartYear();
+	m_iFinalTurn = game.getGameTurn();
+	GAMETEXT.setYearStr(m_szFinalDate, m_iFinalTurn, false, GC.getGameINLINE().getCalendar(), GC.getGameINLINE().getStartYear(), GC.getGameINLINE().getGameSpeedType());
+
+	m_eCalendar = GC.getGameINLINE().getCalendar();
 
 
 	std::map<PlayerTypes, int> mapPlayers;
@@ -166,8 +173,8 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 		}
 	}
 
-	m_iMapWidth = GC.getMap().getGridWidth();
-	m_iMapHeight = GC.getMap().getGridHeight();
+	m_iMapWidth = GC.getMapINLINE().getGridWidthINLINE();
+	m_iMapHeight = GC.getMapINLINE().getGridHeightINLINE();
 	
 	SAFE_DELETE(m_pcMinimapPixels);	
 	m_pcMinimapPixels = new unsigned char[m_nMinimapSize];

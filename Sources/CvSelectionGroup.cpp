@@ -262,9 +262,9 @@ void CvSelectionGroup::doTurn()
 // BUG - Sentry Actions - end
 
 // BUG - Sentry Exploring Units - start
-			if (isAutomated() && getAutomateType() == AUTOMATE_EXPLORE && GC.getBugOptionBOOL("Actions__SentryHealing", true, "BUG_SENTRY_HEALING") && sentryAlert())
+			if (isAutomated() && getAutomateType() == AUTOMATE_EXPLORE && getBugOptionBOOL("Actions__SentryHealing", true, "BUG_SENTRY_HEALING") && sentryAlert())
 			{
-				if (!(GC.getBugOptionBOOL("Actions__SentryHealingOnlyNeutral", true, "BUG_SENTRY_HEALING_ONLY_NEUTRAL") && plot()->isOwned()))
+				if (!(getBugOptionBOOL("Actions__SentryHealingOnlyNeutral", true, "BUG_SENTRY_HEALING_ONLY_NEUTRAL") && plot()->isOwned()))
 				{
 					setActivityType(ACTIVITY_AWAKE);
 				}
@@ -274,9 +274,9 @@ void CvSelectionGroup::doTurn()
 // BUG - Sentry Healing Units - start
 // AIAndy: This is pointless when there is the separate sentry while heal button
 #ifndef _MOD_SENTRY
-			if (eActivityType == ACTIVITY_HEAL && GC.getBugOptionBOOL("Actions__SentryHealing", true, "BUG_SENTRY_HEALING") && sentryAlert())
+			if (eActivityType == ACTIVITY_HEAL && getBugOptionBOOL("Actions__SentryHealing", true, "BUG_SENTRY_HEALING") && sentryAlert())
 			{
-				if (!(GC.getBugOptionBOOL("Actions__SentryHealingOnlyNeutral", true, "BUG_SENTRY_HEALING_ONLY_NEUTRAL") && plot()->isOwned()))
+				if (!(getBugOptionBOOL("Actions__SentryHealingOnlyNeutral", true, "BUG_SENTRY_HEALING_ONLY_NEUTRAL") && plot()->isOwned()))
 				{
 					setActivityType(ACTIVITY_AWAKE);
 				}
@@ -4825,14 +4825,14 @@ bool CvSelectionGroup::groupBuild(BuildTypes eBuild)
 		if (kBuildInfo.getImprovement() == NO_IMPROVEMENT)
 		{
 			// clearing a forest or jungle
-			if (GC.getBugOptionBOOL("Actions__PreChopForests", true, "BUG_PRECHOP_FORESTS"))
+			if (getBugOptionBOOL("Actions__PreChopForests", true, "BUG_PRECHOP_FORESTS"))
 			{
 				bCheckChop = true;
 			}
 		}
 		else
 		{
-			if (GC.getBugOptionBOOL("Actions__PreChopImprovements", true, "BUG_PRECHOP_IMPROVEMENTS"))
+			if (getBugOptionBOOL("Actions__PreChopImprovements", true, "BUG_PRECHOP_IMPROVEMENTS"))
 			{
 				bCheckChop = true;
 			}

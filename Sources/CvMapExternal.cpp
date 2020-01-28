@@ -358,7 +358,7 @@ void CvMapExternal::read(FDataStreamBase* pStream)
 	}
 	else
 	{
-		GC.getMap().read(pStream);
+		GC.getMapINLINE().read(pStream);
 	}
 
 	GC.getCurrentViewport()->setActionState(VIEWPORT_ACTION_STATE_LOADING);

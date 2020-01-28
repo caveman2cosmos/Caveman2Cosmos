@@ -21,7 +21,7 @@ m_iTick(iTick)
 
 int CvDate::getYear() const
 {
-	return GC.getGame().getStartYear() + (m_iTick / 360);
+	return GC.getGameINLINE().getStartYear() + (m_iTick / 360);
 }
 
 int CvDate::getDay() const
@@ -72,7 +72,7 @@ CvDateIncrement CvDate::getIncrement(GameSpeedTypes eGameSpeed) const
 	GameSpeedTypes eActualGameSpeed = eGameSpeed;
 	if (eGameSpeed == NO_GAMESPEED)
 	{
-		eActualGameSpeed = GC.getGame().getGameSpeedType();
+		eActualGameSpeed = GC.getGameINLINE().getGameSpeedType();
 	}
 	CvGameSpeedInfo& kInfo = GC.getGameSpeedInfo(eActualGameSpeed);
 	std::vector<CvDateIncrement>& aIncrements = kInfo.getIncrements();
@@ -149,7 +149,7 @@ CvDate CvDate::getDate(int iTurn, GameSpeedTypes eGameSpeed)
 	GameSpeedTypes eActualGameSpeed = eGameSpeed;
 	if (eGameSpeed == NO_GAMESPEED)
 	{
-		eActualGameSpeed = GC.getGame().getGameSpeedType();
+		eActualGameSpeed = GC.getGameINLINE().getGameSpeedType();
 	}
 	CvGameSpeedInfo& kInfo = GC.getGameSpeedInfo(eActualGameSpeed);
 	std::vector<CvDateIncrement>& aIncrements = kInfo.getIncrements();

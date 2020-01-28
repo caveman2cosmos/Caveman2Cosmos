@@ -145,7 +145,7 @@ bool CvOutcomeList::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, Unit
 		iChanceSum = 100;
 	}
 
-	int iRoll = GC.getGame().getSorenRandNum( iChanceSum, "Outcome roll");
+	int iRoll = GC.getGameINLINE().getSorenRandNum( iChanceSum, "Outcome roll");
 	iChanceSum = 0;
 
 	for (int i=0; i<(int)apOutcome.size(); i++)

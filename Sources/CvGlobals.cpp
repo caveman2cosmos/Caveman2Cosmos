@@ -1105,7 +1105,7 @@ bool cvInternalGlobals::viewportsEnabled() const
 
 bool cvInternalGlobals::getReprocessGreatWallDynamically() const
 {
-	return m_bViewportsEnabled || GC.getDefineBOOL("DYNAMIC_GREAT_WALL");
+	return m_bViewportsEnabled || (getDefineBOOL("DYNAMIC_GREAT_WALL") != 0);
 }
 
 int cvInternalGlobals::getNumMapInfos()
@@ -3806,16 +3806,6 @@ CvString& cvInternalGlobals::getCurrentXMLFile()
 	return m_szCurrentXMLFile;
 }
 
-bool cvInternalGlobals::getBugOptionBOOL(const char* id, bool bDefault, const char* xmlKey)
-{
-	return Cy::call<bool>("CvAppInterface", "getOptionBOOL", Cy::Args(id, bDefault));
-}
-
-int cvInternalGlobals::getBugOptionINT(const char* id, int iDefault, const char* xmlKey)
-{
-	return Cy::call<int>("CvAppInterface", "getOptionINT", Cy::Args(id, iDefault));
-}
-
 FVariableSystem* cvInternalGlobals::getDefinesVarSystem()
 {
 	return m_VarSystem;
@@ -4084,30 +4074,71 @@ void cvInternalGlobals::cacheGlobals()
 	OutputDebugString("Caching Globals: End");
 }
 
-bool cvInternalGlobals::getDefineBOOL(const char* xmlKey, bool bDefault)
+/************************************************************************************************/
+/* MOD COMPONENT CONTROL                   08/02/07                            MRGENIE          */
+/*                                                                                              */
+/* Return true/false from                                                                       */
+/************************************************************************************************/
+bool cvInternalGlobals::getDefineBOOL( const char * szName ) const
 {
-	int iResult = 0;
-	return GC.getDefinesVarSystem()->GetValue(xmlKey, iResult) ? iResult : bDefault;
+	bool bReturn = false;
+	bool success = GC.getDefinesVarSystem()->GetValue( szName, bReturn );
+	//FAssertMsg( success, szName );
+	return bReturn;
+}
+/************************************************************************************************/
+/* MOD COMPONENT CONTROL                   END                                                  */
+/************************************************************************************************/
+
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
+/*                                                                                              */
+/*                                                                                              */
+/************************************************************************************************/
+int cvInternalGlobals::getDefineINT( const char * szName, const int iDefault ) const
+{
+	int iReturn = 0;
+
+	if( GC.getDefinesVarSystem()->GetValue( szName, iReturn ) )
+	{
+		return iReturn;
+	}
+
+	return iDefault;
+}
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
+
+
+int cvInternalGlobals::getDefineINT( const char * szName ) const
+{
+	int iReturn = 0;
+	bool success = GC.getDefinesVarSystem()->GetValue( szName, iReturn );
+	//FAssertMsg( success, szName );
+	return iReturn;
 }
 
-int cvInternalGlobals::getDefineINT(const char* xmlKey, int iDefault)
+float cvInternalGlobals::getDefineFLOAT( const char * szName ) const
 {
-	int iResult = 0;
-	return GC.getDefinesVarSystem()->GetValue(xmlKey, iResult) ? iResult : iDefault;
+	float fReturn = 0;
+	bool success = GC.getDefinesVarSystem()->GetValue( szName, fReturn );
+	//FAssertMsg( success, szName );
+	return fReturn;
 }
 
-float cvInternalGlobals::getDefineFLOAT(const char* xmlKey, float fDefault)
+const char * cvInternalGlobals::getDefineSTRING( const char * szName ) const
 {
-	float fResult = 0.0;
-	return GC.getDefinesVarSystem()->GetValue(xmlKey, fResult) ? fResult : fDefault;
+	const char * szReturn = NULL;
+	bool success = GC.getDefinesVarSystem()->GetValue( szName, szReturn );
+	//FAssertMsg( success, szName );
+	return szReturn;
 }
-
-const char* cvInternalGlobals::getDefineSTRING(const char* xmlKey, const char* szDefault)
-{
-	const char* szResult = NULL;
-	return GC.getDefinesVarSystem()->GetValue(xmlKey, szResult) ? szResult : szDefault;
-}
-
+/************************************************************************************************/
+/* Afforess	                  Start		 08/18/10                                               */
+/*                                                                                              */
+/*                                                                                              */
+/************************************************************************************************/
 void cvInternalGlobals::setDefineINT( const char * szName, int iValue, bool bUpdate )
 {
 	if (getDefineINT(szName) != iValue)
@@ -4143,6 +4174,9 @@ void cvInternalGlobals::setDefineSTRING( const char * szName, const char * szVal
 		cacheGlobals(); // TO DO : we should not cache all globals at each single set
 	}
 }
+/************************************************************************************************/
+/* Afforess	                     END                                                            */
+/************************************************************************************************/
 
 int cvInternalGlobals::getMOVE_DENOMINATOR()
 {
@@ -5341,7 +5375,7 @@ int cvInternalGlobals::getInfoTypeForString(const char* szType, bool hideAssert)
 		return it->second;
 	}
 
-	if(!(stricmp(szType, "NONE")==0 || strcmp(szType, "")==0) && !hideAssert && !GC.getDefineINT(szType))
+	if(!(stricmp(szType, "NONE")==0 || strcmp(szType, "")==0) && !hideAssert && !getDefineINT(szType))
 	{
 		CvString szError;
 		szError.Format("info type '%s' not found, Current XML file is: %s", szType, GC.getCurrentXMLFile().GetCString());
@@ -5362,7 +5396,7 @@ bool cvInternalGlobals::hasInfoTypeForString(const char* szType, bool hideAssert
 		return true;
 	}
 
-	if(!(stricmp(szType, "NONE")==0 || strcmp(szType, "")==0) && !GC.getDefineINT(szType))
+	if(!(stricmp(szType, "NONE")==0 || strcmp(szType, "")==0) && !getDefineINT(szType))
 	{
 		if (!hideAssert)
 		{
@@ -5494,13 +5528,20 @@ void cvInternalGlobals::switchMap(MapTypes eMap)
 {	
 	//bool bInitial = false;
 
-	GC.getMap().beforeSwitch();
+	GC.getMapINLINE().beforeSwitch();
 
 	if (eMap > NO_MAP && eMap < GC.getNumMapInfos())
 		GC.getGame().setCurrentMap(eMap);
 
-	GC.getMap().afterSwitch();
+	GC.getMapINLINE().afterSwitch();
 }
+
+#ifdef _USRDLL
+CvMap& cvInternalGlobals::getMapINLINE()
+{
+	return *m_maps[GC.getGame().getCurrentMap()];
+}
+#endif
 
 CvMap& cvInternalGlobals::getMap()
 {
@@ -5514,12 +5555,12 @@ CvViewport* cvInternalGlobals::getCurrentViewport()
 
 int	cvInternalGlobals::getViewportSizeX() const
 {
-	return GC.viewportsEnabled() ? std::min(m_iViewportSizeX, m_maps[GC.getGame().getCurrentMap()]->getGridWidth()) : m_maps[GC.getGame().getCurrentMap()]->getGridWidth();
+	return GC.viewportsEnabled() ? std::min(m_iViewportSizeX, m_maps[GC.getGame().getCurrentMap()]->getGridWidthINLINE()) : m_maps[GC.getGame().getCurrentMap()]->getGridWidthINLINE();
 }
 
 int	cvInternalGlobals::getViewportSizeY() const
 {
-	return GC.viewportsEnabled() ? std::min(m_iViewportSizeY, m_maps[GC.getGame().getCurrentMap()]->getGridHeight()) : m_maps[GC.getGame().getCurrentMap()]->getGridHeight();
+	return GC.viewportsEnabled() ? std::min(m_iViewportSizeY, m_maps[GC.getGame().getCurrentMap()]->getGridHeightINLINE()) : m_maps[GC.getGame().getCurrentMap()]->getGridHeightINLINE();
 }
 
 int	cvInternalGlobals::getViewportSelectionBorder() const
@@ -5709,27 +5750,26 @@ void cvInternalGlobals::setIsBug(bool bIsBug)
 {
 	bBugInitCalled = true;
 
-	UnitFilterList::setFilterActiveAll(UNIT_FILTER_HIDE_UNBUILDABLE, getBugOptionBOOL("RoMSettings__HideUntrainableUnits", false));
-	BuildingFilterList::setFilterActiveAll(BUILDING_FILTER_HIDE_UNBUILDABLE, getBugOptionBOOL("RoMSettings__HideUnconstructableBuildings", false));
+	::setIsBug(bIsBug);
 
-	bool bBUGViewportsEnabled = GC.getBugOptionBOOL("MainInterface__EnableViewports", false);
+	bool bBUGViewportsEnabled = getBugOptionBOOL("MainInterface__EnableViewports", false);
 
 	//	If viewports are truned on in BUG the settinsg there override those in the global defines
 	if ( bBUGViewportsEnabled )
 	{
 		m_bViewportsEnabled = true;
 
-		int iViewportSizeX = GC.getBugOptionINT("MainInterface__ViewportX", 40);
-		int iViewportSizeY = GC.getBugOptionINT("MainInterface__ViewportY", 40);
+		int iViewportSizeX = getBugOptionINT("MainInterface__ViewportX", 40);
+		int iViewportSizeY = getBugOptionINT("MainInterface__ViewportY", 40);
 
-		int iViewportFocusBorder = GC.getBugOptionINT("MainInterface__ViewportAutoSwitchBorder", 2);
+		int iViewportFocusBorder = getBugOptionINT("MainInterface__ViewportAutoSwitchBorder", 2);
 
 		//	Push them back inot the globals so that a reload of the globals cache preserves these values
 		setDefineINT("ENABLE_VIEWPORTS", 1, false);
 		setDefineINT("VIEWPORT_SIZE_X", iViewportSizeX, false);
 		setDefineINT("VIEWPORT_SIZE_Y", iViewportSizeY, false);
 		setDefineINT("VIEWPORT_FOCUS_BORDER", iViewportFocusBorder, false);
-		m_iViewportCenterOnSelectionCenterBorder = GC.getBugOptionINT("MainInterface__ViewportAutoCenterBorder", 5);
+		m_iViewportCenterOnSelectionCenterBorder = getBugOptionINT("MainInterface__ViewportAutoCenterBorder", 5);
 
 		//	This happens after the maps load on first load, so resize existing viewports
 		for(int iI = 0; iI < GC.getNumMapInfos(); iI++)
@@ -6262,7 +6302,7 @@ bool cvInternalGlobals::getGraphicalDetailPagingEnabled()
 
 int cvInternalGlobals::getGraphicalDetailPageInRange()
 {
-	return std::max(getGame().getXResolution(), getGame().getYResolution())/150;
+	return std::max(getGameINLINE().getXResolution(), getGameINLINE().getYResolution())/150;
 }
 
 /************************************************************************************************/

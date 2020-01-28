@@ -264,13 +264,13 @@ bool postEvent(EventArgs eventData, const char* eventName)
 	if (eventData.toJson)
 	{
 		eventData.jsonArgs << logging::JsonValue("game_name", GC.getInitCore().getGameName());
-		eventData.jsonArgs << logging::JsonValue("game_id", GC.getGame().getGameId());
+		eventData.jsonArgs << logging::JsonValue("game_id", GC.getGameINLINE().getGameId());
 		eventData.jsonArgs << logging::JsonValue("session_id", gSessionID);
 
 		logging::log_json_event("pyevent", eventData.jsonArgs);
 	}
 
-	eventData.pyArgs << GC.getGame().isDebugMode();
+	eventData.pyArgs << GC.getGameINLINE().isDebugMode();
 	eventData.pyArgs << false;
 	eventData.pyArgs << gDLL->altKey();
 	eventData.pyArgs << gDLL->ctrlKey();
