@@ -27741,10 +27741,18 @@ void CvGameTextMgr::setAngerHelp(CvWStringBuffer &szBuffer, CvCity& city)
 	for (int iI = 0; iI < GC.getNumCivicInfos(); ++iI)
 	{
 		iAnger = kPlayer.getCivicPercentAnger((CivicTypes)iI) * iPop / iDivisor;
-		if (iAnger > 0)
+		if (iAnger != 0)
 		{
-			szBuffer.append(gDLL->getText("TXT_KEY_ANGER_DEMAND_CIVIC", iAnger, GC.getCivicInfo((CivicTypes) iI).getTextKeyWide()));
-			szBuffer.append(NEWLINE);
+			if (iAnger > 0)
+			{
+				szBuffer.append(gDLL->getText("TXT_KEY_ANGER_CIVIC_PERCENT_BAD", iAnger, GC.getCivicInfo((CivicTypes) iI).getTextKeyWide()));
+				szBuffer.append(NEWLINE);
+			}
+			else
+			{
+				szBuffer.append(gDLL->getText("TXT_KEY_ANGER_CIVIC_PERCENT_GOOD", iAnger, GC.getCivicInfo((CivicTypes) iI).getTextKeyWide()));
+				szBuffer.append(NEWLINE);
+			}
 			iTotal += iAnger;
 		}
 	}
@@ -27999,18 +28007,6 @@ void CvGameTextMgr::setHappyHelp(CvWStringBuffer &szBuffer, CvCity& city)
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-		for (int iI = 0; iI < GC.getNumCivicInfos(); ++iI)
-		{
-			iHappy = -GET_PLAYER(city.getOwnerINLINE()).getCivicPercentAnger((CivicTypes)iI) * city.getPopulation() / GC.getPERCENT_ANGER_DIVISOR();
-
-			if (iHappy > 0)
-			{
-				szBuffer.append(gDLL->getText("TXT_KEY_HAPPY_NOT_CIVIC", iHappy, GC.getCivicInfo((CivicTypes) iI).getTextKeyWide()));
-				szBuffer.append(NEWLINE);
-				iTotalHappy += iHappy;
-			}
-		}
-
 		iHappy = city.getCivicHappiness();
 		if (iHappy > 0)
 		{

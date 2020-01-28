@@ -1248,7 +1248,15 @@
 		<Polish>[ICON_BULLET]+%d1_Change[ICON_UNHAPPY]: "Nienawidzimy naszego rządu!"</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ANGER_DEMAND_CIVIC</Tag>
+		<Tag>TXT_KEY_ANGER_CIVIC_PERCENT_BAD</Tag>
+		<English>+%d1_Change[ICON_UNHAPPY]: %s2_Name</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ANGER_CIVIC_PERCENT_GOOD</Tag>
+		<English>%d1_Change[ICON_UNHAPPY]: %s2_Name</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ANGER_CIVIC_PERCENT_BAD</Tag>
 		<English>+%d1_Change[ICON_UNHAPPY]: "We hate %s2_Name!"</English>
 	</TEXT>
 	<TEXT>
@@ -8275,10 +8283,6 @@
 		<Italian>+%d1_Change[ICON_HAPPY]: "Ci piacciono le nostre Località!"</Italian>
 		<Spanish>+%d1_Change[ICON_HAPPY]: "¡Disfrutamos de nuestros parajes nacionales!"</Spanish>
 		<Polish>+%d1_Change[ICON_HAPPY]: "Kochamy nasze Cuda Natury!"</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_HAPPY_NOT_CIVIC</Tag>
-		<English>+%d1_Change[ICON_HAPPY]: "We love %s2_Name!"</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HAPPY_PROJECT</Tag>

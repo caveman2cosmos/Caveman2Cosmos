@@ -4503,11 +4503,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREEDOM_ANGER</Tag>
-		<English>[ICON_BULLET][ICON_UNHAPPY] Penalty equal to %d1%% of city population</English>
+		<English>[ICON_BULLET]Increases [ICON_UNHAPPY] equal to %d1%% population</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREEDOM_HAPPINESS</Tag>
-		<English>[ICON_BULLET][ICON_HAPPY] Boost equal to %d1%% of city population</English>
+		<English>[ICON_BULLET]Decreases [ICON_UNHAPPY] equal to %d1%% population</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FROM_LANDMARK</Tag>
