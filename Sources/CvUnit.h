@@ -652,7 +652,7 @@ public:
 	const CvWString getDescription(uint uiForm = 0) const;
 
 	bool canShadow() const;
-	bool canShadowAt(CvPlot* pShadowPlot, CvUnit* pShadowUnit = NULL) const;
+	bool canShadowAt(const CvPlot* pShadowPlot, CvUnit* pShadowUnit = NULL) const;
 	
 	void setShadowUnit(CvUnit* pUnit);
 	CvUnit* getShadowUnit() const;
@@ -1648,7 +1648,7 @@ public:
 
 	DllExport CvUnit* getCombatUnit() const;
 	void setCombatUnit(CvUnit* pUnit, bool bAttacking = false, bool bStealthAttack = false, bool bStealthDefense = false);
-	bool showSeigeTower(CvUnit* pDefender) const; // K-Mod
+	bool showSeigeTower(const CvUnit* pDefender) const; // K-Mod
 
 	CvUnit* getTransportUnit() const;																							// Exposed to Python
 	bool isCargo() const;																													// Exposed to Python
@@ -2759,7 +2759,7 @@ public:
 
 	void checkCityAttackDefensesDamage(CvCity* pCity, const std::vector<UnitCombatTypes>& kDamagableUnitCombatTypes);
 
-	bool isBreakdownCombat(CvPlot* pPlot, bool bSamePlot = false);
+	bool isBreakdownCombat(const CvPlot* pPlot, bool bSamePlot = false) const;
 	void resolveBreakdownAttack(CvPlot* pPlot, CvUnit* pDefender, int AdjustedRepel);
 
 	int getDiminishingReturn(int i) const;

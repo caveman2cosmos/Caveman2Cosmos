@@ -43850,7 +43850,7 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	m_aVisibilityIntensityRangeChangeTypes.clear();
 	if (pXML->TryMoveToXmlFirstChild(L"VisibilityIntensityRangeChangeTypes"))
 	{
-		int iNumSibs = pXML->GetXmlChildrenNumber();
+		const int iNumSibs = pXML->GetXmlChildrenNumber();
 
 		if (0 < iNumSibs)
 		{
@@ -43886,7 +43886,7 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	m_aVisibilityIntensitySameTileChangeTypes.clear();
 	if (pXML->TryMoveToXmlFirstChild(L"VisibilityIntensitySameTileChangeTypes"))
 	{
-		int iNumSibs = pXML->GetXmlChildrenNumber();
+		const int iNumSibs = pXML->GetXmlChildrenNumber();
 
 		if (0 < iNumSibs)
 		{
@@ -43925,7 +43925,7 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"AfflictionFortitudeChangeModifiers"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"AfflictionFortitudeChangeModifier" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"AfflictionFortitudeChangeModifier" );
 		m_aAfflictionFortitudeChangeModifiers.resize(iNum); // Important to keep the delayed resolution pointers correct
 
 		if(pXML->TryMoveToXmlFirstChild())
@@ -43949,7 +43949,7 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"TerrainAttackChangeModifiers"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"TerrainAttackChangeModifier" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"TerrainAttackChangeModifier" );
 		m_aTerrainAttackChangeModifiers.resize(iNum);
 		if(pXML->TryMoveToXmlFirstChild())
 		{
@@ -43972,7 +43972,7 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"TerrainDefenseChangeModifiers"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"TerrainDefenseChangeModifier" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"TerrainDefenseChangeModifier" );
 		m_aTerrainDefenseChangeModifiers.resize(iNum);
 		if(pXML->TryMoveToXmlFirstChild())
 		{
@@ -43995,7 +43995,7 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"TerrainWorkChangeModifiers"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"TerrainWorkChangeModifier" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"TerrainWorkChangeModifier" );
 		m_aTerrainWorkChangeModifiers.resize(iNum);
 		if(pXML->TryMoveToXmlFirstChild())
 		{
@@ -44018,7 +44018,7 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"BuildWorkChangeModifiers"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"BuildWorkChangeModifier" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"BuildWorkChangeModifier" );
 		m_aBuildWorkChangeModifiers.resize(iNum); // Important to keep the delayed resolution pointers correct
 
 		if(pXML->TryMoveToXmlFirstChild())
@@ -44042,7 +44042,7 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"FeatureAttackChangeModifiers"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"FeatureAttackChangeModifier" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"FeatureAttackChangeModifier" );
 		m_aFeatureAttackChangeModifiers.resize(iNum);
 		if(pXML->TryMoveToXmlFirstChild())
 		{
@@ -44065,7 +44065,7 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"FeatureDefenseChangeModifiers"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"FeatureDefenseChangeModifier" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"FeatureDefenseChangeModifier" );
 		m_aFeatureDefenseChangeModifiers.resize(iNum);
 		if(pXML->TryMoveToXmlFirstChild())
 		{
@@ -44088,7 +44088,7 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"FeatureWorkChangeModifiers"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"FeatureWorkChangeModifier" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"FeatureWorkChangeModifier" );
 		m_aFeatureWorkChangeModifiers.resize(iNum);
 		if(pXML->TryMoveToXmlFirstChild())
 		{
@@ -44111,7 +44111,7 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"UnitCombatChangeModifiers"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"UnitCombatChangeModifier" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"UnitCombatChangeModifier" );
 		m_aUnitCombatChangeModifiers.resize(iNum); // Important to keep the delayed resolution pointers correct
 
 		if(pXML->TryMoveToXmlFirstChild())
@@ -44135,7 +44135,7 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"FlankingStrengthbyUnitCombatTypesChanges"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"FlankingStrengthbyUnitCombatTypesChange" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"FlankingStrengthbyUnitCombatTypesChange" );
 		m_aFlankingStrengthbyUnitCombatTypeChange.resize(iNum); // Important to keep the delayed resolution pointers correct
 
 		if(pXML->TryMoveToXmlFirstChild())
@@ -44159,7 +44159,7 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"WithdrawVSUnitCombatTypesChanges"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"WithdrawVSUnitCombatTypesChange" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"WithdrawVSUnitCombatTypesChange" );
 		m_aWithdrawVSUnitCombatTypeChange.resize(iNum); // Important to keep the delayed resolution pointers correct
 
 		if(pXML->TryMoveToXmlFirstChild())
@@ -44183,7 +44183,7 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"PursuitVSUnitCombatTypesChanges"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"PursuitVSUnitCombatTypesChange" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"PursuitVSUnitCombatTypesChange" );
 		m_aPursuitVSUnitCombatTypeChange.resize(iNum); // Important to keep the delayed resolution pointers correct
 
 		if(pXML->TryMoveToXmlFirstChild())
@@ -44207,7 +44207,7 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"RepelVSUnitCombatTypesChanges"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"RepelVSUnitCombatTypesChange" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"RepelVSUnitCombatTypesChange" );
 		m_aRepelVSUnitCombatTypeChange.resize(iNum); // Important to keep the delayed resolution pointers correct
 
 		if(pXML->TryMoveToXmlFirstChild())
@@ -44231,7 +44231,7 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"KnockbackVSUnitCombatTypesChanges"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"KnockbackVSUnitCombatTypesChange" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"KnockbackVSUnitCombatTypesChange" );
 		m_aKnockbackVSUnitCombatTypeChange.resize(iNum); // Important to keep the delayed resolution pointers correct
 
 		if(pXML->TryMoveToXmlFirstChild())
@@ -44255,7 +44255,7 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"PunctureVSUnitCombatTypesChanges"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"PunctureVSUnitCombatTypesChange" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"PunctureVSUnitCombatTypesChange" );
 		m_aPunctureVSUnitCombatTypeChange.resize(iNum); // Important to keep the delayed resolution pointers correct
 
 		if(pXML->TryMoveToXmlFirstChild())
@@ -44279,7 +44279,7 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"ArmorVSUnitCombatTypesChanges"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"ArmorVSUnitCombatTypesChange" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"ArmorVSUnitCombatTypesChange" );
 		m_aArmorVSUnitCombatTypeChange.resize(iNum); // Important to keep the delayed resolution pointers correct
 
 		if(pXML->TryMoveToXmlFirstChild())
@@ -44303,7 +44303,7 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"DodgeVSUnitCombatTypesChanges"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"DodgeVSUnitCombatTypesChange" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"DodgeVSUnitCombatTypesChange" );
 		m_aDodgeVSUnitCombatTypeChange.resize(iNum); // Important to keep the delayed resolution pointers correct
 
 		if(pXML->TryMoveToXmlFirstChild())
@@ -44327,7 +44327,7 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"PrecisionVSUnitCombatTypesChanges"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"PrecisionVSUnitCombatTypesChange" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"PrecisionVSUnitCombatTypesChange" );
 		m_aPrecisionVSUnitCombatTypeChange.resize(iNum); // Important to keep the delayed resolution pointers correct
 
 		if(pXML->TryMoveToXmlFirstChild())
@@ -44351,7 +44351,7 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"CriticalVSUnitCombatTypesChanges"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"CriticalVSUnitCombatTypesChange" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"CriticalVSUnitCombatTypesChange" );
 		m_aCriticalVSUnitCombatTypeChange.resize(iNum); // Important to keep the delayed resolution pointers correct
 
 		if(pXML->TryMoveToXmlFirstChild())
@@ -44375,7 +44375,7 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"RoundStunVSUnitCombatTypesChanges"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"RoundStunVSUnitCombatTypesChange" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"RoundStunVSUnitCombatTypesChange" );
 		m_aRoundStunVSUnitCombatTypeChange.resize(iNum); // Important to keep the delayed resolution pointers correct
 
 		if(pXML->TryMoveToXmlFirstChild())
@@ -44399,7 +44399,7 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"TrapAvoidanceUnitCombatTypes"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"TrapAvoidanceUnitCombatType" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"TrapAvoidanceUnitCombatType" );
 		m_aTrapAvoidanceUnitCombatTypes.resize(iNum); // Important to keep the delayed resolution pointers correct
 
 		if(pXML->TryMoveToXmlFirstChild())
@@ -44423,7 +44423,7 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"AfflictOnAttackChangeTypes"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"AfflictOnAttackChangeType" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"AfflictOnAttackChangeType" );
 		m_aAfflictOnAttackChangeTypes.resize(iNum); // Important to keep the delayed resolution pointers correct
 
 		if(pXML->TryMoveToXmlFirstChild())
@@ -44450,7 +44450,7 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"InvisibleTerrainChanges"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"InvisibleTerrainChange" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"InvisibleTerrainChange" );
 		m_aInvisibleTerrainChanges.resize(iNum);
 		if(pXML->TryMoveToXmlFirstChild())
 		{
@@ -44475,7 +44475,7 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"InvisibleFeatureChanges"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"InvisibleFeatureChange" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"InvisibleFeatureChange" );
 		m_aInvisibleFeatureChanges.resize(iNum);
 		if(pXML->TryMoveToXmlFirstChild())
 		{
@@ -44500,7 +44500,7 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"InvisibleImprovementChanges"))
 	{
 		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"InvisibleImprovementChange" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"InvisibleImprovementChange" );
 		m_aInvisibleImprovementChanges.resize(iNum);
 		if(pXML->TryMoveToXmlFirstChild())
 		{
@@ -44717,7 +44717,7 @@ void CvUnitCombatInfo::copyNonDefaults(CvUnitCombatInfo* pClassInfo, CvXMLLoadUt
 
 	if (m_aOutcomeMissions.empty())
 	{
-		int num = (int) pClassInfo->getNumActionOutcomes();
+		const int num = (int) pClassInfo->getNumActionOutcomes();
 		for (int index = 0; index < num; index++)
 		{
 			m_aOutcomeMissions.push_back(pClassInfo->m_aOutcomeMissions[index]);
@@ -45790,22 +45790,22 @@ CvOutcomeList* CvUnitCombatInfo::getKillOutcomeList()
 	return &m_KillOutcomeList;
 }
 
-int CvUnitCombatInfo::getNumActionOutcomes()
+int CvUnitCombatInfo::getNumActionOutcomes() const
 {
 	return m_aOutcomeMissions.size();
 }
 
-MissionTypes CvUnitCombatInfo::getActionOutcomeMission(int index)
+MissionTypes CvUnitCombatInfo::getActionOutcomeMission(int index) const
 {
 	return m_aOutcomeMissions[index]->getMission();
 }
 
-CvOutcomeList* CvUnitCombatInfo::getActionOutcomeList(int index)
+CvOutcomeList* CvUnitCombatInfo::getActionOutcomeList(int index) const
 {
 	return m_aOutcomeMissions[index]->getOutcomeList();
 }
 
-CvOutcomeList* CvUnitCombatInfo::getActionOutcomeListByMission(MissionTypes eMission)
+CvOutcomeList* CvUnitCombatInfo::getActionOutcomeListByMission(MissionTypes eMission) const
 {
 	for (int i = 0; i < (int) m_aOutcomeMissions.size(); i++)
 	{
@@ -45817,12 +45817,12 @@ CvOutcomeList* CvUnitCombatInfo::getActionOutcomeListByMission(MissionTypes eMis
 	return NULL;
 }
 
-CvOutcomeMission* CvUnitCombatInfo::getOutcomeMission(int index)
+CvOutcomeMission* CvUnitCombatInfo::getOutcomeMission(int index) const
 {
 	return m_aOutcomeMissions[index];
 }
 
-CvOutcomeMission* CvUnitCombatInfo::getOutcomeMissionByMission(MissionTypes eMission)
+CvOutcomeMission* CvUnitCombatInfo::getOutcomeMissionByMission(MissionTypes eMission) const
 {
 	for (int i = 0; i < (int) m_aOutcomeMissions.size(); i++)
 	{

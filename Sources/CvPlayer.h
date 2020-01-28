@@ -155,7 +155,7 @@ public:
 
 	int startingPlotRange() const;																																									// Exposed to Python
 	bool startingPlotWithinRange(CvPlot* pPlot, PlayerTypes ePlayer, int iRange, int iPass) const;									// Exposed to Python
-	int startingPlotDistanceFactor(CvPlot* pPlot, PlayerTypes ePlayer, int iRange) const;
+	int startingPlotDistanceFactor(const CvPlot* pPlot, PlayerTypes ePlayer, int iRange) const;
 	int findStartingArea() const;
 	CvPlot* findStartingPlot(bool bRandomize = false);																																									// Exposed to Python
 
@@ -174,7 +174,7 @@ public:
 	void disbandUnit(bool bAnnounce);																																					// Exposed to Python
 	void killUnits();																																													// Exposed to Python
 
-	CvSelectionGroup* cycleSelectionGroups(CvUnit* pUnit, bool bForward, bool bWorkers, bool* pbWrap, bool bAllowViewportSwitch);
+	CvSelectionGroup* cycleSelectionGroups(const CvUnit* pUnit, bool bForward, bool bWorkers, bool* pbWrap, bool bAllowViewportSwitch);
 
 	bool hasTrait(TraitTypes eTrait) const;																																			// Exposed to Python						
 /************************************************************************************************/
@@ -269,7 +269,7 @@ public:
 	void updatePlunder(int iChange, bool bUpdatePlotGroups);
 	void validateCommerce() const;
 	void updateTimers();
-	CvCity* findClosestCity(CvPlot* pPlot) const;
+	CvCity* findClosestCity(const CvPlot* pPlot) const;
 
 	bool hasReadyUnautomatedUnit(bool bAny = false) const;
 	bool hasReadyUnit(bool bAny = false) const;
@@ -301,23 +301,23 @@ public:
 	/*                                                                                              */
 	/* General AI                                                                                   */
 	/************************************************************************************************/
-	int countReligionSpreadUnits(CvArea* pArea, ReligionTypes eReligion, bool bIncludeTraining = false) const;														// Exposed to Python
-	int countCorporationSpreadUnits(CvArea* pArea, CorporationTypes eCorporation, bool bIncludeTraining = false) const;														// Exposed to Python
+	int countReligionSpreadUnits(const CvArea* pArea, ReligionTypes eReligion, bool bIncludeTraining = false) const;														// Exposed to Python
+	int countCorporationSpreadUnits(const CvArea* pArea, CorporationTypes eCorporation, bool bIncludeTraining = false) const;														// Exposed to Python
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 	int countNumCoastalCities() const;																																		// Exposed to Python
-	int countNumCoastalCitiesByArea(CvArea* pArea) const; // Exposed to Python
+	int countNumCoastalCitiesByArea(const CvArea* pArea) const; // Exposed to Python
 	int countNumCitiesWithOrbitalInfrastructure() const;
 	inline void noteOrbitalInfrastructureCountDirty() { m_orbitalInfrastructureCountDirty = true; }
 	unsigned long long countTotalCulture() const;
 	void doCountTotalCulture();																																																	// Exposed to Python
 	int countOwnedBonuses(BonusTypes eBonus) const;																												// Exposed to Python
-	int countUnimprovedBonuses(CvArea* pArea, CvPlot* pFromPlot = NULL) const;														// Exposed to Python
+	int countUnimprovedBonuses(const CvArea* pArea, const CvPlot* pFromPlot = NULL) const;														// Exposed to Python
 	int countCityFeatures(FeatureTypes eFeature) const;																										// Exposed to Python
 	int countNumBuildings(BuildingTypes eBuilding) const;																									// Exposed to Python
 	int countNumCitiesConnectedToCapital() const;																								// Exposed to Python
-	int countPotentialForeignTradeCities(CvArea* pIgnoreArea = NULL) const;																// Exposed to Python
+	int countPotentialForeignTradeCities(const CvArea* pIgnoreArea = NULL) const;																// Exposed to Python
 	int countPotentialForeignTradeCitiesConnected() const;																								// Exposed to Python
 
 	DllExport bool canContact(PlayerTypes ePlayer) const;																									// Exposed to Python
@@ -528,21 +528,21 @@ public:
 	bool canStealTech(PlayerTypes eTarget, TechTypes eTech) const;
 	bool canForceCivics(PlayerTypes eTarget, CivicTypes eCivic) const;
 	bool canForceReligion(PlayerTypes eTarget, ReligionTypes eReligion) const;
-	bool canSpyDestroyUnit(PlayerTypes eTarget, CvUnit& kUnit) const;
-	bool canSpyBribeUnit(PlayerTypes eTarget, CvUnit& kUnit) const;
+	bool canSpyDestroyUnit(PlayerTypes eTarget, const CvUnit& kUnit) const;
+	bool canSpyBribeUnit(PlayerTypes eTarget, const CvUnit& kUnit) const;
 	bool canSpyDestroyBuilding(PlayerTypes eTarget, BuildingTypes eBuilding) const;
 	bool canSpyDestroyProject(PlayerTypes eTarget, ProjectTypes eProject) const;
 
 	void doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, int iY, int iData, bool bAdd);
-	int getAdvancedStartUnitCost(UnitTypes eUnit, bool bAdd, CvPlot* pPlot = NULL) const;																													// Exposed to Python 
-	int getAdvancedStartCityCost(bool bAdd, CvPlot* pPlot = NULL) const;																													// Exposed to Python 
-	int getAdvancedStartPopCost(bool bAdd, CvCity* pCity = NULL) const;																													// Exposed to Python 
-	int getAdvancedStartCultureCost(bool bAdd, CvCity* pCity = NULL) const;																													// Exposed to Python 
-	int getAdvancedStartBuildingCost(BuildingTypes eBuilding, bool bAdd, CvCity* pCity = NULL) const;																													// Exposed to Python 
-	int getAdvancedStartImprovementCost(ImprovementTypes eImprovement, bool bAdd, CvPlot* pPlot = NULL) const;																													// Exposed to Python 
-	int getAdvancedStartRouteCost(RouteTypes eRoute, bool bAdd, CvPlot* pPlot = NULL) const;																													// Exposed to Python 
+	int getAdvancedStartUnitCost(UnitTypes eUnit, bool bAdd, const CvPlot* pPlot = NULL) const;																													// Exposed to Python 
+	int getAdvancedStartCityCost(bool bAdd, const CvPlot* pPlot = NULL) const;																													// Exposed to Python 
+	int getAdvancedStartPopCost(bool bAdd, const CvCity* pCity = NULL) const;																													// Exposed to Python 
+	int getAdvancedStartCultureCost(bool bAdd, const CvCity* pCity = NULL) const;																													// Exposed to Python 
+	int getAdvancedStartBuildingCost(BuildingTypes eBuilding, bool bAdd, const CvCity* pCity = NULL) const;																													// Exposed to Python 
+	int getAdvancedStartImprovementCost(ImprovementTypes eImprovement, bool bAdd, const CvPlot* pPlot = NULL) const;																													// Exposed to Python 
+	int getAdvancedStartRouteCost(RouteTypes eRoute, bool bAdd, const CvPlot* pPlot = NULL) const;																													// Exposed to Python 
 	int getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const;																													// Exposed to Python 
-	int getAdvancedStartVisibilityCost(bool bAdd, CvPlot* pPlot = NULL) const;																													// Exposed to Python 
+	int getAdvancedStartVisibilityCost(bool bAdd, const CvPlot* pPlot = NULL) const;																													// Exposed to Python 
 
 	int getGoldenAgeTurns() const;																															// Exposed to Python  
 	bool isGoldenAge() const;																																		// Exposed to Python 
@@ -1608,7 +1608,7 @@ public:
 
 	/*bool hasFixedBorders();*/
 	void doCheckForTaxationAnger();
-	bool hasEnemyDefenderUnit(CvPlot* pPlot);
+	bool hasEnemyDefenderUnit(const CvPlot* pPlot) const;
 
 	CvCity* getBestHQCity(CorporationTypes eCorporation) const;
 	PlayerVoteTypes getPledgedVote() const;
@@ -1634,9 +1634,9 @@ public:
 	int getNumTradeImportsByBonus(PlayerTypes ePlayer, BonusTypes eBonus) const;
 	bool isTradingMilitaryBonus(PlayerTypes ePlayer) const;
 
-	DenialTypes AI_workerTrade(CvUnit* pUnit, PlayerTypes ePlayer) const;
+	DenialTypes AI_workerTrade(const CvUnit* pUnit, PlayerTypes ePlayer) const;
 
-	DenialTypes AI_militaryUnitTrade(CvUnit* pUnit, PlayerTypes ePlayer) const;
+	DenialTypes AI_militaryUnitTrade(const CvUnit* pUnit, PlayerTypes ePlayer) const;
 	DenialTypes AI_corporationTrade(CorporationTypes eCorporation, PlayerTypes ePlayer) const;
 	DenialTypes AI_pledgeVoteTrade(VoteTriggeredData* kData, PlayerVoteTypes ePlayerVote, PlayerTypes ePlayer) const;
 	DenialTypes AI_secretaryGeneralTrade(VoteSourceTypes eVoteSource, PlayerTypes ePlayer) const;
@@ -1946,7 +1946,7 @@ public:
 	virtual void AI_doTurnPost() = 0;
 	virtual void AI_doTurnUnitsPre() = 0;
 	virtual void AI_doTurnUnitsPost() = 0;
-	virtual void AI_updateFoundValues(bool bClear = false, CvArea* area = NULL) const = 0;
+	virtual void AI_updateFoundValues(bool bClear = false, const CvArea* area = NULL) const = 0;
 	virtual void AI_unitUpdate() = 0;
 	virtual void AI_makeAssignWorkDirty() = 0;
 	virtual void AI_assignWorkingPlots() = 0;
@@ -1963,7 +1963,7 @@ public:
 	/************************************************************************************************/
 	virtual void AI_conquerCity(CvCity* pCity) = 0;
 	virtual int AI_foundValue(int iX, int iY, int iMinUnitRange = -1, bool bStartingLoc = false) const = 0; // Exposed to Python
-	virtual bool AI_isCommercePlot(CvPlot* pPlot) const = 0;
+	virtual bool AI_isCommercePlot(const CvPlot* pPlot) const = 0;
 	virtual int AI_getPlotDanger(const CvPlot* pPlot, int iRange = -1, bool bTestMoves = true) const = 0;
 	virtual bool AI_isFinancialTrouble() const = 0;																											// Exposed to Python
 	virtual TechTypes AI_bestTech(int iMaxPathLength = 1, bool bIgnoreCost = false, bool bAsync = false, TechTypes eIgnoreTech = NO_TECH, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR) const = 0;
@@ -1989,15 +1989,15 @@ public:
 	/* 	City Defenders						24.07.2010				Fuyu			*/
 	/********************************************************************************/
 	//Fuyu bIgnoreNotUnitAIs
-	virtual int AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea, CvUnitSelectionCriteria* criteria = NULL) const = 0;						// Exposed to Python
+	virtual int AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea* pArea, CvUnitSelectionCriteria* criteria = NULL) const = 0;						// Exposed to Python
 /********************************************************************************/
 /* 	City Defenders												END 			*/
 /********************************************************************************/
 	virtual int AI_totalUnitAIs(UnitAITypes eUnitAI) const = 0;																					// Exposed to Python
-	virtual int AI_totalAreaUnitAIs(CvArea* pArea, UnitAITypes eUnitAI) const = 0;											// Exposed to Python
-	virtual int AI_totalWaterAreaUnitAIs(CvArea* pArea, UnitAITypes eUnitAI) const = 0;									// Exposed to Python
-	virtual int AI_plotTargetMissionAIs(CvPlot* pPlot, MissionAITypes eMissionAI, CvSelectionGroup* pSkipSelectionGroup = NULL, int iRange = 0, int* piClosest = NULL) const = 0;
-	virtual int AI_unitTargetMissionAIs(CvUnit* pUnit, MissionAITypes eMissionAI, CvSelectionGroup* pSkipSelectionGroup = NULL) const = 0;
+	virtual int AI_totalAreaUnitAIs(const CvArea* pArea, UnitAITypes eUnitAI) const = 0;											// Exposed to Python
+	virtual int AI_totalWaterAreaUnitAIs(const CvArea* pArea, UnitAITypes eUnitAI) const = 0;									// Exposed to Python
+	virtual int AI_plotTargetMissionAIs(CvPlot* pPlot, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL, int iRange = 0, int* piClosest = NULL) const = 0;
+	virtual int AI_unitTargetMissionAIs(const CvUnit* pUnit, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL) const = 0;
 	/********************************************************************************/
 	/* 	New Civic AI						19.08.2010				Fuyu			*/
 	/********************************************************************************/

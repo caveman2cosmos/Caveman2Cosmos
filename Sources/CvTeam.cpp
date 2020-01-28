@@ -3104,7 +3104,7 @@ int CvTeam::getCurrentMasterPower(bool bIncludeVassals) const
 	return 0;
 }
 
-bool CvTeam::isMasterPlanningLandWar(CvArea* pArea) const
+bool CvTeam::isMasterPlanningLandWar(const CvArea* pArea) const
 {
 	if( !isAVassal() )
 	{
@@ -3153,7 +3153,7 @@ bool CvTeam::isMasterPlanningLandWar(CvArea* pArea) const
 	return false;
 }
 
-bool CvTeam::isMasterPlanningSeaWar(CvArea* pArea) const
+bool CvTeam::isMasterPlanningSeaWar(const CvArea* pArea) const
 {
 	if( !isAVassal() )
 	{
@@ -3295,7 +3295,7 @@ unsigned long long CvTeam::countTotalCulture() const
 }
 
 
-int CvTeam::countNumUnitsByArea(CvArea* pArea) const
+int CvTeam::countNumUnitsByArea(const CvArea* pArea) const
 {
 	PROFILE_FUNC();
 
@@ -3313,7 +3313,7 @@ int CvTeam::countNumUnitsByArea(CvArea* pArea) const
 }
 
 
-int CvTeam::countNumCitiesByArea(CvArea* pArea) const
+int CvTeam::countNumCitiesByArea(const CvArea* pArea) const
 {
 	PROFILE_FUNC();
 
@@ -3331,7 +3331,7 @@ int CvTeam::countNumCitiesByArea(CvArea* pArea) const
 }
 
 
-int CvTeam::countTotalPopulationByArea(CvArea* pArea) const
+int CvTeam::countTotalPopulationByArea(const CvArea* pArea) const
 {
 	int iCount = 0;
 
@@ -3347,7 +3347,7 @@ int CvTeam::countTotalPopulationByArea(CvArea* pArea) const
 }
 
 
-int CvTeam::countPowerByArea(CvArea* pArea) const
+int CvTeam::countPowerByArea(const CvArea* pArea) const
 {
 	int iCount = 0;
 
@@ -3363,7 +3363,7 @@ int CvTeam::countPowerByArea(CvArea* pArea) const
 }
 
 
-int CvTeam::countEnemyPowerByArea(CvArea* pArea) const
+int CvTeam::countEnemyPowerByArea(const CvArea* pArea) const
 {
 	int iCount = 0;
 
@@ -3398,7 +3398,7 @@ int CvTeam::countEnemyPowerByArea(CvArea* pArea) const
 /*                                                                                              */
 /* War strategy AI                                                                              */
 /************************************************************************************************/
-int CvTeam::countEnemyPopulationByArea(CvArea* pArea) const
+int CvTeam::countEnemyPopulationByArea(const CvArea* pArea) const
 {
 	int iCount = 0;
 
@@ -3428,7 +3428,7 @@ int CvTeam::countEnemyPopulationByArea(CvArea* pArea) const
 /************************************************************************************************/
 
 
-int CvTeam::countNumAIUnitsByArea(CvArea* pArea, UnitAITypes eUnitAI) const
+int CvTeam::countNumAIUnitsByArea(const CvArea* pArea, UnitAITypes eUnitAI) const
 {
 	PROFILE_FUNC();
 
@@ -3450,7 +3450,7 @@ int CvTeam::countNumAIUnitsByArea(CvArea* pArea, UnitAITypes eUnitAI) const
 /*                                                                                              */
 /* War strategy AI                                                                              */
 /************************************************************************************************/
-int CvTeam::countEnemyDangerByArea(CvArea* pArea, TeamTypes eEnemyTeam ) const
+int CvTeam::countEnemyDangerByArea(const CvArea* pArea, TeamTypes eEnemyTeam ) const
 {
 	PROFILE_FUNC();
 
@@ -9830,17 +9830,17 @@ int CvTeam::getTypicalUnitValue(UnitAITypes eUnitAI) const
 	return iMax;
 }
 
-int CvTeam::getWinForLosingResearchModifier()
+int CvTeam::getWinForLosingResearchModifier() const
 {
-	int iTopCityCount = GC.getGame().getTopCityCount();
-	int iTopPopCount = GC.getGame().getTopPopCount();
-	int iOurCityCount = getNumCities() * 100;
-	int iOurPopCount = getTotalPopulation(false) * 100;
-	int iCityPercent = iOurCityCount/std::max(1,iTopCityCount);
-	int iPopPercent = iOurPopCount/std::max(1,iTopPopCount);
+	const int iTopCityCount = GC.getGame().getTopCityCount();
+	const int iTopPopCount = GC.getGame().getTopPopCount();
+	const int iOurCityCount = getNumCities() * 100;
+	const int iOurPopCount = getTotalPopulation(false) * 100;
+	const int iCityPercent = iOurCityCount/std::max(1,iTopCityCount);
+	const int iPopPercent = iOurPopCount/std::max(1,iTopPopCount);
 	int iModifier = iCityPercent+iPopPercent;
 	iModifier /= 2;
-	int iFinal = 100-iModifier;
+	const int iFinal = 100-iModifier;
 	return iFinal;
 }
 

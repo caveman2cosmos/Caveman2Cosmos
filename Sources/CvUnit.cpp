@@ -22643,7 +22643,7 @@ void CvUnit::setCombatUnit(CvUnit* pCombatUnit, bool bAttacking, bool bStealthAt
 
 // K-Mod. Return true if the combat animation should include a seige tower
 // (code copied from setCombatUnit, above)
-bool CvUnit::showSeigeTower(CvUnit* pDefender) const
+bool CvUnit::showSeigeTower(const CvUnit* pDefender) const
 {
 	return getDomainType() == DOMAIN_LAND
 		&& !m_pUnitInfo->isIgnoreBuildingDefense()
@@ -35444,7 +35444,7 @@ bool CvUnit::canShadow() const
 	return true;
 }
 
-bool CvUnit::canShadowAt(CvPlot* pShadowPlot, CvUnit* pShadowUnit) const
+bool CvUnit::canShadowAt(const CvPlot* pShadowPlot, CvUnit* pShadowUnit) const
 {
 	if (!canShadow())
 	{
@@ -41621,7 +41621,7 @@ void CvUnit::checkCityAttackDefensesDamage(CvCity* pCity, const std::vector<Unit
 	}
 }
 
-bool CvUnit::isBreakdownCombat(CvPlot* pPlot, bool bSamePlot)
+bool CvUnit::isBreakdownCombat(const CvPlot* pPlot, bool bSamePlot) const
 {
 	CvCity* pCity = NULL;
 

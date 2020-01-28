@@ -10065,7 +10065,7 @@ void CvPlot::changeCulture(PlayerTypes eIndex, int iChange, bool bUpdate)
 /************************************************************************************************/
 	if (0 != iChange)
 	{
-		int iNonNegativeCulture = std::max(getCulture(eIndex) + iChange, 0);		
+		const int iNonNegativeCulture = std::max(getCulture(eIndex) + iChange, 0);		
 		setCulture(eIndex, iNonNegativeCulture, bUpdate, true);
 	}
 /************************************************************************************************/

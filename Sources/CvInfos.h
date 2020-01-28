@@ -10927,12 +10927,12 @@ public:
 	static void setUnitCombatWildAnimal(UnitCombatTypes eIndex) { m_UnitCombatWildAnimal = eIndex; }
 
 	CvOutcomeList* getKillOutcomeList();
-	int getNumActionOutcomes();
-	CvOutcomeList* getActionOutcomeList(int index);
-	MissionTypes getActionOutcomeMission(int index);
-	CvOutcomeList* getActionOutcomeListByMission(MissionTypes eMission);
-	CvOutcomeMission* getOutcomeMission(int index);
-	CvOutcomeMission* getOutcomeMissionByMission(MissionTypes eMission);
+	int getNumActionOutcomes() const;
+	CvOutcomeList* getActionOutcomeList(int index) const;
+	MissionTypes getActionOutcomeMission(int index) const;
+	CvOutcomeList* getActionOutcomeListByMission(MissionTypes eMission) const;
+	CvOutcomeMission* getOutcomeMission(int index) const;
+	CvOutcomeMission* getOutcomeMissionByMission(MissionTypes eMission) const;
 
 protected:
 

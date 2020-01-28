@@ -13098,7 +13098,7 @@ void CvGame::doFoundCorporation(CorporationTypes eCorporation, bool bForce)
 	}
 }
 
-int CvGame::getAverageCorporationInfluence(CvCity* pCity, CorporationTypes eCorporation) const
+int CvGame::getAverageCorporationInfluence(const CvCity* pCity, const CorporationTypes eCorporation) const
 {
 	CvCity* pLoopCity;
 	int iSpread = GC.getCorporationInfo(eCorporation).getSpread();
@@ -13115,7 +13115,7 @@ int CvGame::getAverageCorporationInfluence(CvCity* pCity, CorporationTypes eCorp
 	
 	for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iI);
+		const CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iI);
 		if (kPlayer.isAlive())
 		{
 			if (kPlayer.isNoCorporations())
