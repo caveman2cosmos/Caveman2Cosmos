@@ -4502,13 +4502,12 @@
 		<Polish>[ICON_BULLET]+%d1[ICON_UNHAPPY] na %d2% zagranicznej [ICON_CULTURE]</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIVIC_FREEDOM_ANGER</Tag>
+		<English>[ICON_BULLET][ICON_UNHAPPY] Penalty equal to %d1%% of city population</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREEDOM_HAPPINESS</Tag>
-		<English>[ICON_BULLET][ICON_HAPPY] Boost for all civilizations without [LINK=%s1_CivicType]%s2_CivicName[\LINK]</English>
-		<French>[ICON_BULLET][ICON_HAPPY] Bonus pour toutes les Civilisations, sauf [LINK=%s1_CivicType]%s2_CivicName[\LINK]</French>
-		<German>[ICON_BULLET][ICON_HAPPY]-Steigerung für alle Zivilisationen ohne [LINK=%s1_CivicType]%s2_CivicName[\LINK]</German>
-		<Italian>[ICON_BULLET][ICON_HAPPY] Bonus per tuute le civiltà senza [LINK=%s1_CivicType]%s2_CivicName[\LINK]</Italian>
-		<Spanish>[ICON_BULLET]Bonificación de [ICON_HAPPY] para todas las civilizaciones que no usen [LINK=%s1_CivicType]%s2_CivicName[\LINK]</Spanish>
-		<Polish>[ICON_BULLET][ICON_HAPPY] dla innych cywilzacji bez doktryny [LINK=%s1_CivicType]%s2_CivicName[\LINK]</Polish>
+		<English>[ICON_BULLET][ICON_HAPPY] Boost equal to %d1%% of city population</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FROM_LANDMARK</Tag>
