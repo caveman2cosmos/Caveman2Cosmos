@@ -20842,6 +20842,18 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>Zbuduj Phenotype Studio by poprawić jakość zdrowia Twoich poddanych w miastach.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SKIS_FACTORY</Tag>
+		<English>Factory (Skis)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SKIS_FACTORY_PEDIA</Tag>
+		<English>A ski is a narrow strip of semi-rigid material worn underfoot to glide over snow. Substantially longer than wide and characteristically employed in pairs, skis are attached to ski boots with ski bindings, with either a free, lockable, or partially secured heel. For climbing slopes, ski skins (originally made of seal fur, but now made of synthetic materials) can be attached at the base of the ski.[NEWLINE]Originally intended as an aid to travel over snow, they are now mainly used recreationally in the sport of skiing. </English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SKIS_FACTORY_STRATEGY</Tag>
+		<English>Build a Skis Factory to increase your cities gold.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PHONOGRAPH_FACTORY</Tag>
 		<English>Factory (Phonographs)</English>
 		<French>

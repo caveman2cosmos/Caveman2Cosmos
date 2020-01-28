@@ -5,10 +5,6 @@
       <Configuration>Assert</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="Debug-old|Win32">
-      <Configuration>Debug-old</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
@@ -60,10 +56,6 @@
     <ConfigurationType>Makefile</ConfigurationType>
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-old|Win32'" Label="Configuration">
-    <ConfigurationType>Makefile</ConfigurationType>
-    <PlatformToolset>v142</PlatformToolset>
-  </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
@@ -83,9 +75,6 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug-old|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
@@ -171,20 +160,6 @@
     <IntDir>$(SolutionDir)..\Build\vs\$(Configuration)\</IntDir>
     <OutDir>$(SolutionDir)..\Build\vs\$(Configuration)\</OutDir>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-old|Win32'">
-    <ReferencePath>..\Sources;$(ReferencePath)</ReferencePath>
-    <OutDir>$(SolutionDir)..\Build\vs\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)..\Build\vs\$(Configuration)\</IntDir>
-    <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL_nmake.bat" build Debug</NMakeBuildCommandLine>
-    <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL_nmake.bat" rebuild Debug</NMakeReBuildCommandLine>
-    <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL_nmake.bat" clean Debug</NMakeCleanCommandLine>
-    <IncludePath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.55.0\include;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</IncludePath>
-    <NMakePreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;_DEBUG;XERCES_STATIC_LIBRARY;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS;LOG_AI;_MOD_SHAM_SPOILER;C2C_BUILD;MULTI_FEATURE_MOD;FASSERT_ENABLE</NMakePreprocessorDefinitions>
-    <NMakeIncludeSearchPath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</NMakeIncludeSearchPath>
-    <AdditionalOptions>/std:c++14 /DBOOST_FUNCTION_PARMS=0 /DBOOST_FUNCTION_PARM=0</AdditionalOptions>
-    <NMakeOutput>
-    </NMakeOutput>
-  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Assert|Win32'">
     <BuildLog>
       <Path>$(IntDir)$(MSBuildProjectName).log</Path>
@@ -192,11 +167,6 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <BuildLog />
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug-old|Win32'">
-    <BuildLog>
-      <Path>$(IntDir)$(MSBuildProjectName).log</Path>
-    </BuildLog>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='FinalRelease|Win32'">
     <BuildLog>

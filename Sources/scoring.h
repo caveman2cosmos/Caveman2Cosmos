@@ -45,6 +45,7 @@ namespace scoring {
 		};
 	}
 
+	// Return item with maximum score as determined by scoringFn
 	template < class RangeItrTy_ >
 	bst::optional<typename bst::range_value<RangeItrTy_>::type> max_score(RangeItrTy_& range, bst::function<int(const typename bst::range_value<RangeItrTy_>::type&)> scoringFn)
 	{
@@ -57,9 +58,10 @@ namespace scoring {
 		{
 			return best->item;
 		}
-		return bst::optional<value_type>::type>();
+		return bst::optional<value_type>();
 	}
 
+	// Return item with minimum score as determined by scoringFn
 	template < class RangeItrTy_ >
 	bst::optional<typename bst::range_value<RangeItrTy_>::type> min_score(RangeItrTy_& range, bst::function<int(const typename bst::range_value<RangeItrTy_>::type&)> scoringFn)
 	{

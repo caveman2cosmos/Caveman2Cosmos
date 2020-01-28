@@ -782,6 +782,7 @@
 			<Strategy>TXT_KEY_BUILDING_FRAUNHOFER_SOCIETY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FRAUNHOFER_SOCIETY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_FRAUNHOFER_SOCIETY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -8278,7 +8279,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ENCRYPTION_MACHINES</PrereqTech>
 			<iCost>990</iCost>
-			<ObsoleteTech>TECH_FLASHMEMORY</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 				<iCommerce>2</iCommerce>
@@ -8441,6 +8441,7 @@
 			<Strategy>TXT_KEY_BUILDING_FERMATS_LAST_THEOREM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FERMATS_LAST_THEOREM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_FERMATS_LAST_THEOREM</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -8473,6 +8474,7 @@
 			<Strategy>TXT_KEY_BUILDING_FOUR_COLOR_THEOREM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FOUR_COLOR_THEOREM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_FOUR_COLOR_THEOREM</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -8508,6 +8510,7 @@
 			<Strategy>TXT_KEY_BUILDING_GODEL_INCOMPLETENESS_THEOREM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GODEL_INCOMPLETENESS_THEOREM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GODEL_INCOMPLETENESS_THEOREM</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -8539,6 +8542,7 @@
 			<Strategy>TXT_KEY_BUILDING_MILLENNIUM_PROBLEMS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MILLENNIUM_PROBLEMS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MILLENNIUM_PROBLEMS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -8679,6 +8683,7 @@
 			<Strategy>TXT_KEY_BUILDING_METRIC_SYSTEM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_METRIC_SYSTEM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_METRIC_SYSTEM</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -9124,6 +9129,7 @@
 			<Strategy>TXT_KEY_BUILDING_DARPA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DARPA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_DARPA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -10807,6 +10813,7 @@
 			<Strategy>TXT_KEY_BUILDING_ENCYCLOPEDIA_GALACTICA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ENCYCLOPEDIA_GALACTICA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ENCYCLOPEDIA_GALACTICA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -10943,6 +10950,7 @@
 			<Strategy>TXT_KEY_BUILDING_DEEP_THOUGHT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEEP_THOUGHT</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_DEEP_THOUGHT</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -11139,6 +11147,7 @@
 			<Strategy>TXT_KEY_BUILDING_HUNGER_GAMES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HUNGER_GAMES</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HUNGER_GAMES</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -11871,6 +11880,7 @@
 			<Strategy>TXT_KEY_BUILDING_INTERNET_ARCHIVE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INTERNET_ARCHIVE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_INTERNET_ARCHIVE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -12742,6 +12752,7 @@
 			<Strategy>TXT_KEY_BUILDING_FLATLAND_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLATLAND</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_FLATLAND</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -13337,6 +13348,7 @@
 			<Strategy>TXT_KEY_BUILDING_HYPERLOOP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HYPERLOOP</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HYPERLOOP</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -13655,6 +13667,7 @@
 			<Strategy>TXT_KEY_BUILDING_INTERCONTINENTAL_RAIL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INTERCONTINENTAL_RAIL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_INTERCONTINENTAL_RAIL</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -14361,6 +14374,7 @@
 			<Strategy>TXT_KEY_BUILDING_FUTURE_VENICE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FUTURE_VENICE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_FUTURE_VENICE</MovieDefineTag>
 			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -14600,6 +14614,7 @@
 			<Strategy>TXT_KEY_BUILDING_GREEN_WALL_OF_CHINA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GREEN_WALL_OF_CHINA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GREEN_WALL_OF_CHINA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -14716,6 +14731,7 @@
 			<Strategy>TXT_KEY_BUILDING_NEO_PYRAMID_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NEO_PYRAMID</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NEO_PYRAMID</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -14863,6 +14879,7 @@
 			<Strategy>TXT_KEY_BUILDING_MORSE_CODE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MORSE_CODE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MORSE_CODE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -15148,11 +15165,6 @@
 			</ReplaceBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CHARCOAL_FIRE</BuildingClass>
-			<Type>BUILDING_CHARCOAL_FIRE</Type>
-			<ObsoleteTech>TECH_ADVANCED_METALLURGY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_CHINAMPA</BuildingClass>
 			<Type>BUILDING_CHINAMPA</Type>
 			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
@@ -15297,11 +15309,6 @@
 			<ObsoleteTech>TECH_AUGMENT_CONSUMABLES</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FLINT_QUARRY</BuildingClass>
-			<Type>BUILDING_FLINT_QUARRY</Type>
-			<ObsoleteTech>TECH_IRON_WORKING</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_FLY_AGARIC</BuildingClass>
 			<Type>BUILDING_FLY_AGARIC</Type>
 			<ObsoleteTech>TECH_SYNTHETIC_SYNESTHESIA</ObsoleteTech>
@@ -15402,11 +15409,6 @@
 			<BuildingClass>BUILDINGCLASS_JETSTREAM_POWER_PLANT</BuildingClass>
 			<Type>BUILDING_JETSTREAM_POWER_PLANT</Type>
 			<ObsoleteTech>TECH_ASTROENGINEERING</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_KEROSENE_DISTILLERY</BuildingClass>
-			<Type>BUILDING_KEROSENE_DISTILLERY</Type>
-			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_LEVEE</BuildingClass>
@@ -18505,11 +18507,6 @@
 			<ObsoleteTech>TECH_DMERCH</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SAIL_FACTORY</BuildingClass>
-			<Type>BUILDING_SAIL_FACTORY</Type>
-			<ObsoleteTech>TECH_MARINEARCHITECTURE</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_TRANSISTOR_FACTORY</BuildingClass>
 			<Type>BUILDING_TRANSISTOR_FACTORY</Type>
 			<ObsoleteTech>TECH_ADVANCED_COMPUTERS</ObsoleteTech>
@@ -18793,11 +18790,6 @@
 			<BuildingClass>BUILDINGCLASS_METEORITE_LAB</BuildingClass>
 			<Type>BUILDING_METEORITE_LAB</Type>
 			<ObsoleteTech>TECH_ASTEROID_EXTRACTION</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_PALEONTOLOGY_LAB</BuildingClass>
-			<Type>BUILDING_PALEONTOLOGY_LAB</Type>
-			<ObsoleteTech>TECH_NOVOPALEONTOLOGY</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_QUANTUM_LAB</BuildingClass>
@@ -21887,76 +21879,6 @@
 			<ObsoleteTech>TECH_MARXISM</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FOSSIL_AMMIONITE</BuildingClass>
-			<Type>BUILDING_FOSSIL_AMMIONITE</Type>
-			<ObsoleteTech>TECH_NOVOPALEONTOLOGY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FOSSIL_ARCHAEOPTERYX</BuildingClass>
-			<Type>BUILDING_FOSSIL_ARCHAEOPTERYX</Type>
-			<ObsoleteTech>TECH_NOVOPALEONTOLOGY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FOSSIL_DIMETRODON</BuildingClass>
-			<Type>BUILDING_FOSSIL_DIMETRODON</Type>
-			<ObsoleteTech>TECH_NOVOPALEONTOLOGY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FOSSIL_ICTHYOSTEGA</BuildingClass>
-			<Type>BUILDING_FOSSIL_ICTHYOSTEGA</Type>
-			<ObsoleteTech>TECH_NOVOPALEONTOLOGY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FOSSIL_MAMMOTH</BuildingClass>
-			<Type>BUILDING_FOSSIL_MAMMOTH</Type>
-			<ObsoleteTech>TECH_NOVOPALEONTOLOGY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FOSSIL_NEANDERTHAL</BuildingClass>
-			<Type>BUILDING_FOSSIL_NEANDERTHAL</Type>
-			<ObsoleteTech>TECH_NOVOPALEONTOLOGY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FOSSIL_PETRIFIEDFOREST</BuildingClass>
-			<Type>BUILDING_FOSSIL_PETRIFIEDFOREST</Type>
-			<ObsoleteTech>TECH_NOVOPALEONTOLOGY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FOSSIL_PLESIOSAUR</BuildingClass>
-			<Type>BUILDING_FOSSIL_PLESIOSAUR</Type>
-			<ObsoleteTech>TECH_NOVOPALEONTOLOGY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FOSSIL_PTERODACTYL</BuildingClass>
-			<Type>BUILDING_FOSSIL_PTERODACTYL</Type>
-			<ObsoleteTech>TECH_NOVOPALEONTOLOGY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FOSSIL_SHARKTEETH</BuildingClass>
-			<Type>BUILDING_FOSSIL_SHARKTEETH</Type>
-			<ObsoleteTech>TECH_NOVOPALEONTOLOGY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FOSSIL_SMILODON</BuildingClass>
-			<Type>BUILDING_FOSSIL_SMILODON</Type>
-			<ObsoleteTech>TECH_NOVOPALEONTOLOGY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FOSSIL_TRICERATOPS</BuildingClass>
-			<Type>BUILDING_FOSSIL_TRICERATOPS</Type>
-			<ObsoleteTech>TECH_NOVOPALEONTOLOGY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FOSSIL_TRILOBITE</BuildingClass>
-			<Type>BUILDING_FOSSIL_TRILOBITE</Type>
-			<ObsoleteTech>TECH_NOVOPALEONTOLOGY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FOSSIL_VELOCIRAPTOR</BuildingClass>
-			<Type>BUILDING_FOSSIL_VELOCIRAPTOR</Type>
-			<ObsoleteTech>TECH_NOVOPALEONTOLOGY</ObsoleteTech>
-		</BuildingInfo>
-		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_VIRTUAL_WORLD</BuildingClass>
 			<Type>BUILDING_VIRTUAL_WORLD</Type>
 			<Description>TXT_KEY_BUILDING_VIRTUAL_WORLD</Description>
@@ -22429,6 +22351,7 @@
 			<Strategy>TXT_KEY_BUILDING_KHAZAR_ISLANDS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KHAZAR_ISLANDS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_KHAZAR_ISLANDS</MovieDefineTag>
 			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -23198,6 +23121,7 @@
 			<Strategy>TXT_KEY_BUILDING_JEDDAH_TOWER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_JEDDAH_TOWER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_JEDDAH_TOWER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -23232,6 +23156,7 @@
 			<Strategy>TXT_KEY_BUILDING_DUBAI_CITY_TOWER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DUBAI_CITY_TOWER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_DUBAI_CITY_TOWER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24409,6 +24334,7 @@
 			<Strategy>TXT_KEY_BUILDING_LEAN_LINEAR_CITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LEAN_LINEAR_CITY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_LEAN_LINEAR_CITY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24467,6 +24393,7 @@
 			<Strategy>TXT_KEY_BUILDING_NUDING_SPACE_ARCOLOGY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NUDING_SPACE_ARCOLOGY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NUDING_SPACE_ARCOLOGY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24520,6 +24447,7 @@
 			<Strategy>TXT_KEY_BUILDING_DARCO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DARCO</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_DARCO</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24549,6 +24477,7 @@
 			<Strategy>TXT_KEY_BUILDING_EXODUS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EXODUS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_EXODUS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24765,6 +24694,7 @@
 			<Strategy>TXT_KEY_BUILDING_MASDAR_CITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MASDAR_CITY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MASDAR_CITY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24798,6 +24728,7 @@
 			<Strategy>TXT_KEY_BUILDING_DUBAI_WORLD_CENTRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DUBAI_WORLD_CENTRAL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_DUBAI_WORLD_CENTRAL</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24866,6 +24797,7 @@
 			<Strategy>TXT_KEY_BUILDING_DEHLI_MUMBAI_INDUSTRIAL_CORRIDOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEHLI_MUMBAI_INDUSTRIAL_CORRIDOR</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_DEHLI_MUMBAI_INDUSTRIAL_CORRIDOR</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24912,6 +24844,7 @@
 			<Strategy>TXT_KEY_BUILDING_HUDSON_YARDS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HUDSON_YARDS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HUDSON_YARDS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24944,6 +24877,7 @@
 			<Strategy>TXT_KEY_BUILDING_KING_ABDULLAH_ECONOMIC_CITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KING_ABDULLAH_ECONOMIC_CITY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_KING_ABDULLAH_ECONOMIC_CITY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24971,6 +24905,7 @@
 			<Strategy>TXT_KEY_BUILDING_NEOM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NEOM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NEOM</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -25574,6 +25509,7 @@
 			<Strategy>TXT_KEY_BUILDING_ECUMENOPOLIS_EARTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ECUMENOPOLIS_EARTH</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ECUMENOPOLIS_EARTH</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -26261,6 +26197,7 @@
 			<Strategy>TXT_KEY_BUILDING_EURO_ELT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EURO_ELT</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_EURO_ELT</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -26365,6 +26302,7 @@
 			<Strategy>TXT_KEY_BUILDING_ET_DISCOVERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ET_DISCOVERY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ET_DISCOVERY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -28000,6 +27938,7 @@
 			<Strategy>TXT_KEY_BUILDING_MITHRIL_IMPORTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MITHRIL_IMPORTER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MITHRIL_IMPORTER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -28334,6 +28273,7 @@
 			<Strategy>TXT_KEY_BUILDING_FRIEDLANDER_SKYSHADE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FRIEDLANDER_SKYSHADE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_FRIEDLANDER_SKYSHADE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -28405,6 +28345,7 @@
 			<Strategy>TXT_KEY_BUILDING_EYE_IN_SKY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EYE_IN_SKY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_EYE_IN_SKY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

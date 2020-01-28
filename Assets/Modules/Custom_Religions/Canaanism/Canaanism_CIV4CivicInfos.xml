@@ -15,7 +15,6 @@
 				</BuildingCommerceModifier>
 			</BuildingCommerceModifiers>
 		</CivicInfo>
-
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_WELFARE</CivicOptionType>
 			<Type>CIVIC_CHURCH</Type>
@@ -26,7 +25,6 @@
 				</BuildingHealthChange>
 			</BuildingHealthChanges>
 		</CivicInfo>
-
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_GOVERNMENT</CivicOptionType>
 			<Type>CIVIC_THEOCRACY</Type>
@@ -41,7 +39,6 @@
 				</BuildingCommerceModifier>
 			</BuildingCommerceModifiers>
 		</CivicInfo>
-
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_EDUCATION</CivicOptionType>
 			<Type>CIVIC_RELIGIOUS_TRAINING</Type>
@@ -52,6 +49,5 @@
 				</BuildingClassProductionModifier>
 			</BuildingClassProductionModifiers>
 		</CivicInfo>
-
 	</CivicInfos>
 </Civ4CivicInfos>

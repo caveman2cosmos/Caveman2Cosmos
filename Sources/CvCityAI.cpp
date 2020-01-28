@@ -763,7 +763,7 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 			int iProgress = getGreatPeopleProgress();
 			if (iProgress > 0)
 			{
-				int iThreshold = GET_PLAYER(getOwnerINLINE()).greatPeopleThreshold();
+				int iThreshold = GET_PLAYER(getOwnerINLINE()).greatPeopleThresholdNonMilitary();
 				iTempValue += ((iGreatPeopleRate * (isHuman() ? 1 : 4) * iGPPValue * iProgress * iProgress) / (iThreshold * iThreshold));
 			}
 		}
@@ -1560,11 +1560,9 @@ void CvCityAI::AI_chooseProduction()
 			return;
 		}
 		
-		if (AI_chooseUnit("barbarian last resort"))
-		{
-			return;
-		}
-		
+		// As last resort choose any unit we can build
+		AI_chooseUnit("barbarian last resort", NO_UNITAI);
+
 		return;
 	}
 	
@@ -1741,12 +1739,7 @@ void CvCityAI::AI_chooseProduction()
 						}
 					}
 				}
-
-				if (AI_chooseUnit("rebel last resort"))
-				{
-					return;
-				}
-			}			
+			}
 		}
 
 		// Buildings important for rebels
@@ -2286,14 +2279,11 @@ void CvCityAI::AI_chooseProduction()
 
 	m_iTempBuildPriority--;
 
-	if (!m_bRequestedUnit)
+	if (!m_bRequestedUnit && !bInhibitUnits)
 	{
-		if (!bInhibitUnits)
+		if (AI_establishSeeInvisibleCoverage())
 		{
-			if (AI_establishSeeInvisibleCoverage())
-			{
-				return;
-			}
+			return;
 		}
 	}
 
@@ -4386,39 +4376,15 @@ void CvCityAI::AI_chooseProduction()
 
 	m_iTempBuildPriority--;
 
-	bool bChooseUnit = false;
-	if (!bInhibitUnits && iUnitCostPercentage < iMaxUnitSpending + 5)
+	// Only cities with reasonable production
+	if (!isHuman() && (iProductionRank <= ((kPlayer.getNumCities() > 8) ? 3 : 2)) && (getPopulation() > 3))
 	{
-		if ((bLandWar) ||
-			  ((kPlayer.getNumCities() <= 3) && (GC.getGameINLINE().getElapsedGameTurns() < 60)) ||
-			  (GC.getGameINLINE().getSorenRandNum(100, "AI Build Unit Production") < AI_buildUnitProb()) ||
-				(isHuman() && (getGameTurnFounded() == GC.getGameINLINE().getGameTurn())))
+		if (AI_chooseProject())
 		{
-			if (AI_chooseUnit("optional units"))
-			{
-				return;
-			}
-
-			bChooseUnit = true;
+			if( gCityLogLevel >= 2 ) logBBAI("      City %S uses choose project 2", getName().GetCString());
+			return;
 		}
 	}
-
-	m_iTempBuildPriority--;
-
-	// BBAI TODO: Temporary for testing
-	//if( getOwnerINLINE()%2 == 1 )
-	//{
-		// Only cities with reasonable production
-		if (!isHuman() && (iProductionRank <= ((kPlayer.getNumCities() > 8) ? 3 : 2))
-		&& (getPopulation() > 3))
-		{
-			if (AI_chooseProject())
-			{
-				if( gCityLogLevel >= 2 ) logBBAI("      City %S uses choose project 2", getName().GetCString());
-				return;
-			}
-		}
-	//}
 
 	m_iTempBuildPriority--;
 
@@ -4430,9 +4396,14 @@ void CvCityAI::AI_chooseProduction()
 	
 	m_iTempBuildPriority--;
 
-	if (!bChooseUnit && !bFinancialTrouble && kPlayer.AI_isDoStrategy(AI_STRATEGY_FINAL_WAR))
+	if (!bFinancialTrouble && kPlayer.AI_isDoStrategy(AI_STRATEGY_FINAL_WAR))
 	{
-		if (AI_chooseUnit("final war units"))
+		if (AI_chooseUnit("final war units", UNITAI_ATTACK))
+		{
+			return;
+		}
+
+		if (AI_chooseUnit("final war units", UNITAI_ATTACK_CITY))
 		{
 			return;
 		}
@@ -5072,14 +5043,20 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 	return eBestUnit;
 }
 
-
-BuildingTypes CvCityAI::AI_bestBuilding(int iFocusFlags, int iMaxTurns, bool bAsync, AdvisorTypes eIgnoreAdvisor, bool bMaximizeFlaggedValue)
-{
-	return AI_bestBuildingThreshold(iFocusFlags, iMaxTurns, /*iMinThreshold*/ 0, bAsync, eIgnoreAdvisor, bMaximizeFlaggedValue);
-}
-
 BuildingTypes CvCityAI::AI_bestBuildingThreshold(int iFocusFlags, int iMaxTurns, int iMinThreshold, bool bAsync, AdvisorTypes eIgnoreAdvisor, bool bMaximizeFlaggedValue, PropertyTypes eProperty)
 {
+	std::vector<ScoredBuilding> scoredBuildings = AI_bestBuildingsThreshold(iFocusFlags, iMaxTurns, iMinThreshold, bAsync, eIgnoreAdvisor, bMaximizeFlaggedValue, eProperty);
+	if(!scoredBuildings.empty())
+	{
+		return scoredBuildings[0].building;
+	}
+	return NO_BUILDING;
+}
+
+std::vector<CvCity::ScoredBuilding> CvCityAI::AI_bestBuildingsThreshold(int iFocusFlags, int iMaxTurns, int iMinThreshold, bool bAsync, AdvisorTypes eIgnoreAdvisor, bool bMaximizeFlaggedValue, PropertyTypes eProperty)
+{
+	std::vector<ScoredBuilding> scoredBuildings;
+
 	std::vector<BuildingTypes> possibles;
 
 	CvCivilizationInfo& civ = GC.getCivilizationInfo(getCivilizationType());
@@ -5095,13 +5072,8 @@ BuildingTypes CvCityAI::AI_bestBuildingThreshold(int iFocusFlags, int iMaxTurns,
 		}
 	}
 
-	std::vector<ScoredBuilding> scoredBuildings;
-	if (AI_scoreBuildingsFromListThreshold(scoredBuildings, possibles, iFocusFlags, iMaxTurns, iMinThreshold, bAsync, eIgnoreAdvisor, bMaximizeFlaggedValue, eProperty))
-	{
-		return scoredBuildings[0].building;
-	}
-
-	return NO_BUILDING;
+	AI_scoreBuildingsFromListThreshold(scoredBuildings, possibles, iFocusFlags, iMaxTurns, iMinThreshold, bAsync, eIgnoreAdvisor, bMaximizeFlaggedValue, eProperty);
+	return scoredBuildings;
 }
 
 bool AI_buildingInfluencesProperty(CvCity* city, CvBuildingInfo& buildingInfo, PropertyTypes eProperty)
@@ -5139,12 +5111,12 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 
 			if (GC.getBuildingInfo(building).isCapital())
 			{
-				scoredBuildings.push_back(ScoredBuilding(building, getProductionTurnsLeft(building, 0)));
+				scoredBuildings.push_back(ScoredBuilding(building, -getProductionTurnsLeft(building, 0)));
 			}
 		}
 
 		// Sort from least turns to most
-		std::sort(scoredBuildings.begin(), scoredBuildings.end());
+		std::sort(scoredBuildings.rbegin(), scoredBuildings.rend());
 		return !scoredBuildings.empty();
 	}
 
@@ -8565,7 +8537,7 @@ int CvCityAI::evaluateDanger()
 	}
 }
 
-bool CvCityAI::AI_isDanger()
+bool CvCityAI::AI_isDanger() const
 {
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      08/20/09                                jdog5000      */
@@ -11456,7 +11428,6 @@ void CvCityAI::AI_doEmphasize()
 //Fuyu bIgnoreNotUnitAIs
 bool CvCityAI::AI_chooseUnit(const char* reason, UnitAITypes eUnitAI, int iOdds, int iUnitStrength, int iPriorityOverride, CvUnitSelectionCriteria* criteria)
 {//Adding a unit type direct selection here...
-
 #ifdef USE_UNIT_TENDERING
 	//	Have we already contracted for a unit?
 	if ( m_bRequestedUnit )
@@ -11851,31 +11822,41 @@ bool CvCityAI::AI_chooseBuilding(int iFocusFlags, int iMaxTurns, int iMinThresho
 	{
 		return false;
 	}
-			
 	m_iBuildPriority = m_iTempBuildPriority;
 #endif
 
-	BuildingTypes eBestBuilding = AI_bestBuildingThreshold(iFocusFlags, iMaxTurns, iMinThreshold, false, NO_ADVISOR, bMaximizeFlaggedValue, eProperty);
+	std::vector<ScoredBuilding> bestBuildings = AI_bestBuildingsThreshold(iFocusFlags, iMaxTurns, iMinThreshold, false, NO_ADVISOR, bMaximizeFlaggedValue, eProperty);
 
-	if (eBestBuilding != NO_BUILDING)
+	const int maxQueueTurnsForSpeed = 5 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent() / 100;
+	const int desiredQueueTurns = std::max(3, std::min(maxQueueTurnsForSpeed, iMaxTurns));
+	bool enqueuedBuilding = false;
+	for (size_t i = 0; i < bestBuildings.size() && getTotalProductionQueueTurnsLeft() < desiredQueueTurns; ++i)
 	{
+		const BuildingTypes eBestBuilding = bestBuildings[i].building;
 		if( iOdds < 0 || 
 			getBuildingProduction(eBestBuilding) > 0 ||
-			GC.getGameINLINE().getSorenRandNum(100,"City AI choose building") < iOdds )
+			GC.getGameINLINE().getSorenRandNum(100, "City AI choose building") < iOdds)
 		{
 			pushOrder(ORDER_CONSTRUCT, eBestBuilding, -1, false, false, false);
-
-#ifdef USE_UNIT_TENDERING
-			m_bRequestedBuilding = true;
-
-			return (isNPC() || m_bRequestedUnit);
-#else
-			return true;
-#endif
+			enqueuedBuilding = true;
+		}
+		else
+		{
+			// If we failed a roll then abort now, we don't want to choose worse buildings
+			break;
 		}
 	}
+#ifdef USE_UNIT_TENDERING
+	if(enqueuedBuilding)
+	{
+		m_bRequestedBuilding = true;
 
+		return (isNPC() || m_bRequestedUnit);
+	}
 	return false;
+#else
+	return enqueuedBuilding;
+#endif
 }
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
@@ -14717,16 +14698,8 @@ void CvCityAI::AI_buildGovernorChooseProduction()
 		return;
 	}
 
-
-	if (AI_chooseProcess())
-	{
-		return;
-	}
-	
-	if (AI_chooseUnit("crappy governor"))
-	{
-		return;
-	}
+	// As last resort select a process
+	AI_finalProcessSelection();
 }
 
 int CvCityAI::AI_calculateWaterWorldPercent()

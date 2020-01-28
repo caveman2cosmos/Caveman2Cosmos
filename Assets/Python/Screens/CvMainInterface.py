@@ -2272,7 +2272,7 @@ class CvMainInterface:
 				# Great General Bar
 				CyPlayer = self.CyPlayer
 				iCombatExp = CyPlayer.getCombatExperience()
-				iThresholdExp = CyPlayer.greatPeopleThreshold(True)
+				iThresholdExp = CyPlayer.greatPeopleThresholdMilitary()
 
 				szTxt = self.iconGreatGeneral + " (" + str(iThresholdExp - iCombatExp) + ")"
 
@@ -2296,7 +2296,7 @@ class CvMainInterface:
 					screen.setText("GreatPersonBar1", "", szTxt, 1<<2, x, y, 0, eFontGame, eWidGen, 0, 0)
 					screen.setHitTest("GreatPersonBar1", HitTestTypes.HITTEST_NOHIT)
 					if CyCity:
-						fThreshold = float(GC.getPlayer(CyCity.getOwner()).greatPeopleThreshold(False))
+						fThreshold = float(GC.getPlayer(CyCity.getOwner()).greatPeopleThresholdNonMilitary())
 						fRate = float(CyCity.getGreatPeopleRate())
 						fFirst = float(CyCity.getGreatPeopleProgress()) / fThreshold
 
@@ -2880,7 +2880,7 @@ class CvMainInterface:
 			iGreatPeopleRate = CyCity.getGreatPeopleRate()
 			if iGreatPeopleProgress + iGreatPeopleRate > 0:
 				# Great Person Turns
-				iGreatPeopleTreshold = CyPlayer.greatPeopleThreshold(False)
+				iGreatPeopleTreshold = CyPlayer.greatPeopleThresholdNonMilitary()
 				if iGreatPeopleRate > 0:
 					iGPTurns = (iGreatPeopleTreshold - iGreatPeopleProgress + iGreatPeopleRate - 1) / iGreatPeopleRate
 				else:
@@ -5008,10 +5008,10 @@ class CvMainInterface:
 		CyCity, iTurns = GPUtil.getDisplayCity()
 		if not CyCity:
 			# no rate or progress in any city and no city selected
-			szTxt = TRNSLTR.getText("TXT_KEY_MISC_GREAT_PERSON", (0, self.CyPlayer.greatPeopleThreshold(False)))
+			szTxt = TRNSLTR.getText("TXT_KEY_MISC_GREAT_PERSON", (0, self.CyPlayer.greatPeopleThresholdNonMilitary()))
 			self.updateTooltip(screen, szTxt)
 			return
-		iThreshold = GC.getPlayer(CyCity.getOwner()).greatPeopleThreshold(False)
+		iThreshold = GC.getPlayer(CyCity.getOwner()).greatPeopleThresholdNonMilitary()
 		iProgress = CyCity.getGreatPeopleProgress()
 		iRate = CyCity.getGreatPeopleRate()
 		szTxt = TRNSLTR.changeTextColor(CyCity.getName(), GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT")) + "\n"
@@ -5255,7 +5255,7 @@ class CvMainInterface:
 			elif BASE == "PlotList":
 				if TYPE in ("Button", "Health"):
 					CyUnit = self.aPlotListList[ID][0]
-					if not CyUnit.isDead():
+					if not CyUnit.getGroup().isNone():
 						if TYPE == "Button":
 							szTxt = CyGameTextMgr().getSpecificUnitHelp(CyUnit, False, False)
 							x = self.xRes / 4
@@ -5265,6 +5265,7 @@ class CvMainInterface:
 							szTxt = "HP: %d/%d" %(CyUnit.currHitPoints(), CyUnit.maxHitPoints())
 							x = -1
 							y = -1
+						else: return
 						self.updateTooltip(screen, szTxt, x, y)
 
 			elif BASE == "BldgList":

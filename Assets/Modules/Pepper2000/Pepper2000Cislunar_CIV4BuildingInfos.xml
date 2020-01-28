@@ -2018,6 +2018,7 @@
 			<Strategy>TXT_KEY_BUILDING_ENERGY_BEAM_NETWORK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ENERGY_BEAM_NETWORK</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ENERGY_BEAM_NETWORK</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PHOTONIC_SATELLITES</PrereqTech>
 			<iCost>13448</iCost>
@@ -2151,6 +2152,7 @@
 			<Strategy>TXT_KEY_BUILDING_L5_COLONY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_L5_COLONY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_L5_COLONY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ORBITAL_MEGASTRUCTURES</PrereqTech>
 			<iCost>11175</iCost>
@@ -2190,6 +2192,7 @@
 			<Strategy>TXT_KEY_BUILDING_INTERPLANETARY_TRANSPORT_NETWORK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INTERPLANETARY_TRANSPORT_NETWORK</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_INTERPLANETARY_TRANSPORT_NETWORK</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ASTROGATION_CONSTELLATION</PrereqTech>
 			<iCost>10179</iCost>
@@ -2224,6 +2227,7 @@
 			<Strategy>TXT_KEY_BUILDING_ELYSIUM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ELYSIUM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ELYSIUM</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LAUNCH_ARCOLOGY</PrereqTech>
 			<iCost>27966</iCost>

@@ -66,7 +66,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DONKEY_STORY</BuildingClass>
@@ -186,7 +185,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<bGraphicalOnly>1</bGraphicalOnly>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>

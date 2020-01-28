@@ -15262,7 +15262,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
+					<BuildType>BUILD_PLANT_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -17701,10 +17701,6 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_SOLAR_PANELS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -22884,7 +22880,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
+					<BuildType>BUILD_PLANT_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -24916,7 +24912,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
+					<BuildType>BUILD_PLANT_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -42262,7 +42258,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
+					<BuildType>BUILD_PLANT_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -43222,7 +43218,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
+					<BuildType>BUILD_PLANT_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>

@@ -663,7 +663,6 @@
 				<MapCategoryType>MAPCATEGORY_HYPERSPACE</MapCategoryType>
 			</MapCategoryTypes>
 		</TerrainInfo>
-
 		<TerrainInfo>
 			<Type>TERRAIN_GREEN_MOON</Type>
 			<Description>TXT_KEY_TERRAIN_GREEN_MOON</Description>

@@ -442,7 +442,10 @@ int CyCity::getProductionModifier()
 
 int CyCity::getCurrentProductionDifference(bool bIgnoreFood, bool bOverflow)
 {
-	return m_pCity ? m_pCity->getCurrentProductionDifference(bIgnoreFood, bOverflow) : -1;
+	return m_pCity ? m_pCity->getCurrentProductionDifference(
+		(bIgnoreFood? ProductionCalc::None : ProductionCalc::FoodProduction) | 
+		(bOverflow? ProductionCalc::Overflow : ProductionCalc::None)
+	) : -1;
 }
 
 int CyCity::getUnitProductionModifier(int /*UnitTypes*/ iUnit)
@@ -2685,9 +2688,9 @@ int CyCity::getOrderQueueLength()
 	return m_pCity ? m_pCity->getOrderQueueLength() : -1;
 }
 
-OrderData* CyCity::getOrderFromQueue(int iIndex)
+OrderData CyCity::getOrderFromQueue(int iIndex)
 {
-	return m_pCity ? m_pCity->getOrderFromQueue(iIndex) : NULL;
+	return m_pCity ? m_pCity->getOrderAt(iIndex) : OrderData::InvalidOrder;
 }
 
 void CyCity::setWallOverridePoints(const python::tuple& kPoints)
@@ -2853,10 +2856,6 @@ int /*UnitTypes*/ CyCity::AI_bestUnitAI(int iUnitAIType)
 	return (m_pCity ? m_pCity->AI_bestUnitAI((UnitAITypes)iUnitAIType, iDummyValue) : -1);
 }
 
-int /*BuildingTypes*/ CyCity::AI_bestBuilding(int iFocusFlags)
-{
-	return (m_pCity ? m_pCity->AI_bestBuilding(iFocusFlags) : -1);
-}
 /************************************************************************************************/
 /* REVOLUTION_MOD                          END                                                  */
 /************************************************************************************************/

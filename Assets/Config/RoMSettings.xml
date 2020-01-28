@@ -154,9 +154,6 @@ values="Current Color|Black|Blue|Brown|Cyan|Dark Blue|Dark Cyan|Dark Green|Dark 
 			<option id="HideUnavailableBuilds" key="HideUnavailableBuilds" type="boolean" default="False" get="isHideUnavailableBuilds" set="setHideUnavailableBuilds">
 				<change module="ANewDawnSettings" function="changedHideUnavailableBuilds"/>
 			</option>
-			<option id="HideObsoleteBuilds" key="HideObsoleteBuilds" type="boolean" default="False" get="isHideObsoleteBuilds" set="setHideObsoleteBuilds">
-				<change module="ANewDawnSettings" function="changedHideObsoleteBuilds"/>
-			</option>
 			<option id="WarPrizes" key="WarPrizes" type="boolean" default="True" get="isWarPrizes" set="setWarPrizes">
 				<change module="ANewDawnSettings" function="changedWarPrizes"/>
 			</option>

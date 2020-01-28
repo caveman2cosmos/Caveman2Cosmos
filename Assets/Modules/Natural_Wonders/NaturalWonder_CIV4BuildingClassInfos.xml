@@ -174,7 +174,6 @@
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_NATURAL_WONDER_AUYANTEPUI</DefaultBuilding>
 		</BuildingClassInfo>
-
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_OASIS_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_OASIS_MYTH</Description>

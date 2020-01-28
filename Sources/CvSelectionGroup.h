@@ -211,7 +211,7 @@ public:
 
 	bool isChoosingNewLeader() const { return m_bIsChoosingNewLeader; }
 
-	PlayerTypes getOwner() const;																															// Exposed to Python
+	inline PlayerTypes getOwner() const { return m_eOwner; } // Exposed to Python
 #ifdef _USRDLL
 	inline PlayerTypes getOwnerINLINE() const
 	{
@@ -472,6 +472,7 @@ public:
 		DECLARE_MAP_FUNCTOR(CvSelectionGroup, UnitAITypes, getHeadUnitAI);
 		DECLARE_MAP_FUNCTOR(CvSelectionGroup, PlayerTypes, getHeadOwner);
 		DECLARE_MAP_FUNCTOR(CvSelectionGroup, TeamTypes, getHeadTeam);
+		DECLARE_MAP_FUNCTOR(CvSelectionGroup, AutomateTypes, getAutomateType);
 	};
 };
 

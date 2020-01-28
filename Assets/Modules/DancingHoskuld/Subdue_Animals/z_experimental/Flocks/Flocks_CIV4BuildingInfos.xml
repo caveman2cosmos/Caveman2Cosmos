@@ -58,7 +58,6 @@
 				<iYield>1</iYield>
 			</YieldChanges>
 			<iCost>-1</iCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_PEACOCK_FLOCKS</BuildingClass>
@@ -115,7 +114,6 @@
 				<iYield>1</iYield>
 			</YieldChanges>
 			<iCost>-1</iCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_TURKEY_FLOCKS</BuildingClass>
@@ -172,7 +170,6 @@
 				<iYield>1</iYield>
 			</YieldChanges>
 			<iCost>-1</iCost>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

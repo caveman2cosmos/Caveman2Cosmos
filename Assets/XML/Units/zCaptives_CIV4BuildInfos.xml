@@ -39,7 +39,6 @@
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/Button_GrainGather.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_GRAIN_GATHERER_2_SLAVE</Type>
@@ -72,7 +71,6 @@
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/Button_GrainGather.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_PINE_GATHERER_SLAVE</Type>
@@ -88,7 +86,6 @@
 			<HotKey>KB_L</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/Button_WoodGather.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_LUMBER_JACK_SLAVE</Type>
@@ -104,7 +101,6 @@
 			<HotKey>KB_L</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/Button_WoodGather.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_ROCK_GATHERER_SLAVE</Type>
@@ -157,7 +153,6 @@
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/Button_StoneToolsWorkshop.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_SCAVENGING_CAMP_SLAVE</Type>
@@ -174,7 +169,6 @@
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/techtree/scavenging.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_NOMADIC_HERD_SLAVE</Type>
@@ -213,7 +207,6 @@
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/techtree/scavenging.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_TRAIL_SLAVE</Type>
@@ -228,7 +221,6 @@
 			<HotKey>KB_R</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/BuildPath.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_PATH_SLAVE</Type>
@@ -243,7 +235,6 @@
 			<HotKey>KB_R</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/dirt.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_ROAD_SLAVE</Type>
@@ -258,7 +249,6 @@
 			<HotKey>KB_R</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/BuildRoad.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_PAVED_SLAVE</Type>
@@ -274,7 +264,6 @@
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/BuildPavedRoad.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_MODERN_ROAD_SLAVE</Type>
@@ -289,7 +278,6 @@
 			<HotKey>KB_R</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/BuildHighway.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_RAILROAD_SLAVE</Type>
@@ -304,7 +292,6 @@
 			<HotKey>KB_R</HotKey>
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/BuildRailroad.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_RAILROAD_ELECTRIC_SLAVE</Type>
@@ -320,7 +307,6 @@
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/BuildElectricRailroad.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_GRAVTUBE_SLAVE</Type>
@@ -335,7 +321,6 @@
 			<HotKey>KB_R</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/BuildMaglev.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_JUMPLANE_SLAVE</Type>
@@ -351,11 +336,10 @@
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/BuildJumplane.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_FARM_SLAVE</Type>
-			<Description>TXT_KEY_BUILD_FARM</Description>
+			<Description>TXT_KEY_BUILD_FARM_SLAVE</Description>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
 			<iTime>500</iTime>
 			<iCost>0</iCost>
@@ -428,7 +412,6 @@
 			<HotKey>KB_I</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildFarm.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,3,7</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_MINE_SLAVE</Type>
@@ -460,7 +443,6 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildMine.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,6,7</Button>
 			<bMine>1</bMine>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_SHAFT_MINE_SLAVE</Type>
@@ -493,7 +475,6 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildMine.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,6,7</Button>
 			<bMine>1</bMine>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_MOUNTAIN_MINE_SLAVE</Type>
@@ -758,7 +739,6 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/Explosives.dds</Button>
 			<bMine>1</bMine>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_3FACTORY_SLAVE</Type>
@@ -1029,7 +1009,6 @@
 			<HotKey>0</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Buildings/Factory.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,6,2</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_WORKSHOP_SLAVE</Type>
@@ -1152,7 +1131,6 @@
 			<HotKey>KB_K</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildWorkshop.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,8,8</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_LUMBERMILL_SLAVE</Type>
@@ -1190,253 +1168,6 @@
 			<HotKey>KB_L</HotKey>
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildLumberMill.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,5,7</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
-		</BuildInfo>
-		<BuildInfo>
-			<Type>BUILD_TREE_NURSERY_SLAVE</Type>
-			<Description>TXT_KEY_BUILD_TREE_NURSERY_SLAVE</Description>
-			<PrereqTech>TECH_GUILDS</PrereqTech>
-			<iTime>500</iTime>
-			<iCost>0</iCost>
-			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_TREE_NURSERY</ImprovementType>
-			<RouteType>NONE</RouteType>
-			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<FeatureStructs>
-				<FeatureStruct>
-					<FeatureType>FEATURE_JUNGLE</FeatureType>
-					<PrereqTech>TECH_IRON_WORKING</PrereqTech>
-					<iTime>400</iTime>
-					<iProduction>20</iProduction>
-					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_MANGROVE</FeatureType>
-					<PrereqTech>TECH_IRON_WORKING</PrereqTech>
-					<iTime>400</iTime>
-					<iProduction>20</iProduction>
-					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
-					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
-					<iTime>300</iTime>
-					<iProduction>30</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST</FeatureType>
-					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
-					<iTime>300</iTime>
-					<iProduction>30</iProduction>
-					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
-					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
-					<iTime>500</iTime>
-					<iProduction>60</iProduction>
-					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
-					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
-					<iTime>300</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_SAVANNA</FeatureType>
-					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
-					<iTime>300</iTime>
-					<iProduction>10</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_BAMBOO</FeatureType>
-					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
-					<iTime>300</iTime>
-					<iProduction>20</iProduction>
-					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
-					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
-					<iTime>300</iTime>
-					<iProduction>5</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
-					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
-					<iTime>400</iTime>
-					<iProduction>5</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_CITY_RUINS</FeatureType>
-					<PrereqTech/>
-					<iTime>1</iTime>
-					<iProduction>40</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_ARCOLOGY_RUINS</FeatureType>
-					<PrereqTech/>
-					<iTime>1</iTime>
-					<iProduction>40</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-			</FeatureStructs>
-			<HotKey>KB_S</HotKey>
-			<bShiftDown>1</bShiftDown>
-			<iHotKeyPriority>1</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/TerrainFeatures/Forest.dds,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,3,3</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_WINDMILL_SLAVE</Type>
@@ -1523,7 +1254,6 @@
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildWindMill.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,5,8</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_WATERMILL_SLAVE</Type>
@@ -1540,7 +1270,6 @@
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildWaterMill.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,3,8</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_PLANTATION_SLAVE</Type>
@@ -1662,7 +1391,6 @@
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildPlantation.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,1,9</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_SILK_FARM_SLAVE</Type>
@@ -1718,7 +1446,6 @@
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildPlantation.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,1,9</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_QUARRY_SLAVE</Type>
@@ -1795,11 +1522,10 @@
 			<HotKey>KB_Q</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildQuarry.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,2,9</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_PASTURE_SLAVE</Type>
-			<Description>TXT_KEY_BUILD_PASTURE</Description>
+			<Description>TXT_KEY_BUILD_PASTURE_SLAVE</Description>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
 			<iTime>400</iTime>
 			<iCost>0</iCost>
@@ -1851,7 +1577,6 @@
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildPasture.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,8,7</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_CAMP_SLAVE</Type>
@@ -1866,7 +1591,6 @@
 			<HotKey>KB_H</HotKey>
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildCamp.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,1,7</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_HUNTING_PRESERVE_SLAVE</Type>
@@ -2120,7 +1844,6 @@
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildWell.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,4,8</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_WINERY_SLAVE</Type>
@@ -2367,7 +2090,6 @@
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildWinery.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,6,8</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_COTTAGE_SLAVE</Type>
@@ -2437,7 +2159,6 @@
 			<HotKey>KB_T</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildCottage.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,2,7</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_HAMLET_SLAVE</Type>
@@ -3351,7 +3072,6 @@
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildFort.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,7,9</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BURN_VEGETATION_SLAVE</Type>
@@ -3438,7 +3158,6 @@
 			<bAltDown>1</bAltDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildChopDown.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,7,8</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_REMOVE_VEGETATION_SLAVE</Type>
@@ -3525,7 +3244,6 @@
 			<bAltDown>1</bAltDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildChopDown.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,7,8</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_REMOVE_SWAMP_SLAVE</Type>
@@ -3556,7 +3274,6 @@
 			<bAltDown>1</bAltDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildChopDown.dds,Art/interface/buttons/mainmenu_techscreen_worldbuilder_popups_atlas.dds,4,2</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_REMOVE_ROCK_FORM_SLAVE</Type>
@@ -3714,7 +3431,6 @@
 			<HotKey>KB_F</HotKey>
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/TerrainFeatures/Forest.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,4,14</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_GROUNDWATER_WELL_SLAVE</Type>
@@ -3731,7 +3447,6 @@
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildWell.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,4,8</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_TREEFARM_SLAVE</Type>
@@ -3748,7 +3463,6 @@
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/buildtreefarm.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_HYBRID_FOREST_SLAVE</Type>
@@ -3765,7 +3479,6 @@
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/buildtreefarm.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_EXPLORETEMPLE_SLAVE</Type>
@@ -3790,7 +3503,6 @@
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Button_Select.dds,Art/Interface/Buttons/Actions_Builds_Leaderheads_Specialists_Atlas.dds,4,2</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_MODERNWINDMILL_SLAVE</Type>
@@ -3917,7 +3629,6 @@
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/BuildWindgenerator.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_SOLAR_PANELS_SLAVE</Type>
@@ -4180,7 +3891,6 @@
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Buildings/Bunker.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_FUTURE_BUNKER_SLAVE</Type>
@@ -4198,7 +3908,6 @@
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Buildings/Bunker.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_SAFARI_SLAVE</Type>
@@ -4214,7 +3923,6 @@
 			<HotKey>KB_H</HotKey>
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildCamp.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,1,7</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_GEOTHERMAL_BOREHOLE_SLAVE</Type>
@@ -4230,7 +3938,6 @@
 			<HotKey>KB_M</HotKey>
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>Art/electricity/art/geothermalplant.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_JUNGLE_CAMP_SLAVE</Type>
@@ -4246,7 +3953,6 @@
 			<HotKey>0</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/builds/junglecamp.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_SANITIZE_SLAVE</Type>
@@ -4276,7 +3982,6 @@
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Actions/Sanitize.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_MAKE_JUNGLE_SLAVE</Type>
@@ -4310,48 +4015,6 @@
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/TerrainFeatures/Jungle.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
-		</BuildInfo>
-		<BuildInfo>
-			<Type>BUILD_PLANT_FOREST_SLAVE</Type>
-			<Description>TXT_KEY_BUILD_PLANT_FOREST_SLAVE</Description>
-			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<iTime>2000</iTime>
-			<iCost>0</iCost>
-			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_PLANT_FOREST</ImprovementType>
-			<RouteType>NONE</RouteType>
-			<FeatureChange>FEATURE_FOREST</FeatureChange>
-			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<FeatureStructs>
-				<FeatureStruct>
-					<FeatureType>FEATURE_JUNGLE</FeatureType>
-					<PrereqTech/>
-					<iTime>500</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
-					<PrereqTech/>
-					<iTime>1</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_MANGROVE</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
-					<iTime>500</iTime>
-					<iProduction>30</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-			</FeatureStructs>
-			<HotKey>KB_F</HotKey>
-			<bAltDown>1</bAltDown>
-			<bCtrlDown>1</bCtrlDown>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/TerrainFeatures/Forest.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_PLANT_BAMBOO_SLAVE</Type>
@@ -4399,7 +4062,6 @@
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/TerrainFeatures/Forest.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_PLANT_SAVANNA_SLAVE</Type>
@@ -4447,7 +4109,6 @@
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/TerrainFeatures/Forest.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_TERRAFORM_LUSH_SLAVE</Type>
@@ -4487,7 +4148,6 @@
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/baseterrain/grassland.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_TERRAFORM_MUDDY_SLAVE</Type>
@@ -4527,7 +4187,6 @@
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/baseterrain/grassland.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_TERRAFORM_GRASS_SLAVE</Type>
@@ -4567,7 +4226,6 @@
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/baseterrain/grassland.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_TERRAFORM_PLAINS_SLAVE</Type>
@@ -4663,7 +4321,6 @@
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/baseterrain/plains.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_TERRAFORM_TUNDRA_SLAVE</Type>
@@ -4689,7 +4346,6 @@
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/baseterrain/tundra.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_TERRAFORM_PERMAFROST_SLAVE</Type>
@@ -4707,7 +4363,6 @@
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/baseterrain/tundra.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_TERRAFORM_ROCKY_SLAVE</Type>
@@ -4725,7 +4380,6 @@
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/baseterrain/tundra.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_TERRAFORM_SCRUB_SLAVE</Type>
@@ -4743,7 +4397,6 @@
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/baseterrain/tundra.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_TERRAFORM_DESERT_SLAVE</Type>
@@ -4761,7 +4414,6 @@
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/baseterrain/tundra.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_TERRAFORM_DUNES_SLAVE</Type>
@@ -4779,7 +4431,6 @@
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/baseterrain/tundra.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_FRUIT_GATHERER_SLAVE</Type>
@@ -4795,7 +4446,6 @@
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/gatherer_genericfruit.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
         	<BuildInfo>
 			<Type>BUILD_GRAPE_GATHERER_SLAVE</Type>
@@ -4811,7 +4461,6 @@
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/gatherer_grape.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_PLANT_GATHERER_SLAVE</Type>
@@ -4827,7 +4476,6 @@
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/gatherer_genericplant.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_FRUIT_PICKER_SLAVE</Type>
@@ -4843,7 +4491,6 @@
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/picker_genericfruit.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_GRAPE_PICKER_SLAVE</Type>
@@ -4859,7 +4506,6 @@
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/picker_grape.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_PLANT_PICKER_SLAVE</Type>
@@ -4875,7 +4521,6 @@
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/picker_genericplant.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_FOSSIL_DIGSITE_SLAVE</Type>
@@ -4891,7 +4536,6 @@
 			<HotKey>KB_F</HotKey>
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/TerrainFeatures/Forest.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,4,14</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_NATURE_PRESERVE_SLAVE</Type>
@@ -4907,7 +4551,6 @@
 			<HotKey>KB_F</HotKey>
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/TerrainFeatures/Forest.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,4,14</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_ORCHARD_SLAVE</Type>
@@ -4923,7 +4566,6 @@
 			<HotKey>KB_L</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/orchard.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_THATCH_CUTTER_SLAVE</Type>
@@ -4939,7 +4581,6 @@
 			<HotKey>KB_L</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/Button_WoodGather.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_PEAT_CUTTER_SLAVE</Type>
@@ -4955,7 +4596,6 @@
 			<HotKey>KB_L</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/Button_StoneToolsWorkshop.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_MUSHROOM_GATHERER_SLAVE</Type>
@@ -4971,7 +4611,6 @@
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/gatherer_mushroom.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 	</BuildInfos>
 </Civ4BuildInfos>

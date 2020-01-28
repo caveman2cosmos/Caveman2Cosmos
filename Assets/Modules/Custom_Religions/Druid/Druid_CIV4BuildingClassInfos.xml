@@ -54,7 +54,6 @@
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_DRUID_TEMPLE_POTATO</DefaultBuilding>
 		</BuildingClassInfo>
-
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DRUID_CATHEDRAL</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_CATHEDRAL</Description>
@@ -119,7 +118,6 @@
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_DRUID_MONASTERY_POTATO</DefaultBuilding>
 		</BuildingClassInfo>
-
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DRUID_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_SHRINE</Description>

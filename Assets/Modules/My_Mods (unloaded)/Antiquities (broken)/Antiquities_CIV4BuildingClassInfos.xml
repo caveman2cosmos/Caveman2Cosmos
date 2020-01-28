@@ -38,7 +38,6 @@
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_BURIAL_GOODS_SKY</DefaultBuilding>
 		</BuildingClassInfo>
-
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_GRAVE_GOODS</Type>
 			<Description>TXT_KEY_GRAVE_GOODS</Description>

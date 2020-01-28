@@ -262,6 +262,9 @@ namespace python = boost::python;
 #include <xercesc/framework/Wrapper4InputSource.hpp>
 #include <xercesc/validators/common/Grammar.hpp>
 
+// Stupid define comes from windows and interferes with our stuff
+#undef Yield
+
 //
 // Json
 //

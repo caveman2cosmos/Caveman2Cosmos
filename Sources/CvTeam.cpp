@@ -6829,18 +6829,25 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 /* REVDCM                                  END                                                  */
 /************************************************************************************************/
 
+			bool bGlobal = GC.getTechInfo(eIndex).isGlobal();
+
 			for (iI = 0; iI < MAX_PLAYERS; iI++)
 			{
-				if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID() && GET_PLAYER((PlayerTypes)iI).isAlive())
+				if (GET_PLAYER((PlayerTypes)iI).isAlive())
 				{
-					if (GET_PLAYER((PlayerTypes)iI).isResearchingTech(eIndex))
+					if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+					{
+						if (GET_PLAYER((PlayerTypes)iI).isResearchingTech(eIndex))
+						{
+							GET_PLAYER((PlayerTypes)iI).popResearch(eIndex);
+						}
+						GET_PLAYER((PlayerTypes)iI).AI_nowHasTech(eIndex);
+						GET_PLAYER((PlayerTypes)iI).invalidateYieldRankCache();
+					}
+					else if (bGlobal && GET_PLAYER((PlayerTypes)iI).isResearchingTech(eIndex))
 					{
 						GET_PLAYER((PlayerTypes)iI).popResearch(eIndex);
 					}
-					
-					// notify the player they now have the tech, if they want to make immediate changes
-					GET_PLAYER((PlayerTypes)iI).AI_nowHasTech(eIndex);
-					GET_PLAYER((PlayerTypes)iI).invalidateYieldRankCache();
 				}
 			}
 
