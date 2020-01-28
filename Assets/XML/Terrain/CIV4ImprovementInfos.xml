@@ -6182,6 +6182,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bChangeRemove>1</bChangeRemove>
 		</ImprovementInfo>
 		<!-- Plant Bamboo -->
 		<ImprovementInfo>
@@ -6221,6 +6222,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bChangeRemove>1</bChangeRemove>
 		</ImprovementInfo>
 		<!-- Terraform Lush -->
 		<ImprovementInfo>
