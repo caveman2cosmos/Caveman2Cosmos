@@ -1602,6 +1602,10 @@
 		<Polish>[ICON_BULLET]Splądrowanie daje %d1_Num[ICON_GOLD] złota.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_PLANT_FOREST_PEDIA</Tag>
+		<English>This is a pseudo improvement that, when built, creates a [LINK=FEATURE_FOREST_NEW]Young Forest[\LINK] on the plot without leaving an improvement behind.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_PLANT_GATHERER</Tag>
 		<English>Plant Gathering Camp</English>
 		<French>Installer un camp de récolte</French>

@@ -1177,6 +1177,7 @@ class CvEventManager:
 
 		if iImprovement == mapImpType['IMPROVEMENT_GROW_FOREST']:
 			CyPlot = GC.getMap().plot(iX, iY)
+			CyPlot.setImprovementType(-1)
 
 			if CyPlot.getTerrainType() == GC.getInfoTypeForString('TERRAIN_TAIGA'):
 				CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_FOREST'), 2) # snowy forest
@@ -1205,16 +1206,19 @@ class CvEventManager:
 							CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_BAMBOO'), 0)
 
 		elif iImprovement == mapImpType['IMPROVEMENT_PLANT_FOREST']:
-			# No need to check feature requirements as they should be fulfilled for the build to be ordered in the first place.
-			GC.getMap().plot(iX, iY).setFeatureType(GC.getInfoTypeForString('FEATURE_FOREST_NEW'), 0)
-			# Happens in the dll due to imp having <bChangeRemove>1</bChangeRemove>
-			# CyPlot.setImprovementType(-1)
+			CyPlot = GC.getMap().plot(iX, iY)
+			CyPlot.setImprovementType(-1)
+			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_FOREST_NEW'), 0)
 
 		elif iImprovement == mapImpType['IMPROVEMENT_PLANT_BAMBOO']:
-			GC.getMap().plot(iX, iY).setFeatureType(GC.getInfoTypeForString('FEATURE_BAMBOO'), 0)
+			CyPlot = GC.getMap().plot(iX, iY)
+			CyPlot.setImprovementType(-1)
+			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_BAMBOO'), 0)
 
 		elif iImprovement == mapImpType['IMPROVEMENT_PLANT_SAVANNA']:
-			GC.getMap().plot(iX, iY).setFeatureType(GC.getInfoTypeForString('FEATURE_SAVANNA'), 0)
+			CyPlot = GC.getMap().plot(iX, iY)
+			CyPlot.setImprovementType(-1)
+			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_SAVANNA'), 0)
 
 		elif iImprovement == mapImpType['IMPROVEMENT_FARM']:
 			iPlayer = GC.getMap().plot(iX, iY).getOwner()
