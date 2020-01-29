@@ -118,6 +118,57 @@ CvGame::~CvGame()
 /************************************************************************************************/
 }
 
+namespace {
+	//TB GameOption compatibility enforcement project
+	void enforceOptionCompatability(CvGame* game)
+	{
+		for (int iI = 0; iI < NUM_GAMEOPTION_TYPES; iI++)
+		{
+			const GameOptionTypes eGameOption = static_cast<GameOptionTypes>(iI);
+			if (game->isOption(eGameOption))
+			{
+				CvGameOptionInfo& optionInfo = GC.getGameOptionInfo(eGameOption);
+
+				const int numOptionsForcedOn = optionInfo.getNumEnforcesGameOptionOnTypes();
+				if (numOptionsForcedOn > 0)
+				{
+					for (int iJ = 0; iJ < numOptionsForcedOn; iJ++)
+					{
+						const GameOptionTypes eGameOptionMustOn = static_cast<GameOptionTypes>(optionInfo.isEnforcesGameOptionOnType(iJ).eGameOption);
+						if (optionInfo.isEnforcesGameOptionOnType(iJ).bBool && !game->isOption(eGameOptionMustOn))
+						{
+							game->setOption(eGameOptionMustOn, true);
+						}
+					}
+				}
+				const int numOptionsForcedOff = optionInfo.getNumEnforcesGameOptionOffTypes();
+				if (numOptionsForcedOff > 0)
+				{
+					for (int iJ = 0; iJ < numOptionsForcedOff; iJ++)
+					{
+						const GameOptionTypes eGameOptionMustOff = static_cast<GameOptionTypes>(optionInfo.isEnforcesGameOptionOffType(iJ).eGameOption);
+						if (optionInfo.isEnforcesGameOptionOffType(iJ).bBool && game->isOption(eGameOptionMustOff))
+						{
+							game->setOption(eGameOptionMustOff, false);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// Alberts2: cache highly used Types
+	void cacheHighlyUsedTypes()
+	{
+		CvImprovementInfo::setImprovementCity((ImprovementTypes)GC.getInfoTypeForString("IMPROVEMENT_CITY"));
+		CvTerrainInfo::setTerrainPeak((TerrainTypes)GC.getInfoTypeForString("TERRAIN_PEAK"));
+		CvTerrainInfo::setTerrainHill((TerrainTypes)GC.getInfoTypeForString("TERRAIN_HILL"));
+		CvUnitCombatInfo::setUnitCombatAnimal((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_ANIMAL"));
+		CvUnitCombatInfo::setUnitCombatWildAnimal((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_WILD"));
+	}
+}
+
+
 void CvGame::init(HandicapTypes eHandicap)
 {
 	//--------------------------------
@@ -176,11 +227,11 @@ void CvGame::init(HandicapTypes eHandicap)
 
 		for (int i = 0; i < iNumPlayers; i++)
 		{
-			int j = (getSorenRand().get(iNumPlayers - i, NULL) + i);
+			const int j = (getSorenRand().get(iNumPlayers - i, NULL) + i);
 
 			if (i != j)
 			{
-				int iTemp = aiTeams[i];
+				const int iTemp = aiTeams[i];
 				aiTeams[i] = aiTeams[j];
 				aiTeams[j] = iTemp;
 			}
@@ -199,42 +250,14 @@ void CvGame::init(HandicapTypes eHandicap)
 	//AlbertS2 set hidden options to their default setting
 	for (int iI = 0; iI < NUM_GAMEOPTION_TYPES; iI++)
 	{
-		CvGameOptionInfo& kGameOption = GC.getGameOptionInfo((GameOptionTypes)iI);
+		const CvGameOptionInfo& kGameOption = GC.getGameOptionInfo((GameOptionTypes)iI);
 		if (!kGameOption.getVisible())
 		{
 			setOption((GameOptionTypes)iI, kGameOption.getDefault());
 		}
 	}
-	//TB GameOption compatibility enforcement project
-	for (int iI = 0; iI < NUM_GAMEOPTION_TYPES; iI++)
-	{
-		GameOptionTypes eGameOption = ((GameOptionTypes)iI);
-		if (isOption(eGameOption))
-		{
-			if (GC.getGameOptionInfo(eGameOption).getNumEnforcesGameOptionOnTypes() > 0)
-			{
-				for (int iJ = 0; iJ < GC.getGameOptionInfo(eGameOption).getNumEnforcesGameOptionOnTypes(); iJ++)
-				{
-					GameOptionTypes eGameOptionMustOn = ((GameOptionTypes)GC.getGameOptionInfo(eGameOption).isEnforcesGameOptionOnType(iJ).eGameOption);
-					if (GC.getGameOptionInfo(eGameOption).isEnforcesGameOptionOnType(iJ).bBool && !isOption(eGameOptionMustOn))
-					{
-						setOption(eGameOptionMustOn, true);
-					}
-				}
-			}
-			if (GC.getGameOptionInfo(eGameOption).getNumEnforcesGameOptionOffTypes() > 0)
-			{
-				for (int iJ = 0; iJ < GC.getGameOptionInfo(eGameOption).getNumEnforcesGameOptionOffTypes(); iJ++)
-				{
-					GameOptionTypes eGameOptionMustOff = ((GameOptionTypes)GC.getGameOptionInfo(eGameOption).isEnforcesGameOptionOffType(iJ).eGameOption);
-					if (GC.getGameOptionInfo(eGameOption).isEnforcesGameOptionOffType(iJ).bBool && isOption(eGameOptionMustOff))
-					{
-						setOption(eGameOptionMustOff, false);
-					}
-				}
-			}
-		}
-	}
+
+	enforceOptionCompatability(this);
 
 	if (isOption(GAMEOPTION_LOCK_MODS))
 	{
@@ -259,12 +282,7 @@ void CvGame::init(HandicapTypes eHandicap)
 	// Alberts2: Recalculate which info class replacements are currently active
 	GC.updateReplacements();
 
-	// Alberts2: cache higly used Types
-	CvImprovementInfo::setImprovementCity((ImprovementTypes)GC.getInfoTypeForString("IMPROVEMENT_CITY"));
-	CvTerrainInfo::setTerrainPeak((TerrainTypes)GC.getInfoTypeForString("TERRAIN_PEAK"));
-	CvTerrainInfo::setTerrainHill((TerrainTypes)GC.getInfoTypeForString("TERRAIN_HILL"));
-	CvUnitCombatInfo::setUnitCombatAnimal((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_ANIMAL"));
-	CvUnitCombatInfo::setUnitCombatWildAnimal((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_WILD"));
+	cacheHighlyUsedTypes();
 
 	//TB: Set Statuses
 	setStatusPromotions();
@@ -2596,42 +2614,9 @@ void CvGame::update()
 		}
 		GC.getMapINLINE().updateSight(true, false);
 
-		for (int iI= 0; iI < NUM_GAMEOPTION_TYPES; iI++)
-		{
-			GameOptionTypes eGameOption = ((GameOptionTypes)iI);
-			if (isOption(eGameOption))
-			{
-				if (GC.getGameOptionInfo(eGameOption).getNumEnforcesGameOptionOnTypes() > 0)
-				{
-					for (int iJ = 0; iJ < GC.getGameOptionInfo(eGameOption).getNumEnforcesGameOptionOnTypes(); iJ++)
-					{
-						GameOptionTypes eGameOptionMustOn = ((GameOptionTypes)GC.getGameOptionInfo(eGameOption).isEnforcesGameOptionOnType(iJ).eGameOption);
-						if (GC.getGameOptionInfo(eGameOption).isEnforcesGameOptionOnType(iJ).bBool && !isOption(eGameOptionMustOn))
-						{
-							setOption(eGameOptionMustOn, true);
-						}
-					}
-				}
-				if (GC.getGameOptionInfo(eGameOption).getNumEnforcesGameOptionOffTypes() > 0)
-				{
-					for (int iJ = 0; iJ < GC.getGameOptionInfo(eGameOption).getNumEnforcesGameOptionOffTypes(); iJ++)
-					{
-						GameOptionTypes eGameOptionMustOff = ((GameOptionTypes)GC.getGameOptionInfo(eGameOption).isEnforcesGameOptionOffType(iJ).eGameOption);
-						if (GC.getGameOptionInfo(eGameOption).isEnforcesGameOptionOffType(iJ).bBool && isOption(eGameOptionMustOff))
-						{
-							setOption(eGameOptionMustOff, false);
-						}
-					}
-				}
-			}
-		}
+		enforceOptionCompatability(this);
 
-		// Alberts2: cache higly used Types //TB Note: preserve compatibility - place here for games that haven't set them yet.
-		CvImprovementInfo::setImprovementCity((ImprovementTypes)GC.getInfoTypeForString("IMPROVEMENT_CITY"));
-		CvTerrainInfo::setTerrainPeak((TerrainTypes)GC.getInfoTypeForString("TERRAIN_PEAK"));
-		CvTerrainInfo::setTerrainHill((TerrainTypes)GC.getInfoTypeForString("TERRAIN_HILL"));
-		CvUnitCombatInfo::setUnitCombatAnimal((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_ANIMAL"));
-		CvUnitCombatInfo::setUnitCombatWildAnimal((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_WILD"));
+		cacheHighlyUsedTypes();
 
 		//TB: Set Statuses
 		setStatusPromotions();
@@ -2732,7 +2717,7 @@ again:
 	}
 
 	//OutputDebugString(CvString::format("Stop profiling(false) after CvGame::update()\n").c_str());
-	CvPlayerAI& kActivePlayer = GET_PLAYER(getActivePlayer());
+	const CvPlayerAI& kActivePlayer = GET_PLAYER(getActivePlayer());
 	if ( (!kActivePlayer.isTurnActive() || kActivePlayer.isAutoMoves()) && !kActivePlayer.hasBusyUnit() && !isGameMultiPlayer() &&
 		 getBugOptionBOOL("MainInterface__MinimizeAITurnSlices", false) )
 	{
