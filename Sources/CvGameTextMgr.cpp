@@ -30450,33 +30450,6 @@ bool CvGameTextMgr::buildPromotionString(CvWStringBuffer &szBuffer, TechTypes eT
 	return bFirst;
 }
 
-/************************************************************************************************/
-/* Afforess	                  Start		 01/01/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-void CvGameTextMgr::buildObsoletePromotionString(CvWStringBuffer &szBuffer, int iItem, bool bList, bool bPlayerContext)
-{
-	if (bList)
-	{
-		szBuffer.append(NEWLINE);
-	}
-	szBuffer.append(gDLL->getText("TXT_KEY_TECH_OBSOLETES", CvWString(GC.getPromotionInfo((PromotionTypes)iItem).getType()).GetCString(), GC.getPromotionInfo((PromotionTypes)iItem).getDescription()));
-}
-void CvGameTextMgr::buildObsoleteCorporationString(CvWStringBuffer &szBuffer, int iItem, bool bList, bool bPlayerContext)
-{
-	CvWString szTempBuffer;
-
-	if (bList)
-	{
-		szBuffer.append(NEWLINE);
-	}
-	szBuffer.append(gDLL->getText("TXT_KEY_TECH_OBSOLETES", CvWString(GC.getCorporationInfo((CorporationTypes)iItem).getType()).GetCString(), GC.getCorporationInfo((CorporationTypes)iItem).getDescription()));
-}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
 // Displays a list of derived technologies - no distinction between AND/OR prerequisites
 void CvGameTextMgr::buildSingleLineTechTreeString(CvWStringBuffer &szBuffer, TechTypes eTech, bool bPlayerContext)
 {
@@ -36404,95 +36377,6 @@ void CvGameTextMgr::parseLeaderHeadHelp(CvWStringBuffer &szBuffer, PlayerTypes e
 
 	getAllRelationsString(szBuffer, eThisTeam);
 // BUG - Leaderhead Relations - end
-}
-
-// BUG - Leaderhead Relations - start
-/*
- * Displays the relations between two leaders only. This is used by the F4:GLANCE and F5:SIT-REP tabs.
- */
-void CvGameTextMgr::parseLeaderHeadRelationsHelp(CvWStringBuffer &szBuffer, PlayerTypes eThisPlayer, PlayerTypes eOtherPlayer)
-{
-	if (NO_PLAYER == eThisPlayer)
-	{
-		return;
-	}
-	if (NO_PLAYER == eOtherPlayer)
-	{
-		parseLeaderHeadHelp(szBuffer, eThisPlayer, NO_PLAYER);
-		return;
-	}
-
-	szBuffer.append(CvWString::format(L"%s", GET_PLAYER(eThisPlayer).getName()));
-
-	parsePlayerTraits(szBuffer, eThisPlayer);
-
-	szBuffer.append(L"\n");
-
-	PlayerTypes eActivePlayer = GC.getGameINLINE().getActivePlayer();
-	TeamTypes eThisTeam = GET_PLAYER(eThisPlayer).getTeam();
-	CvTeam& kThisTeam = GET_TEAM(eThisTeam);
-
-	if (eThisPlayer != eOtherPlayer && kThisTeam.isHasMet(GET_PLAYER(eOtherPlayer).getTeam()))
-	{
-		getEspionageString(szBuffer, eThisPlayer, eOtherPlayer);
-
-		getAttitudeString(szBuffer, eThisPlayer, eOtherPlayer);
-
-		getActiveDealsString(szBuffer, eThisPlayer, eOtherPlayer);
-
-		if (eOtherPlayer == eActivePlayer)
-		{
-			getActiveTeamRelationsString(szBuffer, eThisTeam);
-		}
-		else
-		{
-			getOtherRelationsString(szBuffer, eThisPlayer, eOtherPlayer);
-		}
-	}
-	else
-	{
-		getAllRelationsString(szBuffer, eThisTeam);
-	}
-}
-// BUG - Leaderhead Relations - end
-
-void CvGameTextMgr::parseLeaderLineHelp(CvWStringBuffer &szBuffer, PlayerTypes eThisPlayer, PlayerTypes eOtherPlayer)
-{
-	if (NO_PLAYER == eThisPlayer || NO_PLAYER == eOtherPlayer)
-	{
-		return;
-	}
-	CvTeam& thisTeam = GET_TEAM(GET_PLAYER(eThisPlayer).getTeam());
-	CvTeam& otherTeam = GET_TEAM(GET_PLAYER(eOtherPlayer).getTeam());
-
-	if (thisTeam.getID() == otherTeam.getID())
-	{
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_PERMANENT_ALLIANCE"));
-		szBuffer.append(NEWLINE);
-	}
-	else if (thisTeam.isAtWar(otherTeam.getID()))
-	{
-		szBuffer.append(gDLL->getText("TXT_KEY_CONCEPT_WAR"));
-		szBuffer.append(NEWLINE);
-	}
-	else
-	{
-		if (thisTeam.isDefensivePact(otherTeam.getID()))
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_DEFENSIVE_PACT"));
-			szBuffer.append(NEWLINE);
-		}
-		if (thisTeam.isOpenBorders(otherTeam.getID()))
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_OPEN_BORDERS"));
-			szBuffer.append(NEWLINE);
-		}
-		if (thisTeam.isVassal(otherTeam.getID()))
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_VASSAL"));
-			szBuffer.append(NEWLINE);
-		}
-	}
 }
 
 
