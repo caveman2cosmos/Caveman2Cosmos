@@ -226,8 +226,8 @@ public:
 	void uninit();
 	void clearTypesMap();
 
-	CvDiplomacyScreen* getDiplomacyScreen();
-	CMPDiplomacyScreen* getMPDiplomacyScreen();
+	CvDiplomacyScreen* getDiplomacyScreen() const;
+	CMPDiplomacyScreen* getMPDiplomacyScreen() const;
 
 	FMPIManager*& getFMPMgrPtr();
 	CvPortal& getPortal();
@@ -237,9 +237,9 @@ public:
 	CvInitCore& getIniInitCore();
 	CvMessageCodeTranslator& getMessageCodes();
 	CvStatsReporter& getStatsReporter();
-	CvStatsReporter* getStatsReporterPtr();
+	CvStatsReporter* getStatsReporterPtr() const;
 	CvInterface& getInterface();
-	CvInterface* getInterfacePtr();
+	CvInterface* getInterfacePtr() const;
 	int getMaxCivPlayers() const;
 	int getMaxPCPlayers() const;
 
@@ -260,12 +260,12 @@ public:
 	bool multiMapsEnabled() const;
 	bool viewportsEnabled() const;
 	bool getReprocessGreatWallDynamically() const;
-	int getNumMapInfos();
-	int getNumMapSwitchInfos();
+	int getNumMapInfos() const;
+	int getNumMapSwitchInfos() const;
 	std::vector<CvMapInfo*>& getMapInfos();
 	std::vector<CvMapSwitchInfo*>& getMapSwitchInfos();
-	CvMapInfo& getMapInfo(MapTypes eMap);
-	CvMapSwitchInfo& getMapSwitchInfo(MapSwitchTypes eMapSwitch);
+	CvMapInfo& getMapInfo(const MapTypes eMap) const;
+	CvMapSwitchInfo& getMapSwitchInfo(const MapSwitchTypes eMapSwitch) const;
 	
 	void switchMap(MapTypes eMap);
 	CvMap& getMapByIndex(MapTypes eIndex);
@@ -310,19 +310,19 @@ public:
 	inline bool	getIsInPedia() const { return m_bIsInPedia; }
 	inline void	setIsInPedia(bool bNewValue) { m_bIsInPedia = bNewValue; }
 
-	int* getPlotDirectionX();
-	int* getPlotDirectionY();
-	int* getPlotCardinalDirectionX();
-	int* getPlotCardinalDirectionY();
-	int* getCityPlotX();
-	int* getCityPlotY();
-	int* getCityPlotPriority();
-	int getXYCityPlot(int i, int j);
-	DirectionTypes* getTurnLeftDirection();
-	DirectionTypes getTurnLeftDirection(int i);
-	DirectionTypes* getTurnRightDirection();
-	DirectionTypes getTurnRightDirection(int i);
-	DirectionTypes getXYDirection(int i, int j);
+	int* getPlotDirectionX() const;
+	int* getPlotDirectionY() const;
+	int* getPlotCardinalDirectionX() const;
+	int* getPlotCardinalDirectionY() const;
+	int* getCityPlotX() const;
+	int* getCityPlotY() const;
+	int* getCityPlotPriority() const;
+	int getXYCityPlot(const int i, const int j) const;
+	DirectionTypes* getTurnLeftDirection() const;
+	DirectionTypes getTurnLeftDirection(const int i) const;
+	DirectionTypes* getTurnRightDirection() const;
+	DirectionTypes getTurnRightDirection(int i) const;
+	DirectionTypes getXYDirection(const int i, const int j) const;
 
 /************************************************************************************************/
 /* SORT_ALPHABET                           11/19/07                                MRGENIE      */

@@ -852,12 +852,12 @@ void cvInternalGlobals::clearTypesMap()
 }
 
 
-CvDiplomacyScreen* cvInternalGlobals::getDiplomacyScreen()
+CvDiplomacyScreen* cvInternalGlobals::getDiplomacyScreen() const
 {
 	return m_diplomacyScreen;
 }
 
-CMPDiplomacyScreen* cvInternalGlobals::getMPDiplomacyScreen()
+CMPDiplomacyScreen* cvInternalGlobals::getMPDiplomacyScreen() const
 {
 	return m_mpDiplomacyScreen;
 }
@@ -902,7 +902,7 @@ CvStatsReporter& cvInternalGlobals::getStatsReporter()
 	return *m_statsReporter;
 }
 
-CvStatsReporter* cvInternalGlobals::getStatsReporterPtr()
+CvStatsReporter* cvInternalGlobals::getStatsReporterPtr() const
 {
 	return m_statsReporter;
 }
@@ -912,7 +912,7 @@ CvInterface& cvInternalGlobals::getInterface()
 	return *m_interface;
 }
 
-CvInterface* cvInternalGlobals::getInterfacePtr()
+CvInterface* cvInternalGlobals::getInterfacePtr() const
 {
 	return m_interface;
 }
@@ -1018,71 +1018,71 @@ bool& cvInternalGlobals::overwriteLogs()
 	return m_bOverwriteLogs;
 }
 
-int* cvInternalGlobals::getPlotDirectionX()
+int* cvInternalGlobals::getPlotDirectionX() const
 {
 	return m_aiPlotDirectionX;
 }
 
-int* cvInternalGlobals::getPlotDirectionY()
+int* cvInternalGlobals::getPlotDirectionY() const
 {
 	return m_aiPlotDirectionY;
 }
 
-int* cvInternalGlobals::getPlotCardinalDirectionX()
+int* cvInternalGlobals::getPlotCardinalDirectionX() const
 {
 	return m_aiPlotCardinalDirectionX;
 }
 
-int* cvInternalGlobals::getPlotCardinalDirectionY()
+int* cvInternalGlobals::getPlotCardinalDirectionY() const
 {
 	return m_aiPlotCardinalDirectionY;
 }
 
-int* cvInternalGlobals::getCityPlotX()
+int* cvInternalGlobals::getCityPlotX() const
 {
 	return m_aiCityPlotX;
 }
 
-int* cvInternalGlobals::getCityPlotY()
+int* cvInternalGlobals::getCityPlotY() const
 {
 	return m_aiCityPlotY;
 }
 
-int* cvInternalGlobals::getCityPlotPriority()
+int* cvInternalGlobals::getCityPlotPriority() const
 {
 	return m_aiCityPlotPriority;
 }
 
-int cvInternalGlobals::getXYCityPlot(int i, int j)
+int cvInternalGlobals::getXYCityPlot(const int i, const int j) const
 {
 	FAssertMsg(i >= 0 && i < CITY_PLOTS_DIAMETER, "XYCityPlot i index out of bounds");
 	FAssertMsg(j >= 0 && j < CITY_PLOTS_DIAMETER, "XYCityPlot j index out of bounds");
 	return m_aaiXYCityPlot[i][j];
 }
 
-DirectionTypes* cvInternalGlobals::getTurnLeftDirection()
+DirectionTypes* cvInternalGlobals::getTurnLeftDirection() const
 {
 	return m_aeTurnLeftDirection;
 }
 
-DirectionTypes cvInternalGlobals::getTurnLeftDirection(int i)
+DirectionTypes cvInternalGlobals::getTurnLeftDirection(const int i) const
 {
 	FAssertMsg(i >= 0 && i < DIRECTION_DIAMETER, "TurnLeftDirection index out of bounds");
 	return m_aeTurnLeftDirection[i];
 }
 
-DirectionTypes* cvInternalGlobals::getTurnRightDirection()
+DirectionTypes* cvInternalGlobals::getTurnRightDirection() const
 {
 	return m_aeTurnRightDirection;
 }
 
-DirectionTypes cvInternalGlobals::getTurnRightDirection(int i)
+DirectionTypes cvInternalGlobals::getTurnRightDirection(const int i) const
 {
 	FAssertMsg(i >= 0 && i < DIRECTION_DIAMETER, "TurnRightDirection index out of bounds");
 	return m_aeTurnRightDirection[i];
 }
 
-DirectionTypes cvInternalGlobals::getXYDirection(int i, int j)
+DirectionTypes cvInternalGlobals::getXYDirection(const int i, const int j) const
 {
 	FAssertMsg(i >= 0 && i < DIRECTION_DIAMETER, "XYDirection i index out of bounds");
 	FAssertMsg(j >= 0 && j < DIRECTION_DIAMETER, "XYDirection j index out of bounds");
@@ -1108,12 +1108,12 @@ bool cvInternalGlobals::getReprocessGreatWallDynamically() const
 	return m_bViewportsEnabled || (getDefineBOOL("DYNAMIC_GREAT_WALL") != 0);
 }
 
-int cvInternalGlobals::getNumMapInfos()
+int cvInternalGlobals::getNumMapInfos() const
 {
 	return multiMapsEnabled() ? m_paMapInfo.size() : 1;
 }
 
-int cvInternalGlobals::getNumMapSwitchInfos()
+int cvInternalGlobals::getNumMapSwitchInfos() const
 {
 	return m_paMapSwitchInfo.size();
 }
@@ -1128,13 +1128,13 @@ std::vector<CvMapSwitchInfo*>& cvInternalGlobals::getMapSwitchInfos()
 	return m_paMapSwitchInfo;
 }
 
-CvMapInfo& cvInternalGlobals::getMapInfo(MapTypes eMap)
+CvMapInfo& cvInternalGlobals::getMapInfo(const MapTypes eMap) const
 {
 	FAssertMsg(eMap > NO_MAP && eMap < GC.getNumMapInfos(), "MapInfo index out of bounds");
 	return *(m_paMapInfo[eMap]);
 }
 
-CvMapSwitchInfo& cvInternalGlobals::getMapSwitchInfo(MapSwitchTypes eMapSwitch)
+CvMapSwitchInfo& cvInternalGlobals::getMapSwitchInfo(const MapSwitchTypes eMapSwitch) const
 {
 	FAssertMsg(eMapSwitch > NO_MAPSWITCH && eMapSwitch < GC.getNumMapSwitchInfos(), "MapSwitchInfo index out of bounds");
 	return *(m_paMapSwitchInfo[eMapSwitch]);

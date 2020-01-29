@@ -232,14 +232,14 @@ public:
 	CvDiplomacyResponse();
 	virtual ~CvDiplomacyResponse();
 
-	int getNumDiplomacyText();
+	int getNumDiplomacyText() const;
 	void setNumDiplomacyText(int i);
 
-	bool getCivilizationTypes(int i);
+	bool getCivilizationTypes(const int i) const;
 	bool* getCivilizationTypes() const;
 	void setCivilizationTypes(int i, bool bVal);
 
-	bool getLeaderHeadTypes(int i);
+	bool getLeaderHeadTypes(const int i) const;
 	bool* getLeaderHeadTypes() const;
 	void setLeaderHeadTypes(int i, bool bVal);
 
@@ -247,7 +247,7 @@ public:
 	bool* getAttitudeTypes() const;
 	void setAttitudeTypes(int i, bool bVal);
 
-	bool getDiplomacyPowerTypes(int i);
+	bool getDiplomacyPowerTypes(const int i) const;
 	bool* getDiplomacyPowerTypes() const;
 	void setDiplomacyPowerTypes(int i, bool bVal);
 
@@ -463,13 +463,13 @@ public:
 
 	int getNumPrereqBuildingClasses() const;
 	PrereqBuildingClass& getPrereqBuildingClass(int iIndex);
-	int getPrereqBuildingClassType(int iIndex);
-	int getPrereqBuildingClassMinimumRequired(int iIndex);
+	int getPrereqBuildingClassType(int iIndex) const;
+	int getPrereqBuildingClassMinimumRequired(int iIndex) const;
 
 	int getNumPrereqOrBuildingClasses() const;
 	PrereqBuildingClass& getPrereqOrBuildingClass(int iIndex);
-	int getPrereqOrBuildingClassType(int iIndex);
-	int getPrereqOrBuildingClassMinimumRequired(int iIndex);
+	int getPrereqOrBuildingClassType(int iIndex) const;
+	int getPrereqOrBuildingClassMinimumRequired(int iIndex) const;
 
 	//int getPrereqBuildingClass(int i) const;
 	//int getPrereqBuildingVectorSize();
@@ -2013,9 +2013,9 @@ public:
 	void setFutureArtDefineTag(int i, const TCHAR* szVal);
 
 	CvWString getCivilizationName(int i) const;
-	int getCivilizationNamesVectorSize();
-	CvWString getCivilizationNamesNamesVectorElement(int i);
-	CvWString getCivilizationNamesValuesVectorElement(int i);
+	int getCivilizationNamesVectorSize() const;
+	CvWString getCivilizationNamesNamesVectorElement(const int i) const;
+	CvWString getCivilizationNamesValuesVectorElement(const int i) const;
 
 	//TB Combat Mod Begin  TB SubCombat Mod begin
 	//Functions
@@ -2493,12 +2493,12 @@ public:
 	int getLeaderExperience() const;				// Exposed to Python
 
 	CvOutcomeList* getKillOutcomeList();
-	int getNumActionOutcomes();
-	CvOutcomeList* getActionOutcomeList(int index);
-	MissionTypes getActionOutcomeMission(int index);
-	CvOutcomeList* getActionOutcomeListByMission(MissionTypes eMission);
-	CvOutcomeMission* getOutcomeMission(int index);
-	CvOutcomeMission* getOutcomeMissionByMission(MissionTypes eMission);
+	int getNumActionOutcomes() const;
+	CvOutcomeList* getActionOutcomeList(const int index) const;
+	MissionTypes getActionOutcomeMission(const int index) const;
+	CvOutcomeList* getActionOutcomeListByMission(const MissionTypes eMission) const;
+	CvOutcomeMission* getOutcomeMission(const int index) const;
+	CvOutcomeMission* getOutcomeMissionByMission(const MissionTypes eMission) const;
 
 	const TCHAR* getEarlyArtDefineTag(int i, UnitArtStyleTypes eStyle) const;	// Exposed to Python
 	void setEarlyArtDefineTag(int i, const TCHAR* szVal);
@@ -2943,43 +2943,43 @@ public:
 	virtual bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvSpawnInfo* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL);
 
-	int	getNumBonuses();
-	int	getNumTerrains();
-	int	getNumFeatures();
-	int	getNumFeatureTerrains();
-	int	getNumSpawnGroup();
-	PlayerTypes		getPlayer();
-	BonusTypes		getBonus(int index);
-	TerrainTypes	getTerrain(int index);
-	FeatureTypes	getFeature(int index);
-	TerrainTypes	getFeatureTerrain(int index);
-	UnitTypes		getSpawnGroup(int index);
-	int getTurnRate();
-	int getGlobalTurnRate();
-	int getMaxLocalDensity();
-	int getMaxAreaTotalDensity();
-	int getMaxAreaUnitDensity();
-	int getStartDate();
-	int	getEndDate();
-	int	getMinLatitude();
-	int	getMaxLatitude();
-	bool getLatitudeAbs();
-	int	getMinLongitude();
-	int	getMaxLongitude();
-	bool getTreatAsBarbarian();
-	bool getNeutralOnly();
-	bool getNoSpeedNormalization();
-	bool getNotInView();
-	bool getHills();
-	bool getFlatlands();
-	bool getPeaks();
-	bool getFreshWaterOnly();
-	int getRateOverride();
-	UnitTypes	getUnitType();
-	TechTypes	getPrereqTechType();
-	TechTypes	getObsoleteTechType();
+	int	getNumBonuses() const;
+	int	getNumTerrains() const;
+	int	getNumFeatures() const;
+	int	getNumFeatureTerrains() const;
+	int	getNumSpawnGroup() const;
+	PlayerTypes getPlayer() const;
+	BonusTypes getBonus(const int index) const;
+	TerrainTypes getTerrain(const int index) const;
+	FeatureTypes getFeature(const int index) const;
+	TerrainTypes getFeatureTerrain(const int index) const;
+	UnitTypes getSpawnGroup(const int index) const;
+	int getTurnRate() const;
+	int getGlobalTurnRate() const;
+	int getMaxLocalDensity() const;
+	int getMaxAreaTotalDensity() const;
+	int getMaxAreaUnitDensity() const;
+	int getStartDate() const;
+	int	getEndDate() const;
+	int	getMinLatitude() const;
+	int	getMaxLatitude() const;
+	bool getLatitudeAbs() const;
+	int	getMinLongitude() const;
+	int	getMaxLongitude() const;
+	bool getTreatAsBarbarian() const;
+	bool getNeutralOnly() const;
+	bool getNoSpeedNormalization() const;
+	bool getNotInView() const;
+	bool getHills() const;
+	bool getFlatlands() const;
+	bool getPeaks() const;
+	bool getFreshWaterOnly() const;
+	int getRateOverride() const;
+	UnitTypes getUnitType() const;
+	TechTypes getPrereqTechType() const;
+	TechTypes getObsoleteTechType() const;
 
-	BoolExpr* getSpawnCondition();
+	BoolExpr* getSpawnCondition() const;
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -3198,9 +3198,9 @@ public:
 	virtual ~CvCivicInfo();
 
 	std::wstring pyGetWeLoveTheKing() { return getWeLoveTheKing(); }// Exposed to Python
-	const wchar* getWeLoveTheKing();
+	const wchar* getWeLoveTheKing() const;
 	void setWeLoveTheKingKey(const TCHAR* szVal);
-	const wchar* getWeLoveTheKingKey();
+	const wchar* getWeLoveTheKingKey() const;
 
 	int getCivicOptionType() const;						// Exposed to Python
 	int getAnarchyLength() const;						// Exposed to Python
@@ -3356,13 +3356,13 @@ public:
 	bool isAnySpecialistCommerceChanges() const;
 	bool isAnySpecialistYieldChanges() const;
 
-	CvString getCivicAttitudeReason(int i) const;
-	int getCivicAttitudeVectorSize();
-	CvString getCivicAttitudeNamesVectorElement(int i);
-	int getCivicAttitudeValuesVectorElement(int i);
-	int getCivicAttitudeReasonVectorSize();
-	CvString getCivicAttitudeReasonNamesVectorElement(int i);
-	CvString getCivicAttitudeReasonValuesVectorElement(int i);
+	CvString getCivicAttitudeReason(const int i) const;
+	int getCivicAttitudeVectorSize() const;
+	CvString getCivicAttitudeNamesVectorElement(const int i) const;
+	int getCivicAttitudeValuesVectorElement(const int i) const;
+	int getCivicAttitudeReasonVectorSize() const;
+	CvString getCivicAttitudeReasonNamesVectorElement(const int i) const;
+	CvString getCivicAttitudeReasonValuesVectorElement(const int i) const;
 
 	void read(FDataStreamBase* stream) {}
 	void write(FDataStreamBase* stream) {}
@@ -3559,7 +3559,7 @@ public:
 	void write(FDataStreamBase* stream){}
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvXMLLoadUtility* pXML);
-	bool FindResponseIndex(CvDiplomacyResponse* pNewResponse, int iCase, int* iIndex);
+	bool FindResponseIndex(const CvDiplomacyResponse* pNewResponse, int iCase, int* iIndex) const;
 
 private:
 	std::vector<CvDiplomacyResponse*> m_pResponses;
@@ -3600,8 +3600,8 @@ public:
 /* Afforess						 END															*/
 /************************************************************************************************/
 
-	int getDefaultUnitIndexVector();
-	CvString getDefaultUnitIndexVectorElement(int i);
+	int getDefaultUnitIndexVector() const;
+	CvString getDefaultUnitIndexVectorElement(const int i) const;
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvUnitClassInfo* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL);
@@ -3633,9 +3633,6 @@ protected:
 /************************************************************************************************/
 /* Afforess						 END															*/
 /************************************************************************************************/
-
-
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3959,7 +3956,7 @@ public:
 	std::vector<CvString> m_aszPrereqOrCivicsforPass3;
 	std::vector<bool> m_abPrereqOrCivicsforPass3;
 
-	int isPrereqOrCivicsVectorSize();
+	int isPrereqOrCivicsVectorSize() const;
 	CvString isPrereqOrCivicsNamesVectorElement(int i);
 	int isPrereqOrCivicsValuesVectorElement(int i);
 
