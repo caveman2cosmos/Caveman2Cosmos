@@ -1040,6 +1040,7 @@
 			<Strategy>TXT_KEY_BUILDING_VENUS_TERRA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_TERRA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_VENUS_TERRA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_TERRAFORMING</PrereqTech>
 			<iCost>27966</iCost>
