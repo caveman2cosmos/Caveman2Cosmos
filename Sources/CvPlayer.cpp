@@ -16687,9 +16687,6 @@ EraTypes CvPlayer::getCurrentEra() const
 
 void CvPlayer::setCurrentEra(EraTypes eNewValue)
 {
-	CvPlot* pLoopPlot;
-	int iI;
-
 	if (getCurrentEra() != eNewValue)
 	{
 		EraTypes eOldEra = m_eCurrentEra;
@@ -16697,9 +16694,9 @@ void CvPlayer::setCurrentEra(EraTypes eNewValue)
 
 		if (GC.getGameINLINE().getActiveTeam() != NO_TEAM)
 		{
-			for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+			for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 			{
-				pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+				CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 				pLoopPlot->updateGraphicEra();
 
 				if (pLoopPlot->getRevealedImprovementType(GC.getGameINLINE().getActiveTeam(), true) != NO_IMPROVEMENT)
@@ -16719,7 +16716,7 @@ void CvPlayer::setCurrentEra(EraTypes eNewValue)
 			{
 				//TB Era Advance Free Specialist Type
 	//Team Project (6)
-				for (iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
+				for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 				{
 					if (getEraAdvanceFreeSpecialistCount((SpecialistTypes)iI) > 0)
 					{
@@ -16761,6 +16758,8 @@ void CvPlayer::setCurrentEra(EraTypes eNewValue)
 				}
 			}
 		}
+
+		GC.getGame().updateEra();
 	}
 }
 

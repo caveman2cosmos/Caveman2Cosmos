@@ -138,6 +138,7 @@ void CvGame::init(HandicapTypes eHandicap)
 
 	//--------------------------------
 	// Init other game data
+	m_eCurrentEra = GC.getInitCore().getEra();
 
 	// Turn off all MP options if it's a single player game
 	if (GC.getInitCore().getType() == GAME_SP_NEW ||
@@ -896,6 +897,7 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 	m_eWinner = NO_TEAM;
 	m_eVictory = NO_VICTORY;
 	m_eGameState = GAMESTATE_ON;
+	m_eCurrentEra = NO_ERA;
 
 	m_szScriptData = "";
 
@@ -3800,19 +3802,32 @@ EraTypes CvGame::getHighestEra() const
 /************************************************************************************************/
 EraTypes CvGame::getCurrentEra() const
 {
-	int iEra = 0;
-	int iCount = 0;
+	return m_eCurrentEra;
+}
 
-	for (int iI = 0; iI < MAX_PLAYERS; iI++)
+void CvGame::updateEra()
+{
+	int eraCount = 0;
+	int numCivs = 0;
+
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		const CvPlayer& player = GET_PLAYER((PlayerTypes)iI);
+		if (player.isAlive())
 		{
-			iEra += GET_PLAYER((PlayerTypes)iI).getCurrentEra();
-			iCount++;
+			eraCount += player.getCurrentEra();
+			numCivs++;
 		}
 	}
 
-	return (iCount > 0) ? ((EraTypes)(iEra / iCount)) : NO_ERA;
+	FAssert(numCivs > 0);
+
+	const EraTypes newEra = static_cast<EraTypes>(eraCount / numCivs);
+	if (newEra > m_eCurrentEra)
+	{
+		m_eCurrentEra = newEra;
+		//CvEventReporter::getInstance().newEra(newEra);
+	}
 }
 
 
@@ -9892,6 +9907,7 @@ void CvGame::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper,"CvGame",(int*)&m_eWinner);
 	WRAPPER_READ(wrapper,"CvGame",(int*)&m_eVictory);
 	WRAPPER_READ(wrapper,"CvGame",(int*)&m_eGameState);
+	WRAPPER_READ(wrapper,"CvGame",(int*)&m_eCurrentEra);
 
 	WRAPPER_READ_STRING(wrapper,"CvGame",m_szScriptData);
 
@@ -10267,6 +10283,7 @@ void CvGame::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvGame", m_eWinner);
 	WRAPPER_WRITE(wrapper, "CvGame", m_eVictory);
 	WRAPPER_WRITE(wrapper, "CvGame", m_eGameState);
+	WRAPPER_WRITE(wrapper, "CvGame", m_eCurrentEra);
 
 	WRAPPER_WRITE_STRING(wrapper, "CvGame", m_szScriptData);
 
@@ -13594,6 +13611,7 @@ void CvGame::recalculateModifiers()
 
 	m_bRecalculatingModifiers = true;
 
+	updateEra();
 
 	//establish improvement costs
 	for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)

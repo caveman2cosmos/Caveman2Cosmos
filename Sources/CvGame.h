@@ -171,6 +171,7 @@ public:
 /* New World Logic                 END                                                          */
 /************************************************************************************************/
 	EraTypes getCurrentEra() const;											// Exposed to Python
+	void updateEra();
 
 	DllExport TeamTypes getActiveTeam() const;																		// Exposed to Python
 	CivilizationTypes getActiveCivilizationType() const;								// Exposed to Python
@@ -884,6 +885,7 @@ protected:
 	TeamTypes m_eWinner;
 	VictoryTypes m_eVictory;
 	GameStateTypes m_eGameState;
+	EraTypes m_eCurrentEra;
 	PlayerTypes m_eEventPlayer;
 
 	CvString m_szScriptData;
