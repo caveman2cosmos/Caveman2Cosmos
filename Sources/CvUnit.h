@@ -905,9 +905,11 @@ public:
 /********************************************************************************/
 	bool isGoldenAge() const;																							// Exposed to Python
 
-	// Can this unit always coexist with other units (all other things being equal)?
+	// Can this unit always coexist with all other units anywhere?
 	bool canCoexistAlways() const;
-	// Can this unit coexist with the specified team (all other things being equal)?
+	// Can this unit always coexist with all units on the specified plot?
+	bool canCoexistAlwaysOnPlot(const CvPlot& onPlot) const;
+	// Can this unit coexist with the specified team anywhere?
 	bool canCoexistWithTeam(const TeamTypes withTeam) const;
 	// Can this unit coexist with the specified team, on the specified plot?
 	bool canCoexistWithTeamOnPlot(const TeamTypes withTeam, const CvPlot& onPlot) const;

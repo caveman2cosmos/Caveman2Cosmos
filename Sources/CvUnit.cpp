@@ -9743,28 +9743,14 @@ bool CvUnit::recon(int iX, int iY)
 
 bool CvUnit::canParadrop(const CvPlot* pPlot) const
 {
-	if (getDropRange() <= 0)
+	if (getDropRange() <= 0 || hasMoved() || !pPlot->isFriendlyCity(*this, true))
 	{
 		return false;
 	}
-
-	if (hasMoved())
-	{
-		return false;
-	}
-
-	if (!pPlot->isFriendlyCity(*this, true))
-	{
-		return false;
-	}
-
 	return true;
 }
 
 
-
-
-// original: bool CvUnit::canParadropAt(const CvPlot* pPlot, int iX, int iY) const
 bool CvUnit::canParadropAt(const CvPlot* fromPlot, int toX, int toY) const
 {
 	if (!canParadrop(fromPlot))
@@ -9793,12 +9779,9 @@ bool CvUnit::canParadropAt(const CvPlot* fromPlot, int toX, int toY) const
 		return false;
 	}
 
-	if (!canCoexistAlways())
+	if (!canCoexistAlwaysOnPlot(*pTargetPlot) && pTargetPlot->isEnemyCity(*this))
 	{
-		if (pTargetPlot->isEnemyCity(*this))
-		{
-			return false;
-		}
+		return false;
 	}
 
 	if (pTargetPlot->isWater() && getDomainType() == DOMAIN_LAND)
@@ -14919,6 +14902,14 @@ bool CvUnit::canCoexistAlways() const
 	return alwaysInvisible();
 }
 
+bool CvUnit::canCoexistAlwaysOnPlot(const CvPlot& onPlot) const
+{
+	return canCoexistAlways()
+		// City or fort allows blend in
+		|| onPlot.isCity(true) && isBlendIntoCity()
+	;
+}
+
 bool CvUnit::canCoexistWithTeam(const TeamTypes withTeam) const
 {
 	return canCoexistAlways() || getTeam() == withTeam;
@@ -14926,12 +14917,10 @@ bool CvUnit::canCoexistWithTeam(const TeamTypes withTeam) const
 
 bool CvUnit::canCoexistWithTeamOnPlot(const TeamTypes withTeam, const CvPlot& onPlot) const
 {
-	return canCoexistWithTeam(withTeam)
-		// City or fort allows blend in
-		|| onPlot.isCity(true) && isBlendIntoCity()
+	return getTeam() == withTeam || canCoexistAlwaysOnPlot(onPlot)
 		// Invisible to team and on the same plot
 		|| isInvisible(withTeam) && *plot() == onPlot
-		;
+	;
 }
 
 namespace {
@@ -30662,11 +30651,16 @@ bool CvUnit::isAlwaysHostile(const CvPlot* pPlot) const
 bool CvUnit::verifyStackValid()
 {
 	CvPlot* pPlot = plot();
+	if (canCoexistAlwaysOnPlot(*pPlot))
+	{
+		return true;
+	}
 	foreach_ (CvUnit* unit, pPlot->units())
 	{
 		if (unit != this && isEnemy(unit->getTeam(), NULL, unit)
-		&& !unit->canCoexistWithTeamOnPlot(getTeam(), *pPlot)
-		&& !canCoexistWithTeamOnPlot(unit->getTeam(), *pPlot))
+		&& !isInvisible(unit->getTeam())
+		&& !canCoexistWithTeam(unit->getTeam())
+		&& !unit->canCoexistWithTeamOnPlot(getTeam(), *pPlot))
 		{
 			return jumpToNearestValidPlot();
 		}
