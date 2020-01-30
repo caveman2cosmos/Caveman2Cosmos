@@ -265,7 +265,8 @@ public:
 	int unitsRequiredForGoldenAge();
 	int unitsGoldenAgeCapable();
 	int unitsGoldenAgeReady();
-	int greatPeopleThreshold(bool bMilitary);
+	int greatPeopleThresholdMilitary();
+	int greatPeopleThresholdNonMilitary();
 	int specialistYield(int /*SpecialistTypes*/ eSpecialist, int /*YieldTypes*/ eCommerce);
 	int specialistCommerce(int /*SpecialistTypes*/ eSpecialist, int /*CommerceTypes*/ eCommerce);
 
@@ -461,11 +462,9 @@ public:
 	int getUnitPower();
 	int getPopScore();
 	int getLandScore();
-#if defined QC_MASTERY_VICTORY
 //Sevo Begin--VCM
 	int getSevoWondersScore(int mode);
 //Sevo End VCM
-#endif
 	int getWondersScore();
 	int getTechScore();
 	int getTotalTimePlayed();
@@ -602,6 +601,7 @@ public:
 	std::wstring getCityName(int iIndex);
 	python::tuple firstCity(bool bRev);	// returns tuple of (CyCity, iterOut)
 	python::tuple nextCity(int iterIn, bool bRev);		// returns tuple of (CyCity, iterOut)
+	CyCity* nthCity(int n, bool bRev); // shortcut for firstCity + nextCity + nextCity ...
 	int getNumCities();
 	CyCity* getCity(int iID);
 	python::tuple firstUnit(bool bRev);	// returns tuple of (CyUnit, iterOut)

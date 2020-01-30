@@ -241,7 +241,7 @@
 	</TEXT>
 		<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BONGO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Bongo and Antelopes[NEWLINE][ICON_BULLET]Exotic Herbavour Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Bongo and Antelopes, Exotic Herbivore Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BONGO_MYTH</Tag>
@@ -265,7 +265,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CROW_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Crow and Sea Birds[NEWLINE][ICON_BULLET]Bird Cage and Enclosure[NEWLINE][ICON_BULLET]Feather Worker</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Crow and Sea Birds, Bird Cage and Enclosure, Feather Worker</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CROW_MYTH</Tag>
@@ -289,7 +289,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GAZELLE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Gazelle and Antelopes[NEWLINE][ICON_BULLET]Exotic Herbavour Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Gazelle and Antelopes, Exotic Herbivore Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GAZELLE_MYTH</Tag>
@@ -313,7 +313,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GELADA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Gelada Babbon and Old Man Of the Forest[NEWLINE][ICON_BULLET]Primate Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Gelada Babbon and Old Man Of the Forest, Primate Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GELADA_MYTH</Tag>
@@ -337,7 +337,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GEMSBOK_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Gemsbok and Antelopes[NEWLINE][ICON_BULLET]Exotic Herbavour Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Gemsbok and Antelopes, Exotic Herbivore Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GEMSBOK_MYTH</Tag>
@@ -361,7 +361,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GERENUK_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Gerenuk and Antelopes[NEWLINE][ICON_BULLET]Exotic Herbavour Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Gerenuk and Antelopes, Exotic Herbivore Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GERENUK_MYTH</Tag>
@@ -385,7 +385,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GORILLA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Gorilla and Old Man Of the Forest[NEWLINE][ICON_BULLET]Primate Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Gorilla and Old Man Of the Forest, Primate Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GORILLA_MYTH</Tag>
@@ -409,7 +409,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_KANGAROO_GREY_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Grey Kangaroo and Marsuipial[NEWLINE][ICON_BULLET]Marsuipial Herd, Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Grey Kangaroo and Marsuipial, Marsuipial Herd, Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KANGAROO_GREY_MYTH</Tag>
@@ -433,7 +433,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GULL_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Gull, Birds and Sea Birds[NEWLINE][ICON_BULLET]Bird Cage and Enclosure[NEWLINE][ICON_BULLET]Feather Worker</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Gull, Birds and Sea Birds, Bird Cage and Enclosure, Feather Worker</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GULL_MYTH</Tag>
@@ -457,7 +457,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_HYENA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Hyena and Scavenger[NEWLINE][ICON_BULLET]Bad Boy Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Hyena and Scavenger, Bad Boy Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYENA_MYTH</Tag>
@@ -481,11 +481,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_IMPALA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Impala and Antelopes[NEWLINE][ICON_BULLET]Exotic Herbavour Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Impala and Antelopes, Exotic Herbivore Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SAIGA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Saiga and Antelopes[NEWLINE][ICON_BULLET]Exotic Herbavour Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Saiga and Antelopes, Exotic Herbivore Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IMPALA_MYTH</Tag>
@@ -509,7 +509,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_JAGUAR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Jaguar and Spotted Cats[NEWLINE][ICON_BULLET]Big Cat Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Jaguar and Spotted Cats, Big Cat Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JAGUAR_MYTH</Tag>
@@ -533,7 +533,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_KOALA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Koala and Marsupials[NEWLINE][ICON_BULLET]Marsupial Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Koala and Marsupials, Marsupial Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KOALA_MYTH</Tag>
@@ -557,7 +557,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_KOOKABURRA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Kookaburra and Birds[NEWLINE][ICON_BULLET]Bird Cage and Enclosure[NEWLINE][ICON_BULLET]Feather Worker</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Kookaburra and Birds, Bird Cage and Enclosure, Feather Worker</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KOOKABURRA_MYTH</Tag>
@@ -581,7 +581,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_LION_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Lion[NEWLINE][ICON_BULLET]Big Cat Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Lion, Big Cat Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LION_MYTH</Tag>
@@ -610,7 +610,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_IGUANA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Iguana[NEWLINE][ICON_BULLET]Myths of Earth and Reptiles[NEWLINE][ICON_BULLET]Reptile Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Iguana, Myths of Earth and Reptiles, Reptile Cage and Enclosure</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Permet de construire[COLOR_REVERT] Mythe, Histoire et Histoires -  Iguane[NEWLINE][ICON_BULLET]Les Mythes de la Terre et des Reptiles[NEWLINE][ICON_BULLET]Cage à Reptiles Enclos</French>
 	</TEXT>
 	<TEXT>
@@ -644,7 +644,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_KOMODO_DRAGON_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Komodo Dragon[NEWLINE][ICON_BULLET]Myths of Reptile and Dragon[NEWLINE][ICON_BULLET]Reptile Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Komodo Dragon, Myths of Reptile and Dragon, Reptile Cage and Enclosure</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construisez[COLOR_REVERT] les Mythe, Histoire et Histoires - des Dragons de Komodo[NEWLINE][ICON_BULLET]Mythe des Reptiles et Dragons[NEWLINE][ICON_BULLET]Cage et enclos à reptiles</French>
 	</TEXT>
 	<TEXT>
@@ -684,7 +684,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_LIZARD_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Story and Stories -  Lizards[NEWLINE][ICON_BULLET]Reptile Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Story and Stories -  Lizards, Reptile Cage and Enclosure</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construisez l'[COLOR_REVERT]Histoire ou les Histoires des lézards[NEWLINE][ICON_BULLET]Cage et Enclos à Reptiles</French>
 	</TEXT>
 	<TEXT>
@@ -693,7 +693,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_NILE_MONITOR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Nile Monitor[NEWLINE][ICON_BULLET]Myths of Reptile and Dragon[NEWLINE][ICON_BULLET]Reptile Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Nile Monitor, Myths of Reptile and Dragon, Reptile Cage and Enclosure</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Permet de construire[COLOR_REVERT] Mythe, et Histoires du Varan du Nil[NEWLINE][ICON_BULLET]Mythes des Reptiles et Dragons[NEWLINE][ICON_BULLET]Cage à Reptiles Enclos</French>
 	</TEXT>
 	<TEXT>
@@ -723,7 +723,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_LLAMA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Llama[NEWLINE][ICON_BULLET]Exotic Herbavour Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Llama, Exotic Herbivore Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LLAMA_MYTH_EFFECT</Tag>
@@ -743,7 +743,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MANDRILL_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Mandrill and Old Man Of the Forest[NEWLINE][ICON_BULLET]Primate Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Mandrill and Old Man Of the Forest, Primate Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MANDRILL_MYTH</Tag>
@@ -767,7 +767,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_OKAPI_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Okapi and Myth - Giraffe[NEWLINE][ICON_BULLET]Carnival and Exotic Herbavore Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Okapi and Myth - Giraffe, Carnival and Exotic Herbivore Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OKAPI_MYTH</Tag>
@@ -791,7 +791,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ORANGUTAN_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Orangutan and Old Man Of the Forest[NEWLINE][ICON_BULLET]Primate Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Orangutan and Old Man Of the Forest, Primate Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORANGUTAN_MYTH</Tag>
@@ -815,7 +815,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_OXPECKER_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Oxpecker and Birds[NEWLINE][ICON_BULLET]Bird Cage and Enclosure[NEWLINE][ICON_BULLET]Feather Worker</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Oxpecker and Birds, Bird Cage and Enclosure, Feather Worker</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OXPECKER_MYTH</Tag>
@@ -839,7 +839,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PEACOCK_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Peacock and Birds[NEWLINE][ICON_BULLET]Bird Cage and Enclosure[NEWLINE][ICON_BULLET]Poultry Flock, Feather Worker and Flocks of Peacock</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Peacock and Birds, Bird Cage and Enclosure, Poultry Flock, Feather Worker and Flocks of Peacock</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PEACOCK_MYTH</Tag>
@@ -893,7 +893,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PROCOPTODON_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Procoptodon, Paleolithic Marsupial and Marsuipial[NEWLINE][ICON_BULLET]Marsuipial Herd, Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Procoptodon, Paleolithic Marsupial and Marsuipial, Marsuipial Herd, Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROCOPTODON_MYTH</Tag>
@@ -921,7 +921,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_QUOLL_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Quoll and Marsupials[NEWLINE][ICON_BULLET]Marsupial Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Quoll and Marsupials, Marsupial Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_QUOLL_MYTH</Tag>
@@ -945,7 +945,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RATEL_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Ratel and weasel[NEWLINE][ICON_BULLET]Nocturnal and Bad Boy Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Ratel and weasel, Nocturnal and Bad Boy Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RATEL_MYTH</Tag>
@@ -969,7 +969,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_KANGAROO_RED_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Red Kangaroo and Marsuipial[NEWLINE][ICON_BULLET]Marsuipial Herd, Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Red Kangaroo and Marsuipial, Marsuipial Herd, Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KANGAROO_RED_MYTH</Tag>
@@ -997,7 +997,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_COBRA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Cobra[NEWLINE][ICON_BULLET]Myths of Earth and Snakes[NEWLINE][ICON_BULLET]Reptile Cage and Enclosure[NEWLINE][ICON_BULLET]Snake pit and charmer</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Cobra, Myths of Earth and Snakes, Reptile Cage and Enclosure, Snake pit and charmer</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Permet de construire[COLOR_REVERT] Mythe et Histoires des Cobras[NEWLINE][ICON_BULLET]Mythe de la Terre et des serpents[NEWLINE][ICON_BULLET]Cage et enclos pour Reptiles[NEWLINE][ICON_BULLET]Fosse à Serpents et Charmeur</French>
 	</TEXT>
 	<TEXT>
@@ -1031,7 +1031,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PUFFADDER_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Puff adder[NEWLINE][ICON_BULLET]Myths of Earth and Snakess[NEWLINE][ICON_BULLET]Snake Cage and Enclosure[NEWLINE][ICON_BULLET]Snake pit and charmer</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Puff adder, Myths of Earth and Snakess, Snake Cage and Enclosure, Snake pit and charmer</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires - Vipère heurtante[NEWLINE][ICON_BULLET]Mythes de la Terre et des Serpents[NEWLINE][ICON_BULLET]Cage à Serpents et Enclos[NEWLINE][ICON_BULLET]Fosse à serpents et Charmeur</French>
 	</TEXT>
 	<TEXT>
@@ -1096,7 +1096,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_SNAKE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Story and Stories -  Snakes[NEWLINE][ICON_BULLET]Reptile Cage and Enclosure[NEWLINE][ICON_BULLET]Snake pit and charmer</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Story and Stories -  Snakes, Reptile Cage and Enclosure, Snake pit and charmer</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Histoires des Serpents[NEWLINE][ICON_BULLET]Cage des Reptiles et enclos[NEWLINE][ICON_BULLET]Fosse à Serpents et Charmeur</French>
 	</TEXT>
 	<TEXT>
@@ -1107,7 +1107,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_VIPER_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Viper[NEWLINE][ICON_BULLET]Myths of Earth and Snakes[NEWLINE][ICON_BULLET]Snake Cage and Enclosure[NEWLINE][ICON_BULLET]Snake pit and charmer</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Viper, Myths of Earth and Snakes, Snake Cage and Enclosure, Snake pit and charmer</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires des Vipères[NEWLINE][ICON_BULLET]Mythes de la Terre et des Serpents[NEWLINE][ICON_BULLET]Cage à Serpents et Enclos[NEWLINE][ICON_BULLET]Fosse à Serpents et Charmeur</French>
 	</TEXT>
 	<TEXT>
@@ -1167,7 +1167,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WALLAROO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Wallaroo and Marsuipial[NEWLINE][ICON_BULLET]Kangaroo Herd, Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Wallaroo and Marsuipial, Kangaroo Herd, Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WALLAROO_MYTH</Tag>
@@ -1191,7 +1191,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BUFFALO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Buffalo and Bull[NEWLINE][ICON_BULLET]Buffalo Herd, Exotic Herbavore Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Buffalo and Bull, Buffalo Herd, Exotic Herbivore Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BUFFALO_MYTH</Tag>
@@ -1215,7 +1215,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WILDEBEEST_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Wildebeest and Antelopes[NEWLINE][ICON_BULLET]Exotic Herbavore Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Wildebeest and Antelopes, Exotic Herbivore Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WILDEBEEST_MYTH</Tag>
@@ -1239,7 +1239,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GALAPOGOS_TORTOISE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Galapagos Tortoise and Reptiles[NEWLINE][ICON_BULLET]Reptile Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Galapagos Tortoise and Reptiles, Reptile Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALAPOGOS_TORTOISE_MYTH</Tag>

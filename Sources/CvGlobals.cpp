@@ -4,6 +4,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvMapExternal.h"
 #include <time.h> 
+#include <sstream>
 
 static char gVersionString[1024] = { 0 };
 
@@ -379,7 +380,6 @@ cvInternalGlobals::cvInternalGlobals()
 	/************************************************************************************************/
 	, m_iPEAK_EXTRA_MOVEMENT(0)
 	, m_iPEAK_EXTRA_DEFENSE(0)
-	, m_bFormationsMod(false)
 	, m_bLoadedPlayerOptions(false)
 	, m_bXMLLogging(false)
 	, m_iSCORE_FREE_PERCENT(0)
@@ -495,6 +495,22 @@ cvInternalGlobals::~cvInternalGlobals()
 #include <dbghelp.h>
 #pragma comment (lib, "dbghelp.lib")
 
+
+std::string getPyTrace()
+{
+	std::vector<Cy::StackFrame> trace = Cy::get_stack_trace();
+
+	std::stringstream buffer;
+
+	for (std::vector<Cy::StackFrame>::const_iterator itr = trace.begin(); itr != trace.end(); ++itr)
+	{
+		if (itr != trace.begin()) buffer << "\r\n";
+		buffer << CvString::format("%s.py (%d): %s", itr->filename.c_str(), itr->line, itr->code.c_str());
+	}
+
+	return buffer.str();
+}
+
 void CreateMiniDump(EXCEPTION_POINTERS *pep)
 {
 	_TCHAR filename[256];
@@ -538,6 +554,11 @@ void CreateMiniDump(EXCEPTION_POINTERS *pep)
 
 	/* Close the file. */
 	CloseHandle(hFile);
+	std::string pyTrace = getPyTrace();
+	if(!pyTrace.empty())
+	{
+		gDLL->logMsg("PythonCallstack.log", pyTrace.c_str(), true, false);
+	}
 }
 
 LONG WINAPI CustomFilter(EXCEPTION_POINTERS *ExceptionInfo)
@@ -1252,23 +1273,6 @@ CvMainMenuInfo& cvInternalGlobals::getMainMenus(int i)
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-// Python Modular Loading
-int cvInternalGlobals::getNumPythonModulesInfos()
-{
-	return (int)m_paPythonModulesInfo.size();
-}
-
-std::vector<CvPythonModulesInfo*>& cvInternalGlobals::getPythonModulesInfos()
-{
-	return m_paPythonModulesInfo;
-}
-
-CvPythonModulesInfo& cvInternalGlobals::getPythonModulesInfo(int iIndex)
-{
-	FAssertMsg(iIndex >= 0 && iIndex < GC.getNumPythonModulesInfos(), "PythonModulesInfo index out of bounds");
-	return *(m_paPythonModulesInfo[iIndex]);
-}
-
 // MLF loading
 void cvInternalGlobals::resetModLoadControlVector()
 {
@@ -3994,7 +3998,6 @@ void cvInternalGlobals::cacheGlobals()
 /************************************************************************************************/
 	m_iPEAK_EXTRA_MOVEMENT = getDefineINT("PEAK_EXTRA_MOVEMENT");
 	m_iPEAK_EXTRA_DEFENSE = getDefineINT("PEAK_EXTRA_DEFENSE");
-	m_bFormationsMod = getDefineINT("FORMATIONS");
 	m_bXMLLogging = getDefineINT("XML_LOGGING_ENABLED");
 	m_iSCORE_FREE_PERCENT = getDefineINT("SCORE_FREE_PERCENT");
 	m_iSCORE_POPULATION_FACTOR = getDefineINT("SCORE_POPULATION_FACTOR");
@@ -4145,20 +4148,11 @@ void cvInternalGlobals::setDefineINT( const char * szName, int iValue, bool bUpd
 		else
 			GC.getDefinesVarSystem()->SetValue( szName, iValue );
 		cacheGlobals();
-			
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 }
-/************************************************************************************************/
-/* Afforess	                  Start		 08/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 void cvInternalGlobals::setDefineFLOAT( const char * szName, float fValue, bool bUpdate )
 {
-
 	if (getDefineFLOAT(szName) != fValue)
 	{
 		if (bUpdate)
@@ -4167,15 +4161,8 @@ void cvInternalGlobals::setDefineFLOAT( const char * szName, float fValue, bool 
 			GC.getDefinesVarSystem()->SetValue( szName, fValue );
 		cacheGlobals();
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 }
-/************************************************************************************************/
-/* Afforess	                  Start		 08/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 void cvInternalGlobals::setDefineSTRING( const char * szName, const char * szValue, bool bUpdate )
 {
 	if (getDefineSTRING(szName) != szValue)
@@ -4186,10 +4173,10 @@ void cvInternalGlobals::setDefineSTRING( const char * szName, const char * szVal
 			GC.getDefinesVarSystem()->SetValue( szName, szValue );
 		cacheGlobals(); // TO DO : we should not cache all globals at each single set
 	}
+}
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
-}
 
 int cvInternalGlobals::getMOVE_DENOMINATOR()
 {
@@ -4754,11 +4741,6 @@ int cvInternalGlobals::getMAX_TEAMS()
 	return MAX_TEAMS;
 }
 
-int cvInternalGlobals::getLAST_PLAYER()
-{
-	return LAST_PLAYER;
-}
-
 int cvInternalGlobals::getBARBARIAN_PLAYER()
 {
 	return BARBARIAN_PLAYER;
@@ -5137,8 +5119,6 @@ void cvInternalGlobals::deleteInfoArrays()
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	// Python Modular Loading
-	deleteInfoArray(m_paPythonModulesInfo);
 	// MLF loading
 	m_paModLoadControlVector.clear();
 	deleteInfoArray(m_paModLoadControls);
@@ -5211,22 +5191,6 @@ void cvInternalGlobals::deleteInfoArrays()
 
 	deleteInfoArray(m_paConceptInfo);
 	deleteInfoArray(m_paNewConceptInfo);
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-	// Dale - DCM: Pedia Concepts START
-	deleteInfoArray(m_paDCMConceptInfo);
-	// Dale - DCM: Pedia Concepts END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/*Afforess                                     11/13/09                                         */
-/************************************************************************************************/
-	deleteInfoArray(m_paANDConceptInfo);
-/************************************************************************************************/
-/* Afforess                                END                                                  */
-/************************************************************************************************/
 	deleteInfoArray(m_paCityTabInfo);
 	deleteInfoArray(m_paCalendarInfo);
 	deleteInfoArray(m_paSeasonInfo);
@@ -5773,21 +5737,6 @@ void cvInternalGlobals::setBorderFinder(FAStar* pVal) { m_borderFinder = pVal; }
 void cvInternalGlobals::setAreaFinder(FAStar* pVal) { m_areaFinder = pVal; }
 void cvInternalGlobals::setPlotGroupFinder(FAStar* pVal) { m_plotGroupFinder = pVal; }
 CvDLLUtilityIFaceBase* cvInternalGlobals::getDLLIFaceNonInl() { return g_DLL; }
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-// Dale - DCM: Pedia Concepts START
-int cvInternalGlobals::getNumDCMConceptInfos()
-{
-	return (int)m_paDCMConceptInfo.size();
-}
-
-// BUG - DLL Info - start
-bool cvInternalGlobals::isBull() const { return true; }
-int cvInternalGlobals::getBullApiVersion() const { return BUG_DLL_API_VERSION; }
-const wchar* cvInternalGlobals::getBullName() const { return BUG_DLL_NAME; }
-const wchar* cvInternalGlobals::getBullVersion() const { return BUG_DLL_VERSION; }
-// BUG - DLL Info - end
 
 // BUG - BUG Info - start
 static bool bBugInitCalled = false;
@@ -5833,15 +5782,6 @@ void cvInternalGlobals::setIsBug(bool bIsBug)
 	}
 }
 // BUG - BUG Info - end
-
-// BUFFY - DLL Info - start
-#ifdef _BUFFY
-bool cvInternalGlobals::isBuffy() const { return true; }
-int cvInternalGlobals::getBuffyApiVersion() const { return BUFFY_DLL_API_VERSION; }
-const wchar* cvInternalGlobals::getBuffyName() const { return BUFFY_DLL_NAME; }
-const wchar* cvInternalGlobals::getBuffyVersion() const { return BUFFY_DLL_VERSION; }
-#endif
-// BUFFY - DLL Info - end
 
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
@@ -5965,22 +5905,6 @@ int cvInternalGlobals::getCOMBAT_DAMAGE()
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-int cvInternalGlobals::getNumANDConceptInfos()
-{
-	return (int)m_paANDConceptInfo.size();
-}
-std::vector<CvInfoBase*>& cvInternalGlobals::getANDConceptInfos()
-{
-	return m_paANDConceptInfo;
-}
-
-CvInfoBase& cvInternalGlobals::getANDConceptInfo(ANDConceptTypes e)
-{
-	FAssert(e > -1);
-	FAssert(e < GC.getNumANDConceptInfos());
-	return *(m_paANDConceptInfo[e]);
-}
-
 int cvInternalGlobals::getPEAK_EXTRA_MOVEMENT()
 {
 	return m_iPEAK_EXTRA_MOVEMENT;
@@ -5989,11 +5913,6 @@ int cvInternalGlobals::getPEAK_EXTRA_MOVEMENT()
 int cvInternalGlobals::getPEAK_EXTRA_DEFENSE()
 {
 	return m_iPEAK_EXTRA_DEFENSE;
-}
-
-bool cvInternalGlobals::isFormationsMod() const
-{
-	return m_bFormationsMod;
 }
 
 bool cvInternalGlobals::isLoadedPlayerOptions() const
@@ -6160,18 +6079,6 @@ int cvInternalGlobals::getUSE_AI_CAN_DO_WARPLANS_CALLBACK()
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
-std::vector<CvInfoBase*>& cvInternalGlobals::getDCMConceptInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paDCMConceptInfo;
-}
-
-CvInfoBase& cvInternalGlobals::getDCMConceptInfo(DCMConceptTypes e)
-{
-	FAssert(e > -1);
-	FAssert(e < GC.getNumDCMConceptInfos());
-	return *(m_paDCMConceptInfo[e]);
-}
-// Dale - DCM: Pedia Concepts END
 
 /************************************************************************************************/
 /* Mod Globals    Start                          09/13/10                           phungus420  */
@@ -6401,63 +6308,6 @@ int cvInternalGlobals::getGraphicalDetailPageInRange()
 /************************************************************************************************/
 /* Mod Globals                        END                                           phungus420  */
 /************************************************************************************************/
-// BUFFY - DLL Info - start
-#ifdef _BUFFY
-bool cvInternalGlobals::isBuffy() const { return true; }
-int cvInternalGlobals::getBuffyApiVersion() const { return BUFFY_DLL_API_VERSION; }
-const wchar* cvInternalGlobals::getBuffyName() const { return BUFFY_DLL_NAME; }
-const wchar* cvInternalGlobals::getBuffyVersion() const { return BUFFY_DLL_VERSION; }
-#endif
-// BUFFY - DLL Info - end
-
-
-/**** Dexy - Dark Ages START ****/
-const wchar* cvInternalGlobals::getRankingTextKeyWide(RankingTypes eRanking) const
-{
-	/* TODO read these from XML */
-	switch (eRanking)
-	{
-	case RANKING_POWER:
-		return L"TXT_KEY_RANKING_POWER";
-	case RANKING_POPULATION:
-		return L"TXT_KEY_RANKING_POPULATION";
-	case RANKING_LAND:
-		return L"TXT_KEY_RANKING_LAND";
-	case RANKING_CULTURE:
-		return L"TXT_KEY_RANKING_CULTURE";
-	case RANKING_ESPIONAGE:
-		return L"TXT_KEY_RANKING_ESPIONAGE";
-	case RANKING_WONDERS:
-		return L"TXT_KEY_RANKING_WONDERS";
-	case RANKING_TECH:
-		return L"TXT_KEY_RANKING_TECH";
-	default:
-		FAssertMsg(false, "Ranking type unknown");
-		return L"Ranking Type Unknown";
-	}			
-}
-/**** Dexy - Dark Ages  END  ****/
-
-const wchar* cvInternalGlobals::parseDenialHover(DenialTypes eDenial)
-{
-	int iCount = getDefineINT(getDenialInfo(eDenial).getType());
-	int iRand;
-	if (iCount > 0)
-	{
-		iRand = getASyncRand().get(iCount);
-		if (iRand == 0)
-		{
-			return GC.getDenialInfo(eDenial).getDescription();
-		}
-		else
-		{
-			CvWString szType = getDenialInfo(eDenial).getType();
-			szType.append(CvWString::format(L"_%d", iRand));
-			return gDLL->getText(szType);
-		}
-	}
-	return GC.getDenialInfo(eDenial).getDescription();
-}
 
 // calculate asset checksum
 unsigned int cvInternalGlobals::getAssetCheckSum()

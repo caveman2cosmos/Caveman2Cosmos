@@ -44,7 +44,6 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #undef new    // IMPORTANT!
 
-
 extern void CreateMiniDump(EXCEPTION_POINTERS *pep);
 
 void* CvMalloc(size_t size)
@@ -182,9 +181,10 @@ namespace MemTrack
 		char const* myTypeName;
 
 	public:     // members
-		BlockHeader(size_t requestedSize);
+		BlockHeader(size_t requestedSize = static_cast<size_t>(-1));
 		~BlockHeader();
 
+		bool IsValid() const { return myRequestedSize != static_cast<size_t>(-1); }
 		size_t GetRequestedSize() const { return myRequestedSize; }
 		char const* GetFilename() const { return myFilename; }
 		int GetLineNum() const { return myLineNum; }
@@ -197,6 +197,7 @@ namespace MemTrack
 		static size_t CountBlocks();
 		static void GetBlocks(BlockHeader** blockHeaderPP);
 		static bool TypeGreaterThan(BlockHeader* header1, BlockHeader* header2);
+		static bool LocGreaterThan(BlockHeader* header1, BlockHeader* header2);
 	};
 
 	/* ---------------------------------------- BlockHeader static member variables */
@@ -317,6 +318,16 @@ namespace MemTrack
 	bool BlockHeader::TypeGreaterThan(BlockHeader* header1, BlockHeader* header2)
 	{
 		return (strcmp(header1->myTypeName, header2->myTypeName) > 0);
+	}
+
+	bool BlockHeader::LocGreaterThan(BlockHeader* header1, BlockHeader* header2)
+	{
+		int fComp = strcmp(header1->myFilename, header2->myFilename);
+		if (fComp > 0) return true;
+		if (fComp < 0) return false;
+		if (header1->myLineNum > header2->myLineNum) return true;
+		if (header1->myLineNum < header2->myLineNum) return false;
+		return strcmp(header1->myTypeName, header2->myTypeName) > 0;
 	}
 
 	/* ------------------------------------------------------------ */
@@ -448,11 +459,19 @@ namespace MemTrack
 		// If the allocation failed, then return NULL.
 		if (pProlog == NULL) return NULL;
 
-		// Use placement new to construct the block header in place.
-		BlockHeader* pBlockHeader = new (pProlog) BlockHeader(size);
 
-		// Link the block header into the list of extant block headers.
-		BlockHeader::AddNode(pBlockHeader);
+		if (!UntrackedScope::is_tracking_disabled())
+		{
+			// Use placement new to construct the block header in place.
+			BlockHeader* pBlockHeader = new (pProlog) BlockHeader(size);
+			// Link the block header into the list of extant block headers.
+			BlockHeader::AddNode(pBlockHeader);
+		}
+		else
+		{
+			// Use placement new to construct the block header with invalid flag in place.
+			new (pProlog) BlockHeader();
+		}
 
 		// Use placement new to construct the signature in place.
 		Signature* pSignature = new (GetSignatureAddress(pProlog)) Signature;
@@ -484,7 +503,10 @@ namespace MemTrack
 
 		// Unlink the block header from the list and destroy it.
 		BlockHeader* pBlockHeader = GetHeaderAddress(pProlog);
-		BlockHeader::RemoveNode(pBlockHeader);
+		if(pBlockHeader->IsValid())
+		{
+			BlockHeader::RemoveNode(pBlockHeader);
+		}
 		pBlockHeader->~BlockHeader();
 		pBlockHeader = NULL;
 
@@ -509,7 +531,8 @@ namespace MemTrack
 		pHeader->Stamp(stamp.filename, stamp.lineNum, typeName);
 	}
 
-	std::string convertToString(double num) {
+	template < class Type_ >
+	std::string convertToString(Type_ num) {
 		std::ostringstream convert;
 		convert << num;
 		return convert.str();
@@ -523,17 +546,33 @@ namespace MemTrack
 	}
 
 	std::string convertSize(size_t size) {
-		static const char* SIZES[] = { "B", "KB", "MB", "GB" };
+		static const char* SIZES[] = { "B ", "KB", "MB", "GB" };
 		int div = 0;
 		size_t rem = 0;
-
 		while (size >= 1024 && div < (sizeof SIZES / sizeof * SIZES) - 1) {
 			rem = (size % 1024);
 			div++;
 			size /= 1024;
 		}
 		double size_d = (float)size + (float)rem / 1024.0;
-		std::string result = convertToString(roundOff(size_d)) + " " + SIZES[div];
+		std::string result = convertToString((div == 0 ? static_cast<int>(roundOff(size_d)) : roundOff(size_d))) + " " + SIZES[div];
+		return result;
+	}
+
+	template < typename SizeTy_ >
+	std::string convertSize(SizeTy_ size) {
+		static const char* SIZES[] = { "B ", "KB", "MB", "GB" };
+		int div = 0;
+		SizeTy_ rem = 0;
+		const int sign = size >= 0 ? 1 : -1;
+		size = std::abs(size);
+		while (size >= 1024 && div < (sizeof SIZES / sizeof * SIZES) - 1) {
+			rem = (size % 1024);
+			div++;
+			size /= 1024;
+		}
+		double size_d = (float)size + (float)rem / 1024.0;
+		std::string result = convertToString(sign * (div == 0? static_cast<int>(roundOff(size_d)) : roundOff(size_d))) + " " + SIZES[div];
 		return result;
 	}
 
@@ -560,8 +599,8 @@ namespace MemTrack
 			size_t size = pBlockHeader->GetRequestedSize();
 			char const* fileName = pBlockHeader->GetFilename();
 			int lineNum = pBlockHeader->GetLineNum();
-			mem_log << boost::format("*** #%-6d %13d %-50s\n") % i % convertSize(size).c_str() % typeName;
-			mem_log << boost::format("... %s:%d\n") % fileName % lineNum;
+			mem_log << bst::format("*** #%-6d %13d %-50s\n") % i % convertSize(size).c_str() % typeName;
+			mem_log << bst::format("... %s:%d\n") % fileName % lineNum;
 		}
 
 		mem_log.flush();
@@ -594,6 +633,8 @@ namespace MemTrack
 		size_t endPost
 	)
 	{
+		MEMTRACK_EXEMPT;
+
 		pMemDigest->typeName = ppBlockHeader[startPost]->GetTypeName();
 		pMemDigest->blockCount = 0;
 		pMemDigest->totalSize = 0;
@@ -609,6 +650,8 @@ namespace MemTrack
 
 	void TrackListMemoryUsage()
 	{
+		MEMTRACK_EXEMPT;
+
 		// If there are no allocated blocks, then return now.
 		size_t numBlocks = BlockHeader::CountBlocks();
 		if (numBlocks == 0) return;
@@ -679,8 +722,8 @@ namespace MemTrack
 		mem_log << "Memory Usage Statistics\n";
 		mem_log << "-----------------------\n";
 		mem_log << "\n";
-		mem_log << boost::format("%-50s %12s %5s %15s %s \n") % "allocated type" % "blocks" % "" % "bytes" % "";
-		mem_log << boost::format("%-50s %12s %5s %15s %s \n") % "--------------" % "------" % "" % "-----" % "";
+		mem_log << bst::format("%-50s %12s %5s %15s %s \n") % "allocated type" % "blocks" % "" % "bytes" % "";
+		mem_log << bst::format("%-50s %12s %5s %15s %s \n") % "--------------" % "------" % "" % "-----" % "";
 
 		for (size_t i = 0; i < numUniqueTypes; i++)
 		{
@@ -690,7 +733,7 @@ namespace MemTrack
 			size_t totalSize = pMD->totalSize;
 			double totalSizePct = 100.0 * totalSize / grandTotalSize;
 
-			mem_log << boost::format("%-50s %12d %5.1f%% %15d %5.1f%%\n")
+			mem_log << bst::format("%-50s %12d %5.1f%% %15d %5.1f%%\n")
 				% pMD->typeName
 				% blockCount
 				% blockCountPct
@@ -698,8 +741,8 @@ namespace MemTrack
 				% totalSizePct
 			;
 		}
-		mem_log << boost::format("%-50s %12s %5s  %15s %s \n") % "--------" % "-----" % "" % "-------" % "";
-		mem_log << boost::format("%-50s %12d %5s  %15s %s \n") % "[totals]" % grandTotalNumBlocks % "" % convertSize(grandTotalSize).c_str() % "";
+		mem_log << bst::format("%-50s %12s %5s  %15s %s \n") % "--------" % "-----" % "" % "-------" % "";
+		mem_log << bst::format("%-50s %12d %5s  %15s %s \n") % "[totals]" % grandTotalNumBlocks % "" % convertSize(grandTotalSize).c_str() % "";
 
 		mem_log.flush();
 
@@ -708,6 +751,144 @@ namespace MemTrack
 		free(pMemDigestArray);
 	}
 
+	namespace {
+		struct MemInfo
+		{
+			MemInfo(int count = 0, int size = 0) : count(count), size(size) {}
+			int count;
+			int size;
+		};
+
+		typedef stdext::hash_map<std::string, MemInfo> MemMap;
+		MemMap memLastTurn;
+		int turnIndex = 0;
+		size_t totalLastTurnBlocks = 0;
+		size_t totalLastTurnSize = 0;
+
+		struct MemInfoDiff
+		{
+			MemInfoDiff(const std::string& id = std::string(), MemInfo diff = MemInfo(), MemInfo total = MemInfo()) : id(id), diff(diff), total(total) {}
+
+			std::string id;
+			MemInfo diff;
+			MemInfo total;
+
+			bool operator<(const MemInfoDiff& other) const
+			{
+				return diff.size < other.diff.size;
+			}
+
+			void write(std::ofstream& stream) const
+			{
+				if (id.length() >= 80)
+				{
+					mem_log << bst::format("%s\n") % id;
+					mem_log << bst::format("%-80s   TOTAL %8d %12s   DELTA %8d %12s\n")
+						% ""
+						% total.count % convertSize(total.size).c_str()
+						% diff.count % convertSize(diff.size).c_str();
+				}
+				else
+				{
+					mem_log << bst::format("%-80s   TOTAL %8d %12s   DELTA %8d %12s\n")
+						% id
+						% total.count % convertSize(total.size).c_str()
+						% diff.count % convertSize(diff.size).c_str();
+				}
+
+			}
+		};
+
+		std::string get_block_id(const BlockHeader* block)
+		{
+			std::string fname = block->GetFilename();
+			size_t p = fname.find_last_of('\\');
+			if (p != std::string::npos)
+				fname = fname.substr(p);
+			return (bst::format("%s(%d): %s") % fname % block->GetLineNum() % block->GetTypeName()).str();
+		}
+	};
+
+	void TrackListMemoryUsageTurnDiff()
+	{
+		if (turnIndex++ % 10 != 0)
+		{
+			return;
+		}
+		MEMTRACK_EXEMPT;
+
+		// If there are no allocated blocks, then return now.
+		size_t numBlocks = BlockHeader::CountBlocks();
+		if (numBlocks == 0) return;
+
+		const size_t grandTotalNumBlocks = numBlocks;
+		size_t grandTotalSize = 0;
+
+		// Get an array of pointers to all extant blocks.
+		BlockHeader** ppBlockHeader = (BlockHeader**)calloc(numBlocks, sizeof(*ppBlockHeader));
+		BlockHeader::GetBlocks(ppBlockHeader);
+
+		MemMap thisTurn;
+
+		for (size_t i = 0; i < numBlocks; i++)
+		{
+			const BlockHeader* block = ppBlockHeader[i];
+			MemInfo& info  = thisTurn[get_block_id(block)];
+			++info.count;
+			info.size += block->GetRequestedSize();
+			grandTotalSize += block->GetRequestedSize();
+		}
+
+		free(ppBlockHeader);
+		// Dump the memory usage statistics.
+		mem_log << "\n=============================\n";
+		mem_log << bst::format("TURN %d") % (turnIndex + 1); // "-----------------------\n";
+		mem_log << "\n";
+
+		std::vector<MemInfoDiff> diffs;
+		for (MemMap::iterator itr = thisTurn.begin(); itr != thisTurn.end(); ++itr)
+		{
+			MemInfo& oldInfo = memLastTurn[itr->first];
+			int countDiff = itr->second.count - oldInfo.count;
+			if (countDiff != 0)
+			{
+				diffs.push_back(MemInfoDiff(itr->first, MemInfo(countDiff, itr->second.size - oldInfo.size), itr->second));
+			}
+			oldInfo = itr->second;
+		}
+
+		for (MemMap::iterator itr = memLastTurn.begin(); itr != memLastTurn.end(); ++itr)
+		{
+			if (thisTurn.find(itr->first.c_str()) == thisTurn.end())
+			{
+				diffs.push_back(MemInfoDiff(itr->first, MemInfo(-itr->second.count, -itr->second.size)));
+
+				itr->second.count = 0;
+				itr->second.size = 0;
+			}
+		}
+
+		std::sort(diffs.rbegin(), diffs.rend());
+
+		for (std::vector<MemInfoDiff>::const_iterator itr = diffs.begin(); itr != diffs.end(); ++itr)
+		{
+			itr->write(mem_log);
+		}
+
+		mem_log << bst::format("%-80s   TOTAL %8d %12s   DELTA %8d %12s\n") 
+			% "" 
+			% grandTotalNumBlocks % convertSize(grandTotalSize).c_str() 
+			% (static_cast<int>(grandTotalNumBlocks) - static_cast<int>(totalLastTurnBlocks)) 
+			% convertSize(static_cast<int>(static_cast<long long>(grandTotalSize) - static_cast<long long>(totalLastTurnSize))).c_str();
+
+		totalLastTurnBlocks = grandTotalNumBlocks;
+		totalLastTurnSize = grandTotalSize;
+
+		mem_log.flush();
+
+	}
+
+	int UntrackedScope::m_ref = 0;
 }    // namespace MemTrack
 
 /* ------------------------------------------------------------ */
@@ -722,8 +903,8 @@ void* operator new(size_t size)
 	void* p = MemTrack::TrackMalloc(size);
 #else
 	void* p = CvMalloc(size);
-	if (p == NULL) throw std::bad_alloc();
 #endif
+	if (p == NULL) throw std::bad_alloc();
 	return p;
 }
 
@@ -746,8 +927,8 @@ void* operator new[](size_t size)
 	void* p = MemTrack::TrackMalloc(size);
 #else
 	void* p = CvMallocArray(size);
-	if (p == NULL) throw std::bad_alloc();
 #endif
+	if (p == NULL) throw std::bad_alloc();
 	return p;
 }
 
@@ -761,4 +942,3 @@ void operator delete[](void* p)
 	CvFreeArray(p);
 #endif
 }
-

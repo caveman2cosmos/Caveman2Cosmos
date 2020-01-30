@@ -1675,7 +1675,7 @@ void CvNetChooseMergeUnit::Debug(char* szAddendum)
 }
 
 // Helpers
-namespace {
+namespace NetChooseMergeUnit {
 	bool isGroupUpgradePromotion(const CvUnit* unit, PromotionTypes promotion)
 	{
 		return GC.getPromotionInfo(promotion).getGroupChange() > 0 &&
@@ -1757,7 +1757,7 @@ void CvNetChooseMergeUnit::Execute()
 								pkMergedUnit->afflict(GC.getPromotionInfo(ePromotion).getPromotionLine());
 							}
 						}
-						else if (pUnit1->isPromotionFree(ePromotion) || pUnit2->isPromotionFree((PromotionTypes)iI) || pUnit3->isPromotionFree((PromotionTypes)iI))
+						else if (pUnit1->isPromotionFree(ePromotion) || pUnit2->isPromotionFree(ePromotion) || pUnit3->isPromotionFree(ePromotion))
 						{
 							pkMergedUnit->setHasPromotion(ePromotion, true, true);
 						}
@@ -1780,26 +1780,26 @@ void CvNetChooseMergeUnit::Execute()
 				{
 					if (pUnit1->isHasPromotion(ePromotion) || pUnit2->isHasPromotion(ePromotion) || pUnit3->isHasPromotion(ePromotion))
 					{
-						iTotalQualityOffset += GC.getPromotionInfo((PromotionTypes)iI).getQualityChange();
+						iTotalQualityOffset += GC.getPromotionInfo(ePromotion).getQualityChange();
 					}
 				}
 				else if (GC.getPromotionInfo(ePromotion).getGroupChange() != 0)
 				{
 					if (pUnit1->isHasPromotion(ePromotion) || pUnit2->isHasPromotion(ePromotion) || pUnit3->isHasPromotion(ePromotion))
 					{
-						iTotalGroupOffset += GC.getPromotionInfo((PromotionTypes)iI).getGroupChange();
+						iTotalGroupOffset += GC.getPromotionInfo(ePromotion).getGroupChange();
 					}
 				}
 			}
 			bool bNormalizedGroup = CvUnit::normalizeUnitPromotions(pkMergedUnit, iTotalGroupOffset, 
-				boost::bind(&CvUnit::isGroupUpgradePromotion, pkMergedUnit, _2),
-				boost::bind(&CvUnit::isGroupDowngradePromotion, pkMergedUnit, _2)
+				bst::bind(&CvUnit::isGroupUpgradePromotion, pkMergedUnit, _2),
+				bst::bind(&CvUnit::isGroupDowngradePromotion, pkMergedUnit, _2)
 			);
 			FAssertMsg(bNormalizedGroup, "Could not apply required number of group promotions on merged units");
 
 			bool bNormalizedQuality = CvUnit::normalizeUnitPromotions(pkMergedUnit, iTotalQualityOffset,
-				boost::bind(&CvUnit::isQualityUpgradePromotion, pkMergedUnit, _2),
-				boost::bind(&CvUnit::isQualityDowngradePromotion, pkMergedUnit, _2)
+				bst::bind(&CvUnit::isQualityUpgradePromotion, pkMergedUnit, _2),
+				bst::bind(&CvUnit::isQualityDowngradePromotion, pkMergedUnit, _2)
 			);
 			FAssertMsg(bNormalizedQuality, "Could not apply required number of quality promotions on merged units");
 			
@@ -1952,14 +1952,14 @@ void CvNetConfirmSplitUnit::Execute()
 			newUnits.push_back(pUnit3);
 
 			bool bNormalizedGroup = CvUnit::normalizeUnitPromotions(newUnits, iTotalGroupOffset,
-				boost::bind(isGroupUpgradePromotion, pUnit1, _2),
-				boost::bind(isGroupDowngradePromotion, pUnit1, _2)
+				bst::bind(NetChooseMergeUnit::isGroupUpgradePromotion, pUnit1, _2),
+				bst::bind(NetChooseMergeUnit::isGroupDowngradePromotion, pUnit1, _2)
 			);
 			FAssertMsg(bNormalizedGroup, "Could not apply required number of group promotions on split units");
 
 			bool bNormalizedQuality = CvUnit::normalizeUnitPromotions(newUnits, iTotalQualityOffset,
-				boost::bind(isQualityUpgradePromotion, pUnit1, _2),
-				boost::bind(isQualityDowngradePromotion, pUnit1, _2)
+				bst::bind(NetChooseMergeUnit::isQualityUpgradePromotion, pUnit1, _2),
+				bst::bind(NetChooseMergeUnit::isQualityDowngradePromotion, pUnit1, _2)
 			);
 			FAssertMsg(bNormalizedQuality, "Could not apply required number of quality promotions on split units");
 

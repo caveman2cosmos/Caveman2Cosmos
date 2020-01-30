@@ -5,12 +5,10 @@
 
 CyCity::CyCity() : m_pCity(NULL)
 {
-
 }
 
 CyCity::CyCity(CvCity* pCity) : m_pCity(pCity)
 {
-
 }
 
 void CyCity::kill()
@@ -26,10 +24,7 @@ void CyCity::kill()
 /************************************************************************************************/
 int CyCity::getRevolutionIndex()
 {
-	if( m_pCity )
-		return m_pCity->getRevolutionIndex();
-	else
-		return 0;
+	return m_pCity ? m_pCity->getRevolutionIndex() : 0;
 }
 
 void CyCity::setRevolutionIndex( int iNewValue )
@@ -122,70 +117,6 @@ void CyCity::changeRevolutionCounter( int iChange )
 {
 	if( m_pCity )
 		m_pCity->changeRevolutionCounter( iChange );
-}
-
-int CyCity::getRevIndexHappinessVal()
-{
-	if( m_pCity )
-		return m_pCity->getRevIndexHappinessVal();
-	else
-		return 0;
-}
-
-int CyCity::getRevIndexDistanceVal()
-{
-	if( m_pCity )
-		return m_pCity->getRevIndexDistanceVal();
-	else
-		return 0;
-}
-
-int CyCity::getRevIndexColonyVal()
-{
-	if( m_pCity )
-		return m_pCity->getRevIndexColonyVal();
-	else
-		return 0;
-}
-
-int CyCity::getRevIndexReligionVal()
-{
-	if( m_pCity )
-		return m_pCity->getRevIndexReligionVal();
-	else
-		return 0;
-}
-
-int CyCity::getRevIndexNationalityVal()
-{
-	if( m_pCity )
-		return m_pCity->getRevIndexNationalityVal();
-	else
-		return 0;
-}
-
-int CyCity::getRevIndexHealthVal()
-{
-	if( m_pCity )
-		return m_pCity->getRevIndexHealthVal();
-	else
-		return 0;
-}
-
-int CyCity::getRevIndexGarrisonVal()
-{
-	if( m_pCity )
-		return m_pCity->getRevIndexGarrisonVal();
-	else
-		return 0;
-}
-
-int CyCity::getRevIndexDisorderVal()
-{
-	if( m_pCity )
-		return m_pCity->getRevIndexDisorderVal();
-	else
-		return 0;
 }
 
 bool CyCity::isRecentlyAcquired()
@@ -511,7 +442,10 @@ int CyCity::getProductionModifier()
 
 int CyCity::getCurrentProductionDifference(bool bIgnoreFood, bool bOverflow)
 {
-	return m_pCity ? m_pCity->getCurrentProductionDifference(bIgnoreFood, bOverflow) : -1;
+	return m_pCity ? m_pCity->getCurrentProductionDifference(
+		(bIgnoreFood? ProductionCalc::None : ProductionCalc::FoodProduction) | 
+		(bOverflow? ProductionCalc::Overflow : ProductionCalc::None)
+	) : -1;
 }
 
 int CyCity::getUnitProductionModifier(int /*UnitTypes*/ iUnit)
@@ -2379,6 +2313,11 @@ bool CyCity::hasBonus(int /*BonusTypes */iBonus)
 	return m_pCity ? m_pCity->hasBonus((BonusTypes) iBonus) : false;
 }
 
+bool CyCity::hasVicinityBonus(int iBonus)
+{
+	return m_pCity ? m_pCity->hasVicinityBonus(static_cast<BonusTypes>(iBonus)) : false;
+}
+
 int CyCity::getBuildingProduction(int /*BuildingTypes*/ iIndex)
 {
 	return m_pCity ? m_pCity->getBuildingProduction((BuildingTypes) iIndex) : -1;
@@ -2749,9 +2688,9 @@ int CyCity::getOrderQueueLength()
 	return m_pCity ? m_pCity->getOrderQueueLength() : -1;
 }
 
-OrderData* CyCity::getOrderFromQueue(int iIndex)
+OrderData CyCity::getOrderFromQueue(int iIndex)
 {
-	return m_pCity ? m_pCity->getOrderFromQueue(iIndex) : NULL;
+	return m_pCity ? m_pCity->getOrderAt(iIndex) : OrderData::InvalidOrder;
 }
 
 void CyCity::setWallOverridePoints(const python::tuple& kPoints)
@@ -2917,10 +2856,6 @@ int /*UnitTypes*/ CyCity::AI_bestUnitAI(int iUnitAIType)
 	return (m_pCity ? m_pCity->AI_bestUnitAI((UnitAITypes)iUnitAIType, iDummyValue) : -1);
 }
 
-int /*BuildingTypes*/ CyCity::AI_bestBuilding(int iFocusFlags)
-{
-	return (m_pCity ? m_pCity->AI_bestBuilding(iFocusFlags) : -1);
-}
 /************************************************************************************************/
 /* REVOLUTION_MOD                          END                                                  */
 /************************************************************************************************/

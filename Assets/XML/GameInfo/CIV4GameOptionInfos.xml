@@ -612,7 +612,7 @@
 			<Description>TXT_KEY_GAMEOPTION_NIGHTMARE_MODE</Description>
 			<Help>TXT_KEY_GAMEOPTION_NIGHTMARE_MODE_HELP</Help>
 			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
+			<bVisible>0</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_SIZE_MATTERS_UNCUT</Type>

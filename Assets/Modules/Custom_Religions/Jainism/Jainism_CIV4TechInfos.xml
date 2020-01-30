@@ -42,7 +42,7 @@
 			</Flavors>
 			<Quote>TXT_KEY_RELIGION_JAINISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_JAINISM</Sound>
-			<SoundMP>AS2D_TECH_JAINISM</SoundMP>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Jainism.dds</Button>
 		</TechInfo>
 	</TechInfos>

@@ -23,7 +23,7 @@ bool runProcess(const std::string& exe, const std::string& workingDir)
 	// HOWEVER: this DLL is loaded by LoadLibrary later in exe startup so we appear to have the required dlls already loaded at this point.
 	if (::CreateProcessA(NULL, (LPSTR)exe.c_str(), NULL, NULL, TRUE, 0, NULL, workingDir.c_str(), &startupInfo, &procInfo))
 	{
-		success = ::WaitForSingleObject(procInfo.hProcess, 1500000) == WAIT_OBJECT_0;
+		success = ::WaitForSingleObject(procInfo.hProcess, 1800000) == WAIT_OBJECT_0;
 	}
 	::CloseHandle(procInfo.hProcess);
 	::CloseHandle(procInfo.hThread);
@@ -75,10 +75,15 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 				MessageBox(0, "Creation of FPK packs failed, are you sure you set up the development environment correctly?", "ERROR!", 0);
 				return FALSE;
 			}
-			if (!runProcess("cmd.exe /C \"" + git_dir + "\\Tools\\_BootDLLCheck.bat\" " + TOSTRING(BUILD_TARGET), git_dir + "\\Tools"))
+
+			// Don't attempt rebuild if debugger is connected, its annoying
+			if(!IsDebuggerPresent())
 			{
-				MessageBox(0, "DLL update failed!", "ERROR!", 0);
-				return FALSE;
+				if (!runProcess("cmd.exe /C \"" + git_dir + "\\Tools\\_BootDLLCheck.bat\" " + TOSTRING(BUILD_TARGET), git_dir + "\\Tools"))
+				{
+					MessageBox(0, "DLL update failed!", "ERROR!", 0);
+					return FALSE;
+				}
 			}
 		}
 		}

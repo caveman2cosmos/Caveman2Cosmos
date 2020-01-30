@@ -2932,7 +2932,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 				{
 					CvUnit* pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
 
-					if (pSelectedUnit->canDiscover(pMissionPlot))
+					if (pSelectedUnit->canDiscover())
 					{
 						TechTypes eTech = pSelectedUnit->getDiscoveryTech();
 	
@@ -4460,37 +4460,34 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 		bool bFirst = true;
 		for (int iTeamIndex = 0; iTeamIndex < MAX_TEAMS; iTeamIndex++)
 		{
-			TeamTypes eLoopTeam = (TeamTypes) iTeamIndex;
+			TeamTypes eLoopTeam = (TeamTypes)iTeamIndex;
 			CvTeamAI& kLoopTeam = GET_TEAM(eLoopTeam);
-			if (eLoopTeam != eTeam && kLoopTeam.isAlive() && !kLoopTeam.isNPC() && !kLoopTeam.isMinorCiv())
+			if (eLoopTeam != eTeam && kLoopTeam.isAlive() && !kLoopTeam.isMinorCiv() && kTeam.isAtWar(eLoopTeam))
 			{
-				if (kTeam.isAtWar(eLoopTeam))
+				if (bFirst)
 				{
-					if (bFirst)
-					{
-						szBuffer.append(CvWString::format(SETCOLR L"Current War:\n" ENDCOLR, TEXT_COLOR("COLOR_UNIT_TEXT")));
-						bFirst = false;
-					}
-
-					bHadAny = true;
-					
-					WarPlanTypes eWarPlan = kTeam.AI_getWarPlan(eLoopTeam);
-					CvWStringBuffer szWarplan;
-					GAMETEXT.getWarplanString(szWarplan, eWarPlan);
-
-					int iOtherValue = kTeam.AI_endWarVal(eLoopTeam);
-					int iTheirValue = kLoopTeam.AI_endWarVal(eTeam);
-					
-					szBuffer.append( CvWString::format(SETCOLR L" %s " ENDCOLR SETCOLR L"(%d, %d)" ENDCOLR SETCOLR L" with %s " ENDCOLR  SETCOLR L"(%d, %d)\n" ENDCOLR, 
-						TEXT_COLOR((iOtherValue < iTheirValue) ? "COLOR_POSITIVE_TEXT" : "COLOR_NEGATIVE_TEXT"),
-						szWarplan.getCString(),
-						TEXT_COLOR((iOtherValue < iTheirValue) ? "COLOR_POSITIVE_TEXT" : "COLOR_NEGATIVE_TEXT"),
-						iOtherValue, kTeam.AI_getWarSuccess(eLoopTeam),
-						TEXT_COLOR((iOtherValue < iTheirValue) ? "COLOR_POSITIVE_TEXT" : "COLOR_NEGATIVE_TEXT"),
-						kLoopTeam.getName().GetCString(),
-						TEXT_COLOR((iTheirValue < iOtherValue) ? "COLOR_POSITIVE_TEXT" : "COLOR_NEGATIVE_TEXT"),
-						iTheirValue, kLoopTeam.AI_getWarSuccess(eTeam)) );
+					szBuffer.append(CvWString::format(SETCOLR L"Current War:\n" ENDCOLR, TEXT_COLOR("COLOR_UNIT_TEXT")));
+					bFirst = false;
 				}
+
+				bHadAny = true;
+				
+				WarPlanTypes eWarPlan = kTeam.AI_getWarPlan(eLoopTeam);
+				CvWStringBuffer szWarplan;
+				GAMETEXT.getWarplanString(szWarplan, eWarPlan);
+
+				int iOtherValue = kTeam.AI_endWarVal(eLoopTeam);
+				int iTheirValue = kLoopTeam.AI_endWarVal(eTeam);
+				
+				szBuffer.append( CvWString::format(SETCOLR L" %s " ENDCOLR SETCOLR L"(%d, %d)" ENDCOLR SETCOLR L" with %s " ENDCOLR  SETCOLR L"(%d, %d)\n" ENDCOLR, 
+					TEXT_COLOR((iOtherValue < iTheirValue) ? "COLOR_POSITIVE_TEXT" : "COLOR_NEGATIVE_TEXT"),
+					szWarplan.getCString(),
+					TEXT_COLOR((iOtherValue < iTheirValue) ? "COLOR_POSITIVE_TEXT" : "COLOR_NEGATIVE_TEXT"),
+					iOtherValue, kTeam.AI_getWarSuccess(eLoopTeam),
+					TEXT_COLOR((iOtherValue < iTheirValue) ? "COLOR_POSITIVE_TEXT" : "COLOR_NEGATIVE_TEXT"),
+					kLoopTeam.getName().GetCString(),
+					TEXT_COLOR((iTheirValue < iOtherValue) ? "COLOR_POSITIVE_TEXT" : "COLOR_NEGATIVE_TEXT"),
+					iTheirValue, kLoopTeam.AI_getWarSuccess(eTeam)) );
 			}
 		}
 		
@@ -4515,11 +4512,11 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 		// show warplan values
 		bHadAny = false;
 		bFirst = true;
-		for (int iTeamIndex = 0; iTeamIndex < MAX_TEAMS; iTeamIndex++)
+		for (int iTeamIndex = 0; iTeamIndex < MAX_PC_TEAMS; iTeamIndex++)
 		{
 			TeamTypes eLoopTeam = (TeamTypes) iTeamIndex;
 			CvTeamAI& kLoopTeam = GET_TEAM(eLoopTeam);
-			if (eLoopTeam != eTeam && kLoopTeam.isAlive() && !kLoopTeam.isNPC())
+			if (eLoopTeam != eTeam && kLoopTeam.isAlive())
 			{
 				WarPlanTypes eWarPlan = kTeam.AI_getWarPlan(eLoopTeam);
 				if (!kTeam.isAtWar(eLoopTeam) && eWarPlan != NO_WARPLAN)
@@ -4674,13 +4671,13 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 		} aStartWarInfo[MAX_TEAMS];
 		
 		// first calculate all the values and put into array
-		for (int iTeamIndex = 0; iTeamIndex < MAX_TEAMS; iTeamIndex++)
+		for (int iTeamIndex = 0; iTeamIndex < MAX_PC_TEAMS; iTeamIndex++)
 		{
 			aStartWarInfo[iTeamIndex].bValid = false;
 			
 			TeamTypes eLoopTeam = (TeamTypes) iTeamIndex;
 			CvTeamAI& kLoopTeam = GET_TEAM(eLoopTeam);
-			if (eLoopTeam != eTeam && kLoopTeam.isAlive() && !kLoopTeam.isNPC())
+			if (eLoopTeam != eTeam && kLoopTeam.isAlive())
 			{
 				WarPlanTypes eWarPlan = kTeam.AI_getWarPlan(eLoopTeam);
 				if (!kTeam.isAtWar(eLoopTeam) && (eWarPlan == NO_WARPLAN))
@@ -6091,46 +6088,43 @@ void CvDLLWidgetData::parseSelectedHelp(CvWidgetDataStruct &widgetDataStruct, Cv
 
 	if (pHeadSelectedCity != NULL)
 	{
-		OrderData* pOrder = pHeadSelectedCity->getOrderFromQueue(widgetDataStruct.m_iData1);
+		const OrderData order = pHeadSelectedCity->getOrderAt(widgetDataStruct.m_iData1);
 
-		if (pOrder != NULL)
+		switch (order.eOrderType)
 		{
-			switch (pOrder->eOrderType)
-			{
-			case ORDER_TRAIN:
-				GAMETEXT.setUnitHelp(szBuffer, ((UnitTypes)EXTERNAL_ORDER_IDATA(pOrder->iData1)), false, false, false, pHeadSelectedCity);
-				break;
+		case ORDER_TRAIN:
+			GAMETEXT.setUnitHelp(szBuffer, order.getUnitType(), false, false, false, pHeadSelectedCity);
+			break;
 
-			case ORDER_CONSTRUCT:
+		case ORDER_CONSTRUCT:
 // BUG - Building Actual Effects - start
-				GAMETEXT.setBuildingHelpActual(szBuffer, ((BuildingTypes)(pOrder->iData1)), false, false, false, pHeadSelectedCity);
+			GAMETEXT.setBuildingHelpActual(szBuffer, order.getBuildingType(), false, false, false, pHeadSelectedCity);
 // BUG - Building Actual Effects - end
-				break;
+			break;
 
-			case ORDER_CREATE:
-				GAMETEXT.setProjectHelp(szBuffer, ((ProjectTypes)(pOrder->iData1)), false, pHeadSelectedCity);
-				break;
+		case ORDER_CREATE:
+			GAMETEXT.setProjectHelp(szBuffer, order.getProjectType(), false, pHeadSelectedCity);
+			break;
 
-			case ORDER_MAINTAIN:
-				GAMETEXT.setProcessHelp(szBuffer, ((ProcessTypes)(pOrder->iData1)));
-				break;
+		case ORDER_MAINTAIN:
+			GAMETEXT.setProcessHelp(szBuffer, order.getProcessType());
+			break;
 
-			case ORDER_LIST:
+		case ORDER_LIST:
+			{
+				const CvPlayerAI& kPlayer = GET_PLAYER(pHeadSelectedCity->getOwnerINLINE());
+				const int index = kPlayer.m_pBuildLists->getIndexByID(order.getOrderListID());
+				if (index >= 0)
 				{
-					CvPlayerAI& kPlayer = GET_PLAYER(pHeadSelectedCity->getOwnerINLINE());
-					int index = kPlayer.m_pBuildLists->getIndexByID(pOrder->iData1);
-					if (index >= 0)
-					{
-						szBuffer.append(CvWString(kPlayer.m_pBuildLists->getListName(index)));
-					}
-					// Possibly display some building names on the list here
+					szBuffer.append(CvWString(kPlayer.m_pBuildLists->getListName(index)));
 				}
-				break;
-
-			default:
-				FAssertMsg(false, "eOrderType did not match valid options");
-				break;
+				// Possibly display some building names on the list here
 			}
+			break;
+
+		default:
+			FAssertMsg(false, "eOrderType did not match valid options");
+			break;
 		}
 	}
 }
@@ -6866,36 +6860,6 @@ void CvDLLWidgetData::parseDescriptionHelp(CvWidgetDataStruct &widgetDataStruct,
 			}
 		}
 		break;
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-	case CIVILOPEDIA_PAGE_CONCEPT_DCM:
-		{
-			DCMConceptTypes eConcept = (DCMConceptTypes)widgetDataStruct.m_iData2;
-			if (NO_DCM_CONCEPT != eConcept)
-			{
-				szBuffer.assign(GC.getDCMConceptInfo(eConcept).getDescription());
-			}
-		}
-		break;
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* Afforess                                     11/13/09                                        */
-/************************************************************************************************/
-	case CIVILOPEDIA_PAGE_CONCEPT_AND:
-		{
-			ANDConceptTypes eConcept = (ANDConceptTypes)widgetDataStruct.m_iData2;
-			if (NO_AND_CONCEPT != eConcept)
-			{
-				szBuffer.assign(GC.getANDConceptInfo(eConcept).getDescription());
-			}
-		}
-		break;
-/************************************************************************************************/
-/* Afforess                                    END                                              */
-/************************************************************************************************/
 	case CIVILOPEDIA_PAGE_SPECIALIST:
 		{
 			SpecialistTypes eSpecialist = (SpecialistTypes)widgetDataStruct.m_iData2;

@@ -28,7 +28,7 @@ enum UnitValueFlags
 	UNITVALUE_FLAGS_UTILITY = 1 << 2,
 	UNITVALUE_FLAGS_ALL = UNITVALUE_FLAGS_DEFENSIVE | UNITVALUE_FLAGS_OFFENSIVE | UNITVALUE_FLAGS_UTILITY
 };
-DEFINE_ENUM_FLAG_OPERATORS(UnitValueFlags);
+DECLARE_FLAGS(UnitValueFlags);
 
 struct PromotionRequirements
 {
@@ -47,21 +47,41 @@ struct PromotionRequirements
 		ForStatus = 1 << 8
 	};
 };
-DEFINE_ENUM_FLAG_OPERATORS(PromotionRequirements::flags);
+DECLARE_FLAGS(PromotionRequirements::flags);
 
 struct PromotionApply
 {
 	enum flags
 	{
 		None = 0,
-		NewValue = 1 << 0,
-		Free = 1 << 1,
-		Dying = 1 << 2,
-		Initial = 1 << 3,
-		FromTrait = 1 << 4
+		Free = 1 << 0,
+		Dying = 1 << 1,
+		Initial = 1 << 2,
+		FromTrait = 1 << 3
 	};
 };
-DEFINE_ENUM_FLAG_OPERATORS(PromotionApply::flags);
+DECLARE_FLAGS(PromotionApply::flags);
+
+struct MoveCheck
+{
+	enum flags 
+	{
+		None = 0,
+		// Checking for a potential attack
+		Attack = 1 << 0,
+		// Allow declaration of war (human only check)
+		DeclareWar = 1 << 1,
+		// Don't allow loading into transports
+		IgnoreLoad = 1 << 2,
+		IgnoreTileLimit = 1 << 3,
+		IgnoreLocation = 1 << 4,
+		IgnoreAttack = 1 << 5,
+		CheckForBest = 1 << 6,
+		Assassinate = 1 << 7,
+		Suprise = 1 << 8
+	};
+};
+DECLARE_FLAGS(MoveCheck::flags);
 
 
 /************************************************************************************************/
@@ -437,9 +457,13 @@ public:
 	CvUnit(bool bIsDummy = false);
 	virtual ~CvUnit();
 
+	CvGameObjectUnit* getGameObject() { return &m_GameObject; }
+	const CvGameObjectUnit* getGameObject() const { return &m_GameObject; }
 
-	CvGameObjectUnit* getGameObject() {return &m_GameObject;};
-	const CvGameObjectUnit* getGameObjectConst() const {return (const CvGameObjectUnit*)&m_GameObject;};
+	// Comparison operators
+	// Use address identity for now (more than one map means x/y compare wouldn't work)
+	friend bool operator==(const CvUnit& lhs, const CvUnit& rhs) { return &lhs == &rhs; }
+	friend bool operator!=(const CvUnit& lhs, const CvUnit& rhs) { return &lhs != &rhs; }
 
 protected:
 	CvGameObjectUnit m_GameObject;
@@ -502,15 +526,22 @@ public:
 	bool canEnterTerritory(TeamTypes eTeam, bool bIgnoreRightOfPassage = false) const;						// Exposed to Python
 	bool canEnterArea(TeamTypes eTeam, const CvArea* pArea, bool bIgnoreRightOfPassage = false) const;						// Exposed to Python
 	TeamTypes getDeclareWarMove(const CvPlot* pPlot) const;															// Exposed to Python
-/************************************************************************************************/
-/* Afforess	                  Start		 06/17/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	bool canMoveInto(const CvPlot* pPlot, bool bAttack = false, bool bDeclareWar = false, bool bIgnoreLoad = false, bool bIgnoreTileLimit = false, bool bIgnoreLocation = false, bool bIgnoreAttack = false, CvUnit** pDefender = NULL, bool bCheckForBest = false, bool bAssassinate = false, bool bSuprise = false) const;	// Exposed to Python
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
+
+	bool canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags = MoveCheck::None, CvUnit** ppDefender = nullptr) const;
+	// Deprecated - use method above
+	//bool canMoveInto(const CvPlot* pPlot, 
+	//	bool bAttack = false, 
+	//	bool bDeclareWar = false, 
+	//	bool bIgnoreLoad = false, 
+	//	bool bIgnoreTileLimit = false,
+	//	bool bIgnoreLocation = false,
+	//	bool bIgnoreAttack = false,
+	//	CvUnit** pDefender = NULL,
+	//	bool bCheckForBest = false,
+	//	bool bAssassinate = false,
+	//	bool bSuprise = false) const;	// Exposed to Python
+
 	bool canMoveOrAttackInto(const CvPlot* pPlot, bool bDeclareWar = false) const;								// Exposed to Python
 	bool canMoveThrough(const CvPlot* pPlot, bool bDeclareWar = false) const;																								// Exposed to Python
 	void attack(CvPlot* pPlot, bool bQuick, bool bStealth = false, bool bNoCache = false);
@@ -636,8 +667,8 @@ public:
 	bool canGift(bool bTestVisible = false, bool bTestTransport = true);																											// Exposed to Python 
 	void gift(bool bTestTransport = true);
 
-	bool canLoadUnit(const CvUnit* pUnit, const CvPlot* pPlot) const;															// Exposed to Python
-	void loadUnit(CvUnit* pUnit);
+	bool canLoadOntoUnit(const CvUnit* pUnit, const CvPlot* pPlot) const;															// Exposed to Python
+	void loadOntoUnit(CvUnit* pUnit);
 
 	bool canLoad(const CvPlot* pPlot) const;																											// Exposed to Python
 	void load();
@@ -757,7 +788,7 @@ public:
 
 	TechTypes getDiscoveryTech() const;																														// Exposed to Python
 	int getDiscoverResearch(TechTypes eTech) const;																								// Exposed to Python
-	bool canDiscover(const CvPlot* pPlot) const;																									// Exposed to Python
+	bool canDiscover() const;																									// Exposed to Python
 	bool discover();
 
 	int getMaxHurryProduction(CvCity* pCity) const;																													// Exposed to Python
@@ -842,6 +873,7 @@ public:
 
 	bool canBuildRoute() const;																						// Exposed to Python
 	DllExport BuildTypes getBuildType() const;														// Exposed to Python
+	ImprovementTypes getBuildTypeImprovement() const;
 
 	bool isAnimal() const;																								// Exposed to Python
 	bool isNoBadGoodies() const;																					// Exposed to Python
@@ -872,8 +904,19 @@ public:
 /**		REVOLUTION_MOD							END								*/
 /********************************************************************************/
 	bool isGoldenAge() const;																							// Exposed to Python
-	bool canCoexistWithEnemyUnit(TeamTypes eTeam, const CvPlot* pPlot = NULL, bool bAlways = true, const CvUnit* pThis = NULL, bool bAssassinate = false) const;
-	bool canUnitCoexistWithEnemyUnit(const CvUnit* pUnit, const CvPlot* pPlot = NULL, bool bTrapCheck = false) const;
+
+	// Can this unit always coexist with other units (all other things being equal)?
+	bool canCoexistAlways() const;
+	// Can this unit coexist with the specified team (all other things being equal)?
+	bool canCoexistWithTeam(const TeamTypes withTeam) const;
+	// Can this unit coexist with the specified team, on the specified plot?
+	bool canCoexistWithTeamOnPlot(const TeamTypes withTeam, const CvPlot& onPlot) const;
+	// Can this unit coexist with an attacking unit (possibly performing an assassination)?
+	bool canCoexistWithAttacker(const CvUnit& attacker, bool bAssassinate = false) const;
+
+	// Checks for differing domains, transport status, amnesty game setting
+	// TODO: roll this into the other Coexist functions
+	bool canUnitCoexistWithArrivingUnit(const CvUnit& pUnit) const;
 
 	DllExport bool isFighting() const;																		// Exposed to Python						
 	DllExport bool isAttacking() const;																		// Exposed to Python						
@@ -961,7 +1004,7 @@ public:
 	bool isNeverInvisible() const;
 	int getNoInvisibilityCount() const;
 	void changeNoInvisibilityCount(int iChange);	
-	DllExport bool isInvisible(TeamTypes eTeam, bool bDebug, bool bCheckCargo = true) const;										// Exposed to Python
+	DllExport bool isInvisible(TeamTypes eTeam, bool bDebug = false, bool bCheckCargo = true) const;										// Exposed to Python
 	bool isNukeImmune() const;																												// Exposed to Python
 /************************************************************************************************/
 /* REVDCM_OC                              02/16/10                                phungus420    */
@@ -1675,7 +1718,7 @@ public:
 	void setHasUnitCombat(UnitCombatTypes eIndex, bool bNewValue, bool bByPromo = false);
 	bool isHasPromotion(PromotionTypes eIndex) const;															// Exposed to Python
 	
-	void setHasPromotion(PromotionTypes eIndex, PromotionApply::flags flags);
+	void setHasPromotion(PromotionTypes eIndex, bool bNewValue, PromotionApply::flags flags);
 	// Deprecated, use the one above that takes enum flags instead for increased readability.
 	void setHasPromotion(PromotionTypes eIndex, bool bNewValue, bool bFree = true, bool bDying = false, bool bInitial = false, bool bFromTrait = false);									// Exposed to Python
 
@@ -1779,14 +1822,6 @@ public:
 	bool isRbombardable(int iMinStack);
 	int getRbombardSeigeCount(CvPlot* pPlot);
 	// RevolutionDCM - end
-
-private:
-	int m_iDCMBombRange;
-	int m_iDCMBombAccuracy;
-	int m_iHealUnitCombatCount;
-	std::vector<int> m_aiExtraBuildTypes;
-public:
-// Dale - RB: Field Bombard END
 // Dale - ARB: Archer Bombard START
 	bool canArcherBombard() const;
 	// fromPlot - units own plot() isn't valid in some cases (when its out of viewport or using dummy entities)
@@ -1863,6 +1898,12 @@ public:
 
 	PlayerTypes m_eOriginalOwner;
 
+protected:
+	int m_iDCMBombRange;
+	int m_iDCMBombAccuracy;
+	int m_iHealUnitCombatCount;
+	std::vector<int> m_aiExtraBuildTypes;
+
 	DomainTypes m_eNewDomainCargo;
 	SpecialUnitTypes m_eNewSpecialCargo;
 	SpecialUnitTypes m_eNewSMSpecialCargo;
@@ -1870,7 +1911,7 @@ public:
 	SpecialUnitTypes m_eSpecialUnit;
 	MissionTypes m_eSleepType;
 	PromotionLineTypes m_eCurrentBuildUpType;
-protected:
+
 	bool m_bHiddenNationality;
 	bool m_bHasHNCapturePromotion;
 /************************************************************************************************/
@@ -2296,7 +2337,7 @@ protected:
 /************************************************************************************************/
 // From Lead From Behind by UncutDragon
 public:
-	int defenderValue(const CvUnit* pAttacker, bool bAssassinate = false) const;
+	int defenderValue(const CvUnit* pAttacker) const;
 	bool isBetterDefenderThan(const CvUnit* pDefender, const CvUnit* pAttacker, int* pBestDefenderRank) const;
 protected:
 /************************************************************************************************/
@@ -2517,7 +2558,7 @@ public:
 	void setPromotionFreeCount(PromotionTypes ePromotion, int iChange);
 	void checkFreetoCombatClass();
 	//TB Combat Mods end
-	bool meetsUnitSelectionCriteria(CvUnitSelectionCriteria* criteria) const;
+	bool meetsUnitSelectionCriteria(const CvUnitSelectionCriteria* criteria) const;
 	bool shouldUseWithdrawalOddsCap() const;
 	bool isPursuitinUse() const;
 	bool canSwitchEquipment(PromotionTypes eEquipment) const;
@@ -2648,7 +2689,7 @@ public:
 	void changeAfflictOnAttackTypeAttemptedCount(PromotionLineTypes ePromotionLineType, int iChange);
 	void setAfflictOnAttackTypeAttemptedCount(PromotionLineTypes ePromotionLineType, int iChange);
 
-	int worsenedProbabilitytoAfflict(PromotionLineTypes eAfflictionLine);
+	int worsenedProbabilitytoAfflict(PromotionLineTypes eAfflictionLine) const;
 
 	bool hasHealUnitCombat() const;
 	int getHealUnitCombatCount() const;
@@ -2802,8 +2843,8 @@ public:
 	
 	int getExtraPowerValue() const;
 	void changeExtraPowerValue(int iChange);
-	int powerValueTotal() const;
-	int powerValueTotalPreCheck() const;
+	int getPowerValueTotal() const;
+	int getSMPowerValueTotalBase() const;
 	int getSMPowerValue() const;
 	void setSMPowerValue(bool bForLoad = false);
 	
@@ -2821,7 +2862,7 @@ public:
 	int getExtraCargoVolume() const;
 	void setExtraCargoVolume(int iNewValue);
 	void changeExtraCargoVolume(int iChange);
-	int SMCargoVolumePreCheck() const;
+	int getSMCargoVolumeBase() const;
 	int getCargoVolume() const;
 	void setCargoVolume(int iNewValue);
 	int SMCargoVolume() const;
@@ -2849,14 +2890,14 @@ public:
 	int getExtraBombardRate() const;																													// Exposed to Python
 	void changeExtraBombardRate(int iChange);
 	void setExtraBombardRate(int iChange);
-	int bombardRate() const;
-	int bombardRateTotalPreCheck() const;
+	int getBombardRate() const;
+	int getSMBombardRateTotalBase() const;
 	int getSMBombardRate() const;
 	void setSMBombardRate();
 
-	int airBombCurrRate() const;
-	int airBombBaseRate() const;
-	int airBombBaseRateTotalPreCheck() const;
+	int getAirBombCurrRate() const;
+	int getAirBombBaseRate() const;
+	int getSMAirBombBaseRateTotalBase() const;
 	int getSMAirBombBaseRate() const;
 	void setSMAirBombBaseRate();
 
@@ -3270,10 +3311,64 @@ private:
 	std::vector<AidStruct> m_aExtraAidChanges;
 
 	PlayerTypes m_pPlayerInvestigated;
+
+public:
+	//
+	// Algorithm/range helpers
+	// Pass these to the filtered/transformed range adapters like:
+	// foreach_(BuildTypes buildType, units() | filtered(!CvUnit::fn::isDead())
+	//										  | transformed(CvUnit::fn::getBuildType())) {}
+	// or algorithms like:
+	// fn::find_if(units(), CvUnit::fn::isAutoUpgrading() && CvUnit::fn::isReadyForUpgrade())
+	//
+	struct fn {
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isDead);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, hasCargo);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isFull);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, canMove);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, canMoveAllTerrain);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, hasMoved);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, canIgnoreZoneofControl);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isAutoUpgrading);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isReadyForUpgrade);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isPromotionReady);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isCombat);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isAnimal);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, canFight);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, canDefend);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, alwaysInvisible);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, IsSelected);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isCommander);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, hasAfflictionLine, PromotionLineTypes);
+
+		DECLARE_MAP_FUNCTOR_1(CvUnit, int, upgradePrice, UnitTypes);
+		DECLARE_MAP_FUNCTOR_2(CvUnit, bool, canUpgrade, UnitTypes, bool);
+
+		DECLARE_MAP_FUNCTOR(CvUnit, int, getDamage);
+		DECLARE_MAP_FUNCTOR(CvUnit, int, getID);
+		DECLARE_MAP_FUNCTOR(CvUnit, TeamTypes, getTeam);
+		DECLARE_MAP_FUNCTOR(CvUnit, UnitTypes, getUnitType);
+		DECLARE_MAP_FUNCTOR(CvUnit, UnitCombatTypes, getUnitCombatType);
+
+		DECLARE_MAP_FUNCTOR(CvUnit, const CvPlot*, plot);
+		DECLARE_MAP_FUNCTOR(CvUnit, BuildTypes, getBuildType);
+		DECLARE_MAP_FUNCTOR(CvUnit, ImprovementTypes, getBuildTypeImprovement);
+		DECLARE_MAP_FUNCTOR(CvUnit, int, getCargo);
+		DECLARE_MAP_FUNCTOR(CvUnit, int, SMgetCargo);
+
+		DECLARE_MAP_FUNCTOR_1(CvUnit, int, worsenedProbabilitytoAfflict, PromotionLineTypes);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, int, aidTotal, PropertyTypes);
+
+		DECLARE_MAP_FUNCTOR_3(CvUnit, int, getTriggerValue, EventTriggerTypes /*eTrigger*/, const CvPlot* /*pPlot*/, bool /*bCheckPlot*/);
+		
+	};
 };
 
 typedef std::vector<CvUnit*> UnitVector;
 typedef std::vector<const CvUnit*> ConstUnitVector;
-typedef copy_iterator<CvUnit*, CvUnit*> safe_unit_iterator;
+
+// Safe unit iterators (they copy the whole range before iterating, but this is just copying pointers so not a big deal in most cases
+// However it shouldn't be used in inner loops
+typedef copy_iterator<CvUnit> safe_unit_iterator;
 
 #endif

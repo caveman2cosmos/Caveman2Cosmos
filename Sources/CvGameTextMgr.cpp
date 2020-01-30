@@ -13,8 +13,8 @@
 #include "CvGameCoreDLL.h"
 #include "CvDLLSymbolIFaceBase.h"
 
-#include <boost/function.hpp>
-#include <boost/bind.hpp>
+#include <boost155/function.hpp>
+#include <boost155/bind.hpp>
 
 int shortenID(int iId)
 {
@@ -1849,17 +1849,17 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				}
 			}
 
-			if (pUnit->bombardRate() > 0)
+			if (pUnit->getBombardRate() > 0)
 			{
 				if (bShort)
 				{
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_UNIT_BOMBARD_RATE_SHORT", ((pUnit->bombardRate() * 100) / GC.getMAX_CITY_DEFENSE_DAMAGE())));
+					szString.append(gDLL->getText("TXT_KEY_UNIT_BOMBARD_RATE_SHORT", ((pUnit->getBombardRate() * 100) / GC.getMAX_CITY_DEFENSE_DAMAGE())));
 				}
 				else
 				{
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_UNIT_BOMBARD_RATE", ((pUnit->bombardRate() * 100) / GC.getMAX_CITY_DEFENSE_DAMAGE())));
+					szString.append(gDLL->getText("TXT_KEY_UNIT_BOMBARD_RATE", ((pUnit->getBombardRate() * 100) / GC.getMAX_CITY_DEFENSE_DAMAGE())));
 				}
 			}
 
@@ -4519,7 +4519,6 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 	CvWString szTempBuffer;
 	CvWString szOffenseOdds;
 	CvWString szDefenseOdds;
-	bool bValid;
 	int iModifier;
 
 	UnitCombatTypes eUnitCombatType;
@@ -4530,7 +4529,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 		return false;
 	}
 
-	bValid = false;
+	bool bValid = false;
 
 	switch (gDLL->getInterfaceIFace()->getSelectionList()->getDomainType())
 	{
@@ -4543,7 +4542,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 		break;
 
 	case DOMAIN_LAND:
-		bValid = (!(pPlot->isWater()) || pPlot->isCanMoveLandUnits() || gDLL->getInterfaceIFace()->getSelectionList()->canMoveAllTerrain());
+		bValid = (!pPlot->isWater() || pPlot->isSeaTunnel() || gDLL->getInterfaceIFace()->getSelectionList()->canMoveAllTerrain());
 		break;
 
 	case DOMAIN_IMMOBILE:
@@ -8264,7 +8263,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 					if (GC.getGameINLINE().isDebugMode())
 					{
 						szTempBuffer.Format(L"\nStack Compare Value = %d",
-							gDLL->getInterfaceIFace()->getSelectionList()->AI_compareStacks(pPlot, false));
+							gDLL->getInterfaceIFace()->getSelectionList()->AI_compareStacks(pPlot));
 						szString.append(szTempBuffer);
 
 						if (pPlot->getPlotCity() != NULL)
@@ -9165,12 +9164,12 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 
 		{
 			szTempBuffer.Format(L"\nStack Str: land=%d(%d), sea=%d(%d), air=%d(%d)",
-				pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_LAND, false, false, false),
-				pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_LAND, true, false, false),
-				pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_SEA, false, false, false),
-				pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_SEA, true, false, false),
-				pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_AIR, false, false, false),
-				pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_AIR, true, false, false));
+				pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_LAND, StrengthFlags::None),
+				pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_LAND, StrengthFlags::DefensiveBonuses),
+				pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_SEA, StrengthFlags::None),
+				pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_SEA, StrengthFlags::DefensiveBonuses),
+				pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_AIR, StrengthFlags::None),
+				pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_AIR, StrengthFlags::DefensiveBonuses));
 			szString.append(szTempBuffer);
 		}
 		
@@ -10576,12 +10575,12 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 		}
 		else
 		{
-			iBaseProductionDiffNoFood = pCity->getCurrentProductionDifference(true, false);
+			iBaseProductionDiffNoFood = pCity->getCurrentProductionDifference(ProductionCalc::None);
 		}
 // BUG - Base Production - end
 
-		iProductionDiffNoFood = pCity->getCurrentProductionDifference(true, true);
-		iProductionDiffJustFood = (pCity->getCurrentProductionDifference(false, true) - iProductionDiffNoFood);
+		iProductionDiffNoFood = pCity->getCurrentProductionDifference(ProductionCalc::Overflow);
+		iProductionDiffJustFood = (pCity->getCurrentProductionDifference(ProductionCalc::FoodProduction | ProductionCalc::Overflow) - iProductionDiffNoFood);
 
 		if (iProductionDiffJustFood > 0)
 		{
@@ -10643,7 +10642,7 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 		}
 		else
 		{
-			iBaseProductionDiffNoFood = pCity->getCurrentProductionDifference(true, false);
+			iBaseProductionDiffNoFood = pCity->getCurrentProductionDifference(ProductionCalc::Overflow);
 		}
 		if (iOverflow > 0 || iBaseProductionDiffNoFood > 0)
 		{
@@ -10937,7 +10936,7 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 	if (iGppRate > 0 && getBugOptionBOOL("CityBar__GreatPersonTurns", true, "BUG_CITYBAR_GREAT_PERSON_TURNS"))
 	{
 		int iGpp = pCity->getGreatPeopleProgress();
-		int iGppTotal = GET_PLAYER(pCity->getOwnerINLINE()).greatPeopleThreshold(false);
+		int iGppTotal = GET_PLAYER(pCity->getOwnerINLINE()).greatPeopleThresholdNonMilitary();
 		szString.append(gDLL->getText("TXT_KEY_CITY_BAR_GREAT_PEOPLE", iGpp, iGppTotal));
 		int iGppLeft = iGppTotal - iGpp;
 		int iGppTurns = (iGppLeft + iGppRate - 1) / iGppRate;
@@ -10949,7 +10948,7 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 		// unchanged
 		if (pCity->getGreatPeopleProgress() > 0)
 		{
-			szString.append(gDLL->getText("TXT_KEY_CITY_BAR_GREAT_PEOPLE", pCity->getGreatPeopleProgress(), GET_PLAYER(pCity->getOwnerINLINE()).greatPeopleThreshold(false)));
+			szString.append(gDLL->getText("TXT_KEY_CITY_BAR_GREAT_PEOPLE", pCity->getGreatPeopleProgress(), GET_PLAYER(pCity->getOwnerINLINE()).greatPeopleThresholdNonMilitary()));
 		}
 	}
 // BUG - Great Person Turns - end
@@ -22021,7 +22020,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 			bool bEval = false;
 			if (pCity)
 			{
-				bEval = pExpr->evaluate(const_cast<CvGameObjectCity*>(pCity->getGameObjectConst())); // Const wegcasten ist hier ok da evaluate nicht wirklich etwas ändert
+				bEval = pExpr->evaluate(const_cast<CvGameObjectCity*>(pCity->getGameObject())); // Const wegcasten ist hier ok da evaluate nicht wirklich etwas ändert
 			}
 			if (!bEval)
 			{
@@ -26567,7 +26566,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 			bool bEval = false;
 			if (pCity)
 			{
-				bEval = pExpr->evaluate(const_cast<CvGameObjectCity*>(pCity->getGameObjectConst())); // Const wegcasten ist hier ok da evaluate nicht wirklich etwas ändert
+				bEval = pExpr->evaluate(const_cast<CvGameObjectCity*>(pCity->getGameObject())); // Const wegcasten ist hier ok da evaluate nicht wirklich etwas ändert
 			}
 			if (!bEval)
 			{
@@ -35958,7 +35957,7 @@ void CvGameTextMgr::setProductionHelp(CvWStringBuffer &szBuffer, CvCity& city)
 
 // BUG - Building Additional Production - start
 	bool bBuildingAdditionalYield = getBugOptionBOOL("MiscHover__BuildingAdditionalProduction", true, "BUG_BUILDING_ADDITIONAL_PRODUCTION_HOVER");
-	if (city.getCurrentProductionDifference(false, true) == 0 && !bBuildingAdditionalYield)
+	if (city.getCurrentProductionDifference(ProductionCalc::FoodProduction | ProductionCalc::Overflow) == 0 && !bBuildingAdditionalYield)
 // BUG - Building Additional Production - end
 	{
 		return;
@@ -36333,7 +36332,7 @@ void CvGameTextMgr::setProductionHelp(CvWStringBuffer &szBuffer, CvCity& city)
 
 	int iModProduction = iFoodProduction + (iBaseModifier * iBaseProduction) / 100;
 
-	FAssertMsg(iModProduction == city.getCurrentProductionDifference(false, !bIsProcess), "Modified Production does not match actual value");
+	FAssertMsg(iModProduction == city.getCurrentProductionDifference(ProductionCalc::FoodProduction | (!bIsProcess? ProductionCalc::Overflow : ProductionCalc::None)), "Modified Production does not match actual value");
 
 	szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_FINAL_YIELD", iModProduction));
 
@@ -37438,11 +37437,11 @@ void CvGameTextMgr::parseGreatPeopleHelp(CvWStringBuffer &szBuffer, CvCity& city
 	}
 	CvPlayer& owner = GET_PLAYER(city.getOwnerINLINE());
 
-	szBuffer.assign(gDLL->getText("TXT_KEY_MISC_GREAT_PERSON", city.getGreatPeopleProgress(), owner.greatPeopleThreshold(false)));
+	szBuffer.assign(gDLL->getText("TXT_KEY_MISC_GREAT_PERSON", city.getGreatPeopleProgress(), owner.greatPeopleThresholdNonMilitary()));
 
 	if (city.getGreatPeopleRate() > 0)
 	{
-		int iGPPLeft = owner.greatPeopleThreshold(false) - city.getGreatPeopleProgress();
+		int iGPPLeft = owner.greatPeopleThresholdNonMilitary() - city.getGreatPeopleProgress();
 
 		if (iGPPLeft > 0)
 		{
@@ -37728,7 +37727,7 @@ bool CvGameTextMgr::setBuildingAdditionalGreatPeopleHelp(CvWStringBuffer &szBuff
 
 void CvGameTextMgr::parseGreatGeneralHelp(CvWStringBuffer &szBuffer, CvPlayer& kPlayer)
 {
-	szBuffer.append(gDLL->getText("TXT_KEY_MISC_GREAT_MILITARY_PERSON", kPlayer.getCombatExperience(), kPlayer.greatPeopleThreshold(true), GC.getUnitInfo(kPlayer.getGreatGeneralTypetoAssign()).getTextKeyWide()));
+	szBuffer.append(gDLL->getText("TXT_KEY_MISC_GREAT_MILITARY_PERSON", kPlayer.getCombatExperience(), kPlayer.greatPeopleThresholdMilitary(), GC.getUnitInfo(kPlayer.getGreatGeneralTypetoAssign()).getTextKeyWide()));
 
 	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{

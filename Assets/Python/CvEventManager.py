@@ -256,8 +256,7 @@ class CvEventManager:
 					"GLADIATOR"	: GC.getInfoTypeForString("UNIT_GLADIATOR")
 				}
 				self.mapImpType = {
-					"IMPROVEMENT_TREE_NURSERY"	: GC.getInfoTypeForString('IMPROVEMENT_TREE_NURSERY'),
-					"IMPROVEMENT_YOUNG_FOREST"	: GC.getInfoTypeForString('IMPROVEMENT_YOUNG_FOREST'),
+					"IMPROVEMENT_GROW_FOREST"	: GC.getInfoTypeForString('IMPROVEMENT_GROW_FOREST'),
 					"IMPROVEMENT_PLANT_FOREST"	: GC.getInfoTypeForString('IMPROVEMENT_PLANT_FOREST'),
 					"IMPROVEMENT_PLANT_BAMBOO"	: GC.getInfoTypeForString('IMPROVEMENT_PLANT_BAMBOO'),
 					"IMPROVEMENT_PLANT_SAVANNA"	: GC.getInfoTypeForString('IMPROVEMENT_PLANT_SAVANNA'),
@@ -516,7 +515,17 @@ class CvEventManager:
 
 		self.GO_1_CITY_TILE_FOUNDING	= GAME.isOption(GameOptionTypes.GAMEOPTION_1_CITY_TILE_FOUNDING)
 		self.GO_START_AS_MINORS			= GAME.isOption(GameOptionTypes.GAMEOPTION_START_AS_MINORS)
+		self.GO_NO_CITY_RAZING			= GAME.isOption(GameOptionTypes.GAMEOPTION_NO_CITY_RAZING)
+		self.GO_ONE_CITY_CHALLENGE		= GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
 		self.GO_INFINITE_XP				= GAME.isOption(GameOptionTypes.GAMEOPTION_INFINITE_XP)
+		# Extended caching
+		if not self.GO_INFINITE_XP:
+			self.ANIMAL_MAX_XP = GC.getDefineINT("ANIMAL_MAX_XP_VALUE")
+			self.BARBARIAN_MAX_XP = GC.getDefineINT("BARBARIAN_MAX_XP_VALUE")
+
+			self.GO_MORE_XP_TO_LEVEL = GAME.isOption(GameOptionTypes.GAMEOPTION_MORE_XP_TO_LEVEL)
+			if self.GO_MORE_XP_TO_LEVEL:
+				self.MORE_XP_TO_LEVEL_MOD = GC.getDefineINT("MORE_XP_TO_LEVEL_MODIFIER")
 
 		if bNewGame and self.GO_START_AS_MINORS:
 			for iTeam in xrange(GC.getMAX_PC_TEAMS()):
@@ -525,8 +534,8 @@ class CvEventManager:
 					CyTeam.setIsMinorCiv(True, False)
 
 		CvGameSpeedInfo = GC.getGameSpeedInfo(GAME.getGameSpeedType())
-		self.fTrainPrcntGS = CvGameSpeedInfo.getTrainPercent() / 100.0
-		self.fVictoryDelayPrcntGS = CvGameSpeedInfo.getVictoryDelayPercent() / 100.0
+		self.iTrainPrcntGS = CvGameSpeedInfo.getTrainPercent()
+		self.iVictoryDelayPrcntGS = CvGameSpeedInfo.getVictoryDelayPercent()
 		# Find special buildings built where by whom.
 		mapBuildingType = self.mapBuildingType
 		aList0 = [ # Only meant for world wonders
@@ -699,7 +708,7 @@ class CvEventManager:
 					MAP = GC.getMap()
 					iPlayerAct = GAME.getActivePlayer()
 					TECH_SATELLITES = GC.getInfoTypeForString("TECH_SATELLITES")
-					iWorldSize = MAP.getWorldSize() + 1
+					iChance = 50 + (MAP.getWorldSize() + 3)**2 + 64 * self.iVictoryDelayPrcntGS / 100
 					iTeam = CyPlayer.getTeam()
 					for iPlayerX in xrange(self.MAX_PC_PLAYERS):
 						CyPlayerX = GC.getPlayer(iPlayerX)
@@ -714,7 +723,7 @@ class CvEventManager:
 						if TECH_SATELLITES > -1 and CyTeamX.isHasTech(TECH_SATELLITES):
 							continue
 
-						if not GAME.getSorenRandNum(5 * iWorldSize, "Zizkov"):
+						if not GAME.getSorenRandNum(iChance, "Zizkov"):
 							GC.getMap().resetRevealedPlots(iTeamX)
 							if iPlayer == iPlayerAct:
 								CvUtil.sendMessage(TRNSLTR.getText("TXT_ZIZKOV1", (CyPlayerX.getCivilizationDescription(0),)), iPlayer)
@@ -722,7 +731,7 @@ class CvEventManager:
 								CvUtil.sendMessage(TRNSLTR.getText("TXT_ZIZKOV2",()), iPlayerX)
 
 				elif KEY == "CYRUS_CYLINDER":
-					if not iGameTurn % int(4*self.fVictoryDelayPrcntGS):
+					if not iGameTurn % (4*self.iVictoryDelayPrcntGS/100 + 1):
 						iTeam = CyPlayer.getTeam()
 						Value = iGameTurn * 2
 						for iTeamX in xrange(GC.getMAX_PC_TEAMS()):
@@ -745,17 +754,14 @@ class CvEventManager:
 		# Aging Animals
 		if not CyPlayer.isNPC() or CyPlayer.isHominid():
 			return
-		fModGS = self.fVictoryDelayPrcntGS
-		iMinorIncrement = int(16 * fModGS)
-		iMajorIncrement = int(128 * fModGS)
-		bMinor = not iGameTurn % iMinorIncrement
-		bMajor = not iGameTurn % iMajorIncrement
+		bMinor = not iGameTurn % (16 * self.iVictoryDelayPrcntGS / 100 + 1)
+		bMajor = not iGameTurn % (128 * self.iVictoryDelayPrcntGS / 100)
 
 		if bMinor or bMajor:
 			CyUnit, i = CyPlayer.firstUnit(False)
 			while CyUnit:
 				if not CyUnit.isDead() and CyUnit.isAnimal():
-					if not GAME.getSorenRandNum(15 - bMajor*10, "Aging"): # 1 in 15
+					if not GAME.getSorenRandNum(15 - bMajor*10, "Aging"): # 1 in 15/5
 						if not CyUnit.isHasPromotion(GC.getInfoTypeForString("PROMOTION_COMBAT1")):
 							CyUnit.setHasPromotion(GC.getInfoTypeForString("PROMOTION_COMBAT1"), True)
 						elif not CyUnit.isHasPromotion(GC.getInfoTypeForString("PROMOTION_COMBAT2")):
@@ -847,7 +853,7 @@ class CvEventManager:
 					# Booty
 					iValid = GC.getInfoTypeForString("UNITCOMBAT_TRANSPORT")
 					if iValid > -1 and CyUnitL.isHasUnitCombat(iValid):
-						Loot = int(GAME.getSorenRandNum(100, "Loot") * self.fTrainPrcntGS)
+						Loot = GAME.getSorenRandNum(100, "Loot") * self.iTrainPrcntGS / 100
 						if CyPlayerL.getGold() >= Loot:
 							CyPlayerW.changeGold(Loot)
 							CyPlayerL.changeGold(-Loot)
@@ -925,14 +931,18 @@ class CvEventManager:
 				iExpLimit = -1
 				if CyUnitL.isAnimal():
 					if CyUnitW.isHasPromotion(GC.getInfoTypeForString("PROMOTION_ANIMAL_HUNTER")):
-						iExpLimit = GC.getDefineINT("ANIMAL_MAX_XP_VALUE")
+						iExpLimit = self.ANIMAL_MAX_XP
 
 				elif CyUnitW.isHasPromotion(GC.getInfoTypeForString("PROMOTION_BARBARIAN_HUNTER")):
-					iExpLimit = GC.getDefineINT("BARBARIAN_MAX_XP_VALUE")
+					iExpLimit = self.BARBARIAN_MAX_XP
 
-				if iExpLimit != -1 and CyUnitW.getExperience() >= iExpLimit:
-					bInBorders = iPlayerW == GC.getMap().plot(CyUnitW.getX(), CyUnitW.getY()).getOwner()
-					CyUnitW.changeExperience(1, 9999, True, bInBorders, True)
+				if iExpLimit != -1:
+					if self.GO_MORE_XP_TO_LEVEL:
+						iExpLimit = iExpLimit * self.MORE_XP_TO_LEVEL_MOD / 100
+					
+					if CyUnitW.getExperience() >= iExpLimit:
+						bInBorders = iPlayerW == GC.getMap().plot(CyUnitW.getX(), CyUnitW.getY()).getOwner()
+						CyUnitW.changeExperience(1, 9999, True, bInBorders, True)
 		else:
 			bSneak = CyUnitW.isHasPromotion(mapPromoType['PROMOTION_SNEAK'])
 			bMarauder = CyUnitW.isHasPromotion(mapPromoType['PROMOTION_MARAUDER'])
@@ -1073,31 +1083,21 @@ class CvEventManager:
 				CyCity = CyPlotW.getPlotCity()
 				iReligion = CyPlayerW.getStateReligion()
 				if iReligion != -1 and not CyCity.isHasReligion(iReligion):
-					CyCity.setHasReligion(iReligion, True, True, False)
+					CyCity.setHasReligion(iReligion, True, True, True)
 		# Warriors Of God - Fanatic
 		elif iUnitW == mapUnitType["FANATIC"]:
-			iReligion = CyPlayerW.getStateReligion()
-			if iReligion != -1:
-				CyPlotL = CyUnitL.plot()
-				if CyPlotL.isCity():
-					CyCity = CyPlotL.getPlotCity()
-					if not CyCity.isHasReligion(iReligion):
-						if not CyTeamW:
-							iTeamW = CyPlayerW.getTeam()
-							CyTeamW = GC.getTeam(iTeamW)
-						if CyTeamW.isAtWar(GC.getPlayer(CyCity.getOwner()).getTeam()):
-							NumDef = 0
-							for i in range(self.MAX_PLAYERS):
-								if i == iWinner: continue
-								CyPlayer = GC.getPlayer(i)
-								iTeam = CyPlayer.getTeam()
-								if iTeam == iTeamW: continue
-								if CyTeamW.isAtWar(iTeam):
-									NumDef += CyPlotL.getNumDefenders(i)
-									if NumDef > 1:
-										break
-							if NumDef <= 1:
-								CyCity.setHasReligion(i, False, False, False)
+			if not self.GO_ONE_CITY_CHALLENGE:
+				iReligion = CyPlayerW.getStateReligion()
+				if iReligion != -1:
+					CyPlotL = CyUnitL.plot()
+					if CyPlotL.isCity():
+						CyCity = CyPlotL.getPlotCity()
+						if not CyCity.isHasReligion(iReligion) and (self.GO_NO_CITY_RAZING or CyCity.getPopulation() > 1):
+							if not CyTeamW:
+								iTeamW = CyPlayerW.getTeam()
+								CyTeamW = GC.getTeam(iTeamW)
+							if CyTeamW.isAtWar(GC.getPlayer(CyCity.getOwner()).getTeam()) and not CyPlotL.getNumVisibleEnemyDefenders(CyUnitW):
+								CyCity.setHasReligion(iReligion, True, True, True)
 
 		aWonderTuple = self.aWonderTuple
 		if iPlayerW in aWonderTuple[4]:
@@ -1174,59 +1174,51 @@ class CvEventManager:
 			return
 		# Worker placed feature
 		mapImpType = self.mapImpType
-		if iImprovement == mapImpType['IMPROVEMENT_TREE_NURSERY']:
+
+		if iImprovement == mapImpType['IMPROVEMENT_GROW_FOREST']:
 			CyPlot = GC.getMap().plot(iX, iY)
-			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_FOREST_NEW'), 0)
-
-		elif iImprovement == mapImpType['IMPROVEMENT_YOUNG_FOREST']:
-			CyPlot = GC.getMap().plot(iX, iY)
-			iFeatureNewForest = GC.getInfoTypeForString('FEATURE_FOREST_NEW')
-			if CyPlot.getFeatureType() == iFeatureNewForest:
-				CyPlot.setFeatureType(iFeatureNewForest, 0)
-
-			iFeatureForest = GC.getInfoTypeForString('FEATURE_FOREST')
-			iChance = GAME.getSorenRandNum(100, "FEATURE_FOREST")
-			lat = CyPlot.getLatitude()
-
-			if lat > 60: # POLAR
-				if CyPlot.getTerrainType() == GC.getInfoTypeForString('TERRAIN_TAIGA'):
-					CyPlot.setFeatureType(iFeatureForest, 2) # snowy forest
-				else:
-					CyPlot.setFeatureType(iFeatureForest, 1) # evergreen forest
-			elif lat > 25: # TEMPERATE
-				if iChance < 50:
-					CyPlot.setFeatureType(iFeatureForest, 0) # leafy forest
-				else:
-					CyPlot.setFeatureType(iFeatureForest, 1) # evergreen forest
-			else: # EQUATOR
-				if iChance < 30:
-					CyPlot.setFeatureType(iFeatureForest, 0) # leafy forest
-				elif iChance < 60:
-					CyPlot.setFeatureType(iFeatureForest, 1) # evergreen forest
-				else:
-					if CyPlot.getTerrainType() == GC.getInfoTypeForString('TERRAIN_GRASS'):
-						CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_JUNGLE'), 0) # jungle
-					else:
-						CyPlot.setFeatureType(iFeatureForest, 0) # leafy forest
 			CyPlot.setImprovementType(-1)
+
+			if CyPlot.getTerrainType() == GC.getInfoTypeForString('TERRAIN_TAIGA'):
+				CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_FOREST'), 2) # snowy forest
+			else:
+				lat = CyPlot.getLatitude()
+				iChance = GAME.getSorenRandNum(100, "FEATURE_FOREST")
+				if lat > 60: # POLAR
+					if iChance < 10:
+						CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_FOREST'), 0) # leafy forest
+					else:
+						CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_FOREST'), 1) # evergreen forest
+				elif lat > 25: # TEMPERATE
+					if iChance < 70:
+						CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_FOREST'), 0) # leafy forest
+					else:
+						CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_FOREST'), 1) # evergreen forest
+				else: # EQUATOR
+					if iChance < 10:
+						CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_FOREST'), 1) # evergreen forest
+					elif iChance < 70:
+						CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_FOREST'), 0) # leafy forest
+					else:
+						if CyPlot.getTerrainType() in (GC.getInfoTypeForString('TERRAIN_LUSH'), GC.getInfoTypeForString('TERRAIN_MUDDY')):
+							CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_JUNGLE'), 0)
+						else:
+							CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_BAMBOO'), 0)
 
 		elif iImprovement == mapImpType['IMPROVEMENT_PLANT_FOREST']:
 			CyPlot = GC.getMap().plot(iX, iY)
-			iFeatureNewForest = GC.getInfoTypeForString('FEATURE_FOREST_NEW')
-			if CyPlot.getFeatureType() == iFeatureNewForest:
-				CyPlot.setFeatureType(iFeatureNewForest, 0)
-			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_FOREST'), 0)
 			CyPlot.setImprovementType(-1)
+			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_FOREST_NEW'), 0)
 
 		elif iImprovement == mapImpType['IMPROVEMENT_PLANT_BAMBOO']:
 			CyPlot = GC.getMap().plot(iX, iY)
-			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_BAMBOO'), 0)
 			CyPlot.setImprovementType(-1)
+			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_BAMBOO'), 0)
 
 		elif iImprovement == mapImpType['IMPROVEMENT_PLANT_SAVANNA']:
 			CyPlot = GC.getMap().plot(iX, iY)
-			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_SAVANNA'), 0)
 			CyPlot.setImprovementType(-1)
+			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_SAVANNA'), 0)
 
 		elif iImprovement == mapImpType['IMPROVEMENT_FARM']:
 			iPlayer = GC.getMap().plot(iX, iY).getOwner()
@@ -1398,7 +1390,6 @@ class CvEventManager:
 			elif KEY == "ZIZKOV":
 				TECH_SATELLITES = GC.getInfoTypeForString("TECH_SATELLITES")
 				iTeam = CyPlayer.getTeam()
-				# Reveals whole map for owner
 				for iTeamX in xrange(GC.getMAX_PC_TEAMS()):
 					if iTeamX == iTeam:
 						continue
@@ -2777,14 +2768,14 @@ class CvEventManager:
 				KEY = aWonderTuple[0][i]
 
 				if KEY == "CRUSADE":
-					if not GAME.getGameTurn() % (1 + int(4 * self.fTrainPrcntGS)):
+					if not GAME.getGameTurn() % (1 + 4 * self.iTrainPrcntGS / 100):
 						CyPlayer = GC.getPlayer(iPlayer)
 						iUnit = GC.getInfoTypeForString("UNIT_CRUSADER")
 						CyUnit = CyPlayer.initUnit(iUnit, CyCity.getX(), CyCity.getY(), UnitAITypes.UNITAI_ATTACK_CITY, DirectionTypes.NO_DIRECTION)
 						CyCity.addProductionExperience(CyUnit, False)
 
 				elif KEY == "KENTUCKY_DERBY":
-					if GAME.getGameTurn() % (1 + int(3 * self.fTrainPrcntGS)): continue
+					if GAME.getGameTurn() % (1 + 3 * self.iTrainPrcntGS / 100): continue
 					CyPlayer = GC.getPlayer(iPlayer)
 					iUnit = GC.getInfoTypeForString("UNIT_SUBDUED_HORSE")
 					iX = CyCity.getX()
@@ -2802,7 +2793,7 @@ class CvEventManager:
 							CyCity.setFood(CyCity.getFoodKept())
 
 				elif KEY == "BIODOME":
-					if not self.aBiodomeList or GAME.getGameTurn() % int(4*self.fVictoryDelayPrcntGS + 1):
+					if not self.aBiodomeList or GAME.getGameTurn() % (4*self.iVictoryDelayPrcntGS/100 + 1):
 						continue
 					CyPlayer = GC.getPlayer(iPlayer)
 					iX = CyCity.getX()

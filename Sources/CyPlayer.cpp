@@ -889,9 +889,14 @@ int CyPlayer::unitsGoldenAgeReady()
 	return m_pPlayer ? m_pPlayer->unitsGoldenAgeReady() : -1;
 }
 
-int CyPlayer::greatPeopleThreshold(bool bMilitary)
+int CyPlayer::greatPeopleThresholdMilitary()
 {
-	return m_pPlayer ? m_pPlayer->greatPeopleThreshold(bMilitary) : -1;
+	return m_pPlayer ? m_pPlayer->greatPeopleThresholdMilitary() : -1;
+}
+
+int CyPlayer::greatPeopleThresholdNonMilitary()
+{
+	return m_pPlayer ? m_pPlayer->greatPeopleThresholdNonMilitary() : -1;
 }
 
 int CyPlayer::specialistYield(int /*SpecialistTypes*/ eSpecialist, int /*YieldTypes*/ eCommerce)
@@ -1705,14 +1710,12 @@ int CyPlayer::getLandScore()
 	return m_pPlayer ? m_pPlayer->getLandScore() : -1;
 }
 
-#if defined QC_MASTERY_VICTORY
 //Sevo Begin--VCM
 int CyPlayer::getSevoWondersScore(int mode)
 {
 	return m_pPlayer ? m_pPlayer->getSevoWondersScore(mode) : -1;
 }
 //Sevo End VCM
-#endif
 
 int CyPlayer::getWondersScore()
 {
@@ -2336,6 +2339,16 @@ python::tuple CyPlayer::nextCity(int iterIn, bool bRev)
 	python::tuple tup=python::make_tuple(pyObj, iterIn);
 	if(pyObj) delete pyObj;
 	return tup;
+}
+
+CyCity* CyPlayer::nthCity(int n, bool bRev)
+{
+	FAssert(n >= 0);
+	int it;
+	CvCity* c = m_pPlayer->firstCity(&it, bRev);
+	for (; n > 0; --n)
+		c = m_pPlayer->nextCity(&it, bRev);
+	return new CyCity(c);
 }
 
 int CyPlayer::getNumCities()

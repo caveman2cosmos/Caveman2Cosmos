@@ -1,17 +1,19 @@
 <?xml version="1.0"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- ReModified by StrategyOnly -->
-	<!-- -->
-	<!-- Build Infos -->
+<!-- Notes:
+** 'CANNOT' be built on this feature 
+	<FeatureStruct>
+		<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+		<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+	</FeatureStruct>
+**
+-->
 <Civ4BuildInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<BuildInfos>
 		<!-- Prehistoric -->
 		<!-- Seed Camp (Kill) -->
 		<BuildInfo>
 			<Type>BUILD_GRAIN_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_GRAIN_GATHERER</Description>
+			<Description>TXT_KEY_BUILD_GRAIN_GATHERER_K</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
@@ -21,7 +23,6 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_TARPIT</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -29,7 +30,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -54,7 +54,6 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_TARPIT</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -62,7 +61,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -105,7 +103,7 @@
 		<!-- Stone Tools Workshop (Mine/Quarry) (Kill) -->
 		<BuildInfo>
 			<Type>BUILD_ROCK_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_ROCK_GATHERER</Description>
+			<Description>TXT_KEY_BUILD_ROCK_GATHERER_K</Description>
 			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
@@ -254,7 +252,7 @@
 		<!-- Tar Gatherer (Kill) -->
 		<BuildInfo>
 			<Type>BUILD_TAR_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_TAR_GATHERER</Description>
+			<Description>TXT_KEY_BUILD_TAR_GATHERER_K</Description>
 			<PrereqTech>TECH_ADHESIVES</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
@@ -653,7 +651,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_TARPIT</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -661,7 +658,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -1286,7 +1282,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_TARPIT</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -1294,7 +1289,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -1302,7 +1296,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -1555,7 +1548,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_TARPIT</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -1563,7 +1555,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -1571,7 +1562,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -1585,7 +1575,7 @@
 		<BuildInfo>
 			<Type>BUILD_3FACTORY_2</Type>
 			<bForceOverwrite>1</bForceOverwrite>
-			<Description>TXT_KEY_BUILD_FACTORY</Description>
+			<Description>TXT_KEY_BUILD_FACTORY_COLD</Description>
 			<PrereqTech>TECH_REFRIGERATION</PrereqTech>
 			<ObsoleteTech>TECH_MINIATURIZATION</ObsoleteTech>
 			<iTime>1000</iTime>
@@ -1824,7 +1814,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_TARPIT</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -1832,7 +1821,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -1840,7 +1828,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -1945,7 +1932,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_TARPIT</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -1953,7 +1939,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -1961,7 +1946,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -2341,7 +2325,7 @@
 		<!-- Salt Gatherer (Quarry) (Kill) -->
 		<BuildInfo>
 			<Type>BUILD_SALT_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_SALT_GATHERER</Description>
+			<Description>TXT_KEY_BUILD_SALT_GATHERER_K</Description>
 			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
@@ -3154,7 +3138,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_TARPIT</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -3162,7 +3145,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -3170,7 +3152,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -3245,7 +3226,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_TARPIT</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -3253,7 +3233,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -3261,7 +3240,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -3515,7 +3493,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_TARPIT</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -3523,7 +3500,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -3531,7 +3507,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -3785,7 +3760,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_TARPIT</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -3793,7 +3767,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -3801,7 +3774,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -4054,7 +4026,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_TARPIT</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -4062,7 +4033,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -4070,7 +4040,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -4510,7 +4479,6 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_TARPIT</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -4649,7 +4617,6 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_TARPIT</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -4657,7 +4624,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_OASIS</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -4665,7 +4631,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -4673,7 +4638,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -4681,7 +4645,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -4831,7 +4794,7 @@
 		<!-- Break Ice -->
 		<BuildInfo>
 			<Type>BUILD_BREAK_ICE</Type>
-			<Description>TXT_KEY_BUILD_BREAK_ICE</Description>
+			<Description>TXT_KEY_BUILD_BREAK_ICE_K</Description>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
@@ -4875,7 +4838,7 @@
 		<!-- Jungle Camp (Kill) -->
 		<BuildInfo>
 			<Type>BUILD_JUNGLE_CAMP_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_JUNGLE_CAMP</Description>
+			<Description>TXT_KEY_BUILD_JUNGLE_CAMP_K</Description>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>600</iTime>
@@ -4900,7 +4863,7 @@
 		<!-- Desert Camp (Kill) -->
 		<BuildInfo>
 			<Type>BUILD_DESERT_CAMP_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_DESERT_CAMP</Description>
+			<Description>TXT_KEY_BUILD_DESERT_CAMP_K</Description>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>600</iTime>
@@ -4925,7 +4888,7 @@
 		<!-- Wetlands Camp (Kill) -->
 		<BuildInfo>
 			<Type>BUILD_WETLANDS_CAMP_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_WETLANDS_CAMP</Description>
+			<Description>TXT_KEY_BUILD_WETLANDS_CAMP_K</Description>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>600</iTime>
@@ -4979,7 +4942,7 @@
 		<!-- Sanitize Water -->
 		<BuildInfo>
 			<Type>BUILD_SANITIZE_WATER</Type>
-			<Description>TXT_KEY_BUILD_SANITIZE</Description>
+			<Description>TXT_KEY_BUILD_SANITIZE_WATER</Description>
 			<PrereqTech>TECH_AQUACULTURE</PrereqTech>
 			<iTime>800</iTime>
 			<iCost>0</iCost>
@@ -5250,29 +5213,43 @@
 		<BuildInfo>
 			<Type>BUILD_PLANT_FOREST</Type>
 			<Description>TXT_KEY_BUILD_PLANT_FOREST</Description>
-			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<iTime>2000</iTime>
+			<PrereqTech>TECH_GUILDS</PrereqTech>
+			<iTime>1000</iTime>
 			<iCost>20</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_PLANT_FOREST</ImprovementType>
-			<FeatureChange>FEATURE_FOREST</FeatureChange>
+			<FeatureChange>FEATURE_FOREST_NEW</FeatureChange><!-- canBuild() should check all feature requirements against the plot, not only map category and feature already on plot conditions as it currently does -->
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
+					<FeatureType>FEATURE_FOREST</FeatureType>
+					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<iTime>0</iTime>
+					<iProduction>0</iProduction>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<iTime>0</iTime>
+					<iProduction>0</iProduction>
+				</FeatureStruct>
+				<FeatureStruct>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
-					<PrereqTech>TECH_IRON_WORKING</PrereqTech>
-					<iTime>400</iTime>
-					<iProduction>20</iProduction>
-					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
+					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<iTime>0</iTime>
+					<iProduction>0</iProduction>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_MANGROVE</FeatureType>
-					<PrereqTech>TECH_IRON_WORKING</PrereqTech>
-					<iTime>400</iTime>
-					<iProduction>20</iProduction>
-					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
+					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<iTime>0</iTime>
+					<iProduction>0</iProduction>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_BAMBOO</FeatureType>
+					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<iTime>0</iTime>
+					<iProduction>0</iProduction>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -5301,14 +5278,6 @@
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
 					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_BAMBOO</FeatureType>
-					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
-					<iTime>300</iTime>
-					<iProduction>20</iProduction>
-					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_KAKTUS</FeatureType>
@@ -5465,11 +5434,10 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 			</FeatureStructs>
-			<HotKey>KB_F</HotKey>
-			<bAltDown>1</bAltDown>
-			<bCtrlDown>1</bCtrlDown>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/TerrainFeatures/Forest.dds</Button>
+			<HotKey>KB_S</HotKey>
+			<bShiftDown>1</bShiftDown>
+			<iHotKeyPriority>1</iHotKeyPriority>
+			<Button>,Art/Interface/Buttons/TerrainFeatures/Forest.dds,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,3,3</Button>
 		</BuildInfo>
 		<!-- Plant Bamboo -->
 		<BuildInfo>
@@ -5709,7 +5677,7 @@
 			<bAltDown>1</bAltDown>
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/TerrainFeatures/Forest.dds</Button>
+			<Button>Art/Interface/Buttons/TerrainFeatures/Bamboo.dds</Button>
 		</BuildInfo>
 		<!-- Plant Savanna -->
 		<BuildInfo>
@@ -5950,7 +5918,7 @@
 			<bAltDown>1</bAltDown>
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/TerrainFeatures/Forest.dds</Button>
+			<Button>Art/Interface/Buttons/TerrainFeatures/button_savanna.dds</Button>
 		</BuildInfo>
 		<!-- Tunnel -->
 		<BuildInfo>
@@ -8513,7 +8481,7 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/gatherer_genericfruit.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/gatherer_grape.dds</Button>
 		</BuildInfo>
 		<!-- Plant Gatherer (Kill) -->
 		<BuildInfo>
@@ -8544,7 +8512,7 @@
 			<FeatureStructs/>
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/gatherer_genericfruit.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/picker_genericfruit.dds</Button>
 		</BuildInfo>
 		<!-- Grape Picker -->
 		<BuildInfo>
@@ -8559,7 +8527,7 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/gatherer_genericfruit.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/picker_grape.dds</Button>
 		</BuildInfo>
 		<!-- Plant Picker -->
 		<BuildInfo>
@@ -8574,7 +8542,7 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/gatherer_genericplant.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/picker_genericplant.dds</Button>
 		</BuildInfo>
 		<!-- Beacon -->
 		<BuildInfo>
@@ -8620,7 +8588,7 @@
 		<!-- Harvest Kelp (consumes unit) -->
 		<BuildInfo>
 			<Type>BUILD_HARVEST_KELP_2</Type>
-			<Description>TXT_KEY_BUILD_HARVEST_KELP</Description>
+			<Description>TXT_KEY_BUILD_HARVEST_KELP_K</Description>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>100</iTime>
 			<iCost>0</iCost>
@@ -8634,7 +8602,7 @@
 		<!-- Lighthouse -->
 		<BuildInfo>
 			<Type>BUILD_LIGHTHOUSE_CORAL</Type>
-			<Description>TXT_KEY_BUILD_LIGHTHOUSE</Description>
+			<Description>TXT_KEY_BUILD_LIGHTHOUSE_CORAL</Description>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<iTime>800</iTime>
 			<iCost>0</iCost>
@@ -8647,7 +8615,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_LIGHTHOUSE_REEF</Type>
-			<Description>TXT_KEY_BUILD_LIGHTHOUSE</Description>
+			<Description>TXT_KEY_BUILD_LIGHTHOUSE_REEF</Description>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<iTime>800</iTime>
 			<iCost>0</iCost>
@@ -8731,7 +8699,7 @@
 		<!-- Mushroom Gatherer (Kill) -->
 		<BuildInfo>
 			<Type>BUILD_MUSHROOM_GATHERER_0</Type>
-			<Description>TXT_KEY_BUILD_MUSHROOM_GATHERER</Description>
+			<Description>TXT_KEY_BUILD_MUSHROOM_GATHERER_K</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
@@ -8741,7 +8709,7 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/Button_GrainGather.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/gatherer_mushroom.dds</Button>
 		</BuildInfo>
 		<!-- Mushroom Gatherer (No Kill) -->
 		<BuildInfo>
@@ -8755,7 +8723,7 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/Button_GrainGather.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/gatherer_mushroom.dds</Button>
 		</BuildInfo>
 		<!-- Colony Habitat (Small) -->
 		<BuildInfo>
@@ -8895,7 +8863,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_REEF</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -8903,7 +8870,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CORAL</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -8911,7 +8877,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_REEF_WITH_BEACON</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -8919,7 +8884,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CORAL_WITH_BEACON</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -8927,7 +8891,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_REEF_WITH_LIGHTHOUSE</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -8935,7 +8898,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CORAL_WITH_LIGHTHOUSE</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -8959,7 +8921,6 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_REEF</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -8967,7 +8928,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CORAL</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -8975,7 +8935,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_REEF_WITH_BEACON</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -8983,7 +8942,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CORAL_WITH_BEACON</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -8991,7 +8949,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_REEF_WITH_LIGHTHOUSE</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -8999,7 +8956,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CORAL_WITH_LIGHTHOUSE</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -9253,7 +9209,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_TARPIT</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -9261,7 +9216,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -9269,7 +9223,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -9277,7 +9230,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_OASIS</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -9285,7 +9237,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -9538,7 +9489,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_TARPIT</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -9546,7 +9496,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -9894,7 +9843,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_TARPIT</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -9902,7 +9850,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -9910,7 +9857,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -9918,7 +9864,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_OASIS</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -9926,7 +9871,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -10021,7 +9965,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_TARPIT</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -10029,7 +9972,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -10037,7 +9979,6 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
@@ -10049,265 +9990,14 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/moaiimprovement.dds</Button>
 		</BuildInfo>
-		<!-- Tree Nursery -->
 		<BuildInfo>
-			<Type>BUILD_TREE_NURSERY</Type>
-			<Description>TXT_KEY_BUILD_TREE_NURSERY</Description>
-			<PrereqTech>TECH_GUILDS</PrereqTech>
-			<iTime>500</iTime>
-			<iCost>0</iCost>
+			<Type>BUILD_GROW_FOREST</Type>
+			<Description>TXT_KEY_BUILD_GROW_FOREST</Description>
+			<PrereqTech>TECH_ECOLOGY</PrereqTech>
+			<iTime>1000</iTime>
+			<iCost>20</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_TREE_NURSERY</ImprovementType>
-			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<FeatureStructs>
-				<FeatureStruct>
-					<FeatureType>FEATURE_JUNGLE</FeatureType>
-					<PrereqTech>TECH_IRON_WORKING</PrereqTech>
-					<iTime>400</iTime>
-					<iProduction>20</iProduction>
-					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_MANGROVE</FeatureType>
-					<PrereqTech>TECH_IRON_WORKING</PrereqTech>
-					<iTime>400</iTime>
-					<iProduction>20</iProduction>
-					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
-				</FeatureStruct>
-				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
-					<iTime>300</iTime>
-					<iProduction>30</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
-					<FeatureType>FEATURE_FOREST</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
-					<iTime>300</iTime>
-					<iProduction>40</iProduction>
-					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
-				</FeatureStruct>
-				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
-					<iTime>500</iTime>
-					<iProduction>60</iProduction>
-					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
-					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
-					<iTime>300</iTime>
-					<iProduction>10</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_SAVANNA</FeatureType>
-					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
-					<iTime>300</iTime>
-					<iProduction>10</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
-					<FeatureType>FEATURE_BAMBOO</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
-					<iTime>300</iTime>
-					<iProduction>20</iProduction>
-					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
-					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
-					<iTime>300</iTime>
-					<iProduction>5</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
-					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
-					<iTime>400</iTime>
-					<iProduction>5</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
-					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_CITY_RUINS</FeatureType>
-					<PrereqTech/>
-					<iTime>200</iTime>
-					<iProduction>40</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_ARCOLOGY_RUINS</FeatureType>
-					<PrereqTech/>
-					<iTime>200</iTime>
-					<iProduction>40</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-			</FeatureStructs>
-			<HotKey>KB_S</HotKey>
-			<bShiftDown>1</bShiftDown>
-			<iHotKeyPriority>1</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/TerrainFeatures/Forest.dds,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,3,3</Button>
-		</BuildInfo>
-		<BuildInfo>
-			<Type>BUILD_YOUNG_FOREST</Type>
-			<Description>TXT_KEY_BUILD_YOUNG_FOREST</Description>
-			<PrereqTech>TECH_GUILDS</PrereqTech>
-			<iTime>500</iTime>
-			<iCost>0</iCost>
-			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_YOUNG_FOREST</ImprovementType>
-			<FeatureChange>FEATURE_FOREST_NEW</FeatureChange>
+			<ImprovementType>IMPROVEMENT_GROW_FOREST</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_S</HotKey>
 			<bShiftDown>1</bShiftDown>

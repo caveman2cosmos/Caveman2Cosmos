@@ -16,7 +16,6 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_AGRICULTURAL_ACHIEVEMENT</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_ACHIEVEMENT</ConstructSound>
 			<fVisibilityPriority>10000</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -50,7 +49,6 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_COMMERCIAL_ACHIEVEMENT</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_ACHIEVEMENT</ConstructSound>
 			<fVisibilityPriority>10000</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -264,7 +262,6 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_INDUSTRIAL_ACHIEVEMENT</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_ACHIEVEMENT</ConstructSound>
 			<fVisibilityPriority>10000</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -336,7 +333,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_MILITARY_ACHIEVEMENT</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_ACHIEVEMENT</ConstructSound>
 			<fVisibilityPriority>10000</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -369,7 +365,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_POLITICAL_ACHIEVEMENT</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_ACHIEVEMENT</ConstructSound>
 			<fVisibilityPriority>10000</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -441,7 +436,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_SCIENTIFIC_ACHIEVEMENT</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_ACHIEVEMENT</ConstructSound>
 			<fVisibilityPriority>10000</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -476,7 +470,6 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_SEAFARING_ACHIEVEMENT</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_ACHIEVEMENT</ConstructSound>
 			<fVisibilityPriority>10000</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -1758,7 +1751,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<FoundsCorporation>CORPORATION_MAPSTER</FoundsCorporation>
@@ -9006,7 +8999,6 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURAL_ACHIEVEMENT</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_ACHIEVEMENT</ConstructSound>
 			<fVisibilityPriority>10000</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -20411,7 +20403,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_FIRE_MYTH_EFFECT</BuildingClass>
@@ -20427,7 +20418,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_METAL_MYTH_EFFECT</BuildingClass>
@@ -20443,7 +20433,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_SEA_MYTH</BuildingClass>
@@ -20526,7 +20515,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_SKY_MYTH</BuildingClass>
@@ -20610,7 +20598,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_STONE_MYTH_EFFECT</BuildingClass>
@@ -20626,7 +20613,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DRAGON_MYTH</BuildingClass>

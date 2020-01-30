@@ -1642,6 +1642,7 @@
 			<Strategy>TXT_KEY_BUILDING_HYPERURANION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HYPERURANION</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HYPERURANION</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ARCHETYPAL_VECTOR_SPACES</PrereqTech>
 			<iCost>13692</iCost>
@@ -1676,6 +1677,7 @@
 			<Strategy>TXT_KEY_BUILDING_FAIRYLAND_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FAIRYLAND</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_FAIRYLAND</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_NON_TEMPORAL_ENTITIES</PrereqTech>
 			<iCost>11658</iCost>
@@ -1710,6 +1712,7 @@
 			<Strategy>TXT_KEY_BUILDING_COSMIC_AC_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COSMIC_AC</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_COSMIC_AC</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_NON_TEMPORAL_ENTITIES</PrereqTech>
 			<iCost>11658</iCost>
@@ -1769,6 +1772,7 @@
 			<Strategy>TXT_KEY_BUILDING_UNIVERSE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_SELF_CREATION</PrereqTech>
 			<iCost>14732</iCost>

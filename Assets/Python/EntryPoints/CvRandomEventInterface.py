@@ -2657,15 +2657,9 @@ def getHelpMasterBlacksmith1(argsList):
 
 def expireMasterBlacksmith1(argsList):
 	iPlayer = argsList[1].ePlayer
-	CyPlayer = GC.getPlayer(iPlayer)
-	# A player reported a 'NoneType' object has no attribute 'getCity' exception in this function on SVN 11031.
-	# CyPlayer could never be None/null here in vanilla BtS. Issue name: NEW_EXPIRE_QUEST_PARADIGM
-	if not CyPlayer:
-		print "[WARNING] CvRandonEventInterface.expireMasterBlacksmith1\n\tEVENTTRIGGER_MASTER_BLACKSMITH triggered for a non valid player (iPlayer not in range(51) == True)"
-	else:
-		CyCity = CyPlayer.getCity(argsList[1].iCityId)
-		if not CyCity or CyCity.getOwner() != iPlayer:
-			return True
+	CyCity = GC.getPlayer(iPlayer).getCity(argsList[1].iCityId)
+	if not CyCity or CyCity.getOwner() != iPlayer:
+		return True
 	return False
 
 
@@ -4688,12 +4682,9 @@ def doSyntheticFuels4(argsList):
 ####### ALTERNATIVE_ENERGY ######
 
 def canTriggerAlternativeEnergy(argsList):
-
 	CyPlayer = GC.getPlayer(argsList[0].ePlayer)
-
 	if CyPlayer.getBuildingClassCountWithUpgrades(GC.getBuildingInfo(GC.getInfoTypeForString("BUILDING_GREAT_DAM")).getBuildingClassType()):
 		return False
-
 	if not CyPlayer.getBuildingClassCountWithUpgrades(GC.getInfoTypeForString("BUILDINGCLASS_COAL_PLANT")):
 		return False
 	return True
@@ -4703,15 +4694,8 @@ def getHelpAlternativeEnergy1(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_ALTERNATIVE_ENERGY_HELP_1", (GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers(), ))
 
 def expireAlternativeEnergy1(argsList):
-
-	CyPlayer = GC.getPlayer(argsList[1].ePlayer)
-	# A player reported a 'NoneType' object has no attribute 'getBuildingClassCountWithUpgrades' exception in this function on SVN 11024.
-	# CyPlayer could never be None/null here in vanilla BtS. Issue name: NEW_EXPIRE_QUEST_PARADIGM
-	if not CyPlayer:
-		print "[WARNING] CvRandonEventInterface.expireAlternativeEnergy1\n\tEVENTTRIGGER_ALTERNATIVE_ENERGY triggered for a non valid player (iPlayer not in range(51) == True)"
-	else:
-		if CyPlayer.getBuildingClassCountWithUpgrades(GC.getBuildingInfo(GC.getInfoTypeForString("BUILDING_GREAT_DAM")).getBuildingClassType()):
-			return True
+	if GC.getPlayer(argsList[1].ePlayer).getBuildingClassCountWithUpgrades(GC.getBuildingInfo(GC.getInfoTypeForString("BUILDING_GREAT_DAM")).getBuildingClassType()):
+		return True
 	return False
 
 
@@ -8782,6 +8766,9 @@ def doRemoveWVSlavery(argsList):
 		if bMessage:
 			msg = "Slavery worldview eradicated"
 			CvUtil.sendMessage(msg, iPlayer, 16, CyUnit.getButton(), ColorTypes(8), CyUnit.getX(), CyUnit.getY(), True, True, 0, "AS2D_DISCOVERBONUS")
+
+		iCost = CyPlayer.getBuildingProductionNeeded(iSlaveMarket)
+		iSum = 0
 		CyCity, i = CyPlayer.firstCity(False)
 		while CyCity:
 			sCityName = CyCity.getName()
@@ -8796,9 +8783,7 @@ def doRemoveWVSlavery(argsList):
 
 				CyCity.setNumRealBuilding(iSlaveMarket, 0)
 
-				iCost = CyPlayer.getBuildingProductionNeeded(iSlaveMarket)
-				if iCost > 0:
-					CyPlayer.changeGold(iCost * 0.2)
+				iSum += iCost
 
 				if bMessage:
 					msg = TRNSLTR.getText("TXT_KEY_MESSAGE_SLAVE_MARKET_SOLD", (sCityName,))
@@ -8897,6 +8882,8 @@ def doRemoveWVSlavery(argsList):
 
 			CyCity, i = CyPlayer.nextCity(i, False)
 
+		if iSum > 0:
+			CyPlayer.changeGold(int(iSum * 0.2))
 
 
 def doRemoveWVCannibalism(argsList):

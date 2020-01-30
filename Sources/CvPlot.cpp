@@ -839,12 +839,12 @@ void CvPlot::doImprovementSpawn()
 	// XXX
 #ifdef _DEBUG
 	{
-		for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
+		foreach_ (CvUnit* unit, units())
 		{
-			FAssertMsg(unitItr->atPlot(this), "pLoopUnit is expected to be at the current plot instance");
-			if (!unitItr->atPlot(this))
+			FAssertMsg(unit->atPlot(this), "pLoopUnit is expected to be at the current plot instance");
+			if (!unit->atPlot(this))
 			{
-				removeUnit(*unitItr);
+				removeUnit(unit);
 			}
 		}
 	}
@@ -1292,15 +1292,7 @@ void CvPlot::updateMinimapColor()
 
 bool CvPlot::unitHere(const CvUnit* pUnit) const
 {
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-	{
-		if (*unitItr == pUnit)
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return algo::contains(units(), pUnit);
 }
 
 CvUnit* CvPlot::getPreferredCenterUnit() const
@@ -1855,19 +1847,13 @@ bool CvPlot::isAdjacentToLand() const
 {
 	PROFILE_FUNC();
 
-	CvPlot* pAdjacentPlot;
-	int iI;
-
-	for (iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+	for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
 	{
-		pAdjacentPlot = plotDirection(getX_INLINE(), getY_INLINE(), ((DirectionTypes)iI));
+		CvPlot* pAdjacentPlot = plotDirection(getX_INLINE(), getY_INLINE(), ((DirectionTypes)iI));
 
-		if (pAdjacentPlot != NULL)
+		if (pAdjacentPlot != NULL && !pAdjacentPlot->isWater())
 		{
-			if (!(pAdjacentPlot->isWater()))
-			{
-				return true;
-			}
+			return true;
 		}
 	}
 
@@ -1879,17 +1865,14 @@ bool CvPlot::isCoastalLand(int iMinWaterSize) const
 {
 	PROFILE_FUNC();
 
-	CvPlot* pAdjacentPlot;
-	int iI;
-
 	if (isWater())
 	{
 		return false;
 	}
 
-	for (iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+	for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
 	{
-		pAdjacentPlot = plotDirection(getX_INLINE(), getY_INLINE(), ((DirectionTypes)iI));
+		CvPlot* pAdjacentPlot = plotDirection(getX_INLINE(), getY_INLINE(), ((DirectionTypes)iI));
 
 		if (pAdjacentPlot != NULL)
 		{
@@ -1909,15 +1892,7 @@ bool CvPlot::isCoastalLand(int iMinWaterSize) const
 
 bool CvPlot::isVisibleWorked() const
 {
-	if (isBeingWorked())
-	{
-		if ((getTeam() == GC.getGameINLINE().getActiveTeam()) || GC.getGameINLINE().isDebugMode())
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return isBeingWorked() && (getTeam() == GC.getGameINLINE().getActiveTeam() || GC.getGameINLINE().isDebugMode());
 }
 
 
@@ -1925,9 +1900,7 @@ bool CvPlot::isWithinTeamCityRadius(TeamTypes eTeam, PlayerTypes eIgnorePlayer) 
 {
 	PROFILE_FUNC();
 
-	int iI;
-
-	for (iI = 0; iI < MAX_PLAYERS; ++iI)
+	for (int iI = 0; iI < MAX_PLAYERS; ++iI)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -1950,13 +1923,8 @@ bool CvPlot::isWithinTeamCityRadius(TeamTypes eTeam, PlayerTypes eIgnorePlayer) 
 
 bool CvPlot::isLake() const
 {
-	CvArea* pArea = area();
-	if (pArea != NULL)
-	{
-		return pArea->isLake();
-	}
-
-	return false;
+	const CvArea* pArea = area();
+	return pArea ? pArea->isLake() : false;
 }
 
 
@@ -1975,15 +1943,20 @@ bool CvPlot::isFreshWater(bool bIgnoreJungle) const
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 {
-	CvPlot* pLoopPlot;
-	int iDX, iDY;
-
-	if (isWater())
+	CvCity* pCity = getPlotCity();
+	if (pCity != NULL && pCity->hasFreshWater())
 	{
-		return false;
+		return true;
 	}
 
-	if (isImpassable())
+	if (isLake())
+	{
+		return true;
+	}
+
+	TeamTypes eTeam = getTeam();
+
+	if (isWater() || isImpassable(eTeam))
 	{
 		return false;
 	}
@@ -1993,11 +1966,11 @@ bool CvPlot::isFreshWater(bool bIgnoreJungle) const
 		return true;
 	}
 
-	for (iDX = -1; iDX <= 1; iDX++)
+	for (int iDX = -1; iDX <= 1; iDX++)
 	{
-		for (iDY = -1; iDY <= 1; iDY++)
+		for (int iDY = -1; iDY <= 1; iDY++)
 		{
-			pLoopPlot	= plotXY(getX_INLINE(), getY_INLINE(), iDX, iDY);
+			CvPlot* pLoopPlot = plotXY(getX_INLINE(), getY_INLINE(), iDX, iDY);
 
 			if (pLoopPlot != NULL)
 			{
@@ -2013,22 +1986,6 @@ bool CvPlot::isFreshWater(bool bIgnoreJungle) const
 						return true;
 					}
 				}
-				/************************************************************************************************/
-				/* Afforess	                  Start		 12/13/09                                                */
-				/*                                                                                              */
-				/*                                                                                              */
-				/************************************************************************************************/
-				if (pLoopPlot->isCity())
-				{
-					CvCity* pCity = pLoopPlot->getPlotCity();
-					if (pCity->hasFreshWater())
-					{
-						return true;
-					}
-				}
-				/************************************************************************************************/
-				/* Afforess	                     END                                                            */
-				/************************************************************************************************/
 			}
 		}
 	}
@@ -2040,7 +1997,8 @@ bool CvPlot::isFreshWater(bool bIgnoreJungle) const
 bool CvPlot::isPotentialIrrigation() const
 {
 //===NM=====Mountain Mod===0X=====
-	if ((isCity() && !(isHills() || isPeak2(true))) || ((getImprovementType() != NO_IMPROVEMENT) && (GC.getImprovementInfo(getImprovementType()).isCarriesIrrigation())))
+	//TB Debug: Why should it be necessary for cities to require Not being on hills or alternative peak types (like volcanoes) for them to be potentially irrigated?  Seems to be a strange requirement for wells to function.
+	if ((isCity() /*&& !(isHills() || isPeak2(true))*/) || ((getImprovementType() != NO_IMPROVEMENT) && (GC.getImprovementInfo(getImprovementType()).isCarriesIrrigation())))
 	{
 		if ((getTeam() != NO_TEAM) && GET_TEAM(getTeam()).isIrrigation())
 		{
@@ -2057,7 +2015,8 @@ bool CvPlot::canHavePotentialIrrigation() const
 	int iI;
 
 //===NM=====Mountain Mod===0X=====
-	if (isCity() && !(isHills() || isPeak2(true)))
+	//TB Debug: Why should it be necessary for cities to require Not being on either hills or alternative peak types (like volcanoes) for them to be potentially irrigated?  Seems to be a strange requirement for wells to function.
+	if (isCity() /*&& !(isHills() || isPeak2(true))*/)
 	{
 		return true;
 	}
@@ -2827,26 +2786,7 @@ bool CvPlot::canHaveBonus(BonusTypes eBonus, bool bIgnoreLatitude) const
 		return false;
 	}
 
-/************************************************************************************************/
-/* Afforess	Mountains Start		 08/03/09                                           		 */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-//	if (isPeak())
-//	{
-//		return false;
-//	}
 
-	if (!GC.getGameINLINE().isOption(GAMEOPTION_MOUNTAINS))
-	{
-		if (isPeak2(true))
-		{
-			return false;
-		}
-	}
-/************************************************************************************************/
-/* Afforess	Mountains End       END        		                                             */
-/************************************************************************************************/
 	if (getFeatureType() != NO_FEATURE)
 	{
 		if (!(GC.getBonusInfo(eBonus).isFeature(getFeatureType())))
@@ -2874,24 +2814,13 @@ bool CvPlot::canHaveBonus(BonusTypes eBonus, bool bIgnoreLatitude) const
 			return false;
 		}
 	}
-/************************************************************************************************/
-/* Afforess	Mountains Start		 08/31/09                                           		 */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	else if (isPeak2(true))
 	{
-		if (GC.getGameINLINE().isOption(GAMEOPTION_MOUNTAINS))
+		if (!(GC.getBonusInfo(eBonus).isPeaks()))
 		{
-			if (!(GC.getBonusInfo(eBonus).isPeaks()))
-			{
-				return false;
-			}
+			return false;
 		}
 	}
-/************************************************************************************************/
-/* Afforess	Mountains End       END        		                                             */
-/************************************************************************************************/
 	else if (isFlatlands())
 	{
 		if (!(GC.getBonusInfo(eBonus).isFlatlands()))
@@ -2908,7 +2837,7 @@ bool CvPlot::canHaveBonus(BonusTypes eBonus, bool bIgnoreLatitude) const
 		}
 	}
 
-	if (GC.getBonusInfo(eBonus).getMinAreaSize() != -1)
+	if (GC.getBonusInfo(eBonus).getMinAreaSize() > 1)
 	{
 		if (area()->getNumTiles() < GC.getBonusInfo(eBonus).getMinAreaSize())
 		{
@@ -4039,7 +3968,7 @@ namespace {
 				|| pLoopUnit->isEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), plot)
 				|| (pAttacker != NULL && pAttacker->isEnemy(GET_PLAYER(pLoopUnit->getOwnerINLINE()).getTeam(), plot, pLoopUnit)))
 			// Units cannot coexist together
-			&& (pAttacker == NULL || !pLoopUnit->canUnitCoexistWithEnemyUnit(pAttacker, plot, true))
+			&& (pAttacker == NULL || !pLoopUnit->canUnitCoexistWithArrivingUnit(*pAttacker))
 			// Potential enemy (todo: we should just assert that attacking player is valid if we are testing for potential enemy)
 			&& (!bTestPotentialEnemy
 				|| eAttackingPlayer == NO_PLAYER
@@ -4115,21 +4044,23 @@ CvUnit* CvPlot::getBestDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer
 	}
 
 	int iBestValue = 0;
-	CvUnit* pBestUnit = NULL;
+	CvUnit* pBestUnit = nullptr;
 
-	for (unit_iterator unit = beginUnits(); unit != endUnits(); ++unit)
+	// Can't use this as it requires more than 9 args, and bind only supports 9
+	//CvUnit* pBestUnit = scoring::max_score(units(), 
+	//	bst::bind(&CvSelectionGroup::getDefenderScore, this, _1, eOwner, eAttackingPlayer, pAttacker, bTestAtWar, bTestPotentialEnemy, bTestCanMove, bAssassinate, bClearCache ? ECacheAccess::Write : ECacheAccess::ReadWrite)
+	//).get_value_or(nullptr);
+
+	foreach_ (CvUnit* unit, units())
 	{
-		CvUnit* pLoopUnit = *unit;
-
-		int iValue = getDefenderScore(this, pLoopUnit, eOwner, eAttackingPlayer, pAttacker, bTestAtWar, bTestPotentialEnemy, bTestCanMove, bAssassinate, bClearCache ? ECacheAccess::Write : ECacheAccess::ReadWrite);
+		int iValue = getDefenderScore(this, unit, eOwner, eAttackingPlayer, pAttacker, bTestAtWar, bTestPotentialEnemy, bTestCanMove, bAssassinate, bClearCache ? ECacheAccess::Write : ECacheAccess::ReadWrite);
 
 		if (iValue > iBestValue)
 		{
-			pBestUnit = pLoopUnit;
+			pBestUnit = unit;
 			iBestValue = iValue;
 		}
 	}
-
 
 	return pBestUnit;
 }
@@ -4168,76 +4099,55 @@ CvUnit* CvPlot::getFirstDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlaye
 }
 
 // returns a sum of the strength (adjusted by firepower) of all the units on a plot
-int CvPlot::AI_sumStrength(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, DomainTypes eDomainType, bool bDefensiveBonuses, bool bTestAtWar, bool bTestPotentialEnemy, int iRange) const
+int CvPlot::AI_sumStrength(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, DomainTypes eDomainType, StrengthFlags::flags flags /*= StrengthFlags::DefensiveBonuses*/, int iRange) const
 {
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
+	const int COLLATERAL_COMBAT_DAMAGE = GC.getDefineINT("COLLATERAL_COMBAT_DAMAGE"); // K-Mod. (currently this number is "10")
+
+	const bool bTestAtWar = flags & StrengthFlags::TestAtWar;
+	const bool bTestPotentialEnemy = flags & StrengthFlags::TestPotentialEnemy;
+	const bool bDefensiveBonuses = flags & StrengthFlags::DefensiveBonuses;
+	const bool bCollatoral = flags & StrengthFlags::CollatoralDamage;
+	FAssertMsg(!bTestPotentialEnemy || eAttackingPlayer != NO_PLAYER, "Need to specify the attacking player to filter by enemies");
+
 	int	strSum = 0;
-	int iBaseCollateral = GC.getDefineINT("COLLATERAL_COMBAT_DAMAGE"); // K-Mod. (currently this number is "10")
-	CvPlot* pLoopPlot;
 
-	for (int iDX = -(iRange); iDX <= iRange; iDX++)
+	for (int iDX = -iRange; iDX <= iRange; iDX++)
 	{
-		for (int iDY = -(iRange); iDY <= iRange; iDY++)
+		for (int iDY = -iRange; iDY <= iRange; iDY++)
 		{
-			pLoopPlot	= plotXY(getX_INLINE(), getY_INLINE(), iDX, iDY);
+			const CvPlot* pLoopPlot = plotXY(getX_INLINE(), getY_INLINE(), iDX, iDY);
 
-			if (pLoopPlot != NULL)
+			if (pLoopPlot == NULL)
+				continue;
+
+			for(unit_iterator unitItr = pLoopPlot->beginUnits(); unitItr != pLoopPlot->endUnits(); ++unitItr)
 			{
-				pUnitNode = pLoopPlot->headUnitNode();
+				CvUnit* pLoopUnit = *unitItr;
 
-				while (pUnitNode != NULL)
+				if ((eOwner == NO_PLAYER || pLoopUnit->getOwnerINLINE() == eOwner) 
+					&& (eAttackingPlayer == NO_PLAYER || !pLoopUnit->isInvisible(GET_PLAYER(eAttackingPlayer).getTeam(), false))
+					&& (!bTestAtWar || eAttackingPlayer == NO_PLAYER || atWar(GET_PLAYER(eAttackingPlayer).getTeam(), pLoopUnit->getTeam()))
+					&& (!bTestPotentialEnemy || eAttackingPlayer == NO_PLAYER || pLoopUnit->isPotentialEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), this))
+					&& (eDomainType == NO_DOMAIN || pLoopUnit->getDomainType() == eDomainType)
+					)
 				{
-					pLoopUnit = ::getUnit(pUnitNode->m_data);
-					if (pLoopUnit == NULL)
-					{
-						pLoopPlot->unitGameStateCorrections();
-						pUnitNode = nextUnitNode(pUnitNode);
-						continue;
-					}
-					else
-					{
-						pUnitNode = nextUnitNode(pUnitNode);
-					}
+					// we may want to be more sophisticated about domains
+					// somewhere we need to check to see if this is a city, if so, only land units can defend here, etc
+					strSum += pLoopUnit->currEffectiveStr(bDefensiveBonuses? this : nullptr, nullptr);
 
-					if ((eOwner == NO_PLAYER) || (pLoopUnit->getOwnerINLINE() == eOwner))
-					{
-						if ((eAttackingPlayer == NO_PLAYER) || !(pLoopUnit->isInvisible(GET_PLAYER(eAttackingPlayer).getTeam(), false)))
-						{
-							if (!bTestAtWar || (eAttackingPlayer == NO_PLAYER) || atWar(GET_PLAYER(eAttackingPlayer).getTeam(), pLoopUnit->getTeam()))
-							{
-								if (!bTestPotentialEnemy || (eAttackingPlayer == NO_PLAYER) || pLoopUnit->isPotentialEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), this))
-								{
-									// we may want to be more sophisticated about domains
-									// somewhere we need to check to see if this is a city, if so, only land units can defend here, etc
-									if (eDomainType == NO_DOMAIN || (pLoopUnit->getDomainType() == eDomainType))
-									{
-										const CvPlot* pPlot = NULL;
-										
-										if (bDefensiveBonuses)
-											pPlot = this;
-
-										strSum += pLoopUnit->currEffectiveStr(pPlot, NULL);
-
-										// K-Mod assume that if we aren't counting defensive bonuses, then we should be counting collateral 
-										if (pLoopUnit->collateralDamage() > 0 && !bDefensiveBonuses) 
-										{ 
-											//int iPossibleTargets = std::min((pAttackedPlot->getNumVisibleEnemyDefenders(pLoopUnit) - 1), pLoopUnit->collateralDamageMaxUnits()); 
-											// unfortunately, we can't count how many targets there are... 
-											int iPossibleTargets = pLoopUnit->collateralDamageMaxUnits(); 
-											if (iPossibleTargets > 0) 
-											{ 
-												// collateral damage is not trivial to calculate. This estimate is pretty rough. 
-												strSum += pLoopUnit->baseCombatStr() * iBaseCollateral * pLoopUnit->collateralDamage() * iPossibleTargets / 100; 
-											} 
-										} 
-										// K-Mod end 
-									}
-								}
-							}
-						}
-					}
-					
+					// K-Mod assume that if we aren't counting defensive bonuses, then we should be counting collateral 
+					if (pLoopUnit->collateralDamage() > 0 && bCollatoral)
+					{ 
+						//int iPossibleTargets = std::min((pAttackedPlot->getNumVisibleEnemyDefenders(pLoopUnit) - 1), pLoopUnit->collateralDamageMaxUnits()); 
+						// unfortunately, we can't count how many targets there are... 
+						int iPossibleTargets = pLoopUnit->collateralDamageMaxUnits(); 
+						if (iPossibleTargets > 0) 
+						{ 
+							// collateral damage is not trivial to calculate. This estimate is pretty rough. 
+							strSum += pLoopUnit->baseCombatStr() * COLLATERAL_COMBAT_DAMAGE * pLoopUnit->collateralDamage() * iPossibleTargets / 100;
+						} 
+					} 
+					// K-Mod end
 				}
 			}
 		}
@@ -4855,23 +4765,10 @@ int CvPlot::defenseModifier(TeamTypes eDefender, bool bIgnoreBuilding, bool bHel
 	{
 		iModifier += GC.getHILLS_EXTRA_DEFENSE();
 	}
-
-/************************************************************************************************/
-/* Afforess	Mountains Start		 08/03/09                                           		 */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-
-	if (GC.getGameINLINE().isOption(GAMEOPTION_MOUNTAINS))
+	else if (isPeak2(true))
 	{
-		if (isPeak2(true))
-		{
-			iModifier += GC.getPEAK_EXTRA_DEFENSE();
-		}
+		iModifier += GC.getPEAK_EXTRA_DEFENSE();
 	}
-/************************************************************************************************/
-/* Afforess	Mountains End       END        		                                             */
-/************************************************************************************************/
 
 	if (bHelp)
 	{
@@ -5233,7 +5130,7 @@ int CvPlot::getNumCultureRangeCities(PlayerTypes ePlayer) const
 /*                                                                                              */
 /* General AI                                                                                   */
 /************************************************************************************************/
-bool CvPlot::isHasPathToEnemyCity( TeamTypes eAttackerTeam, bool bIgnoreBarb )
+bool CvPlot::isHasPathToEnemyCity( TeamTypes eAttackerTeam, bool bIgnoreBarb ) const
 {
 	PROFILE_FUNC();
 
@@ -5312,7 +5209,7 @@ bool CvPlot::isHasPathToEnemyCity( TeamTypes eAttackerTeam, bool bIgnoreBarb )
 	return bFound;
 }
 
-bool CvPlot::isHasPathToPlayerCity( TeamTypes eMoveTeam, PlayerTypes eOtherPlayer )
+bool CvPlot::isHasPathToPlayerCity( TeamTypes eMoveTeam, PlayerTypes eOtherPlayer ) const
 {
 	PROFILE_FUNC();
 
@@ -5355,7 +5252,7 @@ bool CvPlot::isHasPathToPlayerCity( TeamTypes eMoveTeam, PlayerTypes eOtherPlaye
 	return bFound;
 }
 
-int CvPlot::calculatePathDistanceToPlot( TeamTypes eTeam, CvPlot* pTargetPlot )
+int CvPlot::calculatePathDistanceToPlot( TeamTypes eTeam, CvPlot* pTargetPlot ) const
 {
 	PROFILE_FUNC();
 
@@ -5415,23 +5312,23 @@ bool CvPlot::isTeamBorderCache( TeamTypes eTeam ) const
 	return m_abIsTeamBorderCache[eTeam];
 }
 
-void CvPlot::setIsActivePlayerNoDangerCache( bool bNewValue )
+void CvPlot::setIsActivePlayerNoDangerCache( bool bNewValue ) const
 {
 	m_bIsActivePlayerNoDangerCache = bNewValue;
 }
 
-void CvPlot::setIsActivePlayerHasDangerCache( bool bNewValue )
+void CvPlot::setIsActivePlayerHasDangerCache( bool bNewValue ) const
 {
 	m_bIsActivePlayerHasDangerCache = bNewValue;
 }
 
-void CvPlot::setIsTeamBorderCache( TeamTypes eTeam, bool bNewValue )
+void CvPlot::setIsTeamBorderCache( TeamTypes eTeam, bool bNewValue ) const
 {
 	PROFILE_FUNC();
 	m_abIsTeamBorderCache[eTeam] = bNewValue;
 }
 
-void CvPlot::invalidateIsTeamBorderCache()
+void CvPlot::invalidateIsTeamBorderCache() const
 {
 	PROFILE_FUNC();
 
@@ -6851,35 +6748,17 @@ bool CvPlot::isValidDomainForAction(const CvUnit& unit) const
 
 bool CvPlot::isImpassable(TeamTypes eTeam) const
 {
-/************************************************************************************************/
-/* Afforess	Mountains Start		 09/18/09                                           		 */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-//	if (isPeak())
-//	{
-//		return true;
-//	}
-
-	if (!GC.getGameINLINE().isOption(GAMEOPTION_MOUNTAINS))
+	if (isPeak2(true))
 	{
-		if (isPeak2(true))
+		if (eTeam != NO_TEAM && GET_TEAM(eTeam).isCanPassPeaks())
+		{
+			return false;
+		}
+		else
 		{
 			return true;
 		}
 	}
-	else if (isPeak2(true))
-	{
-		if (eTeam == NO_TEAM || !GET_TEAM(eTeam).isCanPassPeaks())
-		{
-			return true;
-		}
-	}
-	
-/************************************************************************************************/
-/* Afforess	Mountains End       END        		                                             */
-/************************************************************************************************/
-
 	if (getTerrainType() == NO_TERRAIN)
 	{
 		return false;
@@ -9529,23 +9408,13 @@ int CvPlot::calculateNatureYield(YieldTypes eYield, TeamTypes eTeam, bool bIgnor
 
 	if (isImpassable(getTeam()))
 	{
-		if (GC.getGameINLINE().isOption(GAMEOPTION_MOUNTAINS))
+		if (isPeak2(true))
 		{
-			if (!isPeak2(true))
-			{
+			if (eTeam != NO_TEAM && !isRoute())
+			{// It makes sense to only require a route for a city to work the peak even if the player doesn't have the mounteneering tech.
+			// Perhaps add a landslide event that destroys route and improvement on peaks, so that players without the mountaneering tech
+			// can't rebuild easily mountain improvements conquered from a more advanced civilization.
 				return 0;
-			}
-			else
-			{
-				//	Koshling - prevent mountains being worked until workers can
-				//	move into peak tiles
-				if ( eTeam != NO_TEAM && !GET_TEAM(eTeam).isCanPassPeaks()  )
-				{
-					if ( !isRoute() )
-					{
-						return 0;
-					}
-				}
 			}
 		}
 		else
@@ -10730,7 +10599,7 @@ int CvPlot::getVisibilityCount(TeamTypes eTeam) const
 	return m_aiVisibilityCount[eTeam];
 }
 
-int CvPlot::getDangerCount(int /*PlayerTypes*/ ePlayer)
+int CvPlot::getDangerCount(int /*PlayerTypes*/ ePlayer) const
 {
 	FAssertMsg(ePlayer >= 0, "ePlayer is expected to be non-negative (invalid Index)");
 	FAssertMsg(ePlayer < MAX_PLAYERS, "ePlayer is expected to be within maximum bounds (invalid Index)");
@@ -11015,7 +10884,7 @@ int CvPlot::getBlockadedCount(TeamTypes eTeam) const
 		return 0;
 	}
 
-	return m_aiBlockadedCount[eTeam];
+	return std::max<int>(0, m_aiBlockadedCount[eTeam]);
 }
 
 void CvPlot::resetBlockadedCounts()
@@ -11046,8 +10915,8 @@ void CvPlot::changeBlockadedCount(TeamTypes eTeam, int iChange)
 /*                                                                                              */
 /* Bugfix                                                                                       */
 /************************************************************************************************/
-		FAssertMsg(getBlockadedCount(eTeam) >= 0, CvString::format("Blockaded count on a plot should not go lower than 0, it is now %d", getBlockadedCount(eTeam)).c_str());
-		FAssertMsg(getBlockadedCount(eTeam) == 0 || isWater(), "Non water tiles cannot have a non-zero Blockaded count");
+		FAssertMsg(m_aiBlockadedCount[eTeam] >= 0, CvString::format("Blockaded count on a plot should not go lower than 0, it is now %d", getBlockadedCount(eTeam)).c_str());
+		FAssertMsg(m_aiBlockadedCount[eTeam] == 0 || isWater(), "Non water tiles cannot have a non-zero Blockaded count");
 
 		// Hack so that never get negative blockade counts as a result of fixing issue causing
 		// rare permanent blockades.
@@ -13650,6 +13519,11 @@ void CvPlot::read(FDataStreamBase* pStream)
 	{
 		m_aiBlockadedCount = new short[cCount];
 		WRAPPER_READ_ARRAY(wrapper, "CvPlot", cCount, m_aiBlockadedCount);
+		// Hack to cleanup negative blockades
+		for (int i = 0; i < cCount; ++i)
+		{
+			m_aiBlockadedCount[i] = std::max<short>(0, m_aiBlockadedCount[i]);
+		}
 	}
 
 	SAFE_DELETE_ARRAY(m_aiRevealedOwner);
@@ -15507,7 +15381,7 @@ bool CvPlot::hasDefender(bool bCheckCanAttack, PlayerTypes eOwner, PlayerTypes e
 					{
 						if (!bTestAtWar || eAttackingPlayer == NO_PLAYER || pLoopUnit->isEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), this) || (NULL != pAttacker && pAttacker->isEnemy(GET_PLAYER(pLoopUnit->getOwnerINLINE()).getTeam(), this, pLoopUnit)))
 						{
-							if (NULL == pAttacker || !pLoopUnit->canUnitCoexistWithEnemyUnit(pAttacker, this, true))
+							if (NULL == pAttacker || !pLoopUnit->canUnitCoexistWithArrivingUnit(*pAttacker))
 							{
 								if (!bTestPotentialEnemy || (eAttackingPlayer == NO_PLAYER) || pLoopUnit->isPotentialEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), this) || (NULL != pAttacker && pAttacker->isPotentialEnemy(GET_PLAYER(pLoopUnit->getOwnerINLINE()).getTeam(), this, pLoopUnit)))
 								{
@@ -15558,7 +15432,7 @@ bool CvPlot::hasStealthDefender(const CvUnit* pAttacker) const
 			{
 				if (pLoopUnit->isEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), this) || (NULL != pAttacker && pAttacker->isEnemy(GET_PLAYER(pLoopUnit->getOwnerINLINE()).getTeam(), this, pLoopUnit)))
 				{
-					if (NULL == pAttacker || !pLoopUnit->canUnitCoexistWithEnemyUnit(pAttacker, this, true))
+					if (NULL == pAttacker || !pLoopUnit->canUnitCoexistWithArrivingUnit(*pAttacker))
 					{
 						if (pLoopUnit->getImmobileTimer() < 1)
 						{
@@ -15603,7 +15477,7 @@ void CvPlot::revealBestStealthDefender(const CvUnit* pAttacker)
 		{
 			if (pLoopUnit->isEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), this) || (NULL != pAttacker && pAttacker->isEnemy(GET_PLAYER(pLoopUnit->getOwnerINLINE()).getTeam(), this, pLoopUnit)))
 			{
-				if (NULL == pAttacker || !pLoopUnit->canUnitCoexistWithEnemyUnit(pAttacker, this, true))
+				if (NULL == pAttacker || !pLoopUnit->canUnitCoexistWithArrivingUnit(*pAttacker))
 				{
 					if (pLoopUnit->getImmobileTimer() < 1)
 					{
@@ -15658,7 +15532,7 @@ void CvPlot::doPreAttackTraps(CvUnit* pAttacker)
 		pUnitNode = nextUnitNode(pUnitNode);
 		if (!pLoopUnit->isDead() && pLoopUnit->isArmedTrap() && pLoopUnit->isEnemy(pAttacker->getTeam(), this, pAttacker) && pLoopUnit->isTriggerBeforeAttack())
 		{
-			if (NULL == pAttacker || !pLoopUnit->canUnitCoexistWithEnemyUnit(pAttacker, this, true))
+			if (NULL == pAttacker || !pLoopUnit->canUnitCoexistWithArrivingUnit(*pAttacker))
 			{
 				pLoopUnit->doTrap(pAttacker);
 			}
@@ -16203,7 +16077,7 @@ CvUnit* CvPlot::getWorstDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlaye
 			{
 				if (!bTestAtWar || eAttackingPlayer == NO_PLAYER || pLoopUnit->isEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), this) || (NULL != pAttacker && pAttacker->isEnemy(GET_PLAYER(pLoopUnit->getOwnerINLINE()).getTeam(), this, pLoopUnit)))
 				{
-					if (NULL == pAttacker || !pLoopUnit->canUnitCoexistWithEnemyUnit(pAttacker, this, true))
+					if (NULL == pAttacker || !pLoopUnit->canUnitCoexistWithArrivingUnit(*pAttacker))
 					{
 						if (!bTestPotentialEnemy || (eAttackingPlayer == NO_PLAYER) || pLoopUnit->isPotentialEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), this) || (NULL != pAttacker && pAttacker->isPotentialEnemy(GET_PLAYER(pLoopUnit->getOwnerINLINE()).getTeam(), this, pLoopUnit)))
 						{
@@ -16518,7 +16392,8 @@ void CvPlot::enableCenterUnitRecalc(bool bEnable)
 
 	if ( bEnable )
 	{
-		updateCenterUnit();
+		hideGraphics(ECvPlotGraphics::UNIT);
+		// updateCenterUnit();
 	}
 }
 
@@ -16891,3 +16766,8 @@ CvUnit* CvPlot::unit_iterator::resolve(const IDInfo& info) const
 {
 	return ::getUnit(info);
 }
+
+//CvPlot::const_unit_iterator::value_type* CvPlot::const_unit_iterator::resolve(const IDInfo& info) const
+//{
+//	return ::getUnit(info);
+//}

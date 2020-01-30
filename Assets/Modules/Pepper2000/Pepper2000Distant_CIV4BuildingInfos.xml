@@ -1425,6 +1425,7 @@
 			<Strategy>TXT_KEY_BUILDING_BASILISK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BASILISK</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BASILISK</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_COSMIC_GOVERNANCE</PrereqTech>
 			<iCost>7783</iCost>
@@ -1456,6 +1457,7 @@
 			<Strategy>TXT_KEY_BUILDING_LIBRARY_OF_BABEL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LIBRARY_OF_BABEL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_LIBRARY_OF_BABEL</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_TRANSFINITE_COMPUTATION</PrereqTech>
 			<iCost>13692</iCost>
@@ -1493,6 +1495,7 @@
 			<Strategy>TXT_KEY_BUILDING_MILLIWAYS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MILLIWAYS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MILLIWAYS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_TIME_REVERSAL</PrereqTech>
 			<iCost>7783</iCost>
@@ -1532,6 +1535,7 @@
 			<Strategy>TXT_KEY_BUILDING_HEAVEN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HEAVEN</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HEAVEN</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_OMEGA_POINT</PrereqTech>
 			<iCost>14732</iCost>
@@ -1570,6 +1574,7 @@
 			<Strategy>TXT_KEY_BUILDING_OMELAS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OMELAS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_OMELAS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_OMNIBENEVOLENT_MANDATE</PrereqTech>
 			<iCost>10665</iCost>

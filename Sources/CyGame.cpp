@@ -739,7 +739,6 @@ int CyGame::getBestLandUnitCombat()
 	return m_pGame ? m_pGame->getBestLandUnitCombat() : -1;
 }
 
-#if defined QC_MASTERY_VICTORY
 //Sevo Begin--VCM
 bool CyGame::getStarshipLaunched(int playaID)
 {
@@ -751,7 +750,6 @@ bool CyGame::getDiplomaticVictoryAchieved(int playaID)
 	return m_pGame ? m_pGame->getDiplomaticVictoryAchieved(playaID) : false;
 }
 //Sevo End VCM
-#endif
 
 int /*TeamTypes*/ CyGame::getWinner() 
 {
@@ -1309,16 +1307,6 @@ bool CyGame::isCivEverActive(int /*CivilizationTypes*/ eCivilization)
 bool CyGame::isLeaderEverActive(int /*LeaderHeadTypes*/ eLeader)
 {
 	return (NULL != m_pGame ? m_pGame->isLeaderEverActive((LeaderHeadTypes)eLeader) : false);
-}
-
-bool CyGame::isUnitEverActive(int /*UnitTypes*/ eUnit)
-{
-	return (NULL != m_pGame ? m_pGame->isUnitEverActive((UnitTypes)eUnit) : false);
-}
-
-bool CyGame::isBuildingEverActive(int /*BuildingTypes*/ eBuilding)
-{
-	return (NULL != m_pGame ? m_pGame->isBuildingEverActive((BuildingTypes)eBuilding) : false);
 }
 
 bool CyGame::isEventActive(int /*EventTriggerTypes*/ eTrigger)

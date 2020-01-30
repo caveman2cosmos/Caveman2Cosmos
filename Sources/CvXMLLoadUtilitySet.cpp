@@ -568,8 +568,8 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	gDLL->ChangeINIKeyValue("CONFIG", "HideMinSpecWarning ", "1");
-	gDLL->ChangeINIKeyValue("GAME", "ModularLoading  ", "0");
+		gDLL->ChangeINIKeyValue("CONFIG", "HideMinSpecWarning ", "1");
+		gDLL->ChangeINIKeyValue("GAME", "ModularLoading  ", "0");
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
@@ -899,12 +899,6 @@ bool CvXMLLoadUtility::LoadBasicInfos()
 
 	LoadGlobalClassInfo(GC.getConceptInfos(), "CIV4BasicInfos", "BasicInfos", L"/Civ4BasicInfos/ConceptInfos/ConceptInfo", false);
 	LoadGlobalClassInfo(GC.getNewConceptInfos(), "CIV4NewConceptInfos", "BasicInfos", L"/Civ4NewConceptInfos/NewConceptInfos/NewConceptInfo", false);
-	// Dale - DCM: Pedia Concepts START
-	LoadGlobalClassInfo(GC.getDCMConceptInfos(), "CIV4DCMConceptInfos", "BasicInfos", L"/Civ4DCMConceptInfos/DCMConceptInfos/DCMConceptInfo", false);
-	// Dale - DCM: Pedia Concepts END
-	// Afforess - A New Dawn Concepts
-	LoadGlobalClassInfo(GC.getANDConceptInfos(), "CIV4ANDConceptInfos", "BasicInfos", L"/Civ4ANDConceptInfos/ANDConceptInfos/ANDConceptInfo", false);
-	// Afforess
 	LoadGlobalClassInfo(GC.getCityTabInfos(), "CIV4CityTabInfos", "BasicInfos", L"/Civ4CityTabInfos/CityTabInfos/CityTabInfo", false);
 	LoadGlobalClassInfo(GC.getCalendarInfos(), "CIV4CalendarInfos", "BasicInfos", L"/Civ4CalendarInfos/CalendarInfos/CalendarInfo", false);
 	LoadGlobalClassInfo(GC.getSeasonInfos(), "CIV4SeasonInfos", "BasicInfos", L"/Civ4SeasonInfos/SeasonInfos/SeasonInfo", false);
@@ -1251,9 +1245,9 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 
 	// Add TGA space fillers
 	CvReligionInfo* pReligionBogus = new CvReligionInfo();
-	aReligionInfos.insert(aReligionInfos.end(), TGA_RELIGIONS - aReligionInfos.size(), pReligionBogus);
+	aReligionInfos.insert(aReligionInfos.end(), GC.getTGA_RELIGIONS() - aReligionInfos.size(), pReligionBogus);
 	CvCorporationInfo* pCorporationBogus = new CvCorporationInfo();
-	aCorporationInfos.insert(aCorporationInfos.end(), TGA_CORPORATIONS - aCorporationInfos.size(), pCorporationBogus);
+	aCorporationInfos.insert(aCorporationInfos.end(), GC.getTGA_CORPORATIONS() - aCorporationInfos.size(), pCorporationBogus);
 
 	OutputDebugString("Load globals complete\n");
 	UpdateProgressCB("GlobalOther");
@@ -2443,7 +2437,7 @@ void CvXMLLoadUtility::SetGlobalClassInfoTwoPassReplacement(std::vector<T*>& aIn
 			GetOptionalChildXmlValByName(&bForceOverwrite, L"bForceOverwrite");
 			// (4) Read off the Replacement condition
 			uint uiReplacementID = 0;
-			boost::shared_ptr<BoolExpr> pReplacementCondition;
+			bst::shared_ptr<BoolExpr> pReplacementCondition;
 			if (GetOptionalChildXmlValByName(szTypeReplace, L"ReplacementID") && szTypeReplace.size()) {
 				uiReplacementID = CvInfoReplacements<T>::getReplacementIDForString(szTypeReplace);
 				if (TryMoveToXmlFirstChild(L"ReplacementCondition")) {
@@ -4319,12 +4313,6 @@ DllExport bool CvXMLLoadUtility::LoadPlayerOptions()
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	// Python Modular Loading
-	if (!CreateFXml())
-		return false;
-	LoadPythonModulesInfo(GC.getPythonModulesInfos(), "CIV4PythonModulesInfos", L"/Civ4PythonModulesInfos/PythonModulesInfos/PythonModulesInfo", false);
-	DestroyFXml();
-
 	// MLF loading
 	if (!gDLL->isModularXMLLoading())
 	{
@@ -4360,53 +4348,11 @@ DllExport bool CvXMLLoadUtility::LoadGraphicOptions()
 	return true;
 }
 
-
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 10/24/07                            MRGENIE          */
 /*                                                                                              */
 /* Initialize the list of Module Directories to be loaded                                       */
 /************************************************************************************************/
-// Python Modular Loading
-template <class T>
-void CvXMLLoadUtility::LoadPythonModulesInfo(std::vector<T*>& aInfos, const char* szFileRoot, const wchar_t* szXmlPath, bool bTwoPass)
-{
-	bool bLoaded = false;
-	GC.addToInfosVectors(&aInfos);
-
-//	XML_CHECK_DOUBLE_TYPE						10/10/07							MRGENIE
-#ifdef _DEBUG
-	logXmlCheckDoubleTypes("Entering: %s\n", szFileRoot);
-#endif
-//	XML_CHECK_DOUBLE_TYPE						END   
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING                 03/28/08                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	GC.setModDir("NONE");
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING                 END                                                  */
-/************************************************************************************************/
-	
-	std::vector<CvString> aszFiles;
-	gDLL->enumerateFiles(aszFiles, CvString::format("Python Config\\*_%s.xml", szFileRoot));  // search for the modular files
-
-	for (std::vector<CvString>::iterator it = aszFiles.begin(); it != aszFiles.end(); ++it)
-	{
-		bLoaded = LoadCivXml(NULL, *it);
-
-		if (!bLoaded)
-		{
-			char szMessage[1024];
-			sprintf(szMessage, "LoadXML call failed for %s.", (*it).GetCString());
-			gDLL->MessageBox(szMessage, "XML Load Error");
-		}
-		else
-		{
-			SetGlobalClassInfo(aInfos, szXmlPath, bTwoPass);
-		}
-	}
-}
 // Main control of the MLF feature
 void CvXMLLoadUtility::ModularLoadingControlXML()
 {
@@ -4414,7 +4360,6 @@ void CvXMLLoadUtility::ModularLoadingControlXML()
 	pSetMod->setModLoadControlDirArray(LoadModLoadControlInfo(GC.getModLoadControlInfos(), "CIV4ModularLoadingControls", L"Type"));
 	SAFE_DELETE(pSetMod);
 }
-
 
 // In the next 2 methods we load the MLF classes
 template <class T>
@@ -4851,7 +4796,7 @@ void CvXMLLoadUtility::RemoveTGAFiller()
 {
 	std::vector<CvReligionInfo*>& aInfos1 = GC.getReligionInfos();
 	std::vector<CvCorporationInfo*>& aInfos2 = GC.getCorporationInfos();
-	if (aInfos1.size() && aInfos1.size() == TGA_RELIGIONS)
+	if (aInfos1.size() && aInfos1.size() == GC.getTGA_RELIGIONS())
 	{
 		std::sort(aInfos1.begin(), aInfos1.end(), cmpReligionTGA);
 		if (aInfos1.front()->getTGAIndex() == -1)
@@ -4862,7 +4807,7 @@ void CvXMLLoadUtility::RemoveTGAFiller()
 			aInfos1.erase(aInfos1.begin(), it);
 		}
 	}
-	if (aInfos2.size() && aInfos2.size() == TGA_CORPORATIONS)
+	if (aInfos2.size() && aInfos2.size() == GC.getTGA_CORPORATIONS())
 	{
 		std::sort(aInfos2.begin(), aInfos2.end(), cmpCorporationTGA);
 		if (aInfos2.front()->getTGAIndex() == -1)

@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AACHEN</Tag>
@@ -236,7 +235,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ALALIE</Tag>
-		<English>Alaliē</English>
+		<English>Alalie</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ALBAFUCENS</Tag>
@@ -4759,7 +4758,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MILETOS</Tag>
-		<English>Milētos</English>
+		<English>Miletos</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MILWAUKEE</Tag>

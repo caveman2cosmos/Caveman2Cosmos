@@ -1948,6 +1948,7 @@
 			<Strategy>TXT_KEY_BUILDING_PLANET_CLOUD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PLANET_CLOUD</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_PLANET_CLOUD</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LAUNCH_ARCOLOGY</PrereqTech>
 			<iCost>27966</iCost>
@@ -2018,6 +2019,7 @@
 			<Strategy>TXT_KEY_BUILDING_ENERGY_BEAM_NETWORK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ENERGY_BEAM_NETWORK</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ENERGY_BEAM_NETWORK</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PHOTONIC_SATELLITES</PrereqTech>
 			<iCost>13448</iCost>
@@ -2112,6 +2114,7 @@
 			<Strategy>TXT_KEY_BUILDING_ASTEROID_MINING_COMPLEX_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ASTEROID_MINING_COMPLEX</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ASTEROID_MINING_COMPLEX</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
 			<iCost>6311</iCost>
@@ -2150,6 +2153,7 @@
 			<Strategy>TXT_KEY_BUILDING_L5_COLONY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_L5_COLONY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_L5_COLONY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ORBITAL_MEGASTRUCTURES</PrereqTech>
 			<iCost>11175</iCost>
@@ -2189,6 +2193,7 @@
 			<Strategy>TXT_KEY_BUILDING_INTERPLANETARY_TRANSPORT_NETWORK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INTERPLANETARY_TRANSPORT_NETWORK</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_INTERPLANETARY_TRANSPORT_NETWORK</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ASTROGATION_CONSTELLATION</PrereqTech>
 			<iCost>10179</iCost>
@@ -2223,6 +2228,7 @@
 			<Strategy>TXT_KEY_BUILDING_ELYSIUM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ELYSIUM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ELYSIUM</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LAUNCH_ARCOLOGY</PrereqTech>
 			<iCost>27966</iCost>
@@ -2272,6 +2278,7 @@
 			<Strategy>TXT_KEY_BUILDING_ZEUS_CANNON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ZEUS_CANNON</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ZEUS_CANNON</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ION_BEAMS</PrereqTech>
 			<iCost>5116</iCost>

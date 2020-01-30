@@ -1,5 +1,9 @@
 #pragma once
 
+#ifndef CvPlot_h__
+#define CvPlot_h__
+
+
 // CvPlot.h
 
 //#include "CvStructs.h"
@@ -8,7 +12,7 @@
 #include <vector>
 #include "CvGameObject.h"
 #include "CvUnit.h"
-#include "idinfo_iterator.h"
+#include "idinfo_iterator_base.h"
 
 #include "CvPlotPaging.h"
 
@@ -46,7 +50,21 @@ struct EDefenderScore
 		ClearCache = 1 << 4
 	};
 };
-DEFINE_ENUM_FLAG_OPERATORS(EDefenderScore::flags);
+DECLARE_FLAGS(EDefenderScore::flags);
+
+// Flags for evaluating plot defender strength
+struct StrengthFlags
+{
+	enum flags
+	{
+		None = 0,
+		DefensiveBonuses = 1 << 0,
+		TestAtWar = 1 << 1,
+		TestPotentialEnemy = 1 << 2,
+		CollatoralDamage = 1 << 3
+	};
+};
+DECLARE_FLAGS(StrengthFlags::flags);
 
 //	Koshling - add caching to canBuild calculations
 #define CAN_BUILD_VALUE_CACHING
@@ -115,17 +133,21 @@ struct ECvPlotGraphics
 		return static_cast<type>(1 << idx); 
 	}
 };
-DEFINE_ENUM_FLAG_OPERATORS(ECvPlotGraphics::type);
+DECLARE_FLAGS(ECvPlotGraphics::type);
 
-class CvPlot
+class CvPlot : bst::noncopyable
 {
 friend CvPathPlotInfoStore;
 public:
 	CvPlot();
 	virtual ~CvPlot();
 
-
 	CvGameObjectPlot* getGameObject() {return &m_GameObject;};
+
+	// Comparison operators
+	// Use address identity for now (more than one map means x/y compare wouldn't work)
+	friend bool operator==(const CvPlot& lhs, const CvPlot& rhs) { return &lhs == &rhs; }
+	friend bool operator!=(const CvPlot& lhs, const CvPlot& rhs) { return &lhs != &rhs; }
 
 protected:
 	CvGameObjectPlot m_GameObject;
@@ -290,9 +312,8 @@ public:
 	CvUnit* getBestDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER, const CvUnit* pAttacker = NULL, bool bTestAtWar = false, bool bTestPotentialEnemy = false, bool bTestCanMove = false, bool bAssassinate = false, bool bClearCache = false) const; // Exposed to Python
 	// Deprecated, use the function above
 	CvUnit* getFirstDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker, bool bTestAtWar = false, bool bTestPotentialEnemy = false, bool bTestCanMove = false) const;
-	// Deprecated, use the function above
-
-	int AI_sumStrength(PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER, DomainTypes eDomainType = NO_DOMAIN, bool bDefensiveBonuses = true, bool bTestAtWar = false, bool bTestPotentialEnemy = false, int iRange = 0) const;
+	int AI_sumStrength(PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER, DomainTypes eDomainType = NO_DOMAIN, 
+		StrengthFlags::flags flags = StrengthFlags::DefensiveBonuses, int iRange = 0) const;
 	CvUnit* getSelectedUnit() const; // Exposed to Python				
 	int getUnitPower(PlayerTypes eOwner = NO_PLAYER) const; // Exposed to Python	
 	/*int getUnitNukeIntercept(PlayerTypes eOwner) const;*/
@@ -347,9 +368,9 @@ public:
 /*                                                                                              */
 /* General AI                                                                                   */
 /************************************************************************************************/
-	bool isHasPathToEnemyCity( TeamTypes eAttackerTeam, bool bIgnoreBarb = true );
-	bool isHasPathToPlayerCity( TeamTypes eMoveTeam, PlayerTypes eOtherPlayer = NO_PLAYER );
-	int calculatePathDistanceToPlot( TeamTypes eTeam, CvPlot* pTargetPlot );
+	bool isHasPathToEnemyCity( TeamTypes eAttackerTeam, bool bIgnoreBarb = true ) const;
+	bool isHasPathToPlayerCity( TeamTypes eMoveTeam, PlayerTypes eOtherPlayer = NO_PLAYER ) const;
+	int calculatePathDistanceToPlot( TeamTypes eTeam, CvPlot* pTargetPlot ) const;
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
@@ -363,10 +384,10 @@ public:
 	bool isActivePlayerNoDangerCache() const;
 	bool isActivePlayerHasDangerCache() const;
 	bool isTeamBorderCache( TeamTypes eTeam ) const;
-	void setIsActivePlayerNoDangerCache( bool bNewValue );
-	void setIsActivePlayerHasDangerCache( bool bNewValue );
-	void setIsTeamBorderCache( TeamTypes eTeam, bool bNewValue );
-	void invalidateIsTeamBorderCache();
+	void setIsActivePlayerNoDangerCache( bool bNewValue ) const;
+	void setIsActivePlayerHasDangerCache( bool bNewValue ) const;
+	void setIsTeamBorderCache( TeamTypes eTeam, bool bNewValue ) const;
+	void invalidateIsTeamBorderCache() const;
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
@@ -436,19 +457,16 @@ public:
 	int getVisibleEnemyStrength(PlayerTypes ePlayer, int iRange = 0) const;
 	int getVisibleNonAllyStrength(PlayerTypes ePlayer) const;
 
-	protected:
-		bool m_bDepletedMine;
-		char /*PlayerTypes*/ m_eClaimingOwner;
-		char* m_aiOccupationCultureRangeCities;
-		void doTerritoryClaiming();
-		CvWString m_szLandmarkMessage;
-		CvWString m_szLandmarkName;
-		LandmarkTypes m_eLandmarkType;
-		bool m_bCounted;
-		static stdext::hash_map<int,int>* m_resultHashMap;
-#ifdef SUPPORT_MULTITHREADED_PATHING
-		static CRITICAL_SECTION m_resultHashAccessSection;
-#endif
+protected:
+	bool m_bDepletedMine;
+	char /*PlayerTypes*/ m_eClaimingOwner;
+	char* m_aiOccupationCultureRangeCities;
+	void doTerritoryClaiming();
+	CvWString m_szLandmarkMessage;
+	CvWString m_szLandmarkName;
+	LandmarkTypes m_eLandmarkType;
+	bool m_bCounted;
+	static stdext::hash_map<int,int>* m_resultHashMap;
 
 	public:
 /************************************************************************************************/
@@ -540,24 +558,112 @@ public:
 /************************************************************************************************/
 
 	DllExport int getViewportX() const;
-	inline int getX() const
-	{
-		return m_iX;
-	}
-	inline int getX_INLINE() const
-	{
-		return m_iX;
-	}
+	inline int getX() const { return m_iX; }
+	inline int getX_INLINE() const { return m_iX; }
 	DllExport int getViewportY() const; // Exposed to Python
-	inline int getY() const
-	{
-		return m_iY;
-	}
-	inline int getY_INLINE() const
-	{
-		return m_iY;
-	}
+	inline int getY() const { return m_iY; }
+	inline int getY_INLINE() const { return m_iY; }
 	bool isInViewport(int comfortBorderSize = 0) const;
+
+	// Base iterator type for iterating over adjacent valid plots
+	template < class Value_ >
+	struct adjacent_iterator_base : 
+		public bst::iterator_facade<adjacent_iterator_base<Value_>, Value_*, bst::forward_traversal_tag, Value_*>
+	{
+		adjacent_iterator_base() : m_centerX(-1), m_centerY(-1), m_curr(nullptr), m_idx(0) {}
+		explicit adjacent_iterator_base(int centerX, int centerY) : m_centerX(centerX), m_centerY(centerY), m_curr(nullptr), m_idx(-1)
+		{
+			increment();
+		}
+
+	private:
+		friend class bst::iterator_core_access;
+		void increment()
+		{
+			do
+			{
+				++m_idx;
+				m_curr = plotDirection(m_centerX, m_centerY, ((DirectionTypes)m_idx));
+			} while (m_curr == nullptr && m_idx < NUM_DIRECTION_TYPES);
+		}
+		bool equal(adjacent_iterator_base const& other) const
+		{
+			return (this->m_centerX == other.m_centerX 
+				&& this->m_centerY == other.m_centerY 
+				&& this->m_idx == other.m_idx) 
+				|| (this->m_curr == NULL && other.m_curr == NULL);
+		}
+
+		Value_* dereference() const { return m_curr; }
+
+		int m_centerX;
+		int m_centerY;
+		Value_* m_curr;
+		int m_idx;
+	};
+	typedef adjacent_iterator_base<CvPlot> adjacent_iterator;
+
+	adjacent_iterator beginAdjacent() const { return adjacent_iterator(getX(), getY()); }
+	adjacent_iterator endAdjacent() const { return adjacent_iterator(); }
+
+	typedef bst::iterator_range<adjacent_iterator> adjacent_range;
+	adjacent_range adjacent() const { return adjacent_range(beginAdjacent(), endAdjacent()); }
+
+	// Base iterator type for iterating over a rectangle of plots
+	template < class Value_ >
+	struct rect_iterator_base :
+		public bst::iterator_facade<rect_iterator_base<Value_>, Value_*, bst::forward_traversal_tag, Value_*>
+	{
+		rect_iterator_base() : m_centerX(-1), m_centerY(-1), m_wid(-1), m_hgt(-1), m_curr(nullptr), m_x(0), m_y(0){}
+		explicit rect_iterator_base(int centerX, int centerY, int halfwid, int halfhgt) : m_centerX(centerX), m_centerY(centerY), m_wid(halfwid), m_hgt(halfhgt), m_curr(nullptr), m_x(-halfwid), m_y(-halfhgt)
+		{
+			increment();
+		}
+
+	private:
+		friend class bst::iterator_core_access;
+		void increment()
+		{
+			m_curr = nullptr;
+			while (m_curr == nullptr && m_x <= m_wid)
+			{
+				m_curr = plotXY(m_centerX, m_centerY, m_x, m_y);
+				++m_y;
+				if(m_y > m_hgt) 
+				{
+					m_y = -m_hgt;
+					++m_x;
+				}
+			}
+		}
+
+		bool equal(rect_iterator_base const& other) const
+		{
+			return this->m_curr == other.m_curr;
+			//(this->m_centerX == other.m_centerX
+			//&& this->m_centerY == other.m_centerY
+			//&& this->m_x == other.m_x
+			//&& this->m_y == other.m_y)
+			//|| (this->m_curr == NULL && other.m_curr == NULL);
+		}
+
+		Value_* dereference() const { return m_curr; }
+
+		int m_centerX;
+		int m_centerY;
+		int m_wid;
+		int m_hgt;
+		Value_* m_curr;
+		int m_x;
+		int m_y;
+	};
+	typedef rect_iterator_base<CvPlot> rect_iterator;
+
+	static rect_iterator beginRect(int centerX, int centerY, int halfWid, int halfHgt) { return rect_iterator(centerX, centerY, halfWid, halfHgt); }
+	static rect_iterator endRect() { return rect_iterator(); }
+
+	typedef bst::iterator_range<rect_iterator> rect_range;
+	static rect_range rect(int centerX, int centerY, int halfWid, int halfHgt) { return rect_range(beginRect(centerX, centerY, halfWid, halfHgt), endRect()); }
 
 	// ==========================================================================================
 	// PAGING SYSTEM
@@ -796,7 +902,7 @@ public:
 	int getVisibilityCount(TeamTypes eTeam) const; // Exposed to Python
 	void changeVisibilityCount(TeamTypes eTeam, int iChange, InvisibleTypes eSeeInvisible, bool bUpdatePlotGroups, int iIntensity = 0, int iUnitID = 0); // Exposed to Python
 
-	int getDangerCount(int /*PlayerTypes*/ ePlayer);
+	int getDangerCount(int /*PlayerTypes*/ ePlayer) const;
 	void setDangerCount(int /*PlayerTypes*/ ePlayer, int iNewCount);
 
 	int getStolenVisibilityCount(TeamTypes eTeam) const; // Exposed to Python
@@ -895,21 +1001,36 @@ public:
 	DllExport CLLNode<IDInfo>* headUnitNode() const;
 	CLLNode<IDInfo>* tailUnitNode() const;
 
-	// For iterating over units on a plot, optionally skipping invalid (NULL) ones
-	class unit_iterator : public idinfo_iterator<unit_iterator, CvUnit>
+	// For iterating over units on a plot
+	class unit_iterator : public idinfo_iterator_base<unit_iterator, CvUnit>
 	{
 	public:
-		typedef idinfo_iterator<unit_iterator, CvUnit> base_type;
 		unit_iterator() {}
 		explicit unit_iterator(const CLinkList<IDInfo>* list) : base_type(list) {}
-
 	private:
 		friend class core_access;
-		CvUnit* resolve(const IDInfo& info) const;
+		reference resolve(const IDInfo& info) const;
 	};
-
 	unit_iterator beginUnits() const { return unit_iterator(&m_units); }
 	unit_iterator endUnits() const { return unit_iterator(); }
+	typedef bst::iterator_range<unit_iterator> unit_range;
+	unit_range units() const { return unit_range(beginUnits(), endUnits()); }
+
+	// As the plot doesn't own the units they aren't const even if the plot it, so not 
+	// point in a const unit iterator
+	//class const_unit_iterator : public idinfo_iterator_base<const_unit_iterator, const CvUnit>
+	//{
+	//public:
+	//	const_unit_iterator() {}
+	//	explicit const_unit_iterator(const CLinkList<IDInfo>* list) : base_type(list) {}
+	//private:
+	//	friend class core_access;
+	//	reference resolve(const IDInfo& info) const;
+	//};
+	//const_unit_iterator beginUnits() const { return const_unit_iterator(&m_units); }
+	//const_unit_iterator endUnits() const { return const_unit_iterator(); }
+	//typedef bst::iterator_range<const_unit_iterator> const_unit_range;
+	//const_unit_range units() const { return const_unit_range(beginUnits(), endUnits()); }
 
 	int getNumSymbols() const;
 	CvSymbol* getSymbol(int iID) const;
@@ -1006,19 +1127,19 @@ protected:
 /* Efficiency                                                                                   */
 /************************************************************************************************/
 	// Plot danger cache
-	bool m_bIsActivePlayerHasDangerCache;
-	bool m_bIsActivePlayerNoDangerCache;
-	bool* m_abIsTeamBorderCache;
+	mutable bool m_bIsActivePlayerHasDangerCache;
+	mutable bool m_bIsActivePlayerNoDangerCache;
+	mutable bool* m_abIsTeamBorderCache;
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
 	static	int m_iGlobalCachePathEpoch;
-	int		m_iCachePathEpoch;
-	void*	m_cachedPathValidityEntity;
-	void*	m_cachedPathAlternateValidityEntity;
-	bool	m_cachedPathAlternateValidity;
-	bool	m_cachedPathValidity;
+	mutable int		m_iCachePathEpoch;
+	mutable void*	m_cachedPathValidityEntity;
+	mutable void*	m_cachedPathAlternateValidityEntity;
+	mutable bool	m_cachedPathAlternateValidity;
+	mutable bool	m_cachedPathValidity;
 
 	// Super Forts begin *culture*
 	//	Koshling - not needed in the C2C implemenattion due to AND's existing
@@ -1173,4 +1294,14 @@ protected:
 	ECvPlotGraphics::type m_requiredVisibleGraphics;
 	ECvPlotGraphics::type m_visibleGraphics;
 	CvPlotPaging::paging_handle m_pagingHandle;
+
+public:
+	//
+	// Algorithm/range helpers
+	//
+	struct fn {
+		DECLARE_MAP_FUNCTOR(CvPlot, bool, isWater);
+	}; 
 };
+
+#endif // CvPlot_h__

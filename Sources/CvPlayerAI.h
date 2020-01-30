@@ -10,12 +10,14 @@
 
 class CvEventTriggerInfo;
 
-typedef struct
+struct MissionTargetInfo
 {
+	MissionTargetInfo() : iCount(0), iClosest(0), iVolume(0) {}
+
 	int	iCount;		//	Num units targeting the mission target
 	int iClosest;	//	How close is the closest
 	int iVolume;    //  How much volume among the units counted
-} MissionTargetInfo;
+};
 
 //	Koshling - add caching to plot danger calculations
 #define PLOT_DANGER_CACHING
@@ -149,17 +151,17 @@ public:
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	bool AI_getAnyPlotDanger(CvPlot* pPlot, int iRange = -1, bool bTestMoves = true) const;
+	bool AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange = -1, bool bTestMoves = true) const;
 	bool AI_getVisiblePlotDanger(CvPlot* pPlot, int iRange, bool bAnimalOnly, CvSelectionGroup* group = NULL, int acceptableOdds = -1) const;
-	int AI_getPlotDanger(CvPlot* pPlot, int iRange = -1, bool bTestMoves = true) const;
+	int AI_getPlotDanger(const CvPlot* pPlot, int iRange = -1, bool bTestMoves = true) const;
 	//	Koshling - internal bypasses cache
-	int AI_getPlotDangerInternal(CvPlot* pPlot, int iRange, bool bTestMoves) const;
+	int AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool bTestMoves) const;
 	//int AI_getUnitDanger(CvUnit* pUnit, int iRange = -1, bool bTestMoves = true, bool bAnyDanger = true) const;
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
-	int AI_getWaterDanger(CvPlot* pPlot, int iRange, bool bTestMoves = true) const;
-	int AI_countNumLocalNavy(CvPlot* pPlot, int iRange) const;
+	int AI_getWaterDanger(const CvPlot* pPlot, int iRange, bool bTestMoves = true) const;
+	int AI_countNumLocalNavy(const CvPlot* pPlot, int iRange) const;
 
 	bool AI_avoidScience() const;
 	bool AI_isFinancialTrouble() const;
@@ -439,8 +441,8 @@ public:
 	
 	int AI_countDeadlockedBonuses(CvPlot* pPlot) const;
 	
-	int AI_getOurPlotStrength(CvPlot* pPlot, int iRange, bool bDefensiveBonuses, bool bTestMoves) const;
-	int AI_getEnemyPlotStrength(CvPlot* pPlot, int iRange, bool bDefensiveBonuses, bool bTestMoves) const;
+	int AI_getOurPlotStrength(const CvPlot* pPlot, int iRange, bool bDefensiveBonuses, bool bTestMoves) const;
+	int AI_getEnemyPlotStrength(const CvPlot* pPlot, int iRange, bool bDefensiveBonuses, bool bTestMoves) const;
 
 	int AI_goldToUpgradeAllUnits(int iExpThreshold = 0) const;
 
@@ -755,19 +757,23 @@ private:
 	static int plotDangerCacheReads;
 #endif
 
-	techPath*	findBestPath(TechTypes eTech, int& valuePerUnitCost, bool bIgnoreCost, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave) const;
+	techPath* findBestPath(TechTypes eTech, int& valuePerUnitCost, bool bIgnoreCost, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave) const;
 	int	 techPathValuePerUnitCost(techPath* path, TechTypes eTech, bool bIgnoreCost, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave) const;
 	TechTypes findStartTech(techPath* path) const;
 
-	mutable std::map<TechTypes,int>	m_cachedTechValues;
-	mutable std::map<BuildingTypes, int>	m_numBuildingsNeeded;
+	typedef stdext::hash_map<TechTypes, int> TechTypesValueMap;
+	mutable TechTypesValueMap m_cachedTechValues;
+	typedef stdext::hash_map<BuildingTypes, int> BuildingCountMap;
+	mutable BuildingCountMap m_numBuildingsNeeded;
 
 	int m_iCityGrowthValueBase;
 	int m_turnsSinceLastRevolution;
 	int m_iCivicSwitchMinDeltaThreshold;
 	bool bUnitRecalcNeeded;
 
-	mutable std::map<MissionAITypes,boost::shared_ptr<std::map<CvPlot*,MissionTargetInfo> > > m_missionTargetCache;
+	typedef stdext::hash_map<CvPlot*, MissionTargetInfo> PlotMissionTargetMap;
+	typedef stdext::hash_map<MissionAITypes, PlotMissionTargetMap> MissionPlotTargetMap;
+	mutable MissionPlotTargetMap m_missionTargetCache;
 };
 
 // helper for accessing static functions

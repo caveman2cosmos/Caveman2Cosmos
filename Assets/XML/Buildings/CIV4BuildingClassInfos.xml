@@ -6448,6 +6448,14 @@
 			<DefaultBuilding>BUILDING_PHONOGRAPH_FACTORY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_SKIS_FACTORY</Type>
+			<Description>TXT_KEY_BUILDING_SKIS_FACTORY</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<DefaultBuilding>BUILDING_SKIS_FACTORY</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_ELECTROACTIVE_POLYMER_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_ELECTROACTIVE_POLYMER_FACTORY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>

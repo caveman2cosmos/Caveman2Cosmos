@@ -681,11 +681,9 @@ void CvMapGenerator::addUniqueBonusType(BonusTypes eBonusType)
 	while (true)
 	{
 		int iBestValue = 0;
-		int iLoop = 0;
 		CvArea *pBestArea = NULL;
-		CvArea *pLoopArea = NULL;
 
-		for(pLoopArea = GC.getMapINLINE().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMapINLINE().nextArea(&iLoop))
+		foreach_(CvArea * pLoopArea, GC.getMapINLINE().areas())
 		{
 			bool bTried = false;
 

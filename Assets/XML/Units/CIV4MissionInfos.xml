@@ -1394,8 +1394,6 @@
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/Buttons/Units/sparth/Immigrant.dds</Button>
 		</MissionInfo>
-
-
 		<MissionInfo>
 			<Type>MISSION_CAPTIVE_UPGRADE_TO_STONE_THROWER</Type>
 			<Description>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_STONE_THROWER</Description>
@@ -1466,7 +1464,6 @@
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/Buttons/Units/button_neanderthal.dds</Button>
 		</MissionInfo>
-
 		<MissionInfo>
 			<Type>MISSION_SELL_CAPTIVE</Type>
 			<Description>TXT_KEY_MISSION_SELL_CAPTIVE</Description>

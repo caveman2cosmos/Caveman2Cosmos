@@ -13,14 +13,15 @@
 //
 #pragma warning( disable: 4530 )	// C++ exception handler used, but unwind semantics are not enabled
 
-#ifdef __INTELLISENSE__
-#define BOOST_MSVC 1310
-// #undef _MSC_VER
-#define _MSC_VER 1310
-#define BOOST_FUNCTION_PARMS
-#define BOOST_FUNCTION_PARM
-#define BOOST_PP_VARIADICS 0
-#endif
+//#ifdef __INTELLISENSE__
+//// #undef _MSC_VER
+//#define _MSC_VER 1310
+//#define BOOST_MSVC 1310
+//#define boost155_MSVC 1310
+//#define BOOST_FUNCTION_PARMS
+//#define BOOST_FUNCTION_PARM
+//#define BOOST_PP_VARIADICS 0
+//#endif
 
 #define NOMINMAX
 #define _WIN32_WINNT 0x0600
@@ -54,9 +55,19 @@
 #include <set>
 #include <fstream>
 
+//
+// Google sparsehash
+//
+#include <sparsehash/sparse_hash_set>
+#include <sparsehash/sparse_hash_map>
+#include <sparsehash/dense_hash_set>
+#include <sparsehash/dense_hash_map>
+#include <sparsehash/template_util.h>
+#include <sparsehash/type_traits.h>
+
+
 #define DllExport   __declspec( dllexport ) 
 
-#include "EnumFlags.h"
 #include "NiPoint.h"
 
 //
@@ -112,12 +123,22 @@ struct ECacheAccess
 		ReadWrite = Read | Write
 	};
 };
-DEFINE_ENUM_FLAG_OPERATORS(ECacheAccess::flags);
+DECLARE_FLAGS(ECacheAccess::flags);
 
 //
 // Feature macros
 //
 // #define STRENGTH_IN_NUMBERS
+// #define BARBARIAN_CITY_SPAWN_MAPCATEGORY_CHECK
+// #define GLOBAL_WARMING
+// #define THE_GREAT_WALL
+
+//
+// Cache feature macros
+//
+#define PATHFINDING_CACHE
+#define PATHFINDING_VALIDITY_CACHE
+#define DISCOVERY_TECH_CACHE
 
 //
 // Profiler
@@ -161,27 +182,56 @@ void IFPSetCount(ProfileSample* sample, int count);
   #include "Python.h"
 #endif
 
-
 //
 // Boost
 //
-#include <boost/scoped_ptr.hpp>
-#include <boost/scoped_array.hpp>
-#include <boost/shared_ptr.hpp>
-#include <boost/shared_array.hpp>
-#include <boost/lambda/lambda.hpp>
-#include <boost/bind.hpp>
-#include <boost/optional.hpp>
-#include <boost/algorithm/string.hpp>
-#include <boost/format.hpp>
-#include <boost/function.hpp>
-#include <boost/array.hpp>
+#define BOOST_155_USE_WINDOWS_H
+#define BOOST_155_ALL_NO_LIB
+#include <boost155/scoped_ptr.hpp>
+#include <boost155/scoped_array.hpp>
+#include <boost155/shared_ptr.hpp>
+#include <boost155/shared_array.hpp>
+#include <boost155/lambda/lambda.hpp>
+#include <boost155/bind.hpp>
+#include <boost155/optional.hpp>
+#include <boost155/algorithm/string.hpp>
+#include <boost155/format.hpp>
+#include <boost155/function.hpp>
+#include <boost155/array.hpp>
+#include <boost155/utility.hpp>
+#include <boost155/foreach.hpp>
+#include <boost155/functional.hpp>
 
+
+// #include <boost155/phoenix.hpp> Doesn't work, see https://github.com/boostorg/phoenix/issues/91
+
+// Ranges
+#include <boost155/range.hpp>
+#include <boost155/range/adaptor/filtered.hpp>
+#include <boost155/range/adaptor/transformed.hpp>
+#include <boost155/range/any_range.hpp>
+#include <boost155/range/algorithm.hpp>
+#include <boost155/range/algorithm_ext/push_back.hpp>
+#include <boost155/range/numeric.hpp>
+
+// Make boost foreach look nice enough to actually use
+#define foreach_ BOOST_155_FOREACH
+
+// Alias our latest boost version
+namespace bst = boost155;
+
+// Bring range adaptors into global namespace
+using namespace bst::adaptors;
+
+// Bring bind into global namespace
+using bst::bind;
 
 //
 // Boost Python
 //
 #ifndef __INTELLISENSE__
+// Disable the boost 1.32 placeholders, we won't be using them
+#define BOOST_BIND_NO_PLACEHOLDERS
 #include <boost/python/list.hpp>
 #include <boost/python/tuple.hpp>
 #include <boost/python/class.hpp>
@@ -193,6 +243,8 @@ void IFPSetCount(ProfileSample* sample, int count);
 namespace python = boost::python;
 #endif
 
+//#include <boost155/range/adaptor/filtered.hpp>
+//#include <boost155/range/adaptor/transformed.hpp>
 
 //
 // xercesc for XML loading
@@ -210,18 +262,31 @@ namespace python = boost::python;
 #include <xercesc/framework/Wrapper4InputSource.hpp>
 #include <xercesc/validators/common/Grammar.hpp>
 
+// Stupid define comes from windows and interferes with our stuff
+#undef Yield
 
 //
 // Json
 //
 #include "picojson.h"
 
+//
+// Polyfills
+//
+#include "nullptr_t.h"
+#include "EnumFlags.h"
+#include "hash.h"
 
 //
 // Our code
 //
 #include "copy_iterator.h"
+#include "index_iterator_base.h"
 #include "logging.h"
+
+#include "algorithm2.h"
+
+#include "scoring.h"
 
 #include "CvAllocator.h"
 
@@ -272,6 +337,9 @@ namespace python = boost::python;
 #include "CvPathGenerator.h"
 #include "CvBugOptions.h"
 #include "CvPython.h"
+
+#include "SCvDebug.h"
+#include "SCvInternalGlobals.h"
 
 #include "CyGlobalContext.h"
 #include "CyArtFileMgr.h"

@@ -2272,7 +2272,7 @@ class CvMainInterface:
 				# Great General Bar
 				CyPlayer = self.CyPlayer
 				iCombatExp = CyPlayer.getCombatExperience()
-				iThresholdExp = CyPlayer.greatPeopleThreshold(True)
+				iThresholdExp = CyPlayer.greatPeopleThresholdMilitary()
 
 				szTxt = self.iconGreatGeneral + " (" + str(iThresholdExp - iCombatExp) + ")"
 
@@ -2296,7 +2296,7 @@ class CvMainInterface:
 					screen.setText("GreatPersonBar1", "", szTxt, 1<<2, x, y, 0, eFontGame, eWidGen, 0, 0)
 					screen.setHitTest("GreatPersonBar1", HitTestTypes.HITTEST_NOHIT)
 					if CyCity:
-						fThreshold = float(GC.getPlayer(CyCity.getOwner()).greatPeopleThreshold(False))
+						fThreshold = float(GC.getPlayer(CyCity.getOwner()).greatPeopleThresholdNonMilitary())
 						fRate = float(CyCity.getGreatPeopleRate())
 						fFirst = float(CyCity.getGreatPeopleProgress()) / fThreshold
 
@@ -2880,7 +2880,7 @@ class CvMainInterface:
 			iGreatPeopleRate = CyCity.getGreatPeopleRate()
 			if iGreatPeopleProgress + iGreatPeopleRate > 0:
 				# Great Person Turns
-				iGreatPeopleTreshold = CyPlayer.greatPeopleThreshold(False)
+				iGreatPeopleTreshold = CyPlayer.greatPeopleThresholdNonMilitary()
 				if iGreatPeopleRate > 0:
 					iGPTurns = (iGreatPeopleTreshold - iGreatPeopleProgress + iGreatPeopleRate - 1) / iGreatPeopleRate
 				else:
@@ -3050,6 +3050,7 @@ class CvMainInterface:
 		screen.setTableColumnHeader(ID, 0, "", a8thX)
 		screen.setTableColumnHeader(ID, 1, "", a8thX - 24)
 		screen.setTableColumnRightJustify(ID, 1)
+		uFont3	= self.aFontList[3]
 
 		iRow = -1
 		if not TAB: # Properties display
@@ -3058,8 +3059,9 @@ class CvMainInterface:
 			pProperties = CyCity.getProperties()
 			iPropertyNum = pProperties.getNumProperties()
 			for i in xrange(iPropertyNum):
-				szLeftBuffer = uFont2 + pProperties.getPropertyDisplay(i)
 				eProperty = pProperties.getProperty(i)
+				info = GC.getPropertyInfo(eProperty)
+				szLeftBuffer = uFont3 + u"%c " % info.getChar() + uFont2 + info.getText()
 				iChange = pProperties.getChangeByProperty(eProperty)
 				szRightBuffer = uFont2 + str(pProperties.getValue(i)) + " ( "
 				if iChange >= 0:
@@ -3079,7 +3081,7 @@ class CvMainInterface:
 		# Bonus List
 		for szName, iBonus, szChar, iTotalResourceCount, iTotalExport in aList1:
 			iRow += 1
-			szLeftBuffer = uFont1b + szChar + szName + " ("
+			szLeftBuffer = uFont3 + szChar + uFont1b + szName + " ("
 			szTemp = ""
 			iTotalImport = CyPlayer.getBonusImport(iBonus)
 			iHomemade = iTotalResourceCount - iTotalImport
@@ -5006,10 +5008,10 @@ class CvMainInterface:
 		CyCity, iTurns = GPUtil.getDisplayCity()
 		if not CyCity:
 			# no rate or progress in any city and no city selected
-			szTxt = TRNSLTR.getText("TXT_KEY_MISC_GREAT_PERSON", (0, self.CyPlayer.greatPeopleThreshold(False)))
+			szTxt = TRNSLTR.getText("TXT_KEY_MISC_GREAT_PERSON", (0, self.CyPlayer.greatPeopleThresholdNonMilitary()))
 			self.updateTooltip(screen, szTxt)
 			return
-		iThreshold = GC.getPlayer(CyCity.getOwner()).greatPeopleThreshold(False)
+		iThreshold = GC.getPlayer(CyCity.getOwner()).greatPeopleThresholdNonMilitary()
 		iProgress = CyCity.getGreatPeopleProgress()
 		iRate = CyCity.getGreatPeopleRate()
 		szTxt = TRNSLTR.changeTextColor(CyCity.getName(), GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT")) + "\n"
@@ -5112,14 +5114,19 @@ class CvMainInterface:
 					self.bBuildWorkQueue = True
 
 			elif iData in (13, 16, 31): # A D S
-				if self.InCity and True not in (bAlt, bCtrl, bShift):
-					iTab = {13:0, 16:2, 31:1}[iData]
+				if self.InCity:
+					if bCtrl and iData == 16 and self.InCity.iPlayer == self.iPlayer:
+						GAME.selectedCitiesGameNetMessage(GameMessageTypes.GAMEMESSAGE_DO_TASK, TaskTypes.TASK_CONSCRIPT, -1, -1, False, False, False, False)
+						return 1
 
-					if iTab == self.iCityTab:
-						self.exitCityTab(screen, iTab)
-					else:
-						self.openCityTab(screen, iTab)
-					return 1
+					elif not (bAlt or bCtrl or bShift):
+						iTab = {13:0, 16:2, 31:1}[iData]
+
+						if iTab == self.iCityTab:
+							self.exitCityTab(screen, iTab)
+						else:
+							self.openCityTab(screen, iTab)
+						return 1
 
 			elif iData in (45, 49, 56): # Ctrl, Shift, Alt
 				dataTT = self.dataTT
@@ -5248,7 +5255,7 @@ class CvMainInterface:
 			elif BASE == "PlotList":
 				if TYPE in ("Button", "Health"):
 					CyUnit = self.aPlotListList[ID][0]
-					if not CyUnit.isDead():
+					if not CyUnit.getGroup().isNone():
 						if TYPE == "Button":
 							szTxt = CyGameTextMgr().getSpecificUnitHelp(CyUnit, False, False)
 							x = self.xRes / 4
@@ -5258,6 +5265,7 @@ class CvMainInterface:
 							szTxt = "HP: %d/%d" %(CyUnit.currHitPoints(), CyUnit.maxHitPoints())
 							x = -1
 							y = -1
+						else: return
 						self.updateTooltip(screen, szTxt, x, y)
 
 			elif BASE == "BldgList":

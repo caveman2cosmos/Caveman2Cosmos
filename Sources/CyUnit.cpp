@@ -85,7 +85,11 @@ int /*TeamTypes*/ CyUnit::getDeclareWarMove(CyPlot* pPlot)
 
 bool CyUnit::canMoveInto(CyPlot* pPlot, bool bAttack, bool bDeclareWar, bool bIgnoreLoad)
 {
-	return m_pUnit ? m_pUnit->canMoveInto(pPlot->getPlot(), bAttack, bDeclareWar, bIgnoreLoad) : false;
+	return m_pUnit ? m_pUnit->canMoveInto(pPlot->getPlot(), 
+		(bAttack ? MoveCheck::Attack : MoveCheck::None) |
+		(bDeclareWar ? MoveCheck::DeclareWar : MoveCheck::None) |
+		(bIgnoreLoad ? MoveCheck::IgnoreLoad : MoveCheck::None)
+	) : false;
 }
 
 bool CyUnit::canMoveOrAttackInto(CyPlot* pPlot, bool bDeclareWar)
@@ -133,7 +137,7 @@ void CyUnit::gift()
 /************************************************************************************************/
 bool CyUnit::canLoadUnit(CyUnit* pUnit, CyPlot* pPlot)
 {
-	return m_pUnit ? m_pUnit->canLoadUnit(pUnit->getUnit(), pPlot->getPlot()) : false;
+	return m_pUnit ? m_pUnit->canLoadOntoUnit(pUnit->getUnit(), pPlot->getPlot()) : false;
 }
 
 bool CyUnit::canLoad(CyPlot* pPlot)
@@ -384,9 +388,9 @@ int CyUnit::getDiscoverResearch(int /*TechTypes*/ eTech)
 	return m_pUnit ? m_pUnit->getDiscoverResearch((TechTypes) eTech) : -1;
 }
 
-bool CyUnit::canDiscover(CyPlot* pPlot)
+bool CyUnit::canDiscover()
 {
-	return m_pUnit ? m_pUnit->canDiscover(pPlot->getPlot()) : false;
+	return m_pUnit ? m_pUnit->canDiscover() : false;
 }
 
 int CyUnit::getMaxHurryProduction(CyCity* pCity)
@@ -707,7 +711,7 @@ bool CyUnit::isGoldenAge()
 
 bool CyUnit::canCoexistWithEnemyUnit(int /*TeamTypes*/ eTeam)
 {
-	return m_pUnit ? m_pUnit->canCoexistWithEnemyUnit((TeamTypes)eTeam, m_pUnit->plot()) : false;
+	return m_pUnit ? m_pUnit->canCoexistWithTeamOnPlot((TeamTypes)eTeam, *m_pUnit->plot()) : false;
 }
 
 bool CyUnit::isFighting()
@@ -1306,17 +1310,17 @@ int CyUnit::domainModifier(int /*DomainTypes*/ eDomain)
 
 int CyUnit::bombardRate()
 {
-	return m_pUnit ? m_pUnit->bombardRate() : -1;
+	return m_pUnit ? m_pUnit->getBombardRate() : -1;
 }
 
 int CyUnit::airBombBaseRate()
 {
-	return m_pUnit ? m_pUnit->airBombBaseRate() : -1;
+	return m_pUnit ? m_pUnit->getAirBombBaseRate() : -1;
 }
 
 int CyUnit::airBombCurrRate()
 {
-	return m_pUnit ? m_pUnit->airBombCurrRate() : -1;
+	return m_pUnit ? m_pUnit->getAirBombCurrRate() : -1;
 }
 
 int /*SpecialUnitTypes*/ CyUnit::specialCargo()

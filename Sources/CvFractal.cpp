@@ -13,9 +13,26 @@ CvFractal::CvFractal()
 	reset();
 }
 
+CvFractal::~CvFractal()
+{
+	uninit();
+}
+
+void CvFractal::uninit()
+{
+	if (m_aaiFrac != NULL)
+	{
+		for (int iX = 0; iX < m_iFracX + 1; iX++)
+		{
+			SAFE_DELETE_ARRAY(m_aaiFrac[iX]);
+		}
+		SAFE_DELETE_ARRAY(m_aaiFrac);
+	}
+}
+
 void CvFractal::reset()
 {
-	m_aaiFrac.clear();
+	m_aaiFrac = NULL;
 	m_iFracXExp = -1;
 	m_iFracYExp = -1;
 	m_iXs = -1;
@@ -23,8 +40,6 @@ void CvFractal::reset()
 	m_iFlags = 0;
 	m_iFracX = -1;
 	m_iFracY = -1;
-	m_iXInc = 0;
-	m_iYInc = 0;
 }
 
 void CvFractal::fracInit(int iNewXs, int iNewYs, int iGrain, CvRandom& random, int iFlags, CvFractal* pRifts, int iFracXExp/*=7*/, int iFracYExp/*=6*/)
@@ -48,7 +63,7 @@ void CvFractal::fracInitInternal(int iNewXs, int iNewYs, int iGrain, CvRandom& r
 {
 	PROFILE("CvFractal::fracInit()");
 	int iSmooth;
-	int iScreen;  // This screens out already marked spots in getFrac(, );
+	int iScreen;  // This screens out already marked spots in m_aaiFrac[][];
 	int iPass;
 	int iSum;
 	int iX, iY;
@@ -71,8 +86,15 @@ void CvFractal::fracInitInternal(int iNewXs, int iNewYs, int iGrain, CvRandom& r
 	m_iFracY = 1 << iFracYExp;
 
 	// Init m_aaiFrac to all zeroes:
-	m_aaiFrac.clear();
-	m_aaiFrac.resize(m_iFracX + 1, std::vector<int>(m_iFracY + 1, 0));
+	m_aaiFrac = new int*[m_iFracX + 1];
+	for (iX = 0; iX < m_iFracX + 1; iX++)
+	{
+		m_aaiFrac[iX] = new int[m_iFracY + 1];
+		for (iY = 0; iY < m_iFracY + 1; iY++)
+		{
+			m_aaiFrac[iX][iY] = 0;
+		}
+	}
 
 	m_iXs = iNewXs;
 	m_iYs = iNewYs;
@@ -103,15 +125,15 @@ void CvFractal::fracInitInternal(int iNewXs, int iNewYs, int iGrain, CvRandom& r
 		{
 			for (iX = 0; iX < m_iFracX + 1; iX++)
 			{
-				getFrac(iX, m_iFracY) = getFrac(iX, 0);
+				m_aaiFrac[iX][m_iFracY] = m_aaiFrac[iX][0];
 			}
 		}
 		else if (m_iFlags & FRAC_POLAR)
 		{
 			for (iX = 0; iX < m_iFracX + 1; iX++)
 			{
-				getFrac(iX, 0) = 0;
-				getFrac(iX, m_iFracY) = 0;
+				m_aaiFrac[iX][   0    ] = 0;
+				m_aaiFrac[iX][m_iFracY] = 0;
 			}
 		}
 
@@ -119,15 +141,15 @@ void CvFractal::fracInitInternal(int iNewXs, int iNewYs, int iGrain, CvRandom& r
 		{
 			for (iY = 0; iY < m_iFracY + 1; iY++)
 			{
-				getFrac(m_iFracX, iY) = getFrac(0, iY);
+				m_aaiFrac[m_iFracX][iY] = m_aaiFrac[0][iY];
 			}
 		}
 		else if (m_iFlags & FRAC_POLAR)
 		{
 			for (iY = 0; iY < m_iFracY + 1; iY++)
 			{
-				getFrac(0, iY) = 0;
-				getFrac(m_iFracX, iY) = 0;
+				m_aaiFrac[   0    ][iY] = 0;
+				m_aaiFrac[m_iFracX][iY] = 0;
 			}
 		}
 
@@ -139,8 +161,8 @@ void CvFractal::fracInitInternal(int iNewXs, int iNewYs, int iGrain, CvRandom& r
 				{
 					for (iY = 0; iY < (m_iFracY / 6); iY++)
 					{
-						getFrac(iX, iY) /= (abs((m_iFracY / 12) - iY) + 1);
-						getFrac(iX, (m_iFracY / 2) + iY) /= (abs((m_iFracY / 12) - iY) + 1);
+						m_aaiFrac[iX][        iY         ] /= (abs((m_iFracY / 12) - iY) + 1);
+						m_aaiFrac[iX][(m_iFracY / 2) + iY] /= (abs((m_iFracY / 12) - iY) + 1);
 					}
 				}
 			}
@@ -151,8 +173,8 @@ void CvFractal::fracInitInternal(int iNewXs, int iNewYs, int iGrain, CvRandom& r
 				{
 					for (iX = 0; iX < (m_iFracX / 6); iX++)
 					{
-						getFrac(iX, iY) /= (abs((m_iFracX / 12) - iX) + 1);
-						getFrac((m_iFracX / 2) + iX, iY) /= (abs((m_iFracX / 12) - iX) + 1);
+						m_aaiFrac[        iX         ][iY] /= (abs((m_iFracX / 12) - iX) + 1);
+						m_aaiFrac[(m_iFracX / 2) + iX][iY] /= (abs((m_iFracX / 12) - iX) + 1);
 					}
 				}
 			}
@@ -167,7 +189,7 @@ void CvFractal::fracInitInternal(int iNewXs, int iNewYs, int iGrain, CvRandom& r
 				{  
 					if (pbyHints == NULL)
 					{
-						getFrac(iX << iPass, iY << iPass) = random.get(256, "Fractal Gen");
+						m_aaiFrac[iX << iPass][iY << iPass] = random.get(256, "Fractal Gen");
 					}
 					else
 					{
@@ -175,7 +197,7 @@ void CvFractal::fracInitInternal(int iNewXs, int iNewYs, int iGrain, CvRandom& r
 						int iYY = iY % iHintsHeight; // wrap
 						int iHintsI = iYY*iHintsWidth + iXX;
 						FAssertMsg(iHintsI < iHintsLength, "iHintsI out of range");
-						getFrac(iX << iPass, iY << iPass) = pbyHints[iHintsI];
+						m_aaiFrac[iX << iPass][iY << iPass] = pbyHints[iHintsI];
 					}
 				}
 				else  // Interpolate
@@ -185,38 +207,38 @@ void CvFractal::fracInitInternal(int iNewXs, int iNewYs, int iGrain, CvRandom& r
 					{
 						if ((iY << iPass) & iScreen)  // (center)
 						{
-							iSum += getFrac((iX-1) << iPass, (iY-1) << iPass);
-							iSum += getFrac((iX+1) << iPass, (iY-1) << iPass);
-							iSum += getFrac((iX-1) << iPass, (iY+1) << iPass);
-							iSum += getFrac((iX+1) << iPass, (iY+1) << iPass);
+							iSum += m_aaiFrac[(iX-1) << iPass][(iY-1) << iPass];
+							iSum += m_aaiFrac[(iX+1) << iPass][(iY-1) << iPass];
+							iSum += m_aaiFrac[(iX-1) << iPass][(iY+1) << iPass];
+							iSum += m_aaiFrac[(iX+1) << iPass][(iY+1) << iPass];
 							iSum >>= 2;
 							iSum += random.get(1 << (8 - iSmooth + iPass), "Fractal Gen 2");
 							iSum -= 1 << (7 - iSmooth + iPass);
 							iSum = range(iSum, 0, 255);
-							getFrac(iX << iPass, iY << iPass) = iSum;
+							m_aaiFrac[iX << iPass][iY << iPass] = iSum;
 						}
 						else  // (horizontal)
 						{
-							iSum += getFrac((iX-1) << iPass, iY << iPass);
-							iSum += getFrac((iX+1) << iPass, iY << iPass);
+							iSum += m_aaiFrac[(iX-1) << iPass][iY << iPass];
+							iSum += m_aaiFrac[(iX+1) << iPass][iY << iPass];
 							iSum >>= 1;
 							iSum += random.get (1 << (8 - iSmooth + iPass), "Fractal Gen 3");
 							iSum -= 1 << (7 - iSmooth + iPass);
 							iSum = range (iSum, 0, 255);
-							getFrac(iX << iPass, iY << iPass) = iSum;
+							m_aaiFrac[iX << iPass][iY << iPass] = iSum;
 						}
 					}
 					else
 					{
 						if ((iY << iPass) & iScreen)  // (vertical)
 						{
-							iSum += getFrac(iX << iPass, (iY-1) << iPass);
-							iSum += getFrac(iX << iPass, (iY+1) << iPass);
+							iSum += m_aaiFrac[iX << iPass][(iY-1) << iPass];
+							iSum += m_aaiFrac[iX << iPass][(iY+1) << iPass];
 							iSum >>= 1;
 							iSum += random.get (1 << (8 - iSmooth + iPass), "Fractal Gen 4");
 							iSum -= 1 << (7 - iSmooth + iPass);
 							iSum = range (iSum, 0, 255);
-							getFrac(iX << iPass, iY << iPass) = (BYTE) iSum;
+							m_aaiFrac[iX << iPass][iY << iPass] = (BYTE) iSum;
 						}
 						else
 						{
@@ -239,7 +261,7 @@ void CvFractal::fracInitInternal(int iNewXs, int iNewYs, int iGrain, CvRandom& r
 		{
 			for (iY = 0; iY < m_iFracY; iY++)
 			{
-				getFrac(iX, iY) = (255 - getFrac(iX, iY));
+				m_aaiFrac[iX][iY] = (255 - m_aaiFrac[iX][iY]);
 			}
 		}
 	}
@@ -272,10 +294,10 @@ int CvFractal::getHeight(int iX, int iY)
 	iErrY = ((m_iYInc * iY) - (iLowY * FLOAT_PRECISION));
 
 	iSum = 0;
-	iSum += ((FLOAT_PRECISION - iErrX) * (FLOAT_PRECISION - iErrY) * getFrac(iLowX, iLowY));
-	iSum += ((                  iErrX) * (FLOAT_PRECISION - iErrY) * getFrac(iLowX + 1, iLowY    ));
-	iSum += ((FLOAT_PRECISION - iErrX) * (                  iErrY) * getFrac(iLowX    , iLowY + 1));
-	iSum += ((                  iErrX) * (                  iErrY) * getFrac(iLowX + 1, iLowY + 1));
+	iSum += ((FLOAT_PRECISION - iErrX) * (FLOAT_PRECISION - iErrY) * m_aaiFrac[iLowX    ][iLowY    ]);
+	iSum += ((                  iErrX) * (FLOAT_PRECISION - iErrY) * m_aaiFrac[iLowX + 1][iLowY    ]);
+	iSum += ((FLOAT_PRECISION - iErrX) * (                  iErrY) * m_aaiFrac[iLowX    ][iLowY + 1]);
+	iSum += ((                  iErrX) * (                  iErrY) * m_aaiFrac[iLowX + 1][iLowY + 1]);
 
 	iSum /= (FLOAT_PRECISION * FLOAT_PRECISION);
 
@@ -317,7 +339,7 @@ int CvFractal::getHeightFromPercent(int iPercent)
 		{
 			for (iY = 0; iY < m_iFracY; iY++)
 			{
-				if (getFrac(iX, iY) < iEstimate)
+				if (m_aaiFrac[iX][iY] < iEstimate)
 				{
 					iSum++;
 				}
@@ -360,16 +382,16 @@ void CvFractal::tectonicAction(CvFractal* pRifts)  //  Assumes FRAC_WRAP_X is on
 		{
 			//  Rift along edge of map.
 			iDeep = 0;
-			iRx = yieldX (((((pRifts->getFrac(iRift2x, iY) - 128) * m_iFracX) / 128) / 8) + iX);
-			iLx = yieldX (((((pRifts->getFrac(iRift2x, iY) - 128) * m_iFracX) / 128) / 8) - iX);
-			getFrac(iRx, iY) = (((getFrac(iRx, iY) * iX) + iDeep * (iWidth - iX)) / iWidth);
-			getFrac(iLx, iY) = (((getFrac(iLx, iY) * iX) + iDeep * (iWidth - iX)) / iWidth);
+			iRx = yieldX (((((pRifts->m_aaiFrac[iRift2x][iY] - 128) * m_iFracX) / 128) / 8) + iX);
+			iLx = yieldX (((((pRifts->m_aaiFrac[iRift2x][iY] - 128) * m_iFracX) / 128) / 8) - iX);
+			m_aaiFrac[iRx][iY] = (((m_aaiFrac[iRx][iY] * iX) + iDeep * (iWidth - iX)) / iWidth);
+			m_aaiFrac[iLx][iY] = (((m_aaiFrac[iLx][iY] * iX) + iDeep * (iWidth - iX)) / iWidth);
 		}
 	}
 
 	for (iY = 0; iY < m_iFracY + 1; iY++)
 	{
-		getFrac(m_iFracX, iY) = getFrac(0, iY);
+		m_aaiFrac[m_iFracX][iY] = m_aaiFrac[0][iY];
 	}
 }
 

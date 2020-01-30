@@ -1,8 +1,7 @@
 #include "CvGameCoreDLL.h"
 
-//#include <boost/lambda/lambda.hpp>
-#include <boost/functional.hpp>
-#include <boost/bind.hpp>
+#include <boost155/functional.hpp>
+#include <boost155/bind.hpp>
 
 
 namespace logging {
@@ -921,9 +920,9 @@ void CvDllPythonEvents::reportSelectionGroupPushMission(CvSelectionGroup* pSelec
 	{
 		std::vector<int> aiUnitIds;
 
-		//using namespace boost::lambda;
+		//using namespace bst::lambda;
 
-		std::transform(pSelectionGroup->beginUnits(), pSelectionGroup->endUnits(), std::back_inserter(aiUnitIds), boost::bind(&CvUnit::getID, _1));
+		std::transform(pSelectionGroup->beginUnits(), pSelectionGroup->endUnits(), std::back_inserter(aiUnitIds), bst::bind(&CvUnit::getID, _1));
 
 		EventArgs eventData;
 		eventData

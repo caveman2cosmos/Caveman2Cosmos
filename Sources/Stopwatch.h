@@ -34,6 +34,9 @@
 
 #pragma once
 
+#ifndef Stopwatch_h__
+#define Stopwatch_h__
+
 //#include <crtdbg.h>     // For _ASSERTE
 #include <Windows.h>    // For high-performance timers
 
@@ -188,3 +191,4 @@ namespace win32
 
 } // namespace win32
 
+#endif // Stopwatch_h__

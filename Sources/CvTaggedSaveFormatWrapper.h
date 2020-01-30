@@ -1,11 +1,12 @@
 #pragma once
 
+#ifndef CIV4_TAGGED_SAVE_FORMAT_WRAPPER_H
+#define CIV4_TAGGED_SAVE_FORMAT_WRAPPER_H
+
 #include "CvString.h"
 
 // CvTaggedSaveFormatWrapper.h
 
-#ifndef CIV4_TAGGED_SAVE_FORMAT_WRAPPER_H
-#define CIV4_TAGGED_SAVE_FORMAT_WRAPPER_H
 
 //	Forward declarations
 class DictionaryEntry;

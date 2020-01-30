@@ -8332,7 +8332,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DJENNE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Desert Tiles: +2[ICON_COMMERCE][NEWLINE][ICON_BULLET]-50% Cost of Cathedrals in All Cities[NEWLINE][COLOR_NEGATIVE_TEXT]Requires Desert in City Radius[COLOR_REVERT]</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Desert Tiles: +2[ICON_COMMERCE], -50% Cost of Cathedrals in All Cities. [COLOR_NEGATIVE_TEXT]Requires Desert in City Radius[COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Déserts: +2[ICON_COMMERCE][NEWLINE][ICON_BULLET]-50% de coût des Cathédrales dans toutes les Villes [NEWLINE][COLOR_NEGATIVE_TEXT]Requiert du Désert dans le périmètre de la Ville[COLOR_REVERT]</French>
 		<German>[ICON_BULLET]Wüstenfelder: +2[ICON_COMMERCE][NEWLINE][ICON_BULLET]-50% Kosten für Kathedralen in allen Städten[NEWLINE][COLOR_NEGATIVE_TEXT]Benötigt Wüste im Stadtradius[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Caselle di deserto: +2[ICON_COMMERCE][NEWLINE][ICON_BULLET]-50% al costo delle cattedrali in tutte le città[NEWLINE][COLOR_NEGATIVE_TEXT]Richiede deserto nelle vicinanze della città[COLOR_REVERT]</Italian>
@@ -10636,7 +10636,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FROM_ATTACKS</Tag>
-		<English>[ICON_BULLET]1 %F1 per turn, per unit that dies attacking this city.[NEWLINE][ICON_BULLET]Maximum of %d2 %F3 per turn[NEWLINE][ICON_BULLET]1 %F4 Fades away after %d5 turns.</English>
+		<English>[ICON_BULLET]1 %F1 per turn, per unit that dies attacking this city., Maximum of %d2 %F3 per turn, 1 %F4 Fades away after %d5 turns.</English>
 		<French>[ICON_BULLET]1 %F1 par tour, par unité qui meurt en attaquant la ville.[NEWLINE][ICON_BULLET]Maximum de %d2 %F3 par tour[NEWLINE][ICON_BULLET]1 %F4 s'estompe après %d5 tours.</French>
 		<German>[ICON_BULLET]1 %F1 pro Runde für jede Einheit, die beim Angriff auf die Stadt stirbt.[NEWLINE][ICON_BULLET]Maximum von %d2 %F3 pro Runde[NEWLINE][ICON_BULLET]Wird nach %d5 Runden um 1 %F4 reduziert</German>
 		<Italian>[ICON_BULLET]1 %F1 ogni turno, per ogni unità che muore attaccando questa città.[NEWLINE][ICON_BULLET]Massimo di %d2 %F3 per turno[NEWLINE][ICON_BULLET]1 %F4 Svanisce dopo %d5 turni.</Italian>
@@ -12608,8 +12608,8 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIMEJI_CASTLE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]+100%[ICON_GOLD] from Pillaging
-[ICON_BULLET]Enemies Can't Capture or Pillage [ICON_GOLD] Inside Cultural Borders</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]+100%[ICON_GOLD] from Pillaging. Enemies Can't Capture or Pillage [ICON_GOLD] Inside Cultural Borders</English>
+	
 		<French>[ICON_BULLET]+100%[ICON_GOLD] lors des pillages[NEWLINE][ICON_BULLET]Ennemis ne récupère par [ICON_GOLD] de leurs pillages</French>
 		<German>[ICON_BULLET]+100%[ICON_GOLD] durch Plünderungen[NEWLINE][ICON_BULLET]Feinde können innerhalb der Grenzen kein [ICON_GOLD] erobern oder plündern.</German>
 		<Italian>[ICON_BULLET]+100%[ICON_GOLD] dal saccheggio[NEWLINE][ICON_BULLET]I nemici non possono catturare o saccheggiare [ICON_GOLD] all'interno dei confini culturali</Italian>
@@ -14992,8 +14992,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LASCAUX_CAVES_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][ICON_CULTURE] Boost in Cities when [ICON_GREATPEOPLE] Born
-[ICON_BULLET]Bonus Doubles in Cities with [LINK=SPECIALIST_GREAT_ARTIST]Great Artists[\LINK]</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][ICON_CULTURE] Boost in Cities when [ICON_GREATPEOPLE] Born. Bonus Doubles in Cities with [LINK=SPECIALIST_GREAT_ARTIST]Great Artists[\LINK]</English>
 		<French>[ICON_BULLET]Bonus de [ICON_CULTURE] dans les Villes lors de la naissance d'un [ICON_GREATPEOPLE][NEWLINE][ICON_BULLET]Le Bonus est doublé dans les villes avec un [LINK=SPECIALIST_GREAT_ARTIST]Artiste Illustre[\LINK]</French>
 		<Italian>[ICON_BULLET][ICON_CULTURE] Boost nelle città quando nascono [ICON_GREATPEOPLE][NEWLINE][ICON_BULLET]Bonus doppio nelle città con [LINK=SPECIALIST_GREAT_ARTIST]Grandi Artisti[\LINK]</Italian>
 		<Spanish>[ICON_BULLET]Bonificación a la [ICON_CULTURE] en las ciudades cuando nazcan [ICON_GREATPEOPLE][NEWLINE][ICON_BULLET]Bonificación doble en ciudades con [LINK=SPECIALIST_GREAT_ARTIST]Grandes artistas[\LINK]</Spanish>
@@ -20843,6 +20842,18 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>Zbuduj Phenotype Studio by poprawić jakość zdrowia Twoich poddanych w miastach.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SKIS_FACTORY</Tag>
+		<English>Factory (Skis)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SKIS_FACTORY_PEDIA</Tag>
+		<English>A ski is a narrow strip of semi-rigid material worn underfoot to glide over snow. Substantially longer than wide and characteristically employed in pairs, skis are attached to ski boots with ski bindings, with either a free, lockable, or partially secured heel. For climbing slopes, ski skins (originally made of seal fur, but now made of synthetic materials) can be attached at the base of the ski.[NEWLINE]Originally intended as an aid to travel over snow, they are now mainly used recreationally in the sport of skiing. </English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SKIS_FACTORY_STRATEGY</Tag>
+		<English>Build a Skis Factory to increase your cities gold.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PHONOGRAPH_FACTORY</Tag>
 		<English>Factory (Phonographs)</English>
 		<French>
@@ -24326,7 +24337,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SILK_ROAD_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Connects all owned Silk plots to the city by road [NEWLINE][ICON_BULLET]Connects the city to the capital by road [NEWLINE][ICON_BULLET]Connects the capital to the largest visible foreign city on the same continent by road</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Connects all owned Silk plots to the city by road, Connects the city to the capital by road, Connects the capital to the largest visible foreign city on the same continent by road</English>
 		<French>[ICON_BULLET]Connecte toutes les cases avec de la [COLOR_GREEN]Soie[COLOR_REVERT] à votre ville par des routes[NEWLINE][ICON_BULLET]Connecte également votre ville à la Capitale[NEWLINE][ICON_BULLET]Connecte la Capitale à la plus grande vill étrangère visible du continent</French>
 		<German>[ICON_BULLET]Verbindet alle eigenen Seidenfelder mit Straße[NEWLINE][ICON_BULLET]Verbindet die erbauende Stadt mit der Hauptstadt mit Straße[NEWLINE][ICON_BULLET]Verbindet die Hauptstadt mit der größten sichtbaren fremden Stadt auf diesem Kontinent mit Straße.</German>
 		<Italian>[ICON_BULLET]Collega tutte le caselle in tuo possesso con una risorsa di Seta alla tua città che costruisce [COLOR_BUILDING_TEXT]Via della seta[COLOR_REVERT][NEWLINE][ICON_BULLET]Collega la città che costruisce [COLOR_BUILDING_TEXT]Via della seta[COLOR_REVERT] alla tua capitale [NEWLINE][ICON_BULLET]Collega la tua capitale alla più grande città straniera sullo stesso continente</Italian>
@@ -30661,7 +30672,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CYRUS_CYLINDER_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Generates Great General Points Based on Game Score[NEWLINE][ICON_BULLET]Vassals Increase the Rate</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Generates Great General Points Based on Game Score, Vassals Increase the Rate</English>
 		<French>[ICON_BULLET]Génère des points de General Illustre, basé sur le score actuel[NEWLINE][ICON_BULLET]Les Vassaux font augmenter le taux</French>
 		<Polish>[ICON_BULLET]Generuje punkty Wielkiego Generala na podstawie punktacji.[NEWLINE][ICON_BULLET]Wasale zwiekszaja przyrosty tych punktów.</Polish>
 	</TEXT>
@@ -30682,7 +30693,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NAZCA_LINES_STRATEGY</Tag>
-		<English>[COLOR_BUILDING_TEXT]Nazca Lines[COLOR_REVERT] provide totally unpredictable benefits out of the following each era advance.[NEWLINE][ICON_BULLET]+2[ICON_HAPPY][NEWLINE][ICON_BULLET]+2[ICON_HEALTHY][NEWLINE][ICON_BULLET]+4[ICON_FOOD][NEWLINE][ICON_BULLET]+4[ICON_PRODUCTION][NEWLINE][ICON_BULLET]+4[ICON_GOLD][NEWLINE][ICON_BULLET]+4[ICON_RESEARCH][NEWLINE][ICON_BULLET]+4[ICON_CULTURE][NEWLINE][ICON_BULLET]+4[ICON_ESPIONAGE]</English>
+		<English>[COLOR_BUILDING_TEXT]Nazca Lines[COLOR_REVERT] provide totally unpredictable benefits out of the following each era advance., +2[ICON_HAPPY], +2[ICON_HEALTHY], +4[ICON_FOOD], +4[ICON_PRODUCTION], +4[ICON_GOLD], +4[ICON_RESEARCH], +4[ICON_CULTURE], +4[ICON_ESPIONAGE]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NAZCA_LINES_HELP</Tag>
@@ -30747,7 +30758,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FA_MEN_SI_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Free Morale Promotion for New Missionaries Built[NEWLINE][ICON_BULLET]100%% Success Rate of Spreading Religion for Missionaries</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Free Morale Promotion for New Missionaries Built, 100%% Success Rate of Spreading Religion for Missionaries</English>
 		<French>[ICON_BULLET]Promotion Morale gratuite pour les nouveaux missionnaires recrutés[NEWLINE][ICON_BULLET]100%% de succès pour la propagation des la religion</French>
 		<Polish>[ICON_BULLET]Werbowani nowi misjonarze posiadaja nowa Promocje: Morale[NEWLINE][ICON_BULLET]100%% Szansy na rozpowszechnienie religii przez misjonarzy</Polish>
 	</TEXT>
@@ -30855,7 +30866,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TSUKIJI_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Places New Sources of Marine Resources around City[NEWLINE][ICON_BULLET]Fishing Boats: +1[ICON_FOOD], +1[ICON_COMMERCE]</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Places New Sources of Marine Resources around City, Fishing Boats: +1[ICON_FOOD], +1[ICON_COMMERCE]</English>
 		<French>[ICON_BULLET]Place de nouvelles ressources maritimes autour de la ville[NEWLINE][ICON_BULLET]Bateaux-atelier: +1[ICON_FOOD], +1[ICON_COMMERCE]</French>
 		<Polish>[ICON_BULLET]Umieszcza wokól miasta nowe lawice ryb wokól miasta[NEWLINE][ICON_BULLET]Lodzie Rybackie: +1[ICON_FOOD], +1[ICON_COMMERCE]</Polish>
 	</TEXT>
@@ -30878,12 +30889,19 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZIZKOV_STRATEGY</Tag>
-		<English>[COLOR_BUILDING_TEXT]Zizkov Television Tower[COLOR_REVERT] disrupts trade and conceals the world map of rivals. Additionally, it increases espionage in all cities and reveals the world map.</English>
+		<English>[COLOR_BUILDING_TEXT]Zizkov Television Tower[COLOR_REVERT] increases espionage in all cities. It also conceals the world map for rivals whom have not invented [LINK=TECH_SATELLITES]Satellites[\LINK] when built, and with a small chance may do so again each turn threafter. The per turn concealment chance depend on both world size and game speed.
+e.g. The chance per rival is 1 in 75 turns with "smallest/fastest", and 1 in 790 turns with "biggest/slowest".
+	Chance Formula: 1 / (SIZE^2 + SPEED)
+[ICON_BULLET]Where SIZE range is 3-9 (small-big) and SPEED is, from fast to slow, [66,82,114,178,242,306,434,562,690].</English>
+ 
 		<French>La [COLOR_BUILDING_TEXT]Tour de Télévision de Zizkov[COLOR_REVERT] disrupts trade and conceals the world map of rivals. Additionally, it increases espionage in all cities and reveals the world map.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZIZKOV_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Reveals World Map[NEWLINE][ICON_BULLET]Conceals World Map of Rivals[NEWLINE][ICON_BULLET]10% Conceals World Map of Rivals Every Turn[NEWLINE][ICON_BULLET]Rivals with Satellite Technology are Immune</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Conceals World Map of Rivals when built.
+[ICON_BULLET]May conceal world map for rivals each turn.
+[ICON_BULLET]Rivals with [LINK=TECH_SATELLITES]Satellite[\LINK] Technology are Immune.</English>
+
 		<French>[ICON_BULLET]Révèle complètement la carte[NEWLINE][ICON_BULLET]Dissimule la carte aux rivaux[NEWLINE][ICON_BULLET]10% de probabilité de dissimuler la carte chaque tour[NEWLINE][ICON_BULLET]Les Rivaux possédant la Technologie des Satellites sont immunisés</French>
 		<Polish>[ICON_BULLET]Odkrywa Mape Swiata[NEWLINE][ICON_BULLET]Ukrywa Mape Swiata dla rywali.[NEWLINE][ICON_BULLET]10% Mapy Swiata jest odkrywane rywalom co ture[NEWLINE][ICON_BULLET]Rywale z odkryta technoligia Satelity sa odporni na ukrycie mapy.</Polish>
 	</TEXT>
@@ -31047,7 +31065,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THE_MOTHERLAND_CALLS_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Conscripts One Unit Per City When A Rival Declares War On You [NEWLINE][ICON_BULLET]+1[ICON_HAPPY] for 10 turns in All Cities When A Rival Declares War On You</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Conscripts One Unit Per City When A Rival Declares War On You , +1[ICON_HAPPY] for 10 turns in All Cities When A Rival Declares War On You</English>
 		<Polish>[ICON_BULLET]Werbuje jedna jednoste na miasto w momencie wypowiedzenia wojny Tobie przez obce Imperium/ [NEWLINE][ICON_BULLET]+1[ICON_HAPPY] na kazde 10 tur we wszystkich miastach w czasie wojny z wrogim Imperium.</Polish>
 	</TEXT>
 	<TEXT>
@@ -32207,7 +32225,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROUTE_66_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Places Route 66 Terminus in your largest city on the same continent[NEWLINE][ICON_BULLET]Builds Highway Between This City and Route 66 Terminus</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Places Route 66 Terminus in your largest city on the same continent, Builds Highway Between This City and Route 66 Terminus</English>
 		<Italian>[ICON_BULLET]Piazza un Termine della Route 66 nella città più grande dello stesso continente[NEWLINE][ICON_BULLET]Costruisce un'autostrada tra questa città e il termine della Route 66</Italian>
 	</TEXT>
 	<TEXT>

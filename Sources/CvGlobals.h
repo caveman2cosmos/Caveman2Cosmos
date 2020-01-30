@@ -6,7 +6,6 @@
 #ifndef CIV4_GLOBALS_H
 #define CIV4_GLOBALS_H
 
-//#include "CvStructs.h"
 //
 // 'global' vars for Civ IV.  singleton class.
 // All globals and global types should be contained in this class
@@ -149,8 +148,6 @@ class CvInvisibleInfo;
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-// Python Modular Loading
-class CvPythonModulesInfo;
 // MLF loading
 class CvModLoadControlInfo;
 /************************************************************************************************/
@@ -430,10 +427,6 @@ public:
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	// Python Modular Loading
-	int getNumPythonModulesInfos();
-	std::vector<CvPythonModulesInfo*>& getPythonModulesInfos();
-	CvPythonModulesInfo& getPythonModulesInfo(int i);
 	// MLF loading
 	void resetModLoadControlVector();
 	int getModLoadControlVectorSize();
@@ -621,27 +614,10 @@ public:
 	CvOutcomeInfo& getOutcomeInfo(OutcomeTypes eOutcomeNum);
 
 /************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-	// Dale - DCM: Pedia Concepts START
-	int getNumDCMConceptInfos();
-	std::vector<CvInfoBase*>& getDCMConceptInfos();
-	CvInfoBase& getDCMConceptInfo(DCMConceptTypes e);
-	// Dale - DCM: Pedia Concepts END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
 /*Afforess                                     12/21/09                                         */
 /************************************************************************************************/
-	int getNumANDConceptInfos();
-	std::vector<CvInfoBase*>& getANDConceptInfos();
-	CvInfoBase& getANDConceptInfo(ANDConceptTypes e);
-	
 	int getPEAK_EXTRA_DEFENSE();
 	int getPEAK_EXTRA_MOVEMENT();
-
-	bool isFormationsMod() const;
 	
 	int iStuckUnitID;
 	int iStuckUnitCount;
@@ -653,8 +629,6 @@ public:
 	void setXMLLogging(bool bNewVal);
 	
 	void updateReplacements();
-	
-	const wchar* parseDenialHover(DenialTypes eDenial);
 	
 	int getSCORE_FREE_PERCENT();
 	int getSCORE_POPULATION_FACTOR();
@@ -764,7 +738,7 @@ public:
 	std::vector<CvInfoBase*>& getUnitAIInfos();
 	CvInfoBase& getUnitAIInfo(UnitAITypes eUnitAINum);
 
-	//	Koshling - added internal registration odf supported UnitAI types, not reliant
+	//	Koshling - added internal registration of supported UnitAI types, not reliant
 	//	on external definition in XML
 private:
 	void registerUnitAI(const char* szType, int enumVal);
@@ -902,7 +876,7 @@ public:
 	std::vector<CvPromotionInfo*>& getPromotionInfos();
 	CvPromotionInfo& getPromotionInfo(PromotionTypes ePromotionNum);
 	CvInfoReplacements<CvPromotionInfo>* getPromotionInfoReplacements();
-	typedef boost::function<bool(const CvPromotionInfo*, PromotionTypes)> PromotionPredicateFn;
+	typedef bst::function<bool(const CvPromotionInfo*, PromotionTypes)> PromotionPredicateFn;
 	PromotionTypes findPromotion(PromotionPredicateFn predicateFn) const;
 
 	int getNumTechInfos();
@@ -1245,7 +1219,6 @@ public:
 	int getMAX_CIV_TEAMS();
 	int getMAX_PC_TEAMS();
 	int getMAX_TEAMS();
-	int getLAST_PLAYER();
 	int getBARBARIAN_PLAYER();
 	int getBARBARIAN_TEAM();
 	int getAGGRESSIVE_ANIMAL_PLAYER();
@@ -1369,27 +1342,9 @@ public:
 	 int getNumGraphicLevels() const;
 	 int getNumGlobeLayers() const;
 
-// BUG - DLL Info - start
-	bool isBull() const;
-	int getBullApiVersion() const;
-
-	const wchar* getBullName() const;
-	const wchar* getBullVersion() const;
-// BUG - DLL Info - end
-
 // BUG - BUG Info - start
 	void setIsBug(bool bIsBug);
 // BUG - BUG Info - end
-
-// BUFFY - DLL Info - start
-#ifdef _BUFFY
-	bool isBuffy() const;
-	int getBuffyApiVersion() const;
-
-	const wchar* getBuffyName() const;
-	const wchar* getBuffyVersion() const;
-#endif
-// BUFFY - DLL Info - end
 
 	unsigned int getAssetCheckSum();
 
@@ -1405,10 +1360,6 @@ public:
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
-
-	/**** Dexy - Dark Ages START ****/
-	const wchar* getRankingTextKeyWide(RankingTypes eRanking) const;
-	/**** Dexy - Dark Ages  END  ****/
 
 protected:
 
@@ -1551,8 +1502,6 @@ protected:
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	// Python Modular Loading
-	std::vector<CvPythonModulesInfo*> m_paPythonModulesInfo;
 	// MLF loading
 	std::vector<CvString> m_paModLoadControlVector;
 	std::vector<CvModLoadControlInfo*> m_paModLoadControls;
@@ -1625,22 +1574,6 @@ protected:
 	std::vector<CvSpecialUnitInfo*> m_paSpecialUnitInfo;
 	std::vector<CvInfoBase*> m_paConceptInfo;
 	std::vector<CvInfoBase*> m_paNewConceptInfo;
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-	// Dale - DCM: Pedia Concepts START
-	std::vector<CvInfoBase*> m_paDCMConceptInfo;
-	// Dale - DCM: Pedia Concepts END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/*Afforess                                     11/13/09                                         */
-/************************************************************************************************/
-	std::vector<CvInfoBase*> m_paANDConceptInfo;
-/************************************************************************************************/
-/* Afforess                                END                                                  */
-/************************************************************************************************/
 	std::vector<CvInfoBase*> m_paCityTabInfo;
 	std::vector<CvInfoBase*> m_paCalendarInfo;
 	std::vector<CvInfoBase*> m_paSeasonInfo;
@@ -1845,7 +1778,6 @@ protected:
 /************************************************************************************************/
 	int m_iPEAK_EXTRA_DEFENSE;
 	int m_iPEAK_EXTRA_MOVEMENT;
-	bool m_bFormationsMod;
 	bool m_bXMLLogging;
 	bool m_bLoadedPlayerOptions;
 	
@@ -2522,17 +2454,6 @@ public:
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	// Python Modular Loading
-	int getNumPythonModulesInfos()
-	{
-		PROXY_TRACK("getNumPythonModulesInfos");	
-		return gGlobals->getNumPythonModulesInfos();	
-	}
-	CvPythonModulesInfo& getPythonModulesInfo(int i)
-	{
-		PROXY_TRACK("getPythonModulesInfo");	
-		return gGlobals->getPythonModulesInfo(i);	
-	}
 	CvModLoadControlInfo& getModLoadControlInfos(int i)
 	{
 		PROXY_TRACK("getModLoadControlInfos");	
@@ -2863,23 +2784,6 @@ public:
 		PROXY_TRACK("getSpaceShipInfo");	
 		return gGlobals->getSpaceShipInfo(iIndex);	
 	}
-
-/************************************************************************************************/
-/*Afforess                                     12/21/09                                         */
-/************************************************************************************************/
-	int getNumANDConceptInfos()
-	{
-		PROXY_TRACK("getNumANDConceptInfos");	
-		return gGlobals->getNumANDConceptInfos();	
-	}
-	CvInfoBase& getANDConceptInfo(ANDConceptTypes e)
-	{
-		PROXY_TRACK("getANDConceptInfo");	
-		return gGlobals->getANDConceptInfo(e);	
-	}
-/************************************************************************************************/
-/* Afforess                                END                                                  */
-/************************************************************************************************/
 
 	int getNumGameOptionInfos()
 	{
@@ -3393,11 +3297,6 @@ public:
 	{
 		PROXY_TRACK("getMAX_TEAMS");	
 		return gGlobals->getMAX_TEAMS();	
-	}
-	int getLAST_PLAYER()
-	{
-		PROXY_TRACK("getLAST_PLAYER");	
-		return gGlobals->getLAST_PLAYER();	
 	}
 	int getBARBARIAN_PLAYER()
 	{
@@ -3941,23 +3840,6 @@ inline CvGlobals& CvGlobals::getInstance()
 
 #ifndef FIXED_MISSION_NUMBER
 #define NUM_MISSION_TYPES (GC.getNumMissionInfos())
-#endif
-
-
-
-/************************************************************************************************/
-/* ADVANCED COMBAT ODDS                      17/02/09                          PieceOfMind      */
-/*                                                                                              */
-/************************************************************************************************/
-
-#ifndef ADVANCED_COMBAT_ODDS_H
-#define ADVANCED_COMBAT_ODDS_H
-
-#define ACO_DETAIL_LOW          0
-#define ACO_DETAIL_MEDIUM       1
-#define ACO_DETAIL_HIGH         2
-#define ACO_DETAIL_EVERYTHING   3
-
 #endif
 
 #endif

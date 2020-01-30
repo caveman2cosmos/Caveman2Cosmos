@@ -15262,7 +15262,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
+					<BuildType>BUILD_PLANT_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -17701,10 +17701,6 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_SOLAR_PANELS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -22884,7 +22880,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
+					<BuildType>BUILD_PLANT_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -24916,7 +24912,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
+					<BuildType>BUILD_PLANT_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -31840,6 +31836,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</UnitInfo>
+<!-- Wrong flag
 		<UnitInfo>
 			<Class>UNITCLASS_MAGOS</Class>
 			<Type>UNIT_MAGOS</Type>
@@ -31968,6 +31965,7 @@
 				</FreePromotion>
 			</FreePromotions>
 		</UnitInfo>
+-->
 		<UnitInfo>
 			<Class>UNITCLASS_TOFANGCHI</Class>
 			<Type>UNIT_TOFANGCHI</Type>
@@ -42260,7 +42258,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
+					<BuildType>BUILD_PLANT_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -43220,7 +43218,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
+					<BuildType>BUILD_PLANT_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>

@@ -772,7 +772,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
+					<BuildType>BUILD_PLANT_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1093,7 +1093,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
+					<BuildType>BUILD_PLANT_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1413,7 +1413,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
+					<BuildType>BUILD_PLANT_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1747,7 +1747,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
+					<BuildType>BUILD_PLANT_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2078,7 +2078,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
+					<BuildType>BUILD_PLANT_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2402,7 +2402,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
+					<BuildType>BUILD_PLANT_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2732,7 +2732,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
+					<BuildType>BUILD_PLANT_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3068,10 +3068,6 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_LUMBERMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3461,10 +3457,6 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
 					<BuildType>BUILD_WINDMILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -3630,6 +3622,10 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_PLANT_SAVANNA</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_GROW_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3854,10 +3850,6 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
 					<BuildType>BUILD_WINDMILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -4023,6 +4015,10 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_PLANT_SAVANNA</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_GROW_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -4243,10 +4239,6 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
 					<BuildType>BUILD_WINDMILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -4416,6 +4408,10 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_PLANT_SAVANNA</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_GROW_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -53022,6 +53018,10 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_GROW_FOREST</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_NATURE_PRESERVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -53171,6 +53171,10 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_PLANT_SAVANNA</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_GROW_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -57538,7 +57542,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
+					<BuildType>BUILD_PLANT_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -68198,10 +68202,6 @@ iTradeMultiplier>3</iTradeMultiplier>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TREE_NURSERY_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
 					<BuildType>BUILD_WINDMILL_SLAVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -68332,6 +68332,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_PRODUCTION</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_COMMERCE</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_SANITATION</BuildingType>
+				<BuildingType>BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</BuildingType>				
 				<BuildingType>BUILDING_WV_CANNIBALISM</BuildingType>
 				<BuildingType>BUILDING_WV_HUMAN_SACRIFICE</BuildingType>
 			</Buildings>
@@ -69363,6 +69364,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_PRODUCTION</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_COMMERCE</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_SANITATION</BuildingType>
+				<BuildingType>BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</BuildingType>	
 				<BuildingType>BUILDING_WV_CANNIBALISM</BuildingType>
 				<BuildingType>BUILDING_WV_HUMAN_SACRIFICE</BuildingType>
 			</Buildings>

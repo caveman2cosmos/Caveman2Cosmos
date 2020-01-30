@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <Civ4TechInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4TechnologiesSchema.xml">
 	<TechInfos>
 		<TechInfo>
@@ -46,7 +45,7 @@
 			</AndPreReqs>
 			<Quote>TXT_KEY_CULTURE_CLOCKPUNK_QUOTE</Quote>
 			<Sound>AS2D_TECH_CLOCKPUNK</Sound>
-			<SoundMP>AS2D_TECH_CLOCKPUNK</SoundMP>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/clockpunk.dds</Button>
 		</TechInfo>
 	</TechInfos>

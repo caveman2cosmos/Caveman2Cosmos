@@ -787,7 +787,7 @@ BoolExprIntegrateOr::~BoolExprIntegrateOr()
 bool BoolExprIntegrateOr::evaluate(CvGameObject *pObject)
 {
 	bool bAcc = false;
-	pObject->foreachRelated(m_eType, m_eRelation, boost::bind(evalExprIntegrateOr, _1, m_pExpr, &bAcc));
+	pObject->foreachRelated(m_eType, m_eRelation, bst::bind(evalExprIntegrateOr, _1, m_pExpr, &bAcc));
 	return bAcc;
 }
 

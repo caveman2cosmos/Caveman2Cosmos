@@ -5491,6 +5491,7 @@
 			<iCultureDistance>20</iCultureDistance>
 			<iMovement>1</iMovement>
 			<Button>Art/Interface/Buttons/WorldBuilder/Space.dds</Button>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_ORBIT</Type>

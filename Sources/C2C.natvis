@@ -28,8 +28,8 @@
     </Expand>
   </Type>
   <Type Name="CvUnit">
-    <DisplayString Condition="m_bDeathDelay">[DELAYED DEATH! owner = {CvPlayerAI::m_aPlayers[m_eOwner]}, class = {gGlobals->m_paUnitClassInfo[m_pUnitInfo->m_iUnitClassType]->m_szType} ({m_pUnitInfo->m_iUnitClassType}), type = {gGlobals->m_paUnitInfo[m_eUnitType]->m_szType} ({m_eUnitType})]</DisplayString>
-    <DisplayString>[owner = {CvPlayerAI::m_aPlayers[m_eOwner]}, class = {gGlobals->m_paUnitClassInfo[m_pUnitInfo->m_iUnitClassType]->m_szType} ({m_pUnitInfo->m_iUnitClassType}), type = {gGlobals->m_paUnitInfo[m_eUnitType]->m_szType} ({m_eUnitType})]</DisplayString>
+    <DisplayString Condition="m_bDeathDelay">[DELAYED DEATH! {gGlobals->m_paUnitClassInfo[m_pUnitInfo->m_iUnitClassType]->m_szType} {gGlobals->m_paUnitInfo[m_eUnitType]->m_szType} {CvPlayerAI::m_aPlayers[m_eOwner]}]</DisplayString>
+    <DisplayString>[{gGlobals->m_paUnitClassInfo[m_pUnitInfo->m_iUnitClassType]->m_szType} {gGlobals->m_paUnitInfo[m_eUnitType]->m_szType} {CvPlayerAI::m_aPlayers[m_eOwner]}]</DisplayString>
     <Expand>
       <Item Name="[owner]" ExcludeView="simple">CvPlayerAI::m_aPlayers[m_eOwner]</Item>
       <Item Name="[id]" ExcludeView="simple">m_iID</Item>
@@ -40,7 +40,7 @@
       <Item Name="[plot]" ExcludeView="simple">gGlobals->m_maps[gGlobals->m_game->m_eCurrentMap]->m_pMapPlots[m_iY*gGlobals->m_maps[gGlobals->m_game->m_eCurrentMap]->m_iGridWidth+m_iX]</Item>
       <Item Name="[is dummy]">m_pEntity != nullptr &amp;&amp; g_dummyEntity == m_pEntity</Item>
       <Item Name="[group id]">m_iGroupID</Item>
-    
+      <Item Name="[group]">CvPlayerAI::m_aPlayers[m_eOwner].m_selectionGroups.m_pArray[m_iGroupID &amp; ((1 &lt;&lt; 13) - 1)].pData</Item>
     </Expand>
   </Type>
   <Type Name="CvPlot">
@@ -117,6 +117,7 @@
   <Type Name="CvSelectionGroup">
     <DisplayString>{{ id = {m_iID}, units = {m_units} }}</DisplayString>
     <Expand>
+      <Item Name="[id]" ExcludeView="simple">m_iID</Item>
       <Item Name="[units]" ExcludeView="simple">m_units</Item>
       <!--Recreating the CLinkList<IDinfo> iteration with lookup into FFreeListTrashArray<CvUnitAI> by ID-->
       <CustomListItems MaxItemsPerView="50" ExcludeView="Test">

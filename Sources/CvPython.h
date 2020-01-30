@@ -3,8 +3,8 @@
 #ifndef CvPython_h__
 #define CvPython_h__
 
-#include <boost/type_traits.hpp>
-#include <boost/utility/enable_if.hpp>
+#include <boost155/type_traits.hpp>
+#include <boost155/utility/enable_if.hpp>
 
 #include "FAssert.h"
 #include "CvGlobals.h"
@@ -46,9 +46,9 @@ namespace Cy
 	template < class Ty_ >
 	struct base_type
 	{
-		typedef typename boost::remove_cv<
-			typename boost::remove_reference<
-			typename boost::remove_pointer<Ty_>::type
+		typedef typename bst::remove_cv<
+			typename bst::remove_reference<
+			typename bst::remove_pointer<Ty_>::type
 			>::type
 		>::type type;
 	};
@@ -114,7 +114,7 @@ namespace Cy
 	template < class Ty_ >
 	struct PyWrap : PyWrapBase
 	{
-		STATIC_ASSERT(boost::is_class<Ty_>::value, Wrong_type_for_PyWrap);
+		STATIC_ASSERT(bst::is_class<Ty_>::value, Wrong_type_for_PyWrap);
 
 		typedef Ty_ value_type;
 		explicit PyWrap(const value_type& obj) : obj(obj)
@@ -154,16 +154,16 @@ namespace Cy
 		template < class Ty_ >
 		Args& add_wrapped(const Ty_& arg)
 		{
-			m_wrapped.push_back(boost::shared_ptr<PyWrapBase>(new PyWrap<Ty_>(arg)));
+			m_wrapped.push_back(bst::shared_ptr<PyWrapBase>(new PyWrap<Ty_>(arg)));
 			m_args.add(m_wrapped.back()->pyobj);
 			return *this;
 		}
 
 		//template < class Ty_ >
-		//typename boost::enable_if<
-		//	boost::type_traits::ice_or<
-		//	!boost::is_class<Ty_>::value,
-		//	boost::is_pointer<Ty_>::value
+		//typename bst::enable_if<
+		//	bst::type_traits::ice_or<
+		//	!bst::is_class<Ty_>::value,
+		//	bst::is_pointer<Ty_>::value
 		//	>,
 		//	Args&
 		//>::type add(const Ty_& arg)
@@ -191,7 +191,7 @@ namespace Cy
 
 	private:
 		CyArgsList m_args;
-		std::vector< boost::shared_ptr< PyWrapBase > > m_wrapped;
+		std::vector< bst::shared_ptr< PyWrapBase > > m_wrapped;
 	};
 
 	// These classes allows mappings between C++ types and python types to be defined for 
@@ -205,7 +205,7 @@ namespace Cy
 		template <class Ty_, bool b>	struct EnumDetect				{ typedef Ty_ type; };
 		template <class Ty_>			struct EnumDetect<Ty_, true>	{ typedef long type; };
 
-		typedef typename EnumDetect<PyTy_, boost::is_enum<DesiredTy_>::value>::type py_type;
+		typedef typename EnumDetect<PyTy_, bst::is_enum<DesiredTy_>::value>::type py_type;
 		static desired_type convert(const py_type& pyVal) { return static_cast<desired_type>(pyVal); }
 	};
 
@@ -277,9 +277,9 @@ namespace Cy
 	template < class ReturnValueTy_ >
 	// inline 
 	// Make sure to disallow Cy::Args matching ReturnValueTy_
-	typename boost::enable_if_c<
-		!boost::is_convertible<
-			typename boost::remove_cv<ReturnValueTy_>::type,
+	typename bst::enable_if_c<
+		!bst::is_convertible<
+			typename bst::remove_cv<ReturnValueTy_>::type,
 			Cy::Args
 		>::value,
 		bool

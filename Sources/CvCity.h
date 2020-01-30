@@ -124,6 +124,19 @@ public:
 	CvUnitSelectionCriteria& IsCommander(bool IsCommander) { m_bIsCommander = IsCommander; return *this; }
 };
 
+struct ProductionCalc
+{
+	enum flags {
+		None = 0,
+		FoodProduction = 1 << 0,
+		Overflow = 1 << 1,
+		Yield = 1 << 2
+	};
+};
+
+DECLARE_FLAGS(ProductionCalc::flags);
+
+
 class CvCity : public CvDLLEntity
 {
 public:
@@ -136,8 +149,8 @@ public:
 	void reset(int iID = 0, PlayerTypes eOwner = NO_PLAYER, int iX = 0, int iY = 0, bool bConstructorCall = false);
 	void setupGraphical();
 
-	CvGameObjectCity* getGameObject()  {return &m_GameObject;};
-	const CvGameObjectCity* getGameObjectConst() const {return (const CvGameObjectCity*)&m_GameObject;};
+	CvGameObjectCity* getGameObject() { return &m_GameObject; }
+	const CvGameObjectCity* getGameObject() const { return &m_GameObject; }
 
 private:
 	// disable copy: we have owned pointers so we can't use the default copy implementation
@@ -173,20 +186,10 @@ public:
 	void setReinforcementCounter( int iNewValue );
 	void changeReinforcementCounter( int iChange );
 
-	int getRevIndexHappinessVal();
-	int getRevIndexDistanceVal();
-	int getRevIndexColonyVal();
-	int getRevIndexReligionVal();
-	int getRevIndexNationalityVal();
-	int getRevIndexHealthVal();
-	int getRevIndexGarrisonVal();
-	int getRevIndexDisorderVal();
-
-	bool isRecentlyAcquired();
+	bool isRecentlyAcquired() const;
 /************************************************************************************************/
 /* REVOLUTION_MOD                          END                                                  */
 /************************************************************************************************/
-
 
 	void kill(bool bUpdatePlotGroups, bool bUpdateCulture = true);																								// Exposed to Python
 	void killTestCheap(); // For testing, do not call in a game situation
@@ -201,7 +204,7 @@ public:
 	void updateYield();
 
 	void updateVisibility();
-	bool isVisibilitySetup();
+	bool isVisibilitySetup() const;
 
 	void createGreatPeople(UnitTypes eGreatPersonUnit, bool bIncrementThreshold, bool bIncrementExperience);		// Exposed to Python
 
@@ -209,7 +212,52 @@ public:
 
 	void chooseProduction(UnitTypes eTrainUnit = NO_UNIT, BuildingTypes eConstructBuilding = NO_BUILDING, ProjectTypes eCreateProject = NO_PROJECT, bool bFinish = false, bool bFront = false);		// Exposed to Python
 
+	// Base iterator type for iterating over city plots, returning valid ones only
+	template < class Value_ >
+	struct city_plot_iterator_base :
+		public bst::iterator_facade<city_plot_iterator_base<Value_>, Value_*, bst::forward_traversal_tag, Value_*>
+	{
+		city_plot_iterator_base() : m_centerX(-1), m_centerY(-1), m_curr(nullptr), m_idx(0) {}
+		explicit city_plot_iterator_base(int centerX, int centerY) : m_centerX(centerX), m_centerY(centerY), m_curr(nullptr), m_idx(-1)
+		{
+			increment();
+		}
+
+	private:
+		friend class bst::iterator_core_access;
+		void increment()
+		{
+			do
+			{
+				++m_idx;
+				m_curr = plotCity(m_centerX, m_centerY, m_idx);
+			} while (m_curr == nullptr && m_idx < NUM_CITY_PLOTS);
+		}
+		bool equal(city_plot_iterator_base const& other) const
+		{
+			return (this->m_centerX == other.m_centerX
+				&& this->m_centerY == other.m_centerY
+				&& this->m_idx == other.m_idx)
+				|| (this->m_curr == nullptr && other.m_curr == nullptr);
+		}
+
+		Value_* dereference() const { return m_curr; }
+
+		int m_centerX;
+		int m_centerY;
+		Value_* m_curr;
+		int m_idx;
+	};
+	typedef city_plot_iterator_base<CvPlot> city_plot_iterator;
+
+	city_plot_iterator beginPlots() const { return city_plot_iterator(getX(), getY()); }
+	city_plot_iterator endPlots() const { return city_plot_iterator(); }
+
+	typedef bst::iterator_range<city_plot_iterator> city_plot_range;
+	city_plot_range plots() const { return city_plot_range(beginPlots(), endPlots()); }
+
 	int getCityPlotIndex(const CvPlot* pPlot) const;				// Exposed to Python 
+	// Prefer to use plots() range instead of this for loops, searching etc.
 	CvPlot* getCityIndexPlot(int iIndex) const;															// Exposed to Python
 
 	bool canWork(CvPlot* pPlot) const;																			// Exposed to Python
@@ -275,8 +323,8 @@ public:
 	bool isProductionProject() const;																							// Exposed to Python
 	bool isProductionProcess() const;																		// Exposed to Python
 
-	bool canContinueProduction(OrderData order);														// Exposed to Python
-	int getProductionExperience(UnitTypes eUnit = NO_UNIT);									// Exposed to Python
+	bool canContinueProduction(const OrderData& order) const;														// Exposed to Python
+	int getProductionExperience(UnitTypes eUnit = NO_UNIT) const;									// Exposed to Python
 	void addProductionExperience(CvUnit* pUnit, bool bConscript = false);		// Exposed to Python
 
 	UnitTypes getProductionUnit() const;																// Exposed to Python
@@ -288,48 +336,52 @@ public:
 	const wchar* getProductionNameKey() const;													// Exposed to Python
 	int getGeneralProductionTurnsLeft() const;										// Exposed to Python
 
-	bool isFoodProduction() const;																								// Exposed to Python
-	bool isFoodProduction(UnitTypes eUnit) const;																	// Exposed to Python
-	int getFirstUnitOrder(UnitTypes eUnit) const;																	// Exposed to Python
-	int getFirstBuildingOrder(BuildingTypes eBuilding) const;											// Exposed to Python
-	int getFirstProjectOrder(ProjectTypes eProject) const;												// Exposed to Python
-	int getNumTrainUnitAI(UnitAITypes eUnitAI) const;															// Exposed to Python
+	bool isFoodProduction() const; // Exposed to Python
+	bool isFoodProduction(const OrderData& order) const;
+	bool isFoodProduction(UnitTypes eUnit) const; // Exposed to Python
 
-	int getProduction() const;																						// Exposed to Python
-	int getProductionNeeded() const;																						// Exposed to Python
+	int getFirstUnitOrder(UnitTypes eUnit) const; // Exposed to Python
+	int getFirstBuildingOrder(BuildingTypes eBuilding) const; // Exposed to Python
+	int getFirstProjectOrder(ProjectTypes eProject) const; // Exposed to Python
+	int getNumTrainUnitAI(UnitAITypes eUnitAI) const; // Exposed to Python
+
+	int getProduction() const; // Exposed to Python
+	int getProductionNeeded() const; // Exposed to Python
+	int getProductionNeeded(const OrderData& order) const;
 	int getProductionNeeded(UnitTypes eUnit) const;
 	int getProductionNeeded(BuildingTypes eBuilding) const;
 	int getProductionNeeded(ProjectTypes eProject) const;		
-	int getQueueNodeProductionTurnsLeft(CLLNode<OrderData>* pOrderNode, int iIndex = 0) const;
+	int getOrderProductionTurnsLeft(const OrderData& order, int iIndex = 0) const;
+
+	// For fractional production calculations:
 	int getTotalProductionQueueTurnsLeft() const;
-	int getProductionTurnsLeft() const;																	// Exposed to Python 
-	int getProductionTurnsLeft(UnitTypes eUnit, int iNum) const;					// Exposed to Python
-	int getProductionTurnsLeft(BuildingTypes eBuilding, int iNum) const;	// Exposed to Python
-	int getProductionTurnsLeft(ProjectTypes eProject, int iNum) const;		// Exposed to Python
+	int getProductionTurnsLeft() const; // Exposed to Python 
+	int getProductionTurnsLeft(UnitTypes eUnit, int iNum) const; // Exposed to Python
+	int getProductionTurnsLeft(BuildingTypes eBuilding, int iNum) const; // Exposed to Python
+	int getProductionTurnsLeft(ProjectTypes eProject, int iNum) const; // Exposed to Python
 	int getProductionTurnsLeft(int iProductionNeeded, int iProduction, int iFirstProductionDifference, int iProductionDifference) const;
+
 	void setProduction(int iNewValue);																			// Exposed to Python
 	void changeProduction(int iChange);																			// Exposed to Python
-	int numQueuedUnits(UnitAITypes eUnitAI, CvPlot* pDestPlot);
+	int numQueuedUnits(UnitAITypes contractedAIType, const CvPlot* contractedPlot) const;
 
-	int getProductionModifier() const;																						// Exposed to Python
-	int getProductionModifier(UnitTypes eUnit) const;															// Exposed to Python
-	int getProductionModifier(BuildingTypes eBuilding) const;											// Exposed to Python
-	int getProductionModifier(ProjectTypes eProject) const;												// Exposed to Python
+	int getProductionModifier(const OrderData& order) const;
+	int getProductionModifier() const; // Exposed to Python
 
-/************************************************************************************************/
-/* Afforess	Multiple Production Mod		 08/23/09                                            */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+	int getProductionModifier(UnitTypes eUnit) const; // Exposed to Python
+	int getProductionModifier(BuildingTypes eBuilding) const; // Exposed to Python
+	int getProductionModifier(ProjectTypes eProject) const; // Exposed to Python
+
 //	int getOverflowProductionDifference(int iProductionNeeded, int iProduction, int iProductionModifier, int iDiff, int iModifiedProduction) const;
 //	int getProductionDifference(int iProductionNeeded, int iProduction, int iProductionModifier, bool bFoodProduction, bool bOverflow) const;
+
 	int getOverflowProductionDifference() const;
-	int getProductionDifference(int iProductionNeeded, int iProduction, int iProductionModifier, bool bFoodProduction, bool bOverflow, bool bYield = true) const;
-/************************************************************************************************/
-/* Afforess	Multiple Production Mod       END                                                */
-/************************************************************************************************/
-	int getCurrentProductionDifference(bool bIgnoreFood, bool bOverflow) const;				// Exposed to Python
-	int getExtraProductionDifference(int iExtra) const;																					// Exposed to Python
+	// int getProductionDifference(int iProductionNeeded, int iProduction, int iProductionModifier, bool bFoodProduction, bool bOverflow, bool bYield = true) const;
+	int getProductionPerTurn(int iProductionModifier, ProductionCalc::flags flags) const;
+
+	int getProductionDifference(const OrderData& orderData, ProductionCalc::flags flags) const;
+	int getCurrentProductionDifference(ProductionCalc::flags flags) const; // Exposed to Python
+	int getExtraProductionDifference(int iExtra) const; // Exposed to Python
 
 	bool canHurry(HurryTypes eHurry, bool bTestVisible = false) const;		// Exposed to Python
 	void hurry(HurryTypes eHurry);																						// Exposed to Python
@@ -972,7 +1024,7 @@ public:
 	void setCitySizeBoost(int iBoost);
 
 	// < M.A.D. Nukes Start >
-	int getMADIncoming();											// Exposed to Python
+	int getMADIncoming() const;											// Exposed to Python
 	void setMADIncoming(int iValue);								// Exposed to Python
 	void changeMADIncoming(int iValue);							// Exposed to Python
 	// < M.A.D. Nukes End   >
@@ -1215,6 +1267,7 @@ public:
 	bool isCorporationBonus(BonusTypes eBonus) const;
 	bool isActiveCorporation(CorporationTypes eCorporation) const;
 
+	// How many hammers already put into production of the building
 	int getBuildingProduction(BuildingTypes eIndex) const;							// Exposed to Python
 	void setBuildingProduction(BuildingTypes eIndex, int iNewValue);				// Exposed to Python
 	void changeBuildingProduction(BuildingTypes eIndex, int iChange);				// Exposed to Python
@@ -1337,13 +1390,16 @@ public:
 	void popOrder(int iNum, bool bFinish = false, bool bChoose = false, bool bResolveList = true);		// Exposed to Python
 	void startHeadOrder();
 	void stopHeadOrder();
-	int getOrderQueueLength();																		// Exposed to Python
-	OrderData* getOrderFromQueue(int iIndex);											// Exposed to Python
-	CLLNode<OrderData>* nextOrderQueueNode(CLLNode<OrderData>* pNode) const;
-	CLLNode<OrderData>* headOrderQueueNode() const;
-	DllExport int getNumOrdersQueued() const;
+
+	int getOrderQueueLength() const; // Exposed to Python
+	bst::optional<OrderData> getHeadOrder() const { return m_orderQueue.empty() ? bst::optional<OrderData>() : m_orderQueue.front(); }
+	bst::optional<OrderData> getTailOrder() const { return m_orderQueue.empty() ? bst::optional<OrderData>() : m_orderQueue.back(); }
+	OrderData getOrderAt(int index) const { return m_orderQueue[index]; } // Exposed to Python
+
+	//CLLNode<OrderData>* nextOrderQueueNode(CLLNode<OrderData>* pNode) const;
+	//CLLNode<OrderData>* headOrderQueueNode() const;
+	DllExport int getNumOrdersQueued() const { return m_orderQueue.size(); };
 	DllExport OrderData getOrderData(int iIndex) const;
-	OrderData getOrderDataInternal(int iIndex, bool externalView = true) const;
 	bool pushFirstValidBuildListOrder(int iListID);
 
 	// fill the kVisible array with buildings that you want shown in city, as well as the number of generics
@@ -1459,8 +1515,8 @@ public:
 	
 	int calculateBuildingCommerceModifier(CommerceTypes eCommerce) const;
 	int calculateBuildingYieldModifier(YieldTypes eYield) const;
-	int getRevTrend();
-	bool isInquisitionConditions();
+	int getRevTrend() const;
+	bool isInquisitionConditions() const;
 	int calculateCorporationHealth() const;
 	int calculateCorporationHappiness() const;
 	virtual bool AI_isEmphasizeAvoidAngryCitizens() = 0;
@@ -1619,7 +1675,6 @@ public:
 	virtual UnitTypes AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAsync = false, bool bNoRand = false, CvUnitSelectionCriteria* criteria = NULL) = 0;
 
 	virtual void AI_FlushBuildingValueCache(bool bRetainValues = false) = 0;
-	virtual BuildingTypes AI_bestBuilding(int iFocusFlags = 0, int iMaxTurns = MAX_INT, bool bAsync = false, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR, bool bMaximizeFlaggedValue = false) = 0;
 
 	// Represents a building with associated score as measured by the AI
 	struct ScoredBuilding
@@ -1664,7 +1719,7 @@ public:
 /********************************************************************************/
 /**		BETTER_BTS_AI_MOD						END								*/
 /********************************************************************************/
-	virtual bool AI_isDanger() = 0;
+	virtual bool AI_isDanger() const = 0;
 	virtual int evaluateDanger() = 0;
 	virtual int AI_neededDefenders() = 0;
 	virtual int AI_neededAirDefenders() = 0;
@@ -1721,7 +1776,7 @@ public:
 /********************************************************************************/
 	virtual int AI_getBuildPriority() const = 0;
 
-	bool hasShrine(ReligionTypes eReligion);
+	bool hasShrine(ReligionTypes eReligion) const;
 	bool hasOrbitalInfrastructure() const;
 	void processVoteSourceBonus(VoteSourceTypes eVoteSource, bool bActive);
 
@@ -1903,7 +1958,7 @@ protected:
 	int* m_paiUnitClassProductionModifier;
 	int* m_paiBuildingClassProductionModifier;
 	int* m_paiBonusDefenseChanges;
-	int* m_cachedPropertyNeeds;
+	mutable int* m_cachedPropertyNeeds;
 	bool* m_pabHadVicinityBonus;
 	bool* m_pabHadRawVicinityBonus;
 	mutable bool* m_pabHasVicinityBonusCached;
@@ -1952,7 +2007,8 @@ protected:
 	int m_iEspionageDefenseModifier;
 	int m_iSpecialistInsidiousness;
 	int m_iSpecialistInvestigation;
-	int m_icachedPropertyNeedsTurn;
+	// Mutable as its used in caching
+	mutable int m_icachedPropertyNeedsTurn;
 	// < M.A.D. Nukes Start >
 	int m_iMADIncoming;
 	// < M.A.D. Nukes Start >
@@ -2126,7 +2182,8 @@ protected:
 
 	std::vector<IDInfo> m_paTradeCities;
 
-	mutable CLinkList<OrderData> m_orderQueue;
+	typedef std::vector<OrderData> OrderQueue;
+	OrderQueue m_orderQueue;
 
 	std::vector< std::pair < float, float> > m_kWallOverridePoints;
 
@@ -2342,7 +2399,7 @@ public:
 	int getSpecialistInvestigation() const;
 	void changeSpecialistInvestigation(int iChange);
 
-	int getPropertyNeed(PropertyTypes eProperty);
+	int getPropertyNeed(PropertyTypes eProperty) const;
 	int getNumPropertySpawns() const;
 	PropertySpawns& getPropertySpawn(int iIndex);
 	void changePropertySpawn(int iChange, PropertyTypes eProperty, UnitClassTypes eUnitClass);
@@ -2378,6 +2435,14 @@ public:
 protected:
 	void invalidateCachedCanTrainForUnit(UnitTypes eUnit) const;
 #endif
+
+public:
+	//
+	// Algorithm/range helpers
+	//
+	struct fn {
+		DECLARE_MAP_FUNCTOR_1(CvCity, int, getNumBuilding, BuildingTypes);
+	};
 };
 
 #endif

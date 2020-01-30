@@ -526,7 +526,7 @@
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Terrain/Features/TreeLeafy/Leafy15_01.nif</NIF>
+			<NIF>Art/Terrain/Features/New Forest/new forest.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/TerrainFeatures/Forest.dds</Button>
 		</ImprovementArtInfo>
@@ -574,7 +574,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Structures/Improvements/SeedGatherer/camp_fx.nif</NIF>
 			<KFM>Art/Structures/Improvements/SeedGatherer/Camp.kfm</KFM>
-			<Button>Art/Interface/Buttons/Builds/gatherer_genericplant.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/picker_genericplant.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_FRUIT_GATHERER</Type>
@@ -583,7 +583,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Structures/Improvements/SeedGatherer/camp_fx.nif</NIF>
 			<KFM>Art/Structures/Improvements/SeedGatherer/Camp.kfm</KFM>
-			<Button>Art/Interface/Buttons/Builds/gatherer_genericfruit.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/picker_genericfruit.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_WOOD_GATHERER</Type>

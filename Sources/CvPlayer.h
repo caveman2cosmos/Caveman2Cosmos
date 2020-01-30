@@ -51,7 +51,7 @@ public:
 	virtual ~CvPlayer();
 
 	CvGameObjectPlayer* getGameObject() { return &m_GameObject; };
-	const CvGameObjectPlayer* getGameObjectConst() const { return &m_GameObject; };
+	const CvGameObjectPlayer* getGameObject() const { return &m_GameObject; };
 
 protected:
 	CvGameObjectPlayer m_GameObject;
@@ -467,7 +467,9 @@ public:
 	int unitsGoldenAgeReady() const;																														// Exposed to Python
 	void killGoldenAgeUnits(CvUnit* pUnitAlive);
 
-	int greatPeopleThreshold(bool bMilitary = false) const;																														// Exposed to Python
+	int greatPeopleThresholdMilitary() const; // Exposed to Python
+	int greatPeopleThresholdNonMilitary() const; // Exposed to Python
+
 	int specialistYield(SpecialistTypes eSpecialist, YieldTypes eYield) const;														// Exposed to Python
 	int specialistCommerceTimes100(SpecialistTypes eSpecialist, CommerceTypes eCommerce) const;
 	int specialistCommerce(SpecialistTypes eSpecialist, CommerceTypes eCommerce) const;										// Exposed to Python
@@ -1141,10 +1143,10 @@ public:
 	void changeImprovementCount(ImprovementTypes eIndex, int iChange);
 
 	int getFreeBuildingCount(BuildingTypes eIndex) const;
-	int getFreeAreaBuildingCount(BuildingTypes eIndex, CvArea* area) const;
-	bool isBuildingFree(BuildingTypes eIndex, CvArea* area = NULL) const;																									// Exposed to Python
+	int getFreeAreaBuildingCount(BuildingTypes eIndex, const CvArea* area) const;
+	bool isBuildingFree(BuildingTypes eIndex, const CvArea* area = NULL) const;																									// Exposed to Python
 	void changeFreeBuildingCount(BuildingTypes eIndex, int iChange);
-	void changeFreeAreaBuildingCount(BuildingTypes eIndex, CvArea* area, int iChange);
+	void changeFreeAreaBuildingCount(BuildingTypes eIndex, const CvArea* area, int iChange);
 
 	int getExtraBuildingHappiness(BuildingTypes eIndex) const;																				// Exposed to Python
 /********************************************************************************/
@@ -1278,16 +1280,34 @@ public:
 	CLLNode<CvWString>* headCityNameNode() const;
 
 	// plot groups iteration
+	DECLARE_INDEX_ITERATOR(const CvPlayer, CvPlotGroup, plot_group_iterator, firstPlotGroup, nextPlotGroup);
+	plot_group_iterator beginPlotGroups() const { return plot_group_iterator(this); }
+	plot_group_iterator endPlotGroups() const { return plot_group_iterator(); }
+	typedef bst::iterator_range<plot_group_iterator> plot_group_range;
+	plot_group_range plot_groups() const { return plot_group_range(beginPlotGroups(), endPlotGroups()); }
+
+	// deprecated, use plot_group_iterator
 	CvPlotGroup* firstPlotGroup(int* pIterIdx, bool bRev = false) const;
+	// deprecated, use plot_group_iterator
 	CvPlotGroup* nextPlotGroup(int* pIterIdx, bool bRev = false) const;
+
 	int getNumPlotGroups() const;
 	CvPlotGroup* getPlotGroup(int iID) const;
 	CvPlotGroup* addPlotGroup();
 	void deletePlotGroup(int iID);
 
 	// city iteration
+	DECLARE_INDEX_ITERATOR(const CvPlayer, CvCity, city_iterator, firstCity, nextCity);
+	city_iterator beginCities() const { return city_iterator(this); }
+	city_iterator endCities() const { return city_iterator(); }
+	typedef bst::iterator_range<city_iterator> city_range;
+	city_range cities() const { return city_range(beginCities(), endCities()); }
+
+	// deprecated, use city_iterator
 	CvCity* firstCity(int* pIterIdx, bool bRev = false) const;																// Exposed to Python					
+	// deprecated, use city_iterator
 	CvCity* nextCity(int* pIterIdx, bool bRev = false) const;																	// Exposed to Python					
+
 	DllExport CvCity* firstCityExternal(int* pIterIdx, bool bRev = false) const;																// Exposed to Python					
 	DllExport CvCity* nextCityExternal(int* pIterIdx, bool bRev = false) const;																	// Exposed to Python					
 	DllExport int getNumCities() const;																																// Exposed to Python					
@@ -1295,65 +1315,68 @@ public:
 	CvCity* addCity();
 	void deleteCity(int iID);
 
-	// unit iteration
-	class unit_iterator : public boost::iterator_facade<unit_iterator, CvUnit*, boost::forward_traversal_tag, CvUnit*>
-	{
-	public:
-		unit_iterator() : m_player(NULL), m_reverse(false), m_curr(NULL), m_idx(0) {}
-		explicit unit_iterator(const CvPlayer* player) : m_player(player), m_reverse(false), m_idx(0)
-		{
-			m_curr = m_player->firstUnit(&m_idx, m_reverse);
-		}
-		struct reverse_tag {};
-		explicit unit_iterator(const CvPlayer* player, reverse_tag) : m_player(player), m_reverse(true), m_idx(0)
-		{
-			m_curr = m_player->firstUnit(&m_idx, m_reverse);
-		}
-
-	private:
-		friend class boost::iterator_core_access;
-		void increment() { m_curr = m_player->nextUnit(&m_idx, m_reverse); }
-		bool equal(unit_iterator const& other) const 
-		{
-			return (this->m_player == other.m_player && this->m_curr == other.m_curr) || (this->m_curr == NULL && other.m_curr == NULL);
-		}
-		CvUnit* dereference() const { return m_curr; }
-
-		const CvPlayer* m_player;
-		CvUnit* m_curr;
-		bool m_reverse;
-		int m_idx;
-	};
+	DECLARE_INDEX_ITERATOR(const CvPlayer, CvUnit, unit_iterator, firstUnit, nextUnit);
 
 	unit_iterator beginUnits() const { return unit_iterator(this); }
 	unit_iterator endUnits() const { return unit_iterator(); }
-	unit_iterator rbeginUnits() const { return unit_iterator(this, unit_iterator::reverse_tag()); }
-	unit_iterator rendUnits() const { return unit_iterator(); }
+	typedef bst::iterator_range<unit_iterator> unit_range;
+	unit_range units() const { return unit_range(beginUnits(), endUnits()); }
 
 	safe_unit_iterator beginUnitsSafe() const { return safe_unit_iterator(beginUnits(), endUnits()); }
 	safe_unit_iterator endUnitsSafe() const { return safe_unit_iterator(); }
+	typedef bst::iterator_range<safe_unit_iterator> safe_unit_range;
+	safe_unit_range units_safe() const { return safe_unit_range(beginUnitsSafe(), endUnitsSafe()); }
 
-
-	CvUnit* firstUnit(int* pIterIdx, bool bRev = false) const;																// Exposed to Python					
-	CvUnit* nextUnit(int* pIterIdx, bool bRev = false) const;																	// Exposed to Python					
-	DllExport CvUnit* firstUnitExternal(int* pIterIdx, bool bRev = false) const;																// Exposed to Python
-	DllExport CvUnit* nextUnitExternal(int* pIterIdx, bool bRev = false) const;																	// Exposed to Python					
-	DllExport int getNumUnits() const;																																// Exposed to Python					
-	CvUnit* getUnit(int iID) const;																													// Exposed to Python					
+	// deprecated, use unit_range
+	CvUnit* firstUnit(int* pIterIdx, bool bRev = false) const; // Exposed to Python
+	// deprecated, use unit_range
+	CvUnit* nextUnit(int* pIterIdx, bool bRev = false) const; // Exposed to Python
+	DllExport CvUnit* firstUnitExternal(int* pIterIdx, bool bRev = false) const; // Exposed to Python
+	DllExport CvUnit* nextUnitExternal(int* pIterIdx, bool bRev = false) const; // Exposed to Python
+	DllExport int getNumUnits() const; // Exposed to Python
+	CvUnit* getUnit(int iID) const; // Exposed to Python
 	CvUnit* addUnit();
 	void deleteUnit(int iID);
 
-	// selection groups iteration																																
-	CvSelectionGroup* firstSelectionGroup(int* pIterIdx, bool bRev = false) const;						// Exposed to Python					
-	CvSelectionGroup* nextSelectionGroup(int* pIterIdx, bool bRev = false) const;							// Exposed to Python					
-	int getNumSelectionGroups() const;																																// Exposed to Python
-	CvSelectionGroup* getSelectionGroup(int iID) const;																								// Exposed to Python
+	// selection groups iteration
+	DECLARE_INDEX_ITERATOR(const CvPlayer, CvSelectionGroup, group_iterator, firstSelectionGroup, nextSelectionGroup);
+	group_iterator beginGroups() const { return group_iterator(this); }
+	group_iterator endGroups() const { return group_iterator(); }
+	typedef bst::iterator_range<group_iterator> group_range;
+	group_range groups() const { return group_range(beginGroups(), endGroups()); }
+
+	// non-empty selection groups iteration
+	DECLARE_INDEX_ITERATOR(const CvPlayer, CvSelectionGroup, group_non_empty_iterator, firstSelectionGroupNonEmpty, nextSelectionGroupNonEmpty);
+	group_non_empty_iterator beginGroupsNonEmpty() const { return group_non_empty_iterator(this); }
+	group_non_empty_iterator endGroupsNonEmpty() const { return group_non_empty_iterator(); }
+	typedef bst::iterator_range<group_non_empty_iterator> group_non_empty_range;
+	group_non_empty_range groups_non_empty() const { return group_non_empty_range(beginGroupsNonEmpty(), endGroupsNonEmpty()); }
+
+	// deprecated, use group_range
+	CvSelectionGroup* firstSelectionGroup(int* pIterIdx, bool bRev = false) const; // Exposed to Python
+	// deprecated, use group_range
+	CvSelectionGroup* nextSelectionGroup(int* pIterIdx, bool bRev = false) const; // Exposed to Python
+	CvSelectionGroup* firstSelectionGroupNonEmpty(int* pIterIdx, bool bRev = false) const; // Exposed to Python
+	CvSelectionGroup* nextSelectionGroupNonEmpty(int* pIterIdx, bool bRev = false) const; // Exposed to Python
+
+	int getNumSelectionGroups() const; // Exposed to Python
+
+	CvSelectionGroup* getSelectionGroup(int iID) const; // Exposed to Python
 	CvSelectionGroup* addSelectionGroup();
 	void deleteSelectionGroup(int iID);
 
-	// pending triggers iteration																																
+	// triggered events iteration
+	DECLARE_INDEX_ITERATOR(const CvPlayer, EventTriggeredData, event_iterator, firstEventTriggered, nextEventTriggered);
+	event_iterator beginEvents() const { return event_iterator(this); }
+	event_iterator endEvents() const { return event_iterator(); }
+	typedef bst::iterator_range<event_iterator> event_range;
+	event_range events() const { return event_range(beginEvents(), endEvents()); }
+
+	// deprecated, use event_iterator
 	EventTriggeredData* firstEventTriggered(int* pIterIdx, bool bRev = false) const;
+	// deprecated, use event_iterator
 	EventTriggeredData* nextEventTriggered(int* pIterIdx, bool bRev = false) const;
+
 	int getNumEventsTriggered() const;
 	EventTriggeredData* getEventTriggered(int iID) const;   // Exposed to Python
 	EventTriggeredData* addEventTriggered();
@@ -1941,7 +1964,7 @@ public:
 	virtual void AI_conquerCity(CvCity* pCity) = 0;
 	virtual int AI_foundValue(int iX, int iY, int iMinUnitRange = -1, bool bStartingLoc = false) const = 0; // Exposed to Python
 	virtual bool AI_isCommercePlot(CvPlot* pPlot) const = 0;
-	virtual int AI_getPlotDanger(CvPlot* pPlot, int iRange = -1, bool bTestMoves = true) const = 0;
+	virtual int AI_getPlotDanger(const CvPlot* pPlot, int iRange = -1, bool bTestMoves = true) const = 0;
 	virtual bool AI_isFinancialTrouble() const = 0;																											// Exposed to Python
 	virtual TechTypes AI_bestTech(int iMaxPathLength = 1, bool bIgnoreCost = false, bool bAsync = false, TechTypes eIgnoreTech = NO_TECH, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR) const = 0;
 	virtual void AI_chooseFreeTech() = 0;
@@ -2628,7 +2651,7 @@ public:
 
 	void setGreatGeneralTypetoAssign();
 	UnitTypes getGreatGeneralTypetoAssign() const;
-	void resetUnitSMValues();
+	void setSMValues();
 
 	void upgradePlotPopup(ImprovementTypes eImprovement, int iX, int iY);
 	void upgradePlot(int iX, int iY, ImprovementTypes eImprovement, bool bConfirm);
@@ -2690,7 +2713,7 @@ private:
 
 	CvContractBroker	m_contractBroker;
 
-	mutable boost::scoped_ptr<CvUpgradeCache> m_upgradeCache;
+	mutable bst::scoped_ptr<CvUpgradeCache> m_upgradeCache;
 
 	bool m_bInhibitPlotGroupRecalc;
 	mutable bool m_bMaintenanceDirty;

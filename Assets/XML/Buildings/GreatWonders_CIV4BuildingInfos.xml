@@ -401,6 +401,7 @@
 			<!-- Misc -->
 			<iConquestProb>100</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_ANTIKYTHERA_MECHANISM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ANTIKYTHERA_MECHANISM</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Aon Center -->
@@ -414,6 +415,7 @@
 			<Strategy>TXT_KEY_BUILDING_AON_CENTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AON_CENTER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_AON_CENTER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
@@ -777,6 +779,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<Help>TXT_KEY_BUILDING_ASCENSION_GATE_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_ASCENSION_GATE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ASCENSION_GATE</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_ACCELERATOR</ConstructSound>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>10000</fVisibilityPriority>
@@ -931,6 +934,7 @@
 			<Strategy>TXT_KEY_BUILDING_KHMER_BARAY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KHMER_BARAY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_KHMER_BARAY</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_AQUEDUCT</ConstructSound>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1063,6 +1067,7 @@
 			<Strategy>TXT_KEY_BUILDING_BIG_BEN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIG_BEN</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BIG_BEN</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CLOCKWORKS</PrereqTech>
@@ -1135,6 +1140,7 @@
 			<Strategy>TXT_KEY_BUILDING_BNS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BNS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BNS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MODERN_SPORTS</PrereqTech>
@@ -1699,6 +1705,7 @@
 			<Strategy>TXT_KEY_BUILDING_BURJ_KHALIFA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BURJ_KHALIFA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BURJ_KHALIFA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CONGLOMERATES</PrereqTech>
@@ -2498,6 +2505,7 @@
 			<Strategy>TXT_KEY_BUILDING_CN_TOWER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CN_TOWER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CN_TOWER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
@@ -3202,6 +3210,7 @@
 			<Strategy>TXT_KEY_BUILDING_ASSYRIA_EKAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ASSYRIA_EKAL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ASSYRIA_EKAL</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -3314,6 +3323,7 @@
 			<Strategy>TXT_KEY_BUILDING_PORTUGAL_FEITORIA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PORTUGAL_FEITORIA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_PORTUGAL_FEITORIA</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
 			<iMinAreaSize>10</iMinAreaSize>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -3531,6 +3541,7 @@
 			<Strategy>TXT_KEY_BUILDING_FORT_KNOX_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FORT_KNOX</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_FORT_KNOX</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
@@ -3877,6 +3888,7 @@
 			<iConquestProb>100</iConquestProb>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_GLOBE_THEATRE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GLOBE_THEATRE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Gobekli Tepe -->
@@ -3950,6 +3962,7 @@
 			<Strategy>TXT_KEY_BUILDING_GOLDEN_GATE_BRIDGE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GOLDEN_GATE_BRIDGE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GOLDEN_GATE_BRIDGE</MovieDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<TechTypes>
@@ -5016,6 +5029,7 @@
 			<Strategy>TXT_KEY_BUILDING_GREAT_FIREWALL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GREAT_FIREWALL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GREAT_FIREWALL</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CYBERWARFARE</PrereqTech>
@@ -5248,6 +5262,7 @@
 			<Strategy>TXT_KEY_BUILDING_OTTOMAN_HAMMAM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OTTOMAN_HAMMAM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_OTTOMAN_HAMMAM</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_AQUEDUCT</ConstructSound>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -5368,6 +5383,7 @@
 			<Strategy>TXT_KEY_BUILDING_HERMITAGE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HERMITAGE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HERMITAGE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_NATIONALISM</PrereqTech>
@@ -5627,6 +5643,7 @@
 			<Strategy>TXT_KEY_BUILDING_SIAM_HO_TRAI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SIAM_HO_TRAI</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SIAM_HO_TRAI_LIBRARY</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -5832,6 +5849,7 @@
 			<Strategy>TXT_KEY_BUILDING_HUMPHREY_METRODOME_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HUMPHREY_METRODOME</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HUMPHREY_METRODOME</MovieDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MODERN_SPORTS</PrereqTech>
 			<ObsoleteTech>TECH_BINARY_PYSCHOKINESIS</ObsoleteTech>
@@ -5951,6 +5969,7 @@
 			</Flavors>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_ZULU_IKHANDA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ZULU_IKHANDA</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Independence Hall -->
@@ -6508,6 +6527,7 @@
 			<Strategy>TXT_KEY_BUILDING_KINGDOM_CENTRE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KINGDOM_CENTRE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_KINGDOM_CENTRE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CONGLOMERATES</PrereqTech>
@@ -7918,6 +7938,7 @@
 			<Strategy>TXT_KEY_BUILDING_DEEPSEA_MISSION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEEPSEA_MISSION</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_DEEPSEA_MISSION</MovieDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_DEEP_SEA_EXPLORATION</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
@@ -7968,6 +7989,7 @@
 			<Strategy>TXT_KEY_BUILDING_EARTHCORE_MISSION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EARTHCORE_MISSION</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_EARTHCORE_MISSION</MovieDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_SUBTERRANEAN_EXPLORATION</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
@@ -8244,6 +8266,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Help>TXT_KEY_BUILDING_NANITE_DEFUSER_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_NANITE_DEFUSER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NANITE_DEFUSER</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_ACCELERATOR</ConstructSound>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>10000</fVisibilityPriority>
@@ -8298,6 +8321,7 @@
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_SHIELD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SHIELD</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_SHIELD</MovieDefineTag>
 			<fVisibilityPriority>1000</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_ADVANCED_SHIELDING</PrereqTech>
@@ -8696,6 +8720,7 @@
 			<Strategy>TXT_KEY_BUILDING_BEAULIEU_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BEAULIEU</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BEAULIEU</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -9682,6 +9707,7 @@
 			<Strategy>TXT_KEY_BUILDING_FRENCH_SALON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FRENCH_SALON</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_FRENCH_SALON</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_OBSERVATORY</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -9904,6 +9930,7 @@
 			<Strategy>TXT_KEY_BUILDING_SILICON_VALLEY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SILICON_VALLEY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SILICON_VALLEY</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_LABORATORY</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -10209,6 +10236,7 @@
 			<Strategy>TXT_KEY_BUILDING_SMITHSONIAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SMITHSONIAN</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SMITHSONIAN</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_MUSEUM</ConstructSound>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
@@ -10290,6 +10318,7 @@
 			<Strategy>TXT_KEY_BUILDING_ICE_HOTEL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ICE_HOTEL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ICE_HOTEL</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_HOTEL</ConstructSound>
 			<fVisibilityPriority>2</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -10356,6 +10385,7 @@
 			<Strategy>TXT_KEY_BUILDING_SOLAR_TOWER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SOLAR_TOWER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SOLAR_TOWER</MovieDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
@@ -11000,6 +11030,7 @@
 			<Strategy>TXT_KEY_BUILDING_SYDNEY_OPERA_HOUSE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SYDNEY_OPERA_HOUSE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SYDNEY_OPERA_HOUSE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_REALISM</PrereqTech>
@@ -11081,6 +11112,7 @@
 			<Strategy>TXT_KEY_BUILDING_TECHNOLOGICAL_CAPITAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TECHNOLOGICAL_CAPITAL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TECHNOLOGICAL_CAPITAL</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_TECH_CAPITOL</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -11718,6 +11750,7 @@
 			<Strategy>TXT_KEY_BUILDING_GATEWAY_ARCH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GATEWAY_ARCH</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GATEWAY_ARCH</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
@@ -13942,6 +13975,7 @@
 			<Strategy>TXT_KEY_BUILDING_TRANSAMERICA_PYRAMID_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TRANSAMERICA_PYRAMID</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TRANSAMERICA_PYRAMID</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
@@ -14014,6 +14048,7 @@
 			<Strategy>TXT_KEY_BUILDING_TRUMP_TOWER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TRUMP_TOWER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TRUMP_TOWER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
@@ -14305,6 +14340,7 @@
 			<Strategy>TXT_KEY_BUILDING_VENUS_WILLENDORF_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_WILLENDORF</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_VENUS_WILLENDORF</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CARVING</PrereqTech>
@@ -14438,6 +14474,7 @@
 			<Strategy>TXT_KEY_BUILDING_WALL_STREET_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WALL_STREET</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_WALL_STREET</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_STOCK_EXCHANGING</PrereqTech>
@@ -14695,6 +14732,7 @@
 			<Strategy>TXT_KEY_BUILDING_WILLIS_TOWER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WILLIS_TOWER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_WILLIS_TOWER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
@@ -14965,6 +15003,7 @@
 			<Strategy>TXT_KEY_BUILDING_WORLD_NEWS_NETWORK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WNN</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_WNN</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_UNIVERSITY</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -15096,6 +15135,7 @@
 			<Strategy>TXT_KEY_BUILDING_X_GAMES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_X_GAMES</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_X_GAMES</MovieDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_EXTREME_SPORTS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
@@ -17083,6 +17123,7 @@
 			<Strategy>TXT_KEY_BUILDING_THE_ALMAGEST_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_THE_ALMAGEST</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ALMAGEST</MovieDefineTag>
 			<PrereqTech>TECH_GEOCENTRISM</PrereqTech>
 			<ObsoleteTech>TECH_HELIOCENTRISM</ObsoleteTech>
 			<iCost>1680</iCost>
@@ -17131,6 +17172,7 @@
 			<Strategy>TXT_KEY_BUILDING_RUDOLPHINE_TABLES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RUDOLPHINE_TABLES</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_RUDOLPHINE_TABLES</MovieDefineTag>
 			<PrereqTech>TECH_HELIOCENTRISM</PrereqTech>
 			<ObsoleteTech>TECH_RADAR</ObsoleteTech>
 			<iCost>2730</iCost>
@@ -17184,6 +17226,7 @@
 			<Strategy>TXT_KEY_BUILDING_LAS_MEDULAS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LAS_MEDULAS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_LAS_MEDULAS</MovieDefineTag>
 			<PrereqTech>TECH_HYDRAULIC_MINING</PrereqTech>
 			<ObsoleteTech>TECH_NITROGLYCERIN</ObsoleteTech>
 			<iCost>1152</iCost>
@@ -17595,6 +17638,7 @@
 			<Strategy>TXT_KEY_BUILDING_BRAZEN_BULL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BRAZEN_BULL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BRAZEN_BULL</MovieDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_DUALISM</PrereqTech>
 			<PrereqBonuses>
@@ -18172,6 +18216,7 @@
 			<Strategy>TXT_KEY_BUILDING_HARAPPAN_FAKE_GEMS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HARAPPAN_FAKE_GEMS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HARAPPAN_FAKE_GEMS</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_GLASSMITH</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -18239,6 +18284,7 @@
 			<Strategy>TXT_KEY_BUILDING_MING_VASE_WORKSHOP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MING_VASE_WORKSHOP</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MING_VASE_WORKSHOP</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_GLASSMITH</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -18308,6 +18354,7 @@
 			<Strategy>TXT_KEY_BUILDING_TERRA_SIGILLIATA_WORKSHOP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRA_SIGILLIATA_WORKSHOP</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TERRA_SIGILLIATA_WORKSHOP</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_GLASSMITH</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -18377,6 +18424,7 @@
 			<Strategy>TXT_KEY_BUILDING_MURANO_GLASSMAKERS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MURANO_GLASSMAKERS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MURANO_GLASSMAKERS</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_GLASSMITH</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -18659,6 +18707,7 @@
 			<Help>TXT_KEY_BUILDING_EMPIRE_STATE_BUILDING_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EMPIRE_STATE_BUILDING</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_EMPIRE_STATE_BUILDING</MovieDefineTag>
 			<PrereqTech>TECH_PLASTICS</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -18892,6 +18941,7 @@
 			<Help>TXT_KEY_BUILDING_TAIPEI_101_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TAIPEI_101</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TAIPEI_101</MovieDefineTag>
 			<PrereqTech>TECH_POSTMODERNISM</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -18942,6 +18992,7 @@
 			<Help>TXT_KEY_BUILDING_TSUKIJI_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TSUKIJI</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TSUKIJI</MovieDefineTag>
 			<PrereqTech>TECH_REFRIGERATION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -19042,6 +19093,7 @@
 			<Help>TXT_KEY_BUILDING_ZIZKOV_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ZIZKOV</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ZIZKOV</MovieDefineTag>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

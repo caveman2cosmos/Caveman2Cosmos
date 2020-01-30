@@ -3,22 +3,28 @@
 #ifndef copy_iterator_h__
 #define copy_iterator_h__
 
-template <class Value, class Ref>
-class copy_iterator : public boost::iterator_facade<copy_iterator<Value, Ref>, Value, boost::forward_traversal_tag, Ref>
+template <class Value>
+class copy_iterator : public bst::iterator_facade<copy_iterator<Value>, Value*, bst::forward_traversal_tag, Value*>
 {
 public:
 	copy_iterator() : m_idx(-1) {}
 	template < class OtherItr_ >
 	explicit copy_iterator(OtherItr_ begin, OtherItr_ end)
-		: m_copy(begin, end)
-		, m_idx(-1)
+		: m_idx(-1)
 	{
+		for (; begin != end; ++begin)
+		{
+			m_copy.push_back(*begin);
+		}
+
 		if (m_copy.size() > 0)
+		{
 			m_idx = 0;
+		}
 	}
 
 private:
-	friend class boost::iterator_core_access;
+	friend class bst::iterator_core_access;
 
 	void increment()
 	{
@@ -35,9 +41,9 @@ private:
 		return this->m_idx == other.m_idx;
 	}
 
-	Value dereference() const { return m_copy[m_idx]; }
+	Value* dereference() const { return m_copy[m_idx]; }
 
-	std::vector<Value> m_copy;
+	std::vector<Value*> m_copy;
 	int m_idx;
 };
 #endif // copy_iterator_h__

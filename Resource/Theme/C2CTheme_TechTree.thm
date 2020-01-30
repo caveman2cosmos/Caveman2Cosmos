@@ -2183,28 +2183,28 @@ with GFC_Control_Panel
 	}
 
 	// Tech intro 0
-	style SF_CtrlTheme_Civ4_Control_Panel_TechIntro_0_Style
-	{
-		.StyleId_Border			= GPropertyId(GFC_Control_EmptyBorder_Style);
-		.Flag_NoInnerFill		= 0;
-		.Color_Inner			= SF_CtrlTheme_Civ4_Control_Color_BG;
-
-		with GFC_CtrlTheme_Bitmap_Control_Panel_Skin_Inner
-		{
-			.Default
-			{
-				layer {
-					LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_FILL);
-					DestCombine		=	GColorCombine(BlendSource,Disable);
-					Image			=	GBitmap("GUI/TechTree/0_PrehistoricIntro.tga", HVGrid, 1, 1, 0, 0);
-					Margin			=	GRectMargin(20,0,20,0);
-				}
-			}
-			.Disable				= .Default;
-			.Winoff					= .Default;
-			.WinoffDisable			= .Winoff;
-		}
-		map GFC_CtrlTheme_Bitmap_Control_Panel	= GFC_Control_DefaultPanel_Style;
-		map GFC_Control							= GFC_Control_DefaultPanel_Style;
-	}
+	//style SF_CtrlTheme_Civ4_Control_Panel_TechIntro_0_Style
+	//{
+	//	.StyleId_Border			= GPropertyId(GFC_Control_EmptyBorder_Style);
+	//	.Flag_NoInnerFill		= 0;
+	//	.Color_Inner			= SF_CtrlTheme_Civ4_Control_Color_BG;
+	//
+	//	with GFC_CtrlTheme_Bitmap_Control_Panel_Skin_Inner
+	//	{
+	//		.Default
+	//		{
+	//			layer {
+	//				LayerFlags		=	GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE, GFC_BITMAPSKIN_SIDES_FILL);
+	//				DestCombine		=	GColorCombine(BlendSource,Disable);
+	//				Image			=	GBitmap("GUI/TechTree/0_PrehistoricIntro.tga", HVGrid, 1, 1, 0, 0);
+	//				Margin			=	GRectMargin(20,0,20,0);
+	//			}
+	//		}
+	//		.Disable				= .Default;
+	//		.Winoff					= .Default;
+	//		.WinoffDisable			= .Winoff;
+	//	}
+	//	map GFC_CtrlTheme_Bitmap_Control_Panel	= GFC_Control_DefaultPanel_Style;
+	//	map GFC_Control							= GFC_Control_DefaultPanel_Style;
+	//}
 }

@@ -162,11 +162,9 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("getUnitPower", &CyPlayer::getUnitPower, "int ()")
 		.def("getPopScore", &CyPlayer::getPopScore, "int ()")
 		.def("getLandScore", &CyPlayer::getLandScore, "int ()")
-#if defined QC_MASTERY_VICTORY
 		//Sevo Begin--VCM
 		.def("getSevoWondersScore", &CyPlayer::getSevoWondersScore, "int ()")
 		//Sevo End VCM
-#endif
 		.def("getWondersScore", &CyPlayer::getWondersScore, "int ()")
 		.def("getTechScore", &CyPlayer::getTechScore, "int ()")
 		.def("getTotalTimePlayed", &CyPlayer::getTotalTimePlayed, "int ()")
@@ -287,6 +285,7 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("getNumCityNames", &CyPlayer::getNumCityNames, "int ()")
 		.def("getCityName", &CyPlayer::getCityName, "std::wstring (int iIndex)")
 		.def("firstCity", &CyPlayer::firstCity, "tuple(CyCity, int iterOut) (bool bReverse) - gets the first city")
+		.def("nthCity", &CyPlayer::nthCity, python::return_value_policy<python::manage_new_object>(), "CyCity*S (int n, bool bReverse) - gets the nth city")
 		.def("nextCity", &CyPlayer::nextCity, "tuple(CyCity, int iterOut) (int iterIn, bool bReverse) - gets the next city")
 		.def("getNumCities", &CyPlayer::getNumCities, "int ()")
 		.def("getCity", &CyPlayer::getCity, python::return_value_policy<python::manage_new_object>(), "CyCity* (int iID)")

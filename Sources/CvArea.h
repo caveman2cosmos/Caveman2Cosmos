@@ -1,5 +1,8 @@
 #pragma once
 
+#ifndef CvArea_h__
+#define CvArea_h__
+
 #include "CvGameCoreDLL.h"
 
 class CvCity;
@@ -226,4 +229,16 @@ private:
 	int					m_iLastGameTurnRecorded;
 	TurnCombatResults	m_combatRecord[COMBAT_RECORD_LENGTH];
 
+public:
+	//
+	// Algorithm/range helpers
+	//
+	struct fn {
+		DECLARE_MAP_FUNCTOR(CvArea, bool, isWater);
+		DECLARE_MAP_FUNCTOR(CvArea, int, getNumTiles);
+		DECLARE_MAP_FUNCTOR_1(CvArea, int, getBestFoundValue, PlayerTypes);
+		DECLARE_MAP_FUNCTOR_1(CvArea, int, getCitiesPerPlayer, PlayerTypes);
+	};
 };
+
+#endif // CvArea_h__

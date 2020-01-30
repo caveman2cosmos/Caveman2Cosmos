@@ -1413,6 +1413,7 @@
 			<Strategy>TXT_KEY_BUILDING_RAK_MESBA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RAK_MESBA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_RAK_MESBA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ULTIMA_ARCHITECTURE</PrereqTech>
 			<iCost>22063</iCost>
@@ -1447,6 +1448,7 @@
 			<Strategy>TXT_KEY_BUILDING_GODWHEEL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GODWHEEL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GODWHEEL</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MENSIOKINESIS</PrereqTech>
 			<iCost>30517</iCost>
@@ -1485,6 +1487,7 @@
 			<Strategy>TXT_KEY_BUILDING_PROJECT_ICARUS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PROJECT_ICARUS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_PROJECT_ICARUS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_SPACEPUNK</PrereqTech>
 			<iCost>5448</iCost>
@@ -1524,6 +1527,7 @@
 			<Strategy>TXT_KEY_BUILDING_PROJECT_PERSEPHONE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PROJECT_PERSEPHONE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_PROJECT_PERSEPHONE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<iCost>6195</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -1569,6 +1573,7 @@
 			<Strategy>TXT_KEY_BUILDING_STARDATE_CALENDAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_STARDATE_CALENDAR</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_STARDATE_CALENDAR</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERSTELLAR_COMMUNICATION</PrereqTech>
 			<iCost>7963</iCost>
@@ -7397,6 +7402,7 @@
 			<Strategy>TXT_KEY_BUILDING_MILKY_WAY_CLUSTER_BRAIN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MILKY_WAY_CLUSTER_BRAIN</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MILKY_WAY_CLUSTER_BRAIN</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_WORMHOLE_HIVEMIND</PrereqTech>
 			<iCost>38840</iCost>
@@ -7438,6 +7444,7 @@
 			<Strategy>TXT_KEY_BUILDING_ARGUS_ARRAY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ARGUS_ARRAY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ARGUS_ARRAY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GALACTIC_ENGINEERING</PrereqTech>
 			<iCost>23064</iCost>
@@ -7518,6 +7525,7 @@
 			<Strategy>TXT_KEY_BUILDING_EARTH_BACKUP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EARTH_BACKUP</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_EARTH_BACKUP</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_DATA_ARCHIVAL</PrereqTech>
 			<iCost>8998</iCost>
@@ -7565,6 +7573,7 @@
 			<Strategy>TXT_KEY_BUILDING_WORMHOLE_NETWORK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WORMHOLE_NETWORK</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_WORMHOLE_NETWORK</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GALACTIC_ENGINEERING</PrereqTech>
 			<iCost>23064</iCost>
@@ -7592,6 +7601,7 @@
 			<Strategy>TXT_KEY_BUILDING_GALACTIC_NEWS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GALACTIC_NEWS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GALACTIC_NEWS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_WORMHOLE_COMMUNICATIONS</PrereqTech>
 			<iCost>16224</iCost>
@@ -7630,6 +7640,7 @@
 			<Strategy>TXT_KEY_BUILDING_ARTIFICIAL_CONSTELLATION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ARTIFICIAL_CONSTELLATION</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ARTIFICIAL_CONSTELLATION</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_STELLAR_ENGINE</PrereqTech>
 			<iCost>36440</iCost>
@@ -7669,6 +7680,7 @@
 			<Strategy>TXT_KEY_BUILDING_EARTH_20_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EARTH_20</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_EARTH_20</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_HYPERSTRUCTURE_ENGINEERING</PrereqTech>
 			<iCost>33952</iCost>
@@ -7768,6 +7780,7 @@
 			<Strategy>TXT_KEY_BUILDING_GALACTIC_CORE_DYSON_SPHERE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GALACTIC_CORE_DYSON_SPHERE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GALACTIC_CORE_DYSON_SPHERE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GALACTIC_ENGINEERING</PrereqTech>
 			<iCost>38440</iCost>
@@ -7813,6 +7826,7 @@
 			<Strategy>TXT_KEY_BUILDING_TRANTOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TRANTOR</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TRANTOR</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ASTROIMPERIALISM</PrereqTech>
 			<iCost>14444</iCost>
@@ -7858,6 +7872,7 @@
 			<Strategy>TXT_KEY_BUILDING_ONYX_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ONYX</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ONYX</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ARTIFICIAL_PLANETS</PrereqTech>
 			<iCost>14444</iCost>
@@ -7883,6 +7898,7 @@
 			<Strategy>TXT_KEY_BUILDING_PROTOS_MANDATE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PROTOS_MANDATE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_PROTOS_MANDATE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ASTRODIPLOMACY</PrereqTech>
 			<iCost>10144</iCost>
@@ -7913,6 +7929,7 @@
 			<Strategy>TXT_KEY_BUILDING_CENTERPOINT_STATION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CENTERPOINT_STATION</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CENTERPOINT_STATION</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GRAVITRONICS</PrereqTech>
 			<iCost>22063</iCost>
@@ -7946,6 +7963,7 @@
 			<Strategy>TXT_KEY_BUILDING_INTERSTELLAR_OLYMPICS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INTERSTELLAR_OLYMPICS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_INTERSTELLAR_OLYMPICS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_WORMHOLE_TRAVERSAL</PrereqTech>
 			<iCost>18220</iCost>
@@ -7986,6 +8004,7 @@
 			<Strategy>TXT_KEY_BUILDING_GLIESE_667CC_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GLIESE_667CC</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GLIESE_667CC</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERSTELLAR_COLONIZATION</PrereqTech>
 			<iCost>8998</iCost>
@@ -8037,6 +8056,7 @@
 			<Strategy>TXT_KEY_BUILDING_GLIESE_581D_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GLIESE_581D</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GLIESE_581D</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERSTELLAR_COLONIZATION</PrereqTech>
 			<iCost>8998</iCost>
@@ -8086,6 +8106,7 @@
 			<Strategy>TXT_KEY_BUILDING_PROXIMA_CENTAURI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PROXIMA_CENTAURI</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_PROXIMA_CENTAURI</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERSTELLAR_COLONIZATION</PrereqTech>
 			<iCost>8998</iCost>
@@ -8141,6 +8162,7 @@
 			<Strategy>TXT_KEY_BUILDING_WOLF_1061C_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WOLF_1061C</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_WOLF_1061C</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERSTELLAR_COLONIZATION</PrereqTech>
 			<iCost>8998</iCost>
@@ -8197,6 +8219,7 @@
 			<Strategy>TXT_KEY_BUILDING_HD_85512B_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HD_85512B</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HD_85512B</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ACNP_PROPULSION</PrereqTech>
 			<iCost>11424</iCost>
@@ -8243,6 +8266,7 @@
 			<Strategy>TXT_KEY_BUILDING_GLIESE_163C_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GLIESE_163C</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GLIESE_163C</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ACNP_PROPULSION</PrereqTech>
 			<iCost>11424</iCost>
@@ -8303,6 +8327,7 @@
 			<Strategy>TXT_KEY_BUILDING_KEPLER_186F_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KEPLER_186F</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_KEPLER_186F</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ANTIMATTER_ROCKET</PrereqTech>
 			<iCost>29200</iCost>
@@ -8350,6 +8375,7 @@
 			<Strategy>TXT_KEY_BUILDING_KEPLER_22B_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KEPLER_22B</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_KEPLER_22B</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ANTIMATTER_ROCKET</PrereqTech>
 			<iCost>29200</iCost>
@@ -8396,6 +8422,7 @@
 			<Strategy>TXT_KEY_BUILDING_PERSEUS_ARM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PERSEUS_ARM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_PERSEUS_ARM</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</PrereqTech>
 			<iCost>33800</iCost>
@@ -8445,6 +8472,7 @@
 			<Strategy>TXT_KEY_BUILDING_NORMA_AND_OUTER_ARM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NORMA_AND_OUTER_ARM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NORMA_AND_OUTER_ARM</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</PrereqTech>
 			<iCost>33800</iCost>
@@ -8498,6 +8526,7 @@
 			<Strategy>TXT_KEY_BUILDING_SCUTUM_CRUX_ARM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SCUTUM_CRUX_ARM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SCUTUM_CRUX_ARM</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</PrereqTech>
 			<iCost>33800</iCost>
@@ -8549,6 +8578,7 @@
 			<Strategy>TXT_KEY_BUILDING_CARINA_SAGITTARIUS_ARM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CARINA_SAGITTARIUS_ARM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CARINA_SAGITTARIUS_ARM</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</PrereqTech>
 			<iCost>33800</iCost>
@@ -8597,6 +8627,7 @@
 			<Strategy>TXT_KEY_BUILDING_HYADES_STAR_CLUSTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HYADES_STAR_CLUSTER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HYADES_STAR_CLUSTER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_STELLAR_ENGINE</PrereqTech>
 			<iCost>36440</iCost>
@@ -8644,6 +8675,7 @@
 			<Strategy>TXT_KEY_BUILDING_NGC_6811_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NGC_6811</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NGC_6811</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_STELLAR_ENGINE</PrereqTech>
 			<iCost>36440</iCost>
@@ -8687,6 +8719,7 @@
 			<Strategy>TXT_KEY_BUILDING_CYGNUS_X1_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CYGNUS_X1</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CYGNUS_X1</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</PrereqTech>
 			<iCost>33800</iCost>

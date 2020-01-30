@@ -9943,7 +9943,7 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOPKAPI_PALACE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Strengthens Vassals[NEWLINE][ICON_BULLET]20% Chance to Train a Vassal's Unique Unit</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Strengthens Vassals, 20% Chance to Train a Vassal's Unique Unit</English>
 		<French>[ICON_BULLET]Renforce les vassaux[NEWLINE][ICON_BULLET]20% Chance d'enrôler une unité unique de Vassal</French>
 		<Italian>[ICON_BULLET]Rinforza i vassalli[NEWLINE][ICON_BULLET]20% Chance di addestrare l'unità unica di un vassallo</Italian>
 	</TEXT>

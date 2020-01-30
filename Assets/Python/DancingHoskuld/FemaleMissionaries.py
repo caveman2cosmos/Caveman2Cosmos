@@ -7,8 +7,6 @@
 
 from CvPythonExtensions import *
 
-import sys
-
 # globals
 GC = CyGlobalContext()
 

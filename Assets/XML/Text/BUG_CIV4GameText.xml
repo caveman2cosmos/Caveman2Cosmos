@@ -1599,6 +1599,20 @@
 		<Spanish>Permitir suicidio de unidades</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__AUTOHUNTRETURNFORUPGRADES_TEXT</Tag>
+		<English>Goto City for Upgrades</English>
+		<French>Aller à la ville pour les mises à niveau</French>
+		<German>Zum Upgraden in die Stadt gehen</German>
+		<Spanish>Ir a la ciudad para actualizaciones</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__AUTOHUNTRETURNFORUPGRADES_HOVER</Tag>
+		<English>The unit will return to a city when they have upgrades available, and then wait.</English>
+		<French>L'unité retournera dans une ville lorsqu'elle disposera de mises à niveau, puis attendra.</French>
+		<German>Die Einheit kehrt in eine Stadt zurück, wenn Upgrades verfügbar sind, und wartet dann.</German>
+		<Spanish>La unidad volverá a una ciudad cuando tenga actualizaciones disponibles y luego esperará.</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__AUTODEFENSEMINIMUMATTACKODDS_HOVER</Tag>
 		<English>The minimum odds that a unit will engage an enemy with. Lower odds increases fighting, but also the chances of death.</English>
 		<French>La Prob. de combat minimum à laquelle une unité va engager l'ennemie. Les Probabilité plus faible augmente le combat et l'expérience, mais également les chances de périr.</French>
@@ -5879,11 +5893,11 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__CURRENTDIFFICULTY_LIST</Tag>
-		<English>Current Difficulty|Settler|Chieftan|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity</English>
-		<French>Difficulté actuelle|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité</French>
-		<German>Aktueller Schwierigkeitsgrad|Siedler|Häuptling|Kriegsherr|Adliger|Prinz|König|Kaiser|Unsterblicher|Gottheit</German>
-		<Italian>Difficoltà corrente|Colono|Capitano|Guerriero|Nobile|Principe|Monarca|Imperatore|Immortale|Divinità</Italian>
-		<Spanish>Dificultad actual|Colono|Jefe|Caudillo|Noble|Príncipe|Monarca|Emperador|Immortal|Deidad</Spanish>
+		<English>Current Difficulty|Settler|Chieftan|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare</English>
+		<French>Difficulté actuelle|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité|Nightmare</French>
+		<German>Aktueller Schwierigkeitsgrad|Siedler|Häuptling|Kriegsherr|Adliger|Prinz|König|Kaiser|Unsterblicher|Gottheit|Nightmare</German>
+		<Italian>Difficoltà corrente|Colono|Capitano|Guerriero|Nobile|Principe|Monarca|Imperatore|Immortale|Divinità|Nightmare</Italian>
+		<Spanish>Dificultad actual|Colono|Jefe|Caudillo|Noble|Príncipe|Monarca|Emperador|Immortal|Deidad|Nightmare</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__CURRENTDIFFICULTY_TEXT</Tag>
@@ -5975,11 +5989,11 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYMAXIMUMDIFF_LIST</Tag>
-		<English>No Maximum|Settler|Chieftan|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity</English>
-		<French>Pas de Maximum|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité</French>
-		<German>Kein Maximum|Siedler|Häuptling|Kriegsherr|Adliger|Prinz|König|Kaiser|Unsterblicher|Gottheit</German>
-		<Italian>No Massimo|Colono|Capitano|Guerriero|Nobile|Principe|Monarca|Imperatore|Immortale|Divinità</Italian>
-		<Spanish>Sin mínimo|Colono|Jefe|Caudillo|Noble|Príncipe|Monarca|Emperador|Immortal|Deidad</Spanish>
+		<English>No Maximum|Settler|Chieftan|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare</English>
+		<French>Pas de Maximum|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité|Nightmare</French>
+		<German>Kein Maximum|Siedler|Häuptling|Kriegsherr|Adliger|Prinz|König|Kaiser|Unsterblicher|Gottheit|Nightmare</German>
+		<Italian>No Massimo|Colono|Capitano|Guerriero|Nobile|Principe|Monarca|Imperatore|Immortale|Divinità|Nightmare</Italian>
+		<Spanish>Sin mínimo|Colono|Jefe|Caudillo|Noble|Príncipe|Monarca|Emperador|Immortal|Deidad|Nightmare</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYMAXIMUMDIFF_TEXT</Tag>
@@ -6015,11 +6029,11 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYMINIMUMDIFF_LIST</Tag>
-		<English>No Minimum|Settler|Chieftan|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity</English>
-		<French>Pas de Minimum|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité</French>
-		<German>Kein Minimum|Siedler|Häuptling|Kriegsherr|Adliger|Prinz|König|Kaiser|Unsterblicher|Gottheit</German>
-		<Italian>No Minimo|Colono|Capitano|Guerriero|Nobile|Principe|Monarca|Imperatore|Immortale|Divinità</Italian>
-		<Spanish>Sin mínimo|Colono|Jefe|Caudillo|Noble|Príncipe|Monarca|Emperador|Immortal|Deidad</Spanish>
+		<English>No Minimum|Settler|Chieftan|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare</English>
+		<French>Pas de Minimum|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité|Nightmare</French>
+		<German>Kein Minimum|Siedler|Häuptling|Kriegsherr|Adliger|Prinz|König|Kaiser|Unsterblicher|Gottheit|Nightmare</German>
+		<Italian>No Minimo|Colono|Capitano|Guerriero|Nobile|Principe|Monarca|Imperatore|Immortale|Divinità|Nightmare</Italian>
+		<Spanish>Sin mínimo|Colono|Jefe|Caudillo|Noble|Príncipe|Monarca|Emperador|Immortal|Deidad|Nightmare</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYMINIMUMDIFF_TEXT</Tag>
@@ -6076,22 +6090,6 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 		<German>Veraltete Gebäude ausblenden</German>
 		<Italian>Nascondi edifici obsoleti</Italian>
 		<Spanish>Ocultar edificios obsoletos</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HIDEOBSOLETEBUILDS_HOVER</Tag>
-		<English>Worker Builds that are obsolete (e.g cart path when roads are available) will be hidden.[NEWLINE]Warning: some improvement and route build actions may get hidden despite not being obsolete.</English>
-		<French>Les Aménagements obsolètes (par ex: le chemin lorsques les routes sont disponibles) sont masquées de la barre d'action.</French>
-		<German>Veraltete Bautrupp-Befehle (z.B. zum Anlegen eines Karrenwegs, wenn Straßen bereits verfügbar sind) werden nicht mehr angezeigt.</German>
-		<Italian>Le azioni dei lavoratori che sono obsolete (ad esempio, i sentieri quando sono disponibili le strade) verranno nascoste.</Italian>
-		<Spanish>Las acciones de trabajadores que estén obsoletas (por ejemplo, el camino de carros cuando la carretera esté disponible) se ocultarán de la barra de acciones.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HIDEOBSOLETEBUILDS_TEXT</Tag>
-		<English>Hide Obsolete Worker Actions</English>
-		<French>Masquer les Actions obsolètes des Ouvriers</French>
-		<German>Veraltete Bautrupp-Befehle ausblenden</German>
-		<Italian>Nascondi azioni dei lavoratori obsolete</Italian>
-		<Spanish>Ocultar acciones de trabajadores obsoletas</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HIDEREPLACEDBUILDINGS_HOVER</Tag>

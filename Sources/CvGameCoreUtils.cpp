@@ -1510,29 +1510,35 @@ bool isPlotEventTrigger(EventTriggerTypes eTrigger)
 	return false;
 }
 
+#ifdef DISCOVERY_TECH_CACHE
 namespace {
 	//	Small cache
 	std::vector<stdext::hash_map<UnitTypes, TechTypes> > g_discoveryTechCache;
 	int g_cachedTurn = -1;
 }
+#endif // DISCOVERY_TECH_CACHE
 
 TechTypes getDiscoveryTech(UnitTypes eUnit, PlayerTypes ePlayer)
 {
 	PROFILE_FUNC();
 	FEnsureMsg(ePlayer != NO_PLAYER, "Player must be valid for this function");
 
+#ifdef DISCOVERY_TECH_CACHE
 	if ( g_cachedTurn != GC.getGame().getGameTurn() )
 	{
 		g_discoveryTechCache.clear();
 		g_cachedTurn = GC.getGame().getGameTurn();
 	}
+#endif // DISCOVERY_TECH_CACHE
 
 	// After the first turn this should not cause any allocation to occur as the max size required will have been reserved
 	g_discoveryTechCache.resize(std::max(g_discoveryTechCache.size(), static_cast<size_t>(ePlayer) + 1));
 
 	TechTypes eBestTech = NO_TECH;
+#ifdef DISCOVERY_TECH_CACHE
 	stdext::hash_map<UnitTypes,TechTypes>::const_iterator itr = g_discoveryTechCache[ePlayer].find(eUnit);
 	if ( itr == g_discoveryTechCache[ePlayer].end() )
+#endif // DISCOVERY_TECH_CACHE
 	{
 		CvPlayerAI& kPlayer = GET_PLAYER(ePlayer);
 		CvTeam& kTeam = GET_TEAM(kPlayer.getTeam());
@@ -1604,12 +1610,16 @@ TechTypes getDiscoveryTech(UnitTypes eUnit, PlayerTypes ePlayer)
 			}
 		}
 
+#ifdef DISCOVERY_TECH_CACHE
 		g_discoveryTechCache[ePlayer].insert(std::make_pair(eUnit,eBestTech));
+#endif // DISCOVERY_TECH_CACHE
 	}
+#ifdef DISCOVERY_TECH_CACHE
 	else
 	{
 		eBestTech = itr->second;
 	}
+#endif // DISCOVERY_TECH_CACHE
 
 	return eBestTech;
 }
@@ -1692,7 +1702,7 @@ bool PUF_isOtherTeam(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* 
 {
 	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
 	TeamTypes eTeam = GET_PLAYER((PlayerTypes)iData1).getTeam();
-	if (pUnit->canCoexistWithEnemyUnit(eTeam, pUnit->plot()))
+	if (pUnit->canCoexistWithTeamOnPlot(eTeam, *pUnit->plot()))
 	{
 		return false;
 	}
@@ -1700,20 +1710,20 @@ bool PUF_isOtherTeam(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* 
 	return (pUnit->getTeam() != eTeam);
 }
 
-bool PUF_isEnemy(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
+bool PUF_isEnemy(const CvUnit* pUnit, int otherPlayer, int otherUnitAlwaysHostile, const CvUnit* otherUnit)
 {
-	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
-	FAssertMsg(iData2 != -1, "Invalid data argument, should be >= 0");
+	FAssertMsg(otherPlayer != -1, "Invalid data argument, should be >= 0");
+	FAssertMsg(otherUnitAlwaysHostile != -1, "Invalid data argument, should be >= 0");
 
-	TeamTypes eOtherTeam = GET_PLAYER((PlayerTypes)iData1).getTeam();
+	TeamTypes eOtherTeam = GET_PLAYER((PlayerTypes)otherPlayer).getTeam();
 	TeamTypes eOurTeam = GET_PLAYER(pUnit->getCombatOwner(eOtherTeam, pUnit->plot())).getTeam();
 
-	if (pUnit->canCoexistWithEnemyUnit(eOtherTeam))
+	if (pUnit->canCoexistWithTeam(eOtherTeam))
 	{
 		return false;
 	}
 
-	return (iData2 ? eOtherTeam != eOurTeam : atWar(eOtherTeam, eOurTeam));
+	return (otherUnitAlwaysHostile ? eOtherTeam != eOurTeam : atWar(eOtherTeam, eOurTeam));
 }
 
 bool PUF_isEnemyTarget(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
@@ -1724,7 +1734,7 @@ bool PUF_isEnemyTarget(const CvUnit* pUnit, int iData1, int iData2, const CvUnit
 	TeamTypes eOtherTeam = GET_PLAYER((PlayerTypes)iData1).getTeam();
 	TeamTypes eOurTeam = GET_PLAYER(pUnit->getCombatOwner(eOtherTeam, pUnit->plot())).getTeam();
 
-	if (pUnit->canCoexistWithEnemyUnit(eOtherTeam))
+	if (pUnit->canCoexistWithTeam(eOtherTeam))
 	{
 		return false;
 	}
@@ -1749,7 +1759,7 @@ bool PUF_isNonAlly(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pT
 	TeamTypes eOtherTeam = GET_PLAYER((PlayerTypes)iData1).getTeam();
 	TeamTypes eOurTeam = GET_PLAYER(pUnit->getCombatOwner(eOtherTeam, pUnit->plot())).getTeam();
 
-	if (pUnit->canCoexistWithEnemyUnit(eOtherTeam, pUnit->plot()))
+	if (pUnit->canCoexistWithTeamOnPlot(eOtherTeam, *pUnit->plot()))
 	{
 		return false;
 	}
@@ -1775,21 +1785,21 @@ bool PUF_canSiege(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pTh
 	return (pUnit->canSiege(GET_PLAYER((PlayerTypes)iData1).getTeam()));
 }
 
-bool PUF_isPotentialEnemy(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
+bool PUF_isPotentialEnemy(const CvUnit* pDefender, int pAttackerTeam, int pAttackerAlwaysHostile, const CvUnit* pAttacker)
 {
-	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
-	FAssertMsg(iData2 != -1, "Invalid data argument, should be >= 0");
+	FAssertMsg(pAttackerTeam != -1, "Invalid data argument, should be >= 0");
+	FAssertMsg(pAttackerAlwaysHostile != -1, "Invalid data argument, should be >= 0");
 
-	TeamTypes eOtherTeam = GET_PLAYER((PlayerTypes)iData1).getTeam();
-	TeamTypes eOurTeam = GET_PLAYER(pUnit->getCombatOwner(eOtherTeam, pUnit->plot())).getTeam();
+	TeamTypes eAttackerTeam = GET_PLAYER((PlayerTypes)pAttackerTeam).getTeam();
+	TeamTypes eOurTeam = GET_PLAYER(pDefender->getCombatOwner(eAttackerTeam, pDefender->plot())).getTeam();
 
-	bool bAssassinate = ((pUnit->isAssassin() || pThis->isAssassin()) && (pUnit->plot() == pThis->plot()));
+	bool bAssassinate = ((pDefender->isAssassin() || pAttacker->isAssassin()) && (pDefender->plot() == pAttacker->plot()));
 
-	if (pUnit->canCoexistWithEnemyUnit(eOtherTeam, pUnit->plot(), false, pThis, bAssassinate))
+	if (pDefender->canCoexistWithAttacker(*pAttacker, bAssassinate))
 	{
 		return false;
 	}
-	return (iData2 ? eOtherTeam != eOurTeam : isPotentialEnemy(eOtherTeam, eOurTeam));
+	return (pAttackerAlwaysHostile ? eAttackerTeam != eOurTeam : isPotentialEnemy(eAttackerTeam, eOurTeam));
 }
 
 bool PUF_canDeclareWar( const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
@@ -1800,7 +1810,7 @@ bool PUF_canDeclareWar( const CvUnit* pUnit, int iData1, int iData2, const CvUni
 	TeamTypes eOtherTeam = GET_PLAYER((PlayerTypes)iData1).getTeam();
 	TeamTypes eOurTeam = GET_PLAYER(pUnit->getCombatOwner(eOtherTeam, pUnit->plot())).getTeam();
 
-	if (pUnit->canCoexistWithEnemyUnit(eOtherTeam, pUnit->plot()))
+	if (pUnit->canCoexistWithTeamOnPlot(eOtherTeam, *pUnit->plot()))
 	{
 		return false;
 	}
@@ -1873,16 +1883,10 @@ bool PUF_canDefendEnemy(const CvUnit* pUnit, int iData1, int iData2, const CvUni
 	return (PUF_canDefend(pUnit, iData1, iData2) && PUF_isEnemy(pUnit, iData1, iData2));
 }
 
-bool PUF_canDefendPotentialEnemy(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
+bool PUF_canDefendPotentialEnemyAgainst(const CvUnit* pUnit, int otherTeam, int otherAlwaysHostile, const CvUnit* otherUnit)
 {
-	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
-	return (PUF_canDefend(pUnit, iData1, iData2) && PUF_isPotentialEnemy(pUnit, iData1, iData2));
-}
-
-bool PUF_canDefendPotentialEnemyAgainst(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
-{
-	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
-	return (PUF_canDefend(pUnit, iData1, iData2) && PUF_isPotentialEnemy(pUnit, iData1, iData2, pThis));
+	FAssertMsg(otherTeam != -1, "Invalid data argument, should be >= 0");
+	return (PUF_canDefend(pUnit) && PUF_isPotentialEnemy(pUnit, otherTeam, otherAlwaysHostile, otherUnit));
 }
 
 bool PUF_canDefenselessPotentialEnemyAgainst(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
@@ -2176,7 +2180,9 @@ int pathDestValid(int iToX, int iToY, const void* pointer, FAStar* finder)
 	if (!pSelectionGroup->AI_isControlled() || GET_PLAYER(pSelectionGroup->getHeadOwner()).isHuman())
 	{
 		gDLL->getFAStarIFace()->ForceReset(finder);
+#ifdef PATHFINDING_CACHE
 		CvSelectionGroup::setGroupToCacheFor(pSelectionGroup);
+#endif // PATHFINDING_CACHE
 		return pSelectionGroup->generatePath(pFromPlot, pToPlot, gDLL->getFAStarIFace()->GetInfo(finder), false, NULL, MAX_INT);
 	}
 	else
@@ -2193,7 +2199,7 @@ int pathHeuristic(int iFromX, int iFromY, int iToX, int iToY)
 	return (plotDistance(iFromX, iFromY, iToX, iToY) * PATH_MOVEMENT_WEIGHT);
 }
 
-bool pathValidInternal(CvPlot* pPlot, bool bCheckVisibleDanger, CvSelectionGroup* pSelectionGroup, int iFlags)
+bool pathValidInternal(const CvPlot* pPlot, bool bCheckVisibleDanger, const CvSelectionGroup* pSelectionGroup, int iFlags)
 {
 	//PROFILE_FUNC();
 
@@ -3016,7 +3022,7 @@ int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 
 	return iWorstCost;
 #else
-	int iResult = ((CvSelectionGroup *)pointer)->getPath().containsEdge(pFromPlot,pToPlot) ? 1 : 10000;
+	int iResult = ((const CvSelectionGroup *)pointer)->getPath().containsEdge(pFromPlot,pToPlot) ? 1 : 10000;
 	//OutputDebugString(CvString::format("PathCost (%d,%d)->(%d,%d): [%d]\n", pFromPlot->getX_INLINE(), pFromPlot->getY_INLINE(), pToPlot->getX_INLINE(), pToPlot->getY_INLINE(),iResult).c_str());
 
 	return iResult;
@@ -3026,7 +3032,7 @@ int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 //	Calback functions for the new path generator
 
 //	Heuristic cost
-int	NewPathHeuristicFunc(CvSelectionGroup* pGroup, int iFromX, int iFromY, int iToX, int iToY, int& iLimitCost)
+int	NewPathHeuristicFunc(const CvSelectionGroup* pGroup, int iFromX, int iFromY, int iToX, int iToY, int& iLimitCost)
 {
 	//PROFILE_FUNC();
 
@@ -3100,7 +3106,7 @@ int	NewPathHeuristicFunc(CvSelectionGroup* pGroup, int iFromX, int iFromY, int i
 }
 
 //	Actual edge cost
-int	NewPathCostFunc(CvPathGeneratorBase* generator, CvSelectionGroup* pSelectionGroup, int iFromX, int iFromY, int iToX, int iToY, int iFlags, int& iMovementRemaining, int iPathTurns, int& iToNodeCost, bool bIsTerminalNode)
+int	NewPathCostFunc(const CvPathGeneratorBase* generator, const CvSelectionGroup* pSelectionGroup, int iFromX, int iFromY, int iToX, int iToY, int iFlags, int& iMovementRemaining, int iPathTurns, int& iToNodeCost, bool bIsTerminalNode)
 {
 	PROFILE_FUNC();
 
@@ -3115,7 +3121,7 @@ int	NewPathCostFunc(CvPathGeneratorBase* generator, CvSelectionGroup* pSelection
 	int iWorstMax;
 	int iMax;
 
-	static CvSelectionGroup* gLastSelectionGroup = NULL;
+	static const CvSelectionGroup* gLastSelectionGroup = NULL;
 
 	pFromPlot = GC.getMapINLINE().plotSorenINLINE(iFromX, iFromY);
 	FAssert(pFromPlot != NULL);
@@ -3161,6 +3167,7 @@ int	NewPathCostFunc(CvPathGeneratorBase* generator, CvSelectionGroup* pSelection
 	bool bEndsTurn = false;
 	int iInitialMovementRemaining = -1;
 	
+#ifdef PATHFINDING_CACHE
 	if ( iMovementRemaining == 0 || iMovementRemaining > 2*GC.getMOVE_DENOMINATOR() )
 	{
 		bHaveNonEndTurnCachedEdgeValue = pSelectionGroup->HaveCachedPathEdgeCosts(pFromPlot, pToPlot, false, iCachedNonEndTurnEdgeCost, iSmallestBaseCost, iLargestBaseCost, iCachedNonEndTurnNodeCost );
@@ -3182,6 +3189,7 @@ int	NewPathCostFunc(CvPathGeneratorBase* generator, CvSelectionGroup* pSelection
 		bHaveNonEndTurnCachedEdgeValue = pSelectionGroup->HaveCachedPathEdgeCosts(pFromPlot, pToPlot, false, iCachedNonEndTurnEdgeCost, iSmallestBaseCost, iLargestBaseCost, iCachedNonEndTurnNodeCost );
 		bCheckedNonEndTurnEdgeCache = true;
 	}
+#endif // PATHFINDING_CACHE
 
 	{
 		bool bDoesntEndTurn = true;
@@ -3271,6 +3279,7 @@ int	NewPathCostFunc(CvPathGeneratorBase* generator, CvSelectionGroup* pSelection
 			bDoesntEndTurn = false;
 		}
 
+#ifdef PATHFINDING_CACHE
 		if ( bEndsTurn && !bCheckedEndTurnEdgeCache )
 		{
 			bHaveEndTurnCachedEdgeValue = pSelectionGroup->HaveCachedPathEdgeCosts(pFromPlot, pToPlot, true, iCachedEndTurnEdgeCost, iSmallestBaseCost, iLargestBaseCost, iCachedEndTurnNodeCost );
@@ -3279,6 +3288,7 @@ int	NewPathCostFunc(CvPathGeneratorBase* generator, CvSelectionGroup* pSelection
 		{
 			bHaveNonEndTurnCachedEdgeValue = pSelectionGroup->HaveCachedPathEdgeCosts(pFromPlot, pToPlot, false, iCachedNonEndTurnEdgeCost, iSmallestBaseCost, iLargestBaseCost, iCachedNonEndTurnNodeCost );
 		}
+#endif // PATHFINDING_CACHE
 
 		//	Do we need to calculate the base characteristics or do we have everything we neeed cached?
 		if ( (!(bEndsTurn || bIsTerminalNode) || !bHaveEndTurnCachedEdgeValue) && (!(bDoesntEndTurn && !bIsTerminalNode) || !bHaveNonEndTurnCachedEdgeValue) )
@@ -3599,15 +3609,11 @@ int	NewPathCostFunc(CvPathGeneratorBase* generator, CvSelectionGroup* pSelection
 
 				iExtraNodeCost += iCityAdjacencyCost;
 
-				//	If this is the end of the first turn (only) also evaluate whether we end
-				//	up next to enemy stack that look dangerous and cost that in
-				//
-				//	Sadly the current game pathing engine can't cope with eavluating costs in a way
-				//	dependent on the turn count into a path because once calculated it wil cache the
-				//	edge traversal cost, and mis-use it in another context, so we accoutn the cost for all visible
-				//	enemy units wherever they occur in the path
-				//if ( parent->m_iData2 == 1 && parent->m_iData1 != 0 )//&& !gDLL->getFAStarIFace()->IsPathDest(finder, pToPlot->getX_INLINE(), pToPlot->getY_INLINE()) )
-#define	UNIT_ADJUST_HORIZON 2
+				// We only consider enemies within 2 turns of our current location, as we
+				// can't predict where they will go anyway.
+				// TODO: We should be considering fortified enemies, those holding forts, and those
+				// in cities though regardless of how far away they are. We shouldn't expect them to move.
+				static const int UNIT_ADJUST_HORIZON = 2;
 				if ( iPathTurns <= UNIT_ADJUST_HORIZON )
 				{
 					if ( bTrace )
@@ -3624,12 +3630,17 @@ int	NewPathCostFunc(CvPathGeneratorBase* generator, CvSelectionGroup* pSelection
 						pAdjacentPlot = plotDirection(pToPlot->getX_INLINE(), pToPlot->getY_INLINE(), ((DirectionTypes)iI));
 
 						if( pAdjacentPlot != NULL &&
-							(bIsAIControlled || pAdjacentPlot != generator->getTerminalPlot()) &&	//	For the human player don't count ending turn next to whjat we intend to attack as bad
+							(bIsAIControlled || pAdjacentPlot != generator->getTerminalPlot()) &&	//	For the human player don't count ending turn next to what we intend to attack as bad
 							pSelectionGroup->getArea() == pAdjacentPlot->getArea() &&
 							pAdjacentPlot->isVisible(eTeam, false) &&
 							pAdjacentPlot->getVisibleEnemyDefender(pSelectionGroup->getHeadOwner()))
 						{
-							int iRatioToUnitStack = pSelectionGroup->AI_compareStacks(pAdjacentPlot, false);
+							int iRatioToUnitStack = pSelectionGroup->AI_compareStacks(pAdjacentPlot, 
+								//CvPathGenerator::IsMaxPerformance()? 
+								//StackCompare::Fast 
+								//: 
+								StackCompare::None
+							);
 
 							if ( iRatioToUnitStack < 120 )
 							{
@@ -3705,16 +3716,19 @@ int	NewPathCostFunc(CvPathGeneratorBase* generator, CvSelectionGroup* pSelection
 
 			iEdgeCost += iExtraEdgeCost*GC.getMOVE_DENOMINATOR();
 
+#ifdef PATHFINDING_CACHE
 			if ( iInitialMovementRemaining - iLargestBaseCost == iMovementRemaining )
 			{
 				pSelectionGroup->CachePathEdgeCosts(pFromPlot, pToPlot, true, iEdgeCost, iSmallestBaseCost, iLargestBaseCost, iNodeCost);
 			}
+#endif // PATHFINDING_CACHE
 		}
 		else
 		{
 			iEdgeCost = iCachedEndTurnEdgeCost;
 		}
 	}
+#ifdef PATHFINDING_CACHE
 	else
 	{
 		//	Cache the movement costs
@@ -3723,6 +3737,7 @@ int	NewPathCostFunc(CvPathGeneratorBase* generator, CvSelectionGroup* pSelection
 			pSelectionGroup->CachePathEdgeCosts(pFromPlot, pToPlot, false, iEdgeCost, iSmallestBaseCost, iLargestBaseCost, iNodeCost);
 		}
 	}
+#endif // PATHFINDING_CACHE
 
 	//	Cost is the edge cost (cached) + the node cost (cached) + the used movement cost (calculated)
 	iWorstCost = iEdgeCost + iNodeCost + (iMovementUsedUp*PATH_MOVEMENT_WEIGHT);
@@ -3759,7 +3774,7 @@ int	NewPathCostFunc(CvPathGeneratorBase* generator, CvSelectionGroup* pSelection
 	return iWorstCost;
 }
 
-bool NewPathDestValid(CvSelectionGroup* pSelectionGroup, int iToX, int iToY, int iFlags, bool& bRequiresWar)
+bool NewPathDestValid(const CvSelectionGroup* pSelectionGroup, int iToX, int iToY, int iFlags, bool& bRequiresWar)
 {
 	PROFILE_FUNC();
 
@@ -3889,7 +3904,7 @@ bool NewPathDestValid(CvSelectionGroup* pSelectionGroup, int iToX, int iToY, int
 	return true;
 }
 
-bool NewPathTurnEndValidityCheckRequired(CvSelectionGroup* pSelectionGroup, int iFlags)
+bool NewPathTurnEndValidityCheckRequired(const CvSelectionGroup* pSelectionGroup, int iFlags)
 {
 	return !(iFlags & MOVE_IGNORE_DANGER) &&
 			pSelectionGroup->AI_isControlled() &&
@@ -3898,7 +3913,7 @@ bool NewPathTurnEndValidityCheckRequired(CvSelectionGroup* pSelectionGroup, int 
 }
 
 //	Edge validity
-bool ContextFreeNewPathValidFunc(CvSelectionGroup* pSelectionGroup, int iFromX, int iFromY, int iToX, int iToY, int iFlags, bool isTerminus, bool bMoveTerminationChecksOnly, int iPathTurns, bool* pbToNodeInvalidity, bool* pbValidAsTerminus)
+bool ContextFreeNewPathValidFunc(const CvSelectionGroup* pSelectionGroup, int iFromX, int iFromY, int iToX, int iToY, int iFlags, bool isTerminus, bool bMoveTerminationChecksOnly, int iPathTurns, bool* pbToNodeInvalidity, bool* pbValidAsTerminus)
 {
 	PROFILE_FUNC();
 
@@ -4038,11 +4053,15 @@ bool ContextFreeNewPathValidFunc(CvSelectionGroup* pSelectionGroup, int iFromX, 
 		CheckSum(iEntityId, (int)eOwner);
 		CheckSum(iEntityId, iFlags);
 
+#ifdef PATHFINDING_VALIDITY_CACHE
 		if (!pToPlot->HaveCachedPathValidityResult((void*)iEntityId, bCheckNonInvisibleDanger, bResult))
+#endif // PATHFINDING_VALIDITY_CACHE
 		{
 			bResult = pathValidInternal(pToPlot, bCheckNonInvisibleDanger, pSelectionGroup, iFlags);
 
+#ifdef PATHFINDING_VALIDITY_CACHE
 			pToPlot->CachePathValidityResult((void*)iEntityId, bCheckNonInvisibleDanger, bResult);
+#endif // PATHFINDING_VALIDITY_CACHE
 		}
 	}
 
@@ -4054,14 +4073,14 @@ bool ContextFreeNewPathValidFunc(CvSelectionGroup* pSelectionGroup, int iFromX, 
 	return bResult;
 }
 
-bool NewPathValidFunc(CvSelectionGroup* pSelectionGroup, int iFromX, int iFromY, int iToX, int iToY, int iFlags, bool isTerminus, bool bMoveTerminationChecksOnly, int iPathTurns, bool& bToNodeInvalidity)
+bool NewPathValidFunc(const CvSelectionGroup* pSelectionGroup, int iFromX, int iFromY, int iToX, int iToY, int iFlags, bool isTerminus, bool bMoveTerminationChecksOnly, int iPathTurns, bool& bToNodeInvalidity)
 {
 	bool bDummy;
 
 	return ContextFreeNewPathValidFunc(pSelectionGroup, iFromX, iFromY, iToX, iToY, iFlags, isTerminus, bMoveTerminationChecksOnly, iPathTurns, &bToNodeInvalidity, &bDummy);
 }
 
-bool moveToValid(CvSelectionGroup* pSelectionGroup, CvPlot* pPlot, int iFlags)
+bool moveToValid(const CvSelectionGroup* pSelectionGroup, const CvPlot* pPlot, int iFlags)
 {
 	if (iFlags & MOVE_SAFE_TERRITORY)
 	{

@@ -184,7 +184,6 @@
 		<Tag>TXT_KEY_BUILDING_DISCOVERY_VICTORIA_FALLS</Tag>
 		<English>Discovery - Victoria Falls</English>
 	</TEXT>
-
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOVIE_AUYANTEPUI</Tag>
 		<English>Animated Movie Featuring National Wonder</English>
@@ -197,7 +196,6 @@
 		<Tag>TXT_KEY_BUILDING_MOVIE_AUYANTEPUI_STRATEGY</Tag>
 		<English>If you have Auyantepui in your nation you will get a free "Hit Animated Movie" whenever you build an Animation Studio.</English>
 	</TEXT>
-
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ANIMATED_MOVIES</Tag>
 		<English>Hit Animated Movie</English>

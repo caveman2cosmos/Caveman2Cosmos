@@ -1,7 +1,7 @@
+#pragma once
+
 #ifndef CVHALLOFFAMEINFO_H
 #define CVHALLOFFAMEINFO_H
-
-#pragma once
 
 #include "CvReplayInfo.h"
 

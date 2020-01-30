@@ -50,7 +50,6 @@ CvArea::CvArea()
 	m_paiNumImprovements = NULL;
 	m_aiSpawnValidPlotCount = NULL;
 
-
 	reset(0, false, true);
 }
 
@@ -95,7 +94,6 @@ CvArea::~CvArea()
 		SAFE_DELETE_ARRAY(m_aaiNumAIUnits[i]);
 	}
 	SAFE_DELETE_ARRAY(m_aaiNumAIUnits);
-
 }
 
 
@@ -236,9 +234,9 @@ int CvArea::calculateTotalBestNatureYield() const
 {
 	int iCount = 0;
 
-	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		CvPlot*  pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		const CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 		if (pLoopPlot->getArea() == getID())
 		{
 			iCount += pLoopPlot->calculateTotalBestNatureYield(NO_TEAM);
@@ -258,15 +256,12 @@ int CvArea::countCoastalLand() const
 
 	int iCount = 0;
 
-	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
-		if (pLoopPlot->getArea() == getID())
+		const CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
+		if (pLoopPlot->getArea() == getID() && pLoopPlot->isCoastalLand())
 		{
-			if (pLoopPlot->isCoastalLand())
-			{
-				iCount++;
-			}
+			iCount++;
 		}
 	}
 
@@ -280,12 +275,9 @@ int CvArea::countNumUniqueBonusTypes() const
 
 	for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 	{
-		if (getNumBonuses((BonusTypes)iI) > 0)
+		if (getNumBonuses((BonusTypes)iI) > 0 && GC.getBonusInfo((BonusTypes)iI).isOneArea())
 		{
-			if (GC.getBonusInfo((BonusTypes)iI).isOneArea())
-			{
-				iCount++;
-			}
+			iCount++;
 		}
 	}
 
@@ -299,20 +291,14 @@ int CvArea::countHasReligion(ReligionTypes eReligion, PlayerTypes eOwner) const
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		if (GET_PLAYER((PlayerTypes)iI).isAlive() && (eOwner == NO_PLAYER || iI == eOwner))
 		{
-			if ((eOwner == NO_PLAYER) || (iI == eOwner))
+			for (CvPlayer::city_iterator cityItr = GET_PLAYER((PlayerTypes)iI).beginCities(); cityItr != GET_PLAYER((PlayerTypes)iI).endCities(); ++cityItr)
 			{
-				int iLoop;
-				for (CvCity* pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+				const CvCity* pLoopCity = *cityItr;
+				if (pLoopCity->area()->getID() == getID() && pLoopCity->isHasReligion(eReligion))
 				{
-					if (pLoopCity->area()->getID() == getID())
-					{
-						if (pLoopCity->isHasReligion(eReligion))
-						{
-							iCount++;
-						}
-					}
+					iCount++;
 				}
 			}
 		}
@@ -327,20 +313,14 @@ int CvArea::countHasCorporation(CorporationTypes eCorporation, PlayerTypes eOwne
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		if (GET_PLAYER((PlayerTypes)iI).isAlive() && (eOwner == NO_PLAYER || iI == eOwner))
 		{
-			if ((eOwner == NO_PLAYER) || (iI == eOwner))
+			for (CvPlayer::city_iterator cityItr = GET_PLAYER((PlayerTypes)iI).beginCities(); cityItr != GET_PLAYER((PlayerTypes)iI).endCities(); ++cityItr)
 			{
-				int iLoop;
-				for (CvCity* pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); NULL != pLoopCity; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+				const CvCity* pLoopCity = *cityItr;
+				if (pLoopCity->area()->getID() == getID() && pLoopCity->isHasCorporation(eCorporation))
 				{
-					if (pLoopCity->area()->getID() == getID())
-					{
-						if (pLoopCity->isHasCorporation(eCorporation))
-						{
-							++iCount;
-						}
-					}
+					++iCount;
 				}
 			}
 		}
@@ -357,7 +337,7 @@ int CvArea::getNumTiles() const
 
 bool CvArea::isLake() const							
 {
-	return (isWater() && (getNumTiles() <= GC.getLAKE_MAX_AREA_SIZE()));
+	return (isWater() && getNumTiles() <= GC.getLAKE_MAX_AREA_SIZE());
 }
 
 
@@ -365,7 +345,7 @@ void CvArea::changeNumTiles(int iChange)
 {
 	if (iChange != 0)
 	{
-		bool bWasLake = isLake();
+		const bool bWasLake = isLake();
 
 		m_iNumTiles = (m_iNumTiles + iChange);
 		FAssert(getNumTiles() >= 0);
@@ -373,8 +353,8 @@ void CvArea::changeNumTiles(int iChange)
 		// cppcheck-suppress knownConditionTrueFalse
 		if (bWasLake != isLake())
 		{
-			GC.getMapINLINE().updateIrrigated();
-			GC.getMapINLINE().updateYield();
+			GC.getMap().updateIrrigated();
+			GC.getMap().updateYield();
 		}
 	}
 }
@@ -622,17 +602,7 @@ int CvArea::getPower(PlayerTypes eIndex) const
 	//TB Debug
 	//Somehow we are getting under 0 values here and that could cause problems down the road
 	//This method enforces minimum of 0 without changing the actual value of m_aiPower[eIndex] as the integrity of that value should be maintained.
-	int iValue = 0;
-	if (m_aiPower[eIndex] < 0)
-	{
-		iValue = 0;
-	}
-	else
-	{
-		iValue = m_aiPower[eIndex];
-	}
-	return iValue;
-	//return m_aiPower[eIndex];
+	return (m_aiPower[eIndex] >= 0) ? m_aiPower[eIndex] : 0;
 }
 
 
@@ -654,11 +624,9 @@ bool CvArea::hasBestFoundValue(PlayerTypes eIndex) const
 
 int CvArea::getBestFoundValue(PlayerTypes eIndex) const
 {
-	int iResult;
-
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be >= 0");
 	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be < MAX_PLAYERS");
-	iResult = m_aiBestFoundValue[eIndex];
+	int iResult = m_aiBestFoundValue[eIndex];
 
 	//	Calculate on demand
 	if ( iResult == -1 )
@@ -773,11 +741,7 @@ void CvArea::setHomeArea(PlayerTypes ePlayer, CvArea* pOldHomeArea)
 
 int CvArea::getTotalAreaMaintenanceModifier(PlayerTypes ePlayer) const
 {
-	int iModifier;
-
-	iModifier = (getHomeAreaMaintenanceModifier(ePlayer) + getOtherAreaMaintenanceModifier(ePlayer) + getMaintenanceModifier(ePlayer));
-
-	return iModifier;
+	return (getHomeAreaMaintenanceModifier(ePlayer) + getOtherAreaMaintenanceModifier(ePlayer) + getMaintenanceModifier(ePlayer));
 }
 //DPII < Maintenance Modifiers >
 
@@ -797,15 +761,14 @@ int CvArea::getNumUnrevealedTiles(TeamTypes eIndex) const
 
 int CvArea::getNumRevealedFeatureTiles(TeamTypes eTeam, FeatureTypes eFeature) const
 {
-
-	if (m_iCachedTurnPlotTypeCounts != GC.getGameINLINE().getGameTurn() ||
+	if (m_iCachedTurnPlotTypeCounts != GC.getGame().getGameTurn() ||
 		m_eCachedTeamPlotTypeCounts != eTeam)
 	{
 		m_plotFeatureCountCache.clear();
 		m_plotTerrainCountCache.clear();
 	}
 
-	m_iCachedTurnPlotTypeCounts = GC.getGameINLINE().getGameTurn();
+	m_iCachedTurnPlotTypeCounts = GC.getGame().getGameTurn();
 	m_eCachedTeamPlotTypeCounts = eTeam;
 
 	std::map<FeatureTypes, int>::const_iterator	itr = m_plotFeatureCountCache.find(eFeature);
@@ -813,9 +776,9 @@ int CvArea::getNumRevealedFeatureTiles(TeamTypes eTeam, FeatureTypes eFeature) c
 	{
 		int	iResult = 0;
 
-		for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 		{
-			CvPlot*	pPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+			const CvPlot* pPlot = GC.getMap().plotByIndex(iI);
 			if (pPlot != NULL &&
 				pPlot->area() == this &&
 				pPlot->isRevealed(eTeam, false) &&
@@ -835,14 +798,14 @@ int CvArea::getNumRevealedFeatureTiles(TeamTypes eTeam, FeatureTypes eFeature) c
 
 int CvArea::getNumRevealedTerrainTiles(TeamTypes eTeam, TerrainTypes eTerrain) const
 {
-	if (m_iCachedTurnPlotTypeCounts != GC.getGameINLINE().getGameTurn() ||
+	if (m_iCachedTurnPlotTypeCounts != GC.getGame().getGameTurn() ||
 		m_eCachedTeamPlotTypeCounts != eTeam)
 	{
 		m_plotFeatureCountCache.clear();
 		m_plotTerrainCountCache.clear();
 	}
 
-	m_iCachedTurnPlotTypeCounts = GC.getGameINLINE().getGameTurn();
+	m_iCachedTurnPlotTypeCounts = GC.getGame().getGameTurn();
 	m_eCachedTeamPlotTypeCounts = eTeam;
 
 	std::map<TerrainTypes, int>::const_iterator	itr = m_plotTerrainCountCache.find(eTerrain);
@@ -850,9 +813,9 @@ int CvArea::getNumRevealedTerrainTiles(TeamTypes eTeam, TerrainTypes eTerrain) c
 	{
 		int	iResult = 0;
 
-		for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 		{
-			CvPlot*	pPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+			const CvPlot* pPlot = GC.getMap().plotByIndex(iI);
 			if (pPlot != NULL &&
 				pPlot->area() == this &&
 				pPlot->isRevealed(eTeam, false) &&
@@ -900,7 +863,7 @@ void CvArea::changeCleanPowerCount(TeamTypes eIndex, int iChange)
 
 	if (iChange != 0)
 	{
-		bool bWasCleanPower = isCleanPower(eIndex);
+		const bool bWasCleanPower = isCleanPower(eIndex);
 
 		m_aiCleanPowerCount[eIndex] = (m_aiCleanPowerCount[eIndex] + iChange);
 		
@@ -910,7 +873,7 @@ void CvArea::changeCleanPowerCount(TeamTypes eIndex, int iChange)
 			GET_TEAM(eIndex).updateCommerce();
 			GET_TEAM(eIndex).updatePowerHealth();
 
-			if (eIndex == GC.getGameINLINE().getActiveTeam())
+			if (eIndex == GC.getGame().getActiveTeam())
 			{
 				gDLL->getInterfaceIFace()->setDirty(CityInfo_DIRTY_BIT, true);
 			}
@@ -928,11 +891,7 @@ int CvArea::getBorderObstacleCount(TeamTypes eIndex) const
 
 bool CvArea::isBorderObstacle(TeamTypes eIndex) const
 {
-	if (eIndex == NO_TEAM)
-	{
-		return false;
-	}
-	return (getBorderObstacleCount(eIndex) > 0);
+	return (eIndex != NO_TEAM) ? (getBorderObstacleCount(eIndex) > 0) : false;
 }
 
 
@@ -945,10 +904,9 @@ void CvArea::changeBorderObstacleCount(TeamTypes eIndex, int iChange)
 
 	if (iChange > 0 && m_aiBorderObstacleCount[eIndex] == iChange)
 	{
-		GC.getMapINLINE().verifyUnitValidPlot();
+		GC.getMap().verifyUnitValidPlot();
 	}
 }
-
 
 
 AreaAITypes CvArea::getAreaAIType(TeamTypes eIndex) const
@@ -1021,7 +979,7 @@ void CvArea::changeYieldRateModifier(PlayerTypes eIndex1, YieldTypes eIndex2, in
 
 		GET_PLAYER(eIndex1).AI_makeAssignWorkDirty();
 
-		if (GET_PLAYER(eIndex1).getTeam() == GC.getGameINLINE().getActiveTeam())
+		if (GET_PLAYER(eIndex1).getTeam() == GC.getGame().getActiveTeam())
 		{
 			gDLL->getInterfaceIFace()->setDirty(CityInfo_DIRTY_BIT, true);
 		}
@@ -1416,9 +1374,5 @@ void CvArea::setNumValidPlotsbySpawn(SpawnTypes eSpawn, int iAmount)
 
 int CvArea::getNumValidPlotsbySpawn(SpawnTypes eSpawn) const
 {
-	if (NULL == m_aiSpawnValidPlotCount)
-	{
-		return -1;
-	}
-	return m_aiSpawnValidPlotCount[eSpawn];
+	return m_aiSpawnValidPlotCount != NULL ? m_aiSpawnValidPlotCount[eSpawn] : -1;
 }

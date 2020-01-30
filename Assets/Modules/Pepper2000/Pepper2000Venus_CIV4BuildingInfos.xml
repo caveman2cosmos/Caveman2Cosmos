@@ -1040,6 +1040,7 @@
 			<Strategy>TXT_KEY_BUILDING_VENUS_TERRA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_TERRA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_VENUS_TERRA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_TERRAFORMING</PrereqTech>
 			<iCost>27966</iCost>
@@ -1127,6 +1128,7 @@
 			<Strategy>TXT_KEY_BUILDING_CAPTURED_IO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAPTURED_IO</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CAPTURED_IO</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ORBITAL_ENGINEERING</PrereqTech>
 			<iCost>59408</iCost>
@@ -1167,6 +1169,7 @@
 			<Strategy>TXT_KEY_BUILDING_VENUS_ARTIFICIAL_ROTATION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_ARTIFICIAL_ROTATION</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_VENUS_ARTIFICIAL_ROTATION</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GRAVITY_CONTROL</PrereqTech>
 			<iCost>49068</iCost>

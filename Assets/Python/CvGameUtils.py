@@ -11,6 +11,9 @@ G = GC.getGame()
 class CvGameUtils:
 
 	def __init__(self):
+		self.reset()
+
+	def reset(self):
 		# Cache
 		self.fScoreFreeMod = GC.getDefineINT("SCORE_FREE_PERCENT") / 100.0
 		self.SCORE_POPULATION_FACTOR = GC.getDefineINT("SCORE_POPULATION_FACTOR")
@@ -123,7 +126,6 @@ class CvGameUtils:
 		iX, iY, iBuild, iPlayer = argsList
 
 		aList = GC.getBuildInfo(iBuild).getType().split("_")
-
 		# Bonus placing builds
 		if aList[1] == "BONUS":
 			iBonus = GC.getInfoTypeForString("BONUS_" + aList[2])

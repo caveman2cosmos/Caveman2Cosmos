@@ -174,7 +174,6 @@
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_FIRST_TO_DISCOVER_AUYANTEPUI</DefaultBuilding>
 		</BuildingClassInfo>
-
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DISCOVERY_MT_SINAI</Type>
 			<Description>TXT_KEY_BUILDING_DISCOVERY_MT_SINAI</Description>
@@ -343,7 +342,6 @@
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_DISCOVERY_AUYANTEPUI</DefaultBuilding>
 		</BuildingClassInfo>
-
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_MOVIE_AUYANTEPUI</Type>
 			<Description>TXT_KEY_BUILDING_MOVIE_AUYANTEPUI</Description>

@@ -138,9 +138,7 @@ void CvPlotGroup::removePlot(CvPlot* pPlot, bool bRecalculateBonuses)
 void CvPlotGroup::Validate()
 {
 #if 0
-	CLLNode<XYCoords>* pPlotNode;
-
-	pPlotNode = headPlotsNode();
+	CLLNode<XYCoords>* pPlotNode = headPlotsNode();
 
 	while (pPlotNode != NULL)
 	{
@@ -515,10 +513,9 @@ void CvPlotGroup::changeNumBonuses(BonusTypes eBonus, int iChange)
 
 		m_paiNumBonuses[eBonus] = (m_paiNumBonuses[eBonus] + iChange);
 
-		int iLoop;
-		CvCity* pLoopCity;
-		for (pLoopCity = GET_PLAYER(getOwnerINLINE()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwnerINLINE()).nextCity(&iLoop))
+		for (CvPlayer::city_iterator cityItr = GET_PLAYER(getOwnerINLINE()).beginCities(); cityItr != GET_PLAYER(getOwnerINLINE()).endCities(); ++cityItr)
 		{
+			CvCity* pLoopCity = *cityItr;
 			if (pLoopCity->plotGroup(getOwnerINLINE()) == this)
 			{
 				pLoopCity->changeNumBonuses(eBonus, iChange);
@@ -642,7 +639,7 @@ void CvPlotGroup::plotEnumerator(bool (*pfFunc)(CvPlotGroup* onBehalfOf, CvPlot*
 
 static bool countCitiesCallback(CvPlotGroup* onBehalfOf, CvPlot* pLoopPlot, void* dummy)
 {
-	CvCity* pCity = pLoopPlot->getPlotCity();
+	const CvCity* pCity = pLoopPlot->getPlotCity();
 
 	if (pCity != NULL && pCity->getOwnerINLINE() == onBehalfOf->getOwnerINLINE())
 	{
@@ -728,11 +725,9 @@ void CvPlotGroup::read(FDataStreamBase* pStream)
 		FAssert(m_numPlots > 0);
 	}
 
-	int iI;
-
 	if ( m_paiNumBonuses != NULL )
 	{
-		for(iI = 0; iI < GC.getNumBonusInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 		{
 			if ( m_paiNumBonuses[iI] != 0 )
 			{
@@ -876,34 +871,31 @@ CvPlotGroup* CvPlotGroup::colorRegionInternal(CvPlot* pPlot, PlayerTypes eOwner,
 
 				for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
 				{
-					CvPlot* pAdjacentPlot = plotDirection(pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE(), ((DirectionTypes)iI));
+					CvPlot* pAdjacentPlot = plotDirection(pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE(), (DirectionTypes)iI);
 
-					if (pAdjacentPlot != NULL)
+					if (pAdjacentPlot != NULL && pLoopPlot->isTradeNetworkConnected(pAdjacentPlot, GET_PLAYER(eOwner).getTeam()))
 					{
-						if (pLoopPlot->isTradeNetworkConnected(pAdjacentPlot, GET_PLAYER(eOwner).getTeam()))
+						CvPlotGroup* pAdjacentPlotGroup = pAdjacentPlot->getPlotGroup(eOwner);
+
+						if (pAdjacentPlotGroup != NULL)
 						{
-							CvPlotGroup* pAdjacentPlotGroup = pAdjacentPlot->getPlotGroup(eOwner);
-
-							if (pAdjacentPlotGroup != NULL)
+							if ( pAdjacentPlotGroup != pPlotGroup )
 							{
-								if ( pAdjacentPlotGroup != pPlotGroup )
+								if ( pPlotGroup->getLengthPlots() > pAdjacentPlotGroup->getLengthPlots() )
 								{
-									if ( pPlotGroup->getLengthPlots() > pAdjacentPlotGroup->getLengthPlots() )
-									{
-										pPlotGroup->mergeIn(pAdjacentPlotGroup, bRecalculateBonuses);
-									}
-									else
-									{
-										pAdjacentPlotGroup->mergeIn(pPlotGroup, bRecalculateBonuses);
+									pPlotGroup->mergeIn(pAdjacentPlotGroup, bRecalculateBonuses);
+								}
+								else
+								{
+									pAdjacentPlotGroup->mergeIn(pPlotGroup, bRecalculateBonuses);
 
-										pPlotGroup = pAdjacentPlotGroup;
-									}
+									pPlotGroup = pAdjacentPlotGroup;
 								}
 							}
-							else
-							{
-								queue.push_back(pAdjacentPlot);
-							}
+						}
+						else
+						{
+							queue.push_back(pAdjacentPlot);
 						}
 					}
 				}

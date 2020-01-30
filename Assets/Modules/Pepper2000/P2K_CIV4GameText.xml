@@ -74,7 +74,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYPERSHIP_HOVER</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Can build cities in extragalactic space, Distant Cosmos and Hyperspace[NEWLINE][ICON_BULLET]Upon settling, transforms terrain into Hyperspace</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Can build cities in extragalactic space, Distant Cosmos and Hyperspace. Upon settling transforms terrain into Hyperspace</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ATTACKSHIP</Tag>
@@ -2004,8 +2004,8 @@
 		<English>Explore an Exoplanet</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISSION_EXPLORE_EXOPLANET</Tag>
-		<English>Explore an exoplanet</English>
+		<Tag>TXT_KEY_MISSION_EXPLORE_EXOPLANET_HELP</Tag>
+		<English>Explore an Exoplanet</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_OORT_CLOUD</Tag>
@@ -2092,7 +2092,7 @@
 		<English>Upgrade to Planetary Settler</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISSION_UPGRADE_PLANEWT_SETTLER_HELP</Tag>
+		<Tag>TXT_KEY_MISSION_UPGRADE_PLANET_SETTLER_HELP</Tag>
 		<English>Upgrade to a Planetary Settler</English>
 	</TEXT>
 	<TEXT>
@@ -3156,7 +3156,7 @@
 	<!-- Missions-->
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SUPPLY_SHIP_UPGRADE_TO_LUNAR_BULLDOZER</Tag>
-		<English>Become Bulldozert</English>
+		<English>Become Bulldozer</English>
 		<French>Convertir en Bulldozer</French>
 	</TEXT>
 	<TEXT>
