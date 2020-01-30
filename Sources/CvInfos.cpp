@@ -15747,7 +15747,7 @@ std::vector<CvDateIncrement>& CvGameSpeedInfo::getIncrements()
 	return m_aIncrements;
 }
 
-bool CvGameSpeedInfo::getEndDatesCalculated()
+bool CvGameSpeedInfo::getEndDatesCalculated() const
 {
 	return m_bEndDatesCalculated;
 }

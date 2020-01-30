@@ -2231,12 +2231,12 @@ bool CvBuildingInfo::isPrereqAndCivics(int i) const
 }
 
 //This is for the readpass3
-int CvBuildingInfo::isPrereqOrCivicsVectorSize()					{return m_aszPrereqOrCivicsforPass3.size();}
-CvString CvBuildingInfo::isPrereqOrCivicsNamesVectorElement(int i)	{return m_aszPrereqOrCivicsforPass3[i];}
-int CvBuildingInfo::isPrereqOrCivicsValuesVectorElement(int i)		{return m_abPrereqOrCivicsforPass3[i];}
-int CvBuildingInfo::isPrereqAndCivicsVectorSize()					{return m_aszPrereqAndCivicsforPass3.size();}
-CvString CvBuildingInfo::isPrereqAndCivicsNamesVectorElement(int i)	{return m_aszPrereqAndCivicsforPass3[i];}
-int CvBuildingInfo::isPrereqAndCivicsValuesVectorElement(int i)		{return m_abPrereqAndCivicsforPass3[i];}
+int CvBuildingInfo::isPrereqOrCivicsVectorSize() const					{return m_aszPrereqOrCivicsforPass3.size();}
+CvString CvBuildingInfo::isPrereqOrCivicsNamesVectorElement(const int i) const	{return m_aszPrereqOrCivicsforPass3[i];}
+int CvBuildingInfo::isPrereqOrCivicsValuesVectorElement(const int i) const		{return m_abPrereqOrCivicsforPass3[i];}
+int CvBuildingInfo::isPrereqAndCivicsVectorSize() const					{return m_aszPrereqAndCivicsforPass3.size();}
+CvString CvBuildingInfo::isPrereqAndCivicsNamesVectorElement(const int i) const	{return m_aszPrereqAndCivicsforPass3[i];}
+int CvBuildingInfo::isPrereqAndCivicsValuesVectorElement(const int i) const		{return m_abPrereqAndCivicsforPass3[i];}
 
 bool CvBuildingInfo::isPrereqOrTerrain(int i) const
 {
@@ -3267,7 +3267,7 @@ bool CvBuildingInfo::EnablesUnits() const
 
 			for (int iK = 0; iK < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); iK++)
 			{
-				BonusTypes eXtraFreeBonus = (BonusTypes)kUnit.getPrereqOrBonuses(iK);
+				const BonusTypes eXtraFreeBonus = (BonusTypes)kUnit.getPrereqOrBonuses(iK);
 
 				if ( eXtraFreeBonus != NO_BONUS )
 				{
@@ -7142,7 +7142,7 @@ bool CvBuildingInfo::isNewCityFree(CvGameObject* pObject)
 	}
 }
 
-BoolExpr* CvBuildingInfo::getConstructCondition()
+BoolExpr* CvBuildingInfo::getConstructCondition() const
 {
 	return m_pExprConstructCondition;
 }

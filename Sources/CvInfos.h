@@ -3957,12 +3957,12 @@ public:
 	std::vector<bool> m_abPrereqOrCivicsforPass3;
 
 	int isPrereqOrCivicsVectorSize() const;
-	CvString isPrereqOrCivicsNamesVectorElement(int i);
-	int isPrereqOrCivicsValuesVectorElement(int i);
+	CvString isPrereqOrCivicsNamesVectorElement(const int i) const;
+	int isPrereqOrCivicsValuesVectorElement(const int i) const;
 
-	int isPrereqAndCivicsVectorSize();
-	CvString isPrereqAndCivicsNamesVectorElement(int i);
-	int isPrereqAndCivicsValuesVectorElement(int i);
+	int isPrereqAndCivicsVectorSize() const;
+	CvString isPrereqAndCivicsNamesVectorElement(const int i) const;
+	int isPrereqAndCivicsValuesVectorElement(const int i) const;
 
 	std::vector<CvString> m_aszPrereqAndCivicsforPass3;
 	std::vector<bool> m_abPrereqAndCivicsforPass3;
@@ -4156,7 +4156,7 @@ public:
 
 	bool isNewCityFree(CvGameObject* pObject);
 
-	BoolExpr* getConstructCondition();
+	BoolExpr* getConstructCondition() const;
 
 	bool m_bAnySpecialistYieldChanges;
 	bool m_bAnySpecialistCommerceChanges;
@@ -5251,7 +5251,7 @@ public:
 	GameTurnInfo& getGameTurnInfo(int iIndex) const;	// Exposed to Python
 	CvDateIncrement& getDateIncrement(int iIndex);
 	std::vector<CvDateIncrement>& getIncrements();
-	bool getEndDatesCalculated();
+	bool getEndDatesCalculated() const;
 	void setEndDatesCalculated(bool bCalculated);
 
 	void allocateGameTurnInfos(const int iSize);
