@@ -7456,14 +7456,14 @@ public:
 	int getPrereqGameOption() const;
 
 	int getPrereqBuildingClass(int i) const;
-	int getPrereqBuildingVectorSize();
-	CvString getPrereqBuildingNamesVectorElement(int i);
-	int getPrereqBuildingClassValuesVectorElement(int i);
+	int getPrereqBuildingVectorSize() const;
+	CvString getPrereqBuildingNamesVectorElement(const int i) const;
+	int getPrereqBuildingClassValuesVectorElement(const int i) const;
 
 	bool isCompetingCorporation(int i) const;
-	int getCompetingCorporationVectorSize();
-	CvString getCompetingCorporationNamesVectorElement(int i);
-	bool getCompetingCorporationValuesVectorElement(int i);
+	int getCompetingCorporationVectorSize() const;
+	CvString getCompetingCorporationNamesVectorElement(const int i) const;
+	bool getCompetingCorporationValuesVectorElement(const int i) const;
 
 	bool readPass3();
 	int getYieldChange(int i) const;
@@ -9643,7 +9643,7 @@ public:
 	CvTutorialInfo();
 	virtual ~CvTutorialInfo();
 
-	const TCHAR* getNextTutorialInfoType();
+	const TCHAR* getNextTutorialInfoType() const;
 	void setNextTutorialInfoType(const TCHAR* szVal);
 
 	bool initTutorialMessages(int iNum);

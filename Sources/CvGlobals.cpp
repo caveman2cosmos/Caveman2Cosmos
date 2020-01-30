@@ -3806,7 +3806,7 @@ CvString& cvInternalGlobals::getCurrentXMLFile()
 	return m_szCurrentXMLFile;
 }
 
-FVariableSystem* cvInternalGlobals::getDefinesVarSystem()
+FVariableSystem* cvInternalGlobals::getDefinesVarSystem() const
 {
 	return m_VarSystem;
 }
@@ -4868,10 +4868,10 @@ int cvInternalGlobals::getCITY_HOME_PLOT() const
 
 void cvInternalGlobals::setDLLProfiler(FProfiler* prof)
 {
-	m_Profiler=prof;
+	m_Profiler = prof;
 }
 
-FProfiler* cvInternalGlobals::getDLLProfiler()
+FProfiler* cvInternalGlobals::getDLLProfiler() const
 {
 	return m_Profiler;
 }

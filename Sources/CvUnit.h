@@ -2709,10 +2709,10 @@ public:
 	void setRetrainsAvailable(int iNewValue);
 	void changeRetrainsAvailable(int iChange);
 
-	int getExperiencefromWithdrawal(int iWithdrawalProbability);
+	int getExperiencefromWithdrawal(const int iWithdrawalProbability) const;
 
 //Team Project (3)
-	int getExtraCaptureProbabilityModifier (bool bIgnoreCommanders = false) const;
+	int getExtraCaptureProbabilityModifier(bool bIgnoreCommanders = false) const;
 	void changeExtraCaptureProbabilityModifier(int iChange);
 	int captureProbabilityTotal() const;
 
@@ -2760,7 +2760,7 @@ public:
 	void checkCityAttackDefensesDamage(CvCity* pCity, const std::vector<UnitCombatTypes>& kDamagableUnitCombatTypes);
 
 	bool isBreakdownCombat(const CvPlot* pPlot, bool bSamePlot = false) const;
-	void resolveBreakdownAttack(CvPlot* pPlot, CvUnit* pDefender, int AdjustedRepel);
+	void resolveBreakdownAttack(const CvPlot* pPlot, CvUnit* pDefender, const int AdjustedRepel);
 
 	int getDiminishingReturn(int i) const;
 	int getApproaching0Return(int i) const;
@@ -3209,7 +3209,7 @@ public:
 	int getNoCaptureCount() const;
 	void changeNoCaptureCount(int iChange);
 
-	void makeWanted(CvCity* pCity);
+	void makeWanted(const CvCity* pCity);
 
 	int getDistanceAttackCommunicability(PromotionLineTypes eAfflictionLine) const;
 	void changeDistanceAttackCommunicability(PromotionLineTypes eAfflictionLine, int iChange);

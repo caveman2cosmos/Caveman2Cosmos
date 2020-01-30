@@ -179,7 +179,7 @@ public:
 	DllExport bool isGameMultiPlayer() const;																			// Exposed to Python
 	DllExport bool isTeamGame() const;																						// Exposed to Python
 
-	bool isModem();
+	bool isModem() const;
 	void setModem(bool bModem);
 
 /************************************************************************************************/
@@ -604,7 +604,7 @@ public:
 /************************************************************************************************/
 
 	CvCity* getHolyCity(ReligionTypes eIndex) const;																	// Exposed to Python
-	void setHolyCity(ReligionTypes eIndex, CvCity* pNewValue, bool bAnnounce);	// Exposed to Python
+	void setHolyCity(ReligionTypes eIndex, const CvCity* pNewValue, bool bAnnounce);	// Exposed to Python
 
 	int getCorporationGameTurnFounded(CorporationTypes eIndex) const;												// Exposed to Python
 	bool isCorporationFounded(CorporationTypes eIndex) const;																// Exposed to Python

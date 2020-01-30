@@ -1791,7 +1791,7 @@ const TCHAR* CvUnitInfo::getClassicalArtDefineTag(int i, UnitArtStyleTypes eStyl
 
 	if (NO_UNIT_ARTSTYLE != eStyle)
 	{
-		int iIndex = GC.getInfoTypeForString(getType());
+		const int iIndex = GC.getInfoTypeForString(getType());
 		if (-1 != iIndex)
 		{
 			const TCHAR* pcTag = GC.getUnitArtStyleTypeInfo(eStyle).getClassicalArtDefineTag(i, iIndex);
@@ -1820,7 +1820,7 @@ const TCHAR* CvUnitInfo::getRennArtDefineTag(int i, UnitArtStyleTypes eStyle) co
 
 	if (NO_UNIT_ARTSTYLE != eStyle)
 	{
-		int iIndex = GC.getInfoTypeForString(getType());
+		const int iIndex = GC.getInfoTypeForString(getType());
 		if (-1 != iIndex)
 		{
 			const TCHAR* pcTag = GC.getUnitArtStyleTypeInfo(eStyle).getRennArtDefineTag(i, iIndex);
@@ -1849,7 +1849,7 @@ const TCHAR* CvUnitInfo::getIndustrialArtDefineTag(int i, UnitArtStyleTypes eSty
 
 	if (NO_UNIT_ARTSTYLE != eStyle)
 	{
-		int iIndex = GC.getInfoTypeForString(getType());
+		const int iIndex = GC.getInfoTypeForString(getType());
 		if (-1 != iIndex)
 		{
 			const TCHAR* pcTag = GC.getUnitArtStyleTypeInfo(eStyle).getIndustrialArtDefineTag(i, iIndex);
@@ -1878,7 +1878,7 @@ const TCHAR* CvUnitInfo::getFutureArtDefineTag(int i, UnitArtStyleTypes eStyle) 
 
 	if (NO_UNIT_ARTSTYLE != eStyle)
 	{
-		int iIndex = GC.getInfoTypeForString(getType());
+		const int iIndex = GC.getInfoTypeForString(getType());
 		if (-1 != iIndex)
 		{
 			const TCHAR* pcTag = GC.getUnitArtStyleTypeInfo(eStyle).getFutureArtDefineTag(i, iIndex);

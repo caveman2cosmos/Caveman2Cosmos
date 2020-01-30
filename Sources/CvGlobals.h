@@ -1033,7 +1033,7 @@ public:
 	// THESE ARE READ-ONLY
 	//
 
-	FVariableSystem* getDefinesVarSystem();
+	FVariableSystem* getDefinesVarSystem() const;
 	void cacheGlobals();
 
 	// ***** EXPOSED TO PYTHON *****
@@ -1254,7 +1254,7 @@ public:
 #endif
 	CvDLLUtilityIFaceBase* getDLLIFaceNonInl();
 	void setDLLProfiler(FProfiler* prof);
-	FProfiler* getDLLProfiler();
+	FProfiler* getDLLProfiler() const;
 	void enableDLLProfiler(bool bEnable);
 	bool isDLLProfilerEnabled() const;
 	const char* alternateProfileSampleName() const;

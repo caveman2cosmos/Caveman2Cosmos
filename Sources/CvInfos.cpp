@@ -25079,9 +25079,9 @@ int CvCorporationInfo::getPrereqBuildingClass(int i) const
 	return m_paiPrereqBuildingClass ? m_paiPrereqBuildingClass[i] : false;
 }
 
-int CvCorporationInfo::getPrereqBuildingVectorSize()					{return m_aszPrereqBuildingClassforPass3.size();}
-CvString CvCorporationInfo::getPrereqBuildingNamesVectorElement(int i)	{return m_aszPrereqBuildingClassforPass3[i];}
-int CvCorporationInfo::getPrereqBuildingClassValuesVectorElement(int i)		{return m_aiPrereqBuildingClassforPass3[i];}
+int CvCorporationInfo::getPrereqBuildingVectorSize() const					{return m_aszPrereqBuildingClassforPass3.size();}
+CvString CvCorporationInfo::getPrereqBuildingNamesVectorElement(const int i) const	{return m_aszPrereqBuildingClassforPass3[i];}
+int CvCorporationInfo::getPrereqBuildingClassValuesVectorElement(const int i) const		{return m_aiPrereqBuildingClassforPass3[i];}
 
 bool CvCorporationInfo::isCompetingCorporation(int i) const
 {
@@ -25090,9 +25090,9 @@ bool CvCorporationInfo::isCompetingCorporation(int i) const
 	return m_pabCompetingCorporation ? m_pabCompetingCorporation[i] : false;
 }
 
-int CvCorporationInfo::getCompetingCorporationVectorSize()					{return m_aszCompetingCorporationforPass3.size();}
-CvString CvCorporationInfo::getCompetingCorporationNamesVectorElement(int i)	{return m_aszCompetingCorporationforPass3[i];}
-bool CvCorporationInfo::getCompetingCorporationValuesVectorElement(int i)		{return m_abCompetingCorporationforPass3[i];}
+int CvCorporationInfo::getCompetingCorporationVectorSize() const					{return m_aszCompetingCorporationforPass3.size();}
+CvString CvCorporationInfo::getCompetingCorporationNamesVectorElement(const int i) const	{return m_aszCompetingCorporationforPass3[i];}
+bool CvCorporationInfo::getCompetingCorporationValuesVectorElement(const int i) const		{return m_abCompetingCorporationforPass3[i];}
 
 int CvCorporationInfo::getYieldChange(int i) const
 {
@@ -35408,7 +35408,7 @@ CvTutorialInfo::~CvTutorialInfo()
 	resetMessages();
 }
 
-const TCHAR* CvTutorialInfo::getNextTutorialInfoType()
+const TCHAR* CvTutorialInfo::getNextTutorialInfoType() const
 {
 	return m_szNextTutorialInfoType;
 }

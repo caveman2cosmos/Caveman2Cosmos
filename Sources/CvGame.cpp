@@ -1648,11 +1648,11 @@ void CvGame::normalizeRemovePeaks()
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
-			CvPlot* pStartingPlot = GET_PLAYER((PlayerTypes)iI).getStartingPlot();
+			const CvPlot* pStartingPlot = GET_PLAYER((PlayerTypes)iI).getStartingPlot();
 
 			if (pStartingPlot != NULL)
 			{
-				int iRange = 3;
+				const int iRange = 3;
 
 				for (int iDX = -(iRange); iDX <= iRange; iDX++)
 				{
@@ -1693,7 +1693,7 @@ CvPlot* CvGame::normalizeFindLakePlot(PlayerTypes ePlayer)
 		return NULL;
 	}
 
-	CvPlot* pStartingPlot = GET_PLAYER(ePlayer).getStartingPlot();
+	const CvPlot* pStartingPlot = GET_PLAYER(ePlayer).getStartingPlot();
 	if (pStartingPlot != NULL && !pStartingPlot->isFreshWater())
 	{
 		for (int iJ = 0; iJ < NUM_CITY_PLOTS; iJ++)
@@ -1727,7 +1727,6 @@ CvPlot* CvGame::normalizeFindLakePlot(PlayerTypes ePlayer)
 
 void CvGame::normalizeRemoveBadFeatures()
 {
-	CvPlot* pStartingPlot;
 	CvPlot* pLoopPlot;
 	int iI, iJ;
 
@@ -1735,7 +1734,7 @@ void CvGame::normalizeRemoveBadFeatures()
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
-			pStartingPlot = GET_PLAYER((PlayerTypes)iI).getStartingPlot();
+			const CvPlot* pStartingPlot = GET_PLAYER((PlayerTypes)iI).getStartingPlot();
 
 			if (pStartingPlot != NULL)
 			{
@@ -1757,9 +1756,9 @@ void CvGame::normalizeRemoveBadFeatures()
 				}
 			
 				int iX, iY;
-				int iCityRange = CITY_PLOTS_RADIUS;
-				int iExtraRange = 2;
-				int iMaxRange = iCityRange + iExtraRange;
+				const int iCityRange = CITY_PLOTS_RADIUS;
+				const int iExtraRange = 2;
+				const int iMaxRange = iCityRange + iExtraRange;
 				
 				for (iX = -iMaxRange; iX <= iMaxRange; iX++)
 				{
@@ -1768,7 +1767,7 @@ void CvGame::normalizeRemoveBadFeatures()
 						pLoopPlot = plotXY(pStartingPlot->getX_INLINE(), pStartingPlot->getY_INLINE(), iX, iY);
 						if (pLoopPlot != NULL)
 						{
-							int iDistance = plotDistance(pStartingPlot->getX_INLINE(), pStartingPlot->getY_INLINE(), pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE());			
+							const int iDistance = plotDistance(pStartingPlot->getX_INLINE(), pStartingPlot->getY_INLINE(), pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE());			
 							if (iDistance <= iMaxRange)
 							{
 								if (pLoopPlot->getFeatureType() != NO_FEATURE)
@@ -1815,9 +1814,9 @@ void CvGame::normalizeRemoveBadTerrain()
 	int iPlotProduction;
 	
 	
-	int iCityRange = CITY_PLOTS_RADIUS;
-	int iExtraRange = 1;
-	int iMaxRange = iCityRange + iExtraRange;
+	const int iCityRange = CITY_PLOTS_RADIUS;
+	const int iExtraRange = 1;
+	const int iMaxRange = iCityRange + iExtraRange;
 
 	for (iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
@@ -3193,7 +3192,7 @@ int CvGame::getAdjustedPopulationPercent(VictoryTypes eVictory) const
 	{
 		if (GET_TEAM((TeamTypes)iI).isAlive())
 		{
-			int iPopulation = GET_TEAM((TeamTypes)iI).getTotalPopulation();
+			const int iPopulation = GET_TEAM((TeamTypes)iI).getTotalPopulation();
 
 			if (iPopulation > iBestPopulation)
 			{
@@ -3250,7 +3249,7 @@ bool CvGame::isChooseElection(VoteTypes eVote) const
 
 bool CvGame::isTeamVoteEligible(TeamTypes eTeam, VoteSourceTypes eVoteSource) const
 {
-	CvTeam& kTeam = GET_TEAM(eTeam);
+	const CvTeam& kTeam = GET_TEAM(eTeam);
 
 	if (kTeam.isForceTeamVoteEligible(eVoteSource))
 	{
@@ -3265,7 +3264,7 @@ bool CvGame::isTeamVoteEligible(TeamTypes eTeam, VoteSourceTypes eVoteSource) co
 	int iCount = 0;
 	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
-		CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iI);
+		const CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iI);
 		if (kLoopTeam.isAlive() && kLoopTeam.isForceTeamVoteEligible(eVoteSource))
 		{
 			++iCount;
@@ -3282,7 +3281,7 @@ bool CvGame::isTeamVoteEligible(TeamTypes eTeam, VoteSourceTypes eVoteSource) co
 	{
 		if (iI != eTeam)
 		{
-			CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iI);
+			const CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iI);
 			if (kLoopTeam.isAlive() && !kLoopTeam.isForceTeamVoteEligible(eVoteSource) && kLoopTeam.isFullMember(eVoteSource))
 			{
 				const int iLoopVotes = kLoopTeam.getVotes(NO_VOTE, eVoteSource);
@@ -3373,12 +3372,12 @@ TeamTypes CvGame::getSecretaryGeneral(VoteSourceTypes eVoteSource) const
 			{
 				for (int iI = 0; iI < MAX_PC_PLAYERS; ++iI)
 				{
-					CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
+					const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
 					if (kLoopPlayer.isAlive())
 					{
 						if (kLoopPlayer.getBuildingClassCount((BuildingClassTypes)GC.getBuildingInfo((BuildingTypes)iBuilding).getBuildingClassType()) > 0)
 						{
-							ReligionTypes eReligion = getVoteSourceReligion(eVoteSource);
+							const ReligionTypes eReligion = getVoteSourceReligion(eVoteSource);
 							if (NO_RELIGION == eReligion || kLoopPlayer.getStateReligion() == eReligion)
 							{
 								return kLoopPlayer.getTeam();
@@ -3448,7 +3447,7 @@ void CvGame::updateSecretaryGeneral()
 
 	for (int i = 0; i < GC.getNumVoteSourceInfos(); ++i)
 	{
-		TeamTypes eSecretaryGeneral = getSecretaryGeneral((VoteSourceTypes)i);
+		const TeamTypes eSecretaryGeneral = getSecretaryGeneral((VoteSourceTypes)i);
 		if (NO_TEAM != eSecretaryGeneral && !GET_TEAM(eSecretaryGeneral).isFullMember((VoteSourceTypes)i))
 		{
 			clearSecretaryGeneral((VoteSourceTypes)i);
@@ -3514,7 +3513,7 @@ int CvGame::countCivTeamsEverAlive() const
 
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		CvPlayer& kPlayer = GET_PLAYER((PlayerTypes) iI);
+		const CvPlayer& kPlayer = GET_PLAYER((PlayerTypes) iI);
 		if (kPlayer.isEverAlive() && kPlayer.getParent() == NO_PLAYER)
 		{
 			FAssert(0 <= kPlayer.getTeam());
@@ -3847,7 +3846,7 @@ bool CvGame::isTeamGame() const
 }
 
 
-bool CvGame::isModem()
+bool CvGame::isModem() const
 {
 	return gDLL->IsModem();
 }
@@ -4141,7 +4140,7 @@ void CvGame::resetTurnTimer()
 			if (getElapsedGameTurns() == 0 && !isPitboss())
 			{
 				// Let's allow more time for the initial turn
-				TurnTimerTypes eTurnTimer = GC.getInitCore().getTurnTimer();
+				const TurnTimerTypes eTurnTimer = GC.getInitCore().getTurnTimer();
 				FAssertMsg(eTurnTimer >= 0 && eTurnTimer < GC.getNumTurnTimerInfos(), "Invalid TurnTimer selection in InitCore");
 				iTurnLen = (iTurnLen * GC.getTurnTimerInfo(eTurnTimer).getFirstTurnMultiplier());
 			}
@@ -4195,7 +4194,7 @@ int CvGame::getMaxTurnLen() const
 		}
 
 		// Now return turn len based on base len and unit and city bonuses
-		TurnTimerTypes eTurnTimer = GC.getInitCore().getTurnTimer();
+		const TurnTimerTypes eTurnTimer = GC.getInitCore().getTurnTimer();
 		FAssertMsg(eTurnTimer >= 0 && eTurnTimer < GC.getNumTurnTimerInfos(), "Invalid TurnTimer Selection in InitCore");
 		return ( GC.getTurnTimerInfo(eTurnTimer).getBaseTime() + 
 				(GC.getTurnTimerInfo(eTurnTimer).getCityBonus()*iMaxCities) +
@@ -4489,7 +4488,7 @@ void CvGame::initScoreCalculation()
 	int iMaxFood = 0;
 	for (int i = 0; i < GC.getMapINLINE().numPlotsINLINE(); i++)
 	{
-		CvPlot* pPlot = GC.getMapINLINE().plotByIndexINLINE(i);
+		const CvPlot* pPlot = GC.getMapINLINE().plotByIndexINLINE(i);
 		if (!pPlot->isWater() || pPlot->isAdjacentToLand())
 		{
 			iMaxFood += pPlot->calculateBestNatureYield(YIELD_FOOD, NO_TEAM);
@@ -4510,7 +4509,7 @@ void CvGame::initScoreCalculation()
 
 	if (NO_ERA != getStartEra())
 	{
-		int iNumSettlers = GC.getEraInfo(getStartEra()).getStartingUnitMultiplier();
+		const int iNumSettlers = GC.getEraInfo(getStartEra()).getStartingUnitMultiplier();
 		m_iInitPopulation = getPopulationScore(iNumSettlers * (GC.getEraInfo(getStartEra()).getFreePopulation() + 1));
 		m_iInitLand = getLandPlotsScore(iNumSettlers *  NUM_CITY_PLOTS);
 	}
@@ -4589,7 +4588,7 @@ void CvGame::setAIAutoPlay(PlayerTypes iPlayer, int iNewValue, bool bForced)
 
 void CvGame::setAIAutoPlayExternal(int iNewValue)
 {
-	PlayerTypes iPlayer = getActivePlayer();
+	const PlayerTypes iPlayer = getActivePlayer();
 	return setAIAutoPlay(iPlayer, iNewValue);
 }
 
@@ -4734,7 +4733,7 @@ bool CvGame::circumnavigationAvailable() const
 		return false;
 	}
 
-	CvMap& kMap = GC.getMapINLINE();
+	const CvMap& kMap = GC.getMapINLINE();
 
 	if (!(kMap.isWrapXINLINE()) && !(kMap.isWrapYINLINE()))
 	{
@@ -5297,10 +5296,10 @@ PlayerTypes CvGame::getActivePlayer() const
 
 void CvGame::setActivePlayer(PlayerTypes eNewValue, bool bForceHotSeat)
 {
-	PlayerTypes eOldActivePlayer = getActivePlayer();
+	const PlayerTypes eOldActivePlayer = getActivePlayer();
 	if (eOldActivePlayer != eNewValue)
 	{
-		int iActiveNetId = ((NO_PLAYER != eOldActivePlayer) ? GET_PLAYER(eOldActivePlayer).getNetID() : -1);
+		const int iActiveNetId = ((NO_PLAYER != eOldActivePlayer) ? GET_PLAYER(eOldActivePlayer).getNetID() : -1);
 		GC.getInitCore().setActivePlayer(eNewValue);
 
 		if (GET_PLAYER(eNewValue).isHuman() && (isHotSeat() || isPbem() || bForceHotSeat))
@@ -5311,7 +5310,7 @@ void CvGame::setActivePlayer(PlayerTypes eNewValue, bool bForceHotSeat)
 
 			if (NO_PLAYER != eOldActivePlayer)
 			{
-				int iInactiveNetId = GET_PLAYER(eNewValue).getNetID();
+				const int iInactiveNetId = GET_PLAYER(eNewValue).getNetID();
 				GET_PLAYER(eNewValue).setNetID(iActiveNetId);
 				GET_PLAYER(eOldActivePlayer).setNetID(iInactiveNetId);
 			}
@@ -5926,7 +5925,7 @@ void CvGame::changeForceCivicCount(CivicTypes eIndex, int iChange)
 
 	if (iChange != 0)
 	{
-		bool bOldForceCivic = isForceCivic(eIndex);
+		const bool bOldForceCivic = isForceCivic(eIndex);
 
 		m_paiForceCivicCount[eIndex] += iChange;
 		FAssert(getForceCivicCount(eIndex) >= 0);
@@ -5949,7 +5948,7 @@ PlayerVoteTypes CvGame::getVoteOutcome(VoteTypes eIndex) const
 
 bool CvGame::isVotePassed(VoteTypes eIndex) const
 {
-	PlayerVoteTypes ePlayerVote = getVoteOutcome(eIndex);
+	const PlayerVoteTypes ePlayerVote = getVoteOutcome(eIndex);
 
 	if (isTeamVote(eIndex))
 	{
@@ -5970,7 +5969,7 @@ void CvGame::setVoteOutcome(const VoteTriggeredData& kData, PlayerVoteTypes eNew
 
 	if (getVoteOutcome(eIndex) != eNewValue)
 	{
-		bool bOldPassed = isVotePassed(eIndex);
+		const bool bOldPassed = isVotePassed(eIndex);
 
 		m_paiVoteOutcome[eIndex] = eNewValue;
 
@@ -6290,7 +6289,7 @@ CvCity* CvGame::getHolyCity(ReligionTypes eIndex) const
 }
 
 
-void CvGame::setHolyCity(ReligionTypes eIndex, CvCity* pNewValue, bool bAnnounce)
+void CvGame::setHolyCity(ReligionTypes eIndex, const CvCity* pNewValue, bool bAnnounce)
 {
 	CvWString szBuffer;
 	CvCity* pHolyCity;
@@ -6533,7 +6532,7 @@ void CvGame::castVote(PlayerTypes eOwnerIndex, int iVoteId, PlayerVoteTypes ePla
 	VoteTriggeredData* pTriggeredData = getVoteTriggered(iVoteId);
 	if (NULL != pTriggeredData)
 	{
-		CvVoteInfo& kVote = GC.getVoteInfo(pTriggeredData->kVoteOption.eVote);
+		const CvVoteInfo& kVote = GC.getVoteInfo(pTriggeredData->kVoteOption.eVote);
 		if (kVote.isAssignCity())
 		{
 			FAssert(pTriggeredData->kVoteOption.ePlayer != NO_PLAYER);
@@ -6867,7 +6866,7 @@ void CvGame::doDeals()
 //Enumerates all currently possible spawn plots for a spawning rule, for use in a thread, local density is not checked
 void enumSpawnPlots(int iSpawnInfo, std::vector<CvPlot*>* plots)
 {
-	CvSpawnInfo& spawnInfo = GC.getSpawnInfo((SpawnTypes)iSpawnInfo);
+	const CvSpawnInfo& spawnInfo = GC.getSpawnInfo((SpawnTypes)iSpawnInfo);
 	//GC.getGameINLINE().logMsg("Spawn thread start for %s", spawnInfo.getType());
 	plots->clear();
 	
@@ -6907,9 +6906,9 @@ void enumSpawnPlots(int iSpawnInfo, std::vector<CvPlot*>* plots)
 		}
 	}
 	
-	CvUnitInfo& unitInfo = GC.getUnitInfo(spawnInfo.getUnitType());
-	PlayerTypes ePlayer = spawnInfo.getPlayer();
-	bool bIsBarbarian = spawnInfo.getTreatAsBarbarian() && GET_PLAYER(ePlayer).isHominid();
+	const CvUnitInfo& unitInfo = GC.getUnitInfo(spawnInfo.getUnitType());
+	const PlayerTypes ePlayer = spawnInfo.getPlayer();
+	const bool bIsBarbarian = spawnInfo.getTreatAsBarbarian() && GET_PLAYER(ePlayer).isHominid();
 	if ( bIsBarbarian && GC.getGameINLINE().isOption(GAMEOPTION_NO_BARBARIANS))
 	{
 		return;
@@ -6920,9 +6919,9 @@ void enumSpawnPlots(int iSpawnInfo, std::vector<CvPlot*>* plots)
 		return;
 	}
 
-	bool bNoTerrainFeatureBonus = (spawnInfo.getNumTerrains() == 0) && (spawnInfo.getNumFeatures() == 0) && (spawnInfo.getNumBonuses() == 0) && !spawnInfo.getPeaks();
+	const bool bNoTerrainFeatureBonus = (spawnInfo.getNumTerrains() == 0) && (spawnInfo.getNumFeatures() == 0) && (spawnInfo.getNumBonuses() == 0) && !spawnInfo.getPeaks();
 
-	bool bAnimalBarred = GC.getGameINLINE().isOption(GAMEOPTION_ANIMALS_STAY_OUT) && GC.getUnitInfo(spawnInfo.getUnitType()).isWildAnimal();
+	const bool bAnimalBarred = GC.getGameINLINE().isOption(GAMEOPTION_ANIMALS_STAY_OUT) && GC.getUnitInfo(spawnInfo.getUnitType()).isWildAnimal();
 	for (int i = 0; i < GC.getMapINLINE().numPlotsINLINE(); ++i)
 	{
 		CvPlot* pPlot = GC.getMapINLINE().plotByIndexINLINE(i);
@@ -7008,8 +7007,8 @@ void enumSpawnPlots(int iSpawnInfo, std::vector<CvPlot*>* plots)
 
 					if ( !bValid)
 					{
-						FeatureTypes featureType = pPlot->getFeatureType();
-						TerrainTypes terrainType = pPlot->getTerrainType();
+						const FeatureTypes featureType = pPlot->getFeatureType();
+						const TerrainTypes terrainType = pPlot->getTerrainType();
 						if (featureType == NO_FEATURE)
 						{
 							for(int k = 0; k < spawnInfo.getNumTerrains(); k++) // Check if terrain for spawning is present
@@ -7104,13 +7103,13 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 
 	for (int i = 0; i < GC.getMapINLINE().numPlotsINLINE(); ++i)
 	{
-		CvPlot* pPlot = GC.getMapINLINE().plotByIndexINLINE(i);
+		CvPlot* pPlot = GC.getMap().plotByIndex(i);
 
 		CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
 
 		while (pUnitNode != NULL)
 		{
-			CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
+			const CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
 
 			if (pLoopUnit != NULL)
 			{
@@ -7141,7 +7140,7 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 
 	for(int j = 0; j < GC.getNumSpawnInfos(); j++)
 	{
-		SpawnTypes eSpawn = (SpawnTypes)j;
+		const SpawnTypes eSpawn = (SpawnTypes)j;
 		CvSpawnInfo& spawnInfo = GC.getSpawnInfo((SpawnTypes)j);
 
 		//TB Note: It is at this point that we need to isolate out the player type on spawn info.  
@@ -7202,7 +7201,7 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 
 
 		//	Double for barbarians if raging
-		bool bIsBarbarian = spawnInfo.getTreatAsBarbarian();
+		const bool bIsBarbarian = spawnInfo.getTreatAsBarbarian();
 		int iMaxAreaTotalDensity = spawnInfo.getMaxAreaTotalDensity();
 		int iMaxAreaUnitDensity = spawnInfo.getMaxAreaUnitDensity();
 		if ( bIsBarbarian && GC.getGameINLINE().isOption(GAMEOPTION_RAGING_BARBARIANS) )
@@ -7219,7 +7218,7 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 		//So we ARE going by spawn here but it's still a random check per plot rather than placing an amount.  Before this, determine how many should spawn this round, then pick a plot for each of those spawns.
 		//The density factor is going to be interesting.  Perhaps each plot should get a likelihood value and vary that by the density factor around that plot.
 		//The spawn rate... is high more likely or low and what kind of numeric range are we working with?
-		int iNumAreas = GC.getMap().getNumAreas();
+		const int iNumAreas = GC.getMap().getNumAreas();
 
 		for (int iI = 0; iI < iNumAreas; iI++)
 		{
@@ -7238,15 +7237,15 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 
 		for (std::vector<CvPlot*>::iterator it = validPlots[j].begin(); it < validPlots[j].end(); ++it)
 		{
-			CvPlot* pPlot = *it;
-			int iArea = pPlot->getArea();
-			CvArea* pArea = pPlot->area();
-			int iTotalAreaSize = pArea->getNumTiles();
+			const CvPlot* pPlot = *it;
+			const int iArea = pPlot->getArea();
+			const CvArea* pArea = pPlot->area();
+			const int iTotalAreaSize = pArea->getNumTiles();
 			int iLocalSpawnRate = (int)adjustedSpawnRate;
 			//TB Spawn Modification Begin
 			//Automatically adapts chances of spawn to normalize between units that have a huge amount of plots available to spawn in and those that have relatively few.
 			//Keeping in mind higher is less chance.
-			int iValidPlotsThisArea = pArea->getNumValidPlotsbySpawn(eSpawn);
+			const int iValidPlotsThisArea = pArea->getNumValidPlotsbySpawn(eSpawn);
 			int iFrequencyAdjustment = (iValidPlotsThisArea * 100)/iTotalAreaSize;//Produces the % of plots valid in area. - note: divide by 0 should be literally impossible or we wouldn't have gotten this far as there would not be a plot to be checking this.
 			iFrequencyAdjustment += 50;// Thus 1% becomes 51% while 90% becomes 140%
 			
@@ -7258,7 +7257,7 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 			//Actually, here the unit is selected already based on the spawn info itself.  Derive that then derive the MapCategoryTypes
 			//of the unit and ensure that pPlot has the MapCategoryType of the unit.  Easy... no need to include MapCategoryTypes on the
 			//Spawn Info file.
-			int iCount = GC.getUnitInfo(spawnInfo.getUnitType()).getNumMapCategoryTypes();
+			const int iCount = GC.getUnitInfo(spawnInfo.getUnitType()).getNumMapCategoryTypes();
 			bool bFound = (iCount < 1);
 			for (int iI = 0; iI < iCount; iI++)
 			{
@@ -7296,7 +7295,7 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 			}
 			else
 			{
-				int	percentOccupied = (100*pPlot->area()->getNumOwnedTiles())/pPlot->area()->getNumTiles();
+				const int percentOccupied = (100*pPlot->area()->getNumOwnedTiles())/pPlot->area()->getNumTiles();
 
 				//	Adjust spawn rate upward by up to trebbleing the normal rate in proportion with how
 				//	little wilderness is left in this area
@@ -7334,7 +7333,7 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 				{
 					for(int iY = -LocalRange; iY <= LocalRange; iY++)
 					{
-						CvPlot* pLoopPlot = plotXY(pPlot->getX_INLINE(), pPlot->getY_INLINE(), iX, iY);
+						const CvPlot* pLoopPlot = plotXY(pPlot->getX_INLINE(), pPlot->getY_INLINE(), iX, iY);
 						if ( pLoopPlot != NULL && pLoopPlot->area() == pPlot->area() )
 						{
 							localLandArea++;
@@ -7360,7 +7359,7 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 
 					if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
 					{
-						int iCount = kUnit.getNumGroupSpawnUnitCombatTypes();
+						const int iCount = kUnit.getNumGroupSpawnUnitCombatTypes();
 						if (iCount > 0)
 						{
 							//clear old list
@@ -7374,12 +7373,12 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 								}
 							}
 							//generate result from list
-							int iListCount = (int)aRandomList.size();
-							int iResult = GC.getGameINLINE().getSorenRandNum(iListCount, "Spawn Group Random Roll");
-							int iFinalIndex = aRandomList[iResult];
-							UnitCombatTypes eGroupVolume = kUnit.getGroupSpawnUnitCombatType(iFinalIndex).eUnitCombat;
+							const int iListCount = (int)aRandomList.size();
+							const int iResult = GC.getGameINLINE().getSorenRandNum(iListCount, "Spawn Group Random Roll");
+							const int iFinalIndex = aRandomList[iResult];
+							const UnitCombatTypes eGroupVolume = kUnit.getGroupSpawnUnitCombatType(iFinalIndex).eUnitCombat;
 							CvWString szTitle = kUnit.getGroupSpawnUnitCombatType(iFinalIndex).m_szTitle;
-							CvWString szOriginal = pUnit->getName();
+							const CvWString szOriginal = pUnit->getName();
 							//remove old group volume unitcombat
 							if (eGroupVolume != NO_UNITCOMBAT)
 							{
@@ -7387,10 +7386,10 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 								{
 									if (GC.getUnitCombatInfo((UnitCombatTypes)iI).getGroupBase() != -10)
 									{
-										UnitCombatTypes eUnitCombat = ((UnitCombatTypes)iI);
+										const UnitCombatTypes eUnitCombat = ((UnitCombatTypes)iI);
 										if (pUnit->isHasUnitCombat(eUnitCombat) && eUnitCombat != eGroupVolume)
 										{
-											int iDifference = GC.getUnitCombatInfo(eGroupVolume).getGroupBase() - GC.getUnitCombatInfo(eUnitCombat).getGroupBase();
+											const int iDifference = GC.getUnitCombatInfo(eGroupVolume).getGroupBase() - GC.getUnitCombatInfo(eUnitCombat).getGroupBase();
 											CvUnit::normalizeUnitPromotions(pUnit, iDifference,
 												bst::bind(Game::isGroupUpgradePromotion, pUnit, _2),
 												bst::bind(Game::isGroupDowngradePromotion, pUnit, _2)
@@ -11146,14 +11145,14 @@ VoteSelectionData* CvGame::addVoteSelection(VoteSourceTypes eVoteSource)
 					{
 						for (int iPlayer1 = 0; iPlayer1 < MAX_PC_PLAYERS; ++iPlayer1)
 						{
-							CvPlayer& kPlayer1 = GET_PLAYER((PlayerTypes)iPlayer1);
+							const CvPlayer& kPlayer1 = GET_PLAYER((PlayerTypes)iPlayer1);
 
 							if ( kPlayer1.isAlive() )
 							{
 								int iLoop;
 								for (CvCity* pLoopCity = kPlayer1.firstCity(&iLoop); NULL != pLoopCity; pLoopCity = kPlayer1.nextCity(&iLoop))
 								{
-									PlayerTypes eNewOwner = pLoopCity->plot()->findHighestCulturePlayer();
+									const PlayerTypes eNewOwner = pLoopCity->plot()->findHighestCulturePlayer();
 									if (NO_PLAYER != eNewOwner)
 									{
 										kData.ePlayer = (PlayerTypes)iPlayer1;
@@ -11242,7 +11241,7 @@ VoteTriggeredData* CvGame::addVoteTriggered(VoteSourceTypes eVoteSource, const V
 				}
 				else
 				{
-					castVote(((PlayerTypes)iI), pData->getID(), GET_PLAYER((PlayerTypes)iI).AI_diploVote(kOptionData, eVoteSource, false));
+					castVote(((PlayerTypes)iI), pData->getID(), kPlayer.AI_diploVote(kOptionData, eVoteSource, false));
 				}
 			}
 		}
@@ -11287,7 +11286,7 @@ void CvGame::doVoteResults()
 			bool bAllVoted = true;
 			for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
 			{
-				PlayerTypes ePlayer = (PlayerTypes) iJ;
+				const PlayerTypes ePlayer = (PlayerTypes) iJ;
 				if (GET_PLAYER(ePlayer).isAlive() && GET_PLAYER(ePlayer).isVotingMember(eVoteSource))
 				{
 					if (getPlayerVote(ePlayer, pVoteTriggered->getID()) == NO_PLAYER_VOTE)
@@ -13549,7 +13548,7 @@ void CvGame::loadPirateShip(CvUnit* pUnit)
 		for (int iJ = 0; iJ < GC.getNumUnitClassInfos(); iJ++)
 		{
 			bool bValid = false;
-			UnitTypes eLoopUnit = ((UnitTypes)(GC.getCivilizationInfo(GET_PLAYER(BARBARIAN_PLAYER).getCivilizationType()).getCivilizationUnits(iJ)));
+			const UnitTypes eLoopUnit = ((UnitTypes)(GC.getCivilizationInfo(GET_PLAYER(BARBARIAN_PLAYER).getCivilizationType()).getCivilizationUnits(iJ)));
 
 			if (eLoopUnit != NO_UNIT)
 			{
@@ -13652,7 +13651,7 @@ void CvGame::recalculateModifiers()
 		pLoopPlot->clearVisibilityCounts();
 
 		//	Fix any spurious routes that are on water tiles
-		RouteTypes eRoute = pLoopPlot->getRouteType();
+		const RouteTypes eRoute = pLoopPlot->getRouteType();
 		if (eRoute != NO_ROUTE && pLoopPlot->isWater() && !GC.getRouteInfo(eRoute).isSeaTunnel() )
 		{
 			pLoopPlot->setRouteType(NO_ROUTE, false);
