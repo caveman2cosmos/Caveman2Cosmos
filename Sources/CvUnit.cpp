@@ -30662,15 +30662,15 @@ bool CvUnit::isAlwaysHostile(const CvPlot* pPlot) const
 bool CvUnit::verifyStackValid()
 {
 	CvPlot* pPlot = plot();
-
 	foreach_ (CvUnit* unit, pPlot->units())
 	{
-		if (unit != this && isEnemy(unit->getTeam(), NULL, unit) && !unit->isInvisible(getTeam(),false) && !canCoexistWithTeamOnPlot(unit->getTeam(), *pPlot))
+		if (unit != this && isEnemy(unit->getTeam(), NULL, unit)
+		&& !unit->canCoexistWithTeamOnPlot(getTeam(), *pPlot)
+		&& !canCoexistWithTeamOnPlot(unit->getTeam(), *pPlot))
 		{
 			return jumpToNearestValidPlot();
 		}
 	}
-
 	return true;
 }
 
