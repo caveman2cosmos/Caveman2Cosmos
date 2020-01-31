@@ -5984,7 +5984,7 @@ bool CvPlot::isFriendlyCity(const CvUnit& kUnit, bool bCheckImprovement) const
 		return false;
 	}
 
-	if (isVisibleEnemyUnit(&kUnit))
+	if (isVisiblePotentialEnemyDefender(&kUnit))
 	{
 		return false;
 	}
