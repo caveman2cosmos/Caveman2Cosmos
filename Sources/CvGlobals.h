@@ -166,48 +166,6 @@ class CvMapSwitchInfo;
 #include "CvInfoReplacements.h"
 #include <stack>
 
-//	KOSHLING - granular control over callback enabling
-#define GRANULAR_CALLBACK_CONTROL
-#ifdef GRANULAR_CALLBACK_CONTROL
-typedef enum
-{
-	CALLBACK_TYPE_CAN_TRAIN = 1,
-	CALLBACK_TYPE_CANNOT_TRAIN = 2,
-	CALLBACK_TYPE_CAN_BUILD = 3
-} PythonCallbackTypes;
-
-class GranularCallbackController
-{
-public:
-	GranularCallbackController()
-	{
-		m_rawInputProcessed = false;
-	}
-
-	//	Unit list for a named (unit based) callback which must be enabled
-	//	Logically OR'd into the current set
-	void RegisterUnitCallback(PythonCallbackTypes eCallbackType, const char* unitList);
-	//	Unit list for a named (improvement based) callback which must be enabled
-	//	Logically OR'd into the current set
-	void RegisterBuildCallback(PythonCallbackTypes eCallbackType, const char* buildList);
-	
-	bool IsUnitCallbackEnabled(PythonCallbackTypes eCallbackType, UnitTypes eUnit) const;
-	bool IsBuildCallbackEnabled(PythonCallbackTypes eCallbackType, BuildTypes eBuild) const;
-
-	void Read(FDataStreamBase *);
-	void Write(FDataStreamBase *) const;
-
-private:
-	void ProcessRawInput() const;
-
-	std::map<PythonCallbackTypes,std::vector<CvString> > m_rawUnitCallbacks;			//	Raw strings aggregated from each registartion call
-	std::map<PythonCallbackTypes,std::vector<CvString> > m_rawBuildCallbacks;		//	Raw strings aggregated from each registartion call
-	mutable std::map<PythonCallbackTypes,std::map<UnitTypes,bool> > m_unitCallbacks;			//	Processed list indexed by unit types
-	mutable std::map<PythonCallbackTypes,std::map<BuildTypes,bool> > m_buildCallbacks;	//	Processed list indexed by improvement types
-	mutable bool m_rawInputProcessed;
-};
-#endif
-
 extern CvDLLUtilityIFaceBase* g_DLL;
 
 class cvInternalGlobals
@@ -1931,12 +1889,6 @@ protected:
 /*                                                                                              */
 /* Efficiency, Options                                                                          */
 /************************************************************************************************/
-	//	Koshling - granular callback control
-#ifdef GRANULAR_CALLBACK_CONTROL
-public:
-	mutable GranularCallbackController	m_pythonCallbackController;
-#endif
-
 public:
 	int getDefineINT( const char * szName, const int iDefault ) const;
 	
