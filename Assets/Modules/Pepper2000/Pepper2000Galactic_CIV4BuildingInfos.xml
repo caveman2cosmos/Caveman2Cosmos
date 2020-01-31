@@ -1413,6 +1413,7 @@
 			<Strategy>TXT_KEY_BUILDING_RAK_MESBA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RAK_MESBA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_RAK_MESBA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ULTIMA_ARCHITECTURE</PrereqTech>
 			<iCost>22063</iCost>
@@ -1486,6 +1487,7 @@
 			<Strategy>TXT_KEY_BUILDING_PROJECT_ICARUS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PROJECT_ICARUS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_PROJECT_ICARUS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_SPACEPUNK</PrereqTech>
 			<iCost>5448</iCost>
@@ -1525,6 +1527,7 @@
 			<Strategy>TXT_KEY_BUILDING_PROJECT_PERSEPHONE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PROJECT_PERSEPHONE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_PROJECT_PERSEPHONE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<iCost>6195</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -1570,6 +1573,7 @@
 			<Strategy>TXT_KEY_BUILDING_STARDATE_CALENDAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_STARDATE_CALENDAR</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_STARDATE_CALENDAR</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERSTELLAR_COMMUNICATION</PrereqTech>
 			<iCost>7963</iCost>
@@ -7569,6 +7573,7 @@
 			<Strategy>TXT_KEY_BUILDING_WORMHOLE_NETWORK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WORMHOLE_NETWORK</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_WORMHOLE_NETWORK</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GALACTIC_ENGINEERING</PrereqTech>
 			<iCost>23064</iCost>
@@ -7821,6 +7826,7 @@
 			<Strategy>TXT_KEY_BUILDING_TRANTOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TRANTOR</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TRANTOR</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ASTROIMPERIALISM</PrereqTech>
 			<iCost>14444</iCost>
@@ -7866,6 +7872,7 @@
 			<Strategy>TXT_KEY_BUILDING_ONYX_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ONYX</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ONYX</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ARTIFICIAL_PLANETS</PrereqTech>
 			<iCost>14444</iCost>
@@ -8099,6 +8106,7 @@
 			<Strategy>TXT_KEY_BUILDING_PROXIMA_CENTAURI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PROXIMA_CENTAURI</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_PROXIMA_CENTAURI</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERSTELLAR_COLONIZATION</PrereqTech>
 			<iCost>8998</iCost>
@@ -8154,6 +8162,7 @@
 			<Strategy>TXT_KEY_BUILDING_WOLF_1061C_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WOLF_1061C</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_WOLF_1061C</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERSTELLAR_COLONIZATION</PrereqTech>
 			<iCost>8998</iCost>
@@ -8413,6 +8422,7 @@
 			<Strategy>TXT_KEY_BUILDING_PERSEUS_ARM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PERSEUS_ARM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_PERSEUS_ARM</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</PrereqTech>
 			<iCost>33800</iCost>
@@ -8516,6 +8526,7 @@
 			<Strategy>TXT_KEY_BUILDING_SCUTUM_CRUX_ARM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SCUTUM_CRUX_ARM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SCUTUM_CRUX_ARM</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</PrereqTech>
 			<iCost>33800</iCost>

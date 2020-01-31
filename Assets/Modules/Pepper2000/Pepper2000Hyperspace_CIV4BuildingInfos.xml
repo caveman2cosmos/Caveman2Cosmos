@@ -1772,6 +1772,7 @@
 			<Strategy>TXT_KEY_BUILDING_UNIVERSE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_SELF_CREATION</PrereqTech>
 			<iCost>14732</iCost>

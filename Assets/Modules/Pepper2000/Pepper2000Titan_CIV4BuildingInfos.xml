@@ -420,6 +420,7 @@
 			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_TITAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_TITAN</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TERRAFORMED_TITAN</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LUNAR_TERRAFORMING</PrereqTech>
 			<iCost>22747</iCost>
