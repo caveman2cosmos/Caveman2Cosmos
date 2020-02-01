@@ -19838,8 +19838,8 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RAJPUT_PEDIA</Tag>
 		<English>The Rajput was a primarily Hindu warrior caste located in the northwestern region of India once known as Rajputana, now Rajasthan. Taking great pride in their ancestry and its emphasis on military virtues, the Rajput grew in power until 1616, when all the major clans had no choice but to submit to the might of Akbar and his Mughal Empire. The Rajput warriors were known for using the unique and deadly pata, a sword-like weapon where the blade and the gauntlet were integrated into a single piece that was held by the wielder.</English>
-		<French>Unité Culturelle Unique Pakistanais.</French>
-		<Italian>Unità unica Pakistana.</Italian>
+		<French>Unité culturelle unique pakistanais.</French>
+		<Italian>Unità unica pakistana.</Italian>
 		<Polish>Pakistańska jednostka kulturowa.</Polish>
 	</TEXT>
 	<TEXT>
@@ -31013,7 +31013,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KARAWETARI_STRATEGY</Tag>
-		<English>The [COLOR_UNIT_TEXT]Karawetari[COLOR_REVERT] is a Yanomani unique unit.</English>
+		<English>The [COLOR_UNIT_TEXT]Karawetari[COLOR_REVERT] is a Yanomami unique unit.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARWA_AL_SULAYHI</Tag>

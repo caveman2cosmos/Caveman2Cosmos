@@ -3807,16 +3807,12 @@
 	</TEXT>-->
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GHANA</Tag>
-		<English>Ghanian</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_GHANIAN</Tag>
-		<English>Ghanian</English>
+		<English>Ghanaian</English>
 		<French>Ghanéen</French>
 		<Polish>Ghany</Polish>
 	</TEXT><!--
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_GHANIAN_PEDIA</Tag>
+		<Tag>TXT_KEY_BONUS_GHANA_PEDIA</Tag>
 	</TEXT>-->
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GHEEOIL</Tag>
@@ -5453,10 +5449,6 @@
 		<Tag>TXT_KEY_BONUS_LYDIAN_PEDIA</Tag>
 	</TEXT>-->
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_LYDIANS</Tag>
-		<English>Lydians</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_LYE</Tag>
 		<English>Lye</English>
 		<French>Lessive</French>
@@ -5956,16 +5948,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MISSI</Tag>
 		<English>Mississippian</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_MISSISIPPI</Tag>
-		<English>Mississippian</English>
 		<French>Mississippien</French>
 		<Italian>Mississippiano</Italian>
 		<Polish>Mississipi</Polish>
 	</TEXT><!--
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_MISSISIPPI_PEDIA</Tag>
+		<Tag>TXT_KEY_BONUS_MISSI_PEDIA</Tag>
 	</TEXT>-->
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MITHRIL</Tag>
@@ -6811,10 +6799,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PAIUTE_PEDIA</Tag>
 	</TEXT>-->
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_PAKISTAN</Tag>
-		<English>Pakistan</English>
-	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PAKISTANI</Tag>
 		<English>Pakistani</English>
@@ -8624,15 +8608,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SLOVAKIA</Tag>
 		<English>Slovakian</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_SLOVAKIAN</Tag>
-		<English>Slovakian</English>
 		<French>Slovaques</French>
 		<Polish>Słowacka</Polish>
 	</TEXT><!--
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_SLOVAKIAN_PEDIA</Tag>
+		<Tag>TXT_KEY_BONUS_SLOVAKIA_PEDIA</Tag>
 	</TEXT>-->
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SLOVENIAN</Tag>
@@ -10449,10 +10429,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_XIONGNU_PEDIA</Tag>
 	</TEXT>-->
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_XIONGU</Tag>
-		<English>Xiongnu</English>
-	</TEXT>
 <!-- Y -->
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_YAGHAN</Tag>
@@ -10482,10 +10458,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_YANOMAMI_PEDIA</Tag>
 	</TEXT>-->
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_YANOMANI</Tag>
-		<English>Yanomami</English>
-	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_YEMEN</Tag>
 		<English>Yemeni</English>

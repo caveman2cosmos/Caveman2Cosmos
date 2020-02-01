@@ -37657,7 +37657,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
-			<BonusType>BONUS_XIONGU</BonusType>
+			<BonusType>BONUS_XIONGNU</BonusType>
 			<iCost>1300</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
