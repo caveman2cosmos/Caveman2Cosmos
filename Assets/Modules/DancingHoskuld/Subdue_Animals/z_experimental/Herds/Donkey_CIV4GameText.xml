@@ -4,7 +4,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DONKEY</Tag>
 		<English>Donkey</English>
-		<French>Ane</French>
+		<French>
+			<Text>Onagre</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>Onagro</Italian>
+		<Spanish>
+			<Text>Onagro</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Dziki Osioł</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DONKEY_PEDIA</Tag>

@@ -184,7 +184,7 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_2</Type>
-			<Description>CHANGED_TXT_KEY_UNIT_EXECUTIVE_2</Description>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_2</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>5</iMaxPlayerInstances>

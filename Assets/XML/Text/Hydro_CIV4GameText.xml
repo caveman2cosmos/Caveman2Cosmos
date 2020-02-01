@@ -17844,24 +17844,6 @@
 		<Polish>P'urhepecha, w starszej literaturze określani jako Taraskowie - grupa etniczna zamieszkująca w meksykańskim stanie Michoacan, zwłaszcza w okolicy miastUruapan i Patzcuaro. Posługuje się własnym odrębnym językiem, niespokrewnionym z innymi językami indiańskimi.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TASMANIAN_EMBASSY</Tag>
-		<English>Culture (Tasmanian)</English>
-		<French>Culture (Tasmanienne)</French>
-		<Polish>Kultura (Tasmańska)</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TASMANIAN_EMBASSY_STRATEGY</Tag>
-		<English>Build Culture (Tasmanian) to gain access to unique buildings and units.</English>
-		<French>Construisez la Culture (Tasmanienne) pour avoir accès à des bâtiments et unités uniques.</French>
-		<German>Kulturen ermöglichen den Zugriff auf kulturspezifische Gebäude und Einheiten.</German>
-		<Polish>Zbuduj Culture (Tasmanian) to gain access to unique buildings and units.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TASMANIAN_EMBASSY_PEDIA</Tag>
-		<English>The Colony of Tasmania was a British colony that existed on the island of Tasmania from 1856 until 1901, when it federated together with the five other Australian colonies to form the Commonwealth of Australia. The possibility of the colony was established when the Westminster Parliament passed the Australian Colonies Government Act 1850, granting the right of legislative power to each of the six Australian colonies.</English>
-		<Polish>Przed przybyciem Europejczyków Tasmania była zamieszkana przez Aborygenów tasmańskich, których liczebność wahała się pomiędzy 5 i 10 tys. w 1803. W wyniku osadnictwa brytyjskiego i chorób populacja ich uległa zmniejszeniu do ok. 300 osób w 1833. Część Aborygenów wyginęła, a część zmieszała się z populacją osadników. Do prawdziwej hekatomby ludności tubylczej Tasmanii doszło w I połowie XIX wieku. Trwająca wtedy tzw. Czarna wojna doprowadziła do całkowitego wyniszczenia rodzimej ludności tej wyspy. Wówczas także większość autochtonów przesiedlono na Wyspę Flindersa; odpowiedzialny był za to George Augustus Robinson.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TEXAN_EMBASSY</Tag>
 		<English>Culture (Texan)</English>
 		<French>Culture (Texanne)</French>
@@ -17934,23 +17916,6 @@
 		<Tag>TXT_KEY_BUILDING_TONGAN_EMBASSY_PEDIA</Tag>
 		<English>Tonga, officially the Kingdom of Tonga, is a Polynesian sovereign state and archipelago comprising 176 islands with a surface area of about 750 square kilometres (290 sq mi) scattered over 700,000 square kilometres (270,000 sq mi) of the southern Pacific Ocean.</English>
 		<Polish>Język tonga (język tongijski, faka-Tonga) - język z grupy polinezyjskiej języków austronezyjskich, którym posługuje się około 100 tys. mówiących, mieszkańców Wysp Tonga. Jest to język urzędowy Tonga. Jest blisko spokrewniony z językiem niue, z którym tworzą podgrupę tongańską języków polinezyjskich. Najbardziej znaną pożyczką językową z języka tongijskiego jest słowo "tabu", rozpowszechnione przez literaturę antropologiczną.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TOTONAC_EMBASSY</Tag>
-		<English>Culture (Totonac)</English>
-		<Polish>Kultura (Totonac)</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TOTONAC_EMBASSY_STRATEGY</Tag>
-		<English>Build Culture (Totonac) to gain access to unique buildings and units.</English>
-		<French>Construisez la Culture (Totonac) pour avoir accès à des bâtiments et unités uniques.</French>
-		<German>Kulturen ermöglichen den Zugriff auf kulturspezifische Gebäude und Einheiten.</German>
-		<Polish>Zbuduj Culture (Totonac) to gain access to unique buildings and units.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TOTONAC_EMBASSY_PEDIA</Tag>
-		<English>The Totonac people resided in the eastern coastal and mountainous regions of Mexico at the time of the Spanish arrival in 1519. Today they reside in the states of Veracruz, Puebla, and Hidalgo. They are one of the possible builders of the Pre-Columbian city of El Tajin, and further maintained quarters in Teotihuacan (a city which they claim to have built). Until the mid-19th century they were the world's main producers of vanilla.</English>
-		<Polish>Totonakowie - lud indiański w Meksyku, w czasachprekolumbijskich zajmowali wschodnie wybrzeże i górzyste regionyMeksyku. Obecnie zamieszkują północną część stanów Veracruz iPuebla. Posługują się językiem z grupy penuti, spokrewnionym zjęzykiem maja, używają także języka hiszpańskiego. Obecnie społeczność Totonaków liczy ok. 280 tys. osób (1993). Zajmują się przede wszystkim rolnictwem, rybołówstwem morskim i rzemiosłem, zachowując dawne zwyczaje i folklor. Kultura Totonaków przeżywała swój największy rozkwit od II do X wieku, a jej głównym ośrodkiem było El Tajin. Totonacapan - czyli kraj Totonaków zorganizowany był teokratycznie. W panteonie bóstw najważniejsze miejsce zajmował Centeotl - bóg kukurydzy, reprezentujący potęgę życiodajnego słońca, następnie Tajin - bóg deszczu i piorunów, odpowiednik Tlaloca, i Quetzalcoatla. Cechą charakterystyczną ich sztuki była rzeźba, zwłaszcza ludzkie twarze rozjaśnione uśmiechem. Tzw. "uśmiechnięte twarzyczki" wyróżniają się na tle przedstawień prekolumbijskich, wyrażających na ogół powagę, grozę i potęgę, wierzenia Indian oparte były bowiem głównie na niepokoju, lęku, a nawet strachu.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AKKAD_EMBASSY</Tag>
@@ -18240,40 +18205,6 @@
 		<Tag>TXT_KEY_BUILDING_NOK_EMBASSY_PEDIA</Tag>
 		<English>TBD</English>
 		<Polish>Nok, kultura Nok - kultura ludu zamieszkującego niegdyś tereny na południe od Sahary, między rzekami Niger i Benue (tereny dzisiejszej środkowej Nigerii). Lud ten prowadził osiadły tryb życia oraz zajmował się rolnictwem i hodowlą bydła. Istnienie kultury Nok datuje się na okres od około 500 roku p.n.e. do około 200 roku n.e.. Pozostałe po niej ślady są najstarszymi rozpoznawalnymi dowodami istnienia zorganizowanego społeczeństwa na tym terenie Afryki.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_OMAN_EMBASSY</Tag>
-		<English>Culture (Oman)</English>
-		<Polish>Kultura (Omańska)</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_OMAN_EMBASSY_STRATEGY</Tag>
-		<English>Build Culture (Oman) to gain access to unique buildings and units.</English>
-		<French>Construisez la Culture (Oman) pour avoir accès à des bâtiments et unités uniques.</French>
-		<German>Kulturen ermöglichen den Zugriff auf kulturspezifische Gebäude und Einheiten.</German>
-		<Polish>Zbuduj Culture (Oman) to gain access to unique buildings and units.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_OMAN_EMBASSY_PEDIA</Tag>
-		<English>TBD</English>
-		<Polish>Oman był położony na ważnych szlakach handlowych, dlatego już w drugim tysiącleciu p.n.e. produkowano kadzidła, wtedy też był bogatym i ważnym państwem. Znajdowało się tam miasto Irem. Przed islamizacją w VII wieku kraj był często niszczony przez wojny plemienne i perskie najazdy. W VIII wieku mieszkańcy Omanu przyjęli doktrynę ibadycką islamu i pod rządami wybranego przez siebie imama uniezależnili się od kalifatu Abbasydów. W X wieku kraj został podbity przez Seldżuków. Obieralni imamowie rządzili Omanem do XVIII wieku. W 1507 do portu zaczęli przypływać Portugalczycy i osiedlać się. W 1515 założyli obecną stolicę Omanu - Maskat. W 1650 Portugalczycy zostali wyparci przez Arabów, jednak w czasach nowożytnych Oman był także kilkakrotnie krótkotrwale okupowany przez Turcję i Persję. Obecnie panująca dynastia doszła do władzy pod koniec XVIII wieku. Następnie Oman popadł w zależność od Wielkiej Brytanii, pozostając jednakże krajem formalnie niepodległym (traktaty o przyjaźni, handlu i nawigacji). Bunty plemion z głębi kraju przeciwko władzy sułtana doprowadziły do podpisania przy udziale Brytyjczyków porozumienia, w wyniku którego w okresie 1913-1957 istniały de facto dwa państwa: sułtanat Maskatu i imamat Omanu. W 1951, na mocy układu z sułtanem, którym był wówczas Said III ibn-Taimur, Wielka Brytania potwierdziła niepodległość Omanu jako jednego państwa (Sułtanat Maskatu i Omanu). W latach 1783-1958 do Omanu należał także port Gwadar w Beludżystanie, sprzedany następnie przez sułtana Pakistanowi.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PAIUTE_EMBASSY</Tag>
-		<English>Culture (Paiute)</English>
-		<Polish>Kultura (Paiute)</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PAIUTE_EMBASSY_STRATEGY</Tag>
-		<English>Build Culture (Paiute) to gain access to unique buildings and units.</English>
-		<French>Construisez la Culture (Paiute) pour avoir accès à des bâtiments et unités uniques.</French>
-		<German>Kulturen ermöglichen den Zugriff auf kulturspezifische Gebäude und Einheiten.</German>
-		<Polish>Zbuduj Culture (Paiute) to gain access to unique buildings and units.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PAIUTE_EMBASSY_PEDIA</Tag>
-		<English>TBD</English>
-		<Polish>Pajutowie, Pajuci (nazwa własna 'Pi ut, ang. Paiute - "Prawdziwi Ute" lub "Wodni Ute") - plemię Indian północnoamerykańskich z szoszońskiej grupyjęzyków uto-azteckich, zamieszkujące w przeszłości stany Arizona iKalifornia (Pajutowie Południowi nazywani przez białych Kopaczami) orazIdaho, Nevada, Oregon i Utah (Pajutowie Północni zwani Wężami, od nazwy rzeki Snake, nad którą zamieszkiwali) w Stanach Zjednoczonych.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAMOAN_EMBASSY</Tag>
@@ -32414,12 +32345,6 @@
 		<Polish>Turystyka (Poziom 1)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TOURISM_PLUS1</Tag>
-		<English>Tourism (Level 1)</English>
-		<French>Tourisme (Niveau 1)</French>
-		<Polish>Turystyka (Poziom 1)</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOURISM_PLUS2</Tag>
 		<English>Tourism (Level 2)</English>
 		<French>Tourisme (Niveau 2)</French>
@@ -34834,20 +34759,6 @@
 		<Polish>Szop pracz, szop amerykański (Procyon lotor) - gatunek średnich rozmiarów ssaka z rodziny szopowatych (Procyonidae) pochodzący z Ameryki Północnej. Największy przedstawiciel rodziny szopowatych, o ciele długości od 40 do 70 cm i masie 3,5-9 kg, zazwyczaj aktywny w nocy. Szop jest wszystkożerny, a jego dieta zawiera w 40% bezkręgowce, w 33% - rośliny i w 27% - kręgowce. Sierść szopa o szarym kolorze w 90% składa się z gęstego podszerstka, który chroni przed zimnem. Najbardziej charakterystyczne cechy szopa pracza to niezwykle zręczne przednie łapy i czarny wzór maski wokół oczu; są one elementami mitologii kilku szczepówIndian. Szopy znane są z inteligencji; badania wykazują, że zwierzęta te przechowują w pamięci rozwiązania zadań nawet przez trzy lata.</Polish>
 	</TEXT>
 	<!-- Game Text Infos -->
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_ELEPHANT</Tag>
-		<English>Elephants</English>
-		<French>
-			<Text>Eléphants</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<Italian>
-			<Text>Elefanti</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
-	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VILLA2</Tag>
 		<English>Grand Villa</English>
@@ -37386,15 +37297,19 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PAIUTE_EMBASSY</Tag>
 		<English>Culture (Paiute)</English>
+		<Polish>Kultura (Paiute)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PAIUTE_EMBASSY_STRATEGY</Tag>
 		<English>Build Culture (Paiute) to gain access to unique buildings and units.</English>
+		<French>Construisez la Culture (Paiute) pour avoir accès à des bâtiments et unités uniques.</French>
 		<German>Kulturen ermöglichen den Zugriff auf kulturspezifische Gebäude und Einheiten.</German>
+		<Polish>Zbuduj Culture (Paiute) to gain access to unique buildings and units.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PAIUTE_EMBASSY_PEDIA</Tag>
 		<English>The Northern Paiute traditionally have lived in the Great Basin in eastern California, western Nevada, and southeast Oregon. The Northern Paiute's pre-contact lifestyle was well adapted to the harsh desert environment in which they lived. Each tribe or band occupied a specific territory, generally centered on a lake or wetland that supplied fish and water-fowl. Communal drives, which often involved neighboring bands, would take rabbits and pronghorn from surrounding areas. Individuals and families appear to have moved freely between bands. Pinyon nuts gathered in the mountains in the fall provided critical winter food. Grass seeds and roots were also important parts of their diet. The name of each band came from a characteristic food source. For example, the people at Pyramid Lake were known as the Cui Ui Ticutta (meaning "Cui-ui eaters"), the people of the Lovelock area were known as the Koop Ticutta, meaning "ground-squirrel eaters", and the people of the Carson Sink were known as the Toi Ticutta, meaning "tule eaters". The Kucadikadi of Mono County, California are the "brine fly eaters".</English>
+		<Polish>Pajutowie, Pajuci (nazwa własna 'Pi ut, ang. Paiute - "Prawdziwi Ute" lub "Wodni Ute") - plemię Indian północnoamerykańskich z szoszońskiej grupyjęzyków uto-azteckich, zamieszkujące w przeszłości stany Arizona iKalifornia (Pajutowie Południowi nazywani przez białych Kopaczami) orazIdaho, Nevada, Oregon i Utah (Pajutowie Północni zwani Wężami, od nazwy rzeki Snake, nad którą zamieszkiwali) w Stanach Zjednoczonych.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALESTINIAN_EMBASSY</Tag>
@@ -37932,15 +37847,20 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TASMANIAN_EMBASSY</Tag>
 		<English>Culture (Tasmanian)</English>
+		<French>Culture (Tasmanienne)</French>
+		<Polish>Kultura (Tasmańska)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TASMANIAN_EMBASSY_STRATEGY</Tag>
 		<English>Build Culture (Tasmanian) to gain access to unique buildings and units.</English>
+		<French>Construisez la Culture (Tasmanienne) pour avoir accès à des bâtiments et unités uniques.</French>
 		<German>Kulturen ermöglichen den Zugriff auf kulturspezifische Gebäude und Einheiten.</German>
+		<Polish>Zbuduj Culture (Tasmanian) to gain access to unique buildings and units.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TASMANIAN_EMBASSY_PEDIA</Tag>
-		<English>Evidence indicates the presence of Aborigines in Tasmania about 40,000 years ago. Rising sea levels cut Tasmania off from mainland Australia about 10,000 years ago and by the time of European contact, the Aboriginal people in Tasmania had nine major nations, or ethnic groups. At the time of the British occupation and colonisation in 1803 the indigenous population was estimated at between 3000 and 10,000. Historian Lyndall Ryan's analysis of population studies led her to conclude that there were about 7000 spread throughout the island's nine nations; Nicholas Clements, citing research by N.J.B Plomley and Rhys Jones, settled on a figure of 3000 to 4000. They engaged in fire-stick farming, hunted game including kangaroo and wallabies, caught seals, mutton-birds, shellfish and fish and lived as nine separate "nations" on the island, which they knew as "Trouwunna".</English>
+		<English>Evidence indicates the presence of Aborigines in Tasmania about 40,000 years ago. Rising sea levels cut Tasmania off from mainland Australia about 10,000 years ago and by the time of European contact, the Aboriginal people in Tasmania had nine major nations, or ethnic groups. At the time of the British occupation and colonisation in 1803 the indigenous population was estimated at between 3000 and 10,000. Historian Lyndall Ryan's analysis of population studies led her to conclude that there were about 7000 spread throughout the island's nine nations; Nicholas Clements, citing research by N.J.B Plomley and Rhys Jones, settled on a figure of 3000 to 4000. They engaged in fire-stick farming, hunted game including kangaroo and wallabies, caught seals, mutton-birds, shellfish and fish and lived as nine separate "nations" on the island, which they knew as "Trouwunna".[NEWLINE]The Colony of Tasmania was a British colony that existed on the island of Tasmania from 1856 until 1901, when it federated together with the five other Australian colonies to form the Commonwealth of Australia. The possibility of the colony was established when the Westminster Parliament passed the Australian Colonies Government Act 1850, granting the right of legislative power to each of the six Australian colonies.</English>
+		<Polish>Przed przybyciem Europejczyków Tasmania była zamieszkana przez Aborygenów tasmańskich, których liczebność wahała się pomiędzy 5 i 10 tys. w 1803. W wyniku osadnictwa brytyjskiego i chorób populacja ich uległa zmniejszeniu do ok. 300 osób w 1833. Część Aborygenów wyginęła, a część zmieszała się z populacją osadników. Do prawdziwej hekatomby ludności tubylczej Tasmanii doszło w I połowie XIX wieku. Trwająca wtedy tzw. Czarna wojna doprowadziła do całkowitego wyniszczenia rodzimej ludności tej wyspy. Wówczas także większość autochtonów przesiedlono na Wyspę Flindersa; odpowiedzialny był za to George Augustus Robinson.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TATARS_EMBASSY</Tag>
@@ -38010,15 +37930,19 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOTONAC_EMBASSY</Tag>
 		<English>Culture (Totonac)</English>
+		<Polish>Kultura (Totonac)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOTONAC_EMBASSY_STRATEGY</Tag>
 		<English>Build Culture (Totonac) to gain access to unique buildings and units.</English>
+		<French>Construisez la Culture (Totonac) pour avoir accès à des bâtiments et unités uniques.</French>
 		<German>Kulturen ermöglichen den Zugriff auf kulturspezifische Gebäude und Einheiten.</German>
+		<Polish>Zbuduj Culture (Totonac) to gain access to unique buildings and units.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOTONAC_EMBASSY_PEDIA</Tag>
 		<English>The Totonac people resided in the eastern coastal and mountainous regions of Mexico at the time of the Spanish arrival in 1519. Today they reside in the states of Veracruz, Puebla, and Hidalgo. They are one of the possible builders of the Pre-Columbian city of El Tajín, and further maintained quarters in Teotihuacan (a city which they claim to have built). Until the mid-19th century they were the world's main producers of vanilla.</English>
+		<Polish>Totonakowie - lud indiański w Meksyku, w czasachprekolumbijskich zajmowali wschodnie wybrzeże i górzyste regionyMeksyku. Obecnie zamieszkują północną część stanów Veracruz iPuebla. Posługują się językiem z grupy penuti, spokrewnionym zjęzykiem maja, używają także języka hiszpańskiego. Obecnie społeczność Totonaków liczy ok. 280 tys. osób (1993). Zajmują się przede wszystkim rolnictwem, rybołówstwem morskim i rzemiosłem, zachowując dawne zwyczaje i folklor. Kultura Totonaków przeżywała swój największy rozkwit od II do X wieku, a jej głównym ośrodkiem było El Tajin. Totonacapan - czyli kraj Totonaków zorganizowany był teokratycznie. W panteonie bóstw najważniejsze miejsce zajmował Centeotl - bóg kukurydzy, reprezentujący potęgę życiodajnego słońca, następnie Tajin - bóg deszczu i piorunów, odpowiednik Tlaloca, i Quetzalcoatla. Cechą charakterystyczną ich sztuki była rzeźba, zwłaszcza ludzkie twarze rozjaśnione uśmiechem. Tzw. "uśmiechnięte twarzyczki" wyróżniają się na tle przedstawień prekolumbijskich, wyrażających na ogół powagę, grozę i potęgę, wierzenia Indian oparte były bowiem głównie na niepokoju, lęku, a nawet strachu.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRANSOXANIAN_EMBASSY</Tag>

@@ -30689,7 +30689,7 @@
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TRIREME</Description>
-			<Civilopedia>CHANGED_TXT_KEY_UNIT_TRIREME_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_UNIT_TRIREME_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_TRIREME_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
