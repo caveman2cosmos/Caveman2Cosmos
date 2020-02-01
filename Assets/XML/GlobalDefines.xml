@@ -361,7 +361,7 @@
 	</Define>
 	<Define>
 		<DefineName>MIN_BARBARIAN_CITY_STARTING_DISTANCE</DefineName>
-		<iDefineIntVal>4</iDefineIntVal>
+		<iDefineIntVal>3</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>MIN_CITY_RANGE</DefineName>

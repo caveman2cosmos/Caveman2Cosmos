@@ -1,11 +1,8 @@
 <?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- -->
-<!-- Handicap Infos -->
-<!-- Revolution Mod only changed settings relating to creation of barbarian cities and units -->
+<!-- 
+	iBarbarianCityCreationProb:
+		Base percent chance per turn for barbarian city spawn on normal gamespeed, on eternity a value of 1 means 0.1% chance per turn.:
+ -->
 <Civ4HandicapInfo xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
 	<HandicapInfos>
 		<HandicapInfo>
@@ -67,9 +64,9 @@
 			<iUnownedTilesPerBarbarianUnit>60</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>180</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>60</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>42</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag --> <!-- Unused in dll code, dead tag -->
+			<iBarbarianCreationTurnsElapsed>42</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>40</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>1</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>4</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>1</iBarbarianDefenders>
 			<iAnimalBonus>-60</iAnimalBonus>
 			<iBarbarianBonus>-60</iBarbarianBonus>
@@ -332,7 +329,7 @@
 			<iUnownedTilesPerBarbarianCity>55</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCreationTurnsElapsed>38</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>39</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>1</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>6</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>1</iBarbarianDefenders>
 			<iAnimalBonus>-40</iAnimalBonus>
 			<iBarbarianBonus>-40</iBarbarianBonus>
@@ -622,7 +619,7 @@
 			<iUnownedTilesPerBarbarianCity>50</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCreationTurnsElapsed>34</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>38</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>2</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>8</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>2</iBarbarianDefenders>
 			<iAnimalBonus>-20</iAnimalBonus>
 			<iBarbarianBonus>-20</iBarbarianBonus>
@@ -899,7 +896,7 @@
 			<iUnownedTilesPerBarbarianCity>45</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCreationTurnsElapsed>30</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>37</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>2</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>10</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>3</iBarbarianDefenders>
 			<iAIDeclareWarProb>65</iAIDeclareWarProb>
 			<iAIGrowthPercent>100</iAIGrowthPercent>
@@ -1205,7 +1202,7 @@
 			<iUnownedTilesPerBarbarianCity>40</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCreationTurnsElapsed>26</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>36</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>3</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>12</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>4</iBarbarianDefenders>
 			<iAIAnimalBonus>-10</iAIAnimalBonus>
 			<iAIBarbarianBonus>-10</iAIBarbarianBonus>
@@ -1520,7 +1517,7 @@
 			<iUnownedTilesPerBarbarianCity>35</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCreationTurnsElapsed>22</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>35</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>3</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>14</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>5</iBarbarianDefenders>
 			<iAIAnimalBonus>-20</iAIAnimalBonus>
 			<iAIBarbarianBonus>-20</iAIBarbarianBonus>
@@ -1845,7 +1842,7 @@
 			<iUnownedTilesPerBarbarianCity>30</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCreationTurnsElapsed>18</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>34</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>4</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>16</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>6</iBarbarianDefenders>
 			<iAIAnimalBonus>-30</iAIAnimalBonus>
 			<iAIBarbarianBonus>-30</iAIBarbarianBonus>
@@ -2202,7 +2199,7 @@
 			<iUnownedTilesPerBarbarianCity>25</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCreationTurnsElapsed>14</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>33</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>4</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>18</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>7</iBarbarianDefenders>
 			<iAIAnimalBonus>-40</iAIAnimalBonus>
 			<iAIBarbarianBonus>-40</iAIBarbarianBonus>
@@ -2548,7 +2545,7 @@
 			<iUnownedTilesPerBarbarianCity>20</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCreationTurnsElapsed>10</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>32</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>5</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>20</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>8</iBarbarianDefenders>
 			<iAIAnimalBonus>-50</iAIAnimalBonus>
 			<iAIBarbarianBonus>-50</iAIBarbarianBonus>
@@ -2921,7 +2918,7 @@
 			<iUnownedTilesPerBarbarianCity>10</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCreationTurnsElapsed>2</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>30</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>6</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>24</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>10</iBarbarianDefenders>
 			<iAIAnimalBonus>-70</iAIAnimalBonus>
 			<iAIBarbarianBonus>-70</iAIBarbarianBonus>
@@ -3293,7 +3290,7 @@
 			<iUnownedTilesPerBarbarianCity>10</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCreationTurnsElapsed>2</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>30</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>6</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>24</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>10</iBarbarianDefenders>
 			<iAIAnimalBonus>-70</iAIAnimalBonus>
 			<iAIBarbarianBonus>-70</iAIBarbarianBonus>
