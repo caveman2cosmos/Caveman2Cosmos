@@ -20292,13 +20292,6 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 		<Spanish>Introduce la nomenclatura que desees para nombrar a las unidades de tipo 'HEALS_ALL'.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_HEALS_ALL_TEXT</Tag>
-		<English>Naming Convention: Combat[HEALS_ALL]</English>
-		<French>Convention des Noms: Combat[HEALS_ALL]</French>
-		<German>Benennungsregel: Kampf[HEALS_ALL]</German>
-		<Spanish>Nomenclatura: Combat[HEALS_ALL]</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_SIZE_MICROSCOPIC_HOVER</Tag>
 		<English>Enter the user defined naming convention for combat units 'SIZE_MICROSCOPIC'.</English>
 		<French>Entrez la convention des noms pour les unités 'SIZE_MICROSCOPIC'.</French>

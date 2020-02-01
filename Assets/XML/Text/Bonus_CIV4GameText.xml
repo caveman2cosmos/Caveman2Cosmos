@@ -15,7 +15,6 @@
 		<English>Wood ash is the residue powder left after the combustion of wood, such as burning wood in a home fireplace or an industrial power plant.</English>
 		<French>Les cendres de bois: c'est la poudre résiduelle restant après la combustion du bois, que ce soit pour un feu de camp ou une centrale électrique.</French>
 	</TEXT-->
-	<!-- Unsorted -->
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ABBASID</Tag>
 		<English>Abbasid</English>
@@ -2449,12 +2448,17 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ELEPHANT</Tag>
-		<English>Elephant</English>
-		<German>
-			<Text>Elefanten:Elefanten:Elefanten:Elefanten</Text>
+		<English>Elephants</English>
+		<French>
+			<Text>Eléphants</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
-		</German>
+		</French>
+		<Italian>
+			<Text>Elefanti</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ELEPHANT_PEDIA</Tag>
@@ -5695,10 +5699,6 @@
 		<Polish>Omanu</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_OMAN</Tag>
-		<English>Oman</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_OMEGA_ACIDS</Tag>
 		<English>Omega Acids</English>
 		<French>Acides Omega</French>
@@ -5846,10 +5846,6 @@
 		<Tag>TXT_KEY_BONUS_PAIUTE</Tag>
 		<English>Paiute</English>
 		<French>Païute</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_PAIUTE</Tag>
-		<English>Paiute</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PAKISTAN</Tag>
@@ -7658,14 +7654,6 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SPICES_PEDIA</Tag>
-		<English>[TAB]Certain types of plants have evolved in such a way that they produce mild toxins or repellents that make their odor or flavor distasteful to animals. Oddly enough, humans sought out many of these plants because of those smells and tastes. Merchants in the Middle East began a profitable spice trade before 2000 BC. Spices are used now, as they were in the ancient world, to preserve food and enhance its flavor. Although spices are now commercially cultivated and prepared, most types can still be found in abundance in nature. Many of the most popular spices, such as cloves and nutmeg, are extracted from plants that grow in tropical or swampy regions of the world.</English>
-		<French>[TAB]Certains types de plantes ont évolué de telle manière qu'elles produisent des toxines rendant leur odeur ou leur saveur insupportable pour les animaux. Curieusement, ces odeurs et ces saveurs ont incité l'homme à rechercher ces plantes. Les marchands du Moyen-Orient ont créé vers 2000 av. J.-C. un marché des épices extrêmement lucratif. Les épices sont utilisées aujourd'hui, comme par le passé, pour conserver la nourriture et rehausser le goût des mets. Bien que de nos jours les épices soient cultivées et préparées à échelle commerciale, la plupart peuvent encore être trouvées en grande quantité dans la nature. Certaines des épices les plus recherchées, comme la muscade ou le clou de girofle, sont extraites de plantes qui poussent dans les régions tropicales ou marécageuses.</French>
-		<German>Bestimmte Arten von Pflanzen haben sanfte Gifte oder Abwehrstoffe entwickelt, wodurch ihr Duft oder ihr Geschmack für Tiere unangenehm wird. Interessanterweise begehren Menschen oft gerade wegen dieser Gerüche und Ihres Geschmacks viele dieser Pflanzen. Kaufleute im Nahen Osten begannen um 2000 v.Chr. einen profitablen Gewürzhandel. [COLOR_HIGHLIGHT_TEXT]Gewürze[COLOR_REVERT] werden heute wie damals zur Haltbarmachung und Geschmacksverbesserung von Nahrungsmitteln verwendet. Obwohl Gewürze in unserer Zeit wirtschaftlich kultiviert und bearbeitet werden, können die meisten Arten immer noch im Überfluss in der Natur gefunden werden. Viele der beliebtesten Gewürze, wie Gewürznelken und Muskatnuss, werden aus Pflanzen extrahiert, die in tropischen oder sumpfigen Regionen der Welt wachsen.</German>
-		<Italian>[TAB]Alcuni tipi di piante si sono evoluti in modo da produrre tossine leggere o repellenti per rendere il loro odore o il loro sapore nauseante per gli animali. Stranamente, gli umani cercano queste piante proprio per queste caratteristiche; i mercanti del Medio Oriente cominciarono il commercio di spezie prima del 2000 a. C. Al giorno d'oggi, le spezie vengono usate per conservare e condire i cibi. Malgrado al giorno d'oggi molte spezie vengano coltivate e preparate industrialmente, la maggior parte si possono trovare abbondantemente in natura. Molte delle spezie più popolari, come i chiodi di garofano e le noci moscate, si estraggono da piante che crescono in regioni tropicali e paludose.</Italian>
-		<Spanish>[TAB]Algunas clases de plantas han evolucionado de tal manera que generan toxinas o repelentes suaves que hacen que su olor o sabor resulte desagradable para los animales. Curiosamente, los humanos buscan muchas de esas plantas por sus olores y sabores. Los mercaderes de Oriente Medio iniciaron el rentable comercio de especias antes del año 2000 a. C. Al igual que en la antigüedad, se utilizan ahora para conservar la comida y potenciar su sabor. Aunque actualmente se cultivan y preparan de forma comercial, la mayor parte se sigue pudiendo encontrar en abundancia en la naturaleza. La mayoría de las especias más populares, como el clavo y la nuez moscada, se cultivan en regiones tropicales o pantanosas del mundo.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_SPICES_PEDIA</Tag>
 		<English>Certain types of plants have evolved in such a way that they produce mild toxins or repellents that make their odor or flavor distasteful to animals. Oddly enough, humans sought out many of these plants because of those smells and tastes. Merchants in the Middle East began a profitable spice trade before 2000 BC. Spices are used now, as they were in the ancient world, to preserve food and enhance its flavor. Although spices are now commercially cultivated and prepared, most types can still be found in abundance in nature. Many of the most popular spices, such as cloves and nutmeg, are extracted from plants that grow in tropical or swampy regions of the world.</English>
 		<French>Certains types de plantes ont évolué de telle manière qu'elles produisent des toxines rendant leur odeur ou leur saveur insupportable pour les animaux. Curieusement, ces odeurs et ces saveurs ont incité l'homme à rechercher ces plantes. Les marchands du Moyen-Orient ont créé vers 2000 av. J.-C. un marché des épices extrêmement lucratif. Les épices sont utilisées aujourd'hui, comme par le passé, pour conserver la nourriture et rehausser le goût des mets. Bien que de nos jours les épices soient cultivées et préparées à échelle commerciale, la plupart peuvent encore être trouvées en grande quantité dans la nature. Certaines des épices les plus recherchées, comme la muscade ou le clou de girofle, sont extraites de plantes qui poussent dans les régions tropicales ou marécageuses.</French>
 		<German>Bestimmte Pflanzen produzieren milde Gifte oder abstoßende Stoffe, deren Geruch oder Geschmack Tiere fernhält. Interessanterweise sind viele dieser Pflanzen bei den Menschen gerade wegen ihres Geruchs oder Geschmacks begehrt. Bereits 2000 vor Christus entstand im nahen Osten ein profitabler Gewürzhandel. Damals wie heute werden [COLOR_HIGHLIGHT_TEXT]Gewürze[COLOR_REVERT] benutzt, um Nahrungsmittel zu konservieren und ihren Geschmack zu verbessern. Zwar werden die Gewürzpflanzen mittlerweile kommerziell angebaut und aufbereitet, die meisten Sorten sind aber nach wie vor in großen Mengen auch in der freien Natur zu finden. Viele der beliebtesten Gewürze, wie Nelken und Muskat, werden aus Pflanzen gewonnen, die in den tropischen oder sumpfigen Regionen der Welt wachsen.</German>
@@ -8105,10 +8093,6 @@
 		<Polish>Tasmańska</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_TASMANIAN</Tag>
-		<English>Tasmanian</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_TATARS</Tag>
 		<English>Tatars</English>
 	</TEXT>
@@ -8386,10 +8370,6 @@
 		<Tag>TXT_KEY_BONUS_TOTONAC</Tag>
 		<English>Totonac</English>
 		<Polish>Totonacka</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_TOTONAC</Tag>
-		<English>Totonac</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TOYS</Tag>

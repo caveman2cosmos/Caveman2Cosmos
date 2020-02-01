@@ -54,19 +54,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAODAI_SHRINE</Tag>
-		<English>Cao Dai Holy See</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CAODAI_SHRINE_PEDIA</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CAODAI_SHRINE_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Masjid al-Haram[COLOR_REVERT] ([COLOR_BUILDING_TEXT]CaoDai Shrine[COLOR_REVERT]) produces one gold each turn for every city in the world that practises [COLOR_HIGHLIGHT_TEXT]CaoDai[COLOR_REVERT]. It also spreads [COLOR_HIGHLIGHT_TEXT]CaoDai[COLOR_REVERT] thoughout the world and increases its city's chances of generating a [COLOR_UNIT_TEXT]Great Prophet[COLOR_REVERT].</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CAODAI_SHRINE</Tag>
-		<English>Great Temple Tay Ninh (Cao Dai SHRINE)</English>
+		<English>Great Temple Tay Ninh</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAODAI_SHRINE_PEDIA</Tag>
