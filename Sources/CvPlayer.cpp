@@ -14421,7 +14421,7 @@ void CvPlayer::changeMaintenanceModifier(int iChange)
     }
 }
 
-int CvPlayer::getCoastalDistanceMaintenanceModifier()
+int CvPlayer::getCoastalDistanceMaintenanceModifier() const
 {
     return m_iCoastalDistanceMaintenanceModifier;
 }

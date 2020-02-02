@@ -52,7 +52,7 @@ Integer Tags
 			<iFeatureGrainChange>-1</iFeatureGrainChange>
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>1000</iTradeProfitPercent>
-			<iDistanceMaintenancePercent>50</iDistanceMaintenancePercent>
+			<iDistanceMaintenancePercent>106</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>50</iNumCitiesMaintenancePercent>
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
 			<iCorporationMaintenancePercent>500</iCorporationMaintenancePercent>
@@ -81,7 +81,7 @@ Integer Tags
 			<iFeatureGrainChange>-1</iFeatureGrainChange>
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>755</iTradeProfitPercent>
-			<iDistanceMaintenancePercent>50</iDistanceMaintenancePercent>
+			<iDistanceMaintenancePercent>105</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>50</iNumCitiesMaintenancePercent>
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
 			<iCorporationMaintenancePercent>300</iCorporationMaintenancePercent>
@@ -109,7 +109,7 @@ Integer Tags
 			<iGridHeight>14</iGridHeight>
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>545</iTradeProfitPercent>
-			<iDistanceMaintenancePercent>50</iDistanceMaintenancePercent>
+			<iDistanceMaintenancePercent>103</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>50</iNumCitiesMaintenancePercent>
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
 			<iCorporationMaintenancePercent>150</iCorporationMaintenancePercent>
@@ -135,7 +135,7 @@ Integer Tags
 			<iGridHeight>16</iGridHeight>
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>370</iTradeProfitPercent>
-			<iDistanceMaintenancePercent>50</iDistanceMaintenancePercent>
+			<iDistanceMaintenancePercent>100</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>50</iNumCitiesMaintenancePercent>
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
 			<iCorporationMaintenancePercent>100</iCorporationMaintenancePercent>
@@ -165,7 +165,7 @@ Integer Tags
 			<iFeatureGrainChange>1</iFeatureGrainChange>
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>230</iTradeProfitPercent>
-			<iDistanceMaintenancePercent>50</iDistanceMaintenancePercent>
+			<iDistanceMaintenancePercent>96</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>50</iNumCitiesMaintenancePercent>
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
 			<iCorporationMaintenancePercent>50</iCorporationMaintenancePercent>
@@ -195,7 +195,7 @@ Integer Tags
 			<iFeatureGrainChange>1</iFeatureGrainChange>
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>125</iTradeProfitPercent>
-			<iDistanceMaintenancePercent>50</iDistanceMaintenancePercent>
+			<iDistanceMaintenancePercent>91</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>50</iNumCitiesMaintenancePercent>
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
 			<iCorporationMaintenancePercent>35</iCorporationMaintenancePercent>
@@ -225,7 +225,7 @@ Integer Tags
 			<iFeatureGrainChange>2</iFeatureGrainChange>
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>55</iTradeProfitPercent>
-			<iDistanceMaintenancePercent>50</iDistanceMaintenancePercent>
+			<iDistanceMaintenancePercent>85</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>50</iNumCitiesMaintenancePercent>
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
 			<iCorporationMaintenancePercent>25</iCorporationMaintenancePercent>
@@ -255,8 +255,8 @@ Integer Tags
 			<iFeatureGrainChange>2</iFeatureGrainChange>
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>20</iTradeProfitPercent>
-			<iDistanceMaintenancePercent>50</iDistanceMaintenancePercent>
-			<iNumCitiesMaintenancePercent>50</iNumCitiesMaintenancePercent>
+			<iDistanceMaintenancePercent>78</iDistanceMaintenancePercent>
+			<iNumCitiesMaintenancePercent>78</iNumCitiesMaintenancePercent>
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
 			<iCorporationMaintenancePercent>20</iCorporationMaintenancePercent>
 			<iNumCitiesAnarchyPercent>5</iNumCitiesAnarchyPercent> <!-- 1 more anarchy turn per 20 cities -->

@@ -7171,30 +7171,9 @@
 		<Polish>Gratulacje! Wyprodukowałeś swój pierwszy pojazd gąsienicowy ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) w mieście %s2City_Name! Pojazdy gąsienicowe są najpotężniejszymi jednostkami szturmowymi - wykorzystuj je w celu zniszczenia swoich wrogów!</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FINANCE_ADVISOR_CITY_MAINT_COST</Tag>
-		<English>[NEWLINE]%d1[ICON_GOLD]: Base Maintenance[NEWLINE]%d2[ICON_GOLD]: Distance Maintenance[NEWLINE]%d3[ICON_GOLD]: Number of Cities Maintenance[NEWLINE]%d4[ICON_GOLD]: Colony Maintenance[NEWLINE]%d5[ICON_GOLD]: Corporation Maintenance[NEWLINE]%d6[ICON_GOLD]: Building Maintenance[NEWLINE]------------------------[NEWLINE]%d7[ICON_GOLD]: Sub-Total(includes decimals not shown)[NEWLINE]------------------------[NEWLINE]%D8%%[ICON_GOLD]: Gamespeed Modifier[NEWLINE]------------------------[NEWLINE]TOTAL CITY MAINTENANCE COST: %d9[ICON_GOLD]</English>
-		<German>
-		[NEWLINE]%d1[ICON_GOLD]: entfernungsabhängige Kosten
-		[NEWLINE]%d2[ICON_GOLD]: entfernungsunabhängige Kosten
-		[NEWLINE]%d3[ICON_GOLD]: Kosten für Kolonien
-		[NEWLINE]%d4[ICON_GOLD]: Kapitalgesellschaftszahlungen
-		[NEWLINE]------------------------------------------------
-		[NEWLINE]Gesamte laufende Kosten für Städte: %d5[ICON_GOLD]</German>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_CITY_MAINT_COST_DISTANCE</Tag>
 		<English>------------------------
 		[NEWLINE]%s1[ICON_GOLD]: Distance to Capital</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FINANCE_ADVISOR_CITY_MAINT_COST_MODIFIER</Tag>
-		<English>------------------------
-		[NEWLINE]%D1%%[ICON_GOLD]: Gamespeed Modifier</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FINANCE_ADVISOR_CITY_MAINT_COST_SUB_TOTAL</Tag>
-		<English>------------------------
-		[NEWLINE]%s1[ICON_GOLD]: Sub-Total</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_CITY_MAINT_COST_TOTAL</Tag>
