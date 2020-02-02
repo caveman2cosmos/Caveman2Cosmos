@@ -15587,7 +15587,7 @@ m_iHurryConscriptAngerPercent(0),
 m_iInflationOffset(0),
 m_iInflationPercent(0),
 //ls612: Begin
-m_iGoldModifier(0),
+m_iGoldModifier(0), // Toffer - ToDo: removed usage of this, should remove this residuals too.
 m_iOccupationTimePopulationPercent(0),
 //ls612: End
 m_iVictoryDelayPercent(0),
@@ -15725,6 +15725,7 @@ int CvGameSpeedInfo::getInflationPercent() const
 //ls612: Begin
 int CvGameSpeedInfo::getGoldModifier() const
 {
+	// Toffer - ToDo: removed usage of this, should remove this residuals too.
 	return m_iGoldModifier;
 }
 
@@ -15832,7 +15833,7 @@ bool CvGameSpeedInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iInflationOffset, L"iInflationOffset");
 	pXML->GetOptionalChildXmlValByName(&m_iInflationPercent, L"iInflationPercent");
 	//ls612: Begin
-	pXML->GetOptionalChildXmlValByName(&m_iGoldModifier, L"iGoldModifier");
+	pXML->GetOptionalChildXmlValByName(&m_iGoldModifier, L"iGoldModifier"); // Toffer - ToDo: removed usage of this, should remove this residuals too.
 	pXML->GetOptionalChildXmlValByName(&m_iOccupationTimePopulationPercent, L"iOccupationTurnsPopulationPercent");
 	//ls612: End
 	pXML->GetOptionalChildXmlValByName(&m_iVictoryDelayPercent, L"iVictoryDelayPercent");

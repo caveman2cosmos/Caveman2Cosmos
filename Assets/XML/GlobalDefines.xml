@@ -504,8 +504,9 @@
 		<iDefineIntVal>-4</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- Change name of this one to BASE_DISTANCE_MAINTENANCE_PER_100_PLOTS -->
 		<DefineName>MAX_DISTANCE_CITY_MAINTENANCE</DefineName>
-		<iDefineIntVal>10</iDefineIntVal>
+		<iDefineIntVal>64</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>MAX_TRADE_ROUTES</DefineName>

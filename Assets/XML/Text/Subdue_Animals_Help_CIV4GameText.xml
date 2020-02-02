@@ -150,12 +150,6 @@
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Zbuduj[COLOR_REVERT] Mit Delfina, Mit Morza, Mit Ryby[NEWLINE][ICON_BULLET]Wybitnego Morskiego Łowcę[NEWLINE][ICON_BULLET]Instytut Morski i Wielorybów</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_DONKEY_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Donkey Herd and Horse Myth, Carnival, Exotic Herbivore Cage</English>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT][NEWLINE][ICON_BULLET]Branco - Asini, Mito del cavallo[NEWLINE][ICON_BULLET]Carnevale[NEWLINE][ICON_BULLET]Gabbia - Erbivori esotici</Italian>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Zbuduj[COLOR_REVERT] Mit Konia, Stado Osłów[NEWLINE][ICON_BULLET]Karnawał[NEWLINE][ICON_BULLET]Klatkę z egzotycznymi roślinożercami</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DUCK_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Bird and Sky Myth and Bird Cage, Feather Worker and Poultry Flock</English>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT][NEWLINE][ICON_BULLET]Mito degli uccelli, Mito del Cielo, Gabbia - Uccelli[NEWLINE][ICON_BULLET]Lavoratore di piume, Branco - Pollame</Italian>
@@ -273,12 +267,6 @@
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Bird and Sky Myth and Bird and Nocturnal Cage, Feather Worker</English>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT][NEWLINE][ICON_BULLET]Mito deli uccelli, Mito del Cielo, Gabbia - Animali notturni[NEWLINE][ICON_BULLET]Lavoratore di piume</Italian>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Zbuduj[COLOR_REVERT] Mit Ptaków, Mit Nieba, Klatkę ze zwierzętami nocnymi[NEWLINE][ICON_BULLET]Pierzarza</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_HORSE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Horse Herd and Myth, Master Hunter and Carnival, Exotic Herbivore Cage</English>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT][NEWLINE][ICON_BULLET]Branco - Cavalli, Mito del cavallo[NEWLINE][ICON_BULLET]Mastro cacciatore, Carnevale[NEWLINE][ICON_BULLET]Gabbia - Erbivori esotici</Italian>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Zbuduj[COLOR_REVERT] Mit Konia, Stado Koni[NEWLINE][ICON_BULLET]Wybitnego Łowcę, Karnawał[NEWLINE][ICON_BULLET]Klatkę z egzotycznymi roślinożercami</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_HUMPBACK_WHALE_HELP</Tag>
@@ -444,10 +432,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CHIMPANZEE_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Chimpanzee and Old Man Of the Forest, Primate Cage and Enclosure</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_DESERT_TORTOISE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Desert Tortoise and Reptiles, Reptile Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SIBERIANTIGER_HELP</Tag>
