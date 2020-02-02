@@ -2262,18 +2262,14 @@ namespace {
 			;
 	}
 
-	template < class Plot_ >
-	bst::optional<Plot_*> selectWithdrawPlot(bool bSamePlotCombat, Plot_* fromPlot, const CvUnit* withdrawingUnit)
+	bst::optional<CvPlot*> selectWithdrawPlot(bool bSamePlotCombat, const CvUnit* withdrawingUnit)
 	{
 		if (bSamePlotCombat)
 		{
-			return fromPlot;
+			return withdrawingUnit->plot();
 		}
 
-		/*bst::optional<const CvPlot&> withdrawPlot =*/
-		return algo::find_if(fromPlot->adjacent(), bst::bind(canWithdrawToPlot, withdrawingUnit, _1));
-		//CvPlot::adjacent_iterator itr = std::find_if(fromPlot.beginAdjacent(), fromPlot.endAdjacent(), bst::bind(canWithdrawToPlot, bst::cref(withdrawingUnit), _1));
-		// return itr != fromPlot.endAdjacent() ? &(*itr) : nullptr;
+		return algo::find_if(withdrawingUnit->plot()->adjacent(), bind(canWithdrawToPlot, withdrawingUnit, _1));
 	}
 }
 
@@ -2798,7 +2794,7 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 				{
 					if (DefenderWithdrawalRollResult < AdjustedDefWithdraw)
 					{
-						bst::optional<CvPlot*> withdrawPlot = selectWithdrawPlot(bSamePlot, plot(), pDefender);
+						bst::optional<CvPlot*> withdrawPlot = selectWithdrawPlot(bSamePlot, pDefender);
 						if (withdrawPlot)
 						{
 							m_combatResult.pPlot = *withdrawPlot;
@@ -2883,7 +2879,7 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 							{
 								m_combatResult.bDefenderKnockedBack = true;
 								m_combatResult.bDeathMessaged = false;
-								m_combatResult.pPlot = selectWithdrawPlot(bSamePlot, plot(), pDefender).get_value_or(nullptr);
+								m_combatResult.pPlot = selectWithdrawPlot(bSamePlot, pDefender).get_value_or(nullptr);
 								changeExperience100(getExperiencefromWithdrawal(AdjustedKnockback) * 15, maxXPValue(), true, pPlot->getOwnerINLINE() == getOwnerINLINE(), (!pDefender->isHominid() || GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)));
 								return;
 							}
