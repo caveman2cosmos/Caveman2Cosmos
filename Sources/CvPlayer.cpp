@@ -413,7 +413,6 @@ void CvPlayer::init(PlayerTypes eID)
 	//--------------------------------
 	// Init other game data
 	FAssert(getTeam() != NO_TEAM);
-	GET_TEAM(getTeam()).changeNumMembers(1);
 
 	if ((GC.getInitCore().getSlotStatus(getID()) == SS_TAKEN) || (GC.getInitCore().getSlotStatus(getID()) == SS_COMPUTER))
 	{
@@ -619,17 +618,10 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 		}
 	}
 
-	bool bTeamInit = false;
 	if( (iOtherTeamMembers == 0) || GET_TEAM(getTeam()).getNumMembers() == 0 )
 	{
-		bTeamInit = true;
 		GET_TEAM(getTeam()).init(getTeam());
 		GET_TEAM(getTeam()).resetPlotAndCityData();
-	}
-
-	if( bTeamInit || (GET_TEAM(getTeam()).getNumMembers() == iOtherTeamMembers) )
-	{
-		GET_TEAM(getTeam()).changeNumMembers(1);
 	}
 
 	if ((GC.getInitCore().getSlotStatus(getID()) == SS_TAKEN) || (GC.getInitCore().getSlotStatus(getID()) == SS_COMPUTER))
@@ -15699,9 +15691,6 @@ bool CvPlayer::isEverAlive() const
 
 void CvPlayer::setAlive(bool bNewValue)
 {
-	CvWString szBuffer;
-	int iI;
-
 	if (isAlive() != bNewValue)
 	{
 		m_bAlive = bNewValue;
@@ -15713,6 +15702,8 @@ void CvPlayer::setAlive(bool bNewValue)
 
 		if (isAlive())
 		{
+			GET_TEAM(getTeam()).addTeamMember(getID());
+
 			if (!isEverAlive())
 			{
 				m_bEverAlive = true;
@@ -15751,6 +15742,8 @@ void CvPlayer::setAlive(bool bNewValue)
 		}
 		else
 		{
+			GET_TEAM(getTeam()).removeTeamMember(getID());
+
 			clearResearchQueue();
 			killUnits();
 			killCities();
@@ -15782,9 +15775,9 @@ void CvPlayer::setAlive(bool bNewValue)
 			{
 				if (!isNPC())
 				{
-					szBuffer = gDLL->getText("TXT_KEY_MISC_CIV_DESTROYED", getCivilizationAdjectiveKey());
+					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CIV_DESTROYED", getCivilizationAdjectiveKey());
 
-					for (iI = 0; iI < MAX_PLAYERS; iI++)
+					for (int iI = 0; iI < MAX_PLAYERS; iI++)
 					{
 						if (GET_PLAYER((PlayerTypes)iI).isAlive())
 						{
@@ -15935,7 +15928,7 @@ void CvPlayer::verifyAlive()
 
 	if (isAlive())
 	{
-		bKill = false;
+		bool bKill = false;
 
 		if (!bKill)
 		{
@@ -16927,7 +16920,6 @@ void CvPlayer::setTeam(TeamTypes eTeam)
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
-	GET_TEAM(getTeam()).changeNumMembers(-1);
 	if (isAlive())
 	{
 		GET_TEAM(getTeam()).changeAliveCount(-1);
@@ -16942,7 +16934,6 @@ void CvPlayer::setTeam(TeamTypes eTeam)
 
 	GC.getInitCore().setTeam(getID(), eTeam);
 
-	GET_TEAM(getTeam()).changeNumMembers(1);
 	if (isAlive())
 	{
 		GET_TEAM(getTeam()).changeAliveCount(1);
@@ -20314,7 +20305,7 @@ int CvPlayer::getEspionageSpending(TeamTypes eAgainstTeam, int iTotal) const
 						bFoundTeam = true;
 					}
 
-					int iWeight = getEspionageSpendingWeightAgainstTeam((TeamTypes)iLoop);
+					const int iWeight = getEspionageSpendingWeightAgainstTeam((TeamTypes)iLoop);
 
 					if (iWeight > iBestWeight)
 					{

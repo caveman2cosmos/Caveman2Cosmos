@@ -5,7 +5,6 @@
 #ifndef CIV4_TEAM_H
 #define CIV4_TEAM_H
 
-//#include "CvEnums.h"
 #include "CvGameObject.h"
 
 class CvArea;
@@ -13,7 +12,6 @@ class CvProperties;
 
 class CvTeam
 {
-
 public:
 	CvTeam();
 	virtual ~CvTeam();
@@ -186,6 +184,9 @@ public:
 
 	DllExport int getNumMembers() const;																								// Exposed to Python
 	void changeNumMembers(int iChange);
+	void addTeamMember(const PlayerTypes player);
+	void removeTeamMember(const PlayerTypes player);
+	PlayerTypes getTeamMember(const int index) const;
 
 	int getAliveCount() const;
 	int isAlive() const;																											// Exposed to Python
@@ -598,7 +599,6 @@ public:
 
 protected:
 
-	int m_iNumMembers;
 	int m_iAliveCount;
 	int m_iEverAliveCount;
 	int m_iNumCities;
@@ -712,6 +712,7 @@ protected:
 	int** m_ppaaiImprovementYieldChange;
 
 	std::vector<BonusTypes> m_aeRevealedBonuses;
+	std::vector<PlayerTypes> m_aeTeamMembers;
 
 	void doWarWeariness();
 
