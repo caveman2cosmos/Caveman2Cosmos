@@ -18435,6 +18435,9 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 		bShow = false;
 	}
 
+	pNewPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	pOldPlot = plot();
+
 	//	Koshling - Forcing the unit into a new group causes rapid cycling through the group id
 	//	space, which is a scaling issue, so only do it when necessary
 	//	Note - it used o do this unconditionally for cargo and changing that behavior
@@ -18442,11 +18445,15 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 	//	it should be problematics, nor is it causing any issues in test cases I have tried
 	if ( !bGroup && (getGroup() == NULL || getGroup()->getNumUnits() > 1))
 	{
+		// Need valid plot() for joinGroup() so set our position now
+		if(bInit || pOldPlot == nullptr)
+		{
+			m_iX = iX;
+			m_iY = iY;
+		}
 		joinGroup(NULL, true);
 	}
 
-	pNewPlot = GC.getMapINLINE().plotINLINE(iX, iY);
-	pOldPlot = plot();
 
 	if (pNewPlot != NULL)
 	{
