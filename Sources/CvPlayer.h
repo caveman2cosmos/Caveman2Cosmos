@@ -770,7 +770,7 @@ public:
 	int getMaintenanceModifier();
 	void changeMaintenanceModifier(int iChange);
 
-	int getCoastalDistanceMaintenanceModifier();
+	int getCoastalDistanceMaintenanceModifier() const;
 	void changeCoastalDistanceMaintenanceModifier(int iChange);
 
 	int getConnectedCityMaintenanceModifier();
