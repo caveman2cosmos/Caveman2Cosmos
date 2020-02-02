@@ -322,13 +322,19 @@ void CvMap::setupGraphical()
 	}
 }
 
+namespace {
+	void foreachPlot(const CvMap* map, bst::function<void(CvPlot*)> func)
+	{
+		for (int iI = 0; iI < map->numPlots(); iI++)
+		{
+			func(map->plotByIndex(iI));
+		}
+	}
+}
 
 void CvMap::erasePlots()
 {
-	for (int iI = 0; iI < numPlotsINLINE(); iI++)
-	{
-		plotByIndexINLINE(iI)->erase();
-	}
+	foreachPlot(this, erase);
 }
 
 
@@ -390,10 +396,7 @@ void CvMap::doTurn()
 	MEMORY_TRACE_FUNCTION();
 	PROFILE("CvMap::doTurn()")
 
-	for (int iI = 0; iI < numPlotsINLINE(); iI++)
-	{
-		plotByIndexINLINE(iI)->doTurn();
-	}
+	foreachPlot(this, doTurn);
 }
 
 
@@ -423,28 +426,19 @@ void CvMap::updateFog()
 {
 	PROFILE_FUNC();
 
-	for (int iI = 0; iI < numPlotsINLINE(); iI++)
-	{
-		plotByIndexINLINE(iI)->updateFog();
-	}
+	foreachPlot(this, updateFog);
 }
 
 
 void CvMap::updateVisibility()
 {
-	for (int iI = 0; iI < numPlotsINLINE(); iI++)
-	{
-		plotByIndexINLINE(iI)->updateVisibility();
-	}
+	foreachPlot(this, updateVisibility);
 }
 
 
 void CvMap::updateSymbolVisibility()
 {
-	for (int iI = 0; iI < numPlotsINLINE(); iI++)
-	{
-		plotByIndexINLINE(iI)->updateSymbolVisibility();
-	}
+	foreachPlot(this, updateSymbolVisibility);
 }
 
 
@@ -454,10 +448,7 @@ void CvMap::updateSymbols()
 
 	//	Ignore this while we are demand-creating symbols to minimize memory usage - REMOVED FOR NOW FOR VIEWPORTS
 	
-	for (int iI = 0; iI < numPlotsINLINE(); iI++)
-	{
-		plotByIndexINLINE(iI)->updateSymbols();
-	}
+	foreachPlot(this, updateSymbols);
 }
 
 
@@ -465,10 +456,7 @@ void CvMap::updateMinimapColor()
 {
 	PROFILE_FUNC();
 
-	for (int iI = 0; iI < numPlotsINLINE(); iI++)
-	{
-		plotByIndexINLINE(iI)->updateMinimapColor();
-	}
+	foreachPlot(this, updateMinimapColor);
 }
 
 
@@ -488,28 +476,19 @@ void CvMap::updateSight(bool bIncrement, bool bUpdatePlotGroups)
 
 void CvMap::updateIrrigated()
 {
-	for (int iI = 0; iI < numPlotsINLINE(); iI++)
-	{
-		plotByIndexINLINE(iI)->updateIrrigated();
-	}
+	foreachPlot(this, updateIrrigated);
 }
 
 
 void CvMap::updateCenterUnit()
 {
-	for (int iI = 0; iI < numPlotsINLINE(); iI++)
-	{
-		plotByIndexINLINE(iI)->updateCenterUnit();
-	}
+	foreachPlot(this, updateCenterUnit);
 }
 
 
 void CvMap::updateWorkingCity()
 {
-	for (int iI = 0; iI < numPlotsINLINE(); iI++)
-	{
-		plotByIndexINLINE(iI)->updateWorkingCity();
-	}
+	foreachPlot(this, updateWorkingCity);
 }
 
 
@@ -560,19 +539,13 @@ void CvMap::updateMinOriginalStartDist(CvArea* pArea)
 
 void CvMap::updateYield()
 {
-	for (int iI = 0; iI < numPlotsINLINE(); iI++)
-	{
-		plotByIndexINLINE(iI)->updateYield();
-	}
+	foreachPlot(this, updateYield);
 }
 
 
 void CvMap::verifyUnitValidPlot()
 {
-	for (int iI = 0; iI < numPlotsINLINE(); iI++)
-	{
-		plotByIndexINLINE(iI)->verifyUnitValidPlot();
-	}
+	foreachPlot(this, verifyUnitValidPlot);
 }
 
 
@@ -1169,10 +1142,7 @@ void CvMap::recalculateAreas()
 {
 	PROFILE("CvMap::recalculateAreas");
 
-	for (int iI = 0; iI < numPlotsINLINE(); iI++)
-	{
-		plotByIndexINLINE(iI)->setArea(FFreeList::INVALID_INDEX);
-	}
+	foreachPlot(this, bst::bind(setArea, FFreeList::INVALID_INDEX));
 
 	m_areas.removeAll();
 
