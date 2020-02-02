@@ -23002,14 +23002,9 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 
 		if (!bRelDisabled)
 		{
-			int iBuildingMaintenance = -kBuilding.getCommerceChange(COMMERCE_GOLD);
-			if ( iBuildingMaintenance > 0 )
+			int iBuildingMaintenance = -kBuilding.getCommerceChange(COMMERCE_GOLD) * 100;
+			if (iBuildingMaintenance > 0)
 			{
-				if ( GC.getGame().getHandicapType() != NO_HANDICAP )
-				{
-					iBuildingMaintenance *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getCorporationMaintenancePercent();
-				}
-
 				CvWString szRate = CvWString::format(L"%d.%02d", iBuildingMaintenance/100, iBuildingMaintenance%100);
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_MAINTENANCE", szRate.GetCString()));
@@ -35409,28 +35404,39 @@ void CvGameTextMgr::buildFinanceCityMaintString(CvWStringBuffer& szBuffer, Playe
 	int iColonyMaint = 0;
 	int iCorporationMaint = 0;
 	int iBuildingMaint = 0;
-	int iBase = GC.getEraInfo(GET_PLAYER(ePlayer).getCurrentEra()).getInitialCityMaintenancePercent();
-	const bool bAnarchy = GET_PLAYER(ePlayer).isAnarchy();
 
 	const CvPlayer& player = GET_PLAYER(ePlayer);
+
+	const int iBase = std::max(0, GC.getEraInfo(player.getCurrentEra()).getInitialCityMaintenancePercent());
+
+	const bool bRebel = player.isRebel();
+
 	for (CvCity* pLoopCity = player.firstCity(&iLoop); pLoopCity != NULL; pLoopCity = player.nextCity(&iLoop))
 	{
-		if (iBase != 0 && !bAnarchy && !pLoopCity->isDisorder())
+		iBaseMaint += iBase;
+
+		if (!pLoopCity->isDisorder() && !pLoopCity->isWeLoveTheKingDay() && (pLoopCity->getPopulation() > 0))
 		{
-			iBaseMaint += iBase;
+			iDistanceMaint += pLoopCity->calculateDistanceMaintenanceTimes100() * std::max(0, (pLoopCity->getEffectiveMaintenanceModifier() + 100)) / 100;
+			iNumCityMaint += pLoopCity->calculateNumCitiesMaintenanceTimes100() * std::max(0, (pLoopCity->getEffectiveMaintenanceModifier() + 100)) / 100;
+			iColonyMaint += pLoopCity->calculateColonyMaintenanceTimes100() * std::max(0, (pLoopCity->getEffectiveMaintenanceModifier() + 100)) / 100;
+			iCorporationMaint += pLoopCity->calculateCorporationMaintenanceTimes100() * std::max(0, (pLoopCity->getEffectiveMaintenanceModifier() + 100)) / 100;
+			iBuildingMaint += pLoopCity->calculateBuildingMaintenanceTimes100() * std::max(0, (pLoopCity->getEffectiveMaintenanceModifier() + 100)) / 100;
+
+			if (bRebel)
+			{
+				iDistanceMaint /= 2;
+				iNumCityMaint /= 2;
+				iColonyMaint /= 2;
+				iCorporationMaint /= 2;
+				iBuildingMaint /= 2;
+			}
 		}
-		iDistanceMaint += pLoopCity->calculateDistanceMaintenanceTimes100() * std::max(0, (pLoopCity->getEffectiveMaintenanceModifier() + 100));
-		iNumCityMaint += pLoopCity->calculateNumCitiesMaintenanceTimes100() * std::max(0, (pLoopCity->getEffectiveMaintenanceModifier() + 100));
-		iColonyMaint += pLoopCity->calculateColonyMaintenanceTimes100() * std::max(0, (pLoopCity->getEffectiveMaintenanceModifier() + 100));
-		iCorporationMaint += pLoopCity->calculateCorporationMaintenanceTimes100() * std::max(0, (pLoopCity->getEffectiveMaintenanceModifier() + 100));
-		iBuildingMaint += pLoopCity->calculateBuildingMaintenanceTimes100() * std::max(0, (pLoopCity->getEffectiveMaintenanceModifier() + 100));
+		if (bRebel)
+		{
+			iBaseMaint /= 2;
+		}
 	}
-	iBaseMaint /= 100;
-	iDistanceMaint /= 100;
-	iNumCityMaint /= 100;
-	iColonyMaint /= 100;
-	iCorporationMaint /= 100;
-	iBuildingMaint /= 100;
 
 	if (iBaseMaint != 0)
 	{

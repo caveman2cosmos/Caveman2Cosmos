@@ -9490,8 +9490,7 @@ int CvCity::getSavedMaintenanceTimes100ByBuilding(BuildingTypes eBuilding) const
 	}
 	if (kBuilding.getCommerceChange(COMMERCE_GOLD) < 0 && GC.getDefineINT("TREAT_NEGATIVE_GOLD_AS_MAINTENANCE"))
 	{
-		iDirectMaintenance = -kBuilding.getCommerceChange(COMMERCE_GOLD);
-		iDirectMaintenance *= GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent();
+		iDirectMaintenance = -kBuilding.getCommerceChange(COMMERCE_GOLD) * 100;
 	}
 	if ((iModifier != 0 || iDirectMaintenance > 0) && !isDisorder() && !isWeLoveTheKingDay())
 	{
@@ -9646,56 +9645,26 @@ void CvCity::updateMaintenance() const
 {
 	setMaintenanceDirty(false);
 
-	int iOldMaintenance = getMaintenanceTimes100();
-
 	int iNewMaintenance = 0;
-	/************************************************************************************************/
-	/* Afforess	                  Start		 09/12/10                                               */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-	int iEraMaintanceTimes100 = GC.getEraInfo(GET_PLAYER(getOwnerINLINE()).getCurrentEra()).getInitialCityMaintenancePercent();
-	//	iEraMaintanceTimes100 -= GC.getEraInfo(GC.getGameINLINE().getStartEra()).getInitialCityMaintenancePercent();
-	iNewMaintenance += std::max(0, iEraMaintanceTimes100);
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
+
+	iNewMaintenance += std::max(0, GC.getEraInfo(GET_PLAYER(getOwnerINLINE()).getCurrentEra()).getInitialCityMaintenancePercent());
+
 	if (!isDisorder() && !isWeLoveTheKingDay() && (getPopulation() > 0))
 	{
-		//DPII < Maintenance Modifiers >
-		int iModifier = getEffectiveMaintenanceModifier();
-		iNewMaintenance += (calculateBaseMaintenanceTimes100() * std::max(0, (iModifier + 100))) / 100;
-		//DPII < Maintenance Modifiers >
+		iNewMaintenance += (calculateBaseMaintenanceTimes100() * std::max(0, (getEffectiveMaintenanceModifier() + 100))) / 100;
 	}
-	/************************************************************************************************/
-	/* REVOLUTION_MOD                         01/31/08                                jdog5000      */
-	/*                                                                                              */
-	/* Rebels pay less maintenance                                                                  */
-	/************************************************************************************************/
+
+	// Rebels pay less maintenance
 	if (GET_PLAYER(getOwnerINLINE()).isRebel())
 	{
 		iNewMaintenance /= 2;
 	}
-	/************************************************************************************************/
-	/* REVOLUTION_MOD                          END                                                  */
-	/************************************************************************************************/
 
-	if (iOldMaintenance != iNewMaintenance)
+	if (getMaintenanceTimes100() != iNewMaintenance)
 	{
-		FAssert(iOldMaintenance >= 0);
 		FAssert(iNewMaintenance >= 0);
 
-		m_iMaintenance = iNewMaintenance;
-		FAssert(getMaintenance() >= 0);
-		/************************************************************************************************/
-		/* Afforess	                  Start		 6/20/11                                                */
-		/*                                                                                              */
-		/*   Protect against negative maintenance                                                       */
-		/************************************************************************************************/
-		m_iMaintenance = std::max(0, m_iMaintenance);
-		/************************************************************************************************/
-		/* Afforess	                     END                                                            */
-		/************************************************************************************************/
+		m_iMaintenance = std::max(0, iNewMaintenance);
 	}
 }
 
@@ -9954,28 +9923,15 @@ int CvCity::calculateBuildingMaintenanceTimes100() const
 		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
 			BuildingTypes eBuilding = (BuildingTypes)iI;
-			if (getNumActiveBuilding(eBuilding) > 0)
+			if (getNumActiveBuilding(eBuilding) > 0 && !isReligiouslyDisabledBuilding(eBuilding)
+			&& GC.getBuildingInfo(eBuilding).getCommerceChange(COMMERCE_GOLD) < 0)
 			{
-				//Team Project (5)
-				if (!isReligiouslyDisabledBuilding(eBuilding))
-				{
-					int iBaseCommerceChange = GC.getBuildingInfo(eBuilding).getCommerceChange(COMMERCE_GOLD);
-
-					if (iBaseCommerceChange < 0)
-					{
-						iResult -= iBaseCommerceChange * 100;
-					}
-				}
+				iResult -= GC.getBuildingInfo(eBuilding).getCommerceChange(COMMERCE_GOLD);
 			}
 		}
-
-		iResult = (GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent() * iResult) / 100;
-		return iResult;
+		return 100 * iResult;
 	}
-	else
-	{
-		return 0;
-	}
+	return 0;
 }
 
 int CvCity::calculateBaseMaintenanceTimes100() const
