@@ -23,10 +23,10 @@
 /*******************************/
 
 #define foreachPlot(func) \
-		for (int iI = 0; iI < numPlots(); iI++) \
-		{ \
-			plotByIndex(iI)->func(); \
-		}
+	for (int iI = 0; iI < numPlots(); iI++) \
+	{ \
+		plotByIndex(iI)->func(); \
+	}
 
 
 CvMap::CvMap()
