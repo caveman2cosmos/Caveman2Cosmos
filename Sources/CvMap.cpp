@@ -334,7 +334,7 @@ namespace {
 
 void CvMap::erasePlots()
 {
-	foreachPlot(this, erase);
+	foreachPlot(this, CvPlot::erase);
 }
 
 
@@ -396,7 +396,7 @@ void CvMap::doTurn()
 	MEMORY_TRACE_FUNCTION();
 	PROFILE("CvMap::doTurn()")
 
-	foreachPlot(this, doTurn);
+	foreachPlot(this, CvPlot::doTurn);
 }
 
 
@@ -426,19 +426,19 @@ void CvMap::updateFog()
 {
 	PROFILE_FUNC();
 
-	foreachPlot(this, updateFog);
+	foreachPlot(this, CvPlot::updateFog);
 }
 
 
 void CvMap::updateVisibility()
 {
-	foreachPlot(this, updateVisibility);
+	foreachPlot(this, CvPlot::updateVisibility);
 }
 
 
 void CvMap::updateSymbolVisibility()
 {
-	foreachPlot(this, updateSymbolVisibility);
+	foreachPlot(this, CvPlot::updateSymbolVisibility);
 }
 
 
@@ -447,8 +447,8 @@ void CvMap::updateSymbols()
 	PROFILE_FUNC();
 
 	//	Ignore this while we are demand-creating symbols to minimize memory usage - REMOVED FOR NOW FOR VIEWPORTS
-	
-	foreachPlot(this, updateSymbols);
+
+	foreachPlot(this, CvPlot::updateSymbols);
 }
 
 
@@ -456,7 +456,7 @@ void CvMap::updateMinimapColor()
 {
 	PROFILE_FUNC();
 
-	foreachPlot(this, updateMinimapColor);
+	foreachPlot(this, CvPlot::updateMinimapColor);
 }
 
 
@@ -467,7 +467,7 @@ void CvMap::updateSight(bool bIncrement, bool bUpdatePlotGroups)
 		plotByIndexINLINE(iI)->updateSight(bIncrement, false);
 	}
 
-	if ( bUpdatePlotGroups )
+	if (bUpdatePlotGroups)
 	{
 		GC.getGameINLINE().updatePlotGroups();
 	}
@@ -476,19 +476,19 @@ void CvMap::updateSight(bool bIncrement, bool bUpdatePlotGroups)
 
 void CvMap::updateIrrigated()
 {
-	foreachPlot(this, updateIrrigated);
+	foreachPlot(this, CvPlot::updateIrrigated);
 }
 
 
 void CvMap::updateCenterUnit()
 {
-	foreachPlot(this, updateCenterUnit);
+	foreachPlot(this, CvPlot::updateCenterUnit);
 }
 
 
 void CvMap::updateWorkingCity()
 {
-	foreachPlot(this, updateWorkingCity);
+	foreachPlot(this, CvPlot::updateWorkingCity);
 }
 
 
@@ -519,7 +519,7 @@ void CvMap::updateMinOriginalStartDist(CvArea* pArea)
 				if (pLoopPlot->area() == pArea)
 				{
 					//iDist = GC.getMapINLINE().calculatePathDistance(pStartingPlot, pLoopPlot);
-					int iDist = stepDistance(pStartingPlot->getX_INLINE(), pStartingPlot->getY_INLINE(), pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE());
+					const int iDist = stepDistance(pStartingPlot->getX_INLINE(), pStartingPlot->getY_INLINE(), pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE());
 
 					if (iDist != -1)
 					{
@@ -539,13 +539,13 @@ void CvMap::updateMinOriginalStartDist(CvArea* pArea)
 
 void CvMap::updateYield()
 {
-	foreachPlot(this, updateYield);
+	foreachPlot(this, CvPlot::updateYield);
 }
 
 
 void CvMap::verifyUnitValidPlot()
 {
-	foreachPlot(this, verifyUnitValidPlot);
+	foreachPlot(this, CvPlot::verifyUnitValidPlot);
 }
 
 
@@ -1142,7 +1142,10 @@ void CvMap::recalculateAreas()
 {
 	PROFILE("CvMap::recalculateAreas");
 
-	foreachPlot(this, bst::bind(setArea, FFreeList::INVALID_INDEX));
+	for (int iI = 0; iI < numPlotsINLINE(); iI++)
+	{
+		plotByIndexINLINE(iI)->setArea(FFreeList::INVALID_INDEX);
+	}
 
 	m_areas.removeAll();
 
