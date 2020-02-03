@@ -33948,6 +33948,10 @@
 					<BuildingClassType>BUILDINGCLASS_BRAZILWOOD_GROVE</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
+				<PrereqOrBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CHEMICAL_PLANT</BuildingClassType>
+					<bPrereqBuildingClass>1</bPrereqBuildingClass>
+				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
 			<iCost>710</iCost>
