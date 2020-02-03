@@ -22,7 +22,12 @@
 /***** Parallel Maps - End *****/
 /*******************************/
 
-// Public Functions...
+#define foreachPlot(func) \
+		for (int iI = 0; iI < numPlots(); iI++) \
+		{ \
+			plotByIndex(iI)->func(); \
+		}
+
 
 CvMap::CvMap()
 	: m_iGridWidth(0)
@@ -322,19 +327,10 @@ void CvMap::setupGraphical()
 	}
 }
 
-namespace {
-	void foreachPlot(const CvMap* map, bst::function<void(CvPlot*)> func)
-	{
-		for (int iI = 0; iI < map->numPlots(); iI++)
-		{
-			func(map->plotByIndex(iI));
-		}
-	}
-}
 
 void CvMap::erasePlots()
 {
-	foreachPlot(this, CvPlot::erase);
+	foreachPlot(CvPlot::erase);
 }
 
 
@@ -396,7 +392,7 @@ void CvMap::doTurn()
 	MEMORY_TRACE_FUNCTION();
 	PROFILE("CvMap::doTurn()")
 
-	foreachPlot(this, CvPlot::doTurn);
+	foreachPlot(CvPlot::doTurn);
 }
 
 
@@ -426,19 +422,19 @@ void CvMap::updateFog()
 {
 	PROFILE_FUNC();
 
-	foreachPlot(this, CvPlot::updateFog);
+	foreachPlot(CvPlot::updateFog);
 }
 
 
 void CvMap::updateVisibility()
 {
-	foreachPlot(this, CvPlot::updateVisibility);
+	foreachPlot(CvPlot::updateVisibility);
 }
 
 
 void CvMap::updateSymbolVisibility()
 {
-	foreachPlot(this, CvPlot::updateSymbolVisibility);
+	foreachPlot(CvPlot::updateSymbolVisibility);
 }
 
 
@@ -448,7 +444,7 @@ void CvMap::updateSymbols()
 
 	//	Ignore this while we are demand-creating symbols to minimize memory usage - REMOVED FOR NOW FOR VIEWPORTS
 
-	foreachPlot(this, CvPlot::updateSymbols);
+	foreachPlot(CvPlot::updateSymbols);
 }
 
 
@@ -456,7 +452,7 @@ void CvMap::updateMinimapColor()
 {
 	PROFILE_FUNC();
 
-	foreachPlot(this, CvPlot::updateMinimapColor);
+	foreachPlot(CvPlot::updateMinimapColor);
 }
 
 
@@ -476,19 +472,19 @@ void CvMap::updateSight(bool bIncrement, bool bUpdatePlotGroups)
 
 void CvMap::updateIrrigated()
 {
-	foreachPlot(this, CvPlot::updateIrrigated);
+	foreachPlot(CvPlot::updateIrrigated);
 }
 
 
 void CvMap::updateCenterUnit()
 {
-	foreachPlot(this, CvPlot::updateCenterUnit);
+	foreachPlot(CvPlot::updateCenterUnit);
 }
 
 
 void CvMap::updateWorkingCity()
 {
-	foreachPlot(this, CvPlot::updateWorkingCity);
+	foreachPlot(CvPlot::updateWorkingCity);
 }
 
 
@@ -539,13 +535,13 @@ void CvMap::updateMinOriginalStartDist(CvArea* pArea)
 
 void CvMap::updateYield()
 {
-	foreachPlot(this, CvPlot::updateYield);
+	foreachPlot(CvPlot::updateYield);
 }
 
 
 void CvMap::verifyUnitValidPlot()
 {
-	foreachPlot(this, CvPlot::verifyUnitValidPlot);
+	foreachPlot(CvPlot::verifyUnitValidPlot);
 }
 
 
