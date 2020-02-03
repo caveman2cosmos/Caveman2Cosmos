@@ -11344,12 +11344,6 @@
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_ARCHER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -11365,13 +11359,23 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_BINDING</PrereqTech>
-			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
+			<UnitClassUpgrades>
+				<UnitClassUpgrade>
+					<UnitClassUpgradeType>UNITCLASS_ARCHER</UnitClassUpgradeType>
+					<bUnitClassUpgrade>1</bUnitClassUpgrade>
+				</UnitClassUpgrade>
+				<UnitClassUpgrade>
+					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_SLINGER</UnitClassUpgradeType>
+					<bUnitClassUpgrade>1</bUnitClassUpgrade>
+				</UnitClassUpgrade>
+			</UnitClassUpgrades>
 			<ForceObsoleteUnitClasses>
 				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_GATHERER</ForceObsoleteUnitClassType>
+					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_SLINGER</ForceObsoleteUnitClassType>
 					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
 				</ForceObsoleteUnitClass>
 			</ForceObsoleteUnitClasses>
+			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
 			<iCost>23</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>2</iCombat>
@@ -33374,10 +33378,6 @@
 					<UnitClassUpgradeType>UNITCLASS_CARAVEL</UnitClassUpgradeType>
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_OUTRIGGER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -33394,12 +33394,6 @@
 				</UnitAI>
 			</UnitAIs>
 			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_OUTRIGGER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
 			<PrereqBuilding>BUILDING_CANOEBUILDERS_HUT</PrereqBuilding>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<iCost>105</iCost>
@@ -45055,7 +45049,17 @@
 					<UnitClassUpgradeType>UNITCLASS_ENFORCERS</UnitClassUpgradeType>
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
+				<UnitClassUpgrade>
+					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_WATCHER</UnitClassUpgradeType>
+					<bUnitClassUpgrade>1</bUnitClassUpgrade>
+				</UnitClassUpgrade>
 			</UnitClassUpgrades>
+			<ForceObsoleteUnitClasses>
+				<ForceObsoleteUnitClass>
+					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_WATCHER</ForceObsoleteUnitClassType>
+					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
+				</ForceObsoleteUnitClass>
+			</ForceObsoleteUnitClasses>
 			<bNoCapture>1</bNoCapture>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -45182,7 +45186,17 @@
 					<UnitClassUpgradeType>UNITCLASS_TOWN_WATCHMEN</UnitClassUpgradeType>
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
+				<UnitClassUpgrade>
+					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_ENFORCER</UnitClassUpgradeType>
+					<bUnitClassUpgrade>1</bUnitClassUpgrade>
+				</UnitClassUpgrade>
 			</UnitClassUpgrades>
+			<ForceObsoleteUnitClasses>
+				<ForceObsoleteUnitClass>
+					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_ENFORCER</ForceObsoleteUnitClassType>
+					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
+				</ForceObsoleteUnitClass>
+			</ForceObsoleteUnitClasses>
 			<VisibilityIntensityTypes>
 				<VisibilityIntensityType>
 					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
@@ -56881,7 +56895,7 @@
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -56966,7 +56980,7 @@
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<iCost>5</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>2</iCombat>
@@ -57065,7 +57079,7 @@
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteTech>TECH_BINDING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<iCost>8</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>2</iCombat>
@@ -57108,6 +57122,362 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_NO_SIEGE</FormationType>
+		</UnitInfo>
+		<UnitInfo>
+			<Class>UNITCLASS_NEANDERTHAL_SLINGER</Class>
+			<Type>UNIT_NEANDERTHAL_SLINGER</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_SLINGER</Description>
+			<Civilopedia>TXT_KEY_UNIT_SLINGER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_SLINGER_STRATEGY</Strategy>
+			<Domain>DOMAIN_LAND</Domain>
+			<Combat>UNITCOMBAT_THROWING</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_PLUS_SHIELD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_PLUS_SHIELD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_PLUS_SHIELD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_H2H_CLUB</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_ROCK</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_DIST_SLING</SubCombatType>
+				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SHIELD_SMALL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
+			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_ATTACK</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_CITY_DEFENSE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_ESCORT</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
+			<bMilitaryHappiness>1</bMilitaryHappiness>
+			<bMilitaryProduction>1</bMilitaryProduction>
+			<bMilitarySupport>1</bMilitarySupport>
+			<bPillage>1</bPillage>
+			<PrereqTech>TECH_BINDING</PrereqTech>
+			<BonusType>BONUS_NEANDERTHAL</BonusType>
+			<UnitClassUpgrades>
+				<UnitClassUpgrade>
+					<UnitClassUpgradeType>UNITCLASS_ARCHER</UnitClassUpgradeType>
+					<bUnitClassUpgrade>1</bUnitClassUpgrade>
+				</UnitClassUpgrade>
+			</UnitClassUpgrades>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<iCost>46</iCost>
+			<iMoves>1</iMoves>
+			<iCombat>3</iCombat>
+			<iChanceFirstStrikes>2</iChanceFirstStrikes>
+			<iWithdrawalProb>7</iWithdrawalProb>
+			<iEarlyWithdraw>70</iEarlyWithdraw>
+			<iCollateralDamage>2</iCollateralDamage>
+			<iCollateralDamageLimit>7</iCollateralDamageLimit>
+			<iCollateralDamageMaxUnits>1</iCollateralDamageMaxUnits>
+			<iCityDefense>20</iCityDefense>
+			<iHillsDefense>20</iHillsDefense>
+			<UnitCombatMods>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+				<UnitCombatMod>
+					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<iUnitCombatMod>25</iUnitCombatMod>
+				</UnitCombatMod>
+			</UnitCombatMods>
+			<iAsset>2</iAsset>
+			<iPower>2</iPower>
+			<iConscription>3</iConscription>
+			<iXPValueAttack>3</iXPValueAttack>
+			<iXPValueDefense>1</iXPValueDefense>
+			<UnitMeshGroups>
+				<iGroupSize>3</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>3</iMeleeWaveSize>
+				<iRangedWaveSize>3</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>2</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_SLINGER</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_NO_SIEGE</FormationType>
+		</UnitInfo>
+		<UnitInfo>
+			<Class>UNITCLASS_NEANDERTHAL_WATCHER</Class>
+			<Type>UNIT_NEANDERTHAL_WATCHER</Type>
+			<Special>SPECIALUNIT_PEOPLE</Special>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_WATCHER</Description>
+			<Civilopedia>TXT_KEY_UNIT_WATCHER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_WATCHER_STRATEGY</Strategy>
+			<Domain>DOMAIN_LAND</Domain>
+			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_PRIMARY_PLUS_SECONDARY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_H2H_FIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_ELITE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
+			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_PROPERTY_CONTROL</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_INVESTIGATOR</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_SEE_INVISIBLE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
+			<bNoCapture>1</bNoCapture>
+			<bMilitaryHappiness>1</bMilitaryHappiness>
+			<bMilitarySupport>1</bMilitarySupport>
+			<bMilitaryProduction>1</bMilitaryProduction>
+			<bCounterSpy>1</bCounterSpy>
+			<bMilitaryTrade>1</bMilitaryTrade>
+			<bPassage>1</bPassage>
+			<UnitCombatTargets>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_CRIMINAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+			</UnitCombatTargets>
+			<UnitCombatDefenders>
+				<UnitCombatDefender>
+					<UnitCombatDefenderType>UNITCOMBAT_CRIMINAL</UnitCombatDefenderType>
+					<bUnitCombatDefender>1</bUnitCombatDefender>
+				</UnitCombatDefender>
+			</UnitCombatDefenders>
+			<VisibilityIntensityTypes>
+				<VisibilityIntensityType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityType>
+			</VisibilityIntensityTypes>
+			<FreePromotions>
+				<FreePromotion>
+					<PromotionType>PROMOTION_SENTRY</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+			</FreePromotions>
+			<PrereqTech>TECH_DECEPTION</PrereqTech>
+			<BonusType>BONUS_NEANDERTHAL</BonusType>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_LOOKOUT_POST</BuildingType>
+				<BuildingType>BUILDING_SENTRY_POST</BuildingType>
+			</PrereqOrBuildings>
+			<UnitClassUpgrades>
+				<UnitClassUpgrade>
+					<UnitClassUpgradeType>UNITCLASS_ENFORCERS</UnitClassUpgradeType>
+					<bUnitClassUpgrade>1</bUnitClassUpgrade>
+				</UnitClassUpgrade>
+			</UnitClassUpgrades>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<iCost>36</iCost>
+			<iMoves>1</iMoves>
+			<iCombat>3</iCombat>
+			<iEnclose>2</iEnclose>
+			<iDynamicDefense>2</iDynamicDefense>
+			<iCultureGarrison>1</iCultureGarrison>
+			<iInvestigation>2</iInvestigation>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-2</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<iExtraCost>1</iExtraCost>
+			<iAsset>1</iAsset>
+			<iPower>2</iPower>
+			<iXPValueAttack>6</iXPValueAttack>
+			<iXPValueDefense>3</iXPValueDefense>
+			<UnitMeshGroups>
+				<iGroupSize>1</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>1</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>2</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_WATCHER</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+		</UnitInfo>
+		<UnitInfo>
+			<Class>UNITCLASS_NEANDERTHAL_ENFORCER</Class>
+			<Type>UNIT_NEANDERTHAL_ENFORCER</Type>
+			<Special>SPECIALUNIT_PEOPLE</Special>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_ENFORCER</Description>
+			<Civilopedia>TXT_KEY_UNIT_ENFORCERS_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_ENFORCERS_STRATEGY</Strategy>
+			<Domain>DOMAIN_LAND</Domain>
+			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_H2H_CLUB</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_ROCK</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
+			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_PROPERTY_CONTROL</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_INVESTIGATOR</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_SEE_INVISIBLE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
+			<bNoCapture>1</bNoCapture>
+			<bMilitaryHappiness>1</bMilitaryHappiness>
+			<bMilitarySupport>1</bMilitarySupport>
+			<bMilitaryProduction>1</bMilitaryProduction>
+			<bCounterSpy>1</bCounterSpy>
+			<bMilitaryTrade>1</bMilitaryTrade>
+			<bPassage>1</bPassage>
+			<VisibilityIntensityTypes>
+				<VisibilityIntensityType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityType>
+			</VisibilityIntensityTypes>
+			<UnitCombatTargets>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_CRIMINAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+			</UnitCombatTargets>
+			<UnitCombatDefenders>
+				<UnitCombatDefender>
+					<UnitCombatDefenderType>UNITCOMBAT_CRIMINAL</UnitCombatDefenderType>
+					<bUnitCombatDefender>1</bUnitCombatDefender>
+				</UnitCombatDefender>
+			</UnitCombatDefenders>
+			<FreePromotions>
+				<FreePromotion>
+					<PromotionType>PROMOTION_SENTRY</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+			</FreePromotions>
+			<PrereqTech>TECH_CONDUCT</PrereqTech>
+			<BonusType>BONUS_NEANDERTHAL</BonusType>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_SENTRY_POST</BuildingType>
+				<BuildingType>BUILDING_TOWNWATCH</BuildingType>
+			</PrereqOrBuildings>
+			<UnitClassUpgrades>
+				<UnitClassUpgrade>
+					<UnitClassUpgradeType>UNITCLASS_TOWN_WATCHMEN</UnitClassUpgradeType>
+					<bUnitClassUpgrade>1</bUnitClassUpgrade>
+				</UnitClassUpgrade>
+			</UnitClassUpgrades>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<iCost>80</iCost>
+			<iExtraCost>2</iExtraCost>
+			<iMoves>1</iMoves>
+			<iCombat>4</iCombat>
+			<iStealthCombatModifier>5</iStealthCombatModifier>
+			<iEnclose>4</iEnclose>
+			<iDynamicDefense>4</iDynamicDefense>
+			<iCultureGarrison>2</iCultureGarrison>
+			<iInvestigation>5</iInvestigation>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-4</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-2</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<iAsset>3</iAsset>
+			<iPower>4</iPower>
+			<iXPValueAttack>6</iXPValueAttack>
+			<iXPValueDefense>3</iXPValueDefense>
+			<UnitMeshGroups>
+				<iGroupSize>2</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>2</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>2</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_ENFORCER</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_NEANDERTHAL_WANDERER</Class>
@@ -57447,11 +57817,10 @@
 			<bNoCapture>1</bNoCapture>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_HERBALISM</PrereqTech>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
 			<PrereqBuilding>BUILDING_WILD_HERBS</PrereqBuilding>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_HEALER</UnitClassUpgradeType>
+					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_HEALER</UnitClassUpgradeType>
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 				<UnitClassUpgrade>
@@ -57459,6 +57828,13 @@
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
+			<ForceObsoleteUnitClasses>
+				<ForceObsoleteUnitClass>
+					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_HEALER</ForceObsoleteUnitClassType>
+					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
+				</ForceObsoleteUnitClass>
+			</ForceObsoleteUnitClasses>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<iCost>36</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iXPValueDefense>2</iXPValueDefense>
@@ -57508,6 +57884,111 @@
 					<iAmountPerTurn>-1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+		</UnitInfo>
+		<UnitInfo>
+			<Class>UNITCLASS_NEANDERTHAL_HEALER</Class>
+			<Type>UNIT_NEANDERTHAL_HEALER</Type>
+			<Special>SPECIALUNIT_PEOPLE</Special>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_HEALER</Description>
+			<Civilopedia>TXT_KEY_UNIT_HEALER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_HEALER_STRATEGY</Strategy>
+			<Domain>DOMAIN_LAND</Domain>
+			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_PRIMARY_PLUS_SECONDARY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_H2H_STAFF</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_FIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_MEDIOCRE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
+			</SubCombatTypes>
+			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
+			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_HEALER</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_PROPERTY_CONTROL</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
+			<bMilitaryProduction>1</bMilitaryProduction>
+			<bMilitarySupport>1</bMilitarySupport>
+			<bMilitaryTrade>1</bMilitaryTrade>
+			<bNoCapture>1</bNoCapture>
+			<bOnlyDefensive>1</bOnlyDefensive>
+			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
+			<BonusType>BONUS_NEANDERTHAL</BonusType>
+			<PrereqBuilding>BUILDING_HEALERHUT</PrereqBuilding>
+			<UnitClassUpgrades>
+				<UnitClassUpgrade>
+					<UnitClassUpgradeType>UNITCLASS_MEDICINE_MAN</UnitClassUpgradeType>
+					<bUnitClassUpgrade>1</bUnitClassUpgrade>
+				</UnitClassUpgrade>
+			</UnitClassUpgrades>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<iCost>90</iCost>
+			<iHurryCostModifier>25</iHurryCostModifier>
+			<iExtraCost>2</iExtraCost>
+			<iMoves>1</iMoves>
+			<iCombat>3</iCombat>
+			<iNumHealSupport>4</iNumHealSupport>
+			<HealUnitCombatTypes>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
+					<iHeal>5</iHeal>
+					<iAdjacentHeal>0</iAdjacentHeal>
+				</HealUnitCombatType>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
+					<iHeal>3</iHeal>
+					<iAdjacentHeal>0</iAdjacentHeal>
+				</HealUnitCombatType>
+			</HealUnitCombatTypes>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-4</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-2</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<iAsset>3</iAsset>
+			<iPower>3</iPower>
+			<iXPValueDefense>2</iXPValueDefense>
+			<UnitMeshGroups>
+				<iGroupSize>1</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>2</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>2</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_HEALER</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_NEANDERTHAL_SHEPHERD</Class>
@@ -57578,7 +58059,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_BISON</BonusType>
 				<BonusType>BONUS_DEER</BonusType>
@@ -57699,7 +58180,7 @@
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bPassage>1</bPassage>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_DOG</BonusType>
 			</PrereqBonuses>
@@ -57737,149 +58218,6 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
-		</UnitInfo>
-		<UnitInfo>
-			<Class>UNITCLASS_NEANDERTHAL_OUTRIGGER</Class>
-			<Type>UNIT_NEANDERTHAL_OUTRIGGER</Type>
-			<EnabledCivilizationTypes>
-				<EnabledCivilizationType>
-					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
-				</EnabledCivilizationType>
-			</EnabledCivilizationTypes>
-			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_RECON</SubCombatType>
-				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_SECONDARY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_H2H_OAR</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DIST_JAVELIN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_SEA</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
-			<DefaultUnitAI>UNITAI_EXPLORE_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_OUTRIGGER</Description>
-			<Civilopedia>TXT_KEY_UNIT_OUTRIGGER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_OUTRIGGER_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bNoBadGoodies>1</bNoBadGoodies>
-			<bRivalTerritory>1</bRivalTerritory>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bPillage>1</bPillage>
-			<bMechanized>1</bMechanized>
-			<bRenderBelowWater>1</bRenderBelowWater>
-			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_CARAVEL</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_ATTACK_SEA</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-				<UnitAI>
-					<UnitAIType>UNITAI_ESCORT_SEA</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-				<UnitAI>
-					<UnitAIType>UNITAI_EXPLORE_SEA</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-				<UnitAI>
-					<UnitAIType>UNITAI_SEE_INVISIBLE_SEA</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
-			<PrereqBuilding>BUILDING_CANOEBUILDERS_HUT</PrereqBuilding>
-			<PrereqTech>TECH_SAILING</PrereqTech>
-			<iCost>210</iCost>
-			<iMinAreaSize>5</iMinAreaSize>
-			<iMoves>3</iMoves>
-			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
-				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
-				<TerrainType>TERRAIN_SEA</TerrainType>
-				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
-				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
-				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
-				<TerrainType>TERRAIN_OCEAN</TerrainType>
-				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
-				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
-				<TerrainType>TERRAIN_TRENCH</TerrainType>
-				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
-				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
-			</TerrainImpassableTypes>
-			<TerrainPassableTechs>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
-					<PassableTech>TECH_SEAFARING</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
-					<PassableTech>TECH_SEAFARING</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_SEA</TerrainType>
-					<PassableTech>TECH_SEAFARING</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
-					<PassableTech>TECH_SEAFARING</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
-					<PassableTech>TECH_SEAFARING</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
-					<PassableTech>TECH_SEAFARING</PassableTech>
-				</TerrainPassableTech>
-			</TerrainPassableTechs>
-			<iCombat>4</iCombat>
-			<iXPValueAttack>2</iXPValueAttack>
-			<iXPValueDefense>1</iXPValueDefense>
-			<iWithdrawalProb>35</iWithdrawalProb>
-			<iEarlyWithdraw>50</iEarlyWithdraw>
-			<iAnimalCombat>50</iAnimalCombat>
-			<BonusProductionModifiers>
-				<BonusProductionModifier>
-					<BonusType>BONUS_TIMBER</BonusType>
-					<iProductonModifier>20</iProductonModifier>
-				</BonusProductionModifier>
-			</BonusProductionModifiers>
-			<iAsset>2</iAsset>
-			<iPower>3</iPower>
-			<UnitMeshGroups>
-				<iGroupSize>2</iGroupSize>
-				<fMaxSpeed>2.25</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>1</iMeleeWaveSize>
-				<iRangedWaveSize>1</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_OUTRIGGER</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_NEANDERTHAL_KAYAK</Class>
@@ -57927,7 +58265,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_OUTRIGGER</UnitClassUpgradeType>
+					<UnitClassUpgradeType>UNITCLASS_OUTRIGGER</UnitClassUpgradeType>
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
@@ -57949,7 +58287,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<PrereqBuilding>BUILDING_CANOEBUILDERS_HUT</PrereqBuilding>
 			<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
 			<PrereqBonuses>
@@ -58066,7 +58404,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<PrereqBuilding>BUILDING_CANOEBUILDERS_HUT</PrereqBuilding>
 			<PrereqTech>TECH_HARPOON_MAKING</PrereqTech>
 			<iCost>140</iCost>
@@ -58177,7 +58515,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<PrereqBuilding>BUILDING_CANOEBUILDERS_HUT</PrereqBuilding>
 			<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
 			<iCost>160</iCost>
@@ -58294,7 +58632,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<PrereqTech>TECH_RAFT_BUILDING</PrereqTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_TIMBER</BonusType>
@@ -58448,7 +58786,7 @@
 				</Build>
 			</Builds>
 			<PrereqTech>TECH_FISHING</PrereqTech>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<iCost>96</iCost>
 			<iMoves>1</iMoves>
 			<bNoRevealMap>1</bNoRevealMap>
@@ -58553,7 +58891,7 @@
 			</NotUnitAIs>
 			<PrereqBuilding>BUILDING_LUMBER_CAMP</PrereqBuilding>
 			<PrereqTech>TECH_WARFARE</PrereqTech>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<iCost>165</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>3</iCombat>
@@ -58781,11 +59119,11 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_OBSIDIAN</BonusType>
 			</PrereqBonuses>
-			<iCost>105</iCost>
+			<iCost>104</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
@@ -58886,7 +59224,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_SPEAR_MAKING</PrereqTech>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<iCost>78</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>5</iCombat>
@@ -58995,7 +59333,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<iCost>70</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
@@ -59090,7 +59428,7 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_OBSIDIAN</BonusType>
 			</PrereqBonuses>
@@ -59192,7 +59530,7 @@
 			</MapCategoryTypes>
 			<BonusType>BONUS_NEANDERTHAL</BonusType>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_OBSIDIAN</BonusType>
 			</PrereqBonuses>
@@ -59306,7 +59644,7 @@
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<iCost>84</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>5</iCombat>
@@ -59411,7 +59749,7 @@
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_OBSIDIAN</BonusType>
 			</PrereqBonuses>
@@ -59523,7 +59861,7 @@
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<iCost>75</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>5</iCombat>
@@ -59627,7 +59965,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqTech>TECH_HUNTING_TACTICS</PrereqTech>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<iCost>125</iCost>
 			<iMoves>2</iMoves>
 			<UnitClassUpgrades>
@@ -59926,7 +60264,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<iCost>30</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>4</iCombat>
@@ -62472,6 +62810,10 @@
 					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_WISE_WOMAN</ForceObsoleteUnitClassType>
 					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
 				</ForceObsoleteUnitClass>
+				<ForceObsoleteUnitClass>
+					<ForceObsoleteUnitClassType>UNITCLASS_HEALER</ForceObsoleteUnitClassType>
+					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
+				</ForceObsoleteUnitClass>
 			</ForceObsoleteUnitClasses>
 		</UnitInfo>
 		<UnitInfo>
@@ -62526,7 +62868,17 @@
 					<UnitClassUpgradeType>UNITCLASS_MEDICINE_MAN</UnitClassUpgradeType>
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
+				<UnitClassUpgrade>
+					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_HEALER</UnitClassUpgradeType>
+					<bUnitClassUpgrade>1</bUnitClassUpgrade>
+				</UnitClassUpgrade>
 			</UnitClassUpgrades>
+			<ForceObsoleteUnitClasses>
+				<ForceObsoleteUnitClass>
+					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_HEALER</ForceObsoleteUnitClassType>
+					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
+				</ForceObsoleteUnitClass>
+			</ForceObsoleteUnitClasses>
 			<iCost>45</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iMoves>1</iMoves>

@@ -3784,6 +3784,23 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_NEANDERTHAL_ENFORCER</Type>
+			<Button>Art/Interface/Buttons/Units/neanderthal_enforcer.dds</Button>
+			<fScale>0.44</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Units/enforcer/warrior.nif</NIF>
+			<KFM>Art/Units/Warrior/Warrior.kfm</KFM>
+			<SHADERNIF>Art/Units/enforcer/warrior.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+		</UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_ENTERTAINER</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/entertainer.dds</Button>
 			<fScale>0.44</fScale>
@@ -8472,41 +8489,6 @@
 			<ActionSound>AS3D_UN_OCEAN_END1</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_NEANDERTHAL_OUTRIGGER</Type>
-			<Button>Art/Interface/Buttons/Units/sparth/neanderthal_outrigger.dds</Button>
-			<fScale>0.10</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Units/ships/outrigger/trireme.nif</NIF>
-			<KFM>Art/Units/Trireme/Trireme.kfm</KFM>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/GalleyShadow.nif</ShadowNIF>
-				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
-				<fShadowScale>1.0</fShadowScale>
-			</ShadowDef>
-			<iDamageStates>4</iDamageStates>
-			<TrailDefinition>
-				<Texture>Art/Shared/water_ship_wake.dds</Texture>
-				<fWidth>1</fWidth>
-				<fLength>180.0</fLength>
-				<fTaper>1</fTaper>
-				<fFadeStartTime>.2</fFadeStartTime>
-				<fFadeFalloff>0.35</fFadeFalloff>
-			</TrailDefinition>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<bSmoothMove>1</bSmoothMove>
-			<fAngleInterpRate>720.0</fAngleInterpRate>
-			<fBankRate>.2</fBankRate>
-			<fExchangeAngle>25.0</fExchangeAngle>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-			<AudioRunSounds>
-				<AudioRunTypeLoop>LOOPSTEP_OCEAN1</AudioRunTypeLoop>
-				<AudioRunTypeEnd>ENDSTEP_OCEAN1</AudioRunTypeEnd>
-			</AudioRunSounds>
-			<SelectionSound>AS3D_UN_OCEAN_END1</SelectionSound>
-			<ActionSound>AS3D_UN_OCEAN_END1</ActionSound>
-		</UnitArtInfo>
-		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_OXYBELES</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/oxybeles.dds</Button>
 			<fScale>0.28</fScale>
@@ -10197,6 +10179,24 @@
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_SLINGER</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/slinger.dds</Button>
+			<fScale>0.44</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Units/Slinger/generic/Peltast_FX.nif</NIF>
+			<KFM>Art/Units/Peltast/Peltast.kfm</KFM>
+			<SHADERNIF>Art/Units/Slinger/generic/Peltast_FX.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>1</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_NEANDERTHAL_SLINGER</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/neanderthal_slinger.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Units/Slinger/generic/Peltast_FX.nif</NIF>
@@ -12366,6 +12366,22 @@
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_WATCHER</Type>
 			<Button>Art/Interface/Buttons/Units/watcher.dds</Button>
+			<fScale>0.44</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Units/Mongol_Sparth/brute/MongolWarriorfinal.nif</NIF>
+			<KFM>Art/Units/warrior/warrior.kfm</KFM>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_NEANDERTHAL_WATCHER</Type>
+			<Button>Art/Interface/Buttons/Units/neanderthal_watcher.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Units/Mongol_Sparth/brute/MongolWarriorfinal.nif</NIF>
@@ -75686,6 +75702,24 @@
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_HEALER</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/healer.dds</Button>
+			<fScale>0.44</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Units/Healer/explorer.nif</NIF>
+			<KFM>Art/Units/Healer/explorer.kfm</KFM>
+			<SHADERNIF>Art/Units/Healer/explorer.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>0.9</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.05</fRangedDeathTime>
+			<bActAsRanged>1</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_NEANDERTHAL_HEALER</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/neanderthal_healer.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Units/Healer/explorer.nif</NIF>
