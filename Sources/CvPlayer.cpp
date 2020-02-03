@@ -10220,12 +10220,6 @@ int CvPlayer::getProductionModifier(UnitTypes eUnit) const
 					}
 				}
 			}
-			//iMultiplier += GC.getUnitInfo(eUnit).getProductionTraits(iI);
-
-			//if (GC.getUnitInfo(eUnit).getSpecialUnitType() != NO_SPECIALUNIT)
-			//{
-			//	iMultiplier += GC.getSpecialUnitInfo((SpecialUnitTypes) GC.getUnitInfo(eUnit).getSpecialUnitType()).getProductionTraits(iI);
-			//}
 		}
 	}
 
@@ -10259,15 +10253,6 @@ int CvPlayer::getProductionModifier(BuildingTypes eBuilding) const
 				}
 			}
 		}
-		//if (hasTrait((TraitTypes)iI))
-		//{
-		//	iMultiplier += GC.getBuildingInfo(eBuilding).getProductionTraits(iI);
-
-		//	if (GC.getBuildingInfo(eBuilding).getSpecialBuildingType() != NO_SPECIALBUILDING)
-		//	{
-		//		iMultiplier += GC.getSpecialBuildingInfo((SpecialBuildingTypes) GC.getBuildingInfo(eBuilding).getSpecialBuildingType()).getProductionTraits(iI);
-		//	}
-		//}
 	}
 
 	if (::isWorldWonderClass((BuildingClassTypes)(GC.getBuildingInfo(eBuilding).getBuildingClassType())))
@@ -34770,10 +34755,6 @@ void CvPlayer::processTrait(TraitTypes eTrait, int iChange)
 			}
 		}
 	}
-	//for (iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
-	//{
-	//	changeExtraBuildingHappiness((BuildingTypes)iJ, iChange*GC.getBuildingInfo((BuildingTypes)iJ).getHappinessTraits(eTrait));
-	//}
 
 	changeUpkeepModifier(iChange*GC.getTraitInfo(eTrait).getUpkeepModifier());
 	changeLevelExperienceModifier(iChange*GC.getTraitInfo(eTrait).getLevelExperienceModifier());

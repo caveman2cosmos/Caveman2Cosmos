@@ -116,12 +116,6 @@
 			</UnitAIs>
 			<PrereqTech>TECH_TRIBALISM</PrereqTech>
 			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_IMPERIALIST</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -191,12 +185,6 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_IMPERIALIST</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -275,12 +263,6 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_COLONIALISM</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_IMPERIALIST</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iMoves>2</iMoves>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<iAsset>1</iAsset>
@@ -360,12 +342,6 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_IMPERIALIST</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iMoves>2</iMoves>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<iAsset>1</iAsset>
@@ -454,12 +430,6 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_IMPERIALIST</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>1280</iCost>
 			<iMoves>24</iMoves>
 			<iExtraCost>5</iExtraCost>
@@ -516,6 +486,12 @@
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
+			<ForceObsoleteUnitClasses>
+				<ForceObsoleteUnitClass>
+					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_GATHERER</ForceObsoleteUnitClassType>
+					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
+				</ForceObsoleteUnitClass>
+			</ForceObsoleteUnitClasses>
 			<Builds>
 				<Build>
 					<BuildType>BUILD_TRAIL</BuildType>
@@ -647,12 +623,6 @@
 				</Build>
 			</Builds>
 			<iCost>12</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iMoves>1</iMoves>
 			<iWorkRate>100</iWorkRate>
 			<iAsset>1</iAsset>
@@ -938,12 +908,6 @@
 			</Builds>
 			<ForceObsoleteTech>TECH_NITROGLYCERIN</ForceObsoleteTech>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>90</iCost>
 			<iMoves>2</iMoves>
 			<iWorkRate>150</iWorkRate>
@@ -1288,12 +1252,6 @@
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
 			<BonusType>BONUS_DOG</BonusType>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>120</iCost>
 			<iMoves>2</iMoves>
 			<iWorkRate>240</iWorkRate>
@@ -1608,12 +1566,6 @@
 			<PrereqBuilding>BUILDING_BUFFALO_TRAINER</PrereqBuilding>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>150</iCost>
 			<iMoves>2</iMoves>
 			<iWorkRate>250</iWorkRate>
@@ -1943,12 +1895,6 @@
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
 			<BonusType>BONUS_DONKEY</BonusType>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>150</iCost>
 			<iMoves>2</iMoves>
 			<iWorkRate>250</iWorkRate>
@@ -2273,12 +2219,6 @@
 			<PrereqBuilding>BUILDING_ELEPHANT_TRAINER</PrereqBuilding>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>150</iCost>
 			<iMoves>2</iMoves>
 			<iWorkRate>250</iWorkRate>
@@ -2597,12 +2537,6 @@
 			<PrereqBuilding>BUILDING_LLAMA_TRAINER</PrereqBuilding>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>150</iCost>
 			<iMoves>2</iMoves>
 			<iWorkRate>250</iWorkRate>
@@ -2927,12 +2861,6 @@
 			<PrereqBuilding>BUILDING_CAMEL_TRAINER</PrereqBuilding>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>150</iCost>
 			<iMoves>2</iMoves>
 			<iWorkRate>250</iWorkRate>
@@ -3325,12 +3253,6 @@
 			</Builds>
 			<PrereqTech>TECH_NITROGLYCERIN</PrereqTech>
 			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>600</iCost>
 			<iMoves>2</iMoves>
 			<iWorkRate>300</iWorkRate>
@@ -3719,12 +3641,6 @@
 				</Build>
 			</Builds>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>650</iCost>
 			<iMoves>2</iMoves>
 			<iWorkRate>350</iWorkRate>
@@ -4117,12 +4033,6 @@
 			</Builds>
 			<PrereqBuilding>BUILDING_CLONING_LABORATORY</PrereqBuilding>
 			<PrereqTech>TECH_MAINSTREAM_CLONING</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>2800</iCost>
 			<iAdvancedStartCost>80</iAdvancedStartCost>
 			<iMoves>3</iMoves>
@@ -4510,12 +4420,6 @@
 			</Builds>
 			<PrereqBuilding>BUILDING_ANDROID_FACTORY</PrereqBuilding>
 			<PrereqTech>TECH_ANDROIDS</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>3500</iCost>
 			<iMoves>3</iMoves>
 			<iWorkRate>500</iWorkRate>
@@ -4595,12 +4499,6 @@
 				<BonusType>BONUS_BIOFUEL</BonusType>
 				<BonusType>BONUS_DIESEL</BonusType>
 			</PrereqBonuses>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>800</iCost>
 			<iMoves>2</iMoves>
 			<iWorkRate>400</iWorkRate>
@@ -28380,12 +28278,6 @@
 				</Build>
 			</Builds>
 			<PrereqTech>TECH_FISHING</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>48</iCost>
 			<iMoves>1</iMoves>
 			<iWorkRate>100</iWorkRate>
@@ -28515,12 +28407,6 @@
 			</Builds>
 			<PrereqBuilding>BUILDING_SHIPWRIGHT</PrereqBuilding>
 			<PrereqTech>TECH_SAILING</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>80</iCost>
 			<iMoves>2</iMoves>
 			<iWorkRate>150</iWorkRate>
@@ -28676,12 +28562,6 @@
 			</Builds>
 			<PrereqBuilding>BUILDING_SHIPWRIGHT</PrereqBuilding>
 			<PrereqTech>TECH_RUDDER</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>180</iCost>
 			<iMoves>3</iMoves>
 			<iWorkRate>200</iWorkRate>
@@ -28862,12 +28742,6 @@
 				</Build>
 			</Builds>
 			<PrereqTech>TECH_SCREW_PROPELLER</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>395</iCost>
 			<iMoves>4</iMoves>
 			<iWorkRate>300</iWorkRate>
@@ -28999,12 +28873,6 @@
 				</Build>
 			</Builds>
 			<PrereqTech>TECH_COGNITIVE_ROBOTICS</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>1200</iCost>
 			<iMoves>6</iMoves>
 			<iWorkRate>500</iWorkRate>
@@ -53028,12 +52896,6 @@
 			</Builds>
 			<PrereqTech>TECH_WILDERNESSC</PrereqTech>
 			<BonusType>BONUS_FIREARMS</BonusType>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>545</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iMoves>1</iMoves>
@@ -53192,12 +53054,6 @@
 			</Builds>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<BonusType>BONUS_FIREARMS</BonusType>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>1075</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iMoves>1</iMoves>
@@ -57281,7 +57137,7 @@
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_WORKER</UnitClassUpgradeType>
+					<UnitClassUpgradeType>UNITCLASS_WORKER</UnitClassUpgradeType>
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
@@ -57429,317 +57285,6 @@
 				<UnitMeshGroup>
 					<iRequired>2</iRequired>
 					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_GATHERER</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-		</UnitInfo>
-		<UnitInfo>
-			<Class>UNITCLASS_NEANDERTHAL_WORKER</Class>
-			<Type>UNIT_NEANDERTHAL_WORKER</Type>
-			<EnabledCivilizationTypes>
-				<EnabledCivilizationType>
-					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
-				</EnabledCivilizationType>
-			</EnabledCivilizationTypes>
-			<Capture>UNITCLASS_WORKER</Capture>
-			<Combat>UNITCOMBAT_WORKER</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_POOR</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_COMPANY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_LAND</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
-			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_WORKER</Description>
-			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKER_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<bFood>1</bFood>
-			<bWorkerTrade>1</bWorkerTrade>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_WORKANIMAL</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_WORKER</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<Builds>
-				<Build>
-					<BuildType>BUILD_TRAIL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PATH</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PAVED</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MODERN_ROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_RAILROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GRAIN_GATHERER_2</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ROCK_GATHERER_2</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SALT_GATHERER2</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SHAFT_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MODERN_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WORKSHOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUMBERMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_FOREST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WINDMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WATERMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FRUIT_PICKER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GRAPE_PICKER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_PICKER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WINERY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ORCHARD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANTATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SILK_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_EARLY_QUARRY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_QUARRY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PASTURE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HUNTING_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WELL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COTTAGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HAMLET</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_VILLAGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TOWN</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SUBURB</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FORT</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BUNKER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BURN_VEGETATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_REMOVE_VEGETATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_REMOVE_SWAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JUNGLE_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_DESERT_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WETLANDS_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUMBER_JACK</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_THATCH_CUTTER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PEAT_CUTTER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TAR_GATHERER2</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GEOGLYPH</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WOODEN_TOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE_CACHE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PALISADE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-			</Builds>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<iCost>180</iCost>
-			<iMoves>2</iMoves>
-			<iWorkRate>175</iWorkRate>
-			<BonusProductionModifiers>
-				<BonusProductionModifier>
-					<BonusType>BONUS_DONKEY</BonusType>
-					<iProductonModifier>5</iProductonModifier>
-				</BonusProductionModifier>
-				<BonusProductionModifier>
-					<BonusType>BONUS_CAMEL</BonusType>
-					<iProductonModifier>5</iProductonModifier>
-				</BonusProductionModifier>
-				<BonusProductionModifier>
-					<BonusType>BONUS_COW</BonusType>
-					<iProductonModifier>5</iProductonModifier>
-				</BonusProductionModifier>
-				<BonusProductionModifier>
-					<BonusType>BONUS_HORSE</BonusType>
-					<iProductonModifier>5</iProductonModifier>
-				</BonusProductionModifier>
-			</BonusProductionModifiers>
-			<iAsset>1</iAsset>
-			<UnitMeshGroups>
-				<iGroupSize>2</iGroupSize>
-				<fMaxSpeed>1.75</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>2</iMeleeWaveSize>
-				<iRangedWaveSize>0</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>2</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_WORKER</EarlyArtDefineTag>
-					<LateArtDefineTag>ART_DEF_UNIT_WORKERMODERN</LateArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -58697,178 +58242,6 @@
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_NEANDERTHAL_CLASSIC_WORKBOAT</Class>
-			<Type>UNIT_NEANDERTHAL_CLASSIC_WORKBOAT</Type>
-			<EnabledCivilizationTypes>
-				<EnabledCivilizationType>
-					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
-				</EnabledCivilizationType>
-			</EnabledCivilizationTypes>
-			<Capture>UNITCLASS_CLASSIC_WORKBOAT</Capture>
-			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_POOR</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_SEA</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
-			<DefaultUnitAI>UNITAI_WORKER_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_CLASSIC_WORK_BOAT</Description>
-			<Civilopedia>TXT_KEY_UNIT_WORK_BOAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CLASSIC_WORK_BOAT_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bCanMoveImpassable>1</bCanMoveImpassable>
-			<bPrereqBonuses>1</bPrereqBonuses>
-			<bMechanized>1</bMechanized>
-			<bRenderBelowWater>1</bRenderBelowWater>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_MIDDLE_WORKBOAT</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_WORKER_SEA</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<NotUnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_ESCORT_SEA</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-				<UnitAI>
-					<UnitAIType>UNITAI_RESERVE_SEA</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-				<UnitAI>
-					<UnitAIType>UNITAI_ATTACK_SEA</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-				<UnitAI>
-					<UnitAIType>UNITAI_ASSAULT_SEA</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</NotUnitAIs>
-			<Builds>
-				<Build>
-					<BuildType>BUILD_FISHING_BOATS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WHALING_BOATS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WHALING_SHIPS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HARVEST_KELP_2</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BEACON_CORAL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BEACON_REEF</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LIGHTHOUSE_CORAL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LIGHTHOUSE_REEF</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-			</Builds>
-			<PrereqBuilding>BUILDING_SHIPWRIGHT</PrereqBuilding>
-			<PrereqTech>TECH_SAILING</PrereqTech>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
-			<iCost>160</iCost>
-			<iMoves>2</iMoves>
-			<bNoRevealMap>1</bNoRevealMap>
-			<iWorkRate>150</iWorkRate>
-			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
-				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
-				<TerrainType>TERRAIN_SEA</TerrainType>
-				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
-				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
-				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
-				<TerrainType>TERRAIN_OCEAN</TerrainType>
-				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
-				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
-				<TerrainType>TERRAIN_TRENCH</TerrainType>
-				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
-				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
-			</TerrainImpassableTypes>
-			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_STORM</FeatureType>
-				<FeatureType>FEATURE_ICE</FeatureType>
-			</FeatureImpassableTypes>
-			<TerrainPassableTechs>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
-					<PassableTech>TECH_SEAFARING</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
-					<PassableTech>TECH_SEAFARING</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_SEA</TerrainType>
-					<PassableTech>TECH_SEAFARING</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
-					<PassableTech>TECH_SEAFARING</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
-					<PassableTech>TECH_SEAFARING</PassableTech>
-				</TerrainPassableTech>
-				<TerrainPassableTech>
-					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
-					<PassableTech>TECH_SEAFARING</PassableTech>
-				</TerrainPassableTech>
-			</TerrainPassableTechs>
-			<iXPValueDefense>3</iXPValueDefense>
-			<iAsset>1</iAsset>
-			<UnitMeshGroups>
-				<iGroupSize>1</iGroupSize>
-				<fMaxSpeed>2.25</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>1</iMeleeWaveSize>
-				<iRangedWaveSize>1</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_WORKBOAT_SEDENTARY</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
-		</UnitInfo>
-		<UnitInfo>
 			<Class>UNITCLASS_NEANDERTHAL_WORKBOAT</Class>
 			<Type>UNIT_NEANDERTHAL_WORKBOAT</Type>
 			<EnabledCivilizationTypes>
@@ -58906,7 +58279,7 @@
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_CLASSIC_WORKBOAT</UnitClassUpgradeType>
+					<UnitClassUpgradeType>UNITCLASS_CLASSIC_WORKBOAT</UnitClassUpgradeType>
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
@@ -58970,12 +58343,6 @@
 			</Builds>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>96</iCost>
 			<iMoves>1</iMoves>
 			<bNoRevealMap>1</bNoRevealMap>
@@ -64880,12 +64247,6 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bFood>1</bFood>
 			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>235</iCost>
 			<iAdvancedStartCost>25</iAdvancedStartCost>
 			<iMoves>2</iMoves>

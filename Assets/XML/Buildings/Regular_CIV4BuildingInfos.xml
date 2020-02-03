@@ -101,12 +101,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>2205</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_ORGANIZED</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<YieldModifiers>
 				<iYield>0</iYield>
@@ -239,12 +233,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>50</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -338,12 +326,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>1410</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SCIENTIFIC</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-50</iCommerce>
@@ -763,12 +745,6 @@
 			</ConstructCondition>
 			<!-- Construction cost -->
 			<iCost>4485</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Unit effects -->
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -1363,12 +1339,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>320</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SCIENTIFIC</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
@@ -3938,12 +3908,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>1605</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Defense effects -->
 			<iDefense>25</iDefense>
 			<iBombardDefense>25</iBombardDefense>
@@ -4848,12 +4812,6 @@
 			</PrereqBonuses>
 			<!-- Construction cost -->
 			<iCost>252</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_WATERPROOF_CEMENT</BonusType>
@@ -5060,12 +5018,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>320</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Unit effects -->
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -5129,12 +5081,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>5455</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5266,12 +5212,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>234</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<iHappiness>2</iHappiness>
@@ -5612,12 +5552,6 @@
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Construction cost -->
 			<iCost>425</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>30</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -5805,12 +5739,6 @@
 			<ObsoleteTech>TECH_CIVIL_ENGINEERING</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>344</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGRICULTURAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -6159,12 +6087,6 @@
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>425</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -6421,12 +6343,6 @@
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>225</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_DECEIVER</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
@@ -6500,12 +6416,6 @@
 					<iProductonModifier>50</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_ORGANIZED</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<YieldModifiers>
@@ -7305,12 +7215,6 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Unit effects -->
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -7970,12 +7874,6 @@
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
 			<iCost>125</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGRICULTURAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -8123,12 +8021,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>234</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<iHappiness>2</iHappiness>
@@ -8204,12 +8096,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>300</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -8702,12 +8588,6 @@
 			<ObsoleteTech>TECH_GUERRILLA_WARFARE</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>50</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_DECEIVER</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
@@ -8840,12 +8720,6 @@
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
 			<iCost>270</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_HUMANITARIAN</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<CommerceChanges>
@@ -8908,12 +8782,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>770</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
@@ -9170,12 +9038,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>216</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<NewCityFree>
 				<Has>
 					<GOMType>GOM_TECH</GOMType>
@@ -9327,12 +9189,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>535</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -9696,13 +9552,6 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_BASKETS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<!-- Special Health and Happiness  modifiers -->
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_NOMAD</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Other -->
 			<Flavors>
 				<Flavor>
@@ -9763,12 +9612,6 @@
 					<iProductonModifier>50</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PHILOSOPHICAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -10083,12 +9926,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>710</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_NOMAD</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<CommerceChanges>
@@ -10221,12 +10058,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>56</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_NOMAD</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
@@ -10325,12 +10156,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>332</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_NOMAD</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
@@ -11307,12 +11132,6 @@
 			</ConstructCondition>
 			<!-- Construction cost -->
 			<iCost>3385</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Specialist effects -->
 			<SpecialistCounts>
 				<SpecialistCount>
@@ -12853,12 +12672,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>80</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<!-- Specialist effects -->
@@ -16176,12 +15989,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>870</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>3</iHappiness>
 			<CommerceModifiers>
@@ -16204,12 +16011,6 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_CHARISMATIC</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Specialist effects -->
 			<SpecialistCounts>
 				<SpecialistCount>
@@ -16397,12 +16198,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>216</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_DECEIVER</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceModifiers>
@@ -16477,12 +16272,6 @@
 			<ReligionType>RELIGION_BUDDHISM</ReligionType>
 			<!-- Construction cost -->
 			<iCost>216</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -16506,16 +16295,6 @@
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_SPIRITUAL</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_ANTI_CLERICAL</HappinessTraitType>
-					<iHappinessTrait>-1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Unit effects -->
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -16591,12 +16370,6 @@
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceModifiers>
@@ -16985,12 +16758,6 @@
 			</PrereqBonuses>
 			<!-- Construction cost -->
 			<iCost>770</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Misc. Effects -->
 			<iAirModifier>-20</iAirModifier>
 			<!-- Other -->
@@ -17224,12 +16991,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>56</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -17358,12 +17119,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>30</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_NOMAD</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -18049,12 +17804,6 @@
 			<ReligionType>RELIGION_MESOAMERICANISM</ReligionType>
 			<!-- Construction cost -->
 			<iCost>216</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -18080,16 +17829,6 @@
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_SPIRITUAL</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_ANTI_CLERICAL</HappinessTraitType>
-					<iHappinessTrait>-1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Unit effects -->
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -18433,12 +18172,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>168</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -18836,12 +18569,6 @@
 			<ObsoleteTech>TECH_ARMORED_VEHICLES</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>410</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<!-- Unit effects -->
@@ -18923,12 +18650,6 @@
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>205</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -20053,12 +19774,6 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -20193,12 +19908,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>356</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_HUMANITARIAN</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>2</iHealth>
 			<!-- Special Yield and Commerce modifiers -->
@@ -20667,12 +20376,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>45</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -20979,12 +20682,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>1180</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>-2</iHappiness>
 			<CommerceChanges>
@@ -21610,12 +21307,6 @@
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Construction cost -->
 			<iCost>368</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -21813,12 +21504,6 @@
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Construction cost -->
 			<iCost>990</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_DECEIVER</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
@@ -22643,12 +22328,6 @@
 			</PrereqAndTerrain>
 			<!-- Construction cost -->
 			<iCost>252</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGRICULTURAL</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -22785,12 +22464,6 @@
 			<ObsoleteTech>TECH_SKYROADS</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>830</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_DECEIVER</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<iHappiness>-1</iHappiness>
@@ -22879,12 +22552,6 @@
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceModifiers>
@@ -22969,12 +22636,6 @@
 			<ReligionType>RELIGION_CHRISTIANITY</ReligionType>
 			<!-- Construction cost -->
 			<iCost>216</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -22998,16 +22659,6 @@
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_SPIRITUAL</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_ANTI_CLERICAL</HappinessTraitType>
-					<iHappinessTrait>-1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Unit effects -->
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -23282,12 +22933,6 @@
 			<ObsoleteTech>TECH_COMPULSORY_EDUCATION</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>300</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SCIENTIFIC</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -23876,12 +23521,6 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -24204,12 +23843,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>234</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_ORGANIZED</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -24320,12 +23953,6 @@
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>252</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>75</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Defense effects -->
 			<iDefense>15</iDefense>
 			<iBombardDefense>10</iBombardDefense>
@@ -24429,12 +24056,6 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<!-- Construction cost -->
 			<iCost>800</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_HUMANITARIAN</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>3</iHealth>
 			<iHappiness>1</iHappiness>
@@ -24833,12 +24454,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>1925</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PHILOSOPHICAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>-2</iHappiness>
 			<!-- Specialist effects -->
@@ -25939,12 +25554,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>234</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<iHappiness>3</iHappiness>
@@ -26015,12 +25624,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>2105</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Unit effects -->
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -26230,12 +25833,6 @@
 			</PrereqBonuses>
 			<!-- Construction cost -->
 			<iCost>1230</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_FINANCIAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-3</iHealth>
 			<CommerceChanges>
@@ -26304,12 +25901,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>380</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_FINANCIAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_WATERPROOF_CEMENT</BonusType>
@@ -26486,12 +26077,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>1925</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>4</iHappiness>
 			<CommerceChanges>
@@ -26519,12 +26104,6 @@
 					<iHappinessChange>2</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_CHARISMATIC</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Specialist effects -->
 			<SpecialistCounts>
 				<SpecialistCount>
@@ -27287,12 +26866,6 @@
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceModifiers>
@@ -27377,12 +26950,6 @@
 			<ReligionType>RELIGION_CONFUCIANISM</ReligionType>
 			<!-- Construction cost -->
 			<iCost>216</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -27406,16 +26973,6 @@
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_SPIRITUAL</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_ANTI_CLERICAL</HappinessTraitType>
-					<iHappinessTrait>-1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Unit effects -->
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -27652,12 +27209,6 @@
 			</PrereqBonuses>
 			<!-- Construction cost -->
 			<iCost>1925</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PHILOSOPHICAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>4</iHappiness>
 			<CommerceModifiers>
@@ -28600,12 +28151,6 @@
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Construction cost -->
 			<iCost>368</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -28643,12 +28188,6 @@
 			</PrereqBonuses>
 			<!-- Construction cost -->
 			<iCost>225</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_ORGANIZED</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<NewCityFree>
 				<Has>
 					<GOMType>GOM_TECH</GOMType>
@@ -29509,12 +29048,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>68</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<iHappiness>-1</iHappiness>
@@ -29653,12 +29186,6 @@
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Construction cost -->
 			<iCost>5455</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_DECEIVER</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>-2</iHappiness>
 			<CommerceChanges>
@@ -30488,12 +30015,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>125</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -32832,13 +32353,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<!-- Special Health and Happiness  modifiers -->
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_SPIRITUAL</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Unit effects -->
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -32896,12 +32410,6 @@
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
 			<iCost>344</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_HUMANITARIAN</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingClassType>BUILDINGCLASS_SURGICAL_OFFICE</BuildingClassType>
@@ -32917,13 +32425,6 @@
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
-			<!-- Special Health and Happiness  modifiers -->
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_HUMANITARIAN</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Unit effects -->
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -32991,24 +32492,11 @@
 			</ConstructCondition>
 			<!-- Construction cost -->
 			<iCost>535</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_HUMANITARIAN</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>3</iHealth>
 			<CommerceChanges>
 				<iCommerce>-12</iCommerce>
 			</CommerceChanges>
-			<!-- Special Health and Happiness  modifiers -->
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_HUMANITARIAN</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Unit effects -->
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -33196,12 +32684,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>270</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGRICULTURAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>2</iYield>
@@ -33503,12 +32985,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>270</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -33972,12 +33448,6 @@
 			<ObsoleteTech>TECH_SMART_DRUGS</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>1180</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_DECEIVER</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<iHappiness>-1</iHappiness>
@@ -34161,12 +33631,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>740</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<!-- Unit effects -->
@@ -34691,12 +34155,6 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -35317,12 +34775,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>800</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
@@ -35382,12 +34834,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>1080</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>-2</iHappiness>
 			<CommerceChanges>
@@ -37570,12 +37016,6 @@
 			</PrereqBonuses>
 			<!-- Construction cost -->
 			<iCost>710</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_ORGANIZED</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<YieldModifiers>
@@ -37759,12 +37199,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>160</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_NOMAD</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -39057,12 +38491,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>1030</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Special Yield and Commerce modifiers -->
 			<RiverPlotYieldChanges>
 				<iYield>0</iYield>
@@ -39753,12 +39181,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>56</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -40458,12 +39880,6 @@
 			<Bonus>BONUS_BASKETS</Bonus>
 			<!-- Construction cost -->
 			<iCost>45</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -40552,12 +39968,6 @@
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
 			<iCost>45</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<NewCityFree>
 				<And>
 					<Is>TAG_COASTAL</Is>
@@ -40866,12 +40276,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>118</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Unit effects -->
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -40987,12 +40391,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>2105</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Unit effects -->
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -41401,12 +40799,6 @@
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
 			<iCost>1180</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGRICULTURAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Special Yield and Commerce modifiers -->
 			<PowerYieldModifiers>
 				<iYield>25</iYield>
@@ -41633,12 +41025,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>153</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_INDUSTRIOUS</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<NewCityFree>
 				<Has>
 					<GOMType>GOM_TECH</GOMType>
@@ -42280,10 +41666,6 @@
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Construction cost -->
 			<iCost>535</iCost>
-			<ProductionTrait>
-				<ProductionTraitType>TRAIT_FOREIGN</ProductionTraitType>
-				<iProductionTrait>100</iProductionTrait>
-			</ProductionTrait>
 			<!-- Specialist effects -->
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
@@ -42772,13 +42154,6 @@
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>1</iCommerce>
 			</ObsoleteSafeCommerceChanges>
-			<!-- Special Health and Happiness  modifiers -->
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_NOMAD</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Other -->
 			<Flavors>
 				<Flavor>
@@ -42908,12 +42283,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>310</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<iHappiness>-1</iHappiness>
@@ -43415,12 +42784,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>425</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<NewCityFree>
 				<Has>
 					<GOMType>GOM_TECH</GOMType>
@@ -44320,12 +43683,6 @@
 			<ObsoleteTech>TECH_CITY_PLANNING</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>98</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_NOMAD</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Unit effects -->
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -45036,12 +44393,6 @@
 			<ObsoleteTech>TECH_SOCIAL_CONTRACT</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>234</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -45262,12 +44613,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>200</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_INDUSTRIOUS</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<CommerceChanges>
@@ -46091,16 +45436,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>125</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGRICULTURAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_HUNTER_GATHERER</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<NewCityFree>
 				<Has>
 					<GOMType>GOM_TECH</GOMType>
@@ -46579,12 +45914,6 @@
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -46755,12 +46084,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>332</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGRICULTURAL</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -47341,12 +46664,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>216</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_HUMANITARIAN</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<!-- Special Yield and Commerce modifiers -->
@@ -47705,12 +47022,6 @@
 			<ObsoleteTech>TECH_INDUSTRIALISM</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>332</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_INDUSTRIOUS</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<YieldModifiers>
 				<iYield>0</iYield>
@@ -47804,12 +47115,6 @@
 			<ObsoleteTech>TECH_MODERN_HEALTH_CARE</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>440</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<iHappiness>-1</iHappiness>
@@ -48110,12 +47415,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>192</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_WATERPROOF_CEMENT</BonusType>
@@ -48205,12 +47504,6 @@
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
 			<iCost>192</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -48559,24 +47852,11 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>50</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_HUMANITARIAN</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<!-- Special Health and Happiness  modifiers -->
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_HUMANITARIAN</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Unit effects -->
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -48934,12 +48214,6 @@
 			<ReligionType>RELIGION_HELLENISM</ReligionType>
 			<!-- Construction cost -->
 			<iCost>216</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -48963,16 +48237,6 @@
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_SPIRITUAL</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_ANTI_CLERICAL</HappinessTraitType>
-					<iHappinessTrait>-1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Unit effects -->
 			<FreePromotion>PROMOTION_PANKRATION</FreePromotion>
 			<HealUnitCombatTypes>
@@ -49051,12 +48315,6 @@
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -49869,12 +49127,6 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -50299,12 +49551,6 @@
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceModifiers>
@@ -50375,12 +49621,6 @@
 			<ReligionType>RELIGION_HINDUISM</ReligionType>
 			<!-- Construction cost -->
 			<iCost>216</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -50404,16 +49644,6 @@
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_SPIRITUAL</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_ANTI_CLERICAL</HappinessTraitType>
-					<iHappinessTrait>-1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Unit effects -->
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -50604,12 +49834,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>139</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -50714,12 +49938,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>3525</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Unit effects -->
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -50803,12 +50021,6 @@
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
 			<iCost>3525</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Unit effects -->
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -51053,12 +50265,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>3525</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>3</iHappiness>
 			<CommerceChanges>
@@ -51430,12 +50636,6 @@
 			</ConstructCondition>
 			<!-- Construction cost -->
 			<iCost>770</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_HUMANITARIAN</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>5</iHealth>
 			<CommerceChanges>
@@ -51468,12 +50668,6 @@
 					<iHealthChange>1</iHealthChange>
 				</BonusHealthChange>
 			</BonusHealthChanges>
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_HUMANITARIAN</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Unit effects -->
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -53496,12 +52690,6 @@
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
 			<iCost>990</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_DECEIVER</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-25</iCommerce>
@@ -53900,12 +53088,6 @@
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Construction cost -->
 			<iCost>990</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_DECEIVER</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>-2</iHappiness>
 			<!-- Special Yield and Commerce modifiers -->
@@ -54439,12 +53621,6 @@
 			<bRiver>1</bRiver>
 			<!-- Construction cost -->
 			<iCost>160</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGRICULTURAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -54511,12 +53687,6 @@
 			<ReligionType>RELIGION_ISLAM</ReligionType>
 			<!-- Construction cost -->
 			<iCost>216</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -54540,16 +53710,6 @@
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_SPIRITUAL</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_ANTI_CLERICAL</HappinessTraitType>
-					<iHappinessTrait>-1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Unit effects -->
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -54625,12 +53785,6 @@
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceModifiers>
@@ -54849,12 +54003,6 @@
 			<ObsoleteTech>TECH_PLASTICS</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>40</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_FINANCIAL</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -54943,12 +54091,6 @@
 			</PrereqNotBuildingClasses>
 			<!-- Construction cost -->
 			<iCost>153</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_FINANCIAL</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -54997,12 +54139,6 @@
 			</PrereqNotBuildingClasses>
 			<!-- Construction cost -->
 			<iCost>62</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_FINANCIAL</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -55127,12 +54263,6 @@
 			</PrereqBonuses>
 			<!-- Construction cost -->
 			<iCost>535</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_DECEIVER</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-45</iCommerce>
@@ -55688,12 +54818,6 @@
 			<ReligionType>RELIGION_JUDAISM</ReligionType>
 			<!-- Construction cost -->
 			<iCost>216</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -55717,16 +54841,6 @@
 					<iReligionChange>2</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_SPIRITUAL</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_ANTI_CLERICAL</HappinessTraitType>
-					<iHappinessTrait>-1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Unit effects -->
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -55802,12 +54916,6 @@
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceModifiers>
@@ -57052,12 +56160,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>234</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_NOMAD</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Special Health and Happiness  modifiers -->
 			<TechHappinessChanges>
 				<TechHappinessChange>
@@ -57199,12 +56301,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>1130</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SCIENTIFIC</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<CommerceChanges>
@@ -58296,12 +57392,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>455</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_ORGANIZED</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>4</iCommerce>
@@ -58358,12 +57448,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>368</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_ORGANIZED</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
@@ -58919,12 +58003,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>1280</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
@@ -59151,12 +58229,6 @@
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
 			<iCost>62</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_FINANCIAL</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -59209,12 +58281,6 @@
 			</ConstructCondition>
 			<!-- Construction cost -->
 			<iCost>225</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<NewCityFree>
 				<Has>
 					<GOMType>GOM_TECH</GOMType>
@@ -59247,13 +58313,6 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<!-- Special Health and Happiness  modifiers -->
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_CREATIVE</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Specialist effects -->
 			<SpecialistCounts>
 				<SpecialistCount>
@@ -59421,12 +58480,6 @@
 			</PrereqBonuses>
 			<!-- Construction cost -->
 			<iCost>146</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<NewCityFree>
 				<And>
 					<Is>TAG_COASTAL</Is>
@@ -61118,12 +60171,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>225</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Special Yield and Commerce modifiers -->
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -61135,13 +60182,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<!-- Special Health and Happiness  modifiers -->
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_CREATIVE</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Specialist effects -->
 			<SpecialistCounts>
 				<SpecialistCount>
@@ -61929,12 +60969,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>1180</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_ORGANIZED</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-2</iHealth>
 			<!-- Special Yield and Commerce modifiers -->
@@ -62089,12 +61123,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>410</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<!-- Special Yield and Commerce modifiers -->
@@ -62572,12 +61600,6 @@
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Construction cost -->
 			<iCost>368</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Misc. Effects -->
 			<iWarWearinessModifier>-5</iWarWearinessModifier>
 			<iMilitaryProductionModifier>5</iMilitaryProductionModifier>
@@ -62985,12 +62007,6 @@
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -64110,12 +63126,6 @@
 			<Bonus>BONUS_WARES_MEGASTRONG_ALLOY</Bonus>
 			<!-- Construction cost -->
 			<iCost>12155</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>-5</iHappiness>
 			<CommerceChanges>
@@ -65080,12 +64090,6 @@
 			<ObsoleteTech>TECH_NATIONALISM</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>184</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
@@ -65158,12 +64162,6 @@
 			<ObsoleteTech>TECH_NATIONALISM</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>184</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<CommerceChanges>
@@ -65337,12 +64335,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>2505</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>-3</iHappiness>
 			<CommerceChanges>
@@ -65655,12 +64647,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>475</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_ORGANIZED</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -66311,12 +65297,6 @@
 			</PrereqBonuses>
 			<!-- Construction cost -->
 			<iCost>1130</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Unit effects -->
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -66709,12 +65689,6 @@
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Construction cost -->
 			<iCost>5255</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<YieldModifiers>
 				<iYield>-10</iYield>
@@ -67960,12 +66934,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>1345</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Unit effects -->
 			<UnitClassProductionModifiers>
 				<UnitClassProductionModifier>
@@ -68090,12 +67058,6 @@
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>300</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<!-- Defense effects -->
@@ -68143,12 +67105,6 @@
 			<ObsoleteTech>TECH_BRAIN_SCAN</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>830</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iInsidiousness>35</iInsidiousness>
 			<iHealth>-1</iHealth>
@@ -68550,16 +67506,6 @@
 			</PrereqBonuses>
 			<!-- Construction cost -->
 			<iCost>740</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGRICULTURAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_HUNTER_GATHERER</ProductionTraitType>
-					<iProductionTrait>-60</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Special Health and Happiness  modifiers -->
 			<BonusHealthChanges>
 				<BonusHealthChange>
@@ -68627,12 +67573,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>800</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGRICULTURAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>10</iYield>
@@ -68762,12 +67702,6 @@
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
 			<iCost>475</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_NOMAD</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Special Health and Happiness  modifiers -->
 			<TechHappinessChanges>
 				<TechHappinessChange>
@@ -69191,13 +68125,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<!-- Special Health and Happiness  modifiers -->
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_CHARISMATIC</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Other -->
 			<iAsset>2</iAsset>
 			<Flavors>
@@ -69256,17 +68183,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<!-- Special Health and Happiness  modifiers -->
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_CHARISMATIC</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_CRUEL</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Misc. Effects -->
 			<iMaintenanceModifier>-10</iMaintenanceModifier>
 			<iWarWearinessModifier>-25</iWarWearinessModifier>
@@ -69895,12 +68811,6 @@
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
 			<iCost>830</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>2</iHappiness>
 			<!-- Special Yield and Commerce modifiers -->
@@ -70116,12 +69026,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>830</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-2</iHealth>
 			<CommerceChanges>
@@ -70211,12 +69115,6 @@
 			</PrereqBonuses>
 			<!-- Construction cost -->
 			<iCost>475</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -70245,12 +69143,6 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_CREATIVE</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Specialist effects -->
 			<SpecialistCounts>
 				<SpecialistCount>
@@ -70397,12 +69289,6 @@
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
 			<iCost>280</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -70895,12 +69781,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>3975</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -70953,12 +69833,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>3975</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_ORGANIZED</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<YieldModifiers>
 				<iYield>0</iYield>
@@ -71476,12 +70350,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>475</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Special Yield and Commerce modifiers -->
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -71603,12 +70471,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>1180</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<!-- Unit effects -->
@@ -71686,12 +70548,6 @@
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>10</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<CommerceChanges>
@@ -71870,12 +70726,6 @@
 					<iHappinessChange>3</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_CHARISMATIC</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Specialist effects -->
 			<SpecialistCounts>
 				<SpecialistCount>
@@ -73016,13 +71866,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<!-- Special Health and Happiness  modifiers -->
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_CHARISMATIC</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Specialist effects -->
 			<SpecialistCounts>
 				<SpecialistCount>
@@ -73091,12 +71934,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>425</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SCIENTIFIC</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-15</iCommerce>
@@ -73290,12 +72127,6 @@
 			<ObsoleteTech>TECH_REALISM</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>280</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>2</iHappiness>
 			<CommerceChanges>
@@ -73723,12 +72554,6 @@
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
 			<iCost>62</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_FINANCIAL</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -74062,12 +72887,6 @@
 			</PrereqBonuses>
 			<!-- Construction cost -->
 			<iCost>770</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>2</iHappiness>
 			<!-- Special Yield and Commerce modifiers -->
@@ -75113,12 +73932,6 @@
 			</PrereqVicinityBonuses>
 			<!-- Construction cost -->
 			<iCost>153</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGRICULTURAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -75189,12 +74002,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>270</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGRICULTURAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>2</iYield>
@@ -75546,12 +74353,6 @@
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>146</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -75729,12 +74530,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>68</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -76718,12 +75513,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>680</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_ORGANIZED</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<YieldModifiers>
 				<iYield>0</iYield>
@@ -76803,12 +75592,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>990</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_ORGANIZED</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<YieldModifiers>
 				<iYield>0</iYield>
@@ -78777,12 +77560,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>192</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -79238,12 +78015,6 @@
 			<ObsoleteTech>TECH_SCREW_PROPELLER</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>440</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<iHappiness>-1</iHappiness>
@@ -79777,12 +78548,6 @@
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Construction cost -->
 			<iCost>990</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_ORGANIZED</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<YieldModifiers>
 				<iYield>0</iYield>
@@ -80456,12 +79221,6 @@
 			<ObsoleteTech>TECH_ECOLOGICAL_ENGINEERING</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>680</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_DECEIVER</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>-2</iHappiness>
 			<CommerceChanges>
@@ -80645,12 +79404,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>800</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_DECEIVER</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -80895,12 +79648,6 @@
 			</ConstructCondition>
 			<!-- Construction cost -->
 			<iCost>800</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_DECEIVER</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-12</iCommerce>
@@ -81006,10 +79753,6 @@
 			<ObsoleteTech>TECH_REPRESENTATIVE_DEMOCRACY</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>234</iCost>
-			<ProductionTrait>
-				<ProductionTraitType>TRAIT_POLITICIAN</ProductionTraitType>
-				<iProductionTrait>100</iProductionTrait>
-			</ProductionTrait>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<!-- Misc. Effects -->
@@ -81338,12 +80081,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>234</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_WATERPROOF_CEMENT</BonusType>
@@ -82230,13 +80967,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<!-- Special Health and Happiness  modifiers -->
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_CHARISMATIC</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Other -->
 			<iAsset>3</iAsset>
 			<Flavors>
@@ -83116,12 +81846,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>50</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<iHappiness>-2</iHappiness>
@@ -83649,12 +82373,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>30</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGRICULTURAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -83992,12 +82710,6 @@
 			</PrereqBonuses>
 			<!-- Construction cost -->
 			<iCost>1180</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Defense effects -->
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<!-- Misc. Effects -->
@@ -84505,12 +83217,6 @@
 			<ObsoleteTech>TECH_MILITARY_ROBOTS</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>1030</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<iHappiness>-3</iHappiness>
@@ -84821,12 +83527,6 @@
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Construction cost -->
 			<iCost>580</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_CHARISMATIC</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Misc. Effects -->
 			<iPopulationgrowthratepercentage>5</iPopulationgrowthratepercentage>
 			<iMilitaryProductionModifier>25</iMilitaryProductionModifier>
@@ -85665,12 +84365,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>270</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Unit effects -->
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -86456,12 +85150,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>332</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGRICULTURAL</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -86642,12 +85330,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>225</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Special Yield and Commerce modifiers -->
 			<RiverPlotYieldChanges>
 				<iYield>0</iYield>
@@ -86720,12 +85402,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>74</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Special Yield and Commerce modifiers -->
 			<RiverPlotYieldChanges>
 				<iYield>0</iYield>
@@ -87871,13 +86547,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</ObsoleteSafeCommerceChanges>
-			<!-- Special Health and Happiness  modifiers -->
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_CHARISMATIC</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Misc. Effects -->
 			<iWarWearinessModifier>-15</iWarWearinessModifier>
 			<!-- Other -->
@@ -88671,12 +87340,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>710</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<CommerceChanges>
@@ -88746,12 +87409,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>132</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -88834,12 +87491,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>630</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iInsidiousness>20</iInsidiousness>
 			<iHealth>-1</iHealth>
@@ -89760,12 +88411,6 @@
 			<ObsoleteTech>TECH_PRINTING_PRESS</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>176</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SCIENTIFIC</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-2</iCommerce>
@@ -90256,13 +88901,6 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<!-- Special Health and Happiness  modifiers -->
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_CREATIVE</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Specialist effects -->
 			<SpecialistCounts>
 				<SpecialistCount>
@@ -90346,13 +88984,6 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<!-- Special Health and Happiness  modifiers -->
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_CREATIVE</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Specialist effects -->
 			<SpecialistCounts>
 				<SpecialistCount>
@@ -90614,12 +89245,6 @@
 			<ObsoleteTech>TECH_COMPULSORY_EDUCATION</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>216</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
 			<!-- Special Yield and Commerce modifiers -->
 			<ObsoleteSafeCommerceChanges>
@@ -90739,12 +89364,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>630</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Special Yield and Commerce modifiers -->
 			<SeaPlotYieldChanges>
 				<iYield>0</iYield>
@@ -90890,12 +89509,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>2105</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_DECEIVER</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-30</iCommerce>
@@ -91083,12 +89696,6 @@
 			<ObsoleteTech>TECH_COMPULSORY_EDUCATION</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>300</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Special Yield and Commerce modifiers -->
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -91548,12 +90155,6 @@
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
 			<iCost>139</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_FINANCIAL</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -91770,12 +90371,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>630</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_DECEIVER</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-15</iCommerce>
@@ -91921,12 +90516,6 @@
 			<ObsoleteTech>TECH_COAST_GUARD</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>132</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -91996,12 +90585,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>216</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<!-- Unit effects -->
@@ -92649,12 +91232,6 @@
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>225</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Unit effects -->
 			<UnitClassProductionModifiers>
 				<UnitClassProductionModifier>
@@ -93622,12 +92199,6 @@
 			<Bonus>BONUS_NANOBOTS</Bonus>
 			<!-- Construction cost -->
 			<iCost>5455</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -93836,12 +92407,6 @@
 			<ObsoleteTech>TECH_RAILROAD</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>160</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_DECEIVER</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<CommerceChanges>
@@ -94330,12 +92895,6 @@
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Construction cost -->
 			<iCost>1180</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_HUMANITARIAN</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>2</iHealth>
 			<iHappiness>2</iHappiness>
@@ -95872,12 +94431,6 @@
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Construction cost -->
 			<iCost>368</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_DECEIVER</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -96064,12 +94617,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>98</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_NOMAD</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<NewCityFree>
 				<Has>
 					<GOMType>GOM_TECH</GOMType>
@@ -96292,12 +94839,6 @@
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>425</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -96663,12 +95204,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>630</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Special Yield and Commerce modifiers -->
 			<RiverPlotYieldChanges>
 				<iYield>0</iYield>
@@ -96931,13 +95466,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<!-- Special Health and Happiness  modifiers -->
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_CHARISMATIC</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Other -->
 			<iAsset>2</iAsset>
 			<Flavors>
@@ -97096,12 +95624,6 @@
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Construction cost -->
 			<iCost>368</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_ORGANIZED</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<YieldModifiers>
 				<iYield>0</iYield>
@@ -97354,12 +95876,6 @@
 			<ObsoleteTech>TECH_JURIS_PRUDENCE</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>225</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<iHappiness>-1</iHappiness>
@@ -97752,12 +96268,6 @@
 			<ObsoleteTech>TECH_SCULPTURE</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>25</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_INDUSTRIOUS</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -98818,12 +97328,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>4145</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>-4</iHappiness>
 			<CommerceChanges>
@@ -99607,12 +98111,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>62</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_NOMAD</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -99834,12 +98332,6 @@
 			<ReligionType>RELIGION_TAOISM</ReligionType>
 			<!-- Construction cost -->
 			<iCost>216</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -99863,16 +98355,6 @@
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_SPIRITUAL</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_ANTI_CLERICAL</HappinessTraitType>
-					<iHappinessTrait>-1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Unit effects -->
 			<FreePromotion>PROMOTION_MARTIAL_ARTS</FreePromotion>
 			<HealUnitCombatTypes>
@@ -99949,12 +98431,6 @@
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceModifiers>
@@ -100778,12 +99254,6 @@
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
 			<iCost>475</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_FINANCIAL</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Misc. Effects -->
 			<iMaintenanceModifier>-25</iMaintenanceModifier>
 			<!-- Other -->
@@ -101464,12 +99934,6 @@
 			<ReligionType>RELIGION_EGYPT_MYTHOLOGY</ReligionType>
 			<!-- Construction cost -->
 			<iCost>216</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<CommerceModifiers>
@@ -101494,16 +99958,6 @@
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_SPIRITUAL</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_ANTI_CLERICAL</HappinessTraitType>
-					<iHappinessTrait>-1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Unit effects -->
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -101579,12 +100033,6 @@
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceModifiers>
@@ -101738,12 +100186,6 @@
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceModifiers>
@@ -101929,12 +100371,6 @@
 			</PrereqOrTerrain>
 			<!-- Construction cost -->
 			<iCost>332</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGRICULTURAL</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -102080,12 +100516,6 @@
 			<Bonus>BONUS_AMMO</Bonus>
 			<!-- Construction cost -->
 			<iCost>1180</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-2</iHealth>
 			<iHappiness>-3</iHappiness>
@@ -102348,12 +100778,6 @@
 			<ObsoleteTech>TECH_WEARABLE_ELECTRONICS</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>270</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<!-- Special Yield and Commerce modifiers -->
@@ -102464,12 +100888,6 @@
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Construction cost -->
 			<iCost>2405</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_IMPERIALIST</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Special Yield and Commerce modifiers -->
 			<CommerceHappinesses>
 				<iCommerce>0</iCommerce>
@@ -103600,13 +102018,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<!-- Special Health and Happiness  modifiers -->
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_CHARISMATIC</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Unit effects -->
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -103753,12 +102164,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>118</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_ORGANIZED</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -103994,12 +102399,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>146</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGRICULTURAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -104055,12 +102454,6 @@
 			<ObsoleteTech>TECH_ASSEMBLY_LINE</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>356</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_INDUSTRIOUS</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<YieldModifiers>
 				<iYield>0</iYield>
@@ -105237,12 +103630,6 @@
 			<ObsoleteTech>TECH_THEOLOGY</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>56</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
 			<!-- Main effects -->
 			<CommerceChanges>
@@ -105898,12 +104285,6 @@
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Construction cost -->
 			<iCost>1180</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceModifiers>
@@ -105960,12 +104341,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>368</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PHILOSOPHICAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-15</iCommerce>
@@ -106968,12 +105343,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>74</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_ORGANIZED</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Specialist effects -->
 			<iFreeSpecialist>1</iFreeSpecialist>
 			<!-- Defense effects -->
@@ -107330,12 +105699,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>2505</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>2</iHappiness>
 			<!-- Special Yield and Commerce modifiers -->
@@ -107626,12 +105989,6 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -107887,12 +106244,6 @@
 			<ObsoleteTech>TECH_MILITARY_TRAINING</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>86</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Special Yield and Commerce modifiers -->
 			<TechCommerceChanges>
 				<TechCommerceChange>
@@ -108921,12 +107272,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>280</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGRICULTURAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>2</iYield>
@@ -109802,12 +108147,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>2105</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_ORGANIZED</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Misc. Effects -->
 			<iMaintenanceModifier>10</iMaintenanceModifier>
 			<!-- Other -->
@@ -110165,12 +108504,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>320</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGRICULTURAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>2</iYield>
@@ -110351,12 +108684,6 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>3975</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>-3</iHappiness>
 			<CommerceChanges>
@@ -110876,12 +109203,6 @@
 			<ObsoleteTech>TECH_INDUSTRIALISM</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>475</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_INDUSTRIOUS</ProductionTraitType>
-					<iProductionTrait>60</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<iHappiness>-1</iHappiness>
@@ -110941,12 +109262,6 @@
 			</PrereqOrImprovement>
 			<!-- Construction cost -->
 			<iCost>535</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -111326,12 +109641,6 @@
 			<PrereqReligion>RELIGION_MESO</PrereqReligion>
 			<!-- Construction cost -->
 			<iCost>160</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -111664,12 +109973,6 @@
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>1</iHappiness>
 			<CommerceModifiers>
@@ -111737,12 +110040,6 @@
 			<ReligionType>RELIGION_ZOROASTRIANISM</ReligionType>
 			<!-- Construction cost -->
 			<iCost>216</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -111766,16 +110063,6 @@
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_SPIRITUAL</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_ANTI_CLERICAL</HappinessTraitType>
-					<iHappinessTrait>-1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Unit effects -->
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -111963,12 +110250,6 @@
 			</UnitCombatFreeExperiences>
 			<!-- Defense effects -->
 			<iDCMAirbombMission>2</iDCMAirbombMission>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_DECEIVER</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Other -->
 			<iAsset>2</iAsset>
 			<Flavors>
@@ -112041,12 +110322,6 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<ObsoleteTech>TECH_MECHANIZED_WARFARE</ObsoleteTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Unit effects -->
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -112109,12 +110384,6 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<ObsoleteTech>TECH_WEAPONIZED_LASERS</ObsoleteTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Unit effects -->
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -112178,12 +110447,6 @@
 			</UnitCombatFreeExperiences>
 			<!-- Defense effects -->
 			<iDCMAirbombMission>2</iDCMAirbombMission>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_DECEIVER</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Other -->
 			<iAsset>2</iAsset>
 			<Flavors>
@@ -112336,12 +110599,6 @@
 			</HealUnitCombatTypes>
 			<!-- Defense effects -->
 			<iDCMAirbombMission>2</iDCMAirbombMission>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_DECEIVER</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Other -->
 			<iAsset>2</iAsset>
 			<Flavors>
@@ -112394,12 +110651,6 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<ObsoleteTech>TECH_BATTLEFIELD_SPORTS</ObsoleteTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Unit effects -->
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -112456,12 +110707,6 @@
 			</PrereqBonuses>
 			<!-- Construction -->
 			<iCost>1130</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_BATTLEFIELD_SPORTS</ObsoleteTech>
 			<!-- Unit effects -->
@@ -112533,12 +110778,6 @@
 			</HealUnitCombatTypes>
 			<!-- Defense effects -->
 			<iDCMAirbombMission>2</iDCMAirbombMission>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_DECEIVER</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Other -->
 			<iAsset>2</iAsset>
 			<Flavors>
@@ -112585,12 +110824,6 @@
 			<!-- Construction -->
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iCost>2865</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_BATTLEFIELD_SPORTS</ObsoleteTech>
@@ -112751,12 +110984,6 @@
 			<!-- Construction -->
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<iCost>168</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<!-- Main -->
 			<CommerceChangeDoubleTimes>
@@ -113928,12 +112155,6 @@
 				</PrereqBuildingClass>
 			</PrereqBuildingClasses>
 			<iCost>168</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_INDUSTRIOUS</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<CommerceChanges>
@@ -114313,12 +112534,6 @@
 					<iProductonModifier>5</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -114529,12 +112744,6 @@
 			</BuildingClassNeededs>
 			<!-- Construction cost -->
 			<iCost>1030</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_DECEIVER</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-16</iCommerce>
@@ -114622,10 +112831,6 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_MARKET</ArtDefineTag>
 			<PrereqTech>TECH_TRADE</PrereqTech>
-			<ProductionTrait>
-				<ProductionTraitType>TRAIT_PROGRESSIST</ProductionTraitType>
-				<iProductionTrait>50</iProductionTrait>
-			</ProductionTrait>
 			<bNeverCapture>1</bNeverCapture>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

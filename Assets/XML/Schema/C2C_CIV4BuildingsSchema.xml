@@ -399,24 +399,6 @@
 	<ElementType name="PrereqBonuses" content="eltOnly">
 		<element type="Bonus" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="ProductionTraitType" content="textOnly"/>
-	<ElementType name="iProductionTrait" content="textOnly" dt:type="int"/>
-	<ElementType name="ProductionTrait" content="eltOnly">
-		<element type="ProductionTraitType"/>
-		<element type="iProductionTrait"/>
-	</ElementType>
-	<ElementType name="ProductionTraits" content="eltOnly">
-		<element type="ProductionTrait" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="HappinessTraitType" content="textOnly"/>
-	<ElementType name="iHappinessTrait" content="textOnly" dt:type="int"/>
-	<ElementType name="HappinessTrait" content="eltOnly">
-		<element type="HappinessTraitType"/>
-		<element type="iHappinessTrait"/>
-	</ElementType>
-	<ElementType name="HappinessTraits" content="eltOnly">
-		<element type="HappinessTrait" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
 	<ElementType name="NoBonus" content="textOnly"/>
 	<ElementType name="PowerBonus" content="textOnly"/>
 	<ElementType name="FreeBonus" content="textOnly"/>
@@ -856,8 +838,6 @@
 		<element type="TechTypes" minOccurs="0"/>
 		<element type="Bonus" minOccurs="0"/>
 		<element type="PrereqBonuses" minOccurs="0"/>
-		<element type="ProductionTraits" minOccurs="0"/>
-		<element type="HappinessTraits" minOccurs="0"/>
 		<element type="EnabledCivilizationTypes" minOccurs="0"/>
 		<element type="NoBonus" minOccurs="0"/>
 		<element type="PowerBonus" minOccurs="0"/>

@@ -10781,14 +10781,6 @@ Assyria, Hungary, Minoa, Armenia
 			<DefaultUnit>UNIT_NEANDERTHAL_GATHERER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
-			<Type>UNITCLASS_NEANDERTHAL_WORKER</Type>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_WORKER</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<DefaultUnit>UNIT_NEANDERTHAL_WORKER</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
 			<Type>UNITCLASS_NEANDERTHAL_WISE_WOMAN</Type>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_WISE_WOMAN</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
@@ -10851,14 +10843,6 @@ Assyria, Hungary, Minoa, Armenia
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_NEANDERTHAL_RAFT</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
-			<Type>UNITCLASS_NEANDERTHAL_CLASSIC_WORKBOAT</Type>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_CLASSIC_WORKBOAT</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<DefaultUnit>UNIT_NEANDERTHAL_CLASSIC_WORKBOAT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_NEANDERTHAL_WORKBOAT</Type>
