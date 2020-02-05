@@ -17,7 +17,6 @@
 					<bUnitAI>1</bUnitAI>
 				</CarrierUnitAI>
 			</CarrierUnitAIs>
-			<ProductionTraits/>
 		</SpecialUnitInfo>
 		<SpecialUnitInfo>
 			<Type>SPECIALUNIT_PEOPLE</Type>
@@ -39,7 +38,6 @@
 					<bUnitAI>1</bUnitAI>
 				</CarrierUnitAI>
 			</CarrierUnitAIs>
-			<ProductionTraits/>
 		</SpecialUnitInfo>
 		<SpecialUnitInfo>
 			<Type>SPECIALUNIT_MISSILE</Type>
@@ -52,7 +50,6 @@
 					<bUnitAI>1</bUnitAI>
 				</CarrierUnitAI>
 			</CarrierUnitAIs>
-			<ProductionTraits/>
 		</SpecialUnitInfo>
 		<SpecialUnitInfo>
 			<Type>SPECIALUNIT_TROOP</Type>
@@ -60,7 +57,6 @@
 			<bValid>1</bValid>
 			<bCityLoad>0</bCityLoad>
 			<CarrierUnitAIs/>
-			<ProductionTraits/>
 		</SpecialUnitInfo>
 		<SpecialUnitInfo>
 			<Type>SPECIALUNIT_SEAPLANE</Type>
@@ -73,7 +69,6 @@
 					<bUnitAI>1</bUnitAI>
 				</CarrierUnitAI>
 			</CarrierUnitAIs>
-			<ProductionTraits/>
 		</SpecialUnitInfo>
 		<SpecialUnitInfo>
 			<Type>SPECIALUNIT_UNITED_NATIONS</Type>
@@ -81,7 +76,6 @@
 			<bValid>1</bValid>
 			<bCityLoad>0</bCityLoad>
 			<CarrierUnitAIs/>
-			<ProductionTraits/>
 		</SpecialUnitInfo>
 		<SpecialUnitInfo>
 			<Type>SPECIALUNIT_VTOL</Type>
@@ -94,7 +88,6 @@
 					<bUnitAI>1</bUnitAI>
 				</CarrierUnitAI>
 			</CarrierUnitAIs>
-			<ProductionTraits/>
 		</SpecialUnitInfo>
 		<SpecialUnitInfo>
 			<Type>SPECIALUNIT_CAPTIVE</Type>
@@ -105,7 +98,6 @@
 			<iWithdrawalChange>-10</iWithdrawalChange>
 			<iPursuitChange>-10</iPursuitChange>
 			<CarrierUnitAIs/>
-			<ProductionTraits/>
 		</SpecialUnitInfo>
 	</SpecialUnitInfos>
 </Civ4SpecialUnitInfos>

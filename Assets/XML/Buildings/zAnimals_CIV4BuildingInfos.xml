@@ -18892,12 +18892,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CARNIVAL</ArtDefineTag>
 			<ObsoleteTech>TECH_ADVANCED_FLIGHT</ObsoleteTech>
 			<PrereqTech>TECH_TRADE</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>153</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -19556,10 +19550,6 @@
 			<ObsoleteTech>TECH_TELEGRAPH</ObsoleteTech>
 			<PrereqTech>TECH_FALCONRY</PrereqTech>
 			<FreeStartEra>ERA_CLASSICAL</FreeStartEra>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_NOMAD</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
 			<iCost>-1</iCost>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>

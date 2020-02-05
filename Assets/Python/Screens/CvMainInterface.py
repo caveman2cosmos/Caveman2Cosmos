@@ -235,8 +235,8 @@ class CvMainInterface:
 			self.artPathFilterCivilianPLE		= afm.getInterfaceArtInfo("PLE_FILTER_DOM").getPath()
 			self.artPathFilterSiegePLE			= afm.getInterfaceArtInfo("PLE_GRP_UNITTYPE").getPath()
 			self.artPathFilterHeroPLE			= afm.getInterfaceArtInfo("PLE_FILTER_MIL").getPath()
-			self.artPathWorldWonderOnBUG		= afm.getInterfaceArtInfo("BUG_WORLDWONDER_ON").getPath()
 
+			self.artFILTER_SHOW_UNLIMITED		= afm.getInterfaceArtInfo("ART_DEF_FILTER_SHOW_UNLIMITED").getPath()
 			self.artFILTER_SHOW_MILITARY		= afm.getInterfaceArtInfo("ART_DEF_FILTER_SHOW_MILITARY").getPath()
 			self.artFILTER_SHOW_HAPPY			= afm.getInterfaceArtInfo("ART_DEF_FILTER_SHOW_HAPPY").getPath()
 			self.artFILTER_HIDE_UNHAPPY			= afm.getInterfaceArtInfo("ART_DEF_FILTER_HIDE_UNHAPPY").getPath()
@@ -3474,7 +3474,7 @@ class CvMainInterface:
 
 		aList = [
 			[int(UnitFilterTypes.UNIT_FILTER_HIDE_UNBUILDABLE),	self.artPathButtonNoProduction],
-			[int(UnitFilterTypes.UNIT_FILTER_HIDE_LIMITED),		self.artPathWorldWonderOnBUG],
+			[int(UnitFilterTypes.UNIT_FILTER_HIDE_LIMITED),		self.artFILTER_SHOW_UNLIMITED],
 			[int(UnitFilterTypes.UNIT_FILTER_SHOW_LAND),		self.artPathFilterLandPLE],
 			[int(UnitFilterTypes.UNIT_FILTER_SHOW_AIR),			self.artPathFilterAirPLE],
 			[int(UnitFilterTypes.UNIT_FILTER_SHOW_WATER),		self.artPathFilterSeaPLE],

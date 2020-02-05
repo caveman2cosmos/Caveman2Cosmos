@@ -12076,22 +12076,14 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 					if ((UnitTypes)GC.getTraitInfo(eTrait).getUnitProductionModifier(j).eUnit == eLoopUnit)
 					{
 						if (GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier != 0)
-							/*(GC.getUnitInfo(eLoopUnit).getProductionTraits(eTrait) != 0)*/
 						{
-							//if (GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier == 0)
-							//	/*(GC.getUnitInfo(eLoopUnit).getProductionTraits(eTrait) == 100)*/
-							//{
-							//	szText = gDLL->getText("TXT_KEY_TRAIT_DOUBLE_SPEED_C2C");
-							//}
-							//else
-							//{
-							szText = gDLL->getText("TXT_KEY_TRAIT_PRODUCTION_MODIFIER_C2C", GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier/*GC.getUnitInfo(eLoopUnit).getProductionTraits(eTrait)*/);
-							//}
+							szText = gDLL->getText("TXT_KEY_TRAIT_PRODUCTION_MODIFIER_C2C", GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier);
+
 							CvWString szUnit;
 
 							szUnit.Format(L"<link=%s>%s</link>", CvWString(GC.getUnitInfo(eLoopUnit).getType()).GetCString(), GC.getUnitInfo(eLoopUnit).getDescription());
-							setListHelp(szHelpString, szText.GetCString(), szUnit, L", ", (GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier/*GC.getUnitInfo(eLoopUnit).getProductionTraits(eTrait)*/ != iLast));
-							iLast = GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier/*GC.getUnitInfo(eLoopUnit).getProductionTraits(eTrait)*/;
+							setListHelp(szHelpString, szText.GetCString(), szUnit, L", ", (GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier != iLast));
+							iLast = GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier;
 						}
 					}
 				}
@@ -12107,16 +12099,10 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			{
 				if ((SpecialUnitTypes)GC.getTraitInfo(eTrait).getSpecialUnitProductionModifier(j).eSpecialUnit == eSpecialUnit)
 				{
-					//if (GC.getTraitInfo(eTrait).getSpecialUnitProductionModifier(j).iModifier == 100)/*GC.getSpecialUnitInfo((SpecialUnitTypes) iI).getProductionTraits(eTrait) == 100)*/
-					//{
-					//	szText = gDLL->getText("TXT_KEY_TRAIT_DOUBLE_SPEED_C2C");
-					//}
-					//else
-					//{
-					szText = gDLL->getText("TXT_KEY_TRAIT_PRODUCTION_MODIFIER_C2C", GC.getTraitInfo(eTrait).getSpecialUnitProductionModifier(j).iModifier);/*GC.getSpecialUnitInfo((SpecialUnitTypes) iI).getProductionTraits(eTrait));*/
-				//}
-					setListHelp(szHelpString, szText.GetCString(), GC.getSpecialUnitInfo(eSpecialUnit).getDescription(), L", ", (GC.getTraitInfo(eTrait).getSpecialUnitProductionModifier(j).iModifier != iLast));/*GC.getSpecialUnitInfo((SpecialUnitTypes) iI).getProductionTraits(eTrait) != iLast));*/
-					iLast = GC.getTraitInfo(eTrait).getSpecialUnitProductionModifier(j).iModifier;/*GC.getSpecialUnitInfo((SpecialUnitTypes) iI).getProductionTraits(eTrait);*/
+					szText = gDLL->getText("TXT_KEY_TRAIT_PRODUCTION_MODIFIER_C2C", GC.getTraitInfo(eTrait).getSpecialUnitProductionModifier(j).iModifier);
+
+					setListHelp(szHelpString, szText.GetCString(), GC.getSpecialUnitInfo(eSpecialUnit).getDescription(), L", ", (GC.getTraitInfo(eTrait).getSpecialUnitProductionModifier(j).iModifier != iLast));
+					iLast = GC.getTraitInfo(eTrait).getSpecialUnitProductionModifier(j).iModifier;
 				}
 			}
 		}
@@ -12817,19 +12803,6 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 					}
 				}
 			}
-			//if (GC.getSpecialBuildingInfo((SpecialBuildingTypes) iI).getProductionTraits(eTrait) != 0)
-			//{
-			//	if (GC.getSpecialBuildingInfo((SpecialBuildingTypes) iI).getProductionTraits(eTrait) == 100)
-			//	{
-			//		szText = gDLL->getText("TXT_KEY_TRAIT_DOUBLE_SPEED_C2C");
-			//	}
-			//	else
-			//	{
-			//		szText = gDLL->getText("TXT_KEY_TRAIT_PRODUCTION_MODIFIER_C2C", GC.getSpecialBuildingInfo((SpecialBuildingTypes) iI).getProductionTraits(eTrait));
-			//	}
-			//	setListHelp(szHelpString, szText.GetCString(), GC.getSpecialBuildingInfo((SpecialBuildingTypes) iI).getDescription(), L", ", (GC.getSpecialBuildingInfo((SpecialBuildingTypes) iI).getProductionTraits(eTrait) != iLast));
-			//	iLast = GC.getSpecialBuildingInfo((SpecialBuildingTypes) iI).getProductionTraits(eTrait);
-			//}
 		}
 
 		// Buildings
@@ -12872,25 +12845,6 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			}
 		}
 
-		//		if (GC.getBuildingInfo(eLoopBuilding).getProductionTraits(eTrait) != 0)
-		//		{
-		//			if (GC.getBuildingInfo(eLoopBuilding).getProductionTraits(eTrait) == 100)
-		//			{
-		//				szText = gDLL->getText("TXT_KEY_TRAIT_DOUBLE_SPEED_C2C");
-		//			}
-		//			else
-		//			{
-		//				szText = gDLL->getText("TXT_KEY_TRAIT_PRODUCTION_MODIFIER_C2C", GC.getBuildingInfo(eLoopBuilding).getProductionTraits(eTrait));
-		//			}
-
-		//			CvWString szBuilding;
-		//			szBuilding.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
-		//			setListHelp(szHelpString, szText.GetCString(), szBuilding, L", ", (GC.getBuildingInfo(eLoopBuilding).getProductionTraits(eTrait) != iLast));
-		//			iLast = GC.getBuildingInfo(eLoopBuilding).getProductionTraits(eTrait);
-		//		}
-		//	}
-		//}
-
 		// Buildings
 		iLast = 0;
 		for (iI = 0; iI < GC.getNumBuildingClassInfos(); ++iI)
@@ -12912,7 +12866,6 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 					if ((BuildingTypes)GC.getTraitInfo(eTrait).getBuildingHappinessModifier(j).eBuilding == eLoopBuilding)
 					{
 						int iHappiness = GC.getTraitInfo(eTrait).getBuildingHappinessModifier(j).iModifier;
-						/*int iHappiness = GC.getBuildingInfo(eLoopBuilding).getHappinessTraits(eTrait);*/
 						if (iHappiness != 0)
 						{
 							if (iHappiness > 0)
@@ -21560,9 +21513,9 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			{
 				if ((UnitTypes)GC.getTraitInfo(eTrait).getUnitProductionModifier(j).eUnit == eUnit)
 				{
-					if (GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier != 0)/*GC.getUnitInfo(eUnit).getProductionTraits((TraitTypes)i)*/
+					if (GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier != 0)
 					{
-						if (GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier == 100)/*GC.getUnitInfo(eUnit).getProductionTraits((TraitTypes)i)*/
+						if (GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier == 100)
 						{
 							szBuffer.append(NEWLINE);
 							szBuffer.append(gDLL->getText("TXT_KEY_DOUBLE_SPEED_TRAIT", GC.getTraitInfo(eTrait).getTextKeyWide()));
@@ -21570,7 +21523,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 						else
 						{
 							szBuffer.append(NEWLINE);
-							szBuffer.append(gDLL->getText("TXT_KEY_PRODUCTION_MODIFIER_TRAIT", GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier/*GC.getUnitInfo(eUnit).getProductionTraits((TraitTypes)i)*/, GC.getTraitInfo(eTrait).getTextKeyWide()));
+							szBuffer.append(gDLL->getText("TXT_KEY_PRODUCTION_MODIFIER_TRAIT", GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier, GC.getTraitInfo(eTrait).getTextKeyWide()));
 						}
 					}
 				}
@@ -25559,20 +25512,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 				}
 			}
 		}
-		//	if (kBuilding.getProductionTraits((TraitTypes)i) != 0)
-		//	{
-		//		if (kBuilding.getProductionTraits((TraitTypes)i) == 100)
-		//		{
-		//			szBuffer.append(NEWLINE);
-		//			szBuffer.append(gDLL->getText("TXT_KEY_DOUBLE_SPEED_TRAIT", GC.getTraitInfo((TraitTypes)i).getTextKeyWide()));
-		//		}
-		//		else
-		//		{
-		//			szBuffer.append(NEWLINE);
-		//			szBuffer.append(gDLL->getText("TXT_KEY_PRODUCTION_MODIFIER_TRAIT", kBuilding.getProductionTraits((TraitTypes)i), GC.getTraitInfo((TraitTypes)i).getTextKeyWide()));
-		//		}
-		//	}
-		//}
+
 		if (!bRelDisabled)
 		{
 			for (int i = 0; i < GC.getNumTraitInfos(); ++i)
@@ -25590,14 +25530,6 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 					}
 				}
 			}
-		//for (int i = 0; i < GC.getNumTraitInfos(); ++i)
-		//{
-		//	if (kBuilding.getHappinessTraits((TraitTypes)i) != 0)
-		//	{
-		//		szBuffer.append(NEWLINE);
-		//		szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_HAPPINESS_TRAIT", kBuilding.getHappinessTraits((TraitTypes)i), GC.getTraitInfo((TraitTypes)i).getTextKeyWide()));
-		//	}
-		//}
 		}
 	}
 
@@ -36043,9 +35975,9 @@ void CvGameTextMgr::setProductionHelp(CvWStringBuffer &szBuffer, CvCity& city)
 				{
 					if ((UnitTypes)GC.getTraitInfo(eTrait).getUnitProductionModifier(j).eUnit == eUnit)
 					{
-						if (GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier != 0)/*GC.getUnitInfo(eUnit).getProductionTraits((TraitTypes)i)*/
+						if (GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier != 0)
 						{
-							if (GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier == 100)/*GC.getUnitInfo(eUnit).getProductionTraits((TraitTypes)i)*/
+							if (GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier == 100)
 							{
 								szBuffer.append(NEWLINE);
 								szBuffer.append(gDLL->getText("TXT_KEY_DOUBLE_SPEED_TRAIT", GC.getTraitInfo(eTrait).getTextKeyWide()));
@@ -36053,7 +35985,7 @@ void CvGameTextMgr::setProductionHelp(CvWStringBuffer &szBuffer, CvCity& city)
 							else
 							{
 								szBuffer.append(NEWLINE);
-								szBuffer.append(gDLL->getText("TXT_KEY_PRODUCTION_MODIFIER_TRAIT", GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier/*GC.getUnitInfo(eUnit).getProductionTraits((TraitTypes)i)*/, GC.getTraitInfo(eTrait).getTextKeyWide()));
+								szBuffer.append(gDLL->getText("TXT_KEY_PRODUCTION_MODIFIER_TRAIT", GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier, GC.getTraitInfo(eTrait).getTextKeyWide()));
 							}
 						}
 					}
@@ -36071,7 +36003,7 @@ void CvGameTextMgr::setProductionHelp(CvWStringBuffer &szBuffer, CvCity& city)
 				{
 					if ((UnitTypes)GC.getTraitInfo(eTrait).getUnitProductionModifier(j).eUnit == eUnit)
 					{
-						iTraitMod += GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier;/*unit.getProductionTraits(i);*/
+						iTraitMod += GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier;
 					}
 				}
 
@@ -36081,10 +36013,9 @@ void CvGameTextMgr::setProductionHelp(CvWStringBuffer &szBuffer, CvCity& city)
 					{
 						if ((SpecialUnitTypes)GC.getTraitInfo(eTrait).getSpecialUnitProductionModifier(j).eSpecialUnit == unit.getSpecialUnitType())
 						{
-							iTraitMod += GC.getTraitInfo(eTrait).getSpecialUnitProductionModifier(j).iModifier;/*unit.getProductionTraits(i);*/
+							iTraitMod += GC.getTraitInfo(eTrait).getSpecialUnitProductionModifier(j).iModifier;
 						}
 					}
-					/*iTraitMod += GC.getSpecialUnitInfo((SpecialUnitTypes) unit.getSpecialUnitType()).getProductionTraits(i);*/
 				}
 				if (0 != iTraitMod)
 				{
@@ -36179,23 +36110,6 @@ void CvGameTextMgr::setProductionHelp(CvWStringBuffer &szBuffer, CvCity& city)
 				}
 			}
 		}
-		//{
-		//	if (city.hasTrait((TraitTypes)i))
-		//	{
-		//		int iTraitMod = building.getProductionTraits(i);
-
-		//		if (building.getSpecialBuildingType() != NO_SPECIALBUILDING)
-		//		{
-		//			iTraitMod += GC.getSpecialBuildingInfo((SpecialBuildingTypes) building.getSpecialBuildingType()).getProductionTraits(i);
-		//		}
-		//		if (0 != iTraitMod)
-		//		{
-		//			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_TRAIT", iTraitMod, building.getTextKeyWide(), GC.getTraitInfo((TraitTypes)i).getTextKeyWide()));
-		//			szBuffer.append(NEWLINE);
-		//			iBaseModifier += iTraitMod;
-		//		}
-		//	}
-		//}
 
 		// Wonder
 		if (isWorldWonderClass((BuildingClassTypes)(GC.getBuildingInfo(eBuilding).getBuildingClassType())) && NO_PLAYER != city.getOwnerINLINE())
