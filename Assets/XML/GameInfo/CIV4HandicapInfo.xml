@@ -66,7 +66,6 @@
 			<iUnownedTilesPerBarbarianUnit>60</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>180</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>60</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>42</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag --> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>40</iBarbarianCityCreationTurnsElapsed>
 			<iBarbarianCityCreationProb>1</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>1</iBarbarianDefenders>
@@ -328,7 +327,6 @@
 			<iUnownedTilesPerBarbarianUnit>55</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>165</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>55</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>38</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>39</iBarbarianCityCreationTurnsElapsed>
 			<iBarbarianCityCreationProb>1</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>1</iBarbarianDefenders>
@@ -617,7 +615,6 @@
 			<iUnownedTilesPerBarbarianUnit>50</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>150</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>50</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>34</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>38</iBarbarianCityCreationTurnsElapsed>
 			<iBarbarianCityCreationProb>2</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>2</iBarbarianDefenders>
@@ -893,7 +890,6 @@
 			<iUnownedTilesPerBarbarianUnit>45</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>135</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>45</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>30</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>37</iBarbarianCityCreationTurnsElapsed>
 			<iBarbarianCityCreationProb>2</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>3</iBarbarianDefenders>
@@ -1198,7 +1194,6 @@
 			<iUnownedTilesPerBarbarianUnit>40</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>120</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>40</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>26</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>36</iBarbarianCityCreationTurnsElapsed>
 			<iBarbarianCityCreationProb>3</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>4</iBarbarianDefenders>
@@ -1512,7 +1507,6 @@
 			<iUnownedTilesPerBarbarianUnit>35</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>105</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>35</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>22</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>35</iBarbarianCityCreationTurnsElapsed>
 			<iBarbarianCityCreationProb>3</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>5</iBarbarianDefenders>
@@ -1836,7 +1830,6 @@
 			<iUnownedTilesPerBarbarianUnit>30</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>90</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>30</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>18</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>34</iBarbarianCityCreationTurnsElapsed>
 			<iBarbarianCityCreationProb>4</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>6</iBarbarianDefenders>
@@ -2192,7 +2185,6 @@
 			<iUnownedTilesPerBarbarianUnit>25</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>75</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>25</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>14</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>33</iBarbarianCityCreationTurnsElapsed>
 			<iBarbarianCityCreationProb>4</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>7</iBarbarianDefenders>
@@ -2537,7 +2529,6 @@
 			<iUnownedTilesPerBarbarianUnit>20</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>60</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>20</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>10</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>32</iBarbarianCityCreationTurnsElapsed>
 			<iBarbarianCityCreationProb>5</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>8</iBarbarianDefenders>
@@ -2909,7 +2900,6 @@
 			<iUnownedTilesPerBarbarianUnit>10</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>30</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>10</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>2</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>30</iBarbarianCityCreationTurnsElapsed>
 			<iBarbarianCityCreationProb>6</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>10</iBarbarianDefenders>
@@ -3280,7 +3270,6 @@
 			<iUnownedTilesPerBarbarianUnit>10</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>30</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>10</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>2</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>30</iBarbarianCityCreationTurnsElapsed>
 			<iBarbarianCityCreationProb>6</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>10</iBarbarianDefenders>
