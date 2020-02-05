@@ -2779,28 +2779,9 @@ bool CvCity::isForceObsoleteUnitClassAvailable(UnitTypes eUnit) const
 				{
 					continue;
 				}
-				CvUnitInfo& kLoopUnit = GC.getUnitInfo(eLoopUnit);
-
-				if (canTrain(eLoopUnit, false, false, false, true))
+				if (canTrain(eLoopUnit, false, false, false, true, true))
 				{
 					return true;
-				}
-
-
-				for (int iJ = 0; iJ < numUnitClassInfos; iJ++)
-				{
-					if (kLoopUnit.getUpgradeUnitClass(iJ))
-					{
-						eLoopUnit = (UnitTypes)kCivilization.getCivilizationUnits(iJ);
-
-						if (eLoopUnit != NO_UNIT)
-						{
-							if (canTrain(eLoopUnit, false, false, false, true))
-							{
-								return true;
-							}
-						}
-					}
 				}
 			}
 		}
@@ -3088,35 +3069,21 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 	{
 		return false;
 	}
-	/************************************************************************************************/
-	/* REVDCM                                 02/16/10                                phungus420    */
-	/*                                                                                              */
-	/* CanTrain                                                                                     */
-	/************************************************************************************************/
-	if (isForceObsoleteUnitClassAvailable(eUnit))
+
+	if (!bIgnoreUpgrades && isForceObsoleteUnitClassAvailable(eUnit))
 	{
 		return false;
 	}
 
-	if (!(isPlotTrainable(eUnit, bContinue, bTestVisible)))
+	if (!isPlotTrainable(eUnit, bContinue, bTestVisible))
 	{
 		return false;
 	}
-	/************************************************************************************************/
-	/* REVDCM                                  END                                                  */
-	/************************************************************************************************/
-	/************************************************************************************************/
-	/* Afforess	                  Start		 6/17/10                                                */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
+
 	CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
-	if (kUnit.isForceUpgrade())
+	if (kUnit.isForceUpgrade() && canUpgradeUnit(eUnit))
 	{
-		if (canUpgradeUnit(eUnit))
-		{
-			return false;
-		}
+		return false;
 	}
 
 	CvCivilizationInfo& kCivilization = GC.getCivilizationInfo(getCivilizationType());
@@ -3162,13 +3129,11 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 			return false;
 		}
 	}
-	if (kUnit.getPrereqVicinityBonus() != NO_BONUS)
+	if (kUnit.getPrereqVicinityBonus() != NO_BONUS && !hasVicinityBonus((BonusTypes)kUnit.getPrereqVicinityBonus()))
 	{
-		if (!hasVicinityBonus((BonusTypes)kUnit.getPrereqVicinityBonus()))
-		{
-			return false;
-		}
+		return false;
 	}
+
 	if (!bTestVisible)
 	{
 		bool bHasAnyVicinityBonus = false;
@@ -3190,30 +3155,20 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 			return false;
 		}
 	}
-	if (GC.getGameINLINE().isOption(GAMEOPTION_REALISTIC_CORPORATIONS))
+	if (GC.getGameINLINE().isOption(GAMEOPTION_REALISTIC_CORPORATIONS) && GET_PLAYER(getOwnerINLINE()).isNoForeignCorporations())
 	{
-		if (GET_PLAYER(getOwnerINLINE()).isNoForeignCorporations())
+		for (int iI = 0; iI < GC.getNumCorporationInfos(); iI++)
 		{
-			for (int iI = 0; iI < GC.getNumCorporationInfos(); iI++)
+			if (kUnit.getCorporationSpreads(iI) > 0)
 			{
-				if (kUnit.getCorporationSpreads(iI) > 0)
-				{
-					return false;
-				}
+				return false;
 			}
 		}
 	}
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
 
-
-	if (!bIgnoreUpgrades)
+	if (!bIgnoreUpgrades && allUpgradesAvailable(eUnit) != NO_UNIT)
 	{
-		if (allUpgradesAvailable(eUnit) != NO_UNIT)
-		{
-			return false;
-		}
+		return false;
 	}
 
 	if (GC.getUSE_CANNOT_TRAIN_CALLBACK(eUnit))
@@ -3230,7 +3185,6 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 			return false;
 		}
 	}
-
 	return true;
 }
 
@@ -3294,9 +3248,9 @@ void CvCity::clearUpgradeCache(UnitTypes eUnit) const
 	}
 }
 
-bool CvCity::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool bIgnoreCost, bool bIgnoreUpgrades) const
+bool CvCity::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool bIgnoreCost, bool bIgnoreUpgrades, bool bPropertySpawn) const
 {
-	if (!GET_PLAYER(getOwnerINLINE()).canTrain(eUnit, bContinue, bTestVisible, bIgnoreCost))
+	if (!GET_PLAYER(getOwnerINLINE()).canTrain(eUnit, bContinue, bTestVisible, bIgnoreCost, bPropertySpawn))
 	{
 		return false;
 	}
