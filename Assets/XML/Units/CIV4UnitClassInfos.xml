@@ -10821,6 +10821,14 @@ Assyria, Hungary, Minoa, Armenia
 			<DefaultUnit>UNIT_NEANDERTHAL_TRAINEDDOG</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
+			<Type>UNITCLASS_NEANDERTHAL_TRIBAL_GUARDIAN</Type>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_TRIBAL_GUARDIAN</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<DefaultUnit>UNIT_NEANDERTHAL_TRIBAL_GUARDIAN</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
 			<Type>UNITCLASS_NEANDERTHAL_KAYAK</Type>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_KAYAK</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>

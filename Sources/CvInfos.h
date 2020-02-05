@@ -5035,7 +5035,6 @@ public:
 	int getResearchPercent() const;					// Exposed to Python
 	int getDistanceMaintenancePercent() const;		// Exposed to Python
 	int getNumCitiesMaintenancePercent() const;		// Exposed to Python
-	int getMaxNumCitiesMaintenance() const;			// Exposed to Python
 	int getColonyMaintenancePercent() const;		// Exposed to Python
 	int getMaxColonyMaintenance() const;			// Exposed to Python
 	int getCorporationMaintenancePercent() const;	// Exposed to Python
@@ -5121,7 +5120,6 @@ protected:
 	int m_iResearchPercent;
 	int m_iDistanceMaintenancePercent;
 	int m_iNumCitiesMaintenancePercent;
-	int m_iMaxNumCitiesMaintenance;
 	int m_iColonyMaintenancePercent;
 	int m_iMaxColonyMaintenance;
 	int m_iCorporationMaintenancePercent;

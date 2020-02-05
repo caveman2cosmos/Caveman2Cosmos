@@ -2607,24 +2607,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BAND</Tag>
-		<English>Band of Homo Sapiens</English>
-		<French>
-			<Text>Groupe d'Homo Sapiens</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Homo-sapiens-Horde:Homo-sapiens-Horde:Homo-sapiens-Horde:Homo-sapiens-Horde:Homo-sapiens-Horden:Homo-sapiens-Horden:Homo-sapiens-Horden:Homo-sapiens-Horden</Text>
-			<Gender>Female:Female:Female:Female:Female:Female:Female:Female</Gender>
-			<Plural>0:0:0:0:1:1:1:1</Plural>
-		</German>
-		<Italian>Gruppo di Homo sapiens sapiens</Italian>
-		<Spanish>
-			<Text>Grupo de Homo sapiens</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Grupa Homo Sapiens</Polish>
+		<English>Band of Australopithecus</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BAND_PEDIA</Tag>
@@ -17119,6 +17102,10 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_TRAINEDDOG</Tag>
 		<English>Neanderthal Trained Dog</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NEANDERTHAL_TRIBAL_GUARDIAN</Tag>
+		<English>Neanderthal Tribal Guardian</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_WANDERER</Tag>

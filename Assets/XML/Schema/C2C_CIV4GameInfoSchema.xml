@@ -673,7 +673,6 @@
 	<ElementType name="iStartingLocPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iFreeUnits" content="textOnly" dt:type="int"/>
 	<ElementType name="iUnitCostPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iMaxNumCitiesMaintenance" content="textOnly" dt:type="int"/>
 	<ElementType name="iMaxColonyMaintenance" content="textOnly" dt:type="int"/>
 	<ElementType name="iCivicUpkeepPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iFeatureProductionPercent" content="textOnly" dt:type="int"/>
@@ -769,7 +768,6 @@
 		<element type="iResearchPercent" minOccurs="0"/>
 		<element type="iDistanceMaintenancePercent" minOccurs="0"/>
 		<element type="iNumCitiesMaintenancePercent" minOccurs="0"/>
-		<element type="iMaxNumCitiesMaintenance" minOccurs="0"/>
 		<element type="iColonyMaintenancePercent" minOccurs="0"/>
 		<element type="iMaxColonyMaintenance" minOccurs="0"/>
 		<element type="iCorporationMaintenancePercent" minOccurs="0"/>
