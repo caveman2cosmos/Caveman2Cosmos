@@ -36,7 +36,6 @@ Integer Tags
 	iUnitGreatWorkPercent = Amount or culture produced by great artists' great work ability. Normal is 100
 	iUnitHurryPercent = Amount of hammers produced by units that can hurry productions of buildings. Normal is 100
 	iUnitTradePercent = Amount of gold produced by units that have the trade mission ability. Normal is 100
-	iGoldModifier = Global percentage modifier for city/corp. maintenance and unit/civic upkeep. Higher equals more expenses, lower equals less expenses. Normal is 100. (Made by ls612)
 	iMonthIncrement = Number Months that pass each turn
 	iDayIncrement = Number Days that pass each turn
 Multi-Line Tags

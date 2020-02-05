@@ -5052,7 +5052,6 @@ public:
 	int getUnownedTilesPerBarbarianUnit() const;	// Exposed to Python
 	int getUnownedWaterTilesPerBarbarianUnit() const;	// Exposed to Python
 	int getUnownedTilesPerBarbarianCity() const;		// Exposed to Python
-	int getBarbarianCreationTurnsElapsed() const;		// Exposed to Python
 	int getBarbarianCityCreationTurnsElapsed() const;	// Exposed to Python
 	int getBarbarianCityCreationProb() const;		// Exposed to Python
 	int getAnimalCombatModifier() const;			// Exposed to Python
@@ -5137,7 +5136,6 @@ protected:
 	int m_iUnownedTilesPerBarbarianUnit;
 	int m_iUnownedWaterTilesPerBarbarianUnit;
 	int m_iUnownedTilesPerBarbarianCity;
-	int m_iBarbarianCreationTurnsElapsed;
 	int m_iBarbarianCityCreationTurnsElapsed;
 	int m_iBarbarianCityCreationProb;
 	int m_iAnimalCombatModifier;
@@ -5224,13 +5222,9 @@ public:
 	int getHurryConscriptAngerPercent() const;	// Exposed to Python
 	int getInflationOffset() const;				// Exposed to Python
 	int getInflationPercent() const;			// Exposed to Python
-	//ls612: Begin
-	int getGoldModifier() const;
 	int getOccupationTimePopulationPercent() const;
-	//ls612: End
 	int getVictoryDelayPercent() const;			// Exposed to Python
 	int getNumTurnIncrements() const;			// Exposed to Python
-	// Afforess 12/13/09
 	int getUnitMovementPercent() const;
 
 	GameTurnInfo& getGameTurnInfo(int iIndex) const;	// Exposed to Python
@@ -5274,8 +5268,6 @@ protected:
 	int m_iHurryConscriptAngerPercent;
 	int m_iInflationOffset;
 	int m_iInflationPercent;
-	//ls612: Begin
-	int m_iGoldModifier;
 	int m_iOccupationTimePopulationPercent;
 	int m_iVictoryDelayPercent;
 	int m_iNumTurnIncrements;

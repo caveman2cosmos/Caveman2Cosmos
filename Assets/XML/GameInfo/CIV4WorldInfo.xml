@@ -29,7 +29,7 @@ Integer Tags
     iResearchPercent = The percentage of the rate at which technology is researched, implemented through the cost in beakers of researching. So 100 means normal research rates. Higher values yield slower research, so 200 means that researches will require twice as many beakers and will thus be half as fast.
     iTradeProfitPercent = A percentage rate change to how much money is made from trade routes. So, a value of 50 means trade routes make 50% more commerce. (This may also effect Great Merchant trade missions).
     iDistanceMaintenancePercent = The amount of maintenance that city distance generates. It is a percentage, so 100 means full maintenance from city distance.
-    iNumCitiesMaintenancePercent = The amount of maintenance the number of cities possessed generates. It is a percentage, so 100 means full number of cities maintenance. (Note: the highest default setting for iNumCitiesMaintenancePercent occurs in Quick mode, and is only 45%, not 100%.)
+    iNumCitiesMaintenancePercent = Unused in code, dead tag. The amount of maintenance the number of cities possessed generates. It is a percentage, so 100 means full number of cities maintenance. (Note: the highest default setting for iNumCitiesMaintenancePercent occurs in Quick mode, and is only 45%, not 100%.)
     iNumCitiesAnarchyPercent = iAnarchyLength += getNumCities() * WorldSize.getNumCitiesAnarchyPercent() / 100
 -->
 

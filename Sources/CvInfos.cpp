@@ -14690,7 +14690,6 @@ m_iUnownedTilesPerGameAnimal(0),
 m_iUnownedTilesPerBarbarianUnit(0),
 m_iUnownedWaterTilesPerBarbarianUnit(0),
 m_iUnownedTilesPerBarbarianCity(0),
-m_iBarbarianCreationTurnsElapsed(0),
 m_iBarbarianCityCreationTurnsElapsed(0),
 m_iBarbarianCityCreationProb(0),
 m_iAnimalCombatModifier(0),
@@ -14883,11 +14882,6 @@ int CvHandicapInfo::getUnownedWaterTilesPerBarbarianUnit() const
 int CvHandicapInfo::getUnownedTilesPerBarbarianCity() const
 {
 	return m_iUnownedTilesPerBarbarianCity;
-}
-
-int CvHandicapInfo::getBarbarianCreationTurnsElapsed() const
-{
-	return m_iBarbarianCreationTurnsElapsed;
 }
 
 int CvHandicapInfo::getBarbarianCityCreationTurnsElapsed() const
@@ -15129,7 +15123,6 @@ void CvHandicapInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_iUnownedTilesPerBarbarianUnit);
 	CheckSum(iSum, m_iUnownedWaterTilesPerBarbarianUnit);
 	CheckSum(iSum, m_iUnownedTilesPerBarbarianCity);
-	CheckSum(iSum, m_iBarbarianCreationTurnsElapsed);
 	CheckSum(iSum, m_iBarbarianCityCreationTurnsElapsed);
 	CheckSum(iSum, m_iBarbarianCityCreationProb);
 	CheckSum(iSum, m_iAnimalCombatModifier);
@@ -15215,7 +15208,6 @@ bool CvHandicapInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iUnownedTilesPerBarbarianUnit, L"iUnownedTilesPerBarbarianUnit");
 	pXML->GetOptionalChildXmlValByName(&m_iUnownedWaterTilesPerBarbarianUnit, L"iUnownedWaterTilesPerBarbarianUnit");
 	pXML->GetOptionalChildXmlValByName(&m_iUnownedTilesPerBarbarianCity, L"iUnownedTilesPerBarbarianCity");
-	pXML->GetOptionalChildXmlValByName(&m_iBarbarianCreationTurnsElapsed, L"iBarbarianCreationTurnsElapsed");
 	pXML->GetOptionalChildXmlValByName(&m_iBarbarianCityCreationTurnsElapsed, L"iBarbarianCityCreationTurnsElapsed");
 	pXML->GetOptionalChildXmlValByName(&m_iBarbarianCityCreationProb, L"iBarbarianCityCreationProb");
 	pXML->GetOptionalChildXmlValByName(&m_iAnimalCombatModifier, L"iAnimalBonus");
@@ -15339,7 +15331,6 @@ void CvHandicapInfo::copyNonDefaults(CvHandicapInfo* pClassInfo, CvXMLLoadUtilit
 	if (getUnownedTilesPerBarbarianUnit() == iDefault) m_iUnownedTilesPerBarbarianUnit = pClassInfo->getUnownedTilesPerBarbarianUnit();
 	if (getUnownedWaterTilesPerBarbarianUnit() == iDefault) m_iUnownedWaterTilesPerBarbarianUnit = pClassInfo->getUnownedWaterTilesPerBarbarianUnit();
 	if (getUnownedTilesPerBarbarianCity() == iDefault) m_iUnownedTilesPerBarbarianCity = pClassInfo->getUnownedTilesPerBarbarianCity();
-	if (getBarbarianCreationTurnsElapsed() == iDefault) m_iBarbarianCreationTurnsElapsed = pClassInfo->getBarbarianCreationTurnsElapsed();
 	if (getBarbarianCityCreationTurnsElapsed() == iDefault) m_iBarbarianCityCreationTurnsElapsed = pClassInfo->getBarbarianCityCreationTurnsElapsed();
 	if (getBarbarianCityCreationProb() == iDefault) m_iBarbarianCityCreationProb = pClassInfo->getBarbarianCityCreationProb();
 	if (getAnimalCombatModifier() == iDefault) m_iAnimalCombatModifier = pClassInfo->getAnimalCombatModifier();
@@ -15522,23 +15513,12 @@ m_iHurryPercent(0),
 m_iHurryConscriptAngerPercent(0),
 m_iInflationOffset(0),
 m_iInflationPercent(0),
-//ls612: Begin
-m_iGoldModifier(0), // Toffer - ToDo: removed usage of this, should remove this residuals too.
 m_iOccupationTimePopulationPercent(0),
-//ls612: End
 m_iVictoryDelayPercent(0),
 m_iNumTurnIncrements(0),
 m_pGameTurnInfo(NULL),
 m_bEndDatesCalculated(false)
-/************************************************************************************************/
-/* Afforess					  Start		 12/13/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 ,m_iUnitMovementPercent(0)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 //TB GameSpeed begin
 ,m_iTraitGainPercent(0)
 //TB GameSpeed end
@@ -15658,18 +15638,10 @@ int CvGameSpeedInfo::getInflationPercent() const
 	return m_iInflationPercent;
 }
 
-//ls612: Begin
-int CvGameSpeedInfo::getGoldModifier() const
-{
-	// Toffer - ToDo: removed usage of this, should remove this residuals too.
-	return m_iGoldModifier;
-}
-
 int CvGameSpeedInfo::getOccupationTimePopulationPercent() const
 {
 	return m_iOccupationTimePopulationPercent;
 }
-//ls612: End
 
 int CvGameSpeedInfo::getVictoryDelayPercent() const
 {
@@ -15681,18 +15653,10 @@ int CvGameSpeedInfo::getNumTurnIncrements() const
 	return m_iNumTurnIncrements;
 }
 
-/************************************************************************************************/
-/* Afforess					  Start		 12/13/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 int CvGameSpeedInfo::getUnitMovementPercent() const
 {
 	return m_iUnitMovementPercent;
 }
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 CvDateIncrement& CvGameSpeedInfo::getDateIncrement(int iIndex)
 {
@@ -15768,10 +15732,7 @@ bool CvGameSpeedInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iHurryConscriptAngerPercent, L"iHurryConscriptAngerPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iInflationOffset, L"iInflationOffset");
 	pXML->GetOptionalChildXmlValByName(&m_iInflationPercent, L"iInflationPercent");
-	//ls612: Begin
-	pXML->GetOptionalChildXmlValByName(&m_iGoldModifier, L"iGoldModifier"); // Toffer - ToDo: removed usage of this, should remove this residuals too.
 	pXML->GetOptionalChildXmlValByName(&m_iOccupationTimePopulationPercent, L"iOccupationTurnsPopulationPercent");
-	//ls612: End
 	pXML->GetOptionalChildXmlValByName(&m_iVictoryDelayPercent, L"iVictoryDelayPercent");
 
 	if (pXML->TryMoveToXmlFirstChild(L"GameTurnInfos"))
@@ -15868,10 +15829,7 @@ void CvGameSpeedInfo::copyNonDefaults(CvGameSpeedInfo* pClassInfo, CvXMLLoadUtil
 	if (getHurryConscriptAngerPercent() == iDefault) m_iHurryConscriptAngerPercent = pClassInfo->getHurryConscriptAngerPercent();
 	if (getInflationOffset() == iDefault) m_iInflationOffset = pClassInfo->getInflationOffset();
 	if (getInflationPercent() == iDefault) m_iInflationPercent = pClassInfo->getInflationPercent();
-	//ls612: Begin
-	if (getGoldModifier() == iDefault) m_iGoldModifier = pClassInfo->getGoldModifier();
 	if (getOccupationTimePopulationPercent() == iDefault) m_iOccupationTimePopulationPercent = pClassInfo->getOccupationTimePopulationPercent();
-	//ls612: End
 	if (getVictoryDelayPercent() == iDefault) m_iVictoryDelayPercent = pClassInfo->getVictoryDelayPercent();
 
 	if (getNumTurnIncrements() == iDefault)
@@ -15914,10 +15872,7 @@ void CvGameSpeedInfo::getCheckSum(unsigned int &iSum)
 	CheckSum(iSum, m_iHurryConscriptAngerPercent);
 	CheckSum(iSum, m_iInflationOffset);
 	CheckSum(iSum, m_iInflationPercent);
-	//ls612: Begin
-	CheckSum(iSum, m_iGoldModifier);
 	CheckSum(iSum, m_iOccupationTimePopulationPercent);
-	//ls612: End
 	CheckSum(iSum, m_iVictoryDelayPercent);
 
 	for (int j = 0; j < m_iNumTurnIncrements; j++)

@@ -696,7 +696,6 @@
 	<ElementType name="iUnownedTilesPerBarbarianUnit" content="textOnly" dt:type="int"/>
 	<ElementType name="iUnownedWaterTilesPerBarbarianUnit" content="textOnly" dt:type="int"/>
 	<ElementType name="iUnownedTilesPerBarbarianCity" content="textOnly" dt:type="int"/>
-	<ElementType name="iBarbarianCreationTurnsElapsed" content="textOnly" dt:type="int"/>
 	<ElementType name="iBarbarianCityCreationTurnsElapsed" content="textOnly" dt:type="int"/>
 	<ElementType name="iBarbarianCityCreationProb" content="textOnly" dt:type="int"/>
 	<ElementType name="iAnimalBonus" content="textOnly" dt:type="int"/>
@@ -785,7 +784,6 @@
 		<element type="iUnownedTilesPerBarbarianUnit" minOccurs="0"/>
 		<element type="iUnownedWaterTilesPerBarbarianUnit" minOccurs="0"/>
 		<element type="iUnownedTilesPerBarbarianCity" minOccurs="0"/>
-		<element type="iBarbarianCreationTurnsElapsed" minOccurs="0"/>
 		<element type="iBarbarianCityCreationTurnsElapsed" minOccurs="0"/>
 		<element type="iBarbarianCityCreationProb" minOccurs="0"/>
 		<element type="iAnimalBonus" minOccurs="0"/>
@@ -1548,10 +1546,7 @@ DPII < Revolution Mod End >
 	<ElementType name="iEventChancePerTurn" content="textOnly" dt:type="int"/>
 	<ElementType name="iBarbPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iInflationOffset" content="textOnly" dt:type="int"/>
-	<!-- ls612: Modifiers -->
-	<ElementType name="iGoldModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iOccupationTurnsPopulationPercent" content="textOnly" dt:type="int"/>
-	<!-- ls612: Gold Modifiers -->
 	<ElementType name="GameSpeedInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE		-->
@@ -1584,7 +1579,6 @@ DPII < Revolution Mod End >
 		<element type="iHurryConscriptAngerPercent" minOccurs="0"/>
 		<element type="iInflationPercent" minOccurs="0"/>
 		<element type="iInflationOffset" minOccurs="0"/>
-		<element type="iGoldModifier" minOccurs="0"/>
 		<element type="iOccupationTurnsPopulationPercent" minOccurs="0"/>
 		<element type="iVictoryDelayPercent" minOccurs="0"/>
 		<!-- TB GameSpeed tags begin -->
