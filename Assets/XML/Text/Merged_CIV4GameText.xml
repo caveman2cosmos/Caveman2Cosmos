@@ -10802,7 +10802,7 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<Italian>[ICON_BULLET]I combattimenti contro i barbari dopo il normale limite di XP daranno ancora punti XP.</Italian>
 		<Polish>[ICON_BULLET]Pozwala zdobywać XP w walce z barbarzyńcami, nawet po osiągnięciu limitu.</Polish>
 	</TEXT>
-	<TEXT>
+	<!--TEXT>
 		<Tag>TXT_KEY_PROMOTION_ANIMAL_HUNTER</Tag>
 		<English>Animal Hunter</English>
 		<French>Chasseur d'Animaux</French>
@@ -10811,19 +10811,13 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<Polish>Łowca Zwierząt</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SEA_ANIMAL_HUNTER</Tag>
-		<English>Sea Animal Hunter</English>
-		<French>Chasseur d'Animaux  des Mers</French>
-		<Polish>Łowca Zwierząt Morskich</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ANIMAL_HUNTER_HELP</Tag>
 		<English>[ICON_BULLET]Fights against animals after the normal experience limit will still give XP points.</English>
 		<French>[ICON_BULLET]Les Combats contre les animaux continuent d'ajouter de l'EXP à l'unité.</French>
 		<German>[ICON_BULLET]Kaempfe gegen Tiere geben auch nach dem Erfahrungslimit noch Erfahrungs-Punkte.</German>
 		<Italian>[ICON_BULLET]I combattimenti contro gli animali dopo il normale limite di XP daranno ancora punti XP.</Italian>
 		<Polish>[ICON_BULLET]Pozwala zdobywać XP w walce ze zwierzętami, nawet po osiągnięciu limitu.</Polish>
-	</TEXT>
+	</TEXT-->
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INDUSTRYESPIONAGE</Tag>
 		<English>Industry Espionage</English>
