@@ -2937,26 +2937,6 @@ bool CvBuildingInfo::isMayDamageAttackingUnitCombatType(int i)
 	return true;
 }
 
-int CvBuildingInfo::getMapCategoryType(int i) const
-{
-	return m_aiMapCategoryTypes[i];
-}
-
-int CvBuildingInfo::getNumMapCategoryTypes() const
-{
-	return (int)m_aiMapCategoryTypes.size();
-}
-
-bool CvBuildingInfo::isMapCategoryType(int i)
-{
-	FAssert (i > -1 && i < GC.getNumMapCategoryInfos()); // do not include this line if for delayed resolution
-	if (find(m_aiMapCategoryTypes.begin(), m_aiMapCategoryTypes.end(), i) == m_aiMapCategoryTypes.end())
-	{
-		return false;
-	}
-	return true;
-}
-
 // int vector utilizing pairing without delayed resolution
 int CvBuildingInfo::getNumUnitCombatRepelModifiers() const
 {

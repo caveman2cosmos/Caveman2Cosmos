@@ -2863,17 +2863,7 @@ bool CvPlot::canHaveBonus(BonusTypes eBonus, bool bIgnoreLatitude) const
 		return false;
 	}
 
-	int iCount = GC.getBonusInfo(eBonus).getNumMapCategoryTypes();
-	bool bFound = (iCount < 1);
-	for (int iI = 0; iI < iCount; iI++)
-	{
-		if (isMapCategoryType((MapCategoryTypes)GC.getBonusInfo(eBonus).getMapCategoryType(iI)))
-		{
-			bFound = true;
-			break;
-		}
-	}
-	if (!bFound)
+	if (!isMapCategoryType(GC.getBonusInfo(eBonus).getMapCategories()))
 	{
 		return false;
 	}
@@ -3402,11 +3392,9 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 		}
 	}
 
-
-
 	for (int iI = 0; iI < GC.getBuildInfo(eBuild).getNumPrereqBonusTypes(); iI++)
 	{
-		BonusTypes ePrereqBonus = ((BonusTypes)GC.getBuildInfo(eBuild).getPrereqBonusType(iI));
+		const BonusTypes ePrereqBonus = static_cast<BonusTypes>(GC.getBuildInfo(eBuild).getPrereqBonusType(iI));
 
 		if (!isAdjacentPlotGroupConnectedBonus(ePlayer, ePrereqBonus))
 		{
@@ -3414,17 +3402,7 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 		}
 	}
 
-	int iCount = GC.getBuildInfo(eBuild).getNumMapCategoryTypes();
-	bool bFound = (iCount < 1);
-	for (int iI = 0; iI < iCount; iI++)
-	{
-		if (isMapCategoryType((MapCategoryTypes)GC.getBuildInfo(eBuild).getMapCategoryType(iI)))
-		{
-			bFound = true;
-			break;
-		}
-	}
-	if (!bFound)
+	if (!isMapCategoryType(GC.getBuildInfo(eBuild).getMapCategories()))
 	{
 		return false;
 	}
@@ -3438,17 +3416,7 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 			return false;
 		}
 
-		int iCount = GC.getImprovementInfo(eImprovement).getNumMapCategoryTypes();
-		bool bFound = (iCount < 1);
-		for (int iI = 0; iI < iCount; iI++)
-		{
-			if (isMapCategoryType((MapCategoryTypes)GC.getImprovementInfo(eImprovement).getMapCategoryType(iI)))
-			{
-				bFound = true;
-				break;
-			}
-		}
-		if (!bFound)
+		if (!isMapCategoryType(GC.getImprovementInfo(eImprovement).getMapCategories()))
 		{
 			return false;
 		}
@@ -3647,8 +3615,7 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	TerrainTypes eTerrain;
-	eTerrain = ((TerrainTypes)(GC.getBuildInfo(eBuild).getTerrainChange()));
+	const TerrainTypes eTerrain = (TerrainTypes)GC.getBuildInfo(eBuild).getTerrainChange();
 
 	if (eTerrain != NO_TERRAIN)
 	{
@@ -3660,8 +3627,7 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 		bValid = true;
 	}
 
-	FeatureTypes eFeature;
-	eFeature = ((FeatureTypes)(GC.getBuildInfo(eBuild).getFeatureChange()));
+	const FeatureTypes eFeature = (FeatureTypes)GC.getBuildInfo(eBuild).getFeatureChange();
 
 	if (eFeature != NO_FEATURE)
 	{
@@ -3670,17 +3636,7 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 			return false;
 		}
 
-		int iCount = GC.getFeatureInfo(eFeature).getNumMapCategoryTypes();
-		bool bFound = (iCount < 1);
-		for (int iI = 0; iI < iCount; iI++)
-		{
-			if (isMapCategoryType((MapCategoryTypes)GC.getFeatureInfo(eFeature).getMapCategoryType(iI)))
-			{
-				bFound = true;
-				break;
-			}
-		}
-		if (!bFound)
+		if (!isMapCategoryType(GC.getFeatureInfo(eFeature).getMapCategories()))
 		{
 			return false;
 		}
@@ -14936,17 +14892,7 @@ bool CvPlot::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible) const
 		}
 	}
 	
-	int iCount = kUnit.getNumMapCategoryTypes();
-	bool bFound = (iCount < 1);
-	for (iI = 0; iI < iCount; iI++)
-	{
-		if (isMapCategoryType((MapCategoryTypes)kUnit.getMapCategoryType(iI)))
-		{
-			bFound = true;
-			break;
-		}
-	}
-	if (!bFound)
+	if (!isMapCategoryType(kUnit.getMapCategories()))
 	{
 		return false;
 	}
@@ -16685,18 +16631,14 @@ void CvPlot::unitGameStateCorrections()
 	}
 }
 
-bool CvPlot::isMapCategoryType(MapCategoryTypes eIndex) const
+const bool CvPlot::isMapCategoryType(const std::vector<int> mapCategories) const
 {
-	CvTerrainInfo& kTerrain = GC.getTerrainInfo(getTerrainType());
-	int iNumTypes = kTerrain.getNumMapCategoryTypes();
-	if (iNumTypes > 0)
-	{
-		if (!kTerrain.isMapCategoryType((int)eIndex))
-		{
-			return false;
-		}
-	}
-	return true;
+	return GC.getTerrainInfo(getTerrainType()).isMapCategoryType(mapCategories);
+}
+
+const bool CvPlot::isMapCategoryType(const MapCategoryTypes eIndex) const
+{
+	return GC.getTerrainInfo(getTerrainType()).isMapCategoryType(eIndex);
 }
 
 int CvPlot::countSeeInvisibleActive(PlayerTypes ePlayer, InvisibleTypes eVisible) const

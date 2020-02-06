@@ -4838,27 +4838,6 @@ bool CvPromotionInfo::isNoAutoEquiptoCombatClassType(int i)
 	return true;
 }
 
-int CvPromotionInfo::getMapCategoryType(int i) const
-{
-	return m_aiMapCategoryTypes[i];
-}
-
-int CvPromotionInfo::getNumMapCategoryTypes() const
-{
-	return (int)m_aiMapCategoryTypes.size();
-}
-
-bool CvPromotionInfo::isMapCategoryType(int i)
-{
-	FAssert (i > -1 && i < GC.getNumMapCategoryInfos()); // do not include this line if for delayed resolution
-	if (find(m_aiMapCategoryTypes.begin(), m_aiMapCategoryTypes.end(), i) == m_aiMapCategoryTypes.end())
-	{
-		return false;
-	}
-	return true;
-}
-//Arrays
-
 //int CvPromotionInfo::getAIWeightbyUnitCombatType(int i) const
 //{
 //	FAssertMsg(i < GC.getNumUnitCombatInfos(), "Index out of bounds");
@@ -5954,10 +5933,10 @@ void CvPromotionInfo::setQualifiedUnitCombatTypes()
 	{
 		if (getPromotionLine() == (PromotionLineTypes)iI)
 		{
-			PromotionLineTypes ePromotionLine = (PromotionLineTypes)iI;
+			const PromotionLineTypes ePromotionLine = static_cast<PromotionLineTypes>(iI);
 			for (int iJ = 0; iJ < GC.getPromotionLineInfo(ePromotionLine).getNumUnitCombatPrereqTypes(); iJ++)
 			{
-				int iUnitCombat = GC.getPromotionLineInfo(ePromotionLine).getUnitCombatPrereqType(iJ);
+				const int iUnitCombat = GC.getPromotionLineInfo(ePromotionLine).getUnitCombatPrereqType(iJ);
 				if (!isQualifiedUnitCombatType(iUnitCombat))
 				{
 					m_aiQualifiedUnitCombatTypes.push_back(iUnitCombat);
@@ -16316,26 +16295,6 @@ bool CvBuildInfo::isPrereqBonusType(int i)
 	return true;
 }
 
-int CvBuildInfo::getMapCategoryType(int i) const
-{
-	return m_aiMapCategoryTypes[i];
-}
-
-int CvBuildInfo::getNumMapCategoryTypes() const
-{
-	return (int)m_aiMapCategoryTypes.size();
-}
-
-bool CvBuildInfo::isMapCategoryType(int i)
-{
-	FAssert (i > -1 && i < GC.getNumMapCategoryInfos()); // do not include this line if for delayed resolution
-	if (find(m_aiMapCategoryTypes.begin(), m_aiMapCategoryTypes.end(), i) == m_aiMapCategoryTypes.end())
-	{
-		return false;
-	}
-	return true;
-}
-
 int CvBuildInfo::getNumTerrainStructs() const
 {
 	return (int)m_aTerrainStructs.size();
@@ -16744,25 +16703,6 @@ bool CvGoodyInfo::isBad() const
 bool CvGoodyInfo::isNaval() const
 {
 	return m_bNaval;
-}
-
-int CvGoodyInfo::getMapCategoryType(int i) const
-{
-	return m_aiMapCategoryTypes[i];
-}
-
-int CvGoodyInfo::getNumMapCategoryTypes() const
-{
-	return (int)m_aiMapCategoryTypes.size();
-}
-
-bool CvGoodyInfo::isMapCategoryType(int i)
-{
-	if (find(m_aiMapCategoryTypes.begin(), m_aiMapCategoryTypes.end(), i) == m_aiMapCategoryTypes.end())
-	{
-		return false;
-	}
-	return true;
 }
 
 const TCHAR* CvGoodyInfo::getSound() const
@@ -17811,27 +17751,6 @@ int CvImprovementInfo::getImprovementBonusDiscoverRand(int i) const
 	FAssertMsg(i < GC.getNumBonusInfos(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 	return m_paImprovementBonus[i].m_iDiscoverRand;
-}
-
-//Vectors
-int CvImprovementInfo::getMapCategoryType(int i) const
-{
-	return m_aiMapCategoryTypes[i];
-}
-
-int CvImprovementInfo::getNumMapCategoryTypes() const
-{
-	return (int)m_aiMapCategoryTypes.size();
-}
-
-bool CvImprovementInfo::isMapCategoryType(int i)
-{
-	FAssert (i > -1 && i < GC.getNumMapCategoryInfos()); // do not include this line if for delayed resolution
-	if (find(m_aiMapCategoryTypes.begin(), m_aiMapCategoryTypes.end(), i) == m_aiMapCategoryTypes.end())
-	{
-		return false;
-	}
-	return true;
 }
 
 const TCHAR* CvImprovementInfo::getButton() const
@@ -19074,26 +18993,6 @@ bool CvBonusInfo::isFeatureTerrain(int i) const
 	return m_pbFeatureTerrain ?	m_pbFeatureTerrain[i] : false;
 }
 
-int CvBonusInfo::getMapCategoryType(int i) const
-{
-	return m_aiMapCategoryTypes[i];
-}
-
-int CvBonusInfo::getNumMapCategoryTypes() const
-{
-	return (int)m_aiMapCategoryTypes.size();
-}
-
-bool CvBonusInfo::isMapCategoryType(int i)
-{
-	FAssert (i > -1 && i < GC.getNumMapCategoryInfos()); // do not include this line if for delayed resolution
-	if (find(m_aiMapCategoryTypes.begin(), m_aiMapCategoryTypes.end(), i) == m_aiMapCategoryTypes.end())
-	{
-		return false;
-	}
-	return true;
-}
-
 int CvBonusInfo::getNumAfflictionCommunicabilityTypes() const
 {
 	return (int)m_aAfflictionCommunicabilityTypes.size();
@@ -19741,27 +19640,6 @@ int CvFeatureInfo::get3DAudioScriptFootstepIndex(int i) const
 	//	FAssertMsg(i < ?, "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 	return m_pi3DAudioScriptFootstepIndex ? m_pi3DAudioScriptFootstepIndex[i] : -1;
-}
-
-//Vectors
-int CvFeatureInfo::getMapCategoryType(int i) const
-{
-	return m_aiMapCategoryTypes[i];
-}
-
-int CvFeatureInfo::getNumMapCategoryTypes() const
-{
-	return (int)m_aiMapCategoryTypes.size();
-}
-
-bool CvFeatureInfo::isMapCategoryType(int i)
-{
-	FAssert (i > -1 && i < GC.getNumMapCategoryInfos()); // do not include this line if for delayed resolution
-	if (find(m_aiMapCategoryTypes.begin(), m_aiMapCategoryTypes.end(), i) == m_aiMapCategoryTypes.end())
-	{
-		return false;
-	}
-	return true;
 }
 
 bool CvFeatureInfo::isTerrain(int i) const
@@ -20699,26 +20577,6 @@ bool CvTerrainInfo::isColdDamage() const
 }
 //TB Combat Mod end
 //Vectors
-int CvTerrainInfo::getMapCategoryType(int i) const
-{
-	return m_aiMapCategoryTypes[i];
-}
-
-int CvTerrainInfo::getNumMapCategoryTypes() const
-{
-	return (int)m_aiMapCategoryTypes.size();
-}
-
-bool CvTerrainInfo::isMapCategoryType(int i)
-{
-	FAssert (i > -1 && i < GC.getNumMapCategoryInfos()); // do not include this line if for delayed resolution
-	if (find(m_aiMapCategoryTypes.begin(), m_aiMapCategoryTypes.end(), i) == m_aiMapCategoryTypes.end())
-	{
-		return false;
-	}
-	return true;
-}
-
 int CvTerrainInfo::getNumAfflictionCommunicabilityTypes() const
 {
 	return (int)m_aAfflictionCommunicabilityTypes.size();
@@ -23998,26 +23856,6 @@ int* CvProjectInfo::getCommerceModifierArray() const
 }
 
 // Vectors
-
-int CvProjectInfo::getMapCategoryType(int i) const
-{
-	return m_aiMapCategoryTypes[i];
-}
-
-int CvProjectInfo::getNumMapCategoryTypes() const
-{
-	return (int)m_aiMapCategoryTypes.size();
-}
-
-bool CvProjectInfo::isMapCategoryType(int i)
-{
-	if (find(m_aiMapCategoryTypes.begin(), m_aiMapCategoryTypes.end(), i) == m_aiMapCategoryTypes.end())
-	{
-		return false;
-	}
-	return true;
-}
-
 int CvProjectInfo::getProjectsNeededVectorSize()					{return m_aszProjectsNeededforPass3.size();}
 CvString CvProjectInfo::getProjectsNeededNamesVectorElement(int i)	{return m_aszProjectsNeededforPass3[i];}
 int CvProjectInfo::getProjectsNeededValuesVectorElement(int i)		{return m_aiProjectsNeededforPass3[i];}
@@ -24349,7 +24187,6 @@ void CvProjectInfo::getCheckSum(unsigned int &iSum)
 	// Vectors
 
 	CheckSumC(iSum, m_aiMapCategoryTypes);
-
 }
 
 //======================================================================================================
@@ -45841,8 +45678,7 @@ CvOutcomeMission* CvUnitCombatInfo::getOutcomeMissionByMission(MissionTypes eMis
 //  DESC:   Contains info about Map Categories
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-CvMapCategoryInfo::CvMapCategoryInfo() :
-m_bInitialized(true)
+CvMapCategoryInfo::CvMapCategoryInfo()
 {
 }
 
@@ -45859,18 +45695,11 @@ bool CvMapCategoryInfo::read(CvXMLLoadUtility* pXML)
 		return false;
 	}
 
-	//Uncomment when needed
-	//CvString szTextVal;
-
 	return true;
 }
 
 bool CvMapCategoryInfo::readPass2(CvXMLLoadUtility* pXML)
 {
-	//Uncomment when needed
-	//CvString szTextVal;
-
-
 	if (!CvInfoBase::read(pXML))
 	{
 		return false;
@@ -45898,6 +45727,50 @@ void CvMapCategoryInfo::getCheckSum(unsigned int& iSum)
 }
 
 
+MapCategory::MapCategory()
+{
+}
+
+MapCategory::~MapCategory()
+{
+}
+
+const MapCategoryTypes MapCategory::getMapCategoryType(const int eIndex) const
+{
+	return static_cast<MapCategoryTypes>(m_aiMapCategoryTypes[eIndex]);
+}
+
+const std::vector<int> MapCategory::getMapCategories() const
+{
+	return m_aiMapCategoryTypes;
+}
+
+const int MapCategory::getNumMapCategoryTypes() const
+{
+	return (int)m_aiMapCategoryTypes.size();
+}
+
+const bool MapCategory::isMapCategoryType(const std::vector<int> otherMapCategories) const
+{
+	for (int i = 0; i < (int)otherMapCategories.size(); i++)
+	{
+		if (isMapCategoryType(static_cast<MapCategoryTypes>(otherMapCategories[i])))
+			return true;
+	}
+	return false;
+}
+
+const bool MapCategory::isMapCategoryType(const MapCategoryTypes mapCategory) const
+{
+	FAssert (mapCategory > -1 && mapCategory < (int)m_aiMapCategoryTypes.size());
+
+	for (int i = 0; i < (int)m_aiMapCategoryTypes.size(); i++)
+	{
+		if (static_cast<MapCategoryTypes>(m_aiMapCategoryTypes[i]) == mapCategory)
+			return true;
+	}
+	return false;
+}
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //
