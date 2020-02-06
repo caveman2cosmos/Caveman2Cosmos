@@ -10787,38 +10787,6 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<French>The [COLOR_BUILDING_TEXT]Ark du Covenant[COLOR_REVERT] has no unhappiness in the city in which it is built and provides +1 happines in all cities.  It also provides +1 gold from ALL state religious buildings and it increases it's city's odds of generating a Great Prophet.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_BARBARIAN_HUNTER</Tag>
-		<English>Barbarian Hunter</English>
-		<French>Chasseur de Barbares</French>
-		<German>Barbaren-Jaeger</German>
-		<Italian>Cacciatore di barbari</Italian>
-		<Polish>Łowca Barbarzyńców</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_BARBARIAN_HUNTER_HELP</Tag>
-		<English>[ICON_BULLET]Fights against barbarians after the normal experience limit will still give XP points.</English>
-		<French>[ICON_BULLET]Les Combats contre les barbares continuent d'ajouter de l'EXP à l'unité.</French>
-		<German>[ICON_BULLET]Kaempfe gegen Barbaren geben auch nach dem Erfahrungslimit noch Erfahrungs-Punkte.</German>
-		<Italian>[ICON_BULLET]I combattimenti contro i barbari dopo il normale limite di XP daranno ancora punti XP.</Italian>
-		<Polish>[ICON_BULLET]Pozwala zdobywać XP w walce z barbarzyńcami, nawet po osiągnięciu limitu.</Polish>
-	</TEXT>
-	<!--TEXT>
-		<Tag>TXT_KEY_PROMOTION_ANIMAL_HUNTER</Tag>
-		<English>Animal Hunter</English>
-		<French>Chasseur d'Animaux</French>
-		<German>Animal Jaeger</German>
-		<Italian>Cacciatore di animali</Italian>
-		<Polish>Łowca Zwierząt</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ANIMAL_HUNTER_HELP</Tag>
-		<English>[ICON_BULLET]Fights against animals after the normal experience limit will still give XP points.</English>
-		<French>[ICON_BULLET]Les Combats contre les animaux continuent d'ajouter de l'EXP à l'unité.</French>
-		<German>[ICON_BULLET]Kaempfe gegen Tiere geben auch nach dem Erfahrungslimit noch Erfahrungs-Punkte.</German>
-		<Italian>[ICON_BULLET]I combattimenti contro gli animali dopo il normale limite di XP daranno ancora punti XP.</Italian>
-		<Polish>[ICON_BULLET]Pozwala zdobywać XP w walce ze zwierzętami, nawet po osiągnięciu limitu.</Polish>
-	</TEXT-->
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INDUSTRYESPIONAGE</Tag>
 		<English>Industry Espionage</English>
 		<French>Espionnage Industriel</French>

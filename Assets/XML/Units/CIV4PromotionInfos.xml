@@ -21886,9 +21886,9 @@
 			<Help>TXT_KEY_PROMOTION_BARBARIAN_HUNTER_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_HUNTER1</PromotionPrereq>
-			<!--NotOnGameOptions>
+			<NotOnGameOptions>
 				<GameOptionType>GAMEOPTION_INFINITE_XP</GameOptionType>
-			</NotOnGameOptions-->
+			</NotOnGameOptions>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
@@ -21901,7 +21901,7 @@
 			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/powerattack.dds</Button>
 		</PromotionInfo>
-		<!--PromotionInfo>
+		<PromotionInfo>
 			<Type>PROMOTION_ANIMAL_HUNTER</Type>
 			<Description>TXT_KEY_PROMOTION_ANIMAL_HUNTER</Description>
 			<Help>TXT_KEY_PROMOTION_ANIMAL_HUNTER_HELP</Help>
@@ -21917,7 +21917,7 @@
 				</UnitCombat>
 			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/callofprotection.dds</Button>
-		</PromotionInfo-->
+		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_INDUSTRYESPIONAGE</Type>
 			<Description>TXT_KEY_PROMOTION_INDUSTRYESPIONAGE</Description>

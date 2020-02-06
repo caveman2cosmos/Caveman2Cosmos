@@ -984,7 +984,7 @@ public:
 	int experienceNeeded() const; // Exposed to Python
 	int attackXPValue() const; // Exposed to Python
 	int defenseXPValue() const; // Exposed to Python
-	int maxXPValue(const CvUnit* pVictim) const; // Exposed to Python
+	int maxXPValue(const CvUnit* pVictim, bool bBarb = false) const; // Exposed to Python
 
 	int firstStrikes() const; // Exposed to Python
 	int chanceFirstStrikes() const; // Exposed to Python

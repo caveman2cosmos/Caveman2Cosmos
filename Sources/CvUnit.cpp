@@ -10523,7 +10523,7 @@ bool CvUnit::bombard()
 		}
 		// Super Forts end
 
-		changeExperience100(100, MAX_INT, true, false, false/*this was too corruptable with SM - split to bombatd and get tons of GG pts*/);
+		changeExperience100(100, -1, true);
 		setMadeAttack(true);
 		changeMoves(GC.getMOVE_DENOMINATOR());
 /************************************************************************************************/
@@ -13591,7 +13591,7 @@ bool CvUnit::build(BuildTypes eBuild)
 		int iSpeedModifier = workRate(true);
 		if (iCost > 0 && !GC.getBuildInfo(eBuild).isKill())
 		{
-			changeExperience100(iCost / std::max(1, (2 * iSpeedModifier) / 100), -1, false, false, false);
+			changeExperience100(iCost / std::max(1, (2 * iSpeedModifier) / 100));
 		}
 
 		if (GC.getBuildInfo(eBuild).isKill())
@@ -14377,15 +14377,9 @@ bool CvUnit::upgrade(UnitTypes eUnit)
 
 	pUpgradeUnit->finishMoves();
 
-	if (pUpgradeUnit->getLeaderUnitType() == NO_UNIT)
+	if (pUpgradeUnit->getLeaderUnitType() == NO_UNIT && !GC.getGameINLINE().isOption(GAMEOPTION_INFINITE_XP))
 	{
-		if (!GC.getGameINLINE().isOption(GAMEOPTION_INFINITE_XP))
-		{
-			if (pUpgradeUnit->getExperience() > GC.getDefineINT("MAX_EXPERIENCE_AFTER_UPGRADE"))
-			{
-				pUpgradeUnit->setExperience(GC.getDefineINT("MAX_EXPERIENCE_AFTER_UPGRADE"));
-			}
-		}
+		pUpgradeUnit->setExperience(0);
 	}
 	//TB Combat Mod begin
 	pUpgradeUnit->checkPromotionObsoletion();
@@ -16883,27 +16877,33 @@ int CvUnit::defenseXPValue() const
 }
 
 
-int CvUnit::maxXPValue(const CvUnit* pVictim) const
+int CvUnit::maxXPValue(const CvUnit* pVictim, bool bBarb) const
 {
-	int iMaxValue = MAX_INT;
-
-	if (pVictim->isAnimal())
+	if (GC.getGameINLINE().isOption(GAMEOPTION_INFINITE_XP))
 	{
-		if (!isAnimal() && !isHasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_EXPLORER")))
+		return -1;
+	}
+	int iMaxValue = -1;
+
+	if (pVictim != NULL && pVictim->isAnimal())
+	{
+		if (!isNPC()
+		&& !isHasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_EXPLORER"))
+		&& !isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_ANIMAL_HUNTER")))
 		{
-			iMaxValue = std::min(iMaxValue, GC.getDefineINT("ANIMAL_MAX_XP_VALUE"));
+			iMaxValue = GC.getDefineINT("ANIMAL_MAX_XP_VALUE");
 		}
 	}
-	else if (pVictim->isHominid())
+	else if (pVictim != NULL && pVictim->isHominid() || bBarb)
 	{
-		if (!isHominid()
+		if (!isNPC()
 		&& !isHasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_RECON"))
 		&& !isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_BARBARIAN_HUNTER")))
 		{
-			iMaxValue = std::min(iMaxValue, GC.getDefineINT("BARBARIAN_MAX_XP_VALUE"));
+			iMaxValue = GC.getDefineINT("BARBARIAN_MAX_XP_VALUE");
 		}
 	}
-	if (iMaxValue != MAX_INT && GC.getGameINLINE().isOption(GAMEOPTION_MORE_XP_TO_LEVEL))
+	if (iMaxValue > 0 && GC.getGameINLINE().isOption(GAMEOPTION_MORE_XP_TO_LEVEL))
 	{
 		iMaxValue *= GC.getDefineINT("MORE_XP_TO_LEVEL_MODIFIER");
 		iMaxValue /= 100;
@@ -19527,7 +19527,7 @@ int CvUnit::getExperience100() const
 
 void CvUnit::setExperience100(int iNewValue, int iMax)
 {
-	if ((getExperience100() != iNewValue) && (getExperience100() < ((iMax == -1) ? MAX_INT : iMax)))
+	if (getExperience100() != iNewValue && getExperience100() < (iMax == -1 ? MAX_INT : iMax))
 	{
 		m_iExperience = std::min(((iMax == -1) ? MAX_INT : iMax), iNewValue);
 		FAssert(getExperience100() >= 0);
@@ -19581,7 +19581,7 @@ void CvUnit::changeExperience100(int iChange, int iMax, bool bFromCombat, bool b
             iUnitExperience /= 100;
         }
 
-/* Great Commanders                                                                             */
+		// Great Commanders
 		CvUnit* pCommander = getUsedCommander();
 		if (pCommander != NULL && bFromCombat)
 		{
@@ -19599,12 +19599,12 @@ int CvUnit::getExperience() const
 
 void CvUnit::setExperience(int iNewValue, int iMax)
 {
-	setExperience100(iNewValue * 100, iMax > 0 && iMax != MAX_INT ? iMax * 100 : -1);
+	setExperience100(iNewValue * 100, iMax > 0 && iMax < MAX_INT/100 ? iMax * 100 : -1);
 }
 
 void CvUnit::changeExperience(int iChange, int iMax, bool bFromCombat, bool bInBorders, bool bUpdateGlobal)
 {
-	changeExperience100(iChange * 100, iMax > 0 && iMax != MAX_INT ? iMax * 100 : -1, bFromCombat, bInBorders, bUpdateGlobal);
+	changeExperience100(iChange * 100, iMax > 0 && MAX_INT/100 > iMax ? iMax * 100 : -1, bFromCombat, bInBorders, bUpdateGlobal);
 }
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
@@ -30859,40 +30859,28 @@ bool CvUnit::canAirBomb1At(const CvPlot* pPlot, int iX, int iY) const
 
 bool CvUnit::airBomb1(int iX, int iY)
 {
-	CvWString szBuffer;
-
 	if (!canAirBomb1At(plot(), iX, iY))
 	{
 		return false;
 	}
+
 	CvPlot* pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+
 	if (interceptTest(pPlot))
 	{
 		return true;
 	}
+	CvWString szBuffer;
 
-/************************************************************************************************/
-/* RevolutionDCM	                  Start		 05/31/10                        Afforess       */
-/*                                                                                              */
-/* Battle Effects                                                                               */
-/************************************************************************************************/
+	// Battle Effects
 	setBattlePlot(pPlot);
-/************************************************************************************************/
-/* RevolutionDCM	             Battle Effects END                                             */
-/************************************************************************************************/
+
 	CvCity* pCity = pPlot->getPlotCity();
 	if (pCity != NULL)
 	{
 		pCity->changeDefenseDamage(getAirBombCurrRate());
-		bool bBarb = pCity->isHominid();
-		//TB Combat Mods begin
-		int iMax = MAX_INT;
-		if (!GC.getGameINLINE().isOption(GAMEOPTION_INFINITE_XP))
-		{
-			iMax += (GC.getDefineINT("BARBARIAN_MAX_XP_VALUE"));
-		}
-		changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), bBarb ? iMax : -1, !bBarb, pCity->getOwnerINLINE() == getOwnerINLINE());
-		//TB Combat Mods end
+
+		changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), maxXPValue(NULL, pCity->isHominid()), pCity->getOwnerINLINE() == getOwnerINLINE());
 
 		MEMORY_TRACK_EXEMPT();
 
@@ -30924,15 +30912,7 @@ bool CvUnit::airBomb1(int iX, int iY)
 						szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_IMP_WAS_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide(), getNameKey(), GET_PLAYER(getOwnerINLINE()).getCivilizationAdjectiveKey());
 						AddDLLMessage(pPlot->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX_INLINE(), pPlot->getY_INLINE(), true, true);
 					}
-					bool bBarb = GET_PLAYER(pPlot->getOwnerINLINE()).isHominid();
-					//TB Combat Mods begin
-					int iMax = MAX_INT;
-					if (!GC.getGameINLINE().isOption(GAMEOPTION_INFINITE_XP))
-					{
-						iMax += (GC.getDefineINT("BARBARIAN_MAX_XP_VALUE"));
-					}
-					changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), bBarb ? iMax : -1, !bBarb, pPlot->getOwnerINLINE() == getOwnerINLINE());
-					//TB Combat Mods end
+					changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), maxXPValue(NULL, pPlot->isHominid()), true, pPlot->getOwnerINLINE() == getOwnerINLINE());
 				}
 
 				pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
@@ -30961,18 +30941,15 @@ bool CvUnit::airBomb1(int iX, int iY)
 								{
 									pLoopUnit = ::getUnit(pUnitNode->m_data);
 									pUnitNode = pPlot->nextUnitNode(pUnitNode);
-									if (bDistAttComm)
+									if (bDistAttComm && pLoopUnit->checkContractDisease(eAfflictionLine, iDistanceAttackCommunicability))
 									{
-										if (pLoopUnit->checkContractDisease(eAfflictionLine, iDistanceAttackCommunicability))
-										{
-											pLoopUnit->afflict(eAfflictionLine);
-										}
+										pLoopUnit->afflict(eAfflictionLine);
 									}
 									if (bAffonAtt)
 									{
 										int iAttackersPoisonChance = getAfflictOnAttackTypeProbability(eAfflictionLine) - pLoopUnit->fortitudeTotal() - pLoopUnit->getUnitAfflictionTolerance(eAfflictionLine);
-										int iAttackersPoisonRollResult = GC.getGameINLINE().getSorenRandNum(100, "AttackersPoisonRoll");
-										if (iAttackersPoisonRollResult < iAttackersPoisonChance)
+
+										if (GC.getGameINLINE().getSorenRandNum(100, "AttackersPoisonRoll") < iAttackersPoisonChance)
 										{
 											pLoopUnit->afflict(eAfflictionLine, true, this);
 										}
@@ -31144,17 +31121,9 @@ bool CvUnit::airBomb2(int iX, int iY)
 			if (pCity->getNumRealBuilding((BuildingTypes)build) > 0)
 			{
 				bNoTarget = false;
-				bool bBarb = pCity->isHominid();
-				//TB Combat Mod begin
-				int iMax = MAX_INT;
-				if (!GC.getGameINLINE().isOption(GAMEOPTION_INFINITE_XP))
-				{
-					iMax += (GC.getDefineINT("BARBARIAN_MAX_XP_VALUE"));
-				}
-				changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), bBarb ? iMax : -1, !bBarb, pCity->getOwnerINLINE() == getOwnerINLINE());
-				//TB Combat Mod end
-				pCity->setNumRealBuilding((BuildingTypes)build, 0);
+				changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), maxXPValue(NULL, pCity->isHominid()), true, pCity->getOwnerINLINE() == getOwnerINLINE());
 
+				pCity->setNumRealBuilding((BuildingTypes)build, 0);
 				{
 					MEMORY_TRACK_EXEMPT();
 
@@ -31405,16 +31374,8 @@ bool CvUnit::airBomb3(int iX, int iY)
 			if (pCity->getNumRealBuilding((BuildingTypes)build) > 0)
 			{
 				pCity->setNumRealBuilding((BuildingTypes)build, 0);
-				bool bBarb = pCity->isHominid();
-				//TB Combat Mods begin
-				int iMax = MAX_INT;
-				if (!GC.getGameINLINE().isOption(GAMEOPTION_INFINITE_XP))
-				{
-					iMax += (GC.getDefineINT("BARBARIAN_MAX_XP_VALUE"));
-				}
-				changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), bBarb ? iMax : -1, !bBarb, pCity->getOwnerINLINE() == getOwnerINLINE());
-				//TB Combat Mods end
 
+				changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), maxXPValue(NULL, pCity->isHominid()), true, pCity->getOwnerINLINE() == getOwnerINLINE());
 				{
 					MEMORY_TRACK_EXEMPT();
 
@@ -31673,23 +31634,13 @@ bool CvUnit::airBomb4(int iX, int iY)
 			pUnit = pLoopUnit;
 		}
 	}
-//		if (pCity != NULL)
+
 	{
 		if (pUnit != NULL)
 		{
 			bNoTarget = false;
-			if (pCity != NULL)
-			{
-				bool bBarb = pCity->isHominid();
-				//TB Combat Mods begin
-				int iMax = MAX_INT;
-				if (!GC.getGameINLINE().isOption(GAMEOPTION_INFINITE_XP))
-				{
-					iMax += (GC.getDefineINT("BARBARIAN_MAX_XP_VALUE"));
-				}
-				changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), bBarb ? iMax : -1, !bBarb, pCity->getOwnerINLINE() == getOwnerINLINE());
-				//TB Combat Mods end
-			}
+			changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), maxXPValue(pUnit), true, pPlot->getOwnerINLINE() == getOwnerINLINE());
+
 			iDamage = (airCombatDamage(pUnit) * 2);
 			iUnitDamage = std::max(pUnit->getDamage(), std::min((pUnit->getDamage() + iDamage), airCombatLimit(pUnit)));
 
@@ -31894,15 +31845,9 @@ bool CvUnit::airBomb5(int iX, int iY)
 		return true;
 	}
 
-/************************************************************************************************/
-/* RevolutionDCM	                  Start		 05/31/10                        Afforess       */
-/*                                                                                              */
-/* Battle Effects                                                                               */
-/************************************************************************************************/
+	// Battle Effects
 	setBattlePlot(pPlot);
-/************************************************************************************************/
-/* RevolutionDCM	             Battle Effects END                                             */
-/************************************************************************************************/
+
 	pCity = pPlot->getPlotCity();
 
 	if (pCity != NULL)
@@ -31912,7 +31857,6 @@ bool CvUnit::airBomb5(int iX, int iY)
 			bNoTarget = false;
 			pCity->setProduction(pCity->getProduction() / 2);
 			bSuccess = true;
-
 			{
 				MEMORY_TRACK_EXEMPT();
 
@@ -31921,15 +31865,7 @@ bool CvUnit::airBomb5(int iX, int iY)
 				szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB5SUCCESS", pCity->getNameKey());
 				AddDLLMessage(pCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
 			}
-			bool bBarb = pCity->isHominid();
-			//TB Combat Mods begin
-			int iMax = MAX_INT;
-			if (!GC.getGameINLINE().isOption(GAMEOPTION_INFINITE_XP))
-			{
-				iMax += (GC.getDefineINT("BARBARIAN_MAX_XP_VALUE"));
-			}
-			changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), bBarb ? iMax : -1, !bBarb, pCity->getOwnerINLINE() == getOwnerINLINE());
-			//TB Combat Mods end
+			changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), maxXPValue(NULL, pCity->isHominid()), true, pCity->getOwnerINLINE() == getOwnerINLINE());
 		}
 		else
 		{
@@ -32251,7 +32187,7 @@ bool CvUnit::bombardRanged(int iX, int iY, bool sAttack)
 						AddDLLMessage(pLoopUnit->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX_INLINE(), getY_INLINE(), true, true);
 					}
 					rBombardCombat(pPlot, pLoopUnit);
-					changeExperience100(100, MAX_INT, true, pLoopUnit->getOwnerINLINE() == getOwnerINLINE(), false/*this was too corruptable with SM - split to bombatd and get tons of GG pts*/);
+					changeExperience100(100, -1, true, pLoopUnit->getOwnerINLINE() == getOwnerINLINE());
 				}
 				else
 				{
@@ -32302,7 +32238,7 @@ bool CvUnit::bombardRanged(int iX, int iY, bool sAttack)
 					AddDLLMessage(pLoopUnit->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX_INLINE(), getY_INLINE(), true, true);
 				}
 				rBombardCombat(pPlot, pLoopUnit);
-				changeExperience100(100, MAX_INT, true, pLoopUnit->getOwnerINLINE() == getOwnerINLINE(), false/*this was too corruptable with SM - split to bombatd and get tons of GG pts*/);
+				changeExperience100(100, -1, true, pLoopUnit->getOwnerINLINE() == getOwnerINLINE());
 			}
 			else
 			{
@@ -32342,7 +32278,7 @@ bool CvUnit::bombardRanged(int iX, int iY, bool sAttack)
 						}
 					}
 					pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
-					changeExperience100(100, MAX_INT, true, false, false);
+					changeExperience100(100, -1, true);
 				}
 				else
 				{
