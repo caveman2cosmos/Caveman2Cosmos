@@ -2457,11 +2457,9 @@ void CvPlayer::initFreeState()
 
 void CvPlayer::initFreeUnits()
 {
-	UnitTypes eLoopUnit;
-	int iFreeCount;
-	int iI, iJ;
+	if (isNPC()) return;
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_ADVANCED_START) && !isNPC())
+	if (GC.getGameINLINE().isOption(GAMEOPTION_ADVANCED_START))
 	{
 		int iPoints = GC.getGameINLINE().getNumAdvancedStartPoints();
 
@@ -2491,67 +2489,165 @@ void CvPlayer::initFreeUnits()
 			}
 		}
 	}
-	else if(!isNPC())
+	else // Create Starting units
 	{
+		EraTypes startEra = GC.getGame().getStartEra();
+		int iMult = GC.getEraInfo(startEra).getStartingUnitMultiplier();
+		if (!isHuman())
+		{
+			iMult *= GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAIStartingUnitMultiplier() - 1;
+		}
+		iMult = std::max(1, iMult);
+
+/*	Toffer: Currently not needed for anything...
+Consider removing freeUnitClass from civilization info as this is the only place that would have used it.
+
 		CvCivilizationInfo& kCivilizationInfo = GC.getCivilizationInfo(getCivilizationType());
-		for (iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
 		{
 			eLoopUnit = (UnitTypes)kCivilizationInfo.getCivilizationUnits(iI);
 
 			if (eLoopUnit != NO_UNIT)
 			{
-				iFreeCount = kCivilizationInfo.getCivilizationFreeUnitsClass(iI);
+				int iFreeCount = kCivilizationInfo.getCivilizationFreeUnitsClass(iI) * iMult;
 
-				iFreeCount *= (GC.getEraInfo(GC.getGameINLINE().getStartEra()).getStartingUnitMultiplier() + ((!isHuman()) ? GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAIStartingUnitMultiplier() : 0));
-
-				for (iJ = 0; iJ < iFreeCount; iJ++)
+				for (int iJ = 0; iJ < iFreeCount; iJ++)
 				{
 					addFreeUnit(eLoopUnit);
 				}
 			}
 		}
+*/
 
-		iFreeCount = GC.getEraInfo(GC.getGameINLINE().getStartEra()).getStartingDefenseUnits();
-		iFreeCount += GC.getHandicapInfo(getHandicapType()).getStartingDefenseUnits();
+		// Settler units, can't start a game without one.
+		addFreeUnitAI(UNITAI_SETTLE, GC.getGameINLINE().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) ? 1 : iMult);
 
-		if (!isHuman())
+		// Defensive units
+		int iCount = GC.getEraInfo(startEra).getStartingDefenseUnits();
+		iCount += isHuman() ? GC.getHandicapInfo(getHandicapType()).getStartingDefenseUnits() : GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAIStartingDefenseUnits();
+
+		if (iCount > 0 && !addFreeUnitAI(UNITAI_CITY_DEFENSE, iCount * iMult))
 		{
-			iFreeCount += GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAIStartingDefenseUnits();
+			// Almost any unit qualifies for the UNITAI_EXPLORE package.
+			addFreeUnitAI(UNITAI_EXPLORE, iCount * iMult);
 		}
+		// Worker units
+		iCount = GC.getEraInfo(startEra).getStartingWorkerUnits();
+		iCount += isHuman() ? GC.getHandicapInfo(getHandicapType()).getStartingWorkerUnits() : GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAIStartingWorkerUnits();
 
-		if (iFreeCount > 0)
+		if (iCount > 0 && !addFreeUnitAI(UNITAI_WORKER, iCount * iMult))
 		{
-			addFreeUnitAI(UNITAI_CITY_DEFENSE, iFreeCount);
+			addFreeUnitAI(UNITAI_EXPLORE, iCount * iMult);
 		}
-
-		iFreeCount = GC.getEraInfo(GC.getGameINLINE().getStartEra()).getStartingWorkerUnits();
-		iFreeCount += GC.getHandicapInfo(getHandicapType()).getStartingWorkerUnits();
-
-		if (!isHuman())
+		// Explorer units
+		iCount = GC.getEraInfo(GC.getGameINLINE().getStartEra()).getStartingExploreUnits();
+		iCount += isHuman() ? GC.getHandicapInfo(getHandicapType()).getStartingExploreUnits() : GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAIStartingExploreUnits();
+		if (iCount > 0)
 		{
-			iFreeCount += GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAIStartingWorkerUnits();
-		}
-
-		if (iFreeCount > 0)
-		{
-			addFreeUnitAI(UNITAI_WORKER, iFreeCount);
-		}
-
-		iFreeCount = GC.getEraInfo(GC.getGameINLINE().getStartEra()).getStartingExploreUnits();
-		iFreeCount += GC.getHandicapInfo(getHandicapType()).getStartingExploreUnits();
-
-		if (!isHuman())
-		{
-			iFreeCount += GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAIStartingExploreUnits();
-		}
-
-		if (iFreeCount > 0)
-		{
-			addFreeUnitAI(UNITAI_EXPLORE, iFreeCount);
+			addFreeUnitAI(UNITAI_EXPLORE, iCount * iMult);
 		}
 	}
 }
 
+bool CvPlayer::addFreeUnitAI(UnitAITypes eUnitAI, int iCount)
+{
+	UnitTypes eLoopUnit;
+	UnitTypes eBestUnit = NO_UNIT;
+	bool bValid, bBonusException = false;
+	int iValue;
+
+	int iBestValue = 0;
+
+	// Temp solution to get Wrub of the neanderthals to start with neanderthal units.
+	// This xml type name hardcoding is not good, need a better solution.
+	BonusTypes neanderthal = NO_BONUS;
+	if (getCivilizationType() == (CivilizationTypes) GC.getInfoTypeForString("CIVILIZATION_NEANDERTHAL"))
+	{
+		neanderthal = (BonusTypes) GC.getInfoTypeForString("BONUS_NEANDERTHAL");
+	}
+
+	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
+	{
+		eLoopUnit = (UnitTypes) iI;
+
+		if (canTrain(eLoopUnit, false, false, false, true))
+		{
+			bValid = true;
+
+			if (GC.getUnitInfo(eLoopUnit).getPrereqAndBonus() != NO_BONUS)
+			{
+				bValid = GC.getUnitInfo(eLoopUnit).getPrereqAndBonus() == neanderthal;
+			}
+
+			for (int iJ = 0; iJ < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); iJ++)
+			{
+				if (GC.getUnitInfo(eLoopUnit).getPrereqOrBonuses(iJ) != NO_BONUS
+				&& GC.getUnitInfo(eLoopUnit).getPrereqOrBonuses(iJ) != neanderthal)
+				{
+					bValid = false;
+					break;
+				}
+			}
+
+			if (bValid)
+			{
+				iValue = AI_unitValue(eLoopUnit, eUnitAI, NULL);
+				if (iValue > 0 && GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType() != eUnitAI)
+				{
+					iValue /= 4;
+				}
+				if (iValue > iBestValue)
+				{
+					eBestUnit = eLoopUnit;
+					iBestValue = iValue;
+				}
+			}
+		}
+	}
+	if (eBestUnit != NO_UNIT)
+	{
+		for (int iI = 0; iI < iCount; iI++)
+		{
+			addFreeUnit(eBestUnit, eUnitAI);
+		}
+		return true;
+	}
+	return false;
+}
+
+void CvPlayer::addFreeUnit(UnitTypes eUnit, UnitAITypes eUnitAI)
+{
+	CvPlot* pStartingPlot = getStartingPlot();
+
+	if (pStartingPlot != NULL)
+	{
+		CvPlot* pBestPlot = NULL;
+		bool startOnSameTile = false;
+		if (!GC.getUnitInfo(eUnit).isFound()
+		&& (!Cy::call_optional(gDLL->getPythonIFace()->getMapScriptModule(), "startHumansOnSameTile", startOnSameTile) || !startOnSameTile))
+		{
+			int iRandOffset = GC.getGameINLINE().getSorenRandNum(NUM_CITY_PLOTS, "Place Units (Player)");
+			CvPlot* pLoopPlot;
+
+			for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
+			{
+				pLoopPlot = plotCity(pStartingPlot->getX_INLINE(), pStartingPlot->getY_INLINE(), ((iI + iRandOffset) % NUM_CITY_PLOTS));
+
+				if (pLoopPlot != NULL && pLoopPlot->getArea() == pStartingPlot->getArea()
+				&& !pLoopPlot->isImpassable(getTeam()) && !pLoopPlot->isUnit() && !pLoopPlot->isGoody())
+				{
+					pBestPlot = pLoopPlot;
+					break;
+				}
+			}
+		}
+		if (pBestPlot == NULL)
+		{
+			pBestPlot = pStartingPlot;
+		}
+		initUnit(eUnit, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), eUnitAI, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
+	}
+}
 
 /************************************************************************************************/
 /* LoR                                        11/03/10                          phungus420      */
@@ -2612,151 +2708,9 @@ int CvPlayer::getBestUnitTypeCargoVolume(UnitAITypes eUnitAI) const
 	UnitTypes eBestUnitType = getBestUnitType(eUnitAI);
 	return (eBestUnitType != NO_UNIT ? GC.getUnitInfo(eBestUnitType).getBaseCargoVolume() : 0);
 }
-
 /************************************************************************************************/
 /* LoR                            END                                                           */
 /************************************************************************************************/
-
-
-void CvPlayer::addFreeUnitAI(UnitAITypes eUnitAI, int iCount)
-{
-	UnitTypes eLoopUnit;
-	UnitTypes eBestUnit;
-	bool bValid;
-	int iValue;
-	int iBestValue;
-	int iI, iJ;
-
-	eBestUnit = NO_UNIT;
-	iBestValue = 0;
-	CvCivilizationInfo& kCivilizationInfo = GC.getCivilizationInfo(getCivilizationType());
-
-	for (iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
-	{
-		eLoopUnit = (UnitTypes)kCivilizationInfo.getCivilizationUnits(iI);
-
-		if (eLoopUnit != NO_UNIT)
-		{
-			if (canTrain(eLoopUnit))
-			{
-				bValid = true;
-
-				if (GC.getUnitInfo(eLoopUnit).getPrereqAndBonus() != NO_BONUS)
-				{
-					bValid = false;
-				}
-
-				for (iJ = 0; iJ < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); iJ++)
-				{
-					if (GC.getUnitInfo(eLoopUnit).getPrereqOrBonuses(iJ) != NO_BONUS)
-					{
-						bValid = false;
-					}
-				}
-
-				if (bValid)
-				{
-					iValue = AI_unitValue(eLoopUnit, eUnitAI, NULL);
-					if (iValue > 0 && GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType() != eUnitAI)
-					{
-						iValue /= 4;
-					}
-					if (iValue > iBestValue)
-					{
-						eBestUnit = eLoopUnit;
-						iBestValue = iValue;
-					}
-				}
-			}
-		}
-	}
-
-	if (eBestUnit != NO_UNIT)
-	{
-		for (int iI = 0; iI < iCount; iI++)
-		{
-			addFreeUnit(eBestUnit, eUnitAI);
-		}
-	}
-}
-
-
-void CvPlayer::addFreeUnit(UnitTypes eUnit, UnitAITypes eUnitAI)
-{
-	CvPlot* pStartingPlot;
-	CvPlot* pBestPlot;
-	CvPlot* pLoopPlot;
-	int iRandOffset;
-	int iI;
-
-	if (GC.getGameINLINE().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) && isHuman())
-	{
-		if ((eUnitAI == UNITAI_SETTLE) || (GC.getUnitInfo(eUnit).getDefaultUnitAIType() == UNITAI_SETTLE))
-		{
-			if (AI_getNumAIUnits(UNITAI_SETTLE) >= 1)
-			{
-				return;
-			}
-		}
-	}
-
-	pStartingPlot = getStartingPlot();
-
-	if (pStartingPlot != NULL)
-	{
-		pBestPlot = NULL;
-
-		if (isHuman())
-		{
-			bool startOnSameTile = false;
-			if (!Cy::call_optional(gDLL->getPythonIFace()->getMapScriptModule(), "startHumansOnSameTile", startOnSameTile) || !startOnSameTile)
-			{
-				if (!(GC.getUnitInfo(eUnit).isFound()))
-				{
-					iRandOffset = GC.getGameINLINE().getSorenRandNum(NUM_CITY_PLOTS, "Place Units (Player)");
-
-					for (iI = 0; iI < NUM_CITY_PLOTS; iI++)
-					{
-						pLoopPlot = plotCity(pStartingPlot->getX_INLINE(), pStartingPlot->getY_INLINE(), ((iI + iRandOffset) % NUM_CITY_PLOTS));
-
-						if (pLoopPlot != NULL)
-						{
-							if (pLoopPlot->getArea() == pStartingPlot->getArea())
-							{
-							/************************************************************************************************/
-							/* Afforess	Mountains Start		 09/18/09                                           		 */
-							/*                                                                                              */
-							/*                                                                                              */
-							/************************************************************************************************/
-								if (!(pLoopPlot->isImpassable(getTeam()))) // added getTeam()
-							/************************************************************************************************/
-							/* Afforess	Mountains End       END        		                                             */
-							/************************************************************************************************/
-								{
-									if (!(pLoopPlot->isUnit()))
-									{
-										if (!(pLoopPlot->isGoody()))
-										{
-											pBestPlot = pLoopPlot;
-											break;
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-
-		if (pBestPlot == NULL)
-		{
-			pBestPlot = pStartingPlot;
-		}
-
-		initUnit(eUnit, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), eUnitAI, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
-	}
-}
 
 
 int CvPlayer::startingPlotRange() const
@@ -7112,15 +7066,6 @@ bool CvPlayer::canTradeWith(PlayerTypes eWhoTo) const
 	return false;
 }
 
-bool CvPlayer::canReceiveTradeCity() const
-{
-	if (GC.getGameINLINE().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) && isHuman())
-	{
-		return false;
-	}
-
-	return true;
-}
 
 bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial) const
 {
@@ -7206,7 +7151,7 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 			{
 				bResult = true;
 			}
-			else if (GET_PLAYER(eWhoTo).canReceiveTradeCity())
+			else
 			{
 				if (0 == GC.getGameINLINE().getMaxCityElimination())
 				{
@@ -9155,39 +9100,14 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 {
 	PROFILE_FUNC();
 
-/************************************************************************************************/
-/* REVDCM                                 04/16/10                                phungus420    */
-/*                                                                                              */
-/* CanTrain Performance                                                                         */
-/************************************************************************************************/
 	if (eUnit == NO_UNIT) return false;
 	CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
 	const UnitClassTypes eUnitClass = (UnitClassTypes)kUnit.getUnitClassType();
 	int iI;
 
-/************************************************************************************************/
-/* Afforess	                  Start		 7/22/10                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	/*
-	FAssert(GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(eUnitClass) == eUnit);
-	if (GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(eUnitClass) != eUnit)
-	{
-		return false;
-	}
-	*/
-
-	if (!GC.getGameINLINE().isOption(GAMEOPTION_ASSIMILATION))
-	{
-        if (GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(eUnitClass) != eUnit)
-        {
-            return false;
-        }
-	}
-
 	//Another way to create a barrier for barbarians to spawn heroes - apparently this is called when determining what units to add to a newly spawned barb city.
-	if (isNPC() && GC.getUnitInfo(eUnit).hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_HERO")))
+	if (isNPC() && (GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(eUnitClass) != eUnit
+		|| GC.getUnitInfo(eUnit).hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_HERO"))))
 	{
 		return false;
 	}
@@ -9196,90 +9116,62 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 	{
 		return false;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-	if (!bIgnoreCost)
-	{
-		if (kUnit.getProductionCost() == -1)
-		{
-			return false;
-		}
-	}
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) && isHuman())
-	{
-		if (kUnit.isFound())
-		{
-			return false;
-		}
-	}
-
-	if (GC.getGameINLINE().isOption(GAMEOPTION_NO_ESPIONAGE))
-	{
-		if (kUnit.isSpy() || kUnit.getEspionagePoints() > 0)
-		{
-			return false;
-		}
-	}
-
-	if (!(GET_TEAM(getTeam()).isHasTech((TechTypes)(kUnit.getPrereqAndTech()))))
+	if (!bIgnoreCost && kUnit.getProductionCost() == -1)
 	{
 		return false;
 	}
 
-/************************************************************************************************/
-/* REVDCM                                 02/16/10                                phungus420    */
-/*                                                                                              */
-/* CanTrain                                                                                     */
-/************************************************************************************************/
-	if (kUnit.getMaxStartEra() != NO_ERA)
+	if (GC.getGameINLINE().isOption(GAMEOPTION_NO_ESPIONAGE)
+	&& (kUnit.isSpy() || kUnit.getEspionagePoints() > 0))
 	{
-		if (GC.getGameINLINE().getStartEra() > kUnit.getMaxStartEra())
+		return false;
+	}
+
+	if (!GET_TEAM(getTeam()).isHasTech((TechTypes)(kUnit.getPrereqAndTech())))
+	{
+		return false;
+	}
+
+	if (kUnit.getMaxStartEra() != NO_ERA && GC.getGameINLINE().getStartEra() > kUnit.getMaxStartEra())
+	{
+		return false;
+	}
+
+	if (kUnit.getForceObsoleteTech() != NO_TECH && GET_TEAM(getTeam()).isHasTech((TechTypes)(kUnit.getForceObsoleteTech())))
+	{
+		return false;
+	}
+
+	for (iI = 0; iI < GC.getNUM_UNIT_AND_TECH_PREREQS(); iI++)
+	{
+		if (kUnit.getPrereqAndTechs(iI) != NO_TECH && !GET_TEAM(getTeam()).isHasTech((TechTypes)(kUnit.getPrereqAndTechs(iI))))
 		{
 			return false;
 		}
 	}
 
-	if (kUnit.getForceObsoleteTech() != NO_TECH)
+	if (kUnit.getStateReligion() != NO_RELIGION && getStateReligion() != kUnit.getStateReligion())
 	{
-		if (GET_TEAM(getTeam()).isHasTech((TechTypes)(kUnit.getForceObsoleteTech())))
-		{
-			return false;
-		}
-	}
-/* Moved to CvGame - Afforess 7/22/10
-	if (kUnit.getPrereqGameOption() != NO_GAMEOPTION)
-	{
-		if (!(GC.getGameINLINE().isOption((GameOptionTypes)kUnit.getPrereqGameOption())))
-		{
-			return false;
-		}
+		return false;
 	}
 
-	if (kUnit.getNotGameOption() != NO_GAMEOPTION)
+	if (!bPropertySpawn)
 	{
-		if (GC.getGameINLINE().isOption((GameOptionTypes)kUnit.getNotGameOption()))
+		if (GC.getGameINLINE().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) && kUnit.isFound())
 		{
 			return false;
 		}
-	}
-*/
-	if (kUnit.isPrereqOrCivics((int)NO_CIVIC))
-	{
-		bool bValid = false;
-		const int numNumCivicInfos = GC.getNumCivicInfos();
-		if (!bPropertySpawn)
+
+		if (kUnit.isPrereqOrCivics((int)NO_CIVIC))
 		{
-			for (iI = 0; iI < numNumCivicInfos; iI++)
+			bool bValid = false;
+			for (iI = 0; iI < GC.getNumCivicInfos(); iI++)
 			{
-				if (kUnit.isPrereqOrCivics(iI))
+				if (kUnit.isPrereqOrCivics(iI) && isCivic(CivicTypes(iI)))
 				{
-					if (isCivic(CivicTypes(iI)))
-					{
-						bValid = true;
-						break;
-					}
+					bValid = true;
+					break;
 				}
 			}
 			if (!bValid)
@@ -9287,32 +9179,7 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 				return false;
 			}
 		}
-	}
-/************************************************************************************************/
-/* REVDCM                                  END CanTrain                                         */
-/************************************************************************************************/
 
-	for (iI = 0; iI < GC.getNUM_UNIT_AND_TECH_PREREQS(); iI++)
-	{
-		if (kUnit.getPrereqAndTechs(iI) != NO_TECH)
-		{
-			if (!(GET_TEAM(getTeam()).isHasTech((TechTypes)(kUnit.getPrereqAndTechs(iI)))))
-			{
-				return false;
-			}
-		}
-	}
-
-	if (kUnit.getStateReligion() != NO_RELIGION)
-	{
-		if (getStateReligion() != kUnit.getStateReligion())
-		{
-			return false;
-		}
-	}
-
-	if (!bPropertySpawn)
-	{
 		if (GC.getGameINLINE().isUnitClassMaxedOut(eUnitClass))
 		{
 			return false;
@@ -9349,50 +9216,26 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 			}
 		}
 
-		if (!isNukesValid())
+		if (!isNukesValid() && kUnit.getNukeRange() != -1)
 		{
-			if (kUnit.getNukeRange() != -1)
-			{
-				return false;
-			}
+			return false;
 		}
 
-		if (kUnit.getSpecialUnitType() != NO_SPECIALUNIT)
+		if (kUnit.getSpecialUnitType() != NO_SPECIALUNIT && !GC.getGameINLINE().isSpecialUnitValid((SpecialUnitTypes)(kUnit.getSpecialUnitType())))
 		{
-			if (!(GC.getGameINLINE().isSpecialUnitValid((SpecialUnitTypes)(kUnit.getSpecialUnitType()))))
-			{
-				return false;
-			}
+			return false;
 		}
 
-/************************************************************************************************/
-/* REVDCM                                 02/16/10                                phungus420    */
-/*                                                                                              */
-/* CanTrain                                                                                     */
-/************************************************************************************************/
-		if (kUnit.isStateReligion())
+		if (kUnit.isStateReligion() && getStateReligion() == NO_RELIGION)
 		{
-			if (getStateReligion() == NO_RELIGION)
-			{
-				return false;
-			}
+			return false;
 		}
 
-		if(kUnit.isInquisitor())
+		if (kUnit.isInquisitor() && !isInquisitionConditions())
 		{
-			if(!(isInquisitionConditions()))
-			{
-				return false;
-			}
+			return false;
 		}
-/************************************************************************************************/
-/* REVDCM                                  END CanTrain                                         */
-/************************************************************************************************/
-/************************************************************************************************/
-/* REVDCM                              END Performance                                          */
-/************************************************************************************************/
 	}
-
 	return true;
 }
 
@@ -10220,12 +10063,6 @@ int CvPlayer::getProductionModifier(UnitTypes eUnit) const
 					}
 				}
 			}
-			//iMultiplier += GC.getUnitInfo(eUnit).getProductionTraits(iI);
-
-			//if (GC.getUnitInfo(eUnit).getSpecialUnitType() != NO_SPECIALUNIT)
-			//{
-			//	iMultiplier += GC.getSpecialUnitInfo((SpecialUnitTypes) GC.getUnitInfo(eUnit).getSpecialUnitType()).getProductionTraits(iI);
-			//}
 		}
 	}
 
@@ -10259,15 +10096,6 @@ int CvPlayer::getProductionModifier(BuildingTypes eBuilding) const
 				}
 			}
 		}
-		//if (hasTrait((TraitTypes)iI))
-		//{
-		//	iMultiplier += GC.getBuildingInfo(eBuilding).getProductionTraits(iI);
-
-		//	if (GC.getBuildingInfo(eBuilding).getSpecialBuildingType() != NO_SPECIALBUILDING)
-		//	{
-		//		iMultiplier += GC.getSpecialBuildingInfo((SpecialBuildingTypes) GC.getBuildingInfo(eBuilding).getSpecialBuildingType()).getProductionTraits(iI);
-		//	}
-		//}
 	}
 
 	if (::isWorldWonderClass((BuildingClassTypes)(GC.getBuildingInfo(eBuilding).getBuildingClassType())))
@@ -34770,10 +34598,6 @@ void CvPlayer::processTrait(TraitTypes eTrait, int iChange)
 			}
 		}
 	}
-	//for (iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
-	//{
-	//	changeExtraBuildingHappiness((BuildingTypes)iJ, iChange*GC.getBuildingInfo((BuildingTypes)iJ).getHappinessTraits(eTrait));
-	//}
 
 	changeUpkeepModifier(iChange*GC.getTraitInfo(eTrait).getUpkeepModifier());
 	changeLevelExperienceModifier(iChange*GC.getTraitInfo(eTrait).getLevelExperienceModifier());

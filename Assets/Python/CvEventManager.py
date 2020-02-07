@@ -2339,7 +2339,6 @@ class CvEventManager:
 						eMsgType = InterfaceMessageTypes.MESSAGE_TYPE_MAJOR_EVENT, bForce = False
 					)
 
-
 		# Free Gatherer from Gathering
 		if iTech == self.TECH_GATHERING:
 			X = -1
@@ -2544,12 +2543,14 @@ class CvEventManager:
 
 			# Tribal Guardian
 			if CyUnit.isHasPromotion(self.PROMO_GUARDIAN_TRIBAL):
-				iUnitTG = GC.getInfoTypeForString("UNIT_TRIBAL_GUARDIAN")
-				if iUnitTG > -1:
-					CyPlayer = GC.getPlayer(iPlayer)
-					iExp = CyUnit.getExperience()
-					CyUnitTG = CyPlayer.initUnit(iUnitTG, CyUnit.getX(), CyUnit.getY(), UnitAITypes.UNITAI_PROPERTY_CONTROL, DirectionTypes.DIRECTION_SOUTH)
-					CyUnitTG.setExperience(iExp, iExp)
+				CyPlayer = GC.getPlayer(iPlayer)
+				if GC.getCivilizationInfo(CyPlayer.getCivilizationType()).getType() == "CIVILIZATION_NEANDERTHAL":
+					iUnitTG = GC.getInfoTypeForString("UNIT_NEANDERTHAL_TRIBAL_GUARDIAN")
+				else:
+					iUnitTG = GC.getInfoTypeForString("UNIT_TRIBAL_GUARDIAN")
+				CyUnitTG = CyPlayer.initUnit(iUnitTG, CyUnit.getX(), CyUnit.getY(), UnitAITypes.UNITAI_PROPERTY_CONTROL, DirectionTypes.DIRECTION_SOUTH)
+				iExp = CyUnit.getExperience()
+				CyUnitTG.setExperience(iExp, iExp)
 		if iPop:
 			CyCity.changePopulation(iPop)
 			if self.GO_1_CITY_TILE_FOUNDING:

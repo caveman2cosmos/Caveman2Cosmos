@@ -2779,28 +2779,9 @@ bool CvCity::isForceObsoleteUnitClassAvailable(UnitTypes eUnit) const
 				{
 					continue;
 				}
-				CvUnitInfo& kLoopUnit = GC.getUnitInfo(eLoopUnit);
-
-				if (canTrain(eLoopUnit, false, false, false, true))
+				if (canTrain(eLoopUnit, false, false, false, true, true))
 				{
 					return true;
-				}
-
-
-				for (int iJ = 0; iJ < numUnitClassInfos; iJ++)
-				{
-					if (kLoopUnit.getUpgradeUnitClass(iJ))
-					{
-						eLoopUnit = (UnitTypes)kCivilization.getCivilizationUnits(iJ);
-
-						if (eLoopUnit != NO_UNIT)
-						{
-							if (canTrain(eLoopUnit, false, false, false, true))
-							{
-								return true;
-							}
-						}
-					}
 				}
 			}
 		}
@@ -2925,6 +2906,7 @@ UnitTypes CvCity::allUpgradesAvailable(UnitTypes eUnit, int iUpgradeCount) const
 	return eResult;
 }
 
+
 int CvCity::getMaxNumWorldWonders() const
 {
 	return GC.getCultureLevelInfo(getCultureLevel()).getMaxWorldWonders();
@@ -2932,36 +2914,21 @@ int CvCity::getMaxNumWorldWonders() const
 
 bool CvCity::isWorldWondersMaxed() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) && isHuman())
+	if (GC.getGameINLINE().isOption(GAMEOPTION_ONE_CITY_CHALLENGE))
 	{
 		return false;
 	}
-
-	//if (GC.getDefineINT("MAX_WORLD_WONDERS_PER_CITY") == -1)
-	//{
-	//	return false;
-	//}
-/************************************************************************************************/
-/* Afforess	                  Start		 12/7/09                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	if (GC.getGameINLINE().isOption(GAMEOPTION_UNLIMITED_WONDERS))
 	{
 		return false;
 	}
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
-
-		//if (getNumWorldWonders() >= GC.getDefineINT("MAX_WORLD_WONDERS_PER_CITY"))
 	if (getNumWorldWonders() >= getMaxNumWorldWonders())
 	{
 		return true;
 	}
-
 	return false;
 }
+
 
 int CvCity::getMaxNumTeamWonders() const
 {
@@ -2970,91 +2937,51 @@ int CvCity::getMaxNumTeamWonders() const
 
 bool CvCity::isTeamWondersMaxed() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) && isHuman())
+	if (GC.getGameINLINE().isOption(GAMEOPTION_ONE_CITY_CHALLENGE))
 	{
 		return false;
 	}
-
-	//if (GC.getDefineINT("MAX_TEAM_WONDERS_PER_CITY") == -1)
-	//{
-	//	return false;
-	//}
-/************************************************************************************************/
-/* Afforess	                  Start		 12/7/09                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	if (GC.getGameINLINE().isOption(GAMEOPTION_UNLIMITED_WONDERS))
 	{
 		return false;
 	}
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
-
-		//if (getNumTeamWonders() >= GC.getDefineINT("MAX_TEAM_WONDERS_PER_CITY"))
 	if (getNumTeamWonders() >= getMaxNumTeamWonders())
 	{
 		return true;
 	}
-
 	return false;
 }
 
 
 int CvCity::getMaxNumNationalWonders() const
 {
-	return (GC.getGameINLINE().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) && isHuman()) ? GC.getCultureLevelInfo(getCultureLevel()).getMaxNationalWondersOCC() : GC.getCultureLevelInfo(getCultureLevel()).getMaxNationalWonders();
+	return GC.getGameINLINE().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) ? GC.getCultureLevelInfo(getCultureLevel()).getMaxNationalWondersOCC() : GC.getCultureLevelInfo(getCultureLevel()).getMaxNationalWonders();
 }
 
 bool CvCity::isNationalWondersMaxed() const
 {
-	//int iMaxNumWonders = (GC.getGameINLINE().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) && isHuman()) ? GC.getDefineINT("MAX_NATIONAL_WONDERS_PER_CITY_FOR_OCC") : GC.getDefineINT("MAX_NATIONAL_WONDERS_PER_CITY");
-	int iMaxNumWonders = getMaxNumNationalWonders();
-
-	if (iMaxNumWonders == -1)
-	{
-		return false;
-	}
-
-	/************************************************************************************************/
-	/* Afforess	                  Start		 12/7/09                                                */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
 	if (GC.getGameINLINE().isOption(GAMEOPTION_UNLIMITED_WONDERS))
 	{
 		return false;
 	}
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
-	if (getNumNationalWonders() >= iMaxNumWonders)
+	if (getMaxNumNationalWonders() != -1 && getNumNationalWonders() >= getMaxNumNationalWonders())
 	{
 		return true;
 	}
-
 	return false;
 }
 
 
 bool CvCity::isBuildingsMaxed() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) && isHuman())
+	if (GC.getGameINLINE().isOption(GAMEOPTION_ONE_CITY_CHALLENGE))
 	{
 		return false;
 	}
-
-	if (GC.getDefineINT("MAX_BUILDINGS_PER_CITY") == -1)
-	{
-		return false;
-	}
-
-	if (getNumBuildings() >= GC.getDefineINT("MAX_BUILDINGS_PER_CITY"))
+	if (GC.getDefineINT("MAX_BUILDINGS_PER_CITY") != -1 && getNumBuildings() >= GC.getDefineINT("MAX_BUILDINGS_PER_CITY"))
 	{
 		return true;
 	}
-
 	return false;
 }
 
@@ -3088,35 +3015,21 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 	{
 		return false;
 	}
-	/************************************************************************************************/
-	/* REVDCM                                 02/16/10                                phungus420    */
-	/*                                                                                              */
-	/* CanTrain                                                                                     */
-	/************************************************************************************************/
-	if (isForceObsoleteUnitClassAvailable(eUnit))
+
+	if (!bIgnoreUpgrades && isForceObsoleteUnitClassAvailable(eUnit))
 	{
 		return false;
 	}
 
-	if (!(isPlotTrainable(eUnit, bContinue, bTestVisible)))
+	if (!isPlotTrainable(eUnit, bContinue, bTestVisible))
 	{
 		return false;
 	}
-	/************************************************************************************************/
-	/* REVDCM                                  END                                                  */
-	/************************************************************************************************/
-	/************************************************************************************************/
-	/* Afforess	                  Start		 6/17/10                                                */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
+
 	CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
-	if (kUnit.isForceUpgrade())
+	if (kUnit.isForceUpgrade() && canUpgradeUnit(eUnit))
 	{
-		if (canUpgradeUnit(eUnit))
-		{
-			return false;
-		}
+		return false;
 	}
 
 	CvCivilizationInfo& kCivilization = GC.getCivilizationInfo(getCivilizationType());
@@ -3162,13 +3075,11 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 			return false;
 		}
 	}
-	if (kUnit.getPrereqVicinityBonus() != NO_BONUS)
+	if (kUnit.getPrereqVicinityBonus() != NO_BONUS && !hasVicinityBonus((BonusTypes)kUnit.getPrereqVicinityBonus()))
 	{
-		if (!hasVicinityBonus((BonusTypes)kUnit.getPrereqVicinityBonus()))
-		{
-			return false;
-		}
+		return false;
 	}
+
 	if (!bTestVisible)
 	{
 		bool bHasAnyVicinityBonus = false;
@@ -3190,30 +3101,20 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 			return false;
 		}
 	}
-	if (GC.getGameINLINE().isOption(GAMEOPTION_REALISTIC_CORPORATIONS))
+	if (GC.getGameINLINE().isOption(GAMEOPTION_REALISTIC_CORPORATIONS) && GET_PLAYER(getOwnerINLINE()).isNoForeignCorporations())
 	{
-		if (GET_PLAYER(getOwnerINLINE()).isNoForeignCorporations())
+		for (int iI = 0; iI < GC.getNumCorporationInfos(); iI++)
 		{
-			for (int iI = 0; iI < GC.getNumCorporationInfos(); iI++)
+			if (kUnit.getCorporationSpreads(iI) > 0)
 			{
-				if (kUnit.getCorporationSpreads(iI) > 0)
-				{
-					return false;
-				}
+				return false;
 			}
 		}
 	}
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
 
-
-	if (!bIgnoreUpgrades)
+	if (!bIgnoreUpgrades && allUpgradesAvailable(eUnit) != NO_UNIT)
 	{
-		if (allUpgradesAvailable(eUnit) != NO_UNIT)
-		{
-			return false;
-		}
+		return false;
 	}
 
 	if (GC.getUSE_CANNOT_TRAIN_CALLBACK(eUnit))
@@ -3230,7 +3131,6 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 			return false;
 		}
 	}
-
 	return true;
 }
 
@@ -3294,9 +3194,9 @@ void CvCity::clearUpgradeCache(UnitTypes eUnit) const
 	}
 }
 
-bool CvCity::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool bIgnoreCost, bool bIgnoreUpgrades) const
+bool CvCity::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool bIgnoreCost, bool bIgnoreUpgrades, bool bPropertySpawn) const
 {
-	if (!GET_PLAYER(getOwnerINLINE()).canTrain(eUnit, bContinue, bTestVisible, bIgnoreCost))
+	if (!GET_PLAYER(getOwnerINLINE()).canTrain(eUnit, bContinue, bTestVisible, bIgnoreCost, bPropertySpawn))
 	{
 		return false;
 	}
@@ -9690,7 +9590,7 @@ int CvCity::calculateDistanceMaintenanceTimes100(int iExtraDistanceModifier, int
 		{
 			const int iDistance = plotDistance(getX_INLINE(), getY_INLINE(), pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE());
 
-			int iValue = GC.getDefineINT("MAX_DISTANCE_CITY_MAINTENANCE") * (iDistance + iDistance / 5);
+			int iValue = GC.getDefineINT("MAX_DISTANCE_CITY_MAINTENANCE") * (iDistance + iDistance / 3);
 
 			iValue *= getPopulation() + 5;
 			iValue /= 10;
@@ -9730,6 +9630,7 @@ int CvCity::calculateNumCitiesMaintenance() const
 
 int CvCity::calculateNumCitiesMaintenanceTimes100(int iExtraModifier) const
 {
+	// Toffer: Single city civs gets a free pass, and allows early second city founding without economical collapse.
 	const int iCities = GET_PLAYER(getOwnerINLINE()).getNumCities() - 1;
 	if (iCities < 1)
 	{
@@ -9739,11 +9640,11 @@ int CvCity::calculateNumCitiesMaintenanceTimes100(int iExtraModifier) const
 	// Toffer - ToDo: Add global define called BASE_NUM_CITY_MAINTENANCE_PERCENT
 	int iNumCitiesPercent = 64;
 
-	iNumCitiesPercent *= (getPopulation() + 16);
-	iNumCitiesPercent /= 20;
+	iNumCitiesPercent *= (getPopulation() + 15);
+	iNumCitiesPercent /= 16;
 
-	/* Toffer - ToDo: Remove from worldInfo
-	// Map size affects maintenance indirectly through greater amounts of cities.
+	/* Toffer - Skews early game balance too much between map sizes.
+Large maps have a discount on distance maintenance, that is adequate, this doesn't skew early game very much as you settle close to capital anyway.
 	iNumCitiesPercent *= GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getNumCitiesMaintenancePercent();
 	iNumCitiesPercent /= 100;
 	*/
@@ -9769,10 +9670,8 @@ int CvCity::calculateNumCitiesMaintenanceTimes100(int iExtraModifier) const
 		iNumCitiesMaint += iNumVassalCities * iNumCitiesPercent / (3 + iVassals);
 	}
 
-	// Toffer - ToDo: Difficulty level already modify this maintenance a lot, so the max value should be a global define.
-	// iNumCitiesMaint = std::min(iNumCitiesMaint, GC.getHandicapInfo(getHandicapType()).getMaxNumCitiesMaintenance() * 100);
+	// Toffer - ToDo: Max value should perhaps be a global define.
 	iNumCitiesMaint = std::min(iNumCitiesMaint, 2000000);
-	// !Toffer
 
 	iNumCitiesMaint *= std::max(0, (GET_PLAYER(getOwnerINLINE()).getNumCitiesMaintenanceModifier() + iExtraModifier + 100));
 	iNumCitiesMaint /= 100;
@@ -22608,43 +22507,37 @@ PlayerTypes CvCity::getLiberationPlayer(bool bConquest) const
 
 		if (kLoopPlayer.isAlive())
 		{
-			if (kLoopPlayer.canReceiveTradeCity())
+			CvCity* pCapital = kLoopPlayer.getCapitalCity();
+			if (NULL != pCapital)
 			{
-				CvCity* pCapital = kLoopPlayer.getCapitalCity();
-				if (NULL != pCapital)
+				int iCapitalDistance = ::plotDistance(getX_INLINE(), getY_INLINE(), pCapital->getX_INLINE(), pCapital->getY_INLINE());
+				if (area() != pCapital->area())
 				{
-					int iCapitalDistance = ::plotDistance(getX_INLINE(), getY_INLINE(), pCapital->getX_INLINE(), pCapital->getY_INLINE());
-					if (area() != pCapital->area())
-					{
-						iCapitalDistance *= 2;
-					}
+					iCapitalDistance *= 2;
+				}
 
-					int iCultureTimes100 = getCultureTimes100((PlayerTypes)iPlayer);
+				int iCultureTimes100 = getCultureTimes100((PlayerTypes)iPlayer);
 
-					if (bConquest)
-					{
-						if (iPlayer == getOriginalOwner())
-						{
-							iCultureTimes100 *= 3;
-							iCultureTimes100 /= 2;
-						}
-					}
+				if (bConquest && iPlayer == getOriginalOwner())
+				{
+					iCultureTimes100 *= 3;
+					iCultureTimes100 /= 2;
+				}
 
-					if (GET_PLAYER((PlayerTypes)iPlayer).getTeam() == getTeam()
-						|| GET_TEAM(GET_PLAYER((PlayerTypes)iPlayer).getTeam()).isVassal(getTeam())
-						|| GET_TEAM(getTeam()).isVassal(GET_PLAYER((PlayerTypes)iPlayer).getTeam()))
-					{
-						iCultureTimes100 *= 2;
-						iCultureTimes100 = (iCultureTimes100 + iTotalCultureTimes100) / 2;
-					}
+				if (GET_PLAYER((PlayerTypes)iPlayer).getTeam() == getTeam()
+				|| GET_TEAM(GET_PLAYER((PlayerTypes)iPlayer).getTeam()).isVassal(getTeam())
+				|| GET_TEAM(getTeam()).isVassal(GET_PLAYER((PlayerTypes)iPlayer).getTeam()))
+				{
+					iCultureTimes100 *= 2;
+					iCultureTimes100 = (iCultureTimes100 + iTotalCultureTimes100) / 2;
+				}
 
-					int iValue = std::max(100, iCultureTimes100) / std::max(1, iCapitalDistance);
+				int iValue = std::max(100, iCultureTimes100) / std::max(1, iCapitalDistance);
 
-					if (iValue > iBestValue)
-					{
-						iBestValue = iValue;
-						eBestPlayer = (PlayerTypes)iPlayer;
-					}
+				if (iValue > iBestValue)
+				{
+					iBestValue = iValue;
+					eBestPlayer = (PlayerTypes)iPlayer;
 				}
 			}
 		}
@@ -22722,41 +22615,24 @@ int CvCity::getBestYieldAvailable(YieldTypes eYield) const
 
 bool CvCity::isAutoRaze() const
 {
-	if (!GC.getGameINLINE().isOption(GAMEOPTION_NO_CITY_RAZING))
-	{
-		if (getHighestPopulation() == 1)
-		{
-			return true;
-		}
-
-		if (GC.getGameINLINE().getMaxCityElimination() > 0)
-		{
-			return true;
-		}
-	}
-
-	if (GC.getGameINLINE().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) && isHuman())
+	if (GC.getGameINLINE().isOption(GAMEOPTION_BARBARIANS_ALWAYS_RAZE) && isHominid()
+	//Insectoids always raze
+	|| GET_PLAYER(getOwner()).getID() == NPC6_PLAYER)
 	{
 		return true;
 	}
-	/************************************************************************************************/
-	/* Afforess	                  Start		 06/26/10                                               */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-	if (GC.getGameINLINE().isOption(GAMEOPTION_BARBARIANS_ALWAYS_RAZE) && isHominid())
+	if (GC.getGameINLINE().isOption(GAMEOPTION_NO_CITY_RAZING))
+	{
+		return false;
+	}
+	if (GC.getGameINLINE().isOption(GAMEOPTION_ONE_CITY_CHALLENGE))
 	{
 		return true;
 	}
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
-		//Insectoids always raze
-	if (GET_PLAYER(getOwner()).getID() == NPC6_PLAYER)
+	if (getHighestPopulation() == 1 || GC.getGameINLINE().getMaxCityElimination() > 0)
 	{
 		return true;
 	}
-
 	return false;
 }
 

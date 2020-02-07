@@ -2437,7 +2437,6 @@ public:
 
 	int getPrereqAndTechs(int i) const;				// Exposed to Python
 	int getPrereqOrBonuses(int i) const;			// Exposed to Python
-/*	int getProductionTraits(int i) const;*/			// Exposed to Python
 	int getFlavorValue(int i) const;				// Exposed to Python
 	int getTerrainAttackModifier(int i) const;		// Exposed to Python
 	int getTerrainDefenseModifier(int i) const;		// Exposed to Python
@@ -2695,7 +2694,6 @@ protected:
 
 	int* m_piPrereqAndTechs;
 	int* m_piPrereqOrBonuses;
-	//int* m_piProductionTraits;
 	int* m_piFlavorValue;
 	int* m_piTerrainAttackModifier;
 	int* m_piTerrainDefenseModifier;
@@ -3112,7 +3110,6 @@ public:
 	// Arrays
 
 	bool isCarrierUnitAIType(int i) const;				// Exposed to Python
-/*	int getProductionTraits(int i) const;*/				// Exposed to Python
 
 	int getCombatPercent() const;
 	int getWithdrawalChange() const;
@@ -3142,8 +3139,6 @@ protected:
 
 	// Arrays
 	bool* m_pbCarrierUnitAITypes;
-	//int* m_piProductionTraits;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3863,8 +3858,6 @@ public:
 	bool isAnyDomainFreeExperience() const;
 	int getDomainProductionModifier(int i) const;	// Exposed to Python
 	int getPrereqAndTechs(int i) const;				// Exposed to Python
-//	int getProductionTraits(int i) const;			// Exposed to Python
-//	int getHappinessTraits(int i) const;			// Exposed to Python
 	int getBuildingHappinessChanges(int i) const;	// Exposed to Python
 	int getPrereqNumOfBuildingClass(int i) const;	// Exposed to Python
 	int getFlavorValue(int i) const;				// Exposed to Python
@@ -4421,8 +4414,6 @@ protected:
 	// Arrays
 
 	int* m_piPrereqAndTechs;
-	//int* m_piProductionTraits;
-	//int* m_piHappinessTraits;
 	int* m_piSeaPlotYieldChange;
 	int* m_piRiverPlotYieldChange;
 	int* m_piGlobalSeaPlotYieldChange;
@@ -4596,8 +4587,6 @@ public:
 
 	// Arrays
 
-	//int getProductionTraits(int i) const;
-
 	bool read(CvXMLLoadUtility* pXML);
 
 	void read(FDataStreamBase* stream) {}
@@ -4616,11 +4605,6 @@ protected:
 	int m_iMaxPlayerInstances;
 
 	bool m_bValid;
-
-	// Arrays
-
-	//int* m_piProductionTraits;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5051,7 +5035,6 @@ public:
 	int getResearchPercent() const;					// Exposed to Python
 	int getDistanceMaintenancePercent() const;		// Exposed to Python
 	int getNumCitiesMaintenancePercent() const;		// Exposed to Python
-	int getMaxNumCitiesMaintenance() const;			// Exposed to Python
 	int getColonyMaintenancePercent() const;		// Exposed to Python
 	int getMaxColonyMaintenance() const;			// Exposed to Python
 	int getCorporationMaintenancePercent() const;	// Exposed to Python
@@ -5069,7 +5052,6 @@ public:
 	int getUnownedTilesPerBarbarianUnit() const;	// Exposed to Python
 	int getUnownedWaterTilesPerBarbarianUnit() const;	// Exposed to Python
 	int getUnownedTilesPerBarbarianCity() const;		// Exposed to Python
-	int getBarbarianCreationTurnsElapsed() const;		// Exposed to Python
 	int getBarbarianCityCreationTurnsElapsed() const;	// Exposed to Python
 	int getBarbarianCityCreationProb() const;		// Exposed to Python
 	int getAnimalCombatModifier() const;			// Exposed to Python
@@ -5137,7 +5119,6 @@ protected:
 	int m_iResearchPercent;
 	int m_iDistanceMaintenancePercent;
 	int m_iNumCitiesMaintenancePercent;
-	int m_iMaxNumCitiesMaintenance;
 	int m_iColonyMaintenancePercent;
 	int m_iMaxColonyMaintenance;
 	int m_iCorporationMaintenancePercent;
@@ -5155,7 +5136,6 @@ protected:
 	int m_iUnownedTilesPerBarbarianUnit;
 	int m_iUnownedWaterTilesPerBarbarianUnit;
 	int m_iUnownedTilesPerBarbarianCity;
-	int m_iBarbarianCreationTurnsElapsed;
 	int m_iBarbarianCityCreationTurnsElapsed;
 	int m_iBarbarianCityCreationProb;
 	int m_iAnimalCombatModifier;
@@ -5242,13 +5222,9 @@ public:
 	int getHurryConscriptAngerPercent() const;	// Exposed to Python
 	int getInflationOffset() const;				// Exposed to Python
 	int getInflationPercent() const;			// Exposed to Python
-	//ls612: Begin
-	int getGoldModifier() const;
 	int getOccupationTimePopulationPercent() const;
-	//ls612: End
 	int getVictoryDelayPercent() const;			// Exposed to Python
 	int getNumTurnIncrements() const;			// Exposed to Python
-	// Afforess 12/13/09
 	int getUnitMovementPercent() const;
 
 	GameTurnInfo& getGameTurnInfo(int iIndex) const;	// Exposed to Python
@@ -5292,8 +5268,6 @@ protected:
 	int m_iHurryConscriptAngerPercent;
 	int m_iInflationOffset;
 	int m_iInflationPercent;
-	//ls612: Begin
-	int m_iGoldModifier;
 	int m_iOccupationTimePopulationPercent;
 	int m_iVictoryDelayPercent;
 	int m_iNumTurnIncrements;

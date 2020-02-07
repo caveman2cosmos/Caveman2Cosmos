@@ -9686,16 +9686,14 @@ void CvUnitFormationInfo::copyNonDefaults(CvUnitFormationInfo* pClassInfo, CvXML
 //
 //------------------------------------------------------------------------------------------------------
 CvSpecialUnitInfo::CvSpecialUnitInfo() :
-m_bValid(false),
-m_bCityLoad(false),
-m_bSMLoadSame(false),
-m_iCombatPercent(0),
-m_iWithdrawalChange(0),
-m_iPursuitChange(0),
-m_pbCarrierUnitAITypes(NULL)/*,*/
-//m_piProductionTraits(NULL)
-{
-}
+	m_bValid(false),
+	m_bCityLoad(false),
+	m_bSMLoadSame(false),
+	m_iCombatPercent(0),
+	m_iWithdrawalChange(0),
+	m_iPursuitChange(0),
+	m_pbCarrierUnitAITypes(NULL)
+{ }
 
 //------------------------------------------------------------------------------------------------------
 //
@@ -9707,7 +9705,6 @@ m_pbCarrierUnitAITypes(NULL)/*,*/
 CvSpecialUnitInfo::~CvSpecialUnitInfo()
 {
 	SAFE_DELETE_ARRAY(m_pbCarrierUnitAITypes);
-	//SAFE_DELETE_ARRAY(m_piProductionTraits);
 }
 
 bool CvSpecialUnitInfo::isValid() const
@@ -9753,13 +9750,6 @@ bool CvSpecialUnitInfo::isCarrierUnitAIType(int i) const
 	return m_pbCarrierUnitAITypes ? m_pbCarrierUnitAITypes[i] : false;
 }
 
-//int CvSpecialUnitInfo::getProductionTraits(int i) const
-//{
-//	FAssertMsg(i < GC.getNumTraitInfos(), "Index out of bounds");
-//	FAssertMsg(i > -1, "Index out of bounds");
-//	return m_piProductionTraits ? m_piProductionTraits[i] : 0;
-//}
-
 bool CvSpecialUnitInfo::read(CvXMLLoadUtility* pXML)
 {
 	MEMORY_TRACE_FUNCTION();
@@ -9768,7 +9758,6 @@ bool CvSpecialUnitInfo::read(CvXMLLoadUtility* pXML)
 	{
 		return false;
 	}
-
 	pXML->GetOptionalChildXmlValByName(&m_bValid, L"bValid");
 	pXML->GetOptionalChildXmlValByName(&m_bCityLoad, L"bCityLoad");
 	pXML->GetOptionalChildXmlValByName(&m_bSMLoadSame, L"bSMLoadSame");
@@ -9777,8 +9766,6 @@ bool CvSpecialUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iPursuitChange, L"iPursuitChange");
 
 	pXML->SetVariableListTagPair(&m_pbCarrierUnitAITypes, L"CarrierUnitAITypes", NUM_UNITAI_TYPES);
-
-	//pXML->SetVariableListTagPair(&m_piProductionTraits, L"ProductionTraits", GC.getNumTraitInfos());
 
 	return true;
 }
@@ -9813,19 +9800,6 @@ void CvSpecialUnitInfo::copyNonDefaults(CvSpecialUnitInfo* pClassInfo, CvXMLLoad
 			m_pbCarrierUnitAITypes[i] = pClassInfo->isCarrierUnitAIType(i);
 		}
 	}
-
-	//for ( int i = 0; i < GC.getNumTraitInfos(); i++ )
-	//{
-	//	if ( (m_piProductionTraits == NULL || m_piProductionTraits[i] == iDefault) &&
-	//		 pClassInfo->getProductionTraits(i) != iDefault)
-	//	{
-	//		if ( NULL == m_piProductionTraits )
-	//		{
-	//			CvXMLLoadUtility::InitList(&m_piProductionTraits,GC.getNumTraitInfos(),iDefault);
-	//		}
-	//		m_piProductionTraits[i] = pClassInfo->getProductionTraits(i);
-	//	}
-	//}
 }
 
 void CvSpecialUnitInfo::getCheckSum(unsigned int &iSum)
@@ -9837,7 +9811,6 @@ void CvSpecialUnitInfo::getCheckSum(unsigned int &iSum)
 	CheckSum(iSum, m_iPursuitChange);
 
 	CheckSum(iSum, m_pbCarrierUnitAITypes, NUM_UNITAI_TYPES);
-	//CheckSum(iSum, m_piProductionTraits, GC.getNumTraitInfos());
 }
 
 //======================================================================================================
@@ -12990,8 +12963,7 @@ m_iObsoleteTech(NO_TECH),
 m_iTechPrereq(NO_TECH),
 m_iTechPrereqAnyone(NO_TECH),
 m_iMaxPlayerInstances(-1),
-m_bValid(false)/*,
-m_piProductionTraits(NULL)*/
+m_bValid(false)
 {
 }
 
@@ -13002,10 +12974,7 @@ m_piProductionTraits(NULL)*/
 //  PURPOSE :   Default destructor
 //
 //------------------------------------------------------------------------------------------------------
-CvSpecialBuildingInfo::~CvSpecialBuildingInfo()
-{
-	//SAFE_DELETE_ARRAY(m_piProductionTraits);
-}
+CvSpecialBuildingInfo::~CvSpecialBuildingInfo() { }
 
 int CvSpecialBuildingInfo::getObsoleteTech( void ) const
 {
@@ -13033,13 +13002,6 @@ bool CvSpecialBuildingInfo::isValid( void ) const
 }
 
 // Arrays
-//
-//int CvSpecialBuildingInfo::getProductionTraits(int i) const
-//{
-//	FAssertMsg(i < GC.getNumTraitInfos(), "Index out of bounds");
-//	FAssertMsg(i > -1, "Index out of bounds");
-//	return m_piProductionTraits ? m_piProductionTraits[i] : 0;
-//}
 
 bool CvSpecialBuildingInfo::read(CvXMLLoadUtility* pXML)
 {
@@ -13050,7 +13012,6 @@ bool CvSpecialBuildingInfo::read(CvXMLLoadUtility* pXML)
 	{
 		return false;
 	}
-
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"ObsoleteTech");
 	m_iObsoleteTech = pXML->GetInfoClass(szTextVal);
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"TechPrereq");
@@ -13061,8 +13022,6 @@ bool CvSpecialBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iMaxPlayerInstances, L"iMaxPlayerInstances", -1);
 
 	pXML->GetOptionalChildXmlValByName(&m_bValid, L"bValid");
-
-	//pXML->SetVariableListTagPair(&m_piProductionTraits, L"ProductionTraits", GC.getNumTraitInfos());
 
 	return true;
 }
@@ -13083,18 +13042,6 @@ void CvSpecialBuildingInfo::copyNonDefaults(CvSpecialBuildingInfo* pClassInfo, C
 	if (getMaxPlayerInstances() == -1) m_iMaxPlayerInstances = pClassInfo->getMaxPlayerInstances();
 
 	if (isValid() == bDefault) m_bValid = pClassInfo->isValid();
-
-	//for (int i = 0; i < GC.getNumTraitInfos(); i++)
-	//{
-	//	if (getProductionTraits(i) == iDefault && pClassInfo->getProductionTraits(i) != iDefault)
-	//	{
-	//		if ( NULL == m_piProductionTraits )
-	//		{
-	//			CvXMLLoadUtility::InitList(&m_piProductionTraits,GC.getNumTraitInfos(),iDefault);
-	//		}
-	//		m_piProductionTraits[i] = pClassInfo->getProductionTraits(i);
-	//	}
-	//}
 }
 
 void CvSpecialBuildingInfo::getCheckSum(unsigned int& iSum)
@@ -13107,8 +13054,6 @@ void CvSpecialBuildingInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_bValid);
 
 	// Arrays
-
-	//CheckSum(iSum, m_piProductionTraits, GC.getNumTraitInfos());
 }
 
 //======================================================================================================
@@ -14731,7 +14676,6 @@ m_iConstructPercent(0),
 m_iResearchPercent(0),
 m_iDistanceMaintenancePercent(0),
 m_iNumCitiesMaintenancePercent(0),
-m_iMaxNumCitiesMaintenance(0),
 m_iColonyMaintenancePercent(0),
 m_iMaxColonyMaintenance(0),
 m_iCorporationMaintenancePercent(0),
@@ -14746,7 +14690,6 @@ m_iUnownedTilesPerGameAnimal(0),
 m_iUnownedTilesPerBarbarianUnit(0),
 m_iUnownedWaterTilesPerBarbarianUnit(0),
 m_iUnownedTilesPerBarbarianCity(0),
-m_iBarbarianCreationTurnsElapsed(0),
 m_iBarbarianCityCreationTurnsElapsed(0),
 m_iBarbarianCityCreationProb(0),
 m_iAnimalCombatModifier(0),
@@ -14756,7 +14699,7 @@ m_iAIBarbarianCombatModifier(0),
 m_iStartingDefenseUnits(0),
 m_iStartingWorkerUnits(0),
 m_iStartingExploreUnits(0),
-m_iAIStartingUnitMultiplier(0),
+m_iAIStartingUnitMultiplier(1),
 m_iAIStartingDefenseUnits(0),
 m_iAIStartingWorkerUnits(0),
 m_iAIStartingExploreUnits(0),
@@ -14871,11 +14814,6 @@ int CvHandicapInfo::getNumCitiesMaintenancePercent() const
 	return m_iNumCitiesMaintenancePercent;
 }
 
-int CvHandicapInfo::getMaxNumCitiesMaintenance() const
-{
-	return m_iMaxNumCitiesMaintenance;
-}
-
 int CvHandicapInfo::getColonyMaintenancePercent() const
 {
 	return m_iColonyMaintenancePercent;
@@ -14944,11 +14882,6 @@ int CvHandicapInfo::getUnownedWaterTilesPerBarbarianUnit() const
 int CvHandicapInfo::getUnownedTilesPerBarbarianCity() const
 {
 	return m_iUnownedTilesPerBarbarianCity;
-}
-
-int CvHandicapInfo::getBarbarianCreationTurnsElapsed() const
-{
-	return m_iBarbarianCreationTurnsElapsed;
 }
 
 int CvHandicapInfo::getBarbarianCityCreationTurnsElapsed() const
@@ -15176,7 +15109,6 @@ void CvHandicapInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_iResearchPercent);
 	CheckSum(iSum, m_iDistanceMaintenancePercent);
 	CheckSum(iSum, m_iNumCitiesMaintenancePercent);
-	CheckSum(iSum, m_iMaxNumCitiesMaintenance);
 	CheckSum(iSum, m_iColonyMaintenancePercent);
 	CheckSum(iSum, m_iMaxColonyMaintenance);
 	CheckSum(iSum, m_iCorporationMaintenancePercent);
@@ -15191,7 +15123,6 @@ void CvHandicapInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_iUnownedTilesPerBarbarianUnit);
 	CheckSum(iSum, m_iUnownedWaterTilesPerBarbarianUnit);
 	CheckSum(iSum, m_iUnownedTilesPerBarbarianCity);
-	CheckSum(iSum, m_iBarbarianCreationTurnsElapsed);
 	CheckSum(iSum, m_iBarbarianCityCreationTurnsElapsed);
 	CheckSum(iSum, m_iBarbarianCityCreationProb);
 	CheckSum(iSum, m_iAnimalCombatModifier);
@@ -15263,7 +15194,6 @@ bool CvHandicapInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iResearchPercent, L"iResearchPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iDistanceMaintenancePercent, L"iDistanceMaintenancePercent");
 	pXML->GetOptionalChildXmlValByName(&m_iNumCitiesMaintenancePercent, L"iNumCitiesMaintenancePercent");
-	pXML->GetOptionalChildXmlValByName(&m_iMaxNumCitiesMaintenance, L"iMaxNumCitiesMaintenance");
 	pXML->GetOptionalChildXmlValByName(&m_iColonyMaintenancePercent, L"iColonyMaintenancePercent");
 	pXML->GetOptionalChildXmlValByName(&m_iMaxColonyMaintenance, L"iMaxColonyMaintenance");
 	pXML->GetOptionalChildXmlValByName(&m_iCorporationMaintenancePercent, L"iCorporationMaintenancePercent");
@@ -15278,7 +15208,6 @@ bool CvHandicapInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iUnownedTilesPerBarbarianUnit, L"iUnownedTilesPerBarbarianUnit");
 	pXML->GetOptionalChildXmlValByName(&m_iUnownedWaterTilesPerBarbarianUnit, L"iUnownedWaterTilesPerBarbarianUnit");
 	pXML->GetOptionalChildXmlValByName(&m_iUnownedTilesPerBarbarianCity, L"iUnownedTilesPerBarbarianCity");
-	pXML->GetOptionalChildXmlValByName(&m_iBarbarianCreationTurnsElapsed, L"iBarbarianCreationTurnsElapsed");
 	pXML->GetOptionalChildXmlValByName(&m_iBarbarianCityCreationTurnsElapsed, L"iBarbarianCityCreationTurnsElapsed");
 	pXML->GetOptionalChildXmlValByName(&m_iBarbarianCityCreationProb, L"iBarbarianCityCreationProb");
 	pXML->GetOptionalChildXmlValByName(&m_iAnimalCombatModifier, L"iAnimalBonus");
@@ -15388,7 +15317,6 @@ void CvHandicapInfo::copyNonDefaults(CvHandicapInfo* pClassInfo, CvXMLLoadUtilit
 	if (getResearchPercent() == iDefault) m_iResearchPercent = pClassInfo->getResearchPercent();
 	if (getDistanceMaintenancePercent() == iDefault) m_iDistanceMaintenancePercent = pClassInfo->getDistanceMaintenancePercent();
 	if (getNumCitiesMaintenancePercent() == iDefault) m_iNumCitiesMaintenancePercent = pClassInfo->getNumCitiesMaintenancePercent();
-	if (getMaxNumCitiesMaintenance() == iDefault) m_iMaxNumCitiesMaintenance = pClassInfo->getMaxNumCitiesMaintenance();
 	if (getColonyMaintenancePercent() == iDefault) m_iColonyMaintenancePercent = pClassInfo->getColonyMaintenancePercent();
 	if (getMaxColonyMaintenance() == iDefault) m_iMaxColonyMaintenance = pClassInfo->getMaxColonyMaintenance();
 	if (getCorporationMaintenancePercent() == iDefault) m_iCorporationMaintenancePercent = pClassInfo->getCorporationMaintenancePercent();
@@ -15403,7 +15331,6 @@ void CvHandicapInfo::copyNonDefaults(CvHandicapInfo* pClassInfo, CvXMLLoadUtilit
 	if (getUnownedTilesPerBarbarianUnit() == iDefault) m_iUnownedTilesPerBarbarianUnit = pClassInfo->getUnownedTilesPerBarbarianUnit();
 	if (getUnownedWaterTilesPerBarbarianUnit() == iDefault) m_iUnownedWaterTilesPerBarbarianUnit = pClassInfo->getUnownedWaterTilesPerBarbarianUnit();
 	if (getUnownedTilesPerBarbarianCity() == iDefault) m_iUnownedTilesPerBarbarianCity = pClassInfo->getUnownedTilesPerBarbarianCity();
-	if (getBarbarianCreationTurnsElapsed() == iDefault) m_iBarbarianCreationTurnsElapsed = pClassInfo->getBarbarianCreationTurnsElapsed();
 	if (getBarbarianCityCreationTurnsElapsed() == iDefault) m_iBarbarianCityCreationTurnsElapsed = pClassInfo->getBarbarianCityCreationTurnsElapsed();
 	if (getBarbarianCityCreationProb() == iDefault) m_iBarbarianCityCreationProb = pClassInfo->getBarbarianCityCreationProb();
 	if (getAnimalCombatModifier() == iDefault) m_iAnimalCombatModifier = pClassInfo->getAnimalCombatModifier();
@@ -15586,23 +15513,12 @@ m_iHurryPercent(0),
 m_iHurryConscriptAngerPercent(0),
 m_iInflationOffset(0),
 m_iInflationPercent(0),
-//ls612: Begin
-m_iGoldModifier(0), // Toffer - ToDo: removed usage of this, should remove this residuals too.
 m_iOccupationTimePopulationPercent(0),
-//ls612: End
 m_iVictoryDelayPercent(0),
 m_iNumTurnIncrements(0),
 m_pGameTurnInfo(NULL),
 m_bEndDatesCalculated(false)
-/************************************************************************************************/
-/* Afforess					  Start		 12/13/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 ,m_iUnitMovementPercent(0)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 //TB GameSpeed begin
 ,m_iTraitGainPercent(0)
 //TB GameSpeed end
@@ -15722,18 +15638,10 @@ int CvGameSpeedInfo::getInflationPercent() const
 	return m_iInflationPercent;
 }
 
-//ls612: Begin
-int CvGameSpeedInfo::getGoldModifier() const
-{
-	// Toffer - ToDo: removed usage of this, should remove this residuals too.
-	return m_iGoldModifier;
-}
-
 int CvGameSpeedInfo::getOccupationTimePopulationPercent() const
 {
 	return m_iOccupationTimePopulationPercent;
 }
-//ls612: End
 
 int CvGameSpeedInfo::getVictoryDelayPercent() const
 {
@@ -15745,18 +15653,10 @@ int CvGameSpeedInfo::getNumTurnIncrements() const
 	return m_iNumTurnIncrements;
 }
 
-/************************************************************************************************/
-/* Afforess					  Start		 12/13/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 int CvGameSpeedInfo::getUnitMovementPercent() const
 {
 	return m_iUnitMovementPercent;
 }
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 CvDateIncrement& CvGameSpeedInfo::getDateIncrement(int iIndex)
 {
@@ -15832,10 +15732,7 @@ bool CvGameSpeedInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iHurryConscriptAngerPercent, L"iHurryConscriptAngerPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iInflationOffset, L"iInflationOffset");
 	pXML->GetOptionalChildXmlValByName(&m_iInflationPercent, L"iInflationPercent");
-	//ls612: Begin
-	pXML->GetOptionalChildXmlValByName(&m_iGoldModifier, L"iGoldModifier"); // Toffer - ToDo: removed usage of this, should remove this residuals too.
 	pXML->GetOptionalChildXmlValByName(&m_iOccupationTimePopulationPercent, L"iOccupationTurnsPopulationPercent");
-	//ls612: End
 	pXML->GetOptionalChildXmlValByName(&m_iVictoryDelayPercent, L"iVictoryDelayPercent");
 
 	if (pXML->TryMoveToXmlFirstChild(L"GameTurnInfos"))
@@ -15932,10 +15829,7 @@ void CvGameSpeedInfo::copyNonDefaults(CvGameSpeedInfo* pClassInfo, CvXMLLoadUtil
 	if (getHurryConscriptAngerPercent() == iDefault) m_iHurryConscriptAngerPercent = pClassInfo->getHurryConscriptAngerPercent();
 	if (getInflationOffset() == iDefault) m_iInflationOffset = pClassInfo->getInflationOffset();
 	if (getInflationPercent() == iDefault) m_iInflationPercent = pClassInfo->getInflationPercent();
-	//ls612: Begin
-	if (getGoldModifier() == iDefault) m_iGoldModifier = pClassInfo->getGoldModifier();
 	if (getOccupationTimePopulationPercent() == iDefault) m_iOccupationTimePopulationPercent = pClassInfo->getOccupationTimePopulationPercent();
-	//ls612: End
 	if (getVictoryDelayPercent() == iDefault) m_iVictoryDelayPercent = pClassInfo->getVictoryDelayPercent();
 
 	if (getNumTurnIncrements() == iDefault)
@@ -15978,10 +15872,7 @@ void CvGameSpeedInfo::getCheckSum(unsigned int &iSum)
 	CheckSum(iSum, m_iHurryConscriptAngerPercent);
 	CheckSum(iSum, m_iInflationOffset);
 	CheckSum(iSum, m_iInflationPercent);
-	//ls612: Begin
-	CheckSum(iSum, m_iGoldModifier);
 	CheckSum(iSum, m_iOccupationTimePopulationPercent);
-	//ls612: End
 	CheckSum(iSum, m_iVictoryDelayPercent);
 
 	for (int j = 0; j < m_iNumTurnIncrements; j++)

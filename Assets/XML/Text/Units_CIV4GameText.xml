@@ -2607,24 +2607,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BAND</Tag>
-		<English>Band of Homo Sapiens</English>
-		<French>
-			<Text>Groupe d'Homo Sapiens</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Homo-sapiens-Horde:Homo-sapiens-Horde:Homo-sapiens-Horde:Homo-sapiens-Horde:Homo-sapiens-Horden:Homo-sapiens-Horden:Homo-sapiens-Horden:Homo-sapiens-Horden</Text>
-			<Gender>Female:Female:Female:Female:Female:Female:Female:Female</Gender>
-			<Plural>0:0:0:0:1:1:1:1</Plural>
-		</German>
-		<Italian>Gruppo di Homo sapiens sapiens</Italian>
-		<Spanish>
-			<Text>Grupo de Homo sapiens</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Grupa Homo Sapiens</Polish>
+		<English>Band of Australopithecus</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BAND_PEDIA</Tag>
@@ -17028,9 +17011,17 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Neanderthal Elephant Rider</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_NEANDERTHAL_ENFORCER</Tag>
+		<English>Neanderthal Enforcer</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_GATHERER</Tag>
 		<English>Neanderthal Gatherer</English>
 		<German>Neandertaler-Sammler</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NEANDERTHAL_HEALER</Tag>
+		<English>Neanderthal Healer</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_HUNTER</Tag>
@@ -17061,10 +17052,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Neanderthal Obsidian Swordsman</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_NEANDERTHAL_OUTRIGGER</Tag>
-		<English>Neanderthal Outrigger</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_PEDIA</Tag>
 		<English>The Neanderthal (short for Neanderthal Man, also spelled Neandertal) is an extinct member of the Homo genus that is known from Pleistocene specimens found in Europe and parts of western and central Asia. Neanderthals are either classified as a subspecies (or race) of humans (Homo sapiens neanderthalensis) or as a separate species (Homo neanderthalensis).</English>
 		<Polish>Człowiek neandertalski, neandertalczyk wymarły przedstawiciel rodzaju Homo (człowiek), znany z plejstocenu (ok. 400 000 do ok. 24 500 lat temu), w zależności od autorów klasyfikowany jako podgatunek człowieka rozumnego Homo sapiens neanderthalensis lub odrębny od niego gatunek Homo neanderthalensis.</Polish>
@@ -17080,6 +17067,10 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_SHEPHERD</Tag>
 		<English>Neanderthal Shepherd</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NEANDERTHAL_SLINGER</Tag>
+		<English>Neanderthal Slinger</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_STONE_AGE_AXEMAN</Tag>
@@ -17113,6 +17104,10 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Neanderthal Trained Dog</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_NEANDERTHAL_TRIBAL_GUARDIAN</Tag>
+		<English>Neanderthal Tribal Guardian</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_WANDERER</Tag>
 		<English>Neanderthal Wanderer</English>
 		<German>Neandertaler-Wanderer</German>
@@ -17134,6 +17129,10 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Wojownik Neandertalczyków</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_NEANDERTHAL_WATCHER</Tag>
+		<English>Neanderthal Watcher</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_WISE_WOMAN</Tag>
 		<English>Neanderthal Wise Woman</English>
 	</TEXT>
@@ -17144,11 +17143,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_WORK_BOAT</Tag>
 		<English>Neanderthal Work Boat</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_NEANDERTHAL_WORKER</Tag>
-		<English>Neanderthal Worker</English>
-		<German>Neandertaler-Arbeiter</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_WARRIOR_PEDIA</Tag>

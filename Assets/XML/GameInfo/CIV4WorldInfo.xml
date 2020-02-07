@@ -29,7 +29,7 @@ Integer Tags
     iResearchPercent = The percentage of the rate at which technology is researched, implemented through the cost in beakers of researching. So 100 means normal research rates. Higher values yield slower research, so 200 means that researches will require twice as many beakers and will thus be half as fast.
     iTradeProfitPercent = A percentage rate change to how much money is made from trade routes. So, a value of 50 means trade routes make 50% more commerce. (This may also effect Great Merchant trade missions).
     iDistanceMaintenancePercent = The amount of maintenance that city distance generates. It is a percentage, so 100 means full maintenance from city distance.
-    iNumCitiesMaintenancePercent = The amount of maintenance the number of cities possessed generates. It is a percentage, so 100 means full number of cities maintenance. (Note: the highest default setting for iNumCitiesMaintenancePercent occurs in Quick mode, and is only 45%, not 100%.)
+    iNumCitiesMaintenancePercent = Unused in code, dead tag. The amount of maintenance the number of cities possessed generates. It is a percentage, so 100 means full number of cities maintenance. (Note: the highest default setting for iNumCitiesMaintenancePercent occurs in Quick mode, and is only 45%, not 100%.)
     iNumCitiesAnarchyPercent = iAnarchyLength += getNumCities() * WorldSize.getNumCitiesAnarchyPercent() / 100
 -->
 
@@ -53,7 +53,6 @@ Integer Tags
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>1000</iTradeProfitPercent>
 			<iDistanceMaintenancePercent>106</iDistanceMaintenancePercent>
-			<iNumCitiesMaintenancePercent>100</iNumCitiesMaintenancePercent><!-- Unused in code, dead tag -->
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
 			<iCorporationMaintenancePercent>500</iCorporationMaintenancePercent>
 			<iNumCitiesAnarchyPercent>50</iNumCitiesAnarchyPercent> <!-- 1 more anarchy turn per 2 cities -->
@@ -82,7 +81,6 @@ Integer Tags
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>755</iTradeProfitPercent>
 			<iDistanceMaintenancePercent>105</iDistanceMaintenancePercent>
-			<iNumCitiesMaintenancePercent>100</iNumCitiesMaintenancePercent><!-- Unused in code, dead tag -->
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
 			<iCorporationMaintenancePercent>300</iCorporationMaintenancePercent>
 			<iNumCitiesAnarchyPercent>33</iNumCitiesAnarchyPercent> <!-- 1 more anarchy turn per 3 cities -->
@@ -110,7 +108,6 @@ Integer Tags
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>545</iTradeProfitPercent>
 			<iDistanceMaintenancePercent>103</iDistanceMaintenancePercent>
-			<iNumCitiesMaintenancePercent>100</iNumCitiesMaintenancePercent><!-- Unused in code, dead tag -->
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
 			<iCorporationMaintenancePercent>150</iCorporationMaintenancePercent>
 			<iNumCitiesAnarchyPercent>25</iNumCitiesAnarchyPercent> <!-- 1 more anarchy turn per 4 cities -->
@@ -136,7 +133,6 @@ Integer Tags
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>370</iTradeProfitPercent>
 			<iDistanceMaintenancePercent>100</iDistanceMaintenancePercent>
-			<iNumCitiesMaintenancePercent>100</iNumCitiesMaintenancePercent><!-- Unused in code, dead tag -->
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
 			<iCorporationMaintenancePercent>100</iCorporationMaintenancePercent>
 			<iNumCitiesAnarchyPercent>18</iNumCitiesAnarchyPercent> <!-- 1 more anarchy turn per 5.55 cities -->
@@ -166,7 +162,6 @@ Integer Tags
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>230</iTradeProfitPercent>
 			<iDistanceMaintenancePercent>96</iDistanceMaintenancePercent>
-			<iNumCitiesMaintenancePercent>100</iNumCitiesMaintenancePercent><!-- Unused in code, dead tag -->
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
 			<iCorporationMaintenancePercent>50</iCorporationMaintenancePercent>
 			<iNumCitiesAnarchyPercent>13</iNumCitiesAnarchyPercent> <!-- 1 more anarchy turn per 7.7 cities -->
@@ -196,7 +191,6 @@ Integer Tags
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>125</iTradeProfitPercent>
 			<iDistanceMaintenancePercent>91</iDistanceMaintenancePercent>
-			<iNumCitiesMaintenancePercent>100</iNumCitiesMaintenancePercent><!-- Unused in code, dead tag -->
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
 			<iCorporationMaintenancePercent>35</iCorporationMaintenancePercent>
 			<iNumCitiesAnarchyPercent>9</iNumCitiesAnarchyPercent> <!-- 1 more anarchy turn per 11.1 cities -->
@@ -226,7 +220,6 @@ Integer Tags
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>55</iTradeProfitPercent>
 			<iDistanceMaintenancePercent>85</iDistanceMaintenancePercent>
-			<iNumCitiesMaintenancePercent>100</iNumCitiesMaintenancePercent><!-- Unused in code, dead tag -->
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
 			<iCorporationMaintenancePercent>25</iCorporationMaintenancePercent>
 			<iNumCitiesAnarchyPercent>7</iNumCitiesAnarchyPercent> <!-- 1 more anarchy turn per 14.3 cities -->
@@ -256,7 +249,6 @@ Integer Tags
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>20</iTradeProfitPercent>
 			<iDistanceMaintenancePercent>78</iDistanceMaintenancePercent>
-			<iNumCitiesMaintenancePercent>100</iNumCitiesMaintenancePercent><!-- Unused in code, dead tag -->
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
 			<iCorporationMaintenancePercent>20</iCorporationMaintenancePercent>
 			<iNumCitiesAnarchyPercent>5</iNumCitiesAnarchyPercent> <!-- 1 more anarchy turn per 20 cities -->

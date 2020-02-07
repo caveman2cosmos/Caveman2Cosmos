@@ -12987,27 +12987,18 @@ void CvPlot::doCulture()
 
 							}
 
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/01/08                                jdog5000      */
-/*                                                                                              */
-/* Change only applies when Revolution is running                                               */
-/************************************************************************************************/
-/* original code
-							if (pCity->isBarbarian() || (!(GC.getGameINLINE().isOption(GAMEOPTION_NO_CITY_FLIPPING)) && (GC.getGameINLINE().isOption(GAMEOPTION_FLIPPING_AFTER_CONQUEST) || !(pCity->isEverOwned(eCulturalOwner))) && (pCity->getNumRevolts(eCulturalOwner) >= GC.getDefineINT("NUM_WARNING_REVOLTS"))))
-*/
 							// Disable classic city flip by culture when Revolution is running
-							if ( pCity->isNPC() || (!GC.getGameINLINE().isOption(GAMEOPTION_NO_CITY_FLIPPING) && (GC.getGameINLINE().isOption(GAMEOPTION_FLIPPING_AFTER_CONQUEST) || !(pCity->isEverOwned(eCulturalOwner))) && (pCity->getNumRevolts(eCulturalOwner) >= GC.getDefineINT("NUM_WARNING_REVOLTS"))))
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+							if (pCity->isNPC() || (!GC.getGameINLINE().isOption(GAMEOPTION_NO_CITY_FLIPPING)
+								&& (GC.getGameINLINE().isOption(GAMEOPTION_FLIPPING_AFTER_CONQUEST) || !pCity->isEverOwned(eCulturalOwner))
+								&& pCity->getNumRevolts(eCulturalOwner) >= GC.getDefineINT("NUM_WARNING_REVOLTS")))
 							{
-								if (GC.getGameINLINE().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) && GET_PLAYER(eCulturalOwner).isHuman())
+								if (GC.getGameINLINE().isOption(GAMEOPTION_ONE_CITY_CHALLENGE))
 								{
 									pCity->kill(true);
 								}
 								else
 								{
-									setOwner(eCulturalOwner, true, true); // will delete pCity
+									setOwner(eCulturalOwner, true, true); // Will invalidate pCity pointer.
 								}
 								pCity = NULL;
 							}
@@ -13019,7 +13010,7 @@ void CvPlot::doCulture()
 								// XXX announce for all seen cities?
 								MEMORY_TRACK_EXEMPT();
 
-								if ( isInViewport() )
+								if (isInViewport())
 								{
 									szBuffer = gDLL->getText("TXT_KEY_MISC_REVOLT_IN_CITY", GET_PLAYER(eCulturalOwner).getCivilizationAdjective(), pCity->getNameKey());
 									AddDLLMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT", MESSAGE_TYPE_MINOR_EVENT, ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getViewportX(),getViewportY(), true, true);
