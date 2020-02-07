@@ -943,11 +943,6 @@ int CyUnit::defenseXPValue()
 	return m_pUnit ? m_pUnit->defenseXPValue() : -1;
 }
 
-int CyUnit::maxXPValue()
-{
-	return m_pUnit ? m_pUnit->maxXPValue() : -1;
-}
-
 int CyUnit::firstStrikes()
 {
 	return m_pUnit ? m_pUnit->firstStrikes() : -1;

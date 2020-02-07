@@ -8750,13 +8750,7 @@ void CvPlayer::doGoody(CvPlot* pPlot, CvUnit* pUnit)
 
 bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 {
-	CvPlot* pPlot;
-	CvPlot* pLoopPlot;
-	bool bValid;
-	int iRange;
-	int iDX, iDY;
-
-	pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+	CvPlot* pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
 
 	if(GC.getUSE_CANNOT_FOUND_CITY_CALLBACK())
 	{
@@ -8766,64 +8760,34 @@ bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 		}
 	}
 
-	if (GC.getGameINLINE().isFinalInitialized())
-	{
-		if (GC.getGameINLINE().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) && isHuman())
-		{
-			if (getNumCities() > 0)
-			{
-				return false;
-			}
-		}
-	}
-
-/************************************************************************************************/
-/* Afforess	Mountains Start		 09/18/09                                           		 */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	if (pPlot->isImpassable(getTeam())) //added getTeam()
-/************************************************************************************************/
-/* Afforess	Mountains End       END        		                                             */
-/************************************************************************************************/
-
+	if (GC.getGameINLINE().isFinalInitialized() && GC.getGameINLINE().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) && !isNPC() && getNumCities() > 0)
 	{
 		return false;
 	}
 
-/************************************************************************************************/
-/* Afforess	                          5/28/11                                                   */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	if (!isNPC() && !bTestVisible && getCityLimit() > 0 && getCityOverLimitUnhappy() == 0)
+	if (pPlot->isImpassable(getTeam()))
 	{
-		if (getNumCities() >= getCityLimit())
-		{
-			return false;
-		}
+		return false;
 	}
+
+	if (!isNPC() && !bTestVisible && getCityLimit() > 0 && getCityOverLimitUnhappy() == 0 && getNumCities() >= getCityLimit())
+	{
+		return false;
+	}
+
 	if (pPlot->isPeak() && !GET_TEAM(getTeam()).isCanFoundOnPeaks())
 	{
 		return false;
 	}
-	if (pPlot->getClaimingOwner() != NO_PLAYER)
-	{
-		if (pPlot->getClaimingOwner() != getID())
-		{
-			return false;
-		}
-	}
-/************************************************************************************************/
-/* Afforess	                    END        		                                                */
-/************************************************************************************************/
 
-	if (pPlot->getFeatureType() != NO_FEATURE)
+	if (pPlot->getClaimingOwner() != NO_PLAYER && pPlot->getClaimingOwner() != getID())
 	{
-		if (GC.getFeatureInfo(pPlot->getFeatureType()).isNoCity())
-		{
-			return false;
-		}
+		return false;
+	}
+
+	if (pPlot->getFeatureType() != NO_FEATURE && GC.getFeatureInfo(pPlot->getFeatureType()).isNoCity())
+	{
+		return false;
 	}
 
 	if (pPlot->isOwned() && (pPlot->getOwnerINLINE() != getID()))
@@ -8831,54 +8795,28 @@ bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 		return false;
 	}
 
-	bValid = false;
+	bool bValid = false;
 
-	if (!bValid)
+	if (!bValid && GC.getTerrainInfo(pPlot->getTerrainType()).isFound())
 	{
-		if (GC.getTerrainInfo(pPlot->getTerrainType()).isFound())
-		{
-			bValid = true;
-		}
+		bValid = true;
 	}
 
-	if (!bValid)
+	if (!bValid && GC.getTerrainInfo(pPlot->getTerrainType()).isFoundCoast() && pPlot->isCoastalLand())
 	{
-		if (GC.getTerrainInfo(pPlot->getTerrainType()).isFoundCoast())
-		{
-			if (pPlot->isCoastalLand())
-			{
-				bValid = true;
-			}
-		}
+		bValid = true;
 	}
 
-	if (!bValid)
+	if (!bValid && GC.getTerrainInfo(pPlot->getTerrainType()).isFoundFreshWater() && pPlot->isFreshWater())
 	{
-		if (GC.getTerrainInfo(pPlot->getTerrainType()).isFoundFreshWater())
-		{
-			if (pPlot->isFreshWater())
-			{
-				bValid = true;
-			}
-		}
+		bValid = true;
 	}
 
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       02/16/10                    EmperorFool & jdog5000    */
-/*                                                                                              */
-/* Bugfix                                                                                       */
-/************************************************************************************************/
 	// EF: canFoundCitiesOnWater callback handling was incorrect and ignored isWater() if it returned true
-	if (pPlot->isWater())
+	if (pPlot->isWater() && GC.getUSE_CAN_FOUND_CITIES_ON_WATER_CALLBACK())
 	{
-		if(GC.getUSE_CAN_FOUND_CITIES_ON_WATER_CALLBACK())
-		{
-			bValid = Cy::call<bool>(PYGameModule, "canFoundCitiesOnWater", Cy::Args() << iX << iY);
-		}
+		bValid = Cy::call<bool>(PYGameModule, "canFoundCitiesOnWater", Cy::Args() << iX << iY);
 	}
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
 
 	if (!bValid)
 	{
@@ -8887,28 +8825,21 @@ bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 
 	if (!bTestVisible)
 	{
-		iRange = GC.getMIN_CITY_RANGE();
+		const int iRange = GC.getMIN_CITY_RANGE();
 
-		for (iDX = -(iRange); iDX <= iRange; iDX++)
+		for (int iDX = -(iRange); iDX <= iRange; iDX++)
 		{
-			for (iDY = -(iRange); iDY <= iRange; iDY++)
+			for (int iDY = -(iRange); iDY <= iRange; iDY++)
 			{
-				pLoopPlot	= plotXY(pPlot->getX_INLINE(), pPlot->getY_INLINE(), iDX, iDY);
+				CvPlot* pLoopPlot = plotXY(iX, iY, iDX, iDY);
 
-				if (pLoopPlot != NULL)
+				if (pLoopPlot != NULL && pLoopPlot->isCity() && pLoopPlot->area() == pPlot->area())
 				{
-					if (pLoopPlot->isCity())
-					{
-						if (pLoopPlot->area() == pPlot->area())
-						{
-							return false;
-						}
-					}
+					return false;
 				}
 			}
 		}
 	}
-
 	return true;
 }
 
@@ -12936,13 +12867,13 @@ void CvPlayer::changeAdvancedStartPoints(int iChange)
 }
 
 
-int CvPlayer::getGoldenAgeTurns() const																		
+int CvPlayer::getGoldenAgeTurns() const
 {
 	return m_iGoldenAgeTurns;
 }
 
 
-bool CvPlayer::isGoldenAge() const																					
+bool CvPlayer::isGoldenAge() const
 {
 	return (getGoldenAgeTurns() > 0);
 }
@@ -13029,13 +12960,13 @@ int CvPlayer::getGoldenAgeLength() const
 	return (GC.getGameINLINE().goldenAgeLength() * std::max(0, 100 + getGoldenAgeModifier())) / 100;
 }
 
-int CvPlayer::getNumUnitGoldenAges() const																			
+int CvPlayer::getNumUnitGoldenAges() const
 {
 	return m_iNumUnitGoldenAges;
 }
 
 
-void CvPlayer::changeNumUnitGoldenAges(int iChange)												
+void CvPlayer::changeNumUnitGoldenAges(int iChange)
 {
 	m_iNumUnitGoldenAges = (m_iNumUnitGoldenAges + iChange);
 	FAssert(getNumUnitGoldenAges() >= 0);
@@ -13132,7 +13063,7 @@ void CvPlayer::changeAnarchyTurns(int iChange, bool bHideMessages)
 }
 
 
-int CvPlayer::getMaxAnarchyTurns() const																		
+int CvPlayer::getMaxAnarchyTurns() const
 {
 	return m_iMaxAnarchyTurns;
 }
@@ -13164,7 +13095,7 @@ void CvPlayer::updateMaxAnarchyTurns()
 	FAssert(getMaxAnarchyTurns() >= 0);
 }
 
-int CvPlayer::getMinAnarchyTurns() const																		
+int CvPlayer::getMinAnarchyTurns() const
 {
 	return m_iMinAnarchyTurns;
 }
@@ -13348,7 +13279,7 @@ void CvPlayer::changeMaxGlobalBuildingProductionModifier(int iChange)
 }
 
 
-int CvPlayer::getMaxTeamBuildingProductionModifier() const												
+int CvPlayer::getMaxTeamBuildingProductionModifier() const
 {
 	return m_iMaxTeamBuildingProductionModifier;
 }
@@ -13487,7 +13418,7 @@ void CvPlayer::changeMilitaryProductionModifier(int iChange)
 }
 
 
-int CvPlayer::getSpaceProductionModifier() const													
+int CvPlayer::getSpaceProductionModifier() const
 {
 	return m_iSpaceProductionModifier;
 }
@@ -14546,6 +14477,7 @@ void CvPlayer::changeLargestCityHappiness(int iChange, bool bLimited)
 
 
 int CvPlayer::getWarWearinessPercentAnger() const																
+int CvPlayer::getWarWearinessPercentAnger() const
 {
 	return m_iWarWearinessPercentAnger;
 }
@@ -14862,7 +14794,7 @@ int CvPlayer::getStateReligionCount() const
 }
 
 
-bool CvPlayer::isStateReligion() const	
+bool CvPlayer::isStateReligion() const
 {
 	return (getStateReligionCount() > 0);
 }
@@ -14928,7 +14860,7 @@ void CvPlayer::changeNoNonStateReligionSpreadCount(int iChange)
 }
 
 
-int CvPlayer::getStateReligionHappiness() const								
+int CvPlayer::getStateReligionHappiness() const
 {
 	return m_iStateReligionHappiness;
 }
@@ -14970,7 +14902,7 @@ void CvPlayer::changeNonStateReligionHappiness(int iChange, bool bLimited)
 /********************************************************************************/
 
 
-int CvPlayer::getStateReligionUnitProductionModifier() const	
+int CvPlayer::getStateReligionUnitProductionModifier() const
 {
 	return m_iStateReligionUnitProductionModifier;
 }
@@ -15022,7 +14954,7 @@ void CvPlayer::changeStateReligionFreeExperience(int iChange)
 }
 
 
-CvCity* CvPlayer::getCapitalCity() const	
+CvCity* CvPlayer::getCapitalCity() const
 {
 	return getCity(m_iCapitalCityID);
 }
@@ -15161,7 +15093,7 @@ void CvPlayer::changeCitiesLost(int iChange)
 }
 
 
-int CvPlayer::getWinsVsBarbs() const		
+int CvPlayer::getWinsVsBarbs() const
 {
 	return m_iWinsVsBarbs;
 }
@@ -15223,7 +15155,7 @@ void CvPlayer::changeUnitPower(int iChange)
 }
 
 
-int CvPlayer::getPopScore(bool bCheckVassal) const		
+int CvPlayer::getPopScore(bool bCheckVassal) const
 {
 	if (bCheckVassal && GET_TEAM(getTeam()).isAVassal())
 	{
@@ -15262,7 +15194,7 @@ void CvPlayer::changePopScore(int iChange)
 }
 
 
-int CvPlayer::getLandScore(bool bCheckVassal) const		
+int CvPlayer::getLandScore(bool bCheckVassal) const
 {
 	if (bCheckVassal && GET_TEAM(getTeam()).isAVassal())
 	{
@@ -15302,7 +15234,7 @@ void CvPlayer::changeLandScore(int iChange)
 }
 
 
-int CvPlayer::getWondersScore() const		
+int CvPlayer::getWondersScore() const
 {
 	//TB Debug
 	if (m_iWondersScore < 0)
@@ -15328,7 +15260,7 @@ void CvPlayer::changeWondersScore(int iChange)
 }
 
 
-int CvPlayer::getTechScore() const		
+int CvPlayer::getTechScore() const
 {
 	return m_iTechScore;
 }
@@ -15386,7 +15318,7 @@ void CvPlayer::setCombatExperience(int iExperience, UnitTypes eGGType)
 
 	m_iCombatExperience = iExperience;
 
-	if (!isNPC() || (isHominid() && GC.getGameINLINE().isOption(GAMEOPTION_BARBARIAN_GENERALS)))
+	if (!isNPC() || isHominid())
 	{
 		const int iExperienceThreshold = greatPeopleThresholdMilitary();
 		if (m_iCombatExperience >= iExperienceThreshold && iExperienceThreshold > 0)
@@ -16906,7 +16838,7 @@ void CvPlayer::changeGoldenAgeCommerce(CommerceTypes eIndex, int iChange)
 }
 
 
-int CvPlayer::getYieldRateModifier(YieldTypes eIndex) const		
+int CvPlayer::getYieldRateModifier(YieldTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
@@ -16940,7 +16872,7 @@ void CvPlayer::changeYieldRateModifier(YieldTypes eIndex, int iChange)
 }
 
 
-int CvPlayer::getCapitalYieldRateModifier(YieldTypes eIndex) const		
+int CvPlayer::getCapitalYieldRateModifier(YieldTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
@@ -17830,7 +17762,7 @@ void CvPlayer::changeUnitClassCount(UnitClassTypes eIndex, int iChange)
 }
 
 
-int CvPlayer::getUnitClassMaking(UnitClassTypes eIndex) const									
+int CvPlayer::getUnitClassMaking(UnitClassTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < GC.getNumUnitClassInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
@@ -19191,7 +19123,7 @@ CLLNode<TechTypes>* CvPlayer::headResearchQueueNode() const
 }
 
 
-CLLNode<TechTypes>* CvPlayer::tailResearchQueueNode() const													
+CLLNode<TechTypes>* CvPlayer::tailResearchQueueNode() const
 {
 	return m_researchQueue.tail();
 }
