@@ -1762,7 +1762,7 @@ class CvEventManager:
 							iThePopu = iPopu
 				CyCityX, i = CyPlayer.nextCity(i, False)
 
-			if MAP.generatePathForHypotheticalUnit(CyPlot, CyPlotDo, iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 1000):
+			if iThePath and MAP.generatePathForHypotheticalUnit(CyPlot, CyPlotDo, iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 1000):
 				iBuilding = GC.getInfoTypeForString("BUILDING_ROUTE_66_TERMINUS")
 				if iBuilding > -1:
 					CyCityDo.setNumRealBuilding(iBuilding, 1)
