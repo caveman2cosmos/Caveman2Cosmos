@@ -19,7 +19,7 @@
 			<iTrainPercent>40</iTrainPercent>
 			<iConstructPercent>40</iConstructPercent>
 			<iResearchPercent>40</iResearchPercent>
-			<iMaxNumCitiesMaintenance>40</iMaxNumCitiesMaintenance>
+			<iMaxNumCitiesMaintenance>1000</iMaxNumCitiesMaintenance><!-- Unused in code, dead tag -->
 			<iMaxColonyMaintenance>80</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>40</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>40</iNumCitiesMaintenancePercent>
@@ -276,7 +276,7 @@
 			<iTrainPercent>60</iTrainPercent>
 			<iConstructPercent>60</iConstructPercent>
 			<iResearchPercent>60</iResearchPercent>
-			<iMaxNumCitiesMaintenance>60</iMaxNumCitiesMaintenance>
+			<iMaxNumCitiesMaintenance>2000</iMaxNumCitiesMaintenance><!-- Unused in code, dead tag -->
 			<iMaxColonyMaintenance>120</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>60</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>60</iNumCitiesMaintenancePercent>
@@ -572,7 +572,7 @@
 			<iTrainPercent>80</iTrainPercent>
 			<iConstructPercent>80</iConstructPercent>
 			<iResearchPercent>80</iResearchPercent>
-			<iMaxNumCitiesMaintenance>80</iMaxNumCitiesMaintenance>
+			<iMaxNumCitiesMaintenance>3000</iMaxNumCitiesMaintenance><!-- Unused in code, dead tag -->
 			<iMaxColonyMaintenance>160</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>80</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>80</iNumCitiesMaintenancePercent>
@@ -847,7 +847,7 @@
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
-			<iMaxNumCitiesMaintenance>100</iMaxNumCitiesMaintenance>
+			<iMaxNumCitiesMaintenance>4000</iMaxNumCitiesMaintenance><!-- Unused in code, dead tag -->
 			<iMaxColonyMaintenance>200</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>100</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>100</iNumCitiesMaintenancePercent>
@@ -1155,7 +1155,7 @@
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
-			<iMaxNumCitiesMaintenance>120</iMaxNumCitiesMaintenance>
+			<iMaxNumCitiesMaintenance>5000</iMaxNumCitiesMaintenance><!-- Unused in code, dead tag -->
 			<iMaxColonyMaintenance>240</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>120</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>120</iNumCitiesMaintenancePercent>
@@ -1464,7 +1464,7 @@
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
-			<iMaxNumCitiesMaintenance>140</iMaxNumCitiesMaintenance>
+			<iMaxNumCitiesMaintenance>6000</iMaxNumCitiesMaintenance><!-- Unused in code, dead tag -->
 			<iMaxColonyMaintenance>280</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>140</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>140</iNumCitiesMaintenancePercent>
@@ -1795,7 +1795,7 @@
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
-			<iMaxNumCitiesMaintenance>160</iMaxNumCitiesMaintenance>
+			<iMaxNumCitiesMaintenance>7000</iMaxNumCitiesMaintenance><!-- Unused in code, dead tag -->
 			<iMaxColonyMaintenance>320</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>160</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>160</iNumCitiesMaintenancePercent>
@@ -2146,7 +2146,7 @@
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
-			<iMaxNumCitiesMaintenance>180</iMaxNumCitiesMaintenance>
+			<iMaxNumCitiesMaintenance>8000</iMaxNumCitiesMaintenance><!-- Unused in code, dead tag -->
 			<iMaxColonyMaintenance>360</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>180</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>180</iNumCitiesMaintenancePercent>
@@ -2501,7 +2501,7 @@
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
-			<iMaxNumCitiesMaintenance>200</iMaxNumCitiesMaintenance>
+			<iMaxNumCitiesMaintenance>9000</iMaxNumCitiesMaintenance><!-- Unused in code, dead tag -->
 			<iMaxColonyMaintenance>400</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>200</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>200</iNumCitiesMaintenancePercent>
@@ -2873,7 +2873,7 @@
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
-			<iMaxNumCitiesMaintenance>240</iMaxNumCitiesMaintenance>
+			<iMaxNumCitiesMaintenance>11000</iMaxNumCitiesMaintenance><!-- Unused in code, dead tag -->
 			<iMaxColonyMaintenance>480</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>240</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>240</iNumCitiesMaintenancePercent>
@@ -3245,7 +3245,7 @@
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
-			<iMaxNumCitiesMaintenance>240</iMaxNumCitiesMaintenance>
+			<iMaxNumCitiesMaintenance>11000</iMaxNumCitiesMaintenance><!-- Unused in code, dead tag -->
 			<iMaxColonyMaintenance>480</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>240</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>240</iNumCitiesMaintenancePercent>

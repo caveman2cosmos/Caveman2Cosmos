@@ -60,24 +60,12 @@
 	</TEXT>
 	<!-- CITY INFOS -->
 	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_RICHMOND</Tag>
-		<English>Richmond</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_CHARLESTON</Tag>
-		<English>Charleston</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PETERSBURG</Tag>
 		<English>Petersburg</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MONTGOMERY</Tag>
 		<English>Montgomery</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_MEMPHIS</Tag>
-		<English>Memphis</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LOUISVILLE</Tag>
@@ -88,28 +76,8 @@
 		<English>Nashville</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_ATLANTA</Tag>
-		<English>Atlanta</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_VICKSBURG</Tag>
 		<English>Vicksburg</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_NEW_ORLEANS</Tag>
-		<English>New Orleans</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_SAVANNAH</Tag>
-		<English>Savannah</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_COLUMBUS</Tag>
-		<English>Columbus</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_SPRINGFIELD</Tag>
-		<English>Springfield</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MOBILE</Tag>
@@ -118,10 +86,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NORFOLK</Tag>
 		<English>Norfolk</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_ALEXANDRIA</Tag>
-		<English>Alexandria</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SHREVEPORT</Tag>

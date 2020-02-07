@@ -1173,6 +1173,10 @@
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
 				<UnitProductionModifierType>
+					<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
+					<iUnitProductionModifier>25</iUnitProductionModifier>
+				</UnitProductionModifierType>
+				<UnitProductionModifierType>
 					<UnitType>UNIT_WORKER</UnitType>
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
@@ -1662,6 +1666,10 @@
 			<UnitProductionModifierTypes>
 				<UnitProductionModifierType>
 					<UnitType>UNIT_WORKBOAT</UnitType>
+					<iUnitProductionModifier>25</iUnitProductionModifier>
+				</UnitProductionModifierType>
+				<UnitProductionModifierType>
+					<UnitType>UNIT_NEANDERTHAL_WORKBOAT</UnitType>
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
 				<UnitProductionModifierType>
@@ -4649,6 +4657,10 @@
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
 				<UnitProductionModifierType>
+					<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
+					<iUnitProductionModifier>25</iUnitProductionModifier>
+				</UnitProductionModifierType>
+				<UnitProductionModifierType>
 					<UnitType>UNIT_WORKER</UnitType>
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
@@ -5115,6 +5127,10 @@
 			<UnitProductionModifierTypes>
 				<UnitProductionModifierType>
 					<UnitType>UNIT_WORKBOAT</UnitType>
+					<iUnitProductionModifier>25</iUnitProductionModifier>
+				</UnitProductionModifierType>
+				<UnitProductionModifierType>
+					<UnitType>UNIT_NEANDERTHAL_WORKBOAT</UnitType>
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
 				<UnitProductionModifierType>

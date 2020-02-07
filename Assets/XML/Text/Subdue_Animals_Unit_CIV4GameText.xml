@@ -221,23 +221,6 @@
 		<Polish>Poskromiony Wilk Straszny</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_DONKEY</Tag>
-		<English>Subdued Donkey</English>
-		<French>
-			<Text>Ane (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Subdued Esel</German>
-		<Italian>
-			<Text>Asino addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>Subdued Burro</Spanish>
-		<Polish>Poskromiony Osioł</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ELEPHANT</Tag>
 		<English>Subdued Asian Elephant</English>
 		<French>
@@ -2201,21 +2184,6 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Poskromiony Szaympans</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_GATOR</Tag>
-		<English>Subdued Alligator</English>
-		<French>
-			<Text>Alligator (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Alligatore addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Poskromiony Aligator</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_NILECROC</Tag>

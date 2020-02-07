@@ -387,21 +387,6 @@
 		<Polish>Treser Mułów</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BEAR_MYTH</Tag>
-		<English>Myth - Bear</English>
-		<French>
-			<Text>Mythe de l'Ours</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito dell'orso</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Mit Niedźwiedzia</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BOAR_MYTH</Tag>
 		<English>Myth - Boar</English>
 		<French>
@@ -483,21 +468,6 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Słonia</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HORSE_MYTH</Tag>
-		<English>Myth - Horse</English>
-		<French>
-			<Text>Mythe du Cheval</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito del cavallo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Mit Koni</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LION_MYTH</Tag>
@@ -1802,10 +1772,6 @@
 		<English>Crabs are decapod crustaceans of the infraorder Brachyura, which typically have a very short projecting "tail" (abdomen), usually entirely hidden under the thorax. They live in all the world's oceans, in fresh water, and on land, are generally covered with a thick exoskeleton and have a single pair of claws. Many other animals with similar names  such as hermit crabs, king crabs, porcelain crabs, horseshoe crabs and crab lice  are not true crabs.[PARAGRAPH:2]Crabs are generally covered with a thick exoskeleton, composed primarily of calcium carbonate, and armed with a single pair of chelae (claws). Crabs are found in all of the world's oceans, while many crabs live in fresh water and on land, particularly in tropical regions. Crabs vary in size from the pea crab, a few millimetres wide, to the Japanese spider crab, with a leg span of up to 4 metres (13 ft).[PARAGRAPH:2]About 850 species of crab are freshwater, terrestrial or semi-terrestrial species; they are found throughout the world's tropical and semi-tropical regions. They were previously thought to be a monophyletic group, but are now believed to represent at least two distinct lineages, one in the Old World and one in the New World.[PARAGRAPH:2]The earliest unambiguous crab fossils date from the Jurassic, although Carboniferous Imocaris, known only from its carapace, may be a primitive crab. The radiation of crabs in the Cretaceous and afterward may be linked either to the break-up of Gondwana or to the concurrent radiation of bony fish, crabs' main predators.[PARAGRAPH:2]Source: Wikipedia</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_CRAB_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Crab and Fish, Myth - Sea, Crab Nets</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRAB_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Crab</English>
 	</TEXT>
@@ -1878,10 +1844,6 @@
 		<English>Stories Effect - Mackerel</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_RAY_MANTA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Manta Ray, Sea and Fish Myth, Fish Pens, Coastal Fish Pens, Marine Institute</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAY_MANTA_MYTH</Tag>
 		<English>Myth - Manta Ray</English>
 	</TEXT>
@@ -1946,16 +1908,8 @@
 		<English>See [LINK=UNIT_MACKERAL]Mackerel[/LINK] since tuna are mackerel.[PARAGRAPH:2]Source: Wikipedia</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_TUNA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Tuna, Sea and Fish Myth, Fish Pens, Coastal Fish Pens, Marine Institute</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TUNA_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Tuna</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TUNA_STORY</Tag>
-		<English>Story - Tuna</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TUNA_STORIES</Tag>

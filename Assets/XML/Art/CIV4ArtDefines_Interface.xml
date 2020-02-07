@@ -6763,5 +6763,9 @@
 			<Type>ART_DEF_FILTER_SHOW_MILITARY</Type>
 			<Path>Art/Interface/buttons/filters/show_military.dds</Path>
 		</InterfaceArtInfo>
+		<InterfaceArtInfo>
+			<Type>ART_DEF_FILTER_SHOW_UNLIMITED</Type>
+			<Path>Art/BUG/World_Off.dds</Path>
+		</InterfaceArtInfo>
 	</InterfaceArtInfos>
 </Civ4ArtDefines>
