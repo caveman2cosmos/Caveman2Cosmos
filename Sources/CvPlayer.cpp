@@ -15312,7 +15312,7 @@ void CvPlayer::setCombatExperience(int iExperience, UnitTypes eGGType)
 
 	const int iExperienceDiff = std::max(0, iExperience - m_iCombatExperience);
 
-	changeGreatGeneralPointsForType(eGGType == NO_UNIT? (UnitTypes)GC.getInfoTypeForString("UNIT_GREAT_GENERAL") : eGGType, iExperienceDiff);
+	changeGreatGeneralPointsForType(eGGType == NO_UNIT ? (UnitTypes)GC.getInfoTypeForString("UNIT_GREAT_GENERAL") : eGGType, iExperienceDiff);
 
 	m_iCombatExperience = iExperience;
 

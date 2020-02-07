@@ -19511,11 +19511,7 @@ void CvUnit::finishMoves()
 	setMoves(maxMoves());
 }
 
-/************************************************************************************************/
-/* Afforess	                  Start		 04/25/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 int CvUnit::getExperience100() const
 {
 	return m_iExperience;
@@ -19523,9 +19519,11 @@ int CvUnit::getExperience100() const
 
 void CvUnit::setExperience100(int iNewValue, int iMax)
 {
-	if (getExperience100() != iNewValue && getExperience100() < (iMax == -1 ? MAX_INT : iMax))
+	iMax = iMax < 0 ? MAX_INT : iMax;
+
+	if (getExperience100() != iNewValue && getExperience100() < iMax)
 	{
-		m_iExperience = std::min(((iMax == -1) ? MAX_INT : iMax), iNewValue);
+		m_iExperience = std::min(iMax, iNewValue);
 		FAssert(getExperience100() >= 0);
 
 		if (IsSelected())
@@ -19538,7 +19536,6 @@ void CvUnit::setExperience100(int iNewValue, int iMax)
 void CvUnit::changeExperience100(int iChange, int iMax, bool bFromCombat, bool bInBorders, bool bUpdateGlobal)
 {
 	int iUnitExperience = iChange;
-	UnitTypes eGGType = NO_UNIT;
 
 	if (bFromCombat)
 	{
@@ -19546,10 +19543,10 @@ void CvUnit::changeExperience100(int iChange, int iMax, bool bFromCombat, bool b
 		//TB GG Types mod
 		if (getGGExperienceEarnedTowardsType() == NO_UNIT)
 		{
+			// Toffer - This should be moved to unit initialization,
+			// and if needed later, be refreshed when unitCombat types change.
 			setGGExperienceEarnedTowardsType();
 		}
-
-		eGGType = getGGExperienceEarnedTowardsType();
 
 		int iCombatExperienceMod = kPlayer.getGreatGeneralRateModifier();
 
@@ -19562,7 +19559,7 @@ void CvUnit::changeExperience100(int iChange, int iMax, bool bFromCombat, bool b
 		if (bUpdateGlobal)
 		{
 			int iChangeTotal = iChange + ((iChange * iCombatExperienceMod) / 100);
-			kPlayer.changeFractionalCombatExperience(iChangeTotal, eGGType);
+			kPlayer.changeFractionalCombatExperience(iChangeTotal, getGGExperienceEarnedTowardsType());
 		}
 
 		int iExperiencePercent = getExperiencePercent();
@@ -19579,12 +19576,11 @@ void CvUnit::changeExperience100(int iChange, int iMax, bool bFromCombat, bool b
 
 		// Great Commanders
 		CvUnit* pCommander = getUsedCommander();
-		if (pCommander != NULL && bFromCombat)
+		if (pCommander != NULL)
 		{
-			pCommander->setExperience100(pCommander->getExperience100() + 100);	//1 xp every time
+			pCommander->setExperience100(pCommander->getExperience100() + 60); //0.6 xp every time, make global define?
 		}
 	}
-
 	setExperience100((getExperience100() + iUnitExperience), iMax);
 }
 
@@ -19595,16 +19591,15 @@ int CvUnit::getExperience() const
 
 void CvUnit::setExperience(int iNewValue, int iMax)
 {
-	setExperience100(iNewValue * 100, iMax > 0 && iMax < MAX_INT/100 ? iMax * 100 : -1);
+	setExperience100(iNewValue * 100, iMax > -1 && iMax < MAX_INT/100 ? iMax * 100 : -1);
 }
 
 void CvUnit::changeExperience(int iChange, int iMax, bool bFromCombat, bool bInBorders, bool bUpdateGlobal)
 {
-	changeExperience100(iChange * 100, iMax > 0 && MAX_INT/100 > iMax ? iMax * 100 : -1, bFromCombat, bInBorders, bUpdateGlobal);
+	changeExperience100(iChange * 100, iMax > -1 && MAX_INT/100 > iMax ? iMax * 100 : -1, bFromCombat, bInBorders, bUpdateGlobal);
 }
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
+
 int CvUnit::getLevel() const
 {
 	return m_iLevel;
