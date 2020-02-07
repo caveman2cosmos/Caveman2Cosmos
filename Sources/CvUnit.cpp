@@ -2805,11 +2805,8 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 							m_combatResult.bDefenderWithdrawn = true;
 							m_combatResult.bDeathMessaged = false;
 
-							pDefender->changeExperience100(getExperiencefromWithdrawal(AdjustedDefWithdraw) * 10, MAX_INT, true, pPlot->getOwnerINLINE() == pDefender->getOwnerINLINE(), true);
-							changeExperience100(10, MAX_INT, true, pPlot->getOwnerINLINE() == getOwnerINLINE(), true);
-
-							bDoDynamic = false;
-							//doDynamicXP(pDefender, pPlot, iAttackerInitialDamage, iWinningOdds, iDefenderInitialDamage, iInitialAttXP, iInitialDefXP, iInitialAttGGXP, iInitialDefGGXP, false, false);
+							pDefender->changeExperience100(getExperiencefromWithdrawal(AdjustedDefWithdraw) * 10, -1, true, pPlot->getOwnerINLINE() == pDefender->getOwnerINLINE(), true);
+							changeExperience100(10, -1, true, pPlot->getOwnerINLINE() == getOwnerINLINE(), true);
 							return;
 						}
 					}
@@ -3029,11 +3026,6 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 		}
 	}
 
-/************************************************************************************************/
-/* Afforess	                  Start		 05/6/10                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	bool bPromotion = false;
 	bool bDefPromotion = false;
 	int iNonLethalAttackWinChance = std::max(AdjustedAttWithdrawal, AdjustedKnockback);
@@ -3047,9 +3039,6 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 	}
 	doCommerceAttacks(pDefender, pPlot);
 	doCommerceAttacks(this, pPlot);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 }
 
 
@@ -14379,7 +14368,7 @@ bool CvUnit::upgrade(UnitTypes eUnit)
 
 	if (pUpgradeUnit->getLeaderUnitType() == NO_UNIT && !GC.getGameINLINE().isOption(GAMEOPTION_INFINITE_XP))
 	{
-		pUpgradeUnit->setExperience(0);
+		pUpgradeUnit->setExperience(pUpgradeUnit->getExperience() * 3 / 5);
 	}
 	//TB Combat Mod begin
 	pUpgradeUnit->checkPromotionObsoletion();
@@ -16879,7 +16868,7 @@ int CvUnit::defenseXPValue() const
 
 int CvUnit::maxXPValue(const CvUnit* pVictim, bool bBarb) const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_INFINITE_XP))
+	if (GC.getGameINLINE().isOption(GAMEOPTION_INFINITE_XP) || isNPC())
 	{
 		return -1;
 	}
@@ -16887,8 +16876,7 @@ int CvUnit::maxXPValue(const CvUnit* pVictim, bool bBarb) const
 
 	if (pVictim != NULL && pVictim->isAnimal())
 	{
-		if (!isNPC()
-		&& !isHasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_EXPLORER"))
+		if (!isHasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_EXPLORER"))
 		&& !isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_ANIMAL_HUNTER")))
 		{
 			iMaxValue = GC.getDefineINT("ANIMAL_MAX_XP_VALUE");
@@ -16896,9 +16884,16 @@ int CvUnit::maxXPValue(const CvUnit* pVictim, bool bBarb) const
 	}
 	else if (pVictim != NULL && pVictim->isHominid() || bBarb)
 	{
-		if (!isNPC()
-		&& !isHasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_RECON"))
+		if (!isHasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_RECON"))
 		&& !isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_BARBARIAN_HUNTER")))
+		{
+			iMaxValue = GC.getDefineINT("BARBARIAN_MAX_XP_VALUE");
+		}
+	}
+	else if (pVictim != NULL && getUnitCombatType() == (UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_HUNTER"))
+	{
+		if (!isHasPromotion((PromotionTypes)GC.getInfoTypeForString("PROMOTION_BARBARIAN_HUNTER"))
+		&& pVictim->getUnitCombatType() != (UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_ANIMAL"))
 		{
 			iMaxValue = GC.getDefineINT("BARBARIAN_MAX_XP_VALUE");
 		}
@@ -35039,38 +35034,37 @@ void CvUnit::doDynamicXP(CvUnit* pDefender, const CvPlot* pPlot, int iAttackerIn
 		if (!isDead() && !bPromotion && getUnitCombatType() != NO_UNITCOMBAT)
 		{
 			//reset XP
-			 setExperience100(iInitialAttXP);
+			setExperience100(iInitialAttXP);
 
-			 FAssertMsg(maxHitPoints() - iAttackerInitialDamage > 0, "Attacker is Dead!");
-			int iHealthPercent = (maxHitPoints() - getDamage()) * 100 / std::max(1,(maxHitPoints() - iAttackerInitialDamage));
-			int iExperienceModifier = (100 - iHealthPercent) * (100 - iHealthPercent) / maxHitPoints();
+			FAssertMsg(maxHitPoints() - iAttackerInitialDamage > 0, "Attacker is Dead!");
+			int iHealthPercentLost = 100 - (maxHitPoints() - getDamage()) * 100 / std::max(1, maxHitPoints() - iAttackerInitialDamage);
+			int iExperienceModifier = iHealthPercentLost * iHealthPercentLost / maxHitPoints();
 			//Chance of losing
 			int iOdds = GC.getCOMBAT_DIE_SIDES() - iWinningOdds;
 			int iExperience = iOdds * (100 + iExperienceModifier) / 100;
 
-			if ( attackXPValue() > 0 )
+			if (attackXPValue() > 0)
 			{
 				iExperience = range(iExperience, getRandomMinExperienceTimes100(), attackXPValue() * 100);
-				changeExperience100(iExperience, MAX_INT, true, pPlot->getOwnerINLINE() == getOwnerINLINE(), true);
+				changeExperience100(iExperience, maxXPValue(pDefender), true, pPlot->getOwnerINLINE() == getOwnerINLINE(), true);
 			}
 		}
 		if (!pDefender->isDead() && !bDefPromotion && pDefender->getUnitCombatType() != NO_UNITCOMBAT)
 		{
 			//reset XP
-			 pDefender->setExperience100(iInitialDefXP);
+			pDefender->setExperience100(iInitialDefXP);
 
-			 FAssertMsg(pDefender->maxHitPoints() - iDefenderInitialDamage > 0, "Defender is Dead!");
-			int iHealthPercent = (pDefender->maxHitPoints() - pDefender->getDamage()) * 100 / std::max(1,(pDefender->maxHitPoints() - iDefenderInitialDamage));
-			int iExperienceModifier = (100 - iHealthPercent) * (100 - iHealthPercent) / pDefender->maxHitPoints();
+			FAssertMsg(pDefender->maxHitPoints() - iDefenderInitialDamage > 0, "Defender is Dead!");
+			int iHealthPercentLost = 100 - (pDefender->maxHitPoints() - pDefender->getDamage()) * 100 / std::max(1,(pDefender->maxHitPoints() - iDefenderInitialDamage));
+			int iExperienceModifier = iHealthPercentLost * iHealthPercentLost / pDefender->maxHitPoints();
 			//Chance of Losing
 			int iOdds = iWinningOdds;
-			//iOdds = std::max(iOdds, -iOdds);
 			int iExperience = iOdds * (100 + iExperienceModifier) / 100;
 
-			if ( pDefender->defenseXPValue() > 0 )
+			if (pDefender->defenseXPValue() > 0)
 			{
 				iExperience = range(iExperience, getRandomMinExperienceTimes100(), pDefender->defenseXPValue() * 100);
-				pDefender->changeExperience100(iExperience, MAX_INT, true, pPlot->getOwnerINLINE() == pDefender->getOwnerINLINE(), true);
+				pDefender->changeExperience100(iExperience, pDefender->maxXPValue(this), true, pPlot->getOwnerINLINE() == pDefender->getOwnerINLINE(), true);
 			}
 		}
 	}
