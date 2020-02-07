@@ -5389,10 +5389,6 @@
 			<iPopulationgrowthratepercentage>20</iPopulationgrowthratepercentage>
 			<UnitClassProductionModifiers>
 				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_BAND</UnitClassType>
-					<iProductionModifier>33</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
 					<UnitClassType>UNITCLASS_TRIBE</UnitClassType>
 					<iProductionModifier>25</iProductionModifier>
 				</UnitClassProductionModifier>

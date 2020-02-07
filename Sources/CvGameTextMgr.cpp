@@ -5888,12 +5888,12 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 						}
 						else
 						{
-							iExperience = (pDefender->attackXPValue() * iDefenderStrength) / iAttackerStrength;
+							iExperience = (pAttacker->attackXPValue() * iDefenderStrength) / iAttackerStrength;
 							iExperience = range(iExperience, GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT"));
 						}
 
 						int iDefExperienceKill;
-						iDefExperienceKill = (pAttacker->defenseXPValue() * iAttackerStrength) / iDefenderStrength;
+						iDefExperienceKill = (pDefender->defenseXPValue() * iAttackerStrength) / iDefenderStrength;
 						iDefExperienceKill = range(iDefExperienceKill, GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT"));
 
 						int iBonusAttackerXP = (iExperience * iAttackerExperienceModifier) / 100;
@@ -6126,8 +6126,8 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 						float CombatRatio = ((float)(pAttacker->currCombatStr(NULL, NULL))) / ((float)(pDefender->currCombatStr(pPlot, pAttacker)));
 						// THE ALL-IMPORTANT COMBATRATIO
 
-						float AttXP = (pDefender->attackXPValue()) / CombatRatio;
-						float DefXP = (pAttacker->defenseXPValue()) * CombatRatio;// These two values are simply for the Unrounded XP display
+						float AttXP = (pAttacker->attackXPValue()) / CombatRatio;
+						float DefXP = (pDefender->defenseXPValue()) * CombatRatio;// These two values are simply for the Unrounded XP display
 
 						// General odds
 						if (pAttacker->combatLimit(pDefender) >= (pDefender->maxHitPoints())) //ie. we can kill the defender... I hope this is the most general form
@@ -6791,7 +6791,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 
 								for (int i = 0; i < size; i++) //setup the array
 								{
-									CombatRatioThresholds[i] = ((float)(pDefender->attackXPValue())) / ((float)(GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT") - i));
+									CombatRatioThresholds[i] = ((float)(pAttacker->attackXPValue())) / ((float)(GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT") - i));
 									//For standard game, this is the list created:
 									//  {4/10, 4/9, 4/8,
 									//   4/7, 4/6, 4/5,

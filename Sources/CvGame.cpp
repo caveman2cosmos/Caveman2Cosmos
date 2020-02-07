@@ -8227,203 +8227,150 @@ void CvGame::createBarbarianUnits()
 {
 	MEMORY_TRACE_FUNCTION();
 
-	/*CvUnit* pLoopUnit;*/
-	//CvArea* pLoopArea;
-	//CvPlot* pPlot;
-	//UnitAITypes eBarbUnitAI;
-	//UnitTypes eBestUnit;
-	//UnitTypes eLoopUnit;
-	//int iNeededBarbs;
-	//int iDivisor;
-	//int iValue;
-	//int iBestValue;
-	//int iLoop;
-	//int iI, iJ;
-
 	if (Cy::call<bool>(PYGameModule, "createBarbarianUnits"))
 	{
 		return;
 	}
 
-	//bAnimals = false;
-		
 	if (GC.getEraInfo(getCurrentEra()).isNoBarbUnits())
 	{
 		return;
 	}
 
-//#ifdef C2C_BUILD
-//TB animal mod begin
-	//if (!GC.getEraInfo(getCurrentEra()).isNoBarbUnits())
-	//{
-	//	if (getSorenRandNum(100, "Animal or Barb") < 50)
-	//	{
-	//		bAnimals = true;
-	//	}
-	//}
-//TB animal mod end
-//#endif
-
-	//if (getNumCivCities() < ((countCivPlayersAlive() * 3) / 2) && !isOption(GAMEOPTION_ONE_CITY_CHALLENGE))
-	//{
-	//	bAnimals = true;
-	//}
-
-	//if (getElapsedGameTurns() < ((GC.getHandicapInfo(getHandicapType()).getBarbarianCreationTurnsElapsed() * GC.getGameSpeedInfo(getGameSpeedType()).getBarbPercent()) / 100))
-	//{
-	//	bAnimals = true;
-	//}
-
-	//if (bAnimals)
-	//{
-	//	createAnimals();
-	//	return;
-	//}
-
 	if (isOption(GAMEOPTION_NO_BARBARIANS))
 	{
 		return;
 	}
-	else
+
+	foreach_(CvArea * pLoopArea, GC.getMapINLINE().areas())
 	{
-		foreach_(CvArea * pLoopArea, GC.getMapINLINE().areas())
+		UnitAITypes eBarbUnitAI = pLoopArea->isWater()? UNITAI_ATTACK_SEA : UNITAI_ATTACK;
+
+		int iNeededBarbs = getNeededBarbsInArea(this, pLoopArea);
+
+		// Spawn barbarians
+		for (int iI = 0; iI < iNeededBarbs; iI++)
 		{
-			UnitAITypes eBarbUnitAI = pLoopArea->isWater()? UNITAI_ATTACK_SEA : UNITAI_ATTACK;
+			const CvPlot* pPlot = GC.getMapINLINE().syncRandPlot((RANDPLOT_NOT_VISIBLE_TO_CIV | RANDPLOT_ADJACENT_LAND | RANDPLOT_PASSIBLE), pLoopArea->getID(), GC.getDefineINT("MIN_BARBARIAN_STARTING_DISTANCE"));
 
-			int iNeededBarbs = getNeededBarbsInArea(this, pLoopArea);
+			if (pPlot == NULL)
+				continue;
 
-			// Spawn barbarians
-			for (int iI = 0; iI < iNeededBarbs; iI++)
+			UnitTypes eBestUnit = NO_UNIT;
+			int iBestValue = 0;
+
+			for (int iJ = 0; iJ < GC.getNumUnitClassInfos(); iJ++)
 			{
-				const CvPlot* pPlot = GC.getMapINLINE().syncRandPlot((RANDPLOT_NOT_VISIBLE_TO_CIV | RANDPLOT_ADJACENT_LAND | RANDPLOT_PASSIBLE), pLoopArea->getID(), GC.getDefineINT("MIN_BARBARIAN_STARTING_DISTANCE"));
+				bool bValid = false;
+				const UnitTypes eLoopUnit = ((UnitTypes)(GC.getCivilizationInfo(GET_PLAYER(BARBARIAN_PLAYER).getCivilizationType()).getCivilizationUnits(iJ)));
 
-				if (pPlot == NULL)
+				if (eLoopUnit == NO_UNIT)
 					continue;
 
-				UnitTypes eBestUnit = NO_UNIT;
-				int iBestValue = 0;
-
-				for (int iJ = 0; iJ < GC.getNumUnitClassInfos(); iJ++)
+				const CvUnitInfo& kUnit = GC.getUnitInfo(eLoopUnit);
+				if (isValidBarbarianSpawnUnit(pLoopArea, kUnit, eLoopUnit, static_cast<UnitClassTypes>(iJ)))
 				{
-					bool bValid = false;
-					const UnitTypes eLoopUnit = ((UnitTypes)(GC.getCivilizationInfo(GET_PLAYER(BARBARIAN_PLAYER).getCivilizationType()).getCivilizationUnits(iJ)));
+					int iValue = 500 + getSorenRandNum(500, "Barb Unit Selection");
 
-					if (eLoopUnit == NO_UNIT)
-						continue;
-
-					const CvUnitInfo& kUnit = GC.getUnitInfo(eLoopUnit);
-					if (isValidBarbarianSpawnUnit(pLoopArea, kUnit, eLoopUnit, static_cast<UnitClassTypes>(iJ)))
+					if (kUnit.getUnitAIType(eBarbUnitAI))
 					{
-						int iValue = 500 + getSorenRandNum(500, "Barb Unit Selection");
-
-						if (kUnit.getUnitAIType(eBarbUnitAI))
-						{
-							iValue += 200;
-						}
-						iValue += kUnit.getCargoSpace() * (25 + getSorenRandNum(25, "Cargo Space Value"));
-
-						if (iValue > iBestValue)
-						{
-							eBestUnit = eLoopUnit;
-							iBestValue = iValue;
-						}
+						iValue += 200;
 					}
-				}
+					iValue += kUnit.getCargoSpace() * (25 + getSorenRandNum(25, "Cargo Space Value"));
 
-				if (eBestUnit != NO_UNIT)
-				{
-					CvUnit* pUnit = GET_PLAYER(BARBARIAN_PLAYER).initUnit(eBestUnit, pPlot->getX_INLINE(), pPlot->getY_INLINE(), eBarbUnitAI, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
-					if (GC.getUnitInfo(eBestUnit).getDomainType() == DOMAIN_SEA)
+					if (iValue > iBestValue)
 					{
-						loadPirateShip(pUnit);
+						eBestUnit = eLoopUnit;
+						iBestValue = iValue;
 					}
 				}
 			}
 
-			// Give barb cities in occupied areas free workers so that if the city settles
-			// it has some infrastructure
-			if (!isOption(GAMEOPTION_NO_BARBARIAN_CIV))
+			if (eBestUnit != NO_UNIT)
 			{
-				const int iBarbCities = pLoopArea->getCitiesPerPlayer(BARBARIAN_PLAYER);
-
-				// There are barbarian AND non-barbarian cities in the area
-				if(iBarbCities > 0 && pLoopArea->getNumCities() - iBarbCities > 0)
+				CvUnit* pUnit = GET_PLAYER(BARBARIAN_PLAYER).initUnit(eBestUnit, pPlot->getX_INLINE(), pPlot->getY_INLINE(), eBarbUnitAI, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
+				if (GC.getUnitInfo(eBestUnit).getDomainType() == DOMAIN_SEA)
 				{
-					for (CvPlayer::city_iterator cityItr = GET_PLAYER(BARBARIAN_PLAYER).beginCities(); cityItr != GET_PLAYER(BARBARIAN_PLAYER).endCities(); ++cityItr)
-					{
-						CvCity* pLoopCity = *cityItr;
-						if(pLoopCity->area() == pLoopArea
-							&& pLoopCity->getOriginalOwner() == BARBARIAN_PLAYER
-							&& barbarianCityShouldSpawnWorker(this, pLoopCity))
-						{
-							int iUnitValue;
+					loadPirateShip(pUnit);
+				}
+			}
+		}
 
-							UnitTypes eBestUnit = pLoopCity->AI_bestUnitAI(UNITAI_WORKER, iUnitValue);
-							if (eBestUnit != NO_UNIT)
-							{
-								GET_PLAYER(BARBARIAN_PLAYER).initUnit(eBestUnit, pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE(), UNITAI_WORKER, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
-								pLoopCity->AI_setChooseProductionDirty(true);
-							}
+		// Give barb cities in occupied areas free workers so that if the city settles it has some infrastructure
+		if (!isOption(GAMEOPTION_NO_BARBARIAN_CIV))
+		{
+			const int iBarbCities = pLoopArea->getCitiesPerPlayer(BARBARIAN_PLAYER);
+
+			// There are barbarian AND non-barbarian cities in the area
+			if(iBarbCities > 0 && pLoopArea->getNumCities() - iBarbCities > 0)
+			{
+				for (CvPlayer::city_iterator cityItr = GET_PLAYER(BARBARIAN_PLAYER).beginCities(); cityItr != GET_PLAYER(BARBARIAN_PLAYER).endCities(); ++cityItr)
+				{
+					CvCity* pLoopCity = *cityItr;
+					if(pLoopCity->area() == pLoopArea
+						&& pLoopCity->getOriginalOwner() == BARBARIAN_PLAYER
+						&& barbarianCityShouldSpawnWorker(this, pLoopCity))
+					{
+						int iUnitValue;
+
+						UnitTypes eBestUnit = pLoopCity->AI_bestUnitAI(UNITAI_WORKER, iUnitValue);
+						if (eBestUnit != NO_UNIT)
+						{
+							GET_PLAYER(BARBARIAN_PLAYER).initUnit(eBestUnit, pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE(), UNITAI_WORKER, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
+							pLoopCity->AI_setChooseProductionDirty(true);
 						}
 					}
 				}
 			}
 		}
-/************************************************************************************************/
-/* Afforess	                  Start		 09/01/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-		// TB Note: Commented out as a test for now to see if this would be preferred as I suspect.
-		//Kill Stranded Units
-		//for (pLoopUnit = GET_PLAYER(BARBARIAN_PLAYER).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER(BARBARIAN_PLAYER).nextUnit(&iLoop))
-		//{
-		//	if (pLoopUnit->getGroup()->isStranded())
-		//	{
-		//		pLoopUnit->kill(false);
-		//		break;
-		//	}
-		//}
-		////Kill off extra ships
-		//int iRand = 10000;
-		//int iBarbSeaUnits = 0;
-		//for(pLoopArea = GC.getMapINLINE().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMapINLINE().nextArea(&iLoop))
-		//{
-		//	if (pLoopArea->isWater())
-		//	{
-		//		iBarbSeaUnits	+= GET_PLAYER(BARBARIAN_PLAYER).AI_totalWaterAreaUnitAIs(pLoopArea,UNITAI_ATTACK_SEA);
-		//		iBarbSeaUnits += GET_PLAYER(BARBARIAN_PLAYER).AI_totalWaterAreaUnitAIs(pLoopArea,UNITAI_EXPLORE_SEA);
-		//		iBarbSeaUnits += GET_PLAYER(BARBARIAN_PLAYER).AI_totalWaterAreaUnitAIs(pLoopArea,UNITAI_ASSAULT_SEA);
-		//		iBarbSeaUnits += GET_PLAYER(BARBARIAN_PLAYER).AI_totalWaterAreaUnitAIs(pLoopArea,UNITAI_SETTLER_SEA);
-		//	}
-		//}
-		//iRand /= std::max(iBarbSeaUnits, 1);
-		//if (iBarbSeaUnits > 0)
-		//{
-		//	for (pLoopUnit = GET_PLAYER(BARBARIAN_PLAYER).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER(BARBARIAN_PLAYER).nextUnit(&iLoop))
-		//	{
-		//		if (pLoopUnit->plot()->isCity() && pLoopUnit->getDomainType() == DOMAIN_SEA)
-		//		{
-		//			if (getSorenRandNum(iRand, "Remove Stranded Barbarian Ships") == 0)
-		//			{
-		//				pLoopUnit->kill(false);
-		//			}
-		//		}
-		//	}
-		//}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
-//		for (pLoopUnit = GET_PLAYER(BARBARIAN_PLAYER).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER(BARBARIAN_PLAYER).nextUnit(&iLoop))
-//		{
-//			if (pLoopUnit->isAnimal())
-//			{
-//				pLoopUnit->kill(false);
-//				break;
-//			}
-//		}
 	}
+/* TB Note: Commented out as a test for now to see if this would be preferred as I suspect.
+	//Kill Stranded Units
+	for (pLoopUnit = GET_PLAYER(BARBARIAN_PLAYER).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER(BARBARIAN_PLAYER).nextUnit(&iLoop))
+	{
+		if (pLoopUnit->getGroup()->isStranded())
+		{
+			pLoopUnit->kill(false);
+			break;
+		}
+	}
+	//Kill off extra ships
+	int iRand = 10000;
+	int iBarbSeaUnits = 0;
+	for(pLoopArea = GC.getMapINLINE().firstArea(&iLoop); pLoopArea != NULL; pLoopArea = GC.getMapINLINE().nextArea(&iLoop))
+	{
+		if (pLoopArea->isWater())
+		{
+			iBarbSeaUnits += GET_PLAYER(BARBARIAN_PLAYER).AI_totalWaterAreaUnitAIs(pLoopArea,UNITAI_ATTACK_SEA);
+			iBarbSeaUnits += GET_PLAYER(BARBARIAN_PLAYER).AI_totalWaterAreaUnitAIs(pLoopArea,UNITAI_EXPLORE_SEA);
+			iBarbSeaUnits += GET_PLAYER(BARBARIAN_PLAYER).AI_totalWaterAreaUnitAIs(pLoopArea,UNITAI_ASSAULT_SEA);
+			iBarbSeaUnits += GET_PLAYER(BARBARIAN_PLAYER).AI_totalWaterAreaUnitAIs(pLoopArea,UNITAI_SETTLER_SEA);
+		}
+	}
+	iRand /= std::max(iBarbSeaUnits, 1);
+	if (iBarbSeaUnits > 0)
+	{
+		for (pLoopUnit = GET_PLAYER(BARBARIAN_PLAYER).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER(BARBARIAN_PLAYER).nextUnit(&iLoop))
+		{
+			if (pLoopUnit->plot()->isCity() && pLoopUnit->getDomainType() == DOMAIN_SEA)
+			{
+				if (getSorenRandNum(iRand, "Remove Stranded Barbarian Ships") == 0)
+				{
+					pLoopUnit->kill(false);
+				}
+			}
+		}
+	}
+
+	for (pLoopUnit = GET_PLAYER(BARBARIAN_PLAYER).firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = GET_PLAYER(BARBARIAN_PLAYER).nextUnit(&iLoop))
+	{
+		if (pLoopUnit->isAnimal())
+		{
+			pLoopUnit->kill(false);
+			break;
+		}
+	}
+*/
 }
 
 void CvGame::updateMoves()
