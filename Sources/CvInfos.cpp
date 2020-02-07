@@ -45737,6 +45737,7 @@ MapCategory::~MapCategory()
 
 const MapCategoryTypes MapCategory::getMapCategoryType(const int eIndex) const
 {
+	FAssert(eIndex > -1 && eIndex < (int)m_aiMapCategoryTypes.size());
 	return static_cast<MapCategoryTypes>(m_aiMapCategoryTypes[eIndex]);
 }
 
@@ -45762,8 +45763,7 @@ const bool MapCategory::isMapCategoryType(const std::vector<int> otherMapCategor
 
 const bool MapCategory::isMapCategoryType(const MapCategoryTypes mapCategory) const
 {
-	FAssert (mapCategory > -1 && mapCategory < (int)m_aiMapCategoryTypes.size());
-
+	FAssert(mapCategory > -1 && mapCategory < GC.getNumMapCategoryInfos());
 	for (int i = 0; i < (int)m_aiMapCategoryTypes.size(); i++)
 	{
 		if (static_cast<MapCategoryTypes>(m_aiMapCategoryTypes[i]) == mapCategory)

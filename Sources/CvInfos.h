@@ -50,6 +50,7 @@ public:
 protected:
 	std::vector<int> m_aiMapCategoryTypes;
 };
+
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //
 //  class : CvInfoBase
