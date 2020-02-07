@@ -55465,6 +55465,19 @@ Base XP gained when defending
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<Action>
+					<MissionType>MISSION_REMOVE_WV_HUMAN_SACRIFICE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_REMOVE_WV_HUMAN_SACRIFICE</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<PythonCallback>doRemoveWVHumanSacrifice</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
@@ -55678,6 +55691,19 @@ Base XP gained when defending
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<Action>
+					<MissionType>MISSION_REMOVE_WV_HUMAN_SACRIFICE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_REMOVE_WV_HUMAN_SACRIFICE</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<PythonCallback>doRemoveWVHumanSacrifice</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
@@ -55887,6 +55913,19 @@ Base XP gained when defending
 								<Is>TAG_OWNED</Is>
 							</PlotCondition>
 							<PythonCallback>doRemoveWVCannibalism</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_REMOVE_WV_HUMAN_SACRIFICE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_REMOVE_WV_HUMAN_SACRIFICE</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<PythonCallback>doRemoveWVHumanSacrifice</PythonCallback>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
@@ -56255,6 +56294,19 @@ Base XP gained when defending
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<Action>
+					<MissionType>MISSION_REMOVE_WV_HUMAN_SACRIFICE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_REMOVE_WV_HUMAN_SACRIFICE</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<PythonCallback>doRemoveWVHumanSacrifice</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
@@ -56428,6 +56480,19 @@ Base XP gained when defending
 								<Is>TAG_OWNED</Is>
 							</PlotCondition>
 							<PythonCallback>doRemoveWVCannibalism</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_REMOVE_WV_HUMAN_SACRIFICE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_REMOVE_WV_HUMAN_SACRIFICE</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<PythonCallback>doRemoveWVHumanSacrifice</PythonCallback>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
@@ -56614,6 +56679,19 @@ Base XP gained when defending
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<Action>
+					<MissionType>MISSION_REMOVE_WV_HUMAN_SACRIFICE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_REMOVE_WV_HUMAN_SACRIFICE</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<PythonCallback>doRemoveWVHumanSacrifice</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
@@ -56741,6 +56819,19 @@ Base XP gained when defending
 								<Is>TAG_OWNED</Is>
 							</PlotCondition>
 							<PythonCallback>doRemoveWVCannibalism</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_REMOVE_WV_HUMAN_SACRIFICE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_REMOVE_WV_HUMAN_SACRIFICE</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<PythonCallback>doRemoveWVHumanSacrifice</PythonCallback>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
@@ -64436,6 +64527,19 @@ Base XP gained when defending
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<Action>
+					<MissionType>MISSION_REMOVE_WV_HUMAN_SACRIFICE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_REMOVE_WV_HUMAN_SACRIFICE</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<PythonCallback>doRemoveWVHumanSacrifice</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 		</UnitInfo>
 		<!--TB Note: By the naval review, this is the Medical Ship -->
@@ -66053,6 +66157,19 @@ Base XP gained when defending
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
+				<Action>
+					<MissionType>MISSION_REMOVE_WV_HUMAN_SACRIFICE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_REMOVE_WV_HUMAN_SACRIFICE</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<PythonCallback>doRemoveWVHumanSacrifice</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
@@ -66152,6 +66269,19 @@ Base XP gained when defending
 								<Is>TAG_OWNED</Is>
 							</PlotCondition>
 							<PythonCallback>doRemoveWVCannibalism</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_REMOVE_WV_HUMAN_SACRIFICE</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_REMOVE_WV_HUMAN_SACRIFICE</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<PythonCallback>doRemoveWVHumanSacrifice</PythonCallback>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
