@@ -14475,8 +14475,6 @@ void CvPlayer::changeLargestCityHappiness(int iChange, bool bLimited)
 /* 	New Civic AI												END 			*/
 /********************************************************************************/
 
-
-int CvPlayer::getWarWearinessPercentAnger() const																
 int CvPlayer::getWarWearinessPercentAnger() const
 {
 	return m_iWarWearinessPercentAnger;
