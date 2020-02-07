@@ -490,15 +490,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GRAIN_GATHERER_2</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
 					<BuildType>BUILD_ROCK_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ROCK_GATHERER_2</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -558,10 +550,6 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
 					<BuildType>BUILD_JUNGLE_CAMP_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -587,10 +575,6 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_TAR_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TAR_GATHERER2</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -57617,15 +57601,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GRAIN_GATHERER_2</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
 					<BuildType>BUILD_ROCK_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ROCK_GATHERER_2</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -57685,10 +57661,6 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
 					<BuildType>BUILD_JUNGLE_CAMP_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -57714,10 +57686,6 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_TAR_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TAR_GATHERER2</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
