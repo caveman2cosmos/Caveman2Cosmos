@@ -39760,91 +39760,10 @@ void CvMainMenuInfo::copyNonDefaults(CvMainMenuInfo* pClassInfo, CvXMLLoadUtilit
 }
 
 /************************************************************************************************/
-/* MODULAR_LOADING_CONTROL				 10/25/07								MRGENIE	  */
+/* MODULAR_LOADING_CONTROL				 10/24/07								MRGENIE	  */
 /*																							  */
 /*																							  */
 /************************************************************************************************/
-// Python Modular Loading
-CvPythonModulesInfo::CvPythonModulesInfo():
-m_bMainInterfaceScreen(false),
-m_bCivicScreen(false),
-m_bCorporationScreen(false),
-m_bDomesticAdvisor(false),
-m_bEspionageAdvisor(false),
-m_bForeignAdvisor(false),
-m_bMilitaryAdvisor(false),
-m_bVictoryScreen(false),
-m_iScreen(0)
-{
-}
-
-CvPythonModulesInfo::~CvPythonModulesInfo()
-{
-}
-
-bool CvPythonModulesInfo::isMainInterfaceScreen()
-{
-	return m_bMainInterfaceScreen;
-}
-
-bool CvPythonModulesInfo::isCivicScreen()
-{
-	return m_bCivicScreen;
-}
-
-bool CvPythonModulesInfo::isCorporationScreen()
-{
-	return m_bCorporationScreen;
-}
-
-bool CvPythonModulesInfo::isDomesticAdvisor()
-{
-	return m_bDomesticAdvisor;
-}
-
-bool CvPythonModulesInfo::isEspionageAdvisor()
-{
-	return m_bEspionageAdvisor;
-}
-
-bool CvPythonModulesInfo::isForeignAdvisor()
-{
-	return m_bForeignAdvisor;
-}
-
-bool CvPythonModulesInfo::isMilitaryAdvisor()
-{
-	return m_bMilitaryAdvisor;
-}
-
-bool CvPythonModulesInfo::isVictoryScreen()
-{
-	return m_bVictoryScreen;
-}
-
-int CvPythonModulesInfo::getScreen()
-{
-	return m_iScreen;
-}
-
-bool CvPythonModulesInfo::read(CvXMLLoadUtility* pXML)
-{
-	if (!CvInfoBase::read(pXML))
-	{
-		return false;
-	}
-	pXML->GetOptionalChildXmlValByName(&m_bMainInterfaceScreen, L"bMainInterfaceScreen");
-	pXML->GetOptionalChildXmlValByName(&m_bCivicScreen, L"bCivicScreen");
-	pXML->GetOptionalChildXmlValByName(&m_bCorporationScreen, L"bCorporationScreen");
-	pXML->GetOptionalChildXmlValByName(&m_bDomesticAdvisor, L"bDomesticAdvisor");
-	pXML->GetOptionalChildXmlValByName(&m_bEspionageAdvisor, L"bEspionageAdvisor");
-	pXML->GetOptionalChildXmlValByName(&m_bForeignAdvisor, L"bForeignAdvisor");
-	pXML->GetOptionalChildXmlValByName(&m_bMilitaryAdvisor, L"bMilitaryAdvisor");
-	pXML->GetOptionalChildXmlValByName(&m_bVictoryScreen, L"bVictoryScreen");
-	pXML->GetOptionalChildXmlValByName(&m_iScreen, L"iScreen");
-	return true;
-}
-
 // MLF loading
 CvModLoadControlInfo::CvModLoadControlInfo():
 m_bLoad(NULL),
