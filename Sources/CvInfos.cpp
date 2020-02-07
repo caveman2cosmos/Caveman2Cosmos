@@ -10075,8 +10075,6 @@ m_bAnyImprovementYieldChange(false)
 //------------------------------------------------------------------------------------------------------
 CvCivicInfo::~CvCivicInfo()
 {
-	int iI;
-
 	SAFE_DELETE_ARRAY(m_piYieldModifier);
 	SAFE_DELETE_ARRAY(m_piCapitalYieldModifier);
 	SAFE_DELETE_ARRAY(m_piTradeYieldModifier);
@@ -10089,19 +10087,7 @@ CvCivicInfo::~CvCivicInfo()
 	SAFE_DELETE_ARRAY(m_pabHurry);
 	SAFE_DELETE_ARRAY(m_pabSpecialBuildingNotRequired);
 	SAFE_DELETE_ARRAY(m_pabSpecialistValid);
-	if (m_ppiImprovementYieldChanges != NULL)
-	{
-		for (iI=0;iI<GC.getNumImprovementInfos();iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppiImprovementYieldChanges[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppiImprovementYieldChanges);
-	}
-/************************************************************************************************/
-/* Afforess					  Start		 Last Update: 3/8/10									*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+	SAFE_DELETE_ARRAY2(m_ppiImprovementYieldChanges, GC.getNumImprovementInfos());
 	SAFE_DELETE_ARRAY(m_piFlavorValue);
 	SAFE_DELETE_ARRAY(m_piBonusMintedPercent);
 	SAFE_DELETE_ARRAY(m_piCivicAttitudeChanges);
@@ -10113,57 +10099,12 @@ CvCivicInfo::~CvCivicInfo()
 	SAFE_DELETE_ARRAY(m_piFreeSpecialistCount);
 	SAFE_DELETE_ARRAY(m_piImprovementHappinessChanges);
 	SAFE_DELETE_ARRAY(m_piImprovementHealthPercentChanges);
-	if (m_ppiBuildingCommerceModifier != NULL)
-	{
-		for (iI=0;iI<GC.getNumBuildingInfos();iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppiBuildingCommerceModifier[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppiBuildingCommerceModifier);
-	}
-	if (m_ppiBuildingClassCommerceChange != NULL)
-		{
-			for (iI=0;iI<GC.getNumBuildingClassInfos();iI++)
-			{
-				SAFE_DELETE_ARRAY(m_ppiBuildingClassCommerceChange[iI]);
-			}
-			SAFE_DELETE_ARRAY(m_ppiBuildingClassCommerceChange);
-		}
-	if (m_ppiBonusCommerceModifier != NULL)
-	{
-		for (iI=0;iI<GC.getNumBonusInfos();iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppiBonusCommerceModifier[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppiBonusCommerceModifier);
-	}
-	if (m_ppiTerrainYieldChanges != NULL)
-	{
-		for (iI=0;iI<GC.getNumTerrainInfos();iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppiTerrainYieldChanges[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppiTerrainYieldChanges);
-	}
-	if (m_ppiSpecialistYieldPercentChanges != NULL)
-	{
-		for (iI=0;iI<GC.getNumSpecialistInfos();iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppiSpecialistYieldPercentChanges[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppiSpecialistYieldPercentChanges);
-	}
-	if (m_ppiSpecialistCommercePercentChanges != NULL)
-	{
-		for (iI=0;iI<GC.getNumSpecialistInfos();iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppiSpecialistCommercePercentChanges[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppiSpecialistCommercePercentChanges);
-	}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+	SAFE_DELETE_ARRAY2(m_ppiBuildingCommerceModifier, GC.getNumBuildingInfos());
+	SAFE_DELETE_ARRAY2(m_ppiBuildingClassCommerceChange, GC.getNumBuildingClassInfos());
+	SAFE_DELETE_ARRAY2(m_ppiBonusCommerceModifier, GC.getNumBonusInfos());
+	SAFE_DELETE_ARRAY2(m_ppiTerrainYieldChanges, GC.getNumTerrainInfos());
+	SAFE_DELETE_ARRAY2(m_ppiSpecialistYieldPercentChanges, GC.getNumSpecialistInfos());
+	SAFE_DELETE_ARRAY2(m_ppiSpecialistCommercePercentChanges, GC.getNumSpecialistInfos());
 }
 
 const wchar* CvCivicInfo::getWeLoveTheKing()
@@ -17349,8 +17290,6 @@ m_paImprovementBonus(NULL)
 //------------------------------------------------------------------------------------------------------
 CvImprovementInfo::~CvImprovementInfo()
 {
-	int iI;
-
 	SAFE_DELETE_ARRAY(m_piPrereqNatureYield);
 	SAFE_DELETE_ARRAY(m_piYieldChange);
 	SAFE_DELETE_ARRAY(m_piRiverSideYieldChange);
@@ -17358,45 +17297,11 @@ CvImprovementInfo::~CvImprovementInfo()
 	SAFE_DELETE_ARRAY(m_piIrrigatedChange);
 	SAFE_DELETE_ARRAY(m_pbTerrainMakesValid);
 	SAFE_DELETE_ARRAY(m_pbFeatureMakesValid);
+	SAFE_DELETE_ARRAY(m_paImprovementBonus); // XXX make sure this isn't leaking memory...
+	SAFE_DELETE_ARRAY2(m_ppiTechYieldChanges, GC.getNumTechInfos());
+	SAFE_DELETE_ARRAY2(m_ppiRouteYieldChanges, GC.getNumRouteInfos());
+	//	SAFE_DELETE_ARRAY2(m_ppiTraitYieldChanges, GC.getNumTraitInfos());
 
-	if (m_paImprovementBonus != NULL)
-	{
-		SAFE_DELETE_ARRAY(m_paImprovementBonus); // XXX make sure this isn't leaking memory...
-	}
-
-	if (m_ppiTechYieldChanges != NULL)
-	{
-		for (iI=0;iI<GC.getNumTechInfos();iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppiTechYieldChanges[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppiTechYieldChanges);
-	}
-
-	if (m_ppiRouteYieldChanges != NULL)
-	{
-		for (iI=0;iI<GC.getNumRouteInfos();iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppiRouteYieldChanges[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppiRouteYieldChanges);
-	}
-/************************************************************************************************/
-/* Afforess					  Start		 08/26/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	//if (m_ppiTraitYieldChanges != NULL)
-	//{
-	//	for (iI=0;iI<GC.getNumTraitInfos();iI++)
-	//	{
-	//		SAFE_DELETE_ARRAY(m_ppiTraitYieldChanges[iI]);
-	//	}
-	//	SAFE_DELETE_ARRAY(m_ppiTraitYieldChanges);
-	//}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 	for (int i=0; i<(int)m_aiAlternativeImprovementUpgradeTypes.size(); i++)
 	{
 		GC.removeDelayedResolution((int*)&(m_aiAlternativeImprovementUpgradeTypes[i]));
@@ -25779,39 +25684,12 @@ CvTraitInfo::CvTraitInfo()
 //------------------------------------------------------------------------------------------------------
 CvTraitInfo::~CvTraitInfo()
 {
-
 	SAFE_DELETE_ARRAY(m_paiExtraYieldThreshold);
 	SAFE_DELETE_ARRAY(m_paiTradeYieldModifier);
 	SAFE_DELETE_ARRAY(m_paiCommerceChange);
 	SAFE_DELETE_ARRAY(m_paiCommerceModifier);
-
-/************************************************************************************************/
-/* Afforess					  Start		 08/26/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-/*
-	SAFE_DELETE_ARRAY(m_pabFreePromotionUnitCombat);
-	SAFE_DELETE_ARRAY(m_pabFreePromotion);
-*/
-	if (m_ppbFreePromotionUnitCombats != NULL)
-	{
-		for (int iI=0;iI<GC.getNumPromotionInfos();iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppbFreePromotionUnitCombats[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppbFreePromotionUnitCombats);
-	}
-	//TB Traits begin
-	//Arrays
-	if (m_ppaiSpecialistYieldChange != NULL)
-	{
-		for(int i=0;i<GC.getNumSpecialistInfos();i++)
-		{
-			SAFE_DELETE_ARRAY(m_ppaiSpecialistYieldChange[i]);
-		}
-		SAFE_DELETE_ARRAY(m_ppaiSpecialistYieldChange);
-	}
+	SAFE_DELETE_ARRAY2(m_ppbFreePromotionUnitCombats, GC.getNumPromotionInfos());
+	SAFE_DELETE_ARRAY2(m_ppaiSpecialistYieldChange, GC.getNumSpecialistInfos());
 	SAFE_DELETE_ARRAY(m_piYieldModifier);
 	SAFE_DELETE_ARRAY(m_piCapitalYieldModifier);
 	SAFE_DELETE_ARRAY(m_piCapitalCommerceModifier);
@@ -25820,26 +25698,12 @@ CvTraitInfo::~CvTraitInfo()
 	SAFE_DELETE_ARRAY(m_piYieldChange);
 	SAFE_DELETE_ARRAY(m_paiLessYieldThreshold);
 	SAFE_DELETE_ARRAY(m_piSeaPlotYieldChanges);
-//Team Project (7)
 	SAFE_DELETE_ARRAY(m_piGoldenAgeYieldChanges);
 	SAFE_DELETE_ARRAY(m_piGoldenAgeCommerceChanges);
-	if (m_ppaiSpecialistCommerceChange != NULL)
-	{
-		for(int i=0;i<GC.getNumSpecialistInfos();i++)
-		{
-			SAFE_DELETE_ARRAY(m_ppaiSpecialistCommerceChange[i]);
-		}
-		SAFE_DELETE_ARRAY(m_ppaiSpecialistCommerceChange);
-	}
+	SAFE_DELETE_ARRAY2(m_ppaiSpecialistCommerceChange, GC.getNumSpecialistInfos());
 	SAFE_DELETE_ARRAY(m_piFlavorValue);
-	if (m_ppaiImprovementYieldChange != NULL)
-	{
-		for(int i=0;i<GC.getNumImprovementInfos();i++)
-		{
-			SAFE_DELETE_ARRAY(m_ppaiImprovementYieldChange[i]);
-		}
-		SAFE_DELETE_ARRAY(m_ppaiImprovementYieldChange);
-	}
+	SAFE_DELETE_ARRAY2(m_ppaiImprovementYieldChange, GC.getNumImprovementInfos());
+
 //	 int vector utilizing struct with delayed resolution
 	for (int i=0; i<(int)m_aBuildWorkerSpeedModifierTypes.size(); i++)
 	{

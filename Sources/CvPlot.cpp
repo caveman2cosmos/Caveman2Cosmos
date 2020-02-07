@@ -200,44 +200,11 @@ void CvPlot::uninit()
 	SAFE_DELETE_ARRAY(m_aeRevealedRouteType);
 
 	SAFE_DELETE_ARRAY(m_aiMountainLeaderCount);
-/************************************************************************************************/
-/* Afforess	                  Start		 02/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	SAFE_DELETE_ARRAY(m_aiOccupationCultureRangeCities);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
 	SAFE_DELETE_ARRAY(m_paiBuildProgress);
-
-	if (NULL != m_apaiCultureRangeCities)
-	{
-		for (int iI = 0; iI < MAX_PLAYERS; ++iI)
-		{
-			SAFE_DELETE_ARRAY(m_apaiCultureRangeCities[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_apaiCultureRangeCities);
-	}
-
-	if (NULL != m_apaiInvisibleVisibilityCount)
-	{
-		for (int iI = 0; iI < MAX_TEAMS; ++iI)
-		{
-			SAFE_DELETE_ARRAY(m_apaiInvisibleVisibilityCount[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_apaiInvisibleVisibilityCount);
-	}
-
-	//if (NULL != m_apaiCachedHighestTeamInvisibilityIntensity)
-	//{
-	//	for (int iI = 0; iI < MAX_TEAMS; ++iI)
-	//	{
-	//		SAFE_DELETE_ARRAY(m_apaiCachedHighestTeamInvisibilityIntensity[iI]);
-	//	}
-	//	SAFE_DELETE_ARRAY(m_apaiCachedHighestTeamInvisibilityIntensity);
-	//}
+	SAFE_DELETE_ARRAY2(m_apaiCultureRangeCities, MAX_PLAYERS);
+	SAFE_DELETE_ARRAY2(m_apaiInvisibleVisibilityCount, MAX_TEAMS);
+	//	SAFE_DELETE_ARRAY2(m_apaiCachedHighestTeamInvisibilityIntensity, MAX_TEAMS);
 
 	m_aPlotTeamVisibilityIntensity.clear();
 	m_units.clear();
