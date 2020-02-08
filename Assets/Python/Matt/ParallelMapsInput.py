@@ -23,7 +23,7 @@ class ParallelMapsInput:
 		GC.setDefineINT("ENABLE_MULTIMAPS", 1)
 		GC.updateMaps()
 		self.pEventManager.addEventHandler("kbdEvent", self.filterInput)
-		#self.updatePlayerContainers()
+		self.updatePlayerContainers()
 		CvUtil.sendImmediateMessage("Multi-Maps enabled.")
 
 	def updatePlayerContainers(self):
@@ -41,7 +41,7 @@ class ParallelMapsInput:
 				CvUtil.sendImmediateMessage("Key: %d" %i)
 				if not GC.mapInitialized(i):
 					self.initMap(i)
-					#self.initPlayerContainers(i)
+					self.initPlayerContainers(i)
 				#else:
 				GC.switchMap(i)
 
