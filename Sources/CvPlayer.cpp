@@ -328,6 +328,8 @@ m_cachedBonusCount(NULL)
 		m_cachedTotalCityBaseCommerceRate[i] = MAX_INT;
 	}
 
+	addMembers();
+
 	reset(NO_PLAYER, true);
 }
 
@@ -380,6 +382,15 @@ CvPlayer::~CvPlayer()
 	//TB Traits end
 
 	SAFE_DELETE_ARRAY(m_cachedBonusCount);
+
+	for (int i = 0; i < GC.getNumMapInfos(); i++)
+	{
+		SAFE_DELETE(m_groupCycles[i]);
+		SAFE_DELETE(m_plotGroups[i]);
+		SAFE_DELETE(m_cities[i]);
+		SAFE_DELETE(m_units[i]);
+		SAFE_DELETE(m_selectionGroups[i]);
+	}
 }
 
 
@@ -396,13 +407,7 @@ void CvPlayer::init(PlayerTypes eID)
 
 	//--------------------------------
 	// Init containers
-	m_plotGroups.init();
-
-	m_cities.init();
-
-	m_units.init();
-
-	m_selectionGroups.init();
+	initMembers(MAP_INITIAL);
 
 	m_eventsTriggered.init();
 
@@ -586,13 +591,13 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 
 	//--------------------------------
 	// Init containers
-	m_plotGroups.init();
-
-	m_cities.init();
-
-	m_units.init();
-
-	m_selectionGroups.init();
+	for (int i = 0; i < GC.getNumMapInfos(); i++)
+	{
+		if (GC.mapInitialized((MapTypes)i))
+		{
+			initMembers(i);
+		}
+	}
 
 	m_eventsTriggered.init();
 
@@ -986,21 +991,20 @@ void CvPlayer::uninit()
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
-	m_groupCycle.clear();
-
 	m_researchQueue.clear();
 
 	m_cityNames.clear();
 
 	m_contractBroker.reset();
 
-	m_plotGroups.uninit();
-
-	m_cities.uninit();
-
-	m_units.uninit();
-
-	m_selectionGroups.uninit();
+	for (int i = 0; i < GC.getNumMapInfos(); i++)
+	{
+		m_groupCycles[i]->clear();
+		m_plotGroups[i]->uninit();
+		m_cities[i]->uninit();
+		m_units[i]->uninit();
+		m_selectionGroups[i]->uninit();
+	}
 
 	m_eventsTriggered.uninit();
 
@@ -1026,6 +1030,8 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	//--------------------------------
 	// Uninit class
 	uninit();
+
+	updateMembers();
 
 	// < M.A.D. Nukes Start >
 	m_iMADDeterrent = 0;
@@ -1872,14 +1878,15 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		m_triggersFired.clear();
 	}
 
-	m_plotGroups.removeAll();
+	for (iI = 0; iI < GC.getNumMapInfos(); iI++)
+	{
+		m_plotGroups[iI]->removeAll();
+		m_cities[iI]->removeAll();
+		m_units[iI]->removeAll();
+		m_selectionGroups[iI]->removeAll();
+	}
 
-	m_cities.removeAll();
-
-	m_units.removeAll();
 	m_pTempUnit = NULL;
-
-	m_selectionGroups.removeAll();
 
 	m_eventsTriggered.removeAll();
 
@@ -5690,7 +5697,7 @@ void CvPlayer::updatePlotGroups(CvArea* possibleNewInAreaOnly, bool reInitialize
 				pLoopPlot->setPlotGroup(getID(), NULL, false);
 			}
 
-			m_plotGroups.removeAll();
+			m_plotGroups[GC.getGame().getCurrentMap()]->removeAll();
 		}
 		else
 		{
@@ -15872,7 +15879,7 @@ void CvPlayer::setNewPlayerAlive(bool bNewValue)
 			}
 
 			//	Free the now-stale plot groups
-			m_plotGroups.removeAll();
+			m_plotGroups[GC.getGame().getCurrentMap()]->removeAll();
 		}
 
 		GC.getGameINLINE().setScoreDirty(true);
@@ -18936,11 +18943,11 @@ void CvPlayer::updateGroupCycle(CvUnit* pUnit, bool bFarMove)
 
 	if (pBestSelectionGroupNode != NULL)
 	{
-		m_groupCycle.insertBefore(pUnit->getGroupID(), pBestSelectionGroupNode);
+		m_groupCycles[GC.getGame().getCurrentMap()]->insertBefore(pUnit->getGroupID(), pBestSelectionGroupNode);
 	}
 	else
 	{
-		m_groupCycle.insertAtEnd(pUnit->getGroupID());
+		m_groupCycles[GC.getGame().getCurrentMap()]->insertAtEnd(pUnit->getGroupID());
 	}
 }
 
@@ -18972,31 +18979,31 @@ CLLNode<int>* CvPlayer::removeGroupCycle(int iID)
 
 CLLNode<int>* CvPlayer::deleteGroupCycleNode(CLLNode<int>* pNode)
 {
-	return m_groupCycle.deleteNode(pNode);
+	return m_groupCycles[GC.getGame().getCurrentMap()]->deleteNode(pNode);
 }
 
 
 CLLNode<int>* CvPlayer::nextGroupCycleNode(CLLNode<int>* pNode) const
 {
-	return m_groupCycle.next(pNode);
+	return m_groupCycles[GC.getGame().getCurrentMap()]->next(pNode);
 }
 
 
 CLLNode<int>* CvPlayer::previousGroupCycleNode(CLLNode<int>* pNode) const
 {
-	return m_groupCycle.prev(pNode);
+	return m_groupCycles[GC.getGame().getCurrentMap()]->prev(pNode);
 }
 
 
 CLLNode<int>* CvPlayer::headGroupCycleNode() const
 {
-	return m_groupCycle.head();
+	return m_groupCycles[GC.getGame().getCurrentMap()]->head();
 }
 
 
 CLLNode<int>* CvPlayer::tailGroupCycleNode() const
 {
-	return m_groupCycle.tail();
+	return m_groupCycles[GC.getGame().getCurrentMap()]->tail();
 }
 
 // AIAndy: This can cause a large huge amount of paths to be created if there are lots of OR with lots of subsets the same (so especially a very expensive operation when the target tech is far away)
@@ -19385,33 +19392,71 @@ CLLNode<CvWString>* CvPlayer::headCityNameNode() const
 }
 
 
+int CvPlayer::getNumMembers() const
+{
+	return (int)m_groupCycles.size();
+}
+
+void CvPlayer::updateMembers()
+{
+	if (GC.multiMapsEnabled())
+	{
+		const int numMapInfos = GC.getNumMapInfos();
+		if ((int)m_groupCycles.size() <= numMapInfos)
+		{
+			for (int i = 1; i < numMapInfos; i++)
+			{
+				addMembers();
+			}
+		}
+		FAssert((int)m_groupCycles.size() == numMapInfos);
+	}
+}
+
+void CvPlayer::addMembers()
+{
+	m_groupCycles.push_back(new CLinkList<int>);
+	m_plotGroups.push_back(new FFreeListTrashArray<CvPlotGroup>);
+	m_cities.push_back(new FFreeListTrashArray<CvCityAI>);
+	m_units.push_back(new FFreeListTrashArray<CvUnitAI>);
+	m_selectionGroups.push_back(new FFreeListTrashArray<CvSelectionGroupAI>);
+}
+
+void CvPlayer::initMembers(const int iIndex)
+{
+	m_plotGroups[iIndex]->init();
+	m_cities[iIndex]->init();
+	m_units[iIndex]->init();
+	m_selectionGroups[iIndex]->init(); 
+}
+
 CvPlotGroup* CvPlayer::firstPlotGroup(int *pIterIdx, bool bRev) const
 {
-	return !bRev ? m_plotGroups.beginIter(pIterIdx) : m_plotGroups.endIter(pIterIdx);
+	return !bRev ? m_plotGroups[GC.getGame().getCurrentMap()]->beginIter(pIterIdx) : m_plotGroups[GC.getGame().getCurrentMap()]->endIter(pIterIdx);
 }
 
 
 CvPlotGroup* CvPlayer::nextPlotGroup(int *pIterIdx, bool bRev) const
 {
-	return !bRev ? m_plotGroups.nextIter(pIterIdx) : m_plotGroups.prevIter(pIterIdx);
+	return !bRev ? m_plotGroups[GC.getGame().getCurrentMap()]->nextIter(pIterIdx) : m_plotGroups[GC.getGame().getCurrentMap()]->prevIter(pIterIdx);
 }
 
 
 int CvPlayer::getNumPlotGroups() const
 {
-	return m_plotGroups.getCount();
+	return m_plotGroups[GC.getGame().getCurrentMap()]->getCount();
 }
 
 
 CvPlotGroup* CvPlayer::getPlotGroup(int iID) const
 {
-	return((CvPlotGroup *)(m_plotGroups.getAt(iID)));
+	return((CvPlotGroup *)(m_plotGroups[GC.getGame().getCurrentMap()]->getAt(iID)));
 }
 
 
 CvPlotGroup* CvPlayer::addPlotGroup()
 {
-	return((CvPlotGroup *)(m_plotGroups.add()));
+	return((CvPlotGroup *)(m_plotGroups[GC.getGame().getCurrentMap()]->add()));
 }
 
 
@@ -19428,18 +19473,18 @@ void CvPlayer::deletePlotGroup(int iID)
 		}
 	}
 #endif
-	m_plotGroups.removeAt(iID);
+	m_plotGroups[GC.getGame().getCurrentMap()]->removeAt(iID);
 }
 
 
 CvCity* CvPlayer::firstCity(int *pIterIdx, bool bRev) const
 {
-	return !bRev ? m_cities.beginIter(pIterIdx) : m_cities.endIter(pIterIdx);
+	return !bRev ? m_cities[GC.getGame().getCurrentMap()]->beginIter(pIterIdx) : m_cities[GC.getGame().getCurrentMap()]->endIter(pIterIdx);
 }
 
 CvCity* CvPlayer::nextCity(int *pIterIdx, bool bRev) const
 {
-	return !bRev ? m_cities.nextIter(pIterIdx) : m_cities.prevIter(pIterIdx);
+	return !bRev ? m_cities[GC.getGame().getCurrentMap()]->nextIter(pIterIdx) : m_cities[GC.getGame().getCurrentMap()]->prevIter(pIterIdx);
 }
 
 
@@ -19449,7 +19494,7 @@ CvCity* CvPlayer::nextCityExternal(int *pIterIdx, bool bRev) const
 
 	do
 	{
-		pResult = (!bRev ? m_cities.nextIter(pIterIdx) : m_cities.prevIter(pIterIdx));
+		pResult = (!bRev ? m_cities[GC.getGame().getCurrentMap()]->nextIter(pIterIdx) : m_cities[GC.getGame().getCurrentMap()]->prevIter(pIterIdx));
 	} while(pResult && !pResult->isInViewport());
 
 	return pResult;
@@ -19457,7 +19502,7 @@ CvCity* CvPlayer::nextCityExternal(int *pIterIdx, bool bRev) const
 
 CvCity* CvPlayer::firstCityExternal(int *pIterIdx, bool bRev) const
 {
-	CvCity* pResult = (!bRev ? m_cities.beginIter(pIterIdx) : m_cities.endIter(pIterIdx));
+	CvCity* pResult = (!bRev ? m_cities[GC.getGame().getCurrentMap()]->beginIter(pIterIdx) : m_cities[GC.getGame().getCurrentMap()]->endIter(pIterIdx));
 
 	if ( pResult == NULL || pResult->isInViewport() )
 	{
@@ -19472,31 +19517,31 @@ CvCity* CvPlayer::firstCityExternal(int *pIterIdx, bool bRev) const
 
 int CvPlayer::getNumCities() const
 {
-	return m_cities.getCount();
+	return m_cities[GC.getGame().getCurrentMap()]->getCount();
 }
 
 
 CvCity* CvPlayer::getCity(int iID) const
 {
-	return(m_cities.getAt(iID));
+	return(m_cities[GC.getGame().getCurrentMap()]->getAt(iID));
 }
 
 
 CvCity* CvPlayer::addCity()
 {
-	return(m_cities.add());
+	return(m_cities[GC.getGame().getCurrentMap()]->add());
 }
 
 
 void CvPlayer::deleteCity(int iID)
 {
-	m_cities.removeAt(iID);
+	m_cities[GC.getGame().getCurrentMap()]->removeAt(iID);
 }
 
 
 CvUnit* CvPlayer::firstUnit(int *pIterIdx, bool bRev) const
 {
-	CvUnit* pResult = !bRev ? m_units.beginIter(pIterIdx) : m_units.endIter(pIterIdx);
+	CvUnit* pResult = !bRev ? m_units[GC.getGame().getCurrentMap()]->beginIter(pIterIdx) : m_units[GC.getGame().getCurrentMap()]->endIter(pIterIdx);
 
 	if ( pResult != NULL && pResult == m_pTempUnit )
 	{
@@ -19509,7 +19554,7 @@ CvUnit* CvPlayer::firstUnit(int *pIterIdx, bool bRev) const
 
 CvUnit* CvPlayer::nextUnit(int *pIterIdx, bool bRev) const
 {
-	CvUnit* pResult = !bRev ? m_units.nextIter(pIterIdx) : m_units.prevIter(pIterIdx);
+	CvUnit* pResult = !bRev ? m_units[GC.getGame().getCurrentMap()]->nextIter(pIterIdx) : m_units[GC.getGame().getCurrentMap()]->prevIter(pIterIdx);
 
 	if ( pResult != NULL && pResult == m_pTempUnit )
 	{
@@ -19547,18 +19592,18 @@ CvUnit* CvPlayer::nextUnitExternal(int *pIterIdx, bool bRev) const
 
 int CvPlayer::getNumUnits() const
 {
-	return m_units.getCount() - (m_pTempUnit != NULL ? 1 : 0);
+	return m_units[GC.getGame().getCurrentMap()]->getCount() - (m_pTempUnit != NULL ? 1 : 0);
 }
 
 
 CvUnit* CvPlayer::getUnit(int iID) const
 {
-	return (m_units.getAt(iID));
+	return (m_units[GC.getGame().getCurrentMap()]->getAt(iID));
 }
 
 CvUnit* CvPlayer::addUnit()
 {
-	return m_units.add();
+	return m_units[GC.getGame().getCurrentMap()]->add();
 }
 
 
@@ -19593,12 +19638,12 @@ void CvPlayer::deleteUnit(int iID)
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
-	m_units.removeAt(iID);
+	m_units[GC.getGame().getCurrentMap()]->removeAt(iID);
 }
 
 CvSelectionGroup* CvPlayer::firstSelectionGroup(int *pIterIdx, bool bRev) const
 {
-	CvSelectionGroup* pResult = !bRev ? m_selectionGroups.beginIter(pIterIdx) : m_selectionGroups.endIter(pIterIdx);
+	CvSelectionGroup* pResult = !bRev ? m_selectionGroups[GC.getGame().getCurrentMap()]->beginIter(pIterIdx) : m_selectionGroups[GC.getGame().getCurrentMap()]->endIter(pIterIdx);
 
 	if ( pResult != NULL && pResult->getHeadUnit() != NULL && pResult->getHeadUnit() == m_pTempUnit )
 	{
@@ -19610,7 +19655,7 @@ CvSelectionGroup* CvPlayer::firstSelectionGroup(int *pIterIdx, bool bRev) const
 
 CvSelectionGroup* CvPlayer::nextSelectionGroup(int *pIterIdx, bool bRev) const
 {
-	CvSelectionGroup* pResult = !bRev ? m_selectionGroups.nextIter(pIterIdx) : m_selectionGroups.prevIter(pIterIdx);
+	CvSelectionGroup* pResult = !bRev ? m_selectionGroups[GC.getGame().getCurrentMap()]->nextIter(pIterIdx) : m_selectionGroups[GC.getGame().getCurrentMap()]->prevIter(pIterIdx);
 
 	if ( pResult != NULL && pResult->getHeadUnit() != NULL && pResult->getHeadUnit() == m_pTempUnit )
 	{
@@ -19642,26 +19687,26 @@ CvSelectionGroup* CvPlayer::nextSelectionGroupNonEmpty(int* pIterIdx, bool bRev)
 
 int CvPlayer::getNumSelectionGroups() const
 {
-	return m_selectionGroups.getCount() - (m_pTempUnit != NULL ? 1 : 0);
+	return m_selectionGroups[GC.getGame().getCurrentMap()]->getCount() - (m_pTempUnit != NULL ? 1 : 0);
 }
 
 
 CvSelectionGroup* CvPlayer::getSelectionGroup(int iID) const
 {
-	return ((CvSelectionGroup *)(m_selectionGroups.getAt(iID)));
+	return ((CvSelectionGroup *)(m_selectionGroups[GC.getGame().getCurrentMap()]->getAt(iID)));
 }
 
 
 CvSelectionGroup* CvPlayer::addSelectionGroup()
 {
-	return ((CvSelectionGroup *)(m_selectionGroups.add()));
+	return ((CvSelectionGroup *)(m_selectionGroups[GC.getGame().getCurrentMap()]->add()));
 }
 
 
 void CvPlayer::deleteSelectionGroup(int iID)
 {
-	bool bRemoved = m_selectionGroups.removeAt(iID);
-
+	bool bRemoved = m_selectionGroups[GC.getGame().getCurrentMap()]->removeAt(iID);
+	
 	FAssertMsg(bRemoved, "could not find group, delete failed");
 }
 
@@ -24542,7 +24587,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 			}
 		}
 
-		m_groupCycle.Read(pStream);
 		m_researchQueue.Read(pStream);
 
 		//	The research queue itself is not a streamable type so is serialized in raw
@@ -24583,9 +24627,14 @@ void CvPlayer::read(FDataStreamBase* pStream)
 			}
 		}
 
-		ReadStreamableFFreeListTrashArray(m_plotGroups, pStream);
-		ReadStreamableFFreeListTrashArray(m_cities, pStream);
-		ReadStreamableFFreeListTrashArray(m_units, pStream);
+		for (iI = 0; iI < GC.getNumMapInfos(); iI++)
+		{
+			m_groupCycles[iI]->Read(pStream);
+			ReadStreamableFFreeListTrashArray(*m_plotGroups[iI], pStream);
+			ReadStreamableFFreeListTrashArray(*m_cities[iI], pStream);
+			ReadStreamableFFreeListTrashArray(*m_units[iI], pStream);
+			ReadStreamableFFreeListTrashArray(*m_selectionGroups[iI], pStream);
+		}
 	/************************************************************************************************/
 	/* Afforess	                  Start		 03/30/10                                               */
 	/*                                                                                              */
@@ -24608,8 +24657,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		}
 	/************************************************************************************************/
 	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
-		ReadStreamableFFreeListTrashArray(m_selectionGroups, pStream);
+	/************************************************************************************************/	
 		ReadStreamableFFreeListTrashArray(m_eventsTriggered, pStream);
 
 		// @SAVEBREAK DELETE 21/11/2019
@@ -25608,7 +25656,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_YIELD_TYPES, m_ppaaiImprovementYieldChange[iI]);
 		}
 
-		m_groupCycle.Write(pStream);
 		m_researchQueue.Write(pStream);
 
 		{
@@ -25623,10 +25670,15 @@ void CvPlayer::write(FDataStreamBase* pStream)
 			}
 		}
 
-		WriteStreamableFFreeListTrashArray(m_plotGroups, pStream);
-		WriteStreamableFFreeListTrashArray(m_cities, pStream);
-		WriteStreamableFFreeListTrashArray(m_units, pStream);
-		WriteStreamableFFreeListTrashArray(m_selectionGroups, pStream);
+		for (iI = 0; iI < GC.getNumMapInfos(); iI++)
+		{
+			m_groupCycles[iI]->Write(pStream);
+			WriteStreamableFFreeListTrashArray(*m_plotGroups[iI], pStream);
+			WriteStreamableFFreeListTrashArray(*m_cities[iI], pStream);
+			WriteStreamableFFreeListTrashArray(*m_units[iI], pStream);
+			WriteStreamableFFreeListTrashArray(*m_selectionGroups[iI], pStream);
+		}
+
 		WriteStreamableFFreeListTrashArray(m_eventsTriggered, pStream);
 
 		{
