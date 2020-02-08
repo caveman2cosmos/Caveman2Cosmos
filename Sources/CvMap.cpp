@@ -1493,10 +1493,22 @@ void CvMap::afterSwitch()
 	gDLL->getInterfaceIFace()->setDirty(SelectionCamera_DIRTY_BIT, true);
 	gDLL->getInterfaceIFace()->setDirty(HighlightPlot_DIRTY_BIT, true);
 	
+	int iWidth = GC.getMapInfo(getType()).getGridWidth();
+	if (iWidth == 0)
+	{
+		iWidth = MAX_INT;
+	}
+
+	int iHeight = GC.getMapInfo(getType()).getGridHeight();
+	if (iHeight == 0)
+	{
+		iHeight = MAX_INT;
+	}
+
 	for (int i = 0; i < numPlotsINLINE(); i++)
 	{
 		//	Koshlimg - this is no longer necesary (or correct) with viewports enabled
-		if (!GC.viewportsEnabled() && (plotByIndex(i)->getX() > GC.getMapInfo(getType()).getGridWidth() || plotByIndex(i)->getY() > GC.getMapInfo(getType()).getGridHeight()))
+		if (!GC.viewportsEnabled() && (plotByIndex(i)->getX() > iWidth || plotByIndex(i)->getY() > iHeight))
 		{
 			plotByIndex(i)->setNull(true);
 		}
