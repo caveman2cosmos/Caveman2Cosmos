@@ -21,6 +21,11 @@ CyGame::CyGame(CvGameAI* pGame) : m_pGame(pGame)
 
 }
 
+int CyGame::getCurrentMap() const
+{
+	return m_pGame->getCurrentMap();
+}
+
 /************************************************************************************************/
 /* REVOLUTION_MOD                                                                 lemmy101      */
 /*                                                                                jdog5000      */

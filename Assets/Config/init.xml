@@ -112,4 +112,5 @@
 	<load mod="NaturalWonders"/>
 	<load mod="GreatPersonBornDisplay"/>
 	<events module="WoodlandCycle"/>
+	<events module="ParallelMapsInput"/>
 </bug>
