@@ -189,7 +189,8 @@
 			<iCost>2536</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_INTERSTELLAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -228,7 +229,8 @@
 			<iCost>2536</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_INTERSTELLAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -265,7 +267,8 @@
 			<iCost>2536</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_INTERSTELLAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -303,7 +306,8 @@
 			<iCost>2536</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_INTERSTELLAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -364,7 +368,8 @@
 			<iCost>5269</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_INTERSTELLAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -372,6 +377,12 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
+			<BuildingClassNeededs>
+				<BuildingClassNeeded>
+					<BuildingClassType>BUILDINGCLASS_ROGUE_OUTPOST</BuildingClassType>
+					<bNeededInCity>1</bNeededInCity>
+				</BuildingClassNeeded>
+			</BuildingClassNeededs>
 			<CommerceChanges>
 				<iCommerce>50</iCommerce>
 			</CommerceChanges>
@@ -2692,7 +2703,6 @@
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MILKYWAY</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -2713,10 +2723,6 @@
 					<BuildingClassType>BUILDINGCLASS_PLANETARY_LANDING</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MILKY_WAY_COLONY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2733,7 +2739,6 @@
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MILKYWAY</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -2754,10 +2759,6 @@
 					<BuildingClassType>BUILDINGCLASS_PLANETARY_LANDING</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MILKY_WAY_COLONY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2774,7 +2775,6 @@
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MILKYWAY</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -2794,10 +2794,6 @@
 					<BuildingClassType>BUILDINGCLASS_PLANETARY_LANDING</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MILKY_WAY_COLONY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2814,7 +2810,6 @@
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MILKYWAY</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -2835,10 +2830,6 @@
 					<BuildingClassType>BUILDINGCLASS_PLANETARY_LANDING</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MILKY_WAY_COLONY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2855,7 +2846,6 @@
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MILKYWAY</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -2876,10 +2866,6 @@
 					<BuildingClassType>BUILDINGCLASS_PLANETARY_LANDING</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MILKY_WAY_COLONY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2896,7 +2882,6 @@
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MILKYWAY</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -2917,10 +2902,6 @@
 					<BuildingClassType>BUILDINGCLASS_PLANETARY_LANDING</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MILKY_WAY_COLONY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2937,7 +2918,6 @@
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MILKYWAY</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -2952,10 +2932,6 @@
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PLANETARY_LANDING</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MILKY_WAY_COLONY</BuildingClassType>
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
@@ -5668,7 +5644,6 @@
 			<iCost>5515</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_MILKYWAY</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqOrFeature>

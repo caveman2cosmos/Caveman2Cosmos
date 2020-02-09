@@ -26,6 +26,7 @@
 			</YieldChanges>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 			<bAutoBuild>1</bAutoBuild>
+			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_TITAN_AIR_TRANSPORT</BuildingClass>

@@ -1469,7 +1469,6 @@
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MILKYWAY</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1520,7 +1519,6 @@
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MILKYWAY</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
