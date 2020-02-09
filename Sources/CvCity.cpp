@@ -204,19 +204,10 @@ CvCity::~CvCity()
 	SAFE_DELETE_ARRAY(m_abTradeRoute);
 	SAFE_DELETE_ARRAY(m_abRevealed);
 	SAFE_DELETE_ARRAY(m_abEspionageVisibility);
-	/************************************************************************************************/
-	/* Afforess	                  Start		 05/19/10                                               */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
 	SAFE_DELETE_ARRAY(m_aiBonusCommerceRateModifier);
 	SAFE_DELETE_ARRAY(m_aiBonusCommercePercentChanges);
 	SAFE_DELETE_ARRAY(m_aiCommerceAttacks);
 	SAFE_DELETE_ARRAY(m_aiMaxCommerceAttacks);
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
-
 }
 
 
@@ -515,11 +506,6 @@ void CvCity::uninit()
 	SAFE_DELETE_ARRAY(m_paiNumFreeBuilding);
 	SAFE_DELETE_ARRAY(m_paiNumFreeAreaBuilding);
 	SAFE_DELETE_ARRAY(m_paiBuildingReplaced);
-	/************************************************************************************************/
-	/* Afforess	                  Start		 12/7/09                                                */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
 	SAFE_DELETE_ARRAY(m_paiUnitClassProductionModifier);
 	SAFE_DELETE_ARRAY(m_paiBuildingClassProductionModifier);
 	SAFE_DELETE_ARRAY(m_paiBonusDefenseChanges);
@@ -533,9 +519,6 @@ void CvCity::uninit()
 	SAFE_DELETE_ARRAY(m_pabDisabledBuilding);
 	SAFE_DELETE_ARRAY(m_paiUnitCombatExtraStrength);
 	SAFE_DELETE_ARRAY(m_pabAutomatedCanBuild);
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
 	SAFE_DELETE_ARRAY(m_pabWorkingPlot);
 	SAFE_DELETE_ARRAY(m_pabHasReligion);
 	SAFE_DELETE_ARRAY(m_pabHasCorporation);
@@ -546,15 +529,7 @@ void CvCity::uninit()
 	SAFE_DELETE_ARRAY(m_paiNewAfflictionTypeCount);
 	SAFE_DELETE_ARRAY(m_paiAidRate);
 	//SAFE_DELETE_ARRAY(m_paiExtraBonusAidModifier);
-
-	if (m_ppaaiExtraBonusAidModifier != NULL)
-	{
-		for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppaaiExtraBonusAidModifier[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppaaiExtraBonusAidModifier);
-	}
+	SAFE_DELETE_ARRAY2(m_ppaaiExtraBonusAidModifier, GC.getNumBonusInfos());
 	SAFE_DELETE_ARRAY(m_paiNewExtraAfflictionOutbreakLevelChange);
 	SAFE_DELETE_ARRAY(m_paiNewAfflictionToleranceChange);
 	SAFE_DELETE_ARRAY(m_paiNewCurrentOvercomeChange);
@@ -566,12 +541,8 @@ void CvCity::uninit()
 	SAFE_DELETE_ARRAY(m_paiUnitCombatOngoingTrainingTimeCount);
 	SAFE_DELETE_ARRAY(m_paiUnitCombatOngoingTrainingTimeIncrement);
 	//TB Combat Mod (Buildings) end
-//Team Project (5)
 	SAFE_DELETE_ARRAY(m_pabReligiouslyDisabledBuilding);
-
 	SAFE_DELETE_ARRAY(m_paiStartDeferredSectionNumBonuses);
-
-	//Team Project (1)
 	SAFE_DELETE_ARRAY(m_paiTechHappiness);
 	SAFE_DELETE_ARRAY(m_paiTechSpecialistHappiness);
 	SAFE_DELETE_ARRAY(m_paiTechHealth);
@@ -580,42 +551,10 @@ void CvCity::uninit()
 	SAFE_DELETE_ARRAY(m_paiBuildingCostPopulationCount);
 	SAFE_DELETE_ARRAY(m_paiHealUnitCombatTypeVolume);
 	SAFE_DELETE_ARRAY(m_paiTechSpecialistHealth);
-
-	if (m_ppaaiTechSpecialistHappinessTypes != NULL)
-	{
-		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppaaiTechSpecialistHappinessTypes[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppaaiTechSpecialistHappinessTypes);
-	}
-
-	if (m_ppaaiTechSpecialistHealthTypes != NULL)
-	{
-		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppaaiTechSpecialistHealthTypes[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppaaiTechSpecialistHealthTypes);
-	}
-
-	if (m_ppaaiLocalSpecialistExtraYield != NULL)
-	{
-		for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppaaiLocalSpecialistExtraYield[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppaaiLocalSpecialistExtraYield);
-	}
-
-	if (m_ppaaiLocalSpecialistExtraCommerce != NULL)
-	{
-		for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppaaiLocalSpecialistExtraCommerce[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppaaiLocalSpecialistExtraCommerce);
-	}
+	SAFE_DELETE_ARRAY2(m_ppaaiTechSpecialistHappinessTypes, GC.getNumTechInfos());
+	SAFE_DELETE_ARRAY2(m_ppaaiTechSpecialistHealthTypes, GC.getNumTechInfos());
+	SAFE_DELETE_ARRAY2(m_ppaaiLocalSpecialistExtraYield, GC.getNumSpecialistInfos());
+	SAFE_DELETE_ARRAY2(m_ppaaiLocalSpecialistExtraCommerce, GC.getNumSpecialistInfos());
 
 	m_orderQueue.clear();
 }

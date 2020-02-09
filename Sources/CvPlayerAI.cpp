@@ -146,34 +146,13 @@ CvPlayerAI::~CvPlayerAI()
 	SAFE_DELETE_ARRAY(m_aiGoldTradedTo);
 	SAFE_DELETE_ARRAY(m_aiAttitudeExtra);
 	SAFE_DELETE_ARRAY(m_abFirstContact);
-	for (int i = 0; i < MAX_PLAYERS; i++)
-	{
-		SAFE_DELETE_ARRAY(m_aaiContactTimer[i]);
-	}
-	SAFE_DELETE_ARRAY(m_aaiContactTimer);
-
-	for (int i = 0; i < MAX_PLAYERS; i++)
-	{
-		SAFE_DELETE_ARRAY(m_aaiMemoryCount[i]);
-	}
-	SAFE_DELETE_ARRAY(m_aaiMemoryCount);
-
+	SAFE_DELETE_ARRAY2(m_aaiContactTimer, MAX_PLAYERS);
+	SAFE_DELETE_ARRAY2(m_aaiMemoryCount, MAX_PLAYERS);
 	SAFE_DELETE_ARRAY(m_aiAverageYieldMultiplier);
 	SAFE_DELETE_ARRAY(m_aiAverageCommerceMultiplier);
 	SAFE_DELETE_ARRAY(m_aiAverageCommerceExchange);
 	SAFE_DELETE_ARRAY(m_aiCloseBordersAttitudeCache);
-
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      09/03/09                       poyuzhe & jdog5000     */
-/*                                                                                              */
-/* Efficiency                                                                                   */
-/************************************************************************************************/
-	// From Sanguo Mod Performance, ie the CAR Mod
-	// Attitude cache
 	SAFE_DELETE_ARRAY(m_aiAttitudeCache);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 }
 
 

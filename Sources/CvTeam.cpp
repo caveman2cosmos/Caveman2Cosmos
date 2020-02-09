@@ -191,10 +191,7 @@ void CvTeam::init(TeamTypes eID)
 
 void CvTeam::uninit()
 {
-	int iI;
-
 	SAFE_DELETE_ARRAY(m_abCanLaunch);
-
 	SAFE_DELETE_ARRAY(m_paiRouteChange);
 	SAFE_DELETE_ARRAY(m_paiProjectCount);
 	SAFE_DELETE_ARRAY(m_paiProjectDefaultArtTypes);
@@ -208,77 +205,18 @@ void CvTeam::uninit()
 	SAFE_DELETE_ARRAY(m_paiTerrainTradeCount);
 	SAFE_DELETE_ARRAY(m_aiVictoryCountdown);
 	SAFE_DELETE_ARRAY(m_aiForceTeamVoteEligibilityCount);
-
 	SAFE_DELETE_ARRAY(m_pabHasTech);
 	SAFE_DELETE_ARRAY(m_pabNoTradeTech);
-
-	if (m_ppaaiImprovementYieldChange != NULL)
-	{
-		for (iI = 0; iI < GC.getNumImprovementInfos(); iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppaaiImprovementYieldChange[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppaaiImprovementYieldChange);
-	}
-	
-/************************************************************************************************/
-/* Afforess	                  Start		 03/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+	SAFE_DELETE_ARRAY2(m_ppaaiImprovementYieldChange, GC.getNumImprovementInfos());
 	SAFE_DELETE_ARRAY(m_paiTechExtraBuildingHappiness);
 	SAFE_DELETE_ARRAY(m_paiTechExtraBuildingHealth);
 	SAFE_DELETE_ARRAY(m_paiFreeSpecialistCount);
 	SAFE_DELETE_ARRAY(m_paiUnitClassStrengthChange);
-	if (m_ppiBuildingCommerceChange != NULL)
-	{
-		for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppiBuildingCommerceChange[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppiBuildingCommerceChange);
-	}
-
-	if (m_ppiBuildingYieldChange != NULL)
-	{
-		for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppiBuildingYieldChange[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppiBuildingYieldChange);
-	}
-
-	if (m_ppiBuildingSpecialistChange != NULL)
-	{
-		for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppiBuildingSpecialistChange[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppiBuildingSpecialistChange);
-	}
-
-	if (m_ppiBuildingCommerceModifier != NULL)
-	{
-		for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppiBuildingCommerceModifier[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppiBuildingCommerceModifier);
-	}
-
-	if (m_ppiBuildingYieldModifier != NULL)
-	{
-		for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppiBuildingYieldModifier[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppiBuildingYieldModifier);
-	}
-
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
+	SAFE_DELETE_ARRAY2(m_ppiBuildingCommerceChange, GC.getNumBuildingInfos());
+	SAFE_DELETE_ARRAY2(m_ppiBuildingYieldChange, GC.getNumBuildingInfos());
+	SAFE_DELETE_ARRAY2(m_ppiBuildingSpecialistChange, GC.getNumBuildingInfos());
+	SAFE_DELETE_ARRAY2(m_ppiBuildingCommerceModifier, GC.getNumBuildingInfos());
+	SAFE_DELETE_ARRAY2(m_ppiBuildingYieldModifier, GC.getNumBuildingInfos());
 }
 
 
