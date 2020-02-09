@@ -5286,6 +5286,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>150</iCommerce>
 			</CommerceChanges>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_MULTIVAC</BuildingClassType>
@@ -6987,6 +6988,7 @@
 				<iYield>50</iYield>
 				<iYield>15</iYield>
 			</YieldChanges>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_TERAVERSE</BuildingClassType>
