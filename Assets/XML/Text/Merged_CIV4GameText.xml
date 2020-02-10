@@ -9165,7 +9165,7 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_EARLY_QUARRY</Tag>
-		<English>Build an Early Quarry</English>
+		<English>Build [LINK=IMPROVEMENT_EARLY_QUARRY]Early Quarry[\LINK]</English>
 		<French>Construire une [COLOR_BUILDING_TEXT]carrière antique[COLOR_REVERT]</French>
 		<Polish>Zbuduj Wczesny Kamieniołom</Polish>
 	</TEXT>

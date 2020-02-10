@@ -3160,7 +3160,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ABATIS</Tag>
-		<English>Build a [LINK=IMPROVEMENT_ABATIS]Abatis[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_ABATIS]Abatis[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_ABATIS]Abattis[\LINK]</French>
 		<Italian>Costruisci un'[LINK=IMPROVEMENT_ABATIS]abbattuta[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_ABATIS]Abatis con cerco espinoso[\LINK]</Spanish>
@@ -3168,21 +3168,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ABATIS_G</Tag>
-		<English>Build a [LINK=IMPROVEMENT_ABATIS]Abatis[\LINK] (Gatherer)</English>
+		<English>Build [LINK=IMPROVEMENT_ABATIS]Abatis[\LINK] (Gatherer)</English>
 		<French>Construire un [LINK=IMPROVEMENT_ABATIS]Abattis[\LINK]</French>
 		<Italian>Costruisci un'[LINK=IMPROVEMENT_ABATIS]abbattuta[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_ABATIS]Abatis con cerco espinoso[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_ABATIS]Zasieki[\LINK]</Polish>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_APPLE_FARM</Tag>
-		<English>Build an [LINK=IMPROVEMENT_APPLE_FARM]Apple Orchard[\LINK]</English>
-		<French>Construire une [LINK=IMPROVEMENT_APPLE_FARM]Pommeraie[\LINK]</French>
-		<German>Errichte einen [LINK=IMPROVEMENT_APPLE_FARM]Apfelhain[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_APPLE_FARM]Meleto[\LINK]</Italian>
-		<Spanish>Plantar un [LINK=IMPROVEMENT_APPLE_FARM]Manzanar[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_APPLE_FARM]Sad Jabłkowy[\LINK]</Polish>
-	</TEXT>
+	<!-- Unloaded Module
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ASIAN_TEMPLE</Tag>
 		<English>Build [LINK=IMPROVEMENT_ASIAN_TEMPLE]Asian Temple[\LINK]</English>
@@ -3192,9 +3184,10 @@
 		<Spanish>Construir un [LINK=IMPROVEMENT_ASIAN_TEMPLE]Templo asiático[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_ASIAN_TEMPLE]Azjatycką Świątynię[\LINK]</Polish>
 	</TEXT>
+	-->
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BEACON_CORAL</Tag>
-		<English>Build a [LINK=IMPROVEMENT_BEACON_CORAL]Beacon[\LINK] (Coral)</English>
+		<English>Build [LINK=IMPROVEMENT_BEACON_CORAL]Beacon[\LINK] (Coral)</English>
 		<French>Placer une [LINK=IMPROVEMENT_BEACON_CORAL]Balise[\LINK] (Coral)</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_BEACON_CORAL]Leuchtfeuer[\LINK] (Coral)</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_BEACON_CORAL]Torre di segnalazione[\LINK] (Coral)</Italian>
@@ -3203,7 +3196,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BEACON_REEF</Tag>
-		<English>Build a [LINK=IMPROVEMENT_BEACON_REEF]Beacon[\LINK] (Reef)</English>
+		<English>Build [LINK=IMPROVEMENT_BEACON_REEF]Beacon[\LINK] (Reef)</English>
 		<French>Placer une [LINK=IMPROVEMENT_BEACON_REEF]Balise[\LINK] (Reef)</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_BEACON_REEF]Leuchtfeuer[\LINK] (Reef)</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_BEACON_REEF]Torre di segnalazione[\LINK] (Reef)</Italian>
@@ -3212,7 +3205,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BREAK_ICE</Tag>
-		<English>Break [LINK=FEATURE_ICE]Ice[\LINK]</English>
+		<English>Break Ice</English>
 		<French>Faille de [LINK=FEATURE_ICE]Glace[\LINK]</French>
 		<German>[LINK=FEATURE_ICE]Eis[\LINK]-Brechen</German>
 		<Italian>Rompi il [LINK=FEATURE_ICE]Ghiaccio[\LINK]</Italian>
@@ -3221,7 +3214,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BREAK_ICE_K</Tag>
-		<English>Break [LINK=FEATURE_ICE]Ice[\LINK] (Consumed)</English>
+		<English>Break Ice (Consumed)</English>
 		<French>Faille de [LINK=FEATURE_ICE]Glace[\LINK] (Consumed)</French>
 		<German>[LINK=FEATURE_ICE]Eis[\LINK]-Brechen (Consumed)</German>
 		<Italian>Rompi il [LINK=FEATURE_ICE]Ghiaccio[\LINK] (Consumed)</Italian>
@@ -3230,28 +3223,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BUNKER</Tag>
-		<English>Build a [LINK=IMPROVEMENT_BUNKER]Command Bunker[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_BUNKER]Command Bunker[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_BUNKER]Command Bunker[\LINK]</French>
 		<German>Errichte einen [LINK=IMPROVEMENT_BUNKER]Command Bunker[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_BUNKER]Command Bunker[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_BUNKER]Refugio de mando[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_BUNKER]Bunkier[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_BURN_BAMBOO</Tag>
-		<English>Burn Bamboo</English>
-		<French>Brûler le Bambou</French>
-		<Italian>Brucia il Bambù</Italian>
-		<Spanish>Quemar bosque de bambú</Spanish>
-		<Polish>Spal Bambus</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_BURN_SWORD_GRSS</Tag>
-		<English>Burn Sword Grass</English>
-		<French>Brûler l'herbe</French>
-		<Italian>Brucia l'erba alta</Italian>
-		<Spanish>Quemar hierba alta</Spanish>
-		<Polish>Spal Wysoką Trawę</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BURN_VEGETATION</Tag>
@@ -3264,7 +3241,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_CAMP</Tag>
-		<English>Build a [LINK=IMPROVEMENT_CAMP]Hunting Camp[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_CAMP]Hunting Camp[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_CAMP]Camp de Chasse[\LINK]</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Errichtung eines [LINK=IMPROVEMENT_CAMP]Jagdlagers[\LINK][COLOR_REVERT]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_CAMP]Campo di Caccia[\LINK]</Italian>
@@ -3273,7 +3250,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_COLONY_EXTRACTION_FACILITY</Tag>
-		<English>Build a [LINK=IMPROVEMENT_COLONY_EXTRACTION_FACILITY]Colony Extraction Facility[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_COLONY_EXTRACTION_FACILITY]Colony Extraction Facility[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_COLONY_EXTRACTION_FACILITY]Colonie Installation d'extraction[\LINK]</French>
 		<German>Bauen [LINK=IMPROVEMENT_COLONY_EXTRACTION_FACILITY]Kolonie Extraktionsanlage[\LINK]</German>
 		<Italian>Costruisci [LINK=IMPROVEMENT_COLONY_EXTRACTION_FACILITY]Impianto di estrazione di Colonia[\LINK]</Italian>
@@ -3300,7 +3277,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_COLONY_SOLAR_ARRAY</Tag>
-		<English>Build a [LINK=IMPROVEMENT_COLONY_SOLAR_ARRAY]Colony Solar Array[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_COLONY_SOLAR_ARRAY]Colony Solar Array[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_COLONY_SOLAR_ARRAY]Colonie Solaire Assemblée[\LINK]</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_COLONY_SOLAR_ARRAY]Kolonie Solar Aufstellung[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_COLONY_SOLAR_ARRAY]Solare Apparato di Colonia[\LINK]</Italian>
@@ -3309,7 +3286,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_CORE_MINE</Tag>
-		<English>Build a [LINK=IMPROVEMENT_CORE_MINE]Core Mine[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_CORE_MINE]Core Mine[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_CORE_MINE]Mine profonde[\LINK]</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_CORE_MINE]Core Mine[\LINK]</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_CORE_MINE]Core Mine[\LINK]</Italian>
@@ -3318,7 +3295,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_COTTAGE</Tag>
-		<English>Build a [LINK=IMPROVEMENT_COTTAGE]Cottage[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_COTTAGE]Cottage[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_COTTAGE]Cottage[\LINK]</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Errichtung eines [LINK=IMPROVEMENT_COTTAGE]Gehöfts[\LINK][COLOR_REVERT]</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_COTTAGE]Villetta[\LINK]</Italian>
@@ -3326,17 +3303,8 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_COTTAGE]Chatkę[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_COTTON_FARM</Tag>
-		<English>Build a [LINK=IMPROVEMENT_COTTON_FARM]Cotton Farm[\LINK]</English>
-		<French>Construire une [LINK=IMPROVEMENT_COTTON_FARM]Plantation de Coton[\LINK]</French>
-		<German>Errichte eine [LINK=IMPROVEMENT_COTTON_FARM]Baumwollfarm[\LINK]</German>
-		<Italian>Costruisci una [LINK=IMPROVEMENT_COTTON_FARM]Piantagione di cotone[\LINK]</Italian>
-		<Spanish>Construir una [LINK=IMPROVEMENT_COTTON_FARM]Plantación de algodón[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_COTTON_FARM]Plantację Bawełny[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILD_DESERT_CAMP</Tag>
-		<English>Build a [LINK=IMPROVEMENT_DESERT_CAMP]Desert Camp[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_DESERT_CAMP]Desert Camp[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_DESERT_CAMP]Camp de Desert[\LINK]</French>
 		<German>Errichte [LINK=IMPROVEMENT_DESERT_CAMP]Wuste feldlager[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_DESERT_CAMP]campo nella deserto[\LINK]</Italian>
@@ -3345,7 +3313,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_DESERT_CAMP_K</Tag>
-		<English>Build a [LINK=IMPROVEMENT_DESERT_CAMP]Desert Camp[\LINK] (Consumed)</English>
+		<English>Build [LINK=IMPROVEMENT_DESERT_CAMP]Desert Camp[\LINK] (Consumed)</English>
 		<French>Construire un [LINK=IMPROVEMENT_DESERT_CAMP]Camp de Desert[\LINK] (Consumed)</French>
 		<German>Errichte [LINK=IMPROVEMENT_DESERT_CAMP]Wuste feldlager[\LINK] (Consumed)</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_DESERT_CAMP]campo nella deserto[\LINK] (Consumed)</Italian>
@@ -3381,7 +3349,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FACTORY_COLD</Tag>
-		<English>Build [LINK=IMPROVEMENT_3FACTORY]Factory (Cold Climate)[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_3FACTORY_2]Factory[\LINK] (Cold Climate)</English>
 		<French>Construire une [LINK=IMPROVEMENT_3FACTORY]Usine (Cold Climate)[\LINK]</French>
 		<German>Errichte [LINK=IMPROVEMENT_3FACTORY]Fabrik (Cold Climate)[\LINK]</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_3FACTORY]Fabbrica (Cold Climate)[\LINK]</Italian>
@@ -3390,7 +3358,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FARM</Tag>
-		<English>Build a [LINK=IMPROVEMENT_FARM]Farm[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_FARM]Farm[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_FARM]Ferme[\LINK]</French>
 		<German>Anlegen eines [LINK=IMPROVEMENT_FARM]Getreidefeldes[\LINK]</German>
 		<Italian>Cosstruisci una [LINK=IMPROVEMENT_FARM]Fattoria[\LINK]</Italian>
@@ -3399,7 +3367,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FARMSCRAPER</Tag>
-		<English>Build a [LINK=IMPROVEMENT_FARMSCRAPER]Vertical Farm[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_FARMSCRAPER]Vertical Farm[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_FARMSCRAPER]Ferme verticale[\LINK]</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_FARMSCRAPER]Vertikale Farm[\LINK]</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_FARMSCRAPER]Fattoria verticale[\LINK]</Italian>
@@ -3408,7 +3376,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FORTIFIED_CAVE</Tag>
-		<English>Build a [LINK=IMPROVEMENT_FORTIFIED_CAVE]Fortified Cave[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_FORTIFIED_CAVE]Fortified Cave[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_FORTIFIED_CAVE]Caverne fortifiée[\LINK]</French>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_FORTIFIED_CAVE]grotta fortificata[\LINK]</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_FORTIFIED_CAVE]Caverna fortificada[\LINK]</Spanish>
@@ -3416,7 +3384,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FORTIFIED_CAVE_G</Tag>
-		<English>Build a [LINK=IMPROVEMENT_FORTIFIED_CAVE]Fortified Cave[\LINK] (Gatherer)</English>
+		<English>Build [LINK=IMPROVEMENT_FORTIFIED_CAVE]Fortified Cave[\LINK] (Gatherer)</English>
 		<French>Construire une [LINK=IMPROVEMENT_FORTIFIED_CAVE]Caverne fortifiée[\LINK]</French>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_FORTIFIED_CAVE]grotta fortificata[\LINK]</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_FORTIFIED_CAVE]Caverna fortificada[\LINK]</Spanish>
@@ -3424,7 +3392,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FORTIFIED_CAVE_CACHE</Tag>
-		<English>Build a [LINK=IMPROVEMENT_FORTIFIED_CAVE_CACHE]Fortified Cave with Cache[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_FORTIFIED_CAVE_CACHE]Fortified Cave with Cache[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_FORTIFIED_CAVE_CACHE]Caverne fortifiée, avec cache[\LINK]</French>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_FORTIFIED_CAVE_CACHE]grotta fortificata con nascondigli[\LINK]</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_FORTIFIED_CAVE_CACHE]Caverna fortificada con escondrijo[\LINK]</Spanish>
@@ -3441,7 +3409,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FRUIT_GATHERER</Tag>
-		<English>Build a [LINK=IMPROVEMENT_FRUIT_GATHERER]Fruit Gathering Camp[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_FRUIT_GATHERER]Fruit Gathering Camp[\LINK]</English>
 		<French>Installer un [LINK=IMPROVEMENT_FRUIT_GATHERER]Camp de Récolte de Fruits[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_FRUIT_GATHERER]Früchte sammeln[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_FRUIT_GATHERER]campo di raccolta di frutti[\LINK]</Italian>
@@ -3450,7 +3418,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FRUIT_PICKER</Tag>
-		<English>Build a [LINK=IMPROVEMENT_FRUIT_PICKER]Fruit Picking Camp[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_FRUIT_PICKER]Fruit Picking Camp[\LINK]</English>
 		<French>Mettre en place une [LINK=IMPROVEMENT_FRUIT_PICKER]]pépinière d'Arbres[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_FRUIT_PICKER]Früchte pflücken[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_FRUIT_PICKER]]Vivaio di alberi[\LINK]</Italian>
@@ -3459,7 +3427,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FUTURE_BUNKER</Tag>
-		<English>Build a [LINK=IMPROVEMENT_FUTURE_BUNKER]Command Center[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_FUTURE_BUNKER]Command Center[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_FUTURE_BUNKER]Centre de Commandement[\LINK]</French>
 		<German>Errichte ein [LINK=IMPROVEMENT_FUTURE_BUNKER]Kommandozentrum[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_FUTURE_BUNKER]Centro di comando[\LINK]</Italian>
@@ -3476,7 +3444,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_GEOTHERMAL_BOREHOLE</Tag>
-		<English>Build a [LINK=IMPROVEMENT_GEOTHERMAL_BOREHOLE]Geothermal Factory[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_GEOTHERMAL_BOREHOLE]Geothermal Factory[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_GEOTHERMAL_BOREHOLE]Forage Géothermique[\LINK]</French>
 		<German>Errichte eine [LINK=IMPROVEMENT_GEOTHERMAL_BOREHOLE]Geothermalfabrik[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_GEOTHERMAL_BOREHOLE]Impianto geotermico[\LINK]</Italian>
@@ -3501,7 +3469,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_GRAPE_GATHERER</Tag>
-		<English>Build a [LINK=IMPROVEMENT_GRAPE_GATHERER]Grape Gathering Camp[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_GRAPE_GATHERER]Grape Gathering Camp[\LINK]</English>
 		<French>Installer un [LINK=IMPROVEMENT_GRAPE_GATHERER]camp de récolte de Raisins[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_GRAPE_GATHERER]Trauben sammeln[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_GRAPE_GATHERER]campo di raccolta di uva[\LINK]</Italian>
@@ -3510,12 +3478,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_GRAPE_PICKER</Tag>
-		<English>Build a [LINK=IMPROVEMENT_GRAPE_PICKER]Grape Picking Camp[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_GRAPE_PICKER]Grape Picking Camp[\LINK]</English>
 		<German>[LINK=IMPROVEMENT_GRAPE_GATHERER]Trauben lesen[\LINK]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_GRAVTUBE</Tag>
-		<English>Build a Maglev</English>
+		<English>Build [LINK=ROUTE_GRAVTUBE]Maglev[\LINK]</English>
 		<French>Construire un [COLOR_BUILDING_TEXT]Tube Maglev[COLOR_REVERT]</French>
 		<German>Magnetbahn bauen</German>
 		<Italian>Costruisci una linea Maglev</Italian>
@@ -3524,7 +3492,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_GROUNDWATER_WELL</Tag>
-		<English>Build a [LINK=IMPROVEMENT_GROUNDWATER_WELL]Groundwater Well[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_GROUNDWATER_WELL]Groundwater Well[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_GROUNDWATER_WELL]Puits Souterrain[\LINK]</French>
 		<German>Errichte einen [LINK=IMPROVEMENT_GROUNDWATER_WELL]Grundwasserbrunnen[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_GROUNDWATER_WELL]Pozzo d'irrigazione[\LINK]</Italian>
@@ -3569,7 +3537,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HAMLET</Tag>
-		<English>Build a [LINK=IMPROVEMENT_HAMLET]Hamlet[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_HAMLET]Hamlet[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_HAMLET]Hameau[\LINK]</French>
 		<German>Errichte einen [LINK=IMPROVEMENT_HAMLET]Weiler[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_HAMLET]Casale[\LINK]</Italian>
@@ -3596,7 +3564,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HIGHWAY</Tag>
-		<English>Build a Highway</English>
+		<English>Build [LINK=ROUTE_MODERN_ROAD]Highway[\LINK]</English>
 		<French>Construire une [COLOR_BUILDING_TEXT]Autoroute[COLOR_REVERT]</French>
 		<German>Schnellstraße bauen</German>
 		<Italian>Costruisci un'autostrada</Italian>
@@ -3605,7 +3573,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HUNTING_PRESERVE</Tag>
-		<English>Build a [LINK=IMPROVEMENT_HUNTING_PRESERVE]Hunting Preserve[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_HUNTING_PRESERVE]Hunting Preserve[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_HUNTING_PRESERVE]Chasse gardée[\LINK]</French>
 		<German>Errichte [LINK=IMPROVEMENT_HUNTING_PRESERVE]Wildgehege[\LINK]</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_HUNTING_PRESERVE]Riserva di caccia[\LINK]</Italian>
@@ -3614,7 +3582,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HYBRID_FOREST</Tag>
-		<English>Build a [LINK=IMPROVEMENT_HYBRID_FOREST]Hybrid Forest[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_HYBRID_FOREST]Hybrid Forest[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_HYBRID_FOREST]Forêt Hybride[\LINK]</French>
 		<German>Errichte einen [LINK=IMPROVEMENT_HYBRID_FOREST]Hybriden Wald[\LINK]</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_HYBRID_FOREST]Foresta ibrida[\LINK]</Italian>
@@ -3623,7 +3591,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_IMPROVEMENT_HYDRO_PLANT</Tag>
-		<English>Build a [LINK=IMPROVEMENT_HYDRO_PLANT]Hydro Dam[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_HYDRO_PLANT]Hydro Dam[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_HYDRO_PLANT]Barrage Hydroélectrique[\LINK]</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_HYDRO_PLANT]Wasserkraftwerk[\LINK]</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_HYDRO_PLANT]Diga Idroelettrica[\LINK]</Italian>
@@ -3641,7 +3609,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_JUMPLANE</Tag>
-		<English>Build a Jumplane</English>
+		<English>Build [LINK=ROUTE_JUMPLANE]Jumplane[\LINK]</English>
 		<French>Construire un [COLOR_BUILDING_TEXT]Tremplin[COLOR_REVERT]</French>
 		<German>Jumplane bauen</German>
 		<Italian>Costrusci una Jumplane</Italian>
@@ -3650,7 +3618,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_JUNGLE_CAMP</Tag>
-		<English>Build a [LINK=IMPROVEMENT_JUNGLE_CAMP]Jungle Camp[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_JUNGLE_CAMP]Jungle Camp[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_JUNGLE_CAMP]Camp de Jungle[\LINK]</French>
 		<German>Errichte [LINK=IMPROVEMENT_JUNGLE_CAMP]dschungel feldlager[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_JUNGLE_CAMP]campo nella giungla[\LINK]</Italian>
@@ -3659,7 +3627,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_JUNGLE_CAMP_K</Tag>
-		<English>Build a [LINK=IMPROVEMENT_JUNGLE_CAMP]Jungle Camp[\LINK] (Consumed)</English>
+		<English>Build [LINK=IMPROVEMENT_JUNGLE_CAMP]Jungle Camp[\LINK] (Consumed)</English>
 		<French>Construire un [LINK=IMPROVEMENT_JUNGLE_CAMP]Camp de Jungle[\LINK] (Consumed)</French>
 		<German>Errichte [LINK=IMPROVEMENT_JUNGLE_CAMP]dschungel feldlager[\LINK] (Consumed)</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_JUNGLE_CAMP]campo nella giungla[\LINK] (Consumed)</Italian>
@@ -3668,7 +3636,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LIGHTHOUSE_CORAL</Tag>
-		<English>Build a [LINK=IMPROVEMENT_LIGHTHOUSE]Lighthouse[\LINK] (Coral)</English>
+		<English>Build [LINK=IMPROVEMENT_LIGHTHOUSE_CORAL]Lighthouse[\LINK] (Coral)</English>
 		<French>Construire un [LINK=IMPROVEMENT_LIGHTHOUSE]Phare[\LINK] (Coral)</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_LIGHTHOUSE]Leuchtturm[\LINK] (Coral)</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_LIGHTHOUSE]Faro[\LINK] (Coral)</Italian>
@@ -3677,7 +3645,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LIGHTHOUSE_REEF</Tag>
-		<English>Build a [LINK=IMPROVEMENT_LIGHTHOUSE]Lighthouse[\LINK] (Reef)</English>
+		<English>Build [LINK=IMPROVEMENT_LIGHTHOUSE_REEF]Lighthouse[\LINK] (Reef)</English>
 		<French>Construire un [LINK=IMPROVEMENT_LIGHTHOUSE]Phare[\LINK] (Reef)</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_LIGHTHOUSE]Leuchtturm[\LINK] (Reef)</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_LIGHTHOUSE]Faro[\LINK] (Reef)</Italian>
@@ -3686,7 +3654,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LISTENING_NODE</Tag>
-		<English>Build a [LINK=IMPROVEMENT_LISTENING_NODE]Listening Node[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_LISTENING_NODE]Listening Node[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_LISTENING_NODE]Station d'écoute[\LINK]</French>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_LISTENING_NODE]nodo d'ascolto[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_LISTENING_NODE]Nodo de escucha[\LINK]</Spanish>
@@ -3703,7 +3671,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LUMBER_JACK</Tag>
-		<English>Build a [LINK=IMPROVEMENT_LUMBER_JACK]Lumber Camp[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_LUMBERJACK]Lumber Camp[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_LUMBER_JACK]Camp de bûcherons[\LINK]</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_LUMBER_JACK]Holzfällerlager[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_LUMBER_JACK]Campo di legname[\LINK]</Italian>
@@ -3712,7 +3680,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MAKE_JUNGLE</Tag>
-		<English>Plant Jungle</English>
+		<English>[LINK=IMPROVEMENT_MAKE_JUNGLE]Plant Jungle[\LINK]</English>
 		<French>Restaurer de la Jungle</French>
 		<German>Pflanze Dschungel</German>
 		<Italian>Pianta una giungla</Italian>
@@ -3725,6 +3693,7 @@
 		<Spanish>Construir una [LINK=IMPROVEMENT_MARINE_PRESERVE]Reserva marina[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_MARINE_PRESERVE]Rezerwat Morski[\LINK]</Polish>
 	</TEXT>
+	<!-- Unloaded Module
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MESOAMERICAN_TEMPLE</Tag>
 		<English>Build [LINK=IMPROVEMENT_MESOAMERICAN_TEMPLE]Mesoamerican Temple[\LINK]</English>
@@ -3734,6 +3703,7 @@
 		<Spanish>Construir un [LINK=IMPROVEMENT_MESOAMERICAN_TEMPLE]Templo mesoamericano[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_MESOAMERICAN_TEMPLE]Świątynię Mezoamerykańską[\LINK]</Polish>
 	</TEXT>
+	-->
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MOAI</Tag>
 		<English>Build [LINK=IMPROVEMENT_MOAI]Moai[\LINK]</English>
@@ -3745,7 +3715,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MODERNWINDMILL</Tag>
-		<English>Buld a [LINK=IMPROVEMENT_MODERNWINDMILL]Modern Windmill[\LINK]</English>
+		<English>Buld [LINK=IMPROVEMENT_DESERTWINDMILL]Modern Windmill[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_MODERNWINDMILL]Moderne Moulin à vent[\LINK]</French>
 		<German>Bauen a [LINK=IMPROVEMENT_MODERNWINDMILL]Modern-Windrad[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_MODERNWINDMILL]Moderno Mulino a vento[\LINK]</Italian>
@@ -3754,7 +3724,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MODERN_MINE</Tag>
-		<English>Build a [LINK=IMPROVEMENT_MODERN_MINE]Modern Mine[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_MODERN_MINE]Modern Mine[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_MODERN_MINE]Mine Moderne[\LINK]</French>
 		<German>Errichte eine[LINK=IMPROVEMENT_MODERN_MINE]Moderne Mine[\LINK]</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_MODERN_MINE]Miniera moderna[\LINK]</Italian>
@@ -3763,7 +3733,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MOUNTAIN_MINE</Tag>
-		<English>Build a [LINK=IMPROVEMENT_MOUNTAIN_MINE]Mountain Mine[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_MOUNTAIN_MINE]Mountain Mine[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_MOUNTAIN_MINE]Mine de la montagne[\LINK]</French>
 		<German>Errichte eine [LINK=IMPROVEMENT_MOUNTAIN_MINE]Mine des Berges[\LINK]</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_MOUNTAIN_MINE]Miniera della montagna[\LINK]</Italian>
@@ -3772,7 +3742,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MUSHROOM_GATHERER</Tag>
-		<English>Build a [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Mushroom Gatherer[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Mushroom Gatherer[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Champignonnière[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_MUSHROOM_GATHERER]Pilze sammeln[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Funghi raccoglitori[\LINK]</Italian>
@@ -3781,7 +3751,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MUSHROOM_GATHERER_K</Tag>
-		<English>Build a [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Mushroom Gatherer[\LINK] (Consumed)</English>
+		<English>Build [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Mushroom Gatherer[\LINK] (Consumed)</English>
 		<French>Construire une [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Champignonnière[\LINK] (Consumed)</French>
 		<German>[LINK=IMPROVEMENT_MUSHROOM_GATHERER]Pilze sammeln[\LINK] (Consumed)</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Funghi raccoglitori[\LINK] (Consumed)</Italian>
@@ -3790,7 +3760,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_NATURE_PRESERVE</Tag>
-		<English>Build a [LINK=IMPROVEMENT_NATURE_PRESERVE]Nature Preserve[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_NATURE_PRESERVE]Nature Preserve[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_NATURE_PRESERVE]Réserve naturelle[\LINK]</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_NATURE_PRESERVE]Natur bewahren[\LINK]</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_NATURE_PRESERVE]Riserva Naturale[\LINK]</Italian>
@@ -3799,7 +3769,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_NOMADIC_HERD</Tag>
-		<English>Bulid a [LINK=IMPROVEMENT_NOMADIC_HERD]Nomadic Herd[\LINK]</English>
+		<English>Bulid [LINK=IMPROVEMENT_NOMADIC_HERD]Nomadic Herd[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_NOMADIC_HERD]Harde Nomade[\LINK]</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_NOMADIC_HERD]Nomadenherde[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_NOMADIC_HERD]Pascolo nomade[\LINK]</Italian>
@@ -3808,7 +3778,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ORCHARD</Tag>
-		<English>Build an [LINK=IMPROVEMENT_ORCHARD]Orchard[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_ORCHARD]Orchard[\LINK]</English>
 		<French>Planter un [LINK=IMPROVEMENT_ORCHARD]Verger[\LINK]</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_ORCHARD]Obstplantage[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_ORCHARD]Frutteto[\LINK]</Italian>
@@ -3817,7 +3787,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PALISADE</Tag>
-		<English>Build a [LINK=IMPROVEMENT_PALISADE]Wooden Palisade[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_PALISADE]Wooden Palisade[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_PALISADE]Palissade en bois[\LINK]</French>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_PALISADE]palizzata in legno[\LINK]</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_PALISADE]Empalizada de madera[\LINK]</Spanish>
@@ -3825,7 +3795,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PALISADE_G</Tag>
-		<English>Build a [LINK=IMPROVEMENT_PALISADE]Wooden Palisade[\LINK] (Gatherer)</English>
+		<English>Build [LINK=IMPROVEMENT_PALISADE]Wooden Palisade[\LINK] (Gatherer)</English>
 		<French>Construire une [LINK=IMPROVEMENT_PALISADE]Palissade en bois[\LINK]</French>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_PALISADE]palizzata in legno[\LINK]</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_PALISADE]Empalizada de madera[\LINK]</Spanish>
@@ -3833,7 +3803,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PATH</Tag>
-		<English>Make a Path</English>
+		<English>Make [LINK=ROUTE_PATH]Path[\LINK]</English>
 		<French>Construire un [COLOR_BUILDING_TEXT]Chemin de terre[COLOR_REVERT]</French>
 		<German>Karrenweg anlegen</German>
 		<Italian>Costruisci una strada in fango</Italian>
@@ -3842,7 +3812,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PAVED</Tag>
-		<English>Build a Paved Road</English>
+		<English>Build [LINK=ROUTE_PAVED]Paved Road[\LINK]</English>
 		<French>Construire une [COLOR_BUILDING_TEXT]Route Pavée[COLOR_REVERT]</French>
 		<German>Gepflasterte Straße bauen</German>
 		<Italian>Costruisci una strada pavimentata</Italian>
@@ -3851,14 +3821,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PEAT_CUTTER</Tag>
-		<English>Build a [LINK=IMPROVEMENT_PEAT_CUTTER]Peat Cutter[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_PEAT_CUTTER]Peat Cutter[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_PEAT_CUTTER]récolteur de Tourbe[\LINK]</French>
 		<Spanish>Construir un [LINK=IMPROVEMENT_PEAT_CUTTER]Recolector de turba[\LINK]</Spanish>
 		<Polish>Zbudu [LINK=IMPROVEMENT_PEAT_CUTTER]Obóz Zbieraczy Torfu[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PLANT_BAMBOO</Tag>
-		<English>Plant Bamboo Grove</English>
+		<English>[LINK=IMPROVEMENT_PLANT_BAMBOO]Plant Bamboo Grove[\LINK]</English>
 		<French>Planter des Bambous</French>
 		<Italian>Crea un bosco di bambù</Italian>
 		<Spanish>Plantar un Bosque de bambú</Spanish>
@@ -3866,7 +3836,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PLANT_FOREST</Tag>
-		<English>Plant Forest</English>
+		<English>[LINK=IMPROVEMENT_PLANT_FOREST]Plant Forest[\LINK]</English>
 		<French>Planter une Forêt</French>
 		<German>Pflanze Wald</German>
 		<Italian>Pianta una foresta</Italian>
@@ -3875,7 +3845,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PLANT_GATHERER</Tag>
-		<English>Build a [LINK=IMPROVEMENT_PLANT_GATHERER]Plant Gathering Camp[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_PLANT_GATHERER]Plant Gathering Camp[\LINK]</English>
 		<French>Installer un [LINK=IMPROVEMENT_PLANT_GATHERER]camp de récolte[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_PLANT_GATHERER]Nützliche Pflanzen sammeln[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_PLANT_GATHERER]campo di raccolta di piante[\LINK]</Italian>
@@ -3884,17 +3854,18 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PLANT_PICKER</Tag>
-		<English>Build a [LINK=IMPROVEMENT_PLANT_PICKER]Plant Picking Camp[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_PLANT_PICKER]Plant Picking Camp[\LINK]</English>
 		<German>[LINK=IMPROVEMENT_PLANT_PICKER]Nützliche Pflanzen pflücken[\LINK]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PLANT_SAVANNA</Tag>
-		<English>Plant Savanna</English>
+		<English>[LINK=IMPROVEMENT_PLANT_SAVANNA]Plant Savanna[\LINK]</English>
 		<French>Transformer en Savanne</French>
 		<Italian>Crea una savana</Italian>
 		<Spanish>Crear una Sabana</Spanish>
 		<Polish>Stwórz Sawannę</Polish>
 	</TEXT>
+	<!-- Unloaded Module
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PYRAMIDS</Tag>
 		<English>Build [LINK=IMPROVEMENT_PYRAMIDS]Pyramids[\LINK]</English>
@@ -3904,9 +3875,10 @@
 		<Spanish>Construir unas [LINK=IMPROVEMENT_PYRAMIDS]Pirámides[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_PYRAMIDS]Piramidy[\LINK]</Polish>
 	</TEXT>
+	-->
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_RADAR</Tag>
-		<English>Build a [LINK=IMPROVEMENT_RADAR]Radar Tower[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_RADAR]Radar Tower[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_RADAR]Tour Radar[\LINK]</French>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_RADAR]torre radar[\LINK]</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_RADAR]Torre de radar[\LINK]</Spanish>
@@ -3914,7 +3886,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_RAILROAD_ELECTRIC</Tag>
-		<English>Build a Electric Railroad</English>
+		<English>Build [LINK=ROUTE_RAILROAD_ELECTRIC]Electric Railroad[\LINK]</English>
 		<French>Construire un [COLOR_BUILDING_TEXT]Chemin de Fer électrique[COLOR_REVERT]</French>
 		<German>Baue eine elektrifizierte Eisenbahn</German>
 		<Italian>Costruisci una ferrovia elettrica</Italian>
@@ -3922,16 +3894,8 @@
 		<Polish>Zbuduj Kolej Elektryczną</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_REMOVE_BAMBOO</Tag>
-		<English>Remove Bamboo</English>
-		<French>Défricher le Bambou</French>
-		<Italian>Rimuovi il Bambù</Italian>
-		<Spanish>Talar bosque de bambú</Spanish>
-		<Polish>Usuń Bambus</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILD_REMOVE_ROCK_FORM</Tag>
-		<English>Remove [LINK=FEATURE_DARK_ROCK_FORM1]Rock Formation[\LINK]</English>
+		<English>Remove Rock Formation</English>
 		<French>Eliminer la [LINK=FEATURE_DARK_ROCK_FORM1]Formation de roche[\LINK]</French>
 		<German>[LINK=FEATURE_DARK_ROCK_FORM1]Steinbildung[\LINK] zu entfernen</German>
 		<Italian>Rimuovere [LINK=FEATURE_DARK_ROCK_FORM1]Formazione rocciosa[\LINK]</Italian>
@@ -3940,7 +3904,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_REMOVE_SWAMP</Tag>
-		<English>Drain a [LINK=FEATURE_SWAMP]Swamp[\LINK]</English>
+		<English>Drain Swamp</English>
 		<French>Assainir une [LINK=FEATURE_SWAMP]Tourbière[\LINK]</French>
 		<German>Lege ein [LINK=FEATURE_SWAMP]Torfmoor[\LINK] trocken</German>
 		<Italian>Drena un'[LINK=FEATURE_SWAMP]Acquitrino[\LINK]</Italian>
@@ -3962,17 +3926,8 @@
 		<French>[ICON_BULLET][COLOR_WARNING_TEXT]A placer avec %s1_Build requiert %s2_Bonus[COLOR_REVERT]</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_RESTORE_LAND</Tag>
-		<English>Restore Land</English>
-		<French>Restaurer le Terrain</French>
-		<German>Gelände wiederherstellen</German>
-		<Italian>Rigenera il terreno</Italian>
-		<Spanish>Recuperar terreno</Spanish>
-		<Polish>Odnowione Terenu</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILD_ROCK_GATHERER</Tag>
-		<English>Build a [LINK=IMPROVEMENT_ROCK_GATHERER]Stone Tools Workshop[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_ROCK_GATHERER]Stone Tools Workshop[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_ROCK_GATHERER]Atelier d'Outils en pierre.[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_ROCK_GATHERER]Steinwerkstatt bauen[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_ROCK_GATHERER]Raccoglitore di pietre[\LINK]</Italian>
@@ -3981,7 +3936,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ROCK_GATHERER_K</Tag>
-		<English>Build a [LINK=IMPROVEMENT_ROCK_GATHERER]Stone Tools Workshop[\LINK] (Consumed)</English>
+		<English>Build [LINK=IMPROVEMENT_ROCK_GATHERER]Stone Tools Workshop[\LINK] (Consumed)</English>
 		<French>Construire un [LINK=IMPROVEMENT_ROCK_GATHERER]Atelier d'Outils en pierre [\LINK] (Consumed)</French>
 		<German>[LINK=IMPROVEMENT_ROCK_GATHERER]Steinwerkstatt bauen[\LINK] (Consumed)</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_ROCK_GATHERER]Raccoglitore di pietre[\LINK] (Consumed)</Italian>
@@ -3989,17 +3944,8 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_ROCK_GATHERER]Warsztat Kamiennych Narzędzi[\LINK] (Consumed)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_ROCK_GATHERER2</Tag>
-		<English>[LINK=IMPROVEMENT_ROCK_GATHERER2]Gather Special Stone[\LINK]</English>
-		<French>[LINK=IMPROVEMENT_ROCK_GATHERER2]Récupérer des Pierres remarquables[\LINK]</French>
-		<German>[LINK=IMPROVEMENT_ROCK_GATHERER2]Spezielle Steine sammeln[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_ROCK_GATHERER2]Raccoglitore di pietre speciali[\LINK]</Italian>
-		<Spanish>Recolectar la [LINK=IMPROVEMENT_ROCK_GATHERER2]Piedra especial[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_ROCK_GATHERER2]Zbieraczy Wyjątkowych Kamieni[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILD_SAFARI</Tag>
-		<English>Build a [LINK=IMPROVEMENT_SAFARI]Wildlife Sanctuary[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_SAFARI]Wildlife Sanctuary[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_SAFARI]Sanctuaire de la faune[\LINK]</French>
 		<German>Errichte eine [LINK=IMPROVEMENT_SAFARI]Naturschutzgebiet[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_SAFARI]Santuario della fauna selvatica[\LINK]</Italian>
@@ -4029,7 +3975,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SANITIZE_WATER</Tag>
-		<English>Sanitize Water</English>
+		<English>[LINK=IMPROVEMENT_SANITIZE_WATER]Sanitize Water[\LINK]</English>
 		<French>Assainir l'Eau</French>
 		<German>Wasser desinfizieren</German>
 		<Italian>Disinfetta l'acqua</Italian>
@@ -4038,7 +3984,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SCAVENGING_CAMP</Tag>
-		<English>Bulid a [LINK=IMPROVEMENT_SCAVENGING_CAMP]Scavenging Camp[\LINK]</English>
+		<English>Bulid [LINK=IMPROVEMENT_SCAVENGING_CAMP]Scavenging Camp[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_SCAVENGING_CAMP]Camp de Récupérateur[\LINK]</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_SCAVENGING_CAMP]Lager der Aasverwerter[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_SCAVENGING_CAMP]Campo degli spazzini[\LINK]</Italian>
@@ -4047,7 +3993,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SCRUB_FALLOUT_RAPIDLY</Tag>
-		<English>Clear [LINK=FEATURE_FALLOUT]Fallout (Fast)[\LINK]</English>
+		<English>Clear Fallout (Fast)</English>
 		<French>Décontaminer (Rapidement)</French>
 		<German>Fallout entfernen (schnell)</German>
 		<Italian>Bonifica dalle scorie radioattive (rapida)</Italian>
@@ -4056,7 +4002,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SEA_AIR_DEFENSE</Tag>
-		<English>Build a [LINK=IMPROVEMENT_SEA_AIR_DEFENSE]Aquatic Anti-Air Defense[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_SEA_AIR_DEFENSE]Aquatic Anti-Air Defense[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_SEA_AIR_DEFENSE]Poste aquatique de Défense Anti-Aérienne[\LINK]</French>
 		<German>Errichte einen[LINK=IMPROVEMENT_SEA_AIR_DEFENSE]Wasser-Luftschutz[\LINK]</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_SEA_AIR_DEFENSE]Stazione marina di difesa anti-aerea[\LINK]</Italian>
@@ -4074,7 +4020,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SEA_FORT</Tag>
-		<English>Build a [LINK=IMPROVEMENT_SEA_FORT]Aquatic Forcefield[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_SEA_FORT]Aquatic Forcefield[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_SEA_FORT]Champ de Force Aquatique[\LINK]</French>
 		<German>Errichte eine [LINK=IMPROVEMENT_SEA_FORT]Wasser-Schutzschild\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_SEA_FORT]Campo di forza acquatico[\LINK]</Italian>
@@ -4083,7 +4029,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SEA_MILL</Tag>
-		<English>Buld a [LINK=IMPROVEMENT_WINDMILL_SEA]Sea Mill[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_WINDMILL_SEA]Sea Mill[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_WINDMILL_SEA]Moulin maritime[\LINK]</French>
 		<German>Bauen a [LINK=IMPROVEMENT_WINDMILL_SEA]Sea Mill[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_WINDMILL_SEA]Sea Mill[\LINK]</Italian>
@@ -4092,7 +4038,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SHAFT_MINE</Tag>
-		<English>Build a [LINK=IMPROVEMENT_SHAFT_MINE]Shaft Mine[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_SHAFT_MINE]Shaft Mine[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_SHAFT_MINE]Puits de mine[\LINK]</French>
 		<German>Errichte eine [LINK=IMPROVEMENT_SHAFT_MINE]Schachtmine[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_SHAFT_MINE]Pozzo minerario[\LINK]</Italian>
@@ -4101,7 +4047,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SILK_FARM</Tag>
-		<English>Build a [LINK=IMPROVEMENT_SILK_FARM]Silk Farm[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_SILK_FARM]Silk Farm[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_SILK_FARM]Culture de Soie[\LINK]</French>
 		<German>Errichte eine [LINK=IMPROVEMENT_SILK_FARM]Seidenfarm[\LINK]</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_SILK_FARM]Coltura di bachi da seta[\LINK]</Italian>
@@ -4119,12 +4065,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_STEEL_TOWER</Tag>
-		<English>Build a [LINK=IMPROVEMENT_STEEL_TOWER]Steel Watchtower[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_STEEL_TOWER]Steel Watchtower[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_STEEL_TOWER]Tour d'observation en acier[\LINK]</French>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_STEEL_TOWER]torre d'osservazione in acciaio[\LINK]</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_STEEL_TOWER]Torre de vigilancia de acero[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_STEEL_TOWER]Stalową Wieżę Obserwacyjną[\LINK]</Polish>
 	</TEXT>
+	<!-- Unloaded Module
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_STONE_CIRCLE</Tag>
 		<English>Build [LINK=IMPROVEMENT_STONECIRCLE]Stone Circle[\LINK]</English>
@@ -4134,9 +4081,10 @@
 		<Spanish>Construir un [LINK=IMPROVEMENT_STONECIRCLE]Círculo de piedras[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_STEEL_TOWER]Kamienny Krąg[\LINK]</Polish>
 	</TEXT>
+	-->
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_STONE_TOWER</Tag>
-		<English>Build a [LINK=IMPROVEMENT_STONE_TOWER]Stone Watchtower[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_STONE_TOWER]Stone Watchtower[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_STONE_TOWER]Tour d'observation en pierres[\LINK]</French>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_STONE_TOWER]torre d'osservazione in pietra[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_STONE_TOWER]Puesto de avanzada de piedra[\LINK]</Spanish>
@@ -4162,7 +4110,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TAR_GATHERER</Tag>
-		<English>Build a [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_TAR_GATHERER]récolteur de goudron[\LINK]</French>
 		<German>Bauen a [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK]</German>
 		<Italian>Costruisci a [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK]</Italian>
@@ -4171,7 +4119,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TAR_GATHERER_K</Tag>
-		<English>Build a [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK] (Consumed)</English>
+		<English>Build [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK] (Consumed)</English>
 		<French>Construire un [LINK=IMPROVEMENT_TAR_GATHERER]récolteur de goudron[\LINK] (Consumed)</French>
 		<German>Bauen a [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK] (Consumed)</German>
 		<Italian>Costruisci a [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK] (Consumed)</Italian>
@@ -4180,7 +4128,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_DESERT</Tag>
-		<English>Terraform towards Desert</English>
+		<English>[LINK=IMPROVEMENT_TERRAFORM_DESERT]Terraform Toward Desert[\LINK]</English>
 		<French>Terraformer en Désert</French>
 		<German>Terraforme zu Desert</German>
 		<Italian>Terraforma in Deserto</Italian>
@@ -4188,7 +4136,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_DUNES</Tag>
-		<English>Terraform towards Dunes</English>
+		<English>[LINK=IMPROVEMENT_TERRAFORM_DUNES]Terraform Toward Dunes[\LINK]</English>
 		<French>Terraformer en Dunes</French>
 		<German>Terraforme zu Dunes</German>
 		<Italian>Terraforma in Dune</Italian>
@@ -4196,7 +4144,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_GRASS</Tag>
-		<English>Terraform into Grass</English>
+		<English>[LINK=IMPROVEMENT_TERRAFORM_GRASS]Terraform Toward Grass[\LINK]</English>
 		<French>Terraformer en Prairies</French>
 		<German>Terraforme zu Grasland</German>
 		<Italian>Terraforma in Praterie</Italian>
@@ -4204,7 +4152,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_LUSH</Tag>
-		<English>Terraform into Lush</English>
+		<English>[LINK=IMPROVEMENT_TERRAFORM_LUSH]Terraform Toward Lush[\LINK]</English>
 		<French>Terraformer en Sol luxuriant</French>
 		<German>Terraforme zu Lush</German>
 		<Italian>Terraforma in Suolo lussureggiante</Italian>
@@ -4212,7 +4160,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_MUDDY</Tag>
-		<English>Terraform into Muddy</English>
+		<English>[LINK=IMPROVEMENT_TERRAFORM_MUDDY]Terraform Toward Muddy[\LINK]</English>
 		<French>Terraformer en Sol boueux</French>
 		<German>Terraforme zu Muddy</German>
 		<Italian>Terraforma in Suolo fangoso</Italian>
@@ -4220,7 +4168,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_PERMAFROST</Tag>
-		<English>Terraform towards Permafrost</English>
+		<English>[LINK=IMPROVEMENT_TERRAFORM_PERMAFROST]Terraform Toward Permafrost[\LINK]</English>
 		<French>Terraformer en Persigel</French>
 		<German>Terraforme zu Permafrost</German>
 		<Italian>Terraforma in Permafrost</Italian>
@@ -4228,7 +4176,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_PLAINS</Tag>
-		<English>Terraform towards Plains</English>
+		<English>[LINK=IMPROVEMENT_TERRAFORM_PLAINS]Terraform Toward Plains[\LINK]</English>
 		<French>Terraformer en Plaines</French>
 		<German>Terraforme zu Ebene</German>
 		<Italian>Terraforma in Pianure</Italian>
@@ -4236,7 +4184,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_ROCKY</Tag>
-		<English>Terraform towards Rocky</English>
+		<English>[LINK=IMPROVEMENT_TERRAFORM_ROCKY]Terraform Toward Rocky[\LINK]</English>
 		<French>Terraformer en Sol rocheux</French>
 		<German>Terraforme zu Rocky</German>
 		<Italian>Terraforma in Suolo roccioso</Italian>
@@ -4244,7 +4192,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_SCRUB</Tag>
-		<English>Terraform towards Scrub</English>
+		<English>[LINK=IMPROVEMENT_TERRAFORM_SCRUB]Terraform Toward Scrub[\LINK]</English>
 		<French>Terraformer en Brousse</French>
 		<German>Terraforme zu Scrub</German>
 		<Italian>Terraforma in Macchia</Italian>
@@ -4252,7 +4200,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_TUNDRA</Tag>
-		<English>Terraform towards Tundra</English>
+		<English>[LINK=IMPROVEMENT_TERRAFORM_TUNDRA]Terraform Toward Tundra[\LINK]</English>
 		<French>Terraformer en Toundra</French>
 		<German>Terraforme zu Tundra</German>
 		<Italian>Terraforma in Tundra</Italian>
@@ -4260,14 +4208,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_THATCH_CUTTER</Tag>
-		<English>Build a [LINK=IMPROVEMENT_THATCH_CUTTER]Thatch Cutter[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_THATCH_CUTTER]Thatch Cutter[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_THATCH_CUTTER]Récolteur de Chaume[\LINK]</French>
 		<Spanish>Construir un [LINK=IMPROVEMENT_THATCH_CUTTER]Recolector de paja[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_THATCH_CUTTER]Chatę Zbieracza Strzechy[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TIDAL_HARNESS</Tag>
-		<English>Construct a [LINK=IMPROVEMENT_TIDAL_HARNESS]Tidal Harness[\LINK]</English>
+		<English>Construct [LINK=IMPROVEMENT_TIDAL_HARNESS]Tidal Harness[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_TIDAL_HARNESS]Usine marémotrice[\LINK]</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_TIDAL_HARNESS]Gezeitenbaum[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_TIDAL_HARNESS]Impianto energia delle maree[\LINK]</Italian>
@@ -4276,7 +4224,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TOWN</Tag>
-		<English>Build a [LINK=IMPROVEMENT_TOWN]Town[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_TOWN]Town[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_TOWN]Ville[\LINK]</French>
 		<German>Errichte eine [LINK=IMPROVEMENT_TOWN]Gemeinde[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_TOWN]Paese[\LINK]</Italian>
@@ -4285,7 +4233,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TRAIL</Tag>
-		<English>Make a Trail</English>
+		<English>Make [LINK=ROUTE_TRAIL]Trail[\LINK]</English>
 		<French>Construire un [COLOR_BUILDING_TEXT]Sentier[COLOR_REVERT]</French>
 		<German>Trampelpfad anlegen</German>
 		<Italian>Costruisci un sentiero</Italian>
@@ -4294,7 +4242,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TREEFARM</Tag>
-		<English>Build a [LINK=IMPROVEMENT_TREEFARM]Treefarm[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_TREEFARM]Treefarm[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_TREEFARM]Verger[\LINK]</French>
 		<German>Errichte eine [LINK=IMPROVEMENT_TREEFARM]Baumschule[\LINK]</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_TREEFARM]Coltivazione di alberi[\LINK]</Italian>
@@ -4303,7 +4251,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TUNNEL</Tag>
-		<English>Build a Tunnel</English>
+		<English>Build [LINK=ROUTE_TUNNEL]Tunnel[\LINK]</English>
 		<French>Construire un [COLOR_BUILDING_TEXT]Tunnel sous-marin[COLOR_REVERT]</French>
 		<German>Tunnel errichten</German>
 		<Italian>Costruisci un Tunnel</Italian>
@@ -4312,7 +4260,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_VILLAGE</Tag>
-		<English>Build a [LINK=IMPROVEMENT_VILLAGE]Village[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_VILLAGE]Village[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_VILLAGE]Village[\LINK]</French>
 		<German>Errichte ein [LINK=IMPROVEMENT_VILLAGE]Dorf[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_VILLAGE]Villaggio[\LINK]</Italian>
@@ -4321,7 +4269,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WELL</Tag>
-		<English>Build a [LINK=IMPROVEMENT_WELL]Hydrocarbon Well[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_WELL]Hydrocarbon Well[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_WELL]Hydrocarbure Puits[\LINK]</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Errichtung eines [LINK=IMPROVEMENT_WELL]Bohrturms[\LINK][COLOR_REVERT]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_WELL]Idrocarburo Pozzo[\LINK]</Italian>
@@ -4330,7 +4278,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WETLANDS_CAMP</Tag>
-		<English>Build a [LINK=IMPROVEMENT_WETLANDS_CAMP]Wetlands Camp[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_WETLANDS_CAMP]Wetlands Camp[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_WETLANDS_CAMP]Camp de zones humides[\LINK]</French>
 		<German>Errichte [LINK=IMPROVEMENT_WETLANDS_CAMP]feuchtgebiete feldlager[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_WETLANDS_CAMP]campo nella zone umide[\LINK]</Italian>
@@ -4339,7 +4287,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WETLANDS_CAMP_K</Tag>
-		<English>Build a [LINK=IMPROVEMENT_WETLANDS_CAMP]Wetlands Camp[\LINK] (Consumed)</English>
+		<English>Build [LINK=IMPROVEMENT_WETLANDS_CAMP]Wetlands Camp[\LINK] (Consumed)</English>
 		<French>Construire un [LINK=IMPROVEMENT_WETLANDS_CAMP]Camp de zones humides[\LINK] (Consumed)</French>
 		<German>Errichte [LINK=IMPROVEMENT_WETLANDS_CAMP]feuchtgebiete feldlager[\LINK] (Consumed)</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_WETLANDS_CAMP]campo nella zone umide[\LINK] (Consumed)</Italian>
@@ -4348,12 +4296,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WHALING_SHIPS</Tag>
-		<English>Whaling Ships</English>
+		<English>[LINK=IMPROVEMENT_WHALING_SHIPS]Whaling Ships[\LINK]</English>
 		<Polish>Stwórz Statki Wielorybnicze</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WOODEN_TOWER</Tag>
-		<English>Build a [LINK=IMPROVEMENT_WOODEN_TOWER]Wooden Watchtower[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_WOODEN_TOWER]Wooden Watchtower[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_WOODEN_TOWER]Tour d'observation en bois[\LINK]</French>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_WOODEN_TOWER]torre d'osservazione in legno[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_WOODEN_TOWER]Puesto de avanzada de madera[\LINK]</Spanish>
@@ -4361,7 +4309,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WOODEN_TOWER_G</Tag>
-		<English>Build a [LINK=IMPROVEMENT_WOODEN_TOWER]Wooden Watchtower[\LINK] (Gatherer)</English>
+		<English>Build [LINK=IMPROVEMENT_WOODEN_TOWER]Wooden Watchtower[\LINK] (Gatherer)</English>
 		<French>Construire une [LINK=IMPROVEMENT_WOODEN_TOWER]Tour d'observation en bois[\LINK]</French>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_WOODEN_TOWER]torre d'osservazione in legno[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_WOODEN_TOWER]Puesto de avanzada de madera[\LINK]</Spanish>
@@ -4389,8 +4337,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_GROW_FOREST</Tag>
-		<English>Grow Forest</English>
+		<English>[LINK=IMPROVEMENT_GROW_FOREST]Grow Forest[\LINK]</English>
 	</TEXT>
+	<!-- Unloaded Module
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ZIGGURAT</Tag>
 		<English>Build [LINK=IMPROVEMENT_ZIGGURAT]Ziggurat[\LINK]</English>
@@ -4400,6 +4349,7 @@
 		<Spanish>Construir un [LINK=IMPROVEMENT_ZIGGURAT]Zigurat[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_ZIGGURAT]Ziggurat[\LINK]</Polish>
 	</TEXT>
+	-->
 	<TEXT>
 		<Tag>TXT_KEY_BULLET</Tag>
 		<English>[ICON_BULLET]</English>
@@ -26294,11 +26244,11 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<!-- Pepper's routes are used as yield boosters in improvements. They are here so Pepper's module can be turned off. -->
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HYPERLOOP</Tag>
-		<English>Build Vactrain</English>
+		<English>Build [LINK=ROUTE_HYPERLOOP]Vactrain[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_GRAVITY_TRAIN</Tag>
-		<English>Build Gravity Train</English>
+		<English>Build [LINK=ROUTE_GRAVITY_TRAIN]Gravity Train[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROUTE_HYPERLOOP</Tag>
@@ -26307,5 +26257,54 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_KEY_ROUTE_GRAVITY_TRAIN</Tag>
 		<English>Gravity Train</English>
+	</TEXT>
+	<!-- Vanilla improvemenents - to match spelling -->
+		<TEXT>
+		<Tag>TXT_KEY_BUILD_ROAD</Tag>
+		<English>Build [LINK=ROUTE_ROAD]Road[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_RAILROAD</Tag>
+		<English>Build [LINK=ROUTE_RAILROAD]Railroad[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_MINE</Tag>
+		<English>Build [LINK=IMPROVEMENT_MINE]Mine[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_WORKSHOP</Tag>
+		<English>Build [LINK=IMPROVEMENT_WORKSHOP]Workshop[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_LUMBERMILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_LUMBERMILL]Lumbermill[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_WINDMILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_WINDMILL]Windmill[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_WATERMILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_WATERMILL]Watermill[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_PLANTATION</Tag>
+		<English>Build [LINK=IMPROVEMENT_PLANTATION]Plantation[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_QUARRY</Tag>
+		<English>Build [LINK=IMPROVEMENT_QUARRY]Quarry[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_PASTURE</Tag>
+		<English>Build [LINK=IMPROVEMENT_PASTURE]Pasture[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_WINERY</Tag>
+		<English>Build [LINK=IMPROVEMENT_WINERY]Winery[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_FORT</Tag>
+		<English>Build [LINK=IMPROVEMENT_FORT]Fort[\LINK]</English>
 	</TEXT>
 </Civ4GameText>
