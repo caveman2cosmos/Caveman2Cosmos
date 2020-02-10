@@ -6107,18 +6107,7 @@ bool CvPlayer::hasAutoUnit() const
 {
 	PROFILE_FUNC();
 
-	CvSelectionGroup* pLoopSelectionGroup;
-	int iLoop;
-
-	for(pLoopSelectionGroup = firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = nextSelectionGroup(&iLoop))
-	{
-		if (pLoopSelectionGroup->readyToAuto())
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return algo::any_of(groups(), CvSelectionGroup::fn::readyToAuto());
 }
 
 
@@ -6328,21 +6317,7 @@ int CvPlayer::countCorporationSpreadUnits(CvArea* pArea, CorporationTypes eCorpo
 
 int CvPlayer::countNumCoastalCities() const
 {
-	CvCity* pLoopCity;
-	int iCount;
-	int iLoop;
-
-	iCount = 0;
-
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
-	{
-		if (pLoopCity->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))
-		{
-			iCount++;
-		}
-	}
-
-	return iCount;
+	return algo::count_if(cities(), CvCity::fn::isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()));
 }
 
 
@@ -6369,22 +6344,12 @@ int CvPlayer::countNumCoastalCitiesByArea(CvArea* pArea) const
 	return iCount;
 }
 
+
 int CvPlayer::countNumCitiesWithOrbitalInfrastructure() const
 {
-	if ( m_orbitalInfrastructureCountDirty )
+	if (m_orbitalInfrastructureCountDirty)
 	{
-		//ls612: Count the number of cities that a player owns that have Orbital Infrastructure
-		m_orbitalInfrastructureCount = 0;
-
-		int iLoop;
-		for (CvCity* pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
-		{
-			if(pLoopCity->hasOrbitalInfrastructure())
-			{
-				m_orbitalInfrastructureCount++;
-			}
-		}
-
+		m_orbitalInfrastructureCount = algo::count_if(cities(), CvCity::fn::hasOrbitalInfrastructure());
 		m_orbitalInfrastructureCountDirty = false;
 	}
 
@@ -6394,18 +6359,7 @@ int CvPlayer::countNumCitiesWithOrbitalInfrastructure() const
 
 unsigned long long CvPlayer::countTotalCulture() const
 {
-	CvCity* pLoopCity;
-	unsigned long long iCount;
-	int iLoop;
-
-	iCount = 0;
-
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
-	{
-		iCount += pLoopCity->getCultureTimes100(getID());
-	}
-
-	return iCount/100;
+	return algo::accumulate(cities() | transformed(CvCity::fn::getCultureTimes100(getID())), 0) / 100;
 }
 
 void CvPlayer::doCountTotalCulture()
@@ -6588,43 +6542,15 @@ int CvPlayer::countCityFeatures(FeatureTypes eFeature) const
 
 int CvPlayer::countNumBuildings(BuildingTypes eBuilding) const
 {
-	PROFILE_FUNC();
-
-	CvCity* pLoopCity;
-	int iCount;
-	int iLoop;
-
-	iCount = 0;
-
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
-	{
-		if (pLoopCity->getNumBuilding(eBuilding) > 0)
-		{
-			iCount += pLoopCity->getNumBuilding(eBuilding);
-		}
-	}
-
-	return iCount;
+	return algo::accumulate(cities()
+		| filtered(CvCity::fn::getNumBuilding(eBuilding) > 0)
+		| transformed(CvCity::fn::getNumBuilding(eBuilding)), 0);
 }
 
 
 int CvPlayer::countNumCitiesConnectedToCapital() const
 {
-	CvCity* pLoopCity;
-	int iCount;
-	int iLoop;
-
-	iCount = 0;
-
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
-	{
-		if (pLoopCity->isConnectedToCapital())
-		{
-			iCount++;
-		}
-	}
-
-	return iCount;
+	return algo::count_if(cities(), CvCity::fn::isConnectedToCapital());
 }
 
 
@@ -6663,19 +6589,13 @@ int CvPlayer::countPotentialForeignTradeCities(CvArea* pIgnoreArea) const
 
 int CvPlayer::countPotentialForeignTradeCitiesConnected() const
 {
-	CvCity* pCapitalCity;
-	CvCity* pLoopCity;
-	int iCount;
-	int iLoop;
-	int iI;
+	int iCount = 0;
 
-	iCount = 0;
-
-	pCapitalCity = getCapitalCity();
-
-	if (pCapitalCity != NULL)
+	const CvCity* capitalCity = getCapitalCity();
+	if (capitalCity != NULL)
 	{
-		for (iI = 0; iI < MAX_PC_PLAYERS; iI++)
+		const CvPlotGroup* pCapitalCityPlotGroup = capitalCity->plotGroup(getID());
+		for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 		{
 			if (GET_PLAYER((PlayerTypes)iI).isAlive())
 			{
@@ -6683,16 +6603,8 @@ int CvPlayer::countPotentialForeignTradeCitiesConnected() const
 				{
 					if (GET_TEAM(getTeam()).isFreeTrade(GET_PLAYER((PlayerTypes)iI).getTeam()))
 					{
-						for (pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
-						{
-							FAssert(pLoopCity->getOwnerINLINE() != getID());
-							FAssert(pLoopCity->getTeam() != getTeam());
-
-							if (pLoopCity->plotGroup(getID()) == pCapitalCity->plotGroup(getID()))
-							{
-								iCount++;
-							}
-						}
+						iCount += algo::count_if(GET_PLAYER((PlayerTypes)iI).cities(),
+							CvCity::fn::plotGroup(getID()) == pCapitalCityPlotGroup);
 					}
 				}
 			}
@@ -7966,16 +7878,7 @@ int CvPlayer::getNumTradeableBonuses(BonusTypes eBonus) const
 
 bool CvPlayer::hasBonus(BonusTypes eBonus) const
 {
-	int iLoop;
-	for (CvCity* pLoopCity = firstCity(&iLoop); NULL != pLoopCity; pLoopCity = nextCity(&iLoop))
-	{
-		if (pLoopCity->hasBonus(eBonus))
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return algo::any_of(cities(), CvCity::fn::hasBonus(eBonus));
 }
 
 int CvPlayer::getNumTradeBonusImports(PlayerTypes ePlayer) const
@@ -8195,21 +8098,7 @@ void CvPlayer::findNewCapital()
 
 int CvPlayer::getNumGovernmentCenters() const
 {
-	CvCity* pLoopCity;
-	int iCount;
-	int iLoop;
-
-	iCount = 0;
-
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
-	{
-		if (pLoopCity->isGovernmentCenter())
-		{
-			iCount++;
-		}
-	}
-
-	return iCount;
+	return algo::count_if(cities(), CvCity::fn::isGovernmentCenter());
 }
 
 
@@ -9589,23 +9478,9 @@ bool CvPlayer::canConstructInternal(BuildingTypes eBuilding, bool bContinue, boo
 	{
 		if (getStateReligion() != kBuilding.getStateReligion())
 		{
-			if ( probabilityEverConstructable != NULL )
+			if (probabilityEverConstructable != NULL)
 			{
-				//	Is this religion one we have in our civ?
-				bool hasReligionSomewhere = false;
-				int iLoop;
-				CvCity* pLoopCity;
-
-				for (pLoopCity = firstCity(&iLoop, true); pLoopCity != NULL; pLoopCity = nextCity(&iLoop, true))
-				{
-					if ( pLoopCity->isHasReligion((ReligionTypes)kBuilding.getStateReligion()) )
-					{
-						hasReligionSomewhere = true;
-						break;
-					}
-				}
-
-				*probabilityEverConstructable = (hasReligionSomewhere ? 20 : 5);
+				*probabilityEverConstructable = algo::any_of(cities(), CvCity::fn::isHasReligion((ReligionTypes)kBuilding.getStateReligion())) ? 20 : 5;
 			}
 			return false;
 		}
@@ -10116,7 +9991,6 @@ int CvPlayer::getProductionNeeded(BuildingTypes eBuilding) const
 
 int CvPlayer::getProductionNeeded(ProjectTypes eProject) const
 {
-
 	int iInitialProduction = GC.getProjectInfo(eProject).getProductionCost();
 	if (iInitialProduction < 0)
 	{
@@ -10822,31 +10696,13 @@ int CvPlayer::getImprovementUpgradeRateTimes100(ImprovementTypes eImprovement) c
 
 int CvPlayer::calculateTotalYield(YieldTypes eYield) const
 {
-	CvCity* pLoopCity;
-	int iTotalCommerce = 0;
-	int iLoop = 0;
-
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
-	{
-		iTotalCommerce += pLoopCity->getYieldRate(eYield);
-	}
-
-	return iTotalCommerce;
+	return algo::accumulate(cities() | transformed(CvCity::fn::getYieldRate(eYield)), 0);
 }
 
 
 int CvPlayer::calculateTotalCityHappiness() const
 {
-	CvCity* pLoopCity;
-	int iTotalHappiness = 0;
-	int iLoop = 0;
-
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
-	{
-		iTotalHappiness += pLoopCity->happyLevel();
-	}
-
-	return iTotalHappiness;
+	return algo::accumulate(cities() | transformed(CvCity::fn::happyLevel()), 0);
 }
 
 
@@ -10938,45 +10794,18 @@ int CvPlayer::calculateTotalImports(YieldTypes eYield) const
 
 int CvPlayer::calculateTotalCityUnhappiness() const
 {
-	CvCity* pLoopCity;
-	int iTotalUnhappiness = 0;
-	int iLoop = 0;
-
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
-	{
-		iTotalUnhappiness += pLoopCity->unhappyLevel();
-	}
-
-	return iTotalUnhappiness;
+	return algo::accumulate(cities() | transformed(CvCity::fn::unhappyLevel()), 0);
 }
 
 
 int CvPlayer::calculateTotalCityHealthiness() const
 {
-	CvCity* pLoopCity;
-	int iTotalHealthiness = 0;
-	int iLoop = 0;
-
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
-	{
-		iTotalHealthiness += pLoopCity->goodHealth();
-	}
-
-	return iTotalHealthiness;
+	return algo::accumulate(cities() | transformed(CvCity::fn::goodHealth()), 0);
 }
 
 int CvPlayer::calculateTotalCityUnhealthiness() const
 {
-	CvCity* pLoopCity;
-	int iTotalUnhealthiness = 0;
-	int iLoop = 0;
-
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
-	{
-		iTotalUnhealthiness += pLoopCity->badHealth();
-	}
-
-	return iTotalUnhealthiness;
+	return algo::accumulate(cities() | transformed(CvCity::fn::badHealth()), 0);
 }
 
 
@@ -12432,18 +12261,7 @@ int CvPlayer::countHeadquarters() const
 
 int CvPlayer::countCorporations(CorporationTypes eCorporation) const
 {
-	int iCount = 0;
-
-	int iLoop;
-	for (CvCity* pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
-	{
-		if (pLoopCity->isHasCorporation(eCorporation))
-		{
-			++iCount;
-		}
-	}
-
-	return iCount;
+	return algo::count_if(cities(), CvCity::fn::isHasCorporation(eCorporation));
 }
 
 
@@ -12643,21 +12461,7 @@ int CvPlayer::unitsRequiredForGoldenAge() const
 
 int CvPlayer::unitsGoldenAgeCapable() const
 {
-	CvUnit* pLoopUnit;
-	int iCount;
-	int iLoop;
-
-	iCount = 0;
-
-	for(pLoopUnit = firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = nextUnit(&iLoop))
-	{
-		if (pLoopUnit->isGoldenAge())
-		{
-			iCount++;
-		}
-	}
-
-	return iCount;
+	return algo::count_if(units(), CvUnit::fn::isGoldenAge());
 }
 
 
@@ -12684,8 +12488,8 @@ int CvPlayer::unitsGoldenAgeReady() const
 	{
 		if (!(pabUnitUsed[pLoopUnit->getUnitType()]))
 		{
-		if (pLoopUnit->isGoldenAge())
-		{
+			if (pLoopUnit->isGoldenAge())
+			{
 				pabUnitUsed[pLoopUnit->getUnitType()] = true;
 				iCount++;
 			}
@@ -12915,14 +12719,7 @@ void CvPlayer::changeTotalPopulation(int iChange)
 
 long CvPlayer::getRealPopulation() const
 {
-	CvCity* pLoopCity;
-	__int64 iTotalPopulation = 0;
-	int iLoop = 0;
-
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
-	{
-		iTotalPopulation += pLoopCity->getRealPopulation();
-	}
+	__int64 iTotalPopulation = algo::accumulate(cities() | transformed(CvCity::fn::getRealPopulation()), 0);
 
 	if (iTotalPopulation > MAX_INT)
 	{
@@ -17364,12 +17161,8 @@ int CvPlayer::getTotalCityBaseCommerceRate(CommerceTypes eIndex) const
 
 	if (m_cachedTotalCityBaseCommerceRate[eIndex] == MAX_INT)
 	{
-		int iLoop;
-		int	iResult = 0;
-		for (CvCity* pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
-		{
-			iResult += pLoopCity->getBaseCommerceRateTimes100(eIndex);
-		}
+		const int iResult = algo::accumulate(cities() | transformed(CvCity::fn::getBaseCommerceRateTimes100(eIndex)), 0);
+
 		m_cachedTotalCityBaseCommerceRate[eIndex] = iResult / 100;
 	}
 	return m_cachedTotalCityBaseCommerceRate[eIndex];
@@ -18766,7 +18559,6 @@ void CvPlayer::setCivics(CivicOptionTypes eIndex, CivicTypes eNewValue)
 		}
 
 		clearCanConstructCacheForClass(NO_BUILDINGCLASS, true);
-
 	}
 }
 
@@ -22527,9 +22319,6 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 
 int CvPlayer::getAdvancedStartUnitCost(UnitTypes eUnit, bool bAdd, CvPlot* pPlot) const
 {
-	int iLoop;
-	int iNumUnitType = 0;
-
 	if (0 == getNumCities())
 	{
 		return -1;
@@ -22543,23 +22332,9 @@ int CvPlayer::getAdvancedStartUnitCost(UnitTypes eUnit, bool bAdd, CvPlot* pPlot
 
 	if (NULL == pPlot)
 	{
-		if (bAdd)
+		if (bAdd && algo::none_of(cities(), CvCity::fn::canTrain(eUnit)))
 		{
-			bool bValid = false;
-			int iLoop;
-			for (CvCity* pLoopCity = firstCity(&iLoop); NULL != pLoopCity; pLoopCity = nextCity(&iLoop))
-			{
-				if (pLoopCity->canTrain(eUnit))
-				{
-					bValid = true;
-					break;
-				}
-			}
-
-			if (!bValid)
-			{
-				return -1;
-			}
+			return -1;
 		}
 	}
 	else
@@ -22651,39 +22426,16 @@ int CvPlayer::getAdvancedStartUnitCost(UnitTypes eUnit, bool bAdd, CvPlot* pPlot
 			}
 		}
 		// Must be this unit at plot in order to remove
-		else
+		else if (algo::none_of(pPlot->units(), CvUnit::fn::getUnitType() == eUnit))
 		{
-			bool bUnitFound = false;
-
-			CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-			while (pUnitNode != NULL)
-			{
-				CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-				pUnitNode = pPlot->nextUnitNode(pUnitNode);
-
-				if (pLoopUnit->getUnitType() == eUnit)
-				{
-					bUnitFound = true;
-				}
-			}
-
-			if (!bUnitFound)
-			{
-				return -1;
-			}
+			return -1;
 		}
 	}
 
 	// Increase cost if the XML defines that additional units will cost more
 	if (0 != GC.getUnitInfo(eUnit).getAdvancedStartCostIncrease())
 	{
-		for (CvUnit* pLoopUnit = firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = nextUnit(&iLoop))
-		{
-			if (pLoopUnit->getUnitType() == eUnit)
-			{
-				++iNumUnitType;
-			}
-		}
+		int iNumUnitType = algo::count_if(units(), CvUnit::fn::getUnitType() == eUnit);
 
 		if (!bAdd)
 		{
@@ -22929,27 +22681,11 @@ int CvPlayer::getAdvancedStartBuildingCost(BuildingTypes eBuilding, bool bAdd, C
 		return -1;
 	}
 
-	if (NULL == pCity)
+	if (NULL == pCity && bAdd && algo::none_of(cities(), CvCity::fn::canConstruct(eBuilding)))
 	{
-		if (bAdd)
-		{
-			bool bValid = false;
-			int iLoop;
-			for (CvCity* pLoopCity = firstCity(&iLoop); NULL != pLoopCity; pLoopCity = nextCity(&iLoop))
-			{
-				if (pLoopCity->canConstruct(eBuilding))
-				{
-					bValid = true;
-					break;
-				}
-			}
-
-			if (!bValid)
-			{
-				return -1;
-			}
-		}
+		return -1;
 	}
+
 	if (NULL != pCity)
 	{
 		if (pCity->getOwnerINLINE() != getID())
