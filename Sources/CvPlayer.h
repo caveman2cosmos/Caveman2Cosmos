@@ -104,8 +104,6 @@ public:
 	/*                                                                                              */
 	/************************************************************************************************/
 	void logMsg(char* format, ...);
-	void clearTraitBonuses();
-	void addTraitBonuses();
 	void changePersonalityType();
 	void resetCivTypeEffects();
 	void changeLeader(LeaderHeadTypes eNewLeader);

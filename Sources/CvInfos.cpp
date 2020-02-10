@@ -25875,7 +25875,7 @@ int CvTraitInfo::getHealth() const
 	{
 		if (isNegativeTrait() && m_iHealth > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iHealth < 0)
 		{
@@ -25891,7 +25891,7 @@ int CvTraitInfo::getHappiness() const
 	{
 		if (isNegativeTrait() && m_iHappiness > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iHappiness < 0)
 		{
@@ -25907,7 +25907,7 @@ int CvTraitInfo::getMaxAnarchy() const
 	{
 		if (isNegativeTrait() && m_iMaxAnarchy > -1)
 		{
-				return -1;
+			return -1;
 		}
 	}
 	return m_iMaxAnarchy;
@@ -25919,7 +25919,7 @@ int CvTraitInfo::getUpkeepModifier() const
 	{
 		if (isNegativeTrait() && m_iUpkeepModifier < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iUpkeepModifier > 0)
 		{
@@ -25935,7 +25935,7 @@ int CvTraitInfo::getLevelExperienceModifier() const
 	{
 		if (isNegativeTrait() && m_iLevelExperienceModifier < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iLevelExperienceModifier > 0)
 		{
@@ -25951,7 +25951,7 @@ int CvTraitInfo::getGreatPeopleRateModifier() const
 	{
 		if (isNegativeTrait() && m_iGreatPeopleRateModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iGreatPeopleRateModifier < 0)
 		{
@@ -25967,7 +25967,7 @@ int CvTraitInfo::getGreatGeneralRateModifier() const
 	{
 		if (isNegativeTrait() && m_iGreatGeneralRateModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iGreatGeneralRateModifier < 0)
 		{
@@ -25983,7 +25983,7 @@ int CvTraitInfo::getDomesticGreatGeneralRateModifier() const
 	{
 		if (isNegativeTrait() && m_iDomesticGreatGeneralRateModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iDomesticGreatGeneralRateModifier < 0)
 		{
@@ -25999,7 +25999,7 @@ int CvTraitInfo::getMaxGlobalBuildingProductionModifier() const
 	{
 		if (isNegativeTrait() && m_iMaxGlobalBuildingProductionModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iMaxGlobalBuildingProductionModifier < 0)
 		{
@@ -26015,7 +26015,7 @@ int CvTraitInfo::getMaxTeamBuildingProductionModifier() const
 	{
 		if (isNegativeTrait() && m_iMaxTeamBuildingProductionModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iMaxTeamBuildingProductionModifier < 0)
 		{
@@ -26031,7 +26031,7 @@ int CvTraitInfo::getMaxPlayerBuildingProductionModifier() const
 	{
 		if (isNegativeTrait() && m_iMaxPlayerBuildingProductionModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iMaxPlayerBuildingProductionModifier < 0)
 		{
@@ -26054,7 +26054,7 @@ int CvTraitInfo::getRevIdxLocal() const
 	{
 		if (isNegativeTrait() && m_iRevIdxLocal < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iRevIdxLocal > 0)
 		{
@@ -26071,7 +26071,7 @@ int CvTraitInfo::getRevIdxNational() const
 	{
 		if (isNegativeTrait() && m_iRevIdxNational < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iRevIdxNational > 0)
 		{
@@ -26088,7 +26088,7 @@ int CvTraitInfo::getRevIdxDistanceModifier() const
 	{
 		if (isNegativeTrait() && m_iRevIdxDistanceModifier < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iRevIdxDistanceModifier > 0)
 		{
@@ -26105,7 +26105,7 @@ int CvTraitInfo::getRevIdxHolyCityGood() const
 	{
 		if (isNegativeTrait() && m_iRevIdxHolyCityGood > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iRevIdxHolyCityGood < 0)
 		{
@@ -26122,7 +26122,7 @@ int CvTraitInfo::getRevIdxHolyCityBad() const
 	{
 		if (isNegativeTrait() && m_iRevIdxHolyCityBad < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iRevIdxHolyCityBad > 0)
 		{
@@ -26139,7 +26139,7 @@ float CvTraitInfo::getRevIdxNationalityMod() const
 	{
 		if (isNegativeTrait() && m_fRevIdxNationalityMod < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_fRevIdxNationalityMod > 0)
 		{
@@ -26156,7 +26156,7 @@ float CvTraitInfo::getRevIdxBadReligionMod() const
 	{
 		if (isNegativeTrait() && m_fRevIdxBadReligionMod < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_fRevIdxBadReligionMod > 0)
 		{
@@ -26173,7 +26173,7 @@ float CvTraitInfo::getRevIdxGoodReligionMod() const
 	{
 		if (isNegativeTrait() && m_fRevIdxGoodReligionMod > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_fRevIdxGoodReligionMod < 0)
 		{
@@ -26411,7 +26411,7 @@ int CvTraitInfo::getWarWearinessAccumulationModifier() const
 	{
 		if (isNegativeTrait() && m_iWarWearinessAccumulationModifier < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iWarWearinessAccumulationModifier > 0)
 		{
@@ -26427,7 +26427,7 @@ int CvTraitInfo::getCivicAnarchyTimeModifier() const
 	{
 		if (isNegativeTrait() && m_iCivicAnarchyTimeModifier < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iCivicAnarchyTimeModifier > 0)
 		{
@@ -26443,7 +26443,7 @@ int CvTraitInfo::getReligiousAnarchyTimeModifier() const
 	{
 		if (isNegativeTrait() && m_iReligiousAnarchyTimeModifier < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iReligiousAnarchyTimeModifier > 0)
 		{
@@ -26459,7 +26459,7 @@ int CvTraitInfo::getImprovementUpgradeRateModifier() const
 	{
 		if (isNegativeTrait() && m_iImprovementUpgradeRateModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iImprovementUpgradeRateModifier < 0)
 		{
@@ -26475,7 +26475,7 @@ int CvTraitInfo::getWorkerSpeedModifier() const
 	{
 		if (isNegativeTrait() && m_iWorkerSpeedModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iWorkerSpeedModifier < 0)
 		{
@@ -26491,7 +26491,7 @@ int CvTraitInfo::getMaxConscript() const
 	{
 		if (isNegativeTrait() && m_iMaxConscript > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iMaxConscript < 0)
 		{
@@ -26507,7 +26507,7 @@ int CvTraitInfo::getDistanceMaintenanceModifier() const
 	{
 		if (isNegativeTrait() && m_iDistanceMaintenanceModifier < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iDistanceMaintenanceModifier > 0)
 		{
@@ -26523,7 +26523,7 @@ int CvTraitInfo::getNumCitiesMaintenanceModifier() const
 	{
 		if (isNegativeTrait() && m_iNumCitiesMaintenanceModifier < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iNumCitiesMaintenanceModifier > 0)
 		{
@@ -26539,7 +26539,7 @@ int CvTraitInfo::getCorporationMaintenanceModifier() const
 	{
 		if (isNegativeTrait() && m_iCorporationMaintenanceModifier < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iCorporationMaintenanceModifier > 0)
 		{
@@ -26555,7 +26555,7 @@ int CvTraitInfo::getStateReligionGreatPeopleRateModifier() const
 	{
 		if (isNegativeTrait() && m_iStateReligionGreatPeopleRateModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iStateReligionGreatPeopleRateModifier < 0)
 		{
@@ -26571,7 +26571,7 @@ int CvTraitInfo::getFreeExperience() const
 	{
 		if (isNegativeTrait() && m_iFreeExperience > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iFreeExperience < 0)
 		{
@@ -26587,7 +26587,7 @@ int CvTraitInfo::getBaseFreeUnits() const
 	{
 		if (isNegativeTrait() && m_iBaseFreeUnits > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iBaseFreeUnits < 0)
 		{
@@ -26603,7 +26603,7 @@ int CvTraitInfo::getBaseFreeMilitaryUnits() const
 	{
 		if (isNegativeTrait() && m_iBaseFreeMilitaryUnits > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iBaseFreeMilitaryUnits < 0)
 		{
@@ -26619,7 +26619,7 @@ int CvTraitInfo::getFreeUnitsPopulationPercent() const
 	{
 		if (isNegativeTrait() && m_iFreeUnitsPopulationPercent > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iFreeUnitsPopulationPercent < 0)
 		{
@@ -26635,7 +26635,7 @@ int CvTraitInfo::getFreeMilitaryUnitsPopulationPercent() const
 	{
 		if (isNegativeTrait() && m_iFreeMilitaryUnitsPopulationPercent > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iFreeMilitaryUnitsPopulationPercent < 0)
 		{
@@ -26651,7 +26651,7 @@ int CvTraitInfo::getGoldPerUnit() const
 	{
 		if (isNegativeTrait() && m_iGoldPerUnit < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iGoldPerUnit > 0)
 		{
@@ -26667,7 +26667,7 @@ int CvTraitInfo::getGoldPerMilitaryUnit() const
 	{
 		if (isNegativeTrait() && m_iGoldPerMilitaryUnit < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iGoldPerMilitaryUnit > 0)
 		{
@@ -26683,7 +26683,7 @@ int CvTraitInfo::getHappyPerMilitaryUnit() const
 	{
 		if (isNegativeTrait() && m_iHappyPerMilitaryUnit > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iHappyPerMilitaryUnit < 0)
 		{
@@ -26699,7 +26699,7 @@ int CvTraitInfo::getLargestCityHappiness() const
 	{
 		if (isNegativeTrait() && m_iLargestCityHappiness > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iLargestCityHappiness < 0)
 		{
@@ -26715,7 +26715,7 @@ int CvTraitInfo::getFreeSpecialist() const
 	{
 		if (isNegativeTrait() && m_iFreeSpecialist > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iFreeSpecialist < 0)
 		{
@@ -26731,7 +26731,7 @@ int CvTraitInfo::getTradeRoutes() const
 	{
 		if (isNegativeTrait() && m_iTradeRoutes > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iTradeRoutes < 0)
 		{
@@ -26747,7 +26747,7 @@ int CvTraitInfo::getStateReligionHappiness() const
 	{
 		if (isNegativeTrait() && m_iStateReligionHappiness > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iStateReligionHappiness < 0)
 		{
@@ -26763,7 +26763,7 @@ int CvTraitInfo::getNonStateReligionHappiness() const
 	{
 		if (isNegativeTrait() && m_iNonStateReligionHappiness > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iNonStateReligionHappiness < 0)
 		{
@@ -26779,7 +26779,7 @@ int CvTraitInfo::getStateReligionUnitProductionModifier() const
 	{
 		if (isNegativeTrait() && m_iStateReligionUnitProductionModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iStateReligionUnitProductionModifier < 0)
 		{
@@ -26795,7 +26795,7 @@ int CvTraitInfo::getStateReligionBuildingProductionModifier() const
 	{
 		if (isNegativeTrait() && m_iStateReligionBuildingProductionModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iStateReligionBuildingProductionModifier < 0)
 		{
@@ -26811,7 +26811,7 @@ int CvTraitInfo::getStateReligionFreeExperience() const
 	{
 		if (isNegativeTrait() && m_iStateReligionFreeExperience > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iStateReligionFreeExperience < 0)
 		{
@@ -26827,7 +26827,7 @@ int CvTraitInfo::getExpInBorderModifier() const
 	{
 		if (isNegativeTrait() && m_iExpInBorderModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iExpInBorderModifier < 0)
 		{
@@ -26843,7 +26843,7 @@ int CvTraitInfo::getCityDefenseBonus() const
 	{
 		if (isNegativeTrait() && m_iCityDefenseBonus > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iCityDefenseBonus < 0)
 		{
@@ -26859,7 +26859,7 @@ int CvTraitInfo::getMilitaryProductionModifier() const
 	{
 		if (isNegativeTrait() && m_iMilitaryProductionModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iMilitaryProductionModifier < 0)
 		{
@@ -26875,7 +26875,7 @@ int CvTraitInfo::getAttitudeModifier() const
 	{
 		if (isNegativeTrait() && m_iAttitudeModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iAttitudeModifier < 0)
 		{
@@ -26896,7 +26896,7 @@ int CvTraitInfo::getEspionageDefense() const
 	{
 		if (isNegativeTrait() && m_iEspionageDefense > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iEspionageDefense < 0)
 		{
@@ -26912,7 +26912,7 @@ int CvTraitInfo::getMinAnarchy() const
 	{
 		if (isNegativeTrait() && m_iMinAnarchy < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iMinAnarchy > 0)
 		{
@@ -27072,7 +27072,7 @@ int CvTraitInfo::getCoastalTradeRoutes() const
 	{
 		if (isNegativeTrait() && m_iCoastalTradeRoutes > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iCoastalTradeRoutes < 0)
 		{
@@ -27089,7 +27089,7 @@ int CvTraitInfo::getGlobalPopulationgrowthratepercentage() const
 	{
 		if (isNegativeTrait() && m_iGlobalPopulationgrowthratepercentage < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iGlobalPopulationgrowthratepercentage > 0)
 		{
@@ -27109,7 +27109,7 @@ int CvTraitInfo::getCityStartCulture(bool bForLoad) const
 	{
 		if (isNegativeTrait() && m_iCityStartCulture > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iCityStartCulture < 0)
 		{
@@ -27125,7 +27125,7 @@ int CvTraitInfo::getGlobalAirUnitCapacity() const
 	{
 		if (isNegativeTrait() && m_iGlobalAirUnitCapacity > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iGlobalAirUnitCapacity < 0)
 		{
@@ -27141,7 +27141,7 @@ int CvTraitInfo::getCapitalXPModifier() const
 	{
 		if (isNegativeTrait() && m_iCapitalXPModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iCapitalXPModifier < 0)
 		{
@@ -27157,7 +27157,7 @@ int CvTraitInfo::getHolyCityofStateReligionXPModifier() const
 	{
 		if (isNegativeTrait() && m_iHolyCityofStateReligionXPModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iHolyCityofStateReligionXPModifier < 0)
 		{
@@ -27173,7 +27173,7 @@ int CvTraitInfo::getHolyCityofNonStateReligionXPModifier() const
 	{
 		if (isNegativeTrait() && m_iHolyCityofNonStateReligionXPModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iHolyCityofNonStateReligionXPModifier < 0)
 		{
@@ -27189,7 +27189,7 @@ int CvTraitInfo::getBonusPopulationinNewCities() const
 	{
 		if (isNegativeTrait() && m_iBonusPopulationinNewCities > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iBonusPopulationinNewCities < 0)
 		{
@@ -27205,7 +27205,7 @@ int CvTraitInfo::getMissileRange() const
 	{
 		if (isNegativeTrait() && m_iMissileRange > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iMissileRange < 0)
 		{
@@ -27221,7 +27221,7 @@ int CvTraitInfo::getFlightOperationRange() const
 	{
 		if (isNegativeTrait() && m_iFlightOperationRange > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iFlightOperationRange < 0)
 		{
@@ -27237,7 +27237,7 @@ int CvTraitInfo::getNavalCargoSpace() const
 	{
 		if (isNegativeTrait() && m_iNavalCargoSpace > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iNavalCargoSpace < 0)
 		{
@@ -27253,7 +27253,7 @@ int CvTraitInfo::getMissileCargoSpace() const
 	{
 		if (isNegativeTrait() && m_iMissileCargoSpace > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iMissileCargoSpace < 0)
 		{
@@ -27270,7 +27270,7 @@ int CvTraitInfo::getNationalCaptureProbabilityModifier() const
 	{
 		if (isNegativeTrait() && m_iNationalCaptureProbabilityModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iNationalCaptureProbabilityModifier < 0)
 		{
@@ -27286,7 +27286,7 @@ int CvTraitInfo::getNationalCaptureResistanceModifier() const
 	{
 		if (isNegativeTrait() && m_iNationalCaptureResistanceModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iNationalCaptureResistanceModifier < 0)
 		{
@@ -27303,7 +27303,7 @@ int CvTraitInfo::getStateReligionSpreadProbabilityModifier() const
 	{
 		if (isNegativeTrait() && m_iStateReligionSpreadProbabilityModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iStateReligionSpreadProbabilityModifier < 0)
 		{
@@ -27319,7 +27319,7 @@ int CvTraitInfo::getNonStateReligionSpreadProbabilityModifier() const
 	{
 		if (isNegativeTrait() && m_iNonStateReligionSpreadProbabilityModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iNonStateReligionSpreadProbabilityModifier < 0)
 		{
@@ -27335,7 +27335,7 @@ int CvTraitInfo::getFreedomFighterChange() const
 	{
 		if (isNegativeTrait() && m_iFreedomFighterChange > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iFreedomFighterChange < 0)
 		{
@@ -27527,7 +27527,7 @@ int CvTraitInfo::getNumNotOnGameOptions() const
 	return (int)m_aiNotOnGameOptions.size();
 }
 
-bool CvTraitInfo::isNotOnGameOption(int i)
+bool CvTraitInfo::isNotOnGameOption(int i) const
 {
 	FAssert (i > -1 && i < GC.getNumGameOptions());
 	if (find(m_aiNotOnGameOptions.begin(), m_aiNotOnGameOptions.end(), i) == m_aiNotOnGameOptions.end())
@@ -27547,7 +27547,7 @@ int CvTraitInfo::getNumOnGameOptions() const
 	return (int)m_aiOnGameOptions.size();
 }
 
-bool CvTraitInfo::isOnGameOption(int i)
+bool CvTraitInfo::isOnGameOption(int i) const
 {
 	FAssert (i > -1 && i < GC.getNumGameOptions());
 	if (find(m_aiOnGameOptions.begin(), m_aiOnGameOptions.end(), i) == m_aiOnGameOptions.end())
@@ -27556,6 +27556,49 @@ bool CvTraitInfo::isOnGameOption(int i)
 	}
 	return true;
 }
+
+bool CvTraitInfo::isValidTrait(bool bGameStart) const
+{
+	for (int iI = 0; iI < GC.getNumGameOptionInfos(); iI++)
+	{
+		if (GC.getGameINLINE().isOption((GameOptionTypes)iI))
+		{
+			if (isNotOnGameOption(iI)) return false;
+		}
+		else if (isOnGameOption(iI)) return false;
+	}
+
+	if (bGameStart && isBarbarianSelectionOnly())
+	{
+		return true;
+	}
+
+	if (isNegativeTrait())
+	{
+		if (GC.getGameINLINE().isOption(GAMEOPTION_NO_NEGATIVE_TRAITS))
+		{
+			return false;
+		}
+	}
+	else if (bGameStart && GC.getGameINLINE().isOption(GAMEOPTION_START_NO_POSITIVE_TRAITS))
+	{
+		return false;
+	}
+
+	if (GC.getGameINLINE().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))
+	{
+		if (getLinePriority() == 0)
+		{
+			return false;
+		}
+	}
+	else if (getLinePriority() != 0)
+	{
+		return false;
+	}
+	return true;
+}
+
 //Arrays
 int CvTraitInfo::getSpecialistYieldChange(int i, int j) const
 {

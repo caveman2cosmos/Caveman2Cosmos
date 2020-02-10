@@ -7668,15 +7668,16 @@ public:
 	bool isAllReligionsActive() const;
 	bool isBansNonStateReligions() const;
 	bool isFreedomFighter() const;
+	bool isValidTrait(bool bGameStart=false) const;
 
 	// bool vector without delayed resolution
 	int getNotOnGameOption(int i) const;
 	int getNumNotOnGameOptions() const;
-	bool isNotOnGameOption(int i);
+	bool isNotOnGameOption(int i) const;
 
 	int getOnGameOption(int i) const;
 	int getNumOnGameOptions() const;
-	bool isOnGameOption(int i);
+	bool isOnGameOption(int i) const;
 
 	//Arrays
 	int getSpecialistYieldChange(int i, int j) const;	// Exposed to Python

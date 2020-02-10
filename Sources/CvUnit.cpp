@@ -14043,32 +14043,15 @@ bool CvUnit::canUpgrade(UnitTypes eUnit, bool bTestVisible) const
 
 bool CvUnit::isReadyForUpgrade() const
 {
-
-	bool bUpgradeAnywhere = (isUpgradeAnywhere() || GET_PLAYER(getOwnerINLINE()).isUpgradeAnywhere());
-/************************************************************************************************/
-/* REVDCM                                 02/16/10                                phungus420    */
-/*                                                                                              */
-/* RevTrait Effects                                                                             */
-/************************************************************************************************/
-	if ( !bUpgradeAnywhere)
+	if (!canMove())
 	{
-		if (!canMove())
-		{
-			return false;
-		}
+		return false;
 	}
-
-	if ( !bUpgradeAnywhere)
+	if (plot()->getTeam() != getTeam()
+	&& !(isUpgradeAnywhere() || GET_PLAYER(getOwnerINLINE()).isUpgradeAnywhere()))
 	{
-		if (plot()->getTeam() != getTeam())
-		{
-			return false;
-		}
+		return false;
 	}
-/************************************************************************************************/
-/* REVDCM                                  END                                                  */
-/************************************************************************************************/
-
 	return true;
 }
 
@@ -43169,18 +43152,12 @@ void CvUnit::setSMAirBombBaseRate()
 
 int CvUnit::workRate(bool bMax) const
 {
-	int iRate;
-	int iI;
-
-	if (!bMax)
+	if (!bMax && !canMove())
 	{
-		if (!canMove())
-		{
-			return 0;
-		}
+		return 0;
 	}
 
-	iRate = baseWorkRate();
+	int iRate = baseWorkRate();
 
 	iRate *= std::max(0, (GET_PLAYER(getOwnerINLINE()).getWorkerSpeedModifier() + 100));
 	iRate /= 100;
@@ -43196,7 +43173,7 @@ int CvUnit::workRate(bool bMax) const
 	//ls612: Terrain Work Modifiers
 	if (plot() != NULL)
 	{
-		for (iI = 0; iI < GC.getNumFeatureInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumFeatureInfos(); iI++)
 		{
 			if (plot()->getFeatureType() == (FeatureTypes)iI)
 			{

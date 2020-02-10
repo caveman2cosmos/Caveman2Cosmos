@@ -11348,7 +11348,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 					}
 				}
 			}
-			if (GC.getTraitInfo(eTrait).getLinePriority() == 0  && !GC.getTraitInfo(eTrait).isCivilizationTrait())
+			if (GC.getTraitInfo(eTrait).getLinePriority() == 0  && !GC.getTraitInfo(eTrait).isCivilizationTrait() && !GC.getTraitInfo(eTrait).isBarbarianSelectionOnly())
 			{
 				szHelpString.append(NEWLINE);
 				szHelpString.append(gDLL->getText("TXT_KEY_TRAIT_DISABLED_ON"));

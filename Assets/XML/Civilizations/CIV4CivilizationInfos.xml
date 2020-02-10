@@ -4602,7 +4602,7 @@
 			<Buildings>
 				<Building>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_NEANDERTHAL_NPC</BuildingType>
+					<BuildingType>BUILDING_CULTURE_NEANDERTHAL</BuildingType>
 				</Building>
 			</Buildings>
 			<FreeTechs>
@@ -4803,7 +4803,7 @@
 			<Buildings>
 				<Building>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_BARBARIAN</BuildingType>
+					<BuildingType>NONE</BuildingType>
 				</Building>
 				<Building>
 					<BuildingClassType>BUILDINGCLASS_VERSAILLES</BuildingClassType>
