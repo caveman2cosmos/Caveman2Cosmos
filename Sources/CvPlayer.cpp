@@ -12432,7 +12432,18 @@ int CvPlayer::countHeadquarters() const
 
 int CvPlayer::countCorporations(CorporationTypes eCorporation) const
 {
-	return algo::count_if(cities(), bst::bind(CvCity::isHasCorporation, _1, eCorporation));
+	int iCount = 0;
+
+	int iLoop;
+	for (CvCity* pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	{
+		if (pLoopCity->isHasCorporation(eCorporation))
+		{
+			++iCount;
+		}
+	}
+
+	return iCount;
 }
 
 
