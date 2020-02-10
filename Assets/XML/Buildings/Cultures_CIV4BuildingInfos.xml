@@ -59,19 +59,11 @@
 			<iCost>-1</iCost>
 			<bAutoBuild>1</bAutoBuild>
 			<!-- Main effects -->
-			<YieldChanges>
-				<iYield>3</iYield>
-			</YieldChanges>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>2</iCommerce>
+				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>25</iCommerce>
-			</CommerceModifiers>
 			<!-- Misc. Effects -->
             <iPopulationgrowthratepercentage>-25</iPopulationgrowthratepercentage>
             <iMilitaryProductionModifier>20</iMilitaryProductionModifier>
@@ -181,13 +173,8 @@
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>2</iCommerce>
+				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>25</iCommerce>
-			</CommerceModifiers>
 			<!-- Misc. Effects -->
             <iMilitaryProductionModifier>20</iMilitaryProductionModifier>
 			<FreeBonus>BONUS_NEANDERTHAL</FreeBonus>

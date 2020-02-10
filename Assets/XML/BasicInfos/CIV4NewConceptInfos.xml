@@ -573,11 +573,6 @@
 			<Description>TXT_KEY_TRAIT_HUNTER_GATHERER</Description>
 			<Civilopedia>TXT_KEY_TRAIT_HUNTER_GATHERER_PEDIA</Civilopedia>
 		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_TRAIT_BARBARIAN</Type>
-			<Description>TXT_KEY_TRAIT_BARBARIAN</Description>
-			<Civilopedia>TXT_KEY_TRAIT_BARBARIAN_PEDIA</Civilopedia>
-		</NewConceptInfo>
 		<!-- Shortcut Infos -->
 		<NewConceptInfo>
 			<Type>CONCEPT_SHORTCUTS_ADVISORS</Type>

@@ -16,16 +16,6 @@
 			<iRazeCityProb>10</iRazeCityProb>
 			<iBuildUnitProb>30</iBuildUnitProb>
 			<iAttackOddsChangeRand>20</iAttackOddsChangeRand>
-			<Traits>
-				<Trait>
-					<TraitType>TRAIT_BARBARIAN</TraitType>
-					<bTrait>1</bTrait>
-				</Trait>
-				<Trait>
-					<TraitType>TRAIT_BARBARIAN1</TraitType>
-					<bTrait>1</bTrait>
-				</Trait>
-			</Traits>
 			<DiplomacyIntroMusicPeace>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_ANCIENT</EraType>
@@ -454,16 +444,6 @@
 			<iRazeCityProb>10</iRazeCityProb>
 			<iBuildUnitProb>30</iBuildUnitProb>
 			<iAttackOddsChangeRand>20</iAttackOddsChangeRand>
-			<Traits>
-				<Trait>
-					<TraitType>TRAIT_BARBARIAN</TraitType>
-					<bTrait>1</bTrait>
-				</Trait>
-				<Trait>
-					<TraitType>TRAIT_BARBARIAN1</TraitType>
-					<bTrait>1</bTrait>
-				</Trait>
-			</Traits>
 			<DiplomacyIntroMusicPeace>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_ANCIENT</EraType>

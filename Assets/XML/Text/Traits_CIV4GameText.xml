@@ -204,61 +204,7 @@
 		<Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]Penalità instabilità: %S1% per [ICON_RELIGION] NON di Stato</Italian>
 		<Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%s1% a la penalización a la estabilidad revolucionaria por [ICON_RELIGION] no oficiales</Spanish>
 		<Polish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%s1% zmiany na kary rewolucyjnej z [ICON_RELIGION] nienarodowej</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_BARBARIAN</Tag>
-		<English>Barbarian</English>
-		<French>
-			<Text>Barbare</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Barbarisch</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Barbaro</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Bárbaro:Bárbara:Bárbaros:Bárbaras</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Spanish>
-		<Polish>Dziki</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_BARBARIAN_PEDIA</Tag>
-		<English>A barbarian is an uncivilized person. The word is often used pejoratively, either in a general reference to a member of a nation or ethnos, typically a tribal society as seen by an urban civilization either viewed as inferior, or admired as a noble savage. In idiomatic or figurative usage, a "barbarian" may also be an individual reference to a brutal, cruel, warlike, insensitive person. The term originates in the ancient Greek civilization, meaning "anyone who is not Greek". Comparable notions are found in non-European civilizations. - Wikipedia.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_BARBARIAN_SHORT</Tag>
-		<English>BrB</English>
-		<French>
-			<Text>BrB</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>BrB</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>BrB</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Bar</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Dzi</Polish>
-	</TEXT>
+	</TEXT>	
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BARBARIC</Tag>
 		<English>Barbaric</English>
