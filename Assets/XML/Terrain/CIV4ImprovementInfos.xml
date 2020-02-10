@@ -8550,10 +8550,10 @@
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
-				<iYieldChange>7</iYieldChange>
+				<iYieldChange>8</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
-			<PrereqTech>TECH_PLANET_COLONIZATION</PrereqTech>
+			<PrereqTech>TECH_SUPERFLUOUS_MANUFACTURING</PrereqTech>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bUseLSystem>1</bUseLSystem>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -8618,14 +8618,6 @@
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_SUPERFLUOUS_MANUFACTURING</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
 					<PrereqTech>TECH_PLANETARY_TRADE</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
@@ -8647,7 +8639,7 @@
 				<iYieldChange>9</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
-			<PrereqTech>TECH_SUPERFLUOUS_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bUseLSystem>1</bUseLSystem>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>

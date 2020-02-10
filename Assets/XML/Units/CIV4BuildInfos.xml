@@ -9205,7 +9205,7 @@
 		<BuildInfo>
 			<Type>BUILD_HABITAT3</Type>
 			<Description>TXT_KEY_BUILD_HABITAT3</Description>
-			<PrereqTech>TECH_PLANET_COLONIZATION</PrereqTech>
+			<PrereqTech>TECH_SUPERFLUOUS_MANUFACTURING</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>1500</iCost>
 			<bKill>0</bKill>
@@ -9219,7 +9219,7 @@
 		<BuildInfo>
 			<Type>BUILD_HABITAT4</Type>
 			<Description>TXT_KEY_BUILD_HABITAT4</Description>
-			<PrereqTech>TECH_SUPERFLUOUS_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
 			<iTime>3000</iTime>
 			<iCost>2500</iCost>
 			<bKill>0</bKill>
