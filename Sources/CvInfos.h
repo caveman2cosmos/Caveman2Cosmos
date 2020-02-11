@@ -2448,7 +2448,6 @@ public:
 
 	int getPrereqAndTechs(int i) const;				// Exposed to Python
 	int getPrereqOrBonuses(int i) const;			// Exposed to Python
-/*	int getProductionTraits(int i) const;*/			// Exposed to Python
 	int getFlavorValue(int i) const;				// Exposed to Python
 	int getTerrainAttackModifier(int i) const;		// Exposed to Python
 	int getTerrainDefenseModifier(int i) const;		// Exposed to Python
@@ -2706,7 +2705,6 @@ protected:
 
 	int* m_piPrereqAndTechs;
 	int* m_piPrereqOrBonuses;
-	//int* m_piProductionTraits;
 	int* m_piFlavorValue;
 	int* m_piTerrainAttackModifier;
 	int* m_piTerrainDefenseModifier;
@@ -3122,7 +3120,6 @@ public:
 	// Arrays
 
 	bool isCarrierUnitAIType(int i) const;				// Exposed to Python
-/*	int getProductionTraits(int i) const;*/				// Exposed to Python
 
 	int getCombatPercent() const;
 	int getWithdrawalChange() const;
@@ -3152,8 +3149,6 @@ protected:
 
 	// Arrays
 	bool* m_pbCarrierUnitAITypes;
-	//int* m_piProductionTraits;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3873,8 +3868,6 @@ public:
 	bool isAnyDomainFreeExperience() const;
 	int getDomainProductionModifier(int i) const;	// Exposed to Python
 	int getPrereqAndTechs(int i) const;				// Exposed to Python
-//	int getProductionTraits(int i) const;			// Exposed to Python
-//	int getHappinessTraits(int i) const;			// Exposed to Python
 	int getBuildingHappinessChanges(int i) const;	// Exposed to Python
 	int getPrereqNumOfBuildingClass(int i) const;	// Exposed to Python
 	int getFlavorValue(int i) const;				// Exposed to Python
@@ -4427,8 +4420,6 @@ protected:
 	// Arrays
 
 	int* m_piPrereqAndTechs;
-	//int* m_piProductionTraits;
-	//int* m_piHappinessTraits;
 	int* m_piSeaPlotYieldChange;
 	int* m_piRiverPlotYieldChange;
 	int* m_piGlobalSeaPlotYieldChange;
@@ -4601,8 +4592,6 @@ public:
 
 	// Arrays
 
-	//int getProductionTraits(int i) const;
-
 	bool read(CvXMLLoadUtility* pXML);
 
 	void read(FDataStreamBase* stream) {}
@@ -4621,11 +4610,6 @@ protected:
 	int m_iMaxPlayerInstances;
 
 	bool m_bValid;
-
-	// Arrays
-
-	//int* m_piProductionTraits;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

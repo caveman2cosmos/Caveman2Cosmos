@@ -219,13 +219,6 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_BASKETS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<!-- Special Health and Happiness  modifiers -->
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_NOMAD</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Special properties -->
 			<Flavors>
 				<Flavor>

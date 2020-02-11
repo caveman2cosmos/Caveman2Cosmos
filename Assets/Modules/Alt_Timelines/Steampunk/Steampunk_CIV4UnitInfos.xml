@@ -840,12 +840,6 @@
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<iCost>590</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iMoves>3</iMoves>
 			<iWorkRate>400</iWorkRate>
 			<BonusProductionModifiers>

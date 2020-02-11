@@ -82,30 +82,6 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_RIO_DE_JANEIRO</Tag>
-		<English>Rio de Janeiro</English>
-		<French>
-			<Text>Rio de Janeiro</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Rio de Janeiro</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Rio de Janeiro</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Rio de Janeiro</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BELO_HORIZONTE</Tag>
 		<English>Belo Horizonte</English>
 		<French>
@@ -1181,30 +1157,6 @@
 		</Italian>
 		<Spanish>
 			<Text>Campina Grande</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_SANTAREM</Tag>
-		<English>Santarem</English>
-		<French>
-			<Text>Santarem</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Santarem</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Santarem</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Santarem</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>

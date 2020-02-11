@@ -13,7 +13,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HORSE_MYTH</Tag>
 		<English>Myth - Horse</English>
-		<French>Mythe du Cheval</French>
+		<French>
+			<Text>Mythe du Cheval</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Mito del cavallo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Mit Koni</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HORSE_MYTH_EFFECT</Tag>
@@ -24,6 +34,7 @@
 		<Tag>TXT_KEY_BUILDING_HORSE_STORY</Tag>
 		<English>Story - Horse</English>
 		<French>Histoire du Cheval</French>
+		<Polish>Opowieść o Koniu</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HORSE_STORIES</Tag>

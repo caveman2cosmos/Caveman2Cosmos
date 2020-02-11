@@ -224,7 +224,6 @@ m_pbGreatPeoples(NULL),
 //m_pbFeatureImpassable(NULL),
 m_piPrereqAndTechs(NULL),
 m_piPrereqOrBonuses(NULL),
-//m_piProductionTraits(NULL),
 m_piFlavorValue(NULL),
 m_piTerrainAttackModifier(NULL),
 m_piTerrainDefenseModifier(NULL),
@@ -426,7 +425,6 @@ CvUnitInfo::~CvUnitInfo()
 	//SAFE_DELETE_ARRAY(m_pbFeatureImpassable);
 	SAFE_DELETE_ARRAY(m_piPrereqAndTechs);
 	SAFE_DELETE_ARRAY(m_piPrereqOrBonuses);
-	//SAFE_DELETE_ARRAY(m_piProductionTraits);
 	SAFE_DELETE_ARRAY(m_piFlavorValue);
 	SAFE_DELETE_ARRAY(m_piTerrainAttackModifier);
 	SAFE_DELETE_ARRAY(m_piTerrainDefenseModifier);
@@ -1368,13 +1366,6 @@ int CvUnitInfo::getPrereqOrBonuses(int i) const
 	FAssertMsg(i > -1, "Index out of bounds");
 	return m_piPrereqOrBonuses ? m_piPrereqOrBonuses[i] : -1;
 }
-
-//int CvUnitInfo::getProductionTraits(int i) const
-//{
-//	FAssertMsg(i < GC.getNumTraitInfos(), "Index out of bounds");
-//	FAssertMsg(i > -1, "Index out of bounds");
-//	return m_piProductionTraits ? m_piProductionTraits[i] : 0;
-//}
 
 int CvUnitInfo::getFlavorValue(int i) const
 {
@@ -4014,7 +4005,6 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum)
 
 	CheckSumI(iSum, GC.getNUM_UNIT_AND_TECH_PREREQS(), m_piPrereqAndTechs);
 	CheckSumI(iSum, GC.getNUM_UNIT_PREREQ_OR_BONUSES(), m_piPrereqOrBonuses);
-	//CheckSumI(iSum, GC.getNumTraitInfos(), m_piProductionTraits);
 	CheckSumI(iSum, GC.getNumFlavorTypes(), m_piFlavorValue);
 	CheckSumI(iSum, GC.getNumTerrainInfos(), m_piTerrainAttackModifier);
 	CheckSumI(iSum, GC.getNumTerrainInfos(), m_piTerrainDefenseModifier);
@@ -4646,8 +4636,6 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	{
 		SAFE_DELETE_ARRAY(m_piPrereqOrBonuses);
 	}
-
-	//pXML->SetVariableListTagPair(&m_piProductionTraits, L"ProductionTraits", GC.getNumTraitInfos());
 
 	pXML->SetVariableListTagPair(&m_piFlavorValue, L"Flavors", GC.getFlavorTypes(), GC.getNumFlavorTypes());
 
@@ -5743,18 +5731,6 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 			m_piCorporationSpreads[i] = pClassInfo->getCorporationSpreads(i);
 		}
 	}
-
-	//for ( int i = 0; i < GC.getNumTraitInfos(); i++)
-	//{
-	//	if ( getProductionTraits(i) == iDefault && pClassInfo->getProductionTraits(i) != iDefault)
-	//	{
-	//		if ( NULL == m_piProductionTraits )
-	//		{
-	//			CvXMLLoadUtility::InitList(&m_piProductionTraits,GC.getNumTraitInfos(),iDefault);
-	//		}
-	//		m_piProductionTraits[i] = pClassInfo->getProductionTraits(i);
-	//	}
-	//}
 
 	for ( int i = 0; i < GC.getNumFlavorTypes(); i++)
 	{

@@ -3527,7 +3527,7 @@
 		<BonusInfo>
 			<Type>BONUS_FUR</Type>
 			<Description>TXT_KEY_BONUS_BEAVERS</Description>
-			<Civilopedia>TXT_KEY_BONUS_FUR_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BONUS_BEAVERS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_LUXURY</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_FUR</ArtDefineTag>
 			<TechReveal>TECH_SCAVENGING</TechReveal>

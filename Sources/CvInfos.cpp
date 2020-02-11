@@ -9665,16 +9665,14 @@ void CvUnitFormationInfo::copyNonDefaults(CvUnitFormationInfo* pClassInfo, CvXML
 //
 //------------------------------------------------------------------------------------------------------
 CvSpecialUnitInfo::CvSpecialUnitInfo() :
-m_bValid(false),
-m_bCityLoad(false),
-m_bSMLoadSame(false),
-m_iCombatPercent(0),
-m_iWithdrawalChange(0),
-m_iPursuitChange(0),
-m_pbCarrierUnitAITypes(NULL)/*,*/
-//m_piProductionTraits(NULL)
-{
-}
+	m_bValid(false),
+	m_bCityLoad(false),
+	m_bSMLoadSame(false),
+	m_iCombatPercent(0),
+	m_iWithdrawalChange(0),
+	m_iPursuitChange(0),
+	m_pbCarrierUnitAITypes(NULL)
+{ }
 
 //------------------------------------------------------------------------------------------------------
 //
@@ -9686,7 +9684,6 @@ m_pbCarrierUnitAITypes(NULL)/*,*/
 CvSpecialUnitInfo::~CvSpecialUnitInfo()
 {
 	SAFE_DELETE_ARRAY(m_pbCarrierUnitAITypes);
-	//SAFE_DELETE_ARRAY(m_piProductionTraits);
 }
 
 bool CvSpecialUnitInfo::isValid() const
@@ -9732,13 +9729,6 @@ bool CvSpecialUnitInfo::isCarrierUnitAIType(int i) const
 	return m_pbCarrierUnitAITypes ? m_pbCarrierUnitAITypes[i] : false;
 }
 
-//int CvSpecialUnitInfo::getProductionTraits(int i) const
-//{
-//	FAssertMsg(i < GC.getNumTraitInfos(), "Index out of bounds");
-//	FAssertMsg(i > -1, "Index out of bounds");
-//	return m_piProductionTraits ? m_piProductionTraits[i] : 0;
-//}
-
 bool CvSpecialUnitInfo::read(CvXMLLoadUtility* pXML)
 {
 	MEMORY_TRACE_FUNCTION();
@@ -9747,7 +9737,6 @@ bool CvSpecialUnitInfo::read(CvXMLLoadUtility* pXML)
 	{
 		return false;
 	}
-
 	pXML->GetOptionalChildXmlValByName(&m_bValid, L"bValid");
 	pXML->GetOptionalChildXmlValByName(&m_bCityLoad, L"bCityLoad");
 	pXML->GetOptionalChildXmlValByName(&m_bSMLoadSame, L"bSMLoadSame");
@@ -9756,8 +9745,6 @@ bool CvSpecialUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iPursuitChange, L"iPursuitChange");
 
 	pXML->SetVariableListTagPair(&m_pbCarrierUnitAITypes, L"CarrierUnitAITypes", NUM_UNITAI_TYPES);
-
-	//pXML->SetVariableListTagPair(&m_piProductionTraits, L"ProductionTraits", GC.getNumTraitInfos());
 
 	return true;
 }
@@ -9792,19 +9779,6 @@ void CvSpecialUnitInfo::copyNonDefaults(CvSpecialUnitInfo* pClassInfo, CvXMLLoad
 			m_pbCarrierUnitAITypes[i] = pClassInfo->isCarrierUnitAIType(i);
 		}
 	}
-
-	//for ( int i = 0; i < GC.getNumTraitInfos(); i++ )
-	//{
-	//	if ( (m_piProductionTraits == NULL || m_piProductionTraits[i] == iDefault) &&
-	//		 pClassInfo->getProductionTraits(i) != iDefault)
-	//	{
-	//		if ( NULL == m_piProductionTraits )
-	//		{
-	//			CvXMLLoadUtility::InitList(&m_piProductionTraits,GC.getNumTraitInfos(),iDefault);
-	//		}
-	//		m_piProductionTraits[i] = pClassInfo->getProductionTraits(i);
-	//	}
-	//}
 }
 
 void CvSpecialUnitInfo::getCheckSum(unsigned int &iSum)
@@ -9816,7 +9790,6 @@ void CvSpecialUnitInfo::getCheckSum(unsigned int &iSum)
 	CheckSum(iSum, m_iPursuitChange);
 
 	CheckSum(iSum, m_pbCarrierUnitAITypes, NUM_UNITAI_TYPES);
-	//CheckSum(iSum, m_piProductionTraits, GC.getNumTraitInfos());
 }
 
 //======================================================================================================
@@ -12969,8 +12942,7 @@ m_iObsoleteTech(NO_TECH),
 m_iTechPrereq(NO_TECH),
 m_iTechPrereqAnyone(NO_TECH),
 m_iMaxPlayerInstances(-1),
-m_bValid(false)/*,
-m_piProductionTraits(NULL)*/
+m_bValid(false)
 {
 }
 
@@ -12981,10 +12953,7 @@ m_piProductionTraits(NULL)*/
 //  PURPOSE :   Default destructor
 //
 //------------------------------------------------------------------------------------------------------
-CvSpecialBuildingInfo::~CvSpecialBuildingInfo()
-{
-	//SAFE_DELETE_ARRAY(m_piProductionTraits);
-}
+CvSpecialBuildingInfo::~CvSpecialBuildingInfo() { }
 
 int CvSpecialBuildingInfo::getObsoleteTech( void ) const
 {
@@ -13012,13 +12981,6 @@ bool CvSpecialBuildingInfo::isValid( void ) const
 }
 
 // Arrays
-//
-//int CvSpecialBuildingInfo::getProductionTraits(int i) const
-//{
-//	FAssertMsg(i < GC.getNumTraitInfos(), "Index out of bounds");
-//	FAssertMsg(i > -1, "Index out of bounds");
-//	return m_piProductionTraits ? m_piProductionTraits[i] : 0;
-//}
 
 bool CvSpecialBuildingInfo::read(CvXMLLoadUtility* pXML)
 {
@@ -13029,7 +12991,6 @@ bool CvSpecialBuildingInfo::read(CvXMLLoadUtility* pXML)
 	{
 		return false;
 	}
-
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"ObsoleteTech");
 	m_iObsoleteTech = pXML->GetInfoClass(szTextVal);
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"TechPrereq");
@@ -13040,8 +13001,6 @@ bool CvSpecialBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iMaxPlayerInstances, L"iMaxPlayerInstances", -1);
 
 	pXML->GetOptionalChildXmlValByName(&m_bValid, L"bValid");
-
-	//pXML->SetVariableListTagPair(&m_piProductionTraits, L"ProductionTraits", GC.getNumTraitInfos());
 
 	return true;
 }
@@ -13062,18 +13021,6 @@ void CvSpecialBuildingInfo::copyNonDefaults(CvSpecialBuildingInfo* pClassInfo, C
 	if (getMaxPlayerInstances() == -1) m_iMaxPlayerInstances = pClassInfo->getMaxPlayerInstances();
 
 	if (isValid() == bDefault) m_bValid = pClassInfo->isValid();
-
-	//for (int i = 0; i < GC.getNumTraitInfos(); i++)
-	//{
-	//	if (getProductionTraits(i) == iDefault && pClassInfo->getProductionTraits(i) != iDefault)
-	//	{
-	//		if ( NULL == m_piProductionTraits )
-	//		{
-	//			CvXMLLoadUtility::InitList(&m_piProductionTraits,GC.getNumTraitInfos(),iDefault);
-	//		}
-	//		m_piProductionTraits[i] = pClassInfo->getProductionTraits(i);
-	//	}
-	//}
 }
 
 void CvSpecialBuildingInfo::getCheckSum(unsigned int& iSum)
@@ -13086,8 +13033,6 @@ void CvSpecialBuildingInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_bValid);
 
 	// Arrays
-
-	//CheckSum(iSum, m_piProductionTraits, GC.getNumTraitInfos());
 }
 
 //======================================================================================================
@@ -15566,7 +15511,7 @@ m_iHurryConscriptAngerPercent(0),
 m_iInflationOffset(0),
 m_iInflationPercent(0),
 //ls612: Begin
-m_iGoldModifier(0),
+m_iGoldModifier(0), // Toffer - ToDo: removed usage of this, should remove this residuals too.
 m_iOccupationTimePopulationPercent(0),
 //ls612: End
 m_iVictoryDelayPercent(0),
@@ -15704,6 +15649,7 @@ int CvGameSpeedInfo::getInflationPercent() const
 //ls612: Begin
 int CvGameSpeedInfo::getGoldModifier() const
 {
+	// Toffer - ToDo: removed usage of this, should remove this residuals too.
 	return m_iGoldModifier;
 }
 
@@ -15811,7 +15757,7 @@ bool CvGameSpeedInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iInflationOffset, L"iInflationOffset");
 	pXML->GetOptionalChildXmlValByName(&m_iInflationPercent, L"iInflationPercent");
 	//ls612: Begin
-	pXML->GetOptionalChildXmlValByName(&m_iGoldModifier, L"iGoldModifier");
+	pXML->GetOptionalChildXmlValByName(&m_iGoldModifier, L"iGoldModifier"); // Toffer - ToDo: removed usage of this, should remove this residuals too.
 	pXML->GetOptionalChildXmlValByName(&m_iOccupationTimePopulationPercent, L"iOccupationTurnsPopulationPercent");
 	//ls612: End
 	pXML->GetOptionalChildXmlValByName(&m_iVictoryDelayPercent, L"iVictoryDelayPercent");

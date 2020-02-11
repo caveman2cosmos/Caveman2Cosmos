@@ -21093,10 +21093,6 @@
 			<Strategy>TXT_KEY_BUILDING_WV_SLAVERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WV_SLAVERY</ArtDefineTag>
-			<ProductionTrait>
-				<ProductionTraitType>TRAIT_PROGRESSIST</ProductionTraitType>
-				<iProductionTrait>50</iProductionTrait>
-			</ProductionTrait>
 			<bNeverCapture>1</bNeverCapture>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

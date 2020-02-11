@@ -588,12 +588,6 @@
 			<!-- Cost -->
 			<iCost>950</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_ORGANIZED</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_COURTHOUSE</ConstructSound>
 			<!-- Local -->
@@ -1649,12 +1643,6 @@
 			<!-- Cost -->
 			<iCost>1070</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ConstructSound>AS2D_BUILD_MAX_PRISON</ConstructSound>
 			<!-- Local -->
@@ -6056,12 +6044,6 @@
 			<!-- Cost -->
 			<iCost>6490</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Local -->
 			<CommerceChanges>
@@ -6157,12 +6139,6 @@
 			<!-- Cost -->
 			<iCost>1600</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_DECEIVER</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ConstructSound>AS2D_BUILD_POLICE_STATION</ConstructSound>
 			<!-- Local -->
@@ -6489,13 +6465,6 @@
 					<iAmountPerTurn>-100</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Synergy -->
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_HUMANITARIAN</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Units -->
 			<GreatPeopleUnitClass>UNITCLASS_DOCTOR</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
@@ -6604,12 +6573,6 @@
 			</BuildingClassNeededs>
 			<!-- Cost -->
 			<iCost>3690</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SCIENTIFIC</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_LABORATORY</ConstructSound>
 			<!-- Local -->
@@ -6871,13 +6834,6 @@
 				<iCommerce>2</iCommerce>
 			</CommerceModifiers>
 			<iWarWearinessModifier>-50</iWarWearinessModifier>
-			<!-- Synergy -->
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_CHARISMATIC</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Units -->
 			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
@@ -6920,12 +6876,6 @@
 			<!-- Cost -->
 			<iCost>250</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_ORGANIZED</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<!-- Local -->
@@ -7145,12 +7095,6 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ConstructSound>AS2D_BUILD_BUDDHIST</ConstructSound>
 			<!-- Local -->
@@ -7233,12 +7177,6 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ConstructSound>AS2D_BUILD_BUDDHIST</ConstructSound>
 			<!-- Local -->
@@ -7329,12 +7267,6 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ConstructSound>AS2D_UNIT_BUILD_RA_MISSIONARY</ConstructSound>
 			<!-- Global -->
