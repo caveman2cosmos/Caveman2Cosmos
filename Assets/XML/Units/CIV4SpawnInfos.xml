@@ -4064,6 +4064,49 @@ iValidPlots = Number of Valid spawn plots on entire map
 			</FeatureTypes>
 		</SpawnInfo>
 		<SpawnInfo>
+			<Type>SPAWN_NEANDERTHAL_STONE_THROWER</Type>
+			<UnitType>UNIT_NEANDERTHAL_STONE_THROWER</UnitType>
+			<PlayerType>46</PlayerType>
+			<iTurns>0</iTurns>
+			<iGlobalTurns>100</iGlobalTurns>
+			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iMaxAreaTotalDensity>20</iMaxAreaTotalDensity>
+			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<bTreatAsBarbarian>1</bTreatAsBarbarian>
+			<ObsoleteTech>TECH_BINDING</ObsoleteTech>
+			<rateOverrideDefineName>NEANDERTHAL_SPAWN_MODIFIER</rateOverrideDefineName>
+			<TerrainTypes>
+				<TerrainType>TERRAIN_TAIGA</TerrainType>
+				<TerrainType>TERRAIN_TUNDRA</TerrainType>
+			</TerrainTypes>
+			<FeatureTypes>
+				<FeatureType>FEATURE_CAVE</FeatureType>
+				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+			</FeatureTypes>
+		</SpawnInfo>
+		<SpawnInfo>
+			<Type>SPAWN_NEANDERTHAL_SLINGER</Type>
+			<UnitType>UNIT_NEANDERTHAL_SLINGER</UnitType>
+			<PlayerType>46</PlayerType>
+			<iTurns>0</iTurns>
+			<iGlobalTurns>200</iGlobalTurns>
+			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iMaxAreaTotalDensity>20</iMaxAreaTotalDensity>
+			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
+			<bTreatAsBarbarian>1</bTreatAsBarbarian>
+			<PrereqTech>TECH_BINDING</PrereqTech>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<rateOverrideDefineName>NEANDERTHAL_SPAWN_MODIFIER</rateOverrideDefineName>
+			<TerrainTypes>
+				<TerrainType>TERRAIN_TAIGA</TerrainType>
+				<TerrainType>TERRAIN_TUNDRA</TerrainType>
+			</TerrainTypes>
+			<FeatureTypes>
+				<FeatureType>FEATURE_CAVE</FeatureType>
+				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+			</FeatureTypes>
+		</SpawnInfo>
+		<SpawnInfo>
 			<Type>SPAWN_NEANDERTHAL_WANDERER</Type>
 			<UnitType>UNIT_NEANDERTHAL_WANDERER</UnitType>
 			<PlayerType>46</PlayerType>
@@ -4189,25 +4232,6 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
 			<ObsoleteTech>TECH_SAILING</ObsoleteTech>
-			<rateOverrideDefineName>NEANDERTHAL_SPAWN_MODIFIER</rateOverrideDefineName>
-			<iMinLatitude>50</iMinLatitude>
-			<TerrainTypes>
-				<TerrainType>TERRAIN_COAST</TerrainType>
-				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
-			</TerrainTypes>
-		</SpawnInfo>
-		<SpawnInfo>
-			<Type>SPAWN_NEANDERTHAL_OUTRIGGER</Type>
-			<UnitType>UNIT_NEANDERTHAL_OUTRIGGER</UnitType>
-			<PlayerType>46</PlayerType>
-			<iTurns>0</iTurns>
-			<iGlobalTurns>500</iGlobalTurns>
-			<iMaxLocalDensity>2</iMaxLocalDensity>
-			<iMaxAreaTotalDensity>20</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
-			<bTreatAsBarbarian>1</bTreatAsBarbarian>
-			<PrereqTech>TECH_SAILING</PrereqTech>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<rateOverrideDefineName>NEANDERTHAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMinLatitude>50</iMinLatitude>
 			<TerrainTypes>

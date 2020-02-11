@@ -31,12 +31,6 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>1000</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -392,12 +386,6 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>570</iCost>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
@@ -913,20 +901,6 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_SPIRITUAL</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-					<HappinessTraitType>TRAIT_ANTI_CLERICAL</HappinessTraitType>
-					<iHappinessTrait>-1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>1540</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -1027,14 +1001,6 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGRICULTURAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-					<ProductionTraitType>TRAIT_HUNTER_GATHERER</ProductionTraitType>
-					<iProductionTrait>-60</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>655</iCost>
 			<iConquestProb>75</iConquestProb>
 			<iFoodKept>10</iFoodKept>
@@ -1146,16 +1112,6 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGRICULTURAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-					<ProductionTraitType>TRAIT_HUNTER_GATHERER</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<FreeBonus>BONUS_CANNED_FOOD</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<FreeBuilding>BUILDINGCLASS_BISHOPS_STOREHOUSE</FreeBuilding>
@@ -1236,16 +1192,6 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PHILOSOPHICAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>870</iCost>
 			<iConquestProb>60</iConquestProb>
 			<!-- RevolutionDCM Building Effects  -->

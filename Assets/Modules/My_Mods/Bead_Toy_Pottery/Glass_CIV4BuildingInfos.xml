@@ -157,12 +157,6 @@
 			</ReplaceBuildings-->
 			<!-- Construction cost -->
 			<iCost>200</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_INDUSTRIOUS</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<CommerceChanges>

@@ -6427,8 +6427,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					int iExtraMaintenance = 0;
 					if ( kBuilding.getCommerceChange(COMMERCE_GOLD) < 0 && GC.getDefineINT("TREAT_NEGATIVE_GOLD_AS_MAINTENANCE"))
 					{
-						iExtraMaintenance = -kBuilding.getCommerceChange(COMMERCE_GOLD);
-						iExtraMaintenance *= GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent();
+						iExtraMaintenance = -kBuilding.getCommerceChange(COMMERCE_GOLD) * 100;
 					}
 
 					int iBaseMaintenance = getMaintenanceTimes100();
@@ -18417,8 +18416,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 							int iExtraMaintenance = 0;
 							if ( kBuilding.getCommerceChange(COMMERCE_GOLD) < 0 && GC.getDefineINT("TREAT_NEGATIVE_GOLD_AS_MAINTENANCE"))
 							{
-								iExtraMaintenance = -kBuilding.getCommerceChange(COMMERCE_GOLD);
-								iExtraMaintenance *= GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent();
+								iExtraMaintenance = -kBuilding.getCommerceChange(COMMERCE_GOLD) * 100;
 							}
 
 							int iBaseMaintenance = getMaintenanceTimes100();

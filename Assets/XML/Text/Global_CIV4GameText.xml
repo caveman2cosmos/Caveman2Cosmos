@@ -7171,45 +7171,9 @@
 		<Polish>Gratulacje! Wyprodukowałeś swój pierwszy pojazd gąsienicowy ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) w mieście %s2City_Name! Pojazdy gąsienicowe są najpotężniejszymi jednostkami szturmowymi - wykorzystuj je w celu zniszczenia swoich wrogów!</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FINANCE_ADVISOR_CITY_MAINT_COST</Tag>
-		<English>[NEWLINE]%d1[ICON_GOLD]: Base Maintenance[NEWLINE]%d2[ICON_GOLD]: Distance Maintenance[NEWLINE]%d3[ICON_GOLD]: Number of Cities Maintenance[NEWLINE]%d4[ICON_GOLD]: Colony Maintenance[NEWLINE]%d5[ICON_GOLD]: Corporation Maintenance[NEWLINE]%d6[ICON_GOLD]: Building Maintenance[NEWLINE]------------------------[NEWLINE]%d7[ICON_GOLD]: Sub-Total(includes decimals not shown)[NEWLINE]------------------------[NEWLINE]%D8%%[ICON_GOLD]: Gamespeed Modifier[NEWLINE]------------------------[NEWLINE]TOTAL CITY MAINTENANCE COST: %d9[ICON_GOLD]</English>
-		<German>
-		[NEWLINE]%d1[ICON_GOLD]: entfernungsabhängige Kosten
-		[NEWLINE]%d2[ICON_GOLD]: entfernungsunabhängige Kosten
-		[NEWLINE]%d3[ICON_GOLD]: Kosten für Kolonien
-		[NEWLINE]%d4[ICON_GOLD]: Kapitalgesellschaftszahlungen
-		[NEWLINE]------------------------------------------------
-		[NEWLINE]Gesamte laufende Kosten für Städte: %d5[ICON_GOLD]</German>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_CITY_MAINT_COST_DISTANCE</Tag>
 		<English>------------------------
 		[NEWLINE]%s1[ICON_GOLD]: Distance to Capital</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FINANCE_ADVISOR_CITY_MAINT_COST_DISTANCE</Tag>
-		<English>
-		[NEWLINE]%d2[ICON_GOLD]: Distance Maintenance
-		[NEWLINE]%d3[ICON_GOLD]: Number of Cities Maintenance
-		[NEWLINE]%d4[ICON_GOLD]: Colony Maintenance
-		[NEWLINE]%d5[ICON_GOLD]: Corporation Maintenance
-		[NEWLINE]%d6[ICON_GOLD]: Building Maintenance
-		[NEWLINE]------------------------
-		[NEWLINE]%d7[ICON_GOLD]: Sub-Total(includes decimals not shown)
-		[NEWLINE]------------------------
-		[NEWLINE]%D8%%[ICON_GOLD]: Gamespeed Modifier
-		[NEWLINE]------------------------
-		[NEWLINE]TOTAL CITY MAINTENANCE COST: %d9[ICON_GOLD]</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FINANCE_ADVISOR_CITY_MAINT_COST_MODIFIER</Tag>
-		<English>------------------------
-		[NEWLINE]%D1%%[ICON_GOLD]: Gamespeed Modifier</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FINANCE_ADVISOR_CITY_MAINT_COST_SUB_TOTAL</Tag>
-		<English>------------------------
-		[NEWLINE]%s1[ICON_GOLD]: Sub-Total</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_CITY_MAINT_COST_TOTAL</Tag>
@@ -7808,15 +7772,6 @@
 		<Italian>Gli abitanti del villaggio ti hanno donato un raccoglitore!</Italian>
 		<Spanish>Los aldeanos os han dado un Recolector.</Spanish>
 		<Polish>Mieszkańcy dołączają do Ciebie jako Zbieracze!</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_HUNTER</Tag>
-		<English>The villagers have provided you with a Hunter!</English>
-		<French>Les villageois vous fournissent un guerrier!</French>
-		<German>Die Bewohner haben Euch einen Jäger zur Verfügung gestellt!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato un cacciatore!</Italian>
-		<Spanish>Los aldeanos os han dado un Cazador.</Spanish>
-		<Polish>Mieszkańcy dołączają do Ciebie jako Łowcy!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_STONE_SPEARMAN</Tag>
@@ -23331,30 +23286,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Wolno</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TXT_KEY_UNIT_APACHE_CAVALRY</Tag>
-		<English>Cochise</English>
-		<French>
-			<Text>Cochise</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Cochise</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Cochise</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Cochise</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_ULTSOLDIER_STRATEGY</Tag>
 		<English>Build this corporation in order to get military bonuses.</English>
 		<German>Baue diese Gesellschaft, um Militärboni zu erhalten.</German>
@@ -24912,11 +24843,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<English>[ICON_BULLET]STEALTH DEFENSE!: %d1_Num Stealth Strikes</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_REQUIRES</Tag>
-		<English>[COLOR_WARNING_TEXT]Unit Requires[SPACE]</English>
-		<French>[COLOR_WARNING_TEXT]l'Unité Requiert[SPACE]</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEALTH_COMBAT_ATTACK</Tag>
 		<English>[ICON_BULLET]STEALTH ATTACK!: %D1_Num%% Stealth Combat Modifier Factored in.</English>
 	</TEXT>
@@ -26262,12 +26188,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Italian>[ICON_BULLET]%D1_Mod%% costi di mantenimento derivanti dalla distanza dal palazzo</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% al coste de mantenimiento por distancia con la capital</Spanish>
 		<Polish>[ICON_BULLET]%D1_Mod%% do kosztów utrzymania za odległość od pałacu</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_FIRST_FREE_PROPHET</Tag>
-		<English>[ICON_BULLET]First to Discover Receives a [COLOR_TECH_TEXT]Free Great Prophet[COLOR_REVERT]</English>
-		<French>[ICON_BULLET]Le Premier à découvrir reçoit un [COLOR_TECH_TEXT]Prophète Illustre[COLOR_REVERT] Gratuit</French>
-		<Polish>[ICON_BULLET]Nagroda za pierwsze odkrycie: [COLOR_TECH_TEXT]Darnowy Wielki Prorok[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_FOUNDER_RECEIVES</Tag>

@@ -949,12 +949,6 @@
 			</BuildingClassNeededs>
 			<!-- Cost -->
 			<iCost>1512</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -2753,12 +2747,6 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<!-- Cost -->
 			<iCost>5220</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Special Yield and Commerce modifiers -->
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3228,12 +3216,6 @@
 			</ReplaceBuildings>
 			<!-- Cost -->
 			<iCost>1296</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Great People effects -->
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_GENERAL</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
@@ -5277,12 +5259,6 @@
 			</BuildingClassNeededs>
 			<!-- Cost -->
 			<iCost>1512</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<iHappiness>2</iHappiness>
@@ -5658,12 +5634,6 @@
 			</BuildingClassNeededs>
 			<!-- Cost -->
 			<iCost>1350</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
@@ -5675,13 +5645,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</ObsoleteSafeCommerceChanges>
-			<!-- Special Health and Happiness  modifiers -->
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_CREATIVE</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Specialist effects -->
 			<SpecialistCounts>
 				<SpecialistCount>
@@ -5916,12 +5879,6 @@
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>516</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<!-- Great People effects -->
@@ -9707,6 +9664,7 @@
 			<Strategy>TXT_KEY_BUILDING_FRENCH_SALON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FRENCH_SALON</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_FRENCH_SALON</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_OBSERVATORY</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -9721,12 +9679,6 @@
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Cost -->
 			<iCost>2208</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SCIENTIFIC</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
@@ -9929,6 +9881,7 @@
 			<Strategy>TXT_KEY_BUILDING_SILICON_VALLEY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SILICON_VALLEY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SILICON_VALLEY</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_LABORATORY</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -10234,6 +10187,7 @@
 			<Strategy>TXT_KEY_BUILDING_SMITHSONIAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SMITHSONIAN</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SMITHSONIAN</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_MUSEUM</ConstructSound>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
@@ -10315,6 +10269,7 @@
 			<Strategy>TXT_KEY_BUILDING_ICE_HOTEL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ICE_HOTEL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ICE_HOTEL</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_HOTEL</ConstructSound>
 			<fVisibilityPriority>2</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -10381,6 +10336,7 @@
 			<Strategy>TXT_KEY_BUILDING_SOLAR_TOWER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SOLAR_TOWER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SOLAR_TOWER</MovieDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
@@ -11025,6 +10981,7 @@
 			<Strategy>TXT_KEY_BUILDING_SYDNEY_OPERA_HOUSE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SYDNEY_OPERA_HOUSE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SYDNEY_OPERA_HOUSE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_REALISM</PrereqTech>
@@ -11106,6 +11063,7 @@
 			<Strategy>TXT_KEY_BUILDING_TECHNOLOGICAL_CAPITAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TECHNOLOGICAL_CAPITAL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TECHNOLOGICAL_CAPITAL</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_TECH_CAPITOL</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -13844,12 +13802,6 @@
 			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>1296</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHappiness>2</iHappiness>
 			<CommerceChanges>
@@ -13968,6 +13920,7 @@
 			<Strategy>TXT_KEY_BUILDING_TRANSAMERICA_PYRAMID_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TRANSAMERICA_PYRAMID</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TRANSAMERICA_PYRAMID</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
@@ -14040,6 +13993,7 @@
 			<Strategy>TXT_KEY_BUILDING_TRUMP_TOWER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TRUMP_TOWER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TRUMP_TOWER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
@@ -14331,6 +14285,7 @@
 			<Strategy>TXT_KEY_BUILDING_VENUS_WILLENDORF_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_WILLENDORF</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_VENUS_WILLENDORF</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CARVING</PrereqTech>
@@ -14464,6 +14419,7 @@
 			<Strategy>TXT_KEY_BUILDING_WALL_STREET_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WALL_STREET</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_WALL_STREET</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_STOCK_EXCHANGING</PrereqTech>
@@ -14721,6 +14677,7 @@
 			<Strategy>TXT_KEY_BUILDING_WILLIS_TOWER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WILLIS_TOWER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_WILLIS_TOWER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
@@ -14991,6 +14948,7 @@
 			<Strategy>TXT_KEY_BUILDING_WORLD_NEWS_NETWORK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WNN</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_WNN</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_UNIVERSITY</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -15122,6 +15080,7 @@
 			<Strategy>TXT_KEY_BUILDING_X_GAMES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_X_GAMES</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_X_GAMES</MovieDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_EXTREME_SPORTS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
@@ -17158,6 +17117,7 @@
 			<Strategy>TXT_KEY_BUILDING_RUDOLPHINE_TABLES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RUDOLPHINE_TABLES</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_RUDOLPHINE_TABLES</MovieDefineTag>
 			<PrereqTech>TECH_HELIOCENTRISM</PrereqTech>
 			<ObsoleteTech>TECH_RADAR</ObsoleteTech>
 			<iCost>2730</iCost>
@@ -18339,6 +18299,7 @@
 			<Strategy>TXT_KEY_BUILDING_TERRA_SIGILLIATA_WORKSHOP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRA_SIGILLIATA_WORKSHOP</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TERRA_SIGILLIATA_WORKSHOP</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_GLASSMITH</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -18925,6 +18886,7 @@
 			<Help>TXT_KEY_BUILDING_TAIPEI_101_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TAIPEI_101</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TAIPEI_101</MovieDefineTag>
 			<PrereqTech>TECH_POSTMODERNISM</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -18975,6 +18937,7 @@
 			<Help>TXT_KEY_BUILDING_TSUKIJI_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TSUKIJI</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TSUKIJI</MovieDefineTag>
 			<PrereqTech>TECH_REFRIGERATION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -19075,6 +19038,7 @@
 			<Help>TXT_KEY_BUILDING_ZIZKOV_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ZIZKOV</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ZIZKOV</MovieDefineTag>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -19567,12 +19531,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ALCATRAZ</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ALCATRAZ</MovieDefineTag>
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<FreeBuilding>BUILDINGCLASS_GOOD_ALCATRAZ</FreeBuilding>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
@@ -21413,12 +21371,6 @@
 				<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			</TechTypes>
 			<Bonus>BONUS_STONE</Bonus>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_PROTECTIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1800</iCost>

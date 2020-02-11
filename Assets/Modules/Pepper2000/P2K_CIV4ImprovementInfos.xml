@@ -993,7 +993,7 @@
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MERCURY_COLONY</Type>
 			<Description>TXT_KEY_IMPROVEMENT_MERCURY_COLONY</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_MERCURY_COLONY</Civilopedia>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_MERCURY_COLONY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_MERCURY_COLONY</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>2</iYieldChange>

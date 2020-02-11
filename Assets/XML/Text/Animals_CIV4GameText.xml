@@ -590,11 +590,6 @@
 		<French>Effet (Histoires de l'Eléphant d'Afrique)</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_ELEPHANT_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Asian Elephant, Myth - Elephant, Master Hunter, Carnival; Exotic Herbivore Cage and Enclosure</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires - Asian Elephant[NEWLINE][ICON_BULLET]Myth - Elephant[NEWLINE][ICON_BULLET]Master Hnter[NEWLINE][ICON_BULLET]Carnival; Exotic Herbavours Cage and Enclosure</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASIANELEPHANT_MYTH</Tag>
 		<English>Myth - Elephant, Asian</English>
 		<French>Mythe de l'Eléphant d'Asie</French>
@@ -752,22 +747,6 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_DONKEY</Tag>
-		<English>Onager</English>
-		<French>
-			<Text>Onagre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>Onagro</Italian>
-		<Spanish>
-			<Text>Onagro</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Dziki Osioł</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TARANTULA_PEDIA</Tag>
@@ -1125,10 +1104,6 @@
 		<Polish>Żmija Sykliwa</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_PUFFADDER_PEDIA</Tag>
-		<English>Bitis arietans is a venomous viper species found in savannah and grasslands from Morocco and western Arabia throughout Africa except for the Sahara and rain forest regions. It is responsible for causing the most fatalities in Africa owing to various factors, such as its wide distribution and frequent occurrence in highly populated regions. Two subspecies are currently recognized, including the nominate subspecies described here.[PARAGRAPH:2]The species is commonly known as puff adder, African puff adder, or common puff adder.[PARAGRAPH:2]Source: Wikipedia</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POSSUM_MYTH</Tag>
 		<English>Myth - Possum</English>
 		<French>Mythe du Phalanger commun</French>
@@ -1200,11 +1175,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AARDVARK_PEDIA</Tag>
 		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_AARDVARK_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Aardvark, Myth of Earth,  Cage and Enclosure</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des  Oryctéropes du Cap[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AARDVARK_MYTH</Tag>
@@ -2099,10 +2069,6 @@
 		<Polish>Lew Morski</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SEALION_PEDIA</Tag>
-		<English>Sea lions are pinnipeds characterized by external ear flaps, long foreflippers, the ability to walk on all fours, and short, thick hair. Together with the fur seals, they comprise the family Otariidae, or eared seals. There are six extant and one extinct species (the Japanese sea lion) in five genera. Their range extends from the subarctic to tropical waters of the global ocean in both the Northern and Southern Hemispheres, with the notable exception of the northern Atlantic Ocean. They have an average life span of 20 - 30 years. A male California sea lion weighs on an average about 300 kg (660 lb) and is about 8 ft (2.4 m) long, while the female sea lion weighs 100 kg (220 lb) and is 6 ft (1.8 m) long. The largest sea lion is the Steller's sea lion which can weigh 1,000 kg (2,200 lb) and grow to a length of 10 ft (3.0 m). Sea lions consume large quantities of food at a time and are known to eat about 5% - 8% of their body weight (about 15 - 35 lb (6.8 - 16 kg)) at a single feeding.[PARAGRAPH:2]Source: Wikipedia.</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEAOTTER</Tag>
 		<English>Sea Otter</English>
 		<French>
@@ -2183,10 +2149,6 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Płaszczka</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_RAY_EAGLE_PEDIA</Tag>
-		<English>The eagle rays are a group of cartilaginous fishes in the family Myliobatidae, consisting mostly of large species living in the open ocean rather than on the sea bottom. Eagle rays feed on mollusks and crustaceans, crushing their shells with their flattened teeth. Devil and manta rays filter plankton from the water. They are excellent swimmers and are able to breach the water up to several metres above the surface. Compared with other rays, they have long tails, and well-defined rhomboidal bodies. They are ovoviviparous, giving birth to up to six young at a time. They range from 0.48 to 9.1 m (1.6 to 29.9 ft) in length.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RAY_MANTA</Tag>
@@ -2430,11 +2392,6 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Lion, Tiger and  Paleolithic Cat Myth, Master Hunter and Exotic Big Cat Cage</English>
 		<French>permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe du Lion, Tigre et Chat Paléolithique, Maître Chasseur et la Cage pour les grands félins</French>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT] Mito del leone, Mito della tigre, Mito del gatto paleolitico, Mastro cacciatore, Gabbia-Felino esotico.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TAPIR_PEDIA</Tag>
-		<English>Tapirs are mammals which are often confused with hippos, anteaters and capybaras. Their closest living relatives are odd-toed ungulates (hoofed animals), horses and rhinos.[PARAGRAPH:2]There are four living species of tapir:[NEWLINE][TAB][ICON_BULLET]Baird's tapir[NEWLINE][TAB][ICON_BULLET]Lowland tapir[NEWLINE][TAB][ICON_BULLET]Mountain tapir[NEWLINE][TAB][ICON_BULLET]Malayan tapir[H1]Tapir Characterististics[/H1]A unique feature that tapir posess is its fleshy prehensile nose that it uses to grab leaves and even use as a snorkle while swimming. Their hides are very tough but streamlined for easy maneuvering in the forest. Tapirs are "seed dispersers." They eat seeds that are then dispersed in their scat which helps the forest to regenerate.[PARAGRAPH:2]Tapirs are herbivores best suited to primary or old growth secondary forest, and their reproduction is slower than most mammal species due to a long gestation period (13 months) and to the fact that there is only one offspring per gestation.[PARAGRAPH:2] Source: tapirs.org/tapirs</English>
-		<Polish>Tapirowate, tapiry (Tapiridae)  rodzina ssaków z rzędu nieparzystokopytnych, posiadających krótką trąbę, która powstała z przekształconego nosa i wargi górnej, oraz bardzo krótki ogon. Na kończynie tylnej posiadają trzy, a na przedniej cztery palce, każdy zakończony kopytem. Ciało okryte jest aksamitną sierścią. Tapiry żyją w podmokłych, bagnistych lasach tropikalnych. Są dobrymi pływakami. Mimo pewnego podobieństwa do świni, tapir należy do tej samej grupy ssaków, co nosorożec i koń.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BAIRDS_TAPIR_HELP</Tag>
@@ -2733,27 +2690,6 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 			<Plural>0</Plural>
 		</French>
 		<Polish>Efekt Historii - Krokodyl</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_GATOR</Tag>
-		<English>Alligator</English>
-		<French>
-			<Text>Alligator d'Amérique</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Alligator:Alligators:Alligator:Alligator:Alligatoren:Alligatoren:Alligatoren:Alligatoren</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
-			<Plural>0:0:0:0:1:1:1:1</Plural>
-		</German>
-		<Italian>Alligatore</Italian>
-		<Spanish>
-			<Text>Aligátor</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Aligator</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GATOR_ASIAN</Tag>
@@ -3075,11 +3011,6 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 			<Plural>0</Plural>
 		</French>
 		<Polish>Efekt Historii - Aligator Amerykański</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_GHARIAL_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Gharial, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Gawial</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GHARIAL_MYTH</Tag>
@@ -3407,11 +3338,6 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 		<Tag>TXT_KEY_UNIT_SUBDUED_CROCODILE_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Crocodile, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Krokodyl</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_DIREWOLF_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Dire Wolf, Wolf Cage and Enclosure, Kennels and various Dog Breeds</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires - Loup sinistre[NEWLINE][ICON_BULLET]Cage à Loup et enclos[NEWLINE][ICON_BULLET]Chennils et élevage des chiens variés</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GATOR_ASIAN</Tag>
@@ -3899,13 +3825,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_PEDIA</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BOAR_STORY</Tag>
-		<English>Story - Boar</English>
-		<French>Histoire du Sanglier</French>
-		<Polish>Opowieść o Niedźwiedziu</Polish>
+		<English>The Stories Effect buildings are not real buildings. They are used to allow another building to be unique within a nation without being a national wonder.[NEWLINE]- Stories Effect buildings are given for free by Stories buildings.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BULL_STORY</Tag>
@@ -3918,12 +3838,6 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 		<English>Story - Camel</English>
 		<French>Histoire du Chameau</French>
 		<Polish>Opowieść o Wielbłądzie</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CROCODILE_STORY</Tag>
-		<English>Story - Crocodile</English>
-		<French>Histoire du Crocodile</French>
-		<Polish>Opowieść o Krokodylu</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEER_STORY</Tag>
@@ -3942,12 +3856,6 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 		<English>Myth Effect - Elephant</English>
 		<French>Effet (Mythe de l'Eléphant)</French>
 		<Polish>Efekt Mitu - Słoń</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HORSE_STORY</Tag>
-		<English>Story - Horse</English>
-		<French>Histoire du Cheval</French>
-		<Polish>Opowieść o Koniu</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LION_STORY</Tag>
@@ -4032,12 +3940,6 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOLPHIN_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Dolphin</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CRAB_STORY</Tag>
-		<English>Story - Tales of Crabs</English>
-		<French>Histoire - Contes des Crabes</French>
-		<Polish>Opowieść o Krabach</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREATWHITE_SHARK_STORY</Tag>
@@ -4260,10 +4162,6 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUMPBACK_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Humpback Whale</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HUMPBACK_STORY</Tag>
-		<English>Story - Humpback Whale</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUMPBACK_STORIES</Tag>
@@ -4590,10 +4488,6 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Walrus and Pinnipeds, Pinniped Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WALRUS_MYTH</Tag>
-		<English>Myth - Walrus</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WALRUS_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Walrus</English>
 	</TEXT>
@@ -4618,10 +4512,6 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 		<English>Myth Effect - Greatwhite shark</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GREATWHITE_SHARK_STORY</Tag>
-		<English>Story - Greatwhite shark</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREATWHITE_SHARK_STORIES</Tag>
 		<English>Stories - Greatwhite shark</English>
 	</TEXT>
@@ -4636,10 +4526,6 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HAMMERHEAD_SHARK_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Hammerhead shark</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HAMMERHEAD_SHARK_STORY</Tag>
-		<English>Story - Hammerhead shark</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HAMMERHEAD_SHARK_STORIES</Tag>
@@ -4666,16 +4552,8 @@ There are 5 types of Reef Sharks:
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Reef shark, Myths of Sea and Sharks, Master Sea Hunter and Wonders of the Deep, Marine and Shark Institute</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_REEF_SHARK_MYTH</Tag>
-		<English>Myth - Reef shark</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REEF_SHARK_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Reef shark</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_REEF_SHARK_STORY</Tag>
-		<English>Story - Reef shark</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REEF_SHARK_STORIES</Tag>
@@ -4710,16 +4588,8 @@ There are 5 types of Reef Sharks:
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Whaleshark, Myths of Sea and Sharks, Master Sea Hunter and Wonders of the Deep, Marine and Shark Institute</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WHALESHARK_MYTH</Tag>
-		<English>Myth - Whaleshark</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHALESHARK_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Whaleshark</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WHALESHARK_STORY</Tag>
-		<English>Story - Whaleshark</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHALESHARK_STORIES</Tag>
