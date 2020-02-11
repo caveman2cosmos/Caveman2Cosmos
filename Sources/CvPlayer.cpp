@@ -6542,9 +6542,7 @@ int CvPlayer::countCityFeatures(FeatureTypes eFeature) const
 
 int CvPlayer::countNumBuildings(BuildingTypes eBuilding) const
 {
-	return algo::accumulate(cities()
-		| filtered(CvCity::fn::getNumBuilding(eBuilding) > 0)
-		| transformed(CvCity::fn::getNumBuilding(eBuilding)), 0);
+	return algo::accumulate(cities() | transformed(CvCity::fn::getNumBuilding(eBuilding)), 0);
 }
 
 
