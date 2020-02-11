@@ -6718,8 +6718,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_SEDENTARY_STRATEGY</Tag>
-		<English>Ancient[NEWLINE]12 000 BC - 1200 BC</English>
-	</TEXT>
+		<English>The term Ancient in regards to Caveman to Cosmos describes the beginning of cities and the arrival of what is referred to as the bronze age. It is a period where tribal societies begin to form larger towns and eventually cities, and more elaborate artwork and architecture. Kings emerge in this period, one of the first kinds of powerful rulers, evolving out of powerful tribal leaders. Warfare becomes formalized, with the development of professional armies, the training of animals for war etc.
+
+Time Frame: 12 000 BC - 1200 BC</English>
+	</TEXT>	
 	<TEXT>
 		<Tag>TXT_KEY_ERA_CLASSICAL</Tag>
 		<English>Classical</English>
@@ -6747,7 +6749,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_CLASSICAL_STRATEGY</Tag>
-		<English>Classical[NEWLINE]1200 BC - 450 AD</English>
+		<English>The Classical era picks up where the ancient era left off. During this period new ideas of religion, government, and political organization enter the picture. Technology has improved to the point in this era that larger empires become possible, and many would be conquerors try their hands at conquest. Further advances in architecture lead to better living conditions in some cases.
+
+Time Frame: 1200 BC - 450 AD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_COSMIC</Tag>
@@ -6760,7 +6764,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_COSMIC_STRATEGY</Tag>
-		<English>Cosmic[NEWLINE]3000 AD - 4000 AD</English>
+		<English>The Cosmic era describes a period where a civilization has surpassed the limitations of galactic travel and is able to explore nearby galaxies, spreading further across the universe. Further advances in space flight make this possible.
+
+Time Frame: 3000 AD - 4000 AD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_FUTURE</Tag>
@@ -6789,7 +6795,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_FUTURE_STRATEGY</Tag>
-		<English>Future[NEWLINE]This era can never be actually reached.</English>
+		<English>This era can never be actually reached.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_GALACTIC</Tag>
@@ -6806,7 +6812,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_GALACTIC_STRATEGY</Tag>
-		<English>Galactic[NEWLINE]2300 AD - 3000 AD</English>
+		<English>The Galactic Era represents a time when a civilization develops faster than light travel, allowing the exploration and colonization of nearby solar systems and increasingly, the galaxy. Further improvements in terraforming technology allow hostile planets to be transformed into earth-like worlds, greatly increasing the places humanity can call home. Interplanetary warfare is refined as well, and not all human space nations are friendly democracies. Some develop into deadly space empires.
+		
+Time Frame: 2300 AD - 3000 AD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_INDUSTRIAL</Tag>
@@ -6835,7 +6843,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_INDUSTRIAL_STRATEGY</Tag>
-		<English>Industrial[NEWLINE]1750 AD - 1900 AD</English>
+		<English>The Industrial Era begins with the invention of steam power and continues with the development of factories. Increasingly, warfare becomes mechanized, with the advent of automatic weapons. New ideas on the economy and society begin to shake the old order, with capitalism and communist ideas among others begin to establish themselves, clashing with traditional ideas of religion and government. Flight becomes possible for the first time, and warfare in general undergoes enormous changes, formational warfare and colorful uniforms giving way to drab uniforms and eventually camoflage.
+		
+Time Frame: 1750 AD - 1900 AD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_INFORMATION</Tag>
@@ -6848,7 +6858,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_INFORMATION_STRATEGY</Tag>
-		<English>Information[NEWLINE]1990 AD - 2050 AD</English>
+		<English>The Information era represents roughly the time after the cold war in our world technologically. Computers become personal, the internet appears, and new forms of entertainment such as computer and console games mark the early part of this period. Later, with the advent of high-speed internet, cloud computing and mobile devices such as smart phones, society undergoes a great change as physical businesses begin to be replaced by digital businesses, and increasingly private ownership of things such as movies, music moves into the hands of corporate distribution with streaming technology. Eventually artificial intelligence evolves to the point of allowing first automated drones and driverless cars, to many jobs disappearing due to more advanced machines. Physical cash disappears, with all transactions being done digitally.
+		
+Time Frame: 1990 AD - 2050 AD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_MEDIEVAL</Tag>
@@ -6877,7 +6889,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_MEDIEVAL_STRATEGY</Tag>
-		<English>Medieval[NEWLINE]450 AD - 1400 AD</English>
+		<English>A Medieval society is one which has reached further levels of refinement in culture and technology compared to Classical times. Stronger blacksmithing techniques allow heavier armor, making heavy cavalry and other forces the weapon of choice on the battlefield along with increasingly powerful siege weaponry. Fortifications improve, creating fortresses capable of sustaining a siege for months if need be due not only to sturdy construction but also food and supply storage. New structures like wind and watermills appear with the advent of the first gears. Gunpowder weapons begin to be refined toward the end of this period, foreshadowing the second great change in warfare since ancient times.
+		
+Time Frame: 450 AD - 1400 AD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_MODERN</Tag>
@@ -6890,7 +6904,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_MODERN_STRATEGY</Tag>
-		<English>Atomic[NEWLINE]1900 AD - 1990 AD</English>
+		<English>The Atomic era describes the time of the second world war till roughly the end of the cold war. During this period air power becomes the strongest force on the battlefield and the doctrine of MAD, or mutually assured destruction, appears as nuclear weapons enter the picture. Also, the beginnings of space flight and computers occur in this period.
+		
+Time Frame: 1900 AD - 1990 AD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_NANOTECH</Tag>
@@ -6903,7 +6919,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_NANOTECH_STRATEGY</Tag>
-		<English>Nanotech[NEWLINE]2050 AD - 2150 AD</English>
+		<English>The Nanotech era is a logical evolution of the previous information age. Computers become sentient, and sentient robots begin to appear. Nanites are able to provide a nearly limitless capacity for construction, and small nano-factories find a place first in the homes of developed nations, then in developing nations. Poverty as we know it begins to disappear, and existing systems of government and society are shaken. Capitalism begins to give way to a post-scarcity economy. However not everything is all bring. Nanotech and robotics also become used as deadly weapons. Fierce wars are fought as traditional totalitarian governments fight to maintain control over populations suddenly able to produce nearly anything. MAD or mutually assured destruction is rendered obsolete due to nanotech. With the removal of nuclear deterrence, many powerful countries turn again towards conquest, but the dark spectre of nanotech hangs over the world as the potential for doomsday is much greater than the era of nuclear exchange. Machine governments become possible, and many sophisticated AI attempt at domination in order to protect humanity from itself.
+		
+Time Frame: 2050 AD - 2150 AD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_ANCIENT</Tag>
@@ -6920,10 +6938,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_ANCIENT_STRATEGY</Tag>
-		<English>Prehistoric[NEWLINE]200 000 BC - 12 000 BC[NEWLINE]Prehistory (Latin, pra = before; Greek, iotopia = history) is a term used to describe the period before recorded history. Paul Tournal originally coined the term Pré-historique in describing the finds he had made in the caves of southern France. The term "prehistory" can be used to refer to all time since the beginning of the universe, although it is more often used in referring to the period of time since life appeared on Earth, or even more specifically to the time since human-like beings appeared.</English>
-		<Italian>Preistoria è il termine usato per descrivere il periodo prima della storia. Paul Tournal lo coniò per descrivere le scoperte che aveva fatto nelle caverne della Francia meridionale. Il termine può essere usato per riferirsi a tutto il periodo dall'inizio dell'universo, anche se più spesso indica il periodo dal quale la vita è apparsa sulla Terra, o più precisamente il periodo da cui l'essere umano è apparso.</Italian>
-		<Spanish>La Prehistoria (del latín praiotopia, pra = antes; iotopia = historia) es un término utilizado para referirse al periodo anterior a la historia registrada. Paul Tournal acuñó originalmente el término "Pré-historique" para describir los hallazgos encontrados en las cuevas del sur de Francia. El término se utiliza para describir todo el lapso temporal desde el nacimiento del universo, aunque se utiliza comúnmente para referirse al lapso de tiempo desde la aparición de la vida en la Tierra, más concretamente al periodo en el que aparecieron los primeros homínidos.</Spanish>
-		<Polish>Prehistoria (łac. pra - przedrostek oznaczający uprzedniość, "przed", "wcześniej") to najdłuższy okres dziejów ludzkości - od pojawienia się na Ziemi pierwszych człowiekowatych lub człowieka rozumnego do powstania pisma. Badanie tego okresu możliwe jest jedynie metodami archeologicznymi. Na terenach Afryki zaczyna się około 5 mln lat temu razem z pojawieniem się pierwszych człowiekowatych, na terenie Europy około 1 mln lat temu, natomiast na innych terenach z momentem pojawienia się tam człowieka</Polish>
+		<English>Prehistory (Latin, pra = before; Greek, iotopia = history) is a term used to describe the period before recorded history. Paul Tournal originally coined the term Pré-historique in describing the finds he had made in the caves of southern France. The term "prehistory" can be used to refer to all time since the beginning of the universe, although it is more often used in referring to the period of time since life appeared on Earth, or even more specifically to the time since human-like beings appeared.
+		
+Time Frame: 200 000 BC - 12 000 BC</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_RENAISSANCE</Tag>
@@ -6952,7 +6969,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_RENAISSANCE_STRATEGY</Tag>
-		<English>Renaissance[NEWLINE]1400 AD - 1750 AD</English>
+		<English>The Renaissance begins with the advent of the printing press, further refinements in gunpowder weaponry, and the advent of ships capable of traversing the world. New thoughts on government and religion, much like the Classical era, shape this period as well. Many religions schism as the traditional teachings are again brought to light. Science as a serious discipline emerges for the first time, and advances in medicine and astronomy improve the knowledge of the physical world. Religious explanations for existence and the origin of the universe are questioned, and serious schisms between science and religion occur in some cases, but not all. Towards the end of this period massive oceanic empires appear, colonizing far off lands and trading and dominating far off people. Many native peoples are displaced or enslaved.
+		
+Time Frame: 1400 AD - 1750 AD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_TRANSCENDENT</Tag>
@@ -6965,7 +6984,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_TRANSCENDENT_STRATEGY</Tag>
-		<English>Transcendent[NEWLINE]4000 AD - 6000 AD</English>
+		<English>The Transcendent era is a period in the far future. Mankind has the ability to time travel, transverse diamensions, settle the known and increasingly unknown parts of the universe.
+		
+Time Frame: 4000 AD - 6000 AD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_TRANSHUMAN</Tag>
@@ -6982,7 +7003,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_TRANSHUMAN_STRATEGY</Tag>
-		<English>Transhuman[NEWLINE]2150 AD - 2300 AD</English>
+		<English>The transhuman era represents a period following the nanotech era. In the transhuman era in order to combat the increased hostility between machine and human life, as well as improve themselves, and for some, reach some kind of immortality, some of mankind merges with technology. The transhuman movement actually began in the Information age, but only became possible with the advanced technologies of the late nanotech period. While some humans choose to embrace transhumanism, a counter movement, or new humanist movement also appears, which is diverse, including religious people of all stripes, some scientists warning of the possible negative ramifications of transhumanism, and others simply horrified or opposed to the idea. Some of the Transhumans attempt to force humans to convert. The line between machine and man begins to blur, as machine life becomes more human with emotions, many developing competing ideas, leading to further conflict. Transhumans, Machine factions, and normal humans continue to struggle, some against each other and some allied. Humanity also begins colonizing the solar system in this period, many escaping the warfare on earth to seek a better life. Primitive terraforming allows Mars to become habitable, and eventually the technology improves to allow the construction of massive artificial space colonies. Space warfare appears, first with space fightercraft, developed from shuttles, then with larger ships as well as space faring robots of massive size, some piloted by humans. Eventually interplanetary warfare becomes possible when ships no longer take enormous amounts of time to transverse space. Some of these wars are traditional wars of conquest over resources, others over ideology as the humanist/transhumanist and various machine factions battle it out in space.
+		
+Time Frame: 2150 AD - 2300 AD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EWTRADE_STRATEGY</Tag>
