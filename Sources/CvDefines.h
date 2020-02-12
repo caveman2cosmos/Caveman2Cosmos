@@ -62,7 +62,6 @@
 #define RANDPLOT_NOT_CITY								(0x00000040)
 
 //TBANIMAL - the project really starts here
-#define MAX_CIV_PLAYERS									(40)
 #define MAX_PC_PLAYERS									(40)
 #define MAX_PC_TEAMS									(40)
 #define BARBARIAN_PLAYER								((PlayerTypes)40)

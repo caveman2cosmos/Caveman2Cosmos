@@ -4426,6 +4426,7 @@ void CvTeamAI::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_OBJECT_END(wrapper);
 
+/* Needed if getMaxCivPlayers return MAX_PC_PLAYERS, now it returns MAX_PLAYERS-1.
 	if (getID() == MAX_PC_TEAMS)
 	{
 		//Read NPC data
@@ -4434,6 +4435,7 @@ void CvTeamAI::read(FDataStreamBase* pStream)
 			GET_TEAM((TeamTypes)iI).read(pStream);
 		}
 	}
+*/
 }
 
 
@@ -4483,6 +4485,7 @@ void CvTeamAI::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 
+/* Needed if getMaxCivPlayers return MAX_PC_PLAYERS, now it returns MAX_PLAYERS-1.
 	if (getID() == MAX_PC_TEAMS)
 	{
 		//write NPC data
@@ -4491,6 +4494,7 @@ void CvTeamAI::write(FDataStreamBase* pStream)
 			GET_TEAM((TeamTypes)iI).write(pStream);
 		}
 	}
+*/
 }
 
 int CvTeamAI::AI_noTechTradeThreshold(bool bRecalculate) const

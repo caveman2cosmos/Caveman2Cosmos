@@ -24477,7 +24477,7 @@ void CvPlayerAI::read(FDataStreamBase* pStream)
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
-
+/* Needed if getMaxCivPlayers return MAX_PC_PLAYERS, now it returns MAX_PLAYERS-1.
 	if (getID() == MAX_PC_PLAYERS)
 	{
 		//Read NPC data
@@ -24486,6 +24486,7 @@ void CvPlayerAI::read(FDataStreamBase* pStream)
 			GET_PLAYER((PlayerTypes)iI).read(pStream);
 		}
 	}
+*/
 }
 
 
@@ -24616,6 +24617,7 @@ void CvPlayerAI::write(FDataStreamBase* pStream)
 	}
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 
+/* Needed if getMaxCivPlayers return MAX_PC_PLAYERS, now it returns MAX_PLAYERS-1.
 	if (getID() == MAX_PC_PLAYERS)
 	{
 		//Write NPC data
@@ -24624,6 +24626,7 @@ void CvPlayerAI::write(FDataStreamBase* pStream)
 			GET_PLAYER((PlayerTypes)iI).write(pStream);
 		}
 	}
+*/
 }
 
 

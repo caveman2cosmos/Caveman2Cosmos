@@ -4713,7 +4713,7 @@ int cvInternalGlobals::getTGA_CORPORATIONS()							// GAMEFONT_TGA_CORPORATIONS
 /************************************************************************************************/
 int cvInternalGlobals::getMAX_CIV_PLAYERS()
 {
-	return MAX_CIV_PLAYERS;
+	return MAX_PC_PLAYERS;
 }
 
 int cvInternalGlobals::getMAX_PC_PLAYERS()
@@ -5645,9 +5645,12 @@ int cvInternalGlobals::getNumMissionInfos() const
 CvGameAI& cvInternalGlobals::getGame() { return *m_game; }
 CvGameAI *cvInternalGlobals::getGamePointer(){ return m_game; }
 
+// This determines how many starting civs can be chosen in the custom game staging room screen.
+// Currently it allows you to add more civs than there are civ slots.
+// If this is reduced to the correct number, the city bar and city graphics for the neanderthal NPC will never be updated as the exe doesn't understand that their cities exist.
 int cvInternalGlobals::getMaxCivPlayers() const
 {
-	return MAX_CIV_PLAYERS;
+	return MAX_PLAYERS-1;
 }
 
 int cvInternalGlobals::getMaxPCPlayers() const
