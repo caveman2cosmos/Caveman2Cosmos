@@ -254,7 +254,7 @@ class CvTeamDesc:
 					f.write("\tTech=%s\n" %(GC.getTechInfo(i).getType()))
 
 		# write Espionage against other teams
-		for i in xrange(GC.getMAX_PC_TEAMS()):
+		for i in xrange(GC.getMAX_PC_TEAMS()):#
 			if (GC.getTeam(idx).getEspionagePointsAgainstTeam(i) > 0):
 				f.write("\tEspionageTeam=%d, EspionageAmount=%d\n" %(i, GC.getTeam(idx).getEspionagePointsAgainstTeam(i)))
 
@@ -263,32 +263,32 @@ class CvTeamDesc:
 			f.write("\tEspionageEverAmount=%d\n" %(GC.getTeam(idx).getEspionagePointsEver()))
 
 		# write met other teams
-		for i in xrange(GC.getMAX_PC_TEAMS()):
+		for i in xrange(GC.getMAX_PC_TEAMS()):#
 			if (GC.getTeam(idx).isHasMet(i)):
 				f.write("\tContactWithTeam=%d\n" %(i))
 
 		# write warring teams
-		for i in xrange(GC.getMAX_PC_TEAMS()):
+		for i in xrange(GC.getMAX_PC_TEAMS()):#
 			if (GC.getTeam(idx).isAtWar(i)):
 				f.write("\tAtWar=%d\n" %(i))
 
 		# write permanent war/peace teams
-		for i in xrange(GC.getMAX_PC_TEAMS()):
+		for i in xrange(GC.getMAX_PC_TEAMS()):#
 			if (GC.getTeam(idx).isPermanentWarPeace(i)):
 				f.write("\tPermanentWarPeace=%d\n" %(i))
 
 		# write open borders other teams
-		for i in xrange(GC.getMAX_PC_TEAMS()):
+		for i in xrange(GC.getMAX_PC_TEAMS()):#
 			if (GC.getTeam(idx).isOpenBorders(i)):
 				f.write("\tOpenBordersWithTeam=%d\n" %(i))
 
 		# write defensive pact other teams
-		for i in xrange(GC.getMAX_PC_TEAMS()):
+		for i in xrange(GC.getMAX_PC_TEAMS()):#
 			if (GC.getTeam(idx).isDefensivePact(i)):
 				f.write("\tDefensivePactWithTeam=%d\n" %(i))
 
 		# write vassal state
-		for i in xrange(GC.getMAX_PC_TEAMS()):
+		for i in xrange(GC.getMAX_PC_TEAMS()):#
 			if (GC.getTeam(idx).isVassal(i)):
 				f.write("\tVassalOfTeam=%d\n" %(i))
 
@@ -475,7 +475,7 @@ class CvPlayerDesc:
 						f.write("\tCivicOption=%s, Civic=%s\n" %(GC.getCivicOptionInfo(iCivicOptionLoop).getType(), GC.getCivicInfo(iCivicLoop).getType()))
 
 			# write Attitude Extra
-			for i in xrange(GC.getMAX_PC_PLAYERS()):
+			for i in xrange(GC.getMAX_PC_PLAYERS()):#
 				if (GC.getPlayer(idx).AI_getAttitudeExtra(i) != 0):
 					f.write("\tAttitudePlayer=%d, AttitudeExtra=%d\n" %(i, GC.getPlayer(idx).AI_getAttitudeExtra(i)))
 
@@ -833,7 +833,7 @@ class CvCityDesc:
 		self.plotY=-1
 		self.szScriptData = "NONE"
 		self.aiPlayerCulture = []
-		for iPlayerLoop in xrange(GC.getMAX_PC_PLAYERS()):
+		for iPlayerLoop in xrange(GC.getMAX_PC_PLAYERS()):#
 			self.aiPlayerCulture.append(0)
 
 	# after reading, this will actually apply the data
@@ -880,7 +880,7 @@ class CvCityDesc:
 			if iSpecialist > -1:
 				self.city.changeFreeSpecialistCount(iSpecialist, 1)
 
-		for iPlayerLoop in xrange(GC.getMAX_PC_PLAYERS()):
+		for iPlayerLoop in xrange(GC.getMAX_PC_PLAYERS()):#
 			iPlayerCulture = self.aiPlayerCulture[iPlayerLoop]
 			if iPlayerCulture > 0:
 				self.city.setCulture(iPlayerLoop, iPlayerCulture, True)
@@ -948,7 +948,7 @@ class CvCityDesc:
 			f.write("\t\tScriptData=%s\n" %city.getScriptData())
 
 		# Player culture
-		for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
+		for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):#
 			iPlayerCulture = city.getCulture(iPlayerX)
 			if (iPlayerCulture > 0):
 				f.write("\t\tPlayer%dCulture=%d\n" %(iPlayerX, iPlayerCulture))
@@ -1058,7 +1058,7 @@ class CvCityDesc:
 				continue
 
 			# Player Culture
-			for iPlayerLoop in xrange(GC.getMAX_PC_PLAYERS()):
+			for iPlayerLoop in xrange(GC.getMAX_PC_PLAYERS()):#
 				szCityTag = ("Player%dCulture" %(iPlayerLoop))
 				v = parser.findTokenValue(toks, szCityTag)
 				if v != -1:
@@ -1090,7 +1090,7 @@ class CvPlotDesc:
 		self.cityDesc = None
 		self.szLandmark = ""
 		self.szScriptData = "NONE"
-		self.abTeamPlotRevealed = [0]*GC.getMAX_PC_TEAMS()
+		self.abTeamPlotRevealed = [0]*GC.getMAX_PC_TEAMS()#
 
 	# apply plot and terrain type
 	def preApply(self):
@@ -1186,7 +1186,7 @@ class CvPlotDesc:
 
 		# Fog of War
 		bFirstReveal = True
-		for iTeamX in xrange(GC.getMAX_PC_TEAMS()):
+		for iTeamX in xrange(GC.getMAX_PC_TEAMS()):#
 			if GC.getTeam(iTeamX).isAlive():
 				if plot.isRevealed(iTeamX, 0):
 					# Plot is revealed for this Team so write out the fact that it is; if not revealed don't write anything
@@ -1502,10 +1502,10 @@ class CvWBDesc:
 		f.write("Version=%d\n" % version)
 		self.gameDesc.write(f)	# write game info
 
-		for i in xrange(GC.getMAX_PC_TEAMS()):
+		for i in xrange(GC.getMAX_PC_TEAMS()):#
 			CvTeamDesc().write(f, i)		# write team info
 
-		for i in xrange(GC.getMAX_PC_PLAYERS()):
+		for i in xrange(GC.getMAX_PC_PLAYERS()):#
 			CvPlayerDesc().write(f, i)		# write player info
 
 		self.mapDesc.write(f)	# write map info
@@ -1573,7 +1573,7 @@ class CvWBDesc:
 
 		MAP = GC.getMap()
 		# Player stuff
-		for iPlayerLoop in xrange(GC.getMAX_PC_PLAYERS()):
+		for iPlayerLoop in xrange(GC.getMAX_PC_PLAYERS()):#
 
 			pPlayer = GC.getPlayer(iPlayerLoop)
 			pWBPlayer = self.playersDesc[iPlayerLoop]
@@ -1596,7 +1596,7 @@ class CvWBDesc:
 		# Team stuff
 		bMakePlotList = False
 		if self.teamsDesc:
-			for iTeamX in xrange(GC.getMAX_PC_TEAMS()):
+			for iTeamX in xrange(GC.getMAX_PC_TEAMS()):#
 
 				if self.teamsDesc[iTeamX]:
 					CyTeamX = GC.getTeam(iTeamX)
@@ -1658,7 +1658,7 @@ class CvWBDesc:
 
 		# Player stuff
 		if self.playersDesc:
-			for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
+			for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):#
 
 				if self.playersDesc[iPlayerX]:
 
@@ -1709,7 +1709,7 @@ class CvWBDesc:
 
 		# Team stuff
 		if self.teamsDesc:
-			for iTeamX in xrange(GC.getMAX_PC_TEAMS()):
+			for iTeamX in xrange(GC.getMAX_PC_TEAMS()):#
 
 				if self.teamsDesc[iTeamX]:
 
@@ -1738,7 +1738,7 @@ class CvWBDesc:
 			pWBPlot = self.plotDesc[iPlot]
 
 			# Reveal Fog of War for teams
-			for iTeamX in xrange(GC.getMAX_PC_TEAMS()):
+			for iTeamX in xrange(GC.getMAX_PC_TEAMS()):#
 
 				if pWBPlot.abTeamPlotRevealed[iTeamX] == 1:
 
@@ -1777,7 +1777,7 @@ class CvWBDesc:
 		print "Reading teams desc"
 		filePos = f.tell()
 		self.teamsDesc = []
-		for i in xrange(GC.getMAX_PC_TEAMS()):
+		for i in xrange(GC.getMAX_PC_TEAMS()):#
 			print ("reading team %d" %(i))
 			teamsDesc = CvTeamDesc()
 			if teamsDesc.read(f) == False:	# read team info
@@ -1787,7 +1787,7 @@ class CvWBDesc:
 
 		print "Reading players desc"
 		self.playersDesc = []
-		for i in xrange(GC.getMAX_PC_PLAYERS()):
+		for i in xrange(GC.getMAX_PC_PLAYERS()):#
 			playerDesc = CvPlayerDesc()
 			playerDesc.read(f)				# read player info
 			self.playersDesc.append(playerDesc)
