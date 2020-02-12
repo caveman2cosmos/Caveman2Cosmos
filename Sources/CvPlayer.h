@@ -430,7 +430,7 @@ public:
 	bool canDoCivics(CivicTypes eCivic) const; // Exposed to Python
 	bool canRevolution(CivicTypes* paeNewCivics) const; // Exposed to Python
 	void revolution(CivicTypes* paeNewCivics, bool bForce = false); // Exposed to Python
-	int getCivicPercentAnger(CivicTypes eCivic, bool bIgnore = false) const; // Exposed to Python
+	int getCivicPercentAnger(CivicTypes eCivic) const; // Exposed to Python
 
 	bool canDoReligion(ReligionTypes eReligion) const; // Exposed to Python
 	bool canChangeReligion() const; // Exposed to Python

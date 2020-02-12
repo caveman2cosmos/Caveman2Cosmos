@@ -11638,47 +11638,14 @@ void CvPlayer::revolution(CivicTypes* paeNewCivics, bool bForce)
 }
 
 
-int CvPlayer::getCivicPercentAnger(CivicTypes eCivic, bool bIgnore) const
+int CvPlayer::getCivicPercentAnger(CivicTypes eCivic) const
 {
-	int iCount;
-	int iPossibleCount;
-	int iI;
-
-	if (GC.getCivicInfo(eCivic).getCivicPercentAnger() == 0)
+	if (getCivics((CivicOptionTypes)(GC.getCivicInfo(eCivic).getCivicOptionType())) == eCivic)
 	{
-		return 0;
+		// the divisor is 1000 so 1 percent would be represented by 10.
+		return GC.getCivicInfo(eCivic).getCivicPercentAnger() * 10;
 	}
-
-	if (!bIgnore && (getCivics((CivicOptionTypes)(GC.getCivicInfo(eCivic).getCivicOptionType())) == eCivic))
-	{
-		return 0;
-	}
-
-	iCount = 0;
-	iPossibleCount = 0;
-
-	for (iI = 0; iI < MAX_PC_PLAYERS; iI++)
-	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
-		{
-			if (GET_PLAYER((PlayerTypes)iI).getTeam() != getTeam())
-			{
-				if (GET_PLAYER((PlayerTypes)iI).getCivics((CivicOptionTypes)(GC.getCivicInfo(eCivic).getCivicOptionType())) == eCivic)
-				{
-					iCount += GET_PLAYER((PlayerTypes)iI).getNumCities();
-				}
-
-				iPossibleCount += GET_PLAYER((PlayerTypes)iI).getNumCities();
-			}
-		}
-	}
-
-	if (iPossibleCount == 0)
-	{
-		return 0;
-	}
-
-	return ((GC.getCivicInfo(eCivic).getCivicPercentAnger() * iCount) / iPossibleCount);
+	return 0;
 }
 
 

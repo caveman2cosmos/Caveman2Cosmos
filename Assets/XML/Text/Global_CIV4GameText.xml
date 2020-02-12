@@ -1237,7 +1237,6 @@
 		<German>+%d1_Change[ICON_UNHAPPY]: "Diese Stadt ist einfach zu monströs!"</German>
 		<Italian>+%d1_Change[ICON_UNHAPPY]: "Vogliamo una nazione aperta!"</Italian>
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "¡Echamos de menos el campo!"</Spanish>
-		<Polish>.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ANGER_CIVIC</Tag>
@@ -1249,13 +1248,16 @@
 		<Polish>[ICON_BULLET]+%d1_Change[ICON_UNHAPPY]: "Nienawidzimy naszego rządu!"</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ANGER_DEMAND_CIVIC</Tag>
-		<English>+%d1_Change[ICON_UNHAPPY]: "We demand %s2_Name!"</English>
-		<French>+%d1_Change[ICON_UNHAPPY]: "Nous demandons [NUM2:un:une:des:des] %s2_Name!"</French>
-		<German>+%d1_Change[ICON_UNHAPPY]: "Wir verlangen folgende Gesellschaftsform: %s2_Name!"</German>
-		<Italian>+%d1_Change[ICON_UNHAPPY]: "Vogliamo la forma di governo %s2_Name!"</Italian>
-		<Spanish>+%d1_Change[ICON_UNHAPPY]: "¡Queremos [NUM2:un:una:unos:unas] %s2_Name!"</Spanish>
-		<Polish>+%d1_Change[ICON_UNHAPPY]: "Domagamy się %s2_Name!"</Polish>
+		<Tag>TXT_KEY_ANGER_CIVIC_PERCENT_BAD</Tag>
+		<English>+%d1_Change[ICON_UNHAPPY]: %s2_Name</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ANGER_CIVIC_PERCENT_GOOD</Tag>
+		<English>%d1_Change[ICON_UNHAPPY]: %s2_Name</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ANGER_CIVIC_PERCENT_BAD</Tag>
+		<English>+%d1_Change[ICON_UNHAPPY]: "We hate %s2_Name!"</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ANGER_FEATURES</Tag>
@@ -1265,6 +1267,10 @@
 		<Italian>+%d1_Change[ICON_UNHAPPY]: "Alcuni miglioramenti ci rendono infelici!"</Italian>
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "¡Algunas mejoras nos tienen descontentos!"</Spanish>
 		<Polish>+%d1_Change[ICON_UNHAPPY]: "Niektóre ulepszenia doprowadzają nas do wściekłości!"</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ANGER_MISC</Tag>
+		<English>+%d1_Change[ICON_UNHAPPY]: "Misc."</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ANGER_TOO_MANY_CITIES</Tag>
@@ -8205,15 +8211,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Italian>+%d1_Change[ICON_HAPPY]: "Ci piacciono le nostre Località!"</Italian>
 		<Spanish>+%d1_Change[ICON_HAPPY]: "¡Disfrutamos de nuestros parajes nacionales!"</Spanish>
 		<Polish>+%d1_Change[ICON_HAPPY]: "Kochamy nasze Cuda Natury!"</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_HAPPY_NOT_CIVIC</Tag>
-		<English>%d1_Change[ICON_UNHAPPY]: "We Enjoy Our Freedom from the Oppression of %s2_Name!"</English>
-		<French>%d1_Change[ICON_UNHAPPY]: "Nous nous réjouissons d'avoir échapé à l'oppresion de %s2_Name!"</French>
-		<German>%d1_Change[ICON_UNHAPPY]: "Wir feiern unsere Befreiung von der Unterdrückung durch %s2_Name!"</German>
-		<Italian>%d1_Change[ICON_UNHAPPY]: "Ci godiamo la nostra libertà dall'oppressione di %s2_Name!"</Italian>
-		<Spanish>%d1_Change[ICON_UNHAPPY]: "¡Agradecemos estar libres de la opresión de %s2_Name!"</Spanish>
-		<Polish>%d1_Change[ICON_UNHAPPY]: "Cieszymy się z uwolnienia od ucisku %s2_Name!"</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HAPPY_PROJECT</Tag>
