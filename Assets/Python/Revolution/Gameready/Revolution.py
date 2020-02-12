@@ -552,13 +552,13 @@ class Revolution:
 
 		iMax = GC.getMAX_PC_PLAYERS()
 		iBarb = GC.getBARBARIAN_PLAYER()
-		if iPlayer >= iMax:
-			if iPlayer == iBarb:
-				iNextPlayer = 0
-			else:
-				iNextPlayer = iPlayer
+		if iPlayer == iBarb:
+			iNextPlayer = 0
+			iPlayer = iMax
+		elif iPlayer >= iMax:
+			iNextPlayer = iPlayer
 		elif iPlayer + 1 == iMax:
-			iNextPlayer = iBarb
+			iNextPlayer = 0
 		else:
 			iNextPlayer = iPlayer + 1
 
@@ -576,13 +576,7 @@ class Revolution:
 				break
 
 			iNextPlayer += 1
-			if iNextPlayer == iMax:
-				# iPlayer 40-44 does not exist in C2C currently
-				# Therefore we check the last NPC, rather than the first, next.
-				# If there is only one player vs NPC's, then there should still be 1 rev check per game turn.
-				iNextPlayer = iBarb
-
-			elif iNextPlayer > iMax:
+			if iNextPlayer == iMax and iPlayer != iMax:
 				iGameTurn += 1
 				iNextPlayer = 0
 
