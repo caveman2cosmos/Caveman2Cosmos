@@ -437,6 +437,16 @@ public:
 	int getPREY_TEAM() const { return GC.getPREY_TEAM(); }
 	int getINSECT_PLAYER() const { return GC.getINSECT_PLAYER(); }
 	int getINSECT_TEAM() const { return GC.getINSECT_TEAM(); }
+	int getNPC4_PLAYER() const { return GC.getNPC4_PLAYER(); }
+	int getNPC4_TEAM() const { return GC.getNPC4_TEAM(); }
+	int getNPC3_PLAYER() const { return GC.getNPC3_PLAYER(); }
+	int getNPC3_TEAM() const { return GC.getNPC3_TEAM(); }
+	int getNPC2_PLAYER() const { return GC.getNPC2_PLAYER(); }
+	int getNPC2_TEAM() const { return GC.getNPC2_TEAM(); }
+	int getNPC1_PLAYER() const { return GC.getNPC1_PLAYER(); }
+	int getNPC1_TEAM() const { return GC.getNPC1_TEAM(); }
+	int getNPC0_PLAYER() const { return GC.getNPC0_PLAYER(); }
+	int getNPC0_TEAM() const { return GC.getNPC0_TEAM(); }
 	int getINVALID_PLOT_COORD() const { return GC.getINVALID_PLOT_COORD(); }
 	int getNUM_CITY_PLOTS() const { return GC.getNUM_CITY_PLOTS(); }
 	int getCITY_HOME_PLOT() const { return GC.getCITY_HOME_PLOT(); }

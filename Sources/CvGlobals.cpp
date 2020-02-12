@@ -4790,6 +4790,56 @@ int cvInternalGlobals::getINSECT_TEAM()
 	return INSECT_TEAM;
 }
 
+int cvInternalGlobals::getNPC4_PLAYER()
+{
+	return NPC4_PLAYER;
+}
+
+int cvInternalGlobals::getNPC4_TEAM()
+{
+	return NPC4_TEAM;
+}
+
+int cvInternalGlobals::getNPC3_PLAYER()
+{
+	return NPC3_PLAYER;
+}
+
+int cvInternalGlobals::getNPC3_TEAM()
+{
+	return NPC3_TEAM;
+}
+
+int cvInternalGlobals::getNPC2_PLAYER()
+{
+	return NPC2_PLAYER;
+}
+
+int cvInternalGlobals::getNPC2_TEAM()
+{
+	return NPC2_TEAM;
+}
+
+int cvInternalGlobals::getNPC1_PLAYER()
+{
+	return NPC1_PLAYER;
+}
+
+int cvInternalGlobals::getNPC1_TEAM()
+{
+	return NPC1_TEAM;
+}
+
+int cvInternalGlobals::getNPC0_PLAYER()
+{
+	return NPC0_PLAYER;
+}
+
+int cvInternalGlobals::getNPC0_TEAM()
+{
+	return NPC0_TEAM;
+}
+
 int cvInternalGlobals::getINVALID_PLOT_COORD()
 {
 	return INVALID_PLOT_COORD;

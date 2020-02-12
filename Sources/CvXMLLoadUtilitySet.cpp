@@ -516,16 +516,50 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("INSECT_LEADER", idx);
 
-/************************************************************************************************/
-/* Afforess	                  Start		 07/12/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+		SetGlobalDefine("NPC4_CIVILIZATION", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("NPC4_CIVILIZATION", idx);
+
+		SetGlobalDefine("NPC4_LEADER", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("NPC4_LEADER", idx);
+
+		SetGlobalDefine("NPC3_CIVILIZATION", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("NPC3_CIVILIZATION", idx);
+
+		SetGlobalDefine("NPC3_LEADER", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("NPC3_LEADER", idx);
+
+		SetGlobalDefine("NPC2_CIVILIZATION", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("NPC2_CIVILIZATION", idx);
+
+		SetGlobalDefine("NPC2_LEADER", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("NPC2_LEADER", idx);
+
+		SetGlobalDefine("NPC1_CIVILIZATION", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("NPC1_CIVILIZATION", idx);
+
+		SetGlobalDefine("NPC1_LEADER", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("NPC1_LEADER", idx);
+
+		SetGlobalDefine("NPC0_CIVILIZATION", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("NPC0_CIVILIZATION", idx);
+
+		SetGlobalDefine("NPC0_LEADER", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("NPC0_LEADER", idx);
+
+
 		gDLL->ChangeINIKeyValue("CONFIG", "HideMinSpecWarning ", "1");
 		gDLL->ChangeINIKeyValue("GAME", "ModularLoading  ", "0");
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 		return true;
 	}
 

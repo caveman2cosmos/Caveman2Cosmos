@@ -8,6 +8,11 @@ Valid NPC players for spawns:
 	43 = PREDATOR_PLAYER
 	44 = PREY_PLAYER
 	45 = INSECT_PLAYER
+	46 = NPC4_PLAYER
+	47 = NPC3_PLAYER
+	48 = NPC2_PLAYER
+	49 = NPC1_PLAYER
+	50 = NPC0_PLAYER
 
  <iMaxLocalDensity> Range: 1-49
 	Based on an area of 49 plots, 3 plots out in all directions.

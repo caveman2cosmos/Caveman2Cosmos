@@ -211,6 +211,46 @@
 		<DefineTextVal>LEADER_BARBARIAN</DefineTextVal>
 	</Define>
 	<Define>
+		<DefineName>NPC4_CIVILIZATION</DefineName>
+		<DefineTextVal>CIVILIZATION_BARBARIAN</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>NPC4_LEADER</DefineName>
+		<DefineTextVal>LEADER_BARBARIAN</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>NPC3_CIVILIZATION</DefineName>
+		<DefineTextVal>CIVILIZATION_BARBARIAN</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>NPC3_LEADER</DefineName>
+		<DefineTextVal>LEADER_BARBARIAN</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>NPC2_CIVILIZATION</DefineName>
+		<DefineTextVal>CIVILIZATION_BARBARIAN</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>NPC2_LEADER</DefineName>
+		<DefineTextVal>LEADER_BARBARIAN</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>NPC1_CIVILIZATION</DefineName>
+		<DefineTextVal>CIVILIZATION_BARBARIAN</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>NPC1_LEADER</DefineName>
+		<DefineTextVal>LEADER_BARBARIAN</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>NPC0_CIVILIZATION</DefineName>
+		<DefineTextVal>CIVILIZATION_BARBARIAN</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>NPC0_LEADER</DefineName>
+		<DefineTextVal>LEADER_BARBARIAN</DefineTextVal>
+	</Define>
+	<Define>
 		<DefineName>MAX_PLOT_LIST_SIZE</DefineName>
 		<iDefineIntVal>8</iDefineIntVal>
 	</Define>

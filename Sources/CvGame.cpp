@@ -482,6 +482,58 @@ void CvGame::init(HandicapTypes eHandicap)
 				GET_TEAM(eTeam).init(eTeam);
 				GC.getInitCore().setTeam(ePlayer, eTeam);
 			}
+			else if (ePlayer == NPC4_PLAYER)
+			{
+				break; // Remove me the day I'm added, shift it one "else" down per NPC added.
+				// I will only be initialized when starting a new game, old saves won't ever see me.
+				eLeader = (LeaderHeadTypes)GC.getDefineINT("NPC4_LEADER");
+				eCivilization = (CivilizationTypes)GC.getDefineINT("NPC4_CIVILIZATION");
+				addPlayer(ePlayer, eLeader, eCivilization, false);
+				GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+				TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
+				GET_TEAM(eTeam).init(eTeam);
+				GC.getInitCore().setTeam(ePlayer, eTeam);
+			}
+			else if (ePlayer == NPC3_PLAYER)
+			{
+				eLeader = (LeaderHeadTypes)GC.getDefineINT("NPC3_LEADER");
+				eCivilization = (CivilizationTypes)GC.getDefineINT("NPC3_CIVILIZATION");
+				addPlayer(ePlayer, eLeader, eCivilization, false);
+				GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+				TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
+				GET_TEAM(eTeam).init(eTeam);
+				GC.getInitCore().setTeam(ePlayer, eTeam);
+			}
+			else if (ePlayer == NPC2_PLAYER)
+			{
+				eLeader = (LeaderHeadTypes)GC.getDefineINT("NPC2_LEADER");
+				eCivilization = (CivilizationTypes)GC.getDefineINT("NPC2_CIVILIZATION");
+				addPlayer(ePlayer, eLeader, eCivilization, false);
+				GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+				TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
+				GET_TEAM(eTeam).init(eTeam);
+				GC.getInitCore().setTeam(ePlayer, eTeam);
+			}
+			else if (ePlayer == NPC1_PLAYER)
+			{
+				eLeader = (LeaderHeadTypes)GC.getDefineINT("NPC1_LEADER");
+				eCivilization = (CivilizationTypes)GC.getDefineINT("NPC1_CIVILIZATION");
+				addPlayer(ePlayer, eLeader, eCivilization, false);
+				GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+				TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
+				GET_TEAM(eTeam).init(eTeam);
+				GC.getInitCore().setTeam(ePlayer, eTeam);
+			}
+			else if (ePlayer == NPC0_PLAYER)
+			{
+				eLeader = (LeaderHeadTypes)GC.getDefineINT("NPC0_LEADER");
+				eCivilization = (CivilizationTypes)GC.getDefineINT("NPC0_CIVILIZATION");
+				addPlayer(ePlayer, eLeader, eCivilization, false);
+				GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+				TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
+				GET_TEAM(eTeam).init(eTeam);
+				GC.getInitCore().setTeam(ePlayer, eTeam);
+			}
 		}
 	}
 	AI_init();
