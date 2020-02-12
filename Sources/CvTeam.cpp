@@ -3663,7 +3663,7 @@ bool CvTeam::isNPC() const
 
 bool CvTeam::isHominid() const
 {
-	return (getID() == BARBARIAN_TEAM || getID() == NPC7_TEAM);
+	return (getID() == BARBARIAN_TEAM || getID() == NEANDERTHAL_TEAM);
 }
 
 
@@ -8361,14 +8361,6 @@ void CvTeam::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
 
-//void CvTeam::write2(FDataStreamBase* pStream)
-//{
-//	write(pStream);
-//}
-//void CvTeam::read2(FDataStreamBase* pStream)
-//{
-//	read(pStream);
-//}
 
 // CACHE: cache frequently used values
 ///////////////////////////////////////

@@ -62,34 +62,23 @@
 #define RANDPLOT_NOT_CITY								(0x00000040)
 
 //TBANIMAL - the project really starts here
-#define MAX_CIV_PLAYERS									(50)
+#define MAX_CIV_PLAYERS									(40)
 #define MAX_PC_PLAYERS									(40)
 #define MAX_PC_TEAMS									(40)
-#define MAX_PLAYERS										(51)
-#define MAX_TEAMS										(51)
-#define NPC1_PLAYER										((PlayerTypes)40)
-#define NPC1_TEAM										((TeamTypes)40)
-#define NPC2_PLAYER										((PlayerTypes)41)
-#define NPC2_TEAM										((TeamTypes)41)
-#define NPC3_PLAYER										((PlayerTypes)42)
-#define NPC3_TEAM										((TeamTypes)42)
-#define NPC4_PLAYER										((PlayerTypes)43)
-#define NPC4_TEAM										((TeamTypes)43)
-#define NPC5_PLAYER										((PlayerTypes)44)
-#define NPC5_TEAM										((TeamTypes)44)
-#define NPC6_PLAYER										((PlayerTypes)45)//insectoids
-#define NPC6_TEAM										((TeamTypes)45)
-#define NPC7_PLAYER										((PlayerTypes)46)//Neanderthal
-#define NPC7_TEAM										((TeamTypes)46)
-#define NPC8_PLAYER										((PlayerTypes)47)//Greenman
-#define NPC8_TEAM										((TeamTypes)47)
-#define AGGRESSIVE_ANIMAL_PLAYER						((PlayerTypes)48)//Greenman
-#define AGGRESSIVE_ANIMAL_TEAM							((TeamTypes)48)
-#define PASSIVE_ANIMAL_PLAYER							((PlayerTypes)49)//Greenman
-#define PASSIVE_ANIMAL_TEAM								((TeamTypes)49)
-#define BARBARIAN_PLAYER								((PlayerTypes)50)
-#define BARBARIAN_TEAM									((TeamTypes)50)
-#define FIRST_NPC_PLAYER								((PlayerTypes)45)
+#define BARBARIAN_PLAYER								((PlayerTypes)40)
+#define BARBARIAN_TEAM									((TeamTypes)40)
+#define NEANDERTHAL_PLAYER								((PlayerTypes)41)
+#define NEANDERTHAL_TEAM								((TeamTypes)41)
+#define BEAST_PLAYER									((PlayerTypes)42)
+#define BEAST_TEAM										((TeamTypes)42)
+#define PREDATOR_PLAYER									((PlayerTypes)43)
+#define PREDATOR_TEAM									((TeamTypes)43)
+#define PREY_PLAYER										((PlayerTypes)44)
+#define PREY_TEAM										((TeamTypes)44)
+#define INSECT_PLAYER									((PlayerTypes)45)
+#define INSECT_TEAM										((TeamTypes)45)
+#define MAX_PLAYERS										(46)
+#define MAX_TEAMS										(46)
 
 // Char Count limit for edit boxes
 #define PREFERRED_EDIT_CHAR_COUNT						(15)

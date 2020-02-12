@@ -4740,110 +4740,54 @@ int cvInternalGlobals::getBARBARIAN_PLAYER()
 {
 	return BARBARIAN_PLAYER;
 }
-
 int cvInternalGlobals::getBARBARIAN_TEAM()
 {
 	return BARBARIAN_TEAM;
 }
 
-int cvInternalGlobals::getAGGRESSIVE_ANIMAL_PLAYER()
+int cvInternalGlobals::getNEANDERTHAL_PLAYER()
 {
-	return AGGRESSIVE_ANIMAL_PLAYER;
+	return NEANDERTHAL_PLAYER;
+}
+int cvInternalGlobals::getNEANDERTHAL_TEAM() 
+{
+	return NEANDERTHAL_TEAM;
 }
 
-int cvInternalGlobals::getAGGRESSIVE_ANIMAL_TEAM()
+int cvInternalGlobals::getBEAST_PLAYER()
 {
-	return AGGRESSIVE_ANIMAL_TEAM;
+	return BEAST_PLAYER;
+}
+int cvInternalGlobals::getBEAST_TEAM()
+{
+	return BEAST_TEAM;
 }
 
-int cvInternalGlobals::getPASSIVE_ANIMAL_PLAYER()
+int cvInternalGlobals::getPREDATOR_PLAYER()
 {
-	return PASSIVE_ANIMAL_PLAYER;
+	return PREDATOR_PLAYER;
+}
+int cvInternalGlobals::getPREDATOR_TEAM()
+{
+	return PREDATOR_TEAM;
 }
 
-int cvInternalGlobals::getPASSIVE_ANIMAL_TEAM()
+int cvInternalGlobals::getPREY_PLAYER()
 {
-	return PASSIVE_ANIMAL_TEAM;
+	return PREY_PLAYER;
+}
+int cvInternalGlobals::getPREY_TEAM()
+{
+	return PREY_TEAM;
 }
 
-int cvInternalGlobals::getNPC1_PLAYER()
+int cvInternalGlobals::getINSECT_PLAYER()
 {
-	return NPC1_PLAYER;
+	return INSECT_PLAYER;
 }
-
-int cvInternalGlobals::getNPC1_TEAM()
+int cvInternalGlobals::getINSECT_TEAM()
 {
-	return NPC1_TEAM;
-}
-
-int cvInternalGlobals::getNPC2_PLAYER()
-{
-	return NPC2_PLAYER;
-}
-
-int cvInternalGlobals::getNPC2_TEAM()
-{
-	return NPC2_TEAM;
-}
-
-int cvInternalGlobals::getNPC3_PLAYER()
-{
-	return NPC3_PLAYER;
-}
-
-int cvInternalGlobals::getNPC3_TEAM()
-{
-	return NPC3_TEAM;
-}
-
-int cvInternalGlobals::getNPC4_PLAYER()
-{
-	return NPC4_PLAYER;
-}
-
-int cvInternalGlobals::getNPC4_TEAM()
-{
-	return NPC4_TEAM;
-}
-
-int cvInternalGlobals::getNPC5_PLAYER()
-{
-	return NPC5_PLAYER;
-}
-
-int cvInternalGlobals::getNPC5_TEAM()
-{
-	return NPC5_TEAM;
-}
-
-int cvInternalGlobals::getNPC6_PLAYER()
-{
-	return NPC6_PLAYER;
-}
-
-int cvInternalGlobals::getNPC6_TEAM()
-{
-	return NPC6_TEAM;
-}
-
-int cvInternalGlobals::getNPC7_PLAYER()
-{
-	return NPC7_PLAYER;
-}
-
-int cvInternalGlobals::getNPC7_TEAM()
-{
-	return NPC7_TEAM;
-}
-
-int cvInternalGlobals::getNPC8_PLAYER()
-{
-	return NPC8_PLAYER;
-}
-
-int cvInternalGlobals::getNPC8_TEAM()
-{
-	return NPC8_TEAM;
+	return INSECT_TEAM;
 }
 
 int cvInternalGlobals::getINVALID_PLOT_COORD()

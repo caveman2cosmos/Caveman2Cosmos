@@ -16315,7 +16315,7 @@ bool CvUnit::canSiege(TeamTypes eTeam) const
 		return false;
 	}
 
-	if (GET_PLAYER(getOwner()).getID() == PASSIVE_ANIMAL_PLAYER)
+	if (GET_PLAYER(getOwner()).getID() == PREY_PLAYER)
 	{
 		return false;
 	}

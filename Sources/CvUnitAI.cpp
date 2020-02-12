@@ -3893,7 +3893,7 @@ void CvUnitAI::AI_attackCityMove()
 	bool bReadyToAttack = false;
 	if( isHominid() )
 	{
-		bLandWar = (area()->getNumCities() - area()->getCitiesPerPlayer(BARBARIAN_PLAYER) - area()->getCitiesPerPlayer(NPC7_PLAYER) > 0);
+		bLandWar = (area()->getNumCities() - area()->getCitiesPerPlayer(BARBARIAN_PLAYER) - area()->getCitiesPerPlayer(NEANDERTHAL_PLAYER) > 0);
 		bReadyToAttack = (getGroup()->getNumUnits() >= 3);
 	}
 	else if( !bTurtle )
@@ -24194,7 +24194,7 @@ bool CvUnitAI::AI_assaultSeaReinforce(bool bBarbarian)
 					{
 						iValue = 1;
 					}
-					else if( bBarbarian && (pLoopCity->area()->getCitiesPerPlayer(NPC7_PLAYER) > 0) )
+					else if( bBarbarian && (pLoopCity->area()->getCitiesPerPlayer(NEANDERTHAL_PLAYER) > 0) )
 					{
 						iValue = 1;
 					}
