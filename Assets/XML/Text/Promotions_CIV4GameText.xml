@@ -56,6 +56,7 @@
 		<!-- TXT_KEY_PROMOTEXT_INVISIBILITY_VEIL_PLOT_CHANGE -->
 		<Tag>TXT_KEY_PROMOTION_INVISIBILE_PLOT_CHANGE_TEXT</Tag>
 		<English>[ICON_BULLET]%D1_Mod %F2_Icon Veil on %s3_Type.</English>
+		<French>[ICON_BULLET]%D1_Mod %F2_Icon Invisibilité sur %s3_Type.</French>
 		<German>[ICON_BULLET]%D1_Mod %F2_Icon-Unsichtbarkeit %s3_Type.</German>
 	</TEXT>
 	<TEXT>
@@ -223,6 +224,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ADHERENT</Tag>
 		<English>Adherent</English>
+		<French>Partisan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ADVANCED_AIRBORNE_COMBAT_TRAINING</Tag>
@@ -249,14 +251,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_AFFLICT_ON_ATTACK_MELEE_TEXT</Tag>
 		<English>(Applies to Melee Attacks)</English>
+		<French>(Appliq. aux Attaques de Mélée)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_AFFLICT_ON_ATTACK_DISTANCE_TEXT</Tag>
 		<English>(Applies to Distance Attacks)</English>
+		<French>(Applies to Distance Attacks)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_AFFLICT_ON_ATTACK_BOTH_TEXT</Tag>
 		<English>(Applies to Both Distance AND Melee Attacks)</English>
+		<French>(Applies to Both Distance AND Melee Attacks)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_AFFLICT_ON_ATTACK_TEXT</Tag>
@@ -561,14 +566,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ANIMAL_IGNORES_BORDERS_TEXT</Tag>
 		<English>[ICON_BULLET]Gives this Animal %D1_Reasons Causes to Ignore Border Restrictions</English>
+		<French>[ICON_BULLET]Gives this Animal %D1_Reasons Causes to Ignore Border Restrictions</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_NO_DEFENSIVE_BONUS_CHANGE_POSITIVE_TEXT</Tag>
 		<English>[ICON_BULLET]Gives %D1_Reasons Cause(s) to be unable to benefit from Defense Combat bonuses.</English>
+		<French>[ICON_BULLET]Gives %D1_Reasons Cause(s) to be unable to benefit from Defense Combat bonuses.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_NO_DEFENSIVE_BONUS_CHANGE_NEGATIVE_TEXT</Tag>
 		<English>[ICON_BULLET]Removes %D1_Reasons Cause(s) to be unable to benefit from Defense Combat bonuses.</English>
+		<French>[ICON_BULLET]Removes %D1_Reasons Cause(s) to be unable to benefit from Defense Combat bonuses.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ANTIBIOLOGICAL</Tag>
@@ -713,22 +721,27 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ARMED_GUARD1</Tag>
 		<English>Armed Guard I</English>
+		<French>Garde armée I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ARMED_GUARD2</Tag>
 		<English>Armed Guard II</English>
+		<French>Garde armée II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ARMED_GUARD3</Tag>
 		<English>Armed Guard III</English>
+		<French>Garde armée III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ARMED_GUARD4</Tag>
 		<English>Armed Guard IV</English>
+		<French>Garde armée IV</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ARMED_GUARD5</Tag>
 		<English>Armed Guard V</English>
+		<French>Garde armée V</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ARMOR_TEXT</Tag>
@@ -926,6 +939,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ASSASSIN_TEXT</Tag>
 		<English>[ICON_BULLET]Trait - Assassination: %D1_Change</English>
+		<French>[ICON_BULLET]Trait - Assassination: %D1_Change</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ASTONISHING_ACCUMEN</Tag>
@@ -2146,31 +2160,31 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_ANTI_AIR1</Tag>
 		<English>Build Up (Anti-Air) I</English>
-		<French>Installation (Anti-Aér.) I</French>
+		<French>Retranchement (Anti-Aér.) I</French>
 		<Polish>Koncentracja (Przeciw-powietrzna) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_ANTI_AIR2</Tag>
 		<English>Build Up (Anti-Air) II</English>
-		<French>Installation (Anti-Aér.) II</French>
+		<French>Retranchement (Anti-Aér.) II</French>
 		<Polish>Koncentracja (Przeciw-powietrzna) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_ANTI_AIR3</Tag>
 		<English>Build Up (Anti-Air) III</English>
-		<French>Installation (Anti-Aér.) III</French>
+		<French>Retranchement (Anti-Aér.) III</French>
 		<Polish>Koncentracja (Przeciw-powietrzna) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_ANTI_AIR4</Tag>
 		<English>Build Up (Anti-Air) IV</English>
-		<French>Installation (Anti-Aér.) IV</French>
+		<French>Retranchement (Anti-Aér.) IV</French>
 		<Polish>Koncentracja (Przeciw-powietrzna) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_ANTI_AIR5</Tag>
 		<English>Build Up (Anti-Air) V</English>
-		<French>Installation (Anti-Aér.) V</French>
+		<French>Retranchement (Anti-Aér.) V</French>
 		<Polish>Koncentracja (Przeciw-powietrzna) V</Polish>
 	</TEXT>
 	<TEXT>
@@ -2191,31 +2205,31 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CHASE_PLANS1</Tag>
 		<English>Build Up (Chase Plans) I</English>
-		<French>Installation (Stratégie de chasse) I</French>
+		<French>Retranchement (Stratégie de chasse) I</French>
 		<Polish>Koncentracja (Plany Pościgowe) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CHASE_PLANS2</Tag>
 		<English>Build Up (Chase Plans) II</English>
-		<French>Installation (Stratégie de chasse) II</French>
+		<French>Retranchement (Stratégie de chasse) II</French>
 		<Polish>Koncentracja (Plany Pościgowe) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CHASE_PLANS3</Tag>
 		<English>Build Up (Chase Plans) III</English>
-		<French>Installation (Stratégie de chasse) III</French>
+		<French>Retranchement (Stratégie de chasse) III</French>
 		<Polish>Koncentracja (Plany Pościgowe) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CHASE_PLANS4</Tag>
 		<English>Build Up (Chase Plans) IV</English>
-		<French>Installation (Stratégie de chasse) IV</French>
+		<French>Retranchement (Stratégie de chasse) IV</French>
 		<Polish>Koncentracja (Plany Pościgowe) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CHASE_PLANS5</Tag>
 		<English>Build Up (Chase Plans) V</English>
-		<French>Installation (Stratégie de chasse) V</French>
+		<French>Retranchement (Stratégie de chasse) V</French>
 		<Polish>Koncentracja (Plany Pościgowe) V</Polish>
 	</TEXT>
 	<TEXT>
@@ -2279,306 +2293,306 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CONTROL_CENTER1</Tag>
 		<English>Build Up (Control Center) I</English>
-		<French>Installation (Centre de contrôle) I</French>
+		<French>Retranchement (Centre de contrôle) I</French>
 		<Polish>Koncentracja (Centrum Kontroli) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CONTROL_CENTER2</Tag>
 		<English>Build Up (Control Center) II</English>
-		<French>Installation (Centre de contrôle) II</French>
+		<French>Retranchement (Centre de contrôle) II</French>
 		<Polish>Koncentracja (Centrum Kontroli) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CONTROL_CENTER3</Tag>
 		<English>Build Up (Control Center) III</English>
-		<French>Installation (Centre de contrôle) III</French>
+		<French>Retranchement (Centre de contrôle) III</French>
 		<Polish>Koncentracja (Centrum Kontroli) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CONTROL_CENTER4</Tag>
 		<English>Build Up (Control Center) IV</English>
-		<French>Installation (Centre de contrôle) IV</French>
+		<French>Retranchement (Centre de contrôle) IV</French>
 		<Polish>Koncentracja (Centrum Kontroli) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CONTROL_CENTER5</Tag>
 		<English>Build Up (Control Center) V</English>
-		<French>Installation (Centre de contrôle) V</French>
+		<French>Retranchement (Centre de contrôle) V</French>
 		<Polish>Koncentracja (Centrum Kontroli) V</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CRIME_FIGHTING1</Tag>
 		<English>Build Up (Crime Fighting) I</English>
-		<French>Installation (Anti-crim.) I</French>
+		<French>Retranchement (Anti-crim.) I</French>
 		<Polish>Koncentracja (Walka z przestępczością) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CRIME_FIGHTING2</Tag>
 		<English>Build Up (Crime Fighting) II</English>
-		<French>Installation (Anti-crim.) II</French>
+		<French>Retranchement (Anti-crim.) II</French>
 		<Polish>Koncentracja (Walka z przestępczością) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CRIME_FIGHTING3</Tag>
 		<English>Build Up (Crime Fighting) III</English>
-		<French>Installation (Anti-crim.) III</French>
+		<French>Retranchement (Anti-crim.) III</French>
 		<Polish>Koncentracja (Walka z przestępczością) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CRIME_FIGHTING4</Tag>
 		<English>Build Up (Crime Fighting) IV</English>
-		<French>Installation (Anti-crim.) IV</French>
+		<French>Retranchement (Anti-crim.) IV</French>
 		<Polish>Koncentracja (Walka z przestępczością) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CRIME_FIGHTING5</Tag>
 		<English>Build Up (Crime Fighting) V</English>
-		<French>Installation (Anti-crim.) V</French>
+		<French>Retranchement (Anti-crim.) V</French>
 		<Polish>Koncentracja (Walka z przestępczością) V</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_DISEASE_CONTROL1</Tag>
 		<English>Build Up (Disease Control) I</English>
-		<French>Installation (Contrôle sanitaire) I</French>
+		<French>Retranchement (Contrôle sanitaire) I</French>
 		<Polish>Koncentracja (Walka z chorobami) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_DISEASE_CONTROL2</Tag>
 		<English>Build Up (Disease Control) II</English>
-		<French>Installation (Contrôle sanitaire) II</French>
+		<French>Retranchement (Contrôle sanitaire) II</French>
 		<Polish>Koncentracja (Walka z chorobami) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_DISEASE_CONTROL3</Tag>
 		<English>Build Up (Disease Control) III</English>
-		<French>Installation (Contrôle sanitaire) III</French>
+		<French>Retranchement (Contrôle sanitaire) III</French>
 		<Polish>Koncentracja (Walka z chorobami) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_DISEASE_CONTROL4</Tag>
 		<English>Build Up (Disease Control) IV</English>
-		<French>Installation (Contrôle sanitaire) IV</French>
+		<French>Retranchement (Contrôle sanitaire) IV</French>
 		<Polish>Koncentracja (Walka z chorobami) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_DISEASE_CONTROL5</Tag>
 		<English>Build Up (Disease Control) V</English>
-		<French>Installation (Contrôle sanitaire) V</French>
+		<French>Retranchement (Contrôle sanitaire) V</French>
 		<Polish>Koncentracja (Walka z chorobami) V</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_DIVER_DEPLOYMENT1</Tag>
 		<English>Build Up (Diver Deployment) I</English>
-		<French>Installation (Déploiement de plongeurs) I</French>
+		<French>Retranchement (Déploiement de plongeurs) I</French>
 		<Polish>Koncentracja (Rozmieszczeni Nurkowie) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_DIVER_DEPLOYMENT2</Tag>
 		<English>Build Up (Diver Deployment) II</English>
-		<French>Installation (Déploiement de plongeurs) II</French>
+		<French>Retranchement (Déploiement de plongeurs) II</French>
 		<Polish>Koncentracja (Rozmieszczeni Nurkowie) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_DIVER_DEPLOYMENT3</Tag>
 		<English>Build Up (Diver Deployment) III</English>
-		<French>Installation (Déploiement de plongeurs) III</French>
+		<French>Retranchement (Déploiement de plongeurs) III</French>
 		<Polish>Koncentracja (Rozmieszczeni Nurkowie) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_DIVER_DEPLOYMENT4</Tag>
 		<English>Build Up (Diver Deployment) IV</English>
-		<French>Installation (Déploiement de plongeurs) IV</French>
+		<French>Retranchement (Déploiement de plongeurs) IV</French>
 		<Polish>Koncentracja (Rozmieszczeni Nurkowie) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_DIVER_DEPLOYMENT5</Tag>
 		<English>Build Up (Diver Deployment) V</English>
-		<French>Installation (Déploiement de plongeurs) V</French>
+		<French>Retranchement (Déploiement de plongeurs) V</French>
 		<Polish>Koncentracja (Rozmieszczeni Nurkowie) V</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_ESCAPE_PLANS1</Tag>
 		<English>Build Up (Escape Plans) I</English>
-		<French>Installation (Plans d'évasion) I</French>
+		<French>Retranchement (Plans d'évasion) I</French>
 		<Polish>Koncentracja (Plany Ucieczki) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_ESCAPE_PLANS2</Tag>
 		<English>Build Up (Escape Plans) II</English>
-		<French>Installation (Plans d'évasion) II</French>
+		<French>Retranchement (Plans d'évasion) II</French>
 		<Polish>Koncentracja (Plany Ucieczki) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_ESCAPE_PLANS3</Tag>
 		<English>Build Up (Escape Plans) III</English>
-		<French>Installation (Plans d'évasion) III</French>
+		<French>Retranchement (Plans d'évasion) III</French>
 		<Polish>Koncentracja (Plany Ucieczki) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_ESCAPE_PLANS4</Tag>
 		<English>Build Up (Escape Plans) IV</English>
-		<French>Installation (Plans d'évasion) IV</French>
+		<French>Retranchement (Plans d'évasion) IV</French>
 		<Polish>Koncentracja (Plany Ucieczki) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_ESCAPE_PLANS5</Tag>
 		<English>Build Up (Escape Plans) V</English>
-		<French>Installation (Plans d'évasion) V</French>
+		<French>Retranchement (Plans d'évasion) V</French>
 		<Polish>Koncentracja (Plany Ucieczki) V</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FIELD_HOSPITAL1</Tag>
 		<English>Build Up (Field Hospital) I</English>
-		<French>Installation (Hopital de campagne) I</French>
+		<French>Retranchement (Hopital de campagne) I</French>
 		<Polish>Koncentracja (Szpital Polowy) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FIELD_HOSPITAL2</Tag>
 		<English>Build Up (Field Hospital) II</English>
-		<French>Installation (Hopital de campagne) II</French>
+		<French>Retranchement (Hopital de campagne) II</French>
 		<Polish>Koncentracja (Szpital Polowy) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FIELD_HOSPITAL3</Tag>
 		<English>Build Up (Field Hospital) III</English>
-		<French>Installation (Hopital de campagne) III</French>
+		<French>Retranchement (Hopital de campagne) III</French>
 		<Polish>Koncentracja (Szpital Polowy) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FIELD_HOSPITAL4</Tag>
 		<English>Build Up (Field Hospital) IV</English>
-		<French>Installation (Hopital de campagne) IV</French>
+		<French>Retranchement (Hopital de campagne) IV</French>
 		<Polish>Koncentracja (Szpital Polowy) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FIELD_HOSPITAL5</Tag>
 		<English>Build Up (Field Hospital) V</English>
-		<French>Installation (Hopital de campagne) V</French>
+		<French>Retranchement (Hopital de campagne) V</French>
 		<Polish>Koncentracja (Szpital Polowy) V</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FIELD_MECHANIC1</Tag>
 		<English>Build Up (Field Mechanic) I</English>
-		<French>Installation (Réparations Mécaniques) I</French>
+		<French>Retranchement (Réparations Mécaniques) I</French>
 		<Polish>Koncentracja (Warsztat Polowy) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FIELD_MECHANIC2</Tag>
 		<English>Build Up (Field Mechanic) II</English>
-		<French>Installation (Réparations Mécaniques) II</French>
+		<French>Retranchement (Réparations Mécaniques) II</French>
 		<Polish>Koncentracja (Warsztat Polowy) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FIELD_MECHANIC3</Tag>
 		<English>Build Up (Field Mechanic) III</English>
-		<French>Installation (Réparations Mécaniques) III</French>
+		<French>Retranchement (Réparations Mécaniques) III</French>
 		<Polish>Koncentracja (Warsztat Polowy) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FIELD_MECHANIC4</Tag>
 		<English>Build Up (Field Mechanic) IV</English>
-		<French>Installation (Réparations Mécaniques) IV</French>
+		<French>Retranchement (Réparations Mécaniques) IV</French>
 		<Polish>Koncentracja (Warsztat Polowy) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FIELD_MECHANIC5</Tag>
 		<English>Build Up (Field Mechanic) V</English>
-		<French>Installation (Réparations Mécaniques) V</French>
+		<French>Retranchement (Réparations Mécaniques) V</French>
 		<Polish>Koncentracja (Warsztat Polowy) V</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FIELD_VET1</Tag>
 		<English>Build Up (Field Veterinarian) I</English>
-		<French>Installation (Vétérinaire de campagne) I</French>
+		<French>Retranchement (Vétérinaire de campagne) I</French>
 		<Polish>Koncentracja (Weterynarz Polowy) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FIELD_VET2</Tag>
 		<English>Build Up (Field Veterinarian) II</English>
-		<French>Installation (Vétérinaire de campagne) II</French>
+		<French>Retranchement (Vétérinaire de campagne) II</French>
 		<Polish>Koncentracja (Weterynarz Polowy) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FIELD_VET3</Tag>
 		<English>Build Up (Field Veterinarian) III</English>
-		<French>Installation (Vétérinaire de campagne) III</French>
+		<French>Retranchement (Vétérinaire de campagne) III</French>
 		<Polish>Koncentracja (Weterynarz Polowy) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FIELD_VET4</Tag>
 		<English>Build Up (Field Veterinarian) IV</English>
-		<French>Installation (Vétérinaire de campagne) IV</French>
+		<French>Retranchement (Vétérinaire de campagne) IV</French>
 		<Polish>Koncentracja (Weterynarz Polowy) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FIELD_VET5</Tag>
 		<English>Build Up (Field Veterinarian) V</English>
-		<French>Installation (Vétérinaire de campagne) V</French>
+		<French>Retranchement (Vétérinaire de campagne) V</French>
 		<Polish>Koncentracja (Weterynarz Polowy) V</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FORTIFY1</Tag>
 		<English>Build Up (Fortifications) I</English>
-		<French>Installation (Fortifications) I</French>
+		<French>Retranchement (Fortifications) I</French>
 		<German>(Training) Befestigung I</German>
 		<Polish>Koncentracja (Fortyfikacje) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FORTIFY2</Tag>
 		<English>Build Up (Fortifications) II</English>
-		<French>Installation (Fortifications) II</French>
+		<French>Retranchement (Fortifications) II</French>
 		<German>(Training) Befestigung II</German>
 		<Polish>Koncentracja (Fortyfikacje) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FORTIFY3</Tag>
 		<English>Build Up (Fortifications) III</English>
-		<French>Installation (Fortifications) III</French>
+		<French>Retranchement (Fortifications) III</French>
 		<German>(Training) Befestigung III</German>
 		<Polish>Koncentracja (Fortyfikacje) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FORTIFY4</Tag>
 		<English>Build Up (Fortifications) IV</English>
-		<French>Installation (Fortifications) IV</French>
+		<French>Retranchement (Fortifications) IV</French>
 		<German>(Training) Befestigung IV</German>
 		<Polish>Koncentracja (Fortyfikacje) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FORTIFY5</Tag>
 		<English>Build Up (Fortifications) V</English>
-		<French>Installation (Fortifications) V</French>
+		<French>Retranchement (Fortifications) V</French>
 		<German>(Training) Befestigung V</German>
 		<Polish>Koncentracja (Fortyfikacje) V</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_HEALTH_CARE1</Tag>
 		<English>Build Up (Health Care) I</English>
-		<French>Installation (Service sanitaire) I</French>
+		<French>Retranchement (Service sanitaire) I</French>
 		<Polish>Koncentracja (Ochrona Zdrowia) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_HEALTH_CARE2</Tag>
 		<English>Build Up (Health Care) II</English>
-		<French>Installation (Service sanitaire) II</French>
+		<French>Retranchement (Service sanitaire) II</French>
 		<Polish>Koncentracja (Ochrona Zdrowia) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_HEALTH_CARE3</Tag>
 		<English>Build Up (Health Care) III</English>
-		<French>Installation (Service sanitaire) III</French>
+		<French>Retranchement (Service sanitaire) III</French>
 		<Polish>Koncentracja (Ochrona Zdrowia) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_HEALTH_CARE4</Tag>
 		<English>Build Up (Health Care) IV</English>
-		<French>Installation (Service sanitaire) IV</French>
+		<French>Retranchement (Service sanitaire) IV</French>
 		<Polish>Koncentracja (Ochrona Zdrowia) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_HEALTH_CARE5</Tag>
 		<English>Build Up (Health Care) V</English>
-		<French>Installation (Service sanitaire) V</French>
+		<French>Retranchement (Service sanitaire) V</French>
 		<Polish>Koncentracja (Ochrona Zdrowia) V</Polish>
 	</TEXT>
 	<TEXT>
@@ -2609,56 +2623,61 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_LIE_IN_WAIT1</Tag>
 		<English>Build Up (Lie in Wait) I</English>
+		<French>Retranchement (Campement d'attente) I</French>
 		<German>(Training) Auflauern I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_LIE_IN_WAIT2</Tag>
 		<English>Build Up (Lie in Wait) II</English>
+		<French>Retranchement (Campement d'attente) II</French>
 		<German>(Training) Auflauern II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_LIE_IN_WAIT3</Tag>
 		<English>Build Up (Lie in Wait) III</English>
+		<French>Retranchement (Campement d'attente) III</French>
 		<German>(Training) Auflauern III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_LIE_IN_WAIT4</Tag>
 		<English>Build Up (Lie in Wait) IV</English>
+		<French>Retranchement (Campement d'attente) IV</French>
 		<German>(Training) Auflauern IV</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_LIE_IN_WAIT5</Tag>
 		<English>Build Up (Lie in Wait) V</English>
+		<French>Retranchement (Campement d'attente) V</French>
 		<German>(Training) Auflauern V</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_MAINTENANCE_HANGAR1</Tag>
 		<English>Build Up (Maintenance Hangar) I</English>
-		<French>Installation (Hangar de maintenance) I</French>
+		<French>Retranchement (Hangar de maintenance) I</French>
 		<Polish>Koncentracja (Hangar Obsługi) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_MAINTENANCE_HANGAR2</Tag>
 		<English>Build Up (Maintenance Hangar) II</English>
-		<French>Installation (Hangar de maintenance) II</French>
+		<French>Retranchement (Hangar de maintenance) II</French>
 		<Polish>Koncentracja (Hangar Obsługi) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_MAINTENANCE_HANGAR3</Tag>
 		<English>Build Up (Maintenance Hangar) III</English>
-		<French>Installation (Hangar de maintenance) III</French>
+		<French>Retranchement (Hangar de maintenance) III</French>
 		<Polish>Koncentracja (Hangar Obsługi) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_MAINTENANCE_HANGAR4</Tag>
 		<English>Build Up (Maintenance Hangar) IV</English>
-		<French>Installation (Hangar de maintenance) IV</French>
+		<French>Retranchement (Hangar de maintenance) IV</French>
 		<Polish>Koncentracja (Hangar Obsługi) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_MAINTENANCE_HANGAR5</Tag>
 		<English>Build Up (Maintenance Hangar) V</English>
-		<French>Installation (Hangar de maintenance) V</French>
+		<French>Retranchement (Hangar de maintenance) V</French>
 		<Polish>Koncentracja (Hangar Obsługi) V</Polish>
 	</TEXT>
 	<TEXT>
@@ -2679,186 +2698,201 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_PATRIOTISM1</Tag>
 		<English>Build Up (Patriotism) I</English>
+		<French>Retranchement (Patriotisme) I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_PATRIOTISM2</Tag>
 		<English>Build Up (Patriotism) II</English>
+		<French>Retranchement (Patriotisme) II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_PATRIOTISM3</Tag>
 		<English>Build Up (Patriotism) III</English>
+		<French>Retranchement (Patriotisme) III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_PATRIOTISM4</Tag>
 		<English>Build Up (Patriotism) IV</English>
+		<French>Retranchement (Patriotisme) IV</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_PATRIOTISM5</Tag>
 		<English>Build Up (Patriotism) V</English>
+		<French>Retranchement (Patriotisme) V</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_RANGE_TARGET1</Tag>
 		<English>Build Up (Range Targeting) I</English>
-		<French>Installation (Equipe de Ciblage) I</French>
+		<French>Retranchement (Equipe de Ciblage) I</French>
 		<Polish>Koncentracja (Kierowanie Ogniem) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_RANGE_TARGET2</Tag>
 		<English>Build Up (Range Targeting) II</English>
-		<French>Installation (Equipe de Ciblage) II</French>
+		<French>Retranchement (Equipe de Ciblage) II</French>
 		<Polish>Koncentracja (Kierowanie Ogniem) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_RANGE_TARGET3</Tag>
 		<English>Build Up (Range Targeting) III</English>
-		<French>Installation (Equipe de Ciblage) III</French>
+		<French>Retranchement (Equipe de Ciblage) III</French>
 		<Polish>Koncentracja (Kierowanie Ogniem) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_RANGE_TARGET4</Tag>
 		<English>Build Up (Range Targeting) IV</English>
-		<French>Installation (Equipe de Ciblage) IV</French>
+		<French>Retranchement (Equipe de Ciblage) IV</French>
 		<Polish>Koncentracja (Kierowanie Ogniem) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_RANGE_TARGET5</Tag>
 		<English>Build Up (Range Targeting) V</English>
-		<French>Installation (Equipe de Ciblage) V</French>
+		<French>Retranchement (Equipe de Ciblage) V</French>
 		<Polish>Koncentracja (Kierowanie Ogniem) V</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_RESTFUL_RECOVERY1</Tag>
 		<English>Build Up (Restful Recovery) I</English>
-		<French>Installation (Equipe de récupération) I</French>
+		<French>Retranchement (Camp de repos) I</French>
 		<German>(Training) Wiederherstellung I</German>
 		<Polish>Koncentracja (Spokojny Wypoczynek) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_RESTFUL_RECOVERY2</Tag>
 		<English>Build Up (Restful Recovery) II</English>
-		<French>Installation (Equipe de récupération) II</French>
+		<French>Retranchement (Camp de repos) II</French>
 		<German>(Training) Wiederherstellung II</German>
 		<Polish>Koncentracja (Spokojny Wypoczynek) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_RESTFUL_RECOVERY3</Tag>
 		<English>Build Up (Restful Recovery) III</English>
-		<French>Installation (Equipe de récupération) III</French>
+		<French>Retranchement (Camp de repos) III</French>
 		<German>(Training) Wiederherstellung III</German>
 		<Polish>Koncentracja (Spokojny Wypoczynek) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_RESTFUL_RECOVERY4</Tag>
 		<English>Build Up (Restful Recovery) IV</English>
-		<French>Installation (Equipe de récupération) IV</French>
+		<French>Retranchement (Camp de repos) IV</French>
 		<German>(Training) Wiederherstellung IV</German>
 		<Polish>Koncentracja (Spokojny Wypoczynek) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_RESTFUL_RECOVERY5</Tag>
 		<English>Build Up (Restful Recovery) V</English>
-		<French>Installation (Equipe de récupération) V</French>
+		<French>Retranchement (Camp de repos) V</French>
 		<German>(Training) Wiederherstellung V</German>
 		<Polish>Koncentracja (Spokojny Wypoczynek) V</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_REVOLUTIONARY_SENTIMENT1</Tag>
 		<English>Build Up (Revolutionary Sentiment) I</English>
+		<French>Retranchement (Sentiment révolutionnaire) I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_REVOLUTIONARY_SENTIMENT2</Tag>
 		<English>Build Up (Revolutionary Sentiment) II</English>
+		<French>Retranchement (Sentiment révolutionnaire) II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_REVOLUTIONARY_SENTIMENT3</Tag>
 		<English>Build Up (Revolutionary Sentiment) III</English>
+		<French>Retranchement (Sentiment révolutionnaire) III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_REVOLUTIONARY_SENTIMENT4</Tag>
 		<English>Build Up (Revolutionary Sentiment) IV</English>
+		<French>Retranchement (Sentiment révolutionnaire) IV</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_REVOLUTIONARY_SENTIMENT5</Tag>
 		<English>Build Up (Revolutionary Sentiment) V</English>
+		<French>Retranchement (Sentiment révolutionnaire) V</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_SCHEMES1</Tag>
 		<English>Build Up (Schemes) I</English>
+		<French>Retranchement (Coup monté) I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_SCHEMES2</Tag>
 		<English>Build Up (Schemes) II</English>
+		<French>Retranchement (Coup monté) II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_SCHEMES3</Tag>
 		<English>Build Up (Schemes) III</English>
+		<French>Retranchement (Coup monté) III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_SCHEMES4</Tag>
 		<English>Build Up (Schemes) IV</English>
+		<French>Retranchement (Coup monté) IV</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_SCHEMES5</Tag>
 		<English>Build Up (Schemes) V</English>
+		<French>Retranchement (Coup monté) V</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_SET_FOR_CHARGE1</Tag>
 		<English>Build Up (Set For Charge) I</English>
-		<French>Installation (Préparation contre les unités montées) I</French>
+		<French>Retranchement (Préparation contre les unités montées) I</French>
 		<Polish>Koncentracja (Ładunki Wybuchowe) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_SET_FOR_CHARGE2</Tag>
 		<English>Build Up (Set For Charge) II</English>
-		<French>Installation (Préparation contre les unités montées) II</French>
+		<French>Retranchement (Préparation contre les unités montées) II</French>
 		<Polish>Koncentracja (Ładunki Wybuchowe) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_SET_FOR_CHARGE3</Tag>
 		<English>Build Up (Set For Charge) III</English>
-		<French>Installation (Préparation contre les unités montées) III</French>
+		<French>Retranchement (Préparation contre les unités montées) III</French>
 		<Polish>Koncentracja (Ładunki Wybuchowe) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_SET_FOR_CHARGE4</Tag>
 		<English>Build Up (Set For Charge) IV</English>
-		<French>Installation (Préparation contre les unités montées) IV</French>
+		<French>Retranchement (Préparation contre les unités montées) IV</French>
 		<Polish>Koncentracja (Ładunki Wybuchowe) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_SET_FOR_CHARGE5</Tag>
 		<English>Build Up (Set For Charge) V</English>
-		<French>Installation (Préparation contre les unités montées) V</French>
+		<French>Retranchement (Préparation contre les unités montées) V</French>
 		<Polish>Koncentracja (Ładunki Wybuchowe) V</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_TEACH1</Tag>
 		<English>Build Up (Teaching) I</English>
-		<French>Installation (Instruction) I</French>
+		<French>Retranchement (Instruction) I</French>
 		<Polish>Koncentracja (Nauczanie) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_TEACH2</Tag>
 		<English>Build Up (Teaching) II</English>
-		<French>Installation (Instruction) II</French>
+		<French>Retranchement (Instruction) II</French>
 		<Polish>Koncentracja (Nauczanie) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_TEACH3</Tag>
 		<English>Build Up (Teaching) III</English>
-		<French>Installation (Instruction) III</French>
+		<French>Retranchement (Instruction) III</French>
 		<Polish>Koncentracja (Nauczanie) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_TEACH4</Tag>
 		<English>Build Up (Teaching) IV</English>
-		<French>Installation (Instruction) IV</French>
+		<French>Retranchement (Instruction) IV</French>
 		<Polish>Koncentracja (Nauczanie) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_TEACH5</Tag>
 		<English>Build Up (Teaching) V</English>
-		<French>Installation (Instruction) V</French>
+		<French>Retranchement (Instruction) V</French>
 		<Polish>Koncentracja (Nauczanie) V</Polish>
 	</TEXT>
 	<TEXT>
@@ -2879,31 +2913,31 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_TRAP_HUNTING1</Tag>
 		<English>Build Up (Trap Hunting) I</English>
-		<French>Installation (Pose de pièges) I</French>
+		<French>Retranchement (Pose de pièges) I</French>
 		<Polish>Koncentracja (Zastawianie Pułapek) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_TRAP_HUNTING2</Tag>
 		<English>Build Up (Trap Hunting) II</English>
-		<French>Installation (Pose de pièges) II</French>
+		<French>Retranchement (Pose de pièges) II</French>
 		<Polish>Koncentracja (Zastawianie Pułapek) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_TRAP_HUNTING3</Tag>
 		<English>Build Up (Trap Hunting) III</English>
-		<French>Installation (Pose de pièges) III</French>
+		<French>Retranchement (Pose de pièges) III</French>
 		<Polish>Koncentracja (Zastawianie Pułapek) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_TRAP_HUNTING4</Tag>
 		<English>Build Up (Trap Hunting) IV</English>
-		<French>Installation (Pose de pièges) IV</French>
+		<French>Retranchement (Pose de pièges) IV</French>
 		<Polish>Koncentracja (Zastawianie Pułapek) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_TRAP_HUNTING5</Tag>
 		<English>Build Up (Trap Hunting) V</English>
-		<French>Installation (Pose de pièges) V</French>
+		<French>Retranchement (Pose de pièges) V</French>
 		<Polish>Koncentracja (Zastawianie Pułapek) V</Polish>
 	</TEXT>
 	<TEXT>
@@ -3090,6 +3124,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CANCER</Tag>
 		<English>Cancer</English>
+		<French>Cancer</French>
 		<Spanish>Cáncer</Spanish>
 		<Polish>Rak</Polish>
 	</TEXT>
@@ -3229,6 +3264,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CAVE_DWELLER</Tag>
 		<English>Cave Dweller</English>
+		<French>Cave Dweller</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CELEBRITY</Tag>
@@ -3240,6 +3276,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CELEBRITY_TEXT</Tag>
 		<English>[ICON_BULLET]%D1_Happy [ICON_HAPPY] to any city the unit is in.</English>
+		<French>[ICON_BULLET]%D1_Happy [ICON_HAPPY] to any city the unit is in.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CHAFF</Tag>
@@ -4193,6 +4230,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COMMUNICABILITY_TEXT</Tag>
 		<English>[ICON_BULLET]Affliction can spread to other units: %D1_Change%% base chance</English>
+		<French>[ICON_BULLET]Affliction can spread to other units: %D1_Change%% base chance</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COMPLETELY_INCAPACITATED</Tag>
@@ -4369,42 +4407,52 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CORRUPTION1</Tag>
 		<English>Corruption I</English>
+		<French>Corruption I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CORRUPTION2</Tag>
 		<English>Corruption II</English>
+		<French>Corruption II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CORRUPTION3</Tag>
 		<English>Corruption III</English>
+		<French>Corruption III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CORRUPTION4</Tag>
 		<English>Corruption IV</English>
+		<French>Corruption IV</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CORRUPTION5</Tag>
 		<English>Corruption V</English>
+		<French>Corruption V</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CORRUPTION6</Tag>
 		<English>Corruption VI</English>
+		<French>Corruption VI</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CORRUPTION7</Tag>
 		<English>Corruption VII</English>
+		<French>Corruption VII</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CORRUPTION8</Tag>
 		<English>Corruption VIII</English>
+		<French>Corruption VIII</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CORRUPTION9</Tag>
 		<English>Corruption IX</English>
+		<French>Corruption IX</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CORRUPTION10</Tag>
 		<English>Corruption X</English>
+		<French>Corruption X</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COST_MODIFIER_TEXT</Tag>
@@ -4700,7 +4748,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DECEPTION1</Tag>
 		<English>Deception I</English>
-		<French>Imposture I</French>
+		<French>Tromperie I</French>
 		<German>Täuschung I</German>
 		<Italian>Inganno I</Italian>
 		<Spanish>Engano I</Spanish>
@@ -4709,7 +4757,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DECEPTION2</Tag>
 		<English>Deception II</English>
-		<French>Imposture II</French>
+		<French>Tromperie II</French>
 		<German>Täuschung II</German>
 		<Italian>Inganno II</Italian>
 		<Spanish>Engano II</Spanish>
@@ -4718,7 +4766,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DECEPTION3</Tag>
 		<English>Deception III</English>
-		<French>Imposture III</French>
+		<French>Tromperie III</French>
 		<German>Täuschung III</German>
 		<Italian>Inganno III</Italian>
 		<Spanish>Engano III</Spanish>
@@ -4727,14 +4775,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DECOYS1</Tag>
 		<English>Decoys I</English>
+		<French>Leurre I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DECOYS2</Tag>
 		<English>Decoys II</English>
+		<French>Leurre II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DECOYS3</Tag>
 		<English>Decoys III</English>
+		<French>Leurre III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DEDICATION</Tag>
@@ -4867,6 +4918,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DEFENSE_ONLY_CHANGE_TEXT</Tag>
 		<English>[ICON_BULLET]Trait - Defense only: %D1_Change</English>
+		<French>[ICON_BULLET]Trait - Défense uniquement: %D1_Change</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DEFENSIVE_PROTOCOLS1</Tag>
@@ -4980,6 +5032,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DILLON_M134_MINIGUN</Tag>
 		<English>Dillon Aero M134 Minigun</English>
+		<French>Dillon Aero M134 Minigun</French>
 		<Spanish>Ametralladora Dillon Aero M134</Spanish>
 		<Polish>Minigun</Polish>
 	</TEXT>
@@ -5715,18 +5768,22 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ENCLOSE1</Tag>
 		<English>Enclose I</English>
+		<French>Enclave I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ENCLOSE2</Tag>
 		<English>Enclose II</English>
+		<French>Enclave II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ENCLOSE3</Tag>
 		<English>Enclose III</English>
+		<French>Enclave III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ENDURANCE_TEXT</Tag>
 		<English>[ICON_BULLET]%D1_Change Endurance</English>
+		<French>[ICON_BULLET]%D1_Change Endurance</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_EXCILE_ADD_TEXT</Tag>
@@ -5759,56 +5816,69 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_STEALTH_DEFENSE_CHANGE_TEXT</Tag>
 		<English>[ICON_BULLET]Trait - Stealth Defend: %D1_Change</English>
+		<French>[ICON_BULLET]Trait - Défense furtive: %D1_Change</French>
 		<German>[ICON_BULLET]Verteidigung gegen Tarnangriffe: %D1_Change</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_NO_INVISIBILITY_CHANGE_TEXT</Tag>
 		<English>[ICON_BULLET]Trait - Never Invisible: %D1_Change</English>
+		<French>[ICON_BULLET]Trait - jamais Invisible: %D1_Change</French>
 		<German>[ICON_BULLET]Verhinderte Unsichtbarkeit: %D1_Change</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TRAP_MAX_DAMAGE_TEXT</Tag>
 		<English>[ICON_BULLET]%D1_Change Max Damage from Traps.</English>
+		<French>[ICON_BULLET]%D1_Change Max Damage from Traps.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TRAP_MIN_DAMAGE_TEXT</Tag>
 		<English>[ICON_BULLET]%D1_Change Min Damage from Traps.</English>
+		<French>[ICON_BULLET]%D1_Change Dégâts minimum des pièges.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TRAP_COMPLEXITY_TEXT</Tag>
 		<English>[ICON_BULLET]%D1_Change Disarm Complexity.</English>
+		<French>[ICON_BULLET]%D1_Change complexité pour Désarmer.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TRAP_NUM_TRIGGERS_TEXT</Tag>
 		<English>[ICON_BULLET]%D1_Change Charges</English>
+		<French>[ICON_BULLET]%D1_Change Charges</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TRAP_TRIGGER_BEFORE_ATTACK_TEXT</Tag>
 		<English>[ICON_BULLET]Trait - Trigger Before Combat: %D1_Change</English>
+		<French>[ICON_BULLET]Trait - Déclencher avant le combat: %D1_Change</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TRAP_PROMOTION_SET_TEXT</Tag>
 		<English>[ICON_BULLET]Adds %s1_promo to valid Traps.</English>
+		<French>[ICON_BULLET]Ajoute %s1_promo aux pièges valides.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TRAP_IMMUNITY_TEXT</Tag>
 		<English>[ICON_BULLET]Immune to %s1_promo traps.</English>
+		<French>[ICON_BULLET]Immunisé aux pièges %s1_promo.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TARGET_UNITCOMBAT_TEXT</Tag>
 		<English>[ICON_BULLET]Makes unit attack %s1_promo units first in a stack. (Also enables assassinations against them if the unit has that ability.)</English>
+		<French>[ICON_BULLET]Rend l'attaque d'unité %s1_promo en premier dans une pile. (Permet également des assassinats contre eux si l'unité a cette capacité.)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TRAP_DISABLE_TEXT</Tag>
 		<English>[ICON_BULLET]%D1_Value to the ability to Disable %s2_trap traps.</English>
+		<French>[ICON_BULLET]%D1_Value à la capacité de désactiver les pièges %s2_trap.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TRAP_AVOID_TEXT</Tag>
 		<English>[ICON_BULLET]%D1_Value%% chance to Avoid Triggering %s2_trap traps.</English>
+		<French>[ICON_BULLET]%D1_Value%% chance d'éviter de déclencher les pièges %s2_trap.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TRAP_TRIGGER_TEXT</Tag>
 		<English>[ICON_BULLET]%D1_Value%% chance to Trigger against %s2_trap units.</English>
+		<French>[ICON_BULLET]%D1_Value%% chance to Trigger against %s2_trap units.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ENGINEERCORPS1</Tag>
@@ -6119,6 +6189,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_EXTRA_STRENGTH_TEXT</Tag>
 		<English>[ICON_BULLET]+%d1 [ICON_STRENGTH]</English>
+		<French>[ICON_BULLET]+%d1 [ICON_STRENGTH]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FAKE_IDENTITY1</Tag>
@@ -6194,14 +6265,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FERAL1</Tag>
 		<English>Feral I</English>
+		<French>Feral I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FERAL2</Tag>
 		<English>Feral II</English>
+		<French>Feral II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FERAL3</Tag>
 		<English>Feral III</English>
+		<French>Feral III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIELD_WORKER1</Tag>
@@ -6302,14 +6376,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIGHT_THE_POWER1</Tag>
 		<English>Fight the Power I</English>
+		<French>Fight the Power I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIGHT_THE_POWER2</Tag>
 		<English>Fight the Power II</English>
+		<French>Fight the Power II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIGHT_THE_POWER3</Tag>
 		<English>Fight the Power III</English>
+		<French>Fight the Power III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIRE_SHIP</Tag>
@@ -6656,38 +6733,47 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FOMENT1</Tag>
 		<English>Foment I</English>
+		<French>Foment I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FOMENT2</Tag>
 		<English>Foment II</English>
+		<French>Foment II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FOMENT3</Tag>
 		<English>Foment III</English>
+		<French>Foment III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FOMENT4</Tag>
 		<English>Foment IV</English>
+		<French>Foment IV</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FOMENT5</Tag>
 		<English>Foment V</English>
+		<French>Foment V</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FOMENT6</Tag>
 		<English>Foment VI</English>
+		<French>Foment VI</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FOMENT7</Tag>
 		<English>Foment VII</English>
+		<French>Foment VII</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FOMENT8</Tag>
 		<English>Foment VIII</English>
+		<French>Foment VIII</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FOMENT9</Tag>
 		<English>Foment IX</English>
+		<French>Foment IX</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FORCED_MARCH_STATUS</Tag>
@@ -6980,6 +7066,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FREEDOM_FIGHTER</Tag>
 		<English>Freedom Fighter</English>
+		<French>Freedom Fighter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FRONT_SUPPORT_PERCENT_CHANGE_TEXT</Tag>
@@ -7322,10 +7409,16 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_GUARDIAN_TRIBAL</Tag>
 		<English>Tribal Guardian</English>
+		<French>
+			<Text>Gardien Tribal</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>		
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_GUARDIAN_TRIBAL_HELP</Tag>
 		<English>A Tribal Guardian will appear when a city is founded by this unit.[NEWLINE]It will inherit the XP of this unit.</English>
+		<French>Un Gardien Tribal apparaîtra lorsqu'une ville est fondée.[NEWLINE]Il hérite de l'expérience de cette unité.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_GUARDIAN1</Tag>
@@ -7954,6 +8047,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HIDDEN_NATIONALITY_REMOVES_TEXT</Tag>
 		<English>[ICON_BULLET]Reveals the unit's Nationality</English>
+		<French>[ICON_BULLET]Reveals the unit's Nationality</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HIDE_IN_SHADOWS1</Tag>
@@ -8376,22 +8470,27 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HUNTING_STRIKE1</Tag>
 		<English>Hunting Strike I</English>
+		<French>Hunting Strike I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HUNTING_STRIKE2</Tag>
 		<English>Hunting Strike II</English>
+		<French>Hunting Strike II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HUNTING_STRIKE3</Tag>
 		<English>Hunting Strike III</English>
+		<French>Hunting Strike III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HUNTING_STRIKE4</Tag>
 		<English>Hunting Strike IV</English>
+		<French>Hunting Strike IV</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HUNTING_STRIKE5</Tag>
 		<English>Hunting Strike V</English>
+		<French>Hunting Strike V</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_IDENTIFY1</Tag>
@@ -8607,6 +8706,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INFILTRATION</Tag>
 		<English>Infiltration</English>
+		<French>Infiltration</French>
 		<Italian>Infiltrazione</Italian>
 		<Spanish>Infiltración</Spanish>
 		<Polish>Infiltracja</Polish>
@@ -8623,6 +8723,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INITIATIVE1</Tag>
 		<English>Initiative I</English>
+		<French>Initiative I</French>
 		<Italian>Iniziativa I</Italian>
 		<Spanish>Iniciativa I</Spanish>
 		<Polish>Inicjatywa I</Polish>
@@ -8630,6 +8731,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INITIATIVE2</Tag>
 		<English>Initiative II</English>
+		<French>Initiative II</French>
 		<Italian>Iniziativa II</Italian>
 		<Spanish>Iniciativa II</Spanish>
 		<Polish>Inicjatywa II</Polish>
@@ -8637,6 +8739,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INITIATIVE3</Tag>
 		<English>Initiative III</English>
+		<French>Initiative III</French>
 		<Italian>Iniziativa III</Italian>
 		<Spanish>Iniciativa III</Spanish>
 		<Polish>Inicjatywa III</Polish>
@@ -8644,6 +8747,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INITIATIVE4</Tag>
 		<English>Initiative IV</English>
+		<French>Initiative IV</French>
 		<Italian>Iniziativa IV</Italian>
 		<Spanish>Iniciativa IV</Spanish>
 		<Polish>Inicjatywa IV</Polish>
@@ -8666,42 +8770,52 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INSIDIOUSNESS_TEXT</Tag>
 		<English>[ICON_BULLET]%s1_Change%% Insidiousness</English>
+		<French>[ICON_BULLET]%s1_Change%% Incidiosité</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INSPIRE1</Tag>
 		<English>Inspire I</English>
+		<French>Inspire I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INSPIRE2</Tag>
 		<English>Inspire II</English>
+		<French>Inspire II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INSPIRE3</Tag>
 		<English>Inspire III</English>
+		<French>Inspire III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INSPIRE4</Tag>
 		<English>Inspire IV</English>
+		<French>Inspire IV</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INSPIRE5</Tag>
 		<English>Inspire V</English>
+		<French>Inspire V</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INSPIRE6</Tag>
 		<English>Inspire VI</English>
+		<French>Inspire VI</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INSPIRE7</Tag>
 		<English>Inspire VII</English>
+		<French>Inspire VII</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INSPIRE8</Tag>
 		<English>Inspire VIII</English>
+		<French>Inspire VIII</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INSPIRE9</Tag>
 		<English>Inspire IX</English>
+		<French>Inspire IX</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INSTIGATE_TEXT_SPY</Tag>
@@ -8851,6 +8965,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INVESTIGATION_TEXT</Tag>
 		<English>[ICON_BULLET]%s1_Change%% Investigation</English>
+		<French>[ICON_BULLET]%s1_Change%% Investigation</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_IRON_ARMOR</Tag>
@@ -8987,11 +9102,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_KAMIKAZE</Tag>
 		<English>Kamikaze</English>
+		<French>Kamikaze</French>
 		<Polish>Kamikadze</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_KANAI</Tag>
 		<English>Kanai</English>
+		<French>Kanai</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_KEEN_EARS1</Tag>
@@ -9460,14 +9577,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_LONG_ARM1</Tag>
 		<English>Long Arm I</English>
+		<French>Long Arm I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_LONG_ARM2</Tag>
 		<English>Long Arm II</English>
+		<French>Long Arm II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_LONG_ARM3</Tag>
 		<English>Long Arm III</English>
+		<French>Long Arm III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_LONG_RANGE_SUPPORT_PERCENT_CHANGE_TEXT</Tag>
@@ -10638,6 +10758,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_NAVIGATION3</Tag>
 		<English>Navigation III</English>
+		<French>Navigation III</French>
 		<Italian>Navigazione III</Italian>
 		<Spanish>Navegación III</Spanish>
 		<Polish>Nawigacja III</Polish>
@@ -14434,6 +14555,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SNIPER</Tag>
 		<English>Sniper</English>
+		<French>Sniper</French>
 		<Italian>Cecchino</Italian>
 		<Spanish>Tirador escondido</Spanish>
 		<Polish>Skradanie się</Polish>
@@ -14491,25 +14613,30 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SONAR</Tag>
 		<English>Sonar</English>
+		<French>Sonar</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SOPHISTICATION1</Tag>
 		<English>Sophistication I</English>
+		<French>Sophistication I</French>
 		<Polish>Wyrafinowany I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SOPHISTICATION2</Tag>
 		<English>Sophistication II</English>
+		<French>Sophistication II</French>
 		<Polish>Wyrafinowany II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SOPHISTICATION3</Tag>
 		<English>Sophistication III</English>
+		<French>Sophistication III</French>
 		<Polish>Wyrafinowany III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SOPHISTICATION4</Tag>
 		<English>Sophistication IV</English>
+		<French>Sophistication IV</French>
 		<Polish>Wyrafinowany IV</Polish>
 	</TEXT>
 	<TEXT>
@@ -14551,6 +14678,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SPHINX</Tag>
 		<English>Sphinx</English>
+		<French>Sphinx</French>
 		<Italian>Sfinge</Italian>
 		<Spanish>Esfinge</Spanish>
 		<Polish>Sfinks</Polish>
@@ -15383,6 +15511,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SUPER_CAVITATION</Tag>
 		<English>Super Cavitation</English>
+		<French>Super Cavitation</French>
 		<German>Super-Kavitation</German>
 		<Italian>Super Cavitazione</Italian>
 		<Spanish>Supercavitación</Spanish>
@@ -15391,6 +15520,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SUPER_GUERRILLA</Tag>
 		<English>Super Guerrilla</English>
+		<French>Super Guerrilla</French>
 		<German>Superguerrilla</German>
 		<Italian>Super-guerrigliero</Italian>
 		<Spanish>Súperguerrilla</Spanish>
@@ -15752,6 +15882,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TEMP_UCAIWEIGHT_TEXT</Tag>
 		<English>[ICON_BULLET]%s1_UnitCombat%%: %d2_Amount%%</English>
+		<French>[ICON_BULLET]%s1_UnitCombat%%: %d2_Amount%%</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TEMPERED_IRON_WEAPONS</Tag>
@@ -15869,10 +16000,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TOLERANCE_DECAY_TEXT</Tag>
 		<English>[ICON_BULLET]Each round a Unit or City experiences without this Affliction, it loses %d1_Change tolerance against it until all Tolerance has Decayed away entirely.</English>
+		<French>[ICON_BULLET]Each round a Unit or City experiences without this Affliction, it loses %d1_Change tolerance against it until all Tolerance has Decayed away entirely.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TOLERANCE_DECAY_ADD_TEXT</Tag>
 		<English>[ICON_BULLET]Each round a Unit or City experiences without this Affliction, it GAINS %d1_Change tolerance against it.</English>
+		<French>[ICON_BULLET]Each round a Unit or City experiences without this Affliction, it GAINS %d1_Change tolerance against it.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TOLERANCE_EROSION_TEXT</Tag>
@@ -16486,18 +16619,21 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TRANSPORT1</Tag>
 		<English>Transport I</English>
+		<French>Transport I</French>
 		<Italian>Trasporto I</Italian>
 		<Spanish>Transporte I</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TRANSPORT2</Tag>
 		<English>Transport II</English>
+		<French>Transport II</French>
 		<Italian>Trasporto II</Italian>
 		<Spanish>Transporte II</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TRANSPORT3</Tag>
 		<English>Transport III</English>
+		<French>Transport III</French>
 		<Italian>Trasporto III</Italian>
 		<Spanish>Transporte III</Spanish>
 	</TEXT>
@@ -16882,6 +17018,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAIDAN</Tag>
 		<English>Waidan</English>
+		<French>Waidan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WALL_BREAKER</Tag>
@@ -17204,6 +17341,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ZEN</Tag>
 		<English>Zen</English>
+		<French>Zen</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_ACCURACY</Tag>
@@ -17285,6 +17423,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_ARMED_GUARD</Tag>
 		<English>Armed Guard Promotionline</English>
+		<French>Spécialisation Garde Armé</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_ARMOR_UPGRADE</Tag>
@@ -17331,7 +17470,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BARBARIC</Tag>
 		<English>Barbaric Promotion Line</English>
-		<French>Spécialisation Barbare</French>
+		<French>Spécialisation Actes Barbares</French>
 		<Italian>Barbaro</Italian>
 		<Polish>Linia Promocji: Barbarzyński</Polish>
 	</TEXT>
@@ -17732,14 +17871,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_DECEIVER</Tag>
 		<English>Deceiver Promotion Line</English>
-		<French>Spécialisation Tromperie</French>
+		<French>Spécialisation Trahison</French>
 		<Italian>Traditore</Italian>
 		<Polish>Linia Promocji: Kłamca</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_DECEPTION</Tag>
 		<English>Deception Promotion Line</English>
-		<French>Spécialisation Imposture</French>
+		<French>Spécialisation Tromperie</French>
 		<Italian>Inganno</Italian>
 		<Polish>Linia Promocji: Oszustwo</Polish>
 	</TEXT>
@@ -17781,6 +17920,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_MIGHT</Tag>
 		<English>Might Promotionline</English>
+		<French>Might Promotionline</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_DRILL</Tag>
@@ -17905,6 +18045,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_FERAL</Tag>
 		<English>Feral Promotion-line</English>
+		<French>Feral Promotion-line</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_FIELD</Tag>
@@ -17923,6 +18064,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_FIGHT_THE_POWER</Tag>
 		<English>Fight the Power Promotionline</English>
+		<French>Fight the Power Promotionline</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_FINANCIAL</Tag>
@@ -17968,6 +18110,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_FOMENT</Tag>
 		<English>Foment Promotionline</English>
+		<French>Foment Promotionline</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_FOREIGN</Tag>
@@ -18895,6 +19038,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_CORRUPTION</Tag>
 		<English>Corruption Promotion Line</English>
+		<French>Corruption Promotion Line</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_UNQUESTIONING_OBEDIENCE</Tag>
@@ -19350,37 +19494,43 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_STAY_THE_HAND</Tag>
 		<English>Status (Stay the Hand) Promotionline</English>
+		<French>Spécialisation Statut (N'attaque pas)</French>
 		<German>Aggressivitätsstatus</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_STAY_THE_HAND</Tag>
 		<English>Status (Stay the Hand)</English>
+		<French>Statut (N'attaque pas)</French>
 		<German>Nur verteidigen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REMOVE_STAY_THE_HAND</Tag>
 		<English>Status (Remove Stay the Hand)</English>
+		<French>Statut (Enlever N'attaque pas)</French>
 		<German>Angreifen und verteidigen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SURPRISE</Tag>
 		<English>Status (Surprise) Promotionline</English>
+		<French>Spécialisation Statut (Surprise)</French>
 		<German>Überraschungsstatus</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SURPRISE</Tag>
 		<English>Status (Surprise)</English>
+		<French>Statut (Surprise)</French>
 		<German>Überraschen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REMOVE_SURPRISE</Tag>
 		<English>Status (Remove Surprise)</English>
+		<French>Statut (Enlever Surprise)</French>
 		<German>Nicht überraschen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TERRAIN_PREREQ_TEXT</Tag>
 		<English>[ICON_BULLET]May only have promotion while on plots with %s1_Terrain terrain (or other specific terrain(s) if also is listed).</English>
-		<French>[ICON_BULLET]Peut seulement avoir la promotion lorsque situé sur des case avec le type de terrain '%s1_Feature' (ou plusieurs types spécifiques en cas de liste).</French>
+		<French>[ICON_BULLET]Peut seulement avoir la promotion lorsque situé sur des cases avec le type de terrain '%s1_Feature' (ou plusieurs types spécifiques en cas de liste).</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WANTED_HELP</Tag>
@@ -19390,143 +19540,178 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_LIE_IN_WAIT</Tag>
 		<English>Build Up (Lie in Wait) Promotionline</English>
+		<French>Spécialisation Retranchement (Intrigue)</French>		
 		<German>(Training) Auflauern</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_LIE_IN_WAIT_HELP</Tag>
 		<English>Each round spent building up Lie in Wait, the unit gains +5% [COLOR_HIGHLIGHT_TEXT]Stealth Combat Modifier[COLOR_REVERT] up to a maximum bonus of +25%, AND +1 [COLOR_HIGHLIGHT_TEXT]Stealth Strikes[COLOR_REVERT] on the first and fifth rounds of building up up to a maximum of +2, provided each promotion level is qualified for by the unit.  Unit also gains Stealth Defense and will thus surprise defend against enemy units attempting to move into the tile.  Once the unit has revealed itself, it stays revealed and is no longer engaging in stealth combat thereafter for the remainder of the round.</English>
+		<French>Chaque tour dépensé pour construire Intrigue, l'unité gagne + 5% [COLOR_HIGHLIGHT_TEXT] Modificateur de combat furtif [COLOR_REVERT] jusqu'à un bonus maximum de + 25%, ET +1 [COLOR_HIGHLIGHT_TEXT] Frappes furtives [COLOR_REVERT] les premier et cinquième tours de construction jusqu'à un maximum de +2, à condition que chaque niveau de promotion soit qualifié par l'unité. L'unité gagne également la défense furtive et surprendra ainsi la défense contre les unités ennemies qui tentent de se déplacer dans la tuile. Une fois que l'unité s'est révélée, elle reste révélée et n'entreprend plus de combat furtif par la suite pour le reste du round.</French>
 		<German>Durch Training in Auflauern erhöht sich jede Runde der [COLOR_HIGHLIGHT_TEXT]Tarnmodifikator[COLOR_REVERT] der Einheit um 5% (maximal 25%). Außerdem erhält sie einen zusätzlichen Tarnangriff in der ersten und fünften Runde und kann sich außerdem gegen Tarnangriffe verteidigen. Wenn die Einheit sich gezeigt hat, bleibt sie sichtbar und hat für den Rest der Runde keine Tarnvorteile mehr.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_SCHEMES</Tag>
 		<English>Build Up (Schemes) Promotionline</English>
+		<French>Spécialisation Retranchement (Coup monté)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_SCHEMES_HELP</Tag>
 		<English>Each round spent building up Schemes, the unit spreads +1 (+1 cumulative to the last round) [COLOR_HIGHLIGHT_TEXT]Crime[COLOR_REVERT] to the local city and plot, up to a maximum bonus of +15.</English>
+		<French>Chaque tour dépensé en retranchement Coup monté, l'unité propage +1 (+1 cumulatif jusqu'au dernier tour) [COLOR_HIGHLIGHT_TEXT]Crime[COLOR_REVERT] à la ville voisine et la case, jusqu'à un maximum de +15.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_REVOLUTIONARY_SENTIMENT</Tag>
 		<English>Build Up (Revolutionary Sentiment) Promotionline</English>
+		<French>Spécialisation Retranchement (Sentiment Révolutionnaire)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_REVOLUTIONARY_SENTIMENT_HELP</Tag>
 		<English>Each round spent building up Revolutionary Sentiment, the unit gains -2% [COLOR_HIGHLIGHT_TEXT]Revolt Protection[COLOR_REVERT] (to make a cultural revolution more likely in cities where the national culture isn't a majority for the owner) up to a maximum of -10%, provided each promotion level is qualified for by the unit.</English>
+		<French>Pour chaque tour dépensé en retranchement avec Sentiment révolutionnaire, l'unité reçoit -2% [COLOR_HIGHLIGHT_TEXT]en protection des Révoltes[COLOR_REVERT] (pour rendre une révolution culturelle plus probable dans les villes où la culture nationale n'est pas majoritaire pour le propriétaire) jusqu'à un maximum de -10%, à condition que chaque niveau de promotion soit qualifié par l'unité.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_INSPIRE</Tag>
 		<English>Inspire Promotionline</English>
+		<French>Spécialisation Inspiration</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_PATRIOTISM</Tag>
 		<English>Build Up (Patriotism) Promotionline</English>
+		<French>Spécialisation Retranchement (Patriotisme)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_PATRIOTISM_HELP</Tag>
 		<English>Each round spent building up Patriotism, the unit gains +2% [COLOR_HIGHLIGHT_TEXT]Revolt Protection[COLOR_REVERT] (to make a cultural revolution less likely in cities where the national culture isn't a majority for the owner) up to a maximum of +10%, provided each promotion level is qualified for by the unit.</English>
+		<French>Pour chaque tour dépensé en rentranchement Patriotisme, L'unité gagne +2% [COLOR_HIGHLIGHT_TEXT]Protection contre les Révoltes[COLOR_REVERT] (pour rendre une révolution culturelle moins probable dans les villes où la culture nationale n'est pas majoritaire pour le propriétaire) jusqu'à un maximum de +10%, à condition que chaque niveau de promotion soit qualifié par l'unité.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_DECOYS</Tag>
 		<English>Decoys Promotionline</English>
+		<French>Spécialisation Leurre</French>		
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_ENCLOSE</Tag>
 		<English>Enclose Promotionline</English>
+		<French>Spécialisation Enclave</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_LONG_ARM</Tag>
 		<English>Long Arm Promotionline</English>
+		<French>Spécialisation Bras Long</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_HUNTING_STRIKE</Tag>
 		<English>Hunting Strike Promotionline</English>
+		<French>Spécialisation Chasse escarmouche</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_FIST</Tag>
 		<English>Way of the Fist</English>
+		<French>Voie du Poing</French>				
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_CENTAUR</Tag>
 		<English>Way of the Centaur</English>
+		<French>Voie du Centaure</French>		
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_WILD</Tag>
 		<English>Way of the Wild</English>
+		<French>Voie de la Nature</French>				
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_WAVES</Tag>
 		<English>Way of the Waves</English>
+		<French>Voie des Vagues</French>		
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_WIND</Tag>
 		<English>Way of the Wind</English>
+		<French>Voie du Vent</French>		
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_WARRIOR</Tag>
 		<English>Way of the Warrior</English>
+		<French>Voie du Guerrier</French>		
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_FEATHER</Tag>
 		<English>Way of the Feather</English>
+		<French>Voie de la plume</French>		
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_LEECH</Tag>
 		<English>Way of the Leech</English>
+		<French>Voie de la Goule</French>		
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_SHADOWS</Tag>
 		<English>Way of the Shadows</English>
+		<French>Voie des Ombres</French>		
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_WOLF</Tag>
 		<English>Way of the Wolf</English>
+		<French>Voie du Loup</French>		
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_SECURITY</Tag>
-		<English>Build Up (Counter Espionage) I</English>
+		<English>Build Up (Counter Espionage)</English>
+		<French>Retranchement (Contre-espionnage)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_SECURITY1</Tag>
 		<English>Build Up (Counter Espionage) I</English>
+		<French>Retranchement (Contre-espionnage) I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_SECURITY2</Tag>
 		<English>Build Up (Counter Espionage) II</English>
+		<French>Retranchement (Contre-espionnage) II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_SECURITY3</Tag>
 		<English>Build Up (Counter Espionage) III</English>
+		<French>Retranchement (Contre-espionnage) III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_SECURITY4</Tag>
 		<English>Build Up (Counter Espionage) IV</English>
+		<French>Retranchement (Contre-espionnage) IV</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_SECURITY5</Tag>
 		<English>Build Up (Counter Espionage) V</English>
+		<French>Retranchement (Contre-espionnage) V</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_SECURITY_HELP</Tag>
 		<English>Each round spent building up Counter Espionage, the unit gains +5% [COLOR_HIGHLIGHT_TEXT]Interception Chance[COLOR_REVERT] (to catch enemy spies) up to a maximum of +25%, provided each promotion level is qualified for by the unit.</English>
+		<French>Pour chaque tour dépensé en retranchement Contre-Espionnage, L'unité gagne +5% [COLOR_HIGHLIGHT_TEXT]Prob. d'Interception[COLOR_REVERT] (pour attraper les espions ennemis) jusqu'à un maximum de +25%, à condition que chaque niveau de promotion soit qualifié par l'unité.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_PREREQ_NORM_INVISIBLE_TEXT</Tag>
 		<English>[ICON_BULLET]Requires some invisibility to use</English>
+		<French>[ICON_BULLET]Requiert une capacité d'invisibilité</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_MAMMOTH_HUNTER</Tag>
 		<English>Mammoth Hunter</English>
+		<French>Chasseur de Mammouth</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MAMMOTH_HUNTER1</Tag>
 		<English>Mammoth Hunter I</English>
+		<French>Chasseur de Mammouth I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MAMMOTH_HUNTER2</Tag>
 		<English>Mammoth Hunter II</English>
+		<French>Chasseur de Mammouth II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BY_THE_HORNS</Tag>
 		<English>By the Horns</English>
+		<French>Par les cornes</French>
 	</TEXT>
 </Civ4GameText>

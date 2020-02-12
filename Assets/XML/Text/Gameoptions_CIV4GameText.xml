@@ -205,7 +205,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BATTLEWORN</Tag>
 		<English>C2C Combat Mod - Battleworn</English>
-		<French>C2C Mode de Combat - Epuisement</French>
+		<French>Mode de Combat C2C - Epuisement</French>
 		<German>C2C-Kampfmod - Schlachtauswirkungen</German>
 		<Polish>C2C Modyfikacja Bojowa - Zmęczenie</Polish>
 	</TEXT>
@@ -220,11 +220,13 @@
 		<Tag>TXT_KEY_GAMEOPTION_BEELINE_STINGS</Tag>
 		<English>Beeline Stings</English>
 		<German>Durchmarschstrafen</German>
+		<French>Pénalités des Eres</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BEELINE_STINGS_HELP</Tag>
 		<English>When you break through into a new era, the techs you have not yet researched from previous eras become more expensive to research.</English>
 		<German>Beim Erreichen einer neuen Ära werden alle noch nicht erforschten Techniken der vorherigen Ära teurer in der Erforschung.</German>
+		<French>Lorsque vous entrez dans une nouvelle ère, les technologies que vous n'avez pas encore étudiées des époques précédentes deviennent plus coûteuses à rechercher.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CHALLENGE_CUT_LOSERS</Tag>
@@ -359,6 +361,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_DOWNSIZING_IS_PROFITABLE</Tag>
 		<English>Downsizing is Profitable</English>
+		<French>Réduction des effectifs rentable</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_DOWNSIZING_IS_PROFITABLE_HELP</Tag>
@@ -368,6 +371,7 @@
 		<Tag>TXT_KEY_GAMEOPTION_ECOLOGICAL_ANIMALS</Tag>
 		<English>Ecological Animals</English>
 		<German>Ökologische Tiere</German>
+		<French>Animaux écologiques</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ECOLOGICAL_ANIMALS_HELP</Tag>
@@ -376,7 +380,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_EQUIPMENT</Tag>
 		<English>C2C Combat Mod - Arms and Equipment</English>
-		<French>C2C Mode de Combat - Armes and Equipement</French>
+		<French>Mode de Combat C2C - Armes and Equipement</French>
 		<German>C2C-Kampfmod - Waffen und Ausrüstung</German>
 		<Polish>C2C Modyfikacja Bojowa - Wyposażenie i uzbrojenie.</Polish>
 	</TEXT>
@@ -390,7 +394,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_FIGHT_OR_FLIGHT</Tag>
 		<English>C2C Combat Mod - Fight or Flight</English>
-		<French>C2C Mode de Combat - Bataille ou Fuite</French>
+		<French>Mode de Combat C2C - Bataille ou Fuite</French>
 		<German>C2C-Kampfmod - Kampf oder Flucht</German>
 		<Italian>C2C Combat Mod - Combatti o scappa</Italian>
 		<Polish>C2C Modyfikacja Bojowa - Walcz lub Uciekaj</Polish>
@@ -440,7 +444,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_HEART_OF_WAR</Tag>
 		<English>C2C Combat Mod - Heart of War</English>
-		<French>C2C Mode de Combat - Le Coeur de la Guerre</French>
+		<French>Mode de Combat C2C - Le Coeur de la Guerre</French>
 		<German>C2C-Kampfmod - Herz des Krieges</German>
 		<Polish>C2C Modyfikacja Bojowa - Serce Wojny</Polish>
 	</TEXT>
@@ -454,7 +458,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_HIDE_AND_SEEK</Tag>
 		<English>C2C Combat Mod - Hide and Seek</English>
-		<French>C2C Mode de Combat - Cache-cache</French>
+		<French>Mode de Combat C2C - Cache-cache</French>
 		<German>C2C-Kampfmod - Versteckspiel</German>
 	</TEXT>
 	<TEXT>
@@ -665,11 +669,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NEANDERTHAL_CITIES</Tag>
 		<English>Neanderthal Cities</English>
+		<French>Villes Néanderthal</French>
 		<German>Neandertalerstädte</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NEANDERTHAL_CITIES_HELP</Tag>
 		<English>Neanderthal Cities will spawn during the Prehistoric era.</English>
+		<French>Des Villes Neanderthal apparaissent durant l'Ere Préhistorique.</French>
 		<German>Neandertaler werden bei eingeschalteter Option in der vorgeschichtlichen Ära Städte erbauen.</German>
 	</TEXT>
 	<TEXT>
@@ -1069,11 +1075,13 @@
 		<Tag>TXT_KEY_GAMEOPTION_PEACE_AMONG_NPCS</Tag>
 		<English>Peace Among NPCs</English>
 		<German>Frieden zwischen Computergegnern</German>
+		<French>Paix entre les PNJs</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_PEACE_AMONG_NPCS_HELP</Tag>
 		<English>Keeps NPC players from being in an eternal 'at war' state with each other.  Thus barbs don't attack animals.  Beast team animals don't attack Creature team animals.  And so on.</English>
 		<German>Diese Option verhindert, dass sich Computergegner in einem ewigen Kriegszustand miteinander befinden. Dadurch attackieren Barbaren keine Tiere und Tiere keine Barbaren mehr, usw.</German>
+		<French>Empêche les joueurs PNJ d'être dans un état éternel de «guerre» entre eux. Ainsi, les barbares n'attaquent pas les animaux. Les animaux de l'équipe "bêtes" n'attaquent pas les animaux de l'équipe "Créature". Etc.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_PERMANENT_ALLIANCES</Tag>
@@ -1213,21 +1221,25 @@
 		<Tag>TXT_KEY_GAMEOPTION_REALISTIC_SIEGE</Tag>
 		<English>Realistic Siege</English>
 		<German>Realistische Belagerungen</German>
+		<French>Sièges Réalistes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_REALISTIC_SIEGE_HELP</Tag>
 		<English>The city defense benefits of many defensive buildings, such as walls, cannot be entirely removed.  Many defensive buildings enforce that the city defense level must be reduced to a particular level before the city can be attacked.  More developments to come.</English>
 		<German>Die Stadtverteidigung aus Schutzeinrichtungen wie Stadtmauern lässt sich nicht mehr komplett zerstören. Viele Schutzeinrichtungen sorgen außerdem dafür, dass die Stadtverteidigung zunächst auf einen bestimmten Wert reduziert werden muss, bevor die Stadt direkt angegriffen werden kann.</German>
+		<French>Les avantages de la défense de la ville de nombreux bâtiments défensifs, tels que les murs, ne peuvent pas être entièrement supprimés. De nombreux bâtiments défensifs imposent que le niveau de défense de la ville soit réduit à un niveau particulier avant que la ville puisse être attaquée. Plus de développements à venir.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_RECKLESS_ANIMALS</Tag>
 		<English>Reckless Animals</English>
 		<German>Draufgängerische Tiere</German>
+		<French>Animaux téméraires</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_RECKLESS_ANIMALS_HELP</Tag>
 		<English>Makes animals much more likely to attack with no regards to odds or animal personality.</English>
 		<German>Schaltet die verbesserte Tierintelligenz aus und lässt Tiere wieder wesentlich öfter angreifen.</German>
+		<French>Rend les animaux beaucoup plus susceptibles d'attaquer sans égard aux cotes ou à la personnalité animale.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_RELIGION_DECAY</Tag>
@@ -1320,7 +1332,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_SIZE_MATTERS</Tag>
 		<English>C2C Combat Mod - Size Matters</English>
-		<French>C2C Mode de Combat - La Taille Compte!</French>
+		<French>Mode de Combat C2C - La Taille Compte!</French>
 		<German>C2C-Kampfmod - Größe ist wichtig</German>
 		<Italian>C2C Combat Mod - La dimensione conta</Italian>
 		<Polish>C2C Modyfikacja Bojowa - Rozmiar ma znaczenie.</Polish>
@@ -1383,7 +1395,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_STRENGTH_IN_NUMBERS</Tag>
 		<English>C2C Combat Mod - Strength in Numbers</English>
-		<French>C2C Mode de combat - La Force du nombre</French>
+		<French>Mode de Combat C2C - La Force du nombre</French>
 		<German>C2C-Kampfmod - Gemeinsam sind wir stark</German>
 		<Italian>La forza dei numeri</Italian>
 		<Polish>Siła w Liczbach</Polish>
@@ -1411,7 +1423,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UPRANGE</Tag>
 		<English>C2C Combat Mod - Uprange and Personal</English>
-		<French>C2C Mode de Combat - Portée et proximité</French>
+		<French>Mode de Combat C2C - Portée et proximité</French>
 		<German>C2C-Kampfmod - Nah und fern</German>
 		<Polish>C2C Modyfikacja Bojowa - Walka wręcz i dystansowa</Polish>
 	</TEXT>
@@ -1518,21 +1530,25 @@
 		<Tag>TXT_KEY_GAMEOPTION_WIN_FOR_LOSING</Tag>
 		<English>Win for Losing</English>
 		<German>Gewinne für Verlierer</German>
+		<French>Bonus pour les perdants</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_WIN_FOR_LOSING_HELP</Tag>
 		<English>Smaller nations, by city count and population, are given research bonuses in direct proportion to how much smaller they are from the largest player nations on the map.  Influence begins once the player enters the Ancient era and beyond.</English>
 		<German>Nationen mit weniger Städten und einer geringeren Bevölkerungsdichte erhalten Forschungsboni, die sich direkt aus dem Abstand zur größten Nation auf der Karte errechnen.</German>
+		<French>Les plus petits pays, par nombre de villes et par population, reçoivent des primes de recherche directement proportionnelles à leur taille par rapport aux plus grands pays joueurs sur la carte. L'influence commence une fois que le joueur entre dans l'ère antique et au-delà.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_WITHOUT_WARNING</Tag>
 		<English>C2C Combat Mod - Without Warning</English>
 		<German>C2C-Kampfmod - Ohne Vorwarnung</German>
+		<French>Mod de Combat C2C - Sans Avert.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_WITHOUT_WARNING_HELP</Tag>
 		<English>Enables Ambush and Assassination attacks and Stealth Combat factors (Stealth Strikes and Stealth Combat Modifiers) which come into play when an unseen unit attacks or when a unit attacks another on the same tile, which Ambush and Assassination commands allow.</English>
 		<German>Diese Mod aktiviert Hinterhalte, Attentate und Modifikatoren durch Tarnung, die dann eine Rolle spielen, wenn eine unsichtbare Einheit angreift.</German>
+		<French>Active les attaques d'embuscade et d'assassinat et les facteurs de combat furtif (frappes furtives et modificateurs de combat furtif) qui entrent en jeu lorsqu'une unité invisible attaque ou lorsqu'une unité en attaque une autre sur la même tuile, ce que les commandes d'embuscade et d'assassinat permettent.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_XP_FROM_ASSIGNED_SPECIALISTS</Tag>
@@ -1551,11 +1567,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_1_CITY_TILE_FOUNDING</Tag>
 		<English>City starts with 1 tile</English>
+		<French>Ville avec 1 seule Case</French>
 		<German>Städte beginnen nur mit dem Startfeld</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_1_CITY_TILE_FOUNDING_HELP</Tag>
 		<English>All city founding starts with the main city tile only. Culture Level Poor values must be achieved to expand city culture and expand to surrounding tiles. Scaled for Game Speeds.[NEWLINE]This option disables "Minimum city border" option.</English>
 		<German>Der Einflussbereich jeder neu gegründeten Stadt wird mit dieser Einstellung zunächst immer auf das Stadtfeld begrenzt. Um den Stadtradius auf die umgebenden Felder auszudehnen, muss zunächst die Kulturstufe "schwach" erreicht werden.</German>
+		<French>Toutes les fondations de villes commencent par la tuile ville principale uniquement. Niveau de culture De mauvaises valeurs doivent être atteintes pour étendre la culture de la ville et s'étendre aux carreaux environnants. Adapté aux vitesses de jeu. [NEWLINE] Cette option désactive l'option "Limite minimale de la ville".</French>
 	</TEXT>
 </Civ4GameText>
