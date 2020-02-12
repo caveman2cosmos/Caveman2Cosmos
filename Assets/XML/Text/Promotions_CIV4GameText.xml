@@ -66,21 +66,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Quality Down(Absolute Enfeeblement)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Quality Down(Absolute Enfeeblement)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Quality Down(Absolute Enfeeblement)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Poziom Niżej (Absolutna Niezdarność)</Polish>
 	</TEXT>
 	<TEXT>
@@ -91,21 +76,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Quality Up(Absolute Proficiency)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Quality Up(Absolute Proficiency)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Quality Up(Absolute Proficiency)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Poziom Wyżej (Absolutna Biegłość)</Polish>
 	</TEXT>
 	<TEXT>
@@ -559,16 +529,24 @@
 		<Polish>Desant</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_ANIMAL_HUNTER</Tag>
+		<English>Animal Hunter</English>
+		<French>Chasseur d'Animaux</French>
+		<German>Animal Jaeger</German>
+		<Italian>Cacciatore di animali</Italian>
+		<Polish>Łowca Zwierząt</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_ANIMAL_HUNTER_HELP</Tag>
+		<English>[ICON_BULLET]Fights against animals after the normal experience limit will still give XP points.</English>
+		<French>[ICON_BULLET]Les Combats contre les animaux continuent d'ajouter de l'EXP à l'unité.</French>
+		<German>[ICON_BULLET]Kaempfe gegen Tiere geben auch nach dem Erfahrungslimit noch Erfahrungs-Punkte.</German>
+		<Italian>[ICON_BULLET]I combattimenti contro gli animali dopo il normale limite di XP daranno ancora punti XP.</Italian>
+		<Polish>[ICON_BULLET]Pozwala zdobywać XP w walce ze zwierzętami, nawet po osiągnięciu limitu.</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ANIMAL_IGNORES_BORDERS_TEXT</Tag>
 		<English>[ICON_BULLET]Gives this Animal %D1_Reasons Causes to Ignore Border Restrictions</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_NO_DEFENSIVE_BONUS_CHANGE_POSITIVE_TEXT</Tag>
-		<English>[ICON_BULLET]Gives %D1_Reasons Cause(s) to be unable to benefit from Defense Combat bonuses.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_NO_DEFENSIVE_BONUS_CHANGE_NEGATIVE_TEXT</Tag>
-		<English>[ICON_BULLET]Removes %D1_Reasons Cause(s) to be unable to benefit from Defense Combat bonuses.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ANTIBIOLOGICAL</Tag>
@@ -1198,21 +1176,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Back Down I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Ritirata I</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
-		<Spanish>
-			<Text>Back Down I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Wycofanie się I</Polish>
 	</TEXT>
 	<TEXT>
@@ -1223,21 +1191,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Back Down II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Ritirata II</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
-		<Spanish>
-			<Text>Back Down II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Wycofanie się II</Polish>
 	</TEXT>
 	<TEXT>
@@ -1248,21 +1206,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Back Down III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Ritirata III</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
-		<Spanish>
-			<Text>Back Down III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Wycofanie się III</Polish>
 	</TEXT>
 	<TEXT>
@@ -1273,21 +1221,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Back Down IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Ritirata IV</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
-		<Spanish>
-			<Text>Back Down IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Wycofanie się IV</Polish>
 	</TEXT>
 	<TEXT>
@@ -1298,21 +1236,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Back Down V</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
 		<Italian>
 			<Text>Ritirata V</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
-		<Spanish>
-			<Text>Back Down V</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Polish>Wycofanie się V</Polish>
 	</TEXT>
 	<TEXT>
@@ -1339,6 +1267,22 @@
 		<Tag>TXT_KEY_PROMOTION_BACKSTAB5</Tag>
 		<English>Backstab V</English>
 		<French>Poignard dans le dos V</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_BARBARIAN_HUNTER</Tag>
+		<English>Barbarian Hunter</English>
+		<French>Chasseur de Barbares</French>
+		<German>Barbaren-Jaeger</German>
+		<Italian>Cacciatore di barbari</Italian>
+		<Polish>Łowca Barbarzyńców</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_BARBARIAN_HUNTER_HELP</Tag>
+		<English>[ICON_BULLET]Fights against barbarians after the normal experience limit will still give XP points.</English>
+		<French>[ICON_BULLET]Les Combats contre les barbares continuent d'ajouter de l'EXP à l'unité.</French>
+		<German>[ICON_BULLET]Kaempfe gegen Barbaren geben auch nach dem Erfahrungslimit noch Erfahrungs-Punkte.</German>
+		<Italian>[ICON_BULLET]I combattimenti contro i barbari dopo il normale limite di XP daranno ancora punti XP.</Italian>
+		<Polish>[ICON_BULLET]Pozwala zdobywać XP w walce z barbarzyńcami, nawet po osiągnięciu limitu.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BARBCOEXIST_ADD_TEXT</Tag>
@@ -5760,11 +5704,6 @@
 		<Tag>TXT_KEY_PROMOTION_STEALTH_DEFENSE_CHANGE_TEXT</Tag>
 		<English>[ICON_BULLET]Trait - Stealth Defend: %D1_Change</English>
 		<German>[ICON_BULLET]Verteidigung gegen Tarnangriffe: %D1_Change</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_NO_INVISIBILITY_CHANGE_TEXT</Tag>
-		<English>[ICON_BULLET]Trait - Never Invisible: %D1_Change</English>
-		<German>[ICON_BULLET]Verhinderte Unsichtbarkeit: %D1_Change</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TRAP_MAX_DAMAGE_TEXT</Tag>
@@ -10641,6 +10580,19 @@
 		<Italian>Navigazione III</Italian>
 		<Spanish>Navegación III</Spanish>
 		<Polish>Nawigacja III</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NO_DEFENSIVE_BONUS_CHANGE_POSITIVE_TEXT</Tag>
+		<English>[ICON_BULLET]Gives %D1_Reasons Cause(s) to be unable to benefit from Defense Combat bonuses.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NO_DEFENSIVE_BONUS_CHANGE_NEGATIVE_TEXT</Tag>
+		<English>[ICON_BULLET]Removes %D1_Reasons Cause(s) to be unable to benefit from Defense Combat bonuses.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NO_INVISIBILITY_CHANGE_TEXT</Tag>
+		<English>[ICON_BULLET]Trait - Never Invisible: %D1_Change</English>
+		<German>[ICON_BULLET]Verhinderte Unsichtbarkeit: %D1_Change</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_NO_MECHS_TEXT</Tag>

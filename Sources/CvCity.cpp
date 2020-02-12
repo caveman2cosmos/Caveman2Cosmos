@@ -2111,22 +2111,24 @@ void CvCity::doTurn()
 			iCount += getTradeYield((YieldTypes)iI);
 			iCount += getCorporationYield((YieldTypes)iI);
 
-			//			FAssert(iCount == getBaseYieldRate((YieldTypes)iI));
+			//FAssert(iCount == getBaseYieldRate((YieldTypes)iI));
 		}
 
+/*
 		for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 		{
-			//	FAssert(getBuildingCommerce((CommerceTypes)iI) >= 0);
-			//	FAssert(getSpecialistCommerce((CommerceTypes)iI) >= 0);
-			//	FAssert(getReligionCommerce((CommerceTypes)iI) >= 0);
-			//	FAssert(getCorporationCommerce((CommerceTypes)iI) >= 0);
-			//	FAssert(GET_PLAYER(getOwnerINLINE()).getFreeCityCommerce((CommerceTypes)iI) >= 0);
+			FAssert(getBuildingCommerce((CommerceTypes)iI) >= 0);
+			FAssert(getSpecialistCommerce((CommerceTypes)iI) >= 0);
+			FAssert(getReligionCommerce((CommerceTypes)iI) >= 0);
+			FAssert(getCorporationCommerce((CommerceTypes)iI) >= 0);
+			FAssert(GET_PLAYER(getOwnerINLINE()).getFreeCityCommerce((CommerceTypes)iI) >= 0);
 		}
 
 		for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 		{
-			//	FAssert(isNoBonus((BonusTypes)iI) || getNumBonuses((BonusTypes)iI) >= ((isConnectedToCapital()) ? (GET_PLAYER(getOwnerINLINE()).getBonusImport((BonusTypes)iI) - GET_PLAYER(getOwnerINLINE()).getBonusExport((BonusTypes)iI)) : 0));
+			FAssert(isNoBonus((BonusTypes)iI) || getNumBonuses((BonusTypes)iI) >= ((isConnectedToCapital()) ? (GET_PLAYER(getOwnerINLINE()).getBonusImport((BonusTypes)iI) - GET_PLAYER(getOwnerINLINE()).getBonusExport((BonusTypes)iI)) : 0));
 		}
+*/
 	}
 #endif
 	// XXX

@@ -1,11 +1,8 @@
 <?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- -->
-<!-- Handicap Infos -->
-<!-- Revolution Mod only changed settings relating to creation of barbarian cities and units -->
+<!-- 
+	iBarbarianCityCreationProb:
+		Base percent chance per turn for barbarian city spawn on normal gamespeed, on eternity a value of 1 means 0.1% chance per turn.:
+ -->
 <Civ4HandicapInfo xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
 	<HandicapInfos>
 		<HandicapInfo>
@@ -67,7 +64,7 @@
 			<iUnownedWaterTilesPerBarbarianUnit>180</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>60</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCityCreationTurnsElapsed>40</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>1</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>4</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>1</iBarbarianDefenders>
 			<iAnimalBonus>-60</iAnimalBonus>
 			<iBarbarianBonus>-60</iBarbarianBonus>
@@ -328,7 +325,7 @@
 			<iUnownedWaterTilesPerBarbarianUnit>165</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>55</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCityCreationTurnsElapsed>39</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>1</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>6</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>1</iBarbarianDefenders>
 			<iAnimalBonus>-40</iAnimalBonus>
 			<iBarbarianBonus>-40</iBarbarianBonus>
@@ -616,7 +613,7 @@
 			<iUnownedWaterTilesPerBarbarianUnit>150</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>50</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCityCreationTurnsElapsed>38</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>2</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>8</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>2</iBarbarianDefenders>
 			<iAnimalBonus>-20</iAnimalBonus>
 			<iBarbarianBonus>-20</iBarbarianBonus>
@@ -891,7 +888,7 @@
 			<iUnownedWaterTilesPerBarbarianUnit>135</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>45</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCityCreationTurnsElapsed>37</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>2</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>10</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>3</iBarbarianDefenders>
 			<iAIDeclareWarProb>65</iAIDeclareWarProb>
 			<iAIGrowthPercent>100</iAIGrowthPercent>
@@ -1195,7 +1192,7 @@
 			<iUnownedWaterTilesPerBarbarianUnit>120</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>40</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCityCreationTurnsElapsed>36</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>3</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>12</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>4</iBarbarianDefenders>
 			<iAIAnimalBonus>-10</iAIAnimalBonus>
 			<iAIBarbarianBonus>-10</iAIBarbarianBonus>
@@ -1508,7 +1505,7 @@
 			<iUnownedWaterTilesPerBarbarianUnit>105</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>35</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCityCreationTurnsElapsed>35</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>3</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>14</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>5</iBarbarianDefenders>
 			<iAIAnimalBonus>-20</iAIAnimalBonus>
 			<iAIBarbarianBonus>-20</iAIBarbarianBonus>
@@ -1831,7 +1828,7 @@
 			<iUnownedWaterTilesPerBarbarianUnit>90</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>30</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCityCreationTurnsElapsed>34</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>4</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>16</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>6</iBarbarianDefenders>
 			<iAIAnimalBonus>-30</iAIAnimalBonus>
 			<iAIBarbarianBonus>-30</iAIBarbarianBonus>
@@ -2186,7 +2183,7 @@
 			<iUnownedWaterTilesPerBarbarianUnit>75</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>25</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCityCreationTurnsElapsed>33</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>4</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>18</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>7</iBarbarianDefenders>
 			<iAIAnimalBonus>-40</iAIAnimalBonus>
 			<iAIBarbarianBonus>-40</iAIBarbarianBonus>
@@ -2530,7 +2527,7 @@
 			<iUnownedWaterTilesPerBarbarianUnit>60</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>20</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCityCreationTurnsElapsed>32</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>5</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>20</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>8</iBarbarianDefenders>
 			<iAIAnimalBonus>-50</iAIAnimalBonus>
 			<iAIBarbarianBonus>-50</iAIBarbarianBonus>
@@ -2901,7 +2898,7 @@
 			<iUnownedWaterTilesPerBarbarianUnit>30</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>10</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCityCreationTurnsElapsed>30</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>6</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>24</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>10</iBarbarianDefenders>
 			<iAIAnimalBonus>-70</iAIAnimalBonus>
 			<iAIBarbarianBonus>-70</iAIBarbarianBonus>
@@ -3271,7 +3268,7 @@
 			<iUnownedWaterTilesPerBarbarianUnit>30</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>10</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCityCreationTurnsElapsed>30</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>6</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>24</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>10</iBarbarianDefenders>
 			<iAIAnimalBonus>-70</iAIAnimalBonus>
 			<iAIBarbarianBonus>-70</iAIBarbarianBonus>
