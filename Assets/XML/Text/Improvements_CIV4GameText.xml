@@ -332,25 +332,6 @@
 		<Polish>[ICON_BULLET]Wpływa na teren o zasięgu %d1_Num pól</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_DEPLETED_MINE</Tag>
-		<English>Depleted Mine</English>
-		<French>Mine épuisée</French>
-		<German>Erschöpfte Mine</German>
-		<Italian>Miniera esaurita</Italian>
-		<Spanish>
-			<Text>Mina agotada</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Zużyta kopalnia</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_DEPLETED_MINE_PEDIA</Tag>
-		<English>Abandoned mines pose a threat to anyone who may attempt to explore them without proper knowledge and safety training. Old mines are often dangerous and can contain deadly gases. Standing water in mines from seepage or infiltration poses a significant hazard as the water can hide deep pits and trap gases below the water. Additionally, since weather may have eroded the earth and rock surrounding it, the entrance to an old mine in particular can be very dangerous. Old mine workings, caves, etc. are commonly hazardous simply due to the lack of oxygen in the air, a condition in mines known as blackdamp.</English>
-		<Italian>Le miniere abbandonate sono un pericolo per coloro che tentano di esplorarle senza una conoscenza appropriata e alcune nozioni di sicurezza. Le vecchie miniere sono spesso pericolose e possono contenere gas mortali. L'acqua stagnante, derivante dall'umidità e dall'infiltrazione, è un pericolo significativo che può nascondere buchi profondi e intrappolare i gas sotto la superficie. In più, dato che il tempo può erodere la terra e le rocce che la circondano, l'entrata di una vecchia miniera può essere particolarmente pericolosa. Le antiche miniere e le caverne sono pericolose semplicemente per la mancanza di ossigeno, una condizione nota come blackdamp.</Italian>
-		<Polish>Zużyta kopalnia</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_DESERT_CAMP</Tag>
 		<English>Desert Camp</English>
 		<French>Camp de Desert</French>

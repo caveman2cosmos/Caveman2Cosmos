@@ -5745,8 +5745,6 @@ public:
 	// Afforess 12/9/09
 	int getHealthPercent() const;		// Exposed to Python
 	bool isPeakMakesValid() const;		// Exposed to Python
-	bool isDepletedMine() const;
-	int getDepletionRand() const;
 	int getImprovementBonusDepletionRand(int i) const;
 	int getPrereqTech() const;			// Exposed to Python
 	//int getTraitYieldChanges(int i, int j) const;

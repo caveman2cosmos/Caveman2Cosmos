@@ -1521,7 +1521,7 @@ bool CvUnitAI::AI_bestCityBuild(CvCity* pCity, CvPlot** ppBestPlot, BuildTypes* 
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-						if ((pLoopPlot->getImprovementType() == NO_IMPROVEMENT) || !(GET_PLAYER(getOwnerINLINE()).isOption(PLAYEROPTION_SAFE_AUTOMATION) && !(pLoopPlot->getImprovementType() == (GC.getDefineINT("RUINS_IMPROVEMENT"))) && !(GC.getImprovementInfo((ImprovementTypes)pLoopPlot->getImprovementType()).isDepletedMine())))
+						if ((pLoopPlot->getImprovementType() == NO_IMPROVEMENT) || !(GET_PLAYER(getOwnerINLINE()).isOption(PLAYEROPTION_SAFE_AUTOMATION) && !(pLoopPlot->getImprovementType() == (GC.getDefineINT("RUINS_IMPROVEMENT")))))
 						{
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
@@ -25497,9 +25497,9 @@ bool CvUnitAI::AI_improveCity(CvCity* pCity)
 					iPlotMoveCost += GC.getHILLS_EXTRA_MOVEMENT();
 				}
 /************************************************************************************************/
-/* Afforess	Mountains Start		 07/29/09                                           		 */
-/*                                                                                              */
-/*                                                                                              */
+/* Afforess	Mountains Start		 07/29/09														*/
+/*																								*/
+/*																								*/
 /************************************************************************************************/
 				if (plot()->isPeak2(true))
 				{
@@ -25513,7 +25513,7 @@ bool CvUnitAI::AI_improveCity(CvCity* pCity)
 					}
 				}
 /************************************************************************************************/
-/* Afforess	Mountains End       END    		                                                 */
+/* Afforess	Mountains End       END																*/
 /************************************************************************************************/
 				if (iPlotMoveCost > 1)
 				{
@@ -25568,31 +25568,15 @@ bool CvUnitAI::AI_improveLocalPlot(int iRange, CvCity* pIgnoreCity)
 									{
 										bool bAllowed = true;
 
-										if (GET_PLAYER(getOwnerINLINE()).isOption(PLAYEROPTION_SAFE_AUTOMATION))
+										if (GET_PLAYER(getOwnerINLINE()).isOption(PLAYEROPTION_SAFE_AUTOMATION)
+										&& pLoopPlot->getImprovementType() != NO_IMPROVEMENT && pLoopPlot->getImprovementType() != GC.getDefineINT("RUINS_IMPROVEMENT"))
 										{
-											if (pLoopPlot->getImprovementType() != NO_IMPROVEMENT && pLoopPlot->getImprovementType() != GC.getDefineINT("RUINS_IMPROVEMENT"))
-											{
-											/************************************************************************************************/
-												/* Afforess	                  Start		 01/19/10                                               */
-												/*                                                                                              */
-												/*   Automated Workers Can still replace Depleted Mines                                         */
-											/************************************************************************************************/
-												if (!GC.getImprovementInfo((ImprovementTypes)pLoopPlot->getImprovementType()).isDepletedMine())
-												{
-													bAllowed = false;
-												}
-											/************************************************************************************************/
-												/* Afforess	                     END                                                            */
-											/************************************************************************************************/
-											}
+											bAllowed = false;
 										}
 
-										if (bAllowed)
+										if (bAllowed && pLoopPlot->getImprovementType() != NO_IMPROVEMENT && GC.getBuildInfo(pCity->AI_getBestBuild(iIndex)).getImprovement() != NO_IMPROVEMENT)
 										{
-											if (pLoopPlot->getImprovementType() != NO_IMPROVEMENT && GC.getBuildInfo(pCity->AI_getBestBuild(iIndex)).getImprovement() != NO_IMPROVEMENT)
-											{
-												bAllowed = false;
-											}
+											bAllowed = false;
 										}
 
 										if (bAllowed)

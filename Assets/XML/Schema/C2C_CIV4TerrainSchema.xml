@@ -718,8 +718,6 @@
 		<element type="bPeakMakesValid" minOccurs="0"/>
 		<element type="PrereqTech" minOccurs="0"/>
 		<element type="iHealthPercent" minOccurs="0"/>
-		<element type="bDepletedMine" minOccurs="0"/>
-		<element type="iDepletionRand" minOccurs="0"/>
 		<!--Afforess-->
 		<element type="bFreshWaterMakesValid" minOccurs="0"/>
 		<element type="bRiverSideMakesValid" minOccurs="0"/>

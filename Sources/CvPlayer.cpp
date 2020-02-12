@@ -10206,16 +10206,6 @@ bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra, b
 		}
 	}
 
-	if (pPlot != NULL)
-	{
-		if (pPlot->isDepletedMine())
-		{
-			if (kBuild.isMine())
-			{
-				return false;
-			}
-		}
-	}
 	if (kBuild.isDisabled())
 	{
 		return false;

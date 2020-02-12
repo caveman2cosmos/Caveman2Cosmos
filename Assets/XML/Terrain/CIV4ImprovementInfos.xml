@@ -1075,30 +1075,6 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo>
-		<!-- Depleted Mine -->
-		<ImprovementInfo>
-			<Type>IMPROVEMENT_DEPLETED_MINE</Type>
-			<Description>TXT_KEY_IMPROVEMENT_DEPLETED_MINE</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_DEPLETED_MINE_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_DEPLETED_MINE</ArtDefineTag>
-			<YieldChanges>
-				<iYieldChange>-1</iYieldChange>
-				<iYieldChange>-1</iYieldChange>
-				<iYieldChange>-1</iYieldChange>
-			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
-			<bDepletedMine>1</bDepletedMine>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-					<RelationType>RELATION_NEAR</RelationType>
-					<iDistance>1</iDistance>
-					<iAmountPerTurn>1</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
-		</ImprovementInfo>
 		<!-- Workshop -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_WORKSHOP</Type>
@@ -11720,7 +11696,6 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 			<iAirBombDefense>10</iAirBombDefense>
 			<iHealthPercent>-50</iHealthPercent>
 			<iPillageGold>40</iPillageGold>
-			<iDepletionRand>1000</iDepletionRand>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_ROCKY</TerrainType>

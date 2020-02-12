@@ -17266,8 +17266,6 @@ m_paImprovementBonus(NULL)
 /************************************************************************************************/
 ,m_bPeakMakesValid(false)
 ,m_iHealthPercent(0)
-,m_bDepletedMine(false)
-,m_iDepletionRand(0)
 ,m_iPrereqTech(NO_TECH)
 //,m_ppiTraitYieldChanges(NULL)
 /************************************************************************************************/
@@ -17776,21 +17774,11 @@ int CvImprovementInfo::getHealthPercent() const
 	return m_iHealthPercent;
 }
 
-bool CvImprovementInfo::isDepletedMine() const
-{
-	return m_bDepletedMine;
-}
-
 int CvImprovementInfo::getImprovementBonusDepletionRand(int i) const
 {
 	FAssertMsg(i < GC.getNumBonusInfos(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 	return m_paImprovementBonus[i].m_iDepletionRand;
-}
-
-int CvImprovementInfo::getDepletionRand() const
-{
-	return m_iDepletionRand;
 }
 
 int CvImprovementInfo::getPrereqTech() const
@@ -17994,7 +17982,6 @@ void CvImprovementInfo::getCheckSum(unsigned int &iSum)
 
 	CheckSum(iSum, m_iHealthPercent);
 	CheckSum(iSum, m_bPeakMakesValid);
-	CheckSum(iSum, m_bDepletedMine);
 	CheckSum(iSum, m_iDepletionRand);
 	CheckSum(iSum, m_iPrereqTech);
 
@@ -18241,7 +18228,6 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iHealthPercent, L"iHealthPercent");
 	m_iHealthPercent += iHealth * 100;
 	pXML->GetOptionalChildXmlValByName(&m_bPeakMakesValid, L"bPeakMakesValid");
-	pXML->GetOptionalChildXmlValByName(&m_bDepletedMine, L"bDepletedMine");
 	pXML->GetOptionalChildXmlValByName(&m_iDepletionRand, L"iDepletionRand");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqTech");
@@ -18540,7 +18526,6 @@ void CvImprovementInfo::copyNonDefaults(CvImprovementInfo* pClassInfo, CvXMLLoad
 /*																							  */
 /************************************************************************************************/
 	if (isPeakMakesValid() == bDefault) m_bPeakMakesValid = pClassInfo->isPeakMakesValid();
-	if (isDepletedMine() == bDefault) m_bDepletedMine = pClassInfo->isDepletedMine();
 	if (getHealthPercent() == iDefault) m_iHealthPercent = pClassInfo->getHealthPercent();
 	if (getPrereqTech() == NO_TECH) m_iPrereqTech = pClassInfo->getPrereqTech();
 
