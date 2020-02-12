@@ -20347,7 +20347,7 @@ void CvPlayerAI::AI_doCommerce()
 		{
 			setCommercePercent(COMMERCE_ESPIONAGE, 0);
 
-			for (int iTeam = 0; iTeam < MAX_CIV_TEAMS; ++iTeam)
+			for (int iTeam = 0; iTeam < MAX_PC_TEAMS; ++iTeam)
 			{
 				setEspionageSpendingWeightAgainstTeam((TeamTypes)iTeam, 0);
 			}
@@ -20481,32 +20481,6 @@ void CvPlayerAI::AI_doCommerce()
 /* 																			    */
 /* 	Espionage AI															    */
 /********************************************************************************/
-		// original BTS code
-		/*
-		int iEspionageTargetRate = 0;
-		//TSHEEP Additional variables for targetting tech leader
-		int iTechTeam = MAX_CIV_TEAMS;
-		int iTechScore = 0;
-		int iTechHighScore = 0;
-		//TSHEEP End
-
-		for (int iTeam = 0; iTeam < MAX_CIV_TEAMS; ++iTeam)
-		{
-			CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iTeam);
-			if (kLoopTeam.isAlive() && iTeam != getTeam() && !kLoopTeam.isVassal(getTeam()) && !GET_TEAM(getTeam()).isVassal((TeamTypes)iTeam))
-			{
-				int iTarget = (kLoopTeam.getEspionagePointsAgainstTeam(getTeam()) - GET_TEAM(getTeam()).getEspionagePointsAgainstTeam((TeamTypes)iTeam)) / 8;
-
-				iTarget -= GET_TEAM(getTeam()).AI_getAttitudeVal((TeamTypes)iTeam);
-
-				if (iTarget > 0)
-				{
-					iEspionageTargetRate += iTarget;
-					changeEspionageSpendingWeightAgainstTeam((TeamTypes)iTeam, iTarget);
-				}
-			}
-		}
-		*/
 
 		int iEspionageTargetRate = 0;
 		int* piTarget = new int[MAX_PC_TEAMS];

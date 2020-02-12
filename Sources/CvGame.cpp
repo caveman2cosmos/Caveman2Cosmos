@@ -3524,7 +3524,7 @@ int CvGame::countHumanPlayersAlive() const
 /* Allow humans to control barbs                                                                */
 /************************************************************************************************/
 /* original code
-	for (int iI = 0; iI < MAX_CIV_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 */
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 /************************************************************************************************/
