@@ -2938,7 +2938,6 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 	PlayerTypes eOldOwner;
 	PlayerTypes eOriginalOwner;
 	PlayerTypes eHighestCulturePlayer;
-	BuildingTypes eBuilding;
 	bool bRecapture;
 	bool bRaze;
 	bool bGift;
@@ -3381,18 +3380,10 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 	pNewCity->setNeverLost(false);
 	pNewCity->changeDefenseDamage(iDamage);
 
-/************************************************************************************************/
-/* Afforess	                  Start		 01/12/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	if (iCiv != NO_CIVILIZATION)
     {
         pNewCity->setCivilizationType(iCiv);
     }
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 /************************************************************************************************/
 /* REVOLUTION_MOD                         01/01/08                                jdog5000      */
@@ -3416,46 +3407,23 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		int iNum = 0;
-
 		if (paiNumRealBuilding[iI] > 0)
 		{
-			BuildingClassTypes eBuildingClass = (BuildingClassTypes)GC.getBuildingInfo((BuildingTypes)iI).getBuildingClassType();
-/************************************************************************************************/
-/* Afforess	                  Start		 02/03/10                                              */
-/*                                                                                              */
-/*   Assimilation Bug Fix                                                                       */
-/************************************************************************************************/
-			if ((::isWorldWonderClass(eBuildingClass)) || (GC.getGameINLINE().isOption(GAMEOPTION_ASSIMILATION)))
+			int iNum = 0;
+			if (bTrade || !(GC.getBuildingInfo((BuildingTypes)iI).isNeverCapture()))
 			{
-				eBuilding = (BuildingTypes)iI;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-			}
-			else
-			{
-				eBuilding = (BuildingTypes)kCivilizationInfo.getCivilizationBuildings(eBuildingClass);
-			}
-
-			if (eBuilding != NO_BUILDING)
-			{
-				if (bTrade || !(GC.getBuildingInfo((BuildingTypes)iI).isNeverCapture()))
+				if (!isProductionMaxedBuildingClass(((BuildingClassTypes)(GC.getBuildingInfo((BuildingTypes)iI).getBuildingClassType())), true))
 				{
-					if (!isProductionMaxedBuildingClass(((BuildingClassTypes)(GC.getBuildingInfo(eBuilding).getBuildingClassType())), true))
+					if (pNewCity->isValidBuildingLocation((BuildingTypes)iI))
 					{
-						if (pNewCity->isValidBuildingLocation(eBuilding))
+						if (!bConquest || bRecapture || GC.getGameINLINE().getSorenRandNum(100, "Capture Probability") < GC.getBuildingInfo((BuildingTypes)iI).getConquestProbability())
 						{
-							if (!bConquest || bRecapture || GC.getGameINLINE().getSorenRandNum(100, "Capture Probability") < GC.getBuildingInfo((BuildingTypes)iI).getConquestProbability())
-							{
-								iNum += paiNumRealBuilding[iI];
-							}
+							iNum += paiNumRealBuilding[iI];
 						}
 					}
 				}
-
-				pNewCity->setNumRealBuildingTimed(eBuilding, std::min(pNewCity->getNumRealBuilding(eBuilding) + iNum, GC.getCITY_MAX_NUM_BUILDINGS()), false, ((PlayerTypes)(paiBuildingOriginalOwner[iI])), paiBuildingOriginalTime[iI]);
 			}
+			pNewCity->setNumRealBuildingTimed((BuildingTypes)iI, std::min(pNewCity->getNumRealBuilding((BuildingTypes)iI) + iNum, GC.getCITY_MAX_NUM_BUILDINGS()), false, ((PlayerTypes)(paiBuildingOriginalOwner[iI])), paiBuildingOriginalTime[iI]);
 		}
 	}
 
@@ -3572,18 +3540,11 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 		GC.getMapINLINE().verifyUnitValidPlot();
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 02/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	if (iOccupationRange > 0)
 	{
 		pNewCity->setOccupationCultureLevel((CultureLevelTypes)iOccupationRange);
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	pNewCity->checkBuildings(true, true, true, true, true, false);
 
@@ -9132,14 +9093,6 @@ bool CvPlayer::canConstructInternal(BuildingTypes eBuilding, bool bContinue, boo
 	if (currentTeam.isObsoleteBuilding(eBuilding))
 	{
 		return false;
-	}
-
-	if (!GC.getGameINLINE().isOption(GAMEOPTION_ASSIMILATION))
-	{
-        if (GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuildings(eBuildingClass) != eBuilding)
-        {
-            return false;
-        }
 	}
 
 	if (GC.getGameINLINE().isBuildingClassMaxedOut(eBuildingClass))

@@ -132,23 +132,6 @@
 		<German>Wilde Tiere können niemals die kulturellen Grenzen einer Nation überschreiten.</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_ASSIMILATION</Tag>
-		<English>Assimilation</English>
-		<German>Assimilierung</German>
-		<Italian>Assimilazione</Italian>
-		<Spanish>Asimilación</Spanish>
-		<Polish>Asymilacja</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_ASSIMILATION_HELP</Tag>
-		<English>Captured cities retain their original civilization, so they can build that Civ's UU's and Unique Buildings.</English>
-		<French>Les Villes Capturées gardent leur civilisation d'origine, et peuvent ainsi toujours construire les bâtiments et unités uniques.</French>
-		<German>Eroberte Städte behalten ihre ursprüngliche Zivilisation, so dass sie Spezialeinheiten und -gebäude dieser Zivilisation errichten können.</German>
-		<Italian>Le città catturate mantengono la propria etnia, così possono costruire unità ed edifici unici di quella civiltà.</Italian>
-		<Spanish>Las ciudades capturadas retienen su cultura original, por tanto podrán construir los edificios y unidades únicas de esa civilización.</Spanish>
-		<Polish>Przejęte miasta będą chciały zatrzymać swoją oryginalną cywilizację, będziesz mógł budować w tym mieście unikalne budynki i jednostki od tej cywilizacji.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_ALWAYS_RAZE</Tag>
 		<English>Barbarians Always Raze</English>
 		<French>Barbares Rasent les Villes</French>

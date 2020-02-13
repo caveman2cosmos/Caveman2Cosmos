@@ -257,13 +257,6 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_ASSIMILATION</Type>
-			<Description>TXT_KEY_GAMEOPTION_ASSIMILATION</Description>
-			<Help>TXT_KEY_GAMEOPTION_ASSIMILATION_HELP</Help>
-			<bDefault>1</bDefault>
-			<bVisible>0</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
 			<Type>GAMEOPTION_CHALLENGE_CUT_LOSERS</Type>
 			<Description>TXT_KEY_GAMEOPTION_CHALLENGE_CUT_LOSERS</Description>
 			<Help>TXT_KEY_GAMEOPTION_CHALLENGE_CUT_LOSERS_HELP</Help>

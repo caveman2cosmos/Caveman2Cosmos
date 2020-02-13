@@ -3047,15 +3047,11 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 		}
 	}
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_ASSIMILATION))
+	if (GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits((UnitClassTypes)(kUnit.getUnitClassType())) != eUnit)
 	{
-		UnitClassTypes eUnitClass = ((UnitClassTypes)(kUnit.getUnitClassType()));
-
-		if (GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(eUnitClass) != eUnit)
-		{
-			return false;
-		}
+		return false;
 	}
+
 	if (kUnit.getPrereqVicinityBonus() != NO_BONUS && !hasVicinityBonus((BonusTypes)kUnit.getPrereqVicinityBonus()))
 	{
 		return false;
@@ -3467,11 +3463,7 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 	{
 		return false;
 	}
-	/************************************************************************************************/
-	/* Afforess	                  Start		 05/20/10                                               */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
+
 	if (!bIgnoreAmount)
 	{
 		if (getNumBuilding(eBuilding) >= GC.getCITY_MAX_NUM_BUILDINGS())
@@ -3484,18 +3476,10 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 		return false;
 	}
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_ASSIMILATION))
+	if (kCivilization.getCivilizationBuildings((BuildingClassTypes)(GC.getBuildingInfo(eBuilding).getBuildingClassType())) != eBuilding)
 	{
-		BuildingClassTypes eBuildingClass = ((BuildingClassTypes)(GC.getBuildingInfo(eBuilding).getBuildingClassType()));
-		if (kCivilization.getCivilizationBuildings(eBuildingClass) != eBuilding)
-		{
-			return false;
-		}
+		return false;
 	}
-
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
 
 	if (!bExposed)
 	{
@@ -6796,19 +6780,11 @@ HandicapTypes CvCity::getHandicapType() const
 
 CivilizationTypes CvCity::getCivilizationType() const
 {
-	/************************************************************************************************/
-	/* Afforess	                  Start		 01/14/10                                               */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-	if (!GC.getGameINLINE().isOption(GAMEOPTION_ASSIMILATION) || m_iCiv == NO_CIVILIZATION)
+	if (m_iCiv == NO_CIVILIZATION)
 	{
 		return GET_PLAYER(getOwnerINLINE()).getCivilizationType();
 	}
 	return (CivilizationTypes)m_iCiv;
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
 }
 
 
@@ -6820,22 +6796,10 @@ LeaderHeadTypes CvCity::getPersonalityType() const
 
 ArtStyleTypes CvCity::getArtStyleType() const
 {
-	/************************************************************************************************/
-	/* Afforess	                  Start		 07/12/10                                               */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-	if (GC.getGameINLINE().isOption(GAMEOPTION_ASSIMILATION))
+	if (getOriginalOwner() != NO_PLAYER)
 	{
-		if (getOriginalOwner() != NO_PLAYER)
-		{
-			return GET_PLAYER(getOriginalOwner()).getArtStyleType();
-		}
+		return GET_PLAYER(getOriginalOwner()).getArtStyleType();
 	}
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
-
 	return GET_PLAYER(getOwnerINLINE()).getArtStyleType();
 }
 
