@@ -621,24 +621,6 @@
 		<Polish>Jednostki potrzebują dwa razy więcej XP na poziom.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_MOUNTAINS</Tag>
-		<English>Usable Mountains</English>
-		<French>Utilisation des Montagnes</French>
-		<German>Nutzbare Gebirge</German>
-		<Italian>Montagne lavorabili</Italian>
-		<Spanish>Montañas utilizables</Spanish>
-		<Polish>Eksploatacja gór</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_MOUNTAINS_HELP</Tag>
-		<English>The Mountains Mod makes it so that mountains are no longer impassable, can have some resources, and can be worked by a city, like all other tiles.</English>
-		<French>Le Mod 'Montagnes' rend les montagnes franchissables, elle peuvent également abriter des ressources, être exploitées dans la ville, comme les autres cases.</French>
-		<German>Die Gebirge-Modifikation bewirkt, dass Gebirge nicht mehr unpassierbar sind, einige Ressourcen besitzen können und von einer Stadt wie alle anderen Geländefelder bewirtschaftet werden können.</German>
-		<Italian>Il Mountains Mod fa alcune modifiche: le montagne possono essere attraversate, possono avere delle risorse e possono essere lavorate dalle città, allo stesso modo delle altre caselle.</Italian>
-		<Spanish>El mod de Montañas (Mountains) hace que los Picos dejen de ser infranqueables, puedan tener ciertos recursos, y puedan ser trabajados por una ciudad, al igual que las demás casillas.</Spanish>
-		<Polish>Mountains Mod powoduje że góry nie są już niedostępne, mogą posiadać pewne surowce, może na nich znajdować się miasto - tak jak na innych polach.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NEANDERTHAL_CITIES</Tag>
 		<English>Neanderthal Cities</English>
 		<French>Villes Néanderthal</French>
