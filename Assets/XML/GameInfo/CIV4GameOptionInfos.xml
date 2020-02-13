@@ -257,13 +257,6 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_BARBARIAN_GENERALS</Type>
-			<Description>TXT_KEY_GAMEOPTION_BARBARIAN_GENERALS</Description>
-			<Help>TXT_KEY_GAMEOPTION_BARBARIAN_GENERALS_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>0</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
 			<Type>GAMEOPTION_NO_ZOC</Type>
 			<Description>TXT_KEY_GAMEOPTION_NO_ZOC</Description>
 			<Help>TXT_KEY_GAMEOPTION_NO_ZOC_HELP</Help>
@@ -626,13 +619,6 @@
 					<bEnforcesGameOptionOn>1</bEnforcesGameOptionOn>
  				</EnforcesGameOptionOnType>
  			</EnforcesGameOptionOnTypes>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_ECOLOGICAL_ANIMALS</Type>
-			<Description>TXT_KEY_GAMEOPTION_ECOLOGICAL_ANIMALS</Description>
-			<Help>TXT_KEY_GAMEOPTION_ECOLOGICAL_ANIMALS_HELP</Help>
-			<bDefault>1</bDefault>
-			<bVisible>0</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_TELEPORT_HUNTING_AWARDS</Type>

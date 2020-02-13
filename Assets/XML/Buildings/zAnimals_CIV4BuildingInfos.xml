@@ -1663,7 +1663,6 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuildingClass>
 			</PrereqNotBuildingClasses>
-			<PrereqGameOption>GAMEOPTION_ECOLOGICAL_ANIMALS</PrereqGameOption>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_TARANTULA_MYTH_EFFECT</BuildingClass>
@@ -1678,7 +1677,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqGameOption>GAMEOPTION_ECOLOGICAL_ANIMALS</PrereqGameOption>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_TARANTULA_STORY</BuildingClass>
@@ -1726,7 +1724,6 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<PrereqGameOption>GAMEOPTION_ECOLOGICAL_ANIMALS</PrereqGameOption>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_TARANTULA_STORIES</BuildingClass>
@@ -1775,7 +1772,6 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<PrereqGameOption>GAMEOPTION_ECOLOGICAL_ANIMALS</PrereqGameOption>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_TARANTULA_STORIES_EFFECT</BuildingClass>
@@ -1807,7 +1803,6 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<PrereqGameOption>GAMEOPTION_ECOLOGICAL_ANIMALS</PrereqGameOption>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_TUNA_MYTH</BuildingClass>

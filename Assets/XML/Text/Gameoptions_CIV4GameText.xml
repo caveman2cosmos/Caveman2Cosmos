@@ -167,24 +167,6 @@
 		<Polish>Barbarzyńcy nie mogą przejąć miasta więc za każdym razem je burzą.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_GENERALS</Tag>
-		<English>Barbarian Generals</English>
-		<French>Généraux Barbares</French>
-		<German>Barbarengeneräle</German>
-		<Italian>Generali barbari</Italian>
-		<Spanish>Generales bárbaros</Spanish>
-		<Polish>Barbarzyńscy Generałowie</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_GENERALS_HELP</Tag>
-		<English>Enables XP and Great Generals from Barbarian Combat, but be warned, the Barbarians can receive Great Generals now too!</English>
-		<French>Permet de l'expérience et des Grands Généraux lors des combat contre les Barbares. Mais attention, les Barbares pourront avoir des Généraux également!</French>
-		<German>Erfahrungspunkte und Große Generäle gibt es auch für Kämpfe mit Barbaren. Eine Warnung aber vorweg: Die Barbaren können nun ebenfalls Große Generäle erhalten!</German>
-		<Italian>Permette XP e grandi generali dai combattimenti con i barbari, ma fa attenzione: anche i barbari possono ora ricevere i grandi generali!</Italian>
-		<Spanish>Activa la obtención de experiencia y Grandes generales del combate con bárbaros, pero atención, ¡los bárbaros también podrán recibir Grandes Generales!</Spanish>
-		<Polish>Umożliwia otrzymywanie doświadczenia oraz wielkich generałów od walk z barbarzyńcami, ale uważaj barbarzyńcy również mogą otrzymać Wielkich Generałów.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_WORLD</Tag>
 		<English>Barbarian World</English>
 		<French>Monde Barbare</French>
@@ -366,16 +348,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_DOWNSIZING_IS_PROFITABLE_HELP</Tag>
 		<English>Get gold from disbanding units.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_ECOLOGICAL_ANIMALS</Tag>
-		<English>Ecological Animals</English>
-		<German>Ökologische Tiere</German>
-		<French>Animaux écologiques</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_ECOLOGICAL_ANIMALS_HELP</Tag>
-		<English>UNUSED</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_EQUIPMENT</Tag>

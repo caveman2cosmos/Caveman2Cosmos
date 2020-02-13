@@ -21504,7 +21504,6 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
-			<PrereqGameOption>GAMEOPTION_ECOLOGICAL_ANIMALS</PrereqGameOption>
 			<KillOutcomes>
 				<Outcome>
 					<OutcomeType>OUTCOME_SUBDUE</OutcomeType>
@@ -21601,7 +21600,6 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
-			<PrereqGameOption>GAMEOPTION_ECOLOGICAL_ANIMALS</PrereqGameOption>
 			<KillOutcomes>
 				<Outcome>
 					<OutcomeType>OUTCOME_SUBDUE</OutcomeType>
