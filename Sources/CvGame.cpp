@@ -410,9 +410,9 @@ void CvGame::init(HandicapTypes eHandicap)
 
 	for (int iI = MAX_PC_PLAYERS; iI < MAX_PLAYERS; iI++)
 	{
-		FAssertMsg(!GET_PLAYER(ePlayer).isAlive(), "NPC is not expected to be alive at this point of the game initialization.");
-
 		PlayerTypes ePlayer = (PlayerTypes)iI;
+
+		FAssertMsg(!GET_PLAYER(ePlayer).isAlive(), "NPC is not expected to be alive at this point of the game initialization.");
 
 		if (ePlayer == BARBARIAN_PLAYER)
 		{
