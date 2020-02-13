@@ -13663,22 +13663,6 @@
 		<Polish>Tubylcza Kultura (Blisko-Wschodnia)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_BARBARIAN</Tag>
-		<English>Native Culture (Barbarian)</English>
-		<French>Culture d'origine (Barbare)</French>
-		<German>
-			<Text>Kulturursprung Barbar:Kulturursprungs Barbar:Kulturursprung Barbar:Kulturursprung Barbar</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Cultura d'origine (Barbarica)</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Tubylcza Kultura (Barbarzyńska)</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GOOD_AFRICAN</Tag>
 		<English>Culture (African)</English>
 		<French>

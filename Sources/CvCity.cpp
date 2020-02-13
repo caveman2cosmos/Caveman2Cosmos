@@ -1944,27 +1944,6 @@ void CvCity::doTurn()
 	}
 	//TB Combat Mod (Buildings) end
 
-	if (!isDisorder())
-	{
-		/************************************************************************************************/
-		/* JOOYO_ADDON, Added by Jooyo, 06/17/09                                                        */
-		/*                                                                                              */
-		/*                                                                                              */
-		/************************************************************************************************/
-		for (int iI = 0; iI < getNumCityPlots(); iI++)
-			/************************************************************************************************/
-			/* JOOYO_ADDON                          END                                                     */
-			/************************************************************************************************/
-		{
-			CvPlot* pLoopPlot = getCityIndexPlot(iI);
-
-			if (pLoopPlot != NULL && pLoopPlot->getWorkingCity() == this && pLoopPlot->isBeingWorked())
-			{
-				pLoopPlot->doImprovement();
-			}
-		}
-	}
-
 	if (getCultureUpdateTimer() > 0)
 	{
 		changeCultureUpdateTimer(-1);
@@ -2111,22 +2090,24 @@ void CvCity::doTurn()
 			iCount += getTradeYield((YieldTypes)iI);
 			iCount += getCorporationYield((YieldTypes)iI);
 
-			//			FAssert(iCount == getBaseYieldRate((YieldTypes)iI));
+			//FAssert(iCount == getBaseYieldRate((YieldTypes)iI));
 		}
 
+/*
 		for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 		{
-			//	FAssert(getBuildingCommerce((CommerceTypes)iI) >= 0);
-			//	FAssert(getSpecialistCommerce((CommerceTypes)iI) >= 0);
-			//	FAssert(getReligionCommerce((CommerceTypes)iI) >= 0);
-			//	FAssert(getCorporationCommerce((CommerceTypes)iI) >= 0);
-			//	FAssert(GET_PLAYER(getOwnerINLINE()).getFreeCityCommerce((CommerceTypes)iI) >= 0);
+			FAssert(getBuildingCommerce((CommerceTypes)iI) >= 0);
+			FAssert(getSpecialistCommerce((CommerceTypes)iI) >= 0);
+			FAssert(getReligionCommerce((CommerceTypes)iI) >= 0);
+			FAssert(getCorporationCommerce((CommerceTypes)iI) >= 0);
+			FAssert(GET_PLAYER(getOwnerINLINE()).getFreeCityCommerce((CommerceTypes)iI) >= 0);
 		}
 
 		for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 		{
-			//	FAssert(isNoBonus((BonusTypes)iI) || getNumBonuses((BonusTypes)iI) >= ((isConnectedToCapital()) ? (GET_PLAYER(getOwnerINLINE()).getBonusImport((BonusTypes)iI) - GET_PLAYER(getOwnerINLINE()).getBonusExport((BonusTypes)iI)) : 0));
+			FAssert(isNoBonus((BonusTypes)iI) || getNumBonuses((BonusTypes)iI) >= ((isConnectedToCapital()) ? (GET_PLAYER(getOwnerINLINE()).getBonusImport((BonusTypes)iI) - GET_PLAYER(getOwnerINLINE()).getBonusExport((BonusTypes)iI)) : 0));
 		}
+*/
 	}
 #endif
 	// XXX
@@ -6980,34 +6961,21 @@ bool CvCity::isHeadquarters() const
 
 int CvCity::getOvercrowdingPercentAnger(int iExtra) const
 {
-	int iOvercrowding;
-	int iAnger;
-
-	iAnger = 0;
-
-	iOvercrowding = (getPopulation() + iExtra);
-
-	if (iOvercrowding > 0)
+	if (getPopulation() + iExtra > 0)
 	{
-		iAnger += (((iOvercrowding * GC.getPERCENT_ANGER_DIVISOR()) / std::max(1, (getPopulation() + iExtra))) + 1);
+		return GC.getPERCENT_ANGER_DIVISOR();
 	}
-
-	return iAnger;
+	return 0;
 }
 
 
 int CvCity::getNoMilitaryPercentAnger() const
 {
-	int iAnger;
-
-	iAnger = 0;
-
 	if (getMilitaryHappinessUnits() == 0)
 	{
-		iAnger += GC.getDefineINT("NO_MILITARY_PERCENT_ANGER");
+		return GC.getDefineINT("NO_MILITARY_PERCENT_ANGER");
 	}
-
-	return iAnger;
+	return 0;
 }
 
 
@@ -10712,10 +10680,8 @@ int CvCity::getAdditionalHappinessByCivic(CivicTypes eCivic, bool bDifferenceToC
 		iHappy += iMilitaryHappinessUnits * kCivic.getHappyPerMilitaryUnit();
 	}
 
-
 	//#1.b: CivicPercentAnger and WarWearinessModifier
-	if ((kCivic.getCivicPercentAnger() != 0 && kOwner.getCivicPercentAnger(eCivic, true) != 0)
-		|| (kCivic.getWarWearinessModifier() != 0 && kOwner.getWarWearinessPercentAnger() != 0))
+	if (kCivic.getCivicPercentAnger() != 0 || kCivic.getWarWearinessModifier() != 0 && kOwner.getWarWearinessPercentAnger() != 0)
 	{
 		//int CvCity::unhappyLevel(int iExtra) const
 		int iAngerPercent = 0;
@@ -10745,11 +10711,11 @@ int CvCity::getAdditionalHappinessByCivic(CivicTypes eCivic, bool bDifferenceToC
 
 		for (int iI = 0; iI < GC.getNumCivicInfos(); iI++)
 		{
-			iAngerPercent += kOwner.getCivicPercentAnger((CivicTypes)iI, ((CivicTypes)iI == eCivic || (!bCivicOptionVacuum && (CivicTypes)iI == kOwner.getCivics((CivicOptionTypes)(kCivic.getCivicOptionType())))));
+			iAngerPercent += kOwner.getCivicPercentAnger((CivicTypes)iI);
 		}
 
 		int iUnhappinessNow = ((iAngerPercent * (getPopulation() + iExtraPop)) / GC.getPERCENT_ANGER_DIVISOR());
-		iAngerPercent -= kOwner.getCivicPercentAnger(eCivic, true);
+		iAngerPercent -= kOwner.getCivicPercentAnger(eCivic);
 
 		if (kOwner.getWarWearinessPercentAnger() != 0 && kCivic.getWarWearinessModifier() != 0)
 		{
