@@ -19958,28 +19958,12 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiNumFreeBuilding);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiNumFreeAreaBuilding);
 
-	// @SAVEBREAK DELETE 8/7/2018
-	// Delete this section at the next save break.
-	// Legacy for FreeTradeRegionBuilding.
-	{
-		// It has to be called m_paiNumFreeTradeRegionBuilding or the read code macro doesn't work!
-		int* m_paiNumFreeTradeRegionBuilding = new int[GC.getNumBuildingInfos()];
-		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiNumFreeTradeRegionBuilding);
-		SAFE_DELETE_ARRAY(m_paiNumFreeTradeRegionBuilding);
-	}
-	// SAVEBREAK@
-
 	WRAPPER_READ(wrapper, "CvCity", &m_bHasCalculatedBuildingReplacement);
 
 	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_CITY_PLOTS, m_pabWorkingPlot);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_RELIGIONS, GC.getNumReligionInfos(), m_pabHasReligion);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_CORPORATIONS, GC.getNumCorporationInfos(), m_pabHasCorporation);
 
-	/************************************************************************************************/
-	/* Afforess	                  Start		 12/7/09                                                */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
 	WRAPPER_READ(wrapper, "CvCity", &m_iImprovementGoodHealth);
 	WRAPPER_READ(wrapper, "CvCity", &m_iImprovementBadHealth);
 	WRAPPER_READ(wrapper, "CvCity", &m_iSpecialistGoodHealth);
@@ -20055,13 +20039,6 @@ void CvCity::read(FDataStreamBase* pStream)
 		kChange.read(pStream);
 		m_aBuildingYieldModifier.push_back(kChange);
 	}
-	/*	for (iI=0;iI<GC.getNumImprovementInfos();iI++)
-		{
-			WRAPPER_READ(wrapper, "CvCity", NUM_YIELD_TYPES, m_ppaaiImprovementYieldChange[iI]);
-		}
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
 
 	int iAllowedMaxTradeRoutes = GC.getDefineINT("MAX_TRADE_ROUTES") + GET_PLAYER(getOwnerINLINE()).getMaxTradeRoutesAdjustment();
 	int iMaxTradeRoutes = iAllowedMaxTradeRoutes;
@@ -20081,109 +20058,45 @@ void CvCity::read(FDataStreamBase* pStream)
 	bool bOrdersHaveContractInfo = false;
 	WRAPPER_READ(wrapper, "CvCity", &bOrdersHaveContractInfo);
 
-	// @SAVEBREAK DELETE [12/22/2019 billw]
-	// Delete this code at the next save break.
-	// Replacing old order queue
-	bool bNewOrderQueueFormat = false;
-	WRAPPER_READ(wrapper, "CvCity", &bNewOrderQueueFormat);
-	if (bNewOrderQueueFormat)
-	// SAVEBREAK@
+	int orderQueueSize = 0;
+	WRAPPER_READ(wrapper, "CvCity", &orderQueueSize);
+	m_orderQueue.clear();
+	for (int orderQueueIndex = 0; orderQueueIndex < orderQueueSize; ++orderQueueIndex)
 	{
-		int orderQueueSize = 0;
-		WRAPPER_READ(wrapper, "CvCity", &orderQueueSize);
-		m_orderQueue.clear();
-		for (int orderQueueIndex = 0; orderQueueIndex < orderQueueSize; ++orderQueueIndex)
+		OrderData orderData;
+		WRAPPER_READ_ARRAY_DECORATED(wrapper, "CvCity", sizeof(OrderData), (byte*)&orderData, "OrderData");
+		bool bDeleteNode = false;
+		switch (orderData.eOrderType)
 		{
-			OrderData orderData;
-			WRAPPER_READ_ARRAY_DECORATED(wrapper, "CvCity", sizeof(OrderData), (byte*)&orderData, "OrderData");
-			bool bDeleteNode = false;
-			switch (orderData.eOrderType)
+		case ORDER_TRAIN: {
+			orderData.setUnitType(static_cast<UnitTypes>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_UNITS, orderData.getUnitType(), true)));
+			bDeleteNode = (orderData.getUnitType() == NO_UNIT);
+			if (!bDeleteNode && orderData.getUnitAIType() == static_cast<UnitAITypes>(0xFF))
 			{
-			case ORDER_TRAIN: {
-				orderData.setUnitType(static_cast<UnitTypes>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_UNITS, orderData.getUnitType(), true)));
-				bDeleteNode = (orderData.getUnitType() == NO_UNIT);
-				if (!bDeleteNode && orderData.getUnitAIType() == static_cast<UnitAITypes>(0xFF))
-				{
-					orderData.unit.AIType = static_cast<UnitAITypes>(GC.getUnitInfo(orderData.getUnitType()).getDefaultUnitAIType());
-				}
-				break;
-			};
-			case ORDER_CONSTRUCT: {
-				orderData.setBuildingType(static_cast<BuildingTypes>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDINGS, orderData.getBuildingType(), true)));
-				bDeleteNode = (orderData.getBuildingType() == NO_BUILDING);
-				break;
-			};
-			case ORDER_CREATE: {
-				orderData.setProjectType(static_cast<ProjectTypes>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_PROJECTS, orderData.getProjectType(), true)));
-				bDeleteNode = (orderData.getProjectType() == NO_PROJECT);
-				break;
-			};
-			case ORDER_MAINTAIN:
-			case ORDER_LIST:
-			default:
-				break;
-			};
-			if (!bDeleteNode)
-			{
-				m_orderQueue.push_back(orderData);
+				orderData.unit.AIType = static_cast<UnitAITypes>(GC.getUnitInfo(orderData.getUnitType()).getDefaultUnitAIType());
 			}
+			break;
+		};
+		case ORDER_CONSTRUCT: {
+			orderData.setBuildingType(static_cast<BuildingTypes>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDINGS, orderData.getBuildingType(), true)));
+			bDeleteNode = (orderData.getBuildingType() == NO_BUILDING);
+			break;
+		};
+		case ORDER_CREATE: {
+			orderData.setProjectType(static_cast<ProjectTypes>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_PROJECTS, orderData.getProjectType(), true)));
+			bDeleteNode = (orderData.getProjectType() == NO_PROJECT);
+			break;
+		};
+		case ORDER_MAINTAIN:
+		case ORDER_LIST:
+		default:
+			break;
+		};
+		if (!bDeleteNode)
+		{
+			m_orderQueue.push_back(orderData);
 		}
 	}
-	// @SAVEBREAK DELETE [12/22/2019 billw]
-	// Delete this code at the next save break.
-	// Replacing old order queue
-	else
-	{
-		CLinkList<OrderData> orderQueue;
-		orderQueue.Read(pStream);
-
-		//	The order queue itself is not a streamable type so is serialized in raw
-		//	binary image, which means we need to do some explicit translation on load
-		//	if we are using the tagged format
-		if (wrapper.isUsingTaggedFormat())
-		{
-			CLLNode<OrderData>* pNode = orderQueue.head();
-			while (pNode != NULL)
-			{
-				bool bDeleteNode = false;
-
-				switch (pNode->m_data.eOrderType)
-				{
-				case ORDER_TRAIN:
-				{
-					int eUnit = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_UNITS, EXTERNAL_ORDER_IDATA(pNode->m_data.iData1), true);
-
-					bDeleteNode = (eUnit == -1);
-					pNode->m_data.iData1 = PACK_INTERNAL_ORDER_IDATA(eUnit,
-						bOrdersHaveContractInfo ? INTERNAL_AUXILIARY_ORDER_IDATA(pNode->m_data.iData1) : 0xFFFF);
-				}
-				break;
-				case ORDER_CONSTRUCT:
-					bDeleteNode = ((pNode->m_data.iData1 = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDINGS, pNode->m_data.iData1, true)) == -1);
-					break;
-				case ORDER_CREATE:
-					bDeleteNode = ((pNode->m_data.iData1 = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_PROJECTS, pNode->m_data.iData1, true)) == -1);
-					break;
-				case ORDER_MAINTAIN:
-				case ORDER_LIST:
-					break;
-				default:
-					break;
-				}
-
-				if (bDeleteNode)
-				{
-					pNode = orderQueue.deleteNode(pNode);
-				}
-				else
-				{
-					m_orderQueue.push_back(pNode->m_data);
-					pNode = orderQueue.next(pNode);
-				}
-			}
-		}
-	}
-	// SAVEBREAK@
 
 	WRAPPER_READ(wrapper, "CvCity", &m_iPopulationRank);
 	WRAPPER_READ(wrapper, "CvCity", &m_bPopulationRankValid);
@@ -20258,15 +20171,11 @@ void CvCity::read(FDataStreamBase* pStream)
 	m_BuildingList.setPlayerToOwner();
 	m_UnitList.setPlayerToOwner();
 
-	/************************************************************************************************/
-	/* phunny_pharmer             Start		 05/01/10                                               */
-	/*   clear the culture distance cache (note that it is not saved in the .sav file)              */
-	/************************************************************************************************/
+	// phunny_pharmer:
+	// clear the culture distance cache (note that it is not saved in the .sav file)
 	clearCultureDistanceCache();
-	/************************************************************************************************/
-	/* phunny_pharmer             END                                                               */
-	/************************************************************************************************/
-		//TB Combat Mod (Buildings) begin
+
+	//TB Combat Mod (Buildings) begin
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_iAidRate, SAVE_VALUE_ANY);
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_paiExtraBonusAidModifier, SAVE_VALUE_ANY);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatProductionModifier);
@@ -20614,30 +20523,12 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiNumFreeBuilding);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiNumFreeAreaBuilding);
 
-	// @SAVEBREAK DELETE 8/7/2018
-	// Delete this section at the next save break.
-	// Legacy for FreeTradeRegionBuilding.
-	// This could be replaced with the following instead if it worked (and the write part could be deleted):
-	// WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_paiNumFreeTradeRegionBuilding, SAVE_VALUE_TYPE_INT_ARRAY);
-	{
-		// It has to be called m_paiNumFreeTradeRegionBuilding or the read code macro doesn't work!
-		int* m_paiNumFreeTradeRegionBuilding = new int[GC.getNumBuildingInfos()];
-		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiNumFreeTradeRegionBuilding);
-		SAFE_DELETE_ARRAY(m_paiNumFreeTradeRegionBuilding);
-	}
-	// SAVEBREAK@
-
 	WRAPPER_WRITE(wrapper, "CvCity", m_bHasCalculatedBuildingReplacement);
 
 	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_CITY_PLOTS, m_pabWorkingPlot);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_RELIGIONS, GC.getNumReligionInfos(), m_pabHasReligion);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_CORPORATIONS, GC.getNumCorporationInfos(), m_pabHasCorporation);
 
-	/************************************************************************************************/
-	/* Afforess	                  Start		 12/7/09                                                */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
 	WRAPPER_WRITE(wrapper, "CvCity", m_iImprovementGoodHealth);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iImprovementBadHealth);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iSpecialistGoodHealth);
@@ -20689,13 +20580,7 @@ void CvCity::write(FDataStreamBase* pStream)
 	{
 		(*it).write(pStream);
 	}
-	/*	for (iI=0;iI<GC.getNumImprovementInfos();iI++)
-		{
-			WRAPPER_WRITE(wrapper, "CvCity", NUM_YIELD_TYPES, m_ppaaiImprovementYieldChange[iI]);
-		}
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
+
 	int iMaxTradeRoutes = m_paTradeCities.size();
 	WRAPPER_WRITE_DECORATED(wrapper, "CvCity", iMaxTradeRoutes, "iMaxTradeRoutes");
 	for (int iI = 0; iI < iMaxTradeRoutes; iI++)
@@ -20705,14 +20590,6 @@ void CvCity::write(FDataStreamBase* pStream)
 	}
 
 	WRAPPER_WRITE_DECORATED(wrapper, "CvCity", true, "bOrdersHaveContractInfo");
-
-
-	// @SAVEBREAK DELETE 8/7/2018
-	// Delete this code at the next save break.
-	// Legacy for FreeTradeRegionBuilding. We need to write out something here to keep save compatibility, so just write out the free area building one again
-	const bool bNewOrderQueueFormat = true;
-	WRAPPER_WRITE(wrapper, "CvCity", bNewOrderQueueFormat);
-	// SAVEBREAK@
 
 	const int orderQueueSize = m_orderQueue.size();
 	WRAPPER_WRITE(wrapper, "CvCity", orderQueueSize);

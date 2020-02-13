@@ -697,19 +697,6 @@ void CvPlotGroup::read(FDataStreamBase* pStream)
 		SAFE_DELETE_ARRAY(m_paiNumBonuses);
 	}
 
-	// @SAVEBREAK DELETE 8/7/2018
-	// Delete this section at the next save break.
-	// Legacy for FreeTradeRegionBuilding. It was never used.
-	arrayPresent = true;
-	WRAPPER_READ_DECORATED(wrapper, "CvPlotGroup", &arrayPresent, "freeBuildingsPresent");
-	if ( arrayPresent )
-	{
-		int* dummy = new int[GC.getNumBuildingInfos()];
-		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlotGroup", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), dummy);
-		SAFE_DELETE_ARRAY(dummy);
-	}
-	// SAVEBREAK@
-
 	m_numPlots = -1;
 	WRAPPER_READ(wrapper, "CvPlotGroup", &m_numPlots);
 
@@ -756,27 +743,19 @@ void CvPlotGroup::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 
-	uint uiFlag=0;
-	WRAPPER_WRITE(wrapper, "CvPlotGroup", uiFlag);		// flag for expansion
-
+	uint uiFlag = 0;
+	WRAPPER_WRITE(wrapper, "CvPlotGroup", uiFlag); // flag for expansion
 	WRAPPER_WRITE(wrapper, "CvPlotGroup", m_iID);
-
 	WRAPPER_WRITE(wrapper, "CvPlotGroup", m_eOwner);
 
 	WRAPPER_WRITE_DECORATED(wrapper, "CvPlotGroup", (bool)(m_paiNumBonuses != NULL), "bonusesPresent");
-	if ( m_paiNumBonuses != NULL )
+
+	if (m_paiNumBonuses != NULL)
 	{
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlotGroup", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonuses);
 	}
 
-	// @SAVEBREAK DELETE 8/7/2018
-	// Delete this section at the next save break.
-	// Dummy value. FreeTradeRegionBuilding was removed, so just always write out false.
-	WRAPPER_WRITE_DECORATED(wrapper, "CvPlotGroup", false, "freeBuildingsPresent");
-	// SAVEBREAK@
-
 	WRAPPER_WRITE(wrapper, "CvPlotGroup", m_numPlots);
-
 	WRAPPER_WRITE(wrapper, "CvPlotGroup", m_seedPlotX);
 	WRAPPER_WRITE(wrapper, "CvPlotGroup", m_seedPlotY);
 

@@ -24106,12 +24106,8 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		ReadStreamableFFreeListTrashArray(m_plotGroups, pStream);
 		ReadStreamableFFreeListTrashArray(m_cities, pStream);
 		ReadStreamableFFreeListTrashArray(m_units, pStream);
-	/************************************************************************************************/
-	/* Afforess	                  Start		 03/30/10                                               */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-	//Must be loaded AFTER units.
+
+		//Must be loaded AFTER units.
 		Commanders.clear();
 		int iLoop;
 		for (CvUnit* pLoopUnit = firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = nextUnit(&iLoop))
@@ -24126,36 +24122,9 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				GC.getGameINLINE().toggleAnyoneHasUnitZoneOfControl();
 			}
 		}
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
+
 		ReadStreamableFFreeListTrashArray(m_selectionGroups, pStream);
 		ReadStreamableFFreeListTrashArray(m_eventsTriggered, pStream);
-
-		// @SAVEBREAK DELETE 21/11/2019
-		// Delete this code at the next save break.
-		// Events were broken, this cleans up broken ones
-		{
-			// Collect the ones we want to keep
-			std::vector<EventTriggeredData*> keepers;
-			for (FFreeListTrashArray<EventTriggeredData>::iterator itr = m_eventsTriggered.begin();
-				itr != m_eventsTriggered.end();
-				++itr)
-			{
-				if (itr->m_eTrigger != NO_EVENTTRIGGER)
-				{
-					keepers.push_back(&(*itr));
-				}
-			}
-			// Remove them all from the list
-			for (std::vector<EventTriggeredData*>::iterator itr = keepers.begin();
-				itr != keepers.end();
-				++itr)
-			{
-				m_eventsTriggered.remove(*itr);
-			}
-		}
-		// SAVEBREAK@
 
 		std::map<CvUnit*,bool> unitsPresent;
 
@@ -24414,14 +24383,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				}
 
 				kData.read(pStream);
-				if (
-					// @SAVEBREAK DELETE 21/11/2019
-					// Delete this code at the next save break.
-					// Events were broken, this cleans up broken ones
-					kData.m_eTrigger != NO_EVENTTRIGGER &&
-					// SAVEBREAK@
-					eEvent != NO_EVENT
-					)
+				if (eEvent != NO_EVENT)
 				{
 					m_mapEventsOccured[eEvent] = kData;
 				}
@@ -24438,16 +24400,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				EventTypes eEvent;
 				WRAPPER_READ(wrapper, "CvPlayer", (int*)&eEvent);
 				kData.read(pStream);
-				// @SAVEBREAK REPLACE 21/11/2019
-				// Delete this code at the next save break.
-				// Events were broken, this cleans up broken ones
-				if (kData.m_eTrigger != NO_EVENTTRIGGER)
-				{
-					m_mapEventCountdown[eEvent] = kData;
-				}
-				// REPLACE WITH
-				// m_mapEventCountdown[eEvent] = kData;
-				// SAVEBREAK@
+				m_mapEventCountdown[eEvent] = kData;
 			}
 		}
 
