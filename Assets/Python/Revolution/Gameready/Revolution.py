@@ -525,17 +525,10 @@ class Revolution:
 
 
 	def onBeginPlayerTurn(self, argsList):
-		iGameTurn, iPlayer = argsList
+		iPlayer = argsList[1]
 
-		iMax = GC.getMAX_PC_PLAYERS()
-		if iPlayer >= iMax:
-			# iPlayer 40-44 does not exist in C2C currently
-			# Therefore we use the last NPC rather than the first NPC to check the last real civ in the game.
-			# If there is only one player vs NPC's, then there should still be 1 rev check per game turn.
-			if iPlayer == GC.getBARBARIAN_PLAYER():
-				iPrevPlayer = iMax - 1
-			else:
-				iPrevPlayer = -1
+		if iPlayer > GC.getMAX_PC_PLAYERS():
+			iPrevPlayer = -1
 		else:
 			iPrevPlayer = iPlayer - 1
 
@@ -551,13 +544,10 @@ class Revolution:
 		iGameTurn, iPlayer = argsList
 
 		iMax = GC.getMAX_PC_PLAYERS()
-		iBarb = GC.getBARBARIAN_PLAYER()
-		if iPlayer == iBarb:
-			iNextPlayer = 0
-			iPlayer = iMax
-		elif iPlayer >= iMax:
+
+		if iPlayer > iMax:
 			iNextPlayer = iPlayer
-		elif iPlayer + 1 == iMax:
+		elif iPlayer + 1 >= iMax:
 			iNextPlayer = 0
 		else:
 			iNextPlayer = iPlayer + 1
@@ -991,8 +981,7 @@ class Revolution:
 				if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Avg net effect for %s: %d"%(pPlayer.getCivilizationDescription(0),sumRevIdx))
 
 
-	def updatePlayerRevolution( self, argsList ):
-
+	def updatePlayerRevolution(self, argsList):
 		iGameTurn, iPlayer = argsList
 
 		if self.iNationalismTech == None:
@@ -1004,12 +993,9 @@ class Revolution:
 		self.checkForBribes(iGameTurn, iPlayer)
 		self.checkForRevolution(iGameTurn, iPlayer)
 
-		self.incrementRevIdxHistory( iGameTurn, iPlayer )
+		self.incrementRevIdxHistory(iGameTurn, iPlayer)
 
-
-		return
-
-	def updateRevolutionCounters( self, iGameTurn, iPlayer ) :
+	def updateRevolutionCounters(self, iGameTurn, iPlayer):
 
 		playerPy = PyPlayer( iPlayer )
 		cityList = playerPy.getCityList()
@@ -1017,20 +1003,20 @@ class Revolution:
 		for city in cityList :
 			pCity = city.GetCy()
 
-			if( not RevData.revObjectExists(pCity) ) :
+			if not RevData.revObjectExists(pCity):
 				RevData.initCity(pCity)
 				continue
 
-			if( pCity.getRevolutionCounter() > 0 ) :
-				pCity.changeRevolutionCounter( -1 )
+			if pCity.getRevolutionCounter() > 0:
+				pCity.changeRevolutionCounter(-1)
 
-			if( RevData.getCityVal(pCity, 'SmallRevoltCounter') > 0 ) :
-				RevData.changeCityVal(pCity, 'SmallRevoltCounter', -1 )
+			if RevData.getCityVal(pCity, 'SmallRevoltCounter') > 0:
+				RevData.changeCityVal(pCity, 'SmallRevoltCounter', -1)
 
-			if( RevData.getCityVal( pCity, 'WarningCounter' ) > 0 ) :
-				RevData.changeCityVal(pCity, 'WarningCounter', -1 )
+			if RevData.getCityVal(pCity, 'WarningCounter') > 0:
+				RevData.changeCityVal(pCity, 'WarningCounter', -1)
 
-			if( pCity.getReinforcementCounter() > 0 ) :
+			if pCity.getReinforcementCounter() > 0:
 				pCity.changeReinforcementCounter(-1)
 
 	def updateLocalRevIndices(self, iGameTurn, iPlayer, subCityList = None, bIsRevWatch = False):
@@ -3070,7 +3056,9 @@ class Revolution:
 					return
 
 # --------------- Special options for homeland revolutions
-		if( instigator.area().getID() == pPlayer.getCapitalCity().area().getID() ) :
+		print ("WAKAWAKA", instigator.area().getID())
+		print ("LUBELA_TJIMMY", pPlayer.getCapitalCity().area().getID())
+		if instigator.area().getID() == pPlayer.getCapitalCity().area().getID():
 			# Revolution in homeland
 			if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Revolution in homeland")
 

@@ -484,45 +484,37 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("BARBARIAN_LEADER", idx);
 
-		SetGlobalDefine("AGGRESSIVE_ANIMAL_CIVILIZATION", szVal);
+		SetGlobalDefine("NEANDERTHAL_CIVILIZATION", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("AGGRESSIVE_ANIMAL_CIVILIZATION", idx);
+		GC.getDefinesVarSystem()->SetValue("NEANDERTHAL_CIVILIZATION", idx);
 
-		SetGlobalDefine("AGGRESSIVE_ANIMAL_LEADER", szVal);
+		SetGlobalDefine("NEANDERTHAL_LEADER", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("AGGRESSIVE_ANIMAL_LEADER", idx);
+		GC.getDefinesVarSystem()->SetValue("NEANDERTHAL_LEADER", idx);
 
-		SetGlobalDefine("PASSIVE_ANIMAL_CIVILIZATION", szVal);
+		SetGlobalDefine("BEAST_CIVILIZATION", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("PASSIVE_ANIMAL_CIVILIZATION", idx);
+		GC.getDefinesVarSystem()->SetValue("BEAST_CIVILIZATION", idx);
 
-		SetGlobalDefine("PASSIVE_ANIMAL_LEADER", szVal);
+		SetGlobalDefine("PREDATOR_CIVILIZATION", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("PASSIVE_ANIMAL_LEADER", idx);
+		GC.getDefinesVarSystem()->SetValue("PREDATOR_CIVILIZATION", idx);
 
-		SetGlobalDefine("NPC1_CIVILIZATION", szVal);
+		SetGlobalDefine("PREY_CIVILIZATION", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC1_CIVILIZATION", idx);
+		GC.getDefinesVarSystem()->SetValue("PREY_CIVILIZATION", idx);
 
-		SetGlobalDefine("NPC1_LEADER", szVal);
+		SetGlobalDefine("ANIMAL_LEADER", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC1_LEADER", idx);
+		GC.getDefinesVarSystem()->SetValue("ANIMAL_LEADER", idx);
 
-		SetGlobalDefine("NPC2_CIVILIZATION", szVal);
+		SetGlobalDefine("INSECT_CIVILIZATION", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC2_CIVILIZATION", idx);
+		GC.getDefinesVarSystem()->SetValue("INSECT_CIVILIZATION", idx);
 
-		SetGlobalDefine("NPC2_LEADER", szVal);
+		SetGlobalDefine("INSECT_LEADER", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC2_LEADER", idx);
-
-		SetGlobalDefine("NPC3_CIVILIZATION", szVal);
-		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC3_CIVILIZATION", idx);
-
-		SetGlobalDefine("NPC3_LEADER", szVal);
-		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC3_LEADER", idx);
+		GC.getDefinesVarSystem()->SetValue("INSECT_LEADER", idx);
 
 		SetGlobalDefine("NPC4_CIVILIZATION", szVal);
 		idx = GetInfoClass(szVal);
@@ -532,47 +524,42 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("NPC4_LEADER", idx);
 
-		SetGlobalDefine("NPC5_CIVILIZATION", szVal);
+		SetGlobalDefine("NPC3_CIVILIZATION", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC5_CIVILIZATION", idx);
+		GC.getDefinesVarSystem()->SetValue("NPC3_CIVILIZATION", idx);
 
-		SetGlobalDefine("NPC5_LEADER", szVal);
+		SetGlobalDefine("NPC3_LEADER", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC5_LEADER", idx);
+		GC.getDefinesVarSystem()->SetValue("NPC3_LEADER", idx);
 
-		SetGlobalDefine("NPC6_CIVILIZATION", szVal);
+		SetGlobalDefine("NPC2_CIVILIZATION", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC6_CIVILIZATION", idx);
+		GC.getDefinesVarSystem()->SetValue("NPC2_CIVILIZATION", idx);
 
-		SetGlobalDefine("NPC6_LEADER", szVal);
+		SetGlobalDefine("NPC2_LEADER", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC6_LEADER", idx);
+		GC.getDefinesVarSystem()->SetValue("NPC2_LEADER", idx);
 
-		SetGlobalDefine("NPC7_CIVILIZATION", szVal);
+		SetGlobalDefine("NPC1_CIVILIZATION", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC7_CIVILIZATION", idx);
+		GC.getDefinesVarSystem()->SetValue("NPC1_CIVILIZATION", idx);
 
-		SetGlobalDefine("NPC7_LEADER", szVal);
+		SetGlobalDefine("NPC1_LEADER", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC7_LEADER", idx);
+		GC.getDefinesVarSystem()->SetValue("NPC1_LEADER", idx);
 
-		SetGlobalDefine("NPC8_CIVILIZATION", szVal);
+		SetGlobalDefine("NPC0_CIVILIZATION", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC8_CIVILIZATION", idx);
+		GC.getDefinesVarSystem()->SetValue("NPC0_CIVILIZATION", idx);
 
-		SetGlobalDefine("NPC8_LEADER", szVal);
+		SetGlobalDefine("NPC0_LEADER", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC8_LEADER", idx);
-/************************************************************************************************/
-/* Afforess	                  Start		 07/12/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+		GC.getDefinesVarSystem()->SetValue("NPC0_LEADER", idx);
+
+
 		gDLL->ChangeINIKeyValue("CONFIG", "HideMinSpecWarning ", "1");
 		gDLL->ChangeINIKeyValue("GAME", "ModularLoading  ", "0");
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 		return true;
 	}
 

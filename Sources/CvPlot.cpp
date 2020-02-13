@@ -5783,7 +5783,7 @@ bool CvPlot::isNPC() const
 
 bool CvPlot::isHominid() const
 {
-	return (getOwnerINLINE() == BARBARIAN_PLAYER || getOwnerINLINE() == NPC7_PLAYER);
+	return (getOwnerINLINE() == BARBARIAN_PLAYER || getOwnerINLINE() == NEANDERTHAL_PLAYER);
 }
 
 

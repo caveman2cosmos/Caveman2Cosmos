@@ -4713,7 +4713,7 @@ int cvInternalGlobals::getTGA_CORPORATIONS()							// GAMEFONT_TGA_CORPORATIONS
 /************************************************************************************************/
 int cvInternalGlobals::getMAX_CIV_PLAYERS()
 {
-	return MAX_CIV_PLAYERS;
+	return MAX_PC_PLAYERS;
 }
 
 int cvInternalGlobals::getMAX_PC_PLAYERS()
@@ -4740,60 +4740,54 @@ int cvInternalGlobals::getBARBARIAN_PLAYER()
 {
 	return BARBARIAN_PLAYER;
 }
-
 int cvInternalGlobals::getBARBARIAN_TEAM()
 {
 	return BARBARIAN_TEAM;
 }
 
-int cvInternalGlobals::getAGGRESSIVE_ANIMAL_PLAYER()
+int cvInternalGlobals::getNEANDERTHAL_PLAYER()
 {
-	return AGGRESSIVE_ANIMAL_PLAYER;
+	return NEANDERTHAL_PLAYER;
+}
+int cvInternalGlobals::getNEANDERTHAL_TEAM() 
+{
+	return NEANDERTHAL_TEAM;
 }
 
-int cvInternalGlobals::getAGGRESSIVE_ANIMAL_TEAM()
+int cvInternalGlobals::getBEAST_PLAYER()
 {
-	return AGGRESSIVE_ANIMAL_TEAM;
+	return BEAST_PLAYER;
+}
+int cvInternalGlobals::getBEAST_TEAM()
+{
+	return BEAST_TEAM;
 }
 
-int cvInternalGlobals::getPASSIVE_ANIMAL_PLAYER()
+int cvInternalGlobals::getPREDATOR_PLAYER()
 {
-	return PASSIVE_ANIMAL_PLAYER;
+	return PREDATOR_PLAYER;
+}
+int cvInternalGlobals::getPREDATOR_TEAM()
+{
+	return PREDATOR_TEAM;
 }
 
-int cvInternalGlobals::getPASSIVE_ANIMAL_TEAM()
+int cvInternalGlobals::getPREY_PLAYER()
 {
-	return PASSIVE_ANIMAL_TEAM;
+	return PREY_PLAYER;
+}
+int cvInternalGlobals::getPREY_TEAM()
+{
+	return PREY_TEAM;
 }
 
-int cvInternalGlobals::getNPC1_PLAYER()
+int cvInternalGlobals::getINSECT_PLAYER()
 {
-	return NPC1_PLAYER;
+	return INSECT_PLAYER;
 }
-
-int cvInternalGlobals::getNPC1_TEAM()
+int cvInternalGlobals::getINSECT_TEAM()
 {
-	return NPC1_TEAM;
-}
-
-int cvInternalGlobals::getNPC2_PLAYER()
-{
-	return NPC2_PLAYER;
-}
-
-int cvInternalGlobals::getNPC2_TEAM()
-{
-	return NPC2_TEAM;
-}
-
-int cvInternalGlobals::getNPC3_PLAYER()
-{
-	return NPC3_PLAYER;
-}
-
-int cvInternalGlobals::getNPC3_TEAM()
-{
-	return NPC3_TEAM;
+	return INSECT_TEAM;
 }
 
 int cvInternalGlobals::getNPC4_PLAYER()
@@ -4806,44 +4800,44 @@ int cvInternalGlobals::getNPC4_TEAM()
 	return NPC4_TEAM;
 }
 
-int cvInternalGlobals::getNPC5_PLAYER()
+int cvInternalGlobals::getNPC3_PLAYER()
 {
-	return NPC5_PLAYER;
+	return NPC3_PLAYER;
 }
 
-int cvInternalGlobals::getNPC5_TEAM()
+int cvInternalGlobals::getNPC3_TEAM()
 {
-	return NPC5_TEAM;
+	return NPC3_TEAM;
 }
 
-int cvInternalGlobals::getNPC6_PLAYER()
+int cvInternalGlobals::getNPC2_PLAYER()
 {
-	return NPC6_PLAYER;
+	return NPC2_PLAYER;
 }
 
-int cvInternalGlobals::getNPC6_TEAM()
+int cvInternalGlobals::getNPC2_TEAM()
 {
-	return NPC6_TEAM;
+	return NPC2_TEAM;
 }
 
-int cvInternalGlobals::getNPC7_PLAYER()
+int cvInternalGlobals::getNPC1_PLAYER()
 {
-	return NPC7_PLAYER;
+	return NPC1_PLAYER;
 }
 
-int cvInternalGlobals::getNPC7_TEAM()
+int cvInternalGlobals::getNPC1_TEAM()
 {
-	return NPC7_TEAM;
+	return NPC1_TEAM;
 }
 
-int cvInternalGlobals::getNPC8_PLAYER()
+int cvInternalGlobals::getNPC0_PLAYER()
 {
-	return NPC8_PLAYER;
+	return NPC0_PLAYER;
 }
 
-int cvInternalGlobals::getNPC8_TEAM()
+int cvInternalGlobals::getNPC0_TEAM()
 {
-	return NPC8_TEAM;
+	return NPC0_TEAM;
 }
 
 int cvInternalGlobals::getINVALID_PLOT_COORD()
@@ -5701,9 +5695,12 @@ int cvInternalGlobals::getNumMissionInfos() const
 CvGameAI& cvInternalGlobals::getGame() { return *m_game; }
 CvGameAI *cvInternalGlobals::getGamePointer(){ return m_game; }
 
+// This determines how many starting civs can be chosen in the custom game staging room screen.
+// Currently it allows you to add more civs than there are civ slots.
+// If this is reduced to the correct number, the city bar and city graphics for the neanderthal NPC will never be updated as the exe doesn't understand that their cities exist.
 int cvInternalGlobals::getMaxCivPlayers() const
 {
-	return MAX_CIV_PLAYERS;
+	return MAX_PLAYERS-1;
 }
 
 int cvInternalGlobals::getMaxPCPlayers() const

@@ -598,8 +598,6 @@ public:
 	// for serialization
 	virtual void read(FDataStreamBase* pStream);
 	virtual void write(FDataStreamBase* pStream);
-	void read2(FDataStreamBase* pStream);
-	void write2(FDataStreamBase* pStream);
 
 	void AI_noteUnitRecalcNeeded();
 	void AI_recalculateUnitCounts();
