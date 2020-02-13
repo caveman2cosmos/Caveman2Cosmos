@@ -5235,13 +5235,6 @@ bool CvUnit::isActionRecommended(int iAction)
 		pPlot = plot();
 	}
 
-	// Don't Recommend Actions in Fog of War - start
-	//if (!pPlot->isVisible(GC.getGameINLINE().getActiveTeam(), false))
-	//{
-	//	return false;
-	//}
-	// Don't Recommend Actions in Fog of War - end
-
 	if (GC.getActionInfo(iAction).getMissionType() == MISSION_FORTIFY)
 	{
 		if (pPlot->isCity(true, getTeam()))
