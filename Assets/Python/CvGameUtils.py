@@ -130,7 +130,7 @@ class CvGameUtils:
 		if aList[1] == "BONUS":
 			iBonus = GC.getInfoTypeForString("BONUS_" + aList[2])
 
-			if GC.getPlayer(iPlayer).getNumAvailableBonuses(iBonus) and GC.getMap().plot(iX, iY).canHaveBonus(iBonus, False):
+			if GC.getPlayer(iPlayer).getNumAvailableBonuses(iBonus):
 				return 1
 			return 0
 
