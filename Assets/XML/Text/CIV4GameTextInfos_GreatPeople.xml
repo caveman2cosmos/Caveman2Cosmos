@@ -5127,42 +5127,4 @@
 		<Tag>TXT_KEY_GREAT_PERSON_ZULU_KANTOMBHELA</Tag>
 		<English>Zulu Kantombhela</English>
 	</TEXT>
-	<!-- Unused -->
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PLAYER_AFFORESS</Tag>
-		<English>Afforess</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PLAYER_CIV_FUEHRER</Tag>
-		<English>Civ Fuehrer</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PLAYER_DANCING_HOSKULD</Tag>
-		<English>Dancing Hoskuld</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PLAYER_EF</Tag>
-		<English>EmperorFool</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PLAYER_HYDROMANCERX</Tag>
-		<English>HydromancerX</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PLAYER_KOSHLING</Tag>
-		<English>Koshling</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PLAYER_STRATEGYONLY</Tag>
-		<English>Strategyonly</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PLAYER_THUNDERBRD</Tag>
-		<English>Thunderbrd</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PLAYER_ZAPPARA</Tag>
-		<English>Zappara</English>
-	</TEXT>
-	<!-- Unused -->
 </Civ4GameText>

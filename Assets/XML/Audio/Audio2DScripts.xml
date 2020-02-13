@@ -21700,8 +21700,8 @@
 		<ScriptID>AS2D_BUILD_RA</ScriptID>
 		<SoundID>SND_BUILD_RA</SoundID>
 		<SoundType>GAME_SFX</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
+		<iMinVolume>80</iMinVolume>
+		<iMaxVolume>80</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -24874,8 +24874,8 @@
 		<ScriptID>AS2D_BUILD_FESTIVAL</ScriptID>
 		<SoundID>SND_BUILD_FESTIVAL</SoundID>
 		<SoundType>GAME_SFX</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
+		<iMinVolume>75</iMinVolume>
+		<iMaxVolume>75</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -24897,8 +24897,8 @@
 		<ScriptID>AS2D_BUILD_DIVINE_MONUMENT</ScriptID>
 		<SoundID>SND_BUILD_DIVINE_MONUMENT</SoundID>
 		<SoundType>GAME_SFX</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
+		<iMinVolume>80</iMinVolume>
+		<iMaxVolume>80</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>

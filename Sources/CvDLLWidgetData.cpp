@@ -254,23 +254,11 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 		break;
 
 	case WIDGET_HELP_DEFENSE:
-/************************************************************************************************/
-/* Afforess	                  Start		 01/13/10                                               */
-/*                                                                                              */
-/*    Defense Hover                                                                             */
-/************************************************************************************************/
 		parseDefenseModHelp(widgetDataStruct, szBuffer);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 		break;
 
 	case WIDGET_HELP_HEALTH:
 		parseHealthHelp(widgetDataStruct, szBuffer);
-		break;
-
-	case WIDGET_HELP_HAPPINESS:
-		parseHappinessHelp(widgetDataStruct, szBuffer);
 		break;
 
 	case WIDGET_HELP_POPULATION:
@@ -307,14 +295,6 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 
 	case WIDGET_HELP_ESPIONAGE_COST:
 		parseEspionageCostHelp(widgetDataStruct, szBuffer);
-		break;
-
-	case WIDGET_HELP_TECH_ENTRY:
-		parseTechEntryHelp(widgetDataStruct, szBuffer);
-		break;
-
-	case WIDGET_HELP_TECH_PREPREQ:
-		parseTechPrereqHelp(widgetDataStruct, szBuffer);
 		break;
 
 	case WIDGET_HELP_OBSOLETE:
@@ -512,18 +492,14 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 		break;
 
 	case WIDGET_HELP_FINANCE_GOLD_RESERVE:
-		parseFinanceGoldReserve(widgetDataStruct, szBuffer);
 		break;
 
 	case WIDGET_PEDIA_JUMP_TO_TECH:
 		parseTechEntryHelp(widgetDataStruct, szBuffer);
 		break;
 
-// BUG - Trade Denial - start
 	case WIDGET_PEDIA_JUMP_TO_TECH_TRADE:
-		parseTechTradeEntryHelp(widgetDataStruct, szBuffer);
 		break;
-// BUG - Trade Denial - end
 
 	case WIDGET_PEDIA_JUMP_TO_REQUIRED_TECH:
 		parseTechTreePrereq(widgetDataStruct, szBuffer, false);
@@ -545,26 +521,8 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 		parseTraitHelp(widgetDataStruct, szBuffer);
 		break;
 
-
-	case WIDGET_PEDIA_BACK:
-		// parsePediaBack(widgetDataStruct, szBuffer);
-		break;
-
-	case WIDGET_PEDIA_FORWARD:
-		// parsePediaForward(widgetDataStruct, szBuffer);
-		break;
-
 	case WIDGET_PEDIA_JUMP_TO_BONUS:
 		parseBonusHelp(widgetDataStruct, szBuffer);
-		break;
-
-// BUG - Trade Denial - start
-	case WIDGET_PEDIA_JUMP_TO_BONUS_TRADE:
-		parseBonusTradeHelp(widgetDataStruct, szBuffer);
-		break;
-// BUG - Trade Denial - end
-
-	case WIDGET_PEDIA_MAIN:
 		break;
 
 	case WIDGET_PEDIA_JUMP_TO_PROMOTION:
@@ -645,19 +603,8 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 		parseDescriptionHelp(widgetDataStruct, szBuffer, false);
 		break;
 
-	case WIDGET_CLOSE_SCREEN:
-		//parseCloseScreenHelp(szBuffer);
-		break;
-
 	case WIDGET_DEAL_KILL:
 		parseKillDealHelp(widgetDataStruct, szBuffer);
-		break;
-
-	case WIDGET_PEDIA_DESCRIPTION_NO_HELP:
-		//parseDescriptionHelp(widgetDataStruct, szBuffer, true);
-		break;
-
-	case WIDGET_MINIMAP_HIGHLIGHT:
 		break;
 
 // BUG - Food Rate Hover - start
@@ -674,16 +621,6 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 		parseLeaderheadHelp(widgetDataStruct, szBuffer);
 		break;
 
-// BUG - Leaderhead Relations - start
-	case WIDGET_LEADERHEAD_RELATIONS:
-		parseLeaderheadRelationsHelp(widgetDataStruct, szBuffer);
-		break;
-// BUG - Leaderhead Relations - end
-
-	case WIDGET_LEADER_LINE:
-		parseLeaderLineHelp(widgetDataStruct, szBuffer);
-		break;
-
 	case WIDGET_COMMERCE_MOD_HELP:
 		parseCommerceModHelp(widgetDataStruct, szBuffer);
 		break;
@@ -694,17 +631,6 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 		break;
 // BUG - Trade Hover - end
 
-/************************************************************************************************/
-/* Afforess	                  Start		 6/19/11                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	case WIDGET_OBSOLETE_PROMOTION:
-		parseObsoletePromotion(widgetDataStruct, szBuffer);
-		break;
-	case WIDGET_OBSOLETE_CORPORATION:
-		parseObsoleteCorporation(widgetDataStruct, szBuffer);
-		break;
 	case WIDGET_HELP_EMPLOYMENT:
 		{
 			CvCity* pCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
@@ -737,35 +663,6 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 			if (eOldImprovement != NO_IMPROVEMENT)
 			{
 				szBuffer.append(gDLL->getText("TXT_KEY_TECH_ALLOWS_IMPROVEMENT_UPGRADE", GC.getImprovementInfo(eOldImprovement).getDescription(), GC.getImprovementInfo(eNewImprovement).getDescription() ));
-			}
-		}
-		break;
-	case WIDGET_EXTRA_TECH_STRENGTH:
-		if (widgetDataStruct.m_iData1 != NO_UNIT && widgetDataStruct.m_iData2 != NO_TECH)
-		{
-			UnitTypes eUnit = (UnitTypes)widgetDataStruct.m_iData1;
-			TechTypes eTech = (TechTypes)widgetDataStruct.m_iData2;
-			bool bFound = false;
-			CvWString szUnitName;
-			if (GC.getGameINLINE().getActivePlayer() != NO_PLAYER)
-			{
-				if (GC.getUnitInfo(eUnit).getCivilizationName(GC.getGameINLINE().getActiveCivilizationType()) != NULL)
-				{
-					if (!CvWString(GC.getUnitInfo(eUnit).getCivilizationName(GC.getGameINLINE().getActiveCivilizationType())).empty())
-					{	
-						bFound = true;
-						szUnitName = gDLL->getText(GC.getUnitInfo(eUnit).getCivilizationName(GC.getGameINLINE().getActiveCivilizationType()));
-					}
-				}
-			}
-			if (!bFound)
-			{
-				szUnitName = GC.getUnitInfo(eUnit).getDescription();
-			}
-			if (GC.getTechInfo(eTech).getUnitClassStrengthChange(GC.getUnitInfo(eUnit).getUnitClassType()) != 0)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_TECH_UNIT_STRENGTH_CHANGE", GC.getTechInfo(eTech).getUnitClassStrengthChange(GC.getUnitInfo(eUnit).getUnitClassType()), szUnitName.c_str()));
 			}
 		}
 		break;
@@ -1150,21 +1047,9 @@ bool CvDLLWidgetData::executeAction( CvWidgetDataStruct &widgetDataStruct )
 	case WIDGET_LEADERHEAD:
 	case WIDGET_LEADER_LINE:
 	case WIDGET_SCORE_BREAKDOWN:
-/************************************************************************************************/
-/* Afforess	                  Start		 6/19/11                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	case WIDGET_OBSOLETE_PROMOTION:
-	case WIDGET_OBSOLETE_CORPORATION:
 	case WIDGET_HELP_EMPLOYMENT:
 	case WIDGET_HELP_IMPROVEMENT_CAN_UPGRADE:
-	case WIDGET_EXTRA_TECH_STRENGTH:
 	case WIDGET_HELP_IMPROVEMENT_ACTUAL:
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-		//	Nothing on clicked
 		break;
 	case WIDGET_CLOSE_SCREEN:
 		if ( GC.getCurrentViewport()->getTransformType() == VIEWPORT_TRANSFORM_TYPE_SCALE )
@@ -1191,8 +1076,6 @@ bool CvDLLWidgetData::executeAltAction( CvWidgetDataStruct &widgetDataStruct )
 	bool bHandled = true;
 	switch (widgetDataStruct.m_eWidgetType)
 	{
-	case WIDGET_HELP_TECH_ENTRY:
-	case WIDGET_HELP_TECH_PREPREQ:
 	case WIDGET_RESEARCH:
 	case WIDGET_TECH_TREE:
 		doPediaTechJump(widgetDataStruct);
@@ -1221,15 +1104,6 @@ bool CvDLLWidgetData::executeAltAction( CvWidgetDataStruct &widgetDataStruct )
 		widgetData.m_iData1 = widgetData.m_iData2;
 		//	Intentional fallthrough...
 	case WIDGET_PEDIA_JUMP_TO_CORPORATION:
-/************************************************************************************************/
-/* Afforess	                  Start		 01/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	case WIDGET_OBSOLETE_CORPORATION:
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 		doPediaCorporationJump(widgetData);
 		break;
 	case WIDGET_PEDIA_JUMP_TO_BUILDING:
@@ -1237,15 +1111,6 @@ bool CvDLLWidgetData::executeAltAction( CvWidgetDataStruct &widgetDataStruct )
 		doPediaBuildingJump(widgetDataStruct);
 		break;
 	case WIDGET_PEDIA_JUMP_TO_PROMOTION:
-/************************************************************************************************/
-/* Afforess	                  Start		 01/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	case WIDGET_OBSOLETE_PROMOTION:
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 		doPediaPromotionJump(widgetDataStruct);
 		break;
 	case WIDGET_HELP_OBSOLETE:
@@ -5978,26 +5843,6 @@ void CvDLLWidgetData::parseNationalityHelp(CvWidgetDataStruct &widgetDataStruct,
 }
 
 
-void CvDLLWidgetData::parseHappinessHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
-{
-	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
-
-	if (pHeadSelectedCity != NULL)
-	{
-		GAMETEXT.setAngerHelp(szBuffer, *pHeadSelectedCity);
-		szBuffer.append(L"\n=======================\n");
-		GAMETEXT.setHappyHelp(szBuffer, *pHeadSelectedCity);
-
-// BUG - Building Additional Happiness - start
-		if (pHeadSelectedCity->getOwnerINLINE() == GC.getGame().getActivePlayer() && GC.getBugOptionBOOL("MiscHover__BuildingAdditionalHappiness", true, "BUG_BUILDING_ADDITIONAL_HAPPINESS_HOVER"))
-		{
-			GAMETEXT.setBuildingAdditionalHappinessHelp(szBuffer, *pHeadSelectedCity, DOUBLE_SEPARATOR);
-		}
-// BUG - Building Additional Happiness - end
-	}
-}
-
-
 void CvDLLWidgetData::parsePopulationHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
 	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
@@ -6218,7 +6063,6 @@ void CvDLLWidgetData::parseTerrainHelp(CvWidgetDataStruct &widgetDataStruct, CvW
 	}
 }
 
-
 void CvDLLWidgetData::parseFeatureHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
 	if (widgetDataStruct.m_iData2 != 0)
@@ -6226,7 +6070,6 @@ void CvDLLWidgetData::parseFeatureHelp(CvWidgetDataStruct &widgetDataStruct, CvW
 		GAMETEXT.setFeatureHelp(szBuffer, (FeatureTypes)widgetDataStruct.m_iData1);
 	}
 }
-
 
 void CvDLLWidgetData::parseTechEntryHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
@@ -6236,31 +6079,10 @@ void CvDLLWidgetData::parseTechEntryHelp(CvWidgetDataStruct &widgetDataStruct, C
 	}
 }
 
-// BUG - Trade Denial - start
-void CvDLLWidgetData::parseTechTradeEntryHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
-{
-	if (widgetDataStruct.m_iData2 == -1)
-	{
-		parseTechEntryHelp(widgetDataStruct, szBuffer);
-	}
-	else
-	{
-		GAMETEXT.setTechTradeHelp(szBuffer, (TechTypes)widgetDataStruct.m_iData1, (PlayerTypes)widgetDataStruct.m_iData2, false, false, false, true, NO_TECH);
-	}
-}
-// BUG - Trade Denial - end
-
-void CvDLLWidgetData::parseTechPrereqHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
-{
-//	szBuffer.Format(L"%cThis technology requires the knowledge of %s", gDLL->getSymbolID(BULLET_CHAR), GC.getTechInfo((TechTypes) widgetDataStruct.m_iData1).getDescription());
-	szBuffer.assign(gDLL->getText("TXT_KEY_MISC_TECH_REQUIRES_KNOWLEDGE_OF", GC.getTechInfo((TechTypes) widgetDataStruct.m_iData1).getTextKeyWide()));
-}
-
 void CvDLLWidgetData::parseTechTreePrereq(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer, bool bTreeInfo)
 {
 	GAMETEXT.setTechHelp(szBuffer, (TechTypes)widgetDataStruct.m_iData1, false, false, false, bTreeInfo, (TechTypes)widgetDataStruct.m_iData2);
 }
-
 
 void CvDLLWidgetData::parseObsoleteHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
@@ -6549,20 +6371,12 @@ void CvDLLWidgetData::parseFinanceInflatedCosts(CvWidgetDataStruct &widgetDataSt
 
 void CvDLLWidgetData::parseFinanceGrossIncome(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
-//	szBuffer = "Your gross income";
 	szBuffer.assign(gDLL->getText("TXT_KEY_ECON_GROSS_INCOME"));
 }
 
 void CvDLLWidgetData::parseFinanceNetGold(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
-//	szBuffer = "Net Gold per turn";
 	szBuffer.assign(gDLL->getText("TXT_KEY_ECON_NET_GOLD"));
-}
-
-void CvDLLWidgetData::parseFinanceGoldReserve(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
-{
-//	szBuffer = "Amount of money in your gold reserves";
-	szBuffer.assign(gDLL->getText("TXT_KEY_ECON_GOLD_RESERVE"));
 }
 
 void CvDLLWidgetData::parseUnitHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
@@ -6573,18 +6387,6 @@ void CvDLLWidgetData::parseUnitHelp(CvWidgetDataStruct &widgetDataStruct, CvWStr
 	}
 }
 
-void CvDLLWidgetData::parsePediaBack(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
-{
-//	szBuffer = "Back";
-	szBuffer.assign(gDLL->getText("TXT_KEY_MISC_PEDIA_BACK"));
-}
-
-void CvDLLWidgetData::parsePediaForward(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
-{
-//	szBuffer = "Forward";
-	szBuffer.assign(gDLL->getText("TXT_KEY_MISC_PEDIA_FORWARD"));
-}
-
 void CvDLLWidgetData::parseBonusHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
 	if (widgetDataStruct.m_iData2 != 0)
@@ -6592,20 +6394,6 @@ void CvDLLWidgetData::parseBonusHelp(CvWidgetDataStruct &widgetDataStruct, CvWSt
 		GAMETEXT.setBonusHelp(szBuffer, (BonusTypes)widgetDataStruct.m_iData1);
 	}
 }
-
-// BUG - Trade Denial - start
-void CvDLLWidgetData::parseBonusTradeHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
-{
-	if (widgetDataStruct.m_iData2 == -1)
-	{
-		parseBonusHelp(widgetDataStruct, szBuffer);
-	}
-	else
-	{
-		GAMETEXT.setBonusTradeHelp(szBuffer, (BonusTypes)widgetDataStruct.m_iData1, false, (PlayerTypes)widgetDataStruct.m_iData2);
-	}
-}
-// BUG - Trade Denial - end
 
 void CvDLLWidgetData::parseReligionHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
@@ -6712,11 +6500,6 @@ void CvDLLWidgetData::parseLeaderHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 	{
 		GAMETEXT.parseLeaderTraits(szBuffer, (LeaderHeadTypes)widgetDataStruct.m_iData1, (CivilizationTypes)widgetDataStruct.m_iData2);
 	}
-}
-
-void CvDLLWidgetData::parseCloseScreenHelp(CvWStringBuffer& szBuffer)
-{
-	szBuffer.assign(gDLL->getText("TXT_KEY_MISC_CLOSE_SCREEN"));
 }
 
 void CvDLLWidgetData::parseDescriptionHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer, bool bMinimal)
@@ -6995,18 +6778,6 @@ void CvDLLWidgetData::parseLeaderheadHelp(CvWidgetDataStruct &widgetDataStruct, 
 	GAMETEXT.parseLeaderHeadHelp(szBuffer, (PlayerTypes)widgetDataStruct.m_iData1, (PlayerTypes)widgetDataStruct.m_iData2);
 }
 
-void CvDLLWidgetData::parseLeaderLineHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
-{
-	GAMETEXT.parseLeaderLineHelp(szBuffer, (PlayerTypes)widgetDataStruct.m_iData1, (PlayerTypes)widgetDataStruct.m_iData2);
-}
-
-// BUG - Leaderhead Relations - start
-void CvDLLWidgetData::parseLeaderheadRelationsHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
-{
-	GAMETEXT.parseLeaderHeadRelationsHelp(szBuffer, (PlayerTypes)widgetDataStruct.m_iData1, (PlayerTypes)widgetDataStruct.m_iData2);
-}
-// BUG - Leaderhead Relations - end
-
 void CvDLLWidgetData::parseCommerceModHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
 	CvCity* pCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
@@ -7041,14 +6812,6 @@ void CvDLLWidgetData::parseDefenseModHelp(CvWidgetDataStruct &widgetDataStruct, 
 	{
 		GAMETEXT.setDefenseHelp(szBuffer, *pCity);
 	}
-}
-void CvDLLWidgetData::parseObsoletePromotion(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
-{
-	GAMETEXT.buildObsoletePromotionString(szBuffer, ((TechTypes)(widgetDataStruct.m_iData1)));
-}
-void CvDLLWidgetData::parseObsoleteCorporation(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
-{
-	GAMETEXT.buildObsoleteCorporationString(szBuffer, ((TechTypes)(widgetDataStruct.m_iData1)));
 }
 /************************************************************************************************/
 /* Afforess	                     END                                                            */

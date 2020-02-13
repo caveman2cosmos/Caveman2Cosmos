@@ -3527,7 +3527,7 @@
 		<BonusInfo>
 			<Type>BONUS_FUR</Type>
 			<Description>TXT_KEY_BONUS_BEAVERS</Description>
-			<Civilopedia>TXT_KEY_BONUS_FUR_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BONUS_BEAVERS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_LUXURY</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_FUR</ArtDefineTag>
 			<TechReveal>TECH_SCAVENGING</TechReveal>
@@ -10034,7 +10034,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SALT</ArtDefineTag>
 			<TechReveal>TECH_MASONRY</TechReveal>
 			<TechCityTrade>TECH_MASONRY</TechCityTrade>
-			<TechObsolete>TECH_REFINING</TechObsolete>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>0</iYieldChange>

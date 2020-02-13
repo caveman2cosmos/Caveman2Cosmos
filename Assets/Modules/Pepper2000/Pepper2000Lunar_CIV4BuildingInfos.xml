@@ -65,6 +65,7 @@
 			<Strategy>TXT_KEY_BUILDING_MOON_TERRA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MOON_TERRA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MOON_TERRA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LUNAR_TERRAFORMING</PrereqTech>
 			<iCost>14476</iCost>
@@ -432,20 +433,6 @@
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
-			<PrereqOrTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_LUNAR_PLAINS</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_LUNAR_BARREN</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_LUNAR_DESERT</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-			</PrereqOrTerrain>
 			<FreeBonus>BONUS_MOON_ROCKS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>-1</iCost>

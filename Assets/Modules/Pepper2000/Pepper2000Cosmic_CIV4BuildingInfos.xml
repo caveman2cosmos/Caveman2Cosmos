@@ -86,10 +86,6 @@
 					<TerrainType>TERRAIN_COSMOS</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<YieldChanges>
 				<iYield>6</iYield>
@@ -122,10 +118,6 @@
 			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_COSMOS</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 			</PrereqOrTerrain>
@@ -809,6 +801,16 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
+			<PrereqOrTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_COSMOS</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+			</PrereqOrTerrain>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_INTERGALACTIC_TRADING_POST</BuildingClass>
@@ -839,6 +841,16 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
+			<PrereqOrTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_COSMOS</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+			</PrereqOrTerrain>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_KOLMOGOROV_TRANSPORTER</BuildingClass>
@@ -1029,6 +1041,16 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
+			<PrereqOrTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_COSMOS</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+			</PrereqOrTerrain>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_INTERGALACTIC_COMMAND_CENTER</BuildingClass>
@@ -1585,12 +1607,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqOrTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_NEUTRON_STAR</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-			</PrereqOrTerrain>
 			<YieldChanges>
 				<iYield>10</iYield>
 				<iYield>50</iYield>
@@ -2913,6 +2929,7 @@
 				<iYield>60</iYield>
 				<iYield>18</iYield>
 			</YieldChanges>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_EXAVERSE</BuildingClassType>
@@ -2986,10 +3003,6 @@
 					<TerrainType>TERRAIN_COSMOS</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<CommerceChanges>
 				<iCommerce>1000</iCommerce>
@@ -3027,6 +3040,7 @@
 			<Strategy>TXT_KEY_BUILDING_SMALL_MAGELLANIC_CLOUD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SMALL_MAGELLANIC_CLOUD</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SMALL_MAGELLANIC_CLOUD</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERGALACTIC_TRAVEL</PrereqTech>
 			<iCost>11412</iCost>
@@ -3161,6 +3175,7 @@
 			<Strategy>TXT_KEY_BUILDING_SAGITTARIUS_DWARF_ELLIPTICAL_GALAXY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SAGITTARIUS_DWARF_ELLIPTICAL_GALAXY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SAGITTARIUS_DWARF_ELLIPTICAL_GALAXY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERGALACTIC_TRAVEL</PrereqTech>
 			<iCost>11412</iCost>
@@ -3290,6 +3305,7 @@
 			<Strategy>TXT_KEY_BUILDING_TRIANGULUM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TRIANGULUM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TRIANGULUM</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERGALACTIC_TRAVEL</PrereqTech>
 			<iCost>11412</iCost>
@@ -3355,6 +3371,7 @@
 			<Strategy>TXT_KEY_BUILDING_SCULPTOR_GROUP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SCULPTOR_GROUP</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SCULPTOR_GROUP</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERGROUP_TRAVEL</PrereqTech>
 			<iCost>13205</iCost>
@@ -3527,6 +3544,7 @@
 			<Strategy>TXT_KEY_BUILDING_VIRGO_CLUSTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VIRGO_CLUSTER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_VIRGO_CLUSTER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERGROUP_TRAVEL</PrereqTech>
 			<iCost>13205</iCost>
@@ -3801,6 +3819,7 @@
 			<Strategy>TXT_KEY_BUILDING_PERSEUS_PISCES_SUPERCLUSTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PERSEUS_PISCES_SUPERCLUSTER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_PERSEUS_PISCES_SUPERCLUSTER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERCLUSTER_TRAVEL</PrereqTech>
 			<iCost>16984</iCost>
@@ -3903,6 +3922,7 @@
 			<Strategy>TXT_KEY_BUILDING_SLOAN_GREAT_WALL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SLOAN_GREAT_WALL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SLOAN_GREAT_WALL</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_COSMIC_ENGINEERING</PrereqTech>
 			<iCost>18970</iCost>

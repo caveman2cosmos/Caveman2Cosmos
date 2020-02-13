@@ -1871,6 +1871,7 @@
 				<iYield>20</iYield>
 				<iYield>6</iYield>
 			</YieldChanges>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_MEGAVERSE</BuildingClassType>
@@ -1948,6 +1949,7 @@
 			<Strategy>TXT_KEY_BUILDING_PLANET_CLOUD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PLANET_CLOUD</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_PLANET_CLOUD</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LAUNCH_ARCOLOGY</PrereqTech>
 			<iCost>27966</iCost>
@@ -2277,6 +2279,7 @@
 			<Strategy>TXT_KEY_BUILDING_ZEUS_CANNON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ZEUS_CANNON</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ZEUS_CANNON</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ION_BEAMS</PrereqTech>
 			<iCost>5116</iCost>

@@ -126,7 +126,6 @@ class CvGameUtils:
 		iX, iY, iBuild, iPlayer = argsList
 
 		aList = GC.getBuildInfo(iBuild).getType().split("_")
-
 		# Bonus placing builds
 		if aList[1] == "BONUS":
 			iBonus = GC.getInfoTypeForString("BONUS_" + aList[2])

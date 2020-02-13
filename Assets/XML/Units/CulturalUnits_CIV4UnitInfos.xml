@@ -15262,7 +15262,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
+					<BuildType>BUILD_PLANT_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -15309,12 +15309,6 @@
 			<ForceObsoleteTech>TECH_NITROGLYCERIN</ForceObsoleteTech>
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
 			<BonusType>BONUS_RAPANUI</BonusType>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>78</iCost>
 			<iMoves>2</iMoves>
 			<iWorkRate>200</iWorkRate>
@@ -17704,10 +17698,6 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
 					<BuildType>BUILD_FOREST_PRESERVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -17798,12 +17788,6 @@
 			</Builds>
 			<PrereqTech>TECH_NITROGLYCERIN</PrereqTech>
 			<BonusType>BONUS_CALIFORNIAN</BonusType>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>665</iCost>
 			<iMoves>2</iMoves>
 			<iWorkRate>300</iWorkRate>
@@ -22884,7 +22868,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
+					<BuildType>BUILD_PLANT_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -23075,12 +23059,6 @@
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<BonusType>BONUS_LULE</BonusType>
 			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>140</iCost>
 			<iMoves>2</iMoves>
 			<iWorkRate>240</iWorkRate>
@@ -24916,7 +24894,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
+					<BuildType>BUILD_PLANT_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -25107,12 +25085,6 @@
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<BonusType>BONUS_MISSI</BonusType>
 			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>140</iCost>
 			<iMoves>2</iMoves>
 			<iWorkRate>240</iWorkRate>
@@ -36167,12 +36139,6 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
 			</PrereqBonuses>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>545</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iMoves>2</iMoves>
@@ -42262,7 +42228,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
+					<BuildType>BUILD_PLANT_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -42453,12 +42419,6 @@
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<BonusType>BONUS_ZUNI</BonusType>
 			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>140</iCost>
 			<iMoves>2</iMoves>
 			<iWorkRate>240</iWorkRate>
@@ -42707,12 +42667,6 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
 			</PrereqBonuses>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>545</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iMoves>1</iMoves>
@@ -43222,7 +43176,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
+					<BuildType>BUILD_PLANT_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -43413,12 +43367,6 @@
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<BonusType>BONUS_BELIZE</BonusType>
 			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>140</iCost>
 			<iMoves>2</iMoves>
 			<iWorkRate>240</iWorkRate>
@@ -47624,12 +47572,6 @@
 			<PrereqBuilding>BUILDING_SHIPWRIGHT</PrereqBuilding>
 			<PrereqTech>TECH_RUDDER</PrereqTech>
 			<BonusType>BONUS_FIGI</BonusType>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>220</iCost>
 			<iMoves>4</iMoves>
 			<bNoRevealMap>1</bNoRevealMap>

@@ -4192,7 +4192,7 @@
 			<Type>ART_DEF_BUILDING_TAILOR_SHOP</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
-			<fScale>1</fScale>
+			<fScale>0.25</fScale>
 			<fInterfaceScale>1</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/tailor/ts_e_tav.nif</NIF>
 			<KFM/>
@@ -8148,6 +8148,16 @@
 			<NIF/>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/phonographfactory.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SKIS_FACTORY</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF/>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/skisfactory.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ELECTROACTIVE_POLYMER_FACTORY</Type>
@@ -17418,16 +17428,6 @@
 			<NIF/>
 			<KFM/>
 			<Button>art/Embassy/art/culturemiddleeastern.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CULTURE_BARBARIAN</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF/>
-			<KFM/>
-			<Button>,Art/Interface/Buttons/Civilizations/Barbarian.dds,Art/Interface/Buttons/Civics_Civilizations_Religions_Atlas.dds,4,5</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GOOD_AFRICAN</Type>

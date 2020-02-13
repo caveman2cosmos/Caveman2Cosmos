@@ -4692,11 +4692,6 @@ int cvInternalGlobals::getMAX_PLAYERS()
 	return MAX_PLAYERS;
 }
 
-int cvInternalGlobals::getMAX_CIV_TEAMS()
-{
-	return MAX_CIV_TEAMS;
-}
-
 int cvInternalGlobals::getMAX_PC_TEAMS()
 {
 	return MAX_PC_TEAMS;

@@ -51,12 +51,6 @@
 			</PrereqBuildingClasses>
 			<!-- Construction cost -->
 			<iCost>710</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_NOMAD</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<CommerceChanges>
@@ -198,12 +192,6 @@
 			</ReplaceBuildings-->
 			<!-- Construction cost -->
 			<iCost>56</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_NOMAD</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
@@ -318,12 +306,6 @@
 			</ReplaceBuildings-->
 			<!-- Construction cost -->
 			<iCost>332</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_NOMAD</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>

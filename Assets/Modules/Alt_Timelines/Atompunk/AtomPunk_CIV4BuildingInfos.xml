@@ -60,12 +60,6 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_INDUSTRIOUS</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<bRiver>1</bRiver>
 			<bPower>1</bPower>
 			<iCost>1345</iCost>
@@ -596,12 +590,6 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_INDUSTRIOUS</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<bPower>1</bPower>
 			<iCost>1345</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -649,12 +637,6 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_URANIUM</Bonus>
 			</PrereqBonuses>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_INDUSTRIOUS</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<bPower>1</bPower>
 			<iCost>1845</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -719,12 +701,6 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_INDUSTRIOUS</ProductionTraitType>
-					<iProductionTrait>20</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<FreeBuilding>BUILDINGCLASS_GOOD_ATOM</FreeBuilding>
 			<bRiver>1</bRiver>
 			<bPower>1</bPower>

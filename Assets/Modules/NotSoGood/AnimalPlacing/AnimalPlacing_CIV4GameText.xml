@@ -6,324 +6,324 @@
 <!-- Game Text - New -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_DONKEY</Tag>
-		<English>Place Donkey Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_DONKEY</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_DONKEY]Donkey Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Oslów</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_HORSE</Tag>
-		<English>Place Horse Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_HORSE</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_HORSE]Horse Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Koni</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_ELEPHANT</Tag>
-		<English>Place Elephant Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_ELEPHANT</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_ELEPHANT]Elephant Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Sloni</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_BISON</Tag>
-		<English>Place Bison Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_BISON</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_BISON]Bison Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Bizonów</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_CAMEL</Tag>
-		<English>Place Camel Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_CAMEL</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_CAMEL]Camel Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Wielbladów</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_COW</Tag>
-		<English>Place Cow Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_COW</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_COW]Cow Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Krów</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_DEER</Tag>
-		<English>Place Deer Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_DEER</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_DEER]Deer Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Jeleni</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_FUR</Tag>
-		<English>Place Fur Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_FUR</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_FUR]Fur Bonus[\LINK]</English>
 		<Polish>Umiesc Rodzine Bobrów</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_KANGAROO</Tag>
-		<English>Place Kangaroo Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_KANGAROO</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_KANGAROO]Kangaroo Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Kangurów</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_LLAMA</Tag>
-		<English>Place Llama Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_LLAMA</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_LLAMA]Llama Bonus[\LINK]</English>
 		<Italian>Place LLama Bonus</Italian>
 		<Polish>Umiesc Stado Lam</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_MAMMOTH</Tag>
-		<English>Place Mammoth Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_MAMMOTH</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_MAMMOTH]Mammoth Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Mamutów</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_PIG</Tag>
-		<English>Place Pig Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_PIG</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_PIG]Pig Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Swin</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_POULTRY</Tag>
-		<English>Place Poultry Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_POULTRY</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_POULTRY]Poultry Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Drobiu</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_RABBIT</Tag>
-		<English>Place Rabbit Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_RABBIT</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_RABBIT]Rabbit Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Królików</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_SEA_LIONS</Tag>
-		<English>Place Sea Lions Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_SEA_LIONS</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_SEA_LIONS]Sea Lions Bonus[\LINK]</English>
 		<Polish>Umiesc Kolonie Lwów Morskich</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_SHEEP</Tag>
-		<English>Place Sheep Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_SHEEP</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_SHEEP]Sheep Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Owiec</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_WALRUS</Tag>
-		<English>Place Walrus Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_WALRUS</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_WALRUS]Walrus Bonus[\LINK]</English>
 		<Polish>Umiesc Kolonie Morsów</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_GUINEA_PIG</Tag>
-		<English>Place Guinea Pig Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_GUINEA_PIG</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_GUINEA_PIG]Guinea Pig Bonus[\LINK]</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_PARROTS</Tag>
-		<English>Place Parrot Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_PARROTS</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_PARROTS]Parrot Bonus[\LINK]</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_BARLEY</Tag>
-		<English>Place Barley Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_BARLEY</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_BARLEY]Barley Bonus[\LINK]</English>
 		<Polish>Zasiej Jeczmien</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_CORN</Tag>
-		<English>Place Corn Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_CORN</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_CORN]Corn Bonus[\LINK]</English>
 		<Polish>Zasiej Kukurydze</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_FLAX</Tag>
-		<English>Place Flax Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_FLAX</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_FLAX]Flax Bonus[\LINK]</English>
 		<Polish>Zasiej Len</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_POMEGRANATE</Tag>
-		<English>Place Pomegranate Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_POMEGRANATE</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_POMEGRANATE]Pomegranate Bonus[\LINK]</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_KAVA</Tag>
-		<English>Place Kava Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_KAVA</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_KAVA]Kava Bonus[\LINK]</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_GUAVA</Tag>
-		<English>Place Guava Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_GUAVA</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_GUAVA]Guava Bonus[\LINK]</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_MELON</Tag>
-		<English>Place Melons Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_MELON</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_MELON]Melons Bonus[\LINK]</English>
 		<Polish>Zasiej Melony</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_POTATO</Tag>
-		<English>Place Potatoes Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_POTATO</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_POTATO]Potatoes Bonus[\LINK]</English>
 		<Polish>Zasadz Ziemniaki</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_PUMPKIN</Tag>
-		<English>Place Pumpkins Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_PUMPKIN</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_PUMPKIN]Pumpkins Bonus[\LINK]</English>
 		<Polish>Zasiej Dynie</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_RICE</Tag>
-		<English>Place Rice Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_RICE</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_RICE]Rice Bonus[\LINK]</English>
 		<Polish>Zasiej Ryz</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_SQUASH</Tag>
-		<English>Place Squash Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_SQUASH</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_SQUASH]Squash Bonus[\LINK]</English>
 		<Polish>Zasiej Kabaczki</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_WHEAT</Tag>
-		<English>Place Wheat Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_WHEAT</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_WHEAT]Wheat Bonus[\LINK]</English>
 		<Polish>Zasiej Pszenice</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_ALMONDS</Tag>
-		<English>Place Almonds Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_ALMONDS</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_ALMONDS]Almonds Bonus[\LINK]</English>
 		<Polish>Zasadz Migdalowca</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_APPLE</Tag>
-		<English>Place Apple Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_APPLE</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_APPLE]Apple Bonus[\LINK]</English>
 		<Polish>Zasadz Jablonie</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_BANANA</Tag>
-		<English>Place Banana Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_BANANA</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_BANANA]Banana Bonus[\LINK]</English>
 		<Polish>Zasadz Bananowce</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_COCONUT</Tag>
-		<English>Place Coconut Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_COCONUT</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_COCONUT]Coconut Bonus[\LINK]</English>
 		<Polish>Zasadz Palmy Kokosowe</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_DATES</Tag>
-		<English>Place Dates Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_DATES</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_DATES]Dates Bonus[\LINK]</English>
 		<Polish>Zasadz Daktylowce</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_FIG</Tag>
-		<English>Place Figs Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_FIG</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_FIG]Figs Bonus[\LINK]</English>
 		<Polish>Zasadz Figowce</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_LEMON</Tag>
-		<English>Place Lemons Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_LEMON</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_LEMON]Lemons Bonus[\LINK]</English>
 		<Polish>Zasadz Cytryny</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_MANGO</Tag>
-		<English>Place Mango Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_MANGO</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_MANGO]Mango Bonus[\LINK]</English>
 		<Polish>Zasadz Mango</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_OLIVES</Tag>
-		<English>Place Olives Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_OLIVES</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_OLIVES]Olives Bonus[\LINK]</English>
 		<Polish>Zasadz Oliwki</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_PAPAYA</Tag>
-		<English>Place Papaya Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_PAPAYA</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_PAPAYA]Papaya Bonus[\LINK]</English>
 		<Polish>Zasadz Papaye</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_PISTACHIO</Tag>
-		<English>Place Pistachio Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_PISTACHIO</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_PISTACHIO]Pistachio Bonus[\LINK]</English>
 		<Polish>Zasadz Pistacje</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_WINE</Tag>
-		<English>Place Grapes Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_WINE</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_WINE]Grapes Bonus[\LINK]</English>
 		<Polish>Zasadz Winogrona</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_HENNA</Tag>
-		<English>Place Henna Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_HENNA</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_HENNA]Henna Bonus[\LINK]</English>
 		<Polish>Zasadz Henne</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_INDIGO</Tag>
-		<English>Place Indigo Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_INDIGO</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_INDIGO]Indigo Bonus[\LINK]</English>
 		<Polish>Zasadz Indigo</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_RUBBER</Tag>
-		<English>Place Rubber Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_RUBBER</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_RUBBER]Rubber Bonus[\LINK]</English>
 		<Polish>Zasadz Kauczukowce</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_TIMBER</Tag>
-		<English>Place Prime Timber Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_TIMBER</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_TIMBER]Prime Timber Bonus[\LINK]</English>
 		<Polish>Zasadz Drzewa Wysokiej Jakosci</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_CANNABIS</Tag>
-		<English>Place Hemp Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_CANNABIS</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_CANNABIS]Hemp Bonus[\LINK]</English>
 		<Polish>Zasiej Konopie</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_COCA</Tag>
-		<English>Place Coca Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_COCA</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_COCA]Coca Bonus[\LINK]</English>
 		<Polish>Zasadz Kakaowce</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_COCOA</Tag>
-		<English>Place Cocoa Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_COCOA</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_COCOA]Cocoa Bonus[\LINK]</English>
 		<Polish>Zasiej Koke</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_COFFEE</Tag>
-		<English>Place Coffee Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_COFFEE</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_COFFEE]Coffee Bonus[\LINK]</English>
 		<Polish>Zasiej Krzewy Kawy</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_COTTON</Tag>
-		<English>Place Cotton Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_COTTON</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_COTTON]Cotton Bonus[\LINK]</English>
 		<Polish>Zasiej Bawelne</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_INCENSE</Tag>
-		<English>Place Incense Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_INCENSE</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_INCENSE]Incense Bonus[\LINK]</English>
 		<Polish>Zasadz Kadzidlo</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_MUSHROOMS</Tag>
-		<English>Place Mushrooms Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_MUSHROOMS</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_MUSHROOMS]Mushrooms Bonus[\LINK]</English>
 		<Polish>Utwórz Grzybnie</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_OPIUM</Tag>
-		<English>Place Opium Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_OPIUM</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_OPIUM]Opium Bonus[\LINK]</English>
 		<Polish>Zasiej Opium</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_PAPYRUS</Tag>
-		<English>Place Papyrus Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_PAPYRUS</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_PAPYRUS]Papyrus Bonus[\LINK]</English>
 		<Polish>Zasiej Papirusowca</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_PEYOTE</Tag>
-		<English>Place Peyote Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_PEYOTE</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_PEYOTE]Peyote Bonus[\LINK]</English>
 		<Polish>Zasiej Peyotla</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_PRICKLY_PEAR</Tag>
-		<English>Place Prickly Pear Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_PRICKLY_PEAR</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_PRICKLY_PEAR]Prickly Pear Bonus[\LINK]</English>
 		<Polish>Zasiej Kaktusy</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_RESIN</Tag>
-		<English>Place Resin Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_RESIN</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_RESIN]Resin Bonus[\LINK]</English>
 		<Polish>Zasadz Drzewa Zywiczne</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_SILK</Tag>
-		<English>Place Silk Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_SILK</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_SILK]Silk Bonus[\LINK]</English>
 		<Polish>Stwórz Kolonie Jedwabników</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_SPICES</Tag>
-		<English>Place Spices Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_SPICES</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_SPICES]Spices Bonus[\LINK]</English>
 		<Polish>Zasiej Przyprawy</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_SUGAR</Tag>
-		<English>Place Sugar Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_SUGAR</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_SUGAR]Sugar Bonus[\LINK]</English>
 		<Polish>Zasiej Trzcine Cukrowa</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_TEA</Tag>
-		<English>Place Tea Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_TEA</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_TEA]Tea Bonus[\LINK]</English>
 		<Polish>Zasiej Herbate</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_TOBACCO</Tag>
-		<English>Place Tobacco Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_TOBACCO</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_TOBACCO]Tobacco Bonus[\LINK]</English>
 		<Polish>Zasiej Tyton</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLACE_VANILLA</Tag>
-		<English>Place Vanilla Bonus</English>
+		<Tag>TXT_KEY_BUILD_PLACE_VANILLA</Tag>
+		<English>Place [LINK=IMPROVEMENT_PLACE_VANILLA]Vanilla Bonus[\LINK]</English>
 		<Polish>Zasadz Wanilie</Polish>
 	</TEXT>
 	<TEXT>

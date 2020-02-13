@@ -2704,9 +2704,18 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BEAR_MYTH</Tag>
-		<English>Myth - Bears</English>
-		<French>Mythe des Ours</French>
-		<Polish>Mit - Niedźwiedzie</Polish>
+		<English>Myth - Bear</English>
+		<French>
+			<Text>Mythe de l'Ours</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Mito dell'orso</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Mit Niedźwiedzia</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BEAR_MYTH_EFFECT</Tag>
@@ -20842,6 +20851,18 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>Zbuduj Phenotype Studio by poprawić jakość zdrowia Twoich poddanych w miastach.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SKIS_FACTORY</Tag>
+		<English>Factory (Skis)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SKIS_FACTORY_PEDIA</Tag>
+		<English>A ski is a narrow strip of semi-rigid material worn underfoot to glide over snow. Substantially longer than wide and characteristically employed in pairs, skis are attached to ski boots with ski bindings, with either a free, lockable, or partially secured heel. For climbing slopes, ski skins (originally made of seal fur, but now made of synthetic materials) can be attached at the base of the ski.[NEWLINE]Originally intended as an aid to travel over snow, they are now mainly used recreationally in the sport of skiing. </English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SKIS_FACTORY_STRATEGY</Tag>
+		<English>Build a Skis Factory to increase your cities gold.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PHONOGRAPH_FACTORY</Tag>
 		<English>Factory (Phonographs)</English>
 		<French>
@@ -29049,18 +29070,6 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		[PARAGRAPH:2]The university has an emphasis on research and has been associated with 56 Nobel Prize laureates. It is consistently ranked among Europe's top overall universities, and is an international education venue for doctoral students, with approximately 1,000 doctorates successfully completed every year, and with more than one third of the doctoral students coming from abroad. International students from some 130 countries account for more than 20 percent of the entire student body. Heidelberg comprises two major campuses: one in Heidelberg's Old Town and another in the Neuenheimer Feld quarter on the outskirts of the city. The university's noted alumni include eleven domestic and foreign Heads of State or Heads of Government.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_UNIVERSITY_OF_PADUA</Tag>
-		<English>EU University of Padua</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_UNIVERSITY_OF_PADUA_PEDIA</Tag>
-		<English>The University of Padua (Italian: Università degli Studi di Padova, UNIPD) is a premier Italian university located in the city of Padua, Italy. The University of Padua was founded in 1222 as a school of law and was one of the most prominent universities in early modern Europe. It is among the earliest universities of the world and the second oldest in Italy. The University of Padua is one of Italy's leading universities and ranks in the first position in all the recent ranking of Italian large universities. In 2010 the university had approximately 65,000 students  and in 2013 was ranked "best university" among Italian institutions of higher education with more than 40,000 students.
-		[PARAGRAPH:2]The university is conventionally said to have been founded in 1222 (which corresponds to the first time when the University is cited in a historical document as pre-existing, therefore it is quite certainly older) when a large group of students and professors left the University of Bologna in search of more academic freedom ('Libertas scholastica'). The first subjects to be taught were law and theology. The curriculum expanded rapidly, and by 1399 the institution had divided in two: a Universitas Iuristarum for civil law and Canon law, and a Universitas Artistarum which taught astronomy, dialectic, philosophy, grammar, medicine, and rhetoric. There was also a Universitas Theologorum, established in 1373 by Urban V.
-		[PARAGRAPH:2]From the fifteenth to the eighteenth century, the university was renowned for its research, particularly in the areas of medicine, astronomy, philosophy and law. During this time, the university adopted the Latin motto: Universa universis patavina libertas (Paduan Freedom is Universal for Everyone). Nevertheless, the university had a turbulent history, and there was no teaching in 1237-61, 1509-17, 1848-50.
-		[PARAGRAPH:2]The Botanical Garden of Padova, established by the university in 1545, was one of the oldest gardens of its kind in the world (after the Hanging Gardens of Babylon). Its title for oldest academic garden is in controversy because the Medici created one in Pisa in 1544. In addition to the garden, best visited in the spring and summer, the university also manages nine museums, including a History of physics museum.
-		[PARAGRAPH:2]As the publications of innumerable conferences and congresses show, the modern-day University of Padua plays an important role in scholarly and scientific research at both a European and world level. True to its origins, this is the direction in which the university intends to move in the future, establishing closer links of cooperation and exchange with all the world's major research universities.</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSITY_OF_CAMBRIDGE</Tag>
 		<English>EU University of Cambridge</English>
 	</TEXT>
@@ -29227,46 +29236,54 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Tag>TXT_KEY_BUILDING_SPY_NETWORK</Tag>
 		<English>Spy Network</English>
 		<French>Réseau d'Espions</French>
+		<German>Spionage Netzwerk</German>
 		<Polish>Szpiegowska Sieć</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPY_NETWORK_STRATEGY</Tag>
 		<English>Build better espionage units</English>
 		<French>Permet d'entraîner de meilleurs espions</French>
+		<German>Bessere Spionageeinheiten können errichtet werden</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPY_NETWORK_PEDIA</Tag>
 		<English>Know yourself and know your enemy</English>
 		<French>Connais-toi toi-même, et connais tes ennemis...</French>
+		<German>Kenne deinen Feind wie dich selbst.</German>
 		<Polish>Znaj siebie i swojego wroga</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPY_TRAINING_FACILITY</Tag>
 		<English>Spy Training Facility</English>
 		<French>Centre d'entraînement d'Espions</French>
+		<German>Spionage-Ausbildungseinrichtung</German>
 		<Polish>Ośrodek Szkolenia Szpiegów</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPY_TRAINING_FACILITY_STRATEGY</Tag>
 		<English>Build better espionage units</English>
 		<French>Permet d'entraîner de meilleurs espions</French>
+		<German>Bessere Spionageeinheiten können errichtet werden</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPY_TRAINING_FACILITY_PEDIA</Tag>
 		<English>Trained spies are better.</English>
 		<French>Les espions bien entraînés sont bien plus efficaces.</French>
+		<German>Ausgebildete Spione sind wesentlich effektiver.</German>
 		<Polish>Wyszkoleni szpiedzy są lepsi.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPY_HIDEOUT</Tag>
 		<English>Spy Hideout</English>
 		<French>Repaire d'espion</French>
+		<German>Spion-Versteck</German>
 		<Polish>Kryjówka Szpiegów</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPY_HIDEOUT_STRATEGY</Tag>
 		<English>Improve your counter intelligence.</English>
 		<French>Améliore le contre-espionnage.</French>
+		<German>Verbessert die Spionageabwehr.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPY_HIDEOUT_PEDIA</Tag>
@@ -29277,16 +29294,19 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Tag>TXT_KEY_BUILDING_SPY_SAFE_HOUSE</Tag>
 		<English>Spy Safe House</English>
 		<French>Planque sécurisée pour Espion</French>
+		<German>Sichere Unterkunf für Spione</German>
 		<Polish>Bezpieczny Dom</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPY_SAFE_HOUSE_STRATEGY</Tag>
 		<English>Improve your counter intelligence.</English>
 		<French>Améliore le contre-espionnage.</French>
+		<German>Verbessert die Spionageabwehr.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPY_SAFE_HOUSE_PEDIA</Tag>
 		<English>In the game these are used to help train better spies and improve your defense against foreign espionage.</English>
+		<German>Im Spiel hilft dies um Spione besser zu trainieren und verbessert die Abwehr gegen fremde Spionage.</German>
 		<Polish>W grze tego typu placówki są wykorzystywane do trenowania szpiegów i zwikszania twoich możliwości kontrwywiadowczych.</Polish>
 	</TEXT>
 	<TEXT>

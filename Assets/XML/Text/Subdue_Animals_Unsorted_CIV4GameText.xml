@@ -239,10 +239,6 @@
 		<French>Effet (Histoires des Sangliers)</French>
 		<Polish>Efekt Historii - Dzik</Polish>
 	</TEXT>
-		<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_BONGO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Bongo and Antelopes, Exotic Herbivore Cage and Enclosure</English>
-	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BONGO_MYTH</Tag>
 		<English>Myth - Bongo</English>
@@ -264,10 +260,6 @@
 		<English>Stories Effect - Bongo</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_CROW_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Crow and Sea Birds, Bird Cage and Enclosure, Feather Worker</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CROW_MYTH</Tag>
 		<English>Myth - Crow</English>
 	</TEXT>
@@ -286,10 +278,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CROW_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Crow</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_GAZELLE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Gazelle and Antelopes, Exotic Herbivore Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GAZELLE_MYTH</Tag>
@@ -336,10 +324,6 @@
 		<English>Stories Effect - Gelada Babbon</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_GEMSBOK_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Gemsbok and Antelopes, Exotic Herbivore Cage and Enclosure</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GEMSBOK_MYTH</Tag>
 		<English>Myth - Gemsbok</English>
 	</TEXT>
@@ -360,10 +344,6 @@
 		<English>Stories Effect - Gemsbok</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_GERENUK_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Gerenuk and Antelopes, Exotic Herbivore Cage and Enclosure</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GERENUK_MYTH</Tag>
 		<English>Myth - Gerenuk</English>
 	</TEXT>
@@ -382,10 +362,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GERENUK_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Gerenuk</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_GORILLA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Gorilla and Old Man Of the Forest, Primate Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GORILLA_MYTH</Tag>
@@ -432,10 +408,6 @@
 		<English>Stories Effect - Grey Kangaroo</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_GULL_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Gull, Birds and Sea Birds, Bird Cage and Enclosure, Feather Worker</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GULL_MYTH</Tag>
 		<English>Myth - Gull</English>
 	</TEXT>
@@ -456,10 +428,6 @@
 		<English>Stories Effect - Gull</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_HYENA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Hyena and Scavenger, Bad Boy Cage and Enclosure</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYENA_MYTH</Tag>
 		<English>Myth - Hyena</English>
 	</TEXT>
@@ -478,10 +446,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYENA_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Hyena</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_IMPALA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Impala and Antelopes, Exotic Herbivore Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SAIGA_HELP</Tag>
@@ -532,10 +496,6 @@
 		<English>Stories Effect - Jaguar</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_KOALA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Koala and Marsupials, Marsupial Cage and Enclosure</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KOALA_MYTH</Tag>
 		<English>Myth - Koala</English>
 	</TEXT>
@@ -554,10 +514,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KOALA_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Koala</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_KOOKABURRA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Kookaburra and Birds, Bird Cage and Enclosure, Feather Worker</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KOOKABURRA_MYTH</Tag>
@@ -580,20 +536,8 @@
 		<English>Stories Effect - Kookaburra</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_LION_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Lion, Big Cat Cage and Enclosure</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LION_MYTH</Tag>
-		<English>Myth - Lion</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LION_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Lion</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LION_STORY</Tag>
-		<English>Story - Lion</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LION_STORIES</Tag>
@@ -607,11 +551,6 @@
 		<Tag>TXT_KEY_UNIT_IGUANA_PEDIA</Tag>
 		<English>Iguana is a genus of herbivorous lizards native to tropical areas of Mexico, Central America, and the Caribbean. The genus was first described in 1768 by Austrian naturalist Josephus Nicolaus Laurenti in his book Specimen Medicum, Exhibens Synopsin Reptilium Emendatam cum Experimentis circa Venena. Two species are included in the genus Iguana: the green iguana, which is widespread throughout its range and a popular pet, and the Lesser Antillean iguana, which is native to the Lesser Antilles and endangered due to habitat destruction.[PARAGRAPH:2]The word "iguana" is derived from the original Taino name for the species, iwana.[PARAGRAPH:2]In addition to the two species in the genus Iguana, several other related genera in the same family have common names of the species including the word "iguana".[PARAGRAPH:2]Source: Wikipedia</English>
 		<French>Ce sont des reptiles semi-arboricoles, terrestres ou marins, végétariens bien qu'ils mangent des mouches et des insectes volants. Les iguanes terrestres peuvent rester jusqu'à plusieurs heures sans bouger. Ils se tiennent seuls ou à plusieurs. Il s'agit d'animaux principalement diurnes. Leur peau écailleuse est d'une couleur leur permettant plus ou moins de se fondre dans le paysage et ainsi d'échapper à leurs prédateurs.[PARAGRAPH:2]Source: Wikipedia</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_IGUANA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Iguana, Myths of Earth and Reptiles, Reptile Cage and Enclosure</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Permet de construire[COLOR_REVERT] Mythe, Histoire et Histoires -  Iguane[NEWLINE][ICON_BULLET]Les Mythes de la Terre et des Reptiles[NEWLINE][ICON_BULLET]Cage à Reptiles Enclos</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IGUANA_MYTH</Tag>
@@ -641,11 +580,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KOMODO_DRAGON_PEDIA</Tag>
 		<English>TBD [PARAGRAPH:2]Source: Wikipedia</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_KOMODO_DRAGON_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Komodo Dragon, Myths of Reptile and Dragon, Reptile Cage and Enclosure</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Construisez[COLOR_REVERT] les Mythe, Histoire et Histoires - des Dragons de Komodo[NEWLINE][ICON_BULLET]Mythe des Reptiles et Dragons[NEWLINE][ICON_BULLET]Cage et enclos à reptiles</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KOMODO_DRAGON_MYTH</Tag>
@@ -722,16 +656,8 @@
 		<French>Effet (Histoires des Varans du Nil)</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_LLAMA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Llama, Exotic Herbivore Cage and Enclosure</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LLAMA_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Llama</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LLAMA_STORY</Tag>
-		<English>Story - Llama</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LLAMA_STORIES</Tag>
@@ -1100,12 +1026,6 @@
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Histoires des Serpents[NEWLINE][ICON_BULLET]Cage des Reptiles et enclos[NEWLINE][ICON_BULLET]Fosse à Serpents et Charmeur</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_VIPER_PEDIA</Tag>
-		<English>The Viperidae (vipers) are a family of venomous snakes found all over the world, except in Antarctica, Australia, New Zealand, Madagascar, Hawaii, various other isolated islands, and north of the Arctic Circle. All have relatively long, hinged fangs that permit deep penetration and injection of venom. Four subfamilies are currently recognised. They are also known as viperids.[PARAGRAPH:2]Source: Wikipedia</English>
-		<German>Mit Ottern oder Vipern bezeichnet man eine über Amerika, Afrika und Eurasien verbreitete Familie von Schlangen, die allesamt giftig sind. Bei Viperngiften handelt es sich hauptsächlich um Blutgifte, die die Blutzellen und das umgebende Gewebe schädigen oder zerstören können und sehr schmerzhaft sind. Das Gift mancher Ottern greift auch das Nervensystem des Opfers an und kann Lähmungen hervorrufen.[PARAGRAPH:2]Ottern erreichen Längen von 30 cm bis über 3 m. Sie haben einen gedrungenen, massigen Körper une einen auffälligen, dreieckigen Kopf, der sich deutlich vom Hals absetzt. Falls alle Vipern haben senkrecht geschlitzte Pupillen, die auf eine dämmerungs- und nachtaktive Lebensweise hindeuten.[PARAGRAPH:2]Ottern verfügen über einen komplexen Giftapparat mit beweglichen, röhrenartigen Giftzähnen. Solange das Maul geschlossen ist, liegen sie eingeklappt in einer Bindegewebsfalte im Gaumendach. Beim Aufreißen des Mauls werden sie durch die Drehung zweier Knochen aufgerichtet, wodurch ein tiefes Eindringen in das Beutetier ermöglicht wird. Gift wird aber nicht immer injiziert. Die Schlangen können auch einen sogenannten trockenen Biss anbringen, wenn sie Angreifer abschrecken wollen, die nicht als Beute geeignet sind. Die meisten Ottern gebären ihre Jungtiere lebend, es gibt aber auch eierlegende Arten.</German>
-		<Polish>Żmija właściwa (Viperinae)? podrodzina w obrębie rodziny żmijowatych, w podrzędzie węży. Do podrodziny tej należy 12 rodzajów i około 60 gatunków stosunkowo niewielkich węży, o długości od kilkunastu do 200 centymetrów. W podrodzinie tej przeważa jajożyworodność, choć występują też gatunki jajorodne. Żmije zamieszkują różne środowiska i rejony geograficzne, również subarktyczny. (źródło: Wikipedia)</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_VIPER_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Viper, Myths of Earth and Snakes, Snake Cage and Enclosure, Snake pit and charmer</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires des Vipères[NEWLINE][ICON_BULLET]Mythes de la Terre et des Serpents[NEWLINE][ICON_BULLET]Cage à Serpents et Enclos[NEWLINE][ICON_BULLET]Fosse à Serpents et Charmeur</French>
@@ -1190,10 +1110,6 @@
 		<English>Stories Effect - Wallaroo</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_BUFFALO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Buffalo and Bull, Buffalo Herd, Exotic Herbivore Cage and Enclosure</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BUFFALO_MYTH</Tag>
 		<English>Myth - Buffalo</English>
 	</TEXT>
@@ -1236,10 +1152,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WILDEBEEST_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Wildebeest</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_GALAPOGOS_TORTOISE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Galapagos Tortoise and Reptiles, Reptile Cage and Enclosure</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALAPOGOS_TORTOISE_MYTH</Tag>

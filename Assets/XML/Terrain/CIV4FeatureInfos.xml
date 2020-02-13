@@ -499,10 +499,8 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iHealthPercent>25</iHealthPercent>
 			<iDefense>50</iDefense>
-			<iGrowth>16</iGrowth>
 			<iWarmingDefense>2</iWarmingDefense>
 			<iPopDestroys>3</iPopDestroys>
-			<bCanGrowAnywhere>1</bCanGrowAnywhere>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_GRASS</TerrainType>
@@ -633,9 +631,12 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<iSeeThrough>1</iSeeThrough>
+			<iAppearance>400</iAppearance>
+			<iDefense>20</iDefense>
+			<iGrowth>15</iGrowth>
 			<iHealthPercent>25</iHealthPercent>
 			<iPopDestroys>3</iPopDestroys>
+			<iSeeThrough>1</iSeeThrough>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_GRASS</TerrainType>
@@ -6655,7 +6656,6 @@
 			<bNoImprovement>1</bNoImprovement>
 			<bVisibleAlways>1</bVisibleAlways>
 			<bNukeImmune>1</bNukeImmune>
-			<!-- There was unused Deep Space terrain -->
 			<TerrainBooleans/>
 			<FootstepSounds>
 				<FootstepSound>
