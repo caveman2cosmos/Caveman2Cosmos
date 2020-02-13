@@ -421,10 +421,8 @@ public:
 	float getSHADOW_SCALE() const { return GC.getSHADOW_SCALE(); }
 	float getUNIT_MULTISELECT_DISTANCE() const { return GC.getUNIT_MULTISELECT_DISTANCE(); }
 
-	int getMAX_CIV_PLAYERS() const { return GC.getMAX_CIV_PLAYERS(); }
 	int getMAX_PC_PLAYERS() const { return GC.getMAX_PC_PLAYERS(); }
 	int getMAX_PLAYERS() const { return GC.getMAX_PLAYERS(); }
-	int getMAX_CIV_TEAMS() const { return GC.getMAX_CIV_TEAMS(); }
 	int getMAX_PC_TEAMS() const { return GC.getMAX_PC_TEAMS(); }
 	int getMAX_TEAMS() const { return GC.getMAX_TEAMS(); }
 	int getBARBARIAN_PLAYER() const { return GC.getBARBARIAN_PLAYER(); }

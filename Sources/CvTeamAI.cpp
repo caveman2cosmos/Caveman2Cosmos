@@ -961,55 +961,24 @@ bool CvTeamAI::AI_isAllyLandTarget(TeamTypes eTeam) const
 
 bool CvTeamAI::AI_shareWar(TeamTypes eTeam) const
 {
-	int iI;
-
-/************************************************************************************************/
-/* REVOLUTION_MOD                         10/25/08                                jdog5000      */
-/*                                                                                              */
-/* For minor civs, StartAsMinors                                                                */
-/************************************************************************************************/
-	/* original BTS code
-	for (iI = 0; iI < MAX_CIV_TEAMS; iI++)
-	{
-		if (GET_TEAM((TeamTypes)iI).isAlive() && !GET_TEAM((TeamTypes)iI).isMinorCiv())
-		{
-			if ((iI != getID()) && (iI != eTeam))
-			{
-				if (isAtWar((TeamTypes)iI) && GET_TEAM(eTeam).isAtWar((TeamTypes)iI))
-				{
-					return true;
-				}
-			}
-		}
-	}
-	*/
 	// No dealing with minor civs
-	if( isMinorCiv() || GET_TEAM(eTeam).isMinorCiv() )
+	if (isMinorCiv() || GET_TEAM(eTeam).isMinorCiv())
 	{
 		return false;
 	}
-
 	// Only accumulate if someone actually declared war, not a left over from StartAsMinors
-	for (iI = 0; iI < MAX_PC_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
-		if (GET_TEAM((TeamTypes)iI).isAlive() && !GET_TEAM((TeamTypes)iI).isMinorCiv())
+		if (iI != getID() && iI != eTeam && GET_TEAM((TeamTypes)iI).isAlive() && !GET_TEAM((TeamTypes)iI).isMinorCiv()
+		&& isAtWar((TeamTypes)iI) && GET_TEAM(eTeam).isAtWar((TeamTypes)iI)
+		&& (AI_getWarPlan((TeamTypes)iI) != WARPLAN_LIMITED
+			|| GET_TEAM(eTeam).AI_getWarPlan((TeamTypes)iI) != WARPLAN_LIMITED 
+			|| GET_TEAM((TeamTypes)iI).AI_getWarPlan(getID()) != WARPLAN_LIMITED 
+			|| GET_TEAM((TeamTypes)iI).AI_getWarPlan(eTeam) != WARPLAN_LIMITED))
 		{
-			if ((iI != getID()) && (iI != eTeam))
-			{
-				if (isAtWar((TeamTypes)iI) && GET_TEAM(eTeam).isAtWar((TeamTypes)iI))
-				{
-					if( AI_getWarPlan((TeamTypes)iI) != WARPLAN_LIMITED || GET_TEAM(eTeam).AI_getWarPlan((TeamTypes)iI) != WARPLAN_LIMITED || GET_TEAM((TeamTypes)iI).AI_getWarPlan(getID()) != WARPLAN_LIMITED || GET_TEAM((TeamTypes)iI).AI_getWarPlan(eTeam) != WARPLAN_LIMITED )
-					{
-						return true;
-					}
-				}
-			}
+			return true;
 		}
 	}
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
-
 	return false;
 }
 

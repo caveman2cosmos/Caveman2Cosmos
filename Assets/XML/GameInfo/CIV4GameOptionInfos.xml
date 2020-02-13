@@ -261,7 +261,7 @@
 			<Description>TXT_KEY_GAMEOPTION_BARBARIAN_GENERALS</Description>
 			<Help>TXT_KEY_GAMEOPTION_BARBARIAN_GENERALS_HELP</Help>
 			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
+			<bVisible>0</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_NO_ZOC</Type>
