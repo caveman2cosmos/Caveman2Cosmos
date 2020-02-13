@@ -27552,7 +27552,7 @@ void CvGameTextMgr::parseHappinessHelp(CvWStringBuffer &szBuffer)
 		szBuffer.append(L"\n=======================\n");
 		setHappyHelp(szBuffer, *pHeadSelectedCity);
 
-		if (pHeadSelectedCity->getOwnerINLINE() == GC.getGame().getActivePlayer() && getBugOptionBOOL("MiscHover__BuildingAdditionalHappiness", true, "BUG_BUILDING_ADDITIONAL_HAPPINESS_HOVER"))
+		if (pHeadSelectedCity->getOwnerINLINE() == GC.getGame().getActivePlayer() && GC.getBugOptionBOOL("MiscHover__BuildingAdditionalHappiness", true, "BUG_BUILDING_ADDITIONAL_HAPPINESS_HOVER"))
 		{
 			setBuildingAdditionalHappinessHelp(szBuffer, *pHeadSelectedCity, DOUBLE_SEPARATOR);
 		}
