@@ -866,12 +866,6 @@ enum GameOptionTypes				// Exposed to Python
 	GAMEOPTION_NO_GOODY_HUTS,
 	GAMEOPTION_NO_EVENTS,
 	GAMEOPTION_NO_ESPIONAGE,
-
-/********************************************************************************/
-/**		REVOLUTION_MOD							5/27/08				jdog5000	*/
-/**																				*/
-/**																				*/
-/********************************************************************************/
 	GAMEOPTION_BARBARIAN_WORLD,
 	GAMEOPTION_NO_REVOLUTION,
 	GAMEOPTION_LIMITED_RELIGIONS,
@@ -879,15 +873,6 @@ enum GameOptionTypes				// Exposed to Python
 	GAMEOPTION_NO_BARBARIAN_CIV,
 	GAMEOPTION_NO_TECH_DIFFUSION,
 	GAMEOPTION_START_AS_MINORS,
-	/********************************************************************************/
-	/*		REVOLUTION_MOD							END								*/
-	/********************************************************************************/
-	
-/************************************************************************************************/
-/* Afforess			 		Last Update: 6/12/11                                                */
-/*                              New Gameoptions                                                 */
-/*                                                                                              */
-/************************************************************************************************/
 	GAMEOPTION_MOUNTAINS,
 	GAMEOPTION_SAD,
 	GAMEOPTION_ADVANCED_DIPLOMACY,
@@ -911,9 +896,6 @@ enum GameOptionTypes				// Exposed to Python
 	GAMEOPTION_UNITED_NATIONS,
 	GAMEOPTION_ADVANCED_ESPIONAGE,
 	GAMEOPTION_ADVANCED_NUKES,
-/************************************************************************************************/
-/* Afforess						          END                                                   */
-/************************************************************************************************/
 #ifdef C2C_BUILD
 	GAMEOPTION_DIVINE_PROPHETS,
 	GAMEOPTION_NO_CITY_LIMITS,
@@ -944,7 +926,6 @@ enum GameOptionTypes				// Exposed to Python
 	GAMEOPTION_XP_FROM_ASSIGNED_SPECIALISTS,
 	GAMEOPTION_MORE_XP_TO_LEVEL,
 	GAMEOPTION_ONGOING_TRAINING,
-	GAMEOPTION_NIGHTMARE_MODE,
 	GAMEOPTION_SIZE_MATTERS_UNCUT,
 	GAMEOPTION_TELEPORT_HUNTING_AWARDS,
 	GAMEOPTION_AMNESTY,
@@ -963,8 +944,7 @@ enum GameOptionTypes				// Exposed to Python
 	GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS,
 	GAMEOPTION_DOWNSIZING_IS_PROFITABLE,
 	GAMEOPTION_UPSCALED_RESEARCH_COSTS,
-	GAMEOPTION_DANGEROUS_WILDLIFE,
-	GAMEOPTION_HISTORICAL_WONDERS
+	GAMEOPTION_DANGEROUS_WILDLIFE
 #endif
 };
 

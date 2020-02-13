@@ -667,20 +667,6 @@
 		<Spanish>En cada partida se genera una nueva "seed" al azar que, por ejemplo, arrojará resultados diferentes en el combate.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NIGHTMARE_MODE</Tag>
-		<English>Nightmare Mode (Deity Only)</English>
-		<French>Mode Cauchemard</French>
-		<German>Albtraummodus</German>
-		<Polish>Tryb Koszmaru</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NIGHTMARE_MODE_HELP</Tag>
-		<English>More difficult handicap setting. Requires Deity difficulty to have an effect.</English>
-		<French>Ajoute des paramètres et handicaps supplémentaires pour rendre le jeu plus difficile</French>
-		<German>Erhöht den Schwierigkeitsgrad des Spiels durch neue Handicaps (etwa um 2 weitere Schwierigkeitsstufen). Nicht auf Schwierigkeitsgrad Adliger oder niedriger verwenden!</German>
-		<Polish>Rozgrywka staje się jeszcze trudniejsza.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_BARBARIAN_CIV</Tag>
 		<English>No BarbarianCivs</English>
 		<French>Pas de Civs Barbares</French>

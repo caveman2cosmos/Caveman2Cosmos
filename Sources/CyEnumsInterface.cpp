@@ -609,30 +609,13 @@ void CyEnumsPythonInterface()
 		.value("GAMEOPTION_NO_GOODY_HUTS", GAMEOPTION_NO_GOODY_HUTS)
 		.value("GAMEOPTION_NO_EVENTS", GAMEOPTION_NO_EVENTS)
 		.value("GAMEOPTION_NO_ESPIONAGE", GAMEOPTION_NO_ESPIONAGE)
-// RevolutionDCM - BarbarianWorld - thanks Kael
 		.value("GAMEOPTION_BARBARIAN_WORLD", GAMEOPTION_BARBARIAN_WORLD)
-// RevolutionDCM End
-
-		/********************************************************************************/
-		/**		REVOLUTION_MOD							5/27/08				jdog5000	*/
-		/**																				*/
-		/**																				*/
-		/********************************************************************************/
 		.value("GAMEOPTION_NO_REVOLUTION", GAMEOPTION_NO_REVOLUTION)
 		.value("GAMEOPTION_LIMITED_RELIGIONS", GAMEOPTION_LIMITED_RELIGIONS)
 		.value("GAMEOPTION_NO_INQUISITIONS", GAMEOPTION_NO_INQUISITIONS)
 		.value("GAMEOPTION_NO_BARBARIAN_CIV", GAMEOPTION_NO_BARBARIAN_CIV)
 		.value("GAMEOPTION_NO_TECH_DIFFUSION", GAMEOPTION_NO_TECH_DIFFUSION)
 		.value("GAMEOPTION_START_AS_MINORS", GAMEOPTION_START_AS_MINORS)
-		/********************************************************************************/
-		/**		REVOLUTION_MOD							END								*/
-		/********************************************************************************/
-
-/************************************************************************************************/
-/* Afforess			 		Last Update: 7/21/10                                                */
-/*                              New Gameoptions                                                 */
-/*                                                                                              */
-/************************************************************************************************/
 		.value("GAMEOPTION_MOUNTAINS", GAMEOPTION_MOUNTAINS)
 		.value("GAMEOPTION_SAD", GAMEOPTION_SAD)
 		.value("GAMEOPTION_ADVANCED_DIPLOMACY", GAMEOPTION_ADVANCED_DIPLOMACY)
@@ -655,12 +638,6 @@ void CyEnumsPythonInterface()
 		.value("GAMEOPTION_UNITED_NATIONS", GAMEOPTION_UNITED_NATIONS)
 		.value("GAMEOPTION_ADVANCED_ESPIONAGE", GAMEOPTION_ADVANCED_ESPIONAGE)
 		.value("GAMEOPTION_ADVANCED_NUKES", GAMEOPTION_ADVANCED_NUKES)
-/************************************************************************************************/
-/* Afforess						          END                                                */
-/************************************************************************************************/
-/************************************************************************************************/
-/*C2C                                     Begin                                              */
-/************************************************************************************************/
 #ifdef C2C_BUILD
 		.value("GAMEOPTION_DIVINE_PROPHETS", GAMEOPTION_DIVINE_PROPHETS)
 		.value("GAMEOPTION_NO_CITY_LIMITS", GAMEOPTION_NO_CITY_LIMITS)
@@ -691,7 +668,6 @@ void CyEnumsPythonInterface()
 		.value("GAMEOPTION_XP_FROM_ASSIGNED_SPECIALISTS", GAMEOPTION_XP_FROM_ASSIGNED_SPECIALISTS)
 		.value("GAMEOPTION_MORE_XP_TO_LEVEL", GAMEOPTION_MORE_XP_TO_LEVEL)
 		.value("GAMEOPTION_ONGOING_TRAINING", GAMEOPTION_ONGOING_TRAINING)
-		.value("GAMEOPTION_NIGHTMARE_MODE", GAMEOPTION_NIGHTMARE_MODE)
 		.value("GAMEOPTION_SIZE_MATTERS_UNCUT", GAMEOPTION_SIZE_MATTERS_UNCUT)
 		.value("GAMEOPTION_TELEPORT_HUNTING_AWARDS", GAMEOPTION_TELEPORT_HUNTING_AWARDS)
 		.value("GAMEOPTION_AMNESTY", GAMEOPTION_AMNESTY)
@@ -711,11 +687,7 @@ void CyEnumsPythonInterface()
 		.value("GAMEOPTION_DOWNSIZING_IS_PROFITABLE", GAMEOPTION_DOWNSIZING_IS_PROFITABLE)
 		.value("GAMEOPTION_UPSCALED_RESEARCH_COSTS", GAMEOPTION_UPSCALED_RESEARCH_COSTS)
 		.value("GAMEOPTION_DANGEROUS_WILDLIFE", GAMEOPTION_DANGEROUS_WILDLIFE)
-		.value("GAMEOPTION_HISTORICAL_WONDERS", GAMEOPTION_HISTORICAL_WONDERS)
 #endif
-/************************************************************************************************/
-/*C2C                                     End                                                */
-/************************************************************************************************/
 
 		//.value("NUM_GAMEOPTION_TYPES", NUM_GAMEOPTION_TYPES)
 		;
