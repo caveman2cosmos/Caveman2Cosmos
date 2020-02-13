@@ -555,16 +555,6 @@
 		<French>[ICON_BULLET]Gives this Animal %D1_Reasons Causes to Ignore Border Restrictions</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_NO_DEFENSIVE_BONUS_CHANGE_POSITIVE_TEXT</Tag>
-		<English>[ICON_BULLET]Gives %D1_Reasons Cause(s) to be unable to benefit from Defense Combat bonuses.</English>
-		<French>[ICON_BULLET]Gives %D1_Reasons Cause(s) to be unable to benefit from Defense Combat bonuses.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_NO_DEFENSIVE_BONUS_CHANGE_NEGATIVE_TEXT</Tag>
-		<English>[ICON_BULLET]Removes %D1_Reasons Cause(s) to be unable to benefit from Defense Combat bonuses.</English>
-		<French>[ICON_BULLET]Removes %D1_Reasons Cause(s) to be unable to benefit from Defense Combat bonuses.</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ANTIBIOLOGICAL</Tag>
 		<English>Anti-Biological Warfare</English>
 		<French>
@@ -5770,12 +5760,6 @@
 		<English>[ICON_BULLET]Trait - Stealth Defend: %D1_Change</English>
 		<French>[ICON_BULLET]Trait - Défense furtive: %D1_Change</French>
 		<German>[ICON_BULLET]Verteidigung gegen Tarnangriffe: %D1_Change</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_NO_INVISIBILITY_CHANGE_TEXT</Tag>
-		<English>[ICON_BULLET]Trait - Never Invisible: %D1_Change</English>
-		<French>[ICON_BULLET]Trait - jamais Invisible: %D1_Change</French>
-		<German>[ICON_BULLET]Verhinderte Unsichtbarkeit: %D1_Change</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TRAP_MAX_DAMAGE_TEXT</Tag>
@@ -19621,7 +19605,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_SECURITY</Tag>
-		<English>Build Up (Counter Espionage)</English>
+		<English>Build Up (Counter Espionage) I</English>
 		<French>Retranchement (Contre-espionnage)</French>
 	</TEXT>
 	<TEXT>
