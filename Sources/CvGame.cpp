@@ -12965,7 +12965,7 @@ bool CvGame::canEverResearch(TechTypes eTech) const
 {
 	if (isOption(GAMEOPTION_NO_FUTURE))
 	{
-		if (GC.getTechInfo(eTech).getEra() > GC.getInfoTypeForString("ERA_MODERN"))
+		if (GC.getTechInfo(eTech).getEra() > GC.getInfoTypeForString("ERA_ATOMIC"))
 		{
 			if (!GC.getTechInfo(eTech).isRepeat())
 			{

@@ -42,7 +42,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -92,7 +92,7 @@
 					<DiploScriptId>AS2D_DIPLO_RAGNAR_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_RAGNAR_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -144,7 +144,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -194,7 +194,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -256,7 +256,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -306,7 +306,7 @@
 					<DiploScriptId>AS2D_DIPLO_RAGNAR_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_RAGNAR_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -358,7 +358,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -408,7 +408,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -476,7 +476,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -526,7 +526,7 @@
 					<DiploScriptId>AS2D_DIPLO_RAGNAR_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_RAGNAR_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -578,7 +578,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -628,7 +628,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -1139,7 +1139,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -1189,7 +1189,7 @@
 					<DiploScriptId>AS2D_DIPLO_ALEXANDER_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_ALEXANDER_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -1241,7 +1241,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -1291,7 +1291,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -1810,7 +1810,7 @@
 					<DiploScriptId>AS2D_DIPLO_ASOKA_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_ASOKA_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -1868,7 +1868,7 @@
 					<DiploScriptId>AS2D_DIPLO_ASOKA_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_ASOKA_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -1920,7 +1920,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -1970,7 +1970,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -2487,7 +2487,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -2537,7 +2537,7 @@
 					<DiploScriptId>AS2D_DIPLO_EUROPE_MIDDLE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_CAESAR_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -2589,7 +2589,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -2639,7 +2639,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -3156,7 +3156,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -3206,7 +3206,7 @@
 					<DiploScriptId>AS2D_DIPLO_BISMARCK_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_BISMARCK_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -3258,7 +3258,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -3308,7 +3308,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -3832,7 +3832,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -3882,7 +3882,7 @@
 					<DiploScriptId>AS2D_DIPLO_EUROPE_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_EUROPE_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -3934,7 +3934,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -3984,7 +3984,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -4510,7 +4510,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -4560,7 +4560,7 @@
 					<DiploScriptId>AS2D_DIPLO_BRENNUS_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_BRENNUS_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -4612,7 +4612,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -4662,7 +4662,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -5175,7 +5175,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -5225,7 +5225,7 @@
 					<DiploScriptId>AS2D_DIPLO_CATHERINE_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_CATHERINE_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -5277,7 +5277,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -5327,7 +5327,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -5845,7 +5845,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -5895,7 +5895,7 @@
 					<DiploScriptId>AS2D_DIPLO_CHARLEMAGNE_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_CHARLEMAGNE_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -5947,7 +5947,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -5997,7 +5997,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -6520,7 +6520,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -6570,7 +6570,7 @@
 					<DiploScriptId>AS2D_DIPLO_EUROPE_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_EUROPE_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -6622,7 +6622,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -6672,7 +6672,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -7197,7 +7197,7 @@
 					<DiploScriptId>AS2D_DIPLO_CYRUS_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_CYRUS_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -7255,7 +7255,7 @@
 					<DiploScriptId>AS2D_DIPLO_CYRUS_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_CYRUS_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -7307,7 +7307,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -7357,7 +7357,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -7879,7 +7879,7 @@
 					<DiploScriptId>AS2D_DIPLO_CYRUS_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_CYRUS_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -7937,7 +7937,7 @@
 					<DiploScriptId>AS2D_DIPLO_CYRUS_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_CYRUS_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -7989,7 +7989,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -8039,7 +8039,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -8561,7 +8561,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -8611,7 +8611,7 @@
 					<DiploScriptId>AS2D_DIPLO_EUROPE_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_EUROPE_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -8663,7 +8663,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -8713,7 +8713,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -9237,7 +9237,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -9287,7 +9287,7 @@
 					<DiploScriptId>AS2D_DIPLO_ELIZABETH_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_ELIZABETH_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -9339,7 +9339,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -9389,7 +9389,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -9907,7 +9907,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -9957,7 +9957,7 @@
 					<DiploScriptId>AS2D_DIPLO_FREDERICK_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_FREDERICK_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -10009,7 +10009,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -10059,7 +10059,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -10541,7 +10541,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -10591,7 +10591,7 @@
 					<DiploScriptId>AS2D_DIPLO_GANDHI_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_GANDHI_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -10643,7 +10643,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -10693,7 +10693,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -11211,7 +11211,7 @@
 					<DiploScriptId>AS2D_DIPLO_GENGHISKHAN_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_GENGHISKHAN_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -11269,7 +11269,7 @@
 					<DiploScriptId>AS2D_DIPLO_GENGHISKHAN_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_GENGHISKHAN_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -11321,7 +11321,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -11371,7 +11371,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -11888,7 +11888,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -11938,7 +11938,7 @@
 					<DiploScriptId>AS2D_DIPLO_GILGAMESH_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_GILGAMESH_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -11990,7 +11990,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -12040,7 +12040,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -12562,7 +12562,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -12612,7 +12612,7 @@
 					<DiploScriptId>AS2D_DIPLO_HAMMURABI_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_HAMMURABI_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -12664,7 +12664,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -12714,7 +12714,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -13244,7 +13244,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -13294,7 +13294,7 @@
 					<DiploScriptId>AS2D_DIPLO_HANNIBAL_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_HANNIBAL_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -13346,7 +13346,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -13396,7 +13396,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -13911,7 +13911,7 @@
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -13969,7 +13969,7 @@
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -14021,7 +14021,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -14071,7 +14071,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -14594,7 +14594,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_HUAYNACAPAC_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -14652,7 +14652,7 @@
 					<DiploScriptId>AS2D_DIPLO_HUAYNACAPAC_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_HUAYNACAPAC_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -14704,7 +14704,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -14754,7 +14754,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -15284,7 +15284,7 @@
 					<DiploScriptId>AS2D_DIPLO_ISABELLA_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_ISABELLA_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -15342,7 +15342,7 @@
 					<DiploScriptId>AS2D_DIPLO_ISABELLA_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_ISABELLA_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -15394,7 +15394,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -15444,7 +15444,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -15970,7 +15970,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -16020,7 +16020,7 @@
 					<DiploScriptId>AS2D_DIPLO_JOHNII_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_JOHNII_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -16072,7 +16072,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -16122,7 +16122,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -16640,7 +16640,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -16690,7 +16690,7 @@
 					<DiploScriptId>AS2D_DIPLO_CAESAR_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_CAESAR_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -16742,7 +16742,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -16792,7 +16792,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -17311,7 +17311,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -17361,7 +17361,7 @@
 					<DiploScriptId>AS2D_DIPLO_JUSTINIANI_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_JUSTINIANI_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -17413,7 +17413,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -17463,7 +17463,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -17983,7 +17983,7 @@
 					<DiploScriptId>AS2D_DIPLO_KUBLAIKHAN_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_KUBLAIKHAN_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -18041,7 +18041,7 @@
 					<DiploScriptId>AS2D_DIPLO_KUBLAIKHAN_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_KUBLAIKHAN_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -18093,7 +18093,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -18143,7 +18143,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -18668,7 +18668,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -18718,7 +18718,7 @@
 					<DiploScriptId>AS2D_DIPLO_LINCOLN_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_LINCOLN_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -18770,7 +18770,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -18820,7 +18820,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -19334,7 +19334,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -19384,7 +19384,7 @@
 					<DiploScriptId>AS2D_DIPLO_LOUIS_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_LOUIS_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -19436,7 +19436,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -19486,7 +19486,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -20008,7 +20008,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -20058,7 +20058,7 @@
 					<DiploScriptId>AS2D_DIPLO_MANSAMUSA_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_MANSAMUSA_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -20110,7 +20110,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -20160,7 +20160,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -20680,7 +20680,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -20730,7 +20730,7 @@
 					<DiploScriptId>AS2D_DIPLO_MAOZEDONG_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_MAOZEDONG_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -20782,7 +20782,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -20832,7 +20832,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -21363,7 +21363,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -21413,7 +21413,7 @@
 					<DiploScriptId>AS2D_DIPLO_MEHMED_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_MEHMED_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -21465,7 +21465,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -21515,7 +21515,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -22032,7 +22032,7 @@
 					<DiploScriptId>AS2D_DIPLO_MONTEZUMA_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_MONTEZUMA_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -22090,7 +22090,7 @@
 					<DiploScriptId>AS2D_DIPLO_MONTEZUMA_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_MONTEZUMA_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -22142,7 +22142,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -22192,7 +22192,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -22720,7 +22720,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -22770,7 +22770,7 @@
 					<DiploScriptId>AS2D_DIPLO_NAPOLEON_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_NAPOLEON_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -22822,7 +22822,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -22872,7 +22872,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -23399,7 +23399,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -23449,7 +23449,7 @@
 					<DiploScriptId>AS2D_DIPLO_PACAL_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_PACAL_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -23501,7 +23501,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -23551,7 +23551,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -24076,7 +24076,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -24126,7 +24126,7 @@
 					<DiploScriptId>AS2D_DIPLO_EUROPE_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_EUROPE_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -24178,7 +24178,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -24228,7 +24228,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -24761,7 +24761,7 @@
 					<DiploScriptId>AS2D_DIPLO_PETER_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_PETER_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -24819,7 +24819,7 @@
 					<DiploScriptId>AS2D_DIPLO_PETER_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_PETER_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -24871,7 +24871,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -24921,7 +24921,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -25435,7 +25435,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -25485,7 +25485,7 @@
 					<DiploScriptId>AS2D_DIPLO_SHIHHUANGTI_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_SHIHHUANGTI_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -25537,7 +25537,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -25587,7 +25587,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -26109,7 +26109,7 @@
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -26167,7 +26167,7 @@
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -26219,7 +26219,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -26269,7 +26269,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -26786,7 +26786,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -26836,7 +26836,7 @@
 					<DiploScriptId>AS2D_DIPLO_RAGNAR_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_RAGNAR_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -26888,7 +26888,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -26938,7 +26938,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -27453,7 +27453,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -27503,7 +27503,7 @@
 					<DiploScriptId>AS2D_DIPLO_ROOSEVELT_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_ROOSEVELT_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -27555,7 +27555,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -27605,7 +27605,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -28125,7 +28125,7 @@
 					<DiploScriptId>AS2D_DIPLO_SALADIN_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_SALADIN_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -28183,7 +28183,7 @@
 					<DiploScriptId>AS2D_DIPLO_SALADIN_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_SALADIN_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -28235,7 +28235,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -28285,7 +28285,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -28803,7 +28803,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -28853,7 +28853,7 @@
 					<DiploScriptId>AS2D_DIPLO_SHAKA_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_SHAKA_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -28905,7 +28905,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -28955,7 +28955,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -29469,7 +29469,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -29519,7 +29519,7 @@
 					<DiploScriptId>AS2D_DIPLO_NORTH_AMERICA_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_NORTH_AMERICA_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -29571,7 +29571,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -29621,7 +29621,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -30154,7 +30154,7 @@
 					<DiploScriptId>AS2D_DIPLO_PETER_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_PETER_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -30212,7 +30212,7 @@
 					<DiploScriptId>AS2D_DIPLO_PETER_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_PETER_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -30264,7 +30264,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -30314,7 +30314,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -30860,7 +30860,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -30915,7 +30915,7 @@
 					<DiploScriptId>AS2D_DIPLO_MIDDLE_EAST_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_MIDDLE_EAST_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -30967,7 +30967,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -31017,7 +31017,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -31550,7 +31550,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -31600,7 +31600,7 @@
 					<DiploScriptId>AS2D_DIPLO_SURYAVARAMAN_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_SURYAVARAMAN_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -31652,7 +31652,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -31702,7 +31702,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -32238,7 +32238,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -32288,7 +32288,7 @@
 					<DiploScriptId>AS2D_DIPLO_TOKUGAWA_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_TOKUGAWA_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -32340,7 +32340,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -32390,7 +32390,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -32920,7 +32920,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -32970,7 +32970,7 @@
 					<DiploScriptId>AS2D_DIPLO_VICTORIA_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_VICTORIA_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -33022,7 +33022,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -33072,7 +33072,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -33612,7 +33612,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -33662,7 +33662,7 @@
 					<DiploScriptId>AS2D_DIPLO_WANGKON_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WANGKON_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -33714,7 +33714,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -33764,7 +33764,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -34311,7 +34311,7 @@
 					<DiploScriptId>AS2D_DIPLO_WASHINGTON_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WASHINGTON_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -34369,7 +34369,7 @@
 					<DiploScriptId>AS2D_DIPLO_WASHINGTON_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WASHINGTON_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -34421,7 +34421,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -34471,7 +34471,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -35012,7 +35012,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -35062,7 +35062,7 @@
 					<DiploScriptId>AS2D_DIPLO_WILLEM_VAN_ORANJE_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WILLEM_VAN_ORANJE_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -35114,7 +35114,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -35164,7 +35164,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -35700,7 +35700,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -35750,7 +35750,7 @@
 					<DiploScriptId>AS2D_DIPLO_ZARA_YAQOB_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_ZARA_YAQOB_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -35802,7 +35802,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -35852,7 +35852,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -36374,7 +36374,7 @@
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -36432,7 +36432,7 @@
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -36484,7 +36484,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -36534,7 +36534,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -37063,7 +37063,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -37113,7 +37113,7 @@
 					<DiploScriptId>AS2D_DIPLO_AFRICA_EARLY</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_AFRICA_EARLY</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -37165,7 +37165,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -37215,7 +37215,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -37754,7 +37754,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -37804,7 +37804,7 @@
 					<DiploScriptId>AS2D_DIPLO_AFRICA_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_AFRICA_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -37856,7 +37856,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -37906,7 +37906,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -38427,7 +38427,7 @@
 					<DiploScriptId>AS2D_DIPLO_NORTH_AMERICA_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_NORTH_AMERICA_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -38485,7 +38485,7 @@
 					<DiploScriptId>AS2D_DIPLO_NORTH_AMERICA_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_NORTH_AMERICA_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -38537,7 +38537,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -38587,7 +38587,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -39112,7 +39112,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -39162,7 +39162,7 @@
 					<DiploScriptId>AS2D_DIPLO_HAMMURABI_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_HAMMURABI_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -39214,7 +39214,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -39264,7 +39264,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -39808,7 +39808,7 @@
 					<DiploScriptId>AS2D_DIPLO_SURYAVARAMAN_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_SURYAVARAMAN_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -39866,7 +39866,7 @@
 					<DiploScriptId>AS2D_DIPLO_SURYAVARAMAN_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_SURYAVARAMAN_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -39918,7 +39918,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -39968,7 +39968,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -40485,7 +40485,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -40535,7 +40535,7 @@
 					<DiploScriptId>AS2D_DIPLO_SURYAVARAMAN_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_SURYAVARAMAN_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -40587,7 +40587,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -40637,7 +40637,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -41159,7 +41159,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_ELIZABETH_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -41214,7 +41214,7 @@
 					<DiploScriptId>AS2D_DIPLO_ELIZABETH_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_ELIZABETH_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -41266,7 +41266,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -41316,7 +41316,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -41830,7 +41830,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_ELIZABETH_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -41884,7 +41884,7 @@
 					<DiploScriptId>AS2D_DIPLO_ELIZABETH_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_ELIZABETH_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -41936,7 +41936,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -41986,7 +41986,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -42500,7 +42500,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -42550,7 +42550,7 @@
 					<DiploScriptId>AS2D_DIPLO_GERONIMO_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_GERONIMO_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -42602,7 +42602,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -42652,7 +42652,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -43169,7 +43169,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -43219,7 +43219,7 @@
 					<DiploScriptId>AS2D_DIPLO_EUROPE_MIDDLE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_EUROPE_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -43271,7 +43271,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -43321,7 +43321,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -43830,7 +43830,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -43880,7 +43880,7 @@
 					<DiploScriptId>AS2D_DIPLO_EUROPE_MIDDLE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_EUROPE_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -43932,7 +43932,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -43982,7 +43982,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
@@ -44491,7 +44491,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -44541,7 +44541,7 @@
 					<DiploScriptId>AS2D_DIPLO_CHARLEMAGNE_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_RAGNAR_LATE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
@@ -44593,7 +44593,7 @@
 					<EraType>ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
 					<EraType>ERA_INFORMATION</EraType>
@@ -44643,7 +44643,7 @@
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>

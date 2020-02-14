@@ -6968,7 +6968,7 @@ Time Frame: 1990 AD - 2050 AD</English>
 Time Frame: 450 AD - 1400 AD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ERA_MODERN</Tag>
+		<Tag>TXT_KEY_ERA_ATOMIC</Tag>
 		<English>Atomic</English>
 		<French>Atomique</French>
 		<German>
@@ -6978,7 +6978,7 @@ Time Frame: 450 AD - 1400 AD</English>
 		</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ERA_MODERN_STRATEGY</Tag>
+		<Tag>TXT_KEY_ERA_ATOMIC_STRATEGY</Tag>
 		<English>The Atomic era describes the time of the second world war till roughly the end of the cold war. During this period air power becomes the strongest force on the battlefield and the doctrine of MAD, or mutually assured destruction, appears as nuclear weapons enter the picture. Also, the beginnings of space flight and computers occur in this period.
 Time Frame: 1900 AD - 1990 AD</English>
 	</TEXT>

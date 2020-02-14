@@ -16735,7 +16735,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>9094</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iFirstFreeTechs>1</iFirstFreeTechs>
 			<iAsset>40</iAsset>
 			<iPower>10</iPower>
@@ -16788,7 +16788,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>9484</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>40</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>72</iGridX>
@@ -16814,7 +16814,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_PROPAGANDA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iCost>9484</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>14</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>72</iGridX>
@@ -16852,7 +16852,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>9484</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>40</iAsset>
 			<iPower>10</iPower>
 			<bTrade>1</bTrade>
@@ -16896,7 +16896,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>9484</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>40</iAsset>
 			<iPower>8</iPower>
 			<bTrade>1</bTrade>
@@ -16929,7 +16929,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>9484</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>8</iPower>
 			<bTrade>1</bTrade>
@@ -16975,7 +16975,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_ENCRYPTION_MACHINES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>9889</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>73</iGridX>
@@ -17008,7 +17008,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_THEORY_OF_RELATIVITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>9889</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>30</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>73</iGridX>
@@ -17042,7 +17042,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_COMMUNISM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<iCost>9889</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<FirstFreeUnitClass>UNITCLASS_GREAT_SPY</FirstFreeUnitClass>
 			<iAsset>40</iAsset>
 			<bTrade>1</bTrade>
@@ -17093,7 +17093,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_FASCISM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iCost>9889</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<FirstFreeUnitClass>UNITCLASS_GREAT_GENERAL</FirstFreeUnitClass>
 			<iAsset>40</iAsset>
 			<bTrade>1</bTrade>
@@ -17145,7 +17145,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>9889</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>40</iAsset>
 			<iPower>10</iPower>
 			<bTrade>1</bTrade>
@@ -17189,7 +17189,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>9889</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>32</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>73</iGridX>
@@ -17228,7 +17228,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>9889</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>10</iPower>
 			<bTrade>1</bTrade>
@@ -17260,7 +17260,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>9889</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>8</iPower>
 			<bTrade>1</bTrade>
@@ -17303,7 +17303,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_DECRYPTION_MACHINES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>10309</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>74</iGridX>
@@ -17334,7 +17334,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>10309</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>40</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>74</iGridX>
@@ -17372,7 +17372,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_COSMOLOGY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>10309</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>30</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>74</iGridX>
@@ -17406,7 +17406,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_CONSUMERISM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iCost>10309</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>14</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>74</iGridX>
@@ -17441,7 +17441,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>10309</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>8</iPower>
 			<bTrade>1</bTrade>
@@ -17484,7 +17484,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>10309</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>40</iAsset>
 			<iPower>10</iPower>
 			<bTrade>1</bTrade>
@@ -17534,7 +17534,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_PLASTICS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iCost>10309</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>74</iGridX>
@@ -17573,7 +17573,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>10309</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>32</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>74</iGridX>
@@ -17616,7 +17616,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>10309</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>40</iAsset>
 			<iPower>10</iPower>
 			<bTrade>1</bTrade>
@@ -17648,7 +17648,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>10309</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>40</iAsset>
 			<iPower>10</iPower>
 			<bTrade>1</bTrade>
@@ -17692,7 +17692,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>10744</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>40</iAsset>
 			<iPower>8</iPower>
 			<bTrade>1</bTrade>
@@ -17731,7 +17731,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>10744</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>40</iAsset>
 			<iPower>10</iPower>
 			<bTrade>1</bTrade>
@@ -17778,7 +17778,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_APPLIED_ECONOMICS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iCost>10744</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<FirstFreeUnitClass>UNITCLASS_MERCHANT</FirstFreeUnitClass>
 			<iAsset>50</iAsset>
 			<bTrade>1</bTrade>
@@ -17821,7 +17821,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>10744</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>40</iAsset>
 			<iPower>10</iPower>
 			<bTrade>1</bTrade>
@@ -17857,7 +17857,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>10744</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>32</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>75</iGridX>
@@ -17898,7 +17898,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_AGRICEMICALS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iCost>10744</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>75</iGridX>
@@ -17939,7 +17939,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_ELECTRONICS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<iCost>10744</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>4</iPower>
 			<bTrade>1</bTrade>
@@ -17987,7 +17987,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>10744</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>32</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>75</iGridX>
@@ -18024,7 +18024,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_MODERNPHYSICS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>11196</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<FirstFreeUnitClass>UNITCLASS_SCIENTIST</FirstFreeUnitClass>
 			<iAsset>40</iAsset>
 			<bTrade>1</bTrade>
@@ -18063,7 +18063,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_DADA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iCost>11196</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>40</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>76</iGridX>
@@ -18110,7 +18110,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>11196</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>40</iAsset>
 			<iPower>10</iPower>
@@ -18161,7 +18161,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_HIGHWAY_SYSTEMS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<iCost>11196</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>4</iPower>
 			<bTrade>1</bTrade>
@@ -18207,7 +18207,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_FRANCHISES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<iCost>11196</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>4</iPower>
 			<bTrade>1</bTrade>
@@ -18250,7 +18250,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_CATALYTIC_POLYMERIZATION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iCost>11196</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>76</iGridX>
@@ -18288,7 +18288,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_TELEVISION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<iCost>11196</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>76</iGridX>
@@ -18338,7 +18338,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>11196</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>4</iPower>
 			<bTrade>1</bTrade>
@@ -18390,7 +18390,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_EARLY_COMPUTING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>11196</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>76</iGridX>
@@ -18431,7 +18431,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_SURREALISM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<iCost>11665</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>4</iPower>
 			<bTrade>1</bTrade>
@@ -18474,7 +18474,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>11665</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>40</iAsset>
 			<iPower>10</iPower>
 			<bTrade>1</bTrade>
@@ -18525,7 +18525,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>11665</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>40</iAsset>
 			<iPower>10</iPower>
 			<bTrade>1</bTrade>
@@ -18570,7 +18570,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>11665</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>40</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>77</iGridX>
@@ -18611,7 +18611,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_MASS_MEDIA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<iCost>11665</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>77</iGridX>
@@ -18661,7 +18661,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>11665</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>4</iPower>
 			<bTrade>1</bTrade>
@@ -18704,7 +18704,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>11665</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>40</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>77</iGridX>
@@ -18731,7 +18731,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>12152</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>40</iAsset>
 			<iPower>10</iPower>
 			<bTrade>1</bTrade>
@@ -18775,7 +18775,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>12152</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>10</iPower>
 			<bTrade>1</bTrade>
@@ -18814,7 +18814,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_POP_ART_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iCost>12152</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>78</iGridX>
@@ -18856,7 +18856,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_MICROWAVES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<iCost>12152</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>4</iPower>
 			<bTrade>1</bTrade>
@@ -18903,7 +18903,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>12152</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>78</iGridX>
@@ -18941,7 +18941,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>12657</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>40</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>79</iGridX>
@@ -18975,7 +18975,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_TOURISM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<iCost>12657</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>10</iPower>
 			<bTrade>1</bTrade>
@@ -19014,7 +19014,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_MODERN_HEALTH_CARE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>12657</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>40</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>79</iGridX>
@@ -19049,7 +19049,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>12657</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>10</iPower>
 			<bTrade>1</bTrade>
@@ -19084,7 +19084,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>12657</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>10</iPower>
 			<bTrade>1</bTrade>
@@ -19119,7 +19119,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_RADIO_ASTRONOMY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<iCost>12657</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>32</iAsset>
 			<iPower>4</iPower>
 			<bTrade>1</bTrade>
@@ -19159,7 +19159,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>12657</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>8</iPower>
 			<bTrade>1</bTrade>
@@ -19202,7 +19202,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>12657</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>79</iGridX>
@@ -19248,7 +19248,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_GASTRONOMY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<iCost>13181</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>4</iPower>
 			<bTrade>1</bTrade>
@@ -19291,7 +19291,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_LEGALIZED_GAMBLING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iCost>13181</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>80</iGridX>
@@ -19330,7 +19330,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>13181</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>80</iGridX>
@@ -19372,7 +19372,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>13181</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>10</iPower>
 			<bRebaseAnywhere>1</bRebaseAnywhere>
@@ -19405,7 +19405,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>13181</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>10</iPower>
 			<bTrade>1</bTrade>
@@ -19441,7 +19441,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>13181</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>4</iPower>
 			<bTrade>1</bTrade>
@@ -19487,7 +19487,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_SOLAR_POWER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<iCost>13181</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>4</iPower>
 			<bTrade>1</bTrade>
@@ -19530,7 +19530,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_HYDROPONICS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<iCost>13724</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>81</iGridX>
@@ -19567,7 +19567,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_COUNTERCULTURE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iCost>13724</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>14</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>81</iGridX>
@@ -19602,7 +19602,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>13724</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>40</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>81</iGridX>
@@ -19644,7 +19644,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>13724</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>4</iPower>
 			<bTrade>1</bTrade>
@@ -19683,7 +19683,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_SEISMOLOGY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>13724</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>10</iPower>
 			<bTrade>1</bTrade>
@@ -19726,7 +19726,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_LASER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iCost>13724</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>10</iPower>
 			<bTrade>1</bTrade>
@@ -19768,7 +19768,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_PERSONAL_COMPUTERS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>13724</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>81</iGridX>
@@ -19809,7 +19809,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_MINORITY_RIGHTS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<iCost>14287</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>82</iGridX>
@@ -19856,7 +19856,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>14287</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>82</iGridX>
@@ -19895,7 +19895,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>14287</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>5</iPower>
 			<bTrade>1</bTrade>
@@ -19932,7 +19932,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>14287</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>4</iPower>
 			<bTrade>1</bTrade>
@@ -19974,7 +19974,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_VOLCANOLOGY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>14287</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>10</iPower>
 			<bTrade>1</bTrade>
@@ -20017,7 +20017,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_COMPUTER_NETWORKS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>14287</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>82</iGridX>
@@ -20055,7 +20055,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_LONG_RANGE_FORECASTING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>14287</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iHappiness>1</iHappiness>
 			<iAsset>40</iAsset>
 			<bTrade>1</bTrade>
@@ -20085,7 +20085,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_NEW_URBANISM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<iCost>14870</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>14</iAsset>
 			<iPower>2</iPower>
 			<bTrade>1</bTrade>
@@ -20133,7 +20133,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>14870</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>4</iPower>
 			<bTrade>1</bTrade>
@@ -20175,7 +20175,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_FIRE_SUPPRESSION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<iCost>14870</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
 			<iAsset>48</iAsset>
@@ -20213,7 +20213,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>14870</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>83</iGridX>
@@ -20255,7 +20255,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_CLIMATE_MODELLING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>14870</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>2</iPower>
 			<bTrade>1</bTrade>
@@ -20296,7 +20296,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_EXTREME_SPORTS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iCost>15474</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>40</iAsset>
 			<iPower>2</iPower>
 			<bTrade>1</bTrade>
@@ -20340,7 +20340,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_GENETICS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<iCost>15474</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iHealth>1</iHealth>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
@@ -20380,7 +20380,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>15474</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>10</iPower>
 			<bTrade>1</bTrade>
@@ -20416,7 +20416,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>15474</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>4</iPower>
 			<bTrade>1</bTrade>
@@ -20455,7 +20455,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_3D_MODELLING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>15474</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>84</iGridX>
@@ -20490,7 +20490,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>16099</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>5</iPower>
 			<bTrade>1</bTrade>
@@ -20530,7 +20530,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>16099</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>5</iPower>
 			<bTrade>1</bTrade>
@@ -20565,7 +20565,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>16099</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>4</iPower>
 			<bTrade>1</bTrade>
@@ -20608,7 +20608,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>16099</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>4</iPower>
 			<bTrade>1</bTrade>
@@ -20652,7 +20652,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>16099</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<iPower>4</iPower>
 			<bTrade>1</bTrade>
@@ -20696,7 +20696,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>16099</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>85</iGridX>
@@ -36959,7 +36959,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>-1</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>ERA_ATOMIC</Era>
 			<iAsset>40</iAsset>
 			<iPower>10</iPower>
 			<bTrade>1</bTrade>

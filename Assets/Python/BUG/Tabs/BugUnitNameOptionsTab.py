@@ -504,7 +504,7 @@ class BugUnitNameOptionsTab(BugOptionsTab.BugOptionsTab):
 		#~ self.addTextEdit(screen, columnL, columnR, "UnitNaming__Combat_ERA_MEDIEVAL")
 		#~ self.addTextEdit(screen, columnL, columnR, "UnitNaming__Combat_ERA_RENAISSANCE")
 		#~ self.addTextEdit(screen, columnL, columnR, "UnitNaming__Combat_ERA_INDUSTRIAL")
-		#~ self.addTextEdit(screen, columnL, columnR, "UnitNaming__Combat_ERA_MODERN")
+		#~ self.addTextEdit(screen, columnL, columnR, "UnitNaming__Combat_ERA_ATOMIC")
 		#~ self.addTextEdit(screen, columnL, columnR, "UnitNaming__Combat_ERA_TRANSHUMAN")
 		#~ self.addTextEdit(screen, columnL, columnR, "UnitNaming__Combat_ERA_GALACTIC")
 		#~ self.addTextEdit(screen, columnL, columnR, "UnitNaming__Combat_ERA_FUTURE")

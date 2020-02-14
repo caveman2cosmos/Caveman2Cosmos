@@ -91,7 +91,7 @@
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_INDUSTRIAL_1</Text>
-					<Era>ERA_MODERN</Era>
+					<Era>ERA_ATOMIC</Era>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/CityRuinsEvent.dds</EventArt>
@@ -947,7 +947,7 @@
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_3</Text>
-					<Era>ERA_MODERN</Era>
+					<Era>ERA_ATOMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_3</Text>
@@ -1023,7 +1023,7 @@
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_3</Text>
-					<Era>ERA_MODERN</Era>
+					<Era>ERA_ATOMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_3</Text>
@@ -1099,7 +1099,7 @@
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_3</Text>
-					<Era>ERA_MODERN</Era>
+					<Era>ERA_ATOMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_3</Text>
@@ -1202,7 +1202,7 @@
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_3</Text>
-					<Era>ERA_MODERN</Era>
+					<Era>ERA_ATOMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_3</Text>
@@ -1310,7 +1310,7 @@
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_2</Text>
-					<Era>ERA_MODERN</Era>
+					<Era>ERA_ATOMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_2</Text>
@@ -7240,7 +7240,7 @@
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_EARTHQUAKE_2</Text>
-					<Era>ERA_MODERN</Era>
+					<Era>ERA_ATOMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_EARTHQUAKE_2</Text>
@@ -9536,7 +9536,7 @@
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_TREASURE_INDUSTRIAL_1</Text>
-					<Era>ERA_MODERN</Era>
+					<Era>ERA_ATOMIC</Era>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -10678,7 +10678,7 @@
 				</TriggerText>
 				<TriggerText>
 					<Text>A fisherman from the city of %s2_city has found a old pirate map.</Text>
-					<Era>ERA_MODERN</Era>
+					<Era>ERA_ATOMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>A fisherman from the city of %s2_city has found a old pirate map.</Text>

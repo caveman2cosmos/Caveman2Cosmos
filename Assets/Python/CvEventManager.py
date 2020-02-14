@@ -317,7 +317,7 @@ class CvEventManager:
 					GC.getInfoTypeForString('ERA_MEDIEVAL')		: iMedieval,
 					GC.getInfoTypeForString('ERA_RENAISSANCE')	: GC.getInfoTypeForString('UNIT_MILITIA_RENAISSANCE'),
 					GC.getInfoTypeForString('ERA_INDUSTRIAL')	: GC.getInfoTypeForString('UNIT_MILITIA_INDUSTRIAL'),
-					GC.getInfoTypeForString('ERA_MODERN')		: iModern,
+					GC.getInfoTypeForString('ERA_ATOMIC')		: iModern,
 					GC.getInfoTypeForString('ERA_INFORMATION')	: iModern
 				}
 				# Only needs to be done once.

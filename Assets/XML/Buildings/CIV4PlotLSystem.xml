@@ -342,7 +342,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_eu.nif::1x1_03</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -376,7 +376,7 @@
 		</ArtRef>
 
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_eu.nif::1x1_01</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -385,7 +385,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_eu.nif::1x1_02</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -394,7 +394,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_eu.nif::1x1_03</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -403,7 +403,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_eu.nif::1x1_04</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -533,7 +533,7 @@
 
 		<!-- 1x1 GENERIC MEDITERRANEAN RENAISSANCE/INDUSTRIAL/MODERN -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_mediterranean.nif::1x1x1_01</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EGYPT,ARTSTYLE_GRECO_ROMAN</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -542,7 +542,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_mediterranean.nif::1x1x1_02</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EGYPT,ARTSTYLE_GRECO_ROMAN</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -551,7 +551,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_mediterranean.nif::1x1x2_01</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EGYPT,ARTSTYLE_GRECO_ROMAN</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -560,7 +560,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_mediterranean.nif::1x1x2_02</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EGYPT,ARTSTYLE_GRECO_ROMAN</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -569,7 +569,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_mediterranean.nif::1x1x2_03</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EGYPT,ARTSTYLE_GRECO_ROMAN</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -626,7 +626,7 @@
 		</ArtRef>
 		<!-- 1x1 AFRO MEDIEVAL/RENAISSANCE/INDUSTRIAL/MODERN -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_africa.nif::1x1x1_01</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -635,7 +635,7 @@
 			<Scale>0.28</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_africa.nif::1x1x1_02</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -644,7 +644,7 @@
 			<Scale>0.28</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_africa.nif::1x1x2_01</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -653,7 +653,7 @@
 			<Scale>0.28</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_africa.nif::1x1x2_02</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -662,7 +662,7 @@
 			<Scale>0.28</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_africa.nif::1x1x2_03</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -756,7 +756,7 @@
 		</ArtRef>
 		<!-- 1x1 ARAB RENAISSANCE/INDUSTRIAL/MODERN -->
 <!--		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_India.nif::1x1_01</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -765,7 +765,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_India.nif::1x1_03</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -775,7 +775,7 @@
 		</ArtRef> -->
 
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_arabia.nif::1x1x1_01</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -784,7 +784,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_arabia.nif::1x1x1_02</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -793,7 +793,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_arabia.nif::1x2x2_02</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -855,7 +855,7 @@
 		</ArtRef>
 		<!-- 1x1 ASIAN RENAISSANCE/INDUSTRIAL/MODERN/FUTURE -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_asia.nif::1x1_01</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -865,7 +865,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_asia.nif::1x1_02</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -875,7 +875,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_asia.nif::1x1_03</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -885,7 +885,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_asia.nif::1x1_04</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -895,7 +895,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_asia.nif::1x1_05</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -916,7 +916,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ASIA,ARTSTYLE_JAPAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_eu.nif::1x1_03</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -928,7 +928,7 @@
 
 		<!-- 1x1 JAPANESE RENAISSANCE/INDUSTRIAL/MODERN/FUTURE -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_JAPAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_japan.nif::1x1_01</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -938,7 +938,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_JAPAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_japan.nif::1x1_02</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -948,7 +948,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_JAPAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_japan.nif::1x1_03</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -958,7 +958,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_JAPAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_japan.nif::1x1_04</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -968,7 +968,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_JAPAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_japan.nif::1x1_05</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -998,7 +998,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_ALL,!ERA_INDUSTRIAL,!ERA_MODERN,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ALL,!ERA_INDUSTRIAL,!ERA_ATOMIC,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_MONGOLIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_Mongolia.nif::1x1x2_02</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -1064,7 +1064,7 @@
 		</ArtRef>
 		<!-- 1x1 SOUTH_EAST_ASIAN RENAISSANCE/INDUSTRIAL/MODERN/FUTURE -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_EAST_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_SouthEastAsia.nif::1x1_01</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -1073,7 +1073,7 @@
 			<Scale>0.3</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_EAST_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_SouthEastAsia.nif::1x1_02</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -1082,7 +1082,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_EAST_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_SouthEastAsia.nif::1x1_03</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -1091,7 +1091,7 @@
 			<Scale>0.3</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_EAST_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_SouthEastAsia.nif::1x1_04</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -1100,7 +1100,7 @@
 			<Scale>0.28</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_EAST_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_SouthEastAsia.nif::2x1_01</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -1119,7 +1119,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_EAST_ASIA,ARTSTYLE_MONGOLIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_eu.nif::1x1_03</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -1315,7 +1315,7 @@
 		</ArtRef>
 		<!-- 1x1 CRESCENT RENAISSANCE/INDUSTRIAL/MODERN -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_CRESCENT</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_eastern.nif::1x1_01</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -1324,7 +1324,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_CRESCENT</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_eastern.nif::1x1_02</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -1333,7 +1333,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_CRESCENT</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_eastern.nif::1x1_03</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -1342,7 +1342,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_CRESCENT</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_eastern.nif::1x1_04</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -1596,7 +1596,7 @@
 		</ArtRef>
 		<!-- 1x1 ANGLO MODERN -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/colony_euro_late.nif::1x1_01</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET</Attribute>
@@ -1605,7 +1605,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/colony_euro_late.nif::1x1_02</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET</Attribute>
@@ -1614,7 +1614,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/colony_euro_late.nif::1x1_03</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET</Attribute>
@@ -1623,7 +1623,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/colony_euro_late.nif::1x1_04</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET</Attribute>
@@ -1802,7 +1802,7 @@
 		</ArtRef>
 		<!-- 1x1 GRECO_ROMAN MODERN -->
 <!--		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_GRECO_ROMAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_India.nif::1x1_01</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -1811,7 +1811,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_GRECO_ROMAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_India.nif::1x1_03</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -1987,7 +1987,7 @@
 		</ArtRef>
 
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_Mediterranean.nif::park_1x1</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -2005,7 +2005,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_Mediterranean.nif::1x1_03</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -2014,7 +2014,7 @@
 			<Scale>0.41</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_Mediterranean.nif::1x1_04</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -2249,7 +2249,7 @@
 		</ArtRef> -->
 		<!-- 1x1 RUSSIAN INDUSTRIAL/MODERN -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_russia.nif::1x1_02</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -2258,7 +2258,7 @@
 			<Scale>0.38</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_russia.nif::1x1_04</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -2267,7 +2267,7 @@
 			<Scale>0.33</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_russia.nif::1x1_04</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -2416,7 +2416,7 @@
 		</ArtRef>
 		<!-- 1x1 INDIAN RENAISSANCE/INDUSTRIAL/MODERN -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_eastern.nif::1x1_02</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_INDIA</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -2425,7 +2425,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_eastern.nif::1x1_03</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_INDIA</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -2435,7 +2435,7 @@
 		</ArtRef>
 
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_INDIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_India.nif::1x1_02</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -2444,7 +2444,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_INDIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_India.nif::1x1_04</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -2453,7 +2453,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_INDIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_India.nif::2x1_01</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -2766,7 +2766,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_MESO_AMERICA,ARTSTYLE_SOUTH_AMERICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_Meso_America.nif::1x1_02</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -2775,7 +2775,7 @@
 			<Scale>0.44</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_MESO_AMERICA,ARTSTYLE_SOUTH_AMERICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_Meso_America.nif::1x1_03</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -2784,7 +2784,7 @@
 			<Scale>0.41</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_MESO_AMERICA,ARTSTYLE_SOUTH_AMERICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_Meso_America.nif::1x1_04</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -2910,7 +2910,7 @@
 
 		<!-- 1x1 PACIFIC MEDIEVAL_TO_FUTURE -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_PACIFIC</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/South_Pacific.nif::1x1x1_01</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -2919,7 +2919,7 @@
 			<Scale>0.27</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_PACIFIC</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/South_Pacific.nif::1x2x2_02</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -2992,7 +2992,7 @@
 		</ArtRef>
 		<!--Modern LandWorked -->
 		<ArtRef Name="goal:IMPROVEMENT_LAND_WORKED">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/LandWorked/sm_farm_house_mod.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/LandWorked/sm_farm_house_mod.kfm</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_LAND_WORKED</Attribute>
@@ -3006,7 +3006,7 @@
 		</ArtRef>
 		<!--Testing Modern LandWorked -->
 <!--		<ArtRef Name="goal:IMPROVEMENT_LAND_WORKED">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/LandWorked/sm_farm_house_test.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/LandWorked/sm_farm_house_mod.kfm</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_LAND_WORKED</Attribute>
@@ -3022,7 +3022,7 @@
 		<!-- modern workshop -->
 		<ArtRef Name="goal:IMPROVEMENT_WORKSHOP">
 			<Attribute Class="Improvement">IMPROVEMENT_WORKSHOP</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
 			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Workshop/modern_workshop.nif</Attribute>
@@ -3034,7 +3034,7 @@
 		<!-- modern lumbermill -->
 		<ArtRef Name="goal:IMPROVEMENT_LUMBERMILL">
 			<Attribute Class="Improvement">IMPROVEMENT_LUMBERMILL</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
 			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/LumberMill/Sawmill.nif</Attribute>
@@ -3082,7 +3082,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_eu.nif::1x2_03</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -3118,7 +3118,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_eu.nif::1x2_05</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -3136,7 +3136,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_eu.nif::park_2x1</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -3155,7 +3155,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_eu.nif::2x1_02</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -3182,7 +3182,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_eu.nif::park_2x1</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -3192,7 +3192,7 @@
 		</ArtRef>
 
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_eu.nif::1x2_01</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -3202,7 +3202,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_eu.nif::1x2_02</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -3222,7 +3222,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_eu.nif::2x1_01</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -3242,7 +3242,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_eu.nif::2x1_03</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -3252,7 +3252,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_eu.nif::2x1_04</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -3316,7 +3316,7 @@
 
 		<!-- 2x1 GENERIC MEDITERRANEAN RENAISSANCE/INDUSTRIAL/MODERN -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EGYPT,ARTSTYLE_GRECO_ROMAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_mediterranean.nif::1x2x2_01</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -3326,7 +3326,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EGYPT,ARTSTYLE_GRECO_ROMAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_mediterranean.nif::1x2x2_02</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -3336,7 +3336,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EGYPT,ARTSTYLE_GRECO_ROMAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_mediterranean.nif::1x2x2_03</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -3346,7 +3346,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EGYPT,ARTSTYLE_GRECO_ROMAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_mediterranean.nif::1x2x2_04</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -3356,7 +3356,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EGYPT,ARTSTYLE_GRECO_ROMAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_mediterranean.nif::1x2x2_05</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -3366,7 +3366,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EGYPT,ARTSTYLE_GRECO_ROMAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_mediterranean.nif::2x1x2_01</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -3376,7 +3376,7 @@
 			<Scale>0.41</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EGYPT,ARTSTYLE_GRECO_ROMAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_mediterranean.nif::2x1x2_02</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -3386,7 +3386,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EGYPT,ARTSTYLE_GRECO_ROMAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_mediterranean.nif::2x1x2_03</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -3396,7 +3396,7 @@
 			<Scale>0.26</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EGYPT,ARTSTYLE_GRECO_ROMAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_mediterranean.nif::2x1x2_04</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -3499,7 +3499,7 @@
 		</ArtRef>
 		<!-- 2x1 AFRO MEDIEVAL/RENAISSANCE/INDUSTRIAL/MODERN -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_africa.nif::1x2x2_01</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -3509,7 +3509,7 @@
 			<Scale>0.28</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_africa.nif::1x2x2_02</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -3519,7 +3519,7 @@
 			<Scale>0.28</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_africa.nif::1x2x2_03</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -3529,7 +3529,7 @@
 			<Scale>0.28</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_africa.nif::1x2x2_04</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -3539,7 +3539,7 @@
 			<Scale>0.28</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_africa.nif::1x2x2_05</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -3549,7 +3549,7 @@
 			<Scale>0.28</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_africa.nif::2x1x2_01</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -3559,7 +3559,7 @@
 			<Scale>0.28</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_africa.nif::2x1x2_02</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -3579,7 +3579,7 @@
 			<Scale>0.28</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_africa.nif::2x1x2_04</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -3713,7 +3713,7 @@
 		</ArtRef>
 		<!-- 2x1 ARABIAN RENAISSANCE/INDUSTRIAL/MODERN -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_india.nif::2x1_03</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -3723,7 +3723,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_india.nif::1x2_01</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -3733,7 +3733,7 @@
 			<Scale>0.38</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_india.nif::1x2_02</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -3743,7 +3743,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_india.nif::1x2_03</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -3753,7 +3753,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_india.nif::1x2_05</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -3764,7 +3764,7 @@
 		</ArtRef>
 
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_arabia.nif::1x1x2_03</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -3774,7 +3774,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_arabia.nif::1x2x2_01</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -3784,7 +3784,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_arabia.nif::1x2x2_05</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -3794,7 +3794,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_arabia.nif::2x1x2_02</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -3804,7 +3804,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_arabia.nif::1x2x2_04</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -3814,7 +3814,7 @@
 			<Scale>0.28</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_arabia.nif::2x1x2_04</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -3907,7 +3907,7 @@
 		</ArtRef>
 		<!-- 2x1 ASIAN RENAISSANCE/INDUSTRIAL/MODERN/FUTURE -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_asia.nif::2x1_01</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -3917,7 +3917,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_asia.nif::2x1_02</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -3927,7 +3927,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_asia.nif::2x1_03</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -3937,7 +3937,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_asia.nif::2x1_04</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -3947,7 +3947,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_asia.nif::1x2_01</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -3957,7 +3957,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_asia.nif::1x2_02</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -3967,7 +3967,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_asia.nif::1x2_03</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -3977,7 +3977,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_asia.nif::1x2_04</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -3989,7 +3989,7 @@
 
 		<!-- 2x1 JAPANESE MEDIEVAL/RENAISSANCE/INDUSTRIAL/MODERN/FUTURE -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_JAPAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_Japan.nif::2x1_01</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -3999,7 +3999,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_JAPAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_Japan.nif::2x1_02</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -4009,7 +4009,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_JAPAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_Japan.nif::2x1_03</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -4019,7 +4019,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_JAPAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_Japan.nif::2x1_04</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -4029,7 +4029,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_JAPAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_Japan.nif::1x2_01</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -4039,7 +4039,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_JAPAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_Japan.nif::1x2_02</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -4049,7 +4049,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_JAPAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_Japan.nif::1x2_03</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -4059,7 +4059,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_JAPAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_Japan.nif::1x2_04</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -4101,7 +4101,7 @@
 			<Scale>0.41</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_ALL,!ERA_INDUSTRIAL,!ERA_MODERN,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ALL,!ERA_INDUSTRIAL,!ERA_ATOMIC,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_MONGOLIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_Mongolia.nif::1x2x2_03</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -4131,7 +4131,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_ALL,!ERA_INDUSTRIAL,!ERA_MODERN,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ALL,!ERA_INDUSTRIAL,!ERA_ATOMIC,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_MONGOLIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_Mongolia.nif::2x1x2_01</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -4161,7 +4161,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_ALL,!ERA_INDUSTRIAL,!ERA_MODERN,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ALL,!ERA_INDUSTRIAL,!ERA_ATOMIC,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_MONGOLIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_Mongolia.nif::2x1x2_04</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -4171,7 +4171,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_ALL,!ERA_INDUSTRIAL,!ERA_MODERN,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ALL,!ERA_INDUSTRIAL,!ERA_ATOMIC,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_MONGOLIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_Mongolia.nif::2x2x2_01</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -4244,7 +4244,7 @@
 		</ArtRef>
 		<!-- 2x1 SOUTH_EAST_ASIAN RENAISSANCE/INDUSTRIAL/MODERN/FUTURE -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_EAST_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_SouthEastAsia.nif::3x1_02</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -4254,7 +4254,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_EAST_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_SouthEastAsia.nif::2x1_02</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -4264,7 +4264,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_EAST_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_SouthEastAsia.nif::2x1_03</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -4274,7 +4274,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_EAST_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_SouthEastAsia.nif::2x1_04</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -4284,7 +4284,7 @@
 			<Scale>0.30</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_EAST_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_SouthEastAsia.nif::1x1_05</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -4294,7 +4294,7 @@
 			<Scale>0.3</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_EAST_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_SouthEastAsia.nif::1x3_01</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -4304,7 +4304,7 @@
 			<Scale>0.25</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_EAST_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_SouthEastAsia.nif::1x2_01</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -4314,7 +4314,7 @@
 			<Scale>0.3</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_EAST_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_SouthEastAsia.nif::1x2_03</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -4324,7 +4324,7 @@
 			<Scale>0.3</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_EAST_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_SouthEastAsia.nif::1x2_04</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -4448,7 +4448,7 @@
 		</ArtRef>
 		<!-- 2x1 CRESCENT RENAISSANCE/INDUSTRIAL/MODERN -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_CRESCENT</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_eastern.nif::2x1_01</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -4458,7 +4458,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_CRESCENT</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_eastern.nif::2x1_02</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -4468,7 +4468,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_CRESCENT</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_eastern.nif::2x1_03</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -4478,7 +4478,7 @@
 			<Scale>0.41</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_CRESCENT</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_eastern.nif::2x1_04</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -4488,7 +4488,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_CRESCENT</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_eastern.nif::1x2_01</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -4498,7 +4498,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_CRESCENT</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_eastern.nif::1x2_02</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -4508,7 +4508,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_CRESCENT</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_eastern.nif::1x2_03</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -4518,7 +4518,7 @@
 			<Scale>0.41</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_CRESCENT</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_eastern.nif::1x2_04</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -5206,7 +5206,7 @@
 		</ArtRef>
 		<!-- 2x1 ANGLO MODERN -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/colony_euro_late.nif::1x2_01</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -5217,7 +5217,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/colony_euro_late.nif::1x2_02</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -5228,7 +5228,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/colony_euro_late.nif::1x2_03</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -5239,7 +5239,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/colony_euro_late.nif::1x2_04</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -5250,7 +5250,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/colony_euro_late.nif::2x1_01</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -5261,7 +5261,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/colony_euro_late.nif::2x1_02</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -5272,7 +5272,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/colony_euro_late.nif::2x1_03</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -5283,7 +5283,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/colony_euro_late.nif::2x1_04</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -5490,7 +5490,7 @@
 		</ArtRef>
 		<!-- 2x1 EUROPEAN MODERN -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_europe.nif::1x2_03</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -5500,7 +5500,7 @@
 			<Scale>0.44</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_europe.nif::1x2_04</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -5510,7 +5510,7 @@
 			<Scale>0.38</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_europe.nif::1x2_05</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -5520,7 +5520,7 @@
 			<Scale>0.44</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_europe.nif::park_2x1_05</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -5530,7 +5530,7 @@
 			<Scale>0.44</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_europe.nif::2x1_01</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -5540,7 +5540,7 @@
 			<Scale>0.44</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_europe.nif::2x1_02</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -5550,7 +5550,7 @@
 			<Scale>0.41</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_europe.nif::2x1_03</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -5560,7 +5560,7 @@
 			<Scale>0.38</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_europe.nif::2x1_04</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -5897,7 +5897,7 @@
 		</ArtRef>
 
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_mediterranean.nif::park_2x1</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -5909,7 +5909,7 @@
 			<Rotate>90</Rotate>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_mediterranean.nif::1x2_02</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -5919,7 +5919,7 @@
 			<Scale>0.44</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_mediterranean.nif::1x2_04</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -5929,7 +5929,7 @@
 			<Scale>0.38</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_mediterranean.nif::1x2_05</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -5939,7 +5939,7 @@
 			<Scale>0.38</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_mediterranean.nif::park_2x1</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -5950,7 +5950,7 @@
 			<Scale>0.41</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_mediterranean.nif::park_2x1_05</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -5960,7 +5960,7 @@
 			<Scale>0.38</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_mediterranean.nif::2x1_02</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -5970,7 +5970,7 @@
 			<Scale>0.38</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_mediterranean.nif::2x1_03</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -5980,7 +5980,7 @@
 			<Scale>0.38</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_mediterranean.nif::2x1_04</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -6337,7 +6337,7 @@
 		</ArtRef>
 		<!-- 2x1 RUSSIAN INDUSTRIAL/MODERN -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_russia.nif::1x2_02</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -6347,7 +6347,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_russia.nif::2x1_02</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -6357,7 +6357,7 @@
 			<Scale>0.38</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_russia.nif::2x1_03</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -6367,7 +6367,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_russia.nif::2x1_04</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
@@ -6583,7 +6583,7 @@
 		</ArtRef>
 		<!-- 2x1 INDIAN RENAISSANCE/INDUSTRIAL/MODERN -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_INDIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_eastern.nif::2x1_01</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -6593,7 +6593,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_INDIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_eastern.nif::2x1_02</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -6603,7 +6603,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_INDIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_eastern.nif::2x1_04</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -6613,7 +6613,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_INDIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_eastern.nif::1x2_02</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -6623,7 +6623,7 @@
 			<Scale>0.41</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_INDIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_eastern.nif::1x2_04</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -6634,7 +6634,7 @@
 		</ArtRef>
 
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_INDIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_India.nif::2x1_02</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -6644,7 +6644,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_INDIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_India.nif::2x1_05</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -7099,7 +7099,7 @@
 		</ArtRef>
 		<!-- 2x1 INCA/MESO MODERN/FUTURE -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_MESO_AMERICA,ARTSTYLE_SOUTH_AMERICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_Meso_America.nif::1x2_01</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -7109,7 +7109,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_MESO_AMERICA,ARTSTYLE_SOUTH_AMERICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_Meso_America.nif::1x2_02</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -7129,7 +7129,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 <!--		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_MESO_AMERICA,ARTSTYLE_SOUTH_AMERICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_Meso_America.nif::2x1_01</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -7149,7 +7149,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_MESO_AMERICA,ARTSTYLE_SOUTH_AMERICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_Meso_America.nif::2x1_03</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -7159,7 +7159,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_MESO_AMERICA,ARTSTYLE_SOUTH_AMERICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_Meso_America.nif::2x1_04</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -7449,7 +7449,7 @@
 		</ArtRef>
 		<!-- 2x1 NATIVE MODERN -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_NATIVE_AMERICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/colony_euro_late.nif::1x2_01</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -7460,7 +7460,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_NATIVE_AMERICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/colony_euro_late.nif::1x2_02</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -7471,7 +7471,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_NATIVE_AMERICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/colony_euro_late.nif::1x2_03</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -7482,7 +7482,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_NATIVE_AMERICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/colony_euro_late.nif::1x2_04</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -7493,7 +7493,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_NATIVE_AMERICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/colony_euro_late.nif::2x1_01</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -7504,7 +7504,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_NATIVE_AMERICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/colony_euro_late.nif::2x1_02</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -7515,7 +7515,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_NATIVE_AMERICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/colony_euro_late.nif::2x1_03</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -7526,7 +7526,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_NATIVE_AMERICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/colony_euro_late.nif::2x1_04</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -7539,7 +7539,7 @@
 
 		<!-- 2x1 PACIFIC MEDIEVAL_TO_FUTURE -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_PACIFIC</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/South_Pacific.nif::1x1x2_01</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -7549,7 +7549,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_PACIFIC</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/South_Pacific.nif::1x2x2_01</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -7559,7 +7559,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_PACIFIC</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/South_Pacific.nif::1x2x2_03</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -7569,7 +7569,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_PACIFIC</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/South_Pacific.nif::1x2x2_04</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -7579,7 +7579,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_PACIFIC</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/South_Pacific.nif::1x1x2_05</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
@@ -7589,7 +7589,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_PACIFIC</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/South_Pacific.nif::2x1x2_02</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -8410,7 +8410,7 @@
 			<Attribute Class="Bonus">NO_BONUS,BONUS_ALL,!BONUS_SILK,!BONUS_SUGAR,!BONUS_SPICES,!BONUS_COTTON,!BONUS_TEA</Attribute>
 			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation/Plantation_Modern.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Plantation/plantation_modern.kfm</Attribute>
 			<Scale>0.9</Scale>
@@ -8497,7 +8497,7 @@
 			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA</Attribute>
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation/Plantation_mediterranean/Plantation.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Plantation/Plantation.kfm</Attribute>
 			<Rotate>-45</Rotate>
@@ -8560,7 +8560,7 @@
 			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_AMERICA</Attribute>
-			<Attribute Class="Era">ERA_ALL,!ERA_MODERN,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ALL,!ERA_ATOMIC,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation/Plantation_Inca/plantation_early.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/workshop/workshop.kfm</Attribute>
 			<Rotate>-45</Rotate>
@@ -8573,7 +8573,7 @@
 			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_PACIFIC</Attribute>
-			<Attribute Class="Era">ERA_ALL,!ERA_MODERN,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ALL,!ERA_ATOMIC,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation/Plantation_Pacific/plantation_early.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/workshop/workshop.kfm</Attribute>
 			<Rotate>-45</Rotate>
@@ -8730,7 +8730,7 @@
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_RACK</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation_Plain/Plantation_Modern.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Plantation_Plain/plantation_modern.kfm</Attribute>
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
@@ -8767,7 +8767,7 @@
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_RACK</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation_Plain/Plantation_Modern.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Plantation_Plain/plantation_modern.kfm</Attribute>
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
@@ -9218,7 +9218,7 @@
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_RACK</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_AMERICA</Attribute>
-			<Attribute Class="Era">ERA_ALL,!ERA_MODERN,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ALL,!ERA_ATOMIC,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation/Plantation_Inca/plantation_early.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Workshop/Workshop.kfm</Attribute>
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
@@ -9237,7 +9237,7 @@
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_RACK</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_AMERICA</Attribute>
-			<Attribute Class="Era">ERA_ALL,!ERA_MODERN,!ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ALL,!ERA_ATOMIC,!ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation/Plantation_Inca/Plantation_early.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Workshop/Workshop.kfm</Attribute>
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
@@ -9257,7 +9257,7 @@
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_RACK</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_PACIFIC</Attribute>
-			<Attribute Class="Era">ERA_ALL,!ERA_MODERN,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ALL,!ERA_ATOMIC,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation/Plantation_Pacific/plantation_early.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Workshop/Workshop.kfm</Attribute>
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
@@ -9274,7 +9274,7 @@
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_RACK</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_PACIFIC</Attribute>
-			<Attribute Class="Era">ERA_ALL,!ERA_MODERN,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ALL,!ERA_ATOMIC,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation/Plantation_Pacific/Plantation_early.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Workshop/Workshop.kfm</Attribute>
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
@@ -9578,7 +9578,7 @@
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SPICE_PLANTATION_GRINDER</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SPICE_PLANTATION_RACK</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation_Plain/Plantation_Modern.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Plantation_Plain/plantation_modern.kfm</Attribute>
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
@@ -9613,7 +9613,7 @@
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SPICE_PLANTATION_GRINDER</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SPICE_PLANTATION_RACK</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation_Plain/Plantation_Modern.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Plantation_Plain/plantation_modern.kfm</Attribute>
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
@@ -10057,7 +10057,7 @@
 			<Attribute Class="Scalar">szExtra:art:SPICE_PLANTATION_GRINDER</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SPICE_PLANTATION_RACK</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_AMERICA</Attribute>
-			<Attribute Class="Era">ERA_ALL,!ERA_MODERN,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ALL,!ERA_ATOMIC,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation/Plantation_Inca/Plantation_early.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Workshop/Workshop.kfm</Attribute>
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
@@ -10075,7 +10075,7 @@
 			<Attribute Class="Scalar">szExtra:art:SPICE_PLANTATION_GRINDER</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SPICE_PLANTATION_RACK</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_AMERICA</Attribute>
-			<Attribute Class="Era">ERA_ALL,!ERA_MODERN,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ALL,!ERA_ATOMIC,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation/Plantation_Inca/Plantation_early.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Workshop/Workshop.kfm</Attribute>
 			<Scale>0.29</Scale>
@@ -10094,7 +10094,7 @@
 			<Attribute Class="Scalar">szExtra:art:SPICE_PLANTATION_GRINDER</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SPICE_PLANTATION_RACK</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_PACIFIC</Attribute>
-			<Attribute Class="Era">ERA_ALL,!ERA_MODERN,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ALL,!ERA_ATOMIC,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation/Plantation_Pacific/Plantation_early.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Workshop/Workshop.kfm</Attribute>
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
@@ -10112,7 +10112,7 @@
 			<Attribute Class="Scalar">szExtra:art:SPICE_PLANTATION_GRINDER</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SPICE_PLANTATION_RACK</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_PACIFIC</Attribute>
-			<Attribute Class="Era">ERA_ALL,!ERA_MODERN,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ALL,!ERA_ATOMIC,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation/Plantation_Pacific/Plantation_early.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Workshop/Workshop.kfm</Attribute>
 			<Scale>0.25</Scale>
@@ -10424,7 +10424,7 @@
 			<Attribute Class="Bonus">BONUS_COTTON</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
 			<Attribute Class="Scalar">szExtra:art:COTTON_PLANTATION_RACK</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation_Plain/Plantation_Modern.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Plantation_Plain/plantation_modern.kfm</Attribute>
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
@@ -10456,7 +10456,7 @@
 			<Attribute Class="Bonus">BONUS_COTTON</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
 			<Attribute Class="Scalar">szExtra:art:COTTON_PLANTATION_RACK</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation_Plain/Plantation_Modern.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Plantation_Plain/plantation_modern.kfm</Attribute>
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
@@ -10512,7 +10512,7 @@
 			<Attribute Class="Bonus">BONUS_TOBACCO</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
 			<Attribute Class="Scalar">szExtra:art:TOBACCO_PLANTATION_RACK</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation_Plain/Plantation_Modern.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Plantation_Plain/plantation_modern.kfm</Attribute>
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
@@ -10544,7 +10544,7 @@
 			<Attribute Class="Bonus">BONUS_TOBACCO</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
 			<Attribute Class="Scalar">szExtra:art:TOBACCO_PLANTATION_RACK</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation_Plain/Plantation_Modern.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Plantation_Plain/plantation_modern.kfm</Attribute>
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
@@ -10602,7 +10602,7 @@
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SUGAR_PLANTATION_POOL</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SUGAR_PLANTATION_RACK</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation_Plain/Plantation_Modern.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Plantation_Plain/plantation_modern.kfm</Attribute>
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
@@ -10636,7 +10636,7 @@
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SUGAR_PLANTATION_POOL</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SUGAR_PLANTATION_RACK</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation_Plain/Plantation_Modern.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Plantation_Plain/plantation_modern.kfm</Attribute>
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
@@ -11125,7 +11125,7 @@
 			<Attribute Class="Scalar">szExtra:art:SUGAR_PLANTATION_POOL</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SUGAR_PLANTATION_RACK</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_AMERICA</Attribute>
-			<Attribute Class="Era">ERA_ALL,!ERA_MODERN,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ALL,!ERA_ATOMIC,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation/Plantation_Inca/Plantation_early.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Workshop/Workshop.kfm</Attribute>
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
@@ -11142,7 +11142,7 @@
 			<Attribute Class="Scalar">szExtra:art:SUGAR_PLANTATION_POOL</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SUGAR_PLANTATION_RACK</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_AMERICA</Attribute>
-			<Attribute Class="Era">ERA_ALL,!ERA_MODERN,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ALL,!ERA_ATOMIC,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation/Plantation_Inca/Plantation_early.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Workshop/Workshop.kfm</Attribute>
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
@@ -11160,7 +11160,7 @@
 			<Attribute Class="Scalar">szExtra:art:SUGAR_PLANTATION_POOL</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SUGAR_PLANTATION_RACK</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_PACIFIC</Attribute>
-			<Attribute Class="Era">ERA_ALL,!ERA_MODERN,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ALL,!ERA_ATOMIC,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation/Plantation_Pacific/Plantation_early.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Workshop/Workshop.kfm</Attribute>
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
@@ -11177,7 +11177,7 @@
 			<Attribute Class="Scalar">szExtra:art:SUGAR_PLANTATION_POOL</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SUGAR_PLANTATION_RACK</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_PACIFIC</Attribute>
-			<Attribute Class="Era">ERA_ALL,!ERA_MODERN,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ALL,!ERA_ATOMIC,!ERA_INFORMATION,!ERA_NANOTECH,!ERA_TRANSHUMAN,!ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation/Plantation_Pacific/Plantation_early.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Workshop/Workshop.kfm</Attribute>
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
@@ -11488,7 +11488,7 @@
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
 			<Attribute Class="Scalar">szExtra:art:LEMON_PLANTATION_GRINDER</Attribute>
 			<Attribute Class="Scalar">szExtra:art:LEMON_PLANTATION_RACK</Attribute>
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation_Plain/Plantation_Modern.nif</Attribute>
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
 			<Attribute Class="Scalar">bImprovementWorkedOnly:1</Attribute>
@@ -11521,7 +11521,7 @@
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
 			<Attribute Class="Scalar">szExtra:art:LEMQE_PLANTATION_GRINDER</Attribute>
 			<Attribute Class="Scalar">szExtra:art:LEMQE_PLANTATION_RACK</Attribute>
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation_Plain/Plantation_Modern.nif</Attribute>
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
 			<Attribute Class="Scalar">bImprovementWorkedOnly:0</Attribute>
@@ -11577,7 +11577,7 @@
 			<Attribute Class="Scalar">iCropArea:24</Attribute>
 			<Attribute Class="Scalar">szExtra:art:CNQ_PLANTATION_POOL</Attribute>
 			<Attribute Class="Scalar">szExtra:art:CNQ_PLANTATION_RACK</Attribute>
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation_Plain/Plantation_Modern.nif</Attribute>
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
 			<Attribute Class="Scalar">bImprovementWorkedOnly:1</Attribute>
@@ -11608,7 +11608,7 @@
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
 			<Attribute Class="Scalar">szExtra:art:CNQ_PLANTATION_POOL</Attribute>
 			<Attribute Class="Scalar">szExtra:art:CNQ_PLANTATION_RACK</Attribute>
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation_Plain/Plantation_Modern.nif</Attribute>
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
 			<Attribute Class="Scalar">bImprovementWorkedOnly:0</Attribute>
@@ -11664,7 +11664,7 @@
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
 			<Attribute Class="Scalar">szExtra:art:COFWE_PLANTATION_GRINDER</Attribute>
 			<Attribute Class="Scalar">szExtra:art:COFWE_PLANTATION_RACK</Attribute>
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation_Plain/Plantation_Modern.nif</Attribute>
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
 			<Attribute Class="Scalar">bImprovementWorkedOnly:1</Attribute>
@@ -11697,7 +11697,7 @@
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
 			<Attribute Class="Scalar">szExtra:art:COFWE_PLANTATION_GRINDER</Attribute>
 			<Attribute Class="Scalar">szExtra:art:COFWE_PLANTATION_RACK</Attribute>
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation_Plain/Plantation_Modern.nif</Attribute>
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
 			<Attribute Class="Scalar">bImprovementWorkedOnly:0</Attribute>
@@ -11755,7 +11755,7 @@
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
 			<Attribute Class="Scalar">szExtra:art:TEA_PLANTATION_GRINDER</Attribute>
 			<Attribute Class="Scalar">szExtra:art:TEA_PLANTATION_RACK</Attribute>
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation_Plain/Plantation_Modern.nif</Attribute>
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
 			<Attribute Class="Scalar">bImprovementWorkedOnly:1</Attribute>
@@ -11788,7 +11788,7 @@
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
 			<Attribute Class="Scalar">szExtra:art:TEA_PLANTATION_GRINDER</Attribute>
 			<Attribute Class="Scalar">szExtra:art:TEA_PLANTATION_RACK</Attribute>
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation_Plain/Plantation_Modern.nif</Attribute>
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
 			<Attribute Class="Scalar">bImprovementWorkedOnly:0</Attribute>
@@ -12037,7 +12037,7 @@
 		<!-- INDUSTRIAL/MODERN AFRO FARMHOUSES -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_Africa.nif::1x2x2_03</Attribute>
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
@@ -12045,7 +12045,7 @@
 		</ArtRef>
 		<ArtRef Name="art:IMPROVEMENT_FARM2">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_Africa.nif::1x1x2_01</Attribute>
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
@@ -12053,7 +12053,7 @@
 		</ArtRef>
 		<ArtRef Name="art:IMPROVEMENT_FARM3">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_africa.nif::1x2x2_02</Attribute>
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
@@ -12061,7 +12061,7 @@
 		</ArtRef>
 		<ArtRef Name="art:IMPROVEMENT_FARM4">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_Africa.nif::1x2x2_03</Attribute>
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
@@ -12070,7 +12070,7 @@
 		</ArtRef>
 		<ArtRef Name="art:IMPROVEMENT_FARM5">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_Africa.nif::1x1x2_01</Attribute>
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
@@ -12079,7 +12079,7 @@
 		</ArtRef>
 		<ArtRef Name="art:IMPROVEMENT_FARM6">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_africa.nif::1x2x2_02</Attribute>
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
@@ -12303,7 +12303,7 @@
 		<!-- RENAISSANCE/INDUSTRIAL/MODERN ASIAN FARMHOUSES -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_asia.nif::1x1_01</Attribute>
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ASIA</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
@@ -12311,7 +12311,7 @@
 		</ArtRef>
 		<ArtRef Name="art:IMPROVEMENT_FARM2">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_asia.nif::1x2_04</Attribute>
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ASIA</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
@@ -12327,7 +12327,7 @@
 		</ArtRef>
 		<ArtRef Name="art:IMPROVEMENT_FARM4">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_asia.nif::1x1_01</Attribute>
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ASIA</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
@@ -12336,7 +12336,7 @@
 		</ArtRef>
 		<ArtRef Name="art:IMPROVEMENT_FARM5">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_asia.nif::1x2_04</Attribute>
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ASIA</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
@@ -12357,7 +12357,7 @@
 		<!-- RENAISSANCE/INDUSTRIAL/MODERN JAPANESE FARMHOUSES -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_japan.nif::1x1_01</Attribute>
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_JAPAN</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
@@ -12365,7 +12365,7 @@
 		</ArtRef>
 		<ArtRef Name="art:IMPROVEMENT_FARM2">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_japan.nif::1x1_04</Attribute>
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_JAPAN</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
@@ -12381,7 +12381,7 @@
 		</ArtRef>
 		<ArtRef Name="art:IMPROVEMENT_FARM4">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_japan.nif::1x1_01</Attribute>
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_JAPAN</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
@@ -12390,7 +12390,7 @@
 		</ArtRef>
 		<ArtRef Name="art:IMPROVEMENT_FARM5">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_japan.nif::1x2_04</Attribute>
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_JAPAN</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
@@ -12481,7 +12481,7 @@
 		<!-- INDUSTRIAL/MODERN MONGOL FARMHOUSES -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_Mongolia.nif::1x2x2_05</Attribute>
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_MONGOLIA</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
@@ -12489,7 +12489,7 @@
 		</ArtRef>
 		<ArtRef Name="art:IMPROVEMENT_FARM2">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_Mongolia.nif::2x1x2_03</Attribute>
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_MONGOLIA</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
@@ -12505,7 +12505,7 @@
 		</ArtRef>
 		<ArtRef Name="art:IMPROVEMENT_FARM4">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_Mongolia.nif::1x2x2_05</Attribute>
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_MONGOLIA</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
@@ -12514,7 +12514,7 @@
 		</ArtRef>
 		<ArtRef Name="art:IMPROVEMENT_FARM5">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_Mongolia.nif::2x1x2_03</Attribute>
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_MONGOLIA</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
@@ -12535,7 +12535,7 @@
 		<!-- RENAISSANCE/INDUSTRIAL/MODERN SOUTHEASTASIAN FARMHOUSES -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_southeastasia.nif::1x1_05</Attribute>
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_EAST_ASIA</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
@@ -12543,7 +12543,7 @@
 		</ArtRef>
 		<ArtRef Name="art:IMPROVEMENT_FARM2">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_southeastasia.nif::2x1_04</Attribute>
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_EAST_ASIA</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
@@ -12559,7 +12559,7 @@
 		</ArtRef>
 		<ArtRef Name="art:IMPROVEMENT_FARM4">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_southeastasia.nif::1x1_05</Attribute>
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_EAST_ASIA</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
@@ -12568,7 +12568,7 @@
 		</ArtRef>
 		<ArtRef Name="art:IMPROVEMENT_FARM5">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_southeastasia.nif::2x1_04</Attribute>
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_EAST_ASIA</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
@@ -12729,7 +12729,7 @@
 		<!-- MODERN ARABIAN/CRESCENT/EGYPTIAN/INDIAN FARMHOUSES -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_eastern.nif::2x1_02</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_CRESCENT,ARTSTYLE_EGYPT,ARTSTYLE_INDIA</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
@@ -12737,7 +12737,7 @@
 		</ArtRef>
 		<ArtRef Name="art:IMPROVEMENT_FARM2">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_eastern.nif::1x1_03</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_CRESCENT,ARTSTYLE_EGYPT,ARTSTYLE_INDIA</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
@@ -12745,7 +12745,7 @@
 		</ArtRef>
 		<ArtRef Name="art:IMPROVEMENT_FARM4">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_eastern.nif::2x1_02</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_CRESCENT,ARTSTYLE_EGYPT,ARTSTYLE_INDIA</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
@@ -12754,7 +12754,7 @@
 		</ArtRef>
 		<ArtRef Name="art:IMPROVEMENT_FARM5">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_eastern.nif::1x1_03</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_CRESCENT,ARTSTYLE_EGYPT,ARTSTYLE_INDIA</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
@@ -12879,7 +12879,7 @@
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_mediterranean.nif::1x1x2_01</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_GRECO_ROMAN</Attribute>
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
 			<Scale>0.35</Scale>
@@ -12887,7 +12887,7 @@
 		<ArtRef Name="art:IMPROVEMENT_FARM2">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_mediterranean.nif::1x1x2_03</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_GRECO_ROMAN</Attribute>
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
 			<Scale>0.35</Scale>
@@ -12895,7 +12895,7 @@
 		<ArtRef Name="art:IMPROVEMENT_FARM4">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_mediterranean.nif::1x1x2_01</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_GRECO_ROMAN</Attribute>
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
 			<Rotate>-45</Rotate>
@@ -12904,7 +12904,7 @@
 		<ArtRef Name="art:IMPROVEMENT_FARM5">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_mediterranean.nif::1x1x2_03</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_GRECO_ROMAN</Attribute>
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
 			<Rotate>-45</Rotate>
@@ -13045,7 +13045,7 @@
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_Mediterranean.nif::park_1x1</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
 			<Scale>0.5</Scale>
@@ -13053,7 +13053,7 @@
 		<ArtRef Name="art:IMPROVEMENT_FARM2">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_Mediterranean.nif::park_2x1_05</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
 			<Scale>0.35</Scale>
@@ -13061,7 +13061,7 @@
 		<ArtRef Name="art:IMPROVEMENT_FARM4">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_Mediterranean.nif::park_1x1</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
 			<Rotate>-45</Rotate>
@@ -13070,7 +13070,7 @@
 		<ArtRef Name="art:IMPROVEMENT_FARM5">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_Mediterranean.nif::park_2x1_05</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
 			<Rotate>-45</Rotate>
@@ -13205,21 +13205,21 @@
 		<!-- MODERN RUSSIAN FARMHOUSES -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_russia.nif::1x1_05</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:IMPROVEMENT_FARM2">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_russia.nif::1x2_3</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:IMPROVEMENT_FARM4">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_russia.nif::1x1_05</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Rotate>-45</Rotate>
@@ -13227,7 +13227,7 @@
 		</ArtRef>
 		<ArtRef Name="art:IMPROVEMENT_FARM5">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_russia.nif::1x2_3</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Rotate>-45</Rotate>
@@ -13556,7 +13556,7 @@
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_Meso_America.nif::1x1_02</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_MESO_AMERICA,ARTSTYLE_SOUTH_AMERICA</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -13565,7 +13565,7 @@
 		<ArtRef Name="art:IMPROVEMENT_FARM2">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_Meso_America.nif::1x1_03</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_MESO_AMERICA,ARTSTYLE_SOUTH_AMERICA</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
 			<Scale>0.41</Scale>
@@ -13573,7 +13573,7 @@
 		<ArtRef Name="art:IMPROVEMENT_FARM4">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_Meso_America.nif::1x1_02</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_MESO_AMERICA,ARTSTYLE_SOUTH_AMERICA</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
 			<Rotate>-45</Rotate>
@@ -13582,7 +13582,7 @@
 		<ArtRef Name="art:IMPROVEMENT_FARM5">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_Meso_America.nif::1x1_03</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_MESO_AMERICA,ARTSTYLE_SOUTH_AMERICA</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
 			<Rotate>-45</Rotate>
@@ -13593,7 +13593,7 @@
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/South_Pacific.nif::1x1x1_01</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_PACIFIC</Attribute>
-			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
 			<Scale>0.28</Scale>
@@ -13601,7 +13601,7 @@
 		<ArtRef Name="art:IMPROVEMENT_FARM2">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/South_Pacific.nif::1x2x2_02</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_PACIFIC</Attribute>
-			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
 			<Scale>0.28</Scale>
@@ -13815,7 +13815,7 @@
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Farm/mod_eu_farm02.nif</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_BARBARIAN,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_NORSE</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
 			<Scale>0.35</Scale>
@@ -13823,14 +13823,14 @@
 		<ArtRef Name="art:IMPROVEMENT_FARM2">
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Farm/mod_eu_farm04.nif</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_BARBARIAN,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_NORSE</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:IMPROVEMENT_FARM3">
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Farm/mod_eu_farm03.nif</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ALL</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
@@ -13839,7 +13839,7 @@
 		<ArtRef Name="art:IMPROVEMENT_FARM4">
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Farm/mod_eu_farm02.nif</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_BARBARIAN,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_NORSE</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
 			<Rotate>-45</Rotate>
@@ -13848,7 +13848,7 @@
 		<ArtRef Name="art:IMPROVEMENT_FARM5">
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Farm/mod_eu_farm04.nif</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_BARBARIAN,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_NORSE</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
 			<Rotate>-45</Rotate>
@@ -13856,7 +13856,7 @@
 		</ArtRef>
 		<ArtRef Name="art:IMPROVEMENT_FARM6">
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Farm/mod_eu_farm03.nif</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ALL</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
@@ -14263,7 +14263,7 @@
 
 		<!-- generic modern farms -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_BARBARIAN,ARTSTYLE_EUROPE,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_NATIVE_AMERICA</Attribute>
 			<Attribute Class="Bonus">NO_BONUS,BONUS_ALL,!BONUS_RICE,!BONUS_WHEAT,!BONUS_CORN,!BONUS_POTATO</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Farm/mod_eu_farm01.nif</Attribute>
@@ -14280,7 +14280,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_BARBARIAN,ARTSTYLE_EUROPE,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_NATIVE_AMERICA</Attribute>
 			<Attribute Class="Bonus">BONUS_CORN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Farm/mod_eu_farm01.nif</Attribute>
@@ -14297,7 +14297,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_BARBARIAN,ARTSTYLE_EUROPE,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_NATIVE_AMERICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Farm/mod_eu_farm01.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Farm/mod_eu_farm01.kfm</Attribute>
@@ -14503,7 +14503,7 @@
 
 		<!-- INDUSTRIAL/MODERN AFRO/INCA/MESO/MONGOL FARMS -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA,ARTSTYLE_MESO_AMERICA,ARTSTYLE_MONGOLIA,ARTSTYLE_SOUTH_AMERICA</Attribute>
 			<Attribute Class="Bonus">NO_BONUS,BONUS_ALL,!BONUS_RICE,!BONUS_WHEAT,!BONUS_CORN,!BONUS_POTATO</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Farm/waterwell.nif</Attribute>
@@ -14521,7 +14521,7 @@
 			<Scale>0.5</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA,ARTSTYLE_MESO_AMERICA,ARTSTYLE_MONGOLIA,ARTSTYLE_SOUTH_AMERICA</Attribute>
 			<Attribute Class="Bonus">BONUS_CORN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Farm/waterwell.nif</Attribute>
@@ -14539,7 +14539,7 @@
 			<Scale>0.5</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA,ARTSTYLE_MESO_AMERICA,ARTSTYLE_MONGOLIA,ARTSTYLE_SOUTH_AMERICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Farm/waterwell.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Farm/waterwell.kfm</Attribute>
@@ -14651,7 +14651,7 @@
 		</ArtRef>
 		<!-- PACIFIC INDUSTRIAL/MODERN FARMS -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_PACIFIC</Attribute>
 			<Attribute Class="Bonus">NO_BONUS,BONUS_ALL,!BONUS_RICE,!BONUS_WHEAT,!BONUS_CORN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Farm/Smokestack.nif</Attribute>
@@ -14668,7 +14668,7 @@
 			<Scale>0.5</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_PACIFIC</Attribute>
 			<Attribute Class="Bonus">BONUS_CORN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Farm/Smokestack.nif</Attribute>
@@ -14685,7 +14685,7 @@
 			<Scale>0.5</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_PACIFIC</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Farm/Smokestack.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Farm/workshop.kfm</Attribute>
@@ -14802,7 +14802,7 @@
 		</ArtRef>
 		<!-- ASIAN RENAISSANCE/INDUSTRIAL/MODERN FARMS -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ASIA,ARTSTYLE_JAPAN,ARTSTYLE_SOUTH_EAST_ASIA</Attribute>
 			<Attribute Class="Bonus">NO_BONUS,BONUS_ALL,!BONUS_RICE,!BONUS_WHEAT,!BONUS_CORN,!BONUS_POTATO</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Farm/Smokestack.nif</Attribute>
@@ -14819,7 +14819,7 @@
 			<Scale>0.5</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ASIA,ARTSTYLE_JAPAN,ARTSTYLE_SOUTH_EAST_ASIA</Attribute>
 			<Attribute Class="Bonus">BONUS_CORN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Farm/Smokestack.nif</Attribute>
@@ -14836,7 +14836,7 @@
 			<Scale>0.5</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ASIA,ARTSTYLE_JAPAN,ARTSTYLE_SOUTH_EAST_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Farm/Smokestack.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Farm/workshop.kfm</Attribute>
@@ -14852,7 +14852,7 @@
 		</ArtRef>
 		<!-- PACIFIC INDUSTRIAL/MODERN FARMS -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_PACIFIC</Attribute>
 			<Attribute Class="Bonus">NO_BONUS,BONUS_ALL,!BONUS_RICE,!BONUS_WHEAT,!BONUS_CORN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Farm/Smokestack.nif</Attribute>
@@ -14869,7 +14869,7 @@
 			<Scale>0.5</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_PACIFIC</Attribute>
 			<Attribute Class="Bonus">BONUS_CORN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Farm/Smokestack.nif</Attribute>
@@ -14886,7 +14886,7 @@
 			<Scale>0.5</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_PACIFIC</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Farm/Smokestack.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Farm/workshop.kfm</Attribute>
@@ -15002,7 +15002,7 @@
 		</ArtRef>
 		<!-- ASIAN RENAISSANCE/INDUSTRIAL/MODERN FARMS -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ASIA,ARTSTYLE_JAPAN,ARTSTYLE_SOUTH_EAST_ASIA</Attribute>
 			<Attribute Class="Bonus">NO_BONUS,BONUS_ALL,!BONUS_RICE,!BONUS_WHEAT,!BONUS_CORN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Farm/Smokestack.nif</Attribute>
@@ -15019,7 +15019,7 @@
 			<Scale>0.5</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ASIA,ARTSTYLE_JAPAN,ARTSTYLE_SOUTH_EAST_ASIA</Attribute>
 			<Attribute Class="Bonus">BONUS_CORN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Farm/Smokestack.nif</Attribute>
@@ -15036,7 +15036,7 @@
 			<Scale>0.5</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ASIA,ARTSTYLE_JAPAN,ARTSTYLE_SOUTH_EAST_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Farm/Smokestack.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Farm/workshop.kfm</Attribute>
@@ -15142,7 +15142,7 @@
 		</ArtRef>
 		<!-- MODERN ARABIAN/CRESCENT/EGYPTIAN/INDIAN FARMS -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA,ARTSTYLE_CRESCENT,ARTSTYLE_EGYPT,ARTSTYLE_INDIA</Attribute>
 			<Attribute Class="Bonus">NO_BONUS,BONUS_ALL,!BONUS_RICE,!BONUS_WHEAT,!BONUS_CORN,!BONUS_POTATO</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Farm/waterwell.nif</Attribute>
@@ -15158,7 +15158,7 @@
 			<Scale>0.4</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA,ARTSTYLE_CRESCENT,ARTSTYLE_EGYPT,ARTSTYLE_INDIA</Attribute>
 			<Attribute Class="Bonus">BONUS_CORN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Farm/waterwell.nif</Attribute>
@@ -15174,7 +15174,7 @@
 			<Scale>0.4</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA,ARTSTYLE_CRESCENT,ARTSTYLE_EGYPT,ARTSTYLE_INDIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Farm/waterwell.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Farm/waterwell.kfm</Attribute>
@@ -15340,7 +15340,7 @@
 		</ArtRef>
 		<!-- RENAISSANCE/INDUSTRIAL/MODERN GRECO_ROMAN/IBERIAN FARMS -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA</Attribute>
 			<Attribute Class="Bonus">NO_BONUS,BONUS_ALL,!BONUS_RICE,!BONUS_WHEAT,!BONUS_CORN,!BONUS_POTATO</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation/Plantation_Mediterranean/Plantation.nif</Attribute>
@@ -15356,7 +15356,7 @@
 			<Scale>0.55</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA</Attribute>
 			<Attribute Class="Bonus">BONUS_CORN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation/Plantation_Mediterranean/Plantation.nif</Attribute>
@@ -15372,7 +15372,7 @@
 			<Scale>0.55</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
-			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Plantation/Plantation_Mediterranean/Plantation.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Plantation/Plantation.kfm</Attribute>
@@ -15543,7 +15543,7 @@
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_WATER_WORKED">
 			<Attribute Class="Improvement">IMPROVEMENT_WATER_WORKED</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
 			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Waterworked/Waterworked_Modern.nif</Attribute>
@@ -15589,7 +15589,7 @@
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_FISHING_BOATS">
 			<Attribute Class="Improvement">IMPROVEMENT_FISHING_BOATS</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
 			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Nets/Nets_Modern.nif</Attribute>
@@ -15604,7 +15604,7 @@
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_WHALING_BOATS">
 			<Attribute Class="Improvement">IMPROVEMENT_WHALING_BOATS</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
 			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Whalingboat_Modern/WhalingBoat_Modern.nif</Attribute>
@@ -15632,7 +15632,7 @@
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_MINE">
 			<Attribute Class="Improvement">IMPROVEMENT_MINE</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
 			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Mine/Mine_Modern.nif</Attribute>
@@ -15653,7 +15653,7 @@
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_SHAFT_MINE">
 			<Attribute Class="Improvement">IMPROVEMENT_SHAFT_MINE</Attribute>
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
 			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Mine/Mine_Modern.nif</Attribute>
@@ -15663,7 +15663,7 @@
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_MODERN_MINE">
 			<Attribute Class="Improvement">IMPROVEMENT_MODERN_MINE</Attribute>
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
 			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Mine/Mine_Modern.nif</Attribute>
@@ -16049,7 +16049,7 @@
 		<!-- MODERN/FUTURE FORT -->
 		<ArtRef Name="goal:IMPROVEMENT_FORT">
 			<Attribute Class="Improvement">IMPROVEMENT_FORT</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ALL</Attribute>
 			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
 			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
@@ -16088,7 +16088,7 @@
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PASTURE">
 			<Attribute Class="Improvement">IMPROVEMENT_PASTURE</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
 			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Pasture/mod_pasture.nif</Attribute>
@@ -16106,7 +16106,7 @@
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_QUARRY">
 			<Attribute Class="Improvement">IMPROVEMENT_QUARRY</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
 			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Quarry/QuarryModern.nif</Attribute>
@@ -16124,7 +16124,7 @@
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_WINDMILL">
 			<Attribute Class="Improvement">IMPROVEMENT_WINDMILL</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
 			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/WindMill/WindMill_mod.nif</Attribute>
@@ -16141,7 +16141,7 @@
 		</ArtRef>
 <!--		<ArtRef Name="goal:IMPROVEMENT_WATERMILL">
 			<Attribute Class="Improvement">IMPROVEMENT_WATERMILL</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/WindMill/WindMill_mod.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/WindMill/WindMill_mod.kfm</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
@@ -16163,7 +16163,7 @@
 		<!-- Bunker -->
 		<ArtRef Name="goal:IMPROVEMENT_BUNKER">
 			<Attribute Class="Improvement">IMPROVEMENT_BUNKER</Attribute>
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
 			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Bunker/Bunker.nif</Attribute>
@@ -16176,7 +16176,7 @@
 		<!-- Geothermal Factory -->
 		<ArtRef Name="goal:IMPROVEMENT_GEOTHERMAL_BOREHOLE">
 			<Attribute Class="Improvement">IMPROVEMENT_GEOTHERMAL_BOREHOLE</Attribute>
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
 			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/geothermal/geothermal.nif</Attribute>
@@ -16187,7 +16187,7 @@
 		<!-- Future Bunker -->
 		<ArtRef Name="goal:IMPROVEMENT_FUTURE_BUNKER">
 			<Attribute Class="Improvement">IMPROVEMENT_FUTURE_BUNKER</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
 			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Future_Fort/Bunker.nif</Attribute>
@@ -16201,7 +16201,7 @@
 		<!-- DESERT WINDMILL -->
 		<ArtRef Name="goal:IMPROVEMENT_DESERT_WINDMILL">
 			<Attribute Class="Improvement">IMPROVEMENT_DESERT_WINDMILL</Attribute>
-			<Attribute Class="Era">ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
 			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/WindMill/WindMill_mod.nif</Attribute>
@@ -16654,7 +16654,7 @@
 		<To Name="BLeaf_2x1"/>
 	</LProduction>
 	<LProduction From="Node_2x1">
-		<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_MODERN,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
+		<Attribute Class="Era">ERA_RENAISSANCE,ERA_INDUSTRIAL,ERA_ATOMIC,ERA_INFORMATION,ERA_NANOTECH,ERA_TRANSHUMAN,ERA_GALACTIC,ERA_COSMIC,ERA_TRANSCENDENT,ERA_FUTURE</Attribute>
 		<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURB</Attribute>
 		<To Name="BLeaf_2x1"/>
 	</LProduction>

@@ -491,7 +491,7 @@
 			<option id="Combat_ERA_MEDIEVAL" key="CombatERA_MEDIEVAL" type="string" default="DEFAULT"/>
 			<option id="Combat_ERA_RENAISSANCE" key="CombatERA_RENAISSANCE" type="string" default="DEFAULT"/>
 			<option id="Combat_ERA_INDUSTRIAL" key="CombatERA_INDUSTRIAL" type="string" default="DEFAULT"/>
-			<option id="Combat_ERA_MODERN" key="CombatERA_MODERN" type="string" default="DEFAULT"/>
+			<option id="Combat_ERA_ATOMIC" key="CombatERA_ATOMIC" type="string" default="DEFAULT"/>
 			<option id="Combat_ERA_INFORMATION" key="CombatERA_INFORMATION" type="string" default="DEFAULT"/>
 			<option id="Combat_ERA_NANOTECH" key="CombatERA_NANOTECH" type="string" default="DEFAULT"/>
 			<option id="Combat_ERA_TRANSHUMAN" key="CombatERA_TRANSHUMAN" type="string" default="DEFAULT"/>

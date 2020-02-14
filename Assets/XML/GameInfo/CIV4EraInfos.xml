@@ -401,9 +401,9 @@
 		</EraInfo>
 <!-- Atomic (replacing the old Modern) -->
 		<EraInfo>
-			<Type>ERA_MODERN</Type>
-			<Description>TXT_KEY_ERA_MODERN</Description>
-			<Strategy>TXT_KEY_ERA_MODERN_STRATEGY</Strategy>
+			<Type>ERA_ATOMIC</Type>
+			<Description>TXT_KEY_ERA_ATOMIC</Description>
+			<Strategy>TXT_KEY_ERA_ATOMIC_STRATEGY</Strategy>
 			<iAdvancedStartPoints>32000</iAdvancedStartPoints>
 			<iStartingUnitMultiplier>3</iStartingUnitMultiplier>
 			<iStartingDefenseUnits>3</iStartingDefenseUnits>

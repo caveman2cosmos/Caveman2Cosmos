@@ -277,7 +277,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MODERN_HIGH_GOLD</Type>
@@ -298,7 +298,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_INFORMATION_LOW_GOLD</Type>
@@ -589,7 +589,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_EXPERIENCE</Type>
@@ -736,7 +736,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_INFORMATION_EXPERIENCE</Type>
@@ -1091,7 +1091,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MODERN_INFANTRY</Type>
@@ -1321,7 +1321,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_UNMANNED_TRIKE</Type>
@@ -1573,7 +1573,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_AMBULANCE_II</Type>
@@ -1762,7 +1762,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MODERN_WORKER</Type>
@@ -2203,7 +2203,7 @@
 			<BarbarianClass>UNITCLASS_INFANTRY</BarbarianClass>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_MODERN_STRONG</Type>
@@ -2224,7 +2224,7 @@
 			<BarbarianClass>UNITCLASS_MODERN_INFANTRY</BarbarianClass>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MODERN_CRIMINAL</Type>
@@ -2245,7 +2245,7 @@
 			<BarbarianClass>UNITCLASS_MOBSTER_CAR</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_INFORMATION_WEAK</Type>
@@ -2615,7 +2615,7 @@
 			<BarbarianClass>UNITCLASS_DESTROYER</BarbarianClass>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</Type>
@@ -2637,7 +2637,7 @@
 			<BarbarianClass>UNITCLASS_BATTLESHIP</BarbarianClass>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_INFORMATION_WEAK</Type>

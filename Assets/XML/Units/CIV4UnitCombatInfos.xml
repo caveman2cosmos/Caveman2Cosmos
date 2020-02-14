@@ -5345,9 +5345,9 @@
 			<Button>Art/Interface/Buttons/units/sparth/categories/era_industrial.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
-			<Type>UNITCOMBAT_ERA_MODERN</Type>
-			<Description>TXT_KEY_UNITCOMBAT_ERA_MODERN</Description>
-			<EraType>ERA_MODERN</EraType>
+			<Type>UNITCOMBAT_ERA_ATOMIC</Type>
+			<Description>TXT_KEY_UNITCOMBAT_ERA_ATOMIC</Description>
+			<EraType>ERA_ATOMIC</EraType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/era_modern.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
