@@ -148,8 +148,8 @@ public:
 /* LoR                            END                                                           */
 /************************************************************************************************/
 	int getBestUnitTypeCargoVolume(UnitAITypes eUnitAI) const;
-	bool addFreeUnitAI(UnitAITypes eUnitAI, int iCount);
-	void addFreeUnit(UnitTypes eUnit, UnitAITypes eUnitAI = NO_UNITAI);
+	bool addStartUnitAI(const UnitAITypes eUnitAI, const int iCount);
+	void addStartUnit(const UnitTypes eUnit, const UnitAITypes eUnitAI = NO_UNITAI);
 
 	int startingPlotRange() const; // Exposed to Python
 	bool startingPlotWithinRange(CvPlot* pPlot, PlayerTypes ePlayer, int iRange, int iPass) const; // Exposed to Python

@@ -135,16 +135,6 @@ public:
 
 	CvInfoBase* getHints(int i) const;
 	CvMainMenuInfo* getMainMenus(int i) const;
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 02/19/08                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-// Python Modular Loading
-	CvPythonModulesInfo* getPythonModulesInfo(int i) const;
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
 	CvInvisibleInfo* getInvisibleInfo(int i) const;
 	CvVoteSourceInfo* getVoteSourceInfo(int i) const;
 	CvInfoBase* getAttitudeInfo(int i) const;

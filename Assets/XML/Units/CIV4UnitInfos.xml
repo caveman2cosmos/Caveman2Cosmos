@@ -47226,7 +47226,6 @@ Base XP gained when defending
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqTech>TECH_DECEPTION</PrereqTech>
-			<ForceObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ForceObsoleteTech>
 			<PrereqBuilding>BUILDING_EXILE_PRACTICES</PrereqBuilding>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
@@ -47250,6 +47249,13 @@ Base XP gained when defending
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
+			<ForceObsoleteUnitClasses>
+				<ForceObsoleteUnitClass>
+					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_GATHERER</ForceObsoleteUnitClassType>
+					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
+				</ForceObsoleteUnitClass>
+			</ForceObsoleteUnitClasses>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<Invisible>INVISIBLE_CAMOUFLAGE</Invisible>
 			<InvisibilityIntensityTypes>
 				<InvisibilityIntensityType>
@@ -47425,6 +47431,12 @@ Base XP gained when defending
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
+			<ForceObsoleteUnitClasses>
+				<ForceObsoleteUnitClass>
+					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_GATHERER</ForceObsoleteUnitClassType>
+					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
+				</ForceObsoleteUnitClass>
+			</ForceObsoleteUnitClasses>
 			<iCost>43</iCost>
 			<iMoves>1</iMoves>
 			<Invisible>INVISIBLE_CAMOUFLAGE</Invisible>
@@ -47600,7 +47612,6 @@ Base XP gained when defending
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<PrereqTech>TECH_NOCTURNALISM</PrereqTech>
-			<ForceObsoleteTech>TECH_MATCHLOCK</ForceObsoleteTech>
 			<PrereqBuilding>BUILDING_BANDITS_HIDEOUT</PrereqBuilding>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
@@ -47608,6 +47619,13 @@ Base XP gained when defending
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
+			<ForceObsoleteUnitClasses>
+				<ForceObsoleteUnitClass>
+					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_GATHERER</ForceObsoleteUnitClassType>
+					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
+				</ForceObsoleteUnitClass>
+			</ForceObsoleteUnitClasses>
+			<ForceObsoleteTech>TECH_MATCHLOCK</ForceObsoleteTech>
 			<iCost>68</iCost>
 			<iMoves>2</iMoves>
 			<Invisible>INVISIBLE_CAMOUFLAGE</Invisible>
@@ -56883,7 +56901,7 @@ Base XP gained when defending
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_DUMMY_NEANDERTHAL</PrereqTech>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<iCost>15</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>3</iCombat>
@@ -57139,7 +57157,7 @@ Base XP gained when defending
 			<bPillage>1</bPillage>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_ARCHER</UnitClassUpgradeType>
+					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_SLINGER</UnitClassUpgradeType>
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
@@ -57193,6 +57211,11 @@ Base XP gained when defending
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<EnabledCivilizationTypes>
+				<EnabledCivilizationType>
+					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
+				</EnabledCivilizationType>
+			</EnabledCivilizationTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_SLINGER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SLINGER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_SLINGER_STRATEGY</Strategy>
@@ -57295,6 +57318,11 @@ Base XP gained when defending
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<EnabledCivilizationTypes>
+				<EnabledCivilizationType>
+					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
+				</EnabledCivilizationType>
+			</EnabledCivilizationTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_WATCHER</Description>
 			<Civilopedia>TXT_KEY_UNIT_WATCHER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_WATCHER_STRATEGY</Strategy>
@@ -57367,7 +57395,7 @@ Base XP gained when defending
 			</PrereqOrBuildings>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_ENFORCERS</UnitClassUpgradeType>
+					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_ENFORCER</UnitClassUpgradeType>
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
@@ -57421,6 +57449,11 @@ Base XP gained when defending
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<EnabledCivilizationTypes>
+				<EnabledCivilizationType>
+					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
+				</EnabledCivilizationType>
+			</EnabledCivilizationTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_ENFORCER</Description>
 			<Civilopedia>TXT_KEY_UNIT_ENFORCERS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ENFORCERS_STRATEGY</Strategy>
@@ -57940,6 +57973,11 @@ Base XP gained when defending
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<EnabledCivilizationTypes>
+				<EnabledCivilizationType>
+					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
+				</EnabledCivilizationType>
+			</EnabledCivilizationTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_HEALER</Description>
 			<Civilopedia>TXT_KEY_UNIT_HEALER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_HEALER_STRATEGY</Strategy>

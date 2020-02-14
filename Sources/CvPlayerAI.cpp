@@ -13867,10 +13867,11 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 			break;
 
 		case UNITAI_EXPLORE:
-			iValue += (kUnitInfo.getMoves() * 200) + iCombatValue;
+			iValue += kUnitInfo.getMoves() * kUnitInfo.getMoves() * (100 + iCombatValue/4);
 			if (kUnitInfo.isNoBadGoodies())
 			{
-				iValue += 100;
+				iValue *= 3;
+				iValue /= 2;
 			}
 			//need to add vision and terrain factors here.
 			break;
