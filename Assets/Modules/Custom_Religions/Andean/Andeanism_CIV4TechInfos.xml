@@ -5,11 +5,11 @@
 		<TechInfo>
 			<!-- Andeanism -->
 			<Type>TECH_ANDEANISM</Type>
-			<Description>TXT_KEY_RELIGION_ANDEAN</Description>
-			<Civilopedia>TXT_KEY_RELIGION_ANDEAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_RELIGION_ANDEAN_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_ANDEAN</Description>
+			<Civilopedia>TXT_KEY_TECH_ANDEAN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_ANDEAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<Quote>TXT_KEY_RELIGION_ANDEAN_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_ANDEAN_QUOTE</Quote>
 			<Sound>AS2D_TECH_ANDEANISM</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/techtree/andeanism.dds</Button>

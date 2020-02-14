@@ -8,9 +8,9 @@
 	<ReligionInfos>
 		<ReligionInfo>
 			<Type>RELIGION_DRUID</Type>
-			<Description>TXT_KEY_RELIGION_DRUID</Description>
-			<Adjective>TXT_KEY_RELIGION_DRUID_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_RELIGION_DRUID_PEDIA</Civilopedia>
+			<Description>TXT_KEY_TECH_DRUID</Description>
+			<Adjective>TXT_KEY_TECH_DRUID_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_TECH_DRUID_PEDIA</Civilopedia>
 			<TechPrereq>TECH_DRUIDISM</TechPrereq>
 			<FreeUnitClass>UNITCLASS_DRUID_MISSIONARY</FreeUnitClass>
 			<iFreeUnits>0</iFreeUnits>

@@ -5,8 +5,8 @@
 		<TechInfo>
 			<!-- Mormon -->
 			<Type>TECH_MORMON</Type>
-			<Description>TXT_KEY_RELIGION_MORMON</Description>
-			<Civilopedia>TXT_KEY_RELIGION_MORMON_PEDIA</Civilopedia>
+			<Description>TXT_KEY_TECH_MORMON</Description>
+			<Civilopedia>TXT_KEY_TECH_MORMON_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_TECH_MORMON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<Quote>TXT_KEY_TECH_MORMON_QUOTE</Quote>

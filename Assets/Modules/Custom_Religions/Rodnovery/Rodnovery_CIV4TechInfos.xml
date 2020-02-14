@@ -10,8 +10,8 @@
 	<TechInfos>
 		<TechInfo>
 			<Type>TECH_RODNOVERY</Type>
-			<Description>TXT_KEY_RELIGION_RODNOVERY</Description>
-			<Civilopedia>TXT_KEY_RELIGION_RODNOVERY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_TECH_RODNOVERY</Description>
+			<Civilopedia>TXT_KEY_TECH_RODNOVERY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<iCost>448</iCost>
 			<bGlobal>1</bGlobal>
@@ -40,7 +40,7 @@
 			<AndPreReqs>
 				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			</AndPreReqs>
-			<Quote>TXT_KEY_RELIGION_RODNOVERY_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_RODNOVERY_QUOTE</Quote>
 			<Sound>AS2D_TECH_RODNOVERY</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>

@@ -5,11 +5,11 @@
 		<TechInfo>
 			<!-- CAODAIISM -->
 			<Type>TECH_CAODAIISM</Type>
-			<Description>TXT_KEY_RELIGION_CAODAI</Description>
-			<Civilopedia>TXT_KEY_RELIGION_CAODAI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_RELIGION_CAODAI_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_CAODAI</Description>
+			<Civilopedia>TXT_KEY_TECH_CAODAI_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_CAODAI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<Quote>TXT_KEY_RELIGION_CAODAI_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_CAODAI_QUOTE</Quote>
 			<Sound>AS2D_TECH_CAODAIISM</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Caodai.dds</Button>

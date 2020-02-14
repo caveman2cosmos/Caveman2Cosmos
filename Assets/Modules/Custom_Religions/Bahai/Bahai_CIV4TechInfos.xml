@@ -5,11 +5,11 @@
 		<TechInfo>
 			<!-- Baha'i -->
 			<Type>TECH_BAHAI</Type>
-			<Description>TXT_KEY_RELIGION_BAHAI</Description>
-			<Civilopedia>TXT_KEY_RELIGION_BAHAI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_RELIGION_BAHAI_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_BAHAI</Description>
+			<Civilopedia>TXT_KEY_TECH_BAHAI_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_BAHAI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<Quote>TXT_KEY_RELIGION_BAHAI_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_BAHAI_QUOTE</Quote>
 			<Sound>AS2D_TECH_BAHAI</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Bahai.dds</Button>

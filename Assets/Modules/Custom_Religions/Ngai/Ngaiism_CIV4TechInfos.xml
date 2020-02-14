@@ -5,11 +5,11 @@
 		<TechInfo>
 			<!-- Ngaiism -->
 			<Type>TECH_NGAIISM</Type>
-			<Description>TXT_KEY_RELIGION_NGAI</Description>
-			<Civilopedia>TXT_KEY_RELIGION_NGAI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_RELIGION_NGAI_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_NGAI</Description>
+			<Civilopedia>TXT_KEY_TECH_NGAI_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_NGAI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<Quote>TXT_KEY_RELIGION_NGAI_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_NGAI_QUOTE</Quote>
 			<Sound>AS2D_TECH_NGAIISM</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Ngai.dds</Button>

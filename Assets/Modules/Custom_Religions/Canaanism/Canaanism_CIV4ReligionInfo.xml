@@ -8,9 +8,9 @@
 	<ReligionInfos>
 		<ReligionInfo>
 			<Type>RELIGION_CANAANITE</Type>
-			<Description>TXT_KEY_RELIGION_CANAANISM</Description>
-			<Adjective>TXT_KEY_RELIGION_CANAANISM_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_RELIGION_CANAANISM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_TECH_CANAANISM</Description>
+			<Adjective>TXT_KEY_TECH_CANAANISM_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_TECH_CANAANISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_CANAANITE</TechPrereq>
 			<FreeUnitClass>UNITCLASS_CANAANITE_MISSIONARY</FreeUnitClass>
 			<iFreeUnits>0</iFreeUnits>

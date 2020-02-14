@@ -8,9 +8,9 @@
 	<ReligionInfos>
 		<ReligionInfo>
 			<Type>RELIGION_ANDEAN</Type>
-			<Description>TXT_KEY_RELIGION_ANDEAN</Description>
-			<Adjective>TXT_KEY_RELIGION_ANDEAN_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_RELIGION_ANDEAN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_TECH_ANDEAN</Description>
+			<Adjective>TXT_KEY_TECH_ANDEAN_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_TECH_ANDEAN_PEDIA</Civilopedia>
 			<TechPrereq>TECH_ANDEANISM</TechPrereq>
 			<FreeUnitClass>UNITCLASS_ANDEAN_MISSIONARY</FreeUnitClass>
 			<iFreeUnits>1</iFreeUnits>

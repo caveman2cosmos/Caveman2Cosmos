@@ -6,7 +6,7 @@
 <!-- GameText Civilopedia Techs -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_SHAMAN</Tag>
+		<Tag>TXT_KEY_TECH_SHAMAN</Tag>
 		<English>Shamanism</English>
 		<French>Shamanisme</French>
 		<German>Schamanismus</German>
@@ -19,7 +19,7 @@
 		<Polish>Szamanizm</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_SHAMAN_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_TECH_SHAMAN_ADJECTIVE</Tag>
 		<English>Shamanistic</English>
 		<French>
 			<Text>Shamaniste</Text>
@@ -44,21 +44,21 @@
 		<Polish>Szamanistyczny</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_SHAMAN_STRATEGY</Tag>
+		<Tag>TXT_KEY_TECH_SHAMAN_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Shamanism[COLOR_REVERT] is a prehistoric era technology that founds said religion in the first civilization that researches it.</English>
 		<French>Pour apporter des conseils aux âmes égarées et améliorer la guérison des maladies.</French>
 		<Spanish>Para guiar a las "almas descarriadas" y para mejorar el estado de los enfermos.</Spanish>
 		<Polish>Udostępnia religię [COLOR_HIGHLIGHT_TEXT]Szamanizm[COLOR_REVERT]. Odblokowuje [COLOR_BUILDING_TEXT]Ambasady: Ajnowską i Nawahów[COLOR_REVERT], [COLOR_BUILDING_TEXT]Chatę Szamana[COLOR_REVERT], [COLOR_BUILDING_TEXT]Wężowy Dół[COLOR_REVERT] i [COLOR_BUILDING_TEXT]Kapliczkę Wielorybów[COLOR_REVERT].</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_SHAMAN_PEDIA</Tag>
+		<Tag>TXT_KEY_TECH_SHAMAN_PEDIA</Tag>
 		<English>[TAB]Shamanism is a practice that involves a practitioner reaching altered states of consciousness in order to perceive and interact with what they believe to be a spirit world and channel these transcendental energies into this world.[PARAGRAPH:2]The term "shamanism" was first applied by Western anthropologists as outside observers of the ancient religion of the Turks and Mongols, as well as those of the neighbouring Tungusic and Samoyedic-speaking peoples. Upon observing more religious traditions across the world, some Western anthropologists began to also use the term in a very broad sense. The term was used to describe unrelated magico-religious practices found within the ethnic religions of other parts of Asia, Africa, Australasia and even completely unrelated parts of the Americas, as they believed these practices to be similar to one another.[PARAGRAPH:2]Shamanism encompasses the premise that shamans are intermediaries or messengers between the human world and the spirit worlds. Shamans are said to treat ailments/illness by mending the soul. Alleviating traumas affecting the soul/spirit restores the physical body of the individual to balance and wholeness. The shaman also enters supernatural realms or dimensions to obtain solutions to problems afflicting the community. Shamans may visit other worlds/dimensions to bring guidance to misguided souls and to ameliorate illnesses of the human soul caused by foreign elements. The shaman operates primarily within the spiritual world, which in turn affects the human world. The restoration of balance results in the elimination of the ailment.[PARAGRAPH:2]In the 20th century, many Westerners involved in the counter-cultural movement have created modern magico-religious practices influenced by their ideas of indigenous religions from across the world, creating what has been termed neoshamanism or the neoshamanic movement.[PARAGRAPH:2]- Wikipedia (Wikidata item Q42042)</English>
 		<German>Schamanismus besteht im Allgemeinen aus einer Reihe traditioneller Überzeugungen und Praktiken, die mit der Kommunikation mit der Welt der Geister in Zusammenhang stehen. Er wird durch Schamanen praktiziert. Weltweit gibt es viele völlig verschiedene Varianten des Schamanismus, jedoch haben alle Formen von Schamanismus die folgenden Grundprinzipien gemein:[PARAGRAPH:2]Es gibt Geister, die sowohl auf das Leben einer Einzelperson als auch auf die Gesellschaft insgesamt grossen Einfluß nehmen.[PARAGRAPH:1]Der Schamane ist in der Lage mit der Welt der Geister zu kommunizieren.[PARAGRAPH:1]Geister können gut oder böse sein.[PARAGRAPH:1]Der Schamane kann Krankheiten behandeln, die durch böse Geister verursacht werden.[PARAGRAPH:1]Der Schamane benutzt verschiedene Techniken, um sich in Trance zu versetzen. In völliger Ekstase kann er so Visionen erhalten.[PARAGRAPH:1]Ein Schamane kann mit seinem Geiste den Körper verlassen und sich in der übernatürlichen Welt auf die Suche nach Antworten begeben.[PARAGRAPH:1]Schamanen beschwören Tiergeister als Führer, Omen und Nachrichtenüberbringer.[PARAGRAPH:2]Der Schamanismus basiert auf der Annahme, dass die sichtbare Welt von unsichtbaren Kräften oder Geistern durchdrungen wird, die das Leben der Menschen beeinflussen. Im Gegensatz zu organisierten Religionen wie Animismus oder Animatismus, die durch einen Priester geleitet und von allen Mitgliedern der Gesellschaft praktiziert werden, erfordert der Schamanismus persönliche Kenntnis und spezielle Fähigkeiten. Schamanen bewegen sich außerhalb althergebrachter Religionen.</German>
 		<Italian>Lo sciamanismo è un insieme di credenze e pratiche tradizionali che si occupano della comunicazione con il mondo degli spiriti. Un praticante dello sciamanismo è conosciuto come uno sciamano. Ci sono molti tipi di sciamanismo in tutto il mondo; le seguenti credenze sono condivise da tutte le forme di sciamanismo[PARAGRAPH:2] Gli spiriti esistono e giocano un ruolo importante sia nella vita individuale che nella società umana. [PARAGRAPH:1]Lo sciamano è in grado di comunicare con il mondo degli spiriti. [PARAGRAPH:1]Gli spiriti possono essere buoni o malvagi. [PARAGRAPH:1]Lo sciamano può curare le malattie causate dagli spiriti maligni. [PARAGRAPH:1]Lo sciamano può impiegare tecniche di induzione di trance per incitare un'estasi visionaria. [PARAGRAPH:1]Lo spirito dello sciamano può lasciare il suocorpo per entrare nel mondo soprannaturale per cercare le risposte. [PARAGRAPH:1]Lo sciamano evoca immagini di animali come spiriti guida, presagi o portatori di messaggi. [PARAGRAPH:2] Lo sciamanismo si basa sul presupposto che il mondo visibile è pervaso da forze invisibili o spiriti che incidono sulla vita dei vivi. In contrasto con le religioni organizzate come l'animismo che sono guidate da sacerdoti, e che tutti i membri della società praticano, lo sciamanismo richiede conoscenza individualizzata e abilità speciali. Gli sciamani operano al di fuori delle religioni costituite e, tradizionalmente, da soli. Gli sciamani possono raccogliersi in associazioni, come i praticanti tantrici indiani.</Italian>
 		<Polish>Szamanizm - zespół praktyk i wierzeń opierających swe pojmowanie relacji świata namacalnego do świata duchowego na fundamentalnej roli szamana jako osoby zdolnej do podróży ekstatycznych w zaświaty dla dobra swojej wspólnoty bądź jej poszczególnych członków. Szamanizmem właściwym nazywamy szamanizm występujący w społecznościach plemiennych Syberii i środkowej Azji, w których szamanizm stanowi fundamentalny czynnik życia religijnego. Slady szamanizmu obecne są bardziej lub mniej w religiach tradycyjnych na wszystkich kontynentach świata. Skłania to badaczy do przyjęcia tezy o archaicznym pochodzeniu tych wierzeń, opartych na dwóch rzeczywistościach (namacalnej i duchowej) oraz na trzech piętrach organizacji świata (kosmologia): duchowym Swiecie Dolnym, Swiecie Srodkowym - ziemskim - i Swiecie Górnym, niebieskim świecie duchowym. Z podziałem tym związana jest też idea drzewa kosmicznego, które łączy ze sobą trzy światy.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_SHAMAN_QUOTE</Tag>
+		<Tag>TXT_KEY_TECH_SHAMAN_QUOTE</Tag>
 		<English>The knowledge of the realm of death makes it possible for the shaman to move freely back and forth and mediate these journeys for other people.[PARAGRAPH:2]- Stanislav Grof,[PARAGRAPH:1][SPACE][SPACE]"Noetic Sciences Review: Alternative Cosmologies and Altered States (1994)"</English>
 		<French>"En entrant en contact avec le monde des morts, le shaman peut s'y dplacer librement et se faire l'intermdiaire entre le peuple et les Esprits." - Stanislav Grof</French>
 		<Polish>"Wiedza o królestwie zmarłych umożliwia szamanowi swobodne podróżowanie tam i z powrotem oraz pośredniczenie w tych podróżach dla innych ludzi." - Stanislav Grof</Polish>

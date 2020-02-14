@@ -5,9 +5,9 @@
 		<TechInfo>
 			<!-- Druidism -->
 			<Type>TECH_DRUIDISM</Type>
-			<Description>TXT_KEY_RELIGION_DRUID</Description>
-			<Civilopedia>TXT_KEY_RELIGION_DRUID_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_RELIGION_DRUID_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_DRUID</Description>
+			<Civilopedia>TXT_KEY_TECH_DRUID_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_DRUID_STRATEGY</Strategy>
 			<!-- Main -->
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<iCost>34</iCost>
@@ -37,7 +37,7 @@
 			<OrPreReqs>
 				<PrereqTech>TECH_ANIMISM</PrereqTech>
 			</OrPreReqs>
-			<Quote>TXT_KEY_RELIGION_DRUID_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_DRUID_QUOTE</Quote>
 			<Sound>AS2D_TECH_DRUIDISM</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>art/interface/buttons/techtree/Druidism.dds</Button>

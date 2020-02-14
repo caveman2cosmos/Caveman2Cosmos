@@ -6,8 +6,8 @@
 	<ReligionInfos>
 		<ReligionInfo>
 			<Type>RELIGION_RODNOVERY</Type>
-			<Description>TXT_KEY_RELIGION_RODNOVERY</Description>
-			<Civilopedia>TXT_KEY_RELIGION_RODNOVERY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_TECH_RODNOVERY</Description>
+			<Civilopedia>TXT_KEY_TECH_RODNOVERY_PEDIA</Civilopedia>
 			<TechPrereq>TECH_RODNOVERY</TechPrereq>
 			<FreeUnitClass>UNITCLASS_RODNOVERY_MISSIONARY</FreeUnitClass>
 			<iFreeUnits>1</iFreeUnits>

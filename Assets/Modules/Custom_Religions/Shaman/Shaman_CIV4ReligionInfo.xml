@@ -8,9 +8,9 @@
 	<ReligionInfos>
 		<ReligionInfo>
 			<Type>RELIGION_SHAMAN</Type>
-			<Description>TXT_KEY_RELIGION_SHAMAN</Description>
-			<Adjective>TXT_KEY_RELIGION_SHAMAN_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_RELIGION_SHAMAN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_TECH_SHAMAN</Description>
+			<Adjective>TXT_KEY_TECH_SHAMAN_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_TECH_SHAMAN_PEDIA</Civilopedia>
 			<TechPrereq>TECH_SHAMANISM</TechPrereq>
 			<FreeUnitClass>UNITCLASS_SHAMAN_MISSIONARY</FreeUnitClass>
 			<iFreeUnits>0</iFreeUnits>

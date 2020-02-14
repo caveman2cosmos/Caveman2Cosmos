@@ -6,14 +6,14 @@
 <!-- GameText Civilopedia Techs -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_ANDEAN</Tag>
+		<Tag>TXT_KEY_TECH_ANDEAN</Tag>
 		<English>Andeanism</English>
 		<French>Andéanisme</French>
 		<Italian>Andinismo</Italian>
 		<Polish>Andeanizm</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_ANDEAN_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_TECH_ANDEAN_ADJECTIVE</Tag>
 		<English>Andean</English>
 		<French>
 			<Text>Andéen</Text>
@@ -38,20 +38,20 @@
 		<Polish>Andeańska</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_ANDEAN_PEDIA</Tag>
+		<Tag>TXT_KEY_TECH_ANDEAN_PEDIA</Tag>
 		<English>A prominent theme in Inca mythology is the duality of the Cosmos. The realms were separated into the upper and lower realms. Hanan Paca, the upper world, consisted of the deities of the sun, moon, stars, rainbow, and lightning while Ukhu and Hurin Pacas were the realms of Pachamama, the earth mother, and the ancestors and heroes of the Inca. Cay Paca, the realm of the outer earth, where humans resided was viewed as a intermediary realm between Hanan Paca and Ukhu Paca. The realms were represented by the condor (upper world), puma (outer earth) and snake (inner earth).</English>
 		<Italian>Un tema fondamentale della mitologia inca era la dualità del cosmo. I regni erano divisi in superiore e inferiore. Hanan Paca, il mondo superiore, era formato dalle divinità del sole, della luna, delle stelle, dell'arcobaleno e del tuono; Ukhu e Hurin Pacas erano i regni di Pachamama, la madre terra, e degli antenati ed eroi degli Inca. Cay Paca, il regno della terra in cui gli umani vivevano, era considerato un regno intermedio tra Hanan Paca e Ukhu Paca. I regni erano rappresentati dal condor (mondo superiore), dal puma (mondo intermedio) e dal serpente (mondo inferiore).</Italian>
 		<Polish>Najważniejszym bóstwem inkaskim było Słońce, zwane Inti. Jego ojcem miał być bóg stwórca Wirakocza, a siostrą Księżyc (Mama Quilla; w keczua Księżyc to rodzaj żeński). Sługą Słońca był Illapa, bóg piorunów, grzmotów i błyskawic, a także deszczu. Według mitologii Słońce w pradawnych czasach miało zesłać na ziemię swoje dzieci: czterech synów i cztery córki. Miało także dać im złoty pręt z poleceniem, aby założyły miasto tam, gdzie pręt całkowicie zanurzy się w ziemię. Mimo to wskutek waśni pomiędzy rodzeństwem sześcioro zginęło. Przeżyli tylko Manco Capac i jego żona Mama Occlo Huaco (nie mylić z Mamą Occlo, żoną Pachacuteca). Założyli miasto Cuzco i tak powstało Tahuantinsuyu. Ciekawym aspektem w mitologii inkaskiej jest bóg Wirakocza. Inkowie przejęli jego kult od Ajmarów. Do czasu podboju doliny Rímac czcili go jedynie w myśli, jednak po tym wydarzeniu zaczęli mu stawiać świątynie. Było to spowodowane panującym w Rímac kultem Pacha Kamaqa, czyli boga utożsamianego z Wirakoczą. Wirakocza był teoretycznie jednym z najważniejszych bogów inkaskich, jednak w praktyce nie oddziaływał zbytnio na ludzi. Istnieje hipoteza mówiąca o europejskości Wirakoczy. Według podań miał białą skórę i brodę. Przeciwnicy tej teorii znajdują na to wytłumaczenie: tak Indianie jedynie wyobrażali sobie boga. A nawet gdyby istniał (mówimy o zdaniu niewierzących w to), mógłby być Indianinem. U niektórych plemion spotyka się brody, a w każdej nacji rodzą się dzieci jaśniejsze lub ciemniejsze. Pod imieniem Quetzalcoatl (Pierzasty Wąż) czcili go Aztekowie, Toltekowie i Totonakowie, a Majowie wyznawali go jako Kukulkana.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_ANDEAN_QUOTE</Tag>
+		<Tag>TXT_KEY_TECH_ANDEAN_QUOTE</Tag>
 		<English>"O Pachacamac![NEWLINE]Thou who hast existed from the beginning,[NEWLINE]Thou who shalt exist until the end,[NEWLINE]powerful but merciful?[NEWLINE]Give us life everlasting,[NEWLINE]preserve us, and accept this our sacrifice."[NEWLINE][NEWLINE] - from www.sacred-texts.com</English>
 		<French>"O Pachacamac![NEWLINE]Toi qui était au commencement,[NEWLINE]Toi qui existera à la fin,[NEWLINE]Puissant mais généreux?[NEWLINE]Donne-nous la vie Eternelle,[NEWLINE]préserve-nous et accepte nos sacrifices."[NEWLINE][NEWLINE] - de www.sacred-texts.com</French>
 		<Spanish>"¡Oh Pachacamac![NEWLINE]Tú que has existido desde los comienzos,[NEWLINE]tú quien existirá hasta el apocalipsis,[NEWLINE]poderoso pero misericordioso?[NEWLINE]Danos la vida eterna[NEWLINE]protégenos, y acepta este nuestro sacrificio."[NEWLINE][NEWLINE] - de www.sacred-texts.com)</Spanish>
 		<Polish>"O Pachakamak![NEWLINE]Ty, który istniałeś od początku. Ty, który będziesz istniał aż do końca, wszechmogący, ale miłosierny. Daj nam życie wieczne." - ze strony www.sacred-texts.com</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_ANDEAN_STRATEGY</Tag>
+		<Tag>TXT_KEY_TECH_ANDEAN_STRATEGY</Tag>
 		<English>Research Andeanism to found a Religion</English>
 		<French>Recherchez Andéanisme pour fonder une religion</French>
 		<Spanish>Investiga el Andeanismo para fundar una religión.</Spanish>

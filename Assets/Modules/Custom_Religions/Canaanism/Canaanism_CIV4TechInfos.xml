@@ -5,8 +5,8 @@
 	<TechInfos>
 		<TechInfo>
 			<Type>TECH_CANAANITE</Type>
-			<Description>TXT_KEY_RELIGION_CANAANISM</Description>
-			<Civilopedia>TXT_KEY_RELIGION_CANAANISM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_TECH_CANAANISM</Description>
+			<Civilopedia>TXT_KEY_TECH_CANAANISM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<iCost>309</iCost>
 			<bGlobal>1</bGlobal>
@@ -32,7 +32,7 @@
 			<OrPreReqs>
 				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			</OrPreReqs>
-			<Quote>TXT_KEY_RELIGION_CANAANISM_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_CANAANISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_CANAANISM</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>

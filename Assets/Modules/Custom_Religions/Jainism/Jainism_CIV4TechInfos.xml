@@ -5,9 +5,9 @@
 		<TechInfo>
 			<!-- Jainism -->
 			<Type>TECH_JAINISM</Type>
-			<Description>TXT_KEY_RELIGION_JAINISM</Description>
-			<Civilopedia>TXT_KEY_RELIGION_JAINISM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_RELIGION_JAINISM_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_JAINISM</Description>
+			<Civilopedia>TXT_KEY_TECH_JAINISM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_JAINISM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<!-- Main properties -->
 			<iCost>824</iCost>
@@ -40,7 +40,7 @@
 					<iFlavor>5</iFlavor>
 				</Flavor>
 			</Flavors>
-			<Quote>TXT_KEY_RELIGION_JAINISM_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_JAINISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_JAINISM</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Jainism.dds</Button>

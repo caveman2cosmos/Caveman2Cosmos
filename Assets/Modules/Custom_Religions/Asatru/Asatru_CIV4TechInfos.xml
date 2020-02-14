@@ -5,9 +5,9 @@
 		<TechInfo>
 			<!-- Asatru -->
 			<Type>TECH_ASATRU</Type>
-			<Description>TXT_KEY_RELIGION_ASATRU</Description>
-			<Civilopedia>TXT_KEY_RELIGION_ASATRU_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_RELIGION_ASATRU_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_ASATRU</Description>
+			<Civilopedia>TXT_KEY_TECH_ASATRU_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_ASATRU_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<!-- Main properties -->
 			<iCost>499</iCost>
@@ -40,7 +40,7 @@
 					<iFlavor>5</iFlavor>
 				</Flavor>
 			</Flavors>
-			<Quote>TXT_KEY_RELIGION_ASATRU_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_ASATRU_QUOTE</Quote>
 			<Sound>AS2D_TECH_ASATRU</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/asatru.dds</Button>

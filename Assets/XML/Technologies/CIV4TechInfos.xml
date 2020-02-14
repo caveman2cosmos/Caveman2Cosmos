@@ -6803,9 +6803,9 @@ Current techs which are not in this file:-
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_ZOROASTRIANISM</Type>
-			<Description>TXT_KEY_RELIGION_ZOROASTRIANISM</Description>
-			<Civilopedia>TXT_KEY_RELIGION_ZOROASTRIANISM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_RELIGION_ZOROASTRIANISM_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_ZOROASTRIANISM</Description>
+			<Civilopedia>TXT_KEY_TECH_ZOROASTRIANISM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_ZOROASTRIANISM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
 			<iCost>309</iCost>
@@ -6834,7 +6834,7 @@ Current techs which are not in this file:-
 			<AndPreReqs>
 				<PrereqTech>TECH_DUALISM</PrereqTech>
 			</AndPreReqs>
-			<Quote>TXT_KEY_RELIGION_ZOROASTRIANISM_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_ZOROASTRIANISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_ZOROASTRIANISM</Sound>
 			<SoundMP>AS2D_TECH_ZOROASTRIANISM</SoundMP>
 			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
@@ -6890,9 +6890,9 @@ Current techs which are not in this file:-
 <!--	(030, 17) TECH_CANAANITE	-->
 		<TechInfo>
 			<Type>TECH_KEMETISM</Type>
-			<Description>TXT_KEY_RELIGION_EGYPT_MYTHOLOGY</Description>
-			<Civilopedia>TXT_KEY_RELIGION_EGYPT_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_RELIGION_EGYPT_MYTHOLOGY_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_EGYPT_MYTHOLOGY</Description>
+			<Civilopedia>TXT_KEY_TECH_EGYPT_MYTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_EGYPT_MYTHOLOGY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<iCost>309</iCost>
 			<bGlobal>1</bGlobal>
@@ -6923,7 +6923,7 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ORNAMENTATION</PrereqTech>
 				<PrereqTech>TECH_FELINE_DOMESTICATION</PrereqTech>
 			</AndPreReqs>
-			<Quote>TXT_KEY_RELIGION_EGYPT_MYTHOLOGY_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_EGYPT_MYTHOLOGY_QUOTE</Quote>
 			<Sound>AS2D_TECH_KEMETISM</Sound>
 			<SoundMP>AS2D_TECH_KEMETISM</SoundMP>
 			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
@@ -7030,9 +7030,9 @@ Current techs which are not in this file:-
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_HINDUISM</Type>
-			<Description>TXT_KEY_RELIGION_HINDUISM</Description>
-			<Civilopedia>TXT_KEY_RELIGION_HINDUISM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_RELIGION_HINDUISM_QUOTE</Strategy>
+			<Description>TXT_KEY_TECH_HINDUISM</Description>
+			<Civilopedia>TXT_KEY_TECH_HINDUISM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_HINDUISM_QUOTE</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<iCost>348</iCost>
 			<bGlobal>1</bGlobal>
@@ -7061,7 +7061,7 @@ Current techs which are not in this file:-
 			<AndPreReqs>
 				<PrereqTech>TECH_KARMA</PrereqTech>
 			</AndPreReqs>
-			<Quote>TXT_KEY_RELIGION_HINDUISM_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_HINDUISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_REINCARNATION</Sound>
 			<SoundMP>AS2D_TECH_REINCARNATION</SoundMP>
 			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
@@ -7069,9 +7069,9 @@ Current techs which are not in this file:-
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_JUDAISM</Type>
-			<Description>TXT_KEY_RELIGION_JUDAISM</Description>
-			<Civilopedia>TXT_KEY_RELIGION_JUDAISM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_RELIGION_JUDAISM_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_JUDAISM</Description>
+			<Civilopedia>TXT_KEY_TECH_JUDAISM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_JUDAISM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<iCost>348</iCost>
 			<bGlobal>1</bGlobal>
@@ -7100,7 +7100,7 @@ Current techs which are not in this file:-
 			<AndPreReqs>
 				<PrereqTech>TECH_RESURRECTION</PrereqTech>
 			</AndPreReqs>
-			<Quote>TXT_KEY_RELIGION_JUDAISM_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_JUDAISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_JUDAISM</Sound>
 			<SoundMP>AS2D_TECH_JUDAISM</SoundMP>
 			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
@@ -7924,9 +7924,9 @@ Current techs which are not in this file:-
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_BUDDHISM</Type>
-			<Description>TXT_KEY_RELIGION_BUDDHISM</Description>
-			<Civilopedia>TXT_KEY_RELIGION_BUDDHISM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_RELIGION_BUDDHISM_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_BUDDHISM</Description>
+			<Civilopedia>TXT_KEY_TECH_BUDDHISM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_BUDDHISM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
 			<iCost>499</iCost>
@@ -7955,7 +7955,7 @@ Current techs which are not in this file:-
 			<AndPreReqs>
 				<PrereqTech>TECH_REINCARNATION</PrereqTech>
 			</AndPreReqs>
-			<Quote>TXT_KEY_RELIGION_BUDDHISM_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_BUDDHISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_BUDDHISM</Sound>
 			<SoundMP>AS2D_TECH_BUDDHISM</SoundMP>
 			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
@@ -8074,9 +8074,9 @@ Current techs which are not in this file:-
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_HELLENISM</Type>
-			<Description>TXT_KEY_RELIGION_HELLENISM</Description>
-			<Civilopedia>TXT_KEY_RELIGION_HELLENISM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_RELIGION_HELLENISM_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_HELLENISM</Description>
+			<Civilopedia>TXT_KEY_TECH_HELLENISM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_HELLENISM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
 			<iCost>554</iCost>
@@ -8105,7 +8105,7 @@ Current techs which are not in this file:-
 			<AndPreReqs>
 				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			</AndPreReqs>
-			<Quote>TXT_KEY_RELIGION_HELLENISM_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_HELLENISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_HELLENISM</Sound>
 			<SoundMP>AS2D_TECH_HELLENISM</SoundMP>
 			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
@@ -8376,9 +8376,9 @@ Current techs which are not in this file:-
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_NAGHUALISM</Type>
-			<Description>TXT_KEY_RELIGION_MESOAMERICANISM</Description>
-			<Civilopedia>TXT_KEY_RELIGION_MESOAMERICANISM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_RELIGION_NAGHUALISM_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_MESOAMERICANISM</Description>
+			<Civilopedia>TXT_KEY_TECH_MESOAMERICANISM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_NAGHUALISM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
 			<iCost>614</iCost>
@@ -8407,7 +8407,7 @@ Current techs which are not in this file:-
 			<AndPreReqs>
 				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			</AndPreReqs>
-			<Quote>TXT_KEY_RELIGION_NAGHUALISM_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_NAGHUALISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_NAGHUALISM</Sound>
 			<SoundMP>AS2D_TECH_NAGHUALISM</SoundMP>
 			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
@@ -8935,9 +8935,9 @@ Current techs which are not in this file:-
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_CONFUCIANISM</Type>
-			<Description>TXT_KEY_RELIGION_CONFUCIANISM</Description>
-			<Civilopedia>TXT_KEY_RELIGION_CONFUCIANISM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_RELIGION_CONFUCIANISM_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_CONFUCIANISM</Description>
+			<Civilopedia>TXT_KEY_TECH_CONFUCIANISM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_CONFUCIANISM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
 			<iCost>679</iCost>
@@ -8966,7 +8966,7 @@ Current techs which are not in this file:-
 			<AndPreReqs>
 				<PrereqTech>TECH_MEDITATION</PrereqTech>
 			</AndPreReqs>
-			<Quote>TXT_KEY_RELIGION_CONFUCIANISM_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_CONFUCIANISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_CONFUCIANISM</Sound>
 			<SoundMP>AS2D_TECH_CONFUCIANISM</SoundMP>
 			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
@@ -9050,9 +9050,9 @@ Current techs which are not in this file:-
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_TAOISM</Type>
-			<Description>TXT_KEY_RELIGION_TAOISM</Description>
-			<Civilopedia>TXT_KEY_RELIGION_TAOISM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_RELIGION_TAOISM_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_TAOISM</Description>
+			<Civilopedia>TXT_KEY_TECH_TAOISM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_TAOISM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
 			<iCost>749</iCost>
@@ -9078,7 +9078,7 @@ Current techs which are not in this file:-
 			<OrPreReqs>
 				<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
 			</OrPreReqs>
-			<Quote>TXT_KEY_RELIGION_TAOISM_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_TAOISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_TAOISM</Sound>
 			<SoundMP>AS2D_TECH_TAOISM</SoundMP>
 			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
@@ -9941,9 +9941,9 @@ Current techs which are not in this file:-
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_CHRISTIANITY</Type>
-			<Description>TXT_KEY_RELIGION_CHRISTIANITY</Description>
-			<Civilopedia>TXT_KEY_RELIGION_CHRISTIANITY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_RELIGION_CHRISTIANITY_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_CHRISTIANITY</Description>
+			<Civilopedia>TXT_KEY_TECH_CHRISTIANITY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_CHRISTIANITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
 			<iCost>1230</iCost>
@@ -9969,7 +9969,7 @@ Current techs which are not in this file:-
 			<OrPreReqs>
 				<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			</OrPreReqs>
-			<Quote>TXT_KEY_RELIGION_CHRISTIANITY_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_CHRISTIANITY_QUOTE</Quote>
 			<Sound>AS2D_TECH_CHRISTIANITY</Sound>
 			<SoundMP>AS2D_TECH_CHRISTIANITY</SoundMP>
 			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
@@ -10149,9 +10149,9 @@ Current techs which are not in this file:-
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_ISLAM</Type>
-			<Description>TXT_KEY_RELIGION_ISLAM</Description>
-			<Civilopedia>TXT_KEY_RELIGION_ISLAM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_RELIGION_ISLAM_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_ISLAM</Description>
+			<Civilopedia>TXT_KEY_TECH_ISLAM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_ISLAM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
 			<iCost>1334</iCost>
@@ -10177,7 +10177,7 @@ Current techs which are not in this file:-
 			<OrPreReqs>
 				<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
 			</OrPreReqs>
-			<Quote>TXT_KEY_RELIGION_ISLAM_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_ISLAM_QUOTE</Quote>
 			<Sound>AS2D_TECH_ISLAM</Sound>
 			<SoundMP>AS2D_TECH_ISLAM</SoundMP>
 			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>

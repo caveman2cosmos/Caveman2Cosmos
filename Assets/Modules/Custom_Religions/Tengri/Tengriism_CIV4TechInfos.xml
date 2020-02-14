@@ -5,9 +5,9 @@
 		<TechInfo>
 			<!-- Tengriism -->
 			<Type>TECH_TENGRIISM</Type>
-			<Description>TXT_KEY_RELIGION_TENGRIISM</Description>
-			<Civilopedia>TXT_KEY_RELIGION_TENGRIISM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_RELIGION_TENGRIISM_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_TENGRIISM</Description>
+			<Civilopedia>TXT_KEY_TECH_TENGRIISM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_TENGRIISM_STRATEGY</Strategy>
 			<!-- Main -->
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<iCost>52</iCost>
@@ -37,7 +37,7 @@
 			<OrPreReqs>
 				<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
 			</OrPreReqs>
-			<Quote>TXT_KEY_RELIGION_TENGRIISM_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_TENGRIISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_TENGRIISM2</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/tengriism.dds</Button>

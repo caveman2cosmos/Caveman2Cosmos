@@ -7,13 +7,13 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
 	<!-- SHINTO -->
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_SHINTO</Tag>
+		<Tag>TXT_KEY_TECH_SHINTO</Tag>
 		<English>Shinto</English>
 		<French>Shintoïsme</French>
 		<Italian>Shintoismo</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_SHINTO_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_TECH_SHINTO_ADJECTIVE</Tag>
 		<English>Shinto</English>
 		<French>
 			<Text>Shinto</Text>
@@ -37,14 +37,14 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_SHINTO_PEDIA</Tag>
+		<Tag>TXT_KEY_TECH_SHINTO_PEDIA</Tag>
 		<English>Shinto is the native religion of Japan and was once its state religion. It is a type of polytheism, and involves the worship of kami, or spirits. Some kami are local and can be regarded as the spiritual being/spirit or genius of a particular place, but others represent major natural objects and processes: for example, Amaterasu, the Sun goddess, or Mount Fuji. Shinto is an animistic belief system. The word Shinto, from the original Chinese Shendao, combines two kanji: "shin", meaning gods or spirits; and "to", meaning a philosophical way or path. As such, Shinto is commonly translated as "The Way of the Gods." Some differences exist between koshinto (the ancient Shinto) and the many types of Shinto taught and practiced today, showing the influences of Buddhism when it was introduced into Japan in the sixth century.[PARAGRAPH:2]After World War II, Shinto ceased to be Japan's state religion, although it continued to be considered the native religion of Japan. Some Shinto practices and teachings, once given a great deal of prominence during the war, are no longer taught or practiced today, while others still exist as commonplace activities such as omikuji (a form of fortune-telling) and the Japanese New Year to which few people give religious connotations.</English>
 		<German>Shinto (auch Shintoismus) ist die einheimische Religion in Japan und war dort auch Staatsreligion. Dabei handelt es sich um eine Form des Polytheismus, und beinhaltet die Verehrung von "Kami", oder Geistern. Einige Kami sind nur regional verehrt und können als die spirituellen Wesen/Geister oder Seele eines bestimmten Ortes angesehen werden, während andere größere Naturereignisse oder -Objekte repräsentieren können: Zum Beispiel Amaterasu, die Sonnengöttin, oder Mount Fuji. Shinto ist ein animistisches Glaubenssystem. Das Wort Shinto, abgeleitet vom chinesischen Shendao, verbindet zwei kanji: "Shin", was "Götter" oder "Geister" bedeutet, und "to", was einen philosophischen Weg meint. Man kann Shinto also übersetzen als "Weg der Götter". Es gibt einige Unterschiede zwischen Koshinto (dem antikem Shinto) und die vielen heute unterrichteten und praktizierten Shintoströhmungen, die deutlich durch den im sechten Jahrhundert in Japan eingeführten Buddhismus beeinflußt wurden.[PARAGRAPH:2]Seit nach dem Zweiten Weltkrieg ist Shinto nicht mehr die Staatsreligion in Japan, obwohl obwohl es immernoch als die einheimische Religion betrachtet wird. Einige Shinto-Praktiken und -Lehren, die während des Krieges sehr angesehen waren, werden heute nicht mehr praktiziert, während andere Richtungen immernoch alltäglich sind, so wie zum Beispiel "Omikuji" (eine Form der Wahrsagung) oder dem japanischem Neujahr, an dem die Leute religiöse Spenden darbringen.</German>
 		<Italian>Lo Shintoismo è una religione nativa del Giappone, che una volta era la sua religione di Stato. Si tratta di un tipo di politeismo che coinvolge il culto di kami, gli spiriti. Alcuni kami sono locali e possono essere considerati come l'essere/spirito o genio di un luogo particolare, ma altri rappresentano i principali oggetti naturali e processi: per esempio Amaterasu, la dea del Sole, o il Monte Fuji. Lo Shintoismo è una credenza animista. La parola Shinto, dal cinese Shendao, combina due kanji: "shin", che significa dèi o spiriti, e "a", cioè un modo filosofico o un percorso (in origine dalla parola cinese dao). Come tale, Shintoismo è comunemente tradotto come "La Via degli Dei." Esistono alcune differenze tra koshinto (l'antico Shintoismo) ed i molti tipi di Shinto insegnati e praticati oggi, che mostrano le influenze del Buddismo quando è stato introdotto in Giappone nel VI secolo. [PARAGRAPH:2]Dopo la seconda guerra mondiale, lo Shintoismo ha smesso di essere le religione di stato in Giappone, anche se continua ad essere considerato la religione nativa del Giappone. Alcune pratiche ed insegnamenti shintoisti una volta davano una grande importanza durante la guerra, ma non sono più insegnate o predicate oggi, mentre altre esistono ancora attività banali come omikuji (una forma di predizione del futuro) e il nuovo anno giapponese a cui poche persone danno connotazioni religiose.</Italian>
 		<Polish>Shinto - tradycyjna religia Japonii oparta na mitologii japońskiej, charakteryzująca się politeizmem oraz różnorodnością przejawów i kultów. Wierzenia shinto nie mają wspólnego kanonu, organizacji ani świętych ksiąg. Zwrot kannagara-no-michi jest słownikowo przedstawiany jako synonim shinto i "drogi bogów", ale według wydawnictw specjalistycznych oznacza "w zgodzie z wolą bogów". Był używany m.in. w celu odróżnienia ortodoksyjnego shinto świątynnego od sekciarskiego i wierzeń popularnych. Centralnym dla shinto pojęciem są bóstwa kami.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_SHINTOISM_QUOTE</Tag>
+		<Tag>TXT_KEY_TECH_SHINTOISM_QUOTE</Tag>
 		<English>"Banzai!!!" - Traditional japanese battle cry</English>
 		<French>"Banzai!!!" - Cri de bataille Traditionel japonais</French>
 		<Italian>"Banzai!!!" - Grido di battaglia tradizionale giapponese</Italian>
@@ -52,7 +52,7 @@
 		<Polish>"Banzai!!!" - Tradycyjny japoński okrzyk wojenny</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_SHINTOISM_STRATEGY</Tag>
+		<Tag>TXT_KEY_TECH_SHINTOISM_STRATEGY</Tag>
 		<English>Research Shintoism to Found a religion</English>
 		<French>Recherchez le [COLOR_TECH_TEXT]Shintoïsme[COLOR_REVERT] pour fonder une religion</French>
 		<Spanish>Investiga el Sintoísmo para fundar una religión.</Spanish>
