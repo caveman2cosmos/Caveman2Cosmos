@@ -838,7 +838,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BEACON_GREAT_BARRIER</Tag>
-		<English>Build a [LINK=IMPROVEMENT_BEACON_GREAT_BARRIER]Beacon[\LINK] (Great Reef)</English>
+		<English>Build [LINK=IMPROVEMENT_BEACON_GREAT_BARRIER]Beacon[\LINK] (Great Reef)</English>
 		<French>Placer une [LINK=IMPROVEMENT_BEACON_GREAT_BARRIER]Balise[\LINK] (Great Reef)</French>
 		<German>[LINK=IMPROVEMENT_BEACON_GREAT_BARRIER]Leuchtfeuer[\LINK] errichten (Great Reef)</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_BEACON_GREAT_BARRIER]Torre di segnalazione[\LINK] (Great Reef)</Italian>
@@ -847,7 +847,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LIGHTHOUSE_GREAT_BARRIER</Tag>
-		<English>Build a [LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER]Lighthouse[\LINK](Great Reef)</English>
+		<English>Build [LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER]Lighthouse[\LINK] (Great Reef)</English>
 		<French>Placer un [LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER]Phare[\LINK](Great Reef)</French>
 		<German>[LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER]Leuchtturm[\LINK](Great Reef) bauen</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER]Faro[\LINK](Great Reef)</Italian>

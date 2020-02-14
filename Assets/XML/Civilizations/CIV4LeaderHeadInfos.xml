@@ -21,10 +21,6 @@
 					<TraitType>TRAIT_BARBARIAN</TraitType>
 					<bTrait>1</bTrait>
 				</Trait>
-				<Trait>
-					<TraitType>TRAIT_BARBARIAN1</TraitType>
-					<bTrait>1</bTrait>
-				</Trait>
 			</Traits>
 			<DiplomacyIntroMusicPeace>
 				<DiploMusicPeaceEra>
@@ -457,10 +453,6 @@
 			<Traits>
 				<Trait>
 					<TraitType>TRAIT_BARBARIAN</TraitType>
-					<bTrait>1</bTrait>
-				</Trait>
-				<Trait>
-					<TraitType>TRAIT_BARBARIAN1</TraitType>
 					<bTrait>1</bTrait>
 				</Trait>
 			</Traits>
