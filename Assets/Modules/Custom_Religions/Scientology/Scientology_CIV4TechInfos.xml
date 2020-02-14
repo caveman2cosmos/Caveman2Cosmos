@@ -10,7 +10,7 @@
 			<Strategy>TXT_KEY_RELIGION_SCIENTOLOGY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<iCost>11665</iCost>
-			<Era>ERA_ATOMIC</Era>
+			<Era>C2C_ERA_ATOMIC</Era>
 			<iGridX>77</iGridX>
 			<iGridY>7</iGridY>
 			<bGlobal>1</bGlobal>

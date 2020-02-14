@@ -313,12 +313,12 @@ class CvEventManager:
 				iMedieval = GC.getInfoTypeForString('UNIT_MILITIA_MEDIEVAL')
 				iModern = GC.getInfoTypeForString('UNIT_MILITIA_MODERN')
 				self.mapMilitiaByEra = {
-					GC.getInfoTypeForString('ERA_CLASSICAL')	: iMedieval,
-					GC.getInfoTypeForString('ERA_MEDIEVAL')		: iMedieval,
-					GC.getInfoTypeForString('ERA_RENAISSANCE')	: GC.getInfoTypeForString('UNIT_MILITIA_RENAISSANCE'),
-					GC.getInfoTypeForString('ERA_INDUSTRIAL')	: GC.getInfoTypeForString('UNIT_MILITIA_INDUSTRIAL'),
-					GC.getInfoTypeForString('ERA_ATOMIC')		: iModern,
-					GC.getInfoTypeForString('ERA_INFORMATION')	: iModern
+					GC.getInfoTypeForString('C2C_ERA_CLASSICAL')	: iMedieval,
+					GC.getInfoTypeForString('C2C_ERA_MEDIEVAL')		: iMedieval,
+					GC.getInfoTypeForString('C2C_ERA_RENAISSANCE')	: GC.getInfoTypeForString('UNIT_MILITIA_RENAISSANCE'),
+					GC.getInfoTypeForString('C2C_ERA_INDUSTRIAL')	: GC.getInfoTypeForString('UNIT_MILITIA_INDUSTRIAL'),
+					GC.getInfoTypeForString('C2C_ERA_ATOMIC')		: iModern,
+					GC.getInfoTypeForString('C2C_ERA_INFORMATION')	: iModern
 				}
 				# Only needs to be done once.
 				self.bNotReady = False

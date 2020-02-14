@@ -20424,7 +20424,7 @@
 			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRE_MYTH_EFFECT</ArtDefineTag>
-			<FreeStartEra>ERA_MEDIEVAL</FreeStartEra>
+			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>-1</iCost>
 			<MapCategoryTypes>
@@ -20439,7 +20439,7 @@
 			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_METAL_MYTH_EFFECT</ArtDefineTag>
-			<FreeStartEra>ERA_MEDIEVAL</FreeStartEra>
+			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>-1</iCost>
 			<MapCategoryTypes>
@@ -20455,7 +20455,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SEA_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			<FreeStartEra>ERA_MEDIEVAL</FreeStartEra>
+			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
 			<FreeBuilding>BUILDINGCLASS_SEA_MYTH_EFFECT</FreeBuilding>
 			<iCost>-1</iCost>
 			<MapCategoryTypes>
@@ -20604,7 +20604,7 @@
 			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SKY_MYTH_EFFECT</ArtDefineTag>
-			<FreeStartEra>ERA_MEDIEVAL</FreeStartEra>
+			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>-1</iCost>
 			<MapCategoryTypes>
@@ -20619,7 +20619,7 @@
 			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_STONE_MYTH_EFFECT</ArtDefineTag>
-			<FreeStartEra>ERA_MEDIEVAL</FreeStartEra>
+			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>-1</iCost>
 			<MapCategoryTypes>

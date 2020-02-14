@@ -5309,87 +5309,87 @@
 			<Button>Art/Interface/Buttons/units/sparth/categories/species_ai.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
-			<Type>UNITCOMBAT_ERA_ANCIENT</Type>
-			<Description>TXT_KEY_UNITCOMBAT_ERA_ANCIENT</Description>
-			<EraType>ERA_ANCIENT</EraType>
+			<Type>UNITCOMBAT_ERA_PREHISTORIC</Type>
+			<Description>TXT_KEY_UNITCOMBAT_ERA_PREHISTORIC</Description>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/era_prehistoric.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
-			<Type>UNITCOMBAT_ERA_SEDENTARY</Type>
-			<Description>TXT_KEY_UNITCOMBAT_ERA_SEDENTARY</Description>
-			<EraType>ERA_SEDENTARY</EraType>
-			<Button>Art/Interface/Buttons/units/sparth/categories/era_ancient.dds</Button>
+			<Type>UNITCOMBAT_ERA_ANCIENT</Type>
+			<Description>TXT_KEY_UNITCOMBAT_ERA_ANCIENT</Description>
+			<EraType>C2C_ERA_ANCIENT</EraType>
+			<Button>Art/Interface/Buttons/units/sparth/categories/ERA_PREHISTORIC.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_ERA_CLASSICAL</Type>
 			<Description>TXT_KEY_UNITCOMBAT_ERA_CLASSICAL</Description>
-			<EraType>ERA_CLASSICAL</EraType>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/era_classical.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_ERA_MEDIEVAL</Type>
 			<Description>TXT_KEY_UNITCOMBAT_ERA_MEDIEVAL</Description>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/era_medieval.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_ERA_RENAISSANCE</Type>
 			<Description>TXT_KEY_UNITCOMBAT_ERA_RENAISSANCE</Description>
-			<EraType>ERA_RENAISSANCE</EraType>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/era_renaissance.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_ERA_INDUSTRIAL</Type>
 			<Description>TXT_KEY_UNITCOMBAT_ERA_INDUSTRIAL</Description>
-			<EraType>ERA_INDUSTRIAL</EraType>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/era_industrial.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_ERA_ATOMIC</Type>
 			<Description>TXT_KEY_UNITCOMBAT_ERA_ATOMIC</Description>
-			<EraType>ERA_ATOMIC</EraType>
+			<EraType>C2C_ERA_ATOMIC</EraType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/era_modern.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_ERA_INFORMATION</Type>
 			<Description>TXT_KEY_UNITCOMBAT_ERA_INFORMATION</Description>
-			<EraType>ERA_INFORMATION</EraType>
+			<EraType>C2C_ERA_INFORMATION</EraType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/era_future.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_ERA_NANOTECH</Type>
 			<Description>TXT_KEY_UNITCOMBAT_ERA_NANOTECH</Description>
-			<EraType>ERA_NANOTECH</EraType>
+			<EraType>C2C_ERA_NANOTECH</EraType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/era_future.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_ERA_TRANSHUMAN</Type>
 			<Description>TXT_KEY_UNITCOMBAT_ERA_TRANSHUMAN</Description>
-			<EraType>ERA_TRANSHUMAN</EraType>
+			<EraType>C2C_ERA_TRANSHUMAN</EraType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/era_transhuman.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_ERA_GALACTIC</Type>
 			<Description>TXT_KEY_UNITCOMBAT_ERA_GALACTIC</Description>
-			<EraType>ERA_GALACTIC</EraType>
+			<EraType>C2C_ERA_GALACTIC</EraType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/era_galactic.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_ERA_COSMIC</Type>
 			<Description>TXT_KEY_UNITCOMBAT_ERA_COSMIC</Description>
-			<EraType>ERA_COSMIC</EraType>
+			<EraType>C2C_ERA_COSMIC</EraType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/era_future.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_ERA_TRANSCENDENT</Type>
 			<Description>TXT_KEY_UNITCOMBAT_ERA_TRANSCENDENT</Description>
-			<EraType>ERA_TRANSCENDENT</EraType>
+			<EraType>C2C_ERA_TRANSCENDENT</EraType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/era_future.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_ERA_FUTURE</Type>
 			<Description>TXT_KEY_UNITCOMBAT_ERA_FUTURE</Description>
-			<EraType>ERA_FUTURE</EraType>
+			<EraType>C2C_ERA_FUTURE</EraType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/era_future.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>

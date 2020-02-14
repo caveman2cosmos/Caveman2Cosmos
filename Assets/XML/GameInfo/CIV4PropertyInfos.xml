@@ -1001,59 +1001,59 @@
 			<iTrainReluctance>3</iTrainReluctance>
 			<TargetLevelbyEraTypes>
 				<TargetLevelbyEraType>
-					<EraType>ERA_ANCIENT</EraType>
+					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<iTargetLevel>15</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
-					<EraType>ERA_SEDENTARY</EraType>
+					<EraType>C2C_ERA_ANCIENT</EraType>
 					<iTargetLevel>30</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
-					<EraType>ERA_CLASSICAL</EraType>
+					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<iTargetLevel>60</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
-					<EraType>ERA_MEDIEVAL</EraType>
+					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<iTargetLevel>125</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
-					<EraType>ERA_RENAISSANCE</EraType>
+					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<iTargetLevel>300</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
-					<EraType>ERA_INDUSTRIAL</EraType>
+					<EraType>C2C_ERA_INDUSTRIAL</EraType>
 					<iTargetLevel>600</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
-					<EraType>ERA_ATOMIC</EraType>
+					<EraType>C2C_ERA_ATOMIC</EraType>
 					<iTargetLevel>1100</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
-					<EraType>ERA_INFORMATION</EraType>
+					<EraType>C2C_ERA_INFORMATION</EraType>
 					<iTargetLevel>2600</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
-					<EraType>ERA_NANOTECH</EraType>
+					<EraType>C2C_ERA_NANOTECH</EraType>
 					<iTargetLevel>5100</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
-					<EraType>ERA_TRANSHUMAN</EraType>
+					<EraType>C2C_ERA_TRANSHUMAN</EraType>
 					<iTargetLevel>10100</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
-					<EraType>ERA_GALACTIC</EraType>
+					<EraType>C2C_ERA_GALACTIC</EraType>
 					<iTargetLevel>25100</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
-					<EraType>ERA_COSMIC</EraType>
+					<EraType>C2C_ERA_COSMIC</EraType>
 					<iTargetLevel>50100</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
-					<EraType>ERA_TRANSCENDENT</EraType>
+					<EraType>C2C_ERA_TRANSCENDENT</EraType>
 					<iTargetLevel>100100</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
-					<EraType>ERA_FUTURE</EraType>
+					<EraType>C2C_ERA_FUTURE</EraType>
 					<iTargetLevel>200100</iTargetLevel>
 				</TargetLevelbyEraType>
 			</TargetLevelbyEraTypes>

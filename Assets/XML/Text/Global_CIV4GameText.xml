@@ -6770,7 +6770,7 @@
 		<Polish>Zniewolono mieszkańców miasta!</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ERA_SEDENTARY</Tag>
+		<Tag>TXT_KEY_ERA_ANCIENT</Tag>
 		<English>Ancient</English>
 		<French>
 			<Text>Antiquité</Text>
@@ -6795,7 +6795,7 @@
 		<Polish>Starożytna</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ERA_SEDENTARY_STRATEGY</Tag>
+		<Tag>TXT_KEY_ERA_ANCIENT_STRATEGY</Tag>
 		<English>The term Ancient in regards to Caveman to Cosmos describes the beginning of cities and the arrival of what is referred to as the bronze age. It is a period where tribal societies begin to form larger towns and eventually cities, and more elaborate artwork and architecture. Kings emerge in this period, one of the first kinds of powerful rulers, evolving out of powerful tribal leaders. Warfare becomes formalized, with the development of professional armies, the training of animals for war etc.
 Time Frame: 12 000 BC - 1200 BC</English>
 	</TEXT>	
@@ -6998,7 +6998,7 @@ Time Frame: 1900 AD - 1990 AD</English>
 Time Frame: 2050 AD - 2150 AD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ERA_ANCIENT</Tag>
+		<Tag>TXT_KEY_ERA_PREHISTORIC</Tag>
 		<English>Prehistoric</English>
 		<French>Préhistoire</French>
 		<German>
@@ -7011,7 +7011,7 @@ Time Frame: 2050 AD - 2150 AD</English>
 		<Polish>Prehistoryczna</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ERA_ANCIENT_STRATEGY</Tag>
+		<Tag>TXT_KEY_ERA_PREHISTORIC_STRATEGY</Tag>
 		<English>Prehistory (Latin, pra = before; Greek, iotopia = history) is a term used to describe the period before recorded history. Paul Tournal originally coined the term Pré-historique in describing the finds he had made in the caves of southern France. The term "prehistory" can be used to refer to all time since the beginning of the universe, although it is more often used in referring to the period of time since life appeared on Earth, or even more specifically to the time since human-like beings appeared.
 Time Frame: 200 000 BC - 12 000 BC</English>
 	</TEXT>

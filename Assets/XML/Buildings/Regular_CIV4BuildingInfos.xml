@@ -8925,7 +8925,7 @@
 			<ObsoleteTech>TECH_PLASTICS</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>40</iCost>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -10711,7 +10711,7 @@
 			<ObsoleteTech>TECH_AGRICULTURE</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>15</iCost>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -16573,7 +16573,7 @@
 			</PrereqOrTerrain>
 			<!-- Construction cost -->
 			<iCost>15</iCost>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -22182,7 +22182,7 @@
 			<ObsoleteTech>TECH_ANCIENT_MEDICINE</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>25</iCost>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<!-- Other -->
@@ -24298,7 +24298,7 @@
 			<bFreshWater>1</bFreshWater>
 			<!-- Construction cost -->
 			<iCost>35</iCost>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -32572,7 +32572,7 @@
 			</PrereqBonuses>
 			<!-- Construction cost -->
 			<iCost>92</iCost>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -33282,7 +33282,7 @@
 			<bWater>1</bWater>
 			<!-- Construction cost -->
 			<iCost>15</iCost>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -45833,7 +45833,7 @@
 			</PrereqOrFeature>
 			<!-- Construction cost -->
 			<iCost>15</iCost>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -51134,7 +51134,7 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>25</iCost>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<!-- Unit effects -->
 			<bApplyFreePromotionOnMove>1</bApplyFreePromotionOnMove>
 			<FreePromoTypes>
@@ -56218,7 +56218,7 @@
 			<ObsoleteTech>TECH_WRITING</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>20</iCost>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -59717,7 +59717,7 @@
 			</PrereqOrFeature>
 			<!-- Construction cost -->
 			<iCost>62</iCost>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -71586,7 +71586,7 @@
 			<ObsoleteTech>TECH_AGRICULTURE</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>20</iCost>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -76414,7 +76414,7 @@
 			</PrereqOrBuildingClasses>
 			<!-- Construction cost -->
 			<iCost>25</iCost>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -83805,7 +83805,7 @@
 			</PrereqOrFeature>
 			<!-- Construction cost -->
 			<iCost>15</iCost>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -86062,7 +86062,7 @@
 			<ObsoleteTech>TECH_IRON_WORKING</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>15</iCost>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -86248,7 +86248,7 @@
 			<ObsoleteTech>TECH_AGRICULTURE</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>15</iCost>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -87821,7 +87821,7 @@
 			<bWater>1</bWater>
 			<!-- Construction cost -->
 			<iCost>35</iCost>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -87857,7 +87857,7 @@
 			</PrereqOrTerrain>
 			<!-- Construction cost -->
 			<iCost>35</iCost>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -89261,7 +89261,7 @@
 			<ObsoleteTech>TECH_COMPULSORY_EDUCATION</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>216</iCost>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<!-- Special Yield and Commerce modifiers -->
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -89596,7 +89596,7 @@
 			<ObsoleteTech>TECH_AGRICULTURE</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>15</iCost>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -96369,7 +96369,7 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>15</iCost>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<!-- Misc. Effects -->
 			<iFoodKept>5</iFoodKept>
 			<!-- Other -->
@@ -96477,7 +96477,7 @@
 			</PrereqOrTerrain>
 			<!-- Construction cost -->
 			<iCost>118</iCost>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -102912,7 +102912,7 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>20</iCost>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<!-- Misc. Effects -->
 			<iTradeRoutes>1</iTradeRoutes>
 			<iTradeRouteModifier>5</iTradeRouteModifier>
@@ -103646,7 +103646,7 @@
 			<ObsoleteTech>TECH_THEOLOGY</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>56</iCost>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -105419,7 +105419,7 @@
 			<ObsoleteTech>TECH_PLASTICS</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>30</iCost>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<!-- Main effects -->
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -108200,7 +108200,7 @@
 			<ObsoleteTech>TECH_AGRICULTURE</ObsoleteTech> -->
 			<!-- Construction cost -->
 			<iCost>20</iCost>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<!-- Main effects -->
 			<iHealth>1</iHealth>
 			<!-- Special Yield and Commerce modifiers -->
@@ -108248,7 +108248,7 @@
 			<ObsoleteTech>TECH_FUNGICULTURE</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>15</iCost>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<YieldChanges>

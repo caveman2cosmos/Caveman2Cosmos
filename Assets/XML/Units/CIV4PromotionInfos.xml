@@ -24780,7 +24780,7 @@
 			<Description>TXT_KEY_PROMOTION_POLICING2_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_DUALISM</TechPrereq>
-			<MinEraType>ERA_SEDENTARY</MinEraType>
+			<MinEraType>C2C_ERA_ANCIENT</MinEraType>
 			<PromotionLine>PROMOTIONLINE_POLICING</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iInvestigationChange>2</iInvestigationChange>
@@ -24816,7 +24816,7 @@
 			<Description>TXT_KEY_PROMOTION_POLICING3_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_LAW_ENFORCEMENT</TechPrereq>
-			<MinEraType>ERA_CLASSICAL</MinEraType>
+			<MinEraType>C2C_ERA_CLASSICAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_POLICING</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iInvestigationChange>3</iInvestigationChange>
@@ -24852,7 +24852,7 @@
 			<Description>TXT_KEY_PROMOTION_POLICING4_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_DECREES</TechPrereq>
-			<MinEraType>ERA_MEDIEVAL</MinEraType>
+			<MinEraType>C2C_ERA_MEDIEVAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_POLICING</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<iInvestigationChange>4</iInvestigationChange>
@@ -24888,7 +24888,7 @@
 			<Description>TXT_KEY_PROMOTION_POLICING5_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_DEPUTIZATION</TechPrereq>
-			<MinEraType>ERA_RENAISSANCE</MinEraType>
+			<MinEraType>C2C_ERA_RENAISSANCE</MinEraType>
 			<PromotionLine>PROMOTIONLINE_POLICING</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<iInvestigationChange>5</iInvestigationChange>
@@ -24924,7 +24924,7 @@
 			<Description>TXT_KEY_PROMOTION_POLICING6_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_CRIMINOLOGY</TechPrereq>
-			<MinEraType>ERA_INDUSTRIAL</MinEraType>
+			<MinEraType>C2C_ERA_INDUSTRIAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_POLICING</PromotionLine>
 			<iLinePriority>6</iLinePriority>
 			<iInvestigationChange>6</iInvestigationChange>
@@ -24960,7 +24960,7 @@
 			<Description>TXT_KEY_PROMOTION_POLICING7_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_VERTICAL_FLIGHT</TechPrereq>
-			<MinEraType>ERA_ATOMIC</MinEraType>
+			<MinEraType>C2C_ERA_ATOMIC</MinEraType>
 			<PromotionLine>PROMOTIONLINE_POLICING</PromotionLine>
 			<iLinePriority>7</iLinePriority>
 			<iInvestigationChange>7</iInvestigationChange>
@@ -24996,7 +24996,7 @@
 			<Description>TXT_KEY_PROMOTION_POLICING8_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_FORENSICS</TechPrereq>
-			<MinEraType>ERA_INFORMATION</MinEraType>
+			<MinEraType>C2C_ERA_INFORMATION</MinEraType>
 			<PromotionLine>PROMOTIONLINE_POLICING</PromotionLine>
 			<iLinePriority>8</iLinePriority>
 			<iInvestigationChange>8</iInvestigationChange>
@@ -25032,7 +25032,7 @@
 			<Description>TXT_KEY_PROMOTION_POLICING9_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_FRESPONSE</TechPrereq>
-			<MinEraType>ERA_INFORMATION</MinEraType>
+			<MinEraType>C2C_ERA_INFORMATION</MinEraType>
 			<PromotionLine>PROMOTIONLINE_POLICING</PromotionLine>
 			<iLinePriority>9</iLinePriority>
 			<iInvestigationChange>9</iInvestigationChange>
@@ -25068,7 +25068,7 @@
 			<Description>TXT_KEY_PROMOTION_POLICING10_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_TERRA_COMPUTER</TechPrereq>
-			<MinEraType>ERA_TRANSHUMAN</MinEraType>
+			<MinEraType>C2C_ERA_TRANSHUMAN</MinEraType>
 			<PromotionLine>PROMOTIONLINE_POLICING</PromotionLine>
 			<iLinePriority>10</iLinePriority>
 			<iInvestigationChange>10</iInvestigationChange>
@@ -25135,7 +25135,7 @@
 			<Description>TXT_KEY_PROMOTION_DISEASE_CONTROL2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_FOLK_MEDICINE</TechPrereq>
-			<MinEraType>ERA_SEDENTARY</MinEraType>
+			<MinEraType>C2C_ERA_ANCIENT</MinEraType>
 			<PromotionLine>PROMOTIONLINE_DISEASE_CONTROL</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<Button>art/Buttons/Promotions/DiseaseControl2Promotion.dds</Button>
@@ -25167,7 +25167,7 @@
 			<Description>TXT_KEY_PROMOTION_DISEASE_CONTROL3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_ANCIENT_MEDICINE</TechPrereq>
-			<MinEraType>ERA_CLASSICAL</MinEraType>
+			<MinEraType>C2C_ERA_CLASSICAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_DISEASE_CONTROL</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<Button>art/Buttons/Promotions/DiseaseControl3Promotion.dds</Button>
@@ -25199,7 +25199,7 @@
 			<Description>TXT_KEY_PROMOTION_DISEASE_CONTROL4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_PLAGUE_MEDICINE</TechPrereq>
-			<MinEraType>ERA_MEDIEVAL</MinEraType>
+			<MinEraType>C2C_ERA_MEDIEVAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_DISEASE_CONTROL</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<Button>art/Buttons/Promotions/DiseaseControl4Promotion.dds</Button>
@@ -25231,7 +25231,7 @@
 			<Description>TXT_KEY_PROMOTION_DISEASE_CONTROL5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_ELIXIRS</TechPrereq>
-			<MinEraType>ERA_INDUSTRIAL</MinEraType>
+			<MinEraType>C2C_ERA_INDUSTRIAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_DISEASE_CONTROL</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<Button>art/Buttons/Promotions/DiseaseControl5Promotion.dds</Button>
@@ -25263,7 +25263,7 @@
 			<Description>TXT_KEY_PROMOTION_DISEASE_CONTROL6</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_MEDICINE</TechPrereq>
-			<MinEraType>ERA_INDUSTRIAL</MinEraType>
+			<MinEraType>C2C_ERA_INDUSTRIAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_DISEASE_CONTROL</PromotionLine>
 			<iLinePriority>6</iLinePriority>
 			<Button>art/Buttons/Promotions/DiseaseControl6Promotion.dds</Button>
@@ -25295,7 +25295,7 @@
 			<Description>TXT_KEY_PROMOTION_DISEASE_CONTROL7</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_MODERN_HEALTH_CARE</TechPrereq>
-			<MinEraType>ERA_ATOMIC</MinEraType>
+			<MinEraType>C2C_ERA_ATOMIC</MinEraType>
 			<PromotionLine>PROMOTIONLINE_DISEASE_CONTROL</PromotionLine>
 			<iLinePriority>7</iLinePriority>
 			<Button>art/Buttons/Promotions/DiseaseControl7Promotion.dds</Button>
@@ -25327,7 +25327,7 @@
 			<Description>TXT_KEY_PROMOTION_DISEASE_CONTROL8</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_BIOINFORMATICS</TechPrereq>
-			<MinEraType>ERA_INFORMATION</MinEraType>
+			<MinEraType>C2C_ERA_INFORMATION</MinEraType>
 			<PromotionLine>PROMOTIONLINE_DISEASE_CONTROL</PromotionLine>
 			<iLinePriority>8</iLinePriority>
 			<Button>art/Buttons/Promotions/DiseaseControl8Promotion.dds</Button>
@@ -25359,7 +25359,7 @@
 			<Description>TXT_KEY_PROMOTION_DISEASE_CONTROL9</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_REGENERATIVE_MEDICINE</TechPrereq>
-			<MinEraType>ERA_NANOTECH</MinEraType>
+			<MinEraType>C2C_ERA_NANOTECH</MinEraType>
 			<PromotionLine>PROMOTIONLINE_DISEASE_CONTROL</PromotionLine>
 			<iLinePriority>9</iLinePriority>
 			<Button>art/Buttons/Promotions/DiseaseControl9Promotion.dds</Button>
@@ -25391,7 +25391,7 @@
 			<Description>TXT_KEY_PROMOTION_DISEASE_CONTROL10</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_HUMAN_TRANSMUTATION</TechPrereq>
-			<MinEraType>ERA_TRANSHUMAN</MinEraType>
+			<MinEraType>C2C_ERA_TRANSHUMAN</MinEraType>
 			<PromotionLine>PROMOTIONLINE_DISEASE_CONTROL</PromotionLine>
 			<iLinePriority>10</iLinePriority>
 			<Button>art/Buttons/Promotions/DiseaseControl10Promotion.dds</Button>
@@ -27017,7 +27017,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_TEACH2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_LITERATURE</TechPrereq>
-			<MinEraType>ERA_CLASSICAL</MinEraType>
+			<MinEraType>C2C_ERA_CLASSICAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_TEACH</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<PropertyManipulators>
@@ -27036,7 +27036,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_TEACH3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_EDUCATION</TechPrereq>
-			<MinEraType>ERA_MEDIEVAL</MinEraType>
+			<MinEraType>C2C_ERA_MEDIEVAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_TEACH</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<PropertyManipulators>
@@ -27055,7 +27055,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_TEACH4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_COMPULSORY_EDUCATION</TechPrereq>
-			<MinEraType>ERA_INDUSTRIAL</MinEraType>
+			<MinEraType>C2C_ERA_INDUSTRIAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_TEACH</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<PropertyManipulators>
@@ -27074,7 +27074,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_TEACH5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_KNOWLEDGE_MANAGEMENT</TechPrereq>
-			<MinEraType>ERA_INFORMATION</MinEraType>
+			<MinEraType>C2C_ERA_INFORMATION</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_TEACH</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<PropertyManipulators>
@@ -28839,7 +28839,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_CRIME_FIGHTING2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_COMMUNITY</TechPrereq>
-			<MinEraType>ERA_SEDENTARY</MinEraType>
+			<MinEraType>C2C_ERA_ANCIENT</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_CRIME_FIGHTING</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<PropertyManipulators>
@@ -28865,7 +28865,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_CRIME_FIGHTING3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_CODE_OF_LAWS</TechPrereq>
-			<MinEraType>ERA_CLASSICAL</MinEraType>
+			<MinEraType>C2C_ERA_CLASSICAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_CRIME_FIGHTING</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<PropertyManipulators>
@@ -28891,7 +28891,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_CRIME_FIGHTING4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_CIVIL_SERVICE</TechPrereq>
-			<MinEraType>ERA_MEDIEVAL</MinEraType>
+			<MinEraType>C2C_ERA_MEDIEVAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_CRIME_FIGHTING</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<PropertyManipulators>
@@ -28917,7 +28917,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_CRIME_FIGHTING5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_JURIS_PRUDENCE</TechPrereq>
-			<MinEraType>ERA_RENAISSANCE</MinEraType>
+			<MinEraType>C2C_ERA_RENAISSANCE</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_CRIME_FIGHTING</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<PropertyManipulators>
@@ -28968,7 +28968,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_DISEASE_CONTROL2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_FOLK_MEDICINE</TechPrereq>
-			<MinEraType>ERA_SEDENTARY</MinEraType>
+			<MinEraType>C2C_ERA_ANCIENT</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_DISEASE_CONTROL</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<PropertyManipulators>
@@ -28994,7 +28994,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_DISEASE_CONTROL3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_ANCIENT_MEDICINE</TechPrereq>
-			<MinEraType>ERA_CLASSICAL</MinEraType>
+			<MinEraType>C2C_ERA_CLASSICAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_DISEASE_CONTROL</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<PropertyManipulators>
@@ -29020,7 +29020,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_DISEASE_CONTROL4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_PLAGUE_MEDICINE</TechPrereq>
-			<MinEraType>ERA_MEDIEVAL</MinEraType>
+			<MinEraType>C2C_ERA_MEDIEVAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_DISEASE_CONTROL</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<PropertyManipulators>
@@ -29046,7 +29046,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_DISEASE_CONTROL5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_MICROBIOLOGY</TechPrereq>
-			<MinEraType>ERA_RENAISSANCE</MinEraType>
+			<MinEraType>C2C_ERA_RENAISSANCE</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_DISEASE_CONTROL</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<PropertyManipulators>
@@ -30423,7 +30423,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_SECURITY2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_CRYPTOGRAPHY</TechPrereq>
-			<MinEraType>ERA_CLASSICAL</MinEraType>
+			<MinEraType>C2C_ERA_CLASSICAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_SECURITY</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iVisibilityChange>1</iVisibilityChange>
@@ -30435,7 +30435,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_SECURITY3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_PHOTOGRAPHY</TechPrereq>
-			<MinEraType>ERA_ATOMIC</MinEraType>
+			<MinEraType>C2C_ERA_ATOMIC</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_SECURITY</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iVisibilityChange>0</iVisibilityChange>
@@ -30447,7 +30447,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_SECURITY4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_ELECTRONICS</TechPrereq>
-			<MinEraType>ERA_ATOMIC</MinEraType>
+			<MinEraType>C2C_ERA_ATOMIC</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_SECURITY</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<iVisibilityChange>0</iVisibilityChange>
@@ -30459,7 +30459,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_SECURITY5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_BRAIN_SCAN</TechPrereq>
-			<MinEraType>ERA_NANOTECH</MinEraType>
+			<MinEraType>C2C_ERA_NANOTECH</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_SECURITY</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<iVisibilityChange>1</iVisibilityChange>

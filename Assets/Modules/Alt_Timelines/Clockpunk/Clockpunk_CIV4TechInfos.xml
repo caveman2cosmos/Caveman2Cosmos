@@ -8,7 +8,7 @@
 			<Strategy>TXT_KEY_CULTURE_CLOCKPUNK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<iCost>1960</iCost>
-			<Era>ERA_MEDIEVAL</Era>
+			<Era>C2C_ERA_MEDIEVAL</Era>
 			<iAsset>24</iAsset>
 			<iPower>8</iPower>
 			<bTrade>1</bTrade>

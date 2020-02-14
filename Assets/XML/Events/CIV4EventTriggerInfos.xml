@@ -71,27 +71,27 @@
 			<TriggerTexts>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_ANCIENT_1</Text>
-					<Era>ERA_SEDENTARY</Era>
+					<Era>C2C_ERA_ANCIENT</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_ANCIENT_1</Text>
-					<Era>ERA_CLASSICAL</Era>
+					<Era>C2C_ERA_CLASSICAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_ANCIENT_1</Text>
-					<Era>ERA_MEDIEVAL</Era>
+					<Era>C2C_ERA_MEDIEVAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_ANCIENT_1</Text>
-					<Era>ERA_RENAISSANCE</Era>
+					<Era>C2C_ERA_RENAISSANCE</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_INDUSTRIAL_1</Text>
-					<Era>ERA_INDUSTRIAL</Era>
+					<Era>C2C_ERA_INDUSTRIAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_INDUSTRIAL_1</Text>
-					<Era>ERA_ATOMIC</Era>
+					<Era>C2C_ERA_ATOMIC</Era>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/CityRuinsEvent.dds</EventArt>
@@ -927,55 +927,55 @@
 			<TriggerTexts>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_1</Text>
-					<Era>ERA_SEDENTARY</Era>
+					<Era>C2C_ERA_ANCIENT</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_1</Text>
-					<Era>ERA_CLASSICAL</Era>
+					<Era>C2C_ERA_CLASSICAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_2</Text>
-					<Era>ERA_MEDIEVAL</Era>
+					<Era>C2C_ERA_MEDIEVAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_2</Text>
-					<Era>ERA_RENAISSANCE</Era>
+					<Era>C2C_ERA_RENAISSANCE</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_3</Text>
-					<Era>ERA_INDUSTRIAL</Era>
+					<Era>C2C_ERA_INDUSTRIAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_3</Text>
-					<Era>ERA_ATOMIC</Era>
+					<Era>C2C_ERA_ATOMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_3</Text>
-					<Era>ERA_INFORMATION</Era>
+					<Era>C2C_ERA_INFORMATION</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_3</Text>
-					<Era>ERA_NANOTECH</Era>
+					<Era>C2C_ERA_NANOTECH</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_3</Text>
-					<Era>ERA_TRANSHUMAN</Era>
+					<Era>C2C_ERA_TRANSHUMAN</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_3</Text>
-					<Era>ERA_GALACTIC</Era>
+					<Era>C2C_ERA_GALACTIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_3</Text>
-					<Era>ERA_COSMIC</Era>
+					<Era>C2C_ERA_COSMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_3</Text>
-					<Era>ERA_TRANSCENDENT</Era>
+					<Era>C2C_ERA_TRANSCENDENT</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_3</Text>
-					<Era>ERA_FUTURE</Era>
+					<Era>C2C_ERA_FUTURE</Era>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/JoyousWeddingEvent.dds</EventArt>
@@ -1003,55 +1003,55 @@
 			<TriggerTexts>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_1</Text>
-					<Era>ERA_SEDENTARY</Era>
+					<Era>C2C_ERA_ANCIENT</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_1</Text>
-					<Era>ERA_CLASSICAL</Era>
+					<Era>C2C_ERA_CLASSICAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_2</Text>
-					<Era>ERA_MEDIEVAL</Era>
+					<Era>C2C_ERA_MEDIEVAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_2</Text>
-					<Era>ERA_RENAISSANCE</Era>
+					<Era>C2C_ERA_RENAISSANCE</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_3</Text>
-					<Era>ERA_INDUSTRIAL</Era>
+					<Era>C2C_ERA_INDUSTRIAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_3</Text>
-					<Era>ERA_ATOMIC</Era>
+					<Era>C2C_ERA_ATOMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_3</Text>
-					<Era>ERA_INFORMATION</Era>
+					<Era>C2C_ERA_INFORMATION</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_3</Text>
-					<Era>ERA_NANOTECH</Era>
+					<Era>C2C_ERA_NANOTECH</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_3</Text>
-					<Era>ERA_TRANSHUMAN</Era>
+					<Era>C2C_ERA_TRANSHUMAN</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_3</Text>
-					<Era>ERA_GALACTIC</Era>
+					<Era>C2C_ERA_GALACTIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_3</Text>
-					<Era>ERA_COSMIC</Era>
+					<Era>C2C_ERA_COSMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_3</Text>
-					<Era>ERA_TRANSCENDENT</Era>
+					<Era>C2C_ERA_TRANSCENDENT</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_3</Text>
-					<Era>ERA_FUTURE</Era>
+					<Era>C2C_ERA_FUTURE</Era>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/WeddingFeudEvent.dds</EventArt>
@@ -1079,55 +1079,55 @@
 			<TriggerTexts>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_1</Text>
-					<Era>ERA_SEDENTARY</Era>
+					<Era>C2C_ERA_ANCIENT</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_1</Text>
-					<Era>ERA_CLASSICAL</Era>
+					<Era>C2C_ERA_CLASSICAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_2</Text>
-					<Era>ERA_MEDIEVAL</Era>
+					<Era>C2C_ERA_MEDIEVAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_2</Text>
-					<Era>ERA_RENAISSANCE</Era>
+					<Era>C2C_ERA_RENAISSANCE</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_3</Text>
-					<Era>ERA_INDUSTRIAL</Era>
+					<Era>C2C_ERA_INDUSTRIAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_3</Text>
-					<Era>ERA_ATOMIC</Era>
+					<Era>C2C_ERA_ATOMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_3</Text>
-					<Era>ERA_INFORMATION</Era>
+					<Era>C2C_ERA_INFORMATION</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_3</Text>
-					<Era>ERA_NANOTECH</Era>
+					<Era>C2C_ERA_NANOTECH</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_3</Text>
-					<Era>ERA_TRANSHUMAN</Era>
+					<Era>C2C_ERA_TRANSHUMAN</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_3</Text>
-					<Era>ERA_GALACTIC</Era>
+					<Era>C2C_ERA_GALACTIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_3</Text>
-					<Era>ERA_COSMIC</Era>
+					<Era>C2C_ERA_COSMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_3</Text>
-					<Era>ERA_TRANSCENDENT</Era>
+					<Era>C2C_ERA_TRANSCENDENT</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_3</Text>
-					<Era>ERA_FUTURE</Era>
+					<Era>C2C_ERA_FUTURE</Era>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/LeftAtTheAltarEvent.dds</EventArt>
@@ -1182,39 +1182,39 @@
 			<TriggerTexts>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_1</Text>
-					<Era>ERA_SEDENTARY</Era>
+					<Era>C2C_ERA_ANCIENT</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_1</Text>
-					<Era>ERA_CLASSICAL</Era>
+					<Era>C2C_ERA_CLASSICAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_1</Text>
-					<Era>ERA_MEDIEVAL</Era>
+					<Era>C2C_ERA_MEDIEVAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_2</Text>
-					<Era>ERA_RENAISSANCE</Era>
+					<Era>C2C_ERA_RENAISSANCE</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_2</Text>
-					<Era>ERA_INDUSTRIAL</Era>
+					<Era>C2C_ERA_INDUSTRIAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_3</Text>
-					<Era>ERA_ATOMIC</Era>
+					<Era>C2C_ERA_ATOMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_3</Text>
-					<Era>ERA_INFORMATION</Era>
+					<Era>C2C_ERA_INFORMATION</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_3</Text>
-					<Era>ERA_NANOTECH</Era>
+					<Era>C2C_ERA_NANOTECH</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_3</Text>
-					<Era>ERA_TRANSHUMAN</Era>
+					<Era>C2C_ERA_TRANSHUMAN</Era>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/TornadoEvent.dds</EventArt>
@@ -1290,55 +1290,55 @@
 			<TriggerTexts>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_1</Text>
-					<Era>ERA_SEDENTARY</Era>
+					<Era>C2C_ERA_ANCIENT</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_1</Text>
-					<Era>ERA_CLASSICAL</Era>
+					<Era>C2C_ERA_CLASSICAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_1</Text>
-					<Era>ERA_MEDIEVAL</Era>
+					<Era>C2C_ERA_MEDIEVAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_1</Text>
-					<Era>ERA_RENAISSANCE</Era>
+					<Era>C2C_ERA_RENAISSANCE</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_1</Text>
-					<Era>ERA_INDUSTRIAL</Era>
+					<Era>C2C_ERA_INDUSTRIAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_2</Text>
-					<Era>ERA_ATOMIC</Era>
+					<Era>C2C_ERA_ATOMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_2</Text>
-					<Era>ERA_INFORMATION</Era>
+					<Era>C2C_ERA_INFORMATION</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_2</Text>
-					<Era>ERA_NANOTECH</Era>
+					<Era>C2C_ERA_NANOTECH</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_2</Text>
-					<Era>ERA_TRANSHUMAN</Era>
+					<Era>C2C_ERA_TRANSHUMAN</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_2</Text>
-					<Era>ERA_GALACTIC</Era>
+					<Era>C2C_ERA_GALACTIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_2</Text>
-					<Era>ERA_COSMIC</Era>
+					<Era>C2C_ERA_COSMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_2</Text>
-					<Era>ERA_TRANSCENDENT</Era>
+					<Era>C2C_ERA_TRANSCENDENT</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_2</Text>
-					<Era>ERA_FUTURE</Era>
+					<Era>C2C_ERA_FUTURE</Era>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/LootersEvent.dds</EventArt>
@@ -7240,35 +7240,35 @@
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_EARTHQUAKE_2</Text>
-					<Era>ERA_ATOMIC</Era>
+					<Era>C2C_ERA_ATOMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_EARTHQUAKE_2</Text>
-					<Era>ERA_INFORMATION</Era>
+					<Era>C2C_ERA_INFORMATION</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_EARTHQUAKE_2</Text>
-					<Era>ERA_NANOTECH</Era>
+					<Era>C2C_ERA_NANOTECH</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_EARTHQUAKE_2</Text>
-					<Era>ERA_TRANSHUMAN</Era>
+					<Era>C2C_ERA_TRANSHUMAN</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_EARTHQUAKE_2</Text>
-					<Era>ERA_GALACTIC</Era>
+					<Era>C2C_ERA_GALACTIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_EARTHQUAKE_2</Text>
-					<Era>ERA_COSMIC</Era>
+					<Era>C2C_ERA_COSMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_EARTHQUAKE_2</Text>
-					<Era>ERA_TRANSCENDENT</Era>
+					<Era>C2C_ERA_TRANSCENDENT</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_EARTHQUAKE_2</Text>
-					<Era>ERA_FUTURE</Era>
+					<Era>C2C_ERA_FUTURE</Era>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/Earthquake.dds</EventArt>
@@ -9516,27 +9516,27 @@
 			<TriggerTexts>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_TREASURE_ANCIENT_1</Text>
-					<Era>ERA_SEDENTARY</Era>
+					<Era>C2C_ERA_ANCIENT</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_TREASURE_ANCIENT_1</Text>
-					<Era>ERA_CLASSICAL</Era>
+					<Era>C2C_ERA_CLASSICAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_TREASURE_ANCIENT_1</Text>
-					<Era>ERA_MEDIEVAL</Era>
+					<Era>C2C_ERA_MEDIEVAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_TREASURE_ANCIENT_1</Text>
-					<Era>ERA_RENAISSANCE</Era>
+					<Era>C2C_ERA_RENAISSANCE</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_TREASURE_INDUSTRIAL_1</Text>
-					<Era>ERA_INDUSTRIAL</Era>
+					<Era>C2C_ERA_INDUSTRIAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_TREASURE_INDUSTRIAL_1</Text>
-					<Era>ERA_ATOMIC</Era>
+					<Era>C2C_ERA_ATOMIC</Era>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -10670,43 +10670,43 @@
 			<TriggerTexts>
 				<TriggerText>
 					<Text>A fisherman from the city of %s2_city has found a pirate map.</Text>
-					<Era>ERA_RENAISSANCE</Era>
+					<Era>C2C_ERA_RENAISSANCE</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>A fisherman from the city of %s2_city has found a old pirate map.</Text>
-					<Era>ERA_INDUSTRIAL</Era>
+					<Era>C2C_ERA_INDUSTRIAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>A fisherman from the city of %s2_city has found a old pirate map.</Text>
-					<Era>ERA_ATOMIC</Era>
+					<Era>C2C_ERA_ATOMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>A fisherman from the city of %s2_city has found a old pirate map.</Text>
-					<Era>ERA_INFORMATION</Era>
+					<Era>C2C_ERA_INFORMATION</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>A fisherman from the city of %s2_city has found a old pirate map.</Text>
-					<Era>ERA_NANOTECH</Era>
+					<Era>C2C_ERA_NANOTECH</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>A fisherman from the city of %s2_city has found a old pirate map.</Text>
-					<Era>ERA_TRANSHUMAN</Era>
+					<Era>C2C_ERA_TRANSHUMAN</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>A fisherman from the city of %s2_city has found a old pirate map.</Text>
-					<Era>ERA_GALACTIC</Era>
+					<Era>C2C_ERA_GALACTIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>A fisherman from the city of %s2_city has found a old pirate map.</Text>
-					<Era>ERA_COSMIC</Era>
+					<Era>C2C_ERA_COSMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>A fisherman from the city of %s2_city has found a old pirate map.</Text>
-					<Era>ERA_TRANSCENDENT</Era>
+					<Era>C2C_ERA_TRANSCENDENT</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>A fisherman from the city of %s2_city has found a old pirate map.</Text>
-					<Era>ERA_FUTURE</Era>
+					<Era>C2C_ERA_FUTURE</Era>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -10730,11 +10730,11 @@
 			<TriggerTexts>
 				<TriggerText>
 					<Text>A famous pirate has offered to join our navy.</Text>
-					<Era>ERA_RENAISSANCE</Era>
+					<Era>C2C_ERA_RENAISSANCE</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>A renowned pirate decided to work for our sea forces.</Text>
-					<Era>ERA_INDUSTRIAL</Era>
+					<Era>C2C_ERA_INDUSTRIAL</Era>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>

@@ -485,8 +485,8 @@
 			<option id="Combat_SPECIES_NEANDERTHAL" key="CombatSPECIES_NEANDERTHAL" type="string" default="DEFAULT"/>
 			<option id="Combat_SPECIES_ALIEN" key="CombatSPECIES_ALIEN" type="string" default="DEFAULT"/>
 			<option id="Combat_SPECIES_AI" key="CombatSPECIES_AI" type="string" default="DEFAULT"/>
+			<option id="Combat_ERA_PREHISTORIC" key="CombatERA_PREHISTORIC" type="string" default="DEFAULT"/>
 			<option id="Combat_ERA_ANCIENT" key="CombatERA_ANCIENT" type="string" default="DEFAULT"/>
-			<option id="Combat_ERA_SEDENTARY" key="CombatERA_SEDENTARY" type="string" default="DEFAULT"/>
 			<option id="Combat_ERA_CLASSICAL" key="CombatERA_CLASSICAL" type="string" default="DEFAULT"/>
 			<option id="Combat_ERA_MEDIEVAL" key="CombatERA_MEDIEVAL" type="string" default="DEFAULT"/>
 			<option id="Combat_ERA_RENAISSANCE" key="CombatERA_RENAISSANCE" type="string" default="DEFAULT"/>

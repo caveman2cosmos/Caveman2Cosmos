@@ -9,7 +9,7 @@
 			<Strategy>TXT_KEY_CULTURE_STEAMPUNK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<iCost>5460</iCost>
-			<Era>ERA_INDUSTRIAL</Era>
+			<Era>C2C_ERA_INDUSTRIAL</Era>
 			<iGridX>63</iGridX>
 			<iGridY>13</iGridY>
 			<bTrade>1</bTrade>

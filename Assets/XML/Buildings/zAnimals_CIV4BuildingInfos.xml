@@ -18334,7 +18334,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_AMPHIBIAN_POND</ArtDefineTag>
 			<ObsoleteTech>TECH_DESIGNER_MICROBIOLOGY</ObsoleteTech>
 			<PrereqTech>TECH_TRADE</PrereqTech>
-			<!--FreeStartEra>ERA_MEDIEVAL</FreeStartEra>-->
+			<!--FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>-->
 			<FreeBonus>BONUS_POISON</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>-1</iCost>
@@ -18385,7 +18385,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>
 			<PrereqTech>TECH_CULTURAL_IDENTITY</PrereqTech>
 			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<iCost>-1</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -18429,7 +18429,7 @@
 				<Bonus>BONUS_DOG</Bonus>
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<iCost>-1</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -18483,7 +18483,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>
 			<PrereqTech>TECH_CULTURAL_IDENTITY</PrereqTech>
 			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<iCost>-1</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -19260,7 +19260,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DOG</ArtDefineTag>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<iCost>92</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -19466,7 +19466,7 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GOVENORS_MENAGERIE</ArtDefineTag>
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
-			<FreeStartEra>ERA_CLASSICAL</FreeStartEra>
+			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<iCost>-1</iCost>
 			<MapCategoryTypes>
@@ -19516,7 +19516,7 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GOVENORS_PETS</ArtDefineTag>
 			<PrereqTech>TECH_CHIEFDOM</PrereqTech>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<iCost>-1</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -19549,7 +19549,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HAWKING_HUT</ArtDefineTag>
 			<ObsoleteTech>TECH_TELEGRAPH</ObsoleteTech>
 			<PrereqTech>TECH_FALCONRY</PrereqTech>
-			<FreeStartEra>ERA_CLASSICAL</FreeStartEra>
+			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<iCost>-1</iCost>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
@@ -19708,7 +19708,7 @@
 			</ReplaceBuildings>
 			<!-- Construction Cost -->
 			<iCost>-1</iCost>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<!-- Unit effects -->
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -19776,7 +19776,7 @@
 			<ObsoleteTech>TECH_SEMI_AUTOMATIC_WEAPONS</ObsoleteTech>
 			<!-- Construction Cost -->
 			<iCost>-1</iCost>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -19849,7 +19849,7 @@
             <Advisor>ADVISOR_MILITARY</Advisor>
             <ArtDefineTag>ART_DEF_BUILDING_MASTER_SEA_HUNTER</ArtDefineTag>
  			<ObsoleteTech>TECH_SATELLITES</ObsoleteTech>
-			<FreeStartEra>ERA_CLASSICAL</FreeStartEra>
+			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 	        <FreePromotion>PROMOTION_SEA_HUNTER1</FreePromotion>
             <iCost>-1</iCost>
 			<MapCategoryTypes>
@@ -19961,7 +19961,7 @@
 			<Strategy>TXT_KEY_BUILDING_NAVAL_TOTEM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NAVAL_TOTEM</ArtDefineTag>
-			<FreeStartEra>ERA_CLASSICAL</FreeStartEra>
+			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<!--ObsoleteTech>TECH_RADIO</ObsoleteTech-->
 			<iCost>-1</iCost>
 			<MapCategoryTypes>
@@ -20536,7 +20536,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SNAKE_CHARMER</ArtDefineTag>
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
 			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<iCost>-1</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20585,7 +20585,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SNAKE_PIT</ArtDefineTag>
 			<ObsoleteTech>TECH_CHEMISTRY</ObsoleteTech>
 			<PrereqTech>TECH_POISON_CRAFTING</PrereqTech>
-			<FreeStartEra>ERA_CLASSICAL</FreeStartEra>
+			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<FreeBonus>BONUS_POISON</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>-1</iCost>
@@ -20615,7 +20615,7 @@
 			<Strategy>TXT_KEY_BUILDING_TORTOISE_SHELL_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TORTOISE_SHELL_WORKER</ArtDefineTag>
-			<FreeStartEra>ERA_CLASSICAL</FreeStartEra>
+			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<ObsoleteTech>TECH_PLASTICS</ObsoleteTech>
 			<PrereqTech>TECH_BONE_WORKING</PrereqTech>
 			<iCost>-1</iCost>
@@ -20742,7 +20742,7 @@
 			<Strategy>TXT_KEY_BUILDING_WONDERS_OF_THE_DEEP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WONDERS_OF_THE_DEEP</ArtDefineTag>
-			<FreeStartEra>ERA_MEDIEVAL</FreeStartEra>
+			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
 			<iCost>-1</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20784,7 +20784,7 @@
 			<Strategy>TXT_KEY_BUILDING_FEATHER_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FEATHER_WORKER</ArtDefineTag>
-			<FreeStartEra>ERA_CLASSICAL</FreeStartEra>
+			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<ObsoleteTech>TECH_PLASTICS</ObsoleteTech>
 			<PrereqTech>TECH_BONE_WORKING</PrereqTech>
 			<FreeBonus>BONUS_FEATHERS</FreeBonus>

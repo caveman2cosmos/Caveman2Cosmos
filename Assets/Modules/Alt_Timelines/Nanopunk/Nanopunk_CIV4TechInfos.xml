@@ -14,7 +14,7 @@
 			<Button>Art/Interface/Buttons/TechTree/nanopunk.dds</Button>
 			<!-- Main properties -->
 			<iCost>38858</iCost>
-			<Era>ERA_NANOTECH</Era>
+			<Era>C2C_ERA_NANOTECH</Era>
 			<OrPreReqs>
 				<PrereqTech>TECH_NANOGENERATOR</PrereqTech>
 			</OrPreReqs>

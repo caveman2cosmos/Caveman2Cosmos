@@ -14,7 +14,7 @@
 			<Button>Art/Interface/Buttons/TechTree/biopunk.dds</Button>
 			<!-- Main properties -->
 			<iCost>40165</iCost>
-			<Era>ERA_NANOTECH</Era>
+			<Era>C2C_ERA_NANOTECH</Era>
 			<OrPreReqs>
 				<PrereqTech>TECH_AUGMENT_CONSUMABLES</PrereqTech>
 			</OrPreReqs>

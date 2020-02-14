@@ -156,7 +156,7 @@
 	</Define>
 	<Define>
 		<DefineName>STANDARD_ERA</DefineName>
-		<DefineTextVal>ERA_ANCIENT</DefineTextVal>
+		<DefineTextVal>C2C_ERA_PREHISTORIC</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>STANDARD_CALENDAR</DefineName>

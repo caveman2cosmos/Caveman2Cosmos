@@ -14,7 +14,7 @@
 			<Button>Art/Interface/Buttons/TechTree/retrospace.dds</Button>
 			<!-- Main properties -->
 			<iCost>13181</iCost>
-			<Era>ERA_ATOMIC</Era>
+			<Era>C2C_ERA_ATOMIC</Era>
 			<OrPreReqs>
 				<PrereqTech>TECH_NUCLEAR_POWER</PrereqTech>
 			</OrPreReqs>

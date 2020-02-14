@@ -1072,7 +1072,7 @@ def canTriggerGoldRush(argsList):
 
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iIndustrial = GC.getInfoTypeForString("ERA_INDUSTRIAL")
+  iIndustrial = GC.getInfoTypeForString("C2C_ERA_INDUSTRIAL")
 
   if player.getCurrentEra() != iIndustrial:
     return False
@@ -1088,7 +1088,7 @@ def canTriggerInfluenza(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
   team = GC.getTeam(player.getTeam())
 
-  iIndustrial = GC.getInfoTypeForString("ERA_INDUSTRIAL")
+  iIndustrial = GC.getInfoTypeForString("C2C_ERA_INDUSTRIAL")
 
   if player.getCurrentEra() <= iIndustrial:
     return False
@@ -2563,7 +2563,7 @@ def canApplyClassicLiteratureDone2(argsList):
   kTriggeredData = argsList[1]
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iEraAncient = GC.getInfoTypeForString("ERA_SEDENTARY")
+  iEraAncient = GC.getInfoTypeForString("C2C_ERA_ANCIENT")
 
   for iTech in xrange(GC.getNumTechInfos()):
     if GC.getTechInfo(iTech).getEra() == iEraAncient and player.canResearch(iTech, False):
@@ -2576,7 +2576,7 @@ def applyClassicLiteratureDone2(argsList):
   kTriggeredData = argsList[1]
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iEraAncient = GC.getInfoTypeForString("ERA_SEDENTARY")
+  iEraAncient = GC.getInfoTypeForString("C2C_ERA_ANCIENT")
 
   listTechs = []
   for iTech in xrange(GC.getNumTechInfos()):
@@ -6807,7 +6807,7 @@ def canTriggerBlackDeath(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
   team = GC.getTeam(player.getTeam())
 
-  iClassical = GC.getInfoTypeForString("ERA_CLASSICAL")
+  iClassical = GC.getInfoTypeForString("C2C_ERA_CLASSICAL")
 
   if player.getCurrentEra() <= iClassical:
     return False
@@ -6865,7 +6865,7 @@ def canTriggerSmallpox(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
   team = GC.getTeam(player.getTeam())
 
-  iClassical = GC.getInfoTypeForString("ERA_CLASSICAL")
+  iClassical = GC.getInfoTypeForString("C2C_ERA_CLASSICAL")
 
   if player.getCurrentEra() <= iClassical:
     return False

@@ -11,7 +11,7 @@
 			<iCost>309</iCost>
 			<bGlobal>1</bGlobal>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<Era>ERA_SEDENTARY</Era>
+			<Era>C2C_ERA_ANCIENT</Era>
 			<iAsset>8</iAsset>
 			<iGridX>30</iGridX>
 			<iGridY>17</iGridY>
