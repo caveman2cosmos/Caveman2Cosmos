@@ -305,7 +305,7 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	m_bDepletedMine = false;
+	m_bDepletedMine = false; // deleteMe
 	m_eClaimingOwner = NO_PLAYER;
 	m_bCounted = false;
 	m_eLandmarkType = NO_LANDMARK;
@@ -739,12 +739,10 @@ void CvPlot::doTurn()
 	if (getImprovementType() != NO_IMPROVEMENT)
 	{
 		changeImprovementDuration(1);
-		// Super Forts begin *upgrade*
-		if(!isBeingWorked() && isOwned() && GC.getImprovementInfo(getImprovementType()).isUpgradeRequiresFortify())
+		if (isOwned())
 		{
-			doImprovementUpgrade();
+			doImprovement();
 		}
-		// Super Forts end
 	}
 
 	// Super Forts begin *bombard*
@@ -766,8 +764,6 @@ void CvPlot::doTurn()
 /*                                                                                              */
 /************************************************************************************************/
 	doTerritoryClaiming();
-
-	doResourceDepletion();
 
 	if (getOwnerINLINE() != NO_PLAYER)
 	{
@@ -823,18 +819,9 @@ void CvPlot::doImprovementSpawn()
 		}
 		if (eBestImprovement != NO_IMPROVEMENT)
 		{
-
-
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
-
-	/*
-	if (!isOwned())
-	{
-		doImprovementUpgrade();
-	}
-	*/
 
 	// XXX
 #ifdef _DEBUG
@@ -857,115 +844,102 @@ void CvPlot::doImprovement()
 {
 	PROFILE_FUNC();
 
-	CvCity* pCity;
-	CvWString szBuffer;
-	int iI;
+	ImprovementTypes eType = getImprovementType();
+	CvImprovementInfo& pInfo = GC.getImprovementInfo(eType);
 
-	FAssert(isBeingWorked() && isOwned());
-
-	if (getImprovementType() != NO_IMPROVEMENT)
+	if (isBeingWorked() || pInfo.isUpgradeRequiresFortify())
 	{
-		if (getBonusType() == NO_BONUS)
-		{
-			FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvPlot::doImprovement");
-			for (iI = 0; iI < GC.getNumBonusInfos(); ++iI)
-			{
-				if (GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getBonusInfo((BonusTypes) iI).getTechReveal())))
-				{
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       03/04/10                                jdog5000      */
-/*                                                                                              */
-/* Gamespeed scaling                                                                            */
-/************************************************************************************************/
-/* original bts code
-					if (GC.getImprovementInfo(getImprovementType()).getImprovementBonusDiscoverRand(iI) > 0)
-					{
-						if (GC.getGameINLINE().getSorenRandNum(GC.getImprovementInfo(getImprovementType()).getImprovementBonusDiscoverRand(iI), "Bonus Discovery") == 0)
-						{
-*/
-					//Afforess: check for valid terrains for this bonus before discovering it
-					if (!canHaveBonus((BonusTypes)iI))
-					{
-						continue;
-					}
-					int iOdds = GC.getImprovementInfo(getImprovementType()).getImprovementBonusDiscoverRand(iI);
-
-					if( iOdds > 0 )
-					{
-						iOdds *= GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getVictoryDelayPercent();
-						iOdds /= 100;
-
-						if( GC.getGameINLINE().getSorenRandNum(iOdds, "Bonus Discovery") == 0)
-						{
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
-							setBonusType((BonusTypes)iI);
-
-							pCity = GC.getMapINLINE().findCity(getX_INLINE(), getY_INLINE(), getOwnerINLINE(), NO_TEAM, false);
-
-							if (pCity != NULL && isInViewport())
-							{
-								MEMORY_TRACK_EXEMPT();
-
-								szBuffer = gDLL->getText("TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE", GC.getBonusInfo((BonusTypes) iI).getTextKeyWide(), pCity->getNameKey());
-								AddDLLMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_DISCOVERBONUS", MESSAGE_TYPE_MINOR_EVENT, GC.getBonusInfo((BonusTypes) iI).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), getViewportX(), getViewportY(), true, true);
-							}
-
-							break;
-						}
-					}
-				}
-			}
+		doImprovementUpgrade();
+		if (eType != getImprovementType())
+		{ // We won't do bonus discovery/depletion if it just upgraded into a new improvement.
+			return;
 		}
-/************************************************************************************************/
-/* Afforess	                  Start		 01/20/10                                               */
-/*                                                                                              */
-/*   Mine Depletion                                                                             */
-/************************************************************************************************/
-		if (GC.getGameINLINE().isModderGameOption(MODDERGAMEOPTION_RESOURCE_DEPLETION))
-		{
-			bool bObstruction = ((getBonusType(getTeam()) != NO_BONUS) && (GC.getImprovementInfo(getImprovementType()).isImprovementBonusMakesValid(getBonusType(getTeam()))));
-
-			if (!bObstruction)
-			{
-				int iDepletionOdds = GC.getImprovementInfo(getImprovementType()).getDepletionRand();
-				iDepletionOdds *= GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getResearchPercent();
-				iDepletionOdds /= 100;
-				ImprovementTypes eDepletedMine;
-				eDepletedMine = findDepletedMine();
-
-				if( iDepletionOdds > 0 )
-				{
-					if (eDepletedMine != NO_IMPROVEMENT)
-					{
-						if( GC.getGameINLINE().getSorenRandNum(iDepletionOdds, "Mine Depletion") == 0)
-						{
-							{
-								MEMORY_TRACK_EXEMPT();
-
-								szBuffer = gDLL->getText("TXT_KEY_MISC_IMPROVEMENT_DEPLETED", GC.getImprovementInfo(getImprovementType()).getDescription());
-								AddDLLMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_FIRSTTOTECH", MESSAGE_TYPE_MINOR_EVENT, GC.getImprovementInfo(getImprovementType()).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX_INLINE(), getY_INLINE(), true, true);
-							}
-							setImprovementType(eDepletedMine);
-							setIsDepletedMine(true);
-							pCity = GC.getMapINLINE().findCity(getX_INLINE(), getY_INLINE(), getOwnerINLINE(), NO_TEAM, false);
-							GC.getGameINLINE().logMsg("Mine Depleted!");
-							if (pCity != NULL)
-							{
-								pCity->AI_setAssignWorkDirty(true);
-							}
-						}
-					}
-				}
-			}
-		}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	}
+	// Discover bonus
+	if (getBonusType() == NO_BONUS)
+	{
+		for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
+		{
+			if (GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getBonusInfo((BonusTypes) iI).getTechReveal())))
+			{
+				if (!canHaveBonus((BonusTypes)iI))
+				{
+					continue;
+				}
+				int iOdds = pInfo.getImprovementBonusDiscoverRand(iI);
 
-	doImprovementUpgrade();
+				if (iOdds > 0)
+				{
+					iOdds *= GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getConstructPercent();
+					iOdds /= 100;
+
+					if( GC.getGameINLINE().getSorenRandNum(iOdds, "Bonus Discovery") == 0)
+					{
+						setBonusType((BonusTypes)iI);
+
+						CvCity* pCity = GC.getMapINLINE().findCity(getX_INLINE(), getY_INLINE(), getOwnerINLINE(), NO_TEAM, false);
+
+						if (pCity != NULL && isInViewport())
+						{
+							MEMORY_TRACK_EXEMPT();
+
+							CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE", GC.getBonusInfo((BonusTypes) iI).getTextKeyWide(), pCity->getNameKey());
+							AddDLLMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_DISCOVERBONUS", MESSAGE_TYPE_MINOR_EVENT, GC.getBonusInfo((BonusTypes) iI).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), getViewportX(), getViewportY(), true, true);
+						}
+						break;
+					}
+				}
+			}
+		}
+	}
+	// Deplete Bonus
+	else if (GC.getGameINLINE().isModderGameOption(MODDERGAMEOPTION_RESOURCE_DEPLETION))
+	{
+		BonusTypes eBonus = getNonObsoleteBonusType(getTeam());
+		PlayerTypes ePlayer = getOwnerINLINE();
+
+		// We know it's owned by a player because this function is only called if it is.
+		if (eBonus == NO_BONUS || !pInfo.isImprovementBonusTrade(eBonus) || !GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getBonusInfo(eBonus).getTechCityTrade())))
+		{
+			return;
+		}
+
+		int iBonusOdds = pInfo.getImprovementBonusDepletionRand(eBonus);
+		iBonusOdds *= GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getConstructPercent();
+		iBonusOdds /= 100;
+
+		iBonusOdds *= 12 * ((int)GC.getMapINLINE().getWorldSize() + 1);
+		iBonusOdds /= GC.getMapINLINE().getNumBonuses(eBonus);
+
+		if (GET_PLAYER(ePlayer).getResourceConsumption(eBonus) > 0)
+		{
+			iBonusOdds *= (100 * GET_PLAYER(ePlayer).getNumCities());
+			iBonusOdds /= GET_PLAYER(ePlayer).getResourceConsumption(eBonus);
+		}
+
+		if (iBonusOdds > 0 && GC.getGameINLINE().getSorenRandNum(iBonusOdds, "Bonus Depletion") == 0)
+		{
+			{
+				MEMORY_TRACK_EXEMPT();
+
+				CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_RESOURCE_DEPLETED", GC.getBonusInfo(eBonus).getTextKeyWide(), pInfo.getDescription());
+				AddDLLMessage(ePlayer, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getBonusInfo(eBonus).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX_INLINE(), getY_INLINE(), true, true);
+			}
+			GC.getGameINLINE().logMsg("Resource Depleted! Resource was %d, The odds were 1 in %d", eBonus, iBonusOdds);
+
+			setBonusType(NO_BONUS);
+
+			CvCity* pCity = GC.getMapINLINE().findCity(getX_INLINE(), getY_INLINE(), ePlayer, NO_TEAM, false);
+
+			if (pCity != NULL) { pCity->AI_setAssignWorkDirty(true); }
+
+			if (!canHaveImprovement(eType, getTeam()))
+			{
+				setImprovementType(NO_IMPROVEMENT);
+				return;
+			}
+		}
+	}
 }
 
 void CvPlot::doImprovementUpgrade()
@@ -12974,27 +12948,18 @@ void CvPlot::doCulture()
 
 							}
 
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/01/08                                jdog5000      */
-/*                                                                                              */
-/* Change only applies when Revolution is running                                               */
-/************************************************************************************************/
-/* original code
-							if (pCity->isBarbarian() || (!(GC.getGameINLINE().isOption(GAMEOPTION_NO_CITY_FLIPPING)) && (GC.getGameINLINE().isOption(GAMEOPTION_FLIPPING_AFTER_CONQUEST) || !(pCity->isEverOwned(eCulturalOwner))) && (pCity->getNumRevolts(eCulturalOwner) >= GC.getDefineINT("NUM_WARNING_REVOLTS"))))
-*/
 							// Disable classic city flip by culture when Revolution is running
-							if ( pCity->isNPC() || (!GC.getGameINLINE().isOption(GAMEOPTION_NO_CITY_FLIPPING) && (GC.getGameINLINE().isOption(GAMEOPTION_FLIPPING_AFTER_CONQUEST) || !(pCity->isEverOwned(eCulturalOwner))) && (pCity->getNumRevolts(eCulturalOwner) >= GC.getDefineINT("NUM_WARNING_REVOLTS"))))
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+							if (pCity->isNPC() || (!GC.getGameINLINE().isOption(GAMEOPTION_NO_CITY_FLIPPING)
+								&& (GC.getGameINLINE().isOption(GAMEOPTION_FLIPPING_AFTER_CONQUEST) || !pCity->isEverOwned(eCulturalOwner))
+								&& pCity->getNumRevolts(eCulturalOwner) >= GC.getDefineINT("NUM_WARNING_REVOLTS")))
 							{
-								if (GC.getGameINLINE().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) && GET_PLAYER(eCulturalOwner).isHuman())
+								if (GC.getGameINLINE().isOption(GAMEOPTION_ONE_CITY_CHALLENGE))
 								{
 									pCity->kill(true);
 								}
 								else
 								{
-									setOwner(eCulturalOwner, true, true); // will delete pCity
+									setOwner(eCulturalOwner, true, true); // Will invalidate pCity pointer.
 								}
 								pCity = NULL;
 							}
@@ -13006,7 +12971,7 @@ void CvPlot::doCulture()
 								// XXX announce for all seen cities?
 								MEMORY_TRACK_EXEMPT();
 
-								if ( isInViewport() )
+								if (isInViewport())
 								{
 									szBuffer = gDLL->getText("TXT_KEY_MISC_REVOLT_IN_CITY", GET_PLAYER(eCulturalOwner).getCivilizationAdjective(), pCity->getNameKey());
 									AddDLLMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT", MESSAGE_TYPE_MINOR_EVENT, ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getViewportX(),getViewportY(), true, true);
@@ -13277,7 +13242,7 @@ void CvPlot::read(FDataStreamBase* pStream)
 /*                                                                                              */
 /************************************************************************************************/
 
-	WRAPPER_READ(wrapper, "CvPlot", &m_bDepletedMine);
+	WRAPPER_READ(wrapper, "CvPlot", &m_bDepletedMine); // deleteMe
 	WRAPPER_READ_STRING(wrapper, "CvPlot", m_szLandmarkMessage);
 	WRAPPER_READ_STRING(wrapper, "CvPlot", m_szLandmarkName);
 	WRAPPER_READ(wrapper, "CvPlot", &m_eClaimingOwner);
@@ -13820,7 +13785,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	WRAPPER_WRITE(wrapper, "CvPlot", m_bDepletedMine);
+	WRAPPER_WRITE(wrapper, "CvPlot", m_bDepletedMine); // deleteMe
 	WRAPPER_WRITE_STRING(wrapper, "CvPlot", m_szLandmarkMessage);
 	WRAPPER_WRITE_STRING(wrapper, "CvPlot", m_szLandmarkName);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_eClaimingOwner);
@@ -15498,30 +15463,6 @@ void CvPlot::doPreAttackTraps(CvUnit* pAttacker)
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-bool CvPlot::isDepletedMine() const
-{
-	return m_bDepletedMine;
-}
-void CvPlot::setIsDepletedMine(bool bNewValue)
-{
-	if (m_bDepletedMine != bNewValue)
-	{
-		m_bDepletedMine = bNewValue;
-	}
-}
-
-ImprovementTypes CvPlot::findDepletedMine()
-{
-	int iI;
-
-	for (iI = 0; iI < GC.getNumImprovementInfos(); iI++)
-	{
-		if (GC.getImprovementInfo((ImprovementTypes)iI).isDepletedMine())
-			return (ImprovementTypes)iI;
-	}
-
-	return NO_IMPROVEMENT;
-}
 
 PlayerTypes CvPlot::getClaimingOwner() const
 {
@@ -15633,63 +15574,6 @@ void CvPlot::doTerritoryClaiming()
 		setOwner((PlayerTypes)m_eClaimingOwner, false, false);
 
 		m_eClaimingOwner = NO_PLAYER;
-	}
-}
-void CvPlot::doResourceDepletion()
-{
-	PROFILE_FUNC();
-	CvCity* pCity;
-	CvWString szBuffer;
-
-	if ((getBonusType() == NO_BONUS) || (getImprovementType() == NO_IMPROVEMENT) || (getOwnerINLINE() == NO_PLAYER))
-	{
-		return;
-	}
-
-	if (GC.getGameINLINE().isModderGameOption(MODDERGAMEOPTION_RESOURCE_DEPLETION))
-	{
-		if (getBonusType(getTeam()) != NO_BONUS && GC.getImprovementInfo(getImprovementType()).isImprovementBonusMakesValid(getBonusType(getTeam())))
-		{
-			//returns true for NO_TECH
-			if (GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getBonusInfo(getBonusType()).getTechReveal())))
-			{
-				int iBonusOdds = GC.getImprovementInfo(getImprovementType()).getImprovementBonusDepletionRand(getBonusType());
-				iBonusOdds *= GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getConstructPercent();
-				iBonusOdds /= 100;
-				iBonusOdds *= GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getConstructPercent();
-				iBonusOdds /= 100;
-
-				//Duel Maps are size 0.
-				iBonusOdds *= 12 * ((int)GC.getMapINLINE().getWorldSize() + 1);
-				iBonusOdds /= GC.getMapINLINE().getNumBonuses(getBonusType());
-
-				if (GET_PLAYER(getOwnerINLINE()).getResourceConsumption(getBonusType()) > 0)
-				{
-					iBonusOdds *= (100 * GET_PLAYER(getOwnerINLINE()).getNumCities());
-					iBonusOdds /= GET_PLAYER(getOwnerINLINE()).getResourceConsumption(getBonusType());
-				}
-
-				if( iBonusOdds > 0 )
-				{
-					if( GC.getGameINLINE().getSorenRandNum(iBonusOdds, "Bonus Depletion") == 0)
-					{
-						{
-							MEMORY_TRACK_EXEMPT();
-
-							szBuffer = gDLL->getText("TXT_KEY_MISC_RESOURCE_DEPLETED", GC.getBonusInfo(getBonusType()).getTextKeyWide(), GC.getImprovementInfo(getImprovementType()).getDescription());
-							AddDLLMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_FIRSTTOTECH", MESSAGE_TYPE_MINOR_EVENT, GC.getBonusInfo(getBonusType()).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX_INLINE(), getY_INLINE(), true, true);
-						}
-						pCity = GC.getMapINLINE().findCity(getX_INLINE(), getY_INLINE(), getOwnerINLINE(), NO_TEAM, false);
-						GC.getGameINLINE().logMsg("Resource Depleted! Resource was %d, The odds were 1 in %d", getBonusType(), iBonusOdds);
-						setBonusType(NO_BONUS);
-						if (pCity != NULL)
-						{
-							pCity->AI_setAssignWorkDirty(true);
-						}
-					}
-				}
-			}
-		}
 	}
 }
 

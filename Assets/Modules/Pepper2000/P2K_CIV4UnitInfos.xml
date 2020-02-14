@@ -189,7 +189,20 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 			</MapCategoryTypes>
+			<TerrainImpassableTypes>
+                <TerrainType>TERRAIN_INNER_SOLAR_SYSTEM</TerrainType>
+				<TerrainType>TERRAIN_OUTER_SOLAR_SYSTEM</TerrainType>
+			</TerrainImpassableTypes>
+            <TerrainPassableTechs>
+                <TerrainPassableTech>
+					<TerrainType>TERRAIN_INNER_SOLAR_SYSTEM</TerrainType>
+					<PassableTech>TECH_PLANET_COLONIZATION</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CONSTRUCTION_SHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_CONSTRUCTION_SHIP_PEDIA</Civilopedia>
@@ -217,6 +230,46 @@
 				</Build>
                 <Build>
 					<BuildType>BUILD_LUNAR_MINING_OUTPOST</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_COLONY_EXTRACTION_FACILITY</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+                    <BuildType>BUILD_HABITAT1</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_HABITAT2</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_HABITAT3</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_HABITAT4</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+				<Build>
+                    <BuildType>BUILD_COLONY_HYDROPONICS</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+				<Build>
+                    <BuildType>BUILD_COLONY_MANUFACTORY</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+				<Build>
+                    <BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+				<Build>
+					<BuildType>BUILD_LUNAR_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_MARS_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -9854,6 +9907,14 @@
 					<BuildType>BUILD_LUNAR_MINING_OUTPOST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
+				<Build>
+					<BuildType>BUILD_COLONY_EXTRACTION_FACILITY</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_LUNAR_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
 			</Builds>
 			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
 			<PrereqBuilding>BUILDING_LUNAR_ASSEMBLY_PLANT</PrereqBuilding>
@@ -9944,6 +10005,22 @@
 					<BuildType>BUILD_TERRAFORM_MOON</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
+				<Build>
+                    <BuildType>BUILD_HABITAT1</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_HABITAT2</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_HABITAT3</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_HABITAT4</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
 			</Builds>
 			<PrereqBuilding>BUILDING_LUNAR_DROID_FACTORY</PrereqBuilding>
 			<PrereqTech>TECH_ANDROIDS</PrereqTech>

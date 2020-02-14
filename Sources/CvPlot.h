@@ -398,9 +398,6 @@ public:
 /*                                                                                              */
 /************************************************************************************************/
 	CvCity* getAdjacentCity(PlayerTypes ePlayer = NO_PLAYER) const;
-	bool isDepletedMine() const;
-	void setIsDepletedMine(bool bNewValue);
-	ImprovementTypes findDepletedMine();
 	bool changeBuildProgress(BuildTypes eBuild, int iChange, PlayerTypes ePlayer = NO_PLAYER);
 	void changeCultureRangeCities(PlayerTypes eOwnerIndex, int iRangeIndex, int iChange, bool bUpdatePlotGroups, bool bUpdateCulture = true);
 	bool isHasValidBonus() const;
@@ -413,7 +410,6 @@ public:
 	void changeActsAsCity(PlayerTypes ePlayer, int iChange);
 #endif
 	bool isActsAsCity() const;
-	void doResourceDepletion();
 	bool isCanMoveLandUnits() const;
 	bool isCanMoveSeaUnits() const;
 	bool isCanMoveAllUnits() const;

@@ -7279,11 +7279,10 @@ def TriggerHarryPotter2(argsList):
 		CyCity, i = CyPlayer.nextCity(i, False)
 
 	CyTeam = GC.getTeam(CyPlayer.getTeam())
-	for iPlayerX in xrange(GC.getMAX_PLAYERS()):
+	for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
 		CyPlayerX = GC.getPlayer(iPlayerX)
-		if CyPlayerX.isAlive() and CyTeam.isHasMet(CyPlayerX.getTeam()):
-			if CyPlayerX.getStateReligion() == iStateReligion:
-				CyPlayerX.AI_changeMemoryCount(iPlayer, MemoryTypes.MEMORY_EVENT_BAD_TO_US, 1)
+		if CyPlayerX.isAlive() and CyPlayerX.getStateReligion() == iStateReligion and CyTeam.isHasMet(CyPlayerX.getTeam()) :
+			CyPlayerX.AI_changeMemoryCount(iPlayer, MemoryTypes.MEMORY_EVENT_BAD_TO_US, 1)
 
 def getHelpHarryPotter2(argsList):
 	szHelp = TRNSLTR.getText("TXT_KEY_EVENT_FREE_BUILDING_GLOBAL", (GC.getBuildingInfo(GC.getInfoTypeForString("BUILDING_LIBRARY")).getTextKey(),))

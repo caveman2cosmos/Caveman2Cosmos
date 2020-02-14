@@ -744,10 +744,8 @@ public:
 	bool isLeaderEverActive(LeaderHeadTypes eLeader) const;		// Exposed to Python
 
 	void processBuilding(BuildingTypes eBuilding, int iChange);
-	
-	// RevolutionDCM - BarbarianWorld - thanks Kael
-	void foundBarbarianCity();
-	// RevolutionDCM End
+
+	bool foundBarbarianCity();
 
 	bool pythonIsBonusIgnoreLatitudes() const;
 

@@ -12535,7 +12535,7 @@ DenialTypes CvPlayerAI::AI_civicTrade(CivicTypes eCivic, PlayerTypes ePlayer) co
 		return NO_DENIAL;
 	}
 
-	if (getCivicPercentAnger(getCivics((CivicOptionTypes)(GC.getCivicInfo(eCivic).getCivicOptionType())),true) > getCivicPercentAnger(eCivic))
+	if (getCivicPercentAnger(getCivics((CivicOptionTypes)(GC.getCivicInfo(eCivic).getCivicOptionType()))) < getCivicPercentAnger(eCivic))
 	{
 		return DENIAL_ANGER_CIVIC;
 	}
@@ -12740,171 +12740,266 @@ int CvPlayerAI::AI_unitPropertyValue(UnitTypes eUnit, PropertyTypes eProperty) c
 	return iValue;
 }
 
-/********************************************************************************/
-/* 	City Defenders						24.07.2010				Fuyu			*/
-/********************************************************************************/
-//Fuyu bIgnoreNotUnitAIs
 int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea* pArea, CvUnitSelectionCriteria* criteria) const
-/********************************************************************************/
-/* 	City Defenders												END 			*/
-/********************************************************************************/
 {
 	PROFILE_FUNC();
-
-	bool bValid = false;
-	int iNeededMissionaries;
-	int iCombatValue;
-	int iValue;
-	int iTempValue;
-	int iI;
-
 	FAssertMsg(eUnit != NO_UNIT, "Unit is not assigned a valid value");
 	FAssertMsg(eUnitAI != NO_UNITAI, "UnitAI is not assigned a valid value");
 
 	CvUnitInfo& kUnitInfo = GC.getUnitInfo(eUnit);
 
-	const int numUnitCombatInfos = GC.getNumUnitCombatInfos();
-
-	if (kUnitInfo.getDomainType() != AI_unitAIDomainType(eUnitAI))
+	if (kUnitInfo.getDomainType() != AI_unitAIDomainType(eUnitAI) && eUnitAI != UNITAI_ICBM)
 	{
-		if (eUnitAI != UNITAI_ICBM)//XXX
-		{
-			return 0;
-		}
+		return 0;
 	}
-/********************************************************************************/
-/* 	City Defenders						24.07.2010				Fuyu			*/
-/********************************************************************************/
-//Fuyu bIgnoreNotUnitAIs
+
 	if (kUnitInfo.getNotUnitAIType(eUnitAI) && (criteria == NULL || !criteria->m_bIgnoreNotUnitAIs))
 	{
 		return 0;
 	}
-/********************************************************************************/
-/* 	City Defenders												END 			*/
-/********************************************************************************/
 
+	// Special settler rule
+	if (eUnitAI != UNITAI_SETTLE && kUnitInfo.isFound())
+	{
+		return 0;
+	}
+
+	const int numUnitCombatInfos = GC.getNumUnitCombatInfos();
 	int iGeneralPropertyValue = AI_unitPropertyValue(eUnit);
 	bool bisNegativePropertyUnit = (iGeneralPropertyValue < 0);
 	bool bisPositivePropertyUnit = (iGeneralPropertyValue > 0);
-	bool bUndefinedValid = false;
+	bool bUndefinedValid, bValid = false;
+	int iNeededMissionaries;
+	int iI;
 
-	if (!bValid)
+	switch (eUnitAI)
 	{
-		switch (eUnitAI)
+	case UNITAI_UNKNOWN:
 		{
-		case UNITAI_UNKNOWN:
-			{
-				bUndefinedValid = true;
-			}
-			break;
-
-		case UNITAI_SUBDUED_ANIMAL:
-			{
-				bValid = true;
-			}
-			break;
-		case UNITAI_HUNTER:
-		case UNITAI_HUNTER_ESCORT:
-			if (!bisNegativePropertyUnit)
-			{
-				bValid = true;
-			}
-			break;
-		case UNITAI_BARB_CRIMINAL:
-			break;
-		case UNITAI_ANIMAL:
-			if (isAnimal())
-			{
-				bValid = true;
-			}
-			break;
-
-		case UNITAI_SETTLE:
-			if (kUnitInfo.isFound())
-			{
-				bValid = true;
-			}
-			break;
-
-		case UNITAI_WORKER:
-			for (iI = 0; iI < GC.getNumBuildInfos(); iI++)
-			{
-				if (kUnitInfo.getBuilds(iI))
-				{
-					bValid = true;
-					break;
-				}
-			}
-			break;
-
-		case UNITAI_ESCORT:
 			bUndefinedValid = true;
-			if (!bisNegativePropertyUnit && kUnitInfo.getCombat() > 0 && kUnitInfo.getMoves() > 0)//Note: add a hero filter - a lot of them are being trained for this.
+		}
+		break;
+
+	case UNITAI_SUBDUED_ANIMAL:
+		{
+			bValid = true;
+		}
+		break;
+	case UNITAI_HUNTER:
+	case UNITAI_HUNTER_ESCORT:
+		if (!bisNegativePropertyUnit)
+		{
+			bValid = true;
+		}
+		break;
+	case UNITAI_BARB_CRIMINAL:
+		break;
+	case UNITAI_ANIMAL:
+		if (isAnimal())
+		{
+			bValid = true;
+		}
+		break;
+
+	case UNITAI_SETTLE:
+		if (kUnitInfo.isFound())
+		{
+			bValid = true;
+		}
+		break;
+
+	case UNITAI_WORKER:
+		for (iI = 0; iI < GC.getNumBuildInfos(); iI++)
+		{
+			if (kUnitInfo.getBuilds(iI))
+			{
+				bValid = true;
+				break;
+			}
+		}
+		break;
+
+	case UNITAI_ESCORT:
+		bUndefinedValid = true;
+		if (!bisNegativePropertyUnit && kUnitInfo.getCombat() > 0 && kUnitInfo.getMoves() > 0)//Note: add a hero filter - a lot of them are being trained for this.
+		{
+			bValid = true;
+		}
+		break;
+
+	case UNITAI_ATTACK:
+		if (kUnitInfo.getCombat() > 0)
+		{
+			if (!(kUnitInfo.isOnlyDefensive()))
 			{
 				bValid = true;
 			}
-			break;
+		}
+		break;
 
-		case UNITAI_ATTACK:
-			if (kUnitInfo.getCombat() > 0)
+	case UNITAI_ATTACK_CITY:
+		if (kUnitInfo.getCombat() > 0)
+		{
+			if (!(kUnitInfo.isOnlyDefensive()))
 			{
-				if (!(kUnitInfo.isOnlyDefensive()))
+				if (!(kUnitInfo.isNoCapture()))
 				{
 					bValid = true;
 				}
 			}
-			break;
+		}
+		break;
 
-		case UNITAI_ATTACK_CITY:
-			if (kUnitInfo.getCombat() > 0)
+	case UNITAI_COLLATERAL:
+		if (kUnitInfo.getCombat() > 0)
+		{
+			if (!(kUnitInfo.isOnlyDefensive()))
 			{
-				if (!(kUnitInfo.isOnlyDefensive()))
+				if (kUnitInfo.getCollateralDamage() > 0 || kUnitInfo.getBreakdownChance() > 0)
 				{
-					if (!(kUnitInfo.isNoCapture()))
+					bValid = true;
+				}
+			}
+		}
+		break;
+
+	case UNITAI_PILLAGE:
+		if (kUnitInfo.getCombat() > 0 && !kUnitInfo.isOnlyDefensive())
+		{
+			bValid = true;
+		}
+		break;
+
+	case UNITAI_RESERVE:
+		if (!bisNegativePropertyUnit && kUnitInfo.getCombat() > 0 && !kUnitInfo.isOnlyDefensive())
+		{
+			bValid = true;
+		}
+		break;
+
+	case UNITAI_PILLAGE_COUNTER:
+		if (kUnitInfo.getCombat() > 0 && !kUnitInfo.isOnlyDefensive())
+		{
+			bValid = true;
+		}
+		break;
+
+	case UNITAI_COUNTER:
+		if (!bisNegativePropertyUnit && kUnitInfo.getCombat() > 0 && !kUnitInfo.isOnlyDefensive())
+		{
+			if (kUnitInfo.getInterceptionProbability() > 0)
+			{
+				bValid = true;
+			}
+
+			if (!bValid)
+			{
+				for (iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
+				{
+					if (kUnitInfo.getUnitClassAttackModifier(iI) > 0)
 					{
 						bValid = true;
+						break;
+					}
+
+					if (kUnitInfo.getTargetUnitClass(iI))
+					{
+						bValid = true;
+						break;
 					}
 				}
 			}
-			break;
 
-		case UNITAI_COLLATERAL:
-			if (kUnitInfo.getCombat() > 0)
+			if (!bValid)
 			{
-				if (!(kUnitInfo.isOnlyDefensive()))
+				for (iI = 0; iI < numUnitCombatInfos; iI++)
 				{
-					if (kUnitInfo.getCollateralDamage() > 0 || kUnitInfo.getBreakdownChance() > 0)
+					if (kUnitInfo.getUnitCombatModifier(iI) > 0)
 					{
 						bValid = true;
+						break;
+					}
+
+					if (kUnitInfo.getTargetUnitCombat(iI))
+					{
+						bValid = true;
+						break;
 					}
 				}
 			}
-			break;
 
-		case UNITAI_PILLAGE:
-			if (kUnitInfo.getCombat() > 0 && !kUnitInfo.isOnlyDefensive())
+			if (!bValid)
 			{
-				bValid = true;
-			}
-			break;
 
-		case UNITAI_RESERVE:
-			if (!bisNegativePropertyUnit && kUnitInfo.getCombat() > 0 && !kUnitInfo.isOnlyDefensive())
-			{
-				bValid = true;
-			}
-			break;
+				for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
+				{
+					int iUnitClass = kUnitInfo.getUnitClassType();
+					if (NO_UNITCLASS != iUnitClass && GC.getUnitInfo((UnitTypes)iI).getDefenderUnitClass(iUnitClass))
+					{
+						bValid = true;
+						break;
+					}
 
-		case UNITAI_PILLAGE_COUNTER:
-			if (kUnitInfo.getCombat() > 0 && !kUnitInfo.isOnlyDefensive())
-			{
-				bValid = true;
+					int iUnitCombat = kUnitInfo.getUnitCombatType();
+					if (NO_UNITCOMBAT !=  iUnitCombat && GC.getUnitInfo((UnitTypes)iI).getDefenderUnitCombat(iUnitCombat))
+					{
+						bValid = true;
+						break;
+					}
+				}
 			}
-			break;
+		}
+		break;
 
-		case UNITAI_COUNTER:
-			if (!bisNegativePropertyUnit && kUnitInfo.getCombat() > 0 && !kUnitInfo.isOnlyDefensive())
+	case UNITAI_HEALER:
+	case UNITAI_HEALER_SEA:
+		if (!bisNegativePropertyUnit && (AI_unitHealerValue(eUnit) > 0))
+		{
+			bValid = true;
+		}
+		break;
+
+	case UNITAI_PROPERTY_CONTROL:
+	case UNITAI_PROPERTY_CONTROL_SEA:
+		if (bisPositivePropertyUnit)
+		{
+			bValid = true;
+		}
+		break;
+
+	case UNITAI_INVESTIGATOR:
+		if (kUnitInfo.getInvestigation() > 0 && !bisNegativePropertyUnit)
+		{
+			bValid = true;
+		}
+		break;
+
+	case UNITAI_INFILTRATOR:
+		if (kUnitInfo.isBlendIntoCity())
+		{
+			bValid = true;
+		}
+		break;
+
+	case UNITAI_SEE_INVISIBLE:
+	case UNITAI_SEE_INVISIBLE_SEA:
+		if (!bisNegativePropertyUnit && (kUnitInfo.getNumSeeInvisibleTypes() > 0 || kUnitInfo.getNumVisibilityIntensityTypes() > 0))
+		{
+			bValid = true;
+		}
+		break;
+
+	case UNITAI_CITY_DEFENSE:
+		if (!bisNegativePropertyUnit && kUnitInfo.getCombat() > 0 && !kUnitInfo.isNoDefensiveBonus())
+		{
+			bValid = true;
+		}
+		break;
+
+	case UNITAI_CITY_COUNTER:
+		if (kUnitInfo.getCombat() > 0 && !bisNegativePropertyUnit)
+		{
+			if (!(kUnitInfo.isNoDefensiveBonus()))
 			{
 				if (kUnitInfo.getInterceptionProbability() > 0)
 				{
@@ -12915,13 +13010,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 				{
 					for (iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
 					{
-						if (kUnitInfo.getUnitClassAttackModifier(iI) > 0)
-						{
-							bValid = true;
-							break;
-						}
-
-						if (kUnitInfo.getTargetUnitClass(iI))
+						if (kUnitInfo.getUnitClassDefenseModifier(iI) > 0)
 						{
 							bValid = true;
 							break;
@@ -12938,29 +13027,46 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 							bValid = true;
 							break;
 						}
-
-						if (kUnitInfo.getTargetUnitCombat(iI))
-						{
-							bValid = true;
-							break;
-						}
 					}
 				}
+			}
+		}
+		break;
 
-				if (!bValid)
+	case UNITAI_CITY_SPECIAL:
+		if (!bisNegativePropertyUnit)
+		{
+			bValid = true;
+		}
+		break;
+
+	case UNITAI_PARADROP:
+		if (kUnitInfo.getDropRange() > 0)
+		{
+			bValid = true;
+		}
+		break;
+
+	case UNITAI_EXPLORE:
+		bUndefinedValid = true;
+		if (kUnitInfo.getCombat() > 0 && !(kUnitInfo.isNoRevealMap()))
+		{
+			bValid = true;
+		}
+		break;
+
+	case UNITAI_MISSIONARY:
+		if (pArea != NULL)
+		{
+			for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
+			{
+				if (kUnitInfo.getReligionSpreads((ReligionTypes)iI) > 0)
 				{
+					iNeededMissionaries = AI_neededMissionaries(pArea, ((ReligionTypes)iI));
 
-					for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
+					if (iNeededMissionaries > 0)
 					{
-						int iUnitClass = kUnitInfo.getUnitClassType();
-						if (NO_UNITCLASS != iUnitClass && GC.getUnitInfo((UnitTypes)iI).getDefenderUnitClass(iUnitClass))
-						{
-							bValid = true;
-							break;
-						}
-
-						int iUnitCombat = kUnitInfo.getUnitCombatType();
-						if (NO_UNITCOMBAT !=  iUnitCombat && GC.getUnitInfo((UnitTypes)iI).getDefenderUnitCombat(iUnitCombat))
+						if (iNeededMissionaries > countReligionSpreadUnits(pArea, ((ReligionTypes)iI)))
 						{
 							bValid = true;
 							break;
@@ -12968,299 +13074,170 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 					}
 				}
 			}
-			break;
 
-		case UNITAI_HEALER:
-		case UNITAI_HEALER_SEA:
-			if (!bisNegativePropertyUnit && (AI_unitHealerValue(eUnit) > 0))
+			for (iI = 0; iI < GC.getNumCorporationInfos(); iI++)
 			{
-				bValid = true;
-			}
-			break;
-
-		case UNITAI_PROPERTY_CONTROL:
-		case UNITAI_PROPERTY_CONTROL_SEA:
-			if (bisPositivePropertyUnit)
-			{
-				bValid = true;
-			}
-			break;
-
-		case UNITAI_INVESTIGATOR:
-			if (kUnitInfo.getInvestigation() > 0 && !bisNegativePropertyUnit)
-			{
-				bValid = true;
-			}
-			break;
-
-		case UNITAI_INFILTRATOR:
-			if (kUnitInfo.isBlendIntoCity())
-			{
-				bValid = true;
-			}
-			break;
-
-		case UNITAI_SEE_INVISIBLE:
-		case UNITAI_SEE_INVISIBLE_SEA:
-			if (!bisNegativePropertyUnit && (kUnitInfo.getNumSeeInvisibleTypes() > 0 || kUnitInfo.getNumVisibilityIntensityTypes() > 0))
-			{
-				bValid = true;
-			}
-			break;
-
-		case UNITAI_CITY_DEFENSE:
-			if (!bisNegativePropertyUnit && kUnitInfo.getCombat() > 0 && !kUnitInfo.isNoDefensiveBonus())
-			{
-				bValid = true;
-			}
-			break;
-
-		case UNITAI_CITY_COUNTER:
-			if (kUnitInfo.getCombat() > 0 && !bisNegativePropertyUnit)
-			{
-				if (!(kUnitInfo.isNoDefensiveBonus()))
+				if (kUnitInfo.getCorporationSpreads((CorporationTypes)iI) > 0)
 				{
-					if (kUnitInfo.getInterceptionProbability() > 0)
+					iNeededMissionaries = AI_neededExecutives(pArea, ((CorporationTypes)iI));
+
+					if (iNeededMissionaries > 0)
+					{
+						if (iNeededMissionaries > countCorporationSpreadUnits(pArea, ((CorporationTypes)iI)))
+						{
+							bValid = true;
+							break;
+						}
+					}
+				}
+			}
+		}
+		break;
+
+	case UNITAI_PROPHET:
+	case UNITAI_ARTIST:
+	case UNITAI_SCIENTIST:
+	case UNITAI_GENERAL:
+	case UNITAI_GREAT_HUNTER:
+	case UNITAI_GREAT_ADMIRAL:
+	case UNITAI_MERCHANT:
+	case UNITAI_ENGINEER:
+	case UNITAI_SPY:
+		break;
+
+	case UNITAI_ICBM:
+		if (kUnitInfo.getNukeRange() != -1)
+		{
+			bValid = true;
+		}
+		break;
+
+	case UNITAI_WORKER_SEA:
+		for (iI = 0; iI < GC.getNumBuildInfos(); iI++)
+		{
+			if (kUnitInfo.getBuilds(iI))
+			{
+				bValid = true;
+				break;
+			}
+		}
+		break;
+
+	case UNITAI_ATTACK_SEA:
+		if (kUnitInfo.getCombat() > 0)
+		{
+			bValid = true;
+		}
+		break;
+
+	case UNITAI_RESERVE_SEA:
+		if (kUnitInfo.getCombat() > 0)
+		{
+			bValid = true;
+		}
+		break;
+
+	case UNITAI_ESCORT_SEA:
+		if (kUnitInfo.getCombat() > 0)
+		{
+			bValid = true;
+		}
+		break;
+
+	case UNITAI_EXPLORE_SEA:
+		if (kUnitInfo.getCombat() > 0 && !(kUnitInfo.isNoRevealMap()))
+		{
+			bValid = true;
+		}
+		break;
+
+	case UNITAI_ASSAULT_SEA:
+	case UNITAI_SETTLER_SEA:
+		if (kUnitInfo.getCargoSpace() > 0)
+		{
+			if (kUnitInfo.getSpecialCargo() == NO_SPECIALUNIT)
+			{
+				bValid = true;
+			}
+		}
+		break;
+
+	case UNITAI_MISSIONARY_SEA:
+	case UNITAI_SPY_SEA:
+	case UNITAI_CARRIER_SEA:
+	case UNITAI_MISSILE_CARRIER_SEA:
+		if (kUnitInfo.getCargoSpace() > 0)
+		{
+			if (kUnitInfo.getSpecialCargo() != NO_SPECIALUNIT)
+			{
+				for (int i = 0; i < NUM_UNITAI_TYPES; ++i)
+				{
+					if (GC.getSpecialUnitInfo((SpecialUnitTypes)kUnitInfo.getSpecialCargo()).isCarrierUnitAIType(eUnitAI))
 					{
 						bValid = true;
-					}
-
-					if (!bValid)
-					{
-						for (iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
-						{
-							if (kUnitInfo.getUnitClassDefenseModifier(iI) > 0)
-							{
-								bValid = true;
-								break;
-							}
-						}
-					}
-
-					if (!bValid)
-					{
-						for (iI = 0; iI < numUnitCombatInfos; iI++)
-						{
-							if (kUnitInfo.getUnitCombatModifier(iI) > 0)
-							{
-								bValid = true;
-								break;
-							}
-						}
+						break;
 					}
 				}
 			}
-			break;
+		}
+		break;
 
-		case UNITAI_CITY_SPECIAL:
-			if (!bisNegativePropertyUnit)
+	case UNITAI_PIRATE_SEA:
+		if (kUnitInfo.isAlwaysHostile() && kUnitInfo.isHiddenNationality())
+		{
+			bValid = true;
+		}
+		break;
+
+	case UNITAI_ATTACK_AIR:
+		if (kUnitInfo.getAirCombat() > 0)
+		{
+			if (!kUnitInfo.isSuicide())
 			{
 				bValid = true;
 			}
-			break;
+		}
+		break;
 
-		case UNITAI_PARADROP:
-			if (kUnitInfo.getDropRange() > 0)
-			{
-				bValid = true;
-			}
-			break;
+	case UNITAI_DEFENSE_AIR:
+		if (kUnitInfo.getInterceptionProbability() > 0)
+		{
+			bValid = true;
+		}
+		break;
 
-		case UNITAI_EXPLORE:
-			bUndefinedValid = true;
-			if (kUnitInfo.getCombat() > 0 && !(kUnitInfo.isNoRevealMap()))
-			{
-				bValid = true;
-			}
-			break;
-
-		case UNITAI_MISSIONARY:
-			if (pArea != NULL)
-			{
-				for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
-				{
-					if (kUnitInfo.getReligionSpreads((ReligionTypes)iI) > 0)
-					{
-						iNeededMissionaries = AI_neededMissionaries(pArea, ((ReligionTypes)iI));
-
-						if (iNeededMissionaries > 0)
-						{
-							if (iNeededMissionaries > countReligionSpreadUnits(pArea, ((ReligionTypes)iI)))
-							{
-								bValid = true;
-								break;
-							}
-						}
-					}
-				}
-
-				for (iI = 0; iI < GC.getNumCorporationInfos(); iI++)
-				{
-					if (kUnitInfo.getCorporationSpreads((CorporationTypes)iI) > 0)
-					{
-						iNeededMissionaries = AI_neededExecutives(pArea, ((CorporationTypes)iI));
-
-						if (iNeededMissionaries > 0)
-						{
-							if (iNeededMissionaries > countCorporationSpreadUnits(pArea, ((CorporationTypes)iI)))
-							{
-								bValid = true;
-								break;
-							}
-						}
-					}
-				}
-			}
-			break;
-
-		case UNITAI_PROPHET:
-		case UNITAI_ARTIST:
-		case UNITAI_SCIENTIST:
-		case UNITAI_GENERAL:
-		case UNITAI_GREAT_HUNTER:
-		case UNITAI_GREAT_ADMIRAL:
-		case UNITAI_MERCHANT:
-		case UNITAI_ENGINEER:
-		case UNITAI_SPY:
-			break;
-
-		case UNITAI_ICBM:
-			if (kUnitInfo.getNukeRange() != -1)
-			{
-				bValid = true;
-			}
-			break;
-
-		case UNITAI_WORKER_SEA:
-			for (iI = 0; iI < GC.getNumBuildInfos(); iI++)
-			{
-				if (kUnitInfo.getBuilds(iI))
-				{
-					bValid = true;
-					break;
-				}
-			}
-			break;
-
-		case UNITAI_ATTACK_SEA:
-			if (kUnitInfo.getCombat() > 0)
-			{
-				bValid = true;
-			}
-			break;
-
-		case UNITAI_RESERVE_SEA:
-			if (kUnitInfo.getCombat() > 0)
-			{
-				bValid = true;
-			}
-			break;
-
-		case UNITAI_ESCORT_SEA:
-			if (kUnitInfo.getCombat() > 0)
-			{
-				bValid = true;
-			}
-			break;
-
-		case UNITAI_EXPLORE_SEA:
-			if (kUnitInfo.getCombat() > 0 && !(kUnitInfo.isNoRevealMap()))
-			{
-				bValid = true;
-			}
-			break;
-
-		case UNITAI_ASSAULT_SEA:
-		case UNITAI_SETTLER_SEA:
-			if (kUnitInfo.getCargoSpace() > 0)
-			{
-				if (kUnitInfo.getSpecialCargo() == NO_SPECIALUNIT)
-				{
-					bValid = true;
-				}
-			}
-			break;
-
-		case UNITAI_MISSIONARY_SEA:
-		case UNITAI_SPY_SEA:
-		case UNITAI_CARRIER_SEA:
-		case UNITAI_MISSILE_CARRIER_SEA:
-			if (kUnitInfo.getCargoSpace() > 0)
-			{
-				if (kUnitInfo.getSpecialCargo() != NO_SPECIALUNIT)
-				{
-					for (int i = 0; i < NUM_UNITAI_TYPES; ++i)
-					{
-						if (GC.getSpecialUnitInfo((SpecialUnitTypes)kUnitInfo.getSpecialCargo()).isCarrierUnitAIType(eUnitAI))
-						{
-							bValid = true;
-							break;
-						}
-					}
-				}
-			}
-			break;
-
-		case UNITAI_PIRATE_SEA:
-			if (kUnitInfo.isAlwaysHostile() && kUnitInfo.isHiddenNationality())
-			{
-				bValid = true;
-			}
-			break;
-
-		case UNITAI_ATTACK_AIR:
-			if (kUnitInfo.getAirCombat() > 0)
-			{
-				if (!kUnitInfo.isSuicide())
-				{
-					bValid = true;
-				}
-			}
-			break;
-
-		case UNITAI_DEFENSE_AIR:
+	case UNITAI_CARRIER_AIR:
+		if (kUnitInfo.getAirCombat() > 0)
+		{
 			if (kUnitInfo.getInterceptionProbability() > 0)
 			{
 				bValid = true;
 			}
-			break;
-
-		case UNITAI_CARRIER_AIR:
-			if (kUnitInfo.getAirCombat() > 0)
-			{
-				if (kUnitInfo.getInterceptionProbability() > 0)
-				{
-					bValid = true;
-				}
-			}
-			break;
-
-		case UNITAI_MISSILE_AIR:
-			if (kUnitInfo.getAirCombat() > 0)
-			{
-				if (kUnitInfo.isSuicide())
-				{
-					bValid = true;
-				}
-			}
-			break;
-
-		case UNITAI_ATTACK_CITY_LEMMING:
-			bValid = false;
-			break;
-
-		default:
-			FAssert(false);
-			break;
 		}
+		break;
+
+	case UNITAI_MISSILE_AIR:
+		if (kUnitInfo.getAirCombat() > 0)
+		{
+			if (kUnitInfo.isSuicide())
+			{
+				bValid = true;
+			}
+		}
+		break;
+
+	case UNITAI_ATTACK_CITY_LEMMING:
+		bValid = false;
+		break;
+
+	default:
+		FAssert(false);
+		break;
 	}
 
-	if (bValid && !kUnitInfo.getUnitAIType(eUnitAI))
+	if (bValid && !bUndefinedValid && !kUnitInfo.getUnitAIType(eUnitAI))
 	{
-		if (!bUndefinedValid)
-		{
-			bValid = false;
-		}
+		bValid = false;
 	}
 
 	if (!bValid)
@@ -13268,19 +13245,21 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 		return 0;
 	}
 
-	iCombatValue = GC.getGameINLINE().AI_combatValue(eUnit);
 	PropertyTypes ePropertyRequested = (criteria == NULL ? NO_PROPERTY : criteria->m_eProperty);
 	UnitCombatTypes eHealCombatClassRequested = (criteria == NULL ? NO_UNITCOMBAT : criteria->m_eHealUnitCombat);
 	InvisibleTypes eVisibilityRequested = (criteria == NULL ? NO_INVISIBLE : criteria->m_eVisibility);
-	int iPropertyValue = AI_unitPropertyValue(eUnit, ePropertyRequested);
-	int iHealerValue = AI_unitHealerValue(eUnit, eHealCombatClassRequested);
-	int iAdjustor = 0;
 
-	if ( ePropertyRequested != NO_PROPERTY && iPropertyValue <= 0 )
+	int iCombatValue = GC.getGameINLINE().AI_combatValue(eUnit);
+	int iHealerValue = AI_unitHealerValue(eUnit, eHealCombatClassRequested);
+	int iPropertyValue = AI_unitPropertyValue(eUnit, ePropertyRequested);
+
+	int iValue, iTempValue, iAdjustor;
+
+	if (ePropertyRequested != NO_PROPERTY && iPropertyValue <= 0)
 	{
 		iValue = 0;
 	}
-	else if ( eHealCombatClassRequested != NO_UNITCOMBAT && iHealerValue <= 0)
+	else if (eHealCombatClassRequested != NO_UNITCOMBAT && iHealerValue <= 0)
 	{
 		iValue = 0;
 	}
@@ -13904,10 +13883,11 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			break;
 
 		case UNITAI_EXPLORE:
-			iValue += (kUnitInfo.getMoves() * 200);
+			iValue += kUnitInfo.getMoves() * kUnitInfo.getMoves() * (100 + iCombatValue/4);
 			if (kUnitInfo.isNoBadGoodies())
 			{
-				iValue += 100;
+				iValue *= 3;
+				iValue /= 2;
 			}
 			//need to add vision and terrain factors here.
 			break;
@@ -14254,29 +14234,22 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 		}
 	}
 
-	if ((iCombatValue > 0) && ((eUnitAI == UNITAI_ATTACK) || (eUnitAI == UNITAI_ATTACK_CITY)))
+	if (iCombatValue > 0 && pArea != NULL && (eUnitAI == UNITAI_ATTACK || eUnitAI == UNITAI_ATTACK_CITY))
 	{
-		if (pArea != NULL)
+		AreaAITypes eAreaAI = pArea->getAreaAIType(getTeam());
+		if (eAreaAI == AREAAI_ASSAULT || eAreaAI == AREAAI_ASSAULT_MASSING)
 		{
-			AreaAITypes eAreaAI = pArea->getAreaAIType(getTeam());
-			if (eAreaAI == AREAAI_ASSAULT || eAreaAI == AREAAI_ASSAULT_MASSING)
+			for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 			{
-				for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+				if (kUnitInfo.getFreePromotions(iI) && GC.getPromotionInfo((PromotionTypes)iI).isAmphib())
 				{
-					if (kUnitInfo.getFreePromotions(iI))
-					{
-						if (GC.getPromotionInfo((PromotionTypes)iI).isAmphib())
-						{
-							iValue *= 133;
-							iValue /= 100;
-							break;
-						}
-					}
+					iValue *= 133;
+					iValue /= 100;
+					break;
 				}
 			}
 		}
 	}
-
 	return std::max(0, iValue);
 }
 
@@ -17257,63 +17230,26 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 	iValue += iCommerceValue;
 
-	//makes the AI switch to Emancipation even if there is no unhappiness yet from not doing it
-	if (kCivic.getCivicPercentAnger() != 0)
-	{
-		int iNumOtherCities = GC.getGameINLINE().getNumCities() - getNumCities();
-		iValue += (30 * getNumCities() * getCivicPercentAnger(eCivic, true)) / kCivic.getCivicPercentAnger();
-
-		int iTargetGameTurn = 2 * getNumCities() * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getGrowthPercent();
-		iTargetGameTurn /= GC.getGame().countCivPlayersEverAlive();
-		iTargetGameTurn += GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getGrowthPercent() * 30;
-
-		iTargetGameTurn /= 100;
-		iTargetGameTurn = std::max(10, iTargetGameTurn);
-
-		int iElapsedTurns = GC.getGame().getElapsedGameTurns();
-
-		if (iElapsedTurns > iTargetGameTurn)
-		{
-			iTempValue = (std::min(iTargetGameTurn, iElapsedTurns - iTargetGameTurn) * (iNumOtherCities * kCivic.getCivicPercentAnger())) / (15 * iTargetGameTurn);
-			if ( gPlayerLogLevel > 2 && iTempValue != 0 )
-			{
-				logBBAI("Civic %S anger modifier value %d",
-						 kCivic.getDescription(),
-						 iTempValue);
-			}
-			iValue += iTempValue;
-		}
-	}
-
 	//Everything hereafter requires at least civic option vacuum
 
 	CivicTypes eCivicOptionCivic = getCivics((CivicOptionTypes)(kCivic.getCivicOptionType()));
 
 
 	//#1: Happiness
-	if ( (getNumCities() > 0) &&
-		( (kCivic.getCivicPercentAnger() != 0 && getCivicPercentAnger(eCivic, true) != 0)
-		|| kCivic.getCivicHappiness() != 0 || kCivic.getHappyPerMilitaryUnit() != 0 || kCivic.getLargestCityHappiness() != 0
-		|| (kCivic.getWarWearinessModifier() != 0 && getWarWearinessPercentAnger() != 0)
-		|| kCivic.isAnyBuildingHappinessChange() || kCivic.isAnyFeatureHappinessChange()
-		|| kCivic.getNonStateReligionHappiness() != 0
-		|| (kCivic.getCityLimit(getID()) > 0 && kCivic.getCityOverLimitUnhappy() > 0)
-		|| (kCivic.getStateReligionHappiness() != 0 && (kCivic.isStateReligion() || isStateReligion())) ) )
+	if (getNumCities() > 0
+	&& (kCivic.getCivicPercentAnger() != 0 || kCivic.getCivicHappiness() != 0 
+	|| kCivic.getHappyPerMilitaryUnit() != 0 || kCivic.getLargestCityHappiness() != 0
+	|| kCivic.isAnyBuildingHappinessChange() || kCivic.isAnyFeatureHappinessChange()
+	|| kCivic.getNonStateReligionHappiness() != 0
+	|| (kCivic.getWarWearinessModifier() != 0 && getWarWearinessPercentAnger() != 0)
+	|| (kCivic.getCityLimit(getID()) > 0 && kCivic.getCityOverLimitUnhappy() > 0)
+	|| (kCivic.getStateReligionHappiness() != 0 && (kCivic.isStateReligion() || isStateReligion()))))
 	{
-	//int CvPlayerAI::AI_getHappinessWeight(int iHappy, int iExtraPop) const
-		//int iWorstHappy = 0;
-		//int iBestHappy = 0;
-		//int iTotalUnhappy = 0;
-		//int iTotalHappy = 0;
 		int iExtraPop = 1;
 		int iLoop;
 		CvCity* pLoopCity;
 		int iCount = 0;
 
-		//if (0 == iHappy)
-		//{
-		//	iHappy = 1;
-		//}
 		int iHappyValue = 0;
 		for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
 		{
@@ -17497,10 +17433,6 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	{
 	//int CvPlayerAI::AI_getHealthWeight(int iHealth, int iExtraPop) const
 
-		//int iWorstHealth = 0;
-		//int iBestHealth = 0;
-		//int iTotalUnhappy = 0;
-		//int iTotalHealth = 0;
 		int iExtraPop = 1;
 		int iLoop;
 		CvCity* pLoopCity;
@@ -20374,7 +20306,7 @@ void CvPlayerAI::AI_doCommerce()
 		{
 			setCommercePercent(COMMERCE_ESPIONAGE, 0);
 
-			for (int iTeam = 0; iTeam < MAX_CIV_TEAMS; ++iTeam)
+			for (int iTeam = 0; iTeam < MAX_PC_TEAMS; ++iTeam)
 			{
 				setEspionageSpendingWeightAgainstTeam((TeamTypes)iTeam, 0);
 			}
@@ -20508,32 +20440,6 @@ void CvPlayerAI::AI_doCommerce()
 /* 																			    */
 /* 	Espionage AI															    */
 /********************************************************************************/
-		// original BTS code
-		/*
-		int iEspionageTargetRate = 0;
-		//TSHEEP Additional variables for targetting tech leader
-		int iTechTeam = MAX_CIV_TEAMS;
-		int iTechScore = 0;
-		int iTechHighScore = 0;
-		//TSHEEP End
-
-		for (int iTeam = 0; iTeam < MAX_CIV_TEAMS; ++iTeam)
-		{
-			CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iTeam);
-			if (kLoopTeam.isAlive() && iTeam != getTeam() && !kLoopTeam.isVassal(getTeam()) && !GET_TEAM(getTeam()).isVassal((TeamTypes)iTeam))
-			{
-				int iTarget = (kLoopTeam.getEspionagePointsAgainstTeam(getTeam()) - GET_TEAM(getTeam()).getEspionagePointsAgainstTeam((TeamTypes)iTeam)) / 8;
-
-				iTarget -= GET_TEAM(getTeam()).AI_getAttitudeVal((TeamTypes)iTeam);
-
-				if (iTarget > 0)
-				{
-					iEspionageTargetRate += iTarget;
-					changeEspionageSpendingWeightAgainstTeam((TeamTypes)iTeam, iTarget);
-				}
-			}
-		}
-		*/
 
 		int iEspionageTargetRate = 0;
 		int* piTarget = new int[MAX_PC_TEAMS];
@@ -30604,12 +30510,11 @@ bool CvPlayerAI::AI_isCivicCanChangeOtherValues(CivicTypes eCivicSelected, Relig
 	CvCivicInfo& kCivicSelected = GC.getCivicInfo(eCivicSelected);
 
 	//happiness
-	if ( (kCivicSelected.getCivicPercentAnger() != 0 && getCivicPercentAnger(eCivicSelected, true) != 0)
-		|| kCivicSelected.getHappyPerMilitaryUnit() != 0 || kCivicSelected.getLargestCityHappiness() != 0
-		|| (kCivicSelected.getWarWearinessModifier() != 0 && getWarWearinessPercentAnger() != 0)
-		|| kCivicSelected.isAnyBuildingHappinessChange() || kCivicSelected.isAnyFeatureHappinessChange()
-		|| kCivicSelected.getNonStateReligionHappiness() != 0
-		|| (kCivicSelected.getStateReligionHappiness() != 0 && (kCivicSelected.isStateReligion() || eAssumedReligion != NO_RELIGION)) )
+	if (kCivicSelected.getCivicPercentAnger() != 0 || kCivicSelected.getHappyPerMilitaryUnit() != 0
+	|| kCivicSelected.getLargestCityHappiness() != 0 || kCivicSelected.getNonStateReligionHappiness() != 0
+	|| kCivicSelected.isAnyBuildingHappinessChange() || kCivicSelected.isAnyFeatureHappinessChange()
+	|| (kCivicSelected.getWarWearinessModifier() != 0 && getWarWearinessPercentAnger() != 0)
+	|| (kCivicSelected.getStateReligionHappiness() != 0 && (kCivicSelected.isStateReligion() || eAssumedReligion != NO_RELIGION)))
 	{
 		return true;
 	}
@@ -30679,19 +30584,17 @@ bool CvPlayerAI::AI_isCivicValueRecalculationRequired(CivicTypes eCivic, CivicTy
 	CvCivicInfo& kCivicSelected = GC.getCivicInfo(eCivicSelected);
 
 	//happiness
-	if ( (kCivic.getCivicPercentAnger() != 0 && getCivicPercentAnger(eCivic, true) != 0)
-		|| kCivic.getHappyPerMilitaryUnit() != 0 || kCivic.getLargestCityHappiness() != 0
-		|| (kCivic.getWarWearinessModifier() != 0 && getWarWearinessPercentAnger() != 0)
-		|| kCivic.isAnyBuildingHappinessChange() || kCivic.isAnyFeatureHappinessChange()
-		|| kCivic.getNonStateReligionHappiness() != 0
-		|| (kCivic.getStateReligionHappiness() != 0 && (kCivic.isStateReligion() || eAssumedReligion != NO_RELIGION)) )
+	if (kCivic.getCivicPercentAnger() != 0 || kCivic.getHappyPerMilitaryUnit() != 0
+	|| kCivic.getLargestCityHappiness() != 0 || kCivic.getNonStateReligionHappiness() != 0
+	|| kCivic.isAnyBuildingHappinessChange() || kCivic.isAnyFeatureHappinessChange()
+	|| (kCivic.getWarWearinessModifier() != 0 && getWarWearinessPercentAnger() != 0)
+	|| (kCivic.getStateReligionHappiness() != 0 && (kCivic.isStateReligion() || eAssumedReligion != NO_RELIGION)))
 	{
-		if ( (kCivicSelected.getCivicPercentAnger() != 0 && getCivicPercentAnger(eCivicSelected, true) != 0)
-			|| kCivicSelected.getHappyPerMilitaryUnit() != 0 || kCivicSelected.getLargestCityHappiness() != 0
-			|| (kCivicSelected.getWarWearinessModifier() != 0 && getWarWearinessPercentAnger() != 0)
-			|| kCivicSelected.isAnyBuildingHappinessChange() || kCivicSelected.isAnyFeatureHappinessChange()
-			|| kCivicSelected.getNonStateReligionHappiness() != 0
-			|| (kCivicSelected.getStateReligionHappiness() != 0 && (kCivicSelected.isStateReligion() || eAssumedReligion != NO_RELIGION)) )
+		if (kCivicSelected.getCivicPercentAnger() != 0 || kCivicSelected.getHappyPerMilitaryUnit() != 0
+		|| kCivicSelected.getLargestCityHappiness() != 0 || kCivicSelected.getNonStateReligionHappiness() != 0
+		|| kCivicSelected.isAnyBuildingHappinessChange() || kCivicSelected.isAnyFeatureHappinessChange()
+		|| (kCivicSelected.getWarWearinessModifier() != 0 && getWarWearinessPercentAnger() != 0)
+		|| (kCivicSelected.getStateReligionHappiness() != 0 && (kCivicSelected.isStateReligion() || eAssumedReligion != NO_RELIGION)) )
 		{
 			return true;
 		}
@@ -30789,10 +30692,6 @@ bool CvPlayerAI::AI_isCivicValueRecalculationRequired(CivicTypes eCivic, CivicTy
 //100 * iHappy means a high value.
 int CvPlayerAI::AI_getHappinessWeight(int iHappy, int iExtraPop) const
 {
-	int iWorstHappy = 0;
-	int iBestHappy = 0;
-	int iTotalUnhappy = 0;
-	int iTotalHappy = 0;
 	int iLoop;
 	CvCity* pLoopCity;
 	int iCount = 0;
@@ -30872,10 +30771,6 @@ int CvPlayerAI::AI_getHappinessWeight(int iHappy, int iExtraPop) const
 
 int CvPlayerAI::AI_getHealthWeight(int iHealth, int iExtraPop) const
 {
-	int iWorstHealth = 0;
-	int iBestHealth = 0;
-	int iTotalUnhappy = 0;
-	int iTotalHealth = 0;
 	int iLoop;
 	CvCity* pLoopCity;
 	int iCount = 0;

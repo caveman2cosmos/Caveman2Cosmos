@@ -78,8 +78,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -204,8 +204,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>45</iWithdrawalProb>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -334,8 +334,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>45</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -468,8 +468,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>9</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>25</iWithdrawalProb>
 			<iEarlyWithdraw>30</iEarlyWithdraw>
 			<FeatureAttacks>
@@ -611,8 +611,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -772,8 +772,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -900,8 +900,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -1034,8 +1034,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -1204,8 +1204,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>15</iWithdrawalProb>
 			<iEarlyWithdraw>20</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -1323,8 +1323,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -1396,8 +1396,8 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<iAnimalIgnoresBorders>2</iAnimalIgnoresBorders>
 			<bOnlyDefensive>1</bOnlyDefensive>
+			<iAnimalIgnoresBorders>2</iAnimalIgnoresBorders>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<TerrainImpassableTypes>
@@ -1436,8 +1436,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -1567,8 +1567,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iEarlyWithdraw>75</iEarlyWithdraw>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -1666,8 +1666,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>60</iWithdrawalProb>
 			<iPursuit>30</iPursuit>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
@@ -1736,8 +1736,8 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<iAnimalIgnoresBorders>2</iAnimalIgnoresBorders>
 			<bOnlyDefensive>1</bOnlyDefensive>
+			<iAnimalIgnoresBorders>2</iAnimalIgnoresBorders>
 			<iCost>-1</iCost>
 			<iMoves>3</iMoves>
 			<InvisibleTerrainChanges>
@@ -1779,8 +1779,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>55</iWithdrawalProb>
 			<iPursuit>30</iPursuit>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
@@ -1934,8 +1934,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iPursuit>10</iPursuit>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -2059,8 +2059,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iEarlyWithdraw>80</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -2180,9 +2180,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<iAnimalIgnoresBorders>1</iAnimalIgnoresBorders>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
+			<bOnlyDefensive>1</bOnlyDefensive>
 			<bAssassin>1</bAssassin>
 			<UnitCombatTargets>
 				<UnitCombatTarget>
@@ -2207,8 +2207,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -2348,8 +2348,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>8</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>15</iWithdrawalProb>
 			<iPursuit>15</iPursuit>
 			<UnitMeshGroups>
@@ -2484,8 +2484,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -2618,8 +2618,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -2769,8 +2769,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>15</iWithdrawalProb>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -2917,8 +2917,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iEarlyWithdraw>80</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -3042,8 +3042,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>60</iWithdrawalProb>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -3191,8 +3191,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -3338,8 +3338,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -3462,8 +3462,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -3591,8 +3591,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iEarlyWithdraw>80</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -3732,8 +3732,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>25</iWithdrawalProb>
 			<iEarlyWithdraw>75</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -3846,8 +3846,8 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<iAnimalIgnoresBorders>1</iAnimalIgnoresBorders>
 			<bOnlyDefensive>1</bOnlyDefensive>
+			<iAnimalIgnoresBorders>1</iAnimalIgnoresBorders>
 			<iCost>-1</iCost>
 			<iMoves>2</iMoves>
 			<TerrainImpassableTypes>
@@ -3873,8 +3873,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -4010,8 +4010,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>5</iWithdrawalProb>
 			<iEarlyWithdraw>30</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -4124,8 +4124,8 @@
 			<iCombat>5</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -4265,8 +4265,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>7</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<iPursuit>35</iPursuit>
 			<UnitMeshGroups>
@@ -4399,8 +4399,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>4</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iPursuit>50</iPursuit>
 			<iEarlyWithdraw>40</iEarlyWithdraw>
@@ -4546,8 +4546,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>10</iWithdrawalProb>
 			<iEarlyWithdraw>70</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -4647,8 +4647,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>70</iWithdrawalProb>
 			<iEarlyWithdraw>70</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -4770,8 +4770,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -4911,8 +4911,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>4</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -5033,8 +5033,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -5161,8 +5161,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>10</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>60</iWithdrawalProb>
 			<iEarlyWithdraw>70</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -5266,8 +5266,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>10</iWithdrawalProb>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -5397,8 +5397,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -5494,8 +5494,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -5642,8 +5642,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -5761,8 +5761,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -5891,8 +5891,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>6</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>25</iWithdrawalProb>
 			<iPursuit>25</iPursuit>
 			<UnitMeshGroups>
@@ -6011,8 +6011,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>65</iWithdrawalProb>
 			<iPursuit>20</iPursuit>
 			<UnitMeshGroups>
@@ -6135,8 +6135,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -6258,8 +6258,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>70</iWithdrawalProb>
 			<iEarlyWithdraw>75</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -6380,8 +6380,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -6502,8 +6502,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>45</iWithdrawalProb>
 			<iPursuit>35</iPursuit>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
@@ -6616,8 +6616,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>45</iWithdrawalProb>
 			<iPursuit>35</iPursuit>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
@@ -6751,8 +6751,8 @@
 			<iCombat>5</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -6877,8 +6877,8 @@
 			<iCombat>5</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -7006,8 +7006,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>25</iWithdrawalProb>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -7136,8 +7136,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>15</iWithdrawalProb>
 			<iPursuit>20</iPursuit>
 			<UnitMeshGroups>
@@ -7253,8 +7253,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -7384,8 +7384,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iEarlyWithdraw>85</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -7512,8 +7512,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iEarlyWithdraw>95</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -7602,8 +7602,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -7732,8 +7732,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -7845,8 +7845,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -7964,8 +7964,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>55</iWithdrawalProb>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -8087,8 +8087,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>25</iWithdrawalProb>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -8211,8 +8211,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>45</iWithdrawalProb>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -8333,8 +8333,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>45</iWithdrawalProb>
 			<iEarlyWithdraw>95</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -8471,8 +8471,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -8567,8 +8567,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>2</fMaxSpeed>
@@ -8693,8 +8693,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -8806,8 +8806,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -8935,8 +8935,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>25</iWithdrawalProb>
 			<iPursuit>25</iPursuit>
 			<UnitMeshGroups>
@@ -9035,8 +9035,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iPursuit>60</iPursuit>
 			<UnitMeshGroups>
@@ -9140,8 +9140,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>4</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iPursuit>20</iPursuit>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -9263,8 +9263,8 @@
 			<iCombat>5</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1</fMaxSpeed>
@@ -9393,8 +9393,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>15</iWithdrawalProb>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -9513,8 +9513,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>60</iWithdrawalProb>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -9624,8 +9624,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<iPursuit>30</iPursuit>
 			<iEarlyWithdraw>30</iEarlyWithdraw>
@@ -9701,8 +9701,8 @@
 				</UnitAI>
 			</UnitAIs>
 			<iAnimalIgnoresBorders>1</iAnimalIgnoresBorders>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
+			<bOnlyDefensive>1</bOnlyDefensive>
 			<bAssassin>1</bAssassin>
 			<UnitCombatTargets>
 				<UnitCombatTarget>
@@ -9734,8 +9734,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iPursuit>25</iPursuit>
 			<UnitMeshGroups>
@@ -9887,8 +9887,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>50</iWithdrawalProb>
 			<iPursuit>50</iPursuit>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
@@ -10000,8 +10000,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>45</iWithdrawalProb>
 			<iPursuit>45</iPursuit>
 			<iEarlyWithdraw>45</iEarlyWithdraw>
@@ -10144,8 +10144,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>5</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -10269,8 +10269,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -10419,8 +10419,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>60</iWithdrawalProb>
 			<iPursuit>30</iPursuit>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
@@ -10548,8 +10548,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>45</iWithdrawalProb>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -10653,8 +10653,8 @@
 			<iCombat>6</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -10666,7 +10666,6 @@
 					<EarlyArtDefineTag>ART_DEF_UNIT_HUMPBACK_WHALE</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
-			<iMinAreaSize>10</iMinAreaSize>
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 			<KillOutcomes>
 				<Outcome>
@@ -10792,8 +10791,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iPursuit>25</iPursuit>
 			<iEarlyWithdraw>75</iEarlyWithdraw>
@@ -10909,8 +10908,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -11004,8 +11003,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -11120,8 +11119,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>55</iWithdrawalProb>
 			<iEarlyWithdraw>85</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -11235,8 +11234,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>45</iWithdrawalProb>
 			<iEarlyWithdraw>75</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -11359,8 +11358,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>50</iWithdrawalProb>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -11465,8 +11464,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>10</iWithdrawalProb>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -11618,8 +11617,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -11747,8 +11746,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>65</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -11861,8 +11860,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>35</iWithdrawalProb>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -12015,8 +12014,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>6</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>25</iWithdrawalProb>
 			<iPursuit>30</iPursuit>
 			<UnitMeshGroups>
@@ -12106,8 +12105,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -12204,20 +12203,8 @@
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<iCombat>4</iCombat>
-			<TerrainNatives>
-				<TerrainNative>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
-					<bTerrainNative>1</bTerrainNative>
-				</TerrainNative>
-				<TerrainNative>
-					<TerrainType>TERRAIN_PLAINS</TerrainType>
-					<bTerrainNative>1</bTerrainNative>
-				</TerrainNative>
-				<TerrainNative>
-					<TerrainType>TERRAIN_DESERT</TerrainType>
-					<bTerrainNative>1</bTerrainNative>
-				</TerrainNative>
-			</TerrainNatives>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -12289,20 +12276,8 @@
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<iCombat>17</iCombat>
-			<TerrainNatives>
-				<TerrainNative>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
-					<bTerrainNative>1</bTerrainNative>
-				</TerrainNative>
-				<TerrainNative>
-					<TerrainType>TERRAIN_PLAINS</TerrainType>
-					<bTerrainNative>1</bTerrainNative>
-				</TerrainNative>
-				<TerrainNative>
-					<TerrainType>TERRAIN_DESERT</TerrainType>
-					<bTerrainNative>1</bTerrainNative>
-				</TerrainNative>
-			</TerrainNatives>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -12374,20 +12349,8 @@
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<iCombat>9</iCombat>
-			<TerrainNatives>
-				<TerrainNative>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
-					<bTerrainNative>1</bTerrainNative>
-				</TerrainNative>
-				<TerrainNative>
-					<TerrainType>TERRAIN_PLAINS</TerrainType>
-					<bTerrainNative>1</bTerrainNative>
-				</TerrainNative>
-				<TerrainNative>
-					<TerrainType>TERRAIN_DESERT</TerrainType>
-					<bTerrainNative>1</bTerrainNative>
-				</TerrainNative>
-			</TerrainNatives>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -12459,20 +12422,8 @@
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<iCombat>3</iCombat>
-			<TerrainNatives>
-				<TerrainNative>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
-					<bTerrainNative>1</bTerrainNative>
-				</TerrainNative>
-				<TerrainNative>
-					<TerrainType>TERRAIN_PLAINS</TerrainType>
-					<bTerrainNative>1</bTerrainNative>
-				</TerrainNative>
-				<TerrainNative>
-					<TerrainType>TERRAIN_DESERT</TerrainType>
-					<bTerrainNative>1</bTerrainNative>
-				</TerrainNative>
-			</TerrainNatives>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -12543,8 +12494,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>70</iWithdrawalProb>
 			<iEarlyWithdraw>85</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -12677,8 +12628,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>25</iWithdrawalProb>
 			<iPursuit>40</iPursuit>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
@@ -12788,8 +12739,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>55</iWithdrawalProb>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -12905,8 +12856,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -13018,8 +12969,8 @@
 			<iCombat>7</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iCollateralDamage>100</iCollateralDamage>
 			<iCollateralDamageLimit>75</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>4</iCollateralDamageMaxUnits>
@@ -13122,8 +13073,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iPursuit>50</iPursuit>
 			<UnitMeshGroups>
@@ -13278,8 +13229,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<iPursuit>10</iPursuit>
 			<iEarlyWithdraw>20</iEarlyWithdraw>
@@ -13365,8 +13316,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -13473,8 +13424,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -13586,8 +13537,8 @@
 			<iCombat>6</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -13711,8 +13662,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iPursuit>20</iPursuit>
 			<iEarlyWithdraw>20</iEarlyWithdraw>
@@ -13846,8 +13797,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -13949,8 +13900,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<iPursuit>20</iPursuit>
 			<UnitMeshGroups>
@@ -14053,8 +14004,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iEarlyWithdraw>40</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -14177,8 +14128,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -14296,8 +14247,8 @@
 			<iCombat>5</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>60</iWithdrawalProb>
 			<iEarlyWithdraw>70</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -14457,8 +14408,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>4</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -14556,8 +14507,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>10</iWithdrawalProb>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -14650,8 +14601,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>50</iWithdrawalProb>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -14742,8 +14693,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iPursuit>30</iPursuit>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
@@ -14835,8 +14786,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>15</iWithdrawalProb>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -14942,8 +14893,8 @@
 			<iCombat>6</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iPursuit>35</iPursuit>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -15072,8 +15023,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>25</iWithdrawalProb>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -15191,8 +15142,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>65</iWithdrawalProb>
 			<iEarlyWithdraw>95</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -15298,8 +15249,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -15393,8 +15344,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>4</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iPursuit>40</iPursuit>
 			<iEarlyWithdraw>25</iEarlyWithdraw>
@@ -15492,8 +15443,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>55</iWithdrawalProb>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -15608,8 +15559,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<iEarlyWithdraw>40</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -15754,8 +15705,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>50</iWithdrawalProb>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -15864,8 +15815,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>65</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -15975,8 +15926,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>60</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -16093,8 +16044,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -16218,8 +16169,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>50</iWithdrawalProb>
 			<iEarlyWithdraw>85</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -16345,8 +16296,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>5</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iPursuit>30</iPursuit>
 			<TerrainAttacks>
 				<TerrainAttack>
@@ -16479,8 +16430,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>10</iWithdrawalProb>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -16601,8 +16552,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iPursuit>20</iPursuit>
 			<iEarlyWithdraw>25</iEarlyWithdraw>
@@ -16737,8 +16688,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>4</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>60</iWithdrawalProb>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -16832,8 +16783,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iPursuit>30</iPursuit>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
@@ -16944,8 +16895,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -17071,8 +17022,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>4</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -17185,8 +17136,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>60</iWithdrawalProb>
 			<iEarlyWithdraw>70</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -17271,8 +17222,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -17399,8 +17350,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>70</iWithdrawalProb>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -17529,8 +17480,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iPursuit>40</iPursuit>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
@@ -17637,8 +17588,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>15</iWithdrawalProb>
 			<iEarlyWithdraw>80</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -17755,8 +17706,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>50</iWithdrawalProb>
 			<iEarlyWithdraw>70</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -17863,8 +17814,8 @@
 			<iCombat>5</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iCollateralDamage>100</iCollateralDamage>
 			<iCollateralDamageLimit>75</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>4</iCollateralDamageMaxUnits>
@@ -17973,8 +17924,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>4</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -18081,8 +18032,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -18187,8 +18138,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>4</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -18303,8 +18254,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -18453,8 +18404,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>4</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -18605,8 +18556,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -18739,8 +18690,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -18850,8 +18801,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>10</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<iPursuit>30</iPursuit>
 			<UnitMeshGroups>
@@ -18984,8 +18935,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>35</iWithdrawalProb>
 			<iEarlyWithdraw>85</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -19081,8 +19032,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>4</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -19193,8 +19144,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -19317,8 +19268,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>50</iWithdrawalProb>
 			<iPursuit>50</iPursuit>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
@@ -19449,8 +19400,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -19570,8 +19521,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -19703,8 +19654,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>60</iWithdrawalProb>
 			<iEarlyWithdraw>80</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -19817,8 +19768,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -19956,8 +19907,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -20080,8 +20031,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>50</iWithdrawalProb>
 			<iPursuit>40</iPursuit>
 			<UnitMeshGroups>
@@ -20206,8 +20157,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>5</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iPursuit>50</iPursuit>
 			<iEarlyWithdraw>20</iEarlyWithdraw>
@@ -20313,8 +20264,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>10</iWithdrawalProb>
 			<iEarlyWithdraw>20</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -20414,8 +20365,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>6</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iPursuit>20</iPursuit>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -20551,8 +20502,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<iPursuit>30</iPursuit>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
@@ -20732,8 +20683,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iPursuit>25</iPursuit>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -20843,8 +20794,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>35</iWithdrawalProb>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -20961,8 +20912,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>4</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iPursuit>30</iPursuit>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -21089,8 +21040,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iEarlyWithdraw>70</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -21205,8 +21156,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iEarlyWithdraw>70</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -21322,8 +21273,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iEarlyWithdraw>70</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -21436,8 +21387,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iEarlyWithdraw>70</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -21539,8 +21490,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -21636,8 +21587,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -21770,8 +21721,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iPursuit>30</iPursuit>
 			<iEarlyWithdraw>30</iEarlyWithdraw>
@@ -21890,8 +21841,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>65</iWithdrawalProb>
 			<iEarlyWithdraw>95</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -22025,8 +21976,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<iPursuit>30</iPursuit>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
@@ -22139,8 +22090,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>35</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -22234,8 +22185,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -22342,8 +22293,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>15</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -22471,8 +22422,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -22580,8 +22531,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>65</iWithdrawalProb>
 			<iEarlyWithdraw>65</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -22689,8 +22640,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>5</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>65</iWithdrawalProb>
 			<iEarlyWithdraw>65</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -22813,8 +22764,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iEarlyWithdraw>40</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -22985,8 +22936,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>35</iWithdrawalProb>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -23078,8 +23029,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iEarlyWithdraw>80</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -23205,8 +23156,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -23343,8 +23294,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iPursuit>30</iPursuit>
 			<UnitMeshGroups>
@@ -23440,8 +23391,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -23575,8 +23526,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -23688,8 +23639,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>4</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iPursuit>50</iPursuit>
 			<UnitMeshGroups>
@@ -23842,8 +23793,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iPursuit>30</iPursuit>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -23940,8 +23891,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>10</iWithdrawalProb>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -24056,8 +24007,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>50</iWithdrawalProb>
 			<iEarlyWithdraw>75</iEarlyWithdraw>
 			<UnitMeshGroups>

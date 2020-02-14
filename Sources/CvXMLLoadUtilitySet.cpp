@@ -288,35 +288,6 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 					OutputDebugString("Setting Global Defines: End");
 					return false;
 				}
-
-	#ifdef GRANULAR_CALLBACK_CONTROL
-				//	KOSHLING - granular control over Python callbacks - so far implements
-				//		CanTrain
-				//		CannotTrain
-				//		CanBuild
-				const char* entityList;
-				//	CanTrain
-				if ( GC.getDefinesVarSystem()->GetValue("USE_CAN_TRAIN_CALLBACK_GRANULAR", entityList) )
-				{
-					cvInternalGlobals::getInstance().m_pythonCallbackController.RegisterUnitCallback(CALLBACK_TYPE_CAN_TRAIN, entityList);
-
-					GC.getDefinesVarSystem()->RemValue("USE_CAN_TRAIN_CALLBACK_GRANULAR");
-				}
-				//	CannotTrain
-				if ( GC.getDefinesVarSystem()->GetValue("USE_CANNOT_TRAIN_CALLBACK_GRANULAR", entityList) )
-				{
-					cvInternalGlobals::getInstance().m_pythonCallbackController.RegisterUnitCallback(CALLBACK_TYPE_CANNOT_TRAIN, entityList);
-
-					GC.getDefinesVarSystem()->RemValue("USE_CANNOT_TRAIN_CALLBACK_GRANULAR");
-				}
-				//	CanBuild
-				if ( GC.getDefinesVarSystem()->GetValue("USE_CAN_BUILD_CALLBACK_GRANULAR", entityList) )
-				{
-					cvInternalGlobals::getInstance().m_pythonCallbackController.RegisterBuildCallback(CALLBACK_TYPE_CAN_BUILD, entityList);
-
-					GC.getDefinesVarSystem()->RemValue("USE_CAN_BUILD_CALLBACK_GRANULAR");
-				}
-	#endif
 			}
 			aszFiles.clear();
 			aszModularFiles.clear();
@@ -324,7 +295,6 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 	/************************************************************************************************/
 	/* MODULAR_LOADING_CONTROL                 END                                                  */
 	/************************************************************************************************/
-
 
 		gDLL->destroyCache(cache);
 	}
