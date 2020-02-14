@@ -15799,7 +15799,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_RUFFIAN_HOVER</Tag>
 		<English>Enter the user defined naming convention for combat units 'RUFFIAN'.</English>
-		<French>Entrez la convention des noms pour les unités 'RUFFIAN'.</French>
+		<French>Entrez la convention des noms pour les unités 'Hors-la-loi'.</French>
 		<German>Eingabe der benutzerdefinierten Benennungsregel für 'RUFFIAN' Einheiten</German>
 		<Italian>Inserisci la tua convenzione di denominazione personalizzata per le Unità di Combattimento Corazzate ('Combat[RUFFIAN]').</Italian>
 		<Spanish>Introduce la nomenclatura que desees para nombrar a las unidades de tipo 'RUFFIAN'.</Spanish>
@@ -15807,7 +15807,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_RUFFIAN_TEXT</Tag>
 		<English>Naming Convention: Combat[RUFFIAN]</English>
-		<French>Convention des Noms: Combat[RUFFIAN]</French>
+		<French>Convention des Noms: Combat[Hors-la-loi]</French>
 		<German>Benennungsregel: Kampf[RUFFIAN]</German>
 		<Spanish>Nomenclatura: Combat[RUFFIAN]</Spanish>
 	</TEXT>

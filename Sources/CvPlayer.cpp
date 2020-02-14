@@ -11202,10 +11202,22 @@ bool CvPlayer::canEverResearch(TechTypes eTech) const
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
-	//include global check here
+
 	if (GC.getTechInfo(eTech).isGlobal() && GC.getGameINLINE().countKnownTechNumTeams(eTech) > 0)
 	{
 		return false;
+	}
+	// Limited religions must not allow a player to hoard religious techs to deny the religions from being founded anywhere.
+	// Religion techs are global and can thus only be invented once by one player in a game.
+	if (GC.getGameINLINE().isOption(GAMEOPTION_LIMITED_RELIGIONS) && !canFoundReligion())
+	{
+		for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
+		{
+			if (GC.getReligionInfo((ReligionTypes)iI).getTechPrereq() == eTech)
+			{
+				return false;
+			}
+		}
 	}
 
 	if(GC.getUSE_CANNOT_RESEARCH_CALLBACK())
@@ -11867,6 +11879,19 @@ void CvPlayer::foundReligion(ReligionTypes eReligion, ReligionTypes eSlotReligio
 	}
 	//TB Prophet Mod End
 #endif
+	// Clear queued religious techs for human player when founding a religion
+	// Religious techs are not researchable after founding a religion under "Limited Religions" rules
+	// AI always clear their entire tech queue when a religion is founded in CvTeam::setHasTech
+	if (GC.getGameINLINE().isOption(GAMEOPTION_LIMITED_RELIGIONS))
+	{
+		for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
+		{
+			if (isResearchingTech(TechTypes(GC.getReligionInfo(ReligionTypes(iI)).getTechPrereq())))
+			{
+				popResearch(TechTypes(GC.getReligionInfo(ReligionTypes(iI)).getTechPrereq()));
+			}
+		}
+	}
 	if (GC.getGameINLINE().isReligionFounded(eReligion))
 	{
 		if (isHuman())
@@ -11881,7 +11906,6 @@ void CvPlayer::foundReligion(ReligionTypes eReligion, ReligionTypes eSlotReligio
 		{
 			foundReligion(AI_chooseReligion(), eSlotReligion, bAward);
 		}
-
 		return;
 	}
 
