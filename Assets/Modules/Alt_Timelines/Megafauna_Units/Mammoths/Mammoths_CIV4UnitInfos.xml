@@ -1114,7 +1114,7 @@
 		<UnitInfo>
 			<Type>UNIT_WORKMAMMOTH</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_ANDEAN</DependencyType>
+				<DependencyType>RELIGION_ANDEANISM</DependencyType>
 			</AndDependencyTypes>
 			<Builds>
 				<Build>

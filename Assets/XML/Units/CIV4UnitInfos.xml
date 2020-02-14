@@ -8043,11 +8043,11 @@ Base XP gained when defending
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_EGYPT_MYTHOLOGY</ReligionType>
+					<ReligionType>RELIGION_KEMETISM</ReligionType>
 					<iReligionSpread>30</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
-			<PrereqReligion>RELIGION_EGYPT_MYTHOLOGY</PrereqReligion>
+			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<PrereqBuilding>BUILDING_EGYPT_MYTH_MONASTERY</PrereqBuilding>
 			<iCost>110</iCost>
 			<iMoves>1</iMoves>
@@ -8092,11 +8092,11 @@ Base XP gained when defending
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_MESOAMERICANISM</ReligionType>
+					<ReligionType>RELIGION_NAGHUALISM</ReligionType>
 					<iReligionSpread>30</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
-			<PrereqReligion>RELIGION_MESOAMERICANISM</PrereqReligion>
+			<PrereqReligion>RELIGION_NAGHUALISM</PrereqReligion>
 			<PrereqBuilding>BUILDING_MESOAMERICAN_MONASTERY</PrereqBuilding>
 			<iCost>110</iCost>
 			<iMoves>1</iMoves>
@@ -54812,11 +54812,11 @@ Base XP gained when defending
 					<iReligionSpread>100</iReligionSpread>
 				</ReligionSpread>
 				<ReligionSpread>
-					<ReligionType>RELIGION_EGYPT_MYTHOLOGY</ReligionType>
+					<ReligionType>RELIGION_KEMETISM</ReligionType>
 					<iReligionSpread>100</iReligionSpread>
 				</ReligionSpread>
 				<ReligionSpread>
-					<ReligionType>RELIGION_MESOAMERICANISM</ReligionType>
+					<ReligionType>RELIGION_NAGHUALISM</ReligionType>
 					<iReligionSpread>100</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>

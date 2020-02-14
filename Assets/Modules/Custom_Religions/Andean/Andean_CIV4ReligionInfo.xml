@@ -7,7 +7,7 @@
 <Civ4ReligionInfo xmlns="x-schema:../../../XML/Schema/C2C_CIV4GameInfoSchema.xml">
 	<ReligionInfos>
 		<ReligionInfo>
-			<Type>RELIGION_ANDEAN</Type>
+			<Type>RELIGION_ANDEANISM</Type>
 			<Description>TXT_KEY_TECH_ANDEAN</Description>
 			<Adjective>TXT_KEY_TECH_ANDEAN_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_TECH_ANDEAN_PEDIA</Civilopedia>

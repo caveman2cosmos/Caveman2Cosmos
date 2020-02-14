@@ -15,8 +15,8 @@
 			<Strategy>TXT_KEY_BUILDING_TEMPLE_OF_AN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AN</ArtDefineTag>
-			<ReligionType>RELIGION_MESO</ReligionType>
-			<PrereqReligion>RELIGION_MESO</PrereqReligion>
+			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
+			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<PrereqTech>TECH_PRIESTHOOD</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<FreePromotion>PROMOTION_AN</FreePromotion>
@@ -47,7 +47,7 @@
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_MESO</ReligionType>
+					<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -81,9 +81,9 @@
 			<Strategy>TXT_KEY_BUILDING_TEMPLE_OF_ENKI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ENKI</ArtDefineTag>
-			<ReligionType>RELIGION_MESO</ReligionType>
-			<StateReligion>RELIGION_MESO</StateReligion>
-			<PrereqReligion>RELIGION_MESO</PrereqReligion>
+			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
+			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
+			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<FreePromotion>PROMOTION_ENKI</FreePromotion>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
@@ -118,7 +118,7 @@
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_MESO</ReligionType>
+					<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -164,9 +164,9 @@
 			<Strategy>TXT_KEY_BUILDING_TEMPLE_OF_ENLIL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ENLIL</ArtDefineTag>
-			<ReligionType>RELIGION_MESO</ReligionType>
-			<StateReligion>RELIGION_MESO</StateReligion>
-			<PrereqReligion>RELIGION_MESO</PrereqReligion>
+			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
+			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
+			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<FreePromotion>PROMOTION_ENLIL</FreePromotion>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
@@ -194,7 +194,7 @@
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_MESO</ReligionType>
+					<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -240,9 +240,9 @@
 			<Strategy>TXT_KEY_BUILDING_TEMPLE_OF_INANNA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INANNA</ArtDefineTag>
-			<ReligionType>RELIGION_MESO</ReligionType>
-			<StateReligion>RELIGION_MESO</StateReligion>
-			<PrereqReligion>RELIGION_MESO</PrereqReligion>
+			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
+			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
+			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<FreePromotion>PROMOTION_INANNA</FreePromotion>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
@@ -270,7 +270,7 @@
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_MESO</ReligionType>
+					<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -309,9 +309,9 @@
 			<Strategy>TXT_KEY_BUILDING_TEMPLE_OF_KI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KI</ArtDefineTag>
-			<ReligionType>RELIGION_MESO</ReligionType>
-			<StateReligion>RELIGION_MESO</StateReligion>
-			<PrereqReligion>RELIGION_MESO</PrereqReligion>
+			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
+			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
+			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<FreePromotion>PROMOTION_KI</FreePromotion>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
@@ -345,7 +345,7 @@
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_MESO</ReligionType>
+					<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -378,7 +378,7 @@
 			<Strategy>TXT_KEY_BUILDING_TEMPLE_OF_KI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KI_WHEAT</ArtDefineTag>
-			<PrereqReligion>RELIGION_MESO</PrereqReligion>
+			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
 			<iAsset>4</iAsset>
@@ -419,7 +419,7 @@
 			<Strategy>TXT_KEY_BUILDING_TEMPLE_OF_KI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KI_CORN</ArtDefineTag>
-			<PrereqReligion>RELIGION_MESO</PrereqReligion>
+			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
 			<iAsset>4</iAsset>
@@ -460,7 +460,7 @@
 			<Strategy>TXT_KEY_BUILDING_TEMPLE_OF_KI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KI_RICE</ArtDefineTag>
-			<PrereqReligion>RELIGION_MESO</PrereqReligion>
+			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
 			<iAsset>4</iAsset>
@@ -501,7 +501,7 @@
 			<Strategy>TXT_KEY_BUILDING_TEMPLE_OF_KI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KI_POTATO</ArtDefineTag>
-			<PrereqReligion>RELIGION_MESO</PrereqReligion>
+			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
 			<iAsset>4</iAsset>
@@ -542,9 +542,9 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BABEL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BABEL</MovieDefineTag>
-			<HolyCity>RELIGION_MESO</HolyCity>
-			<ReligionType>RELIGION_MESO</ReligionType>
-			<GlobalReligionCommerce>RELIGION_MESO</GlobalReligionCommerce>
+			<HolyCity>RELIGION_MESOPOTAMISM</HolyCity>
+			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
+			<GlobalReligionCommerce>RELIGION_MESOPOTAMISM</GlobalReligionCommerce>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>

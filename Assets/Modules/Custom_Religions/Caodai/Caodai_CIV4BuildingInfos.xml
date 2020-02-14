@@ -10,7 +10,7 @@
 			<BuildingClass>BUILDINGCLASS_CAODAI_CATHEDRAL</BuildingClass>
 			<Type>BUILDING_CAODAI_CATHEDRAL</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_CAODAI</DependencyType>
+				<DependencyType>RELIGION_CAO_DAI</DependencyType>
 			</AndDependencyTypes>
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CAODAI_CATHEDRAL</Description>
@@ -18,8 +18,8 @@
 			<Strategy>TXT_KEY_BUILDING_CAODAI_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAODAI_CATHEDRAL</ArtDefineTag>
-			<ReligionType>RELIGION_CAODAI</ReligionType>
-			<PrereqReligion>RELIGION_CAODAI</PrereqReligion>
+			<ReligionType>RELIGION_CAO_DAI</ReligionType>
+			<PrereqReligion>RELIGION_CAO_DAI</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>280</iCost>
 			<iConquestProb>0</iConquestProb>
@@ -34,7 +34,7 @@
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_CAODAI</ReligionType>
+					<ReligionType>RELIGION_CAO_DAI</ReligionType>
 					<iReligionChange>3</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -73,7 +73,7 @@
 			<BuildingClass>BUILDINGCLASS_CAODAI_MONASTERY</BuildingClass>
 			<Type>BUILDING_CAODAI_MONASTERY</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_CAODAI</DependencyType>
+				<DependencyType>RELIGION_CAO_DAI</DependencyType>
 			</AndDependencyTypes>
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CAODAI_MONASTERY</Description>
@@ -81,8 +81,8 @@
 			<Strategy>TXT_KEY_BUILDING_CAODAI_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAODAI_MONASTERY</ArtDefineTag>
-			<ReligionType>RELIGION_CAODAI</ReligionType>
-			<PrereqReligion>RELIGION_CAODAI</PrereqReligion>
+			<ReligionType>RELIGION_CAO_DAI</ReligionType>
+			<PrereqReligion>RELIGION_CAO_DAI</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>216</iCost>
 			<iConquestProb>0</iConquestProb>
@@ -104,7 +104,7 @@
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_CAODAI</ReligionType>
+					<ReligionType>RELIGION_CAO_DAI</ReligionType>
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -119,16 +119,16 @@
 			<BuildingClass>BUILDINGCLASS_CAODAI_SHRINE</BuildingClass>
 			<Type>BUILDING_CAODAI_SHRINE</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_CAODAI</DependencyType>
+				<DependencyType>RELIGION_CAO_DAI</DependencyType>
 			</AndDependencyTypes>
 			<Description>TXT_KEY_BUILDING_CAODAI_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAODAI_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CAODAI_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAODAI_SHRINE</ArtDefineTag>
-			<HolyCity>RELIGION_CAODAI</HolyCity>
-			<ReligionType>RELIGION_CAODAI</ReligionType>
-			<GlobalReligionCommerce>RELIGION_CAODAI</GlobalReligionCommerce>
+			<HolyCity>RELIGION_CAO_DAI</HolyCity>
+			<ReligionType>RELIGION_CAO_DAI</ReligionType>
+			<GlobalReligionCommerce>RELIGION_CAO_DAI</GlobalReligionCommerce>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
@@ -139,7 +139,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_CAODAI</ReligionType>
+					<ReligionType>RELIGION_CAO_DAI</ReligionType>
 					<iReligionChange>4</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -160,7 +160,7 @@
 			<BuildingClass>BUILDINGCLASS_CAODAI_TEMPLE</BuildingClass>
 			<Type>BUILDING_CAODAI_TEMPLE</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_CAODAI</DependencyType>
+				<DependencyType>RELIGION_CAO_DAI</DependencyType>
 			</AndDependencyTypes>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CAODAI_TEMPLE</Description>
@@ -168,8 +168,8 @@
 			<Strategy>TXT_KEY_BUILDING_CAODAI_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAODAI_TEMPLE</ArtDefineTag>
-			<ReligionType>RELIGION_CAODAI</ReligionType>
-			<PrereqReligion>RELIGION_CAODAI</PrereqReligion>
+			<ReligionType>RELIGION_CAO_DAI</ReligionType>
+			<PrereqReligion>RELIGION_CAO_DAI</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
 			<iConquestProb>0</iConquestProb>
@@ -189,7 +189,7 @@
 			</CommerceChangeDoubleTimes>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_CAODAI</ReligionType>
+					<ReligionType>RELIGION_CAO_DAI</ReligionType>
 					<iReligionChange>2</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>

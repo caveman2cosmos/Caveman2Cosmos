@@ -73,9 +73,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ReligionType>RELIGION_EGYPT_MYTHOLOGY</ReligionType>
-			<StateReligion>RELIGION_EGYPT_MYTHOLOGY</StateReligion>
-			<PrereqReligion>RELIGION_EGYPT_MYTHOLOGY</PrereqReligion>
+			<ReligionType>RELIGION_KEMETISM</ReligionType>
+			<StateReligion>RELIGION_KEMETISM</StateReligion>
+			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<PrereqBuilding>BUILDING_EGYPT_MYTH_MONASTERY</PrereqBuilding>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<BonusType>BONUS_WARE_IRON</BonusType>
@@ -183,9 +183,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ReligionType>RELIGION_EGYPT_MYTHOLOGY</ReligionType>
-			<StateReligion>RELIGION_EGYPT_MYTHOLOGY</StateReligion>
-			<PrereqReligion>RELIGION_EGYPT_MYTHOLOGY</PrereqReligion>
+			<ReligionType>RELIGION_KEMETISM</ReligionType>
+			<StateReligion>RELIGION_KEMETISM</StateReligion>
+			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<PrereqBuilding>BUILDING_EGYPT_MYTH_MONASTERY</PrereqBuilding>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<BonusType>BONUS_HORSE</BonusType>

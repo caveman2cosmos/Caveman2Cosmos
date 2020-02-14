@@ -8006,7 +8006,7 @@
 				<Bonus>BONUS_OLMEC</Bonus>
 				<Bonus>BONUS_ZAPOTEC</Bonus>
 			</PrereqBonuses>
-			<PrereqReligion>RELIGION_MESOAMERICANISM</PrereqReligion>
+			<PrereqReligion>RELIGION_NAGHUALISM</PrereqReligion>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_REALISM</ObsoleteTech>
 			<ReplaceBuildings>
@@ -17804,8 +17804,8 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_BRICKS</Bonus>
-			<PrereqReligion>RELIGION_MESOAMERICANISM</PrereqReligion>
-			<ReligionType>RELIGION_MESOAMERICANISM</ReligionType>
+			<PrereqReligion>RELIGION_NAGHUALISM</PrereqReligion>
+			<ReligionType>RELIGION_NAGHUALISM</ReligionType>
 			<!-- Construction cost -->
 			<iCost>216</iCost>
 			<!-- Main effects -->
@@ -17829,7 +17829,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_MESOAMERICANISM</ReligionType>
+					<ReligionType>RELIGION_NAGHUALISM</ReligionType>
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -20124,7 +20124,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FELINE_DOMESTICATION</PrereqTech>
 			<Bonus>BONUS_CAT</Bonus>
-			<PrereqReligion>RELIGION_EGYPT_MYTHOLOGY</PrereqReligion>
+			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<!-- Construction cost -->
 			<iCost>92</iCost>
 			<!-- Main effects -->
@@ -71862,7 +71862,7 @@
 				<Bonus>BONUS_BRICKS</Bonus>
 				<Bonus>BONUS_CEMENT</Bonus>
 			</PrereqBonuses>
-			<PrereqReligion>RELIGION_EGYPT_MYTHOLOGY</PrereqReligion>
+			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
 			<!-- Construction cost -->
@@ -99882,8 +99882,8 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_SCULPTURES</Bonus>
 			</PrereqBonuses>
-			<PrereqReligion>RELIGION_EGYPT_MYTHOLOGY</PrereqReligion>
-			<ReligionType>RELIGION_EGYPT_MYTHOLOGY</ReligionType>
+			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
+			<ReligionType>RELIGION_KEMETISM</ReligionType>
 			<!-- Construction cost -->
 			<iCost>160</iCost>
 			<!-- Main effects -->
@@ -99904,7 +99904,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_EGYPT_MYTHOLOGY</ReligionType>
+					<ReligionType>RELIGION_KEMETISM</ReligionType>
 					<iReligionChange>2</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -99946,8 +99946,8 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_SCULPTURES</Bonus>
 			</PrereqBonuses>
-			<PrereqReligion>RELIGION_EGYPT_MYTHOLOGY</PrereqReligion>
-			<ReligionType>RELIGION_EGYPT_MYTHOLOGY</ReligionType>
+			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
+			<ReligionType>RELIGION_KEMETISM</ReligionType>
 			<!-- Construction cost -->
 			<iCost>216</iCost>
 			<!-- Main effects -->
@@ -99970,7 +99970,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_EGYPT_MYTHOLOGY</ReligionType>
+					<ReligionType>RELIGION_KEMETISM</ReligionType>
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -100011,8 +100011,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqReligion>RELIGION_EGYPT_MYTHOLOGY</PrereqReligion>
-			<ReligionType>RELIGION_EGYPT_MYTHOLOGY</ReligionType>
+			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
+			<ReligionType>RELIGION_KEMETISM</ReligionType>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_EGYPT_MYTH_TEMPLE</BuildingClassType>
@@ -100059,7 +100059,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_EGYPT_MYTHOLOGY</ReligionType>
+					<ReligionType>RELIGION_KEMETISM</ReligionType>
 					<iReligionChange>3</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -100104,8 +100104,8 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_BRICKS</Bonus>
-			<PrereqReligion>RELIGION_MESOAMERICANISM</PrereqReligion>
-			<ReligionType>RELIGION_MESOAMERICANISM</ReligionType>
+			<PrereqReligion>RELIGION_NAGHUALISM</PrereqReligion>
+			<ReligionType>RELIGION_NAGHUALISM</ReligionType>
 			<!-- Construction cost -->
 			<iCost>160</iCost>
 			<!-- Special Yield and Commerce modifiers -->
@@ -100122,7 +100122,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_MESOAMERICANISM</ReligionType>
+					<ReligionType>RELIGION_NAGHUALISM</ReligionType>
 					<iReligionChange>2</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -100168,8 +100168,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqReligion>RELIGION_MESOAMERICANISM</PrereqReligion>
-			<ReligionType>RELIGION_MESOAMERICANISM</ReligionType>
+			<PrereqReligion>RELIGION_NAGHUALISM</PrereqReligion>
+			<ReligionType>RELIGION_NAGHUALISM</ReligionType>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_MESOAMERICAN_TEMPLE</BuildingClassType>
@@ -100212,7 +100212,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_MESOAMERICANISM</ReligionType>
+					<ReligionType>RELIGION_NAGHUALISM</ReligionType>
 					<iReligionChange>3</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -101998,14 +101998,14 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_SHAMAN</DependencyType>
+				<DependencyType>RELIGION_SHAMANISM</DependencyType>
 			</AndDependencyTypes>
 			<PrereqTech>TECH_TRIBALISM</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
 				<Bonus>BONUS_TIMBER</Bonus>
 			</PrereqBonuses>
-			<PrereqReligion>RELIGION_SHAMAN</PrereqReligion>
+			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_WOODCARVERS_HUT</BuildingClassType>
@@ -109642,7 +109642,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_MESO</DependencyType>
+				<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
 			</AndDependencyTypes>
 			<PrereqTech>TECH_PRIESTHOOD</PrereqTech>
 			<TechTypes>
@@ -109654,7 +109654,7 @@
 				<Bonus>BONUS_STONE</Bonus>
 				<Bonus>BONUS_MARBLE</Bonus>
 			</PrereqBonuses>
-			<PrereqReligion>RELIGION_MESO</PrereqReligion>
+			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<!-- Construction cost -->
 			<iCost>160</iCost>
 			<!-- Main effects -->

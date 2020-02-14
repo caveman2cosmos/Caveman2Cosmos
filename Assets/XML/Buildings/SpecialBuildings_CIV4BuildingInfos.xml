@@ -18446,8 +18446,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ReligionType>RELIGION_MESOAMERICANISM</ReligionType>
-			<HolyCity>RELIGION_MESOAMERICANISM</HolyCity>
+			<ReligionType>RELIGION_NAGHUALISM</ReligionType>
+			<HolyCity>RELIGION_NAGHUALISM</HolyCity>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Special Yield and Commerce modifiers -->
@@ -18469,7 +18469,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_MESOAMERICANISM</ReligionType>
+					<ReligionType>RELIGION_NAGHUALISM</ReligionType>
 					<iReligionChange>4</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -18490,7 +18490,7 @@
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
-			<GlobalReligionCommerce>RELIGION_MESOAMERICANISM</GlobalReligionCommerce>
+			<GlobalReligionCommerce>RELIGION_NAGHUALISM</GlobalReligionCommerce>
 			<!-- Special properties -->
 			<iAsset>8</iAsset>
 			<Flavors>
@@ -18652,8 +18652,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ReligionType>RELIGION_EGYPT_MYTHOLOGY</ReligionType>
-			<HolyCity>RELIGION_EGYPT_MYTHOLOGY</HolyCity>
+			<ReligionType>RELIGION_KEMETISM</ReligionType>
+			<HolyCity>RELIGION_KEMETISM</HolyCity>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Special Yield and Commerce modifiers -->
@@ -18680,7 +18680,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_EGYPT_MYTHOLOGY</ReligionType>
+					<ReligionType>RELIGION_KEMETISM</ReligionType>
 					<iReligionChange>4</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -18695,7 +18695,7 @@
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
-			<GlobalReligionCommerce>RELIGION_EGYPT_MYTHOLOGY</GlobalReligionCommerce>
+			<GlobalReligionCommerce>RELIGION_KEMETISM</GlobalReligionCommerce>
 			<!-- Special properties -->
 			<iAsset>8</iAsset>
 			<Flavors>

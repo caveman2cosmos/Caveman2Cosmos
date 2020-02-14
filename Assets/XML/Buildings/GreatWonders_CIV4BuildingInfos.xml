@@ -9413,9 +9413,9 @@
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<bStateReligion>1</bStateReligion>
-			<PrereqReligion>RELIGION_MESOAMERICANISM</PrereqReligion>
-			<ReligionType>RELIGION_MESOAMERICANISM</ReligionType>
-			<StateReligion>RELIGION_MESOAMERICANISM</StateReligion>
+			<PrereqReligion>RELIGION_NAGHUALISM</PrereqReligion>
+			<ReligionType>RELIGION_NAGHUALISM</ReligionType>
+			<StateReligion>RELIGION_NAGHUALISM</StateReligion>
 			<!-- Cost -->
 			<iCost>1404</iCost>
 			<BonusProductionModifiers>
@@ -9443,7 +9443,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_MESOAMERICANISM</ReligionType>
+					<ReligionType>RELIGION_NAGHUALISM</ReligionType>
 					<iReligionChange>3</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -12420,15 +12420,15 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_MESO</DependencyType>
+				<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
 			</AndDependencyTypes>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_GLASS_BLOWING</PrereqTech>
 			</TechTypes>
-			<PrereqReligion>RELIGION_MESO</PrereqReligion>
-			<ReligionType>RELIGION_MESO</ReligionType>
-			<StateReligion>RELIGION_MESO</StateReligion>
+			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
+			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
+			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_GLASSSMITH</BuildingClassType>
@@ -13784,7 +13784,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqReligion>RELIGION_MESOAMERICANISM</PrereqReligion>
+			<PrereqReligion>RELIGION_NAGHUALISM</PrereqReligion>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_MESOAMERICAN_CATHEDRAL</BuildingClassType>

@@ -9267,8 +9267,8 @@ def doSacrificeCaptive(argsList):
 	elif pCity.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_HUMAN_SACRIFICE_ALTAR")) > 0:
 		iGoldenAgeLength = iGoldenAgeLength + 1
 
-	iDruid = GC.getInfoTypeForString("RELIGION_DRUID")
-	iMeasoamerican = GC.getInfoTypeForString("RELIGION_MESOAMERICANISM")
+	iDruid = GC.getInfoTypeForString("RELIGION_DRUIDIC_TRADITIONS")
+	iMeasoamerican = GC.getInfoTypeForString("RELIGION_NAGHUALISM")
 	iStateReligion = pUnit.getStateReligion()
 
 	if iStateReligion == iDruid :

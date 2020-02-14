@@ -5590,21 +5590,21 @@
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_zoroastrianism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
-			<Type>UNITCOMBAT_RELIGION_NGAIISM</Type>
+			<Type>UNITCOMBAT_RELIGION_NGAIISMISM</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_NGAI</DependencyType>
+				<DependencyType>RELIGION_NGAIISM</DependencyType>
  			</AndDependencyTypes>
-			<Description>TXT_KEY_UNITCOMBAT_RELIGION_NGAIISM</Description>
-			<ReligionType>RELIGION_NGAI</ReligionType>
+			<Description>TXT_KEY_UNITCOMBAT_RELIGION_NGAIISMISM</Description>
+			<ReligionType>RELIGION_NGAIISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_ngaiism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_KEMETISM</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_EGYPT_MYTHOLOGY</DependencyType>
+				<DependencyType>RELIGION_KEMETISM</DependencyType>
  			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_KEMETISM</Description>
-			<ReligionType>RELIGION_EGYPT_MYTHOLOGY</ReligionType>
+			<ReligionType>RELIGION_KEMETISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_kemetism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5619,10 +5619,10 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_NAGHUALISM</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_MESOAMERICANISM</DependencyType>
+				<DependencyType>RELIGION_NAGHUALISM</DependencyType>
  			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_NAGHUALISM</Description>
-			<ReligionType>RELIGION_MESOAMERICANISM</ReligionType>
+			<ReligionType>RELIGION_NAGHUALISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_naghualism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5671,30 +5671,30 @@
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_voodoo.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
-			<Type>UNITCOMBAT_RELIGION_DRUIDIC</Type>
+			<Type>UNITCOMBAT_RELIGION_DRUIDIC_TRADITIONSIC</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_DRUID</DependencyType>
+				<DependencyType>RELIGION_DRUIDIC_TRADITIONS</DependencyType>
  			</AndDependencyTypes>
-			<Description>TXT_KEY_UNITCOMBAT_RELIGION_DRUIDIC</Description>
-			<ReligionType>RELIGION_DRUID</ReligionType>
+			<Description>TXT_KEY_UNITCOMBAT_RELIGION_DRUIDIC_TRADITIONSIC</Description>
+			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_druidism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
-			<Type>UNITCOMBAT_RELIGION_SHAMANISM</Type>
+			<Type>UNITCOMBAT_RELIGION_SHAMANISMISM</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_SHAMAN</DependencyType>
+				<DependencyType>RELIGION_SHAMANISM</DependencyType>
  			</AndDependencyTypes>
-			<Description>TXT_KEY_UNITCOMBAT_RELIGION_SHAMANISM</Description>
-			<ReligionType>RELIGION_SHAMAN</ReligionType>
+			<Description>TXT_KEY_UNITCOMBAT_RELIGION_SHAMANISMISM</Description>
+			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_shamanism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
-			<Type>UNITCOMBAT_RELIGION_MESOPOTAMIANISM</Type>
+			<Type>UNITCOMBAT_RELIGION_MESOPOTAMISMPOTAMIANISM</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_MESO</DependencyType>
+				<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
  			</AndDependencyTypes>
-			<Description>TXT_KEY_UNITCOMBAT_RELIGION_MESOPOTAMIANISM</Description>
-			<ReligionType>RELIGION_MESO</ReligionType>
+			<Description>TXT_KEY_UNITCOMBAT_RELIGION_MESOPOTAMISMPOTAMIANISM</Description>
+			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_mesopotamism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5727,10 +5727,10 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_CANAANISM</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_CANAANITE</DependencyType>
+				<DependencyType>RELIGION_CANAANISM</DependencyType>
  			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_CANAANISM</Description>
-			<ReligionType>RELIGION_CANAANITE</ReligionType>
+			<ReligionType>RELIGION_CANAANISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_canaanism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>

@@ -10,7 +10,7 @@
 			<BuildingClass>BUILDINGCLASS_ANDEAN_MONASTERY</BuildingClass>
 			<Type>BUILDING_ANDEAN_MONASTERY</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_ANDEAN</DependencyType>
+				<DependencyType>RELIGION_ANDEANISM</DependencyType>
  			</AndDependencyTypes>
 			<TechCommerceChanges>
 				<TechCommerceChange>
@@ -189,7 +189,7 @@
 			<BuildingClass>BUILDINGCLASS_EGYPT_MYTH_MONASTERY</BuildingClass>
 			<Type>BUILDING_EGYPT_MYTH_MONASTERY</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_EGYPT_MYTHOLOGY</DependencyType>
+				<DependencyType>RELIGION_KEMETISM</DependencyType>
 			</AndDependencyTypes>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
@@ -378,7 +378,7 @@
 			<BuildingClass>BUILDINGCLASS_MESOAMERICAN_MONASTERY</BuildingClass>
 			<Type>BUILDING_MESOAMERICAN_MONASTERY</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_MESOAMERICANISM</DependencyType>
+				<DependencyType>RELIGION_NAGHUALISM</DependencyType>
  			</AndDependencyTypes>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
@@ -518,7 +518,7 @@
 			<BuildingClass>BUILDINGCLASS_CANAANISM_MONASTERY</BuildingClass>
 			<Type>BUILDING_CANAANISM_MONASTERY</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_CANAANITE</DependencyType>
+				<DependencyType>RELIGION_CANAANISM</DependencyType>
 			</AndDependencyTypes>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>

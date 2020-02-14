@@ -602,7 +602,7 @@
 			</Flavors>
 		</ReligionInfo>
 		<ReligionInfo>
-			<Type>RELIGION_EGYPT_MYTHOLOGY</Type>
+			<Type>RELIGION_KEMETISM</Type>
 			<Description>TXT_KEY_TECH_EGYPT_MYTHOLOGY</Description>
 			<Adjective/>
 			<Civilopedia>TXT_KEY_TECH_EGYPT_MYTH_PEDIA</Civilopedia>
@@ -668,7 +668,7 @@
 			</Flavors>
 		</ReligionInfo>
 		<ReligionInfo>
-			<Type>RELIGION_MESOAMERICANISM</Type>
+			<Type>RELIGION_NAGHUALISM</Type>
 			<Description>TXT_KEY_TECH_MESOAMERICANISM</Description>
 			<Adjective/>
 			<Civilopedia>TXT_KEY_TECH_MESOAMERICANISM_PEDIA</Civilopedia>

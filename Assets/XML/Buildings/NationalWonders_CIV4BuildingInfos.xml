@@ -7074,8 +7074,8 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_SCULPTURES</Bonus>
 			</PrereqBonuses>
-			<PrereqReligion>RELIGION_EGYPT_MYTHOLOGY</PrereqReligion>
-			<StateReligion>RELIGION_EGYPT_MYTHOLOGY</StateReligion>
+			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
+			<StateReligion>RELIGION_KEMETISM</StateReligion>
 			<PrereqNotBuildingClasses>
 				<PrereqNotBuildingClass>
 					<BuildingClassMustNotHave>BUILDINGCLASS_TEMPLE_OF_SET</BuildingClassMustNotHave>
@@ -7124,7 +7124,7 @@
 			<!-- Global -->
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_EGYPT_MYTHOLOGY</ReligionType>
+					<ReligionType>RELIGION_KEMETISM</ReligionType>
 					<iReligionChange>3</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -7156,8 +7156,8 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_SCULPTURES</Bonus>
 			</PrereqBonuses>
-			<PrereqReligion>RELIGION_EGYPT_MYTHOLOGY</PrereqReligion>
-			<StateReligion>RELIGION_EGYPT_MYTHOLOGY</StateReligion>
+			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
+			<StateReligion>RELIGION_KEMETISM</StateReligion>
 			<PrereqNotBuildingClasses>
 				<PrereqNotBuildingClass>
 					<BuildingClassMustNotHave>BUILDINGCLASS_TEMPLE_OF_SET</BuildingClassMustNotHave>
@@ -7214,7 +7214,7 @@
 			</GlobalCommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_EGYPT_MYTHOLOGY</ReligionType>
+					<ReligionType>RELIGION_KEMETISM</ReligionType>
 					<iReligionChange>3</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -7246,8 +7246,8 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_SCULPTURES</Bonus>
 			</PrereqBonuses>
-			<PrereqReligion>RELIGION_EGYPT_MYTHOLOGY</PrereqReligion>
-			<StateReligion>RELIGION_EGYPT_MYTHOLOGY</StateReligion>
+			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
+			<StateReligion>RELIGION_KEMETISM</StateReligion>
 			<PrereqNotBuildingClasses>
 				<PrereqNotBuildingClass>
 					<BuildingClassMustNotHave>BUILDINGCLASS_TEMPLE_OF_OSIRIS</BuildingClassMustNotHave>
@@ -7298,7 +7298,7 @@
 			<iGreatGeneralRateModifier>10</iGreatGeneralRateModifier>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_EGYPT_MYTHOLOGY</ReligionType>
+					<ReligionType>RELIGION_KEMETISM</ReligionType>
 					<iReligionChange>3</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>

@@ -887,7 +887,7 @@
 			<Description>TXT_KEY_PROMOTION_FLOWER_WAR</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereqOr1>PROMOTION_LEADER</PromotionPrereqOr1>
-			<StateReligionPrereq>RELIGION_MESOAMERICANISM</StateReligionPrereq>
+			<StateReligionPrereq>RELIGION_NAGHUALISM</StateReligionPrereq>
 			<iMoveDiscountChange>1</iMoveDiscountChange>
 			<iCombatPercent>-20</iCombatPercent>
 			<FeatureAttacks>
@@ -947,7 +947,7 @@
 			<Description>TXT_KEY_PROMOTION_PHARAOH</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereqOr1>PROMOTION_LEADER</PromotionPrereqOr1>
-			<StateReligionPrereq>RELIGION_EGYPT_MYTHOLOGY</StateReligionPrereq>
+			<StateReligionPrereq>RELIGION_KEMETISM</StateReligionPrereq>
 			<iChanceFirstStrikesChange>1</iChanceFirstStrikesChange>
 			<iRevoltProtection>5</iRevoltProtection>
 			<UnitCombats>
