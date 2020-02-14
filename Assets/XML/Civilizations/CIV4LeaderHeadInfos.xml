@@ -2082,7 +2082,7 @@
 			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<iVassalPowerModifier>20</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
-			<FavoriteCivic>CIVIC_SENATE</FavoriteCivic>
+			<FavoriteCivic>CIVIC_LEGISLATURE</FavoriteCivic>
 			<Traits>
 				<Trait>
 					<TraitType>TRAIT_PHILOSOPHICAL</TraitType>
@@ -4774,7 +4774,7 @@
 			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
 			<iVassalPowerModifier>-20</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
-			<FavoriteCivic>CIVIC_HEREDITARY_RULE</FavoriteCivic>
+			<FavoriteCivic>CIVIC_MONARCHY</FavoriteCivic>
 			<Traits>
 				<Trait>
 					<TraitType>TRAIT_CREATIVE</TraitType>
@@ -6105,7 +6105,7 @@
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
 			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
-			<FavoriteCivic>CIVIC_SENATE</FavoriteCivic>
+			<FavoriteCivic>CIVIC_LEGISLATURE</FavoriteCivic>
 			<Traits>
 				<Trait>
 					<TraitType>TRAIT_CHARISMATIC</TraitType>
@@ -8822,7 +8822,7 @@
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
 			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
-			<FavoriteCivic>CIVIC_SECULAR</FavoriteCivic>
+			<FavoriteCivic>CIVIC_SECULARISM</FavoriteCivic>
 			<Traits>
 				<Trait>
 					<TraitType>TRAIT_SEAFARING</TraitType>
@@ -11483,7 +11483,7 @@
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
 			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
-			<FavoriteCivic>CIVIC_HEREDITARY_RULE</FavoriteCivic>
+			<FavoriteCivic>CIVIC_MONARCHY</FavoriteCivic>
 			<Traits>
 				<Trait>
 					<TraitType>TRAIT_PROTECTIVE</TraitType>
@@ -14183,7 +14183,7 @@
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
 			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
-			<FavoriteCivic>CIVIC_HEREDITARY_RULE</FavoriteCivic>
+			<FavoriteCivic>CIVIC_MONARCHY</FavoriteCivic>
 			<Traits>
 				<Trait>
 					<TraitType>TRAIT_FINANCIAL</TraitType>
@@ -14867,7 +14867,7 @@
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
 			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
-			<FavoriteCivic>CIVIC_INTOLERANT</FavoriteCivic>
+			<FavoriteCivic>CIVIC_INQUISITORIAL</FavoriteCivic>
 			<Traits>
 				<Trait>
 					<TraitType>TRAIT_SPIRITUAL</TraitType>
@@ -15555,7 +15555,7 @@
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
 			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
-			<FavoriteCivic>CIVIC_HEREDITARY_RULE</FavoriteCivic>
+			<FavoriteCivic>CIVIC_MONARCHY</FavoriteCivic>
 			<Traits>
 				<Trait>
 					<TraitType>TRAIT_IMPERIALIST</TraitType>
@@ -18253,7 +18253,7 @@
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
 			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
-			<FavoriteCivic>CIVIC_LIBERAL</FavoriteCivic>
+			<FavoriteCivic>CIVIC_EGALITARIAN</FavoriteCivic>
 			<Traits>
 				<Trait>
 					<TraitType>TRAIT_SCIENTIFIC</TraitType>
@@ -18933,7 +18933,7 @@
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
 			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
-			<FavoriteCivic>CIVIC_HEREDITARY_RULE</FavoriteCivic>
+			<FavoriteCivic>CIVIC_MONARCHY</FavoriteCivic>
 			<Traits>
 				<Trait>
 					<TraitType>TRAIT_INDUSTRIOUS</TraitType>
@@ -19593,7 +19593,7 @@
 			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
 			<iVassalPowerModifier>-20</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
-			<FavoriteCivic>CIVIC_LAISSEZ_FAIRE</FavoriteCivic>
+			<FavoriteCivic>CIVIC_FREE_MARKET</FavoriteCivic>
 			<Traits>
 				<Trait>
 					<TraitType>TRAIT_SCIENTIFIC</TraitType>
@@ -22984,7 +22984,7 @@
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
 			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
-			<FavoriteCivic>CIVIC_HEREDITARY_RULE</FavoriteCivic>
+			<FavoriteCivic>CIVIC_MONARCHY</FavoriteCivic>
 			<Traits>
 				<Trait>
 					<TraitType>TRAIT_FINANCIAL</TraitType>
@@ -25698,7 +25698,7 @@
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</PermanentAllianceRefuseAttitudeThreshold>
 			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
-			<FavoriteCivic>CIVIC_HEREDITARY_RULE</FavoriteCivic>
+			<FavoriteCivic>CIVIC_MONARCHY</FavoriteCivic>
 			<Traits>
 				<Trait>
 					<TraitType>TRAIT_SPIRITUAL</TraitType>
@@ -29064,7 +29064,7 @@
 			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<iVassalPowerModifier>50</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
-			<FavoriteCivic>CIVIC_ENVIRONMENTALISM</FavoriteCivic>
+			<FavoriteCivic>CIVIC_GREEN</FavoriteCivic>
 			<Traits>
 				<Trait>
 					<TraitType>TRAIT_NOMAD</TraitType>
@@ -30427,7 +30427,7 @@
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
 			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
-			<FavoriteCivic>CIVIC_HEREDITARY_RULE</FavoriteCivic>
+			<FavoriteCivic>CIVIC_MONARCHY</FavoriteCivic>
 			<Traits>
 				<Trait>
 					<TraitType>TRAIT_EXPANSIVE</TraitType>
@@ -34581,7 +34581,7 @@
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
 			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
-			<FavoriteCivic>CIVIC_SECULAR</FavoriteCivic>
+			<FavoriteCivic>CIVIC_SECULARISM</FavoriteCivic>
 			<Traits>
 				<Trait>
 					<TraitType>TRAIT_SEAFARING</TraitType>
@@ -40744,7 +40744,7 @@
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_PLEASED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
-			<FavoriteCivic>CIVIC_LIBERAL</FavoriteCivic>
+			<FavoriteCivic>CIVIC_EGALITARIAN</FavoriteCivic>
 			<Traits>
 				<Trait>
 					<TraitType>TRAIT_POLITICIAN</TraitType>
@@ -41425,7 +41425,7 @@
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_PLEASED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
-			<FavoriteCivic>CIVIC_SENATE</FavoriteCivic>
+			<FavoriteCivic>CIVIC_LEGISLATURE</FavoriteCivic>
 			<Traits>
 				<Trait>
 					<TraitType>TRAIT_INDUSTRIOUS</TraitType>
@@ -42095,7 +42095,7 @@
 			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<iVassalPowerModifier>50</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
-			<FavoriteCivic>CIVIC_ENVIRONMENTALISM</FavoriteCivic>
+			<FavoriteCivic>CIVIC_GREEN</FavoriteCivic>
 			<Traits>
 				<Trait>
 					<TraitType>TRAIT_NOMAD</TraitType>

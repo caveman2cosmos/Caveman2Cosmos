@@ -103,12 +103,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -215,12 +215,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -316,12 +316,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -414,12 +414,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -514,12 +514,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -614,12 +614,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -719,12 +719,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -831,12 +831,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -933,12 +933,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -1043,12 +1043,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -1149,12 +1149,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -1255,12 +1255,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -1361,12 +1361,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -1474,12 +1474,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -1589,12 +1589,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -1725,12 +1725,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -1823,12 +1823,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -1931,12 +1931,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -2077,12 +2077,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -2182,12 +2182,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -2280,12 +2280,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -2377,12 +2377,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -2480,12 +2480,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -2577,12 +2577,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -2679,12 +2679,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -2799,12 +2799,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -2901,12 +2901,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -3001,12 +3001,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -3117,12 +3117,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -3223,12 +3223,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -3339,12 +3339,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -3441,12 +3441,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -3551,12 +3551,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -3652,12 +3652,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -3752,12 +3752,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -3857,12 +3857,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -3958,12 +3958,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -4055,12 +4055,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -4157,12 +4157,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -4276,12 +4276,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -4418,12 +4418,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -4452,12 +4452,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -4488,12 +4488,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -4524,12 +4524,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -4646,12 +4646,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -4682,12 +4682,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -4809,12 +4809,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>

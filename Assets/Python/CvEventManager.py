@@ -309,7 +309,7 @@ class CvEventManager:
 					if GC.getUnitInfo(iUnit).getType().find("UNIT_SUBDUED") > -1:
 						aList.append(iUnit)
 				# Militia
-				self.CIVIC_CONSCRIPTION = GC.getInfoTypeForString("CIVIC_CONSCRIPTION1")
+				self.CIVIC_CONSCRIPTION = GC.getInfoTypeForString("CIVIC_CONSCRIPTION")
 				iMedieval = GC.getInfoTypeForString('UNIT_MILITIA_MEDIEVAL')
 				iModern = GC.getInfoTypeForString('UNIT_MILITIA_MODERN')
 				self.mapMilitiaByEra = {

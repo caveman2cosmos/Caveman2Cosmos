@@ -90,7 +90,7 @@
 			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
-			<FavoriteCivic>CIVIC_HEREDITARY_RULE</FavoriteCivic>
+			<FavoriteCivic>CIVIC_MONARCHY</FavoriteCivic>
 			<FavoriteReligion>NONE</FavoriteReligion>
 			<Traits>
 				<Trait>

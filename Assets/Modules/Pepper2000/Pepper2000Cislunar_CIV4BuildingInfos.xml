@@ -2257,11 +2257,11 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_FASCIST</CivicOption>
+					<CivicOption>CIVIC_TOTALITARIANISM</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>

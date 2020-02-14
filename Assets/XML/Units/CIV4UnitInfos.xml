@@ -8151,7 +8151,7 @@ Base XP gained when defending
 			<NotGameOption>GAMEOPTION_NO_INQUISITIONS</NotGameOption>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_INTOLERANT</CivicOption>
+					<CivicOption>CIVIC_INQUISITORIAL</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
@@ -36767,7 +36767,7 @@ Base XP gained when defending
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -36915,7 +36915,7 @@ Base XP gained when defending
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -37066,7 +37066,7 @@ Base XP gained when defending
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -37220,7 +37220,7 @@ Base XP gained when defending
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -37362,7 +37362,7 @@ Base XP gained when defending
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -37495,7 +37495,7 @@ Base XP gained when defending
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -37644,7 +37644,7 @@ Base XP gained when defending
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -44554,7 +44554,7 @@ Base XP gained when defending
 			</UnitAIs>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
@@ -44657,7 +44657,7 @@ Base XP gained when defending
 			</UnitAIs>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
@@ -44766,7 +44766,7 @@ Base XP gained when defending
 			</UnitAIs>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
@@ -44868,7 +44868,7 @@ Base XP gained when defending
 			</UnitAIs>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>

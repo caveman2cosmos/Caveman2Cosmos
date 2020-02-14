@@ -7303,11 +7303,11 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_INTERGALACTIC_EMPIRE</CivicOption>
+					<CivicOption>CIVIC_UNIVERSAL_EMPIRE</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_ENGINEERED_POPULATION</CivicOption>
+					<CivicOption>CIVIC_SOCIETAL_MOLDING</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>

@@ -2510,7 +2510,7 @@
 			<EventArt>Art/Event_Images/FederalReserveEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>200</iWeight>
-			<Civic>CIVIC_LAISSEZ_FAIRE</Civic>
+			<Civic>CIVIC_FREE_MARKET</Civic>
 			<iMinTreasury>1000</iMinTreasury>
 			<bOwnPlot>1</bOwnPlot>
 			<Events>
@@ -2537,7 +2537,7 @@
 			<EventArt>Art/Event_Images/ElectricCompanyEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>200</iWeight>
-			<Civic>CIVIC_LIBERAL</Civic>
+			<Civic>CIVIC_EGALITARIAN</Civic>
 			<iAngry>-1</iAngry>
 			<bOwnPlot>1</bOwnPlot>
 			<Events>
@@ -2977,7 +2977,7 @@
 			<EventArt>Art/Event_Images/InterstateEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>100</iWeight>
-			<Civic>CIVIC_KEYNESIAN</Civic>
+			<Civic>CIVIC_REGULATED</Civic>
 			<Events>
 				<Event>EVENT_INTERSTATE_1</Event>
 			</Events>
@@ -3002,7 +3002,7 @@
 			<bSinglePlayer>1</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>100</iWeight>
-			<Civic>CIVIC_ENVIRONMENTALISM</Civic>
+			<Civic>CIVIC_GREEN</Civic>
 			<Events>
 				<Event>EVENT_EARTHDAY_1</Event>
 				<Event>EVENT_EARTHDAY_2</Event>
@@ -3026,7 +3026,7 @@
 			<EventArt>Art/Event_Images/FreedomConcert.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>100</iWeight>
-			<Civic>CIVIC_SECULAR</Civic>
+			<Civic>CIVIC_SECULARISM</Civic>
 			<iNumReligions>3</iNumReligions>
 			<Events>
 				<Event>EVENT_FREEDOMCONCERT_1</Event>
@@ -5011,7 +5011,7 @@
 			<EventArt>Art/Event_Images/Heresy.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>200</iWeight>
-			<Civic>CIVIC_DIVINE_RULE</Civic>
+			<Civic>CIVIC_DIVINE_CULT</Civic>
 			<bPickReligion>1</bPickReligion>
 			<bStateReligion>1</bStateReligion>
 			<Events>
@@ -5034,7 +5034,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/Partisans.dds</EventArt>
 			<iWeight>-2</iWeight>
-			<Civic>CIVIC_LIBERAL</Civic>
+			<Civic>CIVIC_EGALITARIAN</Civic>
 			<Events>
 				<Event>EVENT_PARTISANS_1</Event>
 				<Event>EVENT_PARTISANS_2</Event>
@@ -5055,7 +5055,7 @@
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
-			<Civic>CIVIC_HEREDITARY_RULE</Civic>
+			<Civic>CIVIC_MONARCHY</Civic>
 			<BuildingsRequired>
 				<BuildingClass>BUILDINGCLASS_PALACE</BuildingClass>
 			</BuildingsRequired>
@@ -5087,7 +5087,7 @@
 			<EventArt>Art/Event_Images/CrisisInTheSenate.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>100</iWeight>
-			<Civic>CIVIC_SENATE</Civic>
+			<Civic>CIVIC_LEGISLATURE</Civic>
 			<Events>
 				<Event>EVENT_CRISIS_IN_THE_SENATE_1</Event>
 				<Event>EVENT_CRISIS_IN_THE_SENATE_2</Event>
@@ -5132,7 +5132,7 @@
 			<EventArt>Art/Event_Images/Charismatic.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>100</iWeight>
-			<Civic>CIVIC_FASCIST</Civic>
+			<Civic>CIVIC_TOTALITARIANISM</Civic>
 			<Events>
 				<Event>EVENT_CHARISMATIC_1</Event>
 				<Event>EVENT_CHARISMATIC_2</Event>
@@ -5715,7 +5715,7 @@
 			<EventArt>Art/Event_Images/ControversialPhilosopher.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>200</iWeight>
-			<Civic>CIVIC_DIVINE_RULE</Civic>
+			<Civic>CIVIC_DIVINE_CULT</Civic>
 			<Events>
 				<Event>EVENT_CONTROVERSIAL_PHILOSOPHER_1</Event>
 				<Event>EVENT_CONTROVERSIAL_PHILOSOPHER_2</Event>
@@ -5827,7 +5827,7 @@
 			<EventArt>Art/Event_Images/NuclearProtest.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>120</iWeight>
-			<Civic>CIVIC_LIBERAL</Civic>
+			<Civic>CIVIC_EGALITARIAN</Civic>
 			<bOwnPlot>1</bOwnPlot>
 			<Events>
 				<Event>EVENT_NUCLEAR_PROTEST_1</Event>
@@ -6135,7 +6135,7 @@
 			<EventArt>Art/Event_Images/AntiMonarchists.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>100</iWeight>
-			<Civic>CIVIC_HEREDITARY_RULE</Civic>
+			<Civic>CIVIC_MONARCHY</Civic>
 			<Events>
 				<Event>EVENT_ANTIMONARCHISTS_1</Event>
 				<Event>EVENT_ANTIMONARCHISTS_2</Event>
@@ -6381,7 +6381,7 @@
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>220</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
-			<Civic>CIVIC_FIAT_CURRENCY</Civic>
+			<Civic>CIVIC_FIAT_MONEY</Civic>
 			<BuildingsRequired>
 				<BuildingClass>BUILDINGCLASS_BANK</BuildingClass>
 			</BuildingsRequired>
@@ -6598,7 +6598,7 @@
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>200</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
-			<Civic>CIVIC_FIAT_CURRENCY</Civic>
+			<Civic>CIVIC_FIAT_MONEY</Civic>
 			<BuildingsRequired>
 				<BuildingClass>BUILDINGCLASS_BANK</BuildingClass>
 			</BuildingsRequired>
@@ -8026,7 +8026,7 @@
 			<EventArt>Art/Event_Images/Tolerance.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>200</iWeight>
-			<Civic>CIVIC_SECULAR</Civic>
+			<Civic>CIVIC_SECULARISM</Civic>
 			<Events>
 				<Event>EVENT_TOLERANCE_1</Event>
 			</Events>
@@ -8235,7 +8235,7 @@
 			<EventArt>Art/Event_Images/HereticalResearch.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>200</iWeight>
-			<Civic>CIVIC_INTOLERANT</Civic>
+			<Civic>CIVIC_INQUISITORIAL</Civic>
 			<bOwnPlot>1</bOwnPlot>
 			<Events>
 				<Event>EVENT_HERETICAL_RESEARCH2_1</Event>
@@ -8323,7 +8323,7 @@
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>300</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
-			<Civic>CIVIC_FASCIST</Civic>
+			<Civic>CIVIC_TOTALITARIANISM</Civic>
 			<BuildingsRequired>
 				<BuildingClass>BUILDINGCLASS_PALACE</BuildingClass>
 			</BuildingsRequired>
@@ -8351,7 +8351,7 @@
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
-			<Civic>CIVIC_HEREDITARY_RULE</Civic>
+			<Civic>CIVIC_MONARCHY</Civic>
 			<iMinTreasury>50</iMinTreasury>
 			<BuildingsRequired>
 				<BuildingClass>BUILDINGCLASS_PALACE</BuildingClass>
@@ -8379,7 +8379,7 @@
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>140</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
-			<Civic>CIVIC_LAISSEZ_FAIRE</Civic>
+			<Civic>CIVIC_FREE_MARKET</Civic>
 			<BuildingsRequired>
 				<BuildingClass>BUILDINGCLASS_ACADEMY</BuildingClass>
 			</BuildingsRequired>
@@ -8404,7 +8404,7 @@
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
-			<Civic>CIVIC_LIBERAL</Civic>
+			<Civic>CIVIC_EGALITARIAN</Civic>
 			<BuildingsRequired>
 				<BuildingClass>BUILDINGCLASS_UNIVERSITY</BuildingClass>
 			</BuildingsRequired>
@@ -8448,7 +8448,7 @@
 			<EventArt>Art/Event_Images/LargeRecession.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>200</iWeight>
-			<Civic>CIVIC_LAISSEZ_FAIRE</Civic>
+			<Civic>CIVIC_FREE_MARKET</Civic>
 			<iMinTreasury>100</iMinTreasury>
 			<Events>
 				<Event>EVENT_LARGE_RECESSION_1</Event>
@@ -8616,7 +8616,7 @@
 			<EventArt>Art/Event_Images/LaborUnions.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>200</iWeight>
-			<Civic>CIVIC_LIBERAL</Civic>
+			<Civic>CIVIC_EGALITARIAN</Civic>
 			<Events>
 				<Event>EVENT_LABOR_UNIONS_1</Event>
 				<Event>EVENT_LABOR_UNIONS_2</Event>
@@ -8639,7 +8639,7 @@
 			<EventArt>Art/Event_Images/NoJustice.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>200</iWeight>
-			<Civic>CIVIC_OLIGARCHY</Civic>
+			<Civic>CIVIC_JUNTA</Civic>
 			<Events>
 				<Event>EVENT_NO_JUSTICE_1</Event>
 			</Events>
@@ -8693,7 +8693,7 @@
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>200</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
-			<Civic>CIVIC_LIBERAL</Civic>
+			<Civic>CIVIC_EGALITARIAN</Civic>
 			<BuildingsRequired>
 				<BuildingClass>BUILDINGCLASS_BROADCAST_TOWER</BuildingClass>
 			</BuildingsRequired>
@@ -8720,7 +8720,7 @@
 			<EventArt>Art/Event_Images/HeirAssassinated.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>150</iWeight>
-			<Civic>CIVIC_HEREDITARY_RULE</Civic>
+			<Civic>CIVIC_MONARCHY</Civic>
 			<Events>
 				<Event>EVENT_HEIR_ASSASSINATED_1</Event>
 			</Events>
@@ -9498,7 +9498,7 @@
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>100</iWeight>
-			<Civic>CIVIC_SENATE</Civic>
+			<Civic>CIVIC_LEGISLATURE</Civic>
 			<Events>
 				<Event>EVENT_CORRUPT_SENATE_1</Event>
 				<Event>EVENT_CORRUPT_SENATE_2</Event>

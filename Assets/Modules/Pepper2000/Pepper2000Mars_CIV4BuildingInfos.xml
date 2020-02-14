@@ -1042,7 +1042,7 @@
 			</PrereqOrBuildingClasses>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_DIVINE_RULE</CivicOption>
+					<CivicOption>CIVIC_DIVINE_CULT</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -1050,11 +1050,11 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_COSMIC</CivicOption>
+					<CivicOption>CIVIC_COSMIC_ENLIGHTENING</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_INTOLERANT</CivicOption>
+					<CivicOption>CIVIC_INQUISITORIAL</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>

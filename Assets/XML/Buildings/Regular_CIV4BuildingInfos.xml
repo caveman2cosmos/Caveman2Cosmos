@@ -7202,7 +7202,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_UNMANNED_WARFARE</CivicOption>
+					<CivicOption>CIVIC_ROBOTIC</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -7765,11 +7765,11 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_IMPORT_TRASH</CivicOption>
+					<CivicOption>CIVIC_WASTE_IMPORTATION</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_ENERGY_TRASH</CivicOption>
+					<CivicOption>CIVIC_WASTE_TO_ENERGY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
@@ -21233,25 +21233,25 @@
 			</PrereqOrBuildingClasses>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_CORPORATIST</CivicOption>
+					<CivicOption>CIVIC_CORPORATISM</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_LAISSEZ_FAIRE</CivicOption>
+					<CivicOption>CIVIC_FREE_MARKET</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_ENVIRONMENTALISM</CivicOption>
+					<CivicOption>CIVIC_GREEN</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_KEYNESIAN</CivicOption>
+					<CivicOption>CIVIC_REGULATED</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_CORPORATE</CivicOption>
+					<CivicOption>CIVIC_PRIVATIZED</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -21300,7 +21300,7 @@
 			</BuildingClassNeededs>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -21501,7 +21501,7 @@
 			</PrereqOrBuildingClasses>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_FASCIST</CivicOption>
+					<CivicOption>CIVIC_TOTALITARIANISM</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -22841,7 +22841,7 @@
 			</PrereqBonuses>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_ATHEIST</CivicOption>
+					<CivicOption>CIVIC_ANTIRELIGION</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -22928,7 +22928,7 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_RELIGIOUS_TRAINING</CivicOption>
+					<CivicOption>CIVIC_RELIGIOUS</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
@@ -25487,7 +25487,7 @@
 			<PrereqTech>TECH_UTOPIA</PrereqTech>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_FARM_STATE</CivicOption>
+					<CivicOption>CIVIC_STATE_OWNED</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -26189,7 +26189,7 @@
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_NATIVE_SPEAK</CivicOption>
+					<CivicOption>CIVIC_NATIVE_LANGUAGE</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
@@ -26326,7 +26326,7 @@
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_FARM_GREEN</CivicOption>
+					<CivicOption>CIVIC_ORGANIC_FARMING</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -28144,7 +28144,7 @@
 			</BuildingClassNeededs>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -29175,11 +29175,11 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_FASCIST</CivicOption>
+					<CivicOption>CIVIC_TOTALITARIANISM</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -29507,7 +29507,7 @@
 			</BuildingClassNeededs>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_PARADISE</CivicOption>
+					<CivicOption>CIVIC_ECO_FRIENDLY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -32343,7 +32343,7 @@
 			<PrereqTech>TECH_MYSTICISM</PrereqTech>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_DIVINE_RULE</CivicOption>
+					<CivicOption>CIVIC_DIVINE_CULT</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -32815,7 +32815,7 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_CONSCRIPTION1</CivicOption>
+					<CivicOption>CIVIC_CONSCRIPTION</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -36889,7 +36889,7 @@
 			</BuildingClassNeededs>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_KEYNESIAN</CivicOption>
+					<CivicOption>CIVIC_REGULATED</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -37327,7 +37327,7 @@
 			<PrereqTech>TECH_ECONOMICS</PrereqTech>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_FARM_PRIVATIZED</CivicOption>
+					<CivicOption>CIVIC_PRIVATE_OWNED</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -37379,7 +37379,7 @@
 			<bStateReligion>1</bStateReligion>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_INTOLERANT</CivicOption>
+					<CivicOption>CIVIC_INQUISITORIAL</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -38056,19 +38056,19 @@
 			</PrereqOrBuildingClasses>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_FARM_GUILDS</CivicOption>
+					<CivicOption>CIVIC_AGRICULTURAL_GUILDS</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_FARM_PRIVATIZED</CivicOption>
+					<CivicOption>CIVIC_PRIVATE_OWNED</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_FARM_SUBDIDIZED</CivicOption>
+					<CivicOption>CIVIC_INCENTIVIZED</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_FARM_GREEN</CivicOption>
+					<CivicOption>CIVIC_ORGANIC_FARMING</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
@@ -41321,7 +41321,7 @@
 			</PrereqBonuses>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_PRIVATE</CivicOption>
+					<CivicOption>CIVIC_PHILANTHROPIC</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -41671,7 +41671,7 @@
 			</PrereqOrBuildingClasses>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_LAISSEZ_FAIRE</CivicOption>
+					<CivicOption>CIVIC_FREE_MARKET</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -42559,7 +42559,7 @@
 			</PrereqOrBuildingClasses>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_SEA_TRASH</CivicOption>
+					<CivicOption>CIVIC_WASTE_TO_SEA</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
@@ -42618,7 +42618,7 @@
 			</PrereqOrBuildingClasses>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_SPACE_TRASH</CivicOption>
+					<CivicOption>CIVIC_OFF_PLANET_DUMPING</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
@@ -49391,7 +49391,7 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -53089,11 +53089,11 @@
 			</PrereqBonuses>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_OLIGARCHY</CivicOption>
+					<CivicOption>CIVIC_JUNTA</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_MARTIALLAW</CivicOption>
+					<CivicOption>CIVIC_MARTIAL_LAW</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
@@ -55506,7 +55506,7 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_IMPORT_TRASH</CivicOption>
+					<CivicOption>CIVIC_WASTE_IMPORTATION</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
@@ -55982,7 +55982,7 @@
 			</BuildingClassNeededs>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -56800,11 +56800,11 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_IMPORT_TRASH</CivicOption>
+					<CivicOption>CIVIC_WASTE_IMPORTATION</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_ENERGY_TRASH</CivicOption>
+					<CivicOption>CIVIC_WASTE_TO_ENERGY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
@@ -57762,7 +57762,7 @@
 			</PrereqOrBuildingClasses>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_CORPORATE_EDUCATION</CivicOption>
+					<CivicOption>CIVIC_CORPORATE</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -61601,7 +61601,7 @@
 			</BuildingClassNeededs>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -63033,7 +63033,7 @@
 			</PrereqOrTerrain>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_FARM_CORPORATE</CivicOption>
+					<CivicOption>CIVIC_CORPORATE_OWNED</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -65450,7 +65450,7 @@
 			<PrereqTech>TECH_MILITARY_TRAINING</PrereqTech>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_MILITARY_TRADITION</CivicOption>
+					<CivicOption>CIVIC_MARTIAL</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -72608,7 +72608,7 @@
 			</TechTypes>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_COMMUNITY</CivicOption>
+					<CivicOption>CIVIC_COMMUNAL</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
@@ -75028,7 +75028,7 @@
 			<PrereqTech>TECH_MILITARY_TRAINING</PrereqTech>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_MILITARY_TRADITION</CivicOption>
+					<CivicOption>CIVIC_MARTIAL</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -75156,7 +75156,7 @@
 			</PrereqOrBuildingClasses>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_PARADISE</CivicOption>
+					<CivicOption>CIVIC_ECO_FRIENDLY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -78006,7 +78006,7 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -79756,7 +79756,7 @@
 			</PrereqOrBuildingClasses>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_SENATE</CivicOption>
+					<CivicOption>CIVIC_LEGISLATURE</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -81330,7 +81330,7 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_FASCIST</CivicOption>
+					<CivicOption>CIVIC_TOTALITARIANISM</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -83532,7 +83532,7 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_VOLUNTEER_ARMY</CivicOption>
+					<CivicOption>CIVIC_VOLUNTARY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -83577,7 +83577,7 @@
 			</BuildingClassNeededs>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_ENVIRONMENTALISM</CivicOption>
+					<CivicOption>CIVIC_GREEN</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -83840,7 +83840,7 @@
 			</BuildingClassNeededs>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_FASCIST</CivicOption>
+					<CivicOption>CIVIC_TOTALITARIANISM</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
@@ -84820,7 +84820,7 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_SECULAR</CivicOption>
+					<CivicOption>CIVIC_SECULARISM</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
@@ -86546,7 +86546,7 @@
 			</PrereqBonuses>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -89703,7 +89703,7 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_RELIGIOUS_TRAINING</CivicOption>
+					<CivicOption>CIVIC_RELIGIOUS</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
@@ -91024,7 +91024,7 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_DIVINE_RULE</CivicOption>
+					<CivicOption>CIVIC_DIVINE_CULT</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -92398,7 +92398,7 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -94436,7 +94436,7 @@
 			</BuildingClassNeededs>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -94510,7 +94510,7 @@
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_FUEDALISM</CivicOption>
+					<CivicOption>CIVIC_VASSAL_LEVIES</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -95629,7 +95629,7 @@
 			</BuildingClassNeededs>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -99776,7 +99776,7 @@
 			</BuildingClassNeededs>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_DIVINE_RULE</CivicOption>
+					<CivicOption>CIVIC_DIVINE_CULT</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -99788,11 +99788,11 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_INTOLERANT</CivicOption>
+					<CivicOption>CIVIC_INQUISITORIAL</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_SECULAR</CivicOption>
+					<CivicOption>CIVIC_SECULARISM</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
@@ -104294,7 +104294,7 @@
 			</PrereqBonuses>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_SECULAR</CivicOption>
+					<CivicOption>CIVIC_SECULARISM</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -106251,7 +106251,7 @@
 			<PrereqTech>TECH_WARFARE</PrereqTech>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_TRIBALWARFARE</CivicOption>
+					<CivicOption>CIVIC_TRIBAL_WARFARE</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -106418,11 +106418,11 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_IMPORT_TRASH</CivicOption>
+					<CivicOption>CIVIC_WASTE_IMPORTATION</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_ENERGY_TRASH</CivicOption>
+					<CivicOption>CIVIC_WASTE_TO_ENERGY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
@@ -106464,7 +106464,7 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_EXPORT_TRASH</CivicOption>
+					<CivicOption>CIVIC_WASTE_EXPORTATION</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
@@ -106527,11 +106527,11 @@
 			</BuildingClassNeededs>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_ENVIRONMENTALISM</CivicOption>
+					<CivicOption>CIVIC_GREEN</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_ENERGY_TRASH</CivicOption>
+					<CivicOption>CIVIC_WASTE_TO_ENERGY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>

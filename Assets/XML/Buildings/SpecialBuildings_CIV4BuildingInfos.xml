@@ -4990,7 +4990,7 @@
 			<!-- Prerequisites -->
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_BURN_TRASH</CivicOption>
+					<CivicOption>CIVIC_BURN_GARBAGE</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -5112,7 +5112,7 @@
 			</BuildingClassNeededs>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_LIBERAL</CivicOption>
+					<CivicOption>CIVIC_EGALITARIAN</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -5193,7 +5193,7 @@
 			</BuildingClassNeededs>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_LAISSEZ_FAIRE</CivicOption>
+					<CivicOption>CIVIC_FREE_MARKET</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -5235,7 +5235,7 @@
 			</BuildingClassNeededs>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_MARTIALLAW</CivicOption>
+					<CivicOption>CIVIC_MARTIAL_LAW</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -5375,7 +5375,7 @@
 			</BuildingClassNeededs>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_POST_SCARCITY</CivicOption>
+					<CivicOption>CIVIC_AUTOMATED</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -7234,7 +7234,7 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_SECURE_BORDERS</CivicOption>
+					<CivicOption>CIVIC_SECURED_BORDERS</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
@@ -17425,11 +17425,11 @@
 			</BuildingClassNeededs>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_INTOLERANT</CivicOption>
+					<CivicOption>CIVIC_INQUISITORIAL</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_FASCIST</CivicOption>
+					<CivicOption>CIVIC_TOTALITARIANISM</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>

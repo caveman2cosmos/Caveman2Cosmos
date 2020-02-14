@@ -767,11 +767,11 @@
 			</BuildingClassNeededs>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_CORPORATIST</CivicOption>
+					<CivicOption>CIVIC_CORPORATISM</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_ENVIRONMENTALISM</CivicOption>
+					<CivicOption>CIVIC_GREEN</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -787,7 +787,7 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_KEYNESIAN</CivicOption>
+					<CivicOption>CIVIC_REGULATED</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
@@ -3748,7 +3748,7 @@
 			</ConstructCondition>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_SENATE</CivicOption>
+					<CivicOption>CIVIC_LEGISLATURE</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -4886,7 +4886,7 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_LAISSEZ_FAIRE</CivicOption>
+					<CivicOption>CIVIC_FREE_MARKET</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -5985,7 +5985,7 @@
 			</BuildingClassNeededs>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_E_EDUCATION</CivicOption>
+					<CivicOption>CIVIC_ONLINE</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -7331,7 +7331,7 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -8387,7 +8387,7 @@
 			<PrereqTech>TECH_NEW_URBANISM</PrereqTech>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_ENVIRONMENTALISM</CivicOption>
+					<CivicOption>CIVIC_GREEN</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>

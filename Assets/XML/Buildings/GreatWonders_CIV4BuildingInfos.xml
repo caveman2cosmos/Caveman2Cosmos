@@ -5029,11 +5029,11 @@
 			</PrereqNotBuildingClasses>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_INTOLERANT</CivicOption>
+					<CivicOption>CIVIC_INQUISITORIAL</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_FASCIST</CivicOption>
+					<CivicOption>CIVIC_TOTALITARIANISM</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -13200,7 +13200,7 @@
 			</PrereqBuildingClasses>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_LIBERAL</CivicOption>
+					<CivicOption>CIVIC_EGALITARIAN</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -13793,7 +13793,7 @@
 			</BuildingClassNeededs>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_DIVINE_RULE</CivicOption>
+					<CivicOption>CIVIC_DIVINE_CULT</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -19499,7 +19499,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_DIVINE_RULE</CivicOption>
+					<CivicOption>CIVIC_DIVINE_CULT</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -19507,7 +19507,7 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_INTOLERANT</CivicOption>
+					<CivicOption>CIVIC_INQUISITORIAL</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
@@ -20836,7 +20836,7 @@
 			<Help>TXT_KEY_HELP_FIELD_GOLD</Help>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_FUEDALISM</CivicOption>
+					<CivicOption>CIVIC_VASSAL_LEVIES</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -21041,7 +21041,7 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -21348,7 +21348,7 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_FUEDALISM</CivicOption>
+					<CivicOption>CIVIC_VASSAL_LEVIES</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>

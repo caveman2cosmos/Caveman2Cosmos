@@ -1450,7 +1450,7 @@ def canTriggerInterstate(argsList):
   trigger = GC.getEventTriggerInfo(kTriggeredData.eTrigger)
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  if not player.isCivic(GC.getInfoTypeForString("CIVIC_LIBERAL")):
+  if not player.isCivic(GC.getInfoTypeForString("CIVIC_EGALITARIAN")):
     return False
 
   return True
@@ -1489,7 +1489,7 @@ def canApplyEarthDay2(argsList):
 
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iCivic = GC.getInfoTypeForString("CIVIC_ENVIRONMENTALISM")
+  iCivic = GC.getInfoTypeForString("CIVIC_GREEN")
 
   for iPlayer in xrange(GC.getMAX_PC_PLAYERS()):
     loopPlayer = GC.getPlayer(iPlayer)
@@ -1510,7 +1510,7 @@ def applyEarthDay2(argsList):
   kTriggeredData = argsList[1]
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iCivic = GC.getInfoTypeForString("CIVIC_ENVIRONMENTALISM")
+  iCivic = GC.getInfoTypeForString("CIVIC_GREEN")
   iCivicOption = GC.getInfoTypeForString("CIVICOPTION_ECONOMY")
 
   listPlayers = []
@@ -3089,7 +3089,7 @@ def canTriggerHighWarlord(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
   # If source civ is operating this Civic, disallow the event to trigger.
-  if player.isCivic(GC.getInfoTypeForString("CIVIC_LIBERAL")):
+  if player.isCivic(GC.getInfoTypeForString("CIVIC_EGALITARIAN")):
     return False
 
   return True
@@ -3449,7 +3449,7 @@ def canApplyEliteSwordsDone2(argsList):
   kTriggeredData = argsList[1]
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iCivic = GC.getInfoTypeForString("CIVIC_HEREDITARY_RULE")
+  iCivic = GC.getInfoTypeForString("CIVIC_MONARCHY")
 
   if not player.isCivic(iCivic):
     return False
@@ -4179,9 +4179,9 @@ def canTriggerBillionsandBillions(argsList):
   kTriggeredData = argsList[0]
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
 
-  if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_DIVINE_RULE")) or pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_INTOLERANT")):
+  if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_DIVINE_CULT")) or pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_INQUISITORIAL")):
     return False
-  if ( pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_DEMOCRACY")) or pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_FEDERAL"))) and pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_LIBERAL")):
+  if ( pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_DEMOCRACY")) or pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_FEDERALISM"))) and pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_EGALITARIAN")):
     return True
 
   return False
@@ -4213,7 +4213,7 @@ def canTriggerFreeEnterprise(argsList):
   kTriggeredData = argsList[0]
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
 
-  if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_LAISSEZ_FAIRE")):
+  if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_FREE_MARKET")):
     return True
 
   return False
@@ -4259,7 +4259,7 @@ def canTriggerRubicon(argsList):
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
   R = pPlayer.getRevolutionTimer()
   A = pPlayer.isAnarchy()
-  HerdRule = GC.getInfoTypeForString("CIVIC_HEREDITARY_RULE")
+  HerdRule = GC.getInfoTypeForString("CIVIC_MONARCHY")
 
   if R>0:
     return False
@@ -4269,9 +4269,9 @@ def canTriggerRubicon(argsList):
     return False
   if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_DESPOTISM")):
     return False
-  if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_HEREDITARY_RULE")):
+  if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_MONARCHY")):
     return False
-  if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_FASCIST")):
+  if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_TOTALITARIANISM")):
     return False
 
   return True
@@ -4344,7 +4344,7 @@ def applyRubicon3(argsList):
   kTriggeredData = argsList[1]
   pPlayer3 = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iCivicType = GC.getInfoTypeForString("CIVIC_HEREDITARY_RULE")
+  iCivicType = GC.getInfoTypeForString("CIVIC_MONARCHY")
   iCivicOptionType = GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT")
 
   pPlayer3.setCivics(iCivicOptionType, iCivicType)
@@ -4362,9 +4362,9 @@ def canTriggerGeneralsPutsch(argsList):
   otherPlayer = GC.getPlayer(kTriggeredData.eOtherPlayer)
   R = pPlayer.getRevolutionTimer()
   A = pPlayer.isAnarchy()
-  PolState = GC.getInfoTypeForString("CIVIC_FASCIST")
+  PolState = GC.getInfoTypeForString("CIVIC_TOTALITARIANISM")
   Despot = GC.getInfoTypeForString("CIVIC_DESPOTISM")
-  HerdRule = GC.getInfoTypeForString("CIVIC_HEREDITARY_RULE")
+  HerdRule = GC.getInfoTypeForString("CIVIC_MONARCHY")
 
 
   if R>0:
@@ -4430,7 +4430,7 @@ def getHelpGeneralsPutsch3(argsList):
   return szHelp
 
 def applyGeneralsPutsch3(argsList):
-  GC.getPlayer(argsList[1].ePlayer).setCivics(GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT"), GC.getInfoTypeForString("CIVIC_FASCIST"))
+  GC.getPlayer(argsList[1].ePlayer).setCivics(GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT"), GC.getInfoTypeForString("CIVIC_TOTALITARIANISM"))
 
 ######  CURE_FOR_CANCER ########
 
@@ -4440,7 +4440,7 @@ def canTriggerCureforCancer(argsList):
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
   iOxford = GC.getInfoTypeForString("BUILDING_MEDICAL_DATABASE")
 
-  if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_DIVINE_RULE")):
+  if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_DIVINE_CULT")):
     return False
   if pPlayer.getBuildingClassCountWithUpgrades(GC.getBuildingInfo(iOxford).getBuildingClassType()) == 0:
     return False
@@ -4491,7 +4491,7 @@ def canTriggerCarnation(argsList):
     return False
   if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_REPUBLIC")):
     return False
-  if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_FEDERAL")):
+  if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_FEDERALISM")):
     return False
   if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_PLANNED")):
     return False
@@ -4720,7 +4720,7 @@ def canDoAlternativeEnergy4(argsList):
   kTriggeredData = argsList[1]
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
 
-  if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_ENVIRONMENTALISM")):
+  if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_GREEN")):
     return True
 
   return False
@@ -4845,7 +4845,7 @@ def canTriggerDarwinsVoyage(argsList):
 
 
 
-  if not pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_SECULAR")):
+  if not pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_SECULARISM")):
     return False
   if pTransports < 1:
     return False
@@ -7130,7 +7130,7 @@ def canTriggerCompulsoryDem(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
   eCivic = player.getCivics(GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT"))
-  iFederal = GC.getInfoTypeForString("CIVIC_FEDERAL")
+  iFederal = GC.getInfoTypeForString("CIVIC_FEDERALISM")
   iDemocracy = GC.getInfoTypeForString("CIVIC_DEMOCRACY")
   iRepublic = GC.getInfoTypeForString("CIVIC_REPUBLIC")
   if eCivic == iFederal or eCivic == iDemocracy or eCivic == iRepublic:
@@ -7146,15 +7146,15 @@ def canEventTriggerCompulsoryDem(argsList):
     return False
 
   eCivic = player.getCivics(GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT"))
-  iFederal = GC.getInfoTypeForString("CIVIC_FEDERAL")
+  iFederal = GC.getInfoTypeForString("CIVIC_FEDERALISM")
   iDemocracy = GC.getInfoTypeForString("CIVIC_DEMOCRACY")
   iRepublic = GC.getInfoTypeForString("CIVIC_REPUBLIC")
   if eCivic == iFederal or eCivic == iDemocracy or eCivic == iRepublic:
-    bFederal = player.canDoCivics(GC.getInfoTypeForString("CIVIC_FEDERAL"))
+    bFederal = player.canDoCivics(GC.getInfoTypeForString("CIVIC_FEDERALISM"))
     bDemocracy = player.canDoCivics(GC.getInfoTypeForString("CIVIC_DEMOCRACY"))
     bRepublic = player.canDoCivics(GC.getInfoTypeForString("CIVIC_REPUBLIC"))
-    bMonarchy = player.canDoCivics(GC.getInfoTypeForString("CIVIC_HEREDITARY_RULE"))
-    bFacist = player.canDoCivics(GC.getInfoTypeForString("CIVIC_FASCIST"))
+    bMonarchy = player.canDoCivics(GC.getInfoTypeForString("CIVIC_MONARCHY"))
+    bFacist = player.canDoCivics(GC.getInfoTypeForString("CIVIC_TOTALITARIANISM"))
     bDespotism = player.canDoCivics(GC.getInfoTypeForString("CIVIC_DESPOTISM"))
     if (bFederal or bDemocracy or bRepublic):
       if (bMonarchy or bFacist or bDespotism):
@@ -7168,9 +7168,9 @@ def TriggerCompulsoryDem2(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
   eCivic = player.getCivics(GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT"))
-  iFederal = GC.getInfoTypeForString("CIVIC_FEDERAL")
+  iFederal = GC.getInfoTypeForString("CIVIC_FEDERALISM")
 
-  bFederal = player.canDoCivics(GC.getInfoTypeForString("CIVIC_FEDERAL"))
+  bFederal = player.canDoCivics(GC.getInfoTypeForString("CIVIC_FEDERALISM"))
   bDemocracy = player.canDoCivics(GC.getInfoTypeForString("CIVIC_DEMOCRACY"))
   bRepublic = player.canDoCivics(GC.getInfoTypeForString("CIVIC_REPUBLIC"))
 
@@ -7195,11 +7195,11 @@ def TriggerCompulsoryDem3(argsList):
 
   eCivic = player.getCivics(GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT"))
 
-  # bFederal = player.canDoCivics(GC.getInfoTypeForString("CIVIC_FEDERAL"))
+  # bFederal = player.canDoCivics(GC.getInfoTypeForString("CIVIC_FEDERALISM"))
   # bDemocracy = player.canDoCivics(GC.getInfoTypeForString("CIVIC_DEMOCRACY"))
   # bRepublic = player.canDoCivics(GC.getInfoTypeForString("CIVIC_REPUBLIC"))
-  bMonarchy = player.canDoCivics(GC.getInfoTypeForString("CIVIC_HEREDITARY_RULE"))
-  bFacist = player.canDoCivics(GC.getInfoTypeForString("CIVIC_FASCIST"))
+  bMonarchy = player.canDoCivics(GC.getInfoTypeForString("CIVIC_MONARCHY"))
+  bFacist = player.canDoCivics(GC.getInfoTypeForString("CIVIC_TOTALITARIANISM"))
   bDespotism = player.canDoCivics(GC.getInfoTypeForString("CIVIC_DESPOTISM"))
 
   curCivics = []
@@ -7208,9 +7208,9 @@ def TriggerCompulsoryDem3(argsList):
     curCivics.append(player.getCivics(i))
 
   if bFacist:
-    curCivics[GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT")] = GC.getInfoTypeForString("CIVIC_FASCIST")
+    curCivics[GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT")] = GC.getInfoTypeForString("CIVIC_TOTALITARIANISM")
   elif bMonarchy:
-    curCivics[GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT")] = GC.getInfoTypeForString("CIVIC_HEREDITARY_RULE")
+    curCivics[GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT")] = GC.getInfoTypeForString("CIVIC_MONARCHY")
   elif bDespotism:
     curCivics[GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT")] = GC.getInfoTypeForString("CIVIC_DESPOTISM")
   player.doRevolution(curCivics, False)
@@ -7230,7 +7230,7 @@ def getHelpCompulsoryDem2(argsList):
 	if iEvent == GC.getInfoTypeForString("EVENT_COMPULSORY_DEM_2"):
 		print "Event #2"
 		eCivic = CyPlayer.getCivics(GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT"))
-		iFederal = GC.getInfoTypeForString("CIVIC_FEDERAL")
+		iFederal = GC.getInfoTypeForString("CIVIC_FEDERALISM")
 		iDemocracy = GC.getInfoTypeForString("CIVIC_DEMOCRACY")
 		iRepublic = GC.getInfoTypeForString("CIVIC_REPUBLIC")
 
@@ -7247,11 +7247,11 @@ def getHelpCompulsoryDem2(argsList):
 			print "Can Switch to Republic"
 	else:
 		print "Event #3"
-		if CyPlayer.canDoCivics(GC.getInfoTypeForString("CIVIC_FASCIST")):
-			szType = GC.getCivicInfo(GC.getInfoTypeForString("CIVIC_FASCIST")).getTextKey()
+		if CyPlayer.canDoCivics(GC.getInfoTypeForString("CIVIC_TOTALITARIANISM")):
+			szType = GC.getCivicInfo(GC.getInfoTypeForString("CIVIC_TOTALITARIANISM")).getTextKey()
 			print "Can Switch to Fascist"
-		elif CyPlayer.canDoCivics(GC.getInfoTypeForString("CIVIC_HEREDITARY_RULE")):
-			szType = GC.getCivicInfo(GC.getInfoTypeForString("CIVIC_HEREDITARY_RULE")).getTextKey()
+		elif CyPlayer.canDoCivics(GC.getInfoTypeForString("CIVIC_MONARCHY")):
+			szType = GC.getCivicInfo(GC.getInfoTypeForString("CIVIC_MONARCHY")).getTextKey()
 			print "Can Switch to Monarchy"
 		elif CyPlayer.canDoCivics(GC.getInfoTypeForString("CIVIC_DESPOTISM")):
 			szType = GC.getCivicInfo(GC.getInfoTypeForString("CIVIC_DESPOTISM")).getTextKey()
@@ -7298,8 +7298,8 @@ def canEventTriggerLessDictator(argsList):
     return False
 
   eCivic = player.getCivics(GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT"))
-  iMonarch = GC.getInfoTypeForString("CIVIC_HEREDITARY_RULE")
-  iFascist = GC.getInfoTypeForString("CIVIC_FASCIST")
+  iMonarch = GC.getInfoTypeForString("CIVIC_MONARCHY")
+  iFascist = GC.getInfoTypeForString("CIVIC_TOTALITARIANISM")
   iDespot = GC.getInfoTypeForString("CIVIC_DESPOTISM")
   if eCivic == iMonarch or eCivic == iFascist or eCivic == iDespot:
     return True
@@ -7325,7 +7325,7 @@ def TriggerLessDictator2(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
   eCivic = player.getCivics(GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT"))
-  iFederal = GC.getInfoTypeForString("CIVIC_FEDERAL")
+  iFederal = GC.getInfoTypeForString("CIVIC_FEDERALISM")
   iRepublic = GC.getInfoTypeForString("CIVIC_REPUBLIC")
   iDemocracy = GC.getInfoTypeForString("CIVIC_DEMOCRACY")
 
@@ -7352,7 +7352,7 @@ def getHelpLessDictator2(argsList):
 	kTriggeredData = argsList[1]
 	CyPlayer = GC.getPlayer(kTriggeredData.ePlayer)
 
-	iFederal = GC.getInfoTypeForString("CIVIC_FEDERAL")
+	iFederal = GC.getInfoTypeForString("CIVIC_FEDERALISM")
 	if CyPlayer.canDoCivics(iFederal):
 		return TRNSLTR.getText("TXT_KEY_EVENT_CHANGE_CIVICS", (GC.getCivicInfo(iFederal).getTextKey(),))
 
