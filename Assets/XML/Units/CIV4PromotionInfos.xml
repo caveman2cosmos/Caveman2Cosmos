@@ -22004,62 +22004,6 @@
 			<iCaptureResistanceModifierChange>5</iCaptureResistanceModifierChange>
 		</PromotionInfo>
 		<PromotionInfo>
-			<Type>PROMOTION_FUSION_CANNON</Type>
-			<Description>TXT_KEY_PROMOTION_FUSION_CANNON</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereq>PROMOTION_COMBAT4</PromotionPrereq>
-			<TechPrereq>TECH_COLD_FUSION</TechPrereq>
-			<iMovesChange>-1</iMovesChange>
-			<iCollateralDamageChange>200</iCollateralDamageChange>
-			<iBombardRateChange>10</iBombardRateChange>
-			<iFirstStrikesChange>-1</iFirstStrikesChange>
-			<iChanceFirstStrikesChange>-1</iChanceFirstStrikesChange>
-			<TerrainAttacks>
-				<TerrainAttack>
-					<TerrainType>TERRAIN_COAST</TerrainType>
-					<iTerrainAttack>100</iTerrainAttack>
-				</TerrainAttack>
-				<TerrainAttack>
-					<TerrainType>TERRAIN_OCEAN</TerrainType>
-					<iTerrainAttack>100</iTerrainAttack>
-				</TerrainAttack>
-				<TerrainAttack>
-					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
-					<iTerrainAttack>100</iTerrainAttack>
-				</TerrainAttack>
-				<TerrainAttack>
-					<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
-					<iTerrainAttack>100</iTerrainAttack>
-				</TerrainAttack>
-				<TerrainAttack>
-					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
-					<iTerrainAttack>100</iTerrainAttack>
-				</TerrainAttack>
-				<TerrainAttack>
-					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
-					<iTerrainAttack>100</iTerrainAttack>
-				</TerrainAttack>
-			</TerrainAttacks>
-			<UnitCombatMods>
-				<UnitCombatMod>
-					<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
-					<iUnitCombatMod>100</iUnitCombatMod>
-				</UnitCombatMod>
-				<UnitCombatMod>
-					<UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-					<iUnitCombatMod>100</iUnitCombatMod>
-				</UnitCombatMod>
-			</UnitCombatMods>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
-			<iCaptureProbabilityModifierChange>-10</iCaptureProbabilityModifierChange>
-			<Button>Art/Interface/Buttons/Promotions/FusionCannon.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
 			<Type>PROMOTION_HEROIC2</Type>
 			<Description>TXT_KEY_PROMOTION_HEROIC2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>

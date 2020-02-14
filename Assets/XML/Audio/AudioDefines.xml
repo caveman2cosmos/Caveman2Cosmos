@@ -16318,13 +16318,6 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_TECH_COLD_FUSION</SoundID>
-			<Filename>Sounds/Tech/cold_fusion</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
 			<SoundID>SND_TECH_COLONIALISM</SoundID>
 			<Filename>Sounds/Tech/colonialism</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
@@ -16845,13 +16838,6 @@
 		<SoundData>
 			<SoundID>SND_TECH_GENEJURISPRUDENCE</SoundID>
 			<Filename>Sounds/Tech/genejurisprudence</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_GLOBAL_GOVERNANCE</SoundID>
-			<Filename>Sounds/Tech/global_governance</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -17818,13 +17804,6 @@
 		<SoundData>
 			<SoundID>SND_TECH_REINCARNATION2</SoundID>
 			<Filename>Sounds/Tech/reincarnation2</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_TECH_RELIGION</SoundID>
-			<Filename>Sounds/Tech/religion</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
