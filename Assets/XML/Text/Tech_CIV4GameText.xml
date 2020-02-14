@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_CULTURE_ATOMPUNK</Tag>
+		<Tag>TXT_KEY_TECH_ATOMPUNK</Tag>
 		<English>Atompunk</English>
 		<French>Atom-punk</French>
 		<Spanish>
@@ -11,19 +11,19 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CULTURE_ATOMPUNK_PEDIA</Tag>
+		<Tag>TXT_KEY_TECH_ATOMPUNK_PEDIA</Tag>
 		<English>[BOLD]Atompunk[\BOLD], Atompunk relates to the pre-digital period of 1945-1965, including mid-century Modernism, the Atomic Age and Space Age, Communism and concern about it exaggerated as paranoia in the USA along with Neo-Soviet styling, underground cinema, Googie architecture, the Sputnik programme, superhero fiction, the rise of the US military/industrial powers and the fall-out of Chernobyl. Its aesthetic tends toward Populuxe and Raygun Gothic, which describe a retro-futuristic vision of the world.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CULTURE_ATOMPUNK_QUOTE</Tag>
+		<Tag>TXT_KEY_TECH_ATOMPUNK_QUOTE</Tag>
 		<English>"The future was a chrome-trimmed triangular window in the front of dad's car, and it had its own knob to open it up. The future was a hamburger under a light fixture that looked like an atom. The future was going to be awesome." - James Lileks, The Bleat</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CULTURE_ATOMPUNK_STRATEGY</Tag>
+		<Tag>TXT_KEY_TECH_ATOMPUNK_STRATEGY</Tag>
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CULTURE_BIOPUNK</Tag>
+		<Tag>TXT_KEY_TECH_BIOPUNK</Tag>
 		<English>Biopunk</English>
 		<French>Bio-punk</French>
 		<Spanish>
@@ -33,21 +33,21 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CULTURE_BIOPUNK_PEDIA</Tag>
+		<Tag>TXT_KEY_TECH_BIOPUNK_PEDIA</Tag>
 		<English>[BOLD]Biopunk[\BOLD], is a small intellectual and cultural movement, which encompasses a growing number of scientists, artists, and cultural critics who are organizing to create public awareness of how genomic information, produced by bioinformatics, gets used and misused. On the basis of a presumed parallel between genetic and computational code, science journalist Annalee Newitz has called for open-sourcing of genomic databases and declared that "Free our genetic data!" is the rallying cry of the biopunk. Biological Innovation for Open Society is an example of an open-source initiative in biotechnology aiming to apply open license for biological innovation.</English>
 		<Polish>Biopunk - nurt w rozwoju człowieka, który w odróżnieniu od cyberpunku dalszą drogę samozwańczej ewolucji człowieka widzi w nowych osiągnięciach genetyki barzdiej niż techniki.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CULTURE_BIOPUNK_QUOTE</Tag>
+		<Tag>TXT_KEY_TECH_BIOPUNK_QUOTE</Tag>
 		<English>"Some upstarts always try to get closer to the source of creation by ascending to the source's level. The story of Icarus is of course a parable about the folly of such an effort. Get too close to the sun and your hubris will get you burned. Yet in the eyes of twenty-first-century capitalist culture, which worships at the twin altars of the individual and technology, Icarus had initiative. And his melted wings do not represent some deep character flaw; he just needed better beta testers." - Marcus Wohlsen, Biopunk: DIY Scientists Hack the Software of Life</English>
 		<Polish>"Biopunk - nurt w rozwoju człowieka, który w odróżnieniu od cyberpunku dalszą drogę samozwańczej ewolucji człowieka widzi w nowych osiągnięciach genetyki barzdiej niż techniki."</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CULTURE_BIOPUNK_STRATEGY</Tag>
+		<Tag>TXT_KEY_TECH_BIOPUNK_STRATEGY</Tag>
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CULTURE_CYBERPUNK</Tag>
+		<Tag>TXT_KEY_TECH_CYBERPUNK</Tag>
 		<English>Cyberpunk</English>
 		<French>Cyber-punk</French>
 		<Spanish>
@@ -57,21 +57,21 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CULTURE_CYBERPUNK_PEDIA</Tag>
+		<Tag>TXT_KEY_TECH_CYBERPUNK_PEDIA</Tag>
 		<English>[BOLD]Cyberpunk[\BOLD], is a postmodern and science fiction genre noted for its focus on "high tech and low life." The name was originally coined by Bruce Bethke as the title of his short story "Cyberpunk," published in 1983. It features advanced science, such as information technology and cybernetics, coupled with a degree of breakdown or radical change in the social order. Cyberpunk works are well situated within postmodern literature. Cyberpunk plots often center on a conflict among hackers, artificial intelligences, and megacorporations, and tend to be set in a near-future Earth, rather than the far-future settings or galactic vistas found in novels such as Isaac Asimov's Foundation or Frank Herbert's Dune. The settings are usually post-industrial dystopias but tend to be marked by extraordinary cultural ferment and the use of technology in ways never anticipated by its creators ("the street finds its own uses for things"). Much of the genre's atmosphere echoes film noir, and written works in the genre often use techniques from detective fiction.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CULTURE_CYBERPUNK_QUOTE</Tag>
+		<Tag>TXT_KEY_TECH_CYBERPUNK_QUOTE</Tag>
 		<English>"That's sad. How plastic and artificial life has become. It gets harder and harder to find something real. Nin interlocked his fingers, and stretched out his arms. Real love, real friends, real body parts." - Jess C. Scott, The Other Side of Life</English>
 		<French>"Quelle tristesse. Comment la vie plastique et artificielle en est arrivé là Il devient plus difficile de trouver quelque chose de Réel. Nin verrouillé ses doigts, et tendit les bras. Amour réel, de vrais amis, des parties du corps réels." - Jess C. Scott, The Other Side of Life</French>
 		<Polish>"Cyberpunk - nurt w literaturze science-fiction oraz kinematografii, który skupia się na ludziach i otaczającej ich zaawansowanej technologii komputerowej i informacyjnej, niekiedy połączony z różnego rodzaju zamieszaniem w społeczeństwie (np. stan wojenny). Pojęcie cyberpunku można rozważać również pod kątem postawy życiowej, filozofii lub ideologii, w tym wypadku pojęcie cyberpunku jest rozważane bardziej pod kątem porównywania człowieka z maszyną (cybernetyka) i wynikających z tego pytań na temat duszy, Boga oraz świadomości."</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CULTURE_CYBERPUNK_STRATEGY</Tag>
+		<Tag>TXT_KEY_TECH_CYBERPUNK_STRATEGY</Tag>
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CULTURE_NANOPUNK</Tag>
+		<Tag>TXT_KEY_TECH_NANOPUNK</Tag>
 		<English>Nanopunk</English>
 		<French>Nano-punk</French>
 		<Spanish>
@@ -81,16 +81,16 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CULTURE_NANOPUNK_PEDIA</Tag>
+		<Tag>TXT_KEY_TECH_NANOPUNK_PEDIA</Tag>
 		<English>Nanopunk refers to an emerging genre of speculative science fiction (sci-fi) still very much in its infancy in comparison to other genres like that of cyberpunk or steampunk. The genre is similar to biopunk, but describes the world where the use of biotechnologies are limited or prohibited, so only nanites and nanotechnologies are widely used (while in biopunk, bio- and nanotechnologies often coexist). Currently, the genre is more concerned with the artistic and physiological impact of nanotechnology, than of aspects of the technology itself which is still in its infancy. Unlike the cyberpunk, a low-life yet technologically advanced character, the personification of a nanopunk can be set 'hard' or 'soft', depending on your views of the impact nanotechnology will have on our future.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CULTURE_NANOPUNK_QUOTE</Tag>
+		<Tag>TXT_KEY_TECH_NANOPUNK_QUOTE</Tag>
 		<English>"Nanotechnology in medicine is going to have a major impact on the survival of the human race." - Bernard Marcus</English>
 		<Polish>"Nanotechnoloigia w medycynie będzie miała niepodważalny wpływ na wydłużenie życia ludzkiego." - Bernard Marcus</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CULTURE_NANOPUNK_STRATEGY</Tag>
+		<Tag>TXT_KEY_TECH_NANOPUNK_STRATEGY</Tag>
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>

@@ -4,11 +4,11 @@
 		<TechInfo>
 			<!-- Atompunk -->
 			<Type>TECH_ATOMPUNK</Type>
-			<Description>TXT_KEY_CULTURE_ATOMPUNK</Description>
-			<Civilopedia>TXT_KEY_CULTURE_ATOMPUNK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_CULTURE_ATOMPUNK_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_ATOMPUNK</Description>
+			<Civilopedia>TXT_KEY_TECH_ATOMPUNK_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_ATOMPUNK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<Quote>TXT_KEY_CULTURE_ATOMPUNK_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_ATOMPUNK_QUOTE</Quote>
 			<Sound>AS2D_TECH_ATOMPUNK</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/retrospace.dds</Button>

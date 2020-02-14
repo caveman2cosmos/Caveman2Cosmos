@@ -3,9 +3,9 @@
 	<TechInfos>
 		<TechInfo>
 			<Type>TECH_CLOCKPUNK</Type>
-			<Description>TXT_KEY_CULTURE_CLOCKPUNK</Description>
-			<Civilopedia>TXT_KEY_CULTURE_CLOCKPUNK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_CULTURE_CLOCKPUNK_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_CLOCKPUNK</Description>
+			<Civilopedia>TXT_KEY_TECH_CLOCKPUNK_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_CLOCKPUNK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<iCost>1960</iCost>
 			<Era>C2C_ERA_MEDIEVAL</Era>
@@ -43,7 +43,7 @@
 				<PrereqTech>TECH_OPTICS</PrereqTech>
 				<PrereqTech>TECH_CLOCKWORKS</PrereqTech>
 			</AndPreReqs>
-			<Quote>TXT_KEY_CULTURE_CLOCKPUNK_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_CLOCKPUNK_QUOTE</Quote>
 			<Sound>AS2D_TECH_CLOCKPUNK</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/clockpunk.dds</Button>
