@@ -2613,7 +2613,7 @@
 	</TEXT>
 <!-- Workforce -->
 	<TEXT>
-		<Tag>TXT_KEY_CIVICOPTION_LABOR</Tag>
+		<Tag>TXT_KEY_CIVICOPTION_WORKFORCE</Tag>
 		<English>Workforce</English>
 		<French>
 			<Text>Travail</Text>
@@ -2638,7 +2638,7 @@
 		<Polish>Zatrudnienie</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVICOPTION_ABBR_LABOR</Tag>
+		<Tag>TXT_KEY_CIVICOPTION_ABBR_WORKFORCE</Tag>
 		<English>Wrk.</English>
 		<French>Travail</French>
 		<German>Arbeit</German>

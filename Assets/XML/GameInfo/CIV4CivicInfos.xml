@@ -21360,7 +21360,7 @@
 			</UnitCombatProductionModifiers>
 		</CivicInfo>
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_LABOR</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_WORKFORCE</CivicOptionType>
 			<Type>CIVIC_UNORGANIZED</Type>
 			<Description>TXT_KEY_CIVIC_UNORGANIZED</Description>
 			<Civilopedia>TXT_KEY_CIVIC_UNORGANIZED_PEDIA</Civilopedia>
@@ -21390,7 +21390,7 @@
 			<Button>art/Interface/buttons/civics/sparth/labor_unorganized.dds</Button>
 		</CivicInfo>
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_LABOR</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_WORKFORCE</CivicOptionType>
 			<Type>CIVIC_COMMUNITY</Type>
 			<Description>TXT_KEY_CIVIC_COMMUNITY</Description>
 			<Civilopedia>TXT_KEY_CIVIC_COMMUNITY_PEDIA</Civilopedia>
@@ -21531,7 +21531,7 @@
 			<iPopulationgrowthratepercentage>0</iPopulationgrowthratepercentage>
 		</CivicInfo>
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_LABOR</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_WORKFORCE</CivicOptionType>
 			<Type>CIVIC_PROFESSIONAL</Type>
 			<Description>TXT_KEY_CIVIC_PROFESSIONAL</Description>
 			<Civilopedia>TXT_KEY_CIVIC_PROFESSIONAL_PEDIA</Civilopedia>
@@ -21727,7 +21727,7 @@
 			<iPopulationgrowthratepercentage>0</iPopulationgrowthratepercentage>
 		</CivicInfo>
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_LABOR</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_WORKFORCE</CivicOptionType>
 			<Type>CIVIC_SERFDOM</Type>
 			<Description>TXT_KEY_CIVIC_SERFDOM</Description>
 			<Civilopedia>TXT_KEY_CIVIC_SERFDOM_PEDIA</Civilopedia>
@@ -21845,7 +21845,7 @@
 			<iRealCorporationMaintenanceModifier>0</iRealCorporationMaintenanceModifier>
 		</CivicInfo>
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_LABOR</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_WORKFORCE</CivicOptionType>
 			<Type>CIVIC_ORGANIZEDLABOR</Type>
 			<Description>TXT_KEY_CIVIC_ORGANIZEDLABOR</Description>
 			<Civilopedia>TXT_KEY_CIVIC_ORGANIZEDLABOR_PEDIA</Civilopedia>
@@ -21993,7 +21993,7 @@
 			<iPopulationgrowthratepercentage>0</iPopulationgrowthratepercentage>
 		</CivicInfo>
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_LABOR</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_WORKFORCE</CivicOptionType>
 			<Type>CIVIC_SOCIALISM</Type>
 			<Description>TXT_KEY_CIVIC_SOCIALISM</Description>
 			<Civilopedia>TXT_KEY_CIVIC_SOCIALISM_PEDIA</Civilopedia>
@@ -22109,7 +22109,7 @@
 			<iPopulationgrowthratepercentage>0</iPopulationgrowthratepercentage>
 		</CivicInfo>
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_LABOR</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_WORKFORCE</CivicOptionType>
 			<Type>CIVIC_CENTRALIZED</Type>
 			<Description>TXT_KEY_CIVIC_CENTRALIZED</Description>
 			<Civilopedia>TXT_KEY_CIVIC_CENTRALIZED_PEDIA</Civilopedia>
@@ -22220,7 +22220,7 @@
 			<iPopulationgrowthratepercentage>0</iPopulationgrowthratepercentage>
 		</CivicInfo>
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_LABOR</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_WORKFORCE</CivicOptionType>
 			<Type>CIVIC_POST_SCARCITY</Type>
 			<Description>TXT_KEY_CIVIC_POST_SCARCITY</Description>
 			<Civilopedia>TXT_KEY_CIVIC_POST_SCARCITY_PEDIA</Civilopedia>
@@ -22334,7 +22334,7 @@
 			<Flavors/>
 		</CivicInfo>
         <CivicInfo>
-			<CivicOptionType>CIVICOPTION_LABOR</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_WORKFORCE</CivicOptionType>
 			<Type>CIVIC_ENGINEERED</Type>
 			<Description>TXT_KEY_CIVIC_ENGINEERED</Description>
 			<Civilopedia>TXT_KEY_CIVIC_ENGINEERED_PEDIA</Civilopedia>
@@ -22452,7 +22452,7 @@
 			<iRealCorporationMaintenanceModifier>-85</iRealCorporationMaintenanceModifier>
 		</CivicInfo>
         <CivicInfo>
-			<CivicOptionType>CIVICOPTION_LABOR</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_WORKFORCE</CivicOptionType>
 			<Type>CIVIC_HYPERINTELLIGENT</Type>
 			<Description>TXT_KEY_CIVIC_HYPERINTELLIGENT</Description>
 			<Civilopedia>TXT_KEY_CIVIC_HYPERINTELLIGENT_PEDIA</Civilopedia>

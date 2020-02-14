@@ -147,7 +147,7 @@
 			</BuildingClassProductionModifiers>
 		</CivicInfo>
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_LABOR</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_WORKFORCE</CivicOptionType>
 			<Type>CIVIC_SOCIALISM</Type>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
