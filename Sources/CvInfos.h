@@ -10514,39 +10514,6 @@ protected:
 /*																							  */
 /*																							  */
 /************************************************************************************************/
-// Python Modular Loading
-class CvPythonModulesInfo : public CvInfoBase
-{
-public:
-	CvPythonModulesInfo();
-	virtual ~CvPythonModulesInfo();
-
-	bool isMainInterfaceScreen();
-	bool isCivicScreen();
-	bool isCorporationScreen();
-	bool isDomesticAdvisor();
-	bool isEspionageAdvisor();
-	bool isForeignAdvisor();
-	bool isMilitaryAdvisor();
-	bool isVictoryScreen();
-	int getScreen();
-
-	bool read(CvXMLLoadUtility* pXML);
-
-protected:
-
-	bool m_bMainInterfaceScreen;
-	bool m_bCivicScreen;
-	bool m_bCorporationScreen;
-	bool m_bDomesticAdvisor;
-	bool m_bEspionageAdvisor;
-	bool m_bForeignAdvisor;
-	bool m_bMilitaryAdvisor;
-	bool m_bVictoryScreen;
-	int m_iScreen;
-
-};
-
 // MLF loading
 class CvModLoadControlInfo : public CvInfoBase
 {
