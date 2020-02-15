@@ -1039,36 +1039,36 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ORBITAL_TRAJECTORY</Tag>
-		<English>Build Orbital Trajectory</English>
+		<English>Build [LINK=ROUTE_ORBITAL_TRAJECTORY]Orbital Trajectory[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SOLAR_TRAJECTORY</Tag>
-		<English>Build Solar Trajectory</English>
+		<English>Build [LINK=ROUTE_SOLAR_TRAJECTORY]Solar Trajectory[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WORMHOLE</Tag>
-		<English>Build Wormhole</English>
+		<English>Build [LINK=ROUTE_WORMHOLE]Wormhole[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MICROWORMHOLE</Tag>
-		<English>Build Micro-Wormhole</English>
+		<English>Build [LINK=ROUTE_MICROWORMHOLE]Micro-Wormhole[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MEGAWORMHOLE_ROUTE</Tag>
-		<English>Build Megawormhole</English>
+		<English>Build [LINK=ROUTE_MEGAWORMHOLE_ROUTE]Megawormhole[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HYPERLANE</Tag>
-		<English>Build Hyperlane</English>
+		<English>Build [LINK=ROUTE_HYPERLANE]Hyperlane[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ASPATIAL_ROUTE</Tag>
-		<English>Build Aspatial Route</English>
+		<English>Build [LINK=ROUTE_ASPATIAL_ROUTE]Aspatial Route[\LINK]</English>
 	</TEXT>
 	<!-- Improvements-->
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SPACE_STATION1</Tag>
-		<English>Build Space Station</English>
+		<English>Build [LINK=IMPROVEMENT_SPACE_STATION1]Space Station[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SPACE_STATION1</Tag>
@@ -1080,7 +1080,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SPACE_STATION2</Tag>
-		<English>Upgrade Space Station to Lv. 2</English>
+		<English>Upgrade [LINK=IMPROVEMENT_SPACE_STATION2]Space Station to Lv. 2[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SPACE_STATION2</Tag>
@@ -1092,7 +1092,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SPACE_STATION3</Tag>
-		<English>Upgrade Space Station to Lv. 3</English>
+		<English>Upgrade [LINK=IMPROVEMENT_SPACE_STATION3]Space Station to Lv. 3[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SPACE_STATION3</Tag>
@@ -1104,7 +1104,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LUNAR_ARCOLOGY</Tag>
-		<English>Build a Lunar Arcology</English>
+		<English>Build [LINK=IMPROVEMENT_LUNAR_ARCOLOGY]Lunar Arcology[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_ARCOLOGY</Tag>
@@ -1116,7 +1116,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MARS_MINE</Tag>
-		<English>Build Martian Mine</English>
+		<English>Build [LINK=IMPROVEMENT_MARS_MINE]Martian Mine[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_MARS_MINE</Tag>
@@ -1128,7 +1128,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_VENUS_SURFACE_MINE</Tag>
-		<English>Build Venus Surface Mine</English>
+		<English>Build [LINK=IMPROVEMENT_VENUS_SURFACE_MINE]Venus Surface Mine[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_VENUS_SURFACE_MINE</Tag>
@@ -1140,7 +1140,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_VENUS_AERIAL_FARM</Tag>
-		<English>Build Venus Aerial Farm</English>
+		<English>Build [LINK=IMPROVEMENT_VENUS_AERIAL_FARM]Venus Aerial Farm[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_VENUS_AERIAL_FARM</Tag>
@@ -1152,7 +1152,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_DYSON_SPHERE</Tag>
-		<English>Build Dyson Sphere</English>
+		<English>Build [LINK=IMPROVEMENT_DYSON_SPHERE]Dyson Sphere[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_DYSON_SPHERE</Tag>
@@ -1164,7 +1164,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_CISLUNAR_MILITARY_BASE</Tag>
-		<English>Build Cislunar Base</English>
+		<English>Build [LINK=IMPROVEMENT_CISLUNAR_MILITARY_BASE]Cislunar Base[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_CISLUNAR_MILITARY_BASE</Tag>
@@ -1176,7 +1176,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_DEEP_SPACE_MILITARY_BASE</Tag>
-		<English>Build Solar System Base</English>
+		<English>Build [LINK=IMPROVEMENT_DEEP_SPACE_MILITARY_BASE]Solar System Base[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_DEEP_SPACE_MILITARY_BASE</Tag>
@@ -1188,7 +1188,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_INTERSTELLAR_MILITARY_BASE</Tag>
-		<English>Build Interstellar Base</English>
+		<English>Build [LINK=IMPROVEMENT_INTERSTELLAR_MILITARY_BASE]Interstellar Base[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_INTERSTELLAR_MILITARY_BASE</Tag>
@@ -1200,7 +1200,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_INTERGALACTIC_BASE</Tag>
-		<English>Build Intergalactic Base</English>
+		<English>Build [LINK=IMPROVEMENT_INTERGALACTIC_BASE]Intergalactic Base[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_INTERGALACTIC_BASE</Tag>
@@ -1212,7 +1212,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HYPERSPACE_BUNKER</Tag>
-		<English>Build Hyperspace Bunker</English>
+		<English>Build [LINK=IMPROVEMENT_HYPERSPACE_BUNKER]Hyperspace Bunker[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_HYPERSPACE_BUNKER</Tag>
@@ -1224,7 +1224,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MARS_FARM</Tag>
-		<English>Build Martian Farm</English>
+		<English>Build [LINK=IMPROVEMENT_MARS_FARM]Martian Farm[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_MARS_FARM</Tag>
@@ -1236,43 +1236,43 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_MOON</Tag>
-		<English>Terraform toward Green Moon</English>
+		<English>[LINK=IMPROVEMENT_TERRAFORM_MOON]Terraform Toward Green Moon[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_MARS</Tag>
-		<English>Terraform toward Green Mars</English>
+		<English>[LINK=IMPROVEMENT_TERRAFORM_MARS]Terraform Toward Green Mars[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_NEUTRON_STAR</Tag>
-		<English>Induce a Supernova</English>
+		<English>[LINK=IMPROVEMENT_TERRAFORM_NEUTRON_STAR]Induce A Supernova[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_HYPERSPACE</Tag>
-		<English>Chronoform toward Hyperspace</English>
+		<English>[LINK=IMPROVEMENT_TERRAFORM_HYPERSPACE]Chronoform Toward Hyperspace[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_PAST</Tag>
-		<English>Chronoform toward the Past</English>
+		<English>[LINK=IMPROVEMENT_TERRAFORM_PAST]Chronoform Toward the Past[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_FUTURE</Tag>
-		<English>Chronoform toward the Future</English>
+		<English>[LINK=IMPROVEMENT_TERRAFORM_FUTURE]Chronoform Toward the Future[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_BRANESPACE</Tag>
-		<English>Chronoform toward Branespace</English>
+		<English>[LINK=IMPROVEMENT_TERRAFORM_BRANESPACE]Chronoform Toward Branespace[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ASTEROID</Tag>
-		<English>Place an Asteroid</English>
+		<English>Place [LINK=IMPROVEMENT_BUILD_ASTEROID]Asteroid[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_GALAXY</Tag>
-		<English>Place a Galaxy</English>
+		<English>Place [LINK=IMPROVEMENT_BUILD_GALAXY]Galaxy[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SPACE_SOLAR_ARRAY</Tag>
-		<English>Build a Space Solar Array</English>
+		<English>Build [LINK=IMPROVEMENT_SPACE_SOLAR_ARRAY]Space Solar Array[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SPACE_SOLAR_ARRAY</Tag>
@@ -1280,7 +1280,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SPACE_SOLAR_CONCENTRATOR</Tag>
-		<English>Build a Solar Concentrator</English>
+		<English>Build [LINK=IMPROVEMENT_SPACE_SOLAR_CONCENTRATOR]Solar Concentrator[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SPACE_SOLAR_CONCENTRATOR</Tag>
@@ -1288,7 +1288,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ASTEROID_MINE</Tag>
-		<English>Build an Asteroid Mine</English>
+		<English>Build [LINK=IMPROVEMENT_ASTEROID_MINE]Asteroid Mine[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_ASTEROID_MINE</Tag>
@@ -1300,7 +1300,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_DISTANT_PAST_CITY</Tag>
-		<English>Build a Distant Past City</English>
+		<English>Build [LINK=IMPROVEMENT_DISTANT_PAST_CITY]Distant Past City[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_DISTANT_PAST_CITY</Tag>
@@ -1312,7 +1312,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_DISTANT_FUTURE_CITY</Tag>
-		<English>Build a Distant Future City</English>
+		<English>Build [LINK=IMPROVEMENT_DISTANT_FUTURE_CITY]Distant Future City[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_DISTANT_FUTURE_CITY</Tag>
@@ -1324,7 +1324,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BRANE_FACTORY</Tag>
-		<English>Build a Brane Factory</English>
+		<English>Build [LINK=IMPROVEMENT_BRANE_FACTORY]Brane Factory[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BRANE_FACTORY</Tag>
@@ -1336,7 +1336,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BRANE_FARM</Tag>
-		<English>Build a Brane Farm</English>
+		<English>Build [LINK=IMPROVEMENT_BRANE_FARM]Brane Farm[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BRANE_FARM</Tag>
@@ -1348,7 +1348,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SPIRITUAL_REALM</Tag>
-		<English>Build a Spiritual Realm</English>
+		<English>Build [LINK=IMPROVEMENT_SPIRITUAL_REALM]Spiritual Realm[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SPIRITUAL_REALM</Tag>
@@ -1360,7 +1360,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SOLAR_TRADING_POST</Tag>
-		<English>Build Solar Trading Post</English>
+		<English>Build [LINK=IMPROVEMENT_SOLAR_TRADING_POST]Solar Trading Post[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SOLAR_TRADING_POST</Tag>
@@ -1372,7 +1372,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_JOVIAN_SCOOP</Tag>
-		<English>Build a Jovian Scoop</English>
+		<English>Build [LINK=IMPROVEMENT_JOVIAN_SCOOP]Jovian Scoop[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_JOVIAN_SCOOP</Tag>
@@ -1384,7 +1384,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_JOVIAN_FLOATING_CITY</Tag>
-		<English>Build a Jovian Floating City</English>
+		<English>Build [LINK=IMPROVEMENT_JOVIAN_FLOATING_CITY]Jovian Floating City[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_JOVIAN_FLOATING_CITY</Tag>
@@ -1396,7 +1396,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_COSMIC_EXPANSION_NODE</Tag>
-		<English>Build a Cosmic Expansion Node</English>
+		<English>Build [LINK=IMPROVEMENT_COSMIC_EXPANSION_NODE]Cosmic Expansion Node[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_COSMIC_EXPANSION_NODE</Tag>
@@ -1408,7 +1408,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TRUE_VACUUM</Tag>
-		<English>Collapse the Vacuum</English>
+		<English>[LINK=IMPROVEMENT_TRUE_VACUUM]Collapse the Vacuum[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_TRUE_VACUUM</Tag>
@@ -1420,7 +1420,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_JOVIAN_LUNAR_BASE</Tag>
-		<English>Build Jovian Lunar Base</English>
+		<English>Build [LINK=IMPROVEMENT_JOVIAN_LUNAR_BASE]Jovian Lunar Base[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_JOVIAN_LUNAR_BASE</Tag>
@@ -1432,7 +1432,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_JOVIAN_LUNAR_ARCOLOGY</Tag>
-		<English>Build Jovian Lunar Arcology</English>
+		<English>Build [LINK=IMPROVEMENT_JOVIAN_LUNAR_ARCOLOGY]Jovian Lunar Arcology[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_JOVIAN_LUNAR_ARCOLOGY</Tag>
@@ -1444,7 +1444,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PARATERRAFORMED_ASTEROID</Tag>
-		<English>Build Paraterraformed Asteroid</English>
+		<English>Build [LINK=IMPROVEMENT_PARATERRAFORMED_ASTEROID]Paraterraformed Asteroid[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_PARATERRAFORMED_ASTEROID</Tag>
@@ -1456,7 +1456,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ARTIFICIAL_PLANET</Tag>
-		<English>Build an Artificial Planet</English>
+		<English>Build [LINK=IMPROVEMENT_ARTIFICIAL_PLANET]Artificial Planet[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_ARTIFICIAL_PLANET</Tag>
@@ -1468,7 +1468,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_STAR_SCOOP</Tag>
-		<English>Build a Star Scoop</English>
+		<English>Build [LINK=IMPROVEMENT_STAR_SCOOP]Star Scoop[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_STAR_SCOOP</Tag>
@@ -1480,7 +1480,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BLUE_SUPERGIANT_COLONY</Tag>
-		<English>Build a Blue Supergiant Colony</English>
+		<English>Build [LINK=IMPROVEMENT_BLUE_SUPERGIANT_COLONY]Blue Supergiant Colony[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BLUE_SUPERGIANT_COLONY</Tag>
@@ -1492,7 +1492,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SUN_SCOOP</Tag>
-		<English>Build a Sun Scoop</English>
+		<English>Build [LINK=IMPROVEMENT_SUN_SCOOP]Sun Scoop[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SUN_SCOOP</Tag>
@@ -1504,7 +1504,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_NEUTRON_STAR_COLONY</Tag>
-		<English>Build a Neutron Star Colony</English>
+		<English>Build [LINK=IMPROVEMENT_NEUTRON_STAR_COLONY]Neutron Star Colony[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_NEUTRON_STAR_COLONY</Tag>
@@ -1516,7 +1516,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BIOTIC_NEUTRON_STAR</Tag>
-		<English>Terraform a Neutron Star</English>
+		<English>Terraform [LINK=IMPROVEMENT_BIOTIC_NEUTRON_STAR]Neutron Star[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BIOTIC_NEUTRON_STAR</Tag>
@@ -1592,35 +1592,35 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TRADING_PLANET</Tag>
-		<English>Build an Interstellar Trading Post</English>
+		<English>Build [LINK=IMPROVEMENT_TRADING_PLANET]Interstellar Trading Post[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SUPERNOVA_MINE</Tag>
-		<English>Build a Supernova Mine</English>
+		<English>Build [LINK=IMPROVEMENT_SUPERNOVA_MINE]Supernova Mine[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORMED_PLANET</Tag>
-		<English>Terraform a Planet</English>
+		<English>Terraform [LINK=IMPROVEMENT_TERRAFORMED_PLANET]Planet[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BIOTIC_GALAXY</Tag>
-		<English>Terraform a Galaxy</English>
+		<English>Terraform [LINK=IMPROVEMENT_BIOTIC_GALAXY]Galaxy[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HELIOFORM</Tag>
-		<English>Helioform a Brown Dwarf</English>
+		<English>Helioform [LINK=IMPROVEMENT_HELIOFORM]Brown Dwarf[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_INTERSTELLAR_RESEARCH_BASE</Tag>
-		<English>Build an Interstellar Research Base</English>
+		<English>Build [LINK=IMPROVEMENT_INTERSTELLAR_RESEARCH_BASE]Interstellar Research Base[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_INTERGALACTIC_RESEARCH_BASE</Tag>
-		<English>Build an Intergalactic Research Base</English>
+		<English>Build [LINK=IMPROVEMENT_INTERGALACTIC_RESEARCH_BASE]Intergalactic Research Base[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_DISTANT_RESEARCH_BASE</Tag>
-		<English>Build a Distant Research Base</English>
+		<English>Build [LINK=IMPROVEMENT_DISTANT_RESEARCH_BASE]Distant Research Base[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_EXPANDED_HABITAT</Tag>
@@ -1696,43 +1696,43 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_EXPANDED_HABITAT</Tag>
-		<English>Build a Cislunar Expansion Module</English>
+		<English>Build [LINK=IMPROVEMENT_EXPANDED_HABITAT]Cislunar Expansion Module[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SATELLITE_STATION</Tag>
-		<English>Build a Satellite Station</English>
+		<English>Build [LINK=IMPROVEMENT_SATELLITE_STATION]Satellite Station[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ARCOLOGY_MOON</Tag>
-		<English>Build an Arcology Moon</English>
+		<English>Build [LINK=IMPROVEMENT_ARCOLOGY_MOON]Arcology Moon[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_INTERSTELLAR_COLONY</Tag>
-		<English>Build an Interstellar Colony</English>
+		<English>Build [LINK=IMPROVEMENT_INTERSTELLAR_COLONY]Interstellar Colony[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_INTERGALACTIC_COLONY</Tag>
-		<English>Build an Intergalactic Colony</English>
+		<English>Build [LINK=IMPROVEMENT_INTERGALACTIC_COLONY]Intergalactic Colony[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SUPERCLUSTER_COLONY</Tag>
-		<English>Build a Supercluster Colony</English>
+		<English>Build [LINK=IMPROVEMENT_SUPERCLUSTER_COLONY]Supercluster Colony[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_OBSERVABLE_UNIVERSE_COLONY</Tag>
-		<English>Build an Observable Universe Colony</English>
+		<English>Build [LINK=IMPROVEMENT_OBSERVABLE_UNIVERSE_COLONY]Observable Universe Colony[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PARALLEL_UNIVERSE</Tag>
-		<English>Build a Parallel Universe</English>
+		<English>Build [LINK=IMPROVEMENT_PARALLEL_UNIVERSE]Parallel Universe[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TIME_MANIFOLD</Tag>
-		<English>Build a Time Manifold</English>
+		<English>Build [LINK=IMPROVEMENT_TIME_MANIFOLD]Time Manifold[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MERCURY_SOLAR_ARRAY</Tag>
-		<English>Build a Mercury Solar Array</English>
+		<English>Build [LINK=IMPROVEMENT_MERCURY_SOLAR_ARRAY]Mercury Solar Array[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_MERCURY_SOLAR_ARRAY</Tag>
@@ -1744,7 +1744,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MERCURY_COLONY</Tag>
-		<English>Build a Mercury Colony</English>
+		<English>Build [LINK=IMPROVEMENT_MERCURY_COLONY]Mercury Colony[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_MERCURY_COLONY</Tag>
@@ -2459,21 +2459,11 @@
 	<!-- Improvments -->
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LUNAR_BASE_IMPROVEMENT</Tag>
-		<English>Lunar Base</English>
-		<French>
-			<Text>Base Lunaire (Amélioration)</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
+		<English>Build [LINK=IMPROVEMENT_LUNAR_BASE_IMPROVEMENT]Lunar Base[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_BASE_IMPROVEMENT</Tag>
 		<English>Lunar Base</English>
-		<French>
-			<Text>Base Lunaire (Amélioration)</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_BASE_IMPROVEMENT_PEDIA</Tag>
@@ -2481,13 +2471,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LUNAR_OUTPOST</Tag>
-		<English>Lunar Outpost</English>
-		<French>Avant-Poste Lunaire</French>
+		<English>Build [LINK=IMPROVEMENT_LUNAR_OUTPOST]Lunar Outpost[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_OUTPOST</Tag>
 		<English>Lunar Outpost</English>
-		<French>Avant-Poste Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_OUTPOST_PEDIA</Tag>
@@ -2495,21 +2483,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LUNAR_MINE</Tag>
-		<English>Lunar Mine</English>
-		<French>
-			<Text>Mine Lunaire</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
+		<English>Build [LINK=IMPROVEMENT_LUNAR_MINE]Lunar Mine[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_MINE</Tag>
 		<English>Lunar Mine</English>
-		<French>
-			<Text>Mine Lunaire</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_MINE_PEDIA</Tag>
@@ -2517,13 +2495,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LUNAR_MINING_OUTPOST</Tag>
-		<English>Lunar Mining Outpost</English>
-		<French>Avant-Poste minier lunaire</French>
+		<English>Build [LINK=IMPROVEMENT_LUNAR_MINING_OUTPOST]Lunar Mining Outpost[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_MINING_OUTPOST</Tag>
 		<English>Lunar Mining Outpost</English>
-		<French>Avant-Poste minier lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_MINING_OUTPOST_PEDIA</Tag>
@@ -2531,13 +2507,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LUNAR_HABITATION_COMPLEX</Tag>
-		<English>Lunar Habitation Complex</English>
-		<French>Complexe lunaire d'Habitations</French>
+		<English>Build [LINK=IMPROVEMENT_LUNAR_HABITATION_COMPLEX]Lunar Habitation Complex[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_HABITATION_COMPLEX</Tag>
 		<English>Lunar Habitation Complex</English>
-		<French>Complexe lunaire d'Habitations</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_HABITATION_COMPLEX_PEDIA</Tag>

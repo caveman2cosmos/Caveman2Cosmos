@@ -14676,7 +14676,6 @@ m_iConstructPercent(0),
 m_iResearchPercent(0),
 m_iDistanceMaintenancePercent(0),
 m_iNumCitiesMaintenancePercent(0),
-m_iMaxNumCitiesMaintenance(0),
 m_iColonyMaintenancePercent(0),
 m_iMaxColonyMaintenance(0),
 m_iCorporationMaintenancePercent(0),
@@ -14691,7 +14690,6 @@ m_iUnownedTilesPerGameAnimal(0),
 m_iUnownedTilesPerBarbarianUnit(0),
 m_iUnownedWaterTilesPerBarbarianUnit(0),
 m_iUnownedTilesPerBarbarianCity(0),
-m_iBarbarianCreationTurnsElapsed(0),
 m_iBarbarianCityCreationTurnsElapsed(0),
 m_iBarbarianCityCreationProb(0),
 m_iAnimalCombatModifier(0),
@@ -14701,7 +14699,7 @@ m_iAIBarbarianCombatModifier(0),
 m_iStartingDefenseUnits(0),
 m_iStartingWorkerUnits(0),
 m_iStartingExploreUnits(0),
-m_iAIStartingUnitMultiplier(0),
+m_iAIStartingUnitMultiplier(1),
 m_iAIStartingDefenseUnits(0),
 m_iAIStartingWorkerUnits(0),
 m_iAIStartingExploreUnits(0),
@@ -14816,11 +14814,6 @@ int CvHandicapInfo::getNumCitiesMaintenancePercent() const
 	return m_iNumCitiesMaintenancePercent;
 }
 
-int CvHandicapInfo::getMaxNumCitiesMaintenance() const
-{
-	return m_iMaxNumCitiesMaintenance;
-}
-
 int CvHandicapInfo::getColonyMaintenancePercent() const
 {
 	return m_iColonyMaintenancePercent;
@@ -14889,11 +14882,6 @@ int CvHandicapInfo::getUnownedWaterTilesPerBarbarianUnit() const
 int CvHandicapInfo::getUnownedTilesPerBarbarianCity() const
 {
 	return m_iUnownedTilesPerBarbarianCity;
-}
-
-int CvHandicapInfo::getBarbarianCreationTurnsElapsed() const
-{
-	return m_iBarbarianCreationTurnsElapsed;
 }
 
 int CvHandicapInfo::getBarbarianCityCreationTurnsElapsed() const
@@ -15121,7 +15109,6 @@ void CvHandicapInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_iResearchPercent);
 	CheckSum(iSum, m_iDistanceMaintenancePercent);
 	CheckSum(iSum, m_iNumCitiesMaintenancePercent);
-	CheckSum(iSum, m_iMaxNumCitiesMaintenance);
 	CheckSum(iSum, m_iColonyMaintenancePercent);
 	CheckSum(iSum, m_iMaxColonyMaintenance);
 	CheckSum(iSum, m_iCorporationMaintenancePercent);
@@ -15136,7 +15123,6 @@ void CvHandicapInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_iUnownedTilesPerBarbarianUnit);
 	CheckSum(iSum, m_iUnownedWaterTilesPerBarbarianUnit);
 	CheckSum(iSum, m_iUnownedTilesPerBarbarianCity);
-	CheckSum(iSum, m_iBarbarianCreationTurnsElapsed);
 	CheckSum(iSum, m_iBarbarianCityCreationTurnsElapsed);
 	CheckSum(iSum, m_iBarbarianCityCreationProb);
 	CheckSum(iSum, m_iAnimalCombatModifier);
@@ -15208,7 +15194,6 @@ bool CvHandicapInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iResearchPercent, L"iResearchPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iDistanceMaintenancePercent, L"iDistanceMaintenancePercent");
 	pXML->GetOptionalChildXmlValByName(&m_iNumCitiesMaintenancePercent, L"iNumCitiesMaintenancePercent");
-	pXML->GetOptionalChildXmlValByName(&m_iMaxNumCitiesMaintenance, L"iMaxNumCitiesMaintenance");
 	pXML->GetOptionalChildXmlValByName(&m_iColonyMaintenancePercent, L"iColonyMaintenancePercent");
 	pXML->GetOptionalChildXmlValByName(&m_iMaxColonyMaintenance, L"iMaxColonyMaintenance");
 	pXML->GetOptionalChildXmlValByName(&m_iCorporationMaintenancePercent, L"iCorporationMaintenancePercent");
@@ -15223,7 +15208,6 @@ bool CvHandicapInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iUnownedTilesPerBarbarianUnit, L"iUnownedTilesPerBarbarianUnit");
 	pXML->GetOptionalChildXmlValByName(&m_iUnownedWaterTilesPerBarbarianUnit, L"iUnownedWaterTilesPerBarbarianUnit");
 	pXML->GetOptionalChildXmlValByName(&m_iUnownedTilesPerBarbarianCity, L"iUnownedTilesPerBarbarianCity");
-	pXML->GetOptionalChildXmlValByName(&m_iBarbarianCreationTurnsElapsed, L"iBarbarianCreationTurnsElapsed");
 	pXML->GetOptionalChildXmlValByName(&m_iBarbarianCityCreationTurnsElapsed, L"iBarbarianCityCreationTurnsElapsed");
 	pXML->GetOptionalChildXmlValByName(&m_iBarbarianCityCreationProb, L"iBarbarianCityCreationProb");
 	pXML->GetOptionalChildXmlValByName(&m_iAnimalCombatModifier, L"iAnimalBonus");
@@ -15333,7 +15317,6 @@ void CvHandicapInfo::copyNonDefaults(CvHandicapInfo* pClassInfo, CvXMLLoadUtilit
 	if (getResearchPercent() == iDefault) m_iResearchPercent = pClassInfo->getResearchPercent();
 	if (getDistanceMaintenancePercent() == iDefault) m_iDistanceMaintenancePercent = pClassInfo->getDistanceMaintenancePercent();
 	if (getNumCitiesMaintenancePercent() == iDefault) m_iNumCitiesMaintenancePercent = pClassInfo->getNumCitiesMaintenancePercent();
-	if (getMaxNumCitiesMaintenance() == iDefault) m_iMaxNumCitiesMaintenance = pClassInfo->getMaxNumCitiesMaintenance();
 	if (getColonyMaintenancePercent() == iDefault) m_iColonyMaintenancePercent = pClassInfo->getColonyMaintenancePercent();
 	if (getMaxColonyMaintenance() == iDefault) m_iMaxColonyMaintenance = pClassInfo->getMaxColonyMaintenance();
 	if (getCorporationMaintenancePercent() == iDefault) m_iCorporationMaintenancePercent = pClassInfo->getCorporationMaintenancePercent();
@@ -15348,7 +15331,6 @@ void CvHandicapInfo::copyNonDefaults(CvHandicapInfo* pClassInfo, CvXMLLoadUtilit
 	if (getUnownedTilesPerBarbarianUnit() == iDefault) m_iUnownedTilesPerBarbarianUnit = pClassInfo->getUnownedTilesPerBarbarianUnit();
 	if (getUnownedWaterTilesPerBarbarianUnit() == iDefault) m_iUnownedWaterTilesPerBarbarianUnit = pClassInfo->getUnownedWaterTilesPerBarbarianUnit();
 	if (getUnownedTilesPerBarbarianCity() == iDefault) m_iUnownedTilesPerBarbarianCity = pClassInfo->getUnownedTilesPerBarbarianCity();
-	if (getBarbarianCreationTurnsElapsed() == iDefault) m_iBarbarianCreationTurnsElapsed = pClassInfo->getBarbarianCreationTurnsElapsed();
 	if (getBarbarianCityCreationTurnsElapsed() == iDefault) m_iBarbarianCityCreationTurnsElapsed = pClassInfo->getBarbarianCityCreationTurnsElapsed();
 	if (getBarbarianCityCreationProb() == iDefault) m_iBarbarianCityCreationProb = pClassInfo->getBarbarianCityCreationProb();
 	if (getAnimalCombatModifier() == iDefault) m_iAnimalCombatModifier = pClassInfo->getAnimalCombatModifier();
@@ -15531,23 +15513,12 @@ m_iHurryPercent(0),
 m_iHurryConscriptAngerPercent(0),
 m_iInflationOffset(0),
 m_iInflationPercent(0),
-//ls612: Begin
-m_iGoldModifier(0), // Toffer - ToDo: removed usage of this, should remove this residuals too.
 m_iOccupationTimePopulationPercent(0),
-//ls612: End
 m_iVictoryDelayPercent(0),
 m_iNumTurnIncrements(0),
 m_pGameTurnInfo(NULL),
 m_bEndDatesCalculated(false)
-/************************************************************************************************/
-/* Afforess					  Start		 12/13/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 ,m_iUnitMovementPercent(0)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 //TB GameSpeed begin
 ,m_iTraitGainPercent(0)
 //TB GameSpeed end
@@ -15667,18 +15638,10 @@ int CvGameSpeedInfo::getInflationPercent() const
 	return m_iInflationPercent;
 }
 
-//ls612: Begin
-int CvGameSpeedInfo::getGoldModifier() const
-{
-	// Toffer - ToDo: removed usage of this, should remove this residuals too.
-	return m_iGoldModifier;
-}
-
 int CvGameSpeedInfo::getOccupationTimePopulationPercent() const
 {
 	return m_iOccupationTimePopulationPercent;
 }
-//ls612: End
 
 int CvGameSpeedInfo::getVictoryDelayPercent() const
 {
@@ -15690,18 +15653,10 @@ int CvGameSpeedInfo::getNumTurnIncrements() const
 	return m_iNumTurnIncrements;
 }
 
-/************************************************************************************************/
-/* Afforess					  Start		 12/13/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 int CvGameSpeedInfo::getUnitMovementPercent() const
 {
 	return m_iUnitMovementPercent;
 }
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 CvDateIncrement& CvGameSpeedInfo::getDateIncrement(int iIndex)
 {
@@ -15777,10 +15732,7 @@ bool CvGameSpeedInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iHurryConscriptAngerPercent, L"iHurryConscriptAngerPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iInflationOffset, L"iInflationOffset");
 	pXML->GetOptionalChildXmlValByName(&m_iInflationPercent, L"iInflationPercent");
-	//ls612: Begin
-	pXML->GetOptionalChildXmlValByName(&m_iGoldModifier, L"iGoldModifier"); // Toffer - ToDo: removed usage of this, should remove this residuals too.
 	pXML->GetOptionalChildXmlValByName(&m_iOccupationTimePopulationPercent, L"iOccupationTurnsPopulationPercent");
-	//ls612: End
 	pXML->GetOptionalChildXmlValByName(&m_iVictoryDelayPercent, L"iVictoryDelayPercent");
 
 	if (pXML->TryMoveToXmlFirstChild(L"GameTurnInfos"))
@@ -15877,10 +15829,7 @@ void CvGameSpeedInfo::copyNonDefaults(CvGameSpeedInfo* pClassInfo, CvXMLLoadUtil
 	if (getHurryConscriptAngerPercent() == iDefault) m_iHurryConscriptAngerPercent = pClassInfo->getHurryConscriptAngerPercent();
 	if (getInflationOffset() == iDefault) m_iInflationOffset = pClassInfo->getInflationOffset();
 	if (getInflationPercent() == iDefault) m_iInflationPercent = pClassInfo->getInflationPercent();
-	//ls612: Begin
-	if (getGoldModifier() == iDefault) m_iGoldModifier = pClassInfo->getGoldModifier();
 	if (getOccupationTimePopulationPercent() == iDefault) m_iOccupationTimePopulationPercent = pClassInfo->getOccupationTimePopulationPercent();
-	//ls612: End
 	if (getVictoryDelayPercent() == iDefault) m_iVictoryDelayPercent = pClassInfo->getVictoryDelayPercent();
 
 	if (getNumTurnIncrements() == iDefault)
@@ -15923,10 +15872,7 @@ void CvGameSpeedInfo::getCheckSum(unsigned int &iSum)
 	CheckSum(iSum, m_iHurryConscriptAngerPercent);
 	CheckSum(iSum, m_iInflationOffset);
 	CheckSum(iSum, m_iInflationPercent);
-	//ls612: Begin
-	CheckSum(iSum, m_iGoldModifier);
 	CheckSum(iSum, m_iOccupationTimePopulationPercent);
-	//ls612: End
 	CheckSum(iSum, m_iVictoryDelayPercent);
 
 	for (int j = 0; j < m_iNumTurnIncrements; j++)
@@ -17320,8 +17266,6 @@ m_paImprovementBonus(NULL)
 /************************************************************************************************/
 ,m_bPeakMakesValid(false)
 ,m_iHealthPercent(0)
-,m_bDepletedMine(false)
-,m_iDepletionRand(0)
 ,m_iPrereqTech(NO_TECH)
 //,m_ppiTraitYieldChanges(NULL)
 /************************************************************************************************/
@@ -17830,21 +17774,11 @@ int CvImprovementInfo::getHealthPercent() const
 	return m_iHealthPercent;
 }
 
-bool CvImprovementInfo::isDepletedMine() const
-{
-	return m_bDepletedMine;
-}
-
 int CvImprovementInfo::getImprovementBonusDepletionRand(int i) const
 {
 	FAssertMsg(i < GC.getNumBonusInfos(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 	return m_paImprovementBonus[i].m_iDepletionRand;
-}
-
-int CvImprovementInfo::getDepletionRand() const
-{
-	return m_iDepletionRand;
 }
 
 int CvImprovementInfo::getPrereqTech() const
@@ -18048,7 +17982,6 @@ void CvImprovementInfo::getCheckSum(unsigned int &iSum)
 
 	CheckSum(iSum, m_iHealthPercent);
 	CheckSum(iSum, m_bPeakMakesValid);
-	CheckSum(iSum, m_bDepletedMine);
 	CheckSum(iSum, m_iDepletionRand);
 	CheckSum(iSum, m_iPrereqTech);
 
@@ -18295,7 +18228,6 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iHealthPercent, L"iHealthPercent");
 	m_iHealthPercent += iHealth * 100;
 	pXML->GetOptionalChildXmlValByName(&m_bPeakMakesValid, L"bPeakMakesValid");
-	pXML->GetOptionalChildXmlValByName(&m_bDepletedMine, L"bDepletedMine");
 	pXML->GetOptionalChildXmlValByName(&m_iDepletionRand, L"iDepletionRand");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqTech");
@@ -18594,7 +18526,6 @@ void CvImprovementInfo::copyNonDefaults(CvImprovementInfo* pClassInfo, CvXMLLoad
 /*																							  */
 /************************************************************************************************/
 	if (isPeakMakesValid() == bDefault) m_bPeakMakesValid = pClassInfo->isPeakMakesValid();
-	if (isDepletedMine() == bDefault) m_bDepletedMine = pClassInfo->isDepletedMine();
 	if (getHealthPercent() == iDefault) m_iHealthPercent = pClassInfo->getHealthPercent();
 	if (getPrereqTech() == NO_TECH) m_iPrereqTech = pClassInfo->getPrereqTech();
 
@@ -25929,7 +25860,7 @@ int CvTraitInfo::getHealth() const
 	{
 		if (isNegativeTrait() && m_iHealth > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iHealth < 0)
 		{
@@ -25945,7 +25876,7 @@ int CvTraitInfo::getHappiness() const
 	{
 		if (isNegativeTrait() && m_iHappiness > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iHappiness < 0)
 		{
@@ -25961,7 +25892,7 @@ int CvTraitInfo::getMaxAnarchy() const
 	{
 		if (isNegativeTrait() && m_iMaxAnarchy > -1)
 		{
-				return -1;
+			return -1;
 		}
 	}
 	return m_iMaxAnarchy;
@@ -25973,7 +25904,7 @@ int CvTraitInfo::getUpkeepModifier() const
 	{
 		if (isNegativeTrait() && m_iUpkeepModifier < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iUpkeepModifier > 0)
 		{
@@ -25989,7 +25920,7 @@ int CvTraitInfo::getLevelExperienceModifier() const
 	{
 		if (isNegativeTrait() && m_iLevelExperienceModifier < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iLevelExperienceModifier > 0)
 		{
@@ -26005,7 +25936,7 @@ int CvTraitInfo::getGreatPeopleRateModifier() const
 	{
 		if (isNegativeTrait() && m_iGreatPeopleRateModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iGreatPeopleRateModifier < 0)
 		{
@@ -26021,7 +25952,7 @@ int CvTraitInfo::getGreatGeneralRateModifier() const
 	{
 		if (isNegativeTrait() && m_iGreatGeneralRateModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iGreatGeneralRateModifier < 0)
 		{
@@ -26037,7 +25968,7 @@ int CvTraitInfo::getDomesticGreatGeneralRateModifier() const
 	{
 		if (isNegativeTrait() && m_iDomesticGreatGeneralRateModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iDomesticGreatGeneralRateModifier < 0)
 		{
@@ -26053,7 +25984,7 @@ int CvTraitInfo::getMaxGlobalBuildingProductionModifier() const
 	{
 		if (isNegativeTrait() && m_iMaxGlobalBuildingProductionModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iMaxGlobalBuildingProductionModifier < 0)
 		{
@@ -26069,7 +26000,7 @@ int CvTraitInfo::getMaxTeamBuildingProductionModifier() const
 	{
 		if (isNegativeTrait() && m_iMaxTeamBuildingProductionModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iMaxTeamBuildingProductionModifier < 0)
 		{
@@ -26085,7 +26016,7 @@ int CvTraitInfo::getMaxPlayerBuildingProductionModifier() const
 	{
 		if (isNegativeTrait() && m_iMaxPlayerBuildingProductionModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iMaxPlayerBuildingProductionModifier < 0)
 		{
@@ -26108,7 +26039,7 @@ int CvTraitInfo::getRevIdxLocal() const
 	{
 		if (isNegativeTrait() && m_iRevIdxLocal < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iRevIdxLocal > 0)
 		{
@@ -26125,7 +26056,7 @@ int CvTraitInfo::getRevIdxNational() const
 	{
 		if (isNegativeTrait() && m_iRevIdxNational < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iRevIdxNational > 0)
 		{
@@ -26142,7 +26073,7 @@ int CvTraitInfo::getRevIdxDistanceModifier() const
 	{
 		if (isNegativeTrait() && m_iRevIdxDistanceModifier < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iRevIdxDistanceModifier > 0)
 		{
@@ -26159,7 +26090,7 @@ int CvTraitInfo::getRevIdxHolyCityGood() const
 	{
 		if (isNegativeTrait() && m_iRevIdxHolyCityGood > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iRevIdxHolyCityGood < 0)
 		{
@@ -26176,7 +26107,7 @@ int CvTraitInfo::getRevIdxHolyCityBad() const
 	{
 		if (isNegativeTrait() && m_iRevIdxHolyCityBad < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iRevIdxHolyCityBad > 0)
 		{
@@ -26193,7 +26124,7 @@ float CvTraitInfo::getRevIdxNationalityMod() const
 	{
 		if (isNegativeTrait() && m_fRevIdxNationalityMod < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_fRevIdxNationalityMod > 0)
 		{
@@ -26210,7 +26141,7 @@ float CvTraitInfo::getRevIdxBadReligionMod() const
 	{
 		if (isNegativeTrait() && m_fRevIdxBadReligionMod < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_fRevIdxBadReligionMod > 0)
 		{
@@ -26227,7 +26158,7 @@ float CvTraitInfo::getRevIdxGoodReligionMod() const
 	{
 		if (isNegativeTrait() && m_fRevIdxGoodReligionMod > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_fRevIdxGoodReligionMod < 0)
 		{
@@ -26465,7 +26396,7 @@ int CvTraitInfo::getWarWearinessAccumulationModifier() const
 	{
 		if (isNegativeTrait() && m_iWarWearinessAccumulationModifier < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iWarWearinessAccumulationModifier > 0)
 		{
@@ -26481,7 +26412,7 @@ int CvTraitInfo::getCivicAnarchyTimeModifier() const
 	{
 		if (isNegativeTrait() && m_iCivicAnarchyTimeModifier < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iCivicAnarchyTimeModifier > 0)
 		{
@@ -26497,7 +26428,7 @@ int CvTraitInfo::getReligiousAnarchyTimeModifier() const
 	{
 		if (isNegativeTrait() && m_iReligiousAnarchyTimeModifier < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iReligiousAnarchyTimeModifier > 0)
 		{
@@ -26513,7 +26444,7 @@ int CvTraitInfo::getImprovementUpgradeRateModifier() const
 	{
 		if (isNegativeTrait() && m_iImprovementUpgradeRateModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iImprovementUpgradeRateModifier < 0)
 		{
@@ -26529,7 +26460,7 @@ int CvTraitInfo::getWorkerSpeedModifier() const
 	{
 		if (isNegativeTrait() && m_iWorkerSpeedModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iWorkerSpeedModifier < 0)
 		{
@@ -26545,7 +26476,7 @@ int CvTraitInfo::getMaxConscript() const
 	{
 		if (isNegativeTrait() && m_iMaxConscript > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iMaxConscript < 0)
 		{
@@ -26561,7 +26492,7 @@ int CvTraitInfo::getDistanceMaintenanceModifier() const
 	{
 		if (isNegativeTrait() && m_iDistanceMaintenanceModifier < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iDistanceMaintenanceModifier > 0)
 		{
@@ -26577,7 +26508,7 @@ int CvTraitInfo::getNumCitiesMaintenanceModifier() const
 	{
 		if (isNegativeTrait() && m_iNumCitiesMaintenanceModifier < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iNumCitiesMaintenanceModifier > 0)
 		{
@@ -26593,7 +26524,7 @@ int CvTraitInfo::getCorporationMaintenanceModifier() const
 	{
 		if (isNegativeTrait() && m_iCorporationMaintenanceModifier < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iCorporationMaintenanceModifier > 0)
 		{
@@ -26609,7 +26540,7 @@ int CvTraitInfo::getStateReligionGreatPeopleRateModifier() const
 	{
 		if (isNegativeTrait() && m_iStateReligionGreatPeopleRateModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iStateReligionGreatPeopleRateModifier < 0)
 		{
@@ -26625,7 +26556,7 @@ int CvTraitInfo::getFreeExperience() const
 	{
 		if (isNegativeTrait() && m_iFreeExperience > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iFreeExperience < 0)
 		{
@@ -26641,7 +26572,7 @@ int CvTraitInfo::getBaseFreeUnits() const
 	{
 		if (isNegativeTrait() && m_iBaseFreeUnits > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iBaseFreeUnits < 0)
 		{
@@ -26657,7 +26588,7 @@ int CvTraitInfo::getBaseFreeMilitaryUnits() const
 	{
 		if (isNegativeTrait() && m_iBaseFreeMilitaryUnits > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iBaseFreeMilitaryUnits < 0)
 		{
@@ -26673,7 +26604,7 @@ int CvTraitInfo::getFreeUnitsPopulationPercent() const
 	{
 		if (isNegativeTrait() && m_iFreeUnitsPopulationPercent > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iFreeUnitsPopulationPercent < 0)
 		{
@@ -26689,7 +26620,7 @@ int CvTraitInfo::getFreeMilitaryUnitsPopulationPercent() const
 	{
 		if (isNegativeTrait() && m_iFreeMilitaryUnitsPopulationPercent > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iFreeMilitaryUnitsPopulationPercent < 0)
 		{
@@ -26705,7 +26636,7 @@ int CvTraitInfo::getGoldPerUnit() const
 	{
 		if (isNegativeTrait() && m_iGoldPerUnit < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iGoldPerUnit > 0)
 		{
@@ -26721,7 +26652,7 @@ int CvTraitInfo::getGoldPerMilitaryUnit() const
 	{
 		if (isNegativeTrait() && m_iGoldPerMilitaryUnit < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iGoldPerMilitaryUnit > 0)
 		{
@@ -26737,7 +26668,7 @@ int CvTraitInfo::getHappyPerMilitaryUnit() const
 	{
 		if (isNegativeTrait() && m_iHappyPerMilitaryUnit > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iHappyPerMilitaryUnit < 0)
 		{
@@ -26753,7 +26684,7 @@ int CvTraitInfo::getLargestCityHappiness() const
 	{
 		if (isNegativeTrait() && m_iLargestCityHappiness > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iLargestCityHappiness < 0)
 		{
@@ -26769,7 +26700,7 @@ int CvTraitInfo::getFreeSpecialist() const
 	{
 		if (isNegativeTrait() && m_iFreeSpecialist > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iFreeSpecialist < 0)
 		{
@@ -26785,7 +26716,7 @@ int CvTraitInfo::getTradeRoutes() const
 	{
 		if (isNegativeTrait() && m_iTradeRoutes > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iTradeRoutes < 0)
 		{
@@ -26801,7 +26732,7 @@ int CvTraitInfo::getStateReligionHappiness() const
 	{
 		if (isNegativeTrait() && m_iStateReligionHappiness > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iStateReligionHappiness < 0)
 		{
@@ -26817,7 +26748,7 @@ int CvTraitInfo::getNonStateReligionHappiness() const
 	{
 		if (isNegativeTrait() && m_iNonStateReligionHappiness > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iNonStateReligionHappiness < 0)
 		{
@@ -26833,7 +26764,7 @@ int CvTraitInfo::getStateReligionUnitProductionModifier() const
 	{
 		if (isNegativeTrait() && m_iStateReligionUnitProductionModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iStateReligionUnitProductionModifier < 0)
 		{
@@ -26849,7 +26780,7 @@ int CvTraitInfo::getStateReligionBuildingProductionModifier() const
 	{
 		if (isNegativeTrait() && m_iStateReligionBuildingProductionModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iStateReligionBuildingProductionModifier < 0)
 		{
@@ -26865,7 +26796,7 @@ int CvTraitInfo::getStateReligionFreeExperience() const
 	{
 		if (isNegativeTrait() && m_iStateReligionFreeExperience > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iStateReligionFreeExperience < 0)
 		{
@@ -26881,7 +26812,7 @@ int CvTraitInfo::getExpInBorderModifier() const
 	{
 		if (isNegativeTrait() && m_iExpInBorderModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iExpInBorderModifier < 0)
 		{
@@ -26897,7 +26828,7 @@ int CvTraitInfo::getCityDefenseBonus() const
 	{
 		if (isNegativeTrait() && m_iCityDefenseBonus > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iCityDefenseBonus < 0)
 		{
@@ -26913,7 +26844,7 @@ int CvTraitInfo::getMilitaryProductionModifier() const
 	{
 		if (isNegativeTrait() && m_iMilitaryProductionModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iMilitaryProductionModifier < 0)
 		{
@@ -26929,7 +26860,7 @@ int CvTraitInfo::getAttitudeModifier() const
 	{
 		if (isNegativeTrait() && m_iAttitudeModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iAttitudeModifier < 0)
 		{
@@ -26950,7 +26881,7 @@ int CvTraitInfo::getEspionageDefense() const
 	{
 		if (isNegativeTrait() && m_iEspionageDefense > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iEspionageDefense < 0)
 		{
@@ -26966,7 +26897,7 @@ int CvTraitInfo::getMinAnarchy() const
 	{
 		if (isNegativeTrait() && m_iMinAnarchy < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iMinAnarchy > 0)
 		{
@@ -27126,7 +27057,7 @@ int CvTraitInfo::getCoastalTradeRoutes() const
 	{
 		if (isNegativeTrait() && m_iCoastalTradeRoutes > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iCoastalTradeRoutes < 0)
 		{
@@ -27143,7 +27074,7 @@ int CvTraitInfo::getGlobalPopulationgrowthratepercentage() const
 	{
 		if (isNegativeTrait() && m_iGlobalPopulationgrowthratepercentage < 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iGlobalPopulationgrowthratepercentage > 0)
 		{
@@ -27163,7 +27094,7 @@ int CvTraitInfo::getCityStartCulture(bool bForLoad) const
 	{
 		if (isNegativeTrait() && m_iCityStartCulture > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iCityStartCulture < 0)
 		{
@@ -27179,7 +27110,7 @@ int CvTraitInfo::getGlobalAirUnitCapacity() const
 	{
 		if (isNegativeTrait() && m_iGlobalAirUnitCapacity > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iGlobalAirUnitCapacity < 0)
 		{
@@ -27195,7 +27126,7 @@ int CvTraitInfo::getCapitalXPModifier() const
 	{
 		if (isNegativeTrait() && m_iCapitalXPModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iCapitalXPModifier < 0)
 		{
@@ -27211,7 +27142,7 @@ int CvTraitInfo::getHolyCityofStateReligionXPModifier() const
 	{
 		if (isNegativeTrait() && m_iHolyCityofStateReligionXPModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iHolyCityofStateReligionXPModifier < 0)
 		{
@@ -27227,7 +27158,7 @@ int CvTraitInfo::getHolyCityofNonStateReligionXPModifier() const
 	{
 		if (isNegativeTrait() && m_iHolyCityofNonStateReligionXPModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iHolyCityofNonStateReligionXPModifier < 0)
 		{
@@ -27243,7 +27174,7 @@ int CvTraitInfo::getBonusPopulationinNewCities() const
 	{
 		if (isNegativeTrait() && m_iBonusPopulationinNewCities > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iBonusPopulationinNewCities < 0)
 		{
@@ -27259,7 +27190,7 @@ int CvTraitInfo::getMissileRange() const
 	{
 		if (isNegativeTrait() && m_iMissileRange > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iMissileRange < 0)
 		{
@@ -27275,7 +27206,7 @@ int CvTraitInfo::getFlightOperationRange() const
 	{
 		if (isNegativeTrait() && m_iFlightOperationRange > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iFlightOperationRange < 0)
 		{
@@ -27291,7 +27222,7 @@ int CvTraitInfo::getNavalCargoSpace() const
 	{
 		if (isNegativeTrait() && m_iNavalCargoSpace > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iNavalCargoSpace < 0)
 		{
@@ -27307,7 +27238,7 @@ int CvTraitInfo::getMissileCargoSpace() const
 	{
 		if (isNegativeTrait() && m_iMissileCargoSpace > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iMissileCargoSpace < 0)
 		{
@@ -27324,7 +27255,7 @@ int CvTraitInfo::getNationalCaptureProbabilityModifier() const
 	{
 		if (isNegativeTrait() && m_iNationalCaptureProbabilityModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iNationalCaptureProbabilityModifier < 0)
 		{
@@ -27340,7 +27271,7 @@ int CvTraitInfo::getNationalCaptureResistanceModifier() const
 	{
 		if (isNegativeTrait() && m_iNationalCaptureResistanceModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iNationalCaptureResistanceModifier < 0)
 		{
@@ -27357,7 +27288,7 @@ int CvTraitInfo::getStateReligionSpreadProbabilityModifier() const
 	{
 		if (isNegativeTrait() && m_iStateReligionSpreadProbabilityModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iStateReligionSpreadProbabilityModifier < 0)
 		{
@@ -27373,7 +27304,7 @@ int CvTraitInfo::getNonStateReligionSpreadProbabilityModifier() const
 	{
 		if (isNegativeTrait() && m_iNonStateReligionSpreadProbabilityModifier > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iNonStateReligionSpreadProbabilityModifier < 0)
 		{
@@ -27389,7 +27320,7 @@ int CvTraitInfo::getFreedomFighterChange() const
 	{
 		if (isNegativeTrait() && m_iFreedomFighterChange > 0)
 		{
-				return 0;
+			return 0;
 		}
 		else if (!isNegativeTrait() && m_iFreedomFighterChange < 0)
 		{
@@ -27581,7 +27512,7 @@ int CvTraitInfo::getNumNotOnGameOptions() const
 	return (int)m_aiNotOnGameOptions.size();
 }
 
-bool CvTraitInfo::isNotOnGameOption(int i)
+bool CvTraitInfo::isNotOnGameOption(int i) const
 {
 	FAssert (i > -1 && i < GC.getNumGameOptions());
 	if (find(m_aiNotOnGameOptions.begin(), m_aiNotOnGameOptions.end(), i) == m_aiNotOnGameOptions.end())
@@ -27601,7 +27532,7 @@ int CvTraitInfo::getNumOnGameOptions() const
 	return (int)m_aiOnGameOptions.size();
 }
 
-bool CvTraitInfo::isOnGameOption(int i)
+bool CvTraitInfo::isOnGameOption(int i) const
 {
 	FAssert (i > -1 && i < GC.getNumGameOptions());
 	if (find(m_aiOnGameOptions.begin(), m_aiOnGameOptions.end(), i) == m_aiOnGameOptions.end())
@@ -27610,6 +27541,49 @@ bool CvTraitInfo::isOnGameOption(int i)
 	}
 	return true;
 }
+
+bool CvTraitInfo::isValidTrait(bool bGameStart) const
+{
+	for (int iI = 0; iI < GC.getNumGameOptionInfos(); iI++)
+	{
+		if (GC.getGameINLINE().isOption((GameOptionTypes)iI))
+		{
+			if (isNotOnGameOption(iI)) return false;
+		}
+		else if (isOnGameOption(iI)) return false;
+	}
+
+	if (bGameStart && isBarbarianSelectionOnly())
+	{
+		return true;
+	}
+
+	if (isNegativeTrait())
+	{
+		if (GC.getGameINLINE().isOption(GAMEOPTION_NO_NEGATIVE_TRAITS))
+		{
+			return false;
+		}
+	}
+	else if (bGameStart && GC.getGameINLINE().isOption(GAMEOPTION_START_NO_POSITIVE_TRAITS))
+	{
+		return false;
+	}
+
+	if (GC.getGameINLINE().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))
+	{
+		if (getLinePriority() == 0)
+		{
+			return false;
+		}
+	}
+	else if (getLinePriority() != 0)
+	{
+		return false;
+	}
+	return true;
+}
+
 //Arrays
 int CvTraitInfo::getSpecialistYieldChange(int i, int j) const
 {
@@ -39760,91 +39734,10 @@ void CvMainMenuInfo::copyNonDefaults(CvMainMenuInfo* pClassInfo, CvXMLLoadUtilit
 }
 
 /************************************************************************************************/
-/* MODULAR_LOADING_CONTROL				 10/25/07								MRGENIE	  */
+/* MODULAR_LOADING_CONTROL				 10/24/07								MRGENIE	  */
 /*																							  */
 /*																							  */
 /************************************************************************************************/
-// Python Modular Loading
-CvPythonModulesInfo::CvPythonModulesInfo():
-m_bMainInterfaceScreen(false),
-m_bCivicScreen(false),
-m_bCorporationScreen(false),
-m_bDomesticAdvisor(false),
-m_bEspionageAdvisor(false),
-m_bForeignAdvisor(false),
-m_bMilitaryAdvisor(false),
-m_bVictoryScreen(false),
-m_iScreen(0)
-{
-}
-
-CvPythonModulesInfo::~CvPythonModulesInfo()
-{
-}
-
-bool CvPythonModulesInfo::isMainInterfaceScreen()
-{
-	return m_bMainInterfaceScreen;
-}
-
-bool CvPythonModulesInfo::isCivicScreen()
-{
-	return m_bCivicScreen;
-}
-
-bool CvPythonModulesInfo::isCorporationScreen()
-{
-	return m_bCorporationScreen;
-}
-
-bool CvPythonModulesInfo::isDomesticAdvisor()
-{
-	return m_bDomesticAdvisor;
-}
-
-bool CvPythonModulesInfo::isEspionageAdvisor()
-{
-	return m_bEspionageAdvisor;
-}
-
-bool CvPythonModulesInfo::isForeignAdvisor()
-{
-	return m_bForeignAdvisor;
-}
-
-bool CvPythonModulesInfo::isMilitaryAdvisor()
-{
-	return m_bMilitaryAdvisor;
-}
-
-bool CvPythonModulesInfo::isVictoryScreen()
-{
-	return m_bVictoryScreen;
-}
-
-int CvPythonModulesInfo::getScreen()
-{
-	return m_iScreen;
-}
-
-bool CvPythonModulesInfo::read(CvXMLLoadUtility* pXML)
-{
-	if (!CvInfoBase::read(pXML))
-	{
-		return false;
-	}
-	pXML->GetOptionalChildXmlValByName(&m_bMainInterfaceScreen, L"bMainInterfaceScreen");
-	pXML->GetOptionalChildXmlValByName(&m_bCivicScreen, L"bCivicScreen");
-	pXML->GetOptionalChildXmlValByName(&m_bCorporationScreen, L"bCorporationScreen");
-	pXML->GetOptionalChildXmlValByName(&m_bDomesticAdvisor, L"bDomesticAdvisor");
-	pXML->GetOptionalChildXmlValByName(&m_bEspionageAdvisor, L"bEspionageAdvisor");
-	pXML->GetOptionalChildXmlValByName(&m_bForeignAdvisor, L"bForeignAdvisor");
-	pXML->GetOptionalChildXmlValByName(&m_bMilitaryAdvisor, L"bMilitaryAdvisor");
-	pXML->GetOptionalChildXmlValByName(&m_bVictoryScreen, L"bVictoryScreen");
-	pXML->GetOptionalChildXmlValByName(&m_iScreen, L"iScreen");
-	return true;
-}
-
 // MLF loading
 CvModLoadControlInfo::CvModLoadControlInfo():
 m_bLoad(NULL),

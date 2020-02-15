@@ -35,6 +35,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_12</Tag>
 		<English>*BUG Hint*: Animals can enter your lands now unless you have the 'Animals Stay Out!' game option ON.  However, they can never capture a city, so it can be worth the risk to leave your city undefended and use your warrior for early exploration.</English>
+		<French>*Conseils du BUG*: Les animaux peuvent entrer dans vos terres maintenant, à moins que vous ne disposiez de l'option "Les animaux restent dehors!"  activée. Cependant, ils ne peuvent jamais capturer une ville, il peut donc être intéressant de laisser votre ville sans défense et d'utiliser votre guerrier pour une exploration précoce.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_13</Tag>
@@ -368,6 +369,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_21</Tag>
 		<English>C2C: Build other buildings or units on top of already building the Captured Fire wonder. Once you unlock civics finish building the Captured Fire wonder and you can switch over to the tech during a free Golden Age without an anarchy penalty for switching over.</English>
+		<French>C2C: Construisez d'autres bâtiments ou unités au-dessus de la construction de la merveille de la maîtrise du feu. Une fois que vous avez débloqué les doctrines, terminez la construction de la merveille de la maîtrise du feu et vous pouvez passer à la technologie pendant un âge d'or gratuit sans pénalité d'anarchie pour le basculement.</French>
 		<Polish>C2C: Buduj jednostki i budowle dopiero wtedy gdy ukończysz Mieszkania w Jaskiniach. Kiedy tylko odblokujesz Tradycję Mowy, ukończ Mieszkania w Jaskiniach, dzięki temu otrzymasz Złoty Wiek i będziesz mógł zmieniać doktryny bez anarchii.</Polish>
 	</TEXT>
 	<TEXT>
@@ -584,21 +586,25 @@
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_46</Tag>
 		<English>C2C: Education is a new concept in C2C. Having more Education can help reduce crime, flammability and disease, but it will also give you more War Weariness.</English>
+		<French>C2C: L'éducation est un nouveau concept dans C2C. Avoir plus d'éducation peut aider à réduire la criminalité, le risque d'incendies et les maladies, mais cela vous donnera également plus de mécontentement lié à la guerre.</French>
 		<Polish>C2C: Edukacja to nowe system w C2C. Zwiększając edukacje swojego społeczeństwa jednocześnie zmniejszasz przestępczość, zagrożenie pożarowe i chorobowe. Niestety niezadowolenie z wojen wzrasta.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_47</Tag>
 		<English>C2C: Pests are a new concept in C2C. These appear based on your city size and what resouces you have access to. Unlike disease or crime, there is no pest property to lower. Thus they truly are PESTS!</English>
+		<French>C2C: Les 'Parasites' constituent un nouveau concept dans C2C. Ceux-ci apparaissent en fonction de la taille de votre ville et des ressources auxquelles vous avez accès. Contrairement à la maladie ou au crime, il n'y a pas de propriété concernant les parasites, que l'on peut faire baisser . Ils sont donc vraiment des PESTES!</French>
 		<Polish>C2C: Szkodniki to nowy system w C2C. Szkodniki bazują na wielkości twojego miasta oraz na dostępie do surowców. W przeciwieństwie do przestępczości i chorób nie da się zmniejszyć lub usunąć szkodników z miasta.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_48</Tag>
 		<English>C2C: Many of our tech audio quotes have been read by people on YouTube such as Grimith, Gnarlo and The Last Beluga.</English>
+		<French>C2C: Beaucoup de nos citations audio des technologies ont été lues par des gens sur YouTube tels que Grimith, Gnarlo et The Last Beluga.</French>
 		<Polish>C2C: Wiele z naszych audio cytatów zostało nagranych przez graczy z YouTube, takich jak Grimith, Gnarlo czy The Last Beluga.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_49</Tag>
 		<English>C2C: Storytellers can build special Dance buildings. They can give you the early game boost you need to get ahead.</English>
+		<French>C2C: Les conteurs d'hisoires peuvent construire des bâtiments de danse spéciaux. Ils peuvent vous donner le coup de pouce dont vous avez besoin pour avancer.</French>
 		<Polish>C2C: Opowiadacze mogą "budować" specjalne budynki-tańce. Dzięki nim możesz zwiększyć rozwój swoich miast na wczesnym etapie rozgrywki.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1812,5 +1818,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_X</Tag>
 		<English>Caveman2Cosmos:</English>
+		<French>Caveman2Cosmos:</French>
 	</TEXT>
 </Civ4GameText>

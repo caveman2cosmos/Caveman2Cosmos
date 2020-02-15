@@ -28610,8 +28610,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iCost>300000</iCost>
-			<PrereqTech>TECH_ASCENSION</PrereqTech>
+			<iCost>237240</iCost>
+			<PrereqTech>TECH_OMEGA_POINT</PrereqTech>
 			<fVisibilityPriority>10000</fVisibilityPriority>
 			<Strategy>TXT_KEY_BUILDING_ASCENSION_GATE_STRATEGY</Strategy>
 			<bCenterInCity>1</bCenterInCity>
@@ -28624,22 +28624,24 @@
 			<ConstructSound>AS2D_BUILD_ACCELERATOR</ConstructSound>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<bForceOverwrite>1</bForceOverwrite>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PARADISE_PLANET</BuildingClassType>
-					<iNumBuildingNeeded>4</iNumBuildingNeeded>
+					<BuildingClassType>BUILDINGCLASS_UNOBTAINIUM</BuildingClassType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_UNIVERSE</BuildingClassType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuildingClass>
 			</PrereqBuildingClasses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_PARADISE_PLANET</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GALACTIC_EFFECT</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_ASCENDED_CITY</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
+			<Bonus>BONUS_METAPHYSICAL</Bonus>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<iGlobalPopulationChange>-30</iGlobalPopulationChange>
 		</BuildingInfo>

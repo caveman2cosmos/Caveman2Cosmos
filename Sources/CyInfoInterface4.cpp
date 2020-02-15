@@ -276,25 +276,4 @@ void CyInfoPythonInterface4()
 		.def("getChar", &CvPropertyInfo::getChar, "int ()")
 		.def("isSourceDrain", &CvPropertyInfo::isSourceDrain, "bool ()")
 		;
-
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 10/24/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-// Python Modular Loading
-	python::class_<CvPythonModulesInfo, python::bases<CvInfoBase> >("CvPythonModulesInfo")
-		.def("isMainInterfaceScreen", &CvPythonModulesInfo::isMainInterfaceScreen, "bool ()")
-		.def("isCivicScreen", &CvPythonModulesInfo::isCivicScreen, "bool ()")
-		.def("isCorporationScreen", &CvPythonModulesInfo::isCorporationScreen, "bool ()")
-		.def("isDomesticAdvisor", &CvPythonModulesInfo::isDomesticAdvisor, "bool ()")
-		.def("isEspionageAdvisor", &CvPythonModulesInfo::isEspionageAdvisor, "bool ()")
-		.def("isForeignAdvisor", &CvPythonModulesInfo::isForeignAdvisor, "bool ()")
-		.def("isMilitaryAdvisor", &CvPythonModulesInfo::isMilitaryAdvisor, "bool ()")
-		.def("isVictoryScreen", &CvPythonModulesInfo::isVictoryScreen, "bool ()")
-		.def("getScreen", &CvPythonModulesInfo::getScreen, "int ()")
-		;
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
 }

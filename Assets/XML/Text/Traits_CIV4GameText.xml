@@ -57,6 +57,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGRICULTURAL_PEDIA</Tag>
 		<English>TBD</English>
+		<French>TBD</French>
 		<Polish>.</Polish>
 	</TEXT>
 	<TEXT>
@@ -2275,6 +2276,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WOLF</Tag>
 		<English>Ancient Way of the Wolf</English>
+		<French>Ancienne voie du loup</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WOLF_PEDIA</Tag>
