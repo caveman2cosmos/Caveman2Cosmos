@@ -8918,7 +8918,7 @@
 		<Polish>Religia (Confucianizm)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_RELIGION_DRUIDIC</Tag>
+		<Tag>TXT_KEY_UNITCOMBAT_RELIGION_DRUIDIC_TRADITIONS</Tag>
 		<English>Religion(Druidic)</English>
 		<French>
 			<Text>Religion(Druidique)</Text>
@@ -9023,7 +9023,7 @@
 		<Polish>Religia (Kemetizm)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_RELIGION_MESOPOTAMIANISM</Tag>
+		<Tag>TXT_KEY_UNITCOMBAT_RELIGION_MESOPOTAMISM</Tag>
 		<English>Religion(Mesopotamianism)</English>
 		<French>
 			<Text>Religion(Mesopotamianisme)</Text>

@@ -5590,11 +5590,11 @@
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_zoroastrianism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
-			<Type>UNITCOMBAT_RELIGION_NGAIISMISM</Type>
+			<Type>UNITCOMBAT_RELIGION_NGAIISM</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_NGAIISM</DependencyType>
  			</AndDependencyTypes>
-			<Description>TXT_KEY_UNITCOMBAT_RELIGION_NGAIISMISM</Description>
+			<Description>TXT_KEY_UNITCOMBAT_RELIGION_NGAIISM</Description>
 			<ReligionType>RELIGION_NGAIISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_ngaiism.dds</Button>
 		</UnitCombatInfo>
@@ -5671,29 +5671,29 @@
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_voodoo.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
-			<Type>UNITCOMBAT_RELIGION_DRUIDIC_TRADITIONSIC</Type>
+			<Type>UNITCOMBAT_RELIGION_DRUIDIC_TRADITIONS</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_DRUIDIC_TRADITIONS</DependencyType>
  			</AndDependencyTypes>
-			<Description>TXT_KEY_UNITCOMBAT_RELIGION_DRUIDIC_TRADITIONSIC</Description>
+			<Description>TXT_KEY_UNITCOMBAT_RELIGION_DRUIDIC_TRADITIONS</Description>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_druidism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
-			<Type>UNITCOMBAT_RELIGION_SHAMANISMISM</Type>
+			<Type>UNITCOMBAT_RELIGION_SHAMANISM</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_SHAMANISM</DependencyType>
  			</AndDependencyTypes>
-			<Description>TXT_KEY_UNITCOMBAT_RELIGION_SHAMANISMISM</Description>
+			<Description>TXT_KEY_UNITCOMBAT_RELIGION_SHAMANISM</Description>
 			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_shamanism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
-			<Type>UNITCOMBAT_RELIGION_MESOPOTAMISMPOTAMIANISM</Type>
+			<Type>UNITCOMBAT_RELIGION_MESOPOTAMISM</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
  			</AndDependencyTypes>
-			<Description>TXT_KEY_UNITCOMBAT_RELIGION_MESOPOTAMISMPOTAMIANISM</Description>
+			<Description>TXT_KEY_UNITCOMBAT_RELIGION_MESOPOTAMISM</Description>
 			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_mesopotamism.dds</Button>
 		</UnitCombatInfo>
