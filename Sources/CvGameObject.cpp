@@ -759,8 +759,8 @@ void CvGameObject::eventPropertyChanged(PropertyTypes eProperty, int iNewValue)
 void CvGameObjectCity::eventPropertyChanged(PropertyTypes eProperty, int iNewValue)
 {
 	//CvString szBuffer;
-	CvPropertyInfo& kInfo = GC.getPropertyInfo(eProperty);
-	int iNum = kInfo.getNumPropertyBuildings();
+	const CvPropertyInfo& kInfo = GC.getPropertyInfo(eProperty);
+	const int iNum = kInfo.getNumPropertyBuildings();
 	//TB Combat Mods (disease special manifestation and removal system)
 	//PropertyTypes eDiseaseType = (PropertyTypes)GC.getInfoTypeForString("PROPERTY_DISEASE");
 
@@ -774,9 +774,9 @@ void CvGameObjectCity::eventPropertyChanged(PropertyTypes eProperty, int iNewVal
 		{
 			for (int i=0; i<iNum; i++)
 			{
-				PropertyBuilding& kBuilding = kInfo.getPropertyBuilding(i);
-				bool bHasBuilding = m_pCity->getNumRealBuilding(kBuilding.eBuilding) > 0;
-				bool bInRange = (iNewValue >= kBuilding.iMinValue) && (iNewValue <= kBuilding.iMaxValue);
+				const PropertyBuilding& kBuilding = kInfo.getPropertyBuilding(i);
+				const bool bHasBuilding = m_pCity->getNumRealBuilding(kBuilding.eBuilding) > 0;
+				const bool bInRange = (iNewValue >= kBuilding.iMinValue) && (iNewValue <= kBuilding.iMaxValue);
 				if (!bInRange)
 				{
 					if (bHasBuilding)
@@ -816,14 +816,14 @@ void CvGameObjectUnit::eventPropertyChanged(PropertyTypes eProperty, int iNewVal
 {
 	PROFILE_FUNC();
 
-	CvPropertyInfo& kInfo = GC.getPropertyInfo(eProperty);
-	int iNum = kInfo.getNumPropertyPromotions();
+	const CvPropertyInfo& kInfo = GC.getPropertyInfo(eProperty);
+	const int iNum = kInfo.getNumPropertyPromotions();
 
 	for (int i=0; i<iNum; i++)
 	{
-		PropertyPromotion& kPromotion = kInfo.getPropertyPromotion(i);
-		bool bHasPromotion = m_pUnit->isHasPromotion(kPromotion.ePromotion);
-		bool bInRange = (iNewValue >= kPromotion.iMinValue) && (iNewValue <= kPromotion.iMaxValue);
+		const PropertyPromotion& kPromotion = kInfo.getPropertyPromotion(i);
+		const bool bHasPromotion = m_pUnit->isHasPromotion(kPromotion.ePromotion);
+		const bool bInRange = (iNewValue >= kPromotion.iMinValue) && (iNewValue <= kPromotion.iMaxValue);
 		if (!bInRange)
 		{
 			if (bHasPromotion)
