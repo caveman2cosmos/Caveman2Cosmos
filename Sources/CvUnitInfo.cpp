@@ -2023,7 +2023,7 @@ void CvUnitInfo::addUpgradeUnitClassTypes(int i)
 	}
 }
 
-bool CvUnitInfo::isUpgradeUnitClassTypes(int i)
+bool CvUnitInfo::isUpgradeUnitClassTypes(int i) const
 {
 	FAssert (i > -1 && i < GC.getNumUnitClassInfos());
 	if (find(m_aiUpgradeUnitClassTypes.begin(), m_aiUpgradeUnitClassTypes.end(), i) == m_aiUpgradeUnitClassTypes.end())
@@ -2787,7 +2787,7 @@ int CvUnitInfo::getNumSubCombatTypes() const
 	return (int)m_aiSubCombatTypes.size();
 }
 
-bool CvUnitInfo::isSubCombatType(int i)
+bool CvUnitInfo::isSubCombatType(int i) const
 {
 	FAssert (i > -1 && i < GC.getNumUnitCombatInfos());
 	return find(m_aiSubCombatTypes.begin(), m_aiSubCombatTypes.end(), i) != m_aiSubCombatTypes.end();
@@ -2808,7 +2808,7 @@ int CvUnitInfo::getNumCureAfflictionTypes() const
 	return (int)m_aiCureAfflictionTypes.size();
 }
 
-bool CvUnitInfo::isCureAfflictionType(int i)
+bool CvUnitInfo::isCureAfflictionType(int i) const
 {
 	FAssert (i > -1 && i < GC.getNumPromotionLineInfos());
 	if (find(m_aiCureAfflictionTypes.begin(), m_aiCureAfflictionTypes.end(), i) == m_aiCureAfflictionTypes.end())
@@ -2828,7 +2828,7 @@ int CvUnitInfo::getNumHealAsTypes() const
 	return (int)m_aiHealAsTypes.size();
 }
 
-bool CvUnitInfo::isHealAsType(int i)
+bool CvUnitInfo::isHealAsType(int i) const
 {
 	FAssert (i > -1 && i < GC.getNumUnitCombatInfos());
 	if (find(m_aiHealAsTypes.begin(), m_aiHealAsTypes.end(), i) == m_aiHealAsTypes.end())
@@ -2860,7 +2860,7 @@ int CvUnitInfo::getNumTerrainImpassableTypes() const
 	return (int)m_aiTerrainImpassableTypes.size();
 }
 
-bool CvUnitInfo::isTerrainImpassableType(int i)
+bool CvUnitInfo::isTerrainImpassableType(int i) const
 {
 	FAssert (i > -1 && i < GC.getNumTerrainInfos());
 	if (find(m_aiTerrainImpassableTypes.begin(), m_aiTerrainImpassableTypes.end(), i) == m_aiTerrainImpassableTypes.end())
@@ -2880,7 +2880,7 @@ int CvUnitInfo::getNumFeatureImpassableTypes() const
 	return (int)m_aiFeatureImpassableTypes.size();
 }
 
-bool CvUnitInfo::isFeatureImpassableType(int i)
+bool CvUnitInfo::isFeatureImpassableType(int i) const
 {
 	FAssert (i > -1 && i < GC.getNumPromotionLineInfos());
 	if (find(m_aiFeatureImpassableTypes.begin(), m_aiFeatureImpassableTypes.end(), i) == m_aiFeatureImpassableTypes.end())
@@ -2920,7 +2920,7 @@ int CvUnitInfo::getNumTrapSetWithPromotionTypes() const
 	return (int)m_aiTrapSetWithPromotionTypes.size();
 }
 
-bool CvUnitInfo::isTrapSetWithPromotionType(int i)
+bool CvUnitInfo::isTrapSetWithPromotionType(int i) const
 {
 	FAssert (i > -1 && i < GC.getNumPromotionInfos()); // do not include this line if for delayed resolution
 	if (find(m_aiTrapSetWithPromotionTypes.begin(), m_aiTrapSetWithPromotionTypes.end(), i) == m_aiTrapSetWithPromotionTypes.end())
@@ -2940,7 +2940,7 @@ int CvUnitInfo::getNumTrapImmunityUnitCombatTypes() const
 	return (int)m_aiTrapImmunityUnitCombatTypes.size();
 }
 
-bool CvUnitInfo::isTrapImmunityUnitCombatType(int i)
+bool CvUnitInfo::isTrapImmunityUnitCombatType(int i) const
 {
 	FAssert (i > -1 && i < GC.getNumUnitCombatInfos()); // do not include this line if for delayed resolution
 	if (find(m_aiTrapImmunityUnitCombatTypes.begin(), m_aiTrapImmunityUnitCombatTypes.end(), i) == m_aiTrapImmunityUnitCombatTypes.end())
@@ -3125,7 +3125,7 @@ int CvUnitInfo::getFlankingStrengthbyUnitCombatType(int iUnitCombat) const
 	return 0;
 }
 
-bool CvUnitInfo::isFlankingStrikebyUnitCombatType(int iUnitCombat)
+bool CvUnitInfo::isFlankingStrikebyUnitCombatType(int iUnitCombat) const
 {
 	for (UnitCombatModifierArray::const_iterator it = m_aFlankingStrengthbyUnitCombatType.begin(); it != m_aFlankingStrengthbyUnitCombatType.end(); ++it)
 	{
@@ -3188,7 +3188,7 @@ int CvUnitInfo::getWithdrawVSUnitCombatType(int iUnitCombat) const
 	return 0;
 }
 
-bool CvUnitInfo::isWithdrawVSUnitCombatType(int iUnitCombat)
+bool CvUnitInfo::isWithdrawVSUnitCombatType(int iUnitCombat) const
 {
 	for (UnitCombatModifierArray::const_iterator it = m_aWithdrawVSUnitCombatTypes.begin(); it != m_aWithdrawVSUnitCombatTypes.end(); ++it)
 	{
@@ -3226,7 +3226,7 @@ int CvUnitInfo::getPursuitVSUnitCombatType(int iUnitCombat, bool bForLoad) const
 	return 0;
 }
 
-bool CvUnitInfo::isPursuitVSUnitCombatType(int iUnitCombat, bool bForLoad)
+bool CvUnitInfo::isPursuitVSUnitCombatType(int iUnitCombat, bool bForLoad) const
 {
 	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
 	{
@@ -3268,7 +3268,7 @@ int CvUnitInfo::getRepelVSUnitCombatType(int iUnitCombat, bool bForLoad) const
 	return 0;
 }
 
-bool CvUnitInfo::isRepelVSUnitCombatType(int iUnitCombat, bool bForLoad)
+bool CvUnitInfo::isRepelVSUnitCombatType(int iUnitCombat, bool bForLoad) const
 {
 	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
@@ -3310,7 +3310,7 @@ int CvUnitInfo::getKnockbackVSUnitCombatType(int iUnitCombat, bool bForLoad) con
 	return 0;
 }
 
-bool CvUnitInfo::isKnockbackVSUnitCombatType(int iUnitCombat, bool bForLoad)
+bool CvUnitInfo::isKnockbackVSUnitCombatType(int iUnitCombat, bool bForLoad) const
 {
 	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
@@ -3348,7 +3348,7 @@ int CvUnitInfo::getPunctureVSUnitCombatType(int iUnitCombat) const
 	return 0;
 }
 
-bool CvUnitInfo::isPunctureVSUnitCombatType(int iUnitCombat)
+bool CvUnitInfo::isPunctureVSUnitCombatType(int iUnitCombat) const
 {
 	for (UnitCombatModifierArray::const_iterator it = m_aPunctureVSUnitCombatTypes.begin(); it != m_aPunctureVSUnitCombatTypes.end(); ++it)
 	{
@@ -3382,7 +3382,7 @@ int CvUnitInfo::getArmorVSUnitCombatType(int iUnitCombat) const
 	return 0;
 }
 
-bool CvUnitInfo::isArmorVSUnitCombatType(int iUnitCombat)
+bool CvUnitInfo::isArmorVSUnitCombatType(int iUnitCombat) const
 {
 	for (UnitCombatModifierArray::const_iterator it = m_aArmorVSUnitCombatTypes.begin(); it != m_aArmorVSUnitCombatTypes.end(); ++it)
 	{
@@ -3416,7 +3416,7 @@ int CvUnitInfo::getDodgeVSUnitCombatType(int iUnitCombat) const
 	return 0;
 }
 
-bool CvUnitInfo::isDodgeVSUnitCombatType(int iUnitCombat)
+bool CvUnitInfo::isDodgeVSUnitCombatType(int iUnitCombat) const
 {
 	for (UnitCombatModifierArray::const_iterator it = m_aDodgeVSUnitCombatTypes.begin(); it != m_aDodgeVSUnitCombatTypes.end(); ++it)
 	{
@@ -3450,7 +3450,7 @@ int CvUnitInfo::getPrecisionVSUnitCombatType(int iUnitCombat) const
 	return 0;
 }
 
-bool CvUnitInfo::isPrecisionVSUnitCombatType(int iUnitCombat)
+bool CvUnitInfo::isPrecisionVSUnitCombatType(int iUnitCombat) const
 {
 	for (UnitCombatModifierArray::const_iterator it = m_aPrecisionVSUnitCombatTypes.begin(); it != m_aPrecisionVSUnitCombatTypes.end(); ++it)
 	{
@@ -3484,7 +3484,7 @@ int CvUnitInfo::getCriticalVSUnitCombatType(int iUnitCombat) const
 	return 0;
 }
 
-bool CvUnitInfo::isCriticalVSUnitCombatType(int iUnitCombat)
+bool CvUnitInfo::isCriticalVSUnitCombatType(int iUnitCombat) const
 {
 	for (UnitCombatModifierArray::const_iterator it = m_aCriticalVSUnitCombatTypes.begin(); it != m_aCriticalVSUnitCombatTypes.end(); ++it)
 	{
@@ -3518,7 +3518,7 @@ int CvUnitInfo::getRoundStunVSUnitCombatType(int iUnitCombat) const
 	return 0;
 }
 
-bool CvUnitInfo::isRoundStunVSUnitCombatType(int iUnitCombat)
+bool CvUnitInfo::isRoundStunVSUnitCombatType(int iUnitCombat) const
 {
 	for (UnitCombatModifierArray::const_iterator it = m_aRoundStunVSUnitCombatTypes.begin(); it != m_aRoundStunVSUnitCombatTypes.end(); ++it)
 	{
@@ -3552,7 +3552,7 @@ int CvUnitInfo::getTrapDisableUnitCombatType(int iUnitCombat) const
 	return 0;
 }
 
-bool CvUnitInfo::isTrapDisableUnitCombatType(int iUnitCombat)
+bool CvUnitInfo::isTrapDisableUnitCombatType(int iUnitCombat) const
 {
 	for (UnitCombatModifierArray::const_iterator it = m_aTrapDisableUnitCombatTypes.begin(); it != m_aTrapDisableUnitCombatTypes.end(); ++it)
 	{
@@ -3586,7 +3586,7 @@ int CvUnitInfo::getTrapAvoidanceUnitCombatType(int iUnitCombat) const
 	return 0;
 }
 
-bool CvUnitInfo::isTrapAvoidanceUnitCombatType(int iUnitCombat)
+bool CvUnitInfo::isTrapAvoidanceUnitCombatType(int iUnitCombat) const
 {
 	for (UnitCombatModifierArray::const_iterator it = m_aTrapAvoidanceUnitCombatTypes.begin(); it != m_aTrapAvoidanceUnitCombatTypes.end(); ++it)
 	{
@@ -3620,7 +3620,7 @@ int CvUnitInfo::getTrapTriggerUnitCombatType(int iUnitCombat) const
 	return 0;
 }
 
-bool CvUnitInfo::isTrapTriggerUnitCombatType(int iUnitCombat)
+bool CvUnitInfo::isTrapTriggerUnitCombatType(int iUnitCombat) const
 {
 	for (UnitCombatModifierArray::const_iterator it = m_aTrapTriggerUnitCombatTypes.begin(); it != m_aTrapTriggerUnitCombatTypes.end(); ++it)
 	{
@@ -3654,7 +3654,7 @@ int CvUnitInfo::getVisibilityIntensityType(int iInvisibility) const
 	return 0;
 }
 
-bool CvUnitInfo::isVisibilityIntensityType(int iInvisibility)
+bool CvUnitInfo::isVisibilityIntensityType(int iInvisibility) const
 {
 	for (InvisibilityArray::const_iterator it = m_aVisibilityIntensityTypes.begin(); it != m_aVisibilityIntensityTypes.end(); ++it)
 	{
@@ -3688,7 +3688,7 @@ int CvUnitInfo::getInvisibilityIntensityType(int iInvisibility) const
 	return 0;
 }
 
-bool CvUnitInfo::isInvisibilityIntensityType(int iInvisibility)
+bool CvUnitInfo::isInvisibilityIntensityType(int iInvisibility) const
 {
 	for (InvisibilityArray::const_iterator it = m_aInvisibilityIntensityTypes.begin(); it != m_aInvisibilityIntensityTypes.end(); ++it)
 	{
@@ -3722,7 +3722,7 @@ int CvUnitInfo::getVisibilityIntensityRangeType(int iInvisibility) const
 	return 0;
 }
 
-bool CvUnitInfo::isVisibilityIntensityRangeType(int iInvisibility)
+bool CvUnitInfo::isVisibilityIntensityRangeType(int iInvisibility) const
 {
 	for (InvisibilityArray::const_iterator it = m_aVisibilityIntensityRangeTypes.begin(); it != m_aVisibilityIntensityRangeTypes.end(); ++it)
 	{
@@ -3758,7 +3758,7 @@ int CvUnitInfo::getTerrainWorkRateModifierType(int iTerrain) const
 	return 0;
 }
 
-bool CvUnitInfo::isTerrainWorkRateModifierType(int iTerrain)
+bool CvUnitInfo::isTerrainWorkRateModifierType(int iTerrain) const
 {
 	for (TerrainModifierArray::const_iterator it = m_aTerrainWorkRateModifierTypes.begin(); it != m_aTerrainWorkRateModifierTypes.end(); ++it)
 	{
@@ -3787,7 +3787,7 @@ int CvUnitInfo::getFeatureWorkRateModifierType(int iFeature) const
 	return 0;
 }
 
-bool CvUnitInfo::isFeatureWorkRateModifierType(int iFeature)
+bool CvUnitInfo::isFeatureWorkRateModifierType(int iFeature) const
 {
 	for (FeatureModifierArray::const_iterator it = m_aFeatureWorkRateModifierTypes.begin(); it != m_aFeatureWorkRateModifierTypes.end(); ++it)
 	{
@@ -3816,7 +3816,7 @@ int CvUnitInfo::getBuildWorkRateModifierType(int iBuild) const
 	return 0;
 }
 
-bool CvUnitInfo::isBuildWorkRateModifierType(int iBuild)
+bool CvUnitInfo::isBuildWorkRateModifierType(int iBuild) const
 {
 	for (BuildModifierArray::const_iterator it = m_aBuildWorkRateModifierTypes.begin(); it != m_aBuildWorkRateModifierTypes.end(); ++it)
 	{
@@ -3845,7 +3845,7 @@ int CvUnitInfo::getAidChange(int iProperty) const
 	return 0;
 }
 
-bool CvUnitInfo::isAidChange(int iProperty)
+bool CvUnitInfo::isAidChange(int iProperty) const
 {
 	for (AidArray::const_iterator it = m_aAidChanges.begin(); it != m_aAidChanges.end(); ++it)
 	{
@@ -6983,7 +6983,7 @@ int CvUnitInfo::getNumQualifiedPromotionTypes() const
 	return (int)m_aiQualifiedPromotionTypes.size();
 }
 
-bool CvUnitInfo::isQualifiedPromotionType(int i)
+bool CvUnitInfo::isQualifiedPromotionType(int i) const
 {
 	FAssert (i > -1 && i < GC.getNumPromotionInfos());
 	if (find(m_aiQualifiedPromotionTypes.begin(), m_aiQualifiedPromotionTypes.end(), i) == m_aiQualifiedPromotionTypes.end())
