@@ -2331,7 +2331,7 @@ void CvPlayer::initFreeState()
 
 void CvPlayer::initFreeUnits()
 {
-	if (isNPC()) return;
+	if (getStartingPlot() == NULL) return;
 
 	if (GC.getGameINLINE().isOption(GAMEOPTION_ADVANCED_START))
 	{
@@ -2365,11 +2365,11 @@ void CvPlayer::initFreeUnits()
 	}
 	else // Create Starting units
 	{
-		EraTypes startEra = GC.getGame().getStartEra();
+		const EraTypes startEra = GC.getGame().getStartEra();
 		int iMult = GC.getEraInfo(startEra).getStartingUnitMultiplier();
 		if (!isHuman())
 		{
-			iMult *= GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAIStartingUnitMultiplier() - 1;
+			iMult *= GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAIStartingUnitMultiplier();
 		}
 		iMult = std::max(1, iMult);
 
@@ -2394,42 +2394,38 @@ Consider removing freeUnitClass from civilization info as this is the only place
 */
 
 		// Settler units, can't start a game without one.
-		addFreeUnitAI(UNITAI_SETTLE, GC.getGameINLINE().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) ? 1 : iMult);
+		addStartUnitAI(UNITAI_SETTLE, GC.getGameINLINE().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) ? 1 : iMult);
 
 		// Defensive units
 		int iCount = GC.getEraInfo(startEra).getStartingDefenseUnits();
 		iCount += isHuman() ? GC.getHandicapInfo(getHandicapType()).getStartingDefenseUnits() : GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAIStartingDefenseUnits();
 
-		if (iCount > 0 && !addFreeUnitAI(UNITAI_CITY_DEFENSE, iCount * iMult))
+		if (iCount > 0 && !addStartUnitAI(UNITAI_CITY_DEFENSE, iCount * iMult))
 		{
 			// Almost any unit qualifies for the UNITAI_EXPLORE package.
-			addFreeUnitAI(UNITAI_EXPLORE, iCount * iMult);
+			addStartUnitAI(UNITAI_EXPLORE, iCount * iMult);
 		}
 		// Worker units
 		iCount = GC.getEraInfo(startEra).getStartingWorkerUnits();
 		iCount += isHuman() ? GC.getHandicapInfo(getHandicapType()).getStartingWorkerUnits() : GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAIStartingWorkerUnits();
 
-		if (iCount > 0 && !addFreeUnitAI(UNITAI_WORKER, iCount * iMult))
+		if (iCount > 0 && !addStartUnitAI(UNITAI_WORKER, iCount * iMult))
 		{
-			addFreeUnitAI(UNITAI_EXPLORE, iCount * iMult);
+			addStartUnitAI(UNITAI_EXPLORE, iCount * iMult);
 		}
 		// Explorer units
 		iCount = GC.getEraInfo(GC.getGameINLINE().getStartEra()).getStartingExploreUnits();
 		iCount += isHuman() ? GC.getHandicapInfo(getHandicapType()).getStartingExploreUnits() : GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAIStartingExploreUnits();
 		if (iCount > 0)
 		{
-			addFreeUnitAI(UNITAI_EXPLORE, iCount * iMult);
+			addStartUnitAI(UNITAI_EXPLORE, iCount * iMult);
 		}
 	}
 }
 
-bool CvPlayer::addFreeUnitAI(UnitAITypes eUnitAI, int iCount)
+bool CvPlayer::addStartUnitAI(const UnitAITypes eUnitAI, const int iCount)
 {
-	UnitTypes eLoopUnit;
 	UnitTypes eBestUnit = NO_UNIT;
-	bool bValid, bBonusException = false;
-	int iValue;
-
 	int iBestValue = 0;
 
 	// Temp solution to get Wrub of the neanderthals to start with neanderthal units.
@@ -2442,39 +2438,56 @@ bool CvPlayer::addFreeUnitAI(UnitAITypes eUnitAI, int iCount)
 
 	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
-		eLoopUnit = (UnitTypes) iI;
+		const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes) iI);
 
-		if (canTrain(eLoopUnit, false, false, false, true))
+		if (eUnitAI != UNITAI_SETTLE && isLimitedUnitClass((UnitClassTypes)kUnit.getUnitClassType()))
 		{
-			bValid = true;
-
-			if (GC.getUnitInfo(eLoopUnit).getPrereqAndBonus() != NO_BONUS)
+			continue;
+		}
+		if (kUnit.getPrereqAndBonus() != NO_BONUS && kUnit.getPrereqAndBonus() != neanderthal)
+		{
+			continue;
+		}
+		bool bValid = true;
+		for (int iJ = 0; iJ < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); iJ++)
+		{
+			if (kUnit.getPrereqOrBonuses(iJ) != NO_BONUS && kUnit.getPrereqOrBonuses(iJ) != neanderthal)
 			{
-				bValid = GC.getUnitInfo(eLoopUnit).getPrereqAndBonus() == neanderthal;
+				bValid = false;
+				break;
 			}
+		}
+		if (!bValid) continue;
 
-			for (int iJ = 0; iJ < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); iJ++)
+/* Toffer: I plan to change neanderthal cultural units to not have a bonus requirement, but building req instead.
+The "BonusTypes neanderthal" variable can be removed when that is done. and this will replace the bonus exception
+.
+		// Only Wrub of the Neanderthal can start with strongly restricted units.
+		for (int iJ = 0; iJ < GC.getUnitInfo((UnitTypes) iI).getNumEnabledCivilizationTypes(); iJ++)
+		{
+			bValid = false;
+			if (getCivilizationType() == (CivilizationTypes) GC.getInfoTypeForString("CIVILIZATION_NEANDERTHAL"))
 			{
-				if (GC.getUnitInfo(eLoopUnit).getPrereqOrBonuses(iJ) != NO_BONUS
-				&& GC.getUnitInfo(eLoopUnit).getPrereqOrBonuses(iJ) != neanderthal)
+				if ((CivilizationTypes)GC.getInfoTypeForString("CIVILIZATION_NPC_NEANDERTHAL") == GC.getUnitInfo((UnitTypes) iI).getEnabledCivilizationType(iJ).eCivilization)
 				{
-					bValid = false;
+					bValid = true;
 					break;
 				}
 			}
-
-			if (bValid)
+			else break;
+		}
+*/
+		if (/*bValid && */canTrain((UnitTypes) iI, false, false, false, true))
+		{
+			int iValue = AI_unitValue((UnitTypes) iI, eUnitAI, NULL);
+			if (iValue > 0 && kUnit.getDefaultUnitAIType() != eUnitAI)
 			{
-				iValue = AI_unitValue(eLoopUnit, eUnitAI, NULL);
-				if (iValue > 0 && GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType() != eUnitAI)
-				{
-					iValue /= 4;
-				}
-				if (iValue > iBestValue)
-				{
-					eBestUnit = eLoopUnit;
-					iBestValue = iValue;
-				}
+				iValue /= 4;
+			}
+			if (iValue > iBestValue)
+			{
+				eBestUnit = (UnitTypes) iI;
+				iBestValue = iValue;
 			}
 		}
 	}
@@ -2482,32 +2495,28 @@ bool CvPlayer::addFreeUnitAI(UnitAITypes eUnitAI, int iCount)
 	{
 		for (int iI = 0; iI < iCount; iI++)
 		{
-			addFreeUnit(eBestUnit, eUnitAI);
+			addStartUnit(eBestUnit, eUnitAI);
 		}
 		return true;
 	}
 	return false;
 }
 
-void CvPlayer::addFreeUnit(UnitTypes eUnit, UnitAITypes eUnitAI)
+void CvPlayer::addStartUnit(const UnitTypes eUnit, const UnitAITypes eUnitAI)
 {
-	CvPlot* pStartingPlot = getStartingPlot();
-
-	if (pStartingPlot != NULL)
+	CvPlot* pBestPlot = NULL;
+	if (!GC.getUnitInfo(eUnit).isFound())
 	{
-		CvPlot* pBestPlot = NULL;
 		bool startOnSameTile = false;
-		if (!GC.getUnitInfo(eUnit).isFound()
-		&& (!Cy::call_optional(gDLL->getPythonIFace()->getMapScriptModule(), "startHumansOnSameTile", startOnSameTile) || !startOnSameTile))
+		if (!Cy::call_optional(gDLL->getPythonIFace()->getMapScriptModule(), "startHumansOnSameTile", startOnSameTile) || !startOnSameTile)
 		{
-			int iRandOffset = GC.getGameINLINE().getSorenRandNum(NUM_CITY_PLOTS, "Place Units (Player)");
-			CvPlot* pLoopPlot;
+			const int iRandOffset = GC.getGameINLINE().getSorenRandNum(NUM_CITY_PLOTS, "Place Units (Player)");
 
 			for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
 			{
-				pLoopPlot = plotCity(pStartingPlot->getX_INLINE(), pStartingPlot->getY_INLINE(), ((iI + iRandOffset) % NUM_CITY_PLOTS));
+				CvPlot* pLoopPlot = plotCity(getStartingPlot()->getX_INLINE(), getStartingPlot()->getY_INLINE(), ((iI + iRandOffset) % NUM_CITY_PLOTS));
 
-				if (pLoopPlot != NULL && pLoopPlot->getArea() == pStartingPlot->getArea()
+				if (pLoopPlot != NULL && pLoopPlot->getArea() == getStartingPlot()->getArea()
 				&& !pLoopPlot->isImpassable(getTeam()) && !pLoopPlot->isUnit() && !pLoopPlot->isGoody())
 				{
 					pBestPlot = pLoopPlot;
@@ -2515,12 +2524,12 @@ void CvPlayer::addFreeUnit(UnitTypes eUnit, UnitAITypes eUnitAI)
 				}
 			}
 		}
-		if (pBestPlot == NULL)
-		{
-			pBestPlot = pStartingPlot;
-		}
-		initUnit(eUnit, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), eUnitAI, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
 	}
+	if (pBestPlot == NULL)
+	{
+		pBestPlot = getStartingPlot();
+	}
+	initUnit(eUnit, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), eUnitAI, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
 }
 
 /************************************************************************************************/
@@ -2530,50 +2539,35 @@ void CvPlayer::addFreeUnit(UnitTypes eUnit, UnitAITypes eUnitAI)
 /************************************************************************************************/
 UnitTypes CvPlayer::getBestUnitType(UnitAITypes eUnitAI) const
 {
-	UnitTypes eLoopUnit;
 	UnitTypes eBestUnit = NO_UNIT;
-	bool bValid;
-	int iValue;
 	int iBestValue = 0;
-	CvCivilizationInfo& kCivilizationInfo = GC.getCivilizationInfo(getCivilizationType());
 
-	for (int iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
-		eLoopUnit = (UnitTypes)kCivilizationInfo.getCivilizationUnits(iI);
-
-		if (eLoopUnit != NO_UNIT)
+		if (GC.getUnitInfo((UnitTypes) iI).getPrereqAndBonus() != NO_BONUS)
 		{
-			if (canTrain(eLoopUnit))
+			continue;
+		}
+		bool bValid = true;
+		for (int iJ = 0; iJ < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); iJ++)
+		{
+			if (GC.getUnitInfo((UnitTypes) iI).getPrereqOrBonuses(iJ) != NO_BONUS)
 			{
-				bValid = true;
+				bValid = false;
+				break;
+			}
+		}
+		if (bValid && canTrain((UnitTypes) iI))
+		{
+			const int iValue = AI_unitValue((UnitTypes) iI, eUnitAI, NULL);
 
-				if (GC.getUnitInfo(eLoopUnit).getPrereqAndBonus() != NO_BONUS)
-				{
-					bValid = false;
-				}
-
-				for (int iJ = 0; iJ < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); iJ++)
-				{
-					if (GC.getUnitInfo(eLoopUnit).getPrereqOrBonuses(iJ) != NO_BONUS)
-					{
-						bValid = false;
-					}
-				}
-
-				if (bValid)
-				{
-					iValue = AI_unitValue(eLoopUnit, eUnitAI, NULL);
-
-					if (iValue > iBestValue)
-					{
-						eBestUnit = eLoopUnit;
-						iBestValue = iValue;
-					}
-				}
+			if (iValue > iBestValue)
+			{
+				eBestUnit = (UnitTypes) iI;
+				iBestValue = iValue;
 			}
 		}
 	}
-
 	return eBestUnit;
 }
 

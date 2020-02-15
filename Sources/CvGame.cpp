@@ -1259,14 +1259,13 @@ void CvGame::initFreeState()
 
 void CvGame::initFreeUnits()
 {
-	for (int iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		if (GET_PLAYER((PlayerTypes)iI).isAlive()
+		&& GET_PLAYER((PlayerTypes)iI).getNumUnits() == 0
+		&& GET_PLAYER((PlayerTypes)iI).getNumCities() == 0)
 		{
-			if ((GET_PLAYER((PlayerTypes)iI).getNumUnits() == 0) && (GET_PLAYER((PlayerTypes)iI).getNumCities() == 0))
-			{
-				GET_PLAYER((PlayerTypes)iI).initFreeUnits();
-			}
+			GET_PLAYER((PlayerTypes)iI).initFreeUnits();
 		}
 	}
 }
