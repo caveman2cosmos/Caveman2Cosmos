@@ -10569,9 +10569,9 @@ public:
 	CvWString getChangeAllCitiesDisplayText() const;
 	CvWString getPrereqMinDisplayText() const;
 	CvWString getPrereqMaxDisplayText() const;
-	PropertyBuilding& getPropertyBuilding(int index);
+	const PropertyBuilding& getPropertyBuilding(int index) const;
 	int getNumPropertyBuildings() const;
-	PropertyPromotion& getPropertyPromotion(int index);
+	const PropertyPromotion& getPropertyPromotion(int index) const;
 	int getNumPropertyPromotions() const;
 
 	int getChangePropagator(const GameObjectTypes eFrom, const GameObjectTypes eTo) const;
@@ -11136,103 +11136,103 @@ public:
 
 	// int vector utilizing struct with delayed resolution
 	int getNumAfflictionFortitudeChangeModifiers() const;
-	PromotionLineModifier& getAfflictionFortitudeChangeModifier(int iAfflictionLine);
+	const PromotionLineModifier& getAfflictionFortitudeChangeModifier(int iAfflictionLine) const;
 
 	int getNumTerrainAttackChangeModifiers() const;
-	TerrainModifier& getTerrainAttackChangeModifier(int iTerrain);
+	const TerrainModifier& getTerrainAttackChangeModifier(int iTerrain) const;
 
 	int getNumTerrainDefenseChangeModifiers() const;
-	TerrainModifier& getTerrainDefenseChangeModifier(int iTerrain);
+	const TerrainModifier& getTerrainDefenseChangeModifier(int iTerrain) const;
 
 	int getNumTerrainWorkChangeModifiers() const;
-	TerrainModifier& getTerrainWorkChangeModifier(int iTerrain);
+	const TerrainModifier& getTerrainWorkChangeModifier(int iTerrain) const;
 
 	int getNumBuildWorkChangeModifiers() const;
-	BuildModifier& getBuildWorkChangeModifier(int iBuild);
+	const BuildModifier& getBuildWorkChangeModifier(int iBuild) const;
 
 	int getNumFeatureAttackChangeModifiers() const;
-	FeatureModifier& getFeatureAttackChangeModifier(int iFeature);
+	const FeatureModifier& getFeatureAttackChangeModifier(int iFeature) const;
 
 	int getNumFeatureDefenseChangeModifiers() const;
-	FeatureModifier& getFeatureDefenseChangeModifier(int iFeature);
+	const FeatureModifier& getFeatureDefenseChangeModifier(int iFeature) const;
 
 	int getNumFeatureWorkChangeModifiers() const;
-	FeatureModifier& getFeatureWorkChangeModifier(int iFeature);
+	const FeatureModifier& getFeatureWorkChangeModifier(int iFeature) const;
 
 	int getNumUnitCombatChangeModifiers() const;
-	UnitCombatModifier& getUnitCombatChangeModifier(int iUnitCombat);
+	const UnitCombatModifier& getUnitCombatChangeModifier(int iUnitCombat) const;
 
 	int getNumFlankingStrengthbyUnitCombatTypesChange() const;
-	UnitCombatModifier& getFlankingStrengthbyUnitCombatTypeChange(int iUnitCombat);
+	const UnitCombatModifier& getFlankingStrengthbyUnitCombatTypeChange(int iUnitCombat) const;
 
 	int getNumWithdrawVSUnitCombatTypesChange() const;
-	UnitCombatModifier& getWithdrawVSUnitCombatTypeChange(int iUnitCombat);
+	const UnitCombatModifier& getWithdrawVSUnitCombatTypeChange(int iUnitCombat) const;
 
 	//Fight or Flight only
 	int getNumPursuitVSUnitCombatTypesChange() const;
-	UnitCombatModifier& getPursuitVSUnitCombatTypeChange(int iUnitCombat);
+	const UnitCombatModifier& getPursuitVSUnitCombatTypeChange(int iUnitCombat) const;
 
 	//Heart of War only
 	int getNumRepelVSUnitCombatTypesChange() const;
-	UnitCombatModifier& getRepelVSUnitCombatTypeChange(int iUnitCombat);
+	const UnitCombatModifier& getRepelVSUnitCombatTypeChange(int iUnitCombat) const;
 
 	//Heart of War only
 	int getNumKnockbackVSUnitCombatTypesChange() const;
-	UnitCombatModifier& getKnockbackVSUnitCombatTypeChange(int iUnitCombat);
+	const UnitCombatModifier& getKnockbackVSUnitCombatTypeChange(int iUnitCombat) const;
 
 	int getNumPunctureVSUnitCombatTypesChange() const;
-	UnitCombatModifier& getPunctureVSUnitCombatTypeChange(int iUnitCombat);
+	const UnitCombatModifier& getPunctureVSUnitCombatTypeChange(int iUnitCombat) const;
 
 	int getNumArmorVSUnitCombatTypesChange() const;
-	UnitCombatModifier& getArmorVSUnitCombatTypeChange(int iUnitCombat);
+	const UnitCombatModifier& getArmorVSUnitCombatTypeChange(int iUnitCombat) const;
 
 	int getNumDodgeVSUnitCombatTypesChange() const;
-	UnitCombatModifier& getDodgeVSUnitCombatTypeChange(int iUnitCombat);
+	const UnitCombatModifier& getDodgeVSUnitCombatTypeChange(int iUnitCombat) const;
 
 	int getNumPrecisionVSUnitCombatTypesChange() const;
-	UnitCombatModifier& getPrecisionVSUnitCombatTypeChange(int iUnitCombat);
+	const UnitCombatModifier& getPrecisionVSUnitCombatTypeChange(int iUnitCombat) const;
 
 	int getNumCriticalVSUnitCombatTypesChange() const;
-	UnitCombatModifier& getCriticalVSUnitCombatTypeChange(int iUnitCombat);
+	const UnitCombatModifier& getCriticalVSUnitCombatTypeChange(int iUnitCombat) const;
 
 	int getNumRoundStunVSUnitCombatTypesChange() const;
-	UnitCombatModifier& getRoundStunVSUnitCombatTypeChange(int iUnitCombat);
+	const UnitCombatModifier& getRoundStunVSUnitCombatTypeChange(int iUnitCombat) const;
 
 	int getNumTrapAvoidanceUnitCombatTypes() const;
-	UnitCombatModifier& getTrapAvoidanceUnitCombatType(int iIndex);
+	const UnitCombatModifier& getTrapAvoidanceUnitCombatType(int iIndex) const;
 
 	int getNumAfflictOnAttackChangeTypes() const;
-	AfflictOnAttackChange& getAfflictOnAttackChangeType(int iAfflictionLine);
+	const AfflictOnAttackChange& getAfflictOnAttackChangeType(int iAfflictionLine) const;
 
 	int getNumInvisibleTerrainChanges() const;
-	InvisibleTerrainChanges& getInvisibleTerrainChange(int iIndex);
+	const InvisibleTerrainChanges& getInvisibleTerrainChange(int iIndex) const;
 
 	int getNumInvisibleFeatureChanges() const;
-	InvisibleFeatureChanges& getInvisibleFeatureChange(int iIndex);
+	const InvisibleFeatureChanges& getInvisibleFeatureChange(int iIndex) const;
 
 	int getNumInvisibleImprovementChanges() const;
-	InvisibleImprovementChanges& getInvisibleImprovementChange(int iIndex);
+	const InvisibleImprovementChanges& getInvisibleImprovementChange(int iIndex) const;
 
 	int getNumVisibleTerrainChanges() const;
-	InvisibleTerrainChanges& getVisibleTerrainChange(int iIndex);
+	const InvisibleTerrainChanges& getVisibleTerrainChange(int iIndex) const;
 
 	int getNumVisibleFeatureChanges() const;
-	InvisibleFeatureChanges& getVisibleFeatureChange(int iIndex);
+	const InvisibleFeatureChanges& getVisibleFeatureChange(int iIndex) const;
 
 	int getNumVisibleImprovementChanges() const;
-	InvisibleImprovementChanges& getVisibleImprovementChange(int iIndex);
+	const InvisibleImprovementChanges& getVisibleImprovementChange(int iIndex) const;
 
 	int getNumVisibleTerrainRangeChanges() const;
-	InvisibleTerrainChanges& getVisibleTerrainRangeChange(int iIndex);
+	const InvisibleTerrainChanges& getVisibleTerrainRangeChange(int iIndex) const;
 
 	int getNumVisibleFeatureRangeChanges() const;
-	InvisibleFeatureChanges& getVisibleFeatureRangeChange(int iIndex);
+	const InvisibleFeatureChanges& getVisibleFeatureRangeChange(int iIndex) const;
 
 	int getNumVisibleImprovementRangeChanges() const;
-	InvisibleImprovementChanges& getVisibleImprovementRangeChange(int iIndex);
+	const InvisibleImprovementChanges& getVisibleImprovementRangeChange(int iIndex) const;
 
 	int getNumDistanceAttackCommunicabilityTypeChanges() const;
-	AfflictionLineChanges& getDistanceAttackCommunicabilityTypeChange(int iIndex);
+	const AfflictionLineChanges& getDistanceAttackCommunicabilityTypeChange(int iIndex) const;
 
 	//Propery Manipulators
 	CvPropertyManipulators* getPropertyManipulators();
