@@ -2218,82 +2218,82 @@ public:
 
 	int getNumWithdrawVSUnitCombatTypes() const;
 	int getWithdrawVSUnitCombatType(int iUnitCombat) const;
-	bool isWithdrawVSUnitCombatType(int iUnitCombat);
+	bool isWithdrawVSUnitCombatType(int iUnitCombat) const;
 	const UnitCombatModifierArray& getWithdrawVSUnitCombatTypes() const;
 
 	int getNumPursuitVSUnitCombatTypes() const;
 	int getPursuitVSUnitCombatType(int iUnitCombat, bool bForLoad = false) const;
-	bool isPursuitVSUnitCombatType(int iUnitCombat, bool bForLoad = false);
+	bool isPursuitVSUnitCombatType(int iUnitCombat, bool bForLoad = false) const;
 	const UnitCombatModifierArray& getPursuitVSUnitCombatTypes() const;
 
 	int getNumRepelVSUnitCombatTypes() const;
 	int getRepelVSUnitCombatType(int iUnitCombat, bool bForLoad = false) const;
-	bool isRepelVSUnitCombatType(int iUnitCombat, bool bForLoad = false);
+	bool isRepelVSUnitCombatType(int iUnitCombat, bool bForLoad = false) const;
 	const UnitCombatModifierArray& getRepelVSUnitCombatTypes() const;
 
 	int getNumKnockbackVSUnitCombatTypes() const;
 	int getKnockbackVSUnitCombatType(int iUnitCombat, bool bForLoad = false) const;
-	bool isKnockbackVSUnitCombatType(int iUnitCombat, bool bForLoad = false);
+	bool isKnockbackVSUnitCombatType(int iUnitCombat, bool bForLoad = false) const;
 	const UnitCombatModifierArray& getKnockbackVSUnitCombatTypes() const;
 
 	int getNumPunctureVSUnitCombatTypes() const;
 	int getPunctureVSUnitCombatType(int iUnitCombat) const;
-	bool isPunctureVSUnitCombatType(int iUnitCombat);
+	bool isPunctureVSUnitCombatType(int iUnitCombat) const;
 	const UnitCombatModifierArray& getPunctureVSUnitCombatTypes() const;
 
 	int getNumArmorVSUnitCombatTypes() const;
 	int getArmorVSUnitCombatType(int iUnitCombat) const;
-	bool isArmorVSUnitCombatType(int iUnitCombat);
+	bool isArmorVSUnitCombatType(int iUnitCombat) const;
 	const UnitCombatModifierArray& getArmorVSUnitCombatTypes() const;
 
 	int getNumDodgeVSUnitCombatTypes() const;
 	int getDodgeVSUnitCombatType(int iUnitCombat) const;
-	bool isDodgeVSUnitCombatType(int iUnitCombat);
+	bool isDodgeVSUnitCombatType(int iUnitCombat) const;
 	const UnitCombatModifierArray& getDodgeVSUnitCombatTypes() const;
 
 	int getNumPrecisionVSUnitCombatTypes() const;
 	int getPrecisionVSUnitCombatType(int iUnitCombat) const;
-	bool isPrecisionVSUnitCombatType(int iUnitCombat);
+	bool isPrecisionVSUnitCombatType(int iUnitCombat) const;
 	const UnitCombatModifierArray& getPrecisionVSUnitCombatTypes() const;
 
 	int getNumCriticalVSUnitCombatTypes() const;
 	int getCriticalVSUnitCombatType(int iUnitCombat) const;
-	bool isCriticalVSUnitCombatType(int iUnitCombat);
+	bool isCriticalVSUnitCombatType(int iUnitCombat) const;
 	const UnitCombatModifierArray& getCriticalVSUnitCombatTypes() const;
 
 	int getNumRoundStunVSUnitCombatTypes() const;
 	int getRoundStunVSUnitCombatType(int iUnitCombat) const;
-	bool isRoundStunVSUnitCombatType(int iUnitCombat);
+	bool isRoundStunVSUnitCombatType(int iUnitCombat) const;
 	const UnitCombatModifierArray& getRoundStunVSUnitCombatTypes() const;
 
 	int getNumTrapDisableUnitCombatTypes() const;
 	int getTrapDisableUnitCombatType(int iUnitCombat) const;
-	bool isTrapDisableUnitCombatType(int iUnitCombat);
+	bool isTrapDisableUnitCombatType(int iUnitCombat) const;
 	const UnitCombatModifierArray& getTrapDisableUnitCombatTypes() const;
 
 	int getNumTrapAvoidanceUnitCombatTypes() const;
 	int getTrapAvoidanceUnitCombatType(int iUnitCombat) const;
-	bool isTrapAvoidanceUnitCombatType(int iUnitCombat);
+	bool isTrapAvoidanceUnitCombatType(int iUnitCombat) const;
 	const UnitCombatModifierArray& getTrapAvoidanceUnitCombatTypes() const;
 
 	int getNumTrapTriggerUnitCombatTypes() const;
 	int getTrapTriggerUnitCombatType(int iUnitCombat) const;
-	bool isTrapTriggerUnitCombatType(int iUnitCombat);
+	bool isTrapTriggerUnitCombatType(int iUnitCombat) const;
 	const UnitCombatModifierArray& getTrapTriggerUnitCombatTypes() const;
 
 	int getNumVisibilityIntensityTypes() const;
 	int getVisibilityIntensityType(int iInvisibility) const;
-	bool isVisibilityIntensityType(int iInvisibility);
+	bool isVisibilityIntensityType(int iInvisibility) const;
 	const InvisibilityArray& getVisibilityIntensityTypes() const;
 
 	int getNumInvisibilityIntensityTypes() const;
 	int getInvisibilityIntensityType(int iInvisibility) const;
-	bool isInvisibilityIntensityType(int iInvisibility);
+	bool isInvisibilityIntensityType(int iInvisibility) const;
 	const InvisibilityArray& getInvisibilityIntensityTypes() const;
 
 	int getNumVisibilityIntensityRangeTypes() const;
 	int getVisibilityIntensityRangeType(int iInvisibility) const;
-	bool isVisibilityIntensityRangeType(int iInvisibility);
+	bool isVisibilityIntensityRangeType(int iInvisibility) const;
 	const InvisibilityArray& getVisibilityIntensityRangeTypes() const;
 
 	//Team Project (4)
