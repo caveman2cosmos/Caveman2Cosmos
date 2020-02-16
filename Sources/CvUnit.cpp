@@ -5218,16 +5218,6 @@ bool CvUnit::isActionRecommended(int iAction)
 		pPlot = plot();
 	}
 
-// BUFFY - Don't Recommend Actions in Fog of War - start
-#ifdef _BUFFY
-	// from HOF Mod - Denniz
-	if (!pPlot->isVisible(GC.getGameINLINE().getActiveTeam(), false))
-	{
-		return false;
-	}
-#endif
-// BUFFY - Don't Recommend Actions in Fog of War - end
-
 	if (GC.getActionInfo(iAction).getMissionType() == MISSION_FORTIFY)
 	{
 		if (pPlot->isCity(true, getTeam()))
