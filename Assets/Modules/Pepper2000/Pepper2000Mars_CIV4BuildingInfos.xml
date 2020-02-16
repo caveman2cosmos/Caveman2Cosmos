@@ -2437,6 +2437,7 @@
 				<iYield>30</iYield>
 				<iYield>9</iYield>
 			</YieldChanges>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_MEGAVERSE</BuildingClassType>

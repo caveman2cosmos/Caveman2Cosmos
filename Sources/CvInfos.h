@@ -5040,7 +5040,6 @@ public:
 	int getResearchPercent() const;					// Exposed to Python
 	int getDistanceMaintenancePercent() const;		// Exposed to Python
 	int getNumCitiesMaintenancePercent() const;		// Exposed to Python
-	int getMaxNumCitiesMaintenance() const;			// Exposed to Python
 	int getColonyMaintenancePercent() const;		// Exposed to Python
 	int getMaxColonyMaintenance() const;			// Exposed to Python
 	int getCorporationMaintenancePercent() const;	// Exposed to Python
@@ -5058,7 +5057,6 @@ public:
 	int getUnownedTilesPerBarbarianUnit() const;	// Exposed to Python
 	int getUnownedWaterTilesPerBarbarianUnit() const;	// Exposed to Python
 	int getUnownedTilesPerBarbarianCity() const;		// Exposed to Python
-	int getBarbarianCreationTurnsElapsed() const;		// Exposed to Python
 	int getBarbarianCityCreationTurnsElapsed() const;	// Exposed to Python
 	int getBarbarianCityCreationProb() const;		// Exposed to Python
 	int getAnimalCombatModifier() const;			// Exposed to Python
@@ -5126,7 +5124,6 @@ protected:
 	int m_iResearchPercent;
 	int m_iDistanceMaintenancePercent;
 	int m_iNumCitiesMaintenancePercent;
-	int m_iMaxNumCitiesMaintenance;
 	int m_iColonyMaintenancePercent;
 	int m_iMaxColonyMaintenance;
 	int m_iCorporationMaintenancePercent;
@@ -5144,7 +5141,6 @@ protected:
 	int m_iUnownedTilesPerBarbarianUnit;
 	int m_iUnownedWaterTilesPerBarbarianUnit;
 	int m_iUnownedTilesPerBarbarianCity;
-	int m_iBarbarianCreationTurnsElapsed;
 	int m_iBarbarianCityCreationTurnsElapsed;
 	int m_iBarbarianCityCreationProb;
 	int m_iAnimalCombatModifier;
@@ -5231,13 +5227,9 @@ public:
 	int getHurryConscriptAngerPercent() const;	// Exposed to Python
 	int getInflationOffset() const;				// Exposed to Python
 	int getInflationPercent() const;			// Exposed to Python
-	//ls612: Begin
-	int getGoldModifier() const;
 	int getOccupationTimePopulationPercent() const;
-	//ls612: End
 	int getVictoryDelayPercent() const;			// Exposed to Python
 	int getNumTurnIncrements() const;			// Exposed to Python
-	// Afforess 12/13/09
 	int getUnitMovementPercent() const;
 
 	GameTurnInfo& getGameTurnInfo(int iIndex) const;	// Exposed to Python
@@ -5281,8 +5273,6 @@ protected:
 	int m_iHurryConscriptAngerPercent;
 	int m_iInflationOffset;
 	int m_iInflationPercent;
-	//ls612: Begin
-	int m_iGoldModifier;
 	int m_iOccupationTimePopulationPercent;
 	int m_iVictoryDelayPercent;
 	int m_iNumTurnIncrements;
@@ -5746,8 +5736,6 @@ public:
 	// Afforess 12/9/09
 	int getHealthPercent() const;		// Exposed to Python
 	bool isPeakMakesValid() const;		// Exposed to Python
-	bool isDepletedMine() const;
-	int getDepletionRand() const;
 	int getImprovementBonusDepletionRand(int i) const;
 	int getPrereqTech() const;			// Exposed to Python
 	//int getTraitYieldChanges(int i, int j) const;
@@ -7645,15 +7633,16 @@ public:
 	bool isAllReligionsActive() const;
 	bool isBansNonStateReligions() const;
 	bool isFreedomFighter() const;
+	bool isValidTrait(bool bGameStart=false) const;
 
 	// bool vector without delayed resolution
 	int getNotOnGameOption(int i) const;
 	int getNumNotOnGameOptions() const;
-	bool isNotOnGameOption(int i);
+	bool isNotOnGameOption(int i) const;
 
 	int getOnGameOption(int i) const;
 	int getNumOnGameOptions() const;
-	bool isOnGameOption(int i);
+	bool isOnGameOption(int i) const;
 
 	//Arrays
 	int getSpecialistYieldChange(int i, int j) const;	// Exposed to Python
@@ -10492,39 +10481,6 @@ protected:
 /*																							  */
 /*																							  */
 /************************************************************************************************/
-// Python Modular Loading
-class CvPythonModulesInfo : public CvInfoBase
-{
-public:
-	CvPythonModulesInfo();
-	virtual ~CvPythonModulesInfo();
-
-	bool isMainInterfaceScreen();
-	bool isCivicScreen();
-	bool isCorporationScreen();
-	bool isDomesticAdvisor();
-	bool isEspionageAdvisor();
-	bool isForeignAdvisor();
-	bool isMilitaryAdvisor();
-	bool isVictoryScreen();
-	int getScreen();
-
-	bool read(CvXMLLoadUtility* pXML);
-
-protected:
-
-	bool m_bMainInterfaceScreen;
-	bool m_bCivicScreen;
-	bool m_bCorporationScreen;
-	bool m_bDomesticAdvisor;
-	bool m_bEspionageAdvisor;
-	bool m_bForeignAdvisor;
-	bool m_bMilitaryAdvisor;
-	bool m_bVictoryScreen;
-	int m_iScreen;
-
-};
-
 // MLF loading
 class CvModLoadControlInfo : public CvInfoBase
 {
