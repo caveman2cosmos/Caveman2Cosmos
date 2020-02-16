@@ -12747,7 +12747,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 	int iGeneralPropertyValue = AI_unitPropertyValue(eUnit);
 	bool bisNegativePropertyUnit = (iGeneralPropertyValue < 0);
 	bool bisPositivePropertyUnit = (iGeneralPropertyValue > 0);
-	bool bUndefinedValid, bValid = false;
+	bool bUndefinedValid = false, bValid = false;
 	int iNeededMissionaries;
 	int iI;
 
