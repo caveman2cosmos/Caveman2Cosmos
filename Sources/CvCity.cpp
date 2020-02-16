@@ -8554,7 +8554,7 @@ bool CvCity::at(int iX, int iY) const
 }
 
 
-bool CvCity::at(CvPlot* pPlot) const
+bool CvCity::at(const CvPlot* pPlot) const
 {
 	return (plot() == pPlot);
 }
@@ -8572,19 +8572,19 @@ CvPlot* CvCity::plotExternal() const
 }
 
 
-CvPlotGroup* CvCity::plotGroup(PlayerTypes ePlayer) const
+CvPlotGroup* CvCity::plotGroup(const PlayerTypes ePlayer) const
 {
 	return plot()->getPlotGroup(ePlayer);
 }
 
 
-bool CvCity::isConnectedTo(CvCity* pCity) const
+bool CvCity::isConnectedTo(const CvCity* pCity) const
 {
 	return plot()->isConnectedTo(pCity);
 }
 
 
-bool CvCity::isConnectedToCapital(PlayerTypes ePlayer) const
+bool CvCity::isConnectedToCapital(const PlayerTypes ePlayer) const
 {
 	return plot()->isConnectedToCapital(ePlayer);
 }
@@ -8605,7 +8605,7 @@ CvArea* CvCity::area() const
 /*                                                                                              */
 /* General AI                                                                                   */
 /************************************************************************************************/
-CvArea* CvCity::waterArea(bool bNoImpassable) const
+CvArea* CvCity::waterArea(const bool bNoImpassable) const
 {
 	return plot()->waterArea(bNoImpassable);
 }
@@ -8617,7 +8617,7 @@ CvArea* CvCity::secondWaterArea() const
 }
 
 // Find the largest water area shared by this city and other city, if any
-CvArea* CvCity::sharedWaterArea(CvCity* pOtherCity) const
+CvArea* CvCity::sharedWaterArea(const CvCity* pOtherCity) const
 {
 	CvArea* pWaterArea = waterArea(true);
 	if (pWaterArea != NULL)
@@ -8657,7 +8657,7 @@ bool CvCity::isBlockaded() const
 {
 	for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
 	{
-		CvPlot* pAdjacentPlot = plotDirection(getX_INLINE(), getY_INLINE(), ((DirectionTypes)iI));
+		const CvPlot* pAdjacentPlot = plotDirection(getX_INLINE(), getY_INLINE(), ((DirectionTypes)iI));
 
 		if (pAdjacentPlot != NULL)
 		{
@@ -9104,8 +9104,8 @@ int CvCity::getAdditionalGreatPeopleRateByBuilding(BuildingTypes eBuilding)
 	FAssertMsg(eBuilding >= 0, "eBuilding expected to be >= 0");
 	FAssertMsg(eBuilding < GC.getNumBuildingInfos(), "eBuilding expected to be < GC.getNumBuildingInfos()");
 
-	int iRate = getBaseGreatPeopleRate();
-	int iModifier = getTotalGreatPeopleRateModifier();
+	const int iRate = getBaseGreatPeopleRate();
+	const int iModifier = getTotalGreatPeopleRateModifier();
 	int iExtra = ((iRate + getAdditionalBaseGreatPeopleRateByBuilding(eBuilding)) * (iModifier + getAdditionalGreatPeopleRateModifierByBuilding(eBuilding)) / 100) - (iRate * iModifier / 100);
 	/************************************************************************************************/
 	/* Afforess	                  Start		 4/22/10                                                */
@@ -9142,8 +9142,8 @@ int CvCity::getAdditionalBaseGreatPeopleRateByBuilding(BuildingTypes eBuilding)
 	FAssertMsg(eBuilding >= 0, "eBuilding expected to be >= 0");
 	FAssertMsg(eBuilding < GC.getNumBuildingInfos(), "eBuilding expected to be < GC.getNumBuildingInfos()");
 
-	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
-	bool bObsolete = GET_TEAM(getTeam()).isObsoleteBuilding(eBuilding);
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+	const bool bObsolete = GET_TEAM(getTeam()).isObsoleteBuilding(eBuilding);
 	int iExtraRate = 0;
 
 	iExtraRate += kBuilding.getGreatPeopleRateChange();
@@ -9168,7 +9168,7 @@ int CvCity::getAdditionalBaseGreatPeopleRateByBuilding(BuildingTypes eBuilding)
 
 	for (int iI = 1; iI < kBuilding.getFreeSpecialist() + 1; iI++)
 	{
-		SpecialistTypes eNewSpecialist = getBestSpecialist(iI);
+		const SpecialistTypes eNewSpecialist = getBestSpecialist(iI);
 		if (eNewSpecialist == NO_SPECIALIST) break;
 		CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo(eNewSpecialist);
 
@@ -9207,8 +9207,8 @@ int CvCity::getAdditionalGreatPeopleRateModifierByBuilding(BuildingTypes eBuildi
 	FAssertMsg(eBuilding >= 0, "eBuilding expected to be >= 0");
 	FAssertMsg(eBuilding < GC.getNumBuildingInfos(), "eBuilding expected to be < GC.getNumBuildingInfos()");
 
-	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
-	bool bObsolete = GET_TEAM(getTeam()).isObsoleteBuilding(eBuilding);
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+	const bool bObsolete = GET_TEAM(getTeam()).isObsoleteBuilding(eBuilding);
 	int iExtraModifier = 0;
 
 	if (!bObsolete)
@@ -9228,11 +9228,11 @@ int CvCity::getAdditionalGreatPeopleRateModifierByBuilding(BuildingTypes eBuildi
  */
 int CvCity::getAdditionalGreatPeopleRateBySpecialist(SpecialistTypes eSpecialist, int iChange) const
 {
-	int iRate = getBaseGreatPeopleRate();
-	int iModifier = getTotalGreatPeopleRateModifier();
-	int iExtraRate = getAdditionalBaseGreatPeopleRateBySpecialist(eSpecialist, iChange);
+	const int iRate = getBaseGreatPeopleRate();
+	const int iModifier = getTotalGreatPeopleRateModifier();
+	const int iExtraRate = getAdditionalBaseGreatPeopleRateBySpecialist(eSpecialist, iChange);
 
-	int iExtra = ((iRate + iExtraRate) * iModifier / 100) - (iRate * iModifier / 100);
+	const int iExtra = ((iRate + iExtraRate) * iModifier / 100) - (iRate * iModifier / 100);
 
 	return iExtra;
 }
@@ -9347,7 +9347,7 @@ int CvCity::getSavedMaintenanceTimes100ByBuilding(BuildingTypes eBuilding) const
 	FAssertMsg(eBuilding >= 0, "eBuilding expected to be >= 0");
 	FAssertMsg(eBuilding < GC.getNumBuildingInfos(), "eBuilding expected to be < GC.getNumBuildingInfos()");
 
-	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 	int iModifier = kBuilding.getMaintenanceModifier();
 	int iDirectMaintenance = 0;
 	iModifier += kBuilding.getGlobalMaintenanceModifier();
@@ -9395,15 +9395,15 @@ int CvCity::getDistanceMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const
 	FAssertMsg(eCivic >= 0, "eCivic expected to be >= 0");
 	FAssertMsg(eCivic < GC.getNumCivicInfos(), "eBuilding expected to be < GC.getNumCivicInfos()");
 
-	CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
-	int iModifier = kCivic.getDistanceMaintenanceModifier();
+	const CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
+	const int iModifier = kCivic.getDistanceMaintenanceModifier();
 
 	if (iModifier != 0 && !isDisorder() && !isWeLoveTheKingDay())
 	{
-		int iOldBaseMaintenance = calculateDistanceMaintenanceTimes100();
-		int iNewBaseMaintenance = calculateDistanceMaintenanceTimes100(iModifier);
-		int iOldModifiedBaseMaintenance = std::max(0, iOldBaseMaintenance * (getEffectiveMaintenanceModifier() + 100) / 100);
-		int iNewModifiedBaseMaintenance = std::max(0, iNewBaseMaintenance * (getEffectiveMaintenanceModifier() + 100) / 100);
+		const int iOldBaseMaintenance = calculateDistanceMaintenanceTimes100();
+		const int iNewBaseMaintenance = calculateDistanceMaintenanceTimes100(iModifier);
+		const int iOldModifiedBaseMaintenance = std::max(0, iOldBaseMaintenance * (getEffectiveMaintenanceModifier() + 100) / 100);
+		const int iNewModifiedBaseMaintenance = std::max(0, iNewBaseMaintenance * (getEffectiveMaintenanceModifier() + 100) / 100);
 		return iOldModifiedBaseMaintenance - iNewModifiedBaseMaintenance;
 	}
 
@@ -9435,14 +9435,14 @@ int CvCity::getHomeAreaMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const
 	FAssertMsg(eCivic >= 0, "eCivic expected to be >= 0");
 	FAssertMsg(eCivic < GC.getNumCivicInfos(), "eBuilding expected to be < GC.getNumCivicInfos()");
 
-	CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
-	int iModifier = kCivic.getHomeAreaMaintenanceModifier();
+	const CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
+	const int iModifier = kCivic.getHomeAreaMaintenanceModifier();
 
 	if (iModifier != 0 && area()->isHomeArea(getOwnerINLINE()) && !isDisorder() && !isWeLoveTheKingDay())
 	{
-		int iOldBaseMaintenance = calculateBaseMaintenanceTimes100();
-		int iOldModifiedBaseMaintenance = std::max(0, iOldBaseMaintenance * (getEffectiveMaintenanceModifier() + 100) / 100);
-		int iNewModifiedBaseMaintenance = std::max(0, iOldBaseMaintenance * (getEffectiveMaintenanceModifier() + iModifier + 100) / 100);
+		const int iOldBaseMaintenance = calculateBaseMaintenanceTimes100();
+		const int iOldModifiedBaseMaintenance = std::max(0, iOldBaseMaintenance * (getEffectiveMaintenanceModifier() + 100) / 100);
+		const int iNewModifiedBaseMaintenance = std::max(0, iOldBaseMaintenance * (getEffectiveMaintenanceModifier() + iModifier + 100) / 100);
 		return iOldModifiedBaseMaintenance - iNewModifiedBaseMaintenance;
 	}
 
@@ -9454,14 +9454,14 @@ int CvCity::getOtherAreaMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const
 	FAssertMsg(eCivic >= 0, "eCivic expected to be >= 0");
 	FAssertMsg(eCivic < GC.getNumCivicInfos(), "eBuilding expected to be < GC.getNumCivicInfos()");
 
-	CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
-	int iModifier = kCivic.getOtherAreaMaintenanceModifier();
+	const CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
+	const int iModifier = kCivic.getOtherAreaMaintenanceModifier();
 
 	if (iModifier != 0 && !area()->isHomeArea(getOwnerINLINE()) && !isDisorder() && !isWeLoveTheKingDay())
 	{
-		int iOldBaseMaintenance = calculateBaseMaintenanceTimes100();
-		int iOldModifiedBaseMaintenance = std::max(0, iOldBaseMaintenance * (getEffectiveMaintenanceModifier() + 100) / 100);
-		int iNewModifiedBaseMaintenance = std::max(0, iOldBaseMaintenance * (getEffectiveMaintenanceModifier() + iModifier + 100) / 100);
+		const int iOldBaseMaintenance = calculateBaseMaintenanceTimes100();
+		const int iOldModifiedBaseMaintenance = std::max(0, iOldBaseMaintenance * (getEffectiveMaintenanceModifier() + 100) / 100);
+		const int iNewModifiedBaseMaintenance = std::max(0, iOldBaseMaintenance * (getEffectiveMaintenanceModifier() + iModifier + 100) / 100);
 		return iOldModifiedBaseMaintenance - iNewModifiedBaseMaintenance;
 	}
 
@@ -9662,7 +9662,7 @@ int CvCity::calculateColonyMaintenanceTimes100() const
 		return 0;
 	}
 
-	CvCity* pCapital = GET_PLAYER(getOwnerINLINE()).getCapitalCity();
+	const CvCity* pCapital = GET_PLAYER(getOwnerINLINE()).getCapitalCity();
 	if (pCapital && pCapital->area() == area())
 	{
 		return 0;
@@ -9723,7 +9723,7 @@ int CvCity::calculateCorporationMaintenanceTimes100(CorporationTypes eCorporatio
 	int iNumBonuses = 0;
 	for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
 	{
-		BonusTypes eBonus = (BonusTypes)GC.getCorporationInfo(eCorporation).getPrereqBonus(i);
+		const BonusTypes eBonus = (BonusTypes)GC.getCorporationInfo(eCorporation).getPrereqBonus(i);
 		if (NO_BONUS != eBonus)
 		{
 			iNumBonuses += getNumBonuses(eBonus);

@@ -2615,7 +2615,7 @@ bool CvPlayer::startingPlotWithinRange(CvPlot* pPlot, PlayerTypes ePlayer, int i
 	return false;
 }
 
-int CvPlayer::startingPlotDistanceFactor(CvPlot* pPlot, PlayerTypes ePlayer, int iRange) const
+int CvPlayer::startingPlotDistanceFactor(const CvPlot* pPlot, PlayerTypes ePlayer, int iRange) const
 {
 	PROFILE_FUNC();
 
@@ -4175,7 +4175,7 @@ void CvPlayer::killUnits()
 
 // XXX should pUnit be a CvSelectionGroup???
 // Returns the next unit in the cycle...
-CvSelectionGroup* CvPlayer::cycleSelectionGroups(CvUnit* pUnit, bool bForward, bool bWorkers, bool* pbWrap, bool bAllowViewportSwitch)
+CvSelectionGroup* CvPlayer::cycleSelectionGroups(const CvUnit* pUnit, bool bForward, bool bWorkers, bool* pbWrap, bool bAllowViewportSwitch)
 {
 	CLLNode<int>* pSelectionGroupNode;
 	CLLNode<int>* pFirstSelectionGroupNode;
@@ -6067,7 +6067,7 @@ int CvPlayer::upgradeAllPrice(UnitTypes eUpgradeUnit, UnitTypes eFromUnit)
 /*                                                                                              */
 /* General AI                                                                                   */
 /************************************************************************************************/
-int CvPlayer::countReligionSpreadUnits(CvArea* pArea, ReligionTypes eReligion, bool bIncludeTraining) const
+int CvPlayer::countReligionSpreadUnits(const CvArea* pArea, ReligionTypes eReligion, bool bIncludeTraining) const
 {
 	PROFILE_FUNC();
 
@@ -6108,7 +6108,7 @@ int CvPlayer::countReligionSpreadUnits(CvArea* pArea, ReligionTypes eReligion, b
 	return iCount;
 }
 
-int CvPlayer::countCorporationSpreadUnits(CvArea* pArea, CorporationTypes eCorporation, bool bIncludeTraining) const
+int CvPlayer::countCorporationSpreadUnits(const CvArea* pArea, CorporationTypes eCorporation, bool bIncludeTraining) const
 {
 	PROFILE_FUNC();
 
@@ -6130,7 +6130,7 @@ int CvPlayer::countCorporationSpreadUnits(CvArea* pArea, CorporationTypes eCorpo
 		CvCity* pLoopCity;
 		for( pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop) )
 		{
-			UnitTypes eUnit = pLoopCity->getProductionUnit();
+			const UnitTypes eUnit = pLoopCity->getProductionUnit();
 
 			if( eUnit != NO_UNIT )
 			{
@@ -6168,7 +6168,7 @@ int CvPlayer::countNumCoastalCities() const
 }
 
 
-int CvPlayer::countNumCoastalCitiesByArea(CvArea* pArea) const
+int CvPlayer::countNumCoastalCitiesByArea(const CvArea* pArea) const
 {
 	CvCity* pLoopCity;
 	int iCount;
@@ -6275,7 +6275,7 @@ int CvPlayer::countOwnedBonuses(BonusTypes eBonus) const
 			m_cachedBonusCount[iI] = 0;
 		}
 
-		bool bAdvancedStart = (getAdvancedStartPoints() >= 0) && (getCurrentEra() < 3);
+		const bool bAdvancedStart = (getAdvancedStartPoints() >= 0) && (getCurrentEra() < 3);
 
 		//count bonuses outside city radius
 		for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
@@ -6296,7 +6296,7 @@ int CvPlayer::countOwnedBonuses(BonusTypes eBonus) const
 		//count bonuses inside city radius or easily claimed
 		for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
 		{
-			bool bCommerceCulture = (pLoopCity->getCommerceRate(COMMERCE_CULTURE) > 0);
+			const bool bCommerceCulture = (pLoopCity->getCommerceRate(COMMERCE_CULTURE) > 0);
 
 			for(iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
 			{
@@ -6311,7 +6311,7 @@ int CvPlayer::countOwnedBonuses(BonusTypes eBonus) const
 }
 
 
-int CvPlayer::countUnimprovedBonuses(CvArea* pArea, CvPlot* pFromPlot) const
+int CvPlayer::countUnimprovedBonuses(const CvArea* pArea, const CvPlot* pFromPlot) const
 {
 	PROFILE_FUNC();
 
@@ -6450,7 +6450,7 @@ int CvPlayer::countNumCitiesConnectedToCapital() const
 }
 
 
-int CvPlayer::countPotentialForeignTradeCities(CvArea* pIgnoreArea) const
+int CvPlayer::countPotentialForeignTradeCities(const CvArea* pIgnoreArea) const
 {
 	int iTempValue;
 	int iCount;
@@ -22108,7 +22108,7 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 // Adding or removing a unit
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-int CvPlayer::getAdvancedStartUnitCost(UnitTypes eUnit, bool bAdd, CvPlot* pPlot) const
+int CvPlayer::getAdvancedStartUnitCost(UnitTypes eUnit, bool bAdd, const CvPlot* pPlot) const
 {
 	int iLoop;
 	int iNumUnitType = 0;
@@ -22287,7 +22287,7 @@ int CvPlayer::getAdvancedStartUnitCost(UnitTypes eUnit, bool bAdd, CvPlot* pPlot
 // Adding or removing a City
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-int CvPlayer::getAdvancedStartCityCost(bool bAdd, CvPlot* pPlot) const
+int CvPlayer::getAdvancedStartCityCost(bool bAdd, const CvPlot* pPlot) const
 {
 	int iNumCities = getNumCities();
 
@@ -22389,7 +22389,7 @@ int CvPlayer::getAdvancedStartCityCost(bool bAdd, CvPlot* pPlot) const
 // Adding or removing Population
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-int CvPlayer::getAdvancedStartPopCost(bool bAdd, CvCity* pCity) const
+int CvPlayer::getAdvancedStartPopCost(bool bAdd, const CvCity* pCity) const
 {
 	if (0 == getNumCities())
 	{
@@ -22440,7 +22440,7 @@ int CvPlayer::getAdvancedStartPopCost(bool bAdd, CvCity* pCity) const
 // Adding or removing Culture
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-int CvPlayer::getAdvancedStartCultureCost(bool bAdd, CvCity* pCity) const
+int CvPlayer::getAdvancedStartCultureCost(bool bAdd, const CvCity* pCity) const
 {
 	if (0 == getNumCities())
 	{
@@ -22490,7 +22490,7 @@ int CvPlayer::getAdvancedStartCultureCost(bool bAdd, CvCity* pCity) const
 // Adding or removing a Building from a city
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-int CvPlayer::getAdvancedStartBuildingCost(BuildingTypes eBuilding, bool bAdd, CvCity* pCity) const
+int CvPlayer::getAdvancedStartBuildingCost(BuildingTypes eBuilding, bool bAdd, const CvCity* pCity) const
 {
 	if (0 == getNumCities())
 	{
@@ -22607,7 +22607,7 @@ int CvPlayer::getAdvancedStartBuildingCost(BuildingTypes eBuilding, bool bAdd, C
 // Adding or removing Route
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-int CvPlayer::getAdvancedStartRouteCost(RouteTypes eRoute, bool bAdd, CvPlot* pPlot) const
+int CvPlayer::getAdvancedStartRouteCost(RouteTypes eRoute, bool bAdd, const CvPlot* pPlot) const
 {
 	if (0 == getNumCities())
 	{
@@ -22730,7 +22730,7 @@ int CvPlayer::getAdvancedStartRouteCost(RouteTypes eRoute, bool bAdd, CvPlot* pP
 // Adding or removing Improvement
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-int CvPlayer::getAdvancedStartImprovementCost(ImprovementTypes eImprovement, bool bAdd, CvPlot* pPlot) const
+int CvPlayer::getAdvancedStartImprovementCost(ImprovementTypes eImprovement, bool bAdd, const CvPlot* pPlot) const
 {
 	if (eImprovement == NO_IMPROVEMENT)
 	{
@@ -23010,7 +23010,7 @@ int CvPlayer::getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const
 // Adding or removing Visibility
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-int CvPlayer::getAdvancedStartVisibilityCost(bool bAdd, CvPlot* pPlot) const
+int CvPlayer::getAdvancedStartVisibilityCost(bool bAdd, const CvPlot* pPlot) const
 {
 	if (0 == getNumCities())
 	{
@@ -23190,11 +23190,11 @@ int CvPlayer::getCivicHealth() const
 
 	for(int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 	{
-		CivicTypes eCivic = getCivics((CivicOptionTypes)iI);
+		const CivicTypes eCivic = getCivics((CivicOptionTypes)iI);
 
 		if ( eCivic != NO_CIVIC )
 		{
-			CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
+			const CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
 
 			iTotal += kCivic.getExtraHealth();
 		}
@@ -29689,7 +29689,7 @@ bool CvPlayer::canForceReligion(PlayerTypes eTarget, ReligionTypes eReligion) co
 	return (GET_PLAYER(eTarget).canDoReligion(eReligion) && GET_PLAYER(eTarget).getStateReligion() != eReligion && getStateReligion() == eReligion);
 }
 
-bool CvPlayer::canSpyDestroyUnit(PlayerTypes eTarget, CvUnit& kUnit) const
+bool CvPlayer::canSpyDestroyUnit(PlayerTypes eTarget, const CvUnit& kUnit) const
 {
 	if (kUnit.getTeam() == getTeam())
 	{
@@ -29709,7 +29709,7 @@ bool CvPlayer::canSpyDestroyUnit(PlayerTypes eTarget, CvUnit& kUnit) const
 	return true;
 }
 
-bool CvPlayer::canSpyBribeUnit(PlayerTypes eTarget, CvUnit& kUnit) const
+bool CvPlayer::canSpyBribeUnit(PlayerTypes eTarget, const CvUnit& kUnit) const
 {
 	if (!canSpyDestroyUnit(eTarget, kUnit))
 	{
@@ -29750,7 +29750,7 @@ bool CvPlayer::canSpyBribeUnit(PlayerTypes eTarget, CvUnit& kUnit) const
 
 bool CvPlayer::canSpyDestroyBuilding(PlayerTypes eTarget, BuildingTypes eBuilding) const
 {
-	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 	if (kBuilding.getProductionCost() <= 0)
 	{
 		return false;
@@ -29788,7 +29788,7 @@ bool CvPlayer::canSpyDestroyProject(PlayerTypes eTarget, ProjectTypes eProject) 
 	}
 	else
 	{
-		VictoryTypes eVicotry = (VictoryTypes)kProject.getVictoryPrereq();
+		const VictoryTypes eVicotry = (VictoryTypes)kProject.getVictoryPrereq();
 		if (NO_VICTORY != eVicotry)
 		{
 			// Can't destroy spaceship components if we have already launched
@@ -29853,7 +29853,7 @@ int CvPlayer::getReligionPopulation(ReligionTypes eReligion) const
 int CvPlayer::getNewCityProductionValue() const
 {
 	int iValue = 0;
-	CvCivilizationInfo& kCivilizationInfo = GC.getCivilizationInfo(getCivilizationType());
+	const CvCivilizationInfo& kCivilizationInfo = GC.getCivilizationInfo(getCivilizationType());
 	for (int iJ = 0; iJ < GC.getNumBuildingClassInfos(); iJ++)
 	{
 		BuildingTypes eBuilding = ((BuildingTypes)(kCivilizationInfo.getCivilizationBuildings(iJ)));
@@ -31786,7 +31786,7 @@ DenialTypes CvPlayer::AI_secretaryGeneralTrade(VoteSourceTypes eVoteSource, Play
 	return NO_DENIAL;
 }
 
-DenialTypes CvPlayer::AI_workerTrade(CvUnit* pUnit, PlayerTypes ePlayer) const
+DenialTypes CvPlayer::AI_workerTrade(const CvUnit* pUnit, PlayerTypes ePlayer) const
 {
 
 	if (isHuman())
@@ -31832,7 +31832,7 @@ DenialTypes CvPlayer::AI_workerTrade(CvUnit* pUnit, PlayerTypes ePlayer) const
 		}
 	}
 
-	AttitudeTypes eAttitude = AI_getAttitude(ePlayer);
+	const AttitudeTypes eAttitude = AI_getAttitude(ePlayer);
 
 	if (eAttitude <= GC.getLeaderHeadInfo(getPersonalityType()).getWorkerRefuseAttitudeThreshold())
 	{
@@ -31842,7 +31842,7 @@ DenialTypes CvPlayer::AI_workerTrade(CvUnit* pUnit, PlayerTypes ePlayer) const
 	return NO_DENIAL;
 }
 
-DenialTypes CvPlayer::AI_militaryUnitTrade(CvUnit* pUnit, PlayerTypes ePlayer) const
+DenialTypes CvPlayer::AI_militaryUnitTrade(const CvUnit* pUnit, PlayerTypes ePlayer) const
 {
 
 	if (isHuman())
@@ -31888,12 +31888,12 @@ DenialTypes CvPlayer::AI_militaryUnitTrade(CvUnit* pUnit, PlayerTypes ePlayer) c
 		}
 	}
 
-	AttitudeTypes eAttitude = GET_PLAYER(getID()).AI_getAttitude(ePlayer);
-
 	if (pUnit->nukeRange() > 0 && GET_PLAYER(ePlayer).getNumNukeUnits() == 0)
 	{
 		return DENIAL_JOKING;
 	}
+
+	const AttitudeTypes eAttitude = GET_PLAYER(getID()).AI_getAttitude(ePlayer);
 
 	if (eAttitude <= GC.getLeaderHeadInfo(getPersonalityType()).getMilitaryUnitRefuseAttitudeThreshold())
 	{
@@ -32045,7 +32045,7 @@ void CvPlayer::setAutomatedCanBuild(BuildTypes eBuild, bool bNewValue)
 	m_pabAutomatedCanBuild[eBuild] = bNewValue;
 }
 
-bool CvPlayer::hasEnemyDefenderUnit(CvPlot* pPlot)
+bool CvPlayer::hasEnemyDefenderUnit(const CvPlot* pPlot) const
 {
 	std::vector<CvUnit *> plotUnits;
 	CvUnit *pLoopUnit;
@@ -35267,13 +35267,13 @@ void CvPlayer::recalculateAfflictedUnitCount()
 		if (GC.getPromotionLineInfo((PromotionLineTypes)iI).isAffliction())
 		{
 			PromotionLineTypes eAfflictionLine = ((PromotionLineTypes)iI);
-			int iRecalc = countAfflictedUnits(eAfflictionLine);
+			const int iRecalc = countAfflictedUnits(eAfflictionLine);
 			setPlayerWideAfflictionCount(eAfflictionLine, iRecalc);
 		}
 	}
 }
 
-CvCity*	CvPlayer::findClosestCity(CvPlot* pPlot) const
+CvCity*	CvPlayer::findClosestCity(const CvPlot* pPlot) const
 {
 	int iLoop;
 	CvCity* pLoopCity;
@@ -35287,7 +35287,7 @@ CvCity*	CvPlayer::findClosestCity(CvPlot* pPlot) const
 
 	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
 	{
-		int iDistance = plotDistance(pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE(), pPlot->getX_INLINE(), pPlot->getY_INLINE());
+		const int iDistance = plotDistance(pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE(), pPlot->getX_INLINE(), pPlot->getY_INLINE());
 
 		if ( iDistance < iClosest )
 		{
