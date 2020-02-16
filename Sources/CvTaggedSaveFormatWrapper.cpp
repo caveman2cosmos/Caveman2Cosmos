@@ -1039,6 +1039,39 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 			m_stream->WriteString(info.getType());
 		}
 		break;
+	case REMAPPED_CLASS_TYPE_YIELDS:
+		entry.numClasses = NUM_YIELD_TYPES;
+		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		for (int i = 0; i < entry.numClasses; i++)
+		{
+			CvYieldInfo& info = GC.getYieldInfo((YieldTypes)i);
+
+			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
+			m_stream->WriteString(info.getType());
+		}
+		break;
+	case REMAPPED_CLASS_TYPE_COMMERCES:
+		entry.numClasses = NUM_COMMERCE_TYPES;
+		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		for (int i = 0; i < entry.numClasses; i++)
+		{
+			CvCommerceInfo& info = GC.getCommerceInfo((CommerceTypes)i);
+
+			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
+			m_stream->WriteString(info.getType());
+		}
+		break;
+	case REMAPPED_CLASS_TYPE_DOMAINS:
+		entry.numClasses = NUM_DOMAIN_TYPES;
+		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		for (int i = 0; i < entry.numClasses; i++)
+		{
+			CvInfoBase& info = GC.getDomainInfo((DomainTypes)i);
+
+			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
+			m_stream->WriteString(info.getType());
+		}
+		break;
 	default:
 		FAssertMsg(false, "Unexpected RemappedClassType");
 		break;
@@ -1096,6 +1129,9 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTables()
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_PROPERTIES);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_INVISIBLES);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_MISSIONS);
+	WriteClassMappingTable(REMAPPED_CLASS_TYPE_YIELDS);
+	WriteClassMappingTable(REMAPPED_CLASS_TYPE_COMMERCES);
+	WriteClassMappingTable(REMAPPED_CLASS_TYPE_DOMAINS);
 }
 
 //	How many members of a given class type were present at save time?
@@ -1232,6 +1268,15 @@ CvTaggedSaveFormatWrapper::getNumClassEnumValues(RemappedClassType classType)
 			break;
 		case REMAPPED_CLASS_TYPE_MISSIONS:
 			result = GC.getNumMissionInfos();
+			break;
+		case REMAPPED_CLASS_TYPE_YIELDS:
+			result = NUM_YIELD_TYPES;
+			break;
+		case REMAPPED_CLASS_TYPE_COMMERCES:
+			result = NUM_COMMERCE_TYPES;
+			break;
+		case REMAPPED_CLASS_TYPE_DOMAINS:
+			result = NUM_DOMAIN_TYPES;
 			break;
 		default:
 			FAssertMsg(false, "Unexpected RemappedClassType");
