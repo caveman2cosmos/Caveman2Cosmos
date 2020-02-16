@@ -22297,7 +22297,7 @@
 			</SpecialistValids>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<iFreeSpecialistCount>3</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
@@ -22537,7 +22537,7 @@
 			</SpecialistValids>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<iFreeSpecialistCount>3</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>

@@ -19898,7 +19898,7 @@
 			</GlobalBuildingExtraCommerces>
 			<LocalSpecialistCommerceChanges>
 				<LocalSpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<CommerceChanges>
 				            <iCommerce>0</iCommerce>
 				            <iCommerce>0</iCommerce>
@@ -21168,7 +21168,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<CommerceChanges>
 				            <iCommerce>-1</iCommerce>
 				            <iCommerce>1</iCommerce>

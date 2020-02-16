@@ -21347,7 +21347,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Zwycięstwa [COLOR_UNIT_TEXT]Spartakusa[COLOR_REVERT] rozzuchwaliły innych [COLOR_UNIT_TEXT]Gladiatorów[COLOR_REVERT] do dołączenia do rebelii.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_ANDROID</Tag>
+		<Tag>TXT_KEY_SPECIALIST_ANDROID_WORKER</Tag>
 		<English>Android Worker</English>
 		<French>Ouvrier Androide</French>
 		<German>Android-Arbeiter</German>
@@ -21360,7 +21360,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Android Robotnik</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_ANDROID_STRATEGY</Tag>
+		<Tag>TXT_KEY_SPECIALIST_ANDROID_WORKER_STRATEGY</Tag>
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
@@ -21636,7 +21636,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Wielki Kupiec</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_GREAT_PRIEST</Tag>
+		<Tag>TXT_KEY_SPECIALIST_GREAT_PROPHET</Tag>
 		<English>Great Prophet</English>
 		<French>
 			<Text>Prophète illustre</Text>
@@ -21711,7 +21711,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Wielki Szpieg</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_GREAT_WARLORD</Tag>
+		<Tag>TXT_KEY_SPECIALIST_MILITARY_INSTRUCTOR</Tag>
 		<English>Military Instructor</English>
 		<French>
 			<Text>Instructeur Militaire</Text>
@@ -21919,7 +21919,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<French>TBD</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_SLEUTH</Tag>
+		<Tag>TXT_KEY_SPECIALIST_GREAT_SLEUTH</Tag>
 		<English>Great Sleuth</English>
 		<French>Détective illustre</French>
 	</TEXT>

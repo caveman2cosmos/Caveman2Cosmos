@@ -9278,7 +9278,7 @@
 			</UnitAIs>
 			<GreatPeoples>
 				<GreatPeople>
-					<GreatPeopleType>SPECIALIST_GREAT_GENERAL</GreatPeopleType>
+					<GreatPeopleType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</GreatPeopleType>
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
@@ -9344,7 +9344,7 @@
 			</UnitAIs>
 			<GreatPeoples>
 				<GreatPeople>
-					<GreatPeopleType>SPECIALIST_GREAT_GENERAL</GreatPeopleType>
+					<GreatPeopleType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</GreatPeopleType>
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
@@ -9404,7 +9404,7 @@
 			</UnitAIs>
 			<GreatPeoples>
 				<GreatPeople>
-					<GreatPeopleType>SPECIALIST_GREAT_GENERAL</GreatPeopleType>
+					<GreatPeopleType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</GreatPeopleType>
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>

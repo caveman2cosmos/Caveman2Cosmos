@@ -2493,7 +2493,7 @@
 			</SpecialistCounts>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>

@@ -2859,7 +2859,7 @@
 			<iGold>-250</iGold>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
@@ -3048,7 +3048,7 @@
 			<bPickCity>1</bPickCity>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
@@ -3074,7 +3074,7 @@
 			<bPickCity>1</bPickCity>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
@@ -3464,7 +3464,7 @@
 			<bPickCity>1</bPickCity>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
@@ -7399,7 +7399,7 @@
 			<bPickCity>1</bPickCity>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>

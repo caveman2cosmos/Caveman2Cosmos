@@ -53667,7 +53667,7 @@ Base XP gained when defending
 			</UnitAIs>
 			<GreatPeoples>
 				<GreatPeople>
-					<GreatPeopleType>SPECIALIST_GREAT_WARLORD</GreatPeopleType>
+					<GreatPeopleType>SPECIALIST_MILITARY_INSTRUCTOR</GreatPeopleType>
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
@@ -53734,7 +53734,7 @@ Base XP gained when defending
 			</UnitAIs>
 			<GreatPeoples>
 				<GreatPeople>
-					<GreatPeopleType>SPECIALIST_GREAT_WARLORD</GreatPeopleType>
+					<GreatPeopleType>SPECIALIST_MILITARY_INSTRUCTOR</GreatPeopleType>
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
@@ -53802,7 +53802,7 @@ Base XP gained when defending
 			</UnitAIs>
 			<GreatPeoples>
 				<GreatPeople>
-					<GreatPeopleType>SPECIALIST_GREAT_WARLORD</GreatPeopleType>
+					<GreatPeopleType>SPECIALIST_MILITARY_INSTRUCTOR</GreatPeopleType>
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
@@ -53872,7 +53872,7 @@ Base XP gained when defending
 			</UnitAIs>
 			<GreatPeoples>
 				<GreatPeople>
-					<GreatPeopleType>SPECIALIST_GREAT_GENERAL</GreatPeopleType>
+					<GreatPeopleType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</GreatPeopleType>
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
@@ -53933,7 +53933,7 @@ Base XP gained when defending
 			</UnitAIs>
 			<GreatPeoples>
 				<GreatPeople>
-					<GreatPeopleType>SPECIALIST_GREAT_GENERAL</GreatPeopleType>
+					<GreatPeopleType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</GreatPeopleType>
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
@@ -54822,7 +54822,7 @@ Base XP gained when defending
 			</ReligionSpreads>
 			<GreatPeoples>
 				<GreatPeople>
-					<GreatPeopleType>SPECIALIST_GREAT_PRIEST</GreatPeopleType>
+					<GreatPeopleType>SPECIALIST_GREAT_PROPHET</GreatPeopleType>
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
@@ -56241,7 +56241,7 @@ Base XP gained when defending
 			</UnitAIs>
 			<GreatPeoples>
 				<GreatPeople>
-					<GreatPeopleType>SPECIALIST_GREAT_GENERAL</GreatPeopleType>
+					<GreatPeopleType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</GreatPeopleType>
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
@@ -66254,7 +66254,7 @@ Base XP gained when defending
 			</UnitAIs>
 			<GreatPeoples>
 				<GreatPeople>
-					<GreatPeopleType>SPECIALIST_SLEUTH</GreatPeopleType>
+					<GreatPeopleType>SPECIALIST_GREAT_SLEUTH</GreatPeopleType>
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>

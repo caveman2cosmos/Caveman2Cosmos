@@ -7594,7 +7594,7 @@ def TriggerSuperVirus4(argsList):
   szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_SUPER_VIRUS_HIT_CITY", (iChangePopulation, eventCity.getNameKey()))
   CyInterface().addMessage(kTriggeredData.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", InterfaceMessageTypes.MESSAGE_TYPE_INFO, None, GC.getInfoTypeForString("COLOR_RED"), eventCity.getX(), eventCity.getY(), True, True)
 
-  eventCity.changeFreeSpecialistCount(GC.getInfoTypeForString("SPECIALIST_GREAT_GENERAL"), 1)
+  eventCity.changeFreeSpecialistCount(GC.getInfoTypeForString("SPECIALIST_GREAT_MILITARY_INSTRUCTOR"), 1)
 
 def getHelpSuperVirus4(argsList):
 
@@ -7606,7 +7606,7 @@ def getHelpSuperVirus4(argsList):
   iChangePopulation = eventCity.getPopulation() * 75
   iChangePopulation /= 100
 
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_FREE_SPECIALISTS", (1, GC.getSpecialistInfo(GC.getInfoTypeForString("SPECIALIST_GREAT_GENERAL")).getTextKey(), eventCity.getNameKey() , ))
+  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_FREE_SPECIALISTS", (1, GC.getSpecialistInfo(GC.getInfoTypeForString("SPECIALIST_GREAT_MILITARY_INSTRUCTOR")).getTextKey(), eventCity.getNameKey() , ))
   szHelp += u"\n"
   szHelp += TRNSLTR.getText("TXT_KEY_EVENT_LOSE_POPULATION", (iChangePopulation, eventCity.getNameKey() , ))
   szHelp += u"\n"

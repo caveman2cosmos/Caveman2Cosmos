@@ -1097,7 +1097,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 			</TechResearchModifiers>
-			<EraAdvanceFreeSpecialistType>SPECIALIST_GREAT_GENERAL</EraAdvanceFreeSpecialistType>
+			<EraAdvanceFreeSpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</EraAdvanceFreeSpecialistType>
 			<GoldenAgeonBirthofGreatPersonType>UNITCLASS_GREAT_GENERAL</GoldenAgeonBirthofGreatPersonType>
 			<iFreeExperience>2</iFreeExperience>
 			<iExpInBorderModifier>20</iExpInBorderModifier>
@@ -1330,7 +1330,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 			</TechResearchModifiers>
-			<EraAdvanceFreeSpecialistType>SPECIALIST_GREAT_GENERAL</EraAdvanceFreeSpecialistType>
+			<EraAdvanceFreeSpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</EraAdvanceFreeSpecialistType>
 			<GoldenAgeonBirthofGreatPersonType>UNITCLASS_GREAT_GENERAL</GoldenAgeonBirthofGreatPersonType>
 			<iFreeExperience>2</iFreeExperience>
 			<iExpInBorderModifier>10</iExpInBorderModifier>
@@ -1656,7 +1656,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 			</TechResearchModifiers>
-			<EraAdvanceFreeSpecialistType>SPECIALIST_GREAT_GENERAL</EraAdvanceFreeSpecialistType>
+			<EraAdvanceFreeSpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</EraAdvanceFreeSpecialistType>
 			<GoldenAgeonBirthofGreatPersonType>UNITCLASS_GREAT_GENERAL</GoldenAgeonBirthofGreatPersonType>
 			<iFreeExperience>2</iFreeExperience>
 			<iExpInBorderModifier>10</iExpInBorderModifier>
@@ -2694,7 +2694,7 @@
 			</FreePromotionUnitCombatTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -2712,7 +2712,7 @@
 			</SpecialistYieldChanges>
 			<SpecialistCommerceChanges>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>2</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -2833,7 +2833,7 @@
 			</FreePromotionUnitCombatTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -2954,7 +2954,7 @@
 			</FreePromotionUnitCombatTypes>
 			<SpecialistCommerceChanges>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>2</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -3167,7 +3167,7 @@
 			</FreePromotionUnitCombatTypes>
 			<SpecialistCommerceChanges>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>-2</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -3686,7 +3686,7 @@
 			</BuildWorkerSpeedModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -3704,7 +3704,7 @@
 			</SpecialistYieldChanges>
 			<SpecialistCommerceChanges>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>2</iCommerce>
@@ -3933,7 +3933,7 @@
 			</BuildWorkerSpeedModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4162,7 +4162,7 @@
 			</BuildWorkerSpeedModifierTypes>
 			<SpecialistCommerceChanges>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>2</iCommerce>
@@ -5664,7 +5664,7 @@
 			</BuildingHappinessModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -5682,7 +5682,7 @@
 			</SpecialistYieldChanges>
 			<SpecialistCommerceChanges>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -6099,7 +6099,7 @@
 			</BuildingHappinessModifierTypes>
 			<SpecialistCommerceChanges>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -6354,7 +6354,7 @@
 			</BuildingHappinessModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -7874,7 +7874,7 @@
 			</BuildingProductionModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -7892,7 +7892,7 @@
 			</SpecialistYieldChanges>
 			<SpecialistCommerceChanges>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -8190,7 +8190,7 @@
 			</BuildingProductionModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -8375,7 +8375,7 @@
 			</BuildingProductionModifierTypes>
 			<SpecialistCommerceChanges>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -16309,7 +16309,7 @@
 			</BuildWorkerSpeedModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -16319,7 +16319,7 @@
 			</SpecialistYieldChanges>
 			<SpecialistCommerceChanges>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -16957,7 +16957,7 @@
 			</BuildingProductionModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -16967,7 +16967,7 @@
 			</SpecialistYieldChanges>
 			<SpecialistCommerceChanges>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>2</iCommerce>
@@ -17324,7 +17324,7 @@
 			</BuildWorkerSpeedModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -17334,7 +17334,7 @@
 			</SpecialistYieldChanges>
 			<SpecialistCommerceChanges>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -17743,7 +17743,7 @@
 			</BuildingProductionModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -17753,7 +17753,7 @@
 			</SpecialistYieldChanges>
 			<SpecialistCommerceChanges>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>2</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -18008,7 +18008,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -18027,7 +18027,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>1</iCommerce>
 						<iCommerce>1</iCommerce>
@@ -18305,7 +18305,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -18324,7 +18324,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>1</iCommerce>
@@ -18562,7 +18562,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -18581,7 +18581,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>1</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -18632,7 +18632,7 @@
 					<iModifier>25</iModifier>
 				</UnitCombatProductionModifier>
 			</UnitCombatProductionModifiers>
-			<EraAdvanceFreeSpecialistType>SPECIALIST_GREAT_PRIEST</EraAdvanceFreeSpecialistType>
+			<EraAdvanceFreeSpecialistType>SPECIALIST_GREAT_PROPHET</EraAdvanceFreeSpecialistType>
 			<iWarWearinessAccumulationModifier>30</iWarWearinessAccumulationModifier>
 			<iReligiousAnarchyTimeModifier>-50</iReligiousAnarchyTimeModifier>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
@@ -18728,7 +18728,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -18747,7 +18747,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -18894,7 +18894,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -18913,7 +18913,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>-1</iCommerce>
 						<iCommerce>-1</iCommerce>
@@ -19186,7 +19186,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -19205,7 +19205,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-1</iCommerce>
@@ -19353,7 +19353,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -19372,7 +19372,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-1</iCommerce>
@@ -19512,7 +19512,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -19531,7 +19531,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>-1</iCommerce>
 						<iCommerce>-1</iCommerce>
@@ -19685,7 +19685,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -19704,7 +19704,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>1</iCommerce>
 						<iCommerce>1</iCommerce>
@@ -19857,7 +19857,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -19876,7 +19876,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>1</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -20029,7 +20029,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -20048,7 +20048,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -20195,7 +20195,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -20214,7 +20214,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>1</iCommerce>
@@ -20325,7 +20325,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -20344,7 +20344,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>-1</iCommerce>
 						<iCommerce>-1</iCommerce>
@@ -20502,7 +20502,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -20521,7 +20521,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>-1</iCommerce>
 						<iCommerce>-1</iCommerce>
@@ -20672,7 +20672,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -20691,7 +20691,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>-1</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -20840,7 +20840,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -20859,7 +20859,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>-1</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -24291,7 +24291,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -24358,7 +24358,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>-1</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -25040,7 +25040,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -25107,7 +25107,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>-1</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -25615,7 +25615,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -25682,7 +25682,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>-1</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -25962,7 +25962,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -26029,7 +26029,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>-1</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -26754,7 +26754,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -26821,7 +26821,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -27504,7 +27504,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -27571,7 +27571,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -28073,7 +28073,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -28140,7 +28140,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -28420,7 +28420,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -28487,7 +28487,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -31521,7 +31521,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -32086,7 +32086,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -32585,7 +32585,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -33033,7 +33033,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -33493,7 +33493,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -34032,7 +34032,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -34500,7 +34500,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -34925,7 +34925,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -35802,7 +35802,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -37388,7 +37388,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -37994,7 +37994,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -39347,7 +39347,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -39931,7 +39931,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>1</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -41084,7 +41084,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>1</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -41699,7 +41699,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>-1</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -42839,7 +42839,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>-1</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -43284,7 +43284,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_SLEUTH</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_SLEUTH</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -43321,7 +43321,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_SLEUTH</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_SLEUTH</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -43366,7 +43366,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -44087,7 +44087,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_SLEUTH</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_SLEUTH</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -44370,7 +44370,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_SLEUTH</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_SLEUTH</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -44379,7 +44379,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -44840,7 +44840,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_SLEUTH</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_SLEUTH</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -44877,7 +44877,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_SLEUTH</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_SLEUTH</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -44922,7 +44922,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -45632,7 +45632,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_SLEUTH</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_SLEUTH</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -45914,7 +45914,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_SLEUTH</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_SLEUTH</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -45923,7 +45923,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -46567,7 +46567,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>1</iCommerce>
@@ -47848,7 +47848,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>1</iCommerce>
@@ -48539,7 +48539,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-1</iCommerce>
@@ -49760,7 +49760,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-1</iCommerce>
@@ -53667,7 +53667,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_SLEUTH</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_SLEUTH</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -54427,7 +54427,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -54491,7 +54491,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_SLEUTH</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_SLEUTH</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -54712,7 +54712,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -54993,7 +54993,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_SLEUTH</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_SLEUTH</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -55225,7 +55225,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -55289,7 +55289,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_SLEUTH</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_SLEUTH</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -55522,7 +55522,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -55826,7 +55826,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_SLEUTH</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_SLEUTH</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -58405,7 +58405,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-1</iCommerce>
@@ -58911,7 +58911,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>1</iCommerce>
@@ -59507,7 +59507,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>-1</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -60455,7 +60455,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_SLEUTH</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_SLEUTH</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -60873,7 +60873,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_SLEUTH</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_SLEUTH</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -64026,7 +64026,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>-1</iYield>
@@ -64122,7 +64122,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>-1</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -64140,7 +64140,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_WARLORD</SpecialistType>
+					<SpecialistType>SPECIALIST_MILITARY_INSTRUCTOR</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>-1</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -64276,7 +64276,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>-1</iYield>
@@ -64322,7 +64322,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>-1</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -64340,7 +64340,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_WARLORD</SpecialistType>
+					<SpecialistType>SPECIALIST_MILITARY_INSTRUCTOR</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>-1</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -64542,7 +64542,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -64560,7 +64560,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_WARLORD</SpecialistType>
+					<SpecialistType>SPECIALIST_MILITARY_INSTRUCTOR</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -64747,7 +64747,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>-1</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -64765,7 +64765,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_WARLORD</SpecialistType>
+					<SpecialistType>SPECIALIST_MILITARY_INSTRUCTOR</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>-1</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -64898,7 +64898,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>1</iYield>
@@ -65117,7 +65117,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>1</iYield>
@@ -65172,7 +65172,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -66035,7 +66035,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_SLEUTH</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_SLEUTH</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -66088,7 +66088,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_SLEUTH</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_SLEUTH</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -67055,7 +67055,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_SLEUTH</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_SLEUTH</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -67074,7 +67074,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_SLEUTH</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_SLEUTH</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -67819,7 +67819,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_SLEUTH</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_SLEUTH</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -67872,7 +67872,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_SLEUTH</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_SLEUTH</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -68577,7 +68577,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_SLEUTH</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_SLEUTH</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -68596,7 +68596,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_SLEUTH</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_SLEUTH</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -68860,7 +68860,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_SLEUTH</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_SLEUTH</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -69850,7 +69850,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>1</iCommerce>
@@ -71552,7 +71552,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-1</iCommerce>
@@ -72541,7 +72541,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>1</iCommerce>
@@ -72843,7 +72843,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>1</iCommerce>
@@ -75604,7 +75604,7 @@
 			<iGreatPeopleRateModifier>-25</iGreatPeopleRateModifier>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>2</iYield>
@@ -75614,7 +75614,7 @@
 			</SpecialistYieldChanges>
 			<SpecialistCommerceChanges>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_ANDROID</SpecialistType>
+					<SpecialistType>SPECIALIST_ANDROID_WORKER</SpecialistType>
 					<CommerceChanges>
 						<iCommerce>2</iCommerce>
 						<iCommerce>0</iCommerce>
