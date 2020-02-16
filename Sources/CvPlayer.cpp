@@ -853,29 +853,8 @@ void CvPlayer::uninit()
 	m_triggersFired.clear();
 	m_mapScoreHistory.clear();
 
-	if (m_ppaaiSpecialistExtraYield != NULL)
-	{
-		for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppaaiSpecialistExtraYield[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppaaiSpecialistExtraYield);
-	}
-
-	if (m_ppaaiImprovementYieldChange != NULL)
-	{
-		for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppaaiImprovementYieldChange[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppaaiImprovementYieldChange);
-	}
-
-/************************************************************************************************/
-/* Afforess	                  Start		 12/9/09                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+	SAFE_DELETE_ARRAY2(m_ppaaiSpecialistExtraYield, GC.getNumSpecialistInfos());
+	SAFE_DELETE_ARRAY2(m_ppaaiImprovementYieldChange, GC.getNumImprovementInfos());
 	SAFE_DELETE_ARRAY(m_paiUnitCombatProductionModifier);
 	SAFE_DELETE_ARRAY(m_paiBonusMintedPercent);
 	SAFE_DELETE_ARRAY(m_paiBuildingClassProductionModifier);
@@ -883,7 +862,6 @@ void CvPlayer::uninit()
 	SAFE_DELETE_ARRAY(m_pabAutomatedCanBuild);
 	SAFE_DELETE_ARRAY(m_paiResourceConsumption);
 	SAFE_DELETE_ARRAY(m_paiFreeSpecialistCount);
-	//TB Traits begin
 	SAFE_DELETE_ARRAY(m_paiImprovementUpgradeRateModifierSpecific);
 	SAFE_DELETE_ARRAY(m_paiBuildWorkerSpeedModifierSpecific);
 	SAFE_DELETE_ARRAY(m_pabHasTrait);
@@ -892,69 +870,15 @@ void CvPlayer::uninit()
 	SAFE_DELETE_ARRAY(m_paiNationalDomainFreeExperience);
 	SAFE_DELETE_ARRAY(m_paiNationalDomainProductionModifier);
 	SAFE_DELETE_ARRAY(m_paiNationalTechResearchModifier);
-	//Team Project (8)
 	SAFE_DELETE_ARRAY(m_paiUnitCombatFreeExperience);
+	SAFE_DELETE_ARRAY2(m_ppaaiSpecialistExtraCommerce, GC.getNumSpecialistInfos());
+	SAFE_DELETE_ARRAY2(m_ppaaiTerrainYieldChange, GC.getNumTerrainInfos());
+	SAFE_DELETE_ARRAY2(m_ppiBuildingCommerceModifier, GC.getNumBuildingInfos());
+	SAFE_DELETE_ARRAY2(m_ppiBuildingClassCommerceChange, GC.getNumBuildingClassInfos());
+	SAFE_DELETE_ARRAY2(m_ppiBonusCommerceModifier, GC.getNumBonusInfos());
+	SAFE_DELETE_ARRAY2(m_ppiSpecialistCommercePercentChanges, GC.getNumSpecialistInfos());
+	SAFE_DELETE_ARRAY2(m_ppiSpecialistYieldPercentChanges, GC.getNumSpecialistInfos());
 
-	if (m_ppaaiSpecialistExtraCommerce != NULL)
-	{
-		for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppaaiSpecialistExtraCommerce[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppaaiSpecialistExtraCommerce);
-	}
-	//TB Traits end
-	if (m_ppaaiTerrainYieldChange != NULL)
-	{
-		for (int iI = 0; iI < GC.getNumTerrainInfos(); iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppaaiTerrainYieldChange[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppaaiTerrainYieldChange);
-	}
-	if (m_ppiBuildingCommerceModifier != NULL)
-	{
-		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppiBuildingCommerceModifier[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppiBuildingCommerceModifier);
-	}
-	if (m_ppiBuildingClassCommerceChange != NULL)
-	{
-		for (int iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppiBuildingClassCommerceChange[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppiBuildingClassCommerceChange);
-	}
-	if (m_ppiBonusCommerceModifier != NULL)
-	{
-		for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppiBonusCommerceModifier[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppiBonusCommerceModifier);
-	}
-	if (m_ppiSpecialistCommercePercentChanges != NULL)
-	{
-		for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppiSpecialistCommercePercentChanges[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppiSpecialistCommercePercentChanges);
-	}
-	if (m_ppiSpecialistYieldPercentChanges != NULL)
-	{
-		for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppiSpecialistYieldPercentChanges[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppiSpecialistYieldPercentChanges);
-	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	m_groupCycle.clear();
 
 	m_researchQueue.clear();

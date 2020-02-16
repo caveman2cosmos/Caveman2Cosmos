@@ -429,57 +429,11 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY(m_pbCommerceFlexible);
 	SAFE_DELETE_ARRAY(m_pbCommerceChangeOriginalOwner);
 	SAFE_DELETE_ARRAY(m_pbBuildingClassNeededInCity);
-
-	if (m_ppaiSpecialistYieldChange != NULL)
-	{
-		for(int i=0;i<GC.getNumSpecialistInfos();i++)
-		{
-			SAFE_DELETE_ARRAY(m_ppaiSpecialistYieldChange[i]);
-		}
-		SAFE_DELETE_ARRAY(m_ppaiSpecialistYieldChange);
-	}
-
-	if (m_ppaiSpecialistCommerceChange != NULL)
-	{
-		for(int i=0;i<GC.getNumSpecialistInfos();i++)
-		{
-			SAFE_DELETE_ARRAY(m_ppaiSpecialistCommerceChange[i]);
-		}
-		SAFE_DELETE_ARRAY(m_ppaiSpecialistCommerceChange);
-	}
-
-//Team Project (1)
-	if (m_ppaiLocalSpecialistYieldChange != NULL)
-	{
-		for(int i=0;i<GC.getNumSpecialistInfos();i++)
-		{
-			SAFE_DELETE_ARRAY(m_ppaiLocalSpecialistYieldChange[i]);
-		}
-		SAFE_DELETE_ARRAY(m_ppaiLocalSpecialistYieldChange);
-	}
-
-	if (m_ppaiLocalSpecialistCommerceChange != NULL)
-	{
-		for(int i=0;i<GC.getNumSpecialistInfos();i++)
-		{
-			SAFE_DELETE_ARRAY(m_ppaiLocalSpecialistCommerceChange[i]);
-		}
-		SAFE_DELETE_ARRAY(m_ppaiLocalSpecialistCommerceChange);
-	}
-
-	if (m_ppaiBonusYieldModifier != NULL)
-	{
-		for(int i=0;i<GC.getNumBonusInfos();i++)
-		{
-			SAFE_DELETE_ARRAY(m_ppaiBonusYieldModifier[i]);
-		}
-		SAFE_DELETE_ARRAY(m_ppaiBonusYieldModifier);
-	}
-/************************************************************************************************/
-/* Afforess	                  Start		 Last Update: 6/13/10                                    */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+	SAFE_DELETE_ARRAY2(m_ppaiSpecialistYieldChange, GC.getNumSpecialistInfos());
+	SAFE_DELETE_ARRAY2(m_ppaiSpecialistCommerceChange, GC.getNumSpecialistInfos());
+	SAFE_DELETE_ARRAY2(m_ppaiLocalSpecialistYieldChange, GC.getNumSpecialistInfos());
+	SAFE_DELETE_ARRAY2(m_ppaiLocalSpecialistCommerceChange, GC.getNumSpecialistInfos());
+	SAFE_DELETE_ARRAY2(m_ppaiBonusYieldModifier, GC.getNumSpecialistInfos());
 	SAFE_DELETE_ARRAY(m_pbReplaceBuildingClass);
 	SAFE_DELETE_ARRAY(m_pbPrereqOrCivics);
 	SAFE_DELETE_ARRAY(m_pbPrereqAndCivics);
@@ -490,7 +444,6 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY(m_pbPrereqOrFeature);
 	SAFE_DELETE_ARRAY(m_pbPrereqOrBuildingClass);
 	SAFE_DELETE_ARRAY(m_pbPrereqOrGameSpeed);
-
 	SAFE_DELETE_ARRAY(m_piUnitClassProductionModifier);
 	SAFE_DELETE_ARRAY(m_piPrereqOrVicinityBonuses);
 	SAFE_DELETE_ARRAY(m_piPrereqOrRawVicinityBonuses);
@@ -501,100 +454,16 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY(m_piTechHealthChanges);
 	SAFE_DELETE_ARRAY(m_piUnitCombatExtraStrength);
 	SAFE_DELETE_ARRAY(m_piCommerceAttacks);
-
-	if (m_ppaiBonusCommerceModifier != NULL)
-	{
-		for(int i=0;i<GC.getNumBonusInfos();i++)
-		{
-			SAFE_DELETE_ARRAY(m_ppaiBonusCommerceModifier[i]);
-		}
-		SAFE_DELETE_ARRAY(m_ppaiBonusCommerceModifier);
-	}
-
-	if (m_ppaiBonusYieldChanges != NULL)
-	{
-		for(int i=0;i<GC.getNumBonusInfos();i++)
-		{
-			SAFE_DELETE_ARRAY(m_ppaiBonusYieldChanges[i]);
-		}
-		SAFE_DELETE_ARRAY(m_ppaiBonusYieldChanges);
-	}
-
-	if (m_ppaiBonusCommercePercentChanges != NULL)
-	{
-		for(int i=0;i<GC.getNumBonusInfos();i++)
-		{
-			SAFE_DELETE_ARRAY(m_ppaiBonusCommercePercentChanges[i]);
-		}
-		SAFE_DELETE_ARRAY(m_ppaiBonusCommercePercentChanges);
-	}
-
-	if (m_ppaiVicinityBonusYieldChanges != NULL)
-	{
-		for(int i=0;i<GC.getNumBonusInfos();i++)
-		{
-			SAFE_DELETE_ARRAY(m_ppaiVicinityBonusYieldChanges[i]);
-		}
-		SAFE_DELETE_ARRAY(m_ppaiVicinityBonusYieldChanges);
-	}
-
-	if (m_ppaiTechCommerceChange != NULL)
-	{
-		for (int i=0; i<GC.getNumTechInfos(); i++)
-		{
-			SAFE_DELETE_ARRAY(m_ppaiTechCommerceChange[i]);
-		}
-		SAFE_DELETE_ARRAY(m_ppaiTechCommerceChange);
-	}
-
-	if (m_ppaiTechYieldChange != NULL)
-	{
-		for (int i=0; i<GC.getNumTechInfos(); i++)
-		{
-			SAFE_DELETE_ARRAY(m_ppaiTechYieldChange[i]);
-		}
-		SAFE_DELETE_ARRAY(m_ppaiTechYieldChange);
-	}
-
-	if (m_ppaiTechSpecialistChange != NULL)
-	{
-		for (int i=0; i<GC.getNumTechInfos(); i++)
-		{
-			SAFE_DELETE_ARRAY(m_ppaiTechSpecialistChange[i]);
-		}
-		SAFE_DELETE_ARRAY(m_ppaiTechSpecialistChange);
-	}
-
-	if (m_ppaiTechCommerceModifier != NULL)
-	{
-		for (int i=0; i<GC.getNumTechInfos(); i++)
-		{
-			SAFE_DELETE_ARRAY(m_ppaiTechCommerceModifier[i]);
-		}
-		SAFE_DELETE_ARRAY(m_ppaiTechCommerceModifier);
-	}
-
-	if (m_ppaiTechYieldModifier != NULL)
-	{
-		for (int i=0; i<GC.getNumTechInfos(); i++)
-		{
-			SAFE_DELETE_ARRAY(m_ppaiTechYieldModifier[i]);
-		}
-		SAFE_DELETE_ARRAY(m_ppaiTechYieldModifier);
-	}
-
-	if (m_ppiImprovementYieldChanges != NULL)
-	{
-		for (int i=0;i<GC.getNumImprovementInfos();i++)
-		{
-			SAFE_DELETE_ARRAY(m_ppiImprovementYieldChanges[i]);
-		}
-		SAFE_DELETE_ARRAY(m_ppiImprovementYieldChanges);
-	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
+	SAFE_DELETE_ARRAY2(m_ppaiBonusCommerceModifier, GC.getNumBonusInfos());
+	SAFE_DELETE_ARRAY2(m_ppaiBonusYieldChanges, GC.getNumBonusInfos());
+	SAFE_DELETE_ARRAY2(m_ppaiBonusCommercePercentChanges, GC.getNumBonusInfos());
+	SAFE_DELETE_ARRAY2(m_ppaiVicinityBonusYieldChanges, GC.getNumBonusInfos());
+	SAFE_DELETE_ARRAY2(m_ppaiTechCommerceChange, GC.getNumTechInfos());
+	SAFE_DELETE_ARRAY2(m_ppaiTechYieldChange, GC.getNumTechInfos());
+	SAFE_DELETE_ARRAY2(m_ppaiTechSpecialistChange, GC.getNumTechInfos());
+	SAFE_DELETE_ARRAY2(m_ppaiTechCommerceModifier, GC.getNumTechInfos());
+	SAFE_DELETE_ARRAY2(m_ppaiTechYieldModifier, GC.getNumTechInfos());
+	SAFE_DELETE_ARRAY2(m_ppiImprovementYieldChanges, GC.getNumImprovementInfos());
 	SAFE_DELETE(m_pExprNewCityFree);
 	SAFE_DELETE(m_pExprConstructCondition);
 //Team Project (1)
