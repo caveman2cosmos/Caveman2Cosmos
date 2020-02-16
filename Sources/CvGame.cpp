@@ -598,9 +598,7 @@ void CvGame::setInitialItems()
 // from HOF Mod - Dianthus
 bool CvGame::canRegenerateMap() const
 {
-	if (GC.getGameINLINE().getElapsedGameTurns() != 0) return false;
-	if (GC.getGameINLINE().isGameMultiPlayer()) return false;
-	if (GC.getInitCore().getWBMapScript()) return false;
+	if (getElapsedGameTurns() != 0 || isGameMultiPlayer() || GC.getInitCore().getWBMapScript()) return false;
 
 	// EF: TODO clear contact at start of regenerateMap()?
 	for (int iI = 1; iI < MAX_PC_TEAMS; iI++)
@@ -1162,7 +1160,7 @@ void CvGame::initDiplomacy()
 			{
 				if (iI != iJ)
 				{
-					if (GC.getGame().isOption(GAMEOPTION_PEACE_AMONG_NPCS) && GET_TEAM((TeamTypes)iI).isNPC() && GET_TEAM((TeamTypes)iJ).isNPC())
+					if (isOption(GAMEOPTION_PEACE_AMONG_NPCS) && GET_TEAM((TeamTypes)iI).isNPC() && GET_TEAM((TeamTypes)iJ).isNPC())
 					{
 						continue;
 					}
@@ -1261,14 +1259,13 @@ void CvGame::initFreeState()
 
 void CvGame::initFreeUnits()
 {
-	for (int iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		if (GET_PLAYER((PlayerTypes)iI).isAlive()
+		&& GET_PLAYER((PlayerTypes)iI).getNumUnits() == 0
+		&& GET_PLAYER((PlayerTypes)iI).getNumCities() == 0)
 		{
-			if ((GET_PLAYER((PlayerTypes)iI).getNumUnits() == 0) && (GET_PLAYER((PlayerTypes)iI).getNumCities() == 0))
-			{
-				GET_PLAYER((PlayerTypes)iI).initFreeUnits();
-			}
+			GET_PLAYER((PlayerTypes)iI).initFreeUnits();
 		}
 	}
 }
@@ -1630,11 +1627,11 @@ void CvGame::normalizeRemovePeaks()
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
-			CvPlot* pStartingPlot = GET_PLAYER((PlayerTypes)iI).getStartingPlot();
+			const CvPlot* pStartingPlot = GET_PLAYER((PlayerTypes)iI).getStartingPlot();
 
 			if (pStartingPlot != NULL)
 			{
-				int iRange = 3;
+				const int iRange = 3;
 
 				for (int iDX = -(iRange); iDX <= iRange; iDX++)
 				{
@@ -1675,7 +1672,7 @@ CvPlot* CvGame::normalizeFindLakePlot(PlayerTypes ePlayer)
 		return NULL;
 	}
 
-	CvPlot* pStartingPlot = GET_PLAYER(ePlayer).getStartingPlot();
+	const CvPlot* pStartingPlot = GET_PLAYER(ePlayer).getStartingPlot();
 	if (pStartingPlot != NULL && !pStartingPlot->isFreshWater())
 	{
 		for (int iJ = 0; iJ < NUM_CITY_PLOTS; iJ++)
@@ -1709,7 +1706,6 @@ CvPlot* CvGame::normalizeFindLakePlot(PlayerTypes ePlayer)
 
 void CvGame::normalizeRemoveBadFeatures()
 {
-	CvPlot* pStartingPlot;
 	CvPlot* pLoopPlot;
 	int iI, iJ;
 
@@ -1717,7 +1713,7 @@ void CvGame::normalizeRemoveBadFeatures()
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
-			pStartingPlot = GET_PLAYER((PlayerTypes)iI).getStartingPlot();
+			const CvPlot* pStartingPlot = GET_PLAYER((PlayerTypes)iI).getStartingPlot();
 
 			if (pStartingPlot != NULL)
 			{
@@ -1739,10 +1735,10 @@ void CvGame::normalizeRemoveBadFeatures()
 				}
 
 				int iX, iY;
-				int iCityRange = CITY_PLOTS_RADIUS;
-				int iExtraRange = 2;
-				int iMaxRange = iCityRange + iExtraRange;
-
+				const int iCityRange = CITY_PLOTS_RADIUS;
+				const int iExtraRange = 2;
+				const int iMaxRange = iCityRange + iExtraRange;
+				
 				for (iX = -iMaxRange; iX <= iMaxRange; iX++)
 				{
 					for (iY = -iMaxRange; iY <= iMaxRange; iY++)
@@ -1750,7 +1746,7 @@ void CvGame::normalizeRemoveBadFeatures()
 						pLoopPlot = plotXY(pStartingPlot->getX_INLINE(), pStartingPlot->getY_INLINE(), iX, iY);
 						if (pLoopPlot != NULL)
 						{
-							int iDistance = plotDistance(pStartingPlot->getX_INLINE(), pStartingPlot->getY_INLINE(), pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE());
+							const int iDistance = plotDistance(pStartingPlot->getX(), pStartingPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());			
 							if (iDistance <= iMaxRange)
 							{
 								if (pLoopPlot->getFeatureType() != NO_FEATURE)
@@ -1796,10 +1792,9 @@ void CvGame::normalizeRemoveBadTerrain()
 	int iPlotFood;
 	int iPlotProduction;
 
-
-	int iCityRange = CITY_PLOTS_RADIUS;
-	int iExtraRange = 1;
-	int iMaxRange = iCityRange + iExtraRange;
+	const int iCityRange = CITY_PLOTS_RADIUS;
+	const int iExtraRange = 1;
+	const int iMaxRange = iCityRange + iExtraRange;
 
 	for (iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
@@ -1816,7 +1811,7 @@ void CvGame::normalizeRemoveBadTerrain()
 						pLoopPlot = plotXY(pStartingPlot->getX_INLINE(), pStartingPlot->getY_INLINE(), iX, iY);
 						if (pLoopPlot != NULL)
 						{
-							int iDistance = plotDistance(pStartingPlot->getX_INLINE(), pStartingPlot->getY_INLINE(), pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE());
+							const int iDistance = plotDistance(pStartingPlot->getX_INLINE(), pStartingPlot->getY_INLINE(), pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE());
 							if (iDistance <= iMaxRange)
 							{
 								if (!(pLoopPlot->isWater()) && ((iDistance <= iCityRange) || (pLoopPlot->isCoastalLand()) || (0 == getSorenRandNum(1 + iDistance - iCityRange, "Map Upgrade Terrain Food"))))
@@ -3175,7 +3170,7 @@ int CvGame::getAdjustedPopulationPercent(VictoryTypes eVictory) const
 	{
 		if (GET_TEAM((TeamTypes)iI).isAlive())
 		{
-			int iPopulation = GET_TEAM((TeamTypes)iI).getTotalPopulation();
+			const int iPopulation = GET_TEAM((TeamTypes)iI).getTotalPopulation();
 
 			if (iPopulation > iBestPopulation)
 			{
@@ -3232,7 +3227,7 @@ bool CvGame::isChooseElection(VoteTypes eVote) const
 
 bool CvGame::isTeamVoteEligible(TeamTypes eTeam, VoteSourceTypes eVoteSource) const
 {
-	CvTeam& kTeam = GET_TEAM(eTeam);
+	const CvTeam& kTeam = GET_TEAM(eTeam);
 
 	if (kTeam.isForceTeamVoteEligible(eVoteSource))
 	{
@@ -3247,7 +3242,7 @@ bool CvGame::isTeamVoteEligible(TeamTypes eTeam, VoteSourceTypes eVoteSource) co
 	int iCount = 0;
 	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
-		CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iI);
+		const CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iI);
 		if (kLoopTeam.isAlive() && kLoopTeam.isForceTeamVoteEligible(eVoteSource))
 		{
 			++iCount;
@@ -3264,7 +3259,7 @@ bool CvGame::isTeamVoteEligible(TeamTypes eTeam, VoteSourceTypes eVoteSource) co
 	{
 		if (iI != eTeam)
 		{
-			CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iI);
+			const CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iI);
 			if (kLoopTeam.isAlive() && !kLoopTeam.isForceTeamVoteEligible(eVoteSource) && kLoopTeam.isFullMember(eVoteSource))
 			{
 				const int iLoopVotes = kLoopTeam.getVotes(NO_VOTE, eVoteSource);
@@ -3355,12 +3350,12 @@ TeamTypes CvGame::getSecretaryGeneral(VoteSourceTypes eVoteSource) const
 			{
 				for (int iI = 0; iI < MAX_PC_PLAYERS; ++iI)
 				{
-					CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
+					const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
 					if (kLoopPlayer.isAlive())
 					{
 						if (kLoopPlayer.getBuildingClassCount((BuildingClassTypes)GC.getBuildingInfo((BuildingTypes)iBuilding).getBuildingClassType()) > 0)
 						{
-							ReligionTypes eReligion = getVoteSourceReligion(eVoteSource);
+							const ReligionTypes eReligion = getVoteSourceReligion(eVoteSource);
 							if (NO_RELIGION == eReligion || kLoopPlayer.getStateReligion() == eReligion)
 							{
 								return kLoopPlayer.getTeam();
@@ -3430,7 +3425,7 @@ void CvGame::updateSecretaryGeneral()
 
 	for (int i = 0; i < GC.getNumVoteSourceInfos(); ++i)
 	{
-		TeamTypes eSecretaryGeneral = getSecretaryGeneral((VoteSourceTypes)i);
+		const TeamTypes eSecretaryGeneral = getSecretaryGeneral((VoteSourceTypes)i);
 		if (NO_TEAM != eSecretaryGeneral && !GET_TEAM(eSecretaryGeneral).isFullMember((VoteSourceTypes)i))
 		{
 			clearSecretaryGeneral((VoteSourceTypes)i);
@@ -3496,7 +3491,7 @@ int CvGame::countCivTeamsEverAlive() const
 
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		CvPlayer& kPlayer = GET_PLAYER((PlayerTypes) iI);
+		const CvPlayer& kPlayer = GET_PLAYER((PlayerTypes) iI);
 		if (kPlayer.isEverAlive() && kPlayer.getParent() == NO_PLAYER)
 		{
 			FAssert(0 <= kPlayer.getTeam());
@@ -3829,7 +3824,7 @@ bool CvGame::isTeamGame() const
 }
 
 
-bool CvGame::isModem()
+bool CvGame::isModem() const
 {
 	return gDLL->IsModem();
 }
@@ -4123,7 +4118,7 @@ void CvGame::resetTurnTimer()
 			if (getElapsedGameTurns() == 0 && !isPitboss())
 			{
 				// Let's allow more time for the initial turn
-				TurnTimerTypes eTurnTimer = GC.getInitCore().getTurnTimer();
+				const TurnTimerTypes eTurnTimer = GC.getInitCore().getTurnTimer();
 				FAssertMsg(eTurnTimer >= 0 && eTurnTimer < GC.getNumTurnTimerInfos(), "Invalid TurnTimer selection in InitCore");
 				iTurnLen = (iTurnLen * GC.getTurnTimerInfo(eTurnTimer).getFirstTurnMultiplier());
 			}
@@ -4177,7 +4172,7 @@ int CvGame::getMaxTurnLen() const
 		}
 
 		// Now return turn len based on base len and unit and city bonuses
-		TurnTimerTypes eTurnTimer = GC.getInitCore().getTurnTimer();
+		const TurnTimerTypes eTurnTimer = GC.getInitCore().getTurnTimer();
 		FAssertMsg(eTurnTimer >= 0 && eTurnTimer < GC.getNumTurnTimerInfos(), "Invalid TurnTimer Selection in InitCore");
 		return ( GC.getTurnTimerInfo(eTurnTimer).getBaseTime() +
 				(GC.getTurnTimerInfo(eTurnTimer).getCityBonus()*iMaxCities) +
@@ -4348,7 +4343,7 @@ int CvGame::getNoNukesCount() const
 
 bool CvGame::isNoNukes() const
 {
-	return (GC.getGameINLINE().isOption(GAMEOPTION_NO_NUKES) || getNoNukesCount() > 0);
+	return (isOption(GAMEOPTION_NO_NUKES) || getNoNukesCount() > 0);
 }
 
 
@@ -4471,7 +4466,7 @@ void CvGame::initScoreCalculation()
 	int iMaxFood = 0;
 	for (int i = 0; i < GC.getMapINLINE().numPlotsINLINE(); i++)
 	{
-		CvPlot* pPlot = GC.getMapINLINE().plotByIndexINLINE(i);
+		const CvPlot* pPlot = GC.getMapINLINE().plotByIndexINLINE(i);
 		if (!pPlot->isWater() || pPlot->isAdjacentToLand())
 		{
 			iMaxFood += pPlot->calculateBestNatureYield(YIELD_FOOD, NO_TEAM);
@@ -4492,7 +4487,7 @@ void CvGame::initScoreCalculation()
 
 	if (NO_ERA != getStartEra())
 	{
-		int iNumSettlers = GC.getEraInfo(getStartEra()).getStartingUnitMultiplier();
+		const int iNumSettlers = GC.getEraInfo(getStartEra()).getStartingUnitMultiplier();
 		m_iInitPopulation = getPopulationScore(iNumSettlers * (GC.getEraInfo(getStartEra()).getFreePopulation() + 1));
 		m_iInitLand = getLandPlotsScore(iNumSettlers *  NUM_CITY_PLOTS);
 	}
@@ -4571,7 +4566,7 @@ void CvGame::setAIAutoPlay(PlayerTypes iPlayer, int iNewValue, bool bForced)
 
 void CvGame::setAIAutoPlayExternal(int iNewValue)
 {
-	PlayerTypes iPlayer = getActivePlayer();
+	const PlayerTypes iPlayer = getActivePlayer();
 	return setAIAutoPlay(iPlayer, iNewValue);
 }
 
@@ -4716,7 +4711,7 @@ bool CvGame::circumnavigationAvailable() const
 		return false;
 	}
 
-	CvMap& kMap = GC.getMapINLINE();
+	const CvMap& kMap = GC.getMapINLINE();
 
 	if (!(kMap.isWrapXINLINE()) && !(kMap.isWrapYINLINE()))
 	{
@@ -5265,7 +5260,7 @@ void CvGame::sendPlayerOptions(bool bForce)
 			SAFE_DELETE(GET_PLAYER((PlayerTypes)i).m_pBuildLists);
 			GET_PLAYER((PlayerTypes)i).m_pBuildLists = new CvBuildLists();
 		}
-		GET_PLAYER(GC.getGameINLINE().getActivePlayer()).m_pBuildLists->readFromFile();
+		GET_PLAYER(getActivePlayer()).m_pBuildLists->readFromFile();
 		CvMessageControl::getInstance().sendBuildLists();
 	}
 }
@@ -5279,10 +5274,10 @@ PlayerTypes CvGame::getActivePlayer() const
 
 void CvGame::setActivePlayer(PlayerTypes eNewValue, bool bForceHotSeat)
 {
-	PlayerTypes eOldActivePlayer = getActivePlayer();
+	const PlayerTypes eOldActivePlayer = getActivePlayer();
 	if (eOldActivePlayer != eNewValue)
 	{
-		int iActiveNetId = ((NO_PLAYER != eOldActivePlayer) ? GET_PLAYER(eOldActivePlayer).getNetID() : -1);
+		const int iActiveNetId = ((NO_PLAYER != eOldActivePlayer) ? GET_PLAYER(eOldActivePlayer).getNetID() : -1);
 		GC.getInitCore().setActivePlayer(eNewValue);
 
 		if (GET_PLAYER(eNewValue).isHuman() && (isHotSeat() || isPbem() || bForceHotSeat))
@@ -5293,7 +5288,7 @@ void CvGame::setActivePlayer(PlayerTypes eNewValue, bool bForceHotSeat)
 
 			if (NO_PLAYER != eOldActivePlayer)
 			{
-				int iInactiveNetId = GET_PLAYER(eNewValue).getNetID();
+				const int iInactiveNetId = GET_PLAYER(eNewValue).getNetID();
 				GET_PLAYER(eNewValue).setNetID(iActiveNetId);
 				GET_PLAYER(eOldActivePlayer).setNetID(iInactiveNetId);
 			}
@@ -5401,7 +5396,7 @@ UnitTypes CvGame::getBestLandUnit() const
 				{
 					if (pLoopUnit->baseCombatStr() > 0)
 					{
-						if (m_eBestLandUnit == NO_UNIT || (pLoopUnit->baseCombatStrNonGranular() > GC.getGameINLINE().getBestLandUnitCombat()))
+						if (m_eBestLandUnit == NO_UNIT || (pLoopUnit->baseCombatStrNonGranular() > getBestLandUnitCombat()))
 						{
 							m_eBestLandUnit = pLoopUnit->getUnitType();
 						}
@@ -5908,7 +5903,7 @@ void CvGame::changeForceCivicCount(CivicTypes eIndex, int iChange)
 
 	if (iChange != 0)
 	{
-		bool bOldForceCivic = isForceCivic(eIndex);
+		const bool bOldForceCivic = isForceCivic(eIndex);
 
 		m_paiForceCivicCount[eIndex] += iChange;
 		FAssert(getForceCivicCount(eIndex) >= 0);
@@ -5931,7 +5926,7 @@ PlayerVoteTypes CvGame::getVoteOutcome(VoteTypes eIndex) const
 
 bool CvGame::isVotePassed(VoteTypes eIndex) const
 {
-	PlayerVoteTypes ePlayerVote = getVoteOutcome(eIndex);
+	const PlayerVoteTypes ePlayerVote = getVoteOutcome(eIndex);
 
 	if (isTeamVote(eIndex))
 	{
@@ -5952,7 +5947,7 @@ void CvGame::setVoteOutcome(const VoteTriggeredData& kData, PlayerVoteTypes eNew
 
 	if (getVoteOutcome(eIndex) != eNewValue)
 	{
-		bool bOldPassed = isVotePassed(eIndex);
+		const bool bOldPassed = isVotePassed(eIndex);
 
 		m_paiVoteOutcome[eIndex] = eNewValue;
 
@@ -6272,7 +6267,7 @@ CvCity* CvGame::getHolyCity(ReligionTypes eIndex) const
 }
 
 
-void CvGame::setHolyCity(ReligionTypes eIndex, CvCity* pNewValue, bool bAnnounce)
+void CvGame::setHolyCity(ReligionTypes eIndex, const CvCity* pNewValue, bool bAnnounce)
 {
 	CvWString szBuffer;
 	CvCity* pHolyCity;
@@ -6358,7 +6353,7 @@ void CvGame::setHolyCity(ReligionTypes eIndex, CvCity* pNewValue, bool bAnnounce
 /************************************************************************************************/
 		// From Sanguo Mod Performance, ie the CAR Mod
 		// Attitude cache
-		if (GC.getGameINLINE().isFinalInitialized())
+		if (isFinalInitialized())
 		{
 			for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
 			{
@@ -6515,7 +6510,7 @@ void CvGame::castVote(PlayerTypes eOwnerIndex, int iVoteId, PlayerVoteTypes ePla
 	VoteTriggeredData* pTriggeredData = getVoteTriggered(iVoteId);
 	if (NULL != pTriggeredData)
 	{
-		CvVoteInfo& kVote = GC.getVoteInfo(pTriggeredData->kVoteOption.eVote);
+		const CvVoteInfo& kVote = GC.getVoteInfo(pTriggeredData->kVoteOption.eVote);
 		if (kVote.isAssignCity())
 		{
 			FAssert(pTriggeredData->kVoteOption.ePlayer != NO_PLAYER);
@@ -6656,7 +6651,7 @@ void CvGame::doTurn()
 	GC.getMapINLINE().doTurn();
 
 	createBarbarianCities(false);
-	if (GC.getGameINLINE().isOption(GAMEOPTION_NEANDERTHAL_CITIES))
+	if (isOption(GAMEOPTION_NEANDERTHAL_CITIES))
 	{
 		createBarbarianCities(true);
 	}
@@ -6849,7 +6844,7 @@ void CvGame::doDeals()
 //Enumerates all currently possible spawn plots for a spawning rule, for use in a thread, local density is not checked
 void enumSpawnPlots(int iSpawnInfo, std::vector<CvPlot*>* plots)
 {
-	CvSpawnInfo& spawnInfo = GC.getSpawnInfo((SpawnTypes)iSpawnInfo);
+	const CvSpawnInfo& spawnInfo = GC.getSpawnInfo((SpawnTypes)iSpawnInfo);
 	//GC.getGameINLINE().logMsg("Spawn thread start for %s", spawnInfo.getType());
 	plots->clear();
 
@@ -6888,11 +6883,11 @@ void enumSpawnPlots(int iSpawnInfo, std::vector<CvPlot*>* plots)
 			return;
 		}
 	}
-
-	CvUnitInfo& unitInfo = GC.getUnitInfo(spawnInfo.getUnitType());
-	PlayerTypes ePlayer = spawnInfo.getPlayer();
-	bool bIsBarbarian = spawnInfo.getTreatAsBarbarian() && GET_PLAYER(ePlayer).isHominid();
-	if ( bIsBarbarian && GC.getGameINLINE().isOption(GAMEOPTION_NO_BARBARIANS))
+	
+	const CvUnitInfo& unitInfo = GC.getUnitInfo(spawnInfo.getUnitType());
+	const PlayerTypes ePlayer = spawnInfo.getPlayer();
+	const bool bIsBarbarian = spawnInfo.getTreatAsBarbarian() && GET_PLAYER(ePlayer).isHominid();
+	if (bIsBarbarian && GC.getGame().isOption(GAMEOPTION_NO_BARBARIANS))
 	{
 		return;
 	}
@@ -6902,9 +6897,9 @@ void enumSpawnPlots(int iSpawnInfo, std::vector<CvPlot*>* plots)
 		return;
 	}
 
-	bool bNoTerrainFeatureBonus = (spawnInfo.getNumTerrains() == 0) && (spawnInfo.getNumFeatures() == 0) && (spawnInfo.getNumBonuses() == 0) && !spawnInfo.getPeaks();
+	const bool bNoTerrainFeatureBonus = (spawnInfo.getNumTerrains() == 0) && (spawnInfo.getNumFeatures() == 0) && (spawnInfo.getNumBonuses() == 0) && !spawnInfo.getPeaks();
 
-	bool bAnimalBarred = GC.getGameINLINE().isOption(GAMEOPTION_ANIMALS_STAY_OUT) && GC.getUnitInfo(spawnInfo.getUnitType()).isWildAnimal();
+	const bool bAnimalBarred = GC.getGameINLINE().isOption(GAMEOPTION_ANIMALS_STAY_OUT) && GC.getUnitInfo(spawnInfo.getUnitType()).isWildAnimal();
 	for (int i = 0; i < GC.getMapINLINE().numPlotsINLINE(); ++i)
 	{
 		CvPlot* pPlot = GC.getMapINLINE().plotByIndexINLINE(i);
@@ -6990,8 +6985,8 @@ void enumSpawnPlots(int iSpawnInfo, std::vector<CvPlot*>* plots)
 
 					if ( !bValid)
 					{
-						FeatureTypes featureType = pPlot->getFeatureType();
-						TerrainTypes terrainType = pPlot->getTerrainType();
+						const FeatureTypes featureType = pPlot->getFeatureType();
+						const TerrainTypes terrainType = pPlot->getTerrainType();
 						if (featureType == NO_FEATURE)
 						{
 							for(int k = 0; k < spawnInfo.getNumTerrains(); k++) // Check if terrain for spawning is present
@@ -7086,13 +7081,13 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 
 	for (int i = 0; i < GC.getMapINLINE().numPlotsINLINE(); ++i)
 	{
-		CvPlot* pPlot = GC.getMapINLINE().plotByIndexINLINE(i);
+		CvPlot* pPlot = GC.getMap().plotByIndex(i);
 
 		CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
 
 		while (pUnitNode != NULL)
 		{
-			CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
+			const CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
 
 			if (pLoopUnit != NULL)
 			{
@@ -7123,7 +7118,7 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 
 	for(int j = 0; j < GC.getNumSpawnInfos(); j++)
 	{
-		SpawnTypes eSpawn = (SpawnTypes)j;
+		const SpawnTypes eSpawn = (SpawnTypes)j;
 		CvSpawnInfo& spawnInfo = GC.getSpawnInfo((SpawnTypes)j);
 
 		//TB Note: It is at this point that we need to isolate out the player type on spawn info.
@@ -7135,7 +7130,7 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 			continue;
 		}
 
-		if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS) && spawnInfo.getNumSpawnGroup() > 1)
+		if (isOption(GAMEOPTION_SIZE_MATTERS) && spawnInfo.getNumSpawnGroup() > 1)
 		{
 			continue;
 		}
@@ -7170,7 +7165,7 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 			adjustedSpawnRate = (adjustedSpawnRate*((GC.getGameSpeedInfo(getGameSpeedType()).getTrainPercent()+666)/3) / 100);
 		}
 
-		if (GC.getGame().isOption(GAMEOPTION_PEACE_AMONG_NPCS))
+		if (isOption(GAMEOPTION_PEACE_AMONG_NPCS))
 		{
 			adjustedSpawnRate *= (100+GC.getCivilizationInfo(GET_PLAYER(ePlayer).getCivilizationType()).getSpawnRateNPCPeaceModifier());
 		}
@@ -7184,10 +7179,10 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 
 
 		//	Double for barbarians if raging
-		bool bIsBarbarian = spawnInfo.getTreatAsBarbarian();
+		const bool bIsBarbarian = spawnInfo.getTreatAsBarbarian();
 		int iMaxAreaTotalDensity = spawnInfo.getMaxAreaTotalDensity();
 		int iMaxAreaUnitDensity = spawnInfo.getMaxAreaUnitDensity();
-		if ( bIsBarbarian && GC.getGameINLINE().isOption(GAMEOPTION_RAGING_BARBARIANS) )
+		if (bIsBarbarian && isOption(GAMEOPTION_RAGING_BARBARIANS))
 		{
 			adjustedSpawnRate /= 2;
 			iMaxAreaTotalDensity /= 2;
@@ -7201,7 +7196,7 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 		//So we ARE going by spawn here but it's still a random check per plot rather than placing an amount.  Before this, determine how many should spawn this round, then pick a plot for each of those spawns.
 		//The density factor is going to be interesting.  Perhaps each plot should get a likelihood value and vary that by the density factor around that plot.
 		//The spawn rate... is high more likely or low and what kind of numeric range are we working with?
-		int iNumAreas = GC.getMap().getNumAreas();
+		const int iNumAreas = GC.getMap().getNumAreas();
 
 		for (int iI = 0; iI < iNumAreas; iI++)
 		{
@@ -7220,15 +7215,15 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 
 		for (std::vector<CvPlot*>::iterator it = validPlots[j].begin(); it < validPlots[j].end(); ++it)
 		{
-			CvPlot* pPlot = *it;
-			int iArea = pPlot->getArea();
-			CvArea* pArea = pPlot->area();
-			int iTotalAreaSize = pArea->getNumTiles();
+			const CvPlot* pPlot = *it;
+			const int iArea = pPlot->getArea();
+			const CvArea* pArea = pPlot->area();
+			const int iTotalAreaSize = pArea->getNumTiles();
 			int iLocalSpawnRate = (int)adjustedSpawnRate;
 			//TB Spawn Modification Begin
 			//Automatically adapts chances of spawn to normalize between units that have a huge amount of plots available to spawn in and those that have relatively few.
 			//Keeping in mind higher is less chance.
-			int iValidPlotsThisArea = pArea->getNumValidPlotsbySpawn(eSpawn);
+			const int iValidPlotsThisArea = pArea->getNumValidPlotsbySpawn(eSpawn);
 			int iFrequencyAdjustment = (iValidPlotsThisArea * 100)/iTotalAreaSize;//Produces the % of plots valid in area. - note: divide by 0 should be literally impossible or we wouldn't have gotten this far as there would not be a plot to be checking this.
 			iFrequencyAdjustment += 50;// Thus 1% becomes 51% while 90% becomes 140%
 
@@ -7240,7 +7235,7 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 			//Actually, here the unit is selected already based on the spawn info itself.  Derive that then derive the MapCategoryTypes
 			//of the unit and ensure that pPlot has the MapCategoryType of the unit.  Easy... no need to include MapCategoryTypes on the
 			//Spawn Info file.
-			int iCount = GC.getUnitInfo(spawnInfo.getUnitType()).getNumMapCategoryTypes();
+			const int iCount = GC.getUnitInfo(spawnInfo.getUnitType()).getNumMapCategoryTypes();
 			bool bFound = (iCount < 1);
 			for (int iI = 0; iI < iCount; iI++)
 			{
@@ -7278,7 +7273,7 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 			}
 			else
 			{
-				int	percentOccupied = (100*pPlot->area()->getNumOwnedTiles())/pPlot->area()->getNumTiles();
+				const int percentOccupied = (100*pPlot->area()->getNumOwnedTiles())/pPlot->area()->getNumTiles();
 
 				//	Adjust spawn rate upward by up to trebbleing the normal rate in proportion with how
 				//	little wilderness is left in this area
@@ -7316,7 +7311,7 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 				{
 					for(int iY = -LocalRange; iY <= LocalRange; iY++)
 					{
-						CvPlot* pLoopPlot = plotXY(pPlot->getX_INLINE(), pPlot->getY_INLINE(), iX, iY);
+						const CvPlot* pLoopPlot = plotXY(pPlot->getX_INLINE(), pPlot->getY_INLINE(), iX, iY);
 						if ( pLoopPlot != NULL && pLoopPlot->area() == pPlot->area() )
 						{
 							localLandArea++;
@@ -7333,16 +7328,16 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 					//	Spawn a new unit
 					CvUnitInfo& kUnit = GC.getUnitInfo(spawnInfo.getUnitType());
 
-					CvUnit* pUnit = GET_PLAYER(ePlayer).initUnit(spawnInfo.getUnitType(), pPlot->getX_INLINE(), pPlot->getY_INLINE(), (UnitAITypes)kUnit.getDefaultUnitAIType(), NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
+					CvUnit* pUnit = GET_PLAYER(ePlayer).initUnit(spawnInfo.getUnitType(), pPlot->getX_INLINE(), pPlot->getY_INLINE(), (UnitAITypes)kUnit.getDefaultUnitAIType(), NO_DIRECTION, getSorenRandNum(10000, "AI Unit Birthmark"));
 					if (pUnit == NULL)
 					{
 						FErrorMsg("pUnit is expected to be assigned a valid unit object");
 						return;
 					}
 
-					if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+					if (isOption(GAMEOPTION_SIZE_MATTERS))
 					{
-						int iCount = kUnit.getNumGroupSpawnUnitCombatTypes();
+						const int iCount = kUnit.getNumGroupSpawnUnitCombatTypes();
 						if (iCount > 0)
 						{
 							//clear old list
@@ -7356,12 +7351,12 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 								}
 							}
 							//generate result from list
-							int iListCount = (int)aRandomList.size();
-							int iResult = GC.getGameINLINE().getSorenRandNum(iListCount, "Spawn Group Random Roll");
-							int iFinalIndex = aRandomList[iResult];
-							UnitCombatTypes eGroupVolume = kUnit.getGroupSpawnUnitCombatType(iFinalIndex).eUnitCombat;
+							const int iListCount = (int)aRandomList.size();
+							const int iResult = getSorenRandNum(iListCount, "Spawn Group Random Roll");
+							const int iFinalIndex = aRandomList[iResult];
+							const UnitCombatTypes eGroupVolume = kUnit.getGroupSpawnUnitCombatType(iFinalIndex).eUnitCombat;
 							CvWString szTitle = kUnit.getGroupSpawnUnitCombatType(iFinalIndex).m_szTitle;
-							CvWString szOriginal = pUnit->getName();
+							const CvWString szOriginal = pUnit->getName();
 							//remove old group volume unitcombat
 							if (eGroupVolume != NO_UNITCOMBAT)
 							{
@@ -7369,10 +7364,10 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 								{
 									if (GC.getUnitCombatInfo((UnitCombatTypes)iI).getGroupBase() != -10)
 									{
-										UnitCombatTypes eUnitCombat = ((UnitCombatTypes)iI);
+										const UnitCombatTypes eUnitCombat = ((UnitCombatTypes)iI);
 										if (pUnit->isHasUnitCombat(eUnitCombat) && eUnitCombat != eGroupVolume)
 										{
-											int iDifference = GC.getUnitCombatInfo(eGroupVolume).getGroupBase() - GC.getUnitCombatInfo(eUnitCombat).getGroupBase();
+											const int iDifference = GC.getUnitCombatInfo(eGroupVolume).getGroupBase() - GC.getUnitCombatInfo(eUnitCombat).getGroupBase();
 											CvUnit::normalizeUnitPromotions(pUnit, iDifference,
 												bst::bind(Game::isGroupUpgradePromotion, pUnit, _2),
 												bst::bind(Game::isGroupDowngradePromotion, pUnit, _2)
@@ -7396,13 +7391,13 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 					spawnCount++;
 
 					// Spawn unit group
-					if (!GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+					if (!isOption(GAMEOPTION_SIZE_MATTERS))
 					{
 						for(int k = 0; k < spawnInfo.getNumSpawnGroup(); k++)
 						{
 							kUnit = GC.getUnitInfo(spawnInfo.getSpawnGroup(k));
 
-							pUnit = GET_PLAYER(ePlayer).initUnit(spawnInfo.getSpawnGroup(k), pPlot->getX_INLINE(), pPlot->getY_INLINE(), (UnitAITypes)kUnit.getDefaultUnitAIType(), NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
+							pUnit = GET_PLAYER(ePlayer).initUnit(spawnInfo.getSpawnGroup(k), pPlot->getX_INLINE(), pPlot->getY_INLINE(), (UnitAITypes)kUnit.getDefaultUnitAIType(), NO_DIRECTION, getSorenRandNum(10000, "AI Unit Birthmark"));
 							FAssertMsg(pUnit != NULL, "pUnit is expected to be assigned a valid unit object");
 							pUnit->finishMoves();
 							spawnCount++;
@@ -7492,15 +7487,7 @@ void CvGame::doGlobalWarming()
 	TerrainTypes eWarmingTerrain = ((TerrainTypes)(GC.getDefineINT("GLOBAL_WARMING_TERRAIN")));
 	TerrainTypes eFrozenTerrain = ((TerrainTypes)(GC.getDefineINT("FROZEN_TERRAIN")));
 	TerrainTypes eColdTerrain = ((TerrainTypes)(GC.getDefineINT("COLD_TERRAIN")));
-/************************************************************************************************/
-/* Afforess                                     12/7/09                                         */
-/*                                                                                              */
-/*        RoM Has a new terrain, which needs to be defined here                                 */
-/************************************************************************************************/
 	TerrainTypes eMarshTerrain = ((TerrainTypes)(GC.getDefineINT("MARSH_TERRAIN")));
-/************************************************************************************************/
-/* Afforess	                         END                                                        */
-/************************************************************************************************/
 	TerrainTypes eTemperateTerrain = ((TerrainTypes)(GC.getDefineINT("TEMPERATE_TERRAIN")));
 	TerrainTypes eDryTerrain = ((TerrainTypes)(GC.getDefineINT("DRY_TERRAIN")));
 	TerrainTypes eBarrenTerrain = ((TerrainTypes)(GC.getDefineINT("BARREN_TERRAIN")));
@@ -7514,24 +7501,12 @@ void CvGame::doGlobalWarming()
 	//Global Warming
 	for (int iI = 0; iI < iGlobalWarmingValue; iI++)
 	{
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                                                          LunarMongoose      */
-/*                                                                                              */
-/* Gamespeed scaling                                                                            */
-/************************************************************************************************/
-/* original bts code
-		if (getSorenRandNum(100, "Global Warming") + iGlobalWarmingDefense < GC.getDefineINT("GLOBAL_WARMING_PROB"))
-		{
-*/
 		int iOdds = GC.getDefineINT("GLOBAL_WARMING_PROB") - iGlobalWarmingDefense;
 		iOdds *= 100;
-		iOdds /= GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getVictoryDelayPercent();
+		iOdds /= GC.getGameSpeedInfo(getGameSpeedType()).getVictoryDelayPercent();
 
 		if (getSorenRandNum(100, "Global Warming") < iOdds)
 		{
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
 			CvPlot* pPlot = GC.getMapINLINE().syncRandPlot(RANDPLOT_NOT_CITY); // GWMod removed check for water tile M.A.
 
 			if (pPlot != NULL)
@@ -7560,19 +7535,11 @@ void CvGame::doGlobalWarming()
 								pPlot->setTerrainType(eColdTerrain);
 								bChanged = true;
 							}
-/************************************************************************************************/
-/* Afforess                                     12/7/09                                         */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 							else if (pPlot->getTerrainType() == eMarshTerrain)
 							{
 								pPlot->setTerrainType(eTemperateTerrain);
 								bChanged = true;
 							}
-/************************************************************************************************/
-/* Afforess	                         END                                                        */
-/************************************************************************************************/
 							else
 							{
 								pPlot->setFeatureType(NO_FEATURE);
@@ -7617,19 +7584,11 @@ void CvGame::doGlobalWarming()
 						pPlot->setTerrainType(eTemperateTerrain);
 						bChanged = true;
 					}
-/************************************************************************************************/
-/* Afforess                                     12/7/09                                         */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 					else if (pPlot->getTerrainType() == eMarshTerrain)
 					{
 						pPlot->setTerrainType(eTemperateTerrain);
 						bChanged = true;
 					}
-/************************************************************************************************/
-/* Afforess	                         END                                                        */
-/************************************************************************************************/
 					else if (pPlot->getTerrainType() == eFrozenTerrain)
 					{
 						pPlot->setTerrainType(eColdTerrain);
@@ -7662,27 +7621,13 @@ void CvGame::doGlobalWarming()
 
 	for (int iI = 0; iI < iNuclearWinterValue; iI++)
 	{
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                                                          LunarMongoose      */
-/*                                                                                              */
-/* Gamespeed scaling                                                                            */
-/************************************************************************************************/
-/* original Global Warming Mod code
-		if (getSorenRandNum(100, "Nuclear Fallout") + iGlobalWarmingDefense < GC.getDefineINT("NUCLEAR_WINTER_PROB"))
-		{
-*/
 		int iOdds = GC.getDefineINT("NUCLEAR_WINTER_PROB"); //Fuyu: iGlobalWarmingDefense does no longer protect from nuclear winters
 		iOdds *= 100;
-		iOdds /= GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getVictoryDelayPercent();
+		iOdds /= GC.getGameSpeedInfo(getGameSpeedType()).getVictoryDelayPercent();
 
 		if (getSorenRandNum(100, "Nuclear Fallout") < iOdds)
 		{
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
-
 			CvPlot* pPlot = GC.getMapINLINE().syncRandPlot(RANDPLOT_LAND | RANDPLOT_NOT_CITY);
-			//FeatureTypes eFeature = pPlot->getFeatureType();
 
 			if (pPlot != NULL)
 			{
@@ -7886,7 +7831,7 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 	if (getMaxCityElimination() > 0 || isOption(GAMEOPTION_NO_BARBARIANS)
 	|| Cy::call<bool>(PYGameModule, "createBarbarianCities")
 	|| GC.getHandicapInfo(getHandicapType()).getUnownedTilesPerBarbarianCity() <= 0
-	|| bNeanderthal ? (int)getCurrentEra() > 0 : GC.getEraInfo(getCurrentEra()).isNoBarbCities())
+	|| (bNeanderthal ? (int)getCurrentEra() > 0 : GC.getEraInfo(getCurrentEra()).isNoBarbCities()))
 	{
 		return;
 	}
@@ -8209,7 +8154,7 @@ void CvGame::createBarbarianUnits()
 
 			if (eBestUnit != NO_UNIT)
 			{
-				CvUnit* pUnit = GET_PLAYER(BARBARIAN_PLAYER).initUnit(eBestUnit, pPlot->getX_INLINE(), pPlot->getY_INLINE(), eBarbUnitAI, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
+				CvUnit* pUnit = GET_PLAYER(BARBARIAN_PLAYER).initUnit(eBestUnit, pPlot->getX_INLINE(), pPlot->getY_INLINE(), eBarbUnitAI, NO_DIRECTION, getSorenRandNum(10000, "AI Unit Birthmark"));
 				if (GC.getUnitInfo(eBestUnit).getDomainType() == DOMAIN_SEA)
 				{
 					loadPirateShip(pUnit);
@@ -8237,7 +8182,7 @@ void CvGame::createBarbarianUnits()
 						UnitTypes eBestUnit = pLoopCity->AI_bestUnitAI(UNITAI_WORKER, iUnitValue);
 						if (eBestUnit != NO_UNIT)
 						{
-							GET_PLAYER(BARBARIAN_PLAYER).initUnit(eBestUnit, pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE(), UNITAI_WORKER, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
+							GET_PLAYER(BARBARIAN_PLAYER).initUnit(eBestUnit, pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE(), UNITAI_WORKER, NO_DIRECTION, getSorenRandNum(10000, "AI Unit Birthmark"));
 							pLoopCity->AI_setChooseProductionDirty(true);
 						}
 					}
@@ -8874,11 +8819,6 @@ void CvGame::testVictory()
 		}
 	}
 
-/************************************************************************************************/
-/* Afforess                                     12/7/09                                         */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	bool bForceEndGame = false;
 	for (iJ = 0; iJ < GC.getNumVictoryInfos(); iJ++)
 	{
@@ -8900,17 +8840,15 @@ void CvGame::testVictory()
 					TeamTypes eBestTeam = (TeamTypes)0;
 					for (iI = 0; iI < MAX_PC_TEAMS; iI++)
 					{
-						if (GET_TEAM((TeamTypes)iI).isAlive())
+						if (GET_TEAM((TeamTypes)iI).isAlive()
+						&& (!GET_TEAM((TeamTypes)iI).isMinorCiv() || isOption(GAMEOPTION_START_AS_MINORS)))
 						{
-							if (!(GET_TEAM((TeamTypes)iI).isMinorCiv()) || GC.getGameINLINE().isOption(GAMEOPTION_START_AS_MINORS))
+							iTempScore = GET_TEAM((TeamTypes)iI).getTotalVictoryScore();
+							iTotalScore += iTempScore;
+							if (iTempScore > iTopScore)
 							{
-								iTempScore = GET_TEAM((TeamTypes)iI).getTotalVictoryScore();
-								iTotalScore += iTempScore;
-								if (iTempScore > iTopScore)
-								{
-									iTopScore = iTempScore;
-									eBestTeam = (TeamTypes)iI;
-								}
+								iTopScore = iTempScore;
+								eBestTeam = (TeamTypes)iI;
 							}
 						}
 					}
@@ -9035,9 +8973,7 @@ void CvGame::testVictory()
 			aaiWinners.clear();
 		}
 	}
-/************************************************************************************************/
-/* Afforess	                         END                                                        */
-/************************************************************************************************/
+
 	if (!aaiWinners.empty())
 	{
 		const int iWinner = getSorenRandNum(aaiWinners.size(), "Victory tie breaker");
@@ -9046,15 +8982,7 @@ void CvGame::testVictory()
 
 	if (getVictory() == NO_VICTORY && getMaxTurns() > 0 && getElapsedGameTurns() >= getMaxTurns() && !bEndScore)
 	{
-/************************************************************************************************/
-/* REVOLUTION_MOD                                                                 lemmy101      */
-/*                                                                                jdog5000      */
-/*                                                                                              */
-/************************************************************************************************/
 		if ((getAIAutoPlay(getActivePlayer()) > 0) || gDLL->GetAutorun())
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
 		{
 			setGameState(GAMESTATE_EXTENDED);
 		}
@@ -9307,7 +9235,7 @@ void CvGame::logRandomResult(const wchar* szStreamName, const char* pszLog, int 
 		{
 			static int				iLine = 0;
 			TCHAR szFile[1024];
-			sprintf(szFile, "RandomLogger - Player %d - Set %d.log", GC.getGameINLINE().getActivePlayer(), getGameTurn()/50);
+			sprintf(szFile, "RandomLogger - Player %d - Set %d.log", getActivePlayer(), getGameTurn()/50);
 			TCHAR szOut[1024];
 
 			sprintf(szOut, "%d\t%d\t%S\t%s\t%d\t%d\n", ++iLine, getGameTurn()+1, szStreamName, pszLog, iMax, iResult);
@@ -10444,8 +10372,8 @@ void CvGame::logDebugMsg(char* format, ...)
 {
 #ifdef _DEBUG
 	TCHAR szOut[1024];
-	if (GC.getGameINLINE().getActivePlayer() != -1)
-		sprintf(szOut, "Player %d - Multiplayer Game Log.log", GC.getGameINLINE().getActivePlayer());
+	if (getActivePlayer() != -1)
+		sprintf(szOut, "Player %d - Multiplayer Game Log.log", getActivePlayer());
 	else
 		sprintf(szOut, "Pitboss Multiplayer Game Log.log");
 
@@ -11014,14 +10942,14 @@ VoteSelectionData* CvGame::addVoteSelection(VoteSourceTypes eVoteSource)
 					{
 						for (int iPlayer1 = 0; iPlayer1 < MAX_PC_PLAYERS; ++iPlayer1)
 						{
-							CvPlayer& kPlayer1 = GET_PLAYER((PlayerTypes)iPlayer1);
+							const CvPlayer& kPlayer1 = GET_PLAYER((PlayerTypes)iPlayer1);
 
 							if ( kPlayer1.isAlive() )
 							{
 								int iLoop;
 								for (CvCity* pLoopCity = kPlayer1.firstCity(&iLoop); NULL != pLoopCity; pLoopCity = kPlayer1.nextCity(&iLoop))
 								{
-									PlayerTypes eNewOwner = pLoopCity->plot()->findHighestCulturePlayer();
+									const PlayerTypes eNewOwner = pLoopCity->plot()->findHighestCulturePlayer();
 									if (NO_PLAYER != eNewOwner)
 									{
 										kData.ePlayer = (PlayerTypes)iPlayer1;
@@ -11110,7 +11038,7 @@ VoteTriggeredData* CvGame::addVoteTriggered(VoteSourceTypes eVoteSource, const V
 				}
 				else
 				{
-					castVote(((PlayerTypes)iI), pData->getID(), GET_PLAYER((PlayerTypes)iI).AI_diploVote(kOptionData, eVoteSource, false));
+					castVote(((PlayerTypes)iI), pData->getID(), kPlayer.AI_diploVote(kOptionData, eVoteSource, false));
 				}
 			}
 		}
@@ -11155,7 +11083,7 @@ void CvGame::doVoteResults()
 			bool bAllVoted = true;
 			for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
 			{
-				PlayerTypes ePlayer = (PlayerTypes) iJ;
+				const PlayerTypes ePlayer = (PlayerTypes) iJ;
 				if (GET_PLAYER(ePlayer).isAlive() && GET_PLAYER(ePlayer).isVotingMember(eVoteSource))
 				{
 					if (getPlayerVote(ePlayer, pVoteTriggered->getID()) == NO_PLAYER_VOTE)
@@ -11722,11 +11650,6 @@ bool CvGame::takeJPEGScreenShot(std::string fileName) const
 }
 // BUG - MapFinder - end
 
-/************************************************************************************************/
-/* Afforess                                     12/7/09                                         */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 int CvGame::getWaterAnimalSpawnChance() const
 {
 	return m_iWaterAnimalSpawnChance;
@@ -11829,7 +11752,7 @@ void CvGame::doFinalFive()
 {
 	MEMORY_TRACE_FUNCTION();
 
-	if (!GC.getGameINLINE().isGameMultiPlayer() && isOption(GAMEOPTION_CHALLENGE_CUT_LOSERS) && countCivPlayersAlive() > 5)
+	if (!isGameMultiPlayer() && isOption(GAMEOPTION_CHALLENGE_CUT_LOSERS) && countCivPlayersAlive() > 5)
 	{
 		changeCutLosersCounter(1);
 		if (getCutLosersCounter() >= ((GC.getDefineINT("CUT_LOSERS_TURN_INCREMENT") * GC.getGameSpeedInfo(getGameSpeedType()).getAnarchyPercent()) / 100))
@@ -11853,7 +11776,7 @@ void CvGame::doHightoLow()
 {
 	MEMORY_TRACE_FUNCTION();
 
-	if (!GC.getGameINLINE().isGameMultiPlayer() && isOption(GAMEOPTION_CHALLENGE_HIGH_TO_LOW))
+	if (!isGameMultiPlayer() && isOption(GAMEOPTION_CHALLENGE_HIGH_TO_LOW))
 	{
 		if (getGameTurn() >= GC.getDefineINT("HIGH_TO_LOW_FIRST_TURN_CHECK") && getHighToLowCounter() < 2)
 		{
@@ -12832,7 +12755,7 @@ void CvGame::doFoundCorporations()
 }
 void CvGame::doFoundCorporation(CorporationTypes eCorporation, bool bForce)
 {
-	if (!GC.getGameINLINE().isOption(GAMEOPTION_REALISTIC_CORPORATIONS))
+	if (!isOption(GAMEOPTION_REALISTIC_CORPORATIONS))
 	{
 		return;
 	}
@@ -12967,7 +12890,7 @@ void CvGame::doFoundCorporation(CorporationTypes eCorporation, bool bForce)
 	}
 }
 
-int CvGame::getAverageCorporationInfluence(CvCity* pCity, CorporationTypes eCorporation) const
+int CvGame::getAverageCorporationInfluence(const CvCity* pCity, const CorporationTypes eCorporation) const
 {
 	CvCity* pLoopCity;
 	int iSpread = GC.getCorporationInfo(eCorporation).getSpread();
@@ -12977,21 +12900,21 @@ int CvGame::getAverageCorporationInfluence(CvCity* pCity, CorporationTypes eCorp
 	int iPlayerCount = 0;
 	int iRandThreshold = 0;
 
-	if (GC.getGameINLINE().getHeadquarters(eCorporation) == NULL)
+	if (getHeadquarters(eCorporation) == NULL)
 	{
 		return 100;
 	}
 
 	for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iI);
+		const CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iI);
 		if (kPlayer.isAlive())
 		{
 			if (kPlayer.isNoCorporations())
 			{
 				continue;
 			}
-			if (kPlayer.isNoForeignCorporations() && GC.getGameINLINE().getHeadquarters(eCorporation)->getOwner() != pCity->getOwner())
+			if (kPlayer.isNoForeignCorporations() && getHeadquarters(eCorporation)->getOwner() != pCity->getOwner())
 			{
 				continue;
 			}
@@ -13232,14 +13155,6 @@ bool CvGame::canExitToMainMenu() const
 	{
 		return false;
 	}
-	// if (GC.getGameINLINE().isOption(GAMEOPTION_NO_FUTURE))
-	// {
-		// return false;
-	// }
-	//if (!GC.getGameINLINE().isOption(GAMEOPTION_ADVANCED_ECONOMY))
-	//{
-	//	return false;
-	//}
 	return true;
 }
 
@@ -13268,28 +13183,19 @@ bool CvGame::canEverConstruct(BuildingTypes eBuilding) const
 	}
 	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
-	if (kBuilding.getPrereqGameOption() != NO_GAMEOPTION)
+	if (kBuilding.getPrereqGameOption() != NO_GAMEOPTION && !isOption((GameOptionTypes)kBuilding.getPrereqGameOption()))
 	{
-		if (!(GC.getGameINLINE().isOption((GameOptionTypes)kBuilding.getPrereqGameOption())))
-		{
-			return false;
-		}
+		return false;
 	}
 
-	if (kBuilding.getNotGameOption() != NO_GAMEOPTION)
+	if (kBuilding.getNotGameOption() != NO_GAMEOPTION && isOption((GameOptionTypes)kBuilding.getNotGameOption()))
 	{
-		if (GC.getGameINLINE().isOption((GameOptionTypes)kBuilding.getNotGameOption()))
-		{
-			return false;
-		}
+		return false;
 	}
 
-	if (kBuilding.getPrereqCorporation() != NO_CORPORATION)
+	if (kBuilding.getPrereqCorporation() != NO_CORPORATION && !canEverSpread((CorporationTypes)kBuilding.getPrereqCorporation()))
 	{
-		if (!canEverSpread((CorporationTypes)kBuilding.getPrereqCorporation()))
-		{
-			return false;
-		}
+		return false;
 	}
 
 	if (kBuilding.getFoundsCorporation() != NO_CORPORATION)
@@ -13298,8 +13204,7 @@ bool CvGame::canEverConstruct(BuildingTypes eBuilding) const
 		{
 			return false;
 		}
-
-		if (GC.getGameINLINE().isOption(GAMEOPTION_REALISTIC_CORPORATIONS))
+		if (isOption(GAMEOPTION_REALISTIC_CORPORATIONS))
 		{
 			return false;
 		}
@@ -13324,7 +13229,6 @@ bool CvGame::canEverConstruct(BuildingTypes eBuilding) const
 	{
 		return false;
 	}
-
 	return true;
 }
 
@@ -13336,39 +13240,25 @@ bool CvGame::canEverTrain(UnitTypes eUnit) const
 	}
 	CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
 
-	if (kUnit.getPrereqGameOption() != NO_GAMEOPTION)
+	if (kUnit.getPrereqGameOption() != NO_GAMEOPTION && !isOption((GameOptionTypes)kUnit.getPrereqGameOption()))
 	{
-		if (!(GC.getGameINLINE().isOption((GameOptionTypes)kUnit.getPrereqGameOption())))
-		{
-			return false;
-		}
+		return false;
 	}
 
-	if (kUnit.getNotGameOption() != NO_GAMEOPTION)
+	if (kUnit.getNotGameOption() != NO_GAMEOPTION && isOption((GameOptionTypes)kUnit.getNotGameOption()))
 	{
-		if (GC.getGameINLINE().isOption((GameOptionTypes)kUnit.getNotGameOption()))
-		{
-			return false;
-		}
+		return false;
 	}
 
-	if (kUnit.getPrereqCorporation() != NO_CORPORATION)
+	if (kUnit.getPrereqCorporation() != NO_CORPORATION && !canEverSpread((CorporationTypes)kUnit.getPrereqCorporation()))
 	{
-		if (!canEverSpread((CorporationTypes)kUnit.getPrereqCorporation()))
-		{
-			return false;
-		}
+		return false;
 	}
 
-	if (kUnit.getPrereqBuilding() != NO_BUILDING)
+	if (kUnit.getPrereqBuilding() != NO_BUILDING && !canEverConstruct((BuildingTypes)kUnit.getPrereqBuilding()))
 	{
-		if (!canEverConstruct((BuildingTypes)kUnit.getPrereqBuilding()))
-		{
-			return false;
-		}
+		return false;
 	}
-
-
 	return true;
 }
 
@@ -13378,16 +13268,11 @@ bool CvGame::canEverSpread(CorporationTypes eCorporation) const
 	{
 		return false;
 	}
-	CvCorporationInfo& kCorporation = GC.getCorporationInfo(eCorporation);
-
-	if (kCorporation.getPrereqGameOption() != NO_GAMEOPTION)
+	if (GC.getCorporationInfo(eCorporation).getPrereqGameOption() != NO_GAMEOPTION
+	&& !isOption((GameOptionTypes)GC.getCorporationInfo(eCorporation).getPrereqGameOption()))
 	{
-		if (!(GC.getGameINLINE().isOption((GameOptionTypes)kCorporation.getPrereqGameOption())))
-		{
-			return false;
-		}
+		return false;
 	}
-
 	return true;
 }
 
@@ -13418,7 +13303,7 @@ void CvGame::loadPirateShip(CvUnit* pUnit)
 		for (int iJ = 0; iJ < GC.getNumUnitClassInfos(); iJ++)
 		{
 			bool bValid = false;
-			UnitTypes eLoopUnit = ((UnitTypes)(GC.getCivilizationInfo(GET_PLAYER(BARBARIAN_PLAYER).getCivilizationType()).getCivilizationUnits(iJ)));
+			const UnitTypes eLoopUnit = ((UnitTypes)(GC.getCivilizationInfo(GET_PLAYER(BARBARIAN_PLAYER).getCivilizationType()).getCivilizationUnits(iJ)));
 
 			if (eLoopUnit != NO_UNIT)
 			{
@@ -13444,16 +13329,13 @@ void CvGame::loadPirateShip(CvUnit* pUnit)
 
 		if (eBestUnit != NO_UNIT)
 		{
-			CvUnit* pPirate = GET_PLAYER(BARBARIAN_PLAYER).initUnit(eBestUnit, pUnit->plot()->getX_INLINE(), pUnit->plot()->getY_INLINE(), UNITAI_ATTACK, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
+			CvUnit* pPirate = GET_PLAYER(BARBARIAN_PLAYER).initUnit(eBestUnit, pUnit->plot()->getX_INLINE(), pUnit->plot()->getY_INLINE(), UNITAI_ATTACK, NO_DIRECTION, getSorenRandNum(10000, "AI Unit Birthmark"));
 			pPirate->setTransportUnit(pUnit);
 			pUnit->AI_setUnitAIType(UNITAI_ASSAULT_SEA);
 		}
 	}
 }
 
-/************************************************************************************************/
-/* Afforess	                         END                                                        */
-/************************************************************************************************/
 
 void CvGame::recalculateModifiers()
 {
@@ -13521,7 +13403,7 @@ void CvGame::recalculateModifiers()
 		pLoopPlot->clearVisibilityCounts();
 
 		//	Fix any spurious routes that are on water tiles
-		RouteTypes eRoute = pLoopPlot->getRouteType();
+		const RouteTypes eRoute = pLoopPlot->getRouteType();
 		if (eRoute != NO_ROUTE && pLoopPlot->isWater() && !GC.getRouteInfo(eRoute).isSeaTunnel() )
 		{
 			pLoopPlot->setRouteType(NO_ROUTE, false);
@@ -13733,7 +13615,7 @@ void CvGame::logOOSSpecial(int iLocID, int iVar, int iVar2, int iVar3)
 	if (GC.isXMLLogging() || isNetworkMultiPlayer())
 	{
 		TCHAR szFile[1024];
-		sprintf(szFile, "OOSSpecialLogger - Player %d - Set %d.log", GC.getGameINLINE().getActivePlayer(), getGameTurn()/50);
+		sprintf(szFile, "OOSSpecialLogger - Player %d - Set %d.log", getActivePlayer(), getGameTurn()/50);
 		TCHAR szOut[1024];
 		sprintf(szOut, "iLocID %d - iVar %d - iVar2 %d - iVar3 %d", iLocID, iVar, iVar2, iVar3);
 		gDLL->logMsg(szFile,szOut, false, false);
@@ -13787,5 +13669,5 @@ void CvGame::changeImprovementCount(ImprovementTypes eIndex, int iChange)
 
 int CvGame::SorenRand::operator()(const int maxVal) const
 {
-	return GC.getGameINLINE().getSorenRandNum(maxVal, logMsg);
+	return GC.getGame().getSorenRandNum(maxVal, logMsg);
 }

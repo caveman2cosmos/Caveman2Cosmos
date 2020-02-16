@@ -660,15 +660,6 @@ void CvGame::updateColoredPlots()
 						{
 							if (pHeadSelectedUnit->canFound(pLoopPlot))
 							{
-// BUFFY - Don't Recommend Plots in Fog of War - start
-#ifdef _BUFFY
-								if (!pLoopPlot->isVisible(pHeadSelectedUnit->getTeam(), false))
-								{
-									continue;
-								}
-#endif
-// BUFFY - Don't Recommend Plots in Fog of War - end
-
 								if (GET_PLAYER(pHeadSelectedUnit->getOwnerINLINE()).AI_isPlotCitySite(pLoopPlot))
 								{
 									gDLL->getEngineIFace()->addColoredPlot(pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE(), GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT")).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS);

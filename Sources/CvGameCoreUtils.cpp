@@ -83,7 +83,7 @@ DirectionTypes estimateDirection(int iDX, int iDY)
 	int maximumIndex = -1;
 	for(int i=0;i<displacementSize;i++)
 	{
-		float dotProduct = iDX * displacements[i][0] + iDY * displacements[i][1];
+		const float dotProduct = iDX * displacements[i][0] + iDY * displacements[i][1];
 		if(dotProduct > maximum)
 		{
 			maximum = dotProduct;
@@ -231,17 +231,16 @@ bool isBeforeUnitCycle(const CvUnit* pFirstUnit, const CvUnit* pSecondUnit)
 /*************************************************************************************************/
 bool isPromotionValid(PromotionTypes ePromotion, UnitTypes eUnit, bool bLeader)
 {
+	const CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
+
 	// RevolutionDCM - super spies
 	// Disable spy promotions mechanism
-	if (GC.getUnitInfo(eUnit).isSpy() && !GC.isSS_ENABLED()) 
+	if (kUnit.isSpy() && !GC.isSS_ENABLED()) 
 	{
 		return false;
 	}
 	// RevolutionDCM - end
 	
-	CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
-	CvPromotionInfo& kPromotion = GC.getPromotionInfo(ePromotion);
-
 	if (kUnit.getFreePromotions(ePromotion))
 	{
 		return true;
@@ -251,6 +250,8 @@ bool isPromotionValid(PromotionTypes ePromotion, UnitTypes eUnit, bool bLeader)
 	{
 		return false;
 	}
+
+	const CvPromotionInfo& kPromotion = GC.getPromotionInfo(ePromotion);
 
 	if (!bLeader && kPromotion.isLeader())
 	{
@@ -369,8 +370,8 @@ bool isPromotionValid(PromotionTypes ePromotion, UnitTypes eUnit, bool bLeader)
 		}
 	}
 
-	PromotionTypes ePrereq1 = (PromotionTypes)kPromotion.getPrereqOrPromotion1();
-	PromotionTypes ePrereq2 = (PromotionTypes)kPromotion.getPrereqOrPromotion2();
+	const PromotionTypes ePrereq1 = (PromotionTypes)kPromotion.getPrereqOrPromotion1();
+	const PromotionTypes ePrereq2 = (PromotionTypes)kPromotion.getPrereqOrPromotion2();
 	if (NO_PROMOTION != ePrereq1 || NO_PROMOTION != ePrereq2)
 	{
 		bool bValid = false;
@@ -513,7 +514,7 @@ bool isCorporationTech(TechTypes eTech)
 bool isTechRequiredForUnit(TechTypes eTech, UnitTypes eUnit)
 {
 	int iI;
-	CvUnitInfo& info = GC.getUnitInfo(eUnit);
+	const CvUnitInfo& info = GC.getUnitInfo(eUnit);
 
 	if (info.getPrereqAndTech() == eTech)
 	{
@@ -534,7 +535,7 @@ bool isTechRequiredForUnit(TechTypes eTech, UnitTypes eUnit)
 bool isTechRequiredForBuilding(TechTypes eTech, BuildingTypes eBuilding)
 {
 	int iI;
-	CvBuildingInfo& info = GC.getBuildingInfo(eBuilding);
+	const CvBuildingInfo& info = GC.getBuildingInfo(eBuilding);
 
 	if (info.getPrereqAndTech() == eTech)
 	{
@@ -549,7 +550,7 @@ bool isTechRequiredForBuilding(TechTypes eTech, BuildingTypes eBuilding)
 		}
 	}
 
-	SpecialBuildingTypes eSpecial = (SpecialBuildingTypes)info.getSpecialBuildingType();
+	const SpecialBuildingTypes eSpecial = (SpecialBuildingTypes)info.getSpecialBuildingType();
 	if (NO_SPECIALBUILDING != eSpecial && GC.getSpecialBuildingInfo(eSpecial).getTechPrereq() == eTech)
 	{
 		return true;
@@ -605,7 +606,7 @@ bool isNationalWonderClass(BuildingClassTypes eBuildingClass)
 
 bool isNationalWonderGroupClass(BuildingClassTypes eBuildingClass)
 {
-	SpecialBuildingTypes eSpecialBuilding = (SpecialBuildingTypes)GC.getBuildingInfo((BuildingTypes)GC.getBuildingClassInfo(eBuildingClass).getDefaultBuildingIndex()).getSpecialBuildingType();
+	const SpecialBuildingTypes eSpecialBuilding = (SpecialBuildingTypes)GC.getBuildingInfo((BuildingTypes)GC.getBuildingClassInfo(eBuildingClass).getDefaultBuildingIndex()).getSpecialBuildingType();
 	if (eSpecialBuilding == NO_SPECIALBUILDING)
 	{
 		return false;
@@ -628,7 +629,7 @@ int limitedWonderClassLimit(BuildingClassTypes eBuildingClass)
 	int iMax;
 	int iCount = 0;
 	bool bIsLimited = false;
-	CvBuildingClassInfo& kBuildingClass = GC.getBuildingClassInfo(eBuildingClass);
+	const CvBuildingClassInfo& kBuildingClass = GC.getBuildingClassInfo(eBuildingClass);
 
 	iMax = kBuildingClass.getMaxGlobalInstances();
 	if (iMax != -1)
@@ -653,7 +654,7 @@ int limitedWonderClassLimit(BuildingClassTypes eBuildingClass)
 
 	if (kBuildingClass.getDefaultBuildingIndex() != NO_BUILDING)
 	{
-		SpecialBuildingTypes eSpecialBuilding = (SpecialBuildingTypes)GC.getBuildingInfo((BuildingTypes)kBuildingClass.getDefaultBuildingIndex()).getSpecialBuildingType();
+		const SpecialBuildingTypes eSpecialBuilding = (SpecialBuildingTypes)GC.getBuildingInfo((BuildingTypes)kBuildingClass.getDefaultBuildingIndex()).getSpecialBuildingType();
 		if (eSpecialBuilding != NO_SPECIALBUILDING)
 		{
 			iMax = GC.getSpecialBuildingInfo(eSpecialBuilding).getMaxPlayerInstances();
@@ -1576,8 +1577,8 @@ TechTypes getDiscoveryTech(UnitTypes eUnit, PlayerTypes ePlayer)
 
 						for (int iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
 						{
-							TechTypes eRevealTech = (TechTypes)GC.getBonusInfo((BonusTypes)iJ).getTechReveal();
-							BonusClassTypes eBonusClass = (BonusClassTypes)GC.getBonusInfo((BonusTypes)iJ).getBonusClassType();
+							const TechTypes eRevealTech = (TechTypes)GC.getBonusInfo((BonusTypes)iJ).getTechReveal();
+							const BonusClassTypes eBonusClass = (BonusClassTypes)GC.getBonusInfo((BonusTypes)iJ).getBonusClassType();
 							if (eRevealTech != NO_TECH)
 							{
 								if (kTeam.isHasTech(eRevealTech))
@@ -1701,7 +1702,7 @@ bool PUF_isOtherPlayer(const CvUnit* pUnit, int iData1, int iData2, const CvUnit
 bool PUF_isOtherTeam(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
 	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
-	TeamTypes eTeam = GET_PLAYER((PlayerTypes)iData1).getTeam();
+	const TeamTypes eTeam = GET_PLAYER((PlayerTypes)iData1).getTeam();
 	if (pUnit->canCoexistWithTeamOnPlot(eTeam, *pUnit->plot()))
 	{
 		return false;
@@ -1715,13 +1716,14 @@ bool PUF_isEnemy(const CvUnit* pUnit, int otherPlayer, int otherUnitAlwaysHostil
 	FAssertMsg(otherPlayer != -1, "Invalid data argument, should be >= 0");
 	FAssertMsg(otherUnitAlwaysHostile != -1, "Invalid data argument, should be >= 0");
 
-	TeamTypes eOtherTeam = GET_PLAYER((PlayerTypes)otherPlayer).getTeam();
-	TeamTypes eOurTeam = GET_PLAYER(pUnit->getCombatOwner(eOtherTeam, pUnit->plot())).getTeam();
+	const TeamTypes eOtherTeam = GET_PLAYER((PlayerTypes)otherPlayer).getTeam();
 
 	if (pUnit->canCoexistWithTeam(eOtherTeam))
 	{
 		return false;
 	}
+
+	const TeamTypes eOurTeam = GET_PLAYER(pUnit->getCombatOwner(eOtherTeam, pUnit->plot())).getTeam();
 
 	return (otherUnitAlwaysHostile ? eOtherTeam != eOurTeam : atWar(eOtherTeam, eOurTeam));
 }
@@ -1731,8 +1733,7 @@ bool PUF_isEnemyTarget(const CvUnit* pUnit, int iData1, int iData2, const CvUnit
 	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
 	FAssertMsg(iData2 != -1, "Invalid data argument, should be >= 0");
 
-	TeamTypes eOtherTeam = GET_PLAYER((PlayerTypes)iData1).getTeam();
-	TeamTypes eOurTeam = GET_PLAYER(pUnit->getCombatOwner(eOtherTeam, pUnit->plot())).getTeam();
+	const TeamTypes eOtherTeam = GET_PLAYER((PlayerTypes)iData1).getTeam();
 
 	if (pUnit->canCoexistWithTeam(eOtherTeam))
 	{
@@ -1742,6 +1743,8 @@ bool PUF_isEnemyTarget(const CvUnit* pUnit, int iData1, int iData2, const CvUnit
 	{
 		return false;
 	}
+
+	const TeamTypes eOurTeam = GET_PLAYER(pUnit->getCombatOwner(eOtherTeam, pUnit->plot())).getTeam();
 
 	return (iData2 ? eOtherTeam != eOurTeam : atWar(eOtherTeam, eOurTeam));
 }
@@ -1756,13 +1759,14 @@ bool PUF_isNonAlly(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pT
 	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
 	FAssertMsg(iData2 != -1, "Invalid data argument, should be >= 0");
 
-	TeamTypes eOtherTeam = GET_PLAYER((PlayerTypes)iData1).getTeam();
-	TeamTypes eOurTeam = GET_PLAYER(pUnit->getCombatOwner(eOtherTeam, pUnit->plot())).getTeam();
+	const TeamTypes eOtherTeam = GET_PLAYER((PlayerTypes)iData1).getTeam();
 
 	if (pUnit->canCoexistWithTeamOnPlot(eOtherTeam, *pUnit->plot()))
 	{
 		return false;
 	}
+
+	const TeamTypes eOurTeam = GET_PLAYER(pUnit->getCombatOwner(eOtherTeam, pUnit->plot())).getTeam();
 
 	return (iData2 ? eOtherTeam == eOurTeam : isNonAlly(eOtherTeam, eOurTeam));
 }
@@ -1793,7 +1797,7 @@ bool PUF_isPotentialEnemy(const CvUnit* pDefender, int pAttackerTeam, int pAttac
 	TeamTypes eAttackerTeam = GET_PLAYER((PlayerTypes)pAttackerTeam).getTeam();
 	TeamTypes eOurTeam = GET_PLAYER(pDefender->getCombatOwner(eAttackerTeam, pDefender->plot())).getTeam();
 
-	bool bAssassinate = ((pDefender->isAssassin() || pAttacker->isAssassin()) && (pDefender->plot() == pAttacker->plot()));
+	const bool bAssassinate = ((pDefender->isAssassin() || pAttacker->isAssassin()) && (pDefender->plot() == pAttacker->plot()));
 
 	if (pDefender->canCoexistWithAttacker(*pAttacker, bAssassinate))
 	{
@@ -1807,13 +1811,14 @@ bool PUF_canDeclareWar( const CvUnit* pUnit, int iData1, int iData2, const CvUni
 	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
 	FAssertMsg(iData2 != -1, "Invalid data argument, should be >= 0");
 
-	TeamTypes eOtherTeam = GET_PLAYER((PlayerTypes)iData1).getTeam();
-	TeamTypes eOurTeam = GET_PLAYER(pUnit->getCombatOwner(eOtherTeam, pUnit->plot())).getTeam();
+	const TeamTypes eOtherTeam = GET_PLAYER((PlayerTypes)iData1).getTeam();
 
 	if (pUnit->canCoexistWithTeamOnPlot(eOtherTeam, *pUnit->plot()))
 	{
 		return false;
 	}
+
+	const TeamTypes eOurTeam = GET_PLAYER(pUnit->getCombatOwner(eOtherTeam, pUnit->plot())).getTeam();
 
 	return (iData2 ? false : GET_TEAM(eOtherTeam).canDeclareWar(eOurTeam));
 }
@@ -1842,7 +1847,7 @@ bool PUF_isCityGarrison(const CvUnit* pUnit, int iData1, int iData2, const CvUni
 {
 	if ( pUnit->getGroup()->AI_isCityGarrison(GET_PLAYER(pUnit->getOwnerINLINE()).getCity(iData1)) )
 	{
-		bool bAllowAnyDefenders = (bool)iData2;
+		const bool bAllowAnyDefenders = (bool)iData2;
 
 		if ( bAllowAnyDefenders )
 		{
@@ -1850,7 +1855,7 @@ bool PUF_isCityGarrison(const CvUnit* pUnit, int iData1, int iData2, const CvUni
 		}
 		else
 		{
-			UnitAITypes eUnitAI = pUnit->AI_getUnitAIType();
+			const UnitAITypes eUnitAI = pUnit->AI_getUnitAIType();
 
 			return !pUnit->noDefensiveBonus() && eUnitAI != UNITAI_ATTACK_CITY && eUnitAI != UNITAI_ATTACK;
 		}
@@ -2029,7 +2034,7 @@ bool PUF_isAvailableUnitAITypeGroupie(const CvUnit* pUnit, int iData1, int iData
 
 bool PUF_isUnitAITypeGroupie(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
-	CvUnit* pGroupHead = pUnit->getGroup()->getHeadUnit();
+	const CvUnit* pGroupHead = pUnit->getGroup()->getHeadUnit();
 	return (PUF_isUnitAIType(pGroupHead,iData1,iData2));
 }
 
@@ -2074,8 +2079,8 @@ bool PUF_isTunneledEnemy(const CvUnit* pUnit, int iData1, int iData2, const CvUn
 	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
 	FAssertMsg(iData2 != -1, "Invalid data argument, should be >= 0");
 
-	TeamTypes eOtherTeam = GET_PLAYER((PlayerTypes)iData1).getTeam();
-	TeamTypes eOurTeam = GET_PLAYER(pUnit->getCombatOwner(eOtherTeam, pUnit->plot())).getTeam();
+	const TeamTypes eOtherTeam = GET_PLAYER((PlayerTypes)iData1).getTeam();
+	const TeamTypes eOurTeam = GET_PLAYER(pUnit->getCombatOwner(eOtherTeam, pUnit->plot())).getTeam();
 
 	bool bAnswer = (iData2 ? eOtherTeam != eOurTeam : atWar(eOtherTeam, eOurTeam));
 
@@ -2094,8 +2099,8 @@ bool PUF_isNonTunneledEnemy(const CvUnit* pUnit, int iData1, int iData2, const C
 	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
 	FAssertMsg(iData2 != -1, "Invalid data argument, should be >= 0");
 
-	TeamTypes eOtherTeam = GET_PLAYER((PlayerTypes)iData1).getTeam();
-	TeamTypes eOurTeam = GET_PLAYER(pUnit->getCombatOwner(eOtherTeam, pUnit->plot())).getTeam();
+	const TeamTypes eOtherTeam = GET_PLAYER((PlayerTypes)iData1).getTeam();
+	const TeamTypes eOurTeam = GET_PLAYER(pUnit->getCombatOwner(eOtherTeam, pUnit->plot())).getTeam();
 
 	bool bAnswer = (iData2 ? eOtherTeam != eOurTeam : atWar(eOtherTeam, eOurTeam));
 
@@ -3813,7 +3818,7 @@ bool NewPathDestValid(const CvSelectionGroup* pSelectionGroup, int iToX, int iTo
 		// BBAI efficiency: switch order, getPlotDanger is more expensive
 		if (pSelectionGroup->getDomainType() == DOMAIN_LAND)
 		{
-			int iGroupAreaID = pSelectionGroup->getArea();
+			const int iGroupAreaID = pSelectionGroup->getArea();
 			if (pToPlot->getArea() != iGroupAreaID)
 			{
 				if( !(pSelectionGroup->canMoveAllTerrain()) )
@@ -3976,12 +3981,12 @@ bool ContextFreeNewPathValidFunc(const CvSelectionGroup* pSelectionGroup, int iF
 		{
 			//	Need to handle ZOCs
 			//	ZOCs don't apply into cities of the unit owner
-			TeamTypes	eTeam = pSelectionGroup->getHeadTeam();
+			const TeamTypes eTeam = pSelectionGroup->getHeadTeam();
 	
 			if ( pToPlot->getPlotCity() == NULL || pToPlot->getPlotCity()->getTeam() != eTeam )
 			{
 				//Fort ZOC
-				PlayerTypes eDefender = pFromPlot->controlsAdjacentZOCSource(eTeam);
+				const PlayerTypes eDefender = pFromPlot->controlsAdjacentZOCSource(eTeam);
 				if (eDefender != NO_PLAYER)
 				{
 					const CvPlot* pZoneOfControl = pFromPlot->isInFortControl(true, eDefender, eOwner);
@@ -4165,7 +4170,7 @@ int stepDestValid(int iToX, int iToY, const void* pointer, FAStar* finder)
 		//	from a water plot (used to find assault locations for transports)
 		if ( (pFromPlot->getPlotType() == PLOT_OCEAN) != (pToPlot->getPlotType() == PLOT_OCEAN) )
 		{
-			int	iPlot = gDLL->getFAStarIFace()->GetInfo(finder);
+			const int iPlot = gDLL->getFAStarIFace()->GetInfo(finder);
 
 			if ( iPlot != -1 )
 			{
@@ -4559,20 +4564,18 @@ int* shuffle(int iNum, CvRandom& rand)
 
 void shuffleArray(int* piShuffle, int iNum, CvRandom& rand)
 {
-	int iI, iJ;
-
-	for (iI = 0; iI < iNum; iI++)
+	for (int iI = 0; iI < iNum; iI++)
 	{
 		piShuffle[iI] = iI;
 	}
 
 	for (iI = 0; iI < iNum; iI++)
 	{
-		iJ = (rand.get(iNum - iI, NULL) + iI);
+		const int iJ = (rand.get(iNum - iI, NULL) + iI);
 
 		if (iI != iJ)
 		{
-			int iTemp = piShuffle[iI];
+			const int iTemp = piShuffle[iI];
 			piShuffle[iI] = piShuffle[iJ];
 			piShuffle[iJ] = iTemp;
 		}
@@ -5065,7 +5068,7 @@ int calculateLevel(int iExperience, PlayerTypes ePlayer)
 	int iLevel = 1;
 	while (true)
 	{
-		int iNextLevelExperience = calculateExperience(iLevel, ePlayer);
+		const int iNextLevelExperience = calculateExperience(iLevel, ePlayer);
 		if (iNextLevelExperience > iExperience)
 		{
 			break;
