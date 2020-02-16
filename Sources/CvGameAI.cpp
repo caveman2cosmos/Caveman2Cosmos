@@ -71,7 +71,7 @@ void CvGameAI::AI_updateAssignWork()
 }
 
 
-int CvGameAI::AI_combatValue(UnitTypes eUnit)
+int CvGameAI::AI_combatValue(const UnitTypes eUnit) const
 {
 	int iValue;
 
@@ -112,7 +112,7 @@ int CvGameAI::AI_combatValue(UnitTypes eUnit)
 }
 
 
-int CvGameAI::AI_turnsPercent(int iTurns, int iPercent)
+int CvGameAI::AI_turnsPercent(int iTurns, const int iPercent) const
 {
 	FAssert(iPercent > 0);
 	if (iTurns != MAX_INT)
