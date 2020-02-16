@@ -353,7 +353,7 @@
 			<bPickOtherPlayerCity>1</bPickOtherPlayerCity>
 			<iGold>-10</iGold>
 			<bGoldToPlayer>1</bGoldToPlayer>
-			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
+			<PrereqTech>TECH_WHEELS</PrereqTech>
 			<iFoodPercent>-100</iFoodPercent>
 			<iOurAttitudeModifier>3</iOurAttitudeModifier>
 			<iAttitudeModifier>3</iAttitudeModifier>

@@ -16,7 +16,7 @@
 			<iCost>38858</iCost>
 			<Era>C2C_ERA_NANOTECH</Era>
 			<OrPreReqs>
-				<PrereqTech>TECH_NANOGENERATOR</PrereqTech>
+				<PrereqTech>TECH_NANOGENERATORS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
 				<PrereqTech>TECH_HYPERSONIC_FLIGHT</PrereqTech>

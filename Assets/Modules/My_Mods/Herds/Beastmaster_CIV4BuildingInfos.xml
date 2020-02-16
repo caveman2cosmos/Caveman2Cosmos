@@ -11,7 +11,7 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_BREEDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DONKEY_BREEDER</ArtDefineTag>
-			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
+			<PrereqTech>TECH_WHEELS</PrereqTech>
 			<iCost>132</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
@@ -55,7 +55,7 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_BREEDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HORSE_BREEDER</ArtDefineTag>
-			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
+			<PrereqTech>TECH_WHEELS</PrereqTech>
 			<iCost>132</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>

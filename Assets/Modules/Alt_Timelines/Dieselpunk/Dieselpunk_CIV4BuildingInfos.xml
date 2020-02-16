@@ -98,7 +98,7 @@
 			<Strategy>TXT_KEY_BUILDING_GRAND_AERODROME_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GRAND_AERODROME</ArtDefineTag>
-			<PrereqTech>TECH_ADVANCED_FLIGHT</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_AVIATION</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_DIESELPUNK</PrereqTech>
 			</TechTypes>

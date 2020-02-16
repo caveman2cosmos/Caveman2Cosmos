@@ -8,9 +8,9 @@
 	<ReligionInfos>
 		<ReligionInfo>
 			<Type>RELIGION_NGAIISM</Type>
-			<Description>TXT_KEY_TECH_NGAI</Description>
-			<Adjective>TXT_KEY_TECH_NGAI_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_TECH_NGAI_PEDIA</Civilopedia>
+			<Description>TXT_KEY_TECH_NGAIISM</Description>
+			<Adjective>TXT_KEY_TECH_NGAIISM_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_TECH_NGAIISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_NGAIISM</TechPrereq>
 			<FreeUnitClass>NONE</FreeUnitClass>
 			<iFreeUnits>0</iFreeUnits>

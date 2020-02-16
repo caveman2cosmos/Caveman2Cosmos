@@ -293,7 +293,7 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_COMPUTERS</ObsoleteTech>
+			<ObsoleteTech>TECH_PERSONAL_COMPUTERS</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>1512</iCost>
 			<BonusProductionModifiers>
@@ -369,7 +369,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANTIKYTHERA_MECHANISM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANTIKYTHERA_MECHANISM_STRATEGY</Strategy>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_GEAR</PrereqTech>
+			<PrereqTech>TECH_GEARS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_SUNDIAL</PrereqTech>
 			</TechTypes>
@@ -939,7 +939,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_WATERWORKS</PrereqTech>
+			<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -1350,7 +1350,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_WEARABLE_ELECTRONICS</ObsoleteTech>
+			<ObsoleteTech>TECH_WEARABLE_COMPUTERS</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>4620</iCost>
 			<!-- Special Yield and Commerce modifiers -->
@@ -1413,7 +1413,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_MOTER_SPORTS</PrereqTech>
+			<PrereqTech>TECH_MOTORSPORTS</PrereqTech>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<PrereqAndTerrain>
 				<PrereqTerrain>
@@ -2241,7 +2241,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_BLOOD_CULT</PrereqTech>
+				<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<!-- Obsolescence -->
@@ -3038,7 +3038,7 @@
 			<PrereqTech>TECH_INCANDESCENT_LIGHTING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_MAGLEV</ObsoleteTech>
+			<ObsoleteTech>TECH_MAGNETIC_LEVITATION</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>4800</iCost>
 			<!-- Main effects -->
@@ -3121,7 +3121,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_SUPERSTRINGTHEORY</ObsoleteTech>
+			<ObsoleteTech>TECH_SUPERSTRING_THEORY</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>5940</iCost>
 			<!-- Main effects -->
@@ -3667,7 +3667,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_GENOMIC_E</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_GENCYCLOPEDIA</PrereqTech>
+			<PrereqTech>TECH_GENOMIC_ENCYCLOPEDIA</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
@@ -4071,7 +4071,7 @@
 				</PrereqNotBuildingClass>
 			</PrereqNotBuildingClasses>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_WILDERNESSC</ObsoleteTech>
+			<ObsoleteTech>TECH_WILDLIFE_CONSERVATION</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>516</iCost>
 			<!-- Main effects -->
@@ -4163,7 +4163,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_MUSIC</PrereqTech>
+					<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -4387,7 +4387,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_MUSIC</PrereqTech>
+					<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -4652,7 +4652,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_MUSIC</PrereqTech>
+					<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -4843,7 +4843,7 @@
 			</BonusCommerceModifiers>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_BLOOD_CULT</PrereqTech>
+					<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -4875,7 +4875,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_MUSIC</PrereqTech>
+					<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -5249,7 +5249,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_WATERWORKS</PrereqTech>
+			<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -5815,7 +5815,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_HUMPHREY_METRODOME</MovieDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MODERN_SPORTS</PrereqTech>
-			<ObsoleteTech>TECH_BINARY_PYSCHOKINESIS</ObsoleteTech>
+			<ObsoleteTech>TECH_BINARY_PSYCHOKINESIS</ObsoleteTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -6147,7 +6147,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_PERSONAL_ADORNMENT</PrereqTech>
+			<PrereqTech>TECH_PERSONAL_ADORNMENTS</PrereqTech>
 			<Bonus>BONUS_JADE</Bonus>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
@@ -7501,7 +7501,7 @@
 			<PrereqTech>TECH_COMPASS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_UTOPIA</ObsoleteTech>
+			<ObsoleteTech>TECH_COMMUNISM</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>2280</iCost>
 			<!-- Special Yield and Commerce modifiers -->
@@ -8698,7 +8698,7 @@
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_PESTICIDES</ObsoleteTech>
+			<ObsoleteTech>TECH_AGRICULTURAL_ENGINEERING</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>2460</iCost>
 			<!-- Main effects -->
@@ -9199,7 +9199,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>10240000</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_WATERWORKS</PrereqTech>
+			<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<iCitiesPrereq>4</iCitiesPrereq>
 			<!-- Cost -->
@@ -9339,7 +9339,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_PROTEOMIC_E</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_GENCYCLOPEDIA</PrereqTech>
+			<PrereqTech>TECH_GENOMIC_ENCYCLOPEDIA</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
@@ -10399,7 +10399,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_GBIOLOGY</PrereqTech>
+			<PrereqTech>TECH_GENESIS_BIOLOGY</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
@@ -12528,7 +12528,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_KREMLIN</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_UTOPIA</PrereqTech>
+			<PrereqTech>TECH_COMMUNISM</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_FIBER_OPTICS</ObsoleteTech>
@@ -13122,7 +13122,7 @@
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_COMPUTERS</ObsoleteTech>
+			<ObsoleteTech>TECH_PERSONAL_COMPUTERS</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>2640</iCost>
 			<BonusProductionModifiers>
@@ -14073,7 +14073,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_WATERWORKS</PrereqTech>
+				<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_SCULPTURES</Bonus>
@@ -14091,7 +14091,7 @@
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_VIRTUALSOCIETY</ObsoleteTech>
+			<ObsoleteTech>TECH_VIRTUAL_SOCIETY</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>1566</iCost>
 			<!-- Main effects -->
@@ -14144,7 +14144,7 @@
 			<PrereqTech>TECH_PAPER</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_COMPUTERS</ObsoleteTech>
+			<ObsoleteTech>TECH_PERSONAL_COMPUTERS</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>2064</iCost>
 			<BonusProductionModifiers>
@@ -14422,7 +14422,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_WALL_STREET</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_STOCK_EXCHANGING</PrereqTech>
+			<PrereqTech>TECH_STOCK_BROKERING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
@@ -14629,7 +14629,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_WIKIPEDIA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_MMO</PrereqTech>
+			<PrereqTech>TECH_ONLINE_COMMUNITY</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<PrereqBuildingClasses>
@@ -19000,7 +19000,7 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WEMBLEY</ArtDefineTag>
 			<PrereqTech>TECH_SATELLITES</PrereqTech>
-			<ObsoleteTech>TECH_BINARY_PYSCHOKINESIS</ObsoleteTech>
+			<ObsoleteTech>TECH_BINARY_PSYCHOKINESIS</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -20920,7 +20920,7 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GOLDEN_SPIKE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GOLDEN_SPIKE</MovieDefineTag>
-			<ObsoleteTech>TECH_MAGLEV</ObsoleteTech>
+			<ObsoleteTech>TECH_MAGNETIC_LEVITATION</ObsoleteTech>
 			<PrereqTech>TECH_RAILROAD</PrereqTech>
 			<Bonus>BONUS_WARE_STEEL</Bonus>
 			<PrereqBonuses>
@@ -21860,7 +21860,7 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ORIENT_EXPRESS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ORIENT_EXPRESS</MovieDefineTag>
-			<ObsoleteTech>TECH_MAGLEV</ObsoleteTech>
+			<ObsoleteTech>TECH_MAGNETIC_LEVITATION</ObsoleteTech>
 			<PrereqTech>TECH_RAILROAD</PrereqTech>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
@@ -21915,7 +21915,7 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PALACE_SOV</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PALACE_SOV</MovieDefineTag>
-			<PrereqTech>TECH_UTOPIA</PrereqTech>
+			<PrereqTech>TECH_COMMUNISM</PrereqTech>
 			<Bonus>BONUS_WARE_STEEL</Bonus>
 			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
@@ -23177,7 +23177,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WILLOWRUN</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_WILLOWRUN</MovieDefineTag>
-			<ObsoleteTech>TECH_LUNAR_LUNAR_MANUFACTURING</ObsoleteTech>
+			<ObsoleteTech>TECH_LUNAR_MANUFACTURING</ObsoleteTech>
 			<PrereqTech>TECH_AVIATION</PrereqTech>
 			<FreeBonus>BONUS_AIRCRAFT</FreeBonus>
 			<iNumFreeBonuses>3</iNumFreeBonuses>
@@ -23296,7 +23296,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_YASNAYA_POLYANA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_YASNAYA_POLYANA</MovieDefineTag>
 			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
-			<PrereqTech>TECH_LABOR_UNION</PrereqTech>
+			<PrereqTech>TECH_LABOR_UNIONS</PrereqTech>
 			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>

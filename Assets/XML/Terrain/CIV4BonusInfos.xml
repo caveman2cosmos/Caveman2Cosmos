@@ -2945,7 +2945,7 @@
 			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_TIMBER</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
-			<TechCityTrade>TECH_WOOD_WORKING</TechCityTrade>
+			<TechCityTrade>TECH_WOODWORKING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>3</iYieldChange>
@@ -11316,7 +11316,7 @@
 			<Civilopedia>TXT_KEY_BONUS_METHANE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_FUEL</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_METHANE</ArtDefineTag>
-			<TechReveal>TECH_SEISMOLOGY</TechReveal>
+			<TechReveal>TECH_MODERN_SEISMOLOGY</TechReveal>
 			<TechCityTrade>TECH_SUPERSTRONG_ALLOYS</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
@@ -12182,7 +12182,7 @@
 			<Civilopedia>TXT_KEY_BONUS_THERMAL_VENT_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MODERN</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_THERMAL_VENT</ArtDefineTag>
-			<TechReveal>TECH_SEISMOLOGY</TechReveal>
+			<TechReveal>TECH_MODERN_SEISMOLOGY</TechReveal>
 			<TechCityTrade>TECH_ECOLOGICAL_ENGINEERING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>

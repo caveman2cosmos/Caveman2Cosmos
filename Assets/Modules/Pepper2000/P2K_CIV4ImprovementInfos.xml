@@ -420,7 +420,7 @@
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
-			<PrereqTech>TECH_PLANET_EXTRACTION</PrereqTech>
+			<PrereqTech>TECH_PLANETARY_EXTRACTION</PrereqTech>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
 			<bNoFreshWater>0</bNoFreshWater>
@@ -897,7 +897,7 @@
 			</TerrainMakesValids>
 			<TechYieldChanges>
 				<TechYieldChange>
-					<PrereqTech>TECH_APHOTOSYNTHESIS</PrereqTech>
+					<PrereqTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</PrereqTech>
 					<TechYields>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -955,7 +955,7 @@
 			</TerrainMakesValids>
 			<TechYieldChanges>
 				<TechYieldChange>
-					<PrereqTech>TECH_VASIMR_PROPULSION</PrereqTech>
+					<PrereqTech>TECH_FUSION_SPACECRAFT</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -1185,7 +1185,7 @@
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
-			<PrereqTech>TECH_ELECTRONUCLEAR_MATTER</PrereqTech>
+			<PrereqTech>TECH_NEUTRONIUM</PrereqTech>
 			<bFreshWaterMakesValid>0</bFreshWaterMakesValid>
 			<bRiverSideMakesValid>0</bRiverSideMakesValid>
             <bOutsideBorders>1</bOutsideBorders>
@@ -1358,7 +1358,7 @@
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
-			<PrereqTech>TECH_SOLAR_MINING</PrereqTech>
+			<PrereqTech>TECH_STAR_LIFTING</PrereqTech>
             <TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_SUN</TerrainType>
@@ -1536,7 +1536,7 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
             <iUpgradeTime>40</iUpgradeTime>
-			<PrereqTech>TECH_KUIPER_BELT</PrereqTech>
+			<PrereqTech>TECH_KUIPER_BELT_EXPLORATION</PrereqTech>
             <TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_IO</TerrainType>
@@ -2213,7 +2213,7 @@
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
-			<PrereqTech>TECH_INTERGALACTIC_TRAVEL</PrereqTech>
+			<PrereqTech>TECH_INTERGALACTIC_COLONIZATION</PrereqTech>
             <TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_LOCAL_GROUP</TerrainType>
@@ -2791,7 +2791,7 @@
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
-			<PrereqTech>TECH_SOLAR_MINING</PrereqTech>
+			<PrereqTech>TECH_STAR_LIFTING</PrereqTech>
             <TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_MILKY_WAY</TerrainType>
@@ -3371,7 +3371,7 @@
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>0</bHillsMakesValid>
-			<PrereqTech>TECH_INTERGALACTIC_TRAVEL</PrereqTech>
+			<PrereqTech>TECH_INTERGALACTIC_COLONIZATION</PrereqTech>
             <TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
@@ -3587,7 +3587,7 @@
 			<AlternativeImprovementUpgradeTypes/>
 			<TechYieldChanges>
                 <TechYieldChange>
-					<PrereqTech>TECH_TRUTH_MANIPULATION</PrereqTech>
+					<PrereqTech>TECH_REALITY_REPROGRAMMING</PrereqTech>
 					<TechYields>
 						<iYield>1</iYield>
 						<iYield>1</iYield>
@@ -3765,7 +3765,7 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_INTERGALACTIC_BASE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_INTERGALACTIC_BASE</ArtDefineTag>
 			<bActsAsCity>1</bActsAsCity>
-			<PrereqTech>TECH_WAVE_MOTION_GUN</PrereqTech>
+			<PrereqTech>TECH_EXTREME_ENERGY_WEAPONS</PrereqTech>
 			<bUseLSystem>1</bUseLSystem>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
@@ -3968,7 +3968,7 @@
 				<iYieldChange>5</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<iPillageGold>200</iPillageGold>
 			<bOutsideBorders>1</bOutsideBorders>
 			<TerrainMakesValids>

@@ -5,9 +5,9 @@
 		<TechInfo>
 			<!-- Shamanism -->
 			<Type>TECH_SHAMANISM</Type>
-			<Description>TXT_KEY_TECH_SHAMAN</Description>
-			<Civilopedia>TXT_KEY_TECH_SHAMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_SHAMAN_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_SHAMANISM</Description>
+			<Civilopedia>TXT_KEY_TECH_SHAMANISM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_SHAMANISM_STRATEGY</Strategy>
 			<!-- Main -->
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<iCost>34</iCost>
@@ -37,7 +37,7 @@
 			<OrPreReqs>
 				<PrereqTech>TECH_ANIMISM</PrereqTech>
 			</OrPreReqs>
-			<Quote>TXT_KEY_TECH_SHAMAN_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_SHAMANISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_SHAMANISM</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/shamanism.dds</Button>

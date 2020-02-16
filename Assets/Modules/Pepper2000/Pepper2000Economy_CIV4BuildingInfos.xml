@@ -257,7 +257,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_TRUTH_MANIPULATION</PrereqTech>
+			<PrereqTech>TECH_REALITY_REPROGRAMMING</PrereqTech>
 			<iCost>57510</iCost>
 			<FreeBuilding>BUILDINGCLASS_COSMIC_ECONOMY_EFFECT</FreeBuilding>
 			<PrereqBuildingClasses>
@@ -353,7 +353,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COSMIC_ECONOMY_EFFECT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_TRUTH_MANIPULATION</PrereqTech>
+			<PrereqTech>TECH_REALITY_REPROGRAMMING</PrereqTech>
 			<iCost>-1</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 		</BuildingInfo>

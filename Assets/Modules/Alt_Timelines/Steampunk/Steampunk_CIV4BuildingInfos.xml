@@ -136,7 +136,7 @@
 			<Strategy>TXT_KEY_BUILDING_PANOPTICON_PRISON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PANOPTICON_PRISON</ArtDefineTag>
-			<ObsoleteTech>TECH_CRYOGENICS</ObsoleteTech>
+			<ObsoleteTech>TECH_CRYONICS</ObsoleteTech>
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -183,7 +183,7 @@
 			<Strategy>TXT_KEY_BUILDING_MADSCIENTIST_CASTLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MADSCIENTIST_CASTLE</ArtDefineTag>
-			<ObsoleteTech>TECH_BRAIN_SCAN</ObsoleteTech>
+			<ObsoleteTech>TECH_THOUGHT_SCANNING</ObsoleteTech>
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

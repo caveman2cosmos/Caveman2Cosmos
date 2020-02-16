@@ -2136,8 +2136,8 @@
 			<Civilopedia>TXT_KEY_BONUS_DIGITAL_LIFESTYLE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_DIGITAL_LIFESTYLE</ArtDefineTag>
-			<TechReveal>TECH_MMO</TechReveal>
-			<TechCityTrade>TECH_MMO</TechCityTrade>
+			<TechReveal>TECH_ONLINE_COMMUNITY</TechReveal>
+			<TechCityTrade>TECH_ONLINE_COMMUNITY</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
@@ -2146,8 +2146,8 @@
 			<Civilopedia>TXT_KEY_BONUS_DIGITAL_IDENTITY_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_DIGITAL_IDENTITY</ArtDefineTag>
-			<TechReveal>TECH_VIRTUALSOCIETY</TechReveal>
-			<TechCityTrade>TECH_VIRTUALSOCIETY</TechCityTrade>
+			<TechReveal>TECH_VIRTUAL_SOCIETY</TechReveal>
+			<TechCityTrade>TECH_VIRTUAL_SOCIETY</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
@@ -2156,8 +2156,8 @@
 			<Civilopedia>TXT_KEY_BONUS_GENE_EDITING_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_GENE_EDITING</ArtDefineTag>
-			<TechReveal>TECH_GENEENHANCEMENT</TechReveal>
-			<TechCityTrade>TECH_GENEENHANCEMENT</TechCityTrade>
+			<TechReveal>TECH_GENE_ENHANCEMENT</TechReveal>
+			<TechCityTrade>TECH_GENE_ENHANCEMENT</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
@@ -2166,8 +2166,8 @@
 			<Civilopedia>TXT_KEY_BONUS_DESIGNER_BABIES_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_DESIGNER_BABIES</ArtDefineTag>
-			<TechReveal>TECH_GENEJURISPRUDENCE</TechReveal>
-			<TechCityTrade>TECH_GENEJURISPRUDENCE</TechCityTrade>
+			<TechReveal>TECH_GENE_JURISPRUDENCE</TechReveal>
+			<TechCityTrade>TECH_GENE_JURISPRUDENCE</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
@@ -2316,8 +2316,8 @@
 			<Civilopedia>TXT_KEY_BONUS_NANOMORPHICS_BEINGS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_NANOMORPHICS_BEINGS</ArtDefineTag>
-			<TechReveal>TECH_ATTOMETER_NANOMORPHISM</TechReveal>
-			<TechCityTrade>TECH_ATTOMETER_NANOMORPHISM</TechCityTrade>
+			<TechReveal>TECH_NANOMORPHIC_TROIDS</TechReveal>
+			<TechCityTrade>TECH_NANOMORPHIC_TROIDS</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
@@ -2396,8 +2396,8 @@
 			<Civilopedia>TXT_KEY_BONUS_ATEMPORAL_BEINGS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ATEMPORAL_BEINGS</ArtDefineTag>
-			<TechReveal>TECH_NON_TEMPORAL_ENTITIES</TechReveal>
-			<TechCityTrade>TECH_NON_TEMPORAL_ENTITIES</TechCityTrade>
+			<TechReveal>TECH_ATEMPORAL_BEINGS</TechReveal>
+			<TechCityTrade>TECH_ATEMPORAL_BEINGS</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>

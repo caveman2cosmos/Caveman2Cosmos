@@ -18890,7 +18890,7 @@
 			<Strategy>TXT_KEY_BUILDING_CARNIVAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CARNIVAL</ArtDefineTag>
-			<ObsoleteTech>TECH_ADVANCED_FLIGHT</ObsoleteTech>
+			<ObsoleteTech>TECH_ADVANCED_AVIATION</ObsoleteTech>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<iCost>153</iCost>
 			<MapCategoryTypes>
@@ -19697,7 +19697,7 @@
 			</MapCategoryTypes>
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_HUNTING</PrereqTech>
+			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEMI_AUTOMATIC_WEAPONS</ObsoleteTech>
 			<ReplaceBuildings>
@@ -19771,7 +19771,7 @@
 			</MapCategoryTypes>
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_HUNTING</PrereqTech>
+			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SEMI_AUTOMATIC_WEAPONS</ObsoleteTech>
 			<!-- Construction Cost -->
@@ -21067,7 +21067,7 @@
 			<Strategy>TXT_KEY_BUILDING_TRADITION_HUNTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_HUNTER</ArtDefineTag>
-			<PrereqTech>TECH_HUNTING_TACTICS</PrereqTech>
+			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<ObsoleteTech>TECH_SEMI_AUTOMATIC_WEAPONS</ObsoleteTech>
 			<iCost>-1</iCost>
 			<MapCategoryTypes>

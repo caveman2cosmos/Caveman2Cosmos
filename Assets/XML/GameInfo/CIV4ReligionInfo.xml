@@ -603,9 +603,9 @@
 		</ReligionInfo>
 		<ReligionInfo>
 			<Type>RELIGION_KEMETISM</Type>
-			<Description>TXT_KEY_TECH_EGYPT_MYTHOLOGY</Description>
+			<Description>TXT_KEY_TECH_KEMETISM</Description>
 			<Adjective/>
-			<Civilopedia>TXT_KEY_TECH_EGYPT_MYTH_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_TECH_KEMETISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_KEMETISM</TechPrereq>
 			<FreeUnitClass>UNITCLASS_EGYPT_MYTH_MISSIONARY</FreeUnitClass>
 			<iFreeUnits>0</iFreeUnits>
@@ -669,9 +669,9 @@
 		</ReligionInfo>
 		<ReligionInfo>
 			<Type>RELIGION_NAGHUALISM</Type>
-			<Description>TXT_KEY_TECH_MESOAMERICANISM</Description>
+			<Description>TXT_KEY_TECH_NAGHUALISM</Description>
 			<Adjective/>
-			<Civilopedia>TXT_KEY_TECH_MESOAMERICANISM_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_TECH_NAGHUALISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_NAGHUALISM</TechPrereq>
 			<FreeUnitClass>UNITCLASS_NAGUALISM_MISSIONARY</FreeUnitClass>
 			<iFreeUnits>0</iFreeUnits>

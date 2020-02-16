@@ -147,7 +147,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_MONASTERY</ArtDefineTag>
 			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<!--ObsoleteTech>TECH_MODERNPHYSICS</ObsoleteTech-->
+			<!--ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>74</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -769,7 +769,7 @@
 			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<StateReligion>RELIGION_SHAMANISM</StateReligion>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<!--ObsoleteTech>TECH_MODERNPHYSICS</ObsoleteTech-->
+			<!--ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>37</iCost>
 			<iAsset>3</iAsset>
@@ -811,7 +811,7 @@
 			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<StateReligion>RELIGION_SHAMANISM</StateReligion>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<!--ObsoleteTech>TECH_MODERNPHYSICS</ObsoleteTech-->
+			<!--ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>37</iCost>
 			<iAsset>3</iAsset>
@@ -851,7 +851,7 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_TEMPLE_RABBIT</ArtDefineTag>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<!--ObsoleteTech>TECH_MODERNPHYSICS</ObsoleteTech-->
+			<!--ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech-->
 			<iCost>28</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
@@ -890,7 +890,7 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_TEMPLE_SEA_LIONS</ArtDefineTag>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<!--ObsoleteTech>TECH_MODERNPHYSICS</ObsoleteTech-->
+			<!--ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech-->
 			<iCost>28</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
@@ -929,7 +929,7 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_TEMPLE_WALRUS</ArtDefineTag>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<!--ObsoleteTech>TECH_MODERNPHYSICS</ObsoleteTech-->
+			<!--ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech-->
 			<iCost>28</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>

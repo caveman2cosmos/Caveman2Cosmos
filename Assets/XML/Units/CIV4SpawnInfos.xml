@@ -4249,7 +4249,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<iMaxAreaTotalDensity>20</iMaxAreaTotalDensity>
 			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
-			<PrereqTech>TECH_PACHYDERM_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_ELEPHANT_DOMESTICATION</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<rateOverrideDefineName>NEANDERTHAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMinLatitude>50</iMinLatitude>
@@ -4468,7 +4468,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<iMaxAreaTotalDensity>20</iMaxAreaTotalDensity>
 			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
-			<PrereqTech>TECH_HUNTING_TACTICS</PrereqTech>
+			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<rateOverrideDefineName>NEANDERTHAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMinLatitude>50</iMinLatitude>
@@ -4490,8 +4490,8 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<iMaxAreaTotalDensity>20</iMaxAreaTotalDensity>
 			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
-			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<ObsoleteTech>TECH_HUNTING_TACTICS</ObsoleteTech>
+			<PrereqTech>TECH_TRAILS</PrereqTech>
+			<ObsoleteTech>TECH_HUNTING</ObsoleteTech>
 			<rateOverrideDefineName>NEANDERTHAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMinLatitude>50</iMinLatitude>
 			<TerrainTypes>
@@ -4513,7 +4513,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<iMaxAreaTotalDensity>20</iMaxAreaTotalDensity>
 			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
-			<PrereqTech>TECH_TRACKING</PrereqTech>
+			<PrereqTech>TECH_TRAILS</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<rateOverrideDefineName>NEANDERTHAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMinLatitude>50</iMinLatitude>
@@ -4537,7 +4537,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_PERSISTENCE_HUNTING</PrereqTech>
-			<ObsoleteTech>TECH_TRACKING</ObsoleteTech>
+			<ObsoleteTech>TECH_TRAILS</ObsoleteTech>
 			<rateOverrideDefineName>NEANDERTHAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMinLatitude>50</iMinLatitude>
 			<TerrainTypes>
@@ -4587,7 +4587,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_PERSISTENCE_HUNTING</PrereqTech>
-			<ObsoleteTech>TECH_TRACKING</ObsoleteTech>
+			<ObsoleteTech>TECH_TRAILS</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_GRASS</TerrainType>
@@ -4615,8 +4615,8 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<iGlobalTurns>650</iGlobalTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
-			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<ObsoleteTech>TECH_HUNTING_TACTICS</ObsoleteTech>
+			<PrereqTech>TECH_TRAILS</PrereqTech>
+			<ObsoleteTech>TECH_HUNTING</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_GRASS</TerrainType>
@@ -4644,7 +4644,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<iGlobalTurns>600</iGlobalTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
-			<PrereqTech>TECH_HUNTING_TACTICS</PrereqTech>
+			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<ObsoleteTech>TECH_BRONZE_WORKING</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
@@ -4789,7 +4789,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<iGlobalTurns>800</iGlobalTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
-			<PrereqTech>TECH_TRACKING</PrereqTech>
+			<PrereqTech>TECH_TRAILS</PrereqTech>
 			<ObsoleteTech>TECH_EXPLORATION</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
@@ -4906,7 +4906,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
-			<ObsoleteTech>TECH_MILITARY_ROBOTS</ObsoleteTech>
+			<ObsoleteTech>TECH_MILITARY_ROBOTICS</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_GRASS</TerrainType>
@@ -4934,7 +4934,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<iGlobalTurns>1100</iGlobalTurns>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
-			<PrereqTech>TECH_MILITARY_ROBOTS</PrereqTech>
+			<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
 			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
@@ -5661,7 +5661,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
-			<ObsoleteTech>TECH_MINIATURIZATION</ObsoleteTech>
+			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_GRASS</TerrainType>
@@ -5689,8 +5689,8 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<iGlobalTurns>1000</iGlobalTurns>
 			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
-			<PrereqTech>TECH_MINIATURIZATION</PrereqTech>
-			<ObsoleteTech>TECH_EXOSKELETON</ObsoleteTech>
+			<PrereqTech>TECH_MANUFACTURING</PrereqTech>
+			<ObsoleteTech>TECH_POWERED_EXOSKELETON</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_GRASS</TerrainType>

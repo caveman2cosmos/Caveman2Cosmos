@@ -777,7 +777,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_MAGLEV</PrereqTech>
+					<PrereqTech>TECH_MAGNETIC_LEVITATION</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>5</iCommerce>

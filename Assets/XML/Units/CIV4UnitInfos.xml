@@ -4557,7 +4557,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_NOMADIC_LIFESTYLE</PrereqTech>
+			<PrereqTech>TECH_NOMADISM</PrereqTech>
 			<iCost>8</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>1</iCombat>
@@ -4654,7 +4654,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqTech>TECH_TRACKING</PrereqTech>
+			<PrereqTech>TECH_TRAILS</PrereqTech>
 			<iCost>15</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>2</iCombat>
@@ -5355,7 +5355,7 @@ Base XP gained when defending
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteTech>TECH_HUNTING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_TRACKING</ForceObsoleteTech>
 			<ForceObsoleteUnitClasses>
 				<ForceObsoleteUnitClass>
 					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_CHASER</ForceObsoleteUnitClassType>
@@ -5446,7 +5446,7 @@ Base XP gained when defending
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_HUNTING</PrereqTech>
+			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_HUNTER</UnitClassUpgradeType>
@@ -5457,7 +5457,7 @@ Base XP gained when defending
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteTech>TECH_HUNTING_TACTICS</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_HUNTING</ForceObsoleteTech>
 			<ForceObsoleteUnitClasses>
 				<ForceObsoleteUnitClass>
 					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_TRACKER</ForceObsoleteUnitClassType>
@@ -5548,7 +5548,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqTech>TECH_HUNTING_TACTICS</PrereqTech>
+			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<iCost>63</iCost>
 			<iMoves>2</iMoves>
 			<UnitClassUpgrades>
@@ -8428,7 +8428,7 @@ Base XP gained when defending
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_FINE_EDGED_TOOLS</PrereqTech>
+			<PrereqTech>TECH_SHARPENING</PrereqTech>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_STONE_AGE_AXEMAN</UnitClassUpgradeType>
@@ -13512,7 +13512,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_MINIATURIZATION</PrereqTech>
+			<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 			<BonusType>BONUS_AMMO</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
@@ -13614,7 +13614,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_EXOSKELETON</PrereqTech>
+			<PrereqTech>TECH_POWERED_EXOSKELETON</PrereqTech>
 			<BonusType>BONUS_EXOSKELETONS</BonusType>
 			<TrainCondition>
 				<And>
@@ -14328,7 +14328,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_EXOSKELETON</PrereqTech>
+			<PrereqTech>TECH_POWERED_EXOSKELETON</PrereqTech>
 			<BonusType>BONUS_NANOTUBES</BonusType>
 			<TrainCondition>
 				<And>
@@ -14450,7 +14450,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_ADVANCED_FLIGHT</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_AVIATION</PrereqTech>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -17605,7 +17605,7 @@ Base XP gained when defending
 			<PrereqBuilding>BUILDING_ELEPHANT_TRAINER</PrereqBuilding>
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_PACHYDERM_DOMESTICATION</PrereqTech>
+				<PrereqTech>TECH_ELEPHANT_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_ELEPHANT</BonusType>
 			<iCost>95</iCost>
@@ -17851,7 +17851,7 @@ Base XP gained when defending
 			<PrereqBuilding>BUILDING_ELEPHANT_TRAINER</PrereqBuilding>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_PACHYDERM_DOMESTICATION</PrereqTech>
+				<PrereqTech>TECH_ELEPHANT_DOMESTICATION</PrereqTech>
 				<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_ELEPHANT</BonusType>
@@ -19593,7 +19593,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_BIOFUELS</PrereqTech>
+			<PrereqTech>TECH_BIOMATERIALS</PrereqTech>
 			<BonusType>BONUS_TANKS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_DIESEL</BonusType>
@@ -19843,7 +19843,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_ANTIGRAV</PrereqTech>
+			<PrereqTech>TECH_LEVITATION</PrereqTech>
 			<BonusType>BONUS_TANKS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_DIESEL</BonusType>
@@ -20618,7 +20618,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_MINIATURIZATION</PrereqTech>
+			<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 			<BonusType>BONUS_AUTOMOBILES</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_DIESEL</BonusType>
@@ -21013,7 +21013,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_MILITARY_ROBOTS</PrereqTech>
+			<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
 			<BonusType>BONUS_AUTOMOBILES</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_DIESEL</BonusType>
@@ -21116,7 +21116,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_MILITARY_ROBOTS</PrereqTech>
+			<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
 			<BonusType>BONUS_AUTOMOBILES</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_DIESEL</BonusType>
@@ -21339,7 +21339,7 @@ Base XP gained when defending
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqBuilding>BUILDING_CARPENTERS_WORKSHOP</PrereqBuilding>
-			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
+			<PrereqTech>TECH_WHEELS</PrereqTech>
 			<iCost>125</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
@@ -23990,7 +23990,7 @@ Base XP gained when defending
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
 				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqTech>TECH_MICROCHIP</PrereqTech>
+			<PrereqTech>TECH_SEMICONDUCTORS</PrereqTech>
 			<BonusType>BONUS_DIESEL</BonusType>
 			<iCost>1180</iCost>
 			<iMoves>2</iMoves>
@@ -24324,7 +24324,7 @@ Base XP gained when defending
 			</UnitAIs>
 			<PrereqTech>TECH_FUSION</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_LIQUIDMETAL</PrereqTech>
+				<PrereqTech>TECH_LIQUID_METALS</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_WARE_TITANIUM</BonusType>
 			<PrereqBonuses>
@@ -24437,7 +24437,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_ANTIGRAV</PrereqTech>
+			<PrereqTech>TECH_LEVITATION</PrereqTech>
 			<BonusType>BONUS_WARE_TITANIUM</BonusType>
 			<iCost>4500</iCost>
 			<iMoves>5</iMoves>
@@ -25000,7 +25000,7 @@ Base XP gained when defending
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
 				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqTech>TECH_MILITARY_ROBOTS</PrereqTech>
+			<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
 			<BonusType>BONUS_AUTOMOBILES</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_DIESEL</BonusType>
@@ -25556,7 +25556,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_MINIATURIZATION</PrereqTech>
+			<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 			<BonusType>BONUS_AMMO</BonusType>
 			<iCost>1180</iCost>
 			<iMoves>1</iMoves>
@@ -25653,7 +25653,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_MILITARY_ROBOTS</PrereqTech>
+			<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
 			<BonusType>BONUS_AMMO</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_COMPUTERS</BonusType>
@@ -26882,7 +26882,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_ROBOTICS_LAB</PrereqBuilding>
-			<PrereqTech>TECH_AUTOMATEDSERVICES</PrereqTech>
+			<PrereqTech>TECH_AUTOMATED_ROBOTICS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_COILGUN</PrereqTech>
 			</TechTypes>
@@ -27499,7 +27499,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_ROBOTICS_LAB</PrereqBuilding>
-			<PrereqTech>TECH_HUMANOIDS</PrereqTech>
+			<PrereqTech>TECH_SAPIENTROIDS</PrereqTech>
 			<BonusType>BONUS_ANDROIDS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
@@ -27610,7 +27610,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_FRESPONSE</PrereqTech>
+			<PrereqTech>TECH_DISASTER_ROBOTS</PrereqTech>
 			<BonusType>BONUS_SERVICE_BOTS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_WARE_ALUMINUM</BonusType>
@@ -27722,7 +27722,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_ROBOTICS_LAB</PrereqBuilding>
-			<PrereqTech>TECH_COGNITIVE_ROBOTICS</PrereqTech>
+			<PrereqTech>TECH_MACHINE_LEARNING</PrereqTech>
 			<BonusType>BONUS_SEMICONDUCTORS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_WARE_ALUMINUM</BonusType>
@@ -28107,7 +28107,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_NANOBOTICS</PrereqTech>
+			<PrereqTech>TECH_NANOROBOTICS</PrereqTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_NANOBOTS</BonusType>
 			</PrereqBonuses>
@@ -28931,7 +28931,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
-			<PrereqTech>TECH_COGNITIVE_ROBOTICS</PrereqTech>
+			<PrereqTech>TECH_MACHINE_LEARNING</PrereqTech>
 			<iCost>1200</iCost>
 			<iMoves>6</iMoves>
 			<iWorkRate>500</iWorkRate>
@@ -29117,7 +29117,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
-			<PrereqTech>TECH_MARINEARCHITECTURE</PrereqTech>
+			<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
 			<BonusType>BONUS_NANOTUBES</BonusType>
 			<iCost>2292</iCost>
 			<BonusProductionModifiers>
@@ -30104,7 +30104,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_MINIATURIZATION</PrereqTech>
+			<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_DIESEL</BonusType>
 				<BonusType>BONUS_URANIUM</BonusType>
@@ -32291,7 +32291,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_MICROCHIP</PrereqTech>
+			<PrereqTech>TECH_SEMICONDUCTORS</PrereqTech>
 			<BonusType>BONUS_WARE_STEEL</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_DIESEL</BonusType>
@@ -32640,7 +32640,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_NEURAL_NETWORK</PrereqTech>
+			<PrereqTech>TECH_NEURAL_NETWORKS</PrereqTech>
 			<BonusType>BONUS_WARE_STEEL</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_DIESEL</BonusType>
@@ -32767,7 +32767,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_FRESPONSE</PrereqTech>
+			<PrereqTech>TECH_DISASTER_ROBOTS</PrereqTech>
 			<BonusType>BONUS_WARE_STEEL</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_DIESEL</BonusType>
@@ -33018,7 +33018,7 @@ Base XP gained when defending
 			</UnitAIs>
 			<PrereqTech>TECH_WARMACHINES</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_NANOBOTICS</PrereqTech>
+				<PrereqTech>TECH_NANOROBOTICS</PrereqTech>
 			</TechTypes>
 			<iCost>4600</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
@@ -34210,7 +34210,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_MICROCHIP</PrereqTech>
+			<PrereqTech>TECH_SEMICONDUCTORS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_SONAR</PrereqTech>
 			</TechTypes>
@@ -34567,7 +34567,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_REMOTE_NAVAL</PrereqBuilding>
-			<PrereqTech>TECH_FRESPONSE</PrereqTech>
+			<PrereqTech>TECH_DISASTER_ROBOTS</PrereqTech>
 			<BonusType>BONUS_URANIUM</BonusType>
 			<TrainCondition>
 				<Or>
@@ -35539,7 +35539,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_REMOTE_NAVAL</PrereqBuilding>
-			<PrereqTech>TECH_FRESPONSE</PrereqTech>
+			<PrereqTech>TECH_DISASTER_ROBOTS</PrereqTech>
 			<BonusType>BONUS_NANOTUBES</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_WARE_STEEL</BonusType>
@@ -35836,7 +35836,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_NAVAL_AVIATION</PrereqTech>
+			<PrereqTech>TECH_NAVAL_FLIGHT</PrereqTech>
 			<BonusType>BONUS_WARE_STEEL</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_DIESEL</BonusType>
@@ -37573,7 +37573,7 @@ Base XP gained when defending
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqBuilding>BUILDING_REMOTE_NAVAL</PrereqBuilding>
-			<PrereqTech>TECH_FRESPONSE</PrereqTech>
+			<PrereqTech>TECH_DISASTER_ROBOTS</PrereqTech>
 			<BonusType>BONUS_URANIUM</BonusType>
 			<TrainCondition>
 				<Or>
@@ -39322,7 +39322,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_MILITARY_ROBOTS</PrereqTech>
+			<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
 			<BonusType>BONUS_HELICOPTERS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_DIESEL</BonusType>
@@ -39573,7 +39573,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_HOT_AIR_BALLOON</PrereqTech>
-			<ForceObsoleteTech>TECH_SPACE_FLIGHT</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_ASTRONAUTICS</ForceObsoleteTech>
 			<iCost>530</iCost>
 			<iMoves>2</iMoves>
 			<TerrainImpassableTypes>
@@ -40180,7 +40180,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_MILITARY_AIRBASE</PrereqBuilding>
-			<PrereqTech>TECH_MICROCHIP</PrereqTech>
+			<PrereqTech>TECH_SEMICONDUCTORS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_JET_PROPULSION</PrereqTech>
 			</TechTypes>
@@ -40722,7 +40722,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_ADVANCED_FLIGHT</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_AVIATION</PrereqTech>
 			<BonusType>BONUS_DIESEL</BonusType>
 			<TrainCondition>
 				<And>
@@ -40816,7 +40816,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_MILITARY_AIRBASE</PrereqBuilding>
-			<PrereqTech>TECH_MICROCHIP</PrereqTech>
+			<PrereqTech>TECH_SEMICONDUCTORS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_JET_PROPULSION</PrereqTech>
 			</TechTypes>
@@ -41706,7 +41706,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_NAVAL_AVIATION</PrereqTech>
+			<PrereqTech>TECH_NAVAL_FLIGHT</PrereqTech>
 			<BonusType>BONUS_DIESEL</BonusType>
 			<TrainCondition>
 				<And>
@@ -41825,7 +41825,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_ADVANCED_FLIGHT</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_AVIATION</PrereqTech>
 			<BonusType>BONUS_DIESEL</BonusType>
 			<TrainCondition>
 				<And>
@@ -41940,7 +41940,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_MILITARY_AIRBASE</PrereqBuilding>
-			<PrereqTech>TECH_MICROCHIP</PrereqTech>
+			<PrereqTech>TECH_SEMICONDUCTORS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_JET_PROPULSION</PrereqTech>
 			</TechTypes>
@@ -42306,7 +42306,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_MILITARY_AIRBASE</PrereqBuilding>
-			<PrereqTech>TECH_MICROCHIP</PrereqTech>
+			<PrereqTech>TECH_SEMICONDUCTORS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_JET_PROPULSION</PrereqTech>
 			</TechTypes>
@@ -42514,7 +42514,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_MILITARY_AIRBASE</PrereqBuilding>
-			<PrereqTech>TECH_WARSIMULATION</PrereqTech>
+			<PrereqTech>TECH_WAR_SIMULATIONS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_STEALTH</PrereqTech>
 			</TechTypes>
@@ -43339,7 +43339,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_BIOLOGICAL_WARFARE_LAB</PrereqBuilding>
-			<PrereqTech>TECH_GENEMANIPULATION</PrereqTech>
+			<PrereqTech>TECH_GENE_MANIPULATION</PrereqTech>
 			<iCost>2030</iCost>
 			<iAdvancedStartCost>120</iAdvancedStartCost>
 			<iMoves>1</iMoves>
@@ -43851,7 +43851,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_MILITARY_ROBOTS</PrereqTech>
+			<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
 			<BonusType>BONUS_SEMICONDUCTORS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_ROCKETFUEL</BonusType>
@@ -45308,7 +45308,7 @@ Base XP gained when defending
 				</UnitCombatDefender>
 			</UnitCombatDefenders>
 			<PrereqTech>TECH_DUALISM</PrereqTech>
-			<ObsoleteTech>TECH_DECREES</ObsoleteTech>
+			<ObsoleteTech>TECH_WARRANTS_AND_DECREES</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_TOWNWATCH</BuildingType>
 				<BuildingType>BUILDING_TOWN_PATROL</BuildingType>
@@ -45600,7 +45600,7 @@ Base XP gained when defending
 					<bUnitCombatDefender>1</bUnitCombatDefender>
 				</UnitCombatDefender>
 			</UnitCombatDefenders>
-			<PrereqTech>TECH_DECREES</PrereqTech>
+			<PrereqTech>TECH_WARRANTS_AND_DECREES</PrereqTech>
 			<ObsoleteTech>TECH_DEPUTIZATION</ObsoleteTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_GUARDHOUSE</BuildingType>
@@ -46208,7 +46208,7 @@ Base XP gained when defending
 			<TechTypes>
 				<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			</TechTypes>
-			<ObsoleteTech>TECH_FRESPONSE</ObsoleteTech>
+			<ObsoleteTech>TECH_DISASTER_ROBOTS</ObsoleteTech>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -46388,7 +46388,7 @@ Base XP gained when defending
 				</UnitCombatDefender>
 			</UnitCombatDefenders>
 			<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
-			<ObsoleteTech>TECH_FRESPONSE</ObsoleteTech>
+			<ObsoleteTech>TECH_DISASTER_ROBOTS</ObsoleteTech>
 			<PrereqBuilding>BUILDING_POLICE_STATION</PrereqBuilding>
 			<TrainCondition>
 				<And>
@@ -46901,7 +46901,7 @@ Base XP gained when defending
 					<bUnitCombatDefender>1</bUnitCombatDefender>
 				</UnitCombatDefender>
 			</UnitCombatDefenders>
-			<PrereqTech>TECH_FRESPONSE</PrereqTech>
+			<PrereqTech>TECH_DISASTER_ROBOTS</PrereqTech>
 			<BonusType>BONUS_MECHS</BonusType>
 			<PrereqBuilding>BUILDING_POLICE_PRECINCT</PrereqBuilding>
 			<iCost>3580</iCost>
@@ -48203,7 +48203,7 @@ Base XP gained when defending
 			<TechTypes>
 				<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			</TechTypes>
-			<ForceObsoleteTech>TECH_LABOR_UNION</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_LABOR_UNIONS</ForceObsoleteTech>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -48649,7 +48649,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqTech>TECH_LABOR_UNION</PrereqTech>
+			<PrereqTech>TECH_LABOR_UNIONS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_SEMI_AUTOMATIC_WEAPONS</PrereqTech>
 			</TechTypes>
@@ -51197,7 +51197,7 @@ Base XP gained when defending
 			</NotUnitAIs>
 			<PrereqTech>TECH_EXPLORATION</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_BLOOD_CULT</PrereqTech>
+				<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			</TechTypes>
 			<ForceObsoleteTech>TECH_MATCHLOCK</ForceObsoleteTech>
 			<PrereqBuilding>BUILDING_POISONCRAFTERS_HUT</PrereqBuilding>
@@ -53005,7 +53005,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
-			<PrereqTech>TECH_WILDERNESSC</PrereqTech>
+			<PrereqTech>TECH_WILDLIFE_CONSERVATION</PrereqTech>
 			<BonusType>BONUS_FIREARMS</BonusType>
 			<iCost>545</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
@@ -57645,7 +57645,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_NOMADIC_LIFESTYLE</PrereqTech>
+			<PrereqTech>TECH_NOMADISM</PrereqTech>
 			<iCost>16</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>2</iCombat>
@@ -59157,7 +59157,7 @@ Base XP gained when defending
 			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_PACHYDERM_DOMESTICATION</PrereqTech>
+				<PrereqTech>TECH_ELEPHANT_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<PrereqBonuses>
 				<BonusType>BONUS_ELEPHANT</BonusType>
@@ -60116,7 +60116,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqTech>TECH_HUNTING_TACTICS</PrereqTech>
+			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<iCost>125</iCost>
 			<iMoves>2</iMoves>
@@ -60220,14 +60220,14 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<BonusType>BONUS_NEANDERTHAL</BonusType>
-			<PrereqTech>TECH_HUNTING</PrereqTech>
+			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_HUNTER</UnitClassUpgradeType>
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteTech>TECH_HUNTING_TACTICS</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_HUNTING</ForceObsoleteTech>
 			<iCost>77</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>4</iCombat>
@@ -60318,7 +60318,7 @@ Base XP gained when defending
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<ForceObsoleteTech>TECH_HUNTING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_TRACKING</ForceObsoleteTech>
 			<iCost>43</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>2</iCombat>
@@ -60415,7 +60415,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqTech>TECH_TRACKING</PrereqTech>
+			<PrereqTech>TECH_TRAILS</PrereqTech>
 			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<iCost>30</iCost>
 			<iMoves>2</iMoves>
@@ -60719,7 +60719,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_ANCIENT_VETERINARIAN</PrereqBuilding>
-			<PrereqTech>TECH_VETERIANARY_MEDICINE</PrereqTech>
+			<PrereqTech>TECH_VETERINARY_MEDICINE</PrereqTech>
 			<BonusType>BONUS_SOAP</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_SCROLLS</BonusType>
@@ -61633,7 +61633,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_AIRCRAFT_FACTORY</PrereqBuilding>
-			<PrereqTech>TECH_ADVANCED_FLIGHT</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_AVIATION</PrereqTech>
 			<BonusType>BONUS_AIRCRAFT</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_PARTS</BonusType>
@@ -61739,7 +61739,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_AUTOREPAIR_SHOP</PrereqBuilding>
-			<PrereqTech>TECH_MICROCHIP</PrereqTech>
+			<PrereqTech>TECH_SEMICONDUCTORS</PrereqTech>
 			<BonusType>BONUS_POWER_TOOLS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
@@ -61943,7 +61943,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_DESIGN_STUDIO</PrereqBuilding>
-			<PrereqTech>TECH_COMPUTERS</PrereqTech>
+			<PrereqTech>TECH_PERSONAL_COMPUTERS</PrereqTech>
 			<BonusType>BONUS_COMPUTERS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
@@ -62150,7 +62150,7 @@ Base XP gained when defending
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_JET_AIRCRAFT_FACTORY</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqTech>TECH_SPACE_FLIGHT</PrereqTech>
+			<PrereqTech>TECH_ASTRONAUTICS</PrereqTech>
 			<BonusType>BONUS_JET_AIRCRAFTS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_PARTS</BonusType>
@@ -62621,7 +62621,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_HUMAN_TRANSMUTATION</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_ANTI_GRAVITY_FIELDS</PrereqTech>
-				<PrereqTech>TECH_ANIMA_MATERIALS</PrereqTech>
+				<PrereqTech>TECH_ANIMAMATERIALS</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_NANOBOTS</BonusType>
 			<PrereqBonuses>
@@ -62779,7 +62779,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_NANODISASSEMBLY</PrereqTech>
+			<PrereqTech>TECH_NANO_DISASSEMBLY</PrereqTech>
 			<BonusType>BONUS_NANOBOTS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_NANOGENERATORS</BonusType>
@@ -63451,7 +63451,7 @@ Base XP gained when defending
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bNoCapture>1</bNoCapture>
 			<bOnlyDefensive>1</bOnlyDefensive>
-			<PrereqTech>TECH_ELIXIRS</PrereqTech>
+			<PrereqTech>TECH_ELIXIRS_AND_TONICS</PrereqTech>
 			<BonusType>BONUS_DRUGS</BonusType>
 			<PrereqBuilding>BUILDING_SURGICAL_OFFICE</PrereqBuilding>
 			<UnitClassUpgrades>
@@ -64992,7 +64992,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_FERTILITY_CLINIC</PrereqBuilding>
-			<PrereqTech>TECH_GENEENHANCEMENT</PrereqTech>
+			<PrereqTech>TECH_GENE_ENHANCEMENT</PrereqTech>
 			<BonusType>BONUS_AMMO</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
@@ -65175,7 +65175,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_LENGINE</PrereqTech>
+			<PrereqTech>TECH_INTERNAL_SHOCKWAVE_ENGINE</PrereqTech>
 			<BonusType>BONUS_AUTOMOBILES</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_SHOCKWAVE_ENGINES</BonusType>
@@ -65270,7 +65270,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_MILITARY_ROBOTS</PrereqTech>
+			<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
 			<BonusType>BONUS_TIRES</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_DIESEL</BonusType>
@@ -65402,7 +65402,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_MILITARY_ROBOTS</PrereqTech>
+			<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
 			<BonusType>BONUS_HELICOPTERS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_DIESEL</BonusType>
@@ -67548,7 +67548,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bNoBadGoodies>1</bNoBadGoodies>
-			<PrereqTech>TECH_HUNTING</PrereqTech>
+			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_MASTER_HUNTER</UnitClassUpgradeType>
@@ -67593,7 +67593,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<ForceObsoleteTech>TECH_HUNTING_TACTICS</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_HUNTING</ForceObsoleteTech>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_MASTER_HUNTER</Class>
@@ -67646,7 +67646,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_HUNTING_TACTICS</PrereqTech>
+			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<iCost>-1</iCost>
 			<iMoves>3</iMoves>
 			<UnitClassUpgrades>

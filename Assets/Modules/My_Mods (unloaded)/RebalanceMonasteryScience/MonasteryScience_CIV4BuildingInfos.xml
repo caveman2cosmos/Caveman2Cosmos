@@ -409,7 +409,7 @@
  			</AndDependencyTypes>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
-					<PrereqTech>TECH_GENEENHANCEMENT</PrereqTech>
+					<PrereqTech>TECH_GENE_ENHANCEMENT</PrereqTech>
 					<TechCommerce>
 						<iCommerce>-3</iCommerce>
 						<iCommerce>0</iCommerce>

@@ -20,9 +20,9 @@
 	<ReligionInfos>
 		<ReligionInfo>
 			<Type>RELIGION_CAO_DAI</Type>
-			<Description>TXT_KEY_TECH_CAODAI</Description>
-			<Civilopedia>TXT_KEY_TECH_CAODAI_PEDIA</Civilopedia>
-			<TechPrereq>TECH_CAODAIISM</TechPrereq>
+			<Description>TXT_KEY_TECH_CAO_DAI</Description>
+			<Civilopedia>TXT_KEY_TECH_CAO_DAI_PEDIA</Civilopedia>
+			<TechPrereq>TECH_CAO_DAI</TechPrereq>
 			<FreeUnitClass>UNITCLASS_CAODAI_MISSIONARY</FreeUnitClass>
 			<iSpreadFactor>50</iSpreadFactor>
 			<iTGAIndex>24</iTGAIndex>

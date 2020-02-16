@@ -276,7 +276,7 @@
 			<StateReligion>RELIGION_SHINTO</StateReligion>
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_SHINTO</PrereqReligion>
-			<ObsoleteTech>TECH_UTOPIA</ObsoleteTech>
+			<ObsoleteTech>TECH_COMMUNISM</ObsoleteTech>
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_TIMBER</Bonus>

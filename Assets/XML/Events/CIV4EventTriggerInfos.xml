@@ -1278,7 +1278,7 @@
 				<Event>EVENT_BARDS_TALE_3</Event>
 			</Events>
 			<OrPreReqs>
-				<PrereqTech>TECH_MUSIC</PrereqTech>
+				<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 			</OrPreReqs>
 			<bPickCity>1</bPickCity>
 		</EventTriggerInfo>
@@ -2744,7 +2744,7 @@
 				<Event>EVENT_ANTELOPE_2</Event>
 			</Events>
 			<OrPreReqs>
-				<PrereqTech>TECH_HUNTING_TACTICS</PrereqTech>
+				<PrereqTech>TECH_HUNTING</PrereqTech>
 			</OrPreReqs>
 			<bRecurring>1</bRecurring>
 			<PythonCanDo>canTriggerAntelope</PythonCanDo>
@@ -3238,7 +3238,7 @@
 				<Event>EVENT_METAL_DECKS_1</Event>
 			</Events>
 			<AndPreReqs>
-				<PrereqTech>TECH_NAVAL_AVIATION</PrereqTech>
+				<PrereqTech>TECH_NAVAL_FLIGHT</PrereqTech>
 			</AndPreReqs>
 			<ObsoleteTechs>
 				<ObsoleteTech>TECH_COMPOSITES</ObsoleteTech>
@@ -3967,7 +3967,7 @@
 				<Event>EVENT_PERSONAL_COMPUTERS_1</Event>
 			</Events>
 			<OrPreReqs>
-				<PrereqTech>TECH_MICROCHIP</PrereqTech>
+				<PrereqTech>TECH_SEMICONDUCTORS</PrereqTech>
 			</OrPreReqs>
 			<bGlobal>1</bGlobal>
 			<bPickCity>1</bPickCity>
@@ -5069,7 +5069,7 @@
 			</Events>
 			<OrPreReqs>
 				<PrereqTech>TECH_MACHINERY</PrereqTech>
-				<PrereqTech>TECH_MUSIC</PrereqTech>
+				<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 				<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
 			</OrPreReqs>
 			<bPickCity>1</bPickCity>
@@ -5482,7 +5482,7 @@
 				<Event>EVENT_OVERWHELM_1</Event>
 			</Events>
 			<AndPreReqs>
-				<PrereqTech>TECH_NAVAL_AVIATION</PrereqTech>
+				<PrereqTech>TECH_NAVAL_FLIGHT</PrereqTech>
 			</AndPreReqs>
 			<ObsoleteTechs>
 				<ObsoleteTech>TECH_ROBOTICS</ObsoleteTech>
@@ -5616,7 +5616,7 @@
 				<Event>EVENT_CIV_GAME_3</Event>
 			</Events>
 			<OrPreReqs>
-				<PrereqTech>TECH_COMPUTERS</PrereqTech>
+				<PrereqTech>TECH_PERSONAL_COMPUTERS</PrereqTech>
 			</OrPreReqs>
 			<bShowPlot>0</bShowPlot>
 		</EventTriggerInfo>
@@ -5991,7 +5991,7 @@
 				<Event>EVENT_PREACHING_RESEARCHER_2</Event>
 			</Events>
 			<ObsoleteTechs>
-				<ObsoleteTech>TECH_MODERNPHYSICS</ObsoleteTech>
+				<ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech>
 			</ObsoleteTechs>
 			<bPickCity>1</bPickCity>
 			<PythonCanDoCity>canTriggerPreachingResearcherCity</PythonCanDoCity>
@@ -6256,10 +6256,10 @@
 				<Event>EVENT_NAPALM_2</Event>
 			</Events>
 			<AndPreReqs>
-				<PrereqTech>TECH_ADVANCED_FLIGHT</PrereqTech>
+				<PrereqTech>TECH_ADVANCED_AVIATION</PrereqTech>
 			</AndPreReqs>
 			<ObsoleteTechs>
-				<ObsoleteTech>TECH_MILITARY_ROBOTS</ObsoleteTech>
+				<ObsoleteTech>TECH_MILITARY_ROBOTICS</ObsoleteTech>
 			</ObsoleteTechs>
 			<bShowPlot>0</bShowPlot>
 			<PythonCanDo>canTriggerNapalm</PythonCanDo>
@@ -6477,7 +6477,7 @@
 				<Event>EVENT_CURE_FOR_CANCER_1</Event>
 			</Events>
 			<OrPreReqs>
-				<PrereqTech>TECH_TISSUE</PrereqTech>
+				<PrereqTech>TECH_MOLECULAR_MEDICINE</PrereqTech>
 			</OrPreReqs>
 			<bGlobal>1</bGlobal>
 			<bPickCity>1</bPickCity>
@@ -6509,7 +6509,7 @@
 				<Event>EVENT_CARNATION_REVOLUTION_2</Event>
 			</Events>
 			<OrPreReqs>
-				<PrereqTech>TECH_UTOPIA</PrereqTech>
+				<PrereqTech>TECH_COMMUNISM</PrereqTech>
 			</OrPreReqs>
 			<bGlobal>1</bGlobal>
 			<bPickPlayer>1</bPickPlayer>
@@ -6638,7 +6638,7 @@
 				<Event>EVENT_INDUSTRIAL_ACTION_3</Event>
 			</Events>
 			<OrPreReqs>
-				<PrereqTech>TECH_UTOPIA</PrereqTech>
+				<PrereqTech>TECH_COMMUNISM</PrereqTech>
 			</OrPreReqs>
 			<bPickCity>1</bPickCity>
 			<PythonCanDo>canTriggerIndustrialAction</PythonCanDo>
@@ -7664,7 +7664,7 @@
 				<Event>EVENT_FULLERENES_1</Event>
 			</Events>
 			<AndPreReqs>
-				<PrereqTech>TECH_MODERNPHYSICS</PrereqTech>
+				<PrereqTech>TECH_MODERN_PHYSICS</PrereqTech>
 			</AndPreReqs>
 			<bGlobal>1</bGlobal>
 			<bPickCity>1</bPickCity>

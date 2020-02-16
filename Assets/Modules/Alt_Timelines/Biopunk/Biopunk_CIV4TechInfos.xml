@@ -16,7 +16,7 @@
 			<iCost>40165</iCost>
 			<Era>C2C_ERA_NANOTECH</Era>
 			<OrPreReqs>
-				<PrereqTech>TECH_AUGMENT_CONSUMABLES</PrereqTech>
+				<PrereqTech>TECH_AUGMENTED_CONSUMABLES</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
 				<PrereqTech>TECH_MAINSTREAM_CLONING</PrereqTech>

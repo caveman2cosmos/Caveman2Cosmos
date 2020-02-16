@@ -134,7 +134,7 @@
 			<Strategy>TXT_KEY_BUILDING_STEPRECKONER_MANUFACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_STEPRECKONER_MANUFACTORY</ArtDefineTag>
-			<ObsoleteTech>TECH_COMPUTERS</ObsoleteTech>
+			<ObsoleteTech>TECH_PERSONAL_COMPUTERS</ObsoleteTech>
 			<PrereqTech>TECH_CLOCKPUNK</PrereqTech>
 			<Bonus>BONUS_CLOCKPUNK</Bonus>
 			<PrereqBonuses>
@@ -225,7 +225,7 @@
 			</MapCategoryTypes>
 			<Bonus>BONUS_CLOCKPUNK</Bonus>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<ObsoleteTech>TECH_ADVANCED_FLIGHT</ObsoleteTech>
+			<ObsoleteTech>TECH_ADVANCED_AVIATION</ObsoleteTech>
 			<iCost>380</iCost>
 			<iAirUnitCapacity>2</iAirUnitCapacity>
 			<HealUnitCombatTypes>

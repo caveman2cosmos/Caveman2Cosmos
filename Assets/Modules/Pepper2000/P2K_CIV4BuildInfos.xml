@@ -49,7 +49,7 @@
         <BuildInfo>
 			<Type>BUILD_MICROWORMHOLE</Type>
 			<Description>TXT_KEY_BUILD_MICROWORMHOLE</Description>
-			<PrereqTech>TECH_MICROWORMHOLES</PrereqTech>
+			<PrereqTech>TECH_COMPACT_WORMHOLES</PrereqTech>
 			<iTime>600</iTime>
 			<iCost>200</iCost>
 			<bKill>0</bKill>
@@ -254,7 +254,7 @@
 			<Type>BUILD_MARS_MINE</Type>
 			<Description>TXT_KEY_BUILD_MARS_MINE</Description>
 			<Help/>
-			<PrereqTech>TECH_PLANET_EXTRACTION</PrereqTech>
+			<PrereqTech>TECH_PLANETARY_EXTRACTION</PrereqTech>
 			<iTime>4000</iTime>
 			<iCost>400</iCost>
 			<bKill>0</bKill>
@@ -368,7 +368,7 @@
 			<Type>BUILD_INTERGALACTIC_BASE</Type>
 			<Description>TXT_KEY_BUILD_INTERGALACTIC_BASE</Description>
 			<Help/>
-			<PrereqTech>TECH_WAVE_MOTION_GUN</PrereqTech>
+			<PrereqTech>TECH_EXTREME_ENERGY_WEAPONS</PrereqTech>
 			<iTime>3000</iTime>
 			<iCost>600</iCost>
 			<bKill>0</bKill>
@@ -510,7 +510,7 @@
         <BuildInfo>
 			<Type>BUILD_ASTEROID</Type>
 			<Description>TXT_KEY_BUILD_ASTEROID</Description>
-			<PrereqTech>TECH_ASTEROIDPROBE</PrereqTech>
+			<PrereqTech>TECH_ASTEROID_BELT_PROBES</PrereqTech>
 			<iTime>2500</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
@@ -731,7 +731,7 @@
 			<Type>BUILD_SUN_SCOOP</Type>
 			<Description>TXT_KEY_BUILD_SUN_SCOOP</Description>
 			<Help/>
-			<PrereqTech>TECH_SOLAR_MINING</PrereqTech>
+			<PrereqTech>TECH_STAR_LIFTING</PrereqTech>
 			<iTime>2500</iTime>
 			<iCost>800</iCost>
 			<bKill>0</bKill>
@@ -788,7 +788,7 @@
 			<Type>BUILD_JOVIAN_LUNAR_BASE</Type>
 			<Description>TXT_KEY_BUILD_JOVIAN_LUNAR_BASE</Description>
 			<Help/>
-			<PrereqTech>TECH_KUIPER_BELT</PrereqTech>
+			<PrereqTech>TECH_KUIPER_BELT_EXPLORATION</PrereqTech>
 			<iTime>2500</iTime>
 			<iCost>800</iCost>
 			<bKill>0</bKill>
@@ -902,7 +902,7 @@
 			<Type>BUILD_STAR_SCOOP</Type>
 			<Description>TXT_KEY_BUILD_STAR_SCOOP</Description>
 			<Help/>
-			<PrereqTech>TECH_SOLAR_MINING</PrereqTech>
+			<PrereqTech>TECH_STAR_LIFTING</PrereqTech>
 			<iTime>2500</iTime>
 			<iCost>1000</iCost>
 			<bKill>0</bKill>
@@ -959,7 +959,7 @@
 			<Type>BUILD_NEUTRON_STAR_COLONY</Type>
 			<Description>TXT_KEY_BUILD_NEUTRON_STAR_COLONY</Description>
 			<Help/>
-			<PrereqTech>TECH_ELECTRONUCLEAR_MATTER</PrereqTech>
+			<PrereqTech>TECH_NEUTRONIUM</PrereqTech>
 			<iTime>2500</iTime>
 			<iCost>1000</iCost>
 			<bKill>0</bKill>
@@ -1092,7 +1092,7 @@
 			<Type>BUILD_INTERGALACTIC_COLONY</Type>
 			<Description>TXT_KEY_BUILD_INTERGALACTIC_COLONY</Description>
 			<Help/>
-			<PrereqTech>TECH_INTERGALACTIC_TRAVEL</PrereqTech>
+			<PrereqTech>TECH_INTERGALACTIC_COLONIZATION</PrereqTech>
 			<iTime>2500</iTime>
 			<iCost>1000</iCost>
 			<bKill>0</bKill>
@@ -1244,7 +1244,7 @@
 			<Type>BUILD_INTERGALACTIC_RESEARCH_BASE</Type>
 			<Description>TXT_KEY_BUILD_INTERGALACTIC_RESEARCH_BASE</Description>
 			<Help/>
-			<PrereqTech>TECH_INTERGALACTIC_TRAVEL</PrereqTech>
+			<PrereqTech>TECH_INTERGALACTIC_COLONIZATION</PrereqTech>
 			<iTime>2500</iTime>
 			<iCost>1000</iCost>
 			<bKill>0</bKill>
@@ -1339,7 +1339,7 @@
 			<Type>BUILD_LUNAR_MINE</Type>
 			<Description>TXT_KEY_BUILD_LUNAR_MINE</Description>
 			<Help/>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>1000</iCost>
 			<bKill>0</bKill>

@@ -2228,7 +2228,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<PrereqTech>TECH_UTOPIA</PrereqTech>
+			<PrereqTech>TECH_COMMUNISM</PrereqTech>
 			<BonusType>BONUS_RUSSIAN</BonusType>
 			<iCost>4000</iCost>
 			<iMoves>2</iMoves>
@@ -3995,7 +3995,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<PrereqTech>TECH_MUSIC</PrereqTech>
+			<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 			<BonusType>BONUS_MALINESE</BonusType>
 			<iCost>1100</iCost>
 			<iMoves>2</iMoves>
@@ -7527,7 +7527,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<PrereqTech>TECH_MUSIC</PrereqTech>
+			<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 			<BonusType>BONUS_KHMER</BonusType>
 			<iCost>1100</iCost>
 			<iMoves>2</iMoves>
@@ -12855,7 +12855,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<PrereqTech>TECH_MUSIC</PrereqTech>
+			<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 			<BonusType>BONUS_HAUSA</BonusType>
 			<iCost>1100</iCost>
 			<iMoves>2</iMoves>
@@ -18184,7 +18184,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<PrereqTech>TECH_HUNTING</PrereqTech>
+			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<BonusType>BONUS_AKA</BonusType>
 			<iCost>180</iCost>
 			<iMoves>1</iMoves>
@@ -18280,7 +18280,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<PrereqTech>TECH_HUNTING</PrereqTech>
+			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<BonusType>BONUS_AINU</BonusType>
 			<iCost>180</iCost>
 			<iMoves>1</iMoves>
@@ -20267,7 +20267,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<PrereqTech>TECH_HUNTING</PrereqTech>
+			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<BonusType>BONUS_AKA</BonusType>
 			<iCost>180</iCost>
 			<iMoves>1</iMoves>
@@ -21629,7 +21629,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<PrereqTech>TECH_UTOPIA</PrereqTech>
+			<PrereqTech>TECH_COMMUNISM</PrereqTech>
 			<BonusType>BONUS_KONJO</BonusType>
 			<iCost>4000</iCost>
 			<iMoves>2</iMoves>
@@ -31201,7 +31201,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<PrereqTech>TECH_MUSIC</PrereqTech>
+			<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 			<BonusType>BONUS_SERBIAN</BonusType>
 			<iCost>1100</iCost>
 			<iMoves>2</iMoves>
@@ -34156,7 +34156,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<PrereqTech>TECH_MUSIC</PrereqTech>
+			<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 			<BonusType>BONUS_TIMURID</BonusType>
 			<iCost>150</iCost>
 			<iMoves>2</iMoves>
@@ -35795,7 +35795,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<PrereqTech>TECH_UTOPIA</PrereqTech>
+			<PrereqTech>TECH_COMMUNISM</PrereqTech>
 			<BonusType>BONUS_URUGUAYAN</BonusType>
 			<iCost>4000</iCost>
 			<iMoves>2</iMoves>
@@ -36987,7 +36987,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<PrereqTech>TECH_UTOPIA</PrereqTech>
+			<PrereqTech>TECH_COMMUNISM</PrereqTech>
 			<BonusType>BONUS_WAYANA</BonusType>
 			<iCost>4000</iCost>
 			<iMoves>2</iMoves>
@@ -37777,7 +37777,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<PrereqTech>TECH_UTOPIA</PrereqTech>
+			<PrereqTech>TECH_COMMUNISM</PrereqTech>
 			<BonusType>BONUS_YAGHAN</BonusType>
 			<iCost>4000</iCost>
 			<iMoves>2</iMoves>
@@ -37887,7 +37887,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<PrereqTech>TECH_MUSIC</PrereqTech>
+			<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 			<BonusType>BONUS_YAGUA</BonusType>
 			<iCost>1100</iCost>
 			<iMoves>2</iMoves>
@@ -45475,7 +45475,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<PrereqTech>TECH_UTOPIA</PrereqTech>
+			<PrereqTech>TECH_COMMUNISM</PrereqTech>
 			<BonusType>BONUS_GUYANA</BonusType>
 			<iCost>4000</iCost>
 			<iMoves>2</iMoves>
@@ -46414,7 +46414,7 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<PrereqTech>TECH_MUSIC</PrereqTech>
+			<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 			<BonusType>BONUS_HUASTEC</BonusType>
 			<iCost>1100</iCost>
 			<iMoves>2</iMoves>

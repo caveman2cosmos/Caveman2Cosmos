@@ -886,7 +886,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MISSIONARY_TRAINING_CENTER</ArtDefineTag>
 			<ReligionType>RELIGION_MORMON</ReligionType>
 			<PrereqReligion>RELIGION_MORMON</PrereqReligion>
-			<ObsoleteTech>TECH_AUGMENTEDREALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_AUGMENTED_REALITY</ObsoleteTech>
 			<Bonus>BONUS_BOOKS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_BRICKS</Bonus>
@@ -984,7 +984,7 @@
 			<ReligionType>RELIGION_MORMON</ReligionType>
 			<PrereqReligion>RELIGION_MORMON</PrereqReligion>
 			<ObsoleteTech>TECH_ECOLOGICAL_ENGINEERING</ObsoleteTech>
-			<PrereqTech>TECH_FOODP</PrereqTech>
+			<PrereqTech>TECH_FOOD_PRESERVATION</PrereqTech>
 			<!-- PrereqTech>TECH_FOOD_PRESERVATION</PrereqTech-->
 			<Bonus>BONUS_BOOKS</Bonus>
 			<PrereqBonuses>
@@ -1095,7 +1095,7 @@
 			<ReligionType>RELIGION_MORMON</ReligionType>
 			<PrereqReligion>RELIGION_MORMON</PrereqReligion>
 			<ObsoleteTech>TECH_ECOLOGICAL_ENGINEERING</ObsoleteTech>
-			<PrereqTech>TECH_PESTICIDES</PrereqTech>
+			<PrereqTech>TECH_AGRICULTURAL_ENGINEERING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_MARXISM</PrereqTech>
 			</TechTypes>
@@ -1176,7 +1176,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MORMON_SEMINARY</ArtDefineTag>
 			<ReligionType>RELIGION_MORMON</ReligionType>
 			<PrereqReligion>RELIGION_MORMON</PrereqReligion>
-			<ObsoleteTech>TECH_AUGMENTEDREALITY</ObsoleteTech>
+			<ObsoleteTech>TECH_AUGMENTED_REALITY</ObsoleteTech>
 			<PrereqTech>TECH_COMPULSORY_EDUCATION</PrereqTech>
 			<Bonus>BONUS_BOOKS</Bonus>
 			<PrereqBonuses>

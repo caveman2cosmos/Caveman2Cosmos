@@ -8,10 +8,10 @@
 	<ReligionInfos>
 		<ReligionInfo>
 			<Type>RELIGION_DRUIDIC_TRADITIONS</Type>
-			<Description>TXT_KEY_TECH_DRUID</Description>
-			<Adjective>TXT_KEY_TECH_DRUID_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_TECH_DRUID_PEDIA</Civilopedia>
-			<TechPrereq>TECH_DRUIDISM</TechPrereq>
+			<Description>TXT_KEY_TECH_DRUIDIC_TRADITIONS</Description>
+			<Adjective>TXT_KEY_TECH_DRUIDIC_TRADITIONS_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_TECH_DRUIDIC_TRADITIONS_PEDIA</Civilopedia>
+			<TechPrereq>TECH_DRUIDIC_TRADITIONS</TechPrereq>
 			<FreeUnitClass>UNITCLASS_DRUID_MISSIONARY</FreeUnitClass>
 			<iFreeUnits>0</iFreeUnits>
 			<iSpreadFactor>20</iSpreadFactor>

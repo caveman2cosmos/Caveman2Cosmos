@@ -11,7 +11,7 @@
 			<Description>TXT_KEY_TECH_CANAANISM</Description>
 			<Adjective>TXT_KEY_TECH_CANAANISM_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_TECH_CANAANISM_PEDIA</Civilopedia>
-			<TechPrereq>TECH_CANAANITE</TechPrereq>
+			<TechPrereq>TECH_CANAANISM</TechPrereq>
 			<FreeUnitClass>UNITCLASS_CANAANITE_MISSIONARY</FreeUnitClass>
 			<iFreeUnits>0</iFreeUnits>
 			<iSpreadFactor>15</iSpreadFactor>

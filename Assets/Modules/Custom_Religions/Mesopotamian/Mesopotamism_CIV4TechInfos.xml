@@ -5,9 +5,9 @@
 		<TechInfo>
 			<!-- Mesopotamism -->
 			<Type>TECH_MESOPOTAMISM</Type>
-			<Description>TXT_KEY_TECH_MESO</Description>
-			<Civilopedia>TXT_KEY_TECH_MESO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_MESO_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_MESOPOTAMISM</Description>
+			<Civilopedia>TXT_KEY_TECH_MESOPOTAMISM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_MESOPOTAMISM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<!-- Main properties -->
 			<iCost>110</iCost>
@@ -40,7 +40,7 @@
 					<iFlavor>5</iFlavor>
 				</Flavor>
 			</Flavors>
-			<Quote>TXT_KEY_TECH_MESO_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_MESOPOTAMISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_MESOPOTAMISM</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Mesopotamian.dds</Button>

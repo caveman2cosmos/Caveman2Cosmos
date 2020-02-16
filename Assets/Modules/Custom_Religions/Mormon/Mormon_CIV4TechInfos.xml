@@ -15,7 +15,7 @@
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Era>C2C_ERA_INDUSTRIAL</Era>
 			<OrPreReqs>
-				<PrereqTech>TECH_PESTICIDES</PrereqTech>
+				<PrereqTech>TECH_AGRICULTURAL_ENGINEERING</PrereqTech>
 			</OrPreReqs>
 			<!-- Special effects -->
 			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>

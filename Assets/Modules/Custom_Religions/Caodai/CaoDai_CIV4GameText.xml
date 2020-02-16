@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_TECH_CAODAI</Tag>
+		<Tag>TXT_KEY_TECH_CAO_DAI</Tag>
 		<English>Cao Dai</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_CAODAI_PEDIA</Tag>
+		<Tag>TXT_KEY_TECH_CAO_DAI_PEDIA</Tag>
 		<English>[PARAGRAPH:0]Cao Dai (or "High Tower", a Taoist epithet for the supreme god) is a syncretist Vietnamese religious movement with a strongly nationalist political character. Cao Dai draws upon ethical precepts from Confucianism, occult practices from Taoism, theories of karma and rebirth from Buddhism, and a hierarchical organization (including a pope) from Roman Catholicism. Its pantheon of saints includes such diverse figures as the Buddha, Confucius, Jesus Christ, Muhammad, Pericles, Julius Caesar, Joan of Arc, Victor Hugo, and Sun Yat-sen. In Cao Dai, God is represented as an eye in a triangle, a symbol that appears on the facades of the sect’s temples. The religion’s organization is patterned after that of Roman Catholicism, with a pope, cardinals, and archbishops. Worship involves elaborate rituals and festivals.[PARAGRAPH:2]In 1919 Ngo Van Chieu (q.v.), an administrator for the French in Indochina, received a communication from the supreme deity during a table-moving séance. Chieu became the prophet of the new religion, which was formally established in 1926. A Cao Dai army was established in 1943 during the Japanese occupation of Indochina. After the war the Cao Dai was an effective force in national politics; it first supported, then opposed, Premier Ngo Dinh Diem. In 1955–56 Diem disbanded the Cao Dai army and forced the sect’s pope, Pham Cong Tac, into exile. After the communist takeover in 1975, Cao Dai was reportedly repressed by the government. Centres of worship were established in Vietnamese refugee communities abroad, however, and by the early 1990s Cao Dai was reported to have some two million adherents in Vietnam, Cambodia, France, and the United States. Headquarters of the religion are at Tay Ninh (q.v.), near Ho Chi Minh City (formerly Saigon).[PARAGRAPH:2]- Encyclopaedia Britannica</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_CAODAI_QUOTE</Tag>
+		<Tag>TXT_KEY_TECH_CAO_DAI_QUOTE</Tag>
 		<English>The ultimate goal of CaoDaists is to be reunified with the All That Is, to return home.[PARAGRAPH:2]- Hum Dac Bui,[PARAGRAPH:1][SPACE][SPACE]"Cao Dai: Faith of Unity"</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_CAODAI_STRATEGY</Tag>
+		<Tag>TXT_KEY_TECH_CAO_DAI_STRATEGY</Tag>
 		<English>Research Cao Dai to found a religion.</English>
 	</TEXT>
 	<TEXT>

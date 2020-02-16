@@ -76,7 +76,7 @@
 			<Yields/>
 			<TechMovementChanges>
 				<TechMovementChange>
-					<PrereqTech>TECH_MINIATURIZATION</PrereqTech>
+					<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 					<iMovementChange>-6</iMovementChange>
 				</TechMovementChange>
 				<TechMovementChange>

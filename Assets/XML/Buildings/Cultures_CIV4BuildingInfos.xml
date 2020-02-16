@@ -388,7 +388,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_AINU_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_HUNTING</PrereqTech>
+			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<RawVicinityBonus>BONUS_FUR</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -424,7 +424,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_AKA_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_HUNTING</PrereqTech>
+			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
@@ -2174,7 +2174,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CEYLONESE_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_WATERWORKS</PrereqTech>
+			<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_TEA</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -2686,7 +2686,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CREE_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_HUNTING</PrereqTech>
+			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<RawVicinityBonus>BONUS_RABBIT</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -4829,7 +4829,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_JIVARO_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_HUNTING_TACTICS</PrereqTech>
+			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<RawVicinityBonus>BONUS_CANNABIS</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -5022,7 +5022,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_KHMER_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_WATERWORKS</PrereqTech>
+			<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 			<RawVicinityBonus>BONUS_BANANA</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -5147,7 +5147,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_KONJO_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_UTOPIA</PrereqTech>
+			<PrereqTech>TECH_COMMUNISM</PrereqTech>
 			<RawVicinityBonus>BONUS_BANANA</RawVicinityBonus>
 			<PrereqAndTerrain>
 				<PrereqTerrain>
@@ -6003,7 +6003,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_MOCHE_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_BLOOD_CULT</PrereqTech>
+			<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_TURQUOISE</RawVicinityBonus>
 			<PrereqAndTerrain>
@@ -6485,7 +6485,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_NOOTKA_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_WOOD_WORKING</PrereqTech>
+			<PrereqTech>TECH_WOODWORKING</PrereqTech>
 			<RawVicinityBonus>BONUS_FISH</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -7795,7 +7795,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_SHANG_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_BLOOD_CULT</PrereqTech>
+			<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			<RawVicinityBonus>BONUS_JADE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -8125,7 +8125,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_SOVIET_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_UTOPIA</PrereqTech>
+			<PrereqTech>TECH_COMMUNISM</PrereqTech>
 			<RawVicinityBonus>BONUS_NATURAL_GAS</RawVicinityBonus>
 			<PrereqAndTerrain>
 				<PrereqTerrain>
@@ -8761,7 +8761,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<PrereqTech>TECH_MUSIC</PrereqTech>
+			<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 			<RawVicinityBonus>BONUS_SILVER</RawVicinityBonus>
 			<!-- Construction -->
 			<iCost>1680</iCost>
@@ -10229,7 +10229,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_AVERNI_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_BLOOD_CULT</PrereqTech>
+			<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_MUREX</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -11597,7 +11597,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_FUEGIAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_HUNTING_TACTICS</PrereqTech>
+			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_FUR</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -14675,7 +14675,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_PUELCHE_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_BLOOD_CULT</PrereqTech>
+			<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_WHALE</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -15323,7 +15323,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_SERBIAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_MUSIC</PrereqTech>
+			<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_SHEEP</RawVicinityBonus>
 			<BuildingClassNeededs>

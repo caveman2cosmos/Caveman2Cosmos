@@ -88,7 +88,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_WILDERNESSC</PrereqTech>
+			<PrereqTech>TECH_WILDLIFE_CONSERVATION</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_WRITING</PrereqTech>
 			</TechTypes>
@@ -232,7 +232,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_WILDERNESSC</PrereqTech>
+			<PrereqTech>TECH_WILDLIFE_CONSERVATION</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_WRITING</PrereqTech>
 			</TechTypes>
@@ -2729,7 +2729,7 @@
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_MODERN_LIFESTYLE</PrereqTech>
+			<PrereqTech>TECH_ATOMIC_LIFESTYLE</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -3512,7 +3512,7 @@
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_MODERN_LIFESTYLE</PrereqTech>
+			<PrereqTech>TECH_ATOMIC_LIFESTYLE</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -4389,7 +4389,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_EQ_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqTech>TECH_MODERN_LIFESTYLE</PrereqTech>
+			<PrereqTech>TECH_ATOMIC_LIFESTYLE</PrereqTech>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
@@ -4729,7 +4729,7 @@
 			<!-- <ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			-->
 			<!-- Prerequisites -->
-			<!-- <PrereqTech>TECH_MODERN_LIFESTYLE</PrereqTech>-->
+			<!-- <PrereqTech>TECH_ATOMIC_LIFESTYLE</PrereqTech>-->
 			<!-- Construction cost -->
 			<!-- <iCost>-1</iCost>-->
 			<!-- Misc. Effects -->
@@ -6108,7 +6108,7 @@
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LABOR_UNION</PrereqTech>
+			<PrereqTech>TECH_LABOR_UNIONS</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -6240,7 +6240,7 @@
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_MMO</PrereqTech>
+			<PrereqTech>TECH_ONLINE_COMMUNITY</PrereqTech>
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
@@ -6805,7 +6805,7 @@
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LABOR_UNION</PrereqTech>
+			<PrereqTech>TECH_LABOR_UNIONS</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -6990,7 +6990,7 @@
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_COMPUTERS</PrereqTech>
+			<PrereqTech>TECH_PERSONAL_COMPUTERS</PrereqTech>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<!-- Construction cost -->
@@ -7128,7 +7128,7 @@
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_COMPUTERS</PrereqTech>
+			<PrereqTech>TECH_PERSONAL_COMPUTERS</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -7283,7 +7283,7 @@
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_STOCK_EXCHANGING</PrereqTech>
+			<PrereqTech>TECH_STOCK_BROKERING</PrereqTech>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_STOCKMARKET</BuildingClassType>
@@ -7607,7 +7607,7 @@
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CLOUDCOMPUTING</PrereqTech>
+			<PrereqTech>TECH_CLOUD_COMPUTING</PrereqTech>
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
@@ -8206,7 +8206,7 @@
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LABOR_UNION</PrereqTech>
+			<PrereqTech>TECH_LABOR_UNIONS</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -8299,7 +8299,7 @@
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_JURIS_PRUDENCE</PrereqTech>
+			<PrereqTech>TECH_JURISPRUDENCE</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -8956,7 +8956,7 @@
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LABOR_UNION</PrereqTech>
+			<PrereqTech>TECH_LABOR_UNIONS</PrereqTech>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_WELFARE_OFFICE</BuildingClassType>
@@ -9074,7 +9074,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<TechHappinessTypes>
 				<TechHappinessType>
-					<TechType>TECH_BLOOD_CULT</TechType>
+					<TechType>TECH_SACRIFICE_CULT</TechType>
 					<iModifier>1</iModifier>
 				</TechHappinessType>
 			</TechHappinessTypes>
@@ -9251,7 +9251,7 @@
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_MUSIC</ObsoleteTech>
+			<ObsoleteTech>TECH_MUSICAL_NOTATION</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -9302,7 +9302,7 @@
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_MUSIC</ObsoleteTech>
+			<ObsoleteTech>TECH_MUSICAL_NOTATION</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -10244,7 +10244,7 @@
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CLOUDCOMPUTING</PrereqTech>
+			<PrereqTech>TECH_CLOUD_COMPUTING</PrereqTech>
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
@@ -10274,7 +10274,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_ENHANCED_SPECIES</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_GENEENHANCEMENT</PrereqTech>
+			<PrereqTech>TECH_GENE_ENHANCEMENT</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Special Yield and Commerce modifiers -->
@@ -14741,7 +14741,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_PROSTITUTION_BAN</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_JURIS_PRUDENCE</PrereqTech>
+			<PrereqTech>TECH_JURISPRUDENCE</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
@@ -17523,7 +17523,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_SAFETY_NAT_LEGAL_DATABASE</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_CLOUDCOMPUTING</PrereqTech>
+			<PrereqTech>TECH_CLOUD_COMPUTING</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Special properties -->
@@ -17571,7 +17571,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_SAFETY_ORBITAL_PRISON</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -17801,7 +17801,7 @@
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_COMPUTERS</ObsoleteTech>
+			<ObsoleteTech>TECH_PERSONAL_COMPUTERS</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -18113,7 +18113,7 @@
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_MODERN_LIFESTYLE</PrereqTech>
+			<PrereqTech>TECH_ATOMIC_LIFESTYLE</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -19483,7 +19483,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_BRAIN_SCAN</ObsoleteTech>
+			<ObsoleteTech>TECH_THOUGHT_SCANNING</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -19855,7 +19855,7 @@
 			<Help>TXT_KEY_BUILDING_WV_HUMAN_SACRIFICE_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WV_HUMAN_SACRIFICE</ArtDefineTag>
-			<PrereqTech>TECH_BLOOD_CULT</PrereqTech>
+			<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			<FreeBuilding>BUILDINGCLASS_HUMAN_SACRIFICE</FreeBuilding>
 			<bNeverCapture>1</bNeverCapture>
 			<MapCategoryTypes>
@@ -21132,11 +21132,11 @@
 					<iModifier>-2</iModifier>
 				</TechHappinessType>
 				<TechHappinessType>
-					<TechType>TECH_LABOR_UNION</TechType>
+					<TechType>TECH_LABOR_UNIONS</TechType>
 					<iModifier>-1</iModifier>
 				</TechHappinessType>
 				<TechHappinessType>
-					<TechType>TECH_UTOPIA</TechType>
+					<TechType>TECH_COMMUNISM</TechType>
 					<iModifier>-1</iModifier>
 				</TechHappinessType>
 				<TechHappinessType>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_TECH_RODNOVERY</Tag>
+		<Tag>TXT_KEY_TECH_RODNOVERA</Tag>
 		<English>Rodnovera</English>
 		<French>Rodnoverie</French>
 		<Polish>Rodzimowierstwo</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_RODNOVERY_PEDIA</Tag>
+		<Tag>TXT_KEY_TECH_RODNOVERA_PEDIA</Tag>
 		<English>Slavic mythology is the mythological aspect of the polytheistic religion that was practised by the Slavs prior to Christianisation. The religion possesses numerous common traits with other religions descended from the Proto-Indo-European religion. Archaeological remains of old Slavic idols and shrines have been found, though little can be yielded from them without proper knowledge of their contexts, other than confirming existing historical records. Fragments of old mythological beliefs and pagan festivals survive up to this day in folk customs, songs, and stories of all the Slavic nations.</English>
 		<French>La mythologie slave est l'aspect mythologique de la religion polytheistic qui a été pratiquée par les Slaves avant la christianisation. La religion possède de nombreux traits communs avec d'autres religions descendues de la religion Proto-Indo-Européenne. Des restes archéologiques de vieux idoles et tombeaux slaves ont été trouvés, cependant petit peuvent être rapportés de eux sans connaissance appropriée de leurs contextes, autre que les disques historiques existants de confirmation. Les fragments de la vieille croyance mythologique et les festivals païens survivent jusqu'à ce jour à la douane, des chansons, et des histoires folkloriques de toutes les nations slaves.</French>
 		<German>Slavicmythologie ist der mythologische Aspekt der polytheistic Religion, die von den Slawen vor Christianisierung geübt wurde. Die Religion besitzt zahlreiche allgemeine Merkmale mit anderen Religionen, die von der Proto-Indo-Europäischen Religion abgestiegen werden. Archäologische Überreste der alter Slavicidole und -Schreine sind gefunden worden, zwar klein können von ihnen ohne korrektes Wissen ihrer Zusammenhänge, anders als bestätigende vorhandene historische Rekorde erbracht werden. Fragmente des alten mythologischen Glaubens und heidnische Festivals überleben bis zu diesem Tag in den Volksgewohnheiten, in den Lieden und in den Geschichten aller Slavicnationen.</German>
@@ -16,7 +16,7 @@
 		<Polish>Rodzimowierstwo - system wierzeń etnicznych (zarówno minionych jak i współczesnych - w tym część rekonstrukcji - zawsze jednak nawiązujących do konkretnego systemu wierzeń etnicznych) odwołujących się zazwyczaj do tradycji przedchrześcijańskich. Zespół poglądów opartych na mitologii i wierzeniach lokalnej społeczności, w obrębie danej grupy kulturowej lub etnicznej (rodzimowierca - wyznawca wiary rodzimej, etnicznej).</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_RODNOVERY_QUOTE</Tag>
+		<Tag>TXT_KEY_TECH_RODNOVERA_QUOTE</Tag>
 		<English>"Pjarun, nas bac'ka! Jasny boza gromu, Daruj nam!.. Zracy Hrysta nas asukal?..." - Prayer to Perun (Slavic god of thunder)</English>
 		<French>"Pjarun, nas bac'ka! Jasny boza gromu, Daruj nam!.. Zracy Hrysta nas asukal?..." - Prière à Perun (Dieu slave du Tonnerre)</French>
 	</TEXT>

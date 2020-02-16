@@ -11,7 +11,7 @@
 			<Description>TXT_KEY_TECH_SHINTO</Description>
 			<Adjective>TXT_KEY_TECH_SHINTO_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_TECH_SHINTO_PEDIA</Civilopedia>
-			<TechPrereq>TECH_SHINTOISM</TechPrereq>
+			<TechPrereq>TECH_SHINTO</TechPrereq>
 			<FreeUnitClass>UNITCLASS_SHINTO_MISSIONARY</FreeUnitClass>
 			<iFreeUnits>1</iFreeUnits>
 			<iSpreadFactor>20</iSpreadFactor>

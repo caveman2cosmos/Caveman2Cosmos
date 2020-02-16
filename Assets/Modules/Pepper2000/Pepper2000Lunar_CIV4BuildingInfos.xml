@@ -362,7 +362,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MITHRIL_FOUNDRY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MITHRIL_FOUNDRY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_ELECTROWEAK_MATTER</PrereqTech>
+			<PrereqTech>TECH_FANTASY_MATERIALS</PrereqTech>
 			<iCost>28868</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -719,7 +719,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<Bonus>BONUS_GLASS</Bonus>
 			<ConstructCondition>
 				<And>
@@ -1104,7 +1104,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<Bonus>BONUS_CHEMICALS</Bonus>
 			<ConstructCondition>
 				<And>
@@ -1181,7 +1181,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<Bonus>BONUS_CHEMICALS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_CEMENT</Bonus>
@@ -1301,7 +1301,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<Bonus>BONUS_GLASS</Bonus>
 			<ConstructCondition>
 				<And>
@@ -1352,7 +1352,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<Bonus>BONUS_SYNTHETIC_RUBBER</Bonus>
 			<ConstructCondition>
 				<And>
@@ -1542,7 +1542,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<Bonus>BONUS_PARTS</Bonus>
 			<ConstructCondition>
 				<And>
@@ -1603,7 +1603,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_PARTS</Bonus>
@@ -1663,7 +1663,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PLASTIC_ELECTRONICS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+				<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			</TechTypes>
 			<Bonus>BONUS_SEMICONDUCTORS</Bonus>
 			<ConstructCondition>
@@ -1757,7 +1757,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PLASTIC_ELECTRONICS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+				<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			</TechTypes>
 			<Bonus>BONUS_SEMICONDUCTORS</Bonus>
 			<ConstructCondition>
@@ -1822,7 +1822,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<Bonus>BONUS_PLASTIC</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_SEMICONDUCTORS</Bonus>
@@ -2007,7 +2007,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<Bonus>BONUS_GLASS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_CEMENT</Bonus>
@@ -2184,7 +2184,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<FreeBonus>BONUS_BUG</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -2225,7 +2225,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<ConstructCondition>
 				<And>
@@ -2279,7 +2279,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<FreeBonus>BONUS_ROCKETFUEL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>

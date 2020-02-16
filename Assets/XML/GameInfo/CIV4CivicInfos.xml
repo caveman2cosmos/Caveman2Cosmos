@@ -1436,7 +1436,7 @@
 			<Strategy>TXT_KEY_CIVIC_TECHNOCRACY_STRATEGY</Strategy>
 			<!--<Help><!-\-TXT_KEY_CIVIC_TECHNOCRACY_HELP-\-></Help>-->
 			<Button>art/Interface/buttons/civics/sparth/government_technocracy.dds</Button>
-			<TechPrereq>TECH_VIRTUALSOCIETY</TechPrereq>
+			<TechPrereq>TECH_VIRTUAL_SOCIETY</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<iAIWeight>0</iAIWeight>
@@ -1713,7 +1713,7 @@
 			<Strategy>TXT_KEY_CIVIC_GERONTOCRACY_STRATEGY</Strategy>
 			<!--<Help><!-\-TXT_KEY_CIVIC_MONARCHY_HELP-\-></Help>-->
 			<Button>art/Interface/buttons/civics/sparth/government_gerontocracy.dds</Button>
-			<TechPrereq>TECH_ELDER_COUNCIL</TechPrereq>
+			<TechPrereq>TECH_GERONTOCRACY</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<iAIWeight>0</iAIWeight>
@@ -4741,7 +4741,7 @@
 			<Civilopedia>TXT_KEY_CIVIC_MACHINE_RULE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_MACHINE_RULE_STRATEGY</Strategy>
 			<Button>art/Interface/buttons/civics/sparth/rule_machinerule.dds</Button>
-			<TechPrereq>TECH_BINARYLEGISLATION</TechPrereq>
+			<TechPrereq>TECH_BINARY_LEGISLATION</TechPrereq>
 			<iAnarchyLength>3</iAnarchyLength>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<iAIWeight>0</iAIWeight>
@@ -7281,7 +7281,7 @@
 			<Strategy>TXT_KEY_CIVIC_SUBSISTENCE_STRATEGY</Strategy>
 			<!--<Help><!-\-TXT_KEY_CIVIC_BARTER_HELP-\-></Help>-->
 			<Button>art/Interface/buttons/civics/sparth/economy_subsistence.dds</Button>
-			<TechPrereq>TECH_HUNTING</TechPrereq>
+			<TechPrereq>TECH_TRACKING</TechPrereq>
 			<iAnarchyLength>0</iAnarchyLength>
 			<Upkeep>NONE</Upkeep>
 			<iAIWeight>0</iAIWeight>
@@ -8131,7 +8131,7 @@
 			<Civilopedia>TXT_KEY_CIVIC_PLANNED_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_PLANNED_STRATEGY</Strategy>
 			<Button>art/Interface/buttons/civics/sparth/economy_planned.dds</Button>
-			<TechPrereq>TECH_UTOPIA</TechPrereq>
+			<TechPrereq>TECH_COMMUNISM</TechPrereq>
 			<iAnarchyLength>2</iAnarchyLength>
 			<Upkeep>UPKEEP_EXTREME</Upkeep>
 			<iAIWeight>0</iAIWeight>
@@ -11522,7 +11522,7 @@
 			<Civilopedia>TXT_KEY_CIVIC_SOCIALIZED_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_SOCIALIZED_STRATEGY</Strategy>
 			<Button>art/Interface/buttons/civics/sparth/welfare_socialized.dds</Button>
-			<TechPrereq>TECH_LABOR_UNION</TechPrereq>
+			<TechPrereq>TECH_LABOR_UNIONS</TechPrereq>
 			<iAnarchyLength>2</iAnarchyLength>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<iAIWeight>0</iAIWeight>
@@ -13101,7 +13101,7 @@
 			<Civilopedia>TXT_KEY_CIVIC_OFF_PLANET_DUMPING_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_OFF_PLANET_DUMPING_STRATEGY</Strategy>
 			<Button>art/Interface/buttons/civics/sparth/garbage_off_planet_dumping.dds</Button>
-			<TechPrereq>TECH_ANTIGRAV</TechPrereq>
+			<TechPrereq>TECH_LEVITATION</TechPrereq>
 			<iAnarchyLength>0</iAnarchyLength>
 			<Upkeep>UPKEEP_EXTREME</Upkeep>
 			<iAIWeight>0</iAIWeight>
@@ -14001,7 +14001,7 @@
 			<Civilopedia>TXT_KEY_CIVIC_VIRTUAL_CITIZENSHIP_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_VIRTUAL_CITIZENSHIP_STRATEGY</Strategy>
 			<Button>art/Interface/buttons/civics/sparth/immigration_digital_citizenship.dds</Button>
-			<TechPrereq>TECH_CYBERSOCIOLOGY</TechPrereq>
+			<TechPrereq>TECH_CYBERSOCIAL_INTEGRATION</TechPrereq>
 			<iAnarchyLength>0</iAnarchyLength>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<iAIWeight>0</iAIWeight>
@@ -14119,7 +14119,7 @@
 			<Civilopedia>TXT_KEY_CIVIC_INTERSTELLAR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_INTERSTELLAR_STRATEGY</Strategy>
 			<Button>art/Interface/buttons/civics/sparth/immigration_interstellar.dds</Button>
-			<TechPrereq>TECH_ASTRODIPLOMACY</TechPrereq>
+			<TechPrereq>TECH_XENODIPLOMACY</TechPrereq>
 			<iAnarchyLength>0</iAnarchyLength>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<iAIWeight>0</iAIWeight>
@@ -15333,7 +15333,7 @@
 			<Civilopedia>TXT_KEY_CIVIC_ONLINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_ONLINE_STRATEGY</Strategy>
 			<Button>art/Interface/buttons/civics/sparth/education_e_education.dds</Button>
-			<TechPrereq>TECH_VIRTUALSOCIETY</TechPrereq>
+			<TechPrereq>TECH_VIRTUAL_SOCIETY</TechPrereq>
 			<iAnarchyLength>0</iAnarchyLength>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<iAIWeight>0</iAIWeight>
@@ -15455,7 +15455,7 @@
 			<Civilopedia>TXT_KEY_CIVIC_FAST_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_FAST_STRATEGY</Strategy>
 			<Button>art/Interface/buttons/civics/sparth/education_rapid.dds</Button>
-			<TechPrereq>TECH_EXOCORTEXNETWORKS</TechPrereq>
+			<TechPrereq>TECH_EXOCORTEX_NETWORKS</TechPrereq>
 			<iAnarchyLength>0</iAnarchyLength>
 			<Upkeep>UPKEEP_EXTREME</Upkeep>
 			<iAIWeight>0</iAIWeight>
@@ -18871,7 +18871,7 @@
 			<Civilopedia>TXT_KEY_CIVIC_CORPORATE_OWNED_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_CORPORATE_OWNED_STRATEGY</Strategy>
 			<Button>art/Interface/buttons/civics/sparth/agriculture_corporate.dds</Button>
-			<TechPrereq>TECH_PESTICIDES</TechPrereq>
+			<TechPrereq>TECH_AGRICULTURAL_ENGINEERING</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<iAIWeight>0</iAIWeight>
@@ -19005,7 +19005,7 @@
 			<Civilopedia>TXT_KEY_CIVIC_STATE_OWNED_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_STATE_OWNED_STRATEGY</Strategy>
 			<Button>art/Interface/buttons/civics/sparth/agriculture_state_run_agriculture.dds</Button>
-			<TechPrereq>TECH_UTOPIA</TechPrereq>
+			<TechPrereq>TECH_COMMUNISM</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_EXTREME</Upkeep>
 			<iAIWeight>0</iAIWeight>
@@ -19240,7 +19240,7 @@
 			<Civilopedia>TXT_KEY_CIVIC_LAB_GROWN_FOOD_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_LAB_GROWN_FOOD_STRATEGY</Strategy>
 			<Button>art/Interface/buttons/civics/sparth/agriculture_farm_algae.dds</Button>
-			<TechPrereq>TECH_AUGMENT_CONSUMABLES</TechPrereq>
+			<TechPrereq>TECH_AUGMENTED_CONSUMABLES</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<iAIWeight>0</iAIWeight>
@@ -20632,7 +20632,7 @@
 			<Strategy>TXT_KEY_CIVIC_ROBOTIC_STRATEGY</Strategy>
 			<Help/>
 			<Button>art/Interface/buttons/civics/sparth/military_unmanned_warfare.dds</Button>
-			<TechPrereq>TECH_MILITARY_ROBOTS</TechPrereq>
+			<TechPrereq>TECH_MILITARY_ROBOTICS</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<iAIWeight>0</iAIWeight>
@@ -22000,7 +22000,7 @@
 			<Strategy>TXT_KEY_CIVIC_COLLECTIVIST_STRATEGY</Strategy>
 			<Help/>
 			<Button>art/Interface/buttons/civics/sparth/labor_socialized.dds</Button>
-			<TechPrereq>TECH_LABOR_UNION</TechPrereq>
+			<TechPrereq>TECH_LABOR_UNIONS</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<iAIWeight>0</iAIWeight>
@@ -22341,7 +22341,7 @@
 			<Strategy>TXT_KEY_CIVIC_ENGINEERED_STRATEGY</Strategy>
 			<Help/>
 			<Button>art/Interface/buttons/civics/sparth/labor_engineered.dds</Button>
-			<TechPrereq>TECH_HUMANOIDS</TechPrereq>
+			<TechPrereq>TECH_SAPIENTROIDS</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<iAIWeight>0</iAIWeight>

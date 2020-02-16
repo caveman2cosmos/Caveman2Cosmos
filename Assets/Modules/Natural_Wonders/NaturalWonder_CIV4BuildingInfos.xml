@@ -901,7 +901,7 @@
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_HUNTING</PrereqTech>
+					<PrereqTech>TECH_TRACKING</PrereqTech>
 					<TechYield>
 						<iYield>2</iYield>
 					</TechYield>
@@ -1066,7 +1066,7 @@
 					<iHealth>1</iHealth>
 				</TechHealthChange>
 				<TechHealthChange>
-					<PrereqTech>TECH_TISSUE</PrereqTech>
+					<PrereqTech>TECH_MOLECULAR_MEDICINE</PrereqTech>
 					<iHealth>1</iHealth>
 				</TechHealthChange>
 			</TechHealthChanges>
@@ -1611,7 +1611,7 @@
 					<iHealth>1</iHealth>
 				</TechHealthChange>
 				<TechHealthChange>
-					<PrereqTech>TECH_TISSUE</PrereqTech>
+					<PrereqTech>TECH_MOLECULAR_MEDICINE</PrereqTech>
 					<iHealth>1</iHealth>
 				</TechHealthChange>
 			</TechHealthChanges>

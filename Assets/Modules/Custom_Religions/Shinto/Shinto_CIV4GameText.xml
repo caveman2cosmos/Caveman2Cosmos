@@ -44,7 +44,7 @@
 		<Polish>Shinto - tradycyjna religia Japonii oparta na mitologii japońskiej, charakteryzująca się politeizmem oraz różnorodnością przejawów i kultów. Wierzenia shinto nie mają wspólnego kanonu, organizacji ani świętych ksiąg. Zwrot kannagara-no-michi jest słownikowo przedstawiany jako synonim shinto i "drogi bogów", ale według wydawnictw specjalistycznych oznacza "w zgodzie z wolą bogów". Był używany m.in. w celu odróżnienia ortodoksyjnego shinto świątynnego od sekciarskiego i wierzeń popularnych. Centralnym dla shinto pojęciem są bóstwa kami.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_SHINTOISM_QUOTE</Tag>
+		<Tag>TXT_KEY_TECH_SHINTO_QUOTE</Tag>
 		<English>"Banzai!!!" - Traditional japanese battle cry</English>
 		<French>"Banzai!!!" - Cri de bataille Traditionel japonais</French>
 		<Italian>"Banzai!!!" - Grido di battaglia tradizionale giapponese</Italian>
@@ -52,7 +52,7 @@
 		<Polish>"Banzai!!!" - Tradycyjny japoński okrzyk wojenny</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_SHINTOISM_STRATEGY</Tag>
+		<Tag>TXT_KEY_TECH_SHINTO_STRATEGY</Tag>
 		<English>Research Shintoism to Found a religion</English>
 		<French>Recherchez le [COLOR_TECH_TEXT]Shintoïsme[COLOR_REVERT] pour fonder une religion</French>
 		<Spanish>Investiga el Sintoísmo para fundar una religión.</Spanish>

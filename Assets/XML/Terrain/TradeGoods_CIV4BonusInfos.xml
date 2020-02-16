@@ -121,8 +121,8 @@
 			<Civilopedia>TXT_KEY_BONUS_JADE_MASK_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_JADE_MASK</ArtDefineTag>
-			<TechReveal>TECH_PERSONAL_ADORNMENT</TechReveal>
-			<TechCityTrade>TECH_PERSONAL_ADORNMENT</TechCityTrade>
+			<TechReveal>TECH_PERSONAL_ADORNMENTS</TechReveal>
+			<TechCityTrade>TECH_PERSONAL_ADORNMENTS</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
 			<iAITradeModifier>0</iAITradeModifier>
 			<iAIObjective>0</iAIObjective>
@@ -271,8 +271,8 @@
 			<Civilopedia>TXT_KEY_BONUS_SHANG_JADE_RITUAL_ITEMS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SHANG_JADE_RITUAL_ITEMS</ArtDefineTag>
-			<TechReveal>TECH_BLOOD_CULT</TechReveal>
-			<TechCityTrade>TECH_BLOOD_CULT</TechCityTrade>
+			<TechReveal>TECH_SACRIFICE_CULT</TechReveal>
+			<TechCityTrade>TECH_SACRIFICE_CULT</TechCityTrade>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>

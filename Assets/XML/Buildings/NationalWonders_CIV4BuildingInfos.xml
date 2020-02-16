@@ -96,7 +96,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_ADVANCED_FLIGHT</PrereqTech>
+					<PrereqTech>TECH_ADVANCED_AVIATION</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -104,7 +104,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_NAVAL_AVIATION</PrereqTech>
+					<PrereqTech>TECH_NAVAL_FLIGHT</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -128,7 +128,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_SPACE_FLIGHT</PrereqTech>
+					<PrereqTech>TECH_ASTRONAUTICS</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -1119,7 +1119,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_DEEP_SPACE_RESEARCH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DEEP_SPACE_RESEARCH_STRATEGY</Strategy>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_SPACE_FLIGHT</PrereqTech>
+			<PrereqTech>TECH_ASTRONAUTICS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -1467,7 +1467,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_DISTRICT_COURTHOUSE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DISTRICT_COURTHOUSE_STRATEGY</Strategy>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_JURIS_PRUDENCE</PrereqTech>
+			<PrereqTech>TECH_JURISPRUDENCE</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
@@ -1926,7 +1926,7 @@
 				<Bonus>BONUS_WARE_STEEL</Bonus>
 			</PrereqBonuses>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_MAGLEV</ObsoleteTech>
+			<ObsoleteTech>TECH_MAGNETIC_LEVITATION</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>1310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -3328,7 +3328,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_LABOR_UNION</ObsoleteTech>
+			<ObsoleteTech>TECH_LABOR_UNIONS</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>664</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -3877,7 +3877,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_LABOR_UNION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LABOR_UNION_STRATEGY</Strategy>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_LABOR_UNION</PrereqTech>
+			<PrereqTech>TECH_LABOR_UNIONS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<!-- Cost -->
 			<iCost>1540</iCost>
@@ -4382,7 +4382,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_ACADEMIC_DATABASE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_ACADEMIC_DATABASE_STRATEGY</Strategy>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_CLOUDCOMPUTING</PrereqTech>
+			<PrereqTech>TECH_CLOUD_COMPUTING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_COMPUTERS</Bonus>
@@ -4593,7 +4593,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_BREEDER_ELEPHANT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_BREEDER_ELEPHANT_STRATEGY</Strategy>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_PACHYDERM_DOMESTICATION</PrereqTech>
+			<PrereqTech>TECH_ELEPHANT_DOMESTICATION</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_ELEPHANT</Bonus>
 			</PrereqBonuses>
@@ -4748,7 +4748,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_LEGAL_DATABASE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_LEGAL_DATABASE_STRATEGY</Strategy>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_CLOUDCOMPUTING</PrereqTech>
+			<PrereqTech>TECH_CLOUD_COMPUTING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_COMPUTERS</Bonus>
@@ -4968,7 +4968,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_PARK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_PARK_STRATEGY</Strategy>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_WILDERNESSC</PrereqTech>
+			<PrereqTech>TECH_WILDLIFE_CONSERVATION</PrereqTech>
 			<!-- Cost -->
 			<iCost>1360</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -5647,7 +5647,7 @@
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_SPORTS_LEAGUE_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MODERN_SPORTS</PrereqTech>
-			<ObsoleteTech>TECH_BINARY_PYSCHOKINESIS</ObsoleteTech>
+			<ObsoleteTech>TECH_BINARY_PSYCHOKINESIS</ObsoleteTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -5972,7 +5972,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_ONLINE_UNIVERSITY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ONLINE_UNIVERSITY_STRATEGY</Strategy>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_VIRTUALSOCIETY</PrereqTech>
+			<PrereqTech>TECH_VIRTUAL_SOCIETY</PrereqTech>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_UNIVERSITY</BuildingClassType>
@@ -6028,7 +6028,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_ORBITAL_PRISON_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ORBITAL_PRISON_STRATEGY</Strategy>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_COMPUTERS</Bonus>
@@ -6397,14 +6397,14 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_MAGLEV</PrereqTech>
+					<PrereqTech>TECH_MAGNETIC_LEVITATION</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>1</iCommerce>
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_SRAILS</PrereqTech>
+					<PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>1</iCommerce>
@@ -6997,7 +6997,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_SUPREME_COURT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SUPREME_COURT_STRATEGY</Strategy>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_JURIS_PRUDENCE</PrereqTech>
+			<PrereqTech>TECH_JURISPRUDENCE</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>

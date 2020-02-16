@@ -965,7 +965,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_HUNTING_TACTICS</TechType>
+					<TechType>TECH_HUNTING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -1073,15 +1073,15 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WARSIMULATION</TechType>
+					<TechType>TECH_WAR_SIMULATIONS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_UNMANNEDSEA</TechType>
+					<TechType>TECH_UNMANNED_NAVAL_VEHICLES</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MILITARY_ROBOTS</TechType>
+					<TechType>TECH_MILITARY_ROBOTICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -1282,7 +1282,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_HUNTING_TACTICS</TechType>
+					<TechType>TECH_HUNTING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -1632,15 +1632,15 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WARSIMULATION</TechType>
+					<TechType>TECH_WAR_SIMULATIONS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_UNMANNEDSEA</TechType>
+					<TechType>TECH_UNMANNED_NAVAL_VEHICLES</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MILITARY_ROBOTS</TechType>
+					<TechType>TECH_MILITARY_ROBOTICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -1933,7 +1933,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_HUNTING_TACTICS</TechType>
+					<TechType>TECH_HUNTING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -2041,15 +2041,15 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WARSIMULATION</TechType>
+					<TechType>TECH_WAR_SIMULATIONS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_UNMANNEDSEA</TechType>
+					<TechType>TECH_UNMANNED_NAVAL_VEHICLES</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MILITARY_ROBOTS</TechType>
+					<TechType>TECH_MILITARY_ROBOTICS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -2248,7 +2248,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_HUNTING_TACTICS</TechType>
+					<TechType>TECH_HUNTING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -2594,15 +2594,15 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WARSIMULATION</TechType>
+					<TechType>TECH_WAR_SIMULATIONS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_UNMANNEDSEA</TechType>
+					<TechType>TECH_UNMANNED_NAVAL_VEHICLES</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MILITARY_ROBOTS</TechType>
+					<TechType>TECH_MILITARY_ROBOTICS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -5786,7 +5786,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MINIATURIZATION</TechType>
+					<TechType>TECH_MANUFACTURING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -5798,7 +5798,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MILITARY_ROBOTS</TechType>
+					<TechType>TECH_MILITARY_ROBOTICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -5814,7 +5814,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_NANOBOTICS</TechType>
+					<TechType>TECH_NANOROBOTICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -6408,7 +6408,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MINIATURIZATION</TechType>
+					<TechType>TECH_MANUFACTURING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -6613,7 +6613,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MILITARY_ROBOTS</TechType>
+					<TechType>TECH_MILITARY_ROBOTICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -6629,7 +6629,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_NANOBOTICS</TechType>
+					<TechType>TECH_NANOROBOTICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -7045,7 +7045,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MINIATURIZATION</TechType>
+					<TechType>TECH_MANUFACTURING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -7057,7 +7057,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MILITARY_ROBOTS</TechType>
+					<TechType>TECH_MILITARY_ROBOTICS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -7073,7 +7073,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_NANOBOTICS</TechType>
+					<TechType>TECH_NANOROBOTICS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -7515,7 +7515,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MINIATURIZATION</TechType>
+					<TechType>TECH_MANUFACTURING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -7682,7 +7682,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MILITARY_ROBOTS</TechType>
+					<TechType>TECH_MILITARY_ROBOTICS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -7698,7 +7698,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_NANOBOTICS</TechType>
+					<TechType>TECH_NANOROBOTICS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -7912,7 +7912,7 @@
 			</SpecialistCommerceChanges>
 			<TechResearchModifiers>
 				<TechResearchModifier>
-					<TechType>TECH_WOOD_WORKING</TechType>
+					<TechType>TECH_WOODWORKING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -7920,7 +7920,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_THE_WHEEL</TechType>
+					<TechType>TECH_WHEELS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -8008,11 +8008,11 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MINIATURIZATION</TechType>
+					<TechType>TECH_MANUFACTURING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MICROCHIP</TechType>
+					<TechType>TECH_SEMICONDUCTORS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -8020,11 +8020,11 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WARSIMULATION</TechType>
+					<TechType>TECH_WAR_SIMULATIONS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MILITARY_ROBOTS</TechType>
+					<TechType>TECH_MILITARY_ROBOTICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -8040,7 +8040,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_LIQUIDMETAL</TechType>
+					<TechType>TECH_LIQUID_METALS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -8052,7 +8052,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ANTIGRAV</TechType>
+					<TechType>TECH_LEVITATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 			</TechResearchModifiers>
@@ -8208,7 +8208,7 @@
 			</SpecialistYieldChanges>
 			<TechResearchModifiers>
 				<TechResearchModifier>
-					<TechType>TECH_WOOD_WORKING</TechType>
+					<TechType>TECH_WOODWORKING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -8216,7 +8216,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_THE_WHEEL</TechType>
+					<TechType>TECH_WHEELS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -8455,11 +8455,11 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MINIATURIZATION</TechType>
+					<TechType>TECH_MANUFACTURING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MICROCHIP</TechType>
+					<TechType>TECH_SEMICONDUCTORS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -8580,11 +8580,11 @@
 			</BuildingProductionModifierTypes>
 			<TechResearchModifiers>
 				<TechResearchModifier>
-					<TechType>TECH_WARSIMULATION</TechType>
+					<TechType>TECH_WAR_SIMULATIONS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MILITARY_ROBOTS</TechType>
+					<TechType>TECH_MILITARY_ROBOTICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -8600,7 +8600,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_LIQUIDMETAL</TechType>
+					<TechType>TECH_LIQUID_METALS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -8612,7 +8612,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ANTIGRAV</TechType>
+					<TechType>TECH_LEVITATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 			</TechResearchModifiers>
@@ -8774,7 +8774,7 @@
 			</BuildingProductionModifierTypes>
 			<TechResearchModifiers>
 				<TechResearchModifier>
-					<TechType>TECH_WOOD_WORKING</TechType>
+					<TechType>TECH_WOODWORKING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -8782,7 +8782,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_THE_WHEEL</TechType>
+					<TechType>TECH_WHEELS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -8870,11 +8870,11 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MINIATURIZATION</TechType>
+					<TechType>TECH_MANUFACTURING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MICROCHIP</TechType>
+					<TechType>TECH_SEMICONDUCTORS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -8882,11 +8882,11 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WARSIMULATION</TechType>
+					<TechType>TECH_WAR_SIMULATIONS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MILITARY_ROBOTS</TechType>
+					<TechType>TECH_MILITARY_ROBOTICS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -8902,7 +8902,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_LIQUIDMETAL</TechType>
+					<TechType>TECH_LIQUID_METALS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -8914,7 +8914,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ANTIGRAV</TechType>
+					<TechType>TECH_LEVITATION</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 			</TechResearchModifiers>
@@ -9050,7 +9050,7 @@
 			</BuildingProductionModifierTypes>
 			<TechResearchModifiers>
 				<TechResearchModifier>
-					<TechType>TECH_WOOD_WORKING</TechType>
+					<TechType>TECH_WOODWORKING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -9058,7 +9058,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_THE_WHEEL</TechType>
+					<TechType>TECH_WHEELS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -9274,11 +9274,11 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MINIATURIZATION</TechType>
+					<TechType>TECH_MANUFACTURING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MICROCHIP</TechType>
+					<TechType>TECH_SEMICONDUCTORS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -9401,11 +9401,11 @@
 			</BuildingProductionModifierTypes>
 			<TechResearchModifiers>
 				<TechResearchModifier>
-					<TechType>TECH_WARSIMULATION</TechType>
+					<TechType>TECH_WAR_SIMULATIONS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MILITARY_ROBOTS</TechType>
+					<TechType>TECH_MILITARY_ROBOTICS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -9421,7 +9421,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_LIQUIDMETAL</TechType>
+					<TechType>TECH_LIQUID_METALS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -9433,7 +9433,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ANTIGRAV</TechType>
+					<TechType>TECH_LEVITATION</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 			</TechResearchModifiers>
@@ -9861,7 +9861,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_NAVAL_AVIATION</TechType>
+					<TechType>TECH_NAVAL_FLIGHT</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -9885,19 +9885,19 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_UNMANNEDSEA</TechType>
+					<TechType>TECH_UNMANNED_NAVAL_VEHICLES</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MARINEARCHITECTURE</TechType>
+					<TechType>TECH_MARINE_ARCHITECTURE</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_LENGINE</TechType>
+					<TechType>TECH_INTERNAL_SHOCKWAVE_ENGINE</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ANTIGRAV</TechType>
+					<TechType>TECH_LEVITATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -10586,7 +10586,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_NAVAL_AVIATION</TechType>
+					<TechType>TECH_NAVAL_FLIGHT</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -10815,19 +10815,19 @@
 			</DomainProductionModifiers>
 			<TechResearchModifiers>
 				<TechResearchModifier>
-					<TechType>TECH_UNMANNEDSEA</TechType>
+					<TechType>TECH_UNMANNED_NAVAL_VEHICLES</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MARINEARCHITECTURE</TechType>
+					<TechType>TECH_MARINE_ARCHITECTURE</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_LENGINE</TechType>
+					<TechType>TECH_INTERNAL_SHOCKWAVE_ENGINE</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ANTIGRAV</TechType>
+					<TechType>TECH_LEVITATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -11696,7 +11696,7 @@
 			</LessYieldThresholds>
 			<TechResearchModifiers>
 				<TechResearchModifier>
-					<TechType>TECH_NOMADIC_LIFESTYLE</TechType>
+					<TechType>TECH_NOMADISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -11708,7 +11708,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_TRACKING</TechType>
+					<TechType>TECH_TRAILS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -11716,7 +11716,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_HUNTING</TechType>
+					<TechType>TECH_TRACKING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -11736,7 +11736,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_HUNTING_TACTICS</TechType>
+					<TechType>TECH_HUNTING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -11760,7 +11760,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PACHYDERM_DOMESTICATION</TechType>
+					<TechType>TECH_ELEPHANT_DOMESTICATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -11792,7 +11792,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_VETERIANARY_MEDICINE</TechType>
+					<TechType>TECH_VETERINARY_MEDICINE</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -11832,7 +11832,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MAP_MAKING</TechType>
+					<TechType>TECH_CARTOGRAPHY</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -11860,11 +11860,11 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_FOODP</TechType>
+					<TechType>TECH_FOOD_PRESERVATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WILDERNESSC</TechType>
+					<TechType>TECH_WILDLIFE_CONSERVATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -11876,7 +11876,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MOTER_SPORTS</TechType>
+					<TechType>TECH_MOTORSPORTS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -11908,15 +11908,15 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_CLIMATE_MODELLING</TechType>
+					<TechType>TECH_CLIMATE_MODELS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PLANET_EXPLORATION</TechType>
+					<TechType>TECH_PLANETARY_EXPLORATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MAGLEV</TechType>
+					<TechType>TECH_MAGNETIC_LEVITATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -11936,7 +11936,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GBIOLOGY</TechType>
+					<TechType>TECH_GENESIS_BIOLOGY</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -11944,11 +11944,11 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_NANOGENERATOR</TechType>
+					<TechType>TECH_NANOGENERATORS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PLANET_COLONIZATION</TechType>
+					<TechType>TECH_PLANETARY_COLONIZATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -11956,7 +11956,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_SRAILS</TechType>
+					<TechType>TECH_SUPERSONIC_RAILS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -12144,11 +12144,11 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WATERWORKS</TechType>
+					<TechType>TECH_CANAL_SYSTEMS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WATERPROOF_CEMENT</TechType>
+					<TechType>TECH_WATERPROOF_CONCRETE</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -12220,7 +12220,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PESTICIDES</TechType>
+					<TechType>TECH_AGRICULTURAL_ENGINEERING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -12252,11 +12252,11 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_AGRICEMICALS</TechType>
+					<TechType>TECH_AGRICHEMICALS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MINIATURIZATION</TechType>
+					<TechType>TECH_MANUFACTURING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -12272,7 +12272,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MARINEARCHITECTURE</TechType>
+					<TechType>TECH_MARINE_ARCHITECTURE</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -12280,7 +12280,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_SPACE_COLONIES</TechType>
+					<TechType>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -12292,15 +12292,15 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_LUNAR_LUNAR_MANUFACTURING</TechType>
+					<TechType>TECH_LUNAR_MANUFACTURING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PLANET_EXTRACTION</TechType>
+					<TechType>TECH_PLANETARY_EXTRACTION</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_AICITY</TechType>
+					<TechType>TECH_AUTOMATED_URBANIZATION</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -12320,7 +12320,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_SOLAR_MINING</TechType>
+					<TechType>TECH_STAR_LIFTING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -13280,7 +13280,7 @@
 			</LessYieldThresholds>
 			<TechResearchModifiers>
 				<TechResearchModifier>
-					<TechType>TECH_NOMADIC_LIFESTYLE</TechType>
+					<TechType>TECH_NOMADISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -13292,7 +13292,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_TRACKING</TechType>
+					<TechType>TECH_TRAILS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -13300,7 +13300,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_HUNTING</TechType>
+					<TechType>TECH_TRACKING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -13320,7 +13320,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_HUNTING_TACTICS</TechType>
+					<TechType>TECH_HUNTING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -13344,7 +13344,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PACHYDERM_DOMESTICATION</TechType>
+					<TechType>TECH_ELEPHANT_DOMESTICATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -13376,7 +13376,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_VETERIANARY_MEDICINE</TechType>
+					<TechType>TECH_VETERINARY_MEDICINE</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -13416,7 +13416,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MAP_MAKING</TechType>
+					<TechType>TECH_CARTOGRAPHY</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -13552,11 +13552,11 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WATERWORKS</TechType>
+					<TechType>TECH_CANAL_SYSTEMS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WATERPROOF_CEMENT</TechType>
+					<TechType>TECH_WATERPROOF_CONCRETE</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -14580,11 +14580,11 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_FOODP</TechType>
+					<TechType>TECH_FOOD_PRESERVATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WILDERNESSC</TechType>
+					<TechType>TECH_WILDLIFE_CONSERVATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -14596,7 +14596,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MOTER_SPORTS</TechType>
+					<TechType>TECH_MOTORSPORTS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -14628,7 +14628,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_CLIMATE_MODELLING</TechType>
+					<TechType>TECH_CLIMATE_MODELS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -14652,7 +14652,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PESTICIDES</TechType>
+					<TechType>TECH_AGRICULTURAL_ENGINEERING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -14684,11 +14684,11 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_AGRICEMICALS</TechType>
+					<TechType>TECH_AGRICHEMICALS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MINIATURIZATION</TechType>
+					<TechType>TECH_MANUFACTURING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -15586,11 +15586,11 @@
 			</LessYieldThresholds>
 			<TechResearchModifiers>
 				<TechResearchModifier>
-					<TechType>TECH_PLANET_EXPLORATION</TechType>
+					<TechType>TECH_PLANETARY_EXPLORATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MAGLEV</TechType>
+					<TechType>TECH_MAGNETIC_LEVITATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -15610,7 +15610,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GBIOLOGY</TechType>
+					<TechType>TECH_GENESIS_BIOLOGY</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -15618,11 +15618,11 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_NANOGENERATOR</TechType>
+					<TechType>TECH_NANOGENERATORS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PLANET_COLONIZATION</TechType>
+					<TechType>TECH_PLANETARY_COLONIZATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -15630,7 +15630,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_SRAILS</TechType>
+					<TechType>TECH_SUPERSONIC_RAILS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -15694,7 +15694,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MARINEARCHITECTURE</TechType>
+					<TechType>TECH_MARINE_ARCHITECTURE</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -15702,7 +15702,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_SPACE_COLONIES</TechType>
+					<TechType>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -15714,15 +15714,15 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_LUNAR_LUNAR_MANUFACTURING</TechType>
+					<TechType>TECH_LUNAR_MANUFACTURING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PLANET_EXTRACTION</TechType>
+					<TechType>TECH_PLANETARY_EXTRACTION</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_AICITY</TechType>
+					<TechType>TECH_AUTOMATED_URBANIZATION</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -15742,7 +15742,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_SOLAR_MINING</TechType>
+					<TechType>TECH_STAR_LIFTING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -16466,7 +16466,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_NAVAL_AVIATION</TechType>
+					<TechType>TECH_NAVAL_FLIGHT</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -16478,7 +16478,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ADVANCED_FLIGHT</TechType>
+					<TechType>TECH_ADVANCED_AVIATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -16506,7 +16506,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_SPACE_FLIGHT</TechType>
+					<TechType>TECH_ASTRONAUTICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -16514,7 +16514,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_CLIMATE_MODELLING</TechType>
+					<TechType>TECH_CLIMATE_MODELS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -16526,7 +16526,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_INTERSTELLAR_TRAVEL</TechType>
+					<TechType>TECH_ION_PROPULSION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -16534,7 +16534,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MAGLEV</TechType>
+					<TechType>TECH_MAGNETIC_LEVITATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -16542,7 +16542,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_CSPACECRAFT</TechType>
+					<TechType>TECH_COMMERCIAL_SPACEFLIGHT</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -16550,7 +16550,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MICROTURBINE</TechType>
+					<TechType>TECH_MICROGENERATORS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -16558,7 +16558,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_JUPITERE</TechType>
+					<TechType>TECH_JOVIAN_EXPLORATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -16582,7 +16582,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ANTIGRAV</TechType>
+					<TechType>TECH_LEVITATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -16602,7 +16602,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_JUPITERE</TechType>
+					<TechType>TECH_JOVIAN_EXPLORATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -16618,7 +16618,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_VASIMR_PROPULSION</TechType>
+					<TechType>TECH_FUSION_SPACECRAFT</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -16630,7 +16630,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ANTIMATTER_ROCKET</TechType>
+					<TechType>TECH_ANTIMATTER_ROCKETS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -17413,7 +17413,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_NAVAL_AVIATION</TechType>
+					<TechType>TECH_NAVAL_FLIGHT</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -17425,7 +17425,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ADVANCED_FLIGHT</TechType>
+					<TechType>TECH_ADVANCED_AVIATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -17453,7 +17453,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_SPACE_FLIGHT</TechType>
+					<TechType>TECH_ASTRONAUTICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -17461,7 +17461,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_CLIMATE_MODELLING</TechType>
+					<TechType>TECH_CLIMATE_MODELS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -17780,7 +17780,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_INTERSTELLAR_TRAVEL</TechType>
+					<TechType>TECH_ION_PROPULSION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -17788,7 +17788,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MAGLEV</TechType>
+					<TechType>TECH_MAGNETIC_LEVITATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -17796,7 +17796,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_CSPACECRAFT</TechType>
+					<TechType>TECH_COMMERCIAL_SPACEFLIGHT</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -17804,7 +17804,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MICROTURBINE</TechType>
+					<TechType>TECH_MICROGENERATORS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -17812,7 +17812,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_JUPITERE</TechType>
+					<TechType>TECH_JOVIAN_EXPLORATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -17836,7 +17836,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ANTIGRAV</TechType>
+					<TechType>TECH_LEVITATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -17860,7 +17860,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_JUPITERE</TechType>
+					<TechType>TECH_JOVIAN_EXPLORATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -17872,7 +17872,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_VASIMR_PROPULSION</TechType>
+					<TechType>TECH_FUSION_SPACECRAFT</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -17884,7 +17884,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ANTIMATTER_ROCKET</TechType>
+					<TechType>TECH_ANTIMATTER_ROCKETS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -18178,7 +18178,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_TRUTH_MANIPULATION</TechType>
+					<TechType>TECH_REALITY_REPROGRAMMING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -18186,7 +18186,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_SELF_CREATION</TechType>
+					<TechType>TECH_ALPHA_POINT</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -18608,7 +18608,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_CAODAIISM</TechType>
+					<TechType>TECH_CAO_DAI</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -18770,7 +18770,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_TRUTH_MANIPULATION</TechType>
+					<TechType>TECH_REALITY_REPROGRAMMING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -18778,7 +18778,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_SELF_CREATION</TechType>
+					<TechType>TECH_ALPHA_POINT</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -19064,7 +19064,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_TRUTH_MANIPULATION</TechType>
+					<TechType>TECH_REALITY_REPROGRAMMING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -19072,7 +19072,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_SELF_CREATION</TechType>
+					<TechType>TECH_ALPHA_POINT</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -19232,7 +19232,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_CAODAIISM</TechType>
+					<TechType>TECH_CAO_DAI</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -19399,7 +19399,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_CAODAIISM</TechType>
+					<TechType>TECH_CAO_DAI</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -19554,7 +19554,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_TRUTH_MANIPULATION</TechType>
+					<TechType>TECH_REALITY_REPROGRAMMING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -19562,7 +19562,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_SELF_CREATION</TechType>
+					<TechType>TECH_ALPHA_POINT</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -24411,7 +24411,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_FINE_EDGED_TOOLS</TechType>
+					<TechType>TECH_SHARPENING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -24447,7 +24447,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WOOD_WORKING</TechType>
+					<TechType>TECH_WOODWORKING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -24583,7 +24583,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MINIATURIZATION</TechType>
+					<TechType>TECH_MANUFACTURING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -24603,7 +24603,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GRAPHENE</TechType>
+					<TechType>TECH_GRAPHENE_ALLOYS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -24615,19 +24615,19 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_LIQUIDMETAL</TechType>
+					<TechType>TECH_LIQUID_METALS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_LUNAR_LUNAR_MANUFACTURING</TechType>
+					<TechType>TECH_LUNAR_MANUFACTURING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PLANET_EXTRACTION</TechType>
+					<TechType>TECH_PLANETARY_EXTRACTION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_SUPERFLUOUS_MANUFACTURING</TechType>
+					<TechType>TECH_PLANETARY_MANUFACTURING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -24647,7 +24647,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ANIMA_MATERIALS</TechType>
+					<TechType>TECH_ANIMAMATERIALS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -24655,7 +24655,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ATTOMETER_ENGINEERING</TechType>
+					<TechType>TECH_ATOMIC_SCALE_ENGINEERING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -24663,11 +24663,11 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_EXOMINING</TechType>
+					<TechType>TECH_PLANET_CRACKING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ASTROINDUSTRIALISM</TechType>
+					<TechType>TECH_FORGE_WORLDS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -25160,7 +25160,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_FINE_EDGED_TOOLS</TechType>
+					<TechType>TECH_SHARPENING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -25196,7 +25196,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WOOD_WORKING</TechType>
+					<TechType>TECH_WOODWORKING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -25755,7 +25755,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MINIATURIZATION</TechType>
+					<TechType>TECH_MANUFACTURING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 			</TechResearchModifiers>
@@ -26074,7 +26074,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GRAPHENE</TechType>
+					<TechType>TECH_GRAPHENE_ALLOYS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -26086,19 +26086,19 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_LIQUIDMETAL</TechType>
+					<TechType>TECH_LIQUID_METALS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_LUNAR_LUNAR_MANUFACTURING</TechType>
+					<TechType>TECH_LUNAR_MANUFACTURING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PLANET_EXTRACTION</TechType>
+					<TechType>TECH_PLANETARY_EXTRACTION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_SUPERFLUOUS_MANUFACTURING</TechType>
+					<TechType>TECH_PLANETARY_MANUFACTURING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -26118,7 +26118,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ANIMA_MATERIALS</TechType>
+					<TechType>TECH_ANIMAMATERIALS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -26126,7 +26126,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ATTOMETER_ENGINEERING</TechType>
+					<TechType>TECH_ATOMIC_SCALE_ENGINEERING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -26134,11 +26134,11 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_EXOMINING</TechType>
+					<TechType>TECH_PLANET_CRACKING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ASTROINDUSTRIALISM</TechType>
+					<TechType>TECH_FORGE_WORLDS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -26879,7 +26879,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_FINE_EDGED_TOOLS</TechType>
+					<TechType>TECH_SHARPENING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -26915,7 +26915,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WOOD_WORKING</TechType>
+					<TechType>TECH_WOODWORKING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -27051,7 +27051,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MINIATURIZATION</TechType>
+					<TechType>TECH_MANUFACTURING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -27071,7 +27071,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GRAPHENE</TechType>
+					<TechType>TECH_GRAPHENE_ALLOYS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -27083,19 +27083,19 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_LIQUIDMETAL</TechType>
+					<TechType>TECH_LIQUID_METALS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_LUNAR_LUNAR_MANUFACTURING</TechType>
+					<TechType>TECH_LUNAR_MANUFACTURING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PLANET_EXTRACTION</TechType>
+					<TechType>TECH_PLANETARY_EXTRACTION</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_SUPERFLUOUS_MANUFACTURING</TechType>
+					<TechType>TECH_PLANETARY_MANUFACTURING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -27115,7 +27115,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ANIMA_MATERIALS</TechType>
+					<TechType>TECH_ANIMAMATERIALS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -27123,7 +27123,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ATTOMETER_ENGINEERING</TechType>
+					<TechType>TECH_ATOMIC_SCALE_ENGINEERING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -27131,11 +27131,11 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_EXOMINING</TechType>
+					<TechType>TECH_PLANET_CRACKING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ASTROINDUSTRIALISM</TechType>
+					<TechType>TECH_FORGE_WORLDS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -27624,7 +27624,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_FINE_EDGED_TOOLS</TechType>
+					<TechType>TECH_SHARPENING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -27660,7 +27660,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WOOD_WORKING</TechType>
+					<TechType>TECH_WOODWORKING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -28213,7 +28213,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MINIATURIZATION</TechType>
+					<TechType>TECH_MANUFACTURING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 			</TechResearchModifiers>
@@ -28532,7 +28532,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GRAPHENE</TechType>
+					<TechType>TECH_GRAPHENE_ALLOYS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -28544,19 +28544,19 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_LIQUIDMETAL</TechType>
+					<TechType>TECH_LIQUID_METALS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_LUNAR_LUNAR_MANUFACTURING</TechType>
+					<TechType>TECH_LUNAR_MANUFACTURING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PLANET_EXTRACTION</TechType>
+					<TechType>TECH_PLANETARY_EXTRACTION</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_SUPERFLUOUS_MANUFACTURING</TechType>
+					<TechType>TECH_PLANETARY_MANUFACTURING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -28576,7 +28576,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ANIMA_MATERIALS</TechType>
+					<TechType>TECH_ANIMAMATERIALS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -28584,7 +28584,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ATTOMETER_ENGINEERING</TechType>
+					<TechType>TECH_ATOMIC_SCALE_ENGINEERING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -28592,11 +28592,11 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_EXOMINING</TechType>
+					<TechType>TECH_PLANET_CRACKING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ASTROINDUSTRIALISM</TechType>
+					<TechType>TECH_FORGE_WORLDS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -31568,7 +31568,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GROUND_STONES</TechType>
+					<TechType>TECH_GROUND_STONE</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -31636,11 +31636,11 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_FOODP</TechType>
+					<TechType>TECH_FOOD_PRESERVATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PESTICIDES</TechType>
+					<TechType>TECH_AGRICULTURAL_ENGINEERING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -31648,7 +31648,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_AGRICEMICALS</TechType>
+					<TechType>TECH_AGRICHEMICALS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -31660,7 +31660,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_BIOFUELS</TechType>
+					<TechType>TECH_BIOMATERIALS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -31668,11 +31668,11 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_AGERMINATION</TechType>
+					<TechType>TECH_ACCELERATED_GERMINATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_APHOTOSYNTHESIS</TechType>
+					<TechType>TECH_ARTIFICIAL_PHOTOSYNTHESIS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -32133,7 +32133,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GROUND_STONES</TechType>
+					<TechType>TECH_GROUND_STONE</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -32628,11 +32628,11 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_FOODP</TechType>
+					<TechType>TECH_FOOD_PRESERVATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PESTICIDES</TechType>
+					<TechType>TECH_AGRICULTURAL_ENGINEERING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -32640,7 +32640,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_AGRICEMICALS</TechType>
+					<TechType>TECH_AGRICHEMICALS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -33072,7 +33072,7 @@
 			</YieldModifiers>
 			<TechResearchModifiers>
 				<TechResearchModifier>
-					<TechType>TECH_BIOFUELS</TechType>
+					<TechType>TECH_BIOMATERIALS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -33080,11 +33080,11 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_AGERMINATION</TechType>
+					<TechType>TECH_ACCELERATED_GERMINATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_APHOTOSYNTHESIS</TechType>
+					<TechType>TECH_ARTIFICIAL_PHOTOSYNTHESIS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -33540,7 +33540,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GROUND_STONES</TechType>
+					<TechType>TECH_GROUND_STONE</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -33608,11 +33608,11 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_FOODP</TechType>
+					<TechType>TECH_FOOD_PRESERVATION</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PESTICIDES</TechType>
+					<TechType>TECH_AGRICULTURAL_ENGINEERING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -33620,7 +33620,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_AGRICEMICALS</TechType>
+					<TechType>TECH_AGRICHEMICALS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -33632,7 +33632,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_BIOFUELS</TechType>
+					<TechType>TECH_BIOMATERIALS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -33640,11 +33640,11 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_AGERMINATION</TechType>
+					<TechType>TECH_ACCELERATED_GERMINATION</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_APHOTOSYNTHESIS</TechType>
+					<TechType>TECH_ARTIFICIAL_PHOTOSYNTHESIS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -34079,7 +34079,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GROUND_STONES</TechType>
+					<TechType>TECH_GROUND_STONE</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -34543,11 +34543,11 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_FOODP</TechType>
+					<TechType>TECH_FOOD_PRESERVATION</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PESTICIDES</TechType>
+					<TechType>TECH_AGRICULTURAL_ENGINEERING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -34555,7 +34555,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_AGRICEMICALS</TechType>
+					<TechType>TECH_AGRICHEMICALS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -34964,7 +34964,7 @@
 			</YieldModifiers>
 			<TechResearchModifiers>
 				<TechResearchModifier>
-					<TechType>TECH_BIOFUELS</TechType>
+					<TechType>TECH_BIOMATERIALS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -34972,11 +34972,11 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_AGERMINATION</TechType>
+					<TechType>TECH_ACCELERATED_GERMINATION</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_APHOTOSYNTHESIS</TechType>
+					<TechType>TECH_ARTIFICIAL_PHOTOSYNTHESIS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -35849,7 +35849,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PERSONAL_ADORNMENT</TechType>
+					<TechType>TECH_PERSONAL_ADORNMENTS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -35865,7 +35865,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WOOD_WORKING</TechType>
+					<TechType>TECH_WOODWORKING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -35937,7 +35937,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MUSIC</TechType>
+					<TechType>TECH_MUSICAL_NOTATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -36057,7 +36057,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PHOTOVALTICGLASS</TechType>
+					<TechType>TECH_INTERACTIVE_GLASS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -36533,7 +36533,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PERSONAL_ADORNMENT</TechType>
+					<TechType>TECH_PERSONAL_ADORNMENTS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -36549,7 +36549,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WOOD_WORKING</TechType>
+					<TechType>TECH_WOODWORKING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -36621,7 +36621,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MUSIC</TechType>
+					<TechType>TECH_MUSICAL_NOTATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -37427,7 +37427,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PHOTOVALTICGLASS</TechType>
+					<TechType>TECH_INTERACTIVE_GLASS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -38041,7 +38041,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PERSONAL_ADORNMENT</TechType>
+					<TechType>TECH_PERSONAL_ADORNMENTS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -38057,7 +38057,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WOOD_WORKING</TechType>
+					<TechType>TECH_WOODWORKING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -38129,7 +38129,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MUSIC</TechType>
+					<TechType>TECH_MUSICAL_NOTATION</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -38249,7 +38249,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PHOTOVALTICGLASS</TechType>
+					<TechType>TECH_INTERACTIVE_GLASS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -38644,7 +38644,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PERSONAL_ADORNMENT</TechType>
+					<TechType>TECH_PERSONAL_ADORNMENTS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -38660,7 +38660,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WOOD_WORKING</TechType>
+					<TechType>TECH_WOODWORKING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -38732,7 +38732,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MUSIC</TechType>
+					<TechType>TECH_MUSICAL_NOTATION</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -39386,7 +39386,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PHOTOVALTICGLASS</TechType>
+					<TechType>TECH_INTERACTIVE_GLASS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -39958,7 +39958,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PERSONAL_ADORNMENT</TechType>
+					<TechType>TECH_PERSONAL_ADORNMENTS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -39982,7 +39982,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_BOARDGAMES</TechType>
+					<TechType>TECH_BOARD_GAMES</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -40054,7 +40054,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_STOCK_EXCHANGING</TechType>
+					<TechType>TECH_STOCK_BROKERING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -40066,7 +40066,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_LABOR_UNION</TechType>
+					<TechType>TECH_LABOR_UNIONS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -40098,23 +40098,23 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MEDIAPSYCOLOGY</TechType>
+					<TechType>TECH_MEDIA_PSYCHOLOGY</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MMO</TechType>
+					<TechType>TECH_ONLINE_COMMUNITY</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_FSYSTEMS</TechType>
+					<TechType>TECH_DIGITIZATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_CSPACECRAFT</TechType>
+					<TechType>TECH_COMMERCIAL_SPACEFLIGHT</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_DMERCH</TechType>
+					<TechType>TECH_DIRECT_MERCHANDISING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -40126,7 +40126,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_AUGMENT_CONSUMABLES</TechType>
+					<TechType>TECH_AUGMENTED_CONSUMABLES</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -40138,7 +40138,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_AICITY</TechType>
+					<TechType>TECH_AUTOMATED_URBANIZATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -40527,7 +40527,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PERSONAL_ADORNMENT</TechType>
+					<TechType>TECH_PERSONAL_ADORNMENTS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -40551,7 +40551,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_BOARDGAMES</TechType>
+					<TechType>TECH_BOARD_GAMES</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -40872,7 +40872,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_STOCK_EXCHANGING</TechType>
+					<TechType>TECH_STOCK_BROKERING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -40884,7 +40884,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_LABOR_UNION</TechType>
+					<TechType>TECH_LABOR_UNIONS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -41111,23 +41111,23 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MEDIAPSYCOLOGY</TechType>
+					<TechType>TECH_MEDIA_PSYCHOLOGY</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MMO</TechType>
+					<TechType>TECH_ONLINE_COMMUNITY</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_FSYSTEMS</TechType>
+					<TechType>TECH_DIGITIZATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_CSPACECRAFT</TechType>
+					<TechType>TECH_COMMERCIAL_SPACEFLIGHT</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_DMERCH</TechType>
+					<TechType>TECH_DIRECT_MERCHANDISING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -41139,7 +41139,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_AUGMENT_CONSUMABLES</TechType>
+					<TechType>TECH_AUGMENTED_CONSUMABLES</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -41151,7 +41151,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_AICITY</TechType>
+					<TechType>TECH_AUTOMATED_URBANIZATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -41726,7 +41726,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PERSONAL_ADORNMENT</TechType>
+					<TechType>TECH_PERSONAL_ADORNMENTS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -41750,7 +41750,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_BOARDGAMES</TechType>
+					<TechType>TECH_BOARD_GAMES</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -41822,7 +41822,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_STOCK_EXCHANGING</TechType>
+					<TechType>TECH_STOCK_BROKERING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -41834,7 +41834,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_LABOR_UNION</TechType>
+					<TechType>TECH_LABOR_UNIONS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -41866,23 +41866,23 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MEDIAPSYCOLOGY</TechType>
+					<TechType>TECH_MEDIA_PSYCHOLOGY</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MMO</TechType>
+					<TechType>TECH_ONLINE_COMMUNITY</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_FSYSTEMS</TechType>
+					<TechType>TECH_DIGITIZATION</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_CSPACECRAFT</TechType>
+					<TechType>TECH_COMMERCIAL_SPACEFLIGHT</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_DMERCH</TechType>
+					<TechType>TECH_DIRECT_MERCHANDISING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -41894,7 +41894,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_AUGMENT_CONSUMABLES</TechType>
+					<TechType>TECH_AUGMENTED_CONSUMABLES</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -41906,7 +41906,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_AICITY</TechType>
+					<TechType>TECH_AUTOMATED_URBANIZATION</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -42290,7 +42290,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PERSONAL_ADORNMENT</TechType>
+					<TechType>TECH_PERSONAL_ADORNMENTS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -42314,7 +42314,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_BOARDGAMES</TechType>
+					<TechType>TECH_BOARD_GAMES</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -42628,7 +42628,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_STOCK_EXCHANGING</TechType>
+					<TechType>TECH_STOCK_BROKERING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -42640,7 +42640,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_LABOR_UNION</TechType>
+					<TechType>TECH_LABOR_UNIONS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -42866,23 +42866,23 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MEDIAPSYCOLOGY</TechType>
+					<TechType>TECH_MEDIA_PSYCHOLOGY</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MMO</TechType>
+					<TechType>TECH_ONLINE_COMMUNITY</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_FSYSTEMS</TechType>
+					<TechType>TECH_DIGITIZATION</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_CSPACECRAFT</TechType>
+					<TechType>TECH_COMMERCIAL_SPACEFLIGHT</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_DMERCH</TechType>
+					<TechType>TECH_DIRECT_MERCHANDISING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -42894,7 +42894,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_AUGMENT_CONSUMABLES</TechType>
+					<TechType>TECH_AUGMENTED_CONSUMABLES</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -42906,7 +42906,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_AICITY</TechType>
+					<TechType>TECH_AUTOMATED_URBANIZATION</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -43433,7 +43433,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_DECREES</TechType>
+					<TechType>TECH_WARRANTS_AND_DECREES</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -43461,7 +43461,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_UTOPIA</TechType>
+					<TechType>TECH_COMMUNISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -43493,7 +43493,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WARSIMULATION</TechType>
+					<TechType>TECH_WAR_SIMULATIONS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -43501,11 +43501,11 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_FSYSTEMS</TechType>
+					<TechType>TECH_DIGITIZATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_BRAIN_SCAN</TechType>
+					<TechType>TECH_THOUGHT_SCANNING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -43513,7 +43513,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_EXOCORTEXNETWORKS</TechType>
+					<TechType>TECH_EXOCORTEX_NETWORKS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -43549,11 +43549,11 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ALTERNATE_HISTORY</TechType>
+					<TechType>TECH_ALTERNATE_HISTORY_EXPLORATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_TRUTH_MANIPULATION</TechType>
+					<TechType>TECH_REALITY_REPROGRAMMING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 			</TechResearchModifiers>
@@ -43903,7 +43903,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_DECREES</TechType>
+					<TechType>TECH_WARRANTS_AND_DECREES</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 			</TechResearchModifiers>
@@ -44153,7 +44153,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_UTOPIA</TechType>
+					<TechType>TECH_COMMUNISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -44414,7 +44414,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WARSIMULATION</TechType>
+					<TechType>TECH_WAR_SIMULATIONS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -44422,11 +44422,11 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_FSYSTEMS</TechType>
+					<TechType>TECH_DIGITIZATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_BRAIN_SCAN</TechType>
+					<TechType>TECH_THOUGHT_SCANNING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -44434,7 +44434,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_EXOCORTEXNETWORKS</TechType>
+					<TechType>TECH_EXOCORTEX_NETWORKS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -44470,11 +44470,11 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ALTERNATE_HISTORY</TechType>
+					<TechType>TECH_ALTERNATE_HISTORY_EXPLORATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_TRUTH_MANIPULATION</TechType>
+					<TechType>TECH_REALITY_REPROGRAMMING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 			</TechResearchModifiers>
@@ -44989,7 +44989,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_DECREES</TechType>
+					<TechType>TECH_WARRANTS_AND_DECREES</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -45017,7 +45017,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_UTOPIA</TechType>
+					<TechType>TECH_COMMUNISM</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -45049,7 +45049,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WARSIMULATION</TechType>
+					<TechType>TECH_WAR_SIMULATIONS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -45057,11 +45057,11 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_FSYSTEMS</TechType>
+					<TechType>TECH_DIGITIZATION</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_BRAIN_SCAN</TechType>
+					<TechType>TECH_THOUGHT_SCANNING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -45069,7 +45069,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_EXOCORTEXNETWORKS</TechType>
+					<TechType>TECH_EXOCORTEX_NETWORKS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -45105,11 +45105,11 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ALTERNATE_HISTORY</TechType>
+					<TechType>TECH_ALTERNATE_HISTORY_EXPLORATION</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_TRUTH_MANIPULATION</TechType>
+					<TechType>TECH_REALITY_REPROGRAMMING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 			</TechResearchModifiers>
@@ -45454,7 +45454,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_DECREES</TechType>
+					<TechType>TECH_WARRANTS_AND_DECREES</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 			</TechResearchModifiers>
@@ -45698,7 +45698,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_UTOPIA</TechType>
+					<TechType>TECH_COMMUNISM</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -45958,7 +45958,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WARSIMULATION</TechType>
+					<TechType>TECH_WAR_SIMULATIONS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -45966,11 +45966,11 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_FSYSTEMS</TechType>
+					<TechType>TECH_DIGITIZATION</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_BRAIN_SCAN</TechType>
+					<TechType>TECH_THOUGHT_SCANNING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -45978,7 +45978,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_EXOCORTEXNETWORKS</TechType>
+					<TechType>TECH_EXOCORTEX_NETWORKS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -46014,11 +46014,11 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ALTERNATE_HISTORY</TechType>
+					<TechType>TECH_ALTERNATE_HISTORY_EXPLORATION</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_TRUTH_MANIPULATION</TechType>
+					<TechType>TECH_REALITY_REPROGRAMMING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 			</TechResearchModifiers>
@@ -46706,7 +46706,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MODERNPHYSICS</TechType>
+					<TechType>TECH_MODERN_PHYSICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -46758,7 +46758,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_SUPERSTRINGTHEORY</TechType>
+					<TechType>TECH_SUPERSTRING_THEORY</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -46778,7 +46778,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_NEUROTECHNOLOGY</TechType>
+					<TechType>TECH_GENETIC_BIOCHEMISTRY</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -46790,23 +46790,23 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_THEORICALPHYSICS</TechType>
+					<TechType>TECH_IMAGINARY_PHYSICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GENCYCLOPEDIA</TechType>
+					<TechType>TECH_GENOMIC_ENCYCLOPEDIA</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_BRAIN_SCAN</TechType>
+					<TechType>TECH_THOUGHT_SCANNING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GENEENHANCEMENT</TechType>
+					<TechType>TECH_GENE_ENHANCEMENT</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_EXOCORTEXNETWORKS</TechType>
+					<TechType>TECH_EXOCORTEX_NETWORKS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -46822,7 +46822,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_SINGULARITY</TechType>
+					<TechType>TECH_TECHNOLOGICAL_SINGULARITY</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -47518,7 +47518,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MODERNPHYSICS</TechType>
+					<TechType>TECH_MODERN_PHYSICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -47883,7 +47883,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_SUPERSTRINGTHEORY</TechType>
+					<TechType>TECH_SUPERSTRING_THEORY</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -47903,7 +47903,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_NEUROTECHNOLOGY</TechType>
+					<TechType>TECH_GENETIC_BIOCHEMISTRY</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -47915,23 +47915,23 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_THEORICALPHYSICS</TechType>
+					<TechType>TECH_IMAGINARY_PHYSICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GENCYCLOPEDIA</TechType>
+					<TechType>TECH_GENOMIC_ENCYCLOPEDIA</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_BRAIN_SCAN</TechType>
+					<TechType>TECH_THOUGHT_SCANNING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GENEENHANCEMENT</TechType>
+					<TechType>TECH_GENE_ENHANCEMENT</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_EXOCORTEXNETWORKS</TechType>
+					<TechType>TECH_EXOCORTEX_NETWORKS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -47947,7 +47947,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_SINGULARITY</TechType>
+					<TechType>TECH_TECHNOLOGICAL_SINGULARITY</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -48678,7 +48678,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MODERNPHYSICS</TechType>
+					<TechType>TECH_MODERN_PHYSICS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -48730,7 +48730,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_SUPERSTRINGTHEORY</TechType>
+					<TechType>TECH_SUPERSTRING_THEORY</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -48750,7 +48750,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_NEUROTECHNOLOGY</TechType>
+					<TechType>TECH_GENETIC_BIOCHEMISTRY</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -48762,23 +48762,23 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_THEORICALPHYSICS</TechType>
+					<TechType>TECH_IMAGINARY_PHYSICS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GENCYCLOPEDIA</TechType>
+					<TechType>TECH_GENOMIC_ENCYCLOPEDIA</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_BRAIN_SCAN</TechType>
+					<TechType>TECH_THOUGHT_SCANNING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GENEENHANCEMENT</TechType>
+					<TechType>TECH_GENE_ENHANCEMENT</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_EXOCORTEXNETWORKS</TechType>
+					<TechType>TECH_EXOCORTEX_NETWORKS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -48794,7 +48794,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_SINGULARITY</TechType>
+					<TechType>TECH_TECHNOLOGICAL_SINGULARITY</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -49461,7 +49461,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MODERNPHYSICS</TechType>
+					<TechType>TECH_MODERN_PHYSICS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -49795,7 +49795,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_SUPERSTRINGTHEORY</TechType>
+					<TechType>TECH_SUPERSTRING_THEORY</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -49815,7 +49815,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_NEUROTECHNOLOGY</TechType>
+					<TechType>TECH_GENETIC_BIOCHEMISTRY</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -49827,23 +49827,23 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_THEORICALPHYSICS</TechType>
+					<TechType>TECH_IMAGINARY_PHYSICS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GENCYCLOPEDIA</TechType>
+					<TechType>TECH_GENOMIC_ENCYCLOPEDIA</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_BRAIN_SCAN</TechType>
+					<TechType>TECH_THOUGHT_SCANNING</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GENEENHANCEMENT</TechType>
+					<TechType>TECH_GENE_ENHANCEMENT</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_EXOCORTEXNETWORKS</TechType>
+					<TechType>TECH_EXOCORTEX_NETWORKS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -49859,7 +49859,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_SINGULARITY</TechType>
+					<TechType>TECH_TECHNOLOGICAL_SINGULARITY</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -61177,7 +61177,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MUSIC</TechType>
+					<TechType>TECH_MUSICAL_NOTATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -61221,7 +61221,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MODERN_LIFESTYLE</TechType>
+					<TechType>TECH_ATOMIC_LIFESTYLE</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -61229,7 +61229,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_UTOPIA</TechType>
+					<TechType>TECH_COMMUNISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -61237,7 +61237,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MODERNPHYSICS</TechType>
+					<TechType>TECH_MODERN_PHYSICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -61245,11 +61245,11 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_BIOFUELS</TechType>
+					<TechType>TECH_BIOMATERIALS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_SUPERSTRINGTHEORY</TechType>
+					<TechType>TECH_SUPERSTRING_THEORY</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -61281,7 +61281,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_VASIMR_PROPULSION</TechType>
+					<TechType>TECH_FUSION_SPACECRAFT</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -61289,7 +61289,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ANTIMATTER_ROCKET</TechType>
+					<TechType>TECH_ANTIMATTER_ROCKETS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -61329,7 +61329,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ALTERNATE_HISTORY</TechType>
+					<TechType>TECH_ALTERNATE_HISTORY_EXPLORATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 			</TechResearchModifiers>
@@ -61538,7 +61538,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MUSIC</TechType>
+					<TechType>TECH_MUSICAL_NOTATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -61731,7 +61731,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MODERN_LIFESTYLE</TechType>
+					<TechType>TECH_ATOMIC_LIFESTYLE</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -61739,7 +61739,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_UTOPIA</TechType>
+					<TechType>TECH_COMMUNISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -61747,7 +61747,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MODERNPHYSICS</TechType>
+					<TechType>TECH_MODERN_PHYSICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -61755,11 +61755,11 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_BIOFUELS</TechType>
+					<TechType>TECH_BIOMATERIALS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_SUPERSTRINGTHEORY</TechType>
+					<TechType>TECH_SUPERSTRING_THEORY</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -61896,7 +61896,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_VASIMR_PROPULSION</TechType>
+					<TechType>TECH_FUSION_SPACECRAFT</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -61904,7 +61904,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ANTIMATTER_ROCKET</TechType>
+					<TechType>TECH_ANTIMATTER_ROCKETS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -61944,7 +61944,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ALTERNATE_HISTORY</TechType>
+					<TechType>TECH_ALTERNATE_HISTORY_EXPLORATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 			</TechResearchModifiers>
@@ -62245,7 +62245,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MUSIC</TechType>
+					<TechType>TECH_MUSICAL_NOTATION</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -62289,7 +62289,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MODERN_LIFESTYLE</TechType>
+					<TechType>TECH_ATOMIC_LIFESTYLE</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -62297,7 +62297,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_UTOPIA</TechType>
+					<TechType>TECH_COMMUNISM</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -62305,7 +62305,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MODERNPHYSICS</TechType>
+					<TechType>TECH_MODERN_PHYSICS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -62313,11 +62313,11 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_BIOFUELS</TechType>
+					<TechType>TECH_BIOMATERIALS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_SUPERSTRINGTHEORY</TechType>
+					<TechType>TECH_SUPERSTRING_THEORY</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -62349,7 +62349,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_VASIMR_PROPULSION</TechType>
+					<TechType>TECH_FUSION_SPACECRAFT</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -62357,7 +62357,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ANTIMATTER_ROCKET</TechType>
+					<TechType>TECH_ANTIMATTER_ROCKETS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -62397,7 +62397,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ALTERNATE_HISTORY</TechType>
+					<TechType>TECH_ALTERNATE_HISTORY_EXPLORATION</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 			</TechResearchModifiers>
@@ -62606,7 +62606,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MUSIC</TechType>
+					<TechType>TECH_MUSICAL_NOTATION</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -62798,7 +62798,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MODERN_LIFESTYLE</TechType>
+					<TechType>TECH_ATOMIC_LIFESTYLE</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -62806,7 +62806,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_UTOPIA</TechType>
+					<TechType>TECH_COMMUNISM</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -62814,7 +62814,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MODERNPHYSICS</TechType>
+					<TechType>TECH_MODERN_PHYSICS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -62822,11 +62822,11 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_BIOFUELS</TechType>
+					<TechType>TECH_BIOMATERIALS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_SUPERSTRINGTHEORY</TechType>
+					<TechType>TECH_SUPERSTRING_THEORY</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -62962,7 +62962,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_VASIMR_PROPULSION</TechType>
+					<TechType>TECH_FUSION_SPACECRAFT</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -62970,7 +62970,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ANTIMATTER_ROCKET</TechType>
+					<TechType>TECH_ANTIMATTER_ROCKETS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -63010,7 +63010,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ALTERNATE_HISTORY</TechType>
+					<TechType>TECH_ALTERNATE_HISTORY_EXPLORATION</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 			</TechResearchModifiers>
@@ -66209,7 +66209,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_DECREES</TechType>
+					<TechType>TECH_WARRANTS_AND_DECREES</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -66225,7 +66225,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_JURIS_PRUDENCE</TechType>
+					<TechType>TECH_JURISPRUDENCE</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -66249,7 +66249,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_LABOR_UNION</TechType>
+					<TechType>TECH_LABOR_UNIONS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -66285,7 +66285,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WARSIMULATION</TechType>
+					<TechType>TECH_WAR_SIMULATIONS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -66301,11 +66301,11 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_LEDLIGHTING</TechType>
+					<TechType>TECH_ORGANIC_PHOTONICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_FRESPONSE</TechType>
+					<TechType>TECH_DISASTER_ROBOTS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -66317,7 +66317,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_NANOBOTICS</TechType>
+					<TechType>TECH_NANOROBOTICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -66337,7 +66337,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_CRYOGENICS</TechType>
+					<TechType>TECH_CRYONICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -66787,7 +66787,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_DECREES</TechType>
+					<TechType>TECH_WARRANTS_AND_DECREES</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -67089,7 +67089,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_JURIS_PRUDENCE</TechType>
+					<TechType>TECH_JURISPRUDENCE</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -67113,7 +67113,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_LABOR_UNION</TechType>
+					<TechType>TECH_LABOR_UNIONS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -67397,7 +67397,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WARSIMULATION</TechType>
+					<TechType>TECH_WAR_SIMULATIONS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -67413,11 +67413,11 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_LEDLIGHTING</TechType>
+					<TechType>TECH_ORGANIC_PHOTONICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_FRESPONSE</TechType>
+					<TechType>TECH_DISASTER_ROBOTS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -67429,7 +67429,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_NANOBOTICS</TechType>
+					<TechType>TECH_NANOROBOTICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -67449,7 +67449,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_CRYOGENICS</TechType>
+					<TechType>TECH_CRYONICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -67949,11 +67949,11 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_STOCK_EXCHANGING</TechType>
+					<TechType>TECH_STOCK_BROKERING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ELIXIRS</TechType>
+					<TechType>TECH_ELIXIRS_AND_TONICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -67985,7 +67985,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_COMPUTERS</TechType>
+					<TechType>TECH_PERSONAL_COMPUTERS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -68611,11 +68611,11 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_STOCK_EXCHANGING</TechType>
+					<TechType>TECH_STOCK_BROKERING</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ELIXIRS</TechType>
+					<TechType>TECH_ELIXIRS_AND_TONICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -68647,7 +68647,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_COMPUTERS</TechType>
+					<TechType>TECH_PERSONAL_COMPUTERS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -69434,7 +69434,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_VETERIANARY_MEDICINE</TechType>
+					<TechType>TECH_VETERINARY_MEDICINE</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -69442,7 +69442,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WATERWORKS</TechType>
+					<TechType>TECH_CANAL_SYSTEMS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -69478,7 +69478,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ELIXIRS</TechType>
+					<TechType>TECH_ELIXIRS_AND_TONICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -69518,15 +69518,15 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GENEMANIPULATION</TechType>
+					<TechType>TECH_GENE_MANIPULATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MEDIAPSYCOLOGY</TechType>
+					<TechType>TECH_MEDIA_PSYCHOLOGY</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_NEUROTECHNOLOGY</TechType>
+					<TechType>TECH_GENETIC_BIOCHEMISTRY</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -69534,15 +69534,15 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_TISSUE</TechType>
+					<TechType>TECH_MOLECULAR_MEDICINE</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_FRESPONSE</TechType>
+					<TechType>TECH_DISASTER_ROBOTS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GBIOLOGY</TechType>
+					<TechType>TECH_GENESIS_BIOLOGY</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -69550,7 +69550,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PERSONALIZEDHEALTH</TechType>
+					<TechType>TECH_PERSONALIZED_HEALTH</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -69558,19 +69558,19 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GENEENHANCEMENT</TechType>
+					<TechType>TECH_GENE_ENHANCEMENT</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_AUTOMATEDSERVICES</TechType>
+					<TechType>TECH_AUTOMATED_ROBOTICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GENEJURISPRUDENCE</TechType>
+					<TechType>TECH_GENE_JURISPRUDENCE</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_EXOCORTEXNETWORKS</TechType>
+					<TechType>TECH_EXOCORTEX_NETWORKS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -69578,7 +69578,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ACYBERIMM</TechType>
+					<TechType>TECH_CYBERIMMUNOLOGY</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -69919,7 +69919,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_VETERIANARY_MEDICINE</TechType>
+					<TechType>TECH_VETERINARY_MEDICINE</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -69927,7 +69927,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WATERWORKS</TechType>
+					<TechType>TECH_CANAL_SYSTEMS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -70194,7 +70194,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ELIXIRS</TechType>
+					<TechType>TECH_ELIXIRS_AND_TONICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -70502,15 +70502,15 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GENEMANIPULATION</TechType>
+					<TechType>TECH_GENE_MANIPULATION</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MEDIAPSYCOLOGY</TechType>
+					<TechType>TECH_MEDIA_PSYCHOLOGY</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_NEUROTECHNOLOGY</TechType>
+					<TechType>TECH_GENETIC_BIOCHEMISTRY</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -70518,15 +70518,15 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_TISSUE</TechType>
+					<TechType>TECH_MOLECULAR_MEDICINE</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_FRESPONSE</TechType>
+					<TechType>TECH_DISASTER_ROBOTS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GBIOLOGY</TechType>
+					<TechType>TECH_GENESIS_BIOLOGY</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -70534,7 +70534,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PERSONALIZEDHEALTH</TechType>
+					<TechType>TECH_PERSONALIZED_HEALTH</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -70542,19 +70542,19 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GENEENHANCEMENT</TechType>
+					<TechType>TECH_GENE_ENHANCEMENT</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_AUTOMATEDSERVICES</TechType>
+					<TechType>TECH_AUTOMATED_ROBOTICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GENEJURISPRUDENCE</TechType>
+					<TechType>TECH_GENE_JURISPRUDENCE</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_EXOCORTEXNETWORKS</TechType>
+					<TechType>TECH_EXOCORTEX_NETWORKS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -70562,7 +70562,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ACYBERIMM</TechType>
+					<TechType>TECH_CYBERIMMUNOLOGY</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -71133,7 +71133,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_VETERIANARY_MEDICINE</TechType>
+					<TechType>TECH_VETERINARY_MEDICINE</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -71141,7 +71141,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WATERWORKS</TechType>
+					<TechType>TECH_CANAL_SYSTEMS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -71177,7 +71177,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ELIXIRS</TechType>
+					<TechType>TECH_ELIXIRS_AND_TONICS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -71217,15 +71217,15 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GENEMANIPULATION</TechType>
+					<TechType>TECH_GENE_MANIPULATION</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MEDIAPSYCOLOGY</TechType>
+					<TechType>TECH_MEDIA_PSYCHOLOGY</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_NEUROTECHNOLOGY</TechType>
+					<TechType>TECH_GENETIC_BIOCHEMISTRY</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -71233,15 +71233,15 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_TISSUE</TechType>
+					<TechType>TECH_MOLECULAR_MEDICINE</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_FRESPONSE</TechType>
+					<TechType>TECH_DISASTER_ROBOTS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GBIOLOGY</TechType>
+					<TechType>TECH_GENESIS_BIOLOGY</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -71249,7 +71249,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PERSONALIZEDHEALTH</TechType>
+					<TechType>TECH_PERSONALIZED_HEALTH</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -71257,19 +71257,19 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GENEENHANCEMENT</TechType>
+					<TechType>TECH_GENE_ENHANCEMENT</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_AUTOMATEDSERVICES</TechType>
+					<TechType>TECH_AUTOMATED_ROBOTICS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GENEJURISPRUDENCE</TechType>
+					<TechType>TECH_GENE_JURISPRUDENCE</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_EXOCORTEXNETWORKS</TechType>
+					<TechType>TECH_EXOCORTEX_NETWORKS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -71277,7 +71277,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ACYBERIMM</TechType>
+					<TechType>TECH_CYBERIMMUNOLOGY</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -71621,7 +71621,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_VETERIANARY_MEDICINE</TechType>
+					<TechType>TECH_VETERINARY_MEDICINE</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -71629,7 +71629,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WATERWORKS</TechType>
+					<TechType>TECH_CANAL_SYSTEMS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -71899,7 +71899,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ELIXIRS</TechType>
+					<TechType>TECH_ELIXIRS_AND_TONICS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -72211,15 +72211,15 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GENEMANIPULATION</TechType>
+					<TechType>TECH_GENE_MANIPULATION</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MEDIAPSYCOLOGY</TechType>
+					<TechType>TECH_MEDIA_PSYCHOLOGY</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_NEUROTECHNOLOGY</TechType>
+					<TechType>TECH_GENETIC_BIOCHEMISTRY</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -72227,15 +72227,15 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_TISSUE</TechType>
+					<TechType>TECH_MOLECULAR_MEDICINE</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_FRESPONSE</TechType>
+					<TechType>TECH_DISASTER_ROBOTS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GBIOLOGY</TechType>
+					<TechType>TECH_GENESIS_BIOLOGY</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -72243,7 +72243,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_PERSONALIZEDHEALTH</TechType>
+					<TechType>TECH_PERSONALIZED_HEALTH</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -72251,19 +72251,19 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GENEENHANCEMENT</TechType>
+					<TechType>TECH_GENE_ENHANCEMENT</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_AUTOMATEDSERVICES</TechType>
+					<TechType>TECH_AUTOMATED_ROBOTICS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_GENEJURISPRUDENCE</TechType>
+					<TechType>TECH_GENE_JURISPRUDENCE</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_EXOCORTEXNETWORKS</TechType>
+					<TechType>TECH_EXOCORTEX_NETWORKS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -72271,7 +72271,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_ACYBERIMM</TechType>
+					<TechType>TECH_CYBERIMMUNOLOGY</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
