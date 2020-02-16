@@ -169,12 +169,11 @@ class MapConstants:
 		##############################################################################
 		''' These are values that affect the elevation map,
 		higher numbers give greater chaos and smaller features.'''
-		self.aMainFreq = 1.0
+		self.fBaseFreq = 0.4444
+		self.fLacunarity = 1.48
 		# Roughness boundaries; range: 0-1.
-		self.fMinPersi = 0.40
-		self.fMaxPersi = 0.55
-		# Twist limit; range: 0-fMaxTwist.
-		self.fMaxTwist = 1.0
+		self.fMinPersi = 0.6
+		self.fMaxPersi = 0.8
 		''' They are tricky variables, tweaking them is not easy, nor predictable.'''
 
 		# These set the water temperature compression that creates the land/sea seasonal temperature differences that cause monsoon winds.
@@ -201,11 +200,12 @@ class MapConstants:
 		self.fPolarRainBoost  = .20
 
 		# These attenuation factors lower the altitude of the map edges. Value between 0 an 1.
+		# Low factor means strong attenuation at the edge, attenuation dissipates for each plot in the range.
 		# This is currently used to prevent large continents in the uninhabitable polar regions.
-		self.northAttenuationFactor = .26
+		self.northAttenuationFactor = .40
 		self.northAttenuationRange	= .06
-		self.southAttenuationFactor = .86
-		self.southAttenuationRange	= .26
+		self.southAttenuationFactor = .80
+		self.southAttenuationRange	= .16
 		# East/west attenuation is set to zero, but modded maps may have need for them.east west attenuation may be desired for flat maps. 
 		self.eastAttenuationFactor	= .0
 		self.eastAttenuationRange	= .0
@@ -259,26 +259,6 @@ class MapConstants:
 			self.PeakPercent *= 0.5
 		elif selectionID == 2:
 			self.PeakPercent *= 1.5
-		# Wrap Options
-		self.bWrapX = True
-		self.bWrapY = False
-		self.bAttenuate = True 
-		selectionID = MAP.getCustomMapOption(3)
-		if not selectionID:
-			wrapString = "Cylindrical"
-		elif selectionID == 1:
-			wrapString = "Toroidal"
-			self.bWrapY = True
-			self.bAttenuate = False
-		elif selectionID == 2:
-			wrapString = "Flat"
-			self.bWrapX = False
-			self.northAttenuationFactor = .80
-			self.northAttenuationRange	= .25
-			self.southAttenuationFactor = .80
-			self.southAttenuationRange	= .25
-		else:
-			wrapString = "Undefined"
 		# Landmass Type
 		selectionID = MAP.getCustomMapOption(2)
 		self.bDryland = False
@@ -286,30 +266,53 @@ class MapConstants:
 		self.bEarthlike = False
 		self.bArchipelago = False
 		self.bWaterworld = False
+		self.bAttenuate = True 
 		if not selectionID:
 			self.bDryland = True
 			self.bAttenuate = False
 		elif selectionID == 1:
 			self.bPangea = True
-			self.bAttenuate = True
-			self.aMainFreq = 0.8
-			self.northAttenuationFactor	= .4
-			self.northAttenuationRange	= .2
-			self.southAttenuationFactor	= .6
-			self.southAttenuationRange	= .2
-			self.eastAttenuationFactor	= .4
-			self.eastAttenuationRange	= .2
-			self.westAttenuationFactor	= .4
-			self.westAttenuationRange	= .2
+			self.fBaseFreq *= 0.76
+			self.northAttenuationFactor	= .2
+			self.northAttenuationRange	= .16
+			self.southAttenuationFactor	= .2
+			self.southAttenuationRange	= .16
+			self.eastAttenuationFactor	= .2
+			self.eastAttenuationRange	= .24
+			self.westAttenuationFactor	= .2
+			self.westAttenuationRange	= .24
 		elif selectionID == 2:
 			self.bEarthlike = True
 		elif selectionID == 3:
 			self.bArchipelago = True
-			self.aMainFreq = 1.4
+			self.fBaseFreq *=  1.8
 			self.PeakPercent *= 0.7
 		else:
-			self.PeakPercent *= 0.85
+			self.PeakPercent *= 0.7
 			self.bWaterworld = True
+		# Wrap Options
+		self.bWrapX = True
+		self.bWrapY = False
+		selectionID = MAP.getCustomMapOption(3)
+		if not selectionID:
+			wrapString = "Cylindrical"
+			if self.bPangea:
+				self.eastAttenuationRange	= .30
+				self.westAttenuationRange	= .30
+		elif selectionID == 1:
+			wrapString = "Toroidal"
+			self.bWrapY = True
+			if self.bPangea:
+				self.northAttenuationRange	= .20
+				self.southAttenuationRange	= .20
+				self.eastAttenuationRange	= .30
+				self.westAttenuationRange	= .30
+			else:
+				self.bAttenuate = False
+		elif selectionID == 2:
+			wrapString = "Flat"
+			self.bWrapX = False
+
 		# New World Rules
 		selectionID = MAP.getCustomMapOption(4)
 		if not selectionID or self.bDryland or self.bPangea:
@@ -368,15 +371,12 @@ class MapConstants:
 		self.iWidth		= MAP.getGridWidth()
 		self.iHeight	= MAP.getGridHeight()
 		self.iArea		= self.iWidth * self.iHeight
-		self.iWorldSize	= iWorldSizeLoc = MAP.getWorldSize()
-		# Adjust ElevationMap noisiness according to world size.
-		self.aMainFreq *= 1.10**iWorldSizeLoc / 1.10**7
-		self.fMaxTwist *= 1.15**iWorldSizeLoc / 1.15**7
+		self.iWorldSize	= iWorldSize = MAP.getWorldSize()
 		# Too many meteors will simply destroy the Earth, it also prevent an endless loop if the pangea can't be broken.
-		self.iMaxMeteorCount = 15 + 5 * iWorldSizeLoc
+		self.iMaxMeteorCount = 15 + 5 * iWorldSize
 		# Minimum size for a meteor strike that attemps to break pangaeas.
-		self.iMinMeteorSize = int(round((1.3 + iWorldSizeLoc / 1.3) / (self.bArchipelago * .5 + 1)))
-		self.iMaxMeteorSize = int(round((3 + iWorldSizeLoc) / (self.bArchipelago * .5 + 1)))
+		self.iMinMeteorSize = int(round((1.3 + iWorldSize / 1.3) / (self.bArchipelago * .5 + 1)))
+		self.iMaxMeteorSize = int(round((3 + iWorldSize) / (self.bArchipelago * .5 + 1)))
 		# Climate
 		iClimate = MAP.getClimate()
 		if iClimate == 1: # Tropical, less ice, less desert, more jungle.
@@ -480,7 +480,7 @@ class MapConstants:
 		# Lake size
 #		GC.getDefineINT("")
 		self.iMaxLakesize = GC.getLAKE_MAX_AREA_SIZE()
-#		self.iMaxLakesize = int((1 + iWorldSizeLoc) ** 1.5)
+#		self.iMaxLakesize = int((1 + iWorldSize) ** 1.5)
 #		GC.setDefineINT("LAKE_MAX_AREA_SIZE", self.iMaxLakesize)
 #		GC.setDefineINT("MIN_WATER_SIZE_FOR_OCEAN", self.iMaxLakesize + 1)
 
@@ -674,7 +674,7 @@ class FloatMap:
 	def Normalize(self):
 		# Find highest and lowest values.
 		maxAlt = -1000.0
-		minAlt =  1000.0
+		minAlt = ""
 		iLength = len(self.data)
 		for i in xrange(iLength):
 			alt = self.data[i]
@@ -683,17 +683,14 @@ class FloatMap:
 			if alt < minAlt:
 				minAlt = alt
 		# Subtract minAlt from all values so that all values are zero and above.
-		if minAlt != 0.0:
+		if minAlt > 0.0:
 			for i in xrange(iLength):
 				self.data[i] = self.data[i] - minAlt
 			# Subract minAlt also from maxAlt.
 			maxAlt = maxAlt - minAlt
 		# Determine and apply scaler to whole map.
-		if maxAlt != 1.0:
-			if maxAlt == 0.0:
-				scaler = 0.0
-			else:
-				scaler = 1.0 / maxAlt
+		if maxAlt not in (1.0, 0.0):
+			scaler = 1.0 / maxAlt
 			for i in xrange(iLength):
 				self.data[i] = self.data[i] * scaler
 
@@ -816,11 +813,11 @@ class SimplexNoise4D:
 	_G4 = (5.0 - sqrt(5.0)) / 20.0
 	_F4 = (sqrt(5.0) - 1.0) / 4.0
 
-	def __init__(self, iPeriod = 1024):
+	def __init__(self, iPeriod = 512):
 		# Create permutation tables.
 		self.randomize(iPeriod)
 
-	def randomize(self, iPeriod = 1024):
+	def randomize(self, iPeriod = 512):
 		"""Randomize the permutation table used by the noise functions.
 		The same value is always returned for a given coordinate unless the	permutation table changes."""
 		self.period = iPeriod
@@ -829,26 +826,27 @@ class SimplexNoise4D:
 		# Double permutation array so we don't need to wrap
 		self.perm = permTable * 2
 
-
-	def fBm(self, x, y, z, w, octaves, scale, lacunarity, persistence, min, max):
+	def fBm(self, x, y, z, w, octaves, scale, lacunarity, persistence0, persistence1, fExp=1, min=0, max=1):
 		# fBm - fractal Brownian motion
 		frequency = scale
 		amplitude = 1.0
-		maxAmplit = 0.0
-		noise = 0.0
+		maxAmplit = .0
+		noise = .0
 		#add successively smaller, higher-frequency terms
 		for i in xrange(octaves):
-			noise += self.getNoise(x * frequency, y * frequency * 0.66, z * frequency, w * frequency * 0.66) * amplitude
+			noise += (self.getNoise(x * frequency, y * frequency, z * frequency, w * frequency)/2 + .5) * amplitude
 			maxAmplit += amplitude
-			amplitude *= persistence
-			if amplitude < 0.01:
+			if not i:
+				amplitude *= persistence0
+			else: amplitude *= persistence1
+
+			if amplitude < .1:
 				break
 			frequency *= lacunarity
-		#take the average value of the iterations
-		noise /= maxAmplit
-		#normalize the result
-		return noise * (max - min) / 2.0 + (max + min) / 2.0
-
+		# Normalize within 0-1 and apply exponent
+		noise = (noise / maxAmplit)**fExp
+		# Return scaled to min-max range.
+		return min + noise * (max - min)
 
 	def getNoise(self, x, y, z, w):
 		"""4D Raw Simplex noise.
@@ -1061,107 +1059,92 @@ class ElevationMap(FloatMap):
 		bWrapX = mc.bWrapX
 		bAttenuate = mc.bAttenuate
 		fLandPercent = mc.fLandPercent
-		aMainFreq = mc.aMainFreq
+		iSampling0 = mc.iWorldSize + 1
+		iSampling1 = iSampling0
+		fBaseFreq = mc.fBaseFreq
+		fBaseFreq1 = fBaseFreq*6
+		fLacunarity = mc.fLacunarity
 		# Roughness oscillation.
-		persiFreq = aMainFreq / 1.6
+		fPersFreq = fBaseFreq*6
 		fMinPersi = mc.fMinPersi
 		fMaxPersi = mc.fMaxPersi
-		# Twist oscillation.
-		twistFreq = aMainFreq / 2.8
-		fMaxTwist = mc.fMaxTwist
 		# Noise Maps
 		fPersiNoise = SimplexNoise4D()
-		xTwistNoise = SimplexNoise4D()
-		yTwistNoise = SimplexNoise4D()
-		zTwistNoise = SimplexNoise4D()
-		wTwistNoise = SimplexNoise4D()
 		heightNoise = SimplexNoise4D()
+		detailNoise = SimplexNoise4D()
 		i = -1
 		for y in xrange(iHeightLoc):
-			yP = 1.0*y / iHeightLoc
-			if bWrapY:
-				c2 = cos(yP * 2*pi)
-				c4 = sin(yP * 2*pi)
-				b = c2 * twistFreq
-				d = c4 * twistFreq
-			else:
-				c2 = 4 * yP
-				c4 = -1 + 4 * yP
-				b = cos(yP * 2*pi) * twistFreq
-				d = sin(yP * 2*pi) * twistFreq
+			yP = 1.0 * y/iHeightLoc
+			c2 = cos(yP * 2*pi) + 2
+			c4 = sin(yP * 2*pi) + 4
 			for x in xrange(iWidthLoc):
 				i += 1
-				xP = 1.0*x / iWidthLoc
-				if bWrapX:
-					c1 = cos(xP * 2*pi)
-					c3 = sin(xP * 2*pi)
-					a = c1 * twistFreq
-					c = c3 * twistFreq
+				xP = 1.0 * x/iWidthLoc
+				c1 = cos(xP * 2*pi)*1.1 + 4
+				c3 = sin(xP * 2*pi)*1.1 + 2
+				fPersistence = fPersiNoise.fBm(c1, c2, c3, c4, 6, fPersFreq, 1.2, .6, .5, 2.6, fMinPersi, fMaxPersi)
+				self.data[i] = heightNoise.fBm(c1, c2, c3, c4, 12, fBaseFreq, fLacunarity, fMinPersi, fPersistence)
+				if self.data[i] > 0.75:
+					self.data[i] -= detailNoise.fBm(c1, c2, c3, c4, 6, fBaseFreq1, 1.4, .5, .6, 3, .0, .2)
+				elif self.data[i] > 0.5:
+					self.data[i] += detailNoise.fBm(c1, c2, c3, c4, 6, fBaseFreq1, 1.4, .5, .6, 3, .0, .2)
+				elif self.data[i] > 0.25:
+					self.data[i] -= detailNoise.fBm(c1, c2, c3, c4, 6, fBaseFreq1, 1.4, .5, .6, 3, .0, .2)
 				else:
-					c1 = 4 * xP
-					c3 = -1 + 4 * xP
-					a = cos(xP * 2*pi) * twistFreq
-					c = sin(xP * 2*pi) * twistFreq
-				xTwist = (xTwistNoise.getNoise(a, b, c, d) * .5 + .5) * fMaxTwist
-				yTwist = (yTwistNoise.getNoise(a, b, c, d) * .5 + .5) * fMaxTwist
-				zTwist = (zTwistNoise.getNoise(a, b, c, d) * .5 + .5) * fMaxTwist
-				wTwist = (wTwistNoise.getNoise(a, b, c, d) * .5 + .5) * fMaxTwist
-				persistence = fPersiNoise.fBm(c1, c2, c3, c4, 4, persiFreq, 2, .5, fMinPersi, fMaxPersi)
-				if bWrapY:
-					self.data[i] = heightNoise.fBm(c1 + xTwist, c2 + yTwist, c3 + zTwist, c4 + wTwist, 12, aMainFreq, 2, persistence, .0, 1.0)
-				else:
-					self.data[i] = heightNoise.fBm(c1 + xTwist, 4 * yP + yTwist, c3 + zTwist, 4 * yP + wTwist, 12, aMainFreq, 2, persistence, .0, 1.0)
-		# Attenuation does not break normalization as long as abs(attenuationFactor) < 1.
+					self.data[i] += detailNoise.fBm(c1, c2, c3, c4, 6, fBaseFreq1, 1.4, .5, .6, 3, .0, .2)
+		self.Normalize()
 		if bAttenuate:
+			print "	Attenuating"
+			fMinY = 0.05 * iHeightLoc
+			fMaxY = 0.95 * iHeightLoc
 			fSouthRange	 = mc.southAttenuationRange
 			fNorthRange	 = mc.northAttenuationRange
 			fEastRange	 = mc.eastAttenuationRange
 			fWestRange	 = mc.westAttenuationRange
-			bAttenuation = (fSouthRange + fNorthRange + fEastRange + fWestRange) > 0.0
-			if bAttenuation:
-				print "	Attenuating"
-				fMinY = 0.05 * iHeightLoc
-				fMaxY = 0.95 * iHeightLoc
-				if not fSouthRange:
-					southY = -1
-				else:
-					southY = iHeightLoc * fSouthRange
-					southAtFac = mc.southAttenuationFactor
-					southModY = (1.0 - southAtFac) / southY
-				if not fNorthRange:
-					northY = -1
-				else:
-					northY = (iHeightLoc - 1) - iHeightLoc * fNorthRange
-					northAtFac = mc.northAttenuationFactor
-					northModY = (1.0 - northAtFac) / ((iHeightLoc - 1) - northY)
-				if not fWestRange:
-					fWestX = -1
-				else:
-					fWestX  = iWidthLoc * fWestRange
-					fWestAtFac = mc.westAttenuationFactor
-					fWestModX = (1.0 - fWestAtFac) / fWestX
-				if not fEastRange:
-					fEastX = -1
-				else:
-					fEastX  = (iWidthLoc - 1) - iWidthLoc * fEastRange
-					fEastAtFac = mc.eastAttenuationFactor
-					fEastModX = (1.0 - fEastAtFac) / ((iWidthLoc - 1) - fEastX)
-				i = -1
-				for y in xrange(iHeightLoc):
-					for x in xrange(iWidthLoc):
-						i += 1
-						yAttenuation = 1.0
-						if y <= southY and southY != -1:
-							yAttenuation = southAtFac + southModY * y 
-						if y >= northY and northY != -1:
-							yAttenuation = northAtFac +  northModY * (iHeightLoc - 1 - y)
-						xAttenuation = 1.0
-						if x <= fWestX and fWestX != -1:
-							xAttenuation = fWestAtFac + fWestModX * x
-						if x >= fEastX and fEastX != -1:
-							xAttenuation = fEastAtFac + fEastModX * (iWidthLoc - 1 - x)
-						self.data[i] *= yAttenuation * xAttenuation
-		self.Normalize()
+			if not fNorthRange:
+				northY = -1
+			else:
+				northY = iHeightLoc * fNorthRange
+				northAtFac = mc.northAttenuationFactor
+				northStep = (1-northAtFac) / northY
+
+			if not fSouthRange:
+				southY = -1
+			else:
+				southY = (iHeightLoc - 1) - iHeightLoc * fSouthRange
+				southAtFac = mc.southAttenuationFactor
+				southStep = (1-southAtFac) / (iHeightLoc * fSouthRange)
+
+			if not fWestRange:
+				fWestX = -1
+			else:
+				fWestX  = iWidthLoc * fWestRange
+				fWestAtFac = mc.westAttenuationFactor
+				fWestStep = (1-fWestAtFac) / fWestX
+
+			if not fEastRange:
+				fEastX = -1
+			else:
+				fEastX  = (iWidthLoc - 1) - iWidthLoc * fEastRange
+				fEastAtFac = mc.eastAttenuationFactor
+				fEastStep = (1-fEastAtFac) / (iWidthLoc * fEastRange)
+			i = -1
+			for y in xrange(iHeightLoc):
+				for x in xrange(iWidthLoc):
+					i += 1
+					yAttenuation = 1.0
+					if y < northY:
+						yAttenuation = northAtFac + northStep * y
+					elif y > southY and southY != -1:
+						yAttenuation = southAtFac + southStep * (iHeightLoc - 1 - y)
+
+					xAttenuation = 1.0
+					if x < fWestX:
+						xAttenuation = fWestAtFac + fWestStep * x
+					elif x > fEastX and fEastX != -1:
+						xAttenuation = fEastAtFac + fEastStep * (iWidthLoc - 1 - x)
+					self.data[i] *= yAttenuation * xAttenuation
+
 		self.fLandHeight = FindThresholdFromPercent(self.data, fLandPercent)
 		timer.log()
 		# Handle Pangea and fill in random lakes.

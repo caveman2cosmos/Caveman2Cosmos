@@ -6656,7 +6656,6 @@
 			<bNoImprovement>1</bNoImprovement>
 			<bVisibleAlways>1</bVisibleAlways>
 			<bNukeImmune>1</bNukeImmune>
-			<!-- There was unused Deep Space terrain -->
 			<TerrainBooleans/>
 			<FootstepSounds>
 				<FootstepSound>
