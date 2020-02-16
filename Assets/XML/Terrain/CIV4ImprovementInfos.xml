@@ -1179,14 +1179,14 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1200,21 +1200,21 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1352,14 +1352,14 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1375,7 +1375,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1383,7 +1383,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1391,7 +1391,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1508,14 +1508,14 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1531,7 +1531,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1539,7 +1539,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1547,7 +1547,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1702,14 +1702,14 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1725,7 +1725,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1733,7 +1733,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1741,7 +1741,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1910,14 +1910,14 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1933,7 +1933,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1941,7 +1941,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1949,7 +1949,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -2678,14 +2678,14 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -2699,21 +2699,21 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -3788,7 +3788,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -3796,7 +3796,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -3812,7 +3812,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -3820,7 +3820,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -3828,7 +3828,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -3935,7 +3935,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -3943,7 +3943,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -3959,7 +3959,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -3967,7 +3967,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -3975,7 +3975,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4088,7 +4088,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4096,7 +4096,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4112,7 +4112,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4120,7 +4120,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4128,7 +4128,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4222,7 +4222,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4230,7 +4230,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4246,7 +4246,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4254,7 +4254,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4262,7 +4262,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4351,7 +4351,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4359,7 +4359,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4375,7 +4375,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4383,7 +4383,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4391,7 +4391,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4664,14 +4664,14 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -4687,7 +4687,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -4695,7 +4695,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -4703,7 +4703,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -4862,14 +4862,14 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -4885,7 +4885,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -4893,7 +4893,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -4901,7 +4901,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -5537,7 +5537,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5545,7 +5545,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5561,7 +5561,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5569,7 +5569,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5577,7 +5577,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5755,7 +5755,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5763,7 +5763,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5779,7 +5779,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5787,7 +5787,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5795,7 +5795,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5935,7 +5935,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5943,7 +5943,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5959,7 +5959,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5967,7 +5967,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5975,7 +5975,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -7779,7 +7779,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -7787,7 +7787,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -7803,7 +7803,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -7811,7 +7811,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -7819,7 +7819,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -8051,7 +8051,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -8059,7 +8059,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -8075,7 +8075,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -8083,7 +8083,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -8091,7 +8091,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -9406,7 +9406,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -9414,7 +9414,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -9430,7 +9430,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -9438,7 +9438,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -9446,7 +9446,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -10125,7 +10125,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -10133,7 +10133,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -10149,7 +10149,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -10157,7 +10157,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -10165,7 +10165,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -11932,14 +11932,14 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -11953,21 +11953,21 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -12272,14 +12272,14 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -12293,21 +12293,21 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -12599,14 +12599,14 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -12620,21 +12620,21 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -12983,14 +12983,14 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -13004,21 +13004,21 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -13386,14 +13386,14 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -13407,21 +13407,21 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>

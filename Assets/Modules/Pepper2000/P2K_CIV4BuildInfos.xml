@@ -53,7 +53,7 @@
 			<iTime>600</iTime>
 			<iCost>200</iCost>
 			<bKill>0</bKill>
-			<RouteType>ROUTE_MICROWORMHOLE</RouteType>
+			<RouteType>ROUTE_COMPACT_WORMHOLE</RouteType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
 			<HotKey>KB_R</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
@@ -66,7 +66,7 @@
 			<iTime>600</iTime>
 			<iCost>200</iCost>
 			<bKill>0</bKill>
-			<RouteType>ROUTE_MEGAWORMHOLE_ROUTE</RouteType>
+			<RouteType>ROUTE_MEGAWORMHOLE</RouteType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
 			<HotKey>KB_R</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>

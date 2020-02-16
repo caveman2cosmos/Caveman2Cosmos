@@ -178,11 +178,11 @@
 			<RoutesRequired>
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
-				<RouteType>ROUTE_GRAVTUBE</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+				<RouteType>ROUTE_MAGLEV</RouteType>
 				<RouteType>ROUTE_JUMPLANE</RouteType>
 			</RoutesRequired>
 			<Events>
@@ -211,10 +211,10 @@
 			<RoutesRequired>
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			</RoutesRequired>
 			<Events>
 				<Event>EVENT_WASHED_OUT_1</Event>
@@ -613,10 +613,10 @@
 				<RouteType>ROUTE_TRAIL</RouteType>
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			</RoutesRequired>
 			<Events>
 				<Event>EVENT_FARM_BANDITS_1</Event>
@@ -658,10 +658,10 @@
 			<RoutesRequired>
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			</RoutesRequired>
 			<Events>
 				<Event>EVENT_FARM_BANDITS_1</Event>
@@ -1568,11 +1568,11 @@
 				<RouteType>ROUTE_TRAIL</RouteType>
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
-				<RouteType>ROUTE_GRAVTUBE</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+				<RouteType>ROUTE_MAGLEV</RouteType>
 				<RouteType>ROUTE_JUMPLANE</RouteType>
 			</RoutesRequired>
 			<Events>
@@ -1732,11 +1732,11 @@
 				<RouteType>ROUTE_TRAIL</RouteType>
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
-				<RouteType>ROUTE_GRAVTUBE</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+				<RouteType>ROUTE_MAGLEV</RouteType>
 				<RouteType>ROUTE_JUMPLANE</RouteType>
 			</RoutesRequired>
 			<Events>
@@ -1829,11 +1829,11 @@
 			<RoutesRequired>
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
-				<RouteType>ROUTE_GRAVTUBE</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+				<RouteType>ROUTE_MAGLEV</RouteType>
 				<RouteType>ROUTE_JUMPLANE</RouteType>
 			</RoutesRequired>
 			<Events>
@@ -2201,11 +2201,11 @@
 				<RouteType>ROUTE_TRAIL</RouteType>
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
-				<RouteType>ROUTE_GRAVTUBE</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+				<RouteType>ROUTE_MAGLEV</RouteType>
 				<RouteType>ROUTE_JUMPLANE</RouteType>
 			</RoutesRequired>
 			<Events>
@@ -2428,11 +2428,11 @@
 				<RouteType>ROUTE_TRAIL</RouteType>
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
-				<RouteType>ROUTE_GRAVTUBE</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+				<RouteType>ROUTE_MAGLEV</RouteType>
 				<RouteType>ROUTE_JUMPLANE</RouteType>
 			</RoutesRequired>
 			<Events>
@@ -3705,11 +3705,11 @@
 				<RouteType>ROUTE_TRAIL</RouteType>
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
-				<RouteType>ROUTE_GRAVTUBE</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+				<RouteType>ROUTE_MAGLEV</RouteType>
 				<RouteType>ROUTE_JUMPLANE</RouteType>
 			</RoutesRequired>
 			<Events>
@@ -3870,11 +3870,11 @@
 				<RouteType>ROUTE_TRAIL</RouteType>
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
-				<RouteType>ROUTE_GRAVTUBE</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+				<RouteType>ROUTE_MAGLEV</RouteType>
 				<RouteType>ROUTE_JUMPLANE</RouteType>
 			</RoutesRequired>
 			<Events>
@@ -4023,11 +4023,11 @@
 			<RoutesRequired>
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
-				<RouteType>ROUTE_GRAVTUBE</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+				<RouteType>ROUTE_MAGLEV</RouteType>
 				<RouteType>ROUTE_JUMPLANE</RouteType>
 			</RoutesRequired>
 			<Events>
@@ -4068,11 +4068,11 @@
 			<RoutesRequired>
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
-				<RouteType>ROUTE_GRAVTUBE</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+				<RouteType>ROUTE_MAGLEV</RouteType>
 				<RouteType>ROUTE_JUMPLANE</RouteType>
 			</RoutesRequired>
 			<Events>
@@ -4115,11 +4115,11 @@
 			</BonusesRequired>
 			<RoutesRequired>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
-				<RouteType>ROUTE_GRAVTUBE</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+				<RouteType>ROUTE_MAGLEV</RouteType>
 				<RouteType>ROUTE_JUMPLANE</RouteType>
 			</RoutesRequired>
 			<Events>
@@ -4162,11 +4162,11 @@
 				<RouteType>ROUTE_TRAIL</RouteType>
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
-				<RouteType>ROUTE_GRAVTUBE</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+				<RouteType>ROUTE_MAGLEV</RouteType>
 				<RouteType>ROUTE_JUMPLANE</RouteType>
 			</RoutesRequired>
 			<Events>
@@ -4229,11 +4229,11 @@
 				<RouteType>ROUTE_TRAIL</RouteType>
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
-				<RouteType>ROUTE_GRAVTUBE</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+				<RouteType>ROUTE_MAGLEV</RouteType>
 				<RouteType>ROUTE_JUMPLANE</RouteType>
 			</RoutesRequired>
 			<Events>
@@ -6981,11 +6981,11 @@
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_TRAIL</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
-				<RouteType>ROUTE_GRAVTUBE</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+				<RouteType>ROUTE_MAGLEV</RouteType>
 				<RouteType>ROUTE_JUMPLANE</RouteType>
 			</RoutesRequired>
 			<Events>

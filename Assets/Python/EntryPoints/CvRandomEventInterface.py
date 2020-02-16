@@ -1459,7 +1459,7 @@ def getHelpInterstate(argsList):
   iEvent = argsList[0]
   kTriggeredData = argsList[1]
 
-  szHelp = TRNSLTR.getText("TXT_KEY_UNIT_MOVEMENT", (1, GC.getRouteInfo(GC.getInfoTypeForString("ROUTE_MODERN_ROAD")).getTextKey()))
+  szHelp = TRNSLTR.getText("TXT_KEY_UNIT_MOVEMENT", (1, GC.getRouteInfo(GC.getInfoTypeForString("ROUTE_HIGHWAY")).getTextKey()))
 
   return szHelp
 
@@ -1469,7 +1469,7 @@ def applyInterstate(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
   team = GC.getTeam(player.getTeam())
 
-  iRoad = GC.getInfoTypeForString("ROUTE_MODERN_ROAD")
+  iRoad = GC.getInfoTypeForString("ROUTE_HIGHWAY")
 
   team.changeRouteChange(iRoad, -5)
 

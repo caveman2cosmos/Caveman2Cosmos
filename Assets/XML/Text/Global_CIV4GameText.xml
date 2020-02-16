@@ -3530,8 +3530,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_GRAVTUBE</Tag>
-		<English>Build [LINK=ROUTE_GRAVTUBE]Maglev[\LINK]</English>
-		<French>Construire un [LINK=ROUTE_GRAVTUBE]Maglev[\LINK]</French>
+		<English>Build [LINK=ROUTE_MAGLEV]Maglev[\LINK]</English>
+		<French>Construire un [LINK=ROUTE_MAGLEV]Maglev[\LINK]</French>
 		<German>Magnetbahn bauen</German>
 		<Italian>Costruisci una linea Maglev</Italian>
 		<Spanish>Construir un Ferrocarril de levitación magnética</Spanish>
@@ -3611,8 +3611,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HIGHWAY</Tag>
-		<English>Build [LINK=ROUTE_MODERN_ROAD]Highway[\LINK]</English>
-		<French>Construire une [LINK=ROUTE_MODERN_ROAD]Autoroute[\LINK]</French>
+		<English>Build [LINK=ROUTE_HIGHWAY]Highway[\LINK]</English>
+		<French>Construire une [LINK=ROUTE_HIGHWAY]Autoroute[\LINK]</French>
 		<German>Schnellstraße bauen</German>
 		<Italian>Costruisci un'autostrada</Italian>
 		<Spanish>Construir una Autopista</Spanish>
@@ -3860,8 +3860,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PAVED</Tag>
-		<English>Build [LINK=ROUTE_PAVED]Paved Road[\LINK]</English>
-		<French>Construire une [LINK=ROUTE_PAVED]Route Pavée[\LINK]</French>
+		<English>Build [LINK=ROUTE_PAVED_ROAD]Paved Road[\LINK]</English>
+		<French>Construire une [LINK=ROUTE_PAVED_ROAD]Route Pavée[\LINK]</French>
 		<German>Gepflasterte Straße bauen</German>
 		<Italian>Costruisci una strada pavimentata</Italian>
 		<Spanish>Construir un Camino pavimentado</Spanish>
@@ -3935,8 +3935,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_RAILROAD_ELECTRIC</Tag>
-		<English>Build [LINK=ROUTE_RAILROAD_ELECTRIC]Electric Railroad[\LINK]</English>
-		<French>Construire un [LINK=ROUTE_RAILROAD_ELECTRIC]Chemin de Fer électrique[\LINK]</French>
+		<English>Build [LINK=ROUTE_ELECTRIC_RAILROAD]Electric Railroad[\LINK]</English>
+		<French>Construire un [LINK=ROUTE_ELECTRIC_RAILROAD]Chemin de Fer électrique[\LINK]</French>
 		<German>Baue eine elektrifizierte Eisenbahn</German>
 		<Italian>Costruisci una ferrovia elettrica</Italian>
 		<Spanish>Construir un Ferrocarril eléctrico</Spanish>
@@ -19638,7 +19638,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>[ICON_BULLET]Podstawowy koszt ruchu: Wszystkie jednostki mogą poruszyć się o %d1_Change pól wzdłuż tej drogi.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ROUTE_GRAVTUBE</Tag>
+		<Tag>TXT_KEY_ROUTE_MAGLEV</Tag>
 		<English>Maglev</English>
 		<French>Tube Maglev</French>
 		<German>Magnetbahn</German>
@@ -19704,7 +19704,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Ścieżka</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ROUTE_PAVED</Tag>
+		<Tag>TXT_KEY_ROUTE_PAVED_ROAD</Tag>
 		<English>Paved Road</English>
 		<French>Route pavée</French>
 		<German>Gepflasterte Straße</German>
@@ -19742,7 +19742,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Tory Kolejowe</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ROUTE_RAILROAD_ELECTRIC</Tag>
+		<Tag>TXT_KEY_ROUTE_ELECTRIC_RAILROAD</Tag>
 		<English>Electric Railroad</English>
 		<French>Chemin de Fer électrique</French>
 		<German>Elektrifizierte Eisenbahn</German>
@@ -26645,8 +26645,8 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<!-- Pepper's routes are used as yield boosters in improvements. They are here so Pepper's module can be turned off. -->
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HYPERLOOP</Tag>
-		<English>Build [LINK=ROUTE_HYPERLOOP]Vactrain[\LINK]</English>
-		<French>[LINK=ROUTE_HYPERLOOP]Construire Train Hyperloop[\LINK]</French>
+		<English>Build [LINK=ROUTE_VACTRAIN]Vactrain[\LINK]</English>
+		<French>[LINK=ROUTE_VACTRAIN]Construire Train Hyperloop[\LINK]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_GRAVITY_TRAIN</Tag>
@@ -26654,7 +26654,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<French>Construire [LINK=ROUTE_GRAVITY_TRAIN]Train à Gravité[\LINK]</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ROUTE_HYPERLOOP</Tag>
+		<Tag>TXT_KEY_ROUTE_VACTRAIN</Tag>
 		<English>Vactrain</English>
 		<French>Train Hyperloop</French>
 	</TEXT>

@@ -1022,11 +1022,11 @@
 		<English>Wormhole</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ROUTE_MICROWORMHOLE</Tag>
+		<Tag>TXT_KEY_ROUTE_COMPACT_WORMHOLE</Tag>
 		<English>Compact Wormhole</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ROUTE_MEGAWORMHOLE_ROUTE</Tag>
+		<Tag>TXT_KEY_ROUTE_MEGAWORMHOLE</Tag>
 		<English>Megawormhole</English>
 	</TEXT>
 	<TEXT>
@@ -1051,11 +1051,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MICROWORMHOLE</Tag>
-		<English>Build [LINK=ROUTE_MICROWORMHOLE]Micro-Wormhole[\LINK]</English>
+		<English>Build [LINK=ROUTE_COMPACT_WORMHOLE]Micro-Wormhole[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MEGAWORMHOLE_ROUTE</Tag>
-		<English>Build [LINK=ROUTE_MEGAWORMHOLE_ROUTE]Megawormhole[\LINK]</English>
+		<English>Build [LINK=ROUTE_MEGAWORMHOLE]Megawormhole[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HYPERLANE</Tag>

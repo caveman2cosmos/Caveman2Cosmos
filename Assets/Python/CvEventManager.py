@@ -1745,7 +1745,7 @@ class CvEventManager:
 				iBuilding = GC.getInfoTypeForString("BUILDING_ROUTE_66_TERMINUS")
 				if iBuilding > -1:
 					CyCityDo.setNumRealBuilding(iBuilding, 1)
-				iRoute = GC.getInfoTypeForString("ROUTE_MODERN_ROAD")
+				iRoute = GC.getInfoTypeForString("ROUTE_HIGHWAY")
 				if iRoute > -1:
 					for k in xrange(MAP.getLastPathStepNum()):
 						pRoutePlot = MAP.getLastPathPlotByIndex(k)
@@ -1756,9 +1756,9 @@ class CvEventManager:
 			if iUnit < 0:
 				print "Error CvEventManager.onBuildingBuilt\n\tUNIT_WORKER doesn't exist, aborting python effect for Appian Way"
 				return
-			iRoute = GC.getInfoTypeForString("ROUTE_PAVED")
+			iRoute = GC.getInfoTypeForString("ROUTE_PAVED_ROAD")
 			if iRoute < 0:
-				print "Error CvEventManager.onBuildingBuilt\n\tROUTE_PAVED doesn't exist, aborting python effect for Appian Way"
+				print "Error CvEventManager.onBuildingBuilt\n\tROUTE_PAVED_ROAD doesn't exist, aborting python effect for Appian Way"
 				return
 			if iPlayer == GAME.getActivePlayer():
 				CvUtil.sendMessage(TRNSLTR.getText("TXT_APPIAN_BUILT",()), iPlayer)

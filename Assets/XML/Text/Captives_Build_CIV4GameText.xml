@@ -580,7 +580,7 @@
 		<Polish>Zbuduj Kamienn Drog (Prace Przym.)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ROUTE_PAVED_SLAVE</Tag>
+		<Tag>TXT_KEY_ROUTE_PAVED_ROAD_SLAVE</Tag>
 		<English>Paved Road (Forced)</English>
 		<French>Route pavée (Forcé)</French>
 		<German>Zwangsarbeit - Gepflasterte Straße</German>
@@ -590,7 +590,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HIGHWAY_SLAVE</Tag>
-		<English>Build [LINK=ROUTE_MODERN_ROAD]Highway[\LINK] (Forced)</English>
+		<English>Build [LINK=ROUTE_HIGHWAY]Highway[\LINK] (Forced)</English>
 		<French>Construire une [COLOR_BUILDING_TEXT]Autoroute[COLOR_REVERT] (Forcé)</French>
 		<German>Zwangsarbeit - Schnellstraße bauen</German>
 		<Italian>Costruisci un'autostrada (Schiavo)</Italian>
@@ -608,7 +608,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_RAILROAD_ELECTRIC_SLAVE</Tag>
-		<English>Build [LINK=ROUTE_RAILROAD_ELECTRIC]Electric Railroad[\LINK] (Forced)</English>
+		<English>Build [LINK=ROUTE_ELECTRIC_RAILROAD]Electric Railroad[\LINK] (Forced)</English>
 		<French>Construire un [COLOR_BUILDING_TEXT]Chemin de Fer électrique[COLOR_REVERT] (Forcé)</French>
 		<German>Zwangsarbeit - Baue eine elektrifizierte Eisenbahn</German>
 		<Italian>Costruisci una ferrovia elettrica (Schiavo)</Italian>
@@ -626,7 +626,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_GRAVTUBE_SLAVE</Tag>
-		<English>Build [LINK=ROUTE_GRAVTUBE]Maglev[\LINK] (Forced)</English>
+		<English>Build [LINK=ROUTE_MAGLEV]Maglev[\LINK] (Forced)</English>
 		<French>Construire un [COLOR_BUILDING_TEXT]Tube Maglev[COLOR_REVERT] (Forcé)</French>
 		<German>Zwangsarbeit - Magnetbahn bauen</German>
 		<Italian>Costruisci una linea Maglev (Schiavo)</Italian>
@@ -634,7 +634,7 @@
 		<Polish>Zbuduj Maglev (Prace Przym.)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ROUTE_GRAVTUBE_SLAVE</Tag>
+		<Tag>TXT_KEY_ROUTE_MAGLEV_SLAVE</Tag>
 		<English>Maglev (Forced)</English>
 		<French>Tube Maglev (Forcé)</French>
 		<German>Zwangsarbeit - Magnetbahn</German>

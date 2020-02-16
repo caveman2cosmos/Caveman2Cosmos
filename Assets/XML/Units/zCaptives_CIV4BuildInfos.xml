@@ -701,7 +701,7 @@
 			<iTime>250</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
 			<FeatureStructs/>
 			<HotKey>KB_R</HotKey>
@@ -716,7 +716,7 @@
 			<iTime>1</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
 			<FeatureStructs/>
 			<HotKey>KB_R</HotKey>
@@ -744,7 +744,7 @@
 			<iTime>400</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<EntityEvent>ENTITY_EVENT_RAILROAD</EntityEvent>
 			<FeatureStructs/>
 			<HotKey>KB_R</HotKey>
@@ -759,7 +759,7 @@
 			<iTime>600</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
 			<FeatureStructs/>
 			<HotKey>KB_R</HotKey>
