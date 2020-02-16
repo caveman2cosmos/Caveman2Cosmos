@@ -2441,7 +2441,32 @@ public:
 	// Algorithm/range helpers
 	//
 	struct fn {
+		DECLARE_MAP_FUNCTOR(CvCity, bool, hasOrbitalInfrastructure);
+		DECLARE_MAP_FUNCTOR(CvCity, bool, isConnectedToCapital);
+		DECLARE_MAP_FUNCTOR(CvCity, bool, isGovernmentCenter);
+
+		DECLARE_MAP_FUNCTOR(CvCity, int, getRealPopulation);
+		DECLARE_MAP_FUNCTOR(CvCity, int, goodHealth);
+		DECLARE_MAP_FUNCTOR(CvCity, int, badHealth);
+		DECLARE_MAP_FUNCTOR(CvCity, int, happyLevel);
+		DECLARE_MAP_FUNCTOR(CvCity, int, unhappyLevel);
+
+		DECLARE_MAP_FUNCTOR(CvCity, const CvArea*, area);
+		DECLARE_MAP_FUNCTOR(CvCity, const CvPlot*, plot);
+
+		DECLARE_MAP_FUNCTOR_1(CvCity, bool, canConstruct, BuildingTypes);
+		DECLARE_MAP_FUNCTOR_1(CvCity, bool, canTrain, UnitTypes);
+		DECLARE_MAP_FUNCTOR_1(CvCity, bool, isHasReligion, ReligionTypes);
+		DECLARE_MAP_FUNCTOR_1(CvCity, bool, isHasCorporation, CorporationTypes);
+		DECLARE_MAP_FUNCTOR_1(CvCity, bool, hasBonus, BonusTypes);
+		DECLARE_MAP_FUNCTOR_1(CvCity, bool, isCoastal, int);
+
+		DECLARE_MAP_FUNCTOR_1(CvCity, int, getBaseCommerceRateTimes100, CommerceTypes);
+		DECLARE_MAP_FUNCTOR_1(CvCity, int, getCultureTimes100, PlayerTypes);
 		DECLARE_MAP_FUNCTOR_1(CvCity, int, getNumBuilding, BuildingTypes);
+		DECLARE_MAP_FUNCTOR_1(CvCity, int, getYieldRate, YieldTypes);
+
+		DECLARE_MAP_FUNCTOR_1(CvCity, const CvPlotGroup*, plotGroup, PlayerTypes);
 	};
 };
 

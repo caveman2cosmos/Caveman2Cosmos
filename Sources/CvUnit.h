@@ -3341,6 +3341,7 @@ public:
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, alwaysInvisible);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, IsSelected);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isCommander);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isGoldenAge);
 		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, hasAfflictionLine, PromotionLineTypes);
 
 		DECLARE_MAP_FUNCTOR_1(CvUnit, int, upgradePrice, UnitTypes);
@@ -3352,7 +3353,10 @@ public:
 		DECLARE_MAP_FUNCTOR(CvUnit, UnitTypes, getUnitType);
 		DECLARE_MAP_FUNCTOR(CvUnit, UnitCombatTypes, getUnitCombatType);
 
+		DECLARE_MAP_FUNCTOR(CvUnit, int, getArea);
+		DECLARE_MAP_FUNCTOR(CvUnit, const CvArea*, area);
 		DECLARE_MAP_FUNCTOR(CvUnit, const CvPlot*, plot);
+		DECLARE_MAP_FUNCTOR(CvUnit, const CvUnitInfo&, getUnitInfo);
 		DECLARE_MAP_FUNCTOR(CvUnit, BuildTypes, getBuildType);
 		DECLARE_MAP_FUNCTOR(CvUnit, ImprovementTypes, getBuildTypeImprovement);
 		DECLARE_MAP_FUNCTOR(CvUnit, int, getCargo);
