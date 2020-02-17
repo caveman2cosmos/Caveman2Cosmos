@@ -46,7 +46,7 @@
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
 					<!-- culture bump from palace-like furnishings and building materials -->
-					<BonusType>BONUS_GLASS</BonusType>
+					<BonusType>BONUS_GLASSWARE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -62,7 +62,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -70,7 +70,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_WARE_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_WARES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -94,7 +94,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_WARES_PORCELAIN</BonusType>
+					<BonusType>BONUS_PORCELAIN_WARES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -126,7 +126,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_RED_AND_BLACK</BonusType>
+					<BonusType>BONUS_RED_AND_BLACK_WARE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -134,7 +134,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_WARE_SILVER</BonusType>
+					<BonusType>BONUS_SILVER_WARES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -142,7 +142,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_WARE_BRASS</BonusType>
+					<BonusType>BONUS_BRASS_WARES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -150,7 +150,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_SCULPTURE_NOK</BonusType>
+					<BonusType>BONUS_NOK_SCULPTURES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -182,15 +182,15 @@
 					<iProductonModifier>25</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_STEEL</BonusType>
+					<BonusType>BONUS_STEEL_WARES</BonusType>
 					<iProductonModifier>25</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -433,19 +433,19 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_VINTAGE_RED_WINE</BonusType>
+					<BonusType>BONUS_WINE_VINTAGE_RED</BonusType>
 					<CommerceModifiers>
 						<iCommerce>-2</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_VINTAGE_WHITE_WINE</BonusType>
+					<BonusType>BONUS_WINE_VINTAGE_WHITE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>-2</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_CHAMPAGNE</BonusType>
+					<BonusType>BONUS_WINE_CHAMPAGNE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>-2</iCommerce>
 					</CommerceModifiers>
@@ -457,7 +457,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<CommerceModifiers>
 						<iCommerce>-1</iCommerce>
 					</CommerceModifiers>
@@ -478,7 +478,7 @@
 				<!-- Mormons consume more chocolate than the average American -->
 				<!-- these are the accepted Mormon "vice" foods -->
 				<BonusCommerceModifier>
-					<BonusType>BONUS_ICECREAM</BonusType>
+					<BonusType>BONUS_ICE_CREAM</BonusType>
 					<CommerceModifiers>
 						<iCommerce>8</iCommerce>
 					</CommerceModifiers>
@@ -537,14 +537,14 @@
 			<BonusHealthChanges>
 				<!-- olive oil used in Mormon priesthood healings -->
 				<BonusHealthChange>
-					<BonusType>BONUS_OLIVEOIL</BonusType>
+					<BonusType>BONUS_OLIVE_OIL</BonusType>
 					<iHealthChange>2</iHealthChange>
 				</BonusHealthChange>
 			</BonusHealthChanges>
 			<BonusHappinessChanges>
 				<!-- ice cream and soda pop replace alcohol as social lubricantS for Mormons -->
 				<BonusHappinessChange>
-					<BonusType>BONUS_ICECREAM</BonusType>
+					<BonusType>BONUS_ICE_CREAM</BonusType>
 					<iHappinessChange>2</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
@@ -653,7 +653,7 @@
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
 					<!-- cultural bump from palace-quality fine materials and furnishings -->
-					<BonusType>BONUS_GLASS</BonusType>
+					<BonusType>BONUS_GLASSWARE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -669,7 +669,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -677,7 +677,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_WARE_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_WARES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -701,7 +701,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_WARES_PORCELAIN</BonusType>
+					<BonusType>BONUS_PORCELAIN_WARES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -733,7 +733,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_RED_AND_BLACK</BonusType>
+					<BonusType>BONUS_RED_AND_BLACK_WARE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -741,7 +741,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_WARE_SILVER</BonusType>
+					<BonusType>BONUS_SILVER_WARES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -749,7 +749,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_WARE_BRASS</BonusType>
+					<BonusType>BONUS_BRASS_WARES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -757,7 +757,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_SCULPTURE_NOK</BonusType>
+					<BonusType>BONUS_NOK_SCULPTURES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -766,7 +766,7 @@
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
 					<!-- culture bump from symphony at temple square -->
-					<BonusType>BONUS_BRASS</BonusType>
+					<BonusType>BONUS_BRASS_INSTRUMENTS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -774,7 +774,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_PERCUSSION</BonusType>
+					<BonusType>BONUS_PERCUSSION_INSTRUMENTS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -782,7 +782,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_STRINGS</BonusType>
+					<BonusType>BONUS_STRING_INSTRUMENTS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -790,7 +790,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_WOODWINDS</BonusType>
+					<BonusType>BONUS_WOODWIND_INSTRUMENTS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -834,15 +834,15 @@
 					<iProductonModifier>25</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_STEEL</BonusType>
+					<BonusType>BONUS_STEEL_WARES</BonusType>
 					<iProductonModifier>25</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -939,11 +939,11 @@
 					<iProductonModifier>25</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_STEEL</BonusType>
+					<BonusType>BONUS_STEEL_WARES</BonusType>
 					<iProductonModifier>25</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -1049,7 +1049,7 @@
 					<iHealthChange>1</iHealthChange>
 				</BonusHealthChange>
 				<BonusHealthChange>
-					<BonusType>BONUS_WATERBOTTLE</BonusType>
+					<BonusType>BONUS_WATER_BOTTLES</BonusType>
 					<iHealthChange>1</iHealthChange>
 				</BonusHealthChange>
 				<BonusHealthChange>
@@ -1061,7 +1061,7 @@
 					<iHealthChange>1</iHealthChange>
 				</BonusHealthChange>
 				<BonusHealthChange>
-					<BonusType>BONUS_CLOTHES</BonusType>
+					<BonusType>BONUS_CLOTHING</BonusType>
 					<iHealthChange>1</iHealthChange>
 				</BonusHealthChange>
 				<BonusHealthChange>
@@ -1099,7 +1099,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_MARXISM</PrereqTech>
 			</TechTypes>
-			<Bonus>BONUS_WARE_STEEL</Bonus>
+			<Bonus>BONUS_STEEL_WARES</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_CEMENT</Bonus>
 				<Bonus>BONUS_BRICKS</Bonus>

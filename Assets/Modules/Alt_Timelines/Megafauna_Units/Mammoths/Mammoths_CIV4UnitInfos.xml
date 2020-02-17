@@ -720,7 +720,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>

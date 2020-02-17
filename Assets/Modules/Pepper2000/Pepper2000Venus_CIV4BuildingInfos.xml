@@ -291,7 +291,7 @@
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 			<bPrereqPower>1</bPrereqPower>
-			<FreeBonus>BONUS_ROCKETFUEL</FreeBonus>
+			<FreeBonus>BONUS_ROCKET_FUEL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -358,7 +358,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WARE_COPPER</FreeBonus>
+					<FreeBonus>BONUS_COPPER_WARES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -525,7 +525,7 @@
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
-			<Bonus>BONUS_ROCKETFUEL</Bonus>
+			<Bonus>BONUS_ROCKET_FUEL</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_VENUS_DEUTERIUM_EXPORTER</BuildingClass>

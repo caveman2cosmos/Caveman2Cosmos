@@ -231,8 +231,8 @@
 				</PrereqBuildingClass>
 			</PrereqBuildingClasses>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<!-- Obsolescence -->
 			<UnitClassUpgrades>
@@ -367,8 +367,8 @@
 				</PrereqBuildingClass>
 			</PrereqBuildingClasses>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>

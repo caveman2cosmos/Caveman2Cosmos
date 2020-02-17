@@ -140,10 +140,10 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
-				<Bonus>BONUS_CLAY</Bonus>
+				<Bonus>BONUS_COMMON_CLAY</Bonus>
 				<Bonus>BONUS_WOOD</Bonus>
-				<Bonus>BONUS_TIMBER</Bonus>
-				<Bonus>BONUS_WARE_TIN</Bonus>
+				<Bonus>BONUS_PRIME_TIMBER</Bonus>
+				<Bonus>BONUS_TIN_WARES</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>

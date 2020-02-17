@@ -42,9 +42,9 @@ resourcesWater = ('BONUS_CLAM', 'BONUS_FISH', 'BONUS_WHALE', 'BONUS_CRAB', 'BONU
 #these resources should be given more often than others
 resourcesCommon = ('BONUS_CORN', 'BONUS_COW', 'BONUS_DEER', 'BONUS_PIG', 'BONUS_RICE', 'BONUS_SHEEP', 'BONUS_WHEAT')
 #these resources are important early on, and will place extras unless using one of the 'stricter' options
-resourcesImportantEarly = ('BONUS_STONE', 'BONUS_MARBLE', 'BONUS_COPPER', 'BONUS_IRON', 'BONUS_HORSE', 'BONUS_SULPHUR')
+resourcesImportantEarly = ('BONUS_STONE', 'BONUS_MARBLE', 'BONUS_COPPER_ORE', 'BONUS_IRON_ORE', 'BONUS_HORSE', 'BONUS_SULPHUR')
 #these are the strategic resources restricted by the 'restricted' settings
-resourcesStrategic = ('BONUS_IRON', 'BONUS_OIL', 'BONUS_URANIUM')
+resourcesStrategic = ('BONUS_IRON_ORE', 'BONUS_OIL', 'BONUS_URANIUM')
 
 ##########################################################################
 #global variables
@@ -4383,7 +4383,7 @@ def isPlotLegalForBonus(plot,bonus,strict):
 
 	#for whatever reason, these resources never validate as canHaveBonus so we override
 	#and place them on any empty hill, unless strict mode is set
-	resourcesEmptyHill = ('BONUS_GOLD','BONUS_SILVER')
+	resourcesEmptyHill = ('BONUS_GOLD_ORE','BONUS_SILVER_ORE')
 	if not strict:
 		if type_string in resourcesEmptyHill and plot.isHills():
 			return True

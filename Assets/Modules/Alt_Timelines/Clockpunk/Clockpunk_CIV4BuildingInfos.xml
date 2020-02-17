@@ -138,7 +138,7 @@
 			<PrereqTech>TECH_CLOCKPUNK</PrereqTech>
 			<Bonus>BONUS_CLOCKPUNK</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_COPPER</Bonus>
+				<Bonus>BONUS_COPPER_WARES</Bonus>
 			</PrereqBonuses>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -171,12 +171,12 @@
 			</MapCategoryTypes>
 			<Bonus>BONUS_CLOCKPUNK</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_COPPER</Bonus>
-				<Bonus>BONUS_WARE_IRON</Bonus>
-				<Bonus>BONUS_WARE_TIN</Bonus>
-				<Bonus>BONUS_WARE_BRONZE</Bonus>
-				<Bonus>BONUS_WARE_BRASS</Bonus>
-				<Bonus>BONUS_WARE_STEEL</Bonus>
+				<Bonus>BONUS_COPPER_WARES</Bonus>
+				<Bonus>BONUS_IRON_WARES</Bonus>
+				<Bonus>BONUS_TIN_WARES</Bonus>
+				<Bonus>BONUS_BRONZE_WARES</Bonus>
+				<Bonus>BONUS_BRASS_WARES</Bonus>
+				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<iCost>380</iCost>

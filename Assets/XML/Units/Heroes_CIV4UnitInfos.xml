@@ -5517,7 +5517,7 @@
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
-			<BonusType>BONUS_SOUTHAFRICAN</BonusType>
+			<BonusType>BONUS_SOUTH_AFRICAN</BonusType>
 			<iCost>4720</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>42</iCombat>
@@ -7415,7 +7415,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_ALPHABET</PrereqTech>
-			<BonusType>BONUS_AKKAD</BonusType>
+			<BonusType>BONUS_AKKADIAN</BonusType>
 			<iCost>850</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>10</iCombat>
@@ -11541,7 +11541,7 @@
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_ALPHABET</PrereqTech>
-			<BonusType>BONUS_PHOENICAN</BonusType>
+			<BonusType>BONUS_PHOENICIAN</BonusType>
 			<iCost>850</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
@@ -11669,7 +11669,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
-			<BonusType>BONUS_PHOENICAN</BonusType>
+			<BonusType>BONUS_PHOENICIAN</BonusType>
 			<iCost>850</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
@@ -13392,7 +13392,7 @@
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_HUMANISM</PrereqTech>
-			<BonusType>BONUS_HOLYROMAN</BonusType>
+			<BonusType>BONUS_HOLY_ROMAN</BonusType>
 			<iCost>1650</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>18</iCombat>
@@ -13515,7 +13515,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_BANKING</PrereqTech>
-			<BonusType>BONUS_VENICE</BonusType>
+			<BonusType>BONUS_VENETIAN</BonusType>
 			<iCost>1500</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
@@ -15583,8 +15583,8 @@
 			</TechTypes>
 			<BonusType>BONUS_SPARTAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>750</iCost>
 			<iHurryCostModifier>200</iHurryCostModifier>
@@ -16607,8 +16607,8 @@
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<BonusType>BONUS_OLMEC</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_COPPER</BonusType>
-				<BonusType>BONUS_IRON</BonusType>
+				<BonusType>BONUS_COPPER_ORE</BonusType>
+				<BonusType>BONUS_IRON_ORE</BonusType>
 			</PrereqBonuses>
 			<iCost>800</iCost>
 			<iMoves>1</iMoves>
@@ -17393,7 +17393,7 @@
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
-			<BonusType>BONUS_DENMARK</BonusType>
+			<BonusType>BONUS_DANISH</BonusType>
 			<iCost>1400</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>16</iCombat>
@@ -17497,7 +17497,7 @@
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
-			<BonusType>BONUS_HOLYROMAN</BonusType>
+			<BonusType>BONUS_HOLY_ROMAN</BonusType>
 			<iCost>1400</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>16</iCombat>
@@ -17692,7 +17692,7 @@
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
-			<BonusType>BONUS_KANEMBORNU</BonusType>
+			<BonusType>BONUS_KANEM_BORNU</BonusType>
 			<iCost>1750</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
@@ -18985,7 +18985,7 @@
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_WRITING</PrereqTech>
-			<BonusType>BONUS_AKKAD</BonusType>
+			<BonusType>BONUS_AKKADIAN</BonusType>
 			<iCost>700</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>11</iCombat>
@@ -19279,7 +19279,7 @@
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_DEMOCRACY</PrereqTech>
-			<BonusType>BONUS_ATHENS</BonusType>
+			<BonusType>BONUS_ATHENIAN</BonusType>
 			<iCost>950</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>11</iCombat>
@@ -19378,7 +19378,7 @@
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
-			<BonusType>BONUS_TAHITI</BonusType>
+			<BonusType>BONUS_TAHITIAN</BonusType>
 			<iCost>1800</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>16</iCombat>
@@ -20171,7 +20171,7 @@
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_DEMOCRACY</PrereqTech>
-			<BonusType>BONUS_ATHENS</BonusType>
+			<BonusType>BONUS_ATHENIAN</BonusType>
 			<iCost>950</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>12</iCombat>
@@ -24824,7 +24824,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
-			<BonusType>BONUS_MISSI</BonusType>
+			<BonusType>BONUS_MISSISSIPPIAN</BonusType>
 			<iCost>1300</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
@@ -28225,7 +28225,7 @@
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
-			<BonusType>BONUS_PHILIPINO</BonusType>
+			<BonusType>BONUS_FILIPINO</BonusType>
 			<iCost>1500</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
@@ -28949,7 +28949,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
-			<BonusType>BONUS_QUANG</BonusType>
+			<BonusType>BONUS_QIANG</BonusType>
 			<iCost>1200</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
@@ -30015,7 +30015,7 @@
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_LIBERALISM</PrereqTech>
-			<BonusType>BONUS_GYPSY</BonusType>
+			<BonusType>BONUS_ROMANI</BonusType>
 			<iCost>2050</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
@@ -31637,7 +31637,7 @@
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_CONSTITUTION</PrereqTech>
-			<BonusType>BONUS_SLOVAKIA</BonusType>
+			<BonusType>BONUS_SLOVAKIAN</BonusType>
 			<iCost>2150</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
@@ -32673,7 +32673,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_RAILROAD</PrereqTech>
-			<BonusType>BONUS_TAHITI</BonusType>
+			<BonusType>BONUS_TAHITIAN</BonusType>
 			<iCost>2620</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>33</iCombat>
@@ -38181,7 +38181,7 @@
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
-			<BonusType>BONUS_YEMEN</BonusType>
+			<BonusType>BONUS_YEMENESE</BonusType>
 			<iCost>1200</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
@@ -42108,7 +42108,7 @@
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
-			<BonusType>BONUS_CROATIA</BonusType>
+			<BonusType>BONUS_CROATIAN</BonusType>
 			<iCost>1400</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>16</iCombat>
@@ -43470,7 +43470,7 @@
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
-			<BonusType>BONUS_FIGI</BonusType>
+			<BonusType>BONUS_FIJIAN</BonusType>
 			<iCost>2500</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
@@ -44449,7 +44449,7 @@
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
-			<BonusType>BONUS_GHANA</BonusType>
+			<BonusType>BONUS_GHANAIAN</BonusType>
 			<iCost>4720</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>42</iCombat>
@@ -44774,7 +44774,7 @@
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
-			<BonusType>BONUS_GOLDEN_HORDE</BonusType>
+			<BonusType>BONUS_GOLD_OREEN_HORDE</BonusType>
 			<iCost>1750</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
@@ -46071,7 +46071,7 @@
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_ARTILLERY</PrereqTech>
-			<BonusType>BONUS_HONGKONG</BonusType>
+			<BonusType>BONUS_HONG_KONG</BonusType>
 			<iCost>3300</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>33</iCombat>
@@ -48014,7 +48014,7 @@
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
-			<BonusType>BONUS_KHAZAK</BonusType>
+			<BonusType>BONUS_KAZAKH</BonusType>
 			<iCost>1800</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>24</iCombat>

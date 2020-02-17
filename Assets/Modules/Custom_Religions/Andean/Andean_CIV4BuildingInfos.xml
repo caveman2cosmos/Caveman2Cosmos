@@ -50,7 +50,7 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -367,7 +367,7 @@
 			<ConstructSound>AS2D_BUILD_ANDEAN</ConstructSound>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_WARES</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>

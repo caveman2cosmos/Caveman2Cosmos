@@ -136,7 +136,7 @@
 			<ConstructSound>AS2D_BUILD_BUDDHIST</ConstructSound>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -417,7 +417,7 @@
 				</Has>
 				<Has>
 				<GOMType>GOM_BONUS</GOMType>
-				<ID>BONUS_TIMBER</ID>
+				<ID>BONUS_PRIME_TIMBER</ID>
 				</Has>
 				</And>
 			</ConstructCondition>
@@ -1010,7 +1010,7 @@
 				</Has>
 				<Has>
 				<GOMType>GOM_BONUS</GOMType>
-				<ID>BONUS_TIMBER</ID>
+				<ID>BONUS_PRIME_TIMBER</ID>
 				</Has>
 				</And>
 			</ConstructCondition>

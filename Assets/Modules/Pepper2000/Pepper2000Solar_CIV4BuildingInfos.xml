@@ -5220,11 +5220,11 @@
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<FreeBonus>BONUS_ROCKETFUEL</FreeBonus>
+			<FreeBonus>BONUS_ROCKET_FUEL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CO2_ICE</FreeBonus>
+					<FreeBonus>BONUS_CARBON_DIOXIDE_ICE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>

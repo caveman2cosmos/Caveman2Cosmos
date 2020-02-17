@@ -85,7 +85,7 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
-					<BonusType>BONUS_POTATO</BonusType>
+					<BonusType>BONUS_POTATOES</BonusType>
 					<YieldModifiers>
 						<iYield>5</iYield>
 						<iYield>0</iYield>
@@ -401,7 +401,7 @@
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
-				<VicinityBonus>BONUS_POTATO</VicinityBonus>
+				<VicinityBonus>BONUS_POTATOES</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -693,7 +693,7 @@
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<PrereqVicinityBonuses>
-				<VicinityBonus>BONUS_POTATO</VicinityBonus>
+				<VicinityBonus>BONUS_POTATOES</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -703,7 +703,7 @@
 			</BuildingClassNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
-					<BonusType>BONUS_POTATO</BonusType>
+					<BonusType>BONUS_POTATOES</BonusType>
 					<YieldModifiers>
 						<iYield>5</iYield>
 						<iYield>0</iYield>
@@ -1160,7 +1160,7 @@
 			<iCost>25</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
-			<VicinityBonus>BONUS_WINE</VicinityBonus>
+			<VicinityBonus>BONUS_GRAPES</VicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_DRUID_MONASTERY</BuildingClassType>
@@ -1191,7 +1191,7 @@
 			<iCost>18</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
-			<VicinityBonus>BONUS_WINE</VicinityBonus>
+			<VicinityBonus>BONUS_GRAPES</VicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_DRUID_TEMPLE</BuildingClassType>
@@ -1200,7 +1200,7 @@
 			</BuildingClassNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
-					<BonusType>BONUS_WINE</BonusType>
+					<BonusType>BONUS_GRAPES</BonusType>
 					<YieldModifiers>
 						<iYield>2</iYield>
 						<iYield>0</iYield>
@@ -1231,7 +1231,7 @@
 			<iCost>25</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
-			<VicinityBonus>BONUS_GUAVA</VicinityBonus>
+			<VicinityBonus>BONUS_GUAVAS</VicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_DRUID_MONASTERY</BuildingClassType>
@@ -1262,7 +1262,7 @@
 			<iCost>18</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
-			<VicinityBonus>BONUS_GUAVA</VicinityBonus>
+			<VicinityBonus>BONUS_GUAVAS</VicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_DRUID_TEMPLE</BuildingClassType>
@@ -1271,7 +1271,7 @@
 			</BuildingClassNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
-					<BonusType>BONUS_GUAVA</BonusType>
+					<BonusType>BONUS_GUAVAS</BonusType>
 					<YieldModifiers>
 						<iYield>2</iYield>
 						<iYield>0</iYield>
@@ -1302,7 +1302,7 @@
 			<iCost>25</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
-			<VicinityBonus>BONUS_LEMON</VicinityBonus>
+			<VicinityBonus>BONUS_LEMONS</VicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_DRUID_MONASTERY</BuildingClassType>
@@ -1333,7 +1333,7 @@
 			<iCost>18</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
-			<VicinityBonus>BONUS_LEMON</VicinityBonus>
+			<VicinityBonus>BONUS_LEMONS</VicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_DRUID_TEMPLE</BuildingClassType>
@@ -1342,7 +1342,7 @@
 			</BuildingClassNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
-					<BonusType>BONUS_LEMON</BonusType>
+					<BonusType>BONUS_LEMONS</BonusType>
 					<YieldModifiers>
 						<iYield>2</iYield>
 						<iYield>0</iYield>
@@ -1444,7 +1444,7 @@
 			<iCost>25</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
-			<VicinityBonus>BONUS_MELON</VicinityBonus>
+			<VicinityBonus>BONUS_MELONS</VicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_DRUID_MONASTERY</BuildingClassType>
@@ -1475,7 +1475,7 @@
 			<iCost>18</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
-			<VicinityBonus>BONUS_MELON</VicinityBonus>
+			<VicinityBonus>BONUS_MELONS</VicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_DRUID_TEMPLE</BuildingClassType>
@@ -1484,7 +1484,7 @@
 			</BuildingClassNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
-					<BonusType>BONUS_MELON</BonusType>
+					<BonusType>BONUS_MELONS</BonusType>
 					<YieldModifiers>
 						<iYield>2</iYield>
 						<iYield>0</iYield>

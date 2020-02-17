@@ -1407,7 +1407,7 @@ class BonusBalancer:
 		self.map = CyMap()
 
 		# Rise of Mankind mod start
-		self.resourcesToBalance = ('BONUS_BAUXITE', 'BONUS_COAL', 'BONUS_COPPER', 'BONUS_HORSE', 'BONUS_IRON', 'BONUS_OIL', 'BONUS_URANIUM', 'BONUS_SULPHUR', 'BONUS_RUBBER')
+		self.resourcesToBalance = ('BONUS_BAUXITE_ORE', 'BONUS_COAL', 'BONUS_COPPER_ORE', 'BONUS_HORSE', 'BONUS_IRON_ORE', 'BONUS_OIL', 'BONUS_URANIUM', 'BONUS_SULPHUR', 'BONUS_RUBBER')
 		# Rise of Mankind mod end
 
 		self.resourcesToEliminate = ('BONUS_MARBLE', )
@@ -1706,7 +1706,7 @@ def placeC2CBonuses():
 	iWestRightEdge = iMapWidth/3
 	iCentralRightEdge = iMapWidth - iWestRightEdge
 
-	iSeaLion = gc.getInfoTypeForString("BONUS_SEA_LIONS")
+	iSeaLion = gc.getInfoTypeForString("BONUS_SEA_LION_AND_SEAL")
 	iWalrus = gc.getInfoTypeForString("BONUS_WALRUS")
 	iKangaroo = gc.getInfoTypeForString("BONUS_KANGAROO")
 	iLlama = gc.getInfoTypeForString("BONUS_LLAMA")
@@ -1714,8 +1714,8 @@ def placeC2CBonuses():
 	iBison = gc.getInfoTypeForString("BONUS_BISON")
 	iPoultry = gc.getInfoTypeForString("BONUS_POULTRY")
 	iRabbit = gc.getInfoTypeForString("BONUS_RABBIT")
-	iGuineaPig = gc.getInfoTypeForString("BONUS_GUINEA_PIG")
-	aNotInNewWorld =[gc.getInfoTypeForString("BONUS_HORSE"), gc.getInfoTypeForString("BONUS_DONKEY"), gc.getInfoTypeForString("BONUS_CAMEL"), gc.getInfoTypeForString("BONUS_COW"), gc.getInfoTypeForString("BONUS_ELEPHANT")]
+	iGuineaPig = gc.getInfoTypeForString("BONUS_GUINEA_PIGS")
+	aNotInNewWorld =[gc.getInfoTypeForString("BONUS_HORSE"), gc.getInfoTypeForString("BONUS_DONKEY"), gc.getInfoTypeForString("BONUS_CAMEL"), gc.getInfoTypeForString("BONUS_COW"), gc.getInfoTypeForString("BONUS_ELEPHANTS")]
 
 	terrainCoast = gc.getInfoTypeForString("TERRAIN_COAST")
 	terrainSea = gc.getInfoTypeForString("TERRAIN_SEA")
@@ -1854,7 +1854,7 @@ def placeC2CBonuses():
 				iPlot.setBonusType(iKangaroo)
 				iResource = iKangaroo
 		# Elephants
-		if (iResource == gc.getInfoTypeForString("BONUS_ELEPHANT")) and ( (iNS_Hemisphere == cSOUTH and not iEW_Hemisphere == cCENTRAL) or (iNS_Hemisphere == cNORTH and not iEW_Hemisphere == cEAST)):
+		if (iResource == gc.getInfoTypeForString("BONUS_ELEPHANTS")) and ( (iNS_Hemisphere == cSOUTH and not iEW_Hemisphere == cCENTRAL) or (iNS_Hemisphere == cNORTH and not iEW_Hemisphere == cEAST)):
 			if isSeaCoastalLand(iPlot) :
 				iPlot.setBonusType(iSeaLion)
 				iResource = iSeaLion

@@ -262,7 +262,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -764,7 +764,7 @@
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>355</iCost>
 			<iMoves>2</iMoves>

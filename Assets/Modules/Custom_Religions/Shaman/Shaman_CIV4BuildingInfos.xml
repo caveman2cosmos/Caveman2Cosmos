@@ -775,7 +775,7 @@
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqVicinityBonuses>
-				<VicinityBonus>BONUS_SEA_LIONS</VicinityBonus>
+				<VicinityBonus>BONUS_SEA_LION_AND_SEAL</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -785,7 +785,7 @@
 			</BuildingClassNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
-					<BonusType>BONUS_SEA_LIONS</BonusType>
+					<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
 					<YieldModifiers>
 						<iYield>5</iYield>
 						<iYield>0</iYield>
@@ -895,7 +895,7 @@
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqVicinityBonuses>
-				<VicinityBonus>BONUS_SEA_LIONS</VicinityBonus>
+				<VicinityBonus>BONUS_SEA_LION_AND_SEAL</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -905,7 +905,7 @@
 			</BuildingClassNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
-					<BonusType>BONUS_SEA_LIONS</BonusType>
+					<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
 					<YieldModifiers>
 						<iYield>5</iYield>
 						<iYield>0</iYield>

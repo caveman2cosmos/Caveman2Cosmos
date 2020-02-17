@@ -578,7 +578,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<FreeBonus>BONUS_TESSERACT_BONUS</FreeBonus>
+			<FreeBonus>BONUS_TESSERACT</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>

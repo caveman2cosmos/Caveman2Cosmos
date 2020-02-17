@@ -64,13 +64,13 @@ def resetNoLiberateCities():
 			lLuxury.append(i)
 		if GC.getBonusInfo(i).getHealth() > 0:
 			lFood.append(i)
-	iBonus = GC.getInfoTypeForString("BONUS_COPPER")
+	iBonus = GC.getInfoTypeForString("BONUS_COPPER_ORE")
 	if iBonus > -1:
 		lBonus.append([FeatTypes.FEAT_COPPER_CONNECTED, [iBonus], "TXT_KEY_FEAT_COPPER_CONNECTED"])
 	iBonus = GC.getInfoTypeForString("BONUS_HORSE")
 	if iBonus > -1:
 		lBonus.append([FeatTypes.FEAT_HORSE_CONNECTED, [iBonus], "TXT_KEY_FEAT_HORSE_CONNECTED"])
-	iBonus = GC.getInfoTypeForString("BONUS_IRON")
+	iBonus = GC.getInfoTypeForString("BONUS_IRON_ORE")
 	if iBonus > -1:
 		lBonus.append([FeatTypes.FEAT_IRON_CONNECTED, [iBonus], "TXT_KEY_FEAT_IRON_CONNECTED"])
 	if lLuxury:

@@ -2284,7 +2284,7 @@
 			<iHealth>3</iHealth>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
-					<BonusType>BONUS_CONSCIOUS_MATERIAL</BonusType>
+					<BonusType>BONUS_CONSCIOUS_MATERIALS</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
@@ -3625,7 +3625,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<FreeBonus>BONUS_CONSCIOUS_MATERIAL</FreeBonus>
+			<FreeBonus>BONUS_CONSCIOUS_MATERIALS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3913,7 +3913,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<Bonus>BONUS_CONSCIOUS_MATERIAL</Bonus>
+			<Bonus>BONUS_CONSCIOUS_MATERIALS</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DYSON_SPHERE_HEAT_RECOVERY</BuildingClass>
@@ -5043,7 +5043,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<FreeBonus>BONUS_TIME_CRYSTAL</FreeBonus>
+			<FreeBonus>BONUS_TIME_CRYSTALS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -6310,7 +6310,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<Bonus>BONUS_TIME_CRYSTAL</Bonus>
+			<Bonus>BONUS_TIME_CRYSTALS</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_DYSON_SPHERE_PORTAL</BuildingClass>

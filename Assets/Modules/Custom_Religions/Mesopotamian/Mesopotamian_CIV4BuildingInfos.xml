@@ -508,7 +508,7 @@
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_MESOPOTAMIAN</ConstructSound>
 			<PrereqVicinityBonuses>
-				<VicinityBonus>BONUS_POTATO</VicinityBonus>
+				<VicinityBonus>BONUS_POTATOES</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -518,7 +518,7 @@
 			</BuildingClassNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
-					<BonusType>BONUS_POTATO</BonusType>
+					<BonusType>BONUS_POTATOES</BonusType>
 					<YieldModifiers>
 						<iYield>5</iYield>
 						<iYield>0</iYield>

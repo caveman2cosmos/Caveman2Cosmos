@@ -293,7 +293,7 @@
 			</YieldChanges>
 			<iHealth>2</iHealth>
 			<PrereqVicinityBonuses>
-				<VicinityBonus>BONUS_THERMAL_VENT</VicinityBonus>
+				<VicinityBonus>BONUS_GEOTHERMAL_ENERGY</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -547,7 +547,7 @@
 			</TechCommerceChanges>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_PERSONAL_REPLICATORS</BonusType>
+					<BonusType>BONUS_REPLICATORS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -669,7 +669,7 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_RAWFISH</FreeBonus>
+					<FreeBonus>BONUS_RAW_FISH</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -896,7 +896,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<Bonus>BONUS_BOSE_EINSTEIN_CONDENSATE</Bonus>
+			<Bonus>BONUS_SUPERSOLID_MATERIAL</Bonus>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1002,7 +1002,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<Bonus>BONUS_WARES_MEGASTRONG_ALLOY</Bonus>
+			<Bonus>BONUS_MEGASTRONG_ALLOY_WARES</Bonus>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1167,15 +1167,15 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CINNABAR</FreeBonus>
+					<FreeBonus>BONUS_CINNABAR_ORE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CLAY</FreeBonus>
+					<FreeBonus>BONUS_COMMON_CLAY</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_HEMATITE</FreeBonus>
+					<FreeBonus>BONUS_HAEMATITE_ORE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -1305,15 +1305,15 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CAESIUM</FreeBonus>
+					<FreeBonus>BONUS_CAESIUM_ORE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CHROMITE</FreeBonus>
+					<FreeBonus>BONUS_CHROMITE_ORE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_COBALT</FreeBonus>
+					<FreeBonus>BONUS_COBALT_ORE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -1325,7 +1325,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_LAZULITE</FreeBonus>
+					<FreeBonus>BONUS_LAZULITE_ORE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -1333,7 +1333,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_MAGNESIUM</FreeBonus>
+					<FreeBonus>BONUS_MAGNESIUM_ORE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -1345,7 +1345,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_NICKEL</FreeBonus>
+					<FreeBonus>BONUS_NICKEL_ORE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -1353,7 +1353,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_ZINC</FreeBonus>
+					<FreeBonus>BONUS_ZINC_ORE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -1478,79 +1478,79 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<FreeBonus>BONUS_WARE_ALUMINUM</FreeBonus>
+			<FreeBonus>BONUS_ALUMINUM_WARES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_ALUMINUM</FreeBonus>
+					<FreeBonus>BONUS_ALUMINUM_INGOTS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WARE_BRASS</FreeBonus>
+					<FreeBonus>BONUS_BRASS_WARES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_INGOT_BRASS</FreeBonus>
+					<FreeBonus>BONUS_BRASS_INGOTS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WARE_BRONZE</FreeBonus>
+					<FreeBonus>BONUS_BRONZE_WARES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WARE_ELECTRUM</FreeBonus>
+					<FreeBonus>BONUS_ELECTRUM_WARES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_INGOT_ELECTRUM</FreeBonus>
+					<FreeBonus>BONUS_ELECTRUM_INGOTS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_INGOT_GOLD</FreeBonus>
+					<FreeBonus>BONUS_GOLD_INGOTS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WARE_GOLD</FreeBonus>
+					<FreeBonus>BONUS_GOLD_WARES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_INGOT_LEAD</FreeBonus>
+					<FreeBonus>BONUS_LEAD_INGOTS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WARE_LEAD</FreeBonus>
+					<FreeBonus>BONUS_LEAD_WARES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WARE_PLATINUM</FreeBonus>
+					<FreeBonus>BONUS_PLATINUM_WARES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_INGOT_PLATINUM</FreeBonus>
+					<FreeBonus>BONUS_PLATINUM_INGOTS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WARE_SILVER</FreeBonus>
+					<FreeBonus>BONUS_SILVER_WARES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_INGOT_SILVER</FreeBonus>
+					<FreeBonus>BONUS_SILVER_INGOTS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WARE_TIN</FreeBonus>
+					<FreeBonus>BONUS_TIN_WARES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_INGOT_TIN</FreeBonus>
+					<FreeBonus>BONUS_TIN_INGOTS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WARE_TITANIUM</FreeBonus>
+					<FreeBonus>BONUS_TITANIUM_WARES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_INGOT_TITANIUM</FreeBonus>
+					<FreeBonus>BONUS_TITANIUM_INGOTS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -1652,7 +1652,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<FreeBonus>BONUS_WARES_METAMATERIALS</FreeBonus>
+			<FreeBonus>BONUS_METAMATERIAL_WARES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -1660,7 +1660,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WARES_LIQUID_METAL</FreeBonus>
+					<FreeBonus>BONUS_LIQUID_METAL_WARES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -1672,7 +1672,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WARES_SUPERSTRONG_ALLOY</FreeBonus>
+					<FreeBonus>BONUS_SUPERSTRONG_ALLOY_WARES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -1688,7 +1688,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FULLERENE</FreeBonus>
+					<FreeBonus>BONUS_FULLERENES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -1843,7 +1843,7 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PERSONAL_REPLICATORS</FreeBonus>
+					<FreeBonus>BONUS_REPLICATORS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -1918,7 +1918,7 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PERSONAL_REPLICATORS</FreeBonus>
+					<FreeBonus>BONUS_REPLICATORS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -1989,7 +1989,7 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PERSONAL_REPLICATORS</FreeBonus>
+					<FreeBonus>BONUS_REPLICATORS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -2054,7 +2054,7 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PERSONAL_REPLICATORS</FreeBonus>
+					<FreeBonus>BONUS_REPLICATORS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -2104,7 +2104,7 @@
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
-			<Bonus>BONUS_WARE_COPPER</Bonus>
+			<Bonus>BONUS_COPPER_WARES</Bonus>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
@@ -2143,19 +2143,19 @@
 			</BuildingClassNeededs>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<FreeBonus>BONUS_WOODWINDS</FreeBonus>
+			<FreeBonus>BONUS_WOODWIND_INSTRUMENTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_STRINGS</FreeBonus>
+					<FreeBonus>BONUS_STRING_INSTRUMENTS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BRASS</FreeBonus>
+					<FreeBonus>BONUS_BRASS_INSTRUMENTS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PERCUSSION</FreeBonus>
+					<FreeBonus>BONUS_PERCUSSION_INSTRUMENTS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -2197,7 +2197,7 @@
 			</YieldChanges>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_WARES_LIQUID_METAL</BonusType>
+					<BonusType>BONUS_LIQUID_METAL_WARES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -2608,11 +2608,11 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_COPPER</ID>
+						<ID>BONUS_COPPER_WARES</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_SEMICONDUCTORS</ID>
+						<ID>BONUS_MICROCHIPS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -2640,7 +2640,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_MICROWAVES</FreeBonus>
+					<FreeBonus>BONUS_MICROWAVE_OVENS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -2736,7 +2736,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_GLASS</FreeBonus>
+					<FreeBonus>BONUS_GLASSWARE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -2744,7 +2744,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WARES_PORCELAIN</FreeBonus>
+					<FreeBonus>BONUS_PORCELAIN_WARES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -2760,7 +2760,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WARES_TERRACOTTA</FreeBonus>
+					<FreeBonus>BONUS_TERRACOTTA_WARES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -2772,7 +2772,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WATERBOTTLE</FreeBonus>
+					<FreeBonus>BONUS_WATER_BOTTLES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -2872,7 +2872,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CLOTHES</FreeBonus>
+					<FreeBonus>BONUS_CLOTHING</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -2968,11 +2968,11 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_STEEL</ID>
+						<ID>BONUS_STEEL_WARES</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_TITANIUM</ID>
+						<ID>BONUS_TITANIUM_WARES</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -2988,7 +2988,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_JET_AIRCRAFTS</FreeBonus>
+					<FreeBonus>BONUS_JET_ENGINES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -3004,7 +3004,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_AMMO</FreeBonus>
+					<FreeBonus>BONUS_AMMUNITION</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -3596,16 +3596,16 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<Bonus>BONUS_COPPER</Bonus>
-			<FreeBonus>BONUS_WARE_COPPER</FreeBonus>
+			<Bonus>BONUS_COPPER_ORE</Bonus>
+			<FreeBonus>BONUS_COPPER_WARES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_COPPERWIRES</FreeBonus>
+					<FreeBonus>BONUS_COPPER_WIRES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_INGOT_COPPER</FreeBonus>
+					<FreeBonus>BONUS_COPPER_INGOTS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -3654,20 +3654,20 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<Bonus>BONUS_IRON</Bonus>
-			<FreeBonus>BONUS_INGOT_IRON</FreeBonus>
+			<Bonus>BONUS_IRON_ORE</Bonus>
+			<FreeBonus>BONUS_IRON_INGOTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WARE_IRON</FreeBonus>
+					<FreeBonus>BONUS_IRON_WARES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_STEEL</FreeBonus>
+					<FreeBonus>BONUS_STEEL_INGOTS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WARE_STEEL</FreeBonus>
+					<FreeBonus>BONUS_STEEL_WARES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -3724,7 +3724,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<FreeBonus>BONUS_RAWMEAT</FreeBonus>
+			<FreeBonus>BONUS_RAW_MEAT</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -3732,7 +3732,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FISHOIL</FreeBonus>
+					<FreeBonus>BONUS_FISH_OIL</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -3772,19 +3772,19 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_GHEEOIL</FreeBonus>
+					<FreeBonus>BONUS_GHEE_OIL</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WHALEOIL</FreeBonus>
+					<FreeBonus>BONUS_WHALE_OIL</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FINE_LEATHER</FreeBonus>
+					<FreeBonus>BONUS_OSTRICH_LEATHER</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_O_FEATHERS</FreeBonus>
+					<FreeBonus>BONUS_OSTRICH_FEATHERS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -4506,7 +4506,7 @@
 			</YieldChanges>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_WARES_LIQUID_METAL</BonusType>
+					<BonusType>BONUS_LIQUID_METAL_WARES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -4555,7 +4555,7 @@
 			</YieldChanges>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_WARES_LIQUID_METAL</BonusType>
+					<BonusType>BONUS_LIQUID_METAL_WARES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -4604,7 +4604,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<Bonus>BONUS_BOSE_EINSTEIN_CONDENSATE</Bonus>
+			<Bonus>BONUS_SUPERSOLID_MATERIAL</Bonus>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4669,7 +4669,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<Bonus>BONUS_WARES_SUPERSTRONG_ALLOY</Bonus>
+			<Bonus>BONUS_SUPERSTRONG_ALLOY_WARES</Bonus>
 			<bPower>1</bPower>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -4700,7 +4700,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<FreeBonus>BONUS_WARES_MEGASTRONG_ALLOY</FreeBonus>
+			<FreeBonus>BONUS_MEGASTRONG_ALLOY_WARES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
 				<PropertySource>
@@ -4793,7 +4793,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARES_SUPERSTRONG_ALLOY</ID>
+						<ID>BONUS_SUPERSTRONG_ALLOY_WARES</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -4801,7 +4801,7 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<FreeBonus>BONUS_DNT</FreeBonus>
+			<FreeBonus>BONUS_DIAMOND_NANOTHREADS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
 				<PropertySource>
@@ -4961,7 +4961,7 @@
 			</YieldChanges>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_FULLERENE</BonusType>
+					<BonusType>BONUS_FULLERENES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -5057,7 +5057,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<Bonus>BONUS_WARES_METAMATERIALS</Bonus>
+			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
 			<FreeBonus>BONUS_NANOTRUSSES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -5222,7 +5222,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<FreeBonus>BONUS_FULLERENE</FreeBonus>
+			<FreeBonus>BONUS_FULLERENES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
 				<PropertySource>
@@ -5601,7 +5601,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<FreeBonus>BONUS_ANIMAMATERIAL</FreeBonus>
+			<FreeBonus>BONUS_CLAYTRONIC_ATOMS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
 				<PropertySource>
@@ -5645,7 +5645,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<FreeBonus>BONUS_BOSE_EINSTEIN_CONDENSATE</FreeBonus>
+			<FreeBonus>BONUS_SUPERSOLID_MATERIAL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
 				<PropertySource>
@@ -5819,7 +5819,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<FreeBonus>BONUS_POCKET_UNIVERSE_BONUS</FreeBonus>
+			<FreeBonus>BONUS_POCKET_UNIVERSE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -5851,7 +5851,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<Bonus>BONUS_POCKET_UNIVERSE_BONUS</Bonus>
+			<Bonus>BONUS_POCKET_UNIVERSE</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_EXTREME_FORCE_CONCENTRATOR</BuildingClass>
@@ -6583,7 +6583,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<Bonus>BONUS_HOLO_PROJECTORS</Bonus>
+			<Bonus>BONUS_HOLOGRAPHIC_PROJECTORS</Bonus>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -8859,7 +8859,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<Bonus>BONUS_FIBEROPTICS</Bonus>
+			<Bonus>BONUS_FIBER_OPTIC_CABLES</Bonus>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -9585,7 +9585,7 @@
 			</TechCommerceChanges>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_NOVEL_SENSES</BonusType>
+					<BonusType>BONUS_HUMAN_MOD_NOVEL_SENSES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -9601,7 +9601,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_STEEL</ID>
+						<ID>BONUS_STEEL_INGOTS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -9631,7 +9631,7 @@
 			<YieldChanges>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<FreeBonus>BONUS_ICECREAM</FreeBonus>
+			<FreeBonus>BONUS_ICE_CREAM</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHappiness>1</iHappiness>
 			<BonusCommerceModifiers>
@@ -9648,19 +9648,19 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_LEMON</BonusType>
+					<BonusType>BONUS_LEMONS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_MELON</BonusType>
+					<BonusType>BONUS_MELONS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_WINE</BonusType>
+					<BonusType>BONUS_GRAPES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -9714,13 +9714,13 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_RAWMEAT</BonusType>
+					<BonusType>BONUS_RAW_MEAT</BonusType>
 					<CommerceModifiers>
 						<iCommerce>5</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_RAWFISH</BonusType>
+					<BonusType>BONUS_RAW_FISH</BonusType>
 					<CommerceModifiers>
 						<iCommerce>3</iCommerce>
 					</CommerceModifiers>
@@ -9756,7 +9756,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_POTATO</BonusType>
+					<BonusType>BONUS_POTATOES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -9814,7 +9814,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<FreeBonus>BONUS_RAWFISH</FreeBonus>
+			<FreeBonus>BONUS_RAW_FISH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
 				<PropertySource>
@@ -9946,7 +9946,7 @@
 			<iHealth>40</iHealth>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_NOVEL_SENSES</BonusType>
+					<BonusType>BONUS_HUMAN_MOD_NOVEL_SENSES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -9988,7 +9988,7 @@
 			<iHappiness>5</iHappiness>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_NOVEL_SENSES</BonusType>
+					<BonusType>BONUS_HUMAN_MOD_NOVEL_SENSES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -10078,7 +10078,7 @@
 			</TechCommerceChanges>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_NOVEL_SENSES</BonusType>
+					<BonusType>BONUS_HUMAN_MOD_NOVEL_SENSES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -10457,7 +10457,7 @@
 			<iHealth>-1</iHealth>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_NOVEL_SENSES</BonusType>
+					<BonusType>BONUS_HUMAN_MOD_NOVEL_SENSES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -10546,7 +10546,7 @@
 			</TechCommerceChanges>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_INDEFINITE_LIFESPAN</BonusType>
+					<BonusType>BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -10598,8 +10598,8 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
-			<Bonus>BONUS_INGOT_LEAD</Bonus>
-			<FreeBonus>BONUS_INGOT_GOLD</FreeBonus>
+			<Bonus>BONUS_LEAD_INGOTS</Bonus>
+			<FreeBonus>BONUS_GOLD_INGOTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -10704,7 +10704,7 @@
 			</TechCommerceChanges>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_NOVEL_SENSES</BonusType>
+					<BonusType>BONUS_HUMAN_MOD_NOVEL_SENSES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -11108,7 +11108,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<Bonus>BONUS_DIGITAL_IDENTITY</Bonus>
+			<Bonus>BONUS_HUMAN_MOD_DIGITAL_IDENTITY</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_REHABILITATION</BuildingClass>
@@ -12113,7 +12113,7 @@
 				<iYield>0</iYield>
 				<iYield>15</iYield>
 			</YieldChanges>
-			<Bonus>BONUS_FIBEROPTICS</Bonus>
+			<Bonus>BONUS_FIBER_OPTIC_CABLES</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_ALZHEIMERS_CURE</BuildingClass>
@@ -12537,7 +12537,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<Bonus>BONUS_POCKET_UNIVERSE_BONUS</Bonus>
+			<Bonus>BONUS_POCKET_UNIVERSE</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_REALM_OF_ENLIGHTENMENT</BuildingClass>
@@ -13404,7 +13404,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<Bonus>BONUS_BOSE_EINSTEIN_CONDENSATE</Bonus>
+			<Bonus>BONUS_SUPERSOLID_MATERIAL</Bonus>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14046,7 +14046,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<Bonus>BONUS_ANIMAMATERIAL</Bonus>
+			<Bonus>BONUS_CLAYTRONIC_ATOMS</Bonus>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -18043,7 +18043,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_DIESEL</FreeBonus>
+					<FreeBonus>BONUS_OIL_PRODUCTS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -18171,13 +18171,13 @@
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>
-			<FreeBonus>BONUS_BUG</FreeBonus>
+			<FreeBonus>BONUS_BUGS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_AGROFOREST</BuildingClass>
 			<Type>BUILDING_AGROFOREST</Type>
-			<FreeBonus>BONUS_BUG</FreeBonus>
+			<FreeBonus>BONUS_BUGS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -18209,7 +18209,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_OLIVEOIL</FreeBonus>
+					<FreeBonus>BONUS_OLIVE_OIL</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -21915,7 +21915,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<Bonus>BONUS_DIGITAL_LIFESTYLE</Bonus>
+			<Bonus>BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE</Bonus>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -21944,7 +21944,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<Bonus>BONUS_DIGITAL_IDENTITY</Bonus>
+			<Bonus>BONUS_HUMAN_MOD_DIGITAL_IDENTITY</Bonus>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -22043,7 +22043,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<Bonus>BONUS_DIGITAL_IDENTITY</Bonus>
+			<Bonus>BONUS_HUMAN_MOD_DIGITAL_IDENTITY</Bonus>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -22151,7 +22151,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<Bonus>BONUS_NOVEL_SENSES</Bonus>
+			<Bonus>BONUS_HUMAN_MOD_NOVEL_SENSES</Bonus>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -22281,7 +22281,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<Bonus>BONUS_DOLPHIN</Bonus>
+			<Bonus>BONUS_CETACEA_SAPIEN</Bonus>
 			<VicinityBonus>BONUS_WHALE</VicinityBonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -22501,7 +22501,7 @@
 			</TechYieldChanges>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GILLS</BonusType>
+					<BonusType>BONUS_HUMAN_MOD_GILLS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -22664,13 +22664,13 @@
 			</YieldChanges>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GILLS</BonusType>
+					<BonusType>BONUS_HUMAN_MOD_GILLS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
-			<Bonus>BONUS_WARES_SUPERSTRONG_ALLOY</Bonus>
+			<Bonus>BONUS_SUPERSTRONG_ALLOY_WARES</Bonus>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -22715,7 +22715,7 @@
 			</TechCommerceChanges>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_NOVEL_SENSES</BonusType>
+					<BonusType>BONUS_HUMAN_MOD_NOVEL_SENSES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -22791,7 +22791,7 @@
 			<iHappiness>1</iHappiness>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_WINGS</BonusType>
+					<BonusType>BONUS_HUMAN_MOD_WINGS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -22825,7 +22825,7 @@
 			</YieldChanges>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_WINGS</BonusType>
+					<BonusType>BONUS_HUMAN_MOD_WINGS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -22930,7 +22930,7 @@
 				<iYield>5</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<Bonus>BONUS_WARES_SUPERSTRONG_ALLOY</Bonus>
+			<Bonus>BONUS_SUPERSTRONG_ALLOY_WARES</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_SUBTERRANEAN_CITY</BuildingClass>
@@ -22957,7 +22957,7 @@
 			</YieldChanges>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_HEAT_TOLERANCE</BonusType>
+					<BonusType>BONUS_HUMAN_MOD_HEAT_TOLERANCE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -23346,7 +23346,7 @@
 			<Type>BUILDING_MEGATOWER_EDUCATION</Type>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_DESIGNER_BABIES</BonusType>
+					<BonusType>BONUS_HUMAN_MOD_DESIGNER_BABIES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>1</iCommerce>
@@ -23414,7 +23414,7 @@
 			<Type>BUILDING_MEGATOWER_RESEARCH</Type>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_COGNITIVE_ENHANCEMENT</BonusType>
+					<BonusType>BONUS_HUMAN_MOD_COGNITIVE_ENHANCEMENT</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>1</iCommerce>
@@ -23448,7 +23448,7 @@
 			<Type>BUILDING_MEGATOWER_SOLAR_CROWN</Type>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_FULLERENE</BonusType>
+					<BonusType>BONUS_FULLERENES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -23680,7 +23680,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<Bonus>BONUS_DNT</Bonus>
+			<Bonus>BONUS_DIAMOND_NANOTHREADS</Bonus>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -24075,7 +24075,7 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingClassProductionModifier>
 			</GlobalBuildingClassProductionModifiers>
-			<Bonus>BONUS_WARE_BRONZE</Bonus>
+			<Bonus>BONUS_BRONZE_WARES</Bonus>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -24994,7 +24994,7 @@
 			</TechCommerceChanges>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_ENLIGHTENMENT</BonusType>
+					<BonusType>BONUS_HUMAN_MOD_ENLIGHTENED</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 						<iCommerce>1</iCommerce>
@@ -25155,7 +25155,7 @@
 			</TechCommerceChanges>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_ENLIGHTENMENT</BonusType>
+					<BonusType>BONUS_HUMAN_MOD_ENLIGHTENED</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 						<iCommerce>1</iCommerce>
@@ -25416,7 +25416,7 @@
 			</YieldChanges>
 			<BonusYieldChanges>
 				<BonusYieldChange>
-					<BonusType>BONUS_ANIMAMATERIAL</BonusType>
+					<BonusType>BONUS_CLAYTRONIC_ATOMS</BonusType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>10</iYield>
@@ -27255,23 +27255,23 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<FreeBonus>BONUS_IRON</FreeBonus>
+			<FreeBonus>BONUS_IRON_ORE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_NICKEL</FreeBonus>
+					<FreeBonus>BONUS_NICKEL_ORE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_COBALT</FreeBonus>
+					<FreeBonus>BONUS_COBALT_ORE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TITANIUM</FreeBonus>
+					<FreeBonus>BONUS_TITANIUM_ORE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TIN</FreeBonus>
+					<FreeBonus>BONUS_TIN_ORE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -27471,15 +27471,15 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<FreeBonus>BONUS_PLATINUM</FreeBonus>
+			<FreeBonus>BONUS_PLATINUM_ORE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_GOLD</FreeBonus>
+					<FreeBonus>BONUS_GOLD_ORE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SILVER</FreeBonus>
+					<FreeBonus>BONUS_SILVER_ORE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -28641,7 +28641,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<Bonus>BONUS_METAPHYSICAL</Bonus>
+			<Bonus>BONUS_HUMAN_MOD_METAPHYSICAL</Bonus>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<iGlobalPopulationChange>-30</iGlobalPopulationChange>
 		</BuildingInfo>

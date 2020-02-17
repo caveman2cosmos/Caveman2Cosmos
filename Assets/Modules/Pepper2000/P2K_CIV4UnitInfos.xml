@@ -275,7 +275,7 @@
 			</Builds>
 			<PrereqBuilding>BUILDING_COMMERCIAL_SPACEPORT</PrereqBuilding>
 			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
-			<BonusType>BONUS_ROCKETFUEL</BonusType>
+			<BonusType>BONUS_ROCKET_FUEL</BonusType>
 			<iCost>2700</iCost>
 			<iMoves>24</iMoves>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
@@ -337,7 +337,7 @@
 			</Buildings>
 			<PrereqBuilding>BUILDING_COMMERCIAL_SPACEPORT</PrereqBuilding>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
-			<BonusType>BONUS_ROCKETFUEL</BonusType>
+			<BonusType>BONUS_ROCKET_FUEL</BonusType>
 			<iCost>4850</iCost>
 			<iMoves>24</iMoves>
             <bCanMoveAllTerrain>1</bCanMoveAllTerrain>
@@ -620,7 +620,7 @@
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_ORBITAL_FACTORY</PrereqBuilding>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
-            <BonusType>BONUS_ROCKETFUEL</BonusType>
+            <BonusType>BONUS_ROCKET_FUEL</BonusType>
 			<iCost>1000</iCost>
             <iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -724,7 +724,7 @@
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_ORBITAL_FACTORY</PrereqBuilding>
 			<PrereqTech>TECH_PLANETARY_COLONIZATION</PrereqTech>
-            <BonusType>BONUS_ROCKETFUEL</BonusType>
+            <BonusType>BONUS_ROCKET_FUEL</BonusType>
 			<iCost>1000</iCost>
             <iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -1243,7 +1243,7 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_SPACECRAFT</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
-            <BonusType>BONUS_EXOTIC_PARTICLE</BonusType>
+            <BonusType>BONUS_ALICE_MATTER</BonusType>
 			<MapCategoryTypes>
                 <MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_DISTANT</MapCategoryType>
@@ -2846,7 +2846,7 @@
                 <MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 			</MapCategoryTypes>
-			<BonusType>BONUS_ROCKETFUEL</BonusType>
+			<BonusType>BONUS_ROCKET_FUEL</BonusType>
             <bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
@@ -2970,7 +2970,7 @@
                 <MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
 			</MapCategoryTypes>
-			<BonusType>BONUS_ROCKETFUEL</BonusType>
+			<BonusType>BONUS_ROCKET_FUEL</BonusType>
             <bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
@@ -4436,7 +4436,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
 			</MapCategoryTypes>
-			<BonusType>BONUS_ROCKETFUEL</BonusType>
+			<BonusType>BONUS_ROCKET_FUEL</BonusType>
             <TerrainImpassableTypes>
                 <TerrainType>TERRAIN_SPACE</TerrainType>
 			</TerrainImpassableTypes>
@@ -4572,7 +4572,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
 			</MapCategoryTypes>
-			<BonusType>BONUS_ROCKETFUEL</BonusType>
+			<BonusType>BONUS_ROCKET_FUEL</BonusType>
             <TerrainImpassableTypes>
                 <TerrainType>TERRAIN_SPACE</TerrainType>
 			</TerrainImpassableTypes>
@@ -4815,7 +4815,7 @@
                 <MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
 			</MapCategoryTypes>
-			<BonusType>BONUS_ROCKETFUEL</BonusType>
+			<BonusType>BONUS_ROCKET_FUEL</BonusType>
             <TerrainImpassableTypes>
                 <TerrainType>TERRAIN_TRANSNEPTUNIAN</TerrainType>
 			</TerrainImpassableTypes>
@@ -6136,7 +6136,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
 			</MapCategoryTypes>
-			<BonusType>BONUS_ROCKETFUEL</BonusType>
+			<BonusType>BONUS_ROCKET_FUEL</BonusType>
             <bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
@@ -9349,7 +9349,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_ADVANCED_WARMACHINES</PrereqTech>
-			<BonusType>BONUS_WARES_SUPERSTRONG_ALLOY</BonusType>
+			<BonusType>BONUS_SUPERSTRONG_ALLOY_WARES</BonusType>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>3</iMoves>
@@ -9497,11 +9497,11 @@
 			<iCityAttack>25</iCityAttack>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_WARES</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_SILVER</BonusType>
+					<BonusType>BONUS_SILVER_WARES</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -9602,7 +9602,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_ADVANCED_WARMACHINES</PrereqTech>
-			<BonusType>BONUS_WARES_SUPERSTRONG_ALLOY</BonusType>
+			<BonusType>BONUS_SUPERSTRONG_ALLOY_WARES</BonusType>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMoves>3</iMoves>
@@ -9618,11 +9618,11 @@
 			<iCityAttack>25</iCityAttack>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_WARES</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_SILVER</BonusType>
+					<BonusType>BONUS_SILVER_WARES</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -9732,11 +9732,11 @@
 			<iCityAttack>25</iCityAttack>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_WARES</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_SILVER</BonusType>
+					<BonusType>BONUS_SILVER_WARES</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>

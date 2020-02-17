@@ -78,11 +78,11 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_MARS_ELECTRONICS</ID>
+						<ID>BONUS_MARTIAN_ELECTRONICS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_MARS_ALGAE</ID>
+						<ID>BONUS_MARTIAN_ALGAE</ID>
 					</Has>
 				</And>
 			</ConstructCondition>
@@ -181,7 +181,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_MARS_FRUIT</ID>
+						<ID>BONUS_MARTIAN_FRUIT</ID>
 					</Has>
 				</And>
 			</ConstructCondition>
@@ -224,7 +224,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_MARS_CROPS</ID>
+						<ID>BONUS_MARTIAN_CROPS</ID>
 					</Has>
 				</And>
 			</ConstructCondition>
@@ -355,7 +355,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<FreeBonus>BONUS_MARS_VEGETABLES</FreeBonus>
+			<FreeBonus>BONUS_MARTIAN_VEGETABLES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -423,7 +423,7 @@
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 			<Bonus>BONUS_MARS_ROCKS</Bonus>
-			<FreeBonus>BONUS_MARS_PARTS</FreeBonus>
+			<FreeBonus>BONUS_MARTIAN_MANUFACTURED_GOODS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -431,7 +431,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WARE_COPPER</FreeBonus>
+					<FreeBonus>BONUS_COPPER_WARES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -515,15 +515,15 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_CO2_ICE</ID>
+						<ID>BONUS_CARBON_DIOXIDE_ICE</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_MARS_PARTS</ID>
+						<ID>BONUS_MARTIAN_MANUFACTURED_GOODS</ID>
 					</Has>
 				</And>
 			</ConstructCondition>
-			<FreeBonus>BONUS_MARS_ALGAE</FreeBonus>
+			<FreeBonus>BONUS_MARTIAN_ALGAE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
 				<PropertySource>
@@ -577,7 +577,7 @@
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
-			<FreeBonus>BONUS_MARS_VEGETABLES</FreeBonus>
+			<FreeBonus>BONUS_MARTIAN_VEGETABLES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
 				<PropertySource>
@@ -615,8 +615,8 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<Bonus>BONUS_MARS_PARTS</Bonus>
-			<FreeBonus>BONUS_MARS_ELECTRONICS</FreeBonus>
+			<Bonus>BONUS_MARTIAN_MANUFACTURED_GOODS</Bonus>
+			<FreeBonus>BONUS_MARTIAN_ELECTRONICS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
 				<PropertySource>
@@ -652,7 +652,7 @@
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
-			<Bonus>BONUS_MARS_PARTS</Bonus>
+			<Bonus>BONUS_MARTIAN_MANUFACTURED_GOODS</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_MARS_CYCLER</BuildingClass>
@@ -814,7 +814,7 @@
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
-			<FreeBonus>BONUS_CO2_ICE</FreeBonus>
+			<FreeBonus>BONUS_CARBON_DIOXIDE_ICE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1176,7 +1176,7 @@
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
-			<FreeBonus>BONUS_DNT</FreeBonus>
+			<FreeBonus>BONUS_DIAMOND_NANOTHREADS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1555,7 +1555,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_DNT</ID>
+						<ID>BONUS_DIAMOND_NANOTHREADS</ID>
 					</Has>
 				</And>
 			</ConstructCondition>
@@ -1648,11 +1648,11 @@
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
-			<FreeBonus>BONUS_MARS_VEGETABLES</FreeBonus>
+			<FreeBonus>BONUS_MARTIAN_VEGETABLES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_MARS_FRUIT</FreeBonus>
+					<FreeBonus>BONUS_MARTIAN_FRUIT</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -2126,7 +2126,7 @@
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
-			<FreeBonus>BONUS_MARS_CROPS</FreeBonus>
+			<FreeBonus>BONUS_MARTIAN_CROPS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>

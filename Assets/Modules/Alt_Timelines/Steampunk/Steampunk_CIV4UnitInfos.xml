@@ -245,8 +245,8 @@
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<BonusType>BONUS_COAL</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
-				<BonusType>BONUS_WARE_STEEL</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
+				<BonusType>BONUS_STEEL_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>885</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
@@ -346,8 +346,8 @@
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<BonusType>BONUS_COAL</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_STEEL</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_STEEL_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>555</iCost>
 			<iMoves>4</iMoves>
@@ -452,8 +452,8 @@
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<BonusType>BONUS_COAL</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_STEEL</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_STEEL_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>720</iCost>
 			<iMoves>1</iMoves>
@@ -820,10 +820,10 @@
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<BonusType>BONUS_STEAMPUNK</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
-				<BonusType>BONUS_WARE_STEEL</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
+				<BonusType>BONUS_STEEL_WARES</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>
@@ -844,19 +844,19 @@
 			<iWorkRate>400</iWorkRate>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_STEEL</BonusType>
+					<BonusType>BONUS_STEEL_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>

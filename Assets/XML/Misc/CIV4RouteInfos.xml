@@ -71,7 +71,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>30</iMovement>
 			<iFlatMovement>30</iFlatMovement>
-			<BonusType>BONUS_DIESEL</BonusType>
+			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
 			<PrereqOrBonuses/>
 			<Yields/>
 			<TechMovementChanges>
@@ -94,7 +94,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>30</iMovement>
 			<iFlatMovement>12</iFlatMovement>
-			<BonusType>BONUS_WARE_STEEL</BonusType>
+			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqOrBonuses>
 				<PrereqOrBonus>
 					<BonusType>BONUS_COAL</BonusType>
@@ -103,7 +103,7 @@
 					<BonusType>BONUS_OIL</BonusType>
 				</PrereqOrBonus>
 				<PrereqOrBonus>
-					<BonusType>BONUS_DIESEL</BonusType>
+					<BonusType>BONUS_OIL_PRODUCTS</BonusType>
 				</PrereqOrBonus>
 			</PrereqOrBonuses>
 			<Yields/>
@@ -118,10 +118,10 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>30</iMovement>
 			<iFlatMovement>10</iFlatMovement>
-			<BonusType>BONUS_WARE_STEEL</BonusType>
+			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqOrBonuses>
 				<PrereqOrBonus>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 				</PrereqOrBonus>
 			</PrereqOrBonuses>
 			<Yields/>
@@ -136,7 +136,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>20</iMovement>
 			<iFlatMovement>6</iFlatMovement>
-			<BonusType>BONUS_WARE_COPPER</BonusType>
+			<BonusType>BONUS_COPPER_WARES</BonusType>
 			<PrereqOrBonuses>
 				<PrereqOrBonus>
 					<BonusType>BONUS_PLASTIC</BonusType>
@@ -159,7 +159,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>18</iMovement>
 			<iFlatMovement>6</iFlatMovement>
-			<BonusType>BONUS_WARE_TITANIUM</BonusType>
+			<BonusType>BONUS_TITANIUM_WARES</BonusType>
 			<Yields>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
@@ -176,7 +176,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>16</iMovement>
 			<iFlatMovement>6</iFlatMovement>
-			<BonusType>BONUS_WARES_LIQUID_METAL</BonusType>
+			<BonusType>BONUS_LIQUID_METAL_WARES</BonusType>
 			<Yields>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
@@ -212,7 +212,7 @@
 			<iMovement>60</iMovement>
 			<iFlatMovement>60</iFlatMovement>
 			<bSeaTunnel>1</bSeaTunnel>
-			<BonusType>BONUS_WARE_STEEL</BonusType>
+			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqOrBonuses/>
 			<Yields>
 				<iYield>0</iYield>

@@ -2079,7 +2079,7 @@
 				<Outcome>
 					<OutcomeType>OUTCOME_BONUS_SPAWNED</OutcomeType>
 					<iChance>2</iChance>
-					<BonusType>BONUS_FUR</BonusType>
+					<BonusType>BONUS_BEAVERS</BonusType>
 					<Yields>
 						<iYield>1</iYield>
 						<iYield>1</iYield>
@@ -6773,7 +6773,7 @@
 						<iYield>5</iYield>
 						<iYield>2</iYield>
 					</Yields>
-					<BonusType>BONUS_ELEPHANT</BonusType>
+					<BonusType>BONUS_ELEPHANTS</BonusType>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_SUBDUE</OutcomeType>
@@ -6895,7 +6895,7 @@
 				<Outcome>
 					<OutcomeType>OUTCOME_BONUS_SPAWNED</OutcomeType>
 					<iChance>2</iChance>
-					<BonusType>BONUS_ELEPHANT</BonusType>
+					<BonusType>BONUS_ELEPHANTS</BonusType>
 					<Yields>
 						<iYield>5</iYield>
 						<iYield>2</iYield>
@@ -19419,7 +19419,7 @@
 				<Outcome>
 					<OutcomeType>OUTCOME_BONUS_SPAWNED</OutcomeType>
 					<iChance>2</iChance>
-					<BonusType>BONUS_SEA_LIONS</BonusType>
+					<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_SUBDUE</OutcomeType>

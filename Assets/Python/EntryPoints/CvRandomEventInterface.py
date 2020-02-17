@@ -551,10 +551,10 @@ def canTriggerBrothersInNeed(argsList):
     return False
 
   listResources = []
-  listResources.append(GC.getInfoTypeForString("BONUS_COPPER"))
-  listResources.append(GC.getInfoTypeForString("BONUS_IRON"))
+  listResources.append(GC.getInfoTypeForString("BONUS_COPPER_ORE"))
+  listResources.append(GC.getInfoTypeForString("BONUS_IRON_ORE"))
   listResources.append(GC.getInfoTypeForString("BONUS_HORSE"))
-  listResources.append(GC.getInfoTypeForString("BONUS_ELEPHANT"))
+  listResources.append(GC.getInfoTypeForString("BONUS_ELEPHANTS"))
   listResources.append(GC.getInfoTypeForString("BONUS_OIL"))
   listResources.append(GC.getInfoTypeForString("BONUS_URANIUM"))
 
@@ -1260,7 +1260,7 @@ def canTriggerHiyoSilver(argsList):
   kTriggeredData = argsList[0]
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iSilver = GC.getInfoTypeForString("BONUS_SILVER")
+  iSilver = GC.getInfoTypeForString("BONUS_SILVER_ORE")
   iHappyBonuses = 0
   bSilver = False
   for i in xrange(GC.getNumBonusInfos()):
@@ -1287,7 +1287,7 @@ def canTriggerWiningMonks(argsList):
   kTriggeredData = argsList[0]
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  if player.getNumAvailableBonuses(GC.getInfoTypeForString("BONUS_WINE")) > 0:
+  if player.getNumAvailableBonuses(GC.getInfoTypeForString("BONUS_GRAPES")) > 0:
     return False
 
   return True
@@ -1323,7 +1323,7 @@ def canTriggerIndependentFilms(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
   for i in xrange(GC.getNumBuildingInfos()):
-    if GC.getBuildingInfo(i).getFreeBonus() == GC.getInfoTypeForString("BONUS_MOVIES"):
+    if GC.getBuildingInfo(i).getFreeBonus() == GC.getInfoTypeForString("BONUS_HIT_MOVIES"):
       if player.countNumBuildings(i) > 0:
         return False
 
@@ -1336,7 +1336,7 @@ def doIndependentFilms(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
   city = player.getCity(kTriggeredData.iCityId)
 
-  iBonus = GC.getInfoTypeForString("BONUS_MOVIES")
+  iBonus = GC.getInfoTypeForString("BONUS_HIT_MOVIES")
 
   city.changeFreeBonus(iBonus, 1)
 
@@ -1349,7 +1349,7 @@ def getHelpIndependentFilms(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
   city = player.getCity(kTriggeredData.iCityId)
 
-  iBonus = GC.getInfoTypeForString("BONUS_MOVIES")
+  iBonus = GC.getInfoTypeForString("BONUS_HIT_MOVIES")
 
   szHelp = TRNSLTR.getText("TXT_KEY_EVENT_INDEPENDENTFILMS_HELP_1", ( 1, GC.getBonusInfo(iBonus).getChar(), city.getNameKey()))
 
@@ -2689,7 +2689,7 @@ def canApplyMasterBlacksmithDone1(argsList):
   kTriggeredData = argsList[1]
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iBonus = GC.getInfoTypeForString("BONUS_COPPER")
+  iBonus = GC.getInfoTypeForString("BONUS_COPPER_ORE")
   city = player.getCity(kTriggeredData.iCityId)
 
   if city == None:
@@ -2723,7 +2723,7 @@ def applyMasterBlacksmithDone1(argsList):
   plot = GC.getMap().plot(kTriggeredData.iPlotX, kTriggeredData.iPlotY)
   city = player.getCity(kTriggeredData.iCityId)
 
-  iBonus = GC.getInfoTypeForString("BONUS_COPPER")
+  iBonus = GC.getInfoTypeForString("BONUS_COPPER_ORE")
   plot.setBonusType(iBonus)
 
   szBuffer = TRNSLTR.getText("TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE", (GC.getBonusInfo(iBonus).getTextKey(), city.getNameKey()))
@@ -3229,7 +3229,7 @@ def canTriggerGreed(argsList):
 	if not CyPlayer.getNumAvailableBonuses(iOil):
 		bonuses.append(iOil)
 		iCount += 1
-	iIron = GC.getInfoTypeForString("BONUS_IRON")
+	iIron = GC.getInfoTypeForString("BONUS_IRON_ORE")
 	if not CyPlayer.getNumAvailableBonuses(iIron):
 		bonuses.append(iIron)
 		iCount += 1
@@ -3237,7 +3237,7 @@ def canTriggerGreed(argsList):
 	if not CyPlayer.getNumAvailableBonuses(iHorse):
 		bonuses.append(iHorse)
 		iCount += 1
-	iCopper = GC.getInfoTypeForString("BONUS_COPPER")
+	iCopper = GC.getInfoTypeForString("BONUS_COPPER_ORE")
 	if not CyPlayer.getNumAvailableBonuses(iCopper):
 		bonuses.append(iCopper)
 		iCount += 1
@@ -3245,7 +3245,7 @@ def canTriggerGreed(argsList):
 	if not CyPlayer.getNumAvailableBonuses(iSulphur):
 		bonuses.append(iSulphur)
 		iCount += 1
-	iElephant = GC.getInfoTypeForString("BONUS_ELEPHANT")
+	iElephant = GC.getInfoTypeForString("BONUS_ELEPHANTS")
 	if not CyPlayer.getNumAvailableBonuses(iElephant):
 		bonuses.append(iElephant)
 		iCount += 1
@@ -4659,7 +4659,7 @@ def getHelpSyntheticFuels4(argsList):
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
   pCity = pPlayer.getCity(kTriggeredData.iCityId)
 
-  oBonus = GC.getInfoTypeForString("BONUS_DIESEL")
+  oBonus = GC.getInfoTypeForString("BONUS_OIL_PRODUCTS")
 
   szHelp = TRNSLTR.getText("TXT_KEY_EVENT_SYNTHETIC_FUELS_HELP_4", (1, GC.getBonusInfo(oBonus).getChar(), pCity.getNameKey()))
 
@@ -4672,7 +4672,7 @@ def doSyntheticFuels4(argsList):
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
   pCity = pPlayer.getCity(kTriggeredData.iCityId)
 
-  iBonus = GC.getInfoTypeForString("BONUS_DIESEL")
+  iBonus = GC.getInfoTypeForString("BONUS_OIL_PRODUCTS")
 
   pCity.changeFreeBonus(iBonus, 1)
 

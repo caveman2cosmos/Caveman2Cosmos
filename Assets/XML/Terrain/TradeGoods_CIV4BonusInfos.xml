@@ -9,11 +9,11 @@
 		<!-- Wine - Champagne -->
 		<!-- by DancingHoskuld -->
 		<BonusInfo>
-			<Type>BONUS_CHAMPAGNE</Type>
-			<Description>TXT_KEY_BONUS_CHAMPAGNE</Description>
+			<Type>BONUS_WINE_CHAMPAGNE</Type>
+			<Description>TXT_KEY_BONUS_WINE_CHAMPAGNE</Description>
 			<Civilopedia>TXT_KEY_BONUS_VINTAGE_WINE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_CHAMPAGNE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_WINE_CHAMPAGNE</ArtDefineTag>
 			<TechReveal>TECH_ALCHEMY</TechReveal>
 			<TechCityTrade>TECH_ALCHEMY</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -26,11 +26,11 @@
 		</BonusInfo>
 		<!-- Hit Musicals -->
 		<BonusInfo>
-			<Type>BONUS_DRAMA</Type>
-			<Description>TXT_KEY_BONUS_DRAMA</Description>
-			<Civilopedia>TXT_KEY_BONUS_DRAMA_PEDIA</Civilopedia>
+			<Type>BONUS_HIT_MUSICALS</Type>
+			<Description>TXT_KEY_BONUS_HIT_MUSICALS</Description>
+			<Civilopedia>TXT_KEY_BONUS_HIT_MUSICALS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_DRAMA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HIT_MUSICALS</ArtDefineTag>
 			<TechReveal>TECH_INCANDESCENT_LIGHTING</TechReveal>
 			<TechCityTrade>TECH_INCANDESCENT_LIGHTING</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -44,11 +44,11 @@
 		<!-- Carved Emu Eggs -->
 		<!-- by Sargon -->
 		<BonusInfo>
-			<Type>BONUS_EMU_EGG</Type>
-			<Description>TXT_KEY_BONUS_EMU_EGG</Description>
-			<Civilopedia>TXT_KEY_BONUS_EMU_EGG_PEDIA</Civilopedia>
+			<Type>BONUS_CARVED_EMU_EGGS</Type>
+			<Description>TXT_KEY_BONUS_CARVED_EMU_EGGS</Description>
+			<Civilopedia>TXT_KEY_BONUS_CARVED_EMU_EGGS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_EMU_EGG</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_CARVED_EMU_EGGS</ArtDefineTag>
 			<TechReveal>TECH_PICTOGRAPHS</TechReveal>
 			<TechCityTrade>TECH_PICTOGRAPHS</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -62,11 +62,11 @@
 		<!-- Fine Leather -->
 		<!-- by Sargon -->
 		<BonusInfo>
-			<Type>BONUS_FINE_LEATHER</Type>
-			<Description>TXT_KEY_BONUS_FINE_LEATHER</Description>
-			<Civilopedia>TXT_KEY_BONUS_FINE_LEATHER_PEDIA</Civilopedia>
+			<Type>BONUS_OSTRICH_LEATHER</Type>
+			<Description>TXT_KEY_BONUS_OSTRICH_LEATHER</Description>
+			<Civilopedia>TXT_KEY_BONUS_OSTRICH_LEATHER_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_LUXURY</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_FINE_LEATHER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_OSTRICH_LEATHER</ArtDefineTag>
 			<TechReveal>TECH_POULTRY_DOMESTICATION</TechReveal>
 			<TechCityTrade>TECH_POULTRY_DOMESTICATION</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -98,11 +98,11 @@
 		<!-- Hawaiian Surfboards -->
 		<!-- by Sargon -->
 		<BonusInfo>
-			<Type>BONUS_H_SURFBOARD</Type>
-			<Description>TXT_KEY_BONUS_H_SURFBOARD</Description>
-			<Civilopedia>TXT_KEY_BONUS_H_SURFBOARD_PEDIA</Civilopedia>
+			<Type>BONUS_HAWAIIAN_SURFBOARDS</Type>
+			<Description>TXT_KEY_BONUS_HAWAIIAN_SURFBOARDS</Description>
+			<Civilopedia>TXT_KEY_BONUS_HAWAIIAN_SURFBOARDS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_H_SURFBOARD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HAWAIIAN_SURFBOARDS</ArtDefineTag>
 			<TechReveal>TECH_MARTIAL_ARTS</TechReveal>
 			<TechCityTrade>TECH_MARTIAL_ARTS</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -116,11 +116,11 @@
 		<!-- Jade Death Masks -->
 		<!-- by Sargon -->
 		<BonusInfo>
-			<Type>BONUS_JADE_MASK</Type>
-			<Description>TXT_KEY_BONUS_JADE_MASK</Description>
-			<Civilopedia>TXT_KEY_BONUS_JADE_MASK_PEDIA</Civilopedia>
+			<Type>BONUS_JADE_DEATH_MASKS</Type>
+			<Description>TXT_KEY_BONUS_JADE_DEATH_MASKS</Description>
+			<Civilopedia>TXT_KEY_BONUS_JADE_DEATH_MASKS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_JADE_MASK</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_JADE_DEATH_MASKS</ArtDefineTag>
 			<TechReveal>TECH_PERSONAL_ADORNMENTS</TechReveal>
 			<TechCityTrade>TECH_PERSONAL_ADORNMENTS</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -133,11 +133,11 @@
 		</BonusInfo>
 		<!-- Hit Movies -->
 		<BonusInfo>
-			<Type>BONUS_MOVIES</Type>
-			<Description>TXT_KEY_BONUS_MOVIES</Description>
-			<Civilopedia>TXT_KEY_BONUS_MOVIES_PEDIA</Civilopedia>
+			<Type>BONUS_HIT_MOVIES</Type>
+			<Description>TXT_KEY_BONUS_HIT_MOVIES</Description>
+			<Civilopedia>TXT_KEY_BONUS_HIT_MOVIES_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_MOVIES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HIT_MOVIES</ArtDefineTag>
 			<TechReveal>TECH_MOTION_PICTURES</TechReveal>
 			<TechCityTrade>TECH_MOTION_PICTURES</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -150,11 +150,11 @@
 		</BonusInfo>
 		<!-- Hit Singles -->
 		<BonusInfo>
-			<Type>BONUS_MUSIC</Type>
-			<Description>TXT_KEY_BONUS_MUSIC</Description>
-			<Civilopedia>TXT_KEY_BONUS_MUSIC_PEDIA</Civilopedia>
+			<Type>BONUS_HIT_SINGLES</Type>
+			<Description>TXT_KEY_BONUS_HIT_SINGLES</Description>
+			<Civilopedia>TXT_KEY_BONUS_HIT_SINGLES_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_MUSIC</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HIT_SINGLES</ArtDefineTag>
 			<TechReveal>TECH_ELECTRONICS</TechReveal>
 			<TechCityTrade>TECH_ELECTRONICS</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -168,11 +168,11 @@
 		<!-- Ostrich Feathers -->
 		<!-- by Sargon -->
 		<BonusInfo>
-			<Type>BONUS_O_FEATHERS</Type>
-			<Description>TXT_KEY_BONUS_O_FEATHERS</Description>
-			<Civilopedia>TXT_KEY_BONUS_O_FEATHERS_PEDIA</Civilopedia>
+			<Type>BONUS_OSTRICH_FEATHERS</Type>
+			<Description>TXT_KEY_BONUS_OSTRICH_FEATHERS</Description>
+			<Civilopedia>TXT_KEY_BONUS_OSTRICH_FEATHERS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_LUXURY</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_O_FEATHERS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_OSTRICH_FEATHERS</ArtDefineTag>
 			<TechReveal>TECH_POULTRY_DOMESTICATION</TechReveal>
 			<TechCityTrade>TECH_POULTRY_DOMESTICATION</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -186,11 +186,11 @@
 		<!-- Red and Black Ware -->
 		<!-- by Sargon -->
 		<BonusInfo>
-			<Type>BONUS_RED_AND_BLACK</Type>
-			<Description>TXT_KEY_BONUS_RED_AND_BLACK</Description>
-			<Civilopedia>TXT_KEY_BONUS_RED_AND_BLACK_PEDIA</Civilopedia>
+			<Type>BONUS_RED_AND_BLACK_WARE</Type>
+			<Description>TXT_KEY_BONUS_RED_AND_BLACK_WARE</Description>
+			<Civilopedia>TXT_KEY_BONUS_RED_AND_BLACK_WARE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_RED_AND_BLACK</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_RED_AND_BLACK_WARE</ArtDefineTag>
 			<TechReveal>TECH_GLASS_BLOWING</TechReveal>
 			<TechCityTrade>TECH_GLASS_BLOWING</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -204,11 +204,11 @@
 		<!-- Wine - Vintage Red -->
 		<!-- by DancingHoskuld -->
 		<BonusInfo>
-			<Type>BONUS_VINTAGE_RED_WINE</Type>
-			<Description>TXT_KEY_BONUS_VINTAGE_RED_WINE</Description>
+			<Type>BONUS_WINE_VINTAGE_RED</Type>
+			<Description>TXT_KEY_BONUS_WINE_VINTAGE_RED</Description>
 			<Civilopedia>TXT_KEY_BONUS_VINTAGE_WINE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_VINTAGE_RED_WINE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_WINE_VINTAGE_RED</ArtDefineTag>
 			<TechReveal>TECH_ALCHEMY</TechReveal>
 			<TechCityTrade>TECH_ALCHEMY</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -222,11 +222,11 @@
 		<!-- Wine - Vintage White -->
 		<!-- by DancingHoskuld -->
 		<BonusInfo>
-			<Type>BONUS_VINTAGE_WHITE_WINE</Type>
-			<Description>TXT_KEY_BONUS_VINTAGE_WHITE_WINE</Description>
+			<Type>BONUS_WINE_VINTAGE_WHITE</Type>
+			<Description>TXT_KEY_BONUS_WINE_VINTAGE_WHITE</Description>
 			<Civilopedia>TXT_KEY_BONUS_VINTAGE_WINE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_VINTAGE_WHITE_WINE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_WINE_VINTAGE_WHITE</ArtDefineTag>
 			<TechReveal>TECH_ALCHEMY</TechReveal>
 			<TechCityTrade>TECH_ALCHEMY</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>

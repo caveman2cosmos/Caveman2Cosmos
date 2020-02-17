@@ -3995,7 +3995,7 @@
 			</TerrainMakesValids>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_IRON</BonusType>
+					<BonusType>BONUS_IRON_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -4006,7 +4006,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_BAUXITE</BonusType>
+					<BonusType>BONUS_BAUXITE_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -4017,7 +4017,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TITANIUM</BonusType>
+					<BonusType>BONUS_TITANIUM_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -4062,7 +4062,7 @@
 			<bOutsideBorders>1</bOutsideBorders>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_IRON</BonusType>
+					<BonusType>BONUS_IRON_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -4073,7 +4073,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_BAUXITE</BonusType>
+					<BonusType>BONUS_BAUXITE_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -4084,7 +4084,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TITANIUM</BonusType>
+					<BonusType>BONUS_TITANIUM_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>

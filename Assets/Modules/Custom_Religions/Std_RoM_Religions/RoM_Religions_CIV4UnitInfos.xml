@@ -78,7 +78,7 @@
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<PrereqBuilding>BUILDING_EGYPT_MYTH_MONASTERY</PrereqBuilding>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
-			<BonusType>BONUS_WARE_IRON</BonusType>
+			<BonusType>BONUS_IRON_WARES</BonusType>
 			<iCost>330</iCost>
 			<iAdvancedStartCost>200</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -190,7 +190,7 @@
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<BonusType>BONUS_HORSE</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>370</iCost>
 			<iMoves>2</iMoves>

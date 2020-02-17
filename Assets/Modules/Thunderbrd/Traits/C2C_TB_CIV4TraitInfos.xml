@@ -9928,7 +9928,7 @@
 			<bCoastalAIInfluence>1</bCoastalAIInfluence>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
-					<BonusType>BONUS_SEA_LIONS</BonusType>
+					<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
@@ -10256,7 +10256,7 @@
 			<bCoastalAIInfluence>1</bCoastalAIInfluence>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
-					<BonusType>BONUS_SEA_LIONS</BonusType>
+					<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
@@ -12398,7 +12398,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_FUR</BonusType>
+					<BonusType>BONUS_BEAVERS</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
@@ -12406,11 +12406,11 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_ELEPHANT</BonusType>
+					<BonusType>BONUS_ELEPHANTS</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_GUINEA_PIG</BonusType>
+					<BonusType>BONUS_GUINEA_PIGS</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
@@ -12426,7 +12426,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_SEA_LIONS</BonusType>
+					<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
@@ -13676,7 +13676,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_FUR</BonusType>
+					<BonusType>BONUS_BEAVERS</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
@@ -13684,11 +13684,11 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_ELEPHANT</BonusType>
+					<BonusType>BONUS_ELEPHANTS</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_GUINEA_PIG</BonusType>
+					<BonusType>BONUS_GUINEA_PIGS</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
@@ -13704,7 +13704,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_SEA_LIONS</BonusType>
+					<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
@@ -36091,15 +36091,15 @@
 			<iNationalCaptureResistanceModifier>-20</iNationalCaptureResistanceModifier>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
-					<BonusType>BONUS_DRAMA</BonusType>
+					<BonusType>BONUS_HIT_MUSICALS</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_MUSIC</BonusType>
+					<BonusType>BONUS_HIT_SINGLES</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_MOVIES</BonusType>
+					<BonusType>BONUS_HIT_MOVIES</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
@@ -37171,11 +37171,11 @@
 			<iNationalCaptureResistanceModifier>-10</iNationalCaptureResistanceModifier>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
-					<BonusType>BONUS_DRAMA</BonusType>
+					<BonusType>BONUS_HIT_MUSICALS</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_MUSIC</BonusType>
+					<BonusType>BONUS_HIT_SINGLES</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
@@ -37461,7 +37461,7 @@
 			<iNationalCaptureResistanceModifier>-10</iNationalCaptureResistanceModifier>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
-					<BonusType>BONUS_MOVIES</BonusType>
+					<BonusType>BONUS_HIT_MOVIES</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
@@ -66398,7 +66398,7 @@
 			</PropertyManipulators>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
@@ -66836,7 +66836,7 @@
 			</PropertyManipulators>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
@@ -68066,7 +68066,7 @@
 			</PropertyManipulators>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
@@ -68708,7 +68708,7 @@
 			</PropertyManipulators>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
@@ -72614,11 +72614,11 @@
 					<iHappinessChange>-1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_FUR</BonusType>
+					<BonusType>BONUS_BEAVERS</BonusType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_ORE</BonusType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
@@ -72916,11 +72916,11 @@
 					<iHappinessChange>-1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_FUR</BonusType>
+					<BonusType>BONUS_BEAVERS</BonusType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_ORE</BonusType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>

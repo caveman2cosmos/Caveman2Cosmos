@@ -50,7 +50,7 @@
 			</MapCategoryTypes>
 			<Bonus>BONUS_STEAMPUNK</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_COPPER</Bonus>
+				<Bonus>BONUS_COPPER_WARES</Bonus>
 			</PrereqBonuses>
 			<iCost>655</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -327,7 +327,7 @@
 			</MapCategoryTypes>
 			<Bonus>BONUS_STEAMPUNK</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_TIMBER</Bonus>
+				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			</PrereqBonuses>
 			<bPower>1</bPower>
 			<iCost>770</iCost>

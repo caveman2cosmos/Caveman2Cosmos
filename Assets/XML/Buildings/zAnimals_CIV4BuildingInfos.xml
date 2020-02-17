@@ -19348,7 +19348,7 @@
 			<Strategy>TXT_KEY_BUILDING_ELEPHANT_HERD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ELEPHANT_HERD</ArtDefineTag>
-      		<FreeBonus>BONUS_ELEPHANT</FreeBonus>
+      		<FreeBonus>BONUS_ELEPHANTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -19733,11 +19733,11 @@
 			</BonusHealthChanges>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
-					<BonusType>BONUS_FUR</BonusType>
+					<BonusType>BONUS_BEAVERS</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_ELEPHANT</BonusType>
+					<BonusType>BONUS_ELEPHANTS</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
@@ -19817,11 +19817,11 @@
 			</BonusHealthChanges>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
-					<BonusType>BONUS_FUR</BonusType>
+					<BonusType>BONUS_BEAVERS</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_ELEPHANT</BonusType>
+					<BonusType>BONUS_ELEPHANTS</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
@@ -20219,7 +20219,7 @@
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
-			<FreeBonus>BONUS_LIZARD</FreeBonus>
+			<FreeBonus>BONUS_LIZARDS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<Flavors>
 				<Flavor>
@@ -20929,7 +20929,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_FUR_FARM</ArtDefineTag>
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
 			<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
-			<FreeBonus>BONUS_FUR</FreeBonus>
+			<FreeBonus>BONUS_BEAVERS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>-1</iCost>
 			<MapCategoryTypes>

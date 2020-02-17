@@ -16,7 +16,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BURIAL_GOODS_CAVE</ArtDefineTag>
 			<PrereqTech>TECH_CEREMONIAL_BURIAL</PrereqTech>
 			<iCost>-1</iCost>
-			<FreeBonus>BONUS_CAVE_BURIAL_GOODS</FreeBonus>
+			<FreeBonus>BONUS_ANTIQUITIES_GRAVE_GOODS_CAVE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -40,7 +40,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BURIAL_GOODS_EARTH</ArtDefineTag>
 			<PrereqTech>TECH_CEREMONIAL_BURIAL</PrereqTech>
 			<iCost>-1</iCost>
-			<FreeBonus>BONUS_EARTH_BURIAL_GOODS</FreeBonus>
+			<FreeBonus>BONUS_ANTIQUITIES_GRAVE_GOODS_EARTH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -64,7 +64,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BURIAL_GOODS_FIRE</ArtDefineTag>
 			<PrereqTech>TECH_CEREMONIAL_BURIAL</PrereqTech>
 			<iCost>-1</iCost>
-			<FreeBonus>BONUS_FIRE_BURIAL_GOODS</FreeBonus>
+			<FreeBonus>BONUS_ANTIQUITIES_GRAVE_GOODS_FIRE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -88,7 +88,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BURIAL_GOODS_SKY</ArtDefineTag>
 			<PrereqTech>TECH_CEREMONIAL_BURIAL</PrereqTech>
 			<iCost>-1</iCost>
-			<FreeBonus>BONUS_SKY_BURIAL_GOODS</FreeBonus>
+			<FreeBonus>BONUS_ANTIQUITIES_GRAVE_GOODS_SKY</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>

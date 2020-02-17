@@ -217,7 +217,7 @@
 				<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_WARE_IRON</BonusType>
+			<BonusType>BONUS_IRON_WARES</BonusType>
 			<iCost>245</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>8</iCombat>
@@ -918,7 +918,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_AMMO</BonusType>
+			<BonusType>BONUS_AMMUNITION</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
 			</PrereqBonuses>
@@ -1114,7 +1114,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_AMMO</BonusType>
+			<BonusType>BONUS_AMMUNITION</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
 			</PrereqBonuses>
@@ -1301,7 +1301,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_WARE_IRON</BonusType>
+			<BonusType>BONUS_IRON_WARES</BonusType>
 			<iCost>1030</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>18</iCombat>

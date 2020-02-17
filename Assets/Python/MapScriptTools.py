@@ -175,18 +175,18 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 	global ebAlgaeCyan, ebMineral, ebEnergy
 
 	# strategic boni
-	ebAluminum        = GC.getInfoTypeForString('BONUS_ALUMINUM')				#
-	ebBauxite         = GC.getInfoTypeForString('BONUS_BAUXITE')				#
-	ebCopper          = GC.getInfoTypeForString('BONUS_COPPER')					#
+	ebAluminum        = GC.getInfoTypeForString('BONUS_ALUMINUM_INGOTS')				#
+	ebBauxite         = GC.getInfoTypeForString('BONUS_BAUXITE_ORE')				#
+	ebCopper          = GC.getInfoTypeForString('BONUS_COPPER_ORE')					#
 	ebHorse           = GC.getInfoTypeForString('BONUS_HORSE')					#
-	ebIron            = GC.getInfoTypeForString('BONUS_IRON')					#
+	ebIron            = GC.getInfoTypeForString('BONUS_IRON_ORE')					#
 	ebMithril         = GC.getInfoTypeForString('BONUS_MITHRIL')				# FFH:
 	ebNaturalGas      = GC.getInfoTypeForString('BONUS_NATURAL_GAS')			#
 	ebOil             = GC.getInfoTypeForString('BONUS_OIL')						# not plains, Pfall: water
 	ebReagens         = GC.getInfoTypeForString('BONUS_REAGENS')				# FFH:
 	ebRubber          = GC.getInfoTypeForString('BONUS_RUBBER')					#
 	ebSulphur         = GC.getInfoTypeForString('BONUS_SULPHUR')				#
-	ebTitanium        = GC.getInfoTypeForString('BONUS_TITANIUM')				#
+	ebTitanium        = GC.getInfoTypeForString('BONUS_TITANIUM_ORE')				#
 	ebUranium         = GC.getInfoTypeForString('BONUS_URANIUM')				#
 
 	# mana boni
@@ -220,12 +220,12 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 	ebFish            = GC.getInfoTypeForString('BONUS_FISH')					# water
 	ebShrimp          = GC.getInfoTypeForString('BONUS_SHRIMP')					# water
 	ebCoal            = GC.getInfoTypeForString('BONUS_COAL')					#
-	ebGold            = GC.getInfoTypeForString('BONUS_GOLD')					# plains, desert, Pfall: any
-	ebSilver          = GC.getInfoTypeForString('BONUS_SILVER')					# tundra or snow, Pfall: any
+	ebGold            = GC.getInfoTypeForString('BONUS_GOLD_ORE')					# plains, desert, Pfall: any
+	ebSilver          = GC.getInfoTypeForString('BONUS_SILVER_ORE')					# tundra or snow, Pfall: any
 	ebBanana          = GC.getInfoTypeForString('BONUS_BANANA')					# grass & jungle
 	ebCow             = GC.getInfoTypeForString('BONUS_COW')						# grass, plains
 	ebDeer            = GC.getInfoTypeForString('BONUS_DEER')					# tundra & forest
-	ebFur             = GC.getInfoTypeForString('BONUS_FUR')						# tundra or snow, forest
+	ebFur             = GC.getInfoTypeForString('BONUS_BEAVERS')						# tundra or snow, forest
 	ebGems            = GC.getInfoTypeForString('BONUS_GEMS')					# grass, jungle
 	ebMarble          = GC.getInfoTypeForString('BONUS_MARBLE')					# plains, tundra or snow
 	ebSheep           = GC.getInfoTypeForString('BONUS_SHEEP')					# grass or plains
@@ -1319,7 +1319,7 @@ def choose( iPercent, a, b ):
 # choose from several (iPercent,xValue) tuples; iPercent ascending toward 100%
 # parameter may be also a list of tuples
 # Usage:
-# bon = chooseMore( (10,"BONUS_SILVER"), (35,"BONUS_GOLD"), (50,"BONUS_COPPER"), (85,"BONUS_IRON") )
+# bon = chooseMore( (10,"BONUS_SILVER_ORE"), (35,"BONUS_GOLD_ORE"), (50,"BONUS_COPPER_ORE"), (85,"BONUS_IRON_ORE") )
 # will give the boni names with 10%, 25%, 15% and 35% probability or None with 15% probability
 def chooseMore(*t):
 	iRand = CyGame().getMapRand().get(100, "MapScriptTools.chooseMore()")
@@ -3775,9 +3775,9 @@ class BonusBalancer:
 	# class variables
 	# Note: The first bonus will be ignored about half the time,
 	#       not all players will have it near their starting-plot
-	resourcesToBalance   = ( 'BONUS_ALUMINUM', 'BONUS_OIL', 'BONUS_HORSE', 'BONUS_URANIUM', 'BONUS_IRON', 'BONUS_COPPER', )
+	resourcesToBalance   = ( 'BONUS_ALUMINUM_INGOTS', 'BONUS_OIL', 'BONUS_HORSE', 'BONUS_URANIUM', 'BONUS_IRON_ORE', 'BONUS_COPPER_ORE', )
 	resourcesToEliminate = ('', )
-	mineralsToMove       = ( 'BONUS_COPPER', 'BONUS_IRON', 'BONUS_MITHRIL', 'BONUS_SILVER', 'BONUS_GOLD', 'BONUS_URANIUM' )
+	mineralsToMove       = ( 'BONUS_COPPER_ORE', 'BONUS_IRON_ORE', 'BONUS_MITHRIL', 'BONUS_SILVER_ORE', 'BONUS_GOLD_ORE', 'BONUS_URANIUM' )
 
 	def initialize(self, bBalanceOnOff=True, bMissingOnOff=True, bMineralsOnOff=True, bWideRange=False ):
 		print "[MST] ===== BonusBalancer:initialize( %r, %r, %r, %r )" % (bBalanceOnOff, bMissingOnOff, bMineralsOnOff, bWideRange)
@@ -3814,7 +3814,7 @@ class BonusBalancer:
 			self.resourcesToBalance = ('', )
 			self.resourcesToEliminate = ('', )
 		else:
-			self.resourcesToBalance = ('BONUS_BAUXITE', 'BONUS_OIL', 'BONUS_HORSE', 'BONUS_URANIUM', 'BONUS_IRON', 'BONUS_COPPER',)
+			self.resourcesToBalance = ('BONUS_BAUXITE_ORE', 'BONUS_OIL', 'BONUS_HORSE', 'BONUS_URANIUM', 'BONUS_IRON_ORE', 'BONUS_COPPER_ORE',)
 
 		#-----------------------------------------------------
 		# show which of the boni in the mod might be strategic

@@ -978,7 +978,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<Bonus>BONUS_TIME_CRYSTAL</Bonus>
+			<Bonus>BONUS_TIME_CRYSTALS</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_ANCIENT_CIVILIZATION</BuildingClass>
@@ -2176,7 +2176,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<FreeBonus>BONUS_EXOTIC_PARTICLE</FreeBonus>
+			<FreeBonus>BONUS_ALICE_MATTER</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4042,7 +4042,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<Bonus>BONUS_EXOTIC_PARTICLE</Bonus>
+			<Bonus>BONUS_ALICE_MATTER</Bonus>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

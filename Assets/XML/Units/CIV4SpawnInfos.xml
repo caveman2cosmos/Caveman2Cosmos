@@ -251,7 +251,7 @@
 			<iMinLatitude>0</iMinLatitude>
 			<iMinLongitude>60</iMinLongitude>
 			<BonusTypes>
-				<BonusType>BONUS_ELEPHANT</BonusType>
+				<BonusType>BONUS_ELEPHANTS</BonusType>
 			</BonusTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -445,7 +445,7 @@
 			<iMaxLongitude>-60</iMaxLongitude>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<BonusTypes>
-				<BonusType>BONUS_ELEPHANT</BonusType>
+				<BonusType>BONUS_ELEPHANTS</BonusType>
 				<BonusType>BONUS_DONKEY</BonusType>
 			</BonusTypes>
 		</SpawnInfo>
@@ -461,7 +461,7 @@
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMaxLatitude>-40</iMaxLatitude>
 			<BonusTypes>
-				<BonusType>BONUS_SEA_LIONS</BonusType>
+				<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
 				<BonusType>BONUS_POULTRY</BonusType>
 			</BonusTypes>
 		</SpawnInfo>
@@ -477,7 +477,7 @@
 			<iMinLatitude>50</iMinLatitude>
 			<BonusTypes>
 				<BonusType>BONUS_WALRUS</BonusType>
-				<BonusType>BONUS_SEA_LIONS</BonusType>
+				<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
 			</BonusTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -639,7 +639,7 @@
 			<iMinLatitude>0</iMinLatitude>
 			<iMaxLongitude>-60</iMaxLongitude>
 			<BonusTypes>
-				<BonusType>BONUS_FUR</BonusType>
+				<BonusType>BONUS_BEAVERS</BonusType>
 			</BonusTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -1438,7 +1438,7 @@
 				<BonusType>BONUS_COW</BonusType>
 				<BonusType>BONUS_DEER</BonusType>
 				<BonusType>BONUS_HORSE</BonusType>
-				<BonusType>BONUS_ELEPHANT</BonusType>
+				<BonusType>BONUS_ELEPHANTS</BonusType>
 				<BonusType>BONUS_RABBIT</BonusType>
 				<BonusType>BONUS_DONKEY</BonusType>
 				<BonusType>BONUS_KANGAROO</BonusType>
@@ -1801,7 +1801,7 @@
 			<bFreshWaterOnly>1</bFreshWaterOnly>
 			<iMaxLatitude>80</iMaxLatitude>
 			<BonusTypes>
-				<BonusType>BONUS_SEA_LIONS</BonusType>
+				<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
 				<BonusType>BONUS_FISH</BonusType>
 				<BonusType>BONUS_CRAB</BonusType>
 				<BonusType>BONUS_LOBSTER</BonusType>
@@ -2191,7 +2191,7 @@
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<BonusTypes>
-				<BonusType>BONUS_SEA_LIONS</BonusType>
+				<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
 			</BonusTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -2902,7 +2902,7 @@
 			<iMinLongitude>-60</iMinLongitude>
 			<iMaxLongitude>60</iMaxLongitude>
 			<BonusTypes>
-				<BonusType>BONUS_ELEPHANT</BonusType>
+				<BonusType>BONUS_ELEPHANTS</BonusType>
 			</BonusTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -3156,7 +3156,7 @@
 				<BonusType>BONUS_COW</BonusType>
 				<BonusType>BONUS_DEER</BonusType>
 				<BonusType>BONUS_HORSE</BonusType>
-				<BonusType>BONUS_ELEPHANT</BonusType>
+				<BonusType>BONUS_ELEPHANTS</BonusType>
 				<BonusType>BONUS_RABBIT</BonusType>
 				<BonusType>BONUS_DONKEY</BonusType>
 				<BonusType>BONUS_KANGAROO</BonusType>
@@ -3451,7 +3451,7 @@
 			<iMaxLongitude>-60</iMaxLongitude>
 			<BonusTypes>
 				<BonusType>BONUS_BISON</BonusType>
-				<BonusType>BONUS_ELEPHANT</BonusType>
+				<BonusType>BONUS_ELEPHANTS</BonusType>
 				<BonusType>BONUS_MAMMOTH</BonusType>
 				<BonusType>BONUS_DEER</BonusType>
 				<BonusType>BONUS_COW</BonusType>
@@ -3950,7 +3950,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<BonusTypes>
-				<BonusType>BONUS_SEA_LIONS</BonusType>
+				<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
 			</BonusTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4146,10 +4146,10 @@ iValidPlots = Number of Valid spawn plots on entire map
 				<BonusType>BONUS_DEER</BonusType>
 				<BonusType>BONUS_MAMMOTH</BonusType>
 				<BonusType>BONUS_WALRUS</BonusType>
-				<BonusType>BONUS_ELEPHANT</BonusType>
+				<BonusType>BONUS_ELEPHANTS</BonusType>
 				<BonusType>BONUS_COW</BonusType>
 				<BonusType>BONUS_PIG</BonusType>
-				<BonusType>BONUS_SEA_LIONS</BonusType>
+				<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
 			</BonusTypes>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -4254,7 +4254,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<rateOverrideDefineName>NEANDERTHAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMinLatitude>50</iMinLatitude>
 			<BonusTypes>
-				<BonusType>BONUS_ELEPHANT</BonusType>
+				<BonusType>BONUS_ELEPHANTS</BonusType>
 			</BonusTypes>
 		</SpawnInfo>
 		<SpawnInfo>

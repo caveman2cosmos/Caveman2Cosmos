@@ -883,7 +883,7 @@
 			<Type>EVENT_BROTHERS_IN_NEED_2</Type>
 			<Description>TXT_KEY_EVENT_BROTHERS_IN_NEED_2</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_2</OtherPlayerPopup>
-			<BonusGift>BONUS_WARE_COPPER</BonusGift>
+			<BonusGift>BONUS_COPPER_WARES</BonusGift>
 			<iOurAttitudeModifier>3</iOurAttitudeModifier>
 			<iAttitudeModifier>3</iAttitudeModifier>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -893,7 +893,7 @@
 			<Type>EVENT_BROTHERS_IN_NEED_3</Type>
 			<Description>TXT_KEY_EVENT_BROTHERS_IN_NEED_3</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_3</OtherPlayerPopup>
-			<BonusGift>BONUS_WARE_IRON</BonusGift>
+			<BonusGift>BONUS_IRON_WARES</BonusGift>
 			<iAttitudeModifier>3</iAttitudeModifier>
 			<iTheirEnemyAttitudeModifier>3</iTheirEnemyAttitudeModifier>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -913,7 +913,7 @@
 			<Type>EVENT_BROTHERS_IN_NEED_5</Type>
 			<Description>TXT_KEY_EVENT_BROTHERS_IN_NEED_5</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_5</OtherPlayerPopup>
-			<BonusGift>BONUS_ELEPHANT</BonusGift>
+			<BonusGift>BONUS_ELEPHANTS</BonusGift>
 			<iOurAttitudeModifier>3</iOurAttitudeModifier>
 			<iAttitudeModifier>3</iAttitudeModifier>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -933,7 +933,7 @@
 			<Type>EVENT_BROTHERS_IN_NEED_7</Type>
 			<Description>TXT_KEY_EVENT_BROTHERS_IN_NEED_7</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_7</OtherPlayerPopup>
-			<BonusGift>BONUS_AMMO</BonusGift>
+			<BonusGift>BONUS_AMMUNITION</BonusGift>
 			<iOurAttitudeModifier>3</iOurAttitudeModifier>
 			<iAttitudeModifier>3</iAttitudeModifier>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -943,7 +943,7 @@
 			<Type>EVENT_BROTHERS_IN_NEED_8</Type>
 			<Description>TXT_KEY_EVENT_BROTHERS_IN_NEED_8</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_8</OtherPlayerPopup>
-			<BonusGift>BONUS_WARE_STEEL</BonusGift>
+			<BonusGift>BONUS_STEEL_WARES</BonusGift>
 			<iOurAttitudeModifier>3</iOurAttitudeModifier>
 			<iAttitudeModifier>3</iAttitudeModifier>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -953,7 +953,7 @@
 			<Type>EVENT_BROTHERS_IN_NEED_9</Type>
 			<Description>TXT_KEY_EVENT_BROTHERS_IN_NEED_9</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_9</OtherPlayerPopup>
-			<BonusGift>BONUS_DIESEL</BonusGift>
+			<BonusGift>BONUS_OIL_PRODUCTS</BonusGift>
 			<iOurAttitudeModifier>3</iOurAttitudeModifier>
 			<iAttitudeModifier>3</iAttitudeModifier>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -1223,7 +1223,7 @@
 		<EventInfo>
 			<Type>EVENT_TIN_1</Type>
 			<Description>TXT_KEY_EVENT_TIN_1</Description>
-			<BonusType>BONUS_TIN</BonusType>
+			<BonusType>BONUS_TIN_ORE</BonusType>
 			<iBonusChange>1</iBonusChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -1637,7 +1637,7 @@
 		<EventInfo>
 			<Type>EVENT_HIYOSILVER_1</Type>
 			<Description>TXT_KEY_EVENT_HIYOSILVER_1</Description>
-			<BonusType>BONUS_SILVER</BonusType>
+			<BonusType>BONUS_SILVER_ORE</BonusType>
 			<iBonusChange>1</iBonusChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -1648,7 +1648,7 @@
 			<iGold>-20</iGold>
 			<ImprovementType>IMPROVEMENT_MINE</ImprovementType>
 			<iImprovementChange>1</iImprovementChange>
-			<BonusType>BONUS_SILVER</BonusType>
+			<BonusType>BONUS_SILVER_ORE</BonusType>
 			<iBonusChange>1</iBonusChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -1656,7 +1656,7 @@
 		<EventInfo>
 			<Type>EVENT_WININGMONKS_1</Type>
 			<Description>TXT_KEY_EVENT_WININGMONKS_1</Description>
-			<BonusType>BONUS_WINE</BonusType>
+			<BonusType>BONUS_GRAPES</BonusType>
 			<iBonusChange>1</iBonusChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -1666,7 +1666,7 @@
 			<Description>TXT_KEY_EVENT_WININGMONKS_2</Description>
 			<iGold>-20</iGold>
 			<iImprovementChange>1</iImprovementChange>
-			<BonusType>BONUS_WINE</BonusType>
+			<BonusType>BONUS_GRAPES</BonusType>
 			<iBonusChange>1</iBonusChange>
 			<PythonCallback>doWiningMonks2</PythonCallback>
 			<PythonHelp>getHelpWiningMonks2</PythonHelp>
@@ -5685,7 +5685,7 @@
 		<EventInfo>
 			<Type>EVENT_PRIME_TIMBER_1</Type>
 			<Description>TXT_KEY_EVENT_PRIME_TIMBER_1</Description>
-			<BonusType>BONUS_TIMBER</BonusType>
+			<BonusType>BONUS_PRIME_TIMBER</BonusType>
 			<iBonusChange>1</iBonusChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -7051,7 +7051,7 @@
 		<EventInfo>
 			<Type>EVENT_ELEPHANT_MIGRATION_1</Type>
 			<Description>TXT_KEY_EVENT_GAME_MIGRATION_1</Description>
-			<BonusType>BONUS_ELEPHANT</BonusType>
+			<BonusType>BONUS_ELEPHANTS</BonusType>
 			<iBonusChange>1</iBonusChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -7312,7 +7312,7 @@
 		<EventInfo>
 			<Type>EVENT_SEAL_MIGRATION_1</Type>
 			<Description>TXT_KEY_EVENT_GAME_MIGRATION_1</Description>
-			<BonusType>BONUS_SEA_LIONS</BonusType>
+			<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
 			<iBonusChange>1</iBonusChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>

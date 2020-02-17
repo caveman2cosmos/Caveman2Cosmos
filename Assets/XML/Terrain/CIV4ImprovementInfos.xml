@@ -60,7 +60,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_POTATO</BonusType>
+					<BonusType>BONUS_POTATOES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -92,7 +92,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_MELON</BonusType>
+					<BonusType>BONUS_MELONS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -168,7 +168,7 @@
 			</FeatureMakesValids>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -234,7 +234,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -268,7 +268,7 @@
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -334,7 +334,7 @@
 					<iDiscoverRand>100000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_FOSSIL</BonusType>
+					<BonusType>BONUS_FOSSIL_BEDS</BonusType>
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -396,7 +396,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_FUR</BonusType>
+					<BonusType>BONUS_BEAVERS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -404,7 +404,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GUINEA_PIG</BonusType>
+					<BonusType>BONUS_GUINEA_PIGS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -414,7 +414,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_ELEPHANT</BonusType>
+					<BonusType>BONUS_ELEPHANTS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -446,7 +446,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SEA_LIONS</BonusType>
+					<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -1839,7 +1839,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -1873,7 +1873,7 @@
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -2150,7 +2150,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -2626,7 +2626,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_FOSSIL</BonusType>
+					<BonusType>BONUS_FOSSIL_BEDS</BonusType>
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -2899,7 +2899,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_FUR</BonusType>
+					<BonusType>BONUS_BEAVERS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -2909,7 +2909,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GUINEA_PIG</BonusType>
+					<BonusType>BONUS_GUINEA_PIGS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -2919,7 +2919,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_ELEPHANT</BonusType>
+					<BonusType>BONUS_ELEPHANTS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -2946,7 +2946,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SEA_LIONS</BonusType>
+					<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -3034,7 +3034,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_FUR</BonusType>
+					<BonusType>BONUS_BEAVERS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -3044,7 +3044,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GUINEA_PIG</BonusType>
+					<BonusType>BONUS_GUINEA_PIGS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -3054,7 +3054,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_ELEPHANT</BonusType>
+					<BonusType>BONUS_ELEPHANTS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -3082,7 +3082,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SEA_LIONS</BonusType>
+					<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -3180,7 +3180,7 @@
 			<iPillageGold>25</iPillageGold>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_ELEPHANT</BonusType>
+					<BonusType>BONUS_ELEPHANTS</BonusType>
 					<bObsoleteBonusMakesValid>1</bObsoleteBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -3190,7 +3190,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_FUR</BonusType>
+					<BonusType>BONUS_BEAVERS</BonusType>
 					<bObsoleteBonusMakesValid>1</bObsoleteBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -3210,7 +3210,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SEA_LIONS</BonusType>
+					<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
 					<bObsoleteBonusMakesValid>1</bObsoleteBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -3260,7 +3260,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GUINEA_PIG</BonusType>
+					<BonusType>BONUS_GUINEA_PIGS</BonusType>
 					<bObsoleteBonusMakesValid>1</bObsoleteBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -3341,7 +3341,7 @@
 			</FeatureMakesValids>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_FOSSIL</BonusType>
+					<BonusType>BONUS_FOSSIL_BEDS</BonusType>
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3516,7 +3516,7 @@
 			<iPillageGold>40</iPillageGold>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_WINE</BonusType>
+					<BonusType>BONUS_GRAPES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -4326,7 +4326,7 @@
 			</FeatureMakesValids>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_ANCIENTTEMPLE</BonusType>
+					<BonusType>BONUS_ANCIENT_RELICS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 				</BonusTypeStruct>
@@ -4610,7 +4610,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -4644,7 +4644,7 @@
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -4812,7 +4812,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -4834,7 +4834,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -5191,7 +5191,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_METHANE</BonusType>
+					<BonusType>BONUS_METHANE_ICE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDepletionRand>2000</iDepletionRand>
@@ -5257,7 +5257,7 @@
 			<iPillageGold>10</iPillageGold>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_THERMAL_VENT</BonusType>
+					<BonusType>BONUS_GEOTHERMAL_ENERGY</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -5417,7 +5417,7 @@
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_MELON</BonusType>
+					<BonusType>BONUS_MELONS</BonusType>
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5429,7 +5429,7 @@
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_LEMON</BonusType>
+					<BonusType>BONUS_LEMONS</BonusType>
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5449,11 +5449,11 @@
 					<iDiscoverRand>100000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_RUBY</BonusType>
+					<BonusType>BONUS_RUBIES</BonusType>
 					<iDiscoverRand>100000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SAPPHIRE</BonusType>
+					<BonusType>BONUS_SAPPHIRES</BonusType>
 					<iDiscoverRand>100000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5469,7 +5469,7 @@
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GUAVA</BonusType>
+					<BonusType>BONUS_GUAVAS</BonusType>
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5477,7 +5477,7 @@
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5701,7 +5701,7 @@
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_WINE</BonusType>
+					<BonusType>BONUS_GRAPES</BonusType>
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -6456,7 +6456,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_LEMON</BonusType>
+					<BonusType>BONUS_LEMONS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -6554,7 +6554,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GUAVA</BonusType>
+					<BonusType>BONUS_GUAVAS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -6586,7 +6586,7 @@
 			<iPillageGold>7</iPillageGold>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_WINE</BonusType>
+					<BonusType>BONUS_GRAPES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -6618,7 +6618,7 @@
 			<iPillageGold>7</iPillageGold>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -6845,7 +6845,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_LEMON</BonusType>
+					<BonusType>BONUS_LEMONS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -6965,7 +6965,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GUAVA</BonusType>
+					<BonusType>BONUS_GUAVAS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -7015,7 +7015,7 @@
 			<iPillageGold>20</iPillageGold>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_WINE</BonusType>
+					<BonusType>BONUS_GRAPES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -7060,7 +7060,7 @@
 			<iPillageGold>20</iPillageGold>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -7552,7 +7552,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_LEMON</BonusType>
+					<BonusType>BONUS_LEMONS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -7672,7 +7672,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GUAVA</BonusType>
+					<BonusType>BONUS_GUAVAS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -7748,7 +7748,7 @@
 			</FeatureMakesValids>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_FOSSIL</BonusType>
+					<BonusType>BONUS_FOSSIL_BEDS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -8938,7 +8938,7 @@
 			<bOutsideBorders>1</bOutsideBorders>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_CO2_ICE</BonusType>
+					<BonusType>BONUS_CARBON_DIOXIDE_ICE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>100000</iDiscoverRand>
@@ -9271,7 +9271,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_POTATO</BonusType>
+					<BonusType>BONUS_POTATOES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -9291,7 +9291,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_MELON</BonusType>
+					<BonusType>BONUS_MELONS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -9565,7 +9565,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_POTATO</BonusType>
+					<BonusType>BONUS_POTATOES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>25000</iDiscoverRand>
@@ -9585,7 +9585,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_MELON</BonusType>
+					<BonusType>BONUS_MELONS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>25000</iDiscoverRand>
@@ -9629,7 +9629,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_WINE</BonusType>
+					<BonusType>BONUS_GRAPES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>25000</iDiscoverRand>
@@ -9662,7 +9662,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_LEMON</BonusType>
+					<BonusType>BONUS_LEMONS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>25000</iDiscoverRand>
@@ -9794,7 +9794,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GUAVA</BonusType>
+					<BonusType>BONUS_GUAVAS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>25000</iDiscoverRand>
@@ -10086,7 +10086,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>25000</iDiscoverRand>
@@ -11474,7 +11474,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 			</TerrainMakesValids>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -11484,7 +11484,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SILVER</BonusType>
+					<BonusType>BONUS_SILVER_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -11494,7 +11494,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -11712,7 +11712,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 			</TerrainMakesValids>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_BAUXITE</BonusType>
+					<BonusType>BONUS_BAUXITE_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -11735,7 +11735,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -11747,7 +11747,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -11759,7 +11759,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_IRON</BonusType>
+					<BonusType>BONUS_IRON_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -11770,7 +11770,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SILVER</BonusType>
+					<BonusType>BONUS_SILVER_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -11806,7 +11806,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -11818,7 +11818,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_FOSSIL</BonusType>
+					<BonusType>BONUS_FOSSIL_BEDS</BonusType>
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -11834,7 +11834,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_RUBY</BonusType>
+					<BonusType>BONUS_RUBIES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -11846,7 +11846,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SAPPHIRE</BonusType>
+					<BonusType>BONUS_SAPPHIRES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -11870,7 +11870,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_PLATINUM</BonusType>
+					<BonusType>BONUS_PLATINUM_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -11882,7 +11882,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TIN</BonusType>
+					<BonusType>BONUS_TIN_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12033,7 +12033,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 			</TerrainMakesValids>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_BAUXITE</BonusType>
+					<BonusType>BONUS_BAUXITE_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12056,7 +12056,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12068,7 +12068,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12080,7 +12080,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_IRON</BonusType>
+					<BonusType>BONUS_IRON_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12091,7 +12091,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SILVER</BonusType>
+					<BonusType>BONUS_SILVER_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12127,7 +12127,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12139,7 +12139,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_FOSSIL</BonusType>
+					<BonusType>BONUS_FOSSIL_BEDS</BonusType>
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -12155,7 +12155,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_RUBY</BonusType>
+					<BonusType>BONUS_RUBIES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12167,7 +12167,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SAPPHIRE</BonusType>
+					<BonusType>BONUS_SAPPHIRES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12191,7 +12191,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_PLATINUM</BonusType>
+					<BonusType>BONUS_PLATINUM_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12203,7 +12203,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TIN</BonusType>
+					<BonusType>BONUS_TIN_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12215,7 +12215,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TITANIUM</BonusType>
+					<BonusType>BONUS_TITANIUM_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12374,7 +12374,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 			</TerrainMakesValids>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_BAUXITE</BonusType>
+					<BonusType>BONUS_BAUXITE_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12397,7 +12397,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12409,7 +12409,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12421,7 +12421,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_IRON</BonusType>
+					<BonusType>BONUS_IRON_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12432,7 +12432,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SILVER</BonusType>
+					<BonusType>BONUS_SILVER_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12468,7 +12468,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12480,7 +12480,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_FOSSIL</BonusType>
+					<BonusType>BONUS_FOSSIL_BEDS</BonusType>
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -12496,7 +12496,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_RUBY</BonusType>
+					<BonusType>BONUS_RUBIES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12508,7 +12508,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SAPPHIRE</BonusType>
+					<BonusType>BONUS_SAPPHIRES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12532,7 +12532,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_PLATINUM</BonusType>
+					<BonusType>BONUS_PLATINUM_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12544,7 +12544,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TIN</BonusType>
+					<BonusType>BONUS_TIN_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12556,7 +12556,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TITANIUM</BonusType>
+					<BonusType>BONUS_TITANIUM_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12686,7 +12686,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 			<iHealthPercent>-100</iHealthPercent>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_BAUXITE</BonusType>
+					<BonusType>BONUS_BAUXITE_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12709,7 +12709,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12721,7 +12721,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12733,7 +12733,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_IRON</BonusType>
+					<BonusType>BONUS_IRON_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12744,7 +12744,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SILVER</BonusType>
+					<BonusType>BONUS_SILVER_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12780,7 +12780,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12792,7 +12792,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_FOSSIL</BonusType>
+					<BonusType>BONUS_FOSSIL_BEDS</BonusType>
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -12808,7 +12808,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_RUBY</BonusType>
+					<BonusType>BONUS_RUBIES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12820,7 +12820,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SAPPHIRE</BonusType>
+					<BonusType>BONUS_SAPPHIRES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12844,7 +12844,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_PLATINUM</BonusType>
+					<BonusType>BONUS_PLATINUM_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12856,7 +12856,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TIN</BonusType>
+					<BonusType>BONUS_TIN_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12868,7 +12868,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TITANIUM</BonusType>
+					<BonusType>BONUS_TITANIUM_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -13087,7 +13087,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_BAUXITE</BonusType>
+					<BonusType>BONUS_BAUXITE_ORE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -13108,7 +13108,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_ORE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -13130,7 +13130,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_ORE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -13141,7 +13141,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_IRON</BonusType>
+					<BonusType>BONUS_IRON_ORE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -13151,7 +13151,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SILVER</BonusType>
+					<BonusType>BONUS_SILVER_ORE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -13184,7 +13184,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_ORE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -13195,7 +13195,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_RUBY</BonusType>
+					<BonusType>BONUS_RUBIES</BonusType>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -13206,7 +13206,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SAPPHIRE</BonusType>
+					<BonusType>BONUS_SAPPHIRES</BonusType>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -13228,7 +13228,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_PLATINUM</BonusType>
+					<BonusType>BONUS_PLATINUM_ORE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -13239,7 +13239,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TIN</BonusType>
+					<BonusType>BONUS_TIN_ORE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -13250,7 +13250,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TITANIUM</BonusType>
+					<BonusType>BONUS_TITANIUM_ORE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>

@@ -5906,13 +5906,13 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GLASS</BonusType>
+					<BonusType>BONUS_GLASSWARE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>-1</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_CLOTHES</BonusType>
+					<BonusType>BONUS_CLOTHING</BonusType>
 					<CommerceModifiers>
 						<iCommerce>-1</iCommerce>
 					</CommerceModifiers>
@@ -5930,25 +5930,25 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_PERCUSSION</BonusType>
+					<BonusType>BONUS_PERCUSSION_INSTRUMENTS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>-1</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_WOODWINDS</BonusType>
+					<BonusType>BONUS_WOODWIND_INSTRUMENTS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>-1</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_BRASS</BonusType>
+					<BonusType>BONUS_BRASS_INSTRUMENTS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>-1</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_STRINGS</BonusType>
+					<BonusType>BONUS_STRING_INSTRUMENTS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>-1</iCommerce>
 					</CommerceModifiers>
@@ -9958,7 +9958,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<BonusHealthChanges>
 				<BonusHealthChange>
-					<BonusType>BONUS_LEMON</BonusType>
+					<BonusType>BONUS_LEMONS</BonusType>
 					<iHealthChange>1</iHealthChange>
 				</BonusHealthChange>
 			</BonusHealthChanges>
@@ -10292,7 +10292,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_POTATO</BonusType>
+					<BonusType>BONUS_POTATOES</BonusType>
 					<YieldChanges>
 						<iYield>2</iYield>
 					</YieldChanges>
@@ -10369,7 +10369,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_SEA_LIONS</BonusType>
+					<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
 					<YieldChanges>
 						<iYield>2</iYield>
 						<iYield>1</iYield>
@@ -10471,7 +10471,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_LEMON</BonusType>
+					<BonusType>BONUS_LEMONS</BonusType>
 					<YieldChanges>
 						<iYield>2</iYield>
 					</YieldChanges>
@@ -10483,7 +10483,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_MELON</BonusType>
+					<BonusType>BONUS_MELONS</BonusType>
 					<YieldChanges>
 						<iYield>2</iYield>
 					</YieldChanges>
@@ -10563,7 +10563,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_ELEPHANT</BonusType>
+					<BonusType>BONUS_ELEPHANTS</BonusType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>2</iYield>
@@ -10617,7 +10617,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_WINE</BonusType>
+					<BonusType>BONUS_GRAPES</BonusType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -10625,7 +10625,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -10735,7 +10735,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_GUINEA_PIG</BonusType>
+					<BonusType>BONUS_GUINEA_PIGS</BonusType>
 					<YieldChanges>
 						<iYield>2</iYield>
 						<iYield>0</iYield>
@@ -10743,7 +10743,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>2</iYield>
@@ -10759,7 +10759,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_GUAVA</BonusType>
+					<BonusType>BONUS_GUAVAS</BonusType>
 					<YieldChanges>
 						<iYield>2</iYield>
 						<iYield>0</iYield>
@@ -10889,7 +10889,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqBonuses>
-				<Bonus>BONUS_GOLD</Bonus>
+				<Bonus>BONUS_GOLD_ORE</Bonus>
 			</PrereqBonuses>
 			<PrereqAndCivics>
 				<PrereqCivic>
@@ -10931,7 +10931,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqBonuses>
-				<Bonus>BONUS_SILVER</Bonus>
+				<Bonus>BONUS_SILVER_ORE</Bonus>
 			</PrereqBonuses>
 			<PrereqAndCivics>
 				<PrereqCivic>
@@ -12636,7 +12636,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POTTERY</PrereqTech>
-			<Bonus>BONUS_TIMBER</Bonus>
+			<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
 			</PrereqBonuses>
@@ -13227,7 +13227,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<Bonus>BONUS_TIMBER</Bonus>
+			<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
@@ -13415,7 +13415,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POTTERY</PrereqTech>
-			<Bonus>BONUS_CLAY</Bonus>
+			<Bonus>BONUS_COMMON_CLAY</Bonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -14102,7 +14102,7 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_BAMBOO</Bonus>
 				<Bonus>BONUS_WOOD</Bonus>
-				<Bonus>BONUS_TIMBER</Bonus>
+				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			</PrereqBonuses>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
@@ -14447,7 +14447,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
-			<Bonus>BONUS_TIMBER</Bonus>
+			<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_BAMBOO</Bonus>
 			</PrereqBonuses>
@@ -15811,8 +15811,8 @@
 			<PrereqTech>TECH_COOKING</PrereqTech>
 			<iPrereqPopulation>4</iPrereqPopulation>
 			<PrereqVicinityBonuses>
-				<VicinityBonus>BONUS_RAWMEAT</VicinityBonus>
-				<VicinityBonus>BONUS_RAWFISH</VicinityBonus>
+				<VicinityBonus>BONUS_RAW_MEAT</VicinityBonus>
+				<VicinityBonus>BONUS_RAW_FISH</VicinityBonus>
 				<VicinityBonus>BONUS_SHELLFISH</VicinityBonus>
 				<VicinityBonus>BONUS_FERTILIZERS</VicinityBonus>
 			</PrereqVicinityBonuses>
@@ -16012,7 +16012,7 @@
 			<iPrereqPopulation>12</iPrereqPopulation>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_CLOTH</VicinityBonus>
-				<VicinityBonus>BONUS_CLOTHES</VicinityBonus>
+				<VicinityBonus>BONUS_CLOTHING</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
@@ -16194,7 +16194,7 @@
 			<iPrereqPopulation>14</iPrereqPopulation>
 			<bWater>1</bWater>
 			<PrereqVicinityBonuses>
-				<VicinityBonus>BONUS_RAWFISH</VicinityBonus>
+				<VicinityBonus>BONUS_RAW_FISH</VicinityBonus>
 				<VicinityBonus>BONUS_SHELLFISH</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<iMaxLatitude>80</iMaxLatitude>
@@ -16274,7 +16274,7 @@
 			<iPrereqPopulation>10</iPrereqPopulation>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_WOOD</VicinityBonus>
-				<VicinityBonus>BONUS_TIMBER</VicinityBonus>
+				<VicinityBonus>BONUS_PRIME_TIMBER</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
@@ -19551,7 +19551,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_PARTS</BonusType>
 				<BonusType>BONUS_TIRES</BonusType>
-				<BonusType>BONUS_DIESEL</BonusType>
+				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<!-- Construction cost -->
@@ -20788,7 +20788,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_ALUMINUM_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_BAUXITE</RawVicinityBonus>
+            <RawVicinityBonus>BONUS_BAUXITE_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20807,7 +20807,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_COPPER_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_COPPER</RawVicinityBonus>
+            <RawVicinityBonus>BONUS_COPPER_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20826,7 +20826,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_GOLD_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_GOLD</RawVicinityBonus>
+            <RawVicinityBonus>BONUS_GOLD_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20845,7 +20845,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_IRON_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_IRON</RawVicinityBonus>
+            <RawVicinityBonus>BONUS_IRON_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_MINING</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20864,7 +20864,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_LEAD_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_LEAD</RawVicinityBonus>
+            <RawVicinityBonus>BONUS_LEAD_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_MINING</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20883,7 +20883,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_PLATINUM_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_PLATINUM</RawVicinityBonus>
+            <RawVicinityBonus>BONUS_PLATINUM_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_METAL_CASTING</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20902,7 +20902,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_SILVER_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_SILVER</RawVicinityBonus>
+            <RawVicinityBonus>BONUS_SILVER_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20921,7 +20921,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_TIN_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_TIN</RawVicinityBonus>
+            <RawVicinityBonus>BONUS_TIN_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20940,7 +20940,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_TITANIUM_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_TITANIUM</RawVicinityBonus>
+            <RawVicinityBonus>BONUS_TITANIUM_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_ADVANCED_METALLURGY</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20978,7 +20978,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_ELEPHANT_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<RawVicinityBonus>BONUS_ELEPHANT</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_ELEPHANTS</RawVicinityBonus>
 			<PrereqTech>TECH_SCAVENGING</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

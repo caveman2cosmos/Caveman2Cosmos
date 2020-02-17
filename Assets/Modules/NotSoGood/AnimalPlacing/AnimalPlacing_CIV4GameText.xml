@@ -354,7 +354,7 @@
 		<Polish>Bonus: Konie</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_BONUS_ELEPHANT</Tag>
+		<Tag>TXT_KEY_IMPROVEMENT_BONUS_ELEPHANTS</Tag>
 		<English>Elephant Bonus</English>
 		<Polish>Bonus: Kosc Sloniowa</Polish>
 	</TEXT>
@@ -379,7 +379,7 @@
 		<Polish>Bonus: Jelenie</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_BONUS_FUR</Tag>
+		<Tag>TXT_KEY_IMPROVEMENT_BONUS_BEAVERS</Tag>
 		<English>Fur Bonus</English>
 		<Polish>Bonus: Futra</Polish>
 	</TEXT>
@@ -415,7 +415,7 @@
 		<Polish>Bonus: Króliki</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_BONUS_SEA_LIONS</Tag>
+		<Tag>TXT_KEY_IMPROVEMENT_BONUS_SEA_LION_AND_SEAL</Tag>
 		<English>Sea Lions Bonus</English>
 		<Polish>Bonus: Lwy Morskie</Polish>
 	</TEXT>
@@ -430,7 +430,7 @@
 		<Polish>Bonus: Morsy</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_BONUS_GUINEA_PIG</Tag>
+		<Tag>TXT_KEY_IMPROVEMENT_BONUS_GUINEA_PIGS</Tag>
 		<English>Guinea pig Bonus</English>
 	</TEXT>
 	<TEXT>
@@ -461,16 +461,16 @@
 		<English>Kava Bonus</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_BONUS_GUAVA</Tag>
+		<Tag>TXT_KEY_IMPROVEMENT_BONUS_GUAVAS</Tag>
 		<English>Guava Bonus</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_BONUS_MELON</Tag>
+		<Tag>TXT_KEY_IMPROVEMENT_BONUS_MELONS</Tag>
 		<English>Melons Bonus</English>
 		<Polish>Bonus: Morsy</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_BONUS_POTATO</Tag>
+		<Tag>TXT_KEY_IMPROVEMENT_BONUS_POTATOES</Tag>
 		<English>Potatoes Bonus</English>
 		<Polish>Bonus: Ziemniaki</Polish>
 	</TEXT>
@@ -525,7 +525,7 @@
 		<Polish>Bonus: Figi</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_BONUS_LEMON</Tag>
+		<Tag>TXT_KEY_IMPROVEMENT_BONUS_LEMONS</Tag>
 		<English>Lemons Bonus</English>
 		<Polish>Bonus: Cytryny</Polish>
 	</TEXT>
@@ -550,7 +550,7 @@
 		<Polish>Bonus: Pistacje</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_BONUS_WINE</Tag>
+		<Tag>TXT_KEY_IMPROVEMENT_BONUS_GRAPES</Tag>
 		<English>Grapes Bonus</English>
 		<Polish>Bonus: Winogrona</Polish>
 	</TEXT>
@@ -570,12 +570,12 @@
 		<Polish>Bonus: Kauczuk</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_BONUS_TIMBER</Tag>
+		<Tag>TXT_KEY_IMPROVEMENT_BONUS_PRIME_TIMBER</Tag>
 		<English>Prime Timber Bonus</English>
 		<Polish>Bonus: Drewno Wysokiej Jakosci</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_BONUS_CANNABIS</Tag>
+		<Tag>TXT_KEY_IMPROVEMENT_BONUS_HEMP</Tag>
 		<English>Coca Plant Bonus</English>
 		<Polish>Bonus: Marichuana</Polish>
 	</TEXT>

@@ -173,7 +173,7 @@
 				<ImprovementType>IMPROVEMENT_MODERN_MINE</ImprovementType>
 			</ImprovementsRequired>
 			<BonusesRequired>
-				<BonusType>BONUS_GOLD</BonusType>
+				<BonusType>BONUS_GOLD_ORE</BonusType>
 			</BonusesRequired>
 			<RoutesRequired>
 				<RouteType>ROUTE_PATH</RouteType>
@@ -603,9 +603,9 @@
 				<BonusType>BONUS_WHEAT</BonusType>
 				<BonusType>BONUS_RICE</BonusType>
 				<BonusType>BONUS_CORN</BonusType>
-				<BonusType>BONUS_POTATO</BonusType>
+				<BonusType>BONUS_POTATOES</BonusType>
 				<BonusType>BONUS_BARLEY</BonusType>
-				<BonusType>BONUS_MELON</BonusType>
+				<BonusType>BONUS_MELONS</BonusType>
 				<BonusType>BONUS_PUMPKIN</BonusType>
 				<BonusType>BONUS_SQUASH</BonusType>
 			</BonusesRequired>
@@ -653,7 +653,7 @@
 				<BonusType>BONUS_WHEAT</BonusType>
 				<BonusType>BONUS_RICE</BonusType>
 				<BonusType>BONUS_CORN</BonusType>
-				<BonusType>BONUS_POTATO</BonusType>
+				<BonusType>BONUS_POTATOES</BonusType>
 			</BonusesRequired>
 			<RoutesRequired>
 				<RouteType>ROUTE_PATH</RouteType>
@@ -3786,7 +3786,7 @@
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<BonusesRequired>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</BonusesRequired>
 			<Events>
 				<Event>EVENT_FARM_PLOWS_1</Event>
@@ -3830,7 +3830,7 @@
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<BonusesRequired>
-				<BonusType>BONUS_GLASS</BonusType>
+				<BonusType>BONUS_GLASSWARE</BonusType>
 			</BonusesRequired>
 			<Events>
 				<Event>EVENT_STAINED_GLASS_1</Event>
@@ -6249,7 +6249,7 @@
 			<iWeight>175</iWeight>
 			<iMinTreasury>300</iMinTreasury>
 			<BonusesRequired>
-				<BonusType>BONUS_DIESEL</BonusType>
+				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
 			</BonusesRequired>
 			<Events>
 				<Event>EVENT_NAPALM_1</Event>
@@ -6310,7 +6310,7 @@
 			</UnitsRequired>
 			<iNumUnits>1</iNumUnits>
 			<BonusesRequired>
-				<BonusType>BONUS_DIESEL</BonusType>
+				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
 			</BonusesRequired>
 			<Events>
 				<Event>EVENT_REACTIVE_ARMOR_1</Event>
@@ -6919,7 +6919,7 @@
 			</BuildingsRequired>
 			<iNumBuildings>2</iNumBuildings>
 			<BonusesRequired>
-				<BonusType>BONUS_IRON</BonusType>
+				<BonusType>BONUS_IRON_ORE</BonusType>
 			</BonusesRequired>
 			<Events>
 				<Event>EVENT_CRUCIBLE_STEEL_1</Event>
@@ -7449,7 +7449,7 @@
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
 			<BonusesRequired>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
 			</BonusesRequired>
 			<Events>
 				<Event>EVENT_COPPER_PLATING_1</Event>
@@ -7871,9 +7871,9 @@
 				<BonusType>BONUS_CORN</BonusType>
 				<BonusType>BONUS_RICE</BonusType>
 				<BonusType>BONUS_WHEAT</BonusType>
-				<BonusType>BONUS_POTATO</BonusType>
+				<BonusType>BONUS_POTATOES</BonusType>
 				<BonusType>BONUS_BARLEY</BonusType>
-				<BonusType>BONUS_MELON</BonusType>
+				<BonusType>BONUS_MELONS</BonusType>
 				<BonusType>BONUS_PUMPKIN</BonusType>
 				<BonusType>BONUS_SQUASH</BonusType>
 			</BonusesRequired>

@@ -18,7 +18,7 @@
 			<ReligionType>RELIGION_SHINTO</ReligionType>
 			<PrereqReligion>RELIGION_SHINTO</PrereqReligion>
 			<PrereqBonuses>
-				<Bonus>BONUS_TIMBER</Bonus>
+				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
 			<bNeverCapture>1</bNeverCapture>
@@ -77,7 +77,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SHINTO_MONASTERY</ArtDefineTag>
 			<ReligionType>RELIGION_SHINTO</ReligionType>
 			<PrereqReligion>RELIGION_SHINTO</PrereqReligion>
-			<Bonus>BONUS_TIMBER</Bonus>
+			<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_FURNITURE</Bonus>
 			</PrereqBonuses>
@@ -177,7 +177,7 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -279,7 +279,7 @@
 			<ObsoleteTech>TECH_COMMUNISM</ObsoleteTech>
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<PrereqBonuses>
-				<Bonus>BONUS_TIMBER</Bonus>
+				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
 			<FreePromotion>PROMOTION_LOOTER</FreePromotion>
