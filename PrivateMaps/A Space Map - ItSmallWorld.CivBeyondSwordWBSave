@@ -54652,7 +54652,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=258,y=3
-	RouteType=ROUTE_GRAVTUBE
 	TerrainType=TERRAIN_DISTANT_COSMOS
 	PlotType=2
 EndPlot

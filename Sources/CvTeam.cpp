@@ -191,10 +191,7 @@ void CvTeam::init(TeamTypes eID)
 
 void CvTeam::uninit()
 {
-	int iI;
-
 	SAFE_DELETE_ARRAY(m_abCanLaunch);
-
 	SAFE_DELETE_ARRAY(m_paiRouteChange);
 	SAFE_DELETE_ARRAY(m_paiProjectCount);
 	SAFE_DELETE_ARRAY(m_paiProjectDefaultArtTypes);
@@ -208,77 +205,18 @@ void CvTeam::uninit()
 	SAFE_DELETE_ARRAY(m_paiTerrainTradeCount);
 	SAFE_DELETE_ARRAY(m_aiVictoryCountdown);
 	SAFE_DELETE_ARRAY(m_aiForceTeamVoteEligibilityCount);
-
 	SAFE_DELETE_ARRAY(m_pabHasTech);
 	SAFE_DELETE_ARRAY(m_pabNoTradeTech);
-
-	if (m_ppaaiImprovementYieldChange != NULL)
-	{
-		for (iI = 0; iI < GC.getNumImprovementInfos(); iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppaaiImprovementYieldChange[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppaaiImprovementYieldChange);
-	}
-
-/************************************************************************************************/
-/* Afforess	                  Start		 03/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+	SAFE_DELETE_ARRAY2(m_ppaaiImprovementYieldChange, GC.getNumImprovementInfos());
 	SAFE_DELETE_ARRAY(m_paiTechExtraBuildingHappiness);
 	SAFE_DELETE_ARRAY(m_paiTechExtraBuildingHealth);
 	SAFE_DELETE_ARRAY(m_paiFreeSpecialistCount);
 	SAFE_DELETE_ARRAY(m_paiUnitClassStrengthChange);
-	if (m_ppiBuildingCommerceChange != NULL)
-	{
-		for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppiBuildingCommerceChange[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppiBuildingCommerceChange);
-	}
-
-	if (m_ppiBuildingYieldChange != NULL)
-	{
-		for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppiBuildingYieldChange[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppiBuildingYieldChange);
-	}
-
-	if (m_ppiBuildingSpecialistChange != NULL)
-	{
-		for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppiBuildingSpecialistChange[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppiBuildingSpecialistChange);
-	}
-
-	if (m_ppiBuildingCommerceModifier != NULL)
-	{
-		for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppiBuildingCommerceModifier[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppiBuildingCommerceModifier);
-	}
-
-	if (m_ppiBuildingYieldModifier != NULL)
-	{
-		for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-		{
-			SAFE_DELETE_ARRAY(m_ppiBuildingYieldModifier[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_ppiBuildingYieldModifier);
-	}
-
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
+	SAFE_DELETE_ARRAY2(m_ppiBuildingCommerceChange, GC.getNumBuildingInfos());
+	SAFE_DELETE_ARRAY2(m_ppiBuildingYieldChange, GC.getNumBuildingInfos());
+	SAFE_DELETE_ARRAY2(m_ppiBuildingSpecialistChange, GC.getNumBuildingInfos());
+	SAFE_DELETE_ARRAY2(m_ppiBuildingCommerceModifier, GC.getNumBuildingInfos());
+	SAFE_DELETE_ARRAY2(m_ppiBuildingYieldModifier, GC.getNumBuildingInfos());
 }
 
 
@@ -3104,7 +3042,7 @@ int CvTeam::getCurrentMasterPower(bool bIncludeVassals) const
 	return 0;
 }
 
-bool CvTeam::isMasterPlanningLandWar(CvArea* pArea) const
+bool CvTeam::isMasterPlanningLandWar(const CvArea* pArea) const
 {
 	if( !isAVassal() )
 	{
@@ -3153,7 +3091,7 @@ bool CvTeam::isMasterPlanningLandWar(CvArea* pArea) const
 	return false;
 }
 
-bool CvTeam::isMasterPlanningSeaWar(CvArea* pArea) const
+bool CvTeam::isMasterPlanningSeaWar(const CvArea* pArea) const
 {
 	if( !isAVassal() )
 	{
@@ -3295,7 +3233,7 @@ unsigned long long CvTeam::countTotalCulture() const
 }
 
 
-int CvTeam::countNumUnitsByArea(CvArea* pArea) const
+int CvTeam::countNumUnitsByArea(const CvArea* pArea) const
 {
 	PROFILE_FUNC();
 
@@ -3313,7 +3251,7 @@ int CvTeam::countNumUnitsByArea(CvArea* pArea) const
 }
 
 
-int CvTeam::countNumCitiesByArea(CvArea* pArea) const
+int CvTeam::countNumCitiesByArea(const CvArea* pArea) const
 {
 	PROFILE_FUNC();
 
@@ -3331,7 +3269,7 @@ int CvTeam::countNumCitiesByArea(CvArea* pArea) const
 }
 
 
-int CvTeam::countTotalPopulationByArea(CvArea* pArea) const
+int CvTeam::countTotalPopulationByArea(const CvArea* pArea) const
 {
 	int iCount = 0;
 
@@ -3347,7 +3285,7 @@ int CvTeam::countTotalPopulationByArea(CvArea* pArea) const
 }
 
 
-int CvTeam::countPowerByArea(CvArea* pArea) const
+int CvTeam::countPowerByArea(const CvArea* pArea) const
 {
 	int iCount = 0;
 
@@ -3363,7 +3301,7 @@ int CvTeam::countPowerByArea(CvArea* pArea) const
 }
 
 
-int CvTeam::countEnemyPowerByArea(CvArea* pArea) const
+int CvTeam::countEnemyPowerByArea(const CvArea* pArea) const
 {
 	int iCount = 0;
 
@@ -3398,7 +3336,7 @@ int CvTeam::countEnemyPowerByArea(CvArea* pArea) const
 /*                                                                                              */
 /* War strategy AI                                                                              */
 /************************************************************************************************/
-int CvTeam::countEnemyPopulationByArea(CvArea* pArea) const
+int CvTeam::countEnemyPopulationByArea(const CvArea* pArea) const
 {
 	int iCount = 0;
 
@@ -3428,7 +3366,7 @@ int CvTeam::countEnemyPopulationByArea(CvArea* pArea) const
 /************************************************************************************************/
 
 
-int CvTeam::countNumAIUnitsByArea(CvArea* pArea, UnitAITypes eUnitAI) const
+int CvTeam::countNumAIUnitsByArea(const CvArea* pArea, UnitAITypes eUnitAI) const
 {
 	PROFILE_FUNC();
 
@@ -3450,7 +3388,7 @@ int CvTeam::countNumAIUnitsByArea(CvArea* pArea, UnitAITypes eUnitAI) const
 /*                                                                                              */
 /* War strategy AI                                                                              */
 /************************************************************************************************/
-int CvTeam::countEnemyDangerByArea(CvArea* pArea, TeamTypes eEnemyTeam ) const
+int CvTeam::countEnemyDangerByArea(const CvArea* pArea, TeamTypes eEnemyTeam ) const
 {
 	PROFILE_FUNC();
 
@@ -9630,17 +9568,17 @@ int CvTeam::getTypicalUnitValue(UnitAITypes eUnitAI) const
 	return iMax;
 }
 
-int CvTeam::getWinForLosingResearchModifier()
+int CvTeam::getWinForLosingResearchModifier() const
 {
-	int iTopCityCount = GC.getGame().getTopCityCount();
-	int iTopPopCount = GC.getGame().getTopPopCount();
-	int iOurCityCount = getNumCities() * 100;
-	int iOurPopCount = getTotalPopulation(false) * 100;
-	int iCityPercent = iOurCityCount/std::max(1,iTopCityCount);
-	int iPopPercent = iOurPopCount/std::max(1,iTopPopCount);
+	const int iTopCityCount = GC.getGame().getTopCityCount();
+	const int iTopPopCount = GC.getGame().getTopPopCount();
+	const int iOurCityCount = getNumCities() * 100;
+	const int iOurPopCount = getTotalPopulation(false) * 100;
+	const int iCityPercent = iOurCityCount/std::max(1,iTopCityCount);
+	const int iPopPercent = iOurPopCount/std::max(1,iTopPopCount);
 	int iModifier = iCityPercent+iPopPercent;
 	iModifier /= 2;
-	int iFinal = 100-iModifier;
+	const int iFinal = 100-iModifier;
 	return iFinal;
 }
 

@@ -22208,7 +22208,7 @@ bool CvUnitAI::AI_leaveAttack(int iRange, int iOddsThreshold, int iStrengthThres
 
 }
 
-int CvUnitAI::AI_blockadeValue(CvPlot* pLoopPlot, CvCity* pCity, CvPlot*& endTurnPlot) const
+int CvUnitAI::AI_blockadeValue(CvPlot* pLoopPlot, const CvCity* pCity, CvPlot*& endTurnPlot) const
 {
 	int iValue = 0;
 	int	iPathTurns;

@@ -347,7 +347,7 @@ void CvPlotGroup::recalculatePlots()
 			//OutputDebugString(CvString::format("Nulled plot group for: (%d,%d)\n", pPlot->getX_INLINE(), pPlot->getY_INLINE()).c_str());
 		}
 
-		int	iStartingAllocSeq = m_allocationSeqForSession;
+		const int iStartingAllocSeq = m_allocationSeqForSession;
 
 		//	Construct new plot groups (still without bonus adjustment)
 		for (CLLNode<XYCoords>* pPlotNode = allPlotParams.allPlots.head();
@@ -482,7 +482,7 @@ PlayerTypes CvPlotGroup::getOwner() const
 }
 
 
-int CvPlotGroup::getNumBonuses(BonusTypes eBonus) const
+int CvPlotGroup::getNumBonuses(const BonusTypes eBonus) const
 {
 	FAssertMsg(eBonus >= 0, "eBonus is expected to be non-negative (invalid Index)");
 	FAssertMsg(eBonus < GC.getNumBonusInfos(), "eBonus is expected to be within maximum bounds (invalid Index)");
@@ -490,13 +490,13 @@ int CvPlotGroup::getNumBonuses(BonusTypes eBonus) const
 }
 
 
-bool CvPlotGroup::hasBonus(BonusTypes eBonus)
+bool CvPlotGroup::hasBonus(const BonusTypes eBonus) const
 {
 	return(getNumBonuses(eBonus) > 0);
 }
 
 
-void CvPlotGroup::changeNumBonuses(BonusTypes eBonus, int iChange)
+void CvPlotGroup::changeNumBonuses(const BonusTypes eBonus, const int iChange)
 {
 	PROFILE_FUNC();
 

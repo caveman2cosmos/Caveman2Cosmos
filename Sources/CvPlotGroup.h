@@ -51,9 +51,9 @@ public:
 		return m_eOwner;
 	}
 #endif
-	int getNumBonuses(BonusTypes eBonus) const;
-	bool hasBonus(BonusTypes eBonus);										
-	void changeNumBonuses(BonusTypes eBonus, int iChange);
+	int getNumBonuses(const BonusTypes eBonus) const;
+	bool hasBonus(const BonusTypes eBonus) const;										
+	void changeNumBonuses(const BonusTypes eBonus, const int iChange);
 
 	int getNumCities();
 
