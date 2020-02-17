@@ -24128,8 +24128,8 @@ The stages of production are as follows:
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_WHEELS</Tag>
-		<English>Wheels</English>
+		<Tag>TXT_KEY_TECH_THE_WHEEL</Tag>
+		<English>The Wheel</English>
 		<French>
 			<Text>La roue</Text>
 			<Gender>Female</Gender>
