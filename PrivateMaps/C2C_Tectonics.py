@@ -71,8 +71,6 @@
 # Modified by Temudjin
 # VERSION 3.16_mst - 15.July.2010
 #	- use MapScriptTools
-#  - compatibility with 'Planetfall'
-#  - compatibility with 'Mars Now!'
 #  - supports any number of players
 #	- add Map Option: TeamStart
 #  - add Marsh terrain, if supported by mod
@@ -85,14 +83,8 @@
 #  - check for Temudjin's Cool Starting Plots
 #  - print stats of mod and map
 
-
 from CvPythonExtensions import *
-import CvUtil
 import CvMapGeneratorUtil
-#import Popup as PyPopup										# Temudjin
-#from CvMapGeneratorUtil import TerrainGenerator		# Temudjin
-#from CvMapGeneratorUtil import FeatureGenerator		# Temudjin
-
 
 ##################################################################################
 ## MapScriptTools Interface by Temudjin
@@ -143,9 +135,7 @@ def beforeGeneration():
 
 # This function will be called by the system, after generatePlotTypes() and before addRivers()
 # - print the plot-map and hold result to check differences to the next call
-# - build highlands for 'Planetfall'
 # - prettify plots
-# - handle 'Planetfall' mod terrain
 # If the map-script does more than just call the generator in generateTerrainTypes(), you will
 # have to take a closer look.
 # --------------------------------------------------------------------------------------------
@@ -153,15 +143,10 @@ def generateTerrainTypes():
 	print "-- generateTerrainTypes()"
 
 	# print a plotMap; allow for differenceMap with next call
-	mst.mapPrint.buildPlotMap( True, "generateTerrainTypes()" )
-
-	# 'Planetfall' uses ridges and highlands. To utilize them fully, you will
-	# probably want to have a hilly terrain - if you already use
-	# a highland mapscript, you may want to comment-out the following line.
-	mst.planetFallMap.buildPfallHighlands()
+	mst.mapPrint.buildPlotMap(True, "generateTerrainTypes()")
 
 	# Prettify the map - change coastal peaks to hills with 80% chance; default: 66%
-	mst.mapPrettifier.hillifyCoast( 80 )
+	mst.mapPrettifier.hillifyCoast(80)
 
 	terraingen = ClimateGenerator()
 
@@ -219,7 +204,6 @@ def addLakes():
 
 # This function will be called by the system, after addLakes() and before addBonuses()
 # - prettify lakes
-# - handle 'Planetfall' mod features
 # - prettify volcanos
 # If the map-script does more than just call the generator in addFeatures(), you will
 # have to take a closer look.
@@ -332,7 +316,6 @@ def normalizeAddExtras():
 	mst.mapStats.mapStatistics()
 
 # This function will be called at odd times by the system.
-# 'Planetfall' wants nearer starting-plots
 # If the script already has this function, return that result instead of zero or rename it.
 def minStartingDistanceModifier():
 	return 0

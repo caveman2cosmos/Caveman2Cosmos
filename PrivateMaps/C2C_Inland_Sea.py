@@ -8,8 +8,7 @@
 #	Copyright (c) 2005 Firaxis Games, Inc. All rights reserved.
 #-----------------------------------------------------------------------------
 #       MODIFIED BY: Temudjin
-#       PURPOSE:    - compatibility with 'Planetfall' and 'Mars Now!'
-#                   - add Marsh terrain, if supported by mod
+#       PURPOSE:    - add Marsh terrain
 #                   - print stats of mod and map
 #                   - much more ...
 #       DEPENDENCY: - needs MapScriptTools.py
@@ -26,15 +25,10 @@
 #                            - add Map Regions ( BigDent, BigBog, ElementalQuarter, LostIsle )
 #                            - add Map Features ( Kelp, HauntedLands, CrystalPlains )
 #                            - better balanced resources
-#                            - compatibility with 'Mars Now!'
 
 
 from CvPythonExtensions import *
-import CvUtil
 import CvMapGeneratorUtil
-import sys
-from CvMapGeneratorUtil import HintedWorld
-
 
 ################################################################
 ## MapScriptTools by Temudjin
@@ -74,8 +68,6 @@ def addRivers():
 	print "-- addRivers()"
 	# Generate DeepOcean-terrain if mod allows for it
 	mst.deepOcean.buildDeepOcean()
-	# Planetfall: handle shelves and trenches
-	mst.planetFallMap.buildPfallOcean()
 	# Generate marsh-terrain
 	mst.marshMaker.convertTerrain()
 	# Build between 0..3 mountain-ranges.
@@ -95,7 +87,7 @@ def normalizeStartingPlotLocations():
 
 	# build Lost Isle
 	# - this region needs to be placed after starting-plots are first assigned
-	mst.mapRegions.buildLostIsle( bAliens = mst.choose(33,True,False) )
+	mst.mapRegions.buildLostIsle(bAliens = mst.choose(33,True,False))
 
 	if CyMap().getCustomMapOption(2) == 0:
 		# by default civ places teams near to each other
