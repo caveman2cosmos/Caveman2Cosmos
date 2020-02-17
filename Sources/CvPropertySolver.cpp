@@ -303,7 +303,7 @@ void CvPropertySolver::gatherActiveManipulators()
 {
 	for (int i=0; i<NUM_GAMEOBJECTS; i++)
 	{
-		GC.getGameINLINE().getGameObject()->foreach((GameObjectTypes)i, bst::bind(callInstantiateGlobalManipulators, _1, this));
+		GC.getGame().getGameObject()->foreach((GameObjectTypes)i, bst::bind(callInstantiateGlobalManipulators, _1, this));
 	}
 }
 
@@ -405,7 +405,7 @@ void CvMainPropertySolver::resetPropertyChanges()
 {
 	for (int i=0; i<NUM_GAMEOBJECTS; i++)
 	{
-		GC.getGameINLINE().getGameObject()->foreach((GameObjectTypes)i, callResetPropertyChange);
+		GC.getGame().getGameObject()->foreach((GameObjectTypes)i, callResetPropertyChange);
 	}
 }
 

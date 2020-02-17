@@ -134,13 +134,13 @@ void CvNetExtendedGame::Execute()
 void CvNetExtendedGame::PutInBuffer(FDataStreamBase* pStream)
 {
 	pStream->Write(m_ePlayer);
-	GC.getGameINLINE().logDebugMsg("Writing CvNetExtendedGame message with payload [%d]\n", m_ePlayer);
+	GC.getGame().logDebugMsg("Writing CvNetExtendedGame message with payload [%d]\n", m_ePlayer);
 }
 
 void CvNetExtendedGame::SetFromBuffer(FDataStreamBase* pStream)
 {
 	pStream->Read((int*)&m_ePlayer);
-	GC.getGameINLINE().logDebugMsg("Reading CvNetExtendedGame message with payload [%d]\n", m_ePlayer);
+	GC.getGame().logDebugMsg("Reading CvNetExtendedGame message with payload [%d]\n", m_ePlayer);
 }
 
 CvNetAutoMoves::CvNetAutoMoves(PlayerTypes ePlayer) : CvMessageData(GAMEMESSAGE_AUTO_MOVES), m_ePlayer(ePlayer) 
@@ -156,26 +156,26 @@ void CvNetAutoMoves::Execute()
 {
 	if (m_ePlayer != NO_PLAYER)
 	{
-		GC.getGameINLINE().logDebugMsg("Executing CvNetAutoMoves message with payload [%d]\n", m_ePlayer);
+		GC.getGame().logDebugMsg("Executing CvNetAutoMoves message with payload [%d]\n", m_ePlayer);
 		GET_PLAYER(m_ePlayer).setAutoMoves(true);
-		GC.getGameINLINE().logDebugMsg("Executed CvNetAutoMoves message with payload [%d]\n", m_ePlayer);
+		GC.getGame().logDebugMsg("Executed CvNetAutoMoves message with payload [%d]\n", m_ePlayer);
 	}
 	else
 	{
-		GC.getGameINLINE().logDebugMsg("Skipped CvNetAutoMoves message due to invalid player with payload [%d]\n", m_ePlayer);
+		GC.getGame().logDebugMsg("Skipped CvNetAutoMoves message due to invalid player with payload [%d]\n", m_ePlayer);
 	}
 }
 
 void CvNetAutoMoves::PutInBuffer(FDataStreamBase* pStream)
 {
 	pStream->Write(m_ePlayer);
-	GC.getGameINLINE().logDebugMsg("Writing CvNetAutoMoves message with payload [%d]\n", m_ePlayer);
+	GC.getGame().logDebugMsg("Writing CvNetAutoMoves message with payload [%d]\n", m_ePlayer);
 }
 
 void CvNetAutoMoves::SetFromBuffer(FDataStreamBase* pStream)
 {
 	pStream->Read((int*)&m_ePlayer);
-	GC.getGameINLINE().logDebugMsg("Reading CvNetAutoMoves message with payload [%d]\n", m_ePlayer);
+	GC.getGame().logDebugMsg("Reading CvNetAutoMoves message with payload [%d]\n", m_ePlayer);
 }
 
 CvNetTurnComplete::CvNetTurnComplete(PlayerTypes ePlayer) : CvMessageData(GAMEMESSAGE_TURN_COMPLETE), m_ePlayer(ePlayer) 
@@ -191,26 +191,26 @@ void CvNetTurnComplete::Execute()
 {
 	if (m_ePlayer != NO_PLAYER)
 	{
-		GC.getGameINLINE().logDebugMsg("Executing CvNetTurnComplete message with payload [%d]\n", m_ePlayer);
+		GC.getGame().logDebugMsg("Executing CvNetTurnComplete message with payload [%d]\n", m_ePlayer);
 		GET_PLAYER(m_ePlayer).setEndTurn(true);
-		GC.getGameINLINE().logDebugMsg("Executed CvNetTurnComplete message with payload [%d]\n", m_ePlayer);
+		GC.getGame().logDebugMsg("Executed CvNetTurnComplete message with payload [%d]\n", m_ePlayer);
 	}
 	else
 	{
-		GC.getGameINLINE().logDebugMsg("Skipped CvNetTurnComplete message due to invalid player with payload [%d]\n", m_ePlayer);
+		GC.getGame().logDebugMsg("Skipped CvNetTurnComplete message due to invalid player with payload [%d]\n", m_ePlayer);
 	}
 }
 
 void CvNetTurnComplete::PutInBuffer(FDataStreamBase* pStream)
 {
 	pStream->Write(m_ePlayer);
-	GC.getGameINLINE().logDebugMsg("Writing CvNetTurnComplete message with payload [%d]\n", m_ePlayer);
+	GC.getGame().logDebugMsg("Writing CvNetTurnComplete message with payload [%d]\n", m_ePlayer);
 }
 
 void CvNetTurnComplete::SetFromBuffer(FDataStreamBase* pStream)
 {
 	pStream->Read((int*)&m_ePlayer);
-	GC.getGameINLINE().logDebugMsg("Reading CvNetTurnComplete message with payload [%d]\n", m_ePlayer);
+	GC.getGame().logDebugMsg("Reading CvNetTurnComplete message with payload [%d]\n", m_ePlayer);
 }
 
 CvNetPushOrder::CvNetPushOrder() : CvMessageData(GAMEMESSAGE_PUSH_ORDER), m_ePlayer(NO_PLAYER), m_iCityID(-1), m_eOrder(NO_ORDER), m_iData(-1), m_bAlt(false), m_bShift(false), m_bCtrl(false)
@@ -233,23 +233,23 @@ void CvNetPushOrder::Execute()
 		CvCity* pCity = GET_PLAYER(m_ePlayer).getCity(m_iCityID);
 		if (pCity != NULL)
 		{
-			GC.getGameINLINE().logDebugMsg("Executing CvNetPushOrder message with payload [%d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iCityID, m_eOrder, m_iData, m_bAlt, m_bShift, m_bCtrl);
+			GC.getGame().logDebugMsg("Executing CvNetPushOrder message with payload [%d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iCityID, m_eOrder, m_iData, m_bAlt, m_bShift, m_bCtrl);
 			pCity->pushOrder(m_eOrder, m_iData, -1, m_bAlt, !(m_bShift || m_bCtrl), m_bShift);
-			GC.getGameINLINE().logDebugMsg("Executed CvNetPushOrder message with payload [%d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iCityID, m_eOrder, m_iData, m_bAlt, m_bShift, m_bCtrl);
+			GC.getGame().logDebugMsg("Executed CvNetPushOrder message with payload [%d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iCityID, m_eOrder, m_iData, m_bAlt, m_bShift, m_bCtrl);
 		}
 		else
 		{
-			GC.getGameINLINE().logDebugMsg("Skipped CvNetPushOrder message due to invalid city with payload [%d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iCityID, m_eOrder, m_iData, m_bAlt, m_bShift, m_bCtrl);
+			GC.getGame().logDebugMsg("Skipped CvNetPushOrder message due to invalid city with payload [%d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iCityID, m_eOrder, m_iData, m_bAlt, m_bShift, m_bCtrl);
 		}
 
-		if (GC.getGameINLINE().getActivePlayer() == m_ePlayer)
+		if (GC.getGame().getActivePlayer() == m_ePlayer)
 		{
 			gDLL->getInterfaceIFace()->updatePythonScreens();
 		}
 	}
 	else
 	{
-		GC.getGameINLINE().logDebugMsg("Skipped CvNetPushOrder message due to invalid player with payload [%d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iCityID, m_eOrder, m_iData, m_bAlt, m_bShift, m_bCtrl);
+		GC.getGame().logDebugMsg("Skipped CvNetPushOrder message due to invalid player with payload [%d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iCityID, m_eOrder, m_iData, m_bAlt, m_bShift, m_bCtrl);
 	}
 }
 
@@ -262,7 +262,7 @@ void CvNetPushOrder::PutInBuffer(FDataStreamBase* pStream)
 	pStream->Write(m_bAlt);
 	pStream->Write(m_bShift);
 	pStream->Write(m_bCtrl);
-	GC.getGameINLINE().logDebugMsg("Writing CvNetPushOrder message with payload [%d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iCityID, m_eOrder, m_iData, m_bAlt, m_bShift, m_bCtrl);
+	GC.getGame().logDebugMsg("Writing CvNetPushOrder message with payload [%d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iCityID, m_eOrder, m_iData, m_bAlt, m_bShift, m_bCtrl);
 }
 
 void CvNetPushOrder::SetFromBuffer(FDataStreamBase* pStream)
@@ -274,7 +274,7 @@ void CvNetPushOrder::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read(&m_bAlt);
 	pStream->Read(&m_bShift);
 	pStream->Read(&m_bCtrl);
-	GC.getGameINLINE().logDebugMsg("Reading CvNetPushOrder message with payload [%d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iCityID, m_eOrder, m_iData, m_bAlt, m_bShift, m_bCtrl);
+	GC.getGame().logDebugMsg("Reading CvNetPushOrder message with payload [%d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iCityID, m_eOrder, m_iData, m_bAlt, m_bShift, m_bCtrl);
 }
 
 CvNetPopOrder::CvNetPopOrder() : CvMessageData(GAMEMESSAGE_POP_ORDER), m_ePlayer(NO_PLAYER), m_iCityID(-1), m_iNum(0)
@@ -297,25 +297,25 @@ void CvNetPopOrder::Execute()
 		CvCity* pCity = GET_PLAYER(m_ePlayer).getCity(m_iCityID);
 		if (pCity != NULL)
 		{
-			GC.getGameINLINE().logDebugMsg("Executing CvNetPopOrder message with payload [%d, %d, %d]\n", m_ePlayer, m_iCityID, m_iNum);
+			GC.getGame().logDebugMsg("Executing CvNetPopOrder message with payload [%d, %d, %d]\n", m_ePlayer, m_iCityID, m_iNum);
 			pCity->popOrder(m_iNum);
-			GC.getGameINLINE().logDebugMsg("Executed CvNetPopOrder message with payload [%d, %d, %d]\n", m_ePlayer, m_iCityID, m_iNum);
+			GC.getGame().logDebugMsg("Executed CvNetPopOrder message with payload [%d, %d, %d]\n", m_ePlayer, m_iCityID, m_iNum);
 			//pCity->setBuildingListInvalid();
 			//pCity->setUnitListInvalid();
 		}
 		else
 		{
-			GC.getGameINLINE().logDebugMsg("Skipping CvNetPopOrder message due to invalid city with payload [%d, %d, %d]\n", m_ePlayer, m_iCityID, m_iNum);
+			GC.getGame().logDebugMsg("Skipping CvNetPopOrder message due to invalid city with payload [%d, %d, %d]\n", m_ePlayer, m_iCityID, m_iNum);
 		}
 
-		if (GC.getGameINLINE().getActivePlayer() == m_ePlayer)
+		if (GC.getGame().getActivePlayer() == m_ePlayer)
 		{
 			gDLL->getInterfaceIFace()->updatePythonScreens();
 		}
 	}
 	else
 	{
-		GC.getGameINLINE().logDebugMsg("Skipping CvNetPopOrder message due to invalid player with payload [%d, %d, %d]\n", m_ePlayer, m_iCityID, m_iNum);
+		GC.getGame().logDebugMsg("Skipping CvNetPopOrder message due to invalid player with payload [%d, %d, %d]\n", m_ePlayer, m_iCityID, m_iNum);
 	}
 }
 
@@ -324,7 +324,7 @@ void CvNetPopOrder::PutInBuffer(FDataStreamBase* pStream)
 	pStream->Write(m_ePlayer);
 	pStream->Write(m_iCityID);
 	pStream->Write(m_iNum);
-	GC.getGameINLINE().logDebugMsg("Writing CvNetPopOrder message with payload [%d, %d, %d]\n", m_ePlayer, m_iCityID, m_iNum);
+	GC.getGame().logDebugMsg("Writing CvNetPopOrder message with payload [%d, %d, %d]\n", m_ePlayer, m_iCityID, m_iNum);
 }
 
 void CvNetPopOrder::SetFromBuffer(FDataStreamBase* pStream)
@@ -332,7 +332,7 @@ void CvNetPopOrder::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read((int*)&m_ePlayer);
 	pStream->Read(&m_iCityID);
 	pStream->Read(&m_iNum);
-	GC.getGameINLINE().logDebugMsg("Reading CvNetPopOrder message with payload [%d, %d, %d]\n", m_ePlayer, m_iCityID, m_iNum);
+	GC.getGame().logDebugMsg("Reading CvNetPopOrder message with payload [%d, %d, %d]\n", m_ePlayer, m_iCityID, m_iNum);
 }
 
 CvNetDoTask::CvNetDoTask() : CvMessageData(GAMEMESSAGE_DO_TASK), m_ePlayer(NO_PLAYER), m_iCityID(-1), m_eTask(NO_TASK), m_iData1(-1), m_iData2(-1), m_bOption(false), m_bAlt(false), m_bShift(false), m_bCtrl(false)
@@ -355,18 +355,18 @@ void CvNetDoTask::Execute()
 		CvCity* pCity = GET_PLAYER(m_ePlayer).getCity(m_iCityID);
 		if (pCity != NULL)
 		{
-			GC.getGameINLINE().logDebugMsg("Executing CvNetDoTask message with payload [%d, %d, %d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iCityID, m_eTask, m_iData1, m_iData2, m_bOption, m_bAlt, m_bShift, m_bCtrl);
+			GC.getGame().logDebugMsg("Executing CvNetDoTask message with payload [%d, %d, %d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iCityID, m_eTask, m_iData1, m_iData2, m_bOption, m_bAlt, m_bShift, m_bCtrl);
 			pCity->doTask(m_eTask, m_iData1, m_iData2, m_bOption, m_bAlt, m_bShift, m_bCtrl);
-			GC.getGameINLINE().logDebugMsg("Executed CvNetDoTask message with payload [%d, %d, %d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iCityID, m_eTask, m_iData1, m_iData2, m_bOption, m_bAlt, m_bShift, m_bCtrl);
+			GC.getGame().logDebugMsg("Executed CvNetDoTask message with payload [%d, %d, %d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iCityID, m_eTask, m_iData1, m_iData2, m_bOption, m_bAlt, m_bShift, m_bCtrl);
 		}
 		else
 		{
-			GC.getGameINLINE().logDebugMsg("Skipping CvNetDoTask message due to invalid city with payload [%d, %d, %d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iCityID, m_eTask, m_iData1, m_iData2, m_bOption, m_bAlt, m_bShift, m_bCtrl);
+			GC.getGame().logDebugMsg("Skipping CvNetDoTask message due to invalid city with payload [%d, %d, %d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iCityID, m_eTask, m_iData1, m_iData2, m_bOption, m_bAlt, m_bShift, m_bCtrl);
 		}
 	}
 	else
 	{
-		GC.getGameINLINE().logDebugMsg("Skipping CvNetDoTask message due to invalid player with payload [%d, %d, %d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iCityID, m_eTask, m_iData1, m_iData2, m_bOption, m_bAlt, m_bShift, m_bCtrl);
+		GC.getGame().logDebugMsg("Skipping CvNetDoTask message due to invalid player with payload [%d, %d, %d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iCityID, m_eTask, m_iData1, m_iData2, m_bOption, m_bAlt, m_bShift, m_bCtrl);
 	}
 }
 
@@ -381,7 +381,7 @@ void CvNetDoTask::PutInBuffer(FDataStreamBase* pStream)
 	pStream->Write(m_bAlt);
 	pStream->Write(m_bShift);
 	pStream->Write(m_bCtrl);
-	GC.getGameINLINE().logDebugMsg("Writing CvNetDoTask message with payload [%d, %d, %d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iCityID, m_eTask, m_iData1, m_iData2, m_bOption, m_bAlt, m_bShift, m_bCtrl);
+	GC.getGame().logDebugMsg("Writing CvNetDoTask message with payload [%d, %d, %d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iCityID, m_eTask, m_iData1, m_iData2, m_bOption, m_bAlt, m_bShift, m_bCtrl);
 }
 
 void CvNetDoTask::SetFromBuffer(FDataStreamBase* pStream)
@@ -395,7 +395,7 @@ void CvNetDoTask::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read(&m_bAlt);
 	pStream->Read(&m_bShift);
 	pStream->Read(&m_bCtrl);
-	GC.getGameINLINE().logDebugMsg("Reading CvNetDoTask message with payload [%d, %d, %d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iCityID, m_eTask, m_iData1, m_iData2, m_bOption, m_bAlt, m_bShift, m_bCtrl);
+	GC.getGame().logDebugMsg("Reading CvNetDoTask message with payload [%d, %d, %d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iCityID, m_eTask, m_iData1, m_iData2, m_bOption, m_bAlt, m_bShift, m_bCtrl);
 }
 
 CvNetUpdateCivics::CvNetUpdateCivics() : CvMessageData(GAMEMESSAGE_UPDATE_CIVICS), m_ePlayer(NO_PLAYER), m_aeCivics(GC.getNumCivicOptionInfos(), NO_CIVIC)
@@ -462,7 +462,7 @@ void CvNetResearch::Execute()
 
 			if (m_iDiscover > 1)
 			{
-				if (m_ePlayer == GC.getGameINLINE().getActivePlayer())
+				if (m_ePlayer == GC.getGame().getActivePlayer())
 				{
 					kPlayer.chooseTech(m_iDiscover - 1);
 				}
@@ -484,7 +484,7 @@ void CvNetResearch::Execute()
 			}
 		}
 
-		if (GC.getGameINLINE().getActivePlayer() == m_ePlayer)
+		if (GC.getGame().getActivePlayer() == m_ePlayer)
 		{
 			gDLL->getInterfaceIFace()->updatePythonScreens();
 		}
@@ -599,9 +599,9 @@ void CvNetModNetMessage::Debug(char* szAddendum)
 
 void CvNetModNetMessage::Execute()
 {
-	GC.getGameINLINE().logDebugMsg("Executing CvNetModNetMessage message with payload [%d, %d, %d, %d, %d]\n", m_iData1, m_iData2, m_iData3, m_iData4, m_iData5);
+	GC.getGame().logDebugMsg("Executing CvNetModNetMessage message with payload [%d, %d, %d, %d, %d]\n", m_iData1, m_iData2, m_iData3, m_iData4, m_iData5);
 	CvEventReporter::getInstance().reportModNetMessage(m_iData1, m_iData2, m_iData3, m_iData4, m_iData5);
-	GC.getGameINLINE().logDebugMsg("Executed CvNetModNetMessage message with payload [%d, %d, %d, %d, %d]\n", m_iData1, m_iData2, m_iData3, m_iData4, m_iData5);
+	GC.getGame().logDebugMsg("Executed CvNetModNetMessage message with payload [%d, %d, %d, %d, %d]\n", m_iData1, m_iData2, m_iData3, m_iData4, m_iData5);
 }
 
 void CvNetModNetMessage::PutInBuffer(FDataStreamBase* pStream)
@@ -611,7 +611,7 @@ void CvNetModNetMessage::PutInBuffer(FDataStreamBase* pStream)
 	pStream->Write(m_iData3);
 	pStream->Write(m_iData4);
 	pStream->Write(m_iData5);
-	GC.getGameINLINE().logDebugMsg("Writing CvNetModNetMessage message with payload [%d, %d, %d, %d, %d]\n", m_iData1, m_iData2, m_iData3, m_iData4, m_iData5);
+	GC.getGame().logDebugMsg("Writing CvNetModNetMessage message with payload [%d, %d, %d, %d, %d]\n", m_iData1, m_iData2, m_iData3, m_iData4, m_iData5);
 }
 
 void CvNetModNetMessage::SetFromBuffer(FDataStreamBase* pStream)
@@ -621,7 +621,7 @@ void CvNetModNetMessage::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read(&m_iData3);
 	pStream->Read(&m_iData4);
 	pStream->Read(&m_iData5);
-	GC.getGameINLINE().logDebugMsg("Reading CvNetModNetMessage message with payload [%d, %d, %d, %d, %d]\n", m_iData1, m_iData2, m_iData3, m_iData4, m_iData5);
+	GC.getGame().logDebugMsg("Reading CvNetModNetMessage message with payload [%d, %d, %d, %d, %d]\n", m_iData1, m_iData2, m_iData3, m_iData4, m_iData5);
 }
 
 CvNetConvert::CvNetConvert(PlayerTypes ePlayer, ReligionTypes eReligion) : CvMessageData(GAMEMESSAGE_CONVERT), m_ePlayer(ePlayer), m_eReligion(eReligion)
@@ -803,7 +803,7 @@ void CvNetJoinGroup::Execute()
 		CvUnit* pUnit = GET_PLAYER(m_ePlayer).getUnit(m_iUnitID);
 		if (pUnit != NULL)
 		{
-			GC.getGameINLINE().logDebugMsg("Executing CvNetJoinGroup message with payload [%d, %d, %d]\n", m_ePlayer, m_iUnitID, m_iHeadID);
+			GC.getGame().logDebugMsg("Executing CvNetJoinGroup message with payload [%d, %d, %d]\n", m_ePlayer, m_iUnitID, m_iHeadID);
 			CvUnit* pHeadUnit = GET_PLAYER(m_ePlayer).getUnit(m_iHeadID);
 			if (pHeadUnit != NULL)
 			{
@@ -813,17 +813,17 @@ void CvNetJoinGroup::Execute()
 			{
 				pUnit->joinGroup(NULL);
 			}
-			GC.getGameINLINE().logDebugMsg("Executed CvNetJoinGroup message with payload [%d, %d, %d]\n", m_ePlayer, m_iUnitID, m_iHeadID);
+			GC.getGame().logDebugMsg("Executed CvNetJoinGroup message with payload [%d, %d, %d]\n", m_ePlayer, m_iUnitID, m_iHeadID);
 
 		}
 		else
 		{
-			GC.getGameINLINE().logDebugMsg("Skipping CvNetJoinGroup message due to invalid unit id with payload [%d, %d, %d]\n", m_ePlayer, m_iUnitID, m_iHeadID);
+			GC.getGame().logDebugMsg("Skipping CvNetJoinGroup message due to invalid unit id with payload [%d, %d, %d]\n", m_ePlayer, m_iUnitID, m_iHeadID);
 		}
 	}
 	else
 	{
-		GC.getGameINLINE().logDebugMsg("Skipping CvNetJoinGroup message due to invalid player with payload [%d, %d, %d]\n", m_ePlayer, m_iUnitID, m_iHeadID);
+		GC.getGame().logDebugMsg("Skipping CvNetJoinGroup message due to invalid player with payload [%d, %d, %d]\n", m_ePlayer, m_iUnitID, m_iHeadID);
 	}
 }
 
@@ -832,7 +832,7 @@ void CvNetJoinGroup::PutInBuffer(FDataStreamBase* pStream)
 	pStream->Write(m_ePlayer);
 	pStream->Write(m_iUnitID);
 	pStream->Write(m_iHeadID);
-	GC.getGameINLINE().logDebugMsg("Writing CvNetJoinGroup message with payload [%d, %d, %d]\n", m_ePlayer, m_iUnitID, m_iHeadID);
+	GC.getGame().logDebugMsg("Writing CvNetJoinGroup message with payload [%d, %d, %d]\n", m_ePlayer, m_iUnitID, m_iHeadID);
 
 
 }
@@ -842,7 +842,7 @@ void CvNetJoinGroup::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read((int*)&m_ePlayer);
 	pStream->Read(&m_iUnitID);
 	pStream->Read(&m_iHeadID);
-	GC.getGameINLINE().logDebugMsg("Reading CvNetJoinGroup message with payload [%d, %d, %d]\n", m_ePlayer, m_iUnitID, m_iHeadID);
+	GC.getGame().logDebugMsg("Reading CvNetJoinGroup message with payload [%d, %d, %d]\n", m_ePlayer, m_iUnitID, m_iHeadID);
 
 }
 
@@ -869,23 +869,23 @@ void CvNetPushMission::Execute()
 			CvSelectionGroup* pSelectionGroup = pUnit->getGroup();
 			if (pSelectionGroup != NULL)
 			{
-				GC.getGameINLINE().logDebugMsg("Executing CvNetPushMission message with payload [%d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eMission, m_iData1, m_iData2, m_iFlags, m_bShift);
+				GC.getGame().logDebugMsg("Executing CvNetPushMission message with payload [%d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eMission, m_iData1, m_iData2, m_iFlags, m_bShift);
 				pSelectionGroup->pushMission(m_eMission, m_iData1, m_iData2, m_iFlags, m_bShift, true);
-				GC.getGameINLINE().logDebugMsg("Executed CvNetPushMission message with payload [%d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eMission, m_iData1, m_iData2, m_iFlags, m_bShift);
+				GC.getGame().logDebugMsg("Executed CvNetPushMission message with payload [%d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eMission, m_iData1, m_iData2, m_iFlags, m_bShift);
 			}
 			else
 			{
-				GC.getGameINLINE().logDebugMsg("Skipping CvNetPushMission message due to invalid selection group with payload [%d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eMission, m_iData1, m_iData2, m_iFlags, m_bShift);
+				GC.getGame().logDebugMsg("Skipping CvNetPushMission message due to invalid selection group with payload [%d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eMission, m_iData1, m_iData2, m_iFlags, m_bShift);
 			}
 		}
 		else
 		{
-			GC.getGameINLINE().logDebugMsg("Skipping CvNetPushMission message due to invalid unit id with payload [%d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eMission, m_iData1, m_iData2, m_iFlags, m_bShift);
+			GC.getGame().logDebugMsg("Skipping CvNetPushMission message due to invalid unit id with payload [%d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eMission, m_iData1, m_iData2, m_iFlags, m_bShift);
 		}
 	}
 	else
 	{
-		GC.getGameINLINE().logDebugMsg("Skipping CvNetPushMission message due to invalid player with payload [%d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eMission, m_iData1, m_iData2, m_iFlags, m_bShift);
+		GC.getGame().logDebugMsg("Skipping CvNetPushMission message due to invalid player with payload [%d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eMission, m_iData1, m_iData2, m_iFlags, m_bShift);
 	}
 }
 
@@ -898,7 +898,7 @@ void CvNetPushMission::PutInBuffer(FDataStreamBase* pStream)
 	pStream->Write(m_iData2);
 	pStream->Write(m_iFlags);
 	pStream->Write(m_bShift);
-	GC.getGameINLINE().logDebugMsg("Writing CvNetPushMission message with payload [%d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eMission, m_iData1, m_iData2, m_iFlags, m_bShift);
+	GC.getGame().logDebugMsg("Writing CvNetPushMission message with payload [%d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eMission, m_iData1, m_iData2, m_iFlags, m_bShift);
 }
 
 void CvNetPushMission::SetFromBuffer(FDataStreamBase* pStream)
@@ -910,7 +910,7 @@ void CvNetPushMission::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read(&m_iData2);
 	pStream->Read(&m_iFlags);
 	pStream->Read(&m_bShift);
-	GC.getGameINLINE().logDebugMsg("Reading CvNetPushMission message with payload [%d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eMission, m_iData1, m_iData2, m_iFlags, m_bShift);
+	GC.getGame().logDebugMsg("Reading CvNetPushMission message with payload [%d, %d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eMission, m_iData1, m_iData2, m_iFlags, m_bShift);
 }
 
 CvNetAutoMission::CvNetAutoMission() : CvMessageData(GAMEMESSAGE_AUTO_MISSION), m_ePlayer(NO_PLAYER), m_iUnitID(-1)
@@ -936,23 +936,23 @@ void CvNetAutoMission::Execute()
 			CvSelectionGroup* pSelectionGroup = pUnit->getGroup();
 			if (pSelectionGroup != NULL)
 			{
-				GC.getGameINLINE().logDebugMsg("Executing CvNetAutoMission message with payload [%d, %d]\n", m_ePlayer, m_iUnitID);
+				GC.getGame().logDebugMsg("Executing CvNetAutoMission message with payload [%d, %d]\n", m_ePlayer, m_iUnitID);
 				pSelectionGroup->autoMission();
-				GC.getGameINLINE().logDebugMsg("Executed CvNetAutoMission message with payload [%d, %d]\n", m_ePlayer, m_iUnitID);
+				GC.getGame().logDebugMsg("Executed CvNetAutoMission message with payload [%d, %d]\n", m_ePlayer, m_iUnitID);
 			}
 			else
 			{
-				GC.getGameINLINE().logDebugMsg("Skipping CvNetAutoMission message due to invalid selection group with payload [%d, %d]\n", m_ePlayer, m_iUnitID);
+				GC.getGame().logDebugMsg("Skipping CvNetAutoMission message due to invalid selection group with payload [%d, %d]\n", m_ePlayer, m_iUnitID);
 			}
 		}
 		else
 		{
-			GC.getGameINLINE().logDebugMsg("Skipping CvNetAutoMission message due to invalid unit id with payload [%d, %d]\n", m_ePlayer, m_iUnitID);
+			GC.getGame().logDebugMsg("Skipping CvNetAutoMission message due to invalid unit id with payload [%d, %d]\n", m_ePlayer, m_iUnitID);
 		}
 	}
 	else
 	{
-		GC.getGameINLINE().logDebugMsg("Skipping CvNetAutoMission message due to invalid player with payload [%d, %d]\n", m_ePlayer, m_iUnitID);
+		GC.getGame().logDebugMsg("Skipping CvNetAutoMission message due to invalid player with payload [%d, %d]\n", m_ePlayer, m_iUnitID);
 	}
 }
 
@@ -960,14 +960,14 @@ void CvNetAutoMission::PutInBuffer(FDataStreamBase* pStream)
 {
 	pStream->Write(m_ePlayer);
 	pStream->Write(m_iUnitID);
-	GC.getGameINLINE().logDebugMsg("Writing CvNetAutoMission message with payload [%d, %d]\n", m_ePlayer, m_iUnitID);
+	GC.getGame().logDebugMsg("Writing CvNetAutoMission message with payload [%d, %d]\n", m_ePlayer, m_iUnitID);
 }
 
 void CvNetAutoMission::SetFromBuffer(FDataStreamBase* pStream)
 {
 	pStream->Read((int*)&m_ePlayer);
 	pStream->Read(&m_iUnitID);
-	GC.getGameINLINE().logDebugMsg("Reading CvNetAutoMission message with payload [%d, %d]\n", m_ePlayer, m_iUnitID);
+	GC.getGame().logDebugMsg("Reading CvNetAutoMission message with payload [%d, %d]\n", m_ePlayer, m_iUnitID);
 }
 
 CvNetDoCommand::CvNetDoCommand() : CvMessageData(GAMEMESSAGE_DO_COMMAND), m_ePlayer(NO_PLAYER), m_iUnitID(-1), m_eCommand(NO_COMMAND), m_iData1(-1), m_iData2(-1), m_bAlt(false) 
@@ -1013,26 +1013,26 @@ void CvNetDoCommand::Execute()
 /* UNOFFICIAL_PATCH                        END                                                  */
 /************************************************************************************************/
 					{
-						GC.getGameINLINE().logDebugMsg("Executing CvNetDoCommand message (all of same unit type) with payload [%d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eCommand, m_iData1, m_iData2, m_bAlt);
+						GC.getGame().logDebugMsg("Executing CvNetDoCommand message (all of same unit type) with payload [%d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eCommand, m_iData1, m_iData2, m_bAlt);
 						pLoopUnit->doCommand(m_eCommand, m_iData1, m_iData2);
 					}
 				}
 			}
 			else
 			{
-				GC.getGameINLINE().logDebugMsg("Executing CvNetDoCommand  message (single unit) with payload [%d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eCommand, m_iData1, m_iData2, m_bAlt);
+				GC.getGame().logDebugMsg("Executing CvNetDoCommand  message (single unit) with payload [%d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eCommand, m_iData1, m_iData2, m_bAlt);
 				pUnit->doCommand(m_eCommand, m_iData1, m_iData2);
 			}
-			GC.getGameINLINE().logDebugMsg("Executed CvNetDoCommand message with payload [%d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eCommand, m_iData1, m_iData2, m_bAlt);
+			GC.getGame().logDebugMsg("Executed CvNetDoCommand message with payload [%d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eCommand, m_iData1, m_iData2, m_bAlt);
 		}
 		else
 		{
-			GC.getGameINLINE().logDebugMsg("Skipping CvNetDoCommand message due to invalid unit id with payload [%d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eCommand, m_iData1, m_iData2, m_bAlt);
+			GC.getGame().logDebugMsg("Skipping CvNetDoCommand message due to invalid unit id with payload [%d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eCommand, m_iData1, m_iData2, m_bAlt);
 		}
 		}
 	else
 	{
-		GC.getGameINLINE().logDebugMsg("Skipping CvNetDoCommand message due to invalid player with payload [%d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eCommand, m_iData1, m_iData2, m_bAlt);
+		GC.getGame().logDebugMsg("Skipping CvNetDoCommand message due to invalid player with payload [%d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eCommand, m_iData1, m_iData2, m_bAlt);
 	}
 }
 
@@ -1044,7 +1044,7 @@ void CvNetDoCommand::PutInBuffer(FDataStreamBase* pStream)
 	pStream->Write(m_iData1);
 	pStream->Write(m_iData2);
 	pStream->Write(m_bAlt);
-	GC.getGameINLINE().logDebugMsg("Writing CvNetDoCommand message with payload [%d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eCommand, m_iData1, m_iData2, m_bAlt);
+	GC.getGame().logDebugMsg("Writing CvNetDoCommand message with payload [%d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eCommand, m_iData1, m_iData2, m_bAlt);
 }
 
 void CvNetDoCommand::SetFromBuffer(FDataStreamBase* pStream)
@@ -1055,7 +1055,7 @@ void CvNetDoCommand::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read(&m_iData1);
 	pStream->Read(&m_iData2);
 	pStream->Read(&m_bAlt);
-	GC.getGameINLINE().logDebugMsg("Reading CvNetDoCommand message with payload [%d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eCommand, m_iData1, m_iData2, m_bAlt);
+	GC.getGame().logDebugMsg("Reading CvNetDoCommand message with payload [%d, %d, %d, %d, %d, %d]\n", m_ePlayer, m_iUnitID, m_eCommand, m_iData1, m_iData2, m_bAlt);
 }
 
 CvNetPercentChange::CvNetPercentChange() : CvMessageData(GAMEMESSAGE_PERCENT_CHANGE), m_ePlayer(NO_PLAYER), m_iChange(0), m_eCommerce(NO_COMMERCE)
@@ -1146,7 +1146,7 @@ void CvNetChooseElection::Debug(char* szAddendum)
 
 void CvNetChooseElection::Execute()
 {
-	GC.getGameINLINE().setVoteChosen(m_iSelection, m_iVoteId);
+	GC.getGame().setVoteChosen(m_iSelection, m_iVoteId);
 }
 
 void CvNetChooseElection::PutInBuffer(FDataStreamBase* pStream)
@@ -1178,7 +1178,7 @@ void CvNetDiploVote::Debug(char* szAddendum)
 
 void CvNetDiploVote::Execute()
 {
-	GC.getGameINLINE().castVote(m_ePlayer, m_iVoteId, m_eChoice);
+	GC.getGame().castVote(m_ePlayer, m_iVoteId, m_eChoice);
 }
 
 void CvNetDiploVote::PutInBuffer(FDataStreamBase* pStream)
@@ -1268,9 +1268,9 @@ void CvNetPing::SetFromBuffer(FDataStreamBase* pStream)
 
 void CvNetPing::Execute()
 {
-	if (GC.getGameINLINE().getActiveTeam() != NO_TEAM)
+	if (GC.getGame().getActiveTeam() != NO_TEAM)
 	{
-		if (GET_PLAYER(m_ePlayer).getTeam() == GC.getGameINLINE().getActiveTeam() || GET_TEAM(GC.getGameINLINE().getActiveTeam()).isVassal(GET_PLAYER(m_ePlayer).getTeam()) || GET_TEAM(GET_PLAYER(m_ePlayer).getTeam()).isVassal(GC.getGameINLINE().getActiveTeam()))
+		if (GET_PLAYER(m_ePlayer).getTeam() == GC.getGame().getActiveTeam() || GET_TEAM(GC.getGame().getActiveTeam()).isVassal(GET_PLAYER(m_ePlayer).getTeam()) || GET_TEAM(GET_PLAYER(m_ePlayer).getTeam()).isVassal(GC.getGame().getActiveTeam()))
 		{
 			gDLL->getInterfaceIFace()->doPing(m_iX, m_iY, m_ePlayer);
 		}
@@ -1384,7 +1384,7 @@ void CvNetRecalculateModifiers::Debug(char *szAddendum)
 
 void CvNetRecalculateModifiers::Execute()
 {
-	GC.getGameINLINE().recalculateModifiers();
+	GC.getGame().recalculateModifiers();
 }
 
 void CvNetRecalculateModifiers::PutInBuffer(FDataStreamBase* pStream)
@@ -1461,7 +1461,7 @@ void CvNetBuildListPushOrder::Execute()
 	{
 		GET_PLAYER(m_ePlayer).m_pBuildLists->pushOrder(m_iID, m_eOrder, m_iData, -1, m_bAlt, !(m_bShift || m_bCtrl), m_bShift);
 	}
-	if (m_ePlayer == GC.getGameINLINE().getActivePlayer())
+	if (m_ePlayer == GC.getGame().getActivePlayer())
 	{
 		Cy::call("CvScreensInterface", "showBuildListScreen");
 	}
@@ -1508,7 +1508,7 @@ void CvNetBuildListPopOrder::Execute()
 	{
 		GET_PLAYER(m_ePlayer).m_pBuildLists->popOrder(m_iID, m_iNum);
 	}
-	if (m_ePlayer == GC.getGameINLINE().getActivePlayer())
+	if (m_ePlayer == GC.getGame().getActivePlayer())
 	{
 		Cy::call("CvScreensInterface", "showBuildListScreen");
 	}
@@ -1559,7 +1559,7 @@ void CvNetBuildListEdit::Execute()
 			GET_PLAYER(m_ePlayer).m_pBuildLists->renameList(m_iID, m_szName);
 		}
 	}
-	if (m_ePlayer == GC.getGameINLINE().getActivePlayer())
+	if (m_ePlayer == GC.getGame().getActivePlayer())
 	{
 		Cy::call("CvScreensInterface", "showBuildListScreen");
 	}
@@ -1729,7 +1729,7 @@ void CvNetChooseMergeUnit::Execute()
 			CvUnit* pUnit3 = GET_PLAYER(m_ePlayer).getUnit(GET_PLAYER(m_ePlayer).getSecondMergeSelectionUnit());
 			UnitTypes eUnitType = pUnit1->getUnitType();
 
-			CvUnit* pkMergedUnit = GET_PLAYER(m_ePlayer).initUnit(eUnitType, pUnit1->getX_INLINE(), pUnit1->getY_INLINE(), NO_UNITAI, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
+			CvUnit* pkMergedUnit = GET_PLAYER(m_ePlayer).initUnit(eUnitType, pUnit1->getX(), pUnit1->getY(), NO_UNITAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 			PROFILE_FUNC();
 
 			int iTotalGroupOffset = 1;
@@ -1752,7 +1752,7 @@ void CvNetChooseMergeUnit::Execute()
 						}
 						else if (GC.getPromotionInfo(ePromotion).getPromotionLine() != NO_PROMOTIONLINE && GC.getPromotionLineInfo(GC.getPromotionInfo(ePromotion).getPromotionLine()).isAffliction())
 						{
-							if (GC.getGameINLINE().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
+							if (GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
 							{
 								pkMergedUnit->afflict(GC.getPromotionInfo(ePromotion).getPromotionLine());
 							}
@@ -1883,9 +1883,9 @@ void CvNetConfirmSplitUnit::Execute()
 		{
 			CvUnit* pUnit0 = GET_PLAYER(m_ePlayer).getUnit(GET_PLAYER(m_ePlayer).getSplittingUnit());
 			UnitTypes eUnitType = pUnit0->getUnitType();
-			CvUnit* pUnit1 = GET_PLAYER(m_ePlayer).initUnit(eUnitType, pUnit0->getX_INLINE(), pUnit0->getY_INLINE(), NO_UNITAI, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
-			CvUnit* pUnit2 = GET_PLAYER(m_ePlayer).initUnit(eUnitType, pUnit0->getX_INLINE(), pUnit0->getY_INLINE(), NO_UNITAI, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
-			CvUnit* pUnit3 = GET_PLAYER(m_ePlayer).initUnit(eUnitType, pUnit0->getX_INLINE(), pUnit0->getY_INLINE(), NO_UNITAI, NO_DIRECTION, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"));
+			CvUnit* pUnit1 = GET_PLAYER(m_ePlayer).initUnit(eUnitType, pUnit0->getX(), pUnit0->getY(), NO_UNITAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+			CvUnit* pUnit2 = GET_PLAYER(m_ePlayer).initUnit(eUnitType, pUnit0->getX(), pUnit0->getY(), NO_UNITAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+			CvUnit* pUnit3 = GET_PLAYER(m_ePlayer).initUnit(eUnitType, pUnit0->getX(), pUnit0->getY(), NO_UNITAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 			PROFILE_FUNC();
 
 			int iTotalGroupOffset = -1;
@@ -1906,7 +1906,7 @@ void CvNetConfirmSplitUnit::Execute()
 						}
 						else if (GC.getPromotionInfo(ePromotion).getPromotionLine() != NO_PROMOTIONLINE && GC.getPromotionLineInfo(GC.getPromotionInfo(ePromotion).getPromotionLine()).isAffliction())
 						{
-							if (GC.getGameINLINE().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
+							if (GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
 							{
 								pUnit1->afflict(GC.getPromotionInfo(ePromotion).getPromotionLine());
 								pUnit2->afflict(GC.getPromotionInfo(ePromotion).getPromotionLine());
