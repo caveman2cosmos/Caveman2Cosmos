@@ -53,7 +53,7 @@
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_STONECIRCLE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_STONE_CIRCLE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>

@@ -819,12 +819,12 @@
 				</InvisibleImprovementChange>
 				<InvisibleImprovementChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_SUBURB</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</InvisibleImprovementChange>
 				<InvisibleImprovementChange>
 					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
-					<ImprovementType>IMPROVEMENT_SUBURB</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</InvisibleImprovementChange>
 			</InvisibleImprovementChanges>
@@ -3685,7 +3685,7 @@
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_SUBURB</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<iIntensity>-1</iIntensity>
 				</VisibleImprovementRangeChange>
 			</VisibleImprovementRangeChanges>
@@ -4358,7 +4358,7 @@
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_SUBURB</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<iIntensity>-1</iIntensity>
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
@@ -4368,17 +4368,17 @@
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_WOODEN_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STONE_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STEEL_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementRangeChange>
 			</VisibleImprovementRangeChanges>
@@ -4390,17 +4390,17 @@
 				</VisibleImprovementChange>
 				<VisibleImprovementChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_WOODEN_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementChange>
 				<VisibleImprovementChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STONE_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementChange>
 				<VisibleImprovementChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STEEL_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementChange>
 			</VisibleImprovementChanges>
@@ -4524,7 +4524,7 @@
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_SUBURB</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<iIntensity>-1</iIntensity>
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
@@ -4534,17 +4534,17 @@
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_WOODEN_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STONE_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STEEL_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementRangeChange>
 			</VisibleImprovementRangeChanges>
@@ -4556,17 +4556,17 @@
 				</VisibleImprovementChange>
 				<VisibleImprovementChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_WOODEN_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementChange>
 				<VisibleImprovementChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STONE_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementChange>
 				<VisibleImprovementChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STEEL_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementChange>
 			</VisibleImprovementChanges>
@@ -4690,7 +4690,7 @@
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_SUBURB</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<iIntensity>-1</iIntensity>
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
@@ -4700,17 +4700,17 @@
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_WOODEN_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STONE_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STEEL_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementRangeChange>
 			</VisibleImprovementRangeChanges>
@@ -4722,17 +4722,17 @@
 				</VisibleImprovementChange>
 				<VisibleImprovementChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_WOODEN_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementChange>
 				<VisibleImprovementChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STONE_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementChange>
 				<VisibleImprovementChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STEEL_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementChange>
 			</VisibleImprovementChanges>
@@ -4856,7 +4856,7 @@
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_SUBURB</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<iIntensity>-1</iIntensity>
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
@@ -4866,17 +4866,17 @@
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_WOODEN_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STONE_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STEEL_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementRangeChange>
 			</VisibleImprovementRangeChanges>
@@ -4888,17 +4888,17 @@
 				</VisibleImprovementChange>
 				<VisibleImprovementChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_WOODEN_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementChange>
 				<VisibleImprovementChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STONE_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementChange>
 				<VisibleImprovementChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STEEL_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementChange>
 			</VisibleImprovementChanges>

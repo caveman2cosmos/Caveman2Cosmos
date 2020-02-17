@@ -84,7 +84,7 @@
 							<PlotCondition>
 								<Has>
 									<GOMType>GOM_IMPROVEMENT</GOMType>
-									<ID>IMPROVEMENT_INDIGENOUS_PEOPLE</ID>
+									<ID>IMPROVEMENT_INDIGENOUS_COMMUNITY</ID>
 								</Has>
 							</PlotCondition>
 						</Outcome>
@@ -101,7 +101,7 @@
 							<PlotCondition>
 								<Has>
 									<GOMType>GOM_IMPROVEMENT</GOMType>
-									<ID>IMPROVEMENT_INDIGENOUS_PEOPLE</ID>
+									<ID>IMPROVEMENT_INDIGENOUS_COMMUNITY</ID>
 								</Has>
 							</PlotCondition>
 						</Outcome>

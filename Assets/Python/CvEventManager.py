@@ -257,8 +257,8 @@ class CvEventManager:
 				}
 				self.mapImpType = {
 					"IMPROVEMENT_GROW_FOREST"	: GC.getInfoTypeForString('IMPROVEMENT_GROW_FOREST'),
-					"IMPROVEMENT_PLANT_FOREST"	: GC.getInfoTypeForString('IMPROVEMENT_PLANT_FOREST'),
-					"IMPROVEMENT_PLANT_BAMBOO"	: GC.getInfoTypeForString('IMPROVEMENT_PLANT_BAMBOO'),
+					"IMPROVEMENT_YOUNG_FOREST"	: GC.getInfoTypeForString('IMPROVEMENT_YOUNG_FOREST'),
+					"IMPROVEMENT_PLANT_BAMBOO_GROVE"	: GC.getInfoTypeForString('IMPROVEMENT_PLANT_BAMBOO_GROVE'),
 					"IMPROVEMENT_PLANT_SAVANNA"	: GC.getInfoTypeForString('IMPROVEMENT_PLANT_SAVANNA'),
 					"IMPROVEMENT_FARM"			: GC.getInfoTypeForString('IMPROVEMENT_FARM')
 				}
@@ -1184,12 +1184,12 @@ class CvEventManager:
 						else:
 							CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_BAMBOO'), 0)
 
-		elif iImprovement == mapImpType['IMPROVEMENT_PLANT_FOREST']:
+		elif iImprovement == mapImpType['IMPROVEMENT_YOUNG_FOREST']:
 			CyPlot = GC.getMap().plot(iX, iY)
 			CyPlot.setImprovementType(-1)
 			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_FOREST_NEW'), 0)
 
-		elif iImprovement == mapImpType['IMPROVEMENT_PLANT_BAMBOO']:
+		elif iImprovement == mapImpType['IMPROVEMENT_PLANT_BAMBOO_GROVE']:
 			CyPlot = GC.getMap().plot(iX, iY)
 			CyPlot.setImprovementType(-1)
 			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_BAMBOO'), 0)
@@ -1581,7 +1581,7 @@ class CvEventManager:
 						CyPlayerX.AI_changeAttitudeExtra(iTeam, 3)
 		# Maginot Line
 		elif iBuilding == mapBuildingType["MAGINOTLINE"]:
-			iBunker = GC.getInfoTypeForString("IMPROVEMENT_BUNKER")
+			iBunker = GC.getInfoTypeForString("IMPROVEMENT_COMMAND_BUNKER")
 			if iBunker > -1:
 				MAP = GC.getMap()
 				iArea = CyCity.plot().getArea()
@@ -1644,7 +1644,7 @@ class CvEventManager:
 							bOK = True
 							CyPlot.setImprovementType(iBunker)
 			else:
-				print "Warning CvEventManager.onBuildingBuilt\n\tIMPROVEMENT_BUNKER doesn't exist"
+				print "Warning CvEventManager.onBuildingBuilt\n\tIMPROVEMENT_COMMAND_BUNKER doesn't exist"
 		# Silk Road
 		elif iBuilding == mapBuildingType["SILK_ROAD"]:
 			iUnit = GC.getInfoTypeForString("UNIT_SPY")

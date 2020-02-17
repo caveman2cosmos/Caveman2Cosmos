@@ -1530,7 +1530,7 @@
 				<ImprovementType>IMPROVEMENT_PASTURE</ImprovementType>
 				<ImprovementType>IMPROVEMENT_WORKSHOP</ImprovementType>
 				<ImprovementType>IMPROVEMENT_QUARRY</ImprovementType>
-				<ImprovementType>IMPROVEMENT_WELL</ImprovementType>
+				<ImprovementType>IMPROVEMENT_HYDROCARBON_WELL</ImprovementType>
 				<ImprovementType>IMPROVEMENT_WINERY</ImprovementType>
 				<ImprovementType>IMPROVEMENT_MINE</ImprovementType>
 				<ImprovementType>IMPROVEMENT_CORE_MINE</ImprovementType>
@@ -1538,7 +1538,7 @@
 				<ImprovementType>IMPROVEMENT_MODERN_MINE</ImprovementType>
 				<ImprovementType>IMPROVEMENT_WATERMILL</ImprovementType>
 				<ImprovementType>IMPROVEMENT_PLANTATION</ImprovementType>
-				<ImprovementType>IMPROVEMENT_CAMP</ImprovementType>
+				<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 				<ImprovementType>IMPROVEMENT_FORT</ImprovementType>
 				<ImprovementType>IMPROVEMENT_ORCHARD</ImprovementType>
 				<ImprovementType>IMPROVEMENT_SILK_FARM</ImprovementType>
@@ -1546,21 +1546,21 @@
 				<ImprovementType>IMPROVEMENT_TREEFARM</ImprovementType>
 				<ImprovementType>IMPROVEMENT_GROUNDWATER_WELL</ImprovementType>
 				<ImprovementType>IMPROVEMENT_FOREST_PRESERVE</ImprovementType>
-				<ImprovementType>IMPROVEMENT_3FACTORY</ImprovementType>
-				<ImprovementType>IMPROVEMENT_5FACTORY</ImprovementType>
+				<ImprovementType>IMPROVEMENT_FACTORY</ImprovementType>
+				<ImprovementType>IMPROVEMENT_MANUFACTURING_COMPLEX</ImprovementType>
 				<ImprovementType>IMPROVEMENT_LUMBERMILL</ImprovementType>
 				<ImprovementType>IMPROVEMENT_WINDMILL</ImprovementType>
-				<ImprovementType>IMPROVEMENT_HYDRO_PLANT</ImprovementType>
-				<ImprovementType>IMPROVEMENT_SAFARI</ImprovementType>
-				<ImprovementType>IMPROVEMENT_EXPLORETEMPLE</ImprovementType>
-				<ImprovementType>IMPROVEMENT_DESERTWINDMILL</ImprovementType>
-				<ImprovementType>IMPROVEMENT_BUNKER</ImprovementType>
-				<ImprovementType>IMPROVEMENT_FUTURE_BUNKER</ImprovementType>
+				<ImprovementType>IMPROVEMENT_HYDRO_DAM</ImprovementType>
+				<ImprovementType>IMPROVEMENT_WILDLIFE_SANCTUARY</ImprovementType>
+				<ImprovementType>IMPROVEMENT_ARCHEOLOGICAL_SITE</ImprovementType>
+				<ImprovementType>IMPROVEMENT_MODERN_WINDMILL</ImprovementType>
+				<ImprovementType>IMPROVEMENT_COMMAND_BUNKER</ImprovementType>
+				<ImprovementType>IMPROVEMENT_COMMAND_CENTER</ImprovementType>
 				<ImprovementType>IMPROVEMENT_JUNGLE_CAMP</ImprovementType>
 				<ImprovementType>IMPROVEMENT_DESERT_CAMP</ImprovementType>
 				<ImprovementType>IMPROVEMENT_WETLANDS_CAMP</ImprovementType>
-				<ImprovementType>IMPROVEMENT_FOSSIL_DIGSITE</ImprovementType>
-				<ImprovementType>IMPROVEMENT_FARMSCRAPER</ImprovementType>
+				<ImprovementType>IMPROVEMENT_FOSSIL_DIG_SITE</ImprovementType>
+				<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
 				<ImprovementType>IMPROVEMENT_GEOGLYPH</ImprovementType>
 				<ImprovementType>IMPROVEMENT_MOAI</ImprovementType>
 			</ImprovementsRequired>
@@ -1857,7 +1857,7 @@
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
-				<ImprovementType>IMPROVEMENT_WELL</ImprovementType>
+				<ImprovementType>IMPROVEMENT_HYDROCARBON_WELL</ImprovementType>
 				<ImprovementType>IMPROVEMENT_OFFSHORE_PLATFORM</ImprovementType>
 			</ImprovementsRequired>
 			<BonusesRequired>
@@ -2484,7 +2484,7 @@
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
-				<ImprovementType>IMPROVEMENT_WELL</ImprovementType>
+				<ImprovementType>IMPROVEMENT_HYDROCARBON_WELL</ImprovementType>
 				<ImprovementType>IMPROVEMENT_OFFSHORE_PLATFORM</ImprovementType>
 			</ImprovementsRequired>
 			<BonusesRequired>
@@ -5686,7 +5686,7 @@
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
-				<ImprovementType>IMPROVEMENT_CAMP</ImprovementType>
+				<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 			</ImprovementsRequired>
 			<bPickReligion>1</bPickReligion>
 			<bStateReligion>1</bStateReligion>
@@ -10077,7 +10077,7 @@
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
-				<ImprovementType>IMPROVEMENT_ABATIS</ImprovementType>
+				<ImprovementType>IMPROVEMENT_ABATIS_THORN_HEDGE</ImprovementType>
 			</ImprovementsRequired>
 			<Events>
 				<Event>EVENT_ABATIS_IN_DISREPAIR_1</Event>
@@ -10102,7 +10102,7 @@
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
-				<ImprovementType>IMPROVEMENT_PALISADE</ImprovementType>
+				<ImprovementType>IMPROVEMENT_WOODEN_PALISADE</ImprovementType>
 			</ImprovementsRequired>
 			<Events>
 				<Event>EVENT_PALISADE_IN_DISREPAIR_1</Event>
@@ -10126,7 +10126,7 @@
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
-				<ImprovementType>IMPROVEMENT_BUNKER</ImprovementType>
+				<ImprovementType>IMPROVEMENT_COMMAND_BUNKER</ImprovementType>
 			</ImprovementsRequired>
 			<Events>
 				<Event>EVENT_BUNKER_IN_DISREPAIR_1</Event>
@@ -10150,7 +10150,7 @@
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
-				<ImprovementType>IMPROVEMENT_FUTURE_BUNKER</ImprovementType>
+				<ImprovementType>IMPROVEMENT_COMMAND_CENTER</ImprovementType>
 			</ImprovementsRequired>
 			<Events>
 				<Event>EVENT_FUTURE_BUNKER_IN_DISREPAIR_1</Event>

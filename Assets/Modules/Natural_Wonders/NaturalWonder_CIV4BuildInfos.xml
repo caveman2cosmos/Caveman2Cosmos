@@ -34,7 +34,7 @@
 			<iTime>800</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_BEACON_GREAT_BARRIER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_BEACON_GREAT_BARRIER_REEF</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>
@@ -53,7 +53,7 @@
 			<iTime>800</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>

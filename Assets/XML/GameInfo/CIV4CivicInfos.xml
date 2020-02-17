@@ -5330,7 +5330,7 @@
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_CAMP</ImprovementType>
+					<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 					<ImprovementYields>
 						<iYield>1</iYield>
 						<iYield>1</iYield>
@@ -5555,7 +5555,7 @@
 					</ImprovementYields>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FARMSCRAPER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
 					<ImprovementYields>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -5961,7 +5961,7 @@
 					</ImprovementYields>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_3FACTORY</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FACTORY</ImprovementType>
 					<ImprovementYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5969,7 +5969,7 @@
 					</ImprovementYields>
 				</ImprovementYieldChange> 	
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_5FACTORY</ImprovementType>
+					<ImprovementType>IMPROVEMENT_MANUFACTURING_COMPLEX</ImprovementType>
 					<ImprovementYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -6009,7 +6009,7 @@
 					</ImprovementYields>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FARMSCRAPER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
 					<ImprovementYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -6165,7 +6165,7 @@
 					</ImprovementYields>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FARMSCRAPER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
 					<ImprovementYields>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -6389,7 +6389,7 @@
 					</ImprovementYields>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_SAFARI</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WILDLIFE_SANCTUARY</ImprovementType>
 					<ImprovementYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -6982,7 +6982,7 @@
 					</ImprovementYields>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FARMSCRAPER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
 					<ImprovementYields>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -7966,7 +7966,7 @@
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FARMSCRAPER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
 					<ImprovementYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -8232,7 +8232,7 @@
 					</ImprovementYields>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_3FACTORY</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FACTORY</ImprovementType>
 					<ImprovementYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -8240,7 +8240,7 @@
 					</ImprovementYields>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_5FACTORY</ImprovementType>
+					<ImprovementType>IMPROVEMENT_MANUFACTURING_COMPLEX</ImprovementType>
 					<ImprovementYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -8563,7 +8563,7 @@
 					</ImprovementYields>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_DESERTWINDMILL</ImprovementType>
+					<ImprovementType>IMPROVEMENT_MODERN_WINDMILL</ImprovementType>
 					<ImprovementYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -8579,7 +8579,7 @@
 					</ImprovementYields>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_WINDMILL_SEA</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEA_MILL</ImprovementType>
 					<ImprovementYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -18530,7 +18530,7 @@
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FARMSCRAPER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
 					<ImprovementYields>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -18950,7 +18950,7 @@
 					</ImprovementYields>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FARMSCRAPER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
 					<ImprovementYields>
 						<iYield>2</iYield>
 						<iYield>0</iYield>
@@ -19084,7 +19084,7 @@
 					</ImprovementYields>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FARMSCRAPER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
 					<ImprovementYields>
 						<iYield>0</iYield>
 						<iYield>3</iYield>

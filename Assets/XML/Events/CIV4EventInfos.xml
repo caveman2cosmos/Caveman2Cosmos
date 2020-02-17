@@ -6638,7 +6638,7 @@
 		<EventInfo>
 			<Type>EVENT_ABATIS_IN_DISREPAIR_1</Type>
 			<Description>TXT_KEY_EVENT_FORT_IN_DISREPAIR_1</Description>
-			<ImprovementType>IMPROVEMENT_ABATIS</ImprovementType>
+			<ImprovementType>IMPROVEMENT_ABATIS_THORN_HEDGE</ImprovementType>
 			<iImprovementChange>-1</iImprovementChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -6653,7 +6653,7 @@
 		<EventInfo>
 			<Type>EVENT_PALISADE_IN_DISREPAIR_1</Type>
 			<Description>TXT_KEY_EVENT_FORT_IN_DISREPAIR_1</Description>
-			<ImprovementType>IMPROVEMENT_PALISADE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_WOODEN_PALISADE</ImprovementType>
 			<iImprovementChange>-1</iImprovementChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -6668,7 +6668,7 @@
 		<EventInfo>
 			<Type>EVENT_BUNKER_IN_DISREPAIR_1</Type>
 			<Description>TXT_KEY_EVENT_FORT_IN_DISREPAIR_1</Description>
-			<ImprovementType>IMPROVEMENT_BUNKER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_COMMAND_BUNKER</ImprovementType>
 			<iImprovementChange>-1</iImprovementChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -6683,7 +6683,7 @@
 		<EventInfo>
 			<Type>EVENT_FUTURE_BUNKER_IN_DISREPAIR_1</Type>
 			<Description>TXT_KEY_EVENT_FORT_IN_DISREPAIR_1</Description>
-			<ImprovementType>IMPROVEMENT_FUTURE_BUNKER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_COMMAND_CENTER</ImprovementType>
 			<iImprovementChange>-1</iImprovementChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>

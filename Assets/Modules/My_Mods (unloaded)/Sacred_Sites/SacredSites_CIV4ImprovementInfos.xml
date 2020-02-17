@@ -98,8 +98,8 @@
 		</ImprovementInfo>
 		<!-- Stone Circle -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_STONECIRCLE</Type>
-			<Description>TXT_KEY_IMPROVEMENT_STONECIRCLE</Description>
+			<Type>IMPROVEMENT_STONE_CIRCLE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_STONE_CIRCLE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SACRED_SITE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_STONEHENGE</ArtDefineTag>
 			<YieldChanges>

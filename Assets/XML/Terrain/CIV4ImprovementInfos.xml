@@ -11,10 +11,10 @@
 		<!-- Prehistoric -->
 		<!-- Seed Camp -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_GRAIN_GATHERER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_GRAIN_GATHERER</Description>
+			<Type>IMPROVEMENT_SEED_CAMP</Type>
+			<Description>TXT_KEY_IMPROVEMENT_SEED_CAMP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SEED_CAMP_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_GRAIN_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_SEED_CAMP</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
@@ -127,7 +127,7 @@
 		</ImprovementInfo>
 		<!-- Wood Gatherer -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_PINE_GATHERER</Type>
+			<Type>IMPROVEMENT_WOOD_GATHERER</Type>
 			<Description>TXT_KEY_IMPROVEMENT_WOOD_GATHERER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LUMBERYARD_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WOOD_GATHERER</ArtDefineTag>
@@ -310,7 +310,7 @@
 			<Type>IMPROVEMENT_TAR_GATHERER</Type>
 			<Description>TXT_KEY_IMPROVEMENT_TAR_GATHERER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_TAR_GATHERER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_ROCK_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_STONE_TOOLS_WORKSHOP</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>2</iYieldChange>
@@ -338,7 +338,7 @@
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
-			<ImprovementUpgrade>IMPROVEMENT_WELL</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_HYDROCARBON_WELL</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes>
 				<ImprovementType>IMPROVEMENT_WORKSHOP</ImprovementType>
 			</AlternativeImprovementUpgradeTypes>
@@ -372,7 +372,7 @@
 			<Type>IMPROVEMENT_SCAVENGING_CAMP</Type>
 			<Description>TXT_KEY_IMPROVEMENT_SCAVENGING_CAMP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SCAVENGING_CAMP_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_CAMP</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_HUNTING_CAMP</ArtDefineTag>
 			<PrereqTech>TECH_SCAVENGING</PrereqTech>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
@@ -538,7 +538,7 @@
 			</BonusTypeStructs>
 			<ImprovementUpgrade>IMPROVEMENT_NOMADIC_HERD</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes>
-				<ImprovementType>IMPROVEMENT_CAMP</ImprovementType>
+				<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 			</AlternativeImprovementUpgradeTypes>
 			<TraitYieldChanges>
 				<TraitYieldChange>
@@ -554,7 +554,7 @@
 			<Type>IMPROVEMENT_NOMADIC_HERD</Type>
 			<Description>TXT_KEY_IMPROVEMENT_NOMADIC_HERD</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_NOMADIC_HERD_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_CAMP</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_HUNTING_CAMP</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
@@ -844,6 +844,7 @@
 				</TerrainBoolean>
 			</TerrainMakesValids>
 			<WorldSoundscapeAudioScript>ASSS_FOREST_SELECT_AMB</WorldSoundscapeAudioScript>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Fishing Boats -->
 		<ImprovementInfo>
@@ -1135,9 +1136,9 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<ImprovementUpgrade>IMPROVEMENT_3FACTORY</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_FACTORY</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes>
-				<ImprovementType>IMPROVEMENT_3FACTORY_2</ImprovementType>
+				<ImprovementType>IMPROVEMENT_FACTORY_COLD_CLIMATE</ImprovementType>
 			</AlternativeImprovementUpgradeTypes>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -1249,10 +1250,10 @@
 		</ImprovementInfo>
 		<!-- Factory -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_3FACTORY</Type>
+			<Type>IMPROVEMENT_FACTORY</Type>
 			<Description>TXT_KEY_IMPROVEMENT_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FACTORY_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_3FACTORY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_FACTORY</ArtDefineTag>
 			<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
 			<YieldChanges>
 				<iYieldChange>-2</iYieldChange>
@@ -1310,7 +1311,7 @@
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<ImprovementPillage>IMPROVEMENT_WORKSHOP</ImprovementPillage>
-			<ImprovementUpgrade>IMPROVEMENT_5FACTORY</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_MANUFACTURING_COMPLEX</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_ORGANIC_CHEMISTRY</PrereqTech>
@@ -1429,10 +1430,10 @@
 		</ImprovementInfo>
 		<!-- Factory -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_3FACTORY_2</Type>
+			<Type>IMPROVEMENT_FACTORY_COLD_CLIMATE</Type>
 			<Description>TXT_KEY_IMPROVEMENT_FACTORY_COLD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FACTORY_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_3FACTORY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_FACTORY</ArtDefineTag>
 			<PrereqTech>TECH_REFRIGERATION</PrereqTech>
 			<YieldChanges>
 				<iYieldChange>-2</iYieldChange>
@@ -1466,7 +1467,7 @@
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<ImprovementPillage>IMPROVEMENT_WORKSHOP</ImprovementPillage>
-			<ImprovementUpgrade>IMPROVEMENT_5FACTORY</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_MANUFACTURING_COMPLEX</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_ORGANIC_CHEMISTRY</PrereqTech>
@@ -1585,10 +1586,10 @@
 		</ImprovementInfo>
 		<!-- Manufacturing Complex -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_5FACTORY</Type>
+			<Type>IMPROVEMENT_MANUFACTURING_COMPLEX</Type>
 			<Description>TXT_KEY_IMPROVEMENT_INDUSTRIAL_COMPLEX</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FACTORY_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_5FACTORY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_MANUFACTURING_COMPLEX</ArtDefineTag>
 			<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 			<YieldChanges>
 				<iYieldChange>-3</iYieldChange>
@@ -1660,7 +1661,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<ImprovementPillage>IMPROVEMENT_3FACTORY</ImprovementPillage>
+			<ImprovementPillage>IMPROVEMENT_FACTORY</ImprovementPillage>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_ROBOTICS</PrereqTech>
@@ -2002,7 +2003,7 @@
 			<iUpgradeTime>15</iUpgradeTime>
 			<iAirBombDefense>5</iAirBombDefense>
 			<iPillageGold>15</iPillageGold>
-			<ImprovementUpgrade>IMPROVEMENT_DESERTWINDMILL</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_MODERN_WINDMILL</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_AGRICULTURAL_TOOLS</PrereqTech>
@@ -2047,7 +2048,7 @@
 			<iUpgradeTime>15</iUpgradeTime>
 			<iAirBombDefense>5</iAirBombDefense>
 			<iPillageGold>20</iPillageGold>
-			<ImprovementUpgrade>IMPROVEMENT_HYDRO_PLANT</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_HYDRO_DAM</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_AGRICULTURAL_TOOLS</PrereqTech>
@@ -2074,10 +2075,10 @@
 		</ImprovementInfo>
 		<!-- Hydro Dam -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_HYDRO_PLANT</Type>
-			<Description>TXT_KEY_IMPROVEMENT_HYDRO_PLANT</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_HYDRO_PLANT_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_HYDRO_PLANT</ArtDefineTag>
+			<Type>IMPROVEMENT_HYDRO_DAM</Type>
+			<Description>TXT_KEY_IMPROVEMENT_HYDRO_DAM</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_HYDRO_DAM_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_HYDRO_DAM</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>9</iYieldChange>
@@ -2320,7 +2321,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
-			<ImprovementUpgrade>IMPROVEMENT_FARMSCRAPER</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_VERTICAL_FARM</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_SPICE_TRADE</PrereqTech>
@@ -2387,7 +2388,7 @@
 			<Type>IMPROVEMENT_SALT_GATHERER</Type>
 			<Description>TXT_KEY_IMPROVEMENT_SALT_GATHERER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SALT_MINE_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_ROCK_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_STONE_TOOLS_WORKSHOP</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -2835,7 +2836,7 @@
 				</BonusTypeStruct>
 			</BonusTypeStructs>
 			<ImprovementPillage>IMPROVEMENT_NOMADIC_HERD</ImprovementPillage>
-			<ImprovementUpgrade>IMPROVEMENT_FARMSCRAPER</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_VERTICAL_FARM</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_REFRIGERATION</PrereqTech>
@@ -2873,10 +2874,10 @@
 		</ImprovementInfo>
 		<!-- Hunting Camp -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_CAMP</Type>
-			<Description>TXT_KEY_IMPROVEMENT_CAMP</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_CAMP_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_CAMP</ArtDefineTag>
+			<Type>IMPROVEMENT_HUNTING_CAMP</Type>
+			<Description>TXT_KEY_IMPROVEMENT_HUNTING_CAMP</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_HUNTING_CAMP_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_HUNTING_CAMP</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -3010,8 +3011,8 @@
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_HUNTING_PRESERVE</Type>
 			<Description>TXT_KEY_IMPROVEMENT_HUNTING_PRESERVE</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_CAMP_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_CAMP</ArtDefineTag>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_HUNTING_CAMP_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_HUNTING_CAMP</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -3132,8 +3133,8 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
-			<ImprovementPillage>IMPROVEMENT_CAMP</ImprovementPillage>
-			<ImprovementUpgrade>IMPROVEMENT_SAFARI</ImprovementUpgrade>
+			<ImprovementPillage>IMPROVEMENT_HUNTING_CAMP</ImprovementPillage>
+			<ImprovementUpgrade>IMPROVEMENT_WILDLIFE_SANCTUARY</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_MATCHLOCK</PrereqTech>
@@ -3169,10 +3170,10 @@
 		</ImprovementInfo>
 		<!-- Wildlife Sanctuary -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_SAFARI</Type>
-			<Description>TXT_KEY_IMPROVEMENT_SAFARI</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_SAFARI_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_CAMP</ArtDefineTag>
+			<Type>IMPROVEMENT_WILDLIFE_SANCTUARY</Type>
+			<Description>TXT_KEY_IMPROVEMENT_WILDLIFE_SANCTUARY</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_WILDLIFE_SANCTUARY_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_HUNTING_CAMP</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_TOURISM</PrereqTech>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
@@ -3319,10 +3320,10 @@
 		</ImprovementInfo>
 		<!-- Hydrocarbon Well -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_WELL</Type>
-			<Description>TXT_KEY_IMPROVEMENT_WELL</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_WELL_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_WELL</ArtDefineTag>
+			<Type>IMPROVEMENT_HYDROCARBON_WELL</Type>
+			<Description>TXT_KEY_IMPROVEMENT_HYDROCARBON_WELL</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_HYDROCARBON_WELL_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_HYDROCARBON_WELL</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>5</iYieldChange>
@@ -3526,7 +3527,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
-			<ImprovementUpgrade>IMPROVEMENT_FARMSCRAPER</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_VERTICAL_FARM</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_TRADE</PrereqTech>
@@ -3899,7 +3900,7 @@
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<ImprovementPillage>IMPROVEMENT_VILLAGE</ImprovementPillage>
-			<ImprovementUpgrade>IMPROVEMENT_SUBURB</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_SUBURBS</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_ECONOMICS</PrereqTech>
@@ -4004,9 +4005,9 @@
 		</ImprovementInfo>
 		<!-- Suburb -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_SUBURB</Type>
-			<Description>TXT_KEY_IMPROVEMENT_SUBURB</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_SUBURB_PEDIA</Civilopedia>
+			<Type>IMPROVEMENT_SUBURBS</Type>
+			<Description>TXT_KEY_IMPROVEMENT_SUBURBS</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_SUBURBS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TOWN</ArtDefineTag>
 			<PrereqNatureYields>
 				<iYield>1</iYield>
@@ -4299,9 +4300,9 @@
 		</ImprovementInfo>
 		<!-- Archaeology Site -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_EXPLORETEMPLE</Type>
-			<Description>TXT_KEY_IMPROVEMENT_EXPLORETEMPLE</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_EXPLORETEMPLE_PEDIA</Civilopedia>
+			<Type>IMPROVEMENT_ARCHEOLOGICAL_SITE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_ARCHEOLOGICAL_SITE</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_ARCHEOLOGICAL_SITE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_ARCHEOLOGICAL_SITE</ArtDefineTag>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -4457,10 +4458,10 @@
 		</ImprovementInfo>
 		<!-- Modern Windmill -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_DESERTWINDMILL</Type>
+			<Type>IMPROVEMENT_MODERN_WINDMILL</Type>
 			<Description>TXT_KEY_IMPROVEMENT_MODERNWINDMILL</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_WINDMILL_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_DESERTWINDMILL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_MODERN_WINDMILL</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>7</iYieldChange>
@@ -5242,10 +5243,10 @@
 		</ImprovementInfo>
 		<!-- Geothermal Energy Factory -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_GEOTHERMAL_BOREHOLE</Type>
-			<Description>TXT_KEY_IMPROVEMENT_GEOTHERMAL_BOREHOLE</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_GEOTHERMAL_BOREHOLE_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_GEOTHERMAL_BOREHOLE</ArtDefineTag>
+			<Type>IMPROVEMENT_GEOTHERMAL_FACTORY</Type>
+			<Description>TXT_KEY_IMPROVEMENT_GEOTHERMAL_FACTORY</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_GEOTHERMAL_FACTORY_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_GEOTHERMAL_FACTORY</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>10</iYieldChange>
@@ -5287,10 +5288,10 @@
 		</ImprovementInfo>
 		<!-- Sea Fort -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_SEA_FORT</Type>
-			<Description>TXT_KEY_IMPROVEMENT_SEA_FORT</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_SEA_FORT_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_SEA_FORT</ArtDefineTag>
+			<Type>IMPROVEMENT_AQUATIC_FORCEFIELD</Type>
+			<Description>TXT_KEY_IMPROVEMENT_AQUATIC_FORCEFIELD</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_AQUATIC_FORCEFIELD_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_AQUATIC_FORCEFIELD</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_SHIELDING</PrereqTech>
 			<bWater>1</bWater>
@@ -5326,11 +5327,11 @@
 		</ImprovementInfo>
 		<!-- Sea Air Defence -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_SEA_AIR_DEFENSE</Type>
-			<Description>TXT_KEY_IMPROVEMENT_SEA_AIR_DEFENSE</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_SEA_AIR_DEFENSE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_IMPROVEMENT_SEA_AIR_DEFENSE_HELP</Help>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_SEA_AIR_DEFENSE</ArtDefineTag>
+			<Type>IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE_PEDIA</Civilopedia>
+			<Help>TXT_KEY_IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE_HELP</Help>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_ORBITAL_FLIGHT</PrereqTech>
 			<bWater>1</bWater>
@@ -6032,10 +6033,10 @@
 		</ImprovementInfo>
 		<!-- Plant Jungle -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_MAKE_JUNGLE</Type>
+			<Type>IMPROVEMENT_PLANT_JUNGLE</Type>
 			<Description>TXT_KEY_BUILD_MAKE_JUNGLE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_MAKE_JUNGLE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_JUNGLE</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
@@ -6075,13 +6076,14 @@
 					<iAmountPerTurn>-5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Plant Forest -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_PLANT_FOREST</Type>
+			<Type>IMPROVEMENT_YOUNG_FOREST</Type>
 			<Description>TXT_KEY_FEATURE_FOREST_NEW</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_PLANT_FOREST_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_FOREST</ArtDefineTag>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_YOUNG_FOREST_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_YOUNG_FOREST</ArtDefineTag>
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -6119,7 +6121,8 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-		</ImprovementInfo>
+			<bGraphicalOnly>1</bGraphicalOnly>
+		</ImprovementInfo>		
 		<!-- Plant Savanna -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_PLANT_SAVANNA</Type>
@@ -6158,13 +6161,14 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Plant Bamboo -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_PLANT_BAMBOO</Type>
+			<Type>IMPROVEMENT_PLANT_BAMBOO_GROVE</Type>
 			<Description>TXT_KEY_BUILD_PLANT_BAMBOO</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_BAMBOO</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_BAMBOO_GROVE</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<TerrainMakesValids>
@@ -6197,6 +6201,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Terraform Lush -->
 		<ImprovementInfo>
@@ -6430,10 +6435,10 @@
 		<!-- Prehistoric other plant improvements -->
 		<!-- Fruit Gatherer -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_FRUIT_GATHERER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_FRUIT_GATHERER</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_FRUIT_GATHERER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_FRUIT_GATHERER</ArtDefineTag>
+			<Type>IMPROVEMENT_FRUIT_GATHERING_CAMP</Type>
+			<Description>TXT_KEY_IMPROVEMENT_FRUIT_GATHERING_CAMP</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_FRUIT_GATHERING_CAMP_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_FRUIT_GATHERING_CAMP</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<iUpgradeTime>5</iUpgradeTime>
@@ -6562,7 +6567,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
-			<ImprovementUpgrade>IMPROVEMENT_FRUIT_PICKER</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_BARTER</PrereqTech>
@@ -6576,10 +6581,10 @@
 		</ImprovementInfo>
 		<!-- Grape Gatherer -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_GRAPE_GATHERER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_GRAPE_GATHERER</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_FRUIT_GATHERER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_FRUIT_GATHERER</ArtDefineTag>
+			<Type>IMPROVEMENT_GRAPE_GATHERING_CAMP</Type>
+			<Description>TXT_KEY_IMPROVEMENT_GRAPE_GATHERING_CAMP</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_FRUIT_GATHERING_CAMP_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_FRUIT_GATHERING_CAMP</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<iUpgradeTime>5</iUpgradeTime>
@@ -6594,7 +6599,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
-			<ImprovementUpgrade>IMPROVEMENT_GRAPE_PICKER</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_BARTER</PrereqTech>
@@ -6608,10 +6613,10 @@
 		</ImprovementInfo>
 		<!-- Plant Gatherer -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_PLANT_GATHERER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_PLANT_GATHERER</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_PLANT_GATHERER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_GATHERER</ArtDefineTag>
+			<Type>IMPROVEMENT_PLANT_GATHERING_CAMP</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLANT_GATHERING_CAMP</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_PLANT_GATHERING_CAMP_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_GATHERING_CAMP</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<iUpgradeTime>5</iUpgradeTime>
@@ -6796,7 +6801,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
-			<ImprovementUpgrade>IMPROVEMENT_PLANT_PICKER</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_PLANT_PICKING_CAMP</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_BARTER</PrereqTech>
@@ -6810,10 +6815,10 @@
 		</ImprovementInfo>
 		<!-- Fruit Picker -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_FRUIT_PICKER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_FRUIT_PICKER</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_FRUIT_GATHERER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_FRUIT_GATHERER</ArtDefineTag>
+			<Type>IMPROVEMENT_FRUIT_PICKING_CAMP</Type>
+			<Description>TXT_KEY_IMPROVEMENT_FRUIT_PICKING_CAMP</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_FRUIT_GATHERING_CAMP_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_FRUIT_GATHERING_CAMP</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -7000,10 +7005,10 @@
 		</ImprovementInfo>
 		<!-- Grape Picker -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_GRAPE_PICKER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_GRAPE_PICKER</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_FRUIT_GATHERER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_FRUIT_GATHERER</ArtDefineTag>
+			<Type>IMPROVEMENT_GRAPE_PICKING_CAMP</Type>
+			<Description>TXT_KEY_IMPROVEMENT_GRAPE_PICKING_CAMP</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_FRUIT_GATHERING_CAMP_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_FRUIT_GATHERING_CAMP</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -7045,10 +7050,10 @@
 		</ImprovementInfo>
 		<!-- Plant Picker -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_PLANT_PICKER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_PLANT_PICKER</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_PLANT_GATHERER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_GATHERER</ArtDefineTag>
+			<Type>IMPROVEMENT_PLANT_PICKING_CAMP</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLANT_PICKING_CAMP</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_PLANT_GATHERING_CAMP_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_GATHERING_CAMP</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -7682,7 +7687,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
-			<ImprovementUpgrade>IMPROVEMENT_FARMSCRAPER</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_VERTICAL_FARM</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_TRADE</PrereqTech>
@@ -7726,9 +7731,9 @@
 		</ImprovementInfo>
 		<!-- Fossil Digsite -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_FOSSIL_DIGSITE</Type>
-			<Description>TXT_KEY_IMPROVEMENT_FOSSIL_DIGSITE</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_FOSSIL_DIGSITE_PEDIA</Civilopedia>
+			<Type>IMPROVEMENT_FOSSIL_DIG_SITE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_FOSSIL_DIG_SITE</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_FOSSIL_DIG_SITE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FOREST_PRESERVE</ArtDefineTag>
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<YieldChanges>
@@ -8118,10 +8123,10 @@
 		</ImprovementInfo>
 		<!-- Indigenous People -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_INDIGENOUS_PEOPLE</Type>
-			<Description>TXT_KEY_IMPROVEMENT_INDIGENOUS_PEOPLE</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_INDIGENOUS_PEOPLE_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_INDIGENOUS_PEOPLE</ArtDefineTag>
+			<Type>IMPROVEMENT_INDIGENOUS_COMMUNITY</Type>
+			<Description>TXT_KEY_IMPROVEMENT_INDIGENOUS_COMMUNITY</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_INDIGENOUS_COMMUNITY_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_INDIGENOUS_COMMUNITY</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>-1</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -8142,6 +8147,7 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Thatch Cutter -->
 		<ImprovementInfo>
@@ -8260,7 +8266,7 @@
 			<Type>IMPROVEMENT_MUSHROOM_GATHERER</Type>
 			<Description>TXT_KEY_IMPROVEMENT_MUSHROOM_GATHERER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_MUSHROOM_GATHERER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_GATHERING_CAMP</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<iUpgradeTime>20</iUpgradeTime>
@@ -8277,7 +8283,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
-			<ImprovementUpgrade>IMPROVEMENT_FARMSCRAPER</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_VERTICAL_FARM</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_BARTER</PrereqTech>
@@ -8311,10 +8317,10 @@
 		</ImprovementInfo>
 		<!-- Colony Habitat (Small) -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_HABITAT1</Type>
-			<Description>TXT_KEY_IMPROVEMENT_HABITAT1</Description>
+			<Type>IMPROVEMENT_COLONY_HABITAT_SMALL</Type>
+			<Description>TXT_KEY_IMPROVEMENT_COLONY_HABITAT_SMALL</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COTTAGE_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_HABITAT1</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_COLONY_HABITAT_SMALL</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -8374,7 +8380,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<ImprovementUpgrade>IMPROVEMENT_HABITAT2</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_COLONY_HABITAT_MEDIUM</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
@@ -8396,10 +8402,10 @@
 		</ImprovementInfo>
 		<!-- Colony Habitat (Medium) -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_HABITAT2</Type>
-			<Description>TXT_KEY_IMPROVEMENT_HABITAT2</Description>
+			<Type>IMPROVEMENT_COLONY_HABITAT_MEDIUM</Type>
+			<Description>TXT_KEY_IMPROVEMENT_COLONY_HABITAT_MEDIUM</Description>
 			<Civilopedia>Habitat (Medium)</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_HABITAT2</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_COLONY_HABITAT_MEDIUM</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -8459,8 +8465,8 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<ImprovementPillage>IMPROVEMENT_HABITAT1</ImprovementPillage>
-			<ImprovementUpgrade>IMPROVEMENT_HABITAT3</ImprovementUpgrade>
+			<ImprovementPillage>IMPROVEMENT_COLONY_HABITAT_SMALL</ImprovementPillage>
+			<ImprovementUpgrade>IMPROVEMENT_COLONY_HABITAT_LARGE</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_LUNAR_TOURISM</PrereqTech>
@@ -8519,10 +8525,10 @@
 		</ImprovementInfo>
 		<!-- Colony Habitat (Large) -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_HABITAT3</Type>
-			<Description>TXT_KEY_IMPROVEMENT_HABITAT3</Description>
+			<Type>IMPROVEMENT_COLONY_HABITAT_LARGE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_COLONY_HABITAT_LARGE</Description>
 			<Civilopedia>Habitat (Large)</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_HABITAT3</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_COLONY_HABITAT_LARGE</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -8582,8 +8588,8 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<ImprovementPillage>IMPROVEMENT_HABITAT2</ImprovementPillage>
-			<ImprovementUpgrade>IMPROVEMENT_HABITAT4</ImprovementUpgrade>
+			<ImprovementPillage>IMPROVEMENT_COLONY_HABITAT_MEDIUM</ImprovementPillage>
+			<ImprovementUpgrade>IMPROVEMENT_COLONY_HABITAT_HUGE</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_LUNAR_MEGASTRUCTURES</PrereqTech>
@@ -8605,10 +8611,10 @@
 		</ImprovementInfo>
 		<!-- Colony Habitat (Huge) -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_HABITAT4</Type>
-			<Description>TXT_KEY_IMPROVEMENT_HABITAT4</Description>
+			<Type>IMPROVEMENT_COLONY_HABITAT_HUGE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_COLONY_HABITAT_HUGE</Description>
 			<Civilopedia>Habitat Compound</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_HABITAT4</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_COLONY_HABITAT_HUGE</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -8667,7 +8673,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<ImprovementPillage>IMPROVEMENT_HABITAT3</ImprovementPillage>
+			<ImprovementPillage>IMPROVEMENT_COLONY_HABITAT_LARGE</ImprovementPillage>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_PLANETARY_TRADE</PrereqTech>
@@ -8924,7 +8930,7 @@
 			<Type>IMPROVEMENT_COLONY_EXTRACTION_FACILITY</Type>
 			<Description>TXT_KEY_IMPROVEMENT_COLONY_EXTRACTION_FACILITY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COLONY_EXTRACTION_FACILITY_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_GEOTHERMAL_BOREHOLE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_GEOTHERMAL_FACTORY</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>6</iYieldChange>
@@ -9091,10 +9097,10 @@
 		</ImprovementInfo>
 		<!-- Sea Windmill -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_WINDMILL_SEA</Type>
+			<Type>IMPROVEMENT_SEA_MILL</Type>
 			<Description>TXT_KEY_IMPROVEMENT_SEA_MILL</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_WINDMILL_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_WINDMILL_SEA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_SEA_MILL</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -9323,7 +9329,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
-			<ImprovementUpgrade>IMPROVEMENT_FARMSCRAPER</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_VERTICAL_FARM</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_CROP_ROTATION</PrereqTech>
@@ -9483,10 +9489,10 @@
 		</ImprovementInfo>
 		<!-- Vertical Farm -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_FARMSCRAPER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_FARMSCRAPER</Description>
+			<Type>IMPROVEMENT_VERTICAL_FARM</Type>
+			<Description>TXT_KEY_IMPROVEMENT_VERTICAL_FARM</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FARM_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_FARMSCRAPER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_VERTICAL_FARM</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>15</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -10537,10 +10543,10 @@
 		</ImprovementInfo>
 		<!--Fortifications -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_ABATIS</Type>
-			<Description>TXT_KEY_IMPROVEMENT_ABATIS</Description>
+			<Type>IMPROVEMENT_ABATIS_THORN_HEDGE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_ABATIS_THORN_HEDGE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORT_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_ABATIS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_ABATIS_THORN_HEDGE</ArtDefineTag>
 			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<bUseLSystem>1</bUseLSystem>
@@ -10619,16 +10625,16 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<ImprovementUpgrade>IMPROVEMENT_PALISADE</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_WOODEN_PALISADE</ImprovementUpgrade>
 			<iSeeFrom>1</iSeeFrom>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_PALISADE</Type>
-			<Description>TXT_KEY_IMPROVEMENT_PALISADE</Description>
+			<Type>IMPROVEMENT_WOODEN_PALISADE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_WOODEN_PALISADE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORT_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_PALISADE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_WOODEN_PALISADE</ArtDefineTag>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<bActsAsCity>1</bActsAsCity>
 			<bUseLSystem>1</bUseLSystem>
@@ -10732,16 +10738,16 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
-			<ImprovementUpgrade>IMPROVEMENT_FORTIFIED_CAVE_CACHE</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</ImprovementUpgrade>
 			<iSeeFrom>1</iSeeFrom>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_FORTIFIED_CAVE_CACHE</Type>
-			<Description>TXT_KEY_IMPROVEMENT_FORTIFIED_CAVE_CACHE</Description>
+			<Type>IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORTIFIED_CAVE_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_FORTIFIED_CAVE_CACHE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</ArtDefineTag>
 			<PrereqTech>TECH_POTTERY</PrereqTech>
 			<bActsAsCity>1</bActsAsCity>
 			<bUseLSystem>1</bUseLSystem>
@@ -10847,7 +10853,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<ImprovementUpgrade>IMPROVEMENT_BUNKER</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_COMMAND_BUNKER</ImprovementUpgrade>
 			<iCulture>10</iCulture>
 			<iCultureRange>1</iCultureRange>
 			<iVisibilityChange>2</iVisibilityChange>
@@ -10860,10 +10866,10 @@
 		</ImprovementInfo>
 		<!-- Command Bunker -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BUNKER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BUNKER</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_BUNKER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_BUNKER</ArtDefineTag>
+			<Type>IMPROVEMENT_COMMAND_BUNKER</Type>
+			<Description>TXT_KEY_IMPROVEMENT_COMMAND_BUNKER</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_COMMAND_BUNKER_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_COMMAND_BUNKER</ArtDefineTag>
 			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
 			<bUseLSystem>1</bUseLSystem>
@@ -10942,7 +10948,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<ImprovementUpgrade>IMPROVEMENT_FUTURE_BUNKER</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_COMMAND_CENTER</ImprovementUpgrade>
 			<iCulture>10</iCulture>
 			<iCultureRange>1</iCultureRange>
 			<iVisibilityChange>2</iVisibilityChange>
@@ -10955,10 +10961,10 @@
 		</ImprovementInfo>
 		<!-- Command Center -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_FUTURE_BUNKER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_FUTURE_BUNKER</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_FUTURE_BUNKER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_FUTURE_BUNKER</ArtDefineTag>
+			<Type>IMPROVEMENT_COMMAND_CENTER</Type>
+			<Description>TXT_KEY_IMPROVEMENT_COMMAND_CENTER</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_COMMAND_CENTER_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_COMMAND_CENTER</ArtDefineTag>
 			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_METAMATERIALS</PrereqTech>
 			<iAdvancedStartCost>80</iAdvancedStartCost>
@@ -11047,10 +11053,10 @@
 		</ImprovementInfo>
 		<!-- Watch towers -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_WOODEN_TOWER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_WOODEN_TOWER</Description>
+			<Type>IMPROVEMENT_WOODEN_WATCHTOWER</Type>
+			<Description>TXT_KEY_IMPROVEMENT_WOODEN_WATCHTOWER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_OBSERVATION_POST_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_WOODEN_TOWER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_WOODEN_WATCHTOWER</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<bUseLSystem>1</bUseLSystem>
@@ -11130,7 +11136,7 @@
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<!--
-ImprovementUpgrade>IMPROVEMENT_STONE_TOWER</ImprovementUpgrade
+ImprovementUpgrade>IMPROVEMENT_STONE_WATCHTOWER</ImprovementUpgrade
 			-->
 			<iCulture>1</iCulture>
 			<iVisibilityChange>2</iVisibilityChange>
@@ -11139,10 +11145,10 @@ ImprovementUpgrade>IMPROVEMENT_STONE_TOWER</ImprovementUpgrade
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_STONE_TOWER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_STONE_TOWER</Description>
+			<Type>IMPROVEMENT_STONE_WATCHTOWER</Type>
+			<Description>TXT_KEY_IMPROVEMENT_STONE_WATCHTOWER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_OBSERVATION_POST_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_STONE_TOWER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_STONE_WATCHTOWER</ArtDefineTag>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<bActsAsCity>0</bActsAsCity>
 			<bUseLSystem>1</bUseLSystem>
@@ -11221,7 +11227,7 @@ ImprovementUpgrade>IMPROVEMENT_STONE_TOWER</ImprovementUpgrade
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<ImprovementUpgrade>IMPROVEMENT_STEEL_TOWER</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementUpgrade>
 			<iCulture>1</iCulture>
 			<iVisibilityChange>4</iVisibilityChange>
 			<iSeeFrom>1</iSeeFrom>
@@ -11229,10 +11235,10 @@ ImprovementUpgrade>IMPROVEMENT_STONE_TOWER</ImprovementUpgrade
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_STEEL_TOWER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_STEEL_TOWER</Description>
+			<Type>IMPROVEMENT_STEEL_WATCHTOWER</Type>
+			<Description>TXT_KEY_IMPROVEMENT_STEEL_WATCHTOWER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_OBSERVATION_POST_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_STEEL_TOWER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_STEEL_WATCHTOWER</ArtDefineTag>
 			<PrereqTech>TECH_STEEL</PrereqTech>
 			<bActsAsCity>0</bActsAsCity>
 			<bUseLSystem>1</bUseLSystem>
@@ -11311,7 +11317,7 @@ ImprovementUpgrade>IMPROVEMENT_STONE_TOWER</ImprovementUpgrade
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<ImprovementUpgrade>IMPROVEMENT_RADAR</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_RADAR_TOWER</ImprovementUpgrade>
 			<iCulture>10</iCulture>
 			<iVisibilityChange>8</iVisibilityChange>
 			<iSeeFrom>1</iSeeFrom>
@@ -11320,10 +11326,10 @@ ImprovementUpgrade>IMPROVEMENT_STONE_TOWER</ImprovementUpgrade
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_RADAR</Type>
-			<Description>TXT_KEY_IMPROVEMENT_RADAR</Description>
+			<Type>IMPROVEMENT_RADAR_TOWER</Type>
+			<Description>TXT_KEY_IMPROVEMENT_RADAR_TOWER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_OBSERVATION_POST_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_RADAR</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_RADAR_TOWER</ArtDefineTag>
 			<PrereqTech>TECH_RADAR</PrereqTech>
 			<bActsAsCity>0</bActsAsCity>
 			<bUseLSystem>1</bUseLSystem>
@@ -11443,10 +11449,10 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 		</ImprovementInfo>
 		<!-- Stone Tools Workshop (Mine/Quarry) -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_ROCK_GATHERER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_ROCK_GATHERER</Description>
+			<Type>IMPROVEMENT_STONE_TOOLS_WORKSHOP</Type>
+			<Description>TXT_KEY_IMPROVEMENT_STONE_TOOLS_WORKSHOP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_MINE_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_ROCK_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_STONE_TOOLS_WORKSHOP</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -11574,7 +11580,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 			<AlternativeImprovementUpgradeTypes>
 				<ImprovementType>IMPROVEMENT_EARLY_QUARRY</ImprovementType>
 				<ImprovementType>IMPROVEMENT_QUARRY</ImprovementType>
-				<ImprovementType>IMPROVEMENT_PINE_GATHERER</ImprovementType>
+				<ImprovementType>IMPROVEMENT_WOOD_GATHERER</ImprovementType>
 				<ImprovementType>IMPROVEMENT_MOUNTAIN_MINE</ImprovementType>
 			</AlternativeImprovementUpgradeTypes>
 			<TechYieldChanges>
@@ -11592,7 +11598,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 			<Type>IMPROVEMENT_EARLY_QUARRY</Type>
 			<Description>TXT_KEY_IMPROVEMENT_EARLY_QUARRY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_QUARRY_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_ROCK_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_STONE_TOOLS_WORKSHOP</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>3</iYieldChange>
@@ -13483,6 +13489,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 			<Civilopedia>TXT_KEY_IMPROVEMENT_CITY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_CITY_RUINS</ArtDefineTag>
 			<PrereqTech>TECH_DUMMY</PrereqTech>
-		</ImprovementInfo>
+			<bGraphicalOnly>1</bGraphicalOnly>
+		</ImprovementInfo>		
 	</ImprovementInfos>
 </Civ4ImprovementInfos>

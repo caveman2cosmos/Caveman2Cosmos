@@ -18489,7 +18489,7 @@
 			</BuildingClassNeededs>
 			<ImprovementFreeSpecialists>
 				<ImprovementFreeSpecialist>
-					<ImprovementType>IMPROVEMENT_CAMP</ImprovementType>
+					<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</ImprovementFreeSpecialist>
 			</ImprovementFreeSpecialists>

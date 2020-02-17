@@ -19,7 +19,7 @@
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_GRAIN_GATHERER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
@@ -274,7 +274,7 @@
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_GRAIN_GATHERER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
@@ -528,7 +528,7 @@
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_PINE_GATHERER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_WOOD_GATHERER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_U</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
@@ -557,7 +557,7 @@
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_ROCK_GATHERER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_STONE_TOOLS_WORKSHOP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
@@ -589,7 +589,7 @@
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_ROCK_GATHERER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_STONE_TOOLS_WORKSHOP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
@@ -1497,7 +1497,7 @@
 			<iTime>1800</iTime>
 			<iCost>100</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_5FACTORY</ImprovementType>
+			<ImprovementType>IMPROVEMENT_MANUFACTURING_COMPLEX</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
@@ -1763,7 +1763,7 @@
 			<iTime>1000</iTime>
 			<iCost>50</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_3FACTORY</ImprovementType>
+			<ImprovementType>IMPROVEMENT_FACTORY</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
@@ -2029,7 +2029,7 @@
 			<iTime>1000</iTime>
 			<iCost>50</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_3FACTORY_2</ImprovementType>
+			<ImprovementType>IMPROVEMENT_FACTORY_COLD_CLIMATE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
@@ -2523,12 +2523,12 @@
 		<!-- Hydro Plant -->
 		<BuildInfo>
 			<Type>BUILD_HYDRO_PLANT</Type>
-			<Description>TXT_KEY_BUILD_IMPROVEMENT_HYDRO_PLANT</Description>
+			<Description>TXT_KEY_BUILD_IMPROVEMENT_HYDRO_DAM</Description>
 			<PrereqTech>TECH_HYDROELECTRICITY</PrereqTech>
 			<iTime>1200</iTime>
 			<iCost>200</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_HYDRO_PLANT</ImprovementType>
+			<ImprovementType>IMPROVEMENT_HYDRO_DAM</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_W</HotKey>
 			<bShiftDown>1</bShiftDown>
@@ -3025,7 +3025,7 @@
 			<iTime>300</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_CAMP</ImprovementType>
+			<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_H</HotKey>
 			<iHotKeyPriority>1</iHotKeyPriority>
@@ -3053,7 +3053,7 @@
 			<iTime>1000</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_WELL</ImprovementType>
+			<ImprovementType>IMPROVEMENT_HYDROCARBON_WELL</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
@@ -4241,7 +4241,7 @@
 			<iTime>1200</iTime>
 			<iCost>400</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_SUBURB</ImprovementType>
+			<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
@@ -4977,7 +4977,7 @@
 			<iTime>100</iTime>
 			<iCost>50</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_EXPLORETEMPLE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_ARCHEOLOGICAL_SITE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
 			<HotKey>KB_S</HotKey>
 			<bShiftDown>1</bShiftDown>
@@ -4992,7 +4992,7 @@
 			<iTime>1000</iTime>
 			<iCost>50</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_DESERTWINDMILL</ImprovementType>
+			<ImprovementType>IMPROVEMENT_MODERN_WINDMILL</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
@@ -5113,7 +5113,7 @@
 			<iTime>1200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_BUNKER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_COMMAND_BUNKER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bShiftDown>1</bShiftDown>
@@ -5129,7 +5129,7 @@
 			<iTime>2000</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_FUTURE_BUNKER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_COMMAND_CENTER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bShiftDown>1</bShiftDown>
@@ -5145,7 +5145,7 @@
 			<iTime>500</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_SAFARI</ImprovementType>
+			<ImprovementType>IMPROVEMENT_WILDLIFE_SANCTUARY</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_H</HotKey>
 			<iHotKeyPriority>1</iHotKeyPriority>
@@ -5203,7 +5203,7 @@
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_GEOTHERMAL_BOREHOLE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_GEOTHERMAL_FACTORY</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_MINE</EntityEvent>
 			<HotKey>KB_M</HotKey>
 			<iHotKeyPriority>1</iHotKeyPriority>
@@ -5217,7 +5217,7 @@
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_SEA_FORT</ImprovementType>
+			<ImprovementType>IMPROVEMENT_AQUATIC_FORCEFIELD</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<iHotKeyPriority>1</iHotKeyPriority>
@@ -5232,7 +5232,7 @@
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_SEA_AIR_DEFENSE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bShiftDown>1</bShiftDown>
@@ -5425,7 +5425,7 @@
 			<iTime>3000</iTime>
 			<iCost>40</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_MAKE_JUNGLE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLANT_JUNGLE</ImprovementType>
 			<FeatureChange>FEATURE_JUNGLE</FeatureChange>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
@@ -5665,7 +5665,7 @@
 			<iTime>1000</iTime>
 			<iCost>20</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_PLANT_FOREST</ImprovementType>
+			<ImprovementType>IMPROVEMENT_YOUNG_FOREST</ImprovementType>
 			<FeatureChange>FEATURE_FOREST_NEW</FeatureChange><!-- canBuild() should check all feature requirements against the plot, not only map category and feature already on plot conditions as it currently does -->
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
@@ -5895,7 +5895,7 @@
 			<iTime>2000</iTime>
 			<iCost>20</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_PLANT_BAMBOO</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLANT_BAMBOO_GROVE</ImprovementType>
 			<FeatureChange>FEATURE_BAMBOO</FeatureChange>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
@@ -8910,7 +8910,7 @@
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_FRUIT_GATHERER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
@@ -8925,7 +8925,7 @@
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_GRAPE_GATHERER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
@@ -8940,7 +8940,7 @@
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_PLANT_GATHERER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLANT_GATHERING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
@@ -8955,7 +8955,7 @@
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_FRUIT_PICKER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>
 			<HotKey>KB_S</HotKey>
@@ -8971,7 +8971,7 @@
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_GRAPE_PICKER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
@@ -8986,7 +8986,7 @@
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_PLANT_PICKER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLANT_PICKING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
@@ -9082,7 +9082,7 @@
 			<iTime>800</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_FOSSIL_DIGSITE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_FOSSIL_DIG_SITE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<iHotKeyPriority>1</iHotKeyPriority>
@@ -9181,7 +9181,7 @@
 			<iTime>1000</iTime>
 			<iCost>500</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_HABITAT1</ImprovementType>
+			<ImprovementType>IMPROVEMENT_COLONY_HABITAT_SMALL</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_T</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
@@ -9195,7 +9195,7 @@
 			<iTime>1500</iTime>
 			<iCost>1000</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_HABITAT2</ImprovementType>
+			<ImprovementType>IMPROVEMENT_COLONY_HABITAT_MEDIUM</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_T</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
@@ -9209,7 +9209,7 @@
 			<iTime>2000</iTime>
 			<iCost>1500</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_HABITAT3</ImprovementType>
+			<ImprovementType>IMPROVEMENT_COLONY_HABITAT_LARGE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_T</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
@@ -9223,7 +9223,7 @@
 			<iTime>3000</iTime>
 			<iCost>2500</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_HABITAT4</ImprovementType>
+			<ImprovementType>IMPROVEMENT_COLONY_HABITAT_HUGE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_T</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
@@ -9365,7 +9365,7 @@
 			<iTime>1000</iTime>
 			<iCost>50</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_WINDMILL_SEA</ImprovementType>
+			<ImprovementType>IMPROVEMENT_SEA_MILL</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
@@ -9704,7 +9704,7 @@
 			<iTime>1000</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_FARMSCRAPER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
@@ -10460,7 +10460,7 @@
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_ABATIS</ImprovementType>
+			<ImprovementType>IMPROVEMENT_ABATIS_THORN_HEDGE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
@@ -10475,7 +10475,7 @@
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_ABATIS</ImprovementType>
+			<ImprovementType>IMPROVEMENT_ABATIS_THORN_HEDGE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
@@ -10490,7 +10490,7 @@
 			<iTime>500</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_PALISADE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_WOODEN_PALISADE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
@@ -10505,7 +10505,7 @@
 			<iTime>500</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_PALISADE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_WOODEN_PALISADE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
@@ -10547,7 +10547,7 @@
 			<iTime>300</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_FORTIFIED_CAVE_CACHE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
@@ -10561,7 +10561,7 @@
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_WOODEN_TOWER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
@@ -10575,7 +10575,7 @@
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_WOODEN_TOWER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
@@ -10589,7 +10589,7 @@
 			<iTime>800</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_STONE_TOWER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
@@ -10603,7 +10603,7 @@
 			<iTime>800</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_STEEL_TOWER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
@@ -10617,7 +10617,7 @@
 			<iTime>800</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_RADAR</ImprovementType>
+			<ImprovementType>IMPROVEMENT_RADAR_TOWER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>

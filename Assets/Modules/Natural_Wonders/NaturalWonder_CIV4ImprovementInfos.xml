@@ -10,8 +10,8 @@
 	<ImprovementInfos>
 		<!-- Beacon -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BEACON_GREAT_BARRIER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BEACON_GREAT_BARRIER</Description>
+			<Type>IMPROVEMENT_BEACON_GREAT_BARRIER_REEF</Type>
+			<Description>TXT_KEY_IMPROVEMENT_BEACON_GREAT_BARRIER_REEF</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_BEACON</ArtDefineTag>
 			<PrereqTech>TECH_SAILING</PrereqTech>
@@ -31,7 +31,7 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
-			<ImprovementUpgrade>IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF</ImprovementUpgrade>
 			<FeatureChangeTypes>
 				<FeatureType>FEATURE_GREAT_BARRIER_WITH_BEACON</FeatureType>
 			</FeatureChangeTypes>
@@ -77,8 +77,8 @@
 		</ImprovementInfo>
 		<!-- Lighthouse -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER</Description>
+			<Type>IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF</Type>
+			<Description>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LIGHTHOUSE</ArtDefineTag>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>

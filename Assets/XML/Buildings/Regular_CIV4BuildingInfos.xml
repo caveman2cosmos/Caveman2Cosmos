@@ -95043,7 +95043,7 @@
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</ImprovementFreeSpecialist>
 				<ImprovementFreeSpecialist>
-					<ImprovementType>IMPROVEMENT_SAFARI</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WILDLIFE_SANCTUARY</ImprovementType>
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</ImprovementFreeSpecialist>
 			</ImprovementFreeSpecialists>
@@ -104252,7 +104252,7 @@
 			<!-- Specialist effects -->
 			<ImprovementFreeSpecialists>
 				<ImprovementFreeSpecialist>
-					<ImprovementType>IMPROVEMENT_EXPLORETEMPLE</ImprovementType>
+					<ImprovementType>IMPROVEMENT_ARCHEOLOGICAL_SITE</ImprovementType>
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</ImprovementFreeSpecialist>
 			</ImprovementFreeSpecialists>

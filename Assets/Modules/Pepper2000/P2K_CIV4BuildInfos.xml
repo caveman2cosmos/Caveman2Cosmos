@@ -106,7 +106,7 @@
 			<iTime>6000</iTime>
 			<iCost>400</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_SPACE_STATION1</ImprovementType>
+			<ImprovementType>IMPROVEMENT_SPACE_STATION_LV1</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>
@@ -125,7 +125,7 @@
 			<iTime>9000</iTime>
 			<iCost>800</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_SPACE_STATION2</ImprovementType>
+			<ImprovementType>IMPROVEMENT_SPACE_STATION_LV2</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>
@@ -144,7 +144,7 @@
 			<iTime>12000</iTime>
 			<iCost>1200</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_SPACE_STATION3</ImprovementType>
+			<ImprovementType>IMPROVEMENT_SPACE_STATION_LV3</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>
@@ -258,7 +258,7 @@
 			<iTime>4000</iTime>
 			<iCost>400</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_MARS_MINE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_MARTIAN_MINE</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>
@@ -277,7 +277,7 @@
 			<iTime>4000</iTime>
 			<iCost>400</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_MARS_FARM</ImprovementType>
+			<ImprovementType>IMPROVEMENT_MARTIAN_FARM</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>
@@ -315,7 +315,7 @@
 			<iTime>2000</iTime>
 			<iCost>200</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_CISLUNAR_MILITARY_BASE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_CISLUNAR_BASE</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>
@@ -334,7 +334,7 @@
 			<iTime>4000</iTime>
 			<iCost>400</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_DEEP_SPACE_MILITARY_BASE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_SOLAR_SYSTEM_BASE</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>
@@ -353,7 +353,7 @@
 			<iTime>3000</iTime>
 			<iCost>600</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_INTERSTELLAR_MILITARY_BASE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_INTERSTELLAR_BASE</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>
@@ -514,7 +514,7 @@
 			<iTime>2500</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-            <ImprovementType>IMPROVEMENT_BUILD_ASTEROID</ImprovementType>
+            <ImprovementType>IMPROVEMENT_PLACE_ASTEROID</ImprovementType>
 			<FeatureChange>FEATURE_ASTEROIDS</FeatureChange>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_A</HotKey>
@@ -529,7 +529,7 @@
 			<iTime>2500</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-            <ImprovementType>IMPROVEMENT_BUILD_GALAXY</ImprovementType>
+            <ImprovementType>IMPROVEMENT_PLACE_GALAXY</ImprovementType>
 			<FeatureChange>FEATURE_GALAXY</FeatureChange>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_A</HotKey>
@@ -564,7 +564,7 @@
 			<iTime>2500</iTime>
 			<iCost>600</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_SPACE_SOLAR_CONCENTRATOR</ImprovementType>
+			<ImprovementType>IMPROVEMENT_SOLAR_CONCENTRATOR</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>
@@ -697,7 +697,7 @@
 			<iTime>2500</iTime>
 			<iCost>800</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_TRADING_PLANET</ImprovementType>
+			<ImprovementType>IMPROVEMENT_INTERSTELLAR_TRADING_POST</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>
@@ -1001,7 +1001,7 @@
 			<iTime>2500</iTime>
 			<iCost>1000</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_HELIOFORM</ImprovementType>
+			<ImprovementType>IMPROVEMENT_HELIOFORMED_BROWN_DWARF</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>
@@ -1020,7 +1020,7 @@
 			<iTime>2500</iTime>
 			<iCost>1000</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_EXPANDED_HABITAT</ImprovementType>
+			<ImprovementType>IMPROVEMENT_CISLUNAR_EXPANSION_MODULE</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>
@@ -1286,7 +1286,7 @@
 			<iTime>1000</iTime>
 			<iCost>1000</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_LUNAR_BASE_IMPROVEMENT</ImprovementType>
+			<ImprovementType>IMPROVEMENT_LUNAR_BASE</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>

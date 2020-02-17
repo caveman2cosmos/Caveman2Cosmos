@@ -9,11 +9,11 @@
 <Civ4ImprovementInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4TerrainSchema.xml">
 	<ImprovementInfos>
         <ImprovementInfo>
-			<Type>IMPROVEMENT_SPACE_STATION1</Type>
-			<Description>TXT_KEY_IMPROVEMENT_SPACE_STATION1</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_SPACE_STATION1_PEDIA</Civilopedia>
+			<Type>IMPROVEMENT_SPACE_STATION_LV1</Type>
+			<Description>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV1</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV1_PEDIA</Civilopedia>
 			<Help/>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_SPACE_STATION1</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_SPACE_STATION_LV1</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -54,17 +54,17 @@
             <iUnique>2</iUnique>
 			<FeatureMakesValids/>
 			<ImprovementPillage/>
-			<ImprovementUpgrade>IMPROVEMENT_SPACE_STATION2</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_SPACE_STATION_LV2</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes/>
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
         <ImprovementInfo>
-			<Type>IMPROVEMENT_SPACE_STATION2</Type>
-			<Description>TXT_KEY_IMPROVEMENT_SPACE_STATION2</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_SPACE_STATION2_PEDIA</Civilopedia>
+			<Type>IMPROVEMENT_SPACE_STATION_LV2</Type>
+			<Description>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV2</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV2_PEDIA</Civilopedia>
 			<Help/>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_SPACE_STATION2</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_SPACE_STATION_LV2</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>2</iYieldChange>
 				<iYieldChange>2</iYieldChange>
@@ -105,17 +105,17 @@
             <iUnique>2</iUnique>
 			<FeatureMakesValids/>
 			<ImprovementPillage/>
-			<ImprovementUpgrade>IMPROVEMENT_SPACE_STATION3</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_SPACE_STATION_LV3</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes/>
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
         <ImprovementInfo>
-			<Type>IMPROVEMENT_SPACE_STATION3</Type>
-			<Description>TXT_KEY_IMPROVEMENT_SPACE_STATION3</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_SPACE_STATION3_PEDIA</Civilopedia>
+			<Type>IMPROVEMENT_SPACE_STATION_LV3</Type>
+			<Description>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV3</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_SPACE_STATION_LV3_PEDIA</Civilopedia>
 			<Help/>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_SPACE_STATION3</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_SPACE_STATION_LV3</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>3</iYieldChange>
 				<iYieldChange>3</iYieldChange>
@@ -161,23 +161,6 @@
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
-        <ImprovementInfo>
-			<Type>IMPROVEMENT_COLONY_SOLAR_ARRAY</Type>
-            <TerrainMakesValids>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_VENUS</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_VENUS_HIGHLAND</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_VENUS_LOWLAND</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-			</TerrainMakesValids>
-        </ImprovementInfo>
         <ImprovementInfo>
 			<Type>IMPROVEMENT_COLONY_SOLAR_ARRAY</Type>
             <TerrainMakesValids>
@@ -408,11 +391,11 @@
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_MARS_MINE</Type>
-			<Description>TXT_KEY_IMPROVEMENT_MARS_MINE</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_MARS_MINE_PEDIA</Civilopedia>
+			<Type>IMPROVEMENT_MARTIAN_MINE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_MARTIAN_MINE</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_MARTIAN_MINE_PEDIA</Civilopedia>
 			<Help/>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_MARS_MINE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_MARTIAN_MINE</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>4</iYieldChange>
@@ -510,11 +493,11 @@
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
         <ImprovementInfo>
-			<Type>IMPROVEMENT_MARS_FARM</Type>
-			<Description>TXT_KEY_IMPROVEMENT_MARS_FARM</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_MARS_FARM_PEDIA</Civilopedia>
+			<Type>IMPROVEMENT_MARTIAN_FARM</Type>
+			<Description>TXT_KEY_IMPROVEMENT_MARTIAN_FARM</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_MARTIAN_FARM_PEDIA</Civilopedia>
 			<Help/>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_MARS_FARM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_MARTIAN_FARM</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>15</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -808,10 +791,10 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
         <ImprovementInfo>
-			<Type>IMPROVEMENT_BUILD_ASTEROID</Type>
+			<Type>IMPROVEMENT_PLACE_ASTEROID</Type>
 			<Description>TXT_KEY_BUILD_ASTEROID</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_BUILD_ASTEROID</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLACE_ASTEROID</ArtDefineTag>
 			<FeatureChangeTypes>
 				<FeatureType>FEATURE_ASTEROIDS</FeatureType>
 			</FeatureChangeTypes>
@@ -841,10 +824,10 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
         <ImprovementInfo>
-			<Type>IMPROVEMENT_BUILD_GALAXY</Type>
+			<Type>IMPROVEMENT_PLACE_GALAXY</Type>
 			<Description>TXT_KEY_BUILD_GALAXY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_BUILD_GALAXY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLACE_GALAXY</ArtDefineTag>
 			<FeatureChangeTypes>
 				<FeatureType>FEATURE_GALAXY</FeatureType>
 			</FeatureChangeTypes>
@@ -925,8 +908,8 @@
 		</ImprovementInfo>
         <!-- Space Solar Concentrator -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_SPACE_SOLAR_CONCENTRATOR</Type>
-			<Description>TXT_KEY_IMPROVEMENT_SPACE_SOLAR_CONCENTRATOR</Description>
+			<Type>IMPROVEMENT_SOLAR_CONCENTRATOR</Type>
+			<Description>TXT_KEY_IMPROVEMENT_SOLAR_CONCENTRATOR</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SOLAR_PANEL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SPACE_SOLAR_PANELS</ArtDefineTag>
 			<YieldChanges>
@@ -2056,11 +2039,11 @@
 		</ImprovementInfo>
         <!-- Trading Planet -->
         <ImprovementInfo>
-			<Type>IMPROVEMENT_TRADING_PLANET</Type>
-			<Description>TXT_KEY_IMPROVEMENT_TRADING_PLANET</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_TRADING_PLANET_PEDIA</Civilopedia>
+			<Type>IMPROVEMENT_INTERSTELLAR_TRADING_POST</Type>
+			<Description>TXT_KEY_IMPROVEMENT_INTERSTELLAR_TRADING_POST</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_INTERSTELLAR_TRADING_POST_PEDIA</Civilopedia>
 			<Help/>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_TRADING_PLANET</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_INTERSTELLAR_TRADING_POST</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -2952,11 +2935,11 @@
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
         <ImprovementInfo>
-			<Type>IMPROVEMENT_HELIOFORM</Type>
-			<Description>TXT_KEY_IMPROVEMENT_HELIOFORM</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_HELIOFORM_PEDIA</Civilopedia>
+			<Type>IMPROVEMENT_HELIOFORMED_BROWN_DWARF</Type>
+			<Description>TXT_KEY_IMPROVEMENT_HELIOFORMED_BROWN_DWARF</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_HELIOFORMED_BROWN_DWARF_PEDIA</Civilopedia>
 			<Help/>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_HELIOFORM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_HELIOFORMED_BROWN_DWARF</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>7</iYieldChange>
 				<iYieldChange>7</iYieldChange>
@@ -3098,11 +3081,11 @@
 		</ImprovementInfo>
         <!-- Cosmic Expansion Node -->
         <ImprovementInfo>
-			<Type>IMPROVEMENT_EXPANDED_HABITAT</Type>
-			<Description>TXT_KEY_IMPROVEMENT_EXPANDED_HABITAT</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_EXPANDED_HABITAT_PEDIA</Civilopedia>
+			<Type>IMPROVEMENT_CISLUNAR_EXPANSION_MODULE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_CISLUNAR_EXPANSION_MODULE</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_CISLUNAR_EXPANSION_MODULE_PEDIA</Civilopedia>
 			<Help/>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_EXPANDED_HABITAT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_CISLUNAR_EXPANSION_MODULE</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -3654,10 +3637,10 @@
 		</ImprovementInfo>
         <!-- Cislunar Base -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_CISLUNAR_MILITARY_BASE</Type>
-			<Description>TXT_KEY_IMPROVEMENT_CISLUNAR_MILITARY_BASE</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_CISLUNAR_MILITARY_BASE_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_CISLUNAR_MILITARY_BASE</ArtDefineTag>
+			<Type>IMPROVEMENT_CISLUNAR_BASE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_CISLUNAR_BASE</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_CISLUNAR_BASE_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_CISLUNAR_BASE</ArtDefineTag>
 			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_ION_BEAMS</PrereqTech>
 			<bUseLSystem>1</bUseLSystem>
@@ -3684,10 +3667,10 @@
 		</ImprovementInfo>
         <!-- Deep Space Base -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_DEEP_SPACE_MILITARY_BASE</Type>
-			<Description>TXT_KEY_IMPROVEMENT_DEEP_SPACE_MILITARY_BASE</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_DEEP_SPACE_MILITARY_BASE_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_DEEP_SPACE_MILITARY_BASE</ArtDefineTag>
+			<Type>IMPROVEMENT_SOLAR_SYSTEM_BASE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_SOLAR_SYSTEM_BASE</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_SOLAR_SYSTEM_BASE_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_SOLAR_SYSTEM_BASE</ArtDefineTag>
 			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_SOLAR_ORDNANCE</PrereqTech>
 			<bUseLSystem>1</bUseLSystem>
@@ -3722,10 +3705,10 @@
 		</ImprovementInfo>
         <!-- Interstellar Base -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_INTERSTELLAR_MILITARY_BASE</Type>
-			<Description>TXT_KEY_IMPROVEMENT_INTERSTELLAR_MILITARY_BASE</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_INTERSTELLAR_MILITARY_BASE_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_INTERSTELLAR_MILITARY_BASE</ArtDefineTag>
+			<Type>IMPROVEMENT_INTERSTELLAR_BASE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_INTERSTELLAR_BASE</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_INTERSTELLAR_BASE_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_INTERSTELLAR_BASE</ArtDefineTag>
 			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_WEAPONIZED_GRAVITY_FIELDS</PrereqTech>
 			<bUseLSystem>1</bUseLSystem>
@@ -3847,9 +3830,9 @@
 			<bIsZOCSource>1</bIsZOCSource>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_LUNAR_BASE_IMPROVEMENT</Type>
-			<Description>TXT_KEY_IMPROVEMENT_LUNAR_BASE_IMPROVEMENT</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_LUNAR_BASE_IMPROVEMENT_PEDIA</Civilopedia>
+			<Type>IMPROVEMENT_LUNAR_BASE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_LUNAR_BASE</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_LUNAR_BASE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_GREENHOUSE</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>

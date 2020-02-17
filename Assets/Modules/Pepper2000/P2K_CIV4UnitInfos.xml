@@ -4733,7 +4733,7 @@
                                     return plot.getImprovementType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
                                     gc = CyGlobalContext()
-                                    plot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_SPACE_STATION2'))
+                                    plot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_SPACE_STATION_LV2'))
                                 def getDisplay(unit,plot):
                                     return u"Upgrade Space Station"
                                 def getAIValue(unit, plot):
@@ -4764,7 +4764,7 @@
                                     return plot.getImprovementType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
                                     gc = CyGlobalContext()
-                                    plot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_SPACE_STATION3'))
+                                    plot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_SPACE_STATION_LV3'))
                                 def getDisplay(unit,plot):
                                     return u"Upgrade Space Station"
                                 def getAIValue(unit, plot):
@@ -6288,7 +6288,7 @@
                                     return plot.getImprovementType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
                                     gc = CyGlobalContext()
-                                    plot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_SPACE_STATION2'))
+                                    plot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_SPACE_STATION_LV2'))
                                 def getDisplay(unit,plot):
                                     return u"Upgrade Space Station"
                                 def getAIValue(unit, plot):
@@ -6319,7 +6319,7 @@
                                     return plot.getImprovementType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
                                     gc = CyGlobalContext()
-                                    plot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_SPACE_STATION3'))
+                                    plot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_SPACE_STATION_LV3'))
                                 def getDisplay(unit,plot):
                                     return u"Upgrade Space Station"
                                 def getAIValue(unit, plot):

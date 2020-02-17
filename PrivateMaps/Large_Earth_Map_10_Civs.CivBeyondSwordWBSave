@@ -27057,7 +27057,6 @@ EndPlot
 BeginPlot
 	x=70,y=44
 	BonusType=BONUS_SULPHUR
-	ImprovementType=IMPROVEMENT_GRAIN_GATHERER
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot

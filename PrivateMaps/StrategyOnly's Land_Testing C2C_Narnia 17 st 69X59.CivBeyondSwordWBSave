@@ -4147,7 +4147,6 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	isWOfRiver
-	ImprovementType=IMPROVEMENT_CITY_RUINS
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -9211,7 +9210,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=47
-	ImprovementType=IMPROVEMENT_FORT
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -11969,7 +11967,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=5
-	ImprovementType=IMPROVEMENT_FORT
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -12810,7 +12807,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=35
-	ImprovementType=IMPROVEMENT_CAMP
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -16046,7 +16042,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46,y=28
-	ImprovementType=IMPROVEMENT_FORT
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -16616,7 +16611,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=48,y=11
-	ImprovementType=IMPROVEMENT_CAMP
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -23217,7 +23211,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=36
-	ImprovementType=IMPROVEMENT_EXPLORETEMPLE
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot

@@ -42,7 +42,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PLACE_FUR</Tag>
-		<English>Place [LINK=IMPROVEMENT_PLACE_FUR]Fur Bonus[\LINK]</English>
+		<English>Place [LINK=IMPROVEMENT_PLACE_FUR]Beaver Bonus[\LINK]</English>
 		<Polish>Umiesc Rodzine Bobrów</Polish>
 	</TEXT>
 	<TEXT>
@@ -345,323 +345,323 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_DONKEY</Tag>
-		<English>Donkey Bonus</English>
+		<English>Bonus: Donkey</English>
 		<Polish>Bonus: Osly</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_HORSE</Tag>
-		<English>Horse Bonus</English>
+		<English>Bonus: Horse</English>
 		<Polish>Bonus: Konie</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_ELEPHANTS</Tag>
-		<English>Elephant Bonus</English>
+		<English>Bonus: Elephants</English>
 		<Polish>Bonus: Kosc Sloniowa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_BISON</Tag>
-		<English>Bison Bonus</English>
+		<English>Bonus: Bison</English>
 		<Polish>Bonus: Bizony</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_CAMEL</Tag>
-		<English>Camel Bonus</English>
+		<English>Bonus: Camel</English>
 		<Polish>Bonus: Wielblady</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_COW</Tag>
-		<English>Cow Bonus</English>
+		<English>Bonus: Cow</English>
 		<Polish>Bonus: Krowy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_DEER</Tag>
-		<English>Deer Bonus</English>
+		<English>Bonus: Deer</English>
 		<Polish>Bonus: Jelenie</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_BEAVERS</Tag>
-		<English>Fur Bonus</English>
+		<English>Bonus: Beavers</English>
 		<Polish>Bonus: Futra</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_KANGAROO</Tag>
-		<English>Kangaroo Bonus</English>
+		<English>Bonus: Kangaroo</English>
 		<Polish>Bonus: Kangury</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_LLAMA</Tag>
-		<English>Llama Bonus</English>
+		<English>Bonus: Llama</English>
 		<Italian>LLama Bonus</Italian>
 		<Polish>Bonus: Lamy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_MAMMOTH</Tag>
-		<English>Mammoth Bonus</English>
+		<English>Bonus: Mammoth</English>
 		<Polish>Bonus: Mamuty</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_PIG</Tag>
-		<English>Pig Bonus</English>
+		<English>Bonus: Pig</English>
 		<Polish>Bonus: Swinie</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_POULTRY</Tag>
-		<English>Poultry Bonus</English>
+		<English>Bonus: Poultry</English>
 		<Polish>Bonus: Drób</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_RABBIT</Tag>
-		<English>Rabbit Bonus</English>
+		<English>Bonus: Rabbit</English>
 		<Polish>Bonus: Króliki</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_SEA_LION_AND_SEAL</Tag>
-		<English>Sea Lions Bonus</English>
+		<English>Bonus: Sea Lion and Seal</English>
 		<Polish>Bonus: Lwy Morskie</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_SHEEP</Tag>
-		<English>Sheep Bonus</English>
+		<English>Bonus: Sheep</English>
 		<Polish>Bonus: Owce</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_WALRUS</Tag>
-		<English>Walrus Bonus</English>
+		<English>Bonus: Walrus</English>
 		<Polish>Bonus: Morsy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_GUINEA_PIGS</Tag>
-		<English>Guinea pig Bonus</English>
+		<English>Bonus: Guinea Pigs</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_PARROTS</Tag>
-		<English>Parrot Bonus</English>
+		<English>Bonus: Parrots</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_BARLEY</Tag>
-		<English>Barley Bonus</English>
+		<English>Bonus: Barley</English>
 		<Polish>Bonus: Jeczmien</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_CORN</Tag>
-		<English>Corn Bonus</English>
+		<English>Bonus: Corn</English>
 		<Polish>Bonus: Kukurydza</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_FLAX</Tag>
-		<English>Flax Bonus</English>
+		<English>Bonus: Flax</English>
 		<Polish>Bonus: Len</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_POMEGRANATE</Tag>
-		<English>Pomegranate Bonus</English>
+		<English>Bonus: Pomegranate</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_KAVA</Tag>
-		<English>Kava Bonus</English>
+		<English>Bonus: Kava</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_GUAVAS</Tag>
-		<English>Guava Bonus</English>
+		<English>Bonus: Guavas</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_MELONS</Tag>
-		<English>Melons Bonus</English>
+		<English>Bonus: Melons</English>
 		<Polish>Bonus: Morsy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_POTATOES</Tag>
-		<English>Potatoes Bonus</English>
+		<English>Bonus: Potatoes</English>
 		<Polish>Bonus: Ziemniaki</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_PUMPKIN</Tag>
-		<English>Pumpkins Bonus</English>
+		<English>Bonus: Pumpkin</English>
 		<Polish>Bonus: Dynie</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_RICE</Tag>
-		<English>Rice Bonus</English>
+		<English>Bonus: Rice</English>
 		<Polish>Bonus: Ryz</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_SQUASH</Tag>
-		<English>Squash Bonus</English>
+		<English>Bonus: Squash</English>
 		<Polish>Bonus: Kabaczki</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_WHEAT</Tag>
-		<English>Wheat Bonus</English>
+		<English>Bonus: Wheat</English>
 		<Polish>Bonus: Pszenica</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_ALMONDS</Tag>
-		<English>Almonds Bonus</English>
+		<English>Bonus: Almonds</English>
 		<Polish>Bonus: Migdaly</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_APPLE</Tag>
-		<English>Apple Bonus</English>
+		<English>Bonus: Apple</English>
 		<Polish>Bonus: Jablka</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_BANANA</Tag>
-		<English>Banana Bonus</English>
+		<English>Bonus: Banana</English>
 		<Polish>Bonus: Banany</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_COCONUT</Tag>
-		<English>Coconut Bonus</English>
+		<English>Bonus: Coconut</English>
 		<Polish>Bonus: Orzechy Kokosowe</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_DATES</Tag>
-		<English>Dates Bonus</English>
+		<English>Bonus: Dates</English>
 		<Polish>Bonus: Daktyle</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_FIG</Tag>
-		<English>Figs Bonus</English>
+		<English>Bonus: Fig</English>
 		<Polish>Bonus: Figi</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_LEMONS</Tag>
-		<English>Lemons Bonus</English>
+		<English>Bonus: Lemons</English>
 		<Polish>Bonus: Cytryny</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_MANGO</Tag>
-		<English>Mango Bonus</English>
+		<English>Bonus: Mango</English>
 		<Polish>Bonus: Mango</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_OLIVES</Tag>
-		<English>Olives Bonus</English>
+		<English>Bonus: Olives</English>
 		<Polish>Bonus: Oliwki</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_PAPAYA</Tag>
-		<English>Papaya Bonus</English>
+		<English>Bonus: Papaya</English>
 		<Polish>Bonus: Papaya</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_PISTACHIO</Tag>
-		<English>Pistachio Bonus</English>
+		<English>Bonus: Pistachio</English>
 		<Polish>Bonus: Pistacje</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_GRAPES</Tag>
-		<English>Grapes Bonus</English>
+		<English>Bonus: Grapes</English>
 		<Polish>Bonus: Winogrona</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_HENNA</Tag>
-		<English>Henna Bonus</English>
+		<English>Bonus: Henna</English>
 		<Polish>Bonus: Henna</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_INDIGO</Tag>
-		<English>Indigo Bonus</English>
+		<English>Bonus: Indigo</English>
 		<Polish>Bonus: Indigo</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_RUBBER</Tag>
-		<English>Rubber Bonus</English>
+		<English>Bonus: Rubber</English>
 		<Polish>Bonus: Kauczuk</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_PRIME_TIMBER</Tag>
-		<English>Prime Timber Bonus</English>
+		<English>Bonus: Prime Timber</English>
 		<Polish>Bonus: Drewno Wysokiej Jakosci</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_HEMP</Tag>
-		<English>Coca Plant Bonus</English>
+		<English>Bonus: Hemp</English>
 		<Polish>Bonus: Marichuana</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_COCA</Tag>
-		<English>Coca Bonus</English>
+		<English>Bonus: Coca</English>
 		<Polish>Bonus: Koka</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_COCOA</Tag>
-		<English>Cocoa Bonus</English>
+		<English>Bonus: Cocoa</English>
 		<Polish>Bonus: Kakao</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_COFFEE</Tag>
-		<English>Coffee Bonus</English>
+		<English>Bonus: Coffee</English>
 		<Polish>Bonus: Kawa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_COTTON</Tag>
-		<English>Cotton Bonus</English>
+		<English>Bonus: Cotton</English>
 		<Polish>Bonus: Bawelna</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_INCENSE</Tag>
-		<English>Incense Bonus</English>
+		<English>Bonus: Incense</English>
 		<Polish>Bonus: Kadzidlo</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_MUSHROOMS</Tag>
-		<English>Mushrooms Bonus</English>
+		<English>Bonus: Mushrooms</English>
 		<Polish>Bonus: Grzyby</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_OPIUM</Tag>
-		<English>Opium Bonus</English>
+		<English>Bonus: Opium</English>
 		<Polish>Bonus: Opium</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_PAPYRUS</Tag>
-		<English>Papyrus Bonus</English>
+		<English>Bonus: Papyrus</English>
 		<Polish>Bonus: Papirus</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_PEYOTE</Tag>
-		<English>Peyote Bonus</English>
+		<English>Bonus: Peyote</English>
 		<Polish>Bonus: Peyotl</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_PRICKLY_PEAR</Tag>
-		<English>Prickly Pear Bonus</English>
+		<English>Bonus: Prickly Pear</English>
 		<Polish>Bonus: Kaktus</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_RESIN</Tag>
-		<English>Resin Bonus</English>
+		<English>Bonus: Resin</English>
 		<Polish>Bonus: Zywica</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_SILK</Tag>
-		<English>Silk Bonus</English>
+		<English>Bonus: Silk</English>
 		<Polish>Bonus: Jedwab</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_SPICES</Tag>
-		<English>Spices Bonus</English>
+		<English>Bonus: Spices</English>
 		<Polish>Bonus: Przyprawy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_SUGAR</Tag>
-		<English>Sugar Bonus</English>
+		<English>Bonus: Sugar</English>
 		<Polish>Bonus: Cukier</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_TEA</Tag>
-		<English>Tea Bonus</English>
+		<English>Bonus: Tea</English>
 		<Polish>Bonus: Herbata</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_TOBACCO</Tag>
-		<English>Tobacco Bonus</English>
+		<English>Bonus: Tobacco</English>
 		<Polish>Bonus: Tyton</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_VANILLA</Tag>
-		<English>Vanilla Bonus</English>
+		<English>Bonus: Vanilla</English>
 		<Polish>Bonus: Wanilia</Polish>
 	</TEXT>
 </Civ4GameText>

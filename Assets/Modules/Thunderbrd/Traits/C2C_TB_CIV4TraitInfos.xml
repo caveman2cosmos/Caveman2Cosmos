@@ -3570,11 +3570,11 @@
 			</FreePromotionUnitCombatTypes>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_ABATIS</ImprovementType>
+					<ImprovementType>IMPROVEMENT_ABATIS_THORN_HEDGE</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_PALISADE</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_PALISADE</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -3582,7 +3582,7 @@
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_FORTIFIED_CAVE_CACHE</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -3590,23 +3590,23 @@
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_BUNKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COMMAND_BUNKER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_WOODEN_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<!--<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_STONE_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_STEEL_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_RADAR</ImprovementType>
+					<ImprovementType>IMPROVEMENT_RADAR_TOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>-->
 			</ImprovementUpgradeModifierTypes>
@@ -3817,11 +3817,11 @@
 			</FreePromotionUnitCombatTypes>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_ABATIS</ImprovementType>
+					<ImprovementType>IMPROVEMENT_ABATIS_THORN_HEDGE</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_PALISADE</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_PALISADE</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -3829,7 +3829,7 @@
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_FORTIFIED_CAVE_CACHE</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -3837,23 +3837,23 @@
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_BUNKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COMMAND_BUNKER</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_WOODEN_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<!--<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_STONE_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_STEEL_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_RADAR</ImprovementType>
+					<ImprovementType>IMPROVEMENT_RADAR_TOWER</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>-->
 			</ImprovementUpgradeModifierTypes>
@@ -4046,11 +4046,11 @@
 			</FreePromotionUnitCombatTypes>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_ABATIS</ImprovementType>
+					<ImprovementType>IMPROVEMENT_ABATIS_THORN_HEDGE</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_PALISADE</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_PALISADE</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -4058,7 +4058,7 @@
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_FORTIFIED_CAVE_CACHE</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -4066,23 +4066,23 @@
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_BUNKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COMMAND_BUNKER</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_WOODEN_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<!--<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_STONE_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_STEEL_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_RADAR</ImprovementType>
+					<ImprovementType>IMPROVEMENT_RADAR_TOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>-->
 			</ImprovementUpgradeModifierTypes>
@@ -4277,11 +4277,11 @@
 			</FreePromotionUnitCombatTypes>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_ABATIS</ImprovementType>
+					<ImprovementType>IMPROVEMENT_ABATIS_THORN_HEDGE</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_PALISADE</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_PALISADE</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -4289,7 +4289,7 @@
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_FORTIFIED_CAVE_CACHE</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -4297,23 +4297,23 @@
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_BUNKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COMMAND_BUNKER</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_WOODEN_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<!--<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_STONE_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_STEEL_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_RADAR</ImprovementType>
+					<ImprovementType>IMPROVEMENT_RADAR_TOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>-->
 			</ImprovementUpgradeModifierTypes>
@@ -4486,11 +4486,11 @@
 			</FreePromotionUnitCombatTypes>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_ABATIS</ImprovementType>
+					<ImprovementType>IMPROVEMENT_ABATIS_THORN_HEDGE</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_PALISADE</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_PALISADE</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -4498,7 +4498,7 @@
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_FORTIFIED_CAVE_CACHE</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -4506,23 +4506,23 @@
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_BUNKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COMMAND_BUNKER</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_WOODEN_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<!--<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_STONE_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_STEEL_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_RADAR</ImprovementType>
+					<ImprovementType>IMPROVEMENT_RADAR_TOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>-->
 			</ImprovementUpgradeModifierTypes>
@@ -4693,11 +4693,11 @@
 			</FreePromotionUnitCombatTypes>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_ABATIS</ImprovementType>
+					<ImprovementType>IMPROVEMENT_ABATIS_THORN_HEDGE</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_PALISADE</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_PALISADE</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -4705,7 +4705,7 @@
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_FORTIFIED_CAVE_CACHE</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -4713,23 +4713,23 @@
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_BUNKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COMMAND_BUNKER</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_WOODEN_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<!--<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_STONE_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_STEEL_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_RADAR</ImprovementType>
+					<ImprovementType>IMPROVEMENT_RADAR_TOWER</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>-->
 			</ImprovementUpgradeModifierTypes>
@@ -4901,11 +4901,11 @@
 			</FreePromotionUnitCombatTypes>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_ABATIS</ImprovementType>
+					<ImprovementType>IMPROVEMENT_ABATIS_THORN_HEDGE</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_PALISADE</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_PALISADE</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -4913,7 +4913,7 @@
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_FORTIFIED_CAVE_CACHE</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -4921,23 +4921,23 @@
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_BUNKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COMMAND_BUNKER</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_WOODEN_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<!--<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_STONE_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_STEEL_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_RADAR</ImprovementType>
+					<ImprovementType>IMPROVEMENT_RADAR_TOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>-->
 			</ImprovementUpgradeModifierTypes>
@@ -5112,11 +5112,11 @@
 			</FreePromotionUnitCombatTypes>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_ABATIS</ImprovementType>
+					<ImprovementType>IMPROVEMENT_ABATIS_THORN_HEDGE</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_PALISADE</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_PALISADE</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -5124,7 +5124,7 @@
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_FORTIFIED_CAVE_CACHE</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -5132,23 +5132,23 @@
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_BUNKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COMMAND_BUNKER</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_WOODEN_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<!--<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_STONE_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_STEEL_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_RADAR</ImprovementType>
+					<ImprovementType>IMPROVEMENT_RADAR_TOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>-->
 			</ImprovementUpgradeModifierTypes>
@@ -9553,7 +9553,7 @@
 			</FreePromotionUnitCombatTypes>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_ROCK_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_TOOLS_WORKSHOP</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -9593,7 +9593,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAIN_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -9609,7 +9609,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FARMSCRAPER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -9649,7 +9649,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_SUBURB</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -9665,7 +9665,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_3FACTORY</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FACTORY</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -9673,7 +9673,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_3FACTORY_2</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FACTORY_COLD_CLIMATE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -9681,7 +9681,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_5FACTORY</ImprovementType>
+					<ImprovementType>IMPROVEMENT_MANUFACTURING_COMPLEX</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -10078,7 +10078,7 @@
 			</FreePromotionUnitCombatTypes>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_ROCK_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_TOOLS_WORKSHOP</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -10086,7 +10086,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAIN_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -10446,7 +10446,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_3FACTORY</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FACTORY</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -10454,7 +10454,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_3FACTORY_2</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FACTORY_COLD_CLIMATE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -10703,7 +10703,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FARMSCRAPER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -10711,7 +10711,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_SUBURB</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -10719,7 +10719,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_5FACTORY</ImprovementType>
+					<ImprovementType>IMPROVEMENT_MANUFACTURING_COMPLEX</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -11520,7 +11520,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_CAMP</ImprovementType>
+					<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -11536,7 +11536,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_SAFARI</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WILDLIFE_SANCTUARY</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -11598,7 +11598,7 @@
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_CAMP</ImprovementType>
+					<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -13104,7 +13104,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_CAMP</ImprovementType>
+					<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -13120,7 +13120,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_SAFARI</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WILDLIFE_SANCTUARY</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -13182,7 +13182,7 @@
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_CAMP</ImprovementType>
+					<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -14384,7 +14384,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_CAMP</ImprovementType>
+					<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -14400,7 +14400,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_SAFARI</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WILDLIFE_SANCTUARY</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -14462,7 +14462,7 @@
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_CAMP</ImprovementType>
+					<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -15410,7 +15410,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_CAMP</ImprovementType>
+					<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -15426,7 +15426,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_SAFARI</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WILDLIFE_SANCTUARY</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -15488,7 +15488,7 @@
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_CAMP</ImprovementType>
+					<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -16255,7 +16255,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_DESERTWINDMILL</ImprovementType>
+					<ImprovementType>IMPROVEMENT_MODERN_WINDMILL</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -16263,7 +16263,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_WINDMILL_SEA</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEA_MILL</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -17270,7 +17270,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_DESERTWINDMILL</ImprovementType>
+					<ImprovementType>IMPROVEMENT_MODERN_WINDMILL</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -17278,7 +17278,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_WINDMILL_SEA</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEA_MILL</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -23804,7 +23804,7 @@
 			</ExtraYieldThresholds>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_PINE_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOOD_GATHERER</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -23836,7 +23836,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_3FACTORY</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FACTORY</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -23844,7 +23844,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_3FACTORY_2</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FACTORY_COLD_CLIMATE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -23852,7 +23852,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_5FACTORY</ImprovementType>
+					<ImprovementType>IMPROVEMENT_MANUFACTURING_COMPLEX</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -23884,7 +23884,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_HYDRO_PLANT</ImprovementType>
+					<ImprovementType>IMPROVEMENT_HYDRO_DAM</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -23908,7 +23908,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_WELL</ImprovementType>
+					<ImprovementType>IMPROVEMENT_HYDROCARBON_WELL</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -23924,7 +23924,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_DESERTWINDMILL</ImprovementType>
+					<ImprovementType>IMPROVEMENT_MODERN_WINDMILL</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -23940,7 +23940,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GEOTHERMAL_BOREHOLE</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GEOTHERMAL_FACTORY</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -23972,7 +23972,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_WINDMILL_SEA</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEA_MILL</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -23996,7 +23996,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_ROCK_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_TOOLS_WORKSHOP</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -24066,11 +24066,11 @@
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_3FACTORY</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FACTORY</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_3FACTORY_2</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FACTORY_COLD_CLIMATE</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -24094,7 +24094,7 @@
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_ROCK_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_TOOLS_WORKSHOP</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -24805,7 +24805,7 @@
 			</ExtraYieldThresholds>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_PINE_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOOD_GATHERER</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -24877,7 +24877,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_ROCK_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_TOOLS_WORKSHOP</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -24927,7 +24927,7 @@
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_ROCK_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_TOOLS_WORKSHOP</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -25388,7 +25388,7 @@
 			</ExtraYieldThresholds>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_3FACTORY</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FACTORY</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -25396,7 +25396,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_3FACTORY_2</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FACTORY_COLD_CLIMATE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -25404,7 +25404,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_5FACTORY</ImprovementType>
+					<ImprovementType>IMPROVEMENT_MANUFACTURING_COMPLEX</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -25428,7 +25428,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_HYDRO_PLANT</ImprovementType>
+					<ImprovementType>IMPROVEMENT_HYDRO_DAM</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -25436,7 +25436,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_WELL</ImprovementType>
+					<ImprovementType>IMPROVEMENT_HYDROCARBON_WELL</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -25452,7 +25452,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_DESERTWINDMILL</ImprovementType>
+					<ImprovementType>IMPROVEMENT_MODERN_WINDMILL</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -25494,11 +25494,11 @@
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_3FACTORY</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FACTORY</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_3FACTORY_2</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FACTORY_COLD_CLIMATE</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -25861,7 +25861,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GEOTHERMAL_BOREHOLE</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GEOTHERMAL_FACTORY</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -25877,7 +25877,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_WINDMILL_SEA</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEA_MILL</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -26267,7 +26267,7 @@
 			<iHappiness>1</iHappiness>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_PINE_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOOD_GATHERER</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -26299,7 +26299,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_3FACTORY</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FACTORY</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -26307,7 +26307,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_3FACTORY_2</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FACTORY_COLD_CLIMATE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -26315,7 +26315,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_5FACTORY</ImprovementType>
+					<ImprovementType>IMPROVEMENT_MANUFACTURING_COMPLEX</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -26347,7 +26347,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_HYDRO_PLANT</ImprovementType>
+					<ImprovementType>IMPROVEMENT_HYDRO_DAM</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -26371,7 +26371,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_WELL</ImprovementType>
+					<ImprovementType>IMPROVEMENT_HYDROCARBON_WELL</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -26387,7 +26387,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_DESERTWINDMILL</ImprovementType>
+					<ImprovementType>IMPROVEMENT_MODERN_WINDMILL</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -26403,7 +26403,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GEOTHERMAL_BOREHOLE</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GEOTHERMAL_FACTORY</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -26435,7 +26435,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_WINDMILL_SEA</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEA_MILL</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -26459,7 +26459,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_ROCK_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_TOOLS_WORKSHOP</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -26529,11 +26529,11 @@
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_3FACTORY</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FACTORY</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_3FACTORY_2</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FACTORY_COLD_CLIMATE</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -26557,7 +26557,7 @@
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_ROCK_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_TOOLS_WORKSHOP</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -27269,7 +27269,7 @@
 			</LessYieldThresholds>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_PINE_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOOD_GATHERER</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -27341,7 +27341,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_ROCK_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_TOOLS_WORKSHOP</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -27391,7 +27391,7 @@
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_ROCK_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_TOOLS_WORKSHOP</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -27846,7 +27846,7 @@
 			</LessYieldThresholds>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_3FACTORY</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FACTORY</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -27854,7 +27854,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_3FACTORY_2</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FACTORY_COLD_CLIMATE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -27862,7 +27862,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_5FACTORY</ImprovementType>
+					<ImprovementType>IMPROVEMENT_MANUFACTURING_COMPLEX</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -27886,7 +27886,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_HYDRO_PLANT</ImprovementType>
+					<ImprovementType>IMPROVEMENT_HYDRO_DAM</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -27894,7 +27894,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_WELL</ImprovementType>
+					<ImprovementType>IMPROVEMENT_HYDROCARBON_WELL</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -27910,7 +27910,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_DESERTWINDMILL</ImprovementType>
+					<ImprovementType>IMPROVEMENT_MODERN_WINDMILL</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -27952,11 +27952,11 @@
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_3FACTORY</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FACTORY</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_3FACTORY_2</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FACTORY_COLD_CLIMATE</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -28319,7 +28319,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GEOTHERMAL_BOREHOLE</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GEOTHERMAL_FACTORY</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -28335,7 +28335,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_WINDMILL_SEA</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEA_MILL</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -28797,7 +28797,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_SUBURB</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -28805,7 +28805,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_DESERTWINDMILL</ImprovementType>
+					<ImprovementType>IMPROVEMENT_MODERN_WINDMILL</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -28813,7 +28813,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_HYDRO_PLANT</ImprovementType>
+					<ImprovementType>IMPROVEMENT_HYDRO_DAM</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -28821,7 +28821,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_EXPLORETEMPLE</ImprovementType>
+					<ImprovementType>IMPROVEMENT_ARCHEOLOGICAL_SITE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -28829,7 +28829,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FOSSIL_DIGSITE</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FOSSIL_DIG_SITE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -28837,7 +28837,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_WINDMILL_SEA</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEA_MILL</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -28893,7 +28893,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_HABITAT1</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_SMALL</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -28901,7 +28901,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_HABITAT2</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_MEDIUM</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -28909,7 +28909,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_HABITAT3</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_LARGE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -28917,7 +28917,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_HABITAT4</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_HUGE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -28951,23 +28951,23 @@
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_SUBURB</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_HABITAT1</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_SMALL</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_HABITAT2</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_MEDIUM</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_HABITAT3</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_LARGE</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_HABITAT4</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_HUGE</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 			</ImprovementUpgradeModifierTypes>
@@ -29476,7 +29476,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_SUBURB</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -29484,7 +29484,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_DESERTWINDMILL</ImprovementType>
+					<ImprovementType>IMPROVEMENT_MODERN_WINDMILL</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -29492,7 +29492,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_HYDRO_PLANT</ImprovementType>
+					<ImprovementType>IMPROVEMENT_HYDRO_DAM</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -29500,7 +29500,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_EXPLORETEMPLE</ImprovementType>
+					<ImprovementType>IMPROVEMENT_ARCHEOLOGICAL_SITE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -29508,7 +29508,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FOSSIL_DIGSITE</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FOSSIL_DIG_SITE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -29516,7 +29516,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_WINDMILL_SEA</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEA_MILL</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -29779,7 +29779,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_HABITAT1</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_SMALL</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -29787,7 +29787,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_HABITAT2</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_MEDIUM</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -29795,7 +29795,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_HABITAT3</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_LARGE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -29803,7 +29803,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_HABITAT4</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_HUGE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -29813,19 +29813,19 @@
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_HABITAT1</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_SMALL</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_HABITAT2</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_MEDIUM</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_HABITAT3</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_LARGE</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_HABITAT4</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_HUGE</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 			</ImprovementUpgradeModifierTypes>
@@ -30071,7 +30071,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_SUBURB</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -30079,7 +30079,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_DESERTWINDMILL</ImprovementType>
+					<ImprovementType>IMPROVEMENT_MODERN_WINDMILL</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -30087,7 +30087,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_HYDRO_PLANT</ImprovementType>
+					<ImprovementType>IMPROVEMENT_HYDRO_DAM</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -30095,7 +30095,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_EXPLORETEMPLE</ImprovementType>
+					<ImprovementType>IMPROVEMENT_ARCHEOLOGICAL_SITE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -30103,7 +30103,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FOSSIL_DIGSITE</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FOSSIL_DIG_SITE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -30111,7 +30111,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_WINDMILL_SEA</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEA_MILL</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -30167,7 +30167,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_HABITAT1</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_SMALL</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -30175,7 +30175,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_HABITAT2</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_MEDIUM</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -30183,7 +30183,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_HABITAT3</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_LARGE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -30191,7 +30191,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_HABITAT4</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_HUGE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -30225,23 +30225,23 @@
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_SUBURB</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_HABITAT1</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_SMALL</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_HABITAT2</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_MEDIUM</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_HABITAT3</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_LARGE</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_HABITAT4</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_HUGE</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 			</ImprovementUpgradeModifierTypes>
@@ -30737,7 +30737,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_SUBURB</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -30745,7 +30745,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_DESERTWINDMILL</ImprovementType>
+					<ImprovementType>IMPROVEMENT_MODERN_WINDMILL</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -30753,7 +30753,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_HYDRO_PLANT</ImprovementType>
+					<ImprovementType>IMPROVEMENT_HYDRO_DAM</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -30761,7 +30761,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_EXPLORETEMPLE</ImprovementType>
+					<ImprovementType>IMPROVEMENT_ARCHEOLOGICAL_SITE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -30769,7 +30769,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FOSSIL_DIGSITE</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FOSSIL_DIG_SITE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -30777,7 +30777,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_WINDMILL_SEA</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEA_MILL</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -31028,7 +31028,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_HABITAT1</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_SMALL</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -31036,7 +31036,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_HABITAT2</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_MEDIUM</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -31044,7 +31044,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_HABITAT3</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_LARGE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -31052,7 +31052,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_HABITAT4</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_HUGE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -31062,19 +31062,19 @@
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_HABITAT1</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_SMALL</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_HABITAT2</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_MEDIUM</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_HABITAT3</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_LARGE</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_HABITAT4</ImprovementType>
+					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_HUGE</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 			</ImprovementUpgradeModifierTypes>
@@ -31234,7 +31234,7 @@
 			</ExtraYieldThresholds>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAIN_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -31282,7 +31282,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FRUIT_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -31290,7 +31290,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -31298,7 +31298,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_PLANT_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_PLANT_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -31306,7 +31306,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FRUIT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -31314,7 +31314,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -31322,7 +31322,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_PLANT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_PLANT_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -31354,7 +31354,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FARMSCRAPER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -31372,7 +31372,7 @@
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAIN_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -31384,23 +31384,23 @@
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_FRUIT_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_FRUIT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_PLANT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_PLANT_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -31799,7 +31799,7 @@
 			</ExtraYieldThresholds>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAIN_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -31847,7 +31847,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FRUIT_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -31855,7 +31855,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -31863,7 +31863,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_PLANT_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_PLANT_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -31871,7 +31871,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FRUIT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -31879,7 +31879,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -31887,7 +31887,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_PLANT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_PLANT_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -31919,7 +31919,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FARMSCRAPER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -31937,7 +31937,7 @@
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAIN_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -31949,23 +31949,23 @@
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_FRUIT_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_FRUIT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_PLANT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_PLANT_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -32298,7 +32298,7 @@
 			</ExtraYieldThresholds>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAIN_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -32346,7 +32346,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FRUIT_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -32354,7 +32354,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -32362,7 +32362,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_PLANT_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_PLANT_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -32370,7 +32370,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FRUIT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -32378,7 +32378,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -32386,7 +32386,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_PLANT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_PLANT_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -32418,7 +32418,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FARMSCRAPER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -32436,7 +32436,7 @@
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAIN_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -32448,23 +32448,23 @@
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_FRUIT_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_FRUIT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_PLANT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_PLANT_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -32746,7 +32746,7 @@
 			</ExtraYieldThresholds>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAIN_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -32794,7 +32794,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FRUIT_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -32802,7 +32802,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -32810,7 +32810,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_PLANT_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_PLANT_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -32818,7 +32818,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FRUIT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -32826,7 +32826,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -32834,7 +32834,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_PLANT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_PLANT_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -32866,7 +32866,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FARMSCRAPER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -32884,7 +32884,7 @@
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAIN_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -32896,23 +32896,23 @@
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_FRUIT_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_FRUIT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_PLANT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_PLANT_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -33206,7 +33206,7 @@
 			</LessYieldThresholds>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAIN_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -33254,7 +33254,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FRUIT_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -33262,7 +33262,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -33270,7 +33270,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_PLANT_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_PLANT_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -33278,7 +33278,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FRUIT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -33286,7 +33286,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -33294,7 +33294,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_PLANT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_PLANT_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -33326,7 +33326,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FARMSCRAPER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -33344,7 +33344,7 @@
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAIN_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -33356,23 +33356,23 @@
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_FRUIT_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_FRUIT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_PLANT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_PLANT_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -33745,7 +33745,7 @@
 			</ExtraYieldThresholds>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAIN_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -33793,7 +33793,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FRUIT_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -33801,7 +33801,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -33809,7 +33809,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_PLANT_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_PLANT_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -33817,7 +33817,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FRUIT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -33825,7 +33825,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -33833,7 +33833,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_PLANT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_PLANT_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -33865,7 +33865,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FARMSCRAPER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -33883,7 +33883,7 @@
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAIN_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -33895,23 +33895,23 @@
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_FRUIT_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_FRUIT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_PLANT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_PLANT_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -34213,7 +34213,7 @@
 			</ExtraYieldThresholds>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAIN_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -34261,7 +34261,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FRUIT_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -34269,7 +34269,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -34277,7 +34277,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_PLANT_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_PLANT_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -34285,7 +34285,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FRUIT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -34293,7 +34293,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -34301,7 +34301,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_PLANT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_PLANT_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -34333,7 +34333,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FARMSCRAPER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -34351,7 +34351,7 @@
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAIN_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -34363,23 +34363,23 @@
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_FRUIT_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_FRUIT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_PLANT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_PLANT_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -34638,7 +34638,7 @@
 			</ExtraYieldThresholds>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAIN_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -34686,7 +34686,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FRUIT_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -34694,7 +34694,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -34702,7 +34702,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_PLANT_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_PLANT_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -34710,7 +34710,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FRUIT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -34718,7 +34718,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -34726,7 +34726,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_PLANT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_PLANT_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -34758,7 +34758,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FARMSCRAPER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -34776,7 +34776,7 @@
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAIN_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -34788,23 +34788,23 @@
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_FRUIT_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_FRUIT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_PLANT_PICKER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_PLANT_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>

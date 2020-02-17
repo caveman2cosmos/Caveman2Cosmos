@@ -1221,7 +1221,7 @@ def doAntelope2(argsList):
   plot = GC.getMap().plot(kTriggeredData.iPlotX, kTriggeredData.iPlotY)
 
   if not plot.isNone():
-    plot.setImprovementType(GC.getInfoTypeForString("IMPROVEMENT_CAMP"))
+    plot.setImprovementType(GC.getInfoTypeForString("IMPROVEMENT_HUNTING_CAMP"))
 
   return 1
 
@@ -1229,7 +1229,7 @@ def getHelpAntelope2(argsList):
   iEvent = argsList[0]
   kTriggeredData = argsList[1]
 
-  iCamp = GC.getInfoTypeForString("IMPROVEMENT_CAMP")
+  iCamp = GC.getInfoTypeForString("IMPROVEMENT_HUNTING_CAMP")
   szHelp = TRNSLTR.getText("TXT_KEY_EVENT_IMPROVEMENT_GROWTH", ( GC.getImprovementInfo(iCamp).getTextKey(), ))
 
   return szHelp
@@ -7883,16 +7883,16 @@ def doVolcanoNeighbouringPlots(pPlot):
                GC.getInfoTypeForString("IMPROVEMENT_HAMLET"),
                GC.getInfoTypeForString("IMPROVEMENT_VILLAGE"),
                GC.getInfoTypeForString("IMPROVEMENT_TOWN"),
-               GC.getInfoTypeForString("IMPROVEMENT_SUBURB")]
+               GC.getInfoTypeForString("IMPROVEMENT_SUBURBS")]
   iRuins = GC.getInfoTypeForString("IMPROVEMENT_CITY_RUINS")
 
   # List of improvements that are unaffected by eruption
-  immuneImprovements = [GC.getInfoTypeForString("IMPROVEMENT_GRAIN_GATHERER"),
-               GC.getInfoTypeForString("IMPROVEMENT_PINE_GATHERER"),
-               GC.getInfoTypeForString("IMPROVEMENT_ROCK_GATHERER"),
+  immuneImprovements = [GC.getInfoTypeForString("IMPROVEMENT_SEED_CAMP"),
+               GC.getInfoTypeForString("IMPROVEMENT_WOOD_GATHERER"),
+               GC.getInfoTypeForString("IMPROVEMENT_STONE_TOOLS_WORKSHOP"),
                GC.getInfoTypeForString("IMPROVEMENT_SCAVENGING_CAMP"),
-               GC.getInfoTypeForString("IMPROVEMENT_FRUIT_GATHERER"),
-               GC.getInfoTypeForString("IMPROVEMENT_PLANT_GATHERER"),
+               GC.getInfoTypeForString("IMPROVEMENT_FRUIT_GATHERING_CAMP"),
+               GC.getInfoTypeForString("IMPROVEMENT_PLANT_GATHERING_CAMP"),
                GC.getInfoTypeForString("IMPROVEMENT_FISHING_BOATS"),
                GC.getInfoTypeForString("IMPROVEMENT_WHALING_BOATS"),
                GC.getInfoTypeForString("IMPROVEMENT_WHALING_SHIPS"),
@@ -8365,7 +8365,7 @@ def doGlobalWarming(argsList):
       iGW += 2
     if jPlot.getImprovementType() == GC.getInfoTypeForString("IMPROVEMENT_MODERN_MINE"):
       iGW += 4
-    if jPlot.getImprovementType() == GC.getInfoTypeForString("IMPROVEMENT_WELL"):
+    if jPlot.getImprovementType() == GC.getInfoTypeForString("IMPROVEMENT_HYDROCARBON_WELL"):
       iGW += 8
     if jPlot.isCity():
       icityGW = jPlot.getPlotCity()

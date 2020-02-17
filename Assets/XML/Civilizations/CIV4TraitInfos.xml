@@ -765,7 +765,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_ROCK_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_TOOLS_WORKSHOP</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1695,7 +1695,7 @@
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAIN_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-40</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 			</ImprovementUpgradeModifierTypes>
@@ -1881,7 +1881,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_CAMP</ImprovementType>
+					<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 					</YieldChanges>
@@ -4211,7 +4211,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_ROCK_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_TOOLS_WORKSHOP</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -5122,7 +5122,7 @@
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAIN_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-40</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 			</ImprovementUpgradeModifierTypes>
@@ -5299,7 +5299,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_CAMP</ImprovementType>
+					<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 					</YieldChanges>

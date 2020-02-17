@@ -28266,7 +28266,7 @@
 				</InvisibleImprovementChange>
 				<InvisibleImprovementChange>
 					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
-					<ImprovementType>IMPROVEMENT_SUBURB</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</InvisibleImprovementChange>
 				<InvisibleImprovementChange>
@@ -28309,7 +28309,7 @@
 				</InvisibleImprovementChange>
 				<InvisibleImprovementChange>
 					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
-					<ImprovementType>IMPROVEMENT_SUBURB</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</InvisibleImprovementChange>
 				<InvisibleImprovementChange>
@@ -28352,7 +28352,7 @@
 				</InvisibleImprovementChange>
 				<InvisibleImprovementChange>
 					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
-					<ImprovementType>IMPROVEMENT_SUBURB</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</InvisibleImprovementChange>
 				<InvisibleImprovementChange>
