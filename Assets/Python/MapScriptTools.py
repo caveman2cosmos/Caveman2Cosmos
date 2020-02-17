@@ -163,10 +163,6 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 	################################
 	global ebAluminum, ebBauxite, ebCopper, ebHorse, ebIron, ebMithril, ebNaturalGas
 	global ebOil, ebReagens, ebRubber, ebSulphur, ebTitanium, ebUranium
-	global ebMana, ebManaEarth, ebManaWater, ebManaAir, ebManaFire, ebManaChaos, ebManaEntropy
-	global ebManaDeath, ebManaShadow, ebManaSun, ebManaSpirit, ebManaMind, ebManaLaw
-	global ebManaNature, ebManaLife, ebManaBody, ebManaEnchantment, ebManaMetamagic
-	global ebManaDimensional, ebManaCreation, ebManaForce, ebManaIce, ebManaRefined
 	global ebCoal, ebClam, ebFish, ebCrab, ebShrimp, ebGold, ebSilver, ebBanana
 	global ebCow, ebDeer, ebFur, ebGems, ebMarble, ebSheep
 	global ebFungicide, ebFungalGin, ebGrenadeFruits, ebPholusMutagen, ebRareDnaMoist, ebRareDnaOcean
@@ -188,31 +184,6 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 	ebSulphur         = GC.getInfoTypeForString('BONUS_SULPHUR')				#
 	ebTitanium        = GC.getInfoTypeForString('BONUS_TITANIUM')				#
 	ebUranium         = GC.getInfoTypeForString('BONUS_URANIUM')				#
-
-	# mana boni
-	ebMana            = GC.getInfoTypeForString('BONUS_MANA')					# FFH:
-	ebManaEarth       = GC.getInfoTypeForString('BONUS_MANA_EARTH')			# FFH:
-	ebManaWater       = GC.getInfoTypeForString('BONUS_MANA_WATER')			# FFH:
-	ebManaAir         = GC.getInfoTypeForString('BONUS_MANA_AIR')				# FFH:
-	ebManaFire        = GC.getInfoTypeForString('BONUS_MANA_FIRE')				# FFH:
-	ebManaChaos       = GC.getInfoTypeForString('BONUS_MANA_CHAOS')			# FFH:
-	ebManaEntropy     = GC.getInfoTypeForString('BONUS_MANA_ENTROPY')			# FFH:
-	ebManaDeath       = GC.getInfoTypeForString('BONUS_MANA_DEATH')			# FFH:
-	ebManaShadow      = GC.getInfoTypeForString('BONUS_MANA_SHADOW')			# FFH:
-	ebManaSun         = GC.getInfoTypeForString('BONUS_MANA_SUN')				# FFH:
-	ebManaSpirit      = GC.getInfoTypeForString('BONUS_MANA_SPIRIT')			# FFH:
-	ebManaMind        = GC.getInfoTypeForString('BONUS_MANA_MIND')				# FFH:
-	ebManaLaw         = GC.getInfoTypeForString('BONUS_MANA_LAW')				# FFH:
-	ebManaNature      = GC.getInfoTypeForString('BONUS_MANA_NATURE')			# FFH:
-	ebManaLife        = GC.getInfoTypeForString('BONUS_MANA_LIFE')				# FFH:
-	ebManaBody        = GC.getInfoTypeForString('BONUS_MANA_BODY')				# FFH:
-	ebManaEnchantment = GC.getInfoTypeForString('BONUS_MANA_ENCHANTMENT')	# FFH:
-	ebManaMetamagic   = GC.getInfoTypeForString('BONUS_MANA_METAMAGIC')		# FFH:
-	ebManaIce         = GC.getInfoTypeForString('BONUS_MANA_ICE')				# FFH:
-	ebManaDimensional = GC.getInfoTypeForString('BONUS_MANA_DIMENSIONAL')	# FFH:
-	ebManaCreation    = GC.getInfoTypeForString('BONUS_MANA_CREATION')		# FFH:
-	ebManaForce       = GC.getInfoTypeForString('BONUS_MANA_FORCE')			# FFH:
-	ebManaRefined     = GC.getInfoTypeForString('BONUS_REFINED_MANA')			# FFH: Orbis
 
 	# define other known boni
 	ebClam            = GC.getInfoTypeForString('BONUS_CLAM')					# water
@@ -262,8 +233,6 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 	eiGoody = GC.getInfoTypeForString( 'IMPROVEMENT_GOODY_HUT' )
 	eiFarm = GC.getInfoTypeForString( 'IMPROVEMENT_FARM' )
 	eiMine = GC.getInfoTypeForString( 'IMPROVEMENT_MINE' )
-	if eiMine < 0:
-		eiMine = GC.getInfoTypeForString( 'IMPROVEMENT_MINE2' )
 	eiWindmill = GC.getInfoTypeForString( 'IMPROVEMENT_WINDMILL' )
 
 	##############################
@@ -3020,7 +2989,7 @@ class MapRegions:
 										validPlots.append( (fx, fy+1, 3) )
 		# build Elemental Quarter
 		printList(validPlots, "Valid Plots", prefix="[MST] ")
-		if len( validPlots ) > 0:
+		if validPlots:
 			x, y, rot = chooseListElement( validPlots )
 			plot = MAP.plot(x, y)
 			template = self.rotateTemplate( self.eqTemplate, rot )
@@ -3031,8 +3000,8 @@ class MapRegions:
 		else:
 			print "[MST] No valid plot found for 'Elemental Quarter'"
 			return
-#		print "[MST] 'Elemental Quarter' built: %r" % ( self.eqList )
-#		print "[MST] Regions: %r" % ( self.regionList )
+		print "[MST] 'Elemental Quarter' built: %r" % ( self.eqList )
+		print "[MST] Regions: %r" % ( self.regionList )
 
 	# build the 'Elemental Quarter'
 	def theElementalQuarter( self, pCenterPlot, template, rotation ):
@@ -3637,19 +3606,15 @@ class MapRegions:
 					if temp == "m":
 						plot.setPlotType( PlotTypes.PLOT_LAND, False, False )
 						plot.setTerrainType( etMarsh, True, True )
-						plot.setBonusType( ebManaWater )
 					if temp == "P":
 						plot.setPlotType( PlotTypes.PLOT_HILLS, False, False )
 						plot.setTerrainType( etPlains, True, True )
-						plot.setBonusType( ebManaEarth )
 					if temp == "p":
 						plot.setPlotType( PlotTypes.PLOT_LAND, False, False )
 						plot.setTerrainType( etPlains, True, True )
-						plot.setBonusType( ebManaFire )
 					if temp == "g":
 						plot.setPlotType( PlotTypes.PLOT_LAND, False, False )
 						plot.setTerrainType( etGrass, True, True )
-						plot.setBonusType( ebManaAir )
 		MAP.recalculateAreas()
 
 ###############################################################################################################

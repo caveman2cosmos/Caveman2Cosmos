@@ -2120,10 +2120,7 @@ def findStartingPlot(argsList):
 
 	# Shuffle players so the same player doesn't always get the first pick.
 	player_list = []
-	########## Temudjin START
-	#for plrCheckLoop in range(18):
-	for plrCheckLoop in range( gc.getMAX_CIV_PLAYERS() ):
-	########## Temudjin END
+	for plrCheckLoop in range(gc.getMAX_PC_PLAYERS()):
 		if CyGlobalContext().getPlayer(plrCheckLoop).isEverAlive():
 			player_list.append(plrCheckLoop)
 	shuffledPlayers = []

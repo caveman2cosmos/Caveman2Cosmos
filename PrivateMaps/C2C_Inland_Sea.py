@@ -794,18 +794,12 @@ def getStartingPlot(playerID, validFn = None):
 
 				if val > iBestValue:
 
-					valid = True
-
-					for iI in range(gc.getMAX_CIV_PLAYERS()):
-						if (gc.getPlayer(iI).isAlive()):
-							if (iI != playerID):
-								if gc.getPlayer(iI).startingPlotWithinRange(pLoopPlot, playerID, iRange, iPass):
-									valid = False
-									break
-
-					if valid:
-							iBestValue = val
-							pBestPlot = pLoopPlot
+					for iI in range(gc.getMAX_PC_PLAYERS()):
+						if iI != playerID and gc.getPlayer(iI).isAlive() and gc.getPlayer(iI).startingPlotWithinRange(pLoopPlot, playerID, iRange, iPass):
+							break
+					else:
+						iBestValue = val
+						pBestPlot = pLoopPlot
 
 		if pBestPlot != None:
 			plotSuccess = true
