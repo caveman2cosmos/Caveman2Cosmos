@@ -23,7 +23,7 @@
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<iCombatPercent>-10</iCombatPercent>
 			<Button>art/Buttons/Promotions/PromotionPacifist.dds</Button>
 		</PromotionInfo>
@@ -43,7 +43,7 @@
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<iCombatPercent>-10</iCombatPercent>
 			<Button>art/Buttons/Promotions/PromotionPacifist.dds</Button>
 		</PromotionInfo>
@@ -63,7 +63,7 @@
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
@@ -86,7 +86,7 @@
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<iCombatPercent>-10</iCombatPercent>
 			<Button>art/Buttons/Promotions/PromotionPacifist3.dds</Button>
 		</PromotionInfo>
@@ -95,7 +95,7 @@
 			<ReplacementID>PROMOTION_COMPLEX_AGGRESSIVE</ReplacementID>
 			<Description>TXT_KEY_PROMOTION_AGGRESSIVE0</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<iAttackCombatModifierChange>20</iAttackCombatModifierChange>
 			<iDefenseCombatModifierChange>-5</iDefenseCombatModifierChange>
 			<UnitCombats>
@@ -126,7 +126,7 @@
 			<PromotionLine>PROMOTIONLINE_AGGRESSIVE_PROMOTION</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -147,7 +147,7 @@
 			<PromotionLine>PROMOTIONLINE_AGGRESSIVE_PROMOTION</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -168,7 +168,7 @@
 			<PromotionLine>PROMOTIONLINE_AGGRESSIVE_PROMOTION</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -187,7 +187,7 @@
 			<Type>PROMOTION_TIMID</Type>
 			<Description>TXT_KEY_PROMOTION_TIMID</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<iAttackCombatModifierChange>-20</iAttackCombatModifierChange>
 			<iDefenseCombatModifierChange>5</iDefenseCombatModifierChange>
 			<UnitCombats>
@@ -212,7 +212,7 @@
 			<PromotionLine>PROMOTIONLINE_TIMID_PROMOTION</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -233,7 +233,7 @@
 			<PromotionLine>PROMOTIONLINE_TIMID_PROMOTION</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -254,7 +254,7 @@
 			<PromotionLine>PROMOTIONLINE_TIMID_PROMOTION</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -273,7 +273,7 @@
 			<Type>PROMOTION_DEFENSIVE</Type>
 			<Description>TXT_KEY_PROMOTION_DEFENSIVE</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<iAttackCombatModifierChange>-5</iAttackCombatModifierChange>
 			<iDefenseCombatModifierChange>20</iDefenseCombatModifierChange>
 			<UnitCombats>
@@ -298,7 +298,7 @@
 			<PromotionLine>PROMOTIONLINE_DEFENSIVE_PROMOTION</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -319,7 +319,7 @@
 			<PromotionLine>PROMOTIONLINE_DEFENSIVE_PROMOTION</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -340,7 +340,7 @@
 			<PromotionLine>PROMOTIONLINE_DEFENSIVE_PROMOTION</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -359,7 +359,7 @@
 			<Type>PROMOTION_COWARDLY</Type>
 			<Description>TXT_KEY_PROMOTION_COWARDLY</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<iAttackCombatModifierChange>5</iAttackCombatModifierChange>
 			<iDefenseCombatModifierChange>-20</iDefenseCombatModifierChange>
 			<UnitCombats>
@@ -384,7 +384,7 @@
 			<PromotionLine>PROMOTIONLINE_COWARDLY_PROMOTION</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -405,7 +405,7 @@
 			<PromotionLine>PROMOTIONLINE_COWARDLY_PROMOTION</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -426,7 +426,7 @@
 			<PromotionLine>PROMOTIONLINE_COWARDLY_PROMOTION</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -445,7 +445,7 @@
 			<Type>PROMOTION_PROTECTIVE</Type>
 			<Description>TXT_KEY_PROMOTION_PROTECTIVE</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<iCityDefense>20</iCityDefense>
 			<iFirstStrikesChange>1</iFirstStrikesChange>
 			<UnitCombats>
@@ -466,7 +466,7 @@
 			<PromotionLine>PROMOTIONLINE_PROTECTIVE_PROMOTION</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -483,7 +483,7 @@
 			<PromotionLine>PROMOTIONLINE_PROTECTIVE_PROMOTION</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -500,7 +500,7 @@
 			<PromotionLine>PROMOTIONLINE_PROTECTIVE_PROMOTION</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -515,7 +515,7 @@
 			<Type>PROMOTION_NEGLIGENT</Type>
 			<Description>TXT_KEY_PROMOTION_NEGLIGENT</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<iCityDefense>-20</iCityDefense>
 			<iFirstStrikesChange>-1</iFirstStrikesChange>
 			<UnitCombats>
@@ -536,7 +536,7 @@
 			<PromotionLine>PROMOTIONLINE_NEGLIGENT_PROMOTION</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -553,7 +553,7 @@
 			<PromotionLine>PROMOTIONLINE_NEGLIGENT_PROMOTION</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -570,7 +570,7 @@
 			<PromotionLine>PROMOTIONLINE_NEGLIGENT_PROMOTION</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -585,7 +585,7 @@
 			<Type>PROMOTION_IMPERIALIST</Type>
 			<Description>TXT_KEY_PROMOTION_IMPERIALIST</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<iCityAttack>20</iCityAttack>
 			<iRevoltProtection>5</iRevoltProtection>
 			<PropertyManipulators>
@@ -615,7 +615,7 @@
 			<PromotionLine>PROMOTIONLINE_IMPERIALIST_PROMOTION</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -641,7 +641,7 @@
 			<iLinePriority>2</iLinePriority>
 			<iRevoltProtection>5</iRevoltProtection>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -659,7 +659,7 @@
 			<iLinePriority>3</iLinePriority>
 			<iRevoltProtection>5</iRevoltProtection>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -674,7 +674,7 @@
 			<Type>PROMOTION_MEEK</Type>
 			<Description>TXT_KEY_PROMOTION_MEEK</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<iCityAttack>-20</iCityAttack>
 			<iRevoltProtection>-5</iRevoltProtection>
 			<iBombardRateChange>-5</iBombardRateChange>
@@ -696,7 +696,7 @@
 			<PromotionLine>PROMOTIONLINE_MEEK_PROMOTION</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -713,7 +713,7 @@
 			<PromotionLine>PROMOTIONLINE_MEEK_PROMOTION</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -730,7 +730,7 @@
 			<PromotionLine>PROMOTIONLINE_MEEK_PROMOTION</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -745,7 +745,7 @@
 			<Type>PROMOTION_SEAFARING</Type>
 			<Description>TXT_KEY_PROMOTION_SEAFARING</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<iCombatPercent>15</iCombatPercent>
 			<iRevoltProtection>-5</iRevoltProtection>
 			<iMovesChange>1</iMovesChange>
@@ -798,7 +798,7 @@
 			<Description>TXT_KEY_PROMOTION_SEAFARING1</Description>
 			<PromotionLine>PROMOTIONLINE_SEAFARING_PROMOTION</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
@@ -852,7 +852,7 @@
 			<PromotionLine>PROMOTIONLINE_SEAFARING_PROMOTION</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
@@ -905,7 +905,7 @@
 			<PromotionLine>PROMOTIONLINE_SEAFARING_PROMOTION</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
@@ -956,7 +956,7 @@
 			<Type>PROMOTION_NOMADIC</Type>
 			<Description>TXT_KEY_PROMOTION_NOMADIC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<iWithdrawalChange>20</iWithdrawalChange>
 			<iMovesChange>1</iMovesChange>
 			<iMoveDiscountChange>1</iMoveDiscountChange>
@@ -994,7 +994,7 @@
 			<PromotionLine>PROMOTIONLINE_NOMADIC_PROMOTION</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_EXPLORER</UnitCombatType>
@@ -1032,7 +1032,7 @@
 			<PromotionLine>PROMOTIONLINE_NOMADIC_PROMOTION</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_EXPLORER</UnitCombatType>
@@ -1069,7 +1069,7 @@
 			<PromotionLine>PROMOTIONLINE_NOMADIC_PROMOTION</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_EXPLORER</UnitCombatType>
@@ -1104,7 +1104,7 @@
 			<Type>PROMOTION_AERIAL</Type>
 			<Description>TXT_KEY_PROMOTION_AERIAL</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<iFirstStrikesChange>1</iFirstStrikesChange>
 			<iDCMBombAccuracyChange>10</iDCMBombAccuracyChange>
 			<iRBombardDamageChange>10</iRBombardDamageChange>
@@ -1146,7 +1146,7 @@
 			<Type>PROMOTION_AERIAL_STRATEGIES</Type>
 			<Description>TXT_KEY_PROMOTION_AERIAL_STRATEGIES</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<iChanceFirstStrikesChange>1</iChanceFirstStrikesChange>
 			<iDCMBombAccuracyChange>10</iDCMBombAccuracyChange>
 			<iWithdrawalChange>5</iWithdrawalChange>
@@ -1179,7 +1179,7 @@
 			<Type>PROMOTION_AERIAL_WEAPONRY</Type>
 			<Description>TXT_KEY_PROMOTION_AERIAL_WEAPONRY</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<iFirstStrikesChange>1</iFirstStrikesChange>
 			<iRBombardDamageChange>10</iRBombardDamageChange>
 			<iInterceptChange>10</iInterceptChange>
@@ -1207,7 +1207,7 @@
 			<Type>PROMOTION_AERIAL_SUPERIORITY</Type>
 			<Description>TXT_KEY_PROMOTION_AERIAL_SUPERIORITY</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<iCombatPercent>10</iCombatPercent>
 			<iEvasionChange>10</iEvasionChange>
 			<UnitCombats>
@@ -1266,7 +1266,7 @@
 			<Type>PROMOTION_DEVOTION</Type>
 			<Description>TXT_KEY_PROMOTION_DEVOTION</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<iReligiousCombatModifierChange>20</iReligiousCombatModifierChange>
 			<UnitCombats>
 				<UnitCombat>
@@ -1286,7 +1286,7 @@
 			<PromotionLine>PROMOTIONLINE_DEVOTION_PROMOTION</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -1306,7 +1306,7 @@
 			<PromotionLine>PROMOTIONLINE_DEVOTION_PROMOTION</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -1326,7 +1326,7 @@
 			<PromotionLine>PROMOTIONLINE_DEVOTION_PROMOTION</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -1344,7 +1344,7 @@
 			<Type>PROMOTION_DECEIVER</Type>
 			<Description>TXT_KEY_PROMOTION_DECEIVER</Description>
 			<Sound>AS2D_PING</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
@@ -1361,7 +1361,7 @@
 			<PromotionLine>PROMOTIONLINE_DECEIVER_PROMOTION</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<Sound>AS2D_PING</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
@@ -1378,7 +1378,7 @@
 			<PromotionLine>PROMOTIONLINE_DECEIVER_PROMOTION</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<Sound>AS2D_PING</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
@@ -1395,7 +1395,7 @@
 			<PromotionLine>PROMOTIONLINE_DECEIVER_PROMOTION</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<Sound>AS2D_PING</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
@@ -1411,7 +1411,7 @@
 			<Type>PROMOTION_NAIVE</Type>
 			<Description>TXT_KEY_PROMOTION_NAIVE</Description>
 			<Sound>AS2D_PING</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
@@ -1428,7 +1428,7 @@
 			<PromotionLine>PROMOTIONLINE_NAIVE_PROMOTION</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<Sound>AS2D_PING</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
@@ -1445,7 +1445,7 @@
 			<PromotionLine>PROMOTIONLINE_NAIVE_PROMOTION</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<Sound>AS2D_PING</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
@@ -1462,7 +1462,7 @@
 			<PromotionLine>PROMOTIONLINE_NAIVE_PROMOTION</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<Sound>AS2D_PING</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
@@ -1477,7 +1477,7 @@
 			<Type>PROMOTION_CIVILIZED</Type>
 			<Description>TXT_KEY_PROMOTION_CIVILIZED</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -1499,7 +1499,7 @@
 			<PromotionLine>PROMOTIONLINE_CIVILIZED_PROMOTION</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -1521,7 +1521,7 @@
 			<PromotionLine>PROMOTIONLINE_CIVILIZED_PROMOTION</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -1543,7 +1543,7 @@
 			<PromotionLine>PROMOTIONLINE_CIVILIZED_PROMOTION</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -1563,7 +1563,7 @@
 			<Type>PROMOTION_BARBARIC</Type>
 			<Description>TXT_KEY_PROMOTION_BARBARIC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -1585,7 +1585,7 @@
 			<PromotionLine>PROMOTIONLINE_BARBARIC_PROMOTION</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -1607,7 +1607,7 @@
 			<PromotionLine>PROMOTIONLINE_BARBARIC_PROMOTION</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -1629,7 +1629,7 @@
 			<PromotionLine>PROMOTIONLINE_BARBARIC_PROMOTION</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -1649,7 +1649,7 @@
 			<Type>PROMOTION_HUMANITARIAN</Type>
 			<Description>TXT_KEY_PROMOTION_HUMANITARIAN</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_HEALTH_CARE</UnitCombatType>
@@ -1686,7 +1686,7 @@
 			<PromotionLine>PROMOTIONLINE_HUMANITARIAN_PROMOTION</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_HEALTH_CARE</UnitCombatType>
@@ -1723,7 +1723,7 @@
 			<PromotionLine>PROMOTIONLINE_HUMANITARIAN_PROMOTION</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_HEALTH_CARE</UnitCombatType>
@@ -1757,7 +1757,7 @@
 			<Type>PROMOTION_CRUEL</Type>
 			<Description>TXT_KEY_PROMOTION_CRUEL</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
@@ -1810,7 +1810,7 @@
 			<PromotionLine>PROMOTIONLINE_CRUEL_PROMOTION</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
@@ -1863,7 +1863,7 @@
 			<PromotionLine>PROMOTIONLINE_CRUEL_PROMOTION</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
@@ -1914,7 +1914,7 @@
 			<Type>PROMOTION_LAWFUL</Type>
 			<Description>TXT_KEY_PROMOTION_LAWFUL</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_LAW_ENFORCEMENT</UnitCombatType>
@@ -1947,7 +1947,7 @@
 			<PromotionLine>PROMOTIONLINE_LAWFUL_PROMOTION</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_LAW_ENFORCEMENT</UnitCombatType>
@@ -1980,7 +1980,7 @@
 			<PromotionLine>PROMOTIONLINE_LAWFUL_PROMOTION</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_LAW_ENFORCEMENT</UnitCombatType>
@@ -2013,7 +2013,7 @@
 			<PromotionLine>PROMOTIONLINE_LAWFUL_PROMOTION</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_LAW_ENFORCEMENT</UnitCombatType>
@@ -2044,7 +2044,7 @@
 			<Type>PROMOTION_CROOKED</Type>
 			<Description>TXT_KEY_PROMOTION_CROOKED</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_CRIMINAL</UnitCombatType>
@@ -2078,7 +2078,7 @@
 			<PromotionLine>PROMOTIONLINE_CROOKED_PROMOTION</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_CRIMINAL</UnitCombatType>
@@ -2112,7 +2112,7 @@
 			<PromotionLine>PROMOTIONLINE_CROOKED_PROMOTION</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_CRIMINAL</UnitCombatType>
@@ -2146,7 +2146,7 @@
 			<PromotionLine>PROMOTIONLINE_CROOKED_PROMOTION</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_CRIMINAL</UnitCombatType>
@@ -2178,7 +2178,7 @@
 			<Type>PROMOTION_MEDICAL</Type>
 			<Description>TXT_KEY_PROMOTION_MEDICAL</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_HEALTH_CARE</UnitCombatType>
@@ -2211,7 +2211,7 @@
 			<PromotionLine>PROMOTIONLINE_MEDICAL_PROMOTION</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_HEALTH_CARE</UnitCombatType>
@@ -2244,7 +2244,7 @@
 			<PromotionLine>PROMOTIONLINE_MEDICAL_PROMOTION</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_HEALTH_CARE</UnitCombatType>
@@ -2277,7 +2277,7 @@
 			<PromotionLine>PROMOTIONLINE_MEDICAL_PROMOTION</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_HEALTH_CARE</UnitCombatType>
@@ -2307,7 +2307,7 @@
 			<Type>PROMOTION_UNSANITARY</Type>
 			<Description>TXT_KEY_PROMOTION_UNSANITARY</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_CRIMINAL</UnitCombatType>
@@ -2346,7 +2346,7 @@
 			<PromotionLine>PROMOTIONLINE_UNSANITARY_PROMOTION</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_CRIMINAL</UnitCombatType>
@@ -2385,7 +2385,7 @@
 			<PromotionLine>PROMOTIONLINE_UNSANITARY_PROMOTION</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_CRIMINAL</UnitCombatType>
@@ -2424,7 +2424,7 @@
 			<PromotionLine>PROMOTIONLINE_UNSANITARY_PROMOTION</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_CRIMINAL</UnitCombatType>
@@ -2461,7 +2461,7 @@
 			<Type>PROMOTION_NATURALIST</Type>
 			<Description>TXT_KEY_PROMOTION_NATURALIST</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_SPECIES_HUMAN</UnitCombatType>
@@ -2510,7 +2510,7 @@
 			<PromotionLine>PROMOTIONLINE_NATURALIST_PROMOTION</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_SPECIES_HUMAN</UnitCombatType>
@@ -2559,7 +2559,7 @@
 			<PromotionLine>PROMOTIONLINE_NATURALIST_PROMOTION</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_SPECIES_HUMAN</UnitCombatType>
@@ -2608,7 +2608,7 @@
 			<PromotionLine>PROMOTIONLINE_NATURALIST_PROMOTION</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_SPECIES_HUMAN</UnitCombatType>
@@ -2655,7 +2655,7 @@
 			<Type>PROMOTION_SLOB</Type>
 			<Description>TXT_KEY_PROMOTION_SLOB</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_SPECIES_HUMAN</UnitCombatType>
@@ -2704,7 +2704,7 @@
 			<PromotionLine>PROMOTIONLINE_SLOB_PROMOTION</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_SPECIES_HUMAN</UnitCombatType>
@@ -2753,7 +2753,7 @@
 			<PromotionLine>PROMOTIONLINE_SLOB_PROMOTION</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_SPECIES_HUMAN</UnitCombatType>
@@ -2802,7 +2802,7 @@
 			<PromotionLine>PROMOTIONLINE_SLOB_PROMOTION</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_SPECIES_HUMAN</UnitCombatType>

@@ -4,7 +4,7 @@
 			<Type>PROMOTION_CULTURAL_HERITAGE_NATIVE_HIGHLANDER_I</Type>
 			<Description>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_NATIVE_HIGHLANDER_I_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_NATIVE_HIGHLANDER</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iHillsDefense>5</iHillsDefense>
@@ -60,7 +60,7 @@
 			<Type>PROMOTION_CULTURAL_HERITAGE_NATIVE_HIGHLANDER_II</Type>
 			<Description>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_NATIVE_HIGHLANDER_II_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<PromotionPrereq>PROMOTION_CULTURAL_HERITAGE_NATIVE_HIGHLANDER_I</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_NATIVE_HIGHLANDER</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -119,7 +119,7 @@
 			<Type>PROMOTION_CULTURAL_HERITAGE_NATIVE_HIGHLANDER_III</Type>
 			<Description>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_NATIVE_HIGHLANDER_III_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<PromotionPrereq>PROMOTION_CULTURAL_HERITAGE_NATIVE_HIGHLANDER_II</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_NATIVE_HIGHLANDER</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -174,7 +174,7 @@
 			<Type>PROMOTION_CULTURAL_HERITAGE_NATIVE_WOODSMAN_I</Type>
 			<Description>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_NATIVE_WOODSMAN_I_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_NATIVE_WOODSMAN</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<FeatureDefenses>
@@ -236,7 +236,7 @@
 			<Description>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_NATIVE_WOODSMAN_II_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_CULTURAL_HERITAGE_NATIVE_WOODSMAN_I</PromotionPrereq>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_NATIVE_WOODSMAN</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<FeatureAttacks>
@@ -326,7 +326,7 @@
 			<Description>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_NATIVE_WOODSMAN_III_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_CULTURAL_HERITAGE_NATIVE_WOODSMAN_II</PromotionPrereq>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_NATIVE_WOODSMAN</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<FeatureAttacks>
@@ -401,7 +401,7 @@
 			<Type>PROMOTION_CULTURAL_HERITAGE_NATIVE_SEAFARING_I</Type>
 			<Description>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_NATIVE_SEAFARING_I_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_SEAFARING</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<TerrainDefenses>
@@ -473,7 +473,7 @@
 			<Description>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_NATIVE_SEAFARING_II_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_CULTURAL_HERITAGE_NATIVE_SEAFARING_I</PromotionPrereq>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_SEAFARING</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<TerrainAttacks>
@@ -557,7 +557,7 @@
 			<Description>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_NATIVE_SEAFARING_III_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_CULTURAL_HERITAGE_NATIVE_SEAFARING_II</PromotionPrereq>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_SEAFARING</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<TerrainAttacks>
@@ -640,7 +640,7 @@
 			<Type>PROMOTION_CULTURAL_HERITAGE_NATIVE_PLAINSMEN_I</Type>
 			<Description>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_NATIVE_PLAINSMEN_I_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_NATIVE_PLAINSMEN</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<TerrainDefenses>
@@ -705,7 +705,7 @@
 			<Type>PROMOTION_CULTURAL_HERITAGE_NATIVE_PLAINSMEN_II</Type>
 			<Description>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_NATIVE_PLAINSMEN_II_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<PromotionPrereq>PROMOTION_CULTURAL_HERITAGE_NATIVE_PLAINSMEN_I</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_NATIVE_PLAINSMEN</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -791,7 +791,7 @@
 			<Type>PROMOTION_CULTURAL_HERITAGE_DESERT_NOMAD_I</Type>
 			<Description>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_DESERT_NOMAD_I_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_DESERT_NOMAD</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<TerrainDefenses>
@@ -860,7 +860,7 @@
 			<Type>PROMOTION_CULTURAL_HERITAGE_DESERT_NOMAD_II</Type>
 			<Description>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_DESERT_NOMAD_II_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<PromotionPrereq>PROMOTION_CULTURAL_HERITAGE_DESERT_NOMAD_I</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_DESERT_NOMAD</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -958,7 +958,7 @@
 			<Type>PROMOTION_CULTURAL_HERITAGE_DESERT_NOMAD_III</Type>
 			<Description>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_DESERT_NOMAD_III_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<PromotionPrereq>PROMOTION_CULTURAL_HERITAGE_DESERT_NOMAD_II</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_DESERT_NOMAD</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -1042,7 +1042,7 @@
 			<Type>PROMOTION_CULTURAL_HERITAGE_ARCTIC_NOMAD_I</Type>
 			<Description>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_ARCTIC_NOMAD_I_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_ARCTIC_NOMAD</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<TerrainDefenses>
@@ -1107,7 +1107,7 @@
 			<Type>PROMOTION_CULTURAL_HERITAGE_ARCTIC_NOMAD_II</Type>
 			<Description>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_ARCTIC_NOMAD_II_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<PromotionPrereq>PROMOTION_CULTURAL_HERITAGE_ARCTIC_NOMAD_I</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_ARCTIC_NOMAD</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -1193,7 +1193,7 @@
 			<Type>PROMOTION_CULTURAL_HERITAGE_ARCTIC_NOMAD_III</Type>
 			<Description>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_ARCTIC_NOMAD_III_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<PromotionPrereq>PROMOTION_CULTURAL_HERITAGE_ARCTIC_NOMAD_II</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_ARCTIC_NOMAD</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -1269,7 +1269,7 @@
 			<Type>PROMOTION_CULTURAL_HERITAGE_HARDY_I</Type>
 			<Description>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_HARDY_I_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_HARDY</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<TerrainDefenses>
@@ -1346,7 +1346,7 @@
 			<Type>PROMOTION_CULTURAL_HERITAGE_HARDY_II</Type>
 			<Description>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_HARDY_II_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<PromotionPrereq>PROMOTION_CULTURAL_HERITAGE_HARDY_I</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_HARDY</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -1464,7 +1464,7 @@
 			<Type>PROMOTION_CULTURAL_HERITAGE_HARDY_III</Type>
 			<Description>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_HARDY_III_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<PromotionPrereq>PROMOTION_CULTURAL_HERITAGE_HARDY_II</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_HARDY</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -1556,7 +1556,7 @@
 			<Type>PROMOTION_CULTURAL_HERITAGE_WATERWAYS_I</Type>
 			<Description>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_WATERWAYS_I_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_WATERWAYS</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<TerrainDefenses>
@@ -1631,7 +1631,7 @@
 			<Type>PROMOTION_CULTURAL_HERITAGE_WATERWAYS_II</Type>
 			<Description>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_WATERWAYS_II_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<PromotionPrereq>PROMOTION_CULTURAL_HERITAGE_WATERWAYS_I</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_WATERWAYS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -1737,7 +1737,7 @@
 			<Type>PROMOTION_CULTURAL_HERITAGE_SHAMAN</Type>
 			<Description>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_SHAMAN_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<bLeader>1</bLeader>
 			<bImmuneToFirstStrikes>1</bImmuneToFirstStrikes>
 			<iEnemyHealChange>5</iEnemyHealChange>

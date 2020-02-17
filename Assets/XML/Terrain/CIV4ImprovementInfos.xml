@@ -13482,7 +13482,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 			<Description>TXT_KEY_IMPROVEMENT_CITY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_CITY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_CITY_RUINS</ArtDefineTag>
-			<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+			<PrereqTech>TECH_DUMMY</PrereqTech>
 		</ImprovementInfo>
 	</ImprovementInfos>
 </Civ4ImprovementInfos>

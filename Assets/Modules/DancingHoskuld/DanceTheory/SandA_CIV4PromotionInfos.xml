@@ -12,7 +12,7 @@
 			<Description>TXT_KEY_PROMOTION_WAR_CRY</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereqOr1>PROMOTION_TACTICS1</PromotionPrereqOr1>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<iCombatPercent>5</iCombatPercent>
 			<UnitCombats>
 				<UnitCombat>
@@ -27,7 +27,7 @@
 			<Description>TXT_KEY_PROMOTION_CACOPHONY</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereqOr1>PROMOTION_TACTICS1</PromotionPrereqOr1>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<iCombatPercent>5</iCombatPercent>
 			<UnitCombats>
 				<UnitCombat>
@@ -42,7 +42,7 @@
 			<Description>TXT_KEY_PROMOTION_HAKA</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereqOr1>PROMOTION_TACTICS1</PromotionPrereqOr1>
-			<TechPrereq>TECH_FUTURE_TECH</TechPrereq>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<iCombatPercent>5</iCombatPercent>
 			<UnitCombats>
 				<UnitCombat>
