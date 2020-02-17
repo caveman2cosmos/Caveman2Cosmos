@@ -3772,7 +3772,7 @@ class BonusPlacer:
 			return False
 		bonusInfo = gc.getBonusInfo(eBonus)
 		if plot.isPeak():
-			if not gc.getGame().isOption(GameOptionTypes.GAMEOPTION_MOUNTAINS) or not bonusInfo.isPeaks():
+			if not bonusInfo.isPeaks():
 				return False
 		else:
 			#Here is the change from canHaveBonus. Forest does not block bonus
