@@ -2428,14 +2428,6 @@ bool CvPlayer::addStartUnitAI(const UnitAITypes eUnitAI, const int iCount)
 	UnitTypes eBestUnit = NO_UNIT;
 	int iBestValue = 0;
 
-	// Temp solution to get Wrub of the neanderthals to start with neanderthal units.
-	// This xml type name hardcoding is not good, need a better solution.
-	BonusTypes neanderthal = NO_BONUS;
-	if (getCivilizationType() == (CivilizationTypes) GC.getInfoTypeForString("CIVILIZATION_NEANDERTHAL"))
-	{
-		neanderthal = (BonusTypes) GC.getInfoTypeForString("BONUS_NEANDERTHAL");
-	}
-
 	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
 		const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes) iI);
@@ -2444,14 +2436,14 @@ bool CvPlayer::addStartUnitAI(const UnitAITypes eUnitAI, const int iCount)
 		{
 			continue;
 		}
-		if (kUnit.getPrereqAndBonus() != NO_BONUS && kUnit.getPrereqAndBonus() != neanderthal)
+		if (kUnit.getPrereqAndBonus() != NO_BONUS)
 		{
 			continue;
 		}
 		bool bValid = true;
 		for (int iJ = 0; iJ < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); iJ++)
 		{
-			if (kUnit.getPrereqOrBonuses(iJ) != NO_BONUS && kUnit.getPrereqOrBonuses(iJ) != neanderthal)
+			if (kUnit.getPrereqOrBonuses(iJ) != NO_BONUS)
 			{
 				bValid = false;
 				break;
@@ -2459,9 +2451,6 @@ bool CvPlayer::addStartUnitAI(const UnitAITypes eUnitAI, const int iCount)
 		}
 		if (!bValid) continue;
 
-/* Toffer: I plan to change neanderthal cultural units to not have a bonus requirement, but building req instead.
-The "BonusTypes neanderthal" variable can be removed when that is done. and this will replace the bonus exception
-.
 		// Only Wrub of the Neanderthal can start with strongly restricted units.
 		for (int iJ = 0; iJ < GC.getUnitInfo((UnitTypes) iI).getNumEnabledCivilizationTypes(); iJ++)
 		{
@@ -2476,8 +2465,7 @@ The "BonusTypes neanderthal" variable can be removed when that is done. and this
 			}
 			else break;
 		}
-*/
-		if (/*bValid && */canTrain((UnitTypes) iI, false, false, false, true))
+		if (bValid && canTrain((UnitTypes) iI, false, false, false, true))
 		{
 			int iValue = AI_unitValue((UnitTypes) iI, eUnitAI, NULL);
 			if (iValue > 0 && kUnit.getDefaultUnitAIType() != eUnitAI)
@@ -3277,20 +3265,11 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 	iDamage = pOldCity->getDefenseDamage();
 	int iOldCityId = pOldCity->getID();
 
-/************************************************************************************************/
-/* Afforess	                  Start		 01/12/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	int iCiv = pOldCity->getCivilizationType();
 	if (pOldCity->isBarbarian())
 	{
 	    iCiv = NO_CIVILIZATION;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
 
 	for (iI = 0; iI < GC.getNumSpecialistInfos(); ++iI)
 	{
@@ -3396,8 +3375,6 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 		pNewCity->setEverOwned(((PlayerTypes)iI), abEverOwned[iI]);
 		pNewCity->setCultureTimes100(((PlayerTypes)iI), aiCulture[iI], false, false);
 	}
-
-	CvCivilizationInfo& kCivilizationInfo = GC.getCivilizationInfo(getCivilizationType());
 
 	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
@@ -3508,15 +3485,6 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 		if (iTeamCulturePercent < GC.getDefineINT("OCCUPATION_CULTURE_PERCENT_THRESHOLD"))
 		{
-
-/************************************************************************************************/
-/* Afforess	                  Start		 07/14/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/*
-			pNewCity->changeOccupationTimer(((GC.getDefineINT("BASE_OCCUPATION_TURNS") + ((pNewCity->getPopulation() * GC.getDefineINT("OCCUPATION_TURNS_POPULATION_PERCENT")) / 100)) * (100 - iTeamCulturePercent)) / 100);
-*/
 			int iOccupationTime = GC.getDefineINT("BASE_OCCUPATION_TURNS");\
 			//ls612: Remove the old define and replace it with something that scales with Gamespeeds
 			iOccupationTime += pNewCity->getPopulation() * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getOccupationTimePopulationPercent() / 100;
@@ -3526,10 +3494,6 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 			iOccupationTime /= 100;
 
 			pNewCity->changeOccupationTimer(iOccupationTime);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
 		}
 
 		GC.getMapINLINE().verifyUnitValidPlot();
@@ -7907,62 +7871,52 @@ void CvPlayer::killAllDeals()
 
 void CvPlayer::findNewCapital()
 {
-	CvCity* pOldCapital;
+	const CvCity* pOldCapital = getCapitalCity();
+
+	int iBestValue = 0;
+	CvCity* pBestCity = NULL;
 	CvCity* pLoopCity;
-	CvCity* pBestCity;
-	BuildingTypes eCapitalBuilding;
-	int iValue;
-	int iBestValue;
 	int iLoop;
-
-	eCapitalBuilding = ((BuildingTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuildings(GC.getDefineINT("CAPITAL_BUILDINGCLASS"))));
-
-	if (eCapitalBuilding == NO_BUILDING)
-	{
-		return;
-	}
-
-	pOldCapital = getCapitalCity();
-
-	iBestValue = 0;
-	pBestCity = NULL;
-
 	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
 	{
 		if (pLoopCity != pOldCapital)
 		{
-			if (0 == pLoopCity->getNumRealBuilding(eCapitalBuilding))
+			int iValue = pLoopCity->getPopulation() * 4;
+
+			iValue += pLoopCity->getYieldRate(YIELD_FOOD);
+			iValue += pLoopCity->getYieldRate(YIELD_PRODUCTION) * 3;
+			iValue += pLoopCity->getYieldRate(YIELD_COMMERCE) * 2;
+			iValue += pLoopCity->getCultureLevel();
+			iValue += pLoopCity->getReligionCount();
+			iValue += pLoopCity->getCorporationCount();
+			iValue += pLoopCity->getNumGreatPeople() * 2;
+
+			iValue *= (pLoopCity->calculateCulturePercent(getID()) + 100);
+			iValue /= 100;
+
+			if (iValue > iBestValue)
 			{
-				iValue = (pLoopCity->getPopulation() * 4);
-
-				iValue += pLoopCity->getYieldRate(YIELD_FOOD);
-				iValue += (pLoopCity->getYieldRate(YIELD_PRODUCTION) * 3);
-				iValue += (pLoopCity->getYieldRate(YIELD_COMMERCE) * 2);
-				iValue += pLoopCity->getCultureLevel();
-				iValue += pLoopCity->getReligionCount();
-				iValue += pLoopCity->getCorporationCount();
-				iValue += (pLoopCity->getNumGreatPeople() * 2);
-
-				iValue *= (pLoopCity->calculateCulturePercent(getID()) + 100);
-				iValue /= 100;
-
-				if (iValue > iBestValue)
-				{
-					iBestValue = iValue;
-					pBestCity = pLoopCity;
-				}
+				iBestValue = iValue;
+				pBestCity = pLoopCity;
 			}
 		}
 	}
-
 	if (pBestCity != NULL)
 	{
-		if (pOldCapital != NULL)
+		CvCivilizationInfo& civInfo = GC.getCivilizationInfo(getCivilizationType());
+
+		for (int iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
 		{
-			pOldCapital->setNumRealBuilding(eCapitalBuilding, 0);
+			if (civInfo.isCivilizationFreeBuildingClass(iI))
+			{
+				BuildingTypes eBuilding = (BuildingTypes) civInfo.getCivilizationBuildings(iI);
+
+				if (eBuilding != NO_BUILDING)
+				{
+					pBestCity->setNumRealBuilding(eBuilding, 1);
+				}
+			}
 		}
-		FAssertMsg(!(pBestCity->getNumRealBuilding(eCapitalBuilding)), "(pBestCity->getNumRealBuilding(eCapitalBuilding)) did not return false as expected");
-		pBestCity->setNumRealBuilding(eCapitalBuilding, 1);
 	}
 }
 
@@ -9854,18 +9808,11 @@ int CvPlayer::getBuildingClassPrereqBuilding(BuildingTypes eBuilding, BuildingCl
 	{
 		return 0;
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 02/14/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	if (kBuilding.isForceNoPrereqScaling())
 		return iPrereqs;
 	if (isLimitedWonderClass(ePrereqBuildingClass))
 		return iPrereqs;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	BuildingClassTypes eBuildingClass = (BuildingClassTypes)kBuilding.getBuildingClassType();
 
@@ -14722,14 +14669,11 @@ CvCity* CvPlayer::getCapitalCity() const
 
 void CvPlayer::setCapitalCity(CvCity* pNewCapitalCity)
 {
-	CvCity* pOldCapitalCity;
-	bool bUpdatePlotGroups;
-
-	pOldCapitalCity = getCapitalCity();
+	CvCity* pOldCapitalCity = getCapitalCity();
 
 	if (pOldCapitalCity != pNewCapitalCity)
 	{
-		bUpdatePlotGroups = ((pOldCapitalCity == NULL) || (pNewCapitalCity == NULL) || (pOldCapitalCity->plot()->getOwnerPlotGroup() != pNewCapitalCity->plot()->getOwnerPlotGroup()));
+		const bool bUpdatePlotGroups = pOldCapitalCity == NULL || pNewCapitalCity == NULL || pOldCapitalCity->plot()->getOwnerPlotGroup() != pNewCapitalCity->plot()->getOwnerPlotGroup();
 
 		if (bUpdatePlotGroups)
 		{
@@ -14749,11 +14693,23 @@ void CvPlayer::setCapitalCity(CvCity* pNewCapitalCity)
 		{
 			m_iCapitalCityID = pNewCapitalCity->getID();
 
-			if (pOldCapitalCity != NULL)
-			{
-				BuildingTypes eCapitalBuilding = ((BuildingTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuildings(GC.getDefineINT("CAPITAL_BUILDINGCLASS"))));
+			CvCivilizationInfo& civInfo = GC.getCivilizationInfo(getCivilizationType());
 
-				pOldCapitalCity->setNumRealBuilding(eCapitalBuilding, 0);
+			for (int iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
+			{
+				if (civInfo.isCivilizationFreeBuildingClass(iI))
+				{
+					BuildingTypes eBuilding = (BuildingTypes) civInfo.getCivilizationBuildings(iI);
+
+					if (eBuilding != NO_BUILDING)
+					{
+						if (pOldCapitalCity != NULL)
+						{
+							pOldCapitalCity->setNumRealBuilding(eBuilding, 0);
+						}
+						pNewCapitalCity->setNumRealBuilding(eBuilding, 1);
+					}
+				}
 			}
 		}
 		else
@@ -14762,28 +14718,20 @@ void CvPlayer::setCapitalCity(CvCity* pNewCapitalCity)
 		}
 
 		//ls612: Embassy Visibility Fix (by Damgo)
-		if (pOldCapitalCity != NULL)
+		for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 		{
-			for (int iI = 0; iI < MAX_TEAMS; iI++)
+			if (GET_TEAM(getTeam()).isHasEmbassy((TeamTypes)iI))
 			{
-				if (GET_TEAM(getTeam()).isHasEmbassy((TeamTypes)iI))
+				if (pOldCapitalCity != NULL)
 				{
 					pOldCapitalCity->plot()->changeAdjacentSight((TeamTypes)iI, GC.getDefineINT("PLOT_VISIBILITY_RANGE"), false, NULL, bUpdatePlotGroups);
 				}
-			}
-		}
-
-		if (pNewCapitalCity != NULL)
-		{
-			for (int iI = 0; iI < MAX_TEAMS; iI++)
-			{
-				if (GET_TEAM(getTeam()).isHasEmbassy((TeamTypes)iI))
+				if (pNewCapitalCity != NULL)
 				{
 					pNewCapitalCity->plot()->changeAdjacentSight((TeamTypes)iI, GC.getDefineINT("PLOT_VISIBILITY_RANGE"), true, NULL, bUpdatePlotGroups);
 				}
 			}
 		}
-		//ls612: End Embassy Visibility Fix (by Damgo)
 
 		if (bUpdatePlotGroups)
 		{
@@ -14795,7 +14743,6 @@ void CvPlayer::setCapitalCity(CvCity* pNewCapitalCity)
 			{
 				pNewCapitalCity->plot()->updatePlotGroupBonus(true);
 			}
-
 			endDeferredPlotGroupBonusCalculation();
 		}
 		//DPII < Maintenance Modifier >
@@ -28676,32 +28623,26 @@ bool CvPlayer::splitEmpire(int iAreaId)
 /*                                                                                              */
 /************************************************************************************************/
 // Add ePlayer's cities, units, techs, etc to this player
-bool CvPlayer::assimilatePlayer( PlayerTypes ePlayer )
+bool CvPlayer::assimilatePlayer(PlayerTypes ePlayer)
 {
-	CvPlayer& kPlayer = GET_PLAYER(ePlayer);
-	if( !kPlayer.isAlive() )
-	{
-		return false;
-	}
-	CvTeam& kTeam = GET_TEAM(kPlayer.getTeam());
+	if (getCapitalCity() == NULL) return false;
 
-	CvCity* pCapital = getCapitalCity();
-	if( pCapital == NULL )
-	{
-		return false;
-	}
+	CvPlayer& kPlayer = GET_PLAYER(ePlayer);
+	if (!kPlayer.isAlive()) return false;
+
+	CvTeam& kTeam = GET_TEAM(kPlayer.getTeam());
 
 	CvCity* pLoopCity = NULL;
 	CvUnit* pLoopUnit = NULL;
 
-	if( kTeam.isAtWar(getTeam()) )
+	if (kTeam.isAtWar(getTeam()))
 	{
 		kTeam.makePeace(getTeam(),false);
 	}
 
-	for(int iI = 0; iI < MAX_PC_PLAYERS; iI++ )
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		if( kPlayer.canContact((PlayerTypes)iI) )
+		if (kPlayer.canContact((PlayerTypes)iI))
 		{
 			MEMORY_TRACK_EXEMPT();
 
@@ -28750,17 +28691,13 @@ bool CvPlayer::assimilatePlayer( PlayerTypes ePlayer )
 	}
 
 	// Diplomacy
-	for (int iI = 0; iI < MAX_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
-		if ((iI != getTeam()) && (iI != kTeam.getID()))
+		if (iI != getTeam() && iI != kTeam.getID()
+		&& GET_TEAM((TeamTypes)iI).isAlive()
+		&& kTeam.isHasMet((TeamTypes)iI))
 		{
-			if (GET_TEAM((TeamTypes)iI).isAlive())
-			{
-				if (kTeam.isHasMet((TeamTypes)iI))
-				{
-					GET_TEAM(getTeam()).meet(((TeamTypes)iI), false);
-				}
-			}
+			GET_TEAM(getTeam()).meet(((TeamTypes)iI), false);
 		}
 	}
 

@@ -52,7 +52,7 @@ class BarbarianCiv:
 		if not fMod:
 			return
 		maxCivs = self.RevOpt.getBarbCivMaxCivs()
-		if maxCivs < 1:
+		if maxCivs < 1 or maxCivs > MAX_PC_PLAYERS:
 			maxCivs = MAX_PC_PLAYERS
 		if GAME.countCivPlayersAlive() >= maxCivs: return
 

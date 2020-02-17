@@ -431,19 +431,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FOLK_MEDICINE</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqBonuses>
-				<Bonus>BONUS_BONE</Bonus>
-				<Bonus>BONUS_WARE_COPPER</Bonus>
-				<Bonus>BONUS_WARE_STEEL</Bonus>
-				<Bonus>BONUS_WARE_TITANIUM</Bonus>
-			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_ASIAN</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_VIKING_TRADING_POST</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_ASIAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
@@ -70549,7 +70539,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NEANDERTHAL_CAVES</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
-			<Bonus>BONUS_NEANDERTHAL</Bonus>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_CAVE</FeatureType>
@@ -105782,7 +105777,7 @@
 			<PrereqTech>TECH_RITUALISM</PrereqTech>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_NAMERICAN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NORTH_AMERICAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
@@ -105922,7 +105917,7 @@
 			<PrereqTech>TECH_RITUALISM</PrereqTech>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_OCEANIAN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_OCEANIAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>

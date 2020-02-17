@@ -49,7 +49,7 @@ class Revolution:
 		self.showRevIndexInPopup = RevOpt.isShowRevIndexInPopup()
 
 		self.maxCivs = RevOpt.getRevMaxCivs()
-		if self.maxCivs <= 0:
+		if self.maxCivs <= 0 or self.maxCivs > GC.getMAX_PC_PLAYERS():
 			self.maxCivs = GC.getMAX_PC_PLAYERS()
 
 		self.offerDefectToRevs = RevOpt.isOfferDefectToRevs()
@@ -3913,7 +3913,6 @@ class Revolution:
 					cultPlayer = None
 
 			# Don't incarnate as either of these
-			iMinor = CvUtil.findInfoTypeNum(GC.getCivilizationInfo,GC.getNumCivilizationInfos(),RevDefs.sXMLMinor)
 			iBarbarian = CvUtil.findInfoTypeNum(GC.getCivilizationInfo,GC.getNumCivilizationInfos(),RevDefs.sXMLBarbarian)
 			# Civs not currently in the game
 			availableCivs = []
@@ -3921,22 +3920,21 @@ class Revolution:
 			similarStyleCivs = []
 			similarOwnerStyleCivs = []
 			for civType in xrange(GC.getNumCivilizationInfos()):
-				if( not civType == iBarbarian ) :
-					if( not civType == iMinor ) :
-						taken = False
-						for i in xrange(GC.getMAX_PC_PLAYERS()):
-							if( civType == GC.getPlayer(i).getCivilizationType() ) :
-								# Switch in preparation for defining regions of the world for different rebel civ types
-								if( GC.getPlayer(i).isEverAlive() or RevData.revObjectExists(GC.getPlayer(i)) ) :
-									taken = True
-									break
-						if( not taken ) :
-							availableCivs.append(civType)
-							if( not cultPlayer == None ) :
-								if( GC.getCivilizationInfo( cultPlayer.getCivilizationType() ).getArtStyleType() == GC.getCivilizationInfo(civType).getArtStyleType() ) :
-									similarStyleCivs.append(civType)
-							if( GC.getCivilizationInfo( owner.getCivilizationType() ).getArtStyleType() == GC.getCivilizationInfo(civType).getArtStyleType() ) :
-								similarOwnerStyleCivs.append(civType)
+				if not civType == iBarbarian:
+					taken = False
+					for i in xrange(GC.getMAX_PC_PLAYERS()):
+						if( civType == GC.getPlayer(i).getCivilizationType() ) :
+							# Switch in preparation for defining regions of the world for different rebel civ types
+							if( GC.getPlayer(i).isEverAlive() or RevData.revObjectExists(GC.getPlayer(i)) ) :
+								taken = True
+								break
+					if( not taken ) :
+						availableCivs.append(civType)
+						if( not cultPlayer == None ) :
+							if( GC.getCivilizationInfo( cultPlayer.getCivilizationType() ).getArtStyleType() == GC.getCivilizationInfo(civType).getArtStyleType() ) :
+								similarStyleCivs.append(civType)
+						if( GC.getCivilizationInfo( owner.getCivilizationType() ).getArtStyleType() == GC.getCivilizationInfo(civType).getArtStyleType() ) :
+							similarOwnerStyleCivs.append(civType)
 
 			if( len(availableCivs) < 1 ) :
 				if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - No available civs, spawning as Barbarians")

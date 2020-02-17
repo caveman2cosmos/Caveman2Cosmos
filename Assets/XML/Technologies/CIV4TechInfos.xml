@@ -36930,28 +36930,5 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_MP_FUTURE</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/Future_Tech.dds,Art/Interface/Buttons/TechTree_Atlas.dds,2,4</Button>
 		</TechInfo>
-		<!-- ++++++++++++++++++++++++++++++++++++++++++END OF TECH TREE+++++++++++++++++++++++++++++++++++++++++++ -->
-		<TechInfo>
-			<Type>TECH_DUMMY</Type>
-			<Description>TXT_KEY_TECH_DUMMY</Description>
-			<Civilopedia>TXT_KEY_TECH_DUMMY_PEDIA</Civilopedia>
-			<iCost>-1</iCost>
-			<Era>ERA_ANCIENT</Era>
-			<bDisable>1</bDisable>
-			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
-			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-		</TechInfo>
-		<TechInfo>
-			<Type>TECH_DUMMY_NEANDERTHAL</Type>
-			<Description>TXT_KEY_TECH_DUMMY_NEANDERTHAL</Description>
-			<Civilopedia>TXT_KEY_TECH_DUMMY_PEDIA</Civilopedia>
-			<iCost>-1</iCost>
-			<Era>ERA_ANCIENT</Era>
-			<bDisable>1</bDisable>
-			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
-			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-		</TechInfo>
 	</TechInfos>
 </Civ4TechInfos>

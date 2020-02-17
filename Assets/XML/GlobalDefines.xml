@@ -119,8 +119,8 @@
 		<DefineTextVal>TERRAIN_GRASS</DefineTextVal>
 	</Define>
 	<Define>
-		<DefineName>CAPITAL_BUILDINGCLASS</DefineName>
-		<DefineTextVal>BUILDINGCLASS_PALACE</DefineTextVal>
+		<DefineName>CAPITAL_BUILDING</DefineName><!-- Currently unused, consider replacing buildingtag bCaptial with this global define; we only have one capital building anyhow.-->
+		<DefineTextVal>BUILDING_PALACE</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>DEFAULT_SPECIALIST</DefineName>

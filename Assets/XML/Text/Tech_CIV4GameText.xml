@@ -7685,20 +7685,6 @@ During wartime, some coast guard organizations might have responsibilities in ha
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_DUMMY</Tag>
-		<English>|Dummy Tech</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_DUMMY_NEANDERTHAL</Tag>
-		<English>|Dummy Neanderthal Tech</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_DUMMY_PEDIA</Tag>
-		<English>The dummy tech can't be researched. It is used as a requirement for things that isn't available in the regular form.</English>
-		<French>Cette tech. ne peut pas être recherchée. Utilisé uniquement en pré-requis pour certaines promotions spéciales (issues d'événement ou de merveille).</French>
-		<Polish>Ta technologia nie może zostać odkryta. Jest używana do spejalnych promocji prznawanych przez cuda lub wydarzenia w grze.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TECH_DYSTOPIA_PATHOGENS</Tag>
 		<English>Dystopia Pathogens</English>
 		<French>Pathogènes dystopiques</French>

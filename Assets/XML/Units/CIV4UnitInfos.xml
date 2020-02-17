@@ -5358,7 +5358,7 @@ Base XP gained when defending
 			<ForceObsoleteTech>TECH_HUNTING</ForceObsoleteTech>
 			<ForceObsoleteUnitClasses>
 				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_CHASER</ForceObsoleteUnitClassType>
+					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_GATHERER</ForceObsoleteUnitClassType>
 					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
 				</ForceObsoleteUnitClass>
 			</ForceObsoleteUnitClasses>
@@ -5460,7 +5460,7 @@ Base XP gained when defending
 			<ForceObsoleteTech>TECH_HUNTING_TACTICS</ForceObsoleteTech>
 			<ForceObsoleteUnitClasses>
 				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_TRACKER</ForceObsoleteUnitClassType>
+					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_GATHERER</ForceObsoleteUnitClassType>
 					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
 				</ForceObsoleteUnitClass>
 			</ForceObsoleteUnitClasses>
@@ -5596,7 +5596,7 @@ Base XP gained when defending
 			<ForceObsoleteTech>TECH_BRONZE_WORKING</ForceObsoleteTech>
 			<ForceObsoleteUnitClasses>
 				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_HUNTER</ForceObsoleteUnitClassType>
+					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_GATHERER</ForceObsoleteUnitClassType>
 					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
 				</ForceObsoleteUnitClass>
 			</ForceObsoleteUnitClasses>
@@ -8330,13 +8330,13 @@ Base XP gained when defending
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_WARRIOR</UnitClassUpgradeType>
+					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL</UnitClassUpgradeType>
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<ForceObsoleteUnitClasses>
 				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_WARRIOR</ForceObsoleteUnitClassType>
+					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL</ForceObsoleteUnitClassType>
 					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
 				</ForceObsoleteUnitClass>
 			</ForceObsoleteUnitClasses>
@@ -56900,7 +56900,23 @@ Base XP gained when defending
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
-			<PrereqTech>TECH_DUMMY_NEANDERTHAL</PrereqTech>
+			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
+			<UnitClassUpgrades>
+				<UnitClassUpgrade>
+					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_WARRIOR</UnitClassUpgradeType>
+					<bUnitClassUpgrade>1</bUnitClassUpgrade>
+				</UnitClassUpgrade>
+			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<iCost>15</iCost>
 			<iMoves>1</iMoves>
@@ -56931,6 +56947,13 @@ Base XP gained when defending
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_WARRIOR</Description>
+			<Civilopedia>TXT_KEY_UNIT_NEANDERTHAL_WARRIOR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_NEANDERTHAL_WARRIOR_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -56947,14 +56970,7 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_WARRIOR</Description>
-			<Civilopedia>TXT_KEY_UNIT_NEANDERTHAL_WARRIOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NEANDERTHAL_WARRIOR_STRATEGY</Strategy>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<Domain>DOMAIN_LAND</Domain>
-			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<UnitAIs>
 				<UnitAI>
@@ -56968,9 +56984,17 @@ Base XP gained when defending
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
-			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
-			<iCost>33</iCost>
+			<PrereqTech>TECH_FINE_EDGED_TOOLS</PrereqTech>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_SPEARMAN</UnitClassUpgradeType>
@@ -56978,6 +57002,7 @@ Base XP gained when defending
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
+			<iCost>33</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
 			<iXPValueAttack>3</iXPValueAttack>
@@ -57006,6 +57031,13 @@ Base XP gained when defending
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_BRUTE</Description>
+			<Civilopedia>TXT_KEY_UNIT_BRUTE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_BRUTE_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -57021,10 +57053,6 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_BRUTE</Description>
-			<Civilopedia>TXT_KEY_UNIT_BRUTE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BRUTE_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<UnitAIs>
 				<UnitAI>
@@ -57052,10 +57080,16 @@ Base XP gained when defending
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_WARRIOR</UnitClassUpgradeType>
@@ -57102,6 +57136,13 @@ Base XP gained when defending
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_STONE_THROWER</Description>
+			<Civilopedia>TXT_KEY_UNIT_STONE_THROWER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_STONE_THROWER_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_THROWING</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -57120,13 +57161,6 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_STONE_THROWER</Description>
-			<Civilopedia>TXT_KEY_UNIT_STONE_THROWER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STONE_THROWER_STRATEGY</Strategy>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<UnitAIs>
 				<UnitAI>
@@ -57150,11 +57184,20 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_SLINGER</UnitClassUpgradeType>
@@ -57208,17 +57251,18 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_NEANDERTHAL_SLINGER</Class>
 			<Type>UNIT_NEANDERTHAL_SLINGER</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_SLINGER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SLINGER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_SLINGER_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Domain>DOMAIN_LAND</Domain>
 			<Combat>UNITCOMBAT_THROWING</Combat>
 			<SubCombatTypes>
@@ -57259,7 +57303,16 @@ Base XP gained when defending
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_BINDING</PrereqTech>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_ARCHER</UnitClassUpgradeType>
@@ -57267,7 +57320,6 @@ Base XP gained when defending
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iCost>46</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>3</iCombat>
@@ -57315,17 +57367,18 @@ Base XP gained when defending
 			<Class>UNITCLASS_NEANDERTHAL_WATCHER</Class>
 			<Type>UNIT_NEANDERTHAL_WATCHER</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_WATCHER</Description>
 			<Civilopedia>TXT_KEY_UNIT_WATCHER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_WATCHER_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Domain>DOMAIN_LAND</Domain>
 			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
 			<SubCombatTypes>
@@ -57388,7 +57441,16 @@ Base XP gained when defending
 				</FreePromotion>
 			</FreePromotions>
 			<PrereqTech>TECH_DECEPTION</PrereqTech>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LOOKOUT_POST</BuildingType>
 				<BuildingType>BUILDING_SENTRY_POST</BuildingType>
@@ -57400,7 +57462,6 @@ Base XP gained when defending
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iCost>36</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>3</iCombat>
@@ -57446,17 +57507,18 @@ Base XP gained when defending
 			<Class>UNITCLASS_NEANDERTHAL_ENFORCER</Class>
 			<Type>UNIT_NEANDERTHAL_ENFORCER</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_ENFORCER</Description>
 			<Civilopedia>TXT_KEY_UNIT_ENFORCERS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ENFORCERS_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Domain>DOMAIN_LAND</Domain>
 			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
 			<SubCombatTypes>
@@ -57521,7 +57583,16 @@ Base XP gained when defending
 				</FreePromotion>
 			</FreePromotions>
 			<PrereqTech>TECH_CONDUCT</PrereqTech>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SENTRY_POST</BuildingType>
 				<BuildingType>BUILDING_TOWNWATCH</BuildingType>
@@ -57533,7 +57604,6 @@ Base XP gained when defending
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iCost>80</iCost>
 			<iExtraCost>2</iExtraCost>
 			<iMoves>1</iMoves>
@@ -57584,6 +57654,13 @@ Base XP gained when defending
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_WANDERER</Description>
+			<Civilopedia>TXT_KEY_UNIT_WANDERER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_WANDERER_STRATEGY</Strategy>
+			<Advisor>ADVISOR_GROWTH</Advisor>
 			<Combat>UNITCOMBAT_RECON</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -57604,29 +57681,7 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
 			<DefaultUnitAI>UNITAI_EXPLORE</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_WANDERER</Description>
-			<Civilopedia>TXT_KEY_UNIT_WANDERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WANDERER_STRATEGY</Strategy>
-			<Advisor>ADVISOR_GROWTH</Advisor>
-			<bNoBadGoodies>1</bNoBadGoodies>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bPillage>1</bPillage>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_SCOUT</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_CHASER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
@@ -57645,7 +57700,32 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<bNoBadGoodies>1</bNoBadGoodies>
+			<bMilitarySupport>1</bMilitarySupport>
+			<bMilitaryProduction>1</bMilitaryProduction>
+			<bPillage>1</bPillage>
 			<PrereqTech>TECH_NOMADIC_LIFESTYLE</PrereqTech>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
+			<UnitClassUpgrades>
+				<UnitClassUpgrade>
+					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_SCOUT</UnitClassUpgradeType>
+					<bUnitClassUpgrade>1</bUnitClassUpgrade>
+				</UnitClassUpgrade>
+				<UnitClassUpgrade>
+					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_CHASER</UnitClassUpgradeType>
+					<bUnitClassUpgrade>1</bUnitClassUpgrade>
+				</UnitClassUpgrade>
+			</UnitClassUpgrades>
+			<ForceObsoleteTech>TECH_PERSISTENCE_HUNTING</ForceObsoleteTech>
 			<iCost>16</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>2</iCombat>
@@ -57668,17 +57748,23 @@ Base XP gained when defending
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<ForceObsoleteTech>TECH_PERSISTENCE_HUNTING</ForceObsoleteTech>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_NEANDERTHAL_GATHERER</Class>
 			<Type>UNIT_NEANDERTHAL_GATHERER</Type>
+			<Capture>UNITCLASS_NEANDERTHAL_GATHERER</Capture>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Capture>UNITCLASS_GATHERER</Capture>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_GATHERER</Description>
+			<Civilopedia>TXT_KEY_UNIT_GATHERER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_GATHERER_STRATEGY</Strategy>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -57690,10 +57776,6 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_GATHERER</Description>
-			<Civilopedia>TXT_KEY_UNIT_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GATHERER_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<UnitAIs>
 				<UnitAI>
@@ -57703,11 +57785,17 @@ Base XP gained when defending
 			</UnitAIs>
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_WORKER</UnitClassUpgradeType>
@@ -57849,12 +57937,19 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_NEANDERTHAL_WISE_WOMAN</Class>
 			<Type>UNIT_NEANDERTHAL_WISE_WOMAN</Type>
+			<Special>SPECIALUNIT_PEOPLE</Special>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Special>SPECIALUNIT_PEOPLE</Special>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_WISE_WOMAN</Description>
+			<Civilopedia>TXT_KEY_UNIT_WISE_WOMAN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_WISE_WOMAN_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -57873,14 +57968,6 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_WISE_WOMAN</Description>
-			<Civilopedia>TXT_KEY_UNIT_WISE_WOMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WISE_WOMAN_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
 			<UnitAIs>
 				<UnitAI>
@@ -57898,6 +57985,16 @@ Base XP gained when defending
 			<bNoCapture>1</bNoCapture>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_HERBALISM</PrereqTech>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<PrereqBuilding>BUILDING_WILD_HERBS</PrereqBuilding>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
@@ -57970,18 +58067,18 @@ Base XP gained when defending
 			<Class>UNITCLASS_NEANDERTHAL_HEALER</Class>
 			<Type>UNIT_NEANDERTHAL_HEALER</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_HEALER</Description>
 			<Civilopedia>TXT_KEY_UNIT_HEALER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_HEALER_STRATEGY</Strategy>
-			<Domain>DOMAIN_LAND</Domain>
+			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -57999,6 +58096,7 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
 			<UnitAIs>
 				<UnitAI>
@@ -58016,7 +58114,16 @@ Base XP gained when defending
 			<bNoCapture>1</bNoCapture>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<PrereqBuilding>BUILDING_HEALERHUT</PrereqBuilding>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
@@ -58025,7 +58132,6 @@ Base XP gained when defending
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iCost>90</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iExtraCost>2</iExtraCost>
@@ -58079,12 +58185,19 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_NEANDERTHAL_SHEPHERD</Class>
 			<Type>UNIT_NEANDERTHAL_SHEPHERD</Type>
+			<Special>SPECIALUNIT_PEOPLE</Special>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Special>SPECIALUNIT_PEOPLE</Special>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_SHEPHERD</Description>
+			<Civilopedia>TXT_KEY_UNIT_SHEPHERD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_SHEPHERD_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -58103,37 +58216,7 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
 			<DefaultUnitAI>UNITAI_HEALER</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_SHEPHERD</Description>
-			<Civilopedia>TXT_KEY_UNIT_SHEPHERD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SHEPHERD_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<iNumHealSupport>4</iNumHealSupport>
-			<HealUnitCombatTypes>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
-					<iHeal>5</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
-					<iHeal>2</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-			</HealUnitCombatTypes>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_VET</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_HEALER</UnitAIType>
@@ -58144,8 +58227,10 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<bOnlyDefensive>1</bOnlyDefensive>
+			<bMilitarySupport>1</bMilitarySupport>
+			<bMilitaryProduction>1</bMilitaryProduction>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_BISON</BonusType>
 				<BonusType>BONUS_DEER</BonusType>
@@ -58164,10 +58249,40 @@ Base XP gained when defending
 				<BonusType>BONUS_HORSE</BonusType>
 				<BonusType>BONUS_LLAMA</BonusType>
 			</PrereqBonuses>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
+			<UnitClassUpgrades>
+				<UnitClassUpgrade>
+					<UnitClassUpgradeType>UNITCLASS_VET</UnitClassUpgradeType>
+					<bUnitClassUpgrade>1</bUnitClassUpgrade>
+				</UnitClassUpgrade>
+			</UnitClassUpgrades>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<iCost>129</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iMoves>1</iMoves>
 			<iCombat>3</iCombat>
+			<iNumHealSupport>4</iNumHealSupport>
+			<HealUnitCombatTypes>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
+					<iHeal>5</iHeal>
+					<iAdjacentHeal>0</iAdjacentHeal>
+				</HealUnitCombatType>
+				<HealUnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
+					<iHeal>2</iHeal>
+					<iAdjacentHeal>0</iAdjacentHeal>
+				</HealUnitCombatType>
+			</HealUnitCombatTypes>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iExtraCost>1</iExtraCost>
 			<iAsset>2</iAsset>
@@ -58209,6 +58324,13 @@ Base XP gained when defending
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_TRAINEDDOG</Description>
+			<Civilopedia>TXT_KEY_UNIT_WARDOG_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_TRAINEDDOG_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -58231,14 +58353,6 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_TRAINEDDOG</Description>
-			<Civilopedia>TXT_KEY_UNIT_WARDOG_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TRAINEDDOG_STRATEGY</Strategy>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
-			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_PILLAGE_COUNTER</DefaultUnitAI>
 			<UnitAIs>
 				<UnitAI>
@@ -58266,10 +58380,19 @@ Base XP gained when defending
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bPassage>1</bPassage>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_DOG</BonusType>
 			</PrereqBonuses>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<PrereqBuilding>BUILDING_DOG_BREEDER</PrereqBuilding>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
@@ -58277,6 +58400,7 @@ Base XP gained when defending
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<iCost>92</iCost>
 			<iMoves>2</iMoves>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
@@ -58379,6 +58503,13 @@ Base XP gained when defending
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_KAYAK</Description>
+			<Civilopedia>TXT_KEY_UNIT_KAYAK_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_KAYAK_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_RECON</SubCombatType>
@@ -58398,29 +58529,7 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
 			<DefaultUnitAI>UNITAI_EXPLORE_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_KAYAK</Description>
-			<Civilopedia>TXT_KEY_UNIT_KAYAK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KAYAK_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bNoBadGoodies>1</bNoBadGoodies>
-			<bRivalTerritory>1</bRivalTerritory>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bPillage>1</bPillage>
-			<bMechanized>1</bMechanized>
-			<bRenderBelowWater>1</bRenderBelowWater>
-			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_OUTRIGGER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_SEA</UnitAIType>
@@ -58439,14 +58548,38 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<PrereqBuilding>BUILDING_CANOEBUILDERS_HUT</PrereqBuilding>
+			<bNoBadGoodies>1</bNoBadGoodies>
+			<bRivalTerritory>1</bRivalTerritory>
+			<bMilitarySupport>1</bMilitarySupport>
+			<bMilitaryProduction>1</bMilitaryProduction>
+			<bPillage>1</bPillage>
+			<bMechanized>1</bMechanized>
+			<bRenderBelowWater>1</bRenderBelowWater>
+			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_TIMBER</BonusType>
 				<BonusType>BONUS_BAMBOO</BonusType>
 				<BonusType>BONUS_WOOD</BonusType>
 			</PrereqBonuses>
+			<PrereqBuilding>BUILDING_CANOEBUILDERS_HUT</PrereqBuilding>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
+			<UnitClassUpgrades>
+				<UnitClassUpgrade>
+					<UnitClassUpgradeType>UNITCLASS_OUTRIGGER</UnitClassUpgradeType>
+					<bUnitClassUpgrade>1</bUnitClassUpgrade>
+				</UnitClassUpgrade>
+			</UnitClassUpgrades>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<iCost>135</iCost>
 			<iMinAreaSize>5</iMinAreaSize>
 			<iMoves>2</iMoves>
@@ -58499,6 +58632,13 @@ Base XP gained when defending
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_WAR_CANOE</Description>
+			<Civilopedia>TXT_KEY_UNIT_WAR_CANOE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_WAR_CANOE_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
@@ -58521,27 +58661,7 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_WAR_CANOE</Description>
-			<Civilopedia>TXT_KEY_UNIT_WAR_CANOE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WAR_CANOE_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bPillage>1</bPillage>
-			<bMechanized>1</bMechanized>
-			<bRenderBelowWater>1</bRenderBelowWater>
-			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_WARGALLEY</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_SEA</UnitAIType>
@@ -58556,9 +58676,31 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<PrereqBuilding>BUILDING_CANOEBUILDERS_HUT</PrereqBuilding>
+			<bMilitarySupport>1</bMilitarySupport>
+			<bMilitaryProduction>1</bMilitaryProduction>
+			<bPillage>1</bPillage>
+			<bMechanized>1</bMechanized>
+			<bRenderBelowWater>1</bRenderBelowWater>
+			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqTech>TECH_HARPOON_MAKING</PrereqTech>
+			<PrereqBuilding>BUILDING_CANOEBUILDERS_HUT</PrereqBuilding>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
+			<UnitClassUpgrades>
+				<UnitClassUpgrade>
+					<UnitClassUpgradeType>UNITCLASS_WARGALLEY</UnitClassUpgradeType>
+					<bUnitClassUpgrade>1</bUnitClassUpgrade>
+				</UnitClassUpgrade>
+			</UnitClassUpgrades>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<iCost>140</iCost>
 			<iMinAreaSize>5</iMinAreaSize>
 			<iMoves>2</iMoves>
@@ -58608,6 +58750,13 @@ Base XP gained when defending
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_CANOE</Description>
+			<Civilopedia>TXT_KEY_UNIT_CANOE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_CANOE_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TRANSPORT</SubCombatType>
@@ -58628,27 +58777,7 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_CANOE</Description>
-			<Civilopedia>TXT_KEY_UNIT_CANOE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CANOE_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bPillage>1</bPillage>
-			<bMechanized>1</bMechanized>
-			<bRenderBelowWater>1</bRenderBelowWater>
-			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_GALLEY</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ASSAULT_SEA</UnitAIType>
@@ -58667,9 +58796,31 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<PrereqBuilding>BUILDING_CANOEBUILDERS_HUT</PrereqBuilding>
+			<bMilitarySupport>1</bMilitarySupport>
+			<bMilitaryProduction>1</bMilitaryProduction>
+			<bPillage>1</bPillage>
+			<bMechanized>1</bMechanized>
+			<bRenderBelowWater>1</bRenderBelowWater>
+			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
+			<PrereqBuilding>BUILDING_CANOEBUILDERS_HUT</PrereqBuilding>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
+			<UnitClassUpgrades>
+				<UnitClassUpgrade>
+					<UnitClassUpgradeType>UNITCLASS_GALLEY</UnitClassUpgradeType>
+					<bUnitClassUpgrade>1</bUnitClassUpgrade>
+				</UnitClassUpgrade>
+			</UnitClassUpgrades>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<iCost>160</iCost>
 			<iMinAreaSize>5</iMinAreaSize>
 			<iMoves>1</iMoves>
@@ -58721,6 +58872,13 @@ Base XP gained when defending
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_RAFT</Description>
+			<Civilopedia>TXT_KEY_UNIT_RAFT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_RAFT_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
@@ -58741,31 +58899,7 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
 			<DefaultUnitAI>UNITAI_ASSAULT_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_RAFT</Description>
-			<Civilopedia>TXT_KEY_UNIT_RAFT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_RAFT_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bPillage>1</bPillage>
-			<bMechanized>1</bMechanized>
-			<bRenderBelowWater>1</bRenderBelowWater>
-			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_CANOE</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_WAR_CANOE</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ASSAULT_SEA</UnitAIType>
@@ -58784,7 +58918,12 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
+			<bMilitarySupport>1</bMilitarySupport>
+			<bMilitaryProduction>1</bMilitaryProduction>
+			<bPillage>1</bPillage>
+			<bMechanized>1</bMechanized>
+			<bRenderBelowWater>1</bRenderBelowWater>
+			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqTech>TECH_RAFT_BUILDING</PrereqTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_TIMBER</BonusType>
@@ -58792,6 +58931,27 @@ Base XP gained when defending
 				<BonusType>BONUS_WOOD</BonusType>
 				<BonusType>BONUS_REEDS</BonusType>
 			</PrereqBonuses>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
+			<UnitClassUpgrades>
+				<UnitClassUpgrade>
+					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_CANOE</UnitClassUpgradeType>
+					<bUnitClassUpgrade>1</bUnitClassUpgrade>
+				</UnitClassUpgrade>
+				<UnitClassUpgrade>
+					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_WAR_CANOE</UnitClassUpgradeType>
+					<bUnitClassUpgrade>1</bUnitClassUpgrade>
+				</UnitClassUpgrade>
+			</UnitClassUpgrades>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<iCost>100</iCost>
 			<iMinAreaSize>5</iMinAreaSize>
 			<iMoves>1</iMoves>
@@ -58840,12 +59000,19 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_NEANDERTHAL_WORKBOAT</Class>
 			<Type>UNIT_NEANDERTHAL_WORKBOAT</Type>
+			<Capture>UNITCLASS_WORKBOAT</Capture>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Capture>UNITCLASS_WORKBOAT</Capture>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_WORK_BOAT</Description>
+			<Civilopedia>TXT_KEY_UNIT_WORK_BOAT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_WORK_BOAT_ANCIENT_STRATEGY</Strategy>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -58858,27 +59025,7 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
 			<DefaultUnitAI>UNITAI_WORKER_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_WORK_BOAT</Description>
-			<Civilopedia>TXT_KEY_UNIT_WORK_BOAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORK_BOAT_ANCIENT_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bCanMoveImpassable>1</bCanMoveImpassable>
-			<bPrereqBonuses>1</bPrereqBonuses>
-			<bMechanized>1</bMechanized>
-			<bRenderBelowWater>1</bRenderBelowWater>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_CLASSIC_WORKBOAT</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER_SEA</UnitAIType>
@@ -58903,6 +59050,34 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
+			<bMilitarySupport>1</bMilitarySupport>
+			<bMilitaryProduction>1</bMilitaryProduction>
+			<bCanMoveImpassable>1</bCanMoveImpassable>
+			<bPrereqBonuses>1</bPrereqBonuses>
+			<bMechanized>1</bMechanized>
+			<bRenderBelowWater>1</bRenderBelowWater>
+			<PrereqTech>TECH_FISHING</PrereqTech>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
+			<UnitClassUpgrades>
+				<UnitClassUpgrade>
+					<UnitClassUpgradeType>UNITCLASS_CLASSIC_WORKBOAT</UnitClassUpgradeType>
+					<bUnitClassUpgrade>1</bUnitClassUpgrade>
+				</UnitClassUpgrade>
+			</UnitClassUpgrades>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
+			<iCost>96</iCost>
+			<iMoves>1</iMoves>
+			<bNoRevealMap>1</bNoRevealMap>
+			<iWorkRate>200</iWorkRate>
 			<Builds>
 				<Build>
 					<BuildType>BUILD_FISHING_BOATS</BuildType>
@@ -58937,12 +59112,6 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
-			<PrereqTech>TECH_FISHING</PrereqTech>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<iCost>96</iCost>
-			<iMoves>1</iMoves>
-			<bNoRevealMap>1</bNoRevealMap>
-			<iWorkRate>200</iWorkRate>
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
@@ -58979,12 +59148,19 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_NEANDERTHAL_LOG_RAM</Class>
 			<Type>UNIT_NEANDERTHAL_LOG_RAM</Type>
+			<Capture>UNITCLASS_LOG_RAM</Capture>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Capture>UNITCLASS_LOG_RAM</Capture>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_LOG_RAM</Description>
+			<Civilopedia>TXT_KEY_UNIT_LOG_RAM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_LOG_RAM_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -59006,29 +59182,7 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_LOG_RAM</Description>
-			<Civilopedia>TXT_KEY_UNIT_LOG_RAM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LOG_RAM_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bPillage>1</bPillage>
-			<bFirstStrikeImmune>1</bFirstStrikeImmune>
-			<bNoDefensiveBonus>1</bNoDefensiveBonus>
-			<bMechanized>1</bMechanized>
-			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_BATTERING_RAM</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
@@ -59041,8 +59195,32 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqBuilding>BUILDING_LUMBER_CAMP</PrereqBuilding>
+			<bMilitaryHappiness>1</bMilitaryHappiness>
+			<bMilitarySupport>1</bMilitarySupport>
+			<bMilitaryProduction>1</bMilitaryProduction>
+			<bPillage>1</bPillage>
+			<bFirstStrikeImmune>1</bFirstStrikeImmune>
+			<bNoDefensiveBonus>1</bNoDefensiveBonus>
+			<bMechanized>1</bMechanized>
+			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqTech>TECH_WARFARE</PrereqTech>
+			<PrereqBuilding>BUILDING_LUMBER_CAMP</PrereqBuilding>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
+			<UnitClassUpgrades>
+				<UnitClassUpgrade>
+					<UnitClassUpgradeType>UNITCLASS_BATTERING_RAM</UnitClassUpgradeType>
+					<bUnitClassUpgrade>1</bUnitClassUpgrade>
+				</UnitClassUpgrade>
+			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<iCost>165</iCost>
 			<iMoves>1</iMoves>
@@ -59091,6 +59269,13 @@ Base XP gained when defending
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_ELEPHANT_RIDER</Description>
+			<Civilopedia>TXT_KEY_UNIT_ELEPHANT_RIDER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_ELEPHANT_RIDER_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -59113,26 +59298,7 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_ELEPHANT_RIDER</Description>
-			<Civilopedia>TXT_KEY_UNIT_ELEPHANT_RIDER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ELEPHANT_RIDER_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bPillage>1</bPillage>
-			<bNoDefensiveBonus>1</bNoDefensiveBonus>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_WAR_ELEPHANT</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -59153,15 +59319,34 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqBuilding>BUILDING_ELEPHANT_TRAINER</PrereqBuilding>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
+			<bMilitaryHappiness>1</bMilitaryHappiness>
+			<bMilitarySupport>1</bMilitarySupport>
+			<bMilitaryProduction>1</bMilitaryProduction>
+			<bPillage>1</bPillage>
+			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_PACHYDERM_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<PrereqBonuses>
-				<BonusType>BONUS_ELEPHANT</BonusType>
-			</PrereqBonuses>
+			<BonusType>BONUS_ELEPHANT</BonusType>
+			<PrereqBuilding>BUILDING_ELEPHANT_TRAINER</PrereqBuilding>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
+			<UnitClassUpgrades>
+				<UnitClassUpgrade>
+					<UnitClassUpgradeType>UNITCLASS_WAR_ELEPHANT</UnitClassUpgradeType>
+					<bUnitClassUpgrade>1</bUnitClassUpgrade>
+				</UnitClassUpgrade>
+			</UnitClassUpgrades>
+			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
 			<iCost>190</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>9</iCombat>
@@ -59217,6 +59402,13 @@ Base XP gained when defending
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_OBSIDIAN_SPEARMAN</Description>
+			<Civilopedia>TXT_KEY_UNIT_OBSIDIAN_SPEARMAN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_OBSIDIAN_SPEARMAN_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -59233,25 +59425,7 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_OBSIDIAN_SPEARMAN</Description>
-			<Civilopedia>TXT_KEY_UNIT_OBSIDIAN_SPEARMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_OBSIDIAN_SPEARMAN_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bPillage>1</bPillage>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_SPEARMAN</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_RESERVE</UnitAIType>
@@ -59270,11 +59444,29 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<bMilitaryHappiness>1</bMilitaryHappiness>
+			<bMilitaryProduction>1</bMilitaryProduction>
+			<bMilitarySupport>1</bMilitarySupport>
+			<bPillage>1</bPillage>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
+			<BonusType>BONUS_OBSIDIAN</BonusType>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
+			<UnitClassUpgrades>
+				<UnitClassUpgrade>
+					<UnitClassUpgradeType>UNITCLASS_SPEARMAN</UnitClassUpgradeType>
+					<bUnitClassUpgrade>1</bUnitClassUpgrade>
+				</UnitClassUpgrade>
+			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<PrereqBonuses>
-				<BonusType>BONUS_OBSIDIAN</BonusType>
-			</PrereqBonuses>
 			<iCost>104</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
@@ -59321,6 +59513,13 @@ Base XP gained when defending
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_STONE_AGE_SPEARMAN</Description>
+			<Civilopedia>TXT_KEY_UNIT_STONE_AGE_SPEARMAN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_STONE_AGE_SPEARMAN_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -59338,25 +59537,7 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_STONE_AGE_SPEARMAN</Description>
-			<Civilopedia>TXT_KEY_UNIT_STONE_AGE_SPEARMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STONE_AGE_SPEARMAN_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bPillage>1</bPillage>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_OBSIDIAN_SPEARMAN</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_RESERVE</UnitAIType>
@@ -59375,7 +59556,27 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<bMilitaryHappiness>1</bMilitaryHappiness>
+			<bMilitaryProduction>1</bMilitaryProduction>
+			<bMilitarySupport>1</bMilitarySupport>
+			<bPillage>1</bPillage>
 			<PrereqTech>TECH_SPEAR_MAKING</PrereqTech>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
+			<UnitClassUpgrades>
+				<UnitClassUpgrade>
+					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_OBSIDIAN_SPEARMAN</UnitClassUpgradeType>
+					<bUnitClassUpgrade>1</bUnitClassUpgrade>
+				</UnitClassUpgrade>
+			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<iCost>78</iCost>
 			<iMoves>1</iMoves>
@@ -59427,6 +59628,13 @@ Base XP gained when defending
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_WOODEN_SPEARMAN</Description>
+			<Civilopedia>TXT_KEY_UNIT_WOODEN_SPEARMAN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_WOODEN_SPEARMAN_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -59443,25 +59651,7 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_WOODEN_SPEARMAN</Description>
-			<Civilopedia>TXT_KEY_UNIT_WOODEN_SPEARMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WOODEN_SPEARMAN_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bPillage>1</bPillage>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_STONE_AGE_SPEARMAN</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_RESERVE</UnitAIType>
@@ -59484,7 +59674,27 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<bMilitaryHappiness>1</bMilitaryHappiness>
+			<bMilitaryProduction>1</bMilitaryProduction>
+			<bMilitarySupport>1</bMilitarySupport>
+			<bPillage>1</bPillage>
 			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
+			<UnitClassUpgrades>
+				<UnitClassUpgrade>
+					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_STONE_AGE_SPEARMAN</UnitClassUpgradeType>
+					<bUnitClassUpgrade>1</bUnitClassUpgrade>
+				</UnitClassUpgrade>
+			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<iCost>70</iCost>
 			<iMoves>1</iMoves>
@@ -59527,6 +59737,13 @@ Base XP gained when defending
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_OBSIDIAN_SWORDSMAN</Description>
+			<Civilopedia>TXT_KEY_UNIT_OBSIDIAN_SWORDSMAN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_OBSIDIAN_SWORDSMAN_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -59544,14 +59761,6 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_OBSIDIAN_SWORDSMAN</Description>
-			<Civilopedia>TXT_KEY_UNIT_OBSIDIAN_SWORDSMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_OBSIDIAN_SWORDSMAN_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<UnitAIs>
 				<UnitAI>
@@ -59580,16 +59789,24 @@ Base XP gained when defending
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<PrereqBonuses>
-				<BonusType>BONUS_OBSIDIAN</BonusType>
-			</PrereqBonuses>
+			<BonusType>BONUS_OBSIDIAN</BonusType>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_LIGHT_SWORDSMAN</UnitClassUpgradeType>
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<iCost>120</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>7</iCombat>
@@ -59629,6 +59846,13 @@ Base XP gained when defending
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_OBSIDIAN_AXEMAN</Description>
+			<Civilopedia>TXT_KEY_UNIT_OBSIDIAN_AXEMAN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_OBSIDIAN_AXEMAN_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -59646,10 +59870,6 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_OBSIDIAN_AXEMAN</Description>
-			<Civilopedia>TXT_KEY_UNIT_OBSIDIAN_AXEMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_OBSIDIAN_AXEMAN_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<UnitAIs>
 				<UnitAI>
@@ -59677,21 +59897,25 @@ Base XP gained when defending
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<PrereqBonuses>
-				<BonusType>BONUS_OBSIDIAN</BonusType>
-			</PrereqBonuses>
+			<BonusType>BONUS_OBSIDIAN</BonusType>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_AXEMAN</UnitClassUpgradeType>
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<iCost>110</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
@@ -59737,6 +59961,13 @@ Base XP gained when defending
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_STONE_AGE_AXEMAN</Description>
+			<Civilopedia>TXT_KEY_UNIT_STONE_AGE_AXEMAN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_STONE_AGE_AXEMAN_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -59754,10 +59985,6 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_STONE_AGE_AXEMAN</Description>
-			<Civilopedia>TXT_KEY_UNIT_STONE_AGE_AXEMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STONE_AGE_AXEMAN_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<UnitAIs>
 				<UnitAI>
@@ -59785,11 +60012,17 @@ Base XP gained when defending
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
 			<PrereqTech>TECH_AXE_MAKING</PrereqTech>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_OBSIDIAN_AXEMAN</UnitClassUpgradeType>
@@ -59846,6 +60079,13 @@ Base XP gained when defending
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_OBSIDIAN_MACEMAN</Description>
+			<Civilopedia>TXT_KEY_UNIT_OBSIDIAN_MACEMAN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_OBSIDIAN_MACEMAN_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -59863,10 +60103,6 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_OBSIDIAN_MACEMAN</Description>
-			<Civilopedia>TXT_KEY_UNIT_OBSIDIAN_MACEMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_OBSIDIAN_MACEMAN_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<UnitAIs>
 				<UnitAI>
@@ -59890,21 +60126,25 @@ Base XP gained when defending
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
+			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
+			<BonusType>BONUS_OBSIDIAN</BonusType>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_EARLY_MACEMAN</UnitClassUpgradeType>
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<PrereqBonuses>
-				<BonusType>BONUS_OBSIDIAN</BonusType>
-			</PrereqBonuses>
 			<iCost>110</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
@@ -59950,6 +60190,13 @@ Base XP gained when defending
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_STONE_MACEMAN</Description>
+			<Civilopedia>TXT_KEY_UNIT_STONE_MACEMAN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_STONE_MACEMAN_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -59967,10 +60214,6 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_STONE_MACEMAN</Description>
-			<Civilopedia>TXT_KEY_UNIT_STONE_MACEMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STONE_MACEMAN_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<UnitAIs>
 				<UnitAI>
@@ -59998,11 +60241,17 @@ Base XP gained when defending
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
 			<PrereqTech>TECH_COMPOSITE_TOOLS</PrereqTech>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_OBSIDIAN_MACEMAN</UnitClassUpgradeType>
@@ -60063,6 +60312,13 @@ Base XP gained when defending
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_HUNTER</Description>
+			<Civilopedia>TXT_KEY_UNIT_HUNTER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_HUNTER_STRATEGY</Strategy>
+			<Advisor>ADVISOR_GROWTH</Advisor>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -60083,19 +60339,7 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
 			<DefaultUnitAI>UNITAI_HUNTER</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_HUNTER</Description>
-			<Civilopedia>TXT_KEY_UNIT_HUNTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HUNTER_STRATEGY</Strategy>
-			<Advisor>ADVISOR_GROWTH</Advisor>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bAssassin>1</bAssassin>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_HUNTER</UnitAIType>
@@ -60116,16 +60360,42 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
+			<UnitCombatTargets>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+			</UnitCombatTargets>
+			<FreePromotions>
+				<FreePromotion>
+					<PromotionType>PROMOTION_HUNTING_SIGHT1</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+			</FreePromotions>
+			<bMilitaryHappiness>1</bMilitaryHappiness>
+			<bMilitarySupport>1</bMilitarySupport>
+			<bMilitaryProduction>1</bMilitaryProduction>
+			<bAssassin>1</bAssassin>
 			<PrereqTech>TECH_HUNTING_TACTICS</PrereqTech>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<iCost>125</iCost>
-			<iMoves>2</iMoves>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_RANGER</UnitClassUpgradeType>
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
+			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
+			<iCost>125</iCost>
+			<iMoves>2</iMoves>
 			<iCombat>5</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
@@ -60145,19 +60415,7 @@ Base XP gained when defending
 					<EarlyArtDefineTag>ART_DEF_UNIT_NEANDERTHAL_HUNTER</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
-			<UnitCombatTargets>
-				<UnitCombatTarget>
-					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
-					<bUnitCombatTarget>1</bUnitCombatTarget>
-				</UnitCombatTarget>
-			</UnitCombatTargets>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_HUNTING_SIGHT1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_NEANDERTHAL_TRACKER</Class>
@@ -60167,6 +60425,13 @@ Base XP gained when defending
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_TRACKER</Description>
+			<Civilopedia>TXT_KEY_UNIT_HUNTER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_HUNTER_STRATEGY</Strategy>
+			<Advisor>ADVISOR_GROWTH</Advisor>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -60187,10 +60452,6 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_TRACKER</Description>
-			<Civilopedia>TXT_KEY_UNIT_HUNTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HUNTER_STRATEGY</Strategy>
-			<Advisor>ADVISOR_GROWTH</Advisor>
 			<DefaultUnitAI>UNITAI_HUNTER</DefaultUnitAI>
 			<UnitAIs>
 				<UnitAI>
@@ -60216,11 +60477,17 @@ Base XP gained when defending
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bAssassin>1</bAssassin>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_HUNTER</UnitClassUpgradeType>
@@ -60265,6 +60532,13 @@ Base XP gained when defending
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_CHASER</Description>
+			<Civilopedia>TXT_KEY_UNIT_CHASER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_CHASER_STRATEGY</Strategy>
+			<Advisor>ADVISOR_GROWTH</Advisor>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -60280,10 +60554,6 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_CHASER</Description>
-			<Civilopedia>TXT_KEY_UNIT_CHASER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CHASER_STRATEGY</Strategy>
-			<Advisor>ADVISOR_GROWTH</Advisor>
 			<DefaultUnitAI>UNITAI_HUNTER</DefaultUnitAI>
 			<UnitAIs>
 				<UnitAI>
@@ -60301,23 +60571,29 @@ Base XP gained when defending
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bAssassin>1</bAssassin>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
-			<PrereqTech>TECH_PERSISTENCE_HUNTING</PrereqTech>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_TRACKER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
 			<FreePromotions>
 				<FreePromotion>
 					<PromotionType>PROMOTION_BY_THE_HORNS</PromotionType>
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
+			<PrereqTech>TECH_PERSISTENCE_HUNTING</PrereqTech>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
+			<UnitClassUpgrades>
+				<UnitClassUpgrade>
+					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_TRACKER</UnitClassUpgradeType>
+					<bUnitClassUpgrade>1</bUnitClassUpgrade>
+				</UnitClassUpgrade>
+			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_HUNTING</ForceObsoleteTech>
 			<iCost>43</iCost>
 			<iMoves>2</iMoves>
@@ -60345,12 +60621,19 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_NEANDERTHAL_SCOUT</Class>
 			<Type>UNIT_NEANDERTHAL_SCOUT</Type>
+			<Special>SPECIALUNIT_PEOPLE</Special>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Special>SPECIALUNIT_PEOPLE</Special>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_SCOUT</Description>
+			<Civilopedia>TXT_KEY_UNIT_SCOUT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_SCOUT_STRATEGY</Strategy>
+			<Advisor>ADVISOR_GROWTH</Advisor>
 			<Combat>UNITCOMBAT_RECON</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -60371,26 +60654,7 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
 			<DefaultUnitAI>UNITAI_EXPLORE</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_SCOUT</Description>
-			<Civilopedia>TXT_KEY_UNIT_SCOUT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SCOUT_STRATEGY</Strategy>
-			<Advisor>ADVISOR_GROWTH</Advisor>
-			<bNoBadGoodies>1</bNoBadGoodies>
-			<bOnlyDefensive>1</bOnlyDefensive>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_GUIDE</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
-			<bPillage>1</bPillage>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
@@ -60415,7 +60679,28 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
+			<bNoBadGoodies>1</bNoBadGoodies>
+			<bOnlyDefensive>1</bOnlyDefensive>
+			<bMilitarySupport>1</bMilitarySupport>
+			<bMilitaryProduction>1</bMilitaryProduction>
+			<bPillage>1</bPillage>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
+			<UnitClassUpgrades>
+				<UnitClassUpgrade>
+					<UnitClassUpgradeType>UNITCLASS_GUIDE</UnitClassUpgradeType>
+					<bUnitClassUpgrade>1</bUnitClassUpgrade>
+				</UnitClassUpgrade>
+			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<iCost>30</iCost>
 			<iMoves>2</iMoves>

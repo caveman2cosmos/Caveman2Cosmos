@@ -280,7 +280,16 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<BonusType>BONUS_NEANDERTHAL</BonusType>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_MAMMOTH_RIDER</Description>
 			<Civilopedia>TXT_KEY_UNIT_TRAINED_MAMMOTH_PEDIA</Civilopedia>

@@ -394,9 +394,9 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("GLOBAL_WARMING_TERRAIN", idx);
 
-		SetGlobalDefine("CAPITAL_BUILDINGCLASS", szVal);
+		SetGlobalDefine("CAPITAL_BUILDING", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("CAPITAL_BUILDINGCLASS", idx);
+		GC.getDefinesVarSystem()->SetValue("CAPITAL_BUILDING", idx);
 
 		SetGlobalDefine("DEFAULT_SPECIALIST", szVal);
 		idx = GetInfoClass(szVal);

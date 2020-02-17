@@ -7,67 +7,268 @@
 <Civ4BuildingClassInfos xmlns="x-schema:../Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingClassInfos>
 		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_CULTURE_NATIVE</Type>
-			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE</Description>
+			<Type>BUILDINGCLASS_CULTURE_ACTIVE_AFRICAN</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_AFRICAN</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<DefaultBuilding>BUILDING_CULTURE_ACTIVE_AFRICAN</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_GOOD_AFRICAN</Type>
-			<Description>TXT_KEY_BUILDING_GOOD_AFRICAN</Description>
+			<Type>BUILDINGCLASS_CULTURE_ACTIVE_ASIAN</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_ASIAN</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<DefaultBuilding>BUILDING_GOOD_AFRICAN</DefaultBuilding>
+			<DefaultBuilding>BUILDING_CULTURE_ACTIVE_ASIAN</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_GOOD_NAMERICAN</Type>
-			<Description>TXT_KEY_BUILDING_GOOD_NAMERICAN</Description>
+			<Type>BUILDINGCLASS_CULTURE_ACTIVE_EUROPEAN</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_EUROPEAN</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<DefaultBuilding>BUILDING_GOOD_NAMERICAN</DefaultBuilding>
+			<DefaultBuilding>BUILDING_CULTURE_ACTIVE_EUROPEAN</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_GOOD_SAMERICAN</Type>
-			<Description>TXT_KEY_BUILDING_GOOD_SAMERICAN</Description>
+			<Type>BUILDINGCLASS_CULTURE_ACTIVE_MIDDLE_EASTERN</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<DefaultBuilding>BUILDING_GOOD_SAMERICAN</DefaultBuilding>
+			<DefaultBuilding>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_GOOD_ASIAN</Type>
-			<Description>TXT_KEY_BUILDING_GOOD_ASIAN</Description>
+			<Type>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_NEANDERTHAL</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<DefaultBuilding>BUILDING_GOOD_ASIAN</DefaultBuilding>
+			<DefaultBuilding>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_GOOD_OCEANIAN</Type>
-			<Description>TXT_KEY_BUILDING_GOOD_OCEANIAN</Description>
+			<Type>BUILDINGCLASS_CULTURE_ACTIVE_NORTH_AMERICAN</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<DefaultBuilding>BUILDING_GOOD_OCEANIAN</DefaultBuilding>
+			<DefaultBuilding>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_GOOD_EUROPEAN</Type>
-			<Description>TXT_KEY_BUILDING_GOOD_EUROPEAN</Description>
+			<Type>BUILDINGCLASS_CULTURE_ACTIVE_OCEANIAN</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_OCEANIAN</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<DefaultBuilding>BUILDING_GOOD_EUROPEAN</DefaultBuilding>
+			<DefaultBuilding>BUILDING_CULTURE_ACTIVE_OCEANIAN</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_GOOD_MIDDLEEASTERN</Type>
-			<Description>TXT_KEY_BUILDING_GOOD_MIDDLEEASTERN</Description>
+			<Type>BUILDINGCLASS_CULTURE_ACTIVE_SOUTH_AMERICAN</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<DefaultBuilding>BUILDING_GOOD_MIDDLEEASTERN</DefaultBuilding>
+			<DefaultBuilding>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_CULTURE_ADOPTED_AFRICAN</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_AFRICAN</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNoLimit>1</bNoLimit>
+			<DefaultBuilding>BUILDING_CULTURE_ADOPTED_AFRICAN</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_CULTURE_ADOPTED_ASIAN</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_ASIAN</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNoLimit>1</bNoLimit>
+			<DefaultBuilding>BUILDING_CULTURE_ADOPTED_ASIAN</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_CULTURE_ADOPTED_EUROPEAN</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_EUROPEAN</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNoLimit>1</bNoLimit>
+			<DefaultBuilding>BUILDING_CULTURE_ADOPTED_EUROPEAN</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_CULTURE_ADOPTED_MIDDLE_EASTERN</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_MIDDLE_EASTERN</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNoLimit>1</bNoLimit>
+			<DefaultBuilding>BUILDING_CULTURE_ADOPTED_MIDDLE_EASTERN</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_CULTURE_ADOPTED_NEANDERTHAL</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_NEANDERTHAL</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNoLimit>1</bNoLimit>
+			<DefaultBuilding>BUILDING_CULTURE_ADOPTED_NEANDERTHAL</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_CULTURE_ADOPTED_NORTH_AMERICAN</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_NORTH_AMERICAN</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNoLimit>1</bNoLimit>
+			<DefaultBuilding>BUILDING_CULTURE_ADOPTED_NORTH_AMERICAN</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_CULTURE_ADOPTED_OCEANIAN</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_OCEANIAN</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNoLimit>1</bNoLimit>
+			<DefaultBuilding>BUILDING_CULTURE_ADOPTED_OCEANIAN</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_CULTURE_ADOPTED_SOUTH_AMERICAN</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_SOUTH_AMERICAN</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNoLimit>1</bNoLimit>
+			<DefaultBuilding>BUILDING_CULTURE_ADOPTED_SOUTH_AMERICAN</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_CULTURE_LOCAL_AFRICAN</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_AFRICAN</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<DefaultBuilding>BUILDING_CULTURE_LOCAL_AFRICAN</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_CULTURE_LOCAL_ASIAN</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_ASIAN</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<DefaultBuilding>BUILDING_CULTURE_LOCAL_ASIAN</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_CULTURE_LOCAL_EUROPEAN</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_EUROPEAN</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<DefaultBuilding>BUILDING_CULTURE_LOCAL_EUROPEAN</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_CULTURE_LOCAL_MIDDLE_EASTERN</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<DefaultBuilding>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_NEANDERTHAL</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<DefaultBuilding>BUILDING_CULTURE_LOCAL_NEANDERTHAL</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_CULTURE_LOCAL_NORTH_AMERICAN</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<DefaultBuilding>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_CULTURE_LOCAL_OCEANIAN</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_OCEANIAN</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<DefaultBuilding>BUILDING_CULTURE_LOCAL_OCEANIAN</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_CULTURE_LOCAL_SOUTH_AMERICAN</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<DefaultBuilding>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_CULTURE_NATIVE_AFRICAN</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_AFRICAN</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<DefaultBuilding>BUILDING_CULTURE_NATIVE_AFRICAN</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_CULTURE_NATIVE_ASIAN</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_ASIAN</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<DefaultBuilding>BUILDING_CULTURE_NATIVE_ASIAN</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_CULTURE_NATIVE_EUROPEAN</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_EUROPEAN</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<DefaultBuilding>BUILDING_CULTURE_NATIVE_EUROPEAN</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_CULTURE_NATIVE_MIDDLE_EASTERN</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<DefaultBuilding>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_CULTURE_NATIVE_NEANDERTHAL</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_NEANDERTHAL</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<DefaultBuilding>BUILDING_CULTURE_NATIVE_NEANDERTHAL</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_CULTURE_NATIVE_NORTH_AMERICAN</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<DefaultBuilding>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_CULTURE_NATIVE_OCEANIAN</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_OCEANIAN</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<DefaultBuilding>BUILDING_CULTURE_NATIVE_OCEANIAN</DefaultBuilding>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_CULTURE_NATIVE_SOUTH_AMERICAN</Type>
+			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<DefaultBuilding>BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NEANDERTHAL_EMBASSY</Type>

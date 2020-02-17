@@ -224,7 +224,6 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 {
 	PROFILE_FUNC();
 
-
 	//--------------------------------
 	// Log this event
 	if (GC.getLogging())
@@ -248,11 +247,6 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 
 	//--------------------------------
 	// Init other game data
-/************************************************************************************************/
-/* Afforess	                  Start		 04/13/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	bool bFound = false;
 	if (GC.getGameINLINE().isOption(GAMEOPTION_PERSONALIZED_MAP) && GET_PLAYER(getOwnerINLINE()).isModderOption(MODDEROPTION_USE_LANDMARK_NAMES))
 	{
@@ -271,11 +265,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 			}
 		}
 	}
-	if (!bFound)
-		/************************************************************************************************/
-		/* Afforess	                     END                                                            */
-		/************************************************************************************************/
-		setName(GET_PLAYER(getOwnerINLINE()).getNewCityName());
+	if (!bFound) setName(GET_PLAYER(getOwnerINLINE()).getNewCityName());
 
 	setEverOwned(getOwnerINLINE(), true);
 
@@ -292,7 +282,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 
 	if (!GC.getGameINLINE().isOption(GAMEOPTION_1_CITY_TILE_FOUNDING))
 	{
-		int iAdjCulture = GC.getDefineINT("FREE_CITY_ADJACENT_CULTURE");
+		const int iAdjCulture = GC.getDefineINT("FREE_CITY_ADJACENT_CULTURE");
 		for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
 		{
 			CvPlot* pAdjacentPlot = plotDirection(getX_INLINE(), getY_INLINE(), ((DirectionTypes)iI));
@@ -308,7 +298,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 		}
 	}
 
-	for (int iI = 0; iI < MAX_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
 		if (GET_TEAM(getTeam()).isVassal((TeamTypes)iI))
 		{
@@ -316,68 +306,20 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 		}
 	}
 
-	if (Cy::call<bool>(PYGameModule, "citiesDestroyFeatures", Cy::Args(iX, iY)))
+	if (Cy::call<bool>(PYGameModule, "citiesDestroyFeatures", Cy::Args(iX, iY))
+	&& pPlot->getFeatureType() != NO_FEATURE && pPlot->getFeatureType() != (FeatureTypes)GC.getInfoTypeForString("FEATURE_FLOOD_PLAINS")
+	&& (GC.getFeatureInfo(pPlot->getFeatureType()).getPopDestroys() == 0 || GC.getFeatureInfo(pPlot->getFeatureType()).getPopDestroys() == 1))
 	{
-		/************************************************************************************************/
-		/* UNOFFICIAL_PATCH                       10/30/09                     Mongoose & jdog5000      */
-		/*                                                                                              */
-		/* Bugfix                                                                                       */
-		/************************************************************************************************/
-		/* original bts code
-				if (pPlot->getFeatureType() != NO_FEATURE)
-		*/
-		// From Mongoose SDK
-		// Don't remove floodplains from tiles when founding city
-		if ((pPlot->getFeatureType() != NO_FEATURE) && (pPlot->getFeatureType() != (FeatureTypes)GC.getInfoTypeForString("FEATURE_FLOOD_PLAINS")))
-			/************************************************************************************************/
-			/* UNOFFICIAL_PATCH                        END                                                  */
-			/************************************************************************************************/
-		{
-			/************************************************************************************************/
-			/* Afforess	                  Start		 02/09/10                                               */
-			/*                                                                                              */
-			/*  Extra Hammer from Settling on Forest, Extra Food from Settling on Jungle                    */
-			/************************************************************************************************/
-			BuildTypes eChopBuild = findChopBuild(pPlot->getFeatureType());
-			if (eChopBuild != NO_BUILD)
-			{
-				if ((GC.getInfoTypeForString("FEATURE_FOREST", true) > 0 &&
-					pPlot->getFeatureType() == (FeatureTypes)GC.getInfoTypeForString("FEATURE_FOREST")) ||
-					(GC.getInfoTypeForString("FEATURE_JUNGLE", true) > 0 &&
-						pPlot->getFeatureType() == (FeatureTypes)GC.getInfoTypeForString("FEATURE_JUNGLE")))
-				{
-					int iProduction;
-					iProduction = GC.getBuildInfo(eChopBuild).getFeatureProduction(pPlot->getFeatureType());
-
-					iProduction *= GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getFeatureProductionPercent();
-					iProduction /= 100;
-					setExtraYieldTurns(iProduction);
-				}
-			}
-			/************************************************************************************************/
-			/* Afforess	                     END                                                            */
-			/************************************************************************************************/
-			if (pPlot->getFeatureType() != NO_FEATURE)
-			{
-				int iPopDestroys = GC.getFeatureInfo(pPlot->getFeatureType()).getPopDestroys();
-				if (iPopDestroys == 0 || iPopDestroys == 1)
-				{
-					pPlot->setFeatureType(NO_FEATURE);
-				}
-			}
-		}
+		pPlot->setFeatureType(NO_FEATURE);
 	}
 
 	pPlot->updateCityRoute(false);
 
 	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
-		if (GET_TEAM((TeamTypes)iI).isAlive())
+		if (GET_TEAM((TeamTypes)iI).isAlive() && pPlot->isVisible(((TeamTypes)iI), false))
 		{
-			if (pPlot->isVisible(((TeamTypes)iI), false))
-			{
-				setRevealed(((TeamTypes)iI), true);
-			}
+			setRevealed(((TeamTypes)iI), true);
 		}
 	}
 
@@ -416,15 +358,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 
 	updateFreshWaterHealth();
 	updateFeatureHealth();
-	/************************************************************************************************/
-	/* JOOYO_ADDON, Added by Jooyo, 06/19/09                                                        */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
 	updateImprovementHealth();
-	/************************************************************************************************/
-	/* JOOYO_ADDON                          END                                                     */
-	/************************************************************************************************/
 	updateFeatureHappiness();
 	updatePowerHealth();
 
@@ -436,26 +370,18 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 
 	GET_PLAYER(getOwnerINLINE()).setFoundedFirstCity(true);
 
-	if (GC.getGameINLINE().isFinalInitialized())
+	if (isNPC() || GET_PLAYER(getOwnerINLINE()).getNumCities() == 1)
 	{
-		if (GET_PLAYER(getOwnerINLINE()).getNumCities() == 1)
+		for (int iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
 		{
-			for (int iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
+			if (GC.getCivilizationInfo(getCivilizationType()).isCivilizationFreeBuildingClass(iI))
 			{
-				if (GC.getCivilizationInfo(getCivilizationType()).isCivilizationFreeBuildingClass(iI))
+				BuildingTypes eLoopBuilding = ((BuildingTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuildings(iI)));
+
+				if (eLoopBuilding != NO_BUILDING)
 				{
-					BuildingTypes eLoopBuilding = ((BuildingTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuildings(iI)));
-
-					if (eLoopBuilding != NO_BUILDING)
-					{
-						setNumRealBuilding(eLoopBuilding, 1);
-					}
+					setNumRealBuilding(eLoopBuilding, 1);
 				}
-			}
-
-			if (!isHuman())
-			{
-				changeOverflowProduction(GC.getDefineINT("INITIAL_AI_CITY_PRODUCTION"), 0);
 			}
 		}
 	}
@@ -467,18 +393,12 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 		GC.getGameINLINE().updatePlotGroups();
 	}
 
-	/************************************************************************************************/
-	/* Afforess	                  Start		 01/12/10                                               */
-	/*                                                                                              */
-	/* Assimilation                                                                                 */
-	/************************************************************************************************/
-		//	Koshliong  - do this unconditionally - it dopesn; nmatter if assimilation is off because in
-		//	that case we're setting the value it would have anyway and on any change of ownership
-		//	acquireCity() is called which initializes a new CvCity instance anyway
+
+	// Assimilation
+	// Koshliong  - do this unconditionally - it dopesn; nmatter if assimilation is off because in
+	// that case we're setting the value it would have anyway and on any change of ownership
+	// acquireCity() is called which initializes a new CvCity instance anyway
 	setCivilizationType(GET_PLAYER(getOwnerINLINE()).getCivilizationType());
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
 
 	m_UnitList.init();
 
@@ -1488,15 +1408,8 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 	}
 
 	setCultureLevel(NO_CULTURELEVEL, false);
-	/************************************************************************************************/
-	/* Afforess	                  Start		 02/15/10                                               */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
+
 	setOccupationCultureLevel(NO_CULTURELEVEL);
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
 
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
@@ -1548,48 +1461,26 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 		abEspionageVisibility.push_back(getEspionageVisibility((TeamTypes)iI));
 	}
 
-	/************************************************************************************************/
-	/* UNOFFICIAL_PATCH                       08/04/09                                jdog5000      */
-	/*                                                                                              */
-	/* Bugfix                                                                                       */
-	/************************************************************************************************/
-		// Need to clear trade routes of dead city, else they'll be claimed for the owner forever
+	// Need to clear trade routes of dead city, else they'll be claimed for the owner forever
 	clearTradeRoutes();
-	/************************************************************************************************/
-	/* UNOFFICIAL_PATCH                        END                                                  */
-	/************************************************************************************************/
 
 	pPlot->setPlotCity(NULL);
 
-	/************************************************************************************************/
-	/* UNOFFICIAL_PATCH                       03/04/10                                jdog5000      */
-	/*                                                                                              */
-	/* Bugfix                                                                                       */
-	/************************************************************************************************/
-		// Replace floodplains after city is removed
+	// Replace floodplains after city is removed
 	if (pPlot->getBonusType() == NO_BONUS)
 	{
 		for (int iJ = 0; iJ < GC.getNumFeatureInfos(); iJ++)
 		{
-			//Fuyu: don't limit to riverside
-			/*
-			if (GC.getFeatureInfo((FeatureTypes)iJ).isRequiresRiver())
-			*/
+			if (pPlot->canHaveFeature((FeatureTypes)iJ))
 			{
-				if (pPlot->canHaveFeature((FeatureTypes)iJ))
+				if (GC.getFeatureInfo((FeatureTypes)iJ).getAppearanceProbability() == 10000)
 				{
-					if (GC.getFeatureInfo((FeatureTypes)iJ).getAppearanceProbability() == 10000)
-					{
-						pPlot->setFeatureType((FeatureTypes)iJ);
-						break;
-					}
+					pPlot->setFeatureType((FeatureTypes)iJ);
+					break;
 				}
 			}
 		}
 	}
-	/************************************************************************************************/
-	/* UNOFFICIAL_PATCH                        END                                                  */
-	/************************************************************************************************/
 
 	area()->changeCitiesPerPlayer(getOwnerINLINE(), -1);
 
@@ -1636,7 +1527,7 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 		}
 	}
 
-	for (int iI = 0; iI < MAX_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
 		if (GET_TEAM(kOwner.getTeam()).isVassal((TeamTypes)iI))
 		{
@@ -1644,23 +1535,11 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 		}
 	}
 
-	for (int iI = 0; iI < MAX_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
 		if (abEspionageVisibility[iI])
 		{
 			pPlot->changeAdjacentSight((TeamTypes)iI, GC.getDefineINT("PLOT_VISIBILITY_RANGE"), false, NULL, false);
-		}
-	}
-
-	//ls612: Embassy visibility fix (by Damgo)
-	if (bCapital)
-	{
-		for (int iI = 0; iI < MAX_TEAMS; iI++)
-		{
-			if (GET_TEAM(kOwner.getTeam()).isHasEmbassy((TeamTypes)iI))
-			{
-				pPlot->changeAdjacentSight((TeamTypes)iI, GC.getDefineINT("PLOT_VISIBILITY_RANGE"), false, NULL, false);
-			}
 		}
 	}
 
@@ -1672,6 +1551,13 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 
 	if (bCapital)
 	{
+		for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
+		{
+			if (GET_TEAM(kOwner.getTeam()).isHasEmbassy((TeamTypes)iI))
+			{
+				pPlot->changeAdjacentSight((TeamTypes)iI, GC.getDefineINT("PLOT_VISIBILITY_RANGE"), false, NULL, false);
+			}
+		}
 		kOwner.findNewCapital();
 
 		GET_TEAM(kOwner.getTeam()).resetVictoryProgress();
@@ -1706,85 +1592,11 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 
 void CvCity::killTestCheap()
 {
-
-	//CvPlot* pPlot;
-	//CvPlot* pAdjacentPlot;
-	//CvPlot* pLoopPlot;
-	//PlayerTypes eOwner;
-	//bool bCapital;
-	// < M.A.D. Nukes Start >
-	//int iI, iJ;
-	// < M.A.D. Nukes End   >
-
 	if (isCitySelected())
 	{
 		gDLL->getInterfaceIFace()->clearSelectedCities();
 	}
-
-	//	pPlot = plot();
-
-
-	//	for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
-	//	{
-	//		pLoopPlot = getCityIndexPlot(iI);
-	//
-	//		if (pLoopPlot != NULL)
-	//		{
-	//			if (pLoopPlot->getWorkingCityOverride() == this)
-	//			{
-	//				pLoopPlot->setWorkingCityOverride(NULL);
-	//			}
-	//		}
-	//	}
-
-
-
-		//clearOrderQueue();
-
-
-		//pPlot->setPlotCity(NULL);
-
-
-	//	area()->changeCitiesPerPlayer(getOwnerINLINE(), -1);
-
-	//	GET_TEAM(getTeam()).changeNumCities(-1);
-
-	//	GC.getGameINLINE().changeNumCities(-1);
-
-	//	eOwner = getOwnerINLINE();
-
-	//	bCapital = isCapital();
-
 	GET_PLAYER(getOwnerINLINE()).deleteCity(getID());
-
-	//	pPlot->updateCulture(true, false);
-
-		//for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
-		//{
-		//	pAdjacentPlot = plotDirection(pPlot->getX_INLINE(), pPlot->getY_INLINE(), ((DirectionTypes)iI));
-
-		//	if (pAdjacentPlot != NULL)
-		//	{
-		//		pAdjacentPlot->updateCulture(true, false);
-		//	}
-		//}
-
-
-		//GC.getMapINLINE().updateWorkingCity();
-
-		//GC.getGameINLINE().AI_makeAssignWorkDirty();
-
-		//if (bCapital)
-		//{
-		//	GET_PLAYER(eOwner).findNewCapital();
-
-		//	GET_TEAM(GET_PLAYER(eOwner).getTeam()).resetVictoryProgress();
-		//}
-
-		//if (eOwner == GC.getGameINLINE().getActivePlayer())
-		//{
-		//	gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
-		//}
 }
 
 void CvCity::doTurn()
@@ -2118,15 +1930,32 @@ void CvCity::doAutobuild()
 	//	Auto-build any auto-build buildings we can
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		if (GC.getBuildingInfo((BuildingTypes)iI).isAutoBuild() &&
-			getNumBuilding((BuildingTypes)iI) <= 0 &&
-			canConstruct((BuildingTypes)iI, false, false, true))
+		const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
+		if (kBuilding.isAutoBuild())
 		{
-
-			setNumRealBuilding((BuildingTypes)iI, 1);
-
-			CvWString szBuffer = gDLL->getText("TXT_KEY_COMPLETED_AUTO_BUILD", GC.getBuildingInfo((BuildingTypes)iI).getTextKeyWide(), getName().GetCString());
-			AddDLLMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"));
+			if (getNumBuilding((BuildingTypes)iI) <= 0)
+			{
+				if (canConstruct((BuildingTypes)iI, false, false, true))
+				{
+					setNumRealBuilding((BuildingTypes)iI, 1);
+					CvWString szBuffer = gDLL->getText("TXT_KEY_COMPLETED_AUTO_BUILD", kBuilding.getTextKeyWide(), getName().GetCString());
+					AddDLLMessage(getOwnerINLINE(), true, 10, szBuffer, NULL, MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"));
+				}
+			}
+			else if (kBuilding.getPrereqNumOfBuildingClass(NO_BUILDINGCLASS) > 0)
+			{
+				// Speciasl rule meant for adopted cultures, hopefully it won't affect other autobuilds in an irrational way.
+				for (int iJ = 0; iJ < GC.getNumBuildingClassInfos(); iJ++)
+				{
+					if (kBuilding.getPrereqNumOfBuildingClass((BuildingClassTypes)iJ) > 0
+					&& GET_PLAYER(getOwnerINLINE()).getBuildingClassCount((BuildingClassTypes)iJ) < GET_PLAYER(getOwnerINLINE()).getBuildingClassPrereqBuilding((BuildingTypes)iI, (BuildingClassTypes)iJ, 0))
+					{
+						setNumRealBuilding((BuildingTypes)iI, 0);
+						CvWString szBuffer = gDLL->getText("TXT_KEY_COMPLETED_AUTO_BUILD_NOT", kBuilding.getTextKeyWide(), getName().GetCString());
+						AddDLLMessage(getOwnerINLINE(), true, 10, szBuffer, NULL, MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"));
+					}
+				}
+			}
 		}
 	}
 }

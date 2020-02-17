@@ -73,15 +73,13 @@
 				<City>TXT_KEY_CITY_NAME_SAO_CAETANO</City>
 				<City>TXT_KEY_CITY_NAME_JUNDIAI</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_SAMERICAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_SOUTH_AMERICAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
