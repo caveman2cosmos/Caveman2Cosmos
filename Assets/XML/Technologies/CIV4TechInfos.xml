@@ -4407,10 +4407,10 @@ Current techs which are not in this file:-
 			<Button>,Art/Interface/Buttons/TechTree/Mining.dds,Art/Interface/Buttons/TechTree_Atlas.dds,8,5</Button>
 		</TechInfo>
 		<TechInfo>
-			<Type>TECH_WHEELS</Type>
-			<Description>TXT_KEY_TECH_WHEELS</Description>
-			<Civilopedia>TXT_KEY_TECH_WHEELS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_WHEELS_STRATEGY</Strategy>
+			<Type>TECH_THE_WHEEL</Type>
+			<Description>TXT_KEY_TECH_THE_WHEEL</Description>
+			<Civilopedia>TXT_KEY_TECH_THE_WHEEL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_THE_WHEEL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iCost>110</iCost>
 			<Era>C2C_ERA_ANCIENT</Era>
@@ -4444,8 +4444,8 @@ Current techs which are not in this file:-
 			<OrPreReqs>
 				<PrereqTech>TECH_POTTERY</PrereqTech>
 			</OrPreReqs>
-			<Quote>TXT_KEY_TECH_WHEELS_QUOTE</Quote>
-			<Sound>AS2D_TECH_WHEELS</Sound>
+			<Quote>TXT_KEY_TECH_THE_WHEEL_QUOTE</Quote>
+			<Sound>AS2D_TECH_THE_WHEEL</Sound>
 			<SoundMP>AS2D_TECH_MP_THE_WHEEL</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/thewheel2.dds</Button>
 		</TechInfo>
@@ -4542,7 +4542,7 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_SAILING</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_WHEELS</PrereqTech>
+				<PrereqTech>TECH_THE_WHEEL</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_EXPLORATION_QUOTE</Quote>
 			<Sound>AS2D_TECH_EXPLORATION</Sound>
@@ -4639,7 +4639,7 @@ Current techs which are not in this file:-
 				</Flavor>
 			</Flavors>
 			<OrPreReqs>
-				<PrereqTech>TECH_WHEELS</PrereqTech>
+				<PrereqTech>TECH_THE_WHEEL</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
 				<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
@@ -4673,7 +4673,7 @@ Current techs which are not in this file:-
 				</Flavor>
 			</Flavors>
 			<OrPreReqs>
-				<PrereqTech>TECH_WHEELS</PrereqTech>
+				<PrereqTech>TECH_THE_WHEEL</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
 				<PrereqTech>TECH_TAXONOMY</PrereqTech>

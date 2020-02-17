@@ -21339,7 +21339,7 @@ Base XP gained when defending
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqBuilding>BUILDING_CARPENTERS_WORKSHOP</PrereqBuilding>
-			<PrereqTech>TECH_WHEELS</PrereqTech>
+			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
 			<iCost>125</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>

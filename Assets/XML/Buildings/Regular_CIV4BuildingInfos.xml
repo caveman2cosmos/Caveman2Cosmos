@@ -107992,7 +107992,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_WHEELS</PrereqTech>
+			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>

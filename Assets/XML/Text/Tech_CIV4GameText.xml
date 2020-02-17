@@ -24153,7 +24153,7 @@ The stages of production are as follows:
 		<Polish>Koło</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_WHEELS_PEDIA</Tag>
+		<Tag>TXT_KEY_TECH_THE_WHEEL_PEDIA</Tag>
 		<English>The invention of the wheel represented a major turning point in human civilization. The first wheels, disks carved from solid wood, may have been built as early as 3500 BC. The earliest use of this device was the potter's wheel, used to spin and shape clay pottery. It was not long before the true potential of the wheel was discovered, and wheeled carts soon replaced the sledge as a means of transportation. Rapid developments, such as wheels consisting of a ring with radial spokes, made the wheel even more practical by reducing its weight. By using the wheel, mankind gained the ability to work more efficiently and travel more quickly. Besides its use in transportation, the wheel went on to become the basic principle behind almost every mechanical device.</English>
 		<French>L'invention de la roue a été un tournant dans l'histoire de l'humanité. Les premières roues, de simples disques taillés dans du bois brut, pourraient avoir été fabriquées dès 3 500 av. J.-C. La première application de cette invention a été la fabrication du tour de potier, servant à tourner et à façonner des poteries en argile. Mais nos ancêtres ont très vite réalisé tout le potentiel de la roue et les traîneaux ont été remplacés par des charrettes. Des améliorations rapides, comme l'invention de la roue à rayon, ont ensuite permis d'alléger la roue, facilitant ainsi son utilisation. Grâce à la roue, l'homme a amélioré le rendement de son travail et a pu circuler plus rapidement. Outre son utilisation pour le transport, la roue est devenue le principe fondamental de la quasi totalité des appareils mécaniques.</French>
 		<German>Die Erfindung des Rades markiert einen Wendepunkt der menschlichen Gesellschaft. Die ersten Räder waren Scheiben aus massivem Holz und wurden wahrscheinlich bereits um etwa 3500 v.Chr. hergestellt. Eine der ersten Anwendungen des Rades war die Töpferscheibe, welche zum Drehen und Formen von Ton verwendet wurde. Nicht viel später wurde das wahre Potenzial des Rades entdeckt, und Rollkarren ersetzten bald den Schlitten als Transportmittel. Rasante Weiterentwicklungen machten das Rad noch nützlicher, z.B. wurde das Gewicht durch Verwendung eines Rings mit radialen Speichen reduziert. Das Rad erlaubte der Menschheit, effizienter zu arbeiten und schneller zu reisen. Neben dem Einsatz in Fahrzeugen wurde das Rad bald zum Grundprinzip beinahe jeden mechanischen Apparats.</German>
@@ -24161,7 +24161,7 @@ The stages of production are as follows:
 		<Spanish>La invención de la rueda representó un importante punto de inflexión en la historia de la civilización. Las primeras ruedas, discos tallados de madera maciza, podrían remontarse al 3500 a. C. El primer uso de este aparato fue el torno de alfarero, empleado para hacer girar y dar forma a la cerámica de arcilla. No tardó mucho en descubrirse su verdadero potencial, y los carros con ruedas sustituyeron muy pronto a los trineos como medio de transporte. Otros avances, como las ruedas que se componían de un aro con radios, redujeron su peso e hicieron que resultara aún más práctica. Haciendo uso de la rueda, la humanidad obtuvo mayor eficacia en su trabajo y más rapidez en sus desplazamientos. Además de su uso en el transporte, también se convirtió en la pieza básica de casi todos los artefactos mecánicos.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_WHEELS_QUOTE</Tag>
+		<Tag>TXT_KEY_TECH_THE_WHEEL_QUOTE</Tag>
 		<English>"Put your shoulder to the wheel." - Aesop</English>
 		<French>"La roue de la fortune tourne plus vite que celle du moulin." - Miguel de Cervantès</French>
 		<German>"Das schlechteste Rad am Karren macht den größten Lärm." - Deutsches Sprichwort</German>
@@ -24169,7 +24169,7 @@ The stages of production are as follows:
 		<Spanish>"Arrima el hombro a la rueda." - Esopo</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_WHEELS_STRATEGY</Tag>
+		<Tag>TXT_KEY_TECH_THE_WHEEL_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]The Wheel[COLOR_REVERT] allows you to build [COLOR_UNIT_TEXT]Chariot[COLOR_REVERT] units. More importantly, it allows your workers to build [COLOR_HIGHLIGHT_TEXT]Roads[COLOR_REVERT]. </English>
 		<French>La découverte de [COLOR_TECH_TEXT]la roue[COLOR_REVERT] vous permet de construire des [COLOR_UNIT_TEXT]chars[COLOR_REVERT], mais surtout de faire construire des [COLOR_HIGHLIGHT_TEXT]routes[COLOR_REVERT] par vos ouvriers.</French>
 		<German>erlaubt Arbeitstrupps den Bau von [COLOR_HIGHLIGHT_TEXT]Straßen[COLOR_REVERT], ermöglicht [COLOR_UNIT_TEXT]Streitwagen[COLOR_REVERT].</German>

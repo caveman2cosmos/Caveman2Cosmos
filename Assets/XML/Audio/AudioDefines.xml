@@ -8653,7 +8653,7 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_TECH_WHEELS</SoundID>
+			<SoundID>SND_TECH_THE_WHEEL</SoundID>
 			<Filename>Sounds/Tech/Tech_Wheel</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>

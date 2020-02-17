@@ -282,7 +282,7 @@
 			<ImprovementUpgrade>IMPROVEMENT_LUMBERMILL</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
-					<PrereqTech>TECH_WHEELS</PrereqTech>
+					<PrereqTech>TECH_THE_WHEEL</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>

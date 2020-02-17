@@ -7920,7 +7920,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WHEELS</TechType>
+					<TechType>TECH_THE_WHEEL</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -8216,7 +8216,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WHEELS</TechType>
+					<TechType>TECH_THE_WHEEL</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -8782,7 +8782,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WHEELS</TechType>
+					<TechType>TECH_THE_WHEEL</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -9058,7 +9058,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_WHEELS</TechType>
+					<TechType>TECH_THE_WHEEL</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>

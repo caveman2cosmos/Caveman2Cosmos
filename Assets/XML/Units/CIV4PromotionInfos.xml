@@ -2981,7 +2981,7 @@
 			<Description>TXT_KEY_PROMOTION_DRILL2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_DRILL1</PromotionPrereq>
-			<TechPrereq>TECH_WHEELS</TechPrereq>
+			<TechPrereq>TECH_THE_WHEEL</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_DRILL</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iChanceFirstStrikesChange>1</iChanceFirstStrikesChange>
@@ -17249,7 +17249,7 @@
 			<Description>TXT_KEY_PROMOTION_STREET_FIGHTER2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_STREET_FIGHTER1</PromotionPrereq>
-			<TechPrereq>TECH_WHEELS</TechPrereq>
+			<TechPrereq>TECH_THE_WHEEL</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_STREET_FIGHTER</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iCityAttack>15</iCityAttack>
@@ -17345,7 +17345,7 @@
 			<Description>TXT_KEY_PROMOTION_HUNT_DOWN5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_HUNT_DOWN4</PromotionPrereq>
-			<TechPrereq>TECH_WHEELS</TechPrereq>
+			<TechPrereq>TECH_THE_WHEEL</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_HUNT_DOWN</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<OnGameOptions>
@@ -19929,7 +19929,7 @@
 			<Type>PROMOTION_REPAIR_MECHANICAL1</Type>
 			<Description>TXT_KEY_PROMOTION_REPAIR_MECHANICAL1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_WHEELS</TechPrereq>
+			<TechPrereq>TECH_THE_WHEEL</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_REPAIR_MECHANICAL</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iNumHealSupport>1</iNumHealSupport>

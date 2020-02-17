@@ -26561,7 +26561,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=102
-	RouteType=ROUTE_PATH
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=1
 EndPlot
@@ -27629,7 +27628,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=103
-	RouteType=ROUTE_PATH
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=1
 EndPlot
@@ -28729,7 +28727,6 @@ EndPlot
 BeginPlot
 	x=26,y=103
 	BonusType=BONUS_MARTIAN_BLUEBERRIES
-	RouteType=ROUTE_PATH
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
@@ -29816,7 +29813,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=104
-	RouteType=ROUTE_PATH
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
@@ -30881,7 +30877,6 @@ EndPlot
 BeginPlot
 	x=28,y=103
 	BonusType=BONUS_IRON_ORE
-	RouteType=ROUTE_PATH
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
@@ -32000,19 +31995,16 @@ EndPlot
 BeginPlot
 	x=29,y=104
 	BonusType=BONUS_TIN_ORE
-	RouteType=ROUTE_PATH
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
 BeginPlot
 	x=29,y=105
-	RouteType=ROUTE_PATH
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
 BeginPlot
 	x=29,y=106
-	RouteType=ROUTE_PATH
 	TerrainType=TERRAIN_MARTIAN_PERMAFROST
 	PlotType=2
 EndPlot
@@ -33111,7 +33103,6 @@ EndPlot
 BeginPlot
 	x=30,y=106
 	BonusType=BONUS_IRON_ORE
-	RouteType=ROUTE_PATH
 	TerrainType=TERRAIN_MARTIAN_PERMAFROST
 	PlotType=2
 EndPlot
@@ -52337,7 +52328,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=48,y=102
-	RouteType=ROUTE_PATH
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
@@ -53403,7 +53393,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=103
-	RouteType=ROUTE_PATH
 	TerrainType=TERRAIN_MARTIAN_DUNES
 	PlotType=1
 EndPlot
@@ -54458,13 +54447,11 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=103
-	RouteType=ROUTE_PATH
 	TerrainType=TERRAIN_MARTIAN_DUNES
 	PlotType=2
 EndPlot
 BeginPlot
 	x=50,y=104
-	RouteType=ROUTE_PATH
 	TerrainType=TERRAIN_MARTIAN_DUNES
 	PlotType=2
 EndPlot
@@ -55519,7 +55506,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=51,y=102
-	RouteType=ROUTE_PATH
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=1
 EndPlot
@@ -56582,7 +56568,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52,y=101
-	RouteType=ROUTE_PATH
 	TerrainType=TERRAIN_MARTIAN_PLAINS
 	PlotType=2
 EndPlot
@@ -66006,7 +65991,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=63
-	RouteType=ROUTE_TRAIL
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -74753,7 +74737,6 @@ BeginPlot
 	x=69,y=53
 	BonusType=BONUS_PAPYRUS
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
-	RouteType=ROUTE_TRAIL
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -75758,7 +75741,6 @@ BeginPlot
 	x=70,y=36
 	RiverNSDirection=2
 	isWOfRiver
-	RouteType=ROUTE_TRAIL
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -83477,7 +83459,6 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
-	RouteType=ROUTE_TRAIL
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -97400,7 +97381,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=90,y=60
-	RouteType=ROUTE_TRAIL
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -110462,7 +110442,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=102,y=67
-	RouteType=ROUTE_TRAIL
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -110680,7 +110659,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=102,y=105
-	RouteType=ROUTE_PATH
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
@@ -111770,7 +111748,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=103,y=104
-	RouteType=ROUTE_PATH
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=1
 EndPlot
@@ -111781,7 +111758,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=103,y=106
-	RouteType=ROUTE_PATH
 	TerrainType=TERRAIN_MARTIAN_PERMAFROST
 	PlotType=2
 EndPlot
@@ -112850,13 +112826,11 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=104,y=102
-	RouteType=ROUTE_PATH
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=1
 EndPlot
 BeginPlot
 	x=104,y=103
-	RouteType=ROUTE_PATH
 	TerrainType=TERRAIN_MARTIAN_DESERT
 	PlotType=2
 EndPlot
@@ -113964,7 +113938,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=105,y=104
-	RouteType=ROUTE_PATH
 	TerrainType=TERRAIN_MARTIAN_DESERT
 	PlotType=2
 EndPlot
@@ -115046,13 +115019,11 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=106,y=105
-	RouteType=ROUTE_PATH
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
 BeginPlot
 	x=106,y=106
-	RouteType=ROUTE_PATH
 	TerrainType=TERRAIN_MARTIAN_PERMAFROST
 	PlotType=1
 EndPlot
@@ -122299,7 +122270,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=113,y=65
-	RouteType=ROUTE_TRAIL
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
 EndPlot
@@ -122498,7 +122468,6 @@ EndPlot
 BeginPlot
 	x=113,y=102
 	BonusType=BONUS_GOLD_ORE
-	RouteType=ROUTE_PATH
 	TerrainType=TERRAIN_MARTIAN_PLAINS
 	PlotType=2
 EndPlot
@@ -122514,13 +122483,11 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=113,y=105
-	RouteType=ROUTE_PATH
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
 BeginPlot
 	x=113,y=106
-	RouteType=ROUTE_PATH
 	TerrainType=TERRAIN_MARTIAN_PERMAFROST
 	PlotType=2
 EndPlot
@@ -123188,7 +123155,6 @@ BeginPlot
 	x=114,y=33
 	isNOfRiver
 	RiverWEDirection=3
-	RouteType=ROUTE_TRAIL
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -123594,19 +123560,16 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=114,y=103
-	RouteType=ROUTE_PATH
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
 BeginPlot
 	x=114,y=104
-	RouteType=ROUTE_PATH
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
 BeginPlot
 	x=114,y=105
-	RouteType=ROUTE_PATH
 	TerrainType=TERRAIN_MARTIAN_PERMAFROST
 	PlotType=2
 EndPlot

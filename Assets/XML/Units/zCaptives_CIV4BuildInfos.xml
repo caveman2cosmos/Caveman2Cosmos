@@ -669,7 +669,7 @@
 		<BuildInfo>
 			<Type>BUILD_PATH_SLAVE</Type>
 			<Description>TXT_KEY_BUILD_PATH_SLAVE</Description>
-			<PrereqTech>TECH_WHEELS</PrereqTech>
+			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
 			<iTime>150</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
