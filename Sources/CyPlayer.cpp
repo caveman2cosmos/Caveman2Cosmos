@@ -170,7 +170,7 @@ CyUnit* CyPlayer::initUnit(int /*UnitTypes*/ iIndex, int iX, int iY, UnitAITypes
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
-	return m_pPlayer ? new CyUnit(m_pPlayer->initUnit((UnitTypes) iIndex, iX, iY, eUnitAI, eFacingDirection, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"))) : NULL;
+	return m_pPlayer ? new CyUnit(m_pPlayer->initUnit((UnitTypes) iIndex, iX, iY, eUnitAI, eFacingDirection, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"))) : NULL;
 }
 
 void CyPlayer::disbandUnit(bool bAnnounce)
@@ -3275,7 +3275,7 @@ void CyPlayer::addBLList()
 	if (NULL != pInfo)
 	{
 		pInfo->setData1(-1);
-		gDLL->getInterfaceIFace()->addPopup(pInfo, GC.getGameINLINE().getActivePlayer(), true, true);
+		gDLL->getInterfaceIFace()->addPopup(pInfo, GC.getGame().getActivePlayer(), true, true);
 	}
 	//CvMessageControl::getInstance().sendBuildListEdit(-1, CvString(szName));
 }
@@ -3286,7 +3286,7 @@ void CyPlayer::renameBLList(int iID)
 	if (NULL != pInfo)
 	{
 		pInfo->setData1(iID);
-		gDLL->getInterfaceIFace()->addPopup(pInfo, GC.getGameINLINE().getActivePlayer(), true, true);
+		gDLL->getInterfaceIFace()->addPopup(pInfo, GC.getGame().getActivePlayer(), true, true);
 	}
 	//CvMessageControl::getInstance().sendBuildListEdit(iID, CvString(szName));
 }
