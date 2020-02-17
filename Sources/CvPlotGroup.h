@@ -35,7 +35,7 @@ public:
 
 	void init(int iID, PlayerTypes eOwner, CvPlot* pPlot, bool bRecalculateBonuses = true);
 	void uninit();
-	void reset(int iID = 0, PlayerTypes eOwner = NO_PLAYER, bool bConstructorCall=false);
+	void reset(int iID = 0, PlayerTypes eOwner = NO_PLAYER, bool bConstructorCall = false);
 
 	void addPlot(CvPlot* pPlot, bool bRecalculateBonuses);
 	void removePlot(CvPlot* pPlot, bool bRecalculateBonuses = true);
@@ -44,13 +44,8 @@ public:
 	int getID() const;
 	void setID(int iID);
 
-	PlayerTypes getOwner() const;
-#ifdef _USRDLL
-	inline PlayerTypes getOwnerINLINE() const
-	{
-		return m_eOwner;
-	}
-#endif
+	inline PlayerTypes getOwner() const { return m_eOwner; }
+
 	int getNumBonuses(const BonusTypes eBonus) const;
 	bool hasBonus(const BonusTypes eBonus) const;										
 	void changeNumBonuses(const BonusTypes eBonus, const int iChange);

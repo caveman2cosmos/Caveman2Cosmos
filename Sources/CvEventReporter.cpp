@@ -53,17 +53,17 @@ bool CvEventReporter::kbdEvent(int evt, int key, int iCursorX, int iCursorY)
 		if ( gDLL->ctrlKey() && gDLL->shiftKey() && evt == 7 && (key == 30 || key == 32) )
 		{
 			// TESTING ONLY ... GET_PLAYER((PlayerTypes)0/*GC.getGame().getActivePlayer()*/).AI_doCivics();
-			//GC.getGameINLINE().recalculateModifiers();
+			//GC.getGame().recalculateModifiers();
 			//AIAndy: Changed to use a message to make it multiplayer safe
 			CvMessageControl::getInstance().sendRecalculateModifiers();
 		}
 		if ( gDLL->altKey() && gDLL->shiftKey() && evt == 7 && (key == 30) )
 		{
-			GC.getMapINLINE().toggleCitiesDisplay();
+			GC.getMap().toggleCitiesDisplay();
 		}
 		if ( gDLL->altKey() && gDLL->shiftKey() && evt == 7 && (key == 32) )
 		{
-			GC.getMapINLINE().toggleUnitsDisplay();
+			GC.getMap().toggleUnitsDisplay();
 		}
 #ifndef FINAL_RELEASE
 		if ( gDLL->altKey() && gDLL->ctrlKey() && evt ==7 && key == FInputDevice::KB_P )
