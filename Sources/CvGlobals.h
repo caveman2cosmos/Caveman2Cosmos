@@ -204,9 +204,7 @@ public:
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
-	CvMap& getMapINLINE();	//	Synonym for GetMap() currently as internal callers don't usually need the viewport
-// PARALLEL MAPS MODIFIED FUNCTION
-	CvMap& getMap();
+	inline CvMap& getMap() const;
 	CvViewport* getCurrentViewport();
 	int	getViewportSizeX() const;
 	int	getViewportSizeY() const;
@@ -238,9 +236,8 @@ public:
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/
-	CvGameAI& getGameINLINE() { return *m_game; }
-	CvGameAI& getGame();
-	CvGameAI *getGamePointer();
+	inline CvGameAI& getGame() const { return *m_game; }
+	CvGameAI* getGamePointer();
 	CvRandom& getASyncRand();
 	CMessageQueue& getMessageQueue();
 	CMessageQueue& getHotMessageQueue();

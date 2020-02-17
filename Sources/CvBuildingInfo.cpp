@@ -1953,7 +1953,7 @@ int CvBuildingInfo::getOccupationTimeModifier() const
 
 int CvBuildingInfo::getNoEntryDefenseLevel(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_REALISTIC_SIEGE))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_REALISTIC_SIEGE))
 	{
 		return 0;
 	}
@@ -2559,7 +2559,7 @@ int CvBuildingInfo::getRiverDefensePenalty() const
 
 int CvBuildingInfo::getLocalRepel(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -2568,7 +2568,7 @@ int CvBuildingInfo::getLocalRepel(bool bForLoad) const
 
 int CvBuildingInfo::getMinDefense(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_REALISTIC_SIEGE))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_REALISTIC_SIEGE))
 	{
 		return 0;
 	}
@@ -2597,7 +2597,7 @@ int CvBuildingInfo::getDamageToAttacker() const
 
 int CvBuildingInfo::getMaxPopulationAllowed(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_MAXIMUM_POPULATION))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_MAXIMUM_POPULATION))
 	{
 		return -1;
 	}
@@ -2606,7 +2606,7 @@ int CvBuildingInfo::getMaxPopulationAllowed(bool bForLoad) const
 
 int CvBuildingInfo::getMaxPopulationChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_MAXIMUM_POPULATION))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_MAXIMUM_POPULATION))
 	{
 		return 0;
 	}
@@ -2796,7 +2796,7 @@ int CvBuildingInfo::getNumUnitCombatRepelModifiers() const
 
 int CvBuildingInfo::getUnitCombatRepelModifier(int iUnitCombat, bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -2818,7 +2818,7 @@ int CvBuildingInfo::getNumUnitCombatRepelAgainstModifiers() const
 
 int CvBuildingInfo::getUnitCombatRepelAgainstModifier(int iUnitCombat, bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -2876,7 +2876,7 @@ int CvBuildingInfo::getNumUnitCombatOngoingTrainingDurations() const
 
 int CvBuildingInfo::getUnitCombatOngoingTrainingDuration(int iUnitCombat, bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_ONGOING_TRAINING))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_ONGOING_TRAINING))
 	{
 		return 0;
 	}
