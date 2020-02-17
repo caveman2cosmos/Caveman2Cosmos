@@ -621,30 +621,23 @@ def assignStartingPlots():
 						if validFn != None and not validFn(playerID, iX, iY): continue
 						val = pPlot.getFoundValue(playerID)
 						if val > iBestValue:
-							valid = True
+
 							for invalid in min_dist:
 								[invalidX, invalidY] = invalid
 								if abs(invalidX - iX) < minX and abs(invalidY - iY) < minY:
-									valid = False
 									break
-							if valid:
-								oceanside = False
+							else:
 								for ocean in oceans:
 									if pPlot.isAdjacentToArea(ocean):
-										oceanside = True
 										break
-								if not oceanside:
-									valid = False # Not valid unless adjacent to an ocean!
-							if valid:
-								for iI in range(gc.getMAX_CIV_PLAYERS()):
-									if (gc.getPlayer(iI).isAlive()):
-										if (iI != playerID):
-											if gc.getPlayer(iI).startingPlotWithinRange(pPlot, playerID, iRange, iPass):
-												valid = False
-												break
-							if valid:
-								iBestValue = val
-								pBestPlot = pPlot
+								else: continue # Not valid unless adjacent to an ocean!
+
+								for iI in range(gc.getMAX_PC_PLAYERS()):
+									if iI != playerID and gc.getPlayer(iI).isAlive() and gc.getPlayer(iI).startingPlotWithinRange(pPlot, playerID, iRange, iPass):
+										break
+								else:
+									iBestValue = val
+									pBestPlot = pPlot
 
 				if pBestPlot != None:
 					min_dist.append([pBestPlot.getX(), pBestPlot.getY()])

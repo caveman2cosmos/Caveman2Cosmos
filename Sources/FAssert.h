@@ -26,8 +26,8 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, const char
 #define FAssert( expr )	if( !(expr) ) throw std::exception(#expr);
 #define FAssertMsg( expr, msg )	FAssert( expr )
 #define FAssertRecalcMsg( expr, msg ) FAssert( expr )
-#define FAssertOptionMsg( option, expr, msg ) FAssert( GC.getGameINLINE().isOption(option) && expr )
-#define FAssertOptionRecalcMsg( option, expr, msg) FAssert( GC.getGameINLINE().isOption(option) && expr )
+#define FAssertOptionMsg( option, expr, msg ) FAssert( GC.getGame().isOption(option) && expr )
+#define FAssertOptionRecalcMsg( option, expr, msg) FAssert( GC.getGame().isOption(option) && expr )
 #define FErrorMsg( msg ) FAssert( false )
 #define FEnsure( expr ) { if( !(expr) ) throw std::exception(#expr); }
 #define FEnsureMsg( expr, msg ) { if( !(expr) ) throw std::exception(#expr); }
@@ -63,7 +63,7 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, const char
 #define FAssertOptionMsg( option, expr, msg ) \
 { \
 	static bool bIgnoreAlways = false; \
-	if( !bIgnoreAlways && GC.getGameINLINE().isOption(option) && !(expr) ) \
+	if( !bIgnoreAlways && GC.getGame().isOption(option) && !(expr) ) \
 	{ \
 		if( FAssertDlg( #expr, CvString::format("Option: %s\r\n%s", #option, msg).c_str(), __FILE__, __LINE__, __FUNCTION__, bIgnoreAlways ) ) { _asm int 3 } \
 	} \
@@ -72,7 +72,7 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, const char
 #define FAssertOptionRecalcMsg( option, expr, msg) \
 { \
 	static bool bIgnoreAlways = false; \
-	if( !bIgnoreAlways && GC.getGameINLINE().isOption(option) && !(expr) ) \
+	if( !bIgnoreAlways && GC.getGame().isOption(option) && !(expr) ) \
 	{ \
 		if( FAssertDlg( #expr, CvString::format("Option: %s\r\n%s\r\n\r\nPlease recalculate modifiers!",  #option, msg).c_str(), __FILE__, __LINE__, __FUNCTION__, bIgnoreAlways ) ) { _asm int 3 } \
 	} \
@@ -113,8 +113,8 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, const char
 #define FAssert( expr )	FAssert( expr )
 #define FAssertMsg( expr, msg )	FAssert( expr )
 #define FAssertRecalcMsg( expr, msg ) FAssert( expr )
-#define FAssertOptionMsg( option, expr, msg ) FAssert( GC.getGameINLINE().isOption(option) && expr )
-#define FAssertOptionRecalcMsg( option, expr, msg) FAssert( GC.getGameINLINE().isOption(option) && expr )
+#define FAssertOptionMsg( option, expr, msg ) FAssert( GC.getGame().isOption(option) && expr )
+#define FAssertOptionRecalcMsg( option, expr, msg) FAssert( GC.getGame().isOption(option) && expr )
 #define FErrorMsg( msg ) FAssertMsg( false, msg )
 #define FEnsure( expr ) { if( !(expr) ) throw std::exception(#expr); }
 #define FEnsureMsg( expr, msg ) { if( !(expr) ) throw std::exception(#expr); }

@@ -628,21 +628,9 @@ public:
 	void setID(int iID);
 
 	DllExport int getViewportX() const;																			// Exposed to Python
-	int getX() const;																			// Exposed to Python
-#ifdef _USRDLL
-	inline int getX_INLINE() const
-	{
-		return m_iX;
-	}
-#endif
+	inline int getX() const { return m_iX; } // Exposed to Python
 	DllExport int getViewportY() const;																			// Exposed to Python
-	int getY() const;																			// Exposed to Python
-#ifdef _USRDLL
-	inline int getY_INLINE() const
-	{
-		return m_iY;
-	}
-#endif
+	inline int getY() const { return m_iY; } // Exposed to Python
 	bool isInViewport() const;
 	bool at(int iX, int iY) const;																				// Exposed to Python
 	bool at(const CvPlot* pPlot) const;																					// Exposed to Python - atPlot
@@ -1063,13 +1051,7 @@ public:
 	bool isPlundered() const;																		// Exposed to Python
 	void setPlundered(bool bNewValue);																// Exposed to Python
 
-	DllExport PlayerTypes getOwner() const;																// Exposed to Python
-#ifdef _USRDLL
-	inline PlayerTypes getOwnerINLINE() const
-	{
-		return m_eOwner;
-	}
-#endif
+	DllExport inline PlayerTypes getOwner() const { return m_eOwner; } // Exposed to Python
 	DllExport TeamTypes getTeam() const;																	// Exposed to Python
 
 	PlayerTypes getPreviousOwner() const;																	// Exposed to Python

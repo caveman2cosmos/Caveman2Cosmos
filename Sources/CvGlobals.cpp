@@ -5506,26 +5506,14 @@ void cvInternalGlobals::switchMap(MapTypes eMap)
 {	
 	//bool bInitial = false;
 
-	GC.getMapINLINE().beforeSwitch();
+	GC.getMap().beforeSwitch();
 
 	if (eMap > NO_MAP && eMap < GC.getNumMapInfos())
 		GC.getGame().setCurrentMap(eMap);
 
-	GC.getMapINLINE().afterSwitch();
+	GC.getMap().afterSwitch();
 }
 
-#ifdef _USRDLL
-CvMap& cvInternalGlobals::getMapINLINE()
-{
-	return *m_maps[GC.getGame().getCurrentMap()];
-}
-#endif
-
-CvMap& cvInternalGlobals::getMap()
-{
-	return *m_maps[GC.getGame().getCurrentMap()];
-}
-	
 CvViewport* cvInternalGlobals::getCurrentViewport()
 {
 	return m_maps[GC.getGame().getCurrentMap()]->getCurrentViewport();
@@ -5533,12 +5521,12 @@ CvViewport* cvInternalGlobals::getCurrentViewport()
 
 int	cvInternalGlobals::getViewportSizeX() const
 {
-	return GC.viewportsEnabled() ? std::min(m_iViewportSizeX, m_maps[GC.getGame().getCurrentMap()]->getGridWidthINLINE()) : m_maps[GC.getGame().getCurrentMap()]->getGridWidthINLINE();
+	return GC.viewportsEnabled() ? std::min(m_iViewportSizeX, m_maps[GC.getGame().getCurrentMap()]->getGridWidth()) : m_maps[GC.getGame().getCurrentMap()]->getGridWidth();
 }
 
 int	cvInternalGlobals::getViewportSizeY() const
 {
-	return GC.viewportsEnabled() ? std::min(m_iViewportSizeY, m_maps[GC.getGame().getCurrentMap()]->getGridHeightINLINE()) : m_maps[GC.getGame().getCurrentMap()]->getGridHeightINLINE();
+	return GC.viewportsEnabled() ? std::min(m_iViewportSizeY, m_maps[GC.getGame().getCurrentMap()]->getGridHeight()) : m_maps[GC.getGame().getCurrentMap()]->getGridHeight();
 }
 
 int	cvInternalGlobals::getViewportSelectionBorder() const
@@ -5677,12 +5665,12 @@ int cvInternalGlobals::getNumMissionInfos() const
 #endif
 }
 
+inline CvMap& cvInternalGlobals::getMap() const
+{
+	return *m_maps[GC.getGame().getCurrentMap()];
+}
 
-//
-// non-inline versions
-//
-CvGameAI& cvInternalGlobals::getGame() { return *m_game; }
-CvGameAI *cvInternalGlobals::getGamePointer(){ return m_game; }
+CvGameAI* cvInternalGlobals::getGamePointer() { return m_game; }
 
 int cvInternalGlobals::getMaxCivPlayers() const
 {
@@ -5694,8 +5682,8 @@ int cvInternalGlobals::getMaxPCPlayers() const
 	return MAX_PC_PLAYERS;
 }
 
-bool cvInternalGlobals::IsGraphicsInitialized() const { return m_bGraphicsInitialized;}
-void cvInternalGlobals::SetGraphicsInitialized(bool bVal) { m_bGraphicsInitialized = bVal;}
+bool cvInternalGlobals::IsGraphicsInitialized() const { return m_bGraphicsInitialized; }
+void cvInternalGlobals::SetGraphicsInitialized(bool bVal) { m_bGraphicsInitialized = bVal; }
 void cvInternalGlobals::setInterface(CvInterface* pVal) { m_interface = pVal; }
 void cvInternalGlobals::setDiplomacyScreen(CvDiplomacyScreen* pVal) { m_diplomacyScreen = pVal; }
 void cvInternalGlobals::setMPDiplomacyScreen(CMPDiplomacyScreen* pVal) { m_mpDiplomacyScreen = pVal; }
@@ -6280,7 +6268,7 @@ bool cvInternalGlobals::getGraphicalDetailPagingEnabled() const
 
 int cvInternalGlobals::getGraphicalDetailPageInRange()
 {
-	return std::max(getGameINLINE().getXResolution(), getGameINLINE().getYResolution())/150;
+	return std::max(getGame().getXResolution(), getGame().getYResolution())/150;
 }
 
 /************************************************************************************************/
