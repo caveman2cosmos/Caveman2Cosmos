@@ -70539,12 +70539,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NEANDERTHAL_CAVES</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
+			<BuildingClassNeededs>
+				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+					<bNeededInCity>1</bNeededInCity>
+				</BuildingClassNeeded>
+			</BuildingClassNeededs>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_CAVE</FeatureType>
