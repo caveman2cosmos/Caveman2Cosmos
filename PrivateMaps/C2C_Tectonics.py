@@ -163,21 +163,7 @@ def generateTerrainTypes():
 	# Prettify the map - change coastal peaks to hills with 80% chance; default: 66%
 	mst.mapPrettifier.hillifyCoast( 80 )
 
-	# If your active mod is 'Planetfall', you will have to use a different terrainGenerator.
-	if mst.bPfall or mst.bMars:
-
-		# 'Planetfall' uses shelves and trenches to spread and stop the fungus.
-		# The oceans have to be a bit reorganized to accommodate the different realities.
-		mst.planetFallMap.buildPfallOcean()
-
-		# 'Planetfall' and 'Mars Now!' need to use this  TerrainGenerator.
-		terraingen = mst.MST_TerrainGenerator()
-
-	else:
-		# Scripts may already have their own TerrainGenerator.
-		# terraingen = ThisMapTerrainGenerator()
-		# If the script doesn't have it's own, you use this one too (same as 'Planetfall').
-		terraingen = ClimateGenerator()
+	terraingen = ClimateGenerator()
 
 	# Create the terrain and return the result.
 	terrainTypes = terraingen.generateTerrain()
@@ -201,19 +187,15 @@ def addRivers():
 	mst.marshMaker.initialize( 4, 20, (0,25), (50,75) )
 	mst.marshMaker.convertTerrain()
 	# Solidify marsh between 3 [Arid] and 7 [Tropical] percent.
-	if not mst.bPfall:
-		if mst.bMarsh:
-			iAridity =  mst.iif( CyMap().getCustomMapOption(1)==0, 2, 0 )		# Arid
-			iAridity += mst.iif( CyMap().getCustomMapOption(1)==2, -2, 0 )		# Wet
-			marshPer = 5 - iAridity
-			mst.mapPrettifier.percentifyTerrain( (mst.etMarsh,marshPer), (mst.etTundra,1), (mst.etGrass,2) )
+	iAridity =  mst.iif( CyMap().getCustomMapOption(1)==0, 2, 0 )	# Arid
+	iAridity += mst.iif( CyMap().getCustomMapOption(1)==2, -2, 0 )	# Wet
+	marshPer = 5 - iAridity
+	mst.mapPrettifier.percentifyTerrain((mst.etMarsh, marshPer), (mst.etTundra, 1), (mst.etGrass, 2))
 
 	# Build between 0..3 mountain-ranges.
 	mst.mapRegions.buildBigDents()
 	# Build between 0..3 bog-regions.
 	mst.mapRegions.buildBigBogs()
-	# build ElementalQuarter (50% chance).
-	mst.mapRegions.buildElementalQuarter( 50 )
 
 	# Some scripts produce more chaotic terrain than others. You can create more connected
 	# (bigger) deserts by converting surrounded plains and grass.
@@ -223,20 +205,17 @@ def addRivers():
 	# Sprout rivers from lakes.
 	mst.riverMaker.buildRiversFromLake()		# 66% chance to get one river, from each lake without river
 
-	# no rivers on Mars
-	if not mst.bMars:
-		# Tectonics has own river-system
-		addRivers2()
-		# Put rivers on small islands.
-		mst.riverMaker.islandRivers()					# islands between 6 and 50 tiles
+	# Tectonics has own river-system
+	addRivers2()
+	# Put rivers on small islands.
+	mst.riverMaker.islandRivers()					# islands between 6 and 50 tiles
 
 # This function will be called by the system, after addRivers() and before addFeatures()
 # - don't add lakes on Mars
 # ------------------------------------------------------------------------------------
 def addLakes():
 	print "-- addLakes()"
-	if not mst.bMars:
-		CyPythonMgr().allowDefaultImpl()
+	CyPythonMgr().allowDefaultImpl()
 
 # This function will be called by the system, after addLakes() and before addBonuses()
 # - prettify lakes
@@ -282,26 +261,22 @@ def normalizeStartingPlotLocations():
 # prevent additional rivers on Mars
 def normalizeAddRiver():
 	print "-- normalizeAddRiver()"
-	if not mst.bMars:
-		CyPythonMgr().allowDefaultImpl()
+	CyPythonMgr().allowDefaultImpl()
 
 # prevent additional lakes on Mars
 def normalizeAddLakes():
 	print "-- normalizeAddLakes()"
-	if not mst.bMars:
-		CyPythonMgr().allowDefaultImpl()
+	CyPythonMgr().allowDefaultImpl()
 
 # prevent terrain changes on Mars
 def normalizeRemoveBadTerrain():
 	print "-- normalizeRemoveBadTerrain()"
-	if not mst.bMars:
-		CyPythonMgr().allowDefaultImpl()
+	CyPythonMgr().allowDefaultImpl()
 
 # prevent terrain changes on Mars
 def normalizeAddGoodTerrain():
 	print "-- normalizeAddGoodTerrain()"
-	if not mst.bMars:
-		CyPythonMgr().allowDefaultImpl()
+	CyPythonMgr().allowDefaultImpl()
 
 # This function will be called by the system, after the map was generated, after the
 # starting-plots have been choosen, at the end of the normalizing process and
@@ -360,8 +335,6 @@ def normalizeAddExtras():
 # 'Planetfall' wants nearer starting-plots
 # If the script already has this function, return that result instead of zero or rename it.
 def minStartingDistanceModifier():
-	if mst.bPfall: return -25
-#	return minStartingDistanceModifier2()		# call renamed script function
 	return 0
 ##################################################################################
 
@@ -378,10 +351,10 @@ def isSeaLevelMap():
 	return 0
 
 def getNumCustomMapOptions():
-	return 2 + mst.iif( mst.bMars, 0, 1 )
+	return 3
 
 def getNumHiddenCustomMapOptions():
-	return mst.iif( mst.bMars, 0, 1 )
+	return 1
 
 def getCustomMapOptionName(argsList):
 	index = argsList[0]

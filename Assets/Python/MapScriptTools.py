@@ -46,16 +46,9 @@ import CvUtil
 import inspect
 from os import path
 
-# Globals
 GC = CyGlobalContext()
 
 DEBUG = False
-
-bFF = False
-bPfall = False
-bMars = False
-
-bMarsh = True
 
 #################################################
 ### Defined Class Instances
@@ -201,7 +194,6 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 	ebMarble          = GC.getInfoTypeForString('BONUS_MARBLE')					# plains, tundra or snow
 	ebSheep           = GC.getInfoTypeForString('BONUS_SHEEP')					# grass or plains
 
-	ebFungicide        = GC.getInfoTypeForString('BONUS_FUNGICIDE')			# Pfall: non polar
 	ebFungalGin        = GC.getInfoTypeForString('BONUS_FUNGAL_GIN')			# Pfall:
 	ebGrenadeFruits    = GC.getInfoTypeForString('BONUS_GRENADE_FRUITS')		# Pfall: flat, not polar
 	ebPholusMutagen    = GC.getInfoTypeForString('BONUS_PHOLUS_MUTAGEN')		# Pfall:
@@ -2082,7 +2074,6 @@ marshMaker = MarshMaker()
 ###############################################################################################################
 ### - The Big Bog (big, small, with or without lake )
 ### - The Big Dent (single, double and sideways)
-### - Elemental Quarter (FFH only)
 ### Create special features on the map. Use after generateTerrainTypes() and before addRivers()
 ###############################################################################################################
 # initialize( regDist=15 )
@@ -2093,22 +2084,18 @@ marshMaker = MarshMaker()
 # buildBigDents( iDents=None )
 # namePlot = theBigDent( pCenterPlot, bSideways=None, chAccess=66 )
 # adjustBigDentsTemplate( bRandom )
-# buildElementalQuarter( self, chEQ=66 )
-# theElementalQuarter( pCenterPlot, temp )
 # addRegionExtras()
 # --- private ---
 # template = rotateTemplate( tempDict, steps )
 # addLostIsleExtras()
 # addBigBogExtras()
 # addBigDentExtras()
-# addElementalQuarterExtras()
 # bValid = regionCheck( plot )
 # deleteNonBogPlots( plotList )
 # deleteNonDentPlots( plotList )
 # log = changeBogTerrain( plot, temp )
 # tileList = createLostIsle( minDist, bAliens )
 # tileList = stampLostIsle( template, center )
-# stampElementalQuarter()
 ###############################################################################################################
 class MapRegions:
 
@@ -2193,25 +2180,22 @@ class MapRegions:
 		self.bogLakes = []
 		self.bogRivers = None
 		# bigdent
-		self.bigDentTemplate  = {	0: [0,0,0,0,4,4,4,4,3,4,0,0,0,0],
-											1: [0,0,4,4,4,3,3,3,3,3,4,4,0,0],
-											2: [0,4,4,3,3,2,2,3,2,3,3,3,4,0],
-											3: [0,4,3,2,4,2,2,2,2,2,2,3,4,0],
-											4: [4,3,2,2,2,1,1,4,1,2,3,2,3,4],
-											5: [4,3,2,2,1,1,2,2,1,1,4,2,3,4],
-											6: [0,4,3,2,2,2,4,2,2,2,2,3,4,0],
-											7: [0,4,4,3,3,2,2,2,2,3,3,4,4,0],
-											8: [0,0,4,4,4,3,3,3,3,3,4,4,0,0],
-											9: [0,0,0,0,4,4,4,4,4,4,0,0,0,0]
-											}
+		self.bigDentTemplate  = {
+			0: [0,0,0,0,4,4,4,4,3,4,0,0,0,0],
+			1: [0,0,4,4,4,3,3,3,3,3,4,4,0,0],
+			2: [0,4,4,3,3,2,2,3,2,3,3,3,4,0],
+			3: [0,4,3,2,4,2,2,2,2,2,2,3,4,0],
+			4: [4,3,2,2,2,1,1,4,1,2,3,2,3,4],
+			5: [4,3,2,2,1,1,2,2,1,1,4,2,3,4],
+			6: [0,4,3,2,2,2,4,2,2,2,2,3,4,0],
+			7: [0,4,4,3,3,2,2,2,2,3,3,4,4,0],
+			8: [0,0,4,4,4,3,3,3,3,3,4,4,0,0],
+			9: [0,0,0,0,4,4,4,4,4,4,0,0,0,0]
+		}
 		self.dentList = []
 		self.dentVolcanos = []
 		self.dentRivers = None
 		self.dentTemplate = {}
-		# elementalquarter
-		self.eqList = []
-		self.eqVolcanos = []
-		self.eqRivers = None
 
 	# build formerly populated island
 	def buildLostIsle( self, chance=33, minDist=7, bAliens=False ):
@@ -2552,49 +2536,49 @@ class MapRegions:
 
 		# Names for Mountain Ranges
 		dentNames = [
-							{
-								'Volcano': "Big Brothers Doom",
-								'Peak':    "The Big Brother",
-								'Flat':    "Watchers Retreat",
-								'Water':   "Watchers Pool",
-								'Hills':   "Big Brother Range"
-							},
-							{
-								'Volcano': "Hole of the World",
-								'Peak':    "The Big Dent",
-								'Flat':    "Hammers Rest",
-								'Water':   "Hole of the World",
-								'Hills':   "Big Dent Highlands"
-							},
-							{
-								'Volcano': "Roaring Spike",
-								'Peak':    "The Great Spine",
-								'Flat':    "Lost Valley",
-								'Water':   "Forgotten Hollow",
-								'Hills':   "Great Spinal Mountains"
-							},
-							{
-								'Volcano': "Abyss Portal",
-								'Peak':    "Celestial Throne",
-								'Flat':    "Paradise Meadow",
-								'Water':   "Divine Bath",
-								'Hills':   "Celestial Belt"
-							},
-							{
-								'Volcano': "Demons Breath",
-								'Peak':    "Roof of the World",
-								'Flat':    "Banshies Playground",
-								'Water':   "Devils Pool",
-								'Hills':   "Howling Barrier"
-							},
-							{
-								'Volcano': "Witches Cauldron",
-								'Peak':    "Warlocks Hat",
-								'Flat':    "Fairies Glen",
-								'Water':   "Satyrs Lake",
-								'Hills':   "Wizard Mountains"
-							}
-						]
+			{
+				'Volcano': "Big Brothers Doom",
+				'Peak':    "The Big Brother",
+				'Flat':    "Watchers Retreat",
+				'Water':   "Watchers Pool",
+				'Hills':   "Big Brother Range"
+			},
+			{
+				'Volcano': "Hole of the World",
+				'Peak':    "The Big Dent",
+				'Flat':    "Hammers Rest",
+				'Water':   "Hole of the World",
+				'Hills':   "Big Dent Highlands"
+			},
+			{
+				'Volcano': "Roaring Spike",
+				'Peak':    "The Great Spine",
+				'Flat':    "Lost Valley",
+				'Water':   "Forgotten Hollow",
+				'Hills':   "Great Spinal Mountains"
+			},
+			{
+				'Volcano': "Abyss Portal",
+				'Peak':    "Celestial Throne",
+				'Flat':    "Paradise Meadow",
+				'Water':   "Divine Bath",
+				'Hills':   "Celestial Belt"
+			},
+			{
+				'Volcano': "Demons Breath",
+				'Peak':    "Roof of the World",
+				'Flat':    "Banshies Playground",
+				'Water':   "Devils Pool",
+				'Hills':   "Howling Barrier"
+			},
+			{
+				'Volcano': "Witches Cauldron",
+				'Peak':    "Warlocks Hat",
+				'Flat':    "Fairies Glen",
+				'Water':   "Satyrs Lake",
+				'Hills':   "Wizard Mountains"
+			}
+		]
 
 		dentBoni = {
 			'Flat':		[ebSilver, ebFur, ebDeer, ebMarble, ebCow, ebHorse],
@@ -2625,7 +2609,7 @@ class MapRegions:
 			if len(validPlots) > 0:
 				plot = chooseListElement( validPlots )
 				self.adjustBigDentsTemplate()
-				namePlot = self.theBigDent( plot, False )											# do the first dent
+				namePlot = self.theBigDent( plot, False ) # do the first dent
 				nDent += 1
 				# get landmark bonus
 				pos = chooseNumber(5)
@@ -2929,95 +2913,6 @@ class MapRegions:
 		print sprint
 		return namePlot
 
-	#---------------------------------------------------
-	#        ........    ........              Ww Water
-	#  dy+5  .wwwGee.    .ffdpaa.   dy+5       Ff Fire
-	#  dy+4  .wWmgEe.    .fFddAa.   dy+4       Aa Air
-	#  dy+3  .wwmPDP.    .dDpggg.   dy+3       Ee Earth
-	#  dy+2  .gggpDd.    .PDPmww.   dy+2       Dd Desert
-	#  dy+1  .aAddFf.    .eEgmWw.   dy+1       Pp Plains
-	#  dy    .aapdff.    .eeGwww.   dy         Gg Grass
-	#        ........    ........              m  Marsh
-	#         !    !      !    !
-	#        dx  dx+5    dx  dx+5
-	#---------------------------------------------------
-	# build an 'Elemental Quarter' according to one of the the templates
-	# with the four center plots having crystallized mana nodes
-	def buildElementalQuarter( self, chEQ=66 ):
-		print "[MST] ===== MapRegions:buildElementalQuarter()"
-		minOcean = 25
-		if chEQ == 0:
-			print "[MST] No Elemental Quarter selected"
-			return
-		if not choose( chEQ, True, False ):
-			print "[MST] No Elemental Quarter choosen"
-			return
-		if marshMaker.bModHasMarsh == None: marshMaker.initialize()
-		# get valid plots
-		validPlots = []
-		for x in range( 5, iNumPlotsX-5 ):
-			for y in range( 5, iNumPlotsY-5 ):
-				plot = MAP.plot(x,y)
-				if plot.isWater() and (numWaterNeighbors(x, y) < 8):
-					if (evalLatitude( plot ) < 80) and (evalLatitude( plot ) > 10):
-						if plot.area().getNumTiles() >= minOcean:
-							if self.regionCheck( plot ):
-								x,y = plot.getX(), plot.getY()
-								pl = plotDirection( x, y, DirectionTypes.DIRECTION_NORTHWEST )
-								if pl.isWater() and (numWaterNeighbors(pl.getX(), pl.getY()) == 8):
-									pl = plotDirection( x, y, DirectionTypes.DIRECTION_SOUTHEAST )
-									if not pl.isWater():
-										fx, fy = pl.getX(), pl.getY()
-										validPlots.append( (fx, fy, 0) )
-								pl = plotDirection( x, y, DirectionTypes.DIRECTION_NORTHEAST )
-								if pl.isWater() and (numWaterNeighbors(pl.getX(), pl.getY()) == 8):
-									pl = plotDirection( x, y, DirectionTypes.DIRECTION_SOUTHWEST )
-									if not pl.isWater():
-										fx, fy = pl.getX(), pl.getY()
-										validPlots.append( (fx-1, fy, 1) )
-								pl = plotDirection( x, y, DirectionTypes.DIRECTION_SOUTHEAST )
-								if pl.isWater() and (numWaterNeighbors(pl.getX(), pl.getY()) == 8):
-									pl = plotDirection( x, y, DirectionTypes.DIRECTION_NORTHWEST )
-									if not pl.isWater():
-										fx, fy = pl.getX(), pl.getY()
-										validPlots.append( (fx-1, fy+1, 2) )
-								pl = plotDirection( x, y, DirectionTypes.DIRECTION_SOUTHWEST )
-								if pl.isWater() and (numWaterNeighbors(pl.getX(), pl.getY()) == 8):
-									pl = plotDirection( x, y, DirectionTypes.DIRECTION_NORTHEAST )
-									if not pl.isWater():
-										fx, fy = pl.getX(), pl.getY()
-										validPlots.append( (fx, fy+1, 3) )
-		# build Elemental Quarter
-		printList(validPlots, "Valid Plots", prefix="[MST] ")
-		if validPlots:
-			x, y, rot = chooseListElement( validPlots )
-			plot = MAP.plot(x, y)
-			template = self.rotateTemplate( self.eqTemplate, rot )
-			printDict( self.eqTemplate, prefix="[MST] " )
-			self.theElementalQuarter( plot, template, rot )
-			printDict( template, "rotated %i" % (rot), prefix="[MST] " )
-			self.regionNames.append( ('EQ', "Elemental Quarter", plot) )
-		else:
-			print "[MST] No valid plot found for 'Elemental Quarter'"
-			return
-		print "[MST] 'Elemental Quarter' built: %r" % ( self.eqList )
-		print "[MST] Regions: %r" % ( self.regionList )
-
-	# build the 'Elemental Quarter'
-	def theElementalQuarter( self, pCenterPlot, template, rotation ):
-#		print "[MST] ===== MapRegions:elementalQuarter()"
-		if pCenterPlot==None: return
-		# get coordinates
-		x0 = pCenterPlot.getX()
-		y0 = pCenterPlot.getY()
-		# register
-		self.regionList.append( [x0, y0] )
-		self.eqList.append( [x0, y0, template, rotation] )
-		# make
-		print "[MST] Building 'Elemental Quarter' @ %3i,%2i \n\n" % ( x0, y0 )
-#		printDict( template, prefix="[MST] " )
-		self.stampElementalQuarter()		# not needed if rivers are handled properly
-		return pCenterPlot
 
 	# add names and boni to regions
 	def addRegionExtras( self ):
@@ -3025,7 +2920,6 @@ class MapRegions:
 		if len( self.lostIsleList ) > 0: self.addLostIsleExtras()
 		if len( self.bogList ) > 0: self.addBigBogExtras()
 		if len( self.dentList ) > 0: self.addBigDentExtras()
-		if len( self.eqList ) > 0: self.addElementalQuarterExtras()
 		return
 
 	###############
@@ -3316,20 +3210,6 @@ class MapRegions:
 								bonusBalancer.placeBonus( dPlot, dDict['Hills'][1] )
 		print sprint
 
-	# add mana, restamp terrain/plots and kill boni and features
-	def addElementalQuarterExtras(self):
-		print "[MST] ======== MapRegions:addElementalQuarterExtras()"
-		sprint = ""
-		for reg in self.regionNames:
-			# Elemental Quarter Name
-			if reg[0] == 'EQ':
-				plot = reg[2]
-				x,y = plot.getX(), plot.getY()
-				sPlot = MAP.plot(x,y)
-			# extras; do it again as things may have changed
-			self.stampElementalQuarter()
-		print sprint
-
 	# check, if regioncenter is far enough away from other regions to be placed at plot
 	def regionCheck( self, plot ):
 #		print "[MST] ======== MapRegions:regionCheck()"
@@ -3517,105 +3397,6 @@ class MapRegions:
 
 		MAP.recalculateAreas()
 		return stampList
-
-	# set terrain and kill features for 'Elemental Quarter'
-	def stampElementalQuarter( self ):
-#		print "[MST] ======== MapRegions:stampElementalQuarter()"
-		for x,y,template,rot in self.eqList:
-			# work template; if done early, things might get overwritten
-			for dx in range( 0, 6 ):
-				for dy in range( 0, 6 ):
-					temp = template[dy][dx]
-					plot = plotXY( x-2, y-3, dx, dy )
-
-					# kill improvements
-					plot.setImprovementType( ImprovementTypes.NO_IMPROVEMENT )
-					# kill boni
-					plot.setBonusType( -1 )
-					# kill rivers
-					# --- (perhaps) later ---
-					# kill features
-					plot.setFeatureType( FeatureTypes.NO_FEATURE, -1 )
-
-					# Air center: solitary peak - no features
-					if temp == 'A':
-						plot.setPlotType( PlotTypes.PLOT_PEAK, False, False )
-					# Air: flat or water	- no features
-					elif temp == 'a':
-						if not plot.isWater():
-							plot.setPlotType( PlotTypes.PLOT_LAND, False, False )
-					# Earth center: Mountain, Volcano if possible
-					elif temp == 'E':
-						plot.setPlotType( PlotTypes.PLOT_PEAK, False, False )
-					# Earth: hills or peak - no features
-					elif temp == 'e':
-						if plot.isWater() or plot.isFlatlands():
-							plot.setPlotType( PlotTypes.PLOT_HILLS, False, False )
-						elif plot.isHills():
-							plot.setPlotType( PlotTypes.PLOT_PEAK, False, False )
-					# Fire center: flat desert - no features
-					elif temp == 'F':
-						plot.setPlotType( PlotTypes.PLOT_LAND, False, False )
-						plot.setTerrainType( etDesert, True, True )
-					# Fire: desert or plains - no features
-					elif temp == 'f':
-						if plot.isWater():
-							plot.setPlotType( PlotTypes.PLOT_LAND, False, False )
-						if (plot.getTerrainType() == etDesert) or (plot.getTerrainType() == etPlains):
-							plot.setTerrainType( etDesert, True, True )
-						else:
-							plot.setTerrainType( etPlains, True, True )
-					# Water center: water - no features
-					elif temp == 'W':
-						plot.setPlotType( PlotTypes.PLOT_OCEAN, False, False )
-					# Water: water - no features
-					elif temp == 'w':
-						plot.setPlotType( PlotTypes.PLOT_OCEAN, False, False )
-					# Desert Hills - no features
-					elif temp == "D":
-						plot.setPlotType( PlotTypes.PLOT_HILLS, False, False )
-						plot.setTerrainType( etDesert, True, True )
-					# Desert	Flat - no features
-					elif temp == "d":
-						plot.setPlotType( PlotTypes.PLOT_LAND, False, False )
-						plot.setTerrainType( etDesert, True, True )
-					# Plains Hills - no features
-					elif temp == "P":
-						plot.setPlotType( PlotTypes.PLOT_HILLS, False, False )
-						plot.setTerrainType( etPlains, True, True )
-					# Plains	Flat - no features
-					elif temp == "p":
-						plot.setPlotType( PlotTypes.PLOT_LAND, False, False )
-						plot.setTerrainType( etPlains, True, True )
-					# Grass Hills - no features
-					elif temp == "G":
-						plot.setPlotType( PlotTypes.PLOT_HILLS, False, False )
-						plot.setTerrainType( etGrass, True, True )
-					# Grass Flat - no features
-					elif temp == "g":
-						plot.setPlotType( PlotTypes.PLOT_LAND, False, False )
-						plot.setTerrainType( etGrass, True, True )
-					# Marsh Flat - no features
-					elif temp == "m":
-						plot.setPlotType( PlotTypes.PLOT_LAND, False, False )
-						plot.setTerrainType( etMarsh, True, True )
-			for dx in range( 2, 4 ):
-				for dy in range( 2, 4 ):
-					temp = template[dy][dx]
-					plot = plotXY( x-2, y-3, dx, dy )
-					if temp == "m":
-						plot.setPlotType( PlotTypes.PLOT_LAND, False, False )
-						plot.setTerrainType( etMarsh, True, True )
-					if temp == "P":
-						plot.setPlotType( PlotTypes.PLOT_HILLS, False, False )
-						plot.setTerrainType( etPlains, True, True )
-					if temp == "p":
-						plot.setPlotType( PlotTypes.PLOT_LAND, False, False )
-						plot.setTerrainType( etPlains, True, True )
-					if temp == "g":
-						plot.setPlotType( PlotTypes.PLOT_LAND, False, False )
-						plot.setTerrainType( etGrass, True, True )
-		MAP.recalculateAreas()
 
 ###############################################################################################################
 ### CLASS MapRegions END
@@ -6706,7 +6487,6 @@ print "[MST] ########### pre-init MapScriptTools ########### End"
 # -------------- soon
 # alternative to 'Lost Isle'
 #  - 'Eden Valley' (two rows of mountains/hills, river in-between, several resources, ?? in the arctic ??)
-# alternatives to 'Elemental Quarter':
 #  - 'Devils Pentagram' (Death,Entropy,Shadow,Chaos,Meta -mana in pentagram form )
 #  - 'Divine Circle' (Nature,Spirit,Life,Enchantment,Mind,Sun -mana in a circle)
 # -------------- really soon now
@@ -6781,9 +6561,7 @@ The tools in this file allow you to:
     3a) 'The Big Bog', a flat, marshy, somewhat round region, probably with a lake and some rivers within it.
     3b) 'The Big Dent', a mountainous, somewhat oval region, probably with a volcano and several
         rivers flowing from it.
-    3c) 'Elemental Quarter', the place where elemental mana nodes meet. Earth, Water, Air and Fire nodes
-        influence the quarter of featureless terrain behind them. (For FFH only)
-    3d) The lost 'Isle Of Atlantis' / 'Numenor Island', a small, isolated island with city-ruins, roads,
+    3c) The lost 'Isle Of Atlantis' / 'Numenor Island', a small, isolated island with city-ruins, roads,
         and perhaps some intact improvements. If allowed by the mod, some other goodies may also appear.
  4) Put mod-dependent features on the map:
     4a) Kelp on coastal plots
@@ -6964,8 +6742,6 @@ buildBigBogs( iBogs=None )
 namePlot = theBigBog( pCenterPlot, bBigBog=True, bBogLake=True )
 buildBigDents( iDents=None )
 namePlot = theBigDent( pCenterPlot, bSideways=None, chAccess=66 )
-buildElementalQuarter( chEQ=66 )
-namePlot = theElementalQuarter( pCenterPlot, temp )
 addRegionExtras()
 
 
@@ -7083,17 +6859,6 @@ which may well be usefull to you. If you used 'import MapScriptTools as mst',
 you can use them all by putting 'mst.' before the call.
 Have a look and feel free to do with them what you want.
 
-
-Useful Constants:
------------------
-mst.bPfall   True,False
-             indicates if this mod is 'Planetfall' or a modmod
-             ( checks for BONUS_FUNGICIDE )
-
-mst.bMars    True,False
-             indicates if this mod is 'Mars Now!' or a modmod
-             ( checks for 'Mars, Now!' in pedia )
-
 Notes:
 ------
 These tools are for the english version only.
@@ -7119,7 +6884,6 @@ All maps can be used with 'Planetfall' or 'Mars Now!'.
 All maps can (and will) produce Marsh terrain, if the mod supports it.
 All maps can (and will) produce Deep Ocean terrain, if the mod supports it.
 All maps allow for at least two more map sizes beyond 'Huge', if the mod supports them
-All maps may add Map Regions ( BigDent, BigBog (not Mars), ElementalQuarter (FFH only), LostIsle ).
 All maps may add Map Features ( Kelp, HauntedLands, CrystalPlains ), if supported by mod (FFH only).
 All maps add some rivers on small islands and from lakes
 All maps support Team Start options.
@@ -7331,7 +7095,7 @@ def generateTerrainTypes():
 
 # this function will be called by the system, after generateTerrainTypes() and before addLakes()
 # - Generate marsh terrain - converts some grass and tundra to marsh within two latitude zones.
-# - build some odd regions ('The Big Bog', 'The Big Dent', 'Elemental Quarter')
+# - build some odd regions ('The Big Bog', 'The Big Dent')
 # - prettify terrain
 # - make rivers on smaller islands
 # ----------------------------------------------------------------------------------------------
@@ -7355,9 +7119,6 @@ def addRivers():
 
 	# Build between 0..3 bog-regions.
 	mst.mapRegions.buildBigBogs()
-
-	# build ElementalQuarter (66% chance). - ignored if not FFH
-	mst.mapRegions.buildElementalQuarter()
 
 	# Some scripts produce more chaotic terrain than others. You can create more connected
 	# (bigger) deserts by converting surrounded plains and grass.

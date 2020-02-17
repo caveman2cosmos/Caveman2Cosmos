@@ -64,12 +64,8 @@ def beforeGeneration():
 
 def generateTerrainTypes():
 	print "-- generateTerrainTypes()"
-
 	# Choose terrainGenerator
-	if mst.bPfall or mst.bMars:
-		terraingen = mst.MST_TerrainGenerator()	# for Planetfall/Mars Now! use MST_TerrainGenerator()
-	else:
-		terraingen = ISTerrainGenerator()
+	terraingen = ISTerrainGenerator()
 	# Generate terrain
 	terrainTypes = terraingen.generateTerrain()
 	return terrainTypes
@@ -86,18 +82,12 @@ def addRivers():
 	mst.mapRegions.buildBigDents()
 	# Build between 0..3 bog-regions.
 	mst.mapRegions.buildBigBogs()
-	# build ElementalQuarter
-	mst.mapRegions.buildElementalQuarter()
-
-	# No rivers on Mars
-	if not mst.bMars:
-		# Put rivers on the map.
-		CyPythonMgr().allowDefaultImpl()
+	# Put rivers on the map.
+	CyPythonMgr().allowDefaultImpl()
 
 def addLakes():
 	print "-- addLakes()"
-	if not mst.bMars:
-		CyPythonMgr().allowDefaultImpl()
+	CyPythonMgr().allowDefaultImpl()
 
 # shuffle starting-plots for teams
 def normalizeStartingPlotLocations():
@@ -119,25 +109,21 @@ def normalizeStartingPlotLocations():
 
 def normalizeAddRiver():
 	print "-- normalizeAddRiver()"
-	if not mst.bMars:
-		CyPythonMgr().allowDefaultImpl()
+	CyPythonMgr().allowDefaultImpl()
 
 def normalizeAddLakes():
 	print "-- normalizeAddLakes()"
-	if not mst.bMars:
-		CyPythonMgr().allowDefaultImpl()
+	CyPythonMgr().allowDefaultImpl()
 
 # prevent terrain changes on Mars
 def normalizeRemoveBadTerrain():
 	print "-- normalizeRemoveBadTerrain()"
-	if not mst.bMars:
-		CyPythonMgr().allowDefaultImpl()
+	CyPythonMgr().allowDefaultImpl()
 
 # prevent terrain changes on Mars
 def normalizeAddGoodTerrain():
 	print "-- normalizeAddGoodTerrain()"
-	if not mst.bMars:
-		CyPythonMgr().allowDefaultImpl()
+	CyPythonMgr().allowDefaultImpl()
 
 def normalizeAddExtras():
 	print "-- normalizeAddExtras()"
@@ -165,9 +151,12 @@ def normalizeAddExtras():
 	mst.mapStats.mapStatistics()
 
 def minStartingDistanceModifier():
-	if mst.bPfall: return -25
-	minStartingDistanceModifier2()			# call renamed script function
-#	return 0
+	numPlrs = CyGlobalContext().getGame().countCivPlayersEverAlive()
+	if numPlrs  <= 18:
+		return -95
+	else:
+		return -50
+
 ################################################################
 
 
@@ -182,10 +171,10 @@ def isAdvancedMap():
 	return 0
 
 def getNumCustomMapOptions():
-	return 2 + mst.iif( mst.bMars, 0, 1 )
+	return 3
 
 def getNumHiddenCustomMapOptions():
-	return 1 + mst.iif( mst.bMars, 0, 1 )
+	return 2
 
 def getCustomMapOptionName(argsList):
 	[iOption] = argsList
@@ -697,30 +686,7 @@ def getStartPositions():
 	return coord
 ########### Temudjin END
 
-def minStartingDistanceModifier2():
-	numPlrs = CyGlobalContext().getGame().countCivPlayersEverAlive()
-	if numPlrs  <= 18:
-		return -95
-	else:
-		return -50
-
 def findStartingPlot(argsList):
-
-	########### Temudjin START
-	# Usually Planetfall uses default starting-plot function, because
-	# otherwise the 'scattered landing pods' option would be ignored.
-	# But this script specificly designed its starting-plots, so we pay that price.
-	#if mst.bPfall:
-	#	CyPythonMgr().allowDefaultImpl()
-	#	return
-	########### Temudjin END
-
-	# Set up for maximum of 18 players! If more, use default implementation.
-	#iPlayers = CyGlobalContext().getGame().countCivPlayersEverAlive()
-	#if iPlayers > 18:
-	#	CyPythonMgr().allowDefaultImpl()
-	#	return
-
 	[playerID] = argsList
 	global plotSuccess
 	global plotValue
