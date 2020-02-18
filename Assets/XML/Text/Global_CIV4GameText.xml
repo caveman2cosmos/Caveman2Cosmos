@@ -5988,6 +5988,15 @@
 		<Polish>%s1_BldgName został wybudowany przez mieszkańców miasta %s2_CityName</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_COMPLETED_AUTO_BUILD_NOT</Tag>
+		<English>%s1_BldgName has been lost in %s2_CityName</English>
+		<French>[NUM1:Un:Une:Des:Des] %s1_BldgName [NUM1:a:a:ont:ont] été construi[NUM1:t:te:ts:tes] par les citoyens de %s2_CityName</French>
+		<German>Neuer automatischer Effekt in %s2_CityName: %s1_BldgName.</German>
+		<Italian>%s1_BldgName è stato costruito dagli abitanti di %s2_CityName</Italian>
+		<Spanish>Los ciudadanos de %s2_CityName han construido [NUM1:un:una:unos:unas] %s1_BldgName.</Spanish>
+		<Polish>%s1_BldgName został wybudowany przez mieszkańców miasta %s2_CityName</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CONFIRM_AMBUSH</Tag>
 		<English>Are you sure you wish to ambush the enemy?</English>
 		<French>Etez-vous sûr de vouloir tendre une embuscade à l'ennemi?</French>

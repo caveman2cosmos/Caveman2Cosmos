@@ -25662,7 +25662,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 		}
 // BUG - Building Double Commerce - end
 
-		if (!(GC.getBuildingClassInfo((BuildingClassTypes)(kBuilding.getBuildingClassType())).isNoLimit()))
+		if (!kBuilding.isNoLimit())
 		{
 			if (isWorldWonderClass((BuildingClassTypes)(kBuilding.getBuildingClassType())))
 			{
@@ -40608,46 +40608,37 @@ void CvGameTextMgr::getCorporationDataForWB(bool bHeadquarters, std::vector<CvWB
 /************************************************************************************************/
 void CvGameTextMgr::buildCanPassPeaksString(CvWStringBuffer &szBuffer, TechTypes eTech, bool bList, bool bPlayerContext)
 {
-	if (GC.getGame().isOption(GAMEOPTION_MOUNTAINS))
+	if (GC.getTechInfo(eTech).isCanPassPeaks() && (!bPlayerContext || !(GET_TEAM(GC.getGame().getActiveTeam()).isCanPassPeaks())))
 	{
-		if (GC.getTechInfo(eTech).isCanPassPeaks() && (!bPlayerContext || !(GET_TEAM(GC.getGame().getActiveTeam()).isCanPassPeaks())))
+		if (bList)
 		{
-			if (bList)
-			{
-				szBuffer.append(NEWLINE);
-			}
-			szBuffer.append(gDLL->getText("TXT_KEY_CAN_PASS_PEAKS"));
+			szBuffer.append(NEWLINE);
 		}
+		szBuffer.append(gDLL->getText("TXT_KEY_CAN_PASS_PEAKS"));
 	}
 }
 
 void CvGameTextMgr::buildMoveFastPeaksString(CvWStringBuffer &szBuffer, TechTypes eTech, bool bList, bool bPlayerContext)
 {
-	if (GC.getGame().isOption(GAMEOPTION_MOUNTAINS))
+	if (GC.getTechInfo(eTech).isMoveFastPeaks() && (!bPlayerContext || !(GET_TEAM(GC.getGame().getActiveTeam()).isMoveFastPeaks())))
 	{
-		if (GC.getTechInfo(eTech).isMoveFastPeaks() && (!bPlayerContext || !(GET_TEAM(GC.getGame().getActiveTeam()).isMoveFastPeaks())))
+		if (bList)
 		{
-			if (bList)
-			{
-				szBuffer.append(NEWLINE);
-			}
-			szBuffer.append(gDLL->getText("TXT_KEY_MOVE_FAST_PEAKS"));
+			szBuffer.append(NEWLINE);
 		}
+		szBuffer.append(gDLL->getText("TXT_KEY_MOVE_FAST_PEAKS"));
 	}
 }
 
 void CvGameTextMgr::buildCanFoundOnPeaksString(CvWStringBuffer &szBuffer, TechTypes eTech, bool bList, bool bPlayerContext)
 {
-	if (GC.getGame().isOption(GAMEOPTION_MOUNTAINS))
+	if (GC.getTechInfo(eTech).isCanFoundOnPeaks() && (!bPlayerContext || !(GET_TEAM(GC.getGame().getActiveTeam()).isCanFoundOnPeaks())))
 	{
-		if (GC.getTechInfo(eTech).isCanFoundOnPeaks() && (!bPlayerContext || !(GET_TEAM(GC.getGame().getActiveTeam()).isCanFoundOnPeaks())))
+		if (bList)
 		{
-			if (bList)
-			{
-				szBuffer.append(NEWLINE);
-			}
-			szBuffer.append(gDLL->getText("TXT_KEY_CAN_FOUND_ON_PEAKS"));
+			szBuffer.append(NEWLINE);
 		}
+		szBuffer.append(gDLL->getText("TXT_KEY_CAN_FOUND_ON_PEAKS"));
 	}
 }
 

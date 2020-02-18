@@ -6303,14 +6303,6 @@
 			<CultureType>BONUS_NAZCA</CultureType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/culture_nazca.dds</Button>
 		</UnitCombatInfo>
-		<!--
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_CULTURE_NEANDERTHAL</Type>
-			<Description>TXT_KEY_UNITCOMBAT_CULTURE_NEANDERTHAL</Description>
-			<CultureType>BONUS_NEANDERTHAL</CultureType>
-			<Button>Art/Interface/Buttons/units/sparth/categories/culture_neanderthal.dds</Button>
-		</UnitCombatInfo>
-		-->
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_CULTURE_NEPALESE</Type>
 			<Description>TXT_KEY_UNITCOMBAT_CULTURE_NEPALESE</Description>

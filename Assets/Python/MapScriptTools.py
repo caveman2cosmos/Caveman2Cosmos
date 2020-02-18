@@ -160,6 +160,7 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 	ebFur             = GC.getInfoTypeForString('BONUS_BEAVERS')			# tundra, snow, forest
 	ebGems            = GC.getInfoTypeForString('BONUS_GEMS')			# grass, jungle
 	ebMarble          = GC.getInfoTypeForString('BONUS_MARBLE')			# plains, tundra, snow
+	ebSheep           = GC.getInfoTypeForString('BONUS_SHEEP')			# grass, plains
 
 	###################################
 	### define globals for improvements

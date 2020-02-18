@@ -229,13 +229,6 @@
 		</GameOptionInfo>
 		<!-- Revolutions Game Options End -->
 		<GameOptionInfo>
-			<Type>GAMEOPTION_MOUNTAINS</Type>
-			<Description>TXT_KEY_GAMEOPTION_MOUNTAINS</Description>
-			<Help>TXT_KEY_GAMEOPTION_MOUNTAINS_HELP</Help>
-			<bDefault>1</bDefault>
-			<bVisible>0</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
 			<Type>GAMEOPTION_SAD</Type>
 			<Description>TXT_KEY_GAMEOPTION_SAD</Description>
 			<Help>TXT_KEY_GAMEOPTION_SAD_HELP</Help>
@@ -257,25 +250,11 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_BARBARIAN_GENERALS</Type>
-			<Description>TXT_KEY_GAMEOPTION_BARBARIAN_GENERALS</Description>
-			<Help>TXT_KEY_GAMEOPTION_BARBARIAN_GENERALS_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>0</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
 			<Type>GAMEOPTION_NO_ZOC</Type>
 			<Description>TXT_KEY_GAMEOPTION_NO_ZOC</Description>
 			<Help>TXT_KEY_GAMEOPTION_NO_ZOC_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_ASSIMILATION</Type>
-			<Description>TXT_KEY_GAMEOPTION_ASSIMILATION</Description>
-			<Help>TXT_KEY_GAMEOPTION_ASSIMILATION_HELP</Help>
-			<bDefault>1</bDefault>
-			<bVisible>0</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_CHALLENGE_CUT_LOSERS</Type>
@@ -608,13 +587,6 @@
 			<bVisible>0</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_NIGHTMARE_MODE</Type>
-			<Description>TXT_KEY_GAMEOPTION_NIGHTMARE_MODE</Description>
-			<Help>TXT_KEY_GAMEOPTION_NIGHTMARE_MODE_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>0</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
 			<Type>GAMEOPTION_SIZE_MATTERS_UNCUT</Type>
 			<Description>TXT_KEY_GAMEOPTION_SIZE_MATTERS_UNCUT</Description>
 			<Help>TXT_KEY_GAMEOPTION_SIZE_MATTERS_UNCUT_HELP</Help>
@@ -626,13 +598,6 @@
 					<bEnforcesGameOptionOn>1</bEnforcesGameOptionOn>
  				</EnforcesGameOptionOnType>
  			</EnforcesGameOptionOnTypes>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_ECOLOGICAL_ANIMALS</Type>
-			<Description>TXT_KEY_GAMEOPTION_ECOLOGICAL_ANIMALS</Description>
-			<Help>TXT_KEY_GAMEOPTION_ECOLOGICAL_ANIMALS_HELP</Help>
-			<bDefault>1</bDefault>
-			<bVisible>0</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_TELEPORT_HUNTING_AWARDS</Type>

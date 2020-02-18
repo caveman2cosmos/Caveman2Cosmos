@@ -1,10 +1,4 @@
 <?xml version="1.0"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- ReModified by StrategyOnly -->
-	<!-- -->
-	<!-- Build Infos -->
 <Civ4BuildInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<BuildInfos>
 		<!-- Mesoamerican Temple -->
@@ -127,25 +121,22 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -410,41 +401,36 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_OASIS</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -695,41 +681,36 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_OASIS</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<!-- This improvement 'CANNOT' be built on this feature -->
 					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>

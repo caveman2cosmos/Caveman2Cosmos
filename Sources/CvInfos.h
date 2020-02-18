@@ -3647,6 +3647,7 @@ public:
 	CvBuildingInfo();
 	virtual ~CvBuildingInfo();
 
+	bool isNoLimit() const;						// Exposed to Python
 	int getBuildingClassType() const;			// Exposed to Python
 	int getVictoryPrereq() const;				// Exposed to Python
 	int getFreeStartEra() const;				// Exposed to Python
@@ -4167,6 +4168,7 @@ public:
 	bool getNotShowInCity() const;
 
 protected:
+	bool m_bNoLimit;
 	bool m_bNotShowInCity;
 	void setNotShowInCity();
 	int m_iFreePromotion_2;
@@ -4627,9 +4629,6 @@ public:
 	int getDefaultBuildingIndex() const;				// Exposed to Python
 	void setDefaultBuildingIndex(int i);
 
-	bool isNoLimit() const;				// Exposed to Python
-	bool isMonument() const;				// Exposed to Python
-
 	// Arrays
 	int getVictoryThreshold(int i) const;				// Exposed to Python
 
@@ -4651,11 +4650,7 @@ protected:
 	int m_iExtraPlayerInstances;
 	int m_iDefaultBuildingIndex;
 
-	bool m_bNoLimit;
-	bool m_bMonument;
-
 	// Arrays
-
 	int* m_piVictoryThreshold;
 
 };

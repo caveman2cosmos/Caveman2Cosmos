@@ -13965,23 +13965,7 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 		return NULL;
 	}
 
-	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 	CvUnitInfo& kUnitInfo = GC.getUnitInfo(eUnit);
-/************************************************************************************************/
-/* Afforess	                  Start		 02/17/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	if (!GC.getGame().isOption(GAMEOPTION_ASSIMILATION))
-	{
-		if (GC.getCivilizationInfo(kPlayer.getCivilizationType()).getCivilizationUnits(kUnitInfo.getUnitClassType()) != eUnit)
-		{
-			return NULL;
-		}
-	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	if (!upgradeAvailable(getUnitType(), ((UnitClassTypes)(kUnitInfo.getUnitClassType()))))
 	{
@@ -14024,12 +14008,10 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 				}
 			}
 
-			if (kUnitInfo.getDomainCargo() != NO_DOMAIN)
+			if (kUnitInfo.getDomainCargo() != NO_DOMAIN
+			&& kUnitInfo.getDomainCargo() != pLoopUnit->getDomainType())
 			{
-				if (kUnitInfo.getDomainCargo() != pLoopUnit->getDomainType())
-				{
-					return NULL;
-				}
+				return NULL;
 			}
 		}
 	}
@@ -16153,7 +16135,7 @@ bool CvUnit::canSiege(TeamTypes eTeam) const
 		return false;
 	}
 
-	if (GET_PLAYER(getOwner()).getID() == PASSIVE_ANIMAL_PLAYER)
+	if (GET_PLAYER(getOwner()).getID() == PREY_PLAYER)
 	{
 		return false;
 	}

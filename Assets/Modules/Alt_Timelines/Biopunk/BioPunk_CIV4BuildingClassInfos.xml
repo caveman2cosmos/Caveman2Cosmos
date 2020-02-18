@@ -12,7 +12,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_BIOPUNK_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>

@@ -2404,50 +2404,19 @@ bool CvDLLButtonPopup::launchMainMenuPopup(CvPopup* pPopup, CvPopupInfo &info)
 
 	if ((GC.getGame().getElapsedGameTurns() == 0) && !(GC.getGame().isGameMultiPlayer()) && !(GC.getInitCore().getWBMapScript()))
 	{
-		// Don't allow if there has already been diplomacy
 		bool bShow = true;
-		for (int i = 0; bShow && i < MAX_PC_TEAMS; i++)
+		for (int i = 0; i < GC.getMap().numPlots(); ++i)
 		{
-			for (int j = i+1; bShow && j < MAX_PC_TEAMS; j++)
-			{
-				if (GET_TEAM((TeamTypes)i).isHasMet((TeamTypes)j))
-				{
-					bShow = false;
-				}
-			}
-		}
-/********************************************************************************/
-/**		REVOLUTION_MOD							2/29/08				jdog5000	*/
-/**																				*/
-/**																				*/
-/********************************************************************************/
-		/*if (bShow)
-		{
-			// Don't block regenerate on game script data
-			if (!GC.getGame().getScriptData().empty())
+			CvPlot* pPlot = GC.getMap().plotByIndex(i);
+			if (!pPlot->getScriptData().empty())
 			{
 				bShow = false;
+				break;
 			}
-		}*/
-/********************************************************************************/
-/**		REVOLUTION_MOD							END								*/
-/********************************************************************************/
+		}
 		if (bShow)
 		{
-			for (int i = 0; i < GC.getMap().numPlots(); ++i)
-			{
-				CvPlot* pPlot = GC.getMap().plotByIndex(i);
-				if (!pPlot->getScriptData().empty())
-				{
-					bShow = false;
-					break;
-				}
-			}
-
-			if (bShow)
-			{
-				gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_POPUP_REGENERATE_MAP").c_str(), NULL, 3, WIDGET_GENERAL, 3, 0, true, POPUP_LAYOUT_STRETCH, DLL_FONT_CENTER_JUSTIFY);
-			}
+			gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_POPUP_REGENERATE_MAP").c_str(), NULL, 3, WIDGET_GENERAL, 3, 0, true, POPUP_LAYOUT_STRETCH, DLL_FONT_CENTER_JUSTIFY);
 		}
 	}
 

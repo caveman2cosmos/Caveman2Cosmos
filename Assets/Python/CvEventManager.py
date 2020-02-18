@@ -293,6 +293,18 @@ class CvEventManager:
 				self.TECH_SMART_DUST	= GC.getInfoTypeForString("TECH_SMART_DUST")
 				self.CIVICOPTION_POWER	= GC.getInfoTypeForString('CIVICOPTION_POWER')
 				self.CIVIC_TECHNOCRACY	= GC.getInfoTypeForString('CIVIC_TECHNOCRACY')
+				# onCityBuilt
+				self.aCultureList = [
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_AFRICAN'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_AFRICAN'), GC.getInfoTypeForString('BUILDINGCLASS_CULTURE_NATIVE_AFRICAN')],
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_ASIAN'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_ASIAN'), GC.getInfoTypeForString('BUILDINGCLASS_CULTURE_NATIVE_ASIAN')],
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_EUROPEAN'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_EUROPEAN'), GC.getInfoTypeForString('BUILDINGCLASS_CULTURE_NATIVE_EUROPEAN')],
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_MIDDLE_EASTERN'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN'), GC.getInfoTypeForString('BUILDINGCLASS_CULTURE_NATIVE_MIDDLE_EASTERN')],
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_NEANDERTHAL'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_NEANDERTHAL'), GC.getInfoTypeForString('BUILDINGCLASS_CULTURE_NATIVE_NEANDERTHAL')],
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_NORTH_AMERICAN'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_NORTH_AMERICAN'), GC.getInfoTypeForString('BUILDINGCLASS_CULTURE_NATIVE_NORTH_AMERICAN')],
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_OCEANIAN'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_OCEANIAN'), GC.getInfoTypeForString('BUILDINGCLASS_CULTURE_NATIVE_OCEANIAN')],
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_SOUTH_AMERICAN'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN'), GC.getInfoTypeForString('BUILDINGCLASS_CULTURE_NATIVE_SOUTH_AMERICAN')]
+				]
+				self.UNIT_BAND = GC.getInfoTypeForString("UNIT_BAND")
 				# onCombatResult
 				self.UNITCOMBAT_RECON		= GC.getInfoTypeForString("UNITCOMBAT_RECON")
 				self.UNITCOMBAT_HUNTER		= GC.getInfoTypeForString("UNITCOMBAT_HUNTER")
@@ -641,12 +653,22 @@ class CvEventManager:
 		if bPrehistoricStart:
 			for iPlayer in xrange(self.MAX_PC_PLAYERS):
 				CyPlayer = GC.getPlayer(iPlayer)
+				if not CyPlayer.isAlive(): continue
+
+				iCulture = -1
+				civInfo = GC.getCivilizationInfo(CyPlayer.getCivilizationType())
+				for iPromo, _, native in self.aCultureList:
+					if civInfo.isCivilizationFreeBuildingClass(native):
+						iCulture = iPromo
+						break
 				CyUnit, i = CyPlayer.firstUnit(False)
 				while CyUnit:
 					if CyUnit.isFound():
 						CyUnit.setHasPromotion(self.PROMO_GUARDIAN_TRIBAL, True)
-						break
+						if iCulture > -1:
+							CyUnit.setHasPromotion(iCulture, True)
 					CyUnit, i = CyPlayer.nextUnit(i, False)
+
 
 	def onLoadGame(self, argsList):
 		self.gameStart()
@@ -2520,8 +2542,13 @@ class CvEventManager:
 			if iUnit in self.mapSettlerPop:
 				iPop += self.mapSettlerPop[iUnit]
 
-			# Tribal Guardian
-			if CyUnit.isHasPromotion(self.PROMO_GUARDIAN_TRIBAL):
+			for iPromo, iBuilding, _ in self.aCultureList:
+				if -1 in (iPromo, iBuilding): continue
+				if CyUnit.isHasPromotion(iPromo):
+					CyCity.setNumRealBuilding(iBuilding, 1)
+
+			# Give a free defender to the first city when it is built
+			if iUnit == self.UNIT_BAND:
 				CyPlayer = GC.getPlayer(iPlayer)
 				if GC.getCivilizationInfo(CyPlayer.getCivilizationType()).getType() == "CIVILIZATION_NEANDERTHAL":
 					iUnitTG = GC.getInfoTypeForString("UNIT_NEANDERTHAL_TRIBAL_GUARDIAN")

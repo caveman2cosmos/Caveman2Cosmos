@@ -7,7 +7,6 @@
 <Civ4BonusInfos xmlns="x-schema:../Schema/C2C_CIV4TerrainSchema.xml">
 	<BonusInfos>
 	<!-- Aborigine -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_ABORIGINE</Type>
 			<Description>TXT_KEY_BONUS_ABORIGINE</Description>
@@ -17,7 +16,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Ainu -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_AINU</Type>
 			<Description>TXT_KEY_BONUS_AINU</Description>
@@ -27,7 +25,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Aka -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_AKA</Type>
 			<Description>TXT_KEY_BONUS_AKA</Description>
@@ -37,7 +34,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Akkadian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_AKKADIAN</Type>
 			<Description>TXT_KEY_BONUS_AKKADIAN</Description>
@@ -47,7 +43,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- American -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_AMERICAN</Type>
 			<Description>TXT_KEY_BONUS_AMERICAN</Description>
@@ -57,7 +52,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Anasazi -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_ANASAZI</Type>
 			<Description>TXT_KEY_BONUS_ANASAZI</Description>
@@ -67,7 +61,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Apache -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_APACHE</Type>
 			<Description>TXT_KEY_BONUS_APACHE</Description>
@@ -77,7 +70,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Arabian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_ARABIAN</Type>
 			<Description>TXT_KEY_BONUS_ARABIAN</Description>
@@ -87,7 +79,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Arawak -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_ARAWAK</Type>
 			<Description>TXT_KEY_BONUS_ARAWAK</Description>
@@ -97,7 +88,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Argentinian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_ARGENTINIAN</Type>
 			<Description>TXT_KEY_BONUS_ARGENTINIAN</Description>
@@ -107,7 +97,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Armenian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_ARMENIAN</Type>
 			<Description>TXT_KEY_BONUS_ARMENIAN</Description>
@@ -117,7 +106,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Ashanti -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_ASHANTI</Type>
 			<Description>TXT_KEY_BONUS_ASHANTI</Description>
@@ -127,7 +115,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Assyrian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_ASSYRIAN</Type>
 			<Description>TXT_KEY_BONUS_ASSYRIAN</Description>
@@ -137,7 +124,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Athenian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_ATHENIAN</Type>
 			<Description>TXT_KEY_BONUS_ATHENIAN</Description>
@@ -147,7 +133,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Australian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_AUSTRALIAN</Type>
 			<Description>TXT_KEY_BONUS_AUSTRALIAN</Description>
@@ -157,7 +142,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Austrian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_AUSTRIAN</Type>
 			<Description>TXT_KEY_BONUS_AUSTRIAN</Description>
@@ -167,7 +151,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Aymara -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_AYMARA</Type>
 			<Description>TXT_KEY_BONUS_AYMARA</Description>
@@ -177,7 +160,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Aztec -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_AZTEC</Type>
 			<Description>TXT_KEY_BONUS_AZTEC</Description>
@@ -187,7 +169,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Babylonian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_BABYLONIAN</Type>
 			<Description>TXT_KEY_BONUS_BABYLONIAN</Description>
@@ -197,7 +178,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Bandanese -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_BANDANESE</Type>
 			<Description>TXT_KEY_BONUS_BANDANESE</Description>
@@ -207,7 +187,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Basque -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_BASQUE</Type>
 			<Description>TXT_KEY_BONUS_BASQUE</Description>
@@ -217,7 +196,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Belgian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_BELGIAN</Type>
 			<Description>TXT_KEY_BONUS_BELGIAN</Description>
@@ -227,7 +205,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Bengali -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_BENGALI</Type>
 			<Description>TXT_KEY_BONUS_BENGALI</Description>
@@ -237,7 +214,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Benin -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_BENIN</Type>
 			<Description>TXT_KEY_BONUS_BENIN</Description>
@@ -247,7 +223,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Berber -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_BERBER</Type>
 			<Description>TXT_KEY_BONUS_BERBER</Description>
@@ -257,7 +232,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Blackfoot -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_BLACKFOOT</Type>
 			<Description>TXT_KEY_BONUS_BLACKFOOT</Description>
@@ -267,7 +241,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Brazilian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_BRAZILIAN</Type>
 			<Description>TXT_KEY_BONUS_BRAZILIAN</Description>
@@ -277,7 +250,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Bulgarian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_BULGARIAN</Type>
 			<Description>TXT_KEY_BONUS_BULGARIAN</Description>
@@ -287,7 +259,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Burmese -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_BURMESE</Type>
 			<Description>TXT_KEY_BONUS_BURMESE</Description>
@@ -297,7 +268,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Byzantine -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_BYZANTINE</Type>
 			<Description>TXT_KEY_BONUS_BYZANTINE</Description>
@@ -307,7 +277,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Californian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_CALIFORNIAN</Type>
 			<Description>TXT_KEY_BONUS_CALIFORNIAN</Description>
@@ -317,7 +286,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Canadian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_CANADIAN</Type>
 			<Description>TXT_KEY_BONUS_CANADIAN</Description>
@@ -327,7 +295,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Cantonese -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_CANTONESE</Type>
 			<Description>TXT_KEY_BONUS_CANTONESE</Description>
@@ -337,7 +304,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Carib -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_CARIB</Type>
 			<Description>TXT_KEY_BONUS_CARIB</Description>
@@ -347,7 +313,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Carthaginian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_CARTHAGINIAN</Type>
 			<Description>TXT_KEY_BONUS_CARTHAGINIAN</Description>
@@ -357,7 +322,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Castilian -->
-	<!-- by Hydromancerx -->
 <!-- No units
 		<BonusInfo>
 			<Type>BONUS_CASTILIAN</Type>
@@ -369,7 +333,6 @@
 		</BonusInfo>
 -->
 	<!-- Celtic -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_CELTIC</Type>
 			<Description>TXT_KEY_BONUS_CELTIC</Description>
@@ -379,7 +342,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Ceylonese -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_CEYLONESE</Type>
 			<Description>TXT_KEY_BONUS_CEYLONESE</Description>
@@ -389,7 +351,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Cham -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_CHAM</Type>
 			<Description>TXT_KEY_BONUS_CHAM</Description>
@@ -399,7 +360,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Cherokee -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_CHEROKEE</Type>
 			<Description>TXT_KEY_BONUS_CHEROKEE</Description>
@@ -409,7 +369,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Cheyenne -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_CHEYENNE</Type>
 			<Description>TXT_KEY_BONUS_CHEYENNE</Description>
@@ -419,7 +378,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Chinese -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_CHINESE</Type>
 			<Description>TXT_KEY_BONUS_CHINESE</Description>
@@ -429,7 +387,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Chippewa -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_CHIPPEWA</Type>
 			<Description>TXT_KEY_BONUS_CHIPPEWA</Description>
@@ -439,7 +396,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Chola -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_CHOLA</Type>
 			<Description>TXT_KEY_BONUS_CHOLA</Description>
@@ -449,7 +405,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Chumash -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_CHUMASH</Type>
 			<Description>TXT_KEY_BONUS_CHUMASH</Description>
@@ -459,7 +414,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Colombian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_COLOMBIAN</Type>
 			<Description>TXT_KEY_BONUS_COLOMBIAN</Description>
@@ -469,7 +423,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Comanche -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_COMANCHE</Type>
 			<Description>TXT_KEY_BONUS_COMANCHE</Description>
@@ -479,7 +432,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Confederate -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_CONFEDERATE</Type>
 			<Description>TXT_KEY_BONUS_CONFEDERATE</Description>
@@ -489,7 +441,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Cree -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_CREE</Type>
 			<Description>TXT_KEY_BONUS_CREE</Description>
@@ -499,7 +450,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Croatian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_CROATIAN</Type>
 			<Description>TXT_KEY_BONUS_CROATIAN</Description>
@@ -509,7 +459,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Cuban -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_CUBAN</Type>
 			<Description>TXT_KEY_BONUS_CUBAN</Description>
@@ -519,7 +468,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Dahomey -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_DAHOMEY</Type>
 			<Description>TXT_KEY_BONUS_DAHOMEY</Description>
@@ -529,7 +477,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Dene -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_DENE</Type>
 			<Description>TXT_KEY_BONUS_DENE</Description>
@@ -539,7 +486,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Danish -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_DANISH</Type>
 			<Description>TXT_KEY_BONUS_DANISH</Description>
@@ -549,7 +495,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Cetacea Sapien -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_CETACEA_SAPIEN</Type>
 			<Description>TXT_KEY_BONUS_CETACEA_SAPIEN</Description>
@@ -559,7 +504,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Dutch -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_DUTCH</Type>
 			<Description>TXT_KEY_BONUS_DUTCH</Description>
@@ -569,7 +513,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Dzungar -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_DZUNGAR</Type>
 			<Description>TXT_KEY_BONUS_DZUNGAR</Description>
@@ -579,7 +522,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Egyptian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_EGYPTIAN</Type>
 			<Description>TXT_KEY_BONUS_EGYPTIAN</Description>
@@ -589,7 +531,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- English -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_ENGLISH</Type>
 			<Description>TXT_KEY_BONUS_ENGLISH</Description>
@@ -599,7 +540,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Epirus -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_EPIRUS</Type>
 			<Description>TXT_KEY_BONUS_EPIRUS</Description>
@@ -609,7 +549,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Ethiopian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_ETHIOPIAN</Type>
 			<Description>TXT_KEY_BONUS_ETHIOPIAN</Description>
@@ -619,7 +558,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Fijian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_FIJIAN</Type>
 			<Description>TXT_KEY_BONUS_FIJIAN</Description>
@@ -629,7 +567,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Finnish -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_FINNISH</Type>
 			<Description>TXT_KEY_BONUS_FINNISH</Description>
@@ -639,7 +576,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Franks -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_FRANKS</Type>
 			<Description>TXT_KEY_BONUS_FRANKS</Description>
@@ -649,7 +585,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- French -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_FRENCH</Type>
 			<Description>TXT_KEY_BONUS_FRENCH</Description>
@@ -659,7 +594,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Fulani -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_FULANI</Type>
 			<Description>TXT_KEY_BONUS_FULANI</Description>
@@ -669,7 +603,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- German -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_GERMAN</Type>
 			<Description>TXT_KEY_BONUS_GERMAN</Description>
@@ -679,7 +612,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Ghanaian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_GHANAIAN</Type>
 			<Description>TXT_KEY_BONUS_GHANAIAN</Description>
@@ -689,7 +621,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Goth -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_GOTH</Type>
 			<Description>TXT_KEY_BONUS_GOTH</Description>
@@ -699,7 +630,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Greek -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_GREEK</Type>
 			<Description>TXT_KEY_BONUS_GREEK</Description>
@@ -709,7 +639,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Romani (Gypsy) -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_ROMANI</Type>
 			<Description>TXT_KEY_BONUS_ROMANI</Description>
@@ -719,7 +648,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Haida -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_HAIDA</Type>
 			<Description>TXT_KEY_BONUS_HAIDA</Description>
@@ -729,7 +657,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Haitian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_HAITIAN</Type>
 			<Description>TXT_KEY_BONUS_HAITIAN</Description>
@@ -739,7 +666,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Hausa -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_HAUSA</Type>
 			<Description>TXT_KEY_BONUS_HAUSA</Description>
@@ -749,7 +675,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Hawaiian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_HAWAIIAN</Type>
 			<Description>TXT_KEY_BONUS_HAWAIIAN</Description>
@@ -759,7 +684,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Herero -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_HERERO</Type>
 			<Description>TXT_KEY_BONUS_HERERO</Description>
@@ -769,7 +693,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Hittite -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_HITTITE</Type>
 			<Description>TXT_KEY_BONUS_HITTITE</Description>
@@ -779,7 +702,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Holy Roman -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_HOLY_ROMAN</Type>
 			<Description>TXT_KEY_BONUS_HOLY_ROMAN</Description>
@@ -789,7 +711,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Hopi -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_HOPI</Type>
 			<Description>TXT_KEY_BONUS_HOPI</Description>
@@ -799,7 +720,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Huastec -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_HUASTEC</Type>
 			<Description>TXT_KEY_BONUS_HUASTEC</Description>
@@ -809,7 +729,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Hun -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_HUN</Type>
 			<Description>TXT_KEY_BONUS_HUN</Description>
@@ -819,7 +738,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Hungarian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_HUNGARIAN</Type>
 			<Description>TXT_KEY_BONUS_HUNGARIAN</Description>
@@ -829,7 +747,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Huron -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_HURON</Type>
 			<Description>TXT_KEY_BONUS_HURON</Description>
@@ -839,7 +756,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Icelandic -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_ICELANDIC</Type>
 			<Description>TXT_KEY_BONUS_ICELANDIC</Description>
@@ -849,7 +765,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Incan -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_INCAN</Type>
 			<Description>TXT_KEY_BONUS_INCAN</Description>
@@ -859,7 +774,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Indian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_INDIAN</Type>
 			<Description>TXT_KEY_BONUS_INDIAN</Description>
@@ -869,7 +783,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Indonesian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_INDONESIAN</Type>
 			<Description>TXT_KEY_BONUS_INDONESIAN</Description>
@@ -879,7 +792,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Inuit -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_INUIT</Type>
 			<Description>TXT_KEY_BONUS_INUIT</Description>
@@ -889,7 +801,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Irish -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_IRISH</Type>
 			<Description>TXT_KEY_BONUS_IRISH</Description>
@@ -899,7 +810,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Iroquois -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_IROQUOIS</Type>
 			<Description>TXT_KEY_BONUS_IROQUOIS</Description>
@@ -909,7 +819,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Israeli -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_ISRAELI</Type>
 			<Description>TXT_KEY_BONUS_ISRAELI</Description>
@@ -919,7 +828,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Italian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_ITALIAN</Type>
 			<Description>TXT_KEY_BONUS_ITALIAN</Description>
@@ -929,7 +837,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Jamaican -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_JAMAICAN</Type>
 			<Description>TXT_KEY_BONUS_JAMAICAN</Description>
@@ -939,7 +846,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Japanese -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_JAPANESE</Type>
 			<Description>TXT_KEY_BONUS_JAPANESE</Description>
@@ -949,7 +855,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Jivaro -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_JIVARO</Type>
 			<Description>TXT_KEY_BONUS_JIVARO</Description>
@@ -959,7 +864,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Jomon -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_JOMON</Type>
 			<Description>TXT_KEY_BONUS_JOMON</Description>
@@ -969,7 +873,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Jordanian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_JORDANIAN</Type>
 			<Description>TXT_KEY_BONUS_JORDANIAN</Description>
@@ -979,7 +882,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Joseon -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_JOSEON</Type>
 			<Description>TXT_KEY_BONUS_JOSEON</Description>
@@ -989,7 +891,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Kanem-Bornu -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_KANEM_BORNU</Type>
 			<Description>TXT_KEY_BONUS_KANEM_BORNU</Description>
@@ -999,7 +900,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Khmer -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_KHMER</Type>
 			<Description>TXT_KEY_BONUS_KHMER</Description>
@@ -1009,7 +909,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Klamath -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_KLAMATH</Type>
 			<Description>TXT_KEY_BONUS_KLAMATH</Description>
@@ -1019,7 +918,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Kongolese -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_KONGOLESE</Type>
 			<Description>TXT_KEY_BONUS_KONGOLESE</Description>
@@ -1029,7 +927,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Konjo -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_KONJO</Type>
 			<Description>TXT_KEY_BONUS_KONJO</Description>
@@ -1039,7 +936,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Korean -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_KOREAN</Type>
 			<Description>TXT_KEY_BONUS_KOREAN</Description>
@@ -1059,7 +955,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Leonese -->
-	<!-- by Hydromancerx -->
 <!-- No units
 		<BonusInfo>
 			<Type>BONUS_LEONESE</Type>
@@ -1071,7 +966,6 @@
 		</BonusInfo>
 -->
 	<!-- Luba -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_LUBA</Type>
 			<Description>TXT_KEY_BONUS_LUBA</Description>
@@ -1081,7 +975,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Lydian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_LYDIAN</Type>
 			<Description>TXT_KEY_BONUS_LYDIAN</Description>
@@ -1091,7 +984,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Macedonia -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_MACEDONIA</Type>
 			<Description>TXT_KEY_BONUS_MACEDONIA</Description>
@@ -1101,7 +993,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Madan -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_MADAN</Type>
 			<Description>TXT_KEY_BONUS_MADAN</Description>
@@ -1111,7 +1002,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Malaysian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_MALAYSIAN</Type>
 			<Description>TXT_KEY_BONUS_MALAYSIAN</Description>
@@ -1121,7 +1011,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Malinese -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_MALINESE</Type>
 			<Description>TXT_KEY_BONUS_MALINESE</Description>
@@ -1131,7 +1020,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Manchurian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_MANCHURIAN</Type>
 			<Description>TXT_KEY_BONUS_MANCHURIAN</Description>
@@ -1141,7 +1029,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Maori -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_MAORI</Type>
 			<Description>TXT_KEY_BONUS_MAORI</Description>
@@ -1151,7 +1038,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Mapuche -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_MAPUCHE</Type>
 			<Description>TXT_KEY_BONUS_MAPUCHE</Description>
@@ -1161,7 +1047,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Masai -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_MASAI</Type>
 			<Description>TXT_KEY_BONUS_MASAI</Description>
@@ -1171,7 +1056,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Massagetae -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_MASSAGETAE</Type>
 			<Description>TXT_KEY_BONUS_MASSAGETAE</Description>
@@ -1181,7 +1065,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Mayan -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_MAYAN</Type>
 			<Description>TXT_KEY_BONUS_MAYAN</Description>
@@ -1191,7 +1074,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Merina -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_MERINA</Type>
 			<Description>TXT_KEY_BONUS_MERINA</Description>
@@ -1201,7 +1083,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Mexican -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_MEXICAN</Type>
 			<Description>TXT_KEY_BONUS_MEXICAN</Description>
@@ -1211,7 +1092,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Minoan -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_MINOAN</Type>
 			<Description>TXT_KEY_BONUS_MINOAN</Description>
@@ -1221,7 +1101,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Mississippian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_MISSISSIPPIAN</Type>
 			<Description>TXT_KEY_BONUS_MISSISSIPPIAN</Description>
@@ -1231,7 +1110,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Mixtec -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_MIXTEC</Type>
 			<Description>TXT_KEY_BONUS_MIXTEC</Description>
@@ -1241,7 +1119,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Moche -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_MOCHE</Type>
 			<Description>TXT_KEY_BONUS_MOCHE</Description>
@@ -1251,7 +1128,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Mongolian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_MONGOLIAN</Type>
 			<Description>TXT_KEY_BONUS_MONGOLIAN</Description>
@@ -1261,7 +1137,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Moroccan -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_MOROCCAN</Type>
 			<Description>TXT_KEY_BONUS_MOROCCAN</Description>
@@ -1271,7 +1146,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Mughal -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_MUGHAL</Type>
 			<Description>TXT_KEY_BONUS_MUGHAL</Description>
@@ -1281,7 +1155,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Mutapa -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_MUTAPA</Type>
 			<Description>TXT_KEY_BONUS_MUTAPA</Description>
@@ -1291,7 +1164,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Nama -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_NAMA</Type>
 			<Description>TXT_KEY_BONUS_NAMA</Description>
@@ -1301,7 +1173,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Navajo -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_NAVAJO</Type>
 			<Description>TXT_KEY_BONUS_NAVAJO</Description>
@@ -1311,7 +1182,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Nazca -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_NAZCA</Type>
 			<Description>TXT_KEY_BONUS_NAZCA</Description>
@@ -1321,7 +1191,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Nepalese -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_NEPALESE</Type>
 			<Description>TXT_KEY_BONUS_NEPALESE</Description>
@@ -1331,7 +1200,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- New Zealand -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_NEW_ZEALAND</Type>
 			<Description>TXT_KEY_BONUS_NEW_ZEALAND</Description>
@@ -1341,7 +1209,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Nok -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_NOK</Type>
 			<Description>TXT_KEY_BONUS_NOK</Description>
@@ -1351,7 +1218,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Nootka -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_NOOTKA</Type>
 			<Description>TXT_KEY_BONUS_NOOTKA</Description>
@@ -1361,7 +1227,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Norwegian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_NORWEGIAN</Type>
 			<Description>TXT_KEY_BONUS_NORWEGIAN</Description>
@@ -1371,7 +1236,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Nubian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_NUBIAN</Type>
 			<Description>TXT_KEY_BONUS_NUBIAN</Description>
@@ -1381,7 +1245,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Olmec -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_OLMEC</Type>
 			<Description>TXT_KEY_BONUS_OLMEC</Description>
@@ -1391,7 +1254,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Ottoman -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_OTTOMAN</Type>
 			<Description>TXT_KEY_BONUS_OTTOMAN</Description>
@@ -1401,7 +1263,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Pakistani -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_PAKISTANI</Type>
 			<Description>TXT_KEY_BONUS_PAKISTANI</Description>
@@ -1411,7 +1272,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Papuan -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_PAPUAN</Type>
 			<Description>TXT_KEY_BONUS_PAPUAN</Description>
@@ -1421,7 +1281,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Parthian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_PARTHIAN</Type>
 			<Description>TXT_KEY_BONUS_PARTHIAN</Description>
@@ -1431,7 +1290,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Persian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_PERSIAN</Type>
 			<Description>TXT_KEY_BONUS_PERSIAN</Description>
@@ -1441,7 +1299,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Phoenican -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_PHOENICIAN</Type>
 			<Description>TXT_KEY_BONUS_PHOENICIAN</Description>
@@ -1451,7 +1308,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Pictish -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_PICTISH</Type>
 			<Description>TXT_KEY_BONUS_PICTISH</Description>
@@ -1461,7 +1317,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Pima -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_PIMA</Type>
 			<Description>TXT_KEY_BONUS_PIMA</Description>
@@ -1471,7 +1326,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Polish -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_POLISH</Type>
 			<Description>TXT_KEY_BONUS_POLISH</Description>
@@ -1481,7 +1335,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Polynesian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_POLYNESIAN</Type>
 			<Description>TXT_KEY_BONUS_POLYNESIAN</Description>
@@ -1491,7 +1344,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Portuguese -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_PORTUGUESE</Type>
 			<Description>TXT_KEY_BONUS_PORTUGUESE</Description>
@@ -1501,7 +1353,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Prussian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_PRUSSIAN</Type>
 			<Description>TXT_KEY_BONUS_PRUSSIAN</Description>
@@ -1511,7 +1362,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Qiang -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_QIANG</Type>
 			<Description>TXT_KEY_BONUS_QIANG</Description>
@@ -1521,7 +1371,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Quechua -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_QUECHUA</Type>
 			<Description>TXT_KEY_BONUS_QUECHUA</Description>
@@ -1531,7 +1380,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Rapa Nui -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_RAPA_NUI</Type>
 			<Description>TXT_KEY_BONUS_RAPA_NUI</Description>
@@ -1541,7 +1389,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Rhodesian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_RHODESIAN</Type>
 			<Description>TXT_KEY_BONUS_RHODESIAN</Description>
@@ -1551,7 +1398,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Roman -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_ROMAN</Type>
 			<Description>TXT_KEY_BONUS_ROMAN</Description>
@@ -1561,7 +1407,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Roxolani -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_ROXOLANI</Type>
 			<Description>TXT_KEY_BONUS_ROXOLANI</Description>
@@ -1571,7 +1416,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Russian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_RUSSIAN</Type>
 			<Description>TXT_KEY_BONUS_RUSSIAN</Description>
@@ -1581,7 +1425,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Sami -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_SAMI</Type>
 			<Description>TXT_KEY_BONUS_SAMI</Description>
@@ -1591,7 +1434,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Samoa -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_SAMOA</Type>
 			<Description>TXT_KEY_BONUS_SAMOA</Description>
@@ -1601,7 +1443,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Sassanian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_SASSANIAN</Type>
 			<Description>TXT_KEY_BONUS_SASSANIAN</Description>
@@ -1611,7 +1452,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Saxon -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_SAXON</Type>
 			<Description>TXT_KEY_BONUS_SAXON</Description>
@@ -1621,7 +1461,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Scottish -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_SCOTTISH</Type>
 			<Description>TXT_KEY_BONUS_SCOTTISH</Description>
@@ -1631,7 +1470,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Scythian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_SCYTHIAN</Type>
 			<Description>TXT_KEY_BONUS_SCYTHIAN</Description>
@@ -1641,7 +1479,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Seminole -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_SEMINOLE</Type>
 			<Description>TXT_KEY_BONUS_SEMINOLE</Description>
@@ -1651,7 +1488,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Shang -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_SHANG</Type>
 			<Description>TXT_KEY_BONUS_SHANG</Description>
@@ -1661,7 +1497,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Siamese -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_SIAMESE</Type>
 			<Description>TXT_KEY_BONUS_SIAMESE</Description>
@@ -1671,7 +1506,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Siberian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_SIBERIAN</Type>
 			<Description>TXT_KEY_BONUS_SIBERIAN</Description>
@@ -1681,7 +1515,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Sioux -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_SIOUX</Type>
 			<Description>TXT_KEY_BONUS_SIOUX</Description>
@@ -1691,7 +1524,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Slovakian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_SLOVAKIAN</Type>
 			<Description>TXT_KEY_BONUS_SLOVAKIAN</Description>
@@ -1701,7 +1533,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Somali -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_SOMALI</Type>
 			<Description>TXT_KEY_BONUS_SOMALI</Description>
@@ -1711,7 +1542,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Songhai -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_SONGHAI</Type>
 			<Description>TXT_KEY_BONUS_SONGHAI</Description>
@@ -1721,7 +1551,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- South African -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_SOUTH_AFRICAN</Type>
 			<Description>TXT_KEY_BONUS_SOUTH_AFRICAN</Description>
@@ -1731,7 +1560,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Soviet -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_SOVIET</Type>
 			<Description>TXT_KEY_BONUS_SOVIET</Description>
@@ -1741,7 +1569,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Spanish -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_SPANISH</Type>
 			<Description>TXT_KEY_BONUS_SPANISH</Description>
@@ -1751,7 +1578,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Spartan -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_SPARTAN</Type>
 			<Description>TXT_KEY_BONUS_SPARTAN</Description>
@@ -1761,7 +1587,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Sumerian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_SUMERIAN</Type>
 			<Description>TXT_KEY_BONUS_SUMERIAN</Description>
@@ -1771,7 +1596,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Swahili -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_SWAHILI</Type>
 			<Description>TXT_KEY_BONUS_SWAHILI</Description>
@@ -1781,7 +1605,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Swazi -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_SWAZI</Type>
 			<Description>TXT_KEY_BONUS_SWAZI</Description>
@@ -1791,7 +1614,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Swiss -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_SWISS</Type>
 			<Description>TXT_KEY_BONUS_SWISS</Description>
@@ -1801,7 +1623,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Syrian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_SYRIAN</Type>
 			<Description>TXT_KEY_BONUS_SYRIAN</Description>
@@ -1811,7 +1632,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Tahitian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_TAHITIAN</Type>
 			<Description>TXT_KEY_BONUS_TAHITIAN</Description>
@@ -1821,7 +1641,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Taiwanese -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_TAIWANESE</Type>
 			<Description>TXT_KEY_BONUS_TAIWANESE</Description>
@@ -1831,7 +1650,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Tamil -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_TAMIL</Type>
 			<Description>TXT_KEY_BONUS_TAMIL</Description>
@@ -1841,7 +1659,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Tarascan -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_TARASCAN</Type>
 			<Description>TXT_KEY_BONUS_TARASCAN</Description>
@@ -1851,7 +1668,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Texan -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_TEXAN</Type>
 			<Description>TXT_KEY_BONUS_TEXAN</Description>
@@ -1861,7 +1677,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Thai -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_THAI</Type>
 			<Description>TXT_KEY_BONUS_THAI</Description>
@@ -1871,7 +1686,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Tibetan -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_TIBETAN</Type>
 			<Description>TXT_KEY_BONUS_TIBETAN</Description>
@@ -1881,7 +1695,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Timurid -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_TIMURID</Type>
 			<Description>TXT_KEY_BONUS_TIMURID</Description>
@@ -1891,7 +1704,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Tlatilco -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_TLATILCO</Type>
 			<Description>TXT_KEY_BONUS_TLATILCO</Description>
@@ -1901,7 +1713,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Tlaxcaltec -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_TLAXCALTEC</Type>
 			<Description>TXT_KEY_BONUS_TLAXCALTEC</Description>
@@ -1911,7 +1722,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Toltec -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_TOLTEC</Type>
 			<Description>TXT_KEY_BONUS_TOLTEC</Description>
@@ -1921,7 +1731,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Tongan -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_TONGAN</Type>
 			<Description>TXT_KEY_BONUS_TONGAN</Description>
@@ -1931,7 +1740,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Trojan -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_TROJAN</Type>
 			<Description>TXT_KEY_BONUS_TROJAN</Description>
@@ -1941,7 +1749,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Tuareg -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_TUAREG</Type>
 			<Description>TXT_KEY_BONUS_TUAREG</Description>
@@ -1951,7 +1758,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Tupi -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_TUPI</Type>
 			<Description>TXT_KEY_BONUS_TUPI</Description>
@@ -1961,7 +1767,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Turkmen -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_TURKMEN</Type>
 			<Description>TXT_KEY_BONUS_TURKMEN</Description>
@@ -1971,7 +1776,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Uighur -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_UIGHUR</Type>
 			<Description>TXT_KEY_BONUS_UIGHUR</Description>
@@ -1981,7 +1785,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Venezuelan -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_VENEZUELAN</Type>
 			<Description>TXT_KEY_BONUS_VENEZUELAN</Description>
@@ -1991,7 +1794,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Venetian -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_VENETIAN</Type>
 			<Description>TXT_KEY_BONUS_VENETIAN</Description>
@@ -2001,7 +1803,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Vietnamese -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_VIETNAMESE</Type>
 			<Description>TXT_KEY_BONUS_VIETNAMESE</Description>
@@ -2011,7 +1812,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Viking -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_VIKING</Type>
 			<Description>TXT_KEY_BONUS_VIKING</Description>
@@ -2021,7 +1821,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Wayana -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_WAYANA</Type>
 			<Description>TXT_KEY_BONUS_WAYANA</Description>
@@ -2031,7 +1830,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Welsh -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_WELSH</Type>
 			<Description>TXT_KEY_BONUS_WELSH</Description>
@@ -2041,7 +1839,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Xiongu -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_XIONGU</Type>
 			<Description>TXT_KEY_BONUS_XIONGU</Description>
@@ -2051,7 +1848,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Yaghan -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_YAGHAN</Type>
 			<Description>TXT_KEY_BONUS_YAGHAN</Description>
@@ -2061,7 +1857,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Yamato -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_YAMATO</Type>
 			<Description>TXT_KEY_BONUS_YAMATO</Description>
@@ -2071,7 +1866,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Yanomami -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_YANOMAMI</Type>
 			<Description>TXT_KEY_BONUS_YANOMAMI</Description>
@@ -2081,7 +1875,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Yemenese -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_YEMENESE</Type>
 			<Description>TXT_KEY_BONUS_YEMENESE</Description>
@@ -2091,7 +1884,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Zapotec -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_ZAPOTEC</Type>
 			<Description>TXT_KEY_BONUS_ZAPOTEC</Description>
@@ -2101,7 +1893,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Zulu -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_ZULU</Type>
 			<Description>TXT_KEY_BONUS_ZULU</Description>
@@ -2111,7 +1902,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Zuni -->
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_ZUNI</Type>
 			<Description>TXT_KEY_BONUS_ZUNI</Description>
@@ -2121,15 +1911,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Unsorted -->
-	<!-- by Hydromancerx -->
-		<BonusInfo>
-			<Type>BONUS_NEANDERTHAL</Type>
-			<Description>TXT_KEY_CIV_NEANDERTHAL_DESC</Description>
-			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_NEANDERTHAL</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
-		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE</Type>
 			<Description>TXT_KEY_BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE</Description>
@@ -2420,7 +2201,6 @@
 			<TechCityTrade>TECH_ARCHETYPAL_VECTOR_SPACES</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- by Hydromancerx -->
 		<BonusInfo>
 			<Type>BONUS_ABBASID</Type>
 			<Description>TXT_KEY_BONUS_ABBASID</Description>

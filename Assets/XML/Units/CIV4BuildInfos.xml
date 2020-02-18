@@ -3,7 +3,7 @@
 ** 'CANNOT' be built on this feature 
 	<FeatureStruct>
 		<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
-		<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+		<PrereqTech>TECH_DUMMY</PrereqTech>
 	</FeatureStruct>
 **
 -->
@@ -59,14 +59,14 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -108,154 +108,154 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CITY_RUINS</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ARCOLOGY_RUINS</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -314,14 +314,14 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -363,154 +363,154 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CITY_RUINS</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ARCOLOGY_RUINS</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -1100,14 +1100,14 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -1731,21 +1731,21 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -1997,21 +1997,21 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -2263,21 +2263,21 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -2381,21 +2381,21 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -3587,21 +3587,21 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -3675,21 +3675,21 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -3942,21 +3942,21 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -4209,21 +4209,21 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -4475,21 +4475,21 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -4928,7 +4928,7 @@
 			<FeatureStructs>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -5066,35 +5066,35 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_OASIS</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -5165,7 +5165,7 @@
 				<TerrainStruct>
 					<!--- can never be built in Trench Terrain -->
 					<TerrainType>TERRAIN_TRENCH</TerrainType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>400</iTime>
 				</TerrainStruct>
 			</TerrainStructs>
@@ -5187,7 +5187,7 @@
 				<TerrainStruct>
 					<!--- can never be built in Trench Terrain -->
 					<TerrainType>TERRAIN_TRENCH</TerrainType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>400</iTime>
 				</TerrainStruct>
 			</TerrainStructs>
@@ -5671,31 +5671,31 @@
 			<FeatureStructs>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>0</iTime>
 					<iProduction>0</iProduction>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>0</iTime>
 					<iProduction>0</iProduction>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>0</iTime>
 					<iProduction>0</iProduction>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_MANGROVE</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>0</iTime>
 					<iProduction>0</iProduction>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_BAMBOO</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>0</iTime>
 					<iProduction>0</iProduction>
 				</FeatureStruct>
@@ -6422,7 +6422,7 @@
 				<TerrainStruct>
 					<!--- can never be built in Trench Terrain -->
 					<TerrainType>TERRAIN_TRENCH</TerrainType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>400</iTime>
 				</TerrainStruct>
 			</TerrainStructs>
@@ -9312,42 +9312,42 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_REEF</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CORAL_REEF</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_REEF_BEACON</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CORAL_REEF_REEF_BEACON</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_REEF_LIGHTHOUSE</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CORAL_REEF_REEF_LIGHTHOUSE</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -9370,42 +9370,42 @@
 			<FeatureStructs>
 				<FeatureStruct>
 					<FeatureType>FEATURE_REEF</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CORAL_REEF</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_REEF_BEACON</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CORAL_REEF_REEF_BEACON</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_REEF_LIGHTHOUSE</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CORAL_REEF_REEF_LIGHTHOUSE</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -9658,35 +9658,35 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_OASIS</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -9938,14 +9938,14 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -10292,35 +10292,35 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_OASIS</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -10414,21 +10414,21 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>

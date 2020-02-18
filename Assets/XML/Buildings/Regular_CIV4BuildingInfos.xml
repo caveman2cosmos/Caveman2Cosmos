@@ -431,19 +431,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FOLK_MEDICINE</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqBonuses>
-				<Bonus>BONUS_BONE</Bonus>
-				<Bonus>BONUS_COPPER_WARES</Bonus>
-				<Bonus>BONUS_STEEL_WARES</Bonus>
-				<Bonus>BONUS_TITANIUM_WARES</Bonus>
-			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_ASIAN</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_VIKING_TRADING_POST</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_ASIAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
@@ -70549,7 +70539,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NEANDERTHAL_CAVES</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
-			<Bonus>BONUS_NEANDERTHAL</Bonus>
+			<BuildingClassNeededs>
+				<BuildingClassNeeded>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bNeededInCity>1</bNeededInCity>
+				</BuildingClassNeeded>
+			</BuildingClassNeededs>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_CAVES</FeatureType>
@@ -74282,6 +74277,7 @@
 			<!-- Palace Garden -->
 			<BuildingClass>BUILDINGCLASS_PALACE_GARDEN</BuildingClass>
 			<Type>BUILDING_PALACE_GARDEN</Type>
+			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_PALACE_GARDEN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PALACE_GARDEN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PALACE_GARDEN_STRATEGY</Strategy>
@@ -105782,7 +105778,7 @@
 			<PrereqTech>TECH_RITUALISM</PrereqTech>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_NAMERICAN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NORTH_AMERICAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
@@ -105922,7 +105918,7 @@
 			<PrereqTech>TECH_RITUALISM</PrereqTech>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_OCEANIAN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_OCEANIAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>

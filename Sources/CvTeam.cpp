@@ -3601,7 +3601,7 @@ bool CvTeam::isNPC() const
 
 bool CvTeam::isHominid() const
 {
-	return (getID() == BARBARIAN_TEAM || getID() == NPC7_TEAM);
+	return (getID() == BARBARIAN_TEAM || getID() == NEANDERTHAL_TEAM);
 }
 
 
@@ -7113,28 +7113,21 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 	{
 		changeMapTradingCount(iChange);
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 03/8/10                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	CvTechInfo& kTech = GC.getTechInfo(eTech);
-	if (GC.getGame().isOption(GAMEOPTION_MOUNTAINS))
+	if (kTech.isCanPassPeaks())
 	{
-		if (kTech.isCanPassPeaks())
-		{
-			changeCanPassPeaksCount(iChange);
-			//	Koshling - makes peaks workable which chnages the yield calculation
-			updateYield();
-		}
-		if (kTech.isMoveFastPeaks())
-		{
-			changeMoveFastPeaksCount(iChange);
-		}
-		if (kTech.isCanFoundOnPeaks())
-		{
-			changeCanFoundOnPeaksCount(iChange);
-		}
+		changeCanPassPeaksCount(iChange);
+		//	Koshling - makes peaks workable which chnages the yield calculation
+		updateYield();
+	}
+	if (kTech.isMoveFastPeaks())
+	{
+		changeMoveFastPeaksCount(iChange);
+	}
+	if (kTech.isCanFoundOnPeaks())
+	{
+		changeCanFoundOnPeaksCount(iChange);
 	}
 
 	if (iChange > 0)
@@ -7184,9 +7177,7 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 		changeCanFarmDesertCount(iChange);
 		setLastRoundOfValidImprovementCacheUpdate();
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	if (GC.getTechInfo(eTech).isTechTrading())
 	{
 		changeTechTradingCount(iChange);
@@ -7200,15 +7191,7 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 	if (GC.getTechInfo(eTech).isOpenBordersTrading())
 	{
 		changeOpenBordersTradingCount(iChange);
-/************************************************************************************************/
-/* Afforess	                  Start		 05/22/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 		changeLimitedBordersTradingCount(iChange);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	}
 
 	if (GC.getTechInfo(eTech).isDefensivePactTrading())
@@ -8124,14 +8107,6 @@ void CvTeam::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
 
-//void CvTeam::write2(FDataStreamBase* pStream)
-//{
-//	write(pStream);
-//}
-//void CvTeam::read2(FDataStreamBase* pStream)
-//{
-//	read(pStream);
-//}
 
 // CACHE: cache frequently used values
 ///////////////////////////////////////

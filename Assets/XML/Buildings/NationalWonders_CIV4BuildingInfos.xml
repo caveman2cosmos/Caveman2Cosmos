@@ -7825,7 +7825,11 @@
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_AFRICAN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_AFRICAN</BuildingClassType>
+					<bNeededInCity>1</bNeededInCity>
+				</BuildingClassNeeded>
+				<BuildingClassNeeded>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_AFRICAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
@@ -7889,7 +7893,7 @@
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_NAMERICAN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NORTH_AMERICAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
@@ -7953,7 +7957,7 @@
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_EUROPEAN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_EUROPEAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
@@ -8017,7 +8021,7 @@
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_MIDDLEEASTERN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
@@ -8081,7 +8085,7 @@
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_ASIAN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_ASIAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
@@ -8145,7 +8149,7 @@
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_SAMERICAN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
@@ -8209,7 +8213,7 @@
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_OCEANIAN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_OCEANIAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>

@@ -4425,19 +4425,16 @@ void CvTeamAI::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_OBJECT_END(wrapper);
 
-	//if (getID() == MAX_PC_TEAMS)//May not need this any longer
-	//{
-	//	//Read NPC data
-	//	int iNum = (MAX_PC_TEAMS+1);
-	//	for (int iI = iNum; iI < MAX_TEAMS; iI++)
-	//	{
-	//		if (iI >= (int)FIRST_NPC_PLAYER)
-	//		{
-	//			TeamTypes eTeam = (TeamTypes)iI;
-	//			GET_TEAM(eTeam).read2(pStream);
-	//		}
-	//	}
-	//}
+/* Needed if getMaxCivPlayers return MAX_PC_PLAYERS, now it returns MAX_PLAYERS-1.
+	if (getID() == MAX_PC_TEAMS)
+	{
+		//Read NPC data
+		for (int iI = MAX_PC_TEAMS+1; iI < MAX_TEAMS; iI++)
+		{
+			GET_TEAM((TeamTypes)iI).read(pStream);
+		}
+	}
+*/
 }
 
 
@@ -4487,30 +4484,16 @@ void CvTeamAI::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 
-	//int iID = getID();
-	//if (getID() == MAX_PC_TEAMS)//May Not Need this anymore//confirmed
-	//{
-	//	//Read NPC data
-	//	int iNum = (MAX_PC_TEAMS+1);
-	//	for (int iI = iNum; iI < MAX_TEAMS; iI++)
-	//	{
-	//		TeamTypes eTeam = (TeamTypes)iI;
-	//		if (iI >= (int)FIRST_NPC_PLAYER)
-	//		{
-	//			GET_TEAM(eTeam).write2(pStream);
-	//		}
-	//	}
-	//}
-}
-
-
-void CvTeamAI::write2(FDataStreamBase* pStream)
-{
-	write(pStream);
-}
-void CvTeamAI::read2(FDataStreamBase* pStream)
-{
-	read(pStream);
+/* Needed if getMaxCivPlayers return MAX_PC_PLAYERS, now it returns MAX_PLAYERS-1.
+	if (getID() == MAX_PC_TEAMS)
+	{
+		//write NPC data
+		for (int iI = MAX_PC_TEAMS+1; iI < MAX_TEAMS; iI++)
+		{
+			GET_TEAM((TeamTypes)iI).write(pStream);
+		}
+	}
+*/
 }
 
 int CvTeamAI::AI_noTechTradeThreshold(bool bRecalculate) const

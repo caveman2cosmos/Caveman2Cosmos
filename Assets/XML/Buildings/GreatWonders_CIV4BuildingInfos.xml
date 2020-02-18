@@ -3259,7 +3259,7 @@
 			<PrereqTech>TECH_PICTOGRAPHS</PrereqTech>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_OCEANIAN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_OCEANIAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 				<BuildingClassNeeded>
@@ -3384,7 +3384,7 @@
 			<VicinityBonus>BONUS_STONE</VicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_MIDDLEEASTERN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
@@ -5312,7 +5312,7 @@
 			<PrereqTech>TECH_MARTIAL_ARTS</PrereqTech>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_OCEANIAN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_OCEANIAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
@@ -6165,7 +6165,7 @@
 			</PrereqOrBuildingClasses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_SAMERICAN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 				<BuildingClassNeeded>
@@ -8420,7 +8420,7 @@
 			<VicinityBonus>BONUS_FINE_CLAY</VicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_AFRICAN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_AFRICAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
@@ -9509,7 +9509,7 @@
 			<VicinityBonus>BONUS_FINE_CLAY</VicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_EUROPEAN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_EUROPEAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 				<BuildingClassNeeded>
@@ -18180,7 +18180,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_ASIAN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_ASIAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
@@ -18248,7 +18248,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_ASIAN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_ASIAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
@@ -20685,7 +20685,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ELLIS_ISLAND</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ELLIS_ISLAND</MovieDefineTag>
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
-			<FreeBuilding>BUILDINGCLASS_GOOD_EUROPEAN</FreeBuilding>
+			<FreeBuilding>BUILDINGCLASS_CULTURE_LOCAL_EUROPEAN</FreeBuilding>
 			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bWater>1</bWater>

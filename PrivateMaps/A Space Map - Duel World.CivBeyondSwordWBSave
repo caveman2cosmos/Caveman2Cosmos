@@ -9,12 +9,10 @@ BeginGame
 	Option=GAMEOPTION_NO_VASSAL_STATES
 	Option=GAMEOPTION_NO_REVOLUTION
 	Option=GAMEOPTION_NO_BARBARIAN_CIV
-	Option=GAMEOPTION_MOUNTAINS
 	Option=GAMEOPTION_SAD
 	Option=GAMEOPTION_ADVANCED_DIPLOMACY
 	Option=GAMEOPTION_UNLIMITED_WONDERS
 	Option=GAMEOPTION_NO_ZOC
-	Option=GAMEOPTION_ASSIMILATION
 	Option=GAMEOPTION_GREAT_COMMANDERS
 	Option=GAMEOPTION_REALISTIC_CULTURE_SPREAD
 	Option=GAMEOPTION_LARGER_CITIES
@@ -29,7 +27,6 @@ BeginGame
 	Option=GAMEOPTION_FIGHT_OR_FLIGHT
 	Option=GAMEOPTION_SIZE_MATTERS
 	Option=GAMEOPTION_XP_FROM_ASSIGNED_SPECIALISTS
-	Option=GAMEOPTION_ECOLOGICAL_ANIMALS
 	Option=GAMEOPTION_TELEPORT_HUNTING_AWARDS
 	Option=GAMEOPTION_HIDE_AND_SEEK
 	Option=GAMEOPTION_PEACE_AMONG_NPCS
@@ -203,46 +200,6 @@ EndTeam
 BeginTeam
 	TeamID=39
 	ContactWithTeam=39
-EndTeam
-BeginTeam
-	TeamID=40
-	ContactWithTeam=40
-EndTeam
-BeginTeam
-	TeamID=41
-	ContactWithTeam=41
-EndTeam
-BeginTeam
-	TeamID=42
-	ContactWithTeam=42
-EndTeam
-BeginTeam
-	TeamID=43
-	ContactWithTeam=43
-EndTeam
-BeginTeam
-	TeamID=44
-	ContactWithTeam=44
-EndTeam
-BeginTeam
-	TeamID=45
-	ContactWithTeam=45
-EndTeam
-BeginTeam
-	TeamID=46
-	ContactWithTeam=46
-EndTeam
-BeginTeam
-	TeamID=47
-	ContactWithTeam=47
-EndTeam
-BeginTeam
-	TeamID=48
-	ContactWithTeam=48
-EndTeam
-BeginTeam
-	TeamID=49
-	ContactWithTeam=49
 EndTeam
 BeginPlayer
     Team=0
@@ -445,56 +402,6 @@ BeginPlayer
 EndPlayer
 BeginPlayer
 	Team=39
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=40
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=41
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=42
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=43
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=44
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=45
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=46
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=47
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=48
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=49
 	LeaderType=NONE
 	CivType=NONE
 EndPlayer

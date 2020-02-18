@@ -5393,58 +5393,6 @@ En temps de guerre, certaines organisations de la garde côtière peuvent avoir 
 		<French>Le Canon magnétique est représenté dans le jeu comme une arme de poche extrêmement précise et perforante qui est extrêmement efficace dans les rôles de tireur d'élite et capable de tirer des balles beaucoup plus rapidement qu'une arme automatique standard. Aucune combustion n'est nécessaire pour le faire fonctionner, il est donc beaucoup plus facile de s'en équiper pour une utilisation dans les profondeurs de l'espace. [PARAGRAPHE: 2] Bien que l'invention du Canon magnétique soit connue depuis un certain temps maintenant, la quantité d'énergie requise pour les rendre viables n'est accessible qu'une fois les microgénérateurs déverrouillés. Sur les gros véhicules, ils sont déjà dépassés par les canons à Rails, plus puissants et rapides. Avec l'invention des canons à Rails portatifs qui approche, la durée de la suprématie des bobines est plutôt courte. En fait, la technologie peut être presque dépassée le long de l'arbre technologique jusqu'à ce qu'elle soit absolument nécessaire, sauf si vous voulez tout de suite cet avantage militaire.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_COLD_FUSION</Tag>
-		<English>Cold Fusion</English>
-		<French>
-			<Text>Fusion froide</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Kalte Kernfusion</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Fusione fredda</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Fusión fría</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Zimna Fuzja</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_COLD_FUSION_PEDIA</Tag>
-		<English>Cold fusion - a controllable fusion reaction occurring at or near room temperature - has long been the "holy grail" of modern physics. In 1989 two scientists claimed to have created a cold fusion reaction, but their claims were disputed by other scientist who could not duplicate their results. And even when the first verifiable cold fusion reaction was documented many decades later, the size of the reactor necessary and the small amount of power it generated made cold fusion totally inefficient for common use. It would be years before a practical cold fusion generator would be created. [PARAGRAPH:2]Once created, the cold fusion generator had the capacity to change human existence, creating cheap, near-pollution-free energy for all. Unfortunately, however, like so many other potentially beneficial technologies recently discovered, cold fusion technology has been appropriated and classified by the military, used almost exclusively to create power plants for ever larger and more destructive weapons platforms. In the meantime humanity has had to continue to survive on ever-dwindling and highly-polluting energy sources like coal, oil, and uranium.</English>
-		<French>La fusion froide est une réaction de fusion nucléaire réalisée dans des conditions de température et de pression ambiantes. Ce procédé fut longtemps le Saint Graal de la physique moderne. En 1989, deux scientifiques affirmèrent avoir cré une réaction de fusion froide, mais la commission chargée de valider leur découverte ne parvint pas à reproduire l'expérience. Lors de la première expérience attestée de fusion froide, quelques dizaines d'années plus tard, la taille du réacteur nécessaire pour produire une toute petite quantité d'énergie ne pouvait permettre d'en répandre l'usage. Ce n'est que bien des années plus tard que le générateur de fusion froide que nous connaissons aujourd'hui fut mis au point. [PARAGRAPH:2]Le générateur de fusion froide pouvait véritablement révolutionner le quotidien des populations. Grâce à lui, chacun pouvait bénéficier d'une source d'énergie bon marché et non polluante. Malheureusement, cette technologie fut, comme beaucoup d'autres, trustée par les militaires qui l'utilisèrent pour alimenter les chaînes de production d'armes extrêmement destructrices. Et pendant ce temps, l'humanité dut se contenter de survivre en utilisant des ressources de plus en rares et polluantes telles que le charbon, le pétrole et l'uranium.</French>
-		<German>Die Kaltfusion - eine kontrollierbare Fusionsreaktion, die in etwa bei Raumtemperatur stattfindet - wurde lange als der "Heilige Gral" der modernen Physik betrachtet. Im Jahr 1989 gaben zwei Wissenschaftler vor, eine Kaltfusionsreaktion erzeugt zu haben, allerdings wurden ihre Behauptungen von anderen Wissenschaftlern, welche die angeblich erzielten Ergebnisse nicht rekonstruieren konnten, widerlegt. Die erste nachweisbare Kaltfusionsreaktion wurde viele Jahrzehnte später dokumentiert, erwies sich aber wegen der enormen Dimensionen des benötigten Reaktors und der geringen erzeugten Energiemenge als unbrauchbar. Ein wirklich praktisch einsetzbarer Kaltfusionsgenerator wurde erst Jahre später gebaut. [PARAGRAPH:2]Die Kapazitäten dieses neuen Kaltfusionsgenerators wären durchaus geeignet, um die Lebensumstände der Menschen grundlegend zu verändern, denn er erzeugt nicht nur preiswerte, sondern auch nahezu schadstofffreie Energie zur allgemeinen Verwendung. Leider wird die Kaltfusionstechnologie jedoch wie so viele andere fortschrittliche Technologien der jüngeren Vergangenheit größtenteils von militärischen Organen vereinnahmt und somit fast ausschließlich zur Speisung von Kraftwerken verwendet, welche die Produktion noch größerer und vernichtenderer Waffen ermöglichen. Aus diesem Grund bleibt den Menschen nichts anderes übrig, als ihr Überleben auch weiterhin durch zusehends knapper werdende und höchst umweltschädliche Energiequellen wie Kohle, Öl und Uran zu sichern.</German>
-		<Italian>La fusione a freddo: una fusione controllabile che avviene a una temperatura quasi uguale a quella ambientale. È da molto il sacro graal della fisica moderna. Nel 1989 due scienziati affermarono di aver creato una reazione di fusione a freddo, ma le loro dichiarazioni furono confutate da altri scienziati che non riuscirono a riprodurre l'esperimento. Anche quando venne documentata la prima fusione a freddo verificabile, molti decenni dopo, le dimensioni del reattore necessario e la scarsa quantità di energia creata resero la fusione a freddo totalmente inefficace per l'uso comune. Sarebbero passati anni prima della creazione del primo reattore per la fusione a freddo pratico. [PARAGRAPH:2]Una volta creato, il reattore per la fusione a freddo riuscì a cambiare l'esistenza umana, creando energia gratuita e quasi totalmente non inquinante per tutti. Sfortunatamente, però, come tante altre tecnologie potenzialmente benefiche scoperte di recente, la tecnologia per la fusione a freddo è stata confiscata e classificata top secret dai militari, che la usano quasi esclusivamente per creare fonti di energia per armi sempre più devastanti. Nel frattempo l'umanità ha dovuto continuare a sopravvivere utilizzando fonti di energia inquinanti e in esaurimento come carbone, petrolio e uranio.</Italian>
-		<Spanish>La fusión fría, una reacción de fusión controlada que tiene lugar más o menos a temperatura ambiente, ha sido el Santo Grial de la física moderna durante mucho tiempo. En 1989, dos científicos dijeron que habían creado la reacción de fusión fría, pero este honor se lo disputó otro científico, que fue incapaz de repetir sus resultados. E incluso cuando, muchas décadas más tarde, se documentó la primera reacción de fusión fría, el tamaño del reactor necesario y la escasa cantidad de energía que generaba hizo de ella algo completamente ineficaz para usos comunes. Tendrían que pasar años antes de que se creara el primer generador de fusión fría realmente práctico. [PARAGRAPH:2]Una vez creado, el generador tuvo la capacidad de cambiar la vida de las personas, pues creaba energía barata y limpia para todos. Por desgracia, como ocurre con la mayoría de las tecnologías potencialmente beneficiosas descubiertas recientemente, los militares se han apropiado de ella, la han declarado materia confidencial y la usan casi exclusivamente para crear plantas de energía para plataformas armamentísticas cada vez más grandes y destructivas. Mientras tanto, la humanidad para sobrevivir ha tenido que recurrir a fuentes de energía contaminantes y cada vez más escasas, como el carbón, el petróleo y el uranio.</Spanish>
-		<Polish>Zimna fuzja - kontrolowana reakcja zachodząca przy niemal pokojowej temperaturze - długo była "świętym gralem" współczesnej fizyki. W rolku 1980 dwóch naukowców stwierdziło, że stworzyli oni reakcję zimnej fuzji, ale ich twierdzenia były lekceważone przez innych uczonych, którzy nie mogli powtórzyć tego wyczynu. Ale nawet gdy pierwszy sprawnie działający reaktor został skontruowany dekady później, ogromna wielkość reaktora i niewielka dawka energii jaką zapewniał czyniły go praktycznie nieprzydatnym. Minęły całe lata zanim praktyczny reaktor został skonstruowany. Kiedy tak się stało, reaktory fuzyjne miały możliwość poprawy ludzkiego życia poprzez stworzenie taniej i czystej energii. Niestety technologia ta została także użyta do celów militarnych.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_COLD_FUSION_QUOTE</Tag>
-		<English>"A chicken-like yeast product in every microwave, an auto-gyro in every garage and a cold fusion generator in every basement!" - Mr Big, campaign slogan</English>
-		<French>"Un poulet artificiel dans chaque four à micro-ondes, une gyromatique dans chaque garage et un générateur de fusion froide dans chaque cave!" - slogan de campagne de M. Big</French>
-		<German>"Ein hühnerfleischähnliches Hefeprodukt in jeder Mikrowelle, ein Helicaddy in jeder Garage und ein Kaltfusionsgenerator in jedem Keller!" - Mr. Big, Werbeslogan</German>
-		<Italian>"Un lievito che sa di pollo in ogni microonde, un autogiro in ogni garage e un generatore a fusione a freddo in ogni cantina!" - Mr. Big, slogan elettoral</Italian>
-		<Spanish>"Una masa de pseudopollo en cada microondas, un autogiro en cada garaje y un generador de fusión fría en cada sótano." - Eslogan de campaña de Mr. Bi</Spanish>
-		<Polish>"Syntetyczny kurczak w każdej mikrofalówce, żyroauto w każdym garażu i reaktor zimnej fuzji w każdej piwnicy!" - Mr Big, slogan reklamowy</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_COLD_FUSION_STRATEGY</Tag>
-		<English>[COLOR_TECH_TEXT]Cold Fusion[COLOR_REVERT] permits construction of the mighty [COLOR_UNIT_TEXT]Dreadnought[COLOR_REVERT] super-tank!</English>
-		<French>La [COLOR_TECH_TEXT]Fusion froide[COLOR_REVERT] permet la construction du tank surpuissant [COLOR_UNIT_TEXT]Cuirassé 'Dreadnought'[COLOR_REVERT]!</French>
-		<German>Die [COLOR_TECH_TEXT]Kaltfusion[COLOR_REVERT] ermöglicht den Bau des [COLOR_UNIT_TEXT]Dreadnoughts[COLOR_REVERT], eines mächtigen Superpanzers!</German>
-		<Italian>La [COLOR_TECH_TEXT]Fusione a freddo[COLOR_REVERT] permette la costruzione del temibile super-carro armato [COLOR_UNIT_TEXT]Dreadnought[COLOR_REVER</Italian>
-		<Spanish>La [COLOR_TECH_TEXT]Fusión fría[COLOR_REVERT] permite la construcción del poderoso [COLOR_UNIT_TEXT]Blindado Dreadnought[COLOR_REVERT].</Spanish>
-		<Polish>[COLOR_TECH_TEXT]Zimna Fuzja[COLOR_REVERT] umożliwia budowę potężnych [COLOR_UNIT_TEXT]Drednotów[COLOR_REVERT]!</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TECH_COLONIALISM</Tag>
 		<English>Colonialism</English>
 		<French>Colonialisme</French>
@@ -7900,10 +7848,6 @@ En temps de guerre, certaines organisations de la garde côtière peuvent avoir 
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DUMMY</Tag>
 		<English>|Dummy Tech</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_DUMMY_NEANDERTHAL</Tag>
-		<English>|Dummy Neanderthal Tech</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DUMMY_PEDIA</Tag>
@@ -10890,34 +10834,6 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 		<English>[COLOR_TECH_TEXT]Glass Blowing[COLOR_REVERT] allows for [COLOR_BUILDING_TEXT]glassmith[COLOR_REVERT] and further technology into glass applications.</English>
 		<French>[COLOR_TECH_TEXT]Soufflage du Verre[COLOR_REVERT] permet de construire des [COLOR_BUILDING_TEXT]Verriers[COLOR_REVERT] et donne accès à d'autres techs. liées aux applications du verre.</French>
 		<Spanish>El [COLOR_TECH_TEXT]Soplado del vidrio[COLOR_REVERT] permite construir [COLOR_BUILDING_TEXT]Sopladores de vidrio[COLOR_REVERT] y lleva a tecnologías posteriores de aplicaciones del vidrio.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_GLOBAL_GOVERNANCE</Tag>
-		<English>Global Governance</English>
-		<French>Gouvernance Globale</French>
-		<German>Globale Regierung</German>
-		<Italian>Governo globale</Italian>
-		<Spanish>
-			<Text>Gobierno mundial</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Rząd Światowy</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_GLOBAL_GOVERNANCE_PEDIA</Tag>
-		<English>Global governance is the political interaction of transnational actors aimed at solving problems that affect more than one state or region when there is no power of enforcing compliance.</English>
-		<Polish>Rząd światowy to koncepcja zakładająca stworzenie ciała politycznego które stanowiłoby i wdrażało prawo międzynarodowe. Mimo że ciało takie mogłoby mieć np. formę dyktatury, cesarstwa, czy teokracji, obecnie uznaje się, że jedyną zdolną do realizacji formą jest demokratyczna federacja istniejących krajów.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_GLOBAL_GOVERNANCE_QUOTE</Tag>
-		<English>"There is no salvation for civilization, or even the human race, other than the creation of a world government." - Albert Einstein</English>
-		<French>"Il n'y a pas de salut pour la civilisation, ou mème la race humaine, autres que la création d'un gouvernement mondial." - Albert Einstein</French>
-		<Polish>"Jeśli idea Rządu Światowego jest nierealistyczna, to istnieje wyłącznie jedna realistyczna wizja przyszłości: totalne unicestwienie człowieka przez człowieka." - Albert Einstein</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_GLOBAL_GOVERNANCE_STRATEGY</Tag>
-		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_GLOBALIZATION</Tag>
@@ -20678,29 +20594,6 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 		<English>Research Reincarnation to increase your Religion</English>
 		<French>Recherchez la Réincarnation pour accroître l'influence de votre religion</French>
 		<Spanish>Investiga la Reencarnación para mejorar tu religión.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_RELIGION</Tag>
-		<English>RELIGION</English>
-		<French>Religion</French>
-		<Italian>RELIGIONE</Italian>
-		<Spanish>Religión</Spanish>
-		<Polish>RELIGIA</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_RELIGION_PEDIA</Tag>
-		<English>A placeholder tech for religions. Facilitates the limited religion mod comp.</English>
-		<French>Technologie spécifique pour les religions. Facilite le fonctionnement du Mod Religions limitées.</French>
-		<German>Platzhalter-Technologie für Religionen. Vereinfacht die Limitierte-Religionen Mod-Komponente.</German>
-		<Italian>Una tecnologia per le religioni. facilita la mod "Religioni limitate".</Italian>
-		<Spanish>Una tecnología-contenedor para religiones. Facilita el funcionamiento del componente "Religiones limitadas".</Spanish>
-		<Polish>Technologia do wrzucania religii.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_RELIGION_QUOTE</Tag>
-		<English>"We have enslaved the rest of the animal creation, and have treated our distant cousins in fur and feathers so badly that beyond doubt, if they were able to formulate a religion, they would depict the Devil in human form." - R. Inge</English>
-		<French>"Nous avons asservi le reste de la création animale, et avons traité nos lointains cousins pour de la fourrure et des plumes si mal que hors de tout doute, si elles étaient en mesure de formuler une religion, ils représenteraient le Diable sous forme humaine." - R. Inge</French>
-		<Polish>"Zniewoliliśmy resztę zwierzęcego stworzenia oraz potraktowaliśmy naszych dalekich kuzynów w futrach i piórach tak okrutnie, że poza wszelką wątpliwość, gdyby mieli oni stworzyć religię, szatanem byłby dla nich człowiek." - R. Inge</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_RENAISSANCE_LIFESTYLE</Tag>
