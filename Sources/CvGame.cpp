@@ -6666,6 +6666,8 @@ void CvGame::doTurn()
 	int aiShuffle[MAX_PLAYERS];
 	int iLoopPlayer;
 
+	updateEra();
+
 	// END OF TURN
 	CvEventReporter::getInstance().beginGameTurn( getGameTurn() );
 
