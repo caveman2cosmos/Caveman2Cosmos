@@ -267,7 +267,7 @@ class MapConstants:
 		#What temperature will be considered hot enough to be jungle. Temperatures range
 		#from coldest 0.0 to hottest 1.0.
 		self.JungleTemp = 0.7
-		
+
 		#The chance for ice in the water gets this much lower per plot away from the poles
 		self.IceChanceMultiplier = 0.66
 
@@ -497,7 +497,7 @@ class MapConstants:
 
 		#How many land squares will be below plains rainfall threshold. Rain levels close
 		#to the desert threshold are likely to be plains, while those close to the plains
-		#threshold are likely to be grassland. 
+		#threshold are likely to be grassland.
 		self.RockyPercent3 = 0.23
 		self.BarrenPercent3 = 0.29
 		self.PlainsPercent3 = 0.49
@@ -634,7 +634,7 @@ class MapConstants:
 		selectionID = mmap.getCustomMapOption(3)
 		if selectionID == 1:
 			self.AllowNewWorld = not self.AllowNewWorld
-			
+
 		# River threshold
 		selectionID = mmap.getCustomMapOption(4)
 		if selectionID == 0:
@@ -643,7 +643,7 @@ class MapConstants:
 		elif selectionID == 2:
 			self.RiverThreshold3 = self.RiverThreshold3 * 0.66
 			self.RiverThreshold2 = self.RiverThreshold2 * 0.66
-			
+
 		# Bonuses
 		selectionID = mmap.getCustomMapOption(5)
 		if selectionID == 0:
@@ -665,7 +665,7 @@ class MapConstants:
 	def AdaptToClimate(self):
 		gc = CyGlobalContext()
 		climate = gc.getMap().getClimate()
-		
+
 		if climate == 1: # Tropical, less snow, less desert, more jungle
 			self.SnowTemp3 *= 0.7
 			self.TundraTemp3 *= 0.7
@@ -675,9 +675,9 @@ class MapConstants:
 			self.PermafrostTemp2 *= 0.7
 			self.JungleTemp *= 0.7
 			self.ForestTemp *= 0.7
-			
+
 			self.IceChanceMultiplier = 0.5
-			
+
 			self.SaltFlatsPercent3 *= 0.7
 			self.DunesPercent3 *= 0.7
 			self.DesertPercent3 *= 0.7
@@ -688,7 +688,7 @@ class MapConstants:
 			self.GrasslandPercent3 *= 0.9
 			self.LushPercent3 *= 0.9
 			self.MuddyPercent3 *= 0.96
-			
+
 			self.SaltFlatsPercent2 *= 0.7
 			self.DunesPercent2 *= 0.7
 			self.DesertPercent2 *= 0.7
@@ -703,7 +703,7 @@ class MapConstants:
 			self.horseLatitude			= 38
 			self.polarFrontLatitude = 68
 			self.tropicsLatitude = 30
-			
+
 		elif climate == 2: # Arid, more desert, less wet plots
 			self.SaltFlatsPercent3 = 0.06
 			self.DunesPercent3 = 0.14
@@ -715,7 +715,7 @@ class MapConstants:
 			self.GrasslandPercent3 = 0.9
 			self.LushPercent3 = 0.95
 			self.MuddyPercent3 = 0.98
-			
+
 			self.SaltFlatsPercent2 = 0.06
 			self.DunesPercent2 = 0.14
 			self.DesertPercent2 = 0.20
@@ -726,11 +726,11 @@ class MapConstants:
 			self.GrasslandPercent2 = 0.9
 			self.LushPercent2 = 0.95
 			self.MuddyPercent2 = 0.98
-		
+
 		elif climate == 3: # Rocky, more peaks, hills and rocky terrain
 			self.HillPercent *= 1.2
 			self.PeakPercent *= 1.3
-			
+
 			self.SaltFlatsPercent3 = 0.03
 			self.DunesPercent3 = 0.07
 			self.DesertPercent3 = 0.13
@@ -741,7 +741,7 @@ class MapConstants:
 			self.GrasslandPercent3 = 0.84
 			self.LushPercent3 = 0.92
 			self.MuddyPercent3 = 0.98
-			
+
 			self.SaltFlatsPercent2 = 0.03
 			self.DunesPercent2 = 0.07
 			self.DesertPercent2 = 0.13
@@ -752,7 +752,7 @@ class MapConstants:
 			self.GrasslandPercent2 = 0.84
 			self.LushPercent2 = 0.92
 			self.MuddyPercent2 = 0.98
-			
+
 		elif climate == 4: # Cold, larger polar area, more cold territory
 			self.SnowTemp3 *= 1.3
 			self.TundraTemp3 *= 1.3
@@ -762,14 +762,14 @@ class MapConstants:
 			self.PermafrostTemp2 *= 1.3
 			self.JungleTemp *= 1.1
 			self.ForestTemp *= 1.15
-			
+
 			self.IceChanceMultiplier = 0.8
-			
+
 			self.horseLatitude			= 29
 			self.polarFrontLatitude = 55
 			self.tropicsLatitude = 21
-	
-	
+
+
 mc = MapConstants()
 
 
@@ -810,7 +810,7 @@ class PythonRandom:
 		else:
 			gc = CyGlobalContext()
 			self.mapRand = gc.getGame().getMapRand()
-			
+
 			seedValue = self.mapRand.get(65535, "Seeding mapRand - FairWeather.py")
 			self.mapRand.init(seedValue)
 			self.seedString = "Random seed (Using getMapRand) for this map is %(s)20d" % {"s" :seedValue}
@@ -1284,7 +1284,7 @@ class FloatMap:
 		if i == -1:
 			return False
 		return True
-	
+
 	def DumpToDebug(self):
 		for i in range(self.length):
 			print "%f" % self.data[i]
@@ -1364,9 +1364,9 @@ class AreaMap:
 		matchValue = matchFunction(x, y)
 		#place seed on stack for both directions
 		seg = LineSegment(y, x, x, 1)
-		self.segStack.append(seg) 
+		self.segStack.append(seg)
 		seg = LineSegment(y + 1, x, x, -1)
-		self.segStack.append(seg) 
+		self.segStack.append(seg)
 		while(len(self.segStack) > 0):
 			seg = self.segStack.pop()
 			self.scanAndFillLine(seg,areaID,matchValue,matchFunction)
@@ -1424,7 +1424,7 @@ class AreaMap:
 				if lineFound == False:
 					lineFound = True
 					xLeftExtreme = xRightExtreme #starting new line
-			elif lineFound == True: #found the right end of a line segment!				
+			elif lineFound == True: #found the right end of a line segment!
 				lineFound = False
 				#put same direction on stack
 				newSeg = LineSegment(seg.y + seg.dy,xLeftExtreme,xRightExtreme - 1,seg.dy)
@@ -1733,7 +1733,7 @@ class ClimateMap2:
 				else:
 					cost = self.getRainCost(plot.x,plot.y,xx,yy,countRemaining / mc.monsoonUplift)
 				#Convert moisture into rain
-				#self.moistureMap[i] -= cost * moisturePerNeighbor (this line is unecessary actually, we are finished with moisture map for this plot) 
+				#self.moistureMap[i] -= cost * moisturePerNeighbor (this line is unecessary actually, we are finished with moisture map for this plot)
 				self.RainfallMap.data[i] += cost * moisturePerNeighbor * geostrophicFactor #geostrophicFactor is not involved with moisture, only to weigh against monsoons
 				#send remaining moisture to neighbor
 				if ii != -1:
@@ -1973,10 +1973,10 @@ class ClimateMap3:
 			for x in range(em.width):
 				i	= em.GetIndex(x, y)
 				geoMap.data[i] = pressure
-		
+
 		#print("Geo map:")
 		#geoMap.DumpToDebug()
-		
+
 		geoMap.Normalize()
 		sortedSummerMap = []
 		sortedWinterMap = []
@@ -2046,7 +2046,7 @@ class ClimateMap3:
 						geoIndex += 1
 						#x += incX
 					#y += incY
-					
+
 		moistureMap.Initialize(em.width, em.height, em.wrapX, em.wrapY)
 		for i in range(len(sortedSummerMap)):
 			x = sortedSummerMap[i][0]
@@ -2059,25 +2059,25 @@ class ClimateMap3:
 			y = sortedWinterMap[i][1]
 			pressure = sortedWinterMap[i][2]
 			self.DistributeRain(x, y, self.winterMap, rainfallWinterMap, moistureMap, False)
-		
+
 		moistureMap.Initialize(em.width, em.height, em.wrapX, em.wrapY)
 		for i in range(len(sortedGeoMap)):
 			x = sortedGeoMap[i][0]
 			y = sortedGeoMap[i][1]
 			self.DistributeRain(x, y, geoMap, rainfallGeostrophicMap, moistureMap, True)
-			
+
 		#print("Summer temperature map:")
 		#self.summerMap.DumpToDebug()
 		#print("Winter temperature map:")
 		#self.winterMap.DumpToDebug()
-		
+
 		#print("Summer rainfall map:")
 		#rainfallSummerMap.DumpToDebug()
 		#print("Winter rainfall map:")
 		#rainfallWinterMap.DumpToDebug()
 		#print("Geostrophic rainfall map:")
 		#rainfallGeostrophicMap.DumpToDebug()
-			
+
 		##zero below sea level for proper percent threshold finding
 		for y in range(em.height):
 			for x in range(em.width):
@@ -2089,7 +2089,7 @@ class ClimateMap3:
 		rainfallSummerMap.Normalize()
 		rainfallWinterMap.Normalize()
 		rainfallGeostrophicMap.Normalize()
-		
+
 		for y in range(em.height):
 			for x in range(em.width):
 				i = em.GetIndex(x, y)
@@ -2272,10 +2272,10 @@ class TerrainMap:
 			GrasslandPercent = mc.GrasslandPercent2
 			LushPercent = mc.LushPercent2
 			MuddyPercent = mc.MuddyPercent2
-		
+
 		#print("Rainfall map:")
 		#cm.RainfallMap.DumpToDebug()
-			
+
 		for i in range(em.length):
 			if self.data1[i] != mc.OCEAN:
 				if cm.RainfallMap.data[i] < minRain:
@@ -2299,7 +2299,7 @@ class TerrainMap:
 		self.grasslandThreshold = FindValueFromPercent(cm.RainfallMap.data,mc.width,mc.height,GrasslandPercent,.001,False)
 		self.lushThreshold = FindValueFromPercent(cm.RainfallMap.data,mc.width,mc.height,LushPercent,.001,False)
 		self.muddyThreshold = FindValueFromPercent(cm.RainfallMap.data,mc.width,mc.height,MuddyPercent,.001,False)
-		
+
 		for y in range(mc.height):
 			for x in range(mc.width):
 				i = GetIndex(x, y)
@@ -2319,7 +2319,7 @@ class TerrainMap:
 						self.data2[i] = mc.PERMAFROST
 				elif cm.TemperatureMap.data[i] < tundraTemp:
 						self.data2[i] = mc.TUNDRA
-						
+
 				#instead of harsh thresholds, allow a random deviation chance
 				#based on how close to the threshold the rainfall is
 				elif cm.RainfallMap.data[i] < self.saltflatsThreshold:
@@ -2327,61 +2327,61 @@ class TerrainMap:
 								self.data2[i] = mc.SALT_FLATS
 						else:
 								self.data2[i] = mc.DUNES
-								
+
 				elif cm.RainfallMap.data[i] < self.dunesThreshold:
 						if cm.RainfallMap.data[i] < ((1 + PRand.random()) * (self.dunesThreshold - self.saltflatsThreshold))/2.0 + self.saltflatsThreshold:
 								self.data2[i] = mc.DUNES
 						else:
 								self.data2[i] = mc.DESERT
-								
+
 				elif cm.RainfallMap.data[i] < self.desertThreshold:
 						if cm.RainfallMap.data[i] < ((1 + PRand.random()) * (self.desertThreshold - self.dunesThreshold))/2.0 + self.dunesThreshold:
 								self.data2[i] = mc.DESERT
 						else:
 								self.data2[i] = mc.SCRUB
-								
+
 				elif cm.RainfallMap.data[i] < self.scrubThreshold:
 						if cm.RainfallMap.data[i] < ((1 + PRand.random()) * (self.scrubThreshold - self.desertThreshold))/2.0 + self.desertThreshold:
 								self.data2[i] = mc.SCRUB
 						else:
 								self.data2[i] = mc.ROCKY
-				
+
 				elif cm.RainfallMap.data[i] < self.rockyThreshold:
 						if cm.RainfallMap.data[i] < ((1 + PRand.random()) * (self.rockyThreshold - self.scrubThreshold))/2.0 + self.scrubThreshold:
 								self.data2[i] = mc.ROCKY
 						else:
 								self.data2[i] = mc.BARREN
-				
+
 				elif cm.RainfallMap.data[i] < self.barrenThreshold:
 						if cm.RainfallMap.data[i] < ((1 + PRand.random()) * (self.barrenThreshold - self.rockyThreshold))/2.0 + self.rockyThreshold:
 								self.data2[i] = mc.BARREN
 						else:
 								self.data2[i] = mc.PLAINS
-				
+
 				elif cm.RainfallMap.data[i] < self.plainsThreshold:
 						if cm.RainfallMap.data[i] < ((1 + PRand.random()) * (self.plainsThreshold - self.barrenThreshold))/2.0 + self.barrenThreshold:
 								self.data2[i] = mc.PLAINS
 						else:
 								self.data2[i] = mc.GRASS
-				
+
 				elif cm.RainfallMap.data[i] < self.grasslandThreshold:
 						if cm.RainfallMap.data[i] < ((1 + PRand.random()) * (self.grasslandThreshold - self.plainsThreshold))/2.0 + self.plainsThreshold:
 								self.data2[i] = mc.GRASS
 						else:
 								self.data2[i] = mc.LUSH
-				
+
 				elif cm.RainfallMap.data[i] < self.lushThreshold:
 						if cm.RainfallMap.data[i] < ((1 + PRand.random()) * (self.lushThreshold - self.grasslandThreshold))/2.0 + self.grasslandThreshold:
 								self.data2[i] = mc.LUSH
 						else:
 								self.data2[i] = mc.MUDDY
-				
+
 				elif cm.RainfallMap.data[i] < self.muddyThreshold:
 						if cm.RainfallMap.data[i] < ((1 + PRand.random()) * (self.muddyThreshold - self.lushThreshold))/2.0 + self.lushThreshold:
 								self.data2[i] = mc.MUDDY
 						else:
 								self.data2[i] = mc.MARSH
-				
+
 				else:
 						self.data2[i] = mc.MARSH
 
@@ -2761,7 +2761,7 @@ def FindValueFromPercent(mmap, width, height, percent, tolerance, greaterThan):
 					if(mmap[i] > threshold):
 						matchCount += 1
 				else:
-					if(mmap[i] < threshold):	
+					if(mmap[i] < threshold):
 						matchCount += 1
 		currentPercent = float(matchCount) / float(totalCount)
 		if currentPercent < percent + tolerance and currentPercent > percent - tolerance:
@@ -3233,7 +3233,7 @@ class RiverMap:
 		#each element coincides with a four tile intersection on the game map
 		self.averageHeightMap		= array('d')
 		self.flowMap						= array('i')
-		self.averageRainfallMap = array('d')		
+		self.averageRainfallMap = array('d')
 		self.drainageMap				= array('d')
 		self.riverMap						= array('i')
 		#initialize maps with zeros
@@ -3262,7 +3262,7 @@ class RiverMap:
 		self.siltifyLakes()
 		self.createLakeDepressions()
 		#create flowMap by checking for the lowest of each 4 connected
-		#neighbor plus self		 
+		#neighbor plus self
 		for y in range(mc.height):
 			for x in range(mc.width):
 				i = GetIndex(x, y)
@@ -3277,7 +3277,7 @@ class RiverMap:
 					#randomly chosen as the drainage path
 					drainList = list()
 					nonDrainList = list()
-					self.flowMap[i] = mc.L 
+					self.flowMap[i] = mc.L
 					ii = GetIndex(x, y + 1)
 					#in the y direction, avoid wrapping
 					#if(y > 0 and self.averageHeightMap[ii] < lowestAlt):
@@ -3478,20 +3478,20 @@ class BonusPlacer:
 		gameMap.recalculateAreas()
 		self.AssignBonusAreas()
 		numBonuses = gc.getNumBonusInfos()
-		
+
 		orderSet = {}
 		for i in range(numBonuses):  #Check which placement orders are used, discard -1
 			bonusInfo = gc.getBonusInfo(self.bonusList[i].eBonus)
 			porder = bonusInfo.getPlacementOrder()
 			if porder >= 0:
 				orderSet[porder] = 1
-		
+
 		plotIndexList = []
 		for i in range(em.length):
 			plotIndexList.append(i)
 		plotIndexList = ShuffleList(plotIndexList)
 		startAtIndex = 0
-			
+
 		porderList = sorted(orderSet.keys())
 		for order in porderList:
 			placementList = []
@@ -3516,7 +3516,7 @@ class BonusPlacer:
 		for i in range(numBonuses):
 			bonus = self.bonusList[i]
 			if bonus.currentBonusCount == 0 and bonus.desiredBonusCount > 0:
-				startAtIndex = self.AddEmergencyBonus(bonus,True, plotIndexList, startAtIndex)										 
+				startAtIndex = self.AddEmergencyBonus(bonus,True, plotIndexList, startAtIndex)
 		#now report resources that simply could not be placed
 		for i in range(numBonuses):
 			bonus = self.bonusList[i]
@@ -3561,7 +3561,7 @@ class BonusPlacer:
 				if featureEnum == featureForest:
 					if bonusInfo == None or bonusInfo.isFeature(featureEnum):
 						plot.setFeatureType(featureEnum,featureVariety)
-				print "Emergency placement of 1 %(bt)s" % {"bt":bonusInfo.getType()} 
+				print "Emergency placement of 1 %(bt)s" % {"bt":bonusInfo.getType()}
 				break
 		lastI = (lastI + 1) % plotListLength
 		return lastI
@@ -3663,7 +3663,7 @@ class BonusPlacer:
 		self.areas = CvMapGeneratorUtil.getAreas()
 		gameMap = CyMap()
 		self.bonusList = list()
-		
+
 		#Create and shuffle the bonus list and keep tally on
 		#one-area bonuses and find the smallest min area requirement
 		#among those
@@ -3680,10 +3680,10 @@ class BonusPlacer:
 				minAreaSize = bonusInfo.getMinAreaSize()
 				if (minLandAreaSize == -1 or minLandAreaSize > minAreaSize) and minAreaSize > 0:
 					minLandAreaSize = minAreaSize
-		
+
 		self.bonusList = ShuffleList(self.bonusList)
 		self.bonusDict = [0] * numBonuses
-		
+
 		for i in range(numBonuses):
 			eBonus = self.bonusList[i].eBonus
 			self.bonusDict[eBonus] = i
@@ -3946,8 +3946,8 @@ class AreaSuitability:
 class StartingPlotFinder:
 	def __init__(self):
 		return
-	
-	
+
+
 	def CachePlotValue(self):
 		self.plotvalueList = []
 		self.plotfoodList = []
@@ -3956,7 +3956,7 @@ class StartingPlotFinder:
 				food, value = self.getPlotPotentialValueUncached(x, y, True)
 				self.plotvalueList.append(value)
 				self.plotfoodList.append(food)
-	
+
 
 
 	def SetStartingPlots(self):
@@ -3969,15 +3969,15 @@ class StartingPlotFinder:
 			#get old/new world status
 			areaOldWorld = self.setupOldWorldAreaList()
 			print "len(areaOldWorld) = %d" % len(areaOldWorld)
-			
+
 			self.CachePlotValue()
-			
+
 			#Shuffle players so the same player doesn't always get the first pick.
 			#lifted from Highlands.py that ships with Civ.
 			player_list = []
-			for plrCheckLoop in range(gc.getMAX_CIV_PLAYERS()):
-					if CyGlobalContext().getPlayer(plrCheckLoop).isEverAlive():
-							player_list.append(plrCheckLoop)
+			for plrCheckLoop in range(gc.getMAX_PC_PLAYERS()):
+				if CyGlobalContext().getPlayer(plrCheckLoop).isEverAlive():
+					player_list.append(plrCheckLoop)
 			shuffledPlayers = ShuffleList(player_list)
 			#for playerLoop in range(iPlayers):
 			#		iChoosePlayer = PRand.randint(0, len(player_list) - 1)
@@ -3999,7 +3999,7 @@ class StartingPlotFinder:
 			#Get rid of areas that have less value than oldWorldValuePerPlayer
 			#as they are too small to put a player on, however leave at least
 			#half as many continents as there are players, just in case the
-			#continents are *all* quite small. 
+			#continents are *all* quite small.
 			numAreas = max(1, len(self.startingAreaList) - len(shuffledPlayers) / 2)
 			for i in range(numAreas):
 				if self.startingAreaList[0].rawValue < oldWorldValuePerPlayer:
@@ -4075,7 +4075,7 @@ class StartingPlotFinder:
 				if percentLacking > 0:
 					bonuses = min(5, int(percentLacking / 0.2))
 					self.boostCityPlotValue(self.plotList[i].x, self.plotList[i].y, bonuses, self.plotList[i].isCoast())
-			#add bonuses due to player difficulty settings		
+			#add bonuses due to player difficulty settings
 			self.addHandicapBonus()
 		#except Exception, e:
 			#errorPopUp("PerfectWorld's starting plot finder has failed due to a rarely occuring bug, and this map likely has unfair starting locations. You may wish to quit this game and generate a new map.")
@@ -4459,7 +4459,7 @@ class StartingPlotFinder:
 
 	def addHandicapBonus(self):
 		gc = CyGlobalContext()
-		for ePlayer in range(gc.getMAX_CIV_PLAYERS()):
+		for ePlayer in range(gc.getMAX_PC_PLAYERS()):
 			player = gc.getPlayer(ePlayer)
 			if player.isEverAlive() and player.isHuman():
 				eHandicap = player.getHandicapType()
@@ -4718,7 +4718,7 @@ class StartPlot:
 		gameMap = CyMap()
 		plot = gameMap.plot(self.x, self.y)
 		waterArea = plot.waterArea()
-		if waterArea.isNone() == True or waterArea.isLake() == True: 
+		if waterArea.isNone() == True or waterArea.isLake() == True:
 			return False
 		return True
 
@@ -4997,11 +4997,11 @@ def generatePlotTypes():
 			plotTypes[i] = PlotTypes.PLOT_LAND
 	timer.log()
 	return plotTypes
-	
+
 
 def generateTerrainTypes():
 	gc = CyGlobalContext()
-	
+
 	terrainDesert = gc.getInfoTypeForString("TERRAIN_DESERT")
 	terrainSaltFlats = gc.getInfoTypeForString("TERRAIN_SALT_FLATS")
 	terrainDunes = gc.getInfoTypeForString("TERRAIN_DUNES")
@@ -5020,7 +5020,7 @@ def generateTerrainTypes():
 	terrainCoast = gc.getInfoTypeForString("TERRAIN_COAST")
 	terrainOcean = gc.getInfoTypeForString("TERRAIN_OCEAN")
 	terrainPeak = gc.getInfoTypeForString("TERRAIN_PEAK")
-	
+
 	terrainTypes = [0] * em.length
 	for i in range(em.length):
 		if tm.data2[i] == mc.OCEAN:
@@ -5289,7 +5289,7 @@ def makeHarbor(x, y, oceanMap):
 		oceanID = oceanMap.getOceanID()
 	#W
 	xx = x - 2
-	yy = y 
+	yy = y
 	ii = oceanMap.getIndex(xx, yy)
 	if ii > -1 and oceanMap.getAreaByID(oceanMap.data[ii]).water == True and oceanMap.data[ii] != oceanID:
 		makeChannel(x - 1, y)
@@ -5392,7 +5392,7 @@ def expandLake(x, y, riversIntoLake, oceanMap):
 				ii = oceanMap.getIndex(xx,yy)
 			elif n == 3:#W
 				xx = currentLakePlot.x - 1
-				yy = currentLakePlot.y 
+				yy = currentLakePlot.y
 				ii = oceanMap.getIndex(xx,yy)
 			else:
 				raise ValueError, "too many cardinal directions"
@@ -5448,7 +5448,7 @@ def addFeatures():
 	featureBog = gc.getInfoTypeForString("FEATURE_PEAT_BOG")
 	featureSwordGrass = gc.getInfoTypeForString("FEATURE_SWORD_GRASS")
 	featureSwamp = gc.getInfoTypeForString("FEATURE_SWAMP")
-	
+
 	FORESTLEAFY			= 0
 	FORESTEVERGREEN = 1
 	FORESTSNOWY			= 2
@@ -5508,7 +5508,7 @@ def addFeatures():
 									plot.setFeatureType(featureSwamp,0)
 					elif PRand.random() < 0.5:
 							plot.setFeatureType(featureSwamp,0)
-							
+
 			if plot.getFeatureType() == FeatureTypes.NO_FEATURE:
 				for iI in range(gc.getNumFeatureInfos()):
 		#			print self.gc.getFeatureInfo(iI).getDescription()
@@ -5517,7 +5517,7 @@ def addFeatures():
 						if PRand.random() * 10000 < gc.getFeatureInfo(iI).getAppearanceProbability():
 		#					print "Setting feature"
 							plot.setFeatureType(iI, -1)
-										
+
 ## C2C end ##
 			#forest and jungle
 			if not plot.isWater() and plot.getFeatureType() == FeatureTypes.NO_FEATURE and tm.data2[i] != mc.DESERT and tm.data2[i] != mc.DUNES and tm.data2[i] != mc.SALT_FLATS and tm.data2[i] != mc.SCRUB and not plot.isPeak():
@@ -5577,7 +5577,7 @@ def addBonuses():
 	timer = BugUtil.Timer('Bonus generation')
 	bp.AddBonuses()
 	timer.log()
-	
+
 
 def assignStartingPlots():
 	timer = BugUtil.Timer('Starting plot finding')
