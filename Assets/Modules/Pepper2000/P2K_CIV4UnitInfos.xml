@@ -187,7 +187,7 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
@@ -314,7 +314,7 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
@@ -508,7 +508,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CISLUNARSETTLER</Description>
@@ -600,7 +600,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
@@ -698,7 +698,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
@@ -798,7 +798,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
@@ -919,7 +919,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_INTERSTELLAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
@@ -1511,7 +1511,7 @@
 			<Combat>UNITCOMBAT_EARLY_SPACESHIP</Combat>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CISLUNAR_INVADER</Description>
@@ -1751,7 +1751,7 @@
 			<Domain>DOMAIN_IMMOBILE</Domain>
             <bOnlyDefensive>1</bOnlyDefensive>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CISLUNAR_INFANTRY</Description>
@@ -2605,7 +2605,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CISLUNAR_WORKER</Description>
@@ -2839,7 +2839,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
@@ -2962,7 +2962,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
@@ -3137,7 +3137,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
@@ -3312,7 +3312,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
@@ -3750,7 +3750,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
                 <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
             <bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -3810,7 +3810,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
                 <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
@@ -3874,7 +3874,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
                 <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
@@ -3940,7 +3940,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
                 <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
@@ -4008,7 +4008,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
                 <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
@@ -4017,7 +4017,7 @@
                 <MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_MILKYWAY</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
 			</MapCategoryTypes>
             <bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -4077,7 +4077,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
                 <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
@@ -4086,7 +4086,7 @@
                 <MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_MILKYWAY</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
 			</MapCategoryTypes>
             <bCanMoveAllTerrain>1</bCanMoveAllTerrain>
@@ -4434,7 +4434,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
             <TerrainImpassableTypes>
@@ -4570,7 +4570,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
             <TerrainImpassableTypes>
@@ -4807,7 +4807,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
@@ -6134,7 +6134,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
             <bCanMoveAllTerrain>1</bCanMoveAllTerrain>
@@ -6458,7 +6458,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
@@ -6535,7 +6535,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
@@ -7441,7 +7441,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
@@ -7522,7 +7522,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
@@ -7604,7 +7604,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
@@ -9158,7 +9158,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>

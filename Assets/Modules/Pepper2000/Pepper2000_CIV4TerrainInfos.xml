@@ -473,7 +473,7 @@
 			<Button>Art/Interface/Buttons/WorldBuilder/orion_arm.dds</Button>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MILKYWAY</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
 			</MapCategoryTypes>
 		</TerrainInfo>
 		<TerrainInfo>
@@ -487,7 +487,7 @@
 			<Button>Art/Interface/Buttons/WorldBuilder/milky_way.dds</Button>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MILKYWAY</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
 			</MapCategoryTypes>
 		</TerrainInfo>
 		<TerrainInfo>
@@ -501,7 +501,7 @@
 			<Button>Art/Interface/Buttons/WorldBuilder/neutron_star.dds</Button>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MILKYWAY</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
 			</MapCategoryTypes>
 		</TerrainInfo>
 		<TerrainInfo>
@@ -515,7 +515,7 @@
 			<Button>Art/Interface/Buttons/WorldBuilder/nebula.dds</Button>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MILKYWAY</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
 			</MapCategoryTypes>
 		</TerrainInfo>
 		<TerrainInfo>
@@ -529,7 +529,7 @@
 			<Button>Art/Interface/Buttons/WorldBuilder/star_cluster.dds</Button>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MILKYWAY</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
 			</MapCategoryTypes>
 		</TerrainInfo>
 		<TerrainInfo>
@@ -543,7 +543,7 @@
 			<Button>Art/Interface/Buttons/WorldBuilder/galactic_core.dds</Button>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_MILKYWAY</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
 			</MapCategoryTypes>
 		</TerrainInfo>
 		<TerrainInfo>

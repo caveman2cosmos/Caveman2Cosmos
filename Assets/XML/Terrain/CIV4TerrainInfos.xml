@@ -5504,7 +5504,7 @@
 			<iMovement>1</iMovement>
 			<Button>Art/Interface/Buttons/WorldBuilder/Space.dds</Button>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 		</TerrainInfo>
 		<TerrainInfo>
@@ -5517,7 +5517,7 @@
 			<iMovement>1</iMovement>
 			<Button>Art/Interface/Buttons/WorldBuilder/Space.dds</Button>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 		</TerrainInfo>
 		<TerrainInfo>

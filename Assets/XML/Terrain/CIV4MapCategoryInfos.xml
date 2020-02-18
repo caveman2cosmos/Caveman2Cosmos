@@ -54,16 +54,12 @@
 			<Description>TXT_KEY_MAPCATEGORY_INTERSTELLAR</Description>
 		</MapCategoryInfo>
         <MapCategoryInfo>
-			<Type>MAPCATEGORY_MILKYWAY</Type>
-			<Description>TXT_KEY_MAPCATEGORY_MILKYWAY</Description>
+			<Type>MAPCATEGORY_MILKY_WAY</Type>
+			<Description>TXT_KEY_MAPCATEGORY_MILKY_WAY</Description>
 		</MapCategoryInfo>
 		<MapCategoryInfo>
-			<Type>MAPCATEGORY_VOID</Type>
-			<Description>TXT_KEY_MAPCATEGORY_VOID</Description>
-		</MapCategoryInfo>
-		<MapCategoryInfo>
-			<Type>MAPCATEGORY_SPACE</Type>
-			<Description>TXT_KEY_MAPCATEGORY_SPACE</Description>
+			<Type>MAPCATEGORY_CISLUNAR</Type>
+			<Description>TXT_KEY_MAPCATEGORY_CISLUNAR</Description>
 		</MapCategoryInfo>
         <MapCategoryInfo>
 			<Type>MAPCATEGORY_UNIVERSAL</Type>
