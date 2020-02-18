@@ -12671,26 +12671,15 @@ bool CvDiplomacyInfo::FindResponseIndex(const CvDiplomacyResponse* pNewResponse,
 //
 //------------------------------------------------------------------------------------------------------
 CvUnitClassInfo::CvUnitClassInfo() :
-m_iMaxGlobalInstances(0),
-m_iMaxTeamInstances(0),
-m_iMaxPlayerInstances(0),
-//TB Unlimited National Units Mod
-m_bUnlimitedException(false),
-//TB Unlimited National Units End
-m_iInstanceCostModifier(0),
-m_iDefaultUnitIndex(NO_UNIT)
-/************************************************************************************************/
-/* Afforess					  Start		 12/23/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-,m_bUnique(false)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-
-{
-}
+	m_iMaxGlobalInstances(0),
+	m_iMaxTeamInstances(0),
+	m_iMaxPlayerInstances(0),
+	//TB Unlimited National Units Mod
+	m_bUnlimitedException(false),
+	//TB Unlimited National Units End
+	m_iInstanceCostModifier(0),
+	m_iDefaultUnitIndex(NO_UNIT)
+{}
 
 //------------------------------------------------------------------------------------------------------
 //
@@ -12739,18 +12728,6 @@ void CvUnitClassInfo::setDefaultUnitIndex(int i)
 {
 	m_iDefaultUnitIndex = i;
 }
-/************************************************************************************************/
-/* Afforess					  Start		 12/23/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-bool CvUnitClassInfo::isUnique() const
-{
-	return m_bUnique;
-}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 int CvUnitClassInfo::getDefaultUnitIndexVector() const
 {
@@ -12775,15 +12752,6 @@ bool CvUnitClassInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iMaxPlayerInstances, L"iMaxPlayerInstances", -1);
 	pXML->GetOptionalChildXmlValByName(&m_bUnlimitedException, L"bUnlimitedException");
 	pXML->GetOptionalChildXmlValByName(&m_iInstanceCostModifier, L"iInstanceCostModifier");
-/************************************************************************************************/
-/* Afforess					  Start		 12/23/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	pXML->GetOptionalChildXmlValByName(&m_bUnique, L"bUnique");
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 	CvString szTextVal;
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"DefaultUnit");
@@ -12809,15 +12777,6 @@ void CvUnitClassInfo::copyNonDefaults(CvUnitClassInfo* pClassInfo, CvXMLLoadUtil
 	if (getMaxPlayerInstances() == -1) m_iMaxPlayerInstances = pClassInfo->getMaxPlayerInstances();
 	if (isUnlimitedException() == bDefault) m_bUnlimitedException = pClassInfo->isUnlimitedException();
 	if (getInstanceCostModifier() == iDefault) m_iInstanceCostModifier = pClassInfo->getInstanceCostModifier();
-/************************************************************************************************/
-/* Afforess					  Start		 12/23/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	if (isUnique() == bDefault) m_bUnique = pClassInfo->isUnique();
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 	for ( int i = 0; i < pClassInfo->getDefaultUnitIndexVector(); i++ )
 	{
@@ -12865,8 +12824,6 @@ void CvUnitClassInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_bUnlimitedException);
 	CheckSum(iSum, m_iInstanceCostModifier);
 	CheckSum(iSum, m_iDefaultUnitIndex);
-
-	CheckSum(iSum, m_bUnique);
 }
 
 //======================================================================================================

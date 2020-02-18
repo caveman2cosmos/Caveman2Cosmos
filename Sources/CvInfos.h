@@ -3585,15 +3585,6 @@ public:
 	int getInstanceCostModifier() const;			// Exposed to Python
 	int getDefaultUnitIndex() const;				// Exposed to Python
 	void setDefaultUnitIndex(int i);
-/************************************************************************************************/
-/* Afforess					  Start		 12/23/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	bool isUnique() const;
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 	int getDefaultUnitIndexVector() const;
 	CvString getDefaultUnitIndexVectorElement(const int i) const;

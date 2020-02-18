@@ -21869,14 +21869,9 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 	UnitClassTypes eUnitClass = (UnitClassTypes)GC.getUnitInfo(eUnit).getUnitClassType();
 	UnitTypes eDefaultUnit = (UnitTypes)GC.getUnitClassInfo(eUnitClass).getDefaultUnitIndex();
 
-/************************************************************************************************/
-/* Afforess	                  Start		 12/23/09                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	if (bNormalView)
 	{
-		if (GC.getUnitClassInfo(eUnitClass).isUnique() || eDefaultUnit != eUnit)
+		if (eDefaultUnit != eUnit)
 		{
 			bool bFound = false;
 			for (iI  = 0; iI < GC.getNumCivilizationInfos(); ++iI)
@@ -21892,7 +21887,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 
 			if (bFound)
 			{
-				if (NO_UNIT != eDefaultUnit && eDefaultUnit != eUnit && !GC.getUnitClassInfo(eUnitClass).isUnique())
+				if (NO_UNIT != eDefaultUnit && eDefaultUnit != eUnit)
 				{
 					szBuffer.append(NEWLINE);
 					szBuffer.append(gDLL->getText("TXT_KEY_REPLACES_UNIT", CvWString(GC.getUnitInfo(eDefaultUnit).getType()).GetCString(), GC.getUnitInfo(eDefaultUnit).getTextKeyWide()));
@@ -21904,10 +21899,6 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 				szBuffer.append(gDLL->getText("TXT_KEY_RESTRICTED_UNIT"));
 			}
 		}
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
-
 
 		if (isWorldUnitClass(eUnitClass))
 		{
