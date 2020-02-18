@@ -3616,35 +3616,35 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FUTURE_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_CENTER</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SEA_FORT</BuildType>
+					<BuildType>BUILD_AQUATIC_FORCEFIELD</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SEA_AIR_DEFENSE</BuildType>
+					<BuildType>BUILD_AQUATIC_ANTI_AIR_DEFENSE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_ABATIS</BuildType>
+					<BuildType>BUILD_ABATIS_THORN_HEDGE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_ABATIS_G</BuildType>
+					<BuildType>BUILD_ABATIS_THORN_HEDGE_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PALISADE</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PALISADE_G</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -3652,31 +3652,31 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FORTIFIED_CAVE_G</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FORTIFIED_CAVE_CACHE</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WOODEN_TOWER</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WOODEN_TOWER_G</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<!--<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_STONE_TOWER</BuildType>
+					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_STEEL_TOWER</BuildType>
+					<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_RADAR</BuildType>
+					<BuildType>BUILD_RADAR_TOWER</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -3863,35 +3863,35 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FUTURE_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_CENTER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SEA_FORT</BuildType>
+					<BuildType>BUILD_AQUATIC_FORCEFIELD</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SEA_AIR_DEFENSE</BuildType>
+					<BuildType>BUILD_AQUATIC_ANTI_AIR_DEFENSE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_ABATIS</BuildType>
+					<BuildType>BUILD_ABATIS_THORN_HEDGE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_ABATIS_G</BuildType>
+					<BuildType>BUILD_ABATIS_THORN_HEDGE_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PALISADE</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PALISADE_G</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -3899,31 +3899,31 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FORTIFIED_CAVE_G</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FORTIFIED_CAVE_CACHE</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WOODEN_TOWER</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WOODEN_TOWER_G</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<!--<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_STONE_TOWER</BuildType>
+					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_STEEL_TOWER</BuildType>
+					<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_RADAR</BuildType>
+					<BuildType>BUILD_RADAR_TOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -4092,35 +4092,35 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FUTURE_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_CENTER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SEA_FORT</BuildType>
+					<BuildType>BUILD_AQUATIC_FORCEFIELD</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SEA_AIR_DEFENSE</BuildType>
+					<BuildType>BUILD_AQUATIC_ANTI_AIR_DEFENSE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_ABATIS</BuildType>
+					<BuildType>BUILD_ABATIS_THORN_HEDGE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_ABATIS_G</BuildType>
+					<BuildType>BUILD_ABATIS_THORN_HEDGE_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PALISADE</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PALISADE_G</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -4128,31 +4128,31 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FORTIFIED_CAVE_G</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FORTIFIED_CAVE_CACHE</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WOODEN_TOWER</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WOODEN_TOWER_G</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<!--<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_STONE_TOWER</BuildType>
+					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_STEEL_TOWER</BuildType>
+					<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_RADAR</BuildType>
+					<BuildType>BUILD_RADAR_TOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -4323,35 +4323,35 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FUTURE_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_CENTER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SEA_FORT</BuildType>
+					<BuildType>BUILD_AQUATIC_FORCEFIELD</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SEA_AIR_DEFENSE</BuildType>
+					<BuildType>BUILD_AQUATIC_ANTI_AIR_DEFENSE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_ABATIS</BuildType>
+					<BuildType>BUILD_ABATIS_THORN_HEDGE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_ABATIS_G</BuildType>
+					<BuildType>BUILD_ABATIS_THORN_HEDGE_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PALISADE</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PALISADE_G</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -4359,31 +4359,31 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FORTIFIED_CAVE_G</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FORTIFIED_CAVE_CACHE</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WOODEN_TOWER</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WOODEN_TOWER_G</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<!--<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_STONE_TOWER</BuildType>
+					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_STEEL_TOWER</BuildType>
+					<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_RADAR</BuildType>
+					<BuildType>BUILD_RADAR_TOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -4532,35 +4532,35 @@
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FUTURE_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_CENTER</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SEA_FORT</BuildType>
+					<BuildType>BUILD_AQUATIC_FORCEFIELD</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SEA_AIR_DEFENSE</BuildType>
+					<BuildType>BUILD_AQUATIC_ANTI_AIR_DEFENSE</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_ABATIS</BuildType>
+					<BuildType>BUILD_ABATIS_THORN_HEDGE</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_ABATIS_G</BuildType>
+					<BuildType>BUILD_ABATIS_THORN_HEDGE_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PALISADE</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PALISADE_G</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -4568,31 +4568,31 @@
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FORTIFIED_CAVE_G</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FORTIFIED_CAVE_CACHE</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WOODEN_TOWER</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WOODEN_TOWER_G</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<!--<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_STONE_TOWER</BuildType>
+					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_STEEL_TOWER</BuildType>
+					<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_RADAR</BuildType>
+					<BuildType>BUILD_RADAR_TOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -4739,35 +4739,35 @@
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FUTURE_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_CENTER</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SEA_FORT</BuildType>
+					<BuildType>BUILD_AQUATIC_FORCEFIELD</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SEA_AIR_DEFENSE</BuildType>
+					<BuildType>BUILD_AQUATIC_ANTI_AIR_DEFENSE</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_ABATIS</BuildType>
+					<BuildType>BUILD_ABATIS_THORN_HEDGE</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_ABATIS_G</BuildType>
+					<BuildType>BUILD_ABATIS_THORN_HEDGE_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PALISADE</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PALISADE_G</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -4775,31 +4775,31 @@
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FORTIFIED_CAVE_G</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FORTIFIED_CAVE_CACHE</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WOODEN_TOWER</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WOODEN_TOWER_G</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<!--<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_STONE_TOWER</BuildType>
+					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_STEEL_TOWER</BuildType>
+					<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_RADAR</BuildType>
+					<BuildType>BUILD_RADAR_TOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -4947,35 +4947,35 @@
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FUTURE_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_CENTER</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SEA_FORT</BuildType>
+					<BuildType>BUILD_AQUATIC_FORCEFIELD</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SEA_AIR_DEFENSE</BuildType>
+					<BuildType>BUILD_AQUATIC_ANTI_AIR_DEFENSE</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_ABATIS</BuildType>
+					<BuildType>BUILD_ABATIS_THORN_HEDGE</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_ABATIS_G</BuildType>
+					<BuildType>BUILD_ABATIS_THORN_HEDGE_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PALISADE</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PALISADE_G</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -4983,31 +4983,31 @@
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FORTIFIED_CAVE_G</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FORTIFIED_CAVE_CACHE</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WOODEN_TOWER</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WOODEN_TOWER_G</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<!--<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_STONE_TOWER</BuildType>
+					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_STEEL_TOWER</BuildType>
+					<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_RADAR</BuildType>
+					<BuildType>BUILD_RADAR_TOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -5158,35 +5158,35 @@
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FUTURE_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_CENTER</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SEA_FORT</BuildType>
+					<BuildType>BUILD_AQUATIC_FORCEFIELD</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SEA_AIR_DEFENSE</BuildType>
+					<BuildType>BUILD_AQUATIC_ANTI_AIR_DEFENSE</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_ABATIS</BuildType>
+					<BuildType>BUILD_ABATIS_THORN_HEDGE</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_ABATIS_G</BuildType>
+					<BuildType>BUILD_ABATIS_THORN_HEDGE_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PALISADE</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PALISADE_G</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -5194,31 +5194,31 @@
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FORTIFIED_CAVE_G</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FORTIFIED_CAVE_CACHE</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WOODEN_TOWER</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WOODEN_TOWER_G</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<!--<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_STONE_TOWER</BuildType>
+					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_STEEL_TOWER</BuildType>
+					<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_RADAR</BuildType>
+					<BuildType>BUILD_RADAR_TOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -9701,11 +9701,11 @@
 			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_BREAK_ICE</BuildType>
+					<BuildType>BUILD_BREAK_ICE_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>100</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_BREAK_ICE_2</BuildType>
+					<BuildType>BUILD_BREAK_ICE</BuildType>
 					<iBuildWorkerSpeedModifier>100</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -9725,7 +9725,7 @@
 					<iBuildWorkerSpeedModifier>100</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HARVEST_KELP_2</BuildType>
+					<BuildType>BUILD_HARVEST_KELP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>100</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -10122,11 +10122,11 @@
 			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_BREAK_ICE</BuildType>
+					<BuildType>BUILD_BREAK_ICE_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_BREAK_ICE_2</BuildType>
+					<BuildType>BUILD_BREAK_ICE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -10146,7 +10146,7 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HARVEST_KELP_2</BuildType>
+					<BuildType>BUILD_HARVEST_KELP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -10474,11 +10474,11 @@
 			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_BREAK_ICE</BuildType>
+					<BuildType>BUILD_BREAK_ICE_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_BREAK_ICE_2</BuildType>
+					<BuildType>BUILD_BREAK_ICE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -10498,7 +10498,7 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HARVEST_KELP_2</BuildType>
+					<BuildType>BUILD_HARVEST_KELP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -10739,11 +10739,11 @@
 			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_BREAK_ICE</BuildType>
+					<BuildType>BUILD_BREAK_ICE_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_BREAK_ICE_2</BuildType>
+					<BuildType>BUILD_BREAK_ICE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -10763,7 +10763,7 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HARVEST_KELP_2</BuildType>
+					<BuildType>BUILD_HARVEST_KELP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -11620,7 +11620,7 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_CAMP</BuildType>
+					<BuildType>BUILD_HUNTING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -11632,15 +11632,15 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SAFARI</BuildType>
+					<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_JUNGLE_CAMP_GATHERER</BuildType>
+					<BuildType>BUILD_JUNGLE_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_JUNGLE_CAMP_GATHERER</BuildType>
+					<BuildType>BUILD_JUNGLE_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -11648,7 +11648,7 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_DESERT_CAMP_GATHERER</BuildType>
+					<BuildType>BUILD_DESERT_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -11656,7 +11656,7 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WETLANDS_CAMP_GATHERER</BuildType>
+					<BuildType>BUILD_WETLANDS_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -13204,7 +13204,7 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_CAMP</BuildType>
+					<BuildType>BUILD_HUNTING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -13216,15 +13216,15 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SAFARI</BuildType>
+					<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_JUNGLE_CAMP_GATHERER</BuildType>
+					<BuildType>BUILD_JUNGLE_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_JUNGLE_CAMP_GATHERER</BuildType>
+					<BuildType>BUILD_JUNGLE_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -13232,7 +13232,7 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_DESERT_CAMP_GATHERER</BuildType>
+					<BuildType>BUILD_DESERT_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -13240,7 +13240,7 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WETLANDS_CAMP_GATHERER</BuildType>
+					<BuildType>BUILD_WETLANDS_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -14484,7 +14484,7 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_CAMP</BuildType>
+					<BuildType>BUILD_HUNTING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -14496,15 +14496,15 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SAFARI</BuildType>
+					<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_JUNGLE_CAMP_GATHERER</BuildType>
+					<BuildType>BUILD_JUNGLE_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_JUNGLE_CAMP_GATHERER</BuildType>
+					<BuildType>BUILD_JUNGLE_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -14512,7 +14512,7 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_DESERT_CAMP_GATHERER</BuildType>
+					<BuildType>BUILD_DESERT_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -14520,7 +14520,7 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WETLANDS_CAMP_GATHERER</BuildType>
+					<BuildType>BUILD_WETLANDS_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -15510,7 +15510,7 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_CAMP</BuildType>
+					<BuildType>BUILD_HUNTING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -15522,15 +15522,15 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SAFARI</BuildType>
+					<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_JUNGLE_CAMP_GATHERER</BuildType>
+					<BuildType>BUILD_JUNGLE_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_JUNGLE_CAMP_GATHERER</BuildType>
+					<BuildType>BUILD_JUNGLE_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -15538,7 +15538,7 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_DESERT_CAMP_GATHERER</BuildType>
+					<BuildType>BUILD_DESERT_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -15546,7 +15546,7 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WETLANDS_CAMP_GATHERER</BuildType>
+					<BuildType>BUILD_WETLANDS_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -16291,11 +16291,11 @@
 					<iBuildWorkerSpeedModifier>100</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MODERNWINDMILL</BuildType>
+					<BuildType>BUILD_MODERN_WINDMILL</BuildType>
 					<iBuildWorkerSpeedModifier>100</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WINDMILL_SEA</BuildType>
+					<BuildType>BUILD_SEA_MILL</BuildType>
 					<iBuildWorkerSpeedModifier>100</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -17306,11 +17306,11 @@
 					<iBuildWorkerSpeedModifier>100</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MODERNWINDMILL</BuildType>
+					<BuildType>BUILD_MODERN_WINDMILL</BuildType>
 					<iBuildWorkerSpeedModifier>100</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WINDMILL_SEA</BuildType>
+					<BuildType>BUILD_SEA_MILL</BuildType>
 					<iBuildWorkerSpeedModifier>100</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -24116,19 +24116,19 @@
 			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PINE_GATHERER</BuildType>
+					<BuildType>BUILD_WOOD_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_LUMBER_JACK</BuildType>
+					<BuildType>BUILD_LUMBERJACK</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_ROCK_GATHERER</BuildType>
+					<BuildType>BUILD_STONE_TOOLS_WORKSHOP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_ROCK_GATHERER_2</BuildType>
+					<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -24136,11 +24136,11 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_TAR_GATHERER</BuildType>
+					<BuildType>BUILD_TAR_GATHERER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_TAR_GATHERER2</BuildType>
+					<BuildType>BUILD_TAR_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -24160,15 +24160,15 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_5FACTORY</BuildType>
+					<BuildType>BUILD_MANUFACTURING_COMPLEX</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_3FACTORY</BuildType>
+					<BuildType>BUILD_FACTORY</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_3FACTORY_2</BuildType>
+					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -24188,7 +24188,11 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HYDRO_PLANT</BuildType>
+					<BuildType>BUILD_HYDRO_DAM</BuildType>
+					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
+				</BuildWorkerSpeedModifierType>
+				<BuildWorkerSpeedModifierType>
+					<BuildType>BUILD_SALT_GATHERER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -24196,15 +24200,11 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SALT_GATHERER2</BuildType>
-					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_QUARRY</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WELL</BuildType>
+					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -24220,7 +24220,7 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MODERNWINDMILL</BuildType>
+					<BuildType>BUILD_MODERN_WINDMILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -24228,7 +24228,7 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GEOTHERMAL_BOREHOLE</BuildType>
+					<BuildType>BUILD_GEOTHERMAL_FACTORY</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -24240,7 +24240,7 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WINDMILL_SEA</BuildType>
+					<BuildType>BUILD_SEA_MILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -24941,19 +24941,19 @@
 			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PINE_GATHERER</BuildType>
+					<BuildType>BUILD_WOOD_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_LUMBER_JACK</BuildType>
+					<BuildType>BUILD_LUMBERJACK</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_ROCK_GATHERER</BuildType>
+					<BuildType>BUILD_STONE_TOOLS_WORKSHOP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_ROCK_GATHERER_2</BuildType>
+					<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -24961,11 +24961,11 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_TAR_GATHERER</BuildType>
+					<BuildType>BUILD_TAR_GATHERER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_TAR_GATHERER2</BuildType>
+					<BuildType>BUILD_TAR_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -24981,11 +24981,11 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SALT_GATHERER</BuildType>
+					<BuildType>BUILD_SALT_GATHERER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SALT_GATHERER2</BuildType>
+					<BuildType>BUILD_SALT_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -25532,15 +25532,15 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_5FACTORY</BuildType>
+					<BuildType>BUILD_MANUFACTURING_COMPLEX</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_3FACTORY</BuildType>
+					<BuildType>BUILD_FACTORY</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_3FACTORY_2</BuildType>
+					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -25552,11 +25552,11 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HYDRO_PLANT</BuildType>
+					<BuildType>BUILD_HYDRO_DAM</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WELL</BuildType>
+					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -25568,7 +25568,7 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MODERNWINDMILL</BuildType>
+					<BuildType>BUILD_MODERN_WINDMILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -25911,11 +25911,11 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GEOTHERMAL_BOREHOLE</BuildType>
+					<BuildType>BUILD_GEOTHERMAL_FACTORY</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WINDMILL_SEA</BuildType>
+					<BuildType>BUILD_SEA_MILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -26579,19 +26579,19 @@
 			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PINE_GATHERER</BuildType>
+					<BuildType>BUILD_WOOD_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_LUMBER_JACK</BuildType>
+					<BuildType>BUILD_LUMBERJACK</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_ROCK_GATHERER</BuildType>
+					<BuildType>BUILD_STONE_TOOLS_WORKSHOP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_ROCK_GATHERER_2</BuildType>
+					<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -26599,11 +26599,11 @@
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_TAR_GATHERER</BuildType>
+					<BuildType>BUILD_TAR_GATHERER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_TAR_GATHERER2</BuildType>
+					<BuildType>BUILD_TAR_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -26623,15 +26623,15 @@
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_5FACTORY</BuildType>
+					<BuildType>BUILD_MANUFACTURING_COMPLEX</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_3FACTORY</BuildType>
+					<BuildType>BUILD_FACTORY</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_3FACTORY_2</BuildType>
+					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -26651,7 +26651,11 @@
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HYDRO_PLANT</BuildType>
+					<BuildType>BUILD_HYDRO_DAM</BuildType>
+					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
+				</BuildWorkerSpeedModifierType>
+				<BuildWorkerSpeedModifierType>
+					<BuildType>BUILD_SALT_GATHERER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -26659,15 +26663,11 @@
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SALT_GATHERER2</BuildType>
-					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_QUARRY</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WELL</BuildType>
+					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -26683,7 +26683,7 @@
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MODERNWINDMILL</BuildType>
+					<BuildType>BUILD_MODERN_WINDMILL</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -26691,7 +26691,7 @@
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GEOTHERMAL_BOREHOLE</BuildType>
+					<BuildType>BUILD_GEOTHERMAL_FACTORY</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -26703,7 +26703,7 @@
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WINDMILL_SEA</BuildType>
+					<BuildType>BUILD_SEA_MILL</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -27405,19 +27405,19 @@
 			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PINE_GATHERER</BuildType>
+					<BuildType>BUILD_WOOD_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_LUMBER_JACK</BuildType>
+					<BuildType>BUILD_LUMBERJACK</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_ROCK_GATHERER</BuildType>
+					<BuildType>BUILD_STONE_TOOLS_WORKSHOP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_ROCK_GATHERER_2</BuildType>
+					<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -27425,11 +27425,11 @@
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_TAR_GATHERER</BuildType>
+					<BuildType>BUILD_TAR_GATHERER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_TAR_GATHERER2</BuildType>
+					<BuildType>BUILD_TAR_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -27445,11 +27445,11 @@
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SALT_GATHERER</BuildType>
+					<BuildType>BUILD_SALT_GATHERER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SALT_GATHERER2</BuildType>
+					<BuildType>BUILD_SALT_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -27990,15 +27990,15 @@
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_5FACTORY</BuildType>
+					<BuildType>BUILD_MANUFACTURING_COMPLEX</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_3FACTORY</BuildType>
+					<BuildType>BUILD_FACTORY</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_3FACTORY_2</BuildType>
+					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -28010,11 +28010,11 @@
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HYDRO_PLANT</BuildType>
+					<BuildType>BUILD_HYDRO_DAM</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WELL</BuildType>
+					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -28026,7 +28026,7 @@
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MODERNWINDMILL</BuildType>
+					<BuildType>BUILD_MODERN_WINDMILL</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -28369,11 +28369,11 @@
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GEOTHERMAL_BOREHOLE</BuildType>
+					<BuildType>BUILD_GEOTHERMAL_FACTORY</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WINDMILL_SEA</BuildType>
+					<BuildType>BUILD_SEA_MILL</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -29005,27 +29005,27 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SUBURB</BuildType>
+					<BuildType>BUILD_SUBURBS</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MODERNWINDMILL</BuildType>
+					<BuildType>BUILD_MODERN_WINDMILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HYDRO_PLANT</BuildType>
+					<BuildType>BUILD_HYDRO_DAM</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_EXPLORETEMPLE</BuildType>
+					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
+					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WINDMILL_SEA</BuildType>
+					<BuildType>BUILD_SEA_MILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -29045,19 +29045,19 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT1</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT2</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT3</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT4</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
@@ -29572,27 +29572,27 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SUBURB</BuildType>
+					<BuildType>BUILD_SUBURBS</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MODERNWINDMILL</BuildType>
+					<BuildType>BUILD_MODERN_WINDMILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HYDRO_PLANT</BuildType>
+					<BuildType>BUILD_HYDRO_DAM</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_EXPLORETEMPLE</BuildType>
+					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
+					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WINDMILL_SEA</BuildType>
+					<BuildType>BUILD_SEA_MILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -29839,19 +29839,19 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT1</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT2</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT3</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT4</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
@@ -30279,27 +30279,27 @@
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SUBURB</BuildType>
+					<BuildType>BUILD_SUBURBS</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MODERNWINDMILL</BuildType>
+					<BuildType>BUILD_MODERN_WINDMILL</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HYDRO_PLANT</BuildType>
+					<BuildType>BUILD_HYDRO_DAM</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_EXPLORETEMPLE</BuildType>
+					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
+					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WINDMILL_SEA</BuildType>
+					<BuildType>BUILD_SEA_MILL</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -30319,19 +30319,19 @@
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT1</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT2</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT3</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT4</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
@@ -30833,27 +30833,27 @@
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SUBURB</BuildType>
+					<BuildType>BUILD_SUBURBS</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MODERNWINDMILL</BuildType>
+					<BuildType>BUILD_MODERN_WINDMILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HYDRO_PLANT</BuildType>
+					<BuildType>BUILD_HYDRO_DAM</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_EXPLORETEMPLE</BuildType>
+					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
+					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WINDMILL_SEA</BuildType>
+					<BuildType>BUILD_SEA_MILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -31088,19 +31088,19 @@
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT1</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT2</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT3</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT4</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
@@ -31418,11 +31418,11 @@
 			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAIN_GATHERER</BuildType>
+					<BuildType>BUILD_SEED_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAIN_GATHERER_2</BuildType>
+					<BuildType>BUILD_SEED_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -31438,27 +31438,27 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FRUIT_GATHERER</BuildType>
+					<BuildType>BUILD_FRUIT_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_GATHERER</BuildType>
+					<BuildType>BUILD_GRAPE_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_GATHERER</BuildType>
+					<BuildType>BUILD_PLANT_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FRUIT_PICKER</BuildType>
+					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_PICKER</BuildType>
+					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_PICKER</BuildType>
+					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -31466,7 +31466,7 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MUSHROOM_GATHERER_0</BuildType>
+					<BuildType>BUILD_MUSHROOM_GATHERER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -31474,19 +31474,19 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT1</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT2</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT3</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT4</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -31494,7 +31494,7 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FARMSCRAPER</BuildType>
+					<BuildType>BUILD_VERTICAL_FARM</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
@@ -31983,11 +31983,11 @@
 			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAIN_GATHERER</BuildType>
+					<BuildType>BUILD_SEED_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAIN_GATHERER_2</BuildType>
+					<BuildType>BUILD_SEED_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -32003,27 +32003,27 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FRUIT_GATHERER</BuildType>
+					<BuildType>BUILD_FRUIT_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_GATHERER</BuildType>
+					<BuildType>BUILD_GRAPE_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_GATHERER</BuildType>
+					<BuildType>BUILD_PLANT_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FRUIT_PICKER</BuildType>
+					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_PICKER</BuildType>
+					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_PICKER</BuildType>
+					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -32031,7 +32031,7 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MUSHROOM_GATHERER_0</BuildType>
+					<BuildType>BUILD_MUSHROOM_GATHERER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -32039,19 +32039,19 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT1</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT2</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT3</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT4</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -32059,7 +32059,7 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FARMSCRAPER</BuildType>
+					<BuildType>BUILD_VERTICAL_FARM</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
@@ -32482,11 +32482,11 @@
 			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAIN_GATHERER</BuildType>
+					<BuildType>BUILD_SEED_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAIN_GATHERER_2</BuildType>
+					<BuildType>BUILD_SEED_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -32502,27 +32502,27 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FRUIT_GATHERER</BuildType>
+					<BuildType>BUILD_FRUIT_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_GATHERER</BuildType>
+					<BuildType>BUILD_GRAPE_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_GATHERER</BuildType>
+					<BuildType>BUILD_PLANT_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FRUIT_PICKER</BuildType>
+					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_PICKER</BuildType>
+					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_PICKER</BuildType>
+					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -32530,7 +32530,7 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MUSHROOM_GATHERER_0</BuildType>
+					<BuildType>BUILD_MUSHROOM_GATHERER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -32538,19 +32538,19 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT1</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT2</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT3</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT4</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -32558,7 +32558,7 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FARMSCRAPER</BuildType>
+					<BuildType>BUILD_VERTICAL_FARM</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
@@ -32930,11 +32930,11 @@
 			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAIN_GATHERER</BuildType>
+					<BuildType>BUILD_SEED_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAIN_GATHERER_2</BuildType>
+					<BuildType>BUILD_SEED_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -32950,27 +32950,27 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FRUIT_GATHERER</BuildType>
+					<BuildType>BUILD_FRUIT_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_GATHERER</BuildType>
+					<BuildType>BUILD_GRAPE_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_GATHERER</BuildType>
+					<BuildType>BUILD_PLANT_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FRUIT_PICKER</BuildType>
+					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_PICKER</BuildType>
+					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_PICKER</BuildType>
+					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -32978,7 +32978,7 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MUSHROOM_GATHERER_0</BuildType>
+					<BuildType>BUILD_MUSHROOM_GATHERER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -32986,19 +32986,19 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT1</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT2</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT3</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT4</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -33006,7 +33006,7 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FARMSCRAPER</BuildType>
+					<BuildType>BUILD_VERTICAL_FARM</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
@@ -33390,11 +33390,11 @@
 			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAIN_GATHERER</BuildType>
+					<BuildType>BUILD_SEED_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAIN_GATHERER_2</BuildType>
+					<BuildType>BUILD_SEED_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -33410,27 +33410,27 @@
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FRUIT_GATHERER</BuildType>
+					<BuildType>BUILD_FRUIT_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_GATHERER</BuildType>
+					<BuildType>BUILD_GRAPE_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_GATHERER</BuildType>
+					<BuildType>BUILD_PLANT_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FRUIT_PICKER</BuildType>
+					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_PICKER</BuildType>
+					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_PICKER</BuildType>
+					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -33438,7 +33438,7 @@
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MUSHROOM_GATHERER_0</BuildType>
+					<BuildType>BUILD_MUSHROOM_GATHERER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -33446,19 +33446,19 @@
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT1</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT2</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT3</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT4</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -33466,7 +33466,7 @@
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FARMSCRAPER</BuildType>
+					<BuildType>BUILD_VERTICAL_FARM</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
@@ -33929,11 +33929,11 @@
 			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAIN_GATHERER</BuildType>
+					<BuildType>BUILD_SEED_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAIN_GATHERER_2</BuildType>
+					<BuildType>BUILD_SEED_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -33949,27 +33949,27 @@
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FRUIT_GATHERER</BuildType>
+					<BuildType>BUILD_FRUIT_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_GATHERER</BuildType>
+					<BuildType>BUILD_GRAPE_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_GATHERER</BuildType>
+					<BuildType>BUILD_PLANT_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FRUIT_PICKER</BuildType>
+					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_PICKER</BuildType>
+					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_PICKER</BuildType>
+					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -33977,7 +33977,7 @@
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MUSHROOM_GATHERER_0</BuildType>
+					<BuildType>BUILD_MUSHROOM_GATHERER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -33985,19 +33985,19 @@
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT1</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT2</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT3</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT4</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -34005,7 +34005,7 @@
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FARMSCRAPER</BuildType>
+					<BuildType>BUILD_VERTICAL_FARM</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
@@ -34397,11 +34397,11 @@
 			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAIN_GATHERER</BuildType>
+					<BuildType>BUILD_SEED_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAIN_GATHERER_2</BuildType>
+					<BuildType>BUILD_SEED_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -34417,27 +34417,27 @@
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FRUIT_GATHERER</BuildType>
+					<BuildType>BUILD_FRUIT_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_GATHERER</BuildType>
+					<BuildType>BUILD_GRAPE_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_GATHERER</BuildType>
+					<BuildType>BUILD_PLANT_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FRUIT_PICKER</BuildType>
+					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_PICKER</BuildType>
+					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_PICKER</BuildType>
+					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -34445,7 +34445,7 @@
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MUSHROOM_GATHERER_0</BuildType>
+					<BuildType>BUILD_MUSHROOM_GATHERER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -34453,19 +34453,19 @@
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT1</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT2</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT3</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT4</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -34473,7 +34473,7 @@
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FARMSCRAPER</BuildType>
+					<BuildType>BUILD_VERTICAL_FARM</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
@@ -34822,11 +34822,11 @@
 			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAIN_GATHERER</BuildType>
+					<BuildType>BUILD_SEED_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAIN_GATHERER_2</BuildType>
+					<BuildType>BUILD_SEED_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -34842,27 +34842,27 @@
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FRUIT_GATHERER</BuildType>
+					<BuildType>BUILD_FRUIT_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_GATHERER</BuildType>
+					<BuildType>BUILD_GRAPE_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_GATHERER</BuildType>
+					<BuildType>BUILD_PLANT_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FRUIT_PICKER</BuildType>
+					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_PICKER</BuildType>
+					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_PICKER</BuildType>
+					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -34870,7 +34870,7 @@
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MUSHROOM_GATHERER_0</BuildType>
+					<BuildType>BUILD_MUSHROOM_GATHERER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -34878,19 +34878,19 @@
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT1</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT2</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT3</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HABITAT4</BuildType>
+					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -34898,7 +34898,7 @@
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FARMSCRAPER</BuildType>
+					<BuildType>BUILD_VERTICAL_FARM</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
@@ -46451,11 +46451,11 @@
 			</BuildingProductionModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
+					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_EXPLORETEMPLE</BuildType>
+					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
@@ -47390,11 +47390,11 @@
 			</BuildingProductionModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
+					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_EXPLORETEMPLE</BuildType>
+					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
@@ -47802,11 +47802,11 @@
 			</BuildingProductionModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
+					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_EXPLORETEMPLE</BuildType>
+					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
@@ -48423,11 +48423,11 @@
 			</BuildingProductionModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
+					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_EXPLORETEMPLE</BuildType>
+					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
@@ -49333,11 +49333,11 @@
 			</BuildingProductionModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
+					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_EXPLORETEMPLE</BuildType>
+					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
@@ -49714,11 +49714,11 @@
 			</BuildingProductionModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
+					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_EXPLORETEMPLE</BuildType>
+					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
@@ -52572,11 +52572,11 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PAVED</BuildType>
+					<BuildType>BUILD_PAVED_ROAD</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MODERN_ROAD</BuildType>
+					<BuildType>BUILD_HIGHWAY</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -52584,11 +52584,11 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_RAILROAD_ELECTRIC</BuildType>
+					<BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAVTUBE</BuildType>
+					<BuildType>BUILD_MAGLEV</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -52713,7 +52713,7 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PAVED</BuildType>
+					<BuildType>BUILD_PAVED_ROAD</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
@@ -52818,7 +52818,7 @@
 			</FreePromotionUnitCombatTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MODERN_ROAD</BuildType>
+					<BuildType>BUILD_HIGHWAY</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -52826,7 +52826,7 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_RAILROAD_ELECTRIC</BuildType>
+					<BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -52935,7 +52935,7 @@
 			</FreePromotionUnitCombatTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAVTUBE</BuildType>
+					<BuildType>BUILD_MAGLEV</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -53052,11 +53052,11 @@
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PAVED</BuildType>
+					<BuildType>BUILD_PAVED_ROAD</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MODERN_ROAD</BuildType>
+					<BuildType>BUILD_HIGHWAY</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -53064,11 +53064,11 @@
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_RAILROAD_ELECTRIC</BuildType>
+					<BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAVTUBE</BuildType>
+					<BuildType>BUILD_MAGLEV</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -53197,7 +53197,7 @@
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PAVED</BuildType>
+					<BuildType>BUILD_PAVED_ROAD</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
@@ -53308,7 +53308,7 @@
 			</FreePromotionUnitCombatTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MODERN_ROAD</BuildType>
+					<BuildType>BUILD_HIGHWAY</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -53316,7 +53316,7 @@
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_RAILROAD_ELECTRIC</BuildType>
+					<BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -53425,7 +53425,7 @@
 			</FreePromotionUnitCombatTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAVTUBE</BuildType>
+					<BuildType>BUILD_MAGLEV</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -72409,15 +72409,15 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MAKE_JUNGLE</BuildType>
+					<BuildType>BUILD_PLANT_JUNGLE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_FOREST</BuildType>
+					<BuildType>BUILD_YOUNG_FOREST</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
+					<BuildType>BUILD_PLANT_BAMBOO_GROVE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -72489,7 +72489,7 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SCRUB_FALLOUT_RAPIDLY</BuildType>
+					<BuildType>BUILD_CLEAR_FALLOUT_FAST</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -72716,15 +72716,15 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MAKE_JUNGLE</BuildType>
+					<BuildType>BUILD_PLANT_JUNGLE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_FOREST</BuildType>
+					<BuildType>BUILD_YOUNG_FOREST</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
+					<BuildType>BUILD_PLANT_BAMBOO_GROVE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -72796,7 +72796,7 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SCRUB_FALLOUT_RAPIDLY</BuildType>
+					<BuildType>BUILD_CLEAR_FALLOUT_FAST</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -73024,15 +73024,15 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MAKE_JUNGLE</BuildType>
+					<BuildType>BUILD_PLANT_JUNGLE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_FOREST</BuildType>
+					<BuildType>BUILD_YOUNG_FOREST</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
+					<BuildType>BUILD_PLANT_BAMBOO_GROVE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -73104,7 +73104,7 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SCRUB_FALLOUT_RAPIDLY</BuildType>
+					<BuildType>BUILD_CLEAR_FALLOUT_FAST</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -73250,15 +73250,15 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MAKE_JUNGLE</BuildType>
+					<BuildType>BUILD_PLANT_JUNGLE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_FOREST</BuildType>
+					<BuildType>BUILD_YOUNG_FOREST</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
+					<BuildType>BUILD_PLANT_BAMBOO_GROVE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -73330,7 +73330,7 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SCRUB_FALLOUT_RAPIDLY</BuildType>
+					<BuildType>BUILD_CLEAR_FALLOUT_FAST</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>

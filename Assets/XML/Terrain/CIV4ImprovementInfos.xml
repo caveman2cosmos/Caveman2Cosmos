@@ -6034,7 +6034,7 @@
 		<!-- Plant Jungle -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_PLANT_JUNGLE</Type>
-			<Description>TXT_KEY_BUILD_MAKE_JUNGLE</Description>
+			<Description>TXT_KEY_BUILD_PLANT_JUNGLE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_JUNGLE</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -6166,7 +6166,7 @@
 		<!-- Plant Bamboo -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_PLANT_BAMBOO_GROVE</Type>
-			<Description>TXT_KEY_BUILD_PLANT_BAMBOO</Description>
+			<Description>TXT_KEY_BUILD_PLANT_BAMBOO_GROVE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_BAMBOO_GROVE</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>

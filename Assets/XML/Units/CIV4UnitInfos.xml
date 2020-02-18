@@ -486,19 +486,19 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GRAIN_GATHERER</BuildType>
+					<BuildType>BUILD_SEED_CAMP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_ROCK_GATHERER</BuildType>
+					<BuildType>BUILD_STONE_TOOLS_WORKSHOP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PINE_GATHERER</BuildType>
+					<BuildType>BUILD_WOOD_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SALT_GATHERER</BuildType>
+					<BuildType>BUILD_SALT_GATHERER_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -518,39 +518,39 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_CAMP</BuildType>
+					<BuildType>BUILD_HUNTING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FRUIT_GATHERER</BuildType>
+					<BuildType>BUILD_FRUIT_GATHERING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FRUIT_PICKER</BuildType>
+					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GRAPE_GATHERER</BuildType>
+					<BuildType>BUILD_GRAPE_GATHERING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GRAPE_PICKER</BuildType>
+					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_GATHERER</BuildType>
+					<BuildType>BUILD_PLANT_GATHERING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_PICKER</BuildType>
+					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MUSHROOM_GATHERER_0</BuildType>
+					<BuildType>BUILD_MUSHROOM_GATHERER_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_JUNGLE_CAMP_GATHERER</BuildType>
+					<BuildType>BUILD_JUNGLE_CAMP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -558,7 +558,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_DESERT_CAMP_GATHERER</BuildType>
+					<BuildType>BUILD_DESERT_CAMP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -566,7 +566,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WETLANDS_CAMP_GATHERER</BuildType>
+					<BuildType>BUILD_WETLANDS_CAMP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -574,23 +574,23 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TAR_GATHERER</BuildType>
+					<BuildType>BUILD_TAR_GATHERER_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WOODEN_TOWER_G</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE_G</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_ABATIS_G</BuildType>
+					<BuildType>BUILD_ABATIS_THORN_HEDGE_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PALISADE_G</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -662,11 +662,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PAVED</BuildType>
+					<BuildType>BUILD_PAVED_ROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERN_ROAD</BuildType>
+					<BuildType>BUILD_HIGHWAY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -674,7 +674,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GRAIN_GATHERER_2</BuildType>
+					<BuildType>BUILD_SEED_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -682,11 +682,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_ROCK_GATHERER_2</BuildType>
+					<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SALT_GATHERER2</BuildType>
+					<BuildType>BUILD_SALT_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -714,7 +714,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_FOREST</BuildType>
+					<BuildType>BUILD_YOUNG_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -726,15 +726,15 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FRUIT_PICKER</BuildType>
+					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GRAPE_PICKER</BuildType>
+					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_PICKER</BuildType>
+					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -766,7 +766,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_CAMP</BuildType>
+					<BuildType>BUILD_HUNTING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -774,7 +774,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WELL</BuildType>
+					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -794,7 +794,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SUBURB</BuildType>
+					<BuildType>BUILD_SUBURBS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -802,7 +802,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -814,11 +814,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_SWAMP</BuildType>
+					<BuildType>BUILD_DRAIN_SWAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORM</BuildType>
+					<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -834,11 +834,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_LUMBER_JACK</BuildType>
+					<BuildType>BUILD_LUMBERJACK</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
+					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -854,7 +854,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TAR_GATHERER2</BuildType>
+					<BuildType>BUILD_TAR_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -862,7 +862,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WOODEN_TOWER</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -870,11 +870,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE_CACHE</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PALISADE</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -985,11 +985,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PAVED</BuildType>
+					<BuildType>BUILD_PAVED_ROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERN_ROAD</BuildType>
+					<BuildType>BUILD_HIGHWAY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -997,7 +997,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_RAILROAD_ELECTRIC</BuildType>
+					<BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1029,7 +1029,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_FOREST</BuildType>
+					<BuildType>BUILD_YOUNG_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1049,7 +1049,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SALT_GATHERER2</BuildType>
+					<BuildType>BUILD_SALT_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1065,7 +1065,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_CAMP</BuildType>
+					<BuildType>BUILD_HUNTING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1073,7 +1073,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WELL</BuildType>
+					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1097,7 +1097,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SUBURB</BuildType>
+					<BuildType>BUILD_SUBURBS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1113,11 +1113,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_SWAMP</BuildType>
+					<BuildType>BUILD_DRAIN_SWAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORM</BuildType>
+					<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1129,11 +1129,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERNWINDMILL</BuildType>
+					<BuildType>BUILD_MODERN_WINDMILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1141,11 +1141,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_EXPLORETEMPLE</BuildType>
+					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_3FACTORY</BuildType>
+					<BuildType>BUILD_FACTORY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1161,23 +1161,23 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_LUMBER_JACK</BuildType>
+					<BuildType>BUILD_LUMBERJACK</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GRAPE_PICKER</BuildType>
+					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FRUIT_PICKER</BuildType>
+					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_PICKER</BuildType>
+					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
+					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1201,7 +1201,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TAR_GATHERER2</BuildType>
+					<BuildType>BUILD_TAR_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1209,15 +1209,15 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WOODEN_TOWER</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE_CACHE</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PALISADE</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -1299,11 +1299,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PAVED</BuildType>
+					<BuildType>BUILD_PAVED_ROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERN_ROAD</BuildType>
+					<BuildType>BUILD_HIGHWAY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1311,7 +1311,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_RAILROAD_ELECTRIC</BuildType>
+					<BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1343,7 +1343,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_FOREST</BuildType>
+					<BuildType>BUILD_YOUNG_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1363,7 +1363,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SALT_GATHERER2</BuildType>
+					<BuildType>BUILD_SALT_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1379,7 +1379,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_CAMP</BuildType>
+					<BuildType>BUILD_HUNTING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1387,7 +1387,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WELL</BuildType>
+					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1411,7 +1411,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SUBURB</BuildType>
+					<BuildType>BUILD_SUBURBS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1427,11 +1427,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_SWAMP</BuildType>
+					<BuildType>BUILD_DRAIN_SWAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORM</BuildType>
+					<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1443,11 +1443,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERNWINDMILL</BuildType>
+					<BuildType>BUILD_MODERN_WINDMILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1455,11 +1455,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_EXPLORETEMPLE</BuildType>
+					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_3FACTORY</BuildType>
+					<BuildType>BUILD_FACTORY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1475,23 +1475,23 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_LUMBER_JACK</BuildType>
+					<BuildType>BUILD_LUMBERJACK</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GRAPE_PICKER</BuildType>
+					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FRUIT_PICKER</BuildType>
+					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_PICKER</BuildType>
+					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
+					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1515,7 +1515,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TAR_GATHERER2</BuildType>
+					<BuildType>BUILD_TAR_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1523,15 +1523,15 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WOODEN_TOWER</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE_CACHE</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PALISADE</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -1611,7 +1611,7 @@ Base XP gained when defending
 			</UnitAIs>
 			<Builds>
 				<Build>
-					<BuildType>BUILD_ROCK_GATHERER_2</BuildType>
+					<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1627,11 +1627,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PAVED</BuildType>
+					<BuildType>BUILD_PAVED_ROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERN_ROAD</BuildType>
+					<BuildType>BUILD_HIGHWAY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1639,7 +1639,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_RAILROAD_ELECTRIC</BuildType>
+					<BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1671,7 +1671,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_FOREST</BuildType>
+					<BuildType>BUILD_YOUNG_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1691,7 +1691,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SALT_GATHERER2</BuildType>
+					<BuildType>BUILD_SALT_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1707,7 +1707,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_CAMP</BuildType>
+					<BuildType>BUILD_HUNTING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1715,7 +1715,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WELL</BuildType>
+					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1739,7 +1739,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SUBURB</BuildType>
+					<BuildType>BUILD_SUBURBS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1755,11 +1755,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_SWAMP</BuildType>
+					<BuildType>BUILD_DRAIN_SWAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORM</BuildType>
+					<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1771,11 +1771,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERNWINDMILL</BuildType>
+					<BuildType>BUILD_MODERN_WINDMILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1783,11 +1783,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_EXPLORETEMPLE</BuildType>
+					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_3FACTORY</BuildType>
+					<BuildType>BUILD_FACTORY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1803,23 +1803,23 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_LUMBER_JACK</BuildType>
+					<BuildType>BUILD_LUMBERJACK</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GRAPE_PICKER</BuildType>
+					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FRUIT_PICKER</BuildType>
+					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_PICKER</BuildType>
+					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
+					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1843,7 +1843,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TAR_GATHERER2</BuildType>
+					<BuildType>BUILD_TAR_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1851,15 +1851,15 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WOODEN_TOWER</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE_CACHE</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PALISADE</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -1952,11 +1952,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PAVED</BuildType>
+					<BuildType>BUILD_PAVED_ROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERN_ROAD</BuildType>
+					<BuildType>BUILD_HIGHWAY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1964,7 +1964,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_RAILROAD_ELECTRIC</BuildType>
+					<BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1996,7 +1996,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_FOREST</BuildType>
+					<BuildType>BUILD_YOUNG_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2016,7 +2016,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SALT_GATHERER2</BuildType>
+					<BuildType>BUILD_SALT_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2032,7 +2032,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_CAMP</BuildType>
+					<BuildType>BUILD_HUNTING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2040,7 +2040,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WELL</BuildType>
+					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2064,7 +2064,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SUBURB</BuildType>
+					<BuildType>BUILD_SUBURBS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2080,11 +2080,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_SWAMP</BuildType>
+					<BuildType>BUILD_DRAIN_SWAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORM</BuildType>
+					<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2096,11 +2096,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERNWINDMILL</BuildType>
+					<BuildType>BUILD_MODERN_WINDMILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2108,11 +2108,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_EXPLORETEMPLE</BuildType>
+					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_3FACTORY</BuildType>
+					<BuildType>BUILD_FACTORY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2128,23 +2128,23 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_LUMBER_JACK</BuildType>
+					<BuildType>BUILD_LUMBERJACK</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GRAPE_PICKER</BuildType>
+					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FRUIT_PICKER</BuildType>
+					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_PICKER</BuildType>
+					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
+					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2168,7 +2168,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TAR_GATHERER2</BuildType>
+					<BuildType>BUILD_TAR_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2176,15 +2176,15 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WOODEN_TOWER</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE_CACHE</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PALISADE</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -2254,7 +2254,7 @@ Base XP gained when defending
 			</UnitAIs>
 			<Builds>
 				<Build>
-					<BuildType>BUILD_ROCK_GATHERER_2</BuildType>
+					<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2270,11 +2270,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PAVED</BuildType>
+					<BuildType>BUILD_PAVED_ROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERN_ROAD</BuildType>
+					<BuildType>BUILD_HIGHWAY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2282,7 +2282,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_RAILROAD_ELECTRIC</BuildType>
+					<BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2314,7 +2314,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_FOREST</BuildType>
+					<BuildType>BUILD_YOUNG_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2334,7 +2334,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SALT_GATHERER2</BuildType>
+					<BuildType>BUILD_SALT_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2350,7 +2350,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_CAMP</BuildType>
+					<BuildType>BUILD_HUNTING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2358,7 +2358,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WELL</BuildType>
+					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2382,7 +2382,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SUBURB</BuildType>
+					<BuildType>BUILD_SUBURBS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2398,11 +2398,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_SWAMP</BuildType>
+					<BuildType>BUILD_DRAIN_SWAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORM</BuildType>
+					<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2414,11 +2414,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERNWINDMILL</BuildType>
+					<BuildType>BUILD_MODERN_WINDMILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2426,11 +2426,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_EXPLORETEMPLE</BuildType>
+					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_3FACTORY</BuildType>
+					<BuildType>BUILD_FACTORY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2446,23 +2446,23 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_LUMBER_JACK</BuildType>
+					<BuildType>BUILD_LUMBERJACK</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GRAPE_PICKER</BuildType>
+					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FRUIT_PICKER</BuildType>
+					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_PICKER</BuildType>
+					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
+					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2486,7 +2486,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TAR_GATHERER2</BuildType>
+					<BuildType>BUILD_TAR_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2494,15 +2494,15 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WOODEN_TOWER</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE_CACHE</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PALISADE</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -2594,11 +2594,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PAVED</BuildType>
+					<BuildType>BUILD_PAVED_ROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERN_ROAD</BuildType>
+					<BuildType>BUILD_HIGHWAY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2606,7 +2606,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_RAILROAD_ELECTRIC</BuildType>
+					<BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2638,7 +2638,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_FOREST</BuildType>
+					<BuildType>BUILD_YOUNG_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2658,7 +2658,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SALT_GATHERER2</BuildType>
+					<BuildType>BUILD_SALT_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2674,7 +2674,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_CAMP</BuildType>
+					<BuildType>BUILD_HUNTING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2682,7 +2682,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WELL</BuildType>
+					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2706,7 +2706,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SUBURB</BuildType>
+					<BuildType>BUILD_SUBURBS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2722,11 +2722,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_SWAMP</BuildType>
+					<BuildType>BUILD_DRAIN_SWAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORM</BuildType>
+					<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2738,11 +2738,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERNWINDMILL</BuildType>
+					<BuildType>BUILD_MODERN_WINDMILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2750,11 +2750,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_EXPLORETEMPLE</BuildType>
+					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_3FACTORY</BuildType>
+					<BuildType>BUILD_FACTORY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2770,23 +2770,23 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_LUMBER_JACK</BuildType>
+					<BuildType>BUILD_LUMBERJACK</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GRAPE_PICKER</BuildType>
+					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FRUIT_PICKER</BuildType>
+					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_PICKER</BuildType>
+					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
+					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2806,7 +2806,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TAR_GATHERER2</BuildType>
+					<BuildType>BUILD_TAR_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2818,15 +2818,15 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WOODEN_TOWER</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE_CACHE</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PALISADE</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -2919,11 +2919,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PAVED</BuildType>
+					<BuildType>BUILD_PAVED_ROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERN_ROAD</BuildType>
+					<BuildType>BUILD_HIGHWAY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2931,11 +2931,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_RAILROAD_ELECTRIC</BuildType>
+					<BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GRAVTUBE</BuildType>
+					<BuildType>BUILD_MAGLEV</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2987,7 +2987,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SALT_GATHERER2</BuildType>
+					<BuildType>BUILD_SALT_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3003,7 +3003,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_CAMP</BuildType>
+					<BuildType>BUILD_HUNTING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3011,7 +3011,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WELL</BuildType>
+					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3035,7 +3035,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SUBURB</BuildType>
+					<BuildType>BUILD_SUBURBS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3047,11 +3047,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_SWAMP</BuildType>
+					<BuildType>BUILD_DRAIN_SWAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORM</BuildType>
+					<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3071,15 +3071,15 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FUTURE_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_CENTER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERNWINDMILL</BuildType>
+					<BuildType>BUILD_MODERN_WINDMILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3087,15 +3087,15 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_EXPLORETEMPLE</BuildType>
+					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SAFARI</BuildType>
+					<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GEOTHERMAL_BOREHOLE</BuildType>
+					<BuildType>BUILD_GEOTHERMAL_FACTORY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3103,7 +3103,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_3FACTORY</BuildType>
+					<BuildType>BUILD_FACTORY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3123,15 +3123,15 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MAKE_JUNGLE</BuildType>
+					<BuildType>BUILD_PLANT_JUNGLE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_FOREST</BuildType>
+					<BuildType>BUILD_YOUNG_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
+					<BuildType>BUILD_PLANT_BAMBOO_GROVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3179,11 +3179,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_LUMBER_JACK</BuildType>
+					<BuildType>BUILD_LUMBERJACK</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
+					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3207,7 +3207,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TAR_GATHERER2</BuildType>
+					<BuildType>BUILD_TAR_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3215,11 +3215,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_HYDRO_PLANT</BuildType>
+					<BuildType>BUILD_HYDRO_DAM</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_5FACTORY</BuildType>
+					<BuildType>BUILD_MANUFACTURING_COMPLEX</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -3299,11 +3299,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PAVED</BuildType>
+					<BuildType>BUILD_PAVED_ROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERN_ROAD</BuildType>
+					<BuildType>BUILD_HIGHWAY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3311,11 +3311,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_RAILROAD_ELECTRIC</BuildType>
+					<BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GRAVTUBE</BuildType>
+					<BuildType>BUILD_MAGLEV</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3367,7 +3367,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SALT_GATHERER2</BuildType>
+					<BuildType>BUILD_SALT_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3383,7 +3383,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_CAMP</BuildType>
+					<BuildType>BUILD_HUNTING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3391,7 +3391,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WELL</BuildType>
+					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3415,7 +3415,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SUBURB</BuildType>
+					<BuildType>BUILD_SUBURBS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3427,11 +3427,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_SWAMP</BuildType>
+					<BuildType>BUILD_DRAIN_SWAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORM</BuildType>
+					<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3451,15 +3451,15 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FUTURE_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_CENTER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERNWINDMILL</BuildType>
+					<BuildType>BUILD_MODERN_WINDMILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3467,23 +3467,23 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_EXPLORETEMPLE</BuildType>
+					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SAFARI</BuildType>
+					<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GEOTHERMAL_BOREHOLE</BuildType>
+					<BuildType>BUILD_GEOTHERMAL_FACTORY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_3FACTORY</BuildType>
+					<BuildType>BUILD_FACTORY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_3FACTORY_2</BuildType>
+					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3503,15 +3503,15 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MAKE_JUNGLE</BuildType>
+					<BuildType>BUILD_PLANT_JUNGLE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_FOREST</BuildType>
+					<BuildType>BUILD_YOUNG_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
+					<BuildType>BUILD_PLANT_BAMBOO_GROVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3567,7 +3567,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
+					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3591,7 +3591,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TAR_GATHERER2</BuildType>
+					<BuildType>BUILD_TAR_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3599,16 +3599,16 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_HYDRO_PLANT</BuildType>
+					<BuildType>BUILD_HYDRO_DAM</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_5FACTORY</BuildType>
+					<BuildType>BUILD_MANUFACTURING_COMPLEX</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<!-- Pepper's routes are used as yield boosters in improvements. They are here so Pepper's module can be turned off. -->
 				<Build>
-					<BuildType>BUILD_HYPERLOOP</BuildType>
+					<BuildType>BUILD_VACTRAIN</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -3686,11 +3686,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PAVED</BuildType>
+					<BuildType>BUILD_PAVED_ROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERN_ROAD</BuildType>
+					<BuildType>BUILD_HIGHWAY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3698,11 +3698,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_RAILROAD_ELECTRIC</BuildType>
+					<BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GRAVTUBE</BuildType>
+					<BuildType>BUILD_MAGLEV</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3754,7 +3754,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SALT_GATHERER2</BuildType>
+					<BuildType>BUILD_SALT_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3770,7 +3770,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_CAMP</BuildType>
+					<BuildType>BUILD_HUNTING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3778,7 +3778,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WELL</BuildType>
+					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3802,7 +3802,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SUBURB</BuildType>
+					<BuildType>BUILD_SUBURBS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3814,15 +3814,15 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_SWAMP</BuildType>
+					<BuildType>BUILD_DRAIN_SWAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORM</BuildType>
+					<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SCRUB_FALLOUT_RAPIDLY</BuildType>
+					<BuildType>BUILD_CLEAR_FALLOUT_FAST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3838,15 +3838,15 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FUTURE_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_CENTER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERNWINDMILL</BuildType>
+					<BuildType>BUILD_MODERN_WINDMILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3854,23 +3854,23 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_EXPLORETEMPLE</BuildType>
+					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SAFARI</BuildType>
+					<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GEOTHERMAL_BOREHOLE</BuildType>
+					<BuildType>BUILD_GEOTHERMAL_FACTORY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_3FACTORY</BuildType>
+					<BuildType>BUILD_FACTORY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_3FACTORY_2</BuildType>
+					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3890,15 +3890,15 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MAKE_JUNGLE</BuildType>
+					<BuildType>BUILD_PLANT_JUNGLE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_FOREST</BuildType>
+					<BuildType>BUILD_YOUNG_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
+					<BuildType>BUILD_PLANT_BAMBOO_GROVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3950,7 +3950,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
+					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3978,7 +3978,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TAR_GATHERER2</BuildType>
+					<BuildType>BUILD_TAR_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3986,16 +3986,16 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_HYDRO_PLANT</BuildType>
+					<BuildType>BUILD_HYDRO_DAM</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_5FACTORY</BuildType>
+					<BuildType>BUILD_MANUFACTURING_COMPLEX</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<!-- Pepper's routes are used as yield boosters in improvements. They are here so Pepper's module can be turned off. -->
 				<Build>
-					<BuildType>BUILD_HYPERLOOP</BuildType>
+					<BuildType>BUILD_VACTRAIN</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
@@ -4069,11 +4069,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PAVED</BuildType>
+					<BuildType>BUILD_PAVED_ROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERN_ROAD</BuildType>
+					<BuildType>BUILD_HIGHWAY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -4081,11 +4081,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_RAILROAD_ELECTRIC</BuildType>
+					<BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GRAVTUBE</BuildType>
+					<BuildType>BUILD_MAGLEV</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -4137,7 +4137,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SALT_GATHERER2</BuildType>
+					<BuildType>BUILD_SALT_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -4149,7 +4149,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_CAMP</BuildType>
+					<BuildType>BUILD_HUNTING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -4157,7 +4157,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WELL</BuildType>
+					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -4181,7 +4181,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SUBURB</BuildType>
+					<BuildType>BUILD_SUBURBS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -4193,11 +4193,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_SWAMP</BuildType>
+					<BuildType>BUILD_DRAIN_SWAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORM</BuildType>
+					<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -4209,7 +4209,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SCRUB_FALLOUT_RAPIDLY</BuildType>
+					<BuildType>BUILD_CLEAR_FALLOUT_FAST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -4225,15 +4225,15 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FUTURE_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_CENTER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERNWINDMILL</BuildType>
+					<BuildType>BUILD_MODERN_WINDMILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -4241,23 +4241,23 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_EXPLORETEMPLE</BuildType>
+					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SAFARI</BuildType>
+					<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GEOTHERMAL_BOREHOLE</BuildType>
+					<BuildType>BUILD_GEOTHERMAL_FACTORY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_3FACTORY</BuildType>
+					<BuildType>BUILD_FACTORY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_3FACTORY_2</BuildType>
+					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -4277,15 +4277,15 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MAKE_JUNGLE</BuildType>
+					<BuildType>BUILD_PLANT_JUNGLE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_FOREST</BuildType>
+					<BuildType>BUILD_YOUNG_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
+					<BuildType>BUILD_PLANT_BAMBOO_GROVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -4337,7 +4337,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
+					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -4357,7 +4357,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FARMSCRAPER</BuildType>
+					<BuildType>BUILD_VERTICAL_FARM</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -4365,7 +4365,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TAR_GATHERER2</BuildType>
+					<BuildType>BUILD_TAR_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -4373,16 +4373,16 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_HYDRO_PLANT</BuildType>
+					<BuildType>BUILD_HYDRO_DAM</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_5FACTORY</BuildType>
+					<BuildType>BUILD_MANUFACTURING_COMPLEX</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<!-- Pepper's routes are used as yield boosters in improvements. They are here so Pepper's module can be turned off. -->
 				<Build>
-					<BuildType>BUILD_HYPERLOOP</BuildType>
+					<BuildType>BUILD_VACTRAIN</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
@@ -4457,11 +4457,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_SWAMP</BuildType>
+					<BuildType>BUILD_DRAIN_SWAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORM</BuildType>
+					<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -28316,7 +28316,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_HARVEST_KELP_2</BuildType>
+					<BuildType>BUILD_HARVEST_KELP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -28444,7 +28444,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_HARVEST_KELP_2</BuildType>
+					<BuildType>BUILD_HARVEST_KELP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -28599,7 +28599,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_HARVEST_KELP_2</BuildType>
+					<BuildType>BUILD_HARVEST_KELP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -28760,15 +28760,15 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SEA_FORT</BuildType>
+					<BuildType>BUILD_AQUATIC_FORCEFIELD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SEA_AIR_DEFENSE</BuildType>
+					<BuildType>BUILD_AQUATIC_ANTI_AIR_DEFENSE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BREAK_ICE</BuildType>
+					<BuildType>BUILD_BREAK_ICE_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -28796,7 +28796,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WINDMILL_SEA</BuildType>
+					<BuildType>BUILD_SEA_MILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -28891,15 +28891,15 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SEA_FORT</BuildType>
+					<BuildType>BUILD_AQUATIC_FORCEFIELD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SEA_AIR_DEFENSE</BuildType>
+					<BuildType>BUILD_AQUATIC_ANTI_AIR_DEFENSE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BREAK_ICE_2</BuildType>
+					<BuildType>BUILD_BREAK_ICE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -28927,7 +28927,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WINDMILL_SEA</BuildType>
+					<BuildType>BUILD_SEA_MILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -52977,19 +52977,19 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SAFARI</BuildType>
+					<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MAKE_JUNGLE</BuildType>
+					<BuildType>BUILD_PLANT_JUNGLE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_FOREST</BuildType>
+					<BuildType>BUILD_YOUNG_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
+					<BuildType>BUILD_PLANT_BAMBOO_GROVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -53127,19 +53127,19 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SAFARI</BuildType>
+					<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MAKE_JUNGLE</BuildType>
+					<BuildType>BUILD_PLANT_JUNGLE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_FOREST</BuildType>
+					<BuildType>BUILD_YOUNG_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
+					<BuildType>BUILD_PLANT_BAMBOO_GROVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -57721,19 +57721,19 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GRAIN_GATHERER</BuildType>
+					<BuildType>BUILD_SEED_CAMP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_ROCK_GATHERER</BuildType>
+					<BuildType>BUILD_STONE_TOOLS_WORKSHOP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PINE_GATHERER</BuildType>
+					<BuildType>BUILD_WOOD_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SALT_GATHERER</BuildType>
+					<BuildType>BUILD_SALT_GATHERER_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -57753,39 +57753,39 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_CAMP</BuildType>
+					<BuildType>BUILD_HUNTING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FRUIT_GATHERER</BuildType>
+					<BuildType>BUILD_FRUIT_GATHERING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FRUIT_PICKER</BuildType>
+					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GRAPE_GATHERER</BuildType>
+					<BuildType>BUILD_GRAPE_GATHERING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GRAPE_PICKER</BuildType>
+					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_GATHERER</BuildType>
+					<BuildType>BUILD_PLANT_GATHERING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_PICKER</BuildType>
+					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MUSHROOM_GATHERER_0</BuildType>
+					<BuildType>BUILD_MUSHROOM_GATHERER_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_JUNGLE_CAMP_GATHERER</BuildType>
+					<BuildType>BUILD_JUNGLE_CAMP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -57793,7 +57793,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_DESERT_CAMP_GATHERER</BuildType>
+					<BuildType>BUILD_DESERT_CAMP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -57801,7 +57801,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WETLANDS_CAMP_GATHERER</BuildType>
+					<BuildType>BUILD_WETLANDS_CAMP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -57809,23 +57809,23 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TAR_GATHERER</BuildType>
+					<BuildType>BUILD_TAR_GATHERER_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WOODEN_TOWER_G</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE_G</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_ABATIS_G</BuildType>
+					<BuildType>BUILD_ABATIS_THORN_HEDGE_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PALISADE_G</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -58917,7 +58917,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_HARVEST_KELP_2</BuildType>
+					<BuildType>BUILD_HARVEST_KELP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -68176,11 +68176,11 @@ iTradeMultiplier>3</iTradeMultiplier>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PAVED_SLAVE</BuildType>
+					<BuildType>BUILD_PAVED_ROAD_SLAVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERN_ROAD_SLAVE</BuildType>
+					<BuildType>BUILD_HIGHWAY_SLAVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -68192,7 +68192,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_ROCK_GATHERER</BuildType>
+					<BuildType>BUILD_STONE_TOOLS_WORKSHOP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -68244,7 +68244,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_CAMP_SLAVE</BuildType>
+					<BuildType>BUILD_HUNTING_CAMP_SLAVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -68252,7 +68252,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WELL_SLAVE</BuildType>
+					<BuildType>BUILD_HYDROCARBON_WELL_SLAVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -68276,7 +68276,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SUBURB_SLAVE</BuildType>
+					<BuildType>BUILD_SUBURBS_SLAVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -68288,15 +68288,15 @@ iTradeMultiplier>3</iTradeMultiplier>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_SWAMP_SLAVE</BuildType>
+					<BuildType>BUILD_DRAIN_SWAMP_SLAVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORM_SLAVE</BuildType>
+					<BuildType>BUILD_REMOVE_ROCK_FORMATION_SLAVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BUNKER_SLAVE</BuildType>
+					<BuildType>BUILD_COMMAND_BUNKER_SLAVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -68308,15 +68308,15 @@ iTradeMultiplier>3</iTradeMultiplier>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_LUMBER_JACK_SLAVE</BuildType>
+					<BuildType>BUILD_LUMBERJACK_SLAVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FRUIT_PICKER_SLAVE</BuildType>
+					<BuildType>BUILD_FRUIT_PICKING_CAMP_SLAVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_PICKER_SLAVE</BuildType>
+					<BuildType>BUILD_PLANT_PICKING_CAMP_SLAVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -68324,7 +68324,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FOSSIL_DIGSITE_SLAVE</BuildType>
+					<BuildType>BUILD_FOSSIL_DIG_SITE_SLAVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -69284,7 +69284,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_ROCK_GATHERER</BuildType>
+					<BuildType>BUILD_STONE_TOOLS_WORKSHOP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -69300,7 +69300,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_CAMP_SLAVE</BuildType>
+					<BuildType>BUILD_HUNTING_CAMP_SLAVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -69324,7 +69324,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SUBURB_SLAVE</BuildType>
+					<BuildType>BUILD_SUBURBS_SLAVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -69332,11 +69332,11 @@ iTradeMultiplier>3</iTradeMultiplier>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_SWAMP_SLAVE</BuildType>
+					<BuildType>BUILD_DRAIN_SWAMP_SLAVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORM_SLAVE</BuildType>
+					<BuildType>BUILD_REMOVE_ROCK_FORMATION_SLAVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -69348,15 +69348,15 @@ iTradeMultiplier>3</iTradeMultiplier>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_LUMBER_JACK_SLAVE</BuildType>
+					<BuildType>BUILD_LUMBERJACK_SLAVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FRUIT_PICKER_SLAVE</BuildType>
+					<BuildType>BUILD_FRUIT_PICKING_CAMP_SLAVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_PICKER_SLAVE</BuildType>
+					<BuildType>BUILD_PLANT_PICKING_CAMP_SLAVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>

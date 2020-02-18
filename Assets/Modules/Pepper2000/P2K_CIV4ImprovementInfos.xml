@@ -792,7 +792,7 @@
 		</ImprovementInfo>
         <ImprovementInfo>
 			<Type>IMPROVEMENT_PLACE_ASTEROID</Type>
-			<Description>TXT_KEY_BUILD_ASTEROID</Description>
+			<Description>TXT_KEY_BUILD_PLACE_ASTEROID</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLACE_ASTEROID</ArtDefineTag>
 			<FeatureChangeTypes>
@@ -825,7 +825,7 @@
 		</ImprovementInfo>
         <ImprovementInfo>
 			<Type>IMPROVEMENT_PLACE_GALAXY</Type>
-			<Description>TXT_KEY_BUILD_GALAXY</Description>
+			<Description>TXT_KEY_BUILD_PLACE_GALAXY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLACE_GALAXY</ArtDefineTag>
 			<FeatureChangeTypes>

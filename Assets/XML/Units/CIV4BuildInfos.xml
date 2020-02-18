@@ -12,8 +12,8 @@
 		<!-- Prehistoric -->
 		<!-- Seed Camp (Kill) -->
 		<BuildInfo>
-			<Type>BUILD_GRAIN_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_GRAIN_GATHERER_K</Description>
+			<Type>BUILD_SEED_CAMP_KILL</Type>
+			<Description>TXT_KEY_BUILD_SEED_CAMP_KILL</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
@@ -267,8 +267,8 @@
 		</BuildInfo>
 		<!-- Seed Camp (No Kill) -->
 		<BuildInfo>
-			<Type>BUILD_GRAIN_GATHERER_2</Type>
-			<Description>TXT_KEY_BUILD_GRAIN_GATHERER</Description>
+			<Type>BUILD_SEED_CAMP</Type>
+			<Description>TXT_KEY_BUILD_SEED_CAMP</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_AGRICULTURE</ObsoleteTech>
 			<iTime>200</iTime>
@@ -522,7 +522,7 @@
 		</BuildInfo>
 		<!-- Wood Gatherer (Kill) -->
 		<BuildInfo>
-			<Type>BUILD_PINE_GATHERER</Type>
+			<Type>BUILD_WOOD_GATHERER</Type>
 			<Description>TXT_KEY_BUILD_WOOD_GATHERER</Description>
 			<PrereqTech>TECH_WOODWORKING</PrereqTech>
 			<iTime>200</iTime>
@@ -536,8 +536,8 @@
 		</BuildInfo>
 		<!-- Lumber Jack -->
 		<BuildInfo>
-			<Type>BUILD_LUMBER_JACK</Type>
-			<Description>TXT_KEY_BUILD_LUMBER_JACK</Description>
+			<Type>BUILD_LUMBERJACK</Type>
+			<Description>TXT_KEY_BUILD_LUMBERJACK</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
@@ -550,8 +550,8 @@
 		</BuildInfo>
 		<!-- Stone Tools Workshop (Mine/Quarry) (Kill) -->
 		<BuildInfo>
-			<Type>BUILD_ROCK_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_ROCK_GATHERER_K</Description>
+			<Type>BUILD_STONE_TOOLS_WORKSHOP_KILL</Type>
+			<Description>TXT_KEY_BUILD_STONE_TOOLS_WORKSHOP_KILL</Description>
 			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
@@ -582,8 +582,8 @@
 		</BuildInfo>
 		<!-- Stone Tools Workshop (Mine/Quarry) (No Kill) -->
 		<BuildInfo>
-			<Type>BUILD_ROCK_GATHERER_2</Type>
-			<Description>TXT_KEY_BUILD_ROCK_GATHERER</Description>
+			<Type>BUILD_STONE_TOOLS_WORKSHOP</Type>
+			<Description>TXT_KEY_BUILD_STONE_TOOLS_WORKSHOP</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_EXPLOSIVES</ObsoleteTech>
 			<iTime>200</iTime>
@@ -699,8 +699,8 @@
 		</BuildInfo>
 		<!-- Tar Gatherer (Kill) -->
 		<BuildInfo>
-			<Type>BUILD_TAR_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_TAR_GATHERER_K</Description>
+			<Type>BUILD_TAR_GATHERER_KILL</Type>
+			<Description>TXT_KEY_BUILD_TAR_GATHERER_KILL</Description>
 			<PrereqTech>TECH_ADHESIVES</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
@@ -715,7 +715,7 @@
 		</BuildInfo>
 		<!-- Tar Gatherer (No Kill) -->
 		<BuildInfo>
-			<Type>BUILD_TAR_GATHERER2</Type>
+			<Type>BUILD_TAR_GATHERER</Type>
 			<Description>TXT_KEY_BUILD_TAR_GATHERER</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_REFINING</ObsoleteTech>
@@ -773,8 +773,8 @@
 		</BuildInfo>
 		<!-- Paved Road -->
 		<BuildInfo>
-			<Type>BUILD_PAVED</Type>
-			<Description>TXT_KEY_BUILD_PAVED</Description>
+			<Type>BUILD_PAVED_ROAD</Type>
+			<Description>TXT_KEY_BUILD_PAVED_ROAD</Description>
 			<PrereqTech>TECH_PAVED_ROADS</PrereqTech>
 			<iTime>250</iTime>
 			<iCost>4</iCost>
@@ -788,7 +788,7 @@
 		</BuildInfo>
 		<!-- Modern Road -->
 		<BuildInfo>
-			<Type>BUILD_MODERN_ROAD</Type>
+			<Type>BUILD_HIGHWAY</Type>
 			<Description>TXT_KEY_BUILD_HIGHWAY</Description>
 			<PrereqTech>TECH_HIGHWAY_SYSTEMS</PrereqTech>
 			<iTime>200</iTime>
@@ -816,8 +816,8 @@
 		</BuildInfo>
 		<!-- Electric Railroad -->
 		<BuildInfo>
-			<Type>BUILD_RAILROAD_ELECTRIC</Type>
-			<Description>TXT_KEY_BUILD_RAILROAD_ELECTRIC</Description>
+			<Type>BUILD_ELECTRIC_RAILROAD</Type>
+			<Description>TXT_KEY_BUILD_ELECTRIC_RAILROAD</Description>
 			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
 			<iTime>400</iTime>
 			<iCost>12</iCost>
@@ -831,8 +831,8 @@
 		</BuildInfo>
 		<!-- Gravtube -->
 		<BuildInfo>
-			<Type>BUILD_GRAVTUBE</Type>
-			<Description>TXT_KEY_BUILD_GRAVTUBE</Description>
+			<Type>BUILD_MAGLEV</Type>
+			<Description>TXT_KEY_BUILD_MAGLEV</Description>
 			<PrereqTech>TECH_MAGNETIC_LEVITATION</PrereqTech>
 			<iTime>600</iTime>
 			<iCost>50</iCost>
@@ -1490,7 +1490,7 @@
 		</BuildInfo>
 		<!-- Manufacturing Complex -->
 		<BuildInfo>
-			<Type>BUILD_5FACTORY</Type>
+			<Type>BUILD_MANUFACTURING_COMPLEX</Type>
 			<bForceOverwrite>1</bForceOverwrite>
 			<Description>TXT_KEY_BUILD_INDUSTRIAL_COMPLEX</Description>
 			<PrereqTech>TECH_MANUFACTURING</PrereqTech>
@@ -1755,7 +1755,7 @@
 		</BuildInfo>
 		<!-- Factory -->
 		<BuildInfo>
-			<Type>BUILD_3FACTORY</Type>
+			<Type>BUILD_FACTORY</Type>
 			<bForceOverwrite>1</bForceOverwrite>
 			<Description>TXT_KEY_BUILD_FACTORY</Description>
 			<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
@@ -2021,7 +2021,7 @@
 		</BuildInfo>
 		<!-- Factory -->
 		<BuildInfo>
-			<Type>BUILD_3FACTORY_2</Type>
+			<Type>BUILD_FACTORY_COLD_CLIMATE</Type>
 			<bForceOverwrite>1</bForceOverwrite>
 			<Description>TXT_KEY_BUILD_FACTORY_COLD</Description>
 			<PrereqTech>TECH_REFRIGERATION</PrereqTech>
@@ -2522,7 +2522,7 @@
 		</BuildInfo>
 		<!-- Hydro Plant -->
 		<BuildInfo>
-			<Type>BUILD_HYDRO_PLANT</Type>
+			<Type>BUILD_HYDRO_DAM</Type>
 			<Description>TXT_KEY_BUILD_IMPROVEMENT_HYDRO_DAM</Description>
 			<PrereqTech>TECH_HYDROELECTRICITY</PrereqTech>
 			<iTime>1200</iTime>
@@ -2772,8 +2772,8 @@
 		</BuildInfo>
 		<!-- Salt Gatherer (Quarry) (Kill) -->
 		<BuildInfo>
-			<Type>BUILD_SALT_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_SALT_GATHERER_K</Description>
+			<Type>BUILD_SALT_GATHERER_KILL</Type>
+			<Description>TXT_KEY_BUILD_SALT_GATHERER_KILL</Description>
 			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
@@ -2788,7 +2788,7 @@
 		</BuildInfo>
 		<!-- Salt Gatherer (Quarry) (No Kill) -->
 		<BuildInfo>
-			<Type>BUILD_SALT_GATHERER2</Type>
+			<Type>BUILD_SALT_GATHERER</Type>
 			<Description>TXT_KEY_BUILD_SALT_GATHERER</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_EXPLOSIVES</ObsoleteTech>
@@ -3018,8 +3018,8 @@
 		</BuildInfo>
 		<!-- Hunting Camp -->
 		<BuildInfo>
-			<Type>BUILD_CAMP</Type>
-			<Description>TXT_KEY_BUILD_CAMP</Description>
+			<Type>BUILD_HUNTING_CAMP</Type>
+			<Description>TXT_KEY_BUILD_HUNTING_CAMP</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_MONARCHY</ObsoleteTech>
 			<iTime>300</iTime>
@@ -3047,8 +3047,8 @@
 		</BuildInfo>
 		<!-- Hydrocarbon Well -->
 		<BuildInfo>
-			<Type>BUILD_WELL</Type>
-			<Description>TXT_KEY_BUILD_WELL</Description>
+			<Type>BUILD_HYDROCARBON_WELL</Type>
+			<Description>TXT_KEY_BUILD_HYDROCARBON_WELL</Description>
 			<PrereqTech>TECH_REFINING</PrereqTech>
 			<iTime>1000</iTime>
 			<iCost>0</iCost>
@@ -4235,8 +4235,8 @@
 		</BuildInfo>
 		<!-- Suburb -->
 		<BuildInfo>
-			<Type>BUILD_SUBURB</Type>
-			<Description>TXT_KEY_BUILD_SUBURB</Description>
+			<Type>BUILD_SUBURBS</Type>
+			<Description>TXT_KEY_BUILD_SUBURBS</Description>
 			<PrereqTech>TECH_MASS_TRANSIT</PrereqTech>
 			<iTime>1200</iTime>
 			<iCost>400</iCost>
@@ -4688,8 +4688,8 @@
 		</BuildInfo>
 		<!-- Remove Swamp -->
 		<BuildInfo>
-			<Type>BUILD_REMOVE_SWAMP</Type>
-			<Description>TXT_KEY_BUILD_REMOVE_SWAMP</Description>
+			<Type>BUILD_DRAIN_SWAMP</Type>
+			<Description>TXT_KEY_BUILD_DRAIN_SWAMP</Description>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>0</iTime>
 			<iCost>0</iCost>
@@ -4718,8 +4718,8 @@
 		</BuildInfo>
 		<!-- Remove Rock Form -->
 		<BuildInfo>
-			<Type>BUILD_REMOVE_ROCK_FORM</Type>
-			<Description>TXT_KEY_BUILD_REMOVE_ROCK_FORM</Description>
+			<Type>BUILD_REMOVE_ROCK_FORMATION</Type>
+			<Description>TXT_KEY_BUILD_REMOVE_ROCK_FORMATION</Description>
 			<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 			<iTime>0</iTime>
 			<iCost>0</iCost>
@@ -4895,8 +4895,8 @@
 		</BuildInfo>
 		<!-- Scrub Fallout Rapidly -->
 		<BuildInfo>
-			<Type>BUILD_SCRUB_FALLOUT_RAPIDLY</Type>
-			<Description>TXT_KEY_BUILD_SCRUB_FALLOUT_RAPIDLY</Description>
+			<Type>BUILD_CLEAR_FALLOUT_FAST</Type>
+			<Description>TXT_KEY_BUILD_CLEAR_FALLOUT_FAST</Description>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>0</iTime>
 			<iCost>0</iCost>
@@ -4971,8 +4971,8 @@
 		</BuildInfo>
 		<!-- Archaeological Site -->
 		<BuildInfo>
-			<Type>BUILD_EXPLORETEMPLE</Type>
-			<Description>TXT_KEY_BUILD_EXPLORETEMPLE</Description>
+			<Type>BUILD_ARCHEOLOGICAL_SITE</Type>
+			<Description>TXT_KEY_BUILD_ARCHEOLOGICAL_SITE</Description>
 			<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
 			<iTime>100</iTime>
 			<iCost>50</iCost>
@@ -4986,8 +4986,8 @@
 		</BuildInfo>
 		<!-- Modern Windmill -->
 		<BuildInfo>
-			<Type>BUILD_MODERNWINDMILL</Type>
-			<Description>TXT_KEY_BUILD_MODERNWINDMILL</Description>
+			<Type>BUILD_MODERN_WINDMILL</Type>
+			<Description>TXT_KEY_BUILD_MODERN_WINDMILL</Description>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iTime>1000</iTime>
 			<iCost>50</iCost>
@@ -5107,8 +5107,8 @@
 		</BuildInfo>
 		<!-- Bunker -->
 		<BuildInfo>
-			<Type>BUILD_BUNKER</Type>
-			<Description>TXT_KEY_BUILD_BUNKER</Description>
+			<Type>BUILD_COMMAND_BUNKER</Type>
+			<Description>TXT_KEY_BUILD_COMMAND_BUNKER</Description>
 			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
 			<iTime>1200</iTime>
 			<iCost>0</iCost>
@@ -5123,8 +5123,8 @@
 		</BuildInfo>
 		<!-- Future Bunker -->
 		<BuildInfo>
-			<Type>BUILD_FUTURE_BUNKER</Type>
-			<Description>TXT_KEY_BUILD_FUTURE_BUNKER</Description>
+			<Type>BUILD_COMMAND_CENTER</Type>
+			<Description>TXT_KEY_BUILD_COMMAND_CENTER</Description>
 			<PrereqTech>TECH_METAMATERIALS</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>0</iCost>
@@ -5139,8 +5139,8 @@
 		</BuildInfo>
 		<!-- Wildlife Sanctuary -->
 		<BuildInfo>
-			<Type>BUILD_SAFARI</Type>
-			<Description>TXT_KEY_BUILD_SAFARI</Description>
+			<Type>BUILD_WILDLIFE_SANCTUARY</Type>
+			<Description>TXT_KEY_BUILD_WILDLIFE_SANCTUARY</Description>
 			<PrereqTech>TECH_TOURISM</PrereqTech>
 			<iTime>500</iTime>
 			<iCost>0</iCost>
@@ -5197,8 +5197,8 @@
 		</BuildInfo>
 		<!-- Geothermal Borehole -->
 		<BuildInfo>
-			<Type>BUILD_GEOTHERMAL_BOREHOLE</Type>
-			<Description>TXT_KEY_BUILD_GEOTHERMAL_BOREHOLE</Description>
+			<Type>BUILD_GEOTHERMAL_FACTORY</Type>
+			<Description>TXT_KEY_BUILD_GEOTHERMAL_FACTORY</Description>
 			<PrereqTech>TECH_VOLCANOLOGY</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
@@ -5211,8 +5211,8 @@
 		</BuildInfo>
 		<!-- Sea Fort -->
 		<BuildInfo>
-			<Type>BUILD_SEA_FORT</Type>
-			<Description>TXT_KEY_BUILD_SEA_FORT</Description>
+			<Type>BUILD_AQUATIC_FORCEFIELD</Type>
+			<Description>TXT_KEY_BUILD_AQUATIC_FORCEFIELD</Description>
 			<PrereqTech>TECH_SHIELDING</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
@@ -5225,9 +5225,9 @@
 		</BuildInfo>
 		<!-- Sea Air Defense -->
 		<BuildInfo>
-			<Type>BUILD_SEA_AIR_DEFENSE</Type>
-			<Description>TXT_KEY_BUILD_SEA_AIR_DEFENSE</Description>
-			<Help>TXT_KEY_BUILD_SEA_AIR_DEFENSE_HELP</Help>
+			<Type>BUILD_AQUATIC_ANTI_AIR_DEFENSE</Type>
+			<Description>TXT_KEY_BUILD_AQUATIC_ANTI_AIR_DEFENSE</Description>
+			<Help>TXT_KEY_BUILD_AQUATIC_ANTI_AIR_DEFENSE_HELP</Help>
 			<PrereqTech>TECH_ORBITAL_FLIGHT</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
@@ -5241,8 +5241,8 @@
 		</BuildInfo>
 		<!-- Break Ice -->
 		<BuildInfo>
-			<Type>BUILD_BREAK_ICE</Type>
-			<Description>TXT_KEY_BUILD_BREAK_ICE_K</Description>
+			<Type>BUILD_BREAK_ICE_KILL</Type>
+			<Description>TXT_KEY_BUILD_BREAK_ICE_KILL</Description>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
@@ -5263,7 +5263,7 @@
 		</BuildInfo>
 		<!-- Break Ice (no kill) -->
 		<BuildInfo>
-			<Type>BUILD_BREAK_ICE_2</Type>
+			<Type>BUILD_BREAK_ICE</Type>
 			<Description>TXT_KEY_BUILD_BREAK_ICE</Description>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
@@ -5285,8 +5285,8 @@
 		</BuildInfo>
 		<!-- Jungle Camp (Kill) -->
 		<BuildInfo>
-			<Type>BUILD_JUNGLE_CAMP_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_JUNGLE_CAMP_K</Description>
+			<Type>BUILD_JUNGLE_CAMP_KILL</Type>
+			<Description>TXT_KEY_BUILD_JUNGLE_CAMP_KILL</Description>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>600</iTime>
@@ -5310,8 +5310,8 @@
 		</BuildInfo>
 		<!-- Desert Camp (Kill) -->
 		<BuildInfo>
-			<Type>BUILD_DESERT_CAMP_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_DESERT_CAMP_K</Description>
+			<Type>BUILD_DESERT_CAMP_KILL</Type>
+			<Description>TXT_KEY_BUILD_DESERT_CAMP_KILL</Description>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>600</iTime>
@@ -5335,8 +5335,8 @@
 		</BuildInfo>
 		<!-- Wetlands Camp (Kill) -->
 		<BuildInfo>
-			<Type>BUILD_WETLANDS_CAMP_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_WETLANDS_CAMP_K</Description>
+			<Type>BUILD_WETLANDS_CAMP_KILL</Type>
+			<Description>TXT_KEY_BUILD_WETLANDS_CAMP_KILL</Description>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>600</iTime>
@@ -5419,8 +5419,8 @@
 		</BuildInfo>
 		<!-- Plant Jungle -->
 		<BuildInfo>
-			<Type>BUILD_MAKE_JUNGLE</Type>
-			<Description>TXT_KEY_BUILD_MAKE_JUNGLE</Description>
+			<Type>BUILD_PLANT_JUNGLE</Type>
+			<Description>TXT_KEY_BUILD_PLANT_JUNGLE</Description>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iTime>3000</iTime>
 			<iCost>40</iCost>
@@ -5659,8 +5659,8 @@
 		</BuildInfo>
 		<!-- Plant Forest -->
 		<BuildInfo>
-			<Type>BUILD_PLANT_FOREST</Type>
-			<Description>TXT_KEY_BUILD_PLANT_FOREST</Description>
+			<Type>BUILD_YOUNG_FOREST</Type>
+			<Description>TXT_KEY_BUILD_YOUNG_FOREST</Description>
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<iTime>1000</iTime>
 			<iCost>20</iCost>
@@ -5889,8 +5889,8 @@
 		</BuildInfo>
 		<!-- Plant Bamboo -->
 		<BuildInfo>
-			<Type>BUILD_PLANT_BAMBOO</Type>
-			<Description>TXT_KEY_BUILD_PLANT_BAMBOO</Description>
+			<Type>BUILD_PLANT_BAMBOO_GROVE</Type>
+			<Description>TXT_KEY_BUILD_PLANT_BAMBOO_GROVE</Description>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>20</iCost>
@@ -8903,8 +8903,8 @@
 		<!-- Prehistoric -->
 		<!-- Fruit Gatherer (Kill) -->
 		<BuildInfo>
-			<Type>BUILD_FRUIT_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_FRUIT_GATHERER</Description>
+			<Type>BUILD_FRUIT_GATHERING_CAMP</Type>
+			<Description>TXT_KEY_BUILD_FRUIT_GATHERING_CAMP</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
@@ -8918,8 +8918,8 @@
 		</BuildInfo>
 		<!-- Grape Gatherer (Kill) -->
 		<BuildInfo>
-			<Type>BUILD_GRAPE_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_GRAPE_GATHERER</Description>
+			<Type>BUILD_GRAPE_GATHERING_CAMP</Type>
+			<Description>TXT_KEY_BUILD_GRAPE_GATHERING_CAMP</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
@@ -8933,8 +8933,8 @@
 		</BuildInfo>
 		<!-- Plant Gatherer (Kill) -->
 		<BuildInfo>
-			<Type>BUILD_PLANT_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_PLANT_GATHERER</Description>
+			<Type>BUILD_PLANT_GATHERING_CAMP</Type>
+			<Description>TXT_KEY_BUILD_PLANT_GATHERING_CAMP</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
@@ -8948,8 +8948,8 @@
 		</BuildInfo>
 		<!-- Fruit Picker -->
 		<BuildInfo>
-			<Type>BUILD_FRUIT_PICKER</Type>
-			<Description>TXT_KEY_BUILD_FRUIT_PICKER</Description>
+			<Type>BUILD_FRUIT_PICKING_CAMP</Type>
+			<Description>TXT_KEY_BUILD_FRUIT_PICKING_CAMP</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_ORCHARDS</ObsoleteTech>
 			<iTime>200</iTime>
@@ -8964,8 +8964,8 @@
 		</BuildInfo>
 		<!-- Grape Picker -->
 		<BuildInfo>
-			<Type>BUILD_GRAPE_PICKER</Type>
-			<Description>TXT_KEY_BUILD_GRAPE_PICKER</Description>
+			<Type>BUILD_GRAPE_PICKING_CAMP</Type>
+			<Description>TXT_KEY_BUILD_GRAPE_PICKING_CAMP</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_FERMENTATION</ObsoleteTech>
 			<iTime>200</iTime>
@@ -8979,8 +8979,8 @@
 		</BuildInfo>
 		<!-- Plant Picker -->
 		<BuildInfo>
-			<Type>BUILD_PLANT_PICKER</Type>
-			<Description>TXT_KEY_BUILD_PLANT_PICKER</Description>
+			<Type>BUILD_PLANT_PICKING_CAMP</Type>
+			<Description>TXT_KEY_BUILD_PLANT_PICKING_CAMP</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_CALENDAR</ObsoleteTech>
 			<iTime>200</iTime>
@@ -9035,8 +9035,8 @@
 		</BuildInfo>
 		<!-- Harvest Kelp (consumes unit) -->
 		<BuildInfo>
-			<Type>BUILD_HARVEST_KELP_2</Type>
-			<Description>TXT_KEY_BUILD_HARVEST_KELP_K</Description>
+			<Type>BUILD_HARVEST_KELP_KILL</Type>
+			<Description>TXT_KEY_BUILD_HARVEST_KELP_KILL</Description>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>100</iTime>
 			<iCost>0</iCost>
@@ -9076,8 +9076,8 @@
 		</BuildInfo>
 		<!-- Fossil Digsite -->
 		<BuildInfo>
-			<Type>BUILD_FOSSIL_DIGSITE</Type>
-			<Description>TXT_KEY_BUILD_FOSSIL_DIGSITE</Description>
+			<Type>BUILD_FOSSIL_DIG_SITE</Type>
+			<Description>TXT_KEY_BUILD_FOSSIL_DIG_SITE</Description>
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<iTime>800</iTime>
 			<iCost>0</iCost>
@@ -9146,8 +9146,8 @@
 		</BuildInfo>
 		<!-- Mushroom Gatherer (Kill) -->
 		<BuildInfo>
-			<Type>BUILD_MUSHROOM_GATHERER_0</Type>
-			<Description>TXT_KEY_BUILD_MUSHROOM_GATHERER_K</Description>
+			<Type>BUILD_MUSHROOM_GATHERER_KILL</Type>
+			<Description>TXT_KEY_BUILD_MUSHROOM_GATHERER_KILL</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
@@ -9175,8 +9175,8 @@
 		</BuildInfo>
 		<!-- Colony Habitat (Small) -->
 		<BuildInfo>
-			<Type>BUILD_HABITAT1</Type>
-			<Description>TXT_KEY_BUILD_HABITAT1</Description>
+			<Type>BUILD_COLONY_HABITAT_SMALL</Type>
+			<Description>TXT_KEY_BUILD_COLONY_HABITAT_SMALL</Description>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<iTime>1000</iTime>
 			<iCost>500</iCost>
@@ -9189,8 +9189,8 @@
 		</BuildInfo>
 		<!-- Colony Habitat (Medium) -->
 		<BuildInfo>
-			<Type>BUILD_HABITAT2</Type>
-			<Description>TXT_KEY_BUILD_HABITAT2</Description>
+			<Type>BUILD_COLONY_HABITAT_MEDIUM</Type>
+			<Description>TXT_KEY_BUILD_COLONY_HABITAT_MEDIUM</Description>
 			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<iTime>1500</iTime>
 			<iCost>1000</iCost>
@@ -9203,8 +9203,8 @@
 		</BuildInfo>
 		<!-- Colony Habitat (Large) -->
 		<BuildInfo>
-			<Type>BUILD_HABITAT3</Type>
-			<Description>TXT_KEY_BUILD_HABITAT3</Description>
+			<Type>BUILD_COLONY_HABITAT_LARGE</Type>
+			<Description>TXT_KEY_BUILD_COLONY_HABITAT_LARGE</Description>
 			<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>1500</iCost>
@@ -9217,8 +9217,8 @@
 		</BuildInfo>
 		<!-- Colony Habitat (Huge) -->
 		<BuildInfo>
-			<Type>BUILD_HABITAT4</Type>
-			<Description>TXT_KEY_BUILD_HABITAT4</Description>
+			<Type>BUILD_COLONY_HABITAT_HUGE</Type>
+			<Description>TXT_KEY_BUILD_COLONY_HABITAT_HUGE</Description>
 			<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
 			<iTime>3000</iTime>
 			<iCost>2500</iCost>
@@ -9359,7 +9359,7 @@
 		</BuildInfo>
 		<!-- Sea Mill -->
 		<BuildInfo>
-			<Type>BUILD_WINDMILL_SEA</Type>
+			<Type>BUILD_SEA_MILL</Type>
 			<Description>TXT_KEY_BUILD_SEA_MILL</Description>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iTime>1000</iTime>
@@ -9698,8 +9698,8 @@
 		</BuildInfo>
 		<!-- Vertical Farm -->
 		<BuildInfo>
-			<Type>BUILD_FARMSCRAPER</Type>
-			<Description>TXT_KEY_BUILD_FARMSCRAPER</Description>
+			<Type>BUILD_VERTICAL_FARM</Type>
+			<Description>TXT_KEY_BUILD_VERTICAL_FARM</Description>
 			<PrereqTech>TECH_VERTICAL_FARMING</PrereqTech>
 			<iTime>1000</iTime>
 			<iCost>0</iCost>
@@ -10453,8 +10453,8 @@
 			<Button>,Art/Interface/Buttons/TerrainFeatures/Forest.dds,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,3,3</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_ABATIS</Type>
-			<Description>TXT_KEY_BUILD_ABATIS</Description>
+			<Type>BUILD_ABATIS_THORN_HEDGE</Type>
+			<Description>TXT_KEY_BUILD_ABATIS_THORN_HEDGE</Description>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<ObsoleteTech>TECH_CARPENTRY</ObsoleteTech>
 			<iTime>200</iTime>
@@ -10468,8 +10468,8 @@
 			<Button>Art/Structures/Improvements/Abatis/abatis.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_ABATIS_G</Type>
-			<Description>TXT_KEY_BUILD_ABATIS_G</Description>
+			<Type>BUILD_ABATIS_THORN_HEDGE_KILL</Type>
+			<Description>TXT_KEY_BUILD_ABATIS_THORN_HEDGE_KILL</Description>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<ObsoleteTech>TECH_CARPENTRY</ObsoleteTech>
 			<iTime>200</iTime>
@@ -10483,8 +10483,8 @@
 			<Button>Art/Structures/Improvements/Abatis/abatis.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_PALISADE</Type>
-			<Description>TXT_KEY_BUILD_PALISADE</Description>
+			<Type>BUILD_WOODEN_PALISADE</Type>
+			<Description>TXT_KEY_BUILD_WOODEN_PALISADE</Description>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<ObsoleteTech>TECH_MATHEMATICS</ObsoleteTech>
 			<iTime>500</iTime>
@@ -10498,8 +10498,8 @@
 			<Button>Art/Structures/Improvements/Palisade/palisadewall.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_PALISADE_G</Type>
-			<Description>TXT_KEY_BUILD_PALISADE_G</Description>
+			<Type>BUILD_WOODEN_PALISADE_KILL</Type>
+			<Description>TXT_KEY_BUILD_WOODEN_PALISADE_KILL</Description>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<ObsoleteTech>TECH_MATHEMATICS</ObsoleteTech>
 			<iTime>500</iTime>
@@ -10527,8 +10527,8 @@
 			<Button>Art/interface/buttons/builds/fortified_cave.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_FORTIFIED_CAVE_G</Type>
-			<Description>TXT_KEY_BUILD_FORTIFIED_CAVE_G</Description>
+			<Type>BUILD_FORTIFIED_CAVE_KILL</Type>
+			<Description>TXT_KEY_BUILD_FORTIFIED_CAVE_KILL</Description>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<iTime>150</iTime>
 			<iCost>0</iCost>
@@ -10541,8 +10541,8 @@
 			<Button>Art/interface/buttons/builds/fortified_cave.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_FORTIFIED_CAVE_CACHE</Type>
-			<Description>TXT_KEY_BUILD_FORTIFIED_CAVE_CACHE</Description>
+			<Type>BUILD_FORTIFIED_CAVE_WITH_CACHE</Type>
+			<Description>TXT_KEY_BUILD_FORTIFIED_CAVE_WITH_CACHE</Description>
 			<PrereqTech>TECH_POTTERY</PrereqTech>
 			<iTime>300</iTime>
 			<iCost>0</iCost>
@@ -10555,8 +10555,8 @@
 			<Button>Art/interface/buttons/builds/fortified_cave_cache.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_WOODEN_TOWER</Type>
-			<Description>TXT_KEY_BUILD_WOODEN_TOWER</Description>
+			<Type>BUILD_WOODEN_WATCHTOWER</Type>
+			<Description>TXT_KEY_BUILD_WOODEN_WATCHTOWER</Description>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
@@ -10569,8 +10569,8 @@
 			<Button>Art/Structures/Improvements/wooden_tower/wooden_tower_btn.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_WOODEN_TOWER_G</Type>
-			<Description>TXT_KEY_BUILD_WOODEN_TOWER_G</Description>
+			<Type>BUILD_WOODEN_WATCHTOWER_KILL</Type>
+			<Description>TXT_KEY_BUILD_WOODEN_WATCHTOWER_KILL</Description>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
@@ -10583,8 +10583,8 @@
 			<Button>Art/Structures/Improvements/wooden_tower/wooden_tower_btn.dds</Button>
 		</BuildInfo>
 		<!--BuildInfo>
-			<Type>BUILD_STONE_TOWER</Type>
-			<Description>TXT_KEY_BUILD_STONE_TOWER</Description>
+			<Type>BUILD_STONE_WATCHTOWER</Type>
+			<Description>TXT_KEY_BUILD_STONE_WATCHTOWER</Description>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<iTime>800</iTime>
 			<iCost>0</iCost>
@@ -10597,8 +10597,8 @@
 			<Button>Art/Structures/Improvements/stone_tower/stone_tower_btn.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_STEEL_TOWER</Type>
-			<Description>TXT_KEY_BUILD_STEEL_TOWER</Description>
+			<Type>BUILD_STEEL_WATCHTOWER</Type>
+			<Description>TXT_KEY_BUILD_STEEL_WATCHTOWER</Description>
 			<PrereqTech>TECH_STEEL</PrereqTech>
 			<iTime>800</iTime>
 			<iCost>0</iCost>
@@ -10611,8 +10611,8 @@
 			<Button>Art/Structures/Improvements/stone_tower/stone_tower_btn.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_RADAR</Type>
-			<Description>TXT_KEY_BUILD_RADAR</Description>
+			<Type>BUILD_RADAR_TOWER</Type>
+			<Description>TXT_KEY_BUILD_RADAR_TOWER</Description>
 			<PrereqTech>TECH_RADAR</PrereqTech>
 			<iTime>800</iTime>
 			<iCost>0</iCost>
@@ -10640,8 +10640,8 @@
 		</BuildInfo-->
 		<!-- Pepper's routes are used as yield boosters in improvements. They are here so Pepper's module can be turned off. -->
 		<BuildInfo>
-			<Type>BUILD_HYPERLOOP</Type>
-			<Description>TXT_KEY_BUILD_HYPERLOOP</Description>
+			<Type>BUILD_VACTRAIN</Type>
+			<Description>TXT_KEY_BUILD_VACTRAIN</Description>
 			<PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
 			<iTime>700</iTime>
 			<iCost>60</iCost>

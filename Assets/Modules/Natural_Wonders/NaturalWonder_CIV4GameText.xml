@@ -837,7 +837,7 @@
 		<Polish>Latarnia(Wielka Rafa Koralowa)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_BEACON_GREAT_BARRIER</Tag>
+		<Tag>TXT_KEY_BUILD_BEACON_GREAT_BARRIER_REEF</Tag>
 		<English>Build [LINK=IMPROVEMENT_BEACON_GREAT_BARRIER_REEF]Beacon[\LINK] (Great Reef)</English>
 		<French>Placer une [LINK=IMPROVEMENT_BEACON_GREAT_BARRIER_REEF]Balise[\LINK] (Great Reef)</French>
 		<German>[LINK=IMPROVEMENT_BEACON_GREAT_BARRIER_REEF]Leuchtfeuer[\LINK] errichten (Great Reef)</German>
@@ -846,7 +846,7 @@
 		<Polish>Wybuduj [LINK=IMPROVEMENT_BEACON_GREAT_BARRIER_REEF]Boję[\LINK](Great Reef)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_LIGHTHOUSE_GREAT_BARRIER</Tag>
+		<Tag>TXT_KEY_BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</Tag>
 		<English>Build [LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF]Lighthouse[\LINK] (Great Reef)</English>
 		<French>Placer un [LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF]Phare[\LINK](Great Reef)</French>
 		<German>[LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF]Leuchtturm[\LINK](Great Reef) bauen</German>

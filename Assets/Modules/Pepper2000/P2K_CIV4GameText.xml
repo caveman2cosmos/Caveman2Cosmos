@@ -1050,11 +1050,11 @@
 		<English>Build [LINK=ROUTE_WORMHOLE]Wormhole[\LINK]</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_MICROWORMHOLE</Tag>
-		<English>Build [LINK=ROUTE_COMPACT_WORMHOLE]Micro-Wormhole[\LINK]</English>
+		<Tag>TXT_KEY_BUILD_COMPACT_WORMHOLE</Tag>
+		<English>Build [LINK=ROUTE_COMPACT_WORMHOLE]Compact Wormhole[\LINK]</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_MEGAWORMHOLE_ROUTE</Tag>
+		<Tag>TXT_KEY_BUILD_MEGAWORMHOLE</Tag>
 		<English>Build [LINK=ROUTE_MEGAWORMHOLE]Megawormhole[\LINK]</English>
 	</TEXT>
 	<TEXT>
@@ -1067,7 +1067,7 @@
 	</TEXT>
 	<!-- Improvements-->
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_SPACE_STATION1</Tag>
+		<Tag>TXT_KEY_BUILD_SPACE_STATION_LV1</Tag>
 		<English>Build [LINK=IMPROVEMENT_SPACE_STATION_LV1]Space Station[\LINK]</English>
 	</TEXT>
 	<TEXT>
@@ -1079,7 +1079,7 @@
 		<English>An early space station.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_SPACE_STATION2</Tag>
+		<Tag>TXT_KEY_BUILD_SPACE_STATION_LV2</Tag>
 		<English>Upgrade [LINK=IMPROVEMENT_SPACE_STATION_LV2]Space Station to Lv. 2[\LINK]</English>
 	</TEXT>
 	<TEXT>
@@ -1091,7 +1091,7 @@
 		<English>An intermediate space station.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_SPACE_STATION3</Tag>
+		<Tag>TXT_KEY_BUILD_SPACE_STATION_LV3</Tag>
 		<English>Upgrade [LINK=IMPROVEMENT_SPACE_STATION_LV3]Space Station to Lv. 3[\LINK]</English>
 	</TEXT>
 	<TEXT>
@@ -1115,7 +1115,7 @@
 		<English>A megastructure on the Moon.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_MARS_MINE</Tag>
+		<Tag>TXT_KEY_BUILD_MARTIAN_MINE</Tag>
 		<English>Build [LINK=IMPROVEMENT_MARTIAN_MINE]Martian Mine[\LINK]</English>
 	</TEXT>
 	<TEXT>
@@ -1163,7 +1163,7 @@
 		<English>A Dyson Sphere is a solar collector that encompasses an entire star.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_CISLUNAR_MILITARY_BASE</Tag>
+		<Tag>TXT_KEY_BUILD_CISLUNAR_BASE</Tag>
 		<English>Build [LINK=IMPROVEMENT_CISLUNAR_BASE]Cislunar Base[\LINK]</English>
 	</TEXT>
 	<TEXT>
@@ -1175,7 +1175,7 @@
 		<English>A military base in cislunar space.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_DEEP_SPACE_MILITARY_BASE</Tag>
+		<Tag>TXT_KEY_BUILD_SOLAR_SYSTEM_BASE</Tag>
 		<English>Build [LINK=IMPROVEMENT_SOLAR_SYSTEM_BASE]Solar System Base[\LINK]</English>
 	</TEXT>
 	<TEXT>
@@ -1187,7 +1187,7 @@
 		<English>A large military base in solar orbit.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_INTERSTELLAR_MILITARY_BASE</Tag>
+		<Tag>TXT_KEY_BUILD_INTERSTELLAR_BASE</Tag>
 		<English>Build [LINK=IMPROVEMENT_INTERSTELLAR_BASE]Interstellar Base[\LINK]</English>
 	</TEXT>
 	<TEXT>
@@ -1223,7 +1223,7 @@
 		<English>A military base in hyperspace.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_MARS_FARM</Tag>
+		<Tag>TXT_KEY_BUILD_MARTIAN_FARM</Tag>
 		<English>Build [LINK=IMPROVEMENT_MARTIAN_FARM]Martian Farm[\LINK]</English>
 	</TEXT>
 	<TEXT>
@@ -1263,11 +1263,11 @@
 		<English>[LINK=IMPROVEMENT_TERRAFORM_BRANESPACE]Chronoform Toward Branespace[\LINK]</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_ASTEROID</Tag>
+		<Tag>TXT_KEY_BUILD_PLACE_ASTEROID</Tag>
 		<English>Place [LINK=IMPROVEMENT_PLACE_ASTEROID]Asteroid[\LINK]</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_GALAXY</Tag>
+		<Tag>TXT_KEY_BUILD_PLACE_GALAXY</Tag>
 		<English>Place [LINK=IMPROVEMENT_PLACE_GALAXY]Galaxy[\LINK]</English>
 	</TEXT>
 	<TEXT>
@@ -1591,7 +1591,7 @@
 		<English>A research base that studies biology, geology, and other sciences beyond the cosmic horizon.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_TRADING_PLANET</Tag>
+		<Tag>TXT_KEY_BUILD_INTERSTELLAR_TRADING_POST</Tag>
 		<English>Build [LINK=IMPROVEMENT_INTERSTELLAR_TRADING_POST]Interstellar Trading Post[\LINK]</English>
 	</TEXT>
 	<TEXT>
@@ -1607,7 +1607,7 @@
 		<English>Terraform [LINK=IMPROVEMENT_BIOTIC_GALAXY]Galaxy[\LINK]</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_HELIOFORM</Tag>
+		<Tag>TXT_KEY_BUILD_HELIOFORMED_BROWN_DWARF</Tag>
 		<English>Helioform [LINK=IMPROVEMENT_HELIOFORMED_BROWN_DWARF]Brown Dwarf[\LINK]</English>
 	</TEXT>
 	<TEXT>
@@ -1695,7 +1695,7 @@
 		<English>This indescribable time manifold is home to a vast civilization.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_EXPANDED_HABITAT</Tag>
+		<Tag>TXT_KEY_BUILD_CISLUNAR_EXPANSION_MODULE</Tag>
 		<English>Build [LINK=IMPROVEMENT_CISLUNAR_EXPANSION_MODULE]Cislunar Expansion Module[\LINK]</English>
 	</TEXT>
 	<TEXT>
@@ -2458,7 +2458,7 @@
 	</TEXT>
 	<!-- Improvments -->
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_LUNAR_BASE_IMPROVEMENT</Tag>
+		<Tag>TXT_KEY_BUILD_LUNAR_BASE</Tag>
 		<English>Build [LINK=IMPROVEMENT_LUNAR_BASE]Lunar Base[\LINK]</English>
 	</TEXT>
 	<TEXT>

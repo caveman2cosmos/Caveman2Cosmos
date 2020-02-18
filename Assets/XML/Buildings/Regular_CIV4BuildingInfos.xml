@@ -976,7 +976,7 @@
 			<Strategy>TXT_KEY_BUILDING_AI_SURVEILLANCE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AI_SURVEILLANCE</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_BUNKER</ConstructSound>
+			<ConstructSound>AS2D_BUILD_COMMAND_BUNKER</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -3829,7 +3829,7 @@
 			<Strategy>TXT_KEY_BUILDING_TOWERS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANTIMATTER_BATTERY</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_BUNKER</ConstructSound>
+			<ConstructSound>AS2D_BUILD_COMMAND_BUNKER</ConstructSound>
 			<fVisibilityPriority>1000</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -5990,7 +5990,7 @@
 			<Strategy>TXT_KEY_BUILDING_TOWERS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ARTILLERY_BATTERY</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_BUNKER</ConstructSound>
+			<ConstructSound>AS2D_BUILD_COMMAND_BUNKER</ConstructSound>
 			<fVisibilityPriority>1000</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -7037,7 +7037,7 @@
 			<Strategy>TXT_KEY_BUILDING_TOWERS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AUTOCANNON_BATTERY</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_BUNKER</ConstructSound>
+			<ConstructSound>AS2D_BUILD_COMMAND_BUNKER</ConstructSound>
 			<fVisibilityPriority>1000</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -16747,7 +16747,7 @@
 			<Strategy>TXT_KEY_BUILDING_BUNKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BUNKER</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_BUNKER</ConstructSound>
+			<ConstructSound>AS2D_BUILD_COMMAND_BUNKER</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -38144,7 +38144,7 @@
 			<Strategy>TXT_KEY_BUILDING_FARMSCRAPER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FARMSCRAPER_I</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_FARMSCRAPER</ConstructSound>
+			<ConstructSound>AS2D_BUILD_VERTICAL_FARM</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -38194,7 +38194,7 @@
 			<Strategy>TXT_KEY_BUILDING_FARMSCRAPER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FARMSCRAPER_II</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_FARMSCRAPER</ConstructSound>
+			<ConstructSound>AS2D_BUILD_VERTICAL_FARM</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -38246,7 +38246,7 @@
 			<Strategy>TXT_KEY_BUILDING_FARMSCRAPER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FARMSCRAPER</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_FARMSCRAPER</ConstructSound>
+			<ConstructSound>AS2D_BUILD_VERTICAL_FARM</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -57079,7 +57079,7 @@
 			<Strategy>TXT_KEY_BUILDING_TOWERS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LASER_BATTERY</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_BUNKER</ConstructSound>
+			<ConstructSound>AS2D_BUILD_COMMAND_BUNKER</ConstructSound>
 			<fVisibilityPriority>1000</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -66848,7 +66848,7 @@
 			<Strategy>TXT_KEY_BUILDING_TOWERS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MISSILE_BATTERY</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_BUNKER</ConstructSound>
+			<ConstructSound>AS2D_BUILD_COMMAND_BUNKER</ConstructSound>
 			<fVisibilityPriority>1000</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -82707,7 +82707,7 @@
 			<Strategy>TXT_KEY_BUILDING_RADAR_STATION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RADAR_STATION</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_RADAR_STATION</ConstructSound>
+			<ConstructSound>AS2D_BUILD_RADAR_TOWER_STATION</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -82891,7 +82891,7 @@
 			<Strategy>TXT_KEY_BUILDING_TOWERS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RAILGUN_BATTERY</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_BUNKER</ConstructSound>
+			<ConstructSound>AS2D_BUILD_COMMAND_BUNKER</ConstructSound>
 			<fVisibilityPriority>1000</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -110231,7 +110231,7 @@
 			<Strategy>TXT_KEY_BUILDING_CONSPIRATORS_HIDEOUT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CONSPIRATORS_HIDEOUT</ArtDefineTag>
-			<ConstructSound>AS2D_BUILD_BUNKER</ConstructSound>
+			<ConstructSound>AS2D_BUILD_COMMAND_BUNKER</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>

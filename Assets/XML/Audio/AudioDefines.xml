@@ -11481,7 +11481,7 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_BUILD_BUNKER</SoundID>
+			<SoundID>SND_BUILD_COMMAND_BUNKER</SoundID>
 			<Filename>Sounds/Buildings/Bunker</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
@@ -11572,7 +11572,7 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_BUILD_FARMSCRAPER</SoundID>
+			<SoundID>SND_BUILD_VERTICAL_FARM</SoundID>
 			<Filename>Sounds/Buildings/Farmscraper</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
@@ -11852,7 +11852,7 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_BUILD_RADAR_STATION</SoundID>
+			<SoundID>SND_BUILD_RADAR_TOWER_STATION</SoundID>
 			<Filename>Sounds/Buildings/RadarStation</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>

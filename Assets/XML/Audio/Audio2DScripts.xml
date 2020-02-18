@@ -22157,8 +22157,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_BUILD_BUNKER</ScriptID>
-		<SoundID>SND_BUILD_BUNKER</SoundID>
+		<ScriptID>AS2D_BUILD_COMMAND_BUNKER</ScriptID>
+		<SoundID>SND_BUILD_COMMAND_BUNKER</SoundID>
 		<SoundType>GAME_SFX</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -22456,8 +22456,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_BUILD_FARMSCRAPER</ScriptID>
-		<SoundID>SND_BUILD_FARMSCRAPER</SoundID>
+		<ScriptID>AS2D_BUILD_VERTICAL_FARM</ScriptID>
+		<SoundID>SND_BUILD_VERTICAL_FARM</SoundID>
 		<SoundType>GAME_SFX</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -23376,8 +23376,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_BUILD_RADAR_STATION</ScriptID>
-		<SoundID>SND_BUILD_RADAR_STATION</SoundID>
+		<ScriptID>AS2D_BUILD_RADAR_TOWER_STATION</ScriptID>
+		<SoundID>SND_BUILD_RADAR_TOWER_STATION</SoundID>
 		<SoundType>GAME_SFX</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>

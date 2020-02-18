@@ -47,8 +47,8 @@
 			<Button>art/interface/buttons/improvements/wormhole.dds</Button>
 		</BuildInfo>
         <BuildInfo>
-			<Type>BUILD_MICROWORMHOLE</Type>
-			<Description>TXT_KEY_BUILD_MICROWORMHOLE</Description>
+			<Type>BUILD_COMPACT_WORMHOLE</Type>
+			<Description>TXT_KEY_BUILD_COMPACT_WORMHOLE</Description>
 			<PrereqTech>TECH_COMPACT_WORMHOLES</PrereqTech>
 			<iTime>600</iTime>
 			<iCost>200</iCost>
@@ -60,8 +60,8 @@
 			<Button>art/interface/buttons/improvements/microwormhole.dds</Button>
 		</BuildInfo>
         <BuildInfo>
-			<Type>BUILD_MEGAWORMHOLE_ROUTE</Type>
-			<Description>TXT_KEY_BUILD_MEGAWORMHOLE_ROUTE</Description>
+			<Type>BUILD_MEGAWORMHOLE</Type>
+			<Description>TXT_KEY_BUILD_MEGAWORMHOLE</Description>
 			<PrereqTech>TECH_MEGAWORMHOLES</PrereqTech>
 			<iTime>600</iTime>
 			<iCost>200</iCost>
@@ -99,8 +99,8 @@
 			<Button>art/interface/buttons/improvements/aspatial_route.dds</Button>
 		</BuildInfo>
         <BuildInfo>
-			<Type>BUILD_SPACE_STATION1</Type>
-			<Description>TXT_KEY_BUILD_SPACE_STATION1</Description>
+			<Type>BUILD_SPACE_STATION_LV1</Type>
+			<Description>TXT_KEY_BUILD_SPACE_STATION_LV1</Description>
 			<Help/>
 			<PrereqTech>TECH_SPACE_STATIONS</PrereqTech>
 			<iTime>6000</iTime>
@@ -118,8 +118,8 @@
 			<Button>art/interface/buttons/improvements/space_station_1.dds</Button>
 		</BuildInfo>
         <BuildInfo>
-			<Type>BUILD_SPACE_STATION2</Type>
-			<Description>TXT_KEY_BUILD_SPACE_STATION2</Description>
+			<Type>BUILD_SPACE_STATION_LV2</Type>
+			<Description>TXT_KEY_BUILD_SPACE_STATION_LV2</Description>
 			<Help/>
 			<PrereqTech>TECH_SPACE_TOURISM</PrereqTech>
 			<iTime>9000</iTime>
@@ -137,8 +137,8 @@
 			<Button>art/interface/buttons/improvements/space_station_2.dds</Button>
 		</BuildInfo>
         <BuildInfo>
-			<Type>BUILD_SPACE_STATION3</Type>
-			<Description>TXT_KEY_BUILD_SPACE_STATION3</Description>
+			<Type>BUILD_SPACE_STATION_LV3</Type>
+			<Description>TXT_KEY_BUILD_SPACE_STATION_LV3</Description>
 			<Help/>
 			<PrereqTech>TECH_ASTEROID_MINING</PrereqTech>
 			<iTime>12000</iTime>
@@ -251,8 +251,8 @@
 			<Button>art/interface/buttons/improvements/venus_aerial_farm.dds</Button>
 		</BuildInfo>
         <BuildInfo>
-			<Type>BUILD_MARS_MINE</Type>
-			<Description>TXT_KEY_BUILD_MARS_MINE</Description>
+			<Type>BUILD_MARTIAN_MINE</Type>
+			<Description>TXT_KEY_BUILD_MARTIAN_MINE</Description>
 			<Help/>
 			<PrereqTech>TECH_PLANETARY_EXTRACTION</PrereqTech>
 			<iTime>4000</iTime>
@@ -270,8 +270,8 @@
 			<Button>art/interface/buttons/improvements/mars_mine.dds</Button>
 		</BuildInfo>
         <BuildInfo>
-			<Type>BUILD_MARS_FARM</Type>
-			<Description>TXT_KEY_BUILD_MARS_FARM</Description>
+			<Type>BUILD_MARTIAN_FARM</Type>
+			<Description>TXT_KEY_BUILD_MARTIAN_FARM</Description>
 			<Help/>
 			<PrereqTech>TECH_EXTRATERRESTRIAL_AGRICULTURE</PrereqTech>
 			<iTime>4000</iTime>
@@ -308,8 +308,8 @@
 			<Button>art/interface/buttons/improvements/dyson_sphere.dds</Button>
 		</BuildInfo>
         <BuildInfo>
-			<Type>BUILD_CISLUNAR_MILITARY_BASE</Type>
-			<Description>TXT_KEY_BUILD_CISLUNAR_MILITARY_BASE</Description>
+			<Type>BUILD_CISLUNAR_BASE</Type>
+			<Description>TXT_KEY_BUILD_CISLUNAR_BASE</Description>
 			<Help/>
 			<PrereqTech>TECH_ION_BEAMS</PrereqTech>
 			<iTime>2000</iTime>
@@ -327,8 +327,8 @@
 			<Button>art/interface/buttons/improvements/cislunar_military_base.dds</Button>
 		</BuildInfo>
         <BuildInfo>
-			<Type>BUILD_DEEP_SPACE_MILITARY_BASE</Type>
-			<Description>TXT_KEY_BUILD_DEEP_SPACE_MILITARY_BASE</Description>
+			<Type>BUILD_SOLAR_SYSTEM_BASE</Type>
+			<Description>TXT_KEY_BUILD_SOLAR_SYSTEM_BASE</Description>
 			<Help/>
 			<PrereqTech>TECH_SOLAR_ORDNANCE</PrereqTech>
 			<iTime>4000</iTime>
@@ -346,8 +346,8 @@
 			<Button>art/interface/buttons/improvements/deep_space_military_base.dds</Button>
 		</BuildInfo>
         <BuildInfo>
-			<Type>BUILD_INTERSTELLAR_MILITARY_BASE</Type>
-			<Description>TXT_KEY_BUILD_INTERSTELLAR_MILITARY_BASE</Description>
+			<Type>BUILD_INTERSTELLAR_BASE</Type>
+			<Description>TXT_KEY_BUILD_INTERSTELLAR_BASE</Description>
 			<Help/>
 			<PrereqTech>TECH_WEAPONIZED_GRAVITY_FIELDS</PrereqTech>
 			<iTime>3000</iTime>
@@ -508,8 +508,8 @@
 			<Button>art/interface/buttons/worldbuilder/branespace.dds</Button>
 		</BuildInfo>
         <BuildInfo>
-			<Type>BUILD_ASTEROID</Type>
-			<Description>TXT_KEY_BUILD_ASTEROID</Description>
+			<Type>BUILD_PLACE_ASTEROID</Type>
+			<Description>TXT_KEY_BUILD_PLACE_ASTEROID</Description>
 			<PrereqTech>TECH_ASTEROID_BELT_PROBES</PrereqTech>
 			<iTime>2500</iTime>
 			<iCost>50</iCost>
@@ -523,8 +523,8 @@
 			<Button>,Art/Interface/Buttons/Units/Transport.dds,Art/Interface/Buttons/FinalFrontier2_Atlas.dds,5,4</Button>
 		</BuildInfo>
         <BuildInfo>
-			<Type>BUILD_GALAXY</Type>
-			<Description>TXT_KEY_BUILD_GALAXY</Description>
+			<Type>BUILD_PLACE_GALAXY</Type>
+			<Description>TXT_KEY_BUILD_PLACE_GALAXY</Description>
 			<PrereqTech>TECH_GALACTIFORMING</PrereqTech>
 			<iTime>2500</iTime>
 			<iCost>50</iCost>
@@ -690,8 +690,8 @@
 			<Button>art/interface/buttons/improvements/spiritual_realm.dds</Button>
 		</BuildInfo>
         <BuildInfo>
-			<Type>BUILD_TRADING_PLANET</Type>
-			<Description>TXT_KEY_BUILD_TRADING_PLANET</Description>
+			<Type>BUILD_INTERSTELLAR_TRADING_POST</Type>
+			<Description>TXT_KEY_BUILD_INTERSTELLAR_TRADING_POST</Description>
 			<Help/>
 			<PrereqTech>TECH_INTERSTELLAR_TRADE</PrereqTech>
 			<iTime>2500</iTime>
@@ -994,8 +994,8 @@
 			<Button>art/interface/buttons/improvements/biotic_galaxy.dds</Button>
 		</BuildInfo>
         <BuildInfo>
-			<Type>BUILD_HELIOFORM</Type>
-			<Description>TXT_KEY_BUILD_HELIOFORM</Description>
+			<Type>BUILD_HELIOFORMED_BROWN_DWARF</Type>
+			<Description>TXT_KEY_BUILD_HELIOFORMED_BROWN_DWARF</Description>
 			<Help/>
 			<PrereqTech>TECH_ARTIFICIAL_STARS</PrereqTech>
 			<iTime>2500</iTime>
@@ -1013,8 +1013,8 @@
 			<Button>art/interface/buttons/improvements/helioform.dds</Button>
 		</BuildInfo>
         <BuildInfo>
-			<Type>BUILD_EXPANDED_HABITAT</Type>
-			<Description>TXT_KEY_BUILD_EXPANDED_HABITAT</Description>
+			<Type>BUILD_CISLUNAR_EXPANSION_MODULE</Type>
+			<Description>TXT_KEY_BUILD_CISLUNAR_EXPANSION_MODULE</Description>
 			<Help/>
 			<PrereqTech>TECH_ORBITAL_MEGASTRUCTURES</PrereqTech>
 			<iTime>2500</iTime>
@@ -1279,8 +1279,8 @@
 			<Button>art/interface/buttons/improvements/distant_research_base.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_LUNAR_BASE_IMPROVEMENT</Type>
-			<Description>TXT_KEY_BUILD_LUNAR_BASE_IMPROVEMENT</Description>
+			<Type>BUILD_LUNAR_BASE</Type>
+			<Description>TXT_KEY_BUILD_LUNAR_BASE</Description>
 			<Help/>
 			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
 			<iTime>1000</iTime>

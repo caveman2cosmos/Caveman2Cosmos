@@ -221,7 +221,7 @@
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_LUNAR_BASE_IMPROVEMENT</BuildType>
+					<BuildType>BUILD_LUNAR_BASE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
@@ -237,19 +237,19 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-                    <BuildType>BUILD_HABITAT1</BuildType>
+                    <BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
-                    <BuildType>BUILD_HABITAT2</BuildType>
+                    <BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
-                    <BuildType>BUILD_HABITAT3</BuildType>
+                    <BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
-                    <BuildType>BUILD_HABITAT4</BuildType>
+                    <BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
 				<Build>
@@ -269,7 +269,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MARS_MINE</BuildType>
+					<BuildType>BUILD_MARTIAN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -2448,11 +2448,11 @@
 			</UnitAIs>
 			<Builds>
 				<Build>
-					<BuildType>BUILD_GRAVTUBE</BuildType>
+					<BuildType>BUILD_MAGLEV</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-                    <BuildType>BUILD_MARS_MINE</BuildType>
+                    <BuildType>BUILD_MARTIAN_MINE</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
@@ -2460,19 +2460,19 @@
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
-                    <BuildType>BUILD_HABITAT1</BuildType>
+                    <BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
-                    <BuildType>BUILD_HABITAT2</BuildType>
+                    <BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
-                    <BuildType>BUILD_HABITAT3</BuildType>
+                    <BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
-                    <BuildType>BUILD_HABITAT4</BuildType>
+                    <BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
@@ -2484,7 +2484,7 @@
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
-                    <BuildType>BUILD_MARS_FARM</BuildType>
+                    <BuildType>BUILD_MARTIAN_FARM</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
@@ -2548,7 +2548,7 @@
 			</UnitAIs>
 			<Builds>
 				<Build>
-					<BuildType>BUILD_GRAVTUBE</BuildType>
+					<BuildType>BUILD_MAGLEV</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
@@ -2876,11 +2876,11 @@
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_CISLUNAR_MILITARY_BASE</BuildType>
+					<BuildType>BUILD_CISLUNAR_BASE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_DEEP_SPACE_MILITARY_BASE</BuildType>
+					<BuildType>BUILD_SOLAR_SYSTEM_BASE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -3008,7 +3008,7 @@
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_EXPANDED_HABITAT</BuildType>
+					<BuildType>BUILD_CISLUNAR_EXPANSION_MODULE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
@@ -3020,11 +3020,11 @@
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_CISLUNAR_MILITARY_BASE</BuildType>
+					<BuildType>BUILD_CISLUNAR_BASE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_DEEP_SPACE_MILITARY_BASE</BuildType>
+					<BuildType>BUILD_SOLAR_SYSTEM_BASE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
@@ -3162,7 +3162,7 @@
 			</UnitAIs>
 			<Builds>
                 <Build>
-					<BuildType>BUILD_MICROWORMHOLE</BuildType>
+					<BuildType>BUILD_COMPACT_WORMHOLE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3214,7 +3214,7 @@
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_EXPANDED_HABITAT</BuildType>
+					<BuildType>BUILD_CISLUNAR_EXPANSION_MODULE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
@@ -3226,11 +3226,11 @@
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_CISLUNAR_MILITARY_BASE</BuildType>
+					<BuildType>BUILD_CISLUNAR_BASE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_DEEP_SPACE_MILITARY_BASE</BuildType>
+					<BuildType>BUILD_SOLAR_SYSTEM_BASE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -3339,7 +3339,7 @@
 			</UnitAIs>
 			<Builds>
                 <Build>
-					<BuildType>BUILD_MEGAWORMHOLE_ROUTE</BuildType>
+					<BuildType>BUILD_MEGAWORMHOLE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
@@ -3395,7 +3395,7 @@
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_EXPANDED_HABITAT</BuildType>
+					<BuildType>BUILD_CISLUNAR_EXPANSION_MODULE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
@@ -3403,11 +3403,11 @@
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_CISLUNAR_MILITARY_BASE</BuildType>
+					<BuildType>BUILD_CISLUNAR_BASE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_DEEP_SPACE_MILITARY_BASE</BuildType>
+					<BuildType>BUILD_SOLAR_SYSTEM_BASE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
@@ -3415,7 +3415,7 @@
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_TRADING_PLANET</BuildType>
+					<BuildType>BUILD_INTERSTELLAR_TRADING_POST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
@@ -3447,7 +3447,7 @@
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_HELIOFORM</BuildType>
+					<BuildType>BUILD_HELIOFORMED_BROWN_DWARF</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
@@ -3479,7 +3479,7 @@
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_INTERSTELLAR_MILITARY_BASE</BuildType>
+					<BuildType>BUILD_INTERSTELLAR_BASE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
@@ -4607,7 +4607,7 @@
 			<iAsset>1</iAsset>
             <Builds>
 				<Build>
-					<BuildType>BUILD_SPACE_STATION1</BuildType>
+					<BuildType>BUILD_SPACE_STATION_LV1</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -6162,7 +6162,7 @@
 			<iAsset>1</iAsset>
             <Builds>
 				<Build>
-					<BuildType>BUILD_SPACE_STATION1</BuildType>
+					<BuildType>BUILD_SPACE_STATION_LV1</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -6481,7 +6481,7 @@
 			</UnitAIs>
             <Builds>
 				<Build>
-					<BuildType>BUILD_ASTEROID</BuildType>
+					<BuildType>BUILD_PLACE_ASTEROID</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
             </Builds>
@@ -6558,7 +6558,7 @@
 			</UnitAIs>
             <Builds>
 				<Build>
-					<BuildType>BUILD_ASTEROID</BuildType>
+					<BuildType>BUILD_PLACE_ASTEROID</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
             </Builds>
@@ -6650,7 +6650,7 @@
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_TRADING_PLANET</BuildType>
+					<BuildType>BUILD_INTERSTELLAR_TRADING_POST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
@@ -6682,7 +6682,7 @@
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_HELIOFORM</BuildType>
+					<BuildType>BUILD_HELIOFORMED_BROWN_DWARF</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
@@ -6698,7 +6698,7 @@
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_INTERSTELLAR_MILITARY_BASE</BuildType>
+					<BuildType>BUILD_INTERSTELLAR_BASE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
@@ -9974,7 +9974,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GRAVTUBE</BuildType>
+					<BuildType>BUILD_MAGLEV</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -10006,19 +10006,19 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-                    <BuildType>BUILD_HABITAT1</BuildType>
+                    <BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
-                    <BuildType>BUILD_HABITAT2</BuildType>
+                    <BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
-                    <BuildType>BUILD_HABITAT3</BuildType>
+                    <BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
-                    <BuildType>BUILD_HABITAT4</BuildType>
+                    <BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
 			</Builds>

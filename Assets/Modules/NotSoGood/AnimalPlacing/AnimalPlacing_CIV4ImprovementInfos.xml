@@ -8,8 +8,8 @@
 <Civ4ImprovementInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4TerrainSchema.xml">
 	<ImprovementInfos>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_DONKEY</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_DONKEY</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_DONKEY</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_DONKEY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -17,8 +17,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_HORSE</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_HORSE</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_HORSE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_HORSE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -26,8 +26,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_ELEPHANTS</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_ELEPHANTS</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_ELEPHANTS</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_ELEPHANTS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -35,8 +35,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_BISON</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_BISON</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_BISON</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_BISON</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -44,8 +44,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_CAMEL</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_CAMEL</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_CAMEL</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_CAMEL</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -53,8 +53,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_COW</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_COW</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_COW</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_COW</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -62,8 +62,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_DEER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_DEER</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_DEER</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_DEER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -71,8 +71,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_BEAVERS</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_BEAVERS</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_BEAVERS</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_BEAVERS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -80,8 +80,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_KANGAROO</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_KANGAROO</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_KANGAROO</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_KANGAROO</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -89,8 +89,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_LLAMA</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_LLAMA</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_LLAMA</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_LLAMA</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -98,8 +98,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_MAMMOTH</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_MAMMOTH</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_MAMMOTH</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_MAMMOTH</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -107,8 +107,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_PIG</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_PIG</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_PIG</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_PIG</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -116,8 +116,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_POULTRY</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_POULTRY</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_POULTRY</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_POULTRY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -125,8 +125,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_RABBIT</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_RABBIT</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_RABBIT</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_RABBIT</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -134,8 +134,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_SEA_LION_AND_SEAL</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_SEA_LION_AND_SEAL</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_SEA_LION_AND_SEAL</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_SEA_LION_AND_SEAL</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -143,8 +143,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_SHEEP</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_SHEEP</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_SHEEP</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_SHEEP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -152,8 +152,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_WALRUS</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_WALRUS</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_WALRUS</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_WALRUS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -161,8 +161,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_GUINEA_PIGS</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_GUINEA_PIGS</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_GUINEA_PIGS</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_GUINEA_PIGS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -170,8 +170,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_PARROTS</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_PARROTS</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_PARROTS</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_PARROTS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -179,8 +179,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_BARLEY</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_BARLEY</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_BARLEY</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_BARLEY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -188,8 +188,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_CORN</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_CORN</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_CORN</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_CORN</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -197,8 +197,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_FLAX</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_FLAX</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_FLAX</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_FLAX</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -206,8 +206,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
  		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_POMEGRANATE</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_POMEGRANATE</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_POMEGRANATE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_POMEGRANATE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -215,8 +215,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
  		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_KAVA</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_KAVA</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_KAVA</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_KAVA</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -224,8 +224,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_GUAVAS</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_GUAVAS</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_GUAVAS</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_GUAVAS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -233,8 +233,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_MELONS</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_MELONS</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_MELONS</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_MELONS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -242,8 +242,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_POTATOES</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_POTATOES</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_POTATOES</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_POTATOES</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -251,8 +251,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_PUMPKIN</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_PUMPKIN</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_PUMPKIN</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_PUMPKIN</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -260,8 +260,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_RICE</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_RICE</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_RICE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_RICE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -269,8 +269,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_SQUASH</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_SQUASH</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_SQUASH</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_SQUASH</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -278,8 +278,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_WHEAT</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_WHEAT</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_WHEAT</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_WHEAT</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -287,8 +287,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_ALMONDS</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_ALMONDS</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_ALMONDS</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_ALMONDS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -296,8 +296,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_APPLE</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_APPLE</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_APPLE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_APPLE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -305,8 +305,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_BANANA</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_BANANA</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_BANANA</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_BANANA</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -314,8 +314,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_COCONUT</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_COCONUT</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_COCONUT</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_COCONUT</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -323,8 +323,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_DATES</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_DATES</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_DATES</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_DATES</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -332,8 +332,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_FIG</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_FIG</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_FIG</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_FIG</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -341,8 +341,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_LEMONS</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_LEMONS</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_LEMONS</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_LEMONS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -350,8 +350,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_MANGO</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_MANGO</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_MANGO</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_MANGO</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -359,8 +359,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_OLIVES</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_OLIVES</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_OLIVES</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_OLIVES</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -368,8 +368,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_PAPAYA</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_PAPAYA</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_PAPAYA</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_PAPAYA</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -377,8 +377,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_PISTACHIO</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_PISTACHIO</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_PISTACHIO</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_PISTACHIO</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -386,8 +386,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_GRAPES</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_GRAPES</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_GRAPES</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_GRAPES</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -395,8 +395,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_HENNA</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_HENNA</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_HENNA</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_HENNA</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -404,8 +404,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_INDIGO</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_INDIGO</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_INDIGO</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_INDIGO</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -413,8 +413,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_RUBBER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_RUBBER</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_RUBBER</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_RUBBER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -422,8 +422,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_PRIME_TIMBER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_PRIME_TIMBER</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_PRIME_TIMBER</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_PRIME_TIMBER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -431,8 +431,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_HEMP</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_HEMP</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_HEMP</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_HEMP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -440,8 +440,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_COCA</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_COCA</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_COCA</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_COCA</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -449,8 +449,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_COCOA</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_COCOA</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_COCOA</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_COCOA</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -458,8 +458,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_COFFEE</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_COFFEE</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_COFFEE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_COFFEE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -467,8 +467,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_COTTON</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_COTTON</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_COTTON</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_COTTON</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -476,8 +476,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_INCENSE</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_INCENSE</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_INCENSE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_INCENSE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -485,8 +485,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_MUSHROOMS</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_MUSHROOMS</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_MUSHROOMS</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_MUSHROOMS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -494,8 +494,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_OPIUM</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_OPIUM</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_OPIUM</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_OPIUM</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -503,8 +503,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_PAPYRUS</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_PAPYRUS</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_PAPYRUS</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_PAPYRUS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -512,8 +512,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_PEYOTE</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_PEYOTE</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_PEYOTE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_PEYOTE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -521,8 +521,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_PRICKLY_PEAR</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_PRICKLY_PEAR</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_PRICKLY_PEAR</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_PRICKLY_PEAR</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -530,8 +530,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_RESIN</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_RESIN</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_RESIN</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_RESIN</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -539,8 +539,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_SILK</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_SILK</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_SILK</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_SILK</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -548,8 +548,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_SPICES</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_SPICES</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_SPICES</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_SPICES</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -557,8 +557,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_SUGAR</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_SUGAR</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_SUGAR</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_SUGAR</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -566,8 +566,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_TEA</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_TEA</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_TEA</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_TEA</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -575,8 +575,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_TOBACCO</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_TOBACCO</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_TOBACCO</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_TOBACCO</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
@@ -584,8 +584,8 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BONUS_VANILLA</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BONUS_VANILLA</Description>
+			<Type>IMPROVEMENT_PLACE_BONUS_VANILLA</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLACE_BONUS_VANILLA</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LAND_WORKED</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
