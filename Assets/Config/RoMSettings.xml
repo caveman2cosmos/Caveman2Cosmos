@@ -32,7 +32,7 @@
 			<option id="CanNotClaimOcean" key="CanNotClaimOcean" type="boolean" default="False" get="isCanNotClaimOcean" set="setCanNotClaimOcean">
 				<change module="ANewDawnSettings" function="changedCanNotClaimOcean"/>
 			</option>
-			<option id="ShowCivTraits" key="ShowCivTraits" type="boolean" default="False" get="isShowCivTraits" set="setShowCivTraits">
+			<option id="ShowCivTraits" key="ShowCivTraits" type="boolean" default="True" get="isShowCivTraits" set="setShowCivTraits">
 				<change module="ANewDawnSettings" function="changedShowCivTraits"/>
 			</option>
 			<option id="ShowCoastalBuildings" key="ShowCoastalBuildings" type="boolean" default="False" get="isShowCoastalBuildings" set="setShowCoastalBuildings">
