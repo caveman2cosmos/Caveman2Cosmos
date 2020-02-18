@@ -383,7 +383,7 @@
                                 from CvPythonExtensions import CyGlobalContext
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['LUNAR_BASALT','LUNAR_PLAINS','LUNAR_ROCKY','LUNAR_BARREN','LUNAR_DESERT']
+                                    valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE']
                                     valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
                                     return plot.getTerrainType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -426,7 +426,7 @@
                                 import random
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['LUNAR_BASALT','LUNAR_PLAINS','LUNAR_ROCKY','LUNAR_BARREN','LUNAR_DESERT']
+                                    valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE']
                                     valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
                                     return plot.getTerrainType() not in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -435,7 +435,7 @@
                                     destX = -1
                                     destY = -1
                                     numValid = 0
-                                    valid_terrain_strings = ['LUNAR_BASALT','LUNAR_PLAINS','LUNAR_ROCKY','LUNAR_BARREN','LUNAR_DESERT']
+                                    valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE']
                                     valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
                                     for x in range(map.getGridWidth()):
                                         for y in range(map.getGridHeight()):
@@ -472,7 +472,7 @@
                                 import random
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['LUNAR_BASALT','LUNAR_PLAINS','LUNAR_ROCKY','LUNAR_BARREN','LUNAR_DESERT']
+                                    valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE']
                                     valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
                                     return plot.getTerrainType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -664,7 +664,7 @@
                                     valid_improvements = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_improvement_strings]
                                     if plot.getImprovementType() not in valid_improvements:
                                         return False
-                                    valid_terrain_strings = ['LUNAR_BASALT','LUNAR_PLAINS','LUNAR_ROCKY','LUNAR_BARREN','LUNAR_DESERT']
+                                    valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE']
                                     valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
                                     return plot.getTerrainType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -764,7 +764,7 @@
                                     gc = CyGlobalContext()
                                     if not gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY()):
                                         return False
-                                    valid_terrain_strings = ['VENUS','VENUS_HIGHLAND','VENUS_LOWLAND','MARTIAN_ICE','MARTIAN_PERMAFROST','MARTIAN_DUNES','MARTIAN_BARREN','MARTIAN_PLAINS','MARTIAN_ROCKY','MARTIAN_DESERT']
+                                    valid_terrain_strings = ['VENUS','VENUS_HIGHLANDS','VENUS_LOWLANDS','MARTIAN_ICE','MARTIAN_PERMAFROST','MARTIAN_DUNES','MARTIAN_BARREN','MARTIAN_PLAINS','MARTIAN_ROCKY','MARTIAN_DESERT']
                                     valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
                                     return plot.getTerrainType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -980,7 +980,7 @@
                                     gc = CyGlobalContext()
                                     if not gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY()):
                                         return False
-                                    valid_terrain_strings = ['OORT_CLOUD','TRANSTELLAR','RED_DWARF','G_TYPE','RED_GIANT']
+                                    valid_terrain_strings = ['OORT_CLOUD','TRANSTELLAR_SPACE','RED_DWARF','SUN_LIKE_STAR','RED_GIANT']
                                     valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
                                     return plot.getTerrainType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -1210,7 +1210,7 @@
                                     gc = CyGlobalContext()
                                     if not gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY()):
                                         return False
-                                    valid_terrain_strings = ['MILKY_WAY','NEUTRON_STAR','NEBULA','STAR_CLUSTER','ORION_ARM','GALACTIC_CORE','LOCAL_GROUP','VIRGO_SUPERCLUSTER','GALACTIC_VOID','COSMOS']
+                                    valid_terrain_strings = ['MILKY_WAY','NEUTRON_STAR','NEBULA','STAR_CLUSTER','ORION_ARM','GALACTIC_CORE','LOCAL_GROUP','VIRGO_SUPERCLUSTER','INTERGALACTIC_VOID','OBSERVABLE_UNIVERSE']
                                     valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
                                     return plot.getTerrainType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -1315,7 +1315,7 @@
                                     gc = CyGlobalContext()
                                     if not gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY()):
                                         return False
-                                    valid_terrain_strings = ['LOCAL_GROUP','VIRGO_SUPERCLUSTER','GALACTIC_VOID','COSMOS','DISTANT_COSMOS']
+                                    valid_terrain_strings = ['LOCAL_GROUP','VIRGO_SUPERCLUSTER','INTERGALACTIC_VOID','OBSERVABLE_UNIVERSE','DISTANT_COSMOS']
                                     valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
                                     return plot.getTerrainType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -1433,7 +1433,7 @@
                                     gc = CyGlobalContext()
                                     if not gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY()):
                                         return False
-                                    valid_terrain_strings = ['LOCAL_GROUP','VIRGO_SUPERCLUSTER','GALACTIC_VOID','COSMOS','DISTANT_COSMOS','HYPERSPACE']
+                                    valid_terrain_strings = ['LOCAL_GROUP','VIRGO_SUPERCLUSTER','INTERGALACTIC_VOID','OBSERVABLE_UNIVERSE','DISTANT_COSMOS','HYPERSPACE']
                                     valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
                                     return plot.getTerrainType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -4630,7 +4630,7 @@
                                 import random
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['SPACE_STATION1']
+                                    valid_terrain_strings = ['SPACE_STATION_LV1']
                                     valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
                                     return plot.getImprovementType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -4663,7 +4663,7 @@
                                 import random
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['SPACE_STATION2']
+                                    valid_terrain_strings = ['SPACE_STATION_LV2']
                                     valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
                                     return plot.getImprovementType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -4696,7 +4696,7 @@
                                 import random
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['SPACE_STATION3']
+                                    valid_terrain_strings = ['SPACE_STATION_LV3']
                                     valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
                                     return plot.getImprovementType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -4728,7 +4728,7 @@
                                 from CvPythonExtensions import *
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['SPACE_STATION1']
+                                    valid_terrain_strings = ['SPACE_STATION_LV1']
                                     valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
                                     return plot.getImprovementType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -4759,7 +4759,7 @@
                                 from CvPythonExtensions import *
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['SPACE_STATION2']
+                                    valid_terrain_strings = ['SPACE_STATION_LV2']
                                     valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
                                     return plot.getImprovementType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -4925,7 +4925,7 @@
                                 import random
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['TRANSNEPTUNIAN']
+                                    valid_terrain_strings = ['TRANSNEPTUNIAN_SPACE']
                                     valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
                                     return plot.getTerrainType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -4995,7 +4995,7 @@
                                     gc = CyGlobalContext()
                                     if not gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY()):
                                         return False
-                                    valid_terrain_strings = ['VENUS','VENUS_LOWLAND','VENUS_HIGHLAND']
+                                    valid_terrain_strings = ['VENUS','VENUS_LOWLANDS','VENUS_HIGHLANDS']
                                     valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
                                     return plot.getTerrainType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -5510,7 +5510,7 @@
                                 import random
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['RED_DWARF','RED_GIANT','G_TYPE']
+                                    valid_terrain_strings = ['RED_DWARF','RED_GIANT','SUN_LIKE_STAR']
                                     valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
                                     return plot.getTerrainType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -5545,7 +5545,7 @@
                                     gc = CyGlobalContext()
                                     if not gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY()):
                                         return False
-                                    valid_feature_strings = ['CARBON_PLANET','CHTHONIAN_PLANET','DESERT_PLANET','HOT_JUPITER','MINI_NEPTUNE','ROGUE_PLANET','SUPER_EARTH','WATER_PLANET']
+                                    valid_feature_strings = ['CARBON_PLANET','CHTHONIAN_PLANET','DESERT_PLANET','HOT_JUPITER','MINI_NEPTUNE','ROGUE_PLANET','SUPER_EARTH','OCEAN_PLANET']
                                     valid_features = [gc.getInfoTypeForString('FEATURE_'+t) for t in valid_feature_strings]
                                     return plot.getFeatureType() in valid_features
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -6185,7 +6185,7 @@
                                 import random
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['SPACE_STATION1']
+                                    valid_terrain_strings = ['SPACE_STATION_LV1']
                                     valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
                                     return plot.getImprovementType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -6218,7 +6218,7 @@
                                 import random
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['SPACE_STATION2']
+                                    valid_terrain_strings = ['SPACE_STATION_LV2']
                                     valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
                                     return plot.getImprovementType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -6251,7 +6251,7 @@
                                 import random
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['SPACE_STATION3']
+                                    valid_terrain_strings = ['SPACE_STATION_LV3']
                                     valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
                                     return plot.getImprovementType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -6283,7 +6283,7 @@
                                 from CvPythonExtensions import *
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['SPACE_STATION1']
+                                    valid_terrain_strings = ['SPACE_STATION_LV1']
                                     valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
                                     return plot.getImprovementType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -6314,7 +6314,7 @@
                                 from CvPythonExtensions import *
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['SPACE_STATION2']
+                                    valid_terrain_strings = ['SPACE_STATION_LV2']
                                     valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
                                     return plot.getImprovementType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -6346,7 +6346,7 @@
                                 import random
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['SPACE_STATION3']
+                                    valid_terrain_strings = ['SPACE_STATION_LV3']
                                     valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
                                     return plot.getImprovementType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -6378,7 +6378,7 @@
                                 import random
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['SPACE_STATION3']
+                                    valid_terrain_strings = ['SPACE_STATION_LV3']
                                     valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
                                     return plot.getImprovementType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -6410,7 +6410,7 @@
                                 import random
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['SPACE_STATION3']
+                                    valid_terrain_strings = ['SPACE_STATION_LV3']
                                     valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
                                     return plot.getImprovementType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
