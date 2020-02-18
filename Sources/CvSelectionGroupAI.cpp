@@ -116,7 +116,7 @@ bool CvSelectionGroupAI::AI_update()
 {
 	PROFILE("CvSelectionGroupAI::AI_update");
 
-	FAssert(getOwnerINLINE() != NO_PLAYER);
+	FAssert(getOwner() != NO_PLAYER);
 
 	if (!AI_isControlled() || getNumUnits() == 0)
 	{
@@ -147,7 +147,7 @@ bool CvSelectionGroupAI::AI_update()
 
 	setGroupToCacheFor(this);
 
-	FAssert(!(GET_PLAYER(getOwnerINLINE()).isAutoMoves()) || isHuman());
+	FAssert(!(GET_PLAYER(getOwner()).isAutoMoves()) || isHuman());
 
 	int iTempHack = 0; // XXX
 
@@ -169,8 +169,8 @@ bool CvSelectionGroupAI::AI_update()
 					TCHAR szOut[1024];
 					CvWString szTempString;
 					getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
-					sprintf(szOut, "Unit stuck in loop( Warning before short circuit (pass: %d) ): %S(%S)[%d, %d] (%S)\n", iPass, pHeadUnit->getName().GetCString(), GET_PLAYER(pHeadUnit->getOwnerINLINE()).getName(),
-						pHeadUnit->getX_INLINE(), pHeadUnit->getY_INLINE(), szTempString.GetCString());
+					sprintf(szOut, "Unit stuck in loop( Warning before short circuit (pass: %d) ): %S(%S)[%d, %d] (%S)\n", iPass, pHeadUnit->getName().GetCString(), GET_PLAYER(pHeadUnit->getOwner()).getName(),
+						pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString());
 					gDLL->messageControlLog(szOut);
 				//}
 			}
@@ -186,8 +186,8 @@ bool CvSelectionGroupAI::AI_update()
 					TCHAR szOut[1024];
 					CvWString szTempString;
 					getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
-					sprintf(szOut, "Unit stuck in loop: %S(%S)[%d, %d] (%S)\n", pHeadUnit->getName().GetCString(), GET_PLAYER(pHeadUnit->getOwnerINLINE()).getName(),
-						pHeadUnit->getX_INLINE(), pHeadUnit->getY_INLINE(), szTempString.GetCString());
+					sprintf(szOut, "Unit stuck in loop: %S(%S)[%d, %d] (%S)\n", pHeadUnit->getName().GetCString(), GET_PLAYER(pHeadUnit->getOwner()).getName(),
+						pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString());
 					gDLL->messageControlLog(szOut);
 				}
 				
@@ -332,7 +332,7 @@ int CvSelectionGroupAI::AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy,
 
 		CvUnit* pAttacker;
 
-		FAssert(getOwnerINLINE() != NO_PLAYER);
+		FAssert(getOwner() != NO_PLAYER);
 
 	/************************************************************************************************/
 	/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
@@ -341,9 +341,9 @@ int CvSelectionGroupAI::AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy,
 	/************************************************************************************************/
 		// From Lead From Behind by UncutDragon
 	/* original code
-		if (pPlot->getBestDefender(NO_PLAYER, getOwnerINLINE(), NULL, !bPotentialEnemy, bPotentialEnemy) == NULL)
+		if (pPlot->getBestDefender(NO_PLAYER, getOwner(), NULL, !bPotentialEnemy, bPotentialEnemy) == NULL)
 	*/	// modified
-		if (!pPlot->hasDefender(false, NO_PLAYER, getOwnerINLINE(), getHeadUnit(), !bPotentialEnemy, bPotentialEnemy))//disagrees with earlier count
+		if (!pPlot->hasDefender(false, NO_PLAYER, getOwner(), getHeadUnit(), !bPotentialEnemy, bPotentialEnemy))//disagrees with earlier count
 	/************************************************************************************************/
 	/* BETTER_BTS_AI_MOD                       END                                                  */
 	/************************************************************************************************/
@@ -782,7 +782,7 @@ int CvSelectionGroupAI::AI_compareStacks(const CvPlot* pPlot, StackCompare::flag
 	}
 	compareRatio *= 100;
 
-	PlayerTypes eOwner = getOwnerINLINE();
+	PlayerTypes eOwner = getOwner();
 	if (eOwner == NO_PLAYER)
 	{
 		eOwner = getHeadOwner();
@@ -790,7 +790,7 @@ int CvSelectionGroupAI::AI_compareStacks(const CvPlot* pPlot, StackCompare::flag
 	FAssert(eOwner != NO_PLAYER);
 	
 /* original bts code
-	int defenderSum = pPlot->AI_sumStrength(NO_PLAYER, getOwnerINLINE(), eDomainType, true, !bPotentialEnemy, bPotentialEnemy);
+	int defenderSum = pPlot->AI_sumStrength(NO_PLAYER, getOwner(), eDomainType, true, !bPotentialEnemy, bPotentialEnemy);
 */
 	// Clearly meant to use eOwner here ...
 	//	Koshling - changed final param from 'bPotentialEnemy' to '!bPotentialEnemy' since the param is whether
@@ -1007,7 +1007,7 @@ bool CvSelectionGroupAI::AI_isDeclareWar(const CvPlot* pPlot) const
 
 CvPlot* CvSelectionGroupAI::AI_getMissionAIPlot() const
 {
-	return GC.getMapINLINE().plotSorenINLINE(m_iMissionAIX, m_iMissionAIY);
+	return GC.getMap().plotSorenINLINE(m_iMissionAIX, m_iMissionAIY);
 }
 
 
@@ -1036,7 +1036,7 @@ void CvSelectionGroupAI::AI_noteSizeChange(int iChange, int iVolume)
 
 		if ( pPlot != NULL )
 		{
-			GET_PLAYER(getOwnerINLINE()).AI_noteMissionAITargetCountChange(m_eMissionAIType, pPlot, iChange, NULL, iVolume);
+			GET_PLAYER(getOwner()).AI_noteMissionAITargetCountChange(m_eMissionAIType, pPlot, iChange, NULL, iVolume);
 		}
 	}
 }
@@ -1051,7 +1051,7 @@ void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, CvPlot* p
 
 		if ( pPlot != NULL )
 		{
-			GET_PLAYER(getOwnerINLINE()).AI_noteMissionAITargetCountChange(m_eMissionAIType, pPlot, -getNumUnits(), plot(), -getNumUnitCargoVolumeTotal());
+			GET_PLAYER(getOwner()).AI_noteMissionAITargetCountChange(m_eMissionAIType, pPlot, -getNumUnits(), plot(), -getNumUnitCargoVolumeTotal());
 		}
 	}
 
@@ -1059,8 +1059,8 @@ void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, CvPlot* p
 
 	if (pNewPlot != NULL)
 	{
-		m_iMissionAIX = pNewPlot->getX_INLINE();
-		m_iMissionAIY = pNewPlot->getY_INLINE();
+		m_iMissionAIX = pNewPlot->getX();
+		m_iMissionAIY = pNewPlot->getY();
 	}
 	else
 	{
@@ -1083,7 +1083,7 @@ void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, CvPlot* p
 
 		if ( pPlot != NULL )
 		{
-			GET_PLAYER(getOwnerINLINE()).AI_noteMissionAITargetCountChange(m_eMissionAIType, pPlot, getNumUnits(), plot(), getNumUnitCargoVolumeTotal());
+			GET_PLAYER(getOwner()).AI_noteMissionAITargetCountChange(m_eMissionAIType, pPlot, getNumUnits(), plot(), getNumUnitCargoVolumeTotal());
 		}
 	}
 }
@@ -1208,7 +1208,7 @@ CvUnit* CvSelectionGroupAI::AI_findBestDefender(const CvPlot* pDefendPlot, bool 
 			{
 				if ( bConsiderPropertyValues )
 				{
-					iPropertyValue = GET_PLAYER(getOwnerINLINE()).AI_unitPropertyValue(pLoopUnit->getUnitType())*200;
+					iPropertyValue = GET_PLAYER(getOwner()).AI_unitPropertyValue(pLoopUnit->getUnitType())*200;
 					iValue += iPropertyValue;
 				}
 
@@ -1221,7 +1221,7 @@ CvUnit* CvSelectionGroupAI::AI_findBestDefender(const CvPlot* pDefendPlot, bool 
 			{
 				if ( bConsiderPropertyValues )
 				{
-					iPropertyValue = GET_PLAYER(getOwnerINLINE()).AI_unitPropertyValue(pLoopUnit->getUnitType())*200;
+					iPropertyValue = GET_PLAYER(getOwner()).AI_unitPropertyValue(pLoopUnit->getUnitType())*200;
 					iValue -= iPropertyValue;
 				}
 

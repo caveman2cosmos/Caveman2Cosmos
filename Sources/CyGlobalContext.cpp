@@ -30,14 +30,14 @@ bool CyGlobalContext::isDebugBuild() const
 
 CyGame* CyGlobalContext::getCyGame() const
 {
-	static CyGame cyGame(&GC.getGameINLINE());
+	static CyGame cyGame(&GC.getGame());
 	return &cyGame;
 }
 
 
 CyMap* CyGlobalContext::getCyMap() const
 {
-	static CyMap cyMap(&GC.getMapINLINE());
+	static CyMap cyMap(&GC.getMap());
 	return &cyMap;
 }
 
@@ -116,7 +116,7 @@ CyPlayer* CyGlobalContext::getCyPlayer(int idx)
 
 CyPlayer* CyGlobalContext::getCyActivePlayer()
 {
-	PlayerTypes pt = GC.getGameINLINE().getActivePlayer();
+	PlayerTypes pt = GC.getGame().getActivePlayer();
 	return pt != NO_PLAYER ? getCyPlayer(pt) : NULL;
 }
 

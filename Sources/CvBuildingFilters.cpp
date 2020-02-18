@@ -218,12 +218,12 @@ bool BuildingFilterIsCityDefense::isFilteredBuilding(CvPlayer *pPlayer, CvCity *
 	bool bSAD = false;
 	bool bSIN = false;
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_SAD))
+	if (GC.getGame().isOption(GAMEOPTION_SAD))
 	{
 		bSAD = (GC.getBuildingInfo(eBuilding).getLocalDynamicDefense() > 0);
 	}
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
 		bSIN =  ((GC.getBuildingInfo(eBuilding).getFrontSupportPercentModifier() > 0) || 
 		(GC.getBuildingInfo(eBuilding).getShortRangeSupportPercentModifier() > 0) || 
