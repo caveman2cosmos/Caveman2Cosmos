@@ -161,12 +161,6 @@
 			<TechTypes>
 				<PrereqTech>TECH_DIESELPUNK</PrereqTech>
 			</TechTypes>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SCIENTIFIC</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>1130</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -319,18 +313,6 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_RADIOS</Bonus>
 			</PrereqBonuses>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_CHARISMATIC</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<iCost>1080</iCost>
 			<iHappiness>4</iHappiness>
 			<iAsset>5</iAsset>

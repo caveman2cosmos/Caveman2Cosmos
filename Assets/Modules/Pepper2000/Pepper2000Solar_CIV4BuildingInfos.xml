@@ -219,10 +219,6 @@
 					<TerrainType>TERRAIN_EUROPA</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_TITAN</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -419,10 +415,6 @@
 				</PrereqTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_IO</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_TITAN</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -795,10 +787,6 @@
 				</PrereqTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_IO</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_TITAN</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -2046,6 +2034,7 @@
 				<iYield>40</iYield>
 				<iYield>12</iYield>
 			</YieldChanges>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_MEGAVERSE</BuildingClassType>
@@ -2235,6 +2224,7 @@
 			<Strategy>TXT_KEY_BUILDING_SOLAR_CORE_PROBE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SOLAR_CORE_PROBE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SOLAR_CORE_PROBE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_FEMTOTECHNOLOGY</PrereqTech>
 			<iCost>59621</iCost>
@@ -2339,6 +2329,7 @@
 			<Strategy>TXT_KEY_BUILDING_SOLAR_DYSON_SPHERE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SOLAR_DYSON_SPHERE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SOLAR_DYSON_SPHERE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ASTROENGINEERING</PrereqTech>
 			<iCost>42829</iCost>
@@ -2413,6 +2404,7 @@
 			<Strategy>TXT_KEY_BUILDING_SOLAR_MATRIOSHKA_BRAIN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SOLAR_MATRIOSHKA_BRAIN</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SOLAR_MATRIOSHKA_BRAIN</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_STELLAR_COMPUTING</PrereqTech>
 			<iCost>47590</iCost>
@@ -2744,6 +2736,7 @@
 			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_MERCURY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_MERCURY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TERRAFORMED_MERCURY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_TERRAFORMING</PrereqTech>
 			<iCost>18377</iCost>
@@ -3298,6 +3291,7 @@
 			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_CERES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_CERES</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TERRAFORMED_CERES</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LUNAR_TERRAFORMING</PrereqTech>
 			<iCost>22747</iCost>
@@ -3370,6 +3364,7 @@
 			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_CALLISTO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_CALLISTO</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TERRAFORMED_CALLISTO</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LUNAR_TERRAFORMING</PrereqTech>
 			<iCost>22747</iCost>
@@ -3569,6 +3564,7 @@
 			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_EUROPA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_EUROPA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TERRAFORMED_EUROPA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LUNAR_TERRAFORMING</PrereqTech>
 			<iCost>22747</iCost>
@@ -3719,6 +3715,7 @@
 			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_GANYMEDE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_GANYMEDE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TERRAFORMED_GANYMEDE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LUNAR_TERRAFORMING</PrereqTech>
 			<iCost>22747</iCost>
@@ -3948,6 +3945,7 @@
 			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_JUPITER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_JUPITER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TERRAFORMED_JUPITER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_JOVIAN_TERRAFORMING</PrereqTech>
 			<iCost>42829</iCost>
@@ -4028,6 +4026,7 @@
 			<Strategy>TXT_KEY_BUILDING_RHEA_MILITARY_BASE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RHEA_MILITARY_BASE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_RHEA_MILITARY_BASE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_DEFENSES</PrereqTech>
 			<iCost>9454</iCost>
@@ -4157,6 +4156,7 @@
 			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_SATURN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_SATURN</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TERRAFORMED_SATURN</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_JOVIAN_TERRAFORMING</PrereqTech>
 			<iCost>42829</iCost>
@@ -4334,6 +4334,7 @@
 			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_TITANIA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_TITANIA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TERRAFORMED_TITANIA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LUNAR_TERRAFORMING</PrereqTech>
 			<iCost>22747</iCost>
@@ -4377,6 +4378,7 @@
 			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_OBERON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_OBERON</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TERRAFORMED_OBERON</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LUNAR_TERRAFORMING</PrereqTech>
 			<iCost>22747</iCost>
@@ -4517,6 +4519,7 @@
 			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_URANUS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_URANUS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TERRAFORMED_URANUS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_JOVIAN_TERRAFORMING</PrereqTech>
 			<iCost>42829</iCost>
@@ -4658,6 +4661,7 @@
 			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_TRITON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_TRITON</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TERRAFORMED_TRITON</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LUNAR_TERRAFORMING</PrereqTech>
 			<iCost>22747</iCost>
@@ -4691,6 +4695,7 @@
 			<Strategy>TXT_KEY_BUILDING_TRITON_MILITARY_BASE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TRITON_MILITARY_BASE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TRITON_MILITARY_BASE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LAUNCH_ARCOLOGY</PrereqTech>
 			<iCost>18377</iCost>
@@ -4892,6 +4897,7 @@
 			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_NEPTUNE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_NEPTUNE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TERRAFORMED_NEPTUNE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_JOVIAN_TERRAFORMING</PrereqTech>
 			<iCost>42829</iCost>
@@ -5146,6 +5152,7 @@
 			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_PLUTO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRAFORMED_PLUTO</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TERRAFORMED_PLUTO</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LUNAR_TERRAFORMING</PrereqTech>
 			<iCost>22747</iCost>
@@ -5454,6 +5461,7 @@
 			<Strategy>TXT_KEY_BUILDING_SEDNA_COLONY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SEDNA_COLONY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SEDNA_COLONY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_NUCLEAR_PULSE_PROPULSION</PrereqTech>
 			<iCost>13235</iCost>
@@ -5505,6 +5513,7 @@
 			<Strategy>TXT_KEY_BUILDING_PLANET_NINE_COLONY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PLANET_NINE_COLONY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_PLANET_NINE_COLONY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_NUCLEAR_PULSE_PROPULSION</PrereqTech>
 			<iCost>13235</iCost>

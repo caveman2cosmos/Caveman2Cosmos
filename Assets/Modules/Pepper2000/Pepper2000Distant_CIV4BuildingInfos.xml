@@ -1276,12 +1276,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_DISTANT</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqOrTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-			</PrereqOrTerrain>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -1415,7 +1409,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<bPrereqPower>1</bPrereqPower>
+			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_BASILISK</BuildingClass>
@@ -1425,6 +1419,7 @@
 			<Strategy>TXT_KEY_BUILDING_BASILISK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BASILISK</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BASILISK</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_COSMIC_GOVERNANCE</PrereqTech>
 			<iCost>7783</iCost>
@@ -1573,6 +1568,7 @@
 			<Strategy>TXT_KEY_BUILDING_OMELAS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OMELAS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_OMELAS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_OMNIBENEVOLENT_MANDATE</PrereqTech>
 			<iCost>10665</iCost>
@@ -1580,12 +1576,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_DISTANT</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqOrTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-			</PrereqOrTerrain>
 			<CommerceChanges>
 				<iCommerce>100</iCommerce>
 			</CommerceChanges>

@@ -145,7 +145,7 @@
 		<element type="PrereqTech"/>
 		<element type="iTime"/>
 		<element type="iProduction"/>
-		<element type="bRemove"/>
+		<element type="bRemove" minOccurs="0"/>
 		<!--Afforess-->
 		<element type="bCanRemoveWithNoProductionGain" minOccurs="0"/>
 		<!--Afforess-->
@@ -1545,15 +1545,6 @@
 	<ElementType name="PrereqBonuses" content="eltOnly">
 		<element type="BonusType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="ProductionTraitType" content="textOnly"/>
-	<ElementType name="iProductionTrait" content="textOnly" dt:type="int"/>
-	<ElementType name="ProductionTrait" content="eltOnly">
-		<element type="ProductionTraitType"/>
-		<element type="iProductionTrait"/>
-	</ElementType>
-	<ElementType name="ProductionTraits" content="eltOnly">
-		<element type="ProductionTrait" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
 	<ElementType name="FlavorType" content="textOnly"/>
 	<ElementType name="iFlavor" content="textOnly" dt:type="int"/>
 	<ElementType name="Flavor" content="eltOnly">
@@ -2051,7 +2042,6 @@
 		<element type="TechTypes" minOccurs="0"/>
 		<element type="BonusType" minOccurs="0"/>
 		<element type="PrereqBonuses" minOccurs="0"/>
-		<element type="ProductionTraits" minOccurs="0"/>
 		<element type="Flavors" minOccurs="0"/>
 		<element type="iAIWeight" minOccurs="0"/>
 		<element type="iCost" minOccurs="0"/>
@@ -2801,7 +2791,6 @@
 		<element type="iWithdrawalChange" minOccurs="0"/>
 		<element type="iPursuitChange" minOccurs="0"/>
 		<element type="CarrierUnitAIs" minOccurs="0"/>
-		<element type="ProductionTraits" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="SpecialUnitInfos" content="eltOnly">
 		<element type="SpecialUnitInfo" maxOccurs="*"/>

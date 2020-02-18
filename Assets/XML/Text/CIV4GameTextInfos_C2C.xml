@@ -260,28 +260,38 @@
 	<TEXT>
 		<Tag>TXT_KEY_PER_POP</Tag>
 		<English>(Per Population)</English>
+		<French>(par Population)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_INVESTIGATED_WANTED_RESULT</Tag>
 		<English>Investigative efforts in the city of %s1_city have resulted in the identification of a wanted suspect in connection with heinous criminal acts!</English>
+		<French>Les efforts d'enquête dans la ville de %s1_city ont abouti à l'identification d'un suspect recherché en lien avec des actes criminels odieux!</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_INVESTIGATED_BECOME_WANTED</Tag>
 		<English>Your %s1_unit is on the run from the local law in %s2_city!</English>
+		<French>Votre %s1_unit est en fuite des autorités locales de %s2_city!</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_CIVILOPEDIA</Tag>
+		<English>Pedia</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_CATEGORY_PREREQUISITE</Tag>
 		<English>[ICON_BULLET]May only exist on a %s1_MapCat.</English>
 		<German>[ICON_BULLET]kann nur auf einem %s1_MapCat existieren</German>
+		<French>[ICON_BULLET]Ne peut exister que sur une %s1_MapCat.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_CATEGORY_TERRAIN</Tag>
 		<English>This is a %s1_MapCat.</English>
 		<German>Das ist ein %s1_MapCat.</German>
+		<French>%s1_MapCat</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CRIMINAL_CAUGHT</Tag>
 		<English>The %s1_CivAdj %s2_UnitName responsible was foiled in his efforts and spotted in the process!</English>
+		<French>Le responsable %s2_UnitName %s1_CivAdj a été repéré et son action déjouée!</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_YOUR_CRIMINAL_CAUGHT</Tag>
@@ -456,14 +466,6 @@
 		<German>[COLOR_RED]Erfordert die Technologie [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</German>
 		<Italian>[COLOR_RED]Richiede [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_RED]Requiere [NUM1:el:la:los:las] [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_FREEDOM_ANGER</Tag>
-		<English>[ICON_BULLET][ICON_UNHAPPY] Penalty for Civs without [LINK=%s1_CivicType]%s2_CivicName[\LINK]</English>
-		<French>[ICON_BULLET][ICON_UNHAPPY] Pénalité pour les civilisations sans [LINK=%s1_CivicType]%s2_CivicName[\LINK]</French>
-		<German>[ICON_BULLET][ICON_UNHAPPY] Strafe für Zivs ohne Staatsform [LINK=%s1_CivicType]%s2_CivicName[\LINK]</German>
-		<Italian>[ICON_BULLET][ICON_UNHAPPY] Penalià per le civiltà senza la forma di governo [LINK=%s1_CivicType]%s2_CivicName[\LINK]</Italian>
-		<Spanish>[ICON_BULLET]Penalización de [ICON_UNHAPPY] a las civilizaciones sin [LINK=%s1_CivicType]%s2_CivicName[\LINK]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUILDING_HAPPINESS</Tag>

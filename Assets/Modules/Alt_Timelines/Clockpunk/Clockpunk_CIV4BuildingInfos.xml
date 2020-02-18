@@ -52,12 +52,6 @@
 			<ObsoleteTech>TECH_ASSEMBLY_LINE</ObsoleteTech>
 			<iCost>380</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_INDUSTRIOUS</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -105,12 +99,6 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<iCost>770</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iMaintenanceModifier>5</iMaintenanceModifier>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -158,12 +146,6 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<iCost>380</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_INDUSTRIOUS</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
@@ -199,12 +181,6 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<iCost>380</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_INDUSTRIOUS</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_MECHANICAL</UnitCombatType>

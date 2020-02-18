@@ -500,7 +500,6 @@ void CyInfoPythonInterface1()
 
 		.def("getPrereqAndTechs", &CvUnitInfo::getPrereqAndTechs, "int (int i)")
 		.def("getPrereqOrBonuses", &CvUnitInfo::getPrereqOrBonuses, "int (int i)")
-		//.def("getProductionTraits", &CvUnitInfo::getProductionTraits, "int (int i)")
 		.def("getFlavorValue", &CvUnitInfo::getFlavorValue, "int (int i)")
 		.def("getTerrainAttackModifier", &CvUnitInfo::getTerrainAttackModifier, "int (int i)")
 		.def("getTerrainDefenseModifier", &CvUnitInfo::getTerrainDefenseModifier, "int (int i)")
@@ -619,7 +618,6 @@ void CyInfoPythonInterface1()
 		.def("isCityLoad", &CvSpecialUnitInfo::isCityLoad, "bool ()")
 
 		.def("isCarrierUnitAIType", &CvSpecialUnitInfo::isCarrierUnitAIType, "bool (int i)")
-		//.def("getProductionTraits", &CvSpecialUnitInfo::getProductionTraits, "int (int i)")
 		;
 
 	python::class_<CvCivicOptionInfo, python::bases<CvInfoBase> >("CvCivicOptionInfo")
@@ -917,8 +915,6 @@ void CyInfoPythonInterface1()
 		.def("getPrereqAndTechs", &CvBuildingInfo::getPrereqAndTechs, "int (int i)")
 		.def("getPrereqOrBonuses", &CvBuildingInfo::getPrereqOrBonuses, "int (int i)")
 		.def("getNumPrereqOrBonuses", &CvBuildingInfo::getNumPrereqOrBonuses, "int ()")
-		//.def("getProductionTraits", &CvBuildingInfo::getProductionTraits, "int (int i)")
-		//.def("getHappinessTraits", &CvBuildingInfo::getHappinessTraits, "int (int i)")
 		.def("getBuildingHappinessChanges", &CvBuildingInfo::getBuildingHappinessChanges, "int (int i)")
 		.def("getPrereqNumOfBuildingClass", &CvBuildingInfo::getPrereqNumOfBuildingClass, "int (int i)")
 		.def("getFlavorValue", &CvBuildingInfo::getFlavorValue, "int (int i)")
@@ -982,10 +978,6 @@ void CyInfoPythonInterface1()
 		.def("getObsoleteTech", &CvSpecialBuildingInfo::getObsoleteTech, "int ()")
 		.def("getTechPrereq", &CvSpecialBuildingInfo::getTechPrereq, "int ()")
 		.def("isValid", &CvSpecialBuildingInfo::isValid, "bool ()")
-
-		// Arrays
-
-		//.def("getProductionTraits", &CvSpecialBuildingInfo::getProductionTraits, "int (int i)")
 		;
 
 	python::class_<CvPromotionLineInfo, python::bases<CvInfoBase> >("CvPromotionLineInfo")

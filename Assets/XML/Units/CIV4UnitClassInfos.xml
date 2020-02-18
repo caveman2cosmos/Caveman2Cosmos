@@ -184,7 +184,7 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_2</Type>
-			<Description>CHANGED_TXT_KEY_UNIT_EXECUTIVE_2</Description>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_2</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>5</iMaxPlayerInstances>
@@ -4660,6 +4660,14 @@ Assyria, Hungary, Minoa, Armenia
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_NEANDERTHAL_WARRIOR</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>UNITCLASS_NEANDERTHAL_WATCHER</Type>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_WATCHER</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<DefaultUnit>UNIT_NEANDERTHAL_WATCHER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_PARTISAN</Type>
@@ -10781,14 +10789,6 @@ Assyria, Hungary, Minoa, Armenia
 			<DefaultUnit>UNIT_NEANDERTHAL_GATHERER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
-			<Type>UNITCLASS_NEANDERTHAL_WORKER</Type>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_WORKER</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<DefaultUnit>UNIT_NEANDERTHAL_WORKER</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
 			<Type>UNITCLASS_NEANDERTHAL_WISE_WOMAN</Type>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_WISE_WOMAN</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
@@ -10805,6 +10805,14 @@ Assyria, Hungary, Minoa, Armenia
 			<DefaultUnit>UNIT_NEANDERTHAL_SHEPHERD</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
+			<Type>UNITCLASS_NEANDERTHAL_SLINGER</Type>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_SLINGER</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<DefaultUnit>UNIT_NEANDERTHAL_SLINGER</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
 			<Type>UNITCLASS_NEANDERTHAL_TRAINEDDOG</Type>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_TRAINEDDOG</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
@@ -10813,12 +10821,12 @@ Assyria, Hungary, Minoa, Armenia
 			<DefaultUnit>UNIT_NEANDERTHAL_TRAINEDDOG</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
-			<Type>UNITCLASS_NEANDERTHAL_OUTRIGGER</Type>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_OUTRIGGER</Description>
+			<Type>UNITCLASS_NEANDERTHAL_TRIBAL_GUARDIAN</Type>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_TRIBAL_GUARDIAN</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<DefaultUnit>UNIT_NEANDERTHAL_OUTRIGGER</DefaultUnit>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<DefaultUnit>UNIT_NEANDERTHAL_TRIBAL_GUARDIAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_NEANDERTHAL_KAYAK</Type>
@@ -10853,14 +10861,6 @@ Assyria, Hungary, Minoa, Armenia
 			<DefaultUnit>UNIT_NEANDERTHAL_RAFT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
-			<Type>UNITCLASS_NEANDERTHAL_CLASSIC_WORKBOAT</Type>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_CLASSIC_WORKBOAT</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<DefaultUnit>UNIT_NEANDERTHAL_CLASSIC_WORKBOAT</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
 			<Type>UNITCLASS_NEANDERTHAL_WORKBOAT</Type>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_WORKBOAT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
@@ -10883,6 +10883,14 @@ Assyria, Hungary, Minoa, Armenia
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_NEANDERTHAL_ELEPHANT_RIDER</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>UNITCLASS_NEANDERTHAL_ENFORCER</Type>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_ENFORCER</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<DefaultUnit>UNIT_NEANDERTHAL_ENFORCER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_NEANDERTHAL_OBSIDIAN_SPEARMAN</Type>
@@ -10947,6 +10955,14 @@ Assyria, Hungary, Minoa, Armenia
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_NEANDERTHAL_STONE_MACEMAN</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>UNITCLASS_NEANDERTHAL_HEALER</Type>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_HEALER</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<DefaultUnit>UNIT_NEANDERTHAL_HEALER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_NEANDERTHAL_HUNTER</Type>

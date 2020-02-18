@@ -1568,6 +1568,7 @@
 			<Strategy>TXT_KEY_BUILDING_PHOBOS_INDUSTRIAL_COMPLEX_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PHOBOS_INDUSTRIAL_COMPLEX</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_PHOBOS_INDUSTRIAL_COMPLEX</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_NANOMINING</PrereqTech>
 			<iCost>11175</iCost>
@@ -2247,6 +2248,7 @@
 			<Strategy>TXT_KEY_BUILDING_MARS_TERRA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARS_TERRA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MARS_TERRA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_TERRAFORMING</PrereqTech>
 			<iCost>27966</iCost>
@@ -2345,6 +2347,7 @@
 			<Strategy>TXT_KEY_BUILDING_RING_OF_MARS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RING_OF_MARS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_RING_OF_MARS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_MEGASTRUCTURES</PrereqTech>
 			<iCost>21176</iCost>
@@ -2434,6 +2437,7 @@
 				<iYield>30</iYield>
 				<iYield>9</iYield>
 			</YieldChanges>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_MEGAVERSE</BuildingClassType>

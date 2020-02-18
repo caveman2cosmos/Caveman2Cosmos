@@ -59,7 +59,7 @@ public:
 
 	bool checkCondition()
 	{
-		return m_pCondition->evaluate(cvInternalGlobals::getInstance().getGameINLINE().getGameObject());
+		return m_pCondition->evaluate(cvInternalGlobals::getInstance().getGame().getGameObject());
 	}
 
 	T* getInfo()

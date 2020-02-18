@@ -216,7 +216,7 @@ int CvInitCore::getNumHumans() const
 int CvInitCore::getNumDefinedPlayers() const
 {
 	int iCount = 0;
-	for (int i = 0; i < MAX_PLAYERS; ++i)// MAY be a case where MAX_PC_PLAYERS is a better reference.  MAX_CIV_PLAYERS was here previously.
+	for (int i = 0; i < MAX_PC_PLAYERS; ++i)
 	{
 		if ((getCiv((PlayerTypes)i) != NO_CIVILIZATION) && (getLeader((PlayerTypes)i) != NO_LEADER))
 		{
@@ -1961,7 +1961,7 @@ void CvInitCore::write(FDataStreamBase* pStream)
 	//	those within the current viewport (and in viewport coordinates).  They are actually persisted via
 	//	Python anyway
 	GC.clearSigns();
-	GC.getGameINLINE().processGreatWall(false);
+	GC.getGame().processGreatWall(false);
 	GC.getCurrentViewport()->setActionState(VIEWPORT_ACTION_STATE_SAVING);
 
 	/*
@@ -1972,16 +1972,7 @@ void CvInitCore::write(FDataStreamBase* pStream)
 // BUG - Save Format - start
 	// If any optional mod alters the number of game options or save format in any way,
 	// set the BUG save format bit and write out the number of game options later.
-	// It is safe to have multiple #ifdefs trigger.
-	bool bugSaveFlag = false;
-#ifdef _BUFFY
-	bugSaveFlag = true;
 	uiSaveFlag |= BUG_DLL_SAVE_FORMAT;
-#endif
-#ifdef _MOD_GWARM
-	bugSaveFlag = true;
-	uiSaveFlag |= BUG_DLL_SAVE_FORMAT;
-#endif
 // BUG - Save Format - end
 
 	if ( wrapper.m_requestUseTaggedFormat || GC.getDefineINT("ALWAYS_USE_MAX_COMPAT_SAVES") )
@@ -2011,7 +2002,7 @@ void CvInitCore::write(FDataStreamBase* pStream)
 /*                                                                                              */
 /* Savegame compatibility                                                                       */
 /************************************************************************************************/
-	int iNumModLoadControlVector = GC.getModLoadControlVectorSize();
+	const int iNumModLoadControlVector = GC.getModLoadControlVectorSize();
 	WRAPPER_WRITE_DECORATED(wrapper, "CvInitCore", iNumModLoadControlVector, "numModControlVectors");
 
 	for (int uiIndex = 0; uiIndex < iNumModLoadControlVector; ++uiIndex)
@@ -2046,11 +2037,8 @@ void CvInitCore::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_ARRAY(wrapper, "CvInitCore", m_iNumVictories, m_abVictories);
 
 // BUG - Save Format - start
-	if (bugSaveFlag)
-	{
-		// write out the number of game options for the external parser tool
-		WRAPPER_WRITE(wrapper, "CvInitCore", (int)NUM_GAMEOPTION_TYPES);
-	}
+	// write out the number of game options for the external parser tool
+	WRAPPER_WRITE(wrapper, "CvInitCore", NUM_GAMEOPTION_TYPES);
 // BUG - Save Format - end
 
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvInitCore", REMAPPED_CLASS_TYPE_GAMEOPTIONS, NUM_GAMEOPTION_TYPES, m_abOptions);
@@ -2252,7 +2240,7 @@ void CvInitCore::reassignPlayerAdvanced(PlayerTypes eOldID, PlayerTypes eNewID)
 		// We may have a new active player id...
 		if (getActivePlayer() == eOldID)
 		{
-			GC.getGameINLINE().setActivePlayer(eNewID);
+			GC.getGame().setActivePlayer(eNewID);
 		}
 		else if (getActivePlayer() == eNewID)
 		{
@@ -2339,15 +2327,15 @@ void CvInitCore::checkVersions()
 		if (bAssetsChanged)
 		{
 			// DLL or assets changed, recommend modifier reloading
-			if ( NO_PLAYER != GC.getGameINLINE().getActivePlayer() )
+			if ( NO_PLAYER != GC.getGame().getActivePlayer() )
 			{
-				CvPlayer& kPlayer = GET_PLAYER(GC.getGameINLINE().getActivePlayer());
+				CvPlayer& kPlayer = GET_PLAYER(GC.getGame().getActivePlayer());
 				if (kPlayer.isAlive() && kPlayer.isHuman())
 				{
 					CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_MODIFIER_RECALCULATION);
 					if (NULL != pInfo)
 					{
-						gDLL->getInterfaceIFace()->addPopup(pInfo, GC.getGameINLINE().getActivePlayer(), true, true);
+						gDLL->getInterfaceIFace()->addPopup(pInfo, GC.getGame().getActivePlayer(), true, true);
 					}
 					m_uiSavegameAssetCheckSum = GC.getInitCore().getAssetCheckSum();
 					m_bRecalcRequestProcessed = true;

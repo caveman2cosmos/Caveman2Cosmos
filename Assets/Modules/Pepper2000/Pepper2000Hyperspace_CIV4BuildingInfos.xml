@@ -1058,6 +1058,7 @@
 				<iYield>70</iYield>
 				<iYield>21</iYield>
 			</YieldChanges>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_EXAVERSE</BuildingClassType>
@@ -1772,6 +1773,7 @@
 			<Strategy>TXT_KEY_BUILDING_UNIVERSE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_SELF_CREATION</PrereqTech>
 			<iCost>14732</iCost>
