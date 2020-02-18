@@ -1072,8 +1072,8 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_AINU_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<RawVicinityBonus>BONUS_FUR</RawVicinityBonus>
+			<PrereqTech>TECH_TRACKING</PrereqTech>
+			<RawVicinityBonus>BONUS_BEAVERS</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_ASIAN</BuildingClassType>
@@ -1113,7 +1113,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_AKA_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_HUNTING</PrereqTech>
+			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
@@ -1179,7 +1179,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_AKKAD</FreeBonus>
+			<FreeBonus>BONUS_AKKADIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iConquestProb>100</iConquestProb>
@@ -1703,7 +1703,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ARMENIAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
-			<RawVicinityBonus>BONUS_WINE</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_GRAPES</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingClassType>
@@ -1848,7 +1848,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
-			<RawVicinityBonus>BONUS_LEAD</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_LEAD_ORE</RawVicinityBonus>
 			<!-- Construction -->
 			<iCost>876</iCost>
 			<!-- Main effects -->
@@ -1857,7 +1857,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_ATHENS</FreeBonus>
+			<FreeBonus>BONUS_ATHENIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iConquestProb>100</iConquestProb>
@@ -1879,7 +1879,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_AUSTRALIAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_NAVIGATION</PrereqTech>
-			<RawVicinityBonus>BONUS_GOLD</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_GOLD_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_OCEANIAN</BuildingClassType>
@@ -2518,7 +2518,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BULGARIAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_STIRRUP</PrereqTech>
-			<RawVicinityBonus>BONUS_LEAD</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_LEAD_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_EUROPEAN</BuildingClassType>
@@ -2559,7 +2559,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BURMESE_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
-			<RawVicinityBonus>BONUS_TIMBER</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_PRIME_TIMBER</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
@@ -2606,7 +2606,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BYZANTINE_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
-			<RawVicinityBonus>BONUS_IRON</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_IRON_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingClassType>
@@ -2656,7 +2656,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_RAILROAD</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_GOLD</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_GOLD_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingClassType>
@@ -2701,7 +2701,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CANADIAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_SOCIAL_CONTRACT</PrereqTech>
-			<RawVicinityBonus>BONUS_FUR</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_BEAVERS</RawVicinityBonus>
 			<PrereqAndTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -3026,7 +3026,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_DOLPHIN</FreeBonus>
+			<FreeBonus>BONUS_CETACEA_SAPIEN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iConquestProb>100</iConquestProb>
@@ -3047,7 +3047,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CEYLONESE_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_WATERWORKS</PrereqTech>
+			<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_TEA</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -3187,7 +3187,7 @@
 			<RawVicinityBonus>BONUS_HORSE</RawVicinityBonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -3384,7 +3384,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CHOLA_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
-			<RawVicinityBonus>BONUS_TIN</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_TIN_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_ASIAN</BuildingClassType>
@@ -3515,7 +3515,7 @@
 			<RawVicinityBonus>BONUS_HORSE</RawVicinityBonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -3614,7 +3614,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CREE_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_HUNTING</PrereqTech>
+			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<RawVicinityBonus>BONUS_RABBIT</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -3675,7 +3675,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_CROATIA</FreeBonus>
+			<FreeBonus>BONUS_CROATIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iConquestProb>100</iConquestProb>
@@ -3791,7 +3791,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
-			<RawVicinityBonus>BONUS_GOLD</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_GOLD_ORE</RawVicinityBonus>
 			<!-- Construction -->
 			<iCost>2064</iCost>
 			<!-- Main effects -->
@@ -3800,7 +3800,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_DENMARK</FreeBonus>
+			<FreeBonus>BONUS_DANISH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iConquestProb>100</iConquestProb>
@@ -3822,7 +3822,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DENE_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
-			<RawVicinityBonus>BONUS_SEA_LIONS</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_SEA_LION_AND_SEAL</RawVicinityBonus>
 			<PrereqAndTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -3875,7 +3875,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DUTCH_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_NAVAL_CANNON</PrereqTech>
-			<RawVicinityBonus>BONUS_CANNABIS</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_HEMP</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
@@ -3932,7 +3932,7 @@
 			<RawVicinityBonus>BONUS_DONKEY</RawVicinityBonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -4177,7 +4177,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
-			<RawVicinityBonus>BONUS_LEAD</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_LEAD_ORE</RawVicinityBonus>
 			<!-- Construction -->
 			<iCost>1104</iCost>
 			<!-- Main effects -->
@@ -4281,7 +4281,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_FIGI</FreeBonus>
+			<FreeBonus>BONUS_FIJIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iConquestProb>100</iConquestProb>
@@ -4385,7 +4385,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_FRENCH_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_ARISTOCRACY</PrereqTech>
-			<RawVicinityBonus>BONUS_WINE</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_GRAPES</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
@@ -4643,7 +4643,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GHANA</FreeBonus>
+			<FreeBonus>BONUS_GHANAIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iConquestProb>100</iConquestProb>
@@ -4817,7 +4817,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GYPSY</FreeBonus>
+			<FreeBonus>BONUS_ROMANI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iConquestProb>100</iConquestProb>
@@ -4915,7 +4915,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_HATTIAN</FreeBonus>
+			<FreeBonus>BONUS_HAITIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iConquestProb>100</iConquestProb>
@@ -5127,7 +5127,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_HOLYROMAN</FreeBonus>
+			<FreeBonus>BONUS_HOLY_ROMAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<BuildingClassProductionModifiers>
@@ -5259,7 +5259,7 @@
 			<RawVicinityBonus>BONUS_HORSE</RawVicinityBonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -5437,7 +5437,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_INCAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
-			<RawVicinityBonus>BONUS_POTATO</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_POTATOES</RawVicinityBonus>
 			<PrereqAndTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_PEAK</TerrainType>
@@ -5664,7 +5664,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_ENLIGHTENMENT</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_POTATO</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_POTATOES</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_EUROPEAN</BuildingClassType>
@@ -5705,7 +5705,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_IROQUOIS_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_AXE_MAKING</PrereqTech>
-			<RawVicinityBonus>BONUS_TIMBER</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_PRIME_TIMBER</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
@@ -5859,7 +5859,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_COLONIALISM</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_CANNABIS</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_HEMP</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingClassType>
@@ -5982,8 +5982,8 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_JIVARO_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_HUNTING_TACTICS</PrereqTech>
-			<RawVicinityBonus>BONUS_CANNABIS</RawVicinityBonus>
+			<PrereqTech>TECH_HUNTING</PrereqTech>
+			<RawVicinityBonus>BONUS_HEMP</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
@@ -6179,7 +6179,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_KANEMBORNU</FreeBonus>
+			<FreeBonus>BONUS_KANEM_BORNU</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iConquestProb>100</iConquestProb>
@@ -6200,7 +6200,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_KHMER_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_WATERWORKS</PrereqTech>
+			<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 			<RawVicinityBonus>BONUS_BANANA</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -6259,7 +6259,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_KLAMATH_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_RIFLING</PrereqTech>
-			<RawVicinityBonus>BONUS_WINE</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_GRAPES</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingClassType>
@@ -6300,7 +6300,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_KONGOLESE_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
-			<RawVicinityBonus>BONUS_TIMBER</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_PRIME_TIMBER</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_AFRICAN</BuildingClassType>
@@ -6340,7 +6340,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_KONJO_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_UTOPIA</PrereqTech>
+			<PrereqTech>TECH_COMMUNISM</PrereqTech>
 			<RawVicinityBonus>BONUS_BANANA</RawVicinityBonus>
 			<PrereqAndTerrain>
 				<PrereqTerrain>
@@ -6457,7 +6457,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
-			<RawVicinityBonus>BONUS_PLATINUM</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_PLATINUM_ORE</RawVicinityBonus>
 			<!- Construction ->
 			<iCost>1992</iCost>
 			<!- Main effects ->
@@ -6466,7 +6466,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_LEON</FreeBonus>
+			<FreeBonus>BONUS_LEONESE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!- Special properties ->
 			<iConquestProb>100</iConquestProb>
@@ -6530,10 +6530,10 @@
 			<ArtDefineTag>ART_DEF_BUILDING_LUBA_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_TRADE</PrereqTech>
-			<RawVicinityBonus>BONUS_SAPPHIRE</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_SAPPHIRES</RawVicinityBonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 			</PrereqOrTerrain>
@@ -6628,7 +6628,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
-			<RawVicinityBonus>BONUS_COPPER</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_COPPER_ORE</RawVicinityBonus>
 			<!-- Construction -->
 			<iCost>876</iCost>
 			<!-- Main effects -->
@@ -6807,7 +6807,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
-			<RawVicinityBonus>BONUS_CANNABIS</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_HEMP</RawVicinityBonus>
 			<!-- Construction -->
 			<iCost>1860</iCost>
 			<!-- Main effects -->
@@ -6839,7 +6839,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_TATTOOS</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_TIMBER</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_PRIME_TIMBER</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_OCEANIAN</BuildingClassType>
@@ -7119,7 +7119,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MEXICAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CAVALRY_TACTICS</PrereqTech>
-			<RawVicinityBonus>BONUS_IRON</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_IRON_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingClassType>
@@ -7239,7 +7239,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_MISSI</FreeBonus>
+			<FreeBonus>BONUS_MISSISSIPPIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iConquestProb>100</iConquestProb>
@@ -7301,7 +7301,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_MOCHE_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_BLOOD_CULT</PrereqTech>
+			<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_TURQUOISE</RawVicinityBonus>
 			<PrereqAndTerrain>
@@ -7353,7 +7353,7 @@
 			<RawVicinityBonus>BONUS_HORSE</RawVicinityBonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -7496,7 +7496,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MUTAPA_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MASONRY</PrereqTech>
-			<RawVicinityBonus>BONUS_GOLD</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_GOLD_ORE</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_SAVANNA</FeatureType>
@@ -7553,7 +7553,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
-			<RawVicinityBonus>BONUS_SILVER</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_SILVER_ORE</RawVicinityBonus>
 			<!-- Construction -->
 			<iCost>876</iCost>
 			<!-- Main effects -->
@@ -7707,7 +7707,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NEPAL_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MASONRY</PrereqTech>
-			<RawVicinityBonus>BONUS_CANNABIS</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_HEMP</RawVicinityBonus>
 			<PrereqAndTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_PEAK</TerrainType>
@@ -7732,7 +7732,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_NEPAL</FreeBonus>
+			<FreeBonus>BONUS_NEPALESE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iConquestProb>100</iConquestProb>
@@ -7778,7 +7778,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_NEWZEALAND</FreeBonus>
+			<FreeBonus>BONUS_NEW_ZEALAND</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iConquestProb>100</iConquestProb>
@@ -7810,7 +7810,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<PrereqTech>TECH_TRADE</PrereqTech>
-			<RawVicinityBonus>BONUS_GOLD</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_GOLD_ORE</RawVicinityBonus>
 			<!-- Construction -->
 			<iCost>918</iCost>
 			<!-- Main effects -->
@@ -7840,7 +7840,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_NOOTKA_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_WOOD_WORKING</PrereqTech>
+			<PrereqTech>TECH_WOODWORKING</PrereqTech>
 			<RawVicinityBonus>BONUS_FISH</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -8077,7 +8077,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PAKISTANI_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
-			<RawVicinityBonus>BONUS_ELEPHANT</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_ELEPHANTS</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingClassType>
@@ -8165,7 +8165,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PARTHIAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_HORSE_BREEDING</PrereqTech>
-			<RawVicinityBonus>BONUS_TIN</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_TIN_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingClassType>
@@ -8206,7 +8206,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PERSIAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
-			<RawVicinityBonus>BONUS_GOLD</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_GOLD_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingClassType>
@@ -8302,7 +8302,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_PHOENICAN</FreeBonus>
+			<FreeBonus>BONUS_PHOENICIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iConquestProb>100</iConquestProb>
@@ -8343,7 +8343,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_PICT</FreeBonus>
+			<FreeBonus>BONUS_PICTISH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iConquestProb>100</iConquestProb>
@@ -8536,7 +8536,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PRUSSIAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
-			<RawVicinityBonus>BONUS_PLATINUM</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_PLATINUM_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_EUROPEAN</BuildingClassType>
@@ -8596,7 +8596,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_QUANG</FreeBonus>
+			<FreeBonus>BONUS_QIANG</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iConquestProb>100</iConquestProb>
@@ -8685,7 +8685,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_RAPANUI</FreeBonus>
+			<FreeBonus>BONUS_RAPA_NUI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<BuildingClassProductionModifiers>
@@ -8888,7 +8888,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_RUSSIAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_GUILDS</PrereqTech>
-			<RawVicinityBonus>BONUS_FUR</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_BEAVERS</RawVicinityBonus>
 			<PrereqAndTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -9114,7 +9114,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SAXON_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MILITARY_TRAINING</PrereqTech>
-			<RawVicinityBonus>BONUS_IRON</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_IRON_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_EUROPEAN</BuildingClassType>
@@ -9155,7 +9155,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SCOTTISH_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_FOLK_MUSIC</PrereqTech>
-			<RawVicinityBonus>BONUS_SEA_LIONS</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_SEA_LION_AND_SEAL</RawVicinityBonus>
 			<PrereqAndTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_HILL</TerrainType>
@@ -9209,7 +9209,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SCYTHIAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
-			<RawVicinityBonus>BONUS_SILVER</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_SILVER_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingClassType>
@@ -9300,7 +9300,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_SHANG_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_BLOOD_CULT</PrereqTech>
+			<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			<RawVicinityBonus>BONUS_JADE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -9342,7 +9342,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SIAMESE_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
-			<RawVicinityBonus>BONUS_ELEPHANT</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_ELEPHANTS</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
@@ -9458,7 +9458,7 @@
 			<RawVicinityBonus>BONUS_BISON</RawVicinityBonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -9525,7 +9525,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_SLOVAKIA</FreeBonus>
+			<FreeBonus>BONUS_SLOVAKIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iConquestProb>100</iConquestProb>
@@ -9548,7 +9548,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_SEAFARING</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_CANNABIS</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_HEMP</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_AFRICAN</BuildingClassType>
@@ -9599,7 +9599,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
-			<RawVicinityBonus>BONUS_IRON</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_IRON_ORE</RawVicinityBonus>
 			<!-- Construction -->
 			<iCost>2208</iCost>
 			<!-- Main effects -->
@@ -9630,7 +9630,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SOUTHAFRICAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
-			<RawVicinityBonus>BONUS_SEA_LIONS</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_SEA_LION_AND_SEAL</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_AFRICAN</BuildingClassType>
@@ -9653,7 +9653,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_SOUTHAFRICAN</FreeBonus>
+			<FreeBonus>BONUS_SOUTH_AFRICAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iConquestProb>100</iConquestProb>
@@ -9674,7 +9674,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_SOVIET_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_UTOPIA</PrereqTech>
+			<PrereqTech>TECH_COMMUNISM</PrereqTech>
 			<RawVicinityBonus>BONUS_NATURAL_GAS</RawVicinityBonus>
 			<PrereqAndTerrain>
 				<PrereqTerrain>
@@ -9728,7 +9728,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SPANISH_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
-			<RawVicinityBonus>BONUS_GOLD</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_GOLD_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_EUROPEAN</BuildingClassType>
@@ -9788,7 +9788,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SPARTAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
-			<RawVicinityBonus>BONUS_COPPER</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_COPPER_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_EUROPEAN</BuildingClassType>
@@ -9917,7 +9917,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SWAZI_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
-			<RawVicinityBonus>BONUS_LEAD</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_LEAD_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_AFRICAN</BuildingClassType>
@@ -9958,7 +9958,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SWISS_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
-			<RawVicinityBonus>BONUS_SILVER</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_SILVER_ORE</RawVicinityBonus>
 			<PrereqAndTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_PEAK</TerrainType>
@@ -10081,7 +10081,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_TAHITI</FreeBonus>
+			<FreeBonus>BONUS_TAHITIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iConquestProb>100</iConquestProb>
@@ -10193,7 +10193,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_TIN</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_TIN_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingClassType>
@@ -10389,8 +10389,8 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<PrereqTech>TECH_MUSIC</PrereqTech>
-			<RawVicinityBonus>BONUS_SILVER</RawVicinityBonus>
+			<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
+			<RawVicinityBonus>BONUS_SILVER_ORE</RawVicinityBonus>
 			<!-- Construction -->
 			<iCost>1680</iCost>
 			<!-- Main effects -->
@@ -10627,7 +10627,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TROJAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
-			<RawVicinityBonus>BONUS_LEAD</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_LEAD_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_EUROPEAN</BuildingClassType>
@@ -10864,7 +10864,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_VENICE</FreeBonus>
+			<FreeBonus>BONUS_VENETIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iConquestProb>100</iConquestProb>
@@ -10927,7 +10927,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_VIETNAMESE_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_STEEL</PrereqTech>
-			<RawVicinityBonus>BONUS_WINE</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_GRAPES</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
@@ -10974,7 +10974,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_VIKING_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_SAILING</PrereqTech>
-			<RawVicinityBonus>BONUS_TIMBER</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_PRIME_TIMBER</RawVicinityBonus>
 			<PrereqAndTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -11120,10 +11120,10 @@
 			<ArtDefineTag>ART_DEF_BUILDING_XIONGU_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
-			<RawVicinityBonus>BONUS_GOLD</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_GOLD_ORE</RawVicinityBonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -11315,7 +11315,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_YEMEN</FreeBonus>
+			<FreeBonus>BONUS_YEMENESE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iConquestProb>100</iConquestProb>
@@ -11337,7 +11337,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ZAPOTEC_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
-			<RawVicinityBonus>BONUS_GOLD</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_GOLD_ORE</RawVicinityBonus>
 			<PrereqAndTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_PEAK</TerrainType>
@@ -11390,7 +11390,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ZULU_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
-			<RawVicinityBonus>BONUS_ELEPHANT</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_ELEPHANTS</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_SAVANNA</FeatureType>
@@ -11454,7 +11454,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
-			<RawVicinityBonus>BONUS_POTATO</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_POTATOES</RawVicinityBonus>
 			<!-- Construction -->
 			<iCost>918</iCost>
 			<!-- Main effects -->
@@ -11916,7 +11916,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_NATIONALISM</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_GOLD</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_GOLD_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_AFRICAN</BuildingClassType>
@@ -11959,7 +11959,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_GOLD</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_GOLD_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_EUROPEAN</BuildingClassType>
@@ -12043,7 +12043,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_AVERNI_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_BLOOD_CULT</PrereqTech>
+			<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_MUREX</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -12131,7 +12131,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_HORSE_BREEDING</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_SAPPHIRE</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_SAPPHIRES</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingClassType>
@@ -12174,7 +12174,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_SILVER</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_SILVER_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingClassType>
@@ -12518,7 +12518,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_SILVER</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_SILVER_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingClassType>
@@ -12862,7 +12862,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_FERMENTATION</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_WINE</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_GRAPES</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_EUROPEAN</BuildingClassType>
@@ -12905,7 +12905,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_ARCHERY</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_TIMBER</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_PRIME_TIMBER</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_EUROPEAN</BuildingClassType>
@@ -13206,7 +13206,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_FUR</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_BEAVERS</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_EUROPEAN</BuildingClassType>
@@ -13249,7 +13249,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_COPPER</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_COPPER_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_EUROPEAN</BuildingClassType>
@@ -13292,7 +13292,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_DUALISM</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_ELEPHANT</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_ELEPHANTS</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_OCEANIAN</BuildingClassType>
@@ -13550,7 +13550,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_FUR</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_BEAVERS</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_EUROPEAN</BuildingClassType>
@@ -13591,9 +13591,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_FUEGIAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_HUNTING_TACTICS</PrereqTech>
+			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_FUR</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_BEAVERS</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingClassType>
@@ -13679,7 +13679,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_WINE</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_GRAPES</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingClassType>
@@ -13808,7 +13808,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_RUBY</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_RUBIES</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingClassType>
@@ -13851,7 +13851,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_IRON</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_IRON_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_ASIAN</BuildingClassType>
@@ -13913,7 +13913,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GOLDEN_HORDE</FreeBonus>
+			<FreeBonus>BONUS_GOLD_OREEN_HORDE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -14066,7 +14066,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_CANNABIS</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_HEMP</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingClassType>
@@ -14300,7 +14300,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_HONGKONG</FreeBonus>
+			<FreeBonus>BONUS_HONG_KONG</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -14367,7 +14367,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_TIMBER</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_PRIME_TIMBER</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingClassType>
@@ -14410,7 +14410,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_COPPER</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_COPPER_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_AFRICAN</BuildingClassType>
@@ -14453,7 +14453,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_LEAD</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_LEAD_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_EUROPEAN</BuildingClassType>
@@ -14797,7 +14797,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_MELON</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_MELONS</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_ASIAN</BuildingClassType>
@@ -14816,7 +14816,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_KHAZAK</FreeBonus>
+			<FreeBonus>BONUS_KAZAKH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -14883,7 +14883,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_DUALISM</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_COPPER</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_COPPER_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_ASIAN</BuildingClassType>
@@ -14926,7 +14926,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_METAL_CASTING</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_IRON</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_IRON_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingClassType>
@@ -14969,7 +14969,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_FUR</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_BEAVERS</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_AFRICAN</BuildingClassType>
@@ -15313,7 +15313,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_TIMBER</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_PRIME_TIMBER</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingClassType>
@@ -15356,7 +15356,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_RUBY</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_RUBIES</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_AFRICAN</BuildingClassType>
@@ -15442,7 +15442,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_WINE</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_GRAPES</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_EUROPEAN</BuildingClassType>
@@ -15614,7 +15614,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_ARCHERY</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_SILVER</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_SILVER_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_OCEANIAN</BuildingClassType>
@@ -16345,7 +16345,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_IRON</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_IRON_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_EUROPEAN</BuildingClassType>
@@ -16517,7 +16517,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_SEAFARING</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_ELEPHANT</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_ELEPHANTS</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingClassType>
@@ -16560,7 +16560,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_YEOMANRY</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_TIMBER</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_PRIME_TIMBER</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_OCEANIAN</BuildingClassType>
@@ -16861,7 +16861,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_SMITHING</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_FUR</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_BEAVERS</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_ASIAN</BuildingClassType>
@@ -16880,7 +16880,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_PHILIPINO</FreeBonus>
+			<FreeBonus>BONUS_FILIPINO</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -17033,7 +17033,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_COPPER</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_COPPER_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingClassType>
@@ -17074,7 +17074,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_PUELCHE_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_BLOOD_CULT</PrereqTech>
+			<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_WHALE</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -17162,7 +17162,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_LEAD</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_LEAD_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_ASIAN</BuildingClassType>
@@ -17248,7 +17248,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_WINE</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_GRAPES</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingClassType>
@@ -17508,7 +17508,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_LINGUISTICS</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_SILVER</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_SILVER_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingClassType>
@@ -17807,7 +17807,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_SERBIAN_EMBASSY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_MUSIC</PrereqTech>
+			<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 			<bWater>1</bWater>
 			<RawVicinityBonus>BONUS_SHEEP</RawVicinityBonus>
 			<BuildingClassNeededs>
@@ -17938,7 +17938,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_POTTERY</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_TIMBER</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_PRIME_TIMBER</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_ASIAN</BuildingClassType>
@@ -18497,7 +18497,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_GOLD</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_GOLD_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_EUROPEAN</BuildingClassType>
@@ -18540,7 +18540,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_GOLD</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_GOLD_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_ASIAN</BuildingClassType>
@@ -18583,7 +18583,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_COPPER</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_COPPER_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_OCEANIAN</BuildingClassType>
@@ -18755,7 +18755,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_FERMENTATION</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_FUR</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_BEAVERS</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_ASIAN</BuildingClassType>
@@ -19013,7 +19013,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_BARTER</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_SEA_LIONS</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_SEA_LION_AND_SEAL</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingClassType>
@@ -19056,7 +19056,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_SEA_LIONS</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_SEA_LION_AND_SEAL</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_OCEANIAN</BuildingClassType>
@@ -19314,7 +19314,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<bWater>1</bWater>
-			<RawVicinityBonus>BONUS_SILVER</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_SILVER_ORE</RawVicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingClassType>

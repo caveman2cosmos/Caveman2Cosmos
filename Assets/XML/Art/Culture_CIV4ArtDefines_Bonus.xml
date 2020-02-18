@@ -29,7 +29,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_AKKAD</Type>
+			<Type>ART_DEF_BONUS_AKKADIAN</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -119,7 +119,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_ATHENS</Type>
+			<Type>ART_DEF_BONUS_ATHENIAN</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -445,7 +445,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_CROATIA</Type>
+			<Type>ART_DEF_BONUS_CROATIAN</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -481,7 +481,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_DENMARK</Type>
+			<Type>ART_DEF_BONUS_DANISH</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -490,7 +490,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_DOLPHIN</Type>
+			<Type>ART_DEF_BONUS_CETACEA_SAPIEN</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -553,7 +553,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_FIGI</Type>
+			<Type>ART_DEF_BONUS_FIJIAN</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -607,7 +607,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_GHANA</Type>
+			<Type>ART_DEF_BONUS_GHANAIAN</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -634,7 +634,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_GYPSY</Type>
+			<Type>ART_DEF_BONUS_ROMANI</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -652,7 +652,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_HATTIAN</Type>
+			<Type>ART_DEF_BONUS_HAITIAN</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -697,7 +697,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_HOLYROMAN</Type>
+			<Type>ART_DEF_BONUS_HOLY_ROMAN</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -886,7 +886,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_KANEMBORNU</Type>
+			<Type>ART_DEF_BONUS_KANEM_BORNU</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -941,7 +941,7 @@
 		</BonusArtInfo>
 <!-- No units
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_LEON</Type>
+			<Type>ART_DEF_BONUS_LEONESE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1095,7 +1095,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_MISSI</Type>
+			<Type>ART_DEF_BONUS_MISSISSIPPIAN</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1185,7 +1185,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_NEPAL</Type>
+			<Type>ART_DEF_BONUS_NEPALESE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1194,7 +1194,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_NEWZEALAND</Type>
+			<Type>ART_DEF_BONUS_NEW_ZEALAND</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1293,7 +1293,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_PHOENICAN</Type>
+			<Type>ART_DEF_BONUS_PHOENICIAN</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1302,7 +1302,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_PICT</Type>
+			<Type>ART_DEF_BONUS_PICTISH</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1356,7 +1356,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_QUANG</Type>
+			<Type>ART_DEF_BONUS_QIANG</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1374,7 +1374,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_RAPANUI</Type>
+			<Type>ART_DEF_BONUS_RAPA_NUI</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1518,7 +1518,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_SLOVAKIA</Type>
+			<Type>ART_DEF_BONUS_SLOVAKIAN</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1545,7 +1545,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_SOUTHAFRICAN</Type>
+			<Type>ART_DEF_BONUS_SOUTH_AFRICAN</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1626,7 +1626,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_TAHITI</Type>
+			<Type>ART_DEF_BONUS_TAHITIAN</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1788,7 +1788,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_VENICE</Type>
+			<Type>ART_DEF_BONUS_VENETIAN</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1869,7 +1869,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_YEMEN</Type>
+			<Type>ART_DEF_BONUS_YEMENESE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2409,7 +2409,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_GOLDEN_HORDE</Type>
+			<Type>ART_DEF_BONUS_GOLD_OREEN_HORDE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2490,7 +2490,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_HONGKONG</Type>
+			<Type>ART_DEF_BONUS_HONG_KONG</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2598,7 +2598,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_KHAZAK</Type>
+			<Type>ART_DEF_BONUS_KAZAKH</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2976,7 +2976,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_PHILIPINO</Type>
+			<Type>ART_DEF_BONUS_FILIPINO</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>

@@ -7,8 +7,8 @@
 			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL</ReplacementID>
 			<TechResearchModifiers>
 				<TechResearchModifier>
-					<DependencyType>TECH_DRUIDISM</DependencyType>
-					<TechType>TECH_DRUIDISM</TechType>
+					<DependencyType>TECH_DRUIDIC_TRADITIONS</DependencyType>
+					<TechType>TECH_DRUIDIC_TRADITIONS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -42,8 +42,8 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_SHINTOISM</DependencyType>
-					<TechType>TECH_SHINTOISM</TechType>
+					<DependencyType>TECH_SHINTO</DependencyType>
+					<TechType>TECH_SHINTO</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -52,13 +52,13 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_CANAANITE</DependencyType>
-					<TechType>TECH_CANAANITE</TechType>
+					<DependencyType>TECH_CANAANISM</DependencyType>
+					<TechType>TECH_CANAANISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_RODNOVERY</DependencyType>
-					<TechType>TECH_RODNOVERY</TechType>
+					<DependencyType>TECH_RODNOVERA</DependencyType>
+					<TechType>TECH_RODNOVERA</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -102,8 +102,8 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_CAODAIISM</DependencyType>
-					<TechType>TECH_CAODAIISM</TechType>
+					<DependencyType>TECH_CAO_DAI</DependencyType>
+					<TechType>TECH_CAO_DAI</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -118,8 +118,8 @@
 			<ReplacementID>TRAIT_COMPLEX_SPIRITUAL1</ReplacementID>
 			<TechResearchModifiers>
 				<TechResearchModifier>
-					<DependencyType>TECH_DRUIDISM</DependencyType>
-					<TechType>TECH_DRUIDISM</TechType>
+					<DependencyType>TECH_DRUIDIC_TRADITIONS</DependencyType>
+					<TechType>TECH_DRUIDIC_TRADITIONS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -153,8 +153,8 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_SHINTOISM</DependencyType>
-					<TechType>TECH_SHINTOISM</TechType>
+					<DependencyType>TECH_SHINTO</DependencyType>
+					<TechType>TECH_SHINTO</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -163,13 +163,13 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_CANAANITE</DependencyType>
-					<TechType>TECH_CANAANITE</TechType>
+					<DependencyType>TECH_CANAANISM</DependencyType>
+					<TechType>TECH_CANAANISM</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_RODNOVERY</DependencyType>
-					<TechType>TECH_RODNOVERY</TechType>
+					<DependencyType>TECH_RODNOVERA</DependencyType>
+					<TechType>TECH_RODNOVERA</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -213,8 +213,8 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_CAODAIISM</DependencyType>
-					<TechType>TECH_CAODAIISM</TechType>
+					<DependencyType>TECH_CAO_DAI</DependencyType>
+					<TechType>TECH_CAO_DAI</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -239,8 +239,8 @@
 			<ReplacementID>TRAIT_COMPLEX_ANTI_CLERICAL</ReplacementID>
 			<TechResearchModifiers>
 				<TechResearchModifier>
-					<DependencyType>TECH_DRUIDISM</DependencyType>
-					<TechType>TECH_DRUIDISM</TechType>
+					<DependencyType>TECH_DRUIDIC_TRADITIONS</DependencyType>
+					<TechType>TECH_DRUIDIC_TRADITIONS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -274,8 +274,8 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_SHINTOISM</DependencyType>
-					<TechType>TECH_SHINTOISM</TechType>
+					<DependencyType>TECH_SHINTO</DependencyType>
+					<TechType>TECH_SHINTO</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -284,13 +284,13 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_CANAANITE</DependencyType>
-					<TechType>TECH_CANAANITE</TechType>
+					<DependencyType>TECH_CANAANISM</DependencyType>
+					<TechType>TECH_CANAANISM</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_RODNOVERY</DependencyType>
-					<TechType>TECH_RODNOVERY</TechType>
+					<DependencyType>TECH_RODNOVERA</DependencyType>
+					<TechType>TECH_RODNOVERA</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -334,8 +334,8 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_CAODAIISM</DependencyType>
-					<TechType>TECH_CAODAIISM</TechType>
+					<DependencyType>TECH_CAO_DAI</DependencyType>
+					<TechType>TECH_CAO_DAI</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -369,8 +369,8 @@
 			<Type>TRAIT_PIOUS</Type>
 			<TechResearchModifiers>
 				<TechResearchModifier>
-					<DependencyType>TECH_DRUIDISM</DependencyType>
-					<TechType>TECH_DRUIDISM</TechType>
+					<DependencyType>TECH_DRUIDIC_TRADITIONS</DependencyType>
+					<TechType>TECH_DRUIDIC_TRADITIONS</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -404,8 +404,8 @@
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_SHINTOISM</DependencyType>
-					<TechType>TECH_SHINTOISM</TechType>
+					<DependencyType>TECH_SHINTO</DependencyType>
+					<TechType>TECH_SHINTO</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -414,13 +414,13 @@
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_CANAANITE</DependencyType>
-					<TechType>TECH_CANAANITE</TechType>
+					<DependencyType>TECH_CANAANISM</DependencyType>
+					<TechType>TECH_CANAANISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_RODNOVERY</DependencyType>
-					<TechType>TECH_RODNOVERY</TechType>
+					<DependencyType>TECH_RODNOVERA</DependencyType>
+					<TechType>TECH_RODNOVERA</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -464,8 +464,8 @@
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_CAODAIISM</DependencyType>
-					<TechType>TECH_CAODAIISM</TechType>
+					<DependencyType>TECH_CAO_DAI</DependencyType>
+					<TechType>TECH_CAO_DAI</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -479,8 +479,8 @@
 			<Type>TRAIT_PIOUS1</Type>
 			<TechResearchModifiers>
 				<TechResearchModifier>
-					<DependencyType>TECH_DRUIDISM</DependencyType>
-					<TechType>TECH_DRUIDISM</TechType>
+					<DependencyType>TECH_DRUIDIC_TRADITIONS</DependencyType>
+					<TechType>TECH_DRUIDIC_TRADITIONS</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -514,8 +514,8 @@
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_SHINTOISM</DependencyType>
-					<TechType>TECH_SHINTOISM</TechType>
+					<DependencyType>TECH_SHINTO</DependencyType>
+					<TechType>TECH_SHINTO</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -524,13 +524,13 @@
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_CANAANITE</DependencyType>
-					<TechType>TECH_CANAANITE</TechType>
+					<DependencyType>TECH_CANAANISM</DependencyType>
+					<TechType>TECH_CANAANISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_RODNOVERY</DependencyType>
-					<TechType>TECH_RODNOVERY</TechType>
+					<DependencyType>TECH_RODNOVERA</DependencyType>
+					<TechType>TECH_RODNOVERA</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -574,8 +574,8 @@
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_CAODAIISM</DependencyType>
-					<TechType>TECH_CAODAIISM</TechType>
+					<DependencyType>TECH_CAO_DAI</DependencyType>
+					<TechType>TECH_CAO_DAI</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -589,8 +589,8 @@
 			<Type>TRAIT_PIOUS2</Type>
 			<TechResearchModifiers>
 				<TechResearchModifier>
-					<DependencyType>TECH_DRUIDISM</DependencyType>
-					<TechType>TECH_DRUIDISM</TechType>
+					<DependencyType>TECH_DRUIDIC_TRADITIONS</DependencyType>
+					<TechType>TECH_DRUIDIC_TRADITIONS</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -624,8 +624,8 @@
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_SHINTOISM</DependencyType>
-					<TechType>TECH_SHINTOISM</TechType>
+					<DependencyType>TECH_SHINTO</DependencyType>
+					<TechType>TECH_SHINTO</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -634,13 +634,13 @@
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_CANAANITE</DependencyType>
-					<TechType>TECH_CANAANITE</TechType>
+					<DependencyType>TECH_CANAANISM</DependencyType>
+					<TechType>TECH_CANAANISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_RODNOVERY</DependencyType>
-					<TechType>TECH_RODNOVERY</TechType>
+					<DependencyType>TECH_RODNOVERA</DependencyType>
+					<TechType>TECH_RODNOVERA</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -684,8 +684,8 @@
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_CAODAIISM</DependencyType>
-					<TechType>TECH_CAODAIISM</TechType>
+					<DependencyType>TECH_CAO_DAI</DependencyType>
+					<TechType>TECH_CAO_DAI</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -700,8 +700,8 @@
 			<ReplacementID>TRAIT_COMPLEX_ZEALOUS</ReplacementID>
 			<TechResearchModifiers>
 				<TechResearchModifier>
-					<DependencyType>TECH_DRUIDISM</DependencyType>
-					<TechType>TECH_DRUIDISM</TechType>
+					<DependencyType>TECH_DRUIDIC_TRADITIONS</DependencyType>
+					<TechType>TECH_DRUIDIC_TRADITIONS</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -735,8 +735,8 @@
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_SHINTOISM</DependencyType>
-					<TechType>TECH_SHINTOISM</TechType>
+					<DependencyType>TECH_SHINTO</DependencyType>
+					<TechType>TECH_SHINTO</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -745,13 +745,13 @@
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_CANAANITE</DependencyType>
-					<TechType>TECH_CANAANITE</TechType>
+					<DependencyType>TECH_CANAANISM</DependencyType>
+					<TechType>TECH_CANAANISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_RODNOVERY</DependencyType>
-					<TechType>TECH_RODNOVERY</TechType>
+					<DependencyType>TECH_RODNOVERA</DependencyType>
+					<TechType>TECH_RODNOVERA</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -795,8 +795,8 @@
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_CAODAIISM</DependencyType>
-					<TechType>TECH_CAODAIISM</TechType>
+					<DependencyType>TECH_CAO_DAI</DependencyType>
+					<TechType>TECH_CAO_DAI</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -811,8 +811,8 @@
 			<ReplacementID>TRAIT_COMPLEX_ZEALOUS1</ReplacementID>
 			<TechResearchModifiers>
 				<TechResearchModifier>
-					<DependencyType>TECH_DRUIDISM</DependencyType>
-					<TechType>TECH_DRUIDISM</TechType>
+					<DependencyType>TECH_DRUIDIC_TRADITIONS</DependencyType>
+					<TechType>TECH_DRUIDIC_TRADITIONS</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -846,8 +846,8 @@
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_SHINTOISM</DependencyType>
-					<TechType>TECH_SHINTOISM</TechType>
+					<DependencyType>TECH_SHINTO</DependencyType>
+					<TechType>TECH_SHINTO</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -856,13 +856,13 @@
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_CANAANITE</DependencyType>
-					<TechType>TECH_CANAANITE</TechType>
+					<DependencyType>TECH_CANAANISM</DependencyType>
+					<TechType>TECH_CANAANISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_RODNOVERY</DependencyType>
-					<TechType>TECH_RODNOVERY</TechType>
+					<DependencyType>TECH_RODNOVERA</DependencyType>
+					<TechType>TECH_RODNOVERA</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -906,8 +906,8 @@
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_CAODAIISM</DependencyType>
-					<TechType>TECH_CAODAIISM</TechType>
+					<DependencyType>TECH_CAO_DAI</DependencyType>
+					<TechType>TECH_CAO_DAI</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -921,8 +921,8 @@
 			<Type>TRAIT_ZEALOUS2</Type>
 			<TechResearchModifiers>
 				<TechResearchModifier>
-					<DependencyType>TECH_DRUIDISM</DependencyType>
-					<TechType>TECH_DRUIDISM</TechType>
+					<DependencyType>TECH_DRUIDIC_TRADITIONS</DependencyType>
+					<TechType>TECH_DRUIDIC_TRADITIONS</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -956,8 +956,8 @@
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_SHINTOISM</DependencyType>
-					<TechType>TECH_SHINTOISM</TechType>
+					<DependencyType>TECH_SHINTO</DependencyType>
+					<TechType>TECH_SHINTO</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -966,13 +966,13 @@
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_CANAANITE</DependencyType>
-					<TechType>TECH_CANAANITE</TechType>
+					<DependencyType>TECH_CANAANISM</DependencyType>
+					<TechType>TECH_CANAANISM</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_RODNOVERY</DependencyType>
-					<TechType>TECH_RODNOVERY</TechType>
+					<DependencyType>TECH_RODNOVERA</DependencyType>
+					<TechType>TECH_RODNOVERA</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -1016,8 +1016,8 @@
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<DependencyType>TECH_CAODAIISM</DependencyType>
-					<TechType>TECH_CAODAIISM</TechType>
+					<DependencyType>TECH_CAO_DAI</DependencyType>
+					<TechType>TECH_CAO_DAI</TechType>
 					<iModifier>-25</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>

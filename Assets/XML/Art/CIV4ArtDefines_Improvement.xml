@@ -161,7 +161,7 @@
 			<Button>,Art/Interface/Buttons/Builds/BuildPasture.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,8,7</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_CAMP</Type>
+			<Type>ART_DEF_IMPROVEMENT_HUNTING_CAMP</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -170,7 +170,7 @@
 			<Button>,Art/Interface/Buttons/Builds/BuildCamp.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,1,7</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_WELL</Type>
+			<Type>ART_DEF_IMPROVEMENT_HYDROCARBON_WELL</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -269,7 +269,7 @@
 			<Button>Art/Interface/Buttons/Builds/Tree_Farm.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_BUNKER</Type>
+			<Type>ART_DEF_IMPROVEMENT_COMMAND_BUNKER</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -278,7 +278,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Bunker.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_SUBURB</Type>
+			<Type>ART_DEF_IMPROVEMENT_SUBURBS</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -287,7 +287,7 @@
 			<Button>Art/Interface/Buttons/Buildings/suburb.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_DESERTWINDMILL</Type>
+			<Type>ART_DEF_IMPROVEMENT_MODERN_WINDMILL</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.3</fScale>
 			<fInterfaceScale>0.6</fInterfaceScale>
@@ -378,7 +378,7 @@
 			<Button>Art/Interface/Buttons/Builds/orchard.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_GEOTHERMAL_BOREHOLE</Type>
+			<Type>ART_DEF_IMPROVEMENT_GEOTHERMAL_FACTORY</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.5</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -396,7 +396,7 @@
 			<Button>Art/Interface/Buttons/Builds/Build_acheological_site.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_SEA_FORT</Type>
+			<Type>ART_DEF_IMPROVEMENT_AQUATIC_FORCEFIELD</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.14</fScale>
 			<fInterfaceScale>3.8</fInterfaceScale>
@@ -405,7 +405,7 @@
 			<Button>Art/Interface/Buttons/Builds/Sea_fort.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_SEA_AIR_DEFENSE</Type>
+			<Type>ART_DEF_IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -432,7 +432,7 @@
 			<Button>,Art/Interface/Buttons/Builds/BuildFarm.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,3,7</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_FUTURE_BUNKER</Type>
+			<Type>ART_DEF_IMPROVEMENT_COMMAND_CENTER</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>3.5</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -495,7 +495,7 @@
 			<Button>Art/Interface/Buttons/Actions/Sanitize.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_3FACTORY</Type>
+			<Type>ART_DEF_IMPROVEMENT_FACTORY</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.9</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -504,7 +504,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/Factory.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,6,2</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_5FACTORY</Type>
+			<Type>ART_DEF_IMPROVEMENT_MANUFACTURING_COMPLEX</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.2</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -513,7 +513,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/Factory.dds,Art/Interface/Buttons/Buildings_Atlas.dds,7,2</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_MAKE_JUNGLE</Type>
+			<Type>ART_DEF_IMPROVEMENT_PLANT_JUNGLE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -522,7 +522,7 @@
 			<Button>Art/Interface/Buttons/TerrainFeatures/Jungle.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_PLANT_FOREST</Type>
+			<Type>ART_DEF_IMPROVEMENT_YOUNG_FOREST</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -559,7 +559,7 @@
 		</ImprovementArtInfo>
 		<!-- Prehistoric -->
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_GRAIN_GATHERER</Type>
+			<Type>ART_DEF_IMPROVEMENT_SEED_CAMP</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.6</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -568,7 +568,7 @@
 			<Button>Art/Interface/Buttons/Builds/Button_GrainGather.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_PLANT_GATHERER</Type>
+			<Type>ART_DEF_IMPROVEMENT_PLANT_GATHERING_CAMP</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.6</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -577,7 +577,7 @@
 			<Button>Art/Interface/Buttons/Builds/picker_genericplant.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_FRUIT_GATHERER</Type>
+			<Type>ART_DEF_IMPROVEMENT_FRUIT_GATHERING_CAMP</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.6</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -604,7 +604,7 @@
 			<Button>Art/Interface/Buttons/Builds/Lumber_Camp.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_ROCK_GATHERER</Type>
+			<Type>ART_DEF_IMPROVEMENT_STONE_TOOLS_WORKSHOP</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.6</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -658,7 +658,7 @@
 			<Button>Art/Interface/Buttons/builds/Tower.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_PLANT_BAMBOO</Type>
+			<Type>ART_DEF_IMPROVEMENT_PLANT_BAMBOO_GROVE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -685,7 +685,7 @@
 			<Button>,Art/Interface/Buttons/Units/Transport.dds,Art/Interface/Buttons/FinalFrontier2_Atlas.dds,4,3</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_INDIGENOUS_PEOPLE</Type>
+			<Type>ART_DEF_IMPROVEMENT_INDIGENOUS_COMMUNITY</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.35</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -712,7 +712,7 @@
 			<Button>Art/Interface/Buttons/Builds/Button_StoneToolsWorkshop.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_HABITAT1</Type>
+			<Type>ART_DEF_IMPROVEMENT_COLONY_HABITAT_SMALL</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.55</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -721,7 +721,7 @@
 			<Button>Art/Structures/Improvements/habitats/button.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_HABITAT2</Type>
+			<Type>ART_DEF_IMPROVEMENT_COLONY_HABITAT_MEDIUM</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.55</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -730,7 +730,7 @@
 			<Button>Art/Structures/Improvements/habitats/button.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_HABITAT3</Type>
+			<Type>ART_DEF_IMPROVEMENT_COLONY_HABITAT_LARGE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.50</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -739,7 +739,7 @@
 			<Button>Art/Structures/Improvements/habitats/button.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_HABITAT4</Type>
+			<Type>ART_DEF_IMPROVEMENT_COLONY_HABITAT_HUGE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.50</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -748,7 +748,7 @@
 			<Button>Art/Structures/Improvements/habitats/button.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_WINDMILL_SEA</Type>
+			<Type>ART_DEF_IMPROVEMENT_SEA_MILL</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.75</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -766,7 +766,7 @@
 			<Button>Art/Interface/Buttons/Builds/Tidal_Harness.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_FARMSCRAPER</Type>
+			<Type>ART_DEF_IMPROVEMENT_VERTICAL_FARM</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.15</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -820,7 +820,7 @@
 			<Button>Art/Interface/Buttons/Builds/moaiimprovement.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_HYDRO_PLANT</Type>
+			<Type>ART_DEF_IMPROVEMENT_HYDRO_DAM</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.2</fScale>
 			<fInterfaceScale>0.75</fInterfaceScale>
@@ -901,7 +901,7 @@
 			<Button>Art/electricity/Art/solarvoltplant.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_ABATIS</Type>
+			<Type>ART_DEF_IMPROVEMENT_ABATIS_THORN_HEDGE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.5</fScale>
 			<fInterfaceScale>1.5</fInterfaceScale>
@@ -910,7 +910,7 @@
 			<Button>,Art/Interface/Buttons/Builds/BuildFort.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,7,9</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_PALISADE</Type>
+			<Type>ART_DEF_IMPROVEMENT_WOODEN_PALISADE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1</fScale>
 			<fInterfaceScale>1</fInterfaceScale>
@@ -928,7 +928,7 @@
 			<Button>,Art/Interface/Buttons/Builds/BuildFort.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,7,9</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_FORTIFIED_CAVE_CACHE</Type>
+			<Type>ART_DEF_IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.5</fScale>
 			<fInterfaceScale>1.5</fInterfaceScale>
@@ -937,7 +937,7 @@
 			<Button>,Art/Interface/Buttons/Builds/BuildFort.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,7,9</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_WOODEN_TOWER</Type>
+			<Type>ART_DEF_IMPROVEMENT_WOODEN_WATCHTOWER</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>2.0</fScale>
 			<fInterfaceScale>0.8</fInterfaceScale>
@@ -946,7 +946,7 @@
 			<Button>Art/Interface/Buttons/Builds/button_woodentower.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_STONE_TOWER</Type>
+			<Type>ART_DEF_IMPROVEMENT_STONE_WATCHTOWER</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.2</fScale>
 			<fInterfaceScale>0.7</fInterfaceScale>
@@ -955,7 +955,7 @@
 			<Button>Art/Structures/Improvements/stone_tower/stone_tower_btn.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_STEEL_TOWER</Type>
+			<Type>ART_DEF_IMPROVEMENT_STEEL_WATCHTOWER</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.2</fScale>
 			<fInterfaceScale>0.7</fInterfaceScale>
@@ -964,7 +964,7 @@
 			<Button>Art/Structures/Improvements/stone_tower/stone_tower_btn.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_RADAR</Type>
+			<Type>ART_DEF_IMPROVEMENT_RADAR_TOWER</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.6</fScale>
 			<fInterfaceScale>0.30</fInterfaceScale>

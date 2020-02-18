@@ -99,7 +99,7 @@
 			<Strategy>TXT_KEY_BUILDING_GRAND_AERODROME_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GRAND_AERODROME</ArtDefineTag>
-			<PrereqTech>TECH_ADVANCED_FLIGHT</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_AVIATION</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_DIESELPUNK</PrereqTech>
 			</TechTypes>
@@ -332,11 +332,11 @@
 			<ConstructSound>AS2D_BUILD_BROADCASTTOWER</ConstructSound>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
-					<BonusType>BONUS_DRAMA</BonusType>
+					<BonusType>BONUS_HIT_MUSICALS</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_MUSIC</BonusType>
+					<BonusType>BONUS_HIT_SINGLES</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>

@@ -11,10 +11,10 @@
 		<!-- Prehistoric -->
 		<!-- Seed Camp -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_GRAIN_GATHERER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_GRAIN_GATHERER</Description>
+			<Type>IMPROVEMENT_SEED_CAMP</Type>
+			<Description>TXT_KEY_IMPROVEMENT_SEED_CAMP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SEED_CAMP_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_GRAIN_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_SEED_CAMP</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
@@ -26,7 +26,7 @@
 			<iPillageGold>7</iPillageGold>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -60,7 +60,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_POTATO</BonusType>
+					<BonusType>BONUS_POTATOES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -92,7 +92,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_MELON</BonusType>
+					<BonusType>BONUS_MELONS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -127,7 +127,7 @@
 		</ImprovementInfo>
 		<!-- Wood Gatherer -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_PINE_GATHERER</Type>
+			<Type>IMPROVEMENT_WOOD_GATHERER</Type>
 			<Description>TXT_KEY_IMPROVEMENT_WOOD_GATHERER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LUMBERYARD_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WOOD_GATHERER</ArtDefineTag>
@@ -136,7 +136,7 @@
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
-			<PrereqTech>TECH_WOOD_WORKING</PrereqTech>
+			<PrereqTech>TECH_WOODWORKING</PrereqTech>
 			<bRequiresFeature>1</bRequiresFeature>
 			<iUpgradeTime>5</iUpgradeTime>
 			<iPillageGold>5</iPillageGold>
@@ -146,7 +146,7 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
@@ -168,7 +168,7 @@
 			</FeatureMakesValids>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -201,7 +201,7 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
@@ -234,7 +234,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -268,7 +268,7 @@
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -310,7 +310,7 @@
 			<Type>IMPROVEMENT_TAR_GATHERER</Type>
 			<Description>TXT_KEY_IMPROVEMENT_TAR_GATHERER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_TAR_GATHERER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_ROCK_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_STONE_TOOLS_WORKSHOP</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>2</iYieldChange>
@@ -322,7 +322,7 @@
 			<iPillageGold>15</iPillageGold>
 			<FeatureMakesValids>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_TARPIT</FeatureType>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
@@ -334,11 +334,11 @@
 					<iDiscoverRand>100000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_FOSSIL</BonusType>
+					<BonusType>BONUS_FOSSIL_BEDS</BonusType>
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
-			<ImprovementUpgrade>IMPROVEMENT_WELL</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_HYDROCARBON_WELL</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes>
 				<ImprovementType>IMPROVEMENT_WORKSHOP</ImprovementType>
 			</AlternativeImprovementUpgradeTypes>
@@ -372,7 +372,7 @@
 			<Type>IMPROVEMENT_SCAVENGING_CAMP</Type>
 			<Description>TXT_KEY_IMPROVEMENT_SCAVENGING_CAMP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SCAVENGING_CAMP_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_CAMP</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_HUNTING_CAMP</ArtDefineTag>
 			<PrereqTech>TECH_SCAVENGING</PrereqTech>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
@@ -396,7 +396,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_FUR</BonusType>
+					<BonusType>BONUS_BEAVERS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -404,7 +404,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GUINEA_PIG</BonusType>
+					<BonusType>BONUS_GUINEA_PIGS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -414,7 +414,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_ELEPHANT</BonusType>
+					<BonusType>BONUS_ELEPHANTS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -446,7 +446,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SEA_LIONS</BonusType>
+					<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -538,7 +538,7 @@
 			</BonusTypeStructs>
 			<ImprovementUpgrade>IMPROVEMENT_NOMADIC_HERD</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes>
-				<ImprovementType>IMPROVEMENT_CAMP</ImprovementType>
+				<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 			</AlternativeImprovementUpgradeTypes>
 			<TraitYieldChanges>
 				<TraitYieldChange>
@@ -554,7 +554,7 @@
 			<Type>IMPROVEMENT_NOMADIC_HERD</Type>
 			<Description>TXT_KEY_IMPROVEMENT_NOMADIC_HERD</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_NOMADIC_HERD_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_CAMP</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_HUNTING_CAMP</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
@@ -708,7 +708,7 @@
 			<iAirBombDefense>-1</iAirBombDefense>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -750,7 +750,7 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
@@ -795,23 +795,23 @@
 			<iAirBombDefense>-1</iAirBombDefense>
 			<TerrainMakesValids>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_BARREN</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_REGOLITH</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_PLAINS</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_MARE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_ROCKY</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_BASALT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DESERT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_RILLE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -844,6 +844,7 @@
 				</TerrainBoolean>
 			</TerrainMakesValids>
 			<WorldSoundscapeAudioScript>ASSS_FOREST_SELECT_AMB</WorldSoundscapeAudioScript>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Fishing Boats -->
 		<ImprovementInfo>
@@ -1095,7 +1096,7 @@
 			<iPillageGold>30</iPillageGold>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -1123,11 +1124,11 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -1135,9 +1136,9 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<ImprovementUpgrade>IMPROVEMENT_3FACTORY</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_FACTORY</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes>
-				<ImprovementType>IMPROVEMENT_3FACTORY_2</ImprovementType>
+				<ImprovementType>IMPROVEMENT_FACTORY_COLD_CLIMATE</ImprovementType>
 			</AlternativeImprovementUpgradeTypes>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -1179,14 +1180,14 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1200,21 +1201,21 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1249,10 +1250,10 @@
 		</ImprovementInfo>
 		<!-- Factory -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_3FACTORY</Type>
+			<Type>IMPROVEMENT_FACTORY</Type>
 			<Description>TXT_KEY_IMPROVEMENT_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FACTORY_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_3FACTORY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_FACTORY</ArtDefineTag>
 			<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
 			<YieldChanges>
 				<iYieldChange>-2</iYieldChange>
@@ -1269,7 +1270,7 @@
 			<iPillageGold>100</iPillageGold>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -1297,11 +1298,11 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -1310,7 +1311,7 @@
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<ImprovementPillage>IMPROVEMENT_WORKSHOP</ImprovementPillage>
-			<ImprovementUpgrade>IMPROVEMENT_5FACTORY</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_MANUFACTURING_COMPLEX</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_ORGANIC_CHEMISTRY</PrereqTech>
@@ -1335,7 +1336,7 @@
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_MINIATURIZATION</PrereqTech>
+					<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -1352,14 +1353,14 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1375,7 +1376,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1383,7 +1384,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1391,7 +1392,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1429,10 +1430,10 @@
 		</ImprovementInfo>
 		<!-- Factory -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_3FACTORY_2</Type>
+			<Type>IMPROVEMENT_FACTORY_COLD_CLIMATE</Type>
 			<Description>TXT_KEY_IMPROVEMENT_FACTORY_COLD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FACTORY_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_3FACTORY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_FACTORY</ArtDefineTag>
 			<PrereqTech>TECH_REFRIGERATION</PrereqTech>
 			<YieldChanges>
 				<iYieldChange>-2</iYieldChange>
@@ -1466,7 +1467,7 @@
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<ImprovementPillage>IMPROVEMENT_WORKSHOP</ImprovementPillage>
-			<ImprovementUpgrade>IMPROVEMENT_5FACTORY</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_MANUFACTURING_COMPLEX</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_ORGANIC_CHEMISTRY</PrereqTech>
@@ -1491,7 +1492,7 @@
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_MINIATURIZATION</PrereqTech>
+					<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -1508,14 +1509,14 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1531,7 +1532,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1539,7 +1540,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1547,7 +1548,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1585,11 +1586,11 @@
 		</ImprovementInfo>
 		<!-- Manufacturing Complex -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_5FACTORY</Type>
+			<Type>IMPROVEMENT_MANUFACTURING_COMPLEX</Type>
 			<Description>TXT_KEY_IMPROVEMENT_INDUSTRIAL_COMPLEX</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FACTORY_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_5FACTORY</ArtDefineTag>
-			<PrereqTech>TECH_MINIATURIZATION</PrereqTech>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_MANUFACTURING_COMPLEX</ArtDefineTag>
+			<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 			<YieldChanges>
 				<iYieldChange>-3</iYieldChange>
 				<iYieldChange>10</iYieldChange>
@@ -1612,7 +1613,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -1640,11 +1641,11 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -1660,7 +1661,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<ImprovementPillage>IMPROVEMENT_3FACTORY</ImprovementPillage>
+			<ImprovementPillage>IMPROVEMENT_FACTORY</ImprovementPillage>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_ROBOTICS</PrereqTech>
@@ -1686,7 +1687,7 @@
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_SUPERFLUOUS_MANUFACTURING</PrereqTech>
+					<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1702,14 +1703,14 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1725,7 +1726,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1733,7 +1734,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1741,7 +1742,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1806,7 +1807,7 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
@@ -1839,7 +1840,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -1873,7 +1874,7 @@
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -1910,14 +1911,14 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1933,7 +1934,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1941,7 +1942,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1949,7 +1950,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -2002,7 +2003,7 @@
 			<iUpgradeTime>15</iUpgradeTime>
 			<iAirBombDefense>5</iAirBombDefense>
 			<iPillageGold>15</iPillageGold>
-			<ImprovementUpgrade>IMPROVEMENT_DESERTWINDMILL</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_MODERN_WINDMILL</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_AGRICULTURAL_TOOLS</PrereqTech>
@@ -2047,7 +2048,7 @@
 			<iUpgradeTime>15</iUpgradeTime>
 			<iAirBombDefense>5</iAirBombDefense>
 			<iPillageGold>20</iPillageGold>
-			<ImprovementUpgrade>IMPROVEMENT_HYDRO_PLANT</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_HYDRO_DAM</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_AGRICULTURAL_TOOLS</PrereqTech>
@@ -2074,10 +2075,10 @@
 		</ImprovementInfo>
 		<!-- Hydro Dam -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_HYDRO_PLANT</Type>
-			<Description>TXT_KEY_IMPROVEMENT_HYDRO_PLANT</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_HYDRO_PLANT_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_HYDRO_PLANT</ArtDefineTag>
+			<Type>IMPROVEMENT_HYDRO_DAM</Type>
+			<Description>TXT_KEY_IMPROVEMENT_HYDRO_DAM</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_HYDRO_DAM_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_HYDRO_DAM</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>9</iYieldChange>
@@ -2150,7 +2151,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -2320,7 +2321,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
-			<ImprovementUpgrade>IMPROVEMENT_FARMSCRAPER</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_VERTICAL_FARM</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_SPICE_TRADE</PrereqTech>
@@ -2339,7 +2340,7 @@
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_PESTICIDES</PrereqTech>
+					<PrereqTech>TECH_AGRICULTURAL_ENGINEERING</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -2347,7 +2348,7 @@
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_GENEMANIPULATION</PrereqTech>
+					<PrereqTech>TECH_GENE_MANIPULATION</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -2387,7 +2388,7 @@
 			<Type>IMPROVEMENT_SALT_GATHERER</Type>
 			<Description>TXT_KEY_IMPROVEMENT_SALT_GATHERER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SALT_MINE_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_ROCK_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_STONE_TOOLS_WORKSHOP</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -2451,11 +2452,11 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
@@ -2626,7 +2627,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_FOSSIL</BonusType>
+					<BonusType>BONUS_FOSSIL_BEDS</BonusType>
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -2678,14 +2679,14 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -2699,21 +2700,21 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -2835,7 +2836,7 @@
 				</BonusTypeStruct>
 			</BonusTypeStructs>
 			<ImprovementPillage>IMPROVEMENT_NOMADIC_HERD</ImprovementPillage>
-			<ImprovementUpgrade>IMPROVEMENT_FARMSCRAPER</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_VERTICAL_FARM</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_REFRIGERATION</PrereqTech>
@@ -2846,7 +2847,7 @@
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_GENEMANIPULATION</PrereqTech>
+					<PrereqTech>TECH_GENE_MANIPULATION</PrereqTech>
 					<TechYields>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -2873,10 +2874,10 @@
 		</ImprovementInfo>
 		<!-- Hunting Camp -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_CAMP</Type>
-			<Description>TXT_KEY_IMPROVEMENT_CAMP</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_CAMP_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_CAMP</ArtDefineTag>
+			<Type>IMPROVEMENT_HUNTING_CAMP</Type>
+			<Description>TXT_KEY_IMPROVEMENT_HUNTING_CAMP</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_HUNTING_CAMP_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_HUNTING_CAMP</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -2899,7 +2900,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_FUR</BonusType>
+					<BonusType>BONUS_BEAVERS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -2909,7 +2910,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GUINEA_PIG</BonusType>
+					<BonusType>BONUS_GUINEA_PIGS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -2919,7 +2920,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_ELEPHANT</BonusType>
+					<BonusType>BONUS_ELEPHANTS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -2946,7 +2947,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SEA_LIONS</BonusType>
+					<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -3010,8 +3011,8 @@
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_HUNTING_PRESERVE</Type>
 			<Description>TXT_KEY_IMPROVEMENT_HUNTING_PRESERVE</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_CAMP_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_CAMP</ArtDefineTag>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_HUNTING_CAMP_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_HUNTING_CAMP</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -3034,7 +3035,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_FUR</BonusType>
+					<BonusType>BONUS_BEAVERS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -3044,7 +3045,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GUINEA_PIG</BonusType>
+					<BonusType>BONUS_GUINEA_PIGS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -3054,7 +3055,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_ELEPHANT</BonusType>
+					<BonusType>BONUS_ELEPHANTS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -3082,7 +3083,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SEA_LIONS</BonusType>
+					<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -3132,8 +3133,8 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
-			<ImprovementPillage>IMPROVEMENT_CAMP</ImprovementPillage>
-			<ImprovementUpgrade>IMPROVEMENT_SAFARI</ImprovementUpgrade>
+			<ImprovementPillage>IMPROVEMENT_HUNTING_CAMP</ImprovementPillage>
+			<ImprovementUpgrade>IMPROVEMENT_WILDLIFE_SANCTUARY</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_MATCHLOCK</PrereqTech>
@@ -3169,10 +3170,10 @@
 		</ImprovementInfo>
 		<!-- Wildlife Sanctuary -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_SAFARI</Type>
-			<Description>TXT_KEY_IMPROVEMENT_SAFARI</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_SAFARI_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_CAMP</ArtDefineTag>
+			<Type>IMPROVEMENT_WILDLIFE_SANCTUARY</Type>
+			<Description>TXT_KEY_IMPROVEMENT_WILDLIFE_SANCTUARY</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_WILDLIFE_SANCTUARY_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_HUNTING_CAMP</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_TOURISM</PrereqTech>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
@@ -3180,7 +3181,7 @@
 			<iPillageGold>25</iPillageGold>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_ELEPHANT</BonusType>
+					<BonusType>BONUS_ELEPHANTS</BonusType>
 					<bObsoleteBonusMakesValid>1</bObsoleteBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -3190,7 +3191,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_FUR</BonusType>
+					<BonusType>BONUS_BEAVERS</BonusType>
 					<bObsoleteBonusMakesValid>1</bObsoleteBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -3210,7 +3211,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SEA_LIONS</BonusType>
+					<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
 					<bObsoleteBonusMakesValid>1</bObsoleteBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -3260,7 +3261,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GUINEA_PIG</BonusType>
+					<BonusType>BONUS_GUINEA_PIGS</BonusType>
 					<bObsoleteBonusMakesValid>1</bObsoleteBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -3319,10 +3320,10 @@
 		</ImprovementInfo>
 		<!-- Hydrocarbon Well -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_WELL</Type>
-			<Description>TXT_KEY_IMPROVEMENT_WELL</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_WELL_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_WELL</ArtDefineTag>
+			<Type>IMPROVEMENT_HYDROCARBON_WELL</Type>
+			<Description>TXT_KEY_IMPROVEMENT_HYDROCARBON_WELL</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_HYDROCARBON_WELL_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_HYDROCARBON_WELL</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>5</iYieldChange>
@@ -3335,13 +3336,13 @@
 			<iPillageGold>75</iPillageGold>
 			<FeatureMakesValids>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_TARPIT</FeatureType>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_FOSSIL</BonusType>
+					<BonusType>BONUS_FOSSIL_BEDS</BonusType>
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3379,7 +3380,7 @@
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_SEISMOLOGY</PrereqTech>
+					<PrereqTech>TECH_MODERN_SEISMOLOGY</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -3469,7 +3470,7 @@
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_SEISMOLOGY</PrereqTech>
+					<PrereqTech>TECH_MODERN_SEISMOLOGY</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -3516,7 +3517,7 @@
 			<iPillageGold>40</iPillageGold>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_WINE</BonusType>
+					<BonusType>BONUS_GRAPES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -3526,7 +3527,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
-			<ImprovementUpgrade>IMPROVEMENT_FARMSCRAPER</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_VERTICAL_FARM</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_TRADE</PrereqTech>
@@ -3545,7 +3546,7 @@
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_PESTICIDES</PrereqTech>
+					<PrereqTech>TECH_AGRICULTURAL_ENGINEERING</PrereqTech>
 					<TechYields>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -3561,7 +3562,7 @@
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_GENEMANIPULATION</PrereqTech>
+					<PrereqTech>TECH_GENE_MANIPULATION</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -3594,7 +3595,7 @@
 			<iPillageGold>40</iPillageGold>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -3665,7 +3666,7 @@
 			<iPillageGold>60</iPillageGold>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -3731,7 +3732,7 @@
 			<iPillageGold>80</iPillageGold>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -3788,7 +3789,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -3796,7 +3797,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -3812,7 +3813,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -3820,7 +3821,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -3828,7 +3829,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -3878,7 +3879,7 @@
 			<iPillageGold>100</iPillageGold>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -3899,7 +3900,7 @@
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<ImprovementPillage>IMPROVEMENT_VILLAGE</ImprovementPillage>
-			<ImprovementUpgrade>IMPROVEMENT_SUBURB</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_SUBURBS</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_ECONOMICS</PrereqTech>
@@ -3935,7 +3936,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -3943,7 +3944,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -3959,7 +3960,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -3967,7 +3968,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -3975,7 +3976,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4004,9 +4005,9 @@
 		</ImprovementInfo>
 		<!-- Suburb -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_SUBURB</Type>
-			<Description>TXT_KEY_IMPROVEMENT_SUBURB</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_SUBURB_PEDIA</Civilopedia>
+			<Type>IMPROVEMENT_SUBURBS</Type>
+			<Description>TXT_KEY_IMPROVEMENT_SUBURBS</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_SUBURBS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TOWN</ArtDefineTag>
 			<PrereqNatureYields>
 				<iYield>1</iYield>
@@ -4026,7 +4027,7 @@
 			<iPillageGold>120</iPillageGold>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -4088,7 +4089,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4096,7 +4097,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4112,7 +4113,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4120,7 +4121,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4128,7 +4129,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4161,7 +4162,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_FOREST_PRESERVE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FOREST_PRESERVE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FOREST_PRESERVE</ArtDefineTag>
-			<PrereqTech>TECH_WILDERNESSC</PrereqTech>
+			<PrereqTech>TECH_WILDLIFE_CONSERVATION</PrereqTech>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -4186,7 +4187,7 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
@@ -4222,7 +4223,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4230,7 +4231,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4246,7 +4247,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4254,7 +4255,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4262,7 +4263,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4299,9 +4300,9 @@
 		</ImprovementInfo>
 		<!-- Archaeology Site -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_EXPLORETEMPLE</Type>
-			<Description>TXT_KEY_IMPROVEMENT_EXPLORETEMPLE</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_EXPLORETEMPLE_PEDIA</Civilopedia>
+			<Type>IMPROVEMENT_ARCHEOLOGICAL_SITE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_ARCHEOLOGICAL_SITE</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_ARCHEOLOGICAL_SITE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_ARCHEOLOGICAL_SITE</ArtDefineTag>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -4326,7 +4327,7 @@
 			</FeatureMakesValids>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_ANCIENTTEMPLE</BonusType>
+					<BonusType>BONUS_ANCIENT_RELICS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 				</BonusTypeStruct>
@@ -4351,7 +4352,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4359,7 +4360,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4375,7 +4376,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4383,7 +4384,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4391,7 +4392,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -4423,7 +4424,7 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_GROUNDWATER_WELL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_GROUNDWATER_WELL</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
-			<PrereqTech>TECH_SEISMOLOGY</PrereqTech>
+			<PrereqTech>TECH_MODERN_SEISMOLOGY</PrereqTech>
 			<bCarriesIrrigation>1</bCarriesIrrigation>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
 			<iAirBombDefense>10</iAirBombDefense>
@@ -4446,21 +4447,21 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 		</ImprovementInfo>
 		<!-- Modern Windmill -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_DESERTWINDMILL</Type>
+			<Type>IMPROVEMENT_MODERN_WINDMILL</Type>
 			<Description>TXT_KEY_IMPROVEMENT_MODERNWINDMILL</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_WINDMILL_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_DESERTWINDMILL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_MODERN_WINDMILL</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>7</iYieldChange>
@@ -4486,7 +4487,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -4506,11 +4507,11 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -4580,7 +4581,7 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
@@ -4610,7 +4611,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -4644,7 +4645,7 @@
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -4664,14 +4665,14 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -4687,7 +4688,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -4695,7 +4696,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -4703,7 +4704,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -4778,7 +4779,7 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
@@ -4812,7 +4813,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -4834,7 +4835,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -4862,14 +4863,14 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -4885,7 +4886,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -4893,7 +4894,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -4901,7 +4902,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -4948,7 +4949,7 @@
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
-			<PrereqTech>TECH_MARINEARCHITECTURE</PrereqTech>
+			<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
 			<bWater>1</bWater>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
 			<iAirBombDefense>5</iAirBombDefense>
@@ -5122,7 +5123,7 @@
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_GENEMANIPULATION</PrereqTech>
+					<PrereqTech>TECH_GENE_MANIPULATION</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5191,7 +5192,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_METHANE</BonusType>
+					<BonusType>BONUS_METHANE_ICE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDepletionRand>2000</iDepletionRand>
@@ -5242,10 +5243,10 @@
 		</ImprovementInfo>
 		<!-- Geothermal Energy Factory -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_GEOTHERMAL_BOREHOLE</Type>
-			<Description>TXT_KEY_IMPROVEMENT_GEOTHERMAL_BOREHOLE</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_GEOTHERMAL_BOREHOLE_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_GEOTHERMAL_BOREHOLE</ArtDefineTag>
+			<Type>IMPROVEMENT_GEOTHERMAL_FACTORY</Type>
+			<Description>TXT_KEY_IMPROVEMENT_GEOTHERMAL_FACTORY</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_GEOTHERMAL_FACTORY_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_GEOTHERMAL_FACTORY</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>10</iYieldChange>
@@ -5257,7 +5258,7 @@
 			<iPillageGold>10</iPillageGold>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_THERMAL_VENT</BonusType>
+					<BonusType>BONUS_GEOTHERMAL_ENERGY</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -5287,10 +5288,10 @@
 		</ImprovementInfo>
 		<!-- Sea Fort -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_SEA_FORT</Type>
-			<Description>TXT_KEY_IMPROVEMENT_SEA_FORT</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_SEA_FORT_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_SEA_FORT</ArtDefineTag>
+			<Type>IMPROVEMENT_AQUATIC_FORCEFIELD</Type>
+			<Description>TXT_KEY_IMPROVEMENT_AQUATIC_FORCEFIELD</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_AQUATIC_FORCEFIELD_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_AQUATIC_FORCEFIELD</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_SHIELDING</PrereqTech>
 			<bWater>1</bWater>
@@ -5326,11 +5327,11 @@
 		</ImprovementInfo>
 		<!-- Sea Air Defence -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_SEA_AIR_DEFENSE</Type>
-			<Description>TXT_KEY_IMPROVEMENT_SEA_AIR_DEFENSE</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_SEA_AIR_DEFENSE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_IMPROVEMENT_SEA_AIR_DEFENSE_HELP</Help>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_SEA_AIR_DEFENSE</ArtDefineTag>
+			<Type>IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE_PEDIA</Civilopedia>
+			<Help>TXT_KEY_IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE_HELP</Help>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_ORBITAL_FLIGHT</PrereqTech>
 			<bWater>1</bWater>
@@ -5417,7 +5418,7 @@
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_MELON</BonusType>
+					<BonusType>BONUS_MELONS</BonusType>
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5429,7 +5430,7 @@
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_LEMON</BonusType>
+					<BonusType>BONUS_LEMONS</BonusType>
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5449,11 +5450,11 @@
 					<iDiscoverRand>100000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_RUBY</BonusType>
+					<BonusType>BONUS_RUBIES</BonusType>
 					<iDiscoverRand>100000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SAPPHIRE</BonusType>
+					<BonusType>BONUS_SAPPHIRES</BonusType>
 					<iDiscoverRand>100000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5469,7 +5470,7 @@
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GUAVA</BonusType>
+					<BonusType>BONUS_GUAVAS</BonusType>
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5477,7 +5478,7 @@
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5513,13 +5514,13 @@
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_HUNTING_TACTICS</PrereqTech>
+					<PrereqTech>TECH_HUNTING</PrereqTech>
 					<TechYields>
 						<iYield>1</iYield>
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_WILDERNESSC</PrereqTech>
+					<PrereqTech>TECH_WILDLIFE_CONSERVATION</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5537,7 +5538,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5545,7 +5546,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5561,7 +5562,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5569,7 +5570,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5577,7 +5578,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5643,7 +5644,7 @@
 			</TerrainMakesValids>
 			<FeatureMakesValids>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
@@ -5701,7 +5702,7 @@
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_WINE</BonusType>
+					<BonusType>BONUS_GRAPES</BonusType>
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -5731,13 +5732,13 @@
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_HUNTING_TACTICS</PrereqTech>
+					<PrereqTech>TECH_HUNTING</PrereqTech>
 					<TechYields>
 						<iYield>1</iYield>
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_WILDERNESSC</PrereqTech>
+					<PrereqTech>TECH_WILDLIFE_CONSERVATION</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5755,7 +5756,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5763,7 +5764,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5779,7 +5780,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5787,7 +5788,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5795,7 +5796,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5911,13 +5912,13 @@
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_HUNTING_TACTICS</PrereqTech>
+					<PrereqTech>TECH_HUNTING</PrereqTech>
 					<TechYields>
 						<iYield>1</iYield>
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_WILDERNESSC</PrereqTech>
+					<PrereqTech>TECH_WILDLIFE_CONSERVATION</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5935,7 +5936,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5943,7 +5944,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5959,7 +5960,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5967,7 +5968,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -5975,7 +5976,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -6020,11 +6021,11 @@
 			<bOutsideBorders>1</bOutsideBorders>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_SLIMY_COAST</TerrainType>
+					<TerrainType>TERRAIN_INFECTED_WATER</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_SLIMY_OCEAN</TerrainType>
+					<TerrainType>TERRAIN_PLAGUED_WATER</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
@@ -6032,16 +6033,16 @@
 		</ImprovementInfo>
 		<!-- Plant Jungle -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_MAKE_JUNGLE</Type>
-			<Description>TXT_KEY_BUILD_MAKE_JUNGLE</Description>
+			<Type>IMPROVEMENT_PLANT_JUNGLE</Type>
+			<Description>TXT_KEY_BUILD_PLANT_JUNGLE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_MAKE_JUNGLE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_JUNGLE</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -6075,19 +6076,20 @@
 					<iAmountPerTurn>-5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Plant Forest -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_PLANT_FOREST</Type>
-			<Description>TXT_KEY_FEATURE_FOREST_NEW</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_PLANT_FOREST_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_FOREST</ArtDefineTag>
+			<Type>IMPROVEMENT_YOUNG_FOREST</Type>
+			<Description>TXT_KEY_FEATURE_FOREST_YOUNG</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_YOUNG_FOREST_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_YOUNG_FOREST</ArtDefineTag>
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -6119,7 +6121,8 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-		</ImprovementInfo>
+			<bGraphicalOnly>1</bGraphicalOnly>
+		</ImprovementInfo>		
 		<!-- Plant Savanna -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_PLANT_SAVANNA</Type>
@@ -6130,7 +6133,7 @@
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -6158,18 +6161,19 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Plant Bamboo -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_PLANT_BAMBOO</Type>
-			<Description>TXT_KEY_BUILD_PLANT_BAMBOO</Description>
+			<Type>IMPROVEMENT_PLANT_BAMBOO_GROVE</Type>
+			<Description>TXT_KEY_BUILD_PLANT_BAMBOO_GROVE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_BAMBOO</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_BAMBOO_GROVE</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -6197,6 +6201,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Terraform Lush -->
 		<ImprovementInfo>
@@ -6213,7 +6218,7 @@
 			<!--bOutsideBorders>1</bOutsideBorders-->
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -6377,7 +6382,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
@@ -6430,10 +6435,10 @@
 		<!-- Prehistoric other plant improvements -->
 		<!-- Fruit Gatherer -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_FRUIT_GATHERER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_FRUIT_GATHERER</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_FRUIT_GATHERER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_FRUIT_GATHERER</ArtDefineTag>
+			<Type>IMPROVEMENT_FRUIT_GATHERING_CAMP</Type>
+			<Description>TXT_KEY_IMPROVEMENT_FRUIT_GATHERING_CAMP</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_FRUIT_GATHERING_CAMP_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_FRUIT_GATHERING_CAMP</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<iUpgradeTime>5</iUpgradeTime>
@@ -6456,7 +6461,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_LEMON</BonusType>
+					<BonusType>BONUS_LEMONS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -6554,7 +6559,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GUAVA</BonusType>
+					<BonusType>BONUS_GUAVAS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -6562,7 +6567,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
-			<ImprovementUpgrade>IMPROVEMENT_FRUIT_PICKER</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_BARTER</PrereqTech>
@@ -6576,17 +6581,17 @@
 		</ImprovementInfo>
 		<!-- Grape Gatherer -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_GRAPE_GATHERER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_GRAPE_GATHERER</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_FRUIT_GATHERER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_FRUIT_GATHERER</ArtDefineTag>
+			<Type>IMPROVEMENT_GRAPE_GATHERING_CAMP</Type>
+			<Description>TXT_KEY_IMPROVEMENT_GRAPE_GATHERING_CAMP</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_FRUIT_GATHERING_CAMP_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_FRUIT_GATHERING_CAMP</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<iUpgradeTime>5</iUpgradeTime>
 			<iPillageGold>7</iPillageGold>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_WINE</BonusType>
+					<BonusType>BONUS_GRAPES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -6594,7 +6599,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
-			<ImprovementUpgrade>IMPROVEMENT_GRAPE_PICKER</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_BARTER</PrereqTech>
@@ -6608,17 +6613,17 @@
 		</ImprovementInfo>
 		<!-- Plant Gatherer -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_PLANT_GATHERER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_PLANT_GATHERER</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_PLANT_GATHERER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_GATHERER</ArtDefineTag>
+			<Type>IMPROVEMENT_PLANT_GATHERING_CAMP</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLANT_GATHERING_CAMP</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_PLANT_GATHERING_CAMP_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_GATHERING_CAMP</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<iUpgradeTime>5</iUpgradeTime>
 			<iPillageGold>7</iPillageGold>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -6796,7 +6801,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
-			<ImprovementUpgrade>IMPROVEMENT_PLANT_PICKER</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_PLANT_PICKING_CAMP</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_BARTER</PrereqTech>
@@ -6810,10 +6815,10 @@
 		</ImprovementInfo>
 		<!-- Fruit Picker -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_FRUIT_PICKER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_FRUIT_PICKER</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_FRUIT_GATHERER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_FRUIT_GATHERER</ArtDefineTag>
+			<Type>IMPROVEMENT_FRUIT_PICKING_CAMP</Type>
+			<Description>TXT_KEY_IMPROVEMENT_FRUIT_PICKING_CAMP</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_FRUIT_GATHERING_CAMP_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_FRUIT_GATHERING_CAMP</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -6845,7 +6850,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_LEMON</BonusType>
+					<BonusType>BONUS_LEMONS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -6965,7 +6970,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GUAVA</BonusType>
+					<BonusType>BONUS_GUAVAS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -7000,10 +7005,10 @@
 		</ImprovementInfo>
 		<!-- Grape Picker -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_GRAPE_PICKER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_GRAPE_PICKER</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_FRUIT_GATHERER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_FRUIT_GATHERER</ArtDefineTag>
+			<Type>IMPROVEMENT_GRAPE_PICKING_CAMP</Type>
+			<Description>TXT_KEY_IMPROVEMENT_GRAPE_PICKING_CAMP</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_FRUIT_GATHERING_CAMP_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_FRUIT_GATHERING_CAMP</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -7015,7 +7020,7 @@
 			<iPillageGold>20</iPillageGold>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_WINE</BonusType>
+					<BonusType>BONUS_GRAPES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -7045,10 +7050,10 @@
 		</ImprovementInfo>
 		<!-- Plant Picker -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_PLANT_PICKER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_PLANT_PICKER</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_PLANT_GATHERER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_GATHERER</ArtDefineTag>
+			<Type>IMPROVEMENT_PLANT_PICKING_CAMP</Type>
+			<Description>TXT_KEY_IMPROVEMENT_PLANT_PICKING_CAMP</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_PLANT_GATHERING_CAMP_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_GATHERING_CAMP</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -7060,7 +7065,7 @@
 			<iPillageGold>20</iPillageGold>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -7279,17 +7284,17 @@
 			<iPillageGold>5</iPillageGold>
 			<FeatureMakesValids>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_CORAL</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_CORAL_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_REEF_BEACON</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
 			<ImprovementUpgrade>IMPROVEMENT_LIGHTHOUSE_CORAL</ImprovementUpgrade>
 			<FeatureChangeTypes>
-				<FeatureType>FEATURE_CORAL_WITH_BEACON</FeatureType>
+				<FeatureType>FEATURE_CORAL_REEF_REEF_BEACON</FeatureType>
 			</FeatureChangeTypes>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -7349,13 +7354,13 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_REEF_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_REEF_BEACON</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
 			<ImprovementUpgrade>IMPROVEMENT_LIGHTHOUSE_REEF</ImprovementUpgrade>
 			<FeatureChangeTypes>
-				<FeatureType>FEATURE_REEF_WITH_BEACON</FeatureType>
+				<FeatureType>FEATURE_REEF_BEACON</FeatureType>
 			</FeatureChangeTypes>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -7420,7 +7425,7 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_SEAGRASS</FeatureType>
+					<FeatureType>FEATURE_SEA_GRASS</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
@@ -7460,21 +7465,21 @@
 			<iPillageGold>5</iPillageGold>
 			<FeatureMakesValids>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_CORAL</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_CORAL_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_REEF_BEACON</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_CORAL_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_REEF_LIGHTHOUSE</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
 			<ImprovementPillage>IMPROVEMENT_BEACON_CORAL</ImprovementPillage>
 			<FeatureChangeTypes>
-				<FeatureType>FEATURE_CORAL_WITH_LIGHTHOUSE</FeatureType>
+				<FeatureType>FEATURE_CORAL_REEF_REEF_LIGHTHOUSE</FeatureType>
 			</FeatureChangeTypes>
 		</ImprovementInfo>
 		<ImprovementInfo>
@@ -7499,17 +7504,17 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_REEF_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_REEF_BEACON</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_REEF_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_REEF_LIGHTHOUSE</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
 			<ImprovementPillage>IMPROVEMENT_BEACON_REEF</ImprovementPillage>
 			<FeatureChangeTypes>
-				<FeatureType>FEATURE_REEF_WITH_LIGHTHOUSE</FeatureType>
+				<FeatureType>FEATURE_REEF_LIGHTHOUSE</FeatureType>
 			</FeatureChangeTypes>
 		</ImprovementInfo>
 		<!-- Orchard -->
@@ -7552,7 +7557,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_LEMON</BonusType>
+					<BonusType>BONUS_LEMONS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -7672,7 +7677,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GUAVA</BonusType>
+					<BonusType>BONUS_GUAVAS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -7682,7 +7687,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
-			<ImprovementUpgrade>IMPROVEMENT_FARMSCRAPER</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_VERTICAL_FARM</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_TRADE</PrereqTech>
@@ -7701,7 +7706,7 @@
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_PESTICIDES</PrereqTech>
+					<PrereqTech>TECH_AGRICULTURAL_ENGINEERING</PrereqTech>
 					<TechYields>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -7717,7 +7722,7 @@
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_GENEMANIPULATION</PrereqTech>
+					<PrereqTech>TECH_GENE_MANIPULATION</PrereqTech>
 					<TechYields>
 						<iYield>1</iYield>
 					</TechYields>
@@ -7726,9 +7731,9 @@
 		</ImprovementInfo>
 		<!-- Fossil Digsite -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_FOSSIL_DIGSITE</Type>
-			<Description>TXT_KEY_IMPROVEMENT_FOSSIL_DIGSITE</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_FOSSIL_DIGSITE_PEDIA</Civilopedia>
+			<Type>IMPROVEMENT_FOSSIL_DIG_SITE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_FOSSIL_DIG_SITE</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_FOSSIL_DIG_SITE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FOREST_PRESERVE</ArtDefineTag>
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<YieldChanges>
@@ -7742,13 +7747,13 @@
 			<iUpgradeTime>10</iUpgradeTime>
 			<FeatureMakesValids>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_TARPIT</FeatureType>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_FOSSIL</BonusType>
+					<BonusType>BONUS_FOSSIL_BEDS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -7779,7 +7784,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -7787,7 +7792,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -7803,7 +7808,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -7811,7 +7816,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -7819,7 +7824,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -7867,7 +7872,7 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_TARPIT</FeatureType>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
@@ -8051,7 +8056,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -8059,7 +8064,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -8075,7 +8080,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -8083,7 +8088,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -8091,7 +8096,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -8118,10 +8123,10 @@
 		</ImprovementInfo>
 		<!-- Indigenous People -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_INDIGENOUS_PEOPLE</Type>
-			<Description>TXT_KEY_IMPROVEMENT_INDIGENOUS_PEOPLE</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_INDIGENOUS_PEOPLE_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_INDIGENOUS_PEOPLE</ArtDefineTag>
+			<Type>IMPROVEMENT_INDIGENOUS_COMMUNITY</Type>
+			<Description>TXT_KEY_IMPROVEMENT_INDIGENOUS_COMMUNITY</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_INDIGENOUS_COMMUNITY_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_INDIGENOUS_COMMUNITY</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>-1</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -8142,6 +8147,7 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
+			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Thatch Cutter -->
 		<ImprovementInfo>
@@ -8161,7 +8167,7 @@
 			<iPillageGold>8</iPillageGold>
 			<FeatureMakesValids>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
@@ -8215,7 +8221,7 @@
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_MINIATURIZATION</PrereqTech>
+					<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>-2</iYield>
@@ -8260,7 +8266,7 @@
 			<Type>IMPROVEMENT_MUSHROOM_GATHERER</Type>
 			<Description>TXT_KEY_IMPROVEMENT_MUSHROOM_GATHERER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_MUSHROOM_GATHERER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_GATHERING_CAMP</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<iUpgradeTime>20</iUpgradeTime>
@@ -8277,7 +8283,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
-			<ImprovementUpgrade>IMPROVEMENT_FARMSCRAPER</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_VERTICAL_FARM</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_BARTER</PrereqTech>
@@ -8311,10 +8317,10 @@
 		</ImprovementInfo>
 		<!-- Colony Habitat (Small) -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_HABITAT1</Type>
-			<Description>TXT_KEY_IMPROVEMENT_HABITAT1</Description>
+			<Type>IMPROVEMENT_COLONY_HABITAT_SMALL</Type>
+			<Description>TXT_KEY_IMPROVEMENT_COLONY_HABITAT_SMALL</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COTTAGE_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_HABITAT1</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_COLONY_HABITAT_SMALL</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -8330,23 +8336,23 @@
 			<iPillageGold>10</iPillageGold>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_BASALT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_PLAINS</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_MARE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_ROCKY</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_BARREN</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_REGOLITH</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_DESERT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_RILLE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -8374,10 +8380,10 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<ImprovementUpgrade>IMPROVEMENT_HABITAT2</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_COLONY_HABITAT_MEDIUM</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
-					<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+					<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -8396,17 +8402,17 @@
 		</ImprovementInfo>
 		<!-- Colony Habitat (Medium) -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_HABITAT2</Type>
-			<Description>TXT_KEY_IMPROVEMENT_HABITAT2</Description>
+			<Type>IMPROVEMENT_COLONY_HABITAT_MEDIUM</Type>
+			<Description>TXT_KEY_IMPROVEMENT_COLONY_HABITAT_MEDIUM</Description>
 			<Civilopedia>Habitat (Medium)</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_HABITAT2</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_COLONY_HABITAT_MEDIUM</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bUseLSystem>1</bUseLSystem>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -8415,23 +8421,23 @@
 			<iPillageGold>15</iPillageGold>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_BASALT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_PLAINS</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_MARE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_ROCKY</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_BARREN</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_REGOLITH</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_DESERT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_RILLE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -8459,8 +8465,8 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<ImprovementPillage>IMPROVEMENT_HABITAT1</ImprovementPillage>
-			<ImprovementUpgrade>IMPROVEMENT_HABITAT3</ImprovementUpgrade>
+			<ImprovementPillage>IMPROVEMENT_COLONY_HABITAT_SMALL</ImprovementPillage>
+			<ImprovementUpgrade>IMPROVEMENT_COLONY_HABITAT_LARGE</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_LUNAR_TOURISM</PrereqTech>
@@ -8508,7 +8514,7 @@
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_PLANET_COLONIZATION</PrereqTech>
+					<PrereqTech>TECH_PLANETARY_COLONIZATION</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -8519,17 +8525,17 @@
 		</ImprovementInfo>
 		<!-- Colony Habitat (Large) -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_HABITAT3</Type>
-			<Description>TXT_KEY_IMPROVEMENT_HABITAT3</Description>
+			<Type>IMPROVEMENT_COLONY_HABITAT_LARGE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_COLONY_HABITAT_LARGE</Description>
 			<Civilopedia>Habitat (Large)</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_HABITAT3</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_COLONY_HABITAT_LARGE</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>8</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
-			<PrereqTech>TECH_SUPERFLUOUS_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bUseLSystem>1</bUseLSystem>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -8538,23 +8544,23 @@
 			<iPillageGold>20</iPillageGold>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_BASALT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_PLAINS</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_MARE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_ROCKY</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_BARREN</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_REGOLITH</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_DESERT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_RILLE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -8582,8 +8588,8 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<ImprovementPillage>IMPROVEMENT_HABITAT2</ImprovementPillage>
-			<ImprovementUpgrade>IMPROVEMENT_HABITAT4</ImprovementUpgrade>
+			<ImprovementPillage>IMPROVEMENT_COLONY_HABITAT_MEDIUM</ImprovementPillage>
+			<ImprovementUpgrade>IMPROVEMENT_COLONY_HABITAT_HUGE</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_LUNAR_MEGASTRUCTURES</PrereqTech>
@@ -8605,10 +8611,10 @@
 		</ImprovementInfo>
 		<!-- Colony Habitat (Huge) -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_HABITAT4</Type>
-			<Description>TXT_KEY_IMPROVEMENT_HABITAT4</Description>
+			<Type>IMPROVEMENT_COLONY_HABITAT_HUGE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_COLONY_HABITAT_HUGE</Description>
 			<Civilopedia>Habitat Compound</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_HABITAT4</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_COLONY_HABITAT_HUGE</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -8623,23 +8629,23 @@
 			<iPillageGold>25</iPillageGold>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_BASALT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_PLAINS</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_MARE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_ROCKY</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_BARREN</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_REGOLITH</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_DESERT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_RILLE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -8667,7 +8673,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<ImprovementPillage>IMPROVEMENT_HABITAT3</ImprovementPillage>
+			<ImprovementPillage>IMPROVEMENT_COLONY_HABITAT_LARGE</ImprovementPillage>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_PLANETARY_TRADE</PrereqTech>
@@ -8713,30 +8719,30 @@
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bUseLSystem>1</bUseLSystem>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iPillageGold>250</iPillageGold>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_BASALT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_PLAINS</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_MARE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_ROCKY</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_BARREN</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_REGOLITH</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_DESERT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_RILLE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -8766,7 +8772,7 @@
 			</TerrainMakesValids>
 			<TechYieldChanges>
 				<TechYieldChange>
-					<PrereqTech>TECH_AUGMENT_CONSUMABLES</PrereqTech>
+					<PrereqTech>TECH_AUGMENTED_CONSUMABLES</PrereqTech>
 					<TechYields>
 						<iYield>1</iYield>
 					</TechYields>
@@ -8778,7 +8784,7 @@
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_AGERMINATION</PrereqTech>
+					<PrereqTech>TECH_ACCELERATED_GERMINATION</PrereqTech>
 					<TechYields>
 						<iYield>1</iYield>
 					</TechYields>
@@ -8830,30 +8836,30 @@
 				<iYieldChange>5</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bUseLSystem>1</bUseLSystem>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iPillageGold>250</iPillageGold>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_BASALT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_PLAINS</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_MARE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_ROCKY</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_BARREN</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_REGOLITH</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_DESERT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_RILLE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -8904,7 +8910,7 @@
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_SUPERFLUOUS_MANUFACTURING</PrereqTech>
+					<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -8924,21 +8930,21 @@
 			<Type>IMPROVEMENT_COLONY_EXTRACTION_FACILITY</Type>
 			<Description>TXT_KEY_IMPROVEMENT_COLONY_EXTRACTION_FACILITY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COLONY_EXTRACTION_FACILITY_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_GEOTHERMAL_BOREHOLE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_GEOTHERMAL_FACTORY</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>6</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>1</bHillsMakesValid>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<bUseLSystem>1</bUseLSystem>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iPillageGold>250</iPillageGold>
 			<bOutsideBorders>1</bOutsideBorders>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_CO2_ICE</BonusType>
+					<BonusType>BONUS_CARBON_DIOXIDE_ICE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>100000</iDiscoverRand>
@@ -8972,7 +8978,7 @@
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_SUPERFLUOUS_MANUFACTURING</PrereqTech>
+					<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -9020,29 +9026,29 @@
 				<iYieldChange>5</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<bUseLSystem>1</bUseLSystem>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iPillageGold>50</iPillageGold>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_BASALT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_PLAINS</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_MARE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_ROCKY</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_BARREN</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_REGOLITH</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_DESERT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_RILLE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -9091,10 +9097,10 @@
 		</ImprovementInfo>
 		<!-- Sea Windmill -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_WINDMILL_SEA</Type>
+			<Type>IMPROVEMENT_SEA_MILL</Type>
 			<Description>TXT_KEY_IMPROVEMENT_SEA_MILL</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_WINDMILL_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_WINDMILL_SEA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_SEA_MILL</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -9217,7 +9223,7 @@
 			<iPillageGold>15</iPillageGold>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -9271,7 +9277,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_POTATO</BonusType>
+					<BonusType>BONUS_POTATOES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -9291,7 +9297,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_MELON</BonusType>
+					<BonusType>BONUS_MELONS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -9323,7 +9329,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
-			<ImprovementUpgrade>IMPROVEMENT_FARMSCRAPER</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_VERTICAL_FARM</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_CROP_ROTATION</PrereqTech>
@@ -9338,7 +9344,7 @@
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_PESTICIDES</PrereqTech>
+					<PrereqTech>TECH_AGRICULTURAL_ENGINEERING</PrereqTech>
 					<TechYields>
 						<iYield>1</iYield>
 					</TechYields>
@@ -9350,13 +9356,13 @@
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_GENEMANIPULATION</PrereqTech>
+					<PrereqTech>TECH_GENE_MANIPULATION</PrereqTech>
 					<TechYields>
 						<iYield>1</iYield>
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_BIOFUELS</PrereqTech>
+					<PrereqTech>TECH_BIOMATERIALS</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -9406,7 +9412,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -9414,7 +9420,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -9430,7 +9436,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -9438,7 +9444,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -9446,7 +9452,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -9483,10 +9489,10 @@
 		</ImprovementInfo>
 		<!-- Vertical Farm -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_FARMSCRAPER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_FARMSCRAPER</Description>
+			<Type>IMPROVEMENT_VERTICAL_FARM</Type>
+			<Description>TXT_KEY_IMPROVEMENT_VERTICAL_FARM</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FARM_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_FARMSCRAPER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_VERTICAL_FARM</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>15</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -9504,7 +9510,7 @@
 			<iPillageGold>50</iPillageGold>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -9565,7 +9571,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_POTATO</BonusType>
+					<BonusType>BONUS_POTATOES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>25000</iDiscoverRand>
@@ -9585,7 +9591,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_MELON</BonusType>
+					<BonusType>BONUS_MELONS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>25000</iDiscoverRand>
@@ -9629,7 +9635,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_WINE</BonusType>
+					<BonusType>BONUS_GRAPES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>25000</iDiscoverRand>
@@ -9662,7 +9668,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_LEMON</BonusType>
+					<BonusType>BONUS_LEMONS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>25000</iDiscoverRand>
@@ -9794,7 +9800,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GUAVA</BonusType>
+					<BonusType>BONUS_GUAVAS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>25000</iDiscoverRand>
@@ -10086,7 +10092,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>25000</iDiscoverRand>
@@ -10125,7 +10131,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -10133,7 +10139,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -10149,7 +10155,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -10157,7 +10163,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -10165,7 +10171,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -10229,11 +10235,11 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
@@ -10322,7 +10328,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -10495,11 +10501,11 @@
 			<iUpgradeTime>32</iUpgradeTime>
 			<FeatureMakesValids>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_CORAL_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_REEF_LIGHTHOUSE</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_REEF_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_REEF_LIGHTHOUSE</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
@@ -10530,17 +10536,17 @@
 			<bActsAsCity>0</bActsAsCity>
 			<FeatureMakesValids>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
 		</ImprovementInfo>
 		<!--Fortifications -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_ABATIS</Type>
-			<Description>TXT_KEY_IMPROVEMENT_ABATIS</Description>
+			<Type>IMPROVEMENT_ABATIS_THORN_HEDGE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_ABATIS_THORN_HEDGE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORT_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_ABATIS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_ABATIS_THORN_HEDGE</ArtDefineTag>
 			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<bUseLSystem>1</bUseLSystem>
@@ -10563,7 +10569,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -10595,11 +10601,11 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -10619,16 +10625,16 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<ImprovementUpgrade>IMPROVEMENT_PALISADE</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_WOODEN_PALISADE</ImprovementUpgrade>
 			<iSeeFrom>1</iSeeFrom>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_PALISADE</Type>
-			<Description>TXT_KEY_IMPROVEMENT_PALISADE</Description>
+			<Type>IMPROVEMENT_WOODEN_PALISADE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_WOODEN_PALISADE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORT_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_PALISADE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_WOODEN_PALISADE</ArtDefineTag>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<bActsAsCity>1</bActsAsCity>
 			<bUseLSystem>1</bUseLSystem>
@@ -10651,7 +10657,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -10683,11 +10689,11 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -10728,20 +10734,20 @@
 			<bOutsideBorders>1</bOutsideBorders>
 			<FeatureMakesValids>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
-			<ImprovementUpgrade>IMPROVEMENT_FORTIFIED_CAVE_CACHE</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</ImprovementUpgrade>
 			<iSeeFrom>1</iSeeFrom>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_FORTIFIED_CAVE_CACHE</Type>
-			<Description>TXT_KEY_IMPROVEMENT_FORTIFIED_CAVE_CACHE</Description>
+			<Type>IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FORTIFIED_CAVE_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_FORTIFIED_CAVE_CACHE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</ArtDefineTag>
 			<PrereqTech>TECH_POTTERY</PrereqTech>
 			<bActsAsCity>1</bActsAsCity>
 			<bUseLSystem>1</bUseLSystem>
@@ -10752,7 +10758,7 @@
 			<bOutsideBorders>1</bOutsideBorders>
 			<FeatureMakesValids>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
@@ -10791,7 +10797,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -10823,11 +10829,11 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -10847,7 +10853,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<ImprovementUpgrade>IMPROVEMENT_BUNKER</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_COMMAND_BUNKER</ImprovementUpgrade>
 			<iCulture>10</iCulture>
 			<iCultureRange>1</iCultureRange>
 			<iVisibilityChange>2</iVisibilityChange>
@@ -10860,10 +10866,10 @@
 		</ImprovementInfo>
 		<!-- Command Bunker -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_BUNKER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_BUNKER</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_BUNKER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_BUNKER</ArtDefineTag>
+			<Type>IMPROVEMENT_COMMAND_BUNKER</Type>
+			<Description>TXT_KEY_IMPROVEMENT_COMMAND_BUNKER</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_COMMAND_BUNKER_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_COMMAND_BUNKER</ArtDefineTag>
 			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
 			<bUseLSystem>1</bUseLSystem>
@@ -10886,7 +10892,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -10918,11 +10924,11 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -10942,7 +10948,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<ImprovementUpgrade>IMPROVEMENT_FUTURE_BUNKER</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_COMMAND_CENTER</ImprovementUpgrade>
 			<iCulture>10</iCulture>
 			<iCultureRange>1</iCultureRange>
 			<iVisibilityChange>2</iVisibilityChange>
@@ -10955,10 +10961,10 @@
 		</ImprovementInfo>
 		<!-- Command Center -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_FUTURE_BUNKER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_FUTURE_BUNKER</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_FUTURE_BUNKER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_FUTURE_BUNKER</ArtDefineTag>
+			<Type>IMPROVEMENT_COMMAND_CENTER</Type>
+			<Description>TXT_KEY_IMPROVEMENT_COMMAND_CENTER</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_COMMAND_CENTER_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_COMMAND_CENTER</ArtDefineTag>
 			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_METAMATERIALS</PrereqTech>
 			<iAdvancedStartCost>80</iAdvancedStartCost>
@@ -10979,7 +10985,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -11011,11 +11017,11 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -11047,10 +11053,10 @@
 		</ImprovementInfo>
 		<!-- Watch towers -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_WOODEN_TOWER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_WOODEN_TOWER</Description>
+			<Type>IMPROVEMENT_WOODEN_WATCHTOWER</Type>
+			<Description>TXT_KEY_IMPROVEMENT_WOODEN_WATCHTOWER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_OBSERVATION_POST_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_WOODEN_TOWER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_WOODEN_WATCHTOWER</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<bUseLSystem>1</bUseLSystem>
@@ -11073,7 +11079,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -11105,11 +11111,11 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -11130,7 +11136,7 @@
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<!--
-ImprovementUpgrade>IMPROVEMENT_STONE_TOWER</ImprovementUpgrade
+ImprovementUpgrade>IMPROVEMENT_STONE_WATCHTOWER</ImprovementUpgrade
 			-->
 			<iCulture>1</iCulture>
 			<iVisibilityChange>2</iVisibilityChange>
@@ -11139,10 +11145,10 @@ ImprovementUpgrade>IMPROVEMENT_STONE_TOWER</ImprovementUpgrade
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_STONE_TOWER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_STONE_TOWER</Description>
+			<Type>IMPROVEMENT_STONE_WATCHTOWER</Type>
+			<Description>TXT_KEY_IMPROVEMENT_STONE_WATCHTOWER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_OBSERVATION_POST_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_STONE_TOWER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_STONE_WATCHTOWER</ArtDefineTag>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<bActsAsCity>0</bActsAsCity>
 			<bUseLSystem>1</bUseLSystem>
@@ -11165,7 +11171,7 @@ ImprovementUpgrade>IMPROVEMENT_STONE_TOWER</ImprovementUpgrade
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -11197,11 +11203,11 @@ ImprovementUpgrade>IMPROVEMENT_STONE_TOWER</ImprovementUpgrade
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -11221,7 +11227,7 @@ ImprovementUpgrade>IMPROVEMENT_STONE_TOWER</ImprovementUpgrade
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<ImprovementUpgrade>IMPROVEMENT_STEEL_TOWER</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementUpgrade>
 			<iCulture>1</iCulture>
 			<iVisibilityChange>4</iVisibilityChange>
 			<iSeeFrom>1</iSeeFrom>
@@ -11229,10 +11235,10 @@ ImprovementUpgrade>IMPROVEMENT_STONE_TOWER</ImprovementUpgrade
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_STEEL_TOWER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_STEEL_TOWER</Description>
+			<Type>IMPROVEMENT_STEEL_WATCHTOWER</Type>
+			<Description>TXT_KEY_IMPROVEMENT_STEEL_WATCHTOWER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_OBSERVATION_POST_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_STEEL_TOWER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_STEEL_WATCHTOWER</ArtDefineTag>
 			<PrereqTech>TECH_STEEL</PrereqTech>
 			<bActsAsCity>0</bActsAsCity>
 			<bUseLSystem>1</bUseLSystem>
@@ -11255,7 +11261,7 @@ ImprovementUpgrade>IMPROVEMENT_STONE_TOWER</ImprovementUpgrade
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -11287,11 +11293,11 @@ ImprovementUpgrade>IMPROVEMENT_STONE_TOWER</ImprovementUpgrade
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -11311,7 +11317,7 @@ ImprovementUpgrade>IMPROVEMENT_STONE_TOWER</ImprovementUpgrade
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<ImprovementUpgrade>IMPROVEMENT_RADAR</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_RADAR_TOWER</ImprovementUpgrade>
 			<iCulture>10</iCulture>
 			<iVisibilityChange>8</iVisibilityChange>
 			<iSeeFrom>1</iSeeFrom>
@@ -11320,10 +11326,10 @@ ImprovementUpgrade>IMPROVEMENT_STONE_TOWER</ImprovementUpgrade
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_RADAR</Type>
-			<Description>TXT_KEY_IMPROVEMENT_RADAR</Description>
+			<Type>IMPROVEMENT_RADAR_TOWER</Type>
+			<Description>TXT_KEY_IMPROVEMENT_RADAR_TOWER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_OBSERVATION_POST_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_RADAR</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_RADAR_TOWER</ArtDefineTag>
 			<PrereqTech>TECH_RADAR</PrereqTech>
 			<bActsAsCity>0</bActsAsCity>
 			<bUseLSystem>1</bUseLSystem>
@@ -11346,7 +11352,7 @@ ImprovementUpgrade>IMPROVEMENT_STONE_TOWER</ImprovementUpgrade
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -11378,11 +11384,11 @@ ImprovementUpgrade>IMPROVEMENT_STONE_TOWER</ImprovementUpgrade
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -11443,10 +11449,10 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 		</ImprovementInfo>
 		<!-- Stone Tools Workshop (Mine/Quarry) -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_ROCK_GATHERER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_ROCK_GATHERER</Description>
+			<Type>IMPROVEMENT_STONE_TOOLS_WORKSHOP</Type>
+			<Description>TXT_KEY_IMPROVEMENT_STONE_TOOLS_WORKSHOP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_MINE_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_ROCK_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_STONE_TOOLS_WORKSHOP</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -11464,17 +11470,17 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -11484,7 +11490,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SILVER</BonusType>
+					<BonusType>BONUS_SILVER_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -11494,7 +11500,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -11574,7 +11580,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 			<AlternativeImprovementUpgradeTypes>
 				<ImprovementType>IMPROVEMENT_EARLY_QUARRY</ImprovementType>
 				<ImprovementType>IMPROVEMENT_QUARRY</ImprovementType>
-				<ImprovementType>IMPROVEMENT_PINE_GATHERER</ImprovementType>
+				<ImprovementType>IMPROVEMENT_WOOD_GATHERER</ImprovementType>
 				<ImprovementType>IMPROVEMENT_MOUNTAIN_MINE</ImprovementType>
 			</AlternativeImprovementUpgradeTypes>
 			<TechYieldChanges>
@@ -11592,7 +11598,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 			<Type>IMPROVEMENT_EARLY_QUARRY</Type>
 			<Description>TXT_KEY_IMPROVEMENT_EARLY_QUARRY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_QUARRY_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_ROCK_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_STONE_TOOLS_WORKSHOP</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>3</iYieldChange>
@@ -11610,11 +11616,11 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
@@ -11702,17 +11708,17 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_BAUXITE</BonusType>
+					<BonusType>BONUS_BAUXITE_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -11735,7 +11741,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -11747,7 +11753,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -11759,7 +11765,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_IRON</BonusType>
+					<BonusType>BONUS_IRON_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -11770,7 +11776,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SILVER</BonusType>
+					<BonusType>BONUS_SILVER_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -11806,7 +11812,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -11818,7 +11824,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_FOSSIL</BonusType>
+					<BonusType>BONUS_FOSSIL_BEDS</BonusType>
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -11834,7 +11840,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_RUBY</BonusType>
+					<BonusType>BONUS_RUBIES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -11846,7 +11852,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SAPPHIRE</BonusType>
+					<BonusType>BONUS_SAPPHIRES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -11870,7 +11876,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_PLATINUM</BonusType>
+					<BonusType>BONUS_PLATINUM_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -11882,7 +11888,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TIN</BonusType>
+					<BonusType>BONUS_TIN_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -11932,14 +11938,14 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -11953,21 +11959,21 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -12023,17 +12029,17 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_BAUXITE</BonusType>
+					<BonusType>BONUS_BAUXITE_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12056,7 +12062,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12068,7 +12074,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12080,7 +12086,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_IRON</BonusType>
+					<BonusType>BONUS_IRON_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12091,7 +12097,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SILVER</BonusType>
+					<BonusType>BONUS_SILVER_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12127,7 +12133,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12139,7 +12145,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_FOSSIL</BonusType>
+					<BonusType>BONUS_FOSSIL_BEDS</BonusType>
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -12155,7 +12161,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_RUBY</BonusType>
+					<BonusType>BONUS_RUBIES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12167,7 +12173,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SAPPHIRE</BonusType>
+					<BonusType>BONUS_SAPPHIRES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12191,7 +12197,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_PLATINUM</BonusType>
+					<BonusType>BONUS_PLATINUM_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12203,7 +12209,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TIN</BonusType>
+					<BonusType>BONUS_TIN_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12215,7 +12221,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TITANIUM</BonusType>
+					<BonusType>BONUS_TITANIUM_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12272,14 +12278,14 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -12293,21 +12299,21 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -12345,7 +12351,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 			<Description>TXT_KEY_IMPROVEMENT_MODERN_MINE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_MODERN_MINE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_MODERN_MINE</ArtDefineTag>
-			<PrereqTech>TECH_SEISMOLOGY</PrereqTech>
+			<PrereqTech>TECH_MODERN_SEISMOLOGY</PrereqTech>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>10</iYieldChange>
@@ -12364,17 +12370,17 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_BAUXITE</BonusType>
+					<BonusType>BONUS_BAUXITE_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12397,7 +12403,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12409,7 +12415,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12421,7 +12427,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_IRON</BonusType>
+					<BonusType>BONUS_IRON_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12432,7 +12438,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SILVER</BonusType>
+					<BonusType>BONUS_SILVER_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12468,7 +12474,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12480,7 +12486,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_FOSSIL</BonusType>
+					<BonusType>BONUS_FOSSIL_BEDS</BonusType>
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -12496,7 +12502,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_RUBY</BonusType>
+					<BonusType>BONUS_RUBIES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12508,7 +12514,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SAPPHIRE</BonusType>
+					<BonusType>BONUS_SAPPHIRES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12532,7 +12538,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_PLATINUM</BonusType>
+					<BonusType>BONUS_PLATINUM_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12544,7 +12550,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TIN</BonusType>
+					<BonusType>BONUS_TIN_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12556,7 +12562,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TITANIUM</BonusType>
+					<BonusType>BONUS_TITANIUM_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12599,14 +12605,14 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -12620,21 +12626,21 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -12686,7 +12692,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 			<iHealthPercent>-100</iHealthPercent>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_BAUXITE</BonusType>
+					<BonusType>BONUS_BAUXITE_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12709,7 +12715,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12721,7 +12727,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12733,7 +12739,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_IRON</BonusType>
+					<BonusType>BONUS_IRON_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12744,7 +12750,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SILVER</BonusType>
+					<BonusType>BONUS_SILVER_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12780,7 +12786,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12792,7 +12798,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_FOSSIL</BonusType>
+					<BonusType>BONUS_FOSSIL_BEDS</BonusType>
 					<iDiscoverRand>10000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -12808,7 +12814,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_RUBY</BonusType>
+					<BonusType>BONUS_RUBIES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12820,7 +12826,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SAPPHIRE</BonusType>
+					<BonusType>BONUS_SAPPHIRES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12844,7 +12850,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_PLATINUM</BonusType>
+					<BonusType>BONUS_PLATINUM_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12856,7 +12862,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TIN</BonusType>
+					<BonusType>BONUS_TIN_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12868,7 +12874,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TITANIUM</BonusType>
+					<BonusType>BONUS_TITANIUM_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
@@ -12983,14 +12989,14 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -13004,21 +13010,21 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -13087,7 +13093,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_BAUXITE</BonusType>
+					<BonusType>BONUS_BAUXITE_ORE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -13108,7 +13114,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_ORE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -13130,7 +13136,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_ORE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -13141,7 +13147,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_IRON</BonusType>
+					<BonusType>BONUS_IRON_ORE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -13151,7 +13157,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SILVER</BonusType>
+					<BonusType>BONUS_SILVER_ORE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -13184,7 +13190,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_ORE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -13195,7 +13201,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_RUBY</BonusType>
+					<BonusType>BONUS_RUBIES</BonusType>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -13206,7 +13212,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_SAPPHIRE</BonusType>
+					<BonusType>BONUS_SAPPHIRES</BonusType>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -13228,7 +13234,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_PLATINUM</BonusType>
+					<BonusType>BONUS_PLATINUM_ORE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -13239,7 +13245,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TIN</BonusType>
+					<BonusType>BONUS_TIN_ORE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -13250,7 +13256,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_TITANIUM</BonusType>
+					<BonusType>BONUS_TITANIUM_ORE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
@@ -13356,7 +13362,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_SEISMOLOGY</PrereqTech>
+					<PrereqTech>TECH_MODERN_SEISMOLOGY</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -13386,14 +13392,14 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED</RouteType>
+					<RouteType>ROUTE_PAVED_ROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_MODERN_ROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -13407,21 +13413,21 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVTUBE</RouteType>
+					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HYPERLOOP</RouteType>
+					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -13483,6 +13489,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 			<Civilopedia>TXT_KEY_IMPROVEMENT_CITY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_CITY_RUINS</ArtDefineTag>
 			<PrereqTech>TECH_DUMMY</PrereqTech>
-		</ImprovementInfo>
+			<bGraphicalOnly>1</bGraphicalOnly>
+		</ImprovementInfo>		
 	</ImprovementInfos>
 </Civ4ImprovementInfos>

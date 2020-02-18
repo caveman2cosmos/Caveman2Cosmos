@@ -6,14 +6,14 @@
 <!-- GameText Civilopedia Techs -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_MESO</Tag>
+		<Tag>TXT_KEY_TECH_MESOPOTAMISM</Tag>
 		<English>Mesopotamism</English>
 		<French>Mésopotamisme</French>
 		<Italian>Mesopotamismo</Italian>
 		<Polish>Mezopotamizm</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_MESO_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_TECH_MESOPOTAMISM_ADJECTIVE</Tag>
 		<English>Mesopotamic</English>
 		<French>
 			<Text>Mesopotamic</Text>
@@ -38,20 +38,20 @@
 		<Polish>Mezopotamska</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_MESO_PEDIA</Tag>
+		<Tag>TXT_KEY_TECH_MESOPOTAMISM_PEDIA</Tag>
 		<English>RELIGION HELP: mesopotamism doesn't work as usual religions does,it has no monasteries or cathedrals. In other hand, mesopotamism have 5 differents kinds of temples, each of them belonging to a deity and giving together the same amount of bonuses than any other religion; please, note that you need to build temple of An ( it was the mayor god in mesopotamic pantheon )in order to build any other temple. Also,  you have to consider one more thing about mesopotamism, it can be a powerfull religion in ancient times, as it was in history, but it will become almost obsolote with gunpowder, as many of the bonuses are concerned to old units.Mesopotamic religion is a global name given to Sumerian, Assyrian and Babilonic mythology.  It was a polytheistic religion, with antropomorphics gods representing forces or beeings of the world, like much later greeks will do. In their believes they stablish that gods made human kind to serve them as servants, but, when man became to many, gods have to release them.</English>
 		<Italian>ATTENZIONE: il mesopotamismo non funziona come le altre religioni, dato che non ha monasteri nè cattedrali; al contrario, il mesopotamismo ha 5 diversi templi, ognuno legato ad una diversa divinità, che nel complesso dato gli stessi bonus delle altre religioni. E' importante notare che è necessario costruire prima di tutto il tempio di An (il dio più importante del pantheon mesopotamico) per costruire gli altri templi. Il mesopotamismo può essere molto utile nell'era antica e classica, ma diventerà praticamente obsoleto con la polvere da sparo, dato che la maggior parte dei bonus di questa religione riguardano le unità più antiche.Religione mesopotamica è un nome generico che indica le mitologie Sumere, Assire e Babilonesi. Era una religione politeistica con dei antropomorfi che rappresentavano forze ed esseri del mondo, una caratteristica simile alla mitologia greca. Nelle loro credenze, i mesopotamici credevano che gli dei avessero creato gli uomini per usarli come schiavi ma, quando gli uomini divennero troppi, gli dei furono costretti a lasciarli liberi.</Italian>
 		<Polish>Religia Mezopotamii była zbiorem wierzeń politeistycznych. Jej zasięg był szeroki - rozciągała się na prawie cały Bliski Wschód, zaś jej echo widoczne jest w wielu innych kulturach. Religia Mezopotamii składa się z wielu odgałęzień, powstawała bowiem z tradycji lokalnych wierzeń, które w procesie dziejowym oddziaływały na siebie w większym lub mniejszym stopniu, i często były uzależnione od aktualnej sytuacji politycznej w regionie. Historia religii Mezopotamii obejmuje okres od IV tysiąclecia p.n.e., gdy na tym terenie zaczęły powstawać wielkie ośrodki miejskie, do końca I tysiąclecia p.n.e., to jest do epoki hellenistycznej. Katalogowaniem i spisywaniem bóstw zajmowali się kapłani. Stare bóstwa znikały, a na ich miejsce pojawiały się nowe. Czasem o bóstwach zapominano, łączono kilka bóstw w jedno, bądź też na odwrót - z jednego powstawało kilka nowych. Liczba bogów w Babilonii i Asyrii przekraczała aż trzy tysiące.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_MESO_QUOTE</Tag>
+		<Tag>TXT_KEY_TECH_MESOPOTAMISM_QUOTE</Tag>
 		<English>"Where is the strength? It is Gilgamesh who will venture first into the Cedar Forest, and you can follow after, crying out: 'Go on, go forward, go on, embrace the danger!' You who have fought with lions and with wolves, you know what danger is. Where is your courage? If I should fall, my name will be secure. 'It was Gilgamesh who fought against Huwawa! It is Gilgamesh who will venture into the Forest and cut down the Cedar down and win the glory. My fame will be secure to all my sons.'" - Epic of Gilgamesh</English>
 		<French>"Où est la force? c'est Gilgamesh qui osera s'aventurer d'abord dans la forêt de cèdres, et vous pouvez suivre après, en criant: «Allez, allez de l'avant, aller plus loin, embrasser le danger! Vous qui avez combattu avec les lions et les loups, vous savez ce qu'est le danger. Où est votre courage?" - Epopée de Gilgamesh</French>
 		<Spanish>"¿Dónde está la fuerza? Es Gilgamesh el primero que se aventurará a entrar en el Bosque de los Cedros, aunque puedes seguirle después, gritando: '¡Sigue, adelante, sigue, abraza el peligro!' Tú que has luchado contra leones y lobos, conoces cuál es ese peligro. ¿Dónde está tu valor? Si yo cayera, al menos mi nombre estaría a salvo. '¡Fue Gilgamesh, el que se enfrentó a Huwawa! Es Gilgamesh el que se aventurará a entrar en el bosque y talará el cedro, y conseguirá la gloria. Mi gloria estará asegurada para todos mis hijos.'" - Épica de Gilgamesh</Spanish>
 		<Polish>"W czym jest siła? To jest Gilgamesz, wkraczający jako pierwszy do Lasu Cedrowego, możesz za nim podąrzać i krzyczeć Idź, idź do przodu, idź, doświadcz niebezpieczeństwa." - Epos o Gilgameszu</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_MESO_STRATEGY</Tag>
+		<Tag>TXT_KEY_TECH_MESOPOTAMISM_STRATEGY</Tag>
 		<English>Research Mesopotamism to Found a religion</English>
 		<French>Recherchez Mésopotamisme pour fonder une religion</French>
 		<Spanish>Investiga el Mesopotamismo para fundar una religión.</Spanish>

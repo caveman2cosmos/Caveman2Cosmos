@@ -811,7 +811,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<FreeBonus>BONUS_ANIMATED_MOVIES</FreeBonus>
+			<FreeBonus>BONUS_HIT_ANIMATED_MOVIE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAsset>18</iAsset>
 			<iCost>-1</iCost>

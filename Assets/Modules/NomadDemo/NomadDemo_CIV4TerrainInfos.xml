@@ -7,7 +7,7 @@
 <Civ4TerrainInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4TerrainSchema.xml">
 	<TerrainInfos>
 		<TerrainInfo>
-			<Type>TERRAIN_GRASS</Type>
+			<Type>TERRAIN_GRASSLAND</Type>
       <PropertyManipulators>
         <PropertySource>
           <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>

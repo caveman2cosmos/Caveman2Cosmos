@@ -308,9 +308,9 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<PrereqBuilding>BUILDING_MAPINGUARI_COMPOUND</PrereqBuilding>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
@@ -399,8 +399,8 @@
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<PrereqBuilding>BUILDING_MAPINGUARI_COMPOUND</PrereqBuilding>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<ForceObsoleteTech>TECH_GUNPOWDER</ForceObsoleteTech>
 			<iCost>480</iCost>

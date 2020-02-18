@@ -20,7 +20,7 @@
 			<iCaptureResistanceModifierChange>-20</iCaptureResistanceModifierChange>
 			<FeatureDoubleMoveChangeTypes>
 				<FeatureType>FEATURE_REEF</FeatureType>
-				<FeatureType>FEATURE_CORAL</FeatureType>
+				<FeatureType>FEATURE_CORAL_REEF</FeatureType>
 			</FeatureDoubleMoveChangeTypes>
 			<bForMilitary>1</bForMilitary>
 			<bForNavalMilitary>1</bForNavalMilitary>
@@ -464,7 +464,7 @@
 					<iModifier>-10</iModifier>
 				</FeatureDefenseChangeModifier>
 				<FeatureDefenseChangeModifier>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iModifier>-10</iModifier>
 				</FeatureDefenseChangeModifier>
 				<FeatureDefenseChangeModifier>
@@ -573,7 +573,7 @@
 			</UnitCombatChangeModifiers>
 			<TerrainAttackChangeModifiers>
 				<TerrainAttackChangeModifier>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iModifier>10</iModifier>
 				</TerrainAttackChangeModifier>
 				<TerrainAttackChangeModifier>
@@ -589,11 +589,11 @@
 					<iModifier>20</iModifier>
 				</TerrainAttackChangeModifier>
 				<TerrainAttackChangeModifier>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<iModifier>20</iModifier>
 				</TerrainAttackChangeModifier>
 				<TerrainAttackChangeModifier>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iModifier>20</iModifier>
 				</TerrainAttackChangeModifier>
 				<TerrainAttackChangeModifier>
@@ -623,7 +623,7 @@
 					<iModifier>20</iModifier>
 				</FeatureAttackChangeModifier>
 				<FeatureAttackChangeModifier>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iModifier>20</iModifier>
 				</FeatureAttackChangeModifier>
 				<FeatureAttackChangeModifier>
@@ -643,11 +643,11 @@
 					<iModifier>10</iModifier>
 				</FeatureAttackChangeModifier>
 				<FeatureAttackChangeModifier>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<iModifier>20</iModifier>
 				</FeatureAttackChangeModifier>
 				<FeatureAttackChangeModifier>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<iModifier>20</iModifier>
 				</FeatureAttackChangeModifier>
 				<FeatureAttackChangeModifier>
@@ -718,7 +718,7 @@
 					<iWithdrawChange>15</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iWithdrawChange>20</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
@@ -738,11 +738,11 @@
 					<iWithdrawChange>15</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<iWithdrawChange>15</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<iWithdrawChange>10</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
@@ -819,12 +819,12 @@
 				</InvisibleImprovementChange>
 				<InvisibleImprovementChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_SUBURB</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</InvisibleImprovementChange>
 				<InvisibleImprovementChange>
 					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
-					<ImprovementType>IMPROVEMENT_SUBURB</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</InvisibleImprovementChange>
 			</InvisibleImprovementChanges>
@@ -2998,7 +2998,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 			</InvisibleFeatureChanges>
@@ -3091,7 +3091,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -3101,7 +3101,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>2</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -3116,7 +3116,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -3131,7 +3131,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 			</InvisibleFeatureChanges>
@@ -3264,7 +3264,7 @@
 			<InvisibleFeatureChanges>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -3279,7 +3279,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -3307,7 +3307,7 @@
 			<InvisibleFeatureChanges>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -3322,7 +3322,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -3349,20 +3349,20 @@
 			<iPursuitChange>10</iPursuitChange>
 			<FeatureAttacks>
 				<FeatureAttack>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<iFeatureAttack>10</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
 			<FeatureDefenses>
 				<FeatureDefense>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<iFeatureDefense>20</iFeatureDefense>
 				</FeatureDefense>
 			</FeatureDefenses>
 			<InvisibleFeatureChanges>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -3372,7 +3372,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 			</InvisibleFeatureChanges>
@@ -3389,7 +3389,7 @@
 			<InvisibleFeatureChanges>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -3404,7 +3404,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 			</InvisibleFeatureChanges>
@@ -3483,7 +3483,7 @@
 			<InvisibleFeatureChanges>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -3498,7 +3498,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 			</InvisibleFeatureChanges>
@@ -3653,7 +3653,7 @@
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
@@ -3663,7 +3663,7 @@
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
@@ -3685,7 +3685,7 @@
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_SUBURB</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<iIntensity>-1</iIntensity>
 				</VisibleImprovementRangeChange>
 			</VisibleImprovementRangeChanges>
@@ -3763,15 +3763,15 @@
 					<iWithdrawChange>20</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_CORAL</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF</FeatureType>
 					<iWithdrawChange>25</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_CORAL_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_REEF_BEACON</FeatureType>
 					<iWithdrawChange>25</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_CORAL_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_REEF_LIGHTHOUSE</FeatureType>
 					<iWithdrawChange>25</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
@@ -3787,15 +3787,15 @@
 					<iWithdrawChange>25</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_REEF_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_REEF_BEACON</FeatureType>
 					<iWithdrawChange>25</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_REEF_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_REEF_LIGHTHOUSE</FeatureType>
 					<iWithdrawChange>25</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_SEAGRASS</FeatureType>
+					<FeatureType>FEATURE_SEA_GRASS</FeatureType>
 					<iWithdrawChange>10</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 			</WithdrawModifierOnFeatureTypeChanges>
@@ -3918,17 +3918,17 @@
 			<InvisibleFeatureChanges>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_CORAL</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_CORAL_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_REEF_BEACON</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_CORAL_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_REEF_LIGHTHOUSE</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -3963,17 +3963,17 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_REEF_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_REEF_BEACON</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_REEF_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_REEF_LIGHTHOUSE</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_SEAGRASS</FeatureType>
+					<FeatureType>FEATURE_SEA_GRASS</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -3993,7 +3993,7 @@
 					<iWithdrawChange>20</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iWithdrawChange>25</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
@@ -4005,7 +4005,7 @@
 					<iWithdrawChange>25</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iWithdrawChange>15</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
@@ -4021,7 +4021,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -4181,11 +4181,11 @@
 					<iModifier>10</iModifier>
 				</TerrainDefenseChangeModifier>
 				<TerrainDefenseChangeModifier>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<iModifier>10</iModifier>
 				</TerrainDefenseChangeModifier>
 				<TerrainDefenseChangeModifier>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iModifier>10</iModifier>
 				</TerrainDefenseChangeModifier>
 			</TerrainDefenseChangeModifiers>
@@ -4203,7 +4203,7 @@
 					<iModifier>10</iModifier>
 				</FeatureDefenseChangeModifier>
 				<FeatureDefenseChangeModifier>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iModifier>10</iModifier>
 				</FeatureDefenseChangeModifier>
 				<FeatureDefenseChangeModifier>
@@ -4219,11 +4219,11 @@
 					<iModifier>10</iModifier>
 				</FeatureDefenseChangeModifier>
 				<FeatureDefenseChangeModifier>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<iModifier>10</iModifier>
 				</FeatureDefenseChangeModifier>
 				<FeatureDefenseChangeModifier>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<iModifier>10</iModifier>
 				</FeatureDefenseChangeModifier>
 				<FeatureDefenseChangeModifier>
@@ -4274,7 +4274,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>2</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -4289,7 +4289,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -4326,7 +4326,7 @@
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
@@ -4336,7 +4336,7 @@
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
@@ -4358,7 +4358,7 @@
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_SUBURB</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<iIntensity>-1</iIntensity>
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
@@ -4368,17 +4368,17 @@
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_WOODEN_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STONE_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STEEL_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementRangeChange>
 			</VisibleImprovementRangeChanges>
@@ -4390,17 +4390,17 @@
 				</VisibleImprovementChange>
 				<VisibleImprovementChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_WOODEN_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementChange>
 				<VisibleImprovementChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STONE_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementChange>
 				<VisibleImprovementChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STEEL_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementChange>
 			</VisibleImprovementChanges>
@@ -4440,7 +4440,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>2</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -4455,7 +4455,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -4492,7 +4492,7 @@
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
@@ -4502,7 +4502,7 @@
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
@@ -4524,7 +4524,7 @@
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_SUBURB</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<iIntensity>-1</iIntensity>
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
@@ -4534,17 +4534,17 @@
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_WOODEN_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STONE_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STEEL_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementRangeChange>
 			</VisibleImprovementRangeChanges>
@@ -4556,17 +4556,17 @@
 				</VisibleImprovementChange>
 				<VisibleImprovementChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_WOODEN_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementChange>
 				<VisibleImprovementChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STONE_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementChange>
 				<VisibleImprovementChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STEEL_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementChange>
 			</VisibleImprovementChanges>
@@ -4606,7 +4606,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>2</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -4621,7 +4621,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -4658,7 +4658,7 @@
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
@@ -4668,7 +4668,7 @@
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
@@ -4690,7 +4690,7 @@
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_SUBURB</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<iIntensity>-1</iIntensity>
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
@@ -4700,17 +4700,17 @@
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_WOODEN_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STONE_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STEEL_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementRangeChange>
 			</VisibleImprovementRangeChanges>
@@ -4722,17 +4722,17 @@
 				</VisibleImprovementChange>
 				<VisibleImprovementChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_WOODEN_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementChange>
 				<VisibleImprovementChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STONE_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementChange>
 				<VisibleImprovementChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STEEL_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementChange>
 			</VisibleImprovementChanges>
@@ -4772,7 +4772,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>2</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -4787,7 +4787,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -4824,7 +4824,7 @@
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
@@ -4834,7 +4834,7 @@
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
@@ -4856,7 +4856,7 @@
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_SUBURB</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<iIntensity>-1</iIntensity>
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
@@ -4866,17 +4866,17 @@
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_WOODEN_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STONE_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementRangeChange>
 				<VisibleImprovementRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STEEL_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementRangeChange>
 			</VisibleImprovementRangeChanges>
@@ -4888,17 +4888,17 @@
 				</VisibleImprovementChange>
 				<VisibleImprovementChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_WOODEN_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementChange>
 				<VisibleImprovementChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STONE_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementChange>
 				<VisibleImprovementChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<ImprovementType>IMPROVEMENT_STEEL_TOWER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</VisibleImprovementChange>
 			</VisibleImprovementChanges>
@@ -4959,11 +4959,11 @@
 					<iModifier>20</iModifier>
 				</TerrainAttackChangeModifier>
 				<TerrainAttackChangeModifier>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<iModifier>20</iModifier>
 				</TerrainAttackChangeModifier>
 				<TerrainAttackChangeModifier>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iModifier>20</iModifier>
 				</TerrainAttackChangeModifier>
 			</TerrainAttackChangeModifiers>
@@ -4981,7 +4981,7 @@
 					<iModifier>20</iModifier>
 				</FeatureAttackChangeModifier>
 				<FeatureAttackChangeModifier>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iModifier>20</iModifier>
 				</FeatureAttackChangeModifier>
 				<FeatureAttackChangeModifier>
@@ -5001,11 +5001,11 @@
 					<iModifier>20</iModifier>
 				</FeatureAttackChangeModifier>
 				<FeatureAttackChangeModifier>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<iModifier>20</iModifier>
 				</FeatureAttackChangeModifier>
 				<FeatureAttackChangeModifier>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<iModifier>20</iModifier>
 				</FeatureAttackChangeModifier>
 				<FeatureAttackChangeModifier>
@@ -5027,7 +5027,7 @@
 					<iWithdrawChange>5</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iWithdrawChange>5</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
@@ -5043,11 +5043,11 @@
 					<iWithdrawChange>5</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<iWithdrawChange>5</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<iWithdrawChange>5</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
@@ -5262,19 +5262,19 @@
 			<InvisibleFeatureChanges>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 			</InvisibleFeatureChanges>
 			<FeatureAttacks>
 				<FeatureAttack>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<iFeatureAttack>10</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
 			<FeatureDefenses>
 				<FeatureDefense>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<iFeatureDefense>20</iFeatureDefense>
 				</FeatureDefense>
 			</FeatureDefenses>
@@ -5309,87 +5309,87 @@
 			<Button>Art/Interface/Buttons/units/sparth/categories/species_ai.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
-			<Type>UNITCOMBAT_ERA_ANCIENT</Type>
-			<Description>TXT_KEY_UNITCOMBAT_ERA_ANCIENT</Description>
-			<EraType>ERA_ANCIENT</EraType>
+			<Type>UNITCOMBAT_ERA_PREHISTORIC</Type>
+			<Description>TXT_KEY_UNITCOMBAT_ERA_PREHISTORIC</Description>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/era_prehistoric.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
-			<Type>UNITCOMBAT_ERA_SEDENTARY</Type>
-			<Description>TXT_KEY_UNITCOMBAT_ERA_SEDENTARY</Description>
-			<EraType>ERA_SEDENTARY</EraType>
-			<Button>Art/Interface/Buttons/units/sparth/categories/era_ancient.dds</Button>
+			<Type>UNITCOMBAT_ERA_ANCIENT</Type>
+			<Description>TXT_KEY_UNITCOMBAT_ERA_ANCIENT</Description>
+			<EraType>C2C_ERA_ANCIENT</EraType>
+			<Button>Art/Interface/Buttons/units/sparth/categories/ERA_PREHISTORIC.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_ERA_CLASSICAL</Type>
 			<Description>TXT_KEY_UNITCOMBAT_ERA_CLASSICAL</Description>
-			<EraType>ERA_CLASSICAL</EraType>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/era_classical.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_ERA_MEDIEVAL</Type>
 			<Description>TXT_KEY_UNITCOMBAT_ERA_MEDIEVAL</Description>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/era_medieval.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_ERA_RENAISSANCE</Type>
 			<Description>TXT_KEY_UNITCOMBAT_ERA_RENAISSANCE</Description>
-			<EraType>ERA_RENAISSANCE</EraType>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/era_renaissance.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_ERA_INDUSTRIAL</Type>
 			<Description>TXT_KEY_UNITCOMBAT_ERA_INDUSTRIAL</Description>
-			<EraType>ERA_INDUSTRIAL</EraType>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/era_industrial.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
-			<Type>UNITCOMBAT_ERA_MODERN</Type>
-			<Description>TXT_KEY_UNITCOMBAT_ERA_MODERN</Description>
-			<EraType>ERA_MODERN</EraType>
+			<Type>UNITCOMBAT_ERA_ATOMIC</Type>
+			<Description>TXT_KEY_UNITCOMBAT_ERA_ATOMIC</Description>
+			<EraType>C2C_ERA_ATOMIC</EraType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/era_modern.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_ERA_INFORMATION</Type>
 			<Description>TXT_KEY_UNITCOMBAT_ERA_INFORMATION</Description>
-			<EraType>ERA_INFORMATION</EraType>
+			<EraType>C2C_ERA_INFORMATION</EraType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/era_future.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_ERA_NANOTECH</Type>
 			<Description>TXT_KEY_UNITCOMBAT_ERA_NANOTECH</Description>
-			<EraType>ERA_NANOTECH</EraType>
+			<EraType>C2C_ERA_NANOTECH</EraType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/era_future.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_ERA_TRANSHUMAN</Type>
 			<Description>TXT_KEY_UNITCOMBAT_ERA_TRANSHUMAN</Description>
-			<EraType>ERA_TRANSHUMAN</EraType>
+			<EraType>C2C_ERA_TRANSHUMAN</EraType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/era_transhuman.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_ERA_GALACTIC</Type>
 			<Description>TXT_KEY_UNITCOMBAT_ERA_GALACTIC</Description>
-			<EraType>ERA_GALACTIC</EraType>
+			<EraType>C2C_ERA_GALACTIC</EraType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/era_galactic.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_ERA_COSMIC</Type>
 			<Description>TXT_KEY_UNITCOMBAT_ERA_COSMIC</Description>
-			<EraType>ERA_COSMIC</EraType>
+			<EraType>C2C_ERA_COSMIC</EraType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/era_future.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_ERA_TRANSCENDENT</Type>
 			<Description>TXT_KEY_UNITCOMBAT_ERA_TRANSCENDENT</Description>
-			<EraType>ERA_TRANSCENDENT</EraType>
+			<EraType>C2C_ERA_TRANSCENDENT</EraType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/era_future.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_ERA_FUTURE</Type>
 			<Description>TXT_KEY_UNITCOMBAT_ERA_FUTURE</Description>
-			<EraType>ERA_FUTURE</EraType>
+			<EraType>C2C_ERA_FUTURE</EraType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/era_future.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5592,19 +5592,19 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_NGAIISM</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_NGAI</DependencyType>
+				<DependencyType>RELIGION_NGAIISM</DependencyType>
  			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_NGAIISM</Description>
-			<ReligionType>RELIGION_NGAI</ReligionType>
+			<ReligionType>RELIGION_NGAIISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_ngaiism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_KEMETISM</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_EGYPT_MYTHOLOGY</DependencyType>
+				<DependencyType>RELIGION_KEMETISM</DependencyType>
  			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_KEMETISM</Description>
-			<ReligionType>RELIGION_EGYPT_MYTHOLOGY</ReligionType>
+			<ReligionType>RELIGION_KEMETISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_kemetism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5619,10 +5619,10 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_NAGHUALISM</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_MESOAMERICANISM</DependencyType>
+				<DependencyType>RELIGION_NAGHUALISM</DependencyType>
  			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_NAGHUALISM</Description>
-			<ReligionType>RELIGION_MESOAMERICANISM</ReligionType>
+			<ReligionType>RELIGION_NAGHUALISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_naghualism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5671,30 +5671,30 @@
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_voodoo.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
-			<Type>UNITCOMBAT_RELIGION_DRUIDIC</Type>
+			<Type>UNITCOMBAT_RELIGION_DRUIDIC_TRADITIONS</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_DRUID</DependencyType>
+				<DependencyType>RELIGION_DRUIDIC_TRADITIONS</DependencyType>
  			</AndDependencyTypes>
-			<Description>TXT_KEY_UNITCOMBAT_RELIGION_DRUIDIC</Description>
-			<ReligionType>RELIGION_DRUID</ReligionType>
+			<Description>TXT_KEY_UNITCOMBAT_RELIGION_DRUIDIC_TRADITIONS</Description>
+			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_druidism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_SHAMANISM</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_SHAMAN</DependencyType>
+				<DependencyType>RELIGION_SHAMANISM</DependencyType>
  			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_SHAMANISM</Description>
-			<ReligionType>RELIGION_SHAMAN</ReligionType>
+			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_shamanism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
-			<Type>UNITCOMBAT_RELIGION_MESOPOTAMIANISM</Type>
+			<Type>UNITCOMBAT_RELIGION_MESOPOTAMISM</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_MESO</DependencyType>
+				<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
  			</AndDependencyTypes>
-			<Description>TXT_KEY_UNITCOMBAT_RELIGION_MESOPOTAMIANISM</Description>
-			<ReligionType>RELIGION_MESO</ReligionType>
+			<Description>TXT_KEY_UNITCOMBAT_RELIGION_MESOPOTAMISM</Description>
+			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_mesopotamism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5727,10 +5727,10 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_CANAANISM</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_CANAANITE</DependencyType>
+				<DependencyType>RELIGION_CANAANISM</DependencyType>
  			</AndDependencyTypes>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_CANAANISM</Description>
-			<ReligionType>RELIGION_CANAANITE</ReligionType>
+			<ReligionType>RELIGION_CANAANISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_canaanism.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5898,7 +5898,7 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_CULTURE_CETACEA_SAPIEN</Type>
 			<Description>TXT_KEY_UNITCOMBAT_CULTURE_CETACEA_SAPIEN</Description>
-			<CultureType>BONUS_DOLPHIN</CultureType>
+			<CultureType>BONUS_CETACEA_SAPIEN</CultureType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/culture_dolphin.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -6048,7 +6048,7 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_CULTURE_HAITIAN</Type>
 			<Description>TXT_KEY_UNITCOMBAT_CULTURE_HAITIAN</Description>
-			<CultureType>BONUS_HATTIAN</CultureType>
+			<CultureType>BONUS_HAITIAN</CultureType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/culture_haittan.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -6072,7 +6072,7 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_CULTURE_HOLY_ROMAN</Type>
 			<Description>TXT_KEY_UNITCOMBAT_CULTURE_HOLY_ROMAN</Description>
-			<CultureType>BONUS_HOLYROMAN</CultureType>
+			<CultureType>BONUS_HOLY_ROMAN</CultureType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/culture_holyroman.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -6174,7 +6174,7 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_CULTURE_KANEM_BORNU</Type>
 			<Description>TXT_KEY_UNITCOMBAT_CULTURE_KANEM_BORNU</Description>
-			<CultureType>BONUS_KANEMBORNU</CultureType>
+			<CultureType>BONUS_KANEM_BORNU</CultureType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/culture_kanembornu.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -6306,13 +6306,13 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_CULTURE_NEPALESE</Type>
 			<Description>TXT_KEY_UNITCOMBAT_CULTURE_NEPALESE</Description>
-			<CultureType>BONUS_NEPAL</CultureType>
+			<CultureType>BONUS_NEPALESE</CultureType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/culture_nepal.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_CULTURE_NEW_ZEALAND</Type>
 			<Description>TXT_KEY_UNITCOMBAT_CULTURE_NEW_ZEALAND</Description>
-			<CultureType>BONUS_NEWZEALAND</CultureType>
+			<CultureType>BONUS_NEW_ZEALAND</CultureType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/culture_new_zeland.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -6366,7 +6366,7 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_CULTURE_PHOENICIAN</Type>
 			<Description>TXT_KEY_UNITCOMBAT_CULTURE_PHOENICIAN</Description>
-			<CultureType>BONUS_PHOENICAN</CultureType>
+			<CultureType>BONUS_PHOENICIAN</CultureType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/culture_phoenicia.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -6402,7 +6402,7 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_CULTURE_RAPA_NUI</Type>
 			<Description>TXT_KEY_UNITCOMBAT_CULTURE_RAPA_NUI</Description>
-			<CultureType>BONUS_RAPANUI</CultureType>
+			<CultureType>BONUS_RAPA_NUI</CultureType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/culture_rapanui.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -6480,7 +6480,7 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_CULTURE_SOUTH_AFRICAN</Type>
 			<Description>TXT_KEY_UNITCOMBAT_CULTURE_SOUTH_AFRICAN</Description>
-			<CultureType>BONUS_SOUTHAFRICAN</CultureType>
+			<CultureType>BONUS_SOUTH_AFRICAN</CultureType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/culture_south_african.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -8489,7 +8489,7 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_CULTURE_GOLDEN_HORDE</Type>
 			<Description>TXT_KEY_UNITCOMBAT_CULTURE_GOLDEN_HORDE</Description>
-			<CultureType>BONUS_GOLDEN_HORDE</CultureType>
+			<CultureType>BONUS_GOLD_OREEN_HORDE</CultureType>
 			<Button>Art/categories/culture_newcultures.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -8543,7 +8543,7 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_CULTURE_HONGKONG</Type>
 			<Description>TXT_KEY_UNITCOMBAT_CULTURE_HONGKONG</Description>
-			<CultureType>BONUS_HONGKONG</CultureType>
+			<CultureType>BONUS_HONG_KONG</CultureType>
 			<Button>Art/categories/culture_newcultures.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -8615,7 +8615,7 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_CULTURE_KHAZAK</Type>
 			<Description>TXT_KEY_UNITCOMBAT_CULTURE_KHAZAK</Description>
-			<CultureType>BONUS_KHAZAK</CultureType>
+			<CultureType>BONUS_KAZAKH</CultureType>
 			<Button>Art/categories/culture_newcultures.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -8903,7 +8903,7 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_CULTURE_PHILIPINO</Type>
 			<Description>TXT_KEY_UNITCOMBAT_CULTURE_PHILIPINO</Description>
-			<CultureType>BONUS_PHILIPINO</CultureType>
+			<CultureType>BONUS_FILIPINO</CultureType>
 			<Button>Art/categories/culture_newcultures.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>

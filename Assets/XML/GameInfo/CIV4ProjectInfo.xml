@@ -11,11 +11,11 @@
 			<iCost>14760</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_COPPERWIRES</BonusType>
+					<BonusType>BONUS_COPPER_WIRES</BonusType>
 					<iProductonModifier>50</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_FIBEROPTICS</BonusType>
+					<BonusType>BONUS_FIBER_OPTIC_CABLES</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -41,7 +41,7 @@
 			<iNumCitiesMaintenanceModifier>10</iNumCitiesMaintenanceModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_ALUMINUM</BonusType>
+					<BonusType>BONUS_ALUMINUM_INGOTS</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -61,7 +61,7 @@
 			<iNumCitiesMaintenanceModifier>5</iNumCitiesMaintenanceModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_ALUMINUM</BonusType>
+					<BonusType>BONUS_ALUMINUM_INGOTS</BonusType>
 					<iProductonModifier>50</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -80,11 +80,11 @@
 			<iNumCitiesMaintenanceModifier>5</iNumCitiesMaintenanceModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_ALUMINUM</BonusType>
+					<BonusType>BONUS_ALUMINUM_INGOTS</BonusType>
 					<iProductonModifier>25</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_SEMICONDUCTORS</BonusType>
+					<BonusType>BONUS_MICROCHIPS</BonusType>
 					<iProductonModifier>50</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -102,15 +102,15 @@
 			<iGlobalMaintenanceModifier>15</iGlobalMaintenanceModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_SEMICONDUCTORS</BonusType>
+					<BonusType>BONUS_MICROCHIPS</BonusType>
 					<iProductonModifier>25</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_ALUMINUM</BonusType>
+					<BonusType>BONUS_ALUMINUM_INGOTS</BonusType>
 					<iProductonModifier>25</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_ORE</BonusType>
 					<iProductonModifier>25</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -127,7 +127,7 @@
 			<iCost>12320</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_ALUMINUM</BonusType>
+					<BonusType>BONUS_ALUMINUM_INGOTS</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -139,7 +139,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_SS_COCKPIT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_SPACE_SHIP_STRATEGY</Strategy>
 			<VictoryPrereq>VICTORY_SPACE_RACE</VictoryPrereq>
-			<TechPrereq>TECH_PHOTOVALTICGLASS</TechPrereq>
+			<TechPrereq>TECH_INTERACTIVE_GLASS</TechPrereq>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
 			<iCost>33160</iCost>
 			<bSpaceship>1</bSpaceship>
@@ -157,7 +157,7 @@
 			</VictoryThresholds>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_ORE</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -169,7 +169,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_SS_LIFE_SUPPORT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_SPACE_SHIP_STRATEGY</Strategy>
 			<VictoryPrereq>VICTORY_SPACE_RACE</VictoryPrereq>
-			<TechPrereq>TECH_SPACE_COLONIES</TechPrereq>
+			<TechPrereq>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</TechPrereq>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
 			<iCost>25960</iCost>
 			<bSpaceship>1</bSpaceship>
@@ -187,7 +187,7 @@
 			</VictoryThresholds>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_ORE</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -199,7 +199,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_SS_STASIS_CHAMBER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_SPACE_SHIP_STRATEGY</Strategy>
 			<VictoryPrereq>VICTORY_SPACE_RACE</VictoryPrereq>
-			<TechPrereq>TECH_CRYOGENICS</TechPrereq>
+			<TechPrereq>TECH_CRYONICS</TechPrereq>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
 			<iCost>43640</iCost>
 			<bSpaceship>1</bSpaceship>
@@ -223,7 +223,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_SS_DOCKING_BAY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_SPACE_SHIP_STRATEGY</Strategy>
 			<VictoryPrereq>VICTORY_SPACE_RACE</VictoryPrereq>
-			<TechPrereq>TECH_CSPACECRAFT</TechPrereq>
+			<TechPrereq>TECH_COMMERCIAL_SPACEFLIGHT</TechPrereq>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
 			<iCost>19240</iCost>
 			<bSpaceship>1</bSpaceship>
@@ -241,7 +241,7 @@
 			</VictoryThresholds>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_ALUMINUM</BonusType>
+					<BonusType>BONUS_ALUMINUM_INGOTS</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -309,7 +309,7 @@
 			<iSuccessRate>20</iSuccessRate>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_ALUMINUM</BonusType>
+					<BonusType>BONUS_ALUMINUM_INGOTS</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -346,7 +346,7 @@
 			<iVictoryDelayPercent>100</iVictoryDelayPercent>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_ALUMINUM</BonusType>
+					<BonusType>BONUS_ALUMINUM_INGOTS</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -374,13 +374,13 @@
 			<Description>TXT_KEY_PROJECT_HUBBLE</Description>
 			<Civilopedia>TXT_KEY_PROJECT_HUBBLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_HUBBLE_STRATEGY</Strategy>
-			<TechPrereq>TECH_SPACE_FLIGHT</TechPrereq>
+			<TechPrereq>TECH_ASTRONAUTICS</TechPrereq>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iCost>11800</iCost>
 			<EveryoneSpecialBuilding>SPECIALBUILDING_DEEP_SPACE_RESEARCH</EveryoneSpecialBuilding>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_ALUMINUM</BonusType>
+					<BonusType>BONUS_ALUMINUM_INGOTS</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -414,7 +414,7 @@
 			<EveryoneSpecialBuilding>SPECIALBUILDING_SPACE_LABORATORY</EveryoneSpecialBuilding>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_ALUMINUM</BonusType>
+					<BonusType>BONUS_ALUMINUM_INGOTS</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -443,7 +443,7 @@
 			<EveryoneSpecialBuilding>SPECIALBUILDING_WORLD_BANK</EveryoneSpecialBuilding>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_ORE</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -465,7 +465,7 @@
 			<Description>TXT_KEY_BUILDING_CANCER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CANCER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CANCER_STRATEGY</Strategy>
-			<TechPrereq>TECH_PERSONALIZEDHEALTH</TechPrereq>
+			<TechPrereq>TECH_PERSONALIZED_HEALTH</TechPrereq>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iCost>21000</iCost>
 			<iGlobalHealth>2</iGlobalHealth>
@@ -529,7 +529,7 @@
 			<Description>TXT_KEY_BUILDING_THEORY_OF_EVERYTHING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_THEORY_OF_EVERYTHING_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_THEORY_OF_EVERYTHING_STRATEGY</Strategy>
-			<TechPrereq>TECH_SUPERSTRINGTHEORY</TechPrereq>
+			<TechPrereq>TECH_SUPERSTRING_THEORY</TechPrereq>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iCost>16040</iCost>
 			<iGlobalHappiness>1</iGlobalHappiness>

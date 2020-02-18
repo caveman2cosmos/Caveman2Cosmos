@@ -88,7 +88,7 @@
 	</Define>
 	<Define>
 		<DefineName>LAND_TERRAIN</DefineName>
-		<DefineTextVal>TERRAIN_GRASS</DefineTextVal>
+		<DefineTextVal>TERRAIN_GRASSLAND</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>DEEP_WATER_TERRAIN</DefineName>
@@ -116,7 +116,7 @@
 	</Define>
 	<Define>
 		<DefineName>GLOBAL_WARMING_TERRAIN</DefineName>
-		<DefineTextVal>TERRAIN_GRASS</DefineTextVal>
+		<DefineTextVal>TERRAIN_GRASSLAND</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>CAPITAL_BUILDING</DefineName><!-- Currently unused, consider replacing buildingtag bCaptial with this global define; we only have one capital building anyhow.-->
@@ -156,7 +156,7 @@
 	</Define>
 	<Define>
 		<DefineName>STANDARD_ERA</DefineName>
-		<DefineTextVal>ERA_ANCIENT</DefineTextVal>
+		<DefineTextVal>C2C_ERA_PREHISTORIC</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>STANDARD_CALENDAR</DefineName>

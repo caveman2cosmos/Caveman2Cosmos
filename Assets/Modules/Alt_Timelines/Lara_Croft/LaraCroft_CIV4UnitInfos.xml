@@ -59,7 +59,7 @@
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_MUSEUM</PrereqBuilding>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
-			<BonusType>BONUS_MOVIES</BonusType>
+			<BonusType>BONUS_HIT_MOVIES</BonusType>
 			<iCost>4720</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>51</iCombat>

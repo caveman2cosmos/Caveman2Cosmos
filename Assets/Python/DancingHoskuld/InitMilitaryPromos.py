@@ -29,8 +29,8 @@ def init():
 									GC.getInfoTypeForString("UNITCOMBAT_WORKER"),
 									GC.getInfoTypeForString("UNITCOMBAT_SEA_WORKER")]
 
-	giMilInstCivic = GC.getInfoTypeForString("CIVIC_MILITARY_TRADITION")
-	giVolArmyCivic = GC.getInfoTypeForString("CIVIC_VOLUNTEER_ARMY")
+	giMilInstCivic = GC.getInfoTypeForString("CIVIC_MARTIAL")
+	giVolArmyCivic = GC.getInfoTypeForString("CIVIC_VOLUNTARY")
 
 def onUnitBuilt( argsList):
 	'Unit Completed'

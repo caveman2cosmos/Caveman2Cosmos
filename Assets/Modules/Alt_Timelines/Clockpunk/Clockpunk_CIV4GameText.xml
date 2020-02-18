@@ -6,7 +6,7 @@
 <!-- Game Text - New -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_CULTURE_CLOCKPUNK</Tag>
+		<Tag>TXT_KEY_TECH_CLOCKPUNK</Tag>
 		<English>Clockpunk</English>
 		<French>Clock-punk</French>
 		<Spanish>
@@ -16,17 +16,17 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CULTURE_CLOCKPUNK_PEDIA</Tag>
+		<Tag>TXT_KEY_TECH_CLOCKPUNK_PEDIA</Tag>
 		<English>[BOLD]Clockpunk[\BOLD], is a subgenre of speculative fiction which is similar to steampunk, but deviates in its technology. As with steampunk, it portrays advanced technology based on pre-modern designs, but rather than the steam power of the Industrial Age, the technology used is based on springs, clockwork and similar. Clockpunk is based very intensively on the works of Leonardo da Vinci and as such, it is typically set during the Renaissance. The idea is fairly new and very few works have been created in this genre. Clockpunk works include Pasquale's Angel by Paul J. McAuley, and Jack Faust by Michael Swanwick, as well as the upcoming novel Mainspring by Jay Lake. There are also clockpunk elements in the Marvel 1602 comic series and its sequels, and in the Discworld novels of Terry Pratchett, most notably a da Vinci space shuttle in The Last Hero. Benot Sokal's Syberia adventure game could also be considered clockpunk, as it features spring-based machines and clockwork automata.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CULTURE_CLOCKPUNK_QUOTE</Tag>
+		<Tag>TXT_KEY_TECH_CLOCKPUNK_QUOTE</Tag>
 		<English>"A clockwork heart can't replace the real thing." - Dru Pagliassotti, Clockwork Heart</English>
 		<French>"Un coeur d'horlogerie ne peut pas remplacer la chose réelle." - Dru Pagliassotti, Le Coeur d'Horlogerie</French>
 		<Polish>"Mechaniczne serce może zastąpić rzeczywiste." - Dru Pagliassotti, Clockwork Heart</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CULTURE_CLOCKPUNK_STRATEGY</Tag>
+		<Tag>TXT_KEY_TECH_CLOCKPUNK_STRATEGY</Tag>
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>

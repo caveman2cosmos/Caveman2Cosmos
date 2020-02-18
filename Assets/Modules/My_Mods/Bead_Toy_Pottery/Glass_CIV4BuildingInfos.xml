@@ -47,18 +47,18 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<!--FreeBonus>BONUS_GLASS</FreeBonus>
+			<!--FreeBonus>BONUS_GLASSWARE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses-->
 			<!-- Special Yield and Commerce modifiers -->
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_INGOT_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_INGOTS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_INGOT_TIN</BonusType>
+					<BonusType>BONUS_TIN_INGOTS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -162,18 +162,18 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GLASS</FreeBonus>
+			<FreeBonus>BONUS_GLASSWARE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special Yield and Commerce modifiers -->
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_INGOT_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_INGOTS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_INGOT_TIN</BonusType>
+					<BonusType>BONUS_TIN_INGOTS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>

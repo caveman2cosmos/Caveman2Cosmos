@@ -24,16 +24,16 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_RODNOVERY_MISSIONARY</Description>
-			<Civilopedia>TXT_KEY_RELIGION_RODNOVERY_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_TECH_RODNOVERA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_RODNOVERY_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_RODNOVERY</ReligionType>
+					<ReligionType>RELIGION_RODNOVERA</ReligionType>
 					<iReligionSpread>40</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
-			<PrereqReligion>RELIGION_RODNOVERY</PrereqReligion>
+			<PrereqReligion>RELIGION_RODNOVERA</PrereqReligion>
 			<PrereqBuilding>BUILDING_RODNOVERY_MONASTERY</PrereqBuilding>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -59,7 +59,7 @@
 			</Buildings>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_RODNOVERY</ReligionType>
+					<ReligionType>RELIGION_RODNOVERA</ReligionType>
 					<iReligionSpread>100</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>

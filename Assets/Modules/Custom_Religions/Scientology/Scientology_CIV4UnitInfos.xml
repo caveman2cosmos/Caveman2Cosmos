@@ -24,7 +24,7 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SCIENTOLOGY_MISSIONARY</Description>
-			<Civilopedia>TXT_KEY_RELIGION_SCIENTOLOGY_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_TECH_SCIENTOLOGY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_SCIENTOLOGY_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>

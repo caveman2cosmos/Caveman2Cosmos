@@ -27349,7 +27349,8 @@ bool CvTraitInfo::isValidTrait(bool bGameStart) const
 
 	if (isNegativeTrait())
 	{
-		if (GC.getGame().isOption(GAMEOPTION_NO_NEGATIVE_TRAITS))
+		if (GC.getGame().isOption(GAMEOPTION_NO_NEGATIVE_TRAITS)
+		|| bGameStart && GC.getGame().isOption(GAMEOPTION_START_NO_POSITIVE_TRAITS) && GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))
 		{
 			return false;
 		}
