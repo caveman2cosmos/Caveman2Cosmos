@@ -8,8 +8,7 @@
 #	Copyright (c) 2005 Firaxis Games, Inc. All rights reserved.
 #-----------------------------------------------------------------------------
 #       MODIFIED BY: Temudjin
-#       PURPOSE:    - compatibility with 'Planetfall' and 'Mars Now!'
-#                   - add Marsh terrain, if supported by mod
+#       PURPOSE:    - add Marsh terrain
 #                   - print stats of mod and map
 #                   - much more ...
 #       DEPENDENCY: - needs MapScriptTools.py
@@ -26,15 +25,10 @@
 #                            - add Map Regions ( BigDent, BigBog, ElementalQuarter, LostIsle )
 #                            - add Map Features ( Kelp, HauntedLands, CrystalPlains )
 #                            - better balanced resources
-#                            - compatibility with 'Mars Now!'
 
 
 from CvPythonExtensions import *
-import CvUtil
 import CvMapGeneratorUtil
-import sys
-from CvMapGeneratorUtil import HintedWorld
-
 
 ################################################################
 ## MapScriptTools by Temudjin
@@ -64,12 +58,8 @@ def beforeGeneration():
 
 def generateTerrainTypes():
 	print "-- generateTerrainTypes()"
-
 	# Choose terrainGenerator
-	if mst.bPfall or mst.bMars:
-		terraingen = mst.MST_TerrainGenerator()	# for Planetfall/Mars Now! use MST_TerrainGenerator()
-	else:
-		terraingen = ISTerrainGenerator()
+	terraingen = ISTerrainGenerator()
 	# Generate terrain
 	terrainTypes = terraingen.generateTerrain()
 	return terrainTypes
@@ -78,26 +68,18 @@ def addRivers():
 	print "-- addRivers()"
 	# Generate DeepOcean-terrain if mod allows for it
 	mst.deepOcean.buildDeepOcean()
-	# Planetfall: handle shelves and trenches
-	mst.planetFallMap.buildPfallOcean()
 	# Generate marsh-terrain
 	mst.marshMaker.convertTerrain()
 	# Build between 0..3 mountain-ranges.
 	mst.mapRegions.buildBigDents()
 	# Build between 0..3 bog-regions.
 	mst.mapRegions.buildBigBogs()
-	# build ElementalQuarter
-	mst.mapRegions.buildElementalQuarter()
-
-	# No rivers on Mars
-	if not mst.bMars:
-		# Put rivers on the map.
-		CyPythonMgr().allowDefaultImpl()
+	# Put rivers on the map.
+	CyPythonMgr().allowDefaultImpl()
 
 def addLakes():
 	print "-- addLakes()"
-	if not mst.bMars:
-		CyPythonMgr().allowDefaultImpl()
+	CyPythonMgr().allowDefaultImpl()
 
 # shuffle starting-plots for teams
 def normalizeStartingPlotLocations():
@@ -105,7 +87,7 @@ def normalizeStartingPlotLocations():
 
 	# build Lost Isle
 	# - this region needs to be placed after starting-plots are first assigned
-	mst.mapRegions.buildLostIsle( bAliens = mst.choose(33,True,False) )
+	mst.mapRegions.buildLostIsle(bAliens = mst.choose(33,True,False))
 
 	if CyMap().getCustomMapOption(2) == 0:
 		# by default civ places teams near to each other
@@ -119,25 +101,21 @@ def normalizeStartingPlotLocations():
 
 def normalizeAddRiver():
 	print "-- normalizeAddRiver()"
-	if not mst.bMars:
-		CyPythonMgr().allowDefaultImpl()
+	CyPythonMgr().allowDefaultImpl()
 
 def normalizeAddLakes():
 	print "-- normalizeAddLakes()"
-	if not mst.bMars:
-		CyPythonMgr().allowDefaultImpl()
+	CyPythonMgr().allowDefaultImpl()
 
 # prevent terrain changes on Mars
 def normalizeRemoveBadTerrain():
 	print "-- normalizeRemoveBadTerrain()"
-	if not mst.bMars:
-		CyPythonMgr().allowDefaultImpl()
+	CyPythonMgr().allowDefaultImpl()
 
 # prevent terrain changes on Mars
 def normalizeAddGoodTerrain():
 	print "-- normalizeAddGoodTerrain()"
-	if not mst.bMars:
-		CyPythonMgr().allowDefaultImpl()
+	CyPythonMgr().allowDefaultImpl()
 
 def normalizeAddExtras():
 	print "-- normalizeAddExtras()"
@@ -165,9 +143,12 @@ def normalizeAddExtras():
 	mst.mapStats.mapStatistics()
 
 def minStartingDistanceModifier():
-	if mst.bPfall: return -25
-	minStartingDistanceModifier2()			# call renamed script function
-#	return 0
+	numPlrs = CyGlobalContext().getGame().countCivPlayersEverAlive()
+	if numPlrs  <= 18:
+		return -95
+	else:
+		return -50
+
 ################################################################
 
 
@@ -182,10 +163,10 @@ def isAdvancedMap():
 	return 0
 
 def getNumCustomMapOptions():
-	return 2 + mst.iif( mst.bMars, 0, 1 )
+	return 3
 
 def getNumHiddenCustomMapOptions():
-	return 1 + mst.iif( mst.bMars, 0, 1 )
+	return 2
 
 def getCustomMapOptionName(argsList):
 	[iOption] = argsList
@@ -697,30 +678,7 @@ def getStartPositions():
 	return coord
 ########### Temudjin END
 
-def minStartingDistanceModifier2():
-	numPlrs = CyGlobalContext().getGame().countCivPlayersEverAlive()
-	if numPlrs  <= 18:
-		return -95
-	else:
-		return -50
-
 def findStartingPlot(argsList):
-
-	########### Temudjin START
-	# Usually Planetfall uses default starting-plot function, because
-	# otherwise the 'scattered landing pods' option would be ignored.
-	# But this script specificly designed its starting-plots, so we pay that price.
-	#if mst.bPfall:
-	#	CyPythonMgr().allowDefaultImpl()
-	#	return
-	########### Temudjin END
-
-	# Set up for maximum of 18 players! If more, use default implementation.
-	#iPlayers = CyGlobalContext().getGame().countCivPlayersEverAlive()
-	#if iPlayers > 18:
-	#	CyPythonMgr().allowDefaultImpl()
-	#	return
-
 	[playerID] = argsList
 	global plotSuccess
 	global plotValue
@@ -794,18 +752,12 @@ def getStartingPlot(playerID, validFn = None):
 
 				if val > iBestValue:
 
-					valid = True
-
-					for iI in range(gc.getMAX_CIV_PLAYERS()):
-						if (gc.getPlayer(iI).isAlive()):
-							if (iI != playerID):
-								if gc.getPlayer(iI).startingPlotWithinRange(pLoopPlot, playerID, iRange, iPass):
-									valid = False
-									break
-
-					if valid:
-							iBestValue = val
-							pBestPlot = pLoopPlot
+					for iI in range(gc.getMAX_PC_PLAYERS()):
+						if iI != playerID and gc.getPlayer(iI).isAlive() and gc.getPlayer(iI).startingPlotWithinRange(pLoopPlot, playerID, iRange, iPass):
+							break
+					else:
+						iBestValue = val
+						pBestPlot = pLoopPlot
 
 		if pBestPlot != None:
 			plotSuccess = true
