@@ -10572,6 +10572,10 @@
 					<FeatureType>FEATURE_FOREST</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
 			</PrereqOrFeature>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_CHEMISTRY</ObsoleteTech>
@@ -30288,6 +30292,10 @@
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -87439,6 +87447,10 @@
 			<bRiver>1</bRiver>
 			<VicinityBonus>BONUS_FISH</VicinityBonus>
 			<PrereqOrFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_FOREST</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>

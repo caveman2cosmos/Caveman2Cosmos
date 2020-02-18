@@ -8,7 +8,7 @@
 	<BuildInfos>
 		<BuildInfo>
 			<Type>BUILD_BONUS_DONKEY</Type>
-			<Description>TXT_KEY_PLACE_DONKEY</Description>
+			<Description>TXT_KEY_BUILD_PLACE_DONKEY</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -27,7 +27,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_HORSE</Type>
-			<Description>TXT_KEY_PLACE_HORSE</Description>
+			<Description>TXT_KEY_BUILD_PLACE_HORSE</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -46,7 +46,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_ELEPHANT</Type>
-			<Description>TXT_KEY_PLACE_ELEPHANT</Description>
+			<Description>TXT_KEY_BUILD_PLACE_ELEPHANT</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -65,7 +65,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_BISON</Type>
-			<Description>TXT_KEY_PLACE_BISON</Description>
+			<Description>TXT_KEY_BUILD_PLACE_BISON</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -84,7 +84,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_CAMEL</Type>
-			<Description>TXT_KEY_PLACE_CAMEL</Description>
+			<Description>TXT_KEY_BUILD_PLACE_CAMEL</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -103,7 +103,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_COW</Type>
-			<Description>TXT_KEY_PLACE_COW</Description>
+			<Description>TXT_KEY_BUILD_PLACE_COW</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -122,7 +122,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_DEER</Type>
-			<Description>TXT_KEY_PLACE_DEER</Description>
+			<Description>TXT_KEY_BUILD_PLACE_DEER</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -141,7 +141,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_FUR</Type>
-			<Description>TXT_KEY_PLACE_FUR</Description>
+			<Description>TXT_KEY_BUILD_PLACE_FUR</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -160,7 +160,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_KANGAROO</Type>
-			<Description>TXT_KEY_PLACE_KANGAROO</Description>
+			<Description>TXT_KEY_BUILD_PLACE_KANGAROO</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -179,7 +179,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_LLAMA</Type>
-			<Description>TXT_KEY_PLACE_LLAMA</Description>
+			<Description>TXT_KEY_BUILD_PLACE_LLAMA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -198,7 +198,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_MAMMOTH</Type>
-			<Description>TXT_KEY_PLACE_MAMMOTH</Description>
+			<Description>TXT_KEY_BUILD_PLACE_MAMMOTH</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -217,7 +217,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_PIG</Type>
-			<Description>TXT_KEY_PLACE_PIG</Description>
+			<Description>TXT_KEY_BUILD_PLACE_PIG</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -236,7 +236,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_POULTRY</Type>
-			<Description>TXT_KEY_PLACE_POULTRY</Description>
+			<Description>TXT_KEY_BUILD_PLACE_POULTRY</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -255,7 +255,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_RABBIT</Type>
-			<Description>TXT_KEY_PLACE_RABBIT</Description>
+			<Description>TXT_KEY_BUILD_PLACE_RABBIT</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -274,7 +274,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_SEA_LIONS</Type>
-			<Description>TXT_KEY_PLACE_SEA_LIONS</Description>
+			<Description>TXT_KEY_BUILD_PLACE_SEA_LIONS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -293,7 +293,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_SHEEP</Type>
-			<Description>TXT_KEY_PLACE_SHEEP</Description>
+			<Description>TXT_KEY_BUILD_PLACE_SHEEP</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -312,7 +312,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_WALRUS</Type>
-			<Description>TXT_KEY_PLACE_WALRUS</Description>
+			<Description>TXT_KEY_BUILD_PLACE_WALRUS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -331,7 +331,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_GUINEA_PIG</Type>
-			<Description>TXT_KEY_PLACE_GUINEA_PIG</Description>
+			<Description>TXT_KEY_BUILD_PLACE_GUINEA_PIG</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -350,7 +350,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_PARROTS</Type>
-			<Description>TXT_KEY_PLACE_PARROTS</Description>
+			<Description>TXT_KEY_BUILD_PLACE_PARROTS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -369,7 +369,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_BARLEY</Type>
-			<Description>TXT_KEY_PLACE_BARLEY</Description>
+			<Description>TXT_KEY_BUILD_PLACE_BARLEY</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -388,7 +388,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_CORN</Type>
-			<Description>TXT_KEY_PLACE_CORN</Description>
+			<Description>TXT_KEY_BUILD_PLACE_CORN</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -407,7 +407,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_FLAX</Type>
-			<Description>TXT_KEY_PLACE_FLAX</Description>
+			<Description>TXT_KEY_BUILD_PLACE_FLAX</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -426,7 +426,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_POMEGRANATE</Type>
-			<Description>TXT_KEY_PLACE_POMEGRANATE</Description>
+			<Description>TXT_KEY_BUILD_PLACE_POMEGRANATE</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -445,7 +445,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_KAVA</Type>
-			<Description>TXT_KEY_PLACE_KAVA</Description>
+			<Description>TXT_KEY_BUILD_PLACE_KAVA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -464,7 +464,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_GUAVA</Type>
-			<Description>TXT_KEY_PLACE_GUAVA</Description>
+			<Description>TXT_KEY_BUILD_PLACE_GUAVA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -483,7 +483,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_MELON</Type>
-			<Description>TXT_KEY_PLACE_MELON</Description>
+			<Description>TXT_KEY_BUILD_PLACE_MELON</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -502,7 +502,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_POTATO</Type>
-			<Description>TXT_KEY_PLACE_POTATO</Description>
+			<Description>TXT_KEY_BUILD_PLACE_POTATO</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -521,7 +521,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_PUMPKIN</Type>
-			<Description>TXT_KEY_PLACE_PUMPKIN</Description>
+			<Description>TXT_KEY_BUILD_PLACE_PUMPKIN</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -540,7 +540,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_RICE</Type>
-			<Description>TXT_KEY_PLACE_RICE</Description>
+			<Description>TXT_KEY_BUILD_PLACE_RICE</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -559,7 +559,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_SQUASH</Type>
-			<Description>TXT_KEY_PLACE_SQUASH</Description>
+			<Description>TXT_KEY_BUILD_PLACE_SQUASH</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -578,7 +578,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_WHEAT</Type>
-			<Description>TXT_KEY_PLACE_WHEAT</Description>
+			<Description>TXT_KEY_BUILD_PLACE_WHEAT</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -597,7 +597,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_ALMONDS</Type>
-			<Description>TXT_KEY_PLACE_ALMONDS</Description>
+			<Description>TXT_KEY_BUILD_PLACE_ALMONDS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -616,7 +616,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_APPLE</Type>
-			<Description>TXT_KEY_PLACE_APPLE</Description>
+			<Description>TXT_KEY_BUILD_PLACE_APPLE</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -635,7 +635,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_BANANA</Type>
-			<Description>TXT_KEY_PLACE_BANANA</Description>
+			<Description>TXT_KEY_BUILD_PLACE_BANANA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -654,7 +654,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_COCONUT</Type>
-			<Description>TXT_KEY_PLACE_COCONUT</Description>
+			<Description>TXT_KEY_BUILD_PLACE_COCONUT</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -673,7 +673,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_DATES</Type>
-			<Description>TXT_KEY_PLACE_DATES</Description>
+			<Description>TXT_KEY_BUILD_PLACE_DATES</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -692,7 +692,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_FIG</Type>
-			<Description>TXT_KEY_PLACE_FIG</Description>
+			<Description>TXT_KEY_BUILD_PLACE_FIG</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -711,7 +711,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_LEMON</Type>
-			<Description>TXT_KEY_PLACE_LEMON</Description>
+			<Description>TXT_KEY_BUILD_PLACE_LEMON</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -730,7 +730,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_MANGO</Type>
-			<Description>TXT_KEY_PLACE_MANGO</Description>
+			<Description>TXT_KEY_BUILD_PLACE_MANGO</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -749,7 +749,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_OLIVES</Type>
-			<Description>TXT_KEY_PLACE_OLIVES</Description>
+			<Description>TXT_KEY_BUILD_PLACE_OLIVES</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -768,7 +768,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_PAPAYA</Type>
-			<Description>TXT_KEY_PLACE_PAPAYA</Description>
+			<Description>TXT_KEY_BUILD_PLACE_PAPAYA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -787,7 +787,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_PISTACHIO</Type>
-			<Description>TXT_KEY_PLACE_PISTACHIO</Description>
+			<Description>TXT_KEY_BUILD_PLACE_PISTACHIO</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -806,7 +806,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_WINE</Type>
-			<Description>TXT_KEY_PLACE_WINE</Description>
+			<Description>TXT_KEY_BUILD_PLACE_WINE</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -825,7 +825,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_HENNA</Type>
-			<Description>TXT_KEY_PLACE_HENNA</Description>
+			<Description>TXT_KEY_BUILD_PLACE_HENNA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -844,7 +844,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_INDIGO</Type>
-			<Description>TXT_KEY_PLACE_INDIGO</Description>
+			<Description>TXT_KEY_BUILD_PLACE_INDIGO</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -863,7 +863,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_RUBBER</Type>
-			<Description>TXT_KEY_PLACE_RUBBER</Description>
+			<Description>TXT_KEY_BUILD_PLACE_RUBBER</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -882,7 +882,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_TIMBER</Type>
-			<Description>TXT_KEY_PLACE_TIMBER</Description>
+			<Description>TXT_KEY_BUILD_PLACE_TIMBER</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -901,7 +901,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_CANNABIS</Type>
-			<Description>TXT_KEY_PLACE_CANNABIS</Description>
+			<Description>TXT_KEY_BUILD_PLACE_CANNABIS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -920,7 +920,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_COCA</Type>
-			<Description>TXT_KEY_PLACE_COCA</Description>
+			<Description>TXT_KEY_BUILD_PLACE_COCA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -939,7 +939,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_COCOA</Type>
-			<Description>TXT_KEY_PLACE_COCOA</Description>
+			<Description>TXT_KEY_BUILD_PLACE_COCOA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -958,7 +958,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_COFFEE</Type>
-			<Description>TXT_KEY_PLACE_COFFEE</Description>
+			<Description>TXT_KEY_BUILD_PLACE_COFFEE</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -977,7 +977,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_COTTON</Type>
-			<Description>TXT_KEY_PLACE_COTTON</Description>
+			<Description>TXT_KEY_BUILD_PLACE_COTTON</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -996,7 +996,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_INCENSE</Type>
-			<Description>TXT_KEY_PLACE_INCENSE</Description>
+			<Description>TXT_KEY_BUILD_PLACE_INCENSE</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -1015,7 +1015,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_MUSHROOMS</Type>
-			<Description>TXT_KEY_PLACE_MUSHROOMS</Description>
+			<Description>TXT_KEY_BUILD_PLACE_MUSHROOMS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -1034,7 +1034,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_OPIUM</Type>
-			<Description>TXT_KEY_PLACE_OPIUM</Description>
+			<Description>TXT_KEY_BUILD_PLACE_OPIUM</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -1053,7 +1053,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_PAPYRUS</Type>
-			<Description>TXT_KEY_PLACE_PAPYRUS</Description>
+			<Description>TXT_KEY_BUILD_PLACE_PAPYRUS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -1072,7 +1072,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_PEYOTE</Type>
-			<Description>TXT_KEY_PLACE_PEYOTE</Description>
+			<Description>TXT_KEY_BUILD_PLACE_PEYOTE</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -1091,7 +1091,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_PRICKLY_PEAR</Type>
-			<Description>TXT_KEY_PLACE_PRICKLY_PEAR</Description>
+			<Description>TXT_KEY_BUILD_PLACE_PRICKLY_PEAR</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -1110,7 +1110,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_RESIN</Type>
-			<Description>TXT_KEY_PLACE_RESIN</Description>
+			<Description>TXT_KEY_BUILD_PLACE_RESIN</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -1129,7 +1129,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_SILK</Type>
-			<Description>TXT_KEY_PLACE_SILK</Description>
+			<Description>TXT_KEY_BUILD_PLACE_SILK</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -1148,7 +1148,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_SPICES</Type>
-			<Description>TXT_KEY_PLACE_SPICES</Description>
+			<Description>TXT_KEY_BUILD_PLACE_SPICES</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -1167,7 +1167,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_SUGAR</Type>
-			<Description>TXT_KEY_PLACE_SUGAR</Description>
+			<Description>TXT_KEY_BUILD_PLACE_SUGAR</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -1186,7 +1186,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_TEA</Type>
-			<Description>TXT_KEY_PLACE_TEA</Description>
+			<Description>TXT_KEY_BUILD_PLACE_TEA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -1205,7 +1205,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_TOBACCO</Type>
-			<Description>TXT_KEY_PLACE_TOBACCO</Description>
+			<Description>TXT_KEY_BUILD_PLACE_TOBACCO</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -1224,7 +1224,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_VANILLA</Type>
-			<Description>TXT_KEY_PLACE_VANILLA</Description>
+			<Description>TXT_KEY_BUILD_PLACE_VANILLA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>

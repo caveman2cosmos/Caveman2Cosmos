@@ -628,29 +628,17 @@ public:
 	void setID(int iID);
 
 	DllExport int getViewportX() const;																			// Exposed to Python
-	int getX() const;																			// Exposed to Python
-#ifdef _USRDLL
-	inline int getX_INLINE() const
-	{
-		return m_iX;
-	}
-#endif
+	inline int getX() const { return m_iX; } // Exposed to Python
 	DllExport int getViewportY() const;																			// Exposed to Python
-	int getY() const;																			// Exposed to Python
-#ifdef _USRDLL
-	inline int getY_INLINE() const
-	{
-		return m_iY;
-	}
-#endif
+	inline int getY() const { return m_iY; } // Exposed to Python
 	bool isInViewport() const;
 	bool at(int iX, int iY) const;																				// Exposed to Python
-	bool at(CvPlot* pPlot) const;																					// Exposed to Python - atPlot
+	bool at(const CvPlot* pPlot) const;																					// Exposed to Python - atPlot
 	CvPlot* plot() const;																	// Exposed to Python
 	DllExport CvPlot* plotExternal() const;																	// Exposed to Python
-	CvPlotGroup* plotGroup(PlayerTypes ePlayer) const;
-	bool isConnectedTo(CvCity* pCity) const;															// Exposed to Python
-	bool isConnectedToCapital(PlayerTypes ePlayer = NO_PLAYER) const;			// Exposed to Python
+	CvPlotGroup* plotGroup(const PlayerTypes ePlayer) const;
+	bool isConnectedTo(const CvCity* pCity) const;															// Exposed to Python
+	bool isConnectedToCapital(const PlayerTypes ePlayer = NO_PLAYER) const;			// Exposed to Python
 	int getArea() const;
 	CvArea* area() const;																						// Exposed to Python
 /************************************************************************************************/
@@ -658,9 +646,9 @@ public:
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	CvArea* waterArea(bool bNoImpassable = false) const;																			// Exposed to Python
+	CvArea* waterArea(const bool bNoImpassable = false) const;																			// Exposed to Python
 	CvArea* secondWaterArea() const;
-	CvArea* sharedWaterArea(CvCity* pCity) const;
+	CvArea* sharedWaterArea(const CvCity* pCity) const;
 	bool isBlockaded() const;
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
@@ -1063,13 +1051,7 @@ public:
 	bool isPlundered() const;																		// Exposed to Python
 	void setPlundered(bool bNewValue);																// Exposed to Python
 
-	DllExport PlayerTypes getOwner() const;																// Exposed to Python
-#ifdef _USRDLL
-	inline PlayerTypes getOwnerINLINE() const
-	{
-		return m_eOwner;
-	}
-#endif
+	DllExport inline PlayerTypes getOwner() const { return m_eOwner; } // Exposed to Python
 	DllExport TeamTypes getTeam() const;																	// Exposed to Python
 
 	PlayerTypes getPreviousOwner() const;																	// Exposed to Python
@@ -2441,7 +2423,32 @@ public:
 	// Algorithm/range helpers
 	//
 	struct fn {
+		DECLARE_MAP_FUNCTOR(CvCity, bool, hasOrbitalInfrastructure);
+		DECLARE_MAP_FUNCTOR(CvCity, bool, isConnectedToCapital);
+		DECLARE_MAP_FUNCTOR(CvCity, bool, isGovernmentCenter);
+
+		DECLARE_MAP_FUNCTOR(CvCity, int, getRealPopulation);
+		DECLARE_MAP_FUNCTOR(CvCity, int, goodHealth);
+		DECLARE_MAP_FUNCTOR(CvCity, int, badHealth);
+		DECLARE_MAP_FUNCTOR(CvCity, int, happyLevel);
+		DECLARE_MAP_FUNCTOR(CvCity, int, unhappyLevel);
+
+		DECLARE_MAP_FUNCTOR(CvCity, const CvArea*, area);
+		DECLARE_MAP_FUNCTOR(CvCity, const CvPlot*, plot);
+
+		DECLARE_MAP_FUNCTOR_1(CvCity, bool, canConstruct, BuildingTypes);
+		DECLARE_MAP_FUNCTOR_1(CvCity, bool, canTrain, UnitTypes);
+		DECLARE_MAP_FUNCTOR_1(CvCity, bool, isHasReligion, ReligionTypes);
+		DECLARE_MAP_FUNCTOR_1(CvCity, bool, isHasCorporation, CorporationTypes);
+		DECLARE_MAP_FUNCTOR_1(CvCity, bool, hasBonus, BonusTypes);
+		DECLARE_MAP_FUNCTOR_1(CvCity, bool, isCoastal, int);
+
+		DECLARE_MAP_FUNCTOR_1(CvCity, int, getBaseCommerceRateTimes100, CommerceTypes);
+		DECLARE_MAP_FUNCTOR_1(CvCity, int, getCultureTimes100, PlayerTypes);
 		DECLARE_MAP_FUNCTOR_1(CvCity, int, getNumBuilding, BuildingTypes);
+		DECLARE_MAP_FUNCTOR_1(CvCity, int, getYieldRate, YieldTypes);
+
+		DECLARE_MAP_FUNCTOR_1(CvCity, const CvPlotGroup*, plotGroup, PlayerTypes);
 	};
 };
 

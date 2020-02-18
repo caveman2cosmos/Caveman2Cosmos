@@ -785,6 +785,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_LATITUDE</Tag>
 		<English>Exist in latitude:</English>
+		<French>Existe en latitude:</French>
 		<German>Geografische Breite:</German>
 	</TEXT>
 	<TEXT>
@@ -822,6 +823,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_NO_PLOT_YIELD_CHANGE</Tag>
 		<English>No Change</English>
+		<French>Pas de Modif.</French>
 		<Spanish>Sin cambios</Spanish>
 		<Polish>Bez zmian</Polish>
 	</TEXT>
@@ -842,6 +844,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_REPLACED_BY</Tag>
 		<English>Replaced By</English>
+		<French>Remplacé par</French>
 		<German>ersetzt durch</German>
 		<Spanish>Reemplazado por</Spanish>
 		<Polish>Zastąpione przez</Polish>
@@ -849,6 +852,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_RESOURCE_SOURCE</Tag>
 		<English>Source of Bonus</English>
+		<French>Source de Bonus</French>
 		<German>Ursprung</German>
 		<Spanish>Fuente del recurso</Spanish>
 		<Polish>Zródło surowca</Polish>
@@ -856,36 +860,42 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_ROUTE_FLAT_COST</Tag>
 		<English>Flat Move:</English>
+		<French>Dépl. Plat:</French>
 		<Spanish>Mov. por ruta:</Spanish>
 		<Polish>Ruch podstawowy:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_ROUTE_FLAT_MOVEMENT</Tag>
 		<English>[ICON_BULLET]Flat Movement: %d1[NEWLINE]</English>
+		<French>[ICON_BULLET]Déplacement Plat: %d1[NEWLINE]</French>
 		<Spanish>[ICON_BULLET]Movimiento por ruta: %d1[NEWLINE]</Spanish>
 		<Polish>[ICON_BULLET]Ruch podstawowy: %d1[NEWLINE]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_ROUTE_IMPROVEMENT_YIELD_CHANGE</Tag>
 		<English>Improvement Yield Change</English>
+		<French>Chang. taux de rendement</French>
 		<Spanish>Cambios al rendimiento de la mejora</Spanish>
 		<Polish>Wydajność ulepszenia uległa zmianie</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_ROUTE_MOVEMENT</Tag>
 		<English>Movement:</English>
+		<French>Déplacement:</French>
 		<Spanish>Mov. hacia ruta:</Spanish>
 		<Polish>Ruch:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_ROUTE_TECH_CHANGE</Tag>
 		<English>[ICON_BULLET]+%.1d1 Movement with %s2[NEWLINE]</English>
+		<French>[ICON_BULLET]+%.1d1 Déplacement avec %s2[NEWLINE]</French>
 		<Spanish>[ICON_BULLET]+%.1d1 al movimiento con %s2[NEWLINE]</Spanish>
 		<Polish>[ICON_BULLET]+%.1d1 Ruch z %s2[NEWLINE]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_ROUTE_WORK_COST</Tag>
 		<English>Work Cost: %d1</English>
+		<French>Coût de Travail: %d1</French>
 		<Spanish>Coste de trabajo:</Spanish>
 		<Polish>Koszt prac:</Polish>
 	</TEXT>
@@ -940,11 +950,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_SYNERGY</Tag>
 		<English>Synergy</English>
+		<French>Synergie</French>
 		<German>beeinflusst von</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_TECH_CHANGES</Tag>
 		<English>Technology Change</English>
+		<French>Changement Technologique</French>
 		<Spanish>Cambios por tecnología</Spanish>
 		<Polish>Zmiana technologii</Polish>
 	</TEXT>
@@ -960,7 +972,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_UNIT_COLLATERAL_DAMAGES_MAX_UNITS</Tag>
 		<English>[NEWLINE][ICON_BULLET]Collateral or Flanking damage hits maximum of[SPACE]</English>
-		<French>[NEWLINE][ICON_BULLET]Les Dommages Collatéraux ou de Flac atteignent un maximum de[SPACE]</French>
+		<French>[NEWLINE][ICON_BULLET]Les Dommages Collatéraux ou de Flanc atteignent un maximum de[SPACE]</French>
 		<German>[NEWLINE][ICON_BULLET]Maximaler Schaden durch Kollateral oder Flanke:[SPACE]</German>
 		<Italian>[NEWLINE][ICON_BULLET]I danni collaterali e da accerchiamento danno un massimo di[SPACE]</Italian>
 		<Spanish>[NEWLINE][ICON_BULLET]Los daños colaterales o de flanqueo golpean a un máximo de[SPACE]</Spanish>
@@ -996,6 +1008,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_WITH_IMPROVEMENT_AND_ROUTE</Tag>
 		<English>with route and improvement</English>
+		<French>avec route et amélioration</French>
 		<German>wenn angeschlossen und abgebaut</German>
 		<Spanish>con camino y mejora</Spanish>
 		<Polish>z drogą i ulepszeniem</Polish>
@@ -1016,6 +1029,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_WORKRATE</Tag>
 		<English>Work Rate: %d1</English>
+		<French>Taux de travail: %d1</French>
 		<German>Arbeitstempo: %d1</German>
 		<Spanish>Velocidad de trabajo: %d1</Spanish>
 		<Polish>Ocena pracy: %d1</Polish>

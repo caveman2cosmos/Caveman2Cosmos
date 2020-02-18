@@ -943,11 +943,6 @@ int CyUnit::defenseXPValue()
 	return m_pUnit ? m_pUnit->defenseXPValue() : -1;
 }
 
-int CyUnit::maxXPValue()
-{
-	return m_pUnit ? m_pUnit->maxXPValue() : -1;
-}
-
 int CyUnit::firstStrikes()
 {
 	return m_pUnit ? m_pUnit->firstStrikes() : -1;
@@ -1407,19 +1402,19 @@ void CyUnit::setHotKeyNumber(int iNewValue)
 
 int CyUnit::getX()
 {
-	return m_pUnit ? m_pUnit->getX_INLINE() : -1;
+	return m_pUnit ? m_pUnit->getX() : -1;
 }
 
 int CyUnit::getY()
 {
-	return m_pUnit ? m_pUnit->getY_INLINE() : -1;
+	return m_pUnit ? m_pUnit->getY() : -1;
 }
 
 void CyUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow)
 {
 	if (m_pUnit)
 	{
-		//GC.getGameINLINE().logOOSSpecial(23, m_pUnit->getID(), iX, iY);
+		//GC.getGame().logOOSSpecial(23, m_pUnit->getID(), iX, iY);
 		return m_pUnit->setXY(iX, iY, bGroup, bUpdate, bShow);
 	}
 }
@@ -1952,7 +1947,7 @@ void CyUnit::setPromotionReady(bool bNewValue)
 
 int CyUnit::getOwner()
 {
-	return m_pUnit ? m_pUnit->getOwnerINLINE() : -1;
+	return m_pUnit ? m_pUnit->getOwner() : -1;
 }
 
 int CyUnit::getVisualOwner()

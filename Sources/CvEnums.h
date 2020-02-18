@@ -607,11 +607,8 @@ enum WidgetTypes					// Exposed to Python
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	WIDGET_OBSOLETE_PROMOTION,
-	WIDGET_OBSOLETE_CORPORATION,
 	WIDGET_HELP_EMPLOYMENT,
 	WIDGET_HELP_IMPROVEMENT_CAN_UPGRADE,
-	WIDGET_EXTRA_TECH_STRENGTH,
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/

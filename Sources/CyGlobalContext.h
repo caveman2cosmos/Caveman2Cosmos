@@ -135,16 +135,6 @@ public:
 
 	CvInfoBase* getHints(int i) const;
 	CvMainMenuInfo* getMainMenus(int i) const;
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 02/19/08                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-// Python Modular Loading
-	CvPythonModulesInfo* getPythonModulesInfo(int i) const;
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
 	CvInvisibleInfo* getInvisibleInfo(int i) const;
 	CvVoteSourceInfo* getVoteSourceInfo(int i) const;
 	CvInfoBase* getAttitudeInfo(int i) const;
@@ -421,10 +411,8 @@ public:
 	float getSHADOW_SCALE() const { return GC.getSHADOW_SCALE(); }
 	float getUNIT_MULTISELECT_DISTANCE() const { return GC.getUNIT_MULTISELECT_DISTANCE(); }
 
-	int getMAX_CIV_PLAYERS() const { return GC.getMAX_CIV_PLAYERS(); }
 	int getMAX_PC_PLAYERS() const { return GC.getMAX_PC_PLAYERS(); }
 	int getMAX_PLAYERS() const { return GC.getMAX_PLAYERS(); }
-	int getMAX_CIV_TEAMS() const { return GC.getMAX_CIV_TEAMS(); }
 	int getMAX_PC_TEAMS() const { return GC.getMAX_PC_TEAMS(); }
 	int getMAX_TEAMS() const { return GC.getMAX_TEAMS(); }
 	int getBARBARIAN_PLAYER() const { return GC.getBARBARIAN_PLAYER(); }
