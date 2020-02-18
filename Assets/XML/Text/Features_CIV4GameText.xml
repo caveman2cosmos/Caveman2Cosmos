@@ -103,7 +103,7 @@
 		<French>Un trou noir est une région de l'espace-temps définie mathématiquement qui présente une attraction gravitationnelle si forte qu'aucune particule ou rayonnement électromagnétique ne peut y échapper. La théorie de la relativité générale prédit qu'une masse suffisamment compacte peut déformer l'espace-temps pour former un trou noir. La limite de la région d'où aucune fuite n'est possible est appelée horizon des événements. Bien que traverser l'horizon des événements ait un effet énorme sur le sort de l'objet qui le traverse, il ne semble pas avoir de caractéristiques localement détectables. À bien des égards, un trou noir agit comme un corps noir idéal, car il ne réfléchit pas la lumière.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_BURNT_FOREST</Tag>
+		<Tag>TXT_KEY_FEATURE_FOREST_BURNT</Tag>
 		<English>Burnt Forest</English>
 		<French>
 			<Text>Forêt brûlée</Text>
@@ -308,7 +308,7 @@
 		<Polish>Las</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_ANCIENT_FOREST</Tag>
+		<Tag>TXT_KEY_FEATURE_FOREST_ANCIENT</Tag>
 		<English>Ancient Forest</English>
 		<French>
 			<Text>Ancienne Forêt</Text>
@@ -431,7 +431,7 @@
 		<Polish>Wodorosty - potoczna nazwa roślin (i wielokomórkowych roślinopodobnych protistów) wodnych o miękkich ciałach. Nazwa bliskoznaczna to trawa morska. Do wodorostów najczęściej zaliczane są duże glony, takie jak brunatnice, krasnorosty, watkowe i ramienice (czasem określane jako makroglony lub makroalgi). Czasem rośliny wodne zanurzone (elodeidy, jak rogatek lub wywłócznik) oraz glony nitkowate (niektóre sinice), uwikłowce, zrostnicowate, jak skrętnica, rzadziej pozostałe makrofity.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_MEDIUM_CRATER</Tag>
+		<Tag>TXT_KEY_FEATURE_CRATER_MEDIUM</Tag>
 		<English>Medium Crater</English>
 		<French>Cratère Moyen</French>
 		<Italian>Cratere medio</Italian>
@@ -443,7 +443,7 @@
 		<Polish>Średni Krater</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_LARGE_CRATER</Tag>
+		<Tag>TXT_KEY_FEATURE_CRATER_LARGE</Tag>
 		<English>Large Crater</English>
 		<French>Grand Cratère</French>
 		<Italian>Cratere grande</Italian>
@@ -455,7 +455,7 @@
 		<Polish>Duży Krater</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_SMALL_CRATER</Tag>
+		<Tag>TXT_KEY_FEATURE_CRATER_SMALL</Tag>
 		<English>Small Crater</English>
 		<French>Petit Cratère</French>
 		<Italian>Cratere piccolo</Italian>
@@ -505,7 +505,7 @@
 		<Polish>Mgławica</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_YOUNG_FOREST</Tag>
+		<Tag>TXT_KEY_FEATURE_FOREST_YOUNG</Tag>
 		<English>Young Forest</English>
 		<French>
 			<Text>Jeune Forêt</Text>

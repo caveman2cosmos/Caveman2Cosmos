@@ -4556,7 +4556,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=11,y=48
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -4918,7 +4918,7 @@ EndPlot
 BeginPlot
 	x=12,y=48
 	BonusType=BONUS_SILVER_ORE
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -4962,7 +4962,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=12,y=54
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=2
 EndPlot
@@ -5354,7 +5354,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=57
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=1
 EndPlot
@@ -6862,7 +6862,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=58
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=2
 EndPlot
@@ -8300,7 +8300,7 @@ BeginPlot
 	x=21,y=46
 	RiverNSDirection=2
 	isWOfRiver
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -9769,7 +9769,7 @@ BeginPlot
 	x=25,y=33
 	isNOfRiver
 	RiverWEDirection=3
-	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_YOUNG, FeatureVariety=0
 	TerrainType=TERRAIN_ICE
 	PlotType=0
 EndPlot
@@ -10820,7 +10820,7 @@ EndPlot
 BeginPlot
 	x=28,y=11
 	BonusType=BONUS_ANCIENT_RELICS
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -11085,7 +11085,7 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	BonusType=BONUS_LEAD_ORE
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
@@ -27159,7 +27159,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=56
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -29367,7 +29367,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=58
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=2
 EndPlot
@@ -31239,7 +31239,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=81,y=58
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=1
 EndPlot
@@ -34269,7 +34269,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	BonusType=BONUS_TITANIUM_ORE
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_ICE
 	PlotType=0
 EndPlot
@@ -34370,7 +34370,7 @@ EndPlot
 BeginPlot
 	x=89,y=49
 	BonusType=BONUS_GEOTHERMAL_ENERGY
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -36145,7 +36145,7 @@ EndPlot
 BeginPlot
 	x=94,y=18
 	BonusType=BONUS_ANCIENT_RELICS
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
@@ -36505,7 +36505,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	BonusType=BONUS_PRIME_TIMBER
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -38333,7 +38333,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	BonusType=BONUS_PARROTS
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot

@@ -929,7 +929,7 @@
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<FeatureTypes>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -1415,7 +1415,7 @@
 			<iMaxLongitude>105</iMaxLongitude>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<FeatureTypes>
-				<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+				<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_SAVANNA</FeatureType>
 			</FeatureTypes>
@@ -2869,7 +2869,7 @@
 			<iMaxLongitude>-60</iMaxLongitude>
 			<FeatureTypes>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4060,7 +4060,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			</TerrainTypes>
 			<FeatureTypes>
 				<FeatureType>FEATURE_CAVES</FeatureType>
-				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4081,7 +4081,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			</TerrainTypes>
 			<FeatureTypes>
 				<FeatureType>FEATURE_CAVES</FeatureType>
-				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4103,7 +4103,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			</TerrainTypes>
 			<FeatureTypes>
 				<FeatureType>FEATURE_CAVES</FeatureType>
-				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4124,7 +4124,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			</TerrainTypes>
 			<FeatureTypes>
 				<FeatureType>FEATURE_CAVES</FeatureType>
-				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4157,7 +4157,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			</TerrainTypes>
 			<FeatureTypes>
 				<FeatureType>FEATURE_CAVES</FeatureType>
-				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4179,7 +4179,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			</TerrainTypes>
 			<FeatureTypes>
 				<FeatureType>FEATURE_CAVES</FeatureType>
-				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4276,7 +4276,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			</TerrainTypes>
 			<FeatureTypes>
 				<FeatureType>FEATURE_CAVES</FeatureType>
-				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureTypes>
 			<BonusTypes>
 				<BonusType>BONUS_OBSIDIAN</BonusType>
@@ -4301,7 +4301,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			</TerrainTypes>
 			<FeatureTypes>
 				<FeatureType>FEATURE_CAVES</FeatureType>
-				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureTypes>
 			<BonusTypes>
 				<BonusType>BONUS_OBSIDIAN</BonusType>
@@ -4327,7 +4327,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			</TerrainTypes>
 			<FeatureTypes>
 				<FeatureType>FEATURE_CAVES</FeatureType>
-				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureTypes>
 			<BonusTypes>
 				<BonusType>BONUS_STONE</BonusType>
@@ -4353,7 +4353,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			</TerrainTypes>
 			<FeatureTypes>
 				<FeatureType>FEATURE_CAVES</FeatureType>
-				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureTypes>
 			<BonusTypes>
 				<BonusType>BONUS_STONE</BonusType>
@@ -4379,7 +4379,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			</TerrainTypes>
 			<FeatureTypes>
 				<FeatureType>FEATURE_CAVES</FeatureType>
-				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4401,7 +4401,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			</TerrainTypes>
 			<FeatureTypes>
 				<FeatureType>FEATURE_CAVES</FeatureType>
-				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureTypes>
 			<BonusTypes>
 				<BonusType>BONUS_OBSIDIAN</BonusType>
@@ -4426,7 +4426,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			</TerrainTypes>
 			<FeatureTypes>
 				<FeatureType>FEATURE_CAVES</FeatureType>
-				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureTypes>
 			<BonusTypes>
 				<BonusType>BONUS_OBSIDIAN</BonusType>
@@ -4452,7 +4452,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			</TerrainTypes>
 			<FeatureTypes>
 				<FeatureType>FEATURE_CAVES</FeatureType>
-				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureTypes>
 			<BonusTypes>
 				<BonusType>BONUS_STONE</BonusType>
@@ -4477,7 +4477,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			</TerrainTypes>
 			<FeatureTypes>
 				<FeatureType>FEATURE_CAVES</FeatureType>
-				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4500,7 +4500,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			</TerrainTypes>
 			<FeatureTypes>
 				<FeatureType>FEATURE_CAVES</FeatureType>
-				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4523,7 +4523,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			</TerrainTypes>
 			<FeatureTypes>
 				<FeatureType>FEATURE_CAVES</FeatureType>
-				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -4546,7 +4546,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			</TerrainTypes>
 			<FeatureTypes>
 				<FeatureType>FEATURE_CAVES</FeatureType>
-				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureTypes>
 		</SpawnInfo>
 		<!-- Barbarians -->

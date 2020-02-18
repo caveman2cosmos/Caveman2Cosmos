@@ -2014,15 +2014,15 @@
 			</PrereqBonuses>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_MEDIUM_CRATER</FeatureType>
+					<FeatureType>FEATURE_CRATER_MEDIUM</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_LARGE_CRATER</FeatureType>
+					<FeatureType>FEATURE_CRATER_LARGE</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_SMALL_CRATER</FeatureType>
+					<FeatureType>FEATURE_CRATER_SMALL</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>

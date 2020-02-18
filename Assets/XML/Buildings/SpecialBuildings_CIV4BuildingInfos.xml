@@ -11512,7 +11512,7 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -13234,7 +13234,7 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -14398,7 +14398,7 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -14461,7 +14461,7 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>

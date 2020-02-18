@@ -55,7 +55,7 @@
 			<iWeight>1</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<FeaturesRequired>
-				<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+				<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 			</FeaturesRequired>
 			<Events>
 				<Event>EVENT_FOREST_NEW_2</Event>
@@ -1884,7 +1884,7 @@
 			<iNumPlotsRequired>2</iNumPlotsRequired>
 			<FeaturesRequired>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_CAVES</FeatureType>
 			</FeaturesRequired>
@@ -2731,7 +2731,7 @@
 			<bOwnPlot>1</bOwnPlot>
 			<FeaturesRequired>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeaturesRequired>
 			<ImprovementsRequired>
 				<ImprovementType>NONE</ImprovementType>

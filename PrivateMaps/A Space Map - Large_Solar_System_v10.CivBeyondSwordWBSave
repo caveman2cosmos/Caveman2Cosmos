@@ -8877,7 +8877,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=8,y=28
-	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
 	TerrainType=TERRAIN_BARREN
 	PlotType=2
 EndPlot
@@ -9911,13 +9911,13 @@ BeginPlot
 	x=9,y=28
 	BonusType=BONUS_KAVA
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_YOUNG, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=9,y=29
-	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
 	TerrainType=TERRAIN_BARREN
 	PlotType=1
 EndPlot
@@ -29914,7 +29914,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=66
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -33118,7 +33118,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=69
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -36344,7 +36344,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=66
-	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_LARGE, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -45784,7 +45784,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=43,y=65
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -52944,7 +52944,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=70
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -55996,7 +55996,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=68
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -59992,7 +59992,7 @@ EndPlot
 BeginPlot
 	x=57,y=49
 	BonusType=BONUS_GEOTHERMAL_ENERGY
-	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
 	TerrainType=TERRAIN_JAGGED
 	PlotType=1
 EndPlot
@@ -63220,7 +63220,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=69
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -65313,7 +65313,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=62,y=65
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -72736,7 +72736,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=66
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -83522,7 +83522,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=79,y=68
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -86738,7 +86738,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=82,y=69
-	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_LARGE, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -92999,7 +92999,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=88,y=65
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -96149,7 +96149,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=91,y=65
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -99346,7 +99346,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=94,y=68
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot

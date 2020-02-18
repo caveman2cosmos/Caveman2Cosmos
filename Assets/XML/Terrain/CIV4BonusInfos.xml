@@ -563,7 +563,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
@@ -940,7 +940,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -1261,7 +1261,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -1331,7 +1331,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -1495,7 +1495,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -1603,7 +1603,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
@@ -2220,7 +2220,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -2788,7 +2788,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
@@ -2902,7 +2902,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -2969,7 +2969,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -3377,7 +3377,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -3579,7 +3579,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -3709,7 +3709,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -3804,7 +3804,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -4168,7 +4168,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -5108,7 +5108,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -5236,7 +5236,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -5502,7 +5502,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -5751,7 +5751,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -6008,7 +6008,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -6260,7 +6260,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -6654,7 +6654,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -6912,7 +6912,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -7172,7 +7172,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -7508,7 +7508,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -7767,7 +7767,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -8026,7 +8026,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -8284,7 +8284,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -8704,7 +8704,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -8965,7 +8965,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -9227,7 +9227,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -9601,7 +9601,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -9866,7 +9866,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -10120,7 +10120,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -10501,7 +10501,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -10730,7 +10730,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -10996,7 +10996,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -11587,7 +11587,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -11953,7 +11953,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -12278,7 +12278,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>

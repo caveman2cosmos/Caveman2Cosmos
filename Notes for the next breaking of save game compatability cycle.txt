@@ -8,8 +8,8 @@ Several hundred if not few thousand tags with mismatched defined and ingame name
 For example ERA_MODERN is Atomic in game.
 BUILDINGCLASS, UNITCLASS are going to be removed by someone
 Tag types, that could be renamed to match ingame name:
-BUILDING_, UNIT_, PROMOTION_,
-Renames done: ERA_, CIVICOPTION_, CIVIC_, RELIGION_, TECH_, ROUTE_, SPECIALIST_, BONUS_, IMPROVEMENT_, BUILD_, FEATURE_,  TERRAIN_
+BUILDING_, UNIT_, PROMOTION_
+Renames done: ERA_, CIVICOPTION_, CIVIC_, RELIGION_, TECH_, ROUTE_, SPECIALIST_, BONUS_, IMPROVEMENT_, BUILD_, FEATURE_, MAPCATEGORY_, TERRAIN_
 
 
 ========================

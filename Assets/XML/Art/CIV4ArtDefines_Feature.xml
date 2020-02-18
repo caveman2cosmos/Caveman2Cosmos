@@ -1423,7 +1423,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_YOUNG_FOREST</Type>
+			<Type>ART_DEF_FEATURE_FOREST_YOUNG</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
@@ -1444,7 +1444,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_BURNT_FOREST</Type>
+			<Type>ART_DEF_FEATURE_FOREST_BURNT</Type>
 			<bAnimated>0</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_TREES</TileArtType>
@@ -1521,7 +1521,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_ANCIENT_FOREST</Type>
+			<Type>ART_DEF_FEATURE_FOREST_ANCIENT</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_TREES</TileArtType>
@@ -1598,7 +1598,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_MEDIUM_CRATER</Type>
+			<Type>ART_DEF_FEATURE_CRATER_MEDIUM</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
@@ -1619,7 +1619,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_LARGE_CRATER</Type>
+			<Type>ART_DEF_FEATURE_CRATER_LARGE</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
@@ -1640,7 +1640,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_SMALL_CRATER</Type>
+			<Type>ART_DEF_FEATURE_CRATER_SMALL</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>

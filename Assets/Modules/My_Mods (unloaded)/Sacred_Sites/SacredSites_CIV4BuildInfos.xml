@@ -19,7 +19,7 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
@@ -81,7 +81,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>40</iProduction>
@@ -97,7 +97,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>20</iProduction>
@@ -105,7 +105,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
@@ -197,7 +197,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -212,7 +212,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -263,7 +263,7 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
@@ -482,7 +482,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -497,7 +497,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -548,7 +548,7 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>

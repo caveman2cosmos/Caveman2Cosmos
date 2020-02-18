@@ -10573,7 +10573,7 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -30295,7 +30295,7 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -59707,7 +59707,7 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
@@ -87452,7 +87452,7 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -95735,7 +95735,7 @@
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
@@ -103295,7 +103295,7 @@
 			<PrereqTech>TECH_CARVING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
@@ -103435,7 +103435,7 @@
 			</PrereqBonuses>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>

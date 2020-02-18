@@ -464,7 +464,7 @@
 					<iModifier>-10</iModifier>
 				</FeatureDefenseChangeModifier>
 				<FeatureDefenseChangeModifier>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iModifier>-10</iModifier>
 				</FeatureDefenseChangeModifier>
 				<FeatureDefenseChangeModifier>
@@ -619,11 +619,11 @@
 					<iModifier>10</iModifier>
 				</FeatureAttackChangeModifier>
 				<FeatureAttackChangeModifier>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iModifier>20</iModifier>
 				</FeatureAttackChangeModifier>
 				<FeatureAttackChangeModifier>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iModifier>20</iModifier>
 				</FeatureAttackChangeModifier>
 				<FeatureAttackChangeModifier>
@@ -714,11 +714,11 @@
 					<iWithdrawChange>15</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iWithdrawChange>15</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iWithdrawChange>20</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
@@ -3091,17 +3091,17 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>2</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -3264,12 +3264,12 @@
 			<InvisibleFeatureChanges>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -3279,7 +3279,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -3307,12 +3307,12 @@
 			<InvisibleFeatureChanges>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -3322,7 +3322,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -3372,7 +3372,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 			</InvisibleFeatureChanges>
@@ -3389,12 +3389,12 @@
 			<InvisibleFeatureChanges>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -3404,7 +3404,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 			</InvisibleFeatureChanges>
@@ -3483,12 +3483,12 @@
 			<InvisibleFeatureChanges>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -3498,7 +3498,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 			</InvisibleFeatureChanges>
@@ -3653,17 +3653,17 @@
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
@@ -3993,7 +3993,7 @@
 					<iWithdrawChange>20</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iWithdrawChange>25</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
@@ -4005,11 +4005,11 @@
 					<iWithdrawChange>25</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iWithdrawChange>15</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iWithdrawChange>10</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 			</WithdrawModifierOnFeatureTypeChanges>
@@ -4021,7 +4021,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -4199,11 +4199,11 @@
 					<iModifier>10</iModifier>
 				</FeatureDefenseChangeModifier>
 				<FeatureDefenseChangeModifier>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iModifier>10</iModifier>
 				</FeatureDefenseChangeModifier>
 				<FeatureDefenseChangeModifier>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iModifier>10</iModifier>
 				</FeatureDefenseChangeModifier>
 				<FeatureDefenseChangeModifier>
@@ -4274,7 +4274,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>2</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -4326,17 +4326,17 @@
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
@@ -4440,7 +4440,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>2</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -4492,17 +4492,17 @@
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
@@ -4606,7 +4606,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>2</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -4658,17 +4658,17 @@
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
@@ -4772,7 +4772,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>2</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -4824,17 +4824,17 @@
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
@@ -4977,11 +4977,11 @@
 					<iModifier>20</iModifier>
 				</FeatureAttackChangeModifier>
 				<FeatureAttackChangeModifier>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iModifier>20</iModifier>
 				</FeatureAttackChangeModifier>
 				<FeatureAttackChangeModifier>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iModifier>20</iModifier>
 				</FeatureAttackChangeModifier>
 				<FeatureAttackChangeModifier>
@@ -5023,11 +5023,11 @@
 					<iWithdrawChange>5</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iWithdrawChange>5</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iWithdrawChange>5</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>

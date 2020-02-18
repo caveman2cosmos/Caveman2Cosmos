@@ -5714,7 +5714,7 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	BonusType=BONUS_POULTRY
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -8870,7 +8870,7 @@ BeginPlot
 	x=8,y=26
 	isNOfRiver
 	RiverWEDirection=3
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=1
 EndPlot
@@ -10888,7 +10888,7 @@ EndPlot
 BeginPlot
 	x=10,y=16
 	BonusType=BONUS_GEOTHERMAL_ENERGY
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
 EndPlot
@@ -18302,7 +18302,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=43
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
 EndPlot
@@ -29683,7 +29683,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=66
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -32743,7 +32743,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=69
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -35788,7 +35788,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=66
-	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_LARGE, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -40764,7 +40764,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=39,y=36
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -42827,7 +42827,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	BonusType=BONUS_SILK
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
@@ -44897,14 +44897,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=43,y=30
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=43,y=31
 	BonusType=BONUS_PRIME_TIMBER
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -44930,7 +44930,7 @@ EndPlot
 BeginPlot
 	x=43,y=35
 	BonusType=BONUS_MUSHROOMS
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
@@ -45098,7 +45098,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=43,y=65
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -52177,7 +52177,7 @@ EndPlot
 BeginPlot
 	x=50,y=31
 	BonusType=BONUS_SILVER_ORE
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
 EndPlot
@@ -52377,7 +52377,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=70
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -55476,7 +55476,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=68
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -57267,7 +57267,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=15
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
 EndPlot
@@ -57294,7 +57294,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=19
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=1
 EndPlot
@@ -58368,7 +58368,7 @@ BeginPlot
 	x=56,y=24
 	RiverNSDirection=0
 	isWOfRiver
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
@@ -59419,7 +59419,7 @@ EndPlot
 BeginPlot
 	x=57,y=26
 	BonusType=BONUS_ELEPHANTS
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
 EndPlot
@@ -62715,7 +62715,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=69
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -64737,7 +64737,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=62,y=65
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -71878,7 +71878,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=66
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -75783,7 +75783,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	BonusType=BONUS_VANILLA
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_MARSH
 	PlotType=2
 EndPlot
@@ -78840,7 +78840,7 @@ EndPlot
 BeginPlot
 	x=76,y=17
 	BonusType=BONUS_SPICES
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_MARSH
 	PlotType=2
 EndPlot
@@ -79016,7 +79016,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=48
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
@@ -80037,7 +80037,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=47
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -80968,7 +80968,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=25
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
 EndPlot
@@ -82262,7 +82262,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=79,y=68
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -83040,7 +83040,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	BonusType=BONUS_LEMONS
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
@@ -84091,7 +84091,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=81,y=17
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
 EndPlot
@@ -85354,7 +85354,7 @@ EndPlot
 BeginPlot
 	x=82,y=50
 	BonusType=BONUS_DEER
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=2
 EndPlot
@@ -85454,7 +85454,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=82,y=69
-	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_LARGE, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -86285,7 +86285,7 @@ EndPlot
 BeginPlot
 	x=83,y=28
 	BonusType=BONUS_POULTRY
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_MARSH
 	PlotType=2
 EndPlot
@@ -88372,7 +88372,7 @@ EndPlot
 BeginPlot
 	x=85,y=26
 	BonusType=BONUS_LEMONS
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -89507,7 +89507,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=86,y=41
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_SCRUB
 	PlotType=2
 EndPlot
@@ -91679,7 +91679,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=88,y=65
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -92579,7 +92579,7 @@ EndPlot
 BeginPlot
 	x=89,y=41
 	BonusType=BONUS_OLIVES
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
 EndPlot
@@ -94761,7 +94761,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=91,y=65
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -95672,7 +95672,7 @@ EndPlot
 BeginPlot
 	x=92,y=42
 	BonusType=BONUS_APPLE
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
@@ -97871,7 +97871,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=94,y=68
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -98715,7 +98715,7 @@ EndPlot
 BeginPlot
 	x=95,y=34
 	BonusType=BONUS_PIG
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
 EndPlot
@@ -98745,7 +98745,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=95,y=39
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=1
 EndPlot
@@ -98774,7 +98774,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=95,y=44
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
@@ -101838,7 +101838,7 @@ EndPlot
 BeginPlot
 	x=98,y=40
 	BonusType=BONUS_BAUXITE_ORE
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=2
 EndPlot
@@ -103919,7 +103919,7 @@ EndPlot
 BeginPlot
 	x=100,y=41
 	BonusType=BONUS_PRIME_TIMBER
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=2
 EndPlot
@@ -103931,7 +103931,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=100,y=43
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=2
 EndPlot
@@ -103947,7 +103947,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=100,y=46
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -104995,7 +104995,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=101,y=48
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=1
 EndPlot
@@ -107051,7 +107051,7 @@ EndPlot
 BeginPlot
 	x=103,y=44
 	BonusType=BONUS_PRIME_TIMBER
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -108093,7 +108093,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=104,y=45
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -110180,7 +110180,7 @@ EndPlot
 BeginPlot
 	x=106,y=46
 	BonusType=BONUS_APPLE
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -114132,7 +114132,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=110,y=8
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
@@ -118240,7 +118240,7 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot

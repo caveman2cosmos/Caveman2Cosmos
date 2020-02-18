@@ -146,7 +146,7 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
@@ -201,7 +201,7 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
@@ -750,7 +750,7 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
@@ -1807,7 +1807,7 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
@@ -4187,7 +4187,7 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
@@ -4581,7 +4581,7 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
@@ -4779,7 +4779,7 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
@@ -6081,7 +6081,7 @@
 		<!-- Plant Forest -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_YOUNG_FOREST</Type>
-			<Description>TXT_KEY_FEATURE_YOUNG_FOREST</Description>
+			<Description>TXT_KEY_FEATURE_FOREST_YOUNG</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_YOUNG_FOREST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_YOUNG_FOREST</ArtDefineTag>
 			<PrereqTech>TECH_GUILDS</PrereqTech>
@@ -10536,7 +10536,7 @@
 			<bActsAsCity>0</bActsAsCity>
 			<FeatureMakesValids>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>

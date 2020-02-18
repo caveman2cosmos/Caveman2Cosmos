@@ -904,15 +904,15 @@
 					<iFeatureAttack>25</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureAttack>25</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iFeatureAttack>25</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureAttack>25</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
@@ -1063,15 +1063,15 @@
                     <iFeatureDefense>-25</iFeatureDefense>
                 </FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>-25</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iFeatureDefense>-25</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureDefense>-25</iFeatureDefense>
 				</FeatureDefense>
 			</FeatureDefenses>
@@ -6543,15 +6543,15 @@
 					<iFeatureDefense>25</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureDefense>25</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>25</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iFeatureDefense>25</iFeatureDefense>
 				</FeatureDefense>
 			</FeatureDefenses>
@@ -6619,15 +6619,15 @@
 					<iFeatureDefense>25</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureDefense>25</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>25</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iFeatureDefense>25</iFeatureDefense>
 				</FeatureDefense>
 			</FeatureDefenses>
@@ -6687,15 +6687,15 @@
 					<iFeatureAttack>50</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureAttack>50</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureAttack>50</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iFeatureAttack>50</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
@@ -10482,15 +10482,15 @@
                     <iFeatureDefense>25</iFeatureDefense>
                 </FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>25</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iFeatureDefense>25</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureDefense>25</iFeatureDefense>
 				</FeatureDefense>
 			</FeatureDefenses>
@@ -10606,15 +10606,15 @@
                     <iFeatureDefense>50</iFeatureDefense>
                 </FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>50</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iFeatureDefense>50</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureDefense>50</iFeatureDefense>
 				</FeatureDefense>
 			</FeatureDefenses>
@@ -10735,15 +10735,15 @@
 					<iFeatureDefense>100</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>100</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iFeatureDefense>100</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureDefense>100</iFeatureDefense>
 				</FeatureDefense>
 			</FeatureDefenses>
@@ -12173,15 +12173,15 @@
                     <iFeatureAttack>15</iFeatureAttack>
                 </FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureAttack>15</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iFeatureAttack>15</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureAttack>15</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
@@ -12199,15 +12199,15 @@
                     <iFeatureDefense>15</iFeatureDefense>
                 </FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>15</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iFeatureDefense>15</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureDefense>15</iFeatureDefense>
 				</FeatureDefense>
 			</FeatureDefenses>
@@ -13351,15 +13351,15 @@
                     <iFeatureDefense>-1</iFeatureDefense>
                 </FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>-1</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iFeatureDefense>-1</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureDefense>-1</iFeatureDefense>
 				</FeatureDefense>
 			</FeatureDefenses>
@@ -13417,15 +13417,15 @@
                     <iFeatureDefense>-2</iFeatureDefense>
                 </FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>-2</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iFeatureDefense>-2</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureDefense>-2</iFeatureDefense>
 				</FeatureDefense>
 			</FeatureDefenses>
@@ -13483,15 +13483,15 @@
                     <iFeatureDefense>-3</iFeatureDefense>
                 </FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>-3</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iFeatureDefense>-3</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureDefense>-3</iFeatureDefense>
 				</FeatureDefense>
 			</FeatureDefenses>
@@ -14149,15 +14149,15 @@
                     <iFeatureAttack>10</iFeatureAttack>
                 </FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureAttack>10</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iFeatureAttack>10</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureAttack>10</iFeatureAttack>
 				</FeatureAttack>
             </FeatureAttacks>
@@ -14175,15 +14175,15 @@
                     <iFeatureDefense>10</iFeatureDefense>
                 </FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>10</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iFeatureDefense>10</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureDefense>10</iFeatureDefense>
 				</FeatureDefense>
             </FeatureDefenses>
@@ -15017,15 +15017,15 @@
                     <iFeatureDefense>20</iFeatureDefense>
                 </FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>20</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iFeatureDefense>20</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureDefense>20</iFeatureDefense>
 				</FeatureDefense>
 			</FeatureDefenses>
@@ -15117,15 +15117,15 @@
                     <iFeatureDefense>30</iFeatureDefense>
                 </FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>30</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iFeatureDefense>30</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureDefense>30</iFeatureDefense>
 				</FeatureDefense>
 			</FeatureDefenses>
@@ -15346,15 +15346,15 @@
 					<bFeatureDoubleMove>1</bFeatureDoubleMove>
 				</FeatureDoubleMove>
 				<FeatureDoubleMove>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<bFeatureDoubleMove>1</bFeatureDoubleMove>
 				</FeatureDoubleMove>
 				<FeatureDoubleMove>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<bFeatureDoubleMove>1</bFeatureDoubleMove>
 				</FeatureDoubleMove>
 				<FeatureDoubleMove>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeatureDoubleMove>1</bFeatureDoubleMove>
 				</FeatureDoubleMove>
 			</FeatureDoubleMoves>
@@ -16152,15 +16152,15 @@
                     <iFeatureAttack>15</iFeatureAttack>
                 </FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureAttack>15</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iFeatureAttack>15</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureAttack>15</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
@@ -16190,15 +16190,15 @@
                     <iFeatureAttack>15</iFeatureAttack>
                 </FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureAttack>15</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iFeatureAttack>15</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureAttack>15</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
@@ -16229,15 +16229,15 @@
                     <iFeatureAttack>15</iFeatureAttack>
                 </FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureAttack>15</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iFeatureAttack>15</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureAttack>15</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
@@ -17094,7 +17094,7 @@
 					<iFeatureWork>20</iFeatureWork>
 				</FeatureWork>
 				<FeatureWork>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureWork>20</iFeatureWork>
 				</FeatureWork>
 			</FeatureWorks>
@@ -17122,11 +17122,11 @@
 					<iFeatureWork>20</iFeatureWork>
 				</FeatureWork>
 				<FeatureWork>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureWork>20</iFeatureWork>
 				</FeatureWork>
 				<FeatureWork>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureWork>20</iFeatureWork>
 				</FeatureWork>
 			</FeatureWorks>
@@ -17154,11 +17154,11 @@
 					<iFeatureWork>20</iFeatureWork>
 				</FeatureWork>
 				<FeatureWork>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureWork>20</iFeatureWork>
 				</FeatureWork>
 				<FeatureWork>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureWork>20</iFeatureWork>
 				</FeatureWork>
 			</FeatureWorks>
@@ -30033,15 +30033,15 @@
 					<iFeatureDefense>-10</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>-5</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iFeatureDefense>-5</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureDefense>-15</iFeatureDefense>
 				</FeatureDefense>
 			</FeatureDefenses>

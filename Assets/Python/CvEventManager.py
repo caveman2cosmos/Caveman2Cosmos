@@ -1187,7 +1187,7 @@ class CvEventManager:
 		elif iImprovement == mapImpType['IMPROVEMENT_YOUNG_FOREST']:
 			CyPlot = GC.getMap().plot(iX, iY)
 			CyPlot.setImprovementType(-1)
-			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_YOUNG_FOREST'), 0)
+			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_FOREST_YOUNG'), 0)
 
 		elif iImprovement == mapImpType['IMPROVEMENT_PLANT_BAMBOO_GROVE']:
 			CyPlot = GC.getMap().plot(iX, iY)

@@ -11762,7 +11762,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</FeatureHappinessChange>
 				<FeatureHappinessChange>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iHappinessChange>2</iHappinessChange>
 				</FeatureHappinessChange>
 				<FeatureHappinessChange>

@@ -561,7 +561,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=4
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -2074,7 +2074,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=95
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -2636,7 +2636,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2,y=5
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=1
 EndPlot
@@ -3099,7 +3099,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2,y=93
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -4130,7 +4130,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=3,y=92
-	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_LARGE, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -5165,7 +5165,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=4,y=92
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -5177,13 +5177,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=4,y=94
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=95
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -6209,19 +6209,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=5,y=93
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=5,y=94
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=5,y=95
-	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_LARGE, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -9324,7 +9324,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=8,y=93
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -9900,7 +9900,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=9,y=5
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -10359,7 +10359,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=9,y=92
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -12337,7 +12337,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	BonusType=BONUS_OIL
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -12453,7 +12453,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=11,y=91
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -13049,7 +13049,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=12,y=6
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -13379,7 +13379,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=12,y=69
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
@@ -13402,7 +13402,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	isWOfRiver
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
@@ -14583,7 +14583,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=92
-	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_LARGE, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -16224,7 +16224,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=4
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -16713,13 +16713,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=92
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_MARE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=15,y=93
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_MARE
 	PlotType=2
 EndPlot
@@ -17791,7 +17791,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=16,y=93
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_MARE
 	PlotType=2
 EndPlot
@@ -17802,7 +17802,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=16,y=95
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -18874,7 +18874,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=94
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -21073,7 +21073,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=95
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -22147,7 +22147,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=91
-	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_LARGE, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -23247,7 +23247,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=21,y=93
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -24347,7 +24347,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=92
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -27465,7 +27465,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=72
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -28673,7 +28673,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=93
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -29265,7 +29265,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=6
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -29755,13 +29755,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=93
-	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_LARGE, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=27,y=94
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -30819,7 +30819,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=92
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -31948,7 +31948,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=95
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -32895,7 +32895,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=69
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -34026,7 +34026,7 @@ EndPlot
 BeginPlot
 	x=31,y=73
 	BonusType=BONUS_PRIME_TIMBER
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=2
 EndPlot
@@ -34717,7 +34717,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=5
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -37386,7 +37386,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=92
-	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_LARGE, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -39073,7 +39073,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=4
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -39562,13 +39562,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=93
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=36,y=94
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -41699,7 +41699,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=94
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -41752,7 +41752,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=104
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
@@ -43821,7 +43821,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=40,y=95
-	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_LARGE, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -43852,7 +43852,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=40,y=101
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_PLAINS
 	PlotType=2
 EndPlot
@@ -44865,7 +44865,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=91
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -45991,7 +45991,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=42,y=104
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_DESERT
 	PlotType=2
 EndPlot
@@ -47000,7 +47000,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=43,y=95
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -47587,7 +47587,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=6
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -48050,7 +48050,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=94
-	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_LARGE, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -49101,7 +49101,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=45,y=92
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -49118,7 +49118,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=45,y=95
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -49150,7 +49150,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=45,y=101
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
@@ -49784,7 +49784,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46,y=21
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_ICE
 	PlotType=1
 EndPlot
@@ -51214,7 +51214,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=93
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -51261,7 +51261,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=102
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
@@ -52281,13 +52281,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=48,y=93
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=48,y=94
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -52338,7 +52338,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=48,y=104
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
@@ -53341,7 +53341,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=93
-	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_LARGE, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -53377,7 +53377,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=100
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
@@ -54389,7 +54389,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=92
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -55460,7 +55460,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=51,y=93
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -55704,7 +55704,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=51,y=140
-	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_LARGE, FeatureVariety=0
 	TerrainType=TERRAIN_TRITON
 	PlotType=2
 EndPlot
@@ -56526,7 +56526,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52,y=93
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -56573,7 +56573,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52,y=102
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
@@ -57106,7 +57106,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=5
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -57594,7 +57594,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=91
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -57610,7 +57610,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=94
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -58182,7 +58182,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=5
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -58692,7 +58692,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=95
-	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_LARGE, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -59777,13 +59777,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=102
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=55,y=103
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_PLAINS
 	PlotType=2
 EndPlot
@@ -59976,7 +59976,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=140
-	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_LARGE, FeatureVariety=0
 	TerrainType=TERRAIN_TRITON
 	PlotType=2
 EndPlot
@@ -60851,7 +60851,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=105
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
@@ -61865,7 +61865,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=95
-	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_LARGE, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -62923,13 +62923,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=93
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
 BeginPlot
 	x=58,y=94
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -65075,7 +65075,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=91
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -65097,7 +65097,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=95
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -65133,7 +65133,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=102
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_PLAINS
 	PlotType=2
 EndPlot
@@ -65677,7 +65677,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=6
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -66156,7 +66156,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=92
-	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_LARGE, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -66212,7 +66212,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=103
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_PLAINS
 	PlotType=2
 EndPlot
@@ -67275,7 +67275,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=62,y=100
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
@@ -67292,7 +67292,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=62,y=103
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
@@ -68345,7 +68345,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=63,y=94
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_MARE
 	PlotType=2
 EndPlot
@@ -68396,7 +68396,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=63,y=104
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
@@ -69438,7 +69438,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=64,y=93
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_MARE
 	PlotType=2
 EndPlot
@@ -71678,7 +71678,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=66,y=94
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -72257,7 +72257,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=5
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -72770,7 +72770,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=93
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -72822,7 +72822,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=103
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_PLAINS
 	PlotType=2
 EndPlot
@@ -74977,7 +74977,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=95
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -76074,13 +76074,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=93
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=70,y=94
-	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_LARGE, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -76121,7 +76121,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=102
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
@@ -77736,7 +77736,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=5
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -78221,7 +78221,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=92
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -79305,7 +79305,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=73,y=93
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -79369,7 +79369,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=73,y=105
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
@@ -80389,7 +80389,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=74,y=91
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -80401,7 +80401,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=74,y=93
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -80995,7 +80995,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=6
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_CALLISTO
 	PlotType=2
 EndPlot
@@ -81477,7 +81477,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=92
-	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_LARGE, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -83685,7 +83685,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=95
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -84747,7 +84747,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=92
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -84758,13 +84758,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=94
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=78,y=95
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -86406,7 +86406,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=80,y=4
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -86904,7 +86904,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=80,y=94
-	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_LARGE, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -87957,13 +87957,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=81,y=93
-	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_LARGE, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
 BeginPlot
 	x=81,y=94
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -88545,7 +88545,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=82,y=5
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -89002,7 +89002,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=82,y=91
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -90077,7 +90077,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=83,y=91
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -90093,7 +90093,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=83,y=94
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_MARE
 	PlotType=2
 EndPlot
@@ -92231,7 +92231,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=92
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -93314,13 +93314,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=86,y=94
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=86,y=95
-	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_LARGE, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -94387,7 +94387,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=87,y=95
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -95434,7 +95434,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=88,y=92
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -96498,7 +96498,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=89,y=91
-	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_LARGE, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -97092,7 +97092,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=90,y=5
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -97571,7 +97571,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=90,y=92
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -98565,7 +98565,7 @@ BeginPlot
 	x=91,y=77
 	isNOfRiver
 	RiverWEDirection=3
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -99629,7 +99629,7 @@ BeginPlot
 	x=92,y=77
 	isNOfRiver
 	RiverWEDirection=3
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
@@ -99727,7 +99727,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=92,y=94
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -100799,7 +100799,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=93,y=94
-	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_LARGE, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -101849,19 +101849,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=94,y=93
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=94,y=94
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
 BeginPlot
 	x=94,y=95
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -102918,7 +102918,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=95,y=95
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -103500,7 +103500,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=96,y=6
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -105037,7 +105037,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=97,y=92
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -106152,13 +106152,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=98,y=93
-	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_LARGE, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=98,y=94
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -107246,7 +107246,7 @@ EndPlot
 BeginPlot
 	x=99,y=92
 	BonusType=BONUS_STONE
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -108375,7 +108375,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=100,y=93
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -108970,7 +108970,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=101,y=5
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -109474,7 +109474,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=101,y=91
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -109485,7 +109485,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=101,y=93
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -110590,7 +110590,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=102,y=92
-	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_LARGE, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -110601,7 +110601,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=102,y=94
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -111700,7 +111700,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=103,y=95
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -113875,7 +113875,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=105,y=92
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -113892,7 +113892,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=105,y=95
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -114866,13 +114866,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=106,y=77
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=2
 EndPlot
 BeginPlot
 	x=106,y=78
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=2
 EndPlot
@@ -114947,7 +114947,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=106,y=91
-	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_LARGE, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -114958,7 +114958,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=106,y=93
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -115541,7 +115541,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=107,y=6
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -115942,7 +115942,7 @@ EndPlot
 BeginPlot
 	x=107,y=77
 	BonusType=BONUS_SILVER_ORE
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=2
 EndPlot
@@ -117108,13 +117108,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=108,y=93
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=108,y=94
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -118173,7 +118173,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=109,y=92
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -121373,7 +121373,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=112,y=94
-	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_LARGE, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -121944,7 +121944,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=113,y=5
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -123181,7 +123181,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=114,y=38
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -123503,7 +123503,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=114,y=92
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -124263,7 +124263,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=115,y=36
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -124276,13 +124276,13 @@ EndPlot
 BeginPlot
 	x=115,y=38
 	BonusType=BONUS_IRON_ORE
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=39
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -124588,7 +124588,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=115,y=94
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -125320,7 +125320,7 @@ EndPlot
 BeginPlot
 	x=116,y=35
 	BonusType=BONUS_PRIME_TIMBER
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -126376,7 +126376,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=117,y=35
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -126388,7 +126388,7 @@ EndPlot
 BeginPlot
 	x=117,y=37
 	BonusType=BONUS_TITANIUM_ORE
-	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -127739,7 +127739,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=118,y=94
-	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_LARGE, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
@@ -128773,13 +128773,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=119,y=92
-	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_SMALL, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=119,y=93
-	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
+	FeatureType=FEATURE_CRATER_MEDIUM, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_HIGHLAND
 	PlotType=2
 EndPlot

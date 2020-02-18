@@ -9602,7 +9602,7 @@ def canBuildPigBonus(argsList):
 	if pPlot.isCity() or pPlot.getBonusType(-1) > -1: return 0
 	# Check if Feature or Terrain makes invalid.
 	if pPlot.getFeatureType() not in (
-		GC.getInfoTypeForString("FEATURE_FOREST"), GC.getInfoTypeForString("FEATURE_ANCIENT_FOREST"),
+		GC.getInfoTypeForString("FEATURE_FOREST"), GC.getInfoTypeForString("FEATURE_FOREST_ANCIENT"),
 		GC.getInfoTypeForString("FEATURE_JUNGLE"), GC.getInfoTypeForString("FEATURE_FLOOD_PLAINS")
 		): return 0
 	if pPlot.getTerrainType() not in (

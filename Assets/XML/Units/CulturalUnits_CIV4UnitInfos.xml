@@ -161,17 +161,17 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>2</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>

@@ -623,10 +623,10 @@
 		</FeatureInfo>
 		<!-- New Forest -->
 		<FeatureInfo>
-			<Type>FEATURE_YOUNG_FOREST</Type>
-			<Description>TXT_KEY_FEATURE_YOUNG_FOREST</Description>
+			<Type>FEATURE_FOREST_YOUNG</Type>
+			<Description>TXT_KEY_FEATURE_FOREST_YOUNG</Description>
 			<Civilopedia>TXT_KEY_FEATURE_FOREST_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_YOUNG_FOREST</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_FOREST_YOUNG</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -757,10 +757,10 @@
 		</FeatureInfo>
 		<!-- Burnt Forest -->
 		<FeatureInfo>
-			<Type>FEATURE_BURNT_FOREST</Type>
-			<Description>TXT_KEY_FEATURE_BURNT_FOREST</Description>
+			<Type>FEATURE_FOREST_BURNT</Type>
+			<Description>TXT_KEY_FEATURE_FOREST_BURNT</Description>
 			<Civilopedia>TXT_KEY_FEATURE_FOREST_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_BURNT_FOREST</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_FOREST_BURNT</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>15</iDefense>
@@ -872,10 +872,10 @@
 		</FeatureInfo>
 		<!-- Ancient Forest -->
 		<FeatureInfo>
-			<Type>FEATURE_ANCIENT_FOREST</Type>
-			<Description>TXT_KEY_FEATURE_ANCIENT_FOREST</Description>
+			<Type>FEATURE_FOREST_ANCIENT</Type>
+			<Description>TXT_KEY_FEATURE_FOREST_ANCIENT</Description>
 			<Civilopedia>TXT_KEY_FEATURE_FOREST_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_ANCIENT_FOREST</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_FOREST_ANCIENT</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -6228,10 +6228,10 @@
 		</FeatureInfo>
 		<!-- Lunar Crater 1 -->
 		<FeatureInfo>
-			<Type>FEATURE_MEDIUM_CRATER</Type>
-			<Description>TXT_KEY_FEATURE_MEDIUM_CRATER</Description>
+			<Type>FEATURE_CRATER_MEDIUM</Type>
+			<Description>TXT_KEY_FEATURE_CRATER_MEDIUM</Description>
 			<Civilopedia>TXT_KEY_FEATURE_CRATER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_MEDIUM_CRATER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_CRATER_MEDIUM</ArtDefineTag>
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>25</iDefense>
 			<iAppearance>300</iAppearance>
@@ -6336,10 +6336,10 @@
 		</FeatureInfo>
 		<!-- Lunar Crater 2 -->
 		<FeatureInfo>
-			<Type>FEATURE_LARGE_CRATER</Type>
-			<Description>TXT_KEY_FEATURE_LARGE_CRATER</Description>
+			<Type>FEATURE_CRATER_LARGE</Type>
+			<Description>TXT_KEY_FEATURE_CRATER_LARGE</Description>
 			<Civilopedia>TXT_KEY_FEATURE_CRATER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_LARGE_CRATER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_CRATER_LARGE</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<iPopDestroys>50</iPopDestroys>
@@ -6445,10 +6445,10 @@
 		</FeatureInfo>
 		<!-- Lunar Crater 3 -->
 		<FeatureInfo>
-			<Type>FEATURE_SMALL_CRATER</Type>
-			<Description>TXT_KEY_FEATURE_SMALL_CRATER</Description>
+			<Type>FEATURE_CRATER_SMALL</Type>
+			<Description>TXT_KEY_FEATURE_CRATER_SMALL</Description>
 			<Civilopedia>TXT_KEY_FEATURE_CRATER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_SMALL_CRATER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_CRATER_SMALL</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<iAppearance>250</iAppearance>
