@@ -180,7 +180,7 @@ public:
 	DllExport bool isGameMultiPlayer() const;																			// Exposed to Python
 	DllExport bool isTeamGame() const;																						// Exposed to Python
 
-	bool isModem();
+	bool isModem() const;
 	void setModem(bool bModem);
 
 /************************************************************************************************/
@@ -393,7 +393,7 @@ public:
 	void updateInitialSigns();
 	
 	void doFoundCorporation(CorporationTypes eCorporation, bool bForce);
-	int getAverageCorporationInfluence(CvCity* pCity, CorporationTypes eCorporation) const;
+	int getAverageCorporationInfluence(const CvCity* pCity, const CorporationTypes eCorporation) const;
 	
 	bool canEverResearch(TechTypes eTech) const;
 	bool canEverConstruct(BuildingTypes eBuilding) const;
@@ -605,7 +605,7 @@ public:
 /************************************************************************************************/
 
 	CvCity* getHolyCity(ReligionTypes eIndex) const;																	// Exposed to Python
-	void setHolyCity(ReligionTypes eIndex, CvCity* pNewValue, bool bAnnounce);	// Exposed to Python
+	void setHolyCity(ReligionTypes eIndex, const CvCity* pNewValue, bool bAnnounce);	// Exposed to Python
 
 	int getCorporationGameTurnFounded(CorporationTypes eIndex) const;												// Exposed to Python
 	bool isCorporationFounded(CorporationTypes eIndex) const;																// Exposed to Python
@@ -686,7 +686,7 @@ public:
 	virtual void AI_reset() = 0;
 	virtual void AI_makeAssignWorkDirty() = 0;
 	virtual void AI_updateAssignWork() = 0;
-	virtual int AI_combatValue(UnitTypes eUnit) = 0;
+	virtual int AI_combatValue(const UnitTypes eUnit) const = 0;
 
 	CvReplayInfo* getReplayInfo() const;
 	DllExport void setReplayInfo(CvReplayInfo* pReplay);
@@ -745,10 +745,8 @@ public:
 	bool isLeaderEverActive(LeaderHeadTypes eLeader) const;		// Exposed to Python
 
 	void processBuilding(BuildingTypes eBuilding, int iChange);
-	
-	// RevolutionDCM - BarbarianWorld - thanks Kael
-	void foundBarbarianCity();
-	// RevolutionDCM End
+
+	bool foundBarbarianCity();
 
 	bool pythonIsBonusIgnoreLatitudes() const;
 

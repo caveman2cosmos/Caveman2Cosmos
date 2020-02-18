@@ -219,10 +219,6 @@
 					<TerrainType>TERRAIN_EUROPA</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_TITAN</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -419,10 +415,6 @@
 				</PrereqTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_IO</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_TITAN</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -795,10 +787,6 @@
 				</PrereqTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_IO</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_TITAN</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -2046,6 +2034,7 @@
 				<iYield>40</iYield>
 				<iYield>12</iYield>
 			</YieldChanges>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_MEGAVERSE</BuildingClassType>

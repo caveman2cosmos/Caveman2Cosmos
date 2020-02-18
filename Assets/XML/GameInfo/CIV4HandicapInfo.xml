@@ -1,11 +1,8 @@
 <?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- -->
-<!-- Handicap Infos -->
-<!-- Revolution Mod only changed settings relating to creation of barbarian cities and units -->
+<!-- 
+	iBarbarianCityCreationProb:
+		Base percent chance per turn for barbarian city spawn on normal gamespeed, on eternity a value of 1 means 0.1% chance per turn.:
+ -->
 <Civ4HandicapInfo xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
 	<HandicapInfos>
 		<HandicapInfo>
@@ -19,7 +16,6 @@
 			<iTrainPercent>40</iTrainPercent>
 			<iConstructPercent>40</iConstructPercent>
 			<iResearchPercent>40</iResearchPercent>
-			<iMaxNumCitiesMaintenance>40</iMaxNumCitiesMaintenance>
 			<iMaxColonyMaintenance>80</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>40</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>40</iNumCitiesMaintenancePercent>
@@ -67,9 +63,8 @@
 			<iUnownedTilesPerBarbarianUnit>60</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>180</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>60</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>42</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag --> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>40</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>1</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>4</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>1</iBarbarianDefenders>
 			<iAnimalBonus>-60</iAnimalBonus>
 			<iBarbarianBonus>-60</iBarbarianBonus>
@@ -276,7 +271,6 @@
 			<iTrainPercent>60</iTrainPercent>
 			<iConstructPercent>60</iConstructPercent>
 			<iResearchPercent>60</iResearchPercent>
-			<iMaxNumCitiesMaintenance>60</iMaxNumCitiesMaintenance>
 			<iMaxColonyMaintenance>120</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>60</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>60</iNumCitiesMaintenancePercent>
@@ -330,9 +324,8 @@
 			<iUnownedTilesPerBarbarianUnit>55</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>165</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>55</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>38</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>39</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>1</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>6</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>1</iBarbarianDefenders>
 			<iAnimalBonus>-40</iAnimalBonus>
 			<iBarbarianBonus>-40</iBarbarianBonus>
@@ -572,7 +565,6 @@
 			<iTrainPercent>80</iTrainPercent>
 			<iConstructPercent>80</iConstructPercent>
 			<iResearchPercent>80</iResearchPercent>
-			<iMaxNumCitiesMaintenance>80</iMaxNumCitiesMaintenance>
 			<iMaxColonyMaintenance>160</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>80</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>80</iNumCitiesMaintenancePercent>
@@ -620,9 +612,8 @@
 			<iUnownedTilesPerBarbarianUnit>50</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>150</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>50</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>34</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>38</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>2</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>8</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>2</iBarbarianDefenders>
 			<iAnimalBonus>-20</iAnimalBonus>
 			<iBarbarianBonus>-20</iBarbarianBonus>
@@ -847,7 +838,6 @@
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
-			<iMaxNumCitiesMaintenance>100</iMaxNumCitiesMaintenance>
 			<iMaxColonyMaintenance>200</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>100</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>100</iNumCitiesMaintenancePercent>
@@ -897,9 +887,8 @@
 			<iUnownedTilesPerBarbarianUnit>45</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>135</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>45</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>30</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>37</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>2</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>10</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>3</iBarbarianDefenders>
 			<iAIDeclareWarProb>65</iAIDeclareWarProb>
 			<iAIGrowthPercent>100</iAIGrowthPercent>
@@ -1155,7 +1144,6 @@
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
-			<iMaxNumCitiesMaintenance>120</iMaxNumCitiesMaintenance>
 			<iMaxColonyMaintenance>240</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>120</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>120</iNumCitiesMaintenancePercent>
@@ -1203,9 +1191,8 @@
 			<iUnownedTilesPerBarbarianUnit>40</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>120</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>40</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>26</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>36</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>3</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>12</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>4</iBarbarianDefenders>
 			<iAIAnimalBonus>-10</iAIAnimalBonus>
 			<iAIBarbarianBonus>-10</iAIBarbarianBonus>
@@ -1464,7 +1451,6 @@
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
-			<iMaxNumCitiesMaintenance>140</iMaxNumCitiesMaintenance>
 			<iMaxColonyMaintenance>280</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>140</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>140</iNumCitiesMaintenancePercent>
@@ -1518,9 +1504,8 @@
 			<iUnownedTilesPerBarbarianUnit>35</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>105</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>35</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>22</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>35</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>3</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>14</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>5</iBarbarianDefenders>
 			<iAIAnimalBonus>-20</iAIAnimalBonus>
 			<iAIBarbarianBonus>-20</iAIBarbarianBonus>
@@ -1795,7 +1780,6 @@
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
-			<iMaxNumCitiesMaintenance>160</iMaxNumCitiesMaintenance>
 			<iMaxColonyMaintenance>320</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>160</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>160</iNumCitiesMaintenancePercent>
@@ -1843,9 +1827,8 @@
 			<iUnownedTilesPerBarbarianUnit>30</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>90</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>30</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>18</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>34</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>4</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>16</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>6</iBarbarianDefenders>
 			<iAIAnimalBonus>-30</iAIAnimalBonus>
 			<iAIBarbarianBonus>-30</iAIBarbarianBonus>
@@ -2146,7 +2129,6 @@
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
-			<iMaxNumCitiesMaintenance>180</iMaxNumCitiesMaintenance>
 			<iMaxColonyMaintenance>360</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>180</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>180</iNumCitiesMaintenancePercent>
@@ -2200,9 +2182,8 @@
 			<iUnownedTilesPerBarbarianUnit>25</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>75</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>25</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>14</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>33</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>4</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>18</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>7</iBarbarianDefenders>
 			<iAIAnimalBonus>-40</iAIAnimalBonus>
 			<iAIBarbarianBonus>-40</iAIBarbarianBonus>
@@ -2501,7 +2482,6 @@
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
-			<iMaxNumCitiesMaintenance>200</iMaxNumCitiesMaintenance>
 			<iMaxColonyMaintenance>400</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>200</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>200</iNumCitiesMaintenancePercent>
@@ -2546,16 +2526,15 @@
 			<iUnownedTilesPerBarbarianUnit>20</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>60</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>20</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>10</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>32</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>5</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>20</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>8</iBarbarianDefenders>
 			<iAIAnimalBonus>-50</iAIAnimalBonus>
 			<iAIBarbarianBonus>-50</iAIBarbarianBonus>
-			<iAIStartingUnitMultiplier>1</iAIStartingUnitMultiplier>
-			<iAIStartingDefenseUnits>10</iAIStartingDefenseUnits>
-			<iAIStartingExploreUnits>3</iAIStartingExploreUnits>
-			<iAIStartingWorkerUnits>2</iAIStartingWorkerUnits>
+			<iAIStartingUnitMultiplier>2</iAIStartingUnitMultiplier>
+			<iAIStartingDefenseUnits>5</iAIStartingDefenseUnits>
+			<iAIStartingExploreUnits>2</iAIStartingExploreUnits>
+			<iAIStartingWorkerUnits>1</iAIStartingWorkerUnits>
 			<iAIDeclareWarProb>90</iAIDeclareWarProb>
 			<iAIWorkRateModifier>50</iAIWorkRateModifier>
 			<iAIGrowthPercent>50</iAIGrowthPercent>
@@ -2873,7 +2852,6 @@
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
-			<iMaxNumCitiesMaintenance>240</iMaxNumCitiesMaintenance>
 			<iMaxColonyMaintenance>480</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>240</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>240</iNumCitiesMaintenancePercent>
@@ -2919,16 +2897,15 @@
 			<iUnownedTilesPerBarbarianUnit>10</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>30</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>10</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>2</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>30</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>6</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>24</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>10</iBarbarianDefenders>
 			<iAIAnimalBonus>-70</iAIAnimalBonus>
 			<iAIBarbarianBonus>-70</iAIBarbarianBonus>
-			<iAIStartingUnitMultiplier>1</iAIStartingUnitMultiplier>
-			<iAIStartingDefenseUnits>14</iAIStartingDefenseUnits>
-			<iAIStartingExploreUnits>4</iAIStartingExploreUnits>
-			<iAIStartingWorkerUnits>3</iAIStartingWorkerUnits>
+			<iAIStartingUnitMultiplier>2</iAIStartingUnitMultiplier>
+			<iAIStartingDefenseUnits>7</iAIStartingDefenseUnits>
+			<iAIStartingExploreUnits>3</iAIStartingExploreUnits>
+			<iAIStartingWorkerUnits>2</iAIStartingWorkerUnits>
 			<iAIDeclareWarProb>100</iAIDeclareWarProb>
 			<iAIWorkRateModifier>70</iAIWorkRateModifier>
 			<iAIGrowthPercent>30</iAIGrowthPercent>
@@ -3245,7 +3222,6 @@
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
-			<iMaxNumCitiesMaintenance>240</iMaxNumCitiesMaintenance>
 			<iMaxColonyMaintenance>480</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>240</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>240</iNumCitiesMaintenancePercent>
@@ -3291,16 +3267,15 @@
 			<iUnownedTilesPerBarbarianUnit>10</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>30</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>10</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>2</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>30</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>6</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>24</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>10</iBarbarianDefenders>
 			<iAIAnimalBonus>-70</iAIAnimalBonus>
 			<iAIBarbarianBonus>-70</iAIBarbarianBonus>
-			<iAIStartingUnitMultiplier>1</iAIStartingUnitMultiplier>
-			<iAIStartingDefenseUnits>14</iAIStartingDefenseUnits>
-			<iAIStartingExploreUnits>4</iAIStartingExploreUnits>
-			<iAIStartingWorkerUnits>3</iAIStartingWorkerUnits>
+			<iAIStartingUnitMultiplier>2</iAIStartingUnitMultiplier>
+			<iAIStartingDefenseUnits>7</iAIStartingDefenseUnits>
+			<iAIStartingExploreUnits>3</iAIStartingExploreUnits>
+			<iAIStartingWorkerUnits>2</iAIStartingWorkerUnits>
 			<iAIDeclareWarProb>100</iAIDeclareWarProb>
 			<iAIWorkRateModifier>70</iAIWorkRateModifier>
 			<iAIGrowthPercent>30</iAIGrowthPercent>

@@ -6,37 +6,6 @@
 <!-- Game Text - New -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_ECOLOGICAL_ANIMALS</Tag>
-		<English>Dont Change. Ecological Animals</English>
-		<French>Ne pas Changer l'Ecologie des Animaux</French>
-		<Polish>Nie zmieniaj. Ekologiczne zwierzęta.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_ECOLOGICAL_ANIMALS_HELP</Tag>
-		<English>Turn this off if you want to reduce the number of animal types in game to reduce memory load. It removes the animals and buildings that rely on the animals.</English>
-		<Polish>Wyłącz tą opcję jeśli chcesz zredukować ilość typów zwierząt w grze. Usuwa dodatkowe zwierzęta i budynki z nimi związane.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Tag>
-		<English>Pseudo national wonder gives free story building in all cities.</English>
-		<French>Sorte de Merveille nationale qui donne un bâtiment histoire gratuit dans chaque ville</French>
-		<Polish>Pseudo-cud narodowy zapewnia darmowy budynek w każdym mieście.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Tag>
-		<English>Free building provided as the effect of another.</English>
-		<French>Bâtiment gratuit obtenu comme effet d'un autre</French>
-		<Polish>Darmowy budynek dostarczony jako efekt innego budynku.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_PEDIA</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AMPHIBIAN_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Amphibians</English>
 		<French>Effet (Mythe des Amphibiens)</French>
@@ -61,12 +30,6 @@
 		<Polish>Efekt Historii - Płazy</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BIRD_STORY</Tag>
-		<English>Story - Birds</English>
-		<French>Histoire des Oiseaux</French>
-		<Polish>Opowieść - Ptaki</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RODENT_STORY</Tag>
 		<English>Story - Rodents</English>
 		<French>Histoire des Rongeurs</French>
@@ -77,12 +40,6 @@
 		<English>Story - Reptiles</English>
 		<French>Histoire des Reptiles</French>
 		<Polish>Opowieść - Gady</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FISH_STORY</Tag>
-		<English>Story - Tales of Fish</English>
-		<French>Histoire des Bancs de Poissons</French>
-		<Polish>Opowieść - Ryby</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_AMPHIBIAN</Tag>
@@ -291,22 +248,10 @@
 		<Polish>Efekt Historii - Ryby</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_REPTILE_MYTH</Tag>
-		<English>Myth - Reptile</English>
-		<French>Mythe des Reptiles</French>
-		<Polish>Mit - Gady</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REPTILE_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Reptile</English>
 		<French>Effet (Mythe des Reptiles)</French>
 		<Polish>Efekt Mitu - Gady</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_REPTILE_STORY</Tag>
-		<English>Story - Reptile</English>
-		<French>Histoire des Reptiles</French>
-		<Polish>Opowieść - Gady</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REPTILE_STORIES</Tag>
@@ -331,12 +276,6 @@
 		<English>Myth Effect - Rodent</English>
 		<French>Effet (Mythe des Rongeurs)</French>
 		<Polish>Efekt Mitu - Gryzonie</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RODENT_STORY</Tag>
-		<English>Story - Rodent</English>
-		<French>Histoire des Rongeurs</French>
-		<Polish>Opowieść - Gryzonie</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RODENT_STORIES</Tag>

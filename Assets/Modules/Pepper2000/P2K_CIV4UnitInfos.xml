@@ -189,7 +189,20 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 			</MapCategoryTypes>
+			<TerrainImpassableTypes>
+                <TerrainType>TERRAIN_INNER_SOLAR_SYSTEM</TerrainType>
+				<TerrainType>TERRAIN_OUTER_SOLAR_SYSTEM</TerrainType>
+			</TerrainImpassableTypes>
+            <TerrainPassableTechs>
+                <TerrainPassableTech>
+					<TerrainType>TERRAIN_INNER_SOLAR_SYSTEM</TerrainType>
+					<PassableTech>TECH_PLANET_COLONIZATION</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CONSTRUCTION_SHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_CONSTRUCTION_SHIP_PEDIA</Civilopedia>
@@ -217,6 +230,46 @@
 				</Build>
                 <Build>
 					<BuildType>BUILD_LUNAR_MINING_OUTPOST</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_COLONY_EXTRACTION_FACILITY</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+                    <BuildType>BUILD_HABITAT1</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_HABITAT2</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_HABITAT3</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_HABITAT4</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+				<Build>
+                    <BuildType>BUILD_COLONY_HYDROPONICS</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+				<Build>
+                    <BuildType>BUILD_COLONY_MANUFACTORY</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+				<Build>
+                    <BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+				<Build>
+					<BuildType>BUILD_LUNAR_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_MARS_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -474,12 +527,6 @@
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_ORBITAL_FACTORY</PrereqBuilding>
 			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_IMPERIALIST</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>1000</iCost>
             <iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -803,12 +850,6 @@
 				</Or>
 			</TrainCondition>
 			<PrereqTech>TECH_DEEP_SPACE_COLONIES</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_IMPERIALIST</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>4850</iCost>
             <iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -2453,12 +2494,6 @@
 			</Builds>
 			<PrereqBuilding>BUILDING_MARS_FACTORY</PrereqBuilding>
 			<PrereqTech>TECH_SRAILS</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>1500</iCost>
             <iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -2531,12 +2566,6 @@
 			</Builds>
 			<PrereqBuilding>BUILDING_VENUS_CARBONWORKS</PrereqBuilding>
 			<PrereqTech>TECH_SRAILS</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>1500</iCost>
             <iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -2598,12 +2627,6 @@
 			</Builds>
 			<PrereqBuilding>BUILDING_DOCKING_BAY</PrereqBuilding>
 			<PrereqTech>TECH_COILGUN</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>1000</iCost>
             <iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -2666,12 +2689,6 @@
 			</Builds>
 			<PrereqBuilding>BUILDING_HOUSING_WORKING_CLASS</PrereqBuilding>
 			<PrereqTech>TECH_ASTROGATION_CONSTELLATION</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>2000</iCost>
             <iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -2905,12 +2922,6 @@
 			</Actions>
 			<PrereqBuilding>BUILDING_LAUNCH_SITE_EFFECT</PrereqBuilding>
 			<PrereqTech>TECH_SOLAR_PROPULSION</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMoves>24</iMoves>
@@ -3087,12 +3098,6 @@
                 <BuildingType>BUILDING_DEEP_SPACE_DOCKING_BAY</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MAGNETIC_SAILS</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMoves>24</iMoves>
@@ -3267,12 +3272,6 @@
 			</Actions>
 			<PrereqBuilding>BUILDING_DEEP_SPACE_DOCKING_BAY</PrereqBuilding>
 			<PrereqTech>TECH_NANOTROIDS</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>5000</iCost>
             <iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -3568,12 +3567,6 @@
 				</Or>
 			</TrainCondition>
             <PrereqTech>TECH_PHASING</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>5000</iCost>
             <iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -3716,12 +3709,6 @@
 			</TerrainPassableTechs>
 			<PrereqBuilding>BUILDING_CHRONOTON</PrereqBuilding>
 			<PrereqTech>TECH_STABLE_TIME_LOOPS</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>5000</iCost>
             <iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -4544,12 +4531,6 @@
 			</Actions>
 			<PrereqBuilding>BUILDING_LAUNCH_SITE_EFFECT</PrereqBuilding>
 			<PrereqTech>TECH_SATELLITES</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMoves>12</iMoves>
@@ -5413,12 +5394,6 @@
 			</Actions>
 			<PrereqBuilding>BUILDING_LAUNCH_SITE_EFFECT</PrereqBuilding>
 			<PrereqTech>TECH_PLANET_EXPLORATION</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMoves>12</iMoves>
@@ -5621,12 +5596,6 @@
 			</Actions>
 			<PrereqBuilding>BUILDING_DEEP_SPACE_TELESCOPE</PrereqBuilding>
 			<PrereqTech>TECH_ASTROGATION_CONSTELLATION</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMoves>12</iMoves>
@@ -5784,12 +5753,6 @@
 			</Actions>
 			<PrereqBuilding>BUILDING_SELF_REPLICATING_FACTORY</PrereqBuilding>
 			<PrereqTech>TECH_ACNP_PROPULSION</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMoves>12</iMoves>
@@ -5915,12 +5878,6 @@
 			</Actions>
 			<PrereqBuilding>BUILDING_INTERSTELLAR_STARPORT</PrereqBuilding>
 			<PrereqTech>TECH_FOLDING_SPACE</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMoves>12</iMoves>
@@ -6013,12 +5970,6 @@
 			</Actions>
 			<PrereqBuilding>BUILDING_INTERGALACTIC_STARPORT</PrereqBuilding>
 			<PrereqTech>TECH_QUANTUM_RAMJET</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMoves>12</iMoves>
@@ -6144,12 +6095,6 @@
 			</Actions>
 			<PrereqBuilding>BUILDING_HORIZON_PORT</PrereqBuilding>
 			<PrereqTech>TECH_ENDLESS_EXPLORATION</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMoves>12</iMoves>
@@ -6549,12 +6494,6 @@
 			</Buildings>
             <iBaseHurry>1000</iBaseHurry>
 			<PrereqTech>TECH_ASTEROIDPROBE</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>2000</iCost>
             <iHurryCostModifier>10000</iHurryCostModifier>
             <PrereqBuilding>BUILDING_CERES_TRADING_POST</PrereqBuilding>
@@ -6632,12 +6571,6 @@
 			</Buildings>
             <iBaseHurry>1500</iBaseHurry>
 			<PrereqTech>TECH_ASTEROID_EXTRACTION</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>2000</iCost>
             <iHurryCostModifier>10000</iHurryCostModifier>
             <PrereqBuilding>BUILDING_KBO_OUTPOST</PrereqBuilding>
@@ -6775,12 +6708,6 @@
 			</Builds>
 			<PrereqBuilding>BUILDING_PLANETARY_LANDING</PrereqBuilding>
 			<PrereqTech>TECH_INTERSTELLAR_TRADE</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMoves>24</iMoves>
@@ -9980,15 +9907,17 @@
 					<BuildType>BUILD_LUNAR_MINING_OUTPOST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
+				<Build>
+					<BuildType>BUILD_COLONY_EXTRACTION_FACILITY</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_LUNAR_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
 			</Builds>
 			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
 			<PrereqBuilding>BUILDING_LUNAR_ASSEMBLY_PLANT</PrereqBuilding>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>1700</iCost>
 			<iMoves>1</iMoves>
 			<iWorkRate>400</iWorkRate>
@@ -10076,15 +10005,25 @@
 					<BuildType>BUILD_TERRAFORM_MOON</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
+				<Build>
+                    <BuildType>BUILD_HABITAT1</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_HABITAT2</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_HABITAT3</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_HABITAT4</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
 			</Builds>
 			<PrereqBuilding>BUILDING_LUNAR_DROID_FACTORY</PrereqBuilding>
 			<PrereqTech>TECH_ANDROIDS</PrereqTech>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>2000</iCost>
 			<iMoves>3</iMoves>
 			<iWorkRate>500</iWorkRate>

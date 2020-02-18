@@ -313,14 +313,6 @@
 		<Polish>Ulepsz Jeńca do Wojownika Neandertalczyków.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_GATHERER</Tag>
-		<English>Upgrade a Captive to a Neanderthal Gatherer.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_TRACKER</Tag>
-		<English>Upgrade a Captive to a Neanderthal Tracker.</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_NEANDERTHAL_WARRIOR</Tag>
 		<English>Upgrade to Neanderthal Warrior.</English>
 		<French>Convertir en Guerrier Néanderthal.</French>

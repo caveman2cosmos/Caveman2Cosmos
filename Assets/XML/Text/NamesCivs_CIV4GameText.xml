@@ -119,50 +119,62 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ANIMAL_BEAST_ADJECTIVE</Tag>
 		<English>Beastly</English>
+		<French>Bêtes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ANIMAL_BEAST_DESC</Tag>
 		<English>Fauna Beasts</English>
+		<French>Faune Bestiale</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ANIMAL_BEAST_DESC_SHORT</Tag>
 		<English>Beasts</English>
+		<French>Bêtes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ANIMAL_BEAST_PEDIA</Tag>
 		<English>Fauna Beasts, or 'Beasts', are atypical predators that either prey on all animals alike or are both predator and prey at the same time. While usually not the most aggressive animals of the wild they are often as deadly as your typical predator, if not more so.</English>
+		<French>Les bêtes de la faune, ou «bêtes», sont des prédateurs atypiques qui s'attaquent à tous les animaux ou sont à la fois prédateurs et proies en même temps. Bien qu'ils ne soient généralement pas les animaux sauvages les plus agressifs, ils sont souvent aussi mortels que votre prédateur typique, sinon plus.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ANIMAL_PREDATOR_ADJECTIVE</Tag>
 		<English>Predatory</English>
+		<French>Prédateur</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ANIMAL_PREDATOR_DESC</Tag>
 		<English>Fauna Predators</English>
+		<French>Faune prédatrice</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ANIMAL_PREDATOR_DESC_SHORT</Tag>
 		<English>Predators</English>
+		<French>Prédateurs</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ANIMAL_PREDATOR_PEDIA</Tag>
 		<English>Fauna Predators, or 'Predators', are the dangerous entities of the wild that would attack or prey on not only man but other species.</English>
+		<French>Les prédateurs de la faune, ou «prédateurs», sont les entités dangereuses de la nature qui attaqueraient ou s'attaqueraient non seulement à l'homme mais à d'autres espèces.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ANIMAL_PREY_ADJECTIVE</Tag>
 		<English>Creaturely</English>
+		<French>Créatures</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ANIMAL_PREY_DESC</Tag>
 		<English>Fauna Creatures</English>
+		<French>Faune - Créatures</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ANIMAL_PREY_DESC_SHORT</Tag>
 		<English>Creatures</English>
+		<French>Créatures</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ANIMAL_PREY_PEDIA</Tag>
 		<English>Fauna Creatures, or 'Creatures', are the peacefully observable denizens of nature that, while capable of sometimes becoming hostile, and certainly often up to the task of defending themselves, are more commonly likely to be indifferent or flighty at best.  They are often the 'prey' for more aggressive predatory species but since many predators can also BE prey for something larger or stronger than them, nature is not so simple as to divide animals purely into predator and prey camps.  Nevertheless, there ARE animals that are not hostile in general and these creatures are those.</English>
+		<French>Les créatures de la faune, ou "créatures", sont les habitants de la nature pacifiquement observables qui, bien que capables de devenir parfois hostiles, et certainement souvent à la hauteur de se défendre, sont le plus souvent susceptibles d'être au mieux indifférents ou volants. Ils sont souvent la "proie"d'espèces prédatrices plus agressives, mais comme de nombreux prédateurs peuvent également ÊTRE la proie de quelque chose de plus grand ou plus fort qu'eux, la nature n'est pas si simple qu'elle divise les animaux uniquement en camps de prédateurs et de proies. Néanmoins, il y a des animaux qui ne sont pas hostiles en général et ces créatures sont celles-là.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ARABIA_ADJECTIVE</Tag>
@@ -528,37 +540,45 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIV_NPC_NEANDERTHAL_ADJECTIVE</Tag>
 		<English>Neanderthals</English>
+		<French>Néanderthaliens</French>
 		<German>neandertalisch</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_NPC_NEANDERTHAL_DESC</Tag>
 		<English>Neanderthals</English>
+		<French>Néanderthaliens</French>
 		<German>Reich der Neandertaler</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_NPC_NEANDERTHAL_SHORT_DESC</Tag>
 		<English>Neanderthals</English>
+		<French>Néanderthaliens</French>
 		<German>Neandertal</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_NPC_NEANDERTHAL_PEDIA</Tag>
 		<English>Neanderthal Barbarians</English>
+		<French>Barbares Neanderthal</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_INSECTOID_ADJECTIVE</Tag>
 		<English>Insectoids</English>
+		<French>Insectoïdes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_INSECTOID_DESC</Tag>
 		<English>Insectoids</English>
+		<French>Insectoïdes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_INSECTOID_SHORT_DESC</Tag>
 		<English>Insectoids</English>
+		<French>Insectoïdes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_INSECTOID_PEDIA</Tag>
 		<English>Insects, both Terran and Extra-Terrestrial.  In space, they are a terrifyingly evolved horrific foe.</English>
+		<French>Insectes terriens et extraterrestres. Dans l'espace, ils sont un ennemi horrible terriblement évolué.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BYZANTINE_ADJECTIVE</Tag>
@@ -1259,6 +1279,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIV_HITTITES_SHORT_DESC</Tag>
 		<English>Hatti</English>
+		<French>Hatti</French>
 		<German>Hethitien</German>
 		<Polish>Hetyci</Polish>
 	</TEXT>
@@ -1535,6 +1556,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIV_IROQUOIS_SHORT_DESC</Tag>
 		<English>Iroquois</English>
+		<French>Iroquois</French>
 		<German>Irokesenreich</German>
 		<Italian>Irochesi</Italian>
 		<Spanish>Confederación Iroquesa</Spanish>
@@ -2486,6 +2508,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIV_SIAM_SHORT_DESC</Tag>
 		<English>Siam</English>
+		<French>Siam</French>
 		<Polish>Syjam</Polish>
 	</TEXT>
 	<TEXT>

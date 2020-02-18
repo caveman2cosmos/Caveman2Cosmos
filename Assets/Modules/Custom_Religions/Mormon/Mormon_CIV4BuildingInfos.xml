@@ -201,12 +201,6 @@
 				<Bonus>BONUS_TIMBER</Bonus>
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
 			<iConquestProb>0</iConquestProb>
