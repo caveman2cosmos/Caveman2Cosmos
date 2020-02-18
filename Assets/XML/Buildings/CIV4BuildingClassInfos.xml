@@ -21,7 +21,6 @@
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<iExtraPlayerInstances>1</iExtraPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_PALACE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>

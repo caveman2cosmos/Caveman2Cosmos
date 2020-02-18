@@ -12995,7 +12995,6 @@ CvBuildingClassInfo::CvBuildingClassInfo() :
 	m_iMaxPlayerInstances(0),
 	m_iExtraPlayerInstances(0),
 	m_iDefaultBuildingIndex(NO_BUILDING),
-	m_bNoLimit(false),
 	m_piVictoryThreshold(NULL)
 {}
 
@@ -13041,11 +13040,6 @@ void CvBuildingClassInfo::setDefaultBuildingIndex(int i)
 	m_iDefaultBuildingIndex = i;
 }
 
-bool CvBuildingClassInfo::isNoLimit() const
-{
-	return m_bNoLimit;
-}
-
 // Arrays
 
 int CvBuildingClassInfo::getVictoryThreshold(int i) const
@@ -13068,8 +13062,6 @@ bool CvBuildingClassInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iMaxTeamInstances, L"iMaxTeamInstances", -1);
 	pXML->GetOptionalChildXmlValByName(&m_iMaxPlayerInstances, L"iMaxPlayerInstances", -1);
 	pXML->GetOptionalChildXmlValByName(&m_iExtraPlayerInstances, L"iExtraPlayerInstances");
-
-	pXML->GetOptionalChildXmlValByName(&m_bNoLimit, L"bNoLimit");
 
 	pXML->SetVariableListTagPair(&m_piVictoryThreshold, L"VictoryThresholds",  GC.getNumVictoryInfos());
 
@@ -13098,8 +13090,6 @@ void CvBuildingClassInfo::copyNonDefaults(CvBuildingClassInfo* pClassInfo, CvXML
 	if (getMaxTeamInstances() == -1) m_iMaxTeamInstances = pClassInfo->getMaxTeamInstances();
 	if (getMaxPlayerInstances() == -1) m_iMaxPlayerInstances = pClassInfo->getMaxPlayerInstances();
 	if (getExtraPlayerInstances() == iDefault) m_iExtraPlayerInstances = pClassInfo->getExtraPlayerInstances();
-
-	if (isNoLimit() == bDefault) m_bNoLimit = pClassInfo->isNoLimit();
 
 	for ( int i = 0; i < GC.getNumVictoryInfos(); i++ )
 	{
@@ -13153,9 +13143,6 @@ void CvBuildingClassInfo::getCheckSum(unsigned int &iSum)
 	CheckSum(iSum, m_iMaxPlayerInstances);
 	CheckSum(iSum, m_iExtraPlayerInstances);
 	CheckSum(iSum, m_iDefaultBuildingIndex);
-
-	CheckSum(iSum, m_bNoLimit);
-
 	// Arrays
 	CheckSum(iSum, m_piVictoryThreshold, GC.getNumVictoryInfos());
 }

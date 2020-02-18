@@ -10,6 +10,7 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_CLOCKPUNK_EMBASSY</BuildingClass>
 			<Type>BUILDING_CLOCKPUNK_EMBASSY</Type>
+			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CLOCKPUNK_EMBASSY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CLOCKPUNK_EMBASSY_PEDIA</Civilopedia>

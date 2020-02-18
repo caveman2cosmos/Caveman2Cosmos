@@ -16,8 +16,6 @@ void CyInfoPythonInterface2()
 		.def("getMaxPlayerInstances", &CvBuildingClassInfo::getMaxPlayerInstances, "int ()")
 		.def("getExtraPlayerInstances", &CvBuildingClassInfo::getExtraPlayerInstances, "int ()")
 		.def("getDefaultBuildingIndex", &CvBuildingClassInfo::getDefaultBuildingIndex, "int ()")
-
-		.def("isNoLimit", &CvBuildingClassInfo::isNoLimit, "bool ()")
 		// Arrays
 		.def("getVictoryThreshold", &CvBuildingClassInfo::getVictoryThreshold, "int (int i)")
 	;

@@ -25662,7 +25662,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 		}
 // BUG - Building Double Commerce - end
 
-		if (!(GC.getBuildingClassInfo((BuildingClassTypes)(kBuilding.getBuildingClassType())).isNoLimit()))
+		if (!kBuilding.isNoLimit())
 		{
 			if (isWorldWonderClass((BuildingClassTypes)(kBuilding.getBuildingClassType())))
 			{

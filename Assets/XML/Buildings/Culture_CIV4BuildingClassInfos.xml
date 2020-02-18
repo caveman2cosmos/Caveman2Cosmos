@@ -76,7 +76,6 @@
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CULTURE_ADOPTED_AFRICAN</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -85,7 +84,6 @@
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CULTURE_ADOPTED_ASIAN</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -94,7 +92,6 @@
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CULTURE_ADOPTED_EUROPEAN</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -103,7 +100,6 @@
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CULTURE_ADOPTED_MIDDLE_EASTERN</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -112,7 +108,6 @@
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CULTURE_ADOPTED_NEANDERTHAL</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -121,7 +116,6 @@
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CULTURE_ADOPTED_NORTH_AMERICAN</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -130,7 +124,6 @@
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CULTURE_ADOPTED_OCEANIAN</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -139,7 +132,6 @@
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CULTURE_ADOPTED_SOUTH_AMERICAN</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -276,7 +268,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_NEANDERTHAL_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -285,7 +276,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_AMERICAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -294,7 +284,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ARABIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -303,7 +292,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ASSYRIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -312,7 +300,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_AZTEC_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -321,7 +308,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_BABYLONIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -330,7 +316,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_BYZANTINE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -339,7 +324,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CARTHAGINIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -348,7 +332,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CELTIC_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -357,7 +340,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CHINESE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -366,7 +348,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_DUTCH_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -375,7 +356,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_EGYPTIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -384,7 +364,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ENGLISH_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -393,7 +372,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ETHIOPIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -402,7 +380,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_FRENCH_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -411,7 +388,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_GERMAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -420,7 +396,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_GREEK_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -429,7 +404,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_HITTITE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -438,7 +412,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_HOLYROMAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -447,7 +420,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_INCAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -456,7 +428,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_INDIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -465,7 +436,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_IROQUOIS_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -474,7 +444,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_JAPANESE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -483,7 +452,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_KHMER_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -492,7 +460,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_KOREAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -501,7 +468,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MALINESE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -510,7 +476,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MAYAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -519,7 +484,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MONGOLIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -528,7 +492,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_OTTOMAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -537,7 +500,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_PERSIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -546,7 +508,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_PORTUGUESE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -555,7 +516,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ROMAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -564,7 +524,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_RUSSIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -573,7 +532,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SIAMESE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -582,7 +540,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SPANISH_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -591,7 +548,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SUMERIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -600,7 +556,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_VIKING_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -609,7 +564,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ZULU_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -618,7 +572,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SIOUX_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -627,7 +580,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_AUSTRALIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -636,7 +588,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_POLYNESIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -645,7 +596,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ABORIGINE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -654,7 +604,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CHEROKEE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -663,7 +612,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_APACHE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -672,7 +620,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MEXICAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -681,7 +628,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_OLMEC_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -690,7 +636,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_INDONESIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -699,7 +644,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_BRAZILIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -708,7 +652,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CANADIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -717,7 +660,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ISRAELI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -726,7 +668,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MAORI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -735,7 +676,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SWISS_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -744,7 +684,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_TIBETAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -753,7 +692,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CARIB_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -762,7 +700,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CHEYENNE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -771,7 +708,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_COMANCHE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -780,7 +716,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CREE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -789,7 +724,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_HURON_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -798,7 +732,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_INUIT_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -807,7 +740,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_KLAMATH_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -816,7 +748,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MAPUCHE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -825,7 +756,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_NAVAJO_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -834,7 +764,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_NOOTKA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -843,7 +772,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SEMINOLE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -852,7 +780,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_TOLTEC_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -861,7 +788,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_TUPI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -870,7 +796,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ZAPOTEC_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -879,7 +804,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ARMENIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -888,7 +812,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_AUSTRIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -897,7 +820,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_BERBER_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -906,7 +828,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CEYLONESE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -915,7 +836,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CHOLA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -924,7 +844,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_GOTH_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -933,7 +852,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_HUN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -942,7 +860,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_HUNGARIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -951,7 +868,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_JIVARO_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -960,7 +876,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MASAI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -969,7 +884,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MINOAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -978,7 +892,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MOROCCAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -987,7 +900,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_NUBIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -996,7 +908,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_PHOENICAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1005,7 +916,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_POLISH_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1014,7 +924,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SWAHILI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1023,7 +932,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_TURKMEN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1032,7 +940,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_UIGHUR_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1041,7 +948,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_VIETNAMESE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1050,7 +956,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_VENEZUELAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1059,7 +964,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_AINU_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1068,7 +972,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_AKA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1077,7 +980,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_BENGALI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1086,7 +988,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_BENIN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1095,7 +996,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_FULANI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1104,7 +1004,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_HAUSA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1113,7 +1012,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_HERERO_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1122,7 +1020,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_KANEMBORNU_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1131,7 +1028,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_KONGOLESE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1140,7 +1036,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_LUBA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1149,7 +1044,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MERINA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1158,7 +1052,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MUGHAL_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1167,7 +1060,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MUTAPA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1176,7 +1068,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_NEPAL_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1185,7 +1076,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_PAKISTANI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1194,7 +1084,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SOMALI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1203,7 +1092,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SWAZI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1212,7 +1100,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_TAMIL_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1221,7 +1108,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_TUAREG_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1230,7 +1116,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_WELSH_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1239,7 +1124,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_BANDANESE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1248,7 +1132,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_BASQUE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1257,7 +1140,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_BURMESE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1266,7 +1148,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CANTONESE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1275,7 +1156,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CHUMASH_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1284,7 +1164,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CUBAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1293,7 +1172,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_FRANKS_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1302,7 +1180,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_HATTIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1311,7 +1188,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_HOPI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1320,7 +1196,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ITALIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1329,7 +1204,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MANCHURIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1338,7 +1212,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_PAPUAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1347,7 +1220,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_PARTHIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1356,7 +1228,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_PRUSSIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1365,7 +1236,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_QUECHUA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1374,7 +1244,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_RAPANUI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1383,7 +1252,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SAXON_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1392,7 +1260,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SCOTTISH_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1401,7 +1268,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SOUTHAFRICAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1410,7 +1276,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_THAI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1419,7 +1284,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_DOLPHIN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1428,7 +1292,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CHAM_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1437,7 +1300,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SYRIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1446,7 +1308,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ARAWAK_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1455,7 +1316,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_BELGIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1464,7 +1324,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_JOSEON_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1473,7 +1332,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CONFEDERATE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1482,7 +1340,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_DAHOMEY_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1491,7 +1348,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_DENE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1500,7 +1356,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_HAIDA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1509,7 +1364,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_IRISH_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1518,7 +1372,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_JOMON_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1527,7 +1380,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MOCHE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1536,7 +1388,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_NAZCA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1545,7 +1396,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_NEWZEALAND_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1554,7 +1404,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SASSANIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1563,7 +1412,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SCYTHIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1572,7 +1420,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SHANG_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1581,7 +1428,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SIBERIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1590,7 +1436,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SPARTAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1599,7 +1444,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_TROJAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1608,7 +1452,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_XIONGU_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1617,7 +1460,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_YAMATO_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1626,7 +1468,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ARGENTINIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1635,7 +1476,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CALIFORNIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1644,7 +1484,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_HAWAIIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1653,7 +1492,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_HUASTEC_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1662,7 +1500,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ICELANDIC_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1671,7 +1508,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_JAMAICAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1680,7 +1516,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MISSISSIPPI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1689,7 +1524,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MIXTEC_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1698,7 +1532,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_NORWEGIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1707,7 +1540,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_QUANG_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1716,7 +1548,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_RHODESIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1725,7 +1556,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SAMI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1734,7 +1564,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SOVIET_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1743,7 +1572,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_TAIWANESE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1752,7 +1580,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_TARASCAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1761,7 +1588,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_TEXAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1770,7 +1596,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_TLATILCO_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1779,7 +1604,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_TLAXCALTEC_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1788,7 +1612,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_TONGAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1797,7 +1620,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_AKKAD_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1806,7 +1628,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ANASAZI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1815,7 +1636,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_AYMARA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1824,7 +1644,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_BULGARIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 <!-- No units
@@ -1834,7 +1653,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CASTILIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 -->
@@ -1844,7 +1662,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_COLOMBIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1853,7 +1670,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_DZUNGAR_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1862,7 +1678,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_FINNISH_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1871,7 +1686,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_GYPSY_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1880,7 +1694,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_JORDANIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1889,7 +1702,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_KONJO_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 <!-- No units
@@ -1899,7 +1711,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_LEON_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 -->
@@ -1909,7 +1720,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_LIANGZHU_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1918,7 +1728,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_LYDIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1927,7 +1736,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MALAYSIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1936,7 +1744,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MANDAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1945,7 +1752,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_NOK_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1954,7 +1760,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SAMOAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1963,7 +1768,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SONGHAI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1972,7 +1776,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_TIMURID_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1981,7 +1784,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_VENETIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1990,7 +1792,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_WAYANA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1999,7 +1800,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_YANOMAMI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2008,7 +1808,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_YEMEN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2017,7 +1816,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ATHENIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2026,7 +1824,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ASHANTI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2035,7 +1832,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_BLACKFOOT_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2044,7 +1840,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CHIPPEWA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2053,7 +1848,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CROATIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2062,7 +1856,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_DANISH_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2071,7 +1864,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_EPIRUS_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2080,7 +1872,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_FIJIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2089,7 +1880,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_GHANA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2098,7 +1888,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MACEDONIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2107,7 +1896,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MASSAGETAE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2116,7 +1904,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_NAMA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2125,7 +1912,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_PICTISH_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2134,7 +1920,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_PIMA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2143,7 +1928,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ROXOLANI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2152,7 +1936,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SLOVAK_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2161,7 +1944,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_TAHITIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2170,7 +1952,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_YAGHAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2179,7 +1960,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ZUNI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2188,7 +1968,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ABBASID_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2197,7 +1976,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ADENA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2206,7 +1984,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_AFGHANISTAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2215,7 +1992,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_AKSUMITE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2224,7 +2000,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ALACALUFE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2233,7 +2008,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ALBANIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2242,7 +2016,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ALEMANNI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2251,7 +2024,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ALGIER_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2260,7 +2032,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_AMIS_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2269,7 +2040,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ANDAMANESE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2278,7 +2048,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ANGOLAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2287,7 +2056,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ARAGON_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2296,7 +2064,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_AVARS_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2305,7 +2072,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_AVERNI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2314,7 +2080,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_AZANDE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2323,7 +2088,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_BAHRAIN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2332,7 +2096,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_BACTRIC_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2341,7 +2104,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_BANGLADESH_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2350,7 +2112,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_BASHKIR_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2359,7 +2120,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_BATAVI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2368,7 +2128,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_BATEK_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2377,7 +2136,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_BAVARIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2386,7 +2144,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_BEDOUIN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2395,7 +2152,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_BELIZE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2404,7 +2160,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_BOLIVIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2413,7 +2168,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_BRETON_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2422,7 +2176,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_BRITON_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2431,7 +2184,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_BURGUNDI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2440,7 +2192,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CAMBEBA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2449,7 +2200,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CANARI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2458,7 +2208,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CAPAYAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2467,7 +2216,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CARAL_SUPE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2476,7 +2224,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CATALONIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2485,7 +2232,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CELTIBERIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2494,7 +2240,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CHACHAPOYA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2503,7 +2248,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CHAVIN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2512,7 +2256,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CHECHENIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2521,7 +2264,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CHILEAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2530,7 +2272,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CHIMU_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2539,7 +2280,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CHORESM_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2548,7 +2288,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_CZECH_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2557,7 +2296,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_DACIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2566,7 +2304,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_DAYAK_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2575,7 +2312,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_DRAVIDIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2584,7 +2320,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ECUADORIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2593,7 +2328,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ESTONIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2602,7 +2336,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ETRUSCAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2611,7 +2344,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_FATIMID_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2620,7 +2352,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_FLEMISH_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2629,7 +2360,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_FUEGIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2638,7 +2368,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_FURAWI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2647,7 +2376,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_GALATIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2656,7 +2384,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_GAUCHO_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2665,7 +2392,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_GEORGIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2674,7 +2400,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_GHURID_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2683,7 +2408,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_GOKTURK_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2692,7 +2416,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_GOLDEN_HORDE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2701,7 +2424,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_GUAM_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2710,7 +2432,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_GUANCHES_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2719,7 +2440,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_GUARANI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2728,7 +2448,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_GUATEMALA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2737,7 +2456,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_GUYANA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2746,7 +2464,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_HELVETII_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2755,7 +2472,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_HEMUDU_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2764,7 +2480,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_HIMYARITE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2773,7 +2488,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_HONGKONG_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2782,7 +2496,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_HOPEWELL_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2791,7 +2504,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_HURRIANS_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2800,7 +2512,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_HYKSOSI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2809,7 +2520,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ILLYRIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2818,7 +2528,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ILOCANO_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2827,7 +2536,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_INDUS_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2836,7 +2544,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_IRANIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2845,7 +2552,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_IRAQUI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2854,7 +2560,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_JAVANESE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2863,7 +2568,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_JUTES_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2872,7 +2576,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_KENYAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2881,7 +2584,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_KHAZAK_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2890,7 +2592,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_KHAZARS_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2899,7 +2600,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_KHITAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2908,7 +2608,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_KILLKE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2917,7 +2616,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_KITARA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2926,7 +2624,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_KOGI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2935,7 +2632,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_KURDISH_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2944,7 +2640,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_KUSH_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2953,7 +2648,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_KUSHAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2962,7 +2656,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_KUWAIT_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2971,7 +2664,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_LATVIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2980,7 +2672,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_LA_PLATA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2989,7 +2680,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_LEBANON_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2998,7 +2688,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_LIBYAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3007,7 +2696,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_LITHUANIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3016,7 +2704,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_LONGOBARDI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3025,7 +2712,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_LULE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3034,7 +2720,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_LUNDA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3043,7 +2728,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_LUSITANI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3052,7 +2736,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MALAGASY_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3061,7 +2744,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MAMELUKS_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3070,7 +2752,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MANI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3079,7 +2760,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MEDES_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3088,7 +2768,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MELANESIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3097,7 +2776,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MICRONESIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3106,7 +2784,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MING_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3115,7 +2792,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MITTANNI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3124,7 +2800,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MOCOVI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3133,7 +2808,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MOHAWK_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3142,7 +2816,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MOLLO_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3151,7 +2824,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MUISCA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3160,7 +2832,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_MURRI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3169,7 +2840,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_NABATEANS_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3178,7 +2848,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_NAHUA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3187,7 +2856,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_NIGERIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3196,7 +2864,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_NOONGAR_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3205,7 +2872,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_NORMAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3214,7 +2880,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_NUMIDIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3223,7 +2888,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ODAWA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3232,7 +2896,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_OMAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3241,7 +2904,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_OPHIR_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3250,7 +2912,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ORANG_ASLI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3259,7 +2920,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_PAIUTE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3268,7 +2928,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_PALESTINIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3277,7 +2936,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_PANAMAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3286,7 +2944,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_PARAGUAYAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3295,7 +2952,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_PASHTUN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3304,7 +2960,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_PERUVIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3313,7 +2968,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_PHILIPINO_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3322,7 +2976,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_PHILISTINES_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3331,7 +2984,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_PILAGA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3340,7 +2992,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_POVERTY_POINT_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3349,7 +3000,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_POYA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3358,7 +3008,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_PUELCHE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3367,7 +3016,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_PUNTIC_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3376,7 +3024,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_QIN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3385,7 +3032,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_QING_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3394,7 +3040,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_QUEBEC_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3403,7 +3048,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_QUERANDI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3412,7 +3056,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_QULLA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3421,7 +3064,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_RED_OCHER_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 <!-- Wrong flag
@@ -3431,7 +3073,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SABBATEAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 -->
@@ -3441,7 +3082,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SAFAVIDS_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3450,7 +3090,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SAFFARID_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3459,7 +3098,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SAKA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3468,7 +3106,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SARMATIANS_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3477,7 +3114,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SELJUKS_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3486,7 +3122,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SEMANG_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3495,7 +3130,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SENEGALI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3504,7 +3138,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SENNAR_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3513,7 +3146,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SERBIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3522,7 +3154,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SICAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3531,7 +3162,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SICILIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3540,7 +3170,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SINTASHTA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3549,7 +3178,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SLOVENIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3558,7 +3186,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SUDANESE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3567,7 +3194,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SUNDANESE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3576,7 +3202,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SURINAM_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3585,7 +3210,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SWEDISH_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3594,7 +3218,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_TAGALOG_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3603,7 +3226,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_TAIRONA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3612,7 +3234,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_TAJIKS_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3621,7 +3242,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_TANG_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3630,7 +3250,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_TANZANIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3639,7 +3258,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_TASMANIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3648,7 +3266,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_TATARS_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3657,7 +3274,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_THRACIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3666,7 +3282,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_THREE_KINGDOMS_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3675,7 +3290,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_TIWI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3684,7 +3298,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_TOBA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3693,7 +3306,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_TOTONAC_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3702,7 +3314,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_TRANSOXANIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3711,7 +3322,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_TUCANO_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3720,7 +3330,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_TUNGUS_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3729,7 +3338,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_TUNISIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3738,7 +3346,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_TURKISH_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3747,7 +3354,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_UKRAINIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3756,7 +3362,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_URUGUAYAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3765,7 +3370,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_UZBEKS_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3774,7 +3378,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_VALDIVIA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3783,7 +3386,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_VANATU_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3792,7 +3394,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_VANDAL_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3801,7 +3402,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_SAUDI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3810,7 +3410,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_WALLACHIAN_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3819,7 +3418,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_WARAY_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3828,7 +3426,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_WARI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3837,7 +3434,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_WAYUU_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3846,7 +3442,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_XIA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3855,7 +3450,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_XIANBEI_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3864,7 +3458,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_YAGUA_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3873,7 +3466,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_YOLNGU_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3882,7 +3474,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ZANZIBAR_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3891,7 +3482,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ZENU_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -3900,7 +3490,6 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<bNoLimit>1</bNoLimit>
 			<DefaultBuilding>BUILDING_ZIMBABWE_EMBASSY</DefaultBuilding>
 		</BuildingClassInfo>
 	</BuildingClassInfos>

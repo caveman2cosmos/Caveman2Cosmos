@@ -360,7 +360,6 @@
 		<element type="iMaxTeamInstances" minOccurs="0"/>
 		<element type="iMaxPlayerInstances" minOccurs="0"/>
 		<element type="iExtraPlayerInstances" minOccurs="0"/>
-		<element type="bNoLimit" minOccurs="0"/>
 		<element type="DefaultBuilding" minOccurs="0"/>
 		<element type="VictoryThresholds" minOccurs="0"/>
 	</ElementType>
@@ -804,6 +803,7 @@
 	<ElementType name="BuildingInfo" content="eltOnly">
 		<element type="BuildingClass" minOccurs="0"/>
 		<element type="Type"/>
+		<element type="bNoLimit" minOccurs="0"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
