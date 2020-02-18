@@ -3338,7 +3338,7 @@ def getGreedUnit(CyPlayer, CyPlot):
 	iBestUnit = -1
 	for iUnitClass in xrange(GC.getNumUnitClassInfos()):
 		CvUnitClassInfo = GC.getUnitClassInfo(iUnitClass)
-		if CvUnitClassInfo.getMaxGlobalInstances() + 1 or CvUnitClassInfo.getMaxTeamInstances() + 1 or CvUnitClassInfo.getMaxPlayerInstances() + 1:
+		if CvUnitClassInfo.getMaxGlobalInstances() + 1 or CvUnitClassInfo.getMaxPlayerInstances() + 1:
 			continue
 		iUnit = CvUnitClassInfo.getDefaultUnitIndex()
 		CvUnitInfo = GC.getUnitInfo(iUnit)

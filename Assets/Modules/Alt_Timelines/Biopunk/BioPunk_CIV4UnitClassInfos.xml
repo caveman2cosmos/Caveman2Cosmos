@@ -9,10 +9,7 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_ORGANIC_INFANTRY</Type>
 			<Description>TXT_KEY_UNIT_ORGANIC_INFANTRY</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ORGANIC_INFANTRY</DefaultUnit>
 		</UnitClassInfo>
 	</UnitClassInfos>

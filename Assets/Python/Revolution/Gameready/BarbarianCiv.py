@@ -400,7 +400,7 @@ class BarbarianCiv:
 		iMobileVal = 0
 		for i in xrange(GC.getNumUnitClassInfos()):
 
-			if GC.getUnitClassInfo(i).getMaxGlobalInstances() > 0 or GC.getUnitClassInfo(i).getMaxPlayerInstances() > 0 or GC.getUnitClassInfo(i).getMaxTeamInstances() > 0:
+			if GC.getUnitClassInfo(i).getMaxGlobalInstances() > 0 or GC.getUnitClassInfo(i).getMaxPlayerInstances() > 0:
 				continue
 			iUnit = GC.getUnitClassInfo(i).getDefaultUnitIndex()
 			if iUnit < 0 or not CyPlayer.canTrain(iUnit, False, False): continue

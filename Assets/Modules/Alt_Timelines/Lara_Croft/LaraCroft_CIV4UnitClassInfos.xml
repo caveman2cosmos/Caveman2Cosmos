@@ -8,9 +8,6 @@
 			<Type>UNITCLASS_LARA_CROFT</Type>
 			<Description>TXT_KEY_UNIT_LARA_CROFT</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_LARA_CROFT</DefaultUnit>
 		</UnitClassInfo>
 	</UnitClassInfos>

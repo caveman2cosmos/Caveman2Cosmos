@@ -7968,7 +7968,7 @@ namespace {
 		return unitInfo.hasUnitCombat(eHero)
 			|| GC.getUnitClassInfo(unitClassType).getMaxGlobalInstances() > 0
 			|| GC.getUnitClassInfo(unitClassType).getMaxPlayerInstances() > 0
-			|| GC.getUnitClassInfo(unitClassType).getMaxTeamInstances() > 0;
+			/*|| unitInfo.getMaxTeamInstances() > 0*/;
 	}
 
 	bool isValidBarbarianSpawnUnit(const CvArea* area, const CvUnitInfo& unitInfo, const UnitTypes unitType, const UnitClassTypes unitClass)

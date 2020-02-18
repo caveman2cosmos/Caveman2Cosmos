@@ -221,7 +221,6 @@
 	</ElementType>
 	<ElementType name="Name" content="textOnly"/>
 	<ElementType name="iMaxGlobalInstances" content="textOnly" dt:type="int"/>
-	<ElementType name="iMaxTeamInstances" content="textOnly" dt:type="int"/>
 	<ElementType name="iMaxPlayerInstances" content="textOnly" dt:type="int"/>
 	<!--TB's Tags begin-->
 	<!--Textual References -->
@@ -1305,7 +1304,6 @@
 <!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="iMaxGlobalInstances" minOccurs="0"/>
-		<element type="iMaxTeamInstances" minOccurs="0"/>
 		<element type="iMaxPlayerInstances" minOccurs="0"/>
 		<!--TB Unlimited Mod begin-->
 		<element type="bUnlimitedException" minOccurs="0"/>

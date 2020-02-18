@@ -10,10 +10,7 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_BISON_RIDER</Type>
 			<Description>TXT_KEY_UNIT_BISON_RIDER</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BISON_RIDER</DefaultUnit>
 		</UnitClassInfo>
 	</UnitClassInfos>

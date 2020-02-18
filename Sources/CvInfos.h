@@ -3577,7 +3577,6 @@ public:
 	virtual ~CvUnitClassInfo();
 
 	int getMaxGlobalInstances() const;				// Exposed to Python
-	int getMaxTeamInstances() const;				// Exposed to Python
 	int getMaxPlayerInstances() const;				// Exposed to Python
 	//TB Unlimited National Units Mod
 	bool isUnlimitedException() const;				// Exposed to Python
@@ -3603,7 +3602,6 @@ public:
 protected:
 
 	int m_iMaxGlobalInstances;
-	int m_iMaxTeamInstances;
 	int m_iMaxPlayerInstances;
 	//TB Unlimited National Units Mod
 	bool m_bUnlimitedException;
@@ -7175,11 +7173,6 @@ public:
 	void copyNonDefaults(CvProjectInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
 	void getCheckSum(unsigned int& iSum);
 
-/************************************************************************************************/
-/* Afforess					  Start		 07/30/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	int getWorldHappiness() const;
 	int getGlobalHappiness() const;
 	int getWorldHealth() const;
@@ -7205,9 +7198,6 @@ protected:
 	int* m_piCommerceModifier;
 	std::vector<CvString> m_aszProjectsNeededforPass3;
 	std::vector<int> m_aiProjectsNeededforPass3;
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------

@@ -57,7 +57,6 @@ bool cyIsTechRequiredForUnit(int /*TechTypes*/ eTech, int /*UnitTypes*/ eUnit);
 bool cyIsTechRequiredForBuilding(int /*TechTypes*/ eTech, int /*BuildingTypes*/ eBuilding);
 bool cyIsTechRequiredForProject(int /*TechTypes*/ eTech, int /*ProjectTypes*/ eProject);
 bool cyIsWorldUnitClass(int /*UnitClassTypes*/ eUnitClass);
-bool cyIsTeamUnitClass(int /*UnitClassTypes*/ eUnitClass);
 bool cyIsNationalUnitClass(int /*UnitClassTypes*/ eUnitClass);
 bool cyIsLimitedUnitClass(int /*UnitClassTypes*/ eUnitClass);
 bool cyIsWorldWonderClass(int /*BuildingClassTypes*/ eBuildingClass);

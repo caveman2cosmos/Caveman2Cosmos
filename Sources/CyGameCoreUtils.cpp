@@ -199,11 +199,6 @@ bool cyIsWorldUnitClass(int /*UnitClassTypes*/ eUnitClass)
 	return isWorldUnitClass((UnitClassTypes)eUnitClass);
 }
 
-bool cyIsTeamUnitClass(int /*UnitClassTypes*/ eUnitClass)
-{
-	return isTeamUnitClass((UnitClassTypes)eUnitClass);
-}
-
 bool cyIsNationalUnitClass(int /*UnitClassTypes*/ eUnitClass)
 {
 	return isNationalUnitClass((UnitClassTypes)eUnitClass);

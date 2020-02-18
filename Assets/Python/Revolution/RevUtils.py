@@ -370,7 +370,7 @@ def getHandoverUnitTypes(city, pPlayer, compPlayer=None):
 		for unitClass in xrange(GC.getNumUnitClassInfos()) :
 			cityUnitType = GC.getCivilizationInfo(city.getCivilizationType()).getCivilizationUnits(unitClass)
 
-			if GC.getUnitClassInfo(unitClass).getMaxGlobalInstances() > 0 or GC.getUnitClassInfo(unitClass).getMaxPlayerInstances() > 0 or GC.getUnitClassInfo(unitClass).getMaxTeamInstances() > 0:
+			if GC.getUnitClassInfo(unitClass).getMaxGlobalInstances() > 0 or GC.getUnitClassInfo(unitClass).getMaxPlayerInstances() > 0:
 				continue
 
 			if pPlayer.isNPC():
@@ -456,16 +456,16 @@ def getUprisingUnitTypes( pCity, pRevPlayer, isCheckEnemy, bSilent = False ) :
 			ownerUnits = ownerPy.getUnitsOfType( ownerUnitType )
 			unitInfo = GC.getUnitInfo(ownerUnitType)
 
-			if( GC.getUnitClassInfo(unitClass).getMaxGlobalInstances() > 0 or GC.getUnitClassInfo(unitClass).getMaxPlayerInstances() > 0 or GC.getUnitClassInfo(unitClass).getMaxTeamInstances() > 0 ) :
+			if GC.getUnitClassInfo(unitClass).getMaxGlobalInstances() > 0 or GC.getUnitClassInfo(unitClass).getMaxPlayerInstances() > 0:
 				continue
 
-			if( unitInfo == None ) :
+			if unitInfo == None:
 				continue
 
-			if( not unitInfo.getDomainType() == DomainTypes.DOMAIN_LAND ) :
+			if not unitInfo.getDomainType() == DomainTypes.DOMAIN_LAND:
 				continue
 
-			if( GC.getUnitClassInfo(unitClass).getMaxGlobalInstances() > 0 or GC.getUnitClassInfo(unitClass).getMaxPlayerInstances() > 0 or GC.getUnitClassInfo(unitClass).getMaxTeamInstances() > 0 ) :
+			if GC.getUnitClassInfo(unitClass).getMaxGlobalInstances() > 0 or GC.getUnitClassInfo(unitClass).getMaxPlayerInstances() > 0:
 				continue
 
 			# First check what units there are nearby

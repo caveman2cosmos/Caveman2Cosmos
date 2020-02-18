@@ -21913,6 +21913,8 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 			}
 		}
 
+/* iMaxTeamInstances was unused in CvUnitClassInfo and removed as part of us shedding the unitclass object, maybe we want to add it back in for CvUnitInfo?
+
 		if (isTeamUnitClass(eUnitClass))
 		{
 			//TB Unlimited National Units Mod
@@ -21930,6 +21932,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 			}
 			//TB Unlimied National Units End
 		}
+*/
 
 		if (isNationalUnitClass(eUnitClass))
 		{

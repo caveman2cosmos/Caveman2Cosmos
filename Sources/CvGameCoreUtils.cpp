@@ -574,11 +574,6 @@ bool isWorldUnitClass(UnitClassTypes eUnitClass)
 	return (GC.getUnitClassInfo(eUnitClass).getMaxGlobalInstances() != -1);
 }
 
-bool isTeamUnitClass(UnitClassTypes eUnitClass)
-{
-	return (GC.getUnitClassInfo(eUnitClass).getMaxTeamInstances() != -1);
-}
-
 bool isNationalUnitClass(UnitClassTypes eUnitClass)
 {
 	return (GC.getUnitClassInfo(eUnitClass).getMaxPlayerInstances() != -1);
@@ -586,7 +581,7 @@ bool isNationalUnitClass(UnitClassTypes eUnitClass)
 
 bool isLimitedUnitClass(UnitClassTypes eUnitClass)
 {
-	return (isWorldUnitClass(eUnitClass) || isTeamUnitClass(eUnitClass) || isNationalUnitClass(eUnitClass));
+	return (isWorldUnitClass(eUnitClass) || isNationalUnitClass(eUnitClass));
 }
 
 bool isWorldWonderClass(BuildingClassTypes eBuildingClass)

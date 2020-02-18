@@ -13,7 +13,6 @@
 			<TechPrereq>NONE</TechPrereq>
 			<TechPrereqAnyone>TECH_FISSION</TechPrereqAnyone>
 			<bValid>1</bValid>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<Button>Art/Interface/Buttons/Buildings/BombShelters.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
@@ -22,7 +21,6 @@
 			<ObsoleteTech>NONE</ObsoleteTech>
 			<TechPrereq>TECH_PRIESTHOOD</TechPrereq>
 			<TechPrereqAnyone>NONE</TechPrereqAnyone>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<bValid>1</bValid>
 			<Button>Art/Interface/Buttons/Buildings/Temple.dds</Button>
 		</SpecialBuildingInfo>
@@ -41,7 +39,6 @@
 			<ObsoleteTech>NONE</ObsoleteTech>
 			<TechPrereq>NONE</TechPrereq>
 			<TechPrereqAnyone>NONE</TechPrereqAnyone>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<bValid>1</bValid>
 			<Button>Art/Interface/Buttons/Buildings/Cathedral.dds</Button>
 		</SpecialBuildingInfo>
@@ -60,7 +57,6 @@
 			<ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech>
 			<TechPrereq>TECH_MEDITATION</TechPrereq>
 			<TechPrereqAnyone>NONE</TechPrereqAnyone>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<bValid>1</bValid>
 			<Button>Art/Interface/Buttons/Buildings/Monastery_Hindu.dds</Button>
 		</SpecialBuildingInfo>
@@ -70,7 +66,6 @@
 			<ObsoleteTech>NONE</ObsoleteTech>
 			<TechPrereq>NONE</TechPrereq>
 			<TechPrereqAnyone>NONE</TechPrereqAnyone>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<bValid>1</bValid>
 			<Button>Art/Interface/Buttons/Buildings/Monastery_Hindu.dds</Button>
 		</SpecialBuildingInfo>
@@ -134,7 +129,6 @@
 			<ObsoleteTech>NONE</ObsoleteTech>
 			<TechPrereq>NONE</TechPrereq>
 			<TechPrereqAnyone>NONE</TechPrereqAnyone>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<bValid>1</bValid>
 			<Button>Art/Interface/Buttons/Buildings/BeachResort.dds</Button>
 		</SpecialBuildingInfo>
