@@ -3308,21 +3308,15 @@ bool CvSelectionGroup::isBusy() const
 
 bool CvSelectionGroup::isCargoBusy() const
 {
-	FAssert(getNumUnits() > 0);
-
 	const CvPlot* pPlot = plot();
 	for (unit_iterator unitItr1 = beginUnits(); unitItr1 != endUnits(); ++unitItr1)
 	{
 		const CvUnit* pLoopUnit1 = *unitItr1;
-		FAssert(pLoopUnit1 != NULL);
-
 		if (pLoopUnit1->hasCargo())
 		{
 			for (CvPlot::unit_iterator unitItr2 = pPlot->beginUnits(); unitItr2 != pPlot->endUnits(); ++unitItr2)
 			{
 				const CvUnit* pLoopUnit2 = *unitItr2;
-				FAssert(pLoopUnit2 != NULL);
-
 				if (pLoopUnit2->getTransportUnit() == pLoopUnit1 && pLoopUnit2->getGroup()->isBusy())
 				{
 					return true;
@@ -3373,8 +3367,6 @@ bool CvSelectionGroup::isWaiting() const
 
 bool CvSelectionGroup::isFull() const
 {
-	FAssert(getNumUnits() > 0);
-
 	// do two passes, the first pass, we ignore units with speical cargo
 	int iSpecialCargoCount = 0;
 	int iCargoCount = 0;
@@ -3962,8 +3954,6 @@ void CvSelectionGroup::unloadAll()
 
 bool CvSelectionGroup::alwaysInvisible() const
 {
-	FAssert(getNumUnits() > 0);
-
 	return algo::all_of(units(), CvUnit::fn::alwaysInvisible());
 }
 
@@ -3976,12 +3966,7 @@ bool CvSelectionGroup::isInvisible(TeamTypes eTeam) const
 
 int CvSelectionGroup::countNumUnitAIType(UnitAITypes eUnitAI) const
 {
-	FAssertMsg(headUnitNode() != NULL, "headUnitNode() is not expected to be equal with NULL");
-
-	return NO_UNITAI == eUnitAI
-		? getNumUnits()
-		: algo::count_if(units(), CvUnit::fn::AI_getUnitAIType() == eUnitAI
-	);
+	return NO_UNITAI == eUnitAI ? getNumUnits() : algo::count_if(units(), CvUnit::fn::AI_getUnitAIType() == eUnitAI);
 }
 
 
@@ -5058,8 +5043,6 @@ void CvSelectionGroup::setRemoteTransportUnit(CvUnit* pTransportUnit)
 		// loop over all the units, unloading them
 		for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
 		{			
-			FAssert((*unitItr) != NULL);
-
 			(*unitItr)->setTransportUnit(NULL);
 		}
 	}
