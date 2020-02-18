@@ -3205,20 +3205,20 @@
 		<German>[SPACE](Gruppenwunder "%s1_Special": %d2_Num übrig)</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_ABATIS</Tag>
-		<English>Build [LINK=IMPROVEMENT_ABATIS]Abatis[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_ABATIS]Abattis[\LINK]</French>
-		<Italian>Costruisci un'[LINK=IMPROVEMENT_ABATIS]abbattuta[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_ABATIS]Abatis con cerco espinoso[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_ABATIS]Zasieki[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_ABATIS_THORN_HEDGE</Tag>
+		<English>Build [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Abatis[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Abattis[\LINK]</French>
+		<Italian>Costruisci un'[LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]abbattuta[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Abatis con cerco espinoso[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Zasieki[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_ABATIS_G</Tag>
-		<English>Build [LINK=IMPROVEMENT_ABATIS]Abatis[\LINK] (Gatherer)</English>
-		<French>Construire un [LINK=IMPROVEMENT_ABATIS]Abattis[\LINK]</French>
-		<Italian>Costruisci un'[LINK=IMPROVEMENT_ABATIS]abbattuta[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_ABATIS]Abatis con cerco espinoso[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_ABATIS]Zasieki[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_ABATIS_THORN_HEDGE_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Abatis[\LINK] (Gatherer)</English>
+		<French>Construire un [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Abattis[\LINK]</French>
+		<Italian>Costruisci un'[LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]abbattuta[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Abatis con cerco espinoso[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Zasieki[\LINK]</Polish>
 	</TEXT>
 	<!-- Unloaded Module
 	<TEXT>
@@ -3259,7 +3259,7 @@
 		<Polish>Złam [LINK=FEATURE_ICE]Lód[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_BREAK_ICE_K</Tag>
+		<Tag>TXT_KEY_BUILD_BREAK_ICE_KILL</Tag>
 		<English>Break Ice (Consumed)</English>
 		<French>Briser la Banquise (Détruit)</French>
 		<German>[LINK=FEATURE_ICE]Eis[\LINK]-Brechen (Consumed)</German>
@@ -3268,13 +3268,13 @@
 		<Polish>Złam [LINK=FEATURE_ICE]Lód[\LINK] (Consumed)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_BUNKER</Tag>
-		<English>Build [LINK=IMPROVEMENT_BUNKER]Command Bunker[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_BUNKER]Command Bunker[\LINK]</French>
-		<German>Errichte einen [LINK=IMPROVEMENT_BUNKER]Command Bunker[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_BUNKER]Command Bunker[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_BUNKER]Refugio de mando[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_BUNKER]Bunkier[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_COMMAND_BUNKER</Tag>
+		<English>Build [LINK=IMPROVEMENT_COMMAND_BUNKER]Command Bunker[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_COMMAND_BUNKER]Command Bunker[\LINK]</French>
+		<German>Errichte einen [LINK=IMPROVEMENT_COMMAND_BUNKER]Command Bunker[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_COMMAND_BUNKER]Command Bunker[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_COMMAND_BUNKER]Refugio de mando[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_COMMAND_BUNKER]Bunkier[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BURN_VEGETATION</Tag>
@@ -3286,13 +3286,13 @@
 		<Polish>Spal Roślinność</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_CAMP</Tag>
-		<English>Build [LINK=IMPROVEMENT_CAMP]Hunting Camp[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_CAMP]Camp de Chasse[\LINK]</French>
-		<German>[COLOR_HIGHLIGHT_TEXT]Errichtung eines [LINK=IMPROVEMENT_CAMP]Jagdlagers[\LINK][COLOR_REVERT]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_CAMP]Campo di Caccia[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_CAMP]Campamento de caza[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_CAMP]Obóz Łowców[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_HUNTING_CAMP</Tag>
+		<English>Build [LINK=IMPROVEMENT_HUNTING_CAMP]Hunting Camp[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_HUNTING_CAMP]Camp de Chasse[\LINK]</French>
+		<German>[COLOR_HIGHLIGHT_TEXT]Errichtung eines [LINK=IMPROVEMENT_HUNTING_CAMP]Jagdlagers[\LINK][COLOR_REVERT]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_HUNTING_CAMP]Campo di Caccia[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_HUNTING_CAMP]Campamento de caza[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_HUNTING_CAMP]Obóz Łowców[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_COLONY_EXTRACTION_FACILITY</Tag>
@@ -3358,7 +3358,7 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_DESERT_CAMP]Pustynny Obóz[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_DESERT_CAMP_K</Tag>
+		<Tag>TXT_KEY_BUILD_DESERT_CAMP_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_DESERT_CAMP]Desert Camp[\LINK] (Consumed)</English>
 		<French>Construire un [LINK=IMPROVEMENT_DESERT_CAMP]Camp de Desert[\LINK] (Consommé)</French>
 		<German>Errichte [LINK=IMPROVEMENT_DESERT_CAMP]Wuste feldlager[\LINK] (Consumed)</German>
@@ -3367,13 +3367,13 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_DESERT_CAMP]Pustynny Obóz[\LINK] (Consumed)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_EXPLORETEMPLE</Tag>
-		<English>[LINK=IMPROVEMENT_EXPLORETEMPLE]Examine Ruins[\LINK]</English>
-		<French>[LINK=IMPROVEMENT_EXPLORETEMPLE]Ruines examne[\LINK]</French>
-		<German>[LINK=IMPROVEMENT_EXPLORETEMPLE]Examne Ruinen[\LINK]</German>
-		<Italian>[LINK=IMPROVEMENT_EXPLORETEMPLE]Esamina le rovine[\LINK]</Italian>
-		<Spanish>[LINK=IMPROVEMENT_EXPLORETEMPLE]Explorar ruinas[\LINK]</Spanish>
-		<Polish>Zbadaj [LINK=IMPROVEMENT_EXPLORETEMPLE]Starożytną Świątynię[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_ARCHEOLOGICAL_SITE</Tag>
+		<English>Create [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Archeological Site[\LINK]</English>
+		<French>[LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Ruines examne[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Examne Ruinen[\LINK]</German>
+		<Italian>[LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Esamina le rovine[\LINK]</Italian>
+		<Spanish>[LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Explorar ruinas[\LINK]</Spanish>
+		<Polish>Zbadaj [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Starożytną Świątynię[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_EXTRACTION_FACILITY</Tag>
@@ -3386,21 +3386,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FACTORY</Tag>
-		<English>Build [LINK=IMPROVEMENT_3FACTORY]Factory[\LINK]</English>
-		<French>Construire une [LINK=IMPROVEMENT_3FACTORY]Usine[\LINK]</French>
-		<German>Errichte [LINK=IMPROVEMENT_3FACTORY]Fabrik[\LINK]</German>
-		<Italian>Costruisci una [LINK=IMPROVEMENT_3FACTORY]Fabbrica[\LINK]</Italian>
-		<Spanish>Construir una [LINK=IMPROVEMENT_3FACTORY]Fábrica[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_3FACTORY]Fabrykę[\LINK]</Polish>
+		<English>Build [LINK=IMPROVEMENT_FACTORY]Factory[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_FACTORY]Usine[\LINK]</French>
+		<German>Errichte [LINK=IMPROVEMENT_FACTORY]Fabrik[\LINK]</German>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_FACTORY]Fabbrica[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_FACTORY]Fábrica[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_FACTORY]Fabrykę[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FACTORY_COLD</Tag>
-		<English>Build [LINK=IMPROVEMENT_3FACTORY_2]Factory[\LINK] (Cold Climate)</English>
-		<French>Construire une [LINK=IMPROVEMENT_3FACTORY_2]Usine (Climat froid)[\LINK]</French>
-		<German>Errichte [LINK=IMPROVEMENT_3FACTORY]Fabrik (Cold Climate)[\LINK]</German>
-		<Italian>Costruisci una [LINK=IMPROVEMENT_3FACTORY]Fabbrica (Cold Climate)[\LINK]</Italian>
-		<Spanish>Construir una [LINK=IMPROVEMENT_3FACTORY]Fábrica (Cold Climate)[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_3FACTORY]Fabrykę (Cold Climate)[\LINK]</Polish>
+		<English>Build [LINK=IMPROVEMENT_FACTORY_COLD_CLIMATE]Factory[\LINK] (Cold Climate)</English>
+		<French>Construire une [LINK=IMPROVEMENT_FACTORY_COLD_CLIMATE]Usine (Climat froid)[\LINK]</French>
+		<German>Errichte [LINK=IMPROVEMENT_FACTORY]Fabrik (Cold Climate)[\LINK]</German>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_FACTORY]Fabbrica (Cold Climate)[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_FACTORY]Fábrica (Cold Climate)[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_FACTORY]Fabrykę (Cold Climate)[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FARM</Tag>
@@ -3412,13 +3412,13 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_FARM]Farmę[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_FARMSCRAPER</Tag>
-		<English>Build [LINK=IMPROVEMENT_FARMSCRAPER]Vertical Farm[\LINK]</English>
-		<French>Construire une [LINK=IMPROVEMENT_FARMSCRAPER]Ferme verticale[\LINK]</French>
-		<German>Bauen ein [LINK=IMPROVEMENT_FARMSCRAPER]Vertikale Farm[\LINK]</German>
-		<Italian>Costruisci una [LINK=IMPROVEMENT_FARMSCRAPER]Fattoria verticale[\LINK]</Italian>
-		<Spanish>Construir una [LINK=IMPROVEMENT_FARMSCRAPER]Granja vertical[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_FARMSCRAPER]Farmę Wertykalną[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_VERTICAL_FARM</Tag>
+		<English>Build [LINK=IMPROVEMENT_VERTICAL_FARM]Vertical Farm[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_VERTICAL_FARM]Ferme verticale[\LINK]</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_VERTICAL_FARM]Vertikale Farm[\LINK]</German>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_VERTICAL_FARM]Fattoria verticale[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_VERTICAL_FARM]Granja vertical[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_VERTICAL_FARM]Farmę Wertykalną[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FORTIFIED_CAVE</Tag>
@@ -3429,7 +3429,7 @@
 		<Polish>Zbadaj [LINK=IMPROVEMENT_FORTIFIED_CAVE]Ufortyfikowaną Jaskinię[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_FORTIFIED_CAVE_G</Tag>
+		<Tag>TXT_KEY_BUILD_FORTIFIED_CAVE_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_FORTIFIED_CAVE]Fortified Cave[\LINK] (Gatherer)</English>
 		<French>Construire une [LINK=IMPROVEMENT_FORTIFIED_CAVE]Caverne fortifiée[\LINK]</French>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_FORTIFIED_CAVE]grotta fortificata[\LINK]</Italian>
@@ -3437,48 +3437,48 @@
 		<Polish>Zbadaj [LINK=IMPROVEMENT_FORTIFIED_CAVE]Ufortyfikowaną Jaskinię[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_FORTIFIED_CAVE_CACHE</Tag>
-		<English>Build [LINK=IMPROVEMENT_FORTIFIED_CAVE_CACHE]Fortified Cave with Cache[\LINK]</English>
-		<French>Construire une [LINK=IMPROVEMENT_FORTIFIED_CAVE_CACHE]Caverne fortifiée, avec cache[\LINK]</French>
-		<Italian>Costruisci una [LINK=IMPROVEMENT_FORTIFIED_CAVE_CACHE]grotta fortificata con nascondigli[\LINK]</Italian>
-		<Spanish>Construir una [LINK=IMPROVEMENT_FORTIFIED_CAVE_CACHE]Caverna fortificada con escondrijo[\LINK]</Spanish>
-		<Polish>Zbadaj [LINK=IMPROVEMENT_FORTIFIED_CAVE_CACHE]Ufortyfikowaną Jaskinię ze Schowkiem[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_FORTIFIED_CAVE_WITH_CACHE</Tag>
+		<English>Build [LINK=IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE]Fortified Cave with Cache[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE]Caverne fortifiée, avec cache[\LINK]</French>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE]grotta fortificata con nascondigli[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE]Caverna fortificada con escondrijo[\LINK]</Spanish>
+		<Polish>Zbadaj [LINK=IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE]Ufortyfikowaną Jaskinię ze Schowkiem[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_FOSSIL_DIGSITE</Tag>
-		<English>[LINK=IMPROVEMENT_FOSSIL_DIGSITE]Dig Fossils[\LINK]</English>
-		<French>[LINK=IMPROVEMENT_FOSSIL_DIGSITE]Rechercher des Fossiles[\LINK]</French>
-		<German>[LINK=IMPROVEMENT_FOSSIL_DIGSITE]Fossilien graben[\LINK]</German>
-		<Italian>Costruisci uno [LINK=IMPROVEMENT_FOSSIL_DIGSITE]scavo archeologico[\LINK]</Italian>
-		<Spanish>[LINK=IMPROVEMENT_FOSSIL_DIGSITE]Investigar fósiles[\LINK]</Spanish>
-		<Polish>[LINK=IMPROVEMENT_FOSSIL_DIGSITE]Kop Skamieniałości[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_FOSSIL_DIG_SITE</Tag>
+		<English>[LINK=IMPROVEMENT_FOSSIL_DIG_SITE]Dig Fossils[\LINK]</English>
+		<French>[LINK=IMPROVEMENT_FOSSIL_DIG_SITE]Rechercher des Fossiles[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_FOSSIL_DIG_SITE]Fossilien graben[\LINK]</German>
+		<Italian>Costruisci uno [LINK=IMPROVEMENT_FOSSIL_DIG_SITE]scavo archeologico[\LINK]</Italian>
+		<Spanish>[LINK=IMPROVEMENT_FOSSIL_DIG_SITE]Investigar fósiles[\LINK]</Spanish>
+		<Polish>[LINK=IMPROVEMENT_FOSSIL_DIG_SITE]Kop Skamieniałości[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_FRUIT_GATHERER</Tag>
-		<English>Build [LINK=IMPROVEMENT_FRUIT_GATHERER]Fruit Gathering Camp[\LINK]</English>
-		<French>Installer un [LINK=IMPROVEMENT_FRUIT_GATHERER]Camp de Récolte de Fruits[\LINK]</French>
-		<German>[LINK=IMPROVEMENT_FRUIT_GATHERER]Früchte sammeln[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_FRUIT_GATHERER]campo di raccolta di frutti[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_FRUIT_GATHERER]Campo de cultivo de frutas[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_FRUIT_GATHERER]Obóz Zbieraczy Owoców[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_FRUIT_GATHERING_CAMP</Tag>
+		<English>Build [LINK=IMPROVEMENT_FRUIT_GATHERING_CAMP]Fruit Gathering Camp[\LINK]</English>
+		<French>Installer un [LINK=IMPROVEMENT_FRUIT_GATHERING_CAMP]Camp de Récolte de Fruits[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_FRUIT_GATHERING_CAMP]Früchte sammeln[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_FRUIT_GATHERING_CAMP]campo di raccolta di frutti[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_FRUIT_GATHERING_CAMP]Campo de cultivo de frutas[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_FRUIT_GATHERING_CAMP]Obóz Zbieraczy Owoców[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_FRUIT_PICKER</Tag>
-		<English>Build [LINK=IMPROVEMENT_FRUIT_PICKER]Fruit Picking Camp[\LINK]</English>
-		<French>Mettre en place une [LINK=IMPROVEMENT_FRUIT_PICKER]]pépinière d'Arbres[\LINK]</French>
-		<German>[LINK=IMPROVEMENT_FRUIT_PICKER]Früchte pflücken[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_FRUIT_PICKER]]Vivaio di alberi[\LINK]</Italian>
-		<Spanish>Crear una [LINK=IMPROVEMENT_FRUIT_PICKER]]Zona de reforestación[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_FRUIT_PICKER]Zbieracz owocow[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_FRUIT_PICKING_CAMP</Tag>
+		<English>Build [LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]Fruit Picking Camp[\LINK]</English>
+		<French>Mettre en place une [LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]]pépinière d'Arbres[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]Früchte pflücken[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]]Vivaio di alberi[\LINK]</Italian>
+		<Spanish>Crear una [LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]]Zona de reforestación[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]Zbieracz owocow[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_FUTURE_BUNKER</Tag>
-		<English>Build [LINK=IMPROVEMENT_FUTURE_BUNKER]Command Center[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_FUTURE_BUNKER]Centre de Commandement[\LINK]</French>
-		<German>Errichte ein [LINK=IMPROVEMENT_FUTURE_BUNKER]Kommandozentrum[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_FUTURE_BUNKER]Centro di comando[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_FUTURE_BUNKER]Centro de mando[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_FUTURE_BUNKER]Bunkier Przyszłości[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_COMMAND_CENTER</Tag>
+		<English>Build [LINK=IMPROVEMENT_COMMAND_CENTER]Command Center[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_COMMAND_CENTER]Centre de Commandement[\LINK]</French>
+		<German>Errichte ein [LINK=IMPROVEMENT_COMMAND_CENTER]Kommandozentrum[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_COMMAND_CENTER]Centro di comando[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_COMMAND_CENTER]Centro de mando[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_COMMAND_CENTER]Bunkier Przyszłości[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_GEOGLYPH</Tag>
@@ -3489,49 +3489,49 @@
 		<Polish>Stwórz [LINK=IMPROVEMENT_GEOGLYPH]Geoglif[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_GEOTHERMAL_BOREHOLE</Tag>
-		<English>Build [LINK=IMPROVEMENT_GEOTHERMAL_BOREHOLE]Geothermal Factory[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_GEOTHERMAL_BOREHOLE]Forage Géothermique[\LINK]</French>
-		<German>Errichte eine [LINK=IMPROVEMENT_GEOTHERMAL_BOREHOLE]Geothermalfabrik[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_GEOTHERMAL_BOREHOLE]Impianto geotermico[\LINK]</Italian>
-		<Spanish>Construir una [LINK=IMPROVEMENT_GEOTHERMAL_BOREHOLE]Planta geotérmica[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_GEOTHERMAL_BOREHOLE]Zakład Geotermalny[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_GEOTHERMAL_FACTORY</Tag>
+		<English>Build [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Geothermal Factory[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Forage Géothermique[\LINK]</French>
+		<German>Errichte eine [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Geothermalfabrik[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Impianto geotermico[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Planta geotérmica[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Zakład Geotermalny[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_GRAIN_GATHERER</Tag>
-		<English>[LINK=IMPROVEMENT_GRAIN_GATHERER]Gather Grains[\LINK]</English>
-		<French>[LINK=IMPROVEMENT_GRAIN_GATHERER]Récolter les céréales[\LINK]</French>
-		<German>[LINK=IMPROVEMENT_GRAIN_GATHERER]Körner sammeln[\LINK]</German>
-		<Spanish>[LINK=IMPROVEMENT_GRAIN_GATHERER]Recolectar cereales[\LINK]</Spanish>
-		<Polish>[LINK=IMPROVEMENT_GRAIN_GATHERER]Zbieraj Plony[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_SEED_CAMP</Tag>
+		<English>[LINK=IMPROVEMENT_SEED_CAMP]Gather Seeds[\LINK]</English>
+		<French>[LINK=IMPROVEMENT_SEED_CAMP]Récolter les céréales[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_SEED_CAMP]Körner sammeln[\LINK]</German>
+		<Spanish>[LINK=IMPROVEMENT_SEED_CAMP]Recolectar cereales[\LINK]</Spanish>
+		<Polish>[LINK=IMPROVEMENT_SEED_CAMP]Zbieraj Plony[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_GRAIN_GATHERER_K</Tag>
-		<English>[LINK=IMPROVEMENT_GRAIN_GATHERER]Gather Grains[\LINK] (Consumed)</English>
-		<French>[LINK=IMPROVEMENT_GRAIN_GATHERER]Récolter les céréales[\LINK] (Détruit)</French>
-		<German>[LINK=IMPROVEMENT_GRAIN_GATHERER]Körner sammeln[\LINK] (Consumed)</German>
-		<Spanish>[LINK=IMPROVEMENT_GRAIN_GATHERER]Recolectar cereales[\LINK] (Consumed)</Spanish>
-		<Polish>[LINK=IMPROVEMENT_GRAIN_GATHERER]Zbieraj Plony[\LINK] (Consumed)</Polish>
+		<Tag>TXT_KEY_BUILD_SEED_CAMP_KILL</Tag>
+		<English>[LINK=IMPROVEMENT_SEED_CAMP]Gather Seeds[\LINK] (Consumed)</English>
+		<French>[LINK=IMPROVEMENT_SEED_CAMP]Récolter les céréales[\LINK] (Détruit)</French>
+		<German>[LINK=IMPROVEMENT_SEED_CAMP]Körner sammeln[\LINK] (Consumed)</German>
+		<Spanish>[LINK=IMPROVEMENT_SEED_CAMP]Recolectar cereales[\LINK] (Consumed)</Spanish>
+		<Polish>[LINK=IMPROVEMENT_SEED_CAMP]Zbieraj Plony[\LINK] (Consumed)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_GRAPE_GATHERER</Tag>
-		<English>Build [LINK=IMPROVEMENT_GRAPE_GATHERER]Grape Gathering Camp[\LINK]</English>
-		<French>Installer un [LINK=IMPROVEMENT_GRAPE_GATHERER]camp de récolte de Raisins[\LINK]</French>
-		<German>[LINK=IMPROVEMENT_GRAPE_GATHERER]Trauben sammeln[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_GRAPE_GATHERER]campo di raccolta di uva[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_GRAPE_GATHERER]Campo de cultivo de uvas[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_GRAPE_GATHERER]Szałas Zbieraczy Winogron[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_GRAPE_GATHERING_CAMP</Tag>
+		<English>Build [LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Grape Gathering Camp[\LINK]</English>
+		<French>Installer un [LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]camp de récolte de Raisins[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Trauben sammeln[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]campo di raccolta di uva[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Campo de cultivo de uvas[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Szałas Zbieraczy Winogron[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_GRAPE_PICKER</Tag>
-		<English>Build [LINK=IMPROVEMENT_GRAPE_PICKER]Grape Picking Camp[\LINK]</English>
-		<French>Construire un  [LINK=IMPROVEMENT_GRAPE_PICKER]Camp de vendanges[\LINK]</French>
-		<German>[LINK=IMPROVEMENT_GRAPE_GATHERER]Trauben lesen[\LINK]</German>
+		<Tag>TXT_KEY_BUILD_GRAPE_PICKING_CAMP</Tag>
+		<English>Build [LINK=IMPROVEMENT_GRAPE_PICKING_CAMP]Grape Picking Camp[\LINK]</English>
+		<French>Construire un  [LINK=IMPROVEMENT_GRAPE_PICKING_CAMP]Camp de vendanges[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Trauben lesen[\LINK]</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_GRAVTUBE</Tag>
-		<English>Build [LINK=ROUTE_GRAVTUBE]Maglev[\LINK]</English>
-		<French>Construire un [LINK=ROUTE_GRAVTUBE]Maglev[\LINK]</French>
+		<Tag>TXT_KEY_BUILD_MAGLEV</Tag>
+		<English>Build [LINK=ROUTE_MAGLEV]Maglev[\LINK]</English>
+		<French>Construire un [LINK=ROUTE_MAGLEV]Maglev[\LINK]</French>
 		<German>Magnetbahn bauen</German>
 		<Italian>Costruisci una linea Maglev</Italian>
 		<Spanish>Construir un Ferrocarril de levitación magnética</Spanish>
@@ -3547,40 +3547,40 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_GROUNDWATER_WELL]Studnię Głębinową[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_HABITAT1</Tag>
-		<English>Build [LINK=IMPROVEMENT_HABITAT1]Colony Habitat (Small)[\LINK]</English>
-		<French>Construire des [LINK=IMPROVEMENT_HABITAT1]Colonie Habitations (Petites)[\LINK]</French>
-		<German>Bauen ein [LINK=IMPROVEMENT_HABITAT1]Kolonie Lebensraum (Klein)[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_HABITAT1]Colonia Habitat (Piccolo)[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_HABITAT1]Hábitat colonial pequeño[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_HABITAT1]Siedlisko (Małe)[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_COLONY_HABITAT_SMALL</Tag>
+		<English>Build [LINK=IMPROVEMENT_COLONY_HABITAT_SMALL]Colony Habitat (Small)[\LINK]</English>
+		<French>Construire des [LINK=IMPROVEMENT_COLONY_HABITAT_SMALL]Colonie Habitations (Petites)[\LINK]</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_COLONY_HABITAT_SMALL]Kolonie Lebensraum (Klein)[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_COLONY_HABITAT_SMALL]Colonia Habitat (Piccolo)[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_COLONY_HABITAT_SMALL]Hábitat colonial pequeño[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_COLONY_HABITAT_SMALL]Siedlisko (Małe)[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_HABITAT2</Tag>
-		<English>Build [LINK=IMPROVEMENT_HABITAT2]Colony Habitat (Medium)[\LINK]</English>
-		<French>Construire des [LINK=IMPROVEMENT_HABITAT2]Colonie Habitations (Moyennes)[\LINK]</French>
-		<German>Bauen ein [LINK=IMPROVEMENT_HABITAT2]Kolonie Lebensraum (Mittel)[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_HABITAT2]Colonia Habitat (Medio)[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_HABITAT2]Hábitat colonial mediano[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_HABITAT2]Siedlisko (Średnie)[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_COLONY_HABITAT_MEDIUM</Tag>
+		<English>Build [LINK=IMPROVEMENT_COLONY_HABITAT_MEDIUM]Colony Habitat (Medium)[\LINK]</English>
+		<French>Construire des [LINK=IMPROVEMENT_COLONY_HABITAT_MEDIUM]Colonie Habitations (Moyennes)[\LINK]</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_COLONY_HABITAT_MEDIUM]Kolonie Lebensraum (Mittel)[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_COLONY_HABITAT_MEDIUM]Colonia Habitat (Medio)[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_COLONY_HABITAT_MEDIUM]Hábitat colonial mediano[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_COLONY_HABITAT_MEDIUM]Siedlisko (Średnie)[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_HABITAT3</Tag>
-		<English>Build [LINK=IMPROVEMENT_HABITAT3]Colony Habitat (Large)[\LINK]</English>
-		<French>Construire des [LINK=IMPROVEMENT_HABITAT3]Colonie Habitations (Grandes)[\LINK]</French>
-		<German>Bauen ein [LINK=IMPROVEMENT_HABITAT3]Kolonie Lebensraum (Gross)[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_HABITAT3]Colonia Habitat (Grande)[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_HABITAT3]Hábitat colonial grande[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_HABITAT3]Siedlisko (Duże)[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_COLONY_HABITAT_LARGE</Tag>
+		<English>Build [LINK=IMPROVEMENT_COLONY_HABITAT_LARGE]Colony Habitat (Large)[\LINK]</English>
+		<French>Construire des [LINK=IMPROVEMENT_COLONY_HABITAT_LARGE]Colonie Habitations (Grandes)[\LINK]</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_COLONY_HABITAT_LARGE]Kolonie Lebensraum (Gross)[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_COLONY_HABITAT_LARGE]Colonia Habitat (Grande)[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_COLONY_HABITAT_LARGE]Hábitat colonial grande[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_COLONY_HABITAT_LARGE]Siedlisko (Duże)[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_HABITAT4</Tag>
-		<English>Build [LINK=IMPROVEMENT_HABITAT4]Colony Habitat (Huge)[\LINK]</English>
-		<French>Construire des [LINK=IMPROVEMENT_HABITAT4]Colonie Habitations (Immenses)[\LINK]</French>
-		<German>Bauen ein [LINK=IMPROVEMENT_HABITAT4]Kolonie Lebensraum (Riesig)[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_HABITAT4]Colonia Habitat (Enorme)[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_HABITAT4]Hábitat colonial enorme[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_HABITAT4]Siedlisko (Wielkie)[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_COLONY_HABITAT_HUGE</Tag>
+		<English>Build [LINK=IMPROVEMENT_COLONY_HABITAT_HUGE]Colony Habitat (Huge)[\LINK]</English>
+		<French>Construire des [LINK=IMPROVEMENT_COLONY_HABITAT_HUGE]Colonie Habitations (Immenses)[\LINK]</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_COLONY_HABITAT_HUGE]Kolonie Lebensraum (Riesig)[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_COLONY_HABITAT_HUGE]Colonia Habitat (Enorme)[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_COLONY_HABITAT_HUGE]Hábitat colonial enorme[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_COLONY_HABITAT_HUGE]Siedlisko (Wielkie)[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HAMLET</Tag>
@@ -3601,7 +3601,7 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_HARVEST_KELP]Uprawę Wodorostów[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_HARVEST_KELP_K</Tag>
+		<Tag>TXT_KEY_BUILD_HARVEST_KELP_KILL</Tag>
 		<English>[LINK=IMPROVEMENT_HARVEST_KELP]Harvest the Kelp[\LINK] (Consumed)</English>
 		<French>[LINK=IMPROVEMENT_HARVEST_KELP]Récolter les Algues[\LINK] (Détruit)</French>
 		<German>[LINK=IMPROVEMENT_HARVEST_KELP]Ernte Seetang[\LINK] (Consumed)</German>
@@ -3611,8 +3611,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HIGHWAY</Tag>
-		<English>Build [LINK=ROUTE_MODERN_ROAD]Highway[\LINK]</English>
-		<French>Construire une [LINK=ROUTE_MODERN_ROAD]Autoroute[\LINK]</French>
+		<English>Build [LINK=ROUTE_HIGHWAY]Highway[\LINK]</English>
+		<French>Construire une [LINK=ROUTE_HIGHWAY]Autoroute[\LINK]</French>
 		<German>Schnellstraße bauen</German>
 		<Italian>Costruisci un'autostrada</Italian>
 		<Spanish>Construir una Autopista</Spanish>
@@ -3637,22 +3637,22 @@
 		<Polish>Posadź [LINK=IMPROVEMENT_HYBRID_FOREST]Las Hybrydowy[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_IMPROVEMENT_HYDRO_PLANT</Tag>
-		<English>Build [LINK=IMPROVEMENT_HYDRO_PLANT]Hydro Dam[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_HYDRO_PLANT]Barrage Hydroélectrique[\LINK]</French>
-		<German>Bauen ein [LINK=IMPROVEMENT_HYDRO_PLANT]Wasserkraftwerk[\LINK]</German>
-		<Italian>Costruisci una [LINK=IMPROVEMENT_HYDRO_PLANT]Diga Idroelettrica[\LINK]</Italian>
-		<Spanish>Construir una [LINK=IMPROVEMENT_HYDRO_PLANT]Presa[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_HYDRO_PLANT]Hydroelektrownię[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_IMPROVEMENT_HYDRO_DAM</Tag>
+		<English>Build [LINK=IMPROVEMENT_HYDRO_DAM]Hydro Dam[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_HYDRO_DAM]Barrage Hydroélectrique[\LINK]</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_HYDRO_DAM]Wasserkraftwerk[\LINK]</German>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_HYDRO_DAM]Diga Idroelettrica[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_HYDRO_DAM]Presa[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_HYDRO_DAM]Hydroelektrownię[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_INDUSTRIAL_COMPLEX</Tag>
-		<English>Build [LINK=IMPROVEMENT_5FACTORY]Manufacturing Complex[\LINK]</English>
-		<French>Construire une [LINK=IMPROVEMENT_5FACTORY]Complexe Fabrication[\LINK]</French>
-		<German>Bauen ein [LINK=IMPROVEMENT_5FACTORY]Fabrikation Zentrum[\LINK]</German>
-		<Italian>Costruisci una [LINK=IMPROVEMENT_5FACTORY]Complesso Produzione[\LINK]</Italian>
-		<Spanish>Construye un [LINK=IMPROVEMENT_5FACTORY]Polígono Fabrication[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_5FACTORY]Kompleks Produkcyjny[\LINK]</Polish>
+		<English>Build [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Manufacturing Complex[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Complexe Fabrication[\LINK]</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Fabrikation Zentrum[\LINK]</German>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Complesso Produzione[\LINK]</Italian>
+		<Spanish>Construye un [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Polígono Fabrication[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Kompleks Produkcyjny[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_JUMPLANE</Tag>
@@ -3673,7 +3673,7 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_JUNGLE_CAMP]Obóz w Dżungli[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_JUNGLE_CAMP_K</Tag>
+		<Tag>TXT_KEY_BUILD_JUNGLE_CAMP_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_JUNGLE_CAMP]Jungle Camp[\LINK] (Consumed)</English>
 		<French>Construire un [LINK=IMPROVEMENT_JUNGLE_CAMP]Camp de Jungle[\LINK] (Détruit)</French>
 		<German>Errichte [LINK=IMPROVEMENT_JUNGLE_CAMP]dschungel feldlager[\LINK] (Consumed)</German>
@@ -3717,8 +3717,8 @@
 		<Polish>Pokaż okno Listy Budowy.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_LUMBER_JACK</Tag>
-		<English>Build [LINK=IMPROVEMENT_LUMBERJACK]Lumber Camp[\LINK]</English>
+		<Tag>TXT_KEY_BUILD_LUMBERJACK</Tag>
+		<English>Build [LINK=IMPROVEMENT_LUMBERJACK]Lumberjack[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_LUMBER_JACK]Camp de bûcherons[\LINK]</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_LUMBER_JACK]Holzfällerlager[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_LUMBER_JACK]Campo di legname[\LINK]</Italian>
@@ -3726,9 +3726,9 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_LUMBER_JACK]Obóz Drwali[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_MAKE_JUNGLE</Tag>
-		<English>[LINK=IMPROVEMENT_MAKE_JUNGLE]Plant Jungle[\LINK]</English>
-		<French>[LINK=IMPROVEMENT_MAKE_JUNGLE]Restaurer de la Jungle[\LINK]</French>
+		<Tag>TXT_KEY_BUILD_PLANT_JUNGLE</Tag>
+		<English>[LINK=IMPROVEMENT_PLANT_JUNGLE]Plant Jungle[\LINK]</English>
+		<French>[LINK=IMPROVEMENT_PLANT_JUNGLE]Restaurer de la Jungle[\LINK]</French>
 		<German>Pflanze Dschungel</German>
 		<Italian>Pianta una giungla</Italian>
 		<Spanish>Plantar una Selva</Spanish>
@@ -3762,9 +3762,9 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_MOAI]Moai[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_MODERNWINDMILL</Tag>
-		<English>Buld [LINK=IMPROVEMENT_DESERTWINDMILL]Modern Windmill[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_DESERTWINDMILL]Moulin à vent Moderne[\LINK]</French>
+		<Tag>TXT_KEY_BUILD_MODERN_WINDMILL</Tag>
+		<English>Buld [LINK=IMPROVEMENT_MODERN_WINDMILL]Modern Windmill[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_MODERN_WINDMILL]Moulin à vent Moderne[\LINK]</French>
 		<German>Bauen a [LINK=IMPROVEMENT_MODERNWINDMILL]Modern-Windrad[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_MODERNWINDMILL]Moderno Mulino a vento[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_MODERNWINDMILL]Aerogenerador[\LINK]</Spanish>
@@ -3798,7 +3798,7 @@
 		<Polish>Zbudu [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Obóz Zbieraczy Grzybów[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_MUSHROOM_GATHERER_K</Tag>
+		<Tag>TXT_KEY_BUILD_MUSHROOM_GATHERER_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Mushroom Gatherer[\LINK] (Consumed)</English>
 		<French>Construire une [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Champignonnière[\LINK] (Détruit)</French>
 		<German>[LINK=IMPROVEMENT_MUSHROOM_GATHERER]Pilze sammeln[\LINK] (Consumed)</German>
@@ -3834,20 +3834,20 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_APPLE_FARM]Sad[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_PALISADE</Tag>
-		<English>Build [LINK=IMPROVEMENT_PALISADE]Wooden Palisade[\LINK]</English>
-		<French>Construire une [LINK=IMPROVEMENT_PALISADE]Palissade en bois[\LINK]</French>
-		<Italian>Costruisci una [LINK=IMPROVEMENT_PALISADE]palizzata in legno[\LINK]</Italian>
-		<Spanish>Construir una [LINK=IMPROVEMENT_PALISADE]Empalizada de madera[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_PALISADE]Drewnianą Palisadę[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_WOODEN_PALISADE</Tag>
+		<English>Build [LINK=IMPROVEMENT_WOODEN_PALISADE]Wooden Palisade[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_WOODEN_PALISADE]Palissade en bois[\LINK]</French>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_WOODEN_PALISADE]palizzata in legno[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_WOODEN_PALISADE]Empalizada de madera[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_WOODEN_PALISADE]Drewnianą Palisadę[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_PALISADE_G</Tag>
-		<English>Build [LINK=IMPROVEMENT_PALISADE]Wooden Palisade[\LINK] (Gatherer)</English>
-		<French>Construire une [LINK=IMPROVEMENT_PALISADE]Palissade en bois[\LINK]</French>
-		<Italian>Costruisci una [LINK=IMPROVEMENT_PALISADE]palizzata in legno[\LINK]</Italian>
-		<Spanish>Construir una [LINK=IMPROVEMENT_PALISADE]Empalizada de madera[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_PALISADE]Drewnianą Palisadę[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_WOODEN_PALISADE_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_WOODEN_PALISADE]Wooden Palisade[\LINK] (Gatherer)</English>
+		<French>Construire une [LINK=IMPROVEMENT_WOODEN_PALISADE]Palissade en bois[\LINK]</French>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_WOODEN_PALISADE]palizzata in legno[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_WOODEN_PALISADE]Empalizada de madera[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_WOODEN_PALISADE]Drewnianą Palisadę[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PATH</Tag>
@@ -3859,9 +3859,9 @@
 		<Polish>Zbuduj Szlak</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_PAVED</Tag>
-		<English>Build [LINK=ROUTE_PAVED]Paved Road[\LINK]</English>
-		<French>Construire une [LINK=ROUTE_PAVED]Route Pavée[\LINK]</French>
+		<Tag>TXT_KEY_BUILD_PAVED_ROAD</Tag>
+		<English>Build [LINK=ROUTE_PAVED_ROAD]Paved Road[\LINK]</English>
+		<French>Construire une [LINK=ROUTE_PAVED_ROAD]Route Pavée[\LINK]</French>
 		<German>Gepflasterte Straße bauen</German>
 		<Italian>Costruisci una strada pavimentata</Italian>
 		<Spanish>Construir un Camino pavimentado</Spanish>
@@ -3875,16 +3875,16 @@
 		<Polish>Zbudu [LINK=IMPROVEMENT_PEAT_CUTTER]Obóz Zbieraczy Torfu[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_PLANT_BAMBOO</Tag>
-		<English>[LINK=IMPROVEMENT_PLANT_BAMBOO]Plant Bamboo Grove[\LINK]</English>
-		<French>[LINK=IMPROVEMENT_PLANT_BAMBOO]Planter une Bambouseraie[\LINK]</French>
+		<Tag>TXT_KEY_BUILD_PLANT_BAMBOO_GROVE</Tag>
+		<English>[LINK=IMPROVEMENT_PLANT_BAMBOO_GROVE]Plant Bamboo Grove[\LINK]</English>
+		<French>[LINK=IMPROVEMENT_PLANT_BAMBOO_GROVE]Planter une Bambouseraie[\LINK]</French>
 		<Italian>Crea un bosco di bambù</Italian>
 		<Spanish>Plantar un Bosque de bambú</Spanish>
 		<Polish>Zbuduj Gaj Bambusowy</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_PLANT_FOREST</Tag>
-		<English>[LINK=IMPROVEMENT_PLANT_FOREST]Plant Forest[\LINK]</English>
+		<Tag>TXT_KEY_BUILD_YOUNG_FOREST</Tag>
+		<English>[LINK=IMPROVEMENT_YOUNG_FOREST]Plant Forest[\LINK]</English>
 		<French>Planter une Forêt</French>
 		<German>Pflanze Wald</German>
 		<Italian>Pianta una foresta</Italian>
@@ -3892,19 +3892,19 @@
 		<Polish>Posadź las</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_PLANT_GATHERER</Tag>
-		<English>Build [LINK=IMPROVEMENT_PLANT_GATHERER]Plant Gathering Camp[\LINK]</English>
-		<French>Installer un [LINK=IMPROVEMENT_PLANT_GATHERER]camp de récolte[\LINK]</French>
-		<German>[LINK=IMPROVEMENT_PLANT_GATHERER]Nützliche Pflanzen sammeln[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_PLANT_GATHERER]campo di raccolta di piante[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_PLANT_GATHERER]Campo de cultivo de plantas[\LINK]</Spanish>
-		<Polish>Zbudu [LINK=IMPROVEMENT_PLANT_GATHERER]Obóz Zbieraczy Roślin[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_PLANT_GATHERING_CAMP</Tag>
+		<English>Build [LINK=IMPROVEMENT_PLANT_GATHERING_CAMP]Plant Gathering Camp[\LINK]</English>
+		<French>Installer un [LINK=IMPROVEMENT_PLANT_GATHERING_CAMP]camp de récolte[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_PLANT_GATHERING_CAMP]Nützliche Pflanzen sammeln[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_PLANT_GATHERING_CAMP]campo di raccolta di piante[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_PLANT_GATHERING_CAMP]Campo de cultivo de plantas[\LINK]</Spanish>
+		<Polish>Zbudu [LINK=IMPROVEMENT_PLANT_GATHERING_CAMP]Obóz Zbieraczy Roślin[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_PLANT_PICKER</Tag>
-		<English>Build [LINK=IMPROVEMENT_PLANT_PICKER]Plant Picking Camp[\LINK]</English>
-		<French>Construire un  [LINK=IMPROVEMENT_PLANT_PICKER]Camp de récolte de plantes[\LINK]</French>
-		<German>[LINK=IMPROVEMENT_PLANT_PICKER]Nützliche Pflanzen pflücken[\LINK]</German>
+		<Tag>TXT_KEY_BUILD_PLANT_PICKING_CAMP</Tag>
+		<English>Build [LINK=IMPROVEMENT_PLANT_PICKING_CAMP]Plant Picking Camp[\LINK]</English>
+		<French>Construire un  [LINK=IMPROVEMENT_PLANT_PICKING_CAMP]Camp de récolte de plantes[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_PLANT_PICKING_CAMP]Nützliche Pflanzen pflücken[\LINK]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PLANT_SAVANNA</Tag>
@@ -3926,24 +3926,24 @@
 	</TEXT>
 	-->
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_RADAR</Tag>
-		<English>Build [LINK=IMPROVEMENT_RADAR]Radar Tower[\LINK]</English>
-		<French>Construire une [LINK=IMPROVEMENT_RADAR]Tour Radar[\LINK]</French>
-		<Italian>Costruisci una [LINK=IMPROVEMENT_RADAR]torre radar[\LINK]</Italian>
-		<Spanish>Construir una [LINK=IMPROVEMENT_RADAR]Torre de radar[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_RADAR]Wieżę Radarową[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_RADAR_TOWER</Tag>
+		<English>Build [LINK=IMPROVEMENT_RADAR_TOWER]Radar Tower[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_RADAR_TOWER]Tour Radar[\LINK]</French>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_RADAR_TOWER]torre radar[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_RADAR_TOWER]Torre de radar[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_RADAR_TOWER]Wieżę Radarową[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_RAILROAD_ELECTRIC</Tag>
-		<English>Build [LINK=ROUTE_RAILROAD_ELECTRIC]Electric Railroad[\LINK]</English>
-		<French>Construire un [LINK=ROUTE_RAILROAD_ELECTRIC]Chemin de Fer électrique[\LINK]</French>
+		<Tag>TXT_KEY_BUILD_ELECTRIC_RAILROAD</Tag>
+		<English>Build [LINK=ROUTE_ELECTRIC_RAILROAD]Electric Railroad[\LINK]</English>
+		<French>Construire un [LINK=ROUTE_ELECTRIC_RAILROAD]Chemin de Fer électrique[\LINK]</French>
 		<German>Baue eine elektrifizierte Eisenbahn</German>
 		<Italian>Costruisci una ferrovia elettrica</Italian>
 		<Spanish>Construir un Ferrocarril eléctrico</Spanish>
 		<Polish>Zbuduj Kolej Elektryczną</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_REMOVE_ROCK_FORM</Tag>
+		<Tag>TXT_KEY_BUILD_REMOVE_ROCK_FORMATION</Tag>
 		<English>Remove Rock Formation</English>
 		<French>Eliminer la Formation de rochers</French>
 		<German>[LINK=FEATURE_DARK_ROCK_FORM1]Steinbildung[\LINK] zu entfernen</German>
@@ -3952,7 +3952,7 @@
 		<Polish>Usuń [LINK=FEATURE_DARK_ROCK_FORM1]Formację Skalną[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_REMOVE_SWAMP</Tag>
+		<Tag>TXT_KEY_BUILD_DRAIN_SWAMP</Tag>
 		<English>Drain Swamp</English>
 		<French>Assainir un Marais</French>
 		<German>Lege ein [LINK=FEATURE_SWAMP]Torfmoor[\LINK] trocken</German>
@@ -3975,31 +3975,31 @@
 		<French>[ICON_BULLET][COLOR_WARNING_TEXT]A placer avec %s1_Build requiert %s2_Bonus[COLOR_REVERT]</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_ROCK_GATHERER</Tag>
-		<English>Build [LINK=IMPROVEMENT_ROCK_GATHERER]Stone Tools Workshop[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_ROCK_GATHERER]Atelier d'Outils en pierre.[\LINK]</French>
-		<German>[LINK=IMPROVEMENT_ROCK_GATHERER]Steinwerkstatt bauen[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_ROCK_GATHERER]Raccoglitore di pietre[\LINK]</Italian>
-		<Spanish>Contruir un [LINK=IMPROVEMENT_ROCK_GATHERER]Taller de herramientas de piedra[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_ROCK_GATHERER]Warsztat Kamiennych Narzędzi[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_STONE_TOOLS_WORKSHOP</Tag>
+		<English>Build [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Stone Tools Workshop[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Atelier d'Outils en pierre.[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Steinwerkstatt bauen[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Raccoglitore di pietre[\LINK]</Italian>
+		<Spanish>Contruir un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Taller de herramientas de piedra[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Warsztat Kamiennych Narzędzi[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_ROCK_GATHERER_K</Tag>
-		<English>Build [LINK=IMPROVEMENT_ROCK_GATHERER]Stone Tools Workshop[\LINK] (Consumed)</English>
-		<French>Construire un [LINK=IMPROVEMENT_ROCK_GATHERER]Atelier d'Outils en pierre [\LINK] (Détruit)</French>
-		<German>[LINK=IMPROVEMENT_ROCK_GATHERER]Steinwerkstatt bauen[\LINK] (Consumed)</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_ROCK_GATHERER]Raccoglitore di pietre[\LINK] (Consumed)</Italian>
-		<Spanish>Contruir un [LINK=IMPROVEMENT_ROCK_GATHERER]Taller de herramientas de piedra[\LINK] (Consumed)</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_ROCK_GATHERER]Warsztat Kamiennych Narzędzi[\LINK] (Consumed)</Polish>
+		<Tag>TXT_KEY_BUILD_STONE_TOOLS_WORKSHOP_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Stone Tools Workshop[\LINK] (Consumed)</English>
+		<French>Construire un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Atelier d'Outils en pierre [\LINK] (Détruit)</French>
+		<German>[LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Steinwerkstatt bauen[\LINK] (Consumed)</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Raccoglitore di pietre[\LINK] (Consumed)</Italian>
+		<Spanish>Contruir un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Taller de herramientas de piedra[\LINK] (Consumed)</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Warsztat Kamiennych Narzędzi[\LINK] (Consumed)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_SAFARI</Tag>
-		<English>Build [LINK=IMPROVEMENT_SAFARI]Wildlife Sanctuary[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_SAFARI]Sanctuaire de la faune[\LINK]</French>
-		<German>Errichte eine [LINK=IMPROVEMENT_SAFARI]Naturschutzgebiet[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_SAFARI]Santuario della fauna selvatica[\LINK]</Italian>
-		<Spanish>Construir una [LINK=IMPROVEMENT_SAFARI]Reserva salvaje[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_SAFARI]Safari[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_WILDLIFE_SANCTUARY</Tag>
+		<English>Build [LINK=IMPROVEMENT_WILDLIFE_SANCTUARY]Wildlife Sanctuary[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_WILDLIFE_SANCTUARY]Sanctuaire de la faune[\LINK]</French>
+		<German>Errichte eine [LINK=IMPROVEMENT_WILDLIFE_SANCTUARY]Naturschutzgebiet[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_WILDLIFE_SANCTUARY]Santuario della fauna selvatica[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_WILDLIFE_SANCTUARY]Reserva salvaje[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_WILDLIFE_SANCTUARY]Safari[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SALT_GATHERER</Tag>
@@ -4008,7 +4008,7 @@
 		<Polish>[LINK=IMPROVEMENT_SALT_GATHERER]Zbieraj Sól[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_SALT_GATHERER_K</Tag>
+		<Tag>TXT_KEY_BUILD_SALT_GATHERER_KILL</Tag>
 		<English>[LINK=IMPROVEMENT_SALT_GATHERER]Gather Salt[\LINK] (Consumed)</English>
 		<French>[LINK=IMPROVEMENT_SALT_GATHERER]Récolter du Sel[\LINK] (Détruit)</French>
 		<Polish>[LINK=IMPROVEMENT_SALT_GATHERER]Zbieraj Sól[\LINK] (Consumed)</Polish>
@@ -4041,7 +4041,7 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_SCAVENGING_CAMP]Obóz Zbieraczy[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_SCRUB_FALLOUT_RAPIDLY</Tag>
+		<Tag>TXT_KEY_BUILD_CLEAR_FALLOUT_FAST</Tag>
 		<English>Clear Fallout (Fast)</English>
 		<French>Décontaminer (Rapidement)</French>
 		<German>Fallout entfernen (schnell)</German>
@@ -4050,16 +4050,16 @@
 		<Polish>Wyczyść [LINK=FEATURE_FALLOUT]Odpady Radioaktywne (Szybko)[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_SEA_AIR_DEFENSE</Tag>
-		<English>Build [LINK=IMPROVEMENT_SEA_AIR_DEFENSE]Aquatic Anti-Air Defense[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_SEA_AIR_DEFENSE]Poste aquatique de Défense Anti-Aérienne[\LINK]</French>
-		<German>Errichte einen[LINK=IMPROVEMENT_SEA_AIR_DEFENSE]Wasser-Luftschutz[\LINK]</German>
-		<Italian>Costruisci una [LINK=IMPROVEMENT_SEA_AIR_DEFENSE]Stazione marina di difesa anti-aerea[\LINK]</Italian>
-		<Spanish>Construir una [LINK=IMPROVEMENT_SEA_AIR_DEFENSE]Estación acuática de defensa antiaérea[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_SEA_AIR_DEFENSE]Nawodną Obronę Przeciw powietrzną[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_AQUATIC_ANTI_AIR_DEFENSE</Tag>
+		<English>Build [LINK=IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE]Aquatic Anti-Air Defense[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE]Poste aquatique de Défense Anti-Aérienne[\LINK]</French>
+		<German>Errichte einen[LINK=IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE]Wasser-Luftschutz[\LINK]</German>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE]Stazione marina di difesa anti-aerea[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE]Estación acuática de defensa antiaérea[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE]Nawodną Obronę Przeciw powietrzną[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_SEA_AIR_DEFENSE_HELP</Tag>
+		<Tag>TXT_KEY_BUILD_AQUATIC_ANTI_AIR_DEFENSE_HELP</Tag>
 		<English>[ICON_BULLET]+50% Air Defense</English>
 		<French>[ICON_BULLET]+50% Défense Aérienne</French>
 		<German>[ICON_BULLET]+50% Luftverteidigunge</German>
@@ -4068,22 +4068,22 @@
 		<Polish>[ICON_BULLET]+50%% obrony przeciw powietrznej</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_SEA_FORT</Tag>
-		<English>Build [LINK=IMPROVEMENT_SEA_FORT]Aquatic Forcefield[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_SEA_FORT]Champ de Force Aquatique[\LINK]</French>
-		<German>Errichte eine [LINK=IMPROVEMENT_SEA_FORT]Wasser-Schutzschild\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_SEA_FORT]Campo di forza acquatico[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_SEA_FORT]Campo de fuerza acuático[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_SEA_FORT]Nawodne Pole Siłowe[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_AQUATIC_FORCEFIELD</Tag>
+		<English>Build [LINK=IMPROVEMENT_AQUATIC_FORCEFIELD]Aquatic Forcefield[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_AQUATIC_FORCEFIELD]Champ de Force Aquatique[\LINK]</French>
+		<German>Errichte eine [LINK=IMPROVEMENT_AQUATIC_FORCEFIELD]Wasser-Schutzschild\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_AQUATIC_FORCEFIELD]Campo di forza acquatico[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_AQUATIC_FORCEFIELD]Campo de fuerza acuático[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_AQUATIC_FORCEFIELD]Nawodne Pole Siłowe[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SEA_MILL</Tag>
-		<English>Build [LINK=IMPROVEMENT_WINDMILL_SEA]Sea Mill[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_WINDMILL_SEA]Moulin maritime[\LINK]</French>
-		<German>Bauen a [LINK=IMPROVEMENT_WINDMILL_SEA]Sea Mill[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_WINDMILL_SEA]Sea Mill[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_WINDMILL_SEA]Molino marino[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_WINDMILL_SEA]Młyn Morski[\LINK]</Polish>
+		<English>Build [LINK=IMPROVEMENT_SEA_MILL]Sea Mill[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_SEA_MILL]Moulin maritime[\LINK]</French>
+		<German>Bauen a [LINK=IMPROVEMENT_SEA_MILL]Sea Mill[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_SEA_MILL]Sea Mill[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_SEA_MILL]Molino marino[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_SEA_MILL]Młyn Morski[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SHAFT_MINE</Tag>
@@ -4113,31 +4113,31 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_SOLAR_PANELS]Panele Słoneczne[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_STEEL_TOWER</Tag>
-		<English>Build [LINK=IMPROVEMENT_STEEL_TOWER]Steel Watchtower[\LINK]</English>
-		<French>Construire une [LINK=IMPROVEMENT_STEEL_TOWER]Tour d'observation en acier[\LINK]</French>
-		<Italian>Costruisci una [LINK=IMPROVEMENT_STEEL_TOWER]torre d'osservazione in acciaio[\LINK]</Italian>
-		<Spanish>Construir una [LINK=IMPROVEMENT_STEEL_TOWER]Torre de vigilancia de acero[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_STEEL_TOWER]Stalową Wieżę Obserwacyjną[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_STEEL_WATCHTOWER</Tag>
+		<English>Build [LINK=IMPROVEMENT_STEEL_WATCHTOWER]Steel Watchtower[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_STEEL_WATCHTOWER]Tour d'observation en acier[\LINK]</French>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_STEEL_WATCHTOWER]torre d'osservazione in acciaio[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_STEEL_WATCHTOWER]Torre de vigilancia de acero[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_STEEL_WATCHTOWER]Stalową Wieżę Obserwacyjną[\LINK]</Polish>
 	</TEXT>
 	<!-- Unloaded Module
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_STONE_CIRCLE</Tag>
-		<English>Build [LINK=IMPROVEMENT_STONECIRCLE]Stone Circle[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_STONECIRCLE]Cercle de pierres[\LINK]</French>
-		<German>Bauen [LINK=IMPROVEMENT_STONECIRCLE]Steinkreis[\LINK]</German>
-		<Italian>Costruisci [LINK=IMPROVEMENT_STONECIRCLE]Cerchio di pietre[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_STONECIRCLE]Círculo de piedras[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_STEEL_TOWER]Kamienny Krąg[\LINK]</Polish>
+		<English>Build [LINK=IMPROVEMENT_STONE_CIRCLE]Stone Circle[\LINK]</English>
+		<French>Construire un [LINK=IMPROVEMENT_STONE_CIRCLE]Cercle de pierres[\LINK]</French>
+		<German>Bauen [LINK=IMPROVEMENT_STONE_CIRCLE]Steinkreis[\LINK]</German>
+		<Italian>Costruisci [LINK=IMPROVEMENT_STONE_CIRCLE]Cerchio di pietre[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_STONE_CIRCLE]Círculo de piedras[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_STEEL_WATCHTOWER]Kamienny Krąg[\LINK]</Polish>
 	</TEXT>
 	-->
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_STONE_TOWER</Tag>
-		<English>Build [LINK=IMPROVEMENT_STONE_TOWER]Stone Watchtower[\LINK]</English>
-		<French>Construire une [LINK=IMPROVEMENT_STONE_TOWER]Tour d'observation en pierres[\LINK]</French>
-		<Italian>Costruisci una [LINK=IMPROVEMENT_STONE_TOWER]torre d'osservazione in pietra[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_STONE_TOWER]Puesto de avanzada de piedra[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_STEEL_TOWER]Kamienną Wieżę Obserwacyjną[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_STONE_WATCHTOWER</Tag>
+		<English>Build [LINK=IMPROVEMENT_STONE_WATCHTOWER]Stone Watchtower[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_STONE_WATCHTOWER]Tour d'observation en pierres[\LINK]</French>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_STONE_WATCHTOWER]torre d'osservazione in pietra[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_STONE_WATCHTOWER]Puesto de avanzada de piedra[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_STEEL_WATCHTOWER]Kamienną Wieżę Obserwacyjną[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SUBMERGED_TOWN</Tag>
@@ -4149,13 +4149,13 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_SUBMERGED_TOWN]zatopione miasto[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_SUBURB</Tag>
-		<English>Build [LINK=IMPROVEMENT_SUBURB]Suburbs[\LINK]</English>
-		<French>Construire [LINK=IMPROVEMENT_SUBURB]Banlieue[\LINK]</French>
-		<German>Errichte [LINK=IMPROVEMENT_SUBURB]Vorstadt[\LINK]</German>
-		<Italian>Costruisci [LINK=IMPROVEMENT_SUBURB]Sobborghi[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_SUBURB]Barrio[\LINK]</Spanish>
-		<Polish>Ulepsz miasteczko do [LINK=IMPROVEMENT_SUBURB]Przedmieście[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_SUBURBS</Tag>
+		<English>Build [LINK=IMPROVEMENT_SUBURBS]Suburbs[\LINK]</English>
+		<French>Construire [LINK=IMPROVEMENT_SUBURBS]Banlieue[\LINK]</French>
+		<German>Errichte [LINK=IMPROVEMENT_SUBURBS]Vorstadt[\LINK]</German>
+		<Italian>Costruisci [LINK=IMPROVEMENT_SUBURBS]Sobborghi[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_SUBURBS]Barrio[\LINK]</Spanish>
+		<Polish>Ulepsz miasteczko do [LINK=IMPROVEMENT_SUBURBS]Przedmieście[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TAR_GATHERER</Tag>
@@ -4167,7 +4167,7 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_TAR_GATHERER]Chatę Zbieracza Smoły[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_TAR_GATHERER_K</Tag>
+		<Tag>TXT_KEY_BUILD_TAR_GATHERER_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK] (Consumed)</English>
 		<French>Construire un [LINK=IMPROVEMENT_TAR_GATHERER]récolteur de goudron[\LINK] (Détruit)</French>
 		<German>Bauen a [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK] (Consumed)</German>
@@ -4317,13 +4317,13 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_VILLAGE]Wioskę[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_WELL</Tag>
-		<English>Build [LINK=IMPROVEMENT_WELL]Hydrocarbon Well[\LINK]</English>
-		<French>Construire une [LINK=IMPROVEMENT_WELL]Hydrocarbure Puits[\LINK]</French>
-		<German>[COLOR_HIGHLIGHT_TEXT]Errichtung eines [LINK=IMPROVEMENT_WELL]Bohrturms[\LINK][COLOR_REVERT]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_WELL]Idrocarburo Pozzo[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_WELL]Pozo petrolífero[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_WELL]Wieżę Wydobywczą Węglowodorów[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_HYDROCARBON_WELL</Tag>
+		<English>Build [LINK=IMPROVEMENT_HYDROCARBON_WELL]Hydrocarbon Well[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_HYDROCARBON_WELL]Hydrocarbure Puits[\LINK]</French>
+		<German>[COLOR_HIGHLIGHT_TEXT]Errichtung eines [LINK=IMPROVEMENT_HYDROCARBON_WELL]Bohrturms[\LINK][COLOR_REVERT]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_HYDROCARBON_WELL]Idrocarburo Pozzo[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_HYDROCARBON_WELL]Pozo petrolífero[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_HYDROCARBON_WELL]Wieżę Wydobywczą Węglowodorów[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WETLANDS_CAMP</Tag>
@@ -4335,7 +4335,7 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_WETLANDS_CAMP]Obóz na bagnach[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_WETLANDS_CAMP_K</Tag>
+		<Tag>TXT_KEY_BUILD_WETLANDS_CAMP_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_WETLANDS_CAMP]Wetlands Camp[\LINK] (Consumed)</English>
 		<French>Construire un [LINK=IMPROVEMENT_WETLANDS_CAMP]Camp de zones humides[\LINK] (Détruit)</French>
 		<German>Errichte [LINK=IMPROVEMENT_WETLANDS_CAMP]feuchtgebiete feldlager[\LINK] (Consumed)</German>
@@ -4350,29 +4350,29 @@
 		<Polish>Stwórz Statki Wielorybnicze</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_WOODEN_TOWER</Tag>
-		<English>Build [LINK=IMPROVEMENT_WOODEN_TOWER]Wooden Watchtower[\LINK]</English>
-		<French>Construire une [LINK=IMPROVEMENT_WOODEN_TOWER]Tour d'observation en bois[\LINK]</French>
-		<Italian>Costruisci una [LINK=IMPROVEMENT_WOODEN_TOWER]torre d'osservazione in legno[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_WOODEN_TOWER]Puesto de avanzada de madera[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_WOODEN_TOWER]Drewnianą Wieżę Obserwacyjną[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_WOODEN_WATCHTOWER</Tag>
+		<English>Build [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Wooden Watchtower[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Tour d'observation en bois[\LINK]</French>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]torre d'osservazione in legno[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Puesto de avanzada de madera[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Drewnianą Wieżę Obserwacyjną[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_WOODEN_TOWER_G</Tag>
-		<English>Build [LINK=IMPROVEMENT_WOODEN_TOWER]Wooden Watchtower[\LINK] (Gatherer)</English>
-		<French>Construire une [LINK=IMPROVEMENT_WOODEN_TOWER]Tour d'observation en bois[\LINK]</French>
-		<Italian>Costruisci una [LINK=IMPROVEMENT_WOODEN_TOWER]torre d'osservazione in legno[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_WOODEN_TOWER]Puesto de avanzada de madera[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_WOODEN_TOWER]Drewnianą Wieżę Obserwacyjną[\LINK]</Polish>
+		<Tag>TXT_KEY_BUILD_WOODEN_WATCHTOWER_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Wooden Watchtower[\LINK] (Gatherer)</English>
+		<French>Construire une [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Tour d'observation en bois[\LINK]</French>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]torre d'osservazione in legno[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Puesto de avanzada de madera[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Drewnianą Wieżę Obserwacyjną[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WOOD_GATHERER</Tag>
-		<English>[LINK=IMPROVEMENT_PINE_GATHERER]Gather Wood[\LINK]</English>
-		<French>[LINK=IMPROVEMENT_PINE_GATHERER]Récolter du bois[\LINK]</French>
-		<German>[LINK=IMPROVEMENT_PINE_GATHERER]Holz sammeln[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_PINE_GATHERER]Raccoglitore di legno[\LINK]</Italian>
-		<Spanish>[LINK=IMPROVEMENT_PINE_GATHERER]Recolecta Madera[\LINK]</Spanish>
-		<Polish>[LINK=IMPROVEMENT_PINE_GATHERER]Zbieraj Drewno[\LINK]</Polish>
+		<English>[LINK=IMPROVEMENT_WOOD_GATHERER]Gather Wood[\LINK]</English>
+		<French>[LINK=IMPROVEMENT_WOOD_GATHERER]Récolter du bois[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_WOOD_GATHERER]Holz sammeln[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_WOOD_GATHERER]Raccoglitore di legno[\LINK]</Italian>
+		<Spanish>[LINK=IMPROVEMENT_WOOD_GATHERER]Recolecta Madera[\LINK]</Spanish>
+		<Polish>[LINK=IMPROVEMENT_WOOD_GATHERER]Zbieraj Drewno[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WORKER_SPEED_MODIFIER_SPECIFIC</Tag>
@@ -6770,7 +6770,7 @@
 		<Polish>Zniewolono mieszkańców miasta!</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ERA_SEDENTARY</Tag>
+		<Tag>TXT_KEY_ERA_ANCIENT</Tag>
 		<English>Ancient</English>
 		<French>
 			<Text>Antiquité</Text>
@@ -6795,7 +6795,7 @@
 		<Polish>Starożytna</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ERA_SEDENTARY_STRATEGY</Tag>
+		<Tag>TXT_KEY_ERA_ANCIENT_STRATEGY</Tag>
 		<English>The term Ancient in regards to Caveman to Cosmos describes the beginning of cities and the arrival of what is referred to as the bronze age. It is a period where tribal societies begin to form larger towns and eventually cities, and more elaborate artwork and architecture. Kings emerge in this period, one of the first kinds of powerful rulers, evolving out of powerful tribal leaders. Warfare becomes formalized, with the development of professional armies, the training of animals for war etc.
 Time Frame: 12 000 BC - 1200 BC</English>
 	</TEXT>	
@@ -6968,7 +6968,7 @@ Time Frame: 1990 AD - 2050 AD</English>
 Time Frame: 450 AD - 1400 AD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ERA_MODERN</Tag>
+		<Tag>TXT_KEY_ERA_ATOMIC</Tag>
 		<English>Atomic</English>
 		<French>Atomique</French>
 		<German>
@@ -6978,7 +6978,7 @@ Time Frame: 450 AD - 1400 AD</English>
 		</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ERA_MODERN_STRATEGY</Tag>
+		<Tag>TXT_KEY_ERA_ATOMIC_STRATEGY</Tag>
 		<English>The Atomic era describes the time of the second world war till roughly the end of the cold war. During this period air power becomes the strongest force on the battlefield and the doctrine of MAD, or mutually assured destruction, appears as nuclear weapons enter the picture. Also, the beginnings of space flight and computers occur in this period.
 Time Frame: 1900 AD - 1990 AD</English>
 	</TEXT>
@@ -6998,7 +6998,7 @@ Time Frame: 1900 AD - 1990 AD</English>
 Time Frame: 2050 AD - 2150 AD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ERA_ANCIENT</Tag>
+		<Tag>TXT_KEY_ERA_PREHISTORIC</Tag>
 		<English>Prehistoric</English>
 		<French>Préhistoire</French>
 		<German>
@@ -7011,7 +7011,7 @@ Time Frame: 2050 AD - 2150 AD</English>
 		<Polish>Prehistoryczna</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ERA_ANCIENT_STRATEGY</Tag>
+		<Tag>TXT_KEY_ERA_PREHISTORIC_STRATEGY</Tag>
 		<English>Prehistory (Latin, pra = before; Greek, iotopia = history) is a term used to describe the period before recorded history. Paul Tournal originally coined the term Pré-historique in describing the finds he had made in the caves of southern France. The term "prehistory" can be used to refer to all time since the beginning of the universe, although it is more often used in referring to the period of time since life appeared on Earth, or even more specifically to the time since human-like beings appeared.
 Time Frame: 200 000 BC - 12 000 BC</English>
 	</TEXT>
@@ -18668,7 +18668,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Pola w zasięgu miasta</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_BUDDHISM</Tag>
+		<Tag>TXT_KEY_TECH_BUDDHISM</Tag>
 		<English>Buddhism</English>
 		<French>
 			<Text>Bouddhisme</Text>
@@ -18693,7 +18693,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Buddyzm</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_BUDDHISM_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_TECH_BUDDHISM_ADJECTIVE</Tag>
 		<English>
 			<Text>Buddhist</Text>
 			<Gender>Male</Gender>
@@ -18718,13 +18718,13 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>buddyjski</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_BUDDHISM_STRATEGY</Tag>
+		<Tag>TXT_KEY_TECH_BUDDHISM_STRATEGY</Tag>
 		<English>Research Buddhism to found a Religion</English>
 		<French>Recherchez Buddhism pour fonder une religion</French>
 		<Spanish>Investiga el Budismo para fundar una religión.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_BUDDHISM_PEDIA</Tag>
+		<Tag>TXT_KEY_TECH_BUDDHISM_PEDIA</Tag>
 		<English>Buddhism is one of the world's major religions, with more that 350 million followers. Buddhism originated in India and has since spread throughout the subcontinent and into central and southeast Asia. [PARAGRAPH:2]Buddhism follows the teachings of Siddhartha Gautama, the Buddha. Gautama lived from 620 to 540 BC. The Buddha ("enlightened one") sought to teach his followers to search for "Dharma," the truth. By doing so, they too would become enlightened and thus achieve "Nirvana," the perfect peace that would free one's soul from the unending cycle of death and rebirth that all men suffer. [PARAGRAPH:2]Three major schools of Buddhism survive today. Vajrayana believes that people can "speed up" enlightenment through "tantric" techniques such as yoga, mantras (chants), and various other rituals. Theravada and Mahayana are sutric schools that believe that one achieves enlightenment primarily through study of the Budda's teachings.</English>
 		<French>Le bouddhisme, avec plus de 350 millions de fidèles, est considéré comme l'une des principales religions du monde. Originaire d'Inde, il s'est répandu dans tout le sous-continent ainsi qu'en Asie centrale et en Asie du Sud-Est. [PARAGRAPH:2]Le bouddhisme suit les enseignements de Siddhartha Gautama, le Bouddha, qui a vécu de 620 à 540 av. J.-C. Bouddha (l'"Eveillé") s'efforçait d'enseigner à ses adeptes de rechercher le "Dharma", la vérité. De cette manière, ils s'éveilleraient à leur tour et entreraient ainsi dans le "Nirvana," l'état de paix parfaite qui délivrerait leur âme du cycle incessant de la mort et de la renaissance que tous les hommes doivent endurer. [PARAGRAPH:2]Le bouddhisme d'aujourd'hui a vu survivre trois doctrines principales. Selon le bouddhisme vajrayana, les adeptes peuvent "accélérer" leur éveil en recourant à des techniques "tantriques" telles que le yoga, les mantras (chants) et divers autres rituels. Les bouddhismes theravada et mahayana constituent des doctrines sutriques qui considèrent que l'éveil n'est possible qu'après avoir appris les enseignements de Bouddha.</French>
 		<German>Der Buddhismus ist mit über 350 Millionen Gläubigen eine der Hauptreligionen der Welt. Ausgehend von Indien ist er inzwischen in weiten Teilen Zentral- und Südostasiens verbreitet. [PARAGRAPH:2]Der Buddhismus folgt der Lehre Siddhartha Gautamas (um 560 bis 480 vor Christus). Als Buddha (wörtlich: Erwachter, Erleuchteter) lehrte Gautama seine Anhänger das Dharma (die Lehre) und wurde damit der Begründer des Buddhismus. Ziel des Buddhismus ist das "Nirwana", also ein Zustand, in dem es kein Leid mehr gibt und in dem der Mensch den ewigen Kreislauf von Tod und Wiederverkörperung hinter sich gelassen hat. [PARAGRAPH:2]Heute gibt es drei Hauptrichtungen des Buddhismus. Die Vajrayana-Schule lehrt, dass der Mensch die Erleuchtung durch "tantrische" Techniken, wie Yoga, Mantras (Gesänge) und andere Rituale, "beschleunigen" kann. Theravada und Mahayana sind Sutra-Schulen, die lehren, dass die Erleuchtung allein durch das Studium der Lehren Buddhas erreicht werden kann.</German>
@@ -18732,14 +18732,14 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Spanish>El budismo, con más de trescientos cincuenta millones de seguidores, es una de las religiones más importantes. Se originó en la India, y desde entonces se ha propagado por todo el subcontinente y las regiones centrales y meridionales de Asia. [PARAGRAPH:2]El budismo sigue las enseñanzas de Siddhartha Gautama, el Buda. Gautama vivió entre los años 620 y 540 a. C. El Buda ("iluminado") enseñó a sus seguidores que habían de buscar el "Dharma," la verdad. Al hacerlo alcanzarían la iluminación, y con ella, el "Nirvana", la paz perfecta que liberaría su alma del interminable ciclo de muerte y renacimiento que sufren todos los hombres. [PARAGRAPH:2]En la actualidad existen tres grandes escuelas dentro del budismo. El vajrayana cree que es posible acelerar la iluminación empleando técnicas "tántricas" como el yoga, los mantras (cánticos) y otros rituales. El theravada y el mahayana creen que la iluminación se alcanza fundamentalmente por medio del estudio de las enseñanzas del Buda.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_BUDDHISM_QUOTE</Tag>
+		<Tag>TXT_KEY_TECH_BUDDHISM_QUOTE</Tag>
 		<English>"I seek refuge in the Buddha.[NEWLINE]I seek refuge in the Dharma. I seek refuge in the Sangha" - Burmese Pali version of the Refuge Formula</English>
 		<French>"Je cherche refuge dans le Bouddha. [NEWLINE] Je cherche refuge dans le Dharma. Je cherche refuge dans la Sangha" - Version birmane pali de la formule du refuge</French>
 		<Spanish>"Busco refugio en Buda.[NEWLINE]Busco refugio en el Dharma. Busco refugio en la Sangha" - Versión en pali birmano de la fórmula de asilo</Spanish>
 		<Polish>"Buddham saranam gaccha-mi Dhammam saranam gaccha-mi Sangham saranam gaccha-mi." - Birmańska wersja formuły Pali</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_CHRISTIANITY</Tag>
+		<Tag>TXT_KEY_TECH_CHRISTIANITY</Tag>
 		<English>Christianity</English>
 		<French>
 			<Text>Christianisme</Text>
@@ -18764,7 +18764,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Chrześcijaństwo</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_CHRISTIANITY_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_TECH_CHRISTIANITY_ADJECTIVE</Tag>
 		<English>
 			<Text>Christian</Text>
 			<Gender>Male</Gender>
@@ -18789,13 +18789,13 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Chrześcijański</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_CHRISTIANITY_STRATEGY</Tag>
+		<Tag>TXT_KEY_TECH_CHRISTIANITY_STRATEGY</Tag>
 		<English>Research Christianity to found a Religion</English>
 		<French>Recherchez le Christianisme pour fonder une religion</French>
 		<Spanish>Investiga el Cristianismo para fundar una religión.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_CHRISTIANITY_PEDIA</Tag>
+		<Tag>TXT_KEY_TECH_CHRISTIANITY_PEDIA</Tag>
 		<English>Christianity is the world's largest religion. It is the dominant religion in Europe, North, Central and South America, and has made significant inroads in all other parts of the world. Christianity is based upon the teachings of Jesus Christ, whom Christians believe to have been the "son of God made flesh," brought to the world to teach men the way of salvation. Jesus lived from approximately 6 BC to 30 AD. [PARAGRAPH:2]Jesus' life and teachings are recorded in the New Testament. Born of the Virgin Mary, a Jew, the Christ lived and taught in and around present-day Palestine and Israel. According to the New Testament, he performed many miracles during his lifetime, and he taught men how to cleanse themselves from sin and thus achieve eternal happiness after death. Jesus was betrayed and crucified, but he rose from death after three days and ascended into heaven. [PARAGRAPH:2]After Christ's death, Christianity spread throughout the eastern Mediterranean. The Romans tried unsuccessfully to suppress it, but eventually they adopted Christianity as the state religion. With the might of Rome behind it, Christianity spread rapidly through the known world. When the Roman Empire fell, Christianity broke into two branches. Since then it has continued to fragment, with a number of the branches quite hostile to others. Today, the major Christian branches include Roman Catholicism, Protestantism, Orthodox Christianity, and Mormonism.</English>
 		<French>Le christianisme constitue la religion la plus répandue dans le monde. Il domine en Europe, en Amérique du Nord et en Amérique latine et s'est largement imposé dans toutes les autres régions du monde. Le christianisme repose sur les enseignements de Jésus-Christ considéré par les Chrétiens comme le "fils de Dieu fait homme" et mis au monde pour apporter le salut. Jésus a vécu d'environ 6 av. J.-C. à 30 ap. J.-C. [PARAGRAPH:2]La vie de Jésus et ses enseignements sont consignés dans le Nouveau Testament. Né d'une mère juive, la Vierge Marie, le Christ a vécu et enseigné dans la zone correspondant aujourd'hui à la Palestine et à Israël. Selon le Nouveau Testament, il a accompli de nombreux miracles au cours de sa vie et a enseigné aux hommes comment se purifier de leurs péchés et parvenir ainsi à la vie éternelle après la mort. Jésus a été trahi et crucifié, mais il est ressuscité le troisième jour et est monté au ciel [PARAGRAPH:2]Après la mort du Christ, la chrétienté s'est répandue dans toute la Méditerranée orientale. Les Romains ont tenté, sans y parvenir, de l'éradiquer, avant d'adopter finalement le christianisme comme religion d'Etat. A la chute de l'Empire romain, la chrétienté s'est scindée en deux Eglises et a continué depuis à se diviser en diverses branches relativement hostiles les unes envers les autres. Aujourd'hui, les principales Eglises chrétiennes sont le catholicisme romain, le protestantisme, la chrétienté orthodoxe et le mormonisme.</French>
 		<German>Das Christentum ist als größte Weltreligion die Hauptreligion Europas, Nord-, Mittel- und Südamerikas. Grundlage des Christentums ist die Lehre Jesus', des "fleischgewordenen Sohns Gottes", der von Maria geboren wurde, um den Menschen die Erlösung zu bringen. Jesus lebte um 6 vor bis 30 nach Christus. [PARAGRAPH:2]Sein Leben und Wirken ist im Neuen Testament festgehalten. Jesus lebte und lehrte im heutigen Palästina und Israel. Laut des Neuen Testaments vollbrachte er verschiedene Wunder und versprach den Menschen die Vergebung ihrer Sünden und die ewige Glückseligkeit. Jesus wurde von Judas Ischariot an die Römer ausgeliefert und gekreuzigt. Drei Tage nach seinem Tod stand Jesus von den Toten auf und fuhr in den Himmel auf. [PARAGRAPH:2]Nach Jesus' Tod breitete sich das Christentum im gesamten östlichen Mittelmeerraum aus. Die Römer versuchten zunächst erfolglos, die neue Religion zu unterdrücken, bis schließlich Kaiser Konstantin das Christentum zur Staatsreligion erhob. Als das Römische Reich zerfiel, kam es zu einer ersten Spaltung des Christentums. Heute sind der Katholizismus, der Protestantismus sowie das orthodoxe Christentum die wichtigsten Strömungen des Christentums.</German>
@@ -18803,14 +18803,14 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Spanish>El cristianismo es la religión más extendida del mundo. Predomina en Europa y América y tiene una importante presencia en las demás zonas del mundo. Se basa en las enseñanzas de Jesucristo, "el hijo de Dios hecho carne" para los cristianos, venido al mundo para mostrar a los hombres el camino de la salvación. Jesús vivió aproximadamente del año 6 a. C. al año 30 d. C. [PARAGRAPH:2]Su vida y sus enseñanzas se narran en el Nuevo Testamento. Nacido de la virgen María, una judía, Cristo vivió y enseñó en la zona donde hoy en día se encuentran Palestina e Israel. Según el Nuevo Testamento, durante su vida realizó numerosos milagros y enseñó a los hombres a purificarse del pecado y alcanzar la felicidad eterna tras la muerte. Jesús fue traicionado y crucificado, pero se alzó de entre los muertos tres días después y ascendió a los cielos. [PARAGRAPH:2]Tras su muerte, el cristianismo se propagó rápidamente por el Mediterráneo oriental. Los romanos trataron de reprimirlo sin mucho éxito, hasta el punto de que acabarían adoptándolo como religión de estado. Respaldado por el poder de Roma, se difundió rápidamente por todo el orbe. Tras la caída del Imperio Romano, el cristianismo se dividió en dos ramas. Desde entonces esa fragmentación se ha incrementado, y la hostilidad entre las diferentes facciones ha alcanzado cotas muy elevadas. En la actualidad, las ramas más importantes del cristianismo son el catolicismo romano, el protestantismo, el cristianismo ortodoxo y el mormonismo.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_CHRISTIANITY_QUOTE</Tag>
+		<Tag>TXT_KEY_TECH_CHRISTIANITY_QUOTE</Tag>
 		<English>"In the name of the Father, and of the Son, and of the Holy Spirit." - Opening of the Catholic Mass</English>
 		<French>"Au nom du Père, et du Fils, et du Saint-Esprit." - Ouverture de la messe catholique</French>
 		<Spanish>"En el nombre del Padre, del Hijo, y del Espíritu Santo." - Apertura de la misa católica</Spanish>
 		<Polish>"W imię Ojca, i Syna, i Ducha Świętego." - Początek modlitwy katolickiej</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_CONFUCIANISM</Tag>
+		<Tag>TXT_KEY_TECH_CONFUCIANISM</Tag>
 		<English>Confucianism</English>
 		<French>
 			<Text>Confucianisme</Text>
@@ -18835,7 +18835,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Konfucjanizm</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_CONFUCIANISM_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_TECH_CONFUCIANISM_ADJECTIVE</Tag>
 		<English>
 			<Text>Confucian</Text>
 			<Gender>Male</Gender>
@@ -18860,20 +18860,20 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Konfucjański</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_CONFUCIANISM_STRATEGY</Tag>
+		<Tag>TXT_KEY_TECH_CONFUCIANISM_STRATEGY</Tag>
 		<English>Research Confucianism to found a Religion</English>
 		<French>Recherchez Confucianisme pour fonder une religion</French>
 		<Spanish>Investiga el Confucianismo para fundar una religión.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_CONFUCIANISM_QUOTE</Tag>
+		<Tag>TXT_KEY_TECH_CONFUCIANISM_QUOTE</Tag>
 		<English>"Go before the people with your example, and be laborious in their affairs." - Confucius</English>
 		<French>"Montre au peuple l'exemple, et soyez laborieux dans leurs affaires." - Confucius</French>
 		<Spanish>"Predica con el ejemplo ante tu gente, y sé laborioso en cuanto a sus asuntos." - Confucio</Spanish>
 		<Polish>"Idź przed luźmi ze swoim przykładem, i pracowity dla ich spraw." - Konfucjusz</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_CONFUCIANISM_PEDIA</Tag>
+		<Tag>TXT_KEY_TECH_CONFUCIANISM_PEDIA</Tag>
 		<English>Confucianism is an East Asian religion based upon the teachings of Confucius. Confucius (known in Chinese as Kong Fu Zi) lived between 552 and 479 BC. Confucius lived in China during an especially turbulent period, when the country lacked central leadership and various small states fought constantly for dominance. As much a philosopher and political theorist as a religious leader, Confucius sought to teach others the correct behavior for man in society. His philosophy emphasized personal and governmental morality and strong family loyalty. He believed that each man had a place in society, and that each should behave righteously and correctly according to that place. This included the ruler, who needed to be devoted to the people rather than to personal aggrandizement. [PARAGRAPH:2]Confucianism grew in influence for the two centuries following Confucius' death, until it was rigidly suppressed during the Qin Dynasty, whose leaders saw it as a threat to their power. The Qin systematically destroyed the Confucian temples and burned all the Confucian books, including most of Confucius' writings. Virtually everything was lost, except for a cache of important books hidden in the walls of a believer's home. When these were discovered, the few remaining believers were able to rebuild and spread their religion. Eventually Confucianism became the state religion of China. It remained so until the Communists came into power in the 20th Century. [PARAGRAPH:2]Today, Confucianism is enjoying something of a revival, and many Chinese students (and students from around the world) study the great philosopher and his teachings. However, in modern times Confucianism is mostly studied as a philosophy rather than a religion (though it should be pointed out that there is no clear distinction between the two in Eastern thought).</English>
 		<French>Le confucianisme constitue une religion d'Asie du Sud-Est fondée sur les enseignements de Confucius (552 à 479 av. J.-C.). Confucius (ou Kong Fu Zi en chinois) a vécu en Chine durant une période particulièrement agitée, à l'heure où le pays avait cruellement besoin d'un pouvoir central fort et où divers petits Etats se livraient à une lutte incessante. Tout autant philosophe et théoricien politique que chef religieux, Confucius cherchait à enseigner le comportement correct de l'homme en société. Sa philosophie accordait une grande importance à la moralité personnelle et gouvernementale ainsi qu'à une loyauté familiale forte. Il considérait que tout homme avait une place dans la société et qu'il devait se comporter de façon vertueuse et bienséante en fonction de cette place. Ceci valait également pour le dirigeant, qui devait être dévoué au peuple et ne pas privilégier son avancement personnel. [PARAGRAPH:2]Le confucianisme a vu son influence grandir au cours des deux siècles ayant suivi la mort de Confucius, avant d'être complètement supprimé sous la dynastie Qin: les dirigeants le considéraient en effet comme une menace pour leur pouvoir. Les Qin ont systématiquement détruit les temples confucianistes et brûlé tous les livres sur le confucianisme, y compris la majorité des écrits de Confucius. Pratiquement tout a disparu, excepté des livres importants cachés dans les murs de la maison d'un fidèle. A leur découverte, les quelques ultimes adeptes ont pu rétablir leur religion et la répandre. Finalement, le confucianisme est devenu la religion d'Etat en Chine et l'est restée jusqu'à l'arrivée au pouvoir des Communistes au XXe siècle. [PARAGRAPH:2]Aujourd'hui, le confucianisme bénéficie d'une sorte de renouveau et de nombreux étudiants chinois (et du monde entier) étudient le grand philosophe et ses enseignements. A l'heure actuelle, il est cependant davantage étudié comme philosophie que comme religion, bien que la distinction ne soit pas nette dans la pensée orientale.</French>
 		<German>Der Konfuzianismus ist eine ostasiatische Religion, die auf den Lehren Konfuzius' basiert. Konfuzius (Chinesisch: "Kong Fu Zi") lebte um 552 bis 479 vor Christus in China, als unzählige Feudalherren um die Vorherrschaft kämpften. Konfuzius war Philosoph, Theoretiker und Glaubensstifter. Er war entschlossen, seine Mitmenschen das richtige Verhalten innerhalb der Gesellschaft zu lehren. Seine Philosophie umfasste die persönliche und die Regierungsmoral sowie die Bindungen innerhalb der Familie. In seinen Augen hatte jeder Mensch einen festen Platz innerhalb der Gesellschaft und musste sich seiner gesellschaftlichen Stellung entsprechend verhalten. Dies galt auch für den Herrscher, der laut Konfuzius in erster Linie seinem Volk Rechenschaft schuldig war. [PARAGRAPH:2]Der Konfuzianismus gewann in den Jahrhunderten nach Konfuzius' Tod an Einfluss, bis er während der Qin-Dynastie unterdrückt wurde. Die Qin-Herrscher zerstörten systematisch alle konfuzianischen Tempel und verbrannten nahezu alle konfuzianischen Schriften. Mit Ausnahme einiger wichtiger (in den Mauern des Hauses eines Anhängers der konfuzianischen Lehre versteckter) Bücher wurden alle Schriften vernichtet. Dank dieser Bücher konnten die wenigen überlebenden Anhänger ihre Religion erneuern und erneut verbreiten. Später war der Konfuzianismus in China (bis zur Machtergreifung der Kommunisten) sogar Staatsreligion. [PARAGRAPH:2]Heute erlebt der Konfuzianismus eine kleine Renaissance. Viele (nicht nur chinesische) Studenten studieren den großen Philosophen und seine Lehren. Allerdings gilt Konfuzius heute eher als Philosoph denn als Religionsstifter.</German>
@@ -18881,7 +18881,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Spanish>El confucianismo es una religión del Lejano Oriente basada en las enseñanzas de Confucio, (conocido en chino como Kong Fu Zi), que vivió entre el 552 y el 479 a. C. En aquel tiempo, China vivía un periodo especialmente turbulento, sin un liderazgo central y disputada por varios estados menores. Confucio, filósofo y teórico político además de líder religioso, incluyó entre sus enseñanzas un importante componente ético. Su filosofía subrayaba especialmente la moralidad personal y gubernamental, así como la importancia de los lazos familiares. Para él, cada hombre tenía un lugar en la sociedad, y debía comportarse con rectitud y corrección en función de ese lugar. Esto también se aplicaba al gobernante, quien debía actuar por el bien del pueblo, y no por el suyo propio. [PARAGRAPH:2]La influencia del confucianismo fue aumentando durante los dos siglos posteriores a la muerte de su creador, hasta que fue severamente reprimido por la dinastía Qin, cuyos líderes lo consideraban una amenaza para su poder. Los Qin destruyeron sistemáticamente los templos confucionistas y quemaron todos sus libros, incluida la mayor parte de las escrituras del propio Confucio. Todo se perdió, salvo algunos libros importantes que quedaron escondidos en la pared de la casa de uno de sus seguidores. Cuando fueron descubiertos, los fieles supervivientes pudieron reconstruir y difundir de nuevo su religión. Con el tiempo, el confucianismo acabó por convertirse en la religión oficial en China. Siguió siéndolo hasta que los comunistas se hicieron con el poder en el siglo XX. [PARAGRAPH:2]En la actualidad, el confucianismo vive una especie de renacimiento, y muchos chinos (y gente de todo el mundo) estudian al gran filósofo y sus enseñanzas. No obstante, se estudia más como una filosofía que como una religión (aunque debe señalarse que en Oriente no hay una distinción clara entre ambos conceptos).</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_EGYPT_MYTHOLOGY</Tag>
+		<Tag>TXT_KEY_TECH_KEMETISM</Tag>
 		<English>Kemetism</English>
 		<French>Kémétisme</French>
 		<German>Kemetismus</German>
@@ -18894,13 +18894,13 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Kemetyzm</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_EGYPT_MYTHOLOGY_STRATEGY</Tag>
+		<Tag>TXT_KEY_TECH_KEMETISM_STRATEGY</Tag>
 		<English>Research Kemetism to found a Religion</English>
 		<French>Recherchez Kémétisme pour fonder une religion</French>
 		<Spanish>Investiga el Kemetismo para fundar una religión.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_EGYPT_MYTH_PEDIA</Tag>
+		<Tag>TXT_KEY_TECH_KEMETISM_PEDIA</Tag>
 		<English>The ancient Egyptian religion was not really a religion at all in the way that we would think of it, but an overlapping set of cults and rituals that together shared a common worldview. There was no unifying theology or set of canonical writings to the Egyptian religion. Instead, the religion was based upon a series of ritual interactions between the gods and their followers, the Egyptian priests, which had developed over a long period of time. This religion was very old, and dates back to at least 3000BC but possibly even earlier. Ancient Egyptian religion was a mixture of science, law, and philosophy acting together within the same framework; it would have been impossible for an Egyptian to stand outside of the religion. [PARAGRAPH:2:1]According to Egyptian mythology, before creation there was only the sea. The sun-god Re (or Ra) came from out of an egg, and the other gods were born from him who went on to become the sky, the earth, the land of the dead, etc. The most important myth in the Egyptian religion told the story of the murder and rebirth of Osiris, and the revenge gained by his son Horus on his murderer. The story not only explained the cycle of nature, but also served to highlight the importance of the sacred kingship for Egypt. As the legend suggests, Egyptian religion was polytheistic in nature and had as many as 80 major gods and goddesses. The Egyptian gods were mostly human in form, but some also took the form of animals, and others combined aspects of both, such as a human with the head of a jackal. An unusual feature of the Egyptian religion was that the gods were thought to need food and drink just like humans, which were provided by priests in daily rituals located in the temples of the gods. The statue of the deity, known as an image, would be bathed and fed multiple times daily by the priests in sacred rituals. In return for this care, the gods would watch over and protect the Egyptians from harm. [PARAGRAPH:2:1]State and religion were inextricably bound together in ancient Egypt. The pharaoh was considered to be not only the highest priest in the Egyptian religion, but also a living god on earth. Although it was the priests and not pharaoh who performed most of the religious ceremonies, his power was unquestioned, and massive temples that required enormous amounts of labor were built in order to serve as the final resting places of these rulers. As mentioned earlier, the Egyptian religion was a cult in which the ordinary people were not allowed to participate, beyond taking part in public festivals. There were many small shrines across Egypt that may have been frequented by the people, but the main cult was strictly off-limits and access to the major temples severely curtailed. [PARAGRAPH:2:1]In the last few centuries before the Roman conquest of Egypt, the religion began to be influenced by foreign deities. A number of different variations developed based on Hellenic practices, further complicating the already heterogeneous religion. The traditional Egyptian religion vanished later on in the wake of Christianity and Islam, and is a dead religion today.</English>
 		<French>L'ancien culte égyptien n'est pas exactement une religion à proprement parler. C'est plutôt un enchevêtrement de croyances et rituels partageant une même conception du monde, mais il n'existe pas de théologie unificatrice ou d'écritures canoniques: la religion s'appuie sur une série d'interactions rituelles entre les dieux et leurs disciples, les prêtres égyptiens, interactions développées sur une très longue période. Cette religion est très ancienne, certains de ses principes remontent à au moins 3000 av. J.-C., alors que d'autres sont apparus par la suite. Le culte associe les influences de la science, de la loi et de la philosophie dans un même cadre. Il est impossible pour un Egyptien de se soustraire à l'influence de la religion. [PARAGRAPH:2:1]Selon la mythologie égyptienne, avant la création il n'y avait que la mer. Le dieu soleil Re (or Ra) est sorti d'un oeuf et a engendré les autres dieux. Ces dieux sont devenus le ciel, la terre, le monde des morts et ainsi de suite. La plus importante légende de la mythologie égyptienne raconte l'histoire du meurtre et de la renaissance d'Osiris, dieu du monde des morts, et la vengeance contre son assassin accomplie par son fils Horus. L'histoire ne permet pas seulement d'expliquer le cycle de la nature, elle sert aussi à mettre en lumière l'importance d'une royauté sacrée en Egypte. Les Egyptiens ne vénèrent pas moins de 80 principaux dieux ou déesses. La plupart des dieux égyptiens ont forme humaine, mais certains ont l'apparence d'un animal et d'autres combinent les deux formes, tels qu'un humain avec une tête de faucon. L'un des aspects particuliers de cette religion est la croyance en des dieux animés de besoins vitaux et ayant besoin de se nourrir et s'abreuver comme les humains. Boisson et nourriture leur sont servies par les prêtres à l'occasion de rituels quotidiens dans les temples des dieux. La statue du dieu, appelée "image", est baignée et nourrie plusieurs fois par jour par les prêtres avec des rituels sacrés. En récompense de cette attention, les dieux protégent les Egyptiens. [PARAGRAPH:2:1]L'état et la religion sont étroitement liés dans l'ancienne Egypte. Le pharaon n'est pas seulement considéré comme le premier des prêtres, mais aussi comme un dieu vivant. Même si la plupart des cérémonies religieuses se déroulent sous la responsabilité des prêtres et non du pharaon, l'autorité de celui-ci n'est pas remise en question et de gigantesques tombeaux requérant une force de travail fabuleuse sont édifiés comme dernières demeures pour ces rois. La religion égyptienne est un culte auquel le commun des mortels n'a pas le droit de participer, en dehors des célébrations publiques. Certes, l'Egypte compte de nombreux petits sanctuaires qui peuvent être fréquentés par le peuple, mais le culte central est strictement interdit et l'accès aux temples très restreint. [PARAGRAPH:2:1]Durant les derniers siècles avant la conquête romaine de l'Egypte, la religion commence à subir l'influence de divinités étrangères. Un certain nombre de variantes se développent à partir de pratiques helléniques, compliquant encore un culte déjà très hétérogène. Et, comme ce sera le cas pour de nombreux autres cultes anciens, l'émergence du Christianisme et de l'Islam scelle le sort final de la religion égyptienne.</French>
 		<German>Der altägyptische Glaube war nach heutigem Verständnis nicht wirklich eine Religion, sondern eine Mischung aus Kulten und Ritualen, kombiniert mit einer gemeinschaftlichen Weltanschauung. Es gab weder eine einheitliche theologische Lehre noch kanonische Schriften zur ägyptischen Religion. Vielmehr basierte sie auf einem vielfältigen rituellen Zusammenspiel zwischen den Göttern und ihren Anhängern, den ägyptischen Priestern, das sich über einen sehr langen Zeitraum hinweg entwickelt hatte. Diese ägyptische Glaubensform datiert mindestens auf das Jahr 3000 vor Christus zurück, wenn nicht sogar noch früher. Sie repräsentierte eine Mischung aus Wissenschaft, Gesetzgebung und Philosophie, die gemeinschaftlich im gleichen Rahmensystem angewandt wurden. Für einen Ägypter wäre es somit unmöglich gewesen, die Religion außen vor zu lassen. [PARAGRAPH:2:1]Gemäß der ägyptischen Mythologie existierte vor der eigentlichen Schöpfung ausschließlich das Meer. Der Sonnengott Ra (auch Re genannt) soll einem Ei entschlüpft sein und die anderen Götter geboren haben, die dann zu Himmel, Erde, dem Reich der Toten etc. geworden sein sollen. Der wichtigste Mythos der ägyptischen Religion beschreibt den Mord an Osiris, seine Wiedererweckung sowie die Rache, die sein Sohn Horus an seinem Mörder nahm. Diese Geschichte erklärte nicht nur den Lauf der Natur, sondern diente auch der Hervorhebung der Bedeutung der königlichen Herrschaft für Ägypten. Laut der Überlieferungen war die ägyptische Religion polytheistisch und an sage und schreibe 80 bedeutenden Göttern und Göttinnen orientiert. Diese waren zumeist menschlicher Gestalt, manche nahmen jedoch auch Tiergestalt an und andere erschienen in einer Kombination aus beidem, zum Beispiel mit einem menschlichen Körper und dem Kopf eines Schakals. Ein ungewöhnliches Merkmal der ägyptischen Religion war die Annahme, dass die Götter wie die Menschen Nahrung und Getränke brauchten, welche die Priester ihnen tagtäglich in den Tempeln darboten: Die Statue der Gottheit, das so genannte Abbild, wurde im Rahmen der von den Priestern abgehaltenen geheiligten Rituale gebadet, gesalbt und mehrfach am Tag verköstigt, damit die Götter über die Ägypter wachen und Schaden von ihnen fernhalten mochten. [PARAGRAPH:2:1]Staat und Religion waren in der Antike in Ägypten untrennbar miteinander verbunden. Der Pharao wurde nicht nur als Hohepriester der ägyptischen Religion betrachtet, sondern auch als die Personifizierung eines Gottes. Obwohl es die Priester waren, die den größten Teil der religiösen Zeremonien abhielten, und nicht der Pharao, war dessen Macht unumstritten. Aus diesem Grund wurde ihm auch in einem ungeheuren Arbeitsaufwand ein massiver Tempel als letzte Ruhestätte errichtet. Wie bereits erwähnt, war die ägyptische Religion eher eine Art Kult, an dem die "normale" Bevölkerung, abgesehen von den öffentlichen Veranstaltungen, normalerweise nicht teilhaben durfte. Trotzdem gab es in ganz Ägypten viele kleine Schreine, die möglicherweise auch vom gemeinen Volk besucht wurden, doch der Hauptkult war tabu und der Zutritt zu den bedeutenden Tempeln stark eingeschränkt. [PARAGRAPH:2:1]In den letzten Jahrhunderten vor der Eroberung Ägyptens durch die Römer wurde die ägyptische Religion zunehmend von fremdländischen Gottheiten beeinflusst. Es entwickelten sich verschiedene Varianten, die vor allem auf den Praktiken der alten Griechen gründeten, wodurch sich die Struktur dieser ohnehin schon heterogenen Glaubensrichtung noch weiter verkomplizierte. Mit dem Aufkommen des Christentums und des Islams verschwand die traditionelle ägyptische Religion später immer mehr aus dem Blickfeld und ist heute gänzlich erloschen.</German>
@@ -18909,14 +18909,14 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Dużą rolę w życiu Egipcjan odgrywały wierzenia religijne. Egipcjanie wierzyli w wielu bogów (politeizm). Czczono głównie siły przyrody. Szczególnym kultem otaczano Nil i Słońce. Licznym bóstwom przydawano postacie ludzkie z głowami zwierzęcymi (Horus z głową sokoła, Chnum z głową barana). Wierzono, że bóstwa przebywać mogą w ciele świętych zwierząt, za jakie uważano czarnego byka, zwanego Apisem, a także m.in. krokodyle, ibisy, jastrzębie i koty. Ku czci bogów wznoszono gigantyczne kamienne świątynie, którymi opiekowali się kapłani, gromadzący w nich wielkie bogactwa. Kapłani, obok faraonów, stanowili również istotny czynnik w sprawowaniu władzy, a nierzadko to właśnie oni tak naprawdę rządzili w kraju. Posiadłszy wiedzę o zjawiskach przyrody, wprowadzili podział roku na 12 miesięcy i 365 dni (zobacz: kalendarz egipski), potrafili przewidzieć zaćmienie Słońca i wylewy Nilu, kierowali pracami nawadniającymi i budowlanymi.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_EGYPT_MYTHOLOGY_QUOTE</Tag>
+		<Tag>TXT_KEY_TECH_KEMETISM_QUOTE</Tag>
 		<English>May the sun in heaven be favourable to thee; may he cause the two lords to be favourable to thee.[NEWLINE]May the night be favourable to thee; may the two ladies be favourable to thee.[NEWLINE]Utterance 44 of The Pyramid Texts (found at sacred-texts.com)</English>
 		<French>Que le soleil dans le ciel te soit favorable, qu'il implore les deux Seigneurs de t'être favorables.[NEWLINE]Que la lune te soit favorable, qu'elle implore les deux Dames de t'être favorables.[NEWLINE]Enonciation 44 des Textes des Pyramides (trouvé sur sacred-texts.com)</French>
 		<Spanish>Puede que el sol que hay en el cielo esté a tu favor; puede que él haga que los dos señores estén a tu favor.[NEWLINE]Puede que la noche esté a tu favor; puede que las dos señoras estén a tu favor.[NEWLINE]Utterance 44 of The Pyramid Texts (encontrado en sacred-texts.com)</Spanish>
 		<Polish>W wierzeniach egipskich ludzka dusza istnieje również po śmierci ciała. W celu zachowania tożsamości w istnieniu po śmierci, ciało było balsamowane i mumifikowane. Ciała były tymczasowo umieszczane w trzcinowych trumnach w bardzo gorącym piasku, co szybko wysuszało zwłoki i zapobiegało rozkładowi. Później następował pogrzeb. W późniejszych czasach zaczęły powstawać drewniane groby, rytuały i reguły pochówku były rozbudowywane, komplikował się sposób mumifikacji. Balsamowanie zostało wynalezione w okresie Czwartej Dynastii. Usuwano wszystkie miękkie tkanki, a powstałe miejsca wypełniano natronem.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_HELLENISM</Tag>
+		<Tag>TXT_KEY_TECH_HELLENISM</Tag>
 		<English>Hellenism</English>
 		<French>
 			<Text>Hellénisme</Text>
@@ -18941,7 +18941,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Hellenizm</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_HELLENISM_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_TECH_HELLENISM_ADJECTIVE</Tag>
 		<English>Hellenistic</English>
 		<French>Helléniste</French>
 		<German>Hellenistisch</German>
@@ -18954,13 +18954,13 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Helleński</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_HELLENISM_STRATEGY</Tag>
+		<Tag>TXT_KEY_TECH_HELLENISM_STRATEGY</Tag>
 		<English>Research Hellenism to found a Religion</English>
 		<French>Recherchez Hellenisme pour fonder une religion</French>
 		<Spanish>Investiga el Helenismo para fundar una religión.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_HELLENISM_PEDIA</Tag>
+		<Tag>TXT_KEY_TECH_HELLENISM_PEDIA</Tag>
 		<English>The Hellenic religion, also referred to as Greek mythology, comprises an enormous body of stories about gods, goddesses, and heroes. These stories date back many centuries, preserved in pre-literate Greece through oral tradition. The Hellenic religion was polytheistic in nature, with innumerable local nature deities in addition to the major Olympian gods and goddesses. The Greek gods were human in form but possessed supernatural powers; they were born from other gods but never aged, they were immortal, could travel enormous distances instantly, speak through humans with or without their knowledge, etc. Some gods were the personified aspects of natural forces (for example, Helios was literally the god of the sun) while others had complex personalities and multiple functions associated with them (Apollo is probably the best example). [PARAGRAPH:1]The gods and goddesses were all related to one another as part of one large family, but there were clear generations of gods, and their interactions with each other were sometimes violent. For example, the Olympian gods had reached their place of dominance by casting out an earlier generation of gods and goddesses known as the Titans. This may be a mythical reflection of the struggle between the Greeks and the earlier culture that they displaced when arriving in the Peloponnesus around roughly 1000 BC. [PARAGRAPH:1]In addition to stories about gods, the Hellenic religion was also full of great sagas about the deeds of heroes, many of whom possessed a divine parent. Stories abound about figures such as Heracles, Perseus, Jason, and the characters of the Iliad. These humans frequently interacted with gods and even bested them at times. Many of the heroes were held in great esteem by the Greeks, especially "noble" characters such as Achilles. [PARAGRAPH:1]Although some of the well-educated Greeks had their doubts about the existence of the gods, the vast majority of Greeks did not question the validity of the stories. The Greeks used their religion to explain the doings of the natural world and their own origins; it was a source of pride to trace one's lineage or the founding of one's city to the actions of a god. [PARAGRAPH:1]Archaeology and linguistic analysis suggests that the Hellenic religion was heavily influenced by other religions. For example, the Greek Zeus, Roman Jupiter, Germanic Tyr, and Sanskrit Dyaus are all sky gods that share a common Indo-European origin sometime in the distant past. Other gods were borrowed or influenced from Near Eastern religions; Aphrodite possessed a very similar function to the Semitic goddesses Ishtar and Astarte. During the Hellenic period and afterwards, the Greek religion spread across much of the Mediterranean and Near East, influencing many of the previously existing religions and giving rise to new syncretistic mystery cults. Although the Hellenic religion is no longer followed, it continues to provide inspiration for artists throughout the world.</English>
 		<French>La religion hellénique, à laquelle on fait le plus souvent référence sous l'appellation de mythologie grecque, comprend un grand nombre de légendes sur les dieux, déesses et héros. Certaines de ces légendes remontent à plusieurs siècles, ayant été transmises par la tradition orale. La religion hellénique est polythéiste, avec d'innombrables divinités locales de la nature en plus des principaux dieux du panthéon olympien. Les dieux grecs ont forme humaine mais possèdent des pouvoirs surnaturels, ont été engendrés par d'autres dieux mais ne vieillissent pas, ils sont immortels, peuvent voyager sur de très grandes distances instantanément, parler à travers les humains (parfois sans même que ceux-ci s'en aperçoivent), etc. Certains dieux sont les personnifications des forces de la nature (Hélios étant littéralement le dieu du soleil) alors que d'autres ont des personnalités complexes et sont associés à de multiples fonctions (Apollon en étant le meilleur exemple). [PARAGRAPH:1]Dieux et déesses sont tous parents d'une même grande famille, mais il existe des générations distinctes de dieux, et leurs interactions sont parfois très violentes. Le fait est que les dieux olympiens n'occupent leur position dominante qu'après avoir chassé une première génération de dieux appelés les Titans. Cela reflète sans doute le chevauchement culturel mythologique existant entre les Grecs et la civilisation précédente, chassée à leur arrivée dans le Péloponnèse aux alentours de 1000 av. J.-C.. [PARAGRAPH:1]Outre de nombreuses légendes sur les dieux, la tradition orale hellénique est riche de grandes sagas relatant les hauts faits de héros humains, dont un certain nombre ont une ascendance divine. On pense notamment aux légendes d'Héraclès, de Persée, de Jason et des personnages de l'Iliade. Ces mortels entrent souvent en conflit avec des dieux et en triomphent parfois. Nombre d'entre eux, surtout s'ils sont nobles et puissants comme Achille, sont tenus en haute estime par les Grecs. [PARAGRAPH:1] Même si certains des Grecs éduqués entretiennent quelques doutes à propos de la réalité dessinée par la religion hellénique, la grande majorité de la population accepte sans réserve la mythologie comme seule vérité. Les Grecs s'appuient sur leur religion pour expliquer les phénomènes naturels et leurs propres origines, et c'est une source de grande fierté que de pouvoir associer une lignée ou la fondation d'une cité aux actions d'un dieu.[PARAGRAPH:1] Les résultats des recherches archéologiques et linguistiques laissent penser que la religion hellénique a été très influencée par d'autres religions. C'est ainsi que le dieu grec Zeus, le dieu romain Jupiter, le dieu germain Tyr et le dieu sanskrit Dyaus sont tous des dieux du ciel, et il est probable qu'ils partagent tous une même lointaine origine indo-européenne. Les Grecs empruntent librement des dieux à d'autres cultes du Proche-Orient, c'est ainsi qu'Aphrodite a des fonctions très proches de celles des déesses sémites Ishtar et Astarté. Au cours de l'époque hellénique et par la suite, la religion grecque se répand à travers la plus grande partie de la Méditerranée et du Proche-Orient, influençant nombre des cultes déjà existants et donnant naissance à de nouveaux cultes syncrétistes. Bien que la religion grecque ne soit plus pratiquée de nos jours, ses mythologies continuent d'enflammer les imaginations et d'illuminer les esprits.</French>
 		<German>Die hellenistische Religion der Antike, auch als griechische Mythologie bezeichnet, umfasste einen enormen Fundus an Götter- und Heldensagen. Diese Geschichten datieren viele Jahrhunderte zurück und blieben in der präliterarischen Zeit durch mündliche Überlieferung erhalten. Der hellenistische Glaube war angesichts der vielen Götter und Göttinnen des Olymps sowie zahlloser regionaler Naturgottheiten extrem polytheistisch geprägt. Die griechischen Götter wurden in der Regel in menschlicher Form dargestellt, besaßen allerdings übernatürliche Kräfte. Sie wurden von anderen Gottheiten geboren, alterten nicht, waren unsterblich, konnten im Nu enorme Entfernungen überwinden, sprachen durch die Menschen (mit oder ohne deren Wissen) etc. Einige Götter verkörperten Naturgewalten (zum Beispiel war Helios im wörtlichen Sinne der Gott der Sonne), während andere komplexe Persönlichkeitsstrukturen aufwiesen und zahlreiche Funktionen wahrnahmen (zum Beispiel Apollon). [PARAGRAPH:1]Als Teil einer großen Familie waren die Götter und Göttinnen alle irgendwie miteinander verwandt, aber es gab eine klare Generationeneinteilung und manchmal bekämpften sie sich auch gegenseitig. Zum Beispiel sollen die Götter des Olymps ihre Vorherrschaft durch den Sturz der vorangehenden Göttergeneration, der so genannten Titanen, gesichert haben. Hierbei könnte es sich um eine mythische Darstellung der kulturellen Überschneidung zwischen den Griechen und der früheren Population in dieser Region handeln, die sie bei der Ankunft auf dem Peleponnes um 1000 vor Christus vertrieben hatten. [PARAGRAPH:1]Neben den vielen Göttergeschichten wurde die griechische Religion auch von zahlreichen grandiosen Sagen über die Abenteuer verschiedener Helden beeinflusst, von denen viele zumindest ein göttliches Elternteil besaßen. Die Erzählungen handelten von heldenhaften Persönlichkeiten wie Herakles, Perseus, Jason sowie den Charakteren der Ilias und inspirierten viele griechische Künstler späterer Generationen. Diese Helden in Menschengestalt kamen häufig mit den Göttern in Kontakt, übertrumpften sie bisweilen sogar und wurden von den Griechen meist hoch geschätzt, insbesondere so ehrenhafte Persönlichkeiten wie zum Beispiel Achilles. [PARAGRAPH:1]Einige der griechischen Gelehrten hatten durchaus Zweifel an dem Wahrheitsgehalt der griechischen Mythologie, dennoch stellte der überwiegende Teil der Bevölkerung die Stichhaltigkeit der überlieferten Legenden nicht in Frage. Die Griechen nutzten ihre Religion, um natürliche Vorgänge und auch ihren eigenen Ursprung zu erklären. Man war stolz darauf, wenn man seine eigene Herkunft oder die Gründung seiner Heimatstadt auf das Einwirken eines Gottes zurückführen konnte. [PARAGRAPH:1]Archäologische und sprachliche Untersuchungen haben ergeben, dass die griechische Religion stark von anderen Religionen beeinflusst war. Zum Beispiel stellen der griechische Gott Zeus, der römische Gott Jupiter, der germanische Gott Tyr und der Sanskrit-Gott Dyaus allesamt Himmelsgötter dar, die irgendwann in der fernen Vergangenheit einen gemeinsamen indo-europäischen Ursprung hatten. Andere Götter wurden von den Religionen im Nahen Osten "ausgeborgt" oder zumindest beeinflusst: Aphrodite besaß frappierend ähnliche Eigenschaften und Funktionen wie die semitischen Göttinnen Ishtar und Astarte. Während der hellenischen Periode und auch danach kam es zu einer starken Verbreitung der griechischen Mythologie über große Teile des Mittelmeerraums und des Nahen Ostens. Sie beeinflusste viele der bereits existierenden Religionen und ebnete den Weg für die Entstehung neuer synkretistischer Mysterienkulte. Obwohl die griechische Religion des hellenistischen Zeitalters heute nicht mehr in dieser Form praktiziert wird, lassen sich auch heute noch Künstler in aller Welt von ihr inspirieren.</German>
@@ -18969,14 +18969,14 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Religia helleńska, zwana również mitologią grecką, składa się z bardzo licznych opowieści na tematy bogów, bogiń oraz bohaterów. Opowieści te datowane są zwykle na wiele stuleci wstecz, a zachowane zostały dzięki przekazowi ustnemu powszechnemu w Grecji przed epoką literacką. Wierzenia te były politeistyczne w swej naturze, zawierały niezliczoną ilość bóstw lokalnych jak również bogów i boginie powszechnie czczone, a które miały mieć swoją siedzibę na górze Olimp. Bogowie greccy przypominali ludzi w swym wyglądzie, jednakże dysponowali nadnaturalnymi mocami; sami byli potomkami innych bogów, jednakże nigdy się nie starzeli, byli nieśmiertelni, ponadto mogli przemieszczać natychmiast na bardzo duże odległości, przemawiać prze ludzi za ich wiedzą, lub bez niej itp. Niektórzy bogowie stanowili spersonifikowane siły natury (np. Helios był uważany za boga Słońca), podczas gdy inni dysponowali niekiedy bardzo złożoną osobowością i spełniali szereg różnych funkcji (najlepszym przykładem jest chyba tutaj Apollo). [PARAGRAPH:1]Wszyscy bogowie i boginie byli ze sobą spokrewnieni, przy czym można było wyróżnić poszczególne generacje bogów, zaś współżycie pomiędzy nimi w obrębie tej wielkiej, boskiej rodziny nie zawsze wolne było od waśni. Dla przykładu bogowie Olimpu osiągnęli swój dominujący status dzięki wyparciu poprzedniej generacji bogów, znanych jako Tytani. Możliwe że była to nawet swoista refleksja mitologiczna nad faktem walki, jaka toczyła się między Grekami oraz ludami zamieszkującymi półwysep Peloponeski w chwili ich przybycia ok. roku 1000 p.n.e. [PARAGRAPH:1]Obok opowieści traktujących o perypetiach bogów, mitologia grecka pełna jest wielki sag wychwalających wyczyny bohaterów, spośród których liczni legitymowali się boskim pochodzeniem. Opowiadania obfitują w relacje na temat wyczynów Heraklesa, Perseusza, Jazona oraz bohaterów spod Troi. Ci bohaterowie często obcowali z bogami, a nawet przewyższali ich w niektórych sytuacjach. Wielu spośród herosów cieszyło się wielkim poważaniem wśród Greków, szczególnie ci najbardziej "szlachetni", jak Achilles. [PARAGRAPH:1]Pomimo faktu, że przynajmniej część spośród dobrze wykształconych Greków poddawała w wątpliwość istnienie bogów, to jednak zdecydowana większość nie kwestionowała prawdziwości mitów. Grecy wykorzystywali mity w celu wyjaśnienia zjawisk naturalnych oraz własnego pochodzenia; źródłem wielkiej dumy była możliwość wywodzenia własnego rodu, czy też początków jakiegoś miasta z działania boskiego. [PARAGRAPH:1]Odkrycia archeologiczne oraz badania lingwistyczne sugerują, że mitologia grecka znajdowała się pod przemożnym wpływem innych wierzeń. Dla przykładu bogowie tacy jak grecki Zeus, rzymski Jowisz, nordycki Tyr oraz sanskrycki Djaus, wszyscy są bogami związanymi z niebem i dzielą wspólne, indoeuropejskie pochodzenie w odległej przeszłości. Inni bogowie byli często zapożyczani z religii bliskowschodnich, bądź też posiadają w nich swoich odpowiedników; Afrodyta legitymuje się cechami bardzo przypominającymi semickie boginie Isztar oraz Asztarte. W okresie helleńskim i krótko po nim, religia helleńska rozprzestrzeniła się na znacznych obszarach w basenie Morza Śródziemnego oraz na Bliskim Wschodzie, wywierając duży wpływ na wcześniej istniejące na tych terenach wierzenia a przez to przyczyniając się do powstawania nowych religii synkretycznych. Pomimo faktu że nikt już nie wierzy w prawdziwość mitologii greckiej, to wciąż stanowi ona inspirację dla artystów z całego świata.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_HELLENISM_QUOTE</Tag>
+		<Tag>TXT_KEY_TECH_HELLENISM_QUOTE</Tag>
 		<English>"All men's souls are immortal, but the souls of the righteous are immortal and divine." - Socrates</English>
 		<French>"Toutes les âmes des hommes sont immortelles, mais les âmes des justes sont immortelles et divines." - Socrates</French>
 		<Spanish>"Las almas de todos los hombres son inmortales, pero las almas de los virtuosos son inmortales y divinas." - Sócrates</Spanish>
 		<Polish>"Duszy wszystkich ludzi są nieśmiertelne, ale dusze ludzi prawych są nieśmiertelne i ubustwione." - Sokrates</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_HINDUISM</Tag>
+		<Tag>TXT_KEY_TECH_HINDUISM</Tag>
 		<English>Hinduism</English>
 		<French>
 			<Text>Hindouisme</Text>
@@ -19001,7 +19001,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Hinduizm</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_HINDUISM_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_TECH_HINDUISM_ADJECTIVE</Tag>
 		<English>
 			<Text>Hindu</Text>
 			<Gender>Male</Gender>
@@ -19026,13 +19026,13 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>hinduski</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_HINDUISM_STRATEGY</Tag>
+		<Tag>TXT_KEY_TECH_HINDUISM_STRATEGY</Tag>
 		<English>Research Hinduism to found a Religion</English>
 		<French>Recherchez Hindouisme pour fonder une religion</French>
 		<Spanish>Investiga el Hinduísmo para fundar una religión.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_HINDUISM_PEDIA</Tag>
+		<Tag>TXT_KEY_TECH_HINDUISM_PEDIA</Tag>
 		<English>Hinduism is considered to be the oldest religion still in practice. Its roots can be traced back to the Rig-Veda, a collection of over 1000 religious hymns written about 3500 years ago in Sanskrit. Today Hinduism has approximately one billion followers, most concentrated in the Indian subcontinent. [PARAGRAPH:2]Hinduism believes that man needs to strive for self-realization in order to once again become part of the Ultimate Reality, which is God. All things are God - each man suffers only because he has forgotten that. Until he remembers, his soul remains in bondage, and he must suffer the eternal cycle of death and rebirth into this world. [PARAGRAPH:2]Perhaps the most interesting part of Hindu thought is that there is no one true path to self-realization. Any kind of spiritual practice followed with faith and love will lead one to this enlightenment. Hindus have a rich pantheon of deities, all of whom are but a different aspect of the one God. Many contemporary Hindus believe in a Holy Trinity, consisting of Brahma the Creator, Vishnu the Preserver, and Shiva the Destroyer - all are equal, all are faces of the One. Other Hindus have different interpretations, some citing one god as God and others as subordinates. [PARAGRAPH:2]Despite these differences, there is little conflict between the various schools of thought. For, as Krishna, avatar of Vishnu, said, "Whatever deity or form a devotee worships, I make his faith steady." </English>
 		<French>L'hindouisme est considéré comme la plus ancienne religion encore pratiquée. Ses racines remontent au Rigveda, qui recueille plus de 1000 hymnes religieux écrits en sanskrit il y a environ 3500 ans. Aujourd'hui, l'hindouisme compte à peu près un milliard d'adeptes, essentiellement concentrés sur le sous-continent indien. [PARAGRAPH:2]Selon la foi hindoue, l'homme doit rechercher la réalisation de soi afin de devenir à nouveau une part de la Réalité Ultime, qui représente Dieu. Dieu existe en toute chose et si les hommes souffrent, c'est parce qu'ils ont oublié cette vérité. Leur âme reste esclave et ils doivent supporter le cycle éternel de la mort et de la renaissance dans ce monde tant qu'ils ne se souviennent pas de cette vérité. [PARAGRAPH:2]La caractéristique sans doute la plus intéressante de la pensée hindoue tient au fait qu'il n'existe pas de voie unique d'accomplissement de soi. Toute pratique spirituelle accompagnée de foi et d'amour permet d'y parvenir. Les Hindous vénèrent de nombreuses divinités qui représentent toutes un aspect particulier du même Dieu. De nombreux Hindous contemporains croient en une trinité hindoue (Trimurti) constituée du créateur Brahma, du conservateur Vishnou et du destructeur Shiva qui sont tous égaux et représentent les diverses faces de l'Un, le dieu suprême. D'autres Hindous ont des interprétations divergentes, certains considérant l'un des dieux comme Dieu et les autres comme ses subalternes. [PARAGRAPH:2]Malgré ces différences, les conflits entre ces différentes écoles de pensées sont limités. En effet, comme l'indique Krishna, avatar de Vishnou, "Quelle que soit la divinité ou la forme vénérée par un dévot, je rends sa foi infaillible."</French>
 		<German>Der Hinduismus gehört zu den ältesten Religionen der Welt. Seine Wurzeln reichen zurück bis zum Rig-Veda, einer vor mehr als 3500 Jahren in Sanskrit verfassten, über 1000 Hymnen umfassenden, Hymnensammlung. Heute hat der Hinduismus (vor allem auf dem indischen Subkontinent) etwa eine Milliarde Anhänger. [PARAGRAPH:2]Der Hinduismus besagt, dass der Mensch nach der Selbstverwirklichung streben muss, um erneut Teil der ultimativen Realität zu werden, die Gott darstellt. Alle Dinge sind Gott, und der Mensch leidet nur, weil er das vergessen hat. Bis er sich daran erinnert, bleibt seine Seele gefesselt und er muss den ewigen Kreislauf von Tod und Wiedergeburt durchleben. [PARAGRAPH:2]Der vielleicht interessanteste Aspekt der hinduistischen Lehre ist die Tatsache, dass es nicht nur einen Weg zur Erleuchtung gibt. Jede aufrichtige spirituelle Übung führt letztlich zur Erleuchtung. Der Hinduismus kennt verschiedene Götter, die wiederum einzelne Aspekte des einen Gottes verkörpern. Viele moderne Hindus glauben an eine Heilige Dreifaltigkeit aus Brahma (dem Schöpfer), Vishnu (dem Bewahrer) und Shiva (dem Zerstörer). Diese drei Götter, so die Lehre, sind gleichberechtigt und stehen für die verschiedenen Gesichter des einen Gottes. Allerdings gibt es auch noch andere Interpretationen, nach denen alle Götter dem einen Gott untergeordnet sind. [PARAGRAPH:2]Trotz unterschiedlicher Ansichten gibt es zwischen den verschiedenen Glaubensschulen kaum Konflikte, denn egal, "welche Gottheit ein Gläubiger auch anbetet, sorge ich (Krishna) dafür, dass sein Glaube standhaft bleibt."</German>
@@ -19040,14 +19040,14 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Spanish>El hinduismo se considera la más antigua de las religiones vivas. Sus raíces se remontan al Rig-Veda, una colección de aproximadamente mil himnos religiosos escritos hace unos 3.500 años en sánscrito. En nuestros días, el hinduismo cuenta con cerca de mil millones de seguidores, concentrados en su mayor parte en el subcontinente indio. [PARAGRAPH:2]El hinduismo cree que el hombre debe perseguir la realización personal para volver a formar parte de la Realidad Definitiva, esto es, de Dios. Dios es todas las cosas: los hombres solo sufren porque lo han olvidado. Hasta que lo recuerdan, su alma permanece prisionera, y debe sufrir el eterno ciclo de la muerte y el renacimiento en el mundo. [PARAGRAPH:2]Posiblemente, el elemento más interesante del pensamiento hindú sea la idea de que no existe un solo camino a la realización personal. Cualquier práctica espiritual realizada con fe y amor conduce a la iluminación. Los hindúes cuentan con un rico panteón de deidades, que no son más que diferentes aspectos de un único Dios. Muchos hindúes contemporáneos creen en una Trinidad Sagrada, formada por Brahma el Creador, Visnu el Preservador y Siva el Destructor. Todos ellos son iguales, todos son diferentes rostros del Uno. Existen otras interpretaciones. Para algunas de ellas, uno de los dioses es Dios, y los demás son sus subordinados. [PARAGRAPH:2]Al margen de estas diferencias, los conflictos entre las distintas escuelas de pensamiento son mínimas. Porque, tal como dijo Krisna, avatar de Visnu: "sea cual sea la deidad o forma que venere un fiel, yo convierto su fe en verdadera". </Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_HINDUISM_QUOTE</Tag>
+		<Tag>TXT_KEY_TECH_HINDUISM_QUOTE</Tag>
 		<English>"I have been born more times than anybody except Krishna." - Mark Twain</English>
 		<French>"Je suis né plus de fois que tout le monde sauf Krishna." - Mark Twain</French>
 		<Spanish>"He nacido más veces que nadie excepto Krishna." - Mark Twain</Spanish>
 		<Polish>"Rodziłem się więcej razy niż ktokolwiek inny, oprócz Krishny." - Mark Twain</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_ISLAM</Tag>
+		<Tag>TXT_KEY_TECH_ISLAM</Tag>
 		<English>Islam</English>
 		<French>
 			<Text>Islam</Text>
@@ -19071,7 +19071,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_ISLAM_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_TECH_ISLAM_ADJECTIVE</Tag>
 		<English>
 			<Text>Islamic</Text>
 			<Gender>Male</Gender>
@@ -19096,13 +19096,13 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Islamski</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_ISLAM_STRATEGY</Tag>
+		<Tag>TXT_KEY_TECH_ISLAM_STRATEGY</Tag>
 		<English>Research Islam to found a Religion</English>
 		<French>Recherchez Islam pour fonder une religion</French>
 		<Spanish>Investiga el Islam para fundar una religión.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_ISLAM_PEDIA</Tag>
+		<Tag>TXT_KEY_TECH_ISLAM_PEDIA</Tag>
 		<English>"Islam" means "the submission to God." It is the world's second largest religion. Most adherents can be found in the Middle East, Asia and Africa, but Islam has a strong presence in Europe as well. Muslims - followers of Islam - believe that there is only one God ("Allah" in Arabic), and that over the years he has revealed his desires to a number of great prophets: Adam, Abraham, Moses, Jesus, and Muhammad. The last and greatest of prophets, Muhammad has written down God's direct words in the Koran, which is the only true guide to a holy life. [PARAGRAPH:2]Muhammad was born in the city of Mecca (which is now part of Saudi Arabia). He lived from 570 to 632. He began life as a merchant, but during his 40th year he experienced a series of visions from God, who commanded him to memorize the verses that would later make up the Koran. Muhammad revealed his visions to others and he gained followers. He and his followers were reviled and attacked by those who did not believe, but they were following the path that God had set for them and emerged triumphant, eventually unifying all of Arabia under one rule. After Muhammad's death, his words spread throughout the Middle East and far beyond. [PARAGRAPH:2]Since Muhammad, Islam has broken into a number of branches, the three most prominent being the Sunni, Shi'ite and Kharijite. These schools disagree on the correct succession of authority after Muhammad's death - a matter of great religious and political importance to Islam. [PARAGRAPH:2]All Muslims believe in the "Five Pillars of Islam," which state that one must do the following to achieve salvation: acknowledge that there is no god but God, and Muhammad is his Prophet; pray daily to God at the five established times; give a portion of one's wealth to the poor; fast from dawn to dusk during the month of Ramadan; and make a pilgrimage to Mecca during the holy month of Dhul Hijjah.</English>
 		<French>"Islam" signifie "la soumission à Dieu". Il s'agit de la seconde religion la plus pratiquée dans le monde. Ses disciples se trouvent majoritairement au Moyen-Orient, en Asie et en Afrique, mais l'Islam est également solidement implanté en Europe. Les adeptes de l'Islam, appelés musulmans, croient qu'il n'existe qu'un seul Dieu ("Allah" en arabe) et qu'au fil des années, il a fait part de sa volonté à plusieurs grands prophètes: Adam, Abraham, Moïse, Jésus et Mahomet. Celui-ci, le dernier et le plus grand des prophètes, a transcrit les paroles de Dieu directement dans le Coran, qui constitue le seul véritable guide vers une vie sainte. [PARAGRAPH:2]Mahomet est né dans la ville de La Mecque (qui se situe aujourd'hui en Arabie Saoudite) et a vécu de 570 à 632. Marchand au début de sa vie, Dieu lui est apparu à plusieurs reprises au cours de sa 40ème année et l'a sommé de mémoriser les versets qui constitueraient ultérieurement le Coran. Faisant part de ses visions à d'autres, Mahomet a acquis des disciples. Vilipendés et attaqués par les non-croyants, ils ont néanmoins poursuivi la voie tracée par Dieu et fini par triompher, unifiant alors toute l'Arabie sous une même autorité. Après la mort de Mahomet, ses paroles se sont répandues dans tout le Moyen-Orient et même au-delà. [PARAGRAPH:2]L'Islam s'est alors divisé en plusieurs branches qui se distinguent notamment par leur désaccord sur le nom de l'héritier du prophète Mahomet, sujet de grande importance religieuse et politique dans l'Islam. Les trois principales branches sont l'Islam sunnite, l'Islam chiite et l'Islam kharidjite. [PARAGRAPH:2]Tous les musulmans croient aux "Cinq piliers de l'Islam" qui doivent être respectés pour obtenir le salut. Ces obligations consistent à ne pas reconnaître d'autre divinité que Dieu, dont Mahomet est le Prophète ; à prier Dieu cinq fois par jour à heures fixes ; à partager ses richesses avec les pauvres ; à jeûner du lever au coucher de soleil durant le mois du Ramadan ; et à faire un pèlerinage à La Mecque durant le mois saint de Dhu l-hidjdja.</French>
 		<German>"Islam" bedeutet "Hingabe an Gott". Der Islam ist als zweitgrößte Weltreligion vor allem im Mittleren Osten, in Asien und in Afrika verbreitet, hat aber auch in Europa zahlreiche Anhänger. Ein Moslem glaubt, dass es nur einen Gott ("Allah") gibt, der seine Wünsche mehreren Propheten offenbart hat: Adam, Abraham, Moses, Jesus und Mohammed. Der letzte und größte aller Propheten, Mohammed, hat Gottes Worte im Koran festgehalten. Dieser ist bis heute die heilige Schrift des Islam und eine Hauptquelle der Schari'a. [PARAGRAPH:2]Mohammed erblickte 570 nach Christus in Mekka (im heutigen Saudi Arabien) das Licht der Welt. Er führte ein Leben als Händler, bis ihm Gott befahl, seine Lehren im Koran niederzuschreiben. Schon bald scharte Mohammed, der von nun an Allahs Worte verkündete, eine wachsende Schar von Anhängern um sich. Obwohl sie von Andersdenkenden verschmäht und angefeindet wurden, folgten Mohammed und seine Getreuen dem Weg, den Gott für sie auserwählt hatte. Auf diese Weise gelang es Mohammed schließlich, die arabische Welt unter einem Herrscher zu einen. Nach Mohammeds Tod im Jahr 632 nach Christus trugen seine Anhänger seine Lehre in alle Welt. [PARAGRAPH:2]Nach Mohammeds Tod entbrannte zwischen den drei bedeutenden Schulen des Islam (Sunniten, Schiiten und Charidschiten) ein heftiger Streit um dessen Nachfolge. Dieser Streit ist für den Islam bis heute von enormer religiöser und politischer Bedeutung. [PARAGRAPH:2]Ein Moslem glaubt an die "Fünf Säulen des Islam", die befolgt werden müssen, um Erlösung zu finden: 1. Es gibt keinen Gott außer dem einen Allah und Mohammed ist sein Gesandter und Prophet. 2. Muslime verrichten täglich fünf Gebete (in der Morgendämmerung, am Mittag, am Nachmittag, bei Sonnenuntergang und in der Nacht). 3. Im Monat Ramadan fasten Muslime von Morgendämmerung bis Sonnenuntergang. 4. Muslime sind verpflichtet, einen prozentualen Anteil von Besitztümern an bedürftige Menschen zu spenden (Zakat). 5. Jeder Moslem muss einmal in seinem Leben nach Mekka pilgern.</German>
@@ -19110,14 +19110,14 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Spanish>"Islam" significa, "sumisión a Dios". Es la segunda religión más extendida del mundo. La mayoría de sus seguidores se encuentra en Oriente Medio, Asia y África, pero el Islam cuenta también con una importante presencia en Europa. Los musulmanes (seguidores del Islam) creen que solo existe un Dios ("Allah" en árabe), que a lo largo de la historia ha revelado sus deseos a través de una serie de profetas: Adán, Abraham, Moisés, Jesús y Mahoma. El último y el más importante de sus profetas, Mahoma, dejó su palabra escrita en el Corán, que es la única pauta válida para llevar una vida de santidad. [PARAGRAPH:2]Mahoma nació en la ciudad de La Meca (perteneciente a Arabia Saudita en nuestros días). Vivió del año 570 al 632. Empezó su vida como mercader, pero al cumplir los cuarenta, experimentó una serie de visiones de Dios, que le ordenó memorizar los versos que posteriormente conformarían el Corán. Mahoma reveló sus visiones a otros, y fue reuniendo un grupo de seguidores. Fueron escarnecidos y atacados por infieles, pero como seguían el camino que Dios les había preparado, acabaron triunfando y unificando toda Arabia bajo un gobierno único. Tras la muerte de Mahoma, su palabra se extendió por todo Oriente Medio y mucho más allá. [PARAGRAPH:2]Desde entonces, el Islam se ha dividido en una serie de facciones, las más importantes de las cuales son la suní, la chií y la jarichi. Estas escuelas discrepan en la forma de transmisión de la autoridad tras la muerte de Mahoma, un punto de enorme importancia religiosa y política en el Islam.  [PARAGRAPH:2]Todos los musulmanes creen en los "cinco pilares de la fe", que establecen lo que debe hacerse para alcanzar la salvación: reconocer que no hay otro dios que Dios, cuyo profeta es Mahoma; rezar diariamente a Dios las cinco veces establecidas; repartir una parte de la propia fortuna entre los pobres; ayunar del amanecer al anochecer durante el Ramadán; y realizar una peregrinación a La Meca durante el mes sagrado de Dhul Hijjah.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_ISLAM_QUOTE</Tag>
+		<Tag>TXT_KEY_TECH_ISLAM_QUOTE</Tag>
 		<English>"Allah, the One and Only; Allah, the Eternal, Absolute; He begetteth not, nor is He begotten; And there is none like unto Him." - Qur'an 112:1-4</English>
 		<French>"Allah, le Seul et Unique; Allah, l'éternel, absolu; Il n'a pas connu la naissance, Il n'a pas été engendré; Et il n'y a rien qui Lui ressemble;." - Coran 112:1-4</French>
 		<Spanish>"Alá, el único e inigualable; Alá el eterno y absoluto; no ha engendrado ni ha sido engendrado; y no existe nadie semejante a Él." - Cor'án 112:1-4</Spanish>
 		<Polish>"Bóg jest jeden i jedyny, a jego wszechmoc i panowanie niepodzielne." - Koran</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_JUDAISM</Tag>
+		<Tag>TXT_KEY_TECH_JUDAISM</Tag>
 		<English>Judaism</English>
 		<French>
 			<Text>Judaïsme</Text>
@@ -19142,7 +19142,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Judaizm</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_JUDAISM_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_TECH_JUDAISM_ADJECTIVE</Tag>
 		<English>
 			<Text>Jewish</Text>
 			<Gender>Male</Gender>
@@ -19167,13 +19167,13 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>żydowski</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_JUDAISM_STRATEGY</Tag>
+		<Tag>TXT_KEY_TECH_JUDAISM_STRATEGY</Tag>
 		<English>Research Judaism to found a Religion</English>
 		<French>Recherchez Judaisme pour fonder une religion</French>
 		<Spanish>Investiga el Judaismo para fundar una religión.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_JUDAISM_PEDIA</Tag>
+		<Tag>TXT_KEY_TECH_JUDAISM_PEDIA</Tag>
 		<English>Born perhaps 4000 years ago, Judaism is one of the oldest religious traditions practiced today, the first known religion to embrace monotheism and one of the most influential in history. Born in the "cradle of religions," the Middle East, Judaism provided the foundations for Christianity and Islam, two other "Abrahamic" religions. [PARAGRAPH:2]Judaism is the religion of the Jews, originally a Semitic tribe that lived in an area of the Middle East roughly centered on the ancient city of Jerusalem. Over time their central beliefs were written down in the Bible (Old Testament), which contains the history of the Jews, as well as the words of prophets and kings. Most importantly, the Bible teaches the children of Israel how to live according to God's wishes. [PARAGRAPH:2]These are the central beliefs of Judaism. There is only one God and you must not worship any other gods before Him. God is all powerful, all knowing, and eternal. Each man prays to God directly, without the need for an intermediary. People can atone for sins through words and deeds. God has chosen the Jewish people to be in a covenant with Him, and some day God will send a Messiah to bring all of the chosen people back to Israel and usher in an era of peace and prosperity to the Earth. [PARAGRAPH:2]Judaism is a remarkably strong and resilient faith. Throughout history the Jews have been oppressed and enslaved by a series of conquerors. They have been taken from their homeland and scattered across Europe, Africa and Asia. They have been the targets of a program of unbelievably brutal genocide. But throughout it all, the Jews have remained faithful to their religion and their God. </English>
 		<French>Apparu probablement il y a 4000 ans, le judaïsme constitue l'une des plus anciennes religions pratiquées aujourd'hui, l'une des plus influentes de l'histoire, ainsi que la première religion connue à avoir adopté le monothéisme. Née dans le "berceau des religions", au Moyen-Orient, le judaïsme sert de base au christianisme et à l'Islam, les deux autres religions abrahamiques. [PARAGRAPH:2]Le judaïsme est la religion des Juifs, qui étaient à l'origine une tribu sémite vivant au Moyen-Orient, dans une région dont le centre se situait à proximité de l'ancienne ville de Jérusalem. Au fil du temps, leurs croyances les plus importantes ont été consignées dans la Bible (l'Ancien Testament), qui contient l'histoire des Juifs ainsi que les paroles des prophètes et des rois. Plus essentiel encore, la Bible enseigne aux enfants d'Israël à vivre conformément aux voeux de Dieu. [PARAGRAPH:2]Ces préceptes constituent les doctrines principales du judaïsme. Il n'existe qu'un seul Dieu et vous ne devez pas vénérer d'autres dieux que Lui. Dieu est tout-puissant, omniscient et éternel. Tout homme prie Dieu directement, sans avoir besoin de recourir à un intermédiaire. Les hommes peuvent expier leurs péchés par des paroles et de bonnes actions. Dieu a élu les Juifs comme peuple de l'Alliance, et un jour, il enverra un Messie pour ramener le peuple élu en Israël et le conduire dans une zone de paix et de prospérité sur Terre. [PARAGRAPH:2] Le judaïsme constitue une foi remarquablement forte et déterminée. Tout au long de l'histoire, les Juifs ont été opprimés et réduits en esclavage par divers conquérants. Ils ont été éloignés de leur patrie et disséminés en Europe, en Afrique et en Asie. Ils ont fait l'objet d'un génocide systématique et organisé, d'une cruauté incroyable. Malgré toutes ces épreuves, les Juifs sont restés fidèles à leur religion et à leur Dieu.</French>
 		<German>Das Judentum entstand vor etwa 4000 Jahren und ist damit eine der ältesten Religionen der Welt. Als erste monotheistische Religion der Menschheitsgeschichte hat das Judentum die Geschichte wie keine andere Religion geprägt. Das in der "Wiege der Religionen" im Mittleren Osten entstandene Judentum war die Mutterreligion des Christentums und des Islam, zweier weiterer "Religionen Abrahams". [PARAGRAPH:2]Die Juden waren ein semitischer Stamm, der sich in der Gegend um Jerusalem niedergelassen hatte. Im Laufe der Zeit wurden ihre wichtigsten Glaubenssätze im Alten Testament niedergeschrieben. Dieses enthält die Geschichte der Juden sowie die Worte der Propheten und Könige. Überdies lehrt die Bibel die Kinder Israels, Gottes Wünschen gemäß zu leben. [PARAGRAPH:2]Dies sind die zentralen Glaubenssätze des Judentums: Es gibt nur einen Gott. Gott ist allmächtig, allwissend und ewig. Jeder Mensch betet direkt zu Gott. Der Mensch kann für seine Sünden durch Worte und Taten büßen. Gott hat das jüdische Volk auserwählt. Letzteres hat einen Bund mit ihm geschlossen. Eines Tages wird Gott einen Messias schicken, der die Auserwählten nach Israel bringt. Dann wird eine Zeit des Friedens und Wohlstands anbrechen. [PARAGRAPH:2]Das Judentum ist ein starker und unbeugsamer Glaube. Im Laufe der Geschichte wurden die Juden immer wieder unterdrückt, verfolgt und versklavt. Auch als sie aus ihrer Heimat vertrieben und von den Nationalsozialisten beinahe ausgelöscht wurden, blieben sie ihrer Religion und ihrem Gott stets treu.</German>
@@ -19181,13 +19181,13 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Spanish>Nacido hace unos 4.000 años, el judaísmo es una de las religiones más antiguas que se practican en la actualidad, la primera religión monoteísta conocida y una de las más influyentes de la historia. Nacido en la "cuna de las religiones" (Oriente Medio), el judaísmo puso las bases para el cristianismo y el Islam, las otras dos religiones "del libro". [PARAGRAPH:2]El judaísmo es la religión de los judíos, originalmente una tribu semítica que vivió en una zona de Oriente Medio centrada en la antigua ciudad de Jerusalén. Con el paso del tiempo, sus creencias fueron codificándose en la Biblia (Antiguo Testamento), que contiene la historia de los judíos y las palabras de sus profetas y reyes. Además, la Biblia enseña a los hijos de Israel a vivir según los deseos de Dios. [PARAGRAPH:2]Éstos son los principios centrales del judaísmo: Solo existe un Dios, y está prohibido venerar a otro que no sea Él. Dios es todopoderoso, omnisciente y eterno. Los hombres le rezan a Dios directamente, sin necesidad de intermediarios. Se pueden enmendar los pecados mediante las palabras y las obras. Dios ha escogido al pueblo judío para unirse a Él, y algún día enviará un Mesías para devolver al pueblo elegido a Israel y señalar el inicio de una era de paz y prosperidad en la Tierra.  [PARAGRAPH:2]El judaísmo es una fe que ha demostrado una fuerza y una resistencia notables. A lo largo de su historia, los judíos han sido oprimidos y esclavizados por diferentes conquistadores. Fueron expulsados de su tierra natal y dispersados por Europa, África y Asia. Han sido las víctimas de un programa de genocidio de increíble brutalidad, pero a pesar de todo se han mantenido fieles a su religión y a su Dios. </Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_JUDAISM_QUOTE</Tag>
+		<Tag>TXT_KEY_TECH_JUDAISM_QUOTE</Tag>
 		<English>"I will take you as my own people, and I will be your God." - Exodus 6:7</English>
 		<French>"Je vous choisirai comme mon peuple, et je serai votre Dieu." - Exode 6:7</French>
 		<Spanish>"Os tomaré por mi propia gente, y seré vuestro Dios." - Éxodo 6:7</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_MESOAMERICANISM</Tag>
+		<Tag>TXT_KEY_TECH_NAGHUALISM</Tag>
 		<English>Naghualism</English>
 		<French>Nagualisme</French>
 		<German>Nagualismus</German>
@@ -19199,26 +19199,26 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Nagualizm</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_NAGHUALISM_STRATEGY</Tag>
+		<Tag>TXT_KEY_TECH_NAGHUALISM_STRATEGY</Tag>
 		<English>Research Naghulism to found a Religion</English>
 		<French>Recherchez Naghulism pour fonder une religion</French>
 		<Spanish>Investiga el Nahualismo para fundar una religión.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_MESOAMERICANISM_PEDIA</Tag>
+		<Tag>TXT_KEY_TECH_NAGHUALISM_PEDIA</Tag>
 		<English>The Maya, Zapotec, Mixtec, and Aztec religions all had a concept of a vital force that separated living from nonliving matter. For the Maya this was expressed in the concept of "ik," or wind, breath, or life. For the Zapotecs it was "pee" or wind, breath, or spirit. For the Mixtec it was "yni" or "ini" or spirit, heart, or heat. For the Aztec it was "tona" or vital energy, or heat. As animists, the line drawn as to what was alive, was different from the Judeo-Christian tradition. They attributed life to many things which the Spaniards, for example, did not. The idea of human sacrifice was one of the more notable shared concepts of these religions which were concerned with keeping the cosmos in balance through human action.</English>
 		<French>Les religions maya, zapotèque, mixtèque et aztèque avaient toutes un concept de force vitale qui séparait le vivant de la matière non vivante. Pour les Mayas, cela s'exprimait dans le concept de «ik», ou vent, souffle ou vie. Pour les zapotèques, c'était «pipi» ou vent, souffle ou esprit. Pour le Mixtec, c'était «yni» ou «ini» ou esprit, cœur ou chaleur. Pour les Aztèques, c'était «tona» ou énergie vitale, ou chaleur. En tant qu'animistes, la ligne tracée sur ce qui était vivant était différente de la tradition judéo-chrétienne. Ils ont attribué la vie à beaucoup de choses que les Espagnols, par exemple, n'ont pas faites. L'idée de sacrifice humain était l'un des concepts communs les plus notables de ces religions qui étaient soucieuses de maintenir le cosmos en équilibre par l'action humaine.</French>
 		<Polish>Wyznawcy Nagualizmu czerpią wzory z mitologii i zwyczajów Tolteków. Według zwolenników kultu nagual jest racjonalnie niepoznawalny, więc można się do niego przybliżać jedynie poprzez specyficzną praktykę, prowadzoną pod opieką mistrzów, która jest połączeniem technik medytacyjnych zbliżonych do zen z magicznymi tradycjami Yaqui oraz ćwiczeniami fizycznymi przypominającymi Capoeirę. Ostatecznym celem praktyki jest osiągnięcie stanu oświecenia, zbliżonego charakterem do satori, a polegającego na przeżyciu zespolenia własnej osoby z nagualem. Taki stan nazywa się "alternatywną śmiercią". Po jego osiągnięciu adept sam staje się nagualem i może prowadzić innych do tego celu.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_NAGHUALISM_QUOTE</Tag>
+		<Tag>TXT_KEY_TECH_NAGHUALISM_QUOTE</Tag>
 		<English>"Then Tepeu and Gucumatz came together; then they conferred about life and light, what they would do so that there would be light and dawn? Thus let it be done! Let the emptiness be filled! Let the water recede and make a void, let the earth appear and become solid; let it be done. Thus they spoke." - from the Popol Vuh</English>
 		<French>"Puis Tepeu et Gucumatz se sont réunis;Ils ont discuté à propos de la vie et de la lumière, de ce qu'ils feraient pour qu'il y ait la lumière et l'aube. Qu'il en soit ainsi! Que le vide soit rempli! Que l'eau recule et laisse apparaître la terre, que la terre devienne solide. Ainsi ils parlaient." - du  Popol Vuh</French>
 		<Spanish>"Luego Tepeu y Gucumatz vinieron juntos; después conversaron sobre la vida y la luz, sobre si podían hacer para que hubiera luz y alba... ¡Que así sea! ¡Rellénese el vacío! Aléjese el agua y hágase un vacío, aparézcase la tierra y hágase sólida, así sea. Y así hablaban." - del Popol Vuh</Spanish>
 		<Polish>"I wtedy Tepeu i Gucumatz nadeszli razem. Rozmawiali o życiu i światłości, co powinni zrobić by nastało światło i ciemność. To uczynili." - Popol Vuh</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_TAOISM</Tag>
+		<Tag>TXT_KEY_TECH_TAOISM</Tag>
 		<English>Taoism</English>
 		<French>
 			<Text>Taoïsme</Text>
@@ -19243,7 +19243,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Taoizm</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_TAOISM_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_TECH_TAOISM_ADJECTIVE</Tag>
 		<English>
 			<Text>Taoist</Text>
 			<Gender>Male</Gender>
@@ -19268,13 +19268,13 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Taoistyczny</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_TAOISM_STRATEGY</Tag>
+		<Tag>TXT_KEY_TECH_TAOISM_STRATEGY</Tag>
 		<English>Research Taoism to found a Religion</English>
 		<French>Recherchez Taoism pour fonder une religion</French>
 		<Spanish>Investiga el Taoísmo para fundar una religión.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_TAOISM_PEDIA</Tag>
+		<Tag>TXT_KEY_TECH_TAOISM_PEDIA</Tag>
 		<English>When discussing "Taoism," one must be careful to distinguish between the philosophy of Tao and the religion of Tao. The philosophy of Tao came first. According to tradition, the philosopher Lao-Tsu lived in the 4th Century BC. He wrote the "Tao Te Ching," which can be roughly translated as "The Book of the Way and its Virtue." [PARAGRAPH:2]The Tao Te Ching is written in verse. It is extremely subtle and difficult to understand. Many scholars have spent years trying to interpret it. The book can be (very primitively and probably inaccurately) summarized as follows. The "Tao" is what exists before everything else. It is formless, and from it all things are formed. Man must aspire to simplicity; only by discarding the useless trappings of culture and civilization can man return to his original state of emptiness - Tao - when all is possible. According to Lao-Tsu, "the sage has no heart of his own" - no intentions, no preconceptions, and no agenda. [PARAGRAPH:2]The religion of Taoism is based upon worship of Lao-Tsu as a deity. According to Taoist religious tradition, in 142 AD Lao-Tsu appeared to Zhang Daoling, a hermit, and told him that the world was coming to an end, and those who followed Lao-Tsu would go on to another, better life. Further, Lao-Tsu's followers would have access to the celestial powers that control the fate of mankind. Zhang preached Lao-Tsu's words and gained many converts.[PARAGRAPH:2]Over time, Taoism split into a number of schools. Some believed that they could change the world through talismans, alchemy, and magical spells. Some sought to achieve immortality through a Buddhist-like enlightenment. A variety of gods from Chinese folklore and Buddhist tradition were incorporated into the religion.[PARAGRAPH:2]Taoism spread widely throughout China, and it was the official state religion for a thousand years, until the end of the Qing Dynasty in 1911. The Communists virtually eradicated the religion in China during the Cultural Revolution (1960-76), when many of the temples were destroyed and the monks and priests sent to "reeducation" camps. In the 1980s China restored some religious tolerance, and Taoist temples are slowly being rebuilt and repaired. [PARAGRAPH:2]It is believed that many Chinese still practice Taoism in some form, despite the government's restrictions. Taoism is also practiced by some 31 million people outside of China, the largest group being in Taiwan. Its influence can be felt world-wide in the practices of acupuncture, herbalism, feng shui, and martial arts. </English>
 		<French>Lorsque l'on parle de "Taoïsme", il convient de distinguer entre la philosophie de Tao, apparue la première, et la religion de Tao. La tradition indique que le philosophe Lao-tseu a vécu au IVe siècle av. J.-C. Il a écrit le "Daodejing", qui peut être approximativement traduit par "Le Livre de la Voie et de la Vertu". [PARAGRAPH:2]Le Daodejing est écrit en vers, il est extrêmement subtil et difficile à comprendre. De nombreux spécialistes ont passé des années à essayer de l'interpréter. Le livre peut être résumé (de façon très primaire et probablement incorrecte) comme suit. Le "Tao" constitue ce qui existe avant toute chose. Il est informe et constitue la base de toute forme. L'homme doit chercher la simplicité ; ce n'est qu'en abandonnant les signes inutiles de la culture et de la civilisation que l'homme peut retourner à son état originel d'inanité - Tao - dans lequel tout est possible. Selon Lao-tseu, "le sage n'a pas de coeur à soi", c'est-à-dire ni intention, ni opinion préconçue, ni programme. [PARAGRAPH:2]La religion taoïste est fondée sur la vénération de Lao-tseu comme divinité. D'après la tradition religieuse taoïste, Lao-tseu est apparu à l'ermite Zhang Daoling en 142 av. J.-C., lui annonçant que le monde touchait à sa fin et que ceux qui suivraient les préceptes de Lao-tseu auraient une nouvelle vie, meilleure. En outre, ces adeptes auraient accès aux pouvoirs célestes qui contrôlent le destin de l'humanité. Zhang a prêché les paroles de Lao-tseu, ce qui lui a valu l'entourage de nombreux convertis. [PARAGRAPH:2]Au fil du temps, le taoïsme s'est scindé en plusieurs écoles. Certains croyaient qu'ils pourraient changer le monde en recourant à des talismans, à l'alchimie et aux formules magiques. D'autres pensaient parvenir à l'immortalité par le biais d'un éveil semblable à celui recherché dans le bouddhisme. Différents dieux issus du folklore chinois et de la tradition bouddhiste ont été intégrés à cette religion. [PARAGRAPH:2]Le taoïsme s'est largement répandu dans toute la Chine et il a été la religion officielle d'Etat pendant près de mille ans, jusqu'à la fin de la dynastie Qing en 1911. Durant la Révolution culturelle en Chine (1960-76), les communistes ont pratiquement éradiqué cette religion en détruisant de nombreux temples tandis que les moines et les prêtres étaient envoyés dans des camps de "rééducation". Dans les années 1980, la Chine a restauré une certaine tolérance religieuse et les temples taoïstes ont été lentement reconstruits et réparés. [PARAGRAPH:2]On pense que de nombreux Chinois continuent à pratiquer le taoïsme sous certaines formes, malgré les restrictions gouvernementales. Le taoïsme est également pratiqué par près de 31 millions de fidèles hors de Chine, la plus grande communauté se trouvant à Taïwan. Son influence joue dans le monde entier, par le biais de pratiques telles que l'acuponcture, la médecine douce, le feng shui et les arts martiaux.</French>
 		<German>Spricht man über den Taoismus, muss man zwischen der (früheren) Philosophie und der Religion Tao unterscheiden. Angeblich verfasste der Philosoph Lao-Tsu im 4. Jahrhundert vor Christus das "Tao Te Ching" ("Das Buch vom Weg und seinem Wert"). [PARAGRAPH:2]Das in Versen verfasste Tao Te Ching ist äußerst schwer zu verstehen. Unzählige Wissenschaftler haben bereits versucht, den Text zu interpretieren. Das Tao Te Ching kann wie folgt zusammengefasst werden: Das "Tao" existiert vor allem anderen. Es ist formlos und kann die Gestalt aller Dinge annehmen. Das oberste Ziel der menschlichen Existenz ist die Einfachheit. Nur wenn man die kulturellen und zivilisatorischen Fallen hinter sich lässt, kann man in den ursprünglichen Zustand der Leere (Tao) zurückkehren. Laut Lao-Tsu "hat der Weise kein eigenes Herz", also keine Intentionen, Vorurteile oder Ziele. [PARAGRAPH:2]Die Religion des Taoismus basiert auf der Verehrung Lao-Tsus als Gott. Der taoistischen Tradition zufolge erschien Lao-Tsu 142 vor Christus Zhang Daoling, einem Eremiten, und sagte diesem das Ende der Welt voraus. Nur jene, so Lao-Tsu, die seiner Lehre folgten würden in ein neues... besseres... Leben übergehen und hätten Zugang zu den Himmelsmächten, die das Schicksal der Menschheit kontrollieren. Zhang predigte daraufhin Zis Worte und fand zahlreiche Anhänger.[PARAGRAPH:2]Im Laufe der Jahrhunderte gingen aus dem Taoismus mehrere Glaubensschulen hervor. Einige dieser Schulen wollen die Welt durch Talismane, die Alchemie und magische Zauber verändern. Andere streben nach Erleuchtung und Unsterblichkeit. Viele Götter der chinesischen Kultur und des Buddhismus finden sich auch im Taoismus wieder.[PARAGRAPH:2]Der in China weit verbreitete Taoismus war dort (bis zum Ende der Qin-Dynastie im Jahr 1911) über 1000 Jahre lang Staatsreligion. Während der Kulturrevolution (1960-76) wurde der Taoismus von den Kommunisten fast vollständig ausgelöscht, als unzählige Tempel zerstört und deren Mönche und Priester in "Umschulungslager" geschickt wurden. Seit den 80er Jahren werden die taoistischen Tempel im Zuge einer neuen religiösen Toleranz langsam wieder aufgebaut. [PARAGRAPH:2]Vermutlich praktizieren bis heute viele Chinesen eine wie auch immer geartete Form des Taoismus. Ein Großteil der 31 Millionen Anhänger des Taoismus außerhalb Chinas lebt heute in Taiwan. In der westlichen Welt ist der Einfluss des Taoismus in der Akupunktur, der Kräuterkunde, dem Feng Shui und den Martial Arts spürbar.</German>
@@ -19282,14 +19282,14 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Spanish>Cuando se habla de "taoísmo", uno debe tener cuidado en hacer la distinción entre la filosofía del Tao y la religión del Tao. La filosofía del Tao es anterior. Según la tradición, el filósofo Lao Tse vivió en el siglo IV a. C. Fue el autor del "Tao Te Ching," que a grandes rasgos puede traducirse como "El libro del Camino y su Virtud". [PARAGRAPH:2]El Tao Te Ching está en verso, y es extremadamente sutil y difícil de comprender. Muchos eruditos han pasado años tratando de interpretarlo. De modo resumido (de forma tosca y seguro que poco precisa) el contenido del libro es el siguiente: El "Tao" es lo que existe antes que todo lo demás. Carece de forma, pero forma todo lo demás. El hombre debe aspirar a la simplicidad: solo despojándose de los inútiles ornamentos de la cultura y la civilización puede retornar a su estado original de vacío, el Tao, donde todo es posible. Según Lao Tse: "el sabio carece de corazón", no tiene intenciones, no tiene opiniones preconcebidas y no tiene propósitos. [PARAGRAPH:2]El taoísmo como religión se basa en la veneración de Lao Tse. Según la tradición religiosa taoísta, en el año 142 d. C., Lao Tse se apareció a Zhang Dhaoling, un ermitaño, y le anunció que el fin del mundo se acercaba y que aquéllos que lo siguieran serían llevados a una vida mejor. Además, los seguidores de Lao Tse tendrían acceso a los poderes celestiales que gobiernan el destino de la humanidad. Zhang predicó la palabra de Lao Tse y consiguió muchos seguidores.[PARAGRAPH:2]Con el tiempo, el taoísmo se escindió en varias escuelas. Algunas creían que podrían cambiar el mundo por medio de talismanes, procedimientos alquímicos y conjuros. Otras buscaban la inmortalidad a través de un proceso de iluminación de corte budista. Varios dioses del folclore chino y la tradición budista se incorporaron a esta religión.[PARAGRAPH:2]El taoísmo alcanzó gran difusión en China, y fue la religión oficial durante mil años, hasta el final de la dinastía Qin en 1911. Los comunistas la erradicaron prácticamente durante la Revolución Cultural (1960-76), cuando muchos de los templos fueron destruidos y los monjes y sacerdotes fueron enviados a campos de "reeducación". En los años 80, China reinstauró una cierta tolerancia religiosa, y desde entonces los templos taoístas están siendo lentamente reconstruidos y reparados. [PARAGRAPH:2]Se cree que, a despecho de las restricciones legales, muchos chinos todavía practican el taoísmo. Además, la religión es practicada por más de treinta millones de personas fuera de China. El grupo más importante se encuentra en Taiwán. Su influencia puede sentirse en todo el mundo en las prácticas de la acupuntura, el herbolario, el feng shui y las artes marciales. </Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_TAOISM_QUOTE</Tag>
+		<Tag>TXT_KEY_TECH_TAOISM_QUOTE</Tag>
 		<English>"Mastering others is strength. Mastering yourself is the true power." - Lao Tzu, Tao Te Ching</English>
 		<French>"En Contrôlant les autres, on est fort. En se contrôlant soi-même, on a le vrai pouvoir." - Lao Tzu, Tao Te Ching</French>
 		<Spanish>"Dominar a otros es fuerza. Dominarte a ti mismo es el auténtico poder." - Lao Tzu, Tao Te Ching</Spanish>
 		<Polish>"Ten, kto zna (innych) ludzi, posiada (tylko) wiedzę. Ten, kto zna siebie samego, jest (człowiekiem) oświeconym." - Lao Tzu, Tao Te Ching</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_ZOROASTRIANISM</Tag>
+		<Tag>TXT_KEY_TECH_ZOROASTRIANISM</Tag>
 		<English>Zoroastrianism</English>
 		<French>Zoroastrisme</French>
 		<German>Zoroastrismus</German>
@@ -19302,7 +19302,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Zaratusztrianizm</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_ZOROASTRIANISM_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_TECH_ZOROASTRIANISM_ADJECTIVE</Tag>
 		<English>Zoroastrian</English>
 		<French>Zoroastrien</French>
 		<German>Zoroastrismusn</German>
@@ -19315,13 +19315,13 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Zaratustriański</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_ZOROASTRIANISM_STRATEGY</Tag>
+		<Tag>TXT_KEY_TECH_ZOROASTRIANISM_STRATEGY</Tag>
 		<English>Research Zoroastrianism to found a Religion</English>
 		<French>Recherchez le Zoroastrisme pour fonder une religion</French>
 		<Spanish>Investiga el Zoroastrismo para fundar una religión.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_ZOROASTRIANISM_PEDIA</Tag>
+		<Tag>TXT_KEY_TECH_ZOROASTRIANISM_PEDIA</Tag>
 		<English>Zoroastrianism was founded by Zarathushtra (Zoroaster) in Persia which followed an aboriginal polytheistic religion at the time. He preached what may have been the first monotheism with a single supreme god, Ahura Mazda. Zoroastrians belief in the dualism of good and evil as either a cosmic one between Ahura Mazda and an evil spirit of violence and death, Angra Mainyu, or as an ethical dualism within the human consciousness. The Zoroastrian holy book is called the Avesta which includes the teachings of Zarathushtra written in a series of five hymns called the Gathas. They are abstract sacred poetry directed towards the worship of the One God, understanding of righteousness and cosmic order, promotion of social justice, and individual choice between good and evil. The rest of the Avesta was written at a later date and deals with rituals, practice of worship, and other traditions of the faith.</English>
 		<French>Bien que le zoroastrisme soit peu connu de nos jours, c'est l'une des religions qui a le plus influencé l'histoire du monde. Zarathushtra, ou Zoroastre en Occident, est le prophète de cette ancienne religion de l'empire perse. Le zoroastrisme présente certains éléments du monothéisme, mais est également une religion dualiste. L'univers aurait été cré par un être de lumière suprême du nom d'Ahura Mazda, opposé à une créature des ténèbres du nom d'Angra Mainyu. Le symbole le plus important de la foi zoroastrienne est le feu, car il représente la lumière et la chaleur d'Ahura Mazda, mais également la pureté. [PARAGRAPH:2:1]Les érudits ne s'accordent pas précisément sur l'époque à laquelle vécut Zoroastre, mais la situent entre l'an 1000 av. J.-C. et l'an 600 av. J.-C.. Les dates exactes de sa naissance et de sa mort restent un mystère, mais le zoroastrisme existe déjà lorsque Cyrus II érige l'empire perse au cours du VIe siècle av. J.-C.. Selon la légende zoroastrienne, Zoroastre se démarque comme un être particulier dès sa naissance, et des esprits maléfiques tentent à plusieurs reprises de le tuer au cours de son enfance. A l'âge de 20 ans, Zoroastre se retire dans une grotte et y passe les sept années qui suivent à méditer. Une fois qu'il ressent que sa dévotion envers Ahura Mazda a atteint son apogée, Zoroastre décide de partir répandre la bonne parole, sans grand succès au départ. Son tout premier fidèle est converti lorsqu'il parvient par miracle à guérir le cheval du roi Vishtaspa, qui apporte alors le soutien dont Zoroastre a tant besoin pour prêcher sa religion qui s'étend ensuite rapidement. Avant que les Grecs ne rencontrent les Perses et commencent à écrire sur ce peuple, le zoroastrisme s'est répandu dans tout l'empire perse et dans une grande partie du Proche-Orient. [PARAGRAPH:2:1]Les zoroastriens pensent que le monde est fondamentalement un endroit bienfaisant cré par Ahura Mazda pour les hommes, mais qu'il s'agit également d'un champ de bataille qui voit s'affronter les forces du bien et du mal. Les zoroastriens ne croient pas en la prédestination et accordent beaucoup d'importance aux choix que chaque individu doit faire afin de repousser les tentations et les corruptions d'Angra Mainyu. Les bonnes actions comme les mauvaises seront récompensées après la mort, et les êtres malfaisants seront jugés et envoyés en enfer, même si à la fin des temps, ils seront purifiés pour rejoindre Ahura Mazda. Les zoroastriens ne reconnaissent aucun autre dieu qu'Ahura Mazda, mais ce dernier est représenté de différentes façons, souvent dépeint sous une forme angélique, et porte des noms tels que Vohu Manah (la Bonne pensée) et Asha (la Vérité). Le livre saint du zoroastrisme est l'Avesta. Il réunit toutes les traditions orales transcrites pour la première fois sous la dynastie perse des Sassanides. On pense qu'une petite partie de l'Avesta, un ensemble de poèmes connus comme les Gathas, a été rédigée par Zoroastre en personne. Les temples zoroastriens sont conçus de manière à préserver le feu sacré, symbole de la lumière et de l'éclat d'Ahura Mazda. Les zoroastriens accordent également une grande importance à la propreté. C'est pourquoi ils doivent suivre plusieurs rites de purification à chaque péché commis. [PARAGRAPH:2:1]Le zoroastrisme est historiquement la religion de l'empire perse, bien qu'elle ne soit pas officiellement encouragée par les empereurs perses avant la dynastie des Sassanides au IIIe siècle de notre ère. Cette religion croise le judaïsme au cours de la captivité[NEWLINE]babylonienne au VIe siècle av. J.-C.. Plusieurs éléments laissent à penser que les deux religions se sont influencées mutuellement (concepts du monothéisme, du paradis et de l'enfer, de l'eschatologie...). On pense également, mais sans certitude, que les trois hommes sages de la naissance du Christ étaient des mages zoroastriens (prêtres). Au VIIe siècle, lorsque les Arabes envahissent et détruisent l'empire perse, le zoroastrisme devient une religion persécutée et disparaît progressivement. Un petit nombre de zoroastriens fuient en Inde, où ils créent une nouvelle communauté connue sous le nom de Parsis. La population des zoroastriens est aujourd'hui estimée entre 2 et 3 millions de personnes, principalement en Inde, au Pakistan et en Iran, mais est également présente dans les principaux centres urbains anglophones de la planète.</French>
 		<German>Auch wenn bis heute nur wenig über den Zarathustrismus bekannt ist, zählt er doch zuden einflussreichsten Religionen der Weltgeschichte. Von dem Propheten Zarathustra (im griechischen Sprachraum Zoroaster genannt) begründet, wurde diese Glaubensrichtung in der Antike im Persischen Reich praktiziert. Der Zarathustrismus beinhaltet zwar einige monotheistische Elemente, ist aber im Wesentlichen eine dualistische Religion, denn sie besagt, dass das Universum von Ahura Masda, dem Gott des Lichts, erschaffen wurde, dem ein Gott der Finsternis namens Angra Mainyu gegenübersteht. Das wichtigste Symbol des zarathustrischen Glaubens ist das Feuer, welches das Licht und den glänzenden Schein des Ahura Masda repräsentiert und für Reinheit steht. [PARAGRAPH:2:1]Wann genau Zarathustra gelebt hat, ist unter Historikern umstritten, man schränkt den Zeitraum allerdings von etwa 1000 bis 600 vor Christus ein. Unabhängig von seinen exakten Geburts- und Todesdaten ist jedoch belegt, dass der Zarathustrismus bereits bei der Gründung des Persischen Reiches durch Kyros II. im 6. Jahrhundert vor Christus existierte. Überlieferungen zufolge soll Zarathustra schon von Geburt an ein besonderer Mensch gewesen sein, der in seiner Kindheit zahlreiche Anschläge auf sein Leben überstanden haben soll, die böse Geister auf in verübten. Im Alter von etwa 20 Jahren zog sich Zarathustra in die Einsamkeit zurück und verbrachte die darauf folgenden sieben Jahre in Meditation. Als er schließlich vollkommene Hingebung zu Ahura Masda verspürte, machte er sich auf den Weg, um seine Überzeugungen unter das Volk zu bringen, zunächst jedoch erfolglos. Erst nachdem er auf wundersame Weise das Pferd des Königs Vistaspa geheilt hatte, der sich daraufhin höchstpersönlich zu Zarathustras Lehren bekannte, wuchs seine Anhängerschaft und seine Religion wurde zunehmend populärer. Zu der Zeit, als die Griechen erstmals auf die Perser stießen und schriftliche Aufzeichnungen über sie verfassten, war der Zarathustrismus bereits im ganzen Persischen Reich und auch in großen Teilen des Nahen Ostens etabliert. [PARAGRAPH:2:1]Die Anhänger des Zarathustrismus vertreten die Auffassung, dass die Welt im Grunde ein guter Ort ist, den Ahura Masda für die Menschen erschaffen hat, aber auch eine Art Schlachtfeld für die Kräfte des Guten und des Bösen. Sie glauben nicht an die Vorbestimmung, sondern sind überzeugt, dass jeder Einzelne eine Wahl treffen muss, um der Versuchung und Manipulation durch Angra Mainyu zu entgehen. Gute und böse Taten werden nach dem Tod gleichermaßen bewertet, wobei alles Übel verurteilt und zur Hölle geschickt wird, doch am Ende der Zeit wird auch das Böse geläutert werden und sich wieder Ahura Masda zuwenden. Der Zarathustrismus erkennt keinen anderen Gott an als Ahura Masda, der verschiedene Erscheinungsformen annehmen kann, häufig die von engelsähnlichen Wesen mit Namen wie Vohu Manah (guter Gedanke) und Asha (Wahrheit). Das Awesta, das Heilige Buch des zarathustrischen Glaubens, enthält die ursprünglich mündlichen Überlieferungen, die während der Sassaniden-Periode in Persien schriftlich niedergelegt wurden. Ein kleiner Teil des Awestas, eine Reihe von Hymnen bzw. Liedern, die so genannten Gathas, sollen von Zarathustra selbst verfasst worden sein. Der Hauptzweck der zarathustrischen Tempel ist die Bewahrung des heiligen Feuers, welches das Licht und den Glanz des Ahura Masda symbolisiert. Auch die Reinheit spielt im zarathustrischen Glauben eine sehr wichtige Rolle. So müssen die Gläubigen verschiedene Reinigungsrituale durchlaufen, wenn sie gesündigt haben. [PARAGRAPH:2:1]Aus historischer Sicht war der Zarathustrismus die Hauptreligion im Persischen Reich, offiziell wurde sie jedoch erst während der Sassaniden-Periode im 3. Jahrhundert nach Christus von den persischen Kaisern gefördert. Ein erstes Aufeinandertreffen des Zarathustrismus und des jüdischen Glaubens fand während der babylonischen Besatzungszeit im 6. Jahrhundert vor Christus statt und vieles weist darauf hin, dass sich die beiden Religionen in der Folge gegenseitig beeinflussten (ähnliche monotheistische Prägung, Himmel und Hölle, Eschatologie etc.). Es gibt kaum einen Zweifel daran, dass auch die drei Weisen, die bei der Geburt Jesu Christi anwesend waren, zarathustrische Magi (Priester) gewesen sind. Nach der Verwüstung und Zerstörung des Persischen Reiches durch die Araber im 7. Jahrhundert nach Christus wurden die Glaubensanhänger des Zarathustrismus verfolgt und so nahm die Popularität dieser Religion immer mehr ab. Einige Gläubige flüchteten nach Indien, wo sie eine neue Gemeinde gründeten und sich fortan Parsen nannten. Auch heute gibt es noch etwa 2-3 Millionen Menschen, die den Zarathustrismus praktizieren, vorwiegend in Indien, Pakistan, im Iran sowie vereinzelt auch in den Großstädten der englischsprachigen Welt.</German>
@@ -19330,7 +19330,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Zaratusztrianizm został założony przez Zaratusztrę (Zoroastra) w starożytnej Persji, który czerpał z rdzennych wierzeń politeistycznych ówczesnych czasów. Propagował wierzenia, które mogły być pierwszymi monoteistycznymi w swej naturze, z jednym najwyższym bogiem - Ahura Mazdą. Zaratusztrianie wierzą w dualizm dobra i zła w postaci kosmicznej, w osobach Ahura Mazdy oraz złego ducha przemocy i śmierci, Angra Mainju, jak również w postaci etycznej jako dualizm świadomości ludzkiej. Święta księga Zaratusztrianizmu nazywana jest Awesta i zawiera nauki Zaratusztry spisane w postaci pięciu hymnów nazywanych Gatami. Są to abstrakcyjne, natchnione przekazy w formie lirycznej, ukierunkowane na wyznawanie Jedynego Boga, zrozumienie cnotliwości oraz porządku kosmicznego, promowanie sprawiedliwości społecznej jak również indywidualnego wyboru między dobrem a złem. Pozostała część Awesty została napisana w późniejszym okresie i dotyczy rytuałów, praktyki religijnej oraz kultu, jak również innych przekazów związanych z tym wyznaniem.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_ZOROASTRIANISM_QUOTE</Tag>
+		<Tag>TXT_KEY_TECH_ZOROASTRIANISM_QUOTE</Tag>
 		<English>"Now the two primal Spirits, who reveal themselves in[NEWLINE]vision as Twins, are the Better and the Bad, in[NEWLINE]thought and word and action. Between these two the[NEWLINE]wise ones chose aright; the foolish not so."[NEWLINE] - Zoroaster (c.628 - c.551)</English>
 		<French>"Et les Deux Esprits élémentaires, qui se sont révélés jumeaux, sont le Bien et le Mal, en pensée, en parole et en actes. Le sage choisi correctement entre les deux, le fou non."[NEWLINE] - Zoroastre (c.628 - c.551)</French>
 		<Spanish>"Ahora, los dos principales espíritus que se revelan[NEWLINE]en una visión como gemelos, son el Bien y el Mal, en[NEWLINE]pensamiento, palabra y acción. Entre esos dos[NEWLINE]los sabios sabrán elegir; no así los necios."[NEWLINE] - Zaratustra (628 a.C. - 551 a.C.)</Spanish>
@@ -19638,7 +19638,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>[ICON_BULLET]Podstawowy koszt ruchu: Wszystkie jednostki mogą poruszyć się o %d1_Change pól wzdłuż tej drogi.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ROUTE_GRAVTUBE</Tag>
+		<Tag>TXT_KEY_ROUTE_MAGLEV</Tag>
 		<English>Maglev</English>
 		<French>Tube Maglev</French>
 		<German>Magnetbahn</German>
@@ -19704,7 +19704,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Ścieżka</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ROUTE_PAVED</Tag>
+		<Tag>TXT_KEY_ROUTE_PAVED_ROAD</Tag>
 		<English>Paved Road</English>
 		<French>Route pavée</French>
 		<German>Gepflasterte Straße</German>
@@ -19742,7 +19742,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Tory Kolejowe</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ROUTE_RAILROAD_ELECTRIC</Tag>
+		<Tag>TXT_KEY_ROUTE_ELECTRIC_RAILROAD</Tag>
 		<English>Electric Railroad</English>
 		<French>Chemin de Fer électrique</French>
 		<German>Elektrifizierte Eisenbahn</German>
@@ -21347,7 +21347,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Zwycięstwa [COLOR_UNIT_TEXT]Spartakusa[COLOR_REVERT] rozzuchwaliły innych [COLOR_UNIT_TEXT]Gladiatorów[COLOR_REVERT] do dołączenia do rebelii.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_ANDROID</Tag>
+		<Tag>TXT_KEY_SPECIALIST_ANDROID_WORKER</Tag>
 		<English>Android Worker</English>
 		<French>Ouvrier Androide</French>
 		<German>Android-Arbeiter</German>
@@ -21360,7 +21360,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Android Robotnik</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_ANDROID_STRATEGY</Tag>
+		<Tag>TXT_KEY_SPECIALIST_ANDROID_WORKER_STRATEGY</Tag>
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
@@ -21636,7 +21636,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Wielki Kupiec</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_GREAT_PRIEST</Tag>
+		<Tag>TXT_KEY_SPECIALIST_GREAT_PROPHET</Tag>
 		<English>Great Prophet</English>
 		<French>
 			<Text>Prophète illustre</Text>
@@ -21711,7 +21711,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Wielki Szpieg</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_GREAT_WARLORD</Tag>
+		<Tag>TXT_KEY_SPECIALIST_MILITARY_INSTRUCTOR</Tag>
 		<English>Military Instructor</English>
 		<French>
 			<Text>Instructeur Militaire</Text>
@@ -21919,7 +21919,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<French>TBD</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_SLEUTH</Tag>
+		<Tag>TXT_KEY_SPECIALIST_GREAT_SLEUTH</Tag>
 		<English>Great Sleuth</English>
 		<French>Détective illustre</French>
 	</TEXT>
@@ -26644,9 +26644,9 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	</TEXT>
 	<!-- Pepper's routes are used as yield boosters in improvements. They are here so Pepper's module can be turned off. -->
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_HYPERLOOP</Tag>
-		<English>Build [LINK=ROUTE_HYPERLOOP]Vactrain[\LINK]</English>
-		<French>[LINK=ROUTE_HYPERLOOP]Construire Train Hyperloop[\LINK]</French>
+		<Tag>TXT_KEY_BUILD_VACTRAIN</Tag>
+		<English>Build [LINK=ROUTE_VACTRAIN]Vactrain[\LINK]</English>
+		<French>[LINK=ROUTE_VACTRAIN]Construire Train Hyperloop[\LINK]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_GRAVITY_TRAIN</Tag>
@@ -26654,7 +26654,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<French>Construire [LINK=ROUTE_GRAVITY_TRAIN]Train à Gravité[\LINK]</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ROUTE_HYPERLOOP</Tag>
+		<Tag>TXT_KEY_ROUTE_VACTRAIN</Tag>
 		<English>Vactrain</English>
 		<French>Train Hyperloop</French>
 	</TEXT>

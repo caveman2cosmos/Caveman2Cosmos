@@ -39,11 +39,11 @@
 	<!-- Akkadian -->
 	<!-- by Hydromancerx -->
 		<BonusInfo>
-			<Type>BONUS_AKKAD</Type>
-			<Description>TXT_KEY_BONUS_AKKAD</Description>
+			<Type>BONUS_AKKADIAN</Type>
+			<Description>TXT_KEY_BONUS_AKKADIAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_AKKAD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_AKKADIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- American -->
@@ -139,11 +139,11 @@
 	<!-- Athenian -->
 	<!-- by Hydromancerx -->
 		<BonusInfo>
-			<Type>BONUS_ATHENS</Type>
-			<Description>TXT_KEY_BONUS_ATHENS</Description>
+			<Type>BONUS_ATHENIAN</Type>
+			<Description>TXT_KEY_BONUS_ATHENIAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_ATHENS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_ATHENIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Australian -->
@@ -501,11 +501,11 @@
 	<!-- Croatian -->
 	<!-- by Hydromancerx -->
 		<BonusInfo>
-			<Type>BONUS_CROATIA</Type>
-			<Description>TXT_KEY_BONUS_CROATIA</Description>
+			<Type>BONUS_CROATIAN</Type>
+			<Description>TXT_KEY_BONUS_CROATIAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_CROATIA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_CROATIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Cuban -->
@@ -541,21 +541,21 @@
 	<!-- Danish -->
 	<!-- by Hydromancerx -->
 		<BonusInfo>
-			<Type>BONUS_DENMARK</Type>
-			<Description>TXT_KEY_BONUS_DENMARK</Description>
+			<Type>BONUS_DANISH</Type>
+			<Description>TXT_KEY_BONUS_DANISH</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_DENMARK</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_DANISH</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Cetacea Sapien -->
 	<!-- by Hydromancerx -->
 		<BonusInfo>
-			<Type>BONUS_DOLPHIN</Type>
-			<Description>TXT_KEY_BONUS_DOLPHIN</Description>
+			<Type>BONUS_CETACEA_SAPIEN</Type>
+			<Description>TXT_KEY_BONUS_CETACEA_SAPIEN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_DOLPHIN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_CETACEA_SAPIEN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Dutch -->
@@ -621,11 +621,11 @@
 	<!-- Fijian -->
 	<!-- by Hydromancerx -->
 		<BonusInfo>
-			<Type>BONUS_FIGI</Type>
-			<Description>TXT_KEY_BONUS_FIGI</Description>
+			<Type>BONUS_FIJIAN</Type>
+			<Description>TXT_KEY_BONUS_FIJIAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_FIGI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_FIJIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Finnish -->
@@ -681,11 +681,11 @@
 	<!-- Ghanaian -->
 	<!-- by Hydromancerx -->
 		<BonusInfo>
-			<Type>BONUS_GHANA</Type>
-			<Description>TXT_KEY_BONUS_GHANA</Description>
+			<Type>BONUS_GHANAIAN</Type>
+			<Description>TXT_KEY_BONUS_GHANAIAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_GHANA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_GHANAIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Goth -->
@@ -711,11 +711,11 @@
 	<!-- Romani (Gypsy) -->
 	<!-- by Hydromancerx -->
 		<BonusInfo>
-			<Type>BONUS_GYPSY</Type>
-			<Description>TXT_KEY_BONUS_GYPSY</Description>
+			<Type>BONUS_ROMANI</Type>
+			<Description>TXT_KEY_BONUS_ROMANI</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_GYPSY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_ROMANI</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Haida -->
@@ -731,11 +731,11 @@
 	<!-- Haitian -->
 	<!-- by Hydromancerx -->
 		<BonusInfo>
-			<Type>BONUS_HATTIAN</Type>
-			<Description>TXT_KEY_BONUS_HATTIAN</Description>
+			<Type>BONUS_HAITIAN</Type>
+			<Description>TXT_KEY_BONUS_HAITIAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_HATTIAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HAITIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Hausa -->
@@ -781,11 +781,11 @@
 	<!-- Holy Roman -->
 	<!-- by Hydromancerx -->
 		<BonusInfo>
-			<Type>BONUS_HOLYROMAN</Type>
-			<Description>TXT_KEY_BONUS_HOLYROMAN</Description>
+			<Type>BONUS_HOLY_ROMAN</Type>
+			<Description>TXT_KEY_BONUS_HOLY_ROMAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_HOLYROMAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HOLY_ROMAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Hopi -->
@@ -991,11 +991,11 @@
 	<!-- Kanem-Bornu -->
 	<!-- by Hydromancerx -->
 		<BonusInfo>
-			<Type>BONUS_KANEMBORNU</Type>
-			<Description>TXT_KEY_BONUS_KANEMBORNU</Description>
+			<Type>BONUS_KANEM_BORNU</Type>
+			<Description>TXT_KEY_BONUS_KANEM_BORNU</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_KANEMBORNU</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_KANEM_BORNU</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Khmer -->
@@ -1062,11 +1062,11 @@
 	<!-- by Hydromancerx -->
 <!-- No units
 		<BonusInfo>
-			<Type>BONUS_LEON</Type>
-			<Description>TXT_KEY_BONUS_LEON</Description>
+			<Type>BONUS_LEONESE</Type>
+			<Description>TXT_KEY_BONUS_LEONESE</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_LEON</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_LEONESE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 -->
@@ -1223,11 +1223,11 @@
 	<!-- Mississippian -->
 	<!-- by Hydromancerx -->
 		<BonusInfo>
-			<Type>BONUS_MISSI</Type>
-			<Description>TXT_KEY_BONUS_MISSI</Description>
+			<Type>BONUS_MISSISSIPPIAN</Type>
+			<Description>TXT_KEY_BONUS_MISSISSIPPIAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_MISSI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_MISSISSIPPIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Mixtec -->
@@ -1323,21 +1323,21 @@
 	<!-- Nepalese -->
 	<!-- by Hydromancerx -->
 		<BonusInfo>
-			<Type>BONUS_NEPAL</Type>
-			<Description>TXT_KEY_BONUS_NEPAL</Description>
+			<Type>BONUS_NEPALESE</Type>
+			<Description>TXT_KEY_BONUS_NEPALESE</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_NEPAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_NEPALESE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- New Zealand -->
 	<!-- by Hydromancerx -->
 		<BonusInfo>
-			<Type>BONUS_NEWZEALAND</Type>
-			<Description>TXT_KEY_BONUS_NEWZEALAND</Description>
+			<Type>BONUS_NEW_ZEALAND</Type>
+			<Description>TXT_KEY_BONUS_NEW_ZEALAND</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_NEWZEALAND</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_NEW_ZEALAND</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Nok -->
@@ -1443,21 +1443,21 @@
 	<!-- Phoenican -->
 	<!-- by Hydromancerx -->
 		<BonusInfo>
-			<Type>BONUS_PHOENICAN</Type>
-			<Description>TXT_KEY_BONUS_PHOENICAN</Description>
+			<Type>BONUS_PHOENICIAN</Type>
+			<Description>TXT_KEY_BONUS_PHOENICIAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_PHOENICAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_PHOENICIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Pictish -->
 	<!-- by Hydromancerx -->
 		<BonusInfo>
-			<Type>BONUS_PICT</Type>
-			<Description>TXT_KEY_BONUS_PICT</Description>
+			<Type>BONUS_PICTISH</Type>
+			<Description>TXT_KEY_BONUS_PICTISH</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_PICT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_PICTISH</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Pima -->
@@ -1513,11 +1513,11 @@
 	<!-- Qiang -->
 	<!-- by Hydromancerx -->
 		<BonusInfo>
-			<Type>BONUS_QUANG</Type>
-			<Description>TXT_KEY_BONUS_QUANG</Description>
+			<Type>BONUS_QIANG</Type>
+			<Description>TXT_KEY_BONUS_QIANG</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_QUANG</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_QIANG</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Quechua -->
@@ -1533,11 +1533,11 @@
 	<!-- Rapa Nui -->
 	<!-- by Hydromancerx -->
 		<BonusInfo>
-			<Type>BONUS_RAPANUI</Type>
-			<Description>TXT_KEY_BONUS_RAPANUI</Description>
+			<Type>BONUS_RAPA_NUI</Type>
+			<Description>TXT_KEY_BONUS_RAPA_NUI</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_RAPANUI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_RAPA_NUI</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Rhodesian -->
@@ -1693,11 +1693,11 @@
 	<!-- Slovakian -->
 	<!-- by Hydromancerx -->
 		<BonusInfo>
-			<Type>BONUS_SLOVAKIA</Type>
-			<Description>TXT_KEY_BONUS_SLOVAKIA</Description>
+			<Type>BONUS_SLOVAKIAN</Type>
+			<Description>TXT_KEY_BONUS_SLOVAKIAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_SLOVAKIA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_SLOVAKIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Somali -->
@@ -1723,11 +1723,11 @@
 	<!-- South African -->
 	<!-- by Hydromancerx -->
 		<BonusInfo>
-			<Type>BONUS_SOUTHAFRICAN</Type>
-			<Description>TXT_KEY_BONUS_SOUTHAFRICAN</Description>
+			<Type>BONUS_SOUTH_AFRICAN</Type>
+			<Description>TXT_KEY_BONUS_SOUTH_AFRICAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_SOUTHAFRICAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_SOUTH_AFRICAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Soviet -->
@@ -1813,11 +1813,11 @@
 	<!-- Tahitian -->
 	<!-- by Hydromancerx -->
 		<BonusInfo>
-			<Type>BONUS_TAHITI</Type>
-			<Description>TXT_KEY_BONUS_TAHITI</Description>
+			<Type>BONUS_TAHITIAN</Type>
+			<Description>TXT_KEY_BONUS_TAHITIAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_TAHITI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_TAHITIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Taiwanese -->
@@ -1993,11 +1993,11 @@
 	<!-- Venetian -->
 	<!-- by Hydromancerx -->
 		<BonusInfo>
-			<Type>BONUS_VENICE</Type>
-			<Description>TXT_KEY_BONUS_VENICE</Description>
+			<Type>BONUS_VENETIAN</Type>
+			<Description>TXT_KEY_BONUS_VENETIAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_VENICE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_VENETIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Vietnamese -->
@@ -2083,11 +2083,11 @@
 	<!-- Yemenese -->
 	<!-- by Hydromancerx -->
 		<BonusInfo>
-			<Type>BONUS_YEMEN</Type>
-			<Description>TXT_KEY_BONUS_YEMEN</Description>
+			<Type>BONUS_YEMENESE</Type>
+			<Description>TXT_KEY_BONUS_YEMENESE</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_YEMEN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_YEMENESE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Zapotec -->
@@ -2131,291 +2131,291 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_DIGITAL_LIFESTYLE</Type>
-			<Description>TXT_KEY_BONUS_DIGITAL_LIFESTYLE</Description>
-			<Civilopedia>TXT_KEY_BONUS_DIGITAL_LIFESTYLE_PEDIA</Civilopedia>
+			<Type>BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE</Type>
+			<Description>TXT_KEY_BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE</Description>
+			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_DIGITAL_LIFESTYLE</ArtDefineTag>
-			<TechReveal>TECH_MMO</TechReveal>
-			<TechCityTrade>TECH_MMO</TechCityTrade>
+			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE</ArtDefineTag>
+			<TechReveal>TECH_ONLINE_COMMUNITY</TechReveal>
+			<TechCityTrade>TECH_ONLINE_COMMUNITY</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_DIGITAL_IDENTITY</Type>
-			<Description>TXT_KEY_BONUS_DIGITAL_IDENTITY</Description>
-			<Civilopedia>TXT_KEY_BONUS_DIGITAL_IDENTITY_PEDIA</Civilopedia>
+			<Type>BONUS_HUMAN_MOD_DIGITAL_IDENTITY</Type>
+			<Description>TXT_KEY_BONUS_HUMAN_MOD_DIGITAL_IDENTITY</Description>
+			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_DIGITAL_IDENTITY_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_DIGITAL_IDENTITY</ArtDefineTag>
-			<TechReveal>TECH_VIRTUALSOCIETY</TechReveal>
-			<TechCityTrade>TECH_VIRTUALSOCIETY</TechCityTrade>
+			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_DIGITAL_IDENTITY</ArtDefineTag>
+			<TechReveal>TECH_VIRTUAL_SOCIETY</TechReveal>
+			<TechCityTrade>TECH_VIRTUAL_SOCIETY</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_GENE_EDITING</Type>
-			<Description>TXT_KEY_BONUS_GENE_EDITING</Description>
-			<Civilopedia>TXT_KEY_BONUS_GENE_EDITING_PEDIA</Civilopedia>
+			<Type>BONUS_HUMAN_MOD_GENE_EDITING</Type>
+			<Description>TXT_KEY_BONUS_HUMAN_MOD_GENE_EDITING</Description>
+			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_GENE_EDITING_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_GENE_EDITING</ArtDefineTag>
-			<TechReveal>TECH_GENEENHANCEMENT</TechReveal>
-			<TechCityTrade>TECH_GENEENHANCEMENT</TechCityTrade>
+			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_GENE_EDITING</ArtDefineTag>
+			<TechReveal>TECH_GENE_ENHANCEMENT</TechReveal>
+			<TechCityTrade>TECH_GENE_ENHANCEMENT</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_DESIGNER_BABIES</Type>
-			<Description>TXT_KEY_BONUS_DESIGNER_BABIES</Description>
-			<Civilopedia>TXT_KEY_BONUS_DESIGNER_BABIES_PEDIA</Civilopedia>
+			<Type>BONUS_HUMAN_MOD_DESIGNER_BABIES</Type>
+			<Description>TXT_KEY_BONUS_HUMAN_MOD_DESIGNER_BABIES</Description>
+			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_DESIGNER_BABIES_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_DESIGNER_BABIES</ArtDefineTag>
-			<TechReveal>TECH_GENEJURISPRUDENCE</TechReveal>
-			<TechCityTrade>TECH_GENEJURISPRUDENCE</TechCityTrade>
+			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_DESIGNER_BABIES</ArtDefineTag>
+			<TechReveal>TECH_GENE_JURISPRUDENCE</TechReveal>
+			<TechCityTrade>TECH_GENE_JURISPRUDENCE</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_COGNITIVE_ENHANCEMENT</Type>
-			<Description>TXT_KEY_BONUS_COGNITIVE_ENHANCEMENT</Description>
-			<Civilopedia>TXT_KEY_BONUS_COGNITIVE_ENHANCEMENT_PEDIA</Civilopedia>
+			<Type>BONUS_HUMAN_MOD_COGNITIVE_ENHANCEMENT</Type>
+			<Description>TXT_KEY_BONUS_HUMAN_MOD_COGNITIVE_ENHANCEMENT</Description>
+			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_COGNITIVE_ENHANCEMENT_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_COGNITIVE_ENHANCEMENT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_COGNITIVE_ENHANCEMENT</ArtDefineTag>
 			<TechReveal>TECH_NEURON_ENGINEERING</TechReveal>
 			<TechCityTrade>TECH_NEURON_ENGINEERING</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_ENLIGHTENMENT</Type>
-			<Description>TXT_KEY_BONUS_ENLIGHTENMENT</Description>
-			<Civilopedia>TXT_KEY_BONUS_ENLIGHTENMENT_PEDIA</Civilopedia>
+			<Type>BONUS_HUMAN_MOD_ENLIGHTENED</Type>
+			<Description>TXT_KEY_BONUS_HUMAN_MOD_ENLIGHTENED</Description>
+			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_ENLIGHTENED_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_ENLIGHTENMENT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_ENLIGHTENED</ArtDefineTag>
 			<TechReveal>TECH_UTOPIA_DESTINY</TechReveal>
 			<TechCityTrade>TECH_UTOPIA_DESTINY</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_NOVEL_SENSES</Type>
-			<Description>TXT_KEY_BONUS_NOVEL_SENSES</Description>
-			<Civilopedia>TXT_KEY_BONUS_NOVEL_SENSES_PEDIA</Civilopedia>
+			<Type>BONUS_HUMAN_MOD_NOVEL_SENSES</Type>
+			<Description>TXT_KEY_BONUS_HUMAN_MOD_NOVEL_SENSES</Description>
+			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_NOVEL_SENSES_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_NOVEL_SENSES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_NOVEL_SENSES</ArtDefineTag>
 			<TechReveal>TECH_SYNTHETIC_SYNESTHESIA</TechReveal>
 			<TechCityTrade>TECH_SYNTHETIC_SYNESTHESIA</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_LUNARIS</Type>
-			<Description>TXT_KEY_BONUS_LUNARIS</Description>
-			<Civilopedia>TXT_KEY_BONUS_LUNARIS_PEDIA</Civilopedia>
+			<Type>BONUS_HUMAN_MOD_LUNARIS</Type>
+			<Description>TXT_KEY_BONUS_HUMAN_MOD_LUNARIS</Description>
+			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_LUNARIS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_LUNARIS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_LUNARIS</ArtDefineTag>
 			<TechReveal>TECH_ARTIFICIAL_EVOLUTION</TechReveal>
 			<TechCityTrade>TECH_ARTIFICIAL_EVOLUTION</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_MARTIAN</Type>
-			<Description>TXT_KEY_BONUS_MARTIAN</Description>
-			<Civilopedia>TXT_KEY_BONUS_MARTIAN_PEDIA</Civilopedia>
+			<Type>BONUS_HUMAN_MOD_MARTIAN</Type>
+			<Description>TXT_KEY_BONUS_HUMAN_MOD_MARTIAN</Description>
+			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_MARTIAN_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_MARTIAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_MARTIAN</ArtDefineTag>
 			<TechReveal>TECH_ARTIFICIAL_EVOLUTION</TechReveal>
 			<TechCityTrade>TECH_ARTIFICIAL_EVOLUTION</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_INDEFINITE_LIFESPAN</Type>
-			<Description>TXT_KEY_BONUS_INDEFINITE_LIFESPAN</Description>
-			<Civilopedia>TXT_KEY_BONUS_INDEFINITE_LIFESPAN_PEDIA</Civilopedia>
+			<Type>BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</Type>
+			<Description>TXT_KEY_BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</Description>
+			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_INDEFINITE_LIFESPAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</ArtDefineTag>
 			<TechReveal>TECH_TRANSHUMANISM</TechReveal>
 			<TechCityTrade>TECH_TRANSHUMANISM</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_ZERO_G</Type>
-			<Description>TXT_KEY_BONUS_ZERO_G</Description>
-			<Civilopedia>TXT_KEY_BONUS_ZERO_G_PEDIA</Civilopedia>
+			<Type>BONUS_HUMAN_MOD_ZERO_G_ADAPTATION</Type>
+			<Description>TXT_KEY_BONUS_HUMAN_MOD_ZERO_G_ADAPTATION</Description>
+			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_ZERO_G_ADAPTATION_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_ZERO_G</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_ZERO_G_ADAPTATION</ArtDefineTag>
 			<TechReveal>TECH_TRANSHUMANISM</TechReveal>
 			<TechCityTrade>TECH_TRANSHUMANISM</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_ROBOTIC_BODY</Type>
-			<Description>TXT_KEY_BONUS_ROBOTIC_BODY</Description>
-			<Civilopedia>TXT_KEY_BONUS_ROBOTIC_BODY_PEDIA</Civilopedia>
+			<Type>BONUS_HUMAN_MOD_ROBOTIC_BODY</Type>
+			<Description>TXT_KEY_BONUS_HUMAN_MOD_ROBOTIC_BODY</Description>
+			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_ROBOTIC_BODY_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_ROBOTIC_BODY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_ROBOTIC_BODY</ArtDefineTag>
 			<TechReveal>TECH_COMPREHENSIVE_CYBERNETICS</TechReveal>
 			<TechCityTrade>TECH_COMPREHENSIVE_CYBERNETICS</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_WINGS</Type>
-			<Description>TXT_KEY_BONUS_WINGS</Description>
-			<Civilopedia>TXT_KEY_BONUS_WINGS_PEDIA</Civilopedia>
+			<Type>BONUS_HUMAN_MOD_WINGS</Type>
+			<Description>TXT_KEY_BONUS_HUMAN_MOD_WINGS</Description>
+			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_WINGS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_WINGS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_WINGS</ArtDefineTag>
 			<TechReveal>TECH_HUMAN_TRANSMUTATION</TechReveal>
 			<TechCityTrade>TECH_HUMAN_TRANSMUTATION</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_GILLS</Type>
-			<Description>TXT_KEY_BONUS_GILLS</Description>
-			<Civilopedia>TXT_KEY_BONUS_GILLS_PEDIA</Civilopedia>
+			<Type>BONUS_HUMAN_MOD_GILLS</Type>
+			<Description>TXT_KEY_BONUS_HUMAN_MOD_GILLS</Description>
+			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_GILLS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_GILLS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_GILLS</ArtDefineTag>
 			<TechReveal>TECH_HUMAN_TRANSMUTATION</TechReveal>
 			<TechCityTrade>TECH_HUMAN_TRANSMUTATION</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_HEAT_TOLERANCE</Type>
-			<Description>TXT_KEY_BONUS_HEAT_TOLERANCE</Description>
-			<Civilopedia>TXT_KEY_BONUS_HEAT_TOLERANCE_PEDIA</Civilopedia>
+			<Type>BONUS_HUMAN_MOD_HEAT_TOLERANCE</Type>
+			<Description>TXT_KEY_BONUS_HUMAN_MOD_HEAT_TOLERANCE</Description>
+			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_HEAT_TOLERANCE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_HEAT_TOLERANCE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_HEAT_TOLERANCE</ArtDefineTag>
 			<TechReveal>TECH_THERMAL_NEGATION</TechReveal>
 			<TechCityTrade>TECH_THERMAL_NEGATION</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_COLD_TOLERANCE</Type>
-			<Description>TXT_KEY_BONUS_COLD_TOLERANCE</Description>
-			<Civilopedia>TXT_KEY_BONUS_COLD_TOLERANCE_PEDIA</Civilopedia>
+			<Type>BONUS_HUMAN_MOD_COLD_TOLERANCE</Type>
+			<Description>TXT_KEY_BONUS_HUMAN_MOD_COLD_TOLERANCE</Description>
+			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_COLD_TOLERANCE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_COLD_TOLERANCE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_COLD_TOLERANCE</ArtDefineTag>
 			<TechReveal>TECH_THERMAL_NEGATION</TechReveal>
 			<TechCityTrade>TECH_THERMAL_NEGATION</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_RADIATION_TOLERANCE</Type>
-			<Description>TXT_KEY_BONUS_RADIATION_TOLERANCE</Description>
-			<Civilopedia>TXT_KEY_BONUS_RADIATION_TOLERANCE_PEDIA</Civilopedia>
+			<Type>BONUS_HUMAN_MOD_RADIATION_TOLERANCE</Type>
+			<Description>TXT_KEY_BONUS_HUMAN_MOD_RADIATION_TOLERANCE</Description>
+			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_RADIATION_TOLERANCE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_RADIATION_TOLERANCE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_RADIATION_TOLERANCE</ArtDefineTag>
 			<TechReveal>TECH_NANOSHIELDING</TechReveal>
 			<TechCityTrade>TECH_NANOSHIELDING</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_COLLECTIVE_CONSCIOUSNESS</Type>
-			<Description>TXT_KEY_BONUS_COLLECTIVE_CONSCIOUSNESS</Description>
-			<Civilopedia>TXT_KEY_BONUS_COLLECTIVE_CONSCIOUSNESS_PEDIA</Civilopedia>
+			<Type>BONUS_HUMAN_MOD_COLLECTIVE_CONSCIOUSNESS</Type>
+			<Description>TXT_KEY_BONUS_HUMAN_MOD_COLLECTIVE_CONSCIOUSNESS</Description>
+			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_COLLECTIVE_CONSCIOUSNESS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_COLLECTIVE_CONSCIOUSNESS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_COLLECTIVE_CONSCIOUSNESS</ArtDefineTag>
 			<TechReveal>TECH_SENTIENT_EARTH</TechReveal>
 			<TechCityTrade>TECH_SENTIENT_EARTH</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_NANOMORPHICS_BEINGS</Type>
-			<Description>TXT_KEY_BONUS_NANOMORPHICS_BEINGS</Description>
-			<Civilopedia>TXT_KEY_BONUS_NANOMORPHICS_BEINGS_PEDIA</Civilopedia>
+			<Type>BONUS_HUMAN_MOD_NANOMORPHISM</Type>
+			<Description>TXT_KEY_BONUS_HUMAN_MOD_NANOMORPHISM</Description>
+			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_NANOMORPHISM_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_NANOMORPHICS_BEINGS</ArtDefineTag>
-			<TechReveal>TECH_ATTOMETER_NANOMORPHISM</TechReveal>
-			<TechCityTrade>TECH_ATTOMETER_NANOMORPHISM</TechCityTrade>
+			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_NANOMORPHISM</ArtDefineTag>
+			<TechReveal>TECH_NANOMORPHIC_TROIDS</TechReveal>
+			<TechCityTrade>TECH_NANOMORPHIC_TROIDS</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_INFORMATION_BEING</Type>
-			<Description>TXT_KEY_BONUS_INFORMATION_BEING</Description>
-			<Civilopedia>TXT_KEY_BONUS_INFORMATION_BEING_PEDIA</Civilopedia>
+			<Type>BONUS_HUMAN_MOD_INFORMATION_BASED</Type>
+			<Description>TXT_KEY_BONUS_HUMAN_MOD_INFORMATION_BASED</Description>
+			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_INFORMATION_BASED_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_INFORMATION_BEING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_INFORMATION_BASED</ArtDefineTag>
 			<TechReveal>TECH_POSTHUMANISM</TechReveal>
 			<TechCityTrade>TECH_POSTHUMANISM</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_TRANSAPIENT</Type>
-			<Description>TXT_KEY_BONUS_TRANSAPIENT</Description>
-			<Civilopedia>TXT_KEY_BONUS_TRANSAPIENT_PEDIA</Civilopedia>
+			<Type>BONUS_HUMAN_MOD_TRANSAPIENT</Type>
+			<Description>TXT_KEY_BONUS_HUMAN_MOD_TRANSAPIENT</Description>
+			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_TRANSAPIENT_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_TRANSAPIENT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_TRANSAPIENT</ArtDefineTag>
 			<TechReveal>TECH_STELLAR_COMPUTING</TechReveal>
 			<TechCityTrade>TECH_STELLAR_COMPUTING</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
         <BonusInfo>
-			<Type>BONUS_HUMAN_ALIEN_HYBRID</Type>
-			<Description>TXT_KEY_BONUS_HUMAN_ALIEN_HYBRID</Description>
-			<Civilopedia>TXT_KEY_BONUS_HUMAN_ALIEN_HYBRID_PEDIA</Civilopedia>
+			<Type>BONUS_HUMAN_MOD_ALIEN_HYBRID</Type>
+			<Description>TXT_KEY_BONUS_HUMAN_MOD_ALIEN_HYBRID</Description>
+			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_ALIEN_HYBRID_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_HUMAN_ALIEN_HYBRID</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_ALIEN_HYBRID</ArtDefineTag>
 			<TechReveal>TECH_SPECIES_AMALGAMATION</TechReveal>
 			<TechCityTrade>TECH_SPECIES_AMALGAMATION</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
         <BonusInfo>
-			<Type>BONUS_IMMORTAL_BEING</Type>
-			<Description>TXT_KEY_BONUS_IMMORTAL_BEING</Description>
-			<Civilopedia>TXT_KEY_BONUS_IMMORTAL_BEING_PEDIA</Civilopedia>
+			<Type>BONUS_HUMAN_MOD_IMMORTAL</Type>
+			<Description>TXT_KEY_BONUS_HUMAN_MOD_IMMORTAL</Description>
+			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_IMMORTAL_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_IMMORTAL_BEING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_IMMORTAL</ArtDefineTag>
 			<TechReveal>TECH_IMMORTALITY</TechReveal>
 			<TechCityTrade>TECH_IMMORTALITY</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_PURE_INFORMATION_BEING</Type>
-			<Description>TXT_KEY_BONUS_PURE_INFORMATION_BEING</Description>
-			<Civilopedia>TXT_KEY_BONUS_PURE_INFORMATION_BEING_PEDIA</Civilopedia>
+			<Type>BONUS_HUMAN_MOD_PURE_ENERGY</Type>
+			<Description>TXT_KEY_BONUS_HUMAN_MOD_PURE_ENERGY</Description>
+			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PURE_ENERGY_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_PURE_INFORMATION_BEING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_PURE_ENERGY</ArtDefineTag>
 			<TechReveal>TECH_LUMINAL_BEINGS</TechReveal>
 			<TechCityTrade>TECH_LUMINAL_BEINGS</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_HIGH_DIMENSIONAL_BEING</Type>
-			<Description>TXT_KEY_BONUS_HIGH_DIMENSIONAL_BEING</Description>
-			<Civilopedia>TXT_KEY_BONUS_HIGH_DIMENSIONAL_BEING_PEDIA</Civilopedia>
+			<Type>BONUS_HUMAN_MOD_HIGH_DIMENSIONAL</Type>
+			<Description>TXT_KEY_BONUS_HUMAN_MOD_HIGH_DIMENSIONAL</Description>
+			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_HIGH_DIMENSIONAL_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_HIGH_DIMENSIONAL_BEING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_HIGH_DIMENSIONAL</ArtDefineTag>
 			<TechReveal>TECH_TRANSVERSE_EUCLIDEAN_GEOMETRY</TechReveal>
 			<TechCityTrade>TECH_TRANSVERSE_EUCLIDEAN_GEOMETRY</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_ARCHAILECT</Type>
-			<Description>TXT_KEY_BONUS_ARCHAILECT</Description>
-			<Civilopedia>TXT_KEY_BONUS_ARCHAILECT_PEDIA</Civilopedia>
+			<Type>BONUS_HUMAN_MOD_ARCHAILECT</Type>
+			<Description>TXT_KEY_BONUS_HUMAN_MOD_ARCHAILECT</Description>
+			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_ARCHAILECT_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_ARCHAILECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_ARCHAILECT</ArtDefineTag>
 			<TechReveal>TECH_HYPERINTELLIGENCE</TechReveal>
 			<TechCityTrade>TECH_HYPERINTELLIGENCE</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_ATEMPORAL_BEINGS</Type>
-			<Description>TXT_KEY_BONUS_ATEMPORAL_BEINGS</Description>
-			<Civilopedia>TXT_KEY_BONUS_ATEMPORAL_BEINGS_PEDIA</Civilopedia>
+			<Type>BONUS_HUMAN_MOD_ATEMPORAL</Type>
+			<Description>TXT_KEY_BONUS_HUMAN_MOD_ATEMPORAL</Description>
+			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_ATEMPORAL_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_ATEMPORAL_BEINGS</ArtDefineTag>
-			<TechReveal>TECH_NON_TEMPORAL_ENTITIES</TechReveal>
-			<TechCityTrade>TECH_NON_TEMPORAL_ENTITIES</TechCityTrade>
+			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_ATEMPORAL</ArtDefineTag>
+			<TechReveal>TECH_ATEMPORAL_BEINGS</TechReveal>
+			<TechCityTrade>TECH_ATEMPORAL_BEINGS</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_NONSPATIAL_BEINGS</Type>
-			<Description>TXT_KEY_BONUS_NONSPATIAL_BEINGS</Description>
-			<Civilopedia>TXT_KEY_BONUS_NONSPATIAL_BEINGS_PEDIA</Civilopedia>
+			<Type>BONUS_HUMAN_MOD_NONSPATIAL</Type>
+			<Description>TXT_KEY_BONUS_HUMAN_MOD_NONSPATIAL</Description>
+			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_NONSPATIAL_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_NONSPATIAL_BEINGS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_NONSPATIAL</ArtDefineTag>
 			<TechReveal>TECH_SPATIAL_TRANSCENDENCE</TechReveal>
 			<TechCityTrade>TECH_SPATIAL_TRANSCENDENCE</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
         <BonusInfo>
-			<Type>BONUS_METAPHYSICAL</Type>
-			<Description>TXT_KEY_BONUS_METAPHYSICAL</Description>
-			<Civilopedia>TXT_KEY_BONUS_METAPHYSICAL_PEDIA</Civilopedia>
+			<Type>BONUS_HUMAN_MOD_METAPHYSICAL</Type>
+			<Description>TXT_KEY_BONUS_HUMAN_MOD_METAPHYSICAL</Description>
+			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_METAPHYSICAL_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_METAPHYSICAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_METAPHYSICAL</ArtDefineTag>
 			<TechReveal>TECH_ARCHETYPAL_VECTOR_SPACES</TechReveal>
 			<TechCityTrade>TECH_ARCHETYPAL_VECTOR_SPACES</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
@@ -3318,11 +3318,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_GOLDEN_HORDE</Type>
-			<Description>TXT_KEY_BONUS_GOLDEN_HORDE</Description>
+			<Type>BONUS_GOLD_OREEN_HORDE</Type>
+			<Description>TXT_KEY_BONUS_GOLD_OREEN_HORDE</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_GOLDEN_HORDE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_GOLD_OREEN_HORDE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -3462,11 +3462,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_HONGKONG</Type>
-			<Description>TXT_KEY_BONUS_HONGKONG</Description>
+			<Type>BONUS_HONG_KONG</Type>
+			<Description>TXT_KEY_BONUS_HONG_KONG</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_HONGKONG</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HONG_KONG</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -3654,11 +3654,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_KHAZAK</Type>
-			<Description>TXT_KEY_BONUS_KHAZAK</Description>
+			<Type>BONUS_KAZAKH</Type>
+			<Description>TXT_KEY_BONUS_KAZAKH</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_KHAZAK</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_KAZAKH</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -4422,11 +4422,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_PHILIPINO</Type>
-			<Description>TXT_KEY_BONUS_PHILIPINO</Description>
+			<Type>BONUS_FILIPINO</Type>
+			<Description>TXT_KEY_BONUS_FILIPINO</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_PHILIPINO</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_FILIPINO</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>

@@ -228,8 +228,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FUR_FARM_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Fur Farm[COLOR_REVERT] provides [LINK=BONUS_FUR]Furs[\LINK].</English>
-		<Italian>L'[COLOR_BUILDING_TEXT]allevamento di animali da pelliccia[COLOR_REVERT] fornisce [LINK=BONUS_FUR]Pellicce[\LINK].</Italian>
+		<English>The [COLOR_BUILDING_TEXT]Fur Farm[COLOR_REVERT] provides [LINK=BONUS_BEAVERS]Furs[\LINK].</English>
+		<Italian>L'[COLOR_BUILDING_TEXT]allevamento di animali da pelliccia[COLOR_REVERT] fornisce [LINK=BONUS_BEAVERS]Pellicce[\LINK].</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNAKE_PIT_STRATEGY</Tag>

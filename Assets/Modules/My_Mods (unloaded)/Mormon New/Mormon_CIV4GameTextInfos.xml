@@ -6,13 +6,13 @@
 <!-- GameText Civilopedia Techs -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_MORMON</Tag>
+		<Tag>TXT_KEY_TECH_MORMON</Tag>
 		<English>Mormon</English>
 		<Italian>Mormonismo</Italian>
 		<Polish>Mormonizm</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_MORMON_PEDIA</Tag>
+		<Tag>TXT_KEY_TECH_MORMON_PEDIA</Tag>
 		<English>The Church of Jesus Christ of Latter-day Saints (abbreviated as the LDS Church, and colloquially referred to as the Mormon Church) is a restorationist Christian church and the largest denomination originating from the Latter Day Saint movement founded by Joseph Smith, Jr. Founded in Upstate New York in 1830, the church is headquartered in Salt Lake City, Utah, and has established congregations (called wards or branches) worldwide.[PARAGRAPH:2]Adherents view faith in Jesus Christ as the central tenet of their religion. LDS Church theology includes the Christian doctrine of salvation only through Jesus Christ. The church has an open canon which includes four scriptural texts: the Bible (both Old and New Testaments), the Book of Mormon, the Doctrine and Covenants, and the Pearl of Great Price. Other than the Bible, the majority of the LDS canon constitutes revelation dictated by Joseph Smith and includes commentary and exegesis about the Bible, texts described as lost parts of the Bible, and other works believed to be written by ancient prophets. Together these are known to Latter-Day Saints as the Standard Works.[PARAGRAPH:2]Under the doctrine of revelation, Latter Day Saints believe that Jesus leads the church by revealing his will to the President of the Church, whom they sustain as a modern-day prophet, seer, and revelator. Individual members are expected to receive personal revelation from God for specifics in conducting their lives. The President heads a hierarchical structure with various levels reaching down to local congregations. Bishops, drawn from the laity, lead local congregations. Worthy male members, after age 12, may be ordained to the priesthood. Women do not hold positions within the priesthood but serve in an array of other leadership roles, including the Relief Society, the world’s largest women’s organization. Both men and women may serve as missionaries, and the church maintains a large missionary program which proselytizes and conducts humanitarian service worldwide. Faithful members adhere to laws regarding sexual purity, health, fasting, and Sabbath-day observance. Members also voluntarily tithe, donating 10 percent of their income to the church.[PARAGRAPH:2]Source: Wikipedia http://en.wikipedia.org/wiki/LDS_Church</English>
 	</TEXT>
 	<TEXT>

@@ -53,7 +53,7 @@
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_STONECIRCLE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_STONE_CIRCLE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
@@ -81,7 +81,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>40</iProduction>
@@ -97,7 +97,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>20</iProduction>
@@ -128,7 +128,7 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<!-- This improvement 'CANNOT' be built on this feature -->
-					<FeatureType>FEATURE_TARPIT</FeatureType>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
@@ -197,7 +197,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -212,7 +212,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -221,20 +221,20 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>0</iProduction>
@@ -256,7 +256,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -411,7 +411,7 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<!-- This improvement 'CANNOT' be built on this feature -->
-					<FeatureType>FEATURE_TARPIT</FeatureType>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
@@ -482,7 +482,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -497,7 +497,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -506,20 +506,20 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>0</iProduction>
@@ -541,7 +541,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -696,7 +696,7 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<!-- This improvement 'CANNOT' be built on this feature -->
-					<FeatureType>FEATURE_TARPIT</FeatureType>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
 					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>

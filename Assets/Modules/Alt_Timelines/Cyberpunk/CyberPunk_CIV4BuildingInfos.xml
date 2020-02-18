@@ -145,7 +145,7 @@
 			</SpecialistCounts>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_FLASHMEMORY</PrereqTech>
+					<PrereqTech>TECH_FLASH_MEMORY</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>2</iCommerce>
@@ -163,7 +163,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_HUMAN_MACHINE_INTERFACE</PrereqTech>
+					<PrereqTech>TECH_BRAIN_MACHINE_INTERFACE</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>2</iCommerce>
@@ -172,7 +172,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_NANOGENERATOR</PrereqTech>
+					<PrereqTech>TECH_NANOGENERATORS</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>2</iCommerce>

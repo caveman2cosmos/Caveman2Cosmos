@@ -38,7 +38,7 @@
 		</BonusArtInfo>
 	<!-- Aluminum Ingots -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_ALUMINUM</Type>
+			<Type>ART_DEF_BONUS_ALUMINUM_INGOTS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -48,7 +48,7 @@
 		</BonusArtInfo>
 	<!-- Ammunition -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_AMMO</Type>
+			<Type>ART_DEF_BONUS_AMMUNITION</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Copper/Copper.nif</NIF>
@@ -68,7 +68,7 @@
 		</BonusArtInfo>
 	<!-- Antigrav Generators -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_ANTIGRAV_GENERATORS</Type>
+			<Type>ART_DEF_BONUS_LEVITATION_GENERATORS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -268,7 +268,7 @@
 		</BonusArtInfo>
 	<!-- Brass Instruments -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_BRASS</Type>
+			<Type>ART_DEF_BONUS_BRASS_INSTRUMENTS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -298,7 +298,7 @@
 		</BonusArtInfo>
 	<!-- Bugs -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_BUG</Type>
+			<Type>ART_DEF_BONUS_BUGS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -308,7 +308,7 @@
 		</BonusArtInfo>
 	<!-- Caesium Ore -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_CAESIUM</Type>
+			<Type>ART_DEF_BONUS_CAESIUM_ORE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -468,7 +468,7 @@
 		</BonusArtInfo>
 	<!-- Chromite Ore -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_CHROMITE</Type>
+			<Type>ART_DEF_BONUS_CHROMITE_ORE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -478,7 +478,7 @@
 		</BonusArtInfo>
 	<!-- Cinnabar Ore -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_CINNABAR</Type>
+			<Type>ART_DEF_BONUS_CINNABAR_ORE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -488,7 +488,7 @@
 		</BonusArtInfo>
 	<!-- Common Clay -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_CLAY</Type>
+			<Type>ART_DEF_BONUS_COMMON_CLAY</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -509,7 +509,7 @@
 		</BonusArtInfo>
 	<!-- Clothing -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_CLOTHES</Type>
+			<Type>ART_DEF_BONUS_CLOTHING</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -519,7 +519,7 @@
 		</BonusArtInfo>
 	<!-- Cobalt Ore -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_COBALT</Type>
+			<Type>ART_DEF_BONUS_COBALT_ORE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -539,7 +539,7 @@
 		</BonusArtInfo>
 	<!-- Copper Wires -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_COPPERWIRES</Type>
+			<Type>ART_DEF_BONUS_COPPER_WIRES</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -569,7 +569,7 @@
 		</BonusArtInfo>
 	<!-- Oil Products -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_DIESEL</Type>
+			<Type>ART_DEF_BONUS_OIL_PRODUCTS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Oil/Oil.nif</NIF>
@@ -769,7 +769,7 @@
 		</BonusArtInfo>
 	<!-- Fiber Optic Cables -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_FIBEROPTICS</Type>
+			<Type>ART_DEF_BONUS_FIBER_OPTIC_CABLES</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -799,7 +799,7 @@
 		</BonusArtInfo>
 	<!-- Fish Oil -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_FISHOIL</Type>
+			<Type>ART_DEF_BONUS_FISH_OIL</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -909,7 +909,7 @@
 		</BonusArtInfo>
 	<!-- Ghee Oil -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_GHEEOIL</Type>
+			<Type>ART_DEF_BONUS_GHEE_OIL</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -919,7 +919,7 @@
 		</BonusArtInfo>
 	<!-- Glassware -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_GLASS</Type>
+			<Type>ART_DEF_BONUS_GLASSWARE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Wine/Wine.nif</NIF>
@@ -1009,7 +1009,7 @@
 		</BonusArtInfo>
 	<!-- Hematite Ore -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_HEMATITE</Type>
+			<Type>ART_DEF_BONUS_HAEMATITE_ORE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1039,7 +1039,7 @@
 		</BonusArtInfo>
 	<!-- Holographic Projectors -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_HOLO_PROJECTORS</Type>
+			<Type>ART_DEF_BONUS_HOLOGRAPHIC_PROJECTORS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1089,7 +1089,7 @@
 		</BonusArtInfo>
 	<!-- Ice Cream -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_ICECREAM</Type>
+			<Type>ART_DEF_BONUS_ICE_CREAM</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1109,7 +1109,7 @@
 		</BonusArtInfo>
 	<!-- Brass Ingots -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_INGOT_BRASS</Type>
+			<Type>ART_DEF_BONUS_BRASS_INGOTS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1119,7 +1119,7 @@
 		</BonusArtInfo>
 	<!-- Copper Ingots -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_INGOT_COPPER</Type>
+			<Type>ART_DEF_BONUS_COPPER_INGOTS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1129,7 +1129,7 @@
 		</BonusArtInfo>
 	<!-- Electrum Ingots -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_INGOT_ELECTRUM</Type>
+			<Type>ART_DEF_BONUS_ELECTRUM_INGOTS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1139,7 +1139,7 @@
 		</BonusArtInfo>
 	<!-- Gold Ingots -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_INGOT_GOLD</Type>
+			<Type>ART_DEF_BONUS_GOLD_INGOTS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1149,7 +1149,7 @@
 		</BonusArtInfo>
 	<!-- Iron Ingots -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_INGOT_IRON</Type>
+			<Type>ART_DEF_BONUS_IRON_INGOTS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1159,7 +1159,7 @@
 		</BonusArtInfo>
 	<!-- Lead Ingots -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_INGOT_LEAD</Type>
+			<Type>ART_DEF_BONUS_LEAD_INGOTS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1169,7 +1169,7 @@
 		</BonusArtInfo>
 	<!-- Platinum Ingots -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_INGOT_PLATINUM</Type>
+			<Type>ART_DEF_BONUS_PLATINUM_INGOTS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1179,7 +1179,7 @@
 		</BonusArtInfo>
 	<!-- Silver Ingots -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_INGOT_SILVER</Type>
+			<Type>ART_DEF_BONUS_SILVER_INGOTS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1189,7 +1189,7 @@
 		</BonusArtInfo>
 	<!-- Tin Ingots -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_INGOT_TIN</Type>
+			<Type>ART_DEF_BONUS_TIN_INGOTS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1199,7 +1199,7 @@
 		</BonusArtInfo>
 	<!-- Titanium Ingots -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_INGOT_TITANIUM</Type>
+			<Type>ART_DEF_BONUS_TITANIUM_INGOTS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1219,7 +1219,7 @@
 		</BonusArtInfo>
 	<!-- Jet Engines -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_JET_AIRCRAFTS</Type>
+			<Type>ART_DEF_BONUS_JET_ENGINES</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1279,7 +1279,7 @@
 		</BonusArtInfo>
 	<!-- Lazulite Ore -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_LAZULITE</Type>
+			<Type>ART_DEF_BONUS_LAZULITE_ORE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1309,7 +1309,7 @@
 		</BonusArtInfo>
 	<!-- Lizards -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_LIZARD</Type>
+			<Type>ART_DEF_BONUS_LIZARDS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1339,7 +1339,7 @@
 		</BonusArtInfo>
 	<!-- Magnesium Ore -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_MAGNESIUM</Type>
+			<Type>ART_DEF_BONUS_MAGNESIUM_ORE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1429,7 +1429,7 @@
 		</BonusArtInfo>
 	<!-- Microwave Ovens -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_MICROWAVES</Type>
+			<Type>ART_DEF_BONUS_MICROWAVE_OVENS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1529,7 +1529,7 @@
 		</BonusArtInfo>
 	<!-- Nickel Ore -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_NICKEL</Type>
+			<Type>ART_DEF_BONUS_NICKEL_ORE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1579,7 +1579,7 @@
 		</BonusArtInfo>
 	<!-- Olive Oil -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_OLIVEOIL</Type>
+			<Type>ART_DEF_BONUS_OLIVE_OIL</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1679,7 +1679,7 @@
 		</BonusArtInfo>
 	<!-- Percussion Instruments -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_PERCUSSION</Type>
+			<Type>ART_DEF_BONUS_PERCUSSION_INSTRUMENTS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1709,7 +1709,7 @@
 		</BonusArtInfo>
 	<!-- Replicators -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_PERSONAL_REPLICATORS</Type>
+			<Type>ART_DEF_BONUS_REPLICATORS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1839,7 +1839,7 @@
 		</BonusArtInfo>
 	<!-- Raw Fish -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_RAWFISH</Type>
+			<Type>ART_DEF_BONUS_RAW_FISH</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1849,7 +1849,7 @@
 		</BonusArtInfo>
 	<!-- Raw Meat -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_RAWMEAT</Type>
+			<Type>ART_DEF_BONUS_RAW_MEAT</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1899,7 +1899,7 @@
 		</BonusArtInfo>
 	<!-- Rocket Fuel -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_ROCKETFUEL</Type>
+			<Type>ART_DEF_BONUS_ROCKET_FUEL</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1969,7 +1969,7 @@
 		</BonusArtInfo>
 	<!-- Nok Sculptures -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_SCULPTURE_NOK</Type>
+			<Type>ART_DEF_BONUS_NOK_SCULPTURES</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1999,7 +1999,7 @@
 		</BonusArtInfo>
 	<!-- Microchips -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_SEMICONDUCTORS</Type>
+			<Type>ART_DEF_BONUS_MICROCHIPS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2119,7 +2119,7 @@
 		</BonusArtInfo>
 	<!-- Steel Ingots -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_STEEL</Type>
+			<Type>ART_DEF_BONUS_STEEL_INGOTS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2139,7 +2139,7 @@
 		</BonusArtInfo>
 	<!-- Stone Tools -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_STONETOOLS</Type>
+			<Type>ART_DEF_BONUS_STONE_TOOLS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2159,7 +2159,7 @@
 		</BonusArtInfo>
 	<!-- String Instruments -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_STRINGS</Type>
+			<Type>ART_DEF_BONUS_STRING_INSTRUMENTS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2371,7 +2371,7 @@
 		</BonusArtInfo>
 	<!-- Aluminum Wares -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_WARE_ALUMINUM</Type>
+			<Type>ART_DEF_BONUS_ALUMINUM_WARES</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2381,7 +2381,7 @@
 		</BonusArtInfo>
 	<!-- Brass Wares -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_WARE_BRASS</Type>
+			<Type>ART_DEF_BONUS_BRASS_WARES</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2391,7 +2391,7 @@
 		</BonusArtInfo>
 	<!-- Bronze Wares -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_WARE_BRONZE</Type>
+			<Type>ART_DEF_BONUS_BRONZE_WARES</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2401,7 +2401,7 @@
 		</BonusArtInfo>
 	<!-- Copper Wares -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_WARE_COPPER</Type>
+			<Type>ART_DEF_BONUS_COPPER_WARES</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2411,7 +2411,7 @@
 		</BonusArtInfo>
 	<!-- Electrum Wares -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_WARE_ELECTRUM</Type>
+			<Type>ART_DEF_BONUS_ELECTRUM_WARES</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2421,7 +2421,7 @@
 		</BonusArtInfo>
 	<!-- Gold Wares -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_WARE_GOLD</Type>
+			<Type>ART_DEF_BONUS_GOLD_WARES</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2431,7 +2431,7 @@
 		</BonusArtInfo>
 	<!-- Iron Wares -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_WARE_IRON</Type>
+			<Type>ART_DEF_BONUS_IRON_WARES</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2441,7 +2441,7 @@
 		</BonusArtInfo>
 	<!-- Lead Wares -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_WARE_LEAD</Type>
+			<Type>ART_DEF_BONUS_LEAD_WARES</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2451,7 +2451,7 @@
 		</BonusArtInfo>
 	<!-- Platinum Wares -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_WARE_PLATINUM</Type>
+			<Type>ART_DEF_BONUS_PLATINUM_WARES</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2461,7 +2461,7 @@
 		</BonusArtInfo>
 	<!-- Silver Wares -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_WARE_SILVER</Type>
+			<Type>ART_DEF_BONUS_SILVER_WARES</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2471,7 +2471,7 @@
 		</BonusArtInfo>
 	<!-- Steel Wares -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_WARE_STEEL</Type>
+			<Type>ART_DEF_BONUS_STEEL_WARES</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2481,7 +2481,7 @@
 		</BonusArtInfo>
 	<!-- Tin Wares -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_WARE_TIN</Type>
+			<Type>ART_DEF_BONUS_TIN_WARES</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2491,7 +2491,7 @@
 		</BonusArtInfo>
 	<!-- Titanium Wares -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_WARE_TITANIUM</Type>
+			<Type>ART_DEF_BONUS_TITANIUM_WARES</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2501,7 +2501,7 @@
 		</BonusArtInfo>
 	<!-- Liquid Metal Wares -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_WARES_LIQUID_METAL</Type>
+			<Type>ART_DEF_BONUS_LIQUID_METAL_WARES</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2511,7 +2511,7 @@
 		</BonusArtInfo>
 	<!-- Megastrong Alloy Wares -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_WARES_MEGASTRONG_ALLOY</Type>
+			<Type>ART_DEF_BONUS_MEGASTRONG_ALLOY_WARES</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2521,7 +2521,7 @@
 		</BonusArtInfo>
 	<!-- Metamaterial Wares -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_WARES_METAMATERIALS</Type>
+			<Type>ART_DEF_BONUS_METAMATERIAL_WARES</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2531,7 +2531,7 @@
 		</BonusArtInfo>
 	<!-- Porcelain Wares -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_WARES_PORCELAIN</Type>
+			<Type>ART_DEF_BONUS_PORCELAIN_WARES</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2541,7 +2541,7 @@
 		</BonusArtInfo>
 	<!-- Superstrong Alloy Wares -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_WARES_SUPERSTRONG_ALLOY</Type>
+			<Type>ART_DEF_BONUS_SUPERSTRONG_ALLOY_WARES</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2551,7 +2551,7 @@
 		</BonusArtInfo>
 	<!-- Terracotta Wares -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_WARES_TERRACOTTA</Type>
+			<Type>ART_DEF_BONUS_TERRACOTTA_WARES</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2581,7 +2581,7 @@
 		</BonusArtInfo>
 	<!-- Water Bottles -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_WATERBOTTLE</Type>
+			<Type>ART_DEF_BONUS_WATER_BOTTLES</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2601,7 +2601,7 @@
 		</BonusArtInfo>
 	<!-- Whale Oil -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_WHALEOIL</Type>
+			<Type>ART_DEF_BONUS_WHALE_OIL</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2621,7 +2621,7 @@
 		</BonusArtInfo>
 	<!-- Woodwind Instruments -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_WOODWINDS</Type>
+			<Type>ART_DEF_BONUS_WOODWIND_INSTRUMENTS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2642,7 +2642,7 @@
 		</BonusArtInfo>
 	<!-- Zinc Ore -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_ZINC</Type>
+			<Type>ART_DEF_BONUS_ZINC_ORE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2722,7 +2722,7 @@
 			<FontButtonIndex>200</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_DIGITAL_LIFESTYLE</Type>
+			<Type>ART_DEF_BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2731,7 +2731,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_DIGITAL_IDENTITY</Type>
+			<Type>ART_DEF_BONUS_HUMAN_MOD_DIGITAL_IDENTITY</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2740,7 +2740,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_GENE_EDITING</Type>
+			<Type>ART_DEF_BONUS_HUMAN_MOD_GENE_EDITING</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2749,7 +2749,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_DESIGNER_BABIES</Type>
+			<Type>ART_DEF_BONUS_HUMAN_MOD_DESIGNER_BABIES</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2758,7 +2758,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_COGNITIVE_ENHANCEMENT</Type>
+			<Type>ART_DEF_BONUS_HUMAN_MOD_COGNITIVE_ENHANCEMENT</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2767,7 +2767,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_ENLIGHTENMENT</Type>
+			<Type>ART_DEF_BONUS_HUMAN_MOD_ENLIGHTENED</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2776,7 +2776,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_NOVEL_SENSES</Type>
+			<Type>ART_DEF_BONUS_HUMAN_MOD_NOVEL_SENSES</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2785,7 +2785,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_LUNARIS</Type>
+			<Type>ART_DEF_BONUS_HUMAN_MOD_LUNARIS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2794,7 +2794,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_MARTIAN</Type>
+			<Type>ART_DEF_BONUS_HUMAN_MOD_MARTIAN</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2803,7 +2803,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_INDEFINITE_LIFESPAN</Type>
+			<Type>ART_DEF_BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2812,7 +2812,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_ZERO_G</Type>
+			<Type>ART_DEF_BONUS_HUMAN_MOD_ZERO_G_ADAPTATION</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2821,7 +2821,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_ROBOTIC_BODY</Type>
+			<Type>ART_DEF_BONUS_HUMAN_MOD_ROBOTIC_BODY</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2830,7 +2830,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_WINGS</Type>
+			<Type>ART_DEF_BONUS_HUMAN_MOD_WINGS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2839,7 +2839,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_GILLS</Type>
+			<Type>ART_DEF_BONUS_HUMAN_MOD_GILLS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2848,7 +2848,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_HEAT_TOLERANCE</Type>
+			<Type>ART_DEF_BONUS_HUMAN_MOD_HEAT_TOLERANCE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2857,7 +2857,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_COLD_TOLERANCE</Type>
+			<Type>ART_DEF_BONUS_HUMAN_MOD_COLD_TOLERANCE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2866,7 +2866,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_RADIATION_TOLERANCE</Type>
+			<Type>ART_DEF_BONUS_HUMAN_MOD_RADIATION_TOLERANCE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2875,7 +2875,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_COLLECTIVE_CONSCIOUSNESS</Type>
+			<Type>ART_DEF_BONUS_HUMAN_MOD_COLLECTIVE_CONSCIOUSNESS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2884,7 +2884,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_NANOMORPHICS_BEINGS</Type>
+			<Type>ART_DEF_BONUS_HUMAN_MOD_NANOMORPHISM</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2893,7 +2893,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
         <BonusArtInfo>
-			<Type>ART_DEF_BONUS_TRANSAPIENT</Type>
+			<Type>ART_DEF_BONUS_HUMAN_MOD_TRANSAPIENT</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2902,7 +2902,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
         <BonusArtInfo>
-			<Type>ART_DEF_BONUS_HUMAN_ALIEN_HYBRID</Type>
+			<Type>ART_DEF_BONUS_HUMAN_MOD_ALIEN_HYBRID</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2911,7 +2911,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
         <BonusArtInfo>
-			<Type>ART_DEF_BONUS_IMMORTAL_BEING</Type>
+			<Type>ART_DEF_BONUS_HUMAN_MOD_IMMORTAL</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2920,7 +2920,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_HIGH_DIMENSIONAL_BEING</Type>
+			<Type>ART_DEF_BONUS_HUMAN_MOD_HIGH_DIMENSIONAL</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2929,7 +2929,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_INFORMATION_BEING</Type>
+			<Type>ART_DEF_BONUS_HUMAN_MOD_INFORMATION_BASED</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2938,7 +2938,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_PURE_INFORMATION_BEING</Type>
+			<Type>ART_DEF_BONUS_HUMAN_MOD_PURE_ENERGY</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2947,7 +2947,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
         <BonusArtInfo>
-			<Type>ART_DEF_BONUS_ARCHAILECT</Type>
+			<Type>ART_DEF_BONUS_HUMAN_MOD_ARCHAILECT</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2956,7 +2956,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_ATEMPORAL_BEINGS</Type>
+			<Type>ART_DEF_BONUS_HUMAN_MOD_ATEMPORAL</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2965,7 +2965,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_NONSPATIAL_BEINGS</Type>
+			<Type>ART_DEF_BONUS_HUMAN_MOD_NONSPATIAL</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2974,7 +2974,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
         <BonusArtInfo>
-			<Type>ART_DEF_BONUS_METAPHYSICAL</Type>
+			<Type>ART_DEF_BONUS_HUMAN_MOD_METAPHYSICAL</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -3055,7 +3055,7 @@
 			<FontButtonIndex>56</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_FULLERENE</Type>
+			<Type>ART_DEF_BONUS_FULLERENES</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -3091,7 +3091,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_MARS_VEGETABLES</Type>
+			<Type>ART_DEF_BONUS_MARTIAN_VEGETABLES</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -3100,7 +3100,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_MARS_PARTS</Type>
+			<Type>ART_DEF_BONUS_MARTIAN_MANUFACTURED_GOODS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -3118,7 +3118,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_MARS_ELECTRONICS</Type>
+			<Type>ART_DEF_BONUS_MARTIAN_ELECTRONICS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -3127,7 +3127,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_MARS_ALGAE</Type>
+			<Type>ART_DEF_BONUS_MARTIAN_ALGAE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -3136,7 +3136,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_DNT</Type>
+			<Type>ART_DEF_BONUS_DIAMOND_NANOTHREADS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -3154,7 +3154,7 @@
 			<FontButtonIndex>221</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_MARS_FRUIT</Type>
+			<Type>ART_DEF_BONUS_MARTIAN_FRUIT</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -3172,7 +3172,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_ANIMAMATERIAL</Type>
+			<Type>ART_DEF_BONUS_CLAYTRONIC_ATOMS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -3190,7 +3190,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_BOSE_EINSTEIN_CONDENSATE</Type>
+			<Type>ART_DEF_BONUS_SUPERSOLID_MATERIAL</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -3208,7 +3208,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_MARS_CROPS</Type>
+			<Type>ART_DEF_BONUS_MARTIAN_CROPS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -3316,7 +3316,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_TIME_CRYSTAL</Type>
+			<Type>ART_DEF_BONUS_TIME_CRYSTALS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -3352,7 +3352,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
         <BonusArtInfo>
-			<Type>ART_DEF_BONUS_EXOTIC_PARTICLE</Type>
+			<Type>ART_DEF_BONUS_ALICE_MATTER</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -3379,7 +3379,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_CONSCIOUS_MATERIAL</Type>
+			<Type>ART_DEF_BONUS_CONSCIOUS_MATERIALS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -3433,7 +3433,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_TESSERACT_BONUS</Type>
+			<Type>ART_DEF_BONUS_TESSERACT</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -3442,7 +3442,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_POCKET_UNIVERSE_BONUS</Type>
+			<Type>ART_DEF_BONUS_POCKET_UNIVERSE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>

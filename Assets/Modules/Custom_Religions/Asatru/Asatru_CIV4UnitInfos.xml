@@ -104,8 +104,8 @@
 			<PrereqBuilding>BUILDING_LOKI_SANCTUARY</PrereqBuilding>
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>300</iCost>
 			<iMoves>1</iMoves>

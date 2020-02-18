@@ -62,8 +62,8 @@
 			<Button>art/interface/buttons/improvements/wormhole.dds</Button>
 		</RouteInfo>
         <RouteInfo>
-			<Type>ROUTE_MICROWORMHOLE</Type>
-			<Description>TXT_KEY_ROUTE_MICROWORMHOLE</Description>
+			<Type>ROUTE_COMPACT_WORMHOLE</Type>
+			<Description>TXT_KEY_ROUTE_COMPACT_WORMHOLE</Description>
 			<iValue>8</iValue>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -80,8 +80,8 @@
 			<Button>art/interface/buttons/improvements/microwormhole.dds</Button>
 		</RouteInfo>
         <RouteInfo>
-			<Type>ROUTE_MEGAWORMHOLE_ROUTE</Type>
-			<Description>TXT_KEY_ROUTE_MEGAWORMHOLE_ROUTE</Description>
+			<Type>ROUTE_MEGAWORMHOLE</Type>
+			<Description>TXT_KEY_ROUTE_MEGAWORMHOLE</Description>
 			<iValue>8</iValue>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>

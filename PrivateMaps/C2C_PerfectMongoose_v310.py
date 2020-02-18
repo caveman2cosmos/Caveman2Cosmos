@@ -5012,7 +5012,7 @@ def generateTerrainTypes():
 	terrainIce = gc.getInfoTypeForString("TERRAIN_ICE")
 	terrainTundra = gc.getInfoTypeForString("TERRAIN_TAIGA")
 	terrainPermafrost = gc.getInfoTypeForString("TERRAIN_TUNDRA")
-	terrainGrass = gc.getInfoTypeForString("TERRAIN_GRASS")
+	terrainGrass = gc.getInfoTypeForString("TERRAIN_GRASSLAND")
 	terrainLush = gc.getInfoTypeForString("TERRAIN_LUSH")
 	terrainMuddy = gc.getInfoTypeForString("TERRAIN_MUDDY")
 	terrainMarsh = gc.getInfoTypeForString("TERRAIN_MARSH")
@@ -5446,7 +5446,7 @@ def addFeatures():
 	featureReef = gc.getInfoTypeForString("FEATURE_REEF")
 	featureKelp = gc.getInfoTypeForString("FEATURE_KELP")
 	featureBog = gc.getInfoTypeForString("FEATURE_PEAT_BOG")
-	featureSwordGrass = gc.getInfoTypeForString("FEATURE_SWORD_GRASS")
+	featureSwordGrass = gc.getInfoTypeForString("FEATURE_VERY_TALL_GRASS")
 	featureSwamp = gc.getInfoTypeForString("FEATURE_SWAMP")
 
 	FORESTLEAFY			= 0

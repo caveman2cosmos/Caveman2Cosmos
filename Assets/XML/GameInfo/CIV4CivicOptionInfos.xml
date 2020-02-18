@@ -43,8 +43,8 @@
             <Description>TXT_KEY_CIVICOPTION_CURRENCY</Description>
         </CivicOptionInfo>
         <CivicOptionInfo>
-            <Type>CIVICOPTION_LABOR</Type>
-            <Description>TXT_KEY_CIVICOPTION_LABOR</Description>
+            <Type>CIVICOPTION_WORKFORCE</Type>
+            <Description>TXT_KEY_CIVICOPTION_WORKFORCE</Description>
         </CivicOptionInfo>
         <CivicOptionInfo>
             <Type>CIVICOPTION_EDUCATION</Type>

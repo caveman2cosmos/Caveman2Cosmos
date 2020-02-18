@@ -119,11 +119,11 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_GREAT_BARRIER_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_BEACON</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_GREAT_BARRIER_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -901,7 +901,7 @@
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_HUNTING</PrereqTech>
+					<PrereqTech>TECH_TRACKING</PrereqTech>
 					<TechYield>
 						<iYield>2</iYield>
 					</TechYield>
@@ -1066,7 +1066,7 @@
 					<iHealth>1</iHealth>
 				</TechHealthChange>
 				<TechHealthChange>
-					<PrereqTech>TECH_TISSUE</PrereqTech>
+					<PrereqTech>TECH_MOLECULAR_MEDICINE</PrereqTech>
 					<iHealth>1</iHealth>
 				</TechHealthChange>
 			</TechHealthChanges>
@@ -1611,7 +1611,7 @@
 					<iHealth>1</iHealth>
 				</TechHealthChange>
 				<TechHealthChange>
-					<PrereqTech>TECH_TISSUE</PrereqTech>
+					<PrereqTech>TECH_MOLECULAR_MEDICINE</PrereqTech>
 					<iHealth>1</iHealth>
 				</TechHealthChange>
 			</TechHealthChanges>
@@ -1960,7 +1960,7 @@
 			</BuildingClassNeededs>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_VOLCANO</FeatureType>
+					<FeatureType>FEATURE_VOLCANO_ACTIVE</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -2047,15 +2047,15 @@
 			</BuildingClassNeededs>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CORAL</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CORAL_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_REEF_BEACON</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CORAL_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_REEF_LIGHTHOUSE</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -2146,11 +2146,11 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_REEF_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_REEF_BEACON</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_REEF_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_REEF_LIGHTHOUSE</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>

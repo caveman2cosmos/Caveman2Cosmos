@@ -117,7 +117,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_COPPERWIRES</ID>
+						<ID>BONUS_COPPER_WIRES</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -175,7 +175,7 @@
 			</MapCategoryTypes>
 			<Bonus>BONUS_ATOMPUNK</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_ALUMINUM</Bonus>
+				<Bonus>BONUS_ALUMINUM_WARES</Bonus>
 			</PrereqBonuses>
 			<iCost>1345</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -201,7 +201,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_POTATO</BonusType>
+					<BonusType>BONUS_POTATOES</BonusType>
 					<YieldChanges>
 						<iYield>2</iYield>
 					</YieldChanges>
@@ -299,7 +299,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_LEMON</BonusType>
+					<BonusType>BONUS_LEMONS</BonusType>
 					<YieldChanges>
 						<iYield>2</iYield>
 					</YieldChanges>
@@ -311,7 +311,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_MELON</BonusType>
+					<BonusType>BONUS_MELONS</BonusType>
 					<YieldChanges>
 						<iYield>2</iYield>
 					</YieldChanges>
@@ -389,7 +389,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_WINE</BonusType>
+					<BonusType>BONUS_GRAPES</BonusType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -397,7 +397,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -475,7 +475,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_GUAVA</BonusType>
+					<BonusType>BONUS_GUAVAS</BonusType>
 					<YieldChanges>
 						<iYield>2</iYield>
 					</YieldChanges>
@@ -777,7 +777,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_MAGLEV</PrereqTech>
+					<PrereqTech>TECH_MAGNETIC_LEVITATION</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>5</iCommerce>

@@ -86,7 +86,7 @@
 			<iHillsDefense>25</iHillsDefense>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -224,7 +224,7 @@
 			<iHillsDefense>25</iHillsDefense>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -369,7 +369,7 @@
 			<iHillsDefense>25</iHillsDefense>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>

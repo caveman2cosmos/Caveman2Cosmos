@@ -83,7 +83,7 @@
 			<iHillsDefense>25</iHillsDefense>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -217,7 +217,7 @@
 				<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_WARE_IRON</BonusType>
+			<BonusType>BONUS_IRON_WARES</BonusType>
 			<iCost>245</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>8</iCombat>
@@ -231,7 +231,7 @@
 			<iCollateralDamageMaxUnits>5</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -402,7 +402,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -589,7 +589,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -775,7 +775,7 @@
 			<iPursuit>20</iPursuit>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -918,7 +918,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_AMMO</BonusType>
+			<BonusType>BONUS_AMMUNITION</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
 			</PrereqBonuses>
@@ -934,7 +934,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -1114,7 +1114,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_AMMO</BonusType>
+			<BonusType>BONUS_AMMUNITION</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
 			</PrereqBonuses>
@@ -1129,7 +1129,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -1301,7 +1301,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_WARE_IRON</BonusType>
+			<BonusType>BONUS_IRON_WARES</BonusType>
 			<iCost>1030</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>18</iCombat>
@@ -1311,7 +1311,7 @@
 			<iPursuit>20</iPursuit>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>

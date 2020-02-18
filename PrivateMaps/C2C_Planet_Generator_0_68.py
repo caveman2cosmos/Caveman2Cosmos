@@ -2676,7 +2676,7 @@ def addFeatures():
 
 	terrainDesert = cgc.getInfoTypeForString("TERRAIN_DESERT")
 	terrainPlains = cgc.getInfoTypeForString("TERRAIN_PLAINS")
-	terrainGrass = cgc.getInfoTypeForString("TERRAIN_GRASS")
+	terrainGrass = cgc.getInfoTypeForString("TERRAIN_GRASSLAND")
 	terrainTundra = cgc.getInfoTypeForString("TERRAIN_TAIGA")
 	terrainSnow = cgc.getInfoTypeForString("TERRAIN_ICE")
 # Rise of Mankind 2.82 start
@@ -3598,7 +3598,7 @@ def normalizeAddExtras():
 	else:
 		cgc = CyGlobalContext()
 
-		terrainGrass = cgc.getInfoTypeForString("TERRAIN_GRASS")
+		terrainGrass = cgc.getInfoTypeForString("TERRAIN_GRASSLAND")
 		terrainPlains = cgc.getInfoTypeForString("TERRAIN_PLAINS")
 		terrainDesert = cgc.getInfoTypeForString("TERRAIN_DESERT")
 		terrainTundra = cgc.getInfoTypeForString("TERRAIN_TAIGA")

@@ -29,11 +29,11 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_MESO</ReligionType>
+					<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 					<iReligionSpread>100</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
-			<PrereqReligion>RELIGION_MESO</PrereqReligion>
+			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<PrereqBuilding>BUILDING_AN</PrereqBuilding>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -59,7 +59,7 @@
 			</Buildings>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_MESO</ReligionType>
+					<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 					<iReligionSpread>100</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>

@@ -7,14 +7,14 @@
 <Civ4BuildInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<BuildInfos>
 		<BuildInfo>
-			<Type>BUILD_BONUS_DONKEY</Type>
-			<Description>TXT_KEY_BUILD_PLACE_DONKEY</Description>
+			<Type>BUILD_PLACE_BONUS_DONKEY</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_DONKEY</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_DONKEY</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_DONKEY</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -26,14 +26,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,2,2</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_HORSE</Type>
-			<Description>TXT_KEY_BUILD_PLACE_HORSE</Description>
+			<Type>BUILD_PLACE_BONUS_HORSE</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_HORSE</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_HORSE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_HORSE</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -45,14 +45,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,4,2</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_ELEPHANT</Type>
-			<Description>TXT_KEY_BUILD_PLACE_ELEPHANT</Description>
+			<Type>BUILD_PLACE_BONUS_ELEPHANTS</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_ELEPHANTS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_ELEPHANT</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_ELEPHANTS</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -64,14 +64,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,7,2</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_BISON</Type>
-			<Description>TXT_KEY_BUILD_PLACE_BISON</Description>
+			<Type>BUILD_PLACE_BONUS_BISON</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_BISON</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_BISON</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_BISON</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -83,14 +83,14 @@
 			<Button>Art/Interface/Buttons/Resources/bison_button.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_CAMEL</Type>
-			<Description>TXT_KEY_BUILD_PLACE_CAMEL</Description>
+			<Type>BUILD_PLACE_BONUS_CAMEL</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_CAMEL</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_CAMEL</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_CAMEL</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -102,14 +102,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,5,4</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_COW</Type>
-			<Description>TXT_KEY_BUILD_PLACE_COW</Description>
+			<Type>BUILD_PLACE_BONUS_COW</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_COW</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_COW</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_COW</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -121,14 +121,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,7,1</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_DEER</Type>
-			<Description>TXT_KEY_BUILD_PLACE_DEER</Description>
+			<Type>BUILD_PLACE_BONUS_DEER</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_DEER</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_DEER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_DEER</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -140,14 +140,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,1,4</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_FUR</Type>
-			<Description>TXT_KEY_BUILD_PLACE_FUR</Description>
+			<Type>BUILD_PLACE_BONUS_BEAVERS</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_BEAVERS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_FUR</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_BEAVERS</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -159,14 +159,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,1,2</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_KANGAROO</Type>
-			<Description>TXT_KEY_BUILD_PLACE_KANGAROO</Description>
+			<Type>BUILD_PLACE_BONUS_KANGAROO</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_KANGAROO</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_KANGAROO</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_KANGAROO</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -178,14 +178,14 @@
 			<Button>Art/Interface/Buttons/Bonus/kangaroo.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_LLAMA</Type>
-			<Description>TXT_KEY_BUILD_PLACE_LLAMA</Description>
+			<Type>BUILD_PLACE_BONUS_LLAMA</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_LLAMA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_LLAMA</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_LLAMA</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -197,14 +197,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,4,7</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_MAMMOTH</Type>
-			<Description>TXT_KEY_BUILD_PLACE_MAMMOTH</Description>
+			<Type>BUILD_PLACE_BONUS_MAMMOTH</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_MAMMOTH</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_MAMMOTH</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_MAMMOTH</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -216,14 +216,14 @@
 			<Button>Art/Interface/Buttons/Bonus/Mammoth.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_PIG</Type>
-			<Description>TXT_KEY_BUILD_PLACE_PIG</Description>
+			<Type>BUILD_PLACE_BONUS_PIG</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_PIG</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_PIG</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_PIG</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -235,14 +235,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,8,4</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_POULTRY</Type>
-			<Description>TXT_KEY_BUILD_PLACE_POULTRY</Description>
+			<Type>BUILD_PLACE_BONUS_POULTRY</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_POULTRY</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_POULTRY</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_POULTRY</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -254,14 +254,14 @@
 			<Button>Art/Interface/Buttons/Bonus/poultry.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_RABBIT</Type>
-			<Description>TXT_KEY_BUILD_PLACE_RABBIT</Description>
+			<Type>BUILD_PLACE_BONUS_RABBIT</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_RABBIT</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_RABBIT</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_RABBIT</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -273,14 +273,14 @@
 			<Button>Art/Interface/Buttons/Bonus/Rabbits.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_SEA_LIONS</Type>
-			<Description>TXT_KEY_BUILD_PLACE_SEA_LIONS</Description>
+			<Type>BUILD_PLACE_BONUS_SEA_LION_AND_SEAL</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_SEA_LION_AND_SEAL</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_SEA_LIONS</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_SEA_LION_AND_SEAL</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -292,14 +292,14 @@
 			<Button>Art/Interface/Buttons/Resources/Sea_Lions.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_SHEEP</Type>
-			<Description>TXT_KEY_BUILD_PLACE_SHEEP</Description>
+			<Type>BUILD_PLACE_BONUS_SHEEP</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_SHEEP</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_SHEEP</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_SHEEP</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -311,14 +311,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,2,3</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_WALRUS</Type>
-			<Description>TXT_KEY_BUILD_PLACE_WALRUS</Description>
+			<Type>BUILD_PLACE_BONUS_WALRUS</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_WALRUS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_WALRUS</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_WALRUS</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -330,14 +330,14 @@
 			<Button>Art/Interface/Buttons/Resources/walrus.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_GUINEA_PIG</Type>
-			<Description>TXT_KEY_BUILD_PLACE_GUINEA_PIG</Description>
+			<Type>BUILD_PLACE_BONUS_GUINEA_PIGS</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_GUINEA_PIGS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_GUINEA_PIG</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_GUINEA_PIGS</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -349,14 +349,14 @@
 			<Button>Art/Interface/Buttons/Bonus/guinea_pig.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_PARROTS</Type>
-			<Description>TXT_KEY_BUILD_PLACE_PARROTS</Description>
+			<Type>BUILD_PLACE_BONUS_PARROTS</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_PARROTS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_PARROTS</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_PARROTS</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -368,14 +368,14 @@
 			<Button>Art/Interface/Buttons/Resources/Parrots.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_BARLEY</Type>
-			<Description>TXT_KEY_BUILD_PLACE_BARLEY</Description>
+			<Type>BUILD_PLACE_BONUS_BARLEY</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_BARLEY</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_BARLEY</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_BARLEY</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -387,14 +387,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,1,6</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_CORN</Type>
-			<Description>TXT_KEY_BUILD_PLACE_CORN</Description>
+			<Type>BUILD_PLACE_BONUS_CORN</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_CORN</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_CORN</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_CORN</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -406,14 +406,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,6,1</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_FLAX</Type>
-			<Description>TXT_KEY_BUILD_PLACE_FLAX</Description>
+			<Type>BUILD_PLACE_BONUS_FLAX</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_FLAX</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_FLAX</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_FLAX</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -425,14 +425,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,6,6</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_POMEGRANATE</Type>
-			<Description>TXT_KEY_BUILD_PLACE_POMEGRANATE</Description>
+			<Type>BUILD_PLACE_BONUS_POMEGRANATE</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_POMEGRANATE</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_POMEGRANATE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_POMEGRANATE</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -444,14 +444,14 @@
 			<Button>Art/Interface/Buttons/Bonus/Pomegranate.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_KAVA</Type>
-			<Description>TXT_KEY_BUILD_PLACE_KAVA</Description>
+			<Type>BUILD_PLACE_BONUS_KAVA</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_KAVA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_KAVA</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_KAVA</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -463,14 +463,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,3,7</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_GUAVA</Type>
-			<Description>TXT_KEY_BUILD_PLACE_GUAVA</Description>
+			<Type>BUILD_PLACE_BONUS_GUAVAS</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_GUAVAS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_GUAVA</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_GUAVAS</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -482,14 +482,14 @@
 			<Button>Art/Interface/Buttons/Bonus/Guava.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_MELON</Type>
-			<Description>TXT_KEY_BUILD_PLACE_MELON</Description>
+			<Type>BUILD_PLACE_BONUS_MELONS</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_MELONS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_MELON</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_MELONS</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -501,14 +501,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,8,5</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_POTATO</Type>
-			<Description>TXT_KEY_BUILD_PLACE_POTATO</Description>
+			<Type>BUILD_PLACE_BONUS_POTATOES</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_POTATOES</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_POTATO</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_POTATOES</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -520,14 +520,14 @@
 			<Button>Art/Interface/Buttons/Bonus/potato.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_PUMPKIN</Type>
-			<Description>TXT_KEY_BUILD_PLACE_PUMPKIN</Description>
+			<Type>BUILD_PLACE_BONUS_PUMPKIN</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_PUMPKIN</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_PUMPKIN</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_PUMPKIN</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -539,14 +539,14 @@
 			<Button>Art/Interface/Buttons/Bonus/Pumpkin.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_RICE</Type>
-			<Description>TXT_KEY_BUILD_PLACE_RICE</Description>
+			<Type>BUILD_PLACE_BONUS_RICE</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_RICE</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_RICE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_RICE</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -558,14 +558,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,1,3</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_SQUASH</Type>
-			<Description>TXT_KEY_BUILD_PLACE_SQUASH</Description>
+			<Type>BUILD_PLACE_BONUS_SQUASH</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_SQUASH</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_SQUASH</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_SQUASH</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -577,14 +577,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,7,7</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_WHEAT</Type>
-			<Description>TXT_KEY_BUILD_PLACE_WHEAT</Description>
+			<Type>BUILD_PLACE_BONUS_WHEAT</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_WHEAT</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_WHEAT</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_WHEAT</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -596,14 +596,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,2,5</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_ALMONDS</Type>
-			<Description>TXT_KEY_BUILD_PLACE_ALMONDS</Description>
+			<Type>BUILD_PLACE_BONUS_ALMONDS</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_ALMONDS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_ALMONDS</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_ALMONDS</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -615,14 +615,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,1,1</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_APPLE</Type>
-			<Description>TXT_KEY_BUILD_PLACE_APPLE</Description>
+			<Type>BUILD_PLACE_BONUS_APPLE</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_APPLE</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_APPLE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_APPLE</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -634,14 +634,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,3,4</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_BANANA</Type>
-			<Description>TXT_KEY_BUILD_PLACE_BANANA</Description>
+			<Type>BUILD_PLACE_BONUS_BANANA</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_BANANA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_BANANA</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_BANANA</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -653,14 +653,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,2,1</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_COCONUT</Type>
-			<Description>TXT_KEY_BUILD_PLACE_COCONUT</Description>
+			<Type>BUILD_PLACE_BONUS_COCONUT</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_COCONUT</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_COCONUT</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_COCONUT</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -672,14 +672,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,6,4</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_DATES</Type>
-			<Description>TXT_KEY_BUILD_PLACE_DATES</Description>
+			<Type>BUILD_PLACE_BONUS_DATES</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_DATES</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_DATES</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_DATES</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -691,14 +691,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,3,6</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_FIG</Type>
-			<Description>TXT_KEY_BUILD_PLACE_FIG</Description>
+			<Type>BUILD_PLACE_BONUS_FIG</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_FIG</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_FIG</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_FIG</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -710,14 +710,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,5,6</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_LEMON</Type>
-			<Description>TXT_KEY_BUILD_PLACE_LEMON</Description>
+			<Type>BUILD_PLACE_BONUS_LEMONS</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_LEMONS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_LEMON</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_LEMONS</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -729,14 +729,14 @@
 			<Button>Art/Interface/Buttons/Bonus/lemon.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_MANGO</Type>
-			<Description>TXT_KEY_BUILD_PLACE_MANGO</Description>
+			<Type>BUILD_PLACE_BONUS_MANGO</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_MANGO</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_MANGO</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_MANGO</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -748,14 +748,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,7,5</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_OLIVES</Type>
-			<Description>TXT_KEY_BUILD_PLACE_OLIVES</Description>
+			<Type>BUILD_PLACE_BONUS_OLIVES</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_OLIVES</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_OLIVES</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_OLIVES</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -767,14 +767,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,1,7</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_PAPAYA</Type>
-			<Description>TXT_KEY_BUILD_PLACE_PAPAYA</Description>
+			<Type>BUILD_PLACE_BONUS_PAPAYA</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_PAPAYA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_PAPAYA</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_PAPAYA</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -786,14 +786,14 @@
 			<Button>Art/Interface/Buttons/Bonus/Papaya.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_PISTACHIO</Type>
-			<Description>TXT_KEY_BUILD_PLACE_PISTACHIO</Description>
+			<Type>BUILD_PLACE_BONUS_PISTACHIO</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_PISTACHIO</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_PISTACHIO</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_PISTACHIO</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -805,14 +805,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,6,7</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_WINE</Type>
-			<Description>TXT_KEY_BUILD_PLACE_WINE</Description>
+			<Type>BUILD_PLACE_BONUS_GRAPES</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_GRAPES</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_WINE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_GRAPES</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -824,14 +824,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,3,5</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_HENNA</Type>
-			<Description>TXT_KEY_BUILD_PLACE_HENNA</Description>
+			<Type>BUILD_PLACE_BONUS_HENNA</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_HENNA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_HENNA</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_HENNA</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -843,14 +843,14 @@
 			<Button>Art/Interface/Buttons/Bonus/Henna.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_INDIGO</Type>
-			<Description>TXT_KEY_BUILD_PLACE_INDIGO</Description>
+			<Type>BUILD_PLACE_BONUS_INDIGO</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_INDIGO</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_INDIGO</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_INDIGO</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -862,14 +862,14 @@
 			<Button>Art/Interface/Buttons/Bonus/Indigo.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_RUBBER</Type>
-			<Description>TXT_KEY_BUILD_PLACE_RUBBER</Description>
+			<Type>BUILD_PLACE_BONUS_RUBBER</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_RUBBER</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_RUBBER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_RUBBER</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -881,14 +881,14 @@
 			<Button>Art/Interface/Buttons/Bonus/Rubber.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_TIMBER</Type>
-			<Description>TXT_KEY_BUILD_PLACE_TIMBER</Description>
+			<Type>BUILD_PLACE_BONUS_PRIME_TIMBER</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_PRIME_TIMBER</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_TIMBER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_PRIME_TIMBER</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -900,14 +900,14 @@
 			<Button>Art/Interface/Buttons/Resources/Timber_button.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_CANNABIS</Type>
-			<Description>TXT_KEY_BUILD_PLACE_CANNABIS</Description>
+			<Type>BUILD_PLACE_BONUS_HEMP</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_HEMP</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_CANNABIS</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_HEMP</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -919,14 +919,14 @@
 			<Button>Art/Interface/Buttons/Bonus/hemp.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_COCA</Type>
-			<Description>TXT_KEY_BUILD_PLACE_COCA</Description>
+			<Type>BUILD_PLACE_BONUS_COCA</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_COCA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_COCA</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_COCA</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -938,14 +938,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,6,5</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_COCOA</Type>
-			<Description>TXT_KEY_BUILD_PLACE_COCOA</Description>
+			<Type>BUILD_PLACE_BONUS_COCOA</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_COCOA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_COCOA</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_COCOA</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -957,14 +957,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,4,5</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_COFFEE</Type>
-			<Description>TXT_KEY_BUILD_PLACE_COFFEE</Description>
+			<Type>BUILD_PLACE_BONUS_COFFEE</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_COFFEE</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_COFFEE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_COFFEE</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -976,14 +976,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,5,5</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_COTTON</Type>
-			<Description>TXT_KEY_BUILD_PLACE_COTTON</Description>
+			<Type>BUILD_PLACE_BONUS_COTTON</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_COTTON</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_COTTON</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_COTTON</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -995,14 +995,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,2,7</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_INCENSE</Type>
-			<Description>TXT_KEY_BUILD_PLACE_INCENSE</Description>
+			<Type>BUILD_PLACE_BONUS_INCENSE</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_INCENSE</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_INCENSE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_INCENSE</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -1014,14 +1014,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,5,2</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_MUSHROOMS</Type>
-			<Description>TXT_KEY_BUILD_PLACE_MUSHROOMS</Description>
+			<Type>BUILD_PLACE_BONUS_MUSHROOMS</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_MUSHROOMS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_MUSHROOMS</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_MUSHROOMS</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -1033,14 +1033,14 @@
 			<Button>Art/Interface/Buttons/Bonus/mushrooms.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_OPIUM</Type>
-			<Description>TXT_KEY_BUILD_PLACE_OPIUM</Description>
+			<Type>BUILD_PLACE_BONUS_OPIUM</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_OPIUM</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_OPIUM</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_OPIUM</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -1052,14 +1052,14 @@
 			<Button>Art/Interface/Buttons/Bonus/opium.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_PAPYRUS</Type>
-			<Description>TXT_KEY_BUILD_PLACE_PAPYRUS</Description>
+			<Type>BUILD_PLACE_BONUS_PAPYRUS</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_PAPYRUS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_PAPYRUS</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_PAPYRUS</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -1071,14 +1071,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,5,7</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_PEYOTE</Type>
-			<Description>TXT_KEY_BUILD_PLACE_PEYOTE</Description>
+			<Type>BUILD_PLACE_BONUS_PEYOTE</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_PEYOTE</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_PEYOTE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_PEYOTE</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -1090,14 +1090,14 @@
 			<Button>Art/Interface/Buttons/Bonus/peyote.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_PRICKLY_PEAR</Type>
-			<Description>TXT_KEY_BUILD_PLACE_PRICKLY_PEAR</Description>
+			<Type>BUILD_PLACE_BONUS_PRICKLY_PEAR</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_PRICKLY_PEAR</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_PRICKLY_PEAR</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_PRICKLY_PEAR</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -1109,14 +1109,14 @@
 			<Button>Art/Interface/Buttons/Bonus/pricklypear.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_RESIN</Type>
-			<Description>TXT_KEY_BUILD_PLACE_RESIN</Description>
+			<Type>BUILD_PLACE_BONUS_RESIN</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_RESIN</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_RESIN</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_RESIN</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -1128,14 +1128,14 @@
 			<Button>Art/Interface/Buttons/Bonus/Resin.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_SILK</Type>
-			<Description>TXT_KEY_BUILD_PLACE_SILK</Description>
+			<Type>BUILD_PLACE_BONUS_SILK</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_SILK</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_SILK</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_SILK</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -1147,14 +1147,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,3,3</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_SPICES</Type>
-			<Description>TXT_KEY_BUILD_PLACE_SPICES</Description>
+			<Type>BUILD_PLACE_BONUS_SPICES</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_SPICES</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_SPICES</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_SPICES</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -1166,14 +1166,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,5,3</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_SUGAR</Type>
-			<Description>TXT_KEY_BUILD_PLACE_SUGAR</Description>
+			<Type>BUILD_PLACE_BONUS_SUGAR</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_SUGAR</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_SUGAR</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_SUGAR</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -1185,14 +1185,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,7,3</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_TEA</Type>
-			<Description>TXT_KEY_BUILD_PLACE_TEA</Description>
+			<Type>BUILD_PLACE_BONUS_TEA</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_TEA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_TEA</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_TEA</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -1204,14 +1204,14 @@
 			<Button>Art/Interface/Buttons/Bonus/Tea.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_TOBACCO</Type>
-			<Description>TXT_KEY_BUILD_PLACE_TOBACCO</Description>
+			<Type>BUILD_PLACE_BONUS_TOBACCO</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_TOBACCO</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_TOBACCO</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_TOBACCO</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -1223,14 +1223,14 @@
 			<Button>Art/Interface/Buttons/Bonus/Tobacco.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_VANILLA</Type>
-			<Description>TXT_KEY_BUILD_PLACE_VANILLA</Description>
+			<Type>BUILD_PLACE_BONUS_VANILLA</Type>
+			<Description>TXT_KEY_BUILD_PLACE_BONUS_VANILLA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_VANILLA</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLACE_BONUS_VANILLA</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
