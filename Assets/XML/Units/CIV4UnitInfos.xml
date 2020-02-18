@@ -56988,7 +56988,7 @@ Base XP gained when defending
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
-			<PrereqTech>TECH_FINE_EDGED_TOOLS</PrereqTech>
+			<PrereqTech>TECH_SHARPENING</PrereqTech>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
