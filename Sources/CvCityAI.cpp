@@ -297,7 +297,7 @@ void CvCityAI::AI_doContractFloatingDefenders()
 	{
 		int iOurThreat = AI_cityThreat();
 		int iLargestThreat = 0;
-		int iTotalThreat = std::max(1, GET_PLAYER(getOwnerINLINE()).AI_getTotalAreaCityThreat(area(), &iLargestThreat));
+		int iTotalThreat = std::max(1, GET_PLAYER(getOwner()).AI_getTotalAreaCityThreat(area(), &iLargestThreat));
 		logBBAI("      City %S has threat level %d (highest %d, total %d)", getName().GetCString(), iOurThreat, iLargestThreat, iTotalThreat);
 	}
 
@@ -330,7 +330,7 @@ void CvCityAI::AI_doContractFloatingDefenders()
 		{
 			int iOurThreat = AI_cityThreat();
 			int iLargestThreat = 0;
-			GET_PLAYER(getOwnerINLINE()).AI_getTotalAreaCityThreat(area(), &iLargestThreat);
+			GET_PLAYER(getOwner()).AI_getTotalAreaCityThreat(area(), &iLargestThreat);
 
 			iOurPriority = (MINIMUM_CITY_DEFENDER_PRIORITY * iOurThreat)/std::max(1,iLargestThreat);
 			iRequiredStrength = AI_neededDefenseStrength() - iGarrisonStrength;
@@ -348,10 +348,10 @@ void CvCityAI::AI_doContractFloatingDefenders()
 		{
 			eFloatingDefenderUnitAI = UNITAI_CITY_DEFENSE;
 		}
-		GET_PLAYER(getOwnerINLINE()).getContractBroker().advertiseWork(iOurPriority,
+		GET_PLAYER(getOwner()).getContractBroker().advertiseWork(iOurPriority,
 																	   DEFENSIVE_UNITCAPABILITIES,
-																	   getX_INLINE(),
-																	   getY_INLINE(),
+																	   getX(),
+																	   getY(),
 																	   NULL,
 																	   eFloatingDefenderUnitAI,
 																	   iRequiredStrength);
@@ -496,7 +496,7 @@ void CvCityAI::AI_assignWorkingPlots()
 						iExtraSpecialists -= iSpecialistsToAdd;
 
 						// if we cannot fit that many, then add as many as we can
-						if (iSpecialistCount > iMaxSpecialistCount && !GET_PLAYER(getOwnerINLINE()).isSpecialistValid((SpecialistTypes)iI))
+						if (iSpecialistCount > iMaxSpecialistCount && !GET_PLAYER(getOwner()).isSpecialistValid((SpecialistTypes)iI))
 						{
 							iExtraSpecialists += iSpecialistCount - iMaxSpecialistCount;
 							iSpecialistCount = iMaxSpecialistCount;
@@ -530,7 +530,7 @@ void CvCityAI::AI_assignWorkingPlots()
 
 	AI_setAssignWorkDirty(false);
 
-	if ((getOwnerINLINE() == GC.getGameINLINE().getActivePlayer()) && isCitySelected())
+	if ((getOwner() == GC.getGame().getActivePlayer()) && isCitySelected())
 	{
 		gDLL->getInterfaceIFace()->setDirty(CitizenButtons_DIRTY_BIT, true);
 	}
@@ -543,7 +543,7 @@ void CvCityAI::AI_updateAssignWork()
 	{
 		//	Don't mess with plot assignments while the user is in the city screen as
 		//	current assignments might be transitory
-		if ( !GC.getGameINLINE().isNetworkMultiPlayer() && isHuman() && gDLL->getInterfaceIFace()->isCityScreenUp() )
+		if ( !GC.getGame().isNetworkMultiPlayer() && isHuman() && gDLL->getInterfaceIFace()->isCityScreenUp() )
 		{
 			//	Also assume when they leave the city screen they will leave a state
 			//	they are happy with
@@ -603,14 +603,14 @@ bool CvCityAI::AI_avoidGrowth()
 /*                                                                                              */
 /* Revolution AI                                                                                */
 /************************************************************************************************/
-		if(!GC.getGameINLINE().isOption(GAMEOPTION_NO_REVOLUTION))
+		if(!GC.getGame().isOption(GAMEOPTION_NO_REVOLUTION))
 		{
 			iHappinessLevel -= std::min(getRevolutionIndex()/600, 2);
 		}
 		else
 		{
 			// if we can pop rush, we want to grow one over the cap
-			if (GET_PLAYER(getOwnerINLINE()).canPopRush())
+			if (GET_PLAYER(getOwner()).canPopRush())
 			{
 				iHappinessLevel++;
 			}
@@ -696,13 +696,13 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 	short aiYields[NUM_YIELD_TYPES];
 	for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 	{
-		aiYields[iI] = GET_PLAYER(getOwnerINLINE()).specialistYield(eSpecialist, ((YieldTypes)iI));
+		aiYields[iI] = GET_PLAYER(getOwner()).specialistYield(eSpecialist, ((YieldTypes)iI));
 	}
 
 	short int aiCommerceYields[NUM_COMMERCE_TYPES];
 	for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 	{
-		aiCommerceYields[iI] = GET_PLAYER(getOwnerINLINE()).specialistCommerce(eSpecialist, ((CommerceTypes)iI));
+		aiCommerceYields[iI] = GET_PLAYER(getOwner()).specialistCommerce(eSpecialist, ((CommerceTypes)iI));
 	}
 
 	int iValue = AI_yieldValue(aiYields, aiCommerceYields, bAvoidGrowth, bRemove);
@@ -744,7 +744,7 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 		/* City AI                                                                                      */
 		/************************************************************************************************/
 		// Scale up value for civs/civics with bonuses
-		iGreatPeopleRate *= (100 + GET_PLAYER(getOwnerINLINE()).getGreatPeopleRateModifier());
+		iGreatPeopleRate *= (100 + GET_PLAYER(getOwner()).getGreatPeopleRateModifier());
 		iGreatPeopleRate /= 100;
 		/************************************************************************************************/
 		/* BETTER_BTS_AI_MOD                       END                                                  */
@@ -763,12 +763,12 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 			int iProgress = getGreatPeopleProgress();
 			if (iProgress > 0)
 			{
-				int iThreshold = GET_PLAYER(getOwnerINLINE()).greatPeopleThresholdNonMilitary();
+				int iThreshold = GET_PLAYER(getOwner()).greatPeopleThresholdNonMilitary();
 				iTempValue += ((iGreatPeopleRate * (isHuman() ? 1 : 4) * iGPPValue * iProgress * iProgress) / (iThreshold * iThreshold));
 			}
 		}
 
-		int iCurrentEra = GET_PLAYER(getOwnerINLINE()).getCurrentEra();
+		int iCurrentEra = GET_PLAYER(getOwner()).getCurrentEra();
 		int iTotalEras = GC.getNumEraInfos();
 
 		/************************************************************************************************/
@@ -776,7 +776,7 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 		/*                                                                                              */
 		/* Victory Strategy AI                                                                          */
 		/************************************************************************************************/
-		if (GET_PLAYER(getOwnerINLINE()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2))
+		if (GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2))
 		{
 			int iUnitClass = GC.getSpecialistInfo(eSpecialist).getGreatPeopleUnitClass();
 			//FAssert(iUnitClass != NO_UNITCLASS);
@@ -795,7 +795,7 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 					CvUnitInfo& kUnitInfo = GC.getUnitInfo(eGreatPeopleUnit);
 					if (kUnitInfo.getGreatWorkCulture() > 0)
 					{
-						iTempValue += kUnitInfo.getGreatWorkCulture() / ((GET_PLAYER(getOwnerINLINE()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3)) ? 200 : 350);
+						iTempValue += kUnitInfo.getGreatWorkCulture() / ((GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3)) ? 200 : 350);
 					}
 				}
 				/************************************************************************************************/
@@ -822,7 +822,7 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 				ReligionTypes eReligion = (ReligionTypes)iJ;
 
 				if (isHolyCity(eReligion) && !hasShrine(eReligion)
-					&& ((iCurrentEra < iTotalEras / 2) || GC.getGameINLINE().countReligionLevels(eReligion) >= 10))
+					&& ((iCurrentEra < iTotalEras / 2) || GC.getGame().countReligionLevels(eReligion) >= 10))
 				{
 					CvCivilizationInfo* pCivilizationInfo = &GC.getCivilizationInfo(getCivilizationType());
 
@@ -840,16 +840,16 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 						if (eGreatPeopleUnit != NO_UNIT)
 						{
 							// note, for normal XML, this count will be one (there is only 1 shrine building for each religion)
-							int	shrineBuildingCount = GC.getGameINLINE().getShrineBuildingCount(eReligion);
+							int	shrineBuildingCount = GC.getGame().getShrineBuildingCount(eReligion);
 							for (int iI = 0; iI < shrineBuildingCount; iI++)
 							{
-								int eBuilding = (int)GC.getGameINLINE().getShrineBuilding(iI, eReligion);
+								int eBuilding = (int)GC.getGame().getShrineBuilding(iI, eReligion);
 
 								// if this unit builds or forceBuilds this building
 								if (GC.getUnitInfo(eGreatPeopleUnit).getHasBuilding(eBuilding))
 								{
 									bNeedProphet = true;
-									iBestSpreadValue = std::max(iBestSpreadValue, GC.getGameINLINE().countReligionLevels(eReligion));
+									iBestSpreadValue = std::max(iBestSpreadValue, GC.getGame().countReligionLevels(eReligion));
 								}
 							}
 						}
@@ -882,7 +882,7 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 		/************************************************************************************************/
 		/* BETTER_BTS_AI_MOD                       END                                                  */
 		/************************************************************************************************/
-		iTempValue /= GET_PLAYER(getOwnerINLINE()).AI_averageGreatPeopleMultiplier();
+		iTempValue /= GET_PLAYER(getOwner()).AI_averageGreatPeopleMultiplier();
 
 		iTempValue /= (1 + iEmphasisCount);
 		iValue += iTempValue;
@@ -917,7 +917,7 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 		int iHasMetCount = GET_TEAM(getTeam()).getHasMetCivCount(true);
 
 		iValue += (iExperience * ((iHasMetCount > 0) ? 4 : 2));
-		if (iProductionRank <= GET_PLAYER(getOwnerINLINE()).getNumCities() / 2 + 1)
+		if (iProductionRank <= GET_PLAYER(getOwner()).getNumCities() / 2 + 1)
 		{
 			iValue += iExperience * 4;
 		}
@@ -1010,7 +1010,7 @@ void CvCityAI::AI_chooseProduction()
 	m_bRequestedBuilding = false;
 	m_bRequestedUnit = false;
 
-	CvPlayerAI& kPlayer = GET_PLAYER(getOwnerINLINE());
+	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 
 	if (isProduction())
 	{
@@ -1031,7 +1031,7 @@ void CvCityAI::AI_chooseProduction()
 			}
 
 			// if nearly done, keep building current item
-			int iTurns = 5 * std::max(100, GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getConstructPercent());
+			int iTurns = 5 * std::max(100, GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent());
 			iTurns /= 100;
 			if (getProductionTurnsLeft() <= iTurns)
 			{
@@ -1042,7 +1042,7 @@ void CvCityAI::AI_chooseProduction()
 			UnitTypes eProductionUnit = getProductionUnit();
 			if (eProductionUnit != NO_UNIT)
 			{
-				if (plot()->getNumDefenders(getOwnerINLINE()) == 0)
+				if (plot()->getNumDefenders(getOwner()) == 0)
 				{
 /************************************************************************************************/
 /* Afforess	                  Start		 6/11/11                                                */
@@ -1101,7 +1101,7 @@ void CvCityAI::AI_chooseProduction()
 	bool bInhibitUnits = false;
 	if (isHuman() && isProductionAutomated())
 	{
-		if (!GET_PLAYER(getOwnerINLINE()).isOption(PLAYEROPTION_MODDER_3))
+		if (!GET_PLAYER(getOwner()).isOption(PLAYEROPTION_MODDER_3))
 		{
 			AI_buildGovernorChooseProduction();
 			return;
@@ -1156,10 +1156,10 @@ void CvCityAI::AI_chooseProduction()
 	bool bPrimaryArea = kPlayer.AI_isPrimaryArea(pArea);
 	bool bFinancialTrouble = kPlayer.AI_isFinancialTrouble();
 	int iCulturePressure = AI_calculateCulturePressure();
-	int iNumCitiesInArea = pArea->getCitiesPerPlayer(getOwnerINLINE());
+	int iNumCitiesInArea = pArea->getCitiesPerPlayer(getOwner());
 	bool bImportantCity = false; //be very careful about setting this.
 	int iCultureRateRank = findCommerceRateRank(COMMERCE_CULTURE);
-	int iCulturalVictoryNumCultureCities = GC.getGameINLINE().culturalVictoryNumCultureCities();
+	int iCulturalVictoryNumCultureCities = GC.getGame().culturalVictoryNumCultureCities();
 
 	int iWarSuccessRatio = GET_TEAM(getTeam()).AI_getWarSuccessCapitulationRatio();
 	int iEnemyPowerPerc = GET_TEAM(getTeam()).AI_getEnemyPowerPercent(true);
@@ -1211,7 +1211,7 @@ void CvCityAI::AI_chooseProduction()
 	}
 
 	bool bGetBetterUnits = kPlayer.AI_isDoStrategy(AI_STRATEGY_GET_BETTER_UNITS);
-	bool bAggressiveAI = GC.getGameINLINE().isOption(GAMEOPTION_AGGRESSIVE_AI);
+	bool bAggressiveAI = GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI);
 
 	int iUnitCostPercentage = (kPlayer.calculateUnitCost() * 100) / std::max(1, kPlayer.calculatePreInflatedCosts());
 	int iWaterPercent = AI_calculateWaterWorldPercent();
@@ -1235,19 +1235,19 @@ void CvCityAI::AI_chooseProduction()
 	{
 		pWaterSettlerArea = GC.getMap().findBiggestArea(true);
 
-		if( pWaterSettlerArea != NULL && GET_PLAYER(getOwnerINLINE()).AI_totalWaterAreaUnitAIs(pWaterSettlerArea, UNITAI_SETTLER_SEA) == 0 )
+		if( pWaterSettlerArea != NULL && GET_PLAYER(getOwner()).AI_totalWaterAreaUnitAIs(pWaterSettlerArea, UNITAI_SETTLER_SEA) == 0 )
 		{
 			pWaterSettlerArea = NULL;
 		}
 	}
 	int iNumWaterAreaCitySites = (pWaterSettlerArea == NULL) ? 0 : kPlayer.AI_getNumAdjacentAreaCitySites(pWaterSettlerArea->getID(), getArea(), iWaterAreaBestFoundValue);
-	int iNumSettlers = kPlayer.AI_totalUnitAIs(UNITAI_SETTLE) + GET_PLAYER(getOwnerINLINE()).getContractBroker().numRequestsOutstanding(UNITAI_SETTLE);
+	int iNumSettlers = kPlayer.AI_totalUnitAIs(UNITAI_SETTLE) + GET_PLAYER(getOwner()).getContractBroker().numRequestsOutstanding(UNITAI_SETTLE);
 
 	bool bIsCapitalArea = false;
 	int iNumCapitalAreaCities = 0;
 	if (kPlayer.getCapitalCity() != NULL)
 	{
-		iNumCapitalAreaCities = kPlayer.getCapitalCity()->area()->getCitiesPerPlayer(getOwnerINLINE());
+		iNumCapitalAreaCities = kPlayer.getCapitalCity()->area()->getCitiesPerPlayer(getOwner());
 		if (getArea() == kPlayer.getCapitalCity()->getArea())
 		{
 			bIsCapitalArea = true;
@@ -1255,7 +1255,7 @@ void CvCityAI::AI_chooseProduction()
 	}
 
 	int iMaxSettlers = 0;
-	if (!bFinancialTrouble && GET_PLAYER(getOwnerINLINE()).bestBuildableUnitForAIType(NO_DOMAIN, UNITAI_SETTLE) != NO_UNIT)
+	if (!bFinancialTrouble && GET_PLAYER(getOwner()).bestBuildableUnitForAIType(NO_DOMAIN, UNITAI_SETTLE) != NO_UNIT)
 	{
 		iMaxSettlers= std::min((kPlayer.getNumCities() + 1) / 2, iNumAreaCitySites + iNumWaterAreaCitySites);
 		if (bLandWar || bAssault)
@@ -1328,7 +1328,7 @@ void CvCityAI::AI_chooseProduction()
 		iEconomyFlags |= BUILDINGFOCUS_SPECIALIST;
 		iEconomyFlagBits++;
 	}
-	if (!GC.getGameINLINE().isOption(GAMEOPTION_NO_ESPIONAGE))
+	if (!GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE))
 	{
 		iEconomyFlags |= BUILDINGFOCUS_ESPIONAGE;
 		iEconomyFlagBits++;
@@ -1348,7 +1348,7 @@ void CvCityAI::AI_chooseProduction()
 				// if we do not have enough cities, then the highest culture city will not get special attention
 				if (iCultureRateRank > 1 || (kPlayer.getNumCities() > (iCulturalVictoryNumCultureCities + 1)))
 				{
-					if ((((iNumAreaCitySites + iNumWaterAreaCitySites) > 0) && (kPlayer.getNumCities() < 6)) && (GC.getGameINLINE().getSorenRandNum(2, "AI Less Culture More Expand") == 0))
+					if ((((iNumAreaCitySites + iNumWaterAreaCitySites) > 0) && (kPlayer.getNumCities() < 6)) && (GC.getGame().getSorenRandNum(2, "AI Less Culture More Expand") == 0))
 					{
 						bImportantCity = false;
 					}
@@ -1425,7 +1425,7 @@ void CvCityAI::AI_chooseProduction()
 		{
 			logBBAI("      Barb city %S - area workers %d (needed %d), local %d (needed %d)", getName().GetCString(), iExistingWorkers, iNeededWorkers, AI_getWorkersHave(), AI_getWorkersNeeded());
 		}
-		if (!AI_isDefended(plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_isUnitAIType, UNITAI_ATTACK, -1, getOwnerINLINE()))) // XXX check for other team's units?
+		if (!AI_isDefended(plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_isUnitAIType, UNITAI_ATTACK, -1, getOwner()))) // XXX check for other team's units?
 		{
 			if (AI_chooseDefender("barbarian defenders"))
 			{
@@ -1440,7 +1440,7 @@ void CvCityAI::AI_chooseProduction()
 
 		if (!bDanger && (2*iExistingWorkers < iNeededWorkers) && (AI_getWorkersNeeded() > 0) && (AI_getWorkersHave() == 0))
 		{
-			if( getPopulation() > 1 || (GC.getGameINLINE().getGameTurn() - getGameTurnAcquired() > (15 * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getTrainPercent())/100) )
+			if( getPopulation() > 1 || (GC.getGame().getGameTurn() - getGameTurnAcquired() > (15 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent())/100) )
 			{
 				if (AI_chooseUnit("barbarian worker for established city", UNITAI_WORKER))
 				{
@@ -1470,7 +1470,7 @@ void CvCityAI::AI_chooseProduction()
 			}
 		}
 
-		if (!bDanger && GC.getGameINLINE().getSorenRandNum(100, "AI Build Unit Production") > iBuildUnitProb)
+		if (!bDanger && GC.getGame().getSorenRandNum(100, "AI Build Unit Production") > iBuildUnitProb)
 		{
 
 			int iBarbarianFlags = 0;
@@ -1485,7 +1485,7 @@ void CvCityAI::AI_chooseProduction()
 				return;
 			}
 
-			if( GC.getGameINLINE().getSorenRandNum(100, "AI Build Unit Production") > iBuildUnitProb)
+			if( GC.getGame().getSorenRandNum(100, "AI Build Unit Production") > iBuildUnitProb)
 			{
 				if (AI_chooseBuilding())
 				{
@@ -1495,7 +1495,7 @@ void CvCityAI::AI_chooseProduction()
 			}
 		}
 
-		if (plot()->plotCount(PUF_isUnitAIType, UNITAI_ASSAULT_SEA, -1, NULL, getOwnerINLINE()) > 0)
+		if (plot()->plotCount(PUF_isUnitAIType, UNITAI_ASSAULT_SEA, -1, NULL, getOwner()) > 0)
 		{
 			if (AI_chooseUnit("barbarian choose attack city for transports", UNITAI_ATTACK_CITY))
 			{
@@ -1505,7 +1505,7 @@ void CvCityAI::AI_chooseProduction()
 
 		if (!bDanger && (pWaterArea != NULL) && (iWaterPercent > 30))
 		{
-			if (GC.getGameINLINE().getSorenRandNum(3, "AI Coast Raiders!") == 0)
+			if (GC.getGame().getSorenRandNum(3, "AI Coast Raiders!") == 0)
 			{
 				if (kPlayer.AI_totalUnitAIs(UNITAI_ASSAULT_SEA) <= (1 + kPlayer.getNumCities() / 2))
 				{
@@ -1515,7 +1515,7 @@ void CvCityAI::AI_chooseProduction()
 					}
 				}
 			}
-			if (GC.getGameINLINE().getSorenRandNum(110, "AI arrrr!") < (iWaterPercent + 10))
+			if (GC.getGame().getSorenRandNum(110, "AI arrrr!") < (iWaterPercent + 10))
 			{
 				if (kPlayer.AI_totalUnitAIs(UNITAI_PIRATE_SEA) <= kPlayer.getNumCities())
 				{
@@ -1535,7 +1535,7 @@ void CvCityAI::AI_chooseProduction()
 			}
 		}
 
-		if (GC.getGameINLINE().getSorenRandNum(2, "Barb worker") == 0)
+		if (GC.getGame().getSorenRandNum(2, "Barb worker") == 0)
 		{
 			if (!bDanger && (iExistingWorkers < iNeededWorkers) && (AI_getWorkersNeeded() > 0) && (AI_getWorkersHave() == 0))
 			{
@@ -1612,7 +1612,7 @@ void CvCityAI::AI_chooseProduction()
 		else
 		{
 			// City Defense
-			if (plot()->plotCount(PUF_isUnitAIType, UNITAI_CITY_DEFENSE, -1, NULL, getOwnerINLINE()) < (AI_minDefenders()))
+			if (plot()->plotCount(PUF_isUnitAIType, UNITAI_CITY_DEFENSE, -1, NULL, getOwner()) < (AI_minDefenders()))
 			{
 				if (AI_chooseUnit("rebel city defense", UNITAI_CITY_DEFENSE))
 				{
@@ -1638,7 +1638,7 @@ void CvCityAI::AI_chooseProduction()
 			}
 
 			// Offensive rebel units
-			if( bDanger || (GC.getGameINLINE().getSorenRandNum(100, "AI Build Unit Production") < AI_buildUnitProb()) )
+			if( bDanger || (GC.getGame().getSorenRandNum(100, "AI Build Unit Production") < AI_buildUnitProb()) )
 			{
 				if( (getYieldRate(YIELD_PRODUCTION) > 5) )
 				{
@@ -1657,7 +1657,7 @@ void CvCityAI::AI_chooseProduction()
 						airUnitTypes.push_back(std::make_pair(UNITAI_ATTACK_AIR, 60));
 						airUnitTypes.push_back(std::make_pair(UNITAI_DEFENSE_AIR, 100));
 
-						if ((iAircraftHave * 2 < iAircraftNeed) && (GC.getGameINLINE().getSorenRandNum(2, "AI train escort sea") == 0))
+						if ((iAircraftHave * 2 < iAircraftNeed) && (GC.getGame().getSorenRandNum(2, "AI train escort sea") == 0))
 						{
 							if (AI_chooseLeastRepresentedUnit("rebel air units", airUnitTypes))
 							{
@@ -1701,7 +1701,7 @@ void CvCityAI::AI_chooseProduction()
 							iEscorts += kPlayer.AI_totalAreaUnitAIs(pWaterArea, UNITAI_ESCORT_SEA);
 
 							// Escorts
-							if ((iEscorts < ((1 + 2 * iTransports) / 3)) && (GC.getGameINLINE().getSorenRandNum(2, "AI train escort sea") == 0))
+							if ((iEscorts < ((1 + 2 * iTransports) / 3)) && (GC.getGame().getSorenRandNum(2, "AI train escort sea") == 0))
 							{
 								if ( AI_chooseBuilding(BUILDINGFOCUS_DOMAINSEA) )
 								{
@@ -1805,7 +1805,7 @@ void CvCityAI::AI_chooseProduction()
 		}
 	}
 
-	if (!bInhibitUnits && plot()->getNumDefenders(getOwnerINLINE()) == 0) // XXX check for other team's units?
+	if (!bInhibitUnits && plot()->getNumDefenders(getOwner()) == 0) // XXX check for other team's units?
 	{
 		static CvUnitSelectionCriteria DefaultCriteria;
 		if (AI_chooseUnit("defenseless city", UNITAI_CITY_DEFENSE, -1, -1, CITY_BUILD_PRIORITY_CEILING, &DefaultCriteria))
@@ -1898,15 +1898,15 @@ void CvCityAI::AI_chooseProduction()
 
 	// So what's the right detection of defense which works in early game too?
 	// Fuyu: The right way is to 1) queue the warriors with UNITAI_CITY_DEFENCE or UNITAI_RESERVE,
-	// then 2) to detect defenders with plot()->plotCount(PUF_canDefendGroupHead, -1, -1, getOwnerINLINE(), NO_TEAM, PUF_isCityAIType) - compare AI_isDefended()
-	int iPlotSettlerCount = (iNumSettlers == 0) ? 0 : plot()->plotCount(PUF_isUnitAIType, UNITAI_SETTLE, -1, NULL, getOwnerINLINE());
-	int iPlotCityDefenderCount = plot()->plotCount(PUF_isUnitAIType, UNITAI_CITY_DEFENSE, -1, NULL, getOwnerINLINE(), NO_TEAM, NULL, -1, -1, 2);
-	int iPlotOtherCityAICount = plot()->plotCount(PUF_canDefend, -1, -1, NULL, getOwnerINLINE(), NO_TEAM, PUF_isCityAIType, -1, -1, 2);
+	// then 2) to detect defenders with plot()->plotCount(PUF_canDefendGroupHead, -1, -1, getOwner(), NO_TEAM, PUF_isCityAIType) - compare AI_isDefended()
+	int iPlotSettlerCount = (iNumSettlers == 0) ? 0 : plot()->plotCount(PUF_isUnitAIType, UNITAI_SETTLE, -1, NULL, getOwner());
+	int iPlotCityDefenderCount = plot()->plotCount(PUF_isUnitAIType, UNITAI_CITY_DEFENSE, -1, NULL, getOwner(), NO_TEAM, NULL, -1, -1, 2);
+	int iPlotOtherCityAICount = plot()->plotCount(PUF_canDefend, -1, -1, NULL, getOwner(), NO_TEAM, PUF_isCityAIType, -1, -1, 2);
 /********************************************************************************/
 /* 	City Defenders						24.07.2010				Fuyu			*/
 /********************************************************************************/
 	int iPlotCityDefenderStrength = getGarrisonStrength();
-	int iPlotOtherCityAIStrength = plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefend, -1, -1, getOwnerINLINE(), NO_TEAM, PUF_isCityAIType, -1, -1, 2) - iPlotCityDefenderStrength;
+	int iPlotOtherCityAIStrength = plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefend, -1, -1, getOwner(), NO_TEAM, PUF_isCityAIType, -1, -1, 2) - iPlotCityDefenderStrength;
 	if( kPlayer.getCurrentEra() == 0 )
 	{
 		// Warriors are blocked from UNITAI_CITY_DEFENSE, in early game this confuses AI city building
@@ -1918,7 +1918,7 @@ void CvCityAI::AI_chooseProduction()
 				iPlotOtherCityAIStrength = 0;
 				if (iPlotCityDefenderStrength == 0)
 				{
-					iPlotCityDefenderStrength = plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefend, -1, -1, getOwnerINLINE(), NO_TEAM, PUF_isDomainType, DOMAIN_LAND, -1, 2);
+					iPlotCityDefenderStrength = plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefend, -1, -1, getOwner(), NO_TEAM, PUF_isDomainType, DOMAIN_LAND, -1, 2);
 				}
 			}
 		}
@@ -2058,12 +2058,12 @@ void CvCityAI::AI_chooseProduction()
 /********************************************************************************/
 /* 	City Defenders						24.07.2010				Fuyu			*/
 /********************************************************************************/
-	int iPlotSettlerEscortCityDefenseCount =  plot()->plotCount(PUF_isUnitAIType, UNITAI_CITY_COUNTER, -1,NULL, getOwnerINLINE()) - (AI_minDefenders()+1);
-	int iPlotSettlerEscortCounterCount = plot()->plotCount(PUF_isUnitAIType, UNITAI_CITY_COUNTER, -1, NULL, getOwnerINLINE());
+	int iPlotSettlerEscortCityDefenseCount =  plot()->plotCount(PUF_isUnitAIType, UNITAI_CITY_COUNTER, -1,NULL, getOwner()) - (AI_minDefenders()+1);
+	int iPlotSettlerEscortCounterCount = plot()->plotCount(PUF_isUnitAIType, UNITAI_CITY_COUNTER, -1, NULL, getOwner());
 	int iPlotSettlerEscortCount = iPlotSettlerEscortCityDefenseCount + iPlotSettlerEscortCounterCount;
 	if (iMaxSettlers > 0 && !bInhibitUnits && iPlotSettlerCount > 0 && iPlotSettlerEscortCount < (iPlotSettlerCount * 4))
 		//if (!bInhibitUnits && iPlotCityDefenderCount + iPlotOtherCityAICount < (AI_minDefenders() + iPlotSettlerCount))
-		//if (!bUnitExempt && !bInhibitUnits && iPlotCityDefenderStrength + iPlotOtherCityAIStrength < (AI_minDefenseStrength() + iPlotSettlerCount*GET_PLAYER(getOwnerINLINE()).strengthOfBestUnitAI(DOMAIN_LAND, UNITAI_CITY_DEFENSE))) //k-mod
+		//if (!bUnitExempt && !bInhibitUnits && iPlotCityDefenderStrength + iPlotOtherCityAIStrength < (AI_minDefenseStrength() + iPlotSettlerCount*GET_PLAYER(getOwner()).strengthOfBestUnitAI(DOMAIN_LAND, UNITAI_CITY_DEFENSE))) //k-mod
 	{
 		if (AI_chooseUnit("min defender", UNITAI_CITY_DEFENSE))
 		{
@@ -2148,7 +2148,7 @@ void CvCityAI::AI_chooseProduction()
 				int iSettlerSeaNeeded = std::min(iNumWaterAreaCitySites, ((iTotalCities + 4) / 8) + 1);
 				if (kPlayer.getCapitalCity() != NULL)
 				{
-					int iOverSeasColonies = iTotalCities - kPlayer.getCapitalCity()->area()->getCitiesPerPlayer(getOwnerINLINE());
+					int iOverSeasColonies = iTotalCities - kPlayer.getCapitalCity()->area()->getCitiesPerPlayer(getOwner());
 					int iLoop = 2;
 					int iExtras = 0;
 					while (iOverSeasColonies >= iLoop)
@@ -2173,7 +2173,7 @@ void CvCityAI::AI_chooseProduction()
 					{
 						if ((AI_getWorkersNeeded() > 0) && (AI_getWorkersHave() == 0))
 						{
-							if( getPopulation() > 1 || (GC.getGameINLINE().getGameTurn() - getGameTurnAcquired() > (15 * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getTrainPercent())/100) )
+							if( getPopulation() > 1 || (GC.getGame().getGameTurn() - getGameTurnAcquired() > (15 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent())/100) )
 							{
 								if (!bChooseWorker && AI_chooseUnit("worker needed", UNITAI_WORKER))
 								{
@@ -2197,7 +2197,7 @@ void CvCityAI::AI_chooseProduction()
 			{
 				if ((iNumSettlers < iMaxSettlers))
 				{
-					if (GC.getGameINLINE().getSorenRandNum(2, "settler training decision") < (bLandWar ? 1 : 2))
+					if (GC.getGame().getSorenRandNum(2, "settler training decision") < (bLandWar ? 1 : 2))
 					{
 /********************************************************************************/
 /* 	Build more workers #1.2										Fuyu		    */
@@ -2207,7 +2207,7 @@ void CvCityAI::AI_chooseProduction()
 						{
 							if ((AI_getWorkersNeeded() > 0) && (AI_getWorkersHave() == 0))
 							{
-								if( getPopulation() > 1 || (GC.getGameINLINE().getGameTurn() - getGameTurnAcquired() > (15 * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getTrainPercent())/100) )
+								if( getPopulation() > 1 || (GC.getGame().getGameTurn() - getGameTurnAcquired() > (15 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent())/100) )
 								{
 									if (!bChooseWorker && AI_chooseUnit("worker needed 2", UNITAI_WORKER))
 									{
@@ -2225,7 +2225,7 @@ void CvCityAI::AI_chooseProduction()
 /********************************************************************************/
 						if ((kPlayer.getNumMilitaryUnits() <= (kPlayer.getNumCities() + iNumSettlers + 1))
 							//Fuyu: in the beginning, don't count on other cities to build the escorts
-							|| (kPlayer.getNumCities() <= 7 && iNumCitiesInArea <= 3 && (plot()->plotCount(PUF_canDefendGroupHead, -1, -1, NULL, getOwnerINLINE(), NO_TEAM, PUF_isCityAIType) <= 1)))
+							|| (kPlayer.getNumCities() <= 7 && iNumCitiesInArea <= 3 && (plot()->plotCount(PUF_canDefendGroupHead, -1, -1, NULL, getOwner(), NO_TEAM, PUF_isCityAIType) <= 1)))
 						{
 							if (AI_chooseUnit("extra quick defender", UNITAI_CITY_DEFENSE))
 							{
@@ -2303,17 +2303,17 @@ void CvCityAI::AI_chooseProduction()
 			UnitTypes eBestUnit = AI_bestUnitAI(UNITAI_HUNTER, iUnitValue);
 			if ( eBestUnit != NO_UNIT )
 			{
-				int iCost = (GC.getUnitInfo(eBestUnit).getProductionCost() * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getTrainPercent()) / 100;
-				int perTurnLossesCost = (iCost*area()->getRecentCombatDeathRate(getOwnerINLINE(), UNITAI_HUNTER))/100;
+				int iCost = (GC.getUnitInfo(eBestUnit).getProductionCost() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent()) / 100;
+				int perTurnLossesCost = (iCost*area()->getRecentCombatDeathRate(getOwner(), UNITAI_HUNTER))/100;
 
 				if( gCityLogLevel >= 2 )
 				{
 					logBBAI("      City %S evaluating recent hunter deaths - %d per/turn cost vs %d production",
 							getName().GetCString(),
 							perTurnLossesCost,
-							GET_PLAYER(getOwnerINLINE()).calculateTotalYield(YIELD_PRODUCTION));
+							GET_PLAYER(getOwner()).calculateTotalYield(YIELD_PRODUCTION));
 				}
-				if ( perTurnLossesCost > GET_PLAYER(getOwnerINLINE()).calculateTotalYield(YIELD_PRODUCTION)/4 )
+				if ( perTurnLossesCost > GET_PLAYER(getOwner()).calculateTotalYield(YIELD_PRODUCTION)/4 )
 				{
 					if (AI_chooseBuilding(BUILDINGFOCUS_EXPERIENCE, 30))
 					{
@@ -2392,17 +2392,17 @@ void CvCityAI::AI_chooseProduction()
 			UnitTypes eBestUnit = AI_bestUnitAI(UNITAI_HUNTER, iUnitValue);
 			if ( eBestUnit != NO_UNIT )
 			{
-				int iCost = (GC.getUnitInfo(eBestUnit).getProductionCost() * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getTrainPercent()) / 100;
-				int perTurnLossesCost = (iCost*area()->getRecentCombatDeathRate(getOwnerINLINE(), UNITAI_HUNTER))/100;
+				int iCost = (GC.getUnitInfo(eBestUnit).getProductionCost() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent()) / 100;
+				int perTurnLossesCost = (iCost*area()->getRecentCombatDeathRate(getOwner(), UNITAI_HUNTER))/100;
 
 				if( gCityLogLevel >= 2 )
 				{
 					logBBAI("      City %S evaluating recent hunter deaths - %d per/turn cost vs %d production",
 							getName().GetCString(),
 							perTurnLossesCost,
-							GET_PLAYER(getOwnerINLINE()).calculateTotalYield(YIELD_PRODUCTION));
+							GET_PLAYER(getOwner()).calculateTotalYield(YIELD_PRODUCTION));
 				}
-				if ( perTurnLossesCost > GET_PLAYER(getOwnerINLINE()).calculateTotalYield(YIELD_PRODUCTION)/4 )
+				if ( perTurnLossesCost > GET_PLAYER(getOwner()).calculateTotalYield(YIELD_PRODUCTION)/4 )
 				{
 					if (AI_chooseBuilding(BUILDINGFOCUS_EXPERIENCE, 30))
 					{
@@ -2477,7 +2477,7 @@ void CvCityAI::AI_chooseProduction()
 	}
 
 	// Early game worker logic
-	if( !bInhibitUnits && isCapital() && (GC.getGame().getElapsedGameTurns() < ((30 * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getTrainPercent()) / 100)))
+	if( !bInhibitUnits && isCapital() && (GC.getGame().getElapsedGameTurns() < ((30 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent()) / 100)))
 	{
 		if( !bDanger && !(kPlayer.AI_isDoStrategy(AI_STRATEGY_TURTLE)) )
 		{
@@ -2973,9 +2973,9 @@ void CvCityAI::AI_chooseProduction()
 /*                                                                                              */
 /************************************************************************************************/
 /*
-			int iWonderTime = GC.getGameINLINE().getSorenRandNum(GC.getLeaderHeadInfo(getPersonalityType()).getWonderConstructRand(), "Wonder Construction Rand");
+			int iWonderTime = GC.getGame().getSorenRandNum(GC.getLeaderHeadInfo(getPersonalityType()).getWonderConstructRand(), "Wonder Construction Rand");
 */
-			int iWonderTime = GC.getGameINLINE().getSorenRandNum(GET_PLAYER(getOwnerINLINE()).getWonderConstructRand(), "Wonder Construction Rand");
+			int iWonderTime = GC.getGame().getSorenRandNum(GET_PLAYER(getOwner()).getWonderConstructRand(), "Wonder Construction Rand");
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
@@ -2992,13 +2992,13 @@ void CvCityAI::AI_chooseProduction()
 
 	m_iTempBuildPriority--;
 
-	if (!bDanger && !bIsCapitalArea && area()->getCitiesPerPlayer(getOwnerINLINE()) > iNumCapitalAreaCities)
+	if (!bDanger && !bIsCapitalArea && area()->getCitiesPerPlayer(getOwner()) > iNumCapitalAreaCities)
 	{
 		// BBAI TODO:  This check should be done by player, not by city and optimize placement
 		// If losing badly in war, don't build big things
 		if( !bLandWar || (iWarSuccessRatio > -30) )
 		{
-			if( kPlayer.getCapitalCity() == NULL || area()->getPopulationPerPlayer(getOwnerINLINE()) > kPlayer.getCapitalCity()->area()->getPopulationPerPlayer(getOwnerINLINE()) )
+			if( kPlayer.getCapitalCity() == NULL || area()->getPopulationPerPlayer(getOwner()) > kPlayer.getCapitalCity()->area()->getPopulationPerPlayer(getOwner()) )
 			{
 				if (AI_chooseBuilding(BUILDINGFOCUS_CAPITAL, 15))
 				{
@@ -3025,7 +3025,7 @@ void CvCityAI::AI_chooseProduction()
 	{
 		iSpreadUnitThreshold += 800 - 10*iWarSuccessRatio;
 	}
-	iSpreadUnitThreshold += 300*plot()->plotCount(PUF_isUnitAIType, UNITAI_MISSIONARY, -1, NULL, getOwnerINLINE());
+	iSpreadUnitThreshold += 300*plot()->plotCount(PUF_isUnitAIType, UNITAI_MISSIONARY, -1, NULL, getOwner());
 
 	UnitTypes eBestSpreadUnit = NO_UNIT;
 	int iBestSpreadUnitValue = -1;
@@ -3067,7 +3067,7 @@ void CvCityAI::AI_chooseProduction()
 		if (!bDanger && (iProductionRank <= ((kPlayer.getNumCities() / 5) + 1)))
 		{
 			// BBAI TODO: Temporary for testing
-			//if( getOwnerINLINE()%2 == 1 )
+			//if( getOwner()%2 == 1 )
 			//{
 				if (AI_chooseProject())
 				{
@@ -3093,7 +3093,7 @@ void CvCityAI::AI_chooseProduction()
 		{
 			if ((AI_getWorkersNeeded() > 0) && (AI_getWorkersHave() == 0))
 			{
-				if( getPopulation() > 2 || (GC.getGameINLINE().getGameTurn() - getGameTurnAcquired() > (15 * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getTrainPercent())/100) )
+				if( getPopulation() > 2 || (GC.getGame().getGameTurn() - getGameTurnAcquired() > (15 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent())/100) )
 				{
 					if (!bChooseWorker && AI_chooseUnit("worker for established city", UNITAI_WORKER))
 					{
@@ -3109,7 +3109,7 @@ void CvCityAI::AI_chooseProduction()
 						//	bChooseWorker = true;
 
 							//Already set by chooseUnit but I'm not taking any chances
-						//	if ((getTeam() == GC.getGameINLINE().getActiveTeam()) || GC.getGameINLINE().isDebugMode())
+						//	if ((getTeam() == GC.getGame().getActiveTeam()) || GC.getGame().isDebugMode())
 						//	{
 						//		setInfoDirty(true);
 
@@ -3154,7 +3154,7 @@ void CvCityAI::AI_chooseProduction()
 					return;
 				}
 			}
-			else if (GC.getGameINLINE().getSorenRandNum(((iCultureRateRank == 1) ? 4 : 1) + iCulturalVictoryNumCultureCities * 2 + (bLandWar ? 5 : 0), "AI Build up Culture") < iCultureRateRank)
+			else if (GC.getGame().getSorenRandNum(((iCultureRateRank == 1) ? 4 : 1) + iCulturalVictoryNumCultureCities * 2 + (bLandWar ? 5 : 0), "AI Build up Culture") < iCultureRateRank)
 			{
 				if (AI_chooseBuilding(BUILDINGFOCUS_BIGCULTURE | BUILDINGFOCUS_CULTURE | BUILDINGFOCUS_WONDEROK, (bLandWar ? 20 : 40)))
 				{
@@ -3199,18 +3199,18 @@ void CvCityAI::AI_chooseProduction()
 					if ( isCapital() )
 					{
 						//	What is the cost of one of these units?
-						int iCost = (GC.getUnitInfo(eBestUnit).getProductionCost() * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getTrainPercent()) / 100;
-						int perTurnLossesCost = (iCost*area()->getRecentCombatDeathRate(getOwnerINLINE(), UNITAI_EXPLORE))/100;
+						int iCost = (GC.getUnitInfo(eBestUnit).getProductionCost() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent()) / 100;
+						int perTurnLossesCost = (iCost*area()->getRecentCombatDeathRate(getOwner(), UNITAI_EXPLORE))/100;
 
 						if( gCityLogLevel >= 2 )
 						{
 							logBBAI("      City %S evaluating recent explorer deaths - %d per/turn cost vs %d production",
 									getName().GetCString(),
 									perTurnLossesCost,
-									GET_PLAYER(getOwnerINLINE()).calculateTotalYield(YIELD_PRODUCTION));
+									GET_PLAYER(getOwner()).calculateTotalYield(YIELD_PRODUCTION));
 						}
 
-						if ( perTurnLossesCost > GET_PLAYER(getOwnerINLINE()).calculateTotalYield(YIELD_PRODUCTION)/6 )
+						if ( perTurnLossesCost > GET_PLAYER(getOwner()).calculateTotalYield(YIELD_PRODUCTION)/6 )
 						{
 							if (AI_chooseBuilding(BUILDINGFOCUS_EXPERIENCE, 30))
 							{
@@ -3234,18 +3234,18 @@ void CvCityAI::AI_chooseProduction()
 				if ( eBestUnit != NO_UNIT )
 				{
 					//	What is the cost of one of these units?
-					int iCost = (GC.getUnitInfo(eBestUnit).getProductionCost() * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getTrainPercent()) / 100;
-					int perTurnLossesCost = (iCost*area()->getRecentCombatDeathRate(getOwnerINLINE(), UNITAI_HUNTER))/100;
+					int iCost = (GC.getUnitInfo(eBestUnit).getProductionCost() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent()) / 100;
+					int perTurnLossesCost = (iCost*area()->getRecentCombatDeathRate(getOwner(), UNITAI_HUNTER))/100;
 
 					if( gCityLogLevel >= 2 )
 					{
 						logBBAI("      City %S evaluating recent hunter deaths - %d per/turn cost vs %d production",
 							getName().GetCString(),
 							perTurnLossesCost,
-							GET_PLAYER(getOwnerINLINE()).calculateTotalYield(YIELD_PRODUCTION));
+							GET_PLAYER(getOwner()).calculateTotalYield(YIELD_PRODUCTION));
 					}
 
-					if ( perTurnLossesCost > GET_PLAYER(getOwnerINLINE()).calculateTotalYield(YIELD_PRODUCTION)/6 )
+					if ( perTurnLossesCost > GET_PLAYER(getOwner()).calculateTotalYield(YIELD_PRODUCTION)/6 )
 					{
 						if (AI_chooseBuilding(BUILDINGFOCUS_EXPERIENCE, 30))
 						{
@@ -3283,7 +3283,7 @@ void CvCityAI::AI_chooseProduction()
 /*                                                                                              */
 /* Encourage Aggressive AI to stock up on a few nukes                                           */
 /************************************************************************************************/
-	if (!bInhibitUnits && (GC.getGameINLINE().isOption(GAMEOPTION_RUTHLESS_AI) || kPlayer.isEnabledMAD() || (GC.getGameINLINE().getSorenRandNum(10, "AI consider Nuke") == 0)))
+	if (!bInhibitUnits && (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI) || kPlayer.isEnabledMAD() || (GC.getGame().getSorenRandNum(10, "AI consider Nuke") == 0)))
 	{
 		if(!bFinancialTrouble)
 		{
@@ -3329,9 +3329,9 @@ void CvCityAI::AI_chooseProduction()
 /*                                                                                              */
 /************************************************************************************************/
 /*
-			int iWonderTime = GC.getGameINLINE().getSorenRandNum(GC.getLeaderHeadInfo(getPersonalityType()).getWonderConstructRand(), "Wonder Construction Rand");
+			int iWonderTime = GC.getGame().getSorenRandNum(GC.getLeaderHeadInfo(getPersonalityType()).getWonderConstructRand(), "Wonder Construction Rand");
 */
-			int iWonderTime = GC.getGameINLINE().getSorenRandNum(GET_PLAYER(getOwnerINLINE()).getWonderConstructRand(), "Wonder Construction Rand");
+			int iWonderTime = GC.getGame().getSorenRandNum(GET_PLAYER(getOwner()).getWonderConstructRand(), "Wonder Construction Rand");
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
@@ -3354,7 +3354,7 @@ void CvCityAI::AI_chooseProduction()
 		{
 			if ((AI_getWorkersNeeded() > 0) && (AI_getWorkersHave() == 0))
 			{
-				if( getPopulation() > 1 || (GC.getGameINLINE().getGameTurn() - getGameTurnAcquired() > (15 * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getTrainPercent())/100) )
+				if( getPopulation() > 1 || (GC.getGame().getGameTurn() - getGameTurnAcquired() > (15 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent())/100) )
 				{
 					if (!bChooseWorker && AI_chooseUnit("established city needs more workers", UNITAI_WORKER))
 					{
@@ -3564,7 +3564,7 @@ void CvCityAI::AI_chooseProduction()
 
 	if (!bInhibitUnits && iUnitCostPercentage < (iMaxUnitSpending + 4) && (!bImportantCity || bDefenseWar) )
 	{
-		if( bLandWar || bAssault || (iFreeAirExperience > 0) || (GC.getGameINLINE().getSorenRandNum(3, "AI train air") == 0) )
+		if( bLandWar || bAssault || (iFreeAirExperience > 0) || (GC.getGame().getSorenRandNum(3, "AI train air") == 0) )
 		{
 			int iBestAirValue = kPlayer.AI_bestCityUnitAIValue(UNITAI_ATTACK_AIR, this, &eBestAttackAircraft);
 			int iBestMissileValue = kPlayer.AI_bestCityUnitAIValue(UNITAI_MISSILE_AIR, this, &eBestMissile);
@@ -3783,7 +3783,7 @@ void CvCityAI::AI_chooseProduction()
 					if (!bFinancialTrouble && iCarriers < (kPlayer.AI_totalUnitAIs(UNITAI_ASSAULT_SEA) / 4))
 					{
 						// Reduce chances of starting if city has low production
-						if ( iProductionRank > (kPlayer.getNumCities() / 3) && GC.getGameINLINE().getSorenRandNum(100, "AI train carrier") < 30 )
+						if ( iProductionRank > (kPlayer.getNumCities() / 3) && GC.getGame().getSorenRandNum(100, "AI train carrier") < 30 )
 						{
 							if ( AI_chooseBuilding(BUILDINGFOCUS_DOMAINSEA, 12) )
 							{
@@ -3911,15 +3911,15 @@ void CvCityAI::AI_chooseProduction()
 	m_iTempBuildPriority--;
 
 	//Afforess reduced 12 -> 6, since AI rarely reaches this logic, Added exemption for MAD players
-	int chance = !GC.getGameINLINE().isOption(GAMEOPTION_RUTHLESS_AI) ? 6 : 3;
-	if (!bInhibitUnits && (kPlayer.AI_isDoStrategy(AI_STRATEGY_OWABWNW) || kPlayer.isEnabledMAD() || (GC.getGameINLINE().getSorenRandNum(chance, "AI consider Nuke") == 0)))
+	int chance = !GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI) ? 6 : 3;
+	if (!bInhibitUnits && (kPlayer.AI_isDoStrategy(AI_STRATEGY_OWABWNW) || kPlayer.isEnabledMAD() || (GC.getGame().getSorenRandNum(chance, "AI consider Nuke") == 0)))
 	{
 		if( !bFinancialTrouble )
 		{
 			int iTotalNukes = kPlayer.AI_totalUnitAIs(UNITAI_ICBM);
 			int iNukesWanted = 1 + 2 * std::min(kPlayer.getNumCities(), GC.getGame().getNumCities() - kPlayer.getNumCities());
 			//Afforess rolling randoms twice makes getting nukes much harder
-			if ((iTotalNukes < iNukesWanted)/* && (GC.getGameINLINE().getSorenRandNum(100, "AI train nuke MWAHAHAH") < (90 - (80 * iTotalNukes) / iNukesWanted))*/)
+			if ((iTotalNukes < iNukesWanted)/* && (GC.getGame().getSorenRandNum(100, "AI train nuke MWAHAHAH") < (90 - (80 * iTotalNukes) / iNukesWanted))*/)
 			{
 				//Reordered, because nukes are more valuable than carriers
 				if (AI_chooseUnit("ICBM (2)", UNITAI_ICBM))
@@ -4131,13 +4131,13 @@ void CvCityAI::AI_chooseProduction()
 /*
 		int iWonderRand = 8 + getCitySorenRandNum(GC.getLeaderHeadInfo(getPersonalityType()).getWonderConstructRand(), "Wonder Construction Rand");
 */
-		int iWonderRand = 8 + GC.getGameINLINE().getSorenRandNum(GET_PLAYER(getOwnerINLINE()).getWonderConstructRand(), "Wonder Construction Rand");
+		int iWonderRand = 8 + GC.getGame().getSorenRandNum(GET_PLAYER(getOwner()).getWonderConstructRand(), "Wonder Construction Rand");
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 
 		// increase chance of going for an early wonder
-		if (GC.getGameINLINE().getElapsedGameTurns() < (100 * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getConstructPercent() / 100) && iNumCitiesInArea > 1)
+		if (GC.getGame().getElapsedGameTurns() < (100 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent() / 100) && iNumCitiesInArea > 1)
 		{
 			iWonderRand *= 35;
 			iWonderRand /= 100;
@@ -4159,7 +4159,7 @@ void CvCityAI::AI_chooseProduction()
 			iWonderRand /= 3;
 		}
 
-		int iWonderRoll = GC.getGameINLINE().getSorenRandNum(100, "Wonder Build Rand");
+		int iWonderRoll = GC.getGame().getSorenRandNum(100, "Wonder Build Rand");
 
 		if (iProductionRank == 1)
 		{
@@ -4306,7 +4306,7 @@ void CvCityAI::AI_chooseProduction()
 	m_iTempBuildPriority--;
 
 	//	If there are no city counter units in the vicinity best create 1
-	if (!bInhibitUnits && plot()->plotCount(PUF_isUnitAIType, UNITAI_CITY_COUNTER, -1, NULL, getOwnerINLINE(), NO_TEAM, NULL, -1, -1, 2) == 0)
+	if (!bInhibitUnits && plot()->plotCount(PUF_isUnitAIType, UNITAI_CITY_COUNTER, -1, NULL, getOwner(), NO_TEAM, NULL, -1, -1, 2) == 0)
 	{
 		if (AI_chooseUnit("city counter units needed locally", UNITAI_CITY_COUNTER))
 		{
@@ -4317,7 +4317,7 @@ void CvCityAI::AI_chooseProduction()
 	m_iTempBuildPriority--;
 
 	//	If there are no pillage counter units in the vicinity best create 1
-	if (!bInhibitUnits && plot()->plotCount(PUF_isUnitAIType, UNITAI_PILLAGE_COUNTER, -1, NULL, getOwnerINLINE(), NO_TEAM, NULL, -1, -1, 2) == 0)
+	if (!bInhibitUnits && plot()->plotCount(PUF_isUnitAIType, UNITAI_PILLAGE_COUNTER, -1, NULL, getOwner(), NO_TEAM, NULL, -1, -1, 2) == 0)
 	{
 		if (AI_chooseUnit("pillage counter units needed locally", UNITAI_PILLAGE_COUNTER))
 		{
@@ -4418,7 +4418,7 @@ void CvCityAI::AI_chooseProduction()
 	//	100, but only if we already have less gold than our target in which case we should already have unconditonally
 	//	gone for gold earlier in this choice)
 	int commerceWeights[NUM_COMMERCE_TYPES];
-	commerceWeights[COMMERCE_GOLD] = std::max(0,100-(GET_PLAYER(getOwnerINLINE()).getEffectiveGold() - GET_PLAYER(getOwnerINLINE()).AI_goldTarget())*100/std::max(1,GET_PLAYER(getOwnerINLINE()).AI_goldTarget()));
+	commerceWeights[COMMERCE_GOLD] = std::max(0,100-(GET_PLAYER(getOwner()).getEffectiveGold() - GET_PLAYER(getOwner()).AI_goldTarget())*100/std::max(1,GET_PLAYER(getOwner()).AI_goldTarget()));
 	if (isHuman() && !AI_isEmphasizeCommerce(COMMERCE_GOLD))
 	{
 		commerceWeights[COMMERCE_GOLD] = 0;
@@ -4478,20 +4478,20 @@ UnitTypes CvCityAI::AI_bestUnit(int& iBestUnitValue, int iNumSelectableTypes, Un
 		bool bDefense = (area()->getAreaAIType(getTeam()) == AREAAI_DEFENSIVE);
 		bool bLandWar = (bDefense || (area()->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE) || (area()->getAreaAIType(getTeam()) == AREAAI_MASSING));
 		bool bAssault = (area()->getAreaAIType(getTeam()) == AREAAI_ASSAULT);
-		bool bPrimaryArea = GET_PLAYER(getOwnerINLINE()).AI_isPrimaryArea(area());
-		bool bAreaAlone = GET_PLAYER(getOwnerINLINE()).AI_isAreaAlone(area());
-		bool bFinancialTrouble = GET_PLAYER(getOwnerINLINE()).AI_isFinancialTrouble();
+		bool bPrimaryArea = GET_PLAYER(getOwner()).AI_isPrimaryArea(area());
+		bool bAreaAlone = GET_PLAYER(getOwner()).AI_isAreaAlone(area());
+		bool bFinancialTrouble = GET_PLAYER(getOwner()).AI_isFinancialTrouble();
 		bool bWarPossible = GET_TEAM(getTeam()).AI_isWarPossible();
 		bool bDanger = AI_isDanger();
 
 		int iHasMetCount = GET_TEAM(getTeam()).getHasMetCivCount(true);
-		iMilitaryWeight = GET_PLAYER(getOwnerINLINE()).AI_militaryWeight(area());
-		int iNumCitiesInArea = area()->getCitiesPerPlayer(getOwnerINLINE());
+		iMilitaryWeight = GET_PLAYER(getOwner()).AI_militaryWeight(area());
+		int iNumCitiesInArea = area()->getCitiesPerPlayer(getOwner());
 
 		int iCoastalCities = 0;
 		if (pWaterArea != NULL)
 		{
-			iCoastalCities = GET_PLAYER(getOwnerINLINE()).countNumCoastalCitiesByArea(pWaterArea);
+			iCoastalCities = GET_PLAYER(getOwner()).countNumCoastalCitiesByArea(pWaterArea);
 		}
 
 		for (int iI = 0; iI < NUM_UNITAI_TYPES; iI++)
@@ -4499,12 +4499,12 @@ UnitTypes CvCityAI::AI_bestUnit(int& iBestUnitValue, int iNumSelectableTypes, Un
 			aiUnitAIVal[iI] = 0;
 		}
 
-		if (!bFinancialTrouble && ((bPrimaryArea) ? (GET_PLAYER(getOwnerINLINE()).findBestFoundValue() > 0) : (area()->getBestFoundValue(getOwnerINLINE()) > 0)))
+		if (!bFinancialTrouble && ((bPrimaryArea) ? (GET_PLAYER(getOwner()).findBestFoundValue() > 0) : (area()->getBestFoundValue(getOwner()) > 0)))
 		{
 			aiUnitAIVal[UNITAI_SETTLE]++;
 		}
 
-		aiUnitAIVal[UNITAI_WORKER] += GET_PLAYER(getOwnerINLINE()).AI_neededWorkers(area());
+		aiUnitAIVal[UNITAI_WORKER] += GET_PLAYER(getOwner()).AI_neededWorkers(area());
 
 		aiUnitAIVal[UNITAI_ATTACK] += ((iMilitaryWeight / ((bWarPlan || bLandWar || bAssault) ? 7 : 12)) + ((bPrimaryArea && bWarPossible) ? 2 : 0) + 1);
 
@@ -4518,13 +4518,13 @@ UnitTypes CvCityAI::AI_bestUnit(int& iBestUnitValue, int iNumSelectableTypes, Un
 			aiUnitAIVal[UNITAI_COUNTER] += ((iMilitaryWeight / ((bWarPlan || bLandWar || bAssault) ? 13 : 22)) + ((bPrimaryArea) ? 1 : 0));
 			aiUnitAIVal[UNITAI_PARADROP] += ((iMilitaryWeight / ((bWarPlan || bLandWar || bAssault) ? 5 : 8)) + ((bPrimaryArea) ? 1 : 0));
 
-			aiUnitAIVal[UNITAI_DEFENSE_AIR] += (GET_PLAYER(getOwnerINLINE()).getNumCities() + 1);
-			aiUnitAIVal[UNITAI_CARRIER_AIR] += GET_PLAYER(getOwnerINLINE()).AI_countCargoSpace(UNITAI_CARRIER_SEA);
-			aiUnitAIVal[UNITAI_MISSILE_AIR] += GET_PLAYER(getOwnerINLINE()).AI_countCargoSpace(UNITAI_MISSILE_CARRIER_SEA);
+			aiUnitAIVal[UNITAI_DEFENSE_AIR] += (GET_PLAYER(getOwner()).getNumCities() + 1);
+			aiUnitAIVal[UNITAI_CARRIER_AIR] += GET_PLAYER(getOwner()).AI_countCargoSpace(UNITAI_CARRIER_SEA);
+			aiUnitAIVal[UNITAI_MISSILE_AIR] += GET_PLAYER(getOwner()).AI_countCargoSpace(UNITAI_MISSILE_CARRIER_SEA);
 
 			if (bPrimaryArea)
 			{
-				aiUnitAIVal[UNITAI_ICBM] += std::max((GET_PLAYER(getOwnerINLINE()).getTotalPopulation() / 25), ((GC.getGameINLINE().countCivPlayersAlive() + GC.getGameINLINE().countTotalNukeUnits()) / (GC.getGameINLINE().countCivPlayersAlive() + 1)));
+				aiUnitAIVal[UNITAI_ICBM] += std::max((GET_PLAYER(getOwner()).getTotalPopulation() / 25), ((GC.getGame().countCivPlayersAlive() + GC.getGame().countTotalNukeUnits()) / (GC.getGame().countCivPlayersAlive() + 1)));
 			}
 		}
 
@@ -4536,31 +4536,31 @@ UnitTypes CvCityAI::AI_bestUnit(int& iBestUnitValue, int iNumSelectableTypes, Un
 		{
 			if (!bLandWar)
 			{
-				aiUnitAIVal[UNITAI_EXPLORE] += GET_PLAYER(getOwnerINLINE()).AI_neededExplorers(area());
+				aiUnitAIVal[UNITAI_EXPLORE] += GET_PLAYER(getOwner()).AI_neededExplorers(area());
 			}
 
 			if (pWaterArea != NULL)
 			{
 				aiUnitAIVal[UNITAI_WORKER_SEA] += AI_neededSeaWorkers();
 
-				if ((GET_PLAYER(getOwnerINLINE()).getNumCities() > 3) || (area()->getNumUnownedTiles() < 10))
+				if ((GET_PLAYER(getOwner()).getNumCities() > 3) || (area()->getNumUnownedTiles() < 10))
 				{
 					if (bPrimaryArea)
 					{
-						aiUnitAIVal[UNITAI_EXPLORE_SEA] += GET_PLAYER(getOwnerINLINE()).AI_neededExplorers(pWaterArea);
+						aiUnitAIVal[UNITAI_EXPLORE_SEA] += GET_PLAYER(getOwner()).AI_neededExplorers(pWaterArea);
 					}
 
-					if (bPrimaryArea && (GET_PLAYER(getOwnerINLINE()).findBestFoundValue() > 0) && (pWaterArea->getNumTiles() > 300))
+					if (bPrimaryArea && (GET_PLAYER(getOwner()).findBestFoundValue() > 0) && (pWaterArea->getNumTiles() > 300))
 					{
 						aiUnitAIVal[UNITAI_SETTLER_SEA]++;
 					}
 
-					if (bPrimaryArea && (GET_PLAYER(getOwnerINLINE()).AI_totalAreaUnitAIs(area(), UNITAI_MISSIONARY) > 0) && (pWaterArea->getNumTiles() > 400))
+					if (bPrimaryArea && (GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(area(), UNITAI_MISSIONARY) > 0) && (pWaterArea->getNumTiles() > 400))
 					{
 						aiUnitAIVal[UNITAI_MISSIONARY_SEA]++;
 					}
 
-					if (bPrimaryArea && (GET_PLAYER(getOwnerINLINE()).AI_totalAreaUnitAIs(area(), UNITAI_SPY) > 0) && (pWaterArea->getNumTiles() > 500))
+					if (bPrimaryArea && (GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(area(), UNITAI_SPY) > 0) && (pWaterArea->getNumTiles() > 500))
 					{
 						aiUnitAIVal[UNITAI_SPY_SEA]++;
 					}
@@ -4571,7 +4571,7 @@ UnitTypes CvCityAI::AI_bestUnit(int& iBestUnitValue, int iNumSelectableTypes, Un
 					{
 						aiUnitAIVal[UNITAI_ATTACK_SEA] += std::min((pWaterArea->getNumTiles() / 150), ((((iCoastalCities * 2) + (iMilitaryWeight / 9)) / ((bAssault) ? 4 : 6)) + ((bPrimaryArea) ? 1 : 0)));
 						aiUnitAIVal[UNITAI_RESERVE_SEA] += std::min((pWaterArea->getNumTiles() / 200), ((((iCoastalCities * 2) + (iMilitaryWeight / 7)) / 5) + ((bPrimaryArea) ? 1 : 0)));
-						aiUnitAIVal[UNITAI_ESCORT_SEA] += (GET_PLAYER(getOwnerINLINE()).AI_totalWaterAreaUnitAIs(pWaterArea, UNITAI_ASSAULT_SEA) + (GET_PLAYER(getOwnerINLINE()).AI_totalWaterAreaUnitAIs(pWaterArea, UNITAI_CARRIER_SEA) * 2));
+						aiUnitAIVal[UNITAI_ESCORT_SEA] += (GET_PLAYER(getOwner()).AI_totalWaterAreaUnitAIs(pWaterArea, UNITAI_ASSAULT_SEA) + (GET_PLAYER(getOwner()).AI_totalWaterAreaUnitAIs(pWaterArea, UNITAI_CARRIER_SEA) * 2));
 						aiUnitAIVal[UNITAI_ASSAULT_SEA] += std::min((pWaterArea->getNumTiles() / 250), ((((iCoastalCities * 2) + (iMilitaryWeight / 6)) / ((bAssault) ? 5 : 8)) + ((bPrimaryArea) ? 1 : 0)));
 						aiUnitAIVal[UNITAI_CARRIER_SEA] += std::min((pWaterArea->getNumTiles() / 350), ((((iCoastalCities * 2) + (iMilitaryWeight / 8)) / 7) + ((bPrimaryArea) ? 1 : 0)));
 						aiUnitAIVal[UNITAI_MISSILE_CARRIER_SEA] += std::min((pWaterArea->getNumTiles() / 350), ((((iCoastalCities * 2) + (iMilitaryWeight / 8)) / 7) + ((bPrimaryArea) ? 1 : 0)));
@@ -4581,7 +4581,7 @@ UnitTypes CvCityAI::AI_bestUnit(int& iBestUnitValue, int iNumSelectableTypes, Un
 
 			if ((iHasMetCount > 0) && bWarPossible)
 			{
-				if (bLandWar || bAssault || !bFinancialTrouble || (GET_PLAYER(getOwnerINLINE()).calculateUnitCost() == 0))
+				if (bLandWar || bAssault || !bFinancialTrouble || (GET_PLAYER(getOwner()).calculateUnitCost() == 0))
 				{
 					aiUnitAIVal[UNITAI_ATTACK] += ((iMilitaryWeight / ((bLandWar || bAssault) ? 9 : 16)) + ((bPrimaryArea && !bAreaAlone) ? 1 : 0));
 					aiUnitAIVal[UNITAI_ATTACK_CITY] += ((iMilitaryWeight / ((bLandWar || bAssault) ? 7 : 15)) + ((bPrimaryArea && !bAreaAlone) ? 1 : 0));
@@ -4591,11 +4591,11 @@ UnitTypes CvCityAI::AI_bestUnit(int& iBestUnitValue, int iNumSelectableTypes, Un
 					aiUnitAIVal[UNITAI_COUNTER] += ((iMilitaryWeight / ((bLandWar || bAssault) ? 9 : 16)) + ((bPrimaryArea && !bAreaAlone) ? 1 : 0));
 					aiUnitAIVal[UNITAI_PARADROP] += ((iMilitaryWeight / ((bLandWar || bAssault) ? 4 : 8)) + ((bPrimaryArea && !bAreaAlone) ? 1 : 0));
 
-					aiUnitAIVal[UNITAI_ATTACK_AIR] += (GET_PLAYER(getOwnerINLINE()).getNumCities() + 1);
+					aiUnitAIVal[UNITAI_ATTACK_AIR] += (GET_PLAYER(getOwner()).getNumCities() + 1);
 
 					if (pWaterArea != NULL)
 					{
-						if ((GET_PLAYER(getOwnerINLINE()).getNumCities() > 3) || (area()->getNumUnownedTiles() < 10))
+						if ((GET_PLAYER(getOwner()).getNumCities() > 3) || (area()->getNumUnownedTiles() < 10))
 						{
 							aiUnitAIVal[UNITAI_ATTACK_SEA] += std::min((pWaterArea->getNumTiles() / 100), ((((iCoastalCities * 2) + (iMilitaryWeight / 10)) / ((bAssault) ? 5 : 7)) + ((bPrimaryArea) ? 1 : 0)));
 							aiUnitAIVal[UNITAI_RESERVE_SEA] += std::min((pWaterArea->getNumTiles() / 150), ((((iCoastalCities * 2) + (iMilitaryWeight / 11)) / 8) + ((bPrimaryArea) ? 1 : 0)));
@@ -4608,20 +4608,20 @@ UnitTypes CvCityAI::AI_bestUnit(int& iBestUnitValue, int iNumSelectableTypes, Un
 		// XXX this should account for air and heli units too...
 		for (int iI = 0; iI < NUM_UNITAI_TYPES; iI++)
 		{
-			if (GET_PLAYER(getOwnerINLINE()).AI_unitAIDomainType((UnitAITypes)iI) == DOMAIN_SEA)
+			if (GET_PLAYER(getOwner()).AI_unitAIDomainType((UnitAITypes)iI) == DOMAIN_SEA)
 			{
 				if (pWaterArea != NULL)
 				{
-					aiUnitAIVal[iI] -= GET_PLAYER(getOwnerINLINE()).AI_totalWaterAreaUnitAIs(pWaterArea, ((UnitAITypes)iI));
+					aiUnitAIVal[iI] -= GET_PLAYER(getOwner()).AI_totalWaterAreaUnitAIs(pWaterArea, ((UnitAITypes)iI));
 				}
 			}
-			else if ((GET_PLAYER(getOwnerINLINE()).AI_unitAIDomainType((UnitAITypes)iI) == DOMAIN_AIR) || (iI == UNITAI_ICBM))
+			else if ((GET_PLAYER(getOwner()).AI_unitAIDomainType((UnitAITypes)iI) == DOMAIN_AIR) || (iI == UNITAI_ICBM))
 			{
-				aiUnitAIVal[iI] -= GET_PLAYER(getOwnerINLINE()).AI_totalUnitAIs((UnitAITypes)iI);
+				aiUnitAIVal[iI] -= GET_PLAYER(getOwner()).AI_totalUnitAIs((UnitAITypes)iI);
 			}
 			else
 			{
-				aiUnitAIVal[iI] -= GET_PLAYER(getOwnerINLINE()).AI_totalAreaUnitAIs(area(), ((UnitAITypes)iI));
+				aiUnitAIVal[iI] -= GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(area(), ((UnitAITypes)iI));
 			}
 		}
 
@@ -4701,7 +4701,7 @@ UnitTypes CvCityAI::AI_bestUnit(int& iBestUnitValue, int iNumSelectableTypes, Un
 					}
 					else
 					{
-						aiUnitAIVal[iI] += GC.getGameINLINE().getSorenRandNum(iMilitaryWeight, "AI Best UnitAI");
+						aiUnitAIVal[iI] += GC.getGame().getSorenRandNum(iMilitaryWeight, "AI Best UnitAI");
 					}
 				}
 
@@ -4784,7 +4784,7 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 		// BBAI NOTE: This is where small city worker and settler production is blocked
 		// TB Interpret Note: bGrowMore must be FALSE for cities to queue settlers!
 		// This was basically saying that if the city has more population than improved tiles then it won't build settlers!
-		if (GET_PLAYER(getOwnerINLINE()).getNumCities() <= 2 || isHominid())
+		if (GET_PLAYER(getOwner()).getNumCities() <= 2 || isHominid())
 		{
 			/* original bts code
 			bGrowMore = ((getPopulation() < 3) && (AI_countGoodTiles(true, false, 100) >= getPopulation())); */
@@ -4862,7 +4862,7 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 					{
 						if (AI_meetsUnitSelectionCriteria(eLoopUnit, &tempCriteria) && canTrain(eLoopUnit))
 						{
-							iValue = GET_PLAYER(getOwnerINLINE()).AI_unitValue(eLoopUnit, eUnitAI, area(), &tempCriteria);
+							iValue = GET_PLAYER(getOwner()).AI_unitValue(eLoopUnit, eUnitAI, area(), &tempCriteria);
 
 							FAssert((MAX_INT / 100) > iValue);
 							if (iValue > (MAX_INT/100))
@@ -4959,7 +4959,7 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 								}
 								else
 								{
-									iValue *= (GC.getGameINLINE().getSorenRandNum(50, "AI Best Unit") + 100);
+									iValue *= (GC.getGame().getSorenRandNum(50, "AI Best Unit") + 100);
 									iValue /= 100;
 								}
 							}
@@ -4982,8 +4982,8 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 							//	iValue += getUnitProduction(eLoopUnit);
 							//}
 
-							//iValue *= (GET_PLAYER(getOwnerINLINE()).getNumCities() * 2);
-							//iValue /= std::max(1,GET_PLAYER(getOwnerINLINE()).getUnitClassCountPlusMaking((UnitClassTypes)iI) + GET_PLAYER(getOwnerINLINE()).getNumCities()+1);
+							//iValue *= (GET_PLAYER(getOwner()).getNumCities() * 2);
+							//iValue /= std::max(1,GET_PLAYER(getOwner()).getUnitClassCountPlusMaking((UnitClassTypes)iI) + GET_PLAYER(getOwner()).getNumCities()+1);
 
 							bool bIsSuicide = GC.getUnitInfo(eLoopUnit).isSuicide();
 
@@ -5062,7 +5062,7 @@ std::vector<CvCity::ScoredBuilding> CvCityAI::AI_bestBuildingsThreshold(int iFoc
 	CvCivilizationInfo& civ = GC.getCivilizationInfo(getCivilizationType());
 	for (int idx = 0; idx < GC.getNumBuildingClassInfos(); ++idx)
 	{
-		if (!(GET_PLAYER(getOwnerINLINE()).isBuildingClassMaxedOut(((BuildingClassTypes)idx), GC.getBuildingClassInfo((BuildingClassTypes)idx).getExtraPlayerInstances())))
+		if (!(GET_PLAYER(getOwner()).isBuildingClassMaxedOut(((BuildingClassTypes)idx), GC.getBuildingClassInfo((BuildingClassTypes)idx).getExtraPlayerInstances())))
 		{
 			BuildingTypes building = ((BuildingTypes)(civ.getCivilizationBuildings(idx)));
 			if (NO_BUILDING != building && canConstruct(building))
@@ -5122,7 +5122,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 
 	// A couple of shortcuts to make the code more legible (probably the optimier inlines them all but better safe than sorry)
 	CvCivilizationInfo& civInfo = GC.getCivilizationInfo(getCivilizationType());
-	CvPlayerAI& player = GET_PLAYER(getOwnerINLINE());
+	CvPlayerAI& player = GET_PLAYER(getOwner());
 
 	bool bAreaAlone = player.AI_isAreaAlone(area());
 	int iProductionRank = findYieldRateRank(YIELD_PRODUCTION);
@@ -5254,7 +5254,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 					// Score is weighted by the number of cities that don't have the free building
 					int weighting = player.getNumCities() - player.getBuildingClassCountPlusMaking((BuildingClassTypes)buildingInfo.getFreeAreaBuildingClass());
 					// Scaled by the ratio of cities in the area / total, giving a guess as to how important this area is in general
-					weighting = (100 * weighting * area()->getCitiesPerPlayer(getOwnerINLINE())) / player.getNumCities();
+					weighting = (100 * weighting * area()->getCitiesPerPlayer(getOwner())) / player.getNumCities();
 					// If we have none of the free buildings at all then also increase the score weighting
 					if (getNumBuilding(eFreeAreaBuilding) == 0)
 					{
@@ -5281,7 +5281,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 					int wonderScore = bAsync ?
 						GC.getASyncRand().get(player.getWonderConstructRand(), "Wonder Construction Rand ASYNC")
 						:
-						GC.getGameINLINE().getSorenRandNum(player.getWonderConstructRand(), "Wonder Construction Rand");
+						GC.getGame().getSorenRandNum(player.getWonderConstructRand(), "Wonder Construction Rand");
 
 					// We particularly want to build the wonder if we are alone in an area.
 					// Probably because aren't as worried about producing combat units?
@@ -5296,7 +5296,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 				iValue *= bAsync ?
 					(GC.getASyncRand().get(25, "AI Best Building ASYNC") + 100)
 					:
-					(GC.getGameINLINE().getSorenRandNum(25, "AI Best Building") + 100);
+					(GC.getGame().getSorenRandNum(25, "AI Best Building") + 100);
 				iValue /= 100;
 
 				// Add on how much this building is already constructed (could be partially constructed already)
@@ -5309,7 +5309,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 				if (
 					(iMaxTurns <= 0)
 					||
-					(iTurnsLeft <= GC.getGameINLINE().AI_turnsPercent(iMaxTurns, GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getConstructPercent()))
+					(iTurnsLeft <= GC.getGame().AI_turnsPercent(iMaxTurns, GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent()))
 					||
 					AI_canRushBuildingConstruction(building)
 					)
@@ -5414,7 +5414,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 	MEMORY_TRACK();
 
-	CvPlayerAI& kOwner = GET_PLAYER(getOwnerINLINE());
+	CvPlayerAI& kOwner = GET_PLAYER(getOwner());
 	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 	BuildingClassTypes eBuildingClass = (BuildingClassTypes) kBuilding.getBuildingClassType();
 	int iLimitedWonderLimit = limitedWonderClassLimit(eBuildingClass);
@@ -5449,7 +5449,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 		iHealthModifier = 0;
 	}
 
-	int iGoldValueAssessmentModifier = GET_PLAYER(getOwnerINLINE()).AI_goldValueAssessmentModifier();
+	int iGoldValueAssessmentModifier = GET_PLAYER(getOwner()).AI_goldValueAssessmentModifier();
 
 	bool bProvidesPower = (kBuilding.isPower() || ((kBuilding.getPowerBonus() != NO_BONUS) && hasBonus((BonusTypes)(kBuilding.getPowerBonus()))) || kBuilding.isAreaCleanPower());
 /************************************************************************************************/
@@ -5515,7 +5515,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 	int iTotalPopulation = kOwner.getTotalPopulation();
 	int iNumCities = kOwner.getNumCities();
-	int iNumCitiesInArea = area()->getCitiesPerPlayer(getOwnerINLINE());
+	int iNumCitiesInArea = area()->getCitiesPerPlayer(getOwner());
 
 	int aiYieldRank[NUM_YIELD_TYPES];
 	for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
@@ -5545,20 +5545,20 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 	bool bIsHighProductionCity = (aiYieldRank[YIELD_PRODUCTION] <= std::max(3, (iNumCities / 2)));
 
 	int iCultureRank = findCommerceRateRank(COMMERCE_CULTURE);
-	int iCulturalVictoryNumCultureCities = GC.getGameINLINE().culturalVictoryNumCultureCities();
+	int iCulturalVictoryNumCultureCities = GC.getGame().culturalVictoryNumCultureCities();
 
-	bool bFinancialTrouble = GET_PLAYER(getOwnerINLINE()).AI_isFinancialTrouble();
+	bool bFinancialTrouble = GET_PLAYER(getOwner()).AI_isFinancialTrouble();
 
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      03/08/10                                jdog5000      */
 /*                                                                                              */
 /* Victory Strategy AI                                                                          */
 /************************************************************************************************/
-	bool bCulturalVictory1 = GET_PLAYER(getOwnerINLINE()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE1);
-	bool bCulturalVictory2 = GET_PLAYER(getOwnerINLINE()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2);
-	bool bCulturalVictory3 = GET_PLAYER(getOwnerINLINE()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3);
+	bool bCulturalVictory1 = GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE1);
+	bool bCulturalVictory2 = GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2);
+	bool bCulturalVictory3 = GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3);
 
-	bool bSpaceVictory1 = GET_PLAYER(getOwnerINLINE()).AI_isDoVictoryStrategy(AI_VICTORY_SPACE1);
+	bool bSpaceVictory1 = GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_SPACE1);
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
@@ -5616,11 +5616,11 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 			CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo(eNewSpecialist);
 			for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 			{
-				aiFreeSpecialistYield[iJ] += GET_PLAYER(getOwnerINLINE()).specialistYield(eNewSpecialist, (YieldTypes)iJ);
+				aiFreeSpecialistYield[iJ] += GET_PLAYER(getOwner()).specialistYield(eNewSpecialist, (YieldTypes)iJ);
 			}
 			for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 			{
-				aiFreeSpecialistCommerce[iJ] += GET_PLAYER(getOwnerINLINE()).specialistCommerce(eNewSpecialist, (CommerceTypes)iJ);
+				aiFreeSpecialistCommerce[iJ] += GET_PLAYER(getOwner()).specialistCommerce(eNewSpecialist, (CommerceTypes)iJ);
 			}
 			iSpecialistGreatPeopleRate += kSpecialist.getGreatPeopleRateChange();
 			iSpecialistExtraHealth += kSpecialist.getHealthPercent();
@@ -5633,7 +5633,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 	/************************************************************************************************/
 	/* Afforess	                     END                                                            */
 	/************************************************************************************************/
-		bool bCanPopRush = GET_PLAYER(getOwnerINLINE()).canPopRush();
+		bool bCanPopRush = GET_PLAYER(getOwner()).canPopRush();
 
 		bool bForeignTrade = false;
 		int iNumTradeRoutes = getTradeRoutes();
@@ -5644,7 +5644,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 			CvCity* pTradeCity = getTradeCity(iI);
 			if (NULL != pTradeCity)
 			{
-				if (GET_PLAYER(pTradeCity->getOwnerINLINE()).getTeam() != getTeam() || pTradeCity->area() != area())
+				if (GET_PLAYER(pTradeCity->getOwner()).getTeam() != getTeam() || pTradeCity->area() != area())
 				{
 					bForeignTrade = true;
 					break;
@@ -5727,7 +5727,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 					if (!bAreaAlone)
 					{
-						if ((GC.getGameINLINE().getBestLandUnit() == NO_UNIT) || !(GC.getUnitInfo(GC.getGameINLINE().getBestLandUnit()).isIgnoreBuildingDefense()))
+						if ((GC.getGame().getBestLandUnit() == NO_UNIT) || !(GC.getUnitInfo(GC.getGame().getBestLandUnit()).isIgnoreBuildingDefense()))
 						{
 							iValue += (std::max(0, std::min(((kBuilding.getDefenseModifier() + getBuildingDefense()) - getNaturalDefense() - 10), kBuilding.getDefenseModifier())) / 4);
 
@@ -5741,7 +5741,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						}
 
 
-						if (!GC.getGameINLINE().isOption(GAMEOPTION_NO_ZOC))
+						if (!GC.getGame().isOption(GAMEOPTION_NO_ZOC))
 						{
 							iValue += kBuilding.isZoneOfControl() ? 50 : 0;
 						}
@@ -5786,11 +5786,11 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 						iValue += kBuilding.getBombardDefenseModifier() / 4;
 
-						if (GC.getGameINLINE().isOption(GAMEOPTION_SAD))
+						if (GC.getGame().isOption(GAMEOPTION_SAD))
 						{
 							iValue += kBuilding.getLocalDynamicDefense() / 2;
 						}
-						if (GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+						if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 						{
 							iValue += kBuilding.getFrontSupportPercentModifier() / 4;
 							iValue += kBuilding.getShortRangeSupportPercentModifier() / 4;
@@ -5835,11 +5835,11 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 					iValue += kBuilding.getAirlift() * 25;
 
-					if (kBuilding.isAreaBorderObstacle() && !GC.getGameINLINE().isOption(GAMEOPTION_NO_BARBARIANS))
+					if (kBuilding.isAreaBorderObstacle() && !GC.getGame().isOption(GAMEOPTION_NO_BARBARIANS))
 					{
 						int iTempValue = iNumCitiesInArea*3/2;
 						//The great wall is much more valuable with more barbarian activity.
-						if (GC.getGameINLINE().isOption(GAMEOPTION_RAGING_BARBARIANS))
+						if (GC.getGame().isOption(GAMEOPTION_RAGING_BARBARIANS))
 							iTempValue *=2;
 						iValue += iTempValue;
 					}
@@ -5984,7 +5984,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 	/*                                                                                              */
 	/*                                                                                              */
 	/************************************************************************************************/
-					if (!GC.getGameINLINE().isOption(GAMEOPTION_NO_REVOLUTION))
+					if (!GC.getGame().isOption(GAMEOPTION_NO_REVOLUTION))
 					{
 						if (kBuilding.getRevIdxLocal() != 0)
 						{
@@ -6003,16 +6003,16 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						}
 						if (kBuilding.getRevIdxNational() != 0)
 						{
-							iValue -= (8 * GET_PLAYER(getOwnerINLINE()).getNumCities()) * kBuilding.getRevIdxNational();
+							iValue -= (8 * GET_PLAYER(getOwner()).getNumCities()) * kBuilding.getRevIdxNational();
 						}
 						if (kBuilding.getRevIdxDistanceModifier() != 0)
 						{
 							if (!isCapital())
 							{
-								CvCity* pCapital = GET_PLAYER(getOwnerINLINE()).getCapitalCity();
+								CvCity* pCapital = GET_PLAYER(getOwner()).getCapitalCity();
 								if (pCapital != NULL)
 								{
-									int iCapitalDistance = ::plotDistance(getX_INLINE(), getY_INLINE(), pCapital->getX_INLINE(), pCapital->getY_INLINE());
+									int iCapitalDistance = ::plotDistance(getX(), getY(), pCapital->getX(), pCapital->getY());
 									int iOldCapitalDistance = iCapitalDistance;
 									iCapitalDistance *= 100 + kBuilding.getRevIdxDistanceModifier();
 									iCapitalDistance /= 100;
@@ -6436,7 +6436,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					{
 						if (iI != GC.getDefineINT("DEFAULT_SPECIALIST"))
 						{
-							bool bUnlimited = (GET_PLAYER(getOwnerINLINE()).isSpecialistValid((SpecialistTypes)iI));
+							bool bUnlimited = (GET_PLAYER(getOwner()).isSpecialistValid((SpecialistTypes)iI));
 							int iRunnable = (getMaxSpecialistCount((SpecialistTypes)iI) > 0);
 
 							if (bUnlimited || (iRunnable > 0))
@@ -6569,7 +6569,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					if (kBuilding.isAreaCleanPower() && !(area()->isCleanPower(getTeam())))
 					{
 						int iLoop;
-						for( CvCity* pLoopCity = GET_PLAYER(getOwnerINLINE()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwnerINLINE()).nextCity(&iLoop) )
+						for( CvCity* pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop) )
 						{
 							if( pLoopCity->area() == area() )
 							{
@@ -6593,11 +6593,11 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 					if (kBuilding.isAreaBorderObstacle() && !(area()->isBorderObstacle(getTeam())))
 					{
-						if( !GC.getGameINLINE().isOption(GAMEOPTION_NO_BARBARIANS) )
+						if( !GC.getGame().isOption(GAMEOPTION_NO_BARBARIANS) )
 						{
 							iValue += (iNumCitiesInArea);
 
-							if(GC.getGameINLINE().isOption(GAMEOPTION_RAGING_BARBARIANS))
+							if(GC.getGame().isOption(GAMEOPTION_RAGING_BARBARIANS))
 							{
 								iValue += (iNumCitiesInArea);
 							}
@@ -6795,7 +6795,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						int iFoodPerTurn = foodDifference(false);
 						int iFoodToGrow = growthThreshold();
 						int	iGrowthTurns = iFoodToGrow/std::max(1,iFoodPerTurn);
-						int	iValueMultiplier = (400 * iNumCities * iGrowthTurns)/(20*GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getGrowthPercent());
+						int	iValueMultiplier = (400 * iNumCities * iGrowthTurns)/(20*GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getGrowthPercent());
 
 						iValue += (kBuilding.getGlobalPopulationChange() * iValueMultiplier);
 					}
@@ -6841,9 +6841,9 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						{
 							if (GET_TEAM((TeamTypes)iI).isAlive())
 							{
-								if (!GET_TEAM(GET_PLAYER(getOwnerINLINE()).getTeam()).isVassal((TeamTypes)iI))
+								if (!GET_TEAM(GET_PLAYER(getOwner()).getTeam()).isVassal((TeamTypes)iI))
 								{
-									if (!GET_TEAM(GET_PLAYER(getOwnerINLINE()).getTeam()).isOpenBorders((TeamTypes)iI))
+									if (!GET_TEAM(GET_PLAYER(getOwner()).getTeam()).isOpenBorders((TeamTypes)iI))
 									{
 										forcedTradeRoutesValue += GET_TEAM((TeamTypes)iI).getNumCities() * 2;
 									}
@@ -6867,7 +6867,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 								if (eLoopUnit != NO_UNIT && canTrain(eLoopUnit))
 								{
 									UnitAITypes eUnitAI = (UnitAITypes) GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType();
-									//unitProductionModifierValue += GET_PLAYER(getOwnerINLINE()).AI_unitValue(eLoopUnit, eUnitAI, area()) * iModifier / 100;
+									//unitProductionModifierValue += GET_PLAYER(getOwner()).AI_unitValue(eLoopUnit, eUnitAI, area()) * iModifier / 100;
 
 									UnitTypes eBestUnit = kOwner.bestBuildableUnitForAIType((DomainTypes)GC.getUnitInfo(eLoopUnit).getDomainType(), eUnitAI);
 
@@ -6919,7 +6919,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						int iLoop;
 						int iCityCount = 0;
 						int globalGrowthValue = 0;
-						for (CvCity* pLoopCity = GET_PLAYER(getOwnerINLINE()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwnerINLINE()).nextCity(&iLoop))
+						for (CvCity* pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
 						{
 							int iCityHappy = pLoopCity->happyLevel() - pLoopCity->unhappyLevel();
 							int iCurrentFoodToGrow = pLoopCity->growthThreshold();
@@ -6997,7 +6997,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 											int iLoop;
 											int iCount = 0;
 
-											for (CvCity* pLoopCity = GET_PLAYER(getOwnerINLINE()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwnerINLINE()).nextCity(&iLoop))
+											for (CvCity* pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
 											{
 												if ( pLoopCity->getNumBuilding(eLoopBuilding) == 0 )
 												{
@@ -7026,7 +7026,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						{
 							if (iI != CITY_HOME_PLOT)
 							{
-								pLoopPlot = plotCity(getX_INLINE(), getY_INLINE(), iI);
+								pLoopPlot = plotCity(getX(), getY(), iI);
 								if (pLoopPlot != NULL &&
 									!pLoopPlot->isWater() &&
 									!pLoopPlot->isFreshWater() &&
@@ -7080,7 +7080,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 									//this gives a very large extra value if the religion is (nearly) unique
 									//to no extra value for a fully spread religion.
 									//I'm torn between huge boost and enough to bias towards the best monastery type.
-									int iReligionCount = GET_PLAYER(getOwnerINLINE()).getHasReligionCount(eReligion);
+									int iReligionCount = GET_PLAYER(getOwner()).getHasReligionCount(eReligion);
 									religiousBuildingValue += (100 * (iNumCities - iReligionCount)) / (iNumCities * (iReligionCount + 1));
 								}
 							}
@@ -7160,7 +7160,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 									if ((iPlayer != getOwner()) && kLoopPlayer.isAlive())
 									{
 										iPlayerCount++;
-										if (GET_PLAYER(getOwnerINLINE()).getStateReligion() == kLoopPlayer.getStateReligion())
+										if (GET_PLAYER(getOwner()).getStateReligion() == kLoopPlayer.getStateReligion())
 										{
 											iShareReligionCount++;
 										}
@@ -7173,7 +7173,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 								votingSourceValue += 100;
 							}
 
-							iValue += (votingSourceValue * (GET_PLAYER(getOwnerINLINE()).AI_isDoVictoryStrategy(AI_VICTORY_DIPLOMACY1) ? 5 : 1));
+							iValue += (votingSourceValue * (GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_DIPLOMACY1) ? 5 : 1));
 						}
 	/************************************************************************************************/
 	/* BETTER_BTS_AI_MOD                       END                                                  */
@@ -7404,7 +7404,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						iValue += getBuildingCommerceValue(eBuilding, COMMERCE_CULTURE, aiFreeSpecialistYield, aiFreeSpecialistCommerce, aiBaseCommerceRate, aiPlayerCommerceRate)/5;
 					}
 
-					if (iFocusFlags & BUILDINGFOCUS_ESPIONAGE || (GC.getGameINLINE().isOption(GAMEOPTION_NO_ESPIONAGE) && (iFocusFlags & BUILDINGFOCUS_CULTURE)))
+					if (iFocusFlags & BUILDINGFOCUS_ESPIONAGE || (GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE) && (iFocusFlags & BUILDINGFOCUS_CULTURE)))
 					{
 						iValue += getBuildingCommerceValue(eBuilding, COMMERCE_ESPIONAGE, aiFreeSpecialistYield, aiFreeSpecialistCommerce, aiBaseCommerceRate, aiPlayerCommerceRate);
 					}
@@ -7638,7 +7638,7 @@ ProjectTypes CvCityAI::AI_bestProject()
 				  (GC.getProjectInfo((ProjectTypes)iI).getEveryoneSpecialBuilding() != NO_SPECIALBUILDING) ||
 				  GC.getProjectInfo((ProjectTypes)iI).isAllowsNukes())
 			{
-				if (GC.getGameINLINE().getSorenRandNum(100, "Project Everyone") == 0)
+				if (GC.getGame().getSorenRandNum(100, "Project Everyone") == 0)
 				{
 					iValue++;
 				}
@@ -7650,9 +7650,9 @@ ProjectTypes CvCityAI::AI_bestProject()
 
 				int iTurnsLeft = getProductionTurnsLeft(((ProjectTypes)iI), 0);
 
-				if ((iTurnsLeft <= GC.getGameINLINE().AI_turnsPercent(10, GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getCreatePercent())) || !(GET_TEAM(getTeam()).isHuman()))
+				if ((iTurnsLeft <= GC.getGame().AI_turnsPercent(10, GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getCreatePercent())) || !(GET_TEAM(getTeam()).isHuman()))
 				{
-					if ((iTurnsLeft <= GC.getGameINLINE().AI_turnsPercent(20, GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getCreatePercent())) || (iProductionRank <= std::max(3, (GET_PLAYER(getOwnerINLINE()).getNumCities() / 2))))
+					if ((iTurnsLeft <= GC.getGame().AI_turnsPercent(20, GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getCreatePercent())) || (iProductionRank <= std::max(3, (GET_PLAYER(getOwner()).getNumCities() / 2))))
 					{
 						if (iProductionRank == 1)
 						{
@@ -7688,7 +7688,7 @@ int CvCityAI::AI_projectValue(ProjectTypes eProject)
 
 	if (GC.getProjectInfo(eProject).getNukeInterception() > 0)
 	{
-		if (GC.getGameINLINE().canTrainNukes())
+		if (GC.getGame().canTrainNukes())
 		{
 			iValue += (GC.getProjectInfo(eProject).getNukeInterception() / 10);
 		}
@@ -7704,7 +7704,7 @@ int CvCityAI::AI_projectValue(ProjectTypes eProject)
 
 	for (int iI = 0; iI < GC.getNumVictoryInfos(); iI++)
 	{
-		if (GC.getGameINLINE().isVictoryValid((VictoryTypes)iI))
+		if (GC.getGame().isVictoryValid((VictoryTypes)iI))
 		{
 			iValue += (std::max(0, (GC.getProjectInfo(eProject).getVictoryThreshold(iI) - GET_TEAM(getTeam()).getProjectCount(eProject))) * 20);
 		}
@@ -7721,7 +7721,7 @@ int CvCityAI::AI_projectValue(ProjectTypes eProject)
 /*                                                                                              */
 /************************************************************************************************/
 	CvProjectInfo& kProject = GC.getProjectInfo(eProject);	//New Project Valuations Begin
-	int iOurNumCities = GET_PLAYER(getOwnerINLINE()).getNumCities();
+	int iOurNumCities = GET_PLAYER(getOwner()).getNumCities();
 	int iOurHappy = kProject.getGlobalHappiness();
 	int iOurHealth = kProject.getGlobalHealth();
 	int iWorldHappy = kProject.getWorldHappiness();
@@ -7747,10 +7747,10 @@ int CvCityAI::AI_projectValue(ProjectTypes eProject)
 		iTempValue += 4 * iOurNumCities * iWorldHealth;
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
-			if (GET_PLAYER((PlayerTypes)iI).isAlive() && !GET_PLAYER((PlayerTypes)iI).isMinorCiv() && GET_PLAYER((PlayerTypes)iI).getID() != GET_PLAYER(getOwnerINLINE()).getID())
+			if (GET_PLAYER((PlayerTypes)iI).isAlive() && !GET_PLAYER((PlayerTypes)iI).isMinorCiv() && GET_PLAYER((PlayerTypes)iI).getID() != GET_PLAYER(getOwner()).getID())
 			{
 				int iNumCities = GET_PLAYER((PlayerTypes)iI).getNumCities();
-				int iAttitude = GET_PLAYER(getOwnerINLINE()).AI_getAttitude((PlayerTypes)iI);
+				int iAttitude = GET_PLAYER(getOwner()).AI_getAttitude((PlayerTypes)iI);
 				switch(iAttitude)
 				{
 					case ATTITUDE_FURIOUS:
@@ -7826,13 +7826,13 @@ int CvCityAI::AI_processValue(ProcessTypes eProcess, CommerceTypes eCommerceType
 
 	int iValue = 0;
 
-	if (GET_PLAYER(getOwnerINLINE()).AI_isFinancialTrouble())
+	if (GET_PLAYER(getOwner()).AI_isFinancialTrouble())
 	{
 		iValue += GC.getProcessInfo(eProcess).getProductionToCommerceModifier(COMMERCE_GOLD);
 	}
 
 	// if we own less than 50%, or we need to pop borders
-	if ((plot()->calculateCulturePercent(getOwnerINLINE()) < 50) || (getCultureLevel() <= (CultureLevelTypes) 1))
+	if ((plot()->calculateCulturePercent(getOwner()) < 50) || (getCultureLevel() <= (CultureLevelTypes) 1))
 	{
 		iValue += GC.getProcessInfo(eProcess).getProductionToCommerceModifier(COMMERCE_CULTURE);
 	}
@@ -7842,10 +7842,10 @@ int CvCityAI::AI_processValue(ProcessTypes eProcess, CommerceTypes eCommerceType
 /*                                                                                              */
 /* Cultural Victory AI                                                                          */
 /************************************************************************************************/
-	if ( GET_PLAYER(getOwnerINLINE()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3) )
+	if ( GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3) )
 	{
 		// Final city for cultural victory will build culture to speed up victory
-		if( findCommerceRateRank(COMMERCE_CULTURE) == GC.getGameINLINE().culturalVictoryNumCultureCities() )
+		if( findCommerceRateRank(COMMERCE_CULTURE) == GC.getGame().culturalVictoryNumCultureCities() )
 		{
 			iValue += 2*GC.getProcessInfo(eProcess).getProductionToCommerceModifier(COMMERCE_CULTURE);
 		}
@@ -7863,7 +7863,7 @@ int CvCityAI::AI_processValue(ProcessTypes eProcess, CommerceTypes eCommerceType
 			iTempValue *= 2;
 		}
 
-		iTempValue *= GET_PLAYER(getOwnerINLINE()).AI_commerceWeight(((CommerceTypes)iI), this);
+		iTempValue *= GET_PLAYER(getOwner()).AI_commerceWeight(((CommerceTypes)iI), this);
 
 		iTempValue /= 100;
 
@@ -7872,7 +7872,7 @@ int CvCityAI::AI_processValue(ProcessTypes eProcess, CommerceTypes eCommerceType
 /*                                                                                              */
 /* Gold AI                                                                                      */
 /************************************************************************************************/
-		iTempValue *= GET_PLAYER(getOwnerINLINE()).AI_averageCommerceExchange((CommerceTypes)iI);
+		iTempValue *= GET_PLAYER(getOwner()).AI_averageCommerceExchange((CommerceTypes)iI);
 
 		iTempValue /= 60;
 /************************************************************************************************/
@@ -7912,21 +7912,21 @@ bool CvCityAI::AI_finalProcessSelection()
 		{
 			ProcessTypes eProcess = ((ProcessTypes)iI);
 			int iValue = 1;
-			if (GET_PLAYER(getOwnerINLINE()).AI_isFinancialTrouble())
+			if (GET_PLAYER(getOwner()).AI_isFinancialTrouble())
 			{
 				iValue += GC.getProcessInfo(eProcess).getProductionToCommerceModifier(COMMERCE_GOLD);
 			}
 
 			// if we own less than 50%, or we need to pop borders
-			if ((plot()->calculateCulturePercent(getOwnerINLINE()) < 50) || (getCultureLevel() <= (CultureLevelTypes) 1))
+			if ((plot()->calculateCulturePercent(getOwner()) < 50) || (getCultureLevel() <= (CultureLevelTypes) 1))
 			{
 				iValue += GC.getProcessInfo(eProcess).getProductionToCommerceModifier(COMMERCE_CULTURE);
 			}
 
-			if ( GET_PLAYER(getOwnerINLINE()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3) )
+			if ( GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3) )
 			{
 				// Final city for cultural victory will build culture to speed up victory
-				if( findCommerceRateRank(COMMERCE_CULTURE) == GC.getGameINLINE().culturalVictoryNumCultureCities() )
+				if( findCommerceRateRank(COMMERCE_CULTURE) == GC.getGame().culturalVictoryNumCultureCities() )
 				{
 					iValue += 2*GC.getProcessInfo(eProcess).getProductionToCommerceModifier(COMMERCE_CULTURE);
 				}
@@ -7974,13 +7974,13 @@ int CvCityAI::AI_neededSeaWorkers()
 		return 0;
 	}
 
-	int iNeededSeaWorkers = GET_PLAYER(getOwnerINLINE()).countUnimprovedBonuses(pWaterArea);
+	int iNeededSeaWorkers = GET_PLAYER(getOwner()).countUnimprovedBonuses(pWaterArea);
 
 	// Check if second water area city can reach was any unimproved bonuses
 	pWaterArea = secondWaterArea();
 	if (pWaterArea != NULL)
 	{
-		iNeededSeaWorkers += GET_PLAYER(getOwnerINLINE()).countUnimprovedBonuses(pWaterArea);
+		iNeededSeaWorkers += GET_PLAYER(getOwner()).countUnimprovedBonuses(pWaterArea);
 	}
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
@@ -7997,14 +7997,14 @@ bool CvCityAI::AI_isDefended(int iExtra, bool bAllowAnyDefenders)
 	return getGarrisonStrength(bAllowAnyDefenders) + iExtra >= AI_neededDefenseStrength();
 	//	Note - the isDefended range check is slightly flawed since its possible for units 2 away to not actually
 	//	be able to get to the city (e.g. - over water) so this probably needs tweaking slightly
-	//return ((plot()->plotCount(PUF_canDefend /*PUF_canDefendGroupHead*/, -1, -1, getOwnerINLINE(), NO_TEAM, PUF_isCityAIType, -1, -1, iRange) + iExtra) >= AI_neededDefenders()); // XXX check for other team's units?
+	//return ((plot()->plotCount(PUF_canDefend /*PUF_canDefendGroupHead*/, -1, -1, getOwner(), NO_TEAM, PUF_isCityAIType, -1, -1, iRange) + iExtra) >= AI_neededDefenders()); // XXX check for other team's units?
 }
 
 bool CvCityAI::AI_isAdequateHappinessMilitary(int iExtra)
 {
 	PROFILE_FUNC();
 
-	return ((plot()->plotCount(PUF_isMilitaryHappiness, -1, -1, NULL, getOwnerINLINE(), NO_TEAM, PUF_isCityAIType) + iExtra) >= AI_neededHappinessDefenders()); // XXX check for other team's units?
+	return ((plot()->plotCount(PUF_isMilitaryHappiness, -1, -1, NULL, getOwner(), NO_TEAM, PUF_isCityAIType) + iExtra) >= AI_neededHappinessDefenders()); // XXX check for other team's units?
 }
 
 /********************************************************************************/
@@ -8017,7 +8017,7 @@ bool CvCityAI::AI_isAirDefended(int iExtra)
 {
 	PROFILE_FUNC();
 
-	return ((plot()->plotCount(PUF_canAirDefend, -1, -1, getOwnerINLINE(), NO_TEAM, PUF_isDomainType, DOMAIN_AIR) + iExtra) >= AI_neededAirDefenders()); // XXX check for other team's units?
+	return ((plot()->plotCount(PUF_canAirDefend, -1, -1, getOwner(), NO_TEAM, PUF_isDomainType, DOMAIN_AIR) + iExtra) >= AI_neededAirDefenders()); // XXX check for other team's units?
 }
 */
 // Function now answers question of whether city has enough ready air defense, no longer just counts fighters
@@ -8033,7 +8033,7 @@ bool CvCityAI::AI_isAirDefended(bool bCountLand, int iExtra)
 	{
 		CvUnit* pLoopUnit = *unitItr;
 
-		if (pLoopUnit->getOwnerINLINE() == getOwnerINLINE() &&
+		if (pLoopUnit->getOwner() == getOwner() &&
 			pLoopUnit->canAirDefend())
 		{
 			if (pLoopUnit->getDomainType() == DOMAIN_AIR)
@@ -8106,7 +8106,7 @@ int CvCityAI::AI_neededDefenders()
 
 	if (isHominid())
 	{
-		int iDefenders = GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getBarbarianInitialDefenders();
+		int iDefenders = GC.getHandicapInfo(GC.getGame().getHandicapType()).getBarbarianInitialDefenders();
 		iDefenders += ((getPopulation() + 2) / 7);
 		return std::max(1,iDefenders);
 	}
@@ -8187,14 +8187,14 @@ int CvCityAI::AI_neededDefenders()
 		}
 	}
 
-	if (GET_PLAYER(getOwnerINLINE()).AI_isDoStrategy(AI_STRATEGY_LAST_STAND))
+	if (GET_PLAYER(getOwner()).AI_isDoStrategy(AI_STRATEGY_LAST_STAND))
 	{
 		iDefenders += 20;
 	}
 
-	if( GET_PLAYER(getOwnerINLINE()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3) )
+	if( GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3) )
 	{
-		if( findCommerceRateRank(COMMERCE_CULTURE) <= GC.getGameINLINE().culturalVictoryNumCultureCities() )
+		if( findCommerceRateRank(COMMERCE_CULTURE) <= GC.getGame().culturalVictoryNumCultureCities() )
 		{
 			iDefenders += 4;
 
@@ -8205,7 +8205,7 @@ int CvCityAI::AI_neededDefenders()
 		}
 	}
 
-	if( GET_PLAYER(getOwnerINLINE()).AI_isDoVictoryStrategy(AI_VICTORY_SPACE3) )
+	if( GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_SPACE3) )
 	{
 		if( isCapital() || isProductionProject())
 		{
@@ -8217,7 +8217,7 @@ int CvCityAI::AI_neededDefenders()
 			}
 		}
 
-		if( isCapital() && GET_PLAYER(getOwnerINLINE()).AI_isDoVictoryStrategy(AI_VICTORY_SPACE4) )
+		if( isCapital() && GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_SPACE4) )
 		{
 			iDefenders += 6;
 		}
@@ -8227,7 +8227,7 @@ int CvCityAI::AI_neededDefenders()
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	if (!GC.getGameINLINE().isOption(GAMEOPTION_NO_REVOLUTION))
+	if (!GC.getGame().isOption(GAMEOPTION_NO_REVOLUTION))
 	{
 		int iRevIndex = getRevolutionIndex();
 		int iExtraRevDefenders = std::max(0, ((int)(std::pow((float)iRevIndex, 0.35f) - 6.5f)));
@@ -8240,18 +8240,18 @@ int CvCityAI::AI_neededDefenders()
 
 	int iTempDefenders = 0;
 	int iHappiness = happyLevel() - unhappyLevel(0);
-	if (GET_PLAYER(getOwnerINLINE()).getHappyPerMilitaryUnit() > 0)
+	if (GET_PLAYER(getOwner()).getHappyPerMilitaryUnit() > 0)
 	{
 		if (iHappiness < 0)
 		{
-			iTempDefenders -= GET_PLAYER(getOwnerINLINE()).getHappyPerMilitaryUnit() * iHappiness;
+			iTempDefenders -= GET_PLAYER(getOwner()).getHappyPerMilitaryUnit() * iHappiness;
 		}
 	}
-	else if (GET_PLAYER(getOwnerINLINE()).getHappyPerMilitaryUnit() < 0)
+	else if (GET_PLAYER(getOwner()).getHappyPerMilitaryUnit() < 0)
 	{
 		if (iHappiness < 0)
 		{
-			iTempDefenders -= GET_PLAYER(getOwnerINLINE()).getHappyPerMilitaryUnit() * iHappiness;
+			iTempDefenders -= GET_PLAYER(getOwner()).getHappyPerMilitaryUnit() * iHappiness;
 		}
 	}
 	iTempDefenders /= (1 + GET_TEAM(getTeam()).getAtWarCount(true));
@@ -8275,15 +8275,15 @@ int CvCityAI::AI_neededDefenders()
 int CvCityAI::AI_neededHappinessDefenders()
 {
 	int iResult = 0;
-	if (GET_PLAYER(getOwnerINLINE()).getHappyPerMilitaryUnit() > 0)
+	if (GET_PLAYER(getOwner()).getHappyPerMilitaryUnit() > 0)
 	{
-		int iCurrent = plot()->plotCount(PUF_isMilitaryHappiness, -1, -1, NULL, getOwnerINLINE(), NO_TEAM);
+		int iCurrent = plot()->plotCount(PUF_isMilitaryHappiness, -1, -1, NULL, getOwner(), NO_TEAM);
 		int iHappiness = happyLevel() - unhappyLevel(0);
-		int iBaseHappiness = iHappiness - GET_PLAYER(getOwnerINLINE()).getHappyPerMilitaryUnit() * iCurrent;
+		int iBaseHappiness = iHappiness - GET_PLAYER(getOwner()).getHappyPerMilitaryUnit() * iCurrent;
 
 		if (iBaseHappiness < 0)
 		{
-			iResult = -iBaseHappiness/GET_PLAYER(getOwnerINLINE()).getHappyPerMilitaryUnit();
+			iResult = -iBaseHappiness/GET_PLAYER(getOwner()).getHappyPerMilitaryUnit();
 		}
 	}
 
@@ -8295,14 +8295,14 @@ int CvCityAI::AI_minDefenders()
 	int iDefenders = 4;
 
 	//TB Option Control:
-	if (GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		iDefenders += 3;
 		//Intention is to drive the amount up to the amount needed to start merging/splitting to get at least one really tough defender.
 		//May slow the AI a bit and get them building a lot of units but try to attack them and see how far we get!
 	}
 
-	int iEra = GET_PLAYER(getOwnerINLINE()).getCurrentEra();
+	int iEra = GET_PLAYER(getOwner()).getCurrentEra();
 	if (iEra > 0)
 	{
 		iDefenders++;
@@ -8323,21 +8323,21 @@ int CvCityAI::getGarrisonStrength(bool bAllowAnyDefenders) const
 
 	//	Note - the range check is slightly flawed since its possible for units 2 away to not actually
 	//	be able to get to the city (e.g. - over water) so this probably needs tweaking slightly
-	return plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefend, -1, -1, getOwnerINLINE(), NO_TEAM, PUF_isCityGarrison, getID(), (int)bAllowAnyDefenders, 2);
+	return plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefend, -1, -1, getOwner(), NO_TEAM, PUF_isCityGarrison, getID(), (int)bAllowAnyDefenders, 2);
 }
 
 int CvCityAI::AI_neededDefenseStrength()
 {
 	//	For now we just use the old calculation for needed defenders (a count)
 	//	and multiply it by the base strength of the best defender we can currently build
-	return AI_neededDefenders() * GET_PLAYER(getOwnerINLINE()).strengthOfBestUnitAI(DOMAIN_LAND, UNITAI_CITY_DEFENSE);
+	return AI_neededDefenders() * GET_PLAYER(getOwner()).strengthOfBestUnitAI(DOMAIN_LAND, UNITAI_CITY_DEFENSE);
 }
 
 int CvCityAI::AI_minDefenseStrength()
 {
 	//	For now we just use the old calculation for needed defenders (a count)
 	//	and multiply it by the base strength of the best defender we can currently build
-	return AI_minDefenders() * GET_PLAYER(getOwnerINLINE()).strengthOfBestUnitAI(DOMAIN_LAND, UNITAI_CITY_DEFENSE);
+	return AI_minDefenders() * GET_PLAYER(getOwner()).strengthOfBestUnitAI(DOMAIN_LAND, UNITAI_CITY_DEFENSE);
 }
 
 int CvCityAI::AI_neededFloatingDefenders()
@@ -8351,9 +8351,9 @@ int CvCityAI::AI_neededFloatingDefenders()
 
 void CvCityAI::AI_updateNeededFloatingDefenders()
 {
-	int iFloatingDefenders = GET_PLAYER(getOwnerINLINE()).AI_getTotalFloatingDefendersNeeded(area());
+	int iFloatingDefenders = GET_PLAYER(getOwner()).AI_getTotalFloatingDefendersNeeded(area());
 
-	int iTotalThreat = std::max(1, GET_PLAYER(getOwnerINLINE()).AI_getTotalAreaCityThreat(area()));
+	int iTotalThreat = std::max(1, GET_PLAYER(getOwner()).AI_getTotalAreaCityThreat(area()));
 
 	int iThreatModifier = 0;
 
@@ -8385,7 +8385,7 @@ int CvCityAI::AI_neededAirDefenders()
 	{
 		for (int iDY = -(iRange); iDY <= iRange; iDY++)
 		{
-			CvPlot* pLoopPlot = plotXY(getX_INLINE(), getY_INLINE(), iDX, iDY);
+			CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
 
 			if ((pLoopPlot != NULL) && pLoopPlot->isOwned() && (pLoopPlot->getTeam() != getTeam()))
 			{
@@ -8444,16 +8444,16 @@ int CvCityAI::evaluateDanger()
 
 	noGrowthCriteria.m_bIgnoreGrowth = true;
 
-	UnitTypes eDummyUnit = GET_PLAYER(getOwnerINLINE()).bestBuildableUnitForAIType(DOMAIN_LAND, UNITAI_ATTACK, &noGrowthCriteria);
+	UnitTypes eDummyUnit = GET_PLAYER(getOwner()).bestBuildableUnitForAIType(DOMAIN_LAND, UNITAI_ATTACK, &noGrowthCriteria);
 
 	if ( eDummyUnit == NO_UNIT )
 	{
-		eDummyUnit = GET_PLAYER(getOwnerINLINE()).bestBuildableUnitForAIType(DOMAIN_LAND, UNITAI_CITY_DEFENSE, &noGrowthCriteria);
+		eDummyUnit = GET_PLAYER(getOwner()).bestBuildableUnitForAIType(DOMAIN_LAND, UNITAI_CITY_DEFENSE, &noGrowthCriteria);
 	}
 
 	if ( eDummyUnit != NO_UNIT )
 	{
-		CvUnit*				pTempUnit = GET_PLAYER(getOwnerINLINE()).getTempUnit(eDummyUnit, getX_INLINE(), getY_INLINE());
+		CvUnit*				pTempUnit = GET_PLAYER(getOwner()).getTempUnit(eDummyUnit, getX(), getY());
 		CvReachablePlotSet	plotSet(pTempUnit->getGroup(), 0, MAX_DANGER_EVALUATION_RANGE, false, 1);
 		int					iBorderDanger = 0;
 		//int					iGeneralDanger = 0;
@@ -8471,7 +8471,7 @@ int CvCityAI::evaluateDanger()
 			TeamTypes	ePlotTeam = pLoopPlot->getTeam();
 
 			// AIAndy: This sums up iGeneralDanger but never uses it. Looks incorrect for city danger evaluation.
-			//iGeneralDanger += pLoopPlot->getDangerCount(getOwnerINLINE());
+			//iGeneralDanger += pLoopPlot->getDangerCount(getOwner());
 
 			if ( ePlotTeam != getTeam() )
 			{
@@ -8493,7 +8493,7 @@ int CvCityAI::evaluateDanger()
 						int iTempBorderDanger;
 
 						//	Border with a player we are not at war with - weight by attitude
-						iTempBorderDanger = (OWNED_PLOT_NON_WAR_BASE_DANGER*getPlayerDangerPercentage(pLoopPlot->getOwnerINLINE(), iModifier)*iDistanceModifier[itr.stepDistance()-1])/100;
+						iTempBorderDanger = (OWNED_PLOT_NON_WAR_BASE_DANGER*getPlayerDangerPercentage(pLoopPlot->getOwner(), iModifier)*iDistanceModifier[itr.stepDistance()-1])/100;
 						iTempBorderDanger = (iTempBorderDanger*(100+iModifier))/100;
 
 						iBorderDanger += iTempBorderDanger;
@@ -8502,7 +8502,7 @@ int CvCityAI::evaluateDanger()
 			}
 		}
 
-		GET_PLAYER(getOwnerINLINE()).releaseTempUnit();
+		GET_PLAYER(getOwner()).releaseTempUnit();
 
 		return iBorderDanger/100;
 	}
@@ -8521,8 +8521,8 @@ bool CvCityAI::AI_isDanger() const
 /*                                                                                              */
 /* City AI, Efficiency                                                                          */
 /************************************************************************************************/
-	//return GET_PLAYER(getOwnerINLINE()).AI_getPlotDanger(plot(), 2, false);
-	return GET_PLAYER(getOwnerINLINE()).AI_getAnyPlotDanger(plot(), 2, false);
+	//return GET_PLAYER(getOwner()).AI_getPlotDanger(plot(), 2, false);
+	return GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot(), 2, false);
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
@@ -8602,9 +8602,9 @@ void CvCityAI::AI_updateRouteToCity() const
 		allAreaCitiesConnected = new stdext::hash_map<int,bool>();
 	}
 
-	if ( eCachedPlayer != getOwnerINLINE() )
+	if ( eCachedPlayer != getOwner() )
 	{
-		eCachedPlayer = getOwnerINLINE();
+		eCachedPlayer = getOwner();
 		allAreaCitiesConnected->clear();
 	}
 
@@ -8629,9 +8629,9 @@ void CvCityAI::AI_updateRouteToCity() const
 					{
 						if (pLoopCity->area() == area())
 						{
-							if (!(gDLL->getFAStarIFace()->GeneratePath(&GC.getRouteFinder(), getX_INLINE(), getY_INLINE(), pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE(), false, getOwnerINLINE(), true)))
+							if (!(gDLL->getFAStarIFace()->GeneratePath(&GC.getRouteFinder(), getX(), getY(), pLoopCity->getX(), pLoopCity->getY(), false, getOwner(), true)))
 							{
-								int iValue = plotDistance(getX_INLINE(), getY_INLINE(), pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE());
+								int iValue = plotDistance(getX(), getY(), pLoopCity->getX(), pLoopCity->getY());
 
 								if (iValue < iBestValue)
 								{
@@ -8766,14 +8766,14 @@ void CvCityAI::AI_setEmphasize(EmphasizeTypes eIndex, bool bNewValue)
 
 		AI_assignWorkingPlots();
 
-		if ((getOwnerINLINE() == GC.getGameINLINE().getActivePlayer()) && isCitySelected())
+		if ((getOwner() == GC.getGame().getActivePlayer()) && isCitySelected())
 		{
 			gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
 		}
 
 		//	If we're using AI govenors and not part way through a build reflect
 		//	the changes in a new production choice immediately
-		if (isHuman() && (!isProduction() || getProduction() == 0) && isProductionAutomated() &&	GET_PLAYER(getOwnerINLINE()).isOption(PLAYEROPTION_MODDER_3))
+		if (isHuman() && (!isProduction() || getProduction() == 0) && isProductionAutomated() &&	GET_PLAYER(getOwner()).isOption(PLAYEROPTION_MODDER_3))
 		{
 			AI_chooseProduction();
 		}
@@ -8792,7 +8792,7 @@ void CvCityAI::AI_setEmphasizeSpecialist(SpecialistTypes eIndex, bool bNewValue)
 
 		AI_assignWorkingPlots();
 
-		if ((getOwnerINLINE() == GC.getGameINLINE().getActivePlayer()) && isCitySelected())
+		if ((getOwner() == GC.getGame().getActivePlayer()) && isCitySelected())
 		{
 			gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
 		}
@@ -8827,13 +8827,13 @@ int CvCityAI::AI_totalBestBuildValue(CvArea* pArea)
 	{
 		if (iI != CITY_HOME_PLOT)
 		{
-			CvPlot* pLoopPlot = plotCity(getX_INLINE(), getY_INLINE(), iI);
+			CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
 
 			if (pLoopPlot != NULL)
 			{
 				if (pLoopPlot->area() == pArea)
 				{
-					if (pLoopPlot->getImprovementType() == NO_IMPROVEMENT || !(GET_PLAYER(getOwnerINLINE()).isOption(PLAYEROPTION_SAFE_AUTOMATION) && !(pLoopPlot->getImprovementType() == (GC.getDefineINT("RUINS_IMPROVEMENT")))))
+					if (pLoopPlot->getImprovementType() == NO_IMPROVEMENT || !(GET_PLAYER(getOwner()).isOption(PLAYEROPTION_SAFE_AUTOMATION) && !(pLoopPlot->getImprovementType() == (GC.getDefineINT("RUINS_IMPROVEMENT")))))
 					{
 						iTotalValue += AI_getBestBuildValue(iI);
 					}
@@ -8847,7 +8847,7 @@ int CvCityAI::AI_totalBestBuildValue(CvArea* pArea)
 
 int CvCityAI::AI_clearFeatureValue(int iIndex)
 {
-	CvPlot* pPlot = plotCity(getX_INLINE(), getY_INLINE(), iIndex);
+	CvPlot* pPlot = plotCity(getX(), getY(), iIndex);
 	FAssert(pPlot != NULL);
 
 	FeatureTypes eFeature = pPlot->getFeatureType();
@@ -8926,7 +8926,7 @@ int CvCityAI::AI_clearFeatureValue(int iIndex)
 			}
 		}
 
-		if (GET_PLAYER(getOwnerINLINE()).getAdvancedStartPoints() >= 0)
+		if (GET_PLAYER(getOwner()).getAdvancedStartPoints() >= 0)
 		{
 			iValue += 400;
 		}
@@ -8953,7 +8953,7 @@ int CvCityAI::AI_getGoodTileCount()
 {
 	int aiFinalYields[NUM_YIELD_TYPES];
 
-	CvPlayerAI& kPlayer = GET_PLAYER(getOwnerINLINE());
+	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 
 	int iGoodTileCount = 0;
 	for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
@@ -9005,7 +9005,7 @@ int CvCityAI::AI_getGoodTileCount()
 							bUseBaseValue = false;
 							for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 							{
-								aiFinalYields[iJ] = (pLoopPlot->calculateNatureYield(((YieldTypes)iJ), getTeam(), bIgnoreFeature) + pLoopPlot->calculateImprovementYieldChange(eImprovement, ((YieldTypes)iJ), getOwnerINLINE(), false));
+								aiFinalYields[iJ] = (pLoopPlot->calculateNatureYield(((YieldTypes)iJ), getTeam(), bIgnoreFeature) + pLoopPlot->calculateImprovementYieldChange(eImprovement, ((YieldTypes)iJ), getOwner(), false));
 							}
 						}
 					}
@@ -9040,7 +9040,7 @@ int CvCityAI::AI_countWorkedPoorTiles()
 {
 	int aiFinalYields[NUM_YIELD_TYPES];
 
-	CvPlayerAI& kPlayer = GET_PLAYER(getOwnerINLINE());
+	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 
 	int iWorkedPoorTileCount = 0;
 	for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
@@ -9097,7 +9097,7 @@ int CvCityAI::AI_countWorkedPoorTiles()
 							bUseBaseValue = false;
 							for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 							{
-								aiFinalYields[iJ] = (pLoopPlot->calculateNatureYield(((YieldTypes)iJ), getTeam(), bIgnoreFeature) + pLoopPlot->calculateImprovementYieldChange(eImprovement, ((YieldTypes)iJ), getOwnerINLINE(), false));
+								aiFinalYields[iJ] = (pLoopPlot->calculateNatureYield(((YieldTypes)iJ), getTeam(), bIgnoreFeature) + pLoopPlot->calculateImprovementYieldChange(eImprovement, ((YieldTypes)iJ), getOwner(), false));
 							}
 						}
 					}
@@ -9132,7 +9132,7 @@ int CvCityAI::AI_getTargetSize()
 {
 	PROFILE_FUNC();
 
-	CvPlayerAI& kPlayer = GET_PLAYER(getOwnerINLINE());
+	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 	int iTargetSize = AI_getGoodTileCount();
 
 /********************************************************************************/
@@ -9183,7 +9183,7 @@ void CvCityAI::AI_getYieldMultipliers( int &iFoodMultiplier, int &iProductionMul
 	iProductionMultiplier = 100;
 	iDesiredFoodChange = 0;
 
-	CvPlayerAI& kPlayer = GET_PLAYER(getOwnerINLINE());
+	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 
 	int aiFinalYields[NUM_YIELD_TYPES];
 
@@ -9242,7 +9242,7 @@ void CvCityAI::AI_getYieldMultipliers( int &iFoodMultiplier, int &iProductionMul
 							bUseBaseValue = false;
 							for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 							{
-								aiFinalYields[iJ] = (pLoopPlot->calculateNatureYield(((YieldTypes)iJ), getTeam(), bIgnoreFeature) + pLoopPlot->calculateImprovementYieldChange(eImprovement, ((YieldTypes)iJ), getOwnerINLINE(), false));
+								aiFinalYields[iJ] = (pLoopPlot->calculateNatureYield(((YieldTypes)iJ), getTeam(), bIgnoreFeature) + pLoopPlot->calculateImprovementYieldChange(eImprovement, ((YieldTypes)iJ), getOwner(), false));
 							}
 						}
 					}
@@ -9509,7 +9509,7 @@ int CvCityAI::AI_getImprovementValue( CvPlot* pPlot, ImprovementTypes eImproveme
 
 				if (GC.getBuildInfo(eBuild).getImprovement() == eImprovement)
 				{
-					if (GET_PLAYER(getOwnerINLINE()).canBuild(pPlot, eBuild, false))
+					if (GET_PLAYER(getOwner()).canBuild(pPlot, eBuild, false))
 					{
 						int iValue = 10000 / (GC.getBuildInfo(eBuild).getTime() + 1);
 
@@ -9539,7 +9539,7 @@ int CvCityAI::AI_getImprovementValue( CvPlot* pPlot, ImprovementTypes eImproveme
 					{
 						if (eNonObsoleteBonus == NO_BONUS)
 						{
-							if (GET_PLAYER(getOwnerINLINE()).isOption(PLAYEROPTION_LEAVE_FORESTS))
+							if (GET_PLAYER(getOwner()).isOption(PLAYEROPTION_LEAVE_FORESTS))
 							{
 								bValid = false;
 							}
@@ -9547,7 +9547,7 @@ int CvCityAI::AI_getImprovementValue( CvPlot* pPlot, ImprovementTypes eImproveme
 							{
 								bValid = false;
 							}
-							else if (GET_PLAYER(getOwnerINLINE()).getFeatureHappiness(pPlot->getFeatureType()) > 0)
+							else if (GET_PLAYER(getOwner()).getFeatureHappiness(pPlot->getFeatureType()) > 0)
 							{
 								bValid = false;
 							}
@@ -9576,7 +9576,7 @@ int CvCityAI::AI_getImprovementValue( CvPlot* pPlot, ImprovementTypes eImproveme
 			{
 				if (GC.getImprovementInfo(eFinalImprovement).isImprovementBonusTrade(eNonObsoleteBonus))
 				{
-					iValue += (GET_PLAYER(getOwnerINLINE()).AI_bonusVal(eNonObsoleteBonus) * 10);
+					iValue += (GET_PLAYER(getOwner()).AI_bonusVal(eNonObsoleteBonus) * 10);
 					iValue += 200;
 				}
 			}
@@ -9602,8 +9602,8 @@ int CvCityAI::AI_getImprovementValue( CvPlot* pPlot, ImprovementTypes eImproveme
 				if( false && bOriginal )
 				{
 					aiFinalYields[iJ] = 2*(pPlot->calculateNatureYield(((YieldTypes)iJ), getTeam(), bIgnoreFeature));
-					aiFinalYields[iJ] += (pPlot->calculateImprovementYieldChange(eFinalImprovement, ((YieldTypes)iJ), getOwnerINLINE(), false));
-					aiFinalYields[iJ] += (pPlot->calculateImprovementYieldChange(eImprovement, ((YieldTypes)iJ), getOwnerINLINE(), false));
+					aiFinalYields[iJ] += (pPlot->calculateImprovementYieldChange(eFinalImprovement, ((YieldTypes)iJ), getOwner(), false));
+					aiFinalYields[iJ] += (pPlot->calculateImprovementYieldChange(eImprovement, ((YieldTypes)iJ), getOwner(), false));
 					if (bIgnoreFeature && pPlot->getFeatureType() != NO_FEATURE)
 					{
 						aiFinalYields[iJ] -= 2 * GC.getFeatureInfo(pPlot->getFeatureType()).getYieldChange((YieldTypes)iJ);
@@ -9613,8 +9613,8 @@ int CvCityAI::AI_getImprovementValue( CvPlot* pPlot, ImprovementTypes eImproveme
 				else
 				{
 					aiFinalYields[iJ] = 2*(pPlot->calculateNatureYield(((YieldTypes)iJ), getTeam(), bIgnoreFeature));
-					aiFinalYields[iJ] += (pPlot->calculateImprovementYieldChange(eFinalImprovement, ((YieldTypes)iJ), getOwnerINLINE(), false, true));
-					aiFinalYields[iJ] += (pPlot->calculateImprovementYieldChange(eImprovement, ((YieldTypes)iJ), getOwnerINLINE(), false, true));
+					aiFinalYields[iJ] += (pPlot->calculateImprovementYieldChange(eFinalImprovement, ((YieldTypes)iJ), getOwner(), false, true));
+					aiFinalYields[iJ] += (pPlot->calculateImprovementYieldChange(eImprovement, ((YieldTypes)iJ), getOwner(), false, true));
 					if (bIgnoreFeature && pPlot->getFeatureType() != NO_FEATURE)
 					{
 						aiFinalYields[iJ] -= 2 * GC.getFeatureInfo(pPlot->getFeatureType()).getYieldChange((YieldTypes)iJ);
@@ -9630,8 +9630,8 @@ int CvCityAI::AI_getImprovementValue( CvPlot* pPlot, ImprovementTypes eImproveme
 						{
 							eCurFinalImprovement = eCurImprovement;
 						}
-						iCurYield += (pPlot->calculateImprovementYieldChange(eCurFinalImprovement, ((YieldTypes)iJ), getOwnerINLINE(), false, true));
-						iCurYield += (pPlot->calculateImprovementYieldChange(eCurImprovement, ((YieldTypes)iJ), getOwnerINLINE(), false, true));
+						iCurYield += (pPlot->calculateImprovementYieldChange(eCurFinalImprovement, ((YieldTypes)iJ), getOwner(), false, true));
+						iCurYield += (pPlot->calculateImprovementYieldChange(eCurImprovement, ((YieldTypes)iJ), getOwner(), false, true));
 					}
 
 					aiDiffYields[iJ] = (aiFinalYields[iJ] - iCurYield);
@@ -9679,7 +9679,7 @@ int CvCityAI::AI_getImprovementValue( CvPlot* pPlot, ImprovementTypes eImproveme
 				{
 					if ((aiDiffYields[YIELD_PRODUCTION] > 0) && (aiFinalYields[YIELD_FOOD]+aiFinalYields[YIELD_PRODUCTION] > 3))
 					{
-						if (iFoodPriority < 100 || GET_PLAYER(getOwnerINLINE()).getCurrentEra() < 2)
+						if (iFoodPriority < 100 || GET_PLAYER(getOwner()).getCurrentEra() < 2)
 						{
 							//value booster for mines on hills
 							iValue *= (100 + 25 * aiDiffYields[YIELD_PRODUCTION]);
@@ -9732,7 +9732,7 @@ int CvCityAI::AI_getImprovementValue( CvPlot* pPlot, ImprovementTypes eImproveme
 			}
 
 			int iHappiness = GC.getImprovementInfo(eFinalImprovement).getHappiness();
-			if ((iHappiness != 0) && !(GET_PLAYER(getOwnerINLINE()).getAdvancedStartPoints() >= 0))
+			if ((iHappiness != 0) && !(GET_PLAYER(getOwner()).getAdvancedStartPoints() >= 0))
 			{
 				//int iHappyLevel = iHappyAdjust + (happyLevel() - unhappyLevel(0));
 				int iHappyLevel = 0 + (happyLevel() - unhappyLevel(0));
@@ -9862,7 +9862,7 @@ int CvCityAI::AI_getImprovementValue( CvPlot* pPlot, ImprovementTypes eImproveme
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 				{
-					iValue -= (GC.getImprovementInfo(pPlot->getImprovementType()).getUpgradeTime() * 8 * (pPlot->getUpgradeProgressHundredths())) / std::max(1, 100*GC.getGameINLINE().getImprovementUpgradeTime(pPlot->getImprovementType()));
+					iValue -= (GC.getImprovementInfo(pPlot->getImprovementType()).getUpgradeTime() * 8 * (pPlot->getUpgradeProgressHundredths())) / std::max(1, 100*GC.getGame().getImprovementUpgradeTime(pPlot->getImprovementType()));
 				}
 
 				if (eNonObsoleteBonus == NO_BONUS)
@@ -9878,7 +9878,7 @@ int CvCityAI::AI_getImprovementValue( CvPlot* pPlot, ImprovementTypes eImproveme
 					}
 				}
 
-				if (GET_PLAYER(getOwnerINLINE()).isOption(PLAYEROPTION_SAFE_AUTOMATION))
+				if (GET_PLAYER(getOwner()).isOption(PLAYEROPTION_SAFE_AUTOMATION))
 				{
 					iValue /= 4;	//Greatly prefer builds which are legal.
 				}
@@ -9908,7 +9908,7 @@ int CvCityAI::AI_countBestBuilds(CvArea* pArea)
 	{
 		if (iI != CITY_HOME_PLOT)
 		{
-			CvPlot* pLoopPlot = plotCity(getX_INLINE(), getY_INLINE(), iI);
+			CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
 
 			if (pLoopPlot != NULL)
 			{
@@ -9963,7 +9963,7 @@ void CvCityAI::AI_updateBestBuild()
 	int iWorkableFood = 0;
 	int iWorkableFoodPlotCount = 0;
 
-	CvPlayerAI& kPlayer = GET_PLAYER(getOwnerINLINE());
+	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 
 	int iGoodTileCount = 0;
 
@@ -10036,7 +10036,7 @@ void CvCityAI::AI_updateBestBuild()
 							bUseBaseValue = false;
 							for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 							{
-								aiFinalYields[iJ] = (pLoopPlot->calculateNatureYield(((YieldTypes)iJ), getTeam(), bIgnoreFeature) + pLoopPlot->calculateImprovementYieldChange(eImprovement, ((YieldTypes)iJ), getOwnerINLINE(), false));
+								aiFinalYields[iJ] = (pLoopPlot->calculateNatureYield(((YieldTypes)iJ), getTeam(), bIgnoreFeature) + pLoopPlot->calculateImprovementYieldChange(eImprovement, ((YieldTypes)iJ), getOwner(), false));
 							}
 						}
 					}
@@ -10175,9 +10175,9 @@ void CvCityAI::AI_updateBestBuild()
 /* Worker AI                                                                                    */
 /************************************************************************************************/
 /* original bts code
-	if (GET_PLAYER(getOwnerINLINE()).getAdvancedStartPoints() >= 0)
+	if (GET_PLAYER(getOwner()).getAdvancedStartPoints() >= 0)
 	{
-		iTargetSize += 2 + GET_PLAYER(getOwnerINLINE()).getCurrentEra() / 2;
+		iTargetSize += 2 + GET_PLAYER(getOwner()).getCurrentEra() / 2;
 	}
 
 	if (kPlayer.getAdvancedStartPoints() >= 0)
@@ -10378,7 +10378,7 @@ void CvCityAI::AI_updateBestBuild()
 
 		if (iI != CITY_HOME_PLOT)
 		{
-			CvPlot* pLoopPlot = plotCity(getX_INLINE(), getY_INLINE(), iI);
+			CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
 
 			if (NULL != pLoopPlot && pLoopPlot->getWorkingCity() == this)
 			{
@@ -10449,7 +10449,7 @@ void CvCityAI::AI_updateBestBuild()
 		{
 			if (iI != CITY_HOME_PLOT)
 			{
-				CvPlot* pLoopPlot = plotCity(getX_INLINE(), getY_INLINE(), iI);
+				CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
 
 				if (NULL != pLoopPlot && pLoopPlot->getWorkingCity() == this)
 				{
@@ -10513,7 +10513,7 @@ void CvCityAI::AI_updateBestBuild()
 			{
 				if (iI != CITY_HOME_PLOT)
 				{
-					CvPlot* pLoopPlot = plotCity(getX_INLINE(), getY_INLINE(), iI);
+					CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
 
 					if (NULL != pLoopPlot && pLoopPlot->getWorkingCity() == this)
 					{
@@ -10570,7 +10570,7 @@ void CvCityAI::AI_doDraft(bool bForce)
 /*                                                                                              */
 /* City AI, War Strategy AI                                                                     */
 /************************************************************************************************/
-		if (GC.getGameINLINE().AI_combatValue(getConscriptUnit()) > 33)
+		if (GC.getGame().AI_combatValue(getConscriptUnit()) > 33)
 		{
 			if (bForce)
 			{
@@ -10581,7 +10581,7 @@ void CvCityAI::AI_doDraft(bool bForce)
 			bool bDanger = (!AI_isDefended() && AI_isDanger());
 
 			// Don't go broke from drafting
-			if( !bDanger && GET_PLAYER(getOwnerINLINE()).AI_isFinancialTrouble() )
+			if( !bDanger && GET_PLAYER(getOwner()).AI_isFinancialTrouble() )
 			{
 				return;
 			}
@@ -10600,7 +10600,7 @@ void CvCityAI::AI_doDraft(bool bForce)
 			{
 				bool bWait = true;
 
-				if( GET_PLAYER(getOwnerINLINE()).AI_isDoStrategy(AI_STRATEGY_TURTLE) )
+				if( GET_PLAYER(getOwner()).AI_isDoStrategy(AI_STRATEGY_TURTLE) )
 				{
 					// Full out defensive
 					if( bDanger || (getPopulation() >= std::max(5, getHighestPopulation() - 1)) )
@@ -10617,7 +10617,7 @@ void CvCityAI::AI_doDraft(bool bForce)
 				{
 					// If city might be captured, don't hold back
 					int iOurDefense = GET_TEAM(getTeam()).AI_getOurPlotStrength(plot(),0,true,false,true);
-					int iEnemyOffense = GET_PLAYER(getOwnerINLINE()).AI_getEnemyPlotStrength(plot(),2,false,false);
+					int iEnemyOffense = GET_PLAYER(getOwner()).AI_getEnemyPlotStrength(plot(),2,false,false);
 
 					if( (iOurDefense == 0) || (3*iEnemyOffense > 2*iOurDefense) )
 					{
@@ -10755,13 +10755,13 @@ void CvCityAI::AI_doHurry(bool bForce)
 			// This routine is noted and I'll be looking for examples of its use ingame before doing any restructuring.  This might be appropriate.  Maybe.  The rushing could put them in bigger trouble when they can't then rush to get defenders when they need to.
 			if ( (area()->getAreaAIType(getTeam()) == AREAAI_DEFENSIVE) && GET_TEAM(getTeam()).AI_getEnemyPowerPercent(true) > 150 )
 			{
-				if( eProductionUnit != NO_UNIT && GC.getGameINLINE().AI_combatValue(eProductionUnit) > 33 && getProduction() > 0 )
+				if( eProductionUnit != NO_UNIT && GC.getGame().AI_combatValue(eProductionUnit) > 33 && getProduction() > 0 )
 				{
 					//if( (iHurryPopulation > 0) && (iHurryAngerLength == 0 || getHurryAngerTimer() < 2) && (iHurryPopulation < 3 && iHurryPopulation < getPopulation()/3))
 					//{
 					//	bool bWait = true;
 
-					//	if( GET_PLAYER(getOwnerINLINE()).AI_isDoStrategy(AI_STRATEGY_TURTLE) )
+					//	if( GET_PLAYER(getOwner()).AI_isDoStrategy(AI_STRATEGY_TURTLE) )
 					//	{
 					//		bWait = false;
 					//	}
@@ -10769,7 +10769,7 @@ void CvCityAI::AI_doHurry(bool bForce)
 					//	{
 					//		bWait = true;
 					//	}
-					//	else if( GET_PLAYER(getOwnerINLINE()).AI_isFinancialTrouble() )
+					//	else if( GET_PLAYER(getOwner()).AI_isFinancialTrouble() )
 					//	{
 					//		bWait = true;
 					//	}
@@ -10802,23 +10802,23 @@ void CvCityAI::AI_doHurry(bool bForce)
 					{
 						//TBRUSHFIX
 						//I can appreciate nearly any gold rush.  These are more useful as they don't dramatically impede the AI so much.
-						if( !(GET_PLAYER(getOwnerINLINE()).AI_isFinancialTrouble()) )
+						if( !(GET_PLAYER(getOwner()).AI_isFinancialTrouble()) )
 						{
 							int iHurryGold = hurryGold((HurryTypes)iI);
 							if( iHurryGold > 0 && iHurryAngerLength == 0 )
 							{
 								bool bWait = true;
 
-								if( GET_PLAYER(getOwnerINLINE()).AI_isDoStrategy(AI_STRATEGY_TURTLE) )
+								if( GET_PLAYER(getOwner()).AI_isDoStrategy(AI_STRATEGY_TURTLE) )
 								{
-									if( (bDanger ? 5 : 8)*iHurryGold < GET_PLAYER(getOwnerINLINE()).getEffectiveGold() )
+									if( (bDanger ? 5 : 8)*iHurryGold < GET_PLAYER(getOwner()).getEffectiveGold() )
 									{
 										bWait = false;
 									}
 								}
 								else
 								{
-									if( (bDanger ? 8 : 12)*iHurryGold < GET_PLAYER(getOwnerINLINE()).getEffectiveGold() )
+									if( (bDanger ? 8 : 12)*iHurryGold < GET_PLAYER(getOwner()).getEffectiveGold() )
 									{
 										bWait = false;
 									}
@@ -10843,9 +10843,9 @@ void CvCityAI::AI_doHurry(bool bForce)
 			//Slaving won't take place here since these require no pop cost (which is the problem I'm trying to resolve anyhow.)
 			if ((iHurryAngerLength == 0) && (iHurryPopulation == 0))
 			{
-				if (GET_PLAYER(getOwnerINLINE()).AI_avoidScience())
+				if (GET_PLAYER(getOwner()).AI_avoidScience())
 				{
-					if (GET_PLAYER(getOwnerINLINE()).getEffectiveGold() > GET_PLAYER(getOwnerINLINE()).AI_goldTarget())
+					if (GET_PLAYER(getOwner()).getEffectiveGold() > GET_PLAYER(getOwner()).AI_goldTarget())
 					{
 						iMinTurns = std::min(iMinTurns, 10);
 					}
@@ -10865,10 +10865,10 @@ void CvCityAI::AI_doHurry(bool bForce)
 						if ( (iHurryGold > 0) && ((iHurryGold / iValuePerTurn) < getProductionTurnsLeft(eProductionBuilding, 1)) )
 						{
 /* original bts code
-							if (iHurryGold < (GET_PLAYER(getOwnerINLINE()).getGold() / 3))
+							if (iHurryGold < (GET_PLAYER(getOwner()).getGold() / 3))
 */
-							int iGoldThreshold = GET_PLAYER(getOwnerINLINE()).getEffectiveGold();
-							iGoldThreshold -= (GET_PLAYER(getOwnerINLINE()).AI_goldToUpgradeAllUnits() / ((GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0) ? 1 : 3));
+							int iGoldThreshold = GET_PLAYER(getOwner()).getEffectiveGold();
+							iGoldThreshold -= (GET_PLAYER(getOwner()).AI_goldToUpgradeAllUnits() / ((GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0) ? 1 : 3));
 							iGoldThreshold /= 3;
 							if (iHurryGold < iGoldThreshold)
 							{
@@ -10925,7 +10925,7 @@ void CvCityAI::AI_doHurry(bool bForce)
 					(GC.getBuildingInfo(eProductionBuilding).getCommercePerPopChange(COMMERCE_CULTURE) > 0) ||
 						(GC.getBuildingInfo(eProductionBuilding).getObsoleteSafeCommerceChange(COMMERCE_CULTURE) > 0))
 				{
-					if ((getCommerceRateTimes100(COMMERCE_CULTURE) == 0) || (plot()->calculateCulturePercent(getOwnerINLINE()) < 40))
+					if ((getCommerceRateTimes100(COMMERCE_CULTURE) == 0) || (plot()->calculateCulturePercent(getOwner()) < 40))
 					{
 						iMinTurns = std::min(iMinTurns, 10);
 						if (getCommerceRateTimes100(COMMERCE_CULTURE) == 0)
@@ -11003,7 +11003,7 @@ void CvCityAI::AI_doHurry(bool bForce)
 
 				if (GC.getBuildingInfo(eProductionBuilding).getCommerceModifier(COMMERCE_GOLD) > 0)
 				{
-					if (GET_PLAYER(getOwnerINLINE()).AI_isFinancialTrouble())
+					if (GET_PLAYER(getOwner()).AI_isFinancialTrouble())
 					{
 						if (getBaseCommerceRate(COMMERCE_GOLD) >= 16)
 						{
@@ -11014,7 +11014,7 @@ void CvCityAI::AI_doHurry(bool bForce)
 
 				if (GC.getBuildingInfo(eProductionBuilding).getCommerceModifier(COMMERCE_RESEARCH) > 0)
 				{
-					if (!(GET_PLAYER(getOwnerINLINE()).AI_avoidScience()))
+					if (!(GET_PLAYER(getOwner()).AI_avoidScience()))
 					{
 						if (getBaseCommerceRate(COMMERCE_RESEARCH) >= 16)
 						{
@@ -11049,9 +11049,9 @@ void CvCityAI::AI_doHurry(bool bForce)
 
 			if (eProductionUnitAI == UNITAI_CITY_DEFENSE)
 			{
-				if (plot()->plotCheck(PUF_isUnitAIType, UNITAI_SETTLE, -1, NULL, getOwnerINLINE()) != NULL)
+				if (plot()->plotCheck(PUF_isUnitAIType, UNITAI_SETTLE, -1, NULL, getOwner()) != NULL)
 				{
-					if (!AI_isDefended(-2*GET_PLAYER(getOwnerINLINE()).strengthOfBestUnitAI(DOMAIN_LAND, UNITAI_CITY_DEFENSE))) // XXX check for other team's units?
+					if (!AI_isDefended(-2*GET_PLAYER(getOwner()).strengthOfBestUnitAI(DOMAIN_LAND, UNITAI_CITY_DEFENSE))) // XXX check for other team's units?
 					{
 						iMinTurns = std::min(iMinTurns, 5);
 					}
@@ -11060,11 +11060,11 @@ void CvCityAI::AI_doHurry(bool bForce)
 
 			if (eProductionUnitAI == UNITAI_SETTLE)
 			{
-				if (area()->getNumAIUnits(getOwnerINLINE(), UNITAI_SETTLE) == 0)
+				if (area()->getNumAIUnits(getOwner(), UNITAI_SETTLE) == 0)
 				{
-					if (!(GET_PLAYER(getOwnerINLINE()).AI_isFinancialTrouble()))
+					if (!(GET_PLAYER(getOwner()).AI_isFinancialTrouble()))
 					{
-						if (area()->getBestFoundValue(getOwnerINLINE()) > 0)
+						if (area()->getBestFoundValue(getOwner()) > 0)
 						{
 							iMinTurns = std::min(iMinTurns, 5);
 							bEssential = true;
@@ -11078,9 +11078,9 @@ void CvCityAI::AI_doHurry(bool bForce)
 			{
 				if (pWaterArea != NULL)
 				{
-					if (pWaterArea->getNumAIUnits(getOwnerINLINE(), UNITAI_SETTLER_SEA) == 0)
+					if (pWaterArea->getNumAIUnits(getOwner(), UNITAI_SETTLER_SEA) == 0)
 					{
-						if (area()->getNumAIUnits(getOwnerINLINE(), UNITAI_SETTLE) > 0)
+						if (area()->getNumAIUnits(getOwner(), UNITAI_SETTLE) > 0)
 						{
 							iMinTurns = std::min(iMinTurns, 5);
 						}
@@ -11090,7 +11090,7 @@ void CvCityAI::AI_doHurry(bool bForce)
 
 			if (eProductionUnitAI == UNITAI_WORKER)
 			{
-				if (GET_PLAYER(getOwnerINLINE()).AI_neededWorkers(area()) > (area()->getNumAIUnits(getOwnerINLINE(), UNITAI_WORKER) * 2))
+				if (GET_PLAYER(getOwner()).AI_neededWorkers(area()) > (area()->getNumAIUnits(getOwner(), UNITAI_WORKER) * 2))
 				{
 					iMinTurns = std::min(iMinTurns, 5);
 					bEssential = true;
@@ -11111,15 +11111,15 @@ void CvCityAI::AI_doHurry(bool bForce)
 			// adjust for game speed
 			if (NO_UNIT != getProductionUnit())
 			{
-				iMinTurns *= GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getTrainPercent();
+				iMinTurns *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
 			}
 			else if (NO_BUILDING != getProductionBuilding())
 			{
-				iMinTurns *= GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getConstructPercent();
+				iMinTurns *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
 			}
 			else if (NO_PROJECT != getProductionProject())
 			{
-				iMinTurns *= GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getCreatePercent();
+				iMinTurns *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getCreatePercent();
 			}
 			else
 			{
@@ -11130,15 +11130,15 @@ void CvCityAI::AI_doHurry(bool bForce)
 
 			if (NO_UNIT != getProductionUnit())
 			{
-				iMinTurns *= GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getTrainPercent();
+				iMinTurns *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getTrainPercent();
 			}
 			else if (NO_BUILDING != getProductionBuilding())
 			{
-				iMinTurns *= GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getConstructPercent();
+				iMinTurns *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getConstructPercent();
 			}
 			else if (NO_PROJECT != getProductionProject())
 			{
-				iMinTurns *= GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getConstructPercent();
+				iMinTurns *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getConstructPercent();
 			}
 			else
 			{
@@ -11159,11 +11159,11 @@ void CvCityAI::AI_doHurry(bool bForce)
 			if (bGrowth)
 			{
 				int iHurryGold = hurryGold((HurryTypes)iI);
-				if ((iHurryGold > 0) && ((iHurryGold * 16) < GET_PLAYER(getOwnerINLINE()).getEffectiveGold()))
+				if ((iHurryGold > 0) && ((iHurryGold * 16) < GET_PLAYER(getOwner()).getEffectiveGold()))
 				{
 					if( gCityLogLevel >= 2 )
 					{
-						logBBAI("      City %S hurry gold at %d for growth when rich at %d", getName().GetCString(), iHurryGold, GET_PLAYER(getOwnerINLINE()).getEffectiveGold() );
+						logBBAI("      City %S hurry gold at %d for growth when rich at %d", getName().GetCString(), iHurryGold, GET_PLAYER(getOwner()).getEffectiveGold() );
 					}
 					hurry((HurryTypes)iI);
 					break;
@@ -11293,12 +11293,12 @@ void CvCityAI::AI_doEmphasize()
 	FAssert(!isHuman());
 
 	bool bFirstTech = false;
-	if (GET_PLAYER(getOwnerINLINE()).getCurrentResearch() != NO_TECH)
+	if (GET_PLAYER(getOwner()).getCurrentResearch() != NO_TECH)
 	{
-		bFirstTech = GET_PLAYER(getOwnerINLINE()).AI_isFirstTech(GET_PLAYER(getOwnerINLINE()).getCurrentResearch());
+		bFirstTech = GET_PLAYER(getOwner()).AI_isFirstTech(GET_PLAYER(getOwner()).getCurrentResearch());
 	}
 
-	bool bCultureVictory = GET_PLAYER(getOwnerINLINE()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2);
+	bool bCultureVictory = GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2);
 	int iPopulationRank = findPopulationRank();
 
 	for (int iI = 0; iI < GC.getNumEmphasizeInfos(); iI++)
@@ -11329,7 +11329,7 @@ void CvCityAI::AI_doEmphasize()
 			{
 				if (bFirstTech && !bCultureVictory)
 				{
-					if (iPopulationRank < ((GET_PLAYER(getOwnerINLINE()).getNumCities() / 4) + 1))
+					if (iPopulationRank < ((GET_PLAYER(getOwner()).getNumCities() / 4) + 1))
 					{
 						bEmphasize = true;
 					}
@@ -11354,7 +11354,7 @@ void CvCityAI::AI_doEmphasize()
 /* JOOYO_ADDON                          END                                                     */
 /************************************************************************************************/
 				{
-					CvPlot* pLoopPlot = plotCity(getX_INLINE(), getY_INLINE(), iPlot);
+					CvPlot* pLoopPlot = plotCity(getX(), getY(), iPlot);
 					if (pLoopPlot != NULL && pLoopPlot->getWorkingCity() == this)
 					{
 						int iFood = pLoopPlot->getYield(YIELD_FOOD);
@@ -11413,7 +11413,7 @@ bool CvCityAI::AI_chooseUnit(const char* reason, UnitAITypes eUnitAI, int iOdds,
 	}
 #endif
 
-	if( iOdds < 0 || GC.getGameINLINE().getSorenRandNum(100, "City AI choose unit") < iOdds )
+	if( iOdds < 0 || GC.getGame().getSorenRandNum(100, "City AI choose unit") < iOdds )
 	{
 		if ( iPriorityOverride == -1 )
 		{
@@ -11435,7 +11435,7 @@ bool CvCityAI::AI_chooseUnit(const char* reason, UnitAITypes eUnitAI, int iOdds,
 		if ( !isNPC() )
 		{
 			//	Check someone can build a suitable unit before putting out a tender for one.
-			if ( eUnitAI == NO_UNITAI || GET_PLAYER(getOwnerINLINE()).bestBuildableUnitForAIType(NO_DOMAIN, eUnitAI, criteria) != NO_UNIT )
+			if ( eUnitAI == NO_UNITAI || GET_PLAYER(getOwner()).bestBuildableUnitForAIType(NO_DOMAIN, eUnitAI, criteria) != NO_UNIT )
 			{
 				if( gCityLogLevel >= 2 )
 				{
@@ -11443,10 +11443,10 @@ bool CvCityAI::AI_chooseUnit(const char* reason, UnitAITypes eUnitAI, int iOdds,
 				}
 
 				//	Put out a tender for this unit
-				GET_PLAYER(getOwnerINLINE()).getContractBroker().advertiseWork(iPriorityOverride,
+				GET_PLAYER(getOwner()).getContractBroker().advertiseWork(iPriorityOverride,
 																				NO_UNITCAPABILITIES,
-																				getX_INLINE(),
-																				getY_INLINE(),
+																				getX(),
+																				getY(),
 																				NULL,
 																				eUnitAI,
 																				iUnitStrength,
@@ -11532,7 +11532,7 @@ bool CvCityAI::AI_chooseUnit(UnitTypes eUnit, UnitAITypes eUnitAI)
 
 bool CvCityAI::AI_chooseDefender(const char* reason)
 {
-	if (plot()->plotCheck(PUF_isUnitAIType, UNITAI_CITY_SPECIAL, -1, NULL, getOwnerINLINE()) == NULL)
+	if (plot()->plotCheck(PUF_isUnitAIType, UNITAI_CITY_SPECIAL, -1, NULL, getOwner()) == NULL)
 	{
 		if (AI_chooseUnit(reason, UNITAI_CITY_SPECIAL))
 		{
@@ -11540,7 +11540,7 @@ bool CvCityAI::AI_chooseDefender(const char* reason)
 		}
 	}
 
-	if (plot()->plotCheck(PUF_isUnitAIType, UNITAI_CITY_COUNTER, -1, NULL, getOwnerINLINE()) == NULL)
+	if (plot()->plotCheck(PUF_isUnitAIType, UNITAI_CITY_COUNTER, -1, NULL, getOwner()) == NULL)
 	{
 		if (AI_chooseUnit(reason, UNITAI_CITY_COUNTER))
 		{
@@ -11558,7 +11558,7 @@ bool CvCityAI::AI_chooseDefender(const char* reason)
 
 bool CvCityAI::AI_chooseLeastRepresentedUnit(const char* reason, UnitTypeWeightArray &allowedTypes, int iOdds)
 {
-	if ( iOdds < 0 || iOdds > GC.getGameINLINE().getSorenRandNum(100, "AI choose least represented unit overall odds") )
+	if ( iOdds < 0 || iOdds > GC.getGame().getSorenRandNum(100, "AI choose least represented unit overall odds") )
 	{
 		std::multimap<int, UnitAITypes, std::greater<int> > bestTypes;
 		int iTotalWeight = 0;
@@ -11566,14 +11566,14 @@ bool CvCityAI::AI_chooseLeastRepresentedUnit(const char* reason, UnitTypeWeightA
 		for (UnitTypeWeightArray::iterator it = allowedTypes.begin(); it != allowedTypes.end(); ++it)
 		{
 			int iValue = it->second;
-			iValue *= 750 + GC.getGameINLINE().getSorenRandNum(250, "AI choose least represented unit");
-			iValue /= std::max(1,GET_PLAYER(getOwnerINLINE()).AI_totalAreaUnitAIs(area(), it->first));
+			iValue *= 750 + GC.getGame().getSorenRandNum(250, "AI choose least represented unit");
+			iValue /= std::max(1,GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(area(), it->first));
 			bestTypes.insert(std::make_pair(iValue, it->first));
 
 			iTotalWeight += iValue/100;
 		}
 
-		int iChoiceWeight = GC.getGameINLINE().getSorenRandNum(iTotalWeight, "AI choose least represented unit");
+		int iChoiceWeight = GC.getGame().getSorenRandNum(iTotalWeight, "AI choose least represented unit");
 
 		for (std::multimap<int, UnitAITypes, std::greater<int> >::iterator best_it = bestTypes.begin(); best_it != bestTypes.end(); ++best_it)
 		{
@@ -11595,7 +11595,7 @@ bool CvCityAI::AI_chooseLeastRepresentedUnit(const char* reason, UnitTypeWeightA
 
 bool CvCityAI::AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseChance, UnitTypes* eBestSpreadUnit, int* iBestSpreadUnitValue)
 {
-	CvPlayerAI& kPlayer = GET_PLAYER(getOwnerINLINE());
+	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 	CvTeamAI& kTeam = GET_TEAM(getTeam());
 	CvGame& kGame = GC.getGame();
 
@@ -11756,7 +11756,7 @@ bool CvCityAI::AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseCha
 										}
 										iCorporationValue /= std::max(1, (iTotalCount / 4) + iPlotCount);
 
-										int iCost = std::max(0, GC.getCorporationInfo(eCorporation).getSpreadCost() * (100 + GET_PLAYER(getOwnerINLINE()).calculateInflationRate()));
+										int iCost = std::max(0, GC.getCorporationInfo(eCorporation).getSpreadCost() * (100 + GET_PLAYER(getOwner()).calculateInflationRate()));
 										iCost /= 100;
 
 										if (kPlayer.getEffectiveGold() >= iCost)
@@ -11812,7 +11812,7 @@ bool CvCityAI::AI_chooseBuilding(int iFocusFlags, int iMaxTurns, int iMinThresho
 		const BuildingTypes eBestBuilding = bestBuildings[i].building;
 		if( iOdds < 0 ||
 			getBuildingProduction(eBestBuilding) > 0 ||
-			GC.getGameINLINE().getSorenRandNum(100, "City AI choose building") < iOdds)
+			GC.getGame().getSorenRandNum(100, "City AI choose building") < iOdds)
 		{
 			pushOrder(ORDER_CONSTRUCT, eBestBuilding, -1, false, false, false);
 			enqueuedBuilding = true;
@@ -12479,7 +12479,7 @@ int CvCityAI::AI_yieldValue(short* piYields, short* piCommerceYields, bool bAvoi
 
 			if ( realValue != entry->iResult )
 			{
-				OutputDebugString(CvString::format("Cache entry %08lx verification failed, turn is %d\n", entry, GC.getGameINLINE().getGameTurn()).c_str());
+				OutputDebugString(CvString::format("Cache entry %08lx verification failed, turn is %d\n", entry, GC.getGame().getGameTurn()).c_str());
 				FAssertMsg(false, "Yield value cache verification failure");
 				CHECK_YIELD_VALUE_CACHE("Validation");
 			}
@@ -12552,7 +12552,7 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 
 	bool bEmphasizeFood = AI_isEmphasizeYield(YIELD_FOOD);
 	bool bFoodIsProduction = isFoodProduction();
-	bool bCanPopRush = GET_PLAYER(getOwnerINLINE()).canPopRush();
+	bool bCanPopRush = GET_PLAYER(getOwner()).canPopRush();
 
 	for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 	{
@@ -12593,7 +12593,7 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 	{
 		int iModifier = getTotalCommerceRateModifier((CommerceTypes)iJ);
 
-		int iCommerceTimes100 = aiYields[YIELD_COMMERCE] * GET_PLAYER(getOwnerINLINE()).getCommercePercent((CommerceTypes)iJ);
+		int iCommerceTimes100 = aiYields[YIELD_COMMERCE] * GET_PLAYER(getOwner()).getCommercePercent((CommerceTypes)iJ);
 		if (piCommerceYields != NULL)
 		{
 			iCommerceTimes100 += piCommerceYields[iJ] * 100;
@@ -12721,7 +12721,7 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 						// be remedied soon, and that we still want to grow
 						if (getMilitaryHappinessUnits() == 0)
 						{
-							if (GET_PLAYER(getOwnerINLINE()).getNumCities() > 2)
+							if (GET_PLAYER(getOwner()).getNumCities() > 2)
 							{
 								iHappinessLevel += ((GC.getDefineINT("NO_MILITARY_PERCENT_ANGER") * (iPopulation + 1)) / GC.getPERCENT_ANGER_DIVISOR());
 							}
@@ -12940,7 +12940,7 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 	{
 		if (aiCommerceYieldsTimes100[iI] != 0)
 		{
-			int iCommerceWeight = GET_PLAYER(getOwnerINLINE()).AI_commerceWeight((CommerceTypes)iI);
+			int iCommerceWeight = GET_PLAYER(getOwner()).AI_commerceWeight((CommerceTypes)iI);
 			if (AI_isEmphasizeCommerce((CommerceTypes)iI))
 			{
 				iCommerceWeight *= 200;
@@ -12958,7 +12958,7 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 			//	However, within the context of city yield evaluation it's not being compared just with other commerce types, but also with other
 			//	yield types which have no similar normalization.  The result was that as average science multipliers increased (via buildings and
 			//	so on) production was valued relatively more and more over science
-			//iCommerceValue += (iCommerceWeight * (aiCommerceYieldsTimes100[iI] * iBaseCommerceValue) * GET_PLAYER(getOwnerINLINE()).AI_averageCommerceExchange((CommerceTypes)iI)) / 1000000;
+			//iCommerceValue += (iCommerceWeight * (aiCommerceYieldsTimes100[iI] * iBaseCommerceValue) * GET_PLAYER(getOwner()).AI_averageCommerceExchange((CommerceTypes)iI)) / 1000000;
 			iCommerceValue += (iCommerceWeight * (aiCommerceYieldsTimes100[iI] * iBaseCommerceValue[iI])) / 10000;
 		}
 	}
@@ -12997,7 +12997,7 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 	{
 		for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 		{
-			iCommerceValue += ((iCommerceYields[iI] * 40) * GET_PLAYER(getOwnerINLINE()).AI_averageCommerceExchange((CommerceTypes)iI)) / 100;
+			iCommerceValue += ((iCommerceYields[iI] * 40) * GET_PLAYER(getOwner()).AI_averageCommerceExchange((CommerceTypes)iI)) / 100;
 		}
 	}
 
@@ -13096,7 +13096,7 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 			iProductionValue += iSlaveryValue;
 			iProductionValue *= (100 + (bWorkerOptimization ? 0 : AI_specialYieldMultiplier(YIELD_PRODUCTION)));
 
-			iProductionValue /= GET_PLAYER(getOwnerINLINE()).AI_averageYieldMultiplier(YIELD_PRODUCTION);
+			iProductionValue /= GET_PLAYER(getOwner()).AI_averageYieldMultiplier(YIELD_PRODUCTION);
 		}
 
 		iValue += std::max(1,iProductionValue);
@@ -13105,14 +13105,14 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 	if( iCommerceValue > 0 )
 	{
 		iCommerceValue *= (100 + (bWorkerOptimization ? 0 : AI_specialYieldMultiplier(YIELD_COMMERCE)));
-		iCommerceValue /= GET_PLAYER(getOwnerINLINE()).AI_averageYieldMultiplier(YIELD_COMMERCE);
+		iCommerceValue /= GET_PLAYER(getOwner()).AI_averageYieldMultiplier(YIELD_COMMERCE);
 		iValue += std::max(1, iCommerceValue);
 	}
 //
 	if( iFoodValue > 0 )
 	{
 		iFoodValue *= 100;
-		iFoodValue /= GET_PLAYER(getOwnerINLINE()).AI_averageYieldMultiplier(YIELD_FOOD);
+		iFoodValue /= GET_PLAYER(getOwner()).AI_averageYieldMultiplier(YIELD_FOOD);
 		iValue += std::max(1, iFoodValue);
 	}
 /************************************************************************************************/
@@ -13160,7 +13160,7 @@ int CvCityAI::AI_plotValue(const CvPlot* pPlot, bool bAvoidGrowth, bool bRemove,
 	{
 		for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 		{
-			int iYieldDiff = (pPlot->calculateImprovementYieldChange(eFinalImprovement, ((YieldTypes)iI), getOwnerINLINE()) - pPlot->calculateImprovementYieldChange(eCurrentImprovement, ((YieldTypes)iI), getOwnerINLINE()));
+			int iYieldDiff = (pPlot->calculateImprovementYieldChange(eFinalImprovement, ((YieldTypes)iI), getOwner()) - pPlot->calculateImprovementYieldChange(eCurrentImprovement, ((YieldTypes)iI), getOwner()));
 			aiYields[iI] += iYieldDiff;
 		}
 		int iFinalYieldValue = (AI_yieldValue(aiYields, NULL, bAvoidGrowth, bRemove, bIgnoreFood, bIgnoreGrowth, bIgnoreStarvation) * 100);
@@ -13228,7 +13228,7 @@ int CvCityAI::AI_buildUnitProb()
 /************************************************************************************************/
 	int iProb = (GC.getLeaderHeadInfo(getPersonalityType()).getBuildUnitProb() + AI_experienceWeight());
 
-	if (!isNPC() && GET_PLAYER(getOwnerINLINE()).AI_isFinancialTrouble())
+	if (!isNPC() && GET_PLAYER(getOwner()).AI_isFinancialTrouble())
 	{
 		iProb /= 2;
 	}
@@ -13255,7 +13255,7 @@ int CvCityAI::AI_buildUnitProb()
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	if( GET_PLAYER(getOwnerINLINE()).isRebel() )
+	if( GET_PLAYER(getOwner()).isRebel() )
 	{
 		iProb *= 4;
 		iProb /= 3;
@@ -13274,7 +13274,7 @@ int CvCityAI::AI_buildUnitProb()
 		iProb *= 4;
 		iProb /= 3;
 	}
-	else if (GET_PLAYER(getOwnerINLINE()).AI_getMilitaryProductionCityCount() > 0)
+	else if (GET_PLAYER(getOwner()).AI_getMilitaryProductionCityCount() > 0)
 	{
 		iProb *= 3;
 		iProb /= 4;
@@ -13284,7 +13284,7 @@ int CvCityAI::AI_buildUnitProb()
 		iProb *= 4;
 		iProb /= 3;
 	}
-	else if (GET_PLAYER(getOwnerINLINE()).AI_getNavalMilitaryProductionCityCount() > 0)
+	else if (GET_PLAYER(getOwner()).AI_getNavalMilitaryProductionCityCount() > 0)
 	{
 		iProb *= 3;
 		iProb /= 4;
@@ -13350,7 +13350,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
-	FAssertMsg(pPlot->getOwnerINLINE() == getOwnerINLINE(), "pPlot must be owned by this city's owner");
+	FAssertMsg(pPlot->getOwner() == getOwner(), "pPlot must be owned by this city's owner");
 
 	BonusTypes eBonus = pPlot->getBonusType(getTeam());
 	BonusTypes eNonObsoleteBonus = pPlot->getNonObsoleteBonusType(getTeam());
@@ -13383,7 +13383,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 				if (GC.getImprovementInfo((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementUpgrade())).isImprovementBonusTrade(eNonObsoleteBonus)
 					|| GC.getImprovementInfo((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementUpgrade())).isUniversalTradeBonusProvider())
 				{
-					if (pPlot->getUpgradeTimeLeft(pPlot->getImprovementType(), getOwner()) <= 1 + ((9 * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getImprovementPercent() * GC.getEraInfo(GC.getGameINLINE().getStartEra()).getImprovementPercent())/10000))
+					if (pPlot->getUpgradeTimeLeft(pPlot->getImprovementType(), getOwner()) <= 1 + ((9 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getImprovementPercent() * GC.getEraInfo(GC.getGame().getStartEra()).getImprovementPercent())/10000))
 					{
 						bHasBonusImprovement = true;
 					}
@@ -13438,7 +13438,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 		{
 			for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
 			{
-				CvPlot* pAdjacentPlot = plotDirection(pPlot->getX_INLINE(), pPlot->getY_INLINE(), ((DirectionTypes)iI));
+				CvPlot* pAdjacentPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
 
 				if ((pAdjacentPlot != NULL) && (pAdjacentPlot->getOwner() == getOwner()) && (pAdjacentPlot->isCityRadius()))
 				{
@@ -13453,7 +13453,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 
 							for (int iJ = 0; iJ < NUM_DIRECTION_TYPES; iJ++)
 							{
-								CvPlot* pAdjacentPlot2 = plotDirection(pAdjacentPlot->getX_INLINE(), pAdjacentPlot->getY_INLINE(), ((DirectionTypes)iJ));
+								CvPlot* pAdjacentPlot2 = plotDirection(pAdjacentPlot->getX(), pAdjacentPlot->getY(), ((DirectionTypes)iJ));
 								if ((pAdjacentPlot2 != NULL) && (pAdjacentPlot2->getOwner() == getOwner()))
 								{
 									BonusTypes eTempBonus = pAdjacentPlot2->getNonObsoleteBonusType(getTeam());
@@ -13538,7 +13538,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 
 					if (GC.getBuildInfo(eBuild).getImprovement() == eImprovement)
 					{
-						if (GET_PLAYER(getOwnerINLINE()).canBuild(pPlot, eBuild, false, false, false))
+						if (GET_PLAYER(getOwner()).canBuild(pPlot, eBuild, false, false, false))
 						{
 							int iValue = 10000;
 							iValue /= (GC.getBuildInfo(eBuild).getTime() + 1);
@@ -13569,7 +13569,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 						{
 							if (eNonObsoleteBonus == NO_BONUS)
 							{
-								if (GET_PLAYER(getOwnerINLINE()).isOption(PLAYEROPTION_LEAVE_FORESTS))
+								if (GET_PLAYER(getOwner()).isOption(PLAYEROPTION_LEAVE_FORESTS))
 								{
 									bValid = false;
 								}
@@ -13577,7 +13577,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 								{
 									bValid = false;
 								}
-								else if (GET_PLAYER(getOwnerINLINE()).getFeatureHappiness(pPlot->getFeatureType()) > 0)
+								else if (GET_PLAYER(getOwner()).getFeatureHappiness(pPlot->getFeatureType()) > 0)
 								{
 									bValid = false;
 								}
@@ -13660,14 +13660,14 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 								}
 								else
 								{
-									iValue += (GET_PLAYER(getOwnerINLINE()).AI_bonusVal(eNonObsoleteBonus) * 10);
+									iValue += (GET_PLAYER(getOwner()).AI_bonusVal(eNonObsoleteBonus) * 10);
 									iValue += 150;
 								}
 							}
 							else
 							{
 								//full value for permanent solutions
-								iValue += (GET_PLAYER(getOwnerINLINE()).AI_bonusVal(eNonObsoleteBonus) * 10);
+								iValue += (GET_PLAYER(getOwner()).AI_bonusVal(eNonObsoleteBonus) * 10);
 								iValue += 200;
 							}
 
@@ -13732,8 +13732,8 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 /************************************************************************************************/
 /* original BTS code
 					aiFinalYields[iJ] = 2*(pPlot->calculateNatureYield(((YieldTypes)iJ), getTeam(), bIgnoreFeature));
-					aiFinalYields[iJ] += (pPlot->calculateImprovementYieldChange(eFinalImprovement, ((YieldTypes)iJ), getOwnerINLINE(), false));
-					aiFinalYields[iJ] += (pPlot->calculateImprovementYieldChange(eImprovement, ((YieldTypes)iJ), getOwnerINLINE(), false));
+					aiFinalYields[iJ] += (pPlot->calculateImprovementYieldChange(eFinalImprovement, ((YieldTypes)iJ), getOwner(), false));
+					aiFinalYields[iJ] += (pPlot->calculateImprovementYieldChange(eImprovement, ((YieldTypes)iJ), getOwner(), false));
 					if (bIgnoreFeature && pPlot->getFeatureType() != NO_FEATURE)
 					{
 						aiFinalYields[iJ] -= 2 * GC.getFeatureInfo(pPlot->getFeatureType()).getYieldChange((YieldTypes)iJ);
@@ -13742,8 +13742,8 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 */
 					//
 					aiFinalYields[iJ] = 2*(pPlot->calculateNatureYield(((YieldTypes)iJ), getTeam(), bIgnoreFeature));
-					aiFinalYields[iJ] += (pPlot->calculateImprovementYieldChange(eFinalImprovement, ((YieldTypes)iJ), getOwnerINLINE(), false, true));
-					aiFinalYields[iJ] += (pPlot->calculateImprovementYieldChange(eImprovement, ((YieldTypes)iJ), getOwnerINLINE(), false, true));
+					aiFinalYields[iJ] += (pPlot->calculateImprovementYieldChange(eFinalImprovement, ((YieldTypes)iJ), getOwner(), false, true));
+					aiFinalYields[iJ] += (pPlot->calculateImprovementYieldChange(eImprovement, ((YieldTypes)iJ), getOwner(), false, true));
 
 					//	Koshling - removed the following original code because it is double-counting since the
 					//	call to calculateNatureYield() above ALREADY factors out a removed improvement
@@ -13770,8 +13770,8 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 						}
 */
 
-						iCurYield += (pPlot->calculateImprovementYieldChange(eCurFinalImprovement, ((YieldTypes)iJ), getOwnerINLINE(), false, true));
-						iCurYield += (pPlot->calculateImprovementYieldChange(eCurImprovement, ((YieldTypes)iJ), getOwnerINLINE(), false, true));
+						iCurYield += (pPlot->calculateImprovementYieldChange(eCurFinalImprovement, ((YieldTypes)iJ), getOwner(), false, true));
+						iCurYield += (pPlot->calculateImprovementYieldChange(eCurImprovement, ((YieldTypes)iJ), getOwner(), false, true));
 					}
 /********************************************************************************/
 /*	BE	END																		*/
@@ -13846,7 +13846,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 					{
 						if ((aiDiffYields[YIELD_PRODUCTION] > 0) && (aiFinalYields[YIELD_FOOD]+aiFinalYields[YIELD_PRODUCTION] > 3))
 						{
-							if (iFoodPriority < 100 || GET_PLAYER(getOwnerINLINE()).getCurrentEra() < 2)
+							if (iFoodPriority < 100 || GET_PLAYER(getOwner()).getCurrentEra() < 2)
 							{
 								//value booster for mines on hills
 								iValue *= (100 + 25 * aiDiffYields[YIELD_PRODUCTION]);
@@ -13900,7 +13900,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 				//int iHappinessDiff = iNewHappiness - iCurHappiness;
 
 				int iHappinessDiff = GC.getImprovementInfo(eFinalImprovement).getHappiness() - ((eCurFinalImprovement != NO_IMPROVEMENT)? GC.getImprovementInfo(eCurFinalImprovement).getHappiness() : 0);
-				if ((iHappinessDiff != 0) && !(GET_PLAYER(getOwnerINLINE()).getAdvancedStartPoints() >= 0))
+				if ((iHappinessDiff != 0) && !(GET_PLAYER(getOwner()).getAdvancedStartPoints() >= 0))
 				{
 					bool bIsNegative = false;
 					if (iHappinessDiff < 0)
@@ -13949,7 +13949,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 						}
 
 						//iHappyValue += std::max(0, (pPlot->getCityRadiusCount() - 1)) * ((iHappyValue > 0) ? iHappyLevel / 2 : 200);
-						iHappyValue += (pPlot->getPlayerCityRadiusCount(getOwnerINLINE()) - 1) * ((iHappyValue > 0) ? 200 : 50);
+						iHappyValue += (pPlot->getPlayerCityRadiusCount(getOwner()) - 1) * ((iHappyValue > 0) ? 200 : 50);
 
 						if (!bIsNegative)
 						{
@@ -14074,7 +14074,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 					{
-						iValue -= (GC.getImprovementInfo(pPlot->getImprovementType()).getUpgradeTime() * 8 * (pPlot->getUpgradeProgressHundredths())) / std::max(1, 100*GC.getGameINLINE().getImprovementUpgradeTime(pPlot->getImprovementType()));
+						iValue -= (GC.getImprovementInfo(pPlot->getImprovementType()).getUpgradeTime() * 8 * (pPlot->getUpgradeProgressHundredths())) / std::max(1, 100*GC.getGame().getImprovementUpgradeTime(pPlot->getImprovementType()));
 					}
 
 					if (eNonObsoleteBonus == NO_BONUS)
@@ -14090,7 +14090,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 						}
 					}
 
-					if (GET_PLAYER(getOwnerINLINE()).isOption(PLAYEROPTION_SAFE_AUTOMATION))
+					if (GET_PLAYER(getOwner()).isOption(PLAYEROPTION_SAFE_AUTOMATION))
 					{
 						iValue /= 4;	//Greatly prefer builds which are legal.
 					}
@@ -14138,7 +14138,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 					{
 						if (GC.getBuildInfo(eBuild).isFeatureRemove(pPlot->getFeatureType()))
 						{
-							if (GET_PLAYER(getOwnerINLINE()).canBuild(pPlot, eBuild))
+							if (GET_PLAYER(getOwner()).canBuild(pPlot, eBuild))
 							{
 								int iValue = iClearFeatureValue;
 								CvCity* pCity = NULL;
@@ -14163,7 +14163,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 	//Chop - maybe integrate this better with the other feature-clear code tho the logic
 	//is kinda different
 	if (bChop && (eBonus == NO_BONUS) && (pPlot->getFeatureType() != NO_FEATURE) &&
-		(pPlot->getImprovementType() == NO_IMPROVEMENT) && !(GET_PLAYER(getOwnerINLINE()).isOption(PLAYEROPTION_LEAVE_FORESTS)))
+		(pPlot->getImprovementType() == NO_IMPROVEMENT) && !(GET_PLAYER(getOwner()).isOption(PLAYEROPTION_LEAVE_FORESTS)))
 	{
 		for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
 		{
@@ -14172,7 +14172,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 			{
 				if (GC.getBuildInfo(eBuild).isFeatureRemove(pPlot->getFeatureType()))
 				{
-					if (GET_PLAYER(getOwnerINLINE()).canBuild(pPlot, eBuild))
+					if (GET_PLAYER(getOwner()).canBuild(pPlot, eBuild))
 					{
 						CvCity* pCity = NULL;
 						int iValue = (pPlot->getFeatureProduction(eBuild, getTeam(), &pCity)) * 10;
@@ -14184,7 +14184,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 
 							if (iValue > 0)
 							{
-								if (GET_PLAYER(getOwnerINLINE()).AI_isDoStrategy(AI_STRATEGY_DAGGER))
+								if (GET_PLAYER(getOwner()).AI_isDoStrategy(AI_STRATEGY_DAGGER))
 								{
 									iValue += 20;
 									iValue *= 2;
@@ -14241,7 +14241,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 					BuildTypes eBuild = ((BuildTypes)iJ);
 					if (GC.getBuildInfo(eBuild).getRoute() == eRoute)
 					{
-						if (GET_PLAYER(getOwnerINLINE()).canBuild(pPlot, eBuild, false))
+						if (GET_PLAYER(getOwner()).canBuild(pPlot, eBuild, false))
 						{
 							//the value multiplier is based on the default time...
 							int iValue = iTempValue * 5 * 300;
@@ -14266,7 +14266,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 		FAssertMsg(iBestValue > 0, "iBestValue is expected to be greater than 0");
 
 		//Now modify the priority for this build.
-		if (GET_PLAYER(getOwnerINLINE()).AI_isFinancialTrouble())
+		if (GET_PLAYER(getOwner()).AI_isFinancialTrouble())
 		{
 			if (GC.getBuildInfo(eBestBuild).getImprovement() != NO_IMPROVEMENT)
 			{
@@ -14286,7 +14286,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 			{
 				if( gCityLogLevel >= 2 )
 				{
-					logBBAI("    City %S, tile (%d,%d) best build changed from %S to %S", getName().GetCString(), pPlot->getX_INLINE(), pPlot->getY_INLINE(), GC.getBuildInfo(*peBestBuild).getDescription(), GC.getBuildInfo(eBestBuild).getDescription());
+					logBBAI("    City %S, tile (%d,%d) best build changed from %S to %S", getName().GetCString(), pPlot->getX(), pPlot->getY(), GC.getBuildInfo(*peBestBuild).getDescription(), GC.getBuildInfo(eBestBuild).getDescription());
 				}
 			}
 
@@ -14355,8 +14355,8 @@ bool CvCityAI::AI_doPanic()
 
 	if (bLandWar)
 	{
-		int iOurDefense = GET_PLAYER(getOwnerINLINE()).AI_getOurPlotStrength(plot(), 0, true, false);
-		int iEnemyOffense = GET_PLAYER(getOwnerINLINE()).AI_getEnemyPlotStrength(plot(), 2, false, false);
+		int iOurDefense = GET_PLAYER(getOwner()).AI_getOurPlotStrength(plot(), 0, true, false);
+		int iEnemyOffense = GET_PLAYER(getOwner()).AI_getEnemyPlotStrength(plot(), 2, false, false);
 		//TBRUSHFIX
 		//iEnemyOffense was not keeping units that could not attack the city out of account.
 		int iRatio = (100 * iEnemyOffense) / (std::max(1, iOurDefense));
@@ -14389,7 +14389,7 @@ bool CvCityAI::AI_doPanic()
 			}
 			else
 			{
-				if ((GC.getGameINLINE().getSorenRandNum(2, "AI choose panic unit") == 0) && AI_chooseUnitImmediate("panic defense", UNITAI_CITY_COUNTER))
+				if ((GC.getGame().getSorenRandNum(2, "AI choose panic unit") == 0) && AI_chooseUnitImmediate("panic defense", UNITAI_CITY_COUNTER))
 				{
 					AI_doHurry((iRatio > 250/*140*/));
 				}
@@ -14412,16 +14412,16 @@ int CvCityAI::AI_calculateCulturePressure(bool bGreatWork)
 	int iValue = 0;
 	for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
 	{
-		CvPlot* pLoopPlot = plotCity(getX_INLINE(), getY_INLINE(), iI);
+		CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
 		if (pLoopPlot != NULL)
 		{
-			if (pLoopPlot->getOwnerINLINE() == NO_PLAYER)
+			if (pLoopPlot->getOwner() == NO_PLAYER)
 			{
 				iValue++;
 			}
 			else
 			{
-				int iTempValue = pLoopPlot->calculateCulturePercent(getOwnerINLINE());
+				int iTempValue = pLoopPlot->calculateCulturePercent(getOwner());
 				if (iTempValue == 100)
 				{
 					//do nothing
@@ -14446,7 +14446,7 @@ int CvCityAI::AI_calculateCulturePressure(bool bGreatWork)
 
 					if (eNonObsoleteBonus != NO_BONUS)
 					{
-						iTempValue += (GET_PLAYER(getOwnerINLINE()).AI_bonusVal(eNonObsoleteBonus) * ((GET_PLAYER(getOwnerINLINE()).getNumTradeableBonuses(eNonObsoleteBonus) == 0) ? 4 : 2));
+						iTempValue += (GET_PLAYER(getOwner()).AI_bonusVal(eNonObsoleteBonus) * ((GET_PLAYER(getOwner()).getNumTradeableBonuses(eNonObsoleteBonus) == 0) ? 4 : 2));
 					}
 /************************************************************************************************/
 /* UNOFFICIAL_PATCH                       03/20/10                          denev & jdog5000    */
@@ -14454,9 +14454,9 @@ int CvCityAI::AI_calculateCulturePressure(bool bGreatWork)
 /* Bugfix                                                                                       */
 /************************************************************************************************/
 /* original bts code
-					if ((iTempValue > 80) && (pLoopPlot->getOwnerINLINE() == getID()))
+					if ((iTempValue > 80) && (pLoopPlot->getOwner() == getID()))
 */
-					if ((iTempValue > 80) && (pLoopPlot->getOwnerINLINE() == getOwnerINLINE()))
+					if ((iTempValue > 80) && (pLoopPlot->getOwner() == getOwner()))
 /************************************************************************************************/
 /* UNOFFICIAL_PATCH                        END                                                  */
 /************************************************************************************************/
@@ -14475,7 +14475,7 @@ int CvCityAI::AI_calculateCulturePressure(bool bGreatWork)
 						iTempValue *= 2;
 						if (bGreatWork)
 						{
-							if (GET_PLAYER(getOwnerINLINE()).AI_getAttitude(pLoopPlot->getOwnerINLINE()) == ATTITUDE_FRIENDLY)
+							if (GET_PLAYER(getOwner()).AI_getAttitude(pLoopPlot->getOwner()) == ATTITUDE_FRIENDLY)
 							{
 								iValue /= 10;
 							}
@@ -14539,13 +14539,13 @@ void CvCityAI::AI_buildGovernorChooseProduction()
 
 // BUG - Governor Builds Workboats - start
 #ifdef _MOD_GOVWORKERS
-	if (!isHuman() || GET_PLAYER(getOwnerINLINE()).isOption(PLAYEROPTION_MODDER_1))
+	if (!isHuman() || GET_PLAYER(getOwner()).isOption(PLAYEROPTION_MODDER_1))
 	{
 #endif
 	//workboat
 	if (pWaterArea != NULL)
 	{
-		if (GET_PLAYER(getOwnerINLINE()).AI_totalWaterAreaUnitAIs(pWaterArea, UNITAI_WORKER_SEA) == 0)
+		if (GET_PLAYER(getOwner()).AI_totalWaterAreaUnitAIs(pWaterArea, UNITAI_WORKER_SEA) == 0)
 		{
 			if (AI_neededSeaWorkers() > 0)
 			{
@@ -14618,7 +14618,7 @@ void CvCityAI::AI_buildGovernorChooseProduction()
 	iEconomyFlags |= BUILDINGFOCUS_HAPPY;
 	iEconomyFlags |= BUILDINGFOCUS_HEALTHY;
 	iEconomyFlags |= BUILDINGFOCUS_SPECIALIST;
-	if (!GC.getGameINLINE().isOption(GAMEOPTION_NO_ESPIONAGE))
+	if (!GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE))
 	{
 		iEconomyFlags |= BUILDINGFOCUS_ESPIONAGE;
 	}
@@ -14631,7 +14631,7 @@ void CvCityAI::AI_buildGovernorChooseProduction()
 
 // BUG - Governor Builds Workers - start
 #ifdef _MOD_GOVWORKERS
-	if (!isHuman() || GET_PLAYER(getOwnerINLINE()).isOption(PLAYEROPTION_MODDER_1))
+	if (!isHuman() || GET_PLAYER(getOwner()).isOption(PLAYEROPTION_MODDER_1))
 	{
 #endif
 	int iExistingWorkers = GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(area(), UNITAI_WORKER);
@@ -14768,8 +14768,8 @@ int CvCityAI::AI_getPlotMagicValue(CvPlot* pPlot, bool bHealthy, bool bWorkerOpt
 		{
 			for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 			{
-				int iYieldDiff = 100 * pPlot->calculateImprovementYieldChange(eFinalImprovement, ((YieldTypes)iI), getOwnerINLINE());
-				iYieldDiff -= 100 * pPlot->calculateImprovementYieldChange(eCurrentImprovement, ((YieldTypes)iI), getOwnerINLINE());
+				int iYieldDiff = 100 * pPlot->calculateImprovementYieldChange(eFinalImprovement, ((YieldTypes)iI), getOwner());
+				iYieldDiff -= 100 * pPlot->calculateImprovementYieldChange(eCurrentImprovement, ((YieldTypes)iI), getOwner());
 				aiYields[iI] += iYieldDiff / 2;
 			}
 		}
@@ -14794,7 +14794,7 @@ int CvCityAI::AI_countGoodTiles(bool bHealthy, bool bUnworkedOnly, int iThreshol
 /* JOOYO_ADDON                          END                                                     */
 /************************************************************************************************/
 	{
-		CvPlot* pLoopPlot = plotCity(getX_INLINE(),getY_INLINE(), iI);
+		CvPlot* pLoopPlot = plotCity(getX(),getY(), iI);
 		if ((iI != CITY_HOME_PLOT) && (pLoopPlot != NULL))
 		{
 			if (pLoopPlot->getWorkingCity() == this)
@@ -14822,7 +14822,7 @@ int CvCityAI::AI_calculateTargetCulturePerTurn()
 
 	for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
 	{
-		CvPlot* pLoopPlot = plotCity(getX_INLINE(),getY_INLINE(),iI);
+		CvPlot* pLoopPlot = plotCity(getX(),getY(),iI);
 
 		if (pLoopPlot != NULL)
 		{
@@ -14833,7 +14833,7 @@ int CvCityAI::AI_calculateTargetCulturePerTurn()
 				{
 					bAnyGoodPlotUnowned = true;
 				}
-				else if (pLoopPlot->getOwnerINLINE() != getOwnerINLINE())
+				else if (pLoopPlot->getOwner() != getOwner())
 				{
 					bAnyGoodPlotHighPressure = true;
 				}
@@ -14855,7 +14855,7 @@ int CvCityAI::AI_calculateTargetCulturePerTurn()
 
 int CvCityAI::AI_countGoodSpecialists(bool bHealthy)
 {
-	CvPlayerAI& kPlayer = GET_PLAYER(getOwnerINLINE());
+	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 	int iCount = 0;
 	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 	{
@@ -14904,13 +14904,13 @@ int CvCityAI::AI_getCityImportance(bool bEconomy, bool bMilitary)
 /*                                                                                              */
 /* Victory Strategy AI                                                                          */
 /************************************************************************************************/
-	if (GET_PLAYER(getOwnerINLINE()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2))
+	if (GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2))
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 	{
 		int iCultureRateRank = findCommerceRateRank(COMMERCE_CULTURE);
-		int iCulturalVictoryNumCultureCities = GC.getGameINLINE().culturalVictoryNumCultureCities();
+		int iCulturalVictoryNumCultureCities = GC.getGame().culturalVictoryNumCultureCities();
 
 		if (iCultureRateRank <= iCulturalVictoryNumCultureCities)
 		{
@@ -14938,18 +14938,18 @@ void CvCityAI::AI_stealPlots()
 
 	for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
 	{
-		CvPlot* pLoopPlot = plotCity(getX_INLINE(), getY_INLINE(), iI);
+		CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
 
 		if (pLoopPlot != NULL)
 		{
 			if (iImportance > 0)
 			{
-				if (pLoopPlot->getOwnerINLINE() == getOwnerINLINE())
+				if (pLoopPlot->getOwner() == getOwner())
 				{
 					CvCityAI* pWorkingCity = static_cast<CvCityAI*>(pLoopPlot->getWorkingCity());
 					if ((pWorkingCity != this) && (pWorkingCity != NULL))
 					{
-						FAssert(pWorkingCity->getOwnerINLINE() == getOwnerINLINE());
+						FAssert(pWorkingCity->getOwner() == getOwner());
 						int iOtherImportance = pWorkingCity->AI_getCityImportance(true, false);
 						if (iImportance > iOtherImportance)
 						{
@@ -14961,7 +14961,7 @@ void CvCityAI::AI_stealPlots()
 
 			if (pLoopPlot->getWorkingCityOverride() == this)
 			{
-				if (pLoopPlot->getOwnerINLINE() != getOwnerINLINE())
+				if (pLoopPlot->getOwner() != getOwner())
 				{
 					pLoopPlot->setWorkingCityOverride(NULL);
 				}
@@ -15000,7 +15000,7 @@ int CvCityAI::AI_buildingSpecialYieldChangeValue(BuildingTypes eBuilding, YieldT
 		{
 			if (iI != CITY_HOME_PLOT)
 			{
-				CvPlot* pLoopPlot = plotCity(getX_INLINE(), getY_INLINE(), iI);
+				CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
 				if ((pLoopPlot != NULL) && (pLoopPlot->getWorkingCity() == this))
 				{
 					if (pLoopPlot->isWater())
@@ -15121,7 +15121,7 @@ void CvCityAI::AI_updateSpecialYieldMultiplier()
 	// non-human production value increase
 	if (!isHuman())
 	{
-		CvPlayerAI& kPlayer = GET_PLAYER(getOwnerINLINE());
+		CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 		AreaAITypes eAreaAIType = area()->getAreaAIType(getTeam());
 
 		if ((kPlayer.AI_isDoStrategy(AI_STRATEGY_DAGGER) && getPopulation() >= 4)
@@ -15181,7 +15181,7 @@ int CvCityAI::AI_countNumBonuses(BonusTypes eBonus, bool bIncludeOurs, bool bInc
 	int iCount = 0;
 	for (int iI = 0; iI < getNumCityPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = plotCity(getX_INLINE(), getY_INLINE(), iI);
+		CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
 
 		if (pLoopPlot != NULL)
 		{
@@ -15192,7 +15192,7 @@ int CvCityAI::AI_countNumBonuses(BonusTypes eBonus, bool bIncludeOurs, bool bInc
 				{
 					if ((eBonus == NO_BONUS) || (eBonus == eLoopBonus))
 					{
-						if (bIncludeOurs && (pLoopPlot->getOwnerINLINE() == getOwnerINLINE()) && (pLoopPlot->getWorkingCity() == this))
+						if (bIncludeOurs && (pLoopPlot->getOwner() == getOwner()) && (pLoopPlot->getWorkingCity() == this))
 						{
 							iCount++;
 						}
@@ -15200,9 +15200,9 @@ int CvCityAI::AI_countNumBonuses(BonusTypes eBonus, bool bIncludeOurs, bool bInc
 						{
 							iCount++;
 						}
-						else if ((iOtherCultureThreshold > 0) && (pLoopPlot->isOwned() && (pLoopPlot->getOwnerINLINE() != getOwnerINLINE())))
+						else if ((iOtherCultureThreshold > 0) && (pLoopPlot->isOwned() && (pLoopPlot->getOwner() != getOwner())))
 						{
-							if ((pLoopPlot->getCulture(pLoopPlot->getOwnerINLINE()) - pLoopPlot->getCulture(getOwnerINLINE())) < iOtherCultureThreshold)
+							if ((pLoopPlot->getCulture(pLoopPlot->getOwner()) - pLoopPlot->getCulture(getOwner())) < iOtherCultureThreshold)
 							{
 								iCount++;
 							}
@@ -15228,7 +15228,7 @@ int CvCityAI::AI_countNumImprovableBonuses( bool bIncludeNeutral, TechTypes eExt
 	int iCount = 0;
 	for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
 	{
-		CvPlot* pLoopPlot = plotCity(getX_INLINE(), getY_INLINE(), iI);
+		CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
 
 		if (pLoopPlot != NULL)
 		{
@@ -15237,13 +15237,13 @@ int CvCityAI::AI_countNumImprovableBonuses( bool bIncludeNeutral, TechTypes eExt
 				BonusTypes eLoopBonus = pLoopPlot->getBonusType(getTeam());
 				if (eLoopBonus != NO_BONUS)
 				{
-					if ( ((pLoopPlot->getOwnerINLINE() == getOwnerINLINE()) && (pLoopPlot->getWorkingCity() == this)) || (bIncludeNeutral && (!pLoopPlot->isOwned())))
+					if ( ((pLoopPlot->getOwner() == getOwner()) && (pLoopPlot->getWorkingCity() == this)) || (bIncludeNeutral && (!pLoopPlot->isOwned())))
 					{
 						const std::vector<std::pair<ImprovementTypes,BuildTypes> >* improvements = GC.getBonusInfo(eLoopBonus).getTradeProvidingImprovements();
 
 						for(std::vector<std::pair<ImprovementTypes,BuildTypes> >::const_iterator itr = improvements->begin(); itr != improvements->end(); ++itr)
 						{
-							if ( GET_PLAYER(getOwnerINLINE()).canBuild(pLoopPlot, itr->second) )
+							if ( GET_PLAYER(getOwner()).canBuild(pLoopPlot, itr->second) )
 							{
 								iCount++;
 								break;
@@ -15326,7 +15326,7 @@ void CvCityAI::AI_cachePlayerCloseness(int iMaxDistance)
 					continue;
 				}
 
-				int iDistance = stepDistance(getX_INLINE(), getY_INLINE(), pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE());
+				int iDistance = stepDistance(getX(), getY(), pLoopCity->getX(), pLoopCity->getY());
 
 				if (area() != pLoopCity->area() )
 				{
@@ -15387,7 +15387,7 @@ int	CvCityAI::getPlayerDangerPercentage(PlayerTypes ePlayer, int& iModifier) con
 	iModifier = 0;
 
 	CvPlayer& kPlayer = GET_PLAYER(ePlayer);
-	bool bCrushStrategy = GET_PLAYER(getOwnerINLINE()).AI_isDoStrategy(AI_STRATEGY_CRUSH);
+	bool bCrushStrategy = GET_PLAYER(getOwner()).AI_isDoStrategy(AI_STRATEGY_CRUSH);
 
 	int	iResult = 0;
 	if ((bCrushStrategy) && (GET_TEAM(getTeam()).AI_getWarPlan(kPlayer.getTeam()) != NO_WARPLAN))
@@ -15411,7 +15411,7 @@ int	CvCityAI::getPlayerDangerPercentage(PlayerTypes ePlayer, int& iModifier) con
 	}
 	else
 	{
-		switch (GET_PLAYER(getOwnerINLINE()).AI_getAttitude(ePlayer))
+		switch (GET_PLAYER(getOwner()).AI_getAttitude(ePlayer))
 		{
 		case ATTITUDE_FURIOUS:
 			iResult = 180;
@@ -15442,10 +15442,10 @@ int	CvCityAI::getPlayerDangerPercentage(PlayerTypes ePlayer, int& iModifier) con
 /*	RevDCM Better BUG AI changes	28.10.2010							Fuyu	*/
 /********************************************************************************/
 		// Beef up border security next to powerful rival, (Fuyu) just not too much if our units are weaker on average
-		if( kPlayer.getPower() > GET_PLAYER(getOwnerINLINE()).getPower() )
+		if( kPlayer.getPower() > GET_PLAYER(getOwner()).getPower() )
 		{
-			int iTempMultiplier = std::min( 400, (100 * kPlayer.getPower())/std::max(1, GET_PLAYER(getOwnerINLINE()).getPower()) );
-			iTempMultiplier += range(( (100 * kPlayer.getNumMilitaryUnits())/std::max(1, GET_PLAYER(getOwnerINLINE()).getNumMilitaryUnits()) ), 100, iTempMultiplier);
+			int iTempMultiplier = std::min( 400, (100 * kPlayer.getPower())/std::max(1, GET_PLAYER(getOwner()).getPower()) );
+			iTempMultiplier += range(( (100 * kPlayer.getNumMilitaryUnits())/std::max(1, GET_PLAYER(getOwner()).getNumMilitaryUnits()) ), 100, iTempMultiplier);
 			iTempMultiplier /= 2;
 			iResult *= iTempMultiplier;
 			iResult /= 100;
@@ -15478,7 +15478,7 @@ int	CvCityAI::getPlayerDangerPercentage(PlayerTypes ePlayer, int& iModifier) con
 	//	Koshling - modify by the difference in difficulty levels between us and the player
 	//	concerned (upwards only). This is to encourage the AI to be more prepared against humnas
 	//	playing on higher difficulties
-	int	iDifficultyDifference = (GET_PLAYER(getOwnerINLINE()).getHandicapType() - GET_PLAYER(ePlayer).getHandicapType());
+	int	iDifficultyDifference = (GET_PLAYER(getOwner()).getHandicapType() - GET_PLAYER(ePlayer).getHandicapType());
 	if ( iDifficultyDifference < 0 )
 	{
 		iModifier = -10*iDifficultyDifference;
@@ -15529,13 +15529,13 @@ int CvCityAI::AI_cityThreat(TeamTypes eTargetTeam, int* piThreatModifier)
 
 	if (isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))
 	{
-		int iCurrentEra = GET_PLAYER(getOwnerINLINE()).getCurrentEra();
+		int iCurrentEra = GET_PLAYER(getOwner()).getCurrentEra();
 		iValue += std::max(0, ((10 * iCurrentEra) / 3) - 6); //there are better ways to do this
 	}
 
 	iValue += getNumActiveWorldWonders() * 5;
 
-	if (GET_PLAYER(getOwnerINLINE()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3))
+	if (GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3))
 	{
 		iValue += 5;
 		iValue += getTotalCommerceRateModifier(COMMERCE_CULTURE) / 20;
@@ -15549,7 +15549,7 @@ int CvCityAI::AI_cityThreat(TeamTypes eTargetTeam, int* piThreatModifier)
 		}
 	}
 
-	iValue += 2 * GET_PLAYER(getOwnerINLINE()).AI_getPlotDanger(plot(), 3, false);
+	iValue += 2 * GET_PLAYER(getOwner()).AI_getPlotDanger(plot(), 3, false);
 /************************************************************************************************/
 /* REVOLUTION_MOD                         05/22/08                                jdog5000      */
 /*                                                                                              */
@@ -15637,7 +15637,7 @@ void CvCityAI::AI_updateWorkersNeededHere()
 /* 	Worker Counting						03.08.2010				Fuyu			*/
 /********************************************************************************/
 	//iWorkersHave += iWorkersHaveByPlotTargetMissionAI;
-	int iWorkersHaveByPlotTargetMissionAI = AI_workingCityPlotTargetMissionAIs(getOwnerINLINE(), MISSIONAI_BUILD, UNITAI_WORKER, true);
+	int iWorkersHaveByPlotTargetMissionAI = AI_workingCityPlotTargetMissionAIs(getOwner(), MISSIONAI_BUILD, UNITAI_WORKER, true);
 	int iWorkersHaveNewlyBuilt = 0;
 /********************************************************************************/
 /* 	Worker Counting 											END 			*/
@@ -15662,7 +15662,7 @@ void CvCityAI::AI_updateWorkersNeededHere()
 //Fuyu: it might matter, so if we can make it NUM_CITY_PLOT times faster
 //then lets do it. Moved to before the loop
 /* original code
-				iWorkersHave += (GET_PLAYER(getOwnerINLINE()).AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_BUILD));
+				iWorkersHave += (GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_BUILD));
 */
 
 //was counting workers twice because missionais are never reset
@@ -15788,9 +15788,9 @@ void CvCityAI::AI_updateWorkersNeededHere()
 		}
 	}
 
-	iWorkersNeeded += (std::max(0, iUnimprovedWorkedPlotCount - 1) * (GET_PLAYER(getOwnerINLINE()).getCurrentEra())) / 3;
+	iWorkersNeeded += (std::max(0, iUnimprovedWorkedPlotCount - 1) * (GET_PLAYER(getOwner()).getCurrentEra())) / 3;
 
-	if (GET_PLAYER(getOwnerINLINE()).AI_isFinancialTrouble())
+	if (GET_PLAYER(getOwner()).AI_isFinancialTrouble())
 	{
 		iWorkersNeeded *= 3;
 		iWorkersNeeded /= 2;
@@ -15920,7 +15920,7 @@ BuildingTypes CvCityAI::AI_bestAdvancedStartBuilding(int iPass)
 	if (iPass >= 5)
 	{
 		iFocusFlags |= (BUILDINGFOCUS_GOLD | BUILDINGFOCUS_RESEARCH | BUILDINGFOCUS_MAINTENANCE);
-		if (!GC.getGameINLINE().isOption(GAMEOPTION_NO_ESPIONAGE))
+		if (!GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE))
 		{
 			iFocusFlags |= BUILDINGFOCUS_ESPIONAGE;
 		}
@@ -16057,9 +16057,9 @@ void CvCityAI::write(FDataStreamBase* pStream)
 /************************************************************************************************/
 bool CvCityAI::AI_trainInquisitor()
 {
-	CvPlayerAI& kPlayerAI = GET_PLAYER(getOwnerINLINE());
+	CvPlayerAI& kPlayerAI = GET_PLAYER(getOwner());
 
-	if( GC.getGameINLINE().isOption(GAMEOPTION_NO_INQUISITIONS)
+	if( GC.getGame().isOption(GAMEOPTION_NO_INQUISITIONS)
 	|| !kPlayerAI.isInquisitionConditions() )
 	{
 		return false;
@@ -16121,7 +16121,7 @@ bool CvCityAI::AI_trainInquisitor()
 	iBuildOdds -= 3;
 	if (iBuildOdds > 0)
 	{
-		if (GC.getGameINLINE().getSorenRandNum(100, "AI choose Inquisitor") < iBuildOdds)
+		if (GC.getGame().getSorenRandNum(100, "AI choose Inquisitor") < iBuildOdds)
 		{
 			pushOrder(ORDER_TRAIN, eBestUnit, -1, false, false, false);
 			return true;
@@ -16165,11 +16165,11 @@ bool CvCityAI::AI_buildCaravan()
 
 	int iAveProduction = 0;
 	int iLoop = 0;
-	for (CvCity* pLoopCity = GET_PLAYER(getOwnerINLINE()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwnerINLINE()).nextCity(&iLoop))
+	for (CvCity* pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
 	{
 		iAveProduction += pLoopCity->getYieldRate(YIELD_PRODUCTION);
 	}
-	int iNumCities = GET_PLAYER(getOwnerINLINE()).getNumCities();
+	int iNumCities = GET_PLAYER(getOwner()).getNumCities();
 	iAveProduction /= iNumCities;
 
 	UnitTypes eBestUnit = NO_UNIT;
@@ -16190,16 +16190,16 @@ bool CvCityAI::AI_buildCaravan()
 		if (eBestUnit != NO_UNIT)
 		{
 			int iOdds = 100;
-			if (GC.getGameINLINE().isOption(GAMEOPTION_AGGRESSIVE_AI))
+			if (GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI))
 				iOdds *= 2;
 			iOdds /= iNumCities;
 			iOdds *= iAveProduction;
 			iOdds /= std::max(1, getYieldRate(YIELD_PRODUCTION));
 			iOdds = std::max(1, iOdds);
-			if (GC.getGameINLINE().getSorenRandNum(iOdds, "Caravan Production") == 0)
+			if (GC.getGame().getSorenRandNum(iOdds, "Caravan Production") == 0)
 			{
 				pushOrder(ORDER_TRAIN, eBestUnit, -1, false, false, false);
-				//GC.getGameINLINE().logMsg("City %S built a caravan", getName().GetCString());
+				//GC.getGame().logMsg("City %S built a caravan", getName().GetCString());
 				return true;
 			}
 		}
@@ -16299,7 +16299,7 @@ int CvCityAI::AI_getPromotionValue(PromotionTypes ePromotion) const
 					{
 						if (canTrain(eLoopUnit))
 						{
-							iValue += GET_PLAYER(getOwnerINLINE()).AI_promotionValue(ePromotion, eLoopUnit);
+							iValue += GET_PLAYER(getOwner()).AI_promotionValue(ePromotion, eLoopUnit);
 						}
 					}
 				}
@@ -16402,7 +16402,7 @@ int CvCityAI::AI_getMilitaryProductionRateRank() const
 
 	int iLoop;
 	CvCity* pLoopCity;
-	for (pLoopCity = GET_PLAYER(getOwnerINLINE()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwnerINLINE()).nextCity(&iLoop))
+	for (pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
 	{
 		int iLoopRate = pLoopCity->getPopulation() + pLoopCity->getYieldRate(YIELD_PRODUCTION) - pLoopCity->getYieldRate(YIELD_COMMERCE);
 		if ((iLoopRate > iRate) ||
@@ -16465,7 +16465,7 @@ int CvCityAI::AI_getNavalMilitaryProductionRateRank() const
 
 	int iLoop;
 	CvCity* pLoopCity;
-	for (pLoopCity = GET_PLAYER(getOwnerINLINE()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwnerINLINE()).nextCity(&iLoop))
+	for (pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
 	{
 		int iLoopRate = pLoopCity->getPopulation() + pLoopCity->getYieldRate(YIELD_PRODUCTION) - pLoopCity->getYieldRate(YIELD_COMMERCE);
 		if ((iLoopRate > iRate) ||
@@ -16905,12 +16905,12 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 		bool bSIN = false;
 		bool bZOC = false;
 
-		if (GC.getGameINLINE().isOption(GAMEOPTION_SAD))
+		if (GC.getGame().isOption(GAMEOPTION_SAD))
 		{
 			bSAD = (kBuilding.getLocalDynamicDefense() > 0);
 		}
 
-		if (GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+		if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 		{
 			bSIN =  ((kBuilding.getFrontSupportPercentModifier() > 0) ||
 			(kBuilding.getShortRangeSupportPercentModifier() > 0) ||
@@ -16919,7 +16919,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			(kBuilding.getFlankSupportPercentModifier() > 0)) ;
 		}
 
-		if (!GC.getGameINLINE().isOption(GAMEOPTION_NO_ZOC))
+		if (!GC.getGame().isOption(GAMEOPTION_NO_ZOC))
 		{
 			bZOC = kBuilding.isZoneOfControl();
 		}
@@ -16983,7 +16983,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			 kBuilding.getBonusHappinessChanges(NO_BONUS) > 0 ||
 			 kBuilding.getBuildingHappinessChanges(NO_BUILDING) > 0 ||
 			 kBuilding.getTechHappinessChanges(NO_TECH) > 0 ||
-			 GET_PLAYER(getOwnerINLINE()).getExtraBuildingHappiness(eBuilding) > 0 ||
+			 GET_PLAYER(getOwner()).getExtraBuildingHappiness(eBuilding) > 0 ||
 			 bTechHapp
 			 )
 		{
@@ -17014,7 +17014,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			 kBuilding.getBonusHealthChanges(NO_BONUS) > 0 ||
 			 kBuilding.getTechHealthChanges(NO_TECH) > 0 ||
 			 kBuilding.getHealthPercentPerPopulation() > 0 ||
-			 GET_PLAYER(getOwnerINLINE()).getExtraBuildingHealth(eBuilding) > 0 ||
+			 GET_PLAYER(getOwner()).getExtraBuildingHealth(eBuilding) > 0 ||
 			 bTechHealth
 			 )
 		{
@@ -17176,7 +17176,7 @@ retry:
 			{
 				if (iResult > 0)
 				{
-					CvPlayerAI& kOwner = GET_PLAYER(getOwnerINLINE());
+					CvPlayerAI& kOwner = GET_PLAYER(getOwner());
 					CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
 					for (int iI = 0; iI < GC.getNumFlavorTypes(); iI++)
@@ -17226,7 +17226,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 	PROFILE_FUNC()
 
 	//	KOSHLING optimisation - moved what we could outside of the building loop
-	CvPlayerAI& kOwner = GET_PLAYER(getOwnerINLINE());
+	CvPlayerAI& kOwner = GET_PLAYER(getOwner());
 	ReligionTypes eStateReligion = kOwner.getStateReligion();
 	bool bAreaAlone = kOwner.AI_isAreaAlone(area());
 	int iHasMetCount = GET_TEAM(getTeam()).getHasMetCivCount(true);
@@ -17259,7 +17259,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 	int iBaseFoodDifference = getYieldRate(YIELD_FOOD) - iConsumptionbyPopulation - std::max(0, -iHealthLevel);
 
-	int iGoldValueAssessmentModifier = GET_PLAYER(getOwnerINLINE()).AI_goldValueAssessmentModifier();
+	int iGoldValueAssessmentModifier = GET_PLAYER(getOwner()).AI_goldValueAssessmentModifier();
 
 	//Temporary unhappiness that will mostly not be ignored
 	int iTemporaryUnhappiness = 0;
@@ -17272,7 +17272,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 	int iTotalPopulation = kOwner.getTotalPopulation();
 	int iNumCities = kOwner.getNumCities();
-	int iNumCitiesInArea = area()->getCitiesPerPlayer(getOwnerINLINE());
+	int iNumCitiesInArea = area()->getCitiesPerPlayer(getOwner());
 
 	int aiYieldRank[NUM_YIELD_TYPES];
 	for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
@@ -17304,9 +17304,9 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 	int iCultureRank = findCommerceRateRank(COMMERCE_CULTURE);
 	aiCommerceRank[COMMERCE_CULTURE] = iCultureRank;
 
-	int iCulturalVictoryNumCultureCities = GC.getGameINLINE().culturalVictoryNumCultureCities();
+	int iCulturalVictoryNumCultureCities = GC.getGame().culturalVictoryNumCultureCities();
 
-	bool bFinancialTrouble = GET_PLAYER(getOwnerINLINE()).AI_isFinancialTrouble();
+	bool bFinancialTrouble = GET_PLAYER(getOwner()).AI_isFinancialTrouble();
 
 	int iAllowedShrinkRate = (iConsumptionPerPopulationBase * (0
 		+ std::max(0, -iBaseHappinessLevel - iTemporaryUnhappiness)
@@ -17318,11 +17318,11 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 	/*                                                                                              */
 	/* Victory Strategy AI                                                                          */
 	/************************************************************************************************/
-	bool bCulturalVictory1 = GET_PLAYER(getOwnerINLINE()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE1);
-	bool bCulturalVictory2 = GET_PLAYER(getOwnerINLINE()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2);
-	bool bCulturalVictory3 = GET_PLAYER(getOwnerINLINE()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3);
+	bool bCulturalVictory1 = GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE1);
+	bool bCulturalVictory2 = GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2);
+	bool bCulturalVictory3 = GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3);
 
-	bool bSpaceVictory1 = GET_PLAYER(getOwnerINLINE()).AI_isDoVictoryStrategy(AI_VICTORY_SPACE1);
+	bool bSpaceVictory1 = GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_SPACE1);
 	/************************************************************************************************/
 	/* BETTER_BTS_AI_MOD                       END                                                  */
 	/************************************************************************************************/
@@ -17523,11 +17523,11 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo(eNewSpecialist);
 					for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 					{
-						aiFreeSpecialistYield[iJ] += GET_PLAYER(getOwnerINLINE()).specialistYield(eNewSpecialist, (YieldTypes)iJ);
+						aiFreeSpecialistYield[iJ] += GET_PLAYER(getOwner()).specialistYield(eNewSpecialist, (YieldTypes)iJ);
 					}
 					for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 					{
-						aiFreeSpecialistCommerce[iJ] += GET_PLAYER(getOwnerINLINE()).specialistCommerce(eNewSpecialist, (CommerceTypes)iJ);
+						aiFreeSpecialistCommerce[iJ] += GET_PLAYER(getOwner()).specialistCommerce(eNewSpecialist, (CommerceTypes)iJ);
 					}
 					iSpecialistGreatPeopleRate += kSpecialist.getGreatPeopleRateChange();
 					iSpecialistExtraHealth += kSpecialist.getHealthPercent();
@@ -17540,7 +17540,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				/************************************************************************************************/
 				/* Afforess	                     END                                                            */
 				/************************************************************************************************/
-				bool bCanPopRush = GET_PLAYER(getOwnerINLINE()).canPopRush();
+				bool bCanPopRush = GET_PLAYER(getOwner()).canPopRush();
 
 				bool bForeignTrade = false;
 				int iNumTradeRoutes = getTradeRoutes();
@@ -17549,7 +17549,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					CvCity* pTradeCity = getTradeCity(iI);
 					if (NULL != pTradeCity)
 					{
-						if (GET_PLAYER(pTradeCity->getOwnerINLINE()).getTeam() != getTeam() || pTradeCity->area() != area())
+						if (GET_PLAYER(pTradeCity->getOwner()).getTeam() != getTeam() || pTradeCity->area() != area())
 						{
 							bForeignTrade = true;
 							break;
@@ -17637,7 +17637,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 							if (!bAreaAlone)
 							{
-								if ((GC.getGameINLINE().getBestLandUnit() == NO_UNIT) || !(GC.getUnitInfo(GC.getGameINLINE().getBestLandUnit()).isIgnoreBuildingDefense()))
+								if ((GC.getGame().getBestLandUnit() == NO_UNIT) || !(GC.getUnitInfo(GC.getGame().getBestLandUnit()).isIgnoreBuildingDefense()))
 								{
 									iValue += (std::max(0, std::min(((kBuilding.getDefenseModifier() + getBuildingDefense()) - getNaturalDefense() - 10), kBuilding.getDefenseModifier())) / 4);
 
@@ -17651,7 +17651,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 								}
 
 
-								if (!GC.getGameINLINE().isOption(GAMEOPTION_NO_ZOC))
+								if (!GC.getGame().isOption(GAMEOPTION_NO_ZOC))
 								{
 									iValue += kBuilding.isZoneOfControl() ? 50 : 0;
 								}
@@ -17723,11 +17723,11 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 								iValue += kBuilding.getBombardDefenseModifier() / 4;
 
-								if (GC.getGameINLINE().isOption(GAMEOPTION_SAD))
+								if (GC.getGame().isOption(GAMEOPTION_SAD))
 								{
 									iValue += kBuilding.getLocalDynamicDefense() / 2;
 								}
-								if (GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+								if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 								{
 									iValue += kBuilding.getFrontSupportPercentModifier() / 4;
 									iValue += kBuilding.getShortRangeSupportPercentModifier() / 4;
@@ -17773,11 +17773,11 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 							iValue += kBuilding.getAirlift() * 25;
 
-							if (kBuilding.isAreaBorderObstacle() && !GC.getGameINLINE().isOption(GAMEOPTION_NO_BARBARIANS))
+							if (kBuilding.isAreaBorderObstacle() && !GC.getGame().isOption(GAMEOPTION_NO_BARBARIANS))
 							{
 								int areaBorderObstacleValue = iNumCitiesInArea*3/2;
 								//The great wall is much more valuable with more barbarian activity.
-								if (GC.getGameINLINE().isOption(GAMEOPTION_RAGING_BARBARIANS))
+								if (GC.getGame().isOption(GAMEOPTION_RAGING_BARBARIANS))
 									areaBorderObstacleValue *=2;
 								iValue += areaBorderObstacleValue;
 							}
@@ -17917,7 +17917,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 			/*                                                                                              */
 			/*                                                                                              */
 			/************************************************************************************************/
-							if (!GC.getGameINLINE().isOption(GAMEOPTION_NO_REVOLUTION))
+							if (!GC.getGame().isOption(GAMEOPTION_NO_REVOLUTION))
 							{
 								if (kBuilding.getRevIdxLocal() != 0)
 								{
@@ -17936,16 +17936,16 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 								}
 								if (kBuilding.getRevIdxNational() != 0)
 								{
-									iValue -= (8 * GET_PLAYER(getOwnerINLINE()).getNumCities()) * kBuilding.getRevIdxNational();
+									iValue -= (8 * GET_PLAYER(getOwner()).getNumCities()) * kBuilding.getRevIdxNational();
 								}
 								if (kBuilding.getRevIdxDistanceModifier() != 0)
 								{
 									if (!isCapital())
 									{
-										CvCity* pCapital = GET_PLAYER(getOwnerINLINE()).getCapitalCity();
+										CvCity* pCapital = GET_PLAYER(getOwner()).getCapitalCity();
 										if (pCapital != NULL)
 										{
-											int iCapitalDistance = ::plotDistance(getX_INLINE(), getY_INLINE(), pCapital->getX_INLINE(), pCapital->getY_INLINE());
+											int iCapitalDistance = ::plotDistance(getX(), getY(), pCapital->getX(), pCapital->getY());
 											int iOldCapitalDistance = iCapitalDistance;
 											iCapitalDistance *= 100 + kBuilding.getRevIdxDistanceModifier();
 											iCapitalDistance /= 100;
@@ -18404,7 +18404,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 							{
 								if (iI != GC.getDefineINT("DEFAULT_SPECIALIST"))
 								{
-									bool bUnlimited = (GET_PLAYER(getOwnerINLINE()).isSpecialistValid((SpecialistTypes)iI));
+									bool bUnlimited = (GET_PLAYER(getOwner()).isSpecialistValid((SpecialistTypes)iI));
 									int iRunnable = (getMaxSpecialistCount((SpecialistTypes)iI) > 0);
 
 									if (bUnlimited || (iRunnable > 0))
@@ -18548,7 +18548,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 							if (kBuilding.isAreaCleanPower() && !(area()->isCleanPower(getTeam())))
 							{
 								int iLoop;
-								for( CvCity* pLoopCity = GET_PLAYER(getOwnerINLINE()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwnerINLINE()).nextCity(&iLoop) )
+								for( CvCity* pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop) )
 								{
 									if( pLoopCity->area() == area() )
 									{
@@ -18572,11 +18572,11 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 							if (kBuilding.isAreaBorderObstacle() && !(area()->isBorderObstacle(getTeam())))
 							{
-								if( !GC.getGameINLINE().isOption(GAMEOPTION_NO_BARBARIANS) )
+								if( !GC.getGame().isOption(GAMEOPTION_NO_BARBARIANS) )
 								{
 									iValue += (iNumCitiesInArea);
 
-									if(GC.getGameINLINE().isOption(GAMEOPTION_RAGING_BARBARIANS))
+									if(GC.getGame().isOption(GAMEOPTION_RAGING_BARBARIANS))
 									{
 										iValue += (iNumCitiesInArea);
 									}
@@ -18815,9 +18815,9 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 								{
 									if (GET_TEAM((TeamTypes)iI).isAlive())
 									{
-										if (!GET_TEAM(GET_PLAYER(getOwnerINLINE()).getTeam()).isVassal((TeamTypes)iI))
+										if (!GET_TEAM(GET_PLAYER(getOwner()).getTeam()).isVassal((TeamTypes)iI))
 										{
-											if (!GET_TEAM(GET_PLAYER(getOwnerINLINE()).getTeam()).isOpenBorders((TeamTypes)iI))
+											if (!GET_TEAM(GET_PLAYER(getOwner()).getTeam()).isOpenBorders((TeamTypes)iI))
 											{
 												forceTradeRoutesValue += GET_TEAM((TeamTypes)iI).getNumCities() * 2;
 											}
@@ -18839,7 +18839,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 										if (canTrain(eLoopUnit))
 										{
 											UnitAITypes eUnitAI = (UnitAITypes) GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType();
-											//unitProductionModifierValue += GET_PLAYER(getOwnerINLINE()).AI_unitValue(eLoopUnit, eUnitAI, area()) * iModifier / 100;
+											//unitProductionModifierValue += GET_PLAYER(getOwner()).AI_unitValue(eLoopUnit, eUnitAI, area()) * iModifier / 100;
 
 											UnitTypes eBestUnit = kOwner.bestBuildableUnitForAIType((DomainTypes)GC.getUnitInfo(eLoopUnit).getDomainType(), eUnitAI);
 											int iBuildCost;
@@ -18893,7 +18893,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 								int iLoop;
 								int iCityCount = 0;
 								int popGrowthRateGlobalValue = 0;
-								for (CvCity* pLoopCity = GET_PLAYER(getOwnerINLINE()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwnerINLINE()).nextCity(&iLoop))
+								for (CvCity* pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
 								{
 									int iCityHappy = pLoopCity->happyLevel() - pLoopCity->unhappyLevel();
 									int iCurrentFoodToGrow = pLoopCity->growthThreshold();
@@ -18966,7 +18966,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 													int iLoop;
 													int iCount = 0;
 
-													for (CvCity* pLoopCity = GET_PLAYER(getOwnerINLINE()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwnerINLINE()).nextCity(&iLoop))
+													for (CvCity* pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
 													{
 														if ( pLoopCity->getNumBuilding(eLoopBuilding) == 0 )
 														{
@@ -18995,7 +18995,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 								{
 									if (iI != CITY_HOME_PLOT)
 									{
-										pLoopPlot = plotCity(getX_INLINE(), getY_INLINE(), iI);
+										pLoopPlot = plotCity(getX(), getY(), iI);
 										if (pLoopPlot != NULL &&
 											!pLoopPlot->isWater() &&
 											!pLoopPlot->isFreshWater() &&
@@ -19047,7 +19047,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 											//this gives a very large extra value if the religion is (nearly) unique
 											//to no extra value for a fully spread religion.
 											//I'm torn between huge boost and enough to bias towards the best monastery type.
-											int iReligionCount = GET_PLAYER(getOwnerINLINE()).getHasReligionCount(eReligion);
+											int iReligionCount = GET_PLAYER(getOwner()).getHasReligionCount(eReligion);
 											religiousBuildingValue += (100 * (iNumCities - iReligionCount)) / (iNumCities * (iReligionCount + 1));
 										}
 									}
@@ -19123,7 +19123,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 											if ((iPlayer != getOwner()) && kLoopPlayer.isAlive())
 											{
 												iPlayerCount++;
-												if (GET_PLAYER(getOwnerINLINE()).getStateReligion() == kLoopPlayer.getStateReligion())
+												if (GET_PLAYER(getOwner()).getStateReligion() == kLoopPlayer.getStateReligion())
 												{
 													iShareReligionCount++;
 												}
@@ -19136,7 +19136,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 										votesValue += 100;
 									}
 
-									iValue += (votesValue * (GET_PLAYER(getOwnerINLINE()).AI_isDoVictoryStrategy(AI_VICTORY_DIPLOMACY1) ? 5 : 1));
+									iValue += (votesValue * (GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_DIPLOMACY1) ? 5 : 1));
 								}
 			/************************************************************************************************/
 			/* BETTER_BTS_AI_MOD                       END                                                  */
@@ -19350,7 +19350,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 							valuesCache->AccumulateTo(BUILDINGFOCUSINDEX_BIGCULTURE, getBuildingCommerceValue(eBuilding, COMMERCE_CULTURE, aiFreeSpecialistYield, aiFreeSpecialistCommerce, aiBaseCommerceRate, aiPlayerCommerceRate)/5,true);
 
-							if (GC.getGameINLINE().isOption(GAMEOPTION_NO_ESPIONAGE))
+							if (GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE))
 							{
 								valuesCache->AccumulateTo(BUILDINGFOCUSINDEX_CULTURE, getBuildingCommerceValue(eBuilding, COMMERCE_ESPIONAGE, aiFreeSpecialistYield, aiFreeSpecialistCommerce, aiBaseCommerceRate, aiPlayerCommerceRate),true);
 							}
@@ -19385,7 +19385,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiFreeSpecialistYield, int* aiFreeSpecialistCommerce, int* aiBaseCommerceRate, int* aiPlayerCommerceRate)
 {
 	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
-	CvPlayerAI& kOwner = GET_PLAYER(getOwnerINLINE());
+	CvPlayerAI& kOwner = GET_PLAYER(getOwner());
 	int iLimitedWonderLimit = limitedWonderClassLimit((BuildingClassTypes)kBuilding.getBuildingClassType());
 	bool bCulturalVictory1 = kOwner.AI_isDoVictoryStrategy(AI_VICTORY_CULTURE1);
 	// unused: bool bCulturalVictory2 = kOwner.AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2);
@@ -19486,7 +19486,7 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 			}
 		}
 	}
-	iTempValue *= GET_PLAYER(getOwnerINLINE()).getCommercePercent((CommerceTypes)iI);
+	iTempValue *= GET_PLAYER(getOwner()).getCommercePercent((CommerceTypes)iI);
 	iTempValue /= 100;
 	iResult += iTempValue;
 
@@ -19532,7 +19532,7 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 	if (((CommerceTypes) iI) == COMMERCE_CULTURE && iCommerceModifier != 0)
 	{
 		int iCultureRateRank = findCommerceRateRank(COMMERCE_CULTURE);
-		int iCulturalVictoryNumCultureCities = GC.getGameINLINE().culturalVictoryNumCultureCities();
+		int iCulturalVictoryNumCultureCities = GC.getGame().culturalVictoryNumCultureCities();
 
 		if (bCulturalVictory1)
 		{
@@ -19590,7 +19590,7 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 			iCommerceMultiplierValue /= 15;
 
 			// increase priority if we need culture oppressed city
-			iCommerceMultiplierValue *= (100 - calculateCulturePercent(getOwnerINLINE()));
+			iCommerceMultiplierValue *= (100 - calculateCulturePercent(getOwner()));
 		}
 	}
 	else
@@ -19599,7 +19599,7 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 	}
 	iResult += iCommerceMultiplierValue;
 
-	iResult += (kBuilding.getGlobalCommerceModifier(iI) * GET_PLAYER(getOwnerINLINE()).getCommerceRate((CommerceTypes) iI))/8;
+	iResult += (kBuilding.getGlobalCommerceModifier(iI) * GET_PLAYER(getOwner()).getCommerceRate((CommerceTypes) iI))/8;
 	//iResult += ((kBuilding.getGlobalCommerceModifier(iI) * kOwner.getNumCities()) / 4);
 	iResult += ((kBuilding.getSpecialistExtraCommerce(iI) * kOwner.getTotalPopulation()) / 3);
 
@@ -19610,7 +19610,7 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 
 	if (kBuilding.getGlobalReligionCommerce() != NO_RELIGION)
 	{
-		iResult += (GC.getReligionInfo((ReligionTypes)(kBuilding.getGlobalReligionCommerce())).getGlobalReligionCommerce(iI) * GC.getGameINLINE().countReligionLevels((ReligionTypes)(kBuilding.getGlobalReligionCommerce())) * 2);
+		iResult += (GC.getReligionInfo((ReligionTypes)(kBuilding.getGlobalReligionCommerce())).getGlobalReligionCommerce(iI) * GC.getGame().countReligionLevels((ReligionTypes)(kBuilding.getGlobalReligionCommerce())) * 2);
 		if (eStateReligion == (ReligionTypes)(kBuilding.getGlobalReligionCommerce()))
 		{
 			iResult += 10;
@@ -19655,7 +19655,7 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 	{
 		if (kBuilding.getGlobalCorporationCommerce() != NO_CORPORATION)
 		{
-			int iGoldValue = (GC.getCorporationInfo((CorporationTypes)(kBuilding.getGlobalCorporationCommerce())).getHeadquarterCommerce(iI) * GC.getGameINLINE().countCorporationLevels((CorporationTypes)(kBuilding.getGlobalCorporationCommerce())) * 2);
+			int iGoldValue = (GC.getCorporationInfo((CorporationTypes)(kBuilding.getGlobalCorporationCommerce())).getHeadquarterCommerce(iI) * GC.getGame().countCorporationLevels((CorporationTypes)(kBuilding.getGlobalCorporationCommerce())) * 2);
 
 			iGoldValue += GC.getCorporationInfo((CorporationTypes)(kBuilding.getGlobalCorporationCommerce())).getHeadquarterCommerce(iI);
 			if (iGoldValue > 0)
@@ -19723,7 +19723,7 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 	//	extra weight
 	if ( iI == COMMERCE_RESEARCH )
 	{
-		int iPlayerTotal = GET_PLAYER(getOwnerINLINE()).getCommerceRate(COMMERCE_RESEARCH);
+		int iPlayerTotal = GET_PLAYER(getOwner()).getCommerceRate(COMMERCE_RESEARCH);
 
 		if ( iPlayerTotal <= 0 )
 		{
@@ -19745,7 +19745,7 @@ int CvCityAI::tradeRouteValue(CvBuildingInfo& kBuilding, YieldTypes eYield, bool
 
 	int	iExtraTradeRoutes = kBuilding.getTradeRoutes();
 	int iCurrentTradeRoutes = getTradeRoutes();
-	CvPlayerAI&	kOwner = GET_PLAYER(getOwnerINLINE());
+	CvPlayerAI&	kOwner = GET_PLAYER(getOwner());
 
 	int	iTradeRouteValue = 0;
 	if ( iCurrentTradeRoutes <= -iExtraTradeRoutes )
@@ -19919,10 +19919,10 @@ int CvCityAI::getPropertySourceValue(PropertyTypes eProperty, int iSourceValue) 
 		case AISCALE_CITY:
 			break;
 		case AISCALE_AREA:
-			iValue *= area()->getCitiesPerPlayer(getOwnerINLINE());
+			iValue *= area()->getCitiesPerPlayer(getOwner());
 			break;
 		case AISCALE_PLAYER:
-			iValue *= GET_PLAYER(getOwnerINLINE()).getNumCities();
+			iValue *= GET_PLAYER(getOwner()).getNumCities();
 			break;
 		case AISCALE_TEAM:
 			iValue *= GET_TEAM(getTeam()).getNumCities();
@@ -20042,7 +20042,7 @@ bool CvCityAI::AI_choosePropertyControlUnit(int iTriggerPercentOfPropertyOpRange
 	bool bSuccessful = false;
 	bool bAnySuccessful = false;
 	CvPlot* pPlot = plot();
-	int iGameTurn = GC.getGameINLINE().getGameTurn();
+	int iGameTurn = GC.getGame().getGameTurn();
 
 	for( int iI= 0; iI < GC.getNumPropertyInfos(); iI++)
 	{
@@ -20085,7 +20085,7 @@ bool CvCityAI::AI_choosePropertyControlUnit(int iTriggerPercentOfPropertyOpRange
 					{
 						if ( m_iUnitSummonedLastEstablishedTurn != iGameTurn )
 						{
-							int iResponders = GET_PLAYER(getOwnerINLINE()).getContractBroker().numRequestsOutstanding(UNITAI_PROPERTY_CONTROL_SEA, false, pPlot);
+							int iResponders = GET_PLAYER(getOwner()).getContractBroker().numRequestsOutstanding(UNITAI_PROPERTY_CONTROL_SEA, false, pPlot);
 							if (iResponders < 1)
 							{
 								str.Format("Property control for %S", GC.getPropertyInfo(eProperty).getDescription());
@@ -20111,7 +20111,7 @@ bool CvCityAI::AI_choosePropertyControlUnit(int iTriggerPercentOfPropertyOpRange
 
 						if ( m_iUnitSummonedLastEstablishedTurn != iGameTurn )
 						{
-							int iResponders = GET_PLAYER(getOwnerINLINE()).getContractBroker().numRequestsOutstanding(UNITAI_PROPERTY_CONTROL, false, pPlot);
+							int iResponders = GET_PLAYER(getOwner()).getContractBroker().numRequestsOutstanding(UNITAI_PROPERTY_CONTROL, false, pPlot);
 							if (iResponders < 2)//if there aren't already a couple or more property control units being trained and/or on the way
 							{
 								//then lets order the best type we can get from any city we have:
@@ -20170,7 +20170,7 @@ bool CvCityAI::AI_chooseHealerUnit(int iMinNeeded)
 			CvPlot* pLoopPlot;
 			for (int iJ = 0; iJ < NUM_CITY_PLOTS_1; iJ++)
 			{
-				pLoopPlot = plotCity(getX_INLINE(), getY_INLINE(), iJ);
+				pLoopPlot = plotCity(getX(), getY(), iJ);
 				if (pLoopPlot != NULL)
 				{
 					for (int iK = 0; iK < NUM_DOMAIN_TYPES; iK++)
@@ -20475,7 +20475,7 @@ bool CvCityAI::AI_establishSeeInvisibleCoverage()
 			//
 			//	if (eBestUnit != NULL)
 			//	{
-			//		iResponders = GET_PLAYER(getOwnerINLINE()).getContractBroker().numRequestsOutstanding(UNITAI_SEE_INVISIBLE_SEA, false, eBestUnit, pPlot);
+			//		iResponders = GET_PLAYER(getOwner()).getContractBroker().numRequestsOutstanding(UNITAI_SEE_INVISIBLE_SEA, false, eBestUnit, pPlot);
 			//		iResponders += pPlot->countSeeInvisibleActive(getOwner(), eVisible);
 			//		if (iResponders < 1)
 			//		{
@@ -20499,7 +20499,7 @@ bool CvCityAI::AI_establishSeeInvisibleCoverage()
 			//
 			//if (eBestUnit != NO_UNIT)
 			//{
-			int iResponders = GET_PLAYER(getOwnerINLINE()).getContractBroker().numRequestsOutstanding(UNITAI_SEE_INVISIBLE, false, pPlot);//This will tend to space out the AI's sense of immediate need to prepare for each type.
+			int iResponders = GET_PLAYER(getOwner()).getContractBroker().numRequestsOutstanding(UNITAI_SEE_INVISIBLE, false, pPlot);//This will tend to space out the AI's sense of immediate need to prepare for each type.
 			iResponders += pPlot->countSeeInvisibleActive(getOwner(), eVisible);
 			if (iResponders < 1)
 			{
@@ -20525,8 +20525,8 @@ bool CvCityAI::AI_establishInvestigatorCoverage()
 	criteria.m_bNoNegativeProperties = true;
 
 	int iLocalInvestigators = GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pPlot, MISSIONAI_INVESTIGATOR_MAINTAIN, NULL, 0);//MISSIONAI_INVESTIGATOR_MAINTAIN is probably not working as designed due to the way the contract broker works.  Once answered, the unit can really only be tracked by its AI type as mission type has been generically set.
-	iLocalInvestigators += pPlot->getNumPlayerUnitAI(UNITAI_INVESTIGATOR, getOwnerINLINE());
-	iLocalInvestigators += GET_PLAYER(getOwnerINLINE()).getContractBroker().numRequestsOutstanding(UNITAI_INVESTIGATOR, false, pPlot);
+	iLocalInvestigators += pPlot->getNumPlayerUnitAI(UNITAI_INVESTIGATOR, getOwner());
+	iLocalInvestigators += GET_PLAYER(getOwner()).getContractBroker().numRequestsOutstanding(UNITAI_INVESTIGATOR, false, pPlot);
 
 	if (iNumLocalCriminals > 0) // Yes, the first round the city has trained its first criminal it will run into this, even if no spawns ever occur.  Can never be too ready, right?
 	{
