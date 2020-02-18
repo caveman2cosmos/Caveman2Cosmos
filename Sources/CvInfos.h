@@ -4628,7 +4628,6 @@ public:
 	void setDefaultBuildingIndex(int i);
 
 	bool isNoLimit() const;				// Exposed to Python
-	bool isMonument() const;				// Exposed to Python
 
 	// Arrays
 	int getVictoryThreshold(int i) const;				// Exposed to Python
@@ -4652,10 +4651,8 @@ protected:
 	int m_iDefaultBuildingIndex;
 
 	bool m_bNoLimit;
-	bool m_bMonument;
 
 	// Arrays
-
 	int* m_piVictoryThreshold;
 
 };

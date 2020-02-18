@@ -44907,6 +44907,13 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_TRIBAL_GUARDIAN</Class>
 			<Type>UNIT_TRIBAL_GUARDIAN</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_TRIBAL_GUARDIAN</Description>
+			<Civilopedia>TXT_KEY_UNIT_TRIBAL_GUARDIAN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_TRIBAL_GUARDIAN_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -44925,14 +44932,13 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_IMMOBILE</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_TRIBAL_GUARDIAN</Description>
-			<Civilopedia>TXT_KEY_UNIT_TRIBAL_GUARDIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TRIBAL_GUARDIAN_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
+			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_PROPERTY_CONTROL</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -44942,13 +44948,11 @@ Base XP gained when defending
 					<UnitClassUpgradeType>UNITCLASS_ENFORCERS</UnitClassUpgradeType>
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
+				<UnitClassUpgrade>
+					<UnitClassUpgradeType>UNITCLASS_NEANDERTHAL_TRIBAL_GUARDIAN</UnitClassUpgradeType>
+					<bUnitClassUpgrade>1</bUnitClassUpgrade>
+				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_PROPERTY_CONTROL</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>2</iCombat>

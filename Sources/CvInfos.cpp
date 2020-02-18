@@ -12990,16 +12990,14 @@ void CvSpecialBuildingInfo::getCheckSum(unsigned int& iSum)
 //
 //------------------------------------------------------------------------------------------------------
 CvBuildingClassInfo::CvBuildingClassInfo() :
-m_iMaxGlobalInstances(0),
-m_iMaxTeamInstances(0),
-m_iMaxPlayerInstances(0),
-m_iExtraPlayerInstances(0),
-m_iDefaultBuildingIndex(NO_BUILDING),
-m_bNoLimit(false),
-m_bMonument(false),
-m_piVictoryThreshold(NULL)
-{
-}
+	m_iMaxGlobalInstances(0),
+	m_iMaxTeamInstances(0),
+	m_iMaxPlayerInstances(0),
+	m_iExtraPlayerInstances(0),
+	m_iDefaultBuildingIndex(NO_BUILDING),
+	m_bNoLimit(false),
+	m_piVictoryThreshold(NULL)
+{}
 
 //------------------------------------------------------------------------------------------------------
 //
@@ -13048,11 +13046,6 @@ bool CvBuildingClassInfo::isNoLimit() const
 	return m_bNoLimit;
 }
 
-bool CvBuildingClassInfo::isMonument() const
-{
-	return m_bMonument;
-}
-
 // Arrays
 
 int CvBuildingClassInfo::getVictoryThreshold(int i) const
@@ -13077,7 +13070,6 @@ bool CvBuildingClassInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iExtraPlayerInstances, L"iExtraPlayerInstances");
 
 	pXML->GetOptionalChildXmlValByName(&m_bNoLimit, L"bNoLimit");
-	pXML->GetOptionalChildXmlValByName(&m_bMonument, L"bMonument");
 
 	pXML->SetVariableListTagPair(&m_piVictoryThreshold, L"VictoryThresholds",  GC.getNumVictoryInfos());
 
@@ -13108,7 +13100,6 @@ void CvBuildingClassInfo::copyNonDefaults(CvBuildingClassInfo* pClassInfo, CvXML
 	if (getExtraPlayerInstances() == iDefault) m_iExtraPlayerInstances = pClassInfo->getExtraPlayerInstances();
 
 	if (isNoLimit() == bDefault) m_bNoLimit = pClassInfo->isNoLimit();
-	if (isMonument() == bDefault) m_bMonument = pClassInfo->isMonument();
 
 	for ( int i = 0; i < GC.getNumVictoryInfos(); i++ )
 	{
@@ -13164,10 +13155,8 @@ void CvBuildingClassInfo::getCheckSum(unsigned int &iSum)
 	CheckSum(iSum, m_iDefaultBuildingIndex);
 
 	CheckSum(iSum, m_bNoLimit);
-	CheckSum(iSum, m_bMonument);
 
 	// Arrays
-
 	CheckSum(iSum, m_piVictoryThreshold, GC.getNumVictoryInfos());
 }
 
