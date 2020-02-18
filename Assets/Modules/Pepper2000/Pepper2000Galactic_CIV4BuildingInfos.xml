@@ -2813,7 +2813,7 @@
 			</MapCategoryTypes>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_WATER_PLANET</FeatureType>
+					<FeatureType>FEATURE_OCEAN_PLANET</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>

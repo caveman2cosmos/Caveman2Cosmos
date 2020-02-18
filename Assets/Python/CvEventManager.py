@@ -1187,7 +1187,7 @@ class CvEventManager:
 		elif iImprovement == mapImpType['IMPROVEMENT_YOUNG_FOREST']:
 			CyPlot = GC.getMap().plot(iX, iY)
 			CyPlot.setImprovementType(-1)
-			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_FOREST_NEW'), 0)
+			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_YOUNG_FOREST'), 0)
 
 		elif iImprovement == mapImpType['IMPROVEMENT_PLANT_BAMBOO_GROVE']:
 			CyPlot = GC.getMap().plot(iX, iY)
@@ -1279,13 +1279,13 @@ class CvEventManager:
 			for iXLoop in range(iX - 1, iX + 2, 1):
 				for iYLoop in range(iY - 1, iY + 2, 1):
 					CyPlot = GC.getMap().plot(iXLoop, iYLoop)
-					CyPlot.setFeatureType(GC.getInfoTypeForString("FEATURE_BIOGAS"), 1)
+					CyPlot.setFeatureType(GC.getInfoTypeForString("FEATURE_INFECTIOUS_SMOG"), 1)
 
 		elif iUnit == GC.getInfoTypeForString('UNIT_POISON_NOVA'):
 			for iXLoop in range(iX - 5, iX + 6, 1):
 				for iYLoop in range(iY - 5, iY + 6, 1):
 					CyPlot = GC.getMap().plot(iXLoop, iYLoop)
-					CyPlot.setFeatureType(GC.getInfoTypeForString("FEATURE_PLAGUEGAS"), 1)
+					CyPlot.setFeatureType(GC.getInfoTypeForString("FEATURE_PLAGUED_SMOG"), 1)
 		else:
 			print "CvEventManager.onNukeExplosion\n\tNuke with no special effects: " + CyUnit.getName()
 		'''

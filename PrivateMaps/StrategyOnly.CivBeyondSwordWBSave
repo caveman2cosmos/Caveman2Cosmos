@@ -1497,7 +1497,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2,y=9
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -3599,7 +3599,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=6,y=57
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -5108,19 +5108,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=9,y=59
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=9,y=60
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=9,y=61
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -5561,25 +5561,25 @@ EndPlot
 BeginPlot
 	x=10,y=58
 	BonusType=BONUS_SPICES
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=10,y=59
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=10,y=60
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=10,y=61
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -6008,7 +6008,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=11,y=59
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -6020,7 +6020,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=11,y=61
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -6449,20 +6449,20 @@ EndPlot
 BeginPlot
 	x=12,y=60
 	BonusType=BONUS_SILK
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=12,y=61
 	BonusType=BONUS_SILK
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=12,y=62
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -6480,7 +6480,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=12,y=65
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -6879,20 +6879,20 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=59
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=13,y=60
 	BonusType=BONUS_SUGAR
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=13,y=61
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -6920,7 +6920,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=66
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -7224,7 +7224,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=14,y=42
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -7315,14 +7315,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=14,y=59
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=14,y=60
 	BonusType=BONUS_BAUXITE_ORE
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -7670,7 +7670,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=42
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -7763,13 +7763,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=59
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=15,y=60
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -7791,43 +7791,43 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=64
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
 BeginPlot
 	x=15,y=65
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
 BeginPlot
 	x=15,y=66
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
 BeginPlot
 	x=15,y=67
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
 BeginPlot
 	x=15,y=68
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
 BeginPlot
 	x=15,y=69
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=15,y=70
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -8116,7 +8116,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=16,y=42
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -8212,14 +8212,14 @@ EndPlot
 BeginPlot
 	x=16,y=59
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=16,y=60
 	BonusType=BONUS_ALMONDS
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -8246,7 +8246,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=16,y=64
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -8263,7 +8263,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=16,y=67
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -8274,7 +8274,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=16,y=69
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -8306,7 +8306,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=16,y=75
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -8382,7 +8382,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=9
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -8569,7 +8569,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=42
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -8654,20 +8654,20 @@ EndPlot
 BeginPlot
 	x=17,y=58
 	BonusType=BONUS_INCENSE
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=17,y=59
 	BonusType=BONUS_SILVER_ORE
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=17,y=60
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -8694,7 +8694,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=65
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -8705,7 +8705,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=67
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -8717,13 +8717,13 @@ EndPlot
 BeginPlot
 	x=17,y=69
 	BonusType=BONUS_BISON
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=17,y=70
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -8747,7 +8747,7 @@ EndPlot
 BeginPlot
 	x=17,y=74
 	BonusType=BONUS_HORSE
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -9006,7 +9006,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=42
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -9100,7 +9100,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=60
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -9133,19 +9133,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=66
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=18,y=67
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=18,y=68
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -9157,13 +9157,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=70
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=18,y=71
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -9174,13 +9174,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=73
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=18,y=74
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -9337,7 +9337,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=24
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -9347,7 +9347,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	isWOfRiver
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -9444,7 +9444,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=42
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -9465,7 +9465,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=46
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -9573,13 +9573,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=66
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=19,y=67
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -9590,7 +9590,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=69
-	FeatureType=FEATURE_VOLCANO2, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_DORMANT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -9602,7 +9602,7 @@ EndPlot
 BeginPlot
 	x=19,y=71
 	BonusType=BONUS_FLAX
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -9623,7 +9623,7 @@ BeginPlot
 	RiverWEDirection=3
 	isWOfRiver
 	BonusType=BONUS_PIG
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -9722,13 +9722,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=13
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=20,y=14
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -9788,7 +9788,7 @@ EndPlot
 BeginPlot
 	x=20,y=25
 	BonusType=BONUS_COPPER_ORE
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -9800,7 +9800,7 @@ EndPlot
 BeginPlot
 	x=20,y=27
 	BonusType=BONUS_OBSIDIAN
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -9878,14 +9878,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=42
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=20,y=43
 	BonusType=BONUS_BARLEY
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -10044,7 +10044,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=72
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -10055,7 +10055,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=74
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -10142,7 +10142,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=21,y=11
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -10159,13 +10159,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=21,y=14
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=21,y=15
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -10277,13 +10277,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=21,y=36
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=21,y=37
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -10472,20 +10472,20 @@ EndPlot
 BeginPlot
 	x=21,y=71
 	BonusType=BONUS_STONE
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=21,y=72
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=21,y=73
 	BonusType=BONUS_WHEAT
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -10601,7 +10601,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=15
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -10672,7 +10672,7 @@ EndPlot
 BeginPlot
 	x=22,y=28
 	BonusType=BONUS_GOLD_ORE
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -10711,13 +10711,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=35
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=22,y=36
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -10826,7 +10826,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=56
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -10912,7 +10912,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=72
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -11002,7 +11002,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=9
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -11040,7 +11040,7 @@ EndPlot
 BeginPlot
 	x=23,y=16
 	BonusType=BONUS_BEAVERS
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -11106,7 +11106,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=28
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -11138,13 +11138,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=34
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=23,y=35
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -11467,13 +11467,13 @@ EndPlot
 BeginPlot
 	x=24,y=16
 	BonusType=BONUS_PUMPKIN
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=24,y=17
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -11495,7 +11495,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=21
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -11537,13 +11537,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=28
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=24,y=29
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -11875,7 +11875,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=12
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -11913,7 +11913,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=19
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -11930,7 +11930,7 @@ EndPlot
 BeginPlot
 	x=25,y=22
 	BonusType=BONUS_RUBIES
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -11969,7 +11969,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=29
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -12072,7 +12072,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=48
-	FeatureType=FEATURE_TARPIT, FeatureVariety=0
+	FeatureType=FEATURE_TAR_PIT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -12094,7 +12094,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=52
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -12311,7 +12311,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=14
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -12338,14 +12338,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=19
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=26,y=20
 	BonusType=BONUS_CORN
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -12359,13 +12359,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=22
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=26,y=23
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -12426,7 +12426,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=35
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -12514,13 +12514,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=51
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=26,y=52
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -12779,7 +12779,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=21
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -12790,7 +12790,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=23
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -12876,7 +12876,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=39
-	FeatureType=FEATURE_VOLCANO2, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_DORMANT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -12938,20 +12938,20 @@ EndPlot
 BeginPlot
 	x=27,y=50
 	BonusType=BONUS_SILK
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=27,y=51
 	BonusType=BONUS_PRIME_TIMBER
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=27,y=52
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -13221,7 +13221,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=23
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -13358,13 +13358,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=49
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=28,y=50
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -13645,7 +13645,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=23
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_SCRUB
 	PlotType=2
 EndPlot
@@ -13783,7 +13783,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=48
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -13795,7 +13795,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=50
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -14063,20 +14063,20 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=21
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_SCRUB
 	PlotType=2
 EndPlot
 BeginPlot
 	x=30,y=22
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=30,y=23
 	BonusType=BONUS_FLAX
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -14210,7 +14210,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=48
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -14221,7 +14221,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=50
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -14275,7 +14275,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=59
-	FeatureType=FEATURE_TARPIT, FeatureVariety=0
+	FeatureType=FEATURE_TAR_PIT, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY
 	PlotType=2
 EndPlot
@@ -14519,7 +14519,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=25
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -14643,13 +14643,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=48
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=31,y=49
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -14945,13 +14945,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=24
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=32,y=25
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -15081,7 +15081,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=49
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -15380,7 +15380,7 @@ EndPlot
 BeginPlot
 	x=33,y=24
 	BonusType=BONUS_ALMONDS
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -15808,7 +15808,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=24
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -16228,13 +16228,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=23
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=35,y=24
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -16662,7 +16662,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=24
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -16673,7 +16673,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=26
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -17088,7 +17088,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=25
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -17903,7 +17903,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=39,y=19
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -18105,13 +18105,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=39,y=58
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=39,y=59
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -18680,7 +18680,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=6
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -19387,7 +19387,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=42,y=57
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -19616,7 +19616,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=43,y=20
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -20024,7 +20024,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=16
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -20129,7 +20129,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=35
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=2
+	FeatureType=FEATURE_CACTUS, FeatureVariety=2
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -20649,7 +20649,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=45,y=51
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=2
+	FeatureType=FEATURE_CACTUS, FeatureVariety=2
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -20682,7 +20682,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=45,y=57
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -21109,7 +21109,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46,y=56
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -21402,13 +21402,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=31
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=2
+	FeatureType=FEATURE_CACTUS, FeatureVariety=2
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=47,y=32
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=2
+	FeatureType=FEATURE_CACTUS, FeatureVariety=2
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -21593,7 +21593,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=66
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -21634,7 +21634,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=74
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -21837,13 +21837,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=48,y=31
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=2
+	FeatureType=FEATURE_CACTUS, FeatureVariety=2
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=48,y=32
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=2
+	FeatureType=FEATURE_CACTUS, FeatureVariety=2
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -22389,7 +22389,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=53
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=2
+	FeatureType=FEATURE_CACTUS, FeatureVariety=2
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -22416,7 +22416,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=58
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -22860,7 +22860,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=58
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -23099,13 +23099,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=51,y=23
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=51,y=24
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -23368,7 +23368,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=51,y=71
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -23549,7 +23549,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52,y=24
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -23969,25 +23969,25 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=21
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=53,y=22
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=2
+	FeatureType=FEATURE_CACTUS, FeatureVariety=2
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=53,y=23
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=2
+	FeatureType=FEATURE_CACTUS, FeatureVariety=2
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=53,y=24
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -24181,7 +24181,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=57
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -24318,7 +24318,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=3
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -24431,13 +24431,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=23
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=54,y=24
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -24637,7 +24637,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=58
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -24775,7 +24775,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=4
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -25224,7 +25224,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=5
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -25309,7 +25309,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=20
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -25649,7 +25649,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=2
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -25660,13 +25660,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=4
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=57,y=5
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -25792,7 +25792,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=28
-	FeatureType=FEATURE_TARPIT, FeatureVariety=0
+	FeatureType=FEATURE_TAR_PIT, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -26106,20 +26106,20 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=5
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=58,y=6
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=58,y=7
 	BonusType=BONUS_OIL
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -26417,7 +26417,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=59
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -26563,26 +26563,26 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=7
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=59,y=8
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=59,y=9
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=59,y=10
 	BonusType=BONUS_COAL
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -26697,13 +26697,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=30
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=59,y=31
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -26722,7 +26722,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=34
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=2
+	FeatureType=FEATURE_CACTUS, FeatureVariety=2
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -27005,7 +27005,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=6
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -27030,21 +27030,21 @@ EndPlot
 BeginPlot
 	x=60,y=10
 	BonusType=BONUS_SILVER_ORE
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=60,y=11
 	BonusType=BONUS_COW
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=60,y=12
 	BonusType=BONUS_SUGAR
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -27492,52 +27492,52 @@ EndPlot
 BeginPlot
 	x=61,y=12
 	BonusType=BONUS_PRICKLY_PEAR
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=61,y=13
 	BonusType=BONUS_COPPER_ORE
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=61,y=14
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=61,y=15
 	BonusType=BONUS_HENNA
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=61,y=16
 	BonusType=BONUS_DATES
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=61,y=17
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=61,y=18
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=61,y=19
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -27957,13 +27957,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=62,y=15
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=62,y=16
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -28399,7 +28399,7 @@ EndPlot
 BeginPlot
 	x=63,y=15
 	BonusType=BONUS_KANGAROO
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -28420,7 +28420,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=63,y=19
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -28799,7 +28799,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=64,y=7
-	FeatureType=FEATURE_TARPIT, FeatureVariety=0
+	FeatureType=FEATURE_TAR_PIT, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -28846,7 +28846,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=64,y=15
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -29251,7 +29251,7 @@ EndPlot
 BeginPlot
 	x=65,y=9
 	BonusType=BONUS_SULPHUR
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -29263,7 +29263,7 @@ EndPlot
 BeginPlot
 	x=65,y=11
 	BonusType=BONUS_BISON
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -29276,7 +29276,7 @@ EndPlot
 BeginPlot
 	x=65,y=13
 	BonusType=BONUS_ALMONDS
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -29434,7 +29434,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=65,y=41
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -29686,7 +29686,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=66,y=8
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -29808,7 +29808,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=66,y=30
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -29904,7 +29904,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=66,y=47
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=2
+	FeatureType=FEATURE_CACTUS, FeatureVariety=2
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -30237,7 +30237,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=29
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -30585,7 +30585,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=68,y=13
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -30879,7 +30879,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=68,y=66
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -30922,7 +30922,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=68,y=74
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -31365,13 +31365,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=75
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=69,y=76
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -31566,13 +31566,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=32
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=70,y=33
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=2
+	FeatureType=FEATURE_CACTUS, FeatureVariety=2
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -31710,7 +31710,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=57
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -31803,13 +31803,13 @@ EndPlot
 BeginPlot
 	x=70,y=75
 	BonusType=BONUS_CORN
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=70,y=76
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -31980,7 +31980,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=29
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=2
+	FeatureType=FEATURE_CACTUS, FeatureVariety=2
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -32562,7 +32562,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=54
-	FeatureType=FEATURE_TARPIT, FeatureVariety=0
+	FeatureType=FEATURE_TAR_PIT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -32624,7 +32624,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=66
-	FeatureType=FEATURE_VOLCANO2, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_DORMANT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -33266,7 +33266,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=74,y=27
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -33496,7 +33496,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=74,y=69
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -33810,7 +33810,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=49
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -33912,13 +33912,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=68
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=75,y=69
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -34323,7 +34323,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=67
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -34332,7 +34332,7 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	BonusType=BONUS_BANANA
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -34671,7 +34671,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=53
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -34747,7 +34747,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=67
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -34920,7 +34920,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=20
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -35091,7 +35091,7 @@ EndPlot
 BeginPlot
 	x=78,y=51
 	BonusType=BONUS_OIL
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -35161,7 +35161,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=64
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -35518,7 +35518,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=79,y=51
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -35585,7 +35585,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=79,y=63
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -35943,7 +35943,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=80,y=50
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -35956,7 +35956,7 @@ EndPlot
 BeginPlot
 	x=80,y=52
 	BonusType=BONUS_STONE
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -35998,7 +35998,7 @@ EndPlot
 BeginPlot
 	x=80,y=60
 	BonusType=BONUS_GRAPES
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -36377,7 +36377,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=81,y=52
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -36406,20 +36406,20 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=81,y=57
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=81,y=58
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=81,y=59
 	BonusType=BONUS_SPICES
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
 EndPlot
@@ -36795,14 +36795,14 @@ EndPlot
 BeginPlot
 	x=82,y=48
 	BonusType=BONUS_OIL
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=82,y=49
 	BonusType=BONUS_OIL
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -36820,7 +36820,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=82,y=52
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -36849,7 +36849,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=82,y=57
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -37117,7 +37117,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=83,y=26
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -37261,14 +37261,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=83,y=53
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=83,y=54
 	BonusType=BONUS_LEAD_ORE
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -37507,7 +37507,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=84,y=19
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -37627,13 +37627,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=84,y=40
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=84,y=41
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -37703,13 +37703,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=84,y=53
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=84,y=54
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
 EndPlot
@@ -38062,13 +38062,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=38
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=85,y=39
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -38508,7 +38508,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=86,y=39
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -38589,7 +38589,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=86,y=54
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -38846,13 +38846,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=87,y=22
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=87,y=23
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -38907,7 +38907,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=87,y=32
-	FeatureType=FEATURE_VOLCANO2, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_DORMANT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -39025,7 +39025,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=87,y=53
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -39065,7 +39065,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=87,y=60
-	FeatureType=FEATURE_TARPIT, FeatureVariety=0
+	FeatureType=FEATURE_TAR_PIT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -39274,19 +39274,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=88,y=20
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=88,y=21
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=88,y=22
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -39473,7 +39473,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=88,y=54
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -39705,25 +39705,25 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=89,y=18
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=89,y=19
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=89,y=20
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=89,y=21
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -40165,13 +40165,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=90,y=17
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=90,y=18
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -40183,7 +40183,7 @@ EndPlot
 BeginPlot
 	x=90,y=20
 	BonusType=BONUS_ALMONDS
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -40261,7 +40261,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=90,y=31
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -40290,7 +40290,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=90,y=36
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -40630,7 +40630,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=91,y=17
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -40648,7 +40648,7 @@ EndPlot
 BeginPlot
 	x=91,y=20
 	BonusType=BONUS_STONE
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -40769,7 +40769,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=91,y=38
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -41221,7 +41221,7 @@ BeginPlot
 	x=92,y=38
 	RiverNSDirection=2
 	isWOfRiver
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -41229,7 +41229,7 @@ BeginPlot
 	x=92,y=39
 	RiverNSDirection=2
 	isWOfRiver
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -41655,7 +41655,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=93,y=24
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -41735,7 +41735,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=93,y=39
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -42072,7 +42072,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=94,y=16
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -42206,7 +42206,7 @@ EndPlot
 BeginPlot
 	x=94,y=39
 	BonusType=BONUS_WHEAT
-	FeatureType=FEATURE_FOREST_NEW, FeatureVariety=0
+	FeatureType=FEATURE_YOUNG_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -42259,13 +42259,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=94,y=48
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=94,y=49
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -42715,14 +42715,14 @@ EndPlot
 BeginPlot
 	x=95,y=47
 	BonusType=BONUS_OPIUM
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=95,y=48
 	BonusType=BONUS_ALMONDS
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -43044,7 +43044,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=96,y=23
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -43175,13 +43175,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=96,y=46
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=96,y=47
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -44294,7 +44294,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=99,y=10
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -44315,7 +44315,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=99,y=14
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -44357,7 +44357,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=99,y=22
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot

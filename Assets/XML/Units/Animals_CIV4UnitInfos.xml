@@ -189,7 +189,7 @@
 			</TerrainImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -326,8 +326,8 @@
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
-				<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
+				<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
 			</FeatureImpassableTypes>
@@ -569,7 +569,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -596,7 +596,7 @@
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -761,7 +761,7 @@
 			</TerrainImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -893,7 +893,7 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
@@ -1023,11 +1023,11 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
@@ -1150,7 +1150,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -1197,7 +1197,7 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
@@ -1415,7 +1415,7 @@
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
 			</FeatureImpassableTypes>
@@ -1552,7 +1552,7 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -1772,7 +1772,7 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
@@ -2611,7 +2611,7 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
@@ -2728,7 +2728,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 			</InvisibleFeatureChanges>
@@ -2758,7 +2758,7 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -2898,7 +2898,7 @@
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
@@ -3184,7 +3184,7 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
@@ -3322,7 +3322,7 @@
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
@@ -3455,7 +3455,7 @@
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
 			</FeatureImpassableTypes>
@@ -3866,7 +3866,7 @@
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
@@ -4250,11 +4250,11 @@
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -4391,7 +4391,7 @@
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -5876,11 +5876,11 @@
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -7001,7 +7001,7 @@
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
@@ -7506,7 +7506,7 @@
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>1</iCombat>
@@ -8079,7 +8079,7 @@
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -8315,14 +8315,14 @@
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -8685,7 +8685,7 @@
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -8798,7 +8798,7 @@
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -8920,7 +8920,7 @@
 			</TerrainImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -9132,7 +9132,7 @@
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -10117,7 +10117,7 @@
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
@@ -11229,7 +11229,7 @@
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
@@ -11353,7 +11353,7 @@
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>3</iCombat>
 			<iAggression>1</iAggression>
@@ -13210,7 +13210,7 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -13657,7 +13657,7 @@
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>4</iCombat>
 			<iAggression>1</iAggression>
@@ -13893,7 +13893,7 @@
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
@@ -14384,7 +14384,7 @@
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
@@ -14401,7 +14401,7 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
@@ -15018,7 +15018,7 @@
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>3</iCombat>
 			<iAggression>2</iAggression>
@@ -15699,7 +15699,7 @@
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>1</iCombat>
@@ -17343,7 +17343,7 @@
 				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 			</FeatureImpassableTypes>
@@ -17701,7 +17701,7 @@
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
@@ -17807,7 +17807,7 @@
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 			</FeatureImpassableTypes>
@@ -17916,7 +17916,7 @@
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -18026,7 +18026,7 @@
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>4</iCombat>
@@ -18132,7 +18132,7 @@
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>3</iCombat>
@@ -18246,7 +18246,7 @@
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -18380,7 +18380,7 @@
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
@@ -18397,7 +18397,7 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
@@ -18532,7 +18532,7 @@
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
@@ -18549,7 +18549,7 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
@@ -18683,7 +18683,7 @@
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 			</FeatureImpassableTypes>
@@ -18921,7 +18921,7 @@
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -19389,7 +19389,7 @@
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
@@ -19902,7 +19902,7 @@
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>1</iCombat>
 			<iAggression>2</iAggression>
@@ -22881,7 +22881,7 @@
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -23151,7 +23151,7 @@
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>3</iCombat>
 			<iAggression>0</iAggression>
@@ -23782,7 +23782,7 @@
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -23999,7 +23999,7 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>

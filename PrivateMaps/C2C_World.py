@@ -4459,7 +4459,7 @@ def addFeatures():
 	featureJungle		= GC.getInfoTypeForString("FEATURE_JUNGLE")
 	featureFloodPlains	= GC.getInfoTypeForString("FEATURE_FLOOD_PLAINS")
 	featureOasis		= GC.getInfoTypeForString("FEATURE_OASIS")
-	featureCactus		= GC.getInfoTypeForString("FEATURE_KAKTUS")
+	featureCactus		= GC.getInfoTypeForString("FEATURE_CACTUS")
 	featureBog			= GC.getInfoTypeForString("FEATURE_PEAT_BOG")
 	featureSwamp		= GC.getInfoTypeForString("FEATURE_SWAMP")
 	featureIce			= GC.getInfoTypeForString("FEATURE_ICE")

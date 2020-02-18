@@ -55,7 +55,7 @@
 			<iWeight>1</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<FeaturesRequired>
-				<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+				<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
 			</FeaturesRequired>
 			<Events>
 				<Event>EVENT_FOREST_NEW_2</Event>
@@ -1884,9 +1884,9 @@
 			<iNumPlotsRequired>2</iNumPlotsRequired>
 			<FeaturesRequired>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
-				<FeatureType>FEATURE_CAVE</FeatureType>
+				<FeatureType>FEATURE_CAVES</FeatureType>
 			</FeaturesRequired>
 			<ImprovementsRequired>
 				<ImprovementType>NONE</ImprovementType>
@@ -2731,7 +2731,7 @@
 			<bOwnPlot>1</bOwnPlot>
 			<FeaturesRequired>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 			</FeaturesRequired>
 			<ImprovementsRequired>
 				<ImprovementType>NONE</ImprovementType>
@@ -10353,7 +10353,7 @@
 			<iWeight>40</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<FeaturesRequired>
-				<FeatureType>FEATURE_VOLCANO2</FeatureType>
+				<FeatureType>FEATURE_VOLCANO_DORMANT</FeatureType>
 			</FeaturesRequired>
 			<Events>
 				<Event>EVENT_VOLCANO_EXTINCTION</Event>
@@ -10374,7 +10374,7 @@
 			<iWeight>100</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<FeaturesRequired>
-				<FeatureType>FEATURE_VOLCANO2</FeatureType>
+				<FeatureType>FEATURE_VOLCANO_DORMANT</FeatureType>
 			</FeaturesRequired>
 			<Events>
 				<Event>EVENT_VOLCANO_ERUPTION_1</Event>
@@ -10395,7 +10395,7 @@
 			<iWeight>200</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<FeaturesRequired>
-				<FeatureType>FEATURE_VOLCANO</FeatureType>
+				<FeatureType>FEATURE_VOLCANO_ACTIVE</FeatureType>
 			</FeaturesRequired>
 			<Events>
 				<Event>EVENT_VOLCANO_ERUPTION_1</Event>
@@ -10416,7 +10416,7 @@
 			<iWeight>140</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<FeaturesRequired>
-				<FeatureType>FEATURE_VOLCANO</FeatureType>
+				<FeatureType>FEATURE_VOLCANO_ACTIVE</FeatureType>
 			</FeaturesRequired>
 			<Events>
 				<Event>EVENT_VOLCANO_SLEEP</Event>
@@ -10781,7 +10781,7 @@
 			<bUnitsOnPlot>1</bUnitsOnPlot>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<FeaturesRequired>
-				<FeatureType>FEATURE_TARPIT</FeatureType>
+				<FeatureType>FEATURE_TAR_PIT</FeatureType>
 			</FeaturesRequired>
 			<RoutesRequired>
 				<RouteType>ROUTE_TRAIL</RouteType>

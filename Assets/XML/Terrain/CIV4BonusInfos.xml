@@ -495,7 +495,7 @@
 			</TerrainBooleans>
 			<FeatureBooleans>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -507,7 +507,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
@@ -563,7 +563,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
@@ -680,7 +680,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
@@ -748,7 +748,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
@@ -940,7 +940,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -1128,7 +1128,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
@@ -1200,7 +1200,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
@@ -1261,7 +1261,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -1331,7 +1331,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -1495,7 +1495,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -1511,7 +1511,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -1519,7 +1519,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
@@ -1603,7 +1603,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
@@ -2049,7 +2049,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
@@ -2129,7 +2129,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
@@ -2220,7 +2220,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -2240,7 +2240,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
@@ -2439,7 +2439,7 @@
 			</TerrainBooleans>
 			<FeatureBooleans>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
@@ -2484,7 +2484,7 @@
 			</TerrainBooleans>
 			<FeatureBooleans>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
@@ -2598,7 +2598,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
@@ -2733,7 +2733,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
@@ -2788,7 +2788,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
@@ -2902,7 +2902,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -2969,7 +2969,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -3053,7 +3053,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
@@ -3116,7 +3116,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
@@ -3180,7 +3180,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -3188,7 +3188,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
@@ -3260,7 +3260,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -3377,7 +3377,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -3579,7 +3579,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -3709,7 +3709,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -3804,7 +3804,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -3816,7 +3816,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
@@ -3899,7 +3899,7 @@
 			</TerrainBooleans>
 			<FeatureBooleans>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
@@ -4056,7 +4056,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -4168,7 +4168,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -4192,11 +4192,11 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -5108,7 +5108,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -5236,7 +5236,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -5252,7 +5252,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -5260,7 +5260,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -5502,7 +5502,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -5518,7 +5518,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -5526,7 +5526,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -5751,7 +5751,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -5767,7 +5767,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -5775,7 +5775,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -6008,7 +6008,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -6024,7 +6024,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -6032,7 +6032,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -6260,7 +6260,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -6276,7 +6276,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -6284,7 +6284,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -6492,7 +6492,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
@@ -6654,7 +6654,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -6670,7 +6670,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -6678,7 +6678,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -6912,7 +6912,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -6928,7 +6928,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -6936,7 +6936,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -7172,7 +7172,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -7188,7 +7188,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -7196,7 +7196,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -7508,7 +7508,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -7524,7 +7524,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -7532,7 +7532,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -7767,7 +7767,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -7783,7 +7783,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -7791,7 +7791,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -8026,7 +8026,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -8042,7 +8042,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -8050,7 +8050,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -8284,7 +8284,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -8300,7 +8300,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -8308,7 +8308,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -8704,7 +8704,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -8720,7 +8720,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -8728,7 +8728,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -8965,7 +8965,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -8981,7 +8981,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -8989,7 +8989,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -9227,7 +9227,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -9243,7 +9243,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -9251,7 +9251,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -9601,7 +9601,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -9617,7 +9617,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -9625,7 +9625,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -9866,7 +9866,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -9882,7 +9882,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -9890,7 +9890,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -10120,7 +10120,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -10208,7 +10208,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
@@ -10501,7 +10501,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -10585,7 +10585,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
@@ -10730,7 +10730,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -10746,7 +10746,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -10754,7 +10754,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -10996,7 +10996,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -11016,7 +11016,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -11028,7 +11028,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -11587,7 +11587,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -11607,7 +11607,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -11619,7 +11619,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -11953,7 +11953,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -11973,7 +11973,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -11985,7 +11985,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -12278,7 +12278,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -12298,7 +12298,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
@@ -12310,7 +12310,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 				<FeatureBoolean>

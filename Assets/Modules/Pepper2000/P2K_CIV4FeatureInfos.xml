@@ -546,10 +546,10 @@
 		</FeatureInfo>
         <!-- Water Planet -->
 		<FeatureInfo>
-			<Type>FEATURE_WATER_PLANET</Type>
-			<Description>TXT_KEY_FEATURE_WATER_PLANET</Description>
-			<Civilopedia>TXT_KEY_FEATURE_WATER_PLANET_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_WATER_PLANET</ArtDefineTag>
+			<Type>FEATURE_OCEAN_PLANET</Type>
+			<Description>TXT_KEY_FEATURE_OCEAN_PLANET</Description>
+			<Civilopedia>TXT_KEY_FEATURE_OCEAN_PLANET_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_OCEAN_PLANET</ArtDefineTag>
             <iMovement>2</iMovement>
             <iPopDestroys>-1</iPopDestroys>
 			<iSeeThrough>1</iSeeThrough>

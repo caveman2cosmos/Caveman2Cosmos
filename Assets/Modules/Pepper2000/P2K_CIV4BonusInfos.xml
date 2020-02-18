@@ -63,7 +63,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
                 <FeatureBoolean>
-					<FeatureType>FEATURE_WATER_PLANET</FeatureType>
+					<FeatureType>FEATURE_OCEAN_PLANET</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
@@ -491,7 +491,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
                 <FeatureBoolean>
-					<FeatureType>FEATURE_WATER_PLANET</FeatureType>
+					<FeatureType>FEATURE_OCEAN_PLANET</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
@@ -559,7 +559,7 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
                 <FeatureBoolean>
-					<FeatureType>FEATURE_WATER_PLANET</FeatureType>
+					<FeatureType>FEATURE_OCEAN_PLANET</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>

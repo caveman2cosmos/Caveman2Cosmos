@@ -1742,7 +1742,7 @@ def placeC2CBonuses():
 	featureKelp = gc.getInfoTypeForString("FEATURE_KELP")
 	#featureIce = gc.getInfoTypeForString("FEATURE_ICE")
 	featureMangrove = gc.getInfoTypeForString("FEATURE_MANGROVE")
-	featureCactus = gc.getInfoTypeForString("FEATURE_KAKTUS")
+	featureCactus = gc.getInfoTypeForString("FEATURE_CACTUS")
 
 	improvementGoodyIsland = gc.getInfoTypeForString("IMPROVEMENT_GOODY_ISLAND")
 

@@ -27,13 +27,13 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_GREAT_BARRIER_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_BEACON</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
 			<ImprovementUpgrade>IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF</ImprovementUpgrade>
 			<FeatureChangeTypes>
-				<FeatureType>FEATURE_GREAT_BARRIER_WITH_BEACON</FeatureType>
+				<FeatureType>FEATURE_GREAT_BARRIER_REEF_BEACON</FeatureType>
 			</FeatureChangeTypes>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -98,17 +98,17 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_GREAT_BARRIER_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_BEACON</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_GREAT_BARRIER_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
-			<ImprovementPillage>FEATURE_GREAT_BARRIER_WITH_BEACON</ImprovementPillage>
+			<ImprovementPillage>FEATURE_GREAT_BARRIER_REEF_BEACON</ImprovementPillage>
 			<FeatureChangeTypes>
-				<FeatureType>FEATURE_GREAT_BARRIER_WITH_LIGHTHOUSE</FeatureType>
+				<FeatureType>FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE</FeatureType>
 			</FeatureChangeTypes>
 		</ImprovementInfo>
 	</ImprovementInfos>

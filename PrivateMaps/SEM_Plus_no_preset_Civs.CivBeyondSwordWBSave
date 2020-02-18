@@ -568,7 +568,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=17
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -587,7 +587,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=20
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -627,7 +627,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=27
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -690,13 +690,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=38
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=0,y=39
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -775,7 +775,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=1
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -805,7 +805,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=5
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -839,19 +839,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=11
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=1,y=12
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=1,y=13
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -872,31 +872,31 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=17
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=1,y=18
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=1,y=19
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=1,y=20
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=1,y=21
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -917,7 +917,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=25
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -929,7 +929,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=27
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -1091,7 +1091,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	BonusType=BONUS_PARROTS
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -1116,7 +1116,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2,y=8
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -1127,7 +1127,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2,y=10
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -1167,7 +1167,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2,y=17
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -1415,7 +1415,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=3,y=10
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -1429,13 +1429,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=3,y=12
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=3,y=13
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -1463,13 +1463,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=3,y=18
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=3,y=19
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -1685,7 +1685,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=4,y=7
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -1708,13 +1708,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=4,y=11
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=4,y=12
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -1786,7 +1786,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=4,y=26
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -1971,7 +1971,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=5,y=8
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -2058,7 +2058,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=5,y=25
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -2072,7 +2072,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=5,y=27
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -2237,13 +2237,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=6,y=7
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=6,y=8
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -2336,7 +2336,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=6,y=26
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -2576,7 +2576,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=7,y=21
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -2588,7 +2588,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=7,y=23
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -2822,7 +2822,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=8,y=15
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -2867,7 +2867,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=8,y=23
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -2893,7 +2893,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=8,y=28
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -2905,7 +2905,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=8,y=30
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -2978,7 +2978,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=8,y=44
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_ICE
 	PlotType=2
 EndPlot
@@ -3094,7 +3094,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=9,y=14
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -3108,7 +3108,7 @@ EndPlot
 BeginPlot
 	x=9,y=16
 	BonusType=BONUS_MANGANESE
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -3139,7 +3139,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=9,y=22
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -3171,7 +3171,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=9,y=28
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -3179,13 +3179,13 @@ BeginPlot
 	x=9,y=29
 	BonusType=BONUS_SUGAR
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=9,y=30
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -3373,7 +3373,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=10,y=14
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -3385,7 +3385,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=10,y=16
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -3452,7 +3452,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=10,y=29
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -3805,7 +3805,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=11,y=44
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -4049,7 +4049,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=12,y=37
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -4078,7 +4078,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=12,y=41
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -4291,13 +4291,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=29
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=13,y=30
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -4321,7 +4321,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=34
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -4340,7 +4340,7 @@ EndPlot
 BeginPlot
 	x=13,y=37
 	BonusType=BONUS_SILVER_ORE
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -4352,7 +4352,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=39
-	FeatureType=FEATURE_VOLCANO2, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_DORMANT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -4385,7 +4385,7 @@ EndPlot
 BeginPlot
 	x=13,y=43
 	BonusType=BONUS_BEAVERS
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=2
 EndPlot
@@ -4408,7 +4408,7 @@ BeginPlot
 	x=13,y=46
 	RiverNSDirection=0
 	isWOfRiver
-	FeatureType=FEATURE_VOLCANO2, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_DORMANT, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=2
 EndPlot
@@ -4609,7 +4609,7 @@ EndPlot
 BeginPlot
 	x=14,y=32
 	BonusType=BONUS_FOSSIL_BEDS
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
@@ -4623,7 +4623,7 @@ BeginPlot
 	x=14,y=34
 	RiverNSDirection=2
 	isWOfRiver
-	FeatureType=FEATURE_TARPIT, FeatureVariety=0
+	FeatureType=FEATURE_TAR_PIT, FeatureVariety=0
 	TerrainType=TERRAIN_SCRUB
 	PlotType=2
 EndPlot
@@ -4632,14 +4632,14 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	BonusType=BONUS_PEYOTE
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
 BeginPlot
 	x=14,y=36
 	BonusType=BONUS_SHEEP
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=2
+	FeatureType=FEATURE_CACTUS, FeatureVariety=2
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -4706,7 +4706,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=14,y=46
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=1
 EndPlot
@@ -4810,13 +4810,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=13
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=15,y=14
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -4893,13 +4893,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=29
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=15,y=30
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -4945,7 +4945,7 @@ EndPlot
 BeginPlot
 	x=15,y=37
 	BonusType=BONUS_PRICKLY_PEAR
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_ROCKY
 	PlotType=1
 EndPlot
@@ -4963,7 +4963,7 @@ EndPlot
 BeginPlot
 	x=15,y=40
 	BonusType=BONUS_SHEEP
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -4975,7 +4975,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=42
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY
 	PlotType=2
 EndPlot
@@ -4988,7 +4988,7 @@ EndPlot
 BeginPlot
 	x=15,y=44
 	BonusType=BONUS_FOSSIL_BEDS
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=2
+	FeatureType=FEATURE_CACTUS, FeatureVariety=2
 	TerrainType=TERRAIN_TAIGA
 	PlotType=2
 EndPlot
@@ -5099,7 +5099,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=16,y=12
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -5180,7 +5180,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=16,y=27
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -5211,28 +5211,28 @@ EndPlot
 BeginPlot
 	x=16,y=32
 	BonusType=BONUS_PUMPKIN
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
 BeginPlot
 	x=16,y=33
 	BonusType=BONUS_RUBBER
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
 BeginPlot
 	x=16,y=34
 	BonusType=BONUS_SQUASH
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
 BeginPlot
 	x=16,y=35
 	BonusType=BONUS_COPPER_ORE
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
@@ -5260,7 +5260,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=16,y=39
-	FeatureType=FEATURE_VOLCANO2, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_DORMANT, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -5419,13 +5419,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=13
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=17,y=14
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -5486,7 +5486,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=26
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -5513,7 +5513,7 @@ EndPlot
 BeginPlot
 	x=17,y=30
 	BonusType=BONUS_ANCIENT_RELICS
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
@@ -5545,7 +5545,7 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	BonusType=BONUS_PRICKLY_PEAR
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
@@ -5820,7 +5820,7 @@ EndPlot
 BeginPlot
 	x=18,y=29
 	BonusType=BONUS_OBSIDIAN
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_MARSH
 	PlotType=2
 EndPlot
@@ -5866,7 +5866,7 @@ EndPlot
 BeginPlot
 	x=18,y=35
 	BonusType=BONUS_LEAD_ORE
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -5882,7 +5882,7 @@ EndPlot
 BeginPlot
 	x=18,y=37
 	BonusType=BONUS_DEER
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -5957,7 +5957,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=47
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=2
 EndPlot
@@ -6100,7 +6100,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=22
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -6111,13 +6111,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=24
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=19,y=25
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -6144,7 +6144,7 @@ EndPlot
 BeginPlot
 	x=19,y=29
 	BonusType=BONUS_PRICKLY_PEAR
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -6160,21 +6160,21 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	BonusType=BONUS_SQUASH
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=19,y=32
 	BonusType=BONUS_IRON_ORE
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=19,y=33
 	BonusType=BONUS_PAPAYA
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -6214,7 +6214,7 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	BonusType=BONUS_BEAVERS
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -6405,7 +6405,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=20
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -6418,7 +6418,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=22
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -6436,7 +6436,7 @@ EndPlot
 BeginPlot
 	x=20,y=25
 	BonusType=BONUS_PRICKLY_PEAR
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=2
+	FeatureType=FEATURE_CACTUS, FeatureVariety=2
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -6521,7 +6521,7 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	BonusType=BONUS_NATURAL_GAS
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -6536,14 +6536,14 @@ EndPlot
 BeginPlot
 	x=20,y=39
 	BonusType=BONUS_NATRON
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=20,y=40
 	BonusType=BONUS_RABBIT
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -6661,7 +6661,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=21,y=9
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -6723,7 +6723,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=21,y=21
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -6741,7 +6741,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=21,y=24
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -6764,7 +6764,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	BonusType=BONUS_COCOA
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -6783,7 +6783,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=21,y=30
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -6824,7 +6824,7 @@ BeginPlot
 	x=21,y=35
 	RiverNSDirection=2
 	isWOfRiver
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -6976,7 +6976,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=7
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -7048,7 +7048,7 @@ BeginPlot
 	x=22,y=20
 	BonusType=BONUS_HEMP
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -7067,19 +7067,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=23
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=22,y=24
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=22,y=25
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -7149,7 +7149,7 @@ BeginPlot
 	RiverWEDirection=3
 	isWOfRiver
 	BonusType=BONUS_RABBIT
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -7163,7 +7163,7 @@ EndPlot
 BeginPlot
 	x=22,y=37
 	BonusType=BONUS_POULTRY
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -7305,7 +7305,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=8
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -7383,13 +7383,13 @@ EndPlot
 BeginPlot
 	x=23,y=22
 	BonusType=BONUS_COCOA
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=23,y=23
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -7408,25 +7408,25 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=26
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=23,y=27
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=23,y=28
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=23,y=29
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -7437,13 +7437,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=31
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=23,y=32
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -7733,7 +7733,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=28
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -7747,7 +7747,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=30
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -7774,7 +7774,7 @@ EndPlot
 BeginPlot
 	x=24,y=34
 	BonusType=BONUS_SHEEP
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -7802,7 +7802,7 @@ EndPlot
 BeginPlot
 	x=24,y=38
 	BonusType=BONUS_BAUXITE_ORE
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -7974,7 +7974,7 @@ EndPlot
 BeginPlot
 	x=25,y=17
 	BonusType=BONUS_COPPER_ORE
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY
 	PlotType=1
 EndPlot
@@ -8032,7 +8032,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=26
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -8293,7 +8293,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=18
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_ICE
 	PlotType=2
 EndPlot
@@ -8351,7 +8351,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=26
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -8364,7 +8364,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=28
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -8377,13 +8377,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=30
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=26,y=31
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -8537,13 +8537,13 @@ EndPlot
 BeginPlot
 	x=27,y=5
 	BonusType=BONUS_ANCIENT_RELICS
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY
 	PlotType=2
 EndPlot
 BeginPlot
 	x=27,y=6
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_ICE
 	PlotType=2
 EndPlot
@@ -8584,7 +8584,7 @@ EndPlot
 BeginPlot
 	x=27,y=12
 	BonusType=BONUS_PRICKLY_PEAR
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -8598,7 +8598,7 @@ EndPlot
 BeginPlot
 	x=27,y=14
 	BonusType=BONUS_GOLD_ORE
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -8624,7 +8624,7 @@ EndPlot
 BeginPlot
 	x=27,y=18
 	BonusType=BONUS_SILVER_ORE
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -8685,19 +8685,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=26
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=27,y=27
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=27,y=28
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -8708,7 +8708,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=30
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -8753,7 +8753,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=38
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -8764,7 +8764,7 @@ BeginPlot
 	RiverWEDirection=1
 	isWOfRiver
 	BonusType=BONUS_LEAD_ORE
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -8875,7 +8875,7 @@ EndPlot
 BeginPlot
 	x=28,y=6
 	BonusType=BONUS_OIL
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -9012,7 +9012,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=25
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -9042,7 +9042,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=30
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_SEA_TROPICAL
 	PlotType=3
 EndPlot
@@ -9194,7 +9194,7 @@ BeginPlot
 	x=29,y=2
 	BonusType=BONUS_NATRON
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=1
 EndPlot
@@ -9248,7 +9248,7 @@ BeginPlot
 	RiverWEDirection=1
 	isWOfRiver
 	BonusType=BONUS_CORN
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -9338,7 +9338,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	isWOfRiver
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_MARSH
 	PlotType=2
 EndPlot
@@ -9374,7 +9374,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=27
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -9388,7 +9388,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=29
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -9579,7 +9579,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	BonusType=BONUS_DEER
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -9593,7 +9593,7 @@ EndPlot
 BeginPlot
 	x=30,y=11
 	BonusType=BONUS_PRICKLY_PEAR
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -9607,7 +9607,7 @@ EndPlot
 BeginPlot
 	x=30,y=13
 	BonusType=BONUS_NATRON
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY
 	PlotType=1
 EndPlot
@@ -9620,7 +9620,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=15
-	FeatureType=FEATURE_TARPIT, FeatureVariety=0
+	FeatureType=FEATURE_TAR_PIT, FeatureVariety=0
 	TerrainType=TERRAIN_SCRUB
 	PlotType=1
 EndPlot
@@ -9691,13 +9691,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=25
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=30,y=26
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -9709,7 +9709,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=28
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -9894,7 +9894,7 @@ EndPlot
 BeginPlot
 	x=31,y=9
 	BonusType=BONUS_POULTRY
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -9972,7 +9972,7 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	BonusType=BONUS_PRICKLY_PEAR
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_MUDDY
 	PlotType=2
 EndPlot
@@ -10014,7 +10014,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=24
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -10333,19 +10333,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=24
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=32,y=25
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=32,y=26
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -10356,7 +10356,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=28
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -10428,7 +10428,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=42
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -10541,7 +10541,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=33,y=10
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -10576,7 +10576,7 @@ BeginPlot
 	x=33,y=15
 	isNOfRiver
 	RiverWEDirection=3
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -10618,7 +10618,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=33,y=21
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -10849,7 +10849,7 @@ EndPlot
 BeginPlot
 	x=34,y=12
 	BonusType=BONUS_COCONUT
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -11357,7 +11357,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=51
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_ICE
 	PlotType=1
 EndPlot
@@ -11464,7 +11464,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	BonusType=BONUS_NATURAL_GAS
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -12012,13 +12012,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=18
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=38,y=19
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -13010,7 +13010,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=49
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -13148,14 +13148,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=42,y=24
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=42,y=25
 	BonusType=BONUS_COFFEE
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -13254,7 +13254,7 @@ EndPlot
 BeginPlot
 	x=42,y=42
 	BonusType=BONUS_LEAD_ORE
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -13295,7 +13295,7 @@ BeginPlot
 	x=42,y=48
 	BonusType=BONUS_COW
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_TARPIT, FeatureVariety=0
+	FeatureType=FEATURE_TAR_PIT, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=1
 EndPlot
@@ -13562,7 +13562,7 @@ EndPlot
 BeginPlot
 	x=43,y=43
 	BonusType=BONUS_SHEEP
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -13815,7 +13815,7 @@ BeginPlot
 	RiverWEDirection=3
 	BonusType=BONUS_HORSE
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -13906,7 +13906,7 @@ EndPlot
 BeginPlot
 	x=44,y=47
 	BonusType=BONUS_SEA_LION_AND_SEAL
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -14094,7 +14094,7 @@ EndPlot
 BeginPlot
 	x=45,y=29
 	BonusType=BONUS_OLIVES
-	FeatureType=FEATURE_TARPIT, FeatureVariety=0
+	FeatureType=FEATURE_TAR_PIT, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -14401,7 +14401,7 @@ EndPlot
 BeginPlot
 	x=46,y=30
 	BonusType=BONUS_LEMONS
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -14434,7 +14434,7 @@ BeginPlot
 	x=46,y=35
 	BonusType=BONUS_RABBIT
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -14466,7 +14466,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	BonusType=BONUS_DONKEY
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -14604,7 +14604,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=13
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -15000,7 +15000,7 @@ EndPlot
 BeginPlot
 	x=48,y=26
 	BonusType=BONUS_INCENSE
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
@@ -15081,7 +15081,7 @@ EndPlot
 BeginPlot
 	x=48,y=39
 	BonusType=BONUS_LEAD_ORE
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -15398,7 +15398,7 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	BonusType=BONUS_COW
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -15562,7 +15562,7 @@ EndPlot
 BeginPlot
 	x=50,y=18
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_MARSH
 	PlotType=2
 EndPlot
@@ -15596,7 +15596,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	BonusType=BONUS_GOLD_ORE
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -15607,7 +15607,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=25
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
@@ -15635,7 +15635,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=30
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -15657,7 +15657,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=34
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -15688,7 +15688,7 @@ BeginPlot
 	x=50,y=38
 	BonusType=BONUS_AMBER
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -15712,7 +15712,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	BonusType=BONUS_COAL
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -15731,7 +15731,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=44
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -15851,7 +15851,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=51,y=13
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
@@ -15927,7 +15927,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=51,y=24
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -15957,13 +15957,13 @@ EndPlot
 BeginPlot
 	x=51,y=29
 	BonusType=BONUS_PISTACHIO
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=51,y=30
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -16161,7 +16161,7 @@ EndPlot
 BeginPlot
 	x=52,y=10
 	BonusType=BONUS_PLATINUM_ORE
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_SCRUB
 	PlotType=2
 EndPlot
@@ -16259,7 +16259,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52,y=24
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -16282,7 +16282,7 @@ EndPlot
 BeginPlot
 	x=52,y=28
 	BonusType=BONUS_CAMEL
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -16290,13 +16290,13 @@ BeginPlot
 	x=52,y=29
 	BonusType=BONUS_AMBER
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=52,y=30
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -16488,7 +16488,7 @@ EndPlot
 BeginPlot
 	x=53,y=9
 	BonusType=BONUS_SEA_LION_AND_SEAL
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -16517,7 +16517,7 @@ EndPlot
 BeginPlot
 	x=53,y=13
 	BonusType=BONUS_ANCIENT_RELICS
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
@@ -16596,7 +16596,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=24
-	FeatureType=FEATURE_TARPIT, FeatureVariety=0
+	FeatureType=FEATURE_TAR_PIT, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -16648,7 +16648,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=33
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -16698,7 +16698,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	BonusType=BONUS_COPPER_ORE
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -16723,7 +16723,7 @@ EndPlot
 BeginPlot
 	x=53,y=43
 	BonusType=BONUS_FLAX
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -16744,7 +16744,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=47
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -16845,7 +16845,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=11
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_SCRUB
 	PlotType=1
 EndPlot
@@ -16858,7 +16858,7 @@ EndPlot
 BeginPlot
 	x=54,y=13
 	BonusType=BONUS_OIL
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_SCRUB
 	PlotType=2
 EndPlot
@@ -17019,7 +17019,7 @@ EndPlot
 BeginPlot
 	x=54,y=37
 	BonusType=BONUS_ANCIENT_RELICS
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -17217,7 +17217,7 @@ EndPlot
 BeginPlot
 	x=55,y=15
 	BonusType=BONUS_ELEPHANTS
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -17275,7 +17275,7 @@ EndPlot
 BeginPlot
 	x=55,y=23
 	BonusType=BONUS_ELEPHANTS
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -17319,7 +17319,7 @@ EndPlot
 BeginPlot
 	x=55,y=29
 	BonusType=BONUS_FIG
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -17334,7 +17334,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=31
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -17425,7 +17425,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=45
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -17555,7 +17555,7 @@ EndPlot
 BeginPlot
 	x=56,y=15
 	BonusType=BONUS_STONE
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -17564,7 +17564,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	BonusType=BONUS_PLATINUM_ORE
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -17604,7 +17604,7 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	BonusType=BONUS_GEOTHERMAL_ENERGY
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -17784,7 +17784,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=48
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -17896,7 +17896,7 @@ EndPlot
 BeginPlot
 	x=57,y=15
 	BonusType=BONUS_GOLD_ORE
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -17926,7 +17926,7 @@ EndPlot
 BeginPlot
 	x=57,y=19
 	BonusType=BONUS_OBSIDIAN
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -18013,7 +18013,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=31
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -18027,7 +18027,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=33
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -18081,7 +18081,7 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	BonusType=BONUS_LEAD_ORE
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -18208,7 +18208,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=11
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -18240,7 +18240,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=16
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -18323,7 +18323,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=29
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -18346,7 +18346,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=33
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -18379,7 +18379,7 @@ EndPlot
 BeginPlot
 	x=58,y=38
 	BonusType=BONUS_MUSHROOMS
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -18412,7 +18412,7 @@ EndPlot
 BeginPlot
 	x=58,y=42
 	BonusType=BONUS_DONKEY
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -18525,7 +18525,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=11
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -18560,7 +18560,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=16
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -18572,7 +18572,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=18
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -18631,7 +18631,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=27
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -18680,7 +18680,7 @@ EndPlot
 BeginPlot
 	x=59,y=35
 	BonusType=BONUS_MARBLE
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -18693,7 +18693,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=37
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -18845,7 +18845,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=11
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -18858,19 +18858,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=13
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=60,y=14
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=60,y=15
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -18881,7 +18881,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=17
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -18893,7 +18893,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=19
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -18919,7 +18919,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	BonusType=BONUS_HORSE
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
@@ -18937,13 +18937,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=25
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=60,y=26
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -19170,7 +19170,7 @@ EndPlot
 BeginPlot
 	x=61,y=11
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -19194,7 +19194,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=15
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -19234,7 +19234,7 @@ EndPlot
 BeginPlot
 	x=61,y=22
 	BonusType=BONUS_INCENSE
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
@@ -19246,7 +19246,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=24
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -19322,7 +19322,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=35
-	FeatureType=FEATURE_VOLCANO2, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_DORMANT, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -19502,7 +19502,7 @@ EndPlot
 BeginPlot
 	x=62,y=13
 	BonusType=BONUS_RICE
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -19542,7 +19542,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=62,y=20
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -19561,7 +19561,7 @@ EndPlot
 BeginPlot
 	x=62,y=23
 	BonusType=BONUS_SULPHUR
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY
 	PlotType=1
 EndPlot
@@ -19872,7 +19872,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=63,y=22
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -20184,7 +20184,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=64,y=23
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -20270,7 +20270,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=64,y=37
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_LAKE_SHORE
 	PlotType=3
 EndPlot
@@ -20324,7 +20324,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=64,y=45
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -20641,7 +20641,7 @@ BeginPlot
 	x=65,y=48
 	RiverNSDirection=0
 	isWOfRiver
-	FeatureType=FEATURE_TARPIT, FeatureVariety=0
+	FeatureType=FEATURE_TAR_PIT, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=2
 EndPlot
@@ -20786,7 +20786,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=66,y=24
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -21079,7 +21079,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=24
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -21383,7 +21383,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=68,y=26
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -21394,13 +21394,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=68,y=28
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=68,y=29
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -21678,7 +21678,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=27
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -22118,7 +22118,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=47
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=2
 EndPlot
@@ -22267,13 +22267,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=23
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=71,y=24
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -22340,7 +22340,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	BonusType=BONUS_POMEGRANATE
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -22562,7 +22562,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=22
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -22595,7 +22595,7 @@ EndPlot
 BeginPlot
 	x=72,y=27
 	BonusType=BONUS_TIN_ORE
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -23162,7 +23162,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=74,y=20
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -23175,13 +23175,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=74,y=22
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=74,y=23
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -23273,7 +23273,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=74,y=36
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=1
 EndPlot
@@ -23492,7 +23492,7 @@ BeginPlot
 	x=75,y=22
 	BonusType=BONUS_SPICES
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -23647,7 +23647,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=47
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=1
 EndPlot
@@ -23774,7 +23774,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=20
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -23785,7 +23785,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=22
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -24024,7 +24024,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=10
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -24081,7 +24081,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=21
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -24298,7 +24298,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=6
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -24328,7 +24328,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=11
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -24359,7 +24359,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=17
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_SEA_TROPICAL
 	PlotType=3
 EndPlot
@@ -24371,7 +24371,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=19
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -24383,19 +24383,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=21
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=78,y=22
-	FeatureType=FEATURE_VOLCANO2, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_DORMANT, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY
 	PlotType=1
 EndPlot
 BeginPlot
 	x=78,y=23
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -24412,7 +24412,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=26
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -24652,7 +24652,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=79,y=12
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -24691,7 +24691,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=79,y=19
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -24713,13 +24713,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=79,y=22
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=79,y=23
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -24730,7 +24730,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=79,y=25
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -24994,7 +24994,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=80,y=13
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -25016,13 +25016,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=80,y=17
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=80,y=18
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -25036,7 +25036,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=80,y=20
-	FeatureType=FEATURE_VOLCANO2, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_DORMANT, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY
 	PlotType=2
 EndPlot
@@ -25076,7 +25076,7 @@ EndPlot
 BeginPlot
 	x=80,y=26
 	BonusType=BONUS_STONE
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -25352,7 +25352,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=81,y=14
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -25363,13 +25363,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=81,y=16
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=81,y=17
-	FeatureType=FEATURE_VOLCANO2, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_DORMANT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -25394,7 +25394,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=81,y=21
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -25688,7 +25688,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_NATRON
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
@@ -25715,7 +25715,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=82,y=16
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -25740,19 +25740,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=82,y=20
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=82,y=21
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=82,y=22
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -25885,7 +25885,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=82,y=41
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY
 	PlotType=2
 EndPlot
@@ -26006,7 +26006,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=83,y=9
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
@@ -26037,7 +26037,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=83,y=14
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -26048,7 +26048,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=83,y=16
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -26061,7 +26061,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=83,y=18
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -26081,7 +26081,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=83,y=21
-	FeatureType=FEATURE_VOLCANO2, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_DORMANT, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY
 	PlotType=1
 EndPlot
@@ -26113,7 +26113,7 @@ EndPlot
 BeginPlot
 	x=83,y=26
 	BonusType=BONUS_TITANIUM_ORE
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_ICE
 	PlotType=0
 EndPlot
@@ -26131,7 +26131,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=83,y=29
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -26173,14 +26173,14 @@ EndPlot
 BeginPlot
 	x=83,y=34
 	BonusType=BONUS_BISON
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=83,y=35
 	BonusType=BONUS_LEMONS
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -26202,7 +26202,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=83,y=38
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -26367,7 +26367,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=84,y=14
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -26384,7 +26384,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=84,y=17
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -26402,7 +26402,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=84,y=20
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -26427,20 +26427,20 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=84,y=24
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=84,y=25
 	BonusType=BONUS_TEA
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=84,y=26
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -26697,7 +26697,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=17
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -26710,19 +26710,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=19
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=85,y=20
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=85,y=21
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -26740,13 +26740,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=24
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=85,y=25
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -26757,13 +26757,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=27
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=85,y=28
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -26775,7 +26775,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=30
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -26985,7 +26985,7 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	BonusType=BONUS_FINE_CLAY
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -27017,13 +27017,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=86,y=17
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=86,y=18
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -27035,7 +27035,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=86,y=20
-	FeatureType=FEATURE_VOLCANO2, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_DORMANT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -27048,13 +27048,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=86,y=22
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=86,y=23
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -27067,7 +27067,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=86,y=25
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -27093,7 +27093,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=86,y=29
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -27351,7 +27351,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=87,y=15
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -27373,19 +27373,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=87,y=19
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=87,y=20
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=87,y=21
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -27399,7 +27399,7 @@ BeginPlot
 	x=87,y=23
 	BonusType=BONUS_GOLD_ORE
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -27412,19 +27412,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=87,y=25
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=87,y=26
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=87,y=27
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -27436,13 +27436,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=87,y=29
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=87,y=30
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -27490,7 +27490,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=87,y=38
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -27667,13 +27667,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=88,y=14
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=88,y=15
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -27689,7 +27689,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=88,y=18
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -27708,7 +27708,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=88,y=21
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -27719,13 +27719,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=88,y=23
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=88,y=24
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -27743,7 +27743,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=88,y=27
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -27918,13 +27918,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=89,y=4
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=89,y=5
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -27952,7 +27952,7 @@ BeginPlot
 	x=89,y=9
 	isNOfRiver
 	RiverWEDirection=3
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -27980,13 +27980,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=89,y=13
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=89,y=14
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -28002,7 +28002,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=89,y=17
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -28028,7 +28028,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=89,y=21
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -28079,7 +28079,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=89,y=31
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -28099,7 +28099,7 @@ BeginPlot
 	x=89,y=34
 	isNOfRiver
 	RiverWEDirection=1
-	FeatureType=FEATURE_VOLCANO2, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_DORMANT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -28246,7 +28246,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=90,y=5
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -28265,13 +28265,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=90,y=8
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=90,y=9
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -28284,13 +28284,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=90,y=11
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=90,y=12
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -28317,7 +28317,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=90,y=17
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -28330,13 +28330,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=90,y=19
-	FeatureType=FEATURE_VOLCANO2, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_DORMANT, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY
 	PlotType=2
 EndPlot
 BeginPlot
 	x=90,y=20
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -28403,7 +28403,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=90,y=33
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -28566,7 +28566,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=91,y=8
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -28577,7 +28577,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=91,y=10
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -28620,7 +28620,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=91,y=18
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -28659,13 +28659,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=91,y=25
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=91,y=26
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -28776,7 +28776,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=91,y=44
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_ICE
 	PlotType=2
 EndPlot

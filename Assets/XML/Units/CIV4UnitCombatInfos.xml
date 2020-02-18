@@ -20,7 +20,7 @@
 			<iCaptureResistanceModifierChange>-20</iCaptureResistanceModifierChange>
 			<FeatureDoubleMoveChangeTypes>
 				<FeatureType>FEATURE_REEF</FeatureType>
-				<FeatureType>FEATURE_CORAL</FeatureType>
+				<FeatureType>FEATURE_CORAL_REEF</FeatureType>
 			</FeatureDoubleMoveChangeTypes>
 			<bForMilitary>1</bForMilitary>
 			<bForNavalMilitary>1</bForNavalMilitary>
@@ -464,7 +464,7 @@
 					<iModifier>-10</iModifier>
 				</FeatureDefenseChangeModifier>
 				<FeatureDefenseChangeModifier>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<iModifier>-10</iModifier>
 				</FeatureDefenseChangeModifier>
 				<FeatureDefenseChangeModifier>
@@ -619,11 +619,11 @@
 					<iModifier>10</iModifier>
 				</FeatureAttackChangeModifier>
 				<FeatureAttackChangeModifier>
-					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
 					<iModifier>20</iModifier>
 				</FeatureAttackChangeModifier>
 				<FeatureAttackChangeModifier>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<iModifier>20</iModifier>
 				</FeatureAttackChangeModifier>
 				<FeatureAttackChangeModifier>
@@ -643,11 +643,11 @@
 					<iModifier>10</iModifier>
 				</FeatureAttackChangeModifier>
 				<FeatureAttackChangeModifier>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<iModifier>20</iModifier>
 				</FeatureAttackChangeModifier>
 				<FeatureAttackChangeModifier>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<iModifier>20</iModifier>
 				</FeatureAttackChangeModifier>
 				<FeatureAttackChangeModifier>
@@ -714,11 +714,11 @@
 					<iWithdrawChange>15</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
 					<iWithdrawChange>15</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<iWithdrawChange>20</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
@@ -738,11 +738,11 @@
 					<iWithdrawChange>15</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<iWithdrawChange>15</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<iWithdrawChange>10</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
@@ -2998,7 +2998,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 			</InvisibleFeatureChanges>
@@ -3091,17 +3091,17 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<iIntensity>2</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -3116,7 +3116,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -3131,7 +3131,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 			</InvisibleFeatureChanges>
@@ -3264,12 +3264,12 @@
 			<InvisibleFeatureChanges>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -3279,7 +3279,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -3307,12 +3307,12 @@
 			<InvisibleFeatureChanges>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -3322,7 +3322,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -3349,20 +3349,20 @@
 			<iPursuitChange>10</iPursuitChange>
 			<FeatureAttacks>
 				<FeatureAttack>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<iFeatureAttack>10</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
 			<FeatureDefenses>
 				<FeatureDefense>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<iFeatureDefense>20</iFeatureDefense>
 				</FeatureDefense>
 			</FeatureDefenses>
 			<InvisibleFeatureChanges>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -3372,7 +3372,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 			</InvisibleFeatureChanges>
@@ -3389,12 +3389,12 @@
 			<InvisibleFeatureChanges>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -3404,7 +3404,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 			</InvisibleFeatureChanges>
@@ -3483,12 +3483,12 @@
 			<InvisibleFeatureChanges>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -3498,7 +3498,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 			</InvisibleFeatureChanges>
@@ -3653,17 +3653,17 @@
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
@@ -3763,15 +3763,15 @@
 					<iWithdrawChange>20</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_CORAL</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF</FeatureType>
 					<iWithdrawChange>25</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_CORAL_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_REEF_BEACON</FeatureType>
 					<iWithdrawChange>25</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_CORAL_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_REEF_LIGHTHOUSE</FeatureType>
 					<iWithdrawChange>25</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
@@ -3787,15 +3787,15 @@
 					<iWithdrawChange>25</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_REEF_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_REEF_BEACON</FeatureType>
 					<iWithdrawChange>25</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_REEF_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_REEF_LIGHTHOUSE</FeatureType>
 					<iWithdrawChange>25</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_SEAGRASS</FeatureType>
+					<FeatureType>FEATURE_SEA_GRASS</FeatureType>
 					<iWithdrawChange>10</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 			</WithdrawModifierOnFeatureTypeChanges>
@@ -3918,17 +3918,17 @@
 			<InvisibleFeatureChanges>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_CORAL</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_CORAL_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_REEF_BEACON</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_CORAL_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_REEF_LIGHTHOUSE</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -3963,17 +3963,17 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_REEF_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_REEF_BEACON</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_REEF_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_REEF_LIGHTHOUSE</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_SEAGRASS</FeatureType>
+					<FeatureType>FEATURE_SEA_GRASS</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -3993,7 +3993,7 @@
 					<iWithdrawChange>20</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<iWithdrawChange>25</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
@@ -4005,11 +4005,11 @@
 					<iWithdrawChange>25</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
 					<iWithdrawChange>15</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
 					<iWithdrawChange>10</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 			</WithdrawModifierOnFeatureTypeChanges>
@@ -4021,7 +4021,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -4199,11 +4199,11 @@
 					<iModifier>10</iModifier>
 				</FeatureDefenseChangeModifier>
 				<FeatureDefenseChangeModifier>
-					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
 					<iModifier>10</iModifier>
 				</FeatureDefenseChangeModifier>
 				<FeatureDefenseChangeModifier>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<iModifier>10</iModifier>
 				</FeatureDefenseChangeModifier>
 				<FeatureDefenseChangeModifier>
@@ -4219,11 +4219,11 @@
 					<iModifier>10</iModifier>
 				</FeatureDefenseChangeModifier>
 				<FeatureDefenseChangeModifier>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<iModifier>10</iModifier>
 				</FeatureDefenseChangeModifier>
 				<FeatureDefenseChangeModifier>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<iModifier>10</iModifier>
 				</FeatureDefenseChangeModifier>
 				<FeatureDefenseChangeModifier>
@@ -4274,7 +4274,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<iIntensity>2</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -4289,7 +4289,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -4326,17 +4326,17 @@
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
@@ -4440,7 +4440,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<iIntensity>2</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -4455,7 +4455,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -4492,17 +4492,17 @@
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
@@ -4606,7 +4606,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<iIntensity>2</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -4621,7 +4621,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -4658,17 +4658,17 @@
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
@@ -4772,7 +4772,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<iIntensity>2</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -4787,7 +4787,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -4824,17 +4824,17 @@
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_YOUNG_FOREST</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
 				<VisibleFeatureRangeChange>
@@ -4977,11 +4977,11 @@
 					<iModifier>20</iModifier>
 				</FeatureAttackChangeModifier>
 				<FeatureAttackChangeModifier>
-					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
 					<iModifier>20</iModifier>
 				</FeatureAttackChangeModifier>
 				<FeatureAttackChangeModifier>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<iModifier>20</iModifier>
 				</FeatureAttackChangeModifier>
 				<FeatureAttackChangeModifier>
@@ -5001,11 +5001,11 @@
 					<iModifier>20</iModifier>
 				</FeatureAttackChangeModifier>
 				<FeatureAttackChangeModifier>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<iModifier>20</iModifier>
 				</FeatureAttackChangeModifier>
 				<FeatureAttackChangeModifier>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<iModifier>20</iModifier>
 				</FeatureAttackChangeModifier>
 				<FeatureAttackChangeModifier>
@@ -5023,11 +5023,11 @@
 					<iWithdrawChange>5</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+					<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
 					<iWithdrawChange>5</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_ANCIENT_FOREST</FeatureType>
 					<iWithdrawChange>5</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
@@ -5043,11 +5043,11 @@
 					<iWithdrawChange>5</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<iWithdrawChange>5</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<iWithdrawChange>5</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
@@ -5262,19 +5262,19 @@
 			<InvisibleFeatureChanges>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 			</InvisibleFeatureChanges>
 			<FeatureAttacks>
 				<FeatureAttack>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<iFeatureAttack>10</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
 			<FeatureDefenses>
 				<FeatureDefense>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<iFeatureDefense>20</iFeatureDefense>
 				</FeatureDefense>
 			</FeatureDefenses>

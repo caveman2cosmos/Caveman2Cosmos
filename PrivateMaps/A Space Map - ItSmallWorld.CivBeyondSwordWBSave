@@ -717,7 +717,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=1
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_ICE
 	PlotType=2
 EndPlot
@@ -758,7 +758,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=9
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_BARREN
 	PlotType=2
 EndPlot
@@ -869,7 +869,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=31
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_BARREN
 	PlotType=2
 EndPlot
@@ -910,7 +910,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=39
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_ICE
 	PlotType=2
 EndPlot
@@ -1339,7 +1339,7 @@ EndPlot
 BeginPlot
 	x=4,y=0
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_ICE
 	PlotType=1
 EndPlot
@@ -1406,7 +1406,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_BARREN
 	PlotType=1
 EndPlot
@@ -1475,7 +1475,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_SALT_FLATS
 	PlotType=1
 EndPlot
@@ -1544,7 +1544,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_BARREN
 	PlotType=1
 EndPlot
@@ -1686,19 +1686,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=5,y=14
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
 BeginPlot
 	x=5,y=15
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
 BeginPlot
 	x=5,y=16
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
@@ -1748,13 +1748,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=5,y=25
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
 BeginPlot
 	x=5,y=26
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
@@ -1898,13 +1898,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=6,y=13
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DUNES
 	PlotType=1
 EndPlot
 BeginPlot
 	x=6,y=14
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
@@ -1923,7 +1923,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=6,y=17
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DUNES
 	PlotType=1
 EndPlot
@@ -1956,13 +1956,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=6,y=23
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=1
 EndPlot
 BeginPlot
 	x=6,y=24
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
@@ -1980,7 +1980,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=6,y=27
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=1
 EndPlot
@@ -2114,20 +2114,20 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=7,y=12
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
 BeginPlot
 	x=7,y=13
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
 BeginPlot
 	x=7,y=14
 	BonusType=BONUS_SULPHUR
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DUNES
 	PlotType=1
 EndPlot
@@ -2143,13 +2143,13 @@ EndPlot
 BeginPlot
 	x=7,y=16
 	BonusType=BONUS_SILVER_ORE
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DUNES
 	PlotType=1
 EndPlot
 BeginPlot
 	x=7,y=17
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
@@ -2176,13 +2176,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=7,y=22
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
 BeginPlot
 	x=7,y=23
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
@@ -2309,7 +2309,7 @@ EndPlot
 BeginPlot
 	x=8,y=5
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_PERMAFROST
 	PlotType=1
 EndPlot
@@ -2371,7 +2371,7 @@ EndPlot
 BeginPlot
 	x=8,y=15
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=1
 EndPlot
@@ -2448,7 +2448,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=1
 EndPlot
@@ -2510,7 +2510,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_PERMAFROST
 	PlotType=1
 EndPlot
@@ -2587,7 +2587,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=9,y=9
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
@@ -2599,26 +2599,26 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=9,y=11
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
 BeginPlot
 	x=9,y=12
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
 BeginPlot
 	x=9,y=13
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
 BeginPlot
 	x=9,y=14
 	BonusType=BONUS_TIN_ORE
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DUNES
 	PlotType=1
 EndPlot
@@ -2689,25 +2689,25 @@ EndPlot
 BeginPlot
 	x=9,y=26
 	BonusType=BONUS_BAUXITE_ORE
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=1
 EndPlot
 BeginPlot
 	x=9,y=27
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
 BeginPlot
 	x=9,y=28
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
 BeginPlot
 	x=9,y=29
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
@@ -2719,7 +2719,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=9,y=31
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
@@ -2764,7 +2764,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=9,y=39
-	FeatureType=FEATURE_TARPIT, FeatureVariety=0
+	FeatureType=FEATURE_TAR_PIT, FeatureVariety=0
 	TerrainType=TERRAIN_ICE
 	PlotType=2
 EndPlot
@@ -2812,13 +2812,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=10,y=8
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=1
 EndPlot
 BeginPlot
 	x=10,y=9
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
@@ -2835,19 +2835,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=10,y=12
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=1
 EndPlot
 BeginPlot
 	x=10,y=13
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DUNES
 	PlotType=1
 EndPlot
 BeginPlot
 	x=10,y=14
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
@@ -2858,13 +2858,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=10,y=16
-	FeatureType=FEATURE_TARPIT, FeatureVariety=0
+	FeatureType=FEATURE_TAR_PIT, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
 BeginPlot
 	x=10,y=17
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DUNES
 	PlotType=1
 EndPlot
@@ -2896,13 +2896,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=10,y=23
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=1
 EndPlot
 BeginPlot
 	x=10,y=24
-	FeatureType=FEATURE_TARPIT, FeatureVariety=0
+	FeatureType=FEATURE_TAR_PIT, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
@@ -2913,26 +2913,26 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=10,y=26
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
 BeginPlot
 	x=10,y=27
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=1
 EndPlot
 BeginPlot
 	x=10,y=28
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=1
 EndPlot
 BeginPlot
 	x=10,y=29
 	BonusType=BONUS_TEA
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
@@ -2949,7 +2949,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=10,y=32
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=1
 EndPlot
@@ -3029,20 +3029,20 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=11,y=7
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
 BeginPlot
 	x=11,y=8
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
 BeginPlot
 	x=11,y=9
 	BonusType=BONUS_RUBIES
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=1
 EndPlot
@@ -3055,26 +3055,26 @@ EndPlot
 BeginPlot
 	x=11,y=11
 	BonusType=BONUS_LEAD_ORE
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=1
 EndPlot
 BeginPlot
 	x=11,y=12
 	BonusType=BONUS_LLAMA
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
 BeginPlot
 	x=11,y=13
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
 BeginPlot
 	x=11,y=14
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
@@ -3086,7 +3086,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=11,y=16
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
@@ -3130,7 +3130,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=11,y=24
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
@@ -3142,26 +3142,26 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=11,y=26
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
 BeginPlot
 	x=11,y=27
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
 BeginPlot
 	x=11,y=28
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
 BeginPlot
 	x=11,y=29
 	BonusType=BONUS_BAUXITE_ORE
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=1
 EndPlot
@@ -3174,19 +3174,19 @@ EndPlot
 BeginPlot
 	x=11,y=31
 	BonusType=BONUS_STONE
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=1
 EndPlot
 BeginPlot
 	x=11,y=32
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
 BeginPlot
 	x=11,y=33
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
@@ -3227,7 +3227,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_ICE
 	PlotType=1
 EndPlot
@@ -3275,7 +3275,7 @@ BeginPlot
 	x=12,y=7
 	RiverNSDirection=0
 	isWOfRiver
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
@@ -3284,7 +3284,7 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	BonusType=BONUS_TEA
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
@@ -3293,7 +3293,7 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	BonusType=BONUS_INDIGO
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
@@ -3302,7 +3302,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=1
 EndPlot
@@ -3313,7 +3313,7 @@ BeginPlot
 	RiverWEDirection=3
 	isWOfRiver
 	BonusType=BONUS_PAPAYA
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
@@ -3322,7 +3322,7 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	BonusType=BONUS_HENNA
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
@@ -3331,7 +3331,7 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	BonusType=BONUS_PEYOTE
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
@@ -3377,7 +3377,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_SALT_FLATS
 	PlotType=1
 EndPlot
@@ -3425,7 +3425,7 @@ BeginPlot
 	x=12,y=27
 	RiverNSDirection=0
 	isWOfRiver
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
@@ -3433,7 +3433,7 @@ BeginPlot
 	x=12,y=28
 	RiverNSDirection=0
 	isWOfRiver
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
@@ -3441,7 +3441,7 @@ BeginPlot
 	x=12,y=29
 	RiverNSDirection=0
 	isWOfRiver
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
@@ -3450,7 +3450,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=1
 EndPlot
@@ -3461,7 +3461,7 @@ BeginPlot
 	RiverWEDirection=3
 	isWOfRiver
 	BonusType=BONUS_POTATOES
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
@@ -3469,7 +3469,7 @@ BeginPlot
 	x=12,y=32
 	RiverNSDirection=2
 	isWOfRiver
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
@@ -3477,7 +3477,7 @@ BeginPlot
 	x=12,y=33
 	RiverNSDirection=2
 	isWOfRiver
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
@@ -3562,14 +3562,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=7
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
 BeginPlot
 	x=13,y=8
 	BonusType=BONUS_SUGAR
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
@@ -3594,19 +3594,19 @@ EndPlot
 BeginPlot
 	x=13,y=12
 	BonusType=BONUS_PRICKLY_PEAR
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
 BeginPlot
 	x=13,y=13
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
 BeginPlot
 	x=13,y=14
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -3618,7 +3618,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=16
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -3663,7 +3663,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=24
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -3675,20 +3675,20 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=26
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
 BeginPlot
 	x=13,y=27
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
 BeginPlot
 	x=13,y=28
 	BonusType=BONUS_INCENSE
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
@@ -3713,13 +3713,13 @@ EndPlot
 BeginPlot
 	x=13,y=32
 	BonusType=BONUS_COFFEE
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
 BeginPlot
 	x=13,y=33
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
@@ -3804,13 +3804,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=14,y=8
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=1
 EndPlot
 BeginPlot
 	x=14,y=9
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
@@ -3826,19 +3826,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=14,y=12
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=1
 EndPlot
 BeginPlot
 	x=14,y=13
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=2
+	FeatureType=FEATURE_CACTUS, FeatureVariety=2
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
 BeginPlot
 	x=14,y=14
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -3855,7 +3855,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=14,y=17
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
@@ -3887,13 +3887,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=14,y=23
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=2
+	FeatureType=FEATURE_CACTUS, FeatureVariety=2
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
 BeginPlot
 	x=14,y=24
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -3910,20 +3910,20 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=14,y=27
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
 BeginPlot
 	x=14,y=28
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=1
 EndPlot
 BeginPlot
 	x=14,y=29
 	BonusType=BONUS_BISON
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
@@ -3935,13 +3935,13 @@ EndPlot
 BeginPlot
 	x=14,y=31
 	BonusType=BONUS_SHEEP
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
 BeginPlot
 	x=14,y=32
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=1
 EndPlot
@@ -4041,7 +4041,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=9
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
@@ -4053,26 +4053,26 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=11
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
 BeginPlot
 	x=15,y=12
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
 BeginPlot
 	x=15,y=13
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
 BeginPlot
 	x=15,y=14
 	BonusType=BONUS_URANIUM
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
@@ -4091,13 +4091,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=17
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
 BeginPlot
 	x=15,y=18
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -4119,13 +4119,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=22
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
 BeginPlot
 	x=15,y=23
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -4150,19 +4150,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=27
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
 BeginPlot
 	x=15,y=28
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
 BeginPlot
 	x=15,y=29
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
@@ -4174,7 +4174,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=31
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_ARID
 	PlotType=2
 EndPlot
@@ -4269,7 +4269,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=1
 EndPlot
@@ -4346,7 +4346,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
@@ -4424,7 +4424,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
@@ -4500,7 +4500,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=1
 EndPlot
@@ -4861,7 +4861,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=13
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
@@ -4877,13 +4877,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=16
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
 BeginPlot
 	x=18,y=17
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
@@ -4918,13 +4918,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=23
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
 BeginPlot
 	x=18,y=24
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -4936,13 +4936,13 @@ EndPlot
 BeginPlot
 	x=18,y=26
 	BonusType=BONUS_NATURAL_GAS
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
 BeginPlot
 	x=18,y=27
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
@@ -5103,7 +5103,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=14
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -5115,7 +5115,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=16
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -5166,7 +5166,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=24
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -5178,7 +5178,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=26
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -5265,7 +5265,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=1
 EndPlot
@@ -5340,7 +5340,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -5419,7 +5419,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_SCRUB
 	PlotType=1
 EndPlot
@@ -5497,7 +5497,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -6333,7 +6333,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_COLD
 	PlotType=1
 EndPlot
@@ -6411,7 +6411,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=1
 EndPlot
@@ -6489,7 +6489,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=1
 EndPlot
@@ -6565,7 +6565,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_COLD
 	PlotType=1
 EndPlot
@@ -6659,7 +6659,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=9
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -6671,7 +6671,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=11
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -6785,7 +6785,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=29
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -6797,7 +6797,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=31
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -6858,7 +6858,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=1
-	FeatureType=FEATURE_TARPIT, FeatureVariety=0
+	FeatureType=FEATURE_TAR_PIT, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=2
 EndPlot
@@ -6898,14 +6898,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=8
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=26,y=9
 	BonusType=BONUS_GRAPES
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -6922,7 +6922,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=12
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -7017,14 +7017,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=28
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=26,y=29
 	BonusType=BONUS_SHEEP
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -7041,7 +7041,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=32
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -7128,20 +7128,20 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=7
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=27,y=8
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=27,y=9
 	BonusType=BONUS_COPPER_ORE
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -7154,20 +7154,20 @@ EndPlot
 BeginPlot
 	x=27,y=11
 	BonusType=BONUS_BAUXITE_ORE
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=27,y=12
 	BonusType=BONUS_APPLE
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=27,y=13
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -7252,20 +7252,20 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=27
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=27,y=28
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=27,y=29
 	BonusType=BONUS_URANIUM
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -7278,20 +7278,20 @@ EndPlot
 BeginPlot
 	x=27,y=31
 	BonusType=BONUS_GOLD_ORE
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=27,y=32
 	BonusType=BONUS_DONKEY
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=27,y=33
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -7334,7 +7334,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=1
 EndPlot
@@ -7382,7 +7382,7 @@ BeginPlot
 	x=28,y=7
 	RiverNSDirection=0
 	isWOfRiver
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -7390,7 +7390,7 @@ BeginPlot
 	x=28,y=8
 	RiverNSDirection=0
 	isWOfRiver
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -7407,7 +7407,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -7425,7 +7425,7 @@ BeginPlot
 	x=28,y=12
 	RiverNSDirection=2
 	isWOfRiver
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -7433,7 +7433,7 @@ BeginPlot
 	x=28,y=13
 	RiverNSDirection=2
 	isWOfRiver
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -7482,7 +7482,7 @@ BeginPlot
 	x=28,y=20
 	isNOfRiver
 	RiverWEDirection=1
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_SCRUB
 	PlotType=1
 EndPlot
@@ -7535,7 +7535,7 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	BonusType=BONUS_LEMONS
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -7544,7 +7544,7 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	BonusType=BONUS_SPICES
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -7561,7 +7561,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -7580,7 +7580,7 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	BonusType=BONUS_CORN
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -7588,7 +7588,7 @@ BeginPlot
 	x=28,y=33
 	RiverNSDirection=2
 	isWOfRiver
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -7673,21 +7673,21 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=7
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=29,y=8
 	BonusType=BONUS_HEMP
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=29,y=9
 	BonusType=BONUS_DIAMOND
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -7707,13 +7707,13 @@ EndPlot
 BeginPlot
 	x=29,y=12
 	BonusType=BONUS_PIG
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=29,y=13
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -7800,14 +7800,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=27
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=29,y=28
 	BonusType=BONUS_APPLE
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -7827,20 +7827,20 @@ EndPlot
 BeginPlot
 	x=29,y=31
 	BonusType=BONUS_TITANIUM_ORE
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=29,y=32
 	BonusType=BONUS_TEA
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=29,y=33
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -7926,14 +7926,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=8
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=30,y=9
 	BonusType=BONUS_TOBACCO
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -7945,13 +7945,13 @@ EndPlot
 BeginPlot
 	x=30,y=11
 	BonusType=BONUS_OLIVES
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=30,y=12
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -8047,14 +8047,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=28
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=30,y=29
 	BonusType=BONUS_GRAPES
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -8070,7 +8070,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=32
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -8172,7 +8172,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=9
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -8184,7 +8184,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=11
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -8221,7 +8221,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=17
-	FeatureType=FEATURE_TARPIT, FeatureVariety=0
+	FeatureType=FEATURE_TAR_PIT, FeatureVariety=0
 	TerrainType=TERRAIN_MARSH
 	PlotType=2
 EndPlot
@@ -8298,7 +8298,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=29
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -8310,7 +8310,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=31
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -8404,7 +8404,7 @@ BeginPlot
 	RiverWEDirection=1
 	isWOfRiver
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY
 	PlotType=1
 EndPlot
@@ -8474,7 +8474,7 @@ BeginPlot
 	RiverWEDirection=1
 	isWOfRiver
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_MARSH
 	PlotType=1
 EndPlot
@@ -8532,7 +8532,7 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_MARSH
 	PlotType=1
 EndPlot
@@ -8601,7 +8601,7 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY
 	PlotType=1
 EndPlot
@@ -8890,19 +8890,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=0
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_POLAR
 	PlotType=3
 EndPlot
 BeginPlot
 	x=34,y=1
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_POLAR
 	PlotType=3
 EndPlot
 BeginPlot
 	x=34,y=2
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_POLAR
 	PlotType=3
 EndPlot
@@ -8997,13 +8997,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=18
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=34,y=19
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -9021,7 +9021,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=22
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -9039,7 +9039,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=25
-	FeatureType=FEATURE_TARPIT, FeatureVariety=0
+	FeatureType=FEATURE_TAR_PIT, FeatureVariety=0
 	TerrainType=TERRAIN_MARSH
 	PlotType=2
 EndPlot
@@ -9117,13 +9117,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=38
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_POLAR
 	PlotType=3
 EndPlot
 BeginPlot
 	x=34,y=39
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_POLAR
 	PlotType=3
 EndPlot
@@ -9142,7 +9142,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=2
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_POLAR
 	PlotType=3
 EndPlot
@@ -9238,34 +9238,34 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=18
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=35,y=19
 	BonusType=BONUS_SHRIMP
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=35,y=20
 	BonusType=BONUS_WHALE
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=35,y=21
 	BonusType=BONUS_CLAM
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=35,y=22
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -9362,7 +9362,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=38
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_POLAR
 	PlotType=3
 EndPlot
@@ -9376,7 +9376,7 @@ EndPlot
 BeginPlot
 	x=36,y=0
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_ICE
 	PlotType=1
 EndPlot
@@ -9389,7 +9389,7 @@ EndPlot
 BeginPlot
 	x=36,y=2
 	ImprovementType=IMPROVEMENT_GOODY_ISLAND
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_POLAR
 	PlotType=3
 EndPlot
@@ -9443,7 +9443,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_MUDDY
 	PlotType=1
 EndPlot
@@ -9498,34 +9498,34 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=18
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=36,y=19
 	BonusType=BONUS_PEARLS
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=36,y=20
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=1
 EndPlot
 BeginPlot
 	x=36,y=21
 	BonusType=BONUS_CRAB
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=36,y=22
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -9581,7 +9581,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_MUDDY
 	PlotType=1
 EndPlot
@@ -9636,7 +9636,7 @@ EndPlot
 BeginPlot
 	x=36,y=38
 	ImprovementType=IMPROVEMENT_GOODY_ISLAND
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_POLAR
 	PlotType=3
 EndPlot
@@ -9661,7 +9661,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=2
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -9752,34 +9752,34 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=18
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_SEA_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=37,y=19
 	BonusType=BONUS_MUREX
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=37,y=20
 	BonusType=BONUS_LOBSTER
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=37,y=21
 	BonusType=BONUS_FISH
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=37,y=22
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_SEA_TROPICAL
 	PlotType=3
 EndPlot
@@ -9871,7 +9871,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=38
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -9885,19 +9885,19 @@ EndPlot
 BeginPlot
 	x=38,y=0
 	BonusType=BONUS_MANGANESE
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_SEA_POLAR
 	PlotType=3
 EndPlot
 BeginPlot
 	x=38,y=1
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_SEA_POLAR
 	PlotType=3
 EndPlot
 BeginPlot
 	x=38,y=2
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -9983,13 +9983,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=18
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_SEA_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=38,y=19
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_SEA_TROPICAL
 	PlotType=3
 EndPlot
@@ -10001,13 +10001,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=21
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_SEA_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=38,y=22
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_SEA_TROPICAL
 	PlotType=3
 EndPlot
@@ -10094,13 +10094,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=38
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=38,y=39
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_SEA_POLAR
 	PlotType=3
 EndPlot
@@ -30001,7 +30001,7 @@ EndPlot
 BeginPlot
 	x=136,y=13
 	BonusType=BONUS_XENOFLORA
-	FeatureType=FEATURE_WATER_PLANET, FeatureVariety=0
+	FeatureType=FEATURE_OCEAN_PLANET, FeatureVariety=0
 	TerrainType=TERRAIN_TRANSTELLAR
 	PlotType=2
 EndPlot
@@ -30523,7 +30523,7 @@ EndPlot
 BeginPlot
 	x=138,y=36
 	BonusType=BONUS_XENOFLORA
-	FeatureType=FEATURE_WATER_PLANET, FeatureVariety=0
+	FeatureType=FEATURE_OCEAN_PLANET, FeatureVariety=0
 	TerrainType=TERRAIN_TRANSTELLAR
 	PlotType=2
 EndPlot
@@ -30954,7 +30954,7 @@ EndPlot
 BeginPlot
 	x=141,y=1
 	BonusType=BONUS_XENOFLORA
-	FeatureType=FEATURE_WATER_PLANET, FeatureVariety=0
+	FeatureType=FEATURE_OCEAN_PLANET, FeatureVariety=0
 	TerrainType=TERRAIN_RED_GIANT
 	PlotType=2
 EndPlot
@@ -31558,7 +31558,7 @@ EndPlot
 BeginPlot
 	x=144,y=0
 	BonusType=BONUS_XENOFLORA
-	FeatureType=FEATURE_WATER_PLANET, FeatureVariety=0
+	FeatureType=FEATURE_OCEAN_PLANET, FeatureVariety=0
 	TerrainType=TERRAIN_TRANSTELLAR
 	PlotType=2
 EndPlot
@@ -32685,7 +32685,7 @@ EndPlot
 BeginPlot
 	x=149,y=21
 	BonusType=BONUS_XENOFLORA
-	FeatureType=FEATURE_WATER_PLANET, FeatureVariety=0
+	FeatureType=FEATURE_OCEAN_PLANET, FeatureVariety=0
 	TerrainType=TERRAIN_G_TYPE
 	PlotType=2
 EndPlot
@@ -32760,7 +32760,7 @@ EndPlot
 BeginPlot
 	x=149,y=35
 	BonusType=BONUS_XENOFLORA
-	FeatureType=FEATURE_WATER_PLANET, FeatureVariety=0
+	FeatureType=FEATURE_OCEAN_PLANET, FeatureVariety=0
 	TerrainType=TERRAIN_RED_GIANT
 	PlotType=2
 EndPlot

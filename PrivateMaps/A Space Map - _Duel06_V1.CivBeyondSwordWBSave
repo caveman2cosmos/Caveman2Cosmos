@@ -880,7 +880,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=66
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -1073,13 +1073,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=103
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_DESERT
 	PlotType=2
 EndPlot
 BeginPlot
 	x=0,y=104
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -1127,13 +1127,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=113
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=0,y=114
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -1154,13 +1154,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=118
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=0,y=119
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -1172,7 +1172,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=121
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -1424,7 +1424,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=23
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -1458,7 +1458,7 @@ BeginPlot
 	isWOfRiver
 	StartingPlot
 	BonusType=BONUS_COPPER_ORE
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -1480,7 +1480,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=31
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -1597,7 +1597,7 @@ EndPlot
 BeginPlot
 	x=1,y=52
 	BonusType=BONUS_BAUXITE_ORE
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=1
 EndPlot
@@ -1668,7 +1668,7 @@ EndPlot
 BeginPlot
 	x=1,y=65
 	BonusType=BONUS_TITANIUM_ORE
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_PLAINS
 	PlotType=2
 EndPlot
@@ -1934,14 +1934,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=115
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=1,y=116
 	BonusType=BONUS_MUREX
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -1953,7 +1953,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=118
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -1966,13 +1966,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=120
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=1,y=121
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -2273,7 +2273,7 @@ EndPlot
 BeginPlot
 	x=2,y=31
 	BonusType=BONUS_RABBIT
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
 EndPlot
@@ -2465,7 +2465,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2,y=67
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_DESERT
 	PlotType=2
 EndPlot
@@ -2701,7 +2701,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2,y=112
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -2734,7 +2734,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2,y=117
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -2751,13 +2751,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2,y=120
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=2,y=121
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -3243,7 +3243,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=3,y=65
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BASALT
 	PlotType=2
 EndPlot
@@ -3492,7 +3492,7 @@ BeginPlot
 	x=3,y=112
 	RiverNSDirection=2
 	isWOfRiver
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -3549,7 +3549,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=3,y=120
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -3865,7 +3865,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=4,y=33
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -3928,13 +3928,13 @@ EndPlot
 BeginPlot
 	x=4,y=45
 	BonusType=BONUS_OBSIDIAN
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_SCRUB
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=46
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -3976,7 +3976,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=4,y=53
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=1
 EndPlot
@@ -4337,19 +4337,19 @@ EndPlot
 BeginPlot
 	x=4,y=119
 	BonusType=BONUS_BAUXITE_ORE
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY
 	PlotType=0
 EndPlot
 BeginPlot
 	x=4,y=120
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=4,y=121
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -4625,7 +4625,7 @@ EndPlot
 BeginPlot
 	x=5,y=26
 	BonusType=BONUS_TIN_ORE
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=2
 EndPlot
@@ -4727,7 +4727,7 @@ EndPlot
 BeginPlot
 	x=5,y=44
 	BonusType=BONUS_WHEAT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -4739,20 +4739,20 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=5,y=46
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=5,y=47
 	BonusType=BONUS_BARLEY
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=5,y=48
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_SCRUB
 	PlotType=2
 EndPlot
@@ -4855,7 +4855,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=5,y=66
-	FeatureType=FEATURE_LUNAR_CRATER2, FeatureVariety=0
+	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -5115,7 +5115,7 @@ EndPlot
 BeginPlot
 	x=5,y=115
 	BonusType=BONUS_STONE
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY
 	PlotType=1
 EndPlot
@@ -5152,7 +5152,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=5,y=120
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -5548,7 +5548,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=6,y=46
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -5667,7 +5667,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=6,y=67
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_DESERT
 	PlotType=2
 EndPlot
@@ -6195,7 +6195,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=7,y=20
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_ICE
 	PlotType=2
 EndPlot
@@ -6257,7 +6257,7 @@ EndPlot
 BeginPlot
 	x=7,y=30
 	BonusType=BONUS_FIG
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_MARSH
 	PlotType=2
 EndPlot
@@ -6337,7 +6337,7 @@ EndPlot
 BeginPlot
 	x=7,y=45
 	BonusType=BONUS_PRICKLY_PEAR
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -6447,7 +6447,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=7,y=64
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_DESERT
 	PlotType=2
 EndPlot
@@ -6459,7 +6459,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=7,y=66
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=1
 EndPlot
@@ -6657,7 +6657,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=7,y=104
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -6744,13 +6744,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=7,y=118
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=7,y=119
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -6798,7 +6798,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=7,y=128
-	FeatureType=FEATURE_WATER_PLANET, FeatureVariety=0
+	FeatureType=FEATURE_OCEAN_PLANET, FeatureVariety=0
 	TerrainType=TERRAIN_TRANSTELLAR
 	PlotType=2
 EndPlot
@@ -7058,7 +7058,7 @@ EndPlot
 BeginPlot
 	x=8,y=29
 	BonusType=BONUS_FINE_CLAY
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_MARSH
 	PlotType=2
 EndPlot
@@ -7181,7 +7181,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=8,y=51
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -7543,7 +7543,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=8,y=119
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -8038,7 +8038,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=9,y=64
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -8294,7 +8294,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=9,y=113
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -8313,7 +8313,7 @@ EndPlot
 BeginPlot
 	x=9,y=116
 	BonusType=BONUS_DATES
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
@@ -8826,13 +8826,13 @@ EndPlot
 BeginPlot
 	x=10,y=66
 	BonusType=BONUS_TITANIUM_ORE
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
 BeginPlot
 	x=10,y=67
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_DESERT
 	PlotType=2
 EndPlot
@@ -9024,7 +9024,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=10,y=104
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -9045,7 +9045,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=10,y=108
-	FeatureType=FEATURE_TARPIT, FeatureVariety=0
+	FeatureType=FEATURE_TAR_PIT, FeatureVariety=0
 	TerrainType=TERRAIN_ICE
 	PlotType=2
 EndPlot
@@ -9079,7 +9079,7 @@ EndPlot
 BeginPlot
 	x=10,y=114
 	BonusType=BONUS_PRICKLY_PEAR
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=2
+	FeatureType=FEATURE_CACTUS, FeatureVariety=2
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -9501,7 +9501,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=11,y=47
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
@@ -10176,7 +10176,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	BonusType=BONUS_FOSSIL_BEDS
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -10342,7 +10342,7 @@ EndPlot
 BeginPlot
 	x=12,y=55
 	BonusType=BONUS_BAUXITE_ORE
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY_COLD
 	PlotType=2
 EndPlot
@@ -10397,7 +10397,7 @@ EndPlot
 BeginPlot
 	x=12,y=65
 	BonusType=BONUS_BAUXITE_ORE
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -10663,7 +10663,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=12,y=116
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -11101,7 +11101,7 @@ EndPlot
 BeginPlot
 	x=13,y=49
 	BonusType=BONUS_AMBER
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -11208,7 +11208,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=67
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_DESERT
 	PlotType=2
 EndPlot
@@ -11444,7 +11444,7 @@ EndPlot
 BeginPlot
 	x=13,y=112
 	BonusType=BONUS_PRICKLY_PEAR
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=2
+	FeatureType=FEATURE_CACTUS, FeatureVariety=2
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -11467,7 +11467,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=116
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -11746,7 +11746,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=14,y=23
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=2
 EndPlot
@@ -11991,7 +11991,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=14,y=64
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_DESERT
 	PlotType=2
 EndPlot
@@ -12002,7 +12002,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=14,y=66
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=1
 EndPlot
@@ -12195,7 +12195,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=14,y=103
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=1
 EndPlot
@@ -12233,7 +12233,7 @@ EndPlot
 BeginPlot
 	x=14,y=110
 	BonusType=BONUS_CLAM
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -12282,7 +12282,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=14,y=119
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -12332,7 +12332,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=14,y=128
-	FeatureType=FEATURE_WATER_PLANET, FeatureVariety=0
+	FeatureType=FEATURE_OCEAN_PLANET, FeatureVariety=0
 	TerrainType=TERRAIN_TRANSTELLAR
 	PlotType=2
 EndPlot
@@ -12645,7 +12645,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=40
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -12673,7 +12673,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=44
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -12736,7 +12736,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=53
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_BARREN
 	PlotType=2
 EndPlot
@@ -13000,7 +13000,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=104
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -13056,7 +13056,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=114
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -13096,7 +13096,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=121
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -13600,7 +13600,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=16,y=66
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_PLAINS
 	PlotType=2
 EndPlot
@@ -13854,7 +13854,7 @@ EndPlot
 BeginPlot
 	x=16,y=114
 	BonusType=BONUS_CLAM
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -14176,7 +14176,7 @@ EndPlot
 BeginPlot
 	x=17,y=26
 	BonusType=BONUS_TIN_ORE
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -14243,13 +14243,13 @@ EndPlot
 BeginPlot
 	x=17,y=38
 	BonusType=BONUS_KANGAROO
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_MARSH
 	PlotType=2
 EndPlot
 BeginPlot
 	x=17,y=39
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_MARSH
 	PlotType=2
 EndPlot
@@ -14289,7 +14289,7 @@ EndPlot
 BeginPlot
 	x=17,y=45
 	BonusType=BONUS_SHEEP
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -14301,7 +14301,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=47
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -14390,7 +14390,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=64
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_DESERT
 	PlotType=1
 EndPlot
@@ -14630,7 +14630,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=110
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -14642,25 +14642,25 @@ EndPlot
 BeginPlot
 	x=17,y=112
 	BonusType=BONUS_PIG
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=17,y=113
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=17,y=114
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=17,y=115
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -14699,7 +14699,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=122
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_BARREN
 	PlotType=2
 EndPlot
@@ -15024,7 +15024,7 @@ EndPlot
 BeginPlot
 	x=18,y=35
 	BonusType=BONUS_LOBSTER
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -15058,7 +15058,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=40
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -15086,7 +15086,7 @@ BeginPlot
 	x=18,y=44
 	RiverNSDirection=0
 	isWOfRiver
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY
 	PlotType=1
 EndPlot
@@ -15097,7 +15097,7 @@ BeginPlot
 	RiverWEDirection=1
 	isWOfRiver
 	BonusType=BONUS_WHEAT
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -15208,7 +15208,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=66
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -15438,7 +15438,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=110
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -15449,7 +15449,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=112
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -15461,7 +15461,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=114
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -15473,7 +15473,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=116
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -15500,13 +15500,13 @@ EndPlot
 BeginPlot
 	x=18,y=121
 	BonusType=BONUS_STONE
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_BARREN
 	PlotType=2
 EndPlot
 BeginPlot
 	x=18,y=122
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_BARREN
 	PlotType=2
 EndPlot
@@ -15774,14 +15774,14 @@ EndPlot
 BeginPlot
 	x=19,y=26
 	BonusType=BONUS_OIL
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=19,y=27
 	BonusType=BONUS_POTATOES
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -15995,7 +15995,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=64
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_DESERT
 	PlotType=2
 EndPlot
@@ -16242,14 +16242,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=111
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=19,y=112
 	BonusType=BONUS_MUSHROOMS
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -16264,7 +16264,7 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	BonusType=BONUS_PUMPKIN
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -16298,19 +16298,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=120
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_BARREN
 	PlotType=2
 EndPlot
 BeginPlot
 	x=19,y=121
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_BARREN
 	PlotType=2
 EndPlot
 BeginPlot
 	x=19,y=122
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=2
 EndPlot
@@ -16604,7 +16604,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=30
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
 EndPlot
@@ -16811,7 +16811,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=66
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -17041,7 +17041,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=110
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=0
 EndPlot
@@ -17053,7 +17053,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=112
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -17467,7 +17467,7 @@ EndPlot
 BeginPlot
 	x=21,y=40
 	BonusType=BONUS_PRICKLY_PEAR
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_SCRUB
 	PlotType=2
 EndPlot
@@ -17513,7 +17513,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=21,y=47
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -17810,7 +17810,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=21,y=104
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -18230,7 +18230,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=35
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=1
 EndPlot
@@ -18398,7 +18398,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=64
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_DESERT
 	PlotType=1
 EndPlot
@@ -18410,7 +18410,7 @@ EndPlot
 BeginPlot
 	x=22,y=66
 	BonusType=BONUS_IRON_ORE
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BASALT
 	PlotType=1
 EndPlot
@@ -18666,19 +18666,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=114
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=22,y=115
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=22,y=116
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -18689,7 +18689,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=118
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -19200,7 +19200,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=66
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_PLAINS
 	PlotType=2
 EndPlot
@@ -19445,7 +19445,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=112
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -19472,7 +19472,7 @@ EndPlot
 BeginPlot
 	x=23,y=117
 	BonusType=BONUS_CRAB
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -19508,7 +19508,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=123
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY
 	PlotType=2
 EndPlot
@@ -19774,7 +19774,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=28
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_MARSH
 	PlotType=2
 EndPlot
@@ -19822,7 +19822,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=36
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -19838,7 +19838,7 @@ EndPlot
 BeginPlot
 	x=24,y=38
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -19852,7 +19852,7 @@ EndPlot
 BeginPlot
 	x=24,y=40
 	BonusType=BONUS_FIG
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -20222,7 +20222,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=110
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -20561,7 +20561,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=28
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
 EndPlot
@@ -20678,7 +20678,7 @@ EndPlot
 BeginPlot
 	x=25,y=46
 	BonusType=BONUS_FISH
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -20770,7 +20770,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=64
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_DESERT
 	PlotType=1
 EndPlot
@@ -20982,7 +20982,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=104
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_PLAINS
 	PlotType=2
 EndPlot
@@ -21061,7 +21061,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=119
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -21369,7 +21369,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=31
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=1
 EndPlot
@@ -21388,7 +21388,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=34
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -21576,7 +21576,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=66
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -21871,7 +21871,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=121
-	FeatureType=FEATURE_VOLCANO2, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_DORMANT, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY
 	PlotType=2
 EndPlot
@@ -22190,14 +22190,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=34
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=1
 EndPlot
 BeginPlot
 	x=27,y=35
 	BonusType=BONUS_HENNA
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -22358,7 +22358,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=64
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_DESERT
 	PlotType=1
 EndPlot
@@ -22369,7 +22369,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=66
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -22561,7 +22561,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=103
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -22609,7 +22609,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=112
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -22643,7 +22643,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=118
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -22938,14 +22938,14 @@ EndPlot
 BeginPlot
 	x=28,y=28
 	BonusType=BONUS_MUSHROOMS
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=28,y=29
 	BonusType=BONUS_COAL
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -22959,7 +22959,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	BonusType=BONUS_PUMPKIN
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -22978,7 +22978,7 @@ EndPlot
 BeginPlot
 	x=28,y=34
 	BonusType=BONUS_IRON_ORE
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=1
 EndPlot
@@ -22994,7 +22994,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	isWOfRiver
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -23014,7 +23014,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=39
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_MUDDY
 	PlotType=1
 EndPlot
@@ -23163,7 +23163,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=67
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_DESERT
 	PlotType=2
 EndPlot
@@ -23411,7 +23411,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=114
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -23432,7 +23432,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=118
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -24217,7 +24217,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=115
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -24263,7 +24263,7 @@ EndPlot
 BeginPlot
 	x=29,y=121
 	BonusType=BONUS_LLAMA
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_BARREN
 	PlotType=1
 EndPlot
@@ -24554,7 +24554,7 @@ EndPlot
 BeginPlot
 	x=30,y=30
 	BonusType=BONUS_GEODE
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=1
 EndPlot
@@ -24593,7 +24593,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	BonusType=BONUS_TOBACCO
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=1
 EndPlot
@@ -24611,7 +24611,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=37
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_MUDDY
 	PlotType=2
 EndPlot
@@ -24768,7 +24768,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=67
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_DESERT
 	PlotType=2
 EndPlot
@@ -24960,7 +24960,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=104
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -25008,7 +25008,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=113
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -25050,13 +25050,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=120
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY
 	PlotType=1
 EndPlot
 BeginPlot
 	x=30,y=121
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_BARREN
 	PlotType=1
 EndPlot
@@ -25331,7 +25331,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=28
-	FeatureType=FEATURE_VOLCANO2, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_DORMANT, FeatureVariety=0
 	TerrainType=TERRAIN_BARREN
 	PlotType=2
 EndPlot
@@ -25387,7 +25387,7 @@ EndPlot
 BeginPlot
 	x=31,y=36
 	BonusType=BONUS_GEOTHERMAL_ENERGY
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
 EndPlot
@@ -25533,7 +25533,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=64
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_DESERT
 	PlotType=2
 EndPlot
@@ -25549,7 +25549,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=67
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_DESERT
 	PlotType=1
 EndPlot
@@ -25741,7 +25741,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=104
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -25847,7 +25847,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=123
-	FeatureType=FEATURE_TARPIT, FeatureVariety=0
+	FeatureType=FEATURE_TAR_PIT, FeatureVariety=0
 	TerrainType=TERRAIN_PERMAFROST
 	PlotType=2
 EndPlot
@@ -26105,7 +26105,7 @@ EndPlot
 BeginPlot
 	x=32,y=26
 	BonusType=BONUS_CRAB
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -26158,7 +26158,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=35
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -26313,7 +26313,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=65
-	FeatureType=FEATURE_LUNAR_CRATER2, FeatureVariety=0
+	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -26608,7 +26608,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=121
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -26965,7 +26965,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=33,y=43
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -27363,7 +27363,7 @@ EndPlot
 BeginPlot
 	x=33,y=119
 	BonusType=BONUS_LOBSTER
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -27859,7 +27859,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=66
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -28051,7 +28051,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=103
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_DESERT
 	PlotType=2
 EndPlot
@@ -28407,7 +28407,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=25
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -28418,7 +28418,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=27
-	FeatureType=FEATURE_TARPIT, FeatureVariety=0
+	FeatureType=FEATURE_TAR_PIT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -28429,7 +28429,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=29
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -28497,7 +28497,7 @@ EndPlot
 BeginPlot
 	x=35,y=42
 	BonusType=BONUS_TITANIUM_ORE
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -28621,7 +28621,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=65
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BASALT
 	PlotType=2
 EndPlot
@@ -28909,7 +28909,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=120
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -29255,7 +29255,7 @@ EndPlot
 BeginPlot
 	x=36,y=39
 	BonusType=BONUS_MUREX
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -29289,7 +29289,7 @@ EndPlot
 BeginPlot
 	x=36,y=44
 	BonusType=BONUS_PEARLS
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -29307,7 +29307,7 @@ EndPlot
 BeginPlot
 	x=36,y=47
 	BonusType=BONUS_PLATINUM_ORE
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -30049,7 +30049,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=41
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_MUDDY
 	PlotType=1
 EndPlot
@@ -30178,7 +30178,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=65
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=1
 EndPlot
@@ -30224,7 +30224,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=74
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_ICE
 	PlotType=2
 EndPlot
@@ -30423,7 +30423,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=112
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -30728,7 +30728,7 @@ EndPlot
 BeginPlot
 	x=38,y=24
 	BonusType=BONUS_PEARLS
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -30815,7 +30815,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=39
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -30846,7 +30846,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=44
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -30965,7 +30965,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=67
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_DESERT
 	PlotType=2
 EndPlot
@@ -31514,7 +31514,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=39,y=26
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -31598,13 +31598,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=39,y=41
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=39,y=42
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -31722,7 +31722,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=39,y=64
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_DESERT
 	PlotType=2
 EndPlot
@@ -31733,7 +31733,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=39,y=66
-	FeatureType=FEATURE_LUNAR_CRATER2, FeatureVariety=0
+	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -32766,13 +32766,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=40,y=114
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=40,y=115
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -33073,7 +33073,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=26
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_BARREN
 	PlotType=2
 EndPlot
@@ -33155,7 +33155,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=42
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -33169,7 +33169,7 @@ EndPlot
 BeginPlot
 	x=41,y=44
 	BonusType=BONUS_GOLD_ORE
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_SCRUB
 	PlotType=2
 EndPlot
@@ -33279,7 +33279,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=65
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -33327,7 +33327,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=74
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_ICE
 	PlotType=1
 EndPlot
@@ -33485,7 +33485,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=104
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -33524,7 +33524,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=111
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -34009,7 +34009,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=42,y=55
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=2
 EndPlot
@@ -34068,7 +34068,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=42,y=66
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BASALT
 	PlotType=1
 EndPlot
@@ -34306,13 +34306,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=42,y=111
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=42,y=112
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -34337,7 +34337,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=42,y=116
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -35091,14 +35091,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=43,y=112
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=43,y=113
 	BonusType=BONUS_PEARLS
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -35118,13 +35118,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=43,y=116
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=43,y=117
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -35407,7 +35407,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=25
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -35536,7 +35536,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=49
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -35623,7 +35623,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=64
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_DESERT
 	PlotType=2
 EndPlot
@@ -35826,7 +35826,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=103
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_DESERT
 	PlotType=2
 EndPlot
@@ -35884,13 +35884,13 @@ BeginPlot
 	x=44,y=113
 	isNOfRiver
 	RiverWEDirection=3
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=44,y=114
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -35910,7 +35910,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=117
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -36409,7 +36409,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=45,y=64
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_DESERT
 	PlotType=2
 EndPlot
@@ -36420,7 +36420,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=45,y=66
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -36655,7 +36655,7 @@ BeginPlot
 	RiverWEDirection=1
 	isWOfRiver
 	BonusType=BONUS_GOLD_ORE
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY
 	PlotType=0
 EndPlot
@@ -36708,7 +36708,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=45,y=117
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -37101,7 +37101,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46,y=47
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -37218,7 +37218,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46,y=67
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -37492,13 +37492,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46,y=116
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=46,y=117
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -37900,7 +37900,7 @@ EndPlot
 BeginPlot
 	x=47,y=49
 	BonusType=BONUS_CORN
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -37912,7 +37912,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=51
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -38187,7 +38187,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=103
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=1
 EndPlot
@@ -38224,7 +38224,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=110
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -38263,7 +38263,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=115
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -38777,7 +38777,7 @@ EndPlot
 BeginPlot
 	x=48,y=65
 	BonusType=BONUS_IRON_ORE
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=1
 EndPlot
@@ -38980,7 +38980,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=48,y=104
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -39037,7 +39037,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=48,y=114
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -39569,7 +39569,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=67
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_DESERT
 	PlotType=1
 EndPlot
@@ -39756,7 +39756,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=103
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=1
 EndPlot
@@ -39800,7 +39800,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=111
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -40107,7 +40107,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=22
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_POLAR
 	PlotType=3
 EndPlot
@@ -40166,7 +40166,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=30
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_SALT_FLATS
 	PlotType=2
 EndPlot
@@ -40290,7 +40290,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=54
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=2
 EndPlot
@@ -40353,7 +40353,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=65
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BASALT
 	PlotType=1
 EndPlot
@@ -40593,7 +40593,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=111
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -40621,7 +40621,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=115
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -41143,7 +41143,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=51,y=65
-	FeatureType=FEATURE_LUNAR_CRATER2, FeatureVariety=0
+	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -41383,7 +41383,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=51,y=111
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -41711,7 +41711,7 @@ EndPlot
 BeginPlot
 	x=52,y=24
 	BonusType=BONUS_GEODE
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
 EndPlot
@@ -42472,7 +42472,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=22
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_POLAR
 	PlotType=3
 EndPlot
@@ -42950,13 +42950,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=113
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=53,y=114
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -42993,7 +42993,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=121
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -43264,7 +43264,7 @@ EndPlot
 BeginPlot
 	x=54,y=26
 	BonusType=BONUS_SHRIMP
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -43275,7 +43275,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=28
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -43472,7 +43472,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=64
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_DESERT
 	PlotType=2
 EndPlot
@@ -43483,7 +43483,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=66
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -44133,7 +44133,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=46
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -44252,13 +44252,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=66
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
 BeginPlot
 	x=55,y=67
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_DESERT
 	PlotType=2
 EndPlot
@@ -44959,7 +44959,7 @@ EndPlot
 BeginPlot
 	x=56,y=52
 	BonusType=BONUS_RABBIT
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=1
 EndPlot
@@ -45029,7 +45029,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=65
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BASALT
 	PlotType=1
 EndPlot
@@ -45280,19 +45280,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=113
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_BARREN
 	PlotType=2
 EndPlot
 BeginPlot
 	x=56,y=114
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=56,y=115
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -45679,7 +45679,7 @@ EndPlot
 BeginPlot
 	x=57,y=43
 	BonusType=BONUS_PLATINUM_ORE
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -45732,7 +45732,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=50
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_LAKE_SHORE
 	PlotType=3
 EndPlot
@@ -46009,7 +46009,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=103
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_PLAINS
 	PlotType=2
 EndPlot
@@ -46061,32 +46061,32 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=113
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_BARREN
 	PlotType=2
 EndPlot
 BeginPlot
 	x=57,y=114
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_BARREN
 	PlotType=2
 EndPlot
 BeginPlot
 	x=57,y=115
 	BonusType=BONUS_URANIUM
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_BARREN
 	PlotType=2
 EndPlot
 BeginPlot
 	x=57,y=116
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_BARREN
 	PlotType=2
 EndPlot
 BeginPlot
 	x=57,y=117
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -46850,7 +46850,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=114
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_BARREN
 	PlotType=2
 EndPlot
@@ -47327,7 +47327,7 @@ EndPlot
 BeginPlot
 	x=59,y=55
 	BonusType=BONUS_NATURAL_GAS
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=2
 EndPlot
@@ -47375,7 +47375,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=64
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -47391,7 +47391,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=67
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot

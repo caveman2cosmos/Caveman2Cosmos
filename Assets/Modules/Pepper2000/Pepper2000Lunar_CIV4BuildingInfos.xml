@@ -2014,15 +2014,15 @@
 			</PrereqBonuses>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_LUNAR_CRATER1</FeatureType>
+					<FeatureType>FEATURE_MEDIUM_CRATER</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_LUNAR_CRATER2</FeatureType>
+					<FeatureType>FEATURE_LARGE_CRATER</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_LUNAR_CRATER3</FeatureType>
+					<FeatureType>FEATURE_SMALL_CRATER</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>

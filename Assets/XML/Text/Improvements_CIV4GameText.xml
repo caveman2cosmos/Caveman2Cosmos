@@ -1584,7 +1584,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_YOUNG_FOREST_PEDIA</Tag>
-		<English>This is a pseudo improvement that, when built, creates a [LINK=FEATURE_FOREST_NEW]Young Forest[\LINK] on the plot without leaving an improvement behind.</English>
+		<English>This is a pseudo improvement that, when built, creates a [LINK=FEATURE_YOUNG_FOREST]Young Forest[\LINK] on the plot without leaving an improvement behind.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_PLANT_GATHERING_CAMP</Tag>

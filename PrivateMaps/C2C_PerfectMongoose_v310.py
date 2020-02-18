@@ -5446,7 +5446,7 @@ def addFeatures():
 	featureReef = gc.getInfoTypeForString("FEATURE_REEF")
 	featureKelp = gc.getInfoTypeForString("FEATURE_KELP")
 	featureBog = gc.getInfoTypeForString("FEATURE_PEAT_BOG")
-	featureSwordGrass = gc.getInfoTypeForString("FEATURE_SWORD_GRASS")
+	featureSwordGrass = gc.getInfoTypeForString("FEATURE_VERY_TALL_GRASS")
 	featureSwamp = gc.getInfoTypeForString("FEATURE_SWAMP")
 
 	FORESTLEAFY			= 0

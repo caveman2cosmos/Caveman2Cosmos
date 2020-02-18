@@ -51,7 +51,7 @@
 		<Polish>Bambus (Bambusa Shreb.) - rodzaj roślin wieloletnich o drewniejących łodygach, należący do rodziny wiechlinowatych. Stanowi jeden z kilkudziesięciu rodzajów zwyczajowo określanych mianem "bambusów", wchodzących w skład podrodziny bambusowych (Bambusoideae). Rodzaj liczy ok. 130 gatunków występujących w tropikalnej i subtropikalnej części Azji, poza tym niektóre gatunki są szeroko rozpowszechnione w uprawie.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_BIOGAS</Tag>
+		<Tag>TXT_KEY_FEATURE_INFECTIOUS_SMOG</Tag>
 		<English>Infectious Smog</English>
 		<French>Smog infecté</French>
 		<German>
@@ -68,7 +68,7 @@
 		<Polish>Zakaźna Mgła</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_BIOGAS_PEDIA</Tag>
+		<Tag>TXT_KEY_FEATURE_INFECTIOUS_SMOG_PEDIA</Tag>
 		<English>A synthetic virus protected from the sun by a thick layer of smog.</English>
 		<French>Un puissant virus synthétique protégé du Soleil par une fine couche de 'Smog'.</French>
 		<German>Hier wirkt ein synthetisches Virus, das durch eine dicke Nebelwolke vor Sonneneinstrahlung geschützt ist.</German>
@@ -103,7 +103,7 @@
 		<French>Un trou noir est une région de l'espace-temps définie mathématiquement qui présente une attraction gravitationnelle si forte qu'aucune particule ou rayonnement électromagnétique ne peut y échapper. La théorie de la relativité générale prédit qu'une masse suffisamment compacte peut déformer l'espace-temps pour former un trou noir. La limite de la région d'où aucune fuite n'est possible est appelée horizon des événements. Bien que traverser l'horizon des événements ait un effet énorme sur le sort de l'objet qui le traverse, il ne semble pas avoir de caractéristiques localement détectables. À bien des égards, un trou noir agit comme un corps noir idéal, car il ne réfléchit pas la lumière.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_FOREST_BURNT</Tag>
+		<Tag>TXT_KEY_FEATURE_BURNT_FOREST</Tag>
 		<English>Burnt Forest</English>
 		<French>
 			<Text>Forêt brûlée</Text>
@@ -119,7 +119,7 @@
 		<Polish>Spalony Las</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_CAVE</Tag>
+		<Tag>TXT_KEY_FEATURE_CAVES</Tag>
 		<English>Caves</English>
 		<French>Cavernes</French>
 		<German>Höhlen</German>
@@ -132,7 +132,7 @@
 		<Polish>Jaskinie</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_CAVE_PEDIA</Tag>
+		<Tag>TXT_KEY_FEATURE_CAVES_PEDIA</Tag>
 		<English>A cave or cavern is a natural underground space large enough for a human to enter. The term applies to natural cavities some part of which is in total darkness. The word cave also includes smaller spaces like rock shelters, sea caves, and grottos.</English>
 		<French>Une grotte ou une caverne est un espace souterrain naturel suffisamment grand pour qu'un humain y pénètre. Le terme s'applique aux cavités naturelles dont une partie est dans l'obscurité totale. Le mot grotte comprend également des espaces plus petits comme des abris sous roche, des grottes marines et des grottes.</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Höhlen[COLOR_REVERT] sind natürlich entstandene unterirdische Hohlräume, die groß genug sind, um von Menschen betreten zu werden. Im engeren Sinn bestehen sie aus mindestens einem größeren Raum, es kann sich aber auch um Systeme aus Räumen und Gängen handeln, von denen ein Teil in völliger Dunkelheit liegt. Im weiteren Sinn zählen auch Halbhöhlen (Felsdächer) und (natürliche) Grotten zu den Höhlen. Höhlen können zum Teil, aber auch vollständig überflutet sein.</German>
@@ -140,7 +140,7 @@
 		<Polish>Jaskinia - naturalna pusta przestrzeń w skale o rozmiarach umożliwiających jej penetrację przez człowieka. Najliczniejsze są jaskinie krasowe, grawitacyjne, tektoniczne, lodowcowe, wietrzeniowo-erozyjne lub pseudokrasowe. Odkrywanie (eksploracja), dokumentowanie oraz naukowe badanie jaskiń to speleologia.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_CORAL</Tag>
+		<Tag>TXT_KEY_FEATURE_CORAL_REEF</Tag>
 		<English>Coral Reef</English>
 		<French>Récif de Corail</French>
 		<German>Korallenriff</German>
@@ -153,14 +153,14 @@
 		<Polish>Rafa Koralowa</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_CORAL_PEDIA</Tag>
+		<Tag>TXT_KEY_FEATURE_CORAL_REEF_PEDIA</Tag>
 		<English>Corals are marine organisms in class Anthozoa of phylum Cnidaria typically living in compact colonies of many identical individual "polyps". The group includes the important reef builders that inhabit tropical oceans and secrete calcium carbonate to form a hard skeleton.[PARAGRAPH:2]A coral "head" is a colony of myriad genetically identical polyps. Each polyp is a spineless animal typically only a few millimeters in diameter and a few centimeters in length. A set of tentacles surround a central mouth opening. An exoskeleton is excreted near the base. Over many generations, the colony thus creates a large skeleton that is characteristic of the species. Individual heads grow by asexual reproduction of polyps. Corals also breed sexually by spawning: polyps of the same species release gametes simultaneously over a period of one to several nights around a full moon.[PARAGRAPH:2]Although corals can catch small fish and plankton, using stinging cells on their tentacles, most corals obtain the majority of their energy and nutrients from photosynthetic unicellular algae called zooxanthellae that live within the coral's tissue. Such corals require sunlight and grow in clear, shallow water, typically at depths shallower than 60 metres (200 ft). Corals can be major contributors to the physical structure of the coral reefs that develop in tropical and subtropical waters, such as the enormous Great Barrier Reef off the coast of Queensland, Australia. Other corals do not have associated algae and can live in much deeper water, with the cold-water genus Lophelia surviving as deep as 3,000 metres (9,800 ft). Examples live on the Darwin Mounds located north-west of Cape Wrath, Scotland. Corals have also been found off the coast of the U.S. in Washington State and the Aleutian Islands in Alaska.</English>
 		<French>Les coraux sont des organismes marins de la classe Anthozoaires de phylum Cnidaria vivant généralement en colonies compactes de nombreux "polypes" individuels identiques. Le groupe comprend les constructeurs de récifs importants qui habitent les océans tropicaux et sécrètent du carbonate de calcium pour former un squelette dur. [PARAGRAPH:2] Une "tête" de corail est une colonie d'une myriade de polypes génétiquement identiques. Chaque polype est un animal sans épines qui ne mesure généralement que quelques millimètres de diamètre et quelques centimètres de longueur. Un ensemble de tentacules entoure une ouverture de bouche centrale. Un exosquelette est excrété près de la base. Sur plusieurs générations, la colonie crée ainsi un grand squelette caractéristique de l'espèce. Les têtes individuelles poussent par reproduction asexuée des polypes. Les coraux se reproduisent également sexuellement par ponte: les polypes de la même espèce libèrent simultanément des gamètes sur une période d'une à plusieurs nuits autour de la pleine lune.</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Korallenriffe[COLOR_REVERT] sind die größten von Lebewesen geschaffenen Strukturen auf der Erde. Sie werden hauptsächlich von Steinkorallen gebildet. Die Kalkskelette dieser Nesseltiere formen im Laufe vieler Jahrhunderte das Riff. Korallenriffe bieten einer Vielzahl von Meereslebewesen eine Heimat und sind für deren Existenz von großer Wichtigkeit. Leider nimmt ihre Zahl in letzter Zeit durch Überfischung, industrielle Verschmutzung und Bautätigkeiten drastisch ab. Außerdem führen die globale Erwärmung und die Versauerung der Meere zu großflächigen Korallenbleichen, die oft ein Absterben der betroffenen Korallen zur Folge haben.</German>
 		<Polish>Rafa koralowa - rafa powstała z nagromadzenia szkieletów organizmów rafotwórczych. Powstają w morzach i oceanach, w których temperatura wody utrzymuje się powyżej 18 oC, a głębokość dochodzi do 50 m, współcześnie na obszarach od 30o30' szerokości geograficznej północnej do 35o szerokości geograficznej południowej.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_CORAL_WITH_BEACON</Tag>
+		<Tag>TXT_KEY_FEATURE_CORAL_REEF_REEF_BEACON</Tag>
 		<English>Coral Reef (Beacon)</English>
 		<French>
 			<Text>Récif de Corail (Balise)</Text>
@@ -176,7 +176,7 @@
 		<Polish>Rafa Koralowa (Boja)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_CORAL_WITH_LIGHTHOUSE</Tag>
+		<Tag>TXT_KEY_FEATURE_CORAL_REEF_REEF_LIGHTHOUSE</Tag>
 		<English>Coral Reef (Lighthouse)</English>
 		<French>
 			<Text>Récif de Corail (Phare)</Text>
@@ -308,7 +308,7 @@
 		<Polish>Las</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_FOREST_OLD</Tag>
+		<Tag>TXT_KEY_FEATURE_ANCIENT_FOREST</Tag>
 		<English>Ancient Forest</English>
 		<French>
 			<Text>Ancienne Forêt</Text>
@@ -394,7 +394,7 @@
 		<Polish>Dżungla - termin oznaczający pierwotnie i współcześnie w części publikacji specjalistycznych rodzaj formacji roślinnej charakterystycznej dla nadrzecznych terenów w północno-wschodniej części Azji Południowej. W języku potocznym i według niektórych publikacji specjalistycznych termin funkcjonuje jako synonim szeroko ujmowanego wilgotnego lasu równikowego.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_KAKTUS</Tag>
+		<Tag>TXT_KEY_FEATURE_CACTUS</Tag>
 		<English>Cactus</English>
 		<French>Cactus</French>
 		<German>Kaktus</German>
@@ -406,7 +406,7 @@
 		<Polish>Kaktus</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_KAKTUS_PEDIA</Tag>
+		<Tag>TXT_KEY_FEATURE_CACTUS_PEDIA</Tag>
 		<English>A cactus is a member of the plant family Cactaceae, within the order Caryophyllales. The word cactus is derived through Latin from the Ancient Greek (kaktos), a name originally used for a spiny plant whose identity is not certain. The plural of cactus varies; the Latin cacti, the English cactuses and the uninflected plural cactus are all used. With the exception of one species, cacti are native to the Americas, ranging from Patagonia in the south to parts of western Canada in the north.[PARAGRAPH:2]Source: Wikipedia</English>
 		<French>Un cactus est membre de la famille des plantes Cactaceae, au sein de l'ordre des Caryophyllales. Le mot cactus est dérivé du latin du grec ancien (kaktos), un nom utilisé à l'origine pour une plante épineuse dont l'identité n'est pas certaine. Le pluriel de cactus varie; les cactus latins, les cactus anglais et les cactus pluriels non fléchis sont tous utilisés. À l'exception d'une espèce, les cactus sont originaires des Amériques, allant de la Patagonie au sud à certaines parties de l'ouest du Canada au nord.[PARAGRAPH:2]Source: Wikipedia</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Kakteen[COLOR_REVERT] kommen natürlich nur in Amerika vor. Es handelt sich um ausdauernde Sträucher und seltener auch Bäume mit sehr markantem Aussehen. Obwohl sie vielmals nur mit Wüsten assoziiert werden, kann man diese Pflanzen auch in Regenwäldern, Steppen und sogar im Hochgebirge finden. Kakteen dienen auch heute noch als Wasserspender und Nahrungsmittel, bei den alten Azteken hatten sie sogar rituelle Bedeutung.</German>
@@ -431,7 +431,7 @@
 		<Polish>Wodorosty - potoczna nazwa roślin (i wielokomórkowych roślinopodobnych protistów) wodnych o miękkich ciałach. Nazwa bliskoznaczna to trawa morska. Do wodorostów najczęściej zaliczane są duże glony, takie jak brunatnice, krasnorosty, watkowe i ramienice (czasem określane jako makroglony lub makroalgi). Czasem rośliny wodne zanurzone (elodeidy, jak rogatek lub wywłócznik) oraz glony nitkowate (niektóre sinice), uwikłowce, zrostnicowate, jak skrętnica, rzadziej pozostałe makrofity.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_LUNAR_CRATER1</Tag>
+		<Tag>TXT_KEY_FEATURE_MEDIUM_CRATER</Tag>
 		<English>Medium Crater</English>
 		<French>Cratère Moyen</French>
 		<Italian>Cratere medio</Italian>
@@ -443,7 +443,7 @@
 		<Polish>Średni Krater</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_LUNAR_CRATER2</Tag>
+		<Tag>TXT_KEY_FEATURE_LARGE_CRATER</Tag>
 		<English>Large Crater</English>
 		<French>Grand Cratère</French>
 		<Italian>Cratere grande</Italian>
@@ -455,7 +455,7 @@
 		<Polish>Duży Krater</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_LUNAR_CRATER3</Tag>
+		<Tag>TXT_KEY_FEATURE_SMALL_CRATER</Tag>
 		<English>Small Crater</English>
 		<French>Petit Cratère</French>
 		<Italian>Cratere piccolo</Italian>
@@ -505,7 +505,7 @@
 		<Polish>Mgławica</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_FOREST_NEW</Tag>
+		<Tag>TXT_KEY_FEATURE_YOUNG_FOREST</Tag>
 		<English>Young Forest</English>
 		<French>
 			<Text>Jeune Forêt</Text>
@@ -615,7 +615,7 @@
 		<Polish>Torfowisko - jeden z typów mokradeł, siedlisk na tyle uwodnionych, że występuje tam specyficzna roślinność i zachodzą procesy akumulacji osadów organicznych. Jest to teren stale podmokły, o podłożu trudno przepuszczalnym, pokryty zbiorowiskami roślin bagiennych i bagienno-łąkowych. Od innych siedlisk hydrogenicznych odróżnia się słabym natlenieniem. Akumulacja torfu zachodzi, gdy rozkład szczątków organicznych następuje wolniej niż ich powstawanie. Na spowolnienie tempa rozkładu wpływają głównie dwa czynniki - niska temperatura i małe napowietrzenie podłoża, czemu sprzyja jego duże uwodnienie. W niektórych ujęciach przyjmuje się minimalną miąższość torfu (20-70 cm), która pozwala na określenie danego siedliska jako torfowisko. W skali świata torfowiska stanowią około połowy powierzchni szeroko rozumianych mokradeł.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_PLAGUEGAS</Tag>
+		<Tag>TXT_KEY_FEATURE_PLAGUED_SMOG</Tag>
 		<English>Plagued Smog</English>
 		<French>Smog contaminé</French>
 		<Italian>Smog contaminato</Italian>
@@ -627,7 +627,7 @@
 		<Polish>Mordercza mgła</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_PLAGUEGAS_PEDIA</Tag>
+		<Tag>TXT_KEY_FEATURE_PLAGUED_SMOG_PEDIA</Tag>
 		<English>A powerful synthetic virus protected from the sun by a thick layer of smog.</English>
 		<French>Un puissant virus synthétique protégé du Soleil par une fine couche de 'Smog'.</French>
 		<German>Hier wirkt ein mächtiges synthetisches Virus, das durch eine dicke Nebelwolke vor Sonneneinstrahlung geschützt ist.</German>
@@ -686,7 +686,7 @@
 		<Polish>Rafa - skała podwodna, w formie wału albo grzbietu, której górna część znajduje się tuż pod albo tuż nad powierzchnią wody. Rafy stanowią zagrożenie dla żeglugi.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_REEF_WITH_BEACON</Tag>
+		<Tag>TXT_KEY_FEATURE_REEF_BEACON</Tag>
 		<English>Reef (Beacon)</English>
 		<French>
 			<Text>Récif (Balise)</Text>
@@ -702,7 +702,7 @@
 		<Polish>Rafa (Boja)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_REEF_WITH_LIGHTHOUSE</Tag>
+		<Tag>TXT_KEY_FEATURE_REEF_LIGHTHOUSE</Tag>
 		<English>Reef (Lighthouse)</English>
 		<French>
 			<Text>Récif (Phare)</Text>
@@ -738,7 +738,7 @@
 		<Polish>Sawanna - jedna z formacji trawiastych strefy międzyzwrotnikowej o klimacie gorącym z wyraźnie zaznaczoną porą suchą, trwającą od 6 do 9 miesięcy oraz porą deszczową. W szacie roślinnej dominują kępy sucholubnych traw (np. afrykańska trawa słoniowa dochodząca do 5 m wysokości). Na niektórych sawannach rosną nieliczne drzewa, np. akacje, baobaby, palmy, które zwykle zrzucają liście w porze suchej. Większe skupiska drzew występują tylko nad ciekami wodnymi tworząc tzw. lasy galeriowe. W krajobrazie nie ma wyraźnej granicy między wilgotnym lasem równikowym a trawiastą sawanną. W strefie przejściowej w miarę posuwania się w stronę sawanny las staje się coraz rzadszy, a drzewa coraz niższe. Sawanny żywią stada zwierząt roślinożernych. Strefa sawann jest stosunkowo gęsto zaludniona; zamieszkują ją zarówno rolnicy jak i pasterze.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_SEAGRASS</Tag>
+		<Tag>TXT_KEY_FEATURE_SEA_GRASS</Tag>
 		<English>Sea Grass</English>
 		<French>Herbe marine</French>
 		<German>Seegras</German>
@@ -751,7 +751,7 @@
 		<Polish>Trawa Morska</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_SEAGRASS_PEDIA</Tag>
+		<Tag>TXT_KEY_FEATURE_SEA_GRASS_PEDIA</Tag>
 		<English>Seagrasses are flowering plants from one of four plant families (Posidoniaceae, Zosteraceae, Hydrocharitaceae, or Cymodoceaceae), all in the order Alismatales (in the class of monocotyledons), which grow in marine, fully saline environments. These unusual marine flowering plants are called seagrasses because in many species the leaves are long and narrow, and these plants often grow in large "meadows" which look like grassland: in other words many of the species of seagrasses superficially resemble terrestrial grasses of the family Poaceae.[PARAGRAPH:2]Like all autotrophic plants, seagrasses photosynthesize so are limited to growing in the submerged photic zone, and most occur in shallow and sheltered coastal waters anchored in sand or mud bottoms. Most species undergo submarine pollination and complete their entire life cycle underwater. There are about sixty species worldwide.</English>
 		<French>Les herbiers sont des plantes à fleurs de l'une des quatre familles de plantes (Posidoniaceae, Zosteraceae, Hydrocharitaceae ou Cymodoceaceae), toutes dans l'ordre des Alismatales (dans la classe des monocotylédones), qui poussent dans des environnements marins entièrement salins. Ces plantes à fleurs marines inhabituelles sont appelées herbiers parce que dans de nombreuses espèces, les feuilles sont longues et étroites, et ces plantes poussent souvent dans de grandes "prairies" qui ressemblent à des prairies: en d'autres termes, de nombreuses espèces d'herbes marines ressemblent superficiellement aux herbes terrestres de la famille Poaceae. [PARAGRAPH:2] Comme toutes les plantes autotrophes, les herbiers photosynthétiques se limitent donc à la croissance dans la zone photique submergée, et la plupart se produisent dans des eaux côtières peu profondes et abritées ancrées dans des fonds de sable ou de boue. La plupart des espèces subissent une pollinisation sous-marine et achèvent leur cycle de vie sous l'eau. Il existe une soixantaine d'espèces dans le monde.</French>
 		<German>Als Seegras werden im Deutschen verschiedene grasähnliche Samenpflanzen bezeichnet, die im Wasser leben. Sie werden häufig mit Seetang gleichgestellt, aber im Gegensatz zu diesem verfügen sie über Wurzeln. Zudem können Seegräser blühen. Da sie in Küstenregionen häufig anzutreffen sind, werden sie oft als Dünger verwendet, sie sind aber auch als Füllmaterial und Dämmstoff gut geeignet.</German>
@@ -888,7 +888,7 @@
 		<Polish>Mokradło (teren podmokły, bagno, błoto, moczary, trzęsawisko, bajoro, grzęzawisko, topiel, topielisko) - tereny okresowo lub stale zabagnione, podtopione lub pokryte warstwą wody, siedlisko hydrogeniczne, obszar o płytkim poziomie wody gruntowej (powyżej 1 m), teren silnie uwilgotniony, zalany wodą lub okresowo zabagniony, o glebach mineralnych lub organicznych.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_SWORD_GRASS</Tag>
+		<Tag>TXT_KEY_FEATURE_VERY_TALL_GRASS</Tag>
 		<English>Very Tall Grass</English>
 		<French>Très Hautes Herbes</French>
 		<German>Hohes Gras</German>
@@ -901,7 +901,7 @@
 		<Polish>Ostra Trawa</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_SWORD_GRASS_PEDIA</Tag>
+		<Tag>TXT_KEY_FEATURE_VERY_TALL_GRASS_PEDIA</Tag>
 		<English>Very Tall Grass are 2-3 meters tall.  Some can cut human skin.  These include the Fen grasses of the UK.</English>
 		<French>Les herbes très hautes mesurent 2 à 3 mètres. Certains peuvent couper la peau humaine. Il s'agit notamment des herbes Fen au Royaume-Uni.</French>
 		<German>Über 1,80 m [COLOR_HIGHLIGHT_TEXT]hohe Gräser[COLOR_REVERT] werden auch als Riesengräser bezeichnet. Sie lassen sich zwar nur schwer bearbeiten oder ausrotten, haben dafür aber entscheidende militärische Vorteile, da sie gute Versteckmöglichkeiten bieten. Es ist trotzdem immer Vorsicht geboten, denn manche Riesengrasarten sind scharfkantig und können bei Durchquerung zu Verletzungen führen.</German>
@@ -909,7 +909,7 @@
 		<Polish>Wiechlinowate, trawy (Poaceae (R. Br.) Barnh., Gramineae Juss.) - rodzina roślin należąca do rzędu wiechlinowców. Liczy ok. 11 tys. gatunków. Stanowi ona główny komponent roślinności stepowej, łąkowej ipastwiskowej. Należą do niej również ważne rośliny uprawne, w tym zboża. W Polsce występuje ponad 150 gatunków traw.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_TARPIT</Tag>
+		<Tag>TXT_KEY_FEATURE_TAR_PIT</Tag>
 		<English>Tar Pit</English>
 		<French>Fosse de Goudron</French>
 		<Italian>Pozza di catrame</Italian>
@@ -921,7 +921,7 @@
 		<Polish>Smoła</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_TARPIT_PEDIA</Tag>
+		<Tag>TXT_KEY_FEATURE_TAR_PIT_PEDIA</Tag>
 		<English>A tar pit, or more accurately known as an asphalt pit or asphalt lake, is a type of petroleum seep where subterranean bitumen leaks to the surface, creating a large area of natural asphalt. This happens because, after the material reaches the surface, its lighter components vaporize, leaving only the thick asphalt.</English>
 		<French>Une fosse de goudron, ou plus précisément connue comme une fosse d'asphalte ou un lac d'asphalte, est un type de suintement de pétrole où le bitume souterrain fuit à la surface, créant une grande surface d'asphalte naturel. Cela se produit car, une fois que le matériau a atteint la surface, ses composants plus légers se vaporisent, ne laissant que l'asphalte épais.</French>
 		<Polish>Smoła, smoła surowa - produkty odgazowania węgla, łupków bitumicznych lub drewna, rzadko torfu. Składa się głównie z mieszaniny wielu rodzajów węglowodorów oraz innych związków organicznych, zawierających tlen,azot i siarkę, ponadto niektóre rodzaje smoły mogą zawierać pewną ilość grafitu i fulerenów.</Polish>
@@ -976,7 +976,7 @@
 		<Polish>Wulkan (z łac. Vulcanus - imię rzymskiego boga ognia) - miejsce na powierzchni Ziemi, z którego wydobywa się lawa, gazy wulkaniczne (solfatary, mofety, fumarole) i materiał piroklastyczny. Terminu tego również używa się jako określenie form terenu powstałych wskutek działalności wulkanu, choć bardziej poprawne są takie terminy jak: góra wulkaniczna, stożek wulkaniczny, kopuła wulkaniczna czy wulkan tarczowy.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RAINWATER_BASIN_FEATURE</Tag>
+		<Tag>TXT_KEY_FEATURE_RAINWATER_BASIN</Tag>
 		<English>Rainwater Basin</English>
 		<French>Bassin d'eau de pluie</French>
 		<Spanish>
@@ -987,7 +987,7 @@
 		<Polish>Rezerwuar Wody Deszczowej</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RAINWATER_BASIN_FEATURE_PEDIA</Tag>
+		<Tag>TXT_KEY_FEATURE_RAINWATER_BASIN_PEDIA</Tag>
 		<English>A Rainwater Basin is a region of shallow lakes, marshes and other wetlands. In the spring and fall months, millions of migratory birds pass through these regions to feed and rest.</English>
 		<French>Un bassin d'eau de pluie est une région de lacs peu profonds, de marais et d'autres zones humides. Au printemps et à l'automne, des millions d'oiseaux migrateurs traversent ces régions pour se nourrir et se reposer.</French>
 		<Polish>Basen - rodzaj zbiornika antropogenicznego, który jest najczęściej niewielkim akwenem o misie betonowej bądź ukształtowanej z innych materiałów sztucznych. Zwykle posiada płaskie lub prawie płaskie dno oraz strome lub pionowe ściany, co przekłada się na wartości wskaźnika głębokościowego zbliżone do jedności. Jest wykorzystywany do celów przemysłowych (np. osadniki wód chłodniczych), sportowo-rekreacyjnych (np. baseny pływackie), komunalnych (np. zbiorniki wody przeznaczonej do spożycia przez ludzi), retencyjnych (np. zbiorniki wód opadowych) i innych.</Polish>

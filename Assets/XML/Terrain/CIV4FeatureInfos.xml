@@ -623,10 +623,10 @@
 		</FeatureInfo>
 		<!-- New Forest -->
 		<FeatureInfo>
-			<Type>FEATURE_FOREST_NEW</Type>
-			<Description>TXT_KEY_FEATURE_FOREST_NEW</Description>
+			<Type>FEATURE_YOUNG_FOREST</Type>
+			<Description>TXT_KEY_FEATURE_YOUNG_FOREST</Description>
 			<Civilopedia>TXT_KEY_FEATURE_FOREST_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_FOREST_NEW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_YOUNG_FOREST</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -757,10 +757,10 @@
 		</FeatureInfo>
 		<!-- Burnt Forest -->
 		<FeatureInfo>
-			<Type>FEATURE_FOREST_BURNT</Type>
-			<Description>TXT_KEY_FEATURE_FOREST_BURNT</Description>
+			<Type>FEATURE_BURNT_FOREST</Type>
+			<Description>TXT_KEY_FEATURE_BURNT_FOREST</Description>
 			<Civilopedia>TXT_KEY_FEATURE_FOREST_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_FOREST_BURNT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_BURNT_FOREST</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>15</iDefense>
@@ -872,10 +872,10 @@
 		</FeatureInfo>
 		<!-- Ancient Forest -->
 		<FeatureInfo>
-			<Type>FEATURE_FOREST_OLD</Type>
-			<Description>TXT_KEY_FEATURE_FOREST_OLD</Description>
+			<Type>FEATURE_ANCIENT_FOREST</Type>
+			<Description>TXT_KEY_FEATURE_ANCIENT_FOREST</Description>
 			<Civilopedia>TXT_KEY_FEATURE_FOREST_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_FOREST_OLD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_ANCIENT_FOREST</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -1121,10 +1121,10 @@
 		</FeatureInfo>
 		<!-- Biogas -->
 		<FeatureInfo>
-			<Type>FEATURE_BIOGAS</Type>
-			<Description>TXT_KEY_FEATURE_BIOGAS</Description>
-			<Civilopedia>TXT_KEY_FEATURE_BIOGAS_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_BIOGAS</ArtDefineTag>
+			<Type>FEATURE_INFECTIOUS_SMOG</Type>
+			<Description>TXT_KEY_FEATURE_INFECTIOUS_SMOG</Description>
+			<Civilopedia>TXT_KEY_FEATURE_INFECTIOUS_SMOG_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_INFECTIOUS_SMOG</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>-10</iYieldChange>
 				<iYieldChange>-10</iYieldChange>
@@ -1381,10 +1381,10 @@
 		</FeatureInfo>
 		<!-- Plaugegas -->
 		<FeatureInfo>
-			<Type>FEATURE_PLAGUEGAS</Type>
-			<Description>TXT_KEY_FEATURE_PLAGUEGAS</Description>
-			<Civilopedia>TXT_KEY_FEATURE_PLAGUEGAS_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_PLAGUEGAS</ArtDefineTag>
+			<Type>FEATURE_PLAGUED_SMOG</Type>
+			<Description>TXT_KEY_FEATURE_PLAGUED_SMOG</Description>
+			<Civilopedia>TXT_KEY_FEATURE_PLAGUED_SMOG_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_PLAGUED_SMOG</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>-25</iYieldChange>
 				<iYieldChange>-25</iYieldChange>
@@ -1667,10 +1667,10 @@
 		</FeatureInfo>
 		<!-- Cactus -->
 		<FeatureInfo>
-			<Type>FEATURE_KAKTUS</Type>
-			<Description>TXT_KEY_FEATURE_KAKTUS</Description>
-			<Civilopedia>TXT_KEY_FEATURE_KAKTUS_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_KAKTUS</ArtDefineTag>
+			<Type>FEATURE_CACTUS</Type>
+			<Description>TXT_KEY_FEATURE_CACTUS</Description>
+			<Civilopedia>TXT_KEY_FEATURE_CACTUS_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_CACTUS</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>-1</iYieldChange>
@@ -1995,10 +1995,10 @@
 		</FeatureInfo>
 		<!-- Very Tall Grass -->
 		<FeatureInfo>
-			<Type>FEATURE_SWORD_GRASS</Type>
-			<Description>TXT_KEY_FEATURE_SWORD_GRASS</Description>
-			<Civilopedia>TXT_KEY_FEATURE_SWORD_GRASS_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_SWORD_GRASS</ArtDefineTag>
+			<Type>FEATURE_VERY_TALL_GRASS</Type>
+			<Description>TXT_KEY_FEATURE_VERY_TALL_GRASS</Description>
+			<Civilopedia>TXT_KEY_FEATURE_VERY_TALL_GRASS_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_VERY_TALL_GRASS</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
@@ -2120,10 +2120,10 @@
 		</FeatureInfo>
 		<!-- Active Volcano -->
 		<FeatureInfo>
-			<Type>FEATURE_VOLCANO</Type>
+			<Type>FEATURE_VOLCANO_ACTIVE</Type>
 			<Description>TXT_KEY_FEATURE_VOLCANO_ACTIVE</Description>
 			<Civilopedia>TXT_KEY_FEATURE_VOLCANO_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_VOLCANO</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_VOLCANO_ACTIVE</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -2229,10 +2229,10 @@
 		</FeatureInfo>
 		<!-- Dormant Volcano -->
 		<FeatureInfo>
-			<Type>FEATURE_VOLCANO2</Type>
+			<Type>FEATURE_VOLCANO_DORMANT</Type>
 			<Description>TXT_KEY_FEATURE_VOLCANO_DORMANT</Description>
 			<Civilopedia>TXT_KEY_FEATURE_VOLCANO_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_VOLCANO2</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_VOLCANO_DORMANT</ArtDefineTag>
 			<iSeeThrough>1</iSeeThrough>
 			<iAppearance>300</iAppearance>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
@@ -2479,10 +2479,10 @@
 		</FeatureInfo>
 		<!-- Tarpit -->
 		<FeatureInfo>
-			<Type>FEATURE_TARPIT</Type>
-			<Description>TXT_KEY_FEATURE_TARPIT</Description>
-			<Civilopedia>TXT_KEY_FEATURE_TARPIT_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_TARPIT</ArtDefineTag>
+			<Type>FEATURE_TAR_PIT</Type>
+			<Description>TXT_KEY_FEATURE_TAR_PIT</Description>
+			<Civilopedia>TXT_KEY_FEATURE_TAR_PIT_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_TAR_PIT</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -4298,10 +4298,10 @@
 		</FeatureInfo>
 		<!-- Coral -->
 		<FeatureInfo>
-			<Type>FEATURE_CORAL</Type>
-			<Description>TXT_KEY_FEATURE_CORAL</Description>
-			<Civilopedia>TXT_KEY_FEATURE_CORAL_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_CORAL</ArtDefineTag>
+			<Type>FEATURE_CORAL_REEF</Type>
+			<Description>TXT_KEY_FEATURE_CORAL_REEF</Description>
+			<Civilopedia>TXT_KEY_FEATURE_CORAL_REEF_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_CORAL_REEF</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -4346,10 +4346,10 @@
 		</FeatureInfo>
 		<!-- Coral with Beacon -->
 		<FeatureInfo>
-			<Type>FEATURE_CORAL_WITH_BEACON</Type>
-			<Description>TXT_KEY_FEATURE_CORAL_WITH_BEACON</Description>
-			<Civilopedia>TXT_KEY_FEATURE_CORAL_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_CORAL</ArtDefineTag>
+			<Type>FEATURE_CORAL_REEF_REEF_BEACON</Type>
+			<Description>TXT_KEY_FEATURE_CORAL_REEF_REEF_BEACON</Description>
+			<Civilopedia>TXT_KEY_FEATURE_CORAL_REEF_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_CORAL_REEF</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -4392,10 +4392,10 @@
 		</FeatureInfo>
 		<!-- Coral with Lighthouse -->
 		<FeatureInfo>
-			<Type>FEATURE_CORAL_WITH_LIGHTHOUSE</Type>
-			<Description>TXT_KEY_FEATURE_CORAL_WITH_LIGHTHOUSE</Description>
-			<Civilopedia>TXT_KEY_FEATURE_CORAL_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_CORAL</ArtDefineTag>
+			<Type>FEATURE_CORAL_REEF_REEF_LIGHTHOUSE</Type>
+			<Description>TXT_KEY_FEATURE_CORAL_REEF_REEF_LIGHTHOUSE</Description>
+			<Civilopedia>TXT_KEY_FEATURE_CORAL_REEF_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_CORAL_REEF</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -4665,10 +4665,10 @@
 		</FeatureInfo>
 		<!-- Seagrass -->
 		<FeatureInfo>
-			<Type>FEATURE_SEAGRASS</Type>
-			<Description>TXT_KEY_FEATURE_SEAGRASS</Description>
-			<Civilopedia>TXT_KEY_FEATURE_SEAGRASS_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_SEAGRASS</ArtDefineTag>
+			<Type>FEATURE_SEA_GRASS</Type>
+			<Description>TXT_KEY_FEATURE_SEA_GRASS</Description>
+			<Civilopedia>TXT_KEY_FEATURE_SEA_GRASS_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_SEA_GRASS</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -4939,8 +4939,8 @@
 		</FeatureInfo>
 		<!-- Reef with Beacon -->
 		<FeatureInfo>
-			<Type>FEATURE_REEF_WITH_BEACON</Type>
-			<Description>TXT_KEY_FEATURE_REEF_WITH_BEACON</Description>
+			<Type>FEATURE_REEF_BEACON</Type>
+			<Description>TXT_KEY_FEATURE_REEF_BEACON</Description>
 			<Civilopedia>TXT_KEY_FEATURE_REEF_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_REEF</ArtDefineTag>
 			<YieldChanges>
@@ -5102,8 +5102,8 @@
 		</FeatureInfo>
 		<!-- Reef with Lighthouse -->
 		<FeatureInfo>
-			<Type>FEATURE_REEF_WITH_LIGHTHOUSE</Type>
-			<Description>TXT_KEY_FEATURE_REEF_WITH_LIGHTHOUSE</Description>
+			<Type>FEATURE_REEF_LIGHTHOUSE</Type>
+			<Description>TXT_KEY_FEATURE_REEF_LIGHTHOUSE</Description>
 			<Civilopedia>TXT_KEY_FEATURE_REEF_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_REEF</ArtDefineTag>
 			<YieldChanges>
@@ -5674,10 +5674,10 @@
 		</FeatureInfo>
 		<!-- Cave -->
 		<FeatureInfo>
-			<Type>FEATURE_CAVE</Type>
-			<Description>TXT_KEY_FEATURE_CAVE</Description>
-			<Civilopedia>TXT_KEY_FEATURE_CAVE_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_CAVE</ArtDefineTag>
+			<Type>FEATURE_CAVES</Type>
+			<Description>TXT_KEY_FEATURE_CAVES</Description>
+			<Civilopedia>TXT_KEY_FEATURE_CAVES_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_CAVES</ArtDefineTag>
 			<iDefense>50</iDefense>
 			<iAppearance>500</iAppearance>
 			<bNoAdjacent>1</bNoAdjacent>
@@ -5819,8 +5819,8 @@
 		<!-- Rainwater Basin -->
 		<FeatureInfo>
 			<Type>FEATURE_RAINWATER_BASIN</Type>
-			<Description>TXT_KEY_RAINWATER_BASIN_FEATURE</Description>
-			<Civilopedia>TXT_KEY_RAINWATER_BASIN_FEATURE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_FEATURE_RAINWATER_BASIN</Description>
+			<Civilopedia>TXT_KEY_FEATURE_RAINWATER_BASIN_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_RAINWATER_BASIN</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
@@ -6228,10 +6228,10 @@
 		</FeatureInfo>
 		<!-- Lunar Crater 1 -->
 		<FeatureInfo>
-			<Type>FEATURE_LUNAR_CRATER1</Type>
-			<Description>TXT_KEY_FEATURE_LUNAR_CRATER1</Description>
+			<Type>FEATURE_MEDIUM_CRATER</Type>
+			<Description>TXT_KEY_FEATURE_MEDIUM_CRATER</Description>
 			<Civilopedia>TXT_KEY_FEATURE_CRATER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_LUNAR_CRATER1</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_MEDIUM_CRATER</ArtDefineTag>
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>25</iDefense>
 			<iAppearance>300</iAppearance>
@@ -6336,10 +6336,10 @@
 		</FeatureInfo>
 		<!-- Lunar Crater 2 -->
 		<FeatureInfo>
-			<Type>FEATURE_LUNAR_CRATER2</Type>
-			<Description>TXT_KEY_FEATURE_LUNAR_CRATER2</Description>
+			<Type>FEATURE_LARGE_CRATER</Type>
+			<Description>TXT_KEY_FEATURE_LARGE_CRATER</Description>
 			<Civilopedia>TXT_KEY_FEATURE_CRATER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_LUNAR_CRATER2</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_LARGE_CRATER</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<iPopDestroys>50</iPopDestroys>
@@ -6445,10 +6445,10 @@
 		</FeatureInfo>
 		<!-- Lunar Crater 3 -->
 		<FeatureInfo>
-			<Type>FEATURE_LUNAR_CRATER3</Type>
-			<Description>TXT_KEY_FEATURE_LUNAR_CRATER3</Description>
+			<Type>FEATURE_SMALL_CRATER</Type>
+			<Description>TXT_KEY_FEATURE_SMALL_CRATER</Description>
 			<Civilopedia>TXT_KEY_FEATURE_CRATER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_LUNAR_CRATER3</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_SMALL_CRATER</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<iAppearance>250</iAppearance>

@@ -186,14 +186,14 @@
 		<Polish>Wielka Rafa Koralowa</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_GREAT_BARRIER_WITH_BEACON</Tag>
+		<Tag>TXT_KEY_FEATURE_GREAT_BARRIER_REEF_BEACON</Tag>
 		<English>Great Barrier Reef (Beacon)</English>
 		<French>La Grande Barrière de Corail (Balise)</French>
 		<German>Great-Barrier-Riff (Leuchtfeuer)</German>
 		<Polish>Wielka Rafa Koralowa (Boja)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_GREAT_BARRIER_WITH_LIGHTHOUSE</Tag>
+		<Tag>TXT_KEY_FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE</Tag>
 		<English>Great Barrier Reef (Lighthouse)</English>
 		<French>La Grande Barrière de Corail (Phare)</French>
 		<German>Great-Barrier-Riff (Leuchtturm)</German>

@@ -21706,7 +21706,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=63,y=23
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -22422,13 +22422,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=65,y=23
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=65,y=24
-	FeatureType=FEATURE_FOREST_BURNT, FeatureVariety=0
+	FeatureType=FEATURE_BURNT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -22778,7 +22778,7 @@ EndPlot
 BeginPlot
 	x=66,y=23
 	BonusType=BONUS_ALMONDS
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot

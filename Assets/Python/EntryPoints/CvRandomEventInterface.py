@@ -7768,8 +7768,8 @@ def canDoNewVolcano(argsList):
   # List of features that block new volcanoes
   listFeatures = [GC.getInfoTypeForString('FEATURE_PLATY_AUYANTEPUI'),
                   GC.getInfoTypeForString('FEATURE_PLATY_GREAT_BARRIER'),
-                  GC.getInfoTypeForString('FEATURE_GREAT_BARRIER_WITH_BEACON'),
-                  GC.getInfoTypeForString('FEATURE_GREAT_BARRIER_WITH_LIGHTHOUSE'),
+                  GC.getInfoTypeForString('FEATURE_GREAT_BARRIER_REEF_BEACON'),
+                  GC.getInfoTypeForString('FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE'),
                   GC.getInfoTypeForString('FEATURE_PLATY_EVEREST'),
                   GC.getInfoTypeForString('FEATURE_PLATY_FUJI'),
                   GC.getInfoTypeForString('FEATURE_PLATY_AURORA'),
@@ -7790,8 +7790,8 @@ def canDoNewVolcano(argsList):
                   GC.getInfoTypeForString('FEATURE_PLATY_VICTORIA_FALLS'),
                   GC.getInfoTypeForString('FEATURE_PLATY_KILIMANJARO'),
                   GC.getInfoTypeForString('FEATURE_PLATY_DEAD_SEA'),
-                  GC.getInfoTypeForString('FEATURE_VOLCANO'),
-                  GC.getInfoTypeForString('FEATURE_VOLCANO2')]
+                  GC.getInfoTypeForString('FEATURE_VOLCANO_ACTIVE'),
+                  GC.getInfoTypeForString('FEATURE_VOLCANO_DORMANT')]
 
   # List of resources that count as volcanic, and thus do not block volcanoes.
   listVolcanicResources = [GC.getInfoTypeForString('BONUS_OBSIDIAN'),
@@ -7820,8 +7820,8 @@ def canDoOldVolcano(argsList):
                   GC.getInfoTypeForString('FEATURE_PLATY_SOPKA'),
                   GC.getInfoTypeForString('FEATURE_PLATY_KRAKATOA'),
                   GC.getInfoTypeForString('FEATURE_PLATY_KILIMANJARO'),
-                  GC.getInfoTypeForString('FEATURE_VOLCANO'),
-                  GC.getInfoTypeForString('FEATURE_VOLCANO2')]
+                  GC.getInfoTypeForString('FEATURE_VOLCANO_ACTIVE'),
+                  GC.getInfoTypeForString('FEATURE_VOLCANO_DORMANT')]
 
   if pPlot.isCity():
     return False
@@ -7983,10 +7983,10 @@ def doVolcanoPlot(pPlot):
                   GC.getInfoTypeForString('FEATURE_PLATY_SOPKA'),
                   GC.getInfoTypeForString('FEATURE_PLATY_KRAKATOA'),
                   GC.getInfoTypeForString('FEATURE_PLATY_KILIMANJARO'),
-                  GC.getInfoTypeForString('FEATURE_VOLCANO'),
-                  GC.getInfoTypeForString('FEATURE_VOLCANO2')]
-  ft_volcano_dormant = GC.getInfoTypeForString('FEATURE_VOLCANO2')
-  ft_volcano_active = GC.getInfoTypeForString('FEATURE_VOLCANO')
+                  GC.getInfoTypeForString('FEATURE_VOLCANO_ACTIVE'),
+                  GC.getInfoTypeForString('FEATURE_VOLCANO_DORMANT')]
+  ft_volcano_dormant = GC.getInfoTypeForString('FEATURE_VOLCANO_DORMANT')
+  ft_volcano_active = GC.getInfoTypeForString('FEATURE_VOLCANO_ACTIVE')
 
   # if terrain is a hill or peak, level it by changing it to rocky flatland.
   if pPlot.isHills() or pPlot.isPeak():
@@ -8027,8 +8027,8 @@ def doVolcanoPlot(pPlot):
 def doVolcanoReport(argsList):
   pPlot = argsList[0]
   szBuffer = argsList[1]
-  ft_volcano_dormant = GC.getInfoTypeForString('FEATURE_VOLCANO2')
-  ft_volcano_active = GC.getInfoTypeForString('FEATURE_VOLCANO')
+  ft_volcano_dormant = GC.getInfoTypeForString('FEATURE_VOLCANO_DORMANT')
+  ft_volcano_active = GC.getInfoTypeForString('FEATURE_VOLCANO_ACTIVE')
 
   # report message to any one who can see this plot
   iMaxPlayer = GC.getMAX_PC_PLAYERS()
@@ -8115,7 +8115,7 @@ def doVolcanoExtinction(argsList):
 def doVolcanoSleep(argsList):
   kTriggeredData = argsList[0]
   pPlot = GC.getMap().plot(kTriggeredData.iPlotX, kTriggeredData.iPlotY)
-  pPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_VOLCANO2'), 0)
+  pPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_VOLCANO_DORMANT'), 0)
   player = GC.getPlayer(kTriggeredData.ePlayer)
   team = player.getTeam()
   doVolcanoAdjustFertility((pPlot, -1, team))
@@ -8324,7 +8324,7 @@ def doGlobalWarming(argsList):
       iGW += -2
     if jPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_SAVANNA"):
       iGW += -1
-    if jPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_VOLCANO"):
+    if jPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_VOLCANO_ACTIVE"):
       iGW += -5
     if jPlot.getTerrainType() == GC.getInfoTypeForString("TERRAIN_TUNDRA"):
       iGW += -5
@@ -9602,7 +9602,7 @@ def canBuildPigBonus(argsList):
 	if pPlot.isCity() or pPlot.getBonusType(-1) > -1: return 0
 	# Check if Feature or Terrain makes invalid.
 	if pPlot.getFeatureType() not in (
-		GC.getInfoTypeForString("FEATURE_FOREST"), GC.getInfoTypeForString("FEATURE_FOREST_OLD"),
+		GC.getInfoTypeForString("FEATURE_FOREST"), GC.getInfoTypeForString("FEATURE_ANCIENT_FOREST"),
 		GC.getInfoTypeForString("FEATURE_JUNGLE"), GC.getInfoTypeForString("FEATURE_FLOOD_PLAINS")
 		): return 0
 	if pPlot.getTerrainType() not in (

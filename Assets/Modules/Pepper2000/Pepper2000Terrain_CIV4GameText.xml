@@ -531,11 +531,11 @@
 		<English>A white dwarf.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_WATER_PLANET</Tag>
+		<Tag>TXT_KEY_FEATURE_OCEAN_PLANET</Tag>
 		<English>Ocean Planet</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_WATER_PLANET_PEDIA</Tag>
+		<Tag>TXT_KEY_FEATURE_OCEAN_PLANET_PEDIA</Tag>
 		<English>A rocky planet whose surface is covered entirely by ocean.</English>
 	</TEXT>
 	<TEXT>

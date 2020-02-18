@@ -2013,7 +2013,7 @@ def addFeatures():
 	featOasis = GC.getInfoTypeForString("FEATURE_OASIS")
 	featFlood = GC.getInfoTypeForString("FEATURE_FLOOD_PLAINS")
 	featForest = GC.getInfoTypeForString("FEATURE_FOREST")
-	featVolcano = GC.getInfoTypeForString("FEATURE_VOLCANO")
+	featVolcano = GC.getInfoTypeForString("FEATURE_VOLCANO_ACTIVE")
 	terrainDesert = GC.getInfoTypeForString("TERRAIN_DESERT")
 	terrainMarsh = GC.getInfoTypeForString("TERRAIN_MARSH")
 	terrainPlains = GC.getInfoTypeForString("TERRAIN_PLAINS")

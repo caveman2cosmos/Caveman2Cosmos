@@ -52,13 +52,13 @@
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_FOREST_FIRE_END</Type>
-			<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+			<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
 			<iFeatureChange>1</iFeatureChange>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_FOREST_NEW_2</Type>
 			<Description>TXT_KEY_EVENT_GENERIC_CHOICE_GOOD_NEWS</Description>
-			<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+			<FeatureType>FEATURE_BURNT_FOREST</FeatureType>
 			<iFeatureChange>-1</iFeatureChange>
 			<AdditionalEvents>
 				<EventChance>
@@ -7018,7 +7018,7 @@
 			<Type>EVENT_VOLCANO_EXTINCTION</Type>
 			<Description>TXT_KEY_EVENT_VOLCANO_EXTINCTION</Description>
 			<bPickCity>1</bPickCity>
-			<FeatureType>FEATURE_VOLCANO2</FeatureType>
+			<FeatureType>FEATURE_VOLCANO_DORMANT</FeatureType>
 			<iFeatureChange>-1</iFeatureChange>
 			<PythonHelp>getHelpVolcanoExtinction</PythonHelp>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>

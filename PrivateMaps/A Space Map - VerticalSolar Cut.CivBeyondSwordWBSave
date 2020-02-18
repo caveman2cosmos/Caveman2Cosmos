@@ -561,7 +561,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=4
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -609,26 +609,26 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=0,y=14
 	BonusType=BONUS_LEAD_ORE
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=0,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=0,y=16
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -699,7 +699,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=29
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -1643,13 +1643,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=1,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -1665,7 +1665,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=16
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -2074,7 +2074,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=95
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -2636,7 +2636,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2,y=5
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=1
 EndPlot
@@ -2668,13 +2668,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=2,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=0
 EndPlot
@@ -2691,13 +2691,13 @@ EndPlot
 BeginPlot
 	x=2,y=15
 	BonusType=BONUS_URANIUM
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=2,y=16
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -3099,7 +3099,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2,y=93
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -3704,7 +3704,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=3,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
@@ -3726,7 +3726,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=3,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -4130,7 +4130,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=3,y=92
-	FeatureType=FEATURE_LUNAR_CRATER2, FeatureVariety=0
+	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -4736,13 +4736,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=4,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
@@ -4758,7 +4758,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=4,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -5165,7 +5165,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=4,y=92
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -5177,13 +5177,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=4,y=94
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=95
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -5784,7 +5784,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=5,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=0
 EndPlot
@@ -5795,19 +5795,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=5,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=5,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=5,y=16
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -6209,19 +6209,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=5,y=93
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
 BeginPlot
 	x=5,y=94
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
 BeginPlot
 	x=5,y=95
-	FeatureType=FEATURE_LUNAR_CRATER2, FeatureVariety=0
+	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -6817,13 +6817,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=6,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=6,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -6834,19 +6834,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=6,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=6,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=6,y=16
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -7174,7 +7174,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=6,y=79
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_ICE
 	PlotType=2
 EndPlot
@@ -7854,31 +7854,31 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=7,y=10
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=7,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=7,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=7,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=7,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -8887,14 +8887,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=8,y=10
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=8,y=11
 	BonusType=BONUS_LEAD_ORE
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
@@ -9324,7 +9324,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=8,y=93
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -9900,7 +9900,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=9,y=5
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -9926,7 +9926,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=9,y=10
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -10359,7 +10359,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=9,y=92
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -10972,7 +10972,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=10,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -12016,25 +12016,25 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=11,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=0
 EndPlot
 BeginPlot
 	x=11,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=11,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=11,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
@@ -12314,7 +12314,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	isWOfRiver
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -12337,7 +12337,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	BonusType=BONUS_OIL
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -12453,7 +12453,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=11,y=91
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -13049,7 +13049,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=12,y=6
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -13081,25 +13081,25 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=12,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=12,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=12,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=12,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=0
 EndPlot
@@ -13379,7 +13379,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=12,y=69
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -13387,7 +13387,7 @@ BeginPlot
 	x=12,y=70
 	isNOfRiver
 	RiverWEDirection=3
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -13402,7 +13402,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	isWOfRiver
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -14138,7 +14138,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
@@ -14149,13 +14149,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=13,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=0
 EndPlot
@@ -14583,7 +14583,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=92
-	FeatureType=FEATURE_LUNAR_CRATER2, FeatureVariety=0
+	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -15210,19 +15210,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=14,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=14,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=14,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
@@ -15535,7 +15535,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=14,y=74
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -15560,7 +15560,7 @@ EndPlot
 BeginPlot
 	x=14,y=77
 	BonusType=BONUS_GEODE
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -16224,7 +16224,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=4
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -16266,26 +16266,26 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=15,y=13
 	BonusType=BONUS_LEAD_ORE
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=15,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=15,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -16713,13 +16713,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=92
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=15,y=93
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_PLAINS
 	PlotType=2
 EndPlot
@@ -17350,7 +17350,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=16,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -17601,7 +17601,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=16,y=62
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=2
+	FeatureType=FEATURE_CACTUS, FeatureVariety=2
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -17791,7 +17791,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=16,y=93
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_PLAINS
 	PlotType=2
 EndPlot
@@ -17802,7 +17802,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=16,y=95
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -18430,13 +18430,13 @@ EndPlot
 BeginPlot
 	x=17,y=14
 	BonusType=BONUS_URANIUM
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=17,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -18659,13 +18659,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=58
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=17,y=59
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=2
+	FeatureType=FEATURE_CACTUS, FeatureVariety=2
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -18677,7 +18677,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=61
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -18691,7 +18691,7 @@ BeginPlot
 	x=17,y=63
 	RiverNSDirection=2
 	isWOfRiver
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
@@ -18699,7 +18699,7 @@ BeginPlot
 	x=17,y=64
 	RiverNSDirection=2
 	isWOfRiver
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=2
+	FeatureType=FEATURE_CACTUS, FeatureVariety=2
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
@@ -18726,7 +18726,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=69
-	FeatureType=FEATURE_VOLCANO2, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_DORMANT, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -18874,7 +18874,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=94
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -19510,13 +19510,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=18,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -19727,7 +19727,7 @@ EndPlot
 BeginPlot
 	x=18,y=56
 	BonusType=BONUS_OBSIDIAN
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -19744,7 +19744,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=59
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -19789,7 +19789,7 @@ BeginPlot
 	x=18,y=65
 	RiverNSDirection=2
 	isWOfRiver
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=2
+	FeatureType=FEATURE_CACTUS, FeatureVariety=2
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
@@ -19797,7 +19797,7 @@ BeginPlot
 	x=18,y=66
 	isNOfRiver
 	RiverWEDirection=1
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -19822,7 +19822,7 @@ EndPlot
 BeginPlot
 	x=18,y=70
 	BonusType=BONUS_PEYOTE
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=2
+	FeatureType=FEATURE_CACTUS, FeatureVariety=2
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -20599,7 +20599,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -20802,7 +20802,7 @@ EndPlot
 BeginPlot
 	x=19,y=53
 	BonusType=BONUS_FISH
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -20814,7 +20814,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=55
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=2
+	FeatureType=FEATURE_CACTUS, FeatureVariety=2
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -20880,7 +20880,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=63
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -20893,7 +20893,7 @@ BeginPlot
 	x=19,y=65
 	isNOfRiver
 	RiverWEDirection=1
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=1
+	FeatureType=FEATURE_CACTUS, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -20905,7 +20905,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=67
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=2
+	FeatureType=FEATURE_CACTUS, FeatureVariety=2
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -20922,7 +20922,7 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	BonusType=BONUS_PEYOTE
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=2
+	FeatureType=FEATURE_CACTUS, FeatureVariety=2
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -21073,7 +21073,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=95
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -21699,13 +21699,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=20,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
@@ -21983,7 +21983,7 @@ BeginPlot
 	x=20,y=65
 	isNOfRiver
 	RiverWEDirection=1
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=2
+	FeatureType=FEATURE_CACTUS, FeatureVariety=2
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -21991,7 +21991,7 @@ BeginPlot
 	x=20,y=66
 	RiverNSDirection=2
 	isWOfRiver
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -22000,7 +22000,7 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=2
+	FeatureType=FEATURE_CACTUS, FeatureVariety=2
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -22147,7 +22147,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=91
-	FeatureType=FEATURE_LUNAR_CRATER2, FeatureVariety=0
+	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -22784,13 +22784,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=21,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=21,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -22991,13 +22991,13 @@ EndPlot
 BeginPlot
 	x=21,y=51
 	BonusType=BONUS_LOBSTER
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=21,y=52
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -23036,25 +23036,25 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=21,y=58
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=21,y=59
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=21,y=60
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=21,y=61
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -23100,7 +23100,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=21,y=68
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=2
+	FeatureType=FEATURE_CACTUS, FeatureVariety=2
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -23247,7 +23247,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=21,y=93
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -23882,7 +23882,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -24087,19 +24087,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=50
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=22,y=51
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=22,y=52
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -24146,13 +24146,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=60
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=22,y=61
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -24347,7 +24347,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=92
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -24984,25 +24984,25 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=23,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=23,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=23,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -25189,7 +25189,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=50
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -25207,7 +25207,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=53
-	FeatureType=FEATURE_KAKTUS, FeatureVariety=0
+	FeatureType=FEATURE_CACTUS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -25241,20 +25241,20 @@ EndPlot
 BeginPlot
 	x=23,y=59
 	BonusType=BONUS_FISH
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=23,y=60
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=23,y=61
 	BonusType=BONUS_PEARLS
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -26059,20 +26059,20 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=10
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=24,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=24,y=12
 	BonusType=BONUS_URANIUM
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -26088,13 +26088,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=24,y=16
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -26273,7 +26273,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=50
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -26306,13 +26306,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=56
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=24,y=57
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -26339,7 +26339,7 @@ EndPlot
 BeginPlot
 	x=24,y=62
 	BonusType=BONUS_CLAM
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -26439,7 +26439,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=79
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=2
 EndPlot
@@ -27124,7 +27124,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=10
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -27135,7 +27135,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=0
 EndPlot
@@ -27156,7 +27156,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=16
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -27343,7 +27343,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=51
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -27376,7 +27376,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=57
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -27387,7 +27387,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=59
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -27465,7 +27465,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=72
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -28201,7 +28201,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=10
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -28212,7 +28212,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=0
 EndPlot
@@ -28223,19 +28223,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=26,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=26,y=16
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -28426,7 +28426,7 @@ BeginPlot
 	x=26,y=50
 	RiverNSDirection=0
 	isWOfRiver
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -28450,7 +28450,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=54
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -28461,13 +28461,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=56
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=26,y=57
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -28673,7 +28673,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=93
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -29265,7 +29265,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=6
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -29286,32 +29286,32 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=10
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=27,y=11
 	BonusType=BONUS_LEAD_ORE
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=27,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=27,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=27,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -29538,7 +29538,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=54
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -29555,7 +29555,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=57
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -29579,19 +29579,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=61
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=27,y=62
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=27,y=63
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -29755,13 +29755,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=93
-	FeatureType=FEATURE_LUNAR_CRATER2, FeatureVariety=0
+	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
 BeginPlot
 	x=27,y=94
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -30371,19 +30371,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=28,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=28,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -30607,7 +30607,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=54
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -30623,7 +30623,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=57
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -30639,26 +30639,26 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=60
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=28,y=61
 	BonusType=BONUS_LOBSTER
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=28,y=62
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=28,y=63
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -30819,7 +30819,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=92
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -31439,7 +31439,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
@@ -31532,7 +31532,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=28
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -31593,7 +31593,7 @@ EndPlot
 BeginPlot
 	x=29,y=39
 	BonusType=BONUS_LLAMA
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -31641,7 +31641,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=47
-	FeatureType=FEATURE_TARPIT, FeatureVariety=0
+	FeatureType=FEATURE_TAR_PIT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -31708,31 +31708,31 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=54
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=29,y=55
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=29,y=56
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=29,y=57
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=29,y=58
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -31748,13 +31748,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=61
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=29,y=62
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -31948,7 +31948,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=95
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -32559,7 +32559,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
@@ -32811,13 +32811,13 @@ EndPlot
 BeginPlot
 	x=30,y=54
 	BonusType=BONUS_LOBSTER
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=30,y=55
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -32846,14 +32846,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=60
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=30,y=61
 	BonusType=BONUS_SHRIMP
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -32895,7 +32895,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=69
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -33652,37 +33652,37 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=31,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=31,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=31,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=31,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=31,y=16
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -33739,7 +33739,7 @@ EndPlot
 BeginPlot
 	x=31,y=26
 	BonusType=BONUS_SPICES
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -33775,7 +33775,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=32
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -33911,13 +33911,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=53
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
 	x=31,y=54
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -33928,7 +33928,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=56
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -33949,7 +33949,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=60
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -34026,7 +34026,7 @@ EndPlot
 BeginPlot
 	x=31,y=73
 	BonusType=BONUS_PRIME_TIMBER
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=2
 EndPlot
@@ -34717,7 +34717,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=5
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -34759,13 +34759,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=32,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -34776,7 +34776,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=16
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -34992,19 +34992,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=52
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=32,y=53
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=32,y=54
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -35028,13 +35028,13 @@ EndPlot
 BeginPlot
 	x=32,y=58
 	BonusType=BONUS_CRAB
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=32,y=59
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -35842,25 +35842,25 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=33,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=33,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=33,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=33,y=16
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -36121,13 +36121,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=33,y=57
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=33,y=58
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -36926,13 +36926,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=34,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -37172,37 +37172,37 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=52
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=34,y=53
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=34,y=54
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=34,y=55
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=34,y=56
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=34,y=57
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -37386,7 +37386,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=92
-	FeatureType=FEATURE_LUNAR_CRATER2, FeatureVariety=0
+	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -38010,13 +38010,13 @@ EndPlot
 BeginPlot
 	x=35,y=11
 	BonusType=BONUS_TITANIUM_ORE
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=35,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -38267,32 +38267,32 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=51
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=35,y=52
 	BonusType=BONUS_FISH
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=35,y=53
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=35,y=54
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=35,y=55
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -39073,7 +39073,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=4
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -39109,13 +39109,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=36,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -39232,7 +39232,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=34
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -39562,13 +39562,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=93
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
 BeginPlot
 	x=36,y=94
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -40170,7 +40170,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
@@ -40300,7 +40300,7 @@ EndPlot
 BeginPlot
 	x=37,y=35
 	BonusType=BONUS_OIL
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -41239,7 +41239,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -41255,13 +41255,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=38,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -41462,13 +41462,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=48
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=38,y=49
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -41699,7 +41699,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=94
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -41752,7 +41752,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=104
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
@@ -42312,31 +42312,31 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=39,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=39,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=39,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=39,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=39,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -42513,13 +42513,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=39,y=47
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=39,y=48
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -43381,7 +43381,7 @@ EndPlot
 BeginPlot
 	x=40,y=13
 	BonusType=BONUS_LEAD_ORE
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
@@ -43392,7 +43392,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=40,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -43576,7 +43576,7 @@ EndPlot
 BeginPlot
 	x=40,y=47
 	BonusType=BONUS_MUREX
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -43821,7 +43821,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=40,y=95
-	FeatureType=FEATURE_LUNAR_CRATER2, FeatureVariety=0
+	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -43852,7 +43852,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=40,y=101
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_PLAINS
 	PlotType=2
 EndPlot
@@ -44447,7 +44447,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=0
 EndPlot
@@ -44458,7 +44458,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -44630,13 +44630,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=46
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=41,y=47
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -44865,7 +44865,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=91
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -45503,25 +45503,25 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=42,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=42,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=42,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=42,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
@@ -45991,7 +45991,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=42,y=104
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_DESERT
 	PlotType=2
 EndPlot
@@ -46558,13 +46558,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=43,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=43,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -46581,13 +46581,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=43,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=43,y=16
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -47000,7 +47000,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=43,y=95
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -47587,7 +47587,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=6
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -47614,13 +47614,13 @@ EndPlot
 BeginPlot
 	x=44,y=11
 	BonusType=BONUS_TITANIUM_ORE
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=44,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
@@ -47631,7 +47631,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -47642,7 +47642,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=16
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -48050,7 +48050,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=94
-	FeatureType=FEATURE_LUNAR_CRATER2, FeatureVariety=0
+	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -48510,7 +48510,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=179
-	FeatureType=FEATURE_WATER_PLANET, FeatureVariety=0
+	FeatureType=FEATURE_OCEAN_PLANET, FeatureVariety=0
 	TerrainType=TERRAIN_MILKY_WAY
 	PlotType=2
 EndPlot
@@ -48677,32 +48677,32 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=45,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=45,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=45,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=45,y=15
 	BonusType=BONUS_URANIUM
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=45,y=16
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -49101,7 +49101,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=45,y=92
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -49118,7 +49118,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=45,y=95
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -49150,7 +49150,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=45,y=101
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
@@ -49735,7 +49735,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
@@ -49753,7 +49753,7 @@ EndPlot
 BeginPlot
 	x=46,y=15
 	BonusType=BONUS_URANIUM
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -49784,7 +49784,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46,y=21
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_ICE
 	PlotType=1
 EndPlot
@@ -50101,7 +50101,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46,y=82
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_ICE
 	PlotType=2
 EndPlot
@@ -50781,32 +50781,32 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=10
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=47,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=47,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=47,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=47,y=14
 	BonusType=BONUS_LEAD_ORE
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=0
 EndPlot
@@ -50985,7 +50985,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=49
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -51214,7 +51214,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=93
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -51261,7 +51261,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=102
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
@@ -51831,19 +51831,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=48,y=10
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=48,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=48,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
@@ -52281,13 +52281,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=48,y=93
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
 BeginPlot
 	x=48,y=94
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -52338,7 +52338,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=48,y=104
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
@@ -52898,7 +52898,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -53341,7 +53341,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=93
-	FeatureType=FEATURE_LUNAR_CRATER2, FeatureVariety=0
+	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -53377,7 +53377,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=100
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
@@ -53954,7 +53954,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -54132,7 +54132,7 @@ EndPlot
 BeginPlot
 	x=50,y=46
 	BonusType=BONUS_CLAM
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -54389,7 +54389,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=92
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -55005,33 +55005,33 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=51,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=51,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=51,y=13
 	BonusType=BONUS_ORGANIC_VOLATILES
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=51,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=51,y=15
 	BonusType=BONUS_STONE
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -55339,7 +55339,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=51,y=73
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -55460,7 +55460,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=51,y=93
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -55704,7 +55704,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=51,y=140
-	FeatureType=FEATURE_LUNAR_CRATER2, FeatureVariety=0
+	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_TRITON
 	PlotType=2
 EndPlot
@@ -56076,7 +56076,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
@@ -56092,7 +56092,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -56359,7 +56359,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52,y=64
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -56442,7 +56442,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52,y=78
-	FeatureType=FEATURE_TARPIT, FeatureVariety=0
+	FeatureType=FEATURE_TAR_PIT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -56526,7 +56526,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52,y=93
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -56573,7 +56573,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52,y=102
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
@@ -57106,7 +57106,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=5
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -57153,13 +57153,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=53,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -57410,7 +57410,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=63
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -57594,7 +57594,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=91
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -57610,7 +57610,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=94
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -58182,7 +58182,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=5
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -58224,13 +58224,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=54,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -58692,7 +58692,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=95
-	FeatureType=FEATURE_LUNAR_CRATER2, FeatureVariety=0
+	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -59282,7 +59282,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=10
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -59471,7 +59471,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=46
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -59777,13 +59777,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=102
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=55,y=103
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_PLAINS
 	PlotType=2
 EndPlot
@@ -59976,7 +59976,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=140
-	FeatureType=FEATURE_LUNAR_CRATER2, FeatureVariety=0
+	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_TRITON
 	PlotType=2
 EndPlot
@@ -60332,7 +60332,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=10
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -60851,7 +60851,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=105
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
@@ -61399,7 +61399,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=10
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -61616,7 +61616,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=51
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_SCRUB
 	PlotType=2
 EndPlot
@@ -61865,7 +61865,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=95
-	FeatureType=FEATURE_LUNAR_CRATER2, FeatureVariety=0
+	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -62468,7 +62468,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=10
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -62484,14 +62484,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=58,y=14
 	BonusType=BONUS_TITANIUM_ORE
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -62649,7 +62649,7 @@ EndPlot
 BeginPlot
 	x=58,y=44
 	BonusType=BONUS_FISH
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -62923,13 +62923,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=93
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
 BeginPlot
 	x=58,y=94
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -63537,13 +63537,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=10
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=59,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -63554,19 +63554,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=59,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=59,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -63763,7 +63763,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=50
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -64627,7 +64627,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -64643,13 +64643,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=60,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -64780,7 +64780,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=40
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -64838,7 +64838,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=50
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -65075,7 +65075,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=91
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -65097,7 +65097,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=95
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -65133,7 +65133,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=102
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_PLAINS
 	PlotType=2
 EndPlot
@@ -65677,7 +65677,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=6
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -65703,32 +65703,32 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=61,y=12
 	BonusType=BONUS_URANIUM
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=61,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=61,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=61,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -65975,7 +65975,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=60
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -66156,7 +66156,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=92
-	FeatureType=FEATURE_LUNAR_CRATER2, FeatureVariety=0
+	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -66212,7 +66212,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=103
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_PLAINS
 	PlotType=2
 EndPlot
@@ -66784,13 +66784,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=62,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=62,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -67275,7 +67275,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=62,y=100
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
@@ -67292,7 +67292,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=62,y=103
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
@@ -67877,7 +67877,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=63,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
@@ -68068,7 +68068,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=63,y=46
-	FeatureType=FEATURE_TARPIT, FeatureVariety=0
+	FeatureType=FEATURE_TAR_PIT, FeatureVariety=0
 	TerrainType=TERRAIN_MUDDY
 	PlotType=1
 EndPlot
@@ -68345,7 +68345,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=63,y=94
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_PLAINS
 	PlotType=2
 EndPlot
@@ -68396,7 +68396,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=63,y=104
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
@@ -68949,25 +68949,25 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=64,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=64,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=64,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=64,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -69048,7 +69048,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=64,y=29
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -69248,7 +69248,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=64,y=61
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -69438,7 +69438,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=64,y=93
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_PLAINS
 	PlotType=2
 EndPlot
@@ -70062,14 +70062,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=65,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=65,y=12
 	BonusType=BONUS_TITANIUM_ORE
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -71177,25 +71177,25 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=66,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=66,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=66,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=66,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -71310,7 +71310,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=66,y=35
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -71678,7 +71678,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=66,y=94
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -72257,7 +72257,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=5
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -72309,7 +72309,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -72480,7 +72480,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=44
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -72600,7 +72600,7 @@ EndPlot
 BeginPlot
 	x=67,y=64
 	BonusType=BONUS_TIN_ORE
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -72770,7 +72770,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=93
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -72822,7 +72822,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=103
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_PLAINS
 	PlotType=2
 EndPlot
@@ -73406,7 +73406,7 @@ EndPlot
 BeginPlot
 	x=68,y=15
 	BonusType=BONUS_URANIUM
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -73487,7 +73487,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=68,y=30
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -73716,7 +73716,7 @@ EndPlot
 BeginPlot
 	x=68,y=65
 	BonusType=BONUS_IRON_ORE
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -74486,31 +74486,31 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=69,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=69,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=69,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=69,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -74685,7 +74685,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=46
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -74801,7 +74801,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=64
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -74845,7 +74845,7 @@ BeginPlot
 	x=69,y=72
 	RiverNSDirection=2
 	isWOfRiver
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -74891,7 +74891,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=79
-	FeatureType=FEATURE_TARPIT, FeatureVariety=0
+	FeatureType=FEATURE_TAR_PIT, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=2
 EndPlot
@@ -74977,7 +74977,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=95
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -75578,19 +75578,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=10
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=70,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=70,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -75601,7 +75601,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -75692,13 +75692,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=31
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=70,y=32
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -75900,7 +75900,7 @@ EndPlot
 BeginPlot
 	x=70,y=64
 	BonusType=BONUS_COTTON
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -76074,13 +76074,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=93
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
 BeginPlot
 	x=70,y=94
-	FeatureType=FEATURE_LUNAR_CRATER2, FeatureVariety=0
+	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -76121,7 +76121,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=102
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
@@ -76678,7 +76678,7 @@ EndPlot
 BeginPlot
 	x=71,y=10
 	BonusType=BONUS_URANIUM
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
@@ -76689,7 +76689,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -76795,7 +76795,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=32
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -76882,7 +76882,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=47
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -76956,7 +76956,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=61
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -77736,7 +77736,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=5
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -77762,7 +77762,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=10
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
@@ -77882,7 +77882,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=33
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -78221,7 +78221,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=92
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -78835,13 +78835,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=73,y=10
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=73,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -79305,7 +79305,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=73,y=93
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -79369,7 +79369,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=73,y=105
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
@@ -79922,7 +79922,7 @@ EndPlot
 BeginPlot
 	x=74,y=11
 	BonusType=BONUS_STONE
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
@@ -80075,32 +80075,32 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=74,y=39
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=74,y=40
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
 	x=74,y=41
 	BonusType=BONUS_FISH
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=74,y=42
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=74,y=43
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -80144,13 +80144,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=74,y=50
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=74,y=51
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -80389,7 +80389,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=74,y=91
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -80401,7 +80401,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=74,y=93
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -80995,7 +80995,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=6
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_CALLISTO
 	PlotType=2
 EndPlot
@@ -81022,31 +81022,31 @@ EndPlot
 BeginPlot
 	x=75,y=11
 	BonusType=BONUS_STONE
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=75,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=75,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=75,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=75,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
@@ -81180,7 +81180,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=40
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -81201,7 +81201,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=44
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -81234,7 +81234,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=50
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -81307,7 +81307,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=62
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -81477,7 +81477,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=92
-	FeatureType=FEATURE_LUNAR_CRATER2, FeatureVariety=0
+	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -82117,19 +82117,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=76,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=76,y=16
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -82213,13 +82213,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=32
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=76,y=33
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -82285,7 +82285,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=45
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -83200,13 +83200,13 @@ EndPlot
 BeginPlot
 	x=77,y=13
 	BonusType=BONUS_URANIUM
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=77,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -83217,7 +83217,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=16
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -83305,19 +83305,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=33
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=77,y=34
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=77,y=35
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -83333,13 +83333,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=38
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=77,y=39
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -83371,13 +83371,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=45
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=77,y=46
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -83685,7 +83685,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=95
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -84307,13 +84307,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=78,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -84324,13 +84324,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=78,y=16
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -84434,7 +84434,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=36
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -84445,13 +84445,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=38
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=78,y=39
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -84493,7 +84493,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=47
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -84504,7 +84504,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=49
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -84747,7 +84747,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=92
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -84758,13 +84758,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=94
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
 BeginPlot
 	x=78,y=95
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -85372,25 +85372,25 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=79,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=79,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=79,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=79,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -85576,7 +85576,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=79,y=50
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -85614,13 +85614,13 @@ EndPlot
 BeginPlot
 	x=79,y=57
 	BonusType=BONUS_CLAM
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=79,y=58
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -86406,7 +86406,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=80,y=4
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -86443,26 +86443,26 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=80,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=80,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=80,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=80,y=14
 	BonusType=BONUS_STONE
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
@@ -86649,7 +86649,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=80,y=50
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -86686,7 +86686,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=80,y=57
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -86904,7 +86904,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=80,y=94
-	FeatureType=FEATURE_LUNAR_CRATER2, FeatureVariety=0
+	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -87517,19 +87517,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=81,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=81,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=81,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -87714,13 +87714,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=81,y=50
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=81,y=51
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -87749,19 +87749,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=81,y=56
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=81,y=57
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=81,y=58
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -87957,13 +87957,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=81,y=93
-	FeatureType=FEATURE_LUNAR_CRATER2, FeatureVariety=0
+	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
 BeginPlot
 	x=81,y=94
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -88545,7 +88545,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=82,y=5
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -88577,25 +88577,25 @@ EndPlot
 BeginPlot
 	x=82,y=11
 	BonusType=BONUS_TITANIUM_ORE
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=82,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=82,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=82,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -88783,13 +88783,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=82,y=51
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=82,y=52
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -89002,7 +89002,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=82,y=91
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -89632,25 +89632,25 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=83,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=83,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=83,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=83,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
@@ -89844,13 +89844,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=83,y=52
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=83,y=53
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -89866,7 +89866,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=83,y=56
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -90077,7 +90077,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=83,y=91
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -90093,7 +90093,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=83,y=94
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_PLAINS
 	PlotType=2
 EndPlot
@@ -90697,25 +90697,25 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=84,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=84,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=84,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=84,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -90918,7 +90918,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=84,y=53
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -90930,7 +90930,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=84,y=55
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -91781,13 +91781,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=85,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=0
 EndPlot
@@ -91799,7 +91799,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
@@ -92010,13 +92010,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=55
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=85,y=56
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -92231,7 +92231,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=92
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -92851,25 +92851,25 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=86,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=86,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=0
 EndPlot
 BeginPlot
 	x=86,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=86,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
@@ -93073,13 +93073,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=86,y=54
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=86,y=55
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -93314,13 +93314,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=86,y=94
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
 BeginPlot
 	x=86,y=95
-	FeatureType=FEATURE_LUNAR_CRATER2, FeatureVariety=0
+	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -93921,19 +93921,19 @@ EndPlot
 BeginPlot
 	x=87,y=11
 	BonusType=BONUS_LEAD_ORE
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=87,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=87,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
@@ -94131,25 +94131,25 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=87,y=52
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=87,y=53
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=87,y=54
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=87,y=55
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -94387,7 +94387,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=87,y=95
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -94992,7 +94992,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=88,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
@@ -95186,13 +95186,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=88,y=50
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=88,y=51
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -95203,7 +95203,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=88,y=53
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -95434,7 +95434,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=88,y=92
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -96250,14 +96250,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=89,y=49
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=89,y=50
 	BonusType=BONUS_CLAM
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -96498,7 +96498,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=89,y=91
-	FeatureType=FEATURE_LUNAR_CRATER2, FeatureVariety=0
+	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -97092,7 +97092,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=90,y=5
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -97138,7 +97138,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=90,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
@@ -97571,7 +97571,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=90,y=92
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -98201,19 +98201,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=91,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=91,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=91,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -98375,7 +98375,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=91,y=47
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -98565,7 +98565,7 @@ BeginPlot
 	x=91,y=77
 	isNOfRiver
 	RiverWEDirection=3
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -99289,7 +99289,7 @@ EndPlot
 BeginPlot
 	x=92,y=15
 	BonusType=BONUS_LEAD_ORE
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
@@ -99459,7 +99459,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=92,y=48
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -99470,13 +99470,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=92,y=50
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=92,y=51
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -99629,7 +99629,7 @@ BeginPlot
 	x=92,y=77
 	isNOfRiver
 	RiverWEDirection=3
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -99727,7 +99727,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=92,y=94
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -100365,7 +100365,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=93,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
@@ -100555,13 +100555,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=93,y=52
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=93,y=53
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -100583,7 +100583,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=93,y=57
-	FeatureType=FEATURE_TARPIT, FeatureVariety=0
+	FeatureType=FEATURE_TAR_PIT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -100799,7 +100799,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=93,y=94
-	FeatureType=FEATURE_LUNAR_CRATER2, FeatureVariety=0
+	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -101422,19 +101422,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=94,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=94,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=94,y=16
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -101849,19 +101849,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=94,y=93
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
 BeginPlot
 	x=94,y=94
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
 BeginPlot
 	x=94,y=95
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -102481,13 +102481,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=95,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=95,y=16
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -102918,7 +102918,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=95,y=95
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -103500,7 +103500,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=96,y=6
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -103541,13 +103541,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=96,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=96,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -103749,13 +103749,13 @@ EndPlot
 BeginPlot
 	x=96,y=54
 	BonusType=BONUS_SHRIMP
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=96,y=55
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -103767,7 +103767,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=96,y=57
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -104609,13 +104609,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=97,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=97,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -104784,7 +104784,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=97,y=48
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -104800,7 +104800,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=97,y=51
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -104811,13 +104811,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=97,y=53
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=97,y=54
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -105037,7 +105037,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=97,y=92
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -105683,7 +105683,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=98,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -105705,7 +105705,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=98,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -105863,19 +105863,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=98,y=46
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=98,y=47
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=98,y=48
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -105893,19 +105893,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=98,y=51
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=98,y=52
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
 	x=98,y=53
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -106066,7 +106066,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=98,y=78
-	FeatureType=FEATURE_TARPIT, FeatureVariety=0
+	FeatureType=FEATURE_TAR_PIT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -106152,13 +106152,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=98,y=93
-	FeatureType=FEATURE_LUNAR_CRATER2, FeatureVariety=0
+	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
 BeginPlot
 	x=98,y=94
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -106774,31 +106774,31 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=99,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=99,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=99,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=99,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=0
 EndPlot
 BeginPlot
 	x=99,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -106954,14 +106954,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=99,y=45
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=99,y=46
 	BonusType=BONUS_SHRIMP
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -107246,7 +107246,7 @@ EndPlot
 BeginPlot
 	x=99,y=92
 	BonusType=BONUS_STONE
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -107880,19 +107880,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=100,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=100,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=100,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -108060,7 +108060,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=100,y=45
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -108375,7 +108375,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=100,y=93
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -108970,7 +108970,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=101,y=5
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -109001,7 +109001,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=101,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -109474,7 +109474,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=101,y=91
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -109485,7 +109485,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=101,y=93
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -109952,7 +109952,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=101,y=179
-	FeatureType=FEATURE_WATER_PLANET, FeatureVariety=0
+	FeatureType=FEATURE_OCEAN_PLANET, FeatureVariety=0
 	TerrainType=TERRAIN_MILKY_WAY
 	PlotType=2
 EndPlot
@@ -110115,14 +110115,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=102,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=102,y=12
 	BonusType=BONUS_URANIUM
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -110311,7 +110311,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=102,y=47
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -110327,13 +110327,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=102,y=50
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=102,y=51
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -110590,7 +110590,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=102,y=92
-	FeatureType=FEATURE_LUNAR_CRATER2, FeatureVariety=0
+	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -110601,7 +110601,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=102,y=94
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -111222,19 +111222,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=103,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=103,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=103,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
@@ -111396,7 +111396,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=103,y=44
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -111407,7 +111407,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=103,y=46
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -111424,7 +111424,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=103,y=49
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -111435,7 +111435,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=103,y=51
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -111463,13 +111463,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=103,y=56
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=103,y=57
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -111700,7 +111700,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=103,y=95
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -112309,25 +112309,25 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=104,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=104,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=104,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=104,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
@@ -112483,7 +112483,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=104,y=44
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -112495,7 +112495,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=104,y=46
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -112521,27 +112521,27 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=104,y=50
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=104,y=51
 	BonusType=BONUS_CLAM
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=104,y=52
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=104,y=53
 	BonusType=BONUS_FISH
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -112552,13 +112552,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=104,y=55
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=104,y=56
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -113397,7 +113397,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=105,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -113413,7 +113413,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=105,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -113514,13 +113514,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=105,y=34
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
 BeginPlot
 	x=105,y=35
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -113564,19 +113564,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=105,y=43
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=105,y=44
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=105,y=45
-	FeatureType=FEATURE_VOLCANO2, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_DORMANT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -113613,7 +113613,7 @@ BeginPlot
 	x=105,y=48
 	isNOfRiver
 	RiverWEDirection=3
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -113635,7 +113635,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=105,y=52
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -113651,7 +113651,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=105,y=55
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -113875,7 +113875,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=105,y=92
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -113892,7 +113892,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=105,y=95
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -114490,13 +114490,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=106,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=106,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -114607,14 +114607,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=106,y=33
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
 BeginPlot
 	x=106,y=34
 	BonusType=BONUS_GOLD_ORE
-	FeatureType=FEATURE_SWORD_GRASS, FeatureVariety=0
+	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -114647,25 +114647,25 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=106,y=40
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=106,y=41
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=106,y=42
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=106,y=43
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -114714,7 +114714,7 @@ EndPlot
 BeginPlot
 	x=106,y=51
 	BonusType=BONUS_MUREX
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -114866,13 +114866,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=106,y=77
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=2
 EndPlot
 BeginPlot
 	x=106,y=78
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=2
 EndPlot
@@ -114947,7 +114947,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=106,y=91
-	FeatureType=FEATURE_LUNAR_CRATER2, FeatureVariety=0
+	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -114958,7 +114958,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=106,y=93
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_BARREN
 	PlotType=2
 EndPlot
@@ -115541,7 +115541,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=107,y=6
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -115567,7 +115567,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=107,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
@@ -115702,7 +115702,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=107,y=36
-	FeatureType=FEATURE_CAVE, FeatureVariety=0
+	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2
 EndPlot
@@ -115738,7 +115738,7 @@ EndPlot
 BeginPlot
 	x=107,y=42
 	BonusType=BONUS_SHRIMP
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -115761,25 +115761,25 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=107,y=46
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=107,y=47
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=107,y=48
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=107,y=49
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -115942,7 +115942,7 @@ EndPlot
 BeginPlot
 	x=107,y=77
 	BonusType=BONUS_SILVER_ORE
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=2
 EndPlot
@@ -116643,7 +116643,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=108,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -116812,7 +116812,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=108,y=42
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -116850,7 +116850,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=108,y=49
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -116885,7 +116885,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=108,y=55
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -117108,13 +117108,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=108,y=93
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
 BeginPlot
 	x=108,y=94
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -117716,25 +117716,25 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=109,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=109,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=109,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=109,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -117884,7 +117884,7 @@ EndPlot
 BeginPlot
 	x=109,y=42
 	BonusType=BONUS_PEARLS
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -117966,7 +117966,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=109,y=57
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -118173,7 +118173,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=109,y=92
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -118798,7 +118798,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=110,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -118809,13 +118809,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=110,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=110,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -118976,38 +118976,38 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=110,y=45
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=110,y=46
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=110,y=47
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=110,y=48
 	BonusType=BONUS_LOBSTER
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=110,y=49
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=110,y=50
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -119030,13 +119030,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=110,y=54
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=110,y=55
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -119883,7 +119883,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=111,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_LOWLAND
 	PlotType=2
 EndPlot
@@ -120042,13 +120042,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=111,y=44
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=111,y=45
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -120067,7 +120067,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=111,y=48
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -120078,31 +120078,31 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=111,y=50
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=111,y=51
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=111,y=52
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=111,y=53
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=111,y=54
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -120768,7 +120768,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=111,y=180
-	FeatureType=FEATURE_WATER_PLANET, FeatureVariety=0
+	FeatureType=FEATURE_OCEAN_PLANET, FeatureVariety=0
 	TerrainType=TERRAIN_MILKY_WAY
 	PlotType=2
 EndPlot
@@ -120929,26 +120929,26 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=112,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=112,y=13
 	BonusType=BONUS_URANIUM
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=112,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=112,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -121087,7 +121087,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=112,y=41
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -121124,7 +121124,7 @@ EndPlot
 BeginPlot
 	x=112,y=48
 	BonusType=BONUS_FISH
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -121373,7 +121373,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=112,y=94
-	FeatureType=FEATURE_LUNAR_CRATER2, FeatureVariety=0
+	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -121944,7 +121944,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=113,y=5
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_MERCURY
 	PlotType=2
 EndPlot
@@ -121980,7 +121980,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=113,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -122141,7 +122141,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=113,y=41
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -122170,7 +122170,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=113,y=46
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -122182,7 +122182,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=113,y=48
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -123035,27 +123035,27 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=114,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=114,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=114,y=14
 	BonusType=BONUS_LEAD_ORE
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=114,y=15
 	BonusType=BONUS_STONE
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -123181,7 +123181,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=114,y=38
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -123214,7 +123214,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=114,y=43
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -123336,7 +123336,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=114,y=65
-	FeatureType=FEATURE_VOLCANO2, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_DORMANT, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -123503,7 +123503,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=114,y=92
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -124123,13 +124123,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=115,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -124140,7 +124140,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=115,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=0
 EndPlot
@@ -124263,7 +124263,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=115,y=36
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -124276,13 +124276,13 @@ EndPlot
 BeginPlot
 	x=115,y=38
 	BonusType=BONUS_IRON_ORE
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=39
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -124306,7 +124306,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=115,y=43
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -124317,7 +124317,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=115,y=45
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -124459,7 +124459,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=115,y=71
-	FeatureType=FEATURE_VOLCANO, FeatureVariety=0
+	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -124588,7 +124588,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=115,y=94
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -125184,7 +125184,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=116,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
@@ -125195,19 +125195,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=116,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=116,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=116,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=0
 EndPlot
@@ -125320,7 +125320,7 @@ EndPlot
 BeginPlot
 	x=116,y=35
 	BonusType=BONUS_PRIME_TIMBER
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -125352,13 +125352,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=116,y=41
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=116,y=42
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -125382,13 +125382,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=116,y=46
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=116,y=47
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -126243,20 +126243,20 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=117,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=117,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=117,y=13
 	BonusType=BONUS_LEAD_ORE
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
@@ -126346,7 +126346,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=117,y=30
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -126376,7 +126376,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=117,y=35
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -126388,7 +126388,7 @@ EndPlot
 BeginPlot
 	x=117,y=37
 	BonusType=BONUS_TITANIUM_ORE
-	FeatureType=FEATURE_FOREST_OLD, FeatureVariety=0
+	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -126405,13 +126405,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=117,y=40
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=117,y=41
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -126438,7 +126438,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=117,y=46
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -127291,19 +127291,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=118,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=0
 EndPlot
 BeginPlot
 	x=118,y=12
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=0
 EndPlot
 BeginPlot
 	x=118,y=13
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS_HIGHLAND
 	PlotType=1
 EndPlot
@@ -127452,7 +127452,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=118,y=40
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -127479,7 +127479,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=118,y=45
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -127739,7 +127739,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=118,y=94
-	FeatureType=FEATURE_LUNAR_CRATER2, FeatureVariety=0
+	FeatureType=FEATURE_LARGE_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
@@ -128337,7 +128337,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=119,y=11
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -128353,13 +128353,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=119,y=14
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=119,y=15
-	FeatureType=FEATURE_PLAGUEGAS, FeatureVariety=0
+	FeatureType=FEATURE_PLAGUED_SMOG, FeatureVariety=0
 	TerrainType=TERRAIN_VENUS
 	PlotType=2
 EndPlot
@@ -128449,7 +128449,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=119,y=32
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -128465,7 +128465,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=119,y=35
-	FeatureType=FEATURE_SEAGRASS, FeatureVariety=0
+	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -128481,7 +128481,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=119,y=38
-	FeatureType=FEATURE_CORAL, FeatureVariety=0
+	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -128773,13 +128773,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=119,y=92
-	FeatureType=FEATURE_LUNAR_CRATER3, FeatureVariety=0
+	FeatureType=FEATURE_SMALL_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
 BeginPlot
 	x=119,y=93
-	FeatureType=FEATURE_LUNAR_CRATER1, FeatureVariety=0
+	FeatureType=FEATURE_MEDIUM_CRATER, FeatureVariety=0
 	TerrainType=TERRAIN_LUNAR_ROCKY
 	PlotType=2
 EndPlot
