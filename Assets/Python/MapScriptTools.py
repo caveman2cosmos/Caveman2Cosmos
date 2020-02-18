@@ -115,7 +115,7 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 	etCoast		= GC.getInfoTypeForString('TERRAIN_COAST')
 	etDesert	= GC.getInfoTypeForString('TERRAIN_DESERT')	# FlatArid, RockyArid
 	etPlains	= GC.getInfoTypeForString('TERRAIN_PLAINS')	# FlatMoist, RockyMoist
-	etGrass 	= GC.getInfoTypeForString('TERRAIN_GRASS')	# FlatRainy, RockyRainy
+	etGrass 	= GC.getInfoTypeForString('TERRAIN_GRASSLAND')	# FlatRainy, RockyRainy
 	etTundra	= GC.getInfoTypeForString('TERRAIN_TAIGA')	# RockyMoist, FlatPolar
 	etSnow		= GC.getInfoTypeForString('TERRAIN_ICE')	# FlatPolar, RockyPolar
 	etMarsh 	= GC.getInfoTypeForString("TERRAIN_MARSH")	# FlatRainy

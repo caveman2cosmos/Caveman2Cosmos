@@ -2635,7 +2635,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -2790,7 +2790,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -3072,7 +3072,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -3240,7 +3240,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -3435,7 +3435,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -5431,7 +5431,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -6670,7 +6670,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -6822,7 +6822,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -8354,7 +8354,7 @@
 			<iCollateralDamageMaxUnits>5</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -8515,7 +8515,7 @@
 			<iCityAttack>-20</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -8767,7 +8767,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -9011,7 +9011,7 @@
 			<iCityAttack>50</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -9482,7 +9482,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -9649,7 +9649,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -9848,7 +9848,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -10131,7 +10131,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -11711,7 +11711,7 @@
 			<iCityAttack>-20</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -12231,7 +12231,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -12894,7 +12894,7 @@
 			<iCityAttack>-20</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -13434,7 +13434,7 @@
 			<iCityAttack>100</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -13983,7 +13983,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -14759,7 +14759,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -14958,7 +14958,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -15624,7 +15624,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -16104,7 +16104,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -18995,7 +18995,7 @@
 			<iXPValueDefense>3</iXPValueDefense>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -19671,7 +19671,7 @@
 			<iXPValueDefense>3</iXPValueDefense>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -19814,7 +19814,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -21594,7 +21594,7 @@
 			<iHillsDefense>10</iHillsDefense>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -22580,7 +22580,7 @@
 			<iCityAttack>-30</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -25363,7 +25363,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -27175,7 +27175,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -27639,7 +27639,7 @@
 			<iCityAttack>-10</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -28416,7 +28416,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -29300,7 +29300,7 @@
 			<iPursuit>20</iPursuit>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -29486,7 +29486,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -31197,7 +31197,7 @@
 			<iCityAttack>-20</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -32139,7 +32139,7 @@
 			<iCollateralDamageMaxUnits>4</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -32422,7 +32422,7 @@
 			<iCityAttack>-20</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -32722,7 +32722,7 @@
 			<iCityAttack>-10</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -33142,7 +33142,7 @@
 			<iCityAttack>-10</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -34382,7 +34382,7 @@
 			<iCityAttack>-30</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -35256,7 +35256,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -36516,7 +36516,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -37105,7 +37105,7 @@
 			<iCityAttack>-10</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -37637,7 +37637,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -38531,7 +38531,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -38736,7 +38736,7 @@
 			<iPursuit>20</iPursuit>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -39533,7 +39533,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -39842,7 +39842,7 @@
 			<iHillsDefense>10</iHillsDefense>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -40016,7 +40016,7 @@
 			<iCityAttack>-20</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -40591,7 +40591,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -40896,7 +40896,7 @@
 			<iCollateralDamageMaxUnits>4</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -41070,7 +41070,7 @@
 			<iCollateralDamageMaxUnits>5</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -42828,7 +42828,7 @@
 			<iCityAttack>-20</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -43645,7 +43645,7 @@
 			<iPursuit>20</iPursuit>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -43794,7 +43794,7 @@
 			<iXPValueDefense>3</iXPValueDefense>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -44078,7 +44078,7 @@
 			<iCityAttack>-20</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -45855,7 +45855,7 @@
 			<iCityAttack>-10</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -46937,7 +46937,7 @@
 			<iPursuit>20</iPursuit>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -48364,7 +48364,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -48557,7 +48557,7 @@
 			<iCityAttack>-30</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -49030,7 +49030,7 @@
 			<iCityAttack>-30</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -49773,7 +49773,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -52546,7 +52546,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>

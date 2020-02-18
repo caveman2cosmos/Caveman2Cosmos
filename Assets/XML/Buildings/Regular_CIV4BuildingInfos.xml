@@ -3412,7 +3412,7 @@
 			<PrereqTech>TECH_SCAVENGING</PrereqTech>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -3428,7 +3428,7 @@
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -4106,7 +4106,7 @@
 			<PrereqTech>TECH_APICULTURE</PrereqTech>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -4122,7 +4122,7 @@
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -16555,7 +16555,7 @@
 			<PrereqTech>TECH_SCAVENGING</PrereqTech>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -34214,7 +34214,7 @@
 			<PrereqTech>TECH_SCAVENGING</PrereqTech>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -40523,11 +40523,11 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_TERRAIN</GOMType>
-						<ID>TERRAIN_ROCKY_ARID</ID>
+						<ID>TERRAIN_BADLAND</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_TERRAIN</GOMType>
-						<ID>TERRAIN_ROCKY_COLD</ID>
+						<ID>TERRAIN_JAGGED</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_FEATURE</GOMType>
@@ -63003,7 +63003,7 @@
 			<PrereqTech>TECH_AGRICULTURAL_ENGINEERING</PrereqTech>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -92520,7 +92520,7 @@
 			<PrereqTech>TECH_SCAVENGING</PrereqTech>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -96459,7 +96459,7 @@
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -100305,7 +100305,7 @@
 			<PrereqTech>TECH_SCAVENGING</PrereqTech>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -100321,7 +100321,7 @@
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -103343,7 +103343,7 @@
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -103359,11 +103359,11 @@
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>

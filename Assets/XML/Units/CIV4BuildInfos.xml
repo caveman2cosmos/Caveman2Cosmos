@@ -6933,7 +6933,7 @@
 			<iCost>50</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_GRASS</ImprovementType>
-			<TerrainChange>TERRAIN_GRASS</TerrainChange>
+			<TerrainChange>TERRAIN_GRASSLAND</TerrainChange>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>

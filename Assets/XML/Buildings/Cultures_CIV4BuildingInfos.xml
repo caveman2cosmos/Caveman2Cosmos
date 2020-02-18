@@ -2299,7 +2299,7 @@
 			<RawVicinityBonus>BONUS_HORSE</RawVicinityBonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -2597,7 +2597,7 @@
 			<RawVicinityBonus>BONUS_HORSE</RawVicinityBonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -2969,7 +2969,7 @@
 			<RawVicinityBonus>BONUS_DONKEY</RawVicinityBonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -4176,7 +4176,7 @@
 			<RawVicinityBonus>BONUS_HORSE</RawVicinityBonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -5320,7 +5320,7 @@
 			<RawVicinityBonus>BONUS_SAPPHIRES</RawVicinityBonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 			</PrereqOrTerrain>
@@ -6050,7 +6050,7 @@
 			<RawVicinityBonus>BONUS_HORSE</RawVicinityBonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -7934,7 +7934,7 @@
 			<RawVicinityBonus>BONUS_BISON</RawVicinityBonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -9414,7 +9414,7 @@
 			<RawVicinityBonus>BONUS_GOLD_ORE</RawVicinityBonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>

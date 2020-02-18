@@ -810,7 +810,7 @@
             <TerrainImpassableTypes>
                 <TerrainType>TERRAIN_SUN</TerrainType>
                 <TerrainType>TERRAIN_TITAN</TerrainType>
-                <TerrainType>TERRAIN_TRANSNEPTUNIAN</TerrainType>
+                <TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
             </TerrainImpassableTypes>
             <TerrainPassableTechs>
                 <TerrainPassableTech>
@@ -818,7 +818,7 @@
 					<PassableTech>TECH_ABYSS_COLONIZATION</PassableTech>
 				</TerrainPassableTech>
               <TerrainPassableTech>
-                <TerrainType>TERRAIN_TRANSNEPTUNIAN</TerrainType>
+                <TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
                 <PassableTech>TECH_SOLAR_ORDNANCE</PassableTech>
               </TerrainPassableTech>
 			</TerrainPassableTechs>
@@ -1126,8 +1126,8 @@
 			</MapCategoryTypes>
             <TerrainImpassableTypes>
                 <TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
-                <TerrainType>TERRAIN_GALACTIC_VOID</TerrainType>
-                <TerrainType>TERRAIN_COSMOS</TerrainType>
+                <TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
+                <TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 			</TerrainImpassableTypes>
             <TerrainPassableTechs>
                 <TerrainPassableTech>
@@ -1135,11 +1135,11 @@
 					<PassableTech>TECH_INTERGROUP_TRAVEL</PassableTech>
 				</TerrainPassableTech>
                 <TerrainPassableTech>
-					<TerrainType>TERRAIN_GALACTIC_VOID</TerrainType>
+					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
 					<PassableTech>TECH_INTERCLUSTER_TRAVEL</PassableTech>
 				</TerrainPassableTech>
                 <TerrainPassableTech>
-					<TerrainType>TERRAIN_COSMOS</TerrainType>
+					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 					<PassableTech>TECH_INTERCLUSTER_TRAVEL</PassableTech>
 				</TerrainPassableTech>
 			</TerrainPassableTechs>
@@ -3516,8 +3516,8 @@
                 <TerrainType>TERRAIN_GALACTIC_CORE</TerrainType>
                 <TerrainType>TERRAIN_LOCAL_GROUP</TerrainType>
                 <TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
-                <TerrainType>TERRAIN_GALACTIC_VOID</TerrainType>
-                <TerrainType>TERRAIN_COSMOS</TerrainType>
+                <TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
+                <TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
                 <TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
 			</TerrainImpassableTypes>
             <TerrainPassableTechs>
@@ -3538,11 +3538,11 @@
 					<PassableTech>TECH_INTERGROUP_TRAVEL</PassableTech>
 				</TerrainPassableTech>
                 <TerrainPassableTech>
-					<TerrainType>TERRAIN_COSMOS</TerrainType>
+					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 					<PassableTech>TECH_INTERCLUSTER_TRAVEL</PassableTech>
 				</TerrainPassableTech>
                 <TerrainPassableTech>
-					<TerrainType>TERRAIN_GALACTIC_VOID</TerrainType>
+					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
 					<PassableTech>TECH_INTERCLUSTER_TRAVEL</PassableTech>
 				</TerrainPassableTech>
                 <TerrainPassableTech>
@@ -3685,8 +3685,8 @@
 			</Builds>
             <TerrainImpassableTypes>
                 <TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
-                <TerrainType>TERRAIN_GALACTIC_VOID</TerrainType>
-                <TerrainType>TERRAIN_COSMOS</TerrainType>
+                <TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
+                <TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
                 <TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
 			</TerrainImpassableTypes>
             <TerrainPassableTechs>
@@ -3695,11 +3695,11 @@
 					<PassableTech>TECH_INTERGROUP_TRAVEL</PassableTech>
 				</TerrainPassableTech>
                 <TerrainPassableTech>
-					<TerrainType>TERRAIN_COSMOS</TerrainType>
+					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 					<PassableTech>TECH_INTERCLUSTER_TRAVEL</PassableTech>
 				</TerrainPassableTech>
                 <TerrainPassableTech>
-					<TerrainType>TERRAIN_GALACTIC_VOID</TerrainType>
+					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
 					<PassableTech>TECH_INTERCLUSTER_TRAVEL</PassableTech>
 				</TerrainPassableTech>
                 <TerrainPassableTech>
@@ -4208,8 +4208,8 @@
             <TerrainImpassableTypes>
                 <TerrainType>TERRAIN_LOCAL_GROUP</TerrainType>
                 <TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
-                <TerrainType>TERRAIN_GALACTIC_VOID</TerrainType>
-                <TerrainType>TERRAIN_COSMOS</TerrainType>
+                <TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
+                <TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 			</TerrainImpassableTypes>
             <TerrainPassableTechs>
                 <TerrainPassableTech>
@@ -4221,11 +4221,11 @@
 					<PassableTech>TECH_INTERGROUP_TRAVEL</PassableTech>
 				</TerrainPassableTech>
                 <TerrainPassableTech>
-					<TerrainType>TERRAIN_GALACTIC_VOID</TerrainType>
+					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
 					<PassableTech>TECH_INTERCLUSTER_TRAVEL</PassableTech>
 				</TerrainPassableTech>
                 <TerrainPassableTech>
-					<TerrainType>TERRAIN_COSMOS</TerrainType>
+					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 					<PassableTech>TECH_INTERCLUSTER_TRAVEL</PassableTech>
 				</TerrainPassableTech>
 			</TerrainPassableTechs>
@@ -4294,8 +4294,8 @@
             <TerrainImpassableTypes>
                 <TerrainType>TERRAIN_LOCAL_GROUP</TerrainType>
                 <TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
-                <TerrainType>TERRAIN_GALACTIC_VOID</TerrainType>
-                <TerrainType>TERRAIN_COSMOS</TerrainType>
+                <TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
+                <TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
                 <TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
 			</TerrainImpassableTypes>
             <TerrainPassableTechs>
@@ -4308,11 +4308,11 @@
 					<PassableTech>TECH_INTERGROUP_TRAVEL</PassableTech>
 				</TerrainPassableTech>
                 <TerrainPassableTech>
-					<TerrainType>TERRAIN_GALACTIC_VOID</TerrainType>
+					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
 					<PassableTech>TECH_INTERCLUSTER_TRAVEL</PassableTech>
 				</TerrainPassableTech>
                 <TerrainPassableTech>
-					<TerrainType>TERRAIN_COSMOS</TerrainType>
+					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 					<PassableTech>TECH_INTERCLUSTER_TRAVEL</PassableTech>
 				</TerrainPassableTech>
                 <TerrainPassableTech>
@@ -4817,11 +4817,11 @@
 			</MapCategoryTypes>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
             <TerrainImpassableTypes>
-                <TerrainType>TERRAIN_TRANSNEPTUNIAN</TerrainType>
+                <TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
 			</TerrainImpassableTypes>
             <TerrainPassableTechs>
                 <TerrainPassableTech>
-					<TerrainType>TERRAIN_TRANSNEPTUNIAN</TerrainType>
+					<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
 					<PassableTech>TECH_MAGNETIC_SAILS</PassableTech>
 				</TerrainPassableTech>
 			</TerrainPassableTechs>

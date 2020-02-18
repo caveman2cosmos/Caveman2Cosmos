@@ -559,7 +559,7 @@ BeginPlot
 	x=0,y=12
 	BonusType=BONUS_MUSHROOMS
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -605,7 +605,7 @@ BeginPlot
 	x=0,y=20
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -621,7 +621,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_SUGAR
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -902,13 +902,13 @@ BeginPlot
 	x=1,y=12
 	BonusType=BONUS_PRIME_TIMBER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=1,y=13
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -955,7 +955,7 @@ BeginPlot
 	BonusType=BONUS_PRIME_TIMBER
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -1238,7 +1238,7 @@ EndPlot
 BeginPlot
 	x=2,y=12
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -1275,7 +1275,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_MUSHROOMS
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -1326,7 +1326,7 @@ EndPlot
 BeginPlot
 	x=2,y=27
 	BonusType=BONUS_COCONUT
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -1608,7 +1608,7 @@ BeginPlot
 	x=3,y=18
 	BonusType=BONUS_SPICES
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -1618,7 +1618,7 @@ BeginPlot
 	BonusType=BONUS_GOLD_ORE
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -1627,7 +1627,7 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_PRIME_TIMBER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -1641,7 +1641,7 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	BonusType=BONUS_FLAX
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -1666,7 +1666,7 @@ BeginPlot
 	x=3,y=26
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -1980,7 +1980,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -1995,7 +1995,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_SPICES
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -2063,7 +2063,7 @@ EndPlot
 BeginPlot
 	x=4,y=37
 	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -2318,7 +2318,7 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_BARLEY
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -2328,7 +2328,7 @@ BeginPlot
 	RiverWEDirection=3
 	isWOfRiver
 	BonusType=BONUS_KAVA
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -2339,7 +2339,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_PRIME_TIMBER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -2436,7 +2436,7 @@ EndPlot
 BeginPlot
 	x=5,y=41
 	BonusType=BONUS_MUSHROOMS
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -2673,7 +2673,7 @@ BeginPlot
 	x=6,y=22
 	BonusType=BONUS_STONE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -2687,7 +2687,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -2767,7 +2767,7 @@ BeginPlot
 	BonusType=BONUS_KAVA
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_CAVES, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -2988,21 +2988,21 @@ EndPlot
 BeginPlot
 	x=7,y=17
 	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=7,y=18
 	BonusType=BONUS_SULPHUR
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=7,y=19
 	BonusType=BONUS_IRON_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -3359,7 +3359,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_PRIME_TIMBER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -3388,13 +3388,13 @@ BeginPlot
 	x=8,y=26
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=8,y=27
 	BonusType=BONUS_FLAX
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -3698,7 +3698,7 @@ BeginPlot
 	x=9,y=21
 	BonusType=BONUS_KAVA
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -3740,7 +3740,7 @@ BeginPlot
 	x=9,y=28
 	BonusType=BONUS_IRON_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -4036,7 +4036,7 @@ BeginPlot
 	x=10,y=20
 	BonusType=BONUS_MUSHROOMS
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -4059,7 +4059,7 @@ EndPlot
 BeginPlot
 	x=10,y=24
 	BonusType=BONUS_BARLEY
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -4404,7 +4404,7 @@ BeginPlot
 	x=11,y=23
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -4535,21 +4535,21 @@ EndPlot
 BeginPlot
 	x=11,y=48
 	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=11,y=49
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=11,y=50
 	BonusType=BONUS_BEAVERS
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -4558,7 +4558,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_GRAPES
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -4761,7 +4761,7 @@ EndPlot
 BeginPlot
 	x=12,y=23
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -4909,7 +4909,7 @@ EndPlot
 BeginPlot
 	x=12,y=50
 	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -4920,14 +4920,14 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_OBSIDIAN
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=12,y=52
 	BonusType=BONUS_RESIN
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -4935,7 +4935,7 @@ BeginPlot
 	BonusType=BONUS_SHEEP
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -5109,7 +5109,7 @@ BeginPlot
 	x=13,y=19
 	BonusType=BONUS_BARLEY
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -5302,7 +5302,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_PRIME_TIMBER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -5478,7 +5478,7 @@ EndPlot
 BeginPlot
 	x=14,y=19
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -5936,7 +5936,7 @@ EndPlot
 BeginPlot
 	x=15,y=38
 	FeatureType=FEATURE_CITY_RUINS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -6422,14 +6422,14 @@ BeginPlot
 	x=16,y=54
 	BonusType=BONUS_PRIME_TIMBER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=16,y=55
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -6575,7 +6575,7 @@ BeginPlot
 	BonusType=BONUS_KAVA
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -6716,7 +6716,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_SILVER_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -6766,7 +6766,7 @@ EndPlot
 BeginPlot
 	x=17,y=48
 	FeatureType=FEATURE_CAVES, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -6805,13 +6805,13 @@ BeginPlot
 	x=17,y=53
 	BonusType=BONUS_BEAVERS
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=17,y=54
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -7031,7 +7031,7 @@ EndPlot
 BeginPlot
 	x=18,y=30
 	BonusType=BONUS_SEA_LION_AND_SEAL
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -7065,14 +7065,14 @@ BeginPlot
 	x=18,y=36
 	BonusType=BONUS_MARBLE
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=18,y=37
 	BonusType=BONUS_COPPER_ORE
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -7085,14 +7085,14 @@ BeginPlot
 	x=18,y=39
 	BonusType=BONUS_PEYOTE
 	FeatureType=FEATURE_CACTUS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=18,y=40
 	BonusType=BONUS_COCOA
 	FeatureType=FEATURE_SWAMP, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -7101,14 +7101,14 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_SPICES
 	FeatureType=FEATURE_SWAMP, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=18,y=42
 	BonusType=BONUS_PUMPKIN
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -7121,7 +7121,7 @@ EndPlot
 BeginPlot
 	x=18,y=44
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -7432,7 +7432,7 @@ EndPlot
 BeginPlot
 	x=19,y=36
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -7459,7 +7459,7 @@ BeginPlot
 	x=19,y=40
 	BonusType=BONUS_AMBER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -7468,7 +7468,7 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_SQUASH
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -7559,20 +7559,20 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=19,y=54
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=19,y=55
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -7807,7 +7807,7 @@ BeginPlot
 	x=20,y=34
 	BonusType=BONUS_OBSIDIAN
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -7852,7 +7852,7 @@ BeginPlot
 	BonusType=BONUS_TOBACCO
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -7936,7 +7936,7 @@ BeginPlot
 	x=20,y=52
 	BonusType=BONUS_GEOTHERMAL_ENERGY
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -7948,7 +7948,7 @@ EndPlot
 BeginPlot
 	x=20,y=54
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -8192,19 +8192,19 @@ EndPlot
 BeginPlot
 	x=21,y=34
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=21,y=35
 	FeatureType=FEATURE_BAMBOO, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=21,y=36
 	BonusType=BONUS_PAPAYA
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -8213,7 +8213,7 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_COCOA
 	FeatureType=FEATURE_CACTUS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -8264,14 +8264,14 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_OIL
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=21,y=45
 	RiverNSDirection=2
 	isWOfRiver
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -8287,7 +8287,7 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -8330,13 +8330,13 @@ EndPlot
 BeginPlot
 	x=21,y=52
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=21,y=53
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -8345,7 +8345,7 @@ BeginPlot
 	RiverWEDirection=3
 	BonusType=BONUS_TOBACCO
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -8551,7 +8551,7 @@ BeginPlot
 	x=22,y=28
 	BonusType=BONUS_POTATOES
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -8559,14 +8559,14 @@ BeginPlot
 	BonusType=BONUS_HEMP
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=22,y=30
 	BonusType=BONUS_GUINEA_PIGS
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -8591,13 +8591,13 @@ BeginPlot
 	x=22,y=34
 	BonusType=BONUS_JADE
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=22,y=35
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -8610,21 +8610,21 @@ BeginPlot
 	x=22,y=37
 	BonusType=BONUS_JADE
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=22,y=38
 	BonusType=BONUS_RUBBER
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=22,y=39
 	BonusType=BONUS_ANCIENT_RELICS
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -8656,14 +8656,14 @@ EndPlot
 BeginPlot
 	x=22,y=44
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=22,y=45
 	BonusType=BONUS_PRIME_TIMBER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -8678,42 +8678,42 @@ EndPlot
 BeginPlot
 	x=22,y=47
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=22,y=48
 	BonusType=BONUS_POULTRY
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=22,y=49
 	BonusType=BONUS_TOBACCO
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=22,y=50
 	BonusType=BONUS_CORN
 	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=22,y=51
 	BonusType=BONUS_PLATINUM_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=22,y=52
 	BonusType=BONUS_COPPER_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -8722,7 +8722,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_PRIME_TIMBER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -8931,7 +8931,7 @@ BeginPlot
 	x=23,y=27
 	BonusType=BONUS_COCOA
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -8944,21 +8944,21 @@ BeginPlot
 	x=23,y=29
 	BonusType=BONUS_PARROTS
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=23,y=30
 	BonusType=BONUS_COTTON
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=23,y=31
 	BonusType=BONUS_COCOA
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -9036,13 +9036,13 @@ BeginPlot
 	x=23,y=44
 	BonusType=BONUS_NATRON
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=23,y=45
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -9050,24 +9050,24 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=23,y=47
 	BonusType=BONUS_COTTON
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=23,y=48
 	FeatureType=FEATURE_PEAT_BOG, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=23,y=49
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -9080,7 +9080,7 @@ BeginPlot
 	x=23,y=51
 	BonusType=BONUS_MARBLE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -9295,7 +9295,7 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	BonusType=BONUS_CORN
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -9337,14 +9337,14 @@ BeginPlot
 	x=24,y=31
 	BonusType=BONUS_COCA
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=24,y=32
 	BonusType=BONUS_TOBACCO
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -9369,13 +9369,13 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_SQUASH
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=24,y=36
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -9392,7 +9392,7 @@ EndPlot
 BeginPlot
 	x=24,y=39
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -9435,7 +9435,7 @@ BeginPlot
 	x=24,y=46
 	isNOfRiver
 	RiverWEDirection=3
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -9457,7 +9457,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_BAUXITE_ORE
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -9470,13 +9470,13 @@ EndPlot
 BeginPlot
 	x=24,y=51
 	BonusType=BONUS_GOLD_ORE
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=24,y=52
 	BonusType=BONUS_URANIUM
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -9646,14 +9646,14 @@ BeginPlot
 	x=25,y=20
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=25,y=21
 	BonusType=BONUS_MUSHROOMS
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -9673,21 +9673,21 @@ BeginPlot
 	x=25,y=24
 	BonusType=BONUS_GUINEA_PIGS
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=25,y=25
 	BonusType=BONUS_POTATOES
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=25,y=26
 	BonusType=BONUS_COTTON
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -9696,7 +9696,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_COCA
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -9705,7 +9705,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_OIL
 	FeatureType=FEATURE_FOREST, FeatureVariety=2
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -9756,13 +9756,13 @@ BeginPlot
 	BonusType=BONUS_CORN
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=25,y=35
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -9788,7 +9788,7 @@ BeginPlot
 	BonusType=BONUS_LEAD_ORE
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_MANGROVE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -9820,13 +9820,13 @@ BeginPlot
 	x=25,y=44
 	BonusType=BONUS_SHEEP
 	FeatureType=FEATURE_CAVES, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=25,y=45
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -9844,13 +9844,13 @@ BeginPlot
 	x=25,y=47
 	BonusType=BONUS_IRON_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=25,y=48
 	BonusType=BONUS_BISON
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -9862,14 +9862,14 @@ BeginPlot
 	x=25,y=50
 	isNOfRiver
 	RiverWEDirection=1
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=25,y=51
 	BonusType=BONUS_SQUASH
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -10064,19 +10064,19 @@ EndPlot
 BeginPlot
 	x=26,y=22
 	BonusType=BONUS_CORN
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=26,y=23
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=26,y=24
 	BonusType=BONUS_TOBACCO
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -10142,14 +10142,14 @@ BeginPlot
 	x=26,y=33
 	BonusType=BONUS_COCA
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=26,y=34
 	BonusType=BONUS_RUBBER
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -10178,7 +10178,7 @@ BeginPlot
 	x=26,y=39
 	BonusType=BONUS_BAUXITE_ORE
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -10209,13 +10209,13 @@ EndPlot
 BeginPlot
 	x=26,y=44
 	BonusType=BONUS_SQUASH
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=26,y=45
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -10224,7 +10224,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_OBSIDIAN
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -10239,7 +10239,7 @@ EndPlot
 BeginPlot
 	x=26,y=48
 	BonusType=BONUS_GEODE
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -10255,14 +10255,14 @@ BeginPlot
 	BonusType=BONUS_DEER
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=26,y=51
 	BonusType=BONUS_SILVER_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -10451,7 +10451,7 @@ EndPlot
 BeginPlot
 	x=27,y=20
 	BonusType=BONUS_COPPER_ORE
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -10464,7 +10464,7 @@ BeginPlot
 	x=27,y=22
 	BonusType=BONUS_PRIME_TIMBER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -10472,21 +10472,21 @@ BeginPlot
 	BonusType=BONUS_LLAMA
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=27,y=24
 	BonusType=BONUS_POTATOES
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=27,y=25
 	BonusType=BONUS_COPPER_ORE
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -10506,7 +10506,7 @@ BeginPlot
 	x=27,y=28
 	BonusType=BONUS_INDIGO
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -10515,7 +10515,7 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_RUBBER
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -10548,7 +10548,7 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	FeatureType=FEATURE_PLATY_AUYANTEPUI, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -10556,14 +10556,14 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=27,y=35
 	BonusType=BONUS_HEMP
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -10576,7 +10576,7 @@ BeginPlot
 	x=27,y=37
 	BonusType=BONUS_CORN
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -10588,7 +10588,7 @@ BeginPlot
 	x=27,y=39
 	BonusType=BONUS_TOBACCO
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -10628,7 +10628,7 @@ BeginPlot
 	x=27,y=46
 	BonusType=BONUS_RABBIT
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -10637,7 +10637,7 @@ BeginPlot
 	RiverWEDirection=3
 	BonusType=BONUS_PUMPKIN
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -10652,21 +10652,21 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_GOLD_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=27,y=50
 	BonusType=BONUS_COPPER_ORE
 	FeatureType=FEATURE_PEAT_BOG, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=27,y=51
 	BonusType=BONUS_SAPPHIRES
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -10827,7 +10827,7 @@ BeginPlot
 	x=28,y=15
 	BonusType=BONUS_SILVER_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -10835,7 +10835,7 @@ BeginPlot
 	BonusType=BONUS_POTATOES
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -10908,13 +10908,13 @@ EndPlot
 BeginPlot
 	x=28,y=27
 	FeatureType=FEATURE_CACTUS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=28,y=28
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -10923,7 +10923,7 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_COCOA
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -10963,7 +10963,7 @@ EndPlot
 BeginPlot
 	x=28,y=34
 	FeatureType=FEATURE_SWAMP, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -11038,14 +11038,14 @@ BeginPlot
 	x=28,y=47
 	BonusType=BONUS_SQUASH
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=28,y=48
 	BonusType=BONUS_BEAVERS
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -11064,14 +11064,14 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_LEAD_ORE
 	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=28,y=51
 	BonusType=BONUS_NATRON
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -11353,7 +11353,7 @@ BeginPlot
 	x=29,y=31
 	BonusType=BONUS_STONE
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -11374,7 +11374,7 @@ EndPlot
 BeginPlot
 	x=29,y=34
 	BonusType=BONUS_SPICES
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -11418,7 +11418,7 @@ BeginPlot
 	BonusType=BONUS_SALT
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -11456,21 +11456,21 @@ EndPlot
 BeginPlot
 	x=29,y=48
 	BonusType=BONUS_POULTRY
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=29,y=49
 	BonusType=BONUS_PRIME_TIMBER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=29,y=50
 	BonusType=BONUS_TIN_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -11480,7 +11480,7 @@ BeginPlot
 	RiverWEDirection=1
 	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -11681,14 +11681,14 @@ EndPlot
 BeginPlot
 	x=30,y=17
 	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=30,y=18
 	BonusType=BONUS_SULPHUR
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -11735,7 +11735,7 @@ BeginPlot
 	RiverWEDirection=1
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -11759,7 +11759,7 @@ BeginPlot
 	x=30,y=28
 	BonusType=BONUS_PAPAYA
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -11770,7 +11770,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_PRIME_TIMBER
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -11794,7 +11794,7 @@ BeginPlot
 	x=30,y=32
 	BonusType=BONUS_PAPAYA
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -11802,7 +11802,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -11819,7 +11819,7 @@ BeginPlot
 	x=30,y=36
 	BonusType=BONUS_SPICES
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -11833,7 +11833,7 @@ BeginPlot
 	BonusType=BONUS_AMBER
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -11897,21 +11897,21 @@ BeginPlot
 	x=30,y=49
 	BonusType=BONUS_TOBACCO
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=30,y=50
 	BonusType=BONUS_MUSHROOMS
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=30,y=51
 	BonusType=BONUS_STONE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -11919,7 +11919,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -12074,7 +12074,7 @@ BeginPlot
 	BonusType=BONUS_DEER
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -12092,7 +12092,7 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_CORN
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -12150,7 +12150,7 @@ EndPlot
 BeginPlot
 	x=31,y=23
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -12167,7 +12167,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_LEAD_ORE
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -12214,14 +12214,14 @@ BeginPlot
 	x=31,y=31
 	BonusType=BONUS_RUBBER
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=31,y=32
 	BonusType=BONUS_SPICES
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -12326,7 +12326,7 @@ BeginPlot
 	x=31,y=51
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -12468,7 +12468,7 @@ EndPlot
 BeginPlot
 	x=32,y=13
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -12480,14 +12480,14 @@ EndPlot
 BeginPlot
 	x=32,y=15
 	BonusType=BONUS_AMBER
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=32,y=16
 	BonusType=BONUS_RESIN
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -12505,7 +12505,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_PARROTS
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -12525,7 +12525,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_VANILLA
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -12534,7 +12534,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_FOSSIL_BEDS
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -12558,14 +12558,14 @@ EndPlot
 BeginPlot
 	x=32,y=24
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=32,y=25
 	BonusType=BONUS_PARROTS
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -12646,7 +12646,7 @@ BeginPlot
 	x=32,y=35
 	BonusType=BONUS_COCONUT
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -12669,7 +12669,7 @@ EndPlot
 BeginPlot
 	x=32,y=39
 	BonusType=BONUS_GUAVAS
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -12891,28 +12891,28 @@ EndPlot
 BeginPlot
 	x=33,y=15
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=33,y=16
 	BonusType=BONUS_SILVER_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=33,y=17
 	BonusType=BONUS_SQUASH
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=33,y=18
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -12946,7 +12946,7 @@ BeginPlot
 	x=33,y=22
 	BonusType=BONUS_PARROTS
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -12955,19 +12955,19 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	isWOfRiver
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=33,y=24
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=33,y=25
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -13000,13 +13000,13 @@ BeginPlot
 	BonusType=BONUS_COCOA
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=33,y=30
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -13082,7 +13082,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=33,y=44
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -13121,7 +13121,7 @@ EndPlot
 BeginPlot
 	x=33,y=51
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -13277,13 +13277,13 @@ EndPlot
 BeginPlot
 	x=34,y=15
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=34,y=16
 	BonusType=BONUS_VANILLA
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -13297,20 +13297,20 @@ BeginPlot
 	x=34,y=18
 	BonusType=BONUS_PRIME_TIMBER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=34,y=19
 	BonusType=BONUS_PARROTS
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=34,y=20
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -13325,20 +13325,20 @@ EndPlot
 BeginPlot
 	x=34,y=22
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=34,y=23
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=34,y=24
 	BonusType=BONUS_PRIME_TIMBER
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -13350,7 +13350,7 @@ EndPlot
 BeginPlot
 	x=34,y=26
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -13359,7 +13359,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_GUAVAS
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -13379,7 +13379,7 @@ BeginPlot
 	isWOfRiver
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -13495,7 +13495,7 @@ BeginPlot
 	x=34,y=51
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -13655,13 +13655,13 @@ EndPlot
 BeginPlot
 	x=35,y=16
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=35,y=17
 	BonusType=BONUS_PAPAYA
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -13674,14 +13674,14 @@ BeginPlot
 	x=35,y=19
 	BonusType=BONUS_RUBBER
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=35,y=20
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -13692,7 +13692,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_MUSHROOMS
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -13701,7 +13701,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_GUAVAS
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -13709,13 +13709,13 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=35,y=24
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -13723,7 +13723,7 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -13731,7 +13731,7 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -13739,20 +13739,20 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	BonusType=BONUS_PAPAYA
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=35,y=28
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=35,y=29
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -14030,7 +14030,7 @@ EndPlot
 BeginPlot
 	x=36,y=17
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -14042,14 +14042,14 @@ EndPlot
 BeginPlot
 	x=36,y=19
 	BonusType=BONUS_COCONUT
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=36,y=20
 	BonusType=BONUS_CORN
 	FeatureType=FEATURE_SWAMP, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -14063,7 +14063,7 @@ EndPlot
 BeginPlot
 	x=36,y=22
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -14072,39 +14072,39 @@ BeginPlot
 	RiverWEDirection=3
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=36,y=24
 	BonusType=BONUS_CORN
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=36,y=25
 	BonusType=BONUS_ANCIENT_RELICS
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=36,y=26
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=36,y=27
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=36,y=28
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -14403,14 +14403,14 @@ BeginPlot
 	x=37,y=21
 	BonusType=BONUS_IRON_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=37,y=22
 	BonusType=BONUS_PARROTS
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -14429,21 +14429,21 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_STONE
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=37,y=25
 	BonusType=BONUS_GUAVAS
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=37,y=26
 	BonusType=BONUS_TIN_ORE
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -14452,7 +14452,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_SULPHUR
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -14460,7 +14460,7 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	FeatureType=FEATURE_SWAMP, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -14757,7 +14757,7 @@ EndPlot
 BeginPlot
 	x=38,y=21
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -14769,7 +14769,7 @@ EndPlot
 BeginPlot
 	x=38,y=23
 	BonusType=BONUS_PAPAYA
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -14795,21 +14795,21 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_PARROTS
 	FeatureType=FEATURE_SWAMP, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=38,y=27
 	BonusType=BONUS_LEAD_ORE
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=38,y=28
 	BonusType=BONUS_NATURAL_GAS
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -15113,14 +15113,14 @@ BeginPlot
 	x=39,y=22
 	BonusType=BONUS_COCA
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=39,y=23
 	BonusType=BONUS_PRIME_TIMBER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -15133,7 +15133,7 @@ BeginPlot
 	x=39,y=25
 	BonusType=BONUS_MUSHROOMS
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -15148,7 +15148,7 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_TOBACCO
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -15482,7 +15482,7 @@ BeginPlot
 	x=40,y=26
 	BonusType=BONUS_SQUASH
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -15491,7 +15491,7 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_CAVES, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -15915,7 +15915,7 @@ BeginPlot
 	x=41,y=44
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -16987,7 +16987,7 @@ EndPlot
 BeginPlot
 	x=44,y=61
 	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -17280,14 +17280,14 @@ BeginPlot
 	x=45,y=54
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=45,y=55
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -17295,7 +17295,7 @@ BeginPlot
 	BonusType=BONUS_COW
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_DARK_ROCK_FORM3, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -17619,14 +17619,14 @@ BeginPlot
 	x=46,y=54
 	BonusType=BONUS_MUSHROOMS
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=46,y=55
 	BonusType=BONUS_SHEEP
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -17635,7 +17635,7 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_FLAX
 	FeatureType=FEATURE_PEAT_BOG, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -17855,14 +17855,14 @@ EndPlot
 BeginPlot
 	x=47,y=34
 	BonusType=BONUS_DIAMOND
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=47,y=35
 	BonusType=BONUS_COTTON
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -17956,7 +17956,7 @@ EndPlot
 BeginPlot
 	x=47,y=52
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -17995,7 +17995,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -18298,7 +18298,7 @@ EndPlot
 BeginPlot
 	x=48,y=50
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -18317,7 +18317,7 @@ BeginPlot
 	BonusType=BONUS_SHEEP
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_CAVES, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -18330,7 +18330,7 @@ BeginPlot
 	x=48,y=55
 	BonusType=BONUS_TIN_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -18351,7 +18351,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_OBSIDIAN
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -18365,7 +18365,7 @@ BeginPlot
 	x=48,y=60
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -18558,7 +18558,7 @@ BeginPlot
 	BonusType=BONUS_HENNA
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_MANGROVE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -18631,20 +18631,20 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	BonusType=BONUS_BARLEY
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=49,y=45
 	BonusType=BONUS_GRAPES
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=49,y=46
 	BonusType=BONUS_COW
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -18653,7 +18653,7 @@ BeginPlot
 	RiverWEDirection=3
 	BonusType=BONUS_COPPER_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -18696,7 +18696,7 @@ BeginPlot
 	x=49,y=54
 	BonusType=BONUS_COW
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -18704,7 +18704,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	BonusType=BONUS_STONE
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -18712,7 +18712,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -18740,14 +18740,14 @@ BeginPlot
 	x=49,y=60
 	BonusType=BONUS_COW
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=49,y=61
 	BonusType=BONUS_ANCIENT_RELICS
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -18920,14 +18920,14 @@ BeginPlot
 	x=50,y=31
 	BonusType=BONUS_COFFEE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=50,y=32
 	BonusType=BONUS_JADE
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -19055,7 +19055,7 @@ BeginPlot
 	x=50,y=51
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -19083,13 +19083,13 @@ BeginPlot
 	x=50,y=55
 	BonusType=BONUS_IRON_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=50,y=56
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -19099,14 +19099,14 @@ BeginPlot
 	BonusType=BONUS_SULPHUR
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_PEAT_BOG, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=50,y=58
 	BonusType=BONUS_SEA_LION_AND_SEAL
 	FeatureType=FEATURE_CAVES, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -19124,7 +19124,7 @@ EndPlot
 BeginPlot
 	x=50,y=61
 	FeatureType=FEATURE_FOREST, FeatureVariety=2
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=0
 EndPlot
 BeginPlot
@@ -19300,7 +19300,7 @@ BeginPlot
 	x=51,y=31
 	BonusType=BONUS_MELONS
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -19409,7 +19409,7 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_IRON_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -19428,7 +19428,7 @@ BeginPlot
 	x=51,y=50
 	BonusType=BONUS_GRAPES
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -19437,7 +19437,7 @@ BeginPlot
 	RiverWEDirection=3
 	BonusType=BONUS_AMBER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -19457,7 +19457,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	BonusType=BONUS_HORSE
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -19616,7 +19616,7 @@ BeginPlot
 	BonusType=BONUS_PRIME_TIMBER
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -19677,7 +19677,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_GOLD_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -19688,7 +19688,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_STONE
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -19774,7 +19774,7 @@ EndPlot
 BeginPlot
 	x=52,y=45
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -19782,7 +19782,7 @@ BeginPlot
 	BonusType=BONUS_RABBIT
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_CAVES, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -19797,7 +19797,7 @@ BeginPlot
 	x=52,y=48
 	BonusType=BONUS_SPICES
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -19806,7 +19806,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_BARLEY
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -19815,7 +19815,7 @@ BeginPlot
 	RiverWEDirection=3
 	BonusType=BONUS_DONKEY
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -19824,7 +19824,7 @@ BeginPlot
 	RiverWEDirection=3
 	BonusType=BONUS_WHEAT
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -20060,7 +20060,7 @@ BeginPlot
 	x=53,y=31
 	BonusType=BONUS_BANANA
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -20183,7 +20183,7 @@ BeginPlot
 	RiverWEDirection=3
 	BonusType=BONUS_MARBLE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -20192,7 +20192,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_PIG
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -20202,7 +20202,7 @@ BeginPlot
 	BonusType=BONUS_MUSHROOMS
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -20411,7 +20411,7 @@ BeginPlot
 	x=54,y=26
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -20420,14 +20420,14 @@ BeginPlot
 	RiverWEDirection=3
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=54,y=28
 	BonusType=BONUS_PRIME_TIMBER
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -20477,7 +20477,7 @@ BeginPlot
 	x=54,y=34
 	BonusType=BONUS_TIN_ORE
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -20547,7 +20547,7 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_RABBIT
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -20568,7 +20568,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_IRON_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -20582,14 +20582,14 @@ EndPlot
 BeginPlot
 	x=54,y=50
 	FeatureType=FEATURE_CAVES, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=54,y=51
 	BonusType=BONUS_HORSE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -20617,7 +20617,7 @@ EndPlot
 BeginPlot
 	x=54,y=56
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -20626,7 +20626,7 @@ BeginPlot
 	RiverWEDirection=3
 	BonusType=BONUS_TITANIUM_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -20780,33 +20780,33 @@ EndPlot
 BeginPlot
 	x=55,y=22
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=55,y=23
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=55,y=24
 	BonusType=BONUS_PRIME_TIMBER
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=55,y=25
 	BonusType=BONUS_COFFEE
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=55,y=26
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -20817,27 +20817,27 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_IRON_ORE
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=55,y=28
 	BonusType=BONUS_BANANA
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=55,y=29
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=55,y=30
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -20942,7 +20942,7 @@ BeginPlot
 	x=55,y=47
 	BonusType=BONUS_MARBLE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -20951,7 +20951,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_STONE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -20970,7 +20970,7 @@ BeginPlot
 	x=55,y=51
 	BonusType=BONUS_TURQUOISE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -20979,7 +20979,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_COW
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -20988,13 +20988,13 @@ BeginPlot
 	RiverWEDirection=3
 	BonusType=BONUS_FLAX
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=55,y=54
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -21007,7 +21007,7 @@ BeginPlot
 	x=55,y=56
 	BonusType=BONUS_RESIN
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -21176,7 +21176,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_COW
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -21185,7 +21185,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_IRON_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -21194,7 +21194,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_RESIN
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -21202,7 +21202,7 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -21211,7 +21211,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_DIAMOND
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -21230,26 +21230,26 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=56,y=29
 	BonusType=BONUS_GOLD_ORE
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=56,y=30
 	FeatureType=FEATURE_MANGROVE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=56,y=31
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -21316,7 +21316,7 @@ EndPlot
 BeginPlot
 	x=56,y=42
 	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -21344,14 +21344,14 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	BonusType=BONUS_ANCIENT_RELICS
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=56,y=47
 	BonusType=BONUS_GRAPES
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -21359,7 +21359,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	BonusType=BONUS_WHEAT
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -21367,7 +21367,7 @@ BeginPlot
 	BonusType=BONUS_AMBER
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_CAVES, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -21383,7 +21383,7 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_SULPHUR
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -21392,13 +21392,13 @@ BeginPlot
 	RiverWEDirection=3
 	BonusType=BONUS_NATRON
 	FeatureType=FEATURE_CAVES, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=56,y=53
 	BonusType=BONUS_FINE_CLAY
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -21423,7 +21423,7 @@ BeginPlot
 	x=56,y=57
 	BonusType=BONUS_COPPER_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -21591,7 +21591,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_DIAMOND
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -21600,7 +21600,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_BARLEY
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -21609,7 +21609,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -21627,7 +21627,7 @@ BeginPlot
 	RiverWEDirection=3
 	BonusType=BONUS_COFFEE
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -21637,14 +21637,14 @@ BeginPlot
 	BonusType=BONUS_MELONS
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=57,y=28
 	BonusType=BONUS_PRIME_TIMBER
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -21655,13 +21655,13 @@ BeginPlot
 	isWOfRiver
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=57,y=30
 	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -21754,7 +21754,7 @@ BeginPlot
 	x=57,y=45
 	BonusType=BONUS_NATRON
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -21779,14 +21779,14 @@ BeginPlot
 	x=57,y=49
 	BonusType=BONUS_SILVER_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=57,y=50
 	BonusType=BONUS_IRON_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -21804,14 +21804,14 @@ BeginPlot
 	RiverWEDirection=3
 	BonusType=BONUS_FOSSIL_BEDS
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=57,y=53
 	BonusType=BONUS_PIG
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -21830,7 +21830,7 @@ BeginPlot
 	x=57,y=56
 	BonusType=BONUS_SEA_LION_AND_SEAL
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -21838,7 +21838,7 @@ BeginPlot
 	BonusType=BONUS_DEER
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -21847,7 +21847,7 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_IRON_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22011,7 +22011,7 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22020,7 +22020,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_COFFEE
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22028,7 +22028,7 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22046,7 +22046,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_INDIGO
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22054,7 +22054,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22079,7 +22079,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_NATURAL_GAS
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22087,7 +22087,7 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	BonusType=BONUS_COTTON
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22204,7 +22204,7 @@ EndPlot
 BeginPlot
 	x=58,y=50
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22213,7 +22213,7 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_FINE_CLAY
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22222,7 +22222,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22231,7 +22231,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_RABBIT
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22252,7 +22252,7 @@ BeginPlot
 	x=58,y=56
 	BonusType=BONUS_AMBER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22264,26 +22264,26 @@ EndPlot
 BeginPlot
 	x=58,y=58
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=58,y=59
 	BonusType=BONUS_SULPHUR
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=58,y=60
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=58,y=61
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22376,13 +22376,13 @@ BeginPlot
 	x=59,y=14
 	BonusType=BONUS_SHEEP
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=59,y=15
 	BonusType=BONUS_GRAPES
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22438,7 +22438,7 @@ BeginPlot
 	x=59,y=22
 	BonusType=BONUS_RESIN
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22446,7 +22446,7 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22455,7 +22455,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_MELONS
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22464,7 +22464,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_SILVER_ORE
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -22473,7 +22473,7 @@ BeginPlot
 	RiverWEDirection=3
 	BonusType=BONUS_LEAD_ORE
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -22511,7 +22511,7 @@ BeginPlot
 	BonusType=BONUS_COFFEE
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22602,14 +22602,14 @@ EndPlot
 BeginPlot
 	x=59,y=47
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=59,y=48
 	BonusType=BONUS_ALMONDS
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22620,7 +22620,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_ANCIENT_RELICS
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -22628,7 +22628,7 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	BonusType=BONUS_WHEAT
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22637,14 +22637,14 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_COPPER_ORE
 	FeatureType=FEATURE_CAVES, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=59,y=52
 	BonusType=BONUS_STONE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -22653,14 +22653,14 @@ BeginPlot
 	RiverWEDirection=3
 	BonusType=BONUS_HORSE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=59,y=54
 	BonusType=BONUS_FLAX
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22692,7 +22692,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_PRIME_TIMBER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22701,7 +22701,7 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_BEAVERS
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -22796,21 +22796,21 @@ EndPlot
 BeginPlot
 	x=60,y=13
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=60,y=14
 	BonusType=BONUS_LEMONS
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=60,y=15
 	BonusType=BONUS_RESIN
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -22874,7 +22874,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_BANANA
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22882,7 +22882,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22900,7 +22900,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_SALT
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22942,7 +22942,7 @@ BeginPlot
 	x=60,y=31
 	BonusType=BONUS_DONKEY
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -23034,7 +23034,7 @@ BeginPlot
 	x=60,y=45
 	BonusType=BONUS_DONKEY
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -23066,7 +23066,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_LEAD_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -23074,7 +23074,7 @@ BeginPlot
 	BonusType=BONUS_FINE_CLAY
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -23089,7 +23089,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_SILVER_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -23098,7 +23098,7 @@ BeginPlot
 	RiverWEDirection=3
 	BonusType=BONUS_MUSHROOMS
 	FeatureType=FEATURE_PEAT_BOG, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -23107,7 +23107,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_PRIME_TIMBER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -23115,7 +23115,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	BonusType=BONUS_COW
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -23126,7 +23126,7 @@ EndPlot
 BeginPlot
 	x=60,y=57
 	BonusType=BONUS_STONE
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -23134,7 +23134,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -23245,14 +23245,14 @@ BeginPlot
 	x=61,y=14
 	BonusType=BONUS_COPPER_ORE
 	FeatureType=FEATURE_CAVES, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=61,y=15
 	BonusType=BONUS_MELONS
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -23306,7 +23306,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_ELEPHANTS
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -23314,7 +23314,7 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	BonusType=BONUS_WHEAT
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -23328,7 +23328,7 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	BonusType=BONUS_ELEPHANTS
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -23344,7 +23344,7 @@ BeginPlot
 	x=61,y=26
 	BonusType=BONUS_FINE_CLAY
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -23363,14 +23363,14 @@ EndPlot
 BeginPlot
 	x=61,y=29
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=61,y=30
 	BonusType=BONUS_RESIN
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -23489,7 +23489,7 @@ EndPlot
 BeginPlot
 	x=61,y=48
 	BonusType=BONUS_BARLEY
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -23506,7 +23506,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -23519,7 +23519,7 @@ BeginPlot
 	x=61,y=52
 	BonusType=BONUS_OBSIDIAN
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -23528,7 +23528,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_BISON
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -23537,14 +23537,14 @@ BeginPlot
 	RiverWEDirection=3
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=61,y=55
 	BonusType=BONUS_SILVER_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -23562,7 +23562,7 @@ EndPlot
 BeginPlot
 	x=61,y=58
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -23679,13 +23679,13 @@ BeginPlot
 	x=62,y=15
 	BonusType=BONUS_BARLEY
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=62,y=16
 	BonusType=BONUS_PRIME_TIMBER
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -23719,7 +23719,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_TEA
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -23728,7 +23728,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_FOSSIL_BEDS
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -23737,27 +23737,27 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_LEAD_ORE
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=62,y=23
 	BonusType=BONUS_DEER
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=62,y=24
 	BonusType=BONUS_COPPER_ORE
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=62,y=25
 	BonusType=BONUS_PLATINUM_ORE
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -23816,7 +23816,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_BARLEY
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -23936,31 +23936,31 @@ EndPlot
 BeginPlot
 	x=62,y=51
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=62,y=52
 	BonusType=BONUS_SALT
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=62,y=53
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=62,y=54
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=62,y=55
 	BonusType=BONUS_BAUXITE_ORE
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -23998,7 +23998,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=62,y=61
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -24098,7 +24098,7 @@ BeginPlot
 	x=63,y=16
 	BonusType=BONUS_SUGAR
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -24119,7 +24119,7 @@ BeginPlot
 	x=63,y=19
 	BonusType=BONUS_COTTON
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -24128,21 +24128,21 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_COPPER_ORE
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=63,y=21
 	BonusType=BONUS_GOLD_ORE
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=63,y=22
 	BonusType=BONUS_COTTON
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -24227,7 +24227,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_COTTON
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -24299,7 +24299,7 @@ BeginPlot
 	BonusType=BONUS_COPPER_ORE
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -24364,7 +24364,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_LEAD_ORE
 	FeatureType=FEATURE_CAVES, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -24372,7 +24372,7 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -24387,14 +24387,14 @@ BeginPlot
 	x=63,y=55
 	BonusType=BONUS_COW
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=63,y=56
 	BonusType=BONUS_PLATINUM_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -24549,14 +24549,14 @@ EndPlot
 BeginPlot
 	x=64,y=20
 	BonusType=BONUS_DIAMOND
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=64,y=21
 	BonusType=BONUS_WHEAT
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -24702,7 +24702,7 @@ BeginPlot
 	x=64,y=42
 	BonusType=BONUS_COW
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -24721,7 +24721,7 @@ BeginPlot
 	x=64,y=45
 	BonusType=BONUS_APPLE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -24736,7 +24736,7 @@ EndPlot
 BeginPlot
 	x=64,y=47
 	BonusType=BONUS_PRIME_TIMBER
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -24775,20 +24775,20 @@ EndPlot
 BeginPlot
 	x=64,y=52
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=64,y=53
 	BonusType=BONUS_DONKEY
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=64,y=54
 	BonusType=BONUS_WHEAT
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -24806,7 +24806,7 @@ EndPlot
 BeginPlot
 	x=64,y=57
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -24987,7 +24987,7 @@ BeginPlot
 	x=65,y=26
 	BonusType=BONUS_COFFEE
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -25105,7 +25105,7 @@ EndPlot
 BeginPlot
 	x=65,y=45
 	BonusType=BONUS_FLAX
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -25175,7 +25175,7 @@ BeginPlot
 	x=65,y=54
 	BonusType=BONUS_FLAX
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -25183,14 +25183,14 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	BonusType=BONUS_MUSHROOMS
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=65,y=56
 	BonusType=BONUS_PRIME_TIMBER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -25201,7 +25201,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_COAL
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -25361,7 +25361,7 @@ BeginPlot
 	x=66,y=22
 	BonusType=BONUS_LEMONS
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -25429,7 +25429,7 @@ EndPlot
 BeginPlot
 	x=66,y=32
 	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -25575,7 +25575,7 @@ EndPlot
 BeginPlot
 	x=66,y=53
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -25608,7 +25608,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -25762,7 +25762,7 @@ BeginPlot
 	x=67,y=20
 	BonusType=BONUS_BANANA
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -25996,14 +25996,14 @@ EndPlot
 BeginPlot
 	x=67,y=55
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=67,y=56
 	BonusType=BONUS_RESIN
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -26150,20 +26150,20 @@ BeginPlot
 	x=68,y=18
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=68,y=19
 	BonusType=BONUS_RICE
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=68,y=20
 	BonusType=BONUS_COFFEE
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -26322,7 +26322,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_PISTACHIO
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -26388,7 +26388,7 @@ BeginPlot
 	RiverWEDirection=1
 	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -26401,13 +26401,13 @@ BeginPlot
 	x=68,y=56
 	BonusType=BONUS_BEAVERS
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=68,y=57
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -26551,7 +26551,7 @@ BeginPlot
 	x=69,y=20
 	BonusType=BONUS_WHEAT
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -26750,14 +26750,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=53
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=69,y=54
 	BonusType=BONUS_RUBBER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -26772,7 +26772,7 @@ BeginPlot
 	x=69,y=56
 	BonusType=BONUS_TIN_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -26958,7 +26958,7 @@ BeginPlot
 	x=70,y=27
 	BonusType=BONUS_COCONUT
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -27124,7 +27124,7 @@ BeginPlot
 	isWOfRiver
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -27386,7 +27386,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_SPICES
 	FeatureType=FEATURE_FOREST, FeatureVariety=2
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -27431,7 +27431,7 @@ BeginPlot
 	x=71,y=45
 	BonusType=BONUS_DONKEY
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -27494,7 +27494,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	FeatureType=FEATURE_PEAT_BOG, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -28018,7 +28018,7 @@ BeginPlot
 	BonusType=BONUS_SUGAR
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -28118,7 +28118,7 @@ EndPlot
 BeginPlot
 	x=73,y=38
 	BonusType=BONUS_COW
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -28585,7 +28585,7 @@ EndPlot
 BeginPlot
 	x=74,y=55
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -28940,7 +28940,7 @@ EndPlot
 BeginPlot
 	x=75,y=54
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -29324,7 +29324,7 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -29534,7 +29534,7 @@ BeginPlot
 	BonusType=BONUS_COCONUT
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -29599,14 +29599,14 @@ EndPlot
 BeginPlot
 	x=77,y=41
 	BonusType=BONUS_BARLEY
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=77,y=42
 	BonusType=BONUS_FLAX
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -29918,7 +29918,7 @@ BeginPlot
 	x=78,y=33
 	BonusType=BONUS_SULPHUR
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -29931,13 +29931,13 @@ BeginPlot
 	x=78,y=35
 	BonusType=BONUS_SAPPHIRES
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=78,y=36
 	BonusType=BONUS_INCENSE
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -29966,7 +29966,7 @@ BeginPlot
 	x=78,y=40
 	BonusType=BONUS_ALMONDS
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -29974,7 +29974,7 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	BonusType=BONUS_SPICES
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -29984,7 +29984,7 @@ BeginPlot
 	BonusType=BONUS_COCONUT
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -30042,7 +30042,7 @@ EndPlot
 BeginPlot
 	x=78,y=51
 	BonusType=BONUS_HORSE
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -30065,7 +30065,7 @@ EndPlot
 BeginPlot
 	x=78,y=55
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -30290,14 +30290,14 @@ EndPlot
 BeginPlot
 	x=79,y=32
 	BonusType=BONUS_RUBIES
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=79,y=33
 	BonusType=BONUS_SUGAR
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -30313,13 +30313,13 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_JADE
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=79,y=36
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -30327,14 +30327,14 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	BonusType=BONUS_FLAX
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=79,y=38
 	BonusType=BONUS_PISTACHIO
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -30343,14 +30343,14 @@ BeginPlot
 	RiverWEDirection=3
 	BonusType=BONUS_RESIN
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=79,y=40
 	BonusType=BONUS_MARBLE
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -30359,7 +30359,7 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_OPIUM
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -30654,7 +30654,7 @@ BeginPlot
 	x=80,y=30
 	BonusType=BONUS_TEA
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -30677,7 +30677,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=80,y=34
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -30686,7 +30686,7 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_LEMONS
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -30702,21 +30702,21 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_ELEPHANTS
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=80,y=38
 	BonusType=BONUS_MELONS
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=80,y=39
 	BonusType=BONUS_DIAMOND
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -30725,7 +30725,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_COFFEE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -30736,7 +30736,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_COTTON
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -31048,14 +31048,14 @@ BeginPlot
 	x=81,y=31
 	BonusType=BONUS_SPICES
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=81,y=32
 	BonusType=BONUS_COCONUT
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -31076,28 +31076,28 @@ EndPlot
 BeginPlot
 	x=81,y=36
 	BonusType=BONUS_BANANA
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=81,y=37
 	BonusType=BONUS_SULPHUR
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=81,y=38
 	BonusType=BONUS_URANIUM
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=81,y=39
 	BonusType=BONUS_IRON_ORE
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -31194,7 +31194,7 @@ EndPlot
 BeginPlot
 	x=81,y=55
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -31552,7 +31552,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=82,y=54
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -31850,7 +31850,7 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_COW
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -31925,7 +31925,7 @@ BeginPlot
 	x=83,y=55
 	BonusType=BONUS_RESIN
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -32052,7 +32052,7 @@ BeginPlot
 	x=84,y=14
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -32212,7 +32212,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_RICE
 	FeatureType=FEATURE_SWAMP, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -32234,7 +32234,7 @@ EndPlot
 BeginPlot
 	x=84,y=44
 	BonusType=BONUS_RICE
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -32302,7 +32302,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -32311,7 +32311,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_DONKEY
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -32436,7 +32436,7 @@ BeginPlot
 	x=85,y=12
 	BonusType=BONUS_RESIN
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -32445,7 +32445,7 @@ BeginPlot
 	RiverWEDirection=3
 	BonusType=BONUS_BAUXITE_ORE
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -32536,7 +32536,7 @@ BeginPlot
 	x=85,y=28
 	BonusType=BONUS_TIN_ORE
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -32544,7 +32544,7 @@ BeginPlot
 	BonusType=BONUS_SUGAR
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -32552,7 +32552,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	FeatureType=FEATURE_VOLCANO_DORMANT, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -32588,7 +32588,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_AMBER
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -32604,7 +32604,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_INDIGO
 	FeatureType=FEATURE_MANGROVE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -32613,7 +32613,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_DATES
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -32622,7 +32622,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_RUBIES
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -32631,7 +32631,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_OPIUM
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -32644,7 +32644,7 @@ BeginPlot
 	x=85,y=43
 	BonusType=BONUS_LEAD_ORE
 	FeatureType=FEATURE_BAMBOO, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -32708,7 +32708,7 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	BonusType=BONUS_WHEAT
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -32729,7 +32729,7 @@ EndPlot
 BeginPlot
 	x=85,y=55
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -32851,7 +32851,7 @@ BeginPlot
 	BonusType=BONUS_DEER
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -32944,7 +32944,7 @@ BeginPlot
 	BonusType=BONUS_HENNA
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -32968,14 +32968,14 @@ BeginPlot
 	BonusType=BONUS_TIN_ORE
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=86,y=33
 	BonusType=BONUS_MANGO
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -32984,7 +32984,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_BANANA
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -32993,7 +32993,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_ELEPHANTS
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -33011,7 +33011,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_ANCIENT_RELICS
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -33020,21 +33020,21 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_BANANA
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=86,y=39
 	BonusType=BONUS_MANGO
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=86,y=40
 	BonusType=BONUS_HEMP
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -33052,7 +33052,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_SULPHUR
 	FeatureType=FEATURE_BAMBOO, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -33060,7 +33060,7 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	BonusType=BONUS_FINE_CLAY
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -33069,13 +33069,13 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_DONKEY
 	FeatureType=FEATURE_BAMBOO, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=86,y=45
 	BonusType=BONUS_NATRON
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -33127,7 +33127,7 @@ BeginPlot
 	x=86,y=52
 	BonusType=BONUS_HORSE
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -33356,7 +33356,7 @@ BeginPlot
 	x=87,y=26
 	BonusType=BONUS_BANANA
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -33369,7 +33369,7 @@ BeginPlot
 	x=87,y=28
 	BonusType=BONUS_COFFEE
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -33381,14 +33381,14 @@ EndPlot
 BeginPlot
 	x=87,y=30
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=87,y=31
 	BonusType=BONUS_SUGAR
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -33407,35 +33407,35 @@ BeginPlot
 	x=87,y=34
 	BonusType=BONUS_HEMP
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=87,y=35
 	BonusType=BONUS_RICE
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=87,y=36
 	BonusType=BONUS_LEMONS
 	FeatureType=FEATURE_BAMBOO, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=87,y=37
 	BonusType=BONUS_PRIME_TIMBER
 	FeatureType=FEATURE_BAMBOO, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=87,y=38
 	BonusType=BONUS_SAPPHIRES
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -33448,21 +33448,21 @@ BeginPlot
 	x=87,y=40
 	BonusType=BONUS_BANANA
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=87,y=41
 	BonusType=BONUS_SALT
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=87,y=42
 	BonusType=BONUS_COW
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -33471,7 +33471,7 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_JADE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -33485,7 +33485,7 @@ BeginPlot
 	x=87,y=45
 	BonusType=BONUS_PISTACHIO
 	FeatureType=FEATURE_BAMBOO, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -33494,7 +33494,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_TIN_ORE
 	FeatureType=FEATURE_BAMBOO, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -33543,7 +33543,7 @@ EndPlot
 BeginPlot
 	x=87,y=53
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -33556,7 +33556,7 @@ BeginPlot
 	x=87,y=55
 	BonusType=BONUS_BEAVERS
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -33766,7 +33766,7 @@ BeginPlot
 	BonusType=BONUS_RICE
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -33809,13 +33809,13 @@ BeginPlot
 	BonusType=BONUS_PIG
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=88,y=34
 	BonusType=BONUS_POULTRY
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -33830,7 +33830,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_SPICES
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -33839,7 +33839,7 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_COAL
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -33860,7 +33860,7 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_POULTRY
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -33869,14 +33869,14 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_MELONS
 	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=88,y=42
 	BonusType=BONUS_FINE_CLAY
 	FeatureType=FEATURE_BAMBOO, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -33899,7 +33899,7 @@ BeginPlot
 	x=88,y=45
 	BonusType=BONUS_INCENSE
 	FeatureType=FEATURE_BAMBOO, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -33917,7 +33917,7 @@ BeginPlot
 	x=88,y=47
 	BonusType=BONUS_HEMP
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -33963,13 +33963,13 @@ BeginPlot
 	x=88,y=54
 	BonusType=BONUS_GOLD_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=88,y=55
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -34137,7 +34137,7 @@ BeginPlot
 	x=89,y=19
 	BonusType=BONUS_PARROTS
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -34175,7 +34175,7 @@ EndPlot
 BeginPlot
 	x=89,y=26
 	FeatureType=FEATURE_VOLCANO_DORMANT, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -34195,7 +34195,7 @@ BeginPlot
 	BonusType=BONUS_COCONUT
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -34223,14 +34223,14 @@ BeginPlot
 	x=89,y=33
 	BonusType=BONUS_BAUXITE_ORE
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=89,y=34
 	BonusType=BONUS_IRON_ORE
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -34239,7 +34239,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_HEMP
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -34255,7 +34255,7 @@ BeginPlot
 	x=89,y=37
 	BonusType=BONUS_FIG
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -34268,7 +34268,7 @@ BeginPlot
 	x=89,y=39
 	BonusType=BONUS_ANCIENT_RELICS
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -34278,7 +34278,7 @@ BeginPlot
 	BonusType=BONUS_SPICES
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -34287,7 +34287,7 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_TEA
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -34319,7 +34319,7 @@ BeginPlot
 	x=89,y=45
 	BonusType=BONUS_TEA
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -34335,7 +34335,7 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_HENNA
 	FeatureType=FEATURE_BAMBOO, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -34380,13 +34380,13 @@ BeginPlot
 	x=89,y=53
 	BonusType=BONUS_OIL
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=89,y=54
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -34538,7 +34538,7 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -34552,7 +34552,7 @@ BeginPlot
 	x=90,y=19
 	BonusType=BONUS_IRON_ORE
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -34608,20 +34608,20 @@ EndPlot
 BeginPlot
 	x=90,y=29
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=90,y=30
 	BonusType=BONUS_RICE
 	FeatureType=FEATURE_PEAT_BOG, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=90,y=31
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -34645,7 +34645,7 @@ BeginPlot
 	x=90,y=35
 	BonusType=BONUS_TEA
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -34679,14 +34679,14 @@ BeginPlot
 	x=90,y=41
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=90,y=42
 	BonusType=BONUS_MARBLE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -34709,14 +34709,14 @@ BeginPlot
 	x=90,y=45
 	BonusType=BONUS_SILK
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=90,y=46
 	BonusType=BONUS_AMBER
 	FeatureType=FEATURE_MANGROVE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -34752,7 +34752,7 @@ BeginPlot
 	x=90,y=51
 	BonusType=BONUS_STONE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -34761,14 +34761,14 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_FOSSIL_BEDS
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=90,y=53
 	BonusType=BONUS_GEOTHERMAL_ENERGY
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -34990,7 +34990,7 @@ BeginPlot
 	BonusType=BONUS_SPICES
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -35078,7 +35078,7 @@ BeginPlot
 	x=91,y=42
 	BonusType=BONUS_IRON_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -35116,20 +35116,20 @@ BeginPlot
 	x=91,y=48
 	BonusType=BONUS_PIG
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=91,y=49
 	BonusType=BONUS_RESIN
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=91,y=50
 	BonusType=BONUS_FINE_CLAY
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -35138,7 +35138,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_BEAVERS
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -35147,7 +35147,7 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -35283,7 +35283,7 @@ BeginPlot
 	x=92,y=12
 	BonusType=BONUS_TURQUOISE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -35387,14 +35387,14 @@ EndPlot
 BeginPlot
 	x=92,y=29
 	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=92,y=30
 	BonusType=BONUS_HEMP
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -35413,7 +35413,7 @@ BeginPlot
 	x=92,y=33
 	BonusType=BONUS_SUGAR
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -35433,14 +35433,14 @@ BeginPlot
 	BonusType=BONUS_RESIN
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=92,y=37
 	BonusType=BONUS_BANANA
 	FeatureType=FEATURE_MANGROVE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -35453,7 +35453,7 @@ BeginPlot
 	BonusType=BONUS_TEA
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -35499,26 +35499,26 @@ EndPlot
 BeginPlot
 	x=92,y=47
 	BonusType=BONUS_RICE
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=92,y=48
 	BonusType=BONUS_GOLD_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=92,y=49
 	BonusType=BONUS_IRON_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=92,y=50
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -35529,7 +35529,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_INDIGO
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -35537,13 +35537,13 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=92,y=53
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -35662,7 +35662,7 @@ BeginPlot
 	x=93,y=9
 	BonusType=BONUS_PRIME_TIMBER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -35675,7 +35675,7 @@ BeginPlot
 	x=93,y=11
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -35732,7 +35732,7 @@ BeginPlot
 	x=93,y=18
 	BonusType=BONUS_BANANA
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -35741,7 +35741,7 @@ BeginPlot
 	RiverWEDirection=3
 	BonusType=BONUS_PARROTS
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -35813,14 +35813,14 @@ BeginPlot
 	BonusType=BONUS_LEAD_ORE
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_CAVES, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=93,y=33
 	BonusType=BONUS_COPPER_ORE
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -35832,7 +35832,7 @@ EndPlot
 BeginPlot
 	x=93,y=35
 	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -35874,7 +35874,7 @@ BeginPlot
 	x=93,y=42
 	BonusType=BONUS_SUGAR
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -35886,14 +35886,14 @@ EndPlot
 BeginPlot
 	x=93,y=44
 	BonusType=BONUS_MUSHROOMS
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=93,y=45
 	BonusType=BONUS_STONE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -35923,7 +35923,7 @@ BeginPlot
 	x=93,y=50
 	BonusType=BONUS_JADE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -35936,7 +35936,7 @@ EndPlot
 BeginPlot
 	x=93,y=52
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -36051,14 +36051,14 @@ BeginPlot
 	BonusType=BONUS_COPPER_ORE
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=94,y=9
 	BonusType=BONUS_GOLD_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -36071,7 +36071,7 @@ BeginPlot
 	x=94,y=11
 	BonusType=BONUS_SEA_LION_AND_SEAL
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -36124,7 +36124,7 @@ BeginPlot
 	x=94,y=18
 	BonusType=BONUS_ANCIENT_RELICS
 	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -36250,7 +36250,7 @@ BeginPlot
 	BonusType=BONUS_SILK
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -36280,7 +36280,7 @@ BeginPlot
 	x=94,y=45
 	BonusType=BONUS_PRIME_TIMBER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -36331,7 +36331,7 @@ EndPlot
 BeginPlot
 	x=94,y=54
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -36460,7 +36460,7 @@ BeginPlot
 	x=95,y=12
 	BonusType=BONUS_OBSIDIAN
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -36646,7 +36646,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	FeatureType=FEATURE_VOLCANO_DORMANT, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -36658,7 +36658,7 @@ EndPlot
 BeginPlot
 	x=95,y=46
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -36667,7 +36667,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_PIG
 	FeatureType=FEATURE_DARK_ROCK_FORM1, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -36683,7 +36683,7 @@ BeginPlot
 	BonusType=BONUS_INDIGO
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -36696,13 +36696,13 @@ BeginPlot
 	x=95,y=51
 	BonusType=BONUS_OIL
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=95,y=52
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -36714,7 +36714,7 @@ BeginPlot
 	BonusType=BONUS_ANCIENT_RELICS
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -36853,7 +36853,7 @@ BeginPlot
 	x=96,y=13
 	BonusType=BONUS_RESIN
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -36870,7 +36870,7 @@ BeginPlot
 	BonusType=BONUS_DEER
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -36879,7 +36879,7 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_SUGAR
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -36925,7 +36925,7 @@ EndPlot
 BeginPlot
 	x=96,y=24
 	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -37031,7 +37031,7 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -37064,7 +37064,7 @@ BeginPlot
 	x=96,y=48
 	BonusType=BONUS_IRON_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -37077,13 +37077,13 @@ BeginPlot
 	x=96,y=50
 	BonusType=BONUS_STONE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=96,y=51
 	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -37188,13 +37188,13 @@ EndPlot
 BeginPlot
 	x=97,y=6
 	BonusType=BONUS_NATURAL_GAS
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=97,y=7
 	BonusType=BONUS_SEA_LION_AND_SEAL
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -37278,7 +37278,7 @@ BeginPlot
 	x=97,y=22
 	BonusType=BONUS_OIL
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -37286,14 +37286,14 @@ BeginPlot
 	BonusType=BONUS_COCONUT
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=97,y=24
 	BonusType=BONUS_OBSIDIAN
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -37392,26 +37392,26 @@ EndPlot
 BeginPlot
 	x=97,y=43
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=97,y=44
 	BonusType=BONUS_BEAVERS
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=97,y=45
 	BonusType=BONUS_AMBER
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=97,y=46
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -37419,7 +37419,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	BonusType=BONUS_RICE
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -37446,13 +37446,13 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_SEA_LION_AND_SEAL
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=97,y=52
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -37644,7 +37644,7 @@ BeginPlot
 	x=98,y=22
 	BonusType=BONUS_COPPER_ORE
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -37657,7 +37657,7 @@ EndPlot
 BeginPlot
 	x=98,y=24
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -37774,7 +37774,7 @@ BeginPlot
 	x=98,y=46
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -37811,7 +37811,7 @@ BeginPlot
 	x=98,y=52
 	BonusType=BONUS_SILK
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -37879,7 +37879,7 @@ EndPlot
 BeginPlot
 	x=99,y=0
 	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -37911,7 +37911,7 @@ EndPlot
 BeginPlot
 	x=99,y=6
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -37920,7 +37920,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_PARROTS
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -38020,7 +38020,7 @@ BeginPlot
 	x=99,y=23
 	BonusType=BONUS_GOLD_ORE
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -38104,7 +38104,7 @@ BeginPlot
 	BonusType=BONUS_RICE
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -38281,7 +38281,7 @@ BeginPlot
 	x=100,y=6
 	BonusType=BONUS_BEAVERS
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -38290,20 +38290,20 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_FINE_CLAY
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=100,y=8
 	BonusType=BONUS_GOLD_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=100,y=9
 	BonusType=BONUS_JADE
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -38312,7 +38312,7 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_PARROTS
 	FeatureType=FEATURE_ANCIENT_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -38331,7 +38331,7 @@ BeginPlot
 	x=100,y=13
 	BonusType=BONUS_BARLEY
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -38339,7 +38339,7 @@ BeginPlot
 	BonusType=BONUS_IRON_ORE
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -38364,7 +38364,7 @@ BeginPlot
 	x=100,y=18
 	BonusType=BONUS_IRON_ORE
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -38406,7 +38406,7 @@ EndPlot
 BeginPlot
 	x=100,y=25
 	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -38450,7 +38450,7 @@ BeginPlot
 	x=100,y=33
 	BonusType=BONUS_KAVA
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -38662,14 +38662,14 @@ EndPlot
 BeginPlot
 	x=101,y=7
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=101,y=8
 	BonusType=BONUS_PRIME_TIMBER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -38685,7 +38685,7 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_SULPHUR
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -38693,7 +38693,7 @@ BeginPlot
 	BonusType=BONUS_RESIN
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_FOREST, FeatureVariety=2
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -38702,7 +38702,7 @@ BeginPlot
 	isWOfRiver
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -38733,7 +38733,7 @@ BeginPlot
 	x=101,y=17
 	BonusType=BONUS_KAVA
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -39035,13 +39035,13 @@ BeginPlot
 	RiverWEDirection=1
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=102,y=9
 	BonusType=BONUS_MUSHROOMS
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -39055,7 +39055,7 @@ BeginPlot
 	x=102,y=11
 	BonusType=BONUS_OBSIDIAN
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -39072,7 +39072,7 @@ BeginPlot
 	BonusType=BONUS_BEAVERS
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -39129,14 +39129,14 @@ BeginPlot
 	x=102,y=23
 	BonusType=BONUS_KAVA
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=102,y=24
 	BonusType=BONUS_MUSHROOMS
 	ImprovementType=IMPROVEMENT_GOODY_HUT
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -39291,7 +39291,7 @@ EndPlot
 BeginPlot
 	x=102,y=54
 	FeatureType=FEATURE_VOLCANO_ACTIVE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -39398,7 +39398,7 @@ BeginPlot
 	x=103,y=9
 	BonusType=BONUS_STONE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -39411,14 +39411,14 @@ BeginPlot
 	x=103,y=11
 	BonusType=BONUS_AMBER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=103,y=12
 	BonusType=BONUS_FLAX
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -39550,7 +39550,7 @@ BeginPlot
 	BonusType=BONUS_COCONUT
 	ImprovementType=IMPROVEMENT_GOODY_HUT
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
 EndPlot
 BeginPlot

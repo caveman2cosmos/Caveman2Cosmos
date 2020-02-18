@@ -4642,7 +4642,7 @@
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_GRASS</ImprovementType>
 			<RouteType>NONE</RouteType>
-			<TerrainChange>TERRAIN_GRASS</TerrainChange>
+			<TerrainChange>TERRAIN_GRASSLAND</TerrainChange>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>

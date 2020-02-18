@@ -1567,7 +1567,7 @@ def generateTerrainTypes():
 	terrainIce = GC.getInfoTypeForString("TERRAIN_ICE")
 	terrainTundra = GC.getInfoTypeForString("TERRAIN_TAIGA")
 	terrainPermafrost = GC.getInfoTypeForString("TERRAIN_TUNDRA")
-	terrainGrass = GC.getInfoTypeForString("TERRAIN_GRASS")
+	terrainGrass = GC.getInfoTypeForString("TERRAIN_GRASSLAND")
 	terrainLush = GC.getInfoTypeForString("TERRAIN_LUSH")
 	terrainMuddy = GC.getInfoTypeForString("TERRAIN_MUDDY")
 	terrainMarsh = GC.getInfoTypeForString("TERRAIN_MARSH")
@@ -5205,7 +5205,7 @@ class GreatPlainsTerrainGenerator(CvMapGeneratorUtil.TerrainGenerator):
 
 		self.terrainDesert = GC.getInfoTypeForString("TERRAIN_DESERT")
 		self.terrainPlains = GC.getInfoTypeForString("TERRAIN_PLAINS")
-		self.terrainGrass = GC.getInfoTypeForString("TERRAIN_GRASS")
+		self.terrainGrass = GC.getInfoTypeForString("TERRAIN_GRASSLAND")
 
 	def getLatitudeAtPlot(self, iX, iY):
 		lat = iX/float(self.iWidth) # 0.0 = west
@@ -5360,7 +5360,7 @@ class OasisTerrainGenerator(CvMapGeneratorUtil.TerrainGenerator):
 
 		self.terrainDesert = GC.getInfoTypeForString("TERRAIN_DESERT")
 		self.terrainPlains = GC.getInfoTypeForString("TERRAIN_PLAINS")
-		self.terrainGrass = GC.getInfoTypeForString("TERRAIN_GRASS")
+		self.terrainGrass = GC.getInfoTypeForString("TERRAIN_GRASSLAND")
 
 	def getLatitudeAtPlot(self, iX, iY):
 		lat = iY/float(self.iHeight) # 0.0 = south edge, 1.0 = north edge
@@ -5555,7 +5555,7 @@ class OasisFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
 			# Jungles only in the deep south or in the Oasis!
 			if lat < 0.16:
 				self.addJunglesAtPlot(pPlot, iX, iY, lat)
-			elif lat > 0.32 and lat < 0.65 and (pPlot.getTerrainType() == GC.getInfoTypeForString("TERRAIN_GRASS")):
+			elif lat > 0.32 and lat < 0.65 and (pPlot.getTerrainType() == GC.getInfoTypeForString("TERRAIN_GRASSLAND")):
 				pPlot.setFeatureType(self.featureJungle, -1)
 
 		if (pPlot.getFeatureType() == FeatureTypes.NO_FEATURE):

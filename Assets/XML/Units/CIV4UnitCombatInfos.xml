@@ -573,7 +573,7 @@
 			</UnitCombatChangeModifiers>
 			<TerrainAttackChangeModifiers>
 				<TerrainAttackChangeModifier>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iModifier>10</iModifier>
 				</TerrainAttackChangeModifier>
 				<TerrainAttackChangeModifier>
@@ -589,11 +589,11 @@
 					<iModifier>20</iModifier>
 				</TerrainAttackChangeModifier>
 				<TerrainAttackChangeModifier>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<iModifier>20</iModifier>
 				</TerrainAttackChangeModifier>
 				<TerrainAttackChangeModifier>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iModifier>20</iModifier>
 				</TerrainAttackChangeModifier>
 				<TerrainAttackChangeModifier>
@@ -4181,11 +4181,11 @@
 					<iModifier>10</iModifier>
 				</TerrainDefenseChangeModifier>
 				<TerrainDefenseChangeModifier>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<iModifier>10</iModifier>
 				</TerrainDefenseChangeModifier>
 				<TerrainDefenseChangeModifier>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iModifier>10</iModifier>
 				</TerrainDefenseChangeModifier>
 			</TerrainDefenseChangeModifiers>
@@ -4959,11 +4959,11 @@
 					<iModifier>20</iModifier>
 				</TerrainAttackChangeModifier>
 				<TerrainAttackChangeModifier>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<iModifier>20</iModifier>
 				</TerrainAttackChangeModifier>
 				<TerrainAttackChangeModifier>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iModifier>20</iModifier>
 				</TerrainAttackChangeModifier>
 			</TerrainAttackChangeModifiers>

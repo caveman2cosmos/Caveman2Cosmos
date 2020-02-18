@@ -69,7 +69,7 @@
 			</FeatureBooleans>
 			<FeatureTerrainBooleans>
 				<FeatureTerrainBoolean>
-					<TerrainType>TERRAIN_TRANSTELLAR</TerrainType>
+					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bFeatureTerrain>1</bFeatureTerrain>
 				</FeatureTerrainBoolean>
 			</FeatureTerrainBooleans>
@@ -113,7 +113,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
                 <TerrainBoolean>
-					<TerrainType>TERRAIN_COSMOS</TerrainType>
+					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
                 <TerrainBoolean>
@@ -153,11 +153,11 @@
 			<bNormalize>1</bNormalize>
 			<TerrainBooleans>
                 <TerrainBoolean>
-					<TerrainType>TERRAIN_COSMOS</TerrainType>
+					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
                 <TerrainBoolean>
-					<TerrainType>TERRAIN_GALACTIC_VOID</TerrainType>
+					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
                 <TerrainBoolean>
@@ -357,11 +357,11 @@
 					<bFeatureTerrain>1</bFeatureTerrain>
 				</FeatureTerrainBoolean>
                 <FeatureTerrainBoolean>
-					<TerrainType>TERRAIN_TRANSNEPTUNIAN</TerrainType>
+					<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
 					<bFeatureTerrain>1</bFeatureTerrain>
 				</FeatureTerrainBoolean>
                 <FeatureTerrainBoolean>
-					<TerrainType>TERRAIN_TRANSTELLAR</TerrainType>
+					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bFeatureTerrain>1</bFeatureTerrain>
 				</FeatureTerrainBoolean>
 			</FeatureTerrainBooleans>
@@ -425,11 +425,11 @@
 					<bFeatureTerrain>1</bFeatureTerrain>
 				</FeatureTerrainBoolean>
                 <FeatureTerrainBoolean>
-					<TerrainType>TERRAIN_TRANSNEPTUNIAN</TerrainType>
+					<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
 					<bFeatureTerrain>1</bFeatureTerrain>
 				</FeatureTerrainBoolean>
                 <FeatureTerrainBoolean>
-					<TerrainType>TERRAIN_TRANSTELLAR</TerrainType>
+					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bFeatureTerrain>1</bFeatureTerrain>
 				</FeatureTerrainBoolean>
 			</FeatureTerrainBooleans>
@@ -497,7 +497,7 @@
 			</FeatureBooleans>
 			<FeatureTerrainBooleans>
 				<FeatureTerrainBoolean>
-					<TerrainType>TERRAIN_TRANSTELLAR</TerrainType>
+					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bFeatureTerrain>1</bFeatureTerrain>
 				</FeatureTerrainBoolean>
 			</FeatureTerrainBooleans>
@@ -565,7 +565,7 @@
 			</FeatureBooleans>
 			<FeatureTerrainBooleans>
 				<FeatureTerrainBoolean>
-					<TerrainType>TERRAIN_TRANSTELLAR</TerrainType>
+					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bFeatureTerrain>1</bFeatureTerrain>
 				</FeatureTerrainBoolean>
 			</FeatureTerrainBooleans>

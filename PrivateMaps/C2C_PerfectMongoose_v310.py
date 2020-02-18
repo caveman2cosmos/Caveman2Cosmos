@@ -5012,7 +5012,7 @@ def generateTerrainTypes():
 	terrainIce = gc.getInfoTypeForString("TERRAIN_ICE")
 	terrainTundra = gc.getInfoTypeForString("TERRAIN_TAIGA")
 	terrainPermafrost = gc.getInfoTypeForString("TERRAIN_TUNDRA")
-	terrainGrass = gc.getInfoTypeForString("TERRAIN_GRASS")
+	terrainGrass = gc.getInfoTypeForString("TERRAIN_GRASSLAND")
 	terrainLush = gc.getInfoTypeForString("TERRAIN_LUSH")
 	terrainMuddy = gc.getInfoTypeForString("TERRAIN_MUDDY")
 	terrainMarsh = gc.getInfoTypeForString("TERRAIN_MARSH")

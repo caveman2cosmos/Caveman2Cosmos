@@ -87,7 +87,7 @@
 				<FeatureType>FEATURE_FOREST</FeatureType>
 			</FeatureTypes>
 			<FeatureTerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 			</FeatureTerrainTypes>
@@ -290,7 +290,7 @@
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 			</FeatureTypes>
 			<FeatureTerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
@@ -385,7 +385,7 @@
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 			</FeatureTypes>
 			<FeatureTerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
@@ -409,7 +409,7 @@
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 			</FeatureTypes>
 			<FeatureTerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
@@ -496,7 +496,7 @@
 			<TerrainTypes>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
@@ -747,7 +747,7 @@
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 			</FeatureTypes>
 			<FeatureTerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 			</FeatureTerrainTypes>
@@ -893,7 +893,7 @@
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -946,7 +946,7 @@
 			<TerrainTypes>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
@@ -1116,7 +1116,7 @@
 			</FeatureTypes>
 			<FeatureTerrainTypes>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 			</FeatureTerrainTypes>
@@ -1264,7 +1264,7 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -1364,7 +1364,7 @@
 			<TerrainTypes>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -1497,7 +1497,7 @@
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -1533,7 +1533,7 @@
 			<TerrainTypes>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 			</TerrainTypes>
@@ -2015,7 +2015,7 @@
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
@@ -2125,7 +2125,7 @@
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 			</FeatureTypes>
 			<FeatureTerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
@@ -2228,7 +2228,7 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -2268,7 +2268,7 @@
 			<iMinLongitude>-60</iMinLongitude>
 			<iMaxLongitude>60</iMaxLongitude>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
@@ -2304,7 +2304,7 @@
 			<iMaxLatitude>0</iMaxLatitude>
 			<iMinLongitude>60</iMinLongitude>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 			</TerrainTypes>
@@ -2328,7 +2328,7 @@
 			</FeatureTypes>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
@@ -2353,7 +2353,7 @@
 				<FeatureType>FEATURE_OASIS</FeatureType>
 			</FeatureTypes>
 			<FeatureTerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 			</FeatureTerrainTypes>
@@ -2407,7 +2407,7 @@
 			<TerrainTypes>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
@@ -2427,7 +2427,7 @@
 			<iMaxLatitude>0</iMaxLatitude>
 			<iMinLongitude>60</iMinLongitude>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -2466,7 +2466,7 @@
 			<iMinLongitude>-60</iMinLongitude>
 			<iMaxLongitude>60</iMaxLongitude>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
@@ -2490,7 +2490,7 @@
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
@@ -2527,7 +2527,7 @@
 			</FeatureTypes>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
 			</TerrainTypes>
@@ -2547,7 +2547,7 @@
 			<TerrainTypes>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
@@ -2612,12 +2612,12 @@
 			<TerrainTypes>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 			</TerrainTypes>
@@ -2654,12 +2654,12 @@
 			<TerrainTypes>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 			</TerrainTypes>
@@ -2717,12 +2717,12 @@
 			<TerrainTypes>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 			</TerrainTypes>
@@ -3005,11 +3005,11 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -3051,7 +3051,7 @@
 			</FeatureTypes>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
@@ -3179,7 +3179,7 @@
 				<FeatureType>FEATURE_SAVANNA</FeatureType>
 			</FeatureTypes>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 			</TerrainTypes>
@@ -3476,7 +3476,7 @@
 				<FeatureType>FEATURE_SAVANNA</FeatureType>
 			</FeatureTypes>
 			<FeatureTerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
@@ -3500,7 +3500,7 @@
 				<FeatureType>FEATURE_SAVANNA</FeatureType>
 			</FeatureTypes>
 			<FeatureTerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
@@ -3524,7 +3524,7 @@
 				<FeatureType>FEATURE_SAVANNA</FeatureType>
 			</FeatureTypes>
 			<FeatureTerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
@@ -3549,7 +3549,7 @@
 				<FeatureType>FEATURE_SAVANNA</FeatureType>
 			</FeatureTypes>
 			<FeatureTerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
@@ -3571,7 +3571,7 @@
 				<FeatureType>FEATURE_SAVANNA</FeatureType>
 			</FeatureTypes>
 			<FeatureTerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
@@ -4561,13 +4561,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_PERSISTENCE_HUNTING</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -4590,13 +4590,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_TRAILS</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -4619,13 +4619,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_HUNTING</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -4648,13 +4648,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_BRONZE_WORKING</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -4677,13 +4677,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_FEUDALISM</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -4706,13 +4706,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -4735,13 +4735,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -4764,13 +4764,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_URBAN_CULTURE</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -4793,13 +4793,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_EXPLORATION</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -4822,13 +4822,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_ROAD_BUILDING</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -4851,13 +4851,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_COMPASS</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -4880,13 +4880,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -4909,13 +4909,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_MILITARY_ROBOTICS</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -4938,13 +4938,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -4966,13 +4966,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_TOOL_MAKING</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -4995,13 +4995,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_PIERCING</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -5024,13 +5024,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_AXE_MAKING</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -5053,13 +5053,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_OBSIDIAN_WEAPONS</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -5097,13 +5097,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_ARMOR_CRAFTING</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -5126,13 +5126,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -5170,13 +5170,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_SMITHING</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -5199,13 +5199,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_ARMOR_CRAFTING</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -5228,13 +5228,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -5257,13 +5257,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_OBSIDIAN_WEAPONS</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -5301,13 +5301,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_CIVIL_SERVICE</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -5330,13 +5330,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -5359,13 +5359,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_SPEAR_MAKING</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -5388,13 +5388,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_OBSIDIAN_WEAPONS</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -5432,13 +5432,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_SIEGE_WARFARE</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -5461,13 +5461,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_ARMOR_CRAFTING</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -5490,13 +5490,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -5519,13 +5519,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -5548,13 +5548,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_SIEGE_WARFARE</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -5577,13 +5577,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_EXPLOSIVES</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -5606,13 +5606,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_AUTOMATIC_WEAPONS</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -5635,13 +5635,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_AUTOMATIC_WEAPONS</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -5664,13 +5664,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -5693,13 +5693,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_POWERED_EXOSKELETON</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -5721,13 +5721,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_BINDING</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -5750,13 +5750,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_ARCHERY</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -5779,13 +5779,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_BRONZE_WORKING</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -5808,13 +5808,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_YEOMANRY</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -5837,13 +5837,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>

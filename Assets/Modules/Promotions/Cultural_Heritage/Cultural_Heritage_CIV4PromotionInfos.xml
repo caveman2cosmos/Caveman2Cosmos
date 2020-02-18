@@ -649,7 +649,7 @@
 					<iTerrainDefense>5</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>5</iTerrainDefense>
 				</TerrainDefense>
 			</TerrainDefenses>
@@ -711,7 +711,7 @@
 			<iLinePriority>2</iLinePriority>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>15</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -725,7 +725,7 @@
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 			</TerrainDefenses>
@@ -735,7 +735,7 @@
 					<bTerrainDoubleMove>1</bTerrainDoubleMove>
 				</TerrainDoubleMove>
 				<TerrainDoubleMove>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrainDoubleMove>1</bTerrainDoubleMove>
 				</TerrainDoubleMove>
 			</TerrainDoubleMoves>
@@ -1282,11 +1282,11 @@
 					<iTerrainDefense>5</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<iTerrainDefense>5</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iTerrainDefense>5</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -1360,11 +1360,11 @@
 					<iTerrainAttack>10</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<iTerrainAttack>10</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iTerrainAttack>10</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -1386,11 +1386,11 @@
 					<iTerrainDefense>15</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<iTerrainDefense>15</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iTerrainDefense>15</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -1412,11 +1412,11 @@
 					<bTerrainDoubleMove>1</bTerrainDoubleMove>
 				</TerrainDoubleMove>
 				<TerrainDoubleMove>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrainDoubleMove>1</bTerrainDoubleMove>
 				</TerrainDoubleMove>
 				<TerrainDoubleMove>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrainDoubleMove>1</bTerrainDoubleMove>
 				</TerrainDoubleMove>
 				<TerrainDoubleMove>
@@ -1478,11 +1478,11 @@
 					<iTerrainAttack>10</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<iTerrainAttack>10</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iTerrainAttack>10</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -1504,11 +1504,11 @@
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>

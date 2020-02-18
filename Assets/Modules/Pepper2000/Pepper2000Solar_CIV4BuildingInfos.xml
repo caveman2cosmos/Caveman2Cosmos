@@ -255,7 +255,7 @@
 			</MapCategoryTypes>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_TRANSNEPTUNIAN</TerrainType>
+					<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -5427,7 +5427,7 @@
 			</MapCategoryTypes>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_TRANSNEPTUNIAN</TerrainType>
+					<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 			</PrereqOrTerrain>

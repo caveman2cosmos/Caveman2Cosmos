@@ -169,11 +169,11 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_VENUS_HIGHLAND</TerrainType>
+					<TerrainType>TERRAIN_VENUS_HIGHLANDS</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_VENUS_LOWLAND</TerrainType>
+					<TerrainType>TERRAIN_VENUS_LOWLANDS</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
@@ -218,23 +218,23 @@
 			<bOutsideBorders>0</bOutsideBorders>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_BASALT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_PLAINS</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_MARE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_ROCKY</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_BARREN</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_REGOLITH</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_DESERT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_RILLE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
@@ -299,11 +299,11 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_VENUS_HIGHLAND</TerrainType>
+					<TerrainType>TERRAIN_VENUS_HIGHLANDS</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_VENUS_LOWLAND</TerrainType>
+					<TerrainType>TERRAIN_VENUS_LOWLANDS</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
@@ -375,11 +375,11 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_VENUS_HIGHLAND</TerrainType>
+					<TerrainType>TERRAIN_VENUS_HIGHLANDS</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_VENUS_LOWLAND</TerrainType>
+					<TerrainType>TERRAIN_VENUS_LOWLANDS</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
@@ -569,23 +569,23 @@
 			<bOutsideBorders>1</bOutsideBorders>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_BASALT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_PLAINS</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_MARE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_ROCKY</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_BARREN</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_REGOLITH</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_DESERT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_RILLE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
@@ -684,11 +684,11 @@
 			<bOutsideBorders>1</bOutsideBorders>
 			<TerrainMakesValids>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_COSMOS</TerrainType>
+					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_GALACTIC_VOID</TerrainType>
+					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
@@ -817,7 +817,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_TRANSNEPTUNIAN</TerrainType>
+					<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
@@ -842,11 +842,11 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_COSMOS</TerrainType>
+					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_GALACTIC_VOID</TerrainType>
+					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
@@ -932,7 +932,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_TRANSNEPTUNIAN</TerrainType>
+					<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
@@ -1283,7 +1283,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_TRANSNEPTUNIAN</TerrainType>
+					<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
             </TerrainMakesValids>
@@ -2054,7 +2054,7 @@
 			<PrereqTech>TECH_INTERSTELLAR_TRADE</PrereqTech>
             <TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_TRANSTELLAR</TerrainType>
+					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
@@ -2207,11 +2207,11 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_COSMOS</TerrainType>
+					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_GALACTIC_VOID</TerrainType>
+					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
             </TerrainMakesValids>
@@ -2301,7 +2301,7 @@
 			<PrereqTech>TECH_DARK_ENERGY_HARVESTING</PrereqTech>
             <TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GALACTIC_VOID</TerrainType>
+					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
             </TerrainMakesValids>
@@ -2351,7 +2351,7 @@
 			<PrereqTech>TECH_CONTROLLED_VACUUM_COLLAPSE</PrereqTech>
             <TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GALACTIC_VOID</TerrainType>
+					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
             </TerrainMakesValids>
@@ -2425,7 +2425,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_G_TYPE</TerrainType>
+					<TerrainType>TERRAIN_SUN_LIKE_STAR</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
             </TerrainMakesValids>
@@ -2517,11 +2517,11 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_G_TYPE</TerrainType>
+					<TerrainType>TERRAIN_SUN_LIKE_STAR</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_TRANSTELLAR</TerrainType>
+					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
             </TerrainMakesValids>
@@ -2727,7 +2727,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_TRANSTELLAR</TerrainType>
+					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
             </TerrainMakesValids>
@@ -2793,7 +2793,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_G_TYPE</TerrainType>
+					<TerrainType>TERRAIN_SUN_LIKE_STAR</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
@@ -2855,7 +2855,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_COSMOS</TerrainType>
+					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
@@ -3164,7 +3164,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_TRANSNEPTUNIAN</TerrainType>
+					<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
             </TerrainMakesValids>
@@ -3232,7 +3232,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_TRANSNEPTUNIAN</TerrainType>
+					<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
             </TerrainMakesValids>
@@ -3427,7 +3427,7 @@
 			<PrereqTech>TECH_COSMIC_ENGINEERING</PrereqTech>
             <TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_COSMOS</TerrainType>
+					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
             </TerrainMakesValids>
@@ -3526,7 +3526,7 @@
 			<PrereqTech>TECH_EXPERIMENTAL_COSMOLOGY</PrereqTech>
             <TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_COSMOS</TerrainType>
+					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
@@ -3534,7 +3534,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_GALACTIC_VOID</TerrainType>
+					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
@@ -3689,7 +3689,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_TRANSNEPTUNIAN</TerrainType>
+					<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
@@ -3723,7 +3723,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_TRANSTELLAR</TerrainType>
+					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
@@ -3765,11 +3765,11 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_GALACTIC_VOID</TerrainType>
+					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_COSMOS</TerrainType>
+					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
@@ -3845,23 +3845,23 @@
 			<bOutsideBorders>1</bOutsideBorders>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_BASALT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_PLAINS</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_MARE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_ROCKY</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_BARREN</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_REGOLITH</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_DESERT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_RILLE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
@@ -3883,23 +3883,23 @@
 			<bOutsideBorders>1</bOutsideBorders>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_BASALT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_PLAINS</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_MARE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_ROCKY</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_BARREN</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_REGOLITH</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_DESERT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_RILLE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
@@ -3920,23 +3920,23 @@
 			<bOutsideBorders>1</bOutsideBorders>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_BASALT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_PLAINS</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_MARE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_ROCKY</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_BARREN</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_REGOLITH</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_DESERT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_RILLE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
@@ -3956,23 +3956,23 @@
 			<bOutsideBorders>1</bOutsideBorders>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_BASALT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_PLAINS</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_MARE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_ROCKY</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_BARREN</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_REGOLITH</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
                 <TerrainMakesValid>
-					<TerrainType>TERRAIN_LUNAR_DESERT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_RILLE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>

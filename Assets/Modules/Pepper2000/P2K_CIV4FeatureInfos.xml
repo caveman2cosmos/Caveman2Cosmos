@@ -18,11 +18,11 @@
 			<iDefense>50</iDefense>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_TRANSTELLAR</TerrainType>
+					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_TRANSNEPTUNIAN</TerrainType>
+					<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -110,7 +110,7 @@
 			<iDefense>50</iDefense>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_TRANSNEPTUNIAN</TerrainType>
+					<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -243,7 +243,7 @@
 			<iDefense>50</iDefense>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_TRANSTELLAR</TerrainType>
+					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -265,7 +265,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
                 <TerrainBoolean>
-					<TerrainType>TERRAIN_TRANSTELLAR</TerrainType>
+					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -287,7 +287,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
                 <TerrainBoolean>
-					<TerrainType>TERRAIN_TRANSTELLAR</TerrainType>
+					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -309,7 +309,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
                 <TerrainBoolean>
-					<TerrainType>TERRAIN_TRANSTELLAR</TerrainType>
+					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -357,7 +357,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
                 <TerrainBoolean>
-					<TerrainType>TERRAIN_COSMOS</TerrainType>
+					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -379,7 +379,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
                 <TerrainBoolean>
-					<TerrainType>TERRAIN_TRANSTELLAR</TerrainType>
+					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -401,7 +401,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
                 <TerrainBoolean>
-					<TerrainType>TERRAIN_TRANSTELLAR</TerrainType>
+					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -427,7 +427,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
                 <TerrainBoolean>
-					<TerrainType>TERRAIN_TRANSNEPTUNIAN</TerrainType>
+					<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -446,7 +446,7 @@
 			<iDefense>50</iDefense>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_COSMOS</TerrainType>
+					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
                 <TerrainBoolean>
@@ -468,7 +468,7 @@
 			<iDefense>50</iDefense>
 			<TerrainBooleans>
                 <TerrainBoolean>
-					<TerrainType>TERRAIN_TRANSTELLAR</TerrainType>
+					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -494,7 +494,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
                 <TerrainBoolean>
-					<TerrainType>TERRAIN_TRANSNEPTUNIAN</TerrainType>
+					<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -512,7 +512,7 @@
 			<iDefense>50</iDefense>
 			<TerrainBooleans>
                 <TerrainBoolean>
-					<TerrainType>TERRAIN_TRANSTELLAR</TerrainType>
+					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
                 <TerrainBoolean>
@@ -534,7 +534,7 @@
 			<iDefense>50</iDefense>
 			<TerrainBooleans>
                 <TerrainBoolean>
-					<TerrainType>TERRAIN_TRANSTELLAR</TerrainType>
+					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
                 <TerrainBoolean>
@@ -556,7 +556,7 @@
 			<iDefense>50</iDefense>
 			<TerrainBooleans>
                 <TerrainBoolean>
-					<TerrainType>TERRAIN_TRANSTELLAR</TerrainType>
+					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
                 <TerrainBoolean>

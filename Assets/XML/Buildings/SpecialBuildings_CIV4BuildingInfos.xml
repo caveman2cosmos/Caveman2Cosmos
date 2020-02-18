@@ -14287,7 +14287,7 @@
 			<VicinityBonus>BONUS_BISON</VicinityBonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -14604,7 +14604,7 @@
 			<RawVicinityBonus>BONUS_HORSE</RawVicinityBonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>

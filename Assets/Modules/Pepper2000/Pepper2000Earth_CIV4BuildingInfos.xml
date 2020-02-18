@@ -1233,11 +1233,11 @@
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>

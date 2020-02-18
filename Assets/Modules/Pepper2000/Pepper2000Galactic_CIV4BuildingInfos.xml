@@ -8189,7 +8189,7 @@
 			</MapCategoryTypes>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_G_TYPE</TerrainType>
+					<TerrainType>TERRAIN_SUN_LIKE_STAR</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 			</PrereqOrTerrain>

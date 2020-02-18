@@ -4188,7 +4188,7 @@
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
-			<IgnoreTerrainDamage>TERRAIN_ROCKY_ARID</IgnoreTerrainDamage>
+			<IgnoreTerrainDamage>TERRAIN_BADLAND</IgnoreTerrainDamage>
 			<Button>art/Tweaks/art/ruggedcombat2.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -4208,11 +4208,11 @@
 					<iTerrainAttack>20</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<iTerrainAttack>10</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iTerrainAttack>10</iTerrainAttack>
 				</TerrainAttack>
 			</TerrainAttacks>
@@ -4222,11 +4222,11 @@
 					<iTerrainDefense>50</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<iTerrainDefense>25</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iTerrainDefense>25</iTerrainDefense>
 				</TerrainDefense>
 			</TerrainDefenses>
@@ -4236,11 +4236,11 @@
 					<bTerrainDoubleMove>1</bTerrainDoubleMove>
 				</TerrainDoubleMove>
 				<TerrainDoubleMove>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrainDoubleMove>1</bTerrainDoubleMove>
 				</TerrainDoubleMove>
 				<TerrainDoubleMove>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrainDoubleMove>1</bTerrainDoubleMove>
 				</TerrainDoubleMove>
 			</TerrainDoubleMoves>
@@ -4278,7 +4278,7 @@
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
-			<IgnoreTerrainDamage>TERRAIN_ROCKY_COLD</IgnoreTerrainDamage>
+			<IgnoreTerrainDamage>TERRAIN_JAGGED</IgnoreTerrainDamage>
 			<Button>art/Tweaks/art/ruggedcombat3.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -4331,7 +4331,7 @@
 			<iCollateralDamageProtection>20</iCollateralDamageProtection>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -5076,7 +5076,7 @@
 			<iLinePriority>1</iLinePriority>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>15</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -5086,7 +5086,7 @@
 			</TerrainDefenses>
 			<TerrainDoubleMoves>
 				<TerrainDoubleMove>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrainDoubleMove>1</bTerrainDoubleMove>
 				</TerrainDoubleMove>
 			</TerrainDoubleMoves>
@@ -5131,7 +5131,7 @@
 			</NotOnDomainTypes>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>15</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -5182,7 +5182,7 @@
 			<iLinePriority>3</iLinePriority>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>20</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -5192,7 +5192,7 @@
 			</TerrainAttacks>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>20</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -9461,7 +9461,7 @@
 			<iCombatPercent>10</iCombatPercent>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -9583,7 +9583,7 @@
 			<iCombatPercent>10</iCombatPercent>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -9705,7 +9705,7 @@
 			<iCombatPercent>10</iCombatPercent>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -10119,7 +10119,7 @@
 			<iCollateralDamageProtection>10</iCollateralDamageProtection>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>15</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -10193,7 +10193,7 @@
 			<iCollateralDamageProtection>10</iCollateralDamageProtection>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>20</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -10267,7 +10267,7 @@
 			<iCollateralDamageProtection>10</iCollateralDamageProtection>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>30</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -10400,7 +10400,7 @@
 			<iCollateralDamageProtection>10</iCollateralDamageProtection>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>15</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -10524,7 +10524,7 @@
 			<iCollateralDamageProtection>10</iCollateralDamageProtection>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>20</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -10653,7 +10653,7 @@
 			<iCollateralDamageProtection>10</iCollateralDamageProtection>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>30</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -11252,7 +11252,7 @@
 			<iHillsAttack>15</iHillsAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>15</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -11304,7 +11304,7 @@
 			<iHillsAttack>20</iHillsAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>20</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -11356,7 +11356,7 @@
 			<iHillsAttack>30</iHillsAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>30</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -11790,7 +11790,7 @@
 			<iMovesChange>1</iMovesChange>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -13309,7 +13309,7 @@
 			<iCombatPercent>2</iCombatPercent>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>-1</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -13375,7 +13375,7 @@
 			<iCombatPercent>4</iCombatPercent>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>-2</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -13441,7 +13441,7 @@
 			<iCombatPercent>6</iCombatPercent>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>-3</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -14057,11 +14057,11 @@
                     <iTerrainAttack>10</iTerrainAttack>
                 </TerrainAttack>
                 <TerrainAttack>
-                    <TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+                    <TerrainType>TERRAIN_BADLAND</TerrainType>
                     <iTerrainAttack>10</iTerrainAttack>
                 </TerrainAttack>
                 <TerrainAttack>
-                    <TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+                    <TerrainType>TERRAIN_JAGGED</TerrainType>
                     <iTerrainAttack>10</iTerrainAttack>
                 </TerrainAttack>
                 <TerrainAttack>
@@ -14087,11 +14087,11 @@
                     <iTerrainDefense>10</iTerrainDefense>
                 </TerrainDefense>
                 <TerrainDefense>
-                    <TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+                    <TerrainType>TERRAIN_BADLAND</TerrainType>
                     <iTerrainDefense>10</iTerrainDefense>
                 </TerrainDefense>
                 <TerrainDefense>
-                    <TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+                    <TerrainType>TERRAIN_JAGGED</TerrainType>
                     <iTerrainDefense>10</iTerrainDefense>
                 </TerrainDefense>
                 <TerrainDefense>
@@ -17172,7 +17172,7 @@
 			<iLinePriority>1</iLinePriority>
 			<TerrainWorks>
 				<TerrainWork>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainWork>20</iTerrainWork>
 				</TerrainWork>
 				<TerrainWork>
@@ -17191,7 +17191,7 @@
 			<iLinePriority>2</iLinePriority>
 			<TerrainWorks>
 				<TerrainWork>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainWork>20</iTerrainWork>
 				</TerrainWork>
 				<TerrainWork>
@@ -17215,7 +17215,7 @@
 			<iLinePriority>3</iLinePriority>
 			<TerrainWorks>
 				<TerrainWork>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainWork>20</iTerrainWork>
 				</TerrainWork>
 				<TerrainWork>
@@ -25707,7 +25707,7 @@
 			<iLinePriority>1</iLinePriority>
 			<TerrainWorks>
 				<TerrainWork>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainWork>-10</iTerrainWork>
 				</TerrainWork>
 				<TerrainWork>
@@ -25727,11 +25727,11 @@
 					<iTerrainWork>-10</iTerrainWork>
 				</TerrainWork>
 				<TerrainWork>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<iTerrainWork>-10</iTerrainWork>
 				</TerrainWork>
 				<TerrainWork>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iTerrainWork>-10</iTerrainWork>
 				</TerrainWork>
 				<TerrainWork>
@@ -25803,7 +25803,7 @@
 			<iLinePriority>1</iLinePriority>
 			<TerrainWorks>
 				<TerrainWork>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainWork>10</iTerrainWork>
 				</TerrainWork>
 				<TerrainWork>
@@ -25823,11 +25823,11 @@
 					<iTerrainWork>10</iTerrainWork>
 				</TerrainWork>
 				<TerrainWork>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<iTerrainWork>10</iTerrainWork>
 				</TerrainWork>
 				<TerrainWork>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iTerrainWork>10</iTerrainWork>
 				</TerrainWork>
 				<TerrainWork>
@@ -29963,7 +29963,7 @@
 			<iCombatPercent>5</iCombatPercent>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>5</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -29987,11 +29987,11 @@
 					<iTerrainDefense>5</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<iTerrainDefense>5</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iTerrainDefense>5</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -30101,7 +30101,7 @@
 			<iCombatPercent>10</iCombatPercent>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -30125,11 +30125,11 @@
 					<iTerrainDefense>5</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<iTerrainDefense>5</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iTerrainDefense>5</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>

@@ -15,7 +15,7 @@
 			<bCountsAsPeak>1</bCountsAsPeak>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -129,7 +129,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -160,7 +160,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -220,7 +220,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -337,7 +337,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -414,7 +414,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>

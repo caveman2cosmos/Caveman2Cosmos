@@ -1990,7 +1990,7 @@ class CvEventManager:
 			iY = CyCity.getY()
 			DESERT		= GC.getInfoTypeForString('TERRAIN_DESERT')
 			PLAINS		= GC.getInfoTypeForString('TERRAIN_PLAINS')
-			GRASS		= GC.getInfoTypeForString('TERRAIN_GRASS')
+			GRASS		= GC.getInfoTypeForString('TERRAIN_GRASSLAND')
 			TAIGA		= GC.getInfoTypeForString('TERRAIN_TAIGA')
 			TUNDRA		= GC.getInfoTypeForString('TERRAIN_TUNDRA')
 			PERMAFROST	= GC.getInfoTypeForString('TERRAIN_PERMAFROST')

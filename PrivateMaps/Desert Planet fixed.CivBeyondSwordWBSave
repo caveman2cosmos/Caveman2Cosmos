@@ -1917,14 +1917,14 @@ BeginPlot
 	RiverWEDirection=1
 	isWOfRiver
 	BonusType=BONUS_APPLE
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=10
 	RiverNSDirection=0
 	isWOfRiver
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -1932,7 +1932,7 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	BonusType=BONUS_GUAVAS
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -2259,7 +2259,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=5,y=9
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -2270,7 +2270,7 @@ EndPlot
 BeginPlot
 	x=5,y=11
 	FeatureType=FEATURE_BAMBOO, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -2606,12 +2606,12 @@ EndPlot
 BeginPlot
 	x=6,y=11
 	FeatureType=FEATURE_BAMBOO, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=6,y=12
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -2959,7 +2959,7 @@ BeginPlot
 	x=7,y=11
 	RiverNSDirection=0
 	isWOfRiver
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -3314,7 +3314,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=8,y=12
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -4361,13 +4361,13 @@ EndPlot
 BeginPlot
 	x=11,y=10
 	BonusType=BONUS_APPLE
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=11,y=11
 	BonusType=BONUS_VANILLA
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -4727,7 +4727,7 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	BonusType=BONUS_VANILLA
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -4735,7 +4735,7 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	BonusType=BONUS_VANILLA
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -5084,7 +5084,7 @@ EndPlot
 BeginPlot
 	x=13,y=12
 	BonusType=BONUS_APPLE
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -5430,7 +5430,7 @@ EndPlot
 BeginPlot
 	x=14,y=12
 	BonusType=BONUS_APPLE
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
 BeginPlot

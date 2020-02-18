@@ -143,7 +143,7 @@
 			<iPopDestroys>3</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -503,7 +503,7 @@
 			<iPopDestroys>3</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -639,7 +639,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -767,7 +767,7 @@
 			<iPopDestroys>3</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -888,7 +888,7 @@
 			<iPopDestroys>3</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -1033,7 +1033,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -1138,7 +1138,7 @@
 			<iPopDestroys>-1</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -1198,11 +1198,11 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -1398,7 +1398,7 @@
 			<iPopDestroys>-1</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -1458,11 +1458,11 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -1567,7 +1567,7 @@
 			<iPopDestroys>12</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -1803,7 +1803,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -2009,7 +2009,7 @@
 			<iGrowth>20</iGrowth>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -2145,11 +2145,11 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -2250,11 +2250,11 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -2357,7 +2357,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -2389,11 +2389,11 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -2508,7 +2508,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -2524,11 +2524,11 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -2653,7 +2653,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -2750,7 +2750,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -2848,7 +2848,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -2946,7 +2946,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -3044,7 +3044,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -3142,7 +3142,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -3755,7 +3755,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -3848,7 +3848,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -3942,7 +3942,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -4036,7 +4036,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -4130,7 +4130,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -4224,7 +4224,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -4468,7 +4468,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -5300,7 +5300,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -5344,7 +5344,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -5554,7 +5554,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -5586,11 +5586,11 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -5696,7 +5696,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -5728,11 +5728,11 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -5840,7 +5840,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -6242,23 +6242,23 @@
 			<bNoImprovement>1</bNoImprovement>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_BARREN</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_REGOLITH</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_PLAINS</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_MARE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_ROCKY</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_BASALT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DESERT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_RILLE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -6351,23 +6351,23 @@
 			<bNoImprovement>1</bNoImprovement>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_BARREN</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_REGOLITH</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_PLAINS</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_MARE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_ROCKY</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_BASALT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DESERT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_RILLE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -6459,23 +6459,23 @@
 			<bNoImprovement>1</bNoImprovement>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_BARREN</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_REGOLITH</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_PLAINS</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_MARE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_ROCKY</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_BASALT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DESERT</TerrainType>
+					<TerrainType>TERRAIN_LUNAR_RILLE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>

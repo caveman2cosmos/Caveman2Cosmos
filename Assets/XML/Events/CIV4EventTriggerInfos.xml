@@ -2859,7 +2859,7 @@
 				<FeatureType>NONE</FeatureType>
 			</FeaturesRequired>
 			<TerrainsRequired>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 			</TerrainsRequired>
 			<ImprovementsRequired>
@@ -3429,7 +3429,7 @@
 			<TerrainsRequired>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
@@ -3525,7 +3525,7 @@
 			<TerrainsRequired>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
@@ -8535,7 +8535,7 @@
 			<bOwnPlot>1</bOwnPlot>
 			<TerrainsRequired>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 			</TerrainsRequired>
 			<ImprovementsRequired>
 				<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
@@ -8888,7 +8888,7 @@
 				<FeatureType>NONE</FeatureType>
 			</FeaturesRequired>
 			<TerrainsRequired>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
@@ -9013,7 +9013,7 @@
 			</FeaturesRequired>
 			<TerrainsRequired>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -9055,13 +9055,13 @@
 				<FeatureType>FEATURE_FOREST</FeatureType>
 			</FeaturesRequired>
 			<TerrainsRequired>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 			</TerrainsRequired>
 			<ImprovementsRequired>
 				<ImprovementType>NONE</ImprovementType>
@@ -9098,7 +9098,7 @@
 			</FeaturesRequired>
 			<TerrainsRequired>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 			</TerrainsRequired>
 			<ImprovementsRequired>
@@ -9138,12 +9138,12 @@
 				<FeatureType>NONE</FeatureType>
 			</FeaturesRequired>
 			<TerrainsRequired>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 			</TerrainsRequired>
 			<ImprovementsRequired>
@@ -10310,8 +10310,8 @@
            <iNumPlotsRequired>1</iNumPlotsRequired>
            <TerrainsRequired>
                <TerrainType>TERRAIN_ROCKY</TerrainType>
-               <TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-               <TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+               <TerrainType>TERRAIN_BADLAND</TerrainType>
+               <TerrainType>TERRAIN_JAGGED</TerrainType>
            </TerrainsRequired>
            <BonusesRequired>
                <BonusType>BONUS_OBSIDIAN</BonusType>

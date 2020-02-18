@@ -15195,7 +15195,7 @@ Base XP gained when defending
 			<iCollateralDamageMaxUnits>4</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -15339,7 +15339,7 @@ Base XP gained when defending
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -15488,7 +15488,7 @@ Base XP gained when defending
 			<iCollateralDamageMaxUnits>5</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -15647,7 +15647,7 @@ Base XP gained when defending
 			<iHillsDefense>10</iHillsDefense>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -15802,7 +15802,7 @@ Base XP gained when defending
 			<iCityAttack>-20</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -15969,7 +15969,7 @@ Base XP gained when defending
 			<iCityAttack>-10</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -16101,7 +16101,7 @@ Base XP gained when defending
 			<iXPValueDefense>1</iXPValueDefense>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -16235,7 +16235,7 @@ Base XP gained when defending
 			<iCityAttack>-30</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -16391,7 +16391,7 @@ Base XP gained when defending
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -16574,7 +16574,7 @@ Base XP gained when defending
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -16766,7 +16766,7 @@ Base XP gained when defending
 			<iPursuit>20</iPursuit>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -16924,7 +16924,7 @@ Base XP gained when defending
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -17112,7 +17112,7 @@ Base XP gained when defending
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -17310,7 +17310,7 @@ Base XP gained when defending
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -17485,7 +17485,7 @@ Base XP gained when defending
 			<iPursuit>20</iPursuit>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>

@@ -8158,7 +8158,7 @@ TerrainTypes CvPlot::getTerrainTypeExternal() const
 		}
 		else
 		{
-			return (TerrainTypes)GC.getInfoTypeForString("TERRAIN_GRASS");
+			return (TerrainTypes)GC.getInfoTypeForString("TERRAIN_GRASSLAND");
 		}
 	}
 	else
