@@ -35,7 +35,7 @@ void CvUnitList::setPlayerToOwner()
 {
 	if (m_pCity && !m_pPlayer)
 	{
-		CvPlayer* pPlayer = &GET_PLAYER(m_pCity->getOwnerINLINE());
+		CvPlayer* pPlayer = &GET_PLAYER(m_pCity->getOwner());
 		m_pPlayer = pPlayer;
 		m_UnitFilters.setPlayer(pPlayer);
 		m_UnitGrouping.setPlayer(pPlayer);

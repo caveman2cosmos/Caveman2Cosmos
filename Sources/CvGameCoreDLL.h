@@ -100,6 +100,13 @@ typedef wchar_t          wchar;
 #define SAFE_DELETE_ARRAY(p) { if(p) { delete[] (p);   (p)=NULL; } }
 #define SAFE_RELEASE(p)      { if(p) { (p)->Release(); (p)=NULL; } }
 
+#define SAFE_DELETE_ARRAY2(p,size) \
+	if(p) { \
+		for (int i = 0; i < size; i++) \
+			SAFE_DELETE_ARRAY(p[i]); \
+		SAFE_DELETE_ARRAY(p); \
+	}
+
 #define SQR(x)      ( (x) * (x) )
 #define DEGTORAD(x) ( (float)( (x) * (M_PI / 180) ))
 #define LIMIT_RANGE(low, value, high) value = (value < low ? low : (value > high ? high : value));

@@ -184,8 +184,8 @@ public:
 	void uninit();
 	void clearTypesMap();
 
-	CvDiplomacyScreen* getDiplomacyScreen();
-	CMPDiplomacyScreen* getMPDiplomacyScreen();
+	CvDiplomacyScreen* getDiplomacyScreen() const;
+	CMPDiplomacyScreen* getMPDiplomacyScreen() const;
 
 	FMPIManager*& getFMPMgrPtr();
 	CvPortal& getPortal();
@@ -195,18 +195,16 @@ public:
 	CvInitCore& getIniInitCore();
 	CvMessageCodeTranslator& getMessageCodes();
 	CvStatsReporter& getStatsReporter();
-	CvStatsReporter* getStatsReporterPtr();
+	CvStatsReporter* getStatsReporterPtr() const;
 	CvInterface& getInterface();
-	CvInterface* getInterfacePtr();
+	CvInterface* getInterfacePtr() const;
 	int getMaxCivPlayers() const;
 	int getMaxPCPlayers() const;
 
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
-	CvMap& getMapINLINE();	//	Synonym for GetMap() currently as internal callers don't usually need the viewport
-// PARALLEL MAPS MODIFIED FUNCTION
-	CvMap& getMap();
+	inline CvMap& getMap() const;
 	CvViewport* getCurrentViewport();
 	int	getViewportSizeX() const;
 	int	getViewportSizeY() const;
@@ -218,13 +216,13 @@ public:
 	bool multiMapsEnabled() const;
 	bool viewportsEnabled() const;
 	bool getReprocessGreatWallDynamically() const;
-	int getNumMapInfos();
-	int getNumMapSwitchInfos();
+	int getNumMapInfos() const;
+	int getNumMapSwitchInfos() const;
 	std::vector<CvMapInfo*>& getMapInfos();
 	std::vector<CvMapSwitchInfo*>& getMapSwitchInfos();
-	CvMapInfo& getMapInfo(MapTypes eMap);
-	CvMapSwitchInfo& getMapSwitchInfo(MapSwitchTypes eMapSwitch);
-
+	CvMapInfo& getMapInfo(const MapTypes eMap) const;
+	CvMapSwitchInfo& getMapSwitchInfo(const MapSwitchTypes eMapSwitch) const;
+	
 	void switchMap(MapTypes eMap);
 	CvMap& getMapByIndex(MapTypes eIndex);
 	void updateMaps();
@@ -238,9 +236,8 @@ public:
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/
-	CvGameAI& getGameINLINE() { return *m_game; }
-	CvGameAI& getGame();
-	CvGameAI *getGamePointer();
+	inline CvGameAI& getGame() const { return *m_game; }
+	CvGameAI* getGamePointer();
 	CvRandom& getASyncRand();
 	CMessageQueue& getMessageQueue();
 	CMessageQueue& getHotMessageQueue();
@@ -268,19 +265,19 @@ public:
 	inline bool	getIsInPedia() const { return m_bIsInPedia; }
 	inline void	setIsInPedia(bool bNewValue) { m_bIsInPedia = bNewValue; }
 
-	int* getPlotDirectionX();
-	int* getPlotDirectionY();
-	int* getPlotCardinalDirectionX();
-	int* getPlotCardinalDirectionY();
-	int* getCityPlotX();
-	int* getCityPlotY();
-	int* getCityPlotPriority();
-	int getXYCityPlot(int i, int j);
-	DirectionTypes* getTurnLeftDirection();
-	DirectionTypes getTurnLeftDirection(int i);
-	DirectionTypes* getTurnRightDirection();
-	DirectionTypes getTurnRightDirection(int i);
-	DirectionTypes getXYDirection(int i, int j);
+	int* getPlotDirectionX() const;
+	int* getPlotDirectionY() const;
+	int* getPlotCardinalDirectionX() const;
+	int* getPlotCardinalDirectionY() const;
+	int* getCityPlotX() const;
+	int* getCityPlotY() const;
+	int* getCityPlotPriority() const;
+	int getXYCityPlot(const int i, const int j) const;
+	DirectionTypes* getTurnLeftDirection() const;
+	DirectionTypes getTurnLeftDirection(const int i) const;
+	DirectionTypes* getTurnRightDirection() const;
+	DirectionTypes getTurnRightDirection(int i) const;
+	DirectionTypes getXYDirection(const int i, const int j) const;
 
 /************************************************************************************************/
 /* SORT_ALPHABET                           11/19/07                                MRGENIE      */
@@ -348,38 +345,38 @@ public:
 	}
 	void resolveDelayedResolution();
 
-	int getNumWorldInfos();
+	int getNumWorldInfos() const;
 	std::vector<CvWorldInfo*>& getWorldInfos();
-	CvWorldInfo& getWorldInfo(WorldSizeTypes e);
+	CvWorldInfo& getWorldInfo(WorldSizeTypes e) const;
 	CvInfoReplacements<CvWorldInfo>* getWorldInfoReplacements();
 
-	int getNumClimateInfos();
+	int getNumClimateInfos() const;
 	std::vector<CvClimateInfo*>& getClimateInfos();
-	CvClimateInfo& getClimateInfo(ClimateTypes e);
+	CvClimateInfo& getClimateInfo(ClimateTypes e) const;
 
-	int getNumSeaLevelInfos();
+	int getNumSeaLevelInfos() const;
 	std::vector<CvSeaLevelInfo*>& getSeaLevelInfos();
-	CvSeaLevelInfo& getSeaLevelInfo(SeaLevelTypes e);
+	CvSeaLevelInfo& getSeaLevelInfo(SeaLevelTypes e) const;
 
-	int getNumColorInfos();
+	int getNumColorInfos() const;
 	std::vector<CvColorInfo*>& getColorInfos();
-	CvColorInfo& getColorInfo(ColorTypes e);
+	CvColorInfo& getColorInfo(ColorTypes e) const;
 
-	int getNumPlayerColorInfos();
+	int getNumPlayerColorInfos() const;
 	std::vector<CvPlayerColorInfo*>& getPlayerColorInfos();
-	CvPlayerColorInfo& getPlayerColorInfo(PlayerColorTypes e);
+	CvPlayerColorInfo& getPlayerColorInfo(PlayerColorTypes e) const;
 
-	int getNumAdvisorInfos();
+	int getNumAdvisorInfos() const;
 	std::vector<CvAdvisorInfo*>& getAdvisorInfos();
-	CvAdvisorInfo& getAdvisorInfo(AdvisorTypes e);
+	CvAdvisorInfo& getAdvisorInfo(AdvisorTypes e) const;
 
-	int getNumHints();
+	int getNumHints() const;
 	std::vector<CvInfoBase*>& getHints();
-	CvInfoBase& getHints(int i);
+	CvInfoBase& getHints(int i) const;
 
-	int getNumMainMenus();
+	int getNumMainMenus() const;
 	std::vector<CvMainMenuInfo*>& getMainMenus();
-	CvMainMenuInfo& getMainMenus(int i);
+	CvMainMenuInfo& getMainMenus(int i) const;
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 10/30/07                            MRGENIE          */
 /*                                                                                              */
@@ -387,15 +384,15 @@ public:
 /************************************************************************************************/
 	// MLF loading
 	void resetModLoadControlVector();
-	int getModLoadControlVectorSize();
+	int getModLoadControlVectorSize() const;
 	void setModLoadControlVector(const char* szModule);
-	CvString getModLoadControlVector(int i);
+	CvString getModLoadControlVector(int i) const;
 
-	int getTotalNumModules();
+	int getTotalNumModules() const;
 	void setTotalNumModules();
-	int getNumModLoadControlInfos();
+	int getNumModLoadControlInfos() const;
 	std::vector<CvModLoadControlInfo*>& getModLoadControlInfos();
-	CvModLoadControlInfo& getModLoadControlInfos(int i);
+	CvModLoadControlInfo& getModLoadControlInfos(int i) const;
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
@@ -405,218 +402,218 @@ public:
 /*                                                                                              */
 /************************************************************************************************/
 	void setModDir(const char* szModDir);
-	std::string getModDir();
+	std::string getModDir() const;
 	std::string m_cszModDir;
 /************************************************************************************************/
 /* XML_MODULAR_ART_LOADING                 END                                                  */
 /************************************************************************************************/
 
-	int getNumRouteModelInfos();
+	int getNumRouteModelInfos() const;
 	std::vector<CvRouteModelInfo*>& getRouteModelInfos();
-	CvRouteModelInfo& getRouteModelInfo(int i);
+	CvRouteModelInfo& getRouteModelInfo(int i) const;
 
-	int getNumRiverInfos();
+	int getNumRiverInfos() const;
 	std::vector<CvRiverInfo*>& getRiverInfos();
-	CvRiverInfo& getRiverInfo(RiverTypes e);
+	CvRiverInfo& getRiverInfo(RiverTypes e) const;
 
-	int getNumRiverModelInfos();
+	int getNumRiverModelInfos() const;
 	std::vector<CvRiverModelInfo*>& getRiverModelInfos();
-	CvRiverModelInfo& getRiverModelInfo(int i);
+	CvRiverModelInfo& getRiverModelInfo(int i) const;
 
-	int getNumWaterPlaneInfos();
+	int getNumWaterPlaneInfos() const;
 	std::vector<CvWaterPlaneInfo*>& getWaterPlaneInfos();
-	CvWaterPlaneInfo& getWaterPlaneInfo(int i);
+	CvWaterPlaneInfo& getWaterPlaneInfo(int i) const;
 
-	int getNumTerrainPlaneInfos();
+	int getNumTerrainPlaneInfos() const;
 	std::vector<CvTerrainPlaneInfo*>& getTerrainPlaneInfos();
-	CvTerrainPlaneInfo& getTerrainPlaneInfo(int i);
+	CvTerrainPlaneInfo& getTerrainPlaneInfo(int i) const;
 
-	int getNumCameraOverlayInfos();
+	int getNumCameraOverlayInfos() const;
 	std::vector<CvCameraOverlayInfo*>& getCameraOverlayInfos();
-	CvCameraOverlayInfo& getCameraOverlayInfo(int i);
+	CvCameraOverlayInfo& getCameraOverlayInfo(int i) const;
 
-	int getNumAnimationPathInfos();
+	int getNumAnimationPathInfos() const;
 	std::vector<CvAnimationPathInfo*>& getAnimationPathInfos();
-	CvAnimationPathInfo& getAnimationPathInfo(AnimationPathTypes e);
+	CvAnimationPathInfo& getAnimationPathInfo(AnimationPathTypes e) const;
 
-	int getNumAnimationCategoryInfos();
+	int getNumAnimationCategoryInfos() const;
 	std::vector<CvAnimationCategoryInfo*>& getAnimationCategoryInfos();
-	CvAnimationCategoryInfo& getAnimationCategoryInfo(AnimationCategoryTypes e);
+	CvAnimationCategoryInfo& getAnimationCategoryInfo(AnimationCategoryTypes e) const;
 
-	int getNumEntityEventInfos();
+	int getNumEntityEventInfos() const;
 	std::vector<CvEntityEventInfo*>& getEntityEventInfos();
-	CvEntityEventInfo& getEntityEventInfo(EntityEventTypes e);
+	CvEntityEventInfo& getEntityEventInfo(EntityEventTypes e) const;
 
-	int getNumEffectInfos();
+	int getNumEffectInfos() const;
 	std::vector<CvEffectInfo*>& getEffectInfos();
-	CvEffectInfo& getEffectInfo(int i);
+	CvEffectInfo& getEffectInfo(int i) const;
 
-	int getNumAttachableInfos();
+	int getNumAttachableInfos() const;
 	std::vector<CvAttachableInfo*>& getAttachableInfos();
-	CvAttachableInfo& getAttachableInfo(int i);
+	CvAttachableInfo& getAttachableInfo(int i) const;
 
-	int getNumCameraInfos();
+	int getNumCameraInfos() const;
 	std::vector<CvCameraInfo*>& getCameraInfos();
-	CvCameraInfo& getCameraInfo(CameraAnimationTypes eCameraAnimationNum);
+	CvCameraInfo& getCameraInfo(CameraAnimationTypes eCameraAnimationNum) const;
 
-	int getNumUnitFormationInfos();
+	int getNumUnitFormationInfos() const;
 	std::vector<CvUnitFormationInfo*>& getUnitFormationInfos();
-	CvUnitFormationInfo& getUnitFormationInfo(int i);
+	CvUnitFormationInfo& getUnitFormationInfo(int i) const;
 
-	int getNumGameTextXML();
+	int getNumGameTextXML() const;
 	std::vector<CvGameText*>& getGameTextXMLs();
 
-	int getNumLandscapeInfos();
+	int getNumLandscapeInfos() const;
 	std::vector<CvLandscapeInfo*>& getLandscapeInfos();
-	CvLandscapeInfo& getLandscapeInfo(int iIndex);
-	int getActiveLandscapeID();
+	CvLandscapeInfo& getLandscapeInfo(int iIndex) const;
+	int getActiveLandscapeID() const;
 	void setActiveLandscapeID(int iLandscapeID);
 
-	int getNumTerrainInfos();
+	int getNumTerrainInfos() const;
 	std::vector<CvTerrainInfo*>& getTerrainInfos();
-	CvTerrainInfo& getTerrainInfo(TerrainTypes eTerrainNum);
+	CvTerrainInfo& getTerrainInfo(TerrainTypes eTerrainNum) const;
 	CvInfoReplacements<CvTerrainInfo>* getTerrainInfoReplacements();
 
-	int getNumBonusClassInfos();
+	int getNumBonusClassInfos() const;
 	std::vector<CvBonusClassInfo*>& getBonusClassInfos();
-	CvBonusClassInfo& getBonusClassInfo(BonusClassTypes eBonusNum);
+	CvBonusClassInfo& getBonusClassInfo(BonusClassTypes eBonusNum) const;
 	CvInfoReplacements<CvBonusClassInfo>* getBonusClassInfoReplacements();
 
-	int getNumBonusInfos();
+	int getNumBonusInfos() const;
 	std::vector<CvBonusInfo*>& getBonusInfos();
-	CvBonusInfo& getBonusInfo(BonusTypes eBonusNum);
+	CvBonusInfo& getBonusInfo(BonusTypes eBonusNum) const;
 	CvInfoReplacements<CvBonusInfo>* getBonusInfoReplacements();
 
-	int getNumFeatureInfos();
+	int getNumFeatureInfos() const;
 	std::vector<CvFeatureInfo*>& getFeatureInfos();
-	CvFeatureInfo& getFeatureInfo(FeatureTypes eFeatureNum);
+	CvFeatureInfo& getFeatureInfo(FeatureTypes eFeatureNum) const;
 	CvInfoReplacements<CvFeatureInfo>* getFeatureInfoReplacements();
 
 	int& getNumPlayableCivilizationInfos();
 	int& getNumAIPlayableCivilizationInfos();
-	int getNumCivilizationInfos();
+	int getNumCivilizationInfos() const;
 	std::vector<CvCivilizationInfo*>& getCivilizationInfos();
-	CvCivilizationInfo& getCivilizationInfo(CivilizationTypes eCivilizationNum);
+	CvCivilizationInfo& getCivilizationInfo(CivilizationTypes eCivilizationNum) const;
 	CvInfoReplacements<CvCivilizationInfo>* getCivilizationInfoReplacements();
 
-	int getNumLeaderHeadInfos();
+	int getNumLeaderHeadInfos() const;
 	std::vector<CvLeaderHeadInfo*>& getLeaderHeadInfos();
-	CvLeaderHeadInfo& getLeaderHeadInfo(LeaderHeadTypes eLeaderHeadNum);
+	CvLeaderHeadInfo& getLeaderHeadInfo(LeaderHeadTypes eLeaderHeadNum) const;
 	CvInfoReplacements<CvLeaderHeadInfo>* getLeaderHeadInfoReplacements();
 
-	int getNumTraitInfos();
+	int getNumTraitInfos() const;
 	std::vector<CvTraitInfo*>& getTraitInfos();
-	CvTraitInfo& getTraitInfo(TraitTypes eTraitNum);
+	CvTraitInfo& getTraitInfo(TraitTypes eTraitNum) const;
 	CvInfoReplacements<CvTraitInfo>* getTraitInfoReplacements();
 
-	int getNumCursorInfos();
+	int getNumCursorInfos() const;
 	std::vector<CvCursorInfo*>& getCursorInfos();
-	CvCursorInfo& getCursorInfo(CursorTypes eCursorNum);
+	CvCursorInfo& getCursorInfo(CursorTypes eCursorNum) const;
 
-	int getNumThroneRoomCameras();
+	int getNumThroneRoomCameras() const;
 	std::vector<CvThroneRoomCamera*>& getThroneRoomCameras();
-	CvThroneRoomCamera& getThroneRoomCamera(int iIndex);
+	CvThroneRoomCamera& getThroneRoomCamera(int iIndex) const;
 
-	int getNumThroneRoomInfos();
+	int getNumThroneRoomInfos() const;
 	std::vector<CvThroneRoomInfo*>& getThroneRoomInfos();
-	CvThroneRoomInfo& getThroneRoomInfo(int iIndex);
+	CvThroneRoomInfo& getThroneRoomInfo(int iIndex) const;
 
-	int getNumThroneRoomStyleInfos();
+	int getNumThroneRoomStyleInfos() const;
 	std::vector<CvThroneRoomStyleInfo*>& getThroneRoomStyleInfos();
-	CvThroneRoomStyleInfo& getThroneRoomStyleInfo(int iIndex);
+	CvThroneRoomStyleInfo& getThroneRoomStyleInfo(int iIndex) const;
 
-	int getNumSlideShowInfos();
+	int getNumSlideShowInfos() const;
 	std::vector<CvSlideShowInfo*>& getSlideShowInfos();
-	CvSlideShowInfo& getSlideShowInfo(int iIndex);
+	CvSlideShowInfo& getSlideShowInfo(int iIndex) const;
 
-	int getNumSlideShowRandomInfos();
+	int getNumSlideShowRandomInfos() const;
 	std::vector<CvSlideShowRandomInfo*>& getSlideShowRandomInfos();
-	CvSlideShowRandomInfo& getSlideShowRandomInfo(int iIndex);
+	CvSlideShowRandomInfo& getSlideShowRandomInfo(int iIndex) const;
 
-	int getNumWorldPickerInfos();
+	int getNumWorldPickerInfos() const;
 	std::vector<CvWorldPickerInfo*>& getWorldPickerInfos();
-	CvWorldPickerInfo& getWorldPickerInfo(int iIndex);
+	CvWorldPickerInfo& getWorldPickerInfo(int iIndex) const;
 
-	int getNumSpaceShipInfos();
+	int getNumSpaceShipInfos() const;
 	std::vector<CvSpaceShipInfo*>& getSpaceShipInfos();
-	CvSpaceShipInfo& getSpaceShipInfo(int iIndex);
+	CvSpaceShipInfo& getSpaceShipInfo(int iIndex) const;
 
-	int getNumUnitInfos();
+	int getNumUnitInfos() const;
 	std::vector<CvUnitInfo*>& getUnitInfos();
-	CvUnitInfo& getUnitInfo(UnitTypes eUnitNum);
+	CvUnitInfo& getUnitInfo(UnitTypes eUnitNum) const;
 	CvInfoReplacements<CvUnitInfo>* getUnitInfoReplacements();
 
-	int getNumSpawnInfos();
+	int getNumSpawnInfos() const;
 	std::vector<CvSpawnInfo*>& getSpawnInfos();
-	CvSpawnInfo& getSpawnInfo(SpawnTypes eSpawnNum);
+	CvSpawnInfo& getSpawnInfo(SpawnTypes eSpawnNum) const;
 	CvInfoReplacements<CvSpawnInfo>* getSpawnInfoReplacements();
 
-	int getNumSpecialUnitInfos();
+	int getNumSpecialUnitInfos() const;
 	std::vector<CvSpecialUnitInfo*>& getSpecialUnitInfos();
-	CvSpecialUnitInfo& getSpecialUnitInfo(SpecialUnitTypes eSpecialUnitNum);
+	CvSpecialUnitInfo& getSpecialUnitInfo(SpecialUnitTypes eSpecialUnitNum) const;
 
-	int getNumConceptInfos();
+	int getNumConceptInfos() const;
 	std::vector<CvInfoBase*>& getConceptInfos();
-	CvInfoBase& getConceptInfo(ConceptTypes e);
+	CvInfoBase& getConceptInfo(ConceptTypes e) const;
 
-	int getNumNewConceptInfos();
+	int getNumNewConceptInfos() const;
 	std::vector<CvInfoBase*>& getNewConceptInfos();
-	CvInfoBase& getNewConceptInfo(NewConceptTypes e);
+	CvInfoBase& getNewConceptInfo(NewConceptTypes e) const;
 
-	int getNumPropertyInfos();
+	int getNumPropertyInfos() const;
 	std::vector<CvPropertyInfo*>& getPropertyInfos();
-	CvPropertyInfo& getPropertyInfo(PropertyTypes ePropertyNum);
+	CvPropertyInfo& getPropertyInfo(PropertyTypes ePropertyNum) const;
 
-	int getNumOutcomeInfos();
+	int getNumOutcomeInfos() const;
 	std::vector<CvOutcomeInfo*>& getOutcomeInfos();
-	CvOutcomeInfo& getOutcomeInfo(OutcomeTypes eOutcomeNum);
+	CvOutcomeInfo& getOutcomeInfo(OutcomeTypes eOutcomeNum) const;
 
 /************************************************************************************************/
 /*Afforess                                     12/21/09                                         */
 /************************************************************************************************/
-	int getPEAK_EXTRA_DEFENSE();
-	int getPEAK_EXTRA_MOVEMENT();
-
+	int getPEAK_EXTRA_DEFENSE() const;
+	int getPEAK_EXTRA_MOVEMENT() const;
+	
 	int iStuckUnitID;
 	int iStuckUnitCount;
 
 	bool isLoadedPlayerOptions() const;
 	void setLoadedPlayerOptions(bool bNewVal);
-
-	bool isXMLLogging();
+	
+	bool isXMLLogging() const;
 	void setXMLLogging(bool bNewVal);
 
 	void updateReplacements();
-
-	int getSCORE_FREE_PERCENT();
-	int getSCORE_POPULATION_FACTOR();
-	int getSCORE_LAND_FACTOR();
-	int getSCORE_TECH_FACTOR();
-	int getSCORE_WONDER_FACTOR();
-
-	int getUSE_CAN_CREATE_PROJECT_CALLBACK();
-	int getUSE_CANNOT_CREATE_PROJECT_CALLBACK();
-	int getUSE_CAN_DO_MELTDOWN_CALLBACK();
-	int getUSE_CAN_MAINTAIN_PROCESS_CALLBACK();
-	int getUSE_CANNOT_MAINTAIN_PROCESS_CALLBACK();
-	int getUSE_CAN_DO_GROWTH_CALLBACK();
-	int getUSE_CAN_DO_CULTURE_CALLBACK();
-	int getUSE_CAN_DO_PLOT_CULTURE_CALLBACK();
-	int getUSE_CAN_DO_PRODUCTION_CALLBACK();
-	int getUSE_CAN_DO_RELIGION_CALLBACK();
-	int getUSE_CAN_DO_GREATPEOPLE_CALLBACK();
-	int getUSE_CAN_RAZE_CITY_CALLBACK();
-	int getUSE_CAN_DO_GOLD_CALLBACK();
-	int getUSE_CAN_DO_RESEARCH_CALLBACK();
-	int getUSE_UPGRADE_UNIT_PRICE_CALLBACK();
-	int getUSE_IS_VICTORY_CALLBACK();
-	int getUSE_AI_UPDATE_UNIT_CALLBACK();
-	int getUSE_AI_CHOOSE_PRODUCTION_CALLBACK();
-	int getUSE_EXTRA_PLAYER_COSTS_CALLBACK();
-	int getUSE_AI_DO_DIPLO_CALLBACK();
-	int getUSE_AI_BESTTECH_CALLBACK();
-	int getUSE_CAN_DO_COMBAT_CALLBACK();
-	int getUSE_AI_CAN_DO_WARPLANS_CALLBACK();
+	
+	int getSCORE_FREE_PERCENT() const;
+	int getSCORE_POPULATION_FACTOR() const;
+	int getSCORE_LAND_FACTOR() const;
+	int getSCORE_TECH_FACTOR() const;
+	int getSCORE_WONDER_FACTOR() const;
+	
+	int getUSE_CAN_CREATE_PROJECT_CALLBACK() const;
+	int getUSE_CANNOT_CREATE_PROJECT_CALLBACK() const;
+	int getUSE_CAN_DO_MELTDOWN_CALLBACK() const;
+	int getUSE_CAN_MAINTAIN_PROCESS_CALLBACK() const;
+	int getUSE_CANNOT_MAINTAIN_PROCESS_CALLBACK() const;
+	int getUSE_CAN_DO_GROWTH_CALLBACK() const;
+	int getUSE_CAN_DO_CULTURE_CALLBACK() const;
+	int getUSE_CAN_DO_PLOT_CULTURE_CALLBACK() const;
+	int getUSE_CAN_DO_PRODUCTION_CALLBACK() const;
+	int getUSE_CAN_DO_RELIGION_CALLBACK() const;
+	int getUSE_CAN_DO_GREATPEOPLE_CALLBACK() const;
+	int getUSE_CAN_RAZE_CITY_CALLBACK() const;
+	int getUSE_CAN_DO_GOLD_CALLBACK() const;
+	int getUSE_CAN_DO_RESEARCH_CALLBACK() const;
+	int getUSE_UPGRADE_UNIT_PRICE_CALLBACK() const;
+	int getUSE_IS_VICTORY_CALLBACK() const;
+	int getUSE_AI_UPDATE_UNIT_CALLBACK() const;
+	int getUSE_AI_CHOOSE_PRODUCTION_CALLBACK() const;
+	int getUSE_EXTRA_PLAYER_COSTS_CALLBACK() const;
+	int getUSE_AI_DO_DIPLO_CALLBACK() const;
+	int getUSE_AI_BESTTECH_CALLBACK() const;
+	int getUSE_CAN_DO_COMBAT_CALLBACK() const;
+	int getUSE_AI_CAN_DO_WARPLANS_CALLBACK() const;
 	int getLAND_UNITS_CAN_ATTACK_WATER_CITIES() const;
 	int getBASE_UNIT_UPGRADE_COST() const;
 	int getUPGRADE_ROUND_LIMIT() const;
@@ -640,61 +637,61 @@ public:
 /* Afforess                                END                                                  */
 /************************************************************************************************/
 
-	int getNumCityTabInfos();
+	int getNumCityTabInfos() const;
 	std::vector<CvInfoBase*>& getCityTabInfos();
-	CvInfoBase& getCityTabInfo(CityTabTypes e);
+	CvInfoBase& getCityTabInfo(CityTabTypes e) const;
 
-	int getNumCalendarInfos();
+	int getNumCalendarInfos() const;
 	std::vector<CvInfoBase*>& getCalendarInfos();
-	CvInfoBase& getCalendarInfo(CalendarTypes e);
+	CvInfoBase& getCalendarInfo(CalendarTypes e) const;
 
-	int getNumSeasonInfos();
+	int getNumSeasonInfos() const;
 	std::vector<CvInfoBase*>& getSeasonInfos();
-	CvInfoBase& getSeasonInfo(SeasonTypes e);
+	CvInfoBase& getSeasonInfo(SeasonTypes e) const;
 
-	int getNumMonthInfos();
+	int getNumMonthInfos() const;
 	std::vector<CvInfoBase*>& getMonthInfos();
-	CvInfoBase& getMonthInfo(MonthTypes e);
+	CvInfoBase& getMonthInfo(MonthTypes e) const;
 
-	int getNumDenialInfos();
+	int getNumDenialInfos() const;
 	std::vector<CvInfoBase*>& getDenialInfos();
-	CvInfoBase& getDenialInfo(DenialTypes e);
+	CvInfoBase& getDenialInfo(DenialTypes e) const;
 
-	int getNumInvisibleInfos();
+	int getNumInvisibleInfos() const;
 	std::vector<CvInvisibleInfo*>& getInvisibleInfos();
-	CvInvisibleInfo& getInvisibleInfo(InvisibleTypes e);
+	CvInvisibleInfo& getInvisibleInfo(InvisibleTypes e) const;
 
-	int getNumVoteSourceInfos();
+	int getNumVoteSourceInfos() const;
 	std::vector<CvVoteSourceInfo*>& getVoteSourceInfos();
-	CvVoteSourceInfo& getVoteSourceInfo(VoteSourceTypes e);
+	CvVoteSourceInfo& getVoteSourceInfo(VoteSourceTypes e) const;
 
-	int getNumUnitCombatInfos();
+	int getNumUnitCombatInfos() const;
 	std::vector<CvUnitCombatInfo*>& getUnitCombatInfos();
-	CvUnitCombatInfo& getUnitCombatInfo(UnitCombatTypes e);
+	CvUnitCombatInfo& getUnitCombatInfo(UnitCombatTypes e) const;
 
 	std::vector<CvInfoBase*>& getDomainInfos();
-	CvInfoBase& getDomainInfo(DomainTypes e);
+	CvInfoBase& getDomainInfo(DomainTypes e) const;
 
 	//TB Promotion Line Mod begin
-	int getNumPromotionLineInfos();
+	int getNumPromotionLineInfos() const;
 	std::vector<CvPromotionLineInfo*>& getPromotionLineInfos();
-	CvPromotionLineInfo& getPromotionLineInfo(PromotionLineTypes e);
+	CvPromotionLineInfo& getPromotionLineInfo(PromotionLineTypes e) const;
 	//TB Promotion Line Mod end
 
-	int getNumMapCategoryInfos();
+	int getNumMapCategoryInfos() const;
 	std::vector<CvMapCategoryInfo*>& getMapCategoryInfos();
-	CvMapCategoryInfo& getMapCategoryInfo(MapCategoryTypes e);
+	CvMapCategoryInfo& getMapCategoryInfo(MapCategoryTypes e) const;
 
-	int getNumIdeaClassInfos();
+	int getNumIdeaClassInfos() const;
 	std::vector<CvIdeaClassInfo*>& getIdeaClassInfos();
-	CvIdeaClassInfo& getIdeaClassInfo(IdeaClassTypes e);
+	CvIdeaClassInfo& getIdeaClassInfo(IdeaClassTypes e) const;
 
-	int getNumIdeaInfos();
+	int getNumIdeaInfos() const;
 	std::vector<CvIdeaInfo*>& getIdeaInfos();
-	CvIdeaInfo& getIdeaInfo(IdeaTypes e);
+	CvIdeaInfo& getIdeaInfo(IdeaTypes e) const;
 
 	std::vector<CvInfoBase*>& getUnitAIInfos();
-	CvInfoBase& getUnitAIInfo(UnitAITypes eUnitAINum);
+	CvInfoBase& getUnitAIInfo(UnitAITypes eUnitAINum) const;
 
 	//	Koshling - added internal registration of supported UnitAI types, not reliant
 	//	on external definition in XML
@@ -715,212 +712,212 @@ public:
 	void registerMissions();
 
 	std::vector<CvInfoBase*>& getAttitudeInfos();
-	CvInfoBase& getAttitudeInfo(AttitudeTypes eAttitudeNum);
+	CvInfoBase& getAttitudeInfo(AttitudeTypes eAttitudeNum) const;
 
 	std::vector<CvInfoBase*>& getMemoryInfos();
-	CvInfoBase& getMemoryInfo(MemoryTypes eMemoryNum);
+	CvInfoBase& getMemoryInfo(MemoryTypes eMemoryNum) const;
 
-	int getNumGameOptionInfos();
+	int getNumGameOptionInfos() const;
 	std::vector<CvGameOptionInfo*>& getGameOptionInfos();
-	CvGameOptionInfo& getGameOptionInfo(GameOptionTypes eGameOptionNum);
+	CvGameOptionInfo& getGameOptionInfo(GameOptionTypes eGameOptionNum) const;
 
-	int getNumMPOptionInfos();
+	int getNumMPOptionInfos() const;
 	std::vector<CvMPOptionInfo*>& getMPOptionInfos();
-	CvMPOptionInfo& getMPOptionInfo(MultiplayerOptionTypes eMPOptionNum);
+	CvMPOptionInfo& getMPOptionInfo(MultiplayerOptionTypes eMPOptionNum) const;
 
-	int getNumForceControlInfos();
+	int getNumForceControlInfos() const;
 	std::vector<CvForceControlInfo*>& getForceControlInfos();
-	CvForceControlInfo& getForceControlInfo(ForceControlTypes eForceControlNum);
+	CvForceControlInfo& getForceControlInfo(ForceControlTypes eForceControlNum) const;
 
 	std::vector<CvPlayerOptionInfo*>& getPlayerOptionInfos();
-	CvPlayerOptionInfo& getPlayerOptionInfo(PlayerOptionTypes ePlayerOptionNum);
+	CvPlayerOptionInfo& getPlayerOptionInfo(PlayerOptionTypes ePlayerOptionNum) const;
 
 	std::vector<CvGraphicOptionInfo*>& getGraphicOptionInfos();
-	CvGraphicOptionInfo& getGraphicOptionInfo(GraphicOptionTypes eGraphicOptionNum);
+	CvGraphicOptionInfo& getGraphicOptionInfo(GraphicOptionTypes eGraphicOptionNum) const;
 
 	std::vector<CvYieldInfo*>& getYieldInfos();
-	CvYieldInfo& getYieldInfo(YieldTypes eYieldNum);
+	CvYieldInfo& getYieldInfo(YieldTypes eYieldNum) const;
 
 	std::vector<CvCommerceInfo*>& getCommerceInfos();
-	CvCommerceInfo& getCommerceInfo(CommerceTypes eCommerceNum);
+	CvCommerceInfo& getCommerceInfo(CommerceTypes eCommerceNum) const;
 
-	int getNumRouteInfos();
+	int getNumRouteInfos() const;
 	std::vector<CvRouteInfo*>& getRouteInfos();
-	CvRouteInfo& getRouteInfo(RouteTypes eRouteNum);
+	CvRouteInfo& getRouteInfo(RouteTypes eRouteNum) const;
 	CvInfoReplacements<CvRouteInfo>* getRouteInfoReplacements();
 
-	int getNumImprovementInfos();
+	int getNumImprovementInfos() const;
 	std::vector<CvImprovementInfo*>& getImprovementInfos();
-	CvImprovementInfo& getImprovementInfo(ImprovementTypes eImprovementNum);
+	CvImprovementInfo& getImprovementInfo(ImprovementTypes eImprovementNum) const;
 	CvInfoReplacements<CvImprovementInfo>* getImprovementInfoReplacements();
 
-	int getNumGoodyInfos();
+	int getNumGoodyInfos() const;
 	std::vector<CvGoodyInfo*>& getGoodyInfos();
-	CvGoodyInfo& getGoodyInfo(GoodyTypes eGoodyNum);
+	CvGoodyInfo& getGoodyInfo(GoodyTypes eGoodyNum) const;
 
-	int getNumBuildInfos();
+	int getNumBuildInfos() const;
 	std::vector<CvBuildInfo*>& getBuildInfos();
-	CvBuildInfo& getBuildInfo(BuildTypes eBuildNum);
+	CvBuildInfo& getBuildInfo(BuildTypes eBuildNum) const;
 	CvInfoReplacements<CvBuildInfo>* getBuildInfoReplacements();
 
-	int getNumHandicapInfos();
+	int getNumHandicapInfos() const;
 	std::vector<CvHandicapInfo*>& getHandicapInfos();
-	CvHandicapInfo& getHandicapInfo(HandicapTypes eHandicapNum);
+	CvHandicapInfo& getHandicapInfo(HandicapTypes eHandicapNum) const;
 	CvInfoReplacements<CvHandicapInfo>* getHandicapInfoReplacements();
 
-	int getNumGameSpeedInfos();
+	int getNumGameSpeedInfos() const;
 	std::vector<CvGameSpeedInfo*>& getGameSpeedInfos();
-	CvGameSpeedInfo& getGameSpeedInfo(GameSpeedTypes eGameSpeedNum);
+	CvGameSpeedInfo& getGameSpeedInfo(GameSpeedTypes eGameSpeedNum) const;
 	CvInfoReplacements<CvGameSpeedInfo>* getGameSpeedInfoReplacements();
 
-	int getNumTurnTimerInfos();
+	int getNumTurnTimerInfos() const;
 	std::vector<CvTurnTimerInfo*>& getTurnTimerInfos();
-	CvTurnTimerInfo& getTurnTimerInfo(TurnTimerTypes eTurnTimerNum);
+	CvTurnTimerInfo& getTurnTimerInfo(TurnTimerTypes eTurnTimerNum) const;
 
-	int getNumProcessInfos();
+	int getNumProcessInfos() const;
 	std::vector<CvProcessInfo*>& getProcessInfos();
-	CvProcessInfo& getProcessInfo(ProcessTypes e);
+	CvProcessInfo& getProcessInfo(ProcessTypes e) const;
 	CvInfoReplacements<CvProcessInfo>* getProcessInfoReplacements();
 
-	int getNumVoteInfos();
+	int getNumVoteInfos() const;
 	std::vector<CvVoteInfo*>& getVoteInfos();
-	CvVoteInfo& getVoteInfo(VoteTypes e);
+	CvVoteInfo& getVoteInfo(VoteTypes e) const;
 
-	int getNumProjectInfos();
+	int getNumProjectInfos() const;
 	std::vector<CvProjectInfo*>& getProjectInfos();
-	CvProjectInfo& getProjectInfo(ProjectTypes e);
+	CvProjectInfo& getProjectInfo(ProjectTypes e) const;
 	CvInfoReplacements<CvProjectInfo>* getProjectInfoReplacements();
 
-	int getNumBuildingClassInfos();
+	int getNumBuildingClassInfos() const;
 	std::vector<CvBuildingClassInfo*>& getBuildingClassInfos();
-	CvBuildingClassInfo& getBuildingClassInfo(BuildingClassTypes eBuildingClassNum);
+	CvBuildingClassInfo& getBuildingClassInfo(BuildingClassTypes eBuildingClassNum) const;
 	CvInfoReplacements<CvBuildingClassInfo>* getBuildingClassInfoReplacements();
 
-	int getNumBuildingInfos();
+	int getNumBuildingInfos() const;
 	std::vector<CvBuildingInfo*>& getBuildingInfos();
-	CvBuildingInfo& getBuildingInfo(BuildingTypes eBuildingNum);
+	CvBuildingInfo& getBuildingInfo(BuildingTypes eBuildingNum) const;
 	CvInfoReplacements<CvBuildingInfo>* getBuildingInfoReplacements();
 
-	int getNumSpecialBuildingInfos();
+	int getNumSpecialBuildingInfos() const;
 	std::vector<CvSpecialBuildingInfo*>& getSpecialBuildingInfos();
-	CvSpecialBuildingInfo& getSpecialBuildingInfo(SpecialBuildingTypes eSpecialBuildingNum);
+	CvSpecialBuildingInfo& getSpecialBuildingInfo(SpecialBuildingTypes eSpecialBuildingNum) const;
 	CvInfoReplacements<CvSpecialBuildingInfo>* getSpecialBuildingInfoReplacements();
 
-	int getNumUnitClassInfos();
+	int getNumUnitClassInfos() const;
 	std::vector<CvUnitClassInfo*>& getUnitClassInfos();
 	CvUnitClassInfo& getUnitClassInfo(UnitClassTypes eUnitClassNum);
 	const CvUnitClassInfo& getUnitClassInfo(UnitClassTypes eUnitClassNum) const;
 
 	CvInfoReplacements<CvUnitClassInfo>* getUnitClassInfoReplacements();
 
-	int getNumActionInfos();
+	int getNumActionInfos() const;
 	std::vector<CvActionInfo*>& getActionInfos();
-	CvActionInfo& getActionInfo(int i);
+	CvActionInfo& getActionInfo(int i) const;
 
 	std::vector<CvMissionInfo*>& getMissionInfos();
-	CvMissionInfo& getMissionInfo(MissionTypes eMissionNum);
+	CvMissionInfo& getMissionInfo(MissionTypes eMissionNum) const;
 
 	std::vector<CvControlInfo*>& getControlInfos();
-	CvControlInfo& getControlInfo(ControlTypes eControlNum);
+	CvControlInfo& getControlInfo(ControlTypes eControlNum) const;
 
 	std::vector<CvCommandInfo*>& getCommandInfos();
-	CvCommandInfo& getCommandInfo(CommandTypes eCommandNum);
+	CvCommandInfo& getCommandInfo(CommandTypes eCommandNum) const;
 
-	int getNumAutomateInfos();
+	int getNumAutomateInfos() const;
 	std::vector<CvAutomateInfo*>& getAutomateInfos();
-	CvAutomateInfo& getAutomateInfo(int iAutomateNum);
+	CvAutomateInfo& getAutomateInfo(int iAutomateNum) const;
 
-	int getNumPromotionInfos();
+	int getNumPromotionInfos() const;
 	std::vector<CvPromotionInfo*>& getPromotionInfos();
-	CvPromotionInfo& getPromotionInfo(PromotionTypes ePromotionNum);
+	CvPromotionInfo& getPromotionInfo(PromotionTypes ePromotionNum) const;
 	CvInfoReplacements<CvPromotionInfo>* getPromotionInfoReplacements();
 	typedef bst::function<bool(const CvPromotionInfo*, PromotionTypes)> PromotionPredicateFn;
 	PromotionTypes findPromotion(PromotionPredicateFn predicateFn) const;
 
-	int getNumTechInfos();
+	int getNumTechInfos() const;
 	std::vector<CvTechInfo*>& getTechInfos();
-	CvTechInfo& getTechInfo(TechTypes eTechNum);
+	CvTechInfo& getTechInfo(TechTypes eTechNum) const;
 	CvInfoReplacements<CvTechInfo>* getTechInfoReplacements();
 
-	int getNumReligionInfos();
+	int getNumReligionInfos() const;
 	std::vector<CvReligionInfo*>& getReligionInfos();
-	CvReligionInfo& getReligionInfo(ReligionTypes eReligionNum);
+	CvReligionInfo& getReligionInfo(ReligionTypes eReligionNum) const;
 	CvInfoReplacements<CvReligionInfo>* getReligionInfoReplacements();
 
-	int getNumCorporationInfos();
+	int getNumCorporationInfos() const;
 	std::vector<CvCorporationInfo*>& getCorporationInfos();
-	CvCorporationInfo& getCorporationInfo(CorporationTypes eCorporationNum);
+	CvCorporationInfo& getCorporationInfo(CorporationTypes eCorporationNum) const;
 	CvInfoReplacements<CvCorporationInfo>* getCorporationInfoReplacements();
 
-	int getNumSpecialistInfos();
+	int getNumSpecialistInfos() const;
 	std::vector<CvSpecialistInfo*>& getSpecialistInfos();
-	CvSpecialistInfo& getSpecialistInfo(SpecialistTypes eSpecialistNum);
+	CvSpecialistInfo& getSpecialistInfo(SpecialistTypes eSpecialistNum) const;
 	CvInfoReplacements<CvSpecialistInfo>* getSpecialistInfoReplacements();
 
-	int getNumCivicOptionInfos();
+	int getNumCivicOptionInfos() const;
 	std::vector<CvCivicOptionInfo*>& getCivicOptionInfos();
-	CvCivicOptionInfo& getCivicOptionInfo(CivicOptionTypes eCivicOptionNum);
+	CvCivicOptionInfo& getCivicOptionInfo(CivicOptionTypes eCivicOptionNum) const;
 
-	int getNumCivicInfos();
+	int getNumCivicInfos() const;
 	std::vector<CvCivicInfo*>& getCivicInfos();
-	CvCivicInfo& getCivicInfo(CivicTypes eCivicNum);
+	CvCivicInfo& getCivicInfo(CivicTypes eCivicNum) const;
 	CvInfoReplacements<CvCivicInfo>* getCivicInfoReplacements();
 
-	int getNumDiplomacyInfos();
+	int getNumDiplomacyInfos() const;
 	std::vector<CvDiplomacyInfo*>& getDiplomacyInfos();
-	CvDiplomacyInfo& getDiplomacyInfo(int iDiplomacyNum);
+	CvDiplomacyInfo& getDiplomacyInfo(int iDiplomacyNum) const;
 
-	int getNumEraInfos();
+	int getNumEraInfos() const;
 	std::vector<CvEraInfo*>& getEraInfos();
-	CvEraInfo& getEraInfo(EraTypes eEraNum);
+	CvEraInfo& getEraInfo(EraTypes eEraNum) const;
 	CvInfoReplacements<CvEraInfo>* getEraInfoReplacements();
 
-	int getNumHurryInfos();
+	int getNumHurryInfos() const;
 	std::vector<CvHurryInfo*>& getHurryInfos();
-	CvHurryInfo& getHurryInfo(HurryTypes eHurryNum);
+	CvHurryInfo& getHurryInfo(HurryTypes eHurryNum) const;
 
-	int getNumEmphasizeInfos();
+	int getNumEmphasizeInfos() const;
 	std::vector<CvEmphasizeInfo*>& getEmphasizeInfos();
-	CvEmphasizeInfo& getEmphasizeInfo(EmphasizeTypes eEmphasizeNum);
+	CvEmphasizeInfo& getEmphasizeInfo(EmphasizeTypes eEmphasizeNum) const;
 
-	int getNumUpkeepInfos();
+	int getNumUpkeepInfos() const;
 	std::vector<CvUpkeepInfo*>& getUpkeepInfos();
-	CvUpkeepInfo& getUpkeepInfo(UpkeepTypes eUpkeepNum);
+	CvUpkeepInfo& getUpkeepInfo(UpkeepTypes eUpkeepNum) const;
 
-	int getNumCultureLevelInfos();
+	int getNumCultureLevelInfos() const;
 	std::vector<CvCultureLevelInfo*>& getCultureLevelInfos();
-	CvCultureLevelInfo& getCultureLevelInfo(CultureLevelTypes eCultureLevelNum);
+	CvCultureLevelInfo& getCultureLevelInfo(CultureLevelTypes eCultureLevelNum) const;
 	CvInfoReplacements<CvCultureLevelInfo>* getCultureLevelInfoReplacements();
 
-	int getNumVictoryInfos();
+	int getNumVictoryInfos() const;
 	std::vector<CvVictoryInfo*>& getVictoryInfos();
-	CvVictoryInfo& getVictoryInfo(VictoryTypes eVictoryNum);
+	CvVictoryInfo& getVictoryInfo(VictoryTypes eVictoryNum) const;
 
-	int getNumQuestInfos();
+	int getNumQuestInfos() const;
 	std::vector<CvQuestInfo*>& getQuestInfos();
-	CvQuestInfo& getQuestInfo(int iIndex);
+	CvQuestInfo& getQuestInfo(int iIndex) const;
 
-	int getNumTutorialInfos();
+	int getNumTutorialInfos() const;
 	std::vector<CvTutorialInfo*>& getTutorialInfos();
-	CvTutorialInfo& getTutorialInfo(int i);
+	CvTutorialInfo& getTutorialInfo(int i) const;
 
-	int getNumEventTriggerInfos();
+	int getNumEventTriggerInfos() const;
 	std::vector<CvEventTriggerInfo*>& getEventTriggerInfos();
-	CvEventTriggerInfo& getEventTriggerInfo(EventTriggerTypes eEventTrigger);
+	CvEventTriggerInfo& getEventTriggerInfo(EventTriggerTypes eEventTrigger) const;
 	CvInfoReplacements<CvEventTriggerInfo>* getEventTriggerInfoReplacements();
 
-	int getNumEventInfos();
+	int getNumEventInfos() const;
 	std::vector<CvEventInfo*>& getEventInfos();
-	CvEventInfo& getEventInfo(EventTypes eEvent);
+	CvEventInfo& getEventInfo(EventTypes eEvent) const;
 	CvInfoReplacements<CvEventInfo>* getEventInfoReplacements();
 
-	int getNumEspionageMissionInfos();
+	int getNumEspionageMissionInfos() const;
 	std::vector<CvEspionageMissionInfo*>& getEspionageMissionInfos();
-	CvEspionageMissionInfo& getEspionageMissionInfo(EspionageMissionTypes eEspionageMissionNum);
+	CvEspionageMissionInfo& getEspionageMissionInfo(EspionageMissionTypes eEspionageMissionNum) const;
 
-	int getNumUnitArtStyleTypeInfos();
+	int getNumUnitArtStyleTypeInfos() const;
 	std::vector<CvUnitArtStyleTypeInfo*>& getUnitArtStyleTypeInfos();
-	CvUnitArtStyleTypeInfo& getUnitArtStyleTypeInfo(UnitArtStyleTypes eUnitArtStyleTypeNum);
+	CvUnitArtStyleTypeInfo& getUnitArtStyleTypeInfo(UnitArtStyleTypes eUnitArtStyleTypeNum) const;
 
 	//
 	// Global Types
@@ -991,7 +988,7 @@ public:
 	// THESE ARE READ-ONLY
 	//
 
-	FVariableSystem* getDefinesVarSystem();
+	FVariableSystem* getDefinesVarSystem() const;
 	void cacheGlobals();
 
 	// ***** EXPOSED TO PYTHON *****
@@ -1010,57 +1007,57 @@ public:
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	bool isDCM_BATTLE_EFFECTS();
-	int getBATTLE_EFFECT_LESS_FOOD();
-	int getBATTLE_EFFECT_LESS_PRODUCTION();
-	int getBATTLE_EFFECT_LESS_COMMERCE();
-	int getBATTLE_EFFECTS_MINIMUM_TURN_INCREMENTS();
-	int getMAX_BATTLE_TURNS();
+	bool isDCM_BATTLE_EFFECTS() const;
+	int getBATTLE_EFFECT_LESS_FOOD() const;
+	int getBATTLE_EFFECT_LESS_PRODUCTION() const;
+	int getBATTLE_EFFECT_LESS_COMMERCE() const;
+	int getBATTLE_EFFECTS_MINIMUM_TURN_INCREMENTS() const;
+	int getMAX_BATTLE_TURNS() const;
 
-	bool isDCM_AIR_BOMBING();
-	bool isDCM_RANGE_BOMBARD();
-	int getDCM_RB_CITY_INACCURACY();
-	int getDCM_RB_CITYBOMBARD_CHANCE();
-	bool isDCM_ATTACK_SUPPORT();
-	bool isDCM_STACK_ATTACK();
-	bool isDCM_OPP_FIRE();
-	bool isDCM_ACTIVE_DEFENSE();
-	bool isDCM_ARCHER_BOMBARD();
-	bool isDCM_FIGHTER_ENGAGE();
+	bool isDCM_AIR_BOMBING() const;
+	bool isDCM_RANGE_BOMBARD() const;
+	int getDCM_RB_CITY_INACCURACY() const;
+	int getDCM_RB_CITYBOMBARD_CHANCE() const;
+	bool isDCM_ATTACK_SUPPORT() const;
+	bool isDCM_STACK_ATTACK() const;
+	bool isDCM_OPP_FIRE() const;
+	bool isDCM_ACTIVE_DEFENSE() const;
+	bool isDCM_ARCHER_BOMBARD() const;
+	bool isDCM_FIGHTER_ENGAGE() const;
 
-	bool isDYNAMIC_CIV_NAMES();
+	bool isDYNAMIC_CIV_NAMES() const;
 
-	bool isLIMITED_RELIGIONS_EXCEPTIONS();
-	bool isOC_RESPAWN_HOLY_CITIES();
+	bool isLIMITED_RELIGIONS_EXCEPTIONS() const;
+	bool isOC_RESPAWN_HOLY_CITIES() const;
 
-	bool isIDW_ENABLED();
-	float getIDW_BASE_COMBAT_INFLUENCE();
-	float getIDW_NO_CITY_DEFENDER_MULTIPLIER();
-	float getIDW_FORT_CAPTURE_MULTIPLIER();
-	float getIDW_EXPERIENCE_FACTOR();
-	float getIDW_WARLORD_MULTIPLIER();
-	int getIDW_INFLUENCE_RADIUS();
-	float getIDW_PLOT_DISTANCE_FACTOR();
-	float getIDW_WINNER_PLOT_MULTIPLIER();
-	float getIDW_LOSER_PLOT_MULTIPLIER();
-	bool isIDW_EMERGENCY_DRAFT_ENABLED();
-	int getIDW_EMERGENCY_DRAFT_MIN_POPULATION();
-	float getIDW_EMERGENCY_DRAFT_STRENGTH();
-	float getIDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER();
-	bool isIDW_NO_BARBARIAN_INFLUENCE();
-	bool isIDW_NO_NAVAL_INFLUENCE();
-	bool isIDW_PILLAGE_INFLUENCE_ENABLED();
-	float getIDW_BASE_PILLAGE_INFLUENCE();
-	float getIDW_CITY_TILE_MULTIPLIER();
+	bool isIDW_ENABLED() const;
+	float getIDW_BASE_COMBAT_INFLUENCE() const;
+	float getIDW_NO_CITY_DEFENDER_MULTIPLIER() const;
+	float getIDW_FORT_CAPTURE_MULTIPLIER() const;
+	float getIDW_EXPERIENCE_FACTOR() const;
+	float getIDW_WARLORD_MULTIPLIER() const;
+	int getIDW_INFLUENCE_RADIUS() const;
+	float getIDW_PLOT_DISTANCE_FACTOR() const;
+	float getIDW_WINNER_PLOT_MULTIPLIER() const;
+	float getIDW_LOSER_PLOT_MULTIPLIER() const;
+	bool isIDW_EMERGENCY_DRAFT_ENABLED() const;
+	int getIDW_EMERGENCY_DRAFT_MIN_POPULATION() const;
+	float getIDW_EMERGENCY_DRAFT_STRENGTH() const;
+	float getIDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER() const;
+	bool isIDW_NO_BARBARIAN_INFLUENCE() const;
+	bool isIDW_NO_NAVAL_INFLUENCE() const;
+	bool isIDW_PILLAGE_INFLUENCE_ENABLED() const;
+	float getIDW_BASE_PILLAGE_INFLUENCE() const;
+	float getIDW_CITY_TILE_MULTIPLIER() const;
 
-	bool isSS_ENABLED();
-	bool isSS_BRIBE();
-	bool isSS_ASSASSINATE();
+	bool isSS_ENABLED() const;
+	bool isSS_BRIBE() const;
+	bool isSS_ASSASSINATE() const;
 /************************************************************************************************/
 /* Mod Globals                        END                                           phungus420  */
 /************************************************************************************************/
 	void setGraphicalDetailPagingEnabled(bool bEnabled);
-	bool getGraphicalDetailPagingEnabled();
+	bool getGraphicalDetailPagingEnabled() const;
 	int getGraphicalDetailPageInRange();
 
 	int getDefineINT( const char * szName ) const;
@@ -1079,128 +1076,128 @@ public:
 /************************************************************************************************/
 
 
-	int getMOVE_DENOMINATOR();
-	int getNUM_UNIT_PREREQ_OR_BONUSES();
-	int getNUM_BUILDING_PREREQ_OR_BONUSES();
-	int getFOOD_CONSUMPTION_PER_POPULATION();
-	int getMAX_HIT_POINTS();
-	int getPATH_DAMAGE_WEIGHT();
-	int getHILLS_EXTRA_DEFENSE();
-	int getRIVER_ATTACK_MODIFIER();
-	int getAMPHIB_ATTACK_MODIFIER();
-	int getHILLS_EXTRA_MOVEMENT();
-	int getRIVER_EXTRA_MOVEMENT();
-	int getMAX_PLOT_LIST_ROWS();
-	int getUNIT_MULTISELECT_MAX();
-	int getPERCENT_ANGER_DIVISOR();
-	int getEVENT_MESSAGE_TIME();
-	int getROUTE_FEATURE_GROWTH_MODIFIER();
-	int getFEATURE_GROWTH_MODIFIER();
-	int getMIN_CITY_RANGE();
-	int getCITY_MAX_NUM_BUILDINGS();
-	int getNUM_UNIT_AND_TECH_PREREQS();
-	int getNUM_AND_TECH_PREREQS();
-	int getNUM_OR_TECH_PREREQS();
-	int getLAKE_MAX_AREA_SIZE();
-	int getNUM_ROUTE_PREREQ_OR_BONUSES();
-	int getNUM_BUILDING_AND_TECH_PREREQS();
-	int getMIN_WATER_SIZE_FOR_OCEAN();
-	int getFORTIFY_MODIFIER_PER_TURN();
-	int getESTABLISH_MODIFIER_PER_TURN();
-	int getESCAPE_MODIFIER_PER_TURN();
-	int getMAX_CITY_DEFENSE_DAMAGE();
-	int getNUM_CORPORATION_PREREQ_BONUSES();
-	int getPEAK_SEE_THROUGH_CHANGE();
-	int getHILLS_SEE_THROUGH_CHANGE();
-	int getSEAWATER_SEE_FROM_CHANGE();
-	int getPEAK_SEE_FROM_CHANGE();
-	int getHILLS_SEE_FROM_CHANGE();
-	int getUSE_SPIES_NO_ENTER_BORDERS();
+	int getMOVE_DENOMINATOR() const;
+	int getNUM_UNIT_PREREQ_OR_BONUSES() const;
+	int getNUM_BUILDING_PREREQ_OR_BONUSES() const;
+	int getFOOD_CONSUMPTION_PER_POPULATION() const;
+	int getMAX_HIT_POINTS() const;
+	int getPATH_DAMAGE_WEIGHT() const;
+	int getHILLS_EXTRA_DEFENSE() const;
+	int getRIVER_ATTACK_MODIFIER() const;
+	int getAMPHIB_ATTACK_MODIFIER() const;
+	int getHILLS_EXTRA_MOVEMENT() const;
+	int getRIVER_EXTRA_MOVEMENT() const;
+	int getMAX_PLOT_LIST_ROWS() const;
+	int getUNIT_MULTISELECT_MAX() const;
+	int getPERCENT_ANGER_DIVISOR() const;
+	int getEVENT_MESSAGE_TIME() const;
+	int getROUTE_FEATURE_GROWTH_MODIFIER() const;
+	int getFEATURE_GROWTH_MODIFIER() const;
+	int getMIN_CITY_RANGE() const;
+	int getCITY_MAX_NUM_BUILDINGS() const;
+	int getNUM_UNIT_AND_TECH_PREREQS() const;
+	int getNUM_AND_TECH_PREREQS() const;
+	int getNUM_OR_TECH_PREREQS() const;
+	int getLAKE_MAX_AREA_SIZE() const;
+	int getNUM_ROUTE_PREREQ_OR_BONUSES() const;
+	int getNUM_BUILDING_AND_TECH_PREREQS() const;
+	int getMIN_WATER_SIZE_FOR_OCEAN() const;
+	int getFORTIFY_MODIFIER_PER_TURN() const;
+	int getESTABLISH_MODIFIER_PER_TURN() const;
+	int getESCAPE_MODIFIER_PER_TURN() const;
+	int getMAX_CITY_DEFENSE_DAMAGE() const;
+	int getNUM_CORPORATION_PREREQ_BONUSES() const;
+	int getPEAK_SEE_THROUGH_CHANGE() const;
+	int getHILLS_SEE_THROUGH_CHANGE() const;
+	int getSEAWATER_SEE_FROM_CHANGE() const;
+	int getPEAK_SEE_FROM_CHANGE() const;
+	int getHILLS_SEE_FROM_CHANGE() const;
+	int getUSE_SPIES_NO_ENTER_BORDERS() const;
 
-	float getCAMERA_MIN_YAW();
-	float getCAMERA_MAX_YAW();
-	float getCAMERA_FAR_CLIP_Z_HEIGHT();
-	float getCAMERA_MAX_TRAVEL_DISTANCE();
-	float getCAMERA_START_DISTANCE();
-	float getAIR_BOMB_HEIGHT();
-	float getPLOT_SIZE();
-	float getCAMERA_SPECIAL_PITCH();
-	float getCAMERA_MAX_TURN_OFFSET();
-	float getCAMERA_MIN_DISTANCE();
-	float getCAMERA_UPPER_PITCH();
-	float getCAMERA_LOWER_PITCH();
-	float getFIELD_OF_VIEW();
-	float getSHADOW_SCALE();
-	float getUNIT_MULTISELECT_DISTANCE();
+	float getCAMERA_MIN_YAW() const;
+	float getCAMERA_MAX_YAW() const;
+	float getCAMERA_FAR_CLIP_Z_HEIGHT() const;
+	float getCAMERA_MAX_TRAVEL_DISTANCE() const;
+	float getCAMERA_START_DISTANCE() const;
+	float getAIR_BOMB_HEIGHT() const;
+	float getPLOT_SIZE() const;
+	float getCAMERA_SPECIAL_PITCH() const;
+	float getCAMERA_MAX_TURN_OFFSET() const;
+	float getCAMERA_MIN_DISTANCE() const;
+	float getCAMERA_UPPER_PITCH() const;
+	float getCAMERA_LOWER_PITCH() const;
+	float getFIELD_OF_VIEW() const;
+	float getSHADOW_SCALE() const;
+	float getUNIT_MULTISELECT_DISTANCE() const;
 
-	int getUSE_CANNOT_FOUND_CITY_CALLBACK();
-	int getUSE_CAN_FOUND_CITIES_ON_WATER_CALLBACK();
-	int getUSE_IS_PLAYER_RESEARCH_CALLBACK();
-	int getUSE_CAN_RESEARCH_CALLBACK();
-	int getUSE_CANNOT_DO_CIVIC_CALLBACK();
-	int getUSE_CAN_DO_CIVIC_CALLBACK();
-	int getUSE_CANNOT_CONSTRUCT_CALLBACK();
-	int getUSE_CAN_CONSTRUCT_CALLBACK();
-	int getUSE_CAN_DECLARE_WAR_CALLBACK();
-	int getUSE_CANNOT_RESEARCH_CALLBACK();
-	int getUSE_GET_UNIT_COST_MOD_CALLBACK();
-	int getUSE_GET_BUILDING_COST_MOD_CALLBACK();
-	int getUSE_GET_CITY_FOUND_VALUE_CALLBACK();
-	int getUSE_CANNOT_HANDLE_ACTION_CALLBACK();
-	int getUSE_CAN_TRAIN_CALLBACK();
-	int getUSE_CANNOT_TRAIN_CALLBACK();
-	int getUSE_CAN_BUILD_CALLBACK();
-	int getUSE_CAN_TRAIN_CALLBACK(UnitTypes eUnit);
-	int getUSE_CANNOT_TRAIN_CALLBACK(UnitTypes eUnit);
-	int getUSE_CAN_BUILD_CALLBACK(BuildTypes eBuild);
-	int getUSE_UNIT_CANNOT_MOVE_INTO_CALLBACK();
-	int getUSE_USE_CANNOT_SPREAD_RELIGION_CALLBACK();
-	int getUSE_FINISH_TEXT_CALLBACK();
-	int getUSE_ON_UNIT_SET_XY_CALLBACK();
-	int getUSE_ON_UNIT_SELECTED_CALLBACK();
-	int getUSE_ON_UPDATE_CALLBACK();
-	int getUSE_ON_UNIT_CREATED_CALLBACK();
-	int getUSE_ON_UNIT_LOST_CALLBACK();
+	int getUSE_CANNOT_FOUND_CITY_CALLBACK() const;
+	int getUSE_CAN_FOUND_CITIES_ON_WATER_CALLBACK() const;
+	int getUSE_IS_PLAYER_RESEARCH_CALLBACK() const;
+	int getUSE_CAN_RESEARCH_CALLBACK() const;
+	int getUSE_CANNOT_DO_CIVIC_CALLBACK() const;
+	int getUSE_CAN_DO_CIVIC_CALLBACK() const;
+	int getUSE_CANNOT_CONSTRUCT_CALLBACK() const;
+	int getUSE_CAN_CONSTRUCT_CALLBACK() const;
+	int getUSE_CAN_DECLARE_WAR_CALLBACK() const;
+	int getUSE_CANNOT_RESEARCH_CALLBACK() const;
+	int getUSE_GET_UNIT_COST_MOD_CALLBACK() const;
+	int getUSE_GET_BUILDING_COST_MOD_CALLBACK() const;
+	int getUSE_GET_CITY_FOUND_VALUE_CALLBACK() const;
+	int getUSE_CANNOT_HANDLE_ACTION_CALLBACK() const;
+	int getUSE_CAN_TRAIN_CALLBACK() const;
+	int getUSE_CANNOT_TRAIN_CALLBACK() const;
+	int getUSE_CAN_BUILD_CALLBACK() const;
+	int getUSE_CAN_TRAIN_CALLBACK(UnitTypes eUnit) const;
+	int getUSE_CANNOT_TRAIN_CALLBACK(UnitTypes eUnit) const;
+	int getUSE_CAN_BUILD_CALLBACK(BuildTypes eBuild) const;
+	int getUSE_UNIT_CANNOT_MOVE_INTO_CALLBACK() const;
+	int getUSE_USE_CANNOT_SPREAD_RELIGION_CALLBACK() const;
+	int getUSE_FINISH_TEXT_CALLBACK() const;
+	int getUSE_ON_UNIT_SET_XY_CALLBACK() const;
+	int getUSE_ON_UNIT_SELECTED_CALLBACK() const;
+	int getUSE_ON_UPDATE_CALLBACK() const;
+	int getUSE_ON_UNIT_CREATED_CALLBACK() const;
+	int getUSE_ON_UNIT_LOST_CALLBACK() const;
 /************************************************************************************************/
 /* MODULES                                 11/13/07                            MRGENIE          */
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	int getTGA_RELIGIONS();								// GAMEFONT
-	int getTGA_CORPORATIONS();
+	int getTGA_RELIGIONS() const;								// GAMEFONT
+	int getTGA_CORPORATIONS() const;
 /************************************************************************************************/
 /* MODULES                                 END                                                  */
 /************************************************************************************************/
-	int getMAX_CIV_PLAYERS();
-	int getMAX_PC_PLAYERS();
-	int getMAX_PLAYERS();
-	int getMAX_PC_TEAMS();
-	int getMAX_TEAMS();
-	int getBARBARIAN_PLAYER();
-	int getBARBARIAN_TEAM();
-	int getAGGRESSIVE_ANIMAL_PLAYER();
-	int getAGGRESSIVE_ANIMAL_TEAM();
-	int getPASSIVE_ANIMAL_PLAYER();
-	int getPASSIVE_ANIMAL_TEAM();
-	int getNPC1_PLAYER();
-	int getNPC1_TEAM();
-	int getNPC2_PLAYER();
-	int getNPC2_TEAM();
-	int getNPC3_PLAYER();
-	int getNPC3_TEAM();
-	int getNPC4_PLAYER();
-	int getNPC4_TEAM();
-	int getNPC5_PLAYER();
-	int getNPC5_TEAM();
-	int getNPC6_PLAYER();
-	int getNPC6_TEAM();
-	int getNPC7_PLAYER();
-	int getNPC7_TEAM();
-	int getNPC8_PLAYER();
-	int getNPC8_TEAM();
-	int getINVALID_PLOT_COORD();
-	int getNUM_CITY_PLOTS();
-	int getCITY_HOME_PLOT();
+	int getMAX_CIV_PLAYERS() const;
+	int getMAX_PC_PLAYERS() const;
+	int getMAX_PLAYERS() const;
+	int getMAX_PC_TEAMS() const;
+	int getMAX_TEAMS() const;
+	int getBARBARIAN_PLAYER() const;
+	int getBARBARIAN_TEAM() const;
+	int getAGGRESSIVE_ANIMAL_PLAYER() const;
+	int getAGGRESSIVE_ANIMAL_TEAM() const;
+	int getPASSIVE_ANIMAL_PLAYER() const;
+	int getPASSIVE_ANIMAL_TEAM() const;
+	int getNPC1_PLAYER() const;
+	int getNPC1_TEAM() const;
+	int getNPC2_PLAYER() const;
+	int getNPC2_TEAM() const;
+	int getNPC3_PLAYER() const;
+	int getNPC3_TEAM() const;
+	int getNPC4_PLAYER() const;
+	int getNPC4_TEAM() const;
+	int getNPC5_PLAYER() const;
+	int getNPC5_TEAM() const;
+	int getNPC6_PLAYER() const;
+	int getNPC6_TEAM() const;
+	int getNPC7_PLAYER() const;
+	int getNPC7_TEAM() const;
+	int getNPC8_PLAYER() const;
+	int getNPC8_TEAM() const;
+	int getINVALID_PLOT_COORD() const;
+	int getNUM_CITY_PLOTS() const;
+	int getCITY_HOME_PLOT() const;
 
 	// ***** END EXPOSED TO PYTHON *****
 
@@ -1211,7 +1208,7 @@ public:
 #endif
 	CvDLLUtilityIFaceBase* getDLLIFaceNonInl();
 	void setDLLProfiler(FProfiler* prof);
-	FProfiler* getDLLProfiler();
+	FProfiler* getDLLProfiler() const;
 	void enableDLLProfiler(bool bEnable);
 	bool isDLLProfilerEnabled() const;
 	const char* alternateProfileSampleName() const;
@@ -1893,10 +1890,10 @@ public:
 
 // BBAI Options
 public:
-	bool getBBAI_AIR_COMBAT();
-	bool getBBAI_HUMAN_VASSAL_WAR_BUILD();
-	int getBBAI_DEFENSIVE_PACT_BEHAVIOR();
-	bool getBBAI_HUMAN_AS_VASSAL_OPTION();
+	bool getBBAI_AIR_COMBAT() const;
+	bool getBBAI_HUMAN_VASSAL_WAR_BUILD() const;
+	int getBBAI_DEFENSIVE_PACT_BEHAVIOR() const;
+	bool getBBAI_HUMAN_AS_VASSAL_OPTION() const;
 
 protected:
 	bool m_bBBAI_AIR_COMBAT;
@@ -1906,11 +1903,11 @@ protected:
 
 // BBAI AI Variables
 public:
-	int getWAR_SUCCESS_CITY_CAPTURING();
-	int getBBAI_ATTACK_CITY_STACK_RATIO();
-	int getBBAI_SKIP_BOMBARD_BEST_ATTACK_ODDS();
-	int getBBAI_SKIP_BOMBARD_BASE_STACK_RATIO();
-	int getBBAI_SKIP_BOMBARD_MIN_STACK_RATIO();
+	int getWAR_SUCCESS_CITY_CAPTURING() const;
+	int getBBAI_ATTACK_CITY_STACK_RATIO() const;
+	int getBBAI_SKIP_BOMBARD_BEST_ATTACK_ODDS() const;
+	int getBBAI_SKIP_BOMBARD_BASE_STACK_RATIO() const;
+	int getBBAI_SKIP_BOMBARD_MIN_STACK_RATIO() const;
 
 protected:
 	int m_iWAR_SUCCESS_CITY_CAPTURING;
@@ -1921,16 +1918,16 @@ protected:
 
 // Tech Diffusion
 public:
-	bool getTECH_DIFFUSION_ENABLE();
-	int getTECH_DIFFUSION_KNOWN_TEAM_MODIFIER();
-	int getTECH_DIFFUSION_WELFARE_THRESHOLD();
-	int getTECH_DIFFUSION_WELFARE_MODIFIER();
-	int getTECH_COST_FIRST_KNOWN_PREREQ_MODIFIER();
-	int getTECH_COST_KNOWN_PREREQ_MODIFIER();
-	int getTECH_COST_MODIFIER();
-	int getUNIT_PRODUCTION_PERCENT_SM();
-	int getUNIT_PRODUCTION_PERCENT();
-	int getBUILDING_PRODUCTION_PERCENT();
+	bool getTECH_DIFFUSION_ENABLE() const;
+	int getTECH_DIFFUSION_KNOWN_TEAM_MODIFIER() const;
+	int getTECH_DIFFUSION_WELFARE_THRESHOLD() const;
+	int getTECH_DIFFUSION_WELFARE_MODIFIER() const;
+	int getTECH_COST_FIRST_KNOWN_PREREQ_MODIFIER() const;
+	int getTECH_COST_KNOWN_PREREQ_MODIFIER() const;
+	int getTECH_COST_MODIFIER() const;
+	int getUNIT_PRODUCTION_PERCENT_SM() const;
+	int getUNIT_PRODUCTION_PERCENT() const;
+	int getBUILDING_PRODUCTION_PERCENT() const;
 
 protected:
 	bool m_bTECH_DIFFUSION_ENABLE;
@@ -1945,8 +1942,8 @@ protected:
 	int m_iBUILDING_PRODUCTION_PERCENT;
 
 public:
-	int getCOMBAT_DIE_SIDES();
-	int getCOMBAT_DAMAGE();
+	int getCOMBAT_DIE_SIDES() const;
+	int getCOMBAT_DAMAGE() const;
 protected:
 	int m_iCOMBAT_DIE_SIDES;
 	int m_iCOMBAT_DAMAGE;

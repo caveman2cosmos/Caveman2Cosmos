@@ -3655,7 +3655,7 @@ def normalizeAddExtras():
 		usedTiles = bArray()
 		usedCoastTiles = bArray()
 
-		for pIndex in range(cgc.getMAX_CIV_PLAYERS()):
+		for pIndex in range(cgc.getMAX_PC_PLAYERS()):
 			player = cgc.getPlayer(pIndex)
 			if player.isAlive():
 				plot = player.getStartingPlot()

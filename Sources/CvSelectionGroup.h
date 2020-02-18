@@ -212,12 +212,7 @@ public:
 	bool isChoosingNewLeader() const { return m_bIsChoosingNewLeader; }
 
 	inline PlayerTypes getOwner() const { return m_eOwner; } // Exposed to Python
-#ifdef _USRDLL
-	inline PlayerTypes getOwnerINLINE() const
-	{
-		return m_eOwner;
-	}
-#endif
+
 	TeamTypes getTeam() const;																																					// Exposed to Python
 
 	ActivityTypes getActivityType() const;																															// Exposed to Python
@@ -468,6 +463,8 @@ public:
 	// fn::find_if(groups(), CvSelectionGroup::fn::getHeadUnitAI() != UNITAI_SETTLER)
 	//
 	struct fn {
+		DECLARE_MAP_FUNCTOR(CvSelectionGroup, bool, readyToAuto);
+		DECLARE_MAP_FUNCTOR(CvSelectionGroup, bool, isAutomated);
 		DECLARE_MAP_FUNCTOR(CvSelectionGroup, CvUnit*, getHeadUnit);
 		DECLARE_MAP_FUNCTOR(CvSelectionGroup, UnitAITypes, getHeadUnitAI);
 		DECLARE_MAP_FUNCTOR(CvSelectionGroup, PlayerTypes, getHeadOwner);

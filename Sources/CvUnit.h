@@ -652,8 +652,8 @@ public:
 	const CvWString getDescription(uint uiForm = 0) const;
 
 	bool canShadow() const;
-	bool canShadowAt(CvPlot* pShadowPlot, CvUnit* pShadowUnit = NULL) const;
-
+	bool canShadowAt(const CvPlot* pShadowPlot, CvUnit* pShadowUnit = NULL) const;
+	
 	void setShadowUnit(CvUnit* pUnit);
 	CvUnit* getShadowUnit() const;
 
@@ -1128,23 +1128,9 @@ public:
 	void setHotKeyNumber(int iNewValue); // Exposed to Python
 
 	DllExport int getViewportX() const; // Exposed to Python
-	inline int getX_INLINE() const
-	{
-		return m_iX;
-	}
-	inline int getX() const
-	{
-		return m_iX;
-	}
+	inline int getX() const { return m_iX; }
 	DllExport int getViewportY() const; // Exposed to Python
-	inline int getY() const
-	{
-		return m_iY;
-	}
-	inline int getY_INLINE() const
-	{
-		return m_iY;
-	}
+	inline int getY() const { return m_iY; }
 	bool isInViewport() const;
 	void setXY(int iX, int iY, bool bGroup = false, bool bUpdate = true, bool bShow = false, bool bCheckPlotVisible = false, bool bInit = false); // Exposed to Python
 	bool isTempUnit() const;
@@ -1624,13 +1610,7 @@ public:
 	void setBlockading(bool bNewValue);
 	void collectBlockadeGold();
 
-	DllExport PlayerTypes getOwner() const; // Exposed to Python
-#ifdef _USRDLL
-	inline PlayerTypes getOwnerINLINE() const
-	{
-		return m_eOwner;
-	}
-#endif
+	DllExport inline PlayerTypes getOwner() const { return m_eOwner; } // Exposed to Python
 	DllExport PlayerTypes getVisualOwner(TeamTypes eForTeam = NO_TEAM) const; // Exposed to Python
 	PlayerTypes getCombatOwner(TeamTypes eForTeam, const CvPlot* pPlot) const; // Exposed to Python
 	DllExport TeamTypes getTeam() const; // Exposed to Python
@@ -1650,7 +1630,7 @@ public:
 
 	DllExport CvUnit* getCombatUnit() const;
 	void setCombatUnit(CvUnit* pUnit, bool bAttacking = false, bool bStealthAttack = false, bool bStealthDefense = false);
-	bool showSeigeTower(CvUnit* pDefender) const; // K-Mod
+	bool showSeigeTower(const CvUnit* pDefender) const; // K-Mod
 
 	CvUnit* getTransportUnit() const; // Exposed to Python
 	bool isCargo() const; // Exposed to Python
@@ -2711,10 +2691,10 @@ public:
 	void setRetrainsAvailable(int iNewValue);
 	void changeRetrainsAvailable(int iChange);
 
-	int getExperiencefromWithdrawal(int iWithdrawalProbability);
+	int getExperiencefromWithdrawal(const int iWithdrawalProbability) const;
 
 //Team Project (3)
-	int getExtraCaptureProbabilityModifier (bool bIgnoreCommanders = false) const;
+	int getExtraCaptureProbabilityModifier(bool bIgnoreCommanders = false) const;
 	void changeExtraCaptureProbabilityModifier(int iChange);
 	int captureProbabilityTotal() const;
 
@@ -2761,8 +2741,8 @@ public:
 
 	void checkCityAttackDefensesDamage(CvCity* pCity, const std::vector<UnitCombatTypes>& kDamagableUnitCombatTypes);
 
-	bool isBreakdownCombat(CvPlot* pPlot, bool bSamePlot = false);
-	void resolveBreakdownAttack(CvPlot* pPlot, CvUnit* pDefender, int AdjustedRepel);
+	bool isBreakdownCombat(const CvPlot* pPlot, bool bSamePlot = false) const;
+	void resolveBreakdownAttack(const CvPlot* pPlot, CvUnit* pDefender, const int AdjustedRepel);
 
 	int getDiminishingReturn(int i) const;
 	int getApproaching0Return(int i) const;
@@ -3211,7 +3191,7 @@ public:
 	int getNoCaptureCount() const;
 	void changeNoCaptureCount(int iChange);
 
-	void makeWanted(CvCity* pCity);
+	void makeWanted(const CvCity* pCity);
 
 	int getDistanceAttackCommunicability(PromotionLineTypes eAfflictionLine) const;
 	void changeDistanceAttackCommunicability(PromotionLineTypes eAfflictionLine, int iChange);
@@ -3341,6 +3321,7 @@ public:
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, alwaysInvisible);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, IsSelected);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isCommander);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isGoldenAge);
 		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, hasAfflictionLine, PromotionLineTypes);
 
 		DECLARE_MAP_FUNCTOR_1(CvUnit, int, upgradePrice, UnitTypes);
@@ -3352,7 +3333,10 @@ public:
 		DECLARE_MAP_FUNCTOR(CvUnit, UnitTypes, getUnitType);
 		DECLARE_MAP_FUNCTOR(CvUnit, UnitCombatTypes, getUnitCombatType);
 
+		DECLARE_MAP_FUNCTOR(CvUnit, int, getArea);
+		DECLARE_MAP_FUNCTOR(CvUnit, const CvArea*, area);
 		DECLARE_MAP_FUNCTOR(CvUnit, const CvPlot*, plot);
+		DECLARE_MAP_FUNCTOR(CvUnit, const CvUnitInfo&, getUnitInfo);
 		DECLARE_MAP_FUNCTOR(CvUnit, BuildTypes, getBuildType);
 		DECLARE_MAP_FUNCTOR(CvUnit, ImprovementTypes, getBuildTypeImprovement);
 		DECLARE_MAP_FUNCTOR(CvUnit, int, getCargo);
