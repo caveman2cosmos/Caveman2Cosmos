@@ -83,13 +83,6 @@
 		<Italian>Lo zoroastrismo proibisce la schiaivtù; se lo zoroastrismo è presente in città o è la tua religione ufficiale, i cittadini si arrabbieranno se permetti la schiavitù. I magi, missionari di Zoroastro, possono eliminare la schiavitù dalla tua nazione proprio come farebbe un Grande Personaggio.</Italian>
 		<Polish>Zaratusztrianizm potępiał niewolnictwo w każdej postaci.</Polish>
 	</TEXT>
-	<!--	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WORLDVIEW_BAD_PEDIA</Tag>
-		<English>We don't have the ability (yet) to have a building become unhappy with advances in knowledge. These auto build buildings simulate this for now.</English>
-		<French>We don't have the ability (yet) to have a building become unhappy with advances in knowledge. These auto build buildings simulate this for now.</French>
-		<Italian>Non abbiamo ancora l'abilità di generare infelicità da un edificio con gli avanzi tecnologici. Questo effetto viene quindi simulato da un edificio fittizio.</Italian>
-	</TEXT>
--->
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLAVE_MARKET_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Slave Market increases the outcomes from using Captives as Slaves eg increases amount of gold you get from selling a captive into slavery.</English>
@@ -131,21 +124,6 @@
 		<French>Les différents Camps d'esclaves procurent l'accès à des esclaves spécialistes dans les villes.</French>
 		<Italian>Le diverse baracche degli schiavi forniscono l'accesso a diversi schiavi specializzati.</Italian>
 		<Polish>Różne rodzaje Baraków Niewolników dostarczają róznych korzyści.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SLAVE_COMPOUND</Tag>
-		<English>Slave Compound - Management</English>
-		<French>
-			<Text>Camp d'esclaves - Management</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Baracca degli schiavi - Manutenzione</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Baraki Niewolników - Zarządcy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLAVE_COMPOUND_MILITARY_SUPPORT</Tag>

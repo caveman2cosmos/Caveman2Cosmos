@@ -433,20 +433,6 @@
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
-			<PrereqOrTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_LUNAR_PLAINS</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_LUNAR_BARREN</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_LUNAR_DESERT</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-			</PrereqOrTerrain>
 			<FreeBonus>BONUS_MOON_ROCKS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>-1</iCost>

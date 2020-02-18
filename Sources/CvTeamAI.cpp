@@ -224,7 +224,7 @@ void CvTeamAI::AI_makeAssignWorkDirty()
 /* 	General AI																*/
 /********************************************************************************/
 // Find plot strength of teammates and potentially vassals
-int CvTeamAI::AI_getOurPlotStrength(CvPlot* pPlot, int iRange, bool bDefensiveBonuses, bool bTestMoves, bool bIncludeVassals)
+int CvTeamAI::AI_getOurPlotStrength(const CvPlot* pPlot, const int iRange, const bool bDefensiveBonuses, const bool bTestMoves, const bool bIncludeVassals) const
 {
 	int iI;
 	int iPlotStrength = 0;
@@ -247,7 +247,7 @@ int CvTeamAI::AI_getOurPlotStrength(CvPlot* pPlot, int iRange, bool bDefensiveBo
 /********************************************************************************/
 
 
-void CvTeamAI::AI_updateAreaStragies(bool bTargets)
+void CvTeamAI::AI_updateAreaStragies(const bool bTargets)
 {
 	CvArea* pLoopArea;
 	int iLoop;
@@ -320,7 +320,7 @@ int CvTeamAI::AI_countFinancialTrouble() const
 }
 
 
-int CvTeamAI::AI_countMilitaryWeight(CvArea* pArea) const
+int CvTeamAI::AI_countMilitaryWeight(const CvArea* pArea) const
 {
 	int iCount;
 	int iI;
@@ -364,7 +364,7 @@ bool CvTeamAI::AI_isAnyCapitalAreaAlone() const
 }
 
 
-bool CvTeamAI::AI_isPrimaryArea(CvArea* pArea) const
+bool CvTeamAI::AI_isPrimaryArea(const CvArea* pArea) const
 {
 	int iI;
 
@@ -386,7 +386,7 @@ bool CvTeamAI::AI_isPrimaryArea(CvArea* pArea) const
 }
 
 
-bool CvTeamAI::AI_hasCitiesInPrimaryArea(TeamTypes eTeam) const
+bool CvTeamAI::AI_hasCitiesInPrimaryArea(const TeamTypes eTeam) const
 {
 	CvArea* pLoopArea;
 	int iLoop;
@@ -408,7 +408,7 @@ bool CvTeamAI::AI_hasCitiesInPrimaryArea(TeamTypes eTeam) const
 }
 
 
-AreaAITypes CvTeamAI::AI_calculateAreaAIType(CvArea* pArea, bool bPreparingTotal) const
+AreaAITypes CvTeamAI::AI_calculateAreaAIType(const CvArea* pArea, const bool bPreparingTotal) const
 {
 	PROFILE_FUNC();
 
@@ -961,55 +961,24 @@ bool CvTeamAI::AI_isAllyLandTarget(TeamTypes eTeam) const
 
 bool CvTeamAI::AI_shareWar(TeamTypes eTeam) const
 {
-	int iI;
-
-/************************************************************************************************/
-/* REVOLUTION_MOD                         10/25/08                                jdog5000      */
-/*                                                                                              */
-/* For minor civs, StartAsMinors                                                                */
-/************************************************************************************************/
-	/* original BTS code
-	for (iI = 0; iI < MAX_CIV_TEAMS; iI++)
-	{
-		if (GET_TEAM((TeamTypes)iI).isAlive() && !GET_TEAM((TeamTypes)iI).isMinorCiv())
-		{
-			if ((iI != getID()) && (iI != eTeam))
-			{
-				if (isAtWar((TeamTypes)iI) && GET_TEAM(eTeam).isAtWar((TeamTypes)iI))
-				{
-					return true;
-				}
-			}
-		}
-	}
-	*/
 	// No dealing with minor civs
-	if( isMinorCiv() || GET_TEAM(eTeam).isMinorCiv() )
+	if (isMinorCiv() || GET_TEAM(eTeam).isMinorCiv())
 	{
 		return false;
 	}
-
 	// Only accumulate if someone actually declared war, not a left over from StartAsMinors
-	for (iI = 0; iI < MAX_PC_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
-		if (GET_TEAM((TeamTypes)iI).isAlive() && !GET_TEAM((TeamTypes)iI).isMinorCiv())
+		if (iI != getID() && iI != eTeam && GET_TEAM((TeamTypes)iI).isAlive() && !GET_TEAM((TeamTypes)iI).isMinorCiv()
+		&& isAtWar((TeamTypes)iI) && GET_TEAM(eTeam).isAtWar((TeamTypes)iI)
+		&& (AI_getWarPlan((TeamTypes)iI) != WARPLAN_LIMITED
+			|| GET_TEAM(eTeam).AI_getWarPlan((TeamTypes)iI) != WARPLAN_LIMITED 
+			|| GET_TEAM((TeamTypes)iI).AI_getWarPlan(getID()) != WARPLAN_LIMITED 
+			|| GET_TEAM((TeamTypes)iI).AI_getWarPlan(eTeam) != WARPLAN_LIMITED))
 		{
-			if ((iI != getID()) && (iI != eTeam))
-			{
-				if (isAtWar((TeamTypes)iI) && GET_TEAM(eTeam).isAtWar((TeamTypes)iI))
-				{
-					if( AI_getWarPlan((TeamTypes)iI) != WARPLAN_LIMITED || GET_TEAM(eTeam).AI_getWarPlan((TeamTypes)iI) != WARPLAN_LIMITED || GET_TEAM((TeamTypes)iI).AI_getWarPlan(getID()) != WARPLAN_LIMITED || GET_TEAM((TeamTypes)iI).AI_getWarPlan(eTeam) != WARPLAN_LIMITED )
-					{
-						return true;
-					}
-				}
-			}
+			return true;
 		}
 	}
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
-
 	return false;
 }
 
@@ -2886,7 +2855,7 @@ int CvTeamAI::AI_getRivalAirPower( ) const
 	return (iEnemyAirPower + (iRivalAirPower / std::max(1,getHasMetCivCount(true))));
 }
 
-bool CvTeamAI::AI_acceptSurrender( TeamTypes eSurrenderTeam )
+bool CvTeamAI::AI_acceptSurrender(TeamTypes eSurrenderTeam) const
 {
 	PROFILE_FUNC();
 
@@ -2972,14 +2941,13 @@ bool CvTeamAI::AI_acceptSurrender( TeamTypes eSurrenderTeam )
 				else
 				{
 					// Valuable terrain bonuses
-					CvPlot* pLoopPlot = NULL;
 					for (int iJ = 0; iJ < NUM_CITY_PLOTS; iJ++)
 					{
-						pLoopPlot = plotCity(pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE(), iJ);
+						const CvPlot* pLoopPlot = plotCity(pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE(), iJ);
 
 						if (pLoopPlot != NULL)
 						{
-							BonusTypes eBonus = pLoopPlot->getNonObsoleteBonusType(getID());
+							const BonusTypes eBonus = pLoopPlot->getNonObsoleteBonusType(getID());
 							if ( eBonus != NO_BONUS)
 							{
 								if(GET_PLAYER(getLeaderID()).AI_bonusVal(eBonus) > 15)
@@ -2992,9 +2960,9 @@ bool CvTeamAI::AI_acceptSurrender( TeamTypes eSurrenderTeam )
 					}
 				}
 
-				int iOwnerPower = GET_PLAYER((PlayerTypes)iI).AI_getOurPlotStrength(pLoopCity->plot(), 2, true, false);
-				int iOurPower = AI_getOurPlotStrength(pLoopCity->plot(), 2, false, false, true);
-				int iOtherPower = GET_PLAYER((PlayerTypes)iI).AI_getEnemyPlotStrength(pLoopCity->plot(), 2, false, false) - iOurPower;
+				const int iOwnerPower = GET_PLAYER((PlayerTypes)iI).AI_getOurPlotStrength(pLoopCity->plot(), 2, true, false);
+				const int iOurPower = AI_getOurPlotStrength(pLoopCity->plot(), 2, false, false, true);
+				const int iOtherPower = GET_PLAYER((PlayerTypes)iI).AI_getEnemyPlotStrength(pLoopCity->plot(), 2, false, false) - iOurPower;
 
 				if( iOtherPower > iOwnerPower )
 				{
@@ -5131,7 +5099,7 @@ void CvTeamAI::AI_doCounter()
 /* War Strategy AI                                                                              */
 /************************************************************************************************/
 // Block AI from declaring war on a distant vassal if it shares an area with the master
-bool CvTeamAI::AI_isOkayVassalTarget( TeamTypes eTeam )
+bool CvTeamAI::AI_isOkayVassalTarget(const TeamTypes eTeam) const
 {
 	if( GET_TEAM(eTeam).isAVassal() )
 	{
@@ -5996,7 +5964,7 @@ bool CvTeamAI::AI_performNoWarRolls(TeamTypes eTeam)
 	return false;	
 }
 
-int CvTeamAI::AI_getAttitudeWeight(TeamTypes eTeam)
+int CvTeamAI::AI_getAttitudeWeight(const TeamTypes eTeam) const
 {
 	int iAttitudeWeight = 0;
 	switch (AI_getAttitude(eTeam))
@@ -6026,7 +5994,7 @@ int CvTeamAI::AI_getLowestVictoryCountdown() const
 	int iBestVictoryCountdown = MAX_INT;
 	for (int iVictory = 0; iVictory < GC.getNumVictoryInfos(); iVictory++)
 	{
-		 int iCountdown = getVictoryCountdown((VictoryTypes)iVictory);
+		const int iCountdown = getVictoryCountdown((VictoryTypes)iVictory);
 		 if (iCountdown > 0)
 		 {
 			iBestVictoryCountdown = std::min(iBestVictoryCountdown, iCountdown);
@@ -6240,7 +6208,7 @@ int CvTeamAI::AI_getTechMonopolyValue(TechTypes eTech, TeamTypes eTeam) const
 	
 }
 
-bool CvTeamAI::AI_isWaterAreaRelevant(CvArea* pArea)
+bool CvTeamAI::AI_isWaterAreaRelevant(const CvArea* pArea) const
 {
 	PROFILE_FUNC();
 
@@ -6252,7 +6220,7 @@ bool CvTeamAI::AI_isWaterAreaRelevant(CvArea* pArea)
 /*                                                                                              */
 /* City AI                                                                                      */
 /************************************************************************************************/
-	CvArea* pBiggestArea = GC.getMap().findBiggestArea(true);
+	const CvArea* pBiggestArea = GC.getMap().findBiggestArea(true);
 	if (pBiggestArea == pArea)
 	{
 		return true;
@@ -6262,7 +6230,7 @@ bool CvTeamAI::AI_isWaterAreaRelevant(CvArea* pArea)
 	// Also count lakes which are connected to ocean by a bridge city
 	for (int iPlayer = 0; iPlayer < MAX_PC_PLAYERS; iPlayer++)
 	{
-		CvPlayerAI& kPlayer = GET_PLAYER((PlayerTypes)iPlayer);
+		const CvPlayerAI& kPlayer = GET_PLAYER((PlayerTypes)iPlayer);
 		
 		if ((iTeamCities < 2 && (kPlayer.getTeam() == getID())) || (iOtherTeamCities < 2 && (kPlayer.getTeam() != getID())))
 		{

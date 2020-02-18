@@ -16,13 +16,7 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RODNOVERY_CATHEDRAL</ArtDefineTag>
 			<ReligionType>RELIGION_RODNOVERY</ReligionType>
-			<PrereqReligion>RELIGION_RODNOVERY</PrereqReligion>	<!-- RODNOVERY pilgrimages go to lots of places; huge practice.  EWR -->
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>10</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
+			<PrereqReligion>RELIGION_RODNOVERY</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>280</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -111,12 +105,6 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_FURNITURE</Bonus>
 			</PrereqBonuses>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>216</iCost>
 			<iConquestProb>0</iConquestProb>
@@ -178,12 +166,6 @@
 			<ReligionType>RELIGION_RODNOVERY</ReligionType>
 			<PrereqReligion>RELIGION_RODNOVERY</PrereqReligion>
 			<Bonus>BONUS_BRICKS</Bonus>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SPIRITUAL</ProductionTraitType>
-					<iProductionTrait>50	</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
 			<iConquestProb>0</iConquestProb>

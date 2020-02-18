@@ -14,10 +14,6 @@
 	<!-- End Mine Warfare General -->
 	<!-- Mine Warfare Action Buttons -->
 	<TEXT>
-		<Tag>TXT_KEY_MISSION_ARM_MINE</Tag>
-		<English>Arm Mine</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISSION_SWEEP_FOR_MINE_SEA</Tag>
 		<English>Remove Naval Mine</English>
 	</TEXT>
@@ -286,16 +282,8 @@
 		<English>Your nuclear mine has exploded..</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISSION_SWEEP_FOR_LAND_MINE</Tag>
-		<English>Sweep the plot looking for mines.</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISSION_SWEEP_FOR_LAND_MINE_MESSAGE</Tag>
 		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_SWEEP_FOR_SEA_MINE</Tag>
-		<English>Sweep the plot looking for mines.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SWEEP_FOR_SEA_MINE_MESSAGE</Tag>

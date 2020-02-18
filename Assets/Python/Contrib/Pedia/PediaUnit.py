@@ -238,11 +238,11 @@ class PediaUnit:
 			if nOr > 1:
 				aReqList.append(braL)
 			iType = aList0.pop(0)
-			aReqList.append([szChild + str(iType) + "|" + str(n), GC.getBuildingInfo(iType).getButton()])
+			aReqList.append([szChild + str(iType) + "|" + str(n), GC.getCivicInfo(iType).getButton()])
 			n += 1
 			for iType in aList0:
 				aReqList.append(OR)
-				aReqList.append([szChild + str(iType) + "|" + str(n), GC.getBuildingInfo(iType).getButton()])
+				aReqList.append([szChild + str(iType) + "|" + str(n), GC.getCivicInfo(iType).getButton()])
 				n += 1
 			if nOr > 1:
 				aReqList.append(braR)

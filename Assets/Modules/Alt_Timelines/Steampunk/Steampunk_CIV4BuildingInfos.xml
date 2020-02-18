@@ -52,12 +52,6 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_WARE_COPPER</Bonus>
 			</PrereqBonuses>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SCIENTIFIC</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>655</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iHealth>-3</iHealth>
@@ -97,12 +91,6 @@
 				<Bonus>BONUS_TIRES</Bonus>
 				<Bonus>BONUS_RUBBER</Bonus>
 			</PrereqBonuses>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>655</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<HealUnitCombatTypes>
@@ -154,12 +142,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_STEAMPUNK</Bonus>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_DECEIVER</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>655</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iWarWearinessModifier>-30</iWarWearinessModifier>
@@ -211,12 +193,6 @@
 				<Bonus>BONUS_STONE</Bonus>
 				<Bonus>BONUS_BRICKS</Bonus>
 			</PrereqBonuses>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SCIENTIFIC</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>655</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iMaintenanceModifier>-15</iMaintenanceModifier>
@@ -455,12 +431,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_STEAMPUNK</Bonus>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SEAFARING</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<FreePromotion>PROMOTION_NAVIGATION2</FreePromotion>
 			<bWater>1</bWater>
 			<bNukeImmune>1</bNukeImmune>

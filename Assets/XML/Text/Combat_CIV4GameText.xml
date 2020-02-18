@@ -263,10 +263,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ATTACKER_DAMAGE_MODIFIER</Tag>
 		<English>[ICON_BULLET]Attacker Damage Modifier: %D1_Bonus%%</English>
+		<French>[ICON_BULLET]Modif de dégats (Attaquant): %D1_Bonus%%</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_DEFENDER_DAMAGE_MODIFIER</Tag>
 		<English>[ICON_BULLET]Defender Damage Modifier: %D1_Bonus%%</English>
+		<French>[ICON_BULLET]Modif de dégats (Défenseur) : %D1_Bonus%%</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_DAMAGE_MODIFIER</Tag>
@@ -481,6 +483,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_MAY_AFFLICT2</Tag>
 		<English>Chance</English>
+		<French>Chance</French>
 		<Polish>Szansa</Polish>
 	</TEXT>
 	<TEXT>
@@ -4187,11 +4190,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CORVETTE</Tag>
 		<English>Corvette</English>
+		<French>Corvette</French>
 		<Polish>Korwety</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_COSTLESS</Tag>
 		<English>Costless</English>
+		<French>Gratuit</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CRIMINAL</Tag>
@@ -6251,6 +6256,10 @@
 		<Polish>Kultura (Sumeryjska)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SUNDANESE</Tag>
+		<English>Culture(Sundanese)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SWAHILI</Tag>
 		<English>Culture(Swahili)</English>
 		<French>
@@ -6568,11 +6577,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CUTTER</Tag>
 		<English>Cutter</English>
+		<French>Coupant</French>
 		<Polish>Kuter</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_DESTROYER</Tag>
 		<English>Destroyers</English>
+		<French>Destructeurs</French>
 		<Spanish>
 			<Text>Destructor:Destructores</Text>
 			<Gender>Male</Gender>
@@ -6850,11 +6861,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_ERA_INFORMATION</Tag>
 		<English>Era(Information)</English>
+		<French>Ere(Information)</French>
 		<German>(Epoche) Informationszeitalter</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_ERA_NANOTECH</Tag>
 		<English>Era(Nanotech)</English>
+		<French>Ere(Nanotech)</French>
 		<German>(Epoche) Nanozeitalter</German>
 	</TEXT>
 	<TEXT>
@@ -6892,11 +6905,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_ERA_COSMIC</Tag>
 		<English>Era(Cosmic)</English>
+		<French>Ere(Cosmique)</French>
 		<German>(Epoche) Kosmisches Zeitalter</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_ERA_TRANSCENDENT</Tag>
 		<English>Era(Transcendent)</English>
+		<French>Ere(Transcendance)</French>
 		<German>(Epoche) Transzendenz</German>
 	</TEXT>
 	<TEXT>
@@ -7021,6 +7036,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DOMAIN_FREE_EXPERIENCE</Tag>
 		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 for being a %s2_DOMAIN type unit[COLOR_REVERT]</English>
+		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 en étant une unité de type %s2_DOMAIN[COLOR_REVERT]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_GRAVITY_DRIVE_SHIPS</Tag>
@@ -7591,6 +7607,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_MAMMAL_APE</Tag>
 		<English>Mammal(Ape)</English>
+		<French>Mammifères(Grand Singe)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_MAMMAL_BAT</Tag>
@@ -7775,6 +7792,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_MAMMAL_MONKEY</Tag>
 		<English>Mammal(Monkey)</English>
+		<French>Mammifères(Singe)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_MAMMAL_MONOTREME</Tag>
@@ -7839,12 +7857,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_MAMMAL_PROSIMIAN</Tag>
 		<English>Mammal(Prosimian)</English>
+		<French>Mammifères (Prosimien)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_MAMMAL_RACCOON</Tag>
 		<English>Mammal(Raccoon)</English>
 		<French>
-			<Text>Mammifères (Raccoon)</Text>
+			<Text>Mammifères (Raton-laveur)</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -8811,6 +8830,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_RECKLESS_ANIMAL</Tag>
 		<English>Reckless Animal</English>
+		<French>Animal téméraire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_RECON</Tag>
@@ -9312,8 +9332,8 @@
 		<Tag>TXT_KEY_UNITCOMBAT_RUFFIAN</Tag>
 		<English>Ruffian</English>
 		<French>
-			<Text>Ruffian</Text>
-			<Gender>Female</Gender>
+			<Text>Hors-la-loi</Text>
+			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
 		<Spanish>
@@ -9358,7 +9378,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_SHIELD_ATTOMETER</Tag>
 		<English>Shield(Attometer)</English>
-		<French>Shield(Attometre)</French>
+		<French>Protection(Attometre)</French>
 		<Polish>Tarcza (Mkroatomowa)</Polish>
 	</TEXT>
 	<TEXT>
@@ -9379,13 +9399,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_SHIELD_CRYSTAL</Tag>
 		<English>Shield(Crystal)</English>
-		<French>Shield(Cristal)</French>
+		<French>Protection(Cristal)</French>
 		<Polish>Tarcza (Kryształowa)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_SHIELD_ELECTROMAGNETIC</Tag>
 		<English>Shield(Electromagnetic)</English>
-		<French>Shield(Electromagnétique)</French>
+		<French>Bouclier(Electromagnétique)</French>
 		<Polish>Tarcza (Elektromagnetyczna)</Polish>
 	</TEXT>
 	<TEXT>
@@ -9406,13 +9426,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_SHIELD_FORCE_FIELD</Tag>
 		<English>Shield(Force Field)</English>
-		<French>Shield(Champ de Force)</French>
+		<French>Bouclier(Champ de Force)</French>
 		<Polish>Tarcza (Pole Siłowe)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_SHIELD_GRAVITY</Tag>
 		<English>Shield(Gravity)</English>
-		<French>Shield(Gravité)</French>
+		<French>Bouclier(Gravité)</French>
 		<Polish>Tarcza (Grawitacyjna)</Polish>
 	</TEXT>
 	<TEXT>
@@ -9595,13 +9615,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_SHIELD_REINFORCED_FORCE_FIELD</Tag>
 		<English>Shield(Reinforced Force Field)</English>
-		<French>Shield(Champ de force renforcé)</French>
+		<French>Bouclier(Champ de force renforcé)</French>
 		<Polish>Tarcza (Wzmocnione Pole Siłowe)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_SHIELD_SHRAPNEL</Tag>
 		<English>Shield(Shrapnel)</English>
-		<French>Shield(Eclats d'obus)</French>
+		<French>Bouclier(Eclats d'obus)</French>
 		<Polish>Tarcza (Szrapnele)</Polish>
 	</TEXT>
 	<TEXT>
@@ -9622,13 +9642,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_SHIELD_SONIC</Tag>
 		<English>Shield(Sonic)</English>
-		<French>Shield(Sonique)</French>
+		<French>Bouclier(Sonique)</French>
 		<Polish>Tarcza (Soniczna)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_SHIELD_THERMAL_NEGATION</Tag>
 		<English>Shield(Thermal Negation)</English>
-		<French>Shield(Négation Thermique)</French>
+		<French>Bouclier(Négation Thermique)</French>
 		<Polish>Tarcza (Termiczna Negacja)</Polish>
 	</TEXT>
 	<TEXT>
@@ -9649,6 +9669,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_SHIELD_TRANSTANGIBLE</Tag>
 		<English>Shield(Transtangible)</English>
+		<French>Bouclier(Transtangible)</French>
 		<Polish>Tarcza (Kwantowa)</Polish>
 	</TEXT>
 	<TEXT>
@@ -9822,7 +9843,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_SIZE_DIMINUTIVE</Tag>
 		<English>Size(Diminutive)</English>
 		<French>
-			<Text>Size(Minuscule)</Text>
+			<Text>Taille(Minuscule)</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -9923,6 +9944,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_SPACE_WORKER</Tag>
 		<English>Space Workers</English>
+		<French>Ouvriers Spatiaux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_SIZE_SMALL</Tag>
@@ -10311,7 +10333,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_A2G_BIOLOGICAL</Tag>
 		<English>Wields(A2G Biological)</English>
 		<French>
-			<Text>Equipé: Armes Biologiques - Air-Sol</Text>
+			<Text>Equipem.: Armes Biologiques - Air-Sol</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10326,7 +10348,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_A2G_BOMBS</Tag>
 		<English>Wields(A2G Bombs)</English>
 		<French>
-			<Text>Equipé: Bombes - Air-Sol</Text>
+			<Text>Equipem.: Bombes - Air-Sol</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10341,7 +10363,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_A2G_CHEMICAL</Tag>
 		<English>Wields(A2G Chemical)</English>
 		<French>
-			<Text>Equipé: Armes Chimiques - Air-Sol</Text>
+			<Text>Equipem.: Armes Chimiques - Air-Sol</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10356,7 +10378,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_A2G_GUIDED</Tag>
 		<English>Wields(A2G Guided)</English>
 		<French>
-			<Text>Equipé: Armes Guidées - Air-Sol</Text>
+			<Text>Equipem.: Armes Guidées - Air-Sol</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10371,7 +10393,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_A2G_LONG_RANGE_MISSILE</Tag>
 		<English>Wields(A2G Long Range Missiles)</English>
 		<French>
-			<Text>Equipé: Missiles longue portée - Air-Sol</Text>
+			<Text>Equipem.: Missiles longue portée - Air-Sol</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10386,7 +10408,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_A2G_MEDIUM_RANGE_MISSILE</Tag>
 		<English>Wields(A2G Medium Range Missiles)</English>
 		<French>
-			<Text>Equipé: Missiles portée moyenne - Air-Sol</Text>
+			<Text>Equipem.: Missiles portée moyenne - Air-Sol</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10401,7 +10423,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_A2G_RADIOACTIVE</Tag>
 		<English>Wields(A2G Radioactive)</English>
 		<French>
-			<Text>Equipé: Armes Radioactives - Air-Sol</Text>
+			<Text>Equipem.: Armes Radioactives - Air-Sol</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10416,7 +10438,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_A2G_SHORT_RANGE_MISSILE</Tag>
 		<English>Wields(A2G Short Range Missiles)</English>
 		<French>
-			<Text>Equipé: Missiles courte portée - Air-Sol</Text>
+			<Text>Equipem.: Missiles courte portée - Air-Sol</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10431,7 +10453,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_A2G_TORPEDO</Tag>
 		<English>Wields(A2G Torpedos)</English>
 		<French>
-			<Text>Equipé: Torpilles - Air-Sol</Text>
+			<Text>Equipem.: Torpilles - Air-Sol</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10464,7 +10486,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_AXE</Tag>
 		<English>Wields(Dist Backup Axe)</English>
 		<French>
-			<Text>Equipé: Hache - soutien à distance</Text>
+			<Text>Equipem.: Hache - soutien à distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10479,7 +10501,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_BALLISTA</Tag>
 		<English>Wields(Dist Backup Ballista)</English>
 		<French>
-			<Text>Equipé: Balliste - soutien à distance</Text>
+			<Text>Equipem.: Balliste - soutien à distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10494,7 +10516,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_BLOWGUN</Tag>
 		<English>Wields(Dist Backup Blowgun)</English>
 		<French>
-			<Text>Equipé: Sarbacane - soutien à distance</Text>
+			<Text>Equipem.: Sarbacane - soutien à distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10509,7 +10531,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_BOLA</Tag>
 		<English>Wields(Dist Backup Bola)</English>
 		<French>
-			<Text>Equipé: Bolas - Soutien à Dist.</Text>
+			<Text>Equipem.: Bolas - Soutien à Dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10524,7 +10546,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_BOOMERANG</Tag>
 		<English>Wields(Dist Backup Boomerang)</English>
 		<French>
-			<Text>Equipé: Boomerang - Soutien à Dist.</Text>
+			<Text>Equipem.: Boomerang - Soutien à Dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10539,7 +10561,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_CANNONBALL</Tag>
 		<English>Wields(Dist Backup Cannonball)</English>
 		<French>
-			<Text>Equipé: Boulet de Canon- Soutien à Dist.</Text>
+			<Text>Equipem.: Boulet de Canon- Soutien à Dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10554,7 +10576,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_CLUB</Tag>
 		<English>Wields(Dist Backup Club)</English>
 		<French>
-			<Text>Equipé: Gourdin - Soutien à dist.</Text>
+			<Text>Equipem.: Gourdin - Soutien à dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10581,7 +10603,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_DYNAMITE</Tag>
 		<English>Wields(Dist Backup Dynamite)</English>
 		<French>
-			<Text>Equipé: Dynamite - Soutien à dist.</Text>
+			<Text>Equipem.: Dynamite - Soutien à dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10596,7 +10618,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_ELECTRICAL</Tag>
 		<English>Wields(Dist Backup Electrical)</English>
 		<French>
-			<Text>Equipé: Arme Electrique - Soutien à dist.</Text>
+			<Text>Equipem.: Arme Electrique - Soutien à dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10611,7 +10633,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_EMP</Tag>
 		<English>Wields(Dist Backup Electromagnetic)</English>
 		<French>
-			<Text>Equipé: Arme Electromagnétique - Soutien à dist.</Text>
+			<Text>Equipem.: Arme Electromagnétique - Soutien à dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10626,7 +10648,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_EXPLOSIVE_FLASK</Tag>
 		<English>Wields(Dist Backup Explosive Flask)</English>
 		<French>
-			<Text>Equipé: Bouteille Explosive  - Soutien à dist.</Text>
+			<Text>Equipem.: Bouteille Explosive  - Soutien à dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10641,7 +10663,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_FIREWORKS</Tag>
 		<English>Wields(Dist Backup Fireworks)</English>
 		<French>
-			<Text>Equipé: Pétards - Soutien à dist.</Text>
+			<Text>Equipem.: Pétards - Soutien à dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10656,7 +10678,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_FLAME</Tag>
 		<English>Wields(Dist Backup Flame Jet)</English>
 		<French>
-			<Text>Equipé: Lance-Flamme - Soutien à dist.)</Text>
+			<Text>Equipem.: Lance-Flamme - Soutien à dist.)</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10671,7 +10693,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_FROST</Tag>
 		<English>Wields(Dist Backup Frost)</English>
 		<French>
-			<Text>Equipé: Arme Frigorifiante - Soutien à dist.</Text>
+			<Text>Equipem.: Arme Frigorifiante - Soutien à dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10686,7 +10708,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_FULLY_AUTOMATIC</Tag>
 		<English>Wields(Dist Backup Fully-Automatic)</English>
 		<French>
-			<Text>Equipé: Arme Automatique - Soutien à dist.</Text>
+			<Text>Equipem.: Arme Automatique - Soutien à dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10713,7 +10735,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_GRENADE</Tag>
 		<English>Wields(Dist Backup Grenade)</English>
 		<French>
-			<Text>Equipé: Grenade - Soutien à dist.</Text>
+			<Text>Equipem.: Grenade - Soutien à dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10728,7 +10750,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_HAMMER</Tag>
 		<English>Wields(Dist Backup Hammer)</English>
 		<French>
-			<Text>Equipé: Marteau - Soutien à dist.</Text>
+			<Text>Equipem.: Marteau - Soutien à dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10743,7 +10765,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_HANDGUN</Tag>
 		<English>Wields(Dist Backup Handgun)</English>
 		<French>
-			<Text>Equipé: Pistolet - Soutien à dist.</Text>
+			<Text>Equipem.: Pistolet - Soutien à dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10764,7 +10786,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_HEAT</Tag>
 		<English>Wields(Dist Backup Heat)</English>
 		<French>
-			<Text>Equipé: Arme de Chaleur - Soutien à dist.</Text>
+			<Text>Equipem.: Arme de Chaleur - Soutien à dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10779,7 +10801,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_HEAVY_CROSSBOW</Tag>
 		<English>Wields(Dist Backup Heavy Crossbow)</English>
 		<French>
-			<Text>Equipé: Arbalète lourde - Soutien à dist.</Text>
+			<Text>Equipem.: Arbalète lourde - Soutien à dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10829,19 +10851,20 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_IMPROVED_PATHOGENS</Tag>
 		<English>Wields(Backup Improved Pathogens)</English>
+		<French>Equipem.(Pathogènes améliorés de sauvegarde)</French>
 		<Polish>Uzbrojenie (Broń Zapasowa Ulepszone Patogeny)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_IMPROVED_SONIC</Tag>
 		<English>Wields(Backup Improved Sonic)</English>
-		<French>Wields(Sonique amélioré)</French>
+		<French>Equipem.(Sonique amélioré)</French>
 		<Polish>Uzbrojenie (Broń Zapasowa Ulepszona Soniczna)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_ION</Tag>
 		<English>Wields(Dist Backup Ion)</English>
 		<French>
-			<Text>Equipé: Arme à ions - Soutien à dist.</Text>
+			<Text>Equipem.: Arme à ions - Soutien à dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10856,7 +10879,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_JAVELIN</Tag>
 		<English>Wields(Dist Backup Javelin)</English>
 		<French>
-			<Text>Equipé: Javelot - Soutien à dist.</Text>
+			<Text>Equipem.: Javelot - Soutien à dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10871,7 +10894,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_KNIFE</Tag>
 		<English>Wields(Dist Backup Knife)</English>
 		<French>
-			<Text>Equipé: Couteau - Soutien à dist.</Text>
+			<Text>Equipem.: Couteau - Soutien à dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10886,7 +10909,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_LASER</Tag>
 		<English>Wields(Dist Backup Laser)</English>
 		<French>
-			<Text>Equipé: Arme Laser - Soutien à dist.</Text>
+			<Text>Equipem.: Arme Laser - Soutien à dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10901,7 +10924,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_LAUNCHED_STONE</Tag>
 		<English>Wields(Dist Backup Launched Stone)</English>
 		<French>
-			<Text>Equipé: Pierres à lancer - Soutien à dist.</Text>
+			<Text>Equipem.: Pierres à lancer - Soutien à dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10916,7 +10939,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_LIGHT_CROSSBOW</Tag>
 		<English>Wields(Dist Backup Light Crossbow)</English>
 		<French>
-			<Text>Equipé: Arbalète légère - Soutien à dist.</Text>
+			<Text>Equipem.: Arbalète légère - Soutien à dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10931,7 +10954,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_LONG_RANGE_MISSILE</Tag>
 		<English>Wields(Dist Backup Long Range Missiles)</English>
 		<French>
-			<Text>Equipé: Missile à longue porté - Soutien à dist.)</Text>
+			<Text>Equipem.: Missile à longue porté - Soutien à dist.)</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10946,7 +10969,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_LONGBOW</Tag>
 		<English>Wields(Dist Backup Longbow)</English>
 		<French>
-			<Text>Equipé: Arc long - Soutien à dist.</Text>
+			<Text>Equipem.: Arc long - Soutien à dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -10984,7 +11007,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_MEDIUM_RANGE_MISSILE</Tag>
 		<English>Wields(Dist Backup Medium Range Missiles)</English>
 		<French>
-			<Text>Equipé: Missiles à portée moyenne - Soutien à dist.</Text>
+			<Text>Equipem.: Missiles à portée moyenne - Soutien à dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11029,7 +11052,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_REPEATING_CROSSBOW</Tag>
 		<English>Wields(Dist Backup Repeating Crossbow)</English>
 		<French>
-			<Text>Equipé: Arbalète à répétition - Soutien à dist.</Text>
+			<Text>Equipem.: Arbalète à répétition - Soutien à dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11044,7 +11067,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_RIFLE</Tag>
 		<English>Wields(Dist Backup Rifle)</English>
 		<French>
-			<Text>Equipé: Fusil - Soutien à dist.</Text>
+			<Text>Equipem.: Fusil - Soutien à dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11059,7 +11082,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_ROCK</Tag>
 		<English>Wields(Dist Backup Rock)</English>
 		<French>
-			<Text>Equipé: Rocher - Soutien à dist.</Text>
+			<Text>Equipem.: Rocher - Soutien à dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11074,7 +11097,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_SEMI_AUTOMATIC</Tag>
 		<English>Wields(Dist Backup Semi-Automatic)</English>
 		<French>
-			<Text>Equipé: Arme Semi-Automatique - Soutien à dist.</Text>
+			<Text>Equipem.: Arme Semi-Automatique - Soutien à dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11089,7 +11112,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_SHELLFIRE</Tag>
 		<English>Wields(Dist Backup Shellfire)</English>
 		<French>
-			<Text>Equipé: Arme à munitions enflammées - Soutien à dist.</Text>
+			<Text>Equipem.: Arme à munitions enflammées - Soutien à dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11104,7 +11127,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_SHORT_RANGE_MISSILE</Tag>
 		<English>Wields(Dist Backup Short Range Missiles)</English>
 		<French>
-			<Text>Equipé: Missiles à courte portée - Soutien à dist.</Text>
+			<Text>Equipem.: Missiles à courte portée - Soutien à dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11119,7 +11142,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_SHORTBOW</Tag>
 		<English>Wields(Dist Backup Shortbow)</English>
 		<French>
-			<Text>Equipé: Arc court - Soutien à dist.</Text>
+			<Text>Equipem.: Arc court - Soutien à dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11134,7 +11157,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_SLING</Tag>
 		<English>Wields(Dist Backup Sling)</English>
 		<French>
-			<Text>Equipé: Fronde - Soutien à dist.</Text>
+			<Text>Equipem.: Fronde - Soutien à dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11149,7 +11172,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_SONIC</Tag>
 		<English>Wields(Dist Backup Sonic)</English>
 		<French>
-			<Text>Equipé: Arme Sonique - Soutien à dist.</Text>
+			<Text>Equipem.: Arme Sonique - Soutien à dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11176,7 +11199,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_TORPEDO</Tag>
 		<English>Wields(Dist Backup Torpedos)</English>
 		<French>
-			<Text>Equipé: Torpilles - Soutien à dist.</Text>
+			<Text>Equipem.: Torpilles - Soutien à dist.</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11191,7 +11214,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DETONATE_BIOLOGICAL</Tag>
 		<English>Wields(Detonate Biological)</English>
 		<French>
-			<Text>Equipé: Arme biologique -  A retardement</Text>
+			<Text>Equipem.: Arme biologique -  A retardement</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11206,7 +11229,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DETONATE_CHEMICAL</Tag>
 		<English>Wields(Detonate Chemical)</English>
 		<French>
-			<Text>Equipé: Arme Chimique - à Détonation</Text>
+			<Text>Equipem.: Arme Chimique - à Détonation</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11221,7 +11244,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DETONATE_DYNAMITE</Tag>
 		<English>Wields(Detonate Dynamite)</English>
 		<French>
-			<Text>Equipé: Dynamite - à Détonation</Text>
+			<Text>Equipem.: Dynamite - à Détonation</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11236,7 +11259,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DETONATE_GUIDED</Tag>
 		<English>Wields(Detonate Guided)</English>
 		<French>
-			<Text>Equipé: Arme téléguidée - à Détonation</Text>
+			<Text>Equipem.: Arme téléguidée - à Détonation</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11251,7 +11274,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DETONATE_PSYCH</Tag>
 		<English>Wields(Detonate Psychological)</English>
 		<French>
-			<Text>Equipé: Arme Psychologique - à Détonation</Text>
+			<Text>Equipem.: Arme Psychologique - à Détonation</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11266,7 +11289,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DETONATE_RADIOACTIVE</Tag>
 		<English>Wields(Detonate Radioactive)</English>
 		<French>
-			<Text>Equipé: Arme Radioactive - à Détonation</Text>
+			<Text>Equipem.: Arme Radioactive - à Détonation</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11299,7 +11322,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_AXE</Tag>
 		<English>Wields(Distance Axe)</English>
 		<French>
-			<Text>Equipé: Hache de jet - à Distance</Text>
+			<Text>Equipem.: Hache de jet - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11314,7 +11337,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_BALLISTA</Tag>
 		<English>Wields(Distance Ballista)</English>
 		<French>
-			<Text>Equipé: Balliste - à Distance</Text>
+			<Text>Equipem.: Balliste - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11329,7 +11352,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_BLOWGUN</Tag>
 		<English>Wields(Distance Blowgun)</English>
 		<French>
-			<Text>Equipé: Sarbacane - à Distance</Text>
+			<Text>Equipem.: Sarbacane - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11344,7 +11367,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_BOLA</Tag>
 		<English>Wields(Distance Bola)</English>
 		<French>
-			<Text>Equipé: Bolas - à Distance)</Text>
+			<Text>Equipem.: Bolas - à Distance)</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11359,7 +11382,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_BOOMERANG</Tag>
 		<English>Wields(Distance Boomerang)</English>
 		<French>
-			<Text>Equipé: Boomerang - à Distance</Text>
+			<Text>Equipem.: Boomerang - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11374,7 +11397,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_CANNONBALL</Tag>
 		<English>Wields(Distance Cannonball)</English>
 		<French>
-			<Text>Equipé: Boulet de Canon - à Distance</Text>
+			<Text>Equipem.: Boulet de Canon - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11389,7 +11412,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_CLUB</Tag>
 		<English>Wields(Distance Club)</English>
 		<French>
-			<Text>Equipé: Gourdin - à Distance</Text>
+			<Text>Equipem.: Gourdin - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11416,7 +11439,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_DYNAMITE</Tag>
 		<English>Wields(Distance Dynamite)</English>
 		<French>
-			<Text>Equipé: Dynamite - à Distance</Text>
+			<Text>Equipem.: Dynamite - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11431,7 +11454,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_ELECTRICAL</Tag>
 		<English>Wields(Distance Electrical)</English>
 		<French>
-			<Text>Equipé: Arme Electrique - à Distance</Text>
+			<Text>Equipem.: Arme Electrique - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11446,7 +11469,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_EMP</Tag>
 		<English>Wields(Distance Electromagnetic)</English>
 		<French>
-			<Text>Equipé: Arme Electromagnétique - à Distance</Text>
+			<Text>Equipem.: Arme Electromagnétique - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11461,7 +11484,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_EXPLOSIVE_FLASK</Tag>
 		<English>Wields(Distance Explosive Flask)</English>
 		<French>
-			<Text>Equipé: Bouteille Explosive - à Distance</Text>
+			<Text>Equipem.: Bouteille Explosive - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11476,7 +11499,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_FIREWORKS</Tag>
 		<English>Wields(Distance Fireworks)</English>
 		<French>
-			<Text>Equipé: Pétards - à Distance</Text>
+			<Text>Equipem.: Pétards - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11491,7 +11514,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_FLAME</Tag>
 		<English>Wields(Distance Flame Jet)</English>
 		<French>
-			<Text>Equipé: Lance-Flammes - à Distance</Text>
+			<Text>Equipem.: Lance-Flammes - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11506,7 +11529,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_FROST</Tag>
 		<English>Wields(Distance Frost)</English>
 		<French>
-			<Text>Equipé: Arme Frigorifique - à Distance</Text>
+			<Text>Equipem.: Arme Frigorifique - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11521,7 +11544,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_FULLY_AUTOMATIC</Tag>
 		<English>Wields(Distance Fully-Automatic)</English>
 		<French>
-			<Text>Equipé: Arme Automatique - à Distance</Text>
+			<Text>Equipem.: Arme Automatique - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11548,7 +11571,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_GRENADE</Tag>
 		<English>Wields(Distance Grenade)</English>
 		<French>
-			<Text>Equipé: Grenade - à Distance</Text>
+			<Text>Equipem.: Grenade - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11563,7 +11586,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_HAMMER</Tag>
 		<English>Wields(Distance Hammer)</English>
 		<French>
-			<Text>Equipé: Marteau de Jet - à Distance</Text>
+			<Text>Equipem.: Marteau de Jet - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11578,7 +11601,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_HANDGUN</Tag>
 		<English>Wields(Distance Handgun)</English>
 		<French>
-			<Text>Equipé: Pistolet - à Distance</Text>
+			<Text>Equipem.: Pistolet - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11599,7 +11622,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_HEAT</Tag>
 		<English>Wields(Distance Heat)</English>
 		<French>
-			<Text>Equipé: Arme Chauffante - à Distance</Text>
+			<Text>Equipem.: Arme Chauffante - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11614,7 +11637,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_HEAVY_CROSSBOW</Tag>
 		<English>Wields(Distance Heavy Crossbow)</English>
 		<French>
-			<Text>Equipé: Arbalète lourde - à Distance</Text>
+			<Text>Equipem.: Arbalète lourde - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11677,7 +11700,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_ION</Tag>
 		<English>Wields(Distance Ion)</English>
 		<French>
-			<Text>Equipé: Pistolet à Ion - à Distance</Text>
+			<Text>Equipem.: Pistolet à Ion - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11692,7 +11715,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_JAVELIN</Tag>
 		<English>Wields(Distance Javelin)</English>
 		<French>
-			<Text>Equipé: Javelot - à Distance</Text>
+			<Text>Equipem.: Javelot - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11707,7 +11730,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_KNIFE</Tag>
 		<English>Wields(Distance Knife)</English>
 		<French>
-			<Text>Equipé: Dague de Jet - à Distance</Text>
+			<Text>Equipem.: Dague de Jet - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11722,7 +11745,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_LASER</Tag>
 		<English>Wields(Distance Laser)</English>
 		<French>
-			<Text>Equipé: Arme Laser - à Distance</Text>
+			<Text>Equipem.: Arme Laser - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11737,7 +11760,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_LAUNCHED_STONE</Tag>
 		<English>Wields(Distance Launched Stone)</English>
 		<French>
-			<Text>Equipé: Lance-pierre - à Distance</Text>
+			<Text>Equipem.: Lance-pierre - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11752,7 +11775,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_LIGHT_CROSSBOW</Tag>
 		<English>Wields(Distance Light Crossbow)</English>
 		<French>
-			<Text>Equipé: Arbalète légère - à Distance</Text>
+			<Text>Equipem.: Arbalète légère - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11767,7 +11790,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_LONG_RANGE_MISSILE</Tag>
 		<English>Wields(Distance Long Range Missiles)</English>
 		<French>
-			<Text>Equipé: Missiles Longue portée - à Distance</Text>
+			<Text>Equipem.: Missiles Longue portée - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11782,7 +11805,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_LONGBOW</Tag>
 		<English>Wields(Distance Longbow)</English>
 		<French>
-			<Text>Equipé: Arc long - à Distance</Text>
+			<Text>Equipem.: Arc long - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11803,7 +11826,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_MARTIAL_ART</Tag>
 		<English>Wields(Distance Martial Arts Weaponry)</English>
 		<French>
-			<Text>Equipé: Shuriken - à Distance</Text>
+			<Text>Equipem.: Shuriken - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11824,7 +11847,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_MEDIUM_RANGE_MISSILE</Tag>
 		<English>Wields(Distance Medium Range Missiles)</English>
 		<French>
-			<Text>Equipé: Missiles à portée moyenne - à Distance</Text>
+			<Text>Equipem.: Missiles à portée moyenne - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11869,7 +11892,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_REPEATING_CROSSBOW</Tag>
 		<English>Wields(Distance Repeating Crossbow)</English>
 		<French>
-			<Text>Equipé: Arbalète à répétition - à Distance</Text>
+			<Text>Equipem.: Arbalète à répétition - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11884,7 +11907,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_RIFLE</Tag>
 		<English>Wields(Distance Rifle)</English>
 		<French>
-			<Text>Equipé: Fusil - à Distance</Text>
+			<Text>Equipem.: Fusil - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11899,7 +11922,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_ROCK</Tag>
 		<English>Wields(Distance Rock)</English>
 		<French>
-			<Text>Equipé: Pierres - à Distance</Text>
+			<Text>Equipem.: Pierres - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11915,7 +11938,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_SEMI_AUTOMATIC</Tag>
 		<English>Wields(Distance Semi-Automatic)</English>
 		<French>
-			<Text>Equipé: Arme Semi-Automatique - à Distance</Text>
+			<Text>Equipem.: Arme Semi-Automatique - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11930,7 +11953,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_SHELLFIRE</Tag>
 		<English>Wields(Distance Shellfire)</English>
 		<French>
-			<Text>Equipé: Arme à Munitions enflammées - à Distance</Text>
+			<Text>Equipem.: Arme à Munitions enflammées - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11945,7 +11968,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_SHORT_RANGE_MISSILE</Tag>
 		<English>Wields(Distance Short Range Missiles)</English>
 		<French>
-			<Text>Equipé: Missiles à Courte Portée - à Distance</Text>
+			<Text>Equipem.: Missiles à Courte Portée - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11960,7 +11983,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_SHORTBOW</Tag>
 		<English>Wields(Distance Shortbow)</English>
 		<French>
-			<Text>Equipé: Arc court - à Distance</Text>
+			<Text>Equipem.: Arc court - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11975,7 +11998,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_SLING</Tag>
 		<English>Wields(Distance Sling)</English>
 		<French>
-			<Text>Equipé: Fronde - à Distance</Text>
+			<Text>Equipem.: Fronde - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11990,7 +12013,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_SONIC</Tag>
 		<English>Wields(Distance Sonic)</English>
 		<French>
-			<Text>Equipé: Arme Sonique - à Distance</Text>
+			<Text>Equipem.: Arme Sonique - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12017,7 +12040,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_TORPEDO</Tag>
 		<English>Wields(Distance Torpedos)</English>
 		<French>
-			<Text>Equipé: Torpilles - à Distance</Text>
+			<Text>Equipem.: Torpilles - à Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12032,7 +12055,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_AXE</Tag>
 		<English>Wields(H2H Axe)</English>
 		<French>
-			<Text>Equipé: Hache - Corps à Corps</Text>
+			<Text>Equipem.: Hache - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12047,7 +12070,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_BAYONETTE</Tag>
 		<English>Wields(H2H Bayonette)</English>
 		<French>
-			<Text>Equipé: Bayonnette - Corps à Corps</Text>
+			<Text>Equipem.: Bayonnette - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12062,7 +12085,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_CLUB</Tag>
 		<English>Wields(H2H Club)</English>
 		<French>
-			<Text>Equipé: Massue - Corps à Corps</Text>
+			<Text>Equipem.: Massue - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12078,7 +12101,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_CROWBAR</Tag>
 		<English>Wields(H2H Crowbar)</English>
 		<French>
-			<Text>Equipé: Pied de biche - Corps à Corps</Text>
+			<Text>Equipem.: Pied de biche - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12093,7 +12116,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_EMP</Tag>
 		<English>Wields(H2H Electromagnetic)</English>
 		<French>
-			<Text>Equipé: Gant Electromagnétique - Corps à Corps</Text>
+			<Text>Equipem.: Gant Electromagnétique - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12108,7 +12131,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_ENERGY_GLOVES</Tag>
 		<English>Wields(H2H Energy Gloves)</English>
 		<French>
-			<Text>Equipé: Gant énergétique - Corps à Corps</Text>
+			<Text>Equipem.: Gant énergétique - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12123,7 +12146,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_FIST</Tag>
 		<English>Wields(H2H Fists)</English>
 		<French>
-			<Text>Equipé: Poings - Corps à Corps</Text>
+			<Text>Equipem.: Poings - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12139,7 +12162,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_FLAIL</Tag>
 		<English>Wields(H2H Flail)</English>
 		<French>
-			<Text>Equipé: Fléau - Corps à Corps</Text>
+			<Text>Equipem.: Fléau - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12154,7 +12177,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_FLAMETHROWER</Tag>
 		<English>Wields(H2H Flamethrower)</English>
 		<French>
-			<Text>Equipé: Lance-Flammes - Corps à Corps</Text>
+			<Text>Equipem.: Lance-Flammes - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12169,7 +12192,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_HAMMER</Tag>
 		<English>Wields(H2H Hammer)</English>
 		<French>
-			<Text>Equipé: Marteau - Corps à Corps</Text>
+			<Text>Equipem.: Marteau - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12184,7 +12207,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_HANDGUN</Tag>
 		<English>Wields(H2H Handgun)</English>
 		<French>
-			<Text>Equipé: Pistolet - Corps à Corps</Text>
+			<Text>Equipem.: Pistolet - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12199,7 +12222,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_HYDRAULIC_APPENDAGE</Tag>
 		<English>Wields(H2H Hydraulic Appendage)</English>
 		<French>
-			<Text>Equipé: Arme Hydraulique - Corps à Corps</Text>
+			<Text>Equipem.: Arme Hydraulique - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12214,7 +12237,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_KNIFE</Tag>
 		<English>Wields(H2H Knife)</English>
 		<French>
-			<Text>Equipé: Couteau - Corps à Corps</Text>
+			<Text>Equipem.: Couteau - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12229,7 +12252,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_LASER</Tag>
 		<English>Wields(H2H Laser)</English>
 		<French>
-			<Text>Equipé: Epée Laser - Corps à Corps</Text>
+			<Text>Equipem.: Epée Laser - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12244,7 +12267,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_LONG_BLADE</Tag>
 		<English>Wields(H2H Long Blade)</English>
 		<French>
-			<Text>Equipé: Epée Longue - Corps à Corps</Text>
+			<Text>Equipem.: Epée Longue - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12259,7 +12282,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_LONG_POLEARM</Tag>
 		<English>Wields(H2H Long Polearm)</English>
 		<French>
-			<Text>Equipé: Arme à long Manche  - Corps à Corps</Text>
+			<Text>Equipem.: Arme à long Manche  - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12274,7 +12297,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_MACE</Tag>
 		<English>Wields(H2H Mace)</English>
 		<French>
-			<Text>Equipé: Masse - Corps à Corps</Text>
+			<Text>Equipem.: Masse - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12289,7 +12312,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_MARTIAL_ART</Tag>
 		<English>Wields(H2H Martial Arts)</English>
 		<French>
-			<Text>Equipé: Arts Martiaux - Corps à Corps</Text>
+			<Text>Equipem.: Arts Martiaux - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12304,7 +12327,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_OAR</Tag>
 		<English>Wields(H2H Oar)</English>
 		<French>
-			<Text>Equipé: Rames - Corps à Corps</Text>
+			<Text>Equipem.: Rames - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12319,7 +12342,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_RIFLE_BUTT</Tag>
 		<English>Wields(H2H Rifle Butt)</English>
 		<French>
-			<Text>Equipé: Crosse de Fusil - Corps à Corps</Text>
+			<Text>Equipem.: Crosse de Fusil - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12334,7 +12357,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_ROCK</Tag>
 		<English>Wields(H2H Rocks)</English>
 		<French>
-			<Text>Equipé: Pierres - Corps à Corps</Text>
+			<Text>Equipem.: Pierres - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12350,7 +12373,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_SHORT_BLADE</Tag>
 		<English>Wields(H2H Short Blade)</English>
 		<French>
-			<Text>Equipé: Epée Courte - Corps à Corps</Text>
+			<Text>Equipem.: Epée Courte - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12365,7 +12388,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_SHORT_POLEARM</Tag>
 		<English>Wields(H2H Short Polearm)</English>
 		<French>
-			<Text>Equipé: Arme à Manche Court - Corps à Corps</Text>
+			<Text>Equipem.: Arme à Manche Court - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12380,7 +12403,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_SPRAY</Tag>
 		<English>Wields(H2H Spray Cannister)</English>
 		<French>
-			<Text>Equipé: Spray - Corps à Corps</Text>
+			<Text>Equipem.: Spray - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12395,7 +12418,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_STAFF</Tag>
 		<English>Wields(H2H Staff)</English>
 		<French>
-			<Text>Equipé: Baton - Corps à Corps</Text>
+			<Text>Equipem.: Baton - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12411,7 +12434,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_TASER</Tag>
 		<English>Wields(H2H Taser)</English>
 		<French>
-			<Text>Equipé: Taser - Corps à Corps</Text>
+			<Text>Equipem.: Taser - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12506,7 +12529,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_AXE</Tag>
 		<English>Wields(Sidearm Axe)</English>
 		<French>
-			<Text>Equipé: Hache - Arme secondaire</Text>
+			<Text>Equipem.: Hache - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12521,7 +12544,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_BAYONETTE</Tag>
 		<English>Wields(Sidearm Bayonette)</English>
 		<French>
-			<Text>Equipé: Bayonnette - Arme secondaire</Text>
+			<Text>Equipem.: Bayonnette - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12536,7 +12559,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_CLUB</Tag>
 		<English>Wields(Sidearm Club)</English>
 		<French>
-			<Text>Equipé: Gourdin - Arme secondaire</Text>
+			<Text>Equipem.: Gourdin - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12551,7 +12574,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_CROWBAR</Tag>
 		<English>Wields(Sidearm Crowbar)</English>
 		<French>
-			<Text>Equipé: Pied de biche - Arme secondaire</Text>
+			<Text>Equipem.: Pied de biche - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12566,7 +12589,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_EMP</Tag>
 		<English>Wields(Sidearm Electromagnetic)</English>
 		<French>
-			<Text>Equipé: Gant Electromagnétique - Arme secondaire</Text>
+			<Text>Equipem.: Gant Electromagnétique - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12581,7 +12604,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_ENERGY_GLOVES</Tag>
 		<English>Wields(Sidearm Energy Gloves)</English>
 		<French>
-			<Text>Equipé: Gant énergétique - Arme secondaire</Text>
+			<Text>Equipem.: Gant énergétique - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12596,7 +12619,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_FIST</Tag>
 		<English>Wields(Sidearm Fists)</English>
 		<French>
-			<Text>Equipé: Poing - Arme secondaire</Text>
+			<Text>Equipem.: Poing - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12612,7 +12635,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_FLAIL</Tag>
 		<English>Wields(Sidearm Flail)</English>
 		<French>
-			<Text>Equipé: Fléau - Arme secondaire</Text>
+			<Text>Equipem.: Fléau - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12627,7 +12650,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_FLAMETHROWER</Tag>
 		<English>Wields(Sidearm Flamethrower)</English>
 		<French>
-			<Text>Equipé: Lance-Flammes - Arme secondaire</Text>
+			<Text>Equipem.: Lance-Flammes - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12642,7 +12665,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_HAMMER</Tag>
 		<English>Wields(Sidearm Hammer)</English>
 		<French>
-			<Text>Equipé: Marteau - Arme secondaire</Text>
+			<Text>Equipem.: Marteau - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12657,7 +12680,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_HANDGUN</Tag>
 		<English>Wields(Sidearm Handgun)</English>
 		<French>
-			<Text>Equipé: Pistolet - Arme secondaire</Text>
+			<Text>Equipem.: Pistolet - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12672,7 +12695,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_HYDRAULIC_APPENDAGE</Tag>
 		<English>Wields(Sidearm Hydraulic Appendage)</English>
 		<French>
-			<Text>Equipé: Arme Hydraulique - Arme secondaire</Text>
+			<Text>Equipem.: Arme Hydraulique - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12687,7 +12710,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_KNIFE</Tag>
 		<English>Wields(Sidearm Knife)</English>
 		<French>
-			<Text>Equipé: Couteau - Arme secondaire</Text>
+			<Text>Equipem.: Couteau - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12702,7 +12725,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_LASER</Tag>
 		<English>Wields(Sidearm Laser)</English>
 		<French>
-			<Text>Equipé: Laser - Arme secondaire)</Text>
+			<Text>Equipem.: Laser - Arme secondaire)</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12717,7 +12740,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_LONG_BLADE</Tag>
 		<English>Wields(Sidearm Long Blade)</English>
 		<French>
-			<Text>Equipé: Epée Longue - Arme secondaire</Text>
+			<Text>Equipem.: Epée Longue - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12732,7 +12755,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_LONG_POLEARM</Tag>
 		<English>Wields(Sidearm Long Polearm)</English>
 		<French>
-			<Text>Equipé: Lance à long Manche - Arme secondaire</Text>
+			<Text>Equipem.: Lance à long Manche - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12747,7 +12770,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_MACE</Tag>
 		<English>Wields(Sidearm Mace)</English>
 		<French>
-			<Text>Equipé: Masse - Arme secondaire</Text>
+			<Text>Equipem.: Masse - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12762,7 +12785,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_MARTIAL_ART</Tag>
 		<English>Wields(Sidearm Martial Arts)</English>
 		<French>
-			<Text>Equipé: Arts Martiaux - Arme secondaire</Text>
+			<Text>Equipem.: Arts Martiaux - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12777,7 +12800,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_OAR</Tag>
 		<English>Wields(Sidearm Oar)</English>
 		<French>
-			<Text>Equipé: Rames - Arme secondaire</Text>
+			<Text>Equipem.: Rames - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12792,7 +12815,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_RIFLE_BUTT</Tag>
 		<English>Wields(Sidearm Rifle Butt)</English>
 		<French>
-			<Text>Equipé: Crosse de Fusil - Arme secondaire</Text>
+			<Text>Equipem.: Crosse de Fusil - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12807,7 +12830,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_ROCK</Tag>
 		<English>Wields(Sidearm Rocks)</English>
 		<French>
-			<Text>Equipé: Pierres - Arme secondaire</Text>
+			<Text>Equipem.: Pierres - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12822,7 +12845,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_SHORT_BLADE</Tag>
 		<English>Wields(Sidearm Short Blade)</English>
 		<French>
-			<Text>Equipé: Epée Courte - Arme secondaire</Text>
+			<Text>Equipem.: Epée Courte - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12837,7 +12860,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_SHORT_POLEARM</Tag>
 		<English>Wields(Sidearm Short Polearm)</English>
 		<French>
-			<Text>Equipé: Lance à Manche Court - Arme secondaire</Text>
+			<Text>Equipem.: Lance à Manche Court - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12852,7 +12875,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_SPRAY</Tag>
 		<English>Wields(Sidearm Spray Cannister)</English>
 		<French>
-			<Text>Equipé: Spray - Arme secondaire</Text>
+			<Text>Equipem.: Spray - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12867,7 +12890,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_STAFF</Tag>
 		<English>Wields(Sidearm Staff)</English>
 		<French>
-			<Text>Equipé: Baton - Arme secondaire</Text>
+			<Text>Equipem.: Baton - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12882,7 +12905,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_TASER</Tag>
 		<English>Wields(Sidearm Taser)</English>
 		<French>
-			<Text>Equipé: Taser - Arme secondaire</Text>
+			<Text>Equipem.: Taser - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -13323,769 +13346,956 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ADENA</Tag>
 		<English>Culture(Adena)</English>
+		<French>Culture(Adena)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_AFGHANISTAN</Tag>
 		<English>Culture(Afghanistan)</English>
+		<French>Culture(Afghanistan)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_AKSUMITE</Tag>
 		<English>Culture(Aksumite)</English>
+		<French>Culture(Aksumite)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ALACALUFE</Tag>
 		<English>Culture(Alacalufe)</English>
+		<French>Culture(Alacalufe)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ALBANIAN</Tag>
 		<English>Culture(Albanian)</English>
+		<French>Culture(Albanie)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ALEMANNI</Tag>
 		<English>Culture(Alemanni)</English>
+		<French>Culture(Alémanique)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ALGIER</Tag>
 		<English>Culture(Algier)</English>
+		<French>Culture(Algier)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_AMIS</Tag>
 		<English>Culture(Amis)</English>
+		<French>Culture(Amis)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ANDAMANESE</Tag>
 		<English>Culture(Andamanese)</English>
+		<French>Culture(Andamanaise)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ANGOLAN</Tag>
 		<English>Culture(Angolan)</English>
+		<French>Culture(Angola)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ARAGON</Tag>
 		<English>Culture(Aragon)</English>
+		<French>Culture(Aragon)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_AVARS</Tag>
 		<English>Culture(Avars)</English>
+		<French>Culture(Avars)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_AVERNI</Tag>
 		<English>Culture(Averni)</English>
+		<French>Culture(Averni)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_AZANDE</Tag>
 		<English>Culture(Azande)</English>
+		<French>Culture(Azande)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BAHRAIN</Tag>
 		<English>Culture(Bahrain)</English>
+		<French>Culture(Bahrain)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BACTRIC</Tag>
 		<English>Culture(Bactric)</English>
+		<French>Culture(Bactric)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BANGLADESH</Tag>
 		<English>Culture(Bangladesh)</English>
+		<French>Culture(Bangladesh)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BASHKIR</Tag>
 		<English>Culture(Bashkir)</English>
+		<French>Culture(Bashkir)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BATAVI</Tag>
 		<English>Culture(Batavi)</English>
+		<French>Culture(Batavi)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BATEK</Tag>
 		<English>Culture(Batek)</English>
+		<French>Culture(Batek)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BAVARIAN</Tag>
 		<English>Culture(Bavarian)</English>
+		<French>Culture(Bavaroise)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BEDOUIN</Tag>
 		<English>Culture(Bedouin)</English>
+		<French>Culture(Bédouine)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BELIZE</Tag>
 		<English>Culture(Belize)</English>
+		<French>Culture(Belize)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BOLIVIAN</Tag>
 		<English>Culture(Bolivian)</English>
+		<French>Culture(Bolivienne)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BRETON</Tag>
 		<English>Culture(Breton)</English>
+		<French>Culture(Bretonne)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BRITON</Tag>
 		<English>Culture(Briton)</English>
+		<French>Culture(Briton)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BURGUNDI</Tag>
 		<English>Culture(Burgundi)</English>
+		<French>Culture(Burgonde)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CAMBEBA</Tag>
 		<English>Culture(Cambeba)</English>
+		<French>Culture(Cambeba)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CANARI</Tag>
 		<English>Culture(Canari)</English>
+		<French>Culture(Canari)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CAPAYAN</Tag>
 		<English>Culture(Capayan)</English>
+		<French>Culture(Capayenne)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CARAL_SUPE</Tag>
-		<English>Culture(Caral_Supe)</English>
+		<English>Culture(Caral Supe)</English>
+		<French>Culture(Caral Supe)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CATALONIAN</Tag>
 		<English>Culture(Catalonian)</English>
+		<French>Culture(Catalone)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CELTIBERIAN</Tag>
 		<English>Culture(Celtiberian)</English>
+		<French>Culture(Celtibérienne)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CHACHAPOYA</Tag>
 		<English>Culture(Chachapoya)</English>
+		<French>Culture(Chachapoya)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CHAVIN</Tag>
 		<English>Culture(Chavin)</English>
+		<French>Culture(Chavin)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CHECHENIAN</Tag>
 		<English>Culture(Chechenian)</English>
+		<French>Culture(Chechenian)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CHILEAN</Tag>
 		<English>Culture(Chilean)</English>
+		<French>Culture(Chilienne)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CHIMU</Tag>
 		<English>Culture(Chimu)</English>
+		<French>Culture(Chimu)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CHORESM</Tag>
 		<English>Culture(Choresm)</English>
+		<French>Culture(Choresme)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CZECH</Tag>
 		<English>Culture(Czech)</English>
+		<French>Culture(Tchèque)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_DACIAN</Tag>
 		<English>Culture(Dacian)</English>
+		<French>Culture(Dacienne)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_DAYAK</Tag>
 		<English>Culture(Dayak)</English>
+		<French>Culture(Dayak)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_DRAVIDIAN</Tag>
 		<English>Culture(Dravidian)</English>
+		<French>Culture(Dravidian)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ECUADORIAN</Tag>
 		<English>Culture(Ecuadorian)</English>
+		<French>Culture(Equatorienne)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ESTONIAN</Tag>
 		<English>Culture(Estonian)</English>
+		<French>Culture(Estonienne)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ETRUSCAN</Tag>
 		<English>Culture(Etruscan)</English>
+		<French>Culture(Etrusque)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_FATIMID</Tag>
 		<English>Culture(Fatimid)</English>
+		<French>Culture(Fatimid)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_FUEGIAN</Tag>
 		<English>Culture(Fuegian)</English>
+		<French>Culture(Fuegienne)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_FURAWI</Tag>
 		<English>Culture(Furawi)</English>
+		<French>Culture(Furawi)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GALATIAN</Tag>
 		<English>Culture(Galatian)</English>
+		<French>Culture(Galatian)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GAUCHO</Tag>
 		<English>Culture(Gaucho)</English>
+		<French>Culture(Gaucho)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GEORGIAN</Tag>
 		<English>Culture(Georgian)</English>
+		<French>Culture(Géorgienne)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GHURID</Tag>
 		<English>Culture(Ghurid)</English>
+		<French>Culture(Ghurid)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GOKTURK</Tag>
 		<English>Culture(Gokturk)</English>
+		<French>Culture(Gokturk)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GOLDEN_HORDE</Tag>
-		<English>Culture(Golden_Horde)</English>
+		<English>Culture(Golden Horde)</English>
+		<French>Culture(Horde dorée)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GUAM</Tag>
 		<English>Culture(Guam)</English>
+		<French>Culture(Guam)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GUANCHES</Tag>
 		<English>Culture(Guanches)</English>
+		<French>Culture(Guanches)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GUARANI</Tag>
 		<English>Culture(Guarani)</English>
+		<French>Culture(Guarani)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GUATEMALA</Tag>
 		<English>Culture(Guatemala)</English>
+		<French>Culture(Guatemalienne)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GUYANA</Tag>
 		<English>Culture(Guyana)</English>
+		<French>Culture(Guyanaise)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_HELVETII</Tag>
 		<English>Culture(Helvetii)</English>
+		<French>Culture(Helvète)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_HEMUDU</Tag>
 		<English>Culture(Hemudu)</English>
+		<French>Culture(Hemudu)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_HIMYARITE</Tag>
 		<English>Culture(Himyarite)</English>
+		<French>Culture(Himyarite)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_HONGKONG</Tag>
 		<English>Culture(HongKong)</English>
+		<French>Culture(HongKong)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_HOPEWELL</Tag>
 		<English>Culture(Hopewell)</English>
+		<French>Culture(Hopewell)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_HURRIANS</Tag>
 		<English>Culture(Hurrians)</English>
+		<French>Culture(Hurrons)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_HYKSOSI</Tag>
 		<English>Culture(Hyksosi)</English>
+		<French>Culture(Hyksosi)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ILLYRIAN</Tag>
 		<English>Culture(Illyrian)</English>
+		<French>Culture(Illyrian)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ILOCANO</Tag>
 		<English>Culture(Ilocano)</English>
+		<French>Culture(Ilocano)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_INDUS</Tag>
 		<English>Culture(Indus)</English>
+		<French>Culture(Indus)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_IRANIAN</Tag>
 		<English>Culture(Iranian)</English>
+		<French>Culture(Iranienne)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_IRAQUI</Tag>
 		<English>Culture(Iraqui)</English>
+		<French>Culture(Iraquienne)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_JAVANESE</Tag>
 		<English>Culture(Javanese)</English>
+		<French>Culture(Javanaise)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_JUTES</Tag>
 		<English>Culture(Jutes)</English>
+		<French>Culture(Jutes)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KENYAN</Tag>
 		<English>Culture(Kenyan)</English>
+		<French>Culture(Kenyenne)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KHAZAK</Tag>
 		<English>Culture(Kazakh)</English>
+		<French>Culture(Kazakh)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KHAZARS</Tag>
 		<English>Culture(Khazars)</English>
+		<French>Culture(Khazars)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KHITAN</Tag>
 		<English>Culture(Khitan)</English>
+		<French>Culture(Khitan)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KILLKE</Tag>
 		<English>Culture(Killke)</English>
+		<French>Culture(Killke)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KITARA</Tag>
 		<English>Culture(Kitara)</English>
+		<French>Culture(Kitara)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KOGI</Tag>
 		<English>Culture(Kogi)</English>
+		<French>Culture(Kogi)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KURDISH</Tag>
 		<English>Culture(Kurdish)</English>
+		<French>Culture(Kurde)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KUSH</Tag>
 		<English>Culture(Kush)</English>
+		<French>Culture(Kush)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KUSHAN</Tag>
 		<English>Culture(Kushan)</English>
+		<French>Culture(Kushan)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KUWAIT</Tag>
 		<English>Culture(Kuwait)</English>
+		<French>Culture(Koweitienne)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LATVIAN</Tag>
 		<English>Culture(Latvian)</English>
+		<French>Culture(Létonne)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LA_PLATA</Tag>
-		<English>Culture(La_Plata)</English>
+		<English>Culture(La Plata)</English>
+		<French>Culture(La Plata)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LEBANON</Tag>
 		<English>Culture(Lebanon)</English>
+		<French>Culture(Lebanon)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LIBYAN</Tag>
 		<English>Culture(Libyan)</English>
+		<French>Culture(Libyenne)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LITHUANIAN</Tag>
 		<English>Culture(Lithuanian)</English>
+		<French>Culture(Lituanienne)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LONGOBARDI</Tag>
 		<English>Culture(Longobardi)</English>
+		<French>Culture(Longobarde)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LULE</Tag>
 		<English>Culture(Lule)</English>
+		<French>Culture(Lule)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LUNDA</Tag>
 		<English>Culture(Lunda)</English>
+		<French>Culture(Lunda)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MING</Tag>
 		<English>Culture(Ming)</English>
+		<French>Culture(Ming)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MITTANNI</Tag>
 		<English>Culture(Mittanni)</English>
+		<French>Culture(Mittanni)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MOCOVI</Tag>
 		<English>Culture(Mocovi)</English>
+		<French>Culture(Mocovi)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MOHAWK</Tag>
 		<English>Culture(Mohawk)</English>
+		<French>Culture(Mohawk)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MOLLO</Tag>
 		<English>Culture(Mollo)</English>
+		<French>Culture(Mollo)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MUISCA</Tag>
 		<English>Culture(Muisca)</English>
+		<French>Culture(Muisca)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MURRI</Tag>
 		<English>Culture(Murri)</English>
+		<French>Culture(Murri)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_NABATEANS</Tag>
 		<English>Culture(Nabateans)</English>
+		<French>Culture(Nabatéens)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_NAHUA</Tag>
 		<English>Culture(Nahua)</English>
+		<French>Culture(Nahua)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_NIGERIAN</Tag>
 		<English>Culture(Nigerian)</English>
+		<French>Culture(Nigéria)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LUSITANI</Tag>
 		<English>Culture(Lusitani)</English>
+		<French>Culture(Lusitanie)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_NOONGAR</Tag>
 		<English>Culture(Noongar)</English>
+		<French>Culture(Noongar)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_NORMAN</Tag>
 		<English>Culture(Norman)</English>
+		<French>Culture(Normande)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_NUMIDIAN</Tag>
 		<English>Culture(Numidian)</English>
+		<French>Culture(Numidien)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ODAWA</Tag>
 		<English>Culture(Odawa)</English>
+		<French>Culture(Odawa)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_OMAN</Tag>
 		<English>Culture(Oman)</English>
+		<French>Culture(Oman)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_OPHIR</Tag>
 		<English>Culture(Ophir)</English>
+		<French>Culture(Ophir)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ORANG_ASLI</Tag>
-		<English>Culture(Orang_Asli)</English>
+		<English>Culture(Orang Asli)</English>
+		<French>Culture(Orang_Asli)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PAIUTE</Tag>
 		<English>Culture(Paiute)</English>
+		<French>Culture(Paiute)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PAKISTAN</Tag>
 		<English>Culture(Pakistan)</English>
+		<French>Culture(Pakistan)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PALESTINIAN</Tag>
 		<English>Culture(Palestinian)</English>
+		<French>Culture(Paléstinien)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LYDIANS</Tag>
 		<English>Culture(Lydians)</English>
+		<French>Culture(Lydians)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PANAMAN</Tag>
 		<English>Culture(Panaman)</English>
+		<French>Culture(Panaman)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PARAGUAYAN</Tag>
 		<English>Culture(Paraguayan)</English>
+		<French>Culture(Paraguayenne)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PASHTUN</Tag>
 		<English>Culture(Pashtun)</English>
+		<French>Culture(Pashtun)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PERUVIAN</Tag>
 		<English>Culture(Peruvian)</English>
+		<French>Culture(Péruvienne)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PHILIPINO</Tag>
 		<English>Culture(Filipino)</English>
+		<French>Culture(Philipines)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PHILISTINES</Tag>
 		<English>Culture(Philistines)</English>
+		<French>Culture(Philistines)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PILAGA</Tag>
 		<English>Culture(Pilaga)</English>
+		<French>Culture(Pilaga)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_POVERTY_POINT</Tag>
-		<English>Culture(Poverty_Point)</English>
+		<English>Culture(Poverty Point)</English>
+		<French>Culture(Poverty Point)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_POYA</Tag>
 		<English>Culture(Poya)</English>
+		<French>Culture(Poya)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PUELCHE</Tag>
 		<English>Culture(Puelche)</English>
+		<French>Culture(Puelche)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MALAGASY</Tag>
 		<English>Culture(Malagasy)</English>
+		<French>Culture(Malagasy)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PUNTIC</Tag>
 		<English>Culture(Puntic)</English>
+		<French>Culture(Puntic)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_QIN</Tag>
 		<English>Culture(Qin)</English>
+		<French>Culture(Qin)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_QING</Tag>
 		<English>Culture(Qing)</English>
+		<French>Culture(Qing)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_QUEBEC</Tag>
 		<English>Culture(Quebec)</English>
+		<French>Culture(Québec)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_QUERANDI</Tag>
 		<English>Culture(Querandi)</English>
+		<French>Culture(Quérande)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_QULLA</Tag>
 		<English>Culture(Qulla)</English>
+		<French>Culture(Qulla)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_RED_OCHER</Tag>
-		<English>Culture(Red_Ocher)</English>
+		<English>Culture(Red Ocher)</English>
+		<French>Culture(Red_Ocher)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SABBATEAN</Tag>
 		<English>Culture(Sabbatean)</English>
+		<French>Culture(Sabbatéen)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SAFAVIDS</Tag>
 		<English>Culture(Safavids)</English>
+		<French>Culture(Safavids)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SAFFARID</Tag>
 		<English>Culture(Saffarid)</English>
+		<French>Culture(Saffaride)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MAMELUKS</Tag>
 		<English>Culture(Mameluks)</English>
+		<French>Culture(Mameluks)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SAKA</Tag>
 		<English>Culture(Saka)</English>
+		<French>Culture(Saka)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SARMATIANS</Tag>
 		<English>Culture(Sarmatians)</English>
+		<French>Culture(Sarmatiens)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SELJUKS</Tag>
 		<English>Culture(Seljuks)</English>
+		<French>Culture(Seljuks)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SEMANG</Tag>
 		<English>Culture(Semang)</English>
+		<French>Culture(Semang)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SENEGALI</Tag>
 		<English>Culture(Senegali)</English>
+		<French>Culture(Sénégalais)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SENNAR</Tag>
 		<English>Culture(Sennar)</English>
+		<French>Culture(Sennar)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SERBIAN</Tag>
 		<English>Culture(Serbian)</English>
+		<French>Culture(Serbe)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SICAN</Tag>
 		<English>Culture(Sican)</English>
+		<French>Culture(Sican)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SICILIAN</Tag>
 		<English>Culture(Sicilian)</English>
+		<French>Culture(Sicilienne)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SINTASHTA</Tag>
 		<English>Culture(Sintashta)</English>
+		<French>Culture(Sintashta)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MANI</Tag>
 		<English>Culture(Mani)</English>
+		<French>Culture(Mani)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SLOVAKIAN</Tag>
 		<English>Culture(Slovakian)</English>
+		<French>Culture(Slovaque)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SLOVENIAN</Tag>
 		<English>Culture(Slovenian)</English>
+		<French>Culture(Slovénienne)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SUDANESE</Tag>
 		<English>Culture(Sudanese)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SUNDANESE</Tag>
-		<English>Culture(Sundanese)</English>
+		<French>Culture(Soudanaise)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SURINAM</Tag>
 		<English>Culture(Surinam)</English>
+		<French>Culture(Surinam)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SWEDISH</Tag>
 		<English>Culture(Swedish)</English>
+		<French>Culture(Suedoise)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TAGALOG</Tag>
 		<English>Culture(Tagalog)</English>
+		<French>Culture(Tagalog)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TAIRONA</Tag>
 		<English>Culture(Tairona)</English>
+		<French>Culture(Tairona)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TAJIKS</Tag>
 		<English>Culture(Tajiks)</English>
+		<French>Culture(Tajiks)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TANG</Tag>
 		<English>Culture(Tang)</English>
+		<French>Culture(Tang)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TANZANIAN</Tag>
 		<English>Culture(Tanzanian)</English>
+		<French>Culture(Tanzanienne)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TASMANIAN</Tag>
 		<English>Culture(Tasmanian)</English>
+		<French>Culture(Tasmanienne)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TATARS</Tag>
 		<English>Culture(Tatars)</English>
+		<French>Culture(Tatars)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_THRACIAN</Tag>
 		<English>Culture(Thracian)</English>
+		<French>Culture(Thrace)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_THREE_KINGDOMS</Tag>
-		<English>Culture(Three_Kingdoms)</English>
+		<English>Culture(Three Kingdoms)</English>
+		<French>Culture(Trois Royaumes)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TIWI</Tag>
 		<English>Culture(Tiwi)</English>
+		<French>Culture(Tiwi)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MEDES</Tag>
 		<English>Culture(Medes)</English>
+		<French>Culture(Medes)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TOBA</Tag>
 		<English>Culture(Toba)</English>
+		<French>Culture(Toba)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TOTONAC</Tag>
 		<English>Culture(Totonac)</English>
+		<French>Culture(Totonac)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TRANSOXANIAN</Tag>
 		<English>Culture(Transoxanian)</English>
+		<French>Culture(Transoxanien)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TUCANO</Tag>
 		<English>Culture(Tucano)</English>
+		<French>Culture(Tucano)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TUNGUS</Tag>
 		<English>Culture(Tungus)</English>
+		<French>Culture(Tungus)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TUNISIAN</Tag>
 		<English>Culture(Tunisian)</English>
+		<French>Culture(Tunisien)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TURKISH</Tag>
 		<English>Culture(Turkish)</English>
+		<French>Culture(Turc)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_UKRAINIAN</Tag>
 		<English>Culture(Ukrainian)</English>
+		<French>Culture(Ukrainien)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_URUGUAYAN</Tag>
 		<English>Culture(Uruguayan)</English>
+		<French>Culture(Uruguayen)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_UZBEKS</Tag>
 		<English>Culture(Uzbeks)</English>
+		<French>Culture(Ouzbeks)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MELANESIAN</Tag>
 		<English>Culture(Melanesian)</English>
+		<French>Culture(Mélanésien)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_VALDIVIA</Tag>
 		<English>Culture(Valdivia)</English>
+		<French>Culture(Valdivia)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_VANATU</Tag>
 		<English>Culture(Vanatu)</English>
+		<French>Culture(Vanatu)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_VANDAL</Tag>
 		<English>Culture(Vandal)</English>
+		<French>Culture(Vandale)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SAUDI</Tag>
 		<English>Culture(Saudi)</English>
+		<French>Culture(Saudi)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_WALLACHIAN</Tag>
 		<English>Culture(Wallachian)</English>
+		<French>Culture(Wallachien)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_WARAY</Tag>
 		<English>Culture(Waray)</English>
+		<French>Culture(Waray)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_WARI</Tag>
 		<English>Culture(Wari)</English>
+		<French>Culture(Wari)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_WAYUU</Tag>
 		<English>Culture(Wayuu)</English>
+		<French>Culture(Wayuu)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_XIA</Tag>
 		<English>Culture(Xia)</English>
+		<French>Culture(Xia)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_XIANBEI</Tag>
 		<English>Culture(Xianbei)</English>
+		<French>Culture(Xianbei)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MICRONESIAN</Tag>
 		<English>Culture(Micronesian)</English>
+		<French>Culture(Micronésien)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_YAGUA</Tag>
 		<English>Culture(Yagua)</English>
+		<French>Culture(Yagua)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_YOLNGU</Tag>
 		<English>Culture(Yolngu)</English>
+		<French>Culture(Yolngu)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ZANZIBAR</Tag>
 		<English>Culture(Zanzibar)</English>
+		<French>Culture(Zanzibar)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ZENU</Tag>
 		<English>Culture(Zenu)</English>
+		<French>Culture(Zenu)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ZIMBABWE</Tag>
 		<English>Culture(Zimbabwe)</English>
+		<French>Culture(Zimbabwe)</French>
 	</TEXT>
 </Civ4GameText>

@@ -86,10 +86,6 @@
 					<TerrainType>TERRAIN_COSMOS</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<YieldChanges>
 				<iYield>6</iYield>
@@ -122,10 +118,6 @@
 			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_COSMOS</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 			</PrereqOrTerrain>
@@ -809,6 +801,16 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
+			<PrereqOrTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_COSMOS</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+			</PrereqOrTerrain>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_INTERGALACTIC_TRADING_POST</BuildingClass>
@@ -839,6 +841,16 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
+			<PrereqOrTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_COSMOS</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+			</PrereqOrTerrain>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_KOLMOGOROV_TRANSPORTER</BuildingClass>
@@ -1029,6 +1041,16 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
+			<PrereqOrTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_COSMOS</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+			</PrereqOrTerrain>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_INTERGALACTIC_COMMAND_CENTER</BuildingClass>
@@ -1585,12 +1607,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqOrTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_NEUTRON_STAR</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-			</PrereqOrTerrain>
 			<YieldChanges>
 				<iYield>10</iYield>
 				<iYield>50</iYield>
@@ -2913,6 +2929,7 @@
 				<iYield>60</iYield>
 				<iYield>18</iYield>
 			</YieldChanges>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_EXAVERSE</BuildingClassType>
@@ -2984,10 +3001,6 @@
 			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_COSMOS</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 			</PrereqOrTerrain>
