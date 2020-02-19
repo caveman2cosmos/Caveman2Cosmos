@@ -3767,11 +3767,11 @@
 					<iWithdrawChange>25</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_CORAL_REEF_REEF_BEACON</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_BEACON</FeatureType>
 					<iWithdrawChange>25</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_CORAL_REEF_REEF_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_LIGHTHOUSE</FeatureType>
 					<iWithdrawChange>25</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
@@ -3923,12 +3923,12 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_CORAL_REEF_REEF_BEACON</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_BEACON</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_CORAL_REEF_REEF_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_LIGHTHOUSE</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>

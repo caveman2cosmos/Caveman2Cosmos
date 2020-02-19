@@ -9332,7 +9332,7 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_CORAL_REEF_REEF_BEACON</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_BEACON</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
@@ -9346,7 +9346,7 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_CORAL_REEF_REEF_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_LIGHTHOUSE</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
@@ -9390,7 +9390,7 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_CORAL_REEF_REEF_BEACON</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_BEACON</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
@@ -9404,7 +9404,7 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_CORAL_REEF_REEF_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_LIGHTHOUSE</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
