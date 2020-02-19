@@ -593,25 +593,57 @@ bool isWorldWonderClass(BuildingClassTypes eBuildingClass)
 {
 	return (GC.getBuildingClassInfo(eBuildingClass).getMaxGlobalInstances() != -1);
 }
+#ifdef INCLUDE_BUILDING_CLASS
+bool isWorldWonderClass(BuildingTypes building)
+{
+	return GC.getBuildingClassInfo(GC.getBuildingInfo(building).getBuildingClass()).getMaxGlobalInstances() != -1;
+#else
+bool isWorldWonderClass(BuildingTypes building)
+{
+	return GC.getBuildingInfo(building).getMaxGlobalInstances() != -1;
+#endif
+}
 
 bool isTeamWonderClass(BuildingClassTypes eBuildingClass)
 {
 	return (GC.getBuildingClassInfo(eBuildingClass).getMaxTeamInstances() != -1);
+}
+#ifdef INCLUDE_BUILDING_CLASS
+bool isTeamWonderClass(BuildingTypes building)
+{
+	return GC.getBuildingClassInfo(GC.getBuildingInfo(building).getBuildingClassType()).getMaxTeamInstances() != -1;
+#else
+bool isTeamWonderClass(BuildingTypes building)
+{
+	return GC.getBuildingInfo(building).getMaxTeamInstances() != -1;
+#endif
 }
 
 bool isNationalWonderClass(BuildingClassTypes eBuildingClass)
 {
 	return (GC.getBuildingClassInfo(eBuildingClass).getMaxPlayerInstances() != -1);
 }
+#ifdef INCLUDE_BUILDING_CLASS
+bool isNationalWonderClass(BuildingTypes building)
+{
+	return GC.getBuildingClassInfo(GC.getBuildingInfo(building).getBuildingClassType()).getMaxPlayerInstances() != -1;
+#else
+bool isNationalWonderClass(BuildingTypes building)
+{
+	return GC.getBuildingInfo(building).getMaxPlayerInstances() != -1;
+#endif
+}
 
 bool isNationalWonderGroupClass(BuildingClassTypes eBuildingClass)
 {
 	const SpecialBuildingTypes eSpecialBuilding = (SpecialBuildingTypes)GC.getBuildingInfo((BuildingTypes)GC.getBuildingClassInfo(eBuildingClass).getDefaultBuildingIndex()).getSpecialBuildingType();
-	if (eSpecialBuilding == NO_SPECIALBUILDING)
-	{
-		return false;
-	}
-	return (GC.getSpecialBuildingInfo(eSpecialBuilding).getMaxPlayerInstances() != -1);
+	return eSpecialBuilding != NO_SPECIALBUILDING && GC.getSpecialBuildingInfo(eSpecialBuilding).getMaxPlayerInstances() != -1;
+}
+
+bool isNationalWonderGroupClass(BuildingTypes building)
+{
+	const SpecialBuildingTypes eSpecialBuilding = static_cast<SpecialBuildingTypes>(GC.getBuildingInfo(building).getSpecialBuildingType());
+	return eSpecialBuilding != NO_SPECIALBUILDING && GC.getSpecialBuildingInfo(eSpecialBuilding).getMaxPlayerInstances() != -1;
 }
 
 bool isNationalWonderGroupSpecialBuilding(SpecialBuildingTypes eSpecialBuilding)
