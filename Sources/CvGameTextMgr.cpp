@@ -12054,7 +12054,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 		iLast = 0;
 		for (iI = 0; iI < GC.getNumUnitInfos(); ++iI)
 		{
-			if (!isWorldUnitClass((UnitTypes)iI))
+			if (!isWorldUnit((UnitTypes)iI))
 			{
 				for (int j = 0; j < GC.getTraitInfo(eTrait).getNumUnitProductionModifiers(); j++)
 				{
@@ -21860,7 +21860,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 
 	if (bNormalView)
 	{
-		if (isWorldUnitClass(eUnit))
+		if (isWorldUnit(eUnit))
 		{
 			if (pCity == NULL)
 			{
@@ -21875,7 +21875,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 
 /* iMaxTeamInstances was unused in CvUnitClassInfo and removed as part of us shedding the unitclass object, maybe we want to add it back in for CvUnitInfo?
 
-		if (isTeamUnitClass(eUnitClass))
+		if (isTeamUnitClass(eUnit))
 		{
 			//TB Unlimited National Units Mod
 			if (!GC.getGame().isOption(GAMEOPTION_UNLIMITED_NATIONAL_UNITS) || GC.getUnitClassInfo(eUnitClass).isUnlimitedException())
@@ -21883,18 +21883,18 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 				if (pCity == NULL)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_UNIT_TEAM_UNIT_ALLOWED", GC.getUnitClassInfo(eUnitClass).getMaxTeamInstances()));
+					szBuffer.append(gDLL->getText("TXT_KEY_UNIT_TEAM_UNIT_ALLOWED", GC.getUnitInfo(eUnit).getMaxTeamInstances()));
 				}
 				else
 				{
-					szBuffer.append(gDLL->getText("TXT_KEY_UNIT_TEAM_UNIT_LEFT", (GC.getUnitClassInfo(eUnitClass).getMaxTeamInstances() - (ePlayer != NO_PLAYER ? GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getUnitClassCountPlusMaking(eUnitClass) : 0))));
+					szBuffer.append(gDLL->getText("TXT_KEY_UNIT_TEAM_UNIT_LEFT", (GC.getUnitInfo(eUnit).getMaxTeamInstances() - (ePlayer != NO_PLAYER ? GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getUnitClassCountPlusMaking(eUnitClass) : 0))));
 				}
 			}
 			//TB Unlimied National Units End
 		}
 */
 
-		if (isNationalUnitClass(eUnitClass))
+		if (isNationalUnit(eUnit))
 		{
 			//TB Unlimited National Units Mod
 			if (!GC.getGame().isOption(GAMEOPTION_UNLIMITED_NATIONAL_UNITS) || GC.getUnitClassInfo(eUnitClass).isUnlimitedException())
@@ -21902,11 +21902,11 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 				if (pCity == NULL)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_UNIT_NATIONAL_UNIT_ALLOWED", GC.getUnitClassInfo(eUnitClass).getMaxPlayerInstances()));
+					szBuffer.append(gDLL->getText("TXT_KEY_UNIT_NATIONAL_UNIT_ALLOWED", GC.getUnitInfo(eUnit).getMaxPlayerInstances()));
 				}
 				else
 				{
-					szBuffer.append(gDLL->getText("TXT_KEY_UNIT_NATIONAL_UNIT_LEFT", (GC.getUnitClassInfo(eUnitClass).getMaxPlayerInstances() - (ePlayer != NO_PLAYER ? GET_PLAYER(ePlayer).getUnitClassCountPlusMaking(eUnitClass) : 0))));
+					szBuffer.append(gDLL->getText("TXT_KEY_UNIT_NATIONAL_UNIT_LEFT", (GC.getUnitInfo(eUnit).getMaxPlayerInstances() - (ePlayer != NO_PLAYER ? GET_PLAYER(ePlayer).getUnitClassCountPlusMaking(eUnitClass) : 0))));
 				}
 			}
 			//TB Unlimied National Units End
@@ -22028,11 +22028,8 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 			{
 				szBuffer.append(ENDCOLR);
 			}
-	/************************************************************************************************/
-	/* Afforess	Vicinity Bonus Start		 07/29/09                                            */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
+
+			// Afforess	Vicinity Bonus 07/29/09
 			if (GC.getUnitInfo(eUnit).getPrereqVicinityBonus() != NO_BONUS)
 			{
 				if ((pCity == NULL) || !(pCity->canTrain(eUnit)))
@@ -22061,9 +22058,8 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 			{
 				szBuffer.append(ENDCOLR);
 			}
-	/************************************************************************************************/
-	/* Afforess	Vicinity Bonus End       END                                                     */
-	/************************************************************************************************/
+			// Afforess	Vicinity Bonus END
+
 			if (!bCivilopediaText)
 			{
 				if (GC.getUnitInfo(eUnit).getPrereqBuilding() != NO_BUILDING)

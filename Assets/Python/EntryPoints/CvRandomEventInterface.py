@@ -3338,7 +3338,7 @@ def getGreedUnit(CyPlayer, CyPlot):
 	iBestUnit = -1
 	for iUnit in xrange(GC.getNumUnitInfos()):
 		CvUnitInfo = GC.getUnitInfo(iUnit)
-		if CvUnitInfo.getMaxGlobalInstances() + 1 or GC.getUnitClassInfo(CvUnitInfo.getUnitClassType()).getMaxPlayerInstances() + 1:
+		if CvUnitInfo.getMaxGlobalInstances() + 1 or CvUnitInfo.getMaxPlayerInstances() + 1:
 			continue
 		if iUnit != -1 and CvUnitInfo.getDomainType() == DomainTypes.DOMAIN_LAND and CyPlayer.canTrain(iUnit, False, False):
 			iValue = 0

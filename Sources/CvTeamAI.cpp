@@ -2019,7 +2019,7 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam) const
 	{
 		if (isTechRequiredForUnit(eTech, ((UnitTypes)iI)))
 		{
-			if (isWorldUnitClass((UnitTypes)iI))
+			if (isWorldUnit((UnitTypes)iI))
 			{
 				if (getUnitClassMaking((UnitClassTypes)(GC.getUnitInfo((UnitTypes)iI).getUnitClassType())) > 0)
 				{
@@ -6002,7 +6002,7 @@ int CvTeamAI::AI_getTechMonopolyValue(TechTypes eTech, TeamTypes eTeam) const
 
 		if (isTechRequiredForUnit((eTech), eLoopUnit))
 		{
-			if (isWorldUnitClass(eLoopUnit))
+			if (isWorldUnit(eLoopUnit))
 			{
 				iValue += 50;
 			}

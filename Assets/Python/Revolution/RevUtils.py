@@ -366,7 +366,7 @@ def getHandoverUnitTypes(CyCity):
 
 		if CvUnitInfo.getDomainType() != DomainTypes.DOMAIN_LAND or CvUnitInfo.getPrereqAndTech() == TechTypes.NO_TECH:
 			continue
-		if CvUnitInfo.getMaxGlobalInstances() > 0 or GC.getUnitClassInfo(CvUnitInfo.getUnitClassType()).getMaxPlayerInstances() > 0:
+		if CvUnitInfo.getMaxGlobalInstances() > 0 or CvUnitInfo.getMaxPlayerInstances() > 0:
 			continue
 
 		if not CyCity.canTrain(iUnit, False, False, False, False): continue
@@ -405,7 +405,7 @@ def getUprisingUnitTypes(CyCity):
 		if CvUnitInfo.getDomainType() != DomainTypes.DOMAIN_LAND:
 			continue
 
-		if CvUnitInfo.getMaxGlobalInstances() > 0 or GC.getUnitClassInfo(CvUnitInfo.getUnitClassType()).getMaxPlayerInstances() > 0:
+		if CvUnitInfo.getMaxGlobalInstances() > 0 or CvUnitInfo.getMaxPlayerInstances() > 0:
 			continue
 
 		iCombat = CvUnitInfo.getCombat()

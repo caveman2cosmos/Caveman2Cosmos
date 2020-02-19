@@ -7953,7 +7953,7 @@ int CvPlayerAI::AI_techUnitValue( TechTypes eTech, int iPathLength, bool &bEnabl
 					iUnitValue += iMilitaryValue;
 				}
 
-				if (iPathLength <= 1 && getTotalPopulation() > 5 && isWorldUnitClass(eLoopUnit)
+				if (iPathLength <= 1 && getTotalPopulation() > 5 && isWorldUnit(eLoopUnit)
 				&& !GC.getGame().isUnitClassMaxedOut((UnitClassTypes)(kLoopUnit.getUnitClassType())))
 				{
 					bEnablesUnitWonder = true;
@@ -11012,7 +11012,6 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 	{
 		PROFILE("CvPlayerAI::AI_baseBonusVal::recalculate");
 
-		UnitTypes eLoopUnit;
 		BuildingTypes eLoopBuilding;
 		int iDiff;
 		int iValue = 0;
@@ -11052,138 +11051,133 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 
 				{
 					PROFILE("CvPlayerAI::AI_baseBonusVal::recalculate Unit Value");
-					for (iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
+					for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
 					{
-						eLoopUnit = ((UnitTypes)(kCivilizationInfo.getCivilizationUnits(iI)));
+						CvUnitInfo& kLoopUnit = GC.getUnitInfo((UnitTypes)iI);
 
-						if (eLoopUnit != NO_UNIT)
+						iTempValue = 0;
+						iTempTradeValue = 0;
+
+						//	Don't consider units more than one era ahead of us
+						if ( kLoopUnit.getPrereqAndTech() != NO_TECH )
 						{
-							CvUnitInfo& kLoopUnit = GC.getUnitInfo(eLoopUnit);
+							CvTechInfo& prereqTech = GC.getTechInfo((TechTypes)kLoopUnit.getPrereqAndTech());
 
-							iTempValue = 0;
-							iTempTradeValue = 0;
-
-							//	Don't consider units more than one era ahead of us
-							if ( kLoopUnit.getPrereqAndTech() != NO_TECH )
+							if ( prereqTech.getEra() > (int)getCurrentEra() + 1 )
 							{
-								CvTechInfo& prereqTech = GC.getTechInfo((TechTypes)kLoopUnit.getPrereqAndTech());
+								continue;
+							}
+						}
 
-								if ( prereqTech.getEra() > (int)getCurrentEra() + 1 )
+						if (kLoopUnit.getPrereqAndBonus() == eBonus)
+						{
+							iTempValue += 50;
+						}
+
+						int iBonusORVal	= 0;
+						int	iHasOther = 0;
+
+						for (iJ = 0; iJ < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); iJ++)
+						{
+							if ( kLoopUnit.getPrereqOrBonuses(iJ) != NO_BONUS )
+							{
+								if (kLoopUnit.getPrereqOrBonuses(iJ) == eBonus)
 								{
-									continue;
+									iBonusORVal = 40;
+								}
+								else if ( getNumAvailableBonuses((BonusTypes)kLoopUnit.getPrereqOrBonuses(iJ)) > 0 )
+								{
+									iHasOther += getNumAvailableBonuses((BonusTypes)kLoopUnit.getPrereqOrBonuses(iJ));
 								}
 							}
+						}
 
-							if (kLoopUnit.getPrereqAndBonus() == eBonus)
+						while(iHasOther-- > 0)
+						{
+							iBonusORVal /= 4;
+						}
+
+						iTempValue += iBonusORVal;
+
+						iTempValue += kLoopUnit.getBonusProductionModifier(eBonus) / 10;
+
+						if (iTempValue > 0)
+						{
+							bool bIsWater = (kLoopUnit.getDomainType() == DOMAIN_SEA);
+
+							// if non-limited water unit, weight by coastal cities
+							if (bIsWater && !isLimitedUnit((UnitTypes)iI))
 							{
-								iTempValue += 50;
+								iTempValue *= std::min(iCoastalCityCount * 2, iCityCount);	// double coastal cities, cap at total cities
+								iTempValue /= std::max(1, iCityCount);
 							}
 
-							int iBonusORVal	= 0;
-							int	iHasOther = 0;
-
-							for (iJ = 0; iJ < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); iJ++)
+							// is it a water unit and no coastal cities
+							if (bIsWater && pCoastalCity == NULL )
 							{
-								if ( kLoopUnit.getPrereqOrBonuses(iJ) != NO_BONUS )
-								{
-									if (kLoopUnit.getPrereqOrBonuses(iJ) == eBonus)
-									{
-										iBonusORVal = 40;
-									}
-									else if ( getNumAvailableBonuses((BonusTypes)kLoopUnit.getPrereqOrBonuses(iJ)) > 0 )
-									{
-										iHasOther += getNumAvailableBonuses((BonusTypes)kLoopUnit.getPrereqOrBonuses(iJ));
-									}
-								}
+								//	worthless
+								iTempValue = 2;
+
+								iTempTradeValue = iTempValue;
 							}
-
-							while(iHasOther-- > 0)
+							else if (canTrain((UnitTypes)iI))
 							{
-								iBonusORVal /= 4;
-							}
-
-							iTempValue += iBonusORVal;
-
-							iTempValue += kLoopUnit.getBonusProductionModifier(eBonus) / 10;
-
-							if (iTempValue > 0)
-							{
-								bool bIsWater = (kLoopUnit.getDomainType() == DOMAIN_SEA);
-
-								// if non-limited water unit, weight by coastal cities
-								if (bIsWater && !isLimitedUnitClass((UnitClassTypes)(kLoopUnit.getUnitClassType())))
+								// is it a water unit and no coastal cities or our coastal city cannot build because its obsolete
+								if ((bIsWater && (pCoastalCity->allUpgradesAvailable((UnitTypes)iI) != NO_UNIT)) ||
+									// or our capital cannot build because its obsolete (we can already build all its upgrades)
+									(pCapital != NULL && pCapital->allUpgradesAvailable((UnitTypes)iI) != NO_UNIT))
 								{
-									iTempValue *= std::min(iCoastalCityCount * 2, iCityCount);	// double coastal cities, cap at total cities
-									iTempValue /= std::max(1, iCityCount);
-								}
-
-								// is it a water unit and no coastal cities
-								if (bIsWater && pCoastalCity == NULL )
-								{
-									//	worthless
+									// its worthless
 									iTempValue = 2;
-
-									iTempTradeValue = iTempValue;
 								}
-								else if (canTrain(eLoopUnit))
-								{
-									// is it a water unit and no coastal cities or our coastal city cannot build because its obsolete
-									if ((bIsWater && (pCoastalCity->allUpgradesAvailable(eLoopUnit) != NO_UNIT)) ||
-										// or our capital cannot build because its obsolete (we can already build all its upgrades)
-										(pCapital != NULL && pCapital->allUpgradesAvailable(eLoopUnit) != NO_UNIT))
-									{
-										// its worthless
-										iTempValue = 2;
-									}
-									// otherwise, value units we could build if we had this bonus double
-									else
-									{
-										iTempValue *= 2;
-									}
-
-									iTempTradeValue = iTempValue;
-								}
+								// otherwise, value units we could build if we had this bonus double
 								else
 								{
-									//	Trades are short-term - if we can't train the unit now assume we
-									//	won't be able to do so for the duration of the trade
-									iTempTradeValue = 0;
+									iTempValue *= 2;
 								}
 
-								if ( iTempValue > 0 )
-								{
-									int	iTechDistance = 0;
-
-									// If building this is dependent (directly or otherwise) on a tech, assess how
-									//	distant that tech is
-									if ( kLoopUnit.getPrereqAndTech() != NO_TECH )
-									{
-										iTechDistance = std::max(iTechDistance,findPathLength((TechTypes)kLoopUnit.getPrereqAndTech(), false));
-									}
-									//	Without some more checks we are over-assessing religious buildings a lot
-									//	so if there is a religion pre-req make some basic checks on the availability of
-									//	the religion
-									if ( kLoopUnit.getPrereqReligion() != NO_RELIGION )
-									{
-										CvReligionInfo& kReligion = GC.getReligionInfo((ReligionTypes)kLoopUnit.getPrereqReligion());
-
-										iTechDistance = std::max(iTechDistance,findPathLength((TechTypes)kReligion.getTechPrereq(), false));
-									}
-									//	Similarly corporations
-									if ( kLoopUnit.getPrereqCorporation() != NO_RELIGION )
-									{
-										CvCorporationInfo& kCorporation = GC.getCorporationInfo((CorporationTypes)kLoopUnit.getPrereqCorporation());
-
-										iTechDistance = std::max(iTechDistance,findPathLength((TechTypes)kCorporation.getTechPrereq(), false));
-									}
-
-									iTempValue = (iTempValue*15)/(10+iTechDistance);
-									iTempTradeValue = (iTempTradeValue*15)/(10+iTechDistance);
-								}
-
-								iValue += iTempValue;
-								iTradeValue += iTempTradeValue;
+								iTempTradeValue = iTempValue;
 							}
+							else
+							{
+								//	Trades are short-term - if we can't train the unit now assume we
+								//	won't be able to do so for the duration of the trade
+								iTempTradeValue = 0;
+							}
+
+							if ( iTempValue > 0 )
+							{
+								int	iTechDistance = 0;
+
+								// If building this is dependent (directly or otherwise) on a tech, assess how
+								//	distant that tech is
+								if ( kLoopUnit.getPrereqAndTech() != NO_TECH )
+								{
+									iTechDistance = std::max(iTechDistance,findPathLength((TechTypes)kLoopUnit.getPrereqAndTech(), false));
+								}
+								//	Without some more checks we are over-assessing religious buildings a lot
+								//	so if there is a religion pre-req make some basic checks on the availability of
+								//	the religion
+								if ( kLoopUnit.getPrereqReligion() != NO_RELIGION )
+								{
+									CvReligionInfo& kReligion = GC.getReligionInfo((ReligionTypes)kLoopUnit.getPrereqReligion());
+
+									iTechDistance = std::max(iTechDistance,findPathLength((TechTypes)kReligion.getTechPrereq(), false));
+								}
+								//	Similarly corporations
+								if ( kLoopUnit.getPrereqCorporation() != NO_RELIGION )
+								{
+									CvCorporationInfo& kCorporation = GC.getCorporationInfo((CorporationTypes)kLoopUnit.getPrereqCorporation());
+
+									iTechDistance = std::max(iTechDistance,findPathLength((TechTypes)kCorporation.getTechPrereq(), false));
+								}
+
+								iTempValue = (iTempValue*15)/(10+iTechDistance);
+								iTempTradeValue = (iTempTradeValue*15)/(10+iTechDistance);
+							}
+
+							iValue += iTempValue;
+							iTradeValue += iTempTradeValue;
 						}
 					}
 				}

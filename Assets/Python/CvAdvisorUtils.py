@@ -323,25 +323,22 @@ def cityAdvise(CyCity, iPlayer):
 							iBestValue = 0
 							eBestUnit = -1
 
-							for iI in xrange(GC.getNumUnitClassInfos()):
+							for iUnitX in xrange(GC.getNumUnitInfos()):
 
-								if isLimitedUnitClass(iI): continue
+								if isLimitedUnit(iUnitX): continue
 
-								eLoopUnit = GC.getCivilizationInfo(CyPlayer.getCivilizationType()).getCivilizationUnits(iI)
-								if eLoopUnit == -1: continue
+								if GC.getUnitInfo(iUnitX).getDomainType() == DomainTypes.DOMAIN_LAND:
 
-								if GC.getUnitInfo(eLoopUnit).getDomainType() == DomainTypes.DOMAIN_LAND:
+									if CyCity.canTrain(iUnitX, False, False, False, False):
 
-									if CyCity.canTrain(eLoopUnit, False, False, False, False):
+										if CyCity.getFirstUnitOrder(iUnitX) == -1:
 
-										if CyCity.getFirstUnitOrder(eLoopUnit) == -1:
-
-											iValue = CyPlayer.AI_unitValue(eLoopUnit, UnitAITypes.UNITAI_SETTLE, CyArea)
+											iValue = CyPlayer.AI_unitValue(iUnitX, UnitAITypes.UNITAI_SETTLE, CyArea)
 
 											if iValue > iBestValue:
 
 												iBestValue = iValue
-												eBestUnit = eLoopUnit
+												eBestUnit = iUnitX
 
 							if eBestUnit > -1:
 								popupInfo = CyPopupInfo()

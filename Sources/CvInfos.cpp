@@ -12671,10 +12671,7 @@ bool CvDiplomacyInfo::FindResponseIndex(const CvDiplomacyResponse* pNewResponse,
 //
 //------------------------------------------------------------------------------------------------------
 CvUnitClassInfo::CvUnitClassInfo() :
-	m_iMaxPlayerInstances(-1),
-	//TB Unlimited National Units Mod
 	m_bUnlimitedException(false),
-	//TB Unlimited National Units End
 	m_iInstanceCostModifier(0),
 	m_iDefaultUnitIndex(NO_UNIT)
 {}
@@ -12687,11 +12684,6 @@ CvUnitClassInfo::CvUnitClassInfo() :
 //
 //------------------------------------------------------------------------------------------------------
 CvUnitClassInfo::~CvUnitClassInfo() {}
-
-int CvUnitClassInfo::getMaxPlayerInstances() const
-{
-	return m_iMaxPlayerInstances;
-}
 
 //TB Unlimited National Units Mod
 bool CvUnitClassInfo::isUnlimitedException() const
@@ -12733,7 +12725,6 @@ bool CvUnitClassInfo::read(CvXMLLoadUtility* pXML)
 		return false;
 	}
 
-	pXML->GetOptionalChildXmlValByName(&m_iMaxPlayerInstances, L"iMaxPlayerInstances", -1);
 	pXML->GetOptionalChildXmlValByName(&m_bUnlimitedException, L"bUnlimitedException", false);
 	pXML->GetOptionalChildXmlValByName(&m_iInstanceCostModifier, L"iInstanceCostModifier", 0);
 
@@ -12748,7 +12739,6 @@ void CvUnitClassInfo::copyNonDefaults(CvUnitClassInfo* pClassInfo, CvXMLLoadUtil
 {
 	CvInfoBase::copyNonDefaults(pClassInfo, pXML);
 
-	if (getMaxPlayerInstances() == -1) m_iMaxPlayerInstances = pClassInfo->getMaxPlayerInstances();
 	if (isUnlimitedException() == false) m_bUnlimitedException = pClassInfo->isUnlimitedException();
 	if (getInstanceCostModifier() == 0) m_iInstanceCostModifier = pClassInfo->getInstanceCostModifier();
 
@@ -12792,7 +12782,6 @@ bool CvUnitClassInfo::readPass3()
 
 void CvUnitClassInfo::getCheckSum(unsigned int& iSum)
 {
-	CheckSum(iSum, m_iMaxPlayerInstances);
 	CheckSum(iSum, m_bUnlimitedException);
 	CheckSum(iSum, m_iInstanceCostModifier);
 	CheckSum(iSum, m_iDefaultUnitIndex);
@@ -12810,13 +12799,12 @@ void CvUnitClassInfo::getCheckSum(unsigned int& iSum)
 //
 //------------------------------------------------------------------------------------------------------
 CvSpecialBuildingInfo::CvSpecialBuildingInfo() :
-m_iObsoleteTech(NO_TECH),
-m_iTechPrereq(NO_TECH),
-m_iTechPrereqAnyone(NO_TECH),
-m_iMaxPlayerInstances(-1),
-m_bValid(false)
-{
-}
+	m_iObsoleteTech(NO_TECH),
+	m_iTechPrereq(NO_TECH),
+	m_iTechPrereqAnyone(NO_TECH),
+	m_iMaxPlayerInstances(-1),
+	m_bValid(false)
+{}
 
 //------------------------------------------------------------------------------------------------------
 //

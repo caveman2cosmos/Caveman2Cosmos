@@ -401,8 +401,7 @@ class BarbarianCiv:
 		for iUnit in xrange(GC.getNumUnitInfos()):
 
 			CvUnitInfo = GC.getUnitInfo(iUnit)
-			if CvUnitInfo.getDomainType() != DomainTypes.DOMAIN_LAND: continue
-			if CvUnitInfo.getMaxGlobalInstances() > 0 or GC.getUnitClassInfo(CvUnitInfo.getUnitClassType()).getMaxPlayerInstances() > 0:
+			if CvUnitInfo.getDomainType() != DomainTypes.DOMAIN_LAND or CvUnitInfo.getMaxGlobalInstances() > 0 or CvUnitInfo.getMaxPlayerInstances() > 0:
 				continue
 
 			if not CyPlayer.canTrain(iUnit, False, False): continue

@@ -23,6 +23,7 @@
 //------------------------------------------------------------------------------------------------------
 CvUnitInfo::CvUnitInfo() :
 m_iMaxGlobalInstances(-1),
+m_iMaxPlayerInstances(-1),
 m_iDCMBombRange(0),
 m_iDCMBombAccuracy(0),
 m_bDCMAirBomb1(0),
@@ -476,6 +477,10 @@ const wchar* CvUnitInfo::getExtraHoverText() const
 int CvUnitInfo::getMaxGlobalInstances() const
 {
 	return m_iMaxGlobalInstances;
+}
+int CvUnitInfo::getMaxPlayerInstances() const
+{
+	return m_iMaxPlayerInstances;
 }
 /************************************************************************************************/
 /* DCM									 04/19/09								Johny Smith  */
@@ -3850,6 +3855,7 @@ bool CvUnitInfo::isAidChange(int iProperty) const
 void CvUnitInfo::getCheckSum(unsigned int &iSum)
 {
 	CheckSum(iSum, m_iMaxGlobalInstances);
+	CheckSum(iSum, m_iMaxPlayerInstances);
 	CheckSum(iSum, m_iDCMBombRange);
 	CheckSum(iSum, m_iDCMBombAccuracy);
 	CheckSum(iSum, m_bDCMAirBomb1);
@@ -4371,6 +4377,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	m_iUnitClassType = pXML->GetInfoClass(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(&m_iMaxGlobalInstances, L"iMaxGlobalInstances", -1);
+	pXML->GetOptionalChildXmlValByName(&m_iMaxPlayerInstances, L"iMaxPlayerInstances", -1);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Special");
 	m_iSpecialUnitType = pXML->GetInfoClass(szTextVal);
@@ -5511,6 +5518,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 
 	if ( m_iUnitClassType == iTextDefault )	m_iUnitClassType = pClassInfo->getUnitClassType();
 	if ( m_iMaxGlobalInstances == -1) m_iMaxGlobalInstances = pClassInfo->getMaxGlobalInstances();
+	if ( m_iMaxPlayerInstances == -1) m_iMaxPlayerInstances = pClassInfo->getMaxPlayerInstances();
 	if ( m_iSpecialUnitType == iTextDefault )	m_iSpecialUnitType = pClassInfo->getSpecialUnitType();
 	if ( m_iUnitCaptureClassType == iTextDefault )	m_iUnitCaptureClassType = pClassInfo->getUnitCaptureClassType();
 	if ( m_iUnitCombatType == iTextDefault )	m_iUnitCombatType = pClassInfo->getUnitCombatType();

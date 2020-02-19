@@ -2356,7 +2356,7 @@ bool CvPlayer::addStartUnitAI(const UnitAITypes eUnitAI, const int iCount)
 	{
 		const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes) iI);
 
-		if (eUnitAI != UNITAI_SETTLE && isLimitedUnitClass((UnitClassTypes)kUnit.getUnitClassType()))
+		if (eUnitAI != UNITAI_SETTLE && isLimitedUnit((UnitTypes) iI))
 		{
 			continue;
 		}
@@ -9299,7 +9299,7 @@ int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 
 	if (!isHuman() && !isNPC())
 	{
-		if (isWorldUnitClass(eUnit))
+		if (isWorldUnit(eUnit))
 		{
 			iModifier = GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIWorldTrainPercent();
 			iProductionNeeded *= iModifier;
@@ -17156,7 +17156,7 @@ bool CvPlayer::isUnitClassMaxedOut(UnitClassTypes eIndex, int iExtra) const
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < GC.getNumUnitClassInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
-	if (!isNationalUnitClass(eIndex))
+	if (!isNationalUnit((UnitTypes)GC.getUnitClassInfo(eIndex).getDefaultUnitIndex()))
 	{
 		return false;
 	}
@@ -17168,10 +17168,10 @@ bool CvPlayer::isUnitClassMaxedOut(UnitClassTypes eIndex, int iExtra) const
 
 	if (GC.getGame().isOption(GAMEOPTION_UNLIMITED_NATIONAL_UNITS))
 	{
-		FAssertMsg(getUnitClassCount(eIndex) <= GC.getUnitClassInfo(eIndex).getMaxPlayerInstances(), "getUnitClassCount is expected to be less than maximum bound of MaxPlayerInstances (invalid index)");
+		FAssertMsg(getUnitClassCount(eIndex) <= GC.getUnitInfo((UnitTypes)GC.getUnitClassInfo(eIndex).getDefaultUnitIndex()).getMaxPlayerInstances(), "getUnitClassCount is expected to be less than maximum bound of MaxPlayerInstances (invalid index)");
 	}
 
-	return ((getUnitClassCount(eIndex) + iExtra) >= GC.getUnitClassInfo(eIndex).getMaxPlayerInstances());
+	return ((getUnitClassCount(eIndex) + iExtra) >= GC.getUnitInfo((UnitTypes)GC.getUnitClassInfo(eIndex).getDefaultUnitIndex()).getMaxPlayerInstances());
 }
 
 

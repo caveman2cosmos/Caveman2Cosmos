@@ -5746,7 +5746,7 @@ bool CvGame::isUnitClassMaxedOut(UnitClassTypes eIndex, int iExtra) const
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < GC.getNumUnitClassInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
-	if (!isWorldUnitClass((UnitTypes)GC.getUnitClassInfo(eIndex).getDefaultUnitIndex()))
+	if (!isWorldUnit((UnitTypes)GC.getUnitClassInfo(eIndex).getDefaultUnitIndex()))
 	{
 		return false;
 	}
@@ -7963,11 +7963,9 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 namespace {
 	bool isHeroUnit(const CvUnitInfo& unitInfo, const UnitClassTypes& unitClassType)
 	{
-		const UnitCombatTypes eHero = (UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_HERO");
-		return unitInfo.hasUnitCombat(eHero)
+		return unitInfo.hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_HERO")) 
 			|| unitInfo.getMaxGlobalInstances() > 0
-			|| GC.getUnitClassInfo(unitClassType).getMaxPlayerInstances() > 0
-			/*|| unitInfo.getMaxTeamInstances() > 0*/;
+			|| unitInfo.getMaxPlayerInstances() > 0;
 	}
 
 	bool isValidBarbarianSpawnUnit(const CvArea* area, const CvUnitInfo& unitInfo, const UnitTypes unitType, const UnitClassTypes unitClass)

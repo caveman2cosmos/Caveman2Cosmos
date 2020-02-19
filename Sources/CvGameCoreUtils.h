@@ -253,9 +253,9 @@ bool isTechRequiredForUnit(TechTypes eTech, UnitTypes eUnit);							// Exposed t
 bool isTechRequiredForBuilding(TechTypes eTech, BuildingTypes eBuilding);	// Exposed to Python
 bool isTechRequiredForProject(TechTypes eTech, ProjectTypes eProject);		// Exposed to Python
 
-bool isWorldUnitClass(UnitTypes eUnit);											// Exposed to Python
-bool isNationalUnitClass(UnitClassTypes eUnitClass);									// Exposed to Python
-bool isLimitedUnitClass(UnitClassTypes eUnitClass);										// Exposed to Python
+bool isWorldUnit(UnitTypes eUnit);											// Exposed to Python
+bool isNationalUnit(UnitTypes eUnit);									// Exposed to Python
+bool isLimitedUnit(UnitTypes eUnit);										// Exposed to Python
 
 bool isWorldWonderClass(BuildingClassTypes eBuildingClass);						// Exposed to Python
 bool isTeamWonderClass(BuildingClassTypes eBuildingClass);						// Exposed to Python

@@ -481,7 +481,7 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 			gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
 		}
 
-		if (isWorldUnitClass(eUnit))
+		if (isWorldUnit(eUnit))
 		{
 			for (iI = 0; iI < MAX_PLAYERS; iI++)
 			{
@@ -5426,7 +5426,7 @@ int CvUnit::defenderValue(const CvUnit* pAttacker) const
 	}
 
 	iValue += currCombatStr(plot(), pAttacker);
-	if (::isWorldUnitClass(getUnitType()))
+	if (::isWorldUnit(getUnitType()))
 	{
 		iValue /= 2;
 	}
@@ -5552,7 +5552,7 @@ bool CvUnit::isBetterDefenderThan(const CvUnit* pDefender, const CvUnit* pAttack
 	}
 
 	iOurDefense = currCombatStr(plot(), pAttacker);
-	if (::isWorldUnitClass(getUnitType()))
+	if (::isWorldUnit(getUnitType()))
 	{
 		iOurDefense /= 2;
 	}
@@ -5607,7 +5607,7 @@ bool CvUnit::isBetterDefenderThan(const CvUnit* pDefender, const CvUnit* pAttack
 	iOurDefense = iOurDefense * iAssetValue / std::max(1, iAssetValue + iCargoAssetValue);
 
 	iTheirDefense = pDefender->currCombatStr(plot(), pAttacker);
-	if (::isWorldUnitClass(pDefender->getUnitType()))
+	if (::isWorldUnit(pDefender->getUnitType()))
 	{
 		iTheirDefense /= 2;
 	}
@@ -11078,7 +11078,7 @@ int CvUnit::destroyCost(const CvPlot* pPlot) const
 
 	if (pCity->isProductionUnit())
 	{
-		bLimited = isLimitedUnitClass((UnitClassTypes)(GC.getUnitInfo(pCity->getProductionUnit()).getUnitClassType()));
+		bLimited = isLimitedUnit(pCity->getProductionUnit());
 	}
 	else if (pCity->isProductionBuilding())
 	{

@@ -15659,7 +15659,7 @@ bool CvUnitAI::AI_guardSpy(int iRandomPercent)
 
 				if (pLoopCity->isProductionUnit())
 				{
-					if (isLimitedUnitClass((UnitClassTypes)(GC.getUnitInfo(pLoopCity->getProductionUnit()).getUnitClassType())))
+					if (isLimitedUnit(pLoopCity->getProductionUnit()))
 					{
 						iValue += 4;
 					}
@@ -15799,7 +15799,7 @@ bool CvUnitAI::AI_destroySpy()
 				{
 					if (pBestCity->isProductionUnit())
 					{
-						if (isLimitedUnitClass((UnitClassTypes)(GC.getUnitInfo(pBestCity->getProductionUnit()).getUnitClassType())))
+						if (isLimitedUnit(pBestCity->getProductionUnit()))
 						{
 							getGroup()->pushMission(MISSION_DESTROY);
 							return true;
