@@ -53,7 +53,7 @@
 			<Type>UNITCLASS_URBAN_GIRAFFEMAN</Type>
 			<Description>TXT_KEY_UNIT_URBAN_GIRAFFEMAN</Description>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<DefaultUnit>UNIT_GIRAFFE_URBAN_GIRAFFEMAN</DefaultUnit>
+			<DefaultUnit>UNIT_URBAN_GIRAFFEMAN</DefaultUnit>
 		</UnitClassInfo>
 	</UnitClassInfos>
 </Civ4UnitClassInfos>

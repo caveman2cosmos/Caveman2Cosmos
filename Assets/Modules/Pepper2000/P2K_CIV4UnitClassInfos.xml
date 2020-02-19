@@ -137,11 +137,6 @@
 			<DefaultUnit>UNIT_SOLAR_WORKER</DefaultUnit>
 		</UnitClassInfo>
         <UnitClassInfo>
-			<Type>UNITCLASS_WORMHOLE_WORKER</Type>
-			<Description>TXT_KEY_UNIT_WORMHOLE_WORKER</Description>
-			<DefaultUnit>UNIT_WORMHOLE_WORKER</DefaultUnit>
-		</UnitClassInfo>
-        <UnitClassInfo>
 			<Type>UNITCLASS_MARSSETTLER</Type>
 			<Description>TXT_KEY_UNIT_MARSSETTLER</Description>
 			<DefaultUnit>UNIT_MARSSETTLER</DefaultUnit>

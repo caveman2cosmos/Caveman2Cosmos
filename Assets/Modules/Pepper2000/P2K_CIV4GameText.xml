@@ -285,10 +285,6 @@
 		<English>Solar Workship</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_WORMHOLE_WORKER</Tag>
-		<English>Wormhole Workship</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_MARSSETTLER</Tag>
 		<English>Martian Settler</English>
 	</TEXT>

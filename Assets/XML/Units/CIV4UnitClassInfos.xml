@@ -927,11 +927,6 @@
 			<DefaultUnit>UNIT_BOMBER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
-			<Type>UNITCLASS_LONG_RANGE_BOMBER</Type>
-			<Description>TXT_KEY_UNIT_B52</Description>
-			<DefaultUnit>UNIT_B52</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
 			<Type>UNITCLASS_A10_BOMBER</Type>
 			<Description>TXT_KEY_UNIT_A10_BOMBER</Description>
 			<DefaultUnit>UNIT_A10_BOMBER</DefaultUnit>
@@ -1205,114 +1200,6 @@
 			<Description>TXT_KEY_UNIT_TURN</Description>
 			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_TURN</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
-			<Type>UNITCLASS_EXECUTIVE_APOTHEGUILD</Type>
-			<Description>TXT_KEY_UNIT_EXECUTIVE_APOTHEGUILD</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<DefaultUnit>UNIT_EXECUTIVE_APOTHEGUILD</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
-			<Type>UNITCLASS_WGMASTER</Type>
-			<Description>TXT_KEY_UNIT_WGMASTER</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<DefaultUnit>UNIT_WGMASTER</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
-			<Type>UNITCLASS_EXECUTIVE_ARTISTGUILD</Type>
-			<Description>TXT_KEY_UNIT_EXECUTIVE_ARTISTGUILD</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<DefaultUnit>UNIT_EXECUTIVE_ARTISTGUILD</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
-			<Type>UNITCLASS_GGMASTER</Type>
-			<Description>TXT_KEY_UNIT_GGMASTER</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<DefaultUnit>UNIT_GGMASTER</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
-			<Type>UNITCLASS_EXECUTIVE_BAKERGUILD</Type>
-			<Description>TXT_KEY_UNIT_EXECUTIVE_BAKERGUILD</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<DefaultUnit>UNIT_EXECUTIVE_BAKERGUILD</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
-			<Type>UNITCLASS_BGMASTER</Type>
-			<Description>TXT_KEY_UNIT_BGMASTER</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<DefaultUnit>UNIT_BGMASTER</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
-			<Type>UNITCLASS_EXECUTIVE_BLACKSMGUILD</Type>
-			<Description>TXT_KEY_UNIT_EXECUTIVE_BLACKSMGUILD</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<DefaultUnit>UNIT_EXECUTIVE_BLACKSMGUILD</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
-			<Type>UNITCLASS_EXECUTIVE_BUTCHERGUILD</Type>
-			<Description>TXT_KEY_UNIT_EXECUTIVE_BUTCHERGUILD</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<DefaultUnit>UNIT_EXECUTIVE_BUTCHERGUILD</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
-			<Type>UNITCLASS_EXECUTIVE_CARPENTERGUILD</Type>
-			<Description>TXT_KEY_UNIT_EXECUTIVE_CARPENTERGUILD</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<DefaultUnit>UNIT_EXECUTIVE_CARPENTERGUILD</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
-			<Type>UNITCLASS_EXECUTIVE_CLERKSGUILD</Type>
-			<Description>TXT_KEY_UNIT_EXECUTIVE_CLERKSGUILD</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<DefaultUnit>UNIT_EXECUTIVE_CLERKSGUILD</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
-			<Type>UNITCLASS_EXECUTIVE_DRAPERSGUILD</Type>
-			<Description>TXT_KEY_UNIT_EXECUTIVE_DRAPERSGUILD</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<DefaultUnit>UNIT_EXECUTIVE_DRAPERSGUILD</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
-			<Type>UNITCLASS_EXECUTIVE_EQUESTGUILD</Type>
-			<Description>TXT_KEY_UNIT_EXECUTIVE_EQUESTGUILD</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<DefaultUnit>UNIT_EXECUTIVE_EQUESTGUILD</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
-			<Type>UNITCLASS_EXECUTIVE_FISHMONGUILD</Type>
-			<Description>TXT_KEY_UNIT_EXECUTIVE_FISHMONGUILD</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<DefaultUnit>UNIT_EXECUTIVE_FISHMONGUILD</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
-			<Type>UNITCLASS_EXECUTIVE_GLASSGUILD</Type>
-			<Description>TXT_KEY_UNIT_EXECUTIVE_GLASSGUILD</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<DefaultUnit>UNIT_EXECUTIVE_GLASSGUILD</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
-			<Type>UNITCLASS_EXECUTIVE_GOLDSMGUILD</Type>
-			<Description>TXT_KEY_UNIT_EXECUTIVE_GOLDSMGUILD</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<DefaultUnit>UNIT_EXECUTIVE_GOLDSMGUILD</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
-			<Type>UNITCLASS_EXECUTIVE_GROCERGUILD</Type>
-			<Description>TXT_KEY_UNIT_EXECUTIVE_GROCERGUILD</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<DefaultUnit>UNIT_EXECUTIVE_GROCERGUILD</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
-			<Type>UNITCLASS_EXECUTIVE_MASONGUILD</Type>
-			<Description>TXT_KEY_UNIT_EXECUTIVE_MASONGUILD</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<DefaultUnit>UNIT_EXECUTIVE_MASONGUILD</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
-			<Type>UNITCLASS_EXECUTIVE_MERCERGUILD</Type>
-			<Description>TXT_KEY_UNIT_EXECUTIVE_MERCERGUILD</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<DefaultUnit>UNIT_EXECUTIVE_MERCERGUILD</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_007</Type>
@@ -2837,11 +2724,6 @@ Assyria, Hungary, Minoa, Armenia
 			<Type>UNITCLASS_SPARTACUS</Type>
 			<Description>TXT_KEY_UNIT_SPARTACUS</Description>
 			<DefaultUnit>UNIT_SPARTACUS</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
-			<Type>UNITCLASS_LEGEND_SPARTAN</Type>
-			<Description>TXT_KEY_UNIT_LEGEND_SPARTAN</Description>
-			<DefaultUnit>UNIT_LEGEND_SPARTAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_GLADIATOR</Type>
@@ -6003,11 +5885,6 @@ Assyria, Hungary, Minoa, Armenia
 			<DefaultUnit>UNIT_CAPTIVE_CIVILIAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
-			<Type>UNITCLASS_CAPTIVE_SPECIALIST</Type>
-			<Description>TXT_KEY_UNIT_CAPTIVE_SPECIALIST</Description>
-			<DefaultUnit>UNIT_CAPTIVE_SPECIALIST</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
 			<Type>UNITCLASS_FREED_SLAVE</Type>
 			<Description>TXT_KEY_UNIT_FREED_SLAVE</Description>
 			<DefaultUnit>UNIT_FREED_SLAVE</DefaultUnit>
@@ -6319,11 +6196,6 @@ Assyria, Hungary, Minoa, Armenia
 	        <DefaultUnit>UNIT_SUBDUED_SEATURTLE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
-			<Type>UNITCLASS_SUBDUED_SHARK</Type>
-			<Description>TXT_KEY_UNIT_SUBDUED_SHARK</Description>
- 		    <DefaultUnit>UNIT_SUBDUED_SHARK</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
 			<Type>UNITCLASS_SUBDUED_TUNA</Type>
 			<Description>TXT_KEY_UNIT_SUBDUED_TUNA</Description>
  		     <DefaultUnit>UNIT_SUBDUED_TUNA</DefaultUnit>
@@ -6587,11 +6459,6 @@ Assyria, Hungary, Minoa, Armenia
 			<Type>UNITCLASS_TALESOF_SEATURTLE</Type>
 			<Description>TXT_KEY_UNIT_TALESOF_SEATURTLE</Description>
 	        <DefaultUnit>UNIT_TALESOF_SEATURTLE</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
-			<Type>UNITCLASS_TALESOF_SHARK</Type>
-			<Description>TXT_KEY_UNIT_TALESOF_SHARK</Description>
- 		    <DefaultUnit>UNIT_TALESOF_SHARK</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TALESOF_TUNA</Type>
@@ -8226,6 +8093,7 @@ Assyria, Hungary, Minoa, Armenia
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BEGGAR</DefaultUnit>
 		</UnitClassInfo>
+<!-- Deactivated culture - wrong flag
 		<UnitClassInfo>
 			<Type>UNITCLASS_SHEBA</Type>
 			<Description>TXT_KEY_UNIT_SHEBA</Description>
@@ -8238,6 +8106,7 @@ Assyria, Hungary, Minoa, Armenia
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MAGOS</DefaultUnit>
 		</UnitClassInfo>
+-->
 		<UnitClassInfo>
 			<Type>UNITCLASS_ISMAIL_I</Type>
 			<Description>TXT_KEY_UNIT_ISMAIL_I</Description>
@@ -8254,13 +8123,6 @@ Assyria, Hungary, Minoa, Armenia
 			<Type>UNITCLASS_KANISHKA</Type>
 			<Description>TXT_KEY_UNIT_KANISHKA</Description>
 			<DefaultUnit>UNIT_KANISHKA</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
-			<Type>UNITCLASS_SAKA_CATAPRHACT</Type>
-			<Description>TXT_KEY_UNIT_SAKA_CATAPRHACT</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<iInstanceCostModifier>2</iInstanceCostModifier>
-			<DefaultUnit>UNIT_SAKA_CATAPRHACT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_AILI_KESKITALO</Type>
