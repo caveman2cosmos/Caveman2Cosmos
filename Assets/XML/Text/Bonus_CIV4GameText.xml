@@ -765,11 +765,6 @@
 		<Polish>Biopaliwo</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_BIOFUEL_PEDIA</Tag>
-		<English>TBD</English>
-		<Polish>Biopaliwo - paliwo powstałe z przetwórstwa biomasy - produktów organizmów żywych np. roślinnych, zwierzęcych czy mikroorganizmów.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_BIONIC_SUITS</Tag>
 		<English>Bionic Suits</English>
 		<French>Costumes Bioniques</French>
@@ -950,19 +945,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BULK_DIAMOND_PEDIA</Tag>
 		<English>A synthetic diamond (also known as an artificial diamond, cultured diamond, or cultivated diamond) is diamond produced in an artificial process, as opposed to natural diamonds, which are created by geological processes. Synthetic diamond is also widely known as HPHT diamond or CVD diamond after the two common production methods (referring to the high-pressure high-temperature and chemical vapor deposition crystal formation methods, respectively). While the term synthetic is associated by consumers with imitation products, artificial diamonds are made of the same material (pure carbon, crystallized in isotropic 3D form).[PARAGRAPH:2]Wikipedia</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_BULLION</Tag>
-		<English>Bullion</English>
-		<French>Lingots</French>
-		<Italian>Barre</Italian>
-		<Polish>Samorodki</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_BULLION_PEDIA</Tag>
-		<English>A metal is deemed to be precious if it is rare. The discovery of new sources of ore or improvements in mining or refining processes may cause the value of a precious metal to diminish. The status of a "precious" metal can also be determined by high demand or market value. Precious metals in bulk form are known as bullion, and are traded on commodity markets. Bullion metals may be cast into ingots, or minted into coins. The defining attribute of bullion is that it is valued by its mass and purity rather than by a face value as money.</English>
-		<Italian>Un metallo è definito prezioso se è raro. La scoperta di nuove fonti di metallo o miglioramenti nei procedimenti di estrazione e raffinatura possono causare un crollo del valore del metallo prezioso. Lo status di "prezioso" può essere anche determinato da un'alta domanda del mercato. I metalli preziosi vengono fusi in barre; queste barre possono essere usate per fondere nuovi lingotti o coniare le monete. I lingotti vengono valutati in base alla loro massa e alla loro purezzza e non hanno un valore nominale come la carta moneta.</Italian>
-		<Polish>W postaci samorodków występuje w przyrodzie tylko 30 pierwiastków. Dzielą się one na metale, np. miedź, złoto i srebro, oraz niemetale i półmetale, np. siarka, krzem i węgiel (ten ostatni występuje pod postacią grafitu i diamentu). Pierwiastki te mają znikomy udział w budowie skorupy ziemskiej.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BURGUNDI</Tag>
@@ -2513,15 +2495,6 @@
 		<English>These exotic particles are the superpartners of ordinary particles known from a less enlightened time in your civilization's history. They can be used in all sorts of fantastic constructions.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_EXPORTS_PLAYER</Tag>
-		<English>[SPACE](%s2_player is exporting %d1_num_bonus)[SPACE]</English>
-		<French>[SPACE](%s2_player exporte %d1_num_bonus)[SPACE]</French>
-		<German>[SPACE](%s2_player exportiert %d1_num_bonus)[SPACE]</German>
-		<Italian>[SPACE](%s2_player esporta %d1_num_bonus)[SPACE]</Italian>
-		<Spanish>[SPACE](%s2_player está exportando %d1_num_bonus)[SPACE]</Spanish>
-		<Polish>[SPACE](%s2_player eksportuje %d1_num_bonus)[SPACE]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_FATIMID</Tag>
 		<English>Fatimid</English>
 	</TEXT>
@@ -3048,10 +3021,6 @@
 		<Polish>Ghany</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_GHANIAN</Tag>
-		<English>Ghanian</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_GHEE_OIL</Tag>
 		<English>Ghee Oil</English>
 		<French>Huile de Ghî</French>
@@ -3260,27 +3229,6 @@
 		<Tag>TXT_KEY_BONUS_GUAVAS_PEDIA</Tag>
 		<English>The term "guava" appears to derive from Arawak guayabo "guava tree", via the Spanish guayaba. Guavas are native to Mexico, Central America, and northern South America. Guavas are now cultivated and naturalized throughout the tropics and subtropics in Africa, Southeast Asia, the Caribbean, Florida, California, and Hawaii. The fruit is not only relished by humans, but by many mammals and birds as well. The spread of introduced guavas owes much to this fact, since animals eat the fruit and disperse the seeds in their droppings.</English>
 		<German>Die (Echte) [COLOR_HIGHLIGHT_TEXT]Guave[COLOR_REVERT] (Psidium guajava) aus der Familie der Myrtengewächse ist gleichermaßen Obst und Heilpflanze. Die Früchte wachsen an einem bis zu 13 m hohen Baum mit glatter, grauer Borke, die durch sich ablösende Streifen auffällt. Die ursprünglich aus Südamerika stammende Pflanze hat sich unter Einfluss des Menschen auf die gesamten Tropen ausgebreitet. An einigen Standorten verdrängt sie inzwischen sogar die heimischen Spezies und wird zum Problem, so zum Beispiel auf dem Hawaii-Archipel, wo sie vor knapp 200 Jahren eingeführt wurde. Viele der Regenwälder dieser Inseln bestehen heute buchstäblich nur noch aus Guavenbäumen. Dies ist zum großen Teil auch verwilderten Hausschweinen geschuldet, die die Früchte gern verzehren und die Samen mit ihrem Kot in weitem Umkreis verteilen.</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_GUILDPAPER</Tag>
-		<English>Crafts Guild Charter</English>
-		<French>Charte de la Guilde des Artisans</French>
-		<German>Satzung der Handwerkergilde</German>
-		<Italian>Carta della gilda degli artigiani</Italian>
-		<Spanish>
-			<Text>Título del Gremio de artesanos</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Glejt Rzemieślniczy</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_GUILDPAPER_PEDIA</Tag>
-		<English>Crafts Guild Charter</English>
-		<French>Charte de la Guilde des Artisans</French>
-		<Italian>Carta della gilda degli artigiani</Italian>
-		<Spanish>Título del Gremio de artesanos</Spanish>
-		<Polish>Glejt Rzemieślniczy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GUINEA_PIGS</Tag>
@@ -3720,15 +3668,6 @@
 		<Tag>TXT_KEY_BONUS_IMMUNITY_DRUGS_PEDIA</Tag>
 		<English>The immune system is a system of many biological structures and processes within an organism that protects against disease. To function properly, an immune system must detect a wide variety of agents, known as pathogens, from viruses to parasitic worms, and distinguish them from the organism's own healthy tissue. In many species, the immune system can be classified into subsystems, such as the innate immune system versus the adaptive immune system, or humoral immunity versus cell-mediated immunity.</English>
 		<Polish>Theremin, pierwotnie znany jako aetherphone / etherphone, thereminophone lub termenvox / thereminvox jest wczesne elektroniczny instrument muzyczny w kontrolowany, bez fizycznego kontaktu od player.Its nazwane po imieniu swojego westernizacji rosyjskiego wynalazcy, Leon Theremina, który opatentował urządzenie w 1928 roku. sekcja controlling składa się zazwyczaj z dwóch anten, które wyczuwają metalowe pozycję rąk gracza i oscylatorów do częstotliwości kontroli jedną ręką i amplitudy (głośności) z drugiej, dzięki czemu może być odtwarzany bez dotykania. Sygnały elektryczne z Theremina są wzmacniane i przesyłane do głośnika.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_IMPORTS_PLAYER</Tag>
-		<English>[SPACE](%s2_player is importing %d1_num_bonus)[SPACE]</English>
-		<French>[SPACE](%s2_player importe %d1_num_bonus)[SPACE]</French>
-		<German>[SPACE](%s2_player importiert %d1_num_bonus)[SPACE]</German>
-		<Italian>[SPACE](%s2_player importa %d1_num_bonus)[SPACE]</Italian>
-		<Spanish>[SPACE](%s2_player está importando %d1_num_bonus)[SPACE]</Spanish>
-		<Polish>[SPACE](%s2_player importuje %d1_num_bonus)[SPACE]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_INCAN</Tag>
@@ -5340,11 +5279,6 @@
 		<English>Nigerian</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_NIVKH</Tag>
-		<English>Nivkh</English>
-		<Polish>Niwchowie</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_NOK</Tag>
 		<English>Nok</English>
 	</TEXT>
@@ -5458,12 +5392,6 @@
 		<English>Obsidian is a naturally occurring glass formed as an extrusive igneous rock. It is produced when felsic lava extruded from a volcano cools without crystal growth. Obsidian is commonly found within the margins of rhyolitic lava flows known as obsidian flows, where the chemical composition (high silica content) induces a high viscosity and polymerisation degree of the lava. The inhibition of atomic diffusion through this highly viscous and polymerized lava explains the lack of crystal growth. Because of the lack of crystal structure, obsidian blade edges can reach almost molecular thinness, leading to its ancient use as projectile points, and its modern use as surgical scalpel blades.[PARAGRAPH:2]Obsidian is mineral-like, but not a true mineral because as a glass it is not crystalline; in addition, its composition is too complex to comprise a single mineral. It is sometimes classified as a mineraloid. Though obsidian is dark in color similar to mafic rocks such as basalt, obsidian's composition is extremely felsic. [PARAGRAPH:2]Pure obsidian is usually dark in appearance, though the color varies depending on the presence of impurities. Iron and magnesium typically give the obsidian a dark green to brown to black color. A very few samples are nearly colorless. In some stones, the inclusion of small, white, radially clustered crystals of cristobalite in the black glass produce a blotchy or snowflake pattern (snowflake obsidian). It may contain patterns of gas bubbles remaining from the lava flow, aligned along layers created as the molten rock was flowing before being cooled. These bubbles can produce interesting effects such as a golden sheen (sheen obsidian) or a rainbow sheen (rainbow obsidian). [PARAGRAPH:2]Obsidian was valued in Stone Age cultures because, like flint, it could be fractured to produce sharp blades or arrowheads. Like all glass and some other types of naturally occurring rocks, obsidian breaks with a characteristic conchoidal fracture. It was also polished to create early mirrors. Pre-Columbian Mesoamericans' use of obsidian was extensive and sophisticated, including carved and worked obsidian for tools and decorative objects. Mesoamericans also made a type of sword with obsidian blades mounted in a wooden body. Called a macuahuitl, the weapon was capable of inflicting terrible injuries, combining the sharp cutting edge of an obsidian blade with the ragged cut of a serrated weapon. Lithic analysis can be instrumental in understanding prehispanic groups in Mesoamerica. A careful analysis of obsidian in a culture or place can be of use to reconstruct commerce, production, distribution and thereby understand economic, social and political aspects of a civilization. This is the case in Yaxchilán, a maya city where even warfare implications have been studied linked with obsidian use and its debris. [PARAGRAPH:2]Obsidian is used in cardiac surgery, as well-crafted obsidian blades have a cutting edge many times sharper than high-quality steel surgical scalpels, with the edge of the blade being only about 3 nanometres wide. Even the sharpest metal knife has a jagged, irregular blade when viewed under a strong enough microscope. When examined under an electron microscope an obsidian blade is still smooth and even. One study found that obsidian produced narrower scars, fewer inflammatory cells, and less granulation tissue in a group of rats. [PARAGRAPH:2]Obsidian is also used for ornamental purposes and as a gemstone. It possesses the property of presenting a different appearance according to the manner in which it is cut. When cut in one direction it is a beautiful jet black; when cut across another direction it is glistening gray. "Apache tears" are small rounded obsidian nuggets embedded within a grayish-white perlite matrix.</English>
 		<German>[COLOR_HIGHLIGHT_TEXT]Obsidian[COLOR_REVERT] ist ein vulkanisches Gesteinsglas, das bei rascher Abkühlung von Lava mit sehr geringem Wasseranteil entsteht. Es ist meist von dunkelgrüner bis schwarzer Farbe, gelegentlich auch braun und rötlich. Der genaue Farbton ist stark von Verunreinigungen des Materials abhängig.[NEWLINE]In der Steinzeit war Obsidian genau wie Feuerstein wegen seines scharfkantigen Bruchs als Material für Werkzeuge und Waffen beliebt. Bei den Hethitern wurden Gefäße aus Obsidian hergestellt, die alten Römer verwendeten geschliffenen und polierten Obsidian als Spiegel. Im prähistorischen Teotihuacán wurde er zu Götterfiguren und anderen Skulpturen verarbeitet, während viele mittelamerikanische Völker ihn eher für kriegerische Zwecke zur Herstellung von Speer- und Pfeilspitzen oder ganzen Schwertern nutzten. Mit der zunehmenden Verbreitung der Bronze ging die Verwendung von Obsidian in Europa und Asien zurück. Heute wird er vor allem zur Herstellung von Kunstgegenständen und als Schmuckstein genutzt.</German>
 		<Polish>Obsydian to skała magmowa, kwaśna, wylewna, złożona niemal wyłącznie ze szkliwa wulkanicznego. Naturalne szkło powstaje w wyniku natychmiastowego stygnięcia magmy, prawdopodobnie pod wodą. Obsydian znajduje się w wyciekach lawy datowanych od ok. 60 mln lat aż do współczesności. Z czasem ulega zniszczeniu, przyjmując wygląd zwyczajnej, drobnoziarnistej skały.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_OBSOLETED_VALIDATES_IMPROVEMENT</Tag>
-		<English>Qualifies %s1_ImpName to exist on Plot</English>
-		<French>Permet %s1_ImpName d'exister sur la case</French>
-		<Polish>Kwalifikuje %s1_ImpName do isntniena na danym polu</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ODAWA</Tag>
@@ -5717,10 +5645,6 @@
 		<Tag>TXT_KEY_BONUS_PAIUTE</Tag>
 		<English>Paiute</English>
 		<French>Païute</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_PAKISTAN</Tag>
-		<English>Pakistan</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PAKISTANI</Tag>
@@ -5998,15 +5922,6 @@
 			<Plural>1</Plural>
 		</Spanish>
 		<Polish>Replikatory</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_REPLICATORS_HELP</Tag>
-		<English>Reduces the cost of unit upgrades by 50%</English>
-		<French>Réduit le coût des améliorations d'unités de 50%</French>
-		<German>Reduziert die Kosten von Einheitenmodernisierungen um 50%</German>
-		<Italian>Riduce i costi di miglioramento delle unità del 50%</Italian>
-		<Spanish>[ICON_BULLET]Reduce el coste de actualizar unidades un 50%</Spanish>
-		<Polish>Zmniejsza koszt ulepszania jednostek o 50%</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_REPLICATORS_PEDIA</Tag>
@@ -7073,14 +6988,6 @@
 		<Polish>Fokowate, foki (Phocidae) - rodzina drapieżnych ssaków morskich zaliczana do płetwonogich (Pinnipedia), obejmująca 19 gatunków.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_SEA_LION_AND_SEAL_STRATEGY</Tag>
-		<English>Cities with this worked resource in their work radius can build buildings that provide furs, oil and ivory. Art by SaibotLieh.</English>
-		<French>Les Villes bénéficiant de cette ressource peuvent construire des bâtiments procurant de la fourrure, de l'huile et de l'ivoire. Art: SaibotLieh.</French>
-		<Italian>Le città con questa risorsa lavorata all'interno del raggio di lavoro possono costruire edifici che forniscono pellicce, olio e avorio. Art by SaibotLieh.</Italian>
-		<Spanish>Las ciudades que obtienen este recurso en su radio de acción pueden construir edificios que proporcionan pieles, aceites y marfil. Gráficos por SaibotLieh.</Spanish>
-		<Polish>Miasta z tego zasobu w ich pracował promieniu pracy może budować budynki, które zapewniają futra, olej i kości słoniowej. Sztuka przez SaibotLieh.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_SELJUKS</Tag>
 		<English>Seljuks</English>
 	</TEXT>
@@ -7130,27 +7037,6 @@
 		<Tag>TXT_KEY_BONUS_SERVICE_BOTS_PEDIA</Tag>
 		<English>Service robots assist human beings, typically by performing a job that is dirty, dull, distant, dangerous or repetitive, including household chores. They typically are autonomous and/or operated by a build in control system, with manual override options. The term "service robot" is less well-defined. The International Federation of Robotics (IFR) has proposed a tentative definition, "A service robot is a robot which operates semi- or fully autonomously to perform services useful to the well-being of humans and equipment, excluding manufacturing operations."</English>
 		<Polish>Robot - mechaniczne urządzenie wykonujące automatycznie pewne zadania. Działanie robota może być sterowane przez człowieka, przez wprowadzony wcześniej program, bądź przez zbiór ogólnych reguł, które zostają przełożone na działanie robota przy pomocy technik sztucznej inteligencji. Roboty często zastępują człowieka przy monotonnych, złożonych z powtarzających się kroków czynnościach, które mogą wykonywać znacznie szybciej od ludzi. Domeną ich zastosowań są też te zadania, które są niebezpieczne dla człowieka, na przykład związane z manipulacją szkodliwymi dla zdrowia substancjami lub przebywaniem w nieprzyjaznym środowisku.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_SGUILDPAPER</Tag>
-		<English>Servants Guild Charter</English>
-		<French>Charte de la Guilde des Serviteurs</French>
-		<German>Satzung der Dienergilde</German>
-		<Italian>Carta della gilda dei servitori</Italian>
-		<Spanish>
-			<Text>Título del Gremio de sirvientes</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Glejt Służby</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_SGUILDPAPER_PEDIA</Tag>
-		<English>Servants Guild Charter</English>
-		<French>Charte de la Guilde des Serviteurs</French>
-		<Italian>Carta della gilda deri servitori</Italian>
-		<Spanish>Título del Gremio de sirvientes</Spanish>
-		<Polish>Glejt Służby</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SHANG</Tag>
@@ -7503,31 +7389,6 @@
 		<Polish>Gąbki są to zwierzęta z gromady Porifera (czyli "porów nośnika"). Są to organizmy wielokomórkowe, które mają pełne ciał kanałów umożliwiających porów i cyrkulację wody w nich, składający się z galaretowatej mesohyl umieszczonej pomiędzy dwoma cienkimi warstwami komórek. Gąbki niewyspecjalizowanych komórek, które można przekształcić do innych typów i które często migrują pomiędzy głównymi warstw komórek i mesohyl procesu. Gąbki nie mają nerwowego, pokarmowego lub układu krążenia. Zamiast tego, w większości opierają się na utrzymanie stałego przepływu wody przez ich ciała, aby zdobyć żywność i tlen i usunięcia odpadów.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_SPORTS</Tag>
-		<English>Sports</English>
-		<French>
-			<Text>Sports</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Sport:Sports:Sport:Sport</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Sport</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Deportes</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Polish>Sporty</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_SQUASH</Tag>
 		<English>Squash</English>
 		<French>Courge</French>
@@ -7735,35 +7596,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SWAHILI</Tag>
 		<English>Swahili</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_SWAMP</Tag>
-		<English>Swamp</English>
-		<French>
-			<Text>Tourbe</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Moor</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Acquitrino</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Turba</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Moczary</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_SWAMP_PEDIA</Tag>
-		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SWAZI</Tag>
@@ -8465,49 +8297,6 @@ Türkis zählt zu den ältesten Schmucksteinen und hat mit seinen zarten Pastell
 		<Polish>Wanilia (Vanilla Mill.) - rodzaj roślin jednoliściennych z rodziny storczykowatych (Orchidaceae), liczący 109 gatunków rosnących dziko w strefach tropikalnych. Owoce wanilii płaskolistnej są źródłem przyprawy zwanej laskami wanilii.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_VCARPENTRY</Tag>
-		<English>Carpentry</English>
-		<French>Charpenterie</French>
-		<German>Zimmerei</German>
-		<Italian>Carpenteria</Italian>
-		<Spanish>
-			<Text>Carpintería</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Stolarka</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_VCARPENTRY_PEDIA</Tag>
-		<English>Carpentry</English>
-		<French>Charpenterie</French>
-		<Italian>Carpenteria</Italian>
-		<Spanish>Carpintería</Spanish>
-		<Polish>Stolarka</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_VCLOTH</Tag>
-		<English>Cloth</English>
-		<French>Vêtement</French>
-		<German>Tuch</German>
-		<Italian>Vestiti</Italian>
-		<Spanish>
-			<Text>Telas</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Polish>Tkanina</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_VCLOTH_PEDIA</Tag>
-		<English>Cloth</English>
-		<French>Vêtement</French>
-		<German>Tuch</German>
-		<Italian>Vestiti</Italian>
-		<Spanish>Telas</Spanish>
-		<Polish>Tkanina</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_VEGETABLES</Tag>
 		<English>Vegetables</English>
 		<French>Légumes</French>
@@ -8532,49 +8321,6 @@ Türkis zählt zu den ältesten Schmucksteinen und hat mit seinen zarten Pastell
 		<English>Venetian</English>
 		<French>Vénicien</French>
 		<Polish>Wenecka</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_VFAIR</Tag>
-		<English>Annual Fair</English>
-		<French>
-			<Text>Foire Annuelle</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Jährliche Messe</German>
-		<Spanish>
-			<Text>Feria anual</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Doroczne Targi</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_VFAIR_PEDIA</Tag>
-		<English>Annual Fair</English>
-		<French>Foire Annuelle</French>
-		<Italian>Fiera annuale</Italian>
-		<Spanish>Feria anual</Spanish>
-		<Polish>Doroczne Targi</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_VGUILDPAPER</Tag>
-		<English>Victuallers Guild Charter</English>
-		<French>Charte de la Guilde des Ravitailleurs</French>
-		<German>Satzung der Lebensmittelhändlergilde</German>
-		<Spanish>
-			<Text>Título del Gremio de tenderos</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Glejt Kapłański</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_VGUILDPAPER_PEDIA</Tag>
-		<English>Victuallers Guild Charter</English>
-		<French>Charte de la Guilde des Ravitailleurs</French>
-		<Spanish>Título del Gremio de tenderos</Spanish>
-		<Polish>Glejt Kapłański</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_VIBRANIUM</Tag>
@@ -8881,24 +8627,6 @@ Türkis zählt zu den ältesten Schmucksteinen und hat mit seinen zarten Pastell
 		<Polish>Akratopega - woda podziemna, której mineralizacja wynosi 500-1000 mg/dm, a temperatura nie przekracza 20 C. W klasyfikacji wód ze względu na zawartość związków mineralnych znajduje się pomiędzy wodą słodką a mineralną. Produkowana jest w kilku rodzajach: silnie gazowana, gazowana, niegazowana, lekko gazowana oraz jako musująca Perlage.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_WATER_ICE</Tag>
-		<English>Water Ice</English>
-		<French>Eau Gelée</French>
-		<Italian>Ghiaccio d'acqua</Italian>
-		<Spanish>
-			<Text>Hielo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Lód</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_WATER_ICE_PEDIA</Tag>
-		<English>Water Ice - Buried deep beneath the surface this life giver was an unexpected discovery.</English>
-		<Spanish>Hielo - Enterrado en una zona profunda bajo la superficie, este "dotante de vida" fue un descubrimiento inesperado.</Spanish>
-		<Polish>Lód - minerał z gromady tlenków o wzorze chemicznym H2O. Jest to stan stały wody.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_WAX</Tag>
 		<English>Wax</English>
 		<French>Cire</French>
@@ -9074,10 +8802,6 @@ Türkis zählt zu den ältesten Schmucksteinen und hat mit seinen zarten Pastell
 		<English>Xianbei</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_XIONGNU</Tag>
-		<English>Xiongnu</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_XIONGU</Tag>
 		<English>Xiongnu</English>
 	</TEXT>
@@ -9096,10 +8820,6 @@ Türkis zählt zu den ältesten Schmucksteinen und hat mit seinen zarten Pastell
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_YANOMAMI</Tag>
 		<English>Yanomami</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_YANOMANI</Tag>
-		<English>Yanomani</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_YEMENESE</Tag>
