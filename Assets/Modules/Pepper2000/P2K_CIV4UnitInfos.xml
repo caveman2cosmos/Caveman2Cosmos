@@ -1334,6 +1334,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_HYPERSHIP</Class>
 			<Type>UNIT_HYPERSHIP</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Capture>UNITCLASS_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
@@ -2823,6 +2824,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_SOLARSAIL_WORKER</Class>
 			<Type>UNIT_SOLARSAIL_WORKER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Capture>UNITCLASS_SOLARSAIL_WORKER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -4554,6 +4556,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_SPACE_SHUTTLE</Class>
 			<Type>UNIT_SPACE_SHUTTLE</Type>
+			<iMaxPlayerInstances>2</iMaxPlayerInstances>
 			<Capture>UNITCLASS_SPACE_SHUTTLE</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -4791,6 +4794,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_PLANET_PROBE</Class>
 			<Type>UNIT_PLANET_PROBE</Type>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Capture>UNITCLASS_PLANET_PROBE</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -5417,6 +5421,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_INTERSTELLAR_PROBE</Class>
 			<Type>UNIT_INTERSTELLAR_PROBE</Type>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Capture>UNITCLASS_INTERSTELLAR_PROBE</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -5619,6 +5624,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_BRACEWELL_PROBE</Class>
 			<Type>UNIT_BRACEWELL_PROBE</Type>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Capture>UNITCLASS_BRACEWELL_PROBE</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -5776,6 +5782,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_VON_NEUMANN_PROBE</Class>
 			<Type>UNIT_VON_NEUMANN_PROBE</Type>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Capture>UNITCLASS_VON_NEUMANN_PROBE</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -5901,6 +5908,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_QUANTUM_PROBE</Class>
 			<Type>UNIT_QUANTUM_PROBE</Type>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Capture>UNITCLASS_QUANTUM_PROBE</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -5993,6 +6001,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_INTERDIMENSIONAL_PROBE</Class>
 			<Type>UNIT_INTERDIMENSIONAL_PROBE</Type>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Capture>UNITCLASS_INTERDIMENSIONAL_PROBE</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -6118,6 +6127,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_HEAVY_ROCKET</Class>
 			<Type>UNIT_HEAVY_ROCKET</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Capture>UNITCLASS_HEAVY_ROCKET</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
@@ -9434,6 +9444,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_WARLORDVI</Class>
 			<Type>UNIT_WARLORDVI</Type>
+			<iMaxPlayerInstances>6</iMaxPlayerInstances>
 			<Capture>UNITCLASS_WARLORDVIS</Capture>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
@@ -9555,6 +9566,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_WARLORDVII</Class>
 			<Type>UNIT_WARLORDVII</Type>
+			<iMaxPlayerInstances>7</iMaxPlayerInstances>
 			<Capture>UNITCLASS_WARLORDVIIS</Capture>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
@@ -9676,6 +9688,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_WARLORDVIII</Class>
 			<Type>UNIT_WARLORDVIII</Type>
+			<iMaxPlayerInstances>8</iMaxPlayerInstances>
 			<Capture>UNITCLASS_WARLORDVIIIS</Capture>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>

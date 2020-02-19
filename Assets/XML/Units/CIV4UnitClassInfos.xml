@@ -79,31 +79,26 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_TRACKER</Type>
 			<Description>TXT_KEY_UNIT_TRACKER</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_TRACKER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_HUNTER</Type>
 			<Description>TXT_KEY_UNIT_HUNTER</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_HUNTER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_RANGER</Type>
 			<Description>TXT_KEY_UNIT_RANGER</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_RANGER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_GAME_HUNTER</Type>
 			<Description>TXT_KEY_UNIT_GAME_HUNTER</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_GAME_HUNTER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_BIG_GAME_HUNTER</Type>
 			<Description>TXT_KEY_UNIT_BIG_GAME_HUNTER</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_BIG_GAME_HUNTER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -119,43 +114,36 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_1</Type>
 			<Description>TXT_KEY_UNIT_EXECUTIVE_1</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_EXECUTIVE_1</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_2</Type>
 			<Description>TXT_KEY_UNIT_EXECUTIVE_2</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_EXECUTIVE_2</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_3</Type>
 			<Description>TXT_KEY_UNIT_EXECUTIVE_3</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_EXECUTIVE_3</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_4</Type>
 			<Description>TXT_KEY_UNIT_EXECUTIVE_4</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_EXECUTIVE_4</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_5</Type>
 			<Description>TXT_KEY_UNIT_EXECUTIVE_5</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_EXECUTIVE_5</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_6</Type>
 			<Description>TXT_KEY_UNIT_EXECUTIVE_6</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_EXECUTIVE_6</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_7</Type>
 			<Description>TXT_KEY_UNIT_EXECUTIVE_7</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_EXECUTIVE_7</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -306,7 +294,6 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_SPECIAL_FORCES</Type>
 			<Description>TXT_KEY_UNIT_SPECIAL_FORCES</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_SPECIAL_FORCES</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -677,7 +664,6 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_PRIVATEER</Type>
 			<Description>TXT_KEY_UNIT_PRIVATEER</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_PRIVATEER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -893,7 +879,6 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_SR71</Type>
 			<Description>TXT_KEY_UNIT_SR71</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_SR71</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -1019,13 +1004,11 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_TRADE_CARAVAN</Type>
 			<Description>TXT_KEY_UNIT_TRADE_CARAVAN</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_TRADE_CARAVAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_FREIGHT</Type>
 			<Description>TXT_KEY_UNIT_FREIGHT</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_FREIGHT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -1116,13 +1099,11 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_NANITE_SWARM</Type>
 			<Description>TXT_KEY_UNIT_NANITE_SWARM</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_NANITE_SWARM</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_NANITE_CLOUD</Type>
 			<Description>TXT_KEY_UNIT_NANITE_CLOUD</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_NANITE_CLOUD</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -1138,7 +1119,6 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_INQUISITOR</Type>
 			<Description>TXT_KEY_GODS_UNIT_INQUISITOR</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_INQUISITOR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -1159,7 +1139,6 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_POISON_NOVA</Type>
 			<Description>TXT_KEY_UNIT_POISON_NOVA</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_POISON_NOVA</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -1180,31 +1159,26 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXPERIMENTAL</Type>
 			<Description>TXT_KEY_UNIT_EXPERIMENTAL</Description>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_EXPERIMENTAL</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_FUSION_NUKE</Type>
 			<Description>TXT_KEY_UNIT_FUSION_NUKE</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_FUSION_NUKE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_FUSION_NOVA</Type>
 			<Description>TXT_KEY_UNIT_FUSION_NOVA</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_FUSION_NOVA</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TURN</Type>
 			<Description>TXT_KEY_UNIT_TURN</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_TURN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_007</Type>
 			<Description>TXT_KEY_UNIT_007</Description>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bUnlimitedException>1</bUnlimitedException>
 			<DefaultUnit>UNIT_007</DefaultUnit>
 		</UnitClassInfo>
@@ -1216,103 +1190,86 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_SPECIAL_AGENT</Type>
 			<Description>TXT_KEY_UNIT_SPECIAL_AGENT</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_SPECIAL_AGENT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_ADVENTURE</Type>
 			<Description>TXT_KEY_UNIT_ADVENTURE_EXECUTIVE</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_EXECUTIVE_ADVENTURE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_BULLSEYE</Type>
 			<Description>TXT_KEY_UNIT_BULLSEYE_EXECUTIVE</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_EXECUTIVE_BULLSEYE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_BURGERWORLD</Type>
 			<Description>TXT_KEY_UNIT_BURGERWORLD_EXECUTIVE</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_EXECUTIVE_BURGERWORLD</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_EMPCLOTH</Type>
 			<Description>TXT_KEY_UNIT_EMPCLOTH_EXECUTIVE</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_EXECUTIVE_EMPCLOTH</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_EWTRADE</Type>
 			<Description>TXT_KEY_UNIT_EWTRADE_EXECUTIVE</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_EXECUTIVE_EWTRADE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_FASHION</Type>
 			<Description>TXT_KEY_UNIT_FASHION_EXECUTIVE</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_EXECUTIVE_FASHION</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_MALLWART</Type>
 			<Description>TXT_KEY_UNIT_MALLWART_EXECUTIVE</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_EXECUTIVE_MALLWART</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_MAPSTER</Type>
 			<Description>TXT_KEY_UNIT_MAPSTER_EXECUTIVE</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_EXECUTIVE_MAPSTER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_MCDOWELLS</Type>
 			<Description>TXT_KEY_UNIT_MCDOWELLS_EXECUTIVE</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_EXECUTIVE_MCDOWELLS</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_MILEHIGH</Type>
 			<Description>TXT_KEY_UNIT_MILEHIGH_EXECUTIVE</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_EXECUTIVE_MILEHIGH</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_MOBBY</Type>
 			<Description>TXT_KEY_UNIT_MOBBY_EXECUTIVE</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_EXECUTIVE_MOBBY</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MOONBEAN_EXECUTIVE</Type>
 			<Description>TXT_KEY_UNIT_MOONBEAN_EXECUTIVE</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_MOONBEAN_EXECUTIVE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_RED</Type>
 			<Description>TXT_KEY_UNIT_RED_EXECUTIVE</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_EXECUTIVE_RED</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_SAFARI</Type>
 			<Description>TXT_KEY_UNIT_SAFARI_EXECUTIVE</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_EXECUTIVE_SAFARI</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_ULTSOLDIER</Type>
 			<Description>TXT_KEY_UNIT_ULTSOLDIER_EXECUTIVE</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_EXECUTIVE_ULTSOLDIER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_WONKA</Type>
 			<Description>TXT_KEY_UNIT_WONKA_EXECUTIVE</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_EXECUTIVE_WONKA</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -1373,14 +1330,12 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_BAND</Type>
 			<Description>TXT_KEY_UNIT_BAND</Description>
-			<iMaxPlayerInstances>0</iMaxPlayerInstances>
 			<bUnlimitedException>1</bUnlimitedException>
 			<DefaultUnit>UNIT_BAND</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_BATTERING_RAM</Type>
 			<Description>TXT_KEY_UNIT_BATTERING_RAM</Description>
-			<iMaxPlayerInstances>40</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_BATTERING_RAM</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -1391,104 +1346,87 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_TRIBE</Type>
 			<Description>TXT_KEY_UNIT_TRIBE</Description>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bUnlimitedException>1</bUnlimitedException>
 			<DefaultUnit>UNIT_TRIBE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_AMBUSHER</Type>
 			<Description>TXT_KEY_UNIT_AMBUSHER</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_AMBUSHER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_STALKERS</Type>
 			<Description>TXT_KEY_UNIT_STALKERS</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_STALKERS</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXILE</Type>
 			<Description>TXT_KEY_UNIT_EXILE</Description>
-			<iMaxPlayerInstances>2</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_EXILE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_THIEF</Type>
 			<Description>TXT_KEY_UNIT_THIEF</Description>
-			<iMaxPlayerInstances>2</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_THIEF</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_ROGUE</Type>
 			<Description>TXT_KEY_UNIT_ROGUE</Description>
-			<iMaxPlayerInstances>2</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_ROGUE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_BURGLAR</Type>
 			<Description>TXT_KEY_UNIT_BURGLAR</Description>
-			<iMaxPlayerInstances>2</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_BURGLAR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_ASSASSIN</Type>
 			<Description>TXT_KEY_UNIT_ASSASSIN</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_ASSASSIN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_CUTTHROAT</Type>
 			<Description>TXT_KEY_UNIT_CUTTHROAT</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_CUTTHROAT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SCOUNDREL</Type>
 			<Description>TXT_KEY_UNIT_SCOUNDREL</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_SCOUNDREL</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_GUNFIGHTER</Type>
 			<Description>TXT_KEY_UNIT_GUNFIGHTER</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_GUNFIGHTER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_THUG</Type>
 			<Description>TXT_KEY_UNIT_THUG</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_THUG</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_ROBBER</Type>
 			<Description>TXT_KEY_UNIT_ROBBER</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_ROBBER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_BIKER_GANG</Type>
 			<Description>TXT_KEY_UNIT_BIKER_GANG</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_BIKER_GANG</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_STREET_GANG</Type>
 			<Description>TXT_KEY_UNIT_STREET_GANG</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_STREET_GANG</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_HACKER</Type>
 			<Description>TXT_KEY_UNIT_HACKER</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_HACKER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TECHNARCHIST</Type>
 			<Description>TXT_KEY_UNIT_TECHNARCHIST</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_TECHNARCHIST</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -1504,7 +1442,6 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_TOMAHAWK_THROWER</Type>
 			<Description>TXT_KEY_UNIT_TOMAHAWK_THROWER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TOMAHAWK_THROWER</DefaultUnit>
 		</UnitClassInfo>
@@ -1521,25 +1458,21 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_SNIPER</Type>
 			<Description>TXT_KEY_UNIT_SNIPER</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_SNIPER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MSNIPER</Type>
 			<Description>TXT_KEY_UNIT_MSNIPER</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_MSNIPER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_HTSNIPER</Type>
 			<Description>TXT_KEY_UNIT_HTSNIPER</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_HTSNIPER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SHARPSHOOTER</Type>
 			<Description>TXT_KEY_UNIT_SHARPSHOOTER</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_SHARPSHOOTER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -1575,19 +1508,16 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_SIEGE_TOWER</Type>
 			<Description>TXT_KEY_UNIT_SIEGE_TOWER</Description>
-			<iMaxPlayerInstances>40</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_SIEGE_TOWER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_LOG_RAM</Type>
 			<Description>TXT_KEY_UNIT_LOG_RAM</Description>
-			<iMaxPlayerInstances>40</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_LOG_RAM</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SIEGE_RAM</Type>
 			<Description>TXT_KEY_UNIT_SIEGE_RAM</Description>
-			<iMaxPlayerInstances>40</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_SIEGE_RAM</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -1615,7 +1545,6 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_SKI_PATROL</Type>
 			<Description>TXT_KEY_UNIT_SKI_PATROL</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SKI_PATROL</DefaultUnit>
 		</UnitClassInfo>
@@ -1632,273 +1561,234 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_AMERICAN_NAVY_SEAL</Type>
 			<Description>TXT_KEY_UNIT_AMERICAN_NAVY_SEAL</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_AMERICAN_NAVY_SEAL</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_ARABIA_CAMELARCHER</Type>
 			<Description>TXT_KEY_UNIT_ARABIA_CAMELARCHER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ARABIA_CAMELARCHER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_AZTEC_JAGUAR</Type>
 			<Description>TXT_KEY_UNIT_AZTEC_JAGUAR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_AZTEC_JAGUAR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_BABYLON_BOWMAN</Type>
 			<Description>TXT_KEY_UNIT_BABYLON_BOWMAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BABYLON_BOWMAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_BYZANTINE_CATAPHRACT</Type>
 			<Description>TXT_KEY_UNIT_BYZANTINE_CATAPHRACT</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BYZANTINE_CATAPHRACT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_CARTHAGE_NUMIDIAN_CAVALRY</Type>
 			<Description>TXT_KEY_UNIT_CARTHAGE_NUMIDIAN_CAVALRY</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_CARTHAGE_NUMIDIAN_CAVALRY</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_CELTIC_GALLIC_WARRIOR</Type>
 			<Description>TXT_KEY_UNIT_CELTIC_GALLIC_WARRIOR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_CELTIC_GALLIC_WARRIOR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_CHINA_CHOKONU</Type>
 			<Description>TXT_KEY_UNIT_CHINA_CHOKONU</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_CHINA_CHOKONU</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EGYPT_WARCHARIOT</Type>
 			<Description>TXT_KEY_UNIT_EGYPT_WARCHARIOT</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_EGYPT_WARCHARIOT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_ENGLISH_REDCOAT</Type>
 			<Description>TXT_KEY_UNIT_ENGLISH_REDCOAT</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ENGLISH_REDCOAT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_ETHIOPIAN_OROMO_WARRIOR</Type>
 			<Description>TXT_KEY_UNIT_ETHIOPIAN_OROMO_WARRIOR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ETHIOPIAN_OROMO_WARRIOR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_FRENCH_MUSKETEER</Type>
 			<Description>TXT_KEY_UNIT_FRENCH_MUSKETEER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_FRENCH_MUSKETEER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_GERMAN_PANZER</Type>
 			<Description>TXT_KEY_UNIT_GERMAN_PANZER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_GERMAN_PANZER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_GREEK_PHALANX</Type>
 			<Description>TXT_KEY_UNIT_GREEK_PHALANX</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_GREEK_PHALANX</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_HOLY_ROMAN_LANDSKNECHT</Type>
 			<Description>TXT_KEY_UNIT_HOLY_ROMAN_LANDSKNECHT</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_HOLY_ROMAN_LANDSKNECHT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_INCAN_QUECHUA</Type>
 			<Description>TXT_KEY_UNIT_INCAN_QUECHUA</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_INCAN_QUECHUA</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_JAPAN_SAMURAI</Type>
 			<Description>TXT_KEY_UNIT_JAPAN_SAMURAI</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_JAPAN_SAMURAI</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_KHMER_PHAKAK</Type>
 			<Description>TXT_KEY_UNIT_KHMER_PHAKAK</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_KHMER_PHAKAK</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_KOREAN_HWACHA</Type>
 			<Description>TXT_KEY_UNIT_KOREAN_HWACHA</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_KOREAN_HWACHA</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MALI_SKIRMISHER</Type>
 			<Description>TXT_KEY_UNIT_MALI_SKIRMISHER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MALI_SKIRMISHER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MAYA_HOLKAN</Type>
 			<Description>TXT_KEY_UNIT_MAYA_HOLKAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MAYA_HOLKAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MONGOL_KESHIK</Type>
 			<Description>TXT_KEY_UNIT_MONGOL_KESHIK</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MONGOL_KESHIK</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_NATIVE_AMERICA_DOG_SOLDIER</Type>
 			<Description>TXT_KEY_UNIT_NATIVE_AMERICA_DOG_SOLDIER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_NATIVE_AMERICA_DOG_SOLDIER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_NETHERLANDS_OOSTINDIEVAARDER</Type>
 			<Description>TXT_KEY_UNIT_NETHERLANDS_OOSTINDIEVAARDER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_NETHERLANDS_OOSTINDIEVAARDER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_OTTOMAN_JANISSARY</Type>
 			<Description>TXT_KEY_UNIT_OTTOMAN_JANISSARY</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_OTTOMAN_JANISSARY</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_PERSIA_IMMORTAL</Type>
 			<Description>TXT_KEY_UNIT_PERSIA_IMMORTAL</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_PERSIA_IMMORTAL</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_PORTUGAL_CARRACK</Type>
 			<Description>TXT_KEY_UNIT_PORTUGAL_CARRACK</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_PORTUGAL_CARRACK</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_ROME_PRAETORIAN</Type>
 			<Description>TXT_KEY_UNIT_ROME_PRAETORIAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ROME_PRAETORIAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_RUSSIA_COSSACK</Type>
 			<Description>TXT_KEY_UNIT_RUSSIA_COSSACK</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_RUSSIA_COSSACK</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SPANISH_CONQUISTADOR</Type>
 			<Description>TXT_KEY_UNIT_SPANISH_CONQUISTADOR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SPANISH_CONQUISTADOR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SUMERIAN_VULTURE</Type>
 			<Description>TXT_KEY_UNIT_SUMERIAN_VULTURE</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SUMERIAN_VULTURE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_VIKING_BESERKER</Type>
 			<Description>TXT_KEY_UNIT_VIKING_BESERKER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_VIKING_BESERKER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_ZULU_IMPI</Type>
 			<Description>TXT_KEY_UNIT_ZULU_IMPI</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ZULU_IMPI</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_DIGGER</Type>
 			<Description>TXT_KEY_UNIT_DIGGER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_DIGGER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_POLYNESIAN_KOA</Type>
 			<Description>TXT_KEY_UNIT_POLYNESIAN_KOA</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_POLYNESIAN_KOA</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_APACHE_CAVALRY</Type>
 			<Description>TXT_KEY_UNIT_APACHE_CAVALRY</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_APACHE_CAVALRY</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_CHEROKEE_RIFLEMAN</Type>
 			<Description>TXT_KEY_UNIT_CHEROKEE_RIFLEMAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_CHEROKEE_RIFLEMAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MEXICO_RURALES</Type>
 			<Description>TXT_KEY_UNIT_MEXICO_RURALES</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MEXICO_RURALES</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_OLMEC_EAGLE_WARRIOR</Type>
 			<Description>Olmec Eagle Warrior</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_OLMEC_EAGLE_WARRIOR</DefaultUnit>
 		</UnitClassInfo>
@@ -1915,63 +1805,54 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_ASSYRIAN_REDU</Type>
 			<Description>TXT_KEY_UNIT_REDU</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ASSYRIAN_REDU</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_HITTITES_HITTITE_CHARIOT</Type>
 			<Description>TXT_KEY_UNIT_HITTITES_HITTITE_CHARIOT</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_HITTITES_HITTITE_CHARIOT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SIAM_ELEPHANT</Type>
 			<Description>TXT_KEY_UNIT_SIAM_ELEPHANT</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SIAM_ELEPHANT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_CANADIAN_MOUNTIE</Type>
 			<Description>TXT_KEY_UNIT_CANADIAN_MOUNTIE</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_CANADIAN_MOUNTIE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_ISRAELI_MACCABEE</Type>
 			<Description>TXT_KEY_UNIT_ISRAELI_MACCABEE</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ISRAELI_MACCABEE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_INDONESIAN_SILAT</Type>
 			<Description>TXT_KEY_UNIT_INDONESIAN_SILAT</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_INDONESIAN_SILAT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_BRAZILIAN_BANDEIRANTE</Type>
 			<Description>TXT_KEY_UNIT_BRAZILIAN_BANDEIRANTE</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BRAZILIAN_BANDEIRANTE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SWISS_PIKEMAN</Type>
 			<Description>TXT_KEY_UNIT_SWISS_PIKEMAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SWISS_PIKEMAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TIBETIAN_DOB_DOB</Type>
 			<Description>TXT_KEY_UNIT_TIBETIAN_DOB_DOB</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TIBETIAN_DOB_DOB</DefaultUnit>
 		</UnitClassInfo>
@@ -2038,13 +1919,11 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_CANOE</Type>
 			<Description>TXT_KEY_UNIT_CANOE</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_CANOE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_WAR_CANOE</Type>
 			<Description>TXT_KEY_UNIT_WAR_CANOE</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_WAR_CANOE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -2080,13 +1959,11 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_EARLY_MERCHANT_C2C</Type>
 			<Description>TXT_KEY_UNIT_EARLY_MERCHANT_C2C</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_EARLY_MERCHANT_C2C</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SUPPLY_TRAIN</Type>
 			<Description>TXT_KEY_CHARL_UNIT_SUPPLY_TRAIN</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_SUPPLY_TRAIN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -2734,98 +2611,84 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_LIGHTNING_WARRIOR</Type>
 			<Description>TXT_KEY_UNIT_LIGHTNING_WARRIOR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_LIGHTNING_WARRIOR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_COYOTE_RUNNER</Type>
 			<Description>TXT_KEY_UNIT_COYOTE_RUNNER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_COYOTE_RUNNER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_NAVAJO_RIFLEMAN</Type>
 			<Description>TXT_KEY_UNIT_NAVAJO_RIFLEMAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_NAVAJO_RIFLEMAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_CHEYENNE_RIDER</Type>
 			<Description>TXT_KEY_UNIT_CHEYENNE_RIDER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_CHEYENNE_RIDER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_COMANCHE_HORSE_ARCHER</Type>
 			<Description>TXT_KEY_UNIT_COMANCHE_HORSE_ARCHER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_COMANCHE_HORSE_ARCHER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_IRONWOOD_CLUBMAN</Type>
 			<Description>TXT_KEY_UNIT_IRONWOOD_CLUBMAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_IRONWOOD_CLUBMAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_INUIT_HARPOONER</Type>
 			<Description>TXT_KEY_UNIT_INUIT_HARPOONER</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_INUIT_HARPOONER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_BLACKWOOD_ARCHER</Type>
 			<Description>TXT_KEY_UNIT_BLACKWOOD_ARCHER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BLACKWOOD_ARCHER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SHARKTOOTH_ARCHER</Type>
 			<Description>TXT_KEY_UNIT_SHARKTOOTH_ARCHER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SHARKTOOTH_ARCHER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_CARIB_BLOWGUNNER</Type>
 			<Description>TXT_KEY_UNIT_CARIB_BLOWGUNNER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_CARIB_BLOWGUNNER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_CREE_TRACKER</Type>
 			<Description>TXT_KEY_UNIT_CREE_TRACKER</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_CREE_TRACKER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_HURON_MANLET</Type>
 			<Description>TXT_KEY_UNIT_HURON_MANLET</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_HURON_MANLET</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_KLAMATH_RIFLEMAN</Type>
 			<Description>TXT_KEY_UNIT_KLAMATH_RIFLEMAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_KLAMATH_RIFLEMAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_NOOTKA_CLUBMAN</Type>
 			<Description>TXT_KEY_UNIT_NOOTKA_CLUBMAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_NOOTKA_CLUBMAN</DefaultUnit>
 		</UnitClassInfo>
@@ -2877,28 +2740,24 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_EARLY_IMP_GUARD</Type>
 			<Description>TXT_KEY_UNIT_EARLY_IMP_GUARD</Description>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bUnlimitedException>1</bUnlimitedException>
 			<DefaultUnit>UNIT_EARLY_IMP_GUARD</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_REN_IMP_GUARD</Type>
 			<Description>TXT_KEY_UNIT_REN_IMP_GUARD</Description>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bUnlimitedException>1</bUnlimitedException>
 			<DefaultUnit>UNIT_REN_IMP_GUARD</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MODERN_IMP_GUARD</Type>
 			<Description>TXT_KEY_UNIT_MODERN_IMP_GUARD</Description>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bUnlimitedException>1</bUnlimitedException>
 			<DefaultUnit>UNIT_MODERN_IMP_GUARD</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_ROBOT_IMP_GUARD</Type>
 			<Description>TXT_KEY_UNIT_ROBOT_IMP_GUARD</Description>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bUnlimitedException>1</bUnlimitedException>
 			<DefaultUnit>UNIT_ROBOT_IMP_GUARD</DefaultUnit>
 		</UnitClassInfo>
@@ -2959,29 +2818,25 @@ Assyria, Hungary, Minoa, Armenia
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_NOBLE</Type>
-			<Description>Noble</Description>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<Description>TXT_KEY_UNIT_NOBLE</Description>
 			<bUnlimitedException>1</bUnlimitedException>
 			<DefaultUnit>UNIT_NOBLE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_LORD</Type>
-			<Description>Lord</Description>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<Description>TXT_KEY_UNIT_LORD</Description>
 			<bUnlimitedException>1</bUnlimitedException>
 			<DefaultUnit>UNIT_LORD</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_WARLORD_VASSAL</Type>
-			<Description>Warlord Vassal</Description>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<Description>TXT_KEY_UNIT_WARLORD_VASSAL</Description>
 			<bUnlimitedException>1</bUnlimitedException>
 			<DefaultUnit>UNIT_WARLORD_VASSAL</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_VICEROY</Type>
-			<Description>Viceroy</Description>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<Description>TXT_KEY_UNIT_VICEROY</Description>
 			<bUnlimitedException>1</bUnlimitedException>
 			<DefaultUnit>UNIT_VICEROY</DefaultUnit>
 		</UnitClassInfo>
@@ -2993,7 +2848,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_NEANDERTHAL_WARRIOR</Type>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_WARRIOR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_NEANDERTHAL_WARRIOR</DefaultUnit>
 		</UnitClassInfo>
@@ -3040,7 +2894,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_WARLORDI</Type>
 			<Description>TXT_KEY_UNIT_GREAT_GENERAL</Description>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bUnlimitedException>1</bUnlimitedException>
 			<iInstanceCostModifier>25</iInstanceCostModifier>
 			<DefaultUnit>UNIT_WARLORDI</DefaultUnit>
@@ -3048,7 +2901,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_WARLORDII</Type>
 			<Description>TXT_KEY_UNIT_GREAT_GENERAL</Description>
-			<iMaxPlayerInstances>2</iMaxPlayerInstances>
 			<bUnlimitedException>1</bUnlimitedException>
 			<iInstanceCostModifier>25</iInstanceCostModifier>
 			<DefaultUnit>UNIT_WARLORDII</DefaultUnit>
@@ -3056,7 +2908,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_WARLORDIII</Type>
 			<Description>TXT_KEY_UNIT_GREAT_GENERAL</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<bUnlimitedException>1</bUnlimitedException>
 			<iInstanceCostModifier>25</iInstanceCostModifier>
 			<DefaultUnit>UNIT_WARLORDIII</DefaultUnit>
@@ -3064,7 +2915,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_WARLORDIV</Type>
 			<Description>TXT_KEY_UNIT_GREAT_GENERAL</Description>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
 			<bUnlimitedException>1</bUnlimitedException>
 			<iInstanceCostModifier>25</iInstanceCostModifier>
 			<DefaultUnit>UNIT_WARLORDIV</DefaultUnit>
@@ -3072,7 +2922,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_WARLORDV</Type>
 			<Description>TXT_KEY_UNIT_GREAT_GENERAL</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<bUnlimitedException>1</bUnlimitedException>
 			<iInstanceCostModifier>25</iInstanceCostModifier>
 			<DefaultUnit>UNIT_WARLORDV</DefaultUnit>
@@ -3080,7 +2929,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_LAWYER</Type>
 			<Description>TXT_KEY_LAWYER_INQUISITOR_TWO</Description>
-			<iMaxPlayerInstances>2</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_LAWYER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -3121,13 +2969,11 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_CHASER</Type>
 			<Description>TXT_KEY_UNIT_CHASER</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_CHASER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_WARDEN</Type>
 			<Description>TXT_KEY_UNIT_WARDEN</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_WARDEN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -3148,7 +2994,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_JUDGE</Type>
 			<Description>TXT_KEY_UNIT_JUDGE</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_JUDGE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -3224,26 +3069,22 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_DROMON_FIRE_SHIP</Type>
 			<Description>TXT_KEY_UNIT_DROMON_FIRE_SHIP</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_DROMON_FIRE_SHIP</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_RAFT</Type>
 			<Description>TXT_KEY_UNIT_RAFT</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_RAFT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TRIBAL_GUARDIAN</Type>
 			<Description>TXT_KEY_UNIT_TRIBAL_GUARDIAN</Description>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_TRIBAL_GUARDIAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_KAYAK</Type>
 			<Description>TXT_KEY_UNIT_KAYAK</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_KAYAK</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -3570,43 +3411,36 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_COG_MERCHANT</Type>
 			<Description>TXT_KEY_UNIT_COG_MERCHANT</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_COG_MERCHANT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_CARRACK_MERCHANT</Type>
 			<Description>TXT_KEY_UNIT_CARRACK_MERCHANT</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_CARRACK_MERCHANT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_CLIPPER_MERCHANT</Type>
 			<Description>TXT_KEY_UNIT_CLIPPER_MERCHANT</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_CLIPPER_MERCHANT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_LIBERTY_MERCHANT</Type>
 			<Description>TXT_KEY_UNIT_LIBERTY_MERCHANT</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_LIBERTY_MERCHANT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_CARGO_SHIP</Type>
 			<Description>TXT_KEY_UNIT_CARGO_SHIP</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_CARGO_SHIP</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_DRAGON_SHIP_PIRATE</Type>
 			<Description>TXT_KEY_UNIT_DRAGON_SHIP_PIRATE</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_DRAGON_SHIP_PIRATE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_BARBARY_CORSAIR</Type>
 			<Description>TXT_KEY_UNIT_BARBARY_CORSAIR</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_BARBARY_CORSAIR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -3622,7 +3456,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_ASSAULT_SHIP</Type>
 			<Description>TXT_KEY_UNIT_ASSAULT_SHIP</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_ASSAULT_SHIP</DefaultUnit>
 		</UnitClassInfo>
 		<!-- End Pirate Ships -->
@@ -3765,469 +3598,402 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_TIGERCLAW</Type>
 			<Description>TXT_KEY_UNIT_TIGERCLAW</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TIGERCLAW</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SACRED_BAND</Type>
 			<Description>TXT_KEY_UNIT_SACRED_BAND</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SACRED_BAND</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_NAKHARAR</Type>
 			<Description>TXT_KEY_UNIT_NAKHARAR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_NAKHARAR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TEWHATEWHA</Type>
 			<Description>TXT_KEY_UNIT_TEWHATEWHA</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TEWHATEWHA</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SAVANNA_CAVALRY</Type>
 			<Description>TXT_KEY_UNIT_SAVANNA_CAVALRY</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SAVANNA_CAVALRY</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_BENIN_WAR_BOW</Type>
 			<Description>TXT_KEY_UNIT_BENIN_WAR_BOW</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BENIN_WAR_BOW</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_YEOMAN</Type>
 			<Description>TXT_KEY_UNIT_YEOMAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_YEOMAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_WINGED_CAVALRY</Type>
 			<Description>TXT_KEY_UNIT_WINGED_CAVALRY</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_WINGED_CAVALRY</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TARKAN</Type>
 			<Description>TXT_KEY_UNIT_TARKAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TARKAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_DOLPHIN_MECH</Type>
 			<Description>TXT_KEY_UNIT_DOLPHIN_MECH</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_DOLPHIN_MECH</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_HERERO_REBEL</Type>
 			<Description>TXT_KEY_UNIT_HERERO_REBEL</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_HERERO_REBEL</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MANCHU_HORSEARCHER</Type>
 			<Description>TXT_KEY_UNIT_MANCHU_HORSEARCHER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MANCHU_HORSEARCHER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SWAZI_TRACKER</Type>
 			<Description>TXT_KEY_UNIT_SWAZI_TRACKER</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SWAZI_TRACKER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_UIGHUR_KNIGHT</Type>
 			<Description>TXT_KEY_UNIT_UIGHUR_KNIGHT</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_UIGHUR_KNIGHT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MENALAMBA</Type>
 			<Description>TXT_KEY_UNIT_MENALAMBA</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MENALAMBA</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_PAPUAN_CANNIBAL</Type>
 			<Description>TXT_KEY_UNIT_PAPUAN_CANNIBAL</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_PAPUAN_CANNIBAL</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_FULANI_CAVALRY</Type>
 			<Description>TXT_KEY_UNIT_FULANI_CAVALRY</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_FULANI_CAVALRY</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_ADZE_WARRIOR</Type>
 			<Description>TXT_KEY_UNIT_ADZE_WARRIOR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ADZE_WARRIOR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_HUAMINCA</Type>
 			<Description>TXT_KEY_UNIT_HUAMINCA</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_HUAMINCA</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_KATARA</Type>
 			<Description>TXT_KEY_UNIT_KATARA</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_KATARA</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SOMALI_PIRATE</Type>
 			<Description>TXT_KEY_UNIT_SOMALI_PIRATE</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SOMALI_PIRATE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_HIGHLANDER</Type>
 			<Description>TXT_KEY_UNIT_HIGHLANDER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_HIGHLANDER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_AXE_THROWER</Type>
 			<Description>TXT_KEY_UNIT_AXE_THROWER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_AXE_THROWER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_ELMETI</Type>
 			<Description>TXT_KEY_UNIT_ELMETI</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ELMETI</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_GURKHA</Type>
 			<Description>TXT_KEY_UNIT_GURKHA</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_GURKHA</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_RAJPUT</Type>
 			<Description>TXT_KEY_UNIT_RAJPUT</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_RAJPUT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_HUSKARL</Type>
 			<Description>TXT_KEY_UNIT_HUSKARL</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_HUSKARL</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_HUSSAR</Type>
 			<Description>TXT_KEY_UNIT_HUSSAR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_HUSSAR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_JAEGER</Type>
 			<Description>TXT_KEY_UNIT_JAEGER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_JAEGER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_KALLARANI</Type>
 			<Description>TXT_KEY_UNIT_KALLARANI</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_KALLARANI</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_BLACK_GUARD</Type>
 			<Description>TXT_KEY_UNIT_BLACK_GUARD</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BLACK_GUARD</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_BOOMERANG_THROWER</Type>
 			<Description>TXT_KEY_UNIT_BOOMERANG_THROWER</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BOOMERANG_THROWER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_KUSH_ARCHER</Type>
 			<Description>TXT_KEY_UNIT_KUSH_ARCHER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_KUSH_ARCHER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_LLANERO</Type>
 			<Description>TXT_KEY_UNIT_LLANERO</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_LLANERO</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MANDEKALU</Type>
 			<Description>TXT_KEY_UNIT_MANDEKALU</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MANDEKALU</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MORAN</Type>
 			<Description>TXT_KEY_UNIT_MORAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MORAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SEPOY</Type>
 			<Description>TXT_KEY_UNIT_SEPOY</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SEPOY</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TURKOMAN</Type>
 			<Description>TXT_KEY_UNIT_TURKOMAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TURKOMAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_PHOENICAN_BIREME</Type>
 			<Description>TXT_KEY_UNIT_PHOENICAN_BIREME</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_PHOENICAN_BIREME</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_XIFOS</Type>
 			<Description>TXT_KEY_UNIT_XIFOS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_XIFOS</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SIYU_WARRIOR</Type>
 			<Description>TXT_KEY_UNIT_SIYU_WARRIOR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SIYU_WARRIOR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_ROZVI</Type>
 			<Description>TXT_KEY_UNIT_ROZVI</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ROZVI</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SURKU</Type>
 			<Description>TXT_KEY_UNIT_SURKU</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SURKU</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_VIETCONG</Type>
 			<Description>TXT_KEY_UNIT_VIETCONG</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_VIETCONG</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TUAREG_CAMEL</Type>
 			<Description>TXT_KEY_UNIT_TUAREG_CAMEL</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TUAREG_CAMEL</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_PYGMY_WARRIOR</Type>
 			<Description>TXT_KEY_UNIT_PYGMY_WARRIOR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_PYGMY_WARRIOR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_POMBOS</Type>
 			<Description>TXT_KEY_UNIT_POMBOS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_POMBOS</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_URUMI_SWORDSMAN</Type>
 			<Description>TXT_KEY_UNIT_URUMI_SWORDSMAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_URUMI_SWORDSMAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TOMOL</Type>
 			<Description>TXT_KEY_UNIT_TOMOL</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TOMOL</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_GRIVPANVAR</Type>
 			<Description>TXT_KEY_UNIT_GRIVPANVAR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_GRIVPANVAR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SHAN_WARRIOR</Type>
 			<Description>TXT_KEY_UNIT_SHAN_WARRIOR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SHAN_WARRIOR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_FLAIL_ELEPHANT</Type>
 			<Description>TXT_KEY_UNIT_FLAIL_ELEPHANT</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_FLAIL_ELEPHANT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MAHOUT_LANCER</Type>
 			<Description>TXT_KEY_UNIT_MAHOUT_LANCER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MAHOUT_LANCER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_HOWDAH</Type>
 			<Description>TXT_KEY_UNIT_HOWDAH</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_HOWDAH</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_GUDARI</Type>
 			<Description>TXT_KEY_UNIT_GUDARI</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_GUDARI</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MAMBISE</Type>
 			<Description>TXT_KEY_UNIT_MAMBISE</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MAMBISE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_BOER_CAVALRY</Type>
 			<Description>TXT_KEY_UNIT_BOER_CAVALRY</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BOER_CAVALRY</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_RAPANUIWORKER</Type>
 			<Description>TXT_KEY_UNIT_RAPANUIWORKER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_RAPANUIWORKER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_HAITIAN_REBEL</Type>
 			<Description>TXT_KEY_UNIT_HAITIAN_REBEL</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_HAITIAN_REBEL</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SAXON_RAIDER</Type>
 			<Description>TXT_KEY_UNIT_SAXON_RAIDER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SAXON_RAIDER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_DAI_CHUI</Type>
 			<Description>TXT_KEY_UNIT_DAI_CHUI</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_DAI_CHUI</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SPARTAN_WARRIOR</Type>
 			<Description>TXT_KEY_UNIT_SPARTAN_WARRIOR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SPARTAN_WARRIOR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_STONEWALL_BRIGADE</Type>
 			<Description>TXT_KEY_UNIT_STONEWALL_BRIGADE</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_STONEWALL_BRIGADE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TURTLE_SHIP</Type>
 			<Description>TXT_KEY_UNIT_TURTLE_SHIP</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TURTLE_SHIP</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_UHLAN</Type>
 			<Description>TXT_KEY_UNIT_UHLAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_UHLAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_YUMI_ARCHER</Type>
 			<Description>TXT_KEY_UNIT_YUMI_ARCHER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_YUMI_ARCHER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SHANG_CHARIOT</Type>
 			<Description>TXT_KEY_UNIT_SHANG_CHARIOT</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SHANG_CHARIOT</DefaultUnit>
 		</UnitClassInfo>
@@ -4239,14 +4005,12 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_NEW_ZEALAND_INFANTRY</Type>
 			<Description>TXT_KEY_UNIT_NEW_ZEALAND_INFANTRY</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_NEW_ZEALAND_INFANTRY</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_INNISKILLING</Type>
 			<Description>TXT_KEY_UNIT_INNISKILLING</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_INNISKILLING</DefaultUnit>
 		</UnitClassInfo>
@@ -4554,190 +4318,159 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_MATNU</Type>
 			<Description>TXT_KEY_UNIT_MATNU</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_MATNU</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SPIRIT_WALKER</Type>
 			<Description>TXT_KEY_UNIT_SPIRIT_WALKER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_SPIRIT_WALKER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_YURUPARI</Type>
 			<Description>TXT_KEY_UNIT_YURUPARI</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_YURUPARI</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_THORAX_HOPLITE</Type>
 			<Description>TXT_KEY_UNIT_THORAX_HOPLITE</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_THORAX_HOPLITE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_BRIGADE_PIRON</Type>
 			<Description>TXT_KEY_UNIT_BRIGADE_PIRON</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_BRIGADE_PIRON</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_BLOOD_WARRIOR</Type>
 			<Description>TXT_KEY_UNIT_BLOOD_WARRIOR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_BLOOD_WARRIOR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_FORTY_NINER</Type>
 			<Description>TXT_KEY_UNIT_FORTY_NINER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_FORTY_NINER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_DAHOMEY_MINO</Type>
 			<Description>TXT_KEY_UNIT_DAHOMEY_MINO</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_DAHOMEY_MINO</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_DENE_SLED_DOGS</Type>
 			<Description>TXT_KEY_UNIT_DENE_SLED_DOGS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_DENE_SLED_DOGS</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_AGRIANIAN_AXEMAN</Type>
 			<Description>TXT_KEY_UNIT_AGRIANIAN_AXEMAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_AGRIANIAN_AXEMAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_HAIDA_WAR_CANOE</Type>
 			<Description>TXT_KEY_UNIT_HAIDA_WAR_CANOE</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_HAIDA_WAR_CANOE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_PLUMED_ARCHER</Type>
 			<Description>TXT_KEY_UNIT_PLUMED_ARCHER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_PLUMED_ARCHER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_LEIDANG</Type>
 			<Description>TXT_KEY_UNIT_LEIDANG</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_LEIDANG</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MAROON</Type>
 			<Description>TXT_KEY_UNIT_MAROON</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_MAROON</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_HEADHUNTER</Type>
 			<Description>TXT_KEY_UNIT_HEADHUNTER</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_HEADHUNTER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_JADE_AXEMAN</Type>
 			<Description>TXT_KEY_UNIT_JADE_AXEMAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_JADE_AXEMAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_HYPASPISTAI</Type>
 			<Description>TXT_KEY_UNIT_HYPASPISTAI</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_HYPASPISTAI</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SAKA_CATAPHRACT</Type>
 			<Description>TXT_KEY_UNIT_SAKA_CATAPHRACT</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_SAKA_CATAPHRACT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_CUACHIC</Type>
 			<Description>TXT_KEY_UNIT_CUACHIC</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_CUACHIC</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SI_WARRIOR</Type>
 			<Description>TXT_KEY_UNIT_SI_WARRIOR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_SI_WARRIOR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_PICTISH_WARRIOR</Type>
 			<Description>TXT_KEY_UNIT_PICTISH_WARRIOR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_PICTISH_WARRIOR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_QIANG_PIKEMAN</Type>
 			<Description>TXT_KEY_UNIT_QIANG_PIKEMAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_QIANG_PIKEMAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_AXEMAN_ROXOLANI</Type>
 			<Description>TXT_KEY_UNIT_AXEMAN_ROXOLANI</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_AXEMAN_ROXOLANI</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SAVARAN</Type>
 			<Description>TXT_KEY_UNIT_SAVARAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_SAVARAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SCYTHIAN_HORSE_ARCHER</Type>
 			<Description>TXT_KEY_UNIT_SCYTHIAN_HORSE_ARCHER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_SCYTHIAN_HORSE_ARCHER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SIBERIAN_TRACKER</Type>
 			<Description>TXT_KEY_UNIT_SIBERIAN_TRACKER</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_SIBERIAN_TRACKER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MIG_29</Type>
 			<Description>TXT_KEY_UNIT_MIG_29</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_MIG_29</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_KUOMINTANG</Type>
 			<Description>TXT_KEY_UNIT_KUOMINTANG</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_KUOMINTANG</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TLATILCO_WAR_PRIEST</Type>
 			<Description>TXT_KEY_UNIT_TLATILCO_WAR_PRIEST</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_TLATILCO_WAR_PRIEST</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TLAXCALTEC_WARRIOR</Type>
 			<Description>TXT_KEY_UNIT_TLAXCALTEC_WARRIOR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_TLAXCALTEC_WARRIOR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_APOLLONIAN_GUARD</Type>
 			<Description>TXT_KEY_UNIT_APOLLONIAN_GUARD</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_APOLLONIAN_GUARD</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -5812,61 +5545,51 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_EARLY_FOOD_MERCHANT_C2C</Type>
 			<Description>TXT_KEY_UNIT_EARLY_FOOD_MERCHANT_C2C</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_EARLY_FOOD_MERCHANT_C2C</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_FOOD_CARAVAN</Type>
 			<Description>TXT_KEY_UNIT_FOOD_CARAVAN</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_FOOD_CARAVAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_FOOD_SUPPLY_TRAIN</Type>
 			<Description>TXT_KEY_UNIT_FOOD_SUPPLY_TRAIN</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_FOOD_SUPPLY_TRAIN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_FOOD_FREIGHT</Type>
 			<Description>TXT_KEY_UNIT_FOOD_FREIGHT</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_FOOD_FREIGHT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MASTER_TRACKER</Type>
 			<Description>TXT_KEY_UNIT_MASTER_TRACKER</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_MASTER_TRACKER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MASTER_HUNTER</Type>
 			<Description>TXT_KEY_UNIT_MASTER_HUNTER</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_MASTER_HUNTER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MASTER_RANGER</Type>
 			<Description>TXT_KEY_UNIT_MASTER_RANGER</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_MASTER_RANGER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MASTER_WARDEN</Type>
 			<Description>TXT_KEY_UNIT_MASTER_WARDEN</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_MASTER_WARDEN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MASTER_GAME_HUNTER</Type>
 			<Description>TXT_KEY_UNIT_MASTER_GAME_HUNTER</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_MASTER_GAME_HUNTER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MASTER_BIG_GAME_HUNTER</Type>
 			<Description>TXT_KEY_UNIT_MASTER_BIG_GAME_HUNTER</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_MASTER_BIG_GAME_HUNTER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -5897,7 +5620,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_SLEEPER</Type>
 			<Description>TXT_KEY_UNIT_SLEEPER</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_SLEEPER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -7003,31 +6725,26 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_NEANDERTHAL_TRIBAL_GUARDIAN</Type>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_TRIBAL_GUARDIAN</Description>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_NEANDERTHAL_TRIBAL_GUARDIAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_NEANDERTHAL_KAYAK</Type>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_KAYAK</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_NEANDERTHAL_KAYAK</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_NEANDERTHAL_WAR_CANOE</Type>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_WAR_CANOE</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_NEANDERTHAL_WAR_CANOE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_NEANDERTHAL_CANOE</Type>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_CANOE</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_NEANDERTHAL_CANOE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_NEANDERTHAL_RAFT</Type>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_RAFT</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_NEANDERTHAL_RAFT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -7038,7 +6755,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_NEANDERTHAL_LOG_RAM</Type>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_LOG_RAM</Description>
-			<iMaxPlayerInstances>40</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_NEANDERTHAL_LOG_RAM</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -7099,19 +6815,16 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_NEANDERTHAL_HUNTER</Type>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_HUNTER</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_NEANDERTHAL_HUNTER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_NEANDERTHAL_TRACKER</Type>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_TRACKER</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_NEANDERTHAL_TRACKER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_NEANDERTHAL_CHASER</Type>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_CHASER</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_NEANDERTHAL_CHASER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -7127,7 +6840,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_BARUD_WARRIOR</Type>
 			<Description>TXT_KEY_UNIT_BARUD_WARRIOR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BARUD_WARRIOR</DefaultUnit>
 		</UnitClassInfo>
@@ -7139,7 +6851,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_ANDAMAN_PYGMIES</Type>
 			<Description>TXT_KEY_UNIT_ANDAMAN_PYGMIES</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ANDAMAN_PYGMIES</DefaultUnit>
 		</UnitClassInfo>
@@ -7151,7 +6862,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_WIRUTI</Type>
 			<Description>TXT_KEY_UNIT_WIRUTI</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_WIRUTI</DefaultUnit>
 		</UnitClassInfo>
@@ -7163,7 +6873,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_CHWEZI_ELITES</Type>
 			<Description>TXT_KEY_UNIT_CHWEZI_ELITES</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_CHWEZI_ELITES</DefaultUnit>
 		</UnitClassInfo>
@@ -7175,7 +6884,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_ALUNA_SHAMAN</Type>
 			<Description>TXT_KEY_UNIT_ALUNA_SHAMAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ALUNA_SHAMAN</DefaultUnit>
 		</UnitClassInfo>
@@ -7187,7 +6895,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_RWENZURURU_SOLDIER</Type>
 			<Description>TXT_KEY_UNIT_RWENZURURU_SOLDIER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_RWENZURURU_SOLDIER</DefaultUnit>
 		</UnitClassInfo>
@@ -7199,7 +6906,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_PESHMERGA</Type>
 			<Description>TXT_KEY_UNIT_PESHMERGA</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_PESHMERGA</DefaultUnit>
 		</UnitClassInfo>
@@ -7211,7 +6917,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_KANDAKE_VETERANS</Type>
 			<Description>TXT_KEY_UNIT_KANDAKE_VETERANS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_KANDAKE_VETERANS</DefaultUnit>
 		</UnitClassInfo>
@@ -7223,7 +6928,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_KUSHAN_RIDER</Type>
 			<Description>TXT_KEY_UNIT_KUSHAN_RIDER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_KUSHAN_RIDER</DefaultUnit>
 		</UnitClassInfo>
@@ -7235,7 +6939,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_OIL_TANKER</Type>
 			<Description>TXT_KEY_UNIT_OIL_TANKER</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_OIL_TANKER</DefaultUnit>
 		</UnitClassInfo>
@@ -7247,7 +6950,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_LA_PLATA_MOSQUETERO</Type>
 			<Description>TXT_KEY_UNIT_LA_PLATA_MOSQUETERO</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_LA_PLATA_MOSQUETERO</DefaultUnit>
 		</UnitClassInfo>
@@ -7259,7 +6961,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_COURLAND_JAEGER</Type>
 			<Description>TXT_KEY_UNIT_COURLAND_JAEGER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_COURLAND_JAEGER</DefaultUnit>
 		</UnitClassInfo>
@@ -7271,7 +6972,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_UNITA_FORCES</Type>
 			<Description>TXT_KEY_UNIT_UNITA_FORCES</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_UNITA_FORCES</DefaultUnit>
 		</UnitClassInfo>
@@ -7283,7 +6983,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_HEZBOLLAH</Type>
 			<Description>TXT_KEY_UNIT_HEZBOLLAH</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_HEZBOLLAH</DefaultUnit>
 		</UnitClassInfo>
@@ -7295,7 +6994,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_GARAMANTES</Type>
 			<Description>TXT_KEY_UNIT_GARAMANTES</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_GARAMANTES</DefaultUnit>
 		</UnitClassInfo>
@@ -7307,7 +7005,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_PETYHORCY</Type>
 			<Description>TXT_KEY_UNIT_PETYHORCY</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_PETYHORCY</DefaultUnit>
 		</UnitClassInfo>
@@ -7319,7 +7016,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_DUGUNDIZ</Type>
 			<Description>TXT_KEY_UNIT_DUGUNDIZ</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_DUGUNDIZ</DefaultUnit>
 		</UnitClassInfo>
@@ -7331,7 +7027,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_LULE_NOMADS</Type>
 			<Description>TXT_KEY_UNIT_LULE_NOMADS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_LULE_NOMADS</DefaultUnit>
 		</UnitClassInfo>
@@ -7343,7 +7038,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_MWAANTA_GAAND</Type>
 			<Description>TXT_KEY_UNIT_MWAANTA_GAAND</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MWAANTA_GAAND</DefaultUnit>
 		</UnitClassInfo>
@@ -7355,7 +7049,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_SCORTAMAREVA</Type>
 			<Description>TXT_KEY_UNIT_SCORTAMAREVA</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SCORTAMAREVA</DefaultUnit>
 		</UnitClassInfo>
@@ -7367,7 +7060,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_MEIONE_CARAVAN</Type>
 			<Description>TXT_KEY_UNIT_MEIONE_CARAVAN</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MEIONE_CARAVAN</DefaultUnit>
 		</UnitClassInfo>
@@ -7379,7 +7071,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_FADY_SHAMAN</Type>
 			<Description>TXT_KEY_UNIT_FADY_SHAMAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_FADY_SHAMAN</DefaultUnit>
 		</UnitClassInfo>
@@ -7391,7 +7082,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_MALACCAN_PIRATE</Type>
 			<Description>TXT_KEY_UNIT_MALACCAN_PIRATE</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MALACCAN_PIRATE</DefaultUnit>
 		</UnitClassInfo>
@@ -7403,7 +7093,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_TERCIO_PIKEMAN</Type>
 			<Description>TXT_KEY_UNIT_TERCIO_PIKEMAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TERCIO_PIKEMAN</DefaultUnit>
 		</UnitClassInfo>
@@ -7415,7 +7104,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_MAMELUK</Type>
 			<Description>TXT_KEY_UNIT_MAMELUK</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MAMELUK</DefaultUnit>
 		</UnitClassInfo>
@@ -7427,7 +7115,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_BISON_WARDENS</Type>
 			<Description>TXT_KEY_UNIT_BISON_WARDENS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BISON_WARDENS</DefaultUnit>
 		</UnitClassInfo>
@@ -7439,7 +7126,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_MANIQ_SPEAKER</Type>
 			<Description>TXT_KEY_UNIT_MANIQ_SPEAKER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MANIQ_SPEAKER</DefaultUnit>
 		</UnitClassInfo>
@@ -7451,7 +7137,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_STEPPE_RIDER</Type>
 			<Description>TXT_KEY_UNIT_STEPPE_RIDER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_STEPPE_RIDER</DefaultUnit>
 		</UnitClassInfo>
@@ -7463,7 +7148,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_MEDE_RETINUES</Type>
 			<Description>TXT_KEY_UNIT_MEDE_RETINUES</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MEDE_RETINUES</DefaultUnit>
 		</UnitClassInfo>
@@ -7475,7 +7159,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_MOTU_ARCHERS</Type>
 			<Description>TXT_KEY_UNIT_MOTU_ARCHERS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MOTU_ARCHERS</DefaultUnit>
 		</UnitClassInfo>
@@ -7487,7 +7170,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_ISOKELEKEL</Type>
 			<Description>TXT_KEY_UNIT_ISOKELEKEL</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ISOKELEKEL</DefaultUnit>
 		</UnitClassInfo>
@@ -7499,7 +7181,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_TREASURE_SHIP</Type>
 			<Description>TXT_KEY_UNIT_TREASURE_SHIP</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TREASURE_SHIP</DefaultUnit>
 		</UnitClassInfo>
@@ -7511,7 +7192,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_RIVER_WORKER</Type>
 			<Description>TXT_KEY_UNIT_RIVER_WORKER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_RIVER_WORKER</DefaultUnit>
 		</UnitClassInfo>
@@ -7523,14 +7203,12 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_KIKKULI_CHARIOT</Type>
 			<Description>TXT_KEY_UNIT_KIKKULI_CHARIOT</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_KIKKULI_CHARIOT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MOUNTED_GRENADIERS</Type>
 			<Description>TXT_KEY_UNIT_MOUNTED_GRENADIERS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MOUNTED_GRENADIERS</DefaultUnit>
 		</UnitClassInfo>
@@ -7542,7 +7220,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_HUACA_GUARDIANS</Type>
 			<Description>TXT_KEY_UNIT_HUACA_GUARDIANS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_HUACA_GUARDIANS</DefaultUnit>
 		</UnitClassInfo>
@@ -7554,7 +7231,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_MOCOVI_TRACKER</Type>
 			<Description>TXT_KEY_UNIT_MOCOVI_TRACKER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MOCOVI_TRACKER</DefaultUnit>
 		</UnitClassInfo>
@@ -7566,7 +7242,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_MOHAWK_TRACKER</Type>
 			<Description>TXT_KEY_UNIT_MOHAWK_TRACKER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MOHAWK_TRACKER</DefaultUnit>
 		</UnitClassInfo>
@@ -7578,14 +7253,12 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_KALLAWAYA</Type>
 			<Description>TXT_KEY_UNIT_KALLAWAYA</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_KALLAWAYA</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SIEGE_ELEPHANT</Type>
 			<Description>TXT_KEY_UNIT_SIEGE_ELEPHANT</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SIEGE_ELEPHANT</DefaultUnit>
 		</UnitClassInfo>
@@ -7597,7 +7270,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_CZIBCZA_WARRIOR</Type>
 			<Description>TXT_KEY_UNIT_CZIBCZA_WARRIOR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_CZIBCZA_WARRIOR</DefaultUnit>
 		</UnitClassInfo>
@@ -7609,7 +7281,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_MURRI_WARRIOR</Type>
 			<Description>TXT_KEY_UNIT_MURRI_WARRIOR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MURRI_WARRIOR</DefaultUnit>
 		</UnitClassInfo>
@@ -7621,7 +7292,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_PETRA_GUARD</Type>
 			<Description>TXT_KEY_UNIT_PETRA_GUARD</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_PETRA_GUARD</DefaultUnit>
 		</UnitClassInfo>
@@ -7633,7 +7303,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_TLATOANI_BOWMANS</Type>
 			<Description>TXT_KEY_UNIT_TLATOANI_BOWMANS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TLATOANI_BOWMANS</DefaultUnit>
 		</UnitClassInfo>
@@ -7645,7 +7314,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_KHOISAN_RUNNER</Type>
 			<Description>TXT_KEY_UNIT_KHOISAN_RUNNER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_KHOISAN_RUNNER</DefaultUnit>
 		</UnitClassInfo>
@@ -7657,7 +7325,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_PERSIAN_POET</Type>
 			<Description>TXT_KEY_UNIT_PERSIAN_POET</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_PERSIAN_POET</DefaultUnit>
 		</UnitClassInfo>
@@ -7669,7 +7336,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_NAZCA_HEADHUNTERS</Type>
 			<Description>TXT_KEY_UNIT_NAZCA_HEADHUNTERS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_NAZCA_HEADHUNTERS</DefaultUnit>
 		</UnitClassInfo>
@@ -7681,7 +7347,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_GOBIR_LANCER</Type>
 			<Description>TXT_KEY_UNIT_GOBIR_LANCER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_GOBIR_LANCER</DefaultUnit>
 		</UnitClassInfo>
@@ -7693,7 +7358,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_NOK_MERCHANTS</Type>
 			<Description>TXT_KEY_UNIT_NOK_MERCHANTS</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_NOK_MERCHANTS</DefaultUnit>
 		</UnitClassInfo>
@@ -7705,7 +7369,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_BUSH_TRACKERS</Type>
 			<Description>TXT_KEY_UNIT_BUSH_TRACKERS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BUSH_TRACKERS</DefaultUnit>
 		</UnitClassInfo>
@@ -7717,7 +7380,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_NORMAN_KNIGHT</Type>
 			<Description>TXT_KEY_UNIT_NORMAN_KNIGHT</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_NORMAN_KNIGHT</DefaultUnit>
 		</UnitClassInfo>
@@ -7734,7 +7396,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_ODAWA_TRADERS</Type>
 			<Description>TXT_KEY_UNIT_ODAWA_TRADERS</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ODAWA_TRADERS</DefaultUnit>
 		</UnitClassInfo>
@@ -7746,7 +7407,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_ARABIAN_GALLIOT</Type>
 			<Description>TXT_KEY_UNIT_ARABIAN_GALLIOT</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ARABIAN_GALLIOT</DefaultUnit>
 		</UnitClassInfo>
@@ -7758,7 +7418,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_TREASURE_GUARD</Type>
 			<Description>TXT_KEY_UNIT_TREASURE_GUARD</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TREASURE_GUARD</DefaultUnit>
 		</UnitClassInfo>
@@ -7770,14 +7429,12 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_ORANG_BOWMAN</Type>
 			<Description>TXT_KEY_UNIT_ORANG_BOWMAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ORANG_BOWMAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TWAFO</Type>
 			<Description>TXT_KEY_UNIT_TWAFO</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TWAFO</DefaultUnit>
 		</UnitClassInfo>
@@ -7789,7 +7446,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_PAIUTE_CAVALRY</Type>
 			<Description>TXT_KEY_UNIT_PAIUTE_CAVALRY</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_PAIUTE_CAVALRY</DefaultUnit>
 		</UnitClassInfo>
@@ -7801,7 +7457,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_SSG</Type>
 			<Description>TXT_KEY_UNIT_SSG</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SSG</DefaultUnit>
 		</UnitClassInfo>
@@ -7813,7 +7468,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_PLO_FIGHTER</Type>
 			<Description>TXT_KEY_UNIT_PLO_FIGHTER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_PLO_FIGHTER</DefaultUnit>
 		</UnitClassInfo>
@@ -7825,7 +7479,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_PUBLIC_FORCES</Type>
 			<Description>TXT_KEY_UNIT_PUBLIC_FORCES</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_PUBLIC_FORCES</DefaultUnit>
 		</UnitClassInfo>
@@ -7837,7 +7490,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_LOS_MARINOS</Type>
 			<Description>TXT_KEY_UNIT_LOS_MARINOS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_LOS_MARINOS</DefaultUnit>
 		</UnitClassInfo>
@@ -7849,7 +7501,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_MAHSUD_ATTAN</Type>
 			<Description>TXT_KEY_UNIT_MAHSUD_ATTAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MAHSUD_ATTAN</DefaultUnit>
 		</UnitClassInfo>
@@ -7861,7 +7512,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_PERUVIAN_CONQUISTADOR</Type>
 			<Description>TXT_KEY_UNIT_PERUVIAN_CONQUISTADOR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_PERUVIAN_CONQUISTADOR</DefaultUnit>
 		</UnitClassInfo>
@@ -7873,7 +7523,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_KRISS_WARRIOR</Type>
 			<Description>TXT_KEY_UNIT_KRISS_WARRIOR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_KRISS_WARRIOR</DefaultUnit>
 		</UnitClassInfo>
@@ -7885,7 +7534,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_LIGHT_HOPLITE</Type>
 			<Description>TXT_KEY_UNIT_LIGHT_HOPLITE</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_LIGHT_HOPLITE</DefaultUnit>
 		</UnitClassInfo>
@@ -7897,7 +7545,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_WAPITI</Type>
 			<Description>TXT_KEY_UNIT_WAPITI</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_WAPITI</DefaultUnit>
 		</UnitClassInfo>
@@ -7909,7 +7556,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_ARJOS</Type>
 			<Description>TXT_KEY_UNIT_ARJOS</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ARJOS</DefaultUnit>
 		</UnitClassInfo>
@@ -7921,7 +7567,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_AKIMEL_BRIGADE</Type>
 			<Description>TXT_KEY_UNIT_AKIMEL_BRIGADE</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_AKIMEL_BRIGADE</DefaultUnit>
 		</UnitClassInfo>
@@ -7933,7 +7578,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_RED_FOX_ARCHER</Type>
 			<Description>TXT_KEY_UNIT_RED_FOX_ARCHER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_RED_FOX_ARCHER</DefaultUnit>
 		</UnitClassInfo>
@@ -7945,7 +7589,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_POYA_LONGSPEARS</Type>
 			<Description>TXT_KEY_UNIT_POYA_LONGSPEARS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_POYA_LONGSPEARS</DefaultUnit>
 		</UnitClassInfo>
@@ -7957,7 +7600,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_WANQARA</Type>
 			<Description>TXT_KEY_UNIT_WANQARA</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_WANQARA</DefaultUnit>
 		</UnitClassInfo>
@@ -7969,7 +7611,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_RESIN_CARAVAN</Type>
 			<Description>TXT_KEY_UNIT_RESIN_CARAVAN</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_RESIN_CARAVAN</DefaultUnit>
 		</UnitClassInfo>
@@ -7981,7 +7622,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_CHUO_QIANG</Type>
 			<Description>TXT_KEY_UNIT_CHUO_QIANG</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_CHUO_QIANG</DefaultUnit>
 		</UnitClassInfo>
@@ -7993,7 +7633,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_ZHUGE_NO</Type>
 			<Description>TXT_KEY_UNIT_ZHUGE_NO</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ZHUGE_NO</DefaultUnit>
 		</UnitClassInfo>
@@ -8005,7 +7644,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_UJEN_CHOOHA</Type>
 			<Description>TXT_KEY_UNIT_UJEN_CHOOHA</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_UJEN_CHOOHA</DefaultUnit>
 		</UnitClassInfo>
@@ -8017,7 +7655,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_QUEBEC_DEFENDERS</Type>
 			<Description>TXT_KEY_UNIT_QUEBEC_DEFENDERS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_QUEBEC_DEFENDERS</DefaultUnit>
 		</UnitClassInfo>
@@ -8029,7 +7666,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_BOLA_HUNTER</Type>
 			<Description>TXT_KEY_UNIT_BOLA_HUNTER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BOLA_HUNTER</DefaultUnit>
 		</UnitClassInfo>
@@ -8041,7 +7677,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_KHAGAN_CAVALRY</Type>
 			<Description>TXT_KEY_UNIT_KHAGAN_CAVALRY</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_KHAGAN_CAVALRY</DefaultUnit>
 		</UnitClassInfo>
@@ -8053,7 +7688,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_CHULLPAS</Type>
 			<Description>TXT_KEY_UNIT_CHULLPAS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_CHULLPAS</DefaultUnit>
 		</UnitClassInfo>
@@ -8065,7 +7699,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_ILLINIWEK_WARRIOR</Type>
 			<Description>TXT_KEY_UNIT_ILLINIWEK_WARRIOR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ILLINIWEK_WARRIOR</DefaultUnit>
 		</UnitClassInfo>
@@ -8077,7 +7710,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_RHODESIA_NATIVE_REGIMENT</Type>
 			<Description>TXT_KEY_UNIT_RHODESIA_NATIVE_REGIMENT</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_RHODESIA_NATIVE_REGIMENT</DefaultUnit>
 		</UnitClassInfo>
@@ -8089,7 +7721,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_BEGGAR</Type>
 			<Description>TXT_KEY_UNIT_BEGGAR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BEGGAR</DefaultUnit>
 		</UnitClassInfo>
@@ -8102,7 +7733,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_MAGOS</Type>
 			<Description>TXT_KEY_UNIT_MAGOS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MAGOS</DefaultUnit>
 		</UnitClassInfo>
@@ -8115,7 +7745,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_TOFANGCHI</Type>
 			<Description>TXT_KEY_UNIT_TOFANGCHI</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TOFANGCHI</DefaultUnit>
 		</UnitClassInfo>
@@ -8132,7 +7761,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_REINDEER_RIDER</Type>
 			<Description>TXT_KEY_UNIT_REINDEER_RIDER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_REINDEER_RIDER</DefaultUnit>
 		</UnitClassInfo>
@@ -8144,7 +7772,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_MATAAFA_BRIGADE</Type>
 			<Description>TXT_KEY_UNIT_MATAAFA_BRIGADE</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MATAAFA_BRIGADE</DefaultUnit>
 		</UnitClassInfo>
@@ -8156,7 +7783,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_AMAZON_RIDER</Type>
 			<Description>TXT_KEY_UNIT_AMAZON_RIDER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_AMAZON_RIDER</DefaultUnit>
 		</UnitClassInfo>
@@ -8168,7 +7794,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_KATARI_INSURGENTS</Type>
 			<Description>TXT_KEY_UNIT_KATARI_INSURGENTS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_KATARI_INSURGENTS</DefaultUnit>
 		</UnitClassInfo>
@@ -8180,7 +7805,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_SIPAHI</Type>
 			<Description>TXT_KEY_UNIT_SIPAHI</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SIPAHI</DefaultUnit>
 		</UnitClassInfo>
@@ -8192,7 +7816,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_KHANUNGESE</Type>
 			<Description>TXT_KEY_UNIT_KHANUNGESE</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_KHANUNGESE</DefaultUnit>
 		</UnitClassInfo>
@@ -8204,7 +7827,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_SABAR_DRUMMER</Type>
 			<Description>TXT_KEY_UNIT_SABAR_DRUMMER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SABAR_DRUMMER</DefaultUnit>
 		</UnitClassInfo>
@@ -8216,7 +7838,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_FUNJ_CAVALRY</Type>
 			<Description>TXT_KEY_UNIT_FUNJ_CAVALRY</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_FUNJ_CAVALRY</DefaultUnit>
 		</UnitClassInfo>
@@ -8228,7 +7849,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_HAJDUK</Type>
 			<Description>TXT_KEY_UNIT_HAJDUK</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_HAJDUK</DefaultUnit>
 		</UnitClassInfo>
@@ -8240,7 +7860,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_TUCUME</Type>
 			<Description>TXT_KEY_UNIT_TUCUME</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TUCUME</DefaultUnit>
 		</UnitClassInfo>
@@ -8252,7 +7871,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_GASTRAPHETES</Type>
 			<Description>TXT_KEY_UNIT_GASTRAPHETES</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_GASTRAPHETES</DefaultUnit>
 		</UnitClassInfo>
@@ -8264,7 +7882,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_SINTASHTA_CHARIOT</Type>
 			<Description>TXT_KEY_UNIT_SINTASHTA_CHARIOT</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SINTASHTA_CHARIOT</DefaultUnit>
 		</UnitClassInfo>
@@ -8276,7 +7893,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_ZBOJNIK</Type>
 			<Description>TXT_KEY_UNIT_ZBOJNIK</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ZBOJNIK</DefaultUnit>
 		</UnitClassInfo>
@@ -8288,7 +7904,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_CARANTANIAN_MERCENARY</Type>
 			<Description>TXT_KEY_UNIT_CARANTANIAN_MERCENARY</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_CARANTANIAN_MERCENARY</DefaultUnit>
 		</UnitClassInfo>
@@ -8300,7 +7915,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_NIAM_NIAM</Type>
 			<Description>TXT_KEY_UNIT_NIAM_NIAM</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_NIAM_NIAM</DefaultUnit>
 		</UnitClassInfo>
@@ -8312,7 +7926,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_AZAWAD_CAVALRY</Type>
 			<Description>TXT_KEY_UNIT_AZAWAD_CAVALRY</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_AZAWAD_CAVALRY</DefaultUnit>
 		</UnitClassInfo>
@@ -8324,7 +7937,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_DARFUR_MILITIA</Type>
 			<Description>TXT_KEY_UNIT_DARFUR_MILITIA</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_DARFUR_MILITIA</DefaultUnit>
 		</UnitClassInfo>
@@ -8336,7 +7948,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_JAIPONGAN_DANCER</Type>
 			<Description>TXT_KEY_UNIT_JAIPONGAN_DANCER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_JAIPONGAN_DANCER</DefaultUnit>
 		</UnitClassInfo>
@@ -8348,7 +7959,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_BOSNEGERS</Type>
 			<Description>TXT_KEY_UNIT_BOSNEGERS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BOSNEGERS</DefaultUnit>
 		</UnitClassInfo>
@@ -8360,7 +7970,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_KAROLINER</Type>
 			<Description>TXT_KEY_UNIT_KAROLINER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_KAROLINER</DefaultUnit>
 		</UnitClassInfo>
@@ -8372,7 +7981,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_OMUCHTAN</Type>
 			<Description>TXT_KEY_UNIT_OMUCHTAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_OMUCHTAN</DefaultUnit>
 		</UnitClassInfo>
@@ -8384,7 +7992,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_KATIPUNAN_CAVALRY</Type>
 			<Description>TXT_KEY_UNIT_KATIPUNAN_CAVALRY</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_KATIPUNAN_CAVALRY</DefaultUnit>
 		</UnitClassInfo>
@@ -8396,7 +8003,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_TAHITIAN_RIDERS</Type>
 			<Description>TXT_KEY_UNIT_TAHITIAN_RIDERS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TAHITIAN_RIDERS</DefaultUnit>
 		</UnitClassInfo>
@@ -8408,7 +8014,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_TAIRONA_REBELS</Type>
 			<Description>TXT_KEY_UNIT_TAIRONA_REBELS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TAIRONA_REBELS</DefaultUnit>
 		</UnitClassInfo>
@@ -8420,7 +8025,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_PEN_HUO_QI</Type>
 			<Description>TXT_KEY_UNIT_PEN_HUO_QI</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_PEN_HUO_QI</DefaultUnit>
 		</UnitClassInfo>
@@ -8432,7 +8036,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_MOUND_GUARDIAN</Type>
 			<Description>TXT_KEY_UNIT_MOUND_GUARDIAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MOUND_GUARDIAN</DefaultUnit>
 		</UnitClassInfo>
@@ -8444,7 +8047,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_BANYAN_XEBEC</Type>
 			<Description>TXT_KEY_UNIT_BANYAN_XEBEC</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BANYAN_XEBEC</DefaultUnit>
 		</UnitClassInfo>
@@ -8456,7 +8058,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_SERENGETI_RANGER</Type>
 			<Description>TXT_KEY_UNIT_SERENGETI_RANGER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SERENGETI_RANGER</DefaultUnit>
 		</UnitClassInfo>
@@ -8468,7 +8069,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_UACUSECHA</Type>
 			<Description>TXT_KEY_UNIT_UACUSECHA</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_UACUSECHA</DefaultUnit>
 		</UnitClassInfo>
@@ -8480,7 +8080,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_TASMANIAN_DEVILS</Type>
 			<Description>TXT_KEY_UNIT_TASMANIAN_DEVILS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TASMANIAN_DEVILS</DefaultUnit>
 		</UnitClassInfo>
@@ -8492,7 +8091,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_ZAGON</Type>
 			<Description>TXT_KEY_UNIT_ZAGON</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ZAGON</DefaultUnit>
 		</UnitClassInfo>
@@ -8504,7 +8102,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_TEXAS_RANGER</Type>
 			<Description>TXT_KEY_UNIT_TEXAS_RANGER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TEXAS_RANGER</DefaultUnit>
 		</UnitClassInfo>
@@ -8516,7 +8113,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_THRACIAN_PELTAST</Type>
 			<Description>TXT_KEY_UNIT_THRACIAN_PELTAST</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_THRACIAN_PELTAST</DefaultUnit>
 		</UnitClassInfo>
@@ -8528,7 +8124,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_DOUJIAN</Type>
 			<Description>TXT_KEY_UNIT_DOUJIAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_DOUJIAN</DefaultUnit>
 		</UnitClassInfo>
@@ -8540,7 +8135,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_HEAVY_TARKHAN</Type>
 			<Description>TXT_KEY_UNIT_HEAVY_TARKHAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_HEAVY_TARKHAN</DefaultUnit>
 		</UnitClassInfo>
@@ -8552,7 +8146,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_WALLABY_HUNTERS</Type>
 			<Description>TXT_KEY_UNIT_WALLABY_HUNTERS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_WALLABY_HUNTERS</DefaultUnit>
 		</UnitClassInfo>
@@ -8564,7 +8157,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_YAOTLALLI_WARRIOR</Type>
 			<Description>TXT_KEY_UNIT_YAOTLALLI_WARRIOR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_YAOTLALLI_WARRIOR</DefaultUnit>
 		</UnitClassInfo>
@@ -8576,7 +8168,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_BACTRIAN_CATAPHRACT</Type>
 			<Description>TXT_KEY_UNIT_BACTRIAN_CATAPHRACT</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BACTRIAN_CATAPHRACT</DefaultUnit>
 		</UnitClassInfo>
@@ -8588,7 +8179,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_GUAYKURU</Type>
 			<Description>TXT_KEY_UNIT_GUAYKURU</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_GUAYKURU</DefaultUnit>
 		</UnitClassInfo>
@@ -8600,7 +8190,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_NUKULEKA_WARRIORS</Type>
 			<Description>TXT_KEY_UNIT_NUKULEKA_WARRIORS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_NUKULEKA_WARRIORS</DefaultUnit>
 		</UnitClassInfo>
@@ -8612,7 +8201,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_MAIZE_CARAVAN</Type>
 			<Description>TXT_KEY_UNIT_MAIZE_CARAVAN</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MAIZE_CARAVAN</DefaultUnit>
 		</UnitClassInfo>
@@ -8624,7 +8212,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_KHINGILA_WARRIORS</Type>
 			<Description>TXT_KEY_UNIT_KHINGILA_WARRIORS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_KHINGILA_WARRIORS</DefaultUnit>
 		</UnitClassInfo>
@@ -8636,7 +8223,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_TUCANO_MERCHANT</Type>
 			<Description>TXT_KEY_UNIT_TUCANO_MERCHANT</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TUCANO_MERCHANT</DefaultUnit>
 		</UnitClassInfo>
@@ -8648,7 +8234,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_SABLE_TRAPPER</Type>
 			<Description>TXT_KEY_UNIT_SABLE_TRAPPER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SABLE_TRAPPER</DefaultUnit>
 		</UnitClassInfo>
@@ -8660,7 +8245,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_WHEELED_TANK</Type>
 			<Description>TXT_KEY_UNIT_WHEELED_TANK</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_WHEELED_TANK</DefaultUnit>
 		</UnitClassInfo>
@@ -8672,7 +8256,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_57TH_INFANTRY_REGIMENT</Type>
 			<Description>TXT_KEY_UNIT_57TH_INFANTRY_REGIMENT</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_57TH_INFANTRY_REGIMENT</DefaultUnit>
 		</UnitClassInfo>
@@ -8684,7 +8267,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_ZAPOROZKI_KOZAK</Type>
 			<Description>TXT_KEY_UNIT_ZAPOROZKI_KOZAK</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ZAPOROZKI_KOZAK</DefaultUnit>
 		</UnitClassInfo>
@@ -8696,7 +8278,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_HERNANDARIAS_REGIMENTO</Type>
 			<Description>TXT_KEY_UNIT_HERNANDARIAS_REGIMENTO</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_HERNANDARIAS_REGIMENTO</DefaultUnit>
 		</UnitClassInfo>
@@ -8708,7 +8289,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_BOROBUDUR</Type>
 			<Description>TXT_KEY_UNIT_BOROBUDUR</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BOROBUDUR</DefaultUnit>
 		</UnitClassInfo>
@@ -8720,7 +8300,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_JADID_GRENADIERS</Type>
 			<Description>TXT_KEY_UNIT_JADID_GRENADIERS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_JADID_GRENADIERS</DefaultUnit>
 		</UnitClassInfo>
@@ -8732,7 +8311,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_FIGURINE_POTTER</Type>
 			<Description>TXT_KEY_UNIT_FIGURINE_POTTER</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_FIGURINE_POTTER</DefaultUnit>
 		</UnitClassInfo>
@@ -8744,14 +8322,12 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_VANAU_WARRIOR</Type>
 			<Description>TXT_KEY_UNIT_VANAU_WARRIOR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_VANAU_WARRIOR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_GALLIOT</Type>
 			<Description>TXT_KEY_UNIT_GALLIOT</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_GALLIOT</DefaultUnit>
 		</UnitClassInfo>
@@ -8763,7 +8339,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_SAUD_CAVALRY</Type>
 			<Description>TXT_KEY_UNIT_SAUD_CAVALRY</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SAUD_CAVALRY</DefaultUnit>
 		</UnitClassInfo>
@@ -8775,7 +8350,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_ORDER_OF_THE_DRAGON</Type>
 			<Description>TXT_KEY_UNIT_ORDER_OF_THE_DRAGON</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ORDER_OF_THE_DRAGON</DefaultUnit>
 		</UnitClassInfo>
@@ -8787,7 +8361,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_VANDAL_PILLAGER</Type>
 			<Description>TXT_KEY_UNIT_VANDAL_PILLAGER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_VANDAL_PILLAGER</DefaultUnit>
 		</UnitClassInfo>
@@ -8799,7 +8372,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_WARAY_RIDERS</Type>
 			<Description>TXT_KEY_UNIT_WARAY_RIDERS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_WARAY_RIDERS</DefaultUnit>
 		</UnitClassInfo>
@@ -8811,7 +8383,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_ORONAO_WATCHER</Type>
 			<Description>TXT_KEY_UNIT_ORONAO_WATCHER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ORONAO_WATCHER</DefaultUnit>
 		</UnitClassInfo>
@@ -8823,7 +8394,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_AKAVAI</Type>
 			<Description>TXT_KEY_UNIT_AKAVAI</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_AKAVAI</DefaultUnit>
 		</UnitClassInfo>
@@ -8835,7 +8405,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_PATAMAR</Type>
 			<Description>TXT_KEY_UNIT_PATAMAR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_PATAMAR</DefaultUnit>
 		</UnitClassInfo>
@@ -8847,7 +8416,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_WAYUU_CAVALRY</Type>
 			<Description>TXT_KEY_UNIT_WAYUU_CAVALRY</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_WAYUU_CAVALRY</DefaultUnit>
 		</UnitClassInfo>
@@ -8859,7 +8427,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_YU_SPEARMAN</Type>
 			<Description>TXT_KEY_UNIT_YU_SPEARMAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_YU_SPEARMAN</DefaultUnit>
 		</UnitClassInfo>
@@ -8871,7 +8438,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_DAREN</Type>
 			<Description>TXT_KEY_UNIT_DAREN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_DAREN</DefaultUnit>
 		</UnitClassInfo>
@@ -8883,7 +8449,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_ZHUGE_KESHIK</Type>
 			<Description>TXT_KEY_UNIT_ZHUGE_KESHIK</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ZHUGE_KESHIK</DefaultUnit>
 		</UnitClassInfo>
@@ -8895,7 +8460,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_YAGHAN_HUNTERS</Type>
 			<Description>TXT_KEY_UNIT_YAGHAN_HUNTERS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_YAGHAN_HUNTERS</DefaultUnit>
 		</UnitClassInfo>
@@ -8907,7 +8471,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_RIMYURA_WARRIORS</Type>
 			<Description>TXT_KEY_UNIT_RIMYURA_WARRIORS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_RIMYURA_WARRIORS</DefaultUnit>
 		</UnitClassInfo>
@@ -8919,7 +8482,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_KARAWETARI</Type>
 			<Description>TXT_KEY_UNIT_KARAWETARI</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_KARAWETARI</DefaultUnit>
 		</UnitClassInfo>
@@ -8931,7 +8493,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_MBARZ_BALSYF</Type>
 			<Description>TXT_KEY_UNIT_MBARZ_BALSYF</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MBARZ_BALSYF</DefaultUnit>
 		</UnitClassInfo>
@@ -8943,7 +8504,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_YOLNGU_MESSENGER</Type>
 			<Description>TXT_KEY_UNIT_YOLNGU_MESSENGER</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_YOLNGU_MESSENGER</DefaultUnit>
 		</UnitClassInfo>
@@ -8955,7 +8515,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_SAMBUK</Type>
 			<Description>TXT_KEY_UNIT_SAMBUK</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SAMBUK</DefaultUnit>
 		</UnitClassInfo>
@@ -8967,7 +8526,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_BASHKIR_SHAMAN</Type>
 			<Description>TXT_KEY_UNIT_BASHKIR_SHAMAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BASHKIR_SHAMAN</DefaultUnit>
 		</UnitClassInfo>
@@ -8979,7 +8537,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_ZENU_GOLDSMITHS</Type>
 			<Description>TXT_KEY_UNIT_ZENU_GOLDSMITHS</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ZENU_GOLDSMITHS</DefaultUnit>
 		</UnitClassInfo>
@@ -8991,7 +8548,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_SHEBA_ELITES</Type>
 			<Description>TXT_KEY_UNIT_SHEBA_ELITES</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SHEBA_ELITES</DefaultUnit>
 		</UnitClassInfo>
@@ -9003,7 +8559,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_CIBOLA_PEASANT</Type>
 			<Description>TXT_KEY_UNIT_CIBOLA_PEASANT</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_CIBOLA_PEASANT</DefaultUnit>
 		</UnitClassInfo>
@@ -9015,7 +8570,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_CORNUTI</Type>
 			<Description>TXT_KEY_UNIT_CORNUTI</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_CORNUTI</DefaultUnit>
 		</UnitClassInfo>
@@ -9027,7 +8581,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_FOREST_GUARDIANS</Type>
 			<Description>TXT_KEY_UNIT_FOREST_GUARDIANS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_FOREST_GUARDIANS</DefaultUnit>
 		</UnitClassInfo>
@@ -9039,7 +8592,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_MARHATHEGNOZ</Type>
 			<Description>TXT_KEY_UNIT_MARHATHEGNOZ</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MARHATHEGNOZ</DefaultUnit>
 		</UnitClassInfo>
@@ -9051,7 +8603,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_MEHARISTS</Type>
 			<Description>TXT_KEY_UNIT_MEHARISTS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MEHARISTS</DefaultUnit>
 		</UnitClassInfo>
@@ -9063,7 +8614,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_MAHOGANY_WOODCUTTER</Type>
 			<Description>TXT_KEY_UNIT_MAHOGANY_WOODCUTTER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MAHOGANY_WOODCUTTER</DefaultUnit>
 		</UnitClassInfo>
@@ -9075,7 +8625,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_MUJAHIDEEN</Type>
 			<Description>TXT_KEY_UNIT_MUJAHIDEEN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MUJAHIDEEN</DefaultUnit>
 		</UnitClassInfo>
@@ -9087,7 +8636,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_DE_SUCRE_DRAGOONS</Type>
 			<Description>TXT_KEY_UNIT_DE_SUCRE_DRAGOONS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_DE_SUCRE_DRAGOONS</DefaultUnit>
 		</UnitClassInfo>
@@ -9099,7 +8647,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_PALADIN</Type>
 			<Description>TXT_KEY_UNIT_PALADIN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_PALADIN</DefaultUnit>
 		</UnitClassInfo>
@@ -9111,14 +8658,12 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_GAEROAS</Type>
 			<Description>TXT_KEY_UNIT_GAEROAS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_GAEROAS</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_BOYARS</Type>
 			<Description>TXT_KEY_UNIT_BOYARS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BOYARS</DefaultUnit>
 		</UnitClassInfo>
@@ -9130,7 +8675,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_GENOAN_MERCENARY</Type>
 			<Description>TXT_KEY_UNIT_GENOAN_MERCENARY</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_GENOAN_MERCENARY</DefaultUnit>
 		</UnitClassInfo>
@@ -9142,7 +8686,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_CABANAGEM_REBEL</Type>
 			<Description>TXT_KEY_UNIT_CABANAGEM_REBEL</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_CABANAGEM_REBEL</DefaultUnit>
 		</UnitClassInfo>
@@ -9154,7 +8697,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_CANARI_BOWMANS</Type>
 			<Description>TXT_KEY_UNIT_CANARI_BOWMANS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_CANARI_BOWMANS</DefaultUnit>
 		</UnitClassInfo>
@@ -9166,7 +8708,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_CAPAYAN_AXEMANS</Type>
 			<Description>TXT_KEY_UNIT_CAPAYAN_AXEMANS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_CAPAYAN_AXEMANS</DefaultUnit>
 		</UnitClassInfo>
@@ -9178,7 +8719,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_KON_TIKI</Type>
 			<Description>TXT_KEY_UNIT_KON_TIKI</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_KON_TIKI</DefaultUnit>
 		</UnitClassInfo>
@@ -9190,7 +8730,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_BALLESTER</Type>
 			<Description>TXT_KEY_UNIT_BALLESTER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BALLESTER</DefaultUnit>
 		</UnitClassInfo>
@@ -9202,7 +8741,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_AKSUM_MERCHANTS</Type>
 			<Description>TXT_KEY_UNIT_AKSUM_MERCHANTS</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_AKSUM_MERCHANTS</DefaultUnit>
 		</UnitClassInfo>
@@ -9214,7 +8752,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_BALEARIC_SLINGERS</Type>
 			<Description>TXT_KEY_UNIT_BALEARIC_SLINGERS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BALEARIC_SLINGERS</DefaultUnit>
 		</UnitClassInfo>
@@ -9226,7 +8763,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_WARRIORS_OF_THE_CLOUDS</Type>
 			<Description>TXT_KEY_UNIT_WARRIORS_OF_THE_CLOUDS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_WARRIORS_OF_THE_CLOUDS</DefaultUnit>
 		</UnitClassInfo>
@@ -9238,7 +8774,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_QHATUQ</Type>
 			<Description>TXT_KEY_UNIT_QHATUQ</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_QHATUQ</DefaultUnit>
 		</UnitClassInfo>
@@ -9250,7 +8785,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_GAZAVAT_WARRIORS</Type>
 			<Description>TXT_KEY_UNIT_GAZAVAT_WARRIORS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_GAZAVAT_WARRIORS</DefaultUnit>
 		</UnitClassInfo>
@@ -9262,7 +8796,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_CHILEAN_CORVETTE</Type>
 			<Description>TXT_KEY_UNIT_CHILEAN_CORVETTE</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_CHILEAN_CORVETTE</DefaultUnit>
 		</UnitClassInfo>
@@ -9274,7 +8807,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_YUPANQUI_BOWMAN</Type>
 			<Description>TXT_KEY_UNIT_YUPANQUI_BOWMAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_YUPANQUI_BOWMAN</DefaultUnit>
 		</UnitClassInfo>
@@ -9286,7 +8818,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_MIDEWIWIN</Type>
 			<Description>TXT_KEY_UNIT_MIDEWIWIN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MIDEWIWIN</DefaultUnit>
 		</UnitClassInfo>
@@ -9298,7 +8829,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_ASVARAN_SARDAR</Type>
 			<Description>TXT_KEY_UNIT_ASVARAN_SARDAR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ASVARAN_SARDAR</DefaultUnit>
 		</UnitClassInfo>
@@ -9310,7 +8840,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_BEAD_HUCKSTER</Type>
 			<Description>TXT_KEY_UNIT_BEAD_HUCKSTER</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BEAD_HUCKSTER</DefaultUnit>
 		</UnitClassInfo>
@@ -9322,7 +8851,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_SEARCH_BLOC</Type>
 			<Description>TXT_KEY_UNIT_SEARCH_BLOC</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SEARCH_BLOC</DefaultUnit>
 		</UnitClassInfo>
@@ -9334,7 +8862,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_PATAGONIAN_ARCHER</Type>
 			<Description>TXT_KEY_UNIT_PATAGONIAN_ARCHER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_PATAGONIAN_ARCHER</DefaultUnit>
 		</UnitClassInfo>
@@ -9346,7 +8873,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_SAMOSTRELAC</Type>
 			<Description>TXT_KEY_UNIT_SAMOSTRELAC</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SAMOSTRELAC</DefaultUnit>
 		</UnitClassInfo>
@@ -9358,7 +8884,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_VOZOVA_HRADBA</Type>
 			<Description>TXT_KEY_UNIT_VOZOVA_HRADBA</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_VOZOVA_HRADBA</DefaultUnit>
 		</UnitClassInfo>
@@ -9370,7 +8895,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_FALXMEN</Type>
 			<Description>TXT_KEY_UNIT_FALXMEN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_FALXMEN</DefaultUnit>
 		</UnitClassInfo>
@@ -9382,7 +8906,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_NGAYAU</Type>
 			<Description>TXT_KEY_UNIT_NGAYAU</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_NGAYAU</DefaultUnit>
 		</UnitClassInfo>
@@ -9394,7 +8917,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_KALARIPAYATT</Type>
 			<Description>TXT_KEY_UNIT_KALARIPAYATT</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_KALARIPAYATT</DefaultUnit>
 		</UnitClassInfo>
@@ -9406,7 +8928,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_OILAT_KESHIK</Type>
 			<Description>TXT_KEY_UNIT_OILAT_KESHIK</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_OILAT_KESHIK</DefaultUnit>
 		</UnitClassInfo>
@@ -9418,7 +8939,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_IWIA_BATTALION</Type>
 			<Description>TXT_KEY_UNIT_IWIA_BATTALION</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_IWIA_BATTALION</DefaultUnit>
 		</UnitClassInfo>
@@ -9430,7 +8950,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_ERNA</Type>
 			<Description>TXT_KEY_UNIT_ERNA</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ERNA</DefaultUnit>
 		</UnitClassInfo>
@@ -9442,7 +8961,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_HOPLOMACHUS</Type>
 			<Description>TXT_KEY_UNIT_HOPLOMACHUS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_HOPLOMACHUS</DefaultUnit>
 		</UnitClassInfo>
@@ -9454,7 +8972,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_KUTAMA_INFANTRY</Type>
 			<Description>TXT_KEY_UNIT_KUTAMA_INFANTRY</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_KUTAMA_INFANTRY</DefaultUnit>
 		</UnitClassInfo>
@@ -9466,7 +8983,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_FYRDMAN</Type>
 			<Description>TXT_KEY_UNIT_FYRDMAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_FYRDMAN</DefaultUnit>
 		</UnitClassInfo>
@@ -9478,7 +8994,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_GONE_DAU</Type>
 			<Description>TXT_KEY_UNIT_GONE_DAU</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_GONE_DAU</DefaultUnit>
 		</UnitClassInfo>
@@ -9490,7 +9005,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_TARKKA_AMPUJA</Type>
 			<Description>TXT_KEY_UNIT_TARKKA_AMPUJA</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TARKKA_AMPUJA</DefaultUnit>
 		</UnitClassInfo>
@@ -9502,7 +9016,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_BRABANT_MERCENARIES</Type>
 			<Description>TXT_KEY_UNIT_BRABANT_MERCENARIES</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BRABANT_MERCENARIES</DefaultUnit>
 		</UnitClassInfo>
@@ -9514,7 +9027,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_SEAL_HUNTER</Type>
 			<Description>TXT_KEY_UNIT_SEAL_HUNTER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SEAL_HUNTER</DefaultUnit>
 		</UnitClassInfo>
@@ -9526,7 +9038,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_FURAWI_TECHNICAL</Type>
 			<Description>TXT_KEY_UNIT_FURAWI_TECHNICAL</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_FURAWI_TECHNICAL</DefaultUnit>
 		</UnitClassInfo>
@@ -9538,7 +9049,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_SOTAROAS</Type>
 			<Description>TXT_KEY_UNIT_SOTAROAS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SOTAROAS</DefaultUnit>
 		</UnitClassInfo>
@@ -9550,7 +9060,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_GAUCHO_CAVALRY</Type>
 			<Description>TXT_KEY_UNIT_GAUCHO_CAVALRY</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_GAUCHO_CAVALRY</DefaultUnit>
 		</UnitClassInfo>
@@ -9562,7 +9071,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_MONASPA_GUARD</Type>
 			<Description>TXT_KEY_UNIT_MONASPA_GUARD</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MONASPA_GUARD</DefaultUnit>
 		</UnitClassInfo>
@@ -9574,7 +9082,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_SONINKE_SWORDSMAN</Type>
 			<Description>TXT_KEY_UNIT_SONINKE_SWORDSMAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SONINKE_SWORDSMAN</DefaultUnit>
 		</UnitClassInfo>
@@ -9586,7 +9093,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_KETABDAR</Type>
 			<Description>TXT_KEY_UNIT_KETABDAR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_KETABDAR</DefaultUnit>
 		</UnitClassInfo>
@@ -9598,7 +9104,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_ALBANIAN_JANISSARY</Type>
 			<Description>TXT_KEY_UNIT_ALBANIAN_JANISSARY</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ALBANIAN_JANISSARY</DefaultUnit>
 		</UnitClassInfo>
@@ -9610,7 +9115,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_CHAPUL</Type>
 			<Description>TXT_KEY_UNIT_CHAPUL</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_CHAPUL</DefaultUnit>
 		</UnitClassInfo>
@@ -9622,7 +9126,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_ASHINA_ELITE</Type>
 			<Description>TXT_KEY_UNIT_ASHINA_ELITE</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ASHINA_ELITE</DefaultUnit>
 		</UnitClassInfo>
@@ -9634,7 +9137,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_KALANG_MATAI</Type>
 			<Description>TXT_KEY_UNIT_KALANG_MATAI</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_KALANG_MATAI</DefaultUnit>
 		</UnitClassInfo>
@@ -9646,7 +9148,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_MADEIRA_AXEMAN</Type>
 			<Description>TXT_KEY_UNIT_MADEIRA_AXEMAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MADEIRA_AXEMAN</DefaultUnit>
 		</UnitClassInfo>
@@ -9658,7 +9159,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_KARAI_PYHARE</Type>
 			<Description>TXT_KEY_UNIT_KARAI_PYHARE</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_KARAI_PYHARE</DefaultUnit>
 		</UnitClassInfo>
@@ -9670,7 +9170,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_ALVARADO_CAVALRY</Type>
 			<Description>TXT_KEY_UNIT_ALVARADO_CAVALRY</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ALVARADO_CAVALRY</DefaultUnit>
 		</UnitClassInfo>
@@ -9682,7 +9181,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_SUGAR_CLIPPER</Type>
 			<Description>TXT_KEY_UNIT_SUGAR_CLIPPER</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SUGAR_CLIPPER</DefaultUnit>
 		</UnitClassInfo>
@@ -9694,7 +9192,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_TIGURINI_SCOUTS</Type>
 			<Description>TXT_KEY_UNIT_TIGURINI_SCOUTS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TIGURINI_SCOUTS</DefaultUnit>
 		</UnitClassInfo>
@@ -9706,7 +9203,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_HEMUDU_HUNTERS</Type>
 			<Description>TXT_KEY_UNIT_HEMUDU_HUNTERS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_HEMUDU_HUNTERS</DefaultUnit>
 		</UnitClassInfo>
@@ -9718,7 +9214,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_MYRH_CARAVAN</Type>
 			<Description>TXT_KEY_UNIT_MYRH_CARAVAN</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MYRH_CARAVAN</DefaultUnit>
 		</UnitClassInfo>
@@ -9730,7 +9225,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_RAZZIA_PIRATES</Type>
 			<Description>TXT_KEY_UNIT_RAZZIA_PIRATES</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_RAZZIA_PIRATES</DefaultUnit>
 		</UnitClassInfo>
@@ -9742,7 +9236,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_TRADE_JUNK</Type>
 			<Description>TXT_KEY_UNIT_TRADE_JUNK</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TRADE_JUNK</DefaultUnit>
 		</UnitClassInfo>
@@ -9754,7 +9247,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_COPENA_MERCHANT</Type>
 			<Description>TXT_KEY_UNIT_COPENA_MERCHANT</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_COPENA_MERCHANT</DefaultUnit>
 		</UnitClassInfo>
@@ -9766,7 +9258,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_PUEBLO_REBEL</Type>
 			<Description>TXT_KEY_UNIT_PUEBLO_REBEL</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_PUEBLO_REBEL</DefaultUnit>
 		</UnitClassInfo>
@@ -9778,7 +9269,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_BALAMOB_SLINGER</Type>
 			<Description>TXT_KEY_UNIT_BALAMOB_SLINGER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BALAMOB_SLINGER</DefaultUnit>
 		</UnitClassInfo>
@@ -9790,7 +9280,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_TESHUB_PRIEST</Type>
 			<Description>TXT_KEY_UNIT_TESHUB_PRIEST</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TESHUB_PRIEST</DefaultUnit>
 		</UnitClassInfo>
@@ -9802,7 +9291,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_HYKSOSI_CHARIOT</Type>
 			<Description>TXT_KEY_UNIT_HYKSOSI_CHARIOT</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_HYKSOSI_CHARIOT</DefaultUnit>
 		</UnitClassInfo>
@@ -9814,7 +9302,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_LIBURNA</Type>
 			<Description>TXT_KEY_UNIT_LIBURNA</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_LIBURNA</DefaultUnit>
 		</UnitClassInfo>
@@ -9826,7 +9313,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_BILOG</Type>
 			<Description>TXT_KEY_UNIT_BILOG</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BILOG</DefaultUnit>
 		</UnitClassInfo>
@@ -9838,7 +9324,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_HARAPPA_WATCHER</Type>
 			<Description>TXT_KEY_UNIT_HARAPPA_WATCHER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_HARAPPA_WATCHER</DefaultUnit>
 		</UnitClassInfo>
@@ -9850,7 +9335,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_PASDARAN</Type>
 			<Description>TXT_KEY_UNIT_PASDARAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_PASDARAN</DefaultUnit>
 		</UnitClassInfo>
@@ -9862,7 +9346,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_PANGCAH_IMPANTERYA</Type>
 			<Description>TXT_KEY_UNIT_PANGCAH_IMPANTERYA</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_PANGCAH_IMPANTERYA</DefaultUnit>
 		</UnitClassInfo>
@@ -9874,7 +9357,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_REPUBLICAN_GUARD</Type>
 			<Description>TXT_KEY_UNIT_REPUBLICAN_GUARD</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_REPUBLICAN_GUARD</DefaultUnit>
 		</UnitClassInfo>
@@ -9886,7 +9368,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_TARUMA_WARRIOR</Type>
 			<Description>TXT_KEY_UNIT_TARUMA_WARRIOR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TARUMA_WARRIOR</DefaultUnit>
 		</UnitClassInfo>
@@ -9898,7 +9379,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_JOMON_HUNTING_DOGS</Type>
 			<Description>TXT_KEY_UNIT_JOMON_HUNTING_DOGS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_JOMON_HUNTING_DOGS</DefaultUnit>
 		</UnitClassInfo>
@@ -9910,7 +9390,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_ROYAL_SPECIAL_FORCES</Type>
 			<Description>TXT_KEY_UNIT_ROYAL_SPECIAL_FORCES</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ROYAL_SPECIAL_FORCES</DefaultUnit>
 		</UnitClassInfo>
@@ -9927,7 +9406,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_KNARR</Type>
 			<Description>TXT_KEY_UNIT_KNARR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_KNARR</DefaultUnit>
 		</UnitClassInfo>
@@ -9939,7 +9417,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_TSAVO_HUNTERS</Type>
 			<Description>TXT_KEY_UNIT_TSAVO_HUNTERS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TSAVO_HUNTERS</DefaultUnit>
 		</UnitClassInfo>
@@ -9951,7 +9428,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_BATYRS</Type>
 			<Description>TXT_KEY_UNIT_BATYRS</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BATYRS</DefaultUnit>
 		</UnitClassInfo>
@@ -9963,7 +9439,6 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_MOBILE_TREBUCHET</Type>
 			<Description>TXT_KEY_UNIT_MOBILE_TREBUCHET</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MOBILE_TREBUCHET</DefaultUnit>
 		</UnitClassInfo>
@@ -9975,14 +9450,12 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_KHITAN_INFANTRY</Type>
 			<Description>TXT_KEY_UNIT_KHITAN_INFANTRY</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<DefaultUnit>UNIT_KHITAN_INFANTRY</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_HASHISHIN</Type>
 			<Description>TXT_KEY_UNIT_HASHISHIN</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_HASHISHIN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>

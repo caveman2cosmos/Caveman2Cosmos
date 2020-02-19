@@ -1,12 +1,10 @@
 <?xml version="1.0"?>
-	<!-- Created with Notepad by strategyonly -->
-	<!-- Assets\Modules\Alt_Timelines\MegaFauna\Giraffe_Archer\GiraffeArcher_CIV4UnitInfos.xml -->
-	<!-- ###################################################################################### -->
 <Civ4UnitInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
 			<Class>UNITCLASS_GIRAFFE_ARCHER</Class>
 			<Type>UNIT_GIRAFFE_ARCHER</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -137,6 +135,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_GIRAFFE_CROSSBOW</Class>
 			<Type>UNIT_GIRAFFE_CROSSBOW</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -299,6 +298,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_GIRAFFE_CUIRASSIER</Class>
 			<Type>UNIT_GIRAFFE_CUIRASSIER</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -490,6 +490,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_GIRAFFE_CARABINIER</Class>
 			<Type>UNIT_GIRAFFE_CARABINIER</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -677,6 +678,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_GIRAFFE_DRAGOON</Class>
 			<Type>UNIT_GIRAFFE_DRAGOON</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -835,6 +837,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_GIRAFFE_CAVALRY</Class>
 			<Type>UNIT_GIRAFFE_CAVALRY</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -1026,6 +1029,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_GIRAFFE_TRENCH_CAVALRY</Class>
 			<Type>UNIT_GIRAFFE_TRENCH_CAVALRY</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -1229,6 +1233,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_URBAN_GIRAFFEMAN</Class>
 			<Type>UNIT_URBAN_GIRAFFEMAN</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
