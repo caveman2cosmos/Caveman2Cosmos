@@ -15636,8 +15636,8 @@
 			<LeaderPromotion>PROMOTION_LEADER</LeaderPromotion>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_LEGEND_SPARTAN</Class>
-			<Type>UNIT_LEGEND_SPARTAN</Type>
+			<Class>UNITCLASS_LEONIDAS</Class>
+			<Type>UNIT_LEONIDAS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>

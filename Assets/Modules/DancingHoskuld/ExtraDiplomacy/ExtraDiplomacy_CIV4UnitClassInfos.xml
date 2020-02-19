@@ -30,11 +30,6 @@
 			<DefaultUnit>UNIT_DIPLOMAT_MODERN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
-			<Type>UNITCLASS_DIPLOMAT_GALACTIC</Type>
-			<Description>TXT_KEY_UNIT_DIPLOMAT_GALACTIC</Description>
-			<DefaultUnit>UNIT_DIPLOMAT_GALACTIC</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
 			<Type>UNITCLASS_GREAT_STATESMAN</Type>
 			<Description>TXT_KEY_UNIT_GREAT_STATESMAN</Description>
 			<DefaultUnit>UNIT_GREAT_STATESMAN</DefaultUnit>

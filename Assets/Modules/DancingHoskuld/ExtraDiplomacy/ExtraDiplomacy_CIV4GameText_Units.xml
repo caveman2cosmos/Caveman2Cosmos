@@ -60,17 +60,6 @@
 		<Polish>Dyplomata - Współczesność</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DIPLOMAT_GALACTIC</Tag>
-		<English>Diplomat - Galactic Era</English>
-		<French>Diplomate - Ere Galactique</French>
-		<Italian>
-			<Text>Diplomatico - Era galattica</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Dyplomata - Era Galaktyczna</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_UNIT_GREAT_STATESMAN</Tag>
 		<English>Great Statesman</English>
 		<French>Homme d'Etat Illustre</French>
