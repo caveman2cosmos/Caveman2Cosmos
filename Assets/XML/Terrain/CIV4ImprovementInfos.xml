@@ -11451,7 +11451,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_STONE_TOOLS_WORKSHOP</Type>
 			<Description>TXT_KEY_IMPROVEMENT_STONE_TOOLS_WORKSHOP</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_MINE_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_STONE_TOOLS_WORKSHOP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_STONE_TOOLS_WORKSHOP</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
