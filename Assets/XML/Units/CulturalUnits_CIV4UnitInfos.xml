@@ -49007,7 +49007,7 @@
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_HORSE_TRAINER</PrereqBuilding>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
-			<BonusType>BONUS_GOLD_OREEN_HORDE</BonusType>
+			<BonusType>BONUS_GOLDEN_HORDE</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>

@@ -8489,7 +8489,7 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_CULTURE_GOLDEN_HORDE</Type>
 			<Description>TXT_KEY_UNITCOMBAT_CULTURE_GOLDEN_HORDE</Description>
-			<CultureType>BONUS_GOLD_OREEN_HORDE</CultureType>
+			<CultureType>BONUS_GOLDEN_HORDE</CultureType>
 			<Button>Art/categories/culture_newcultures.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>

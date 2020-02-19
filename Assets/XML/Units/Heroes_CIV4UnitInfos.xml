@@ -45149,7 +45149,7 @@
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
-			<BonusType>BONUS_GOLD_OREEN_HORDE</BonusType>
+			<BonusType>BONUS_GOLDEN_HORDE</BonusType>
 			<iCost>1750</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
