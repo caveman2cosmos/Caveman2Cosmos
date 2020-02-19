@@ -29513,24 +29513,17 @@ void CvGameTextMgr::buildFreeUnitString(CvWStringBuffer &szBuffer, TechTypes eTe
 	{
 		eFreeUnit = GET_PLAYER(GC.getGame().getActivePlayer()).getTechFreeUnit(eTech);
 	}
-	else
+	else if (GC.getTechInfo(eTech).getFirstFreeUnit() != NO_UNIT)
 	{
-		if (GC.getTechInfo(eTech).getFirstFreeUnitClass() != NO_UNITCLASS)
-		{
-			eFreeUnit = (UnitTypes)GC.getUnitClassInfo((UnitClassTypes)GC.getTechInfo(eTech).getFirstFreeUnitClass()).getDefaultUnitIndex();
-		}
+		eFreeUnit = (UnitTypes)GC.getTechInfo(eTech).getFirstFreeUnit();
 	}
-
-	if (eFreeUnit != NO_UNIT)
+	if (eFreeUnit != NO_UNIT && (!bPlayerContext || GC.getGame().countKnownTechNumTeams(eTech) == 0))
 	{
-		if (!bPlayerContext || (GC.getGame().countKnownTechNumTeams(eTech) == 0))
+		if (bList)
 		{
-			if (bList)
-			{
-				szBuffer.append(NEWLINE);
-			}
-			szBuffer.append(gDLL->getText("TXT_KEY_TECH_FIRST_RECEIVES", CvWString(GC.getUnitInfo(eFreeUnit).getType()).GetCString(), GC.getUnitInfo(eFreeUnit).getTextKeyWide()));
+			szBuffer.append(NEWLINE);
 		}
+		szBuffer.append(gDLL->getText("TXT_KEY_TECH_FIRST_RECEIVES", CvWString(GC.getUnitInfo(eFreeUnit).getType()).GetCString(), GC.getUnitInfo(eFreeUnit).getTextKeyWide()));
 	}
 }
 
