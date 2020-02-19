@@ -1303,7 +1303,6 @@
 <!-- 		don't use dependencies on this file please!		-->
 <!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
-		<element type="iMaxPlayerInstances" minOccurs="0"/>
 		<!--TB Unlimited Mod begin-->
 		<element type="bUnlimitedException" minOccurs="0"/>
 		<!--TB Unlimited Mod end-->
@@ -1905,6 +1904,7 @@
 		<element type="Class" minOccurs="0"/>
 		<element type="Type" minOccurs="0"/>
 		<element type="iMaxGlobalInstances" minOccurs="0"/>
+		<element type="iMaxPlayerInstances" minOccurs="0"/>
 		<element type="Description" minOccurs="0"/>
 		<element type="Civilopedia" minOccurs="0"/>
 		<element type="Strategy" minOccurs="0"/>
