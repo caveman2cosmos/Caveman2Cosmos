@@ -409,7 +409,7 @@ public:
 	int getNumCitiesMaintenanceModifier() const;
 	int getCoastalDistanceMaintenanceModifier() const;
 	//DPII < Maintenance Modifier >
-	int getFirstFreeUnitClass() const;			// Exposed to Python
+	int getFirstFreeUnit() const;				// Exposed to Python
 	int getFirstFreeProphet() const;			// Exposed to Python
 	int getHealth() const;						// Exposed to Python
 	int getHappiness() const;					// Exposed to Python
@@ -440,11 +440,6 @@ public:
 	bool isWaterWork() const;					// Exposed to Python
 	bool isRiverTrade() const;					// Exposed to Python
 
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	bool isCanPassPeaks() const;
 	bool isMoveFastPeaks() const;
 	bool isCanFoundOnPeaks() const;
@@ -492,17 +487,10 @@ public:
 	int getOriginalPrereqOrTechs(int i) const;
 	int getOriginalPrereqAndTechs(int i) const;
 	int getUnitClassStrengthChange(int iUnit, bool bForLoad = false) const;
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 	//TB Tech Tags
 	bool isGlobal() const;
 	//TB Tech Tags end
 
-
-/************************************************************************************************/
-/* DCM									 04/19/09								Johny Smith  */
-/************************************************************************************************/
 	// Dale - AB: Bombing START
 	bool getDCMAirBombTech1() const;
 	bool getDCMAirBombTech2() const;
@@ -511,9 +499,7 @@ protected:
 	bool m_bDCMAirBombTech2;
 public:
 	// Dale - AB: Bombing END
-/************************************************************************************************/
-/* DCM									 END												  */
-/************************************************************************************************/
+
 	std::wstring getQuote() const;				// Exposed to Python
 	void setQuoteKey(const TCHAR* szVal);
 	const TCHAR* getQuoteKey() const;
@@ -566,7 +552,7 @@ protected:
 	int m_iNumCitiesMaintenanceModifier;
 	int m_iCoastalDistanceMaintenanceModifier;
 	//DPII < Maintenance Modifier >
-	int m_iFirstFreeUnitClass;
+	int m_iFirstFreeUnit;
 	int m_iFirstFreeProphet;
 	int m_iHealth;
 	int m_iHappiness;
@@ -614,11 +600,6 @@ protected:
 	//ls612: Tech Commerce Modifiers
 	int* m_piCommerceModifier;
 
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	//TB Tech Tags
 	bool m_bGlobal;
 	//TB Tech Tags end
@@ -654,9 +635,6 @@ protected:
 	//int* m_paiPrereqOrBuildingClass;
 	//std::vector<CvString> m_aszPrereqOrBuildingClassforPass3;
 	//std::vector<int> m_aiPrereqOrBuildingClassforPass3;
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
