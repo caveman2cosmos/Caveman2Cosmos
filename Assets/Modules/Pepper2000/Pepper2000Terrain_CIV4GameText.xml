@@ -170,14 +170,6 @@
 		<English>The surface of a Kuiper Belt Object, such as Pluto</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_SOLAR_SYSTEM</Tag>
-		<English>Solar System</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_SOLAR_SYSTEM_PEDIA</Tag>
-		<English>The Solar System, but not on or in orbit around any planet.</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_SUN</Tag>
 		<English>Sun</English>
 	</TEXT>
@@ -208,14 +200,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_TRANSNEPTUNIAN_SPACE_PEDIA</Tag>
 		<English>The Solar System, beyond the orbit of Neptune.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_OORT_CLOUD</Tag>
-		<English>Oort Cloud</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_OORT_CLOUD_PEDIA</Tag>
-		<English>The Oort Cloud</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_TRANSTELLAR_SPACE</Tag>
