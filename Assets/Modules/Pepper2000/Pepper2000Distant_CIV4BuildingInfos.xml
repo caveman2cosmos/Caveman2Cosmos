@@ -781,7 +781,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PARANORMAL_BRANESPACE_TOPOLOGY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_TRUTH_MANIPULATION</PrereqTech>
+			<PrereqTech>TECH_REALITY_REPROGRAMMING</PrereqTech>
 			<iCost>3423</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -901,7 +901,7 @@
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_TRUTH_MANIPULATION</PrereqTech>
+					<PrereqTech>TECH_REALITY_REPROGRAMMING</PrereqTech>
 					<TechCommerce>
 						<iCommerce>10</iCommerce>
 					</TechCommerce>
@@ -1276,12 +1276,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_DISTANT</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqOrTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-			</PrereqOrTerrain>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -1415,7 +1409,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<bPrereqPower>1</bPrereqPower>
+			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_BASILISK</BuildingClass>
@@ -1582,12 +1576,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_DISTANT</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqOrTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-			</PrereqOrTerrain>
 			<CommerceChanges>
 				<iCommerce>100</iCommerce>
 			</CommerceChanges>

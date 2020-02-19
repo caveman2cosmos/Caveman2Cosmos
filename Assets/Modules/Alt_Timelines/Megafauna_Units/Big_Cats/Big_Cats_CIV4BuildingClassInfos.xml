@@ -9,32 +9,21 @@
 			<Type>BUILDINGCLASS_BIG_CAT_TRAINER</Type>
 			<Description>TXT_KEY_BUILDING_BIG_CAT_TRAINER</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_BIG_CAT_TRAINER</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BIG_CAT_TRAINER_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_BIG_CAT_TRAINER_EFFECT</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_BIG_CAT_TRAINER_EFFECT</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_ANIMAL_TOTEM_CATS</Type>
 			<Description>TXT_KEY_BUILDING_ANIMAL_TOTEM_CATS</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_ANIMAL_TOTEM_CATS</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_POLICE_CAT</Type>
 			<Description>TXT_KEY_BUILDING_POLICE_CAT</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_POLICE_CAT</DefaultBuilding>
 		</BuildingClassInfo>
 	</BuildingClassInfos>

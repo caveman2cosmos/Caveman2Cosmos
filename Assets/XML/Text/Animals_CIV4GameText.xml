@@ -230,7 +230,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ARCTICFOX_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth/Story/Stories - Arctic Fox, Myth - Dogs, Wolf Cage and Enclosure, Fox Traps and Fur Farm</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires -  Renard arctique[NEWLINE][ICON_BULLET]Myth of Dogs[NEWLINE][ICON_BULLET]Wolf Cage and Enclosure[NEWLINE][ICON_BULLET]Fox Traps and Fur Farm</French>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Renard arctique, Chiens, Cages et enclos de loup, pièges à renard et fourrures</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARCTICFOX_MYTH</Tag>
@@ -270,11 +270,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DHOLE_PEDIA</Tag>
 		<English>The dhole (Cuon alpinus), also called the Asiatic wild dog or Indian wild dog, is a species of canid native to South and Southeast Asia. It is the only extant member of the genus Cuon, which differs from Canis by the reduced number of molars and greater number of teats. The dholes are classed as endangered by the IUCN, due to ongoing habitat loss, depletion of its prey base, competition from other predators, persecution and possibly diseases from domestic and feral dogs.[PARAGRAPH:2]The dhole is a highly social animal, living in large clans which occasionally split up into small packs to hunt. It primarily preys on medium-sized ungulates, which it hunts by tiring them out in long chases, and kills by disemboweling them. Unlike most social canids (but similar to African wild dogs), dholes let their pups eat first at a kill. Though fearful of humans, dhole packs are bold enough to attack large and dangerous animals such as wild boar, water buffalo, and even tigers.[PARAGRAPH:2]Source: Wikipedia.</English>
+		<French>Le Cuon d'Asie, ou dhole (Cuon alpinus), également appelé chien sauvage d'Asie ou chien sauvage indien, est une espèce de canidé originaire d'Asie du Sud et du Sud-Est. C'est le seul membre existant du genre Cuon, qui diffère de Canis par le nombre réduit de molaires et le plus grand nombre de tétines. Les dholes sont classés comme en voie de disparition par l'UICN, en raison de la perte continue de l'habitat, de l'épuisement de sa base de proies, de la concurrence d'autres prédateurs, de la persécution et éventuellement des maladies des chiens domestiques et sauvages. [PARAGRAPH:2] Le dhole est un animal très social, vivant en grands clans qui se séparent parfois en petits groupes pour chasser. Il se nourrit principalement d'ongulés de taille moyenne, qu'il chasse en les fatiguant lors de longues poursuites, et tue en les éventrant. Contrairement à la plupart des canidés sociaux (mais similaires aux chiens sauvages africains), les dholes laissent leurs chiots manger en premier lors d'une mise à mort. Bien qu'ils aient peur des humains, les dholes packs sont assez audacieux pour attaquer des animaux grands et dangereux tels que le sanglier, le buffle d'eau et même les tigres. [PARAGRAPH:2] Source: Wikipedia.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DHOLE_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Dhole, Myth of Canines, Wolf Cage and Enclosure</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires -  Cuon d'Asie[NEWLINE][ICON_BULLET]Myth of Canines[NEWLINE][ICON_BULLET]Wolf Cage and Enclosure</French>
+		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires du cuons et de Canins, Cage et Enclos à Loup</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DHOLE_MYTH</Tag>
@@ -304,10 +305,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DINGO</Tag>
 		<English>Dingo</English>
+		<French>Dingo</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DINGO_PEDIA</Tag>
 		<English>The dingo (Canis lupus dingo) is a free-ranging dog found mainly in Australia, as well as Southeast Asia, where it is said to have originated. It is currently classified as a subspecies of the gray wolf, Canis lupus.[PARAGRAPH:2]The dingo's habitat ranges from deserts to grasslands and the edges of forests. Dingoes will normally make their dens in deserted rabbit holes and hollow logs close to an essential supply of water.[PARAGRAPH:2]The dingo is the largest terrestrial predator in Australia, and plays an important role as an apex predator. However, the dingo is seen as a pest by livestock farmers due to attacks on animals. Conversely, their predation on rabbits, kangaroos and rats may be of benefit to graziers.[PARAGRAPH:2]For many Australians, the dingo is a cultural icon. There is fear of the species becoming extinct. The dingo is seen by many as being responsible for thylacine extinction on the Australian mainland about two thousand years ago, although a recent study challenges this view. Dingoes have a prominent role in the culture of Aboriginal Australians as a feature of stories and ceremonies, and they are depicted on rock carvings and cave paintings.[PARAGRAPH:2]Source: Wikipedia[PARAGRAPH:2]Note: Not the same as the American Dingo from Southeastern USA.</English>
+		<French>Le dingo (Canis lupus dingo) est un chien en liberté qui se trouve principalement en Australie, ainsi qu'en Asie du Sud-Est, où il serait originaire. Il est actuellement classé comme une sous-espèce du loup gris, Canis lupus. [PARAGRAPH:2] L'habitat du dingo s'étend des déserts aux prairies et aux lisières des forêts. Les dingos font normalement leurs tanières dans des trous de lapins déserts et des rondins creux à proximité d'un approvisionnement essentiel en eau. [PARAGRAPH:2] Le dingo est le plus grand prédateur terrestre d'Australie et joue un rôle important en tant que prédateur au sommet. Cependant, le dingo est considéré comme un ravageur par les éleveurs en raison d'attaques contre les animaux. Inversement, leur prédation sur les lapins, les kangourous et les rats peut être bénéfique pour les brouteurs. [PARAGRAPH:2] Pour de nombreux Australiens, le dingo est une icône culturelle. On craint que l'espèce ne disparaisse. Le dingo est considéré par beaucoup comme responsable de l'extinction de la thylacine sur le continent australien il y a environ deux mille ans, bien qu'une étude récente remette en question ce point de vue. Les dingos jouent un rôle de premier plan dans la culture des aborigènes d'Australie en tant qu'histoires et cérémonies, et ils sont représentés sur des gravures rupestres et des peintures rupestres.[PARAGRAPH:2]Source: Wikipedia[PARAGRAPH:2]Note: Not the same as the American Dingo from Southeastern USA.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DINGO</Tag>
@@ -317,7 +320,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DINGO_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Dingo, Dog Breeder, Kennels, Wolf Cage and Enclosure</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires -  Dingo[NEWLINE][ICON_BULLET]Dog Breeder and Kennels[NEWLINE][ICON_BULLET]Wolf Cage and Enclosure</French>
+		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires du Dingo , Eleveur de chiens et Chenils, Cage et Enclos à loup</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DINGO_MYTH</Tag>
@@ -357,11 +360,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EWOLF_PEDIA</Tag>
 		<English>Common names - Ethiopian wolf, Abyssinian wolf, Simien fox, Simien jackal, ky kebero (red jackal in Amharic), jeedala fardaa (horse's jackal in Afan Oromo)[PARAGRAPH:2]Morphology - Long legs and long muzzle; distinctive bright tawny rufous coat with black and white marks; mean mass ~16 kg[PARAGRAPH:2]Habitat - Very localized endemic species, confined to Afroalpine grasslands and heathlands above 3,000m in Ethiopia[PARAGRAPH:2]Foraging behaviour - Solitary, diurnal foragers of small mammals, mainly Afroalpine rodents[PARAGRAPH:2]Social organization - Discrete and cohesive family groups, with strong hierarchies, which cooperate to breed and defend the packs territory[PARAGRAPH:2]Mortality - Typically long-lived, but vulnerable to canid-related viruses such as rabies[PARAGRAPH:2]Source: http://www.ethiopianwolf.org</English>
+		<French>Noms communs - loup éthiopien, loup abyssin, renard Simien, chacal Simien, ky kebero (chacal rouge en amharique), jeedala fardaa (chacal de cheval à Afan Oromo) [PARAGRAPH:2] Morphologie - jambes longues et museau long; manteau roux fauve brillant distinctif avec des marques noires et blanches; masse moyenne ~ 16 kg [PARAGRAPH:2] Habitat - Espèces endémiques très localisées, confinées aux prairies et aux landes afroalpines au-dessus de 3 000 m en Éthiopie [PARAGRAPH:2] Comportement de recherche de nourriture - butineuses diurnes solitaires des petits mammifères, principalement des rongeurs afroalpins [PARAGRAPH:2] Organisation sociale - Groupes familiaux discrets et cohésifs, avec de fortes hiérarchies, qui coopèrent pour élever et défendre le territoire des meutes [PARAGRAPH:2] Mortalité - Typiquement longue durée de vie, mais vulnérable aux virus liés aux canidés tels que la rage[PARAGRAPH:2]Source: http://www.ethiopianwolf.org</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_EWOLF_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Ethiopian Wolf and  Wolves, Wolf Cage and Enclosure</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires -  Loup Ethiopien[NEWLINE][ICON_BULLET]Myths of Wolves[NEWLINE][ICON_BULLET]Wolf Cage and Enclosure</French>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Loup Ethiopien, Mythe des Loups, Cage et Enclos à loup</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EWOLF_MYTH</Tag>
@@ -396,6 +400,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FENNECFOX_PEDIA</Tag>
 		<English>The fennec fox or fennec (Vulpes zerda) is a small nocturnal fox found in the Sahara of North Africa. Its most distinctive feature is its unusually large ears, which also serve to dissipate heat. Its name comes from the Arabic word (fanak), which means fox, and the species name zerda comes from the Greek word xeros which means dry, referring to the fox's habitat. The fennec is the smallest species of canid in the world. Its coat, ears, and kidney functions have adapted to high-temperature, low-water, desert environments. In addition, its hearing is sensitive enough to hear prey moving underground. It mainly eats insects, small mammals, and birds.[PARAGRAPH:2]The fennec has a life span of up to 14 years in captivity. Its main predators are the African varieties of eagle owl. Families of fennecs dig out dens in sand for habitation and protection, which can be as large as 120 m2 (1,292 sq ft) and adjoin the dens of other families. Precise population figures are not known but are estimated from the frequency of sightings; these indicate that the animal is currently not threatened by extinction. Knowledge of social interactions is limited to information gathered from captive animals. The species is usually assigned to the genus Vulpes; however, this is debated due to differences between the fennec fox and other fox species. The fennec's fur is prized by the indigenous peoples of North Africa, and in some parts of the world, the animal is considered an exotic pet.[PARAGRAPH:2]Description: The fennec fox weighs about 1.53.5 lb (0.681.59 kg), with a body length of between 2441 cm (916 in); it is around 20.3 cm (8 in) tall. It is the smallest species of canid in the world. The tail has a black tip and is 1831 cm (712 in) long, while the ears can be between 1015 cm (3.95.9 in) long.[PARAGRAPH:2]The coat is often a cream color and fluffy, which deflects heat during the day and keeps the fox warm at night. The fennec's characteristic ears are the largest among all foxes relative to body size, and serve to dissipate heat, as they have many blood vessels close to the skin. The ears of a fennec are sensitive enough to hear prey that may be underground; the soles of its feet are protected from the hot desert sand by thick fur.[PARAGRAPH:2]Source: Wikipedia</English>
+		<French>Le renard fennec ou fennec (Vulpes zerda) est un petit renard nocturne trouvé dans le Sahara de l'Afrique du Nord. Sa caractéristique la plus distinctive est ses oreilles inhabituellement grandes, qui servent également à dissiper la chaleur. Son nom vient du mot arabe (fanak), qui signifie renard, et le nom d'espèce zerda vient du mot grec xeros qui signifie sec, se référant à l'habitat du renard. Le fennec est la plus petite espèce de canidé au monde. Son pelage, les oreilles et les fonctions rénales sont adaptés à haute température, faible dans l'eau, des milieux désertiques. De plus, son ouïe est suffisamment sensible pour entendre des proies se déplacer sous terre. Il mange principalement des insectes, des petits mammifères et des oiseaux.[PARAGRAPH:2]Source: Wikipedia</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_FENNECFOX</Tag>
@@ -405,7 +410,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_FENNECFOX_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Fennec Fox and Wolves, Wolf Cage,  Enclosure, Fox Traps and Fur Farm</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires -  Fennec[NEWLINE][ICON_BULLET]Myths of Sky and Birds[NEWLINE][ICON_BULLET]Wolf Cage and Enclosure</French>
+		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires de  Fennec, pièges à renard, et fermes de fourrures, Cage et Enclos à loup</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FENNECFOX_MYTH</Tag>
@@ -445,11 +450,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MANEDWOLF_PEDIA</Tag>
 		<English>The maned wolf was born to run. With its extremely long legs, the wolf can move swiftly through the tall grasses that cover its habitat.[PARAGRAPH:2]Its height also allows the wolf to see over the top of the grass in its South American habitat. Some people have described the maned wolf as a fox on stilts.[PARAGRAPH:2]The maned wolf is named for the dark mane of hair on its neck.[PARAGRAPH:2]Maned WolfThe wolf raises its mane when it feels threatened or wants to frighten away other animals.[PARAGRAPH:2]But this creature is usually shy and prefers to live alone. It stakes out a large territory of its own and marks the area with urine. Fiercely possessive of its territory, the wolf will threaten, and may even fight, any other maned wolf that crosses the urine path.[PARAGRAPH:2]Source: http://maned-wolf.com/</English>
+		<French>Le loup à crinière est né pour courir. Avec ses pattes extrêmement longues, le loup peut se déplacer rapidement à travers les hautes herbes qui couvrent son habitat. [PARAGRAPH:2] Sa hauteur permet également au loup de voir par-dessus l'herbe dans son habitat sud-américain. Certaines personnes ont décrit le loup à crinière comme un renard sur des échasses. [PARAGRAPH:2] Le loup à crinière tire son nom de la crinière sombre des cheveux sur son cou. [PARAGRAPH:2] Loup à crinière Le loup lève sa crinière lorsqu'il se sent menacé ou veut pour effrayer les autres animaux. [PARAGRAPH:2] Mais cette créature est généralement timide et préfère vivre seule. Il jalonne un vaste territoire et marque la zone avec de l'urine. Fortement possessif de son territoire, le loup menacera, et pourra même combattre, tout autre loup à crinière qui croise le chemin de l'urine.[PARAGRAPH:2]Source: http://maned-wolf.com/</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MANEDWOLF_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Maned Wolf and Wolves, Kennels, Wolf Cage and Enclosure</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires -  Loup à crinière[NEWLINE][ICON_BULLET]Myths of Sky and Birds[NEWLINE][ICON_BULLET]Bird Cage and Enclosure[NEWLINE][ICON_BULLET]Feather Worker and Parrots</French>
+		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires du Loup à crinière, Chenils, Cage et enclos à loup</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MANEDWOLF_MYTH</Tag>
@@ -479,7 +485,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_REDFOX_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Redfox, Wolf Cage and Enclosure, Canine Totem</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires -  Redfox[NEWLINE][ICON_BULLET]Wolf Cage and Enclosure[NEWLINE][ICON_BULLET]Canine Totem</French>
+		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires du renard roux, Cage et Enclos à loup, Totem Canin</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REDFOX_MYTH</Tag>
@@ -509,6 +515,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_THYLACINE</Tag>
 		<English>Thylacine</English>
+		<French>Thylacine</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_THYLACINE</Tag>
@@ -522,7 +529,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_THYLACINE_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Thylacine, Remains - Thylacine, Myth - Marsupial and Paleolithic Marsupial</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires - Thylacine[NEWLINE][ICON_BULLET]Restes - Thylacine[NEWLINE][ICON_BULLET]Myth - Marsupial and Paleolithic Marsupial</French>
+		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires du  Thylacine, Restes de Thylacine, Mythe du Marsupial</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THYLACINE_MYTH</Tag>
@@ -562,7 +569,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_AFRICANELEPHANT_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - African Elephant, Myth - Elephant, Master Hunter, Carnival, Exotic Herbivore Cage and Enclosure</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires - un Eléphant d'Afrique[NEWLINE][ICON_BULLET]Myth - Elephant[NEWLINE][ICON_BULLET]Master Hnter[NEWLINE][ICON_BULLET]Carnival; Exotic Herbavours Cage and Enclosure</French>
+		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires d'Eléphant d'Afrique, Mythe des Eléphants, Maître Chasseur, Carnaval, Cage et Enclos pour Herbivores exotiques</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AFRICANELEPHANT_MYTH</Tag>
@@ -676,6 +683,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DART_FROG_PEDIA</Tag>
 		<English>TBD</English>
+		<French>TBD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DARTFROG</Tag>
@@ -783,7 +791,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_TARANTULA_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Tarantula, Myth of Bugs, Bug Cage and Enclosure, Bug Catcher</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires -  Tarentule[NEWLINE][ICON_BULLET]Myth of Bugs[NEWLINE][ICON_BULLET]Bug Cage and Enclosure[NEWLINE][ICON_BULLET]Bug Catcher</French>
+		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires de Tarentules , Mythe des insectes, Récolteur d'insectes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TARANTULA_MYTH</Tag>
@@ -978,6 +986,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NUMBAT</Tag>
 		<English>Numbat</English>
+		<French>Numbat</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_NUMBAT</Tag>
@@ -1022,6 +1031,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OPOSSUM</Tag>
 		<English>Opossum</English>
+		<French>Opossum</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_OPOSSUM</Tag>
@@ -1131,6 +1141,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WOMBAT</Tag>
 		<English>Wombat</English>
+		<French>Wombat</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WOMBAT</Tag>
@@ -1175,6 +1186,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AARDVARK_PEDIA</Tag>
 		<English>TBD</English>
+		<French>TBD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AARDVARK_MYTH</Tag>
@@ -1214,6 +1226,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARMADILLO_PEDIA</Tag>
 		<English>The nine-banded armadillo (Dasypus novemcinctus), or the nine-banded, long-nosed armadillo, is a medium-sized mammal found in North, Central, and South America, making it the most widespread of the armadillos.</English>
+		<French>The nine-banded armadillo (Dasypus novemcinctus), or the nine-banded, long-nosed armadillo, is a medium-sized mammal found in North, Central, et South America, making it the most widespread of the armadillos.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ARMADILLO_HELP</Tag>
@@ -1309,7 +1322,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BABIRUSA_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Babirusa, Myth of Boar, Pig Herd, Exotic Herbivore Cage and Enclosure, Master Hunter and Boar Camp</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires -  Babiroussa[NEWLINE][ICON_BULLET]Myth of Boar, Pig Herd[NEWLINE][ICON_BULLET]Exotic Herbavours Cage and Enclosure[NEWLINE][ICON_BULLET]Master Hunter and Boar Camp</French>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires de Babiroussa, Mythe des Ours, Enclos à cochons, camp d'ours, Maitre chasseur</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BABIRUSA_MYTH</Tag>
@@ -1455,6 +1468,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GLYPTO</Tag>
 		<English>Glyptodon</English>
+		<French>Glyptodon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GLYPTO_PEDIA</Tag>
@@ -1504,6 +1518,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GROUNDSLOTH</Tag>
 		<English>Megatherium</English>
+		<French>Mégatherium</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GROUNDSLOTH_PEDIA</Tag>
@@ -1517,7 +1532,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GROUNDSLOTH_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Ground Sloth, Remains - Ground Sloth</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires - Xénarthre[NEWLINE][ICON_BULLET]Remains - Xénarthre</French>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Xénarthre, Restes de Xénarthre</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_GROUNDSLOTH_MYTH</Tag>
@@ -1629,6 +1644,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PIGEON_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Pigeon</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Pigeon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PLATYPUS</Tag>
@@ -1643,7 +1659,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PLATYPUS_PEDIA</Tag>
 		<English>The platypus (Ornithorhynchus anatinus) is a semi-aquatic mammal endemic to eastern Australia, including Tasmania. Together with the four species of echidna, it is one of the five extant species of monotremes, the only mammals that lay eggs instead of giving birth to live young. It is the sole living representative of its family (Ornithorhynchidae) and genus (Ornithorhynchus), though a number of related species have been found in the fossil record.[PARAGRAPH:2]The unusual appearance of this egg-laying, venomous, duck-billed, beaver-tailed, otter-footed mammal baffled European naturalists when they first encountered it, with some considering it an elaborate fraud. It is one of the few venomous mammals, the male platypus having a spur on the hind foot that delivers a venom capable of causing severe pain to humans. The unique features of the platypus make it an important subject in the study of evolutionary biology and a recognisable and iconic symbol of Australia; it has appeared as a mascot at national events and is featured on the reverse of the Australian 20 cent coin. The platypus is the animal emblem of  the state of New South Wales.[PARAGRAPH:2]Until the early 20th century, it was hunted for its fur, but it is now protected throughout its range. Although captive breeding programmes have had only limited success and the platypus is vulnerable to the effects of pollution, it is not under any immediate threat.[PARAGRAPH:2]Source: Wikipedia</English>
-		<French>L'ornithorynque (Ornithorhynchus anatinus) est une espèce de petits mammifères semi-aquatiques endémique de l'est de l'Australie, y compris la Tasmanie. C'est l'une des cinq espèces de l'ordre des monotrèmes, seul ordre de mammifères qui ponde des œufs au lieu de donner naissance à des petits complètement formés (les quatre autres espèces sont des échidnés). C'est la seule espèce survivante de la famille des Ornithorhynchidae et du genre Ornithorhynchus bien qu'un grand nombre de fragments d'espèces fossiles de cette famille et de ce genre aient été découverts.[PARAGRAPH:2]L'apparence bizarre de ce mammifère pondant des œufs, muni d'aiguillons venimeux, à la mâchoire cornée ressemblant au bec d'un canard, à queue évoquant un castor, qui lui sert à la fois de gouvernail dans l'eau et de réserve de graisse, et à pattes de loutre a fortement surpris les premiers explorateurs qui l'ont découvert ; bon nombre de naturalistes européens ont cru à une plaisanterie. C'est l'un des rares mammifères venimeux: le mâle porte sur les pattes postérieures un aiguillon qui peut libérer du venin capable d'infliger de vives douleurs à un être humain. Les traits originaux de l'ornithorynque en font un sujet d'études important pour mieux comprendre l'évolution des espèces animales et en ont fait un des symboles de l'Australie: il a été utilisé comme mascotte pour de nombreux évènements nationaux et il figure au verso de la pièce de 20 cents australiens.[PARAGRAPH:2]Source: Wikipedia</French>
+		<French>L'ornithorynque (Ornithorhynchus anatinus) est une espèce de petits mammifères semi-aquatiques endémique de l'est de l'Australie, y compris la Tasmanie. C'est l'une des cinq espèces de l'ordre des monotrèmes, seul ordre de mammifères qui ponde des oeufs au lieu de donner naissance à des petits complètement formés (les quatre autres espèces sont des échidnés). C'est la seule espèce survivante de la famille des Ornithorhynchidae et du genre Ornithorhynchus bien qu'un grand nombre de fragments d'espèces fossiles de cette famille et de ce genre aient été découverts.[PARAGRAPH:2]L'apparence bizarre de ce mammifère pondant des oeufs, muni d'aiguillons venimeux, à la mâchoire cornée ressemblant au bec d'un canard, à queue évoquant un castor, qui lui sert à la fois de gouvernail dans l'eau et de réserve de graisse, et à pattes de loutre a fortement surpris les premiers explorateurs qui l'ont découvert ; bon nombre de naturalistes européens ont cru à une plaisanterie. C'est l'un des rares mammifères venimeux: le mâle porte sur les pattes postérieures un aiguillon qui peut libérer du venin capable d'infliger de vives douleurs à un être humain. Les traits originaux de l'ornithorynque en font un sujet d'études important pour mieux comprendre l'évolution des espèces animales et en ont fait un des symboles de l'Australie: il a été utilisé comme mascotte pour de nombreux évènements nationaux et il figure au verso de la pièce de 20 cents australiens.[PARAGRAPH:2]Source: Wikipedia</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PLATYPUS</Tag>
@@ -1658,7 +1674,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PLATYPUS_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Platypus, Myths of Monotremes, Sea and Birds</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires -  Ornithorynque[NEWLINE][ICON_BULLET]Myths of Monotremes, Sea and Birds</French>
+		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires de l'Ornithorynque, les Mythes de la Mer et des Oiseaux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PLATYPUS_MYTH</Tag>
@@ -1703,7 +1719,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_TREESLOTH_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Tree Sloth, Exotic Herbivore Cage and Enclosure</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires -  Paresseux[NEWLINE][ICON_BULLET]Exoctic Herbavours Cage and Enclosure</French>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Paresseux, Cage et Enclos pour Herbivores exotiques</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TREESLOTH_MYTH</Tag>
@@ -2023,18 +2039,22 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EAGLE_PEDIA</Tag>
 		<English>This is a generic eagle that represents all eagles except for the "Stellar's Sea Eagle" and all the "Harpy Eagles".</English>
+		<French>Il s'agit d'un aigle générique qui représente tous les aigles à l'exception du "Pigargue empereur" et de tous les "Harpy Eagles".</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EAGLE_BALD</Tag>
 		<English>Bald Eagle</English>
+		<French>Pygargue à tête blanche</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EAGLE_BALD_PEDIA</Tag>
 		<English>The Bald Eagle is a bird of prey found in North America. A sea eagle, it has two known subspecies and forms a species pair with the white-tailed eagle. Its range includes most of Canada and Alaska, all of the contiguous United States, and northern Mexico. It is found near large bodies of open water with an abundant food supply and old-growth trees for nesting.</English>
+		<French>Le pygargue à tête blanche est un oiseau de proie trouvé en Amérique du Nord. Un aigle de mer, il a deux sous-espèces connues et forme une paire d'espèces avec l'aigle à queue blanche. Son aire de répartition comprend la majeure partie du Canada et de l'Alaska, tous les États-Unis contigus et le nord du Mexique. On le trouve près de grandes étendues d'eau libre avec un approvisionnement alimentaire abondant et des arbres centenaires pour la nidification.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEA_ANIMAL_STRATEGY</Tag>
 		<English>A few sea animals hunt unprotected rafts! Beware!!</English>
+		<French>Quelques animaux marins chassent les radeaux non protégés! Il faut se méfier!!</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEAEAGLE</Tag>
@@ -2096,6 +2116,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ELASMOTHERIUM</Tag>
 		<English>Giant Rhinoceros</English>
+		<French>Rhinocéros Géant</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ELASMOTHERIUM_PEDIA</Tag>
@@ -2362,6 +2383,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SABRETOOTH_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Sabretooth</English>
+		<French>Effet (Mythe du Tigre à dents de sabre)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SABRETOOTH_REMAINS</Tag>
@@ -2396,6 +2418,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BAIRDS_TAPIR_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Tapir and Tapir, Bairds, Exotic Herbivores Cage and Enclosure</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Tapir et Tapir, Bairds, Cage et Enclos pour Herbivores exotiques</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Tapira</Polish>
 	</TEXT>
 	<TEXT>
@@ -2449,6 +2472,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MALAYAN_TAPIR_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Tapir and Tapir, Malayan, Exotic Herbivores Cage and Enclosure</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Tapir et Tapir, Malayan, Cage et Enclos pour Herbivores exotiques</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Tapira</Polish>
 	</TEXT>
 	<TEXT>
@@ -2484,6 +2508,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MOUNTAIN_TAPIR_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Tapir and Tapir, Mountain, Exotic Herbivores Cage and Enclosure</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Tapir et Tapir, Mountain, Cage et Enclos pour Herbivores exotiques</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Tapira</Polish>
 	</TEXT>
 	<TEXT>
@@ -2854,10 +2879,12 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAIMAN_BLACK</Tag>
 		<English>Black Caiman</English>
+		<French>Caïman noir</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAIMAN_BLACK_PEDIA</Tag>
 		<English>TBD</English>
+		<French>TBD</French>
 		<Polish>Kajmany (Caimaninae)  podrodzina gadów z rodziny aligatorów, obejmująca gatunki z rodzajów Caiman, Melanosuchus i Paleosuchus. Kajmany mają duże płytki kostne wzmacniające rogowe tarczki brzuszne. Długość dorosłych kajmanów od 1,5  kajman Schneidera (Paleosuchus trigonatus)  do 4,5 m  kajman czarny (Melanosuchus niger) (choć prehistoryczne kajmany, takie jak Purussaurus, osiągały nawet 11 m długości). Występują w Ameryce Zrodkowej i Południowej.</Polish>
 	</TEXT>
 	<TEXT>
@@ -2889,6 +2916,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CAIMAN_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Caiman, Myth - Crocodiles, Bird Cage and Enclosure, Feather Worker and Parrots</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Caiman, Mythe du Crocodiles, Cages à oiseaux, Atelier de Plumes et Perroquets</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Kajman</Polish>
 	</TEXT>
 	<TEXT>
@@ -2960,6 +2988,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GATOR_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Americian Alligator, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) de l'Alligator d'Amérique, Maître Chasseur, Mythe du Reptile, Crocodile et Dragon, Cage et Enclos pour reptiles</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Aligator Amerykański</Polish>
 	</TEXT>
 	<TEXT>
@@ -3065,6 +3094,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_NILECROC_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Nile Crocodile, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Nile Crocodile, Maître Chasseur, Mythe du Reptile, Crocodile et Dragon, Cage et Enclos pour reptiles</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Krokodyl Nilowy</Polish>
 	</TEXT>
 	<TEXT>
@@ -3111,7 +3141,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 		<Tag>TXT_KEY_BUILDING_NILECROC_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Nile Crocodile</English>
 		<French>
-			<Text>Histoires du Effet(Crocodile du Nil)</Text>
+			<Text>Effet (Histoires du Crocodile du Nil)</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -3174,6 +3204,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LEMUR</Tag>
 		<English>Ring-tailed Lemur</English>
+		<French>Lémur catta</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LEMUR_PEDIA</Tag>
@@ -3277,6 +3308,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SALTWATER_CROC_STRATEGY</Tag>
 		<English>Capture salt water crocodiles if you can.  They can be used to build special buildings in a costal city.</English>
+		<French>Capturez des crocodiles d'eau de mer si vous le pouvez. Ils peuvent être utilisés pour construire des bâtiments spéciaux dans une ville côtière.</French>
 		<Italian>Cattura i coccodrilli marini se riesci. Possono essere usati per costruire edifici speciali in una città costiera.</Italian>
 		<Spanish>Captura los cocodrilos marinos si puedes. Pueden ser utilizados para construir edificios especiales en una ciudad costera.</Spanish>
 	</TEXT>
@@ -3326,6 +3358,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BRAZILIAN_TAPIR_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Tapir and Tapir, Brazilian, Exotic Herbivores Cage and Enclosure</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Tapir et Tapir, Brazilian, Cage et Enclos pour Herbivores exotiques</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Tapira</Polish>
 	</TEXT>
 	<TEXT>
@@ -3337,6 +3370,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CROCODILE_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Crocodile, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Crocodile, Maître Chasseur, Mythe du Reptile, Crocodile et Dragon, Cage et Enclos pour reptiles</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Krokodyl</Polish>
 	</TEXT>
 	<TEXT>
@@ -3352,6 +3386,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GATOR_ASIAN_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Chinese Alligator, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) de l'Alligator de Chine, Maître chasseur, Mythe du Reptile, Crocodile et Dragon, Cage et Enclos pour reptiles</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Aligator Chiński</Polish>
 	</TEXT>
 	<TEXT>
@@ -3363,6 +3398,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_LIZARD_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Lizard, Myths of Earth and Reptiles, Reptile Cage and Enclosure</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Lézard, Mythes de la Terre et de Reptiles, Cage et Enclos à Reptiles </French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Jaszczurki</Polish>
 	</TEXT>
 	<TEXT>
@@ -3378,11 +3414,13 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RIVER_CROC_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  River Crocodile, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Crocodile de rivières, Maître chasseur, Mythe du Reptile, Crocodile et Dragon, Cage et Enclos pour reptiles</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Krokodyl Błotny</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SALTWATER_CROC_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Saltwater Crocodile, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Crocodile de mer, Maître Chasseur, Mythe du Reptile, Crocodile et Dragon, Cage et Enclos pour reptiles</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Krokodyl Różańcowy</Polish>
 	</TEXT>
 	<TEXT>
@@ -3448,6 +3486,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VIPER_CHAIN</Tag>
 		<English>Chain Viper</English>
+		<French>Vipère de Russell</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VIPER_CHAIN_PEDIA</Tag>
@@ -3534,206 +3573,257 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_LION_MYTH</Tag>
 		<English>Myth - Cavelion</English>
+		<French>Mythe du Lion des cavernes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_LION_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Cavelion</English>
+		<French>Effet (Mythe du Lion des cavernes)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_LION_REMAINS</Tag>
 		<English>Remains - Cavelion</English>
+		<French>Restes de Lion des cavernes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_LION_STORY</Tag>
 		<English>Story - Cavelion</English>
+		<French>Histoire du Lion des cavernes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_LION_STORIES</Tag>
 		<English>Stories - Cavelion</English>
+		<French>Histoires du Lion des cavernes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_LION_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Cavelion</English>
+		<French>Effet (Histoires du Lion des cavernes)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOOSE_MYTH</Tag>
 		<English>Myth - Moose</English>
+		<French>Mythe de l'Elan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOOSE_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Moose</English>
+		<French>Effet (Mythe de l'Elan)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOOSE_STORY</Tag>
 		<English>Story - Moose</English>
+		<French>Histoire de l'Elan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOOSE_STORIES</Tag>
 		<English>Stories - Moose</English>
+		<French>Histoires de l'Elan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOOSE_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Moose</English>
+		<French>Effet (Histoires de l'Elan)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERN_MYTH</Tag>
 		<English>Myth - Arctic Tern</English>
+		<French>Mythe du Sterne Arctique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERN_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Arctic Tern</English>
+		<French>Effet (Mythe du Sterne Arctique)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERN_STORY</Tag>
 		<English>Story - Arctic Tern</English>
+		<French>Histoire du Sterne Arctique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERN_STORIES</Tag>
 		<English>Stories - Arctic Tern</English>
+		<French>Histoires du Sterne Arctique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERN_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Arctic Tern</English>
+		<French>Effet (Histoires du Sterne Arctique)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CARIBOU_MYTH</Tag>
 		<English>Myth - Caribou</English>
+		<French>Mythe du Caribou</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CARIBOU_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Caribou</English>
+		<French>Effet (Mythe du Caribou)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CARIBOU_STORY</Tag>
 		<English>Story - Caribou</English>
+		<French>Histoire du Caribou</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CARIBOU_STORIES</Tag>
 		<English>Stories - Caribou</English>
+		<French>Histoires du Caribou</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CARIBOU_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Caribou</English>
+		<French>Effet (Histoires du Caribou)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SIBERIAN_TIGER_MYTH</Tag>
 		<English>Myth - Siberian Tiger</English>
+		<French>Mythe du Tigre de Sibérie</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SIBERIAN_TIGER_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Siberian Tiger</English>
+		<French>Effet (Mythe du Tigre de Sibérie)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SIBERIAN_TIGER_STORY</Tag>
 		<English>Story - Siberian Tiger</English>
+		<French>Histoire du Tigre de Sibérie</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SIBERIAN_TIGER_STORIES</Tag>
 		<English>Stories - Siberian Tiger</English>
+		<French>Histoires du Tigre de Sibérie</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SIBERIAN_TIGER_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Siberian Tiger</English>
+		<French>Effet (Histoires du Tigre de Sibérie)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IBEX_MYTH</Tag>
 		<English>Myth - Ibex</English>
+		<French>Mythe du Bouquetin</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IBEX_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Ibex</English>
+		<French>Effet (Mythe du Bouquetin)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IBEX_STORY</Tag>
 		<English>Story - Ibex</English>
+		<French>Histoire du Bouquetin</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IBEX_STORIES</Tag>
 		<English>Stories - Ibex</English>
+		<French>Histoires du Bouquetin</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IBEX_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Ibex</English>
+		<French>Effet (Histoires du Bouquetin)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SKUNK_MYTH</Tag>
 		<English>Myth - Skunk</English>
+		<French>Mythe de la Moufette</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SKUNK_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Skunk</English>
+		<French>Effet (Mythe de la Moufette)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SKUNK_STORY</Tag>
 		<English>Story - Skunk</English>
+		<French>Histoire de la Moufette</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SKUNK_STORIES</Tag>
 		<English>Stories - Skunk</English>
+		<French>Histoires de la Moufette</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SKUNK_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Skunk</English>
+		<French>Effet (Histoires de la Moufette)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PANTHER_MYTH</Tag>
 		<English>Myth - Panther</English>
+		<French>Mythe de la Panthère</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PANTHER_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Panther</English>
+		<French>Effet (Mythe de la Panthère)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PANTHER_STORY</Tag>
 		<English>Story - Panther</English>
+		<French>Histoire de la Panthère</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PANTHER_STORIES</Tag>
 		<English>Stories - Panther</English>
+		<French>Histoires de la Panthère</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PANTHER_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Panther</English>
+		<French>Effet (Histoires de la Panthère)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PIGEON_MYTH</Tag>
 		<English>Myth - Pigeon</English>
+		<French>Mythe du Pigeon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PIGEON_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Pigeon</English>
+		<French>Effet (Mythe du Pigeon)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PIGEON_STORY</Tag>
 		<English>Story - Pigeon</English>
+		<French>Histoire du Pigeon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PIGEON_STORIES</Tag>
 		<English>Stories - Pigeon</English>
+		<French>Histoires du Pigeon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PIGEON_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Pigeon</English>
+		<French>Effet (Histoires du Pigeon)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LYNX_MYTH</Tag>
 		<English>Myth - Lynx</English>
+		<French>Mythe du Lynx</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LYNX_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Lynx</English>
+		<French>Effet (Mythe du Lynx)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LYNX_STORY</Tag>
 		<English>Story - Lynx</English>
+		<French>Histoire du Lynx</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LYNX_STORIES</Tag>
 		<English>Stories - Lynx</English>
+		<French>Histoires du Lynx</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LYNX_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Lynx</English>
+		<French>Effet (Histoires du Lynx)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELEMENTAL_MYTH_STRATEGY</Tag>
@@ -3772,6 +3862,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STONE_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Stone</English>
+		<French>Effet (Mythe de la pierre)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FIRE_MYTH</Tag>
@@ -3806,6 +3897,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Tag>
 		<English>Animal Story buildings represent cultural and educational inspiration from animals after invention of [LINK=TECH_WRITING]Writing[\LINK].</English>
+		<French>Les bâtiments d'Histoire(s) d'animaux représentent une inspiration culturelle et éducative des animaux avant l'invention de [LINK=TECH_WRITING]l'Ecriture[\LINK].</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Tag>
@@ -3816,6 +3908,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Tag>
 		<English>Animal Stories buildings represents educational boost from animals after invention of [LINK=TECH_LITERATURE]Literature[\LINK]- needs [LINK=BUILDING_LIBRARY]Library[\LINK]</English>
+		<French>Les bâtiments des histoires animales représentent un coup de pouce éducatif provenant des animaux, après l'invention de la [LINK=TECH_LITERATURE]Littérature[\LINK]- nécessite une [LINK=BUILDING_LIBRARY]Bibliothèque[\LINK]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Tag>
@@ -3826,6 +3919,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_PEDIA</Tag>
 		<English>The Stories Effect buildings are not real buildings. They are used to allow another building to be unique within a nation without being a national wonder.[NEWLINE]- Stories Effect buildings are given for free by Stories buildings.</English>
+		<French>Les bâtiments d'effet des histoires ne sont pas de vrais bâtiments. Ils sont utilisés pour permettre à un autre bâtiment d'être unique au sein d'une nation, sans être une merveille nationale. [NEWLINE] - Les bâtiments d'effet des histoires sont donnés gratuitement par la construction des bâtiments liés aux Histoires animales.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BULL_STORY</Tag>
@@ -3908,6 +4002,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUGONG_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Dugong</English>
+		<French>Effet (Mythe du Lamantin)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUGONG_STORY</Tag>
@@ -3918,14 +4013,17 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUGONG_STORIES</Tag>
 		<English>Stories - Dugong</English>
+		<French>Histoires du Lamantin</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUGONG_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Dugong</English>
+		<French>Effet (Histoires du Lamantin)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOLPHIN_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Dolphin</English>
+		<French>Effet (Mythe du Dauphin)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOLPHIN_STORY</Tag>
@@ -3936,10 +4034,12 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOLPHIN_STORIES</Tag>
 		<English>Stories - Dolphin</English>
+		<French>Histoires du Dauphin</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOLPHIN_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Dolphin</English>
+		<French>Effet (Histoires du Dauphin)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREATWHITE_SHARK_STORY</Tag>
@@ -3968,10 +4068,12 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KRAKEN_STORIES</Tag>
 		<English>Stories - Kraken</English>
+		<French>Histoires du Kraken</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KRAKEN_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Kraken</English>
+		<French>Effet (Histoires du Kraken)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEVIATHAN_STORY</Tag>
@@ -3988,10 +4090,12 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MINKIE_WHALE_STORIES</Tag>
 		<English>Stories - Minke Whale</English>
+		<French>Histoires du Petit rorqual</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MINKIE_WHALE_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Minke Whale</English>
+		<French>Effet (Histoires du Petit rorqual)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NARWHAL_STORY</Tag>
@@ -4008,10 +4112,12 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORCA_STORIES</Tag>
 		<English>Stories - Orca</English>
+		<French>Histoires de l'Orque</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORCA_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Orca</English>
+		<French>Effet (Histoires de l'Orque)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAY_STORY</Tag>
@@ -4028,10 +4134,12 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEATURTLE_STORIES</Tag>
 		<English>Stories - Seaturtle</English>
+		<French>Histoires de la Tortue des mers</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEATURTLE_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Seaturtle</English>
+		<French>Effet (Histoires de la Tortue des mers)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REEF_SHARK_STORY</Tag>
@@ -4072,26 +4180,32 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KRAKEN_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Kraken</English>
+		<French>Effet (Mythe du Kraken)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEVIATHAN_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Leviathan</English>
+		<French>Effet (Mythe du Léviathan)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MINKIE_WHALE_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Minke Whale</English>
+		<French>Effet (Mythe du Petit rorqual)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NARWHAL_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Narwhal</English>
+		<French>Effet (Mythe du Narval)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORCA_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Orca</English>
+		<French>Effet (Mythe de l'Orque)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAY_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Ray</English>
+		<French>Effet (Mythe de la Raie)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_BIRD_MYTH</Tag>
@@ -4162,214 +4276,267 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUMPBACK_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Humpback Whale</English>
+		<French>Effet (Mythe de la Baleine à bosse</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUMPBACK_STORIES</Tag>
 		<English>Stories - Humpback Whale</English>
+		<French>Histoires de la Baleine à bosse</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUMPBACK_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Humpback Whale</English>
+		<French>Effet (Histoires de la Baleine à bosse)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WOLVERINE_MYTH</Tag>
 		<English>Myth - Wolverine</English>
+		<French>Mythe du Carcajou</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WOLVERINE_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Wolverine</English>
+		<French>Effet (Mythe du Carcajou)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WOLVERINE_STORY</Tag>
 		<English>Story - Wolverine</English>
+		<French>Histoire du Carcajou</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WOLVERINE_STORIES</Tag>
 		<English>Stories - Wolverine</English>
+		<French>Histoires du Carcajou</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WOLVERINE_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Wolverine</English>
+		<French>Effet (Histoires du Carcajou)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VULTURE_MYTH</Tag>
 		<English>Myth - Vulture</English>
+		<French>Mythe du Vautour</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VULTURE_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Vulture</English>
+		<French>Effet (Mythe du Vautour)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VULTURE_STORY</Tag>
 		<English>Story - Vulture</English>
+		<French>Histoire du Vautour</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VULTURE_STORIES</Tag>
 		<English>Stories - Vulture</English>
+		<French>Histoires du Vautour</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VULTURE_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Vulture</English>
+		<French>Effet (Histoires du Vautour)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TURKEY_MYTH</Tag>
 		<English>Myth - Turkey</English>
+		<French>Mythe de la Dinde</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TURKEY_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Turkey</English>
+		<French>Effet (Mythe de la Dinde)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TURKEY_STORY</Tag>
 		<English>Story - Turkey</English>
+		<French>Histoire de la Dinde</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TURKEY_STORIES</Tag>
 		<English>Stories - Turkey</English>
+		<French>Histoires de la Dinde</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TURKEY_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Turkey</English>
+		<French>Effet (Histoires de la Dinde)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNOW_LEOPARD_MYTH</Tag>
 		<English>Myth - Snow Leopard</English>
+		<French>Mythe du Léopard des neiges</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNOW_LEOPARD_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Snow Leopard</English>
+		<French>Effet (Mythe du Léopard des neiges)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNOW_LEOPARD_STORY</Tag>
 		<English>Story - Snow Leopard</English>
+		<French>Histoire du Léopard des neiges</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNOW_LEOPARD_STORIES</Tag>
 		<English>Stories - Snow Leopard</English>
+		<French>Histoires du Léopard des neiges</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNOW_LEOPARD_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Snow Leopard</English>
+		<French>Effet (Histoires du Léopard des neiges)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAIGA_MYTH</Tag>
 		<English>Myth - Saiga</English>
+		<French>Mythe de l'Antilope Saiga</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAIGA_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Saiga</English>
+		<French>Effet (Mythe de l'Antilope Saiga)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAIGA_STORY</Tag>
 		<English>Story - Saiga</English>
+		<French>Histoire de l'Antilope Saiga</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAIGA_STORIES</Tag>
 		<English>Stories - Saiga</English>
+		<French>Histoires de l'Antilope Saiga</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAIGA_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Saiga</English>
+		<French>Effet (Histoires de l'Antilope Saiga)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSKOX_MYTH</Tag>
 		<English>Myth - Muskox</English>
+		<French>Mythe du Boeuf musqué</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSKOX_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Muskox</English>
+		<French>Effet (Mythe du Boeuf musqué)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSKOX_STORY</Tag>
 		<English>Story - Muskox</English>
+		<French>Histoire du Boeuf musqué</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSKOX_STORIES</Tag>
 		<English>Stories - Muskox</English>
+		<French>Histoires du Boeuf musqué</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSKOX_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Muskox</English>
+		<French>Effet (Histoires du Boeuf musqué)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RACCOON_MYTH</Tag>
 		<English>Myth - Raccoon</English>
+		<French>Mythe du Raton-Laveur</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RACCOON_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Raccoon</English>
+		<French>Effet (Mythe du Raton-Laveur)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RACCOON_STORY</Tag>
 		<English>Story - Raccoon</English>
+		<French>Histoire du Raton-Laveur</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RACCOON_STORIES</Tag>
 		<English>Stories - Raccoon</English>
+		<French>Histoires du Raton-Laveur</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RACCOON_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Raccoon</English>
+		<French>Effet (Histoires du Raton-Laveur)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUCK_MYTH</Tag>
 		<English>Myth - Duck</English>
+		<French>Mythe du Canard</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUCK_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Duck</English>
+		<French>Effet (Mythe du Canard)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUCK_STORY</Tag>
 		<English>Story - Duck</English>
+		<French>Histoire du Canard</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUCK_STORIES</Tag>
 		<English>Stories - Duck</English>
+		<French>Histoires du Canard</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUCK_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Duck</English>
+		<French>Effet (Histoires du Canard)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PHEASANT_MYTH</Tag>
 		<English>Myth - Pheasant</English>
+		<French>Mythe du Faisan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PHEASANT_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Pheasant</English>
+		<French>Effet (Mythe du Faisan)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PHEASANT_STORY</Tag>
 		<English>Story - Pheasant</English>
+		<French>Histoire du Faisan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PHEASANT_STORIES</Tag>
 		<English>Stories - Pheasant</English>
+		<French>Histoires du Faisan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PHEASANT_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Pheasant</English>
+		<French>Effet (Histoires du Faisan)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HORNED_OWL_MYTH</Tag>
 		<English>Myth - Great Horned Owl</English>
+		<French>Mythe du Hibou grand duc</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HORNED_OWL_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Great Horned Owl</English>
+		<French>Effet (Mythe du Hibou grand duc)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HORNED_OWL_STORY</Tag>
 		<English>Story - Great Horned Owl</English>
+		<French>Histoire du Hibou grand duc</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HORNED_OWL_STORIES</Tag>
 		<English>Stories - Great Horned Owl</English>
+		<French>Histoires du Hibou grand duc</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HORNED_OWL_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Great Horned Owl</English>
+		<French>Effet (Histoires du Hibou grand duc)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EMPEROR_PENGUIN_PEDIA</Tag>
@@ -4454,54 +4621,67 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SEALION_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Sea Lion and Pinnipeds, Pinniped Cage and Enclosure, Trained Seal</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Lion des mers et autres Pinnipèdes, Cage et Enclos pour pinnipèdes, Phoque dressé</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SEALION_LAND_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Sea Lion</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Lion des mers</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SEALION_SEA_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Sea Lion</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Lion des mers</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEALION_MYTH</Tag>
 		<English>Myth - Sea Lion</English>
+		<French>Mythe du Lion des mers</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEALION_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Sea Lion</English>
+		<French>Effet (Mythe du Lion des mers)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEALION_STORY</Tag>
 		<English>Story - Sea Lion</English>
+		<French>Histoire du Lion des mers</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEALION_STORIES</Tag>
 		<English>Stories - Sea Lion</English>
+		<French>Histoires du Lion des mers</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEALION_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Sea Lion</English>
+		<French>Effet (Histoires de Lions des mers)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WALRUS_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Walrus and Pinnipeds, Pinniped Cage and Enclosure</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Morse et Pinnipèdes, Cage et Enclos de Pinnipèdes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WALRUS_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Walrus</English>
+		<French>Effet (Mythe du Morse)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WALRUS_STORY</Tag>
 		<English>Story - Walrus</English>
+		<French>Histoire du Morse</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WALRUS_STORIES</Tag>
 		<English>Stories - Walrus</English>
+		<French>Histoires de Morses</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WALRUS_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Walrus</English>
+		<French>Effet (Histoires de Morses)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREATWHITE_SHARK_PEDIA</Tag>
@@ -4510,14 +4690,17 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREATWHITE_SHARK_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Greatwhite shark</English>
+		<French>Effet (Mythe du Grand requin blanc)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREATWHITE_SHARK_STORIES</Tag>
 		<English>Stories - Greatwhite shark</English>
+		<French>Histoires du Grand requin blanc</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREATWHITE_SHARK_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Greatwhite shark</English>
+		<French>Effet (Histoires de Grands Requins blancs</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HAMMERHEAD_SHARK_PEDIA</Tag>
@@ -4526,14 +4709,17 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HAMMERHEAD_SHARK_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Hammerhead shark</English>
+		<French>Effet (Mythe du Requin-marteau</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HAMMERHEAD_SHARK_STORIES</Tag>
 		<English>Stories - Hammerhead shark</English>
+		<French>Histoires du Requin-marteau</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HAMMERHEAD_SHARK_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Hammerhead shark</English>
+		<French>Effet (Histoires de Requins-marteau)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_REEF_SHARK_PEDIA</Tag>
@@ -4550,34 +4736,42 @@ There are 5 types of Reef Sharks:
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_REEF_SHARK_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Reef shark, Myths of Sea and Sharks, Master Sea Hunter and Wonders of the Deep, Marine and Shark Institute</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Requin des récifs, Mythe de la Mer et des Requins, Maître Chasseur des Mers et Merveilles des profondeurs, Institut de Marine et des requins</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REEF_SHARK_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Reef shark</English>
+		<French>Effet (Mythe du Requin des récifs)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REEF_SHARK_STORIES</Tag>
 		<English>Stories - Reef shark</English>
+		<French>Histoires du Requin des récifs</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REEF_SHARK_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Reef shark</English>
+		<French>Effet (Histoires de Requins des récifs)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHARK_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Shark</English>
+		<French>Effet (Mythe du Requin)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHARK_STORY</Tag>
 		<English>Story - Shark</English>
+		<French>Histoire du Requin</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHARK_STORIES</Tag>
 		<English>Stories - Shark</English>
+		<French>Histoires de Requins</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHARK_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Shark</English>
+		<French>Effet (Histoires du Requin)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WHALESHARK_PEDIA</Tag>
@@ -4586,98 +4780,122 @@ There are 5 types of Reef Sharks:
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WHALESHARK_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Whaleshark, Myths of Sea and Sharks, Master Sea Hunter and Wonders of the Deep, Marine and Shark Institute</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Requin baleine, Mythes de la mer, Chasseur des mers et Merveilles des profondeurs, Institut de Marine</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHALESHARK_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Whaleshark</English>
+		<French>Effet (Mythe du Requin baleine)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHALESHARK_STORIES</Tag>
 		<English>Stories - Whaleshark</English>
+		<French>Histoires de Requins baleine</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHALESHARK_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Whaleshark</English>
+		<French>Effet (Histoires du Requin baleine)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEA_OTTER_MYTH</Tag>
 		<English>Myth - Sea Otter</English>
+		<French>Mythe de la Loutre de mer</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEA_OTTER_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Sea Otter</English>
+		<French>Effet (Mythe de la Loutre de mer)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEA_OTTER_STORY</Tag>
 		<English>Story - Sea Otter</English>
+		<French>Histoire de la Loutre de mer</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEA_OTTER_STORIES</Tag>
 		<English>Stories - Sea Otter</English>
+		<French>Histoires de Loutres de mer</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEA_OTTER_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Sea Otter</English>
+		<French>Effet (Histoires de la Loutre de mer)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LOON_MYTH</Tag>
 		<English>Myth - Loon</English>
+		<French>Mythe du Plongeon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LOON_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Loon</English>
+		<French>Effet (Mythe du Plongeon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LOON_STORY</Tag>
 		<English>Story - Loon</English>
+		<French>Histoire du Plongeon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LOON_STORIES</Tag>
 		<English>Stories - Loon</English>
+		<French>Histoires du Plongeon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LOON_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Loon</English>
+		<French>Effet (Histoires de Plongeons)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOUCAN_MYTH</Tag>
 		<English>Myth - Toucan</English>
+		<French>Mythe du Toucan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOUCAN_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Toucan</English>
+		<French>Effet (Mythe du Toucan)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOUCAN_STORY</Tag>
 		<English>Story - Toucan</English>
+		<French>Histoire du Toucan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOUCAN_STORIES</Tag>
 		<English>Stories - Toucan</English>
+		<French>Histoires du Toucan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOUCAN_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Toucan</English>
+		<French>Effet (Histoires du Toucan)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLAMINGO_MYTH</Tag>
 		<English>Myth - Flamingo</English>
+		<French>Mythe du Flamant</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLAMINGO_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Flamingo</English>
+		<French>Effet (Mythe du Flamant)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLAMINGO_STORY</Tag>
 		<English>Story - Flamingo</English>
+		<French>Histoire du Flamingo</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLAMINGO_STORIES</Tag>
 		<English>Stories - Flamingo</English>
+		<French>Histoires du Flamingo</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLAMINGO_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Flamingo</English>
+		<French>Effet (Histoires de Flamants)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZEBRA</Tag>
@@ -4704,25 +4922,31 @@ There are 5 types of Reef Sharks:
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ZEBRA_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Zebra and Horse, Zebra Herd and Hunter's Camp, Carnival and Exotic Herbivore Cage and Enclosure</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythe, Histoire(s)du Zèbre et des chameaux, Troupeaux de zèbres et Camp de Chasseur, Carnaval et Cage et Enclos à Herbivores exotiques</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZEBRA_MYTH</Tag>
 		<English>Myth - Zebra</English>
+		<French>Mythe du Zèbre</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZEBRA_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Zebra</English>
+		<French>Effet (Mythe du Zèbre)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZEBRA_STORY</Tag>
 		<English>Story - Zebra</English>
+		<French>Histoire du Zèbre</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZEBRA_STORIES</Tag>
 		<English>Stories - Zebra</English>
+		<French>Histoires de Zèbres</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZEBRA_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Zebra</English>
+		<French>Effet (Histoires du Zèbre)</French>
 	</TEXT>
 </Civ4GameText>

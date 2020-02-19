@@ -59,8 +59,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -78,8 +78,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -180,8 +180,8 @@
 				<TerrainType>TERRAIN_PEAK</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -189,7 +189,7 @@
 			</TerrainImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -204,8 +204,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>45</iWithdrawalProb>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -314,28 +314,28 @@
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
-				<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+				<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>45</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -458,8 +458,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -468,8 +468,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>9</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>25</iWithdrawalProb>
 			<iEarlyWithdraw>30</iEarlyWithdraw>
 			<FeatureAttacks>
@@ -569,7 +569,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -585,8 +585,8 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -596,7 +596,7 @@
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -611,8 +611,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -751,17 +751,17 @@
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 			</TerrainImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -772,8 +772,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -860,12 +860,12 @@
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -893,15 +893,15 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -1008,7 +1008,7 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -1023,19 +1023,19 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
 			<iCombat>4</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -1150,7 +1150,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -1168,11 +1168,11 @@
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
@@ -1197,15 +1197,15 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>15</iWithdrawalProb>
 			<iEarlyWithdraw>20</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -1314,8 +1314,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -1323,8 +1323,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -1396,8 +1396,8 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<iAnimalIgnoresBorders>2</iAnimalIgnoresBorders>
 			<bOnlyDefensive>1</bOnlyDefensive>
+			<iAnimalIgnoresBorders>2</iAnimalIgnoresBorders>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<TerrainImpassableTypes>
@@ -1408,14 +1408,14 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
 			</FeatureImpassableTypes>
@@ -1436,8 +1436,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -1540,8 +1540,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -1552,7 +1552,7 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -1567,8 +1567,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iEarlyWithdraw>75</iEarlyWithdraw>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -1648,8 +1648,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SEA</TerrainType>
 				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
@@ -1666,8 +1666,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>60</iWithdrawalProb>
 			<iPursuit>30</iPursuit>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
@@ -1736,8 +1736,8 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<iAnimalIgnoresBorders>2</iAnimalIgnoresBorders>
 			<bOnlyDefensive>1</bOnlyDefensive>
+			<iAnimalIgnoresBorders>2</iAnimalIgnoresBorders>
 			<iCost>-1</iCost>
 			<iMoves>3</iMoves>
 			<InvisibleTerrainChanges>
@@ -1752,8 +1752,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SEA</TerrainType>
 				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
@@ -1772,15 +1772,15 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
 			<iCombat>1</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>55</iWithdrawalProb>
 			<iPursuit>30</iPursuit>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
@@ -1922,8 +1922,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
@@ -1934,8 +1934,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iPursuit>10</iPursuit>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -2046,8 +2046,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -2059,8 +2059,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iEarlyWithdraw>80</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -2079,7 +2079,7 @@
 				<Outcome>
 					<OutcomeType>OUTCOME_BONUS_SPAWNED</OutcomeType>
 					<iChance>2</iChance>
-					<BonusType>BONUS_FUR</BonusType>
+					<BonusType>BONUS_BEAVERS</BonusType>
 					<Yields>
 						<iYield>1</iYield>
 						<iYield>1</iYield>
@@ -2180,9 +2180,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<iAnimalIgnoresBorders>1</iAnimalIgnoresBorders>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
+			<bOnlyDefensive>1</bOnlyDefensive>
 			<bAssassin>1</bAssassin>
 			<UnitCombatTargets>
 				<UnitCombatTarget>
@@ -2207,8 +2207,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -2339,8 +2339,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -2348,8 +2348,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>8</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>15</iWithdrawalProb>
 			<iPursuit>15</iPursuit>
 			<UnitMeshGroups>
@@ -2471,8 +2471,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -2484,8 +2484,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -2595,8 +2595,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -2611,15 +2611,15 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
 			<iCombat>3</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -2728,7 +2728,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 			</InvisibleFeatureChanges>
@@ -2738,8 +2738,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -2758,7 +2758,7 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -2769,8 +2769,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>15</iWithdrawalProb>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -2883,14 +2883,14 @@
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -2898,7 +2898,7 @@
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
@@ -2917,8 +2917,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iEarlyWithdraw>80</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -3031,8 +3031,8 @@
 				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
 				<TerrainType>TERRAIN_PEAK</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -3042,8 +3042,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>60</iWithdrawalProb>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -3156,8 +3156,8 @@
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -3184,15 +3184,15 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
 			<iCombat>3</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -3313,8 +3313,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -3322,7 +3322,7 @@
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
@@ -3338,8 +3338,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -3449,21 +3449,21 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -3583,7 +3583,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -3591,8 +3591,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iEarlyWithdraw>80</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -3700,12 +3700,12 @@
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -3732,8 +3732,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>25</iWithdrawalProb>
 			<iEarlyWithdraw>75</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -3846,15 +3846,15 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<iAnimalIgnoresBorders>1</iAnimalIgnoresBorders>
 			<bOnlyDefensive>1</bOnlyDefensive>
+			<iAnimalIgnoresBorders>1</iAnimalIgnoresBorders>
 			<iCost>-1</iCost>
 			<iMoves>2</iMoves>
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 			</TerrainImpassableTypes>
@@ -3866,15 +3866,15 @@
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
 			<iCombat>3</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -3982,8 +3982,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -4010,8 +4010,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>5</iWithdrawalProb>
 			<iEarlyWithdraw>30</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -4109,8 +4109,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -4124,8 +4124,8 @@
 			<iCombat>5</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -4240,7 +4240,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
@@ -4250,11 +4250,11 @@
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -4265,8 +4265,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>7</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<iPursuit>35</iPursuit>
 			<UnitMeshGroups>
@@ -4384,14 +4384,14 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -4399,8 +4399,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>4</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iPursuit>50</iPursuit>
 			<iEarlyWithdraw>40</iEarlyWithdraw>
@@ -4530,8 +4530,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -4546,8 +4546,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>10</iWithdrawalProb>
 			<iEarlyWithdraw>70</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -4639,7 +4639,7 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -4647,8 +4647,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>70</iWithdrawalProb>
 			<iEarlyWithdraw>70</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -4770,8 +4770,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -4898,7 +4898,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -4911,8 +4911,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>4</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -5033,8 +5033,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -5161,8 +5161,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>10</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>60</iWithdrawalProb>
 			<iEarlyWithdraw>70</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -5256,8 +5256,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -5266,8 +5266,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>10</iWithdrawalProb>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -5364,13 +5364,13 @@
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -5397,8 +5397,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -5482,7 +5482,7 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -5494,8 +5494,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -5629,8 +5629,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
@@ -5642,8 +5642,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -5748,7 +5748,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -5761,8 +5761,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -5876,11 +5876,11 @@
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -5891,8 +5891,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>6</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>25</iWithdrawalProb>
 			<iPursuit>25</iPursuit>
 			<UnitMeshGroups>
@@ -6011,8 +6011,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>65</iWithdrawalProb>
 			<iPursuit>20</iPursuit>
 			<UnitMeshGroups>
@@ -6123,7 +6123,7 @@
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -6135,8 +6135,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -6246,8 +6246,8 @@
 				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
 				<TerrainType>TERRAIN_TRENCH</TerrainType>
@@ -6258,8 +6258,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>70</iWithdrawalProb>
 			<iEarlyWithdraw>75</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -6380,8 +6380,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -6502,8 +6502,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>45</iWithdrawalProb>
 			<iPursuit>35</iPursuit>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
@@ -6616,8 +6616,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>45</iWithdrawalProb>
 			<iPursuit>35</iPursuit>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
@@ -6728,8 +6728,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -6751,8 +6751,8 @@
 			<iCombat>5</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -6773,7 +6773,7 @@
 						<iYield>5</iYield>
 						<iYield>2</iYield>
 					</Yields>
-					<BonusType>BONUS_ELEPHANT</BonusType>
+					<BonusType>BONUS_ELEPHANTS</BonusType>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_SUBDUE</OutcomeType>
@@ -6864,8 +6864,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -6877,8 +6877,8 @@
 			<iCombat>5</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -6895,7 +6895,7 @@
 				<Outcome>
 					<OutcomeType>OUTCOME_BONUS_SPAWNED</OutcomeType>
 					<iChance>2</iChance>
-					<BonusType>BONUS_ELEPHANT</BonusType>
+					<BonusType>BONUS_ELEPHANTS</BonusType>
 					<Yields>
 						<iYield>5</iYield>
 						<iYield>2</iYield>
@@ -6991,8 +6991,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -7001,13 +7001,13 @@
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>25</iWithdrawalProb>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -7122,8 +7122,8 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -7136,8 +7136,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>15</iWithdrawalProb>
 			<iPursuit>20</iPursuit>
 			<UnitMeshGroups>
@@ -7241,7 +7241,7 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -7253,8 +7253,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -7370,7 +7370,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SEA</TerrainType>
 				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
@@ -7384,8 +7384,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iEarlyWithdraw>85</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -7493,12 +7493,12 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 			</TerrainImpassableTypes>
@@ -7506,14 +7506,14 @@
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iEarlyWithdraw>95</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -7594,7 +7594,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -7602,8 +7602,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -7703,14 +7703,14 @@
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_HILL</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -7732,8 +7732,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -7830,14 +7830,14 @@
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_HILL</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -7845,8 +7845,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -7952,7 +7952,7 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -7964,8 +7964,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>55</iWithdrawalProb>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -8072,14 +8072,14 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -8087,8 +8087,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>25</iWithdrawalProb>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -8198,7 +8198,7 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -8211,8 +8211,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>45</iWithdrawalProb>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -8309,20 +8309,20 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -8333,8 +8333,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>45</iWithdrawalProb>
 			<iEarlyWithdraw>95</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -8443,7 +8443,7 @@
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_HILL</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
@@ -8451,8 +8451,8 @@
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -8471,8 +8471,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -8567,8 +8567,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>2</fMaxSpeed>
@@ -8677,7 +8677,7 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -8685,7 +8685,7 @@
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -8693,8 +8693,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -8791,14 +8791,14 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -8806,8 +8806,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -8911,8 +8911,8 @@
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -8920,7 +8920,7 @@
 			</TerrainImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -8935,8 +8935,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>25</iWithdrawalProb>
 			<iPursuit>25</iPursuit>
 			<UnitMeshGroups>
@@ -9035,8 +9035,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iPursuit>60</iPursuit>
 			<UnitMeshGroups>
@@ -9132,7 +9132,7 @@
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -9140,8 +9140,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>4</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iPursuit>20</iPursuit>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -9240,8 +9240,8 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -9263,8 +9263,8 @@
 			<iCombat>5</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1</fMaxSpeed>
@@ -9371,7 +9371,7 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
@@ -9393,8 +9393,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>15</iWithdrawalProb>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -9513,8 +9513,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>60</iWithdrawalProb>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -9624,8 +9624,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<iPursuit>30</iPursuit>
 			<iEarlyWithdraw>30</iEarlyWithdraw>
@@ -9701,8 +9701,8 @@
 				</UnitAI>
 			</UnitAIs>
 			<iAnimalIgnoresBorders>1</iAnimalIgnoresBorders>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
+			<bOnlyDefensive>1</bOnlyDefensive>
 			<bAssassin>1</bAssassin>
 			<UnitCombatTargets>
 				<UnitCombatTarget>
@@ -9734,8 +9734,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iPursuit>25</iPursuit>
 			<UnitMeshGroups>
@@ -9874,8 +9874,8 @@
 				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -9887,8 +9887,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>50</iWithdrawalProb>
 			<iPursuit>50</iPursuit>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
@@ -10000,8 +10000,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>45</iWithdrawalProb>
 			<iPursuit>45</iPursuit>
 			<iEarlyWithdraw>45</iEarlyWithdraw>
@@ -10108,8 +10108,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -10117,7 +10117,7 @@
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
@@ -10144,8 +10144,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>5</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -10237,12 +10237,12 @@
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -10269,8 +10269,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -10419,8 +10419,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>60</iWithdrawalProb>
 			<iPursuit>30</iPursuit>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
@@ -10528,8 +10528,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -10548,8 +10548,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>45</iWithdrawalProb>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -10653,8 +10653,8 @@
 			<iCombat>6</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -10666,7 +10666,6 @@
 					<EarlyArtDefineTag>ART_DEF_UNIT_HUMPBACK_WHALE</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
-			<iMinAreaSize>10</iMinAreaSize>
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 			<KillOutcomes>
 				<Outcome>
@@ -10784,7 +10783,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -10792,8 +10791,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iPursuit>25</iPursuit>
 			<iEarlyWithdraw>75</iEarlyWithdraw>
@@ -10897,7 +10896,7 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -10909,8 +10908,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -10996,7 +10995,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -11004,8 +11003,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -11112,7 +11111,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -11120,8 +11119,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>55</iWithdrawalProb>
 			<iEarlyWithdraw>85</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -11223,20 +11222,20 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>45</iWithdrawalProb>
 			<iEarlyWithdraw>75</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -11347,20 +11346,20 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>3</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>50</iWithdrawalProb>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -11452,8 +11451,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -11465,8 +11464,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>10</iWithdrawalProb>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -11606,7 +11605,7 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -11618,8 +11617,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -11732,8 +11731,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SEA</TerrainType>
 				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
@@ -11747,8 +11746,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>65</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -11851,8 +11850,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -11861,8 +11860,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>35</iWithdrawalProb>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -12002,7 +12001,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -12015,8 +12014,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>6</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>25</iWithdrawalProb>
 			<iPursuit>30</iPursuit>
 			<UnitMeshGroups>
@@ -12097,8 +12096,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -12106,8 +12105,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -12198,26 +12197,14 @@
 				<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
 				<TerrainType>TERRAIN_PEAK</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<iCombat>4</iCombat>
-			<TerrainNatives>
-				<TerrainNative>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
-					<bTerrainNative>1</bTerrainNative>
-				</TerrainNative>
-				<TerrainNative>
-					<TerrainType>TERRAIN_PLAINS</TerrainType>
-					<bTerrainNative>1</bTerrainNative>
-				</TerrainNative>
-				<TerrainNative>
-					<TerrainType>TERRAIN_DESERT</TerrainType>
-					<bTerrainNative>1</bTerrainNative>
-				</TerrainNative>
-			</TerrainNatives>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -12283,26 +12270,14 @@
 				<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
 				<TerrainType>TERRAIN_PEAK</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<iCombat>17</iCombat>
-			<TerrainNatives>
-				<TerrainNative>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
-					<bTerrainNative>1</bTerrainNative>
-				</TerrainNative>
-				<TerrainNative>
-					<TerrainType>TERRAIN_PLAINS</TerrainType>
-					<bTerrainNative>1</bTerrainNative>
-				</TerrainNative>
-				<TerrainNative>
-					<TerrainType>TERRAIN_DESERT</TerrainType>
-					<bTerrainNative>1</bTerrainNative>
-				</TerrainNative>
-			</TerrainNatives>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -12368,26 +12343,14 @@
 				<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
 				<TerrainType>TERRAIN_PEAK</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<iCombat>9</iCombat>
-			<TerrainNatives>
-				<TerrainNative>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
-					<bTerrainNative>1</bTerrainNative>
-				</TerrainNative>
-				<TerrainNative>
-					<TerrainType>TERRAIN_PLAINS</TerrainType>
-					<bTerrainNative>1</bTerrainNative>
-				</TerrainNative>
-				<TerrainNative>
-					<TerrainType>TERRAIN_DESERT</TerrainType>
-					<bTerrainNative>1</bTerrainNative>
-				</TerrainNative>
-			</TerrainNatives>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -12453,26 +12416,14 @@
 				<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
 				<TerrainType>TERRAIN_PEAK</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<iCombat>3</iCombat>
-			<TerrainNatives>
-				<TerrainNative>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
-					<bTerrainNative>1</bTerrainNative>
-				</TerrainNative>
-				<TerrainNative>
-					<TerrainType>TERRAIN_PLAINS</TerrainType>
-					<bTerrainNative>1</bTerrainNative>
-				</TerrainNative>
-				<TerrainNative>
-					<TerrainType>TERRAIN_DESERT</TerrainType>
-					<bTerrainNative>1</bTerrainNative>
-				</TerrainNative>
-			</TerrainNatives>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -12543,8 +12494,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>70</iWithdrawalProb>
 			<iEarlyWithdraw>85</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -12677,8 +12628,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>25</iWithdrawalProb>
 			<iPursuit>40</iPursuit>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
@@ -12773,8 +12724,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PEAK</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SEA</TerrainType>
 				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
@@ -12788,8 +12739,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>55</iWithdrawalProb>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -12905,8 +12856,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -13009,7 +12960,7 @@
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -13018,8 +12969,8 @@
 			<iCombat>7</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iCollateralDamage>100</iCollateralDamage>
 			<iCollateralDamageLimit>75</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>4</iCollateralDamageMaxUnits>
@@ -13113,8 +13064,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -13122,8 +13073,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iPursuit>50</iPursuit>
 			<UnitMeshGroups>
@@ -13246,8 +13197,8 @@
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -13259,7 +13210,7 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -13278,8 +13229,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<iPursuit>10</iPursuit>
 			<iEarlyWithdraw>20</iEarlyWithdraw>
@@ -13365,8 +13316,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -13473,8 +13424,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -13586,8 +13537,8 @@
 			<iCombat>6</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -13697,8 +13648,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -13706,13 +13657,13 @@
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>4</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iPursuit>20</iPursuit>
 			<iEarlyWithdraw>20</iEarlyWithdraw>
@@ -13826,8 +13777,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -13846,8 +13797,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -13932,8 +13883,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 			</TerrainImpassableTypes>
@@ -13942,15 +13893,15 @@
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
 			<iCombat>4</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<iPursuit>20</iPursuit>
 			<UnitMeshGroups>
@@ -14046,15 +13997,15 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iEarlyWithdraw>40</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -14165,7 +14116,7 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 			</TerrainImpassableTypes>
@@ -14177,8 +14128,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -14296,8 +14247,8 @@
 			<iCombat>5</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>60</iWithdrawalProb>
 			<iEarlyWithdraw>70</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -14424,8 +14375,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -14433,7 +14384,7 @@
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
@@ -14450,15 +14401,15 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
 			<iCombat>3</iCombat>
 			<iAggression>4</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -14543,7 +14494,7 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -14556,8 +14507,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>10</iWithdrawalProb>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -14638,7 +14589,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -14650,8 +14601,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>50</iWithdrawalProb>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -14734,7 +14685,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -14742,8 +14693,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iPursuit>30</iPursuit>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
@@ -14826,8 +14777,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -14835,8 +14786,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>15</iWithdrawalProb>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -14942,8 +14893,8 @@
 			<iCombat>6</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iPursuit>35</iPursuit>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -15058,8 +15009,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
@@ -15067,13 +15018,13 @@
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>3</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>25</iWithdrawalProb>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -15173,8 +15124,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SEA</TerrainType>
 				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
@@ -15191,8 +15142,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>65</iWithdrawalProb>
 			<iEarlyWithdraw>95</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -15277,8 +15228,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -15298,8 +15249,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -15384,8 +15335,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -15393,8 +15344,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>4</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iPursuit>40</iPursuit>
 			<iEarlyWithdraw>25</iEarlyWithdraw>
@@ -15483,8 +15434,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -15492,8 +15443,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>55</iWithdrawalProb>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -15587,8 +15538,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PEAK</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -15608,8 +15559,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<iEarlyWithdraw>40</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -15735,12 +15686,12 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 			</TerrainImpassableTypes>
@@ -15748,14 +15699,14 @@
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>50</iWithdrawalProb>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -15855,8 +15806,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PEAK</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -15864,8 +15815,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>65</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -15975,8 +15926,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>60</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -16081,8 +16032,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -16093,8 +16044,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -16195,8 +16146,8 @@
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -16218,8 +16169,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>50</iWithdrawalProb>
 			<iEarlyWithdraw>85</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -16322,11 +16273,11 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 			</TerrainImpassableTypes>
@@ -16345,12 +16296,12 @@
 			<iCombat>4</iCombat>
 			<iAggression>5</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iPursuit>30</iPursuit>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iTerrainAttack>10</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -16372,7 +16323,7 @@
 			</TerrainAttacks>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -16471,7 +16422,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -16479,8 +16430,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>10</iWithdrawalProb>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -16579,7 +16530,7 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
@@ -16601,8 +16552,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iPursuit>20</iPursuit>
 			<iEarlyWithdraw>25</iEarlyWithdraw>
@@ -16717,8 +16668,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -16737,8 +16688,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>4</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>60</iWithdrawalProb>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -16824,7 +16775,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -16832,8 +16783,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iPursuit>30</iPursuit>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
@@ -16930,8 +16881,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -16944,8 +16895,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -17063,7 +17014,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -17071,8 +17022,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>4</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -17176,8 +17127,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -17185,8 +17136,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>60</iWithdrawalProb>
 			<iEarlyWithdraw>70</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -17271,8 +17222,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -17383,7 +17334,7 @@
 				<TerrainType>TERRAIN_OCEAN</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
@@ -17392,15 +17343,15 @@
 				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>70</iWithdrawalProb>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -17529,8 +17480,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iPursuit>40</iPursuit>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
@@ -17616,8 +17567,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -17637,8 +17588,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>15</iWithdrawalProb>
 			<iEarlyWithdraw>80</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -17740,8 +17691,8 @@
 				<TerrainType>TERRAIN_HILL</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -17750,13 +17701,13 @@
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>50</iWithdrawalProb>
 			<iEarlyWithdraw>70</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -17856,15 +17807,15 @@
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>5</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iCollateralDamage>100</iCollateralDamage>
 			<iCollateralDamageLimit>75</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>4</iCollateralDamageMaxUnits>
@@ -17959,13 +17910,13 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -17973,8 +17924,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>4</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -18068,21 +18019,21 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>4</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -18174,21 +18125,21 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>3</iCombat>
 			<iAggression>4</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -18288,14 +18239,14 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -18303,8 +18254,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -18420,8 +18371,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -18429,7 +18380,7 @@
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
@@ -18446,15 +18397,15 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
 			<iCombat>3</iCombat>
 			<iAggression>4</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -18572,8 +18523,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -18581,7 +18532,7 @@
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
@@ -18598,15 +18549,15 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
 			<iCombat>2</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -18721,26 +18672,26 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -18850,8 +18801,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>10</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<iPursuit>30</iPursuit>
 			<UnitMeshGroups>
@@ -18961,8 +18912,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -18970,7 +18921,7 @@
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -18984,8 +18935,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>35</iWithdrawalProb>
 			<iEarlyWithdraw>85</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -19081,8 +19032,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>4</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -19193,8 +19144,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -19302,8 +19253,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SEA</TerrainType>
 				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
@@ -19317,8 +19268,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>50</iWithdrawalProb>
 			<iPursuit>50</iPursuit>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
@@ -19429,16 +19380,16 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
@@ -19449,8 +19400,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -19468,7 +19419,7 @@
 				<Outcome>
 					<OutcomeType>OUTCOME_BONUS_SPAWNED</OutcomeType>
 					<iChance>2</iChance>
-					<BonusType>BONUS_SEA_LIONS</BonusType>
+					<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_SUBDUE</OutcomeType>
@@ -19570,8 +19521,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -19703,8 +19654,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>60</iWithdrawalProb>
 			<iEarlyWithdraw>80</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -19817,8 +19768,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -19937,7 +19888,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SEA</TerrainType>
 				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
@@ -19951,13 +19902,13 @@
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>1</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -20080,8 +20031,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>50</iWithdrawalProb>
 			<iPursuit>40</iPursuit>
 			<UnitMeshGroups>
@@ -20196,8 +20147,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
@@ -20206,8 +20157,8 @@
 			<iCombat>4</iCombat>
 			<iAggression>5</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iPursuit>50</iPursuit>
 			<iEarlyWithdraw>20</iEarlyWithdraw>
@@ -20304,8 +20255,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -20313,8 +20264,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>10</iWithdrawalProb>
 			<iEarlyWithdraw>20</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -20401,8 +20352,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -20414,8 +20365,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>6</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iPursuit>20</iPursuit>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -20537,7 +20488,7 @@
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 			</TerrainImpassableTypes>
@@ -20551,14 +20502,14 @@
 			<iCombat>3</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<iPursuit>30</iPursuit>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iTerrainAttack>10</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -20580,7 +20531,7 @@
 			</TerrainAttacks>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -20720,8 +20671,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
@@ -20732,8 +20683,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iPursuit>25</iPursuit>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -20836,15 +20787,15 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 			</TerrainImpassableTypes>
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>35</iWithdrawalProb>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -20942,8 +20893,8 @@
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -20961,8 +20912,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>4</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iPursuit>30</iPursuit>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -21056,13 +21007,13 @@
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -21089,8 +21040,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iEarlyWithdraw>70</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -21173,13 +21124,13 @@
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -21205,8 +21156,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iEarlyWithdraw>70</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -21289,13 +21240,13 @@
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -21322,8 +21273,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iEarlyWithdraw>70</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -21403,13 +21354,13 @@
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -21436,8 +21387,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iEarlyWithdraw>70</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -21519,11 +21470,11 @@
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
@@ -21539,8 +21490,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -21553,7 +21504,6 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
-			<PrereqGameOption>GAMEOPTION_ECOLOGICAL_ANIMALS</PrereqGameOption>
 			<KillOutcomes>
 				<Outcome>
 					<OutcomeType>OUTCOME_SUBDUE</OutcomeType>
@@ -21616,13 +21566,13 @@
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -21636,8 +21586,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -21650,7 +21600,6 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
-			<PrereqGameOption>GAMEOPTION_ECOLOGICAL_ANIMALS</PrereqGameOption>
 			<KillOutcomes>
 				<Outcome>
 					<OutcomeType>OUTCOME_SUBDUE</OutcomeType>
@@ -21757,7 +21706,7 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -21770,8 +21719,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iPursuit>30</iPursuit>
 			<iEarlyWithdraw>30</iEarlyWithdraw>
@@ -21881,7 +21830,7 @@
 				<TerrainType>TERRAIN_OCEAN</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TRENCH</TerrainType>
 				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
@@ -21890,8 +21839,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>65</iWithdrawalProb>
 			<iEarlyWithdraw>95</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -22014,7 +21963,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -22025,8 +21974,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<iPursuit>30</iPursuit>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
@@ -22125,7 +22074,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
@@ -22139,8 +22088,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>35</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -22224,8 +22173,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -22234,8 +22183,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -22342,8 +22291,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>15</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -22463,16 +22412,16 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PEAK</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<iCombat>1</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -22572,7 +22521,7 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -22580,8 +22529,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>65</iWithdrawalProb>
 			<iEarlyWithdraw>65</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -22676,7 +22625,7 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -22689,8 +22638,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>5</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>65</iWithdrawalProb>
 			<iEarlyWithdraw>65</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -22798,7 +22747,7 @@
 				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
 				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -22813,8 +22762,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iEarlyWithdraw>40</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -22916,8 +22865,8 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -22930,7 +22879,7 @@
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -22985,8 +22934,8 @@
 			<iCombat>1</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>35</iWithdrawalProb>
 			<iEarlyWithdraw>90</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -23067,7 +23016,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -23078,8 +23027,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iEarlyWithdraw>80</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -23189,10 +23138,10 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 			</TerrainImpassableTypes>
@@ -23200,13 +23149,13 @@
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>3</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -23318,8 +23267,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -23343,8 +23292,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iPursuit>30</iPursuit>
 			<UnitMeshGroups>
@@ -23440,8 +23389,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>0</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -23562,7 +23511,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -23575,8 +23524,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>2</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -23677,7 +23626,7 @@
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
@@ -23688,8 +23637,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>4</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iPursuit>50</iPursuit>
 			<UnitMeshGroups>
@@ -23809,12 +23758,12 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 			</TerrainImpassableTypes>
@@ -23831,7 +23780,7 @@
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -23842,8 +23791,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iPursuit>30</iPursuit>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -23926,7 +23875,7 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -23940,8 +23889,8 @@
 			<iCombat>2</iCombat>
 			<iAggression>3</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>10</iWithdrawalProb>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
 			<UnitMeshGroups>
@@ -24048,7 +23997,7 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -24056,8 +24005,8 @@
 			<iCombat>3</iCombat>
 			<iAggression>1</iAggression>
 			<bBlendIntoCity>1</bBlendIntoCity>
-			<iXPValueAttack>1</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
+			<iXPValueAttack>9</iXPValueAttack>
+			<iXPValueDefense>9</iXPValueDefense>
 			<iWithdrawalProb>50</iWithdrawalProb>
 			<iEarlyWithdraw>75</iEarlyWithdraw>
 			<UnitMeshGroups>

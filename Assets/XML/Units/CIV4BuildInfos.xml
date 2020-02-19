@@ -2,8 +2,8 @@
 <!-- Notes:
 ** 'CANNOT' be built on this feature 
 	<FeatureStruct>
-		<FeatureType>FEATURE_FOREST_NEW</FeatureType>
-		<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+		<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+		<PrereqTech>TECH_DUMMY</PrereqTech>
 	</FeatureStruct>
 **
 -->
@@ -12,26 +12,250 @@
 		<!-- Prehistoric -->
 		<!-- Seed Camp (Kill) -->
 		<BuildInfo>
-			<Type>BUILD_GRAIN_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_GRAIN_GATHERER_K</Description>
+			<Type>BUILD_SEED_CAMP_KILL</Type>
+			<Description>TXT_KEY_BUILD_SEED_CAMP_KILL</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_GRAIN_GATHERER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
-					<FeatureType>FEATURE_TARPIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<FeatureType>FEATURE_JUNGLE</FeatureType>
+					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
+					<iTime>400</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_MANGROVE</FeatureType>
+					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
+					<iTime>300</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_FOREST</FeatureType>
+					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
+					<iTime>300</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
+					<iTime>400</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_SWAMP</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
+					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
+					<iTime>50</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_SAVANNA</FeatureType>
+					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_BAMBOO</FeatureType>
+					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
+					<iTime>300</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
+					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_CITY_RUINS</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_ARCOLOGY_RUINS</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -43,26 +267,250 @@
 		</BuildInfo>
 		<!-- Seed Camp (No Kill) -->
 		<BuildInfo>
-			<Type>BUILD_GRAIN_GATHERER_2</Type>
-			<Description>TXT_KEY_BUILD_GRAIN_GATHERER</Description>
+			<Type>BUILD_SEED_CAMP</Type>
+			<Description>TXT_KEY_BUILD_SEED_CAMP</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_AGRICULTURE</ObsoleteTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_GRAIN_GATHERER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
-					<FeatureType>FEATURE_TARPIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<FeatureType>FEATURE_JUNGLE</FeatureType>
+					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
+					<iTime>400</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_MANGROVE</FeatureType>
+					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
+					<iTime>300</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_FOREST</FeatureType>
+					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
+					<iTime>300</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
+					<iTime>400</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_SWAMP</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
+					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
+					<iTime>50</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_SAVANNA</FeatureType>
+					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_BAMBOO</FeatureType>
+					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
+					<iTime>300</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
+					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_CITY_RUINS</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_ARCOLOGY_RUINS</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -74,13 +522,13 @@
 		</BuildInfo>
 		<!-- Wood Gatherer (Kill) -->
 		<BuildInfo>
-			<Type>BUILD_PINE_GATHERER</Type>
+			<Type>BUILD_WOOD_GATHERER</Type>
 			<Description>TXT_KEY_BUILD_WOOD_GATHERER</Description>
-			<PrereqTech>TECH_WOOD_WORKING</PrereqTech>
+			<PrereqTech>TECH_WOODWORKING</PrereqTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_PINE_GATHERER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_WOOD_GATHERER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_U</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
@@ -88,8 +536,8 @@
 		</BuildInfo>
 		<!-- Lumber Jack -->
 		<BuildInfo>
-			<Type>BUILD_LUMBER_JACK</Type>
-			<Description>TXT_KEY_BUILD_LUMBER_JACK</Description>
+			<Type>BUILD_LUMBERJACK</Type>
+			<Description>TXT_KEY_BUILD_LUMBERJACK</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
@@ -102,19 +550,19 @@
 		</BuildInfo>
 		<!-- Stone Tools Workshop (Mine/Quarry) (Kill) -->
 		<BuildInfo>
-			<Type>BUILD_ROCK_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_ROCK_GATHERER_K</Description>
+			<Type>BUILD_STONE_TOOLS_WORKSHOP_KILL</Type>
+			<Description>TXT_KEY_BUILD_STONE_TOOLS_WORKSHOP_KILL</Description>
 			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_ROCK_GATHERER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_STONE_TOOLS_WORKSHOP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
@@ -134,19 +582,19 @@
 		</BuildInfo>
 		<!-- Stone Tools Workshop (Mine/Quarry) (No Kill) -->
 		<BuildInfo>
-			<Type>BUILD_ROCK_GATHERER_2</Type>
-			<Description>TXT_KEY_BUILD_ROCK_GATHERER</Description>
+			<Type>BUILD_STONE_TOOLS_WORKSHOP</Type>
+			<Description>TXT_KEY_BUILD_STONE_TOOLS_WORKSHOP</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_EXPLOSIVES</ObsoleteTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_ROCK_GATHERER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_STONE_TOOLS_WORKSHOP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
@@ -178,7 +626,7 @@
 			<FeatureStructs>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
@@ -251,8 +699,8 @@
 		</BuildInfo>
 		<!-- Tar Gatherer (Kill) -->
 		<BuildInfo>
-			<Type>BUILD_TAR_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_TAR_GATHERER_K</Description>
+			<Type>BUILD_TAR_GATHERER_KILL</Type>
+			<Description>TXT_KEY_BUILD_TAR_GATHERER_KILL</Description>
 			<PrereqTech>TECH_ADHESIVES</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
@@ -267,7 +715,7 @@
 		</BuildInfo>
 		<!-- Tar Gatherer (No Kill) -->
 		<BuildInfo>
-			<Type>BUILD_TAR_GATHERER2</Type>
+			<Type>BUILD_TAR_GATHERER</Type>
 			<Description>TXT_KEY_BUILD_TAR_GATHERER</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_REFINING</ObsoleteTech>
@@ -285,7 +733,7 @@
 		<BuildInfo>
 			<Type>BUILD_TRAIL</Type>
 			<Description>TXT_KEY_BUILD_TRAIL</Description>
-			<PrereqTech>TECH_TRACKING</PrereqTech>
+			<PrereqTech>TECH_TRAILS</PrereqTech>
 			<iTime>175</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
@@ -325,13 +773,13 @@
 		</BuildInfo>
 		<!-- Paved Road -->
 		<BuildInfo>
-			<Type>BUILD_PAVED</Type>
-			<Description>TXT_KEY_BUILD_PAVED</Description>
+			<Type>BUILD_PAVED_ROAD</Type>
+			<Description>TXT_KEY_BUILD_PAVED_ROAD</Description>
 			<PrereqTech>TECH_PAVED_ROADS</PrereqTech>
 			<iTime>250</iTime>
 			<iCost>4</iCost>
 			<bKill>0</bKill>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
 			<HotKey>KB_R</HotKey>
 			<bShiftDown>1</bShiftDown>
@@ -340,13 +788,13 @@
 		</BuildInfo>
 		<!-- Modern Road -->
 		<BuildInfo>
-			<Type>BUILD_MODERN_ROAD</Type>
+			<Type>BUILD_HIGHWAY</Type>
 			<Description>TXT_KEY_BUILD_HIGHWAY</Description>
 			<PrereqTech>TECH_HIGHWAY_SYSTEMS</PrereqTech>
 			<iTime>200</iTime>
 			<iCost>5</iCost>
 			<bKill>0</bKill>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
 			<HotKey>KB_R</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
@@ -368,13 +816,13 @@
 		</BuildInfo>
 		<!-- Electric Railroad -->
 		<BuildInfo>
-			<Type>BUILD_RAILROAD_ELECTRIC</Type>
-			<Description>TXT_KEY_BUILD_RAILROAD_ELECTRIC</Description>
+			<Type>BUILD_ELECTRIC_RAILROAD</Type>
+			<Description>TXT_KEY_BUILD_ELECTRIC_RAILROAD</Description>
 			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
 			<iTime>400</iTime>
 			<iCost>12</iCost>
 			<bKill>0</bKill>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<EntityEvent>ENTITY_EVENT_RAILROAD</EntityEvent>
 			<HotKey>KB_R</HotKey>
 			<bShiftDown>1</bShiftDown>
@@ -383,13 +831,13 @@
 		</BuildInfo>
 		<!-- Gravtube -->
 		<BuildInfo>
-			<Type>BUILD_GRAVTUBE</Type>
-			<Description>TXT_KEY_BUILD_GRAVTUBE</Description>
-			<PrereqTech>TECH_MAGLEV</PrereqTech>
+			<Type>BUILD_MAGLEV</Type>
+			<Description>TXT_KEY_BUILD_MAGLEV</Description>
+			<PrereqTech>TECH_MAGNETIC_LEVITATION</PrereqTech>
 			<iTime>600</iTime>
 			<iCost>50</iCost>
 			<bKill>0</bKill>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
 			<HotKey>KB_R</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
@@ -438,7 +886,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -453,7 +901,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -462,20 +910,20 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -497,7 +945,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -651,15 +1099,15 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_TARPIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -726,14 +1174,14 @@
 			<FeatureStructs>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -758,14 +1206,14 @@
 			<FeatureStructs>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -797,7 +1245,7 @@
 		<BuildInfo>
 			<Type>BUILD_MODERN_MINE</Type>
 			<Description>TXT_KEY_BUILD_MODERN_MINE</Description>
-			<PrereqTech>TECH_SEISMOLOGY</PrereqTech>
+			<PrereqTech>TECH_MODERN_SEISMOLOGY</PrereqTech>
 			<iTime>1200</iTime>
 			<iCost>40</iCost>
 			<bKill>0</bKill>
@@ -821,7 +1269,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -836,7 +1284,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -845,20 +1293,20 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -880,7 +1328,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -1042,14 +1490,14 @@
 		</BuildInfo>
 		<!-- Manufacturing Complex -->
 		<BuildInfo>
-			<Type>BUILD_5FACTORY</Type>
+			<Type>BUILD_MANUFACTURING_COMPLEX</Type>
 			<bForceOverwrite>1</bForceOverwrite>
 			<Description>TXT_KEY_BUILD_INDUSTRIAL_COMPLEX</Description>
-			<PrereqTech>TECH_MINIATURIZATION</PrereqTech>
+			<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 			<iTime>1800</iTime>
 			<iCost>100</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_5FACTORY</ImprovementType>
+			<ImprovementType>IMPROVEMENT_MANUFACTURING_COMPLEX</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
@@ -1069,7 +1517,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -1084,7 +1532,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -1093,20 +1541,20 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -1128,7 +1576,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -1282,22 +1730,22 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_TARPIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -1307,15 +1755,15 @@
 		</BuildInfo>
 		<!-- Factory -->
 		<BuildInfo>
-			<Type>BUILD_3FACTORY</Type>
+			<Type>BUILD_FACTORY</Type>
 			<bForceOverwrite>1</bForceOverwrite>
 			<Description>TXT_KEY_BUILD_FACTORY</Description>
 			<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
-			<ObsoleteTech>TECH_MINIATURIZATION</ObsoleteTech>
+			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
 			<iTime>1000</iTime>
 			<iCost>50</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_3FACTORY</ImprovementType>
+			<ImprovementType>IMPROVEMENT_FACTORY</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
@@ -1335,7 +1783,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -1350,7 +1798,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -1359,20 +1807,20 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -1394,7 +1842,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -1548,22 +1996,22 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_TARPIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -1573,15 +2021,15 @@
 		</BuildInfo>
 		<!-- Factory -->
 		<BuildInfo>
-			<Type>BUILD_3FACTORY_2</Type>
+			<Type>BUILD_FACTORY_COLD_CLIMATE</Type>
 			<bForceOverwrite>1</bForceOverwrite>
 			<Description>TXT_KEY_BUILD_FACTORY_COLD</Description>
 			<PrereqTech>TECH_REFRIGERATION</PrereqTech>
-			<ObsoleteTech>TECH_MINIATURIZATION</ObsoleteTech>
+			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
 			<iTime>1000</iTime>
 			<iCost>50</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_3FACTORY_2</ImprovementType>
+			<ImprovementType>IMPROVEMENT_FACTORY_COLD_CLIMATE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
@@ -1601,7 +2049,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -1616,7 +2064,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -1625,20 +2073,20 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -1660,7 +2108,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -1814,22 +2262,22 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_TARPIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -1866,7 +2314,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -1881,7 +2329,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -1890,14 +2338,14 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -1932,22 +2380,22 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_TARPIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -2007,7 +2455,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -2015,7 +2463,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -2031,14 +2479,14 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -2074,13 +2522,13 @@
 		</BuildInfo>
 		<!-- Hydro Plant -->
 		<BuildInfo>
-			<Type>BUILD_HYDRO_PLANT</Type>
-			<Description>TXT_KEY_BUILD_IMPROVEMENT_HYDRO_PLANT</Description>
+			<Type>BUILD_HYDRO_DAM</Type>
+			<Description>TXT_KEY_BUILD_IMPROVEMENT_HYDRO_DAM</Description>
 			<PrereqTech>TECH_HYDROELECTRICITY</PrereqTech>
 			<iTime>1200</iTime>
 			<iCost>200</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_HYDRO_PLANT</ImprovementType>
+			<ImprovementType>IMPROVEMENT_HYDRO_DAM</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_W</HotKey>
 			<bShiftDown>1</bShiftDown>
@@ -2123,7 +2571,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -2131,7 +2579,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -2146,7 +2594,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -2162,14 +2610,14 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -2182,7 +2630,7 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -2244,7 +2692,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -2260,7 +2708,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -2275,7 +2723,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -2283,14 +2731,14 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -2324,8 +2772,8 @@
 		</BuildInfo>
 		<!-- Salt Gatherer (Quarry) (Kill) -->
 		<BuildInfo>
-			<Type>BUILD_SALT_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_SALT_GATHERER_K</Description>
+			<Type>BUILD_SALT_GATHERER_KILL</Type>
+			<Description>TXT_KEY_BUILD_SALT_GATHERER_KILL</Description>
 			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
@@ -2340,7 +2788,7 @@
 		</BuildInfo>
 		<!-- Salt Gatherer (Quarry) (No Kill) -->
 		<BuildInfo>
-			<Type>BUILD_SALT_GATHERER2</Type>
+			<Type>BUILD_SALT_GATHERER</Type>
 			<Description>TXT_KEY_BUILD_SALT_GATHERER</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_EXPLOSIVES</ObsoleteTech>
@@ -2391,7 +2839,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -2399,7 +2847,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -2415,20 +2863,20 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -2450,7 +2898,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -2511,7 +2959,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -2527,7 +2975,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -2536,14 +2984,14 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -2570,14 +3018,14 @@
 		</BuildInfo>
 		<!-- Hunting Camp -->
 		<BuildInfo>
-			<Type>BUILD_CAMP</Type>
-			<Description>TXT_KEY_BUILD_CAMP</Description>
+			<Type>BUILD_HUNTING_CAMP</Type>
+			<Description>TXT_KEY_BUILD_HUNTING_CAMP</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_MONARCHY</ObsoleteTech>
 			<iTime>300</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_CAMP</ImprovementType>
+			<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_H</HotKey>
 			<iHotKeyPriority>1</iHotKeyPriority>
@@ -2599,13 +3047,13 @@
 		</BuildInfo>
 		<!-- Hydrocarbon Well -->
 		<BuildInfo>
-			<Type>BUILD_WELL</Type>
-			<Description>TXT_KEY_BUILD_WELL</Description>
+			<Type>BUILD_HYDROCARBON_WELL</Type>
+			<Description>TXT_KEY_BUILD_HYDROCARBON_WELL</Description>
 			<PrereqTech>TECH_REFINING</PrereqTech>
 			<iTime>1000</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_WELL</ImprovementType>
+			<ImprovementType>IMPROVEMENT_HYDROCARBON_WELL</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
@@ -2625,7 +3073,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -2640,7 +3088,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -2649,20 +3097,20 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -2878,7 +3326,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -2893,7 +3341,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -2902,20 +3350,20 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -2937,7 +3385,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -3110,14 +3558,14 @@
 			<FeatureStructs>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -3131,29 +3579,29 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_TARPIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -3185,14 +3633,14 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -3205,7 +3653,7 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -3226,22 +3674,22 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_TARPIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -3280,7 +3728,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -3295,7 +3743,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -3304,20 +3752,20 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -3339,7 +3787,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -3493,22 +3941,22 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_TARPIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -3547,7 +3995,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -3562,7 +4010,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -3571,20 +4019,20 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -3606,7 +4054,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -3760,22 +4208,22 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_TARPIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -3787,13 +4235,13 @@
 		</BuildInfo>
 		<!-- Suburb -->
 		<BuildInfo>
-			<Type>BUILD_SUBURB</Type>
-			<Description>TXT_KEY_BUILD_SUBURB</Description>
+			<Type>BUILD_SUBURBS</Type>
+			<Description>TXT_KEY_BUILD_SUBURBS</Description>
 			<PrereqTech>TECH_MASS_TRANSIT</PrereqTech>
 			<iTime>1200</iTime>
 			<iCost>400</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_SUBURB</ImprovementType>
+			<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
@@ -3813,7 +4261,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -3828,7 +4276,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -3837,20 +4285,20 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -3872,7 +4320,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -4026,22 +4474,22 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_TARPIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -4084,7 +4532,7 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>NONE</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>0</iProduction>
@@ -4105,14 +4553,14 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>NONE</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>NONE</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>0</iProduction>
@@ -4133,7 +4581,7 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>NONE</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>0</iProduction>
@@ -4170,14 +4618,14 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -4198,7 +4646,7 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -4226,7 +4674,7 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>NONE</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -4240,8 +4688,8 @@
 		</BuildInfo>
 		<!-- Remove Swamp -->
 		<BuildInfo>
-			<Type>BUILD_REMOVE_SWAMP</Type>
-			<Description>TXT_KEY_BUILD_REMOVE_SWAMP</Description>
+			<Type>BUILD_DRAIN_SWAMP</Type>
+			<Description>TXT_KEY_BUILD_DRAIN_SWAMP</Description>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>0</iTime>
 			<iCost>0</iCost>
@@ -4250,14 +4698,14 @@
 			<FeatureStructs>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -4270,8 +4718,8 @@
 		</BuildInfo>
 		<!-- Remove Rock Form -->
 		<BuildInfo>
-			<Type>BUILD_REMOVE_ROCK_FORM</Type>
-			<Description>TXT_KEY_BUILD_REMOVE_ROCK_FORM</Description>
+			<Type>BUILD_REMOVE_ROCK_FORMATION</Type>
+			<Description>TXT_KEY_BUILD_REMOVE_ROCK_FORMATION</Description>
 			<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 			<iTime>0</iTime>
 			<iCost>0</iCost>
@@ -4435,7 +4883,7 @@
 		<BuildInfo>
 			<Type>BUILD_FOREST_PRESERVE</Type>
 			<Description>TXT_KEY_BUILD_FOREST_PRESERVE</Description>
-			<PrereqTech>TECH_WILDERNESSC</PrereqTech>
+			<PrereqTech>TECH_WILDLIFE_CONSERVATION</PrereqTech>
 			<iTime>800</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
@@ -4447,8 +4895,8 @@
 		</BuildInfo>
 		<!-- Scrub Fallout Rapidly -->
 		<BuildInfo>
-			<Type>BUILD_SCRUB_FALLOUT_RAPIDLY</Type>
-			<Description>TXT_KEY_BUILD_SCRUB_FALLOUT_RAPIDLY</Description>
+			<Type>BUILD_CLEAR_FALLOUT_FAST</Type>
+			<Description>TXT_KEY_BUILD_CLEAR_FALLOUT_FAST</Description>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>0</iTime>
 			<iCost>0</iCost>
@@ -4471,7 +4919,7 @@
 		<BuildInfo>
 			<Type>BUILD_GROUNDWATER_WELL</Type>
 			<Description>TXT_KEY_BUILD_GROUNDWATER_WELL</Description>
-			<PrereqTech>TECH_SEISMOLOGY</PrereqTech>
+			<PrereqTech>TECH_MODERN_SEISMOLOGY</PrereqTech>
 			<iTime>1000</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
@@ -4479,8 +4927,8 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
-					<FeatureType>FEATURE_TARPIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -4523,13 +4971,13 @@
 		</BuildInfo>
 		<!-- Archaeological Site -->
 		<BuildInfo>
-			<Type>BUILD_EXPLORETEMPLE</Type>
-			<Description>TXT_KEY_BUILD_EXPLORETEMPLE</Description>
+			<Type>BUILD_ARCHEOLOGICAL_SITE</Type>
+			<Description>TXT_KEY_BUILD_ARCHEOLOGICAL_SITE</Description>
 			<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
 			<iTime>100</iTime>
 			<iCost>50</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_EXPLORETEMPLE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_ARCHEOLOGICAL_SITE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
 			<HotKey>KB_S</HotKey>
 			<bShiftDown>1</bShiftDown>
@@ -4538,13 +4986,13 @@
 		</BuildInfo>
 		<!-- Modern Windmill -->
 		<BuildInfo>
-			<Type>BUILD_MODERNWINDMILL</Type>
-			<Description>TXT_KEY_BUILD_MODERNWINDMILL</Description>
+			<Type>BUILD_MODERN_WINDMILL</Type>
+			<Description>TXT_KEY_BUILD_MODERN_WINDMILL</Description>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iTime>1000</iTime>
 			<iCost>50</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_DESERTWINDMILL</ImprovementType>
+			<ImprovementType>IMPROVEMENT_MODERN_WINDMILL</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
@@ -4572,7 +5020,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -4580,7 +5028,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -4596,14 +5044,14 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -4617,36 +5065,36 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_TARPIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_OASIS</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -4659,13 +5107,13 @@
 		</BuildInfo>
 		<!-- Bunker -->
 		<BuildInfo>
-			<Type>BUILD_BUNKER</Type>
-			<Description>TXT_KEY_BUILD_BUNKER</Description>
+			<Type>BUILD_COMMAND_BUNKER</Type>
+			<Description>TXT_KEY_BUILD_COMMAND_BUNKER</Description>
 			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
 			<iTime>1200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_BUNKER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_COMMAND_BUNKER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bShiftDown>1</bShiftDown>
@@ -4675,13 +5123,13 @@
 		</BuildInfo>
 		<!-- Future Bunker -->
 		<BuildInfo>
-			<Type>BUILD_FUTURE_BUNKER</Type>
-			<Description>TXT_KEY_BUILD_FUTURE_BUNKER</Description>
+			<Type>BUILD_COMMAND_CENTER</Type>
+			<Description>TXT_KEY_BUILD_COMMAND_CENTER</Description>
 			<PrereqTech>TECH_METAMATERIALS</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_FUTURE_BUNKER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_COMMAND_CENTER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bShiftDown>1</bShiftDown>
@@ -4691,13 +5139,13 @@
 		</BuildInfo>
 		<!-- Wildlife Sanctuary -->
 		<BuildInfo>
-			<Type>BUILD_SAFARI</Type>
-			<Description>TXT_KEY_BUILD_SAFARI</Description>
+			<Type>BUILD_WILDLIFE_SANCTUARY</Type>
+			<Description>TXT_KEY_BUILD_WILDLIFE_SANCTUARY</Description>
 			<PrereqTech>TECH_TOURISM</PrereqTech>
 			<iTime>500</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_SAFARI</ImprovementType>
+			<ImprovementType>IMPROVEMENT_WILDLIFE_SANCTUARY</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_H</HotKey>
 			<iHotKeyPriority>1</iHotKeyPriority>
@@ -4707,7 +5155,7 @@
 		<BuildInfo>
 			<Type>BUILD_SUBMERGED_TOWN</Type>
 			<Description>TXT_KEY_BUILD_SUBMERGED_TOWN</Description>
-			<PrereqTech>TECH_MARINEARCHITECTURE</PrereqTech>
+			<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
 			<iTime>0</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
@@ -4717,7 +5165,7 @@
 				<TerrainStruct>
 					<!--- can never be built in Trench Terrain -->
 					<TerrainType>TERRAIN_TRENCH</TerrainType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>400</iTime>
 				</TerrainStruct>
 			</TerrainStructs>
@@ -4739,7 +5187,7 @@
 				<TerrainStruct>
 					<!--- can never be built in Trench Terrain -->
 					<TerrainType>TERRAIN_TRENCH</TerrainType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>400</iTime>
 				</TerrainStruct>
 			</TerrainStructs>
@@ -4749,13 +5197,13 @@
 		</BuildInfo>
 		<!-- Geothermal Borehole -->
 		<BuildInfo>
-			<Type>BUILD_GEOTHERMAL_BOREHOLE</Type>
-			<Description>TXT_KEY_BUILD_GEOTHERMAL_BOREHOLE</Description>
+			<Type>BUILD_GEOTHERMAL_FACTORY</Type>
+			<Description>TXT_KEY_BUILD_GEOTHERMAL_FACTORY</Description>
 			<PrereqTech>TECH_VOLCANOLOGY</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_GEOTHERMAL_BOREHOLE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_GEOTHERMAL_FACTORY</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_MINE</EntityEvent>
 			<HotKey>KB_M</HotKey>
 			<iHotKeyPriority>1</iHotKeyPriority>
@@ -4763,13 +5211,13 @@
 		</BuildInfo>
 		<!-- Sea Fort -->
 		<BuildInfo>
-			<Type>BUILD_SEA_FORT</Type>
-			<Description>TXT_KEY_BUILD_SEA_FORT</Description>
+			<Type>BUILD_AQUATIC_FORCEFIELD</Type>
+			<Description>TXT_KEY_BUILD_AQUATIC_FORCEFIELD</Description>
 			<PrereqTech>TECH_SHIELDING</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_SEA_FORT</ImprovementType>
+			<ImprovementType>IMPROVEMENT_AQUATIC_FORCEFIELD</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<iHotKeyPriority>1</iHotKeyPriority>
@@ -4777,14 +5225,14 @@
 		</BuildInfo>
 		<!-- Sea Air Defense -->
 		<BuildInfo>
-			<Type>BUILD_SEA_AIR_DEFENSE</Type>
-			<Description>TXT_KEY_BUILD_SEA_AIR_DEFENSE</Description>
-			<Help>TXT_KEY_BUILD_SEA_AIR_DEFENSE_HELP</Help>
+			<Type>BUILD_AQUATIC_ANTI_AIR_DEFENSE</Type>
+			<Description>TXT_KEY_BUILD_AQUATIC_ANTI_AIR_DEFENSE</Description>
+			<Help>TXT_KEY_BUILD_AQUATIC_ANTI_AIR_DEFENSE_HELP</Help>
 			<PrereqTech>TECH_ORBITAL_FLIGHT</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_SEA_AIR_DEFENSE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bShiftDown>1</bShiftDown>
@@ -4793,8 +5241,8 @@
 		</BuildInfo>
 		<!-- Break Ice -->
 		<BuildInfo>
-			<Type>BUILD_BREAK_ICE</Type>
-			<Description>TXT_KEY_BUILD_BREAK_ICE_K</Description>
+			<Type>BUILD_BREAK_ICE_KILL</Type>
+			<Description>TXT_KEY_BUILD_BREAK_ICE_KILL</Description>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
@@ -4815,7 +5263,7 @@
 		</BuildInfo>
 		<!-- Break Ice (no kill) -->
 		<BuildInfo>
-			<Type>BUILD_BREAK_ICE_2</Type>
+			<Type>BUILD_BREAK_ICE</Type>
 			<Description>TXT_KEY_BUILD_BREAK_ICE</Description>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
@@ -4837,8 +5285,8 @@
 		</BuildInfo>
 		<!-- Jungle Camp (Kill) -->
 		<BuildInfo>
-			<Type>BUILD_JUNGLE_CAMP_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_JUNGLE_CAMP_K</Description>
+			<Type>BUILD_JUNGLE_CAMP_KILL</Type>
+			<Description>TXT_KEY_BUILD_JUNGLE_CAMP_KILL</Description>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>600</iTime>
@@ -4862,8 +5310,8 @@
 		</BuildInfo>
 		<!-- Desert Camp (Kill) -->
 		<BuildInfo>
-			<Type>BUILD_DESERT_CAMP_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_DESERT_CAMP_K</Description>
+			<Type>BUILD_DESERT_CAMP_KILL</Type>
+			<Description>TXT_KEY_BUILD_DESERT_CAMP_KILL</Description>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>600</iTime>
@@ -4887,8 +5335,8 @@
 		</BuildInfo>
 		<!-- Wetlands Camp (Kill) -->
 		<BuildInfo>
-			<Type>BUILD_WETLANDS_CAMP_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_WETLANDS_CAMP_K</Description>
+			<Type>BUILD_WETLANDS_CAMP_KILL</Type>
+			<Description>TXT_KEY_BUILD_WETLANDS_CAMP_KILL</Description>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>600</iTime>
@@ -4921,15 +5369,15 @@
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
-					<FeatureType>FEATURE_PLAGUEGAS</FeatureType>
+					<FeatureType>FEATURE_PLAGUED_SMOG</FeatureType>
 					<PrereqTech>TECH_ARTIFICIAL_LIFE</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_BIOGAS</FeatureType>
-					<PrereqTech>TECH_GENEMANIPULATION</PrereqTech>
+					<FeatureType>FEATURE_INFECTIOUS_SMOG</FeatureType>
+					<PrereqTech>TECH_GENE_MANIPULATION</PrereqTech>
 					<iTime>600</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -4951,15 +5399,15 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
-					<FeatureType>FEATURE_PLAGUEGAS</FeatureType>
+					<FeatureType>FEATURE_PLAGUED_SMOG</FeatureType>
 					<PrereqTech>TECH_ARTIFICIAL_LIFE</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>20</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_BIOGAS</FeatureType>
-					<PrereqTech>TECH_GENEMANIPULATION</PrereqTech>
+					<FeatureType>FEATURE_INFECTIOUS_SMOG</FeatureType>
+					<PrereqTech>TECH_GENE_MANIPULATION</PrereqTech>
 					<iTime>600</iTime>
 					<iProduction>20</iProduction>
 					<bRemove>1</bRemove>
@@ -4971,13 +5419,13 @@
 		</BuildInfo>
 		<!-- Plant Jungle -->
 		<BuildInfo>
-			<Type>BUILD_MAKE_JUNGLE</Type>
-			<Description>TXT_KEY_BUILD_MAKE_JUNGLE</Description>
+			<Type>BUILD_PLANT_JUNGLE</Type>
+			<Description>TXT_KEY_BUILD_PLANT_JUNGLE</Description>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iTime>3000</iTime>
 			<iCost>40</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_MAKE_JUNGLE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLANT_JUNGLE</ImprovementType>
 			<FeatureChange>FEATURE_JUNGLE</FeatureChange>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
@@ -4990,7 +5438,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -5005,7 +5453,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -5014,20 +5462,20 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -5049,7 +5497,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -5211,62 +5659,62 @@
 		</BuildInfo>
 		<!-- Plant Forest -->
 		<BuildInfo>
-			<Type>BUILD_PLANT_FOREST</Type>
-			<Description>TXT_KEY_BUILD_PLANT_FOREST</Description>
+			<Type>BUILD_YOUNG_FOREST</Type>
+			<Description>TXT_KEY_BUILD_YOUNG_FOREST</Description>
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<iTime>1000</iTime>
 			<iCost>20</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_PLANT_FOREST</ImprovementType>
-			<FeatureChange>FEATURE_FOREST_NEW</FeatureChange><!-- canBuild() should check all feature requirements against the plot, not only map category and feature already on plot conditions as it currently does -->
+			<ImprovementType>IMPROVEMENT_YOUNG_FOREST</ImprovementType>
+			<FeatureChange>FEATURE_FOREST_YOUNG</FeatureChange><!-- canBuild() should check all feature requirements against the plot, not only map category and feature already on plot conditions as it currently does -->
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>0</iTime>
 					<iProduction>0</iProduction>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>0</iTime>
 					<iProduction>0</iProduction>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>0</iTime>
 					<iProduction>0</iProduction>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_MANGROVE</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>0</iTime>
 					<iProduction>0</iProduction>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_BAMBOO</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>0</iTime>
 					<iProduction>0</iProduction>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -5280,7 +5728,7 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -5441,13 +5889,13 @@
 		</BuildInfo>
 		<!-- Plant Bamboo -->
 		<BuildInfo>
-			<Type>BUILD_PLANT_BAMBOO</Type>
-			<Description>TXT_KEY_BUILD_PLANT_BAMBOO</Description>
+			<Type>BUILD_PLANT_BAMBOO_GROVE</Type>
+			<Description>TXT_KEY_BUILD_PLANT_BAMBOO_GROVE</Description>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>20</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_PLANT_BAMBOO</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLANT_BAMBOO_GROVE</ImprovementType>
 			<FeatureChange>FEATURE_BAMBOO</FeatureChange>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
@@ -5468,7 +5916,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -5483,7 +5931,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -5492,20 +5940,20 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -5519,7 +5967,7 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -5708,7 +6156,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -5723,7 +6171,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -5732,20 +6180,20 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -5760,7 +6208,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -5953,28 +6401,28 @@
 				</TerrainStruct>
 				<TerrainStruct>
 					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
-					<PrereqTech>TECH_MARINEARCHITECTURE</PrereqTech>
+					<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
 					<iTime>1000</iTime>
 				</TerrainStruct>
 				<TerrainStruct>
 					<TerrainType>TERRAIN_OCEAN</TerrainType>
-					<PrereqTech>TECH_MARINEARCHITECTURE</PrereqTech>
+					<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
 					<iTime>1000</iTime>
 				</TerrainStruct>
 				<TerrainStruct>
 					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
-					<PrereqTech>TECH_MARINEARCHITECTURE</PrereqTech>
+					<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
 					<iTime>1000</iTime>
 				</TerrainStruct>
 				<TerrainStruct>
 					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
-					<PrereqTech>TECH_MARINEARCHITECTURE</PrereqTech>
+					<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
 					<iTime>1000</iTime>
 				</TerrainStruct>
 				<TerrainStruct>
 					<!--- can never be built in Trench Terrain -->
 					<TerrainType>TERRAIN_TRENCH</TerrainType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>400</iTime>
 				</TerrainStruct>
 			</TerrainStructs>
@@ -6011,7 +6459,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -6026,7 +6474,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -6035,20 +6483,20 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -6070,7 +6518,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -6258,7 +6706,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -6273,7 +6721,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -6282,20 +6730,20 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -6317,7 +6765,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -6485,7 +6933,7 @@
 			<iCost>50</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_GRASS</ImprovementType>
-			<TerrainChange>TERRAIN_GRASS</TerrainChange>
+			<TerrainChange>TERRAIN_GRASSLAND</TerrainChange>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
@@ -6505,7 +6953,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -6520,7 +6968,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -6529,20 +6977,20 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -6564,7 +7012,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -6752,7 +7200,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -6767,7 +7215,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -6776,20 +7224,20 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -6811,7 +7259,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -6999,7 +7447,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -7014,7 +7462,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -7023,20 +7471,20 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -7058,7 +7506,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -7246,7 +7694,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -7261,7 +7709,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -7270,20 +7718,20 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -7305,7 +7753,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -7493,7 +7941,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -7508,7 +7956,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -7517,20 +7965,20 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -7552,7 +8000,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -7740,7 +8188,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -7755,7 +8203,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -7764,20 +8212,20 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -7799,7 +8247,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -7987,7 +8435,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -8002,7 +8450,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -8011,20 +8459,20 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -8046,7 +8494,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -8234,7 +8682,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -8249,7 +8697,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -8258,20 +8706,20 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -8293,7 +8741,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -8455,14 +8903,14 @@
 		<!-- Prehistoric -->
 		<!-- Fruit Gatherer (Kill) -->
 		<BuildInfo>
-			<Type>BUILD_FRUIT_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_FRUIT_GATHERER</Description>
+			<Type>BUILD_FRUIT_GATHERING_CAMP</Type>
+			<Description>TXT_KEY_BUILD_FRUIT_GATHERING_CAMP</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_FRUIT_GATHERER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
@@ -8470,14 +8918,14 @@
 		</BuildInfo>
 		<!-- Grape Gatherer (Kill) -->
 		<BuildInfo>
-			<Type>BUILD_GRAPE_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_GRAPE_GATHERER</Description>
+			<Type>BUILD_GRAPE_GATHERING_CAMP</Type>
+			<Description>TXT_KEY_BUILD_GRAPE_GATHERING_CAMP</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_GRAPE_GATHERER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
@@ -8485,14 +8933,14 @@
 		</BuildInfo>
 		<!-- Plant Gatherer (Kill) -->
 		<BuildInfo>
-			<Type>BUILD_PLANT_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_PLANT_GATHERER</Description>
+			<Type>BUILD_PLANT_GATHERING_CAMP</Type>
+			<Description>TXT_KEY_BUILD_PLANT_GATHERING_CAMP</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_PLANT_GATHERER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLANT_GATHERING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
@@ -8500,14 +8948,14 @@
 		</BuildInfo>
 		<!-- Fruit Picker -->
 		<BuildInfo>
-			<Type>BUILD_FRUIT_PICKER</Type>
-			<Description>TXT_KEY_BUILD_FRUIT_PICKER</Description>
+			<Type>BUILD_FRUIT_PICKING_CAMP</Type>
+			<Description>TXT_KEY_BUILD_FRUIT_PICKING_CAMP</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_ORCHARDS</ObsoleteTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_FRUIT_PICKER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>
 			<HotKey>KB_S</HotKey>
@@ -8516,14 +8964,14 @@
 		</BuildInfo>
 		<!-- Grape Picker -->
 		<BuildInfo>
-			<Type>BUILD_GRAPE_PICKER</Type>
-			<Description>TXT_KEY_BUILD_GRAPE_PICKER</Description>
+			<Type>BUILD_GRAPE_PICKING_CAMP</Type>
+			<Description>TXT_KEY_BUILD_GRAPE_PICKING_CAMP</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_FERMENTATION</ObsoleteTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_GRAPE_PICKER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
@@ -8531,14 +8979,14 @@
 		</BuildInfo>
 		<!-- Plant Picker -->
 		<BuildInfo>
-			<Type>BUILD_PLANT_PICKER</Type>
-			<Description>TXT_KEY_BUILD_PLANT_PICKER</Description>
+			<Type>BUILD_PLANT_PICKING_CAMP</Type>
+			<Description>TXT_KEY_BUILD_PLANT_PICKING_CAMP</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_CALENDAR</ObsoleteTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_PLANT_PICKER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLANT_PICKING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
@@ -8587,8 +9035,8 @@
 		</BuildInfo>
 		<!-- Harvest Kelp (consumes unit) -->
 		<BuildInfo>
-			<Type>BUILD_HARVEST_KELP_2</Type>
-			<Description>TXT_KEY_BUILD_HARVEST_KELP_K</Description>
+			<Type>BUILD_HARVEST_KELP_KILL</Type>
+			<Description>TXT_KEY_BUILD_HARVEST_KELP_KILL</Description>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>100</iTime>
 			<iCost>0</iCost>
@@ -8628,13 +9076,13 @@
 		</BuildInfo>
 		<!-- Fossil Digsite -->
 		<BuildInfo>
-			<Type>BUILD_FOSSIL_DIGSITE</Type>
-			<Description>TXT_KEY_BUILD_FOSSIL_DIGSITE</Description>
+			<Type>BUILD_FOSSIL_DIG_SITE</Type>
+			<Description>TXT_KEY_BUILD_FOSSIL_DIG_SITE</Description>
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<iTime>800</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_FOSSIL_DIGSITE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_FOSSIL_DIG_SITE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<iHotKeyPriority>1</iHotKeyPriority>
@@ -8698,8 +9146,8 @@
 		</BuildInfo>
 		<!-- Mushroom Gatherer (Kill) -->
 		<BuildInfo>
-			<Type>BUILD_MUSHROOM_GATHERER_0</Type>
-			<Description>TXT_KEY_BUILD_MUSHROOM_GATHERER_K</Description>
+			<Type>BUILD_MUSHROOM_GATHERER_KILL</Type>
+			<Description>TXT_KEY_BUILD_MUSHROOM_GATHERER_KILL</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
@@ -8727,13 +9175,13 @@
 		</BuildInfo>
 		<!-- Colony Habitat (Small) -->
 		<BuildInfo>
-			<Type>BUILD_HABITAT1</Type>
-			<Description>TXT_KEY_BUILD_HABITAT1</Description>
+			<Type>BUILD_COLONY_HABITAT_SMALL</Type>
+			<Description>TXT_KEY_BUILD_COLONY_HABITAT_SMALL</Description>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<iTime>1000</iTime>
 			<iCost>500</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_HABITAT1</ImprovementType>
+			<ImprovementType>IMPROVEMENT_COLONY_HABITAT_SMALL</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_T</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
@@ -8741,13 +9189,13 @@
 		</BuildInfo>
 		<!-- Colony Habitat (Medium) -->
 		<BuildInfo>
-			<Type>BUILD_HABITAT2</Type>
-			<Description>TXT_KEY_BUILD_HABITAT2</Description>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<Type>BUILD_COLONY_HABITAT_MEDIUM</Type>
+			<Description>TXT_KEY_BUILD_COLONY_HABITAT_MEDIUM</Description>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<iTime>1500</iTime>
 			<iCost>1000</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_HABITAT2</ImprovementType>
+			<ImprovementType>IMPROVEMENT_COLONY_HABITAT_MEDIUM</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_T</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
@@ -8755,13 +9203,13 @@
 		</BuildInfo>
 		<!-- Colony Habitat (Large) -->
 		<BuildInfo>
-			<Type>BUILD_HABITAT3</Type>
-			<Description>TXT_KEY_BUILD_HABITAT3</Description>
-			<PrereqTech>TECH_PLANET_COLONIZATION</PrereqTech>
+			<Type>BUILD_COLONY_HABITAT_LARGE</Type>
+			<Description>TXT_KEY_BUILD_COLONY_HABITAT_LARGE</Description>
+			<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>1500</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_HABITAT3</ImprovementType>
+			<ImprovementType>IMPROVEMENT_COLONY_HABITAT_LARGE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_T</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
@@ -8769,13 +9217,13 @@
 		</BuildInfo>
 		<!-- Colony Habitat (Huge) -->
 		<BuildInfo>
-			<Type>BUILD_HABITAT4</Type>
-			<Description>TXT_KEY_BUILD_HABITAT4</Description>
-			<PrereqTech>TECH_SUPERFLUOUS_MANUFACTURING</PrereqTech>
+			<Type>BUILD_COLONY_HABITAT_HUGE</Type>
+			<Description>TXT_KEY_BUILD_COLONY_HABITAT_HUGE</Description>
+			<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
 			<iTime>3000</iTime>
 			<iCost>2500</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_HABITAT4</ImprovementType>
+			<ImprovementType>IMPROVEMENT_COLONY_HABITAT_HUGE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_T</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
@@ -8785,7 +9233,7 @@
 		<BuildInfo>
 			<Type>BUILD_COLONY_HYDROPONICS</Type>
 			<Description>TXT_KEY_BUILD_COLONY_HYDROPONICS</Description>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<iTime>800</iTime>
 			<iCost>400</iCost>
 			<bKill>0</bKill>
@@ -8799,7 +9247,7 @@
 		<BuildInfo>
 			<Type>BUILD_COLONY_EXTRACTION_FACILITY</Type>
 			<Description>TXT_KEY_BUILD_COLONY_EXTRACTION_FACILITY</Description>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<iTime>1200</iTime>
 			<iCost>800</iCost>
 			<bKill>0</bKill>
@@ -8813,7 +9261,7 @@
 		<BuildInfo>
 			<Type>BUILD_COLONY_SOLAR_ARRAY</Type>
 			<Description>TXT_KEY_BUILD_COLONY_SOLAR_ARRAY</Description>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<iTime>1000</iTime>
 			<iCost>500</iCost>
 			<bKill>0</bKill>
@@ -8827,7 +9275,7 @@
 		<BuildInfo>
 			<Type>BUILD_COLONY_MANUFACTORY</Type>
 			<Description>TXT_KEY_BUILD_COLONY_MANUFACTORY</Description>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<iTime>1500</iTime>
 			<iCost>1200</iCost>
 			<bKill>0</bKill>
@@ -8856,7 +9304,7 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SEAGRASS</FeatureType>
+					<FeatureType>FEATURE_SEA_GRASS</FeatureType>
 					<PrereqTech>NONE</PrereqTech>
 					<iTime>0</iTime>
 					<iProduction>0</iProduction>
@@ -8864,42 +9312,42 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_REEF</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_CORAL</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<FeatureType>FEATURE_CORAL_REEF</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_REEF_WITH_BEACON</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<FeatureType>FEATURE_REEF_BEACON</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_CORAL_WITH_BEACON</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<FeatureType>FEATURE_CORAL_REEF_REEF_BEACON</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_REEF_WITH_LIGHTHOUSE</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<FeatureType>FEATURE_REEF_LIGHTHOUSE</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_CORAL_WITH_LIGHTHOUSE</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<FeatureType>FEATURE_CORAL_REEF_REEF_LIGHTHOUSE</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -8911,53 +9359,53 @@
 		</BuildInfo>
 		<!-- Sea Mill -->
 		<BuildInfo>
-			<Type>BUILD_WINDMILL_SEA</Type>
+			<Type>BUILD_SEA_MILL</Type>
 			<Description>TXT_KEY_BUILD_SEA_MILL</Description>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iTime>1000</iTime>
 			<iCost>50</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_WINDMILL_SEA</ImprovementType>
+			<ImprovementType>IMPROVEMENT_SEA_MILL</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
 					<FeatureType>FEATURE_REEF</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_CORAL</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<FeatureType>FEATURE_CORAL_REEF</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_REEF_WITH_BEACON</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<FeatureType>FEATURE_REEF_BEACON</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_CORAL_WITH_BEACON</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<FeatureType>FEATURE_CORAL_REEF_REEF_BEACON</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_REEF_WITH_LIGHTHOUSE</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<FeatureType>FEATURE_REEF_LIGHTHOUSE</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_CORAL_WITH_LIGHTHOUSE</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<FeatureType>FEATURE_CORAL_REEF_REEF_LIGHTHOUSE</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -8996,7 +9444,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -9011,7 +9459,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -9020,20 +9468,20 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -9055,7 +9503,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -9209,36 +9657,36 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_TARPIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_OASIS</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -9250,13 +9698,13 @@
 		</BuildInfo>
 		<!-- Vertical Farm -->
 		<BuildInfo>
-			<Type>BUILD_FARMSCRAPER</Type>
-			<Description>TXT_KEY_BUILD_FARMSCRAPER</Description>
+			<Type>BUILD_VERTICAL_FARM</Type>
+			<Description>TXT_KEY_BUILD_VERTICAL_FARM</Description>
 			<PrereqTech>TECH_VERTICAL_FARMING</PrereqTech>
 			<iTime>1000</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_FARMSCRAPER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
@@ -9276,7 +9724,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -9291,7 +9739,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -9300,20 +9748,20 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -9335,7 +9783,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -9489,15 +9937,15 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_TARPIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -9536,7 +9984,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -9551,7 +9999,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -9560,20 +10008,20 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_WATERWORKS</PrereqTech>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -9595,7 +10043,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -9768,7 +10216,7 @@
 			</PrereqBonusTypes>
 			<FeatureStructs>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
@@ -9783,7 +10231,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
@@ -9791,7 +10239,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>10</iProduction>
@@ -9813,7 +10261,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_KAKTUS</FeatureType>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>5</iProduction>
@@ -9843,36 +10291,36 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_TARPIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_OASIS</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -9919,7 +10367,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>40</iProduction>
@@ -9935,7 +10383,7 @@
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>20</iProduction>
@@ -9965,22 +10413,22 @@
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_TARPIT</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
-					<PrereqTech>TECH_FUTURE_TECH</PrereqTech>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -10005,14 +10453,14 @@
 			<Button>,Art/Interface/Buttons/TerrainFeatures/Forest.dds,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,3,3</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_ABATIS</Type>
-			<Description>TXT_KEY_BUILD_ABATIS</Description>
+			<Type>BUILD_ABATIS_THORN_HEDGE</Type>
+			<Description>TXT_KEY_BUILD_ABATIS_THORN_HEDGE</Description>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<ObsoleteTech>TECH_CARPENTRY</ObsoleteTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_ABATIS</ImprovementType>
+			<ImprovementType>IMPROVEMENT_ABATIS_THORN_HEDGE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
@@ -10020,14 +10468,14 @@
 			<Button>Art/Structures/Improvements/Abatis/abatis.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_ABATIS_G</Type>
-			<Description>TXT_KEY_BUILD_ABATIS_G</Description>
+			<Type>BUILD_ABATIS_THORN_HEDGE_KILL</Type>
+			<Description>TXT_KEY_BUILD_ABATIS_THORN_HEDGE_KILL</Description>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<ObsoleteTech>TECH_CARPENTRY</ObsoleteTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_ABATIS</ImprovementType>
+			<ImprovementType>IMPROVEMENT_ABATIS_THORN_HEDGE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
@@ -10035,14 +10483,14 @@
 			<Button>Art/Structures/Improvements/Abatis/abatis.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_PALISADE</Type>
-			<Description>TXT_KEY_BUILD_PALISADE</Description>
+			<Type>BUILD_WOODEN_PALISADE</Type>
+			<Description>TXT_KEY_BUILD_WOODEN_PALISADE</Description>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<ObsoleteTech>TECH_MATHEMATICS</ObsoleteTech>
 			<iTime>500</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_PALISADE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_WOODEN_PALISADE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
@@ -10050,14 +10498,14 @@
 			<Button>Art/Structures/Improvements/Palisade/palisadewall.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_PALISADE_G</Type>
-			<Description>TXT_KEY_BUILD_PALISADE_G</Description>
+			<Type>BUILD_WOODEN_PALISADE_KILL</Type>
+			<Description>TXT_KEY_BUILD_WOODEN_PALISADE_KILL</Description>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<ObsoleteTech>TECH_MATHEMATICS</ObsoleteTech>
 			<iTime>500</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_PALISADE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_WOODEN_PALISADE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
@@ -10079,8 +10527,8 @@
 			<Button>Art/interface/buttons/builds/fortified_cave.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_FORTIFIED_CAVE_G</Type>
-			<Description>TXT_KEY_BUILD_FORTIFIED_CAVE_G</Description>
+			<Type>BUILD_FORTIFIED_CAVE_KILL</Type>
+			<Description>TXT_KEY_BUILD_FORTIFIED_CAVE_KILL</Description>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<iTime>150</iTime>
 			<iCost>0</iCost>
@@ -10093,13 +10541,13 @@
 			<Button>Art/interface/buttons/builds/fortified_cave.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_FORTIFIED_CAVE_CACHE</Type>
-			<Description>TXT_KEY_BUILD_FORTIFIED_CAVE_CACHE</Description>
+			<Type>BUILD_FORTIFIED_CAVE_WITH_CACHE</Type>
+			<Description>TXT_KEY_BUILD_FORTIFIED_CAVE_WITH_CACHE</Description>
 			<PrereqTech>TECH_POTTERY</PrereqTech>
 			<iTime>300</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_FORTIFIED_CAVE_CACHE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
@@ -10107,13 +10555,13 @@
 			<Button>Art/interface/buttons/builds/fortified_cave_cache.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_WOODEN_TOWER</Type>
-			<Description>TXT_KEY_BUILD_WOODEN_TOWER</Description>
+			<Type>BUILD_WOODEN_WATCHTOWER</Type>
+			<Description>TXT_KEY_BUILD_WOODEN_WATCHTOWER</Description>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_WOODEN_TOWER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
@@ -10121,13 +10569,13 @@
 			<Button>Art/Structures/Improvements/wooden_tower/wooden_tower_btn.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_WOODEN_TOWER_G</Type>
-			<Description>TXT_KEY_BUILD_WOODEN_TOWER_G</Description>
+			<Type>BUILD_WOODEN_WATCHTOWER_KILL</Type>
+			<Description>TXT_KEY_BUILD_WOODEN_WATCHTOWER_KILL</Description>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_WOODEN_TOWER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
@@ -10135,13 +10583,13 @@
 			<Button>Art/Structures/Improvements/wooden_tower/wooden_tower_btn.dds</Button>
 		</BuildInfo>
 		<!--BuildInfo>
-			<Type>BUILD_STONE_TOWER</Type>
-			<Description>TXT_KEY_BUILD_STONE_TOWER</Description>
+			<Type>BUILD_STONE_WATCHTOWER</Type>
+			<Description>TXT_KEY_BUILD_STONE_WATCHTOWER</Description>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<iTime>800</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_STONE_TOWER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
@@ -10149,13 +10597,13 @@
 			<Button>Art/Structures/Improvements/stone_tower/stone_tower_btn.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_STEEL_TOWER</Type>
-			<Description>TXT_KEY_BUILD_STEEL_TOWER</Description>
+			<Type>BUILD_STEEL_WATCHTOWER</Type>
+			<Description>TXT_KEY_BUILD_STEEL_WATCHTOWER</Description>
 			<PrereqTech>TECH_STEEL</PrereqTech>
 			<iTime>800</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_STEEL_TOWER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
@@ -10163,13 +10611,13 @@
 			<Button>Art/Structures/Improvements/stone_tower/stone_tower_btn.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_RADAR</Type>
-			<Description>TXT_KEY_BUILD_RADAR</Description>
+			<Type>BUILD_RADAR_TOWER</Type>
+			<Description>TXT_KEY_BUILD_RADAR_TOWER</Description>
 			<PrereqTech>TECH_RADAR</PrereqTech>
 			<iTime>800</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_RADAR</ImprovementType>
+			<ImprovementType>IMPROVEMENT_RADAR_TOWER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
@@ -10192,13 +10640,13 @@
 		</BuildInfo-->
 		<!-- Pepper's routes are used as yield boosters in improvements. They are here so Pepper's module can be turned off. -->
 		<BuildInfo>
-			<Type>BUILD_HYPERLOOP</Type>
-			<Description>TXT_KEY_BUILD_HYPERLOOP</Description>
-			<PrereqTech>TECH_SRAILS</PrereqTech>
+			<Type>BUILD_VACTRAIN</Type>
+			<Description>TXT_KEY_BUILD_VACTRAIN</Description>
+			<PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
 			<iTime>700</iTime>
 			<iCost>60</iCost>
 			<bKill>0</bKill>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
 			<HotKey>KB_R</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>

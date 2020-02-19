@@ -187,9 +187,22 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 			</MapCategoryTypes>
+			<TerrainImpassableTypes>
+                <TerrainType>TERRAIN_INNER_SOLAR_SYSTEM</TerrainType>
+				<TerrainType>TERRAIN_OUTER_SOLAR_SYSTEM</TerrainType>
+			</TerrainImpassableTypes>
+            <TerrainPassableTechs>
+                <TerrainPassableTech>
+					<TerrainType>TERRAIN_INNER_SOLAR_SYSTEM</TerrainType>
+					<PassableTech>TECH_PLANETARY_COLONIZATION</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CONSTRUCTION_SHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_CONSTRUCTION_SHIP_PEDIA</Civilopedia>
@@ -208,7 +221,7 @@
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_LUNAR_BASE_IMPROVEMENT</BuildType>
+					<BuildType>BUILD_LUNAR_BASE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
@@ -219,10 +232,50 @@
 					<BuildType>BUILD_LUNAR_MINING_OUTPOST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
+				<Build>
+					<BuildType>BUILD_COLONY_EXTRACTION_FACILITY</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+                    <BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+				<Build>
+                    <BuildType>BUILD_COLONY_HYDROPONICS</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+				<Build>
+                    <BuildType>BUILD_COLONY_MANUFACTORY</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+				<Build>
+                    <BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+				<Build>
+					<BuildType>BUILD_LUNAR_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_MARTIAN_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
 			</Builds>
 			<PrereqBuilding>BUILDING_COMMERCIAL_SPACEPORT</PrereqBuilding>
 			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
-			<BonusType>BONUS_ROCKETFUEL</BonusType>
+			<BonusType>BONUS_ROCKET_FUEL</BonusType>
 			<iCost>2700</iCost>
 			<iMoves>24</iMoves>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
@@ -261,7 +314,7 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
@@ -284,7 +337,7 @@
 			</Buildings>
 			<PrereqBuilding>BUILDING_COMMERCIAL_SPACEPORT</PrereqBuilding>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
-			<BonusType>BONUS_ROCKETFUEL</BonusType>
+			<BonusType>BONUS_ROCKET_FUEL</BonusType>
 			<iCost>4850</iCost>
 			<iMoves>24</iMoves>
             <bCanMoveAllTerrain>1</bCanMoveAllTerrain>
@@ -330,7 +383,7 @@
                                 from CvPythonExtensions import CyGlobalContext
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['LUNAR_BASALT','LUNAR_PLAINS','LUNAR_ROCKY','LUNAR_BARREN','LUNAR_DESERT']
+                                    valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE']
                                     valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
                                     return plot.getTerrainType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -373,7 +426,7 @@
                                 import random
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['LUNAR_BASALT','LUNAR_PLAINS','LUNAR_ROCKY','LUNAR_BARREN','LUNAR_DESERT']
+                                    valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE']
                                     valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
                                     return plot.getTerrainType() not in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -382,7 +435,7 @@
                                     destX = -1
                                     destY = -1
                                     numValid = 0
-                                    valid_terrain_strings = ['LUNAR_BASALT','LUNAR_PLAINS','LUNAR_ROCKY','LUNAR_BARREN','LUNAR_DESERT']
+                                    valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE']
                                     valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
                                     for x in range(map.getGridWidth()):
                                         for y in range(map.getGridHeight()):
@@ -419,7 +472,7 @@
                                 import random
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['LUNAR_BASALT','LUNAR_PLAINS','LUNAR_ROCKY','LUNAR_BARREN','LUNAR_DESERT']
+                                    valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE']
                                     valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
                                     return plot.getTerrainType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -455,7 +508,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CISLUNARSETTLER</Description>
@@ -473,7 +526,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_ORBITAL_FACTORY</PrereqBuilding>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iCost>1000</iCost>
             <iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -547,7 +600,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
@@ -567,7 +620,7 @@
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_ORBITAL_FACTORY</PrereqBuilding>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
-            <BonusType>BONUS_ROCKETFUEL</BonusType>
+            <BonusType>BONUS_ROCKET_FUEL</BonusType>
 			<iCost>1000</iCost>
             <iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -611,7 +664,7 @@
                                     valid_improvements = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_improvement_strings]
                                     if plot.getImprovementType() not in valid_improvements:
                                         return False
-                                    valid_terrain_strings = ['LUNAR_BASALT','LUNAR_PLAINS','LUNAR_ROCKY','LUNAR_BARREN','LUNAR_DESERT']
+                                    valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE']
                                     valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
                                     return plot.getTerrainType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -645,7 +698,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
@@ -670,8 +723,8 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_ORBITAL_FACTORY</PrereqBuilding>
-			<PrereqTech>TECH_PLANET_COLONIZATION</PrereqTech>
-            <BonusType>BONUS_ROCKETFUEL</BonusType>
+			<PrereqTech>TECH_PLANETARY_COLONIZATION</PrereqTech>
+            <BonusType>BONUS_ROCKET_FUEL</BonusType>
 			<iCost>1000</iCost>
             <iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -711,7 +764,7 @@
                                     gc = CyGlobalContext()
                                     if not gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY()):
                                         return False
-                                    valid_terrain_strings = ['VENUS','VENUS_HIGHLAND','VENUS_LOWLAND','MARTIAN_ICE','MARTIAN_PERMAFROST','MARTIAN_DUNES','MARTIAN_BARREN','MARTIAN_PLAINS','MARTIAN_ROCKY','MARTIAN_DESERT']
+                                    valid_terrain_strings = ['VENUS','VENUS_HIGHLANDS','VENUS_LOWLANDS','MARTIAN_ICE','MARTIAN_PERMAFROST','MARTIAN_DUNES','MARTIAN_BARREN','MARTIAN_PLAINS','MARTIAN_ROCKY','MARTIAN_DESERT']
                                     valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
                                     return plot.getTerrainType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -745,7 +798,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
@@ -757,7 +810,7 @@
             <TerrainImpassableTypes>
                 <TerrainType>TERRAIN_SUN</TerrainType>
                 <TerrainType>TERRAIN_TITAN</TerrainType>
-                <TerrainType>TERRAIN_TRANSNEPTUNIAN</TerrainType>
+                <TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
             </TerrainImpassableTypes>
             <TerrainPassableTechs>
                 <TerrainPassableTech>
@@ -765,7 +818,7 @@
 					<PassableTech>TECH_ABYSS_COLONIZATION</PassableTech>
 				</TerrainPassableTech>
               <TerrainPassableTech>
-                <TerrainType>TERRAIN_TRANSNEPTUNIAN</TerrainType>
+                <TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
                 <PassableTech>TECH_SOLAR_ORDNANCE</PassableTech>
               </TerrainPassableTech>
 			</TerrainPassableTechs>
@@ -866,7 +919,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_INTERSTELLAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
@@ -887,7 +940,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_ORBITAL_SPACECRAFT_FACTORY</PrereqBuilding>
-			<PrereqTech>TECH_INTERSTELLAR_VOYAGE</PrereqTech>
+			<PrereqTech>TECH_INTERSTELLAR_TRAVEL</PrereqTech>
 			<iCost>4850</iCost>
             <iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -927,7 +980,7 @@
                                     gc = CyGlobalContext()
                                     if not gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY()):
                                         return False
-                                    valid_terrain_strings = ['OORT_CLOUD','TRANSTELLAR','RED_DWARF','G_TYPE','RED_GIANT']
+                                    valid_terrain_strings = ['OORT_CLOUD','TRANSTELLAR_SPACE','RED_DWARF','SUN_LIKE_STAR','RED_GIANT']
                                     valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
                                     return plot.getTerrainType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -1073,8 +1126,8 @@
 			</MapCategoryTypes>
             <TerrainImpassableTypes>
                 <TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
-                <TerrainType>TERRAIN_GALACTIC_VOID</TerrainType>
-                <TerrainType>TERRAIN_COSMOS</TerrainType>
+                <TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
+                <TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 			</TerrainImpassableTypes>
             <TerrainPassableTechs>
                 <TerrainPassableTech>
@@ -1082,11 +1135,11 @@
 					<PassableTech>TECH_INTERGROUP_TRAVEL</PassableTech>
 				</TerrainPassableTech>
                 <TerrainPassableTech>
-					<TerrainType>TERRAIN_GALACTIC_VOID</TerrainType>
+					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
 					<PassableTech>TECH_INTERCLUSTER_TRAVEL</PassableTech>
 				</TerrainPassableTech>
                 <TerrainPassableTech>
-					<TerrainType>TERRAIN_COSMOS</TerrainType>
+					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 					<PassableTech>TECH_INTERCLUSTER_TRAVEL</PassableTech>
 				</TerrainPassableTech>
 			</TerrainPassableTechs>
@@ -1157,7 +1210,7 @@
                                     gc = CyGlobalContext()
                                     if not gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY()):
                                         return False
-                                    valid_terrain_strings = ['MILKY_WAY','NEUTRON_STAR','NEBULA','STAR_CLUSTER','ORION_ARM','GALACTIC_CORE','LOCAL_GROUP','VIRGO_SUPERCLUSTER','GALACTIC_VOID','COSMOS']
+                                    valid_terrain_strings = ['MILKY_WAY','NEUTRON_STAR','NEBULA','STAR_CLUSTER','ORION_ARM','GALACTIC_CORE','LOCAL_GROUP','VIRGO_SUPERCLUSTER','INTERGALACTIC_VOID','OBSERVABLE_UNIVERSE']
                                     valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
                                     return plot.getTerrainType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -1190,7 +1243,7 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_SPACECRAFT</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
-            <BonusType>BONUS_EXOTIC_PARTICLE</BonusType>
+            <BonusType>BONUS_ALICE_MATTER</BonusType>
 			<MapCategoryTypes>
                 <MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_DISTANT</MapCategoryType>
@@ -1262,7 +1315,7 @@
                                     gc = CyGlobalContext()
                                     if not gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY()):
                                         return False
-                                    valid_terrain_strings = ['LOCAL_GROUP','VIRGO_SUPERCLUSTER','GALACTIC_VOID','COSMOS','DISTANT_COSMOS']
+                                    valid_terrain_strings = ['LOCAL_GROUP','VIRGO_SUPERCLUSTER','INTERGALACTIC_VOID','OBSERVABLE_UNIVERSE','DISTANT_COSMOS']
                                     valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
                                     return plot.getTerrainType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -1380,7 +1433,7 @@
                                     gc = CyGlobalContext()
                                     if not gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY()):
                                         return False
-                                    valid_terrain_strings = ['LOCAL_GROUP','VIRGO_SUPERCLUSTER','GALACTIC_VOID','COSMOS','DISTANT_COSMOS','HYPERSPACE']
+                                    valid_terrain_strings = ['LOCAL_GROUP','VIRGO_SUPERCLUSTER','INTERGALACTIC_VOID','OBSERVABLE_UNIVERSE','DISTANT_COSMOS','HYPERSPACE']
                                     valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
                                     return plot.getTerrainType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -1419,7 +1472,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_ORBITAL_SPACECRAFT_FACTORY</PrereqBuilding>
-			<PrereqTech>TECH_VASIMR_PROPULSION</PrereqTech>
+			<PrereqTech>TECH_FUSION_SPACECRAFT</PrereqTech>
 			<iCost>4850</iCost>
             <iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -1458,7 +1511,7 @@
 			<Combat>UNITCOMBAT_EARLY_SPACESHIP</Combat>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CISLUNAR_INVADER</Description>
@@ -1636,7 +1689,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_ELECTROWEAK_STAR_BASE</PrereqBuilding>
-			<PrereqTech>TECH_ELECTRONUCLEAR_MATTER</PrereqTech>
+			<PrereqTech>TECH_NEUTRONIUM</PrereqTech>
             <BonusType>BONUS_NEUTRONIUM</BonusType>
 			<iCost>4850</iCost>
             <iHurryCostModifier>10000</iHurryCostModifier>
@@ -1698,7 +1751,7 @@
 			<Domain>DOMAIN_IMMOBILE</Domain>
             <bOnlyDefensive>1</bOnlyDefensive>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CISLUNAR_INFANTRY</Description>
@@ -1800,7 +1853,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_DEEP_SPACE_MAGLEV</PrereqBuilding>
-			<PrereqTech>TECH_BINARY_PYSCHOKINESIS</PrereqTech>
+			<PrereqTech>TECH_BINARY_PSYCHOKINESIS</PrereqTech>
 			<iCost>4850</iCost>
             <iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>550</iAdvancedStartCost>
@@ -1975,7 +2028,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_LUNAR_MANUFACTURING_PLANT</PrereqBuilding>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<iCost>4850</iCost>
             <iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>550</iAdvancedStartCost>
@@ -2235,7 +2288,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_KUIPER_BELT</PrereqTech>
+			<PrereqTech>TECH_KUIPER_BELT_EXPLORATION</PrereqTech>
 			<iCost>4850</iCost>
             <iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>550</iAdvancedStartCost>
@@ -2395,11 +2448,11 @@
 			</UnitAIs>
 			<Builds>
 				<Build>
-					<BuildType>BUILD_GRAVTUBE</BuildType>
+					<BuildType>BUILD_MAGLEV</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-                    <BuildType>BUILD_MARS_MINE</BuildType>
+                    <BuildType>BUILD_MARTIAN_MINE</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
@@ -2407,19 +2460,19 @@
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
-                    <BuildType>BUILD_HABITAT1</BuildType>
+                    <BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
-                    <BuildType>BUILD_HABITAT2</BuildType>
+                    <BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
-                    <BuildType>BUILD_HABITAT3</BuildType>
+                    <BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
-                    <BuildType>BUILD_HABITAT4</BuildType>
+                    <BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
@@ -2431,7 +2484,7 @@
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
-                    <BuildType>BUILD_MARS_FARM</BuildType>
+                    <BuildType>BUILD_MARTIAN_FARM</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
@@ -2440,7 +2493,7 @@
 				</Build>
 			</Builds>
 			<PrereqBuilding>BUILDING_MARS_FACTORY</PrereqBuilding>
-			<PrereqTech>TECH_SRAILS</PrereqTech>
+			<PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
 			<iCost>1500</iCost>
             <iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -2495,7 +2548,7 @@
 			</UnitAIs>
 			<Builds>
 				<Build>
-					<BuildType>BUILD_GRAVTUBE</BuildType>
+					<BuildType>BUILD_MAGLEV</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
@@ -2512,7 +2565,7 @@
                 </Build>
 			</Builds>
 			<PrereqBuilding>BUILDING_VENUS_CARBONWORKS</PrereqBuilding>
-			<PrereqTech>TECH_SRAILS</PrereqTech>
+			<PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
 			<iCost>1500</iCost>
             <iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -2552,7 +2605,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CISLUNAR_WORKER</Description>
@@ -2690,7 +2743,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_MARS_FACTORY</PrereqBuilding>
-			<PrereqTech>TECH_SUPERFLUOUS_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
 			<iCost>4850</iCost>
             <iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -2744,7 +2797,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_VENUS_CARBONWORKS</PrereqBuilding>
-			<PrereqTech>TECH_SUPERFLUOUS_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
 			<iCost>3000</iCost>
             <iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -2786,14 +2839,14 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 			</MapCategoryTypes>
-			<BonusType>BONUS_ROCKETFUEL</BonusType>
+			<BonusType>BONUS_ROCKET_FUEL</BonusType>
             <bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
@@ -2823,11 +2876,11 @@
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_CISLUNAR_MILITARY_BASE</BuildType>
+					<BuildType>BUILD_CISLUNAR_BASE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_DEEP_SPACE_MILITARY_BASE</BuildType>
+					<BuildType>BUILD_SOLAR_SYSTEM_BASE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -2909,7 +2962,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
@@ -2917,7 +2970,7 @@
                 <MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
 			</MapCategoryTypes>
-			<BonusType>BONUS_ROCKETFUEL</BonusType>
+			<BonusType>BONUS_ROCKET_FUEL</BonusType>
             <bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
@@ -2955,7 +3008,7 @@
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_EXPANDED_HABITAT</BuildType>
+					<BuildType>BUILD_CISLUNAR_EXPANSION_MODULE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
@@ -2967,11 +3020,11 @@
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_CISLUNAR_MILITARY_BASE</BuildType>
+					<BuildType>BUILD_CISLUNAR_BASE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_DEEP_SPACE_MILITARY_BASE</BuildType>
+					<BuildType>BUILD_SOLAR_SYSTEM_BASE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
@@ -3084,7 +3137,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
@@ -3109,7 +3162,7 @@
 			</UnitAIs>
 			<Builds>
                 <Build>
-					<BuildType>BUILD_MICROWORMHOLE</BuildType>
+					<BuildType>BUILD_COMPACT_WORMHOLE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3161,7 +3214,7 @@
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_EXPANDED_HABITAT</BuildType>
+					<BuildType>BUILD_CISLUNAR_EXPANSION_MODULE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
@@ -3173,11 +3226,11 @@
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_CISLUNAR_MILITARY_BASE</BuildType>
+					<BuildType>BUILD_CISLUNAR_BASE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_DEEP_SPACE_MILITARY_BASE</BuildType>
+					<BuildType>BUILD_SOLAR_SYSTEM_BASE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -3259,7 +3312,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
@@ -3286,7 +3339,7 @@
 			</UnitAIs>
 			<Builds>
                 <Build>
-					<BuildType>BUILD_MEGAWORMHOLE_ROUTE</BuildType>
+					<BuildType>BUILD_MEGAWORMHOLE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
@@ -3342,7 +3395,7 @@
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_EXPANDED_HABITAT</BuildType>
+					<BuildType>BUILD_CISLUNAR_EXPANSION_MODULE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
@@ -3350,11 +3403,11 @@
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_CISLUNAR_MILITARY_BASE</BuildType>
+					<BuildType>BUILD_CISLUNAR_BASE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_DEEP_SPACE_MILITARY_BASE</BuildType>
+					<BuildType>BUILD_SOLAR_SYSTEM_BASE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
@@ -3362,7 +3415,7 @@
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_TRADING_PLANET</BuildType>
+					<BuildType>BUILD_INTERSTELLAR_TRADING_POST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
@@ -3394,7 +3447,7 @@
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_HELIOFORM</BuildType>
+					<BuildType>BUILD_HELIOFORMED_BROWN_DWARF</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
@@ -3426,7 +3479,7 @@
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_INTERSTELLAR_MILITARY_BASE</BuildType>
+					<BuildType>BUILD_INTERSTELLAR_BASE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
@@ -3463,8 +3516,8 @@
                 <TerrainType>TERRAIN_GALACTIC_CORE</TerrainType>
                 <TerrainType>TERRAIN_LOCAL_GROUP</TerrainType>
                 <TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
-                <TerrainType>TERRAIN_GALACTIC_VOID</TerrainType>
-                <TerrainType>TERRAIN_COSMOS</TerrainType>
+                <TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
+                <TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
                 <TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
 			</TerrainImpassableTypes>
             <TerrainPassableTechs>
@@ -3485,11 +3538,11 @@
 					<PassableTech>TECH_INTERGROUP_TRAVEL</PassableTech>
 				</TerrainPassableTech>
                 <TerrainPassableTech>
-					<TerrainType>TERRAIN_COSMOS</TerrainType>
+					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 					<PassableTech>TECH_INTERCLUSTER_TRAVEL</PassableTech>
 				</TerrainPassableTech>
                 <TerrainPassableTech>
-					<TerrainType>TERRAIN_GALACTIC_VOID</TerrainType>
+					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
 					<PassableTech>TECH_INTERCLUSTER_TRAVEL</PassableTech>
 				</TerrainPassableTech>
                 <TerrainPassableTech>
@@ -3632,8 +3685,8 @@
 			</Builds>
             <TerrainImpassableTypes>
                 <TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
-                <TerrainType>TERRAIN_GALACTIC_VOID</TerrainType>
-                <TerrainType>TERRAIN_COSMOS</TerrainType>
+                <TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
+                <TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
                 <TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
 			</TerrainImpassableTypes>
             <TerrainPassableTechs>
@@ -3642,11 +3695,11 @@
 					<PassableTech>TECH_INTERGROUP_TRAVEL</PassableTech>
 				</TerrainPassableTech>
                 <TerrainPassableTech>
-					<TerrainType>TERRAIN_COSMOS</TerrainType>
+					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 					<PassableTech>TECH_INTERCLUSTER_TRAVEL</PassableTech>
 				</TerrainPassableTech>
                 <TerrainPassableTech>
-					<TerrainType>TERRAIN_GALACTIC_VOID</TerrainType>
+					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
 					<PassableTech>TECH_INTERCLUSTER_TRAVEL</PassableTech>
 				</TerrainPassableTech>
                 <TerrainPassableTech>
@@ -3697,7 +3750,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
                 <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
             <bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -3757,7 +3810,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
                 <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
@@ -3821,7 +3874,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
                 <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
@@ -3887,7 +3940,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
                 <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
@@ -3955,7 +4008,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
                 <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
@@ -3964,7 +4017,7 @@
                 <MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_MILKYWAY</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
 			</MapCategoryTypes>
             <bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -4024,7 +4077,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
                 <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
@@ -4033,7 +4086,7 @@
                 <MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_MILKYWAY</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
 			</MapCategoryTypes>
             <bCanMoveAllTerrain>1</bCanMoveAllTerrain>
@@ -4155,8 +4208,8 @@
             <TerrainImpassableTypes>
                 <TerrainType>TERRAIN_LOCAL_GROUP</TerrainType>
                 <TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
-                <TerrainType>TERRAIN_GALACTIC_VOID</TerrainType>
-                <TerrainType>TERRAIN_COSMOS</TerrainType>
+                <TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
+                <TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 			</TerrainImpassableTypes>
             <TerrainPassableTechs>
                 <TerrainPassableTech>
@@ -4168,11 +4221,11 @@
 					<PassableTech>TECH_INTERGROUP_TRAVEL</PassableTech>
 				</TerrainPassableTech>
                 <TerrainPassableTech>
-					<TerrainType>TERRAIN_GALACTIC_VOID</TerrainType>
+					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
 					<PassableTech>TECH_INTERCLUSTER_TRAVEL</PassableTech>
 				</TerrainPassableTech>
                 <TerrainPassableTech>
-					<TerrainType>TERRAIN_COSMOS</TerrainType>
+					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 					<PassableTech>TECH_INTERCLUSTER_TRAVEL</PassableTech>
 				</TerrainPassableTech>
 			</TerrainPassableTechs>
@@ -4241,8 +4294,8 @@
             <TerrainImpassableTypes>
                 <TerrainType>TERRAIN_LOCAL_GROUP</TerrainType>
                 <TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
-                <TerrainType>TERRAIN_GALACTIC_VOID</TerrainType>
-                <TerrainType>TERRAIN_COSMOS</TerrainType>
+                <TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
+                <TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
                 <TerrainType>TERRAIN_DISTANT_COSMOS</TerrainType>
 			</TerrainImpassableTypes>
             <TerrainPassableTechs>
@@ -4255,11 +4308,11 @@
 					<PassableTech>TECH_INTERGROUP_TRAVEL</PassableTech>
 				</TerrainPassableTech>
                 <TerrainPassableTech>
-					<TerrainType>TERRAIN_GALACTIC_VOID</TerrainType>
+					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
 					<PassableTech>TECH_INTERCLUSTER_TRAVEL</PassableTech>
 				</TerrainPassableTech>
                 <TerrainPassableTech>
-					<TerrainType>TERRAIN_COSMOS</TerrainType>
+					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 					<PassableTech>TECH_INTERCLUSTER_TRAVEL</PassableTech>
 				</TerrainPassableTech>
                 <TerrainPassableTech>
@@ -4381,16 +4434,16 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<BonusType>BONUS_ROCKETFUEL</BonusType>
+			<BonusType>BONUS_ROCKET_FUEL</BonusType>
             <TerrainImpassableTypes>
                 <TerrainType>TERRAIN_SPACE</TerrainType>
 			</TerrainImpassableTypes>
             <TerrainPassableTechs>
                 <TerrainPassableTech>
 					<TerrainType>TERRAIN_SPACE</TerrainType>
-					<PassableTech>TECH_INTERSTELLAR_TRAVEL</PassableTech>
+					<PassableTech>TECH_ION_PROPULSION</PassableTech>
 				</TerrainPassableTech>
 			</TerrainPassableTechs>
             <bCanMoveAllTerrain>1</bCanMoveAllTerrain>
@@ -4517,9 +4570,9 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<BonusType>BONUS_ROCKETFUEL</BonusType>
+			<BonusType>BONUS_ROCKET_FUEL</BonusType>
             <TerrainImpassableTypes>
                 <TerrainType>TERRAIN_SPACE</TerrainType>
 			</TerrainImpassableTypes>
@@ -4554,7 +4607,7 @@
 			<iAsset>1</iAsset>
             <Builds>
 				<Build>
-					<BuildType>BUILD_SPACE_STATION1</BuildType>
+					<BuildType>BUILD_SPACE_STATION_LV1</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -4577,7 +4630,7 @@
                                 import random
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['SPACE_STATION1']
+                                    valid_terrain_strings = ['SPACE_STATION_LV1']
                                     valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
                                     return plot.getImprovementType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -4610,7 +4663,7 @@
                                 import random
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['SPACE_STATION2']
+                                    valid_terrain_strings = ['SPACE_STATION_LV2']
                                     valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
                                     return plot.getImprovementType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -4643,7 +4696,7 @@
                                 import random
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['SPACE_STATION3']
+                                    valid_terrain_strings = ['SPACE_STATION_LV3']
                                     valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
                                     return plot.getImprovementType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -4675,12 +4728,12 @@
                                 from CvPythonExtensions import *
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['SPACE_STATION1']
+                                    valid_terrain_strings = ['SPACE_STATION_LV1']
                                     valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
                                     return plot.getImprovementType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
                                     gc = CyGlobalContext()
-                                    plot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_SPACE_STATION2'))
+                                    plot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_SPACE_STATION_LV2'))
                                 def getDisplay(unit,plot):
                                     return u"Upgrade Space Station"
                                 def getAIValue(unit, plot):
@@ -4706,12 +4759,12 @@
                                 from CvPythonExtensions import *
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['SPACE_STATION2']
+                                    valid_terrain_strings = ['SPACE_STATION_LV2']
                                     valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
                                     return plot.getImprovementType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
                                     gc = CyGlobalContext()
-                                    plot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_SPACE_STATION3'))
+                                    plot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_SPACE_STATION_LV3'))
                                 def getDisplay(unit,plot):
                                     return u"Upgrade Space Station"
                                 def getAIValue(unit, plot):
@@ -4754,7 +4807,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
@@ -4762,13 +4815,13 @@
                 <MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
 			</MapCategoryTypes>
-			<BonusType>BONUS_ROCKETFUEL</BonusType>
+			<BonusType>BONUS_ROCKET_FUEL</BonusType>
             <TerrainImpassableTypes>
-                <TerrainType>TERRAIN_TRANSNEPTUNIAN</TerrainType>
+                <TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
 			</TerrainImpassableTypes>
             <TerrainPassableTechs>
                 <TerrainPassableTech>
-					<TerrainType>TERRAIN_TRANSNEPTUNIAN</TerrainType>
+					<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
 					<PassableTech>TECH_MAGNETIC_SAILS</PassableTech>
 				</TerrainPassableTech>
 			</TerrainPassableTechs>
@@ -4872,7 +4925,7 @@
                                 import random
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['TRANSNEPTUNIAN']
+                                    valid_terrain_strings = ['TRANSNEPTUNIAN_SPACE']
                                     valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
                                     return plot.getTerrainType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -4942,7 +4995,7 @@
                                     gc = CyGlobalContext()
                                     if not gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY()):
                                         return False
-                                    valid_terrain_strings = ['VENUS','VENUS_LOWLAND','VENUS_HIGHLAND']
+                                    valid_terrain_strings = ['VENUS','VENUS_LOWLANDS','VENUS_HIGHLANDS']
                                     valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
                                     return plot.getTerrainType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -5340,7 +5393,7 @@
 				</Action>
 			</Actions>
 			<PrereqBuilding>BUILDING_LAUNCH_SITE_EFFECT</PrereqBuilding>
-			<PrereqTech>TECH_PLANET_EXPLORATION</PrereqTech>
+			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMoves>12</iMoves>
@@ -5457,7 +5510,7 @@
                                 import random
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['RED_DWARF','RED_GIANT','G_TYPE']
+                                    valid_terrain_strings = ['RED_DWARF','RED_GIANT','SUN_LIKE_STAR']
                                     valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
                                     return plot.getTerrainType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -5492,7 +5545,7 @@
                                     gc = CyGlobalContext()
                                     if not gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY()):
                                         return False
-                                    valid_feature_strings = ['CARBON_PLANET','CHTHONIAN_PLANET','DESERT_PLANET','HOT_JUPITER','MINI_NEPTUNE','ROGUE_PLANET','SUPER_EARTH','WATER_PLANET']
+                                    valid_feature_strings = ['CARBON_PLANET','CHTHONIAN_PLANET','DESERT_PLANET','HOT_JUPITER','MINI_NEPTUNE','ROGUE_PLANET','SUPER_EARTH','OCEAN_PLANET']
                                     valid_features = [gc.getInfoTypeForString('FEATURE_'+t) for t in valid_feature_strings]
                                     return plot.getFeatureType() in valid_features
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -6081,9 +6134,9 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<BonusType>BONUS_ROCKETFUEL</BonusType>
+			<BonusType>BONUS_ROCKET_FUEL</BonusType>
             <bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
@@ -6100,7 +6153,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_COMMERCIAL_SPACEPORT</PrereqBuilding>
-			<PrereqTech>TECH_CSPACECRAFT</PrereqTech>
+			<PrereqTech>TECH_COMMERCIAL_SPACEFLIGHT</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMoves>24</iMoves>
@@ -6109,7 +6162,7 @@
 			<iAsset>1</iAsset>
             <Builds>
 				<Build>
-					<BuildType>BUILD_SPACE_STATION1</BuildType>
+					<BuildType>BUILD_SPACE_STATION_LV1</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -6132,7 +6185,7 @@
                                 import random
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['SPACE_STATION1']
+                                    valid_terrain_strings = ['SPACE_STATION_LV1']
                                     valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
                                     return plot.getImprovementType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -6165,7 +6218,7 @@
                                 import random
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['SPACE_STATION2']
+                                    valid_terrain_strings = ['SPACE_STATION_LV2']
                                     valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
                                     return plot.getImprovementType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -6198,7 +6251,7 @@
                                 import random
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['SPACE_STATION3']
+                                    valid_terrain_strings = ['SPACE_STATION_LV3']
                                     valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
                                     return plot.getImprovementType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -6230,12 +6283,12 @@
                                 from CvPythonExtensions import *
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['SPACE_STATION1']
+                                    valid_terrain_strings = ['SPACE_STATION_LV1']
                                     valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
                                     return plot.getImprovementType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
                                     gc = CyGlobalContext()
-                                    plot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_SPACE_STATION2'))
+                                    plot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_SPACE_STATION_LV2'))
                                 def getDisplay(unit,plot):
                                     return u"Upgrade Space Station"
                                 def getAIValue(unit, plot):
@@ -6261,12 +6314,12 @@
                                 from CvPythonExtensions import *
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['SPACE_STATION2']
+                                    valid_terrain_strings = ['SPACE_STATION_LV2']
                                     valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
                                     return plot.getImprovementType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
                                     gc = CyGlobalContext()
-                                    plot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_SPACE_STATION3'))
+                                    plot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_SPACE_STATION_LV3'))
                                 def getDisplay(unit,plot):
                                     return u"Upgrade Space Station"
                                 def getAIValue(unit, plot):
@@ -6293,7 +6346,7 @@
                                 import random
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['SPACE_STATION3']
+                                    valid_terrain_strings = ['SPACE_STATION_LV3']
                                     valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
                                     return plot.getImprovementType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -6325,7 +6378,7 @@
                                 import random
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['SPACE_STATION3']
+                                    valid_terrain_strings = ['SPACE_STATION_LV3']
                                     valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
                                     return plot.getImprovementType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -6357,7 +6410,7 @@
                                 import random
                                 def isPossible(unit,plot):
                                     gc = CyGlobalContext()
-                                    valid_terrain_strings = ['SPACE_STATION3']
+                                    valid_terrain_strings = ['SPACE_STATION_LV3']
                                     valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
                                     return plot.getImprovementType() in valid_terrains
                                 def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -6405,7 +6458,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
@@ -6428,7 +6481,7 @@
 			</UnitAIs>
             <Builds>
 				<Build>
-					<BuildType>BUILD_ASTEROID</BuildType>
+					<BuildType>BUILD_PLACE_ASTEROID</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
             </Builds>
@@ -6440,7 +6493,7 @@
                 <BuildingType>BUILDING_MARTIAN_ASTEROID_MINE</BuildingType>
 			</Buildings>
             <iBaseHurry>1000</iBaseHurry>
-			<PrereqTech>TECH_ASTEROIDPROBE</PrereqTech>
+			<PrereqTech>TECH_ASTEROID_BELT_PROBES</PrereqTech>
 			<iCost>2000</iCost>
             <iHurryCostModifier>10000</iHurryCostModifier>
             <PrereqBuilding>BUILDING_CERES_TRADING_POST</PrereqBuilding>
@@ -6482,7 +6535,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
@@ -6505,7 +6558,7 @@
 			</UnitAIs>
             <Builds>
 				<Build>
-					<BuildType>BUILD_ASTEROID</BuildType>
+					<BuildType>BUILD_PLACE_ASTEROID</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
             </Builds>
@@ -6597,7 +6650,7 @@
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_TRADING_PLANET</BuildType>
+					<BuildType>BUILD_INTERSTELLAR_TRADING_POST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
@@ -6629,7 +6682,7 @@
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_HELIOFORM</BuildType>
+					<BuildType>BUILD_HELIOFORMED_BROWN_DWARF</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
@@ -6645,7 +6698,7 @@
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
-					<BuildType>BUILD_INTERSTELLAR_MILITARY_BASE</BuildType>
+					<BuildType>BUILD_INTERSTELLAR_BASE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
                 <Build>
@@ -7019,7 +7072,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_INTERSTELLAR_TRAVEL</PrereqTech>
+			<PrereqTech>TECH_ION_PROPULSION</PrereqTech>
             <Buildings>
                 <BuildingType>BUILDING_COMMERCIAL_SATELLITES</BuildingType>
                 <BuildingType>BUILDING_SOLAR_SATELLITE</BuildingType>
@@ -7256,7 +7309,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_JUPITERE</PrereqTech>
+			<PrereqTech>TECH_JOVIAN_EXPLORATION</PrereqTech>
             <Buildings>
                 <BuildingType>BUILDING_HOLOGRAPHIC_SOLAR_SYSTEM</BuildingType>
                 <BuildingType>BUILDING_MISSION_TO_CALLISTO</BuildingType>
@@ -7388,7 +7441,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
@@ -7469,7 +7522,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
@@ -7551,7 +7604,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
@@ -7648,7 +7701,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_PLANET_EXPLORATION</PrereqTech>
+			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
             <Buildings>
 				<BuildingType>BUILDING_MARINER_PROGRAM</BuildingType>
 			</Buildings>
@@ -7722,7 +7775,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_PLANET_EXPLORATION</PrereqTech>
+			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
             <Buildings>
 				<BuildingType>BUILDING_MARINER_PROGRAM</BuildingType>
 			</Buildings>
@@ -7796,7 +7849,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_PLANET_EXPLORATION</PrereqTech>
+			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
             <Buildings>
 				<BuildingType>BUILDING_MARS_SCIENCE_LAB</BuildingType>
                 <BuildingType>BUILDING_MISSION_MARS</BuildingType>
@@ -7871,7 +7924,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_INTERSTELLAR_TRAVEL</PrereqTech>
+			<PrereqTech>TECH_ION_PROPULSION</PrereqTech>
             <Buildings>
 				<BuildingType>BUILDING_DAWN</BuildingType>
 			</Buildings>
@@ -7945,7 +7998,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_PLANET_EXPLORATION</PrereqTech>
+			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
             <Buildings>
 				<BuildingType>BUILDING_GALILEO</BuildingType>
 			</Buildings>
@@ -8019,7 +8072,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_JUPITERE</PrereqTech>
+			<PrereqTech>TECH_JOVIAN_EXPLORATION</PrereqTech>
             <Buildings>
 				<BuildingType>BUILDING_EUROPA_PROBE</BuildingType>
                 <BuildingType>BUILDING_ASTROBIOLOGY_LAB</BuildingType>
@@ -8094,7 +8147,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_PLANET_EXPLORATION</PrereqTech>
+			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
             <Buildings>
 				<BuildingType>BUILDING_CASSINI_HUYGENS</BuildingType>
 			</Buildings>
@@ -8168,7 +8221,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_JUPITERE</PrereqTech>
+			<PrereqTech>TECH_JOVIAN_EXPLORATION</PrereqTech>
             <Buildings>
 				<BuildingType>BUILDING_TITAN_PROBE</BuildingType>
 			</Buildings>
@@ -8242,7 +8295,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_PLANET_EXPLORATION</PrereqTech>
+			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
             <Buildings>
 				<BuildingType>BUILDING_VOYAGER_PROGRAM</BuildingType>
                 <BuildingType>BUILDING_URANUS_ATMOSPHERE_PROBE</BuildingType>
@@ -8317,7 +8370,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_PLANET_EXPLORATION</PrereqTech>
+			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
             <Buildings>
 				<BuildingType>BUILDING_VOYAGER_PROGRAM</BuildingType>
                 <BuildingType>BUILDING_NEPTUNE_ATMOSPHERE_PROBE</BuildingType>
@@ -8392,7 +8445,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_INTERSTELLAR_TRAVEL</PrereqTech>
+			<PrereqTech>TECH_ION_PROPULSION</PrereqTech>
             <Buildings>
                 <BuildingType>BUILDING_ASTRONOMY_DATABASE</BuildingType>
                 <BuildingType>BUILDING_NEW_HORIZONS</BuildingType>
@@ -9105,7 +9158,7 @@
 			<Domain>DOMAIN_LAND</Domain>
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-                <MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+                <MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
@@ -9127,7 +9180,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_ANTIMATTER_ROCKET</PrereqTech>
+			<PrereqTech>TECH_ANTIMATTER_ROCKETS</PrereqTech>
 			<Buildings>
 				<BuildingType>BUILDING_GALACTIC_CORE</BuildingType>
 			</Buildings>
@@ -9225,11 +9278,11 @@
 			</UnitAIs>
 			<GreatPeoples>
 				<GreatPeople>
-					<GreatPeopleType>SPECIALIST_GREAT_GENERAL</GreatPeopleType>
+					<GreatPeopleType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</GreatPeopleType>
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<PrereqTech>TECH_MILITARY_ROBOTS</PrereqTech>
+			<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
 			<BonusType>BONUS_NANOTUBES</BonusType>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -9291,12 +9344,12 @@
 			</UnitAIs>
 			<GreatPeoples>
 				<GreatPeople>
-					<GreatPeopleType>SPECIALIST_GREAT_GENERAL</GreatPeopleType>
+					<GreatPeopleType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</GreatPeopleType>
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_ADVANCED_WARMACHINES</PrereqTech>
-			<BonusType>BONUS_WARES_SUPERSTRONG_ALLOY</BonusType>
+			<BonusType>BONUS_SUPERSTRONG_ALLOY_WARES</BonusType>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>3</iMoves>
@@ -9351,7 +9404,7 @@
 			</UnitAIs>
 			<GreatPeoples>
 				<GreatPeople>
-					<GreatPeopleType>SPECIALIST_GREAT_GENERAL</GreatPeopleType>
+					<GreatPeopleType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</GreatPeopleType>
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
@@ -9427,7 +9480,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_MILITARY_ROBOTS</PrereqTech>
+			<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
 			<BonusType>BONUS_NANOTUBES</BonusType>
 			<iCost>3000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -9444,11 +9497,11 @@
 			<iCityAttack>25</iCityAttack>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_WARES</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_SILVER</BonusType>
+					<BonusType>BONUS_SILVER_WARES</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -9549,7 +9602,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_ADVANCED_WARMACHINES</PrereqTech>
-			<BonusType>BONUS_WARES_SUPERSTRONG_ALLOY</BonusType>
+			<BonusType>BONUS_SUPERSTRONG_ALLOY_WARES</BonusType>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMoves>3</iMoves>
@@ -9565,11 +9618,11 @@
 			<iCityAttack>25</iCityAttack>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_WARES</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_SILVER</BonusType>
+					<BonusType>BONUS_SILVER_WARES</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -9679,11 +9732,11 @@
 			<iCityAttack>25</iCityAttack>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_WARES</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_SILVER</BonusType>
+					<BonusType>BONUS_SILVER_WARES</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -9854,8 +9907,16 @@
 					<BuildType>BUILD_LUNAR_MINING_OUTPOST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
+				<Build>
+					<BuildType>BUILD_COLONY_EXTRACTION_FACILITY</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_LUNAR_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
 			</Builds>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<PrereqBuilding>BUILDING_LUNAR_ASSEMBLY_PLANT</PrereqBuilding>
 			<iCost>1700</iCost>
 			<iMoves>1</iMoves>
@@ -9913,7 +9974,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GRAVTUBE</BuildType>
+					<BuildType>BUILD_MAGLEV</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -9944,6 +10005,22 @@
 					<BuildType>BUILD_TERRAFORM_MOON</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
+				<Build>
+                    <BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
 			</Builds>
 			<PrereqBuilding>BUILDING_LUNAR_DROID_FACTORY</PrereqBuilding>
 			<PrereqTech>TECH_ANDROIDS</PrereqTech>

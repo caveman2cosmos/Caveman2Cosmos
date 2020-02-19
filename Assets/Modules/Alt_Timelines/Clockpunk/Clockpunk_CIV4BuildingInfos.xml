@@ -10,6 +10,7 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_CLOCKPUNK_EMBASSY</BuildingClass>
 			<Type>BUILDING_CLOCKPUNK_EMBASSY</Type>
+			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CLOCKPUNK_EMBASSY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CLOCKPUNK_EMBASSY_PEDIA</Civilopedia>
@@ -134,11 +135,11 @@
 			<Strategy>TXT_KEY_BUILDING_STEPRECKONER_MANUFACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_STEPRECKONER_MANUFACTORY</ArtDefineTag>
-			<ObsoleteTech>TECH_COMPUTERS</ObsoleteTech>
+			<ObsoleteTech>TECH_PERSONAL_COMPUTERS</ObsoleteTech>
 			<PrereqTech>TECH_CLOCKPUNK</PrereqTech>
 			<Bonus>BONUS_CLOCKPUNK</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_COPPER</Bonus>
+				<Bonus>BONUS_COPPER_WARES</Bonus>
 			</PrereqBonuses>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -171,12 +172,12 @@
 			</MapCategoryTypes>
 			<Bonus>BONUS_CLOCKPUNK</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_COPPER</Bonus>
-				<Bonus>BONUS_WARE_IRON</Bonus>
-				<Bonus>BONUS_WARE_TIN</Bonus>
-				<Bonus>BONUS_WARE_BRONZE</Bonus>
-				<Bonus>BONUS_WARE_BRASS</Bonus>
-				<Bonus>BONUS_WARE_STEEL</Bonus>
+				<Bonus>BONUS_COPPER_WARES</Bonus>
+				<Bonus>BONUS_IRON_WARES</Bonus>
+				<Bonus>BONUS_TIN_WARES</Bonus>
+				<Bonus>BONUS_BRONZE_WARES</Bonus>
+				<Bonus>BONUS_BRASS_WARES</Bonus>
+				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<iCost>380</iCost>
@@ -225,7 +226,7 @@
 			</MapCategoryTypes>
 			<Bonus>BONUS_CLOCKPUNK</Bonus>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<ObsoleteTech>TECH_ADVANCED_FLIGHT</ObsoleteTech>
+			<ObsoleteTech>TECH_ADVANCED_AVIATION</ObsoleteTech>
 			<iCost>380</iCost>
 			<iAirUnitCapacity>2</iAirUnitCapacity>
 			<HealUnitCombatTypes>

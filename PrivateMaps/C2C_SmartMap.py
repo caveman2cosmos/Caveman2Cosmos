@@ -42,9 +42,9 @@ resourcesWater = ('BONUS_CLAM', 'BONUS_FISH', 'BONUS_WHALE', 'BONUS_CRAB', 'BONU
 #these resources should be given more often than others
 resourcesCommon = ('BONUS_CORN', 'BONUS_COW', 'BONUS_DEER', 'BONUS_PIG', 'BONUS_RICE', 'BONUS_SHEEP', 'BONUS_WHEAT')
 #these resources are important early on, and will place extras unless using one of the 'stricter' options
-resourcesImportantEarly = ('BONUS_STONE', 'BONUS_MARBLE', 'BONUS_COPPER', 'BONUS_IRON', 'BONUS_HORSE', 'BONUS_SULPHUR')
+resourcesImportantEarly = ('BONUS_STONE', 'BONUS_MARBLE', 'BONUS_COPPER_ORE', 'BONUS_IRON_ORE', 'BONUS_HORSE', 'BONUS_SULPHUR')
 #these are the strategic resources restricted by the 'restricted' settings
-resourcesStrategic = ('BONUS_IRON', 'BONUS_OIL', 'BONUS_URANIUM')
+resourcesStrategic = ('BONUS_IRON_ORE', 'BONUS_OIL', 'BONUS_URANIUM')
 
 ##########################################################################
 #global variables
@@ -1567,7 +1567,7 @@ def generateTerrainTypes():
 	terrainIce = GC.getInfoTypeForString("TERRAIN_ICE")
 	terrainTundra = GC.getInfoTypeForString("TERRAIN_TAIGA")
 	terrainPermafrost = GC.getInfoTypeForString("TERRAIN_TUNDRA")
-	terrainGrass = GC.getInfoTypeForString("TERRAIN_GRASS")
+	terrainGrass = GC.getInfoTypeForString("TERRAIN_GRASSLAND")
 	terrainLush = GC.getInfoTypeForString("TERRAIN_LUSH")
 	terrainMuddy = GC.getInfoTypeForString("TERRAIN_MUDDY")
 	terrainMarsh = GC.getInfoTypeForString("TERRAIN_MARSH")
@@ -2013,7 +2013,7 @@ def addFeatures():
 	featOasis = GC.getInfoTypeForString("FEATURE_OASIS")
 	featFlood = GC.getInfoTypeForString("FEATURE_FLOOD_PLAINS")
 	featForest = GC.getInfoTypeForString("FEATURE_FOREST")
-	featVolcano = GC.getInfoTypeForString("FEATURE_VOLCANO")
+	featVolcano = GC.getInfoTypeForString("FEATURE_VOLCANO_ACTIVE")
 	terrainDesert = GC.getInfoTypeForString("TERRAIN_DESERT")
 	terrainMarsh = GC.getInfoTypeForString("TERRAIN_MARSH")
 	terrainPlains = GC.getInfoTypeForString("TERRAIN_PLAINS")
@@ -4383,7 +4383,7 @@ def isPlotLegalForBonus(plot,bonus,strict):
 
 	#for whatever reason, these resources never validate as canHaveBonus so we override
 	#and place them on any empty hill, unless strict mode is set
-	resourcesEmptyHill = ('BONUS_GOLD','BONUS_SILVER')
+	resourcesEmptyHill = ('BONUS_GOLD_ORE','BONUS_SILVER_ORE')
 	if not strict:
 		if type_string in resourcesEmptyHill and plot.isHills():
 			return True
@@ -5205,7 +5205,7 @@ class GreatPlainsTerrainGenerator(CvMapGeneratorUtil.TerrainGenerator):
 
 		self.terrainDesert = GC.getInfoTypeForString("TERRAIN_DESERT")
 		self.terrainPlains = GC.getInfoTypeForString("TERRAIN_PLAINS")
-		self.terrainGrass = GC.getInfoTypeForString("TERRAIN_GRASS")
+		self.terrainGrass = GC.getInfoTypeForString("TERRAIN_GRASSLAND")
 
 	def getLatitudeAtPlot(self, iX, iY):
 		lat = iX/float(self.iWidth) # 0.0 = west
@@ -5360,7 +5360,7 @@ class OasisTerrainGenerator(CvMapGeneratorUtil.TerrainGenerator):
 
 		self.terrainDesert = GC.getInfoTypeForString("TERRAIN_DESERT")
 		self.terrainPlains = GC.getInfoTypeForString("TERRAIN_PLAINS")
-		self.terrainGrass = GC.getInfoTypeForString("TERRAIN_GRASS")
+		self.terrainGrass = GC.getInfoTypeForString("TERRAIN_GRASSLAND")
 
 	def getLatitudeAtPlot(self, iX, iY):
 		lat = iY/float(self.iHeight) # 0.0 = south edge, 1.0 = north edge
@@ -5555,7 +5555,7 @@ class OasisFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
 			# Jungles only in the deep south or in the Oasis!
 			if lat < 0.16:
 				self.addJunglesAtPlot(pPlot, iX, iY, lat)
-			elif lat > 0.32 and lat < 0.65 and (pPlot.getTerrainType() == GC.getInfoTypeForString("TERRAIN_GRASS")):
+			elif lat > 0.32 and lat < 0.65 and (pPlot.getTerrainType() == GC.getInfoTypeForString("TERRAIN_GRASSLAND")):
 				pPlot.setFeatureType(self.featureJungle, -1)
 
 		if (pPlot.getFeatureType() == FeatureTypes.NO_FEATURE):

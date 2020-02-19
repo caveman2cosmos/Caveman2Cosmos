@@ -110,8 +110,8 @@ public:
 /*                                                                                              */
 /************************************************************************************************/
 	int getCurrentMasterPower( bool bIncludeVassals ) const;
-	bool isMasterPlanningLandWar(CvArea* pArea) const;
-	bool isMasterPlanningSeaWar(CvArea* pArea)const;
+	bool isMasterPlanningLandWar(const CvArea* pArea) const;
+	bool isMasterPlanningSeaWar(const CvArea* pArea)const;
 	int getAtWarCount(bool bIgnoreMinors, bool bIgnoreVassals = false) const;																				// Exposed to Python
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
@@ -136,19 +136,19 @@ public:
 	int processedTeamCulture() const;
 	unsigned long long countTotalCulture() const;																											// Exposed to Python
 
-	int countNumUnitsByArea(CvArea* pArea) const;																				// Exposed to Python
-	int countNumCitiesByArea(CvArea* pArea) const;																			// Exposed to Python
-	int countTotalPopulationByArea(CvArea* pArea) const;																// Exposed to Python
-	int countPowerByArea(CvArea* pArea) const;																					// Exposed to Python
-	int countEnemyPowerByArea(CvArea* pArea) const;																			// Exposed to Python
+	int countNumUnitsByArea(const CvArea* pArea) const;																				// Exposed to Python
+	int countNumCitiesByArea(const CvArea* pArea) const;																			// Exposed to Python
+	int countTotalPopulationByArea(const CvArea* pArea) const;																// Exposed to Python
+	int countPowerByArea(const CvArea* pArea) const;																					// Exposed to Python
+	int countEnemyPowerByArea(const CvArea* pArea) const;																			// Exposed to Python
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      05/19/10                                jdog5000      */
 /*                                                                                              */
 /* War strategy AI                                                                              */
 /************************************************************************************************/
-	int countEnemyPopulationByArea(CvArea* pArea) const;
-	int countNumAIUnitsByArea(CvArea* pArea, UnitAITypes eUnitAI) const;								// Exposed to Python
-	int countEnemyDangerByArea(CvArea* pArea, TeamTypes eEnemyTeam = NO_TEAM) const;																		// Exposed to Python
+	int countEnemyPopulationByArea(const CvArea* pArea) const;
+	int countNumAIUnitsByArea(const CvArea* pArea, UnitAITypes eUnitAI) const;								// Exposed to Python
+	int countEnemyDangerByArea(const CvArea* pArea, TeamTypes eEnemyTeam = NO_TEAM) const;																		// Exposed to Python
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
@@ -551,7 +551,7 @@ public:
 	virtual void AI_doTurnPre() = 0;
 	virtual void AI_doTurnPost() = 0;
 	virtual void AI_makeAssignWorkDirty() = 0;
-	virtual void AI_updateAreaStragies(bool bTargets = true) = 0;
+	virtual void AI_updateAreaStragies(const bool bTargets = true) = 0;
 	virtual bool AI_shareWar(TeamTypes eTeam) const = 0;			// Exposed to Python
 	virtual void AI_updateWorstEnemy() = 0;
 	virtual int AI_getAtWarCounter(TeamTypes eIndex) const = 0;     // Exposed to Python
@@ -594,7 +594,7 @@ public:
 /**		REVOLUTION_MOD							END								*/
 /********************************************************************************/
 
-	int getWinForLosingResearchModifier();
+	int getWinForLosingResearchModifier() const;
 
 protected:
 

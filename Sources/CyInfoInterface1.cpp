@@ -323,6 +323,8 @@ void CyInfoPythonInterface1()
 
 	python::class_<CvUnitInfo, python::bases<CvInfoBase, CvScalableInfo> >("CvUnitInfo")
 
+		.def("getMaxGlobalInstances", &CvUnitInfo::getMaxGlobalInstances, "int ()")
+//		.def("getMaxTeamInstances", &CvUnitInfo::getMaxTeamInstances, "int ()")
 		.def("getAIWeight", &CvUnitInfo::getAIWeight, "int ()")
 		.def("getProductionCost", &CvUnitInfo::getProductionCost, "int ()")
 		.def("getHurryCostModifier", &CvUnitInfo::getHurryCostModifier, "int ()")
@@ -725,8 +727,6 @@ void CyInfoPythonInterface1()
 		;
 
 	python::class_<CvUnitClassInfo, python::bases<CvInfoBase> >("CvUnitClassInfo")
-		.def("getMaxGlobalInstances", &CvUnitClassInfo::getMaxGlobalInstances, "int ()")
-		.def("getMaxTeamInstances", &CvUnitClassInfo::getMaxTeamInstances, "int ()")
 		.def("getMaxPlayerInstances", &CvUnitClassInfo::getMaxPlayerInstances, "int ()")
 		.def("getUnlimitedException", &CvUnitClassInfo::isUnlimitedException, "bool ()")
 		.def("getInstanceCostModifier", &CvUnitClassInfo::getInstanceCostModifier, "int ()")
@@ -797,16 +797,8 @@ void CyInfoPythonInterface1()
 		.def("getPowerValue", &CvBuildingInfo::getPowerValue, "int ()")
 		.def("getSpecialBuildingType", &CvBuildingInfo::getSpecialBuildingType, "int ()")
 		.def("getAdvisorType", &CvBuildingInfo::getAdvisorType, "int ()")
-/************************************************************************************************/
-/* REVDCM                                 02/16/10                                phungus420    */
-/*                                                                                              */
-/* CanConstruct                                                                                 */
-/************************************************************************************************/
 		.def("getPrereqGameOption", &CvBuildingInfo::getPrereqGameOption, "int ()")
 		.def("getNotGameOption", &CvBuildingInfo::getNotGameOption, "int ()")
-/************************************************************************************************/
-/* REVDCM                                  END                                                  */
-/************************************************************************************************/
 		.def("getHolyCity", &CvBuildingInfo::getHolyCity, "int ()")
 		.def("getReligionType", &CvBuildingInfo::getReligionType, "int ()")
 		.def("getStateReligion", &CvBuildingInfo::getStateReligion, "int ()")
@@ -833,25 +825,17 @@ void CyInfoPythonInterface1()
 		.def("getBombardDefenseModifier", &CvBuildingInfo::getBombardDefenseModifier, "int ()")
 		.def("getAllCityDefenseModifier", &CvBuildingInfo::getAllCityDefenseModifier, "int ()")
 		.def("getEspionageDefenseModifier", &CvBuildingInfo::getEspionageDefenseModifier, "int ()")
-/********************************************************************************/
-/**		REVDCM									4/09/10				phungus420	*/
-/**																				*/
-/**		Building Effects														*/
-/********************************************************************************/
 		.def("getUnitUpgradePriceModifier", &CvBuildingInfo::getUnitUpgradePriceModifier, "int ()")
 		.def("getRevIdxLocal", &CvBuildingInfo::getRevIdxLocal, "int ()")
 		.def("getRevIdxNational", &CvBuildingInfo::getRevIdxNational, "int ()")
 		.def("getRevIdxDistanceModifier", &CvBuildingInfo::getRevIdxDistanceModifier, "int ()")
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
 		.def("getMaxPopulationAllowed", &CvBuildingInfo::getMaxPopulationAllowed, "int ()")
 		.def("getMaxPopulationChange", &CvBuildingInfo::getMaxPopulationChange, "int ()")
-
 		.def("getMissionType", &CvBuildingInfo::getMissionType, "int ()")
 		.def("getVoteSourceType", &CvBuildingInfo::getVoteSourceType, "int ()")
 		.def("getPrereqVicinityBonus", &CvBuildingInfo::getPrereqVicinityBonus, "int ()")
 
+		.def("isNoLimit", &CvBuildingInfo::isNoLimit, "bool ()")
 		.def("isTeamShare", &CvBuildingInfo::isTeamShare, "bool ()")
 		.def("isAutoBuild", &CvBuildingInfo::isAutoBuild, "bool ()")
 		.def("isRequiresActiveCivics", &CvBuildingInfo::isRequiresActiveCivics, "bool ()")

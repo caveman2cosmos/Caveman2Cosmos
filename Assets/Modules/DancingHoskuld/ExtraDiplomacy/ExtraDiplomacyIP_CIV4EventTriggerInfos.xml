@@ -292,7 +292,7 @@
 			<FeaturesRequired/>
 			<TerrainsRequired/>
 			<ImprovementsRequired>
-				<ImprovementType>IMPROVEMENT_INDIGENOUS_PEOPLE</ImprovementType>
+				<ImprovementType>IMPROVEMENT_INDIGENOUS_COMMUNITY</ImprovementType>
 			</ImprovementsRequired>
 			<BonusesRequired/>
 			<RoutesRequired/>

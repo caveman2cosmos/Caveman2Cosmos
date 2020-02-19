@@ -63,9 +63,9 @@
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<BonusType>BONUS_QUECHUA</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>155</iCost>
 			<iMoves>2</iMoves>
@@ -81,15 +81,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -161,7 +161,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -171,7 +171,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>2</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -321,8 +321,8 @@
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			<BonusType>BONUS_CELTIC</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>185</iCost>
 			<iMoves>1</iMoves>
@@ -414,8 +414,8 @@
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			<BonusType>BONUS_ROMAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>195</iCost>
 			<iMoves>1</iMoves>
@@ -520,9 +520,9 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<BonusType>BONUS_GREEK</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>115</iCost>
 			<iMoves>1</iMoves>
@@ -543,15 +543,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -639,9 +639,9 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<BonusType>BONUS_SUMERIAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>125</iCost>
 			<iMoves>1</iMoves>
@@ -656,15 +656,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -843,7 +843,7 @@
 			<PrereqTech>TECH_SMITHING</PrereqTech>
 			<BonusType>BONUS_JAPANESE</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>270</iCost>
 			<iMoves>1</iMoves>
@@ -947,9 +947,9 @@
 			<PrereqTech>TECH_SMITHING</PrereqTech>
 			<BonusType>BONUS_VIKING</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>225</iCost>
 			<iMoves>1</iMoves>
@@ -965,15 +965,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -1063,9 +1063,9 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<BonusType>BONUS_ZULU</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>115</iCost>
 			<iMoves>2</iMoves>
@@ -1085,15 +1085,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -1296,10 +1296,10 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
-			<BonusType>BONUS_HOLYROMAN</BonusType>
+			<BonusType>BONUS_HOLY_ROMAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>200</iCost>
 			<iMoves>1</iMoves>
@@ -1416,7 +1416,7 @@
 			<iXPValueDefense>3</iXPValueDefense>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -1535,7 +1535,7 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_WARES</BonusType>
 					<iProductonModifier>20</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -1636,7 +1636,7 @@
 			<iFirstStrikes>1</iFirstStrikes>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_WARES</BonusType>
 					<iProductonModifier>20</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -1743,7 +1743,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -1856,7 +1856,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -1957,11 +1957,11 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
-			<BonusType>BONUS_KANEMBORNU</BonusType>
+			<BonusType>BONUS_KANEM_BORNU</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>125</iCost>
 			<iMoves>1</iMoves>
@@ -1993,15 +1993,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -2635,7 +2635,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -2790,7 +2790,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -3059,7 +3059,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -3072,7 +3072,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -3240,7 +3240,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -3417,7 +3417,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -3435,7 +3435,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -3589,13 +3589,13 @@
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_SYRIAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_ELEPHANT</BonusType>
+				<BonusType>BONUS_ELEPHANTS</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -3717,7 +3717,7 @@
 				<Or>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_DIESEL</ID>
+						<ID>BONUS_OIL_PRODUCTS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -3875,7 +3875,7 @@
 			</UnitCombatCollateralImmunes>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -3979,11 +3979,11 @@
 			<iXPValueDefense>3</iXPValueDefense>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<iProductonModifier>20</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -4090,11 +4090,11 @@
 			<iXPValueDefense>3</iXPValueDefense>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<iProductonModifier>20</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -4320,7 +4320,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -4440,9 +4440,9 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<BonusType>BONUS_ASSYRIAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>115</iCost>
 			<iMoves>1</iMoves>
@@ -4461,15 +4461,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -4569,7 +4569,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -4797,7 +4797,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -4955,7 +4955,7 @@
 			<BonusType>BONUS_CHEROKEE</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
-				<BonusType>BONUS_AMMO</BonusType>
+				<BonusType>BONUS_AMMUNITION</BonusType>
 			</PrereqBonuses>
 			<iCost>455</iCost>
 			<iMoves>1</iMoves>
@@ -4982,7 +4982,7 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -5115,7 +5115,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -5416,7 +5416,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -5431,7 +5431,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -5579,8 +5579,8 @@
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<BonusType>BONUS_INDONESIAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>200</iCost>
 			<iMoves>1</iMoves>
@@ -5697,7 +5697,7 @@
 			<iXPValueDefense>3</iXPValueDefense>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -5795,8 +5795,8 @@
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			<BonusType>BONUS_ISRAELI</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>195</iCost>
 			<iMoves>1</iMoves>
@@ -5884,8 +5884,8 @@
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<BonusType>BONUS_SWISS</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>275</iCost>
 			<iMoves>1</iMoves>
@@ -5996,8 +5996,8 @@
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<BonusType>BONUS_KHMER</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>200</iCost>
 			<iMoves>1</iMoves>
@@ -6056,15 +6056,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -6142,8 +6142,8 @@
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			<BonusType>BONUS_TIBETAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>195</iCost>
 			<iMoves>1</iMoves>
@@ -6458,7 +6458,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -6670,7 +6670,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -6822,7 +6822,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -6955,7 +6955,7 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -7445,7 +7445,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_HUNTING</PrereqTech>
+			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<BonusType>BONUS_CREE</BonusType>
 			<iCost>38</iCost>
 			<iMoves>2</iMoves>
@@ -7659,7 +7659,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -7768,7 +7768,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_WOOD_WORKING</PrereqTech>
+			<PrereqTech>TECH_WOODWORKING</PrereqTech>
 			<BonusType>BONUS_NOOTKA</BonusType>
 			<iCost>46</iCost>
 			<iMoves>1</iMoves>
@@ -7787,7 +7787,7 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -7870,8 +7870,8 @@
 			<PrereqTech>TECH_SMITHING</PrereqTech>
 			<BonusType>BONUS_CEYLONESE</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>270</iCost>
 			<iMoves>1</iMoves>
@@ -8078,9 +8078,9 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<BonusType>BONUS_KONGOLESE</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>115</iCost>
 			<iMoves>2</iMoves>
@@ -8108,15 +8108,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -8199,9 +8199,9 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<BonusType>BONUS_CARTHAGINIAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>115</iCost>
 			<iMoves>1</iMoves>
@@ -8217,15 +8217,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -8340,7 +8340,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -8354,7 +8354,7 @@
 			<iCollateralDamageMaxUnits>5</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -8491,8 +8491,8 @@
 			<PrereqTech>TECH_STIRRUP</PrereqTech>
 			<BonusType>BONUS_HAUSA</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 				<BonusType>BONUS_OBSIDIAN</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
@@ -8515,7 +8515,7 @@
 			<iCityAttack>-20</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -8754,7 +8754,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -8767,7 +8767,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -9011,7 +9011,7 @@
 			<iCityAttack>50</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -9139,7 +9139,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_SPECIES_UPLIFTING</PrereqTech>
-			<BonusType>BONUS_DOLPHIN</BonusType>
+			<BonusType>BONUS_CETACEA_SAPIEN</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_MECHS</BonusType>
 			</PrereqBonuses>
@@ -9270,13 +9270,13 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -9482,7 +9482,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -9633,7 +9633,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -9649,7 +9649,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -9832,7 +9832,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -9848,7 +9848,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -10118,7 +10118,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -10131,7 +10131,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -10239,8 +10239,8 @@
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<BonusType>BONUS_MERINA</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>215</iCost>
 			<iMoves>1</iMoves>
@@ -10362,7 +10362,7 @@
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
 			<BonusType>BONUS_VIETNAMESE</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_AMMO</BonusType>
+				<BonusType>BONUS_AMMUNITION</BonusType>
 			</PrereqBonuses>
 			<iCost>1030</iCost>
 			<iMoves>1</iMoves>
@@ -10486,8 +10486,8 @@
 			<PrereqTech>TECH_SMITHING</PrereqTech>
 			<BonusType>BONUS_CHOLA</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>270</iCost>
 			<iMoves>1</iMoves>
@@ -10503,15 +10503,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -10590,8 +10590,8 @@
 			<PrereqTech>TECH_SMITHING</PrereqTech>
 			<BonusType>BONUS_INDIAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>270</iCost>
 			<iMoves>1</iMoves>
@@ -10611,15 +10611,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -10698,9 +10698,9 @@
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<BonusType>BONUS_MINOAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>165</iCost>
 			<iMoves>1</iMoves>
@@ -10710,15 +10710,15 @@
 			<iCityAttack>20</iCityAttack>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -10797,7 +10797,7 @@
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<BonusType>BONUS_PAKISTANI</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>310</iCost>
 			<iMoves>1</iMoves>
@@ -10894,9 +10894,9 @@
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<BonusType>BONUS_LUBA</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>155</iCost>
 			<iMoves>1</iMoves>
@@ -10912,15 +10912,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -11000,7 +11000,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_HUNTING</PrereqTech>
+			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<BonusType>BONUS_AKA</BonusType>
 			<iCost>29</iCost>
 			<iMoves>1</iMoves>
@@ -11110,9 +11110,9 @@
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<BonusType>BONUS_FRANKS</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>160</iCost>
 			<iMoves>1</iMoves>
@@ -11129,15 +11129,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -11431,7 +11431,7 @@
 			<iXPValueDefense>3</iXPValueDefense>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -11687,8 +11687,8 @@
 			<PrereqTech>TECH_STIRRUP</PrereqTech>
 			<BonusType>BONUS_FULANI</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 				<BonusType>BONUS_OBSIDIAN</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
@@ -11711,7 +11711,7 @@
 			<iCityAttack>-20</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -11839,9 +11839,9 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<BonusType>BONUS_INCAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>115</iCost>
 			<iMoves>1</iMoves>
@@ -11857,15 +11857,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -11952,8 +11952,8 @@
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<BonusType>BONUS_TAMIL</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>255</iCost>
 			<iMoves>1</iMoves>
@@ -11968,15 +11968,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -12079,7 +12079,7 @@
 			<PrereqTech>TECH_URBAN_CULTURE</PrereqTech>
 			<BonusType>BONUS_SOMALI</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_DIESEL</BonusType>
+				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
 			</PrereqBonuses>
 			<iCost>1100</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
@@ -12218,7 +12218,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -12231,7 +12231,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -12342,7 +12342,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
-			<BonusType>BONUS_NEPAL</BonusType>
+			<BonusType>BONUS_NEPALESE</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -12368,7 +12368,7 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -12458,8 +12458,8 @@
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			<BonusType>BONUS_GOTH</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>195</iCost>
 			<iMoves>1</iMoves>
@@ -12558,7 +12558,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -12665,7 +12665,7 @@
 			<iXPValueDefense>3</iXPValueDefense>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -12870,8 +12870,8 @@
 			<PrereqTech>TECH_STIRRUP</PrereqTech>
 			<BonusType>BONUS_MALINESE</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 				<BonusType>BONUS_OBSIDIAN</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
@@ -12894,7 +12894,7 @@
 			<iCityAttack>-20</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -13030,9 +13030,9 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<BonusType>BONUS_MASAI</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>125</iCost>
 			<iMoves>1</iMoves>
@@ -13057,15 +13057,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -13157,7 +13157,7 @@
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_SHIPWRIGHT</PrereqBuilding>
 			<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
-			<BonusType>BONUS_PHOENICAN</BonusType>
+			<BonusType>BONUS_PHOENICIAN</BonusType>
 			<iCost>260</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iMoves>3</iMoves>
@@ -13206,7 +13206,7 @@
 			<iXPValueDefense>3</iXPValueDefense>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<iProductonModifier>20</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -13312,7 +13312,7 @@
 			<iXPValueDefense>3</iXPValueDefense>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -13420,7 +13420,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -13434,7 +13434,7 @@
 			<iCityAttack>100</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -13546,7 +13546,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -13657,8 +13657,8 @@
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<BonusType>BONUS_MUTAPA</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>255</iCost>
 			<iMoves>1</iMoves>
@@ -13970,7 +13970,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -13983,7 +13983,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -14122,7 +14122,7 @@
 			</FeatureDefenses>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -14221,13 +14221,13 @@
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_BURMESE</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_ELEPHANT</BonusType>
+				<BonusType>BONUS_ELEPHANTS</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -14350,13 +14350,13 @@
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_CHAM</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_ELEPHANT</BonusType>
+				<BonusType>BONUS_ELEPHANTS</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -14478,13 +14478,13 @@
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_SIAMESE</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_ELEPHANT</BonusType>
+				<BonusType>BONUS_ELEPHANTS</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -14611,7 +14611,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -14743,7 +14743,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -14759,7 +14759,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -14929,7 +14929,7 @@
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_HORSE_TRAINER</PrereqBuilding>
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
-			<BonusType>BONUS_SOUTHAFRICAN</BonusType>
+			<BonusType>BONUS_SOUTH_AFRICAN</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -14942,7 +14942,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -14958,7 +14958,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -15102,11 +15102,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PAVED</BuildType>
+					<BuildType>BUILD_PAVED_ROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERN_ROAD</BuildType>
+					<BuildType>BUILD_HIGHWAY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -15114,7 +15114,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GRAIN_GATHERER_2</BuildType>
+					<BuildType>BUILD_SEED_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -15122,7 +15122,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_ROCK_GATHERER_2</BuildType>
+					<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -15154,7 +15154,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_LUMBER_JACK</BuildType>
+					<BuildType>BUILD_LUMBERJACK</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -15166,7 +15166,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FRUIT_PICKER</BuildType>
+					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -15174,7 +15174,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_PICKER</BuildType>
+					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -15194,7 +15194,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_CAMP</BuildType>
+					<BuildType>BUILD_HUNTING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -15206,7 +15206,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WELL</BuildType>
+					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -15230,7 +15230,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SUBURB</BuildType>
+					<BuildType>BUILD_SUBURBS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -15254,27 +15254,27 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
+					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_EXPLORETEMPLE</BuildType>
+					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_FOREST</BuildType>
+					<BuildType>BUILD_YOUNG_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WOODEN_TOWER</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE_CACHE</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PALISADE</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -15282,7 +15282,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -15294,11 +15294,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_SWAMP</BuildType>
+					<BuildType>BUILD_DRAIN_SWAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORM</BuildType>
+					<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -15308,7 +15308,7 @@
 			</Builds>
 			<ForceObsoleteTech>TECH_NITROGLYCERIN</ForceObsoleteTech>
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
-			<BonusType>BONUS_RAPANUI</BonusType>
+			<BonusType>BONUS_RAPA_NUI</BonusType>
 			<iCost>78</iCost>
 			<iMoves>2</iMoves>
 			<iWorkRate>200</iWorkRate>
@@ -15382,7 +15382,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
-			<BonusType>BONUS_HATTIAN</BonusType>
+			<BonusType>BONUS_HAITIAN</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -15402,7 +15402,7 @@
 			<iXPValueDefense>3</iXPValueDefense>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -15500,7 +15500,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -15605,7 +15605,7 @@
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_CANTONESE</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>
@@ -15624,7 +15624,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -15742,8 +15742,8 @@
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			<BonusType>BONUS_SPARTAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>200</iCost>
 			<iMoves>1</iMoves>
@@ -15836,7 +15836,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -15965,7 +15965,7 @@
 			<iXPValueDefense>3</iXPValueDefense>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<iProductonModifier>20</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -16088,7 +16088,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -16104,7 +16104,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -16488,7 +16488,7 @@
 			<iAnimalCombat>25</iAnimalCombat>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<iProductonModifier>20</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -16572,7 +16572,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
-			<BonusType>BONUS_NEWZEALAND</BonusType>
+			<BonusType>BONUS_NEW_ZEALAND</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -16581,7 +16581,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -16679,13 +16679,13 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -16850,7 +16850,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
-			<BonusType>BONUS_AKKAD</BonusType>
+			<BonusType>BONUS_AKKADIAN</BonusType>
 			<iCost>165</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>5</iCombat>
@@ -16946,9 +16946,9 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<BonusType>BONUS_ANASAZI</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>115</iCost>
 			<iMoves>2</iMoves>
@@ -16964,15 +16964,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -17169,11 +17169,11 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
-			<BonusType>BONUS_ATHENS</BonusType>
+			<BonusType>BONUS_ATHENIAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>115</iCost>
 			<iMoves>1</iMoves>
@@ -17189,15 +17189,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -17292,7 +17292,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -17397,9 +17397,9 @@
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<BonusType>BONUS_BLACKFOOT</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>155</iCost>
 			<iMoves>1</iMoves>
@@ -17414,15 +17414,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -17502,11 +17502,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PAVED</BuildType>
+					<BuildType>BUILD_PAVED_ROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERN_ROAD</BuildType>
+					<BuildType>BUILD_HIGHWAY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -17514,11 +17514,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_RAILROAD_ELECTRIC</BuildType>
+					<BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GRAVTUBE</BuildType>
+					<BuildType>BUILD_MAGLEV</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -17550,7 +17550,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GEOTHERMAL_BOREHOLE</BuildType>
+					<BuildType>BUILD_GEOTHERMAL_FACTORY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -17558,11 +17558,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_3FACTORY</BuildType>
+					<BuildType>BUILD_FACTORY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_LUMBER_JACK</BuildType>
+					<BuildType>BUILD_LUMBERJACK</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -17582,7 +17582,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_HYDRO_PLANT</BuildType>
+					<BuildType>BUILD_HYDRO_DAM</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -17606,7 +17606,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_CAMP</BuildType>
+					<BuildType>BUILD_HUNTING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -17614,7 +17614,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SAFARI</BuildType>
+					<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -17622,11 +17622,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TAR_GATHERER2</BuildType>
+					<BuildType>BUILD_TAR_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WELL</BuildType>
+					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -17638,7 +17638,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERNWINDMILL</BuildType>
+					<BuildType>BUILD_MODERN_WINDMILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -17658,7 +17658,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SUBURB</BuildType>
+					<BuildType>BUILD_SUBURBS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -17686,11 +17686,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
+					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_EXPLORETEMPLE</BuildType>
+					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -17706,11 +17706,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FUTURE_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_CENTER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -17718,11 +17718,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_SWAMP</BuildType>
+					<BuildType>BUILD_DRAIN_SWAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORM</BuildType>
+					<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -17730,15 +17730,15 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MAKE_JUNGLE</BuildType>
+					<BuildType>BUILD_PLANT_JUNGLE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_FOREST</BuildType>
+					<BuildType>BUILD_YOUNG_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
+					<BuildType>BUILD_PLANT_BAMBOO_GROVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -17901,7 +17901,7 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_WARES</BonusType>
 					<iProductonModifier>20</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -18123,9 +18123,9 @@
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<BonusType>BONUS_EPIRUS</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>155</iCost>
 			<iMoves>1</iMoves>
@@ -18140,15 +18140,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -18267,7 +18267,7 @@
 			<iAnimalCombat>50</iAnimalCombat>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<iProductonModifier>20</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -18432,7 +18432,7 @@
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<BonusType>BONUS_ICELANDIC</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>290</iCost>
 			<iMoves>1</iMoves>
@@ -18544,7 +18544,7 @@
 			<iXPValueDefense>3</iXPValueDefense>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -18645,7 +18645,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_HUNTING_TACTICS</PrereqTech>
+			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<BonusType>BONUS_JIVARO</BonusType>
 			<iCost>63</iCost>
 			<iMoves>2</iMoves>
@@ -18849,9 +18849,9 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<BonusType>BONUS_MACEDONIA</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>115</iCost>
 			<iMoves>1</iMoves>
@@ -18867,15 +18867,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -18974,7 +18974,7 @@
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_MASSAGETAE</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>
@@ -18995,7 +18995,7 @@
 			<iXPValueDefense>3</iXPValueDefense>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -19213,9 +19213,9 @@
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<BonusType>BONUS_MOCHE</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>155</iCost>
 			<iMoves>1</iMoves>
@@ -19231,15 +19231,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -19326,11 +19326,11 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
-			<BonusType>BONUS_PICT</BonusType>
+			<BonusType>BONUS_PICTISH</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>195</iCost>
 			<iMoves>1</iMoves>
@@ -19417,9 +19417,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
-			<BonusType>BONUS_QUANG</BonusType>
+			<BonusType>BONUS_QIANG</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>275</iCost>
 			<iMoves>1</iMoves>
@@ -19526,9 +19526,9 @@
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<BonusType>BONUS_ROXOLANI</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>155</iCost>
 			<iMoves>1</iMoves>
@@ -19543,15 +19543,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -19650,7 +19650,7 @@
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_SASSANIAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>
@@ -19671,7 +19671,7 @@
 			<iXPValueDefense>3</iXPValueDefense>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -19814,7 +19814,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -20042,7 +20042,7 @@
 			<PrereqTech>TECH_GUIDED_WEAPONS</PrereqTech>
 			<BonusType>BONUS_SOVIET</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_AMMO</BonusType>
+				<BonusType>BONUS_AMMUNITION</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>
@@ -20052,15 +20052,15 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_ALUMINUM</ID>
+						<ID>BONUS_ALUMINUM_WARES</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_DIESEL</ID>
+						<ID>BONUS_OIL_PRODUCTS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_JET_AIRCRAFTS</ID>
+						<ID>BONUS_JET_ENGINES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -20182,7 +20182,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -20512,9 +20512,9 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<BonusType>BONUS_TROJAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>115</iCost>
 			<iMoves>1</iMoves>
@@ -20530,15 +20530,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -20629,7 +20629,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -20663,7 +20663,7 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_WARES</BonusType>
 					<iProductonModifier>20</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -20828,8 +20828,8 @@
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<BonusType>BONUS_KILLKE</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>215</iCost>
 			<iMoves>1</iMoves>
@@ -20947,7 +20947,7 @@
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<BonusType>BONUS_KITARA</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>290</iCost>
 			<iMoves>1</iMoves>
@@ -21195,7 +21195,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -21322,7 +21322,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -21432,9 +21432,9 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<BonusType>BONUS_KUSH</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>115</iCost>
 			<iMoves>1</iMoves>
@@ -21450,15 +21450,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -21576,7 +21576,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -21594,7 +21594,7 @@
 			<iHillsDefense>10</iHillsDefense>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -21718,7 +21718,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -21830,7 +21830,7 @@
 			<iXPValueDefense>3</iXPValueDefense>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -21942,7 +21942,7 @@
 			<iXPValueDefense>3</iXPValueDefense>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -22050,7 +22050,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -22159,7 +22159,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -22566,7 +22566,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -22580,7 +22580,7 @@
 			<iCityAttack>-30</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -22695,9 +22695,9 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<BonusType>BONUS_LONGOBARDI</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>115</iCost>
 			<iMoves>1</iMoves>
@@ -22713,15 +22713,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -22824,11 +22824,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PAVED</BuildType>
+					<BuildType>BUILD_PAVED_ROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERN_ROAD</BuildType>
+					<BuildType>BUILD_HIGHWAY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -22836,7 +22836,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_RAILROAD_ELECTRIC</BuildType>
+					<BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -22868,7 +22868,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_FOREST</BuildType>
+					<BuildType>BUILD_YOUNG_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -22888,7 +22888,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SALT_GATHERER2</BuildType>
+					<BuildType>BUILD_SALT_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -22904,7 +22904,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_CAMP</BuildType>
+					<BuildType>BUILD_HUNTING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -22912,7 +22912,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WELL</BuildType>
+					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -22936,7 +22936,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SUBURB</BuildType>
+					<BuildType>BUILD_SUBURBS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -22952,11 +22952,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_SWAMP</BuildType>
+					<BuildType>BUILD_DRAIN_SWAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORM</BuildType>
+					<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -22968,11 +22968,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERNWINDMILL</BuildType>
+					<BuildType>BUILD_MODERN_WINDMILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -22980,11 +22980,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_EXPLORETEMPLE</BuildType>
+					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_3FACTORY</BuildType>
+					<BuildType>BUILD_FACTORY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -23000,19 +23000,19 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_LUMBER_JACK</BuildType>
+					<BuildType>BUILD_LUMBERJACK</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FRUIT_PICKER</BuildType>
+					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_PICKER</BuildType>
+					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
+					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -23036,7 +23036,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TAR_GATHERER2</BuildType>
+					<BuildType>BUILD_TAR_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -23044,15 +23044,15 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WOODEN_TOWER</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE_CACHE</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PALISADE</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -23146,8 +23146,8 @@
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<BonusType>BONUS_LUNDA</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>215</iCost>
 			<iMoves>1</iMoves>
@@ -23266,9 +23266,9 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<BonusType>BONUS_LUSITANI</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>115</iCost>
 			<iMoves>1</iMoves>
@@ -23284,15 +23284,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -23688,7 +23688,7 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -23753,8 +23753,8 @@
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<BonusType>BONUS_ARAGON</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>275</iCost>
 			<iMoves>1</iMoves>
@@ -23882,7 +23882,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -24416,9 +24416,9 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<BonusType>BONUS_MEDES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>115</iCost>
 			<iMoves>1</iMoves>
@@ -24434,15 +24434,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -24644,7 +24644,7 @@
 			<iFirstStrikes>1</iFirstStrikes>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_WARES</BonusType>
 					<iProductonModifier>20</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -24756,11 +24756,11 @@
 			<iXPValueDefense>3</iXPValueDefense>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<iProductonModifier>20</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -24850,11 +24850,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PAVED</BuildType>
+					<BuildType>BUILD_PAVED_ROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERN_ROAD</BuildType>
+					<BuildType>BUILD_HIGHWAY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -24862,7 +24862,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_RAILROAD_ELECTRIC</BuildType>
+					<BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -24894,7 +24894,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_FOREST</BuildType>
+					<BuildType>BUILD_YOUNG_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -24914,7 +24914,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SALT_GATHERER2</BuildType>
+					<BuildType>BUILD_SALT_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -24930,7 +24930,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_CAMP</BuildType>
+					<BuildType>BUILD_HUNTING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -24938,7 +24938,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WELL</BuildType>
+					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -24962,7 +24962,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SUBURB</BuildType>
+					<BuildType>BUILD_SUBURBS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -24978,11 +24978,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_SWAMP</BuildType>
+					<BuildType>BUILD_DRAIN_SWAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORM</BuildType>
+					<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -24994,11 +24994,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERNWINDMILL</BuildType>
+					<BuildType>BUILD_MODERN_WINDMILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -25006,11 +25006,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_EXPLORETEMPLE</BuildType>
+					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_3FACTORY</BuildType>
+					<BuildType>BUILD_FACTORY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -25026,19 +25026,19 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_LUMBER_JACK</BuildType>
+					<BuildType>BUILD_LUMBERJACK</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FRUIT_PICKER</BuildType>
+					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_PICKER</BuildType>
+					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
+					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -25062,7 +25062,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TAR_GATHERER2</BuildType>
+					<BuildType>BUILD_TAR_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -25070,20 +25070,20 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WOODEN_TOWER</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE_CACHE</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PALISADE</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
-			<BonusType>BONUS_MISSI</BonusType>
+			<BonusType>BONUS_MISSISSIPPIAN</BonusType>
 			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
 			<iCost>140</iCost>
 			<iMoves>2</iMoves>
@@ -25363,7 +25363,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -25512,7 +25512,7 @@
 					<bUnitCombatDefender>1</bUnitCombatDefender>
 				</UnitCombatDefender>
 			</UnitCombatDefenders>
-			<PrereqTech>TECH_DECREES</PrereqTech>
+			<PrereqTech>TECH_WARRANTS_AND_DECREES</PrereqTech>
 			<BonusType>BONUS_MOCHE</BonusType>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_TOWN_PATROL</BuildingType>
@@ -25527,15 +25527,15 @@
 			<iCost>370</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -25699,7 +25699,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -25712,7 +25712,7 @@
 			<iCost>790</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -25888,7 +25888,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -25901,7 +25901,7 @@
 			<iCost>790</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -26030,7 +26030,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bNoCapture>1</bNoCapture>
 			<bOnlyDefensive>1</bOnlyDefensive>
-			<PrereqTech>TECH_ELIXIRS</PrereqTech>
+			<PrereqTech>TECH_ELIXIRS_AND_TONICS</PrereqTech>
 			<BonusType>BONUS_MOLLO</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_DRUGS</BonusType>
@@ -26185,11 +26185,11 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_ELEPHANT</ID>
+						<ID>BONUS_ELEPHANTS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -26317,8 +26317,8 @@
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<BonusType>BONUS_MUISCA</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>215</iCost>
 			<iMoves>1</iMoves>
@@ -26437,7 +26437,7 @@
 			<PrereqTech>TECH_SMITHING</PrereqTech>
 			<BonusType>BONUS_MURRI</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>270</iCost>
 			<iMoves>1</iMoves>
@@ -26516,7 +26516,7 @@
 					<bUnitCombatDefender>1</bUnitCombatDefender>
 				</UnitCombatDefender>
 			</UnitCombatDefenders>
-			<PrereqTech>TECH_DECREES</PrereqTech>
+			<PrereqTech>TECH_WARRANTS_AND_DECREES</PrereqTech>
 			<BonusType>BONUS_NABATEANS</BonusType>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_TOWN_PATROL</BuildingType>
@@ -26531,15 +26531,15 @@
 			<iCost>370</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -26758,9 +26758,9 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<BonusType>BONUS_NAMA</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>125</iCost>
 			<iMoves>1</iMoves>
@@ -26791,15 +26791,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -27175,7 +27175,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -27625,7 +27625,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -27639,7 +27639,7 @@
 			<iCityAttack>-10</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -27976,15 +27976,15 @@
 			<BonusType>BONUS_OPHIR</BonusType>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -28393,7 +28393,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -28416,7 +28416,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -28625,7 +28625,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -28825,7 +28825,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -28932,7 +28932,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -28957,7 +28957,7 @@
 					<Or>
 						<Has>
 							<GOMType>GOM_BONUS</GOMType>
-							<ID>BONUS_DIESEL</ID>
+							<ID>BONUS_OIL_PRODUCTS</ID>
 						</Has>
 						<Has>
 							<GOMType>GOM_BONUS</GOMType>
@@ -29140,7 +29140,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -29300,7 +29300,7 @@
 			<iPursuit>20</iPursuit>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -29486,7 +29486,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -29641,9 +29641,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_SMITHING</PrereqTech>
-			<BonusType>BONUS_PHILIPINO</BonusType>
+			<BonusType>BONUS_FILIPINO</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>270</iCost>
 			<iMoves>1</iMoves>
@@ -29740,9 +29740,9 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<BonusType>BONUS_PHILISTINES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>45</iCost>
 			<iMoves>1</iMoves>
@@ -29758,15 +29758,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -30070,7 +30070,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -30265,8 +30265,8 @@
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<BonusType>BONUS_POYA</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>200</iCost>
 			<iMoves>1</iMoves>
@@ -30579,10 +30579,10 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
-			<BonusType>BONUS_QUANG</BonusType>
+			<BonusType>BONUS_QIANG</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>215</iCost>
 			<iMoves>1</iMoves>
@@ -30820,7 +30820,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -30936,7 +30936,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -31183,7 +31183,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -31197,7 +31197,7 @@
 			<iCityAttack>-20</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -31352,7 +31352,7 @@
 			<iFirstStrikes>1</iFirstStrikes>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_WARES</BonusType>
 					<iProductonModifier>20</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -31453,9 +31453,9 @@
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<BonusType>BONUS_RED_OCHER</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>155</iCost>
 			<iMoves>1</iMoves>
@@ -31470,15 +31470,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -31574,7 +31574,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -31688,7 +31688,7 @@
 			<bStealPlans>1</bStealPlans>
 			<bUpgradeAnywhere>1</bUpgradeAnywhere>
 			<PrereqTech>TECH_LOCKS</PrereqTech>
-			<BonusType>BONUS_GYPSY</BonusType>
+			<BonusType>BONUS_ROMANI</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -32016,7 +32016,7 @@
 			<iXPValueDefense>3</iXPValueDefense>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -32139,7 +32139,7 @@
 			<iCollateralDamageMaxUnits>4</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -32266,7 +32266,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -32408,7 +32408,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -32422,7 +32422,7 @@
 			<iCityAttack>-20</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -32556,7 +32556,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -32708,7 +32708,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -32722,7 +32722,7 @@
 			<iCityAttack>-10</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -32848,9 +32848,9 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<BonusType>BONUS_SEMANG</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>125</iCost>
 			<iMoves>1</iMoves>
@@ -32881,15 +32881,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -33128,7 +33128,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -33142,7 +33142,7 @@
 			<iCityAttack>-10</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -33267,11 +33267,11 @@
 			<BonusType>BONUS_SERBIAN</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
-				<BonusType>BONUS_AMMO</BonusType>
+				<BonusType>BONUS_AMMUNITION</BonusType>
 			</PrereqBonuses>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -33504,8 +33504,8 @@
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<BonusType>BONUS_SICAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>255</iCost>
 			<iMoves>1</iMoves>
@@ -33863,10 +33863,10 @@
 			</UnitCombatTargets>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<PrereqBuilding>BUILDING_HIGHWAY_HIDEOUT</PrereqBuilding>
-			<BonusType>BONUS_SLOVAKIA</BonusType>
+			<BonusType>BONUS_SLOVAKIAN</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
-				<BonusType>BONUS_AMMO</BonusType>
+				<BonusType>BONUS_AMMUNITION</BonusType>
 			</PrereqBonuses>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
@@ -33877,7 +33877,7 @@
 			<iCost>510</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -34050,7 +34050,7 @@
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<BonusType>BONUS_SLOVENIAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>275</iCost>
 			<iMoves>1</iMoves>
@@ -34188,7 +34188,7 @@
 			<BonusType>BONUS_AZANDE</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
-				<BonusType>BONUS_AMMO</BonusType>
+				<BonusType>BONUS_AMMUNITION</BonusType>
 			</PrereqBonuses>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
@@ -34199,7 +34199,7 @@
 			<iCost>530</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -34368,7 +34368,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -34382,7 +34382,7 @@
 			<iCityAttack>-30</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -34511,7 +34511,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -34731,7 +34731,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqTech>TECH_LABOR_UNION</PrereqTech>
+			<PrereqTech>TECH_LABOR_UNIONS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_SEMI_AUTOMATIC_WEAPONS</PrereqTech>
 			</TechTypes>
@@ -34744,7 +34744,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -34987,7 +34987,7 @@
 			<iXPValueDefense>3</iXPValueDefense>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -35233,7 +35233,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -35256,7 +35256,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -35442,7 +35442,7 @@
 			</NotUnitAIs>
 			<PrereqBuilding>BUILDING_SMUGGLERS_SHANTY</PrereqBuilding>
 			<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
-			<BonusType>BONUS_TAHITI</BonusType>
+			<BonusType>BONUS_TAHITIAN</BonusType>
 			<iCost>240</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iMoves>2</iMoves>
@@ -35531,7 +35531,7 @@
 			</UnitClassDefenseMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<iProductonModifier>20</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -35563,7 +35563,7 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -35884,9 +35884,9 @@
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<BonusType>BONUS_ADENA</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>155</iCost>
 			<iMoves>1</iMoves>
@@ -35901,15 +35901,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -36110,19 +36110,19 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SAFARI</BuildType>
+					<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MAKE_JUNGLE</BuildType>
+					<BuildType>BUILD_PLANT_JUNGLE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_FOREST</BuildType>
+					<BuildType>BUILD_YOUNG_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
+					<BuildType>BUILD_PLANT_BAMBOO_GROVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -36134,7 +36134,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
-			<PrereqTech>TECH_WILDERNESSC</PrereqTech>
+			<PrereqTech>TECH_WILDLIFE_CONSERVATION</PrereqTech>
 			<BonusType>BONUS_TANZANIAN</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
@@ -36265,7 +36265,7 @@
 			<PrereqTech>TECH_SMITHING</PrereqTech>
 			<BonusType>BONUS_TARASCAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>270</iCost>
 			<iMoves>1</iMoves>
@@ -36362,7 +36362,7 @@
 			<PrereqTech>TECH_SMITHING</PrereqTech>
 			<BonusType>BONUS_TASMANIAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>270</iCost>
 			<iMoves>1</iMoves>
@@ -36516,7 +36516,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -36670,7 +36670,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -36683,7 +36683,7 @@
 			<iCost>630</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -36812,8 +36812,8 @@
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<BonusType>BONUS_THRACIAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>215</iCost>
 			<iMoves>1</iMoves>
@@ -36960,7 +36960,7 @@
 			<iXPValueDefense>3</iXPValueDefense>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<iProductonModifier>20</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -37091,7 +37091,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -37105,7 +37105,7 @@
 			<iCityAttack>-10</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -37337,9 +37337,9 @@
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<BonusType>BONUS_TLAXCALTEC</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>155</iCost>
 			<iMoves>1</iMoves>
@@ -37355,15 +37355,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -37637,7 +37637,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -37787,9 +37787,9 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<BonusType>BONUS_TONGAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>125</iCost>
 			<iMoves>1</iMoves>
@@ -37820,15 +37820,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -37922,7 +37922,7 @@
 			<PrereqTech>TECH_SMITHING</PrereqTech>
 			<BonusType>BONUS_TRANSOXANIAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>270</iCost>
 			<iMoves>1</iMoves>
@@ -38225,14 +38225,14 @@
 			<PrereqTech>TECH_ADVANCED_ROCKETRY</PrereqTech>
 			<BonusType>BONUS_TUNISIAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_DIESEL</BonusType>
+				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_ALUMINUM</ID>
+						<ID>BONUS_ALUMINUM_WARES</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -38362,7 +38362,7 @@
 			<PrereqTech>TECH_TRENCH_WARFARE</PrereqTech>
 			<BonusType>BONUS_TURKISH</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_AMMO</BonusType>
+				<BonusType>BONUS_AMMUNITION</BonusType>
 			</PrereqBonuses>
 			<iCost>1050</iCost>
 			<iMoves>1</iMoves>
@@ -38531,7 +38531,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -38736,7 +38736,7 @@
 			<iPursuit>20</iPursuit>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -39228,9 +39228,9 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<BonusType>BONUS_VANATU</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>115</iCost>
 			<iMoves>1</iMoves>
@@ -39246,15 +39246,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -39349,7 +39349,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_PIRACY</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_VENICE</BonusType>
+			<BonusType>BONUS_VENETIAN</BonusType>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -39510,7 +39510,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -39533,7 +39533,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -39697,7 +39697,7 @@
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<BonusType>BONUS_WALLACHIAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>290</iCost>
 			<iMoves>1</iMoves>
@@ -39828,7 +39828,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -39842,7 +39842,7 @@
 			<iHillsDefense>10</iHillsDefense>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -40002,7 +40002,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -40016,7 +40016,7 @@
 			<iCityAttack>-20</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -40161,15 +40161,15 @@
 			<iCost>175</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -40303,10 +40303,10 @@
 			<!--
 				BonusType>BONUS_ALCOHOL</BonusType>
 				<BonusType>BONUS_TAR</BonusType>
-				<BonusType>BONUS_OLIVEOIL</BonusType>
-				<BonusType>BONUS_FISHOIL</BonusType>
-				<BonusType>BONUS_GHEEOIL</BonusType>
-				<BonusType>BONUS_WHALEOIL</BonusType>
+				<BonusType>BONUS_OLIVE_OIL</BonusType>
+				<BonusType>BONUS_FISH_OIL</BonusType>
+				<BonusType>BONUS_GHEE_OIL</BonusType>
+				<BonusType>BONUS_WHALE_OIL</BonusType>
 				<BonusType>BONUS_KEROSENE</BonusType>
 				</PrereqBonuses
 			-->
@@ -40314,7 +40314,7 @@
 				<Or>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WHALEOIL</ID>
+						<ID>BONUS_WHALE_OIL</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -40330,15 +40330,15 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_OLIVEOIL</ID>
+						<ID>BONUS_OLIVE_OIL</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FISHOIL</ID>
+						<ID>BONUS_FISH_OIL</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_GHEEOIL</ID>
+						<ID>BONUS_GHEE_OIL</ID>
 					</Has>
 				</Or>
 			</TrainCondition>
@@ -40458,11 +40458,11 @@
 			<iXPValueDefense>3</iXPValueDefense>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<iProductonModifier>20</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -40575,7 +40575,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -40591,7 +40591,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -40748,9 +40748,9 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<BonusType>BONUS_XIA</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>115</iCost>
 			<iMoves>1</iMoves>
@@ -40766,15 +40766,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -40896,7 +40896,7 @@
 			<iCollateralDamageMaxUnits>4</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -41053,7 +41053,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -41070,7 +41070,7 @@
 			<iCollateralDamageMaxUnits>5</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -41192,9 +41192,9 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<BonusType>BONUS_YAGHAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>125</iCost>
 			<iMoves>1</iMoves>
@@ -41225,15 +41225,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -41326,9 +41326,9 @@
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<BonusType>BONUS_YAGUA</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>155</iCost>
 			<iMoves>1</iMoves>
@@ -41344,15 +41344,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -41533,9 +41533,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
-			<BonusType>BONUS_YEMEN</BonusType>
+			<BonusType>BONUS_YEMENESE</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>310</iCost>
 			<iMoves>1</iMoves>
@@ -41760,7 +41760,7 @@
 			</UnitClassDefenseMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<iProductonModifier>20</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -41792,7 +41792,7 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -42078,7 +42078,7 @@
 			<PrereqTech>TECH_SMITHING</PrereqTech>
 			<BonusType>BONUS_ZIMBABWE</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>270</iCost>
 			<iMoves>1</iMoves>
@@ -42184,11 +42184,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PAVED</BuildType>
+					<BuildType>BUILD_PAVED_ROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERN_ROAD</BuildType>
+					<BuildType>BUILD_HIGHWAY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -42196,7 +42196,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_RAILROAD_ELECTRIC</BuildType>
+					<BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -42228,7 +42228,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_FOREST</BuildType>
+					<BuildType>BUILD_YOUNG_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -42248,7 +42248,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SALT_GATHERER2</BuildType>
+					<BuildType>BUILD_SALT_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -42264,7 +42264,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_CAMP</BuildType>
+					<BuildType>BUILD_HUNTING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -42272,7 +42272,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WELL</BuildType>
+					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -42296,7 +42296,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SUBURB</BuildType>
+					<BuildType>BUILD_SUBURBS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -42312,11 +42312,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_SWAMP</BuildType>
+					<BuildType>BUILD_DRAIN_SWAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORM</BuildType>
+					<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -42328,11 +42328,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERNWINDMILL</BuildType>
+					<BuildType>BUILD_MODERN_WINDMILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -42340,11 +42340,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_EXPLORETEMPLE</BuildType>
+					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_3FACTORY</BuildType>
+					<BuildType>BUILD_FACTORY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -42360,19 +42360,19 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_LUMBER_JACK</BuildType>
+					<BuildType>BUILD_LUMBERJACK</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FRUIT_PICKER</BuildType>
+					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_PICKER</BuildType>
+					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
+					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -42396,7 +42396,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TAR_GATHERER2</BuildType>
+					<BuildType>BUILD_TAR_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -42404,15 +42404,15 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WOODEN_TOWER</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE_CACHE</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PALISADE</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -42526,7 +42526,7 @@
 			<PrereqTech>TECH_SMITHING</PrereqTech>
 			<BonusType>BONUS_BATAVI</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>270</iCost>
 			<iMoves>1</iMoves>
@@ -42638,19 +42638,19 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SAFARI</BuildType>
+					<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MAKE_JUNGLE</BuildType>
+					<BuildType>BUILD_PLANT_JUNGLE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_FOREST</BuildType>
+					<BuildType>BUILD_YOUNG_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
+					<BuildType>BUILD_PLANT_BAMBOO_GROVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -42662,7 +42662,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
-			<PrereqTech>TECH_WILDERNESSC</PrereqTech>
+			<PrereqTech>TECH_WILDLIFE_CONSERVATION</PrereqTech>
 			<BonusType>BONUS_BATEK</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
@@ -42814,7 +42814,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -42828,7 +42828,7 @@
 			<iCityAttack>-20</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -42984,7 +42984,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -43132,11 +43132,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PAVED</BuildType>
+					<BuildType>BUILD_PAVED_ROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERN_ROAD</BuildType>
+					<BuildType>BUILD_HIGHWAY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -43144,7 +43144,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_RAILROAD_ELECTRIC</BuildType>
+					<BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -43176,7 +43176,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_FOREST</BuildType>
+					<BuildType>BUILD_YOUNG_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -43196,7 +43196,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SALT_GATHERER2</BuildType>
+					<BuildType>BUILD_SALT_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -43212,7 +43212,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_CAMP</BuildType>
+					<BuildType>BUILD_HUNTING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -43220,7 +43220,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WELL</BuildType>
+					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -43244,7 +43244,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SUBURB</BuildType>
+					<BuildType>BUILD_SUBURBS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -43260,11 +43260,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_SWAMP</BuildType>
+					<BuildType>BUILD_DRAIN_SWAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORM</BuildType>
+					<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -43276,11 +43276,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERNWINDMILL</BuildType>
+					<BuildType>BUILD_MODERN_WINDMILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -43288,11 +43288,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_EXPLORETEMPLE</BuildType>
+					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_3FACTORY</BuildType>
+					<BuildType>BUILD_FACTORY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -43308,19 +43308,19 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_LUMBER_JACK</BuildType>
+					<BuildType>BUILD_LUMBERJACK</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FRUIT_PICKER</BuildType>
+					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_PICKER</BuildType>
+					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
+					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -43344,7 +43344,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TAR_GATHERER2</BuildType>
+					<BuildType>BUILD_TAR_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -43352,15 +43352,15 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WOODEN_TOWER</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE_CACHE</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PALISADE</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -43489,7 +43489,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -43645,7 +43645,7 @@
 			<iPursuit>20</iPursuit>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -43783,7 +43783,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -43794,7 +43794,7 @@
 			<iXPValueDefense>3</iXPValueDefense>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -43909,8 +43909,8 @@
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<BonusType>BONUS_BRITON</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>215</iCost>
 			<iMoves>1</iMoves>
@@ -44064,7 +44064,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -44078,7 +44078,7 @@
 			<iCityAttack>-20</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -44545,9 +44545,9 @@
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<BonusType>BONUS_CAPAYAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>155</iCost>
 			<iMoves>1</iMoves>
@@ -44562,15 +44562,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -44718,11 +44718,11 @@
 			<iXPValueDefense>3</iXPValueDefense>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<iProductonModifier>20</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -45101,9 +45101,9 @@
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<BonusType>BONUS_CHACHAPOYA</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>155</iCost>
 			<iMoves>1</iMoves>
@@ -45119,15 +45119,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -45322,7 +45322,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -45469,7 +45469,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -45495,11 +45495,11 @@
 			</UnitClassDefenseMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -45841,7 +45841,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -45855,7 +45855,7 @@
 			<iCityAttack>-10</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -46101,7 +46101,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -46113,7 +46113,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_DIESEL</ID>
+						<ID>BONUS_OIL_PRODUCTS</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -46348,7 +46348,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
-			<BonusType>BONUS_CROATIA</BonusType>
+			<BonusType>BONUS_CROATIAN</BonusType>
 			<iCost>270</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>9</iCombat>
@@ -46583,7 +46583,7 @@
 			<PrereqTech>TECH_SMITHING</PrereqTech>
 			<BonusType>BONUS_DACIAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>270</iCost>
 			<iMoves>1</iMoves>
@@ -46792,7 +46792,7 @@
 			<PrereqTech>TECH_SMITHING</PrereqTech>
 			<BonusType>BONUS_DRAVIDIAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>270</iCost>
 			<iMoves>1</iMoves>
@@ -46937,7 +46937,7 @@
 			<iPursuit>20</iPursuit>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -47064,7 +47064,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -47152,15 +47152,15 @@
 			<BonusType>BONUS_ETRUSCAN</BonusType>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -47314,8 +47314,8 @@
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<BonusType>BONUS_FATIMID</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>200</iCost>
 			<iMoves>1</iMoves>
@@ -47415,8 +47415,8 @@
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<BonusType>BONUS_ALEMANNI</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>215</iCost>
 			<iMoves>1</iMoves>
@@ -47549,7 +47549,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_HARVEST_KELP_2</BuildType>
+					<BuildType>BUILD_HARVEST_KELP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -47571,7 +47571,7 @@
 			</Builds>
 			<PrereqBuilding>BUILDING_SHIPWRIGHT</PrereqBuilding>
 			<PrereqTech>TECH_RUDDER</PrereqTech>
-			<BonusType>BONUS_FIGI</BonusType>
+			<BonusType>BONUS_FIJIAN</BonusType>
 			<iCost>220</iCost>
 			<iMoves>4</iMoves>
 			<bNoRevealMap>1</bNoRevealMap>
@@ -47727,7 +47727,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -47740,7 +47740,7 @@
 			<iCost>790</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -47888,7 +47888,7 @@
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<BonusType>BONUS_FLEMISH</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>310</iCost>
 			<iMoves>1</iMoves>
@@ -47966,7 +47966,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqTech>TECH_HUNTING_TACTICS</PrereqTech>
+			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<BonusType>BONUS_FUEGIAN</BonusType>
 			<iCost>63</iCost>
 			<iMoves>2</iMoves>
@@ -48112,7 +48112,7 @@
 			<PrereqTech>TECH_COMPOSITES</PrereqTech>
 			<BonusType>BONUS_FURAWI</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_DIESEL</BonusType>
+				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
@@ -48348,7 +48348,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -48364,7 +48364,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -48543,7 +48543,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -48557,7 +48557,7 @@
 			<iCityAttack>-30</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -48674,9 +48674,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
-			<BonusType>BONUS_GHANA</BonusType>
+			<BonusType>BONUS_GHANAIAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>310</iCost>
 			<iMoves>1</iMoves>
@@ -48910,7 +48910,7 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_WARES</BonusType>
 					<iProductonModifier>20</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -49007,7 +49007,7 @@
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_HORSE_TRAINER</PrereqBuilding>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
-			<BonusType>BONUS_GOLDEN_HORDE</BonusType>
+			<BonusType>BONUS_GOLD_OREEN_HORDE</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -49016,7 +49016,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_IRON</ID>
+						<ID>BONUS_IRON_WARES</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -49030,7 +49030,7 @@
 			<iCityAttack>-30</iCityAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -49141,7 +49141,7 @@
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<BonusType>BONUS_GOKTURK</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>310</iCost>
 			<iMoves>1</iMoves>
@@ -49237,9 +49237,9 @@
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<BonusType>BONUS_GUAM</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>155</iCost>
 			<iMoves>1</iMoves>
@@ -49255,15 +49255,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -49363,9 +49363,9 @@
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<BonusType>BONUS_GUANCHES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>155</iCost>
 			<iMoves>1</iMoves>
@@ -49380,15 +49380,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -49773,7 +49773,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -50371,8 +50371,8 @@
 			</TechTypes>
 			<BonusType>BONUS_ALGIER</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>500</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
@@ -50386,11 +50386,11 @@
 			<iEarlyWithdraw>50</iEarlyWithdraw>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -50441,7 +50441,7 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -50511,7 +50511,7 @@
 			<ForceObsoleteTech>TECH_SUBMARINE_WARFARE</ForceObsoleteTech>
 			<PrereqBuilding>BUILDING_SHIPWRIGHT</PrereqBuilding>
 			<PrereqTech>TECH_CHEMISTRY</PrereqTech>
-			<BonusType>BONUS_HONGKONG</BonusType>
+			<BonusType>BONUS_HONG_KONG</BonusType>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -50740,7 +50740,7 @@
 			<BonusType>BONUS_HOPI</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
-				<BonusType>BONUS_AMMO</BonusType>
+				<BonusType>BONUS_AMMUNITION</BonusType>
 			</PrereqBonuses>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
@@ -50751,7 +50751,7 @@
 			<iCost>530</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -51350,7 +51350,7 @@
 			</UnitClassDefenseMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<iProductonModifier>20</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -51382,7 +51382,7 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -51478,11 +51478,11 @@
 			<iXPValueDefense>3</iXPValueDefense>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<iProductonModifier>20</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -51573,15 +51573,15 @@
 			<iCost>175</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -51717,13 +51717,13 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_MINIATURIZATION</PrereqTech>
+			<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 			<BonusType>BONUS_IRANIAN</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -51834,7 +51834,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -51954,13 +51954,13 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_MINIATURIZATION</PrereqTech>
+			<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 			<BonusType>BONUS_IRAQUI</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -52070,9 +52070,9 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<BonusType>BONUS_JAVANESE</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>35</iCost>
 			<iMoves>1</iMoves>
@@ -52088,15 +52088,15 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -52328,7 +52328,7 @@
 			<iXPValueDefense>3</iXPValueDefense>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<iProductonModifier>20</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -52518,7 +52518,7 @@
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_HORSE_TRAINER</PrereqBuilding>
 			<PrereqTech>TECH_CAVALRY_TACTICS</PrereqTech>
-			<BonusType>BONUS_KHAZAK</BonusType>
+			<BonusType>BONUS_KAZAKH</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -52546,7 +52546,7 @@
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -52731,7 +52731,7 @@
 			</UnitCombatCollateralImmunes>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -52811,7 +52811,7 @@
 			<PrereqTech>TECH_SMITHING</PrereqTech>
 			<BonusType>BONUS_KHITAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>270</iCost>
 			<iMoves>1</iMoves>
@@ -53011,7 +53011,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -53123,7 +53123,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 				</And>
 			</TrainCondition>

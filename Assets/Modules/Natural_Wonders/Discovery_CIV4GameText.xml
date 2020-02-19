@@ -197,11 +197,11 @@
 		<English>If you have Auyantepui in your nation you will get a free "Hit Animated Movie" whenever you build an Animation Studio.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_ANIMATED_MOVIES</Tag>
+		<Tag>TXT_KEY_BONUS_HIT_ANIMATED_MOVIE</Tag>
 		<English>Hit Animated Movie</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_ANIMATED_MOVIES_PEDIA</Tag>
+		<Tag>TXT_KEY_BONUS_HIT_ANIMATED_MOVIE_PEDIA</Tag>
 		<English>This is a tribute to the movie "Up!"</English>
 	</TEXT>
 </Civ4GameText>

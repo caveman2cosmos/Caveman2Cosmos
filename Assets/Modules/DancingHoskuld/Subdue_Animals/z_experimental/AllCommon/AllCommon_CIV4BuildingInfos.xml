@@ -790,7 +790,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LOCAL_FISH_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<bWater>1</bWater>
 			<iCost>45</iCost>
 			<MapCategoryTypes>

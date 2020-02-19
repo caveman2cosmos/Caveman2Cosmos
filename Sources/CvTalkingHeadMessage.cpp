@@ -220,11 +220,11 @@ int CvTalkingHeadMessage::getExpireTurn()
 	case MESSAGE_TYPE_QUEST:
 	case MESSAGE_TYPE_MAJOR_EVENT:
 		// never expires
-		iExpireTurn = GC.getGameINLINE().getGameTurn() + 1;
+		iExpireTurn = GC.getGame().getGameTurn() + 1;
 		break;
 	case MESSAGE_TYPE_DISPLAY_ONLY:
 		// never saved
-		iExpireTurn = GC.getGameINLINE().getGameTurn() - 1;
+		iExpireTurn = GC.getGame().getGameTurn() - 1;
 		break;
 	default:
 		FAssert(false);

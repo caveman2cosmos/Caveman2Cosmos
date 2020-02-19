@@ -68,32 +68,18 @@ CvArea::~CvArea()
 	SAFE_DELETE_ARRAY(m_aiFreeSpecialist);
 	SAFE_DELETE_ARRAY(m_aiPower);
 	SAFE_DELETE_ARRAY(m_aiBestFoundValue);
-	//DPII < Maintenance Modifiers >
 	SAFE_DELETE_ARRAY(m_aiMaintenanceModifier);
 	SAFE_DELETE_ARRAY(m_aiHomeAreaMaintenanceModifier);
 	SAFE_DELETE_ARRAY(m_aiOtherAreaMaintenanceModifier);
 	SAFE_DELETE_ARRAY(m_abHomeArea);
-	//DPII < Maintenance Modifiers >
 	SAFE_DELETE_ARRAY(m_aiNumRevealedTiles);
 	SAFE_DELETE_ARRAY(m_aiCleanPowerCount);
 	SAFE_DELETE_ARRAY(m_aiBorderObstacleCount);
 	SAFE_DELETE_ARRAY(m_aeAreaAIType);
 	SAFE_DELETE_ARRAY(m_aTargetCities);
-	for (int i = 0; i < MAX_PLAYERS; i++)
-	{
-		SAFE_DELETE_ARRAY(m_aaiYieldRateModifier[i]);
-	}
-	SAFE_DELETE_ARRAY(m_aaiYieldRateModifier);
-	for (int i = 0; i < MAX_PLAYERS; i++)
-	{
-		SAFE_DELETE_ARRAY(m_aaiNumTrainAIUnits[i]);
-	}
-	SAFE_DELETE_ARRAY(m_aaiNumTrainAIUnits);
-	for (int i = 0; i < MAX_PLAYERS; i++)
-	{
-		SAFE_DELETE_ARRAY(m_aaiNumAIUnits[i]);
-	}
-	SAFE_DELETE_ARRAY(m_aaiNumAIUnits);
+	SAFE_DELETE_ARRAY2(m_aaiYieldRateModifier, MAX_PLAYERS);
+	SAFE_DELETE_ARRAY2(m_aaiNumTrainAIUnits, MAX_PLAYERS);
+	SAFE_DELETE_ARRAY2(m_aaiNumAIUnits, MAX_PLAYERS);
 }
 
 

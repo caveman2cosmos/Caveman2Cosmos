@@ -28,11 +28,11 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_CAODAI</ReligionType>
+					<ReligionType>RELIGION_CAO_DAI</ReligionType>
 					<iReligionSpread>40</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
-			<PrereqReligion>RELIGION_CAODAI</PrereqReligion>
+			<PrereqReligion>RELIGION_CAO_DAI</PrereqReligion>
 			<PrereqBuilding>BUILDING_CAODAI_MONASTERY</PrereqBuilding>
 			<iCost>110</iCost>
 			<iMoves>2</iMoves>
@@ -57,7 +57,7 @@
 			</Buildings>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_CAODAI</ReligionType>
+					<ReligionType>RELIGION_CAO_DAI</ReligionType>
 					<iReligionSpread>100</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>

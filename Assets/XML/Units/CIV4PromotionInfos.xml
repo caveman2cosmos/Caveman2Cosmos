@@ -119,7 +119,7 @@
 			<Type>PROMOTION_FUEL_TANK</Type>
 			<Description>TXT_KEY_PROMOTION_FUEL_TANK</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_ADVANCED_FLIGHT</TechPrereq>
+			<TechPrereq>TECH_ADVANCED_AVIATION</TechPrereq>
 			<iAirRangeChange>2</iAirRangeChange>
 			<iCombatPercent>-15</iCombatPercent>
 			<UnitCombats>
@@ -544,7 +544,7 @@
 			<Description>TXT_KEY_PROMOTION_TACTICS</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_LEADER</PromotionPrereq>
-			<TechPrereq>TECH_HUNTING</TechPrereq>
+			<TechPrereq>TECH_TRACKING</TechPrereq>
 			<iWithdrawalChange>20</iWithdrawalChange>
 			<UnitCombats>
 				<UnitCombat>
@@ -887,7 +887,7 @@
 			<Description>TXT_KEY_PROMOTION_FLOWER_WAR</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereqOr1>PROMOTION_LEADER</PromotionPrereqOr1>
-			<StateReligionPrereq>RELIGION_MESOAMERICANISM</StateReligionPrereq>
+			<StateReligionPrereq>RELIGION_NAGHUALISM</StateReligionPrereq>
 			<iMoveDiscountChange>1</iMoveDiscountChange>
 			<iCombatPercent>-20</iCombatPercent>
 			<FeatureAttacks>
@@ -904,7 +904,7 @@
 					<iFeatureAttack>25</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureAttack>25</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
@@ -912,7 +912,7 @@
 					<iFeatureAttack>25</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureAttack>25</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
@@ -947,7 +947,7 @@
 			<Description>TXT_KEY_PROMOTION_PHARAOH</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereqOr1>PROMOTION_LEADER</PromotionPrereqOr1>
-			<StateReligionPrereq>RELIGION_EGYPT_MYTHOLOGY</StateReligionPrereq>
+			<StateReligionPrereq>RELIGION_KEMETISM</StateReligionPrereq>
 			<iChanceFirstStrikesChange>1</iChanceFirstStrikesChange>
 			<iRevoltProtection>5</iRevoltProtection>
 			<UnitCombats>
@@ -1063,7 +1063,7 @@
                     <iFeatureDefense>-25</iFeatureDefense>
                 </FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>-25</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
@@ -1071,7 +1071,7 @@
 					<iFeatureDefense>-25</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureDefense>-25</iFeatureDefense>
 				</FeatureDefense>
 			</FeatureDefenses>
@@ -2573,7 +2573,7 @@
 			<Description>TXT_KEY_PROMOTION_HUNTER2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_HUNTER1</PromotionPrereq>
-			<TechPrereq>TECH_HUNTING</TechPrereq>
+			<TechPrereq>TECH_TRACKING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_HUNTER</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<NotOnDomainTypes>
@@ -2601,7 +2601,7 @@
 			<Description>TXT_KEY_PROMOTION_HUNTER3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_HUNTER2</PromotionPrereq>
-			<TechPrereq>TECH_HUNTING</TechPrereq>
+			<TechPrereq>TECH_TRACKING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_HUNTER</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<NotOnDomainTypes>
@@ -2629,7 +2629,7 @@
 			<Description>TXT_KEY_PROMOTION_HUNTER_GREAT</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_HUNTER3</PromotionPrereq>
-			<TechPrereq>TECH_HUNTING_TACTICS</TechPrereq>
+			<TechPrereq>TECH_HUNTING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_HUNTER</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<bBlitz>1</bBlitz>
@@ -4188,7 +4188,7 @@
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
-			<IgnoreTerrainDamage>TERRAIN_ROCKY_ARID</IgnoreTerrainDamage>
+			<IgnoreTerrainDamage>TERRAIN_BADLAND</IgnoreTerrainDamage>
 			<Button>art/Tweaks/art/ruggedcombat2.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -4208,11 +4208,11 @@
 					<iTerrainAttack>20</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<iTerrainAttack>10</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iTerrainAttack>10</iTerrainAttack>
 				</TerrainAttack>
 			</TerrainAttacks>
@@ -4222,11 +4222,11 @@
 					<iTerrainDefense>50</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<iTerrainDefense>25</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iTerrainDefense>25</iTerrainDefense>
 				</TerrainDefense>
 			</TerrainDefenses>
@@ -4236,11 +4236,11 @@
 					<bTerrainDoubleMove>1</bTerrainDoubleMove>
 				</TerrainDoubleMove>
 				<TerrainDoubleMove>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrainDoubleMove>1</bTerrainDoubleMove>
 				</TerrainDoubleMove>
 				<TerrainDoubleMove>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrainDoubleMove>1</bTerrainDoubleMove>
 				</TerrainDoubleMove>
 			</TerrainDoubleMoves>
@@ -4278,7 +4278,7 @@
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
-			<IgnoreTerrainDamage>TERRAIN_ROCKY_COLD</IgnoreTerrainDamage>
+			<IgnoreTerrainDamage>TERRAIN_JAGGED</IgnoreTerrainDamage>
 			<Button>art/Tweaks/art/ruggedcombat3.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -4331,7 +4331,7 @@
 			<iCollateralDamageProtection>20</iCollateralDamageProtection>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -5076,7 +5076,7 @@
 			<iLinePriority>1</iLinePriority>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>15</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -5086,7 +5086,7 @@
 			</TerrainDefenses>
 			<TerrainDoubleMoves>
 				<TerrainDoubleMove>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrainDoubleMove>1</bTerrainDoubleMove>
 				</TerrainDoubleMove>
 			</TerrainDoubleMoves>
@@ -5131,7 +5131,7 @@
 			</NotOnDomainTypes>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>15</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -5182,7 +5182,7 @@
 			<iLinePriority>3</iLinePriority>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>20</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -5192,7 +5192,7 @@
 			</TerrainAttacks>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>20</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -5234,7 +5234,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereqOr1>PROMOTION_FLANKING1</PromotionPrereqOr1>
 			<PromotionPrereqOr2>PROMOTION_COMBAT3</PromotionPrereqOr2>
-			<TechPrereq>TECH_NOMADIC_LIFESTYLE</TechPrereq>
+			<TechPrereq>TECH_NOMADISM</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_SENTRY</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iVisibilityChange>1</iVisibilityChange>
@@ -5525,7 +5525,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereqOr1>PROMOTION_COMBAT4</PromotionPrereqOr1>
 			<PromotionPrereqOr2>PROMOTION_COMBAT_AI4</PromotionPrereqOr2>
-			<TechPrereq>TECH_NANOBOTICS</TechPrereq>
+			<TechPrereq>TECH_NANOROBOTICS</TechPrereq>
 			<iSelfHealModifier>10</iSelfHealModifier>
 			<UnitCombats>
 				<UnitCombat>
@@ -5591,7 +5591,7 @@
 			<Description>TXT_KEY_PROMOTION_RANGE1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereqOr1>PROMOTION_VETERAN</PromotionPrereqOr1>
-			<TechPrereq>TECH_ADVANCED_FLIGHT</TechPrereq>
+			<TechPrereq>TECH_ADVANCED_AVIATION</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_RANGE</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iAirRangeChange>1</iAirRangeChange>
@@ -6434,7 +6434,7 @@
 			<Description>TXT_KEY_PROMOTION_GUERILLA2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_GUERILLA1</PromotionPrereq>
-			<TechPrereq>TECH_NOMADIC_LIFESTYLE</TechPrereq>
+			<TechPrereq>TECH_NOMADISM</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_GUERILLA</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iHillsDefense>25</iHillsDefense>
@@ -6526,7 +6526,7 @@
 			<Type>PROMOTION_WOODSMAN1</Type>
 			<Description>TXT_KEY_PROMOTION_WOODSMAN1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_NOMADIC_LIFESTYLE</TechPrereq>
+			<TechPrereq>TECH_NOMADISM</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_WOODSMAN</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<FeatureDefenses>
@@ -6543,11 +6543,11 @@
 					<iFeatureDefense>25</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureDefense>25</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>25</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
@@ -6602,7 +6602,7 @@
 			<Description>TXT_KEY_PROMOTION_WOODSMAN2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_WOODSMAN1</PromotionPrereq>
-			<TechPrereq>TECH_TRACKING</TechPrereq>
+			<TechPrereq>TECH_TRAILS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_WOODSMAN</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<FeatureDefenses>
@@ -6619,11 +6619,11 @@
 					<iFeatureDefense>25</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureDefense>25</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>25</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
@@ -6687,11 +6687,11 @@
 					<iFeatureAttack>50</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureAttack>50</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureAttack>50</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
@@ -9140,7 +9140,7 @@
 			<Type>PROMOTION_REINFORCED_STRUCTURE</Type>
 			<Description>TXT_KEY_PROMOTION_REINFORCED_STRUCTURE</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_EXOSKELETON</TechPrereq>
+			<TechPrereq>TECH_POWERED_EXOSKELETON</TechPrereq>
 			<iCityAttack>15</iCityAttack>
 			<iCityDefense>15</iCityDefense>
 			<UnitCombats>
@@ -9461,7 +9461,7 @@
 			<iCombatPercent>10</iCombatPercent>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -9583,7 +9583,7 @@
 			<iCombatPercent>10</iCombatPercent>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -9705,7 +9705,7 @@
 			<iCombatPercent>10</iCombatPercent>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -9825,7 +9825,7 @@
 			<Type>PROMOTION_LAND_WARRIOR1</Type>
 			<Description>TXT_KEY_PROMOTION_LAND_WARRIOR1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_WEARABLE_ELECTRONICS</TechPrereq>
+			<TechPrereq>TECH_WEARABLE_COMPUTERS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_LAND_WARRIOR</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iVisibilityChange>1</iVisibilityChange>
@@ -10119,7 +10119,7 @@
 			<iCollateralDamageProtection>10</iCollateralDamageProtection>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>15</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -10193,7 +10193,7 @@
 			<iCollateralDamageProtection>10</iCollateralDamageProtection>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>20</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -10267,7 +10267,7 @@
 			<iCollateralDamageProtection>10</iCollateralDamageProtection>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>30</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -10400,7 +10400,7 @@
 			<iCollateralDamageProtection>10</iCollateralDamageProtection>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>15</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -10482,7 +10482,7 @@
                     <iFeatureDefense>25</iFeatureDefense>
                 </FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>25</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
@@ -10490,7 +10490,7 @@
 					<iFeatureDefense>25</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureDefense>25</iFeatureDefense>
 				</FeatureDefense>
 			</FeatureDefenses>
@@ -10524,7 +10524,7 @@
 			<iCollateralDamageProtection>10</iCollateralDamageProtection>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>20</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -10606,7 +10606,7 @@
                     <iFeatureDefense>50</iFeatureDefense>
                 </FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>50</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
@@ -10614,7 +10614,7 @@
 					<iFeatureDefense>50</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureDefense>50</iFeatureDefense>
 				</FeatureDefense>
 			</FeatureDefenses>
@@ -10653,7 +10653,7 @@
 			<iCollateralDamageProtection>10</iCollateralDamageProtection>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>30</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -10735,7 +10735,7 @@
 					<iFeatureDefense>100</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>100</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
@@ -10743,7 +10743,7 @@
 					<iFeatureDefense>100</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureDefense>100</iFeatureDefense>
 				</FeatureDefense>
 			</FeatureDefenses>
@@ -11252,7 +11252,7 @@
 			<iHillsAttack>15</iHillsAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>15</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -11304,7 +11304,7 @@
 			<iHillsAttack>20</iHillsAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>20</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -11356,7 +11356,7 @@
 			<iHillsAttack>30</iHillsAttack>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>30</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -11790,7 +11790,7 @@
 			<iMovesChange>1</iMovesChange>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -12173,7 +12173,7 @@
                     <iFeatureAttack>15</iFeatureAttack>
                 </FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureAttack>15</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
@@ -12181,7 +12181,7 @@
 					<iFeatureAttack>15</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureAttack>15</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
@@ -12199,7 +12199,7 @@
                     <iFeatureDefense>15</iFeatureDefense>
                 </FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>15</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
@@ -12207,7 +12207,7 @@
 					<iFeatureDefense>15</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureDefense>15</iFeatureDefense>
 				</FeatureDefense>
 			</FeatureDefenses>
@@ -12770,7 +12770,7 @@
 			<Description>TXT_KEY_PROMOTION_BARD1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_LORDSHIP</PromotionPrereq>
-			<TechPrereq>TECH_MUSIC</TechPrereq>
+			<TechPrereq>TECH_MUSICAL_NOTATION</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_BARD</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iCityDefense>10</iCityDefense>
@@ -13309,7 +13309,7 @@
 			<iCombatPercent>2</iCombatPercent>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>-1</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -13351,7 +13351,7 @@
                     <iFeatureDefense>-1</iFeatureDefense>
                 </FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>-1</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
@@ -13359,7 +13359,7 @@
 					<iFeatureDefense>-1</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureDefense>-1</iFeatureDefense>
 				</FeatureDefense>
 			</FeatureDefenses>
@@ -13375,7 +13375,7 @@
 			<iCombatPercent>4</iCombatPercent>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>-2</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -13417,7 +13417,7 @@
                     <iFeatureDefense>-2</iFeatureDefense>
                 </FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>-2</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
@@ -13425,7 +13425,7 @@
 					<iFeatureDefense>-2</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureDefense>-2</iFeatureDefense>
 				</FeatureDefense>
 			</FeatureDefenses>
@@ -13441,7 +13441,7 @@
 			<iCombatPercent>6</iCombatPercent>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>-3</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -13483,7 +13483,7 @@
                     <iFeatureDefense>-3</iFeatureDefense>
                 </FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>-3</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
@@ -13491,7 +13491,7 @@
 					<iFeatureDefense>-3</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureDefense>-3</iFeatureDefense>
 				</FeatureDefense>
 			</FeatureDefenses>
@@ -13588,7 +13588,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereqOr1>PROMOTION_COMBAT1</PromotionPrereqOr1>
 			<PromotionPrereqOr2>PROMOTION_DRILL1</PromotionPrereqOr2>
-			<TechPrereq>TECH_NOMADIC_LIFESTYLE</TechPrereq>
+			<TechPrereq>TECH_NOMADISM</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_SIDESTEP</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<UnitCombatMods>
@@ -14046,7 +14046,7 @@
             <Type>PROMOTION_BUSHMAN</Type>
             <Description>TXT_KEY_PROMOTION_BUSHMAN</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_NOMADIC_LIFESTYLE</TechPrereq>
+			<TechPrereq>TECH_NOMADISM</TechPrereq>
             <TerrainAttacks>
                 <TerrainAttack>
                     <TerrainType>TERRAIN_BARREN</TerrainType>
@@ -14057,11 +14057,11 @@
                     <iTerrainAttack>10</iTerrainAttack>
                 </TerrainAttack>
                 <TerrainAttack>
-                    <TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+                    <TerrainType>TERRAIN_BADLAND</TerrainType>
                     <iTerrainAttack>10</iTerrainAttack>
                 </TerrainAttack>
                 <TerrainAttack>
-                    <TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+                    <TerrainType>TERRAIN_JAGGED</TerrainType>
                     <iTerrainAttack>10</iTerrainAttack>
                 </TerrainAttack>
                 <TerrainAttack>
@@ -14087,11 +14087,11 @@
                     <iTerrainDefense>10</iTerrainDefense>
                 </TerrainDefense>
                 <TerrainDefense>
-                    <TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+                    <TerrainType>TERRAIN_BADLAND</TerrainType>
                     <iTerrainDefense>10</iTerrainDefense>
                 </TerrainDefense>
                 <TerrainDefense>
-                    <TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+                    <TerrainType>TERRAIN_JAGGED</TerrainType>
                     <iTerrainDefense>10</iTerrainDefense>
                 </TerrainDefense>
                 <TerrainDefense>
@@ -14113,7 +14113,7 @@
             <Type>PROMOTION_CLIFF_WALKER</Type>
             <Description>TXT_KEY_PROMOTION_CLIFF_WALKER</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_NOMADIC_LIFESTYLE</TechPrereq>
+			<TechPrereq>TECH_NOMADISM</TechPrereq>
             <iHillsAttack>10</iHillsAttack>
             <iHillsDefense>10</iHillsDefense>
 			<TerrainAttacks>
@@ -14134,7 +14134,7 @@
             <Type>PROMOTION_GREEN_WARDEN</Type>
             <Description>TXT_KEY_PROMOTION_GREEN_WARDEN</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_NOMADIC_LIFESTYLE</TechPrereq>
+			<TechPrereq>TECH_NOMADISM</TechPrereq>
             <FeatureAttacks>
                 <FeatureAttack>
                     <FeatureType>FEATURE_JUNGLE</FeatureType>
@@ -14149,7 +14149,7 @@
                     <iFeatureAttack>10</iFeatureAttack>
                 </FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureAttack>10</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
@@ -14157,7 +14157,7 @@
 					<iFeatureAttack>10</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureAttack>10</iFeatureAttack>
 				</FeatureAttack>
             </FeatureAttacks>
@@ -14175,7 +14175,7 @@
                     <iFeatureDefense>10</iFeatureDefense>
                 </FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>10</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
@@ -14183,7 +14183,7 @@
 					<iFeatureDefense>10</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureDefense>10</iFeatureDefense>
 				</FeatureDefense>
             </FeatureDefenses>
@@ -14193,7 +14193,7 @@
             <Type>PROMOTION_SAND_DEVIL</Type>
             <Description>TXT_KEY_PROMOTION_SAND_DEVIL</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_NOMADIC_LIFESTYLE</TechPrereq>
+			<TechPrereq>TECH_NOMADISM</TechPrereq>
             <TerrainAttacks>
                 <TerrainAttack>
                     <TerrainType>TERRAIN_DESERT</TerrainType>
@@ -14220,7 +14220,7 @@
             <Type>PROMOTION_WINTERBORN</Type>
             <Description>TXT_KEY_PROMOTION_WINTERBORN</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_NOMADIC_LIFESTYLE</TechPrereq>
+			<TechPrereq>TECH_NOMADISM</TechPrereq>
             <TerrainAttacks>
                 <TerrainAttack>
                     <TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -15017,7 +15017,7 @@
                     <iFeatureDefense>20</iFeatureDefense>
                 </FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>20</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
@@ -15025,7 +15025,7 @@
 					<iFeatureDefense>20</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureDefense>20</iFeatureDefense>
 				</FeatureDefense>
 			</FeatureDefenses>
@@ -15117,7 +15117,7 @@
                     <iFeatureDefense>30</iFeatureDefense>
                 </FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>30</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
@@ -15125,7 +15125,7 @@
 					<iFeatureDefense>30</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureDefense>30</iFeatureDefense>
 				</FeatureDefense>
 			</FeatureDefenses>
@@ -15327,7 +15327,7 @@
 			<Description>TXT_KEY_PROMOTION_FORESTRY</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereqOr1>PROMOTION_COMBAT2</PromotionPrereqOr1>
-			<TechPrereq>TECH_TRACKING</TechPrereq>
+			<TechPrereq>TECH_TRAILS</TechPrereq>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_AIR</DomainType>
 				<DomainType>DOMAIN_SEA</DomainType>
@@ -15346,7 +15346,7 @@
 					<bFeatureDoubleMove>1</bFeatureDoubleMove>
 				</FeatureDoubleMove>
 				<FeatureDoubleMove>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<bFeatureDoubleMove>1</bFeatureDoubleMove>
 				</FeatureDoubleMove>
 				<FeatureDoubleMove>
@@ -15354,7 +15354,7 @@
 					<bFeatureDoubleMove>1</bFeatureDoubleMove>
 				</FeatureDoubleMove>
 				<FeatureDoubleMove>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bFeatureDoubleMove>1</bFeatureDoubleMove>
 				</FeatureDoubleMove>
 			</FeatureDoubleMoves>
@@ -15395,7 +15395,7 @@
 			<Description>TXT_KEY_PROMOTION_HILLSMAN</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereqOr1>PROMOTION_COMBAT2</PromotionPrereqOr1>
-			<TechPrereq>TECH_NOMADIC_LIFESTYLE</TechPrereq>
+			<TechPrereq>TECH_NOMADISM</TechPrereq>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_AIR</DomainType>
 				<DomainType>DOMAIN_SEA</DomainType>
@@ -16152,7 +16152,7 @@
                     <iFeatureAttack>15</iFeatureAttack>
                 </FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureAttack>15</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
@@ -16160,7 +16160,7 @@
 					<iFeatureAttack>15</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureAttack>15</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
@@ -16190,7 +16190,7 @@
                     <iFeatureAttack>15</iFeatureAttack>
                 </FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureAttack>15</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
@@ -16198,7 +16198,7 @@
 					<iFeatureAttack>15</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureAttack>15</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
@@ -16229,7 +16229,7 @@
                     <iFeatureAttack>15</iFeatureAttack>
                 </FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureAttack>15</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
@@ -16237,7 +16237,7 @@
 					<iFeatureAttack>15</iFeatureAttack>
 				</FeatureAttack>
 				<FeatureAttack>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureAttack>15</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
@@ -17094,7 +17094,7 @@
 					<iFeatureWork>20</iFeatureWork>
 				</FeatureWork>
 				<FeatureWork>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureWork>20</iFeatureWork>
 				</FeatureWork>
 			</FeatureWorks>
@@ -17122,11 +17122,11 @@
 					<iFeatureWork>20</iFeatureWork>
 				</FeatureWork>
 				<FeatureWork>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureWork>20</iFeatureWork>
 				</FeatureWork>
 				<FeatureWork>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureWork>20</iFeatureWork>
 				</FeatureWork>
 			</FeatureWorks>
@@ -17154,11 +17154,11 @@
 					<iFeatureWork>20</iFeatureWork>
 				</FeatureWork>
 				<FeatureWork>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureWork>20</iFeatureWork>
 				</FeatureWork>
 				<FeatureWork>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureWork>20</iFeatureWork>
 				</FeatureWork>
 			</FeatureWorks>
@@ -17172,7 +17172,7 @@
 			<iLinePriority>1</iLinePriority>
 			<TerrainWorks>
 				<TerrainWork>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainWork>20</iTerrainWork>
 				</TerrainWork>
 				<TerrainWork>
@@ -17191,7 +17191,7 @@
 			<iLinePriority>2</iLinePriority>
 			<TerrainWorks>
 				<TerrainWork>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainWork>20</iTerrainWork>
 				</TerrainWork>
 				<TerrainWork>
@@ -17215,7 +17215,7 @@
 			<iLinePriority>3</iLinePriority>
 			<TerrainWorks>
 				<TerrainWork>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainWork>20</iTerrainWork>
 				</TerrainWork>
 				<TerrainWork>
@@ -17235,7 +17235,7 @@
 			<Description>TXT_KEY_PROMOTION_STREET_FIGHTER1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereqOr1>PROMOTION_COMBAT2</PromotionPrereqOr1>
-			<TechPrereq>TECH_TRACKING</TechPrereq>
+			<TechPrereq>TECH_TRAILS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_STREET_FIGHTER</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iCityAttack>10</iCityAttack>
@@ -17317,7 +17317,7 @@
 			<Description>TXT_KEY_PROMOTION_HUNT_DOWN3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_HUNT_DOWN2</PromotionPrereq>
-			<TechPrereq>TECH_HUNTING</TechPrereq>
+			<TechPrereq>TECH_TRACKING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_HUNT_DOWN</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
@@ -17331,7 +17331,7 @@
 			<Description>TXT_KEY_PROMOTION_HUNT_DOWN4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_HUNT_DOWN3</PromotionPrereq>
-			<TechPrereq>TECH_HUNTING_TACTICS</TechPrereq>
+			<TechPrereq>TECH_HUNTING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_HUNT_DOWN</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<OnGameOptions>
@@ -17372,7 +17372,7 @@
 			<Description>TXT_KEY_PROMOTION_CHASE2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_CHASE1</PromotionPrereq>
-			<TechPrereq>TECH_NOMADIC_LIFESTYLE</TechPrereq>
+			<TechPrereq>TECH_NOMADISM</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_CHASE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
@@ -17400,7 +17400,7 @@
 			<Description>TXT_KEY_PROMOTION_CHASE4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_CHASE3</PromotionPrereq>
-			<TechPrereq>TECH_HUNTING</TechPrereq>
+			<TechPrereq>TECH_TRACKING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_CHASE</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<OnGameOptions>
@@ -17414,7 +17414,7 @@
 			<Description>TXT_KEY_PROMOTION_CHASE5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_CHASE4</PromotionPrereq>
-			<TechPrereq>TECH_HUNTING_TACTICS</TechPrereq>
+			<TechPrereq>TECH_HUNTING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_CHASE</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<OnGameOptions>
@@ -17611,7 +17611,7 @@
 			<Description>TXT_KEY_PROMOTION_STALL3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_STALL2</PromotionPrereq>
-			<TechPrereq>TECH_HUNTING</TechPrereq>
+			<TechPrereq>TECH_TRACKING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_STALL</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<NotOnUnitCombatTypes>
@@ -17647,7 +17647,7 @@
 			<Description>TXT_KEY_PROMOTION_STALL5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_STALL4</PromotionPrereq>
-			<TechPrereq>TECH_BLOOD_CULT</TechPrereq>
+			<TechPrereq>TECH_SACRIFICE_CULT</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_STALL</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<NotOnUnitCombatTypes>
@@ -19678,7 +19678,7 @@
 			<Type>PROMOTION_FIRST_AID_PEOPLE6</Type>
 			<Description>TXT_KEY_PROMOTION_FIRST_AID_PEOPLE6</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_PERSONALIZEDHEALTH</TechPrereq>
+			<TechPrereq>TECH_PERSONALIZED_HEALTH</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_FIRST_AID_PEOPLE</PromotionLine>
 			<iLinePriority>6</iLinePriority>
 			<iNumHealSupport>1</iNumHealSupport>
@@ -19775,7 +19775,7 @@
 			<Type>PROMOTION_FIRST_AID_ANIMALS2</Type>
 			<Description>TXT_KEY_PROMOTION_FIRST_AID_ANIMALS2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_VETERIANARY_MEDICINE</TechPrereq>
+			<TechPrereq>TECH_VETERINARY_MEDICINE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_FIRST_AID_ANIMALS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iNumHealSupport>1</iNumHealSupport>
@@ -19850,7 +19850,7 @@
 			<Type>PROMOTION_FIRST_AID_ANIMALS6</Type>
 			<Description>TXT_KEY_PROMOTION_FIRST_AID_ANIMALS6</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_PERSONALIZEDHEALTH</TechPrereq>
+			<TechPrereq>TECH_PERSONALIZED_HEALTH</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_FIRST_AID_ANIMALS</PromotionLine>
 			<iLinePriority>6</iLinePriority>
 			<iNumHealSupport>1</iNumHealSupport>
@@ -20119,7 +20119,7 @@
 			<Type>PROMOTION_REPAIR_AIRCRAFT2</Type>
 			<Description>TXT_KEY_PROMOTION_REPAIR_AIRCRAFT2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_ADVANCED_FLIGHT</TechPrereq>
+			<TechPrereq>TECH_ADVANCED_AVIATION</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_REPAIR_AIRCRAFT</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iNumHealSupport>1</iNumHealSupport>
@@ -20156,7 +20156,7 @@
 			<Type>PROMOTION_REPAIR_AIRCRAFT4</Type>
 			<Description>TXT_KEY_PROMOTION_REPAIR_AIRCRAFT4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_SPACE_FLIGHT</TechPrereq>
+			<TechPrereq>TECH_ASTRONAUTICS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_REPAIR_AIRCRAFT</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<iNumHealSupport>1</iNumHealSupport>
@@ -20405,7 +20405,7 @@
 			<Description>TXT_KEY_PROMOTION_RECOVER_TECH</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<iLevelPrereq>5</iLevelPrereq>
-			<TechPrereq>TECH_COMPUTERS</TechPrereq>
+			<TechPrereq>TECH_PERSONAL_COMPUTERS</TechPrereq>
 			<PromotionPrereq>PROMOTION_SELF_REPAIR1</PromotionPrereq>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_AIR</DomainType>
@@ -20445,7 +20445,7 @@
 			<Type>PROMOTION_RECOVER_TECH1</Type>
 			<Description>TXT_KEY_PROMOTION_RECOVER_TECH1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_COMPUTERS</TechPrereq>
+			<TechPrereq>TECH_PERSONAL_COMPUTERS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_RECOVER_TECH</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iNumHealSupport>1</iNumHealSupport>
@@ -20481,7 +20481,7 @@
 			<Type>PROMOTION_RECOVER_TECH3</Type>
 			<Description>TXT_KEY_PROMOTION_RECOVER_TECH3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_COGNITIVE_ROBOTICS</TechPrereq>
+			<TechPrereq>TECH_MACHINE_LEARNING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_RECOVER_TECH</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iNumHealSupport>1</iNumHealSupport>
@@ -20500,7 +20500,7 @@
 			<Type>PROMOTION_RECOVER_TECH4</Type>
 			<Description>TXT_KEY_PROMOTION_RECOVER_TECH4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_MELECTRONICS</TechPrereq>
+			<TechPrereq>TECH_UBIQUITOUS_COMPUTING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_RECOVER_TECH</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<iNumHealSupport>1</iNumHealSupport>
@@ -20557,7 +20557,7 @@
 			<Type>PROMOTION_RECOVER_TECH7</Type>
 			<Description>TXT_KEY_PROMOTION_RECOVER_TECH7</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_SINGULARITY</TechPrereq>
+			<TechPrereq>TECH_TECHNOLOGICAL_SINGULARITY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_RECOVER_TECH</PromotionLine>
 			<iLinePriority>7</iLinePriority>
 			<iNumHealSupport>1</iNumHealSupport>
@@ -20618,7 +20618,7 @@
 			<Type>PROMOTION_HEAL4</Type>
 			<Description>TXT_KEY_PROMOTION_HEAL4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_NANODISASSEMBLY</TechPrereq>
+			<TechPrereq>TECH_NANO_DISASSEMBLY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_HEAL</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<iNumHealSupport>1</iNumHealSupport>
@@ -20632,7 +20632,7 @@
 			<Type>PROMOTION_HEAL5</Type>
 			<Description>TXT_KEY_PROMOTION_HEAL5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_ATTOMETER_NANOMORPHISM</TechPrereq>
+			<TechPrereq>TECH_NANOMORPHIC_TROIDS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_HEAL</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<iNumHealSupport>1</iNumHealSupport>
@@ -20754,7 +20754,7 @@
 			<Type>PROMOTION_EDUCATE7</Type>
 			<Description>TXT_KEY_PROMOTION_EDUCATE7</Description>
 			<Sound>AS7D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_HUMAN_MACHINE_INTERFACE</TechPrereq>
+			<TechPrereq>TECH_BRAIN_MACHINE_INTERFACE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_EDUCATE</PromotionLine>
 			<iLinePriority>7</iLinePriority>
 			<PropertyManipulators>
@@ -20790,7 +20790,7 @@
 			<Type>PROMOTION_EDUCATE9</Type>
 			<Description>TXT_KEY_PROMOTION_EDUCATE9</Description>
 			<Sound>AS9D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_EXOCORTEXNETWORKS</TechPrereq>
+			<TechPrereq>TECH_EXOCORTEX_NETWORKS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_EDUCATE</PromotionLine>
 			<iLinePriority>9</iLinePriority>
 			<PropertyManipulators>
@@ -21116,7 +21116,7 @@
 			<Type>PROMOTION_EPIC_MIGHT8</Type>
 			<Description>TXT_KEY_PROMOTION_EPIC_MIGHT8</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_NEUROTECHNOLOGY</TechPrereq>
+			<TechPrereq>TECH_GENETIC_BIOCHEMISTRY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_EPIC_MIGHT</PromotionLine>
 			<iLinePriority>8</iLinePriority>
 			<iStrengthChange>3</iStrengthChange>
@@ -21196,7 +21196,7 @@
 			<Type>PROMOTION_DIVINE_MIGHT8</Type>
 			<Description>TXT_KEY_PROMOTION_DIVINE_MIGHT8</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_NEUROTECHNOLOGY</TechPrereq>
+			<TechPrereq>TECH_GENETIC_BIOCHEMISTRY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_DIVINE_MIGHT</PromotionLine>
 			<iLinePriority>8</iLinePriority>
 			<iStrengthChange>4</iStrengthChange>
@@ -21453,7 +21453,7 @@
 			<Type>PROMOTION_MIGHT7</Type>
 			<Description>TXT_KEY_PROMOTION_MIGHT7</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_MODERN_LIFESTYLE</TechPrereq>
+			<TechPrereq>TECH_ATOMIC_LIFESTYLE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_MIGHT</PromotionLine>
 			<iLinePriority>7</iLinePriority>
 			<iLevelPrereq>15</iLevelPrereq>
@@ -21891,27 +21891,11 @@
 			</NotOnGameOptions>
 			<UnitCombats>
 				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
@@ -21928,56 +21912,7 @@
 			</NotOnGameOptions>
 			<UnitCombats>
 				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
-			<Button>Art/Interface/Buttons/Promotions/callofprotection.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
-			<Type>PROMOTION_SEA_ANIMAL_HUNTER</Type>
-			<Description>TXT_KEY_PROMOTION_SEA_ANIMAL_HUNTER</Description>
-			<Help>TXT_KEY_PROMOTION_ANIMAL_HUNTER_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereq>PROMOTION_SEA_HUNTER1</PromotionPrereq>
-			<NotOnGameOptions>
-				<GameOptionType>GAMEOPTION_INFINITE_XP</GameOptionType>
-			</NotOnGameOptions>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_STEAM_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_DIESEL_SHIPS</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatType>
+					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
@@ -22069,62 +22004,6 @@
 			<iCaptureResistanceModifierChange>5</iCaptureResistanceModifierChange>
 		</PromotionInfo>
 		<PromotionInfo>
-			<Type>PROMOTION_FUSION_CANNON</Type>
-			<Description>TXT_KEY_PROMOTION_FUSION_CANNON</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereq>PROMOTION_COMBAT4</PromotionPrereq>
-			<TechPrereq>TECH_COLD_FUSION</TechPrereq>
-			<iMovesChange>-1</iMovesChange>
-			<iCollateralDamageChange>200</iCollateralDamageChange>
-			<iBombardRateChange>10</iBombardRateChange>
-			<iFirstStrikesChange>-1</iFirstStrikesChange>
-			<iChanceFirstStrikesChange>-1</iChanceFirstStrikesChange>
-			<TerrainAttacks>
-				<TerrainAttack>
-					<TerrainType>TERRAIN_COAST</TerrainType>
-					<iTerrainAttack>100</iTerrainAttack>
-				</TerrainAttack>
-				<TerrainAttack>
-					<TerrainType>TERRAIN_OCEAN</TerrainType>
-					<iTerrainAttack>100</iTerrainAttack>
-				</TerrainAttack>
-				<TerrainAttack>
-					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
-					<iTerrainAttack>100</iTerrainAttack>
-				</TerrainAttack>
-				<TerrainAttack>
-					<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
-					<iTerrainAttack>100</iTerrainAttack>
-				</TerrainAttack>
-				<TerrainAttack>
-					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
-					<iTerrainAttack>100</iTerrainAttack>
-				</TerrainAttack>
-				<TerrainAttack>
-					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
-					<iTerrainAttack>100</iTerrainAttack>
-				</TerrainAttack>
-			</TerrainAttacks>
-			<UnitCombatMods>
-				<UnitCombatMod>
-					<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
-					<iUnitCombatMod>100</iUnitCombatMod>
-				</UnitCombatMod>
-				<UnitCombatMod>
-					<UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-					<iUnitCombatMod>100</iUnitCombatMod>
-				</UnitCombatMod>
-			</UnitCombatMods>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
-			<iCaptureProbabilityModifierChange>-10</iCaptureProbabilityModifierChange>
-			<Button>Art/Interface/Buttons/Promotions/FusionCannon.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
 			<Type>PROMOTION_HEROIC2</Type>
 			<Description>TXT_KEY_PROMOTION_HEROIC2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
@@ -22178,7 +22057,7 @@
 			<Type>PROMOTION_ENTRAPMENT1</Type>
 			<Description>TXT_KEY_PROMOTION_ENTRAPMENT1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_HUNTING_TACTICS</TechPrereq>
+			<TechPrereq>TECH_HUNTING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_ENTRAPMENT</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<UnitCombats>
@@ -23791,7 +23670,7 @@
 			<Type>PROMOTION_RED_TAPE1</Type>
 			<Description>TXT_KEY_PROMOTION_RED_TAPE1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_LABOR_UNION</TechPrereq>
+			<TechPrereq>TECH_LABOR_UNIONS</TechPrereq>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
 			</OnGameOptions>
@@ -23810,7 +23689,7 @@
 			<Type>PROMOTION_RED_TAPE2</Type>
 			<Description>TXT_KEY_PROMOTION_RED_TAPE2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_LABOR_UNION</TechPrereq>
+			<TechPrereq>TECH_LABOR_UNIONS</TechPrereq>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
 			</OnGameOptions>
@@ -23829,7 +23708,7 @@
 			<Type>PROMOTION_RED_TAPE3</Type>
 			<Description>TXT_KEY_PROMOTION_RED_TAPE3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_LABOR_UNION</TechPrereq>
+			<TechPrereq>TECH_LABOR_UNIONS</TechPrereq>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
 			</OnGameOptions>
@@ -23848,7 +23727,7 @@
 			<Type>PROMOTION_CLOUT1</Type>
 			<Description>TXT_KEY_PROMOTION_CLOUT1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_LABOR_UNION</TechPrereq>
+			<TechPrereq>TECH_LABOR_UNIONS</TechPrereq>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
 			</OnGameOptions>
@@ -23867,7 +23746,7 @@
 			<Type>PROMOTION_CLOUT2</Type>
 			<Description>TXT_KEY_PROMOTION_CLOUT2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_LABOR_UNION</TechPrereq>
+			<TechPrereq>TECH_LABOR_UNIONS</TechPrereq>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
 			</OnGameOptions>
@@ -23886,7 +23765,7 @@
 			<Type>PROMOTION_CLOUT3</Type>
 			<Description>TXT_KEY_PROMOTION_CLOUT3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_LABOR_UNION</TechPrereq>
+			<TechPrereq>TECH_LABOR_UNIONS</TechPrereq>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
 			</OnGameOptions>
@@ -23955,7 +23834,7 @@
 			<Type>PROMOTION_CONNIVING6</Type>
 			<Description>TXT_KEY_PROMOTION_CONNIVING6</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_LABOR_UNION</TechPrereq>
+			<TechPrereq>TECH_LABOR_UNIONS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_CONNIVING</PromotionLine>
 			<iLinePriority>6</iLinePriority>
 			<iInsidiousnessChange>21</iInsidiousnessChange>
@@ -24025,7 +23904,7 @@
 			<Type>PROMOTION_SLEUTH4</Type>
 			<Description>TXT_KEY_PROMOTION_SLEUTH4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_DECREES</TechPrereq>
+			<TechPrereq>TECH_WARRANTS_AND_DECREES</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_SLEUTH</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<iInvestigationChange>15</iInvestigationChange>
@@ -24065,7 +23944,7 @@
 			<Type>PROMOTION_SLEUTH8</Type>
 			<Description>TXT_KEY_PROMOTION_SLEUTH8</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FRESPONSE</TechPrereq>
+			<TechPrereq>TECH_DISASTER_ROBOTS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_SLEUTH</PromotionLine>
 			<iLinePriority>8</iLinePriority>
 			<iInvestigationChange>27</iInvestigationChange>
@@ -24099,7 +23978,7 @@
 			<Type>PROMOTION_BACKSTAB2</Type>
 			<Description>TXT_KEY_PROMOTION_BACKSTAB2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_HUNTING_TACTICS</TechPrereq>
+			<TechPrereq>TECH_HUNTING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_BACKSTAB</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
@@ -24113,7 +23992,7 @@
 			<Type>PROMOTION_BACKSTAB3</Type>
 			<Description>TXT_KEY_PROMOTION_BACKSTAB3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_BLOOD_CULT</TechPrereq>
+			<TechPrereq>TECH_SACRIFICE_CULT</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_BACKSTAB</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
@@ -24639,7 +24518,7 @@
 			<Type>PROMOTION_CORRUPTION6</Type>
 			<Description>TXT_KEY_PROMOTION_CORRUPTION6</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_LABOR_UNION</TechPrereq>
+			<TechPrereq>TECH_LABOR_UNIONS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_CORRUPTION</PromotionLine>
 			<iLinePriority>6</iLinePriority>
 			<iStealthCombatModifierChange>5</iStealthCombatModifierChange>
@@ -24845,7 +24724,7 @@
 			<Description>TXT_KEY_PROMOTION_POLICING2_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_DUALISM</TechPrereq>
-			<MinEraType>ERA_SEDENTARY</MinEraType>
+			<MinEraType>C2C_ERA_ANCIENT</MinEraType>
 			<PromotionLine>PROMOTIONLINE_POLICING</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iInvestigationChange>2</iInvestigationChange>
@@ -24881,7 +24760,7 @@
 			<Description>TXT_KEY_PROMOTION_POLICING3_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_LAW_ENFORCEMENT</TechPrereq>
-			<MinEraType>ERA_CLASSICAL</MinEraType>
+			<MinEraType>C2C_ERA_CLASSICAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_POLICING</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iInvestigationChange>3</iInvestigationChange>
@@ -24916,8 +24795,8 @@
 			<Type>PROMOTION_POLICING4</Type>
 			<Description>TXT_KEY_PROMOTION_POLICING4_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_DECREES</TechPrereq>
-			<MinEraType>ERA_MEDIEVAL</MinEraType>
+			<TechPrereq>TECH_WARRANTS_AND_DECREES</TechPrereq>
+			<MinEraType>C2C_ERA_MEDIEVAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_POLICING</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<iInvestigationChange>4</iInvestigationChange>
@@ -24953,7 +24832,7 @@
 			<Description>TXT_KEY_PROMOTION_POLICING5_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_DEPUTIZATION</TechPrereq>
-			<MinEraType>ERA_RENAISSANCE</MinEraType>
+			<MinEraType>C2C_ERA_RENAISSANCE</MinEraType>
 			<PromotionLine>PROMOTIONLINE_POLICING</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<iInvestigationChange>5</iInvestigationChange>
@@ -24989,7 +24868,7 @@
 			<Description>TXT_KEY_PROMOTION_POLICING6_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_CRIMINOLOGY</TechPrereq>
-			<MinEraType>ERA_INDUSTRIAL</MinEraType>
+			<MinEraType>C2C_ERA_INDUSTRIAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_POLICING</PromotionLine>
 			<iLinePriority>6</iLinePriority>
 			<iInvestigationChange>6</iInvestigationChange>
@@ -25025,7 +24904,7 @@
 			<Description>TXT_KEY_PROMOTION_POLICING7_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_VERTICAL_FLIGHT</TechPrereq>
-			<MinEraType>ERA_MODERN</MinEraType>
+			<MinEraType>C2C_ERA_ATOMIC</MinEraType>
 			<PromotionLine>PROMOTIONLINE_POLICING</PromotionLine>
 			<iLinePriority>7</iLinePriority>
 			<iInvestigationChange>7</iInvestigationChange>
@@ -25061,7 +24940,7 @@
 			<Description>TXT_KEY_PROMOTION_POLICING8_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_FORENSICS</TechPrereq>
-			<MinEraType>ERA_INFORMATION</MinEraType>
+			<MinEraType>C2C_ERA_INFORMATION</MinEraType>
 			<PromotionLine>PROMOTIONLINE_POLICING</PromotionLine>
 			<iLinePriority>8</iLinePriority>
 			<iInvestigationChange>8</iInvestigationChange>
@@ -25096,8 +24975,8 @@
 			<Type>PROMOTION_POLICING9</Type>
 			<Description>TXT_KEY_PROMOTION_POLICING9_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_FRESPONSE</TechPrereq>
-			<MinEraType>ERA_INFORMATION</MinEraType>
+			<TechPrereq>TECH_DISASTER_ROBOTS</TechPrereq>
+			<MinEraType>C2C_ERA_INFORMATION</MinEraType>
 			<PromotionLine>PROMOTIONLINE_POLICING</PromotionLine>
 			<iLinePriority>9</iLinePriority>
 			<iInvestigationChange>9</iInvestigationChange>
@@ -25133,7 +25012,7 @@
 			<Description>TXT_KEY_PROMOTION_POLICING10_DESC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_TERRA_COMPUTER</TechPrereq>
-			<MinEraType>ERA_TRANSHUMAN</MinEraType>
+			<MinEraType>C2C_ERA_TRANSHUMAN</MinEraType>
 			<PromotionLine>PROMOTIONLINE_POLICING</PromotionLine>
 			<iLinePriority>10</iLinePriority>
 			<iInvestigationChange>10</iInvestigationChange>
@@ -25200,7 +25079,7 @@
 			<Description>TXT_KEY_PROMOTION_DISEASE_CONTROL2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_FOLK_MEDICINE</TechPrereq>
-			<MinEraType>ERA_SEDENTARY</MinEraType>
+			<MinEraType>C2C_ERA_ANCIENT</MinEraType>
 			<PromotionLine>PROMOTIONLINE_DISEASE_CONTROL</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<Button>art/Buttons/Promotions/DiseaseControl2Promotion.dds</Button>
@@ -25232,7 +25111,7 @@
 			<Description>TXT_KEY_PROMOTION_DISEASE_CONTROL3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_ANCIENT_MEDICINE</TechPrereq>
-			<MinEraType>ERA_CLASSICAL</MinEraType>
+			<MinEraType>C2C_ERA_CLASSICAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_DISEASE_CONTROL</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<Button>art/Buttons/Promotions/DiseaseControl3Promotion.dds</Button>
@@ -25264,7 +25143,7 @@
 			<Description>TXT_KEY_PROMOTION_DISEASE_CONTROL4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_PLAGUE_MEDICINE</TechPrereq>
-			<MinEraType>ERA_MEDIEVAL</MinEraType>
+			<MinEraType>C2C_ERA_MEDIEVAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_DISEASE_CONTROL</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<Button>art/Buttons/Promotions/DiseaseControl4Promotion.dds</Button>
@@ -25295,8 +25174,8 @@
 			<Type>PROMOTION_DISEASE_CONTROL5</Type>
 			<Description>TXT_KEY_PROMOTION_DISEASE_CONTROL5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_ELIXIRS</TechPrereq>
-			<MinEraType>ERA_INDUSTRIAL</MinEraType>
+			<TechPrereq>TECH_ELIXIRS_AND_TONICS</TechPrereq>
+			<MinEraType>C2C_ERA_INDUSTRIAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_DISEASE_CONTROL</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<Button>art/Buttons/Promotions/DiseaseControl5Promotion.dds</Button>
@@ -25328,7 +25207,7 @@
 			<Description>TXT_KEY_PROMOTION_DISEASE_CONTROL6</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_MEDICINE</TechPrereq>
-			<MinEraType>ERA_INDUSTRIAL</MinEraType>
+			<MinEraType>C2C_ERA_INDUSTRIAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_DISEASE_CONTROL</PromotionLine>
 			<iLinePriority>6</iLinePriority>
 			<Button>art/Buttons/Promotions/DiseaseControl6Promotion.dds</Button>
@@ -25360,7 +25239,7 @@
 			<Description>TXT_KEY_PROMOTION_DISEASE_CONTROL7</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_MODERN_HEALTH_CARE</TechPrereq>
-			<MinEraType>ERA_MODERN</MinEraType>
+			<MinEraType>C2C_ERA_ATOMIC</MinEraType>
 			<PromotionLine>PROMOTIONLINE_DISEASE_CONTROL</PromotionLine>
 			<iLinePriority>7</iLinePriority>
 			<Button>art/Buttons/Promotions/DiseaseControl7Promotion.dds</Button>
@@ -25392,7 +25271,7 @@
 			<Description>TXT_KEY_PROMOTION_DISEASE_CONTROL8</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_BIOINFORMATICS</TechPrereq>
-			<MinEraType>ERA_INFORMATION</MinEraType>
+			<MinEraType>C2C_ERA_INFORMATION</MinEraType>
 			<PromotionLine>PROMOTIONLINE_DISEASE_CONTROL</PromotionLine>
 			<iLinePriority>8</iLinePriority>
 			<Button>art/Buttons/Promotions/DiseaseControl8Promotion.dds</Button>
@@ -25424,7 +25303,7 @@
 			<Description>TXT_KEY_PROMOTION_DISEASE_CONTROL9</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_REGENERATIVE_MEDICINE</TechPrereq>
-			<MinEraType>ERA_NANOTECH</MinEraType>
+			<MinEraType>C2C_ERA_NANOTECH</MinEraType>
 			<PromotionLine>PROMOTIONLINE_DISEASE_CONTROL</PromotionLine>
 			<iLinePriority>9</iLinePriority>
 			<Button>art/Buttons/Promotions/DiseaseControl9Promotion.dds</Button>
@@ -25456,7 +25335,7 @@
 			<Description>TXT_KEY_PROMOTION_DISEASE_CONTROL10</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_HUMAN_TRANSMUTATION</TechPrereq>
-			<MinEraType>ERA_TRANSHUMAN</MinEraType>
+			<MinEraType>C2C_ERA_TRANSHUMAN</MinEraType>
 			<PromotionLine>PROMOTIONLINE_DISEASE_CONTROL</PromotionLine>
 			<iLinePriority>10</iLinePriority>
 			<Button>art/Buttons/Promotions/DiseaseControl10Promotion.dds</Button>
@@ -25772,7 +25651,7 @@
 			<iLinePriority>1</iLinePriority>
 			<TerrainWorks>
 				<TerrainWork>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainWork>-10</iTerrainWork>
 				</TerrainWork>
 				<TerrainWork>
@@ -25792,11 +25671,11 @@
 					<iTerrainWork>-10</iTerrainWork>
 				</TerrainWork>
 				<TerrainWork>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<iTerrainWork>-10</iTerrainWork>
 				</TerrainWork>
 				<TerrainWork>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iTerrainWork>-10</iTerrainWork>
 				</TerrainWork>
 				<TerrainWork>
@@ -25868,7 +25747,7 @@
 			<iLinePriority>1</iLinePriority>
 			<TerrainWorks>
 				<TerrainWork>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainWork>10</iTerrainWork>
 				</TerrainWork>
 				<TerrainWork>
@@ -25888,11 +25767,11 @@
 					<iTerrainWork>10</iTerrainWork>
 				</TerrainWork>
 				<TerrainWork>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<iTerrainWork>10</iTerrainWork>
 				</TerrainWork>
 				<TerrainWork>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iTerrainWork>10</iTerrainWork>
 				</TerrainWork>
 				<TerrainWork>
@@ -26429,7 +26308,7 @@
 			<Type>PROMOTION_MASTER_HUNTER1</Type>
 			<Description>TXT_KEY_PROMOTION_MASTER_HUNTER1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_HUNTING</TechPrereq>
+			<TechPrereq>TECH_TRACKING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_MASTER_HUNTER</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<bBlitz>1</bBlitz>
@@ -26457,7 +26336,7 @@
 			<Description>TXT_KEY_PROMOTION_MASTER_HUNTER3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_MASTER_HUNTER2</PromotionPrereq>
-			<TechPrereq>TECH_HUNTING</TechPrereq>
+			<TechPrereq>TECH_TRACKING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_MASTER_HUNTER</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iLevelPrereq>10</iLevelPrereq>
@@ -26512,6 +26391,102 @@
 				</UnitCombat>
 			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/Master_seahunter3.dds</Button>
+		</PromotionInfo>
+		<PromotionInfo>
+			<Type>PROMOTION_CULTURE_AFRICAN</Type>
+			<Description>TXT_KEY_PROMOTION_CULTURE_AFRICAN</Description>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
+			<UnitCombats>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_SETTLER</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+			</UnitCombats>
+			<Button>art/Embassy/art/cultureafrican.dds</Button>
+		</PromotionInfo>
+		<PromotionInfo>
+			<Type>PROMOTION_CULTURE_ASIAN</Type>
+			<Description>TXT_KEY_PROMOTION_CULTURE_ASIAN</Description>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
+			<UnitCombats>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_SETTLER</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+			</UnitCombats>
+			<Button>art/Embassy/art/cultureasian.dds</Button>
+		</PromotionInfo>
+		<PromotionInfo>
+			<Type>PROMOTION_CULTURE_EUROPEAN</Type>
+			<Description>TXT_KEY_PROMOTION_CULTURE_EUROPEAN</Description>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
+			<UnitCombats>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_SETTLER</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+			</UnitCombats>
+			<Button>art/Embassy/art/cultureeuropean.dds</Button>
+		</PromotionInfo>
+		<PromotionInfo>
+			<Type>PROMOTION_CULTURE_MIDDLE_EASTERN</Type>
+			<Description>TXT_KEY_PROMOTION_CULTURE_MIDDLE_EASTERN</Description>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
+			<UnitCombats>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_SETTLER</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+			</UnitCombats>
+			<Button>art/Embassy/art/culturemiddleeastern.dds</Button>
+		</PromotionInfo>
+		<PromotionInfo>
+			<Type>PROMOTION_CULTURE_NEANDERTHAL</Type>
+			<Description>TXT_KEY_PROMOTION_CULTURE_SOUTH_AMERICAN</Description>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
+			<UnitCombats>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_SETTLER</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+			</UnitCombats>
+			<Button>art/Embassy/art/neanderthalembassy.dds</Button>
+		</PromotionInfo>
+		<PromotionInfo>
+			<Type>PROMOTION_CULTURE_NORTH_AMERICAN</Type>
+			<Description>TXT_KEY_PROMOTION_CULTURE_NORTH_AMERICAN</Description>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
+			<UnitCombats>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_SETTLER</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+			</UnitCombats>
+			<Button>art/Embassy/art/culturenamerican.dds</Button>
+		</PromotionInfo>
+		<PromotionInfo>
+			<Type>PROMOTION_CULTURE_OCEANIAN</Type>
+			<Description>TXT_KEY_PROMOTION_CULTURE_OCEANIAN</Description>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
+			<UnitCombats>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_SETTLER</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+			</UnitCombats>
+			<Button>art/Embassy/art/cultureoceanian.dds</Button>
+		</PromotionInfo>
+		<PromotionInfo>
+			<Type>PROMOTION_CULTURE_SOUTH_AMERICAN</Type>
+			<Description>TXT_KEY_PROMOTION_CULTURE_SOUTH_AMERICAN</Description>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
+			<UnitCombats>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_SETTLER</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+			</UnitCombats>
+			<Button>art/Embassy/art/culturesamerican.dds</Button>
 		</PromotionInfo>
 <!--   Terrain Dammage Promotions -->
 		<PromotionInfo>
@@ -27082,7 +27057,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_TEACH2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_LITERATURE</TechPrereq>
-			<MinEraType>ERA_CLASSICAL</MinEraType>
+			<MinEraType>C2C_ERA_CLASSICAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_TEACH</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<PropertyManipulators>
@@ -27101,7 +27076,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_TEACH3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_EDUCATION</TechPrereq>
-			<MinEraType>ERA_MEDIEVAL</MinEraType>
+			<MinEraType>C2C_ERA_MEDIEVAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_TEACH</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<PropertyManipulators>
@@ -27120,7 +27095,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_TEACH4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_COMPULSORY_EDUCATION</TechPrereq>
-			<MinEraType>ERA_INDUSTRIAL</MinEraType>
+			<MinEraType>C2C_ERA_INDUSTRIAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_TEACH</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<PropertyManipulators>
@@ -27139,7 +27114,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_TEACH5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_KNOWLEDGE_MANAGEMENT</TechPrereq>
-			<MinEraType>ERA_INFORMATION</MinEraType>
+			<MinEraType>C2C_ERA_INFORMATION</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_TEACH</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<PropertyManipulators>
@@ -28331,7 +28306,7 @@
 				</InvisibleImprovementChange>
 				<InvisibleImprovementChange>
 					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
-					<ImprovementType>IMPROVEMENT_SUBURB</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</InvisibleImprovementChange>
 				<InvisibleImprovementChange>
@@ -28374,7 +28349,7 @@
 				</InvisibleImprovementChange>
 				<InvisibleImprovementChange>
 					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
-					<ImprovementType>IMPROVEMENT_SUBURB</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</InvisibleImprovementChange>
 				<InvisibleImprovementChange>
@@ -28417,7 +28392,7 @@
 				</InvisibleImprovementChange>
 				<InvisibleImprovementChange>
 					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
-					<ImprovementType>IMPROVEMENT_SUBURB</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<iIntensity>1</iIntensity>
 				</InvisibleImprovementChange>
 				<InvisibleImprovementChange>
@@ -28904,7 +28879,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_CRIME_FIGHTING2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_COMMUNITY</TechPrereq>
-			<MinEraType>ERA_SEDENTARY</MinEraType>
+			<MinEraType>C2C_ERA_ANCIENT</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_CRIME_FIGHTING</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<PropertyManipulators>
@@ -28930,7 +28905,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_CRIME_FIGHTING3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_CODE_OF_LAWS</TechPrereq>
-			<MinEraType>ERA_CLASSICAL</MinEraType>
+			<MinEraType>C2C_ERA_CLASSICAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_CRIME_FIGHTING</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<PropertyManipulators>
@@ -28956,7 +28931,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_CRIME_FIGHTING4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_CIVIL_SERVICE</TechPrereq>
-			<MinEraType>ERA_MEDIEVAL</MinEraType>
+			<MinEraType>C2C_ERA_MEDIEVAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_CRIME_FIGHTING</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<PropertyManipulators>
@@ -28981,8 +28956,8 @@
 			<Type>PROMOTION_BUILD_UP_CRIME_FIGHTING5</Type>
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_CRIME_FIGHTING5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_JURIS_PRUDENCE</TechPrereq>
-			<MinEraType>ERA_RENAISSANCE</MinEraType>
+			<TechPrereq>TECH_JURISPRUDENCE</TechPrereq>
+			<MinEraType>C2C_ERA_RENAISSANCE</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_CRIME_FIGHTING</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<PropertyManipulators>
@@ -29033,7 +29008,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_DISEASE_CONTROL2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_FOLK_MEDICINE</TechPrereq>
-			<MinEraType>ERA_SEDENTARY</MinEraType>
+			<MinEraType>C2C_ERA_ANCIENT</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_DISEASE_CONTROL</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<PropertyManipulators>
@@ -29059,7 +29034,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_DISEASE_CONTROL3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_ANCIENT_MEDICINE</TechPrereq>
-			<MinEraType>ERA_CLASSICAL</MinEraType>
+			<MinEraType>C2C_ERA_CLASSICAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_DISEASE_CONTROL</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<PropertyManipulators>
@@ -29085,7 +29060,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_DISEASE_CONTROL4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_PLAGUE_MEDICINE</TechPrereq>
-			<MinEraType>ERA_MEDIEVAL</MinEraType>
+			<MinEraType>C2C_ERA_MEDIEVAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_DISEASE_CONTROL</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<PropertyManipulators>
@@ -29111,7 +29086,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_DISEASE_CONTROL5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_MICROBIOLOGY</TechPrereq>
-			<MinEraType>ERA_RENAISSANCE</MinEraType>
+			<MinEraType>C2C_ERA_RENAISSANCE</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_DISEASE_CONTROL</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<PropertyManipulators>
@@ -30028,7 +30003,7 @@
 			<iCombatPercent>5</iCombatPercent>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>5</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -30052,11 +30027,11 @@
 					<iTerrainDefense>5</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<iTerrainDefense>5</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iTerrainDefense>5</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -30098,7 +30073,7 @@
 					<iFeatureDefense>-10</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>-5</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
@@ -30106,7 +30081,7 @@
 					<iFeatureDefense>-5</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureDefense>-15</iFeatureDefense>
 				</FeatureDefense>
 			</FeatureDefenses>
@@ -30166,7 +30141,7 @@
 			<iCombatPercent>10</iCombatPercent>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -30190,11 +30165,11 @@
 					<iTerrainDefense>5</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<iTerrainDefense>5</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iTerrainDefense>5</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -30248,7 +30223,7 @@
 			<Description>TXT_KEY_CARAVAN_MOVEMENT_I</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_CARAVAN_GUARD_I</PromotionPrereq>
-			<TechPrereq>TECH_TRACKING</TechPrereq>
+			<TechPrereq>TECH_TRAILS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_CARAVAN_MOVEMENT</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iMovesChange>1</iMovesChange>
@@ -30420,23 +30395,23 @@
 					<bFeatureDoubleMove>1</bFeatureDoubleMove>
 				</FeatureDoubleMove>
 				<FeatureDoubleMove>
-					<FeatureType>FEATURE_REEF_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_REEF_BEACON</FeatureType>
 					<bFeatureDoubleMove>1</bFeatureDoubleMove>
 				</FeatureDoubleMove>
 				<FeatureDoubleMove>
-					<FeatureType>FEATURE_REEF_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_REEF_LIGHTHOUSE</FeatureType>
 					<bFeatureDoubleMove>1</bFeatureDoubleMove>
 				</FeatureDoubleMove>
 				<FeatureDoubleMove>
-					<FeatureType>FEATURE_CORAL</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF</FeatureType>
 					<bFeatureDoubleMove>1</bFeatureDoubleMove>
 				</FeatureDoubleMove>
 				<FeatureDoubleMove>
-					<FeatureType>FEATURE_CORAL_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_REEF_BEACON</FeatureType>
 					<bFeatureDoubleMove>1</bFeatureDoubleMove>
 				</FeatureDoubleMove>
 				<FeatureDoubleMove>
-					<FeatureType>FEATURE_CORAL_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_REEF_LIGHTHOUSE</FeatureType>
 					<bFeatureDoubleMove>1</bFeatureDoubleMove>
 				</FeatureDoubleMove>
 			</FeatureDoubleMoves>
@@ -30488,7 +30463,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_SECURITY2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_CRYPTOGRAPHY</TechPrereq>
-			<MinEraType>ERA_CLASSICAL</MinEraType>
+			<MinEraType>C2C_ERA_CLASSICAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_SECURITY</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iVisibilityChange>1</iVisibilityChange>
@@ -30500,7 +30475,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_SECURITY3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_PHOTOGRAPHY</TechPrereq>
-			<MinEraType>ERA_MODERN</MinEraType>
+			<MinEraType>C2C_ERA_ATOMIC</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_SECURITY</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iVisibilityChange>0</iVisibilityChange>
@@ -30512,7 +30487,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_SECURITY4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_ELECTRONICS</TechPrereq>
-			<MinEraType>ERA_MODERN</MinEraType>
+			<MinEraType>C2C_ERA_ATOMIC</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_SECURITY</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<iVisibilityChange>0</iVisibilityChange>
@@ -30523,8 +30498,8 @@
 			<Type>PROMOTION_BUILD_UP_SECURITY5</Type>
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_SECURITY5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_BRAIN_SCAN</TechPrereq>
-			<MinEraType>ERA_NANOTECH</MinEraType>
+			<TechPrereq>TECH_THOUGHT_SCANNING</TechPrereq>
+			<MinEraType>C2C_ERA_NANOTECH</MinEraType>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_SECURITY</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<iVisibilityChange>1</iVisibilityChange>

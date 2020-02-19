@@ -64,21 +64,13 @@
 				<City>Opuha</City>
 				<City>Rakaia</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_OCEANIAN</BuildingType>
-				</Building>
-			</Buildings>
-			<FreeUnitClasses>
-				<FreeUnitClass>
-					<UnitClassType>UNITCLASS_BAND</UnitClassType>
-					<iFreeUnits>1</iFreeUnits>
-				</FreeUnitClass>
-			</FreeUnitClasses>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_OCEANIAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -91,12 +83,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>

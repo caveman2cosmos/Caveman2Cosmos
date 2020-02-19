@@ -10,19 +10,13 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_WAR_RHINO</Type>
 			<Description>TXT_KEY_UNIT_WAR_RHINO</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_WAR_RHINO</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_RHINO_SWORDSMAN</Type>
 			<Description>TXT_KEY_UNIT_RHINO_RIDER</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_RHINO_SWORDSMAN</DefaultUnit>
 		</UnitClassInfo>
 	</UnitClassInfos>

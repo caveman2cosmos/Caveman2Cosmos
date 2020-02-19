@@ -17,31 +17,37 @@
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_POP_NEVER_DESTROYED</Tag>
 		<English>[NEWLINE][ICON_BULLET]This feature is never destroyed by a city.</English>
+		<French>[NEWLINE][ICON_BULLET]Cette caractéristique n'est jamais détruite par une ville.</French>
 		<German>[NEWLINE][ICON_BULLET]Dieses Geländemerkmal wird niemals durch eine Stadt zerstört.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_POP_ALWAYS_DESTROYED</Tag>
 		<English>[NEWLINE][ICON_BULLET]This feature is immediately destroyed when a city is founded on the same plot.</English>
+		<French>[NEWLINE][ICON_BULLET]Cette caractéristique est immédiatement détruite lorsqu'une ville est fondée sur le même terrain.</French>
 		<German>[NEWLINE][ICON_BULLET]Dieses Geländemerkmal wird sofort zerstört, wenn eine Stadt auf demselben Feld errichtet wird.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_POP_DESTROYS</Tag>
 		<English>[NEWLINE][ICON_BULLET]This feature is destroyed by a city founded on the same plot as soon as the city acheives %d1_pop Population.</English>
+		<French>[NEWLINE][ICON_BULLET]Cette caractéristique est détruite par une ville fondée sur le même terrain dès que la ville atteint %d1_pop Population.</French>
 		<German>[NEWLINE][ICON_BULLET]Dieses Geländemerkmal wird zerstört, wenn eine Stadt auf demselben Feld auf Stufe %d1_pop anwächst.</German>
 	</TEXT>
 		<TEXT>
 		<Tag>TXT_KEY_TERRAIN_TURN_DAMAGE</Tag>
 		<English>[NEWLINE][ICON_BULLET]Damage per Turn: %d1_Amt%%</English>
+		<French>[NEWLINE][ICON_BULLET]Dégâts par Tour: %d1_Amt%%</French>
 		<German>[NEWLINE][ICON_BULLET]Schaden pro Runde: %d1_Amt%%</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLOT_MOVEMENT_COST</Tag>
 		<English>[NEWLINE]Movement Cost: %d1[ICON_MOVES]</English>
 		<German>[NEWLINE]Fortbewegungskosten: %d1[ICON_MOVES]</German>
+		<French>[NEWLINE]Coût de dépl.: %d1[ICON_MOVES]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLOT_ROUTE_MOVEMENT_COST</Tag>
 		<English>[NEWLINE]Route Movement: %s1(%s2)</English>
+		<French>[NEWLINE]Dépl. sur route : %s1(%s2)</French>
 		<German>[NEWLINE]Weg-Fortbewegung: %s1(%s2)</German>
 	</TEXT>
 	<TEXT>
@@ -60,6 +66,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_BARREN_PEDIA</Tag>
 		<English>The term Barren vegetation, or just barren, describes an area where plant growth is sparse, stunted, or possesses little biodiversity. Poor growth may occur due to high winds, climate, salt spray, infertile or toxic soil, or heavy exploitation by man.</English>
+		<French>Le terme végétation stérile, ou simplement stérile, décrit une zone où la croissance des plantes est clairsemée, rabougrie ou possède peu de biodiversité. Une croissance médiocre peut se produire en raison de vents violents, du climat, des embruns salés, d'un sol stérile ou toxique ou d'une exploitation intensive par l'homme. </French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Karge Vegetation[COLOR_REVERT] bedeutet nur spärlichen Pflanzenwuchs oder eine sehr geringe Pflanzenvielfalt in einem bestimmten Gebiet, meist aufgrund von unfruchtbarem Boden. Diese Unfruchtbarkeit kann durch starke Winde, extremes Klima, natürliche Versalzung oder vulkanische Aktivitäten entstehen. Sie wird aber häufig auch vom Menschen durch Überdüngung, Verseuchung, übermäßige Nutzung der natürlichen Ressourcen und Überwirtschaftung verursacht oder zumindest beschleunigt.</German>
 		<Italian>Il termine sterile descrive un'area dove la crescita delle piante è scarsa, stentata, oppure possiede poca biodiversità. Una scarsa crsita può derivare da forti venti, clima, ammassi salini, suolo tossico o non fertile, oppure un intenso sfruttamento da parte dell'uomo.</Italian>
 	</TEXT>
@@ -95,26 +102,31 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_COAST_DEEP</Tag>
 		<English>Deep Coast</English>
+		<French>Falaise</French>
 		<German>Schelf</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_COAST_DEEP_PEDIA</Tag>
 		<English>One tile off shore and deep.</English>
+		<French>Une Case au large et en profondeur.</French>
 		<German>Den randlichen Bereich eines Kontinents, der ständig von Meer bedeckt ist, nennt man Schelf, Kontinentalschelf oder Festlandssockel. Die Schelfplattform, also der Meeresgrund, kann bis zu 200 m unter dem Meeresspiegel liegen. Das Schelfmeer ist sehr reich an Tier- und Pflanzenarten, hier befindet sich auch die Kinderstube vieler Fischarten.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_COAST_DEEP_POLAR</Tag>
 		<English>Polar Deep Coast</English>
+		<French>Plateau polaire</French>
 		<German>Polarschelf</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_COAST_DEEP_TROPICAL</Tag>
 		<English>Tropical Deep Coast</English>
+		<French>Plateau Tropical</French>
 		<German>Tropenschelf</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_COAST_PEDIA</Tag>
 		<English>The coastline is where the land meets the sea or ocean. A precise line that can be called a coastline cannot be determined due to the dynamic nature of tides. The term "coastal zone" can be used instead, which is a spatial zone where interaction of the sea and land processes occurs. Both the terms coast and coastal are often used to describe a geographic location or region; for example, New Zealand's West Coast, or the East and West Coasts of the United States. Wikipedia</English>
+		<French>Le littoral est l'endroit où la terre rencontre la mer ou l'océan. Une ligne précise qui peut être appelée un littoral ne peut pas être déterminée en raison de la nature dynamique des marées. Le terme "zone côtière" peut être utilisé à la place, qui est une zone spatiale où se produisent des interactions entre les processus maritimes et terrestres. Les termes côte et côte sont souvent utilisés pour décrire un emplacement géographique ou une région; par exemple, la côte ouest de la Nouvelle-Zélande ou les côtes est et ouest des États-Unis. Wikipédia</French>
 		<German>Mit [COLOR_HIGHLIGHT_TEXT]Küste[COLOR_REVERT] bezeichnet man das Gebiet, in dem sich Landmasse und Ozean treffen. Eine genaue Küstenlinie ist meist durch den dynamischen Gezeitenwechsel schlecht festzulegen, man richtet sich hier nach dem Stand des mittleren Hochwassers. Küsten sind durch Gezeiten-, Brandungs- und Windeinwirkungen einem ständigen Wandel unterworfen.</German>
 	</TEXT>
 	<TEXT>
@@ -175,6 +187,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_DESERT_PEDIA</Tag>
 		<English>A desert is a landscape or region that receives an extremely low amount of precipitation, less than enough to support growth of most plants. Deserts are defined as areas with an average annual precipitation of less than 250 millimetres (10 in) per year, or as areas where more water is lost by evapotranspiration than falls as precipitation. In the K0ppen climate classification system, deserts are classed as BWh (hot desert) or BWk (temperate desert). In the Thornthwaite climate classification system, deserts would be classified as arid megathermal climates. Wikipedia</English>
+		<French>Un désert est un paysage ou une région qui reçoit une quantité extrêmement faible de précipitations, moins que suffisante pour soutenir la croissance de la plupart des plantes. Les déserts sont définis comme des zones avec des précipitations annuelles moyennes de moins de 250 millimètres (10 pouces) par an, ou comme des zones où plus d'eau est perdue par évapotranspiration que ne tombe sous forme de précipitations. Dans le système de classification climatique K0ppen, les déserts sont classés en BWh (désert chaud) ou BWk (désert tempéré). Dans le système de classification climatique de Thornthwaite, les déserts seraient classés comme des climats mégathermiques arides. Wikipédia</French>
 		<German>Unter [COLOR_HIGHLIGHT_TEXT]Wüsten[COLOR_REVERT] versteht man vegetationslose oder -arme Landschaften, die größtenteils durch Wassermangel entstehen. Trotz ihrer vermeintlichen Lebensfeindlichkeit sind in vielen Wüsten zahlreiche angepasste Tierarten anzutreffen. Typisch für Hitzewüsten sind starke Temperaturschwankungen zwischen Tag und Nacht. Insbesondere durch Überweidung, Übernutzung, Abholzung und falsche Bewässerungsmethoden wird die natürliche Wüstenbildung (Desertifikation) durch den Menschen zusätzlich verstärkt und beschleunigt.</German>
 	</TEXT>
 	<TEXT>
@@ -197,6 +210,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_DUNES_PEDIA</Tag>
 		<English>In physical geography, a dune is a hill of sand built by aeolian processes. Dunes occur in different forms and sizes, formed by interaction with the wind. Most kinds of dunes are longer on the windward side where the sand is pushed up the dune and have a shorter "slip face" in the lee of the wind. The valley or trough between dunes is called a slack. A "dune field" is an area covered by extensive sand dunes. Large dune fields are known as ergs.</English>
+		<French>En géographie physique, une dune est une colline de sable construite par des processus éoliens. Les dunes se présentent sous différentes formes et tailles, formées par interaction avec le vent. La plupart des types de dunes sont plus longues sur le côté au vent où le sable est poussé vers le haut de la dune et ont une "face antidérapante" plus courte sous le vent. La vallée ou creux entre les dunes s'appelle un mou. Un "champ de dunes" est une zone couverte de vastes dunes de sable. Les grands champs de dunes sont appelés ergs.</French>
 		<Italian>In geografia fisica, una duna è una collina di sabbia costruita con un processo eolico. Le dune hanno divese forme e dimensioni, formate dall'interazione con il vento. La maggior parte delle dune sono più lunghe dalla parte controvento, dove la sabbia viene spinta sulla duna, e hanno una faccia più corta nella direszione sottovento. L'avvallamento tra le dune è chiamato periodo morto. Un campo di dune è un'area coperta da estese dune di sabbia. I grandi campi di dune sono chiamati erg.</Italian>
 		<German>[COLOR_HIGHLIGHT_TEXT]Dünen[COLOR_REVERT] sind Sandhügel und -berge, die in vegetationslosen Gebieten mit Vorhandensein von Sand unter dem Einfluss des Windes entstehen. Der Wind erodiert den Sand, transportiert ihn und lagert ihn wieder ab, wodurch die Sanddünen einem beständigen Wandel unterworfen sind. Besonders gut sichtbar ist dies bei freien, sogenannten Wanderdünen.</German>
 	</TEXT>
@@ -210,7 +224,7 @@
 		<Polish>[NEWLINE][ICON_BULLET]+%s1[ICON_HEALTHY] w pobliskich miastach</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_GRASS</Tag>
+		<Tag>TXT_KEY_TERRAIN_GRASSLAND</Tag>
 		<English>Grassland</English>
 		<French>
 			<Text>Prairie</Text>
@@ -231,8 +245,9 @@
 		<Polish>Łąka</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_GRASS_PEDIA</Tag>
+		<Tag>TXT_KEY_TERRAIN_GRASSLAND_PEDIA</Tag>
 		<English>Grasslands are areas where the vegetation is dominated by grasses (Poaceae) and other herbaceous (non-woody) plants (forbs). However, sedge (Cyperaceae) and rush (Juncaceae) families can also be found. Grasslands occur naturally on all continents except Antarctica. In temperate latitudes, such as northwest Europe and the Great Plains and California in North America, native grasslands are dominated by perennial bunch grass species, whereas in warmer climates annual species form a greater component of the vegetation. Wikipedia</English>
+		<French>Les prairies sont des zones où la végétation est dominée par les graminées (Poaceae) et d'autres plantes herbacées (non ligneuses) (forbs). Cependant, des familles de carex (Cyperaceae) et de jonc (Juncaceae) peuvent également être trouvées. Les prairies se trouvent naturellement sur tous les continents, sauf en Antarctique. Dans les latitudes tempérées, comme le nord-ouest de l'Europe et les grandes plaines et la Californie en Amérique du Nord, les prairies indigènes sont dominées par des espèces de graminées vivaces, tandis que dans les climats plus chauds, les espèces annuelles forment une plus grande composante de la végétation. Wikipedia</French>
 		<German>Unter dem Überbegriff [COLOR_HIGHLIGHT_TEXT]Grasland[COLOR_REVERT] werden alle Landschaften zusammengefasst, in denen Gräser vorherrschen und in denen es nur wenig bis gar keinen Baumbestand gibt, wie z.B. die verschiedenen Steppen, Savannen und Prärien, aber auch vom Menschen geprägtes Kulturgrasland mit Weiden und Wiesen. Grasländer gibt es auf allen Kontinenten mit Ausnahme der Arktis.</German>
 	</TEXT>
 	<TEXT>
@@ -259,6 +274,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_HILL_PEDIA</Tag>
 		<English>A hill is a landform that extends above the surrounding terrain. Hills often have a distinct summit, although in areas with scarp/dip topography a hill may refer to a particular section of flat terrain without a massive summit (e.g. Box Hill). Wikipedia</English>
+		<French>Une colline est un relief qui s'étend au-dessus du terrain environnant. Les collines ont souvent un sommet distinct, bien que dans les zones à topographie escarpée / pendante, une colline puisse se référer à une section particulière de terrain plat sans sommet massif (e.g. Box Hill). Wikipedia</French>
 		<German>Als [COLOR_HIGHLIGHT_TEXT]Hügel[COLOR_REVERT] bezeichnet man mittelgroße Erhebungen in der Landschaft, die kleiner als Berge aber größer als einzelne Felsen oder leichte Bodenwellen sind. Hügel sind meist abgerundet und mit Pflanzen bewachsen. Natürliche Hügelformationen entstehen hauptsächlich durch Erosion von Gebirgen, Ablagerungen oder geologische Aktivitäten.</German>
 	</TEXT>
 	<TEXT>
@@ -285,6 +301,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_ICE_PEDIA</Tag>
 		<English>Ice is water frozen into the solid state. Usually ice is the phase known as ice Ih, which is the most abundant of the varying solid phases on the Earth's surface. It can appear transparent or opaque bluish-white color, depending on the presence of impurities or air inclusions. The addition of other materials such as soil may further alter the appearance. Wikipedia</English>
+		<French>La glace est de l'eau gelée à l'état solide. Habituellement, la glace est la phase connue sous le nom de glace Ih, qui est la plus abondante des différentes phases solides à la surface de la Terre. Il peut apparaître de couleur blanc bleuâtre transparent ou opaque, selon la présence d'impuretés ou d'inclusions d'air. L'ajout d'autres matériaux tels que le sol peut altérer davantage. Wikipedia</French>
 		<German>Bei Eis handelt es sich um Wasser, dass bei Temperaturen unter 0 °C vom flüssigen in den festen Aggregatzustand übergeht. Unter der Landschaftsform Eis verstehen wir die sogenannten Eisschilde (Inlandeis), ausgedehnte Gletscher in Polnähe, die das Relief der betreffenden Gegend vollständig unter sich verbergen, (Grönland, Antarktis) aber auch kleinere Eiskappen (Plateaugletscher) wie in Kanada, Island oder Patagonien.</German>
 	</TEXT>
 	<TEXT>
@@ -304,7 +321,7 @@
 		<German>See</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_LUNAR_BARREN</Tag>
+		<Tag>TXT_KEY_TERRAIN_LUNAR_REGOLITH</Tag>
 		<English>Lunar Regolith</English>
 		<French>
 			<Text>Sol Lunaire Stérile</Text>
@@ -321,13 +338,13 @@
 		<Polish>Księżycowy Jałowy Teren</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_LUNAR_BARREN_PEDIA</Tag>
+		<Tag>TXT_KEY_TERRAIN_LUNAR_REGOLITH_PEDIA</Tag>
 		<English>The surface of the Moon has been subject to billions of years of collisions with both small and large asteroidal and cometary materials. Over time, these impact processes have pulverised and "gardened" the surface materials, forming a fine grained layer termed "regolith". The thickness of the regolith varies between 2 meters beneath the younger maria, to up to 20 meters beneath the oldest surfaces of the lunar highlands. The regolith is predominantly composed of materials found in the region, but also contains traces of materials ejected by distant impact craters. The term "mega-regolith" is often used to describe the heavily fractured bedrock directly beneath the near-surface regolith layer.[PARAGRAPH:2]The regolith contains rocks, fragments of minerals from the original bedrock, and glassy particles formed during the impacts. In most of the lunar regolith, half of the particles are made of mineral fragments fused by the glassy particles; these objects are called agglutinates. The chemical composition of the regolith varies according to its location; the regolith in the highlands is rich in aluminium and silica, just as the rocks in those regions. The regolith in the maria is rich in iron and magnesium and is silica-poor, as the basaltic rocks from which it is formed.[PARAGRAPH:2]The lunar regolith is very important because it also stores information about the history of the Sun. The atoms that compose the solar wind mostly helium, neon, carbon and nitrogen hit the lunar surface and insert themselves into the mineral grains. Upon analyzing the composition of the regolith, particularly its isotopic composition, it is possible to determine if the activity of the Sun has changed with time. The gases of the solar wind could be useful for future lunar bases, since oxygen, hydrogen (water), carbon and nitrogen are not only essential to sustain life, but are also potentially very useful in the production of fuel. The composition of the lunar regolith can also be used to infer its source origin.</English>
 		<Italian>La superficie lunare è stata soggetta a miliardi di anni di collisioni con asteroidi piccoli e grandi, oltre a materiale cometario. Nel tempo, questi impatti hanno polverizzato i materiali in superficie, formando uno strato a grana fine denominato "regolite". Lo spessore della regolite varia da 2 metri (nei maria) fino a più di 20 metri sotto alla superficie più antica degli altopiani lunari. La regolite è composta principalmente da materiale presente nella regione, ma contiene anche tracce di materiali eiettati da crateri da impatto molto distanti. Il termine "mega-regolite" è spesso usato per descrivere lo strato roccioso altamente fratturato sotto lo strato superficiale di regolite.[PARAGRAPH:2]La regolite contiene rocce, frammenti di minerale derivate dallo strato roccioso originale, e particelle vetrose formate durante gli impatti. Nella maggior parte della regolite lunare, metà delle particelle sono fatte di frammenti di minerale fusi assieme da particelle vetrose; questi oggetti sono detti agglutinati. La composizione chimica della regolite varia in base alla sua posizione; la regolite degli altopiani è ricca di alluminio e silicio, come le rocce in questa regione. La regolite nei maria è ricca di ferro e magnesio e povera di silicio, come le rocce basaltiche di cui è formata.[PARAGRAPH:2]La regolite lunare è molto importante anche perchè contiene informazioni sulla storia del Sole. Gli atomi che compongono il vento solare, per la maggior parte elio, neon, carbonio e azoto, colpiscono la superficie lunare e si mischiano alla regolite. Analizzando la composizione della regolite, in particolare la sua composizione isotopica, è possibile stabilire se l'attività solare è cambiata nel tempo. I gas del vento solare potrebbero essere utili per le future basi lunari, dato che ossigeno, idrogeno, carbonio e azoto sono non solo essenziali alla vita, ma sono anche potenzialmente utilissimi nella produzione di carburante. La composizione della regolite lunare può essere usata anche per stabilire la sua origine.</Italian>
 		<German>Weite Teile der Mondoberfläche sind unter einer meterdicken Schicht aus Mondregolith (auch als Mondstaub bekannt) verborgen. Es handelt sich dabei um Teile des Oberflächengesteins, die durch die ständigen ungebremsten Meteoroideneinschläge regelrecht zu Sand oder gar feinem Staub pulverisiert wurden.</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_LUNAR_BASALT</Tag>
+		<Tag>TXT_KEY_TERRAIN_LUNAR_DOME</Tag>
 		<English>Lunar Dome</English>
 		<French>
 			<Text>Basalte Lunaire</Text>
@@ -344,12 +361,12 @@
 		<Polish>Bazalt Księżycowy</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_LUNAR_BASALT_PEDIA</Tag>
+		<Tag>TXT_KEY_TERRAIN_LUNAR_DOME_PEDIA</Tag>
 		<English>Lunar basalts differ from their terrestrial counterparts principally in their high iron contents, which typically range from about 17 to 22 wt% FeO. They also possess a stunning range of titanium concentrations (present in the mineral ilmenite), ranging from less than 1 wt% TiO2, to about 13 wt.%. Traditionally, lunar basalts have been classified according to their titanium content, with classes being named high-Ti, low-Ti, and very-low-Ti. Nevertheless, global geochemical maps of titanium obtained from the Clementine mission demonstrate that the lunar maria possesses a continuum of titanium concentrations, and that the highest concentrations are the least abundant.[PARAGRAPH:2]Lunar basalts show exotic textures and mineralogy, particularly shock metamorphism, lack of the oxidation typical of terrestrial basalts, and a complete lack of hydration. While most of the Moon's basalts erupted between about 3 and 3.5 billion years ago, the oldest samples are 4.2 billion years old, and the youngest flows, based on the age dating method of "crater counting," are estimated to have erupted only 1.2 billion years ago.</English>
 		<Italian>I basalti lunari differiscono dalle loro controparti terrestri principalmente per il loro contenuto di ferro, che varia tipicamente da 17 a 22 % di ossido di ferro. Possiedono anche un'elevatissima concentrazione di titanio (presente nel minerale ilmenite), variando da meno dell'1% di ossido di titanio, a più del 13%. Tradizionalmente, i basalti lunari vengono classificati in base al loro contenuto di titanio, con classi chiamate high-Ti, low-Ti, e very-low-Ti. Ciononostante, le mappe geochimiche globali ottenute dalla missione Clementine dimostra che i maria lunari possiedono una grande concentrazione di titanio, e che le più alte concetrazioni sono come minimo abbondanti.[PARAGRAPH:2]I basalti luanri presentano mineralogia e forme esotiche, in particolare metamorfismo da shock, mancanza dell'ossidazione tipica dei basalti terrestri e una mancanza completa di idratazione. Mentre la maggior parte del basato lunare è stato eruttato tra 3 e 3,5 miliardi di anni fa, i campioni più vecchi hanno 4,2 miliardi di anni, e le colate più recenti, basate sul metodo di datazione della "conta dei crateri", sono stimate intorno a 1,2 miliardi di anni fa.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_LUNAR_DESERT</Tag>
+		<Tag>TXT_KEY_TERRAIN_LUNAR_RILLE</Tag>
 		<English>Lunar Rille</English>
 		<French>
 			<Text>Desert Lunaire</Text>
@@ -365,7 +382,7 @@
 		<Polish>Pustynia Księżycowa</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_LUNAR_DESERT_PEDIA</Tag>
+		<Tag>TXT_KEY_TERRAIN_LUNAR_RILLE_PEDIA</Tag>
 		<English>Rille (German for 'groove') is typically used to describe any of the long, narrow depressions in the lunar surface that resemble channels. Typically a rille can be up to several kilometres wide and hundreds of kilometres in length. However, the term has also been used loosely to describe similar structures on a number of planets in the Solar System, including Mars, Venus, and on a number of moons. All bear a structural resemblance to each other.[PARAGRAPH:2]Rilles on the Moon sometimes resulted from the formation of localized lava channels. These generally fall into three categories, consisting of sinuous, arcuate, or linear shapes. By following these meandering rilles back to their source, they often lead to an old volcanic vent. One of the most notable sinuous rilles is the Vallis Schröteri feature, located in the Aristarchus plateau along the eastern edge of Oceanus Procellarum. An example of a sinuous rille exists at the Apollo 15 landing site, Rima Hadley, located on the rim of the Imbrium Basin. Based on observations from the mission, it is generally believed that this rille was formed by volcanic processes, a topic long debated before the mission took place.</English>
 		<Italian>Rille (Tedesco per 'bosco') è tipicamente usato per descrivere una delle lunghe depressioni nella superficie lunare che sembrano canali. Tipicamente, un rille può essere largo fino ad un paio di chilometri, e lungo un centinaio di chilometri. Comunque, questo termine è stato per descrivere strutture simili su un numero di pianeti nel sistema Solare, includendo Marte, Venere e un certo numero di lune. Tutte hanno una strsomiglianza strutturale con le altre.[PARAGRAPH:2]I Rille sulla Luna sono avolte il risultato di canali li lava locali. Questi ricadono generalmente in 3 categorie, ovvero sinuoso, arcuato o lineare. Seguendo questi rille fino alla loro fonte, spesso conducono a una vecchia fonte vulcanica. Uno dei rille sinuosi più rilevanti è Vallis Schröteri,situato nell'Aristarchus plateau lungo il lato orientale dell'Oceanus Procellarum. Un esempio di rille sinuoso si trova nel sito di atterraggio dell'Apollo 15, Rima Hadley, situato sul margine di Imbrium Basin. Basandosi su osservazioni dalla missione, si ritiene generalmente che questo rille fu formato da processi volcanici, un argomento a lungo dibattuto prima dell'effettuazione della missione.</Italian>
 	</TEXT>
@@ -388,10 +405,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_LUNAR_DUNES_PEDIA</Tag>
 		<English>Wrinkle ridges are features created by compressive tectonic forces within the maria. These features represent buckling of the surface and form long ridges across parts of the maria. Some of these ridges may outline buried craters or other features beneath the maria. A prime example of such an outlined feature is the crater Letronne.</English>
+		<French>Wrinkle ridges are features created by compressive tectonic forces within the maria. These features represent buckling of the surface and form long ridges across parts of the maria. Some of these ridges may outline buried craters or other features beneath the maria. A prime example of such an outlined feature is the crater Letronne.</French>
 		<Italian>Le increspature dorsali sono caratteristiche craete da force tettoniche di compressione all'interno dei maria. Queste caratteristiche rappresentano increspature della superficie e formano lunghe dorsali attraverso parte dei maria. Alcune di queste dorsalipossono attraversare crateri sepolti o altre caratteristiche nei maria. Un tipico esempio di questa caratteristica è il cratere Letronne.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_LUNAR_PLAINS</Tag>
+		<Tag>TXT_KEY_TERRAIN_LUNAR_MARE</Tag>
 		<English>Lunar Mare</English>
 		<French>
 			<Text>Plaines Lunaires</Text>
@@ -407,12 +425,12 @@
 		<Polish>Równiny Księżycowe</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_LUNAR_PLAINS_PEDIA</Tag>
+		<Tag>TXT_KEY_TERRAIN_LUNAR_MARE_PEDIA</Tag>
 		<English>The lunar maria (singular: mare ) are large, dark, basaltic plains on Earth's Moon, formed by ancient volcanic eruptions. They were dubbed maria, Latin for "seas", by early astronomers who mistook them for actual seas. They are less reflective than the "highlands" as a result of their iron-rich compositions, and hence appear dark to the naked eye. The maria cover about 16 percent of the lunar surface, mostly on the near-side visible from Earth. The few maria on the far-side are much smaller, residing mostly in very large craters. The traditional nomenclature for the Moon also includes one oceanus (ocean), as well as features with the names lacus (lake), palus (marsh) and sinus (bay). The latter three are smaller than maria, but have the same nature and characteristics.[PARAGRAPH:2]Lunar anorthosites constitute the light-coloured areas of the Moon's surface and have been the subject of much research.</English>
 		<Italian>I maria lunari (singolare: mare ) sono grandi e scure pianure basaltiche sulla luna della Terra, formate da antiche eruzioni vulcaniche. Furono chiamati maria, Latino per "mari", dai primi astronomi che liscambiarono per veri e propri mari. Riflettono meno delle "highlands" come risultato della loro composizione ricca di ferro, e perciò appaiono scuri all'occhio nudo. I maria ricoprono circa il 16% della superficie lunare. I pochi maria sulla faccia nascosta sono molto più piccoli, situati per la maggior parte in enormi crateri. La nomenclatura tradizionale per la Luna include anche un oceanus (oceano), oltre a caratteristiche con il nome di lacus (lago), palus (palude) and sinus (baia). Gli ultimi tre sono più piccoli dei maria, ma hanno la stessa natura e caratteristiche.[PARAGRAPH:2]Le anortositi lunari cosituiscono le aree più chiare della superficie lunare, e sono state studiate più a fondo.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_LUNAR_ROCKY</Tag>
+		<Tag>TXT_KEY_TERRAIN_LUNAR_HIGHLAND</Tag>
 		<English>Lunar Highland</English>
 		<French>
 			<Text>Roches Lunaires</Text>
@@ -428,8 +446,9 @@
 		<Polish>Skały Księżycowe</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_LUNAR_ROCKY_PEDIA</Tag>
+		<Tag>TXT_KEY_TERRAIN_LUNAR_HIGHLAND_PEDIA</Tag>
 		<English>The most distinctive aspect of the Moon is the contrast between its bright and dark zones. Lighter surfaces are the lunar highlands, which receive the name of terrae (singular terra, from the Latin for Earth), and the darker plains are called maria (singular mare, from the Latin for sea), after Johannes Kepler who introduced the name in the 17th century. The highlands are anorthositic in composition, whereas the maria are basaltic. The maria often coincide with the "lowlands," but it is important to note that the lowlands (such as within the South Pole-Aitken basin) are not always covered by maria. The highlands are older than the visible maria, and hence are more heavily cratered.</English>
+		<French>The most distinctive aspect of the Moon is the contrast between its bright and dark zones. Lighter surfaces are the lunar highlands, which receive the name of terrae (singular terra, from the Latin for Earth), and the darker plains are called maria (singular mare, from the Latin for sea), after Johannes Kepler who introduced the name in the 17th century. The highlands are anorthositic in composition, whereas the maria are basaltic. The maria often coincide with the "lowlands," but it is important to note that the lowlands (such as within the South Pole-Aitken basin) are not always covered by maria. The highlands are older than the visible maria, and hence are more heavily cratered.</French>
 		<Italian>Il tratto più distintivo della Luna è il contrasto tra le sue zone più chiare e quelle più scure. Le superfici più chiare sono gli altopiani lunari, chiamati terrae (singolare terra, dal Latino), e le pianure più scure sono dette maria (singolare mare, dal latino), secondo Giovanni Keplero che introdusse questi nomi nel 17° secolo. Gli altopiani hanno una composizione anortositica, mentre i maria sono basaltici. I maria coincidono spesso con le "depressioni", ma è importante notare che le depressioni (come nel bacino Polo Sud-Aitken) non sono sempre coperte da maria. Gli altopiani sono più vecchi dei maria, e perciò hanno molti più crateri.</Italian>
 	</TEXT>
 	<TEXT>
@@ -452,6 +471,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_LUSH_PEDIA</Tag>
 		<English>Luxuriant vegetation and rich soil.</English>
+		<French>Luxuriant vegetation and rich soil.</French>
 		<Italian>Vegetazione lussureggiante e suolo fertile.</Italian>
 		<Spanish>Vegetación exuberante y suelo fértil.</Spanish>
 		<German>Gebiete mit fruchtbarem Boden und üppiger Vegetation sind wahre Naturparadiese.</German>
@@ -673,7 +693,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_NONE</Tag>
-		<English>Void</English>
+		<English>No terrain</English>
 		<French>Vide</French>
 		<Spanish>
 			<Text>Vacío</Text>
@@ -762,6 +782,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_ORBIT_PEDIA</Tag>
 		<English>A low Earth orbit (LEO) is an orbit around Earth with an altitude between 160 kilometers (99 mi) (orbital period of about 88 minutes), and 2,000 kilometers (1,200 mi) (about 127 minutes). Objects below approximately 160 kilometers (99 mi) will experience very rapid orbital decay and altitude loss. With the exception of the manned lunar flights of the Apollo program, all human spaceflights have taken place in LEO (or were suborbital). The altitude record for a human spaceflight in LEO was Gemini 11 with an apogee of 1,374.1 kilometers (853.8 mi). All manned space stations to date, as well as the majority of satellites, have been in LEO.</English>
+		<French>Une orbite terrestre basse (LEO) est une orbite autour de la Terre dont l'altitude est comprise entre 160 kilomètres (99 mi) (période orbitale d'environ 88 minutes) et 2000 kilomètres (1200 mi) (environ 127 minutes). Les objets en dessous d'environ 160 kilomètres (99 mi) subiront une décroissance orbitale très rapide et une perte d'altitude. À l'exception des vols lunaires habités du programme Apollo, tous les vols spatiaux humains ont eu lieu en LEO (ou étaient suborbitaux). Le record d'altitude pour un vol spatial humain à LEO était Gemini 11 avec une apogée de 1 374,1 kilomètres (853,8 mi). À ce jour, toutes les stations spatiales habitées, ainsi que la majorité des satellites, se trouvent à LEO.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_PEAK</Tag>
@@ -787,6 +808,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_PEAK_PEDIA</Tag>
 		<English>Peak may refer to:A mountain peak, In topography, a summit is a point on a surface that is higher in elevation than all points immediately adjacent to it. Mathematically, a summit is a local maximum in elevation. The topographic terms "acme", "apex", "peak", and "zenith" are synonyms. Wikipedia</English>
+		<French>Le pic peut se référer à: Un sommet de montagne, En topographie, un sommet est un point sur une surface qui est plus élevé en élévation que tous les points immédiatement adjacents. Mathématiquement, un sommet est un maximum local en élévation. Les termes topographiques "acme", "apex", "peak" et "zenith" sont synonymes. Wikipédia</French>
 		<German>Berge sind Erhebungen in der Landschaft, die höher und steiler als Hügel sind und in der Regel über einen oder mehrere Gipfel verfügen. Sie entstehen größtenteils durch Plattentektonik und Vulkanismus. Viele zusammengehörige Berge bilden ein [COLOR_HIGHLIGHT_TEXT]Gebirge[COLOR_REVERT] oder einen Gebirgszug. Hierbei unterscheidet man zwischen Mittelgebirgen und Hochgebirgen.</German>
 	</TEXT>
 	<TEXT>
@@ -810,10 +832,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_TUNDRA</Tag>
 		<English>Tundra</English>
+		<French>Toundra</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_TUNDRA_PEDIA</Tag>
 		<English>In physical geography, tundra is a type of biome where the tree growth is hindered by low temperatures and short growing seasons. The term tundra comes through Russian (tûndra) from the Kildin Sami word tundâr "uplands", "treeless mountain tract". There are three types of tundra: arctic tundra, alpine tundra, and Antarctic tundra. In tundra, the vegetation is composed of dwarf shrubs, sedges and grasses, mosses, and lichens. Scattered trees grow in some tundra regions. The word "tundra" usually refers only to the areas where the subsoil is permafrost, or permanently frozen soil. Permafrost tundra includes vast areas of northern Russia and Canada. The polar tundra is home to several peoples who are mostly nomadic reindeer herders, such as the Nganasan and Nenets in the permafrost area (and the Sami in Sápmi).</English>
+		<French>En géographie physique, la toundra est un type de biome où la croissance des arbres est entravée par les basses températures et les courtes saisons de croissance. Le terme toundra vient du russe (tûndra) du mot Kildin Sami tundâr "uplands", "montagne sans arbres". Il existe trois types de toundra: la toundra arctique, la toundra alpine et la toundra antarctique. Dans la toundra, la végétation est composée d'arbustes nains, de carex et de graminées, de mousses et de lichens. Des arbres épars poussent dans certaines régions de la toundra. Le mot «toundra» se réfère généralement uniquement aux zones où le sous-sol est du pergélisol ou du sol gelé en permanence. La toundra du pergélisol comprend de vastes régions du nord de la Russie et du Canada. La toundra polaire abrite plusieurs peuples qui sont principalement des éleveurs de rennes nomades, tels que les Nganasan et les Nenets dans la zone de pergélisol (et les Samis à Sápmi).</French>
 		<German>Als Tundra wird eine Kältesteppe zumeist auf Permafrostböden bezeichnet. Es handelt sich um offene, baumfreie Landschaften, in denen hauptsächlich Flechten, Moose, Gräser und sommergrünen Zwergsträucher gedeihen. Tundren entstehen nicht nur in den Polregionen, auch im Hochgebirge ist dieser Vegetationstyp zu finden.</German>
 	</TEXT>
 	<TEXT>
@@ -840,6 +864,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_PLAINS_PEDIA</Tag>
 		<English>Plains is the plural of plain, a geographical feature. It is a big flat area of a land.  Wikipedia</English>
+		<French>Plaines est le pluriel de plaine, une caractéristique géographique. C'est un grand terrain plat. Wikipédia</French>
 		<German>Eine [COLOR_HIGHLIGHT_TEXT]Ebene[COLOR_REVERT] ist eine weitgehend flache Landschaft ohne größere Erhebungen (Hügel, Berge). Sie kann aber durchaus sichtbare Höhenunterschiede aufweisen.</German>
 	</TEXT>
 	<TEXT>
@@ -856,13 +881,15 @@
 		<Polish>Skalisty Teren</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_ROCKY_ARID</Tag>
+		<Tag>TXT_KEY_TERRAIN_BADLAND</Tag>
 		<English>Badland</English>
+		<French>Badland</French>
 		<German>Steinwüste</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_ROCKY_COLD</Tag>
+		<Tag>TXT_KEY_TERRAIN_JAGGED</Tag>
 		<English>Jagged</English>
+		<French>dentelé</French>
 		<German>Gletscher</German>
 	</TEXT>
 	<TEXT>
@@ -920,31 +947,37 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_SEA</Tag>
 		<English>Sea</English>
+		<French>Mer</French>
 		<German>Meer</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_SEA_DEEP</Tag>
 		<English>Deep Sea</English>
+		<French>Mer profonde</French>
 		<German>Tiefsee</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_SEA_DEEP_PEDIA</Tag>
 		<English>Two tiles off shore and deep.</English>
+		<French>Deux cases au large et en profondeur.</French>
 		<German>Mit Tiefsee werden die Meeresanteile bezeichnet, die unterhalb einer Tiefe von 200 m liegen. Naturgemäß sind sie nahezu völlig lichtlos, aber keinesfalls ohne Leben. Zwar schließt die Abwesenheit von Licht Pflanzen aus, aber es existiert in der Tiefe trotzdem eine reichhaltige Tierwelt.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_SEA_DEEP_POLAR</Tag>
 		<English>Polar Deep Sea</English>
+		<French>Mer polaire profonde</French>
 		<German>Polartiefsee</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_SEA_DEEP_TROPICAL</Tag>
 		<English>Tropical Deep Sea</English>
+		<French>Mer Tropicale profonde</French>
 		<German>Tropentiefsee</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_SEA_PEDIA</Tag>
 		<English>Two tiles off shore.</English>
+		<French>Deux cases au large.</French>
 		<German>Das [COLOR_HIGHLIGHT_TEXT]Meer[COLOR_REVERT] oder die See ist eine große zusammenhängende Wassermasse. Man unterscheidet grob zwischen Randmeeren, die den 5 Ozeanen zugeordnet sind, und Binnenmeeren, die von Land umschlossen und nur durch Meerengen miteinander verbunden sind.</German>
 	</TEXT>
 	<TEXT>
@@ -960,7 +993,7 @@
 		<German>Tropenmeer</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_SLIMY_COAST</Tag>
+		<Tag>TXT_KEY_TERRAIN_INFECTED_WATER</Tag>
 		<English>Infected Water</English>
 		<French>Eau Infectée</French>
 		<German>Verkeimtes Wasser</German>
@@ -969,7 +1002,7 @@
 		<Polish>Zanieczyszczona Woda</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_SLIMY_COAST_PEDIA</Tag>
+		<Tag>TXT_KEY_TERRAIN_INFECTED_WATER_PEDIA</Tag>
 		<English>This water plot has been infected by a biological 'nuke'.</English>
 		<French>Cette eau a été infectée par une bombe biologique.</French>
 		<German>Dieses Wasserfeld wurde durch einen biologischen Kampfstoff vergiftet.</German>
@@ -978,7 +1011,7 @@
 		<Polish>To pole wody zostało zanieczyszczone przez biologiczną wersje rakiety</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_SLIMY_OCEAN</Tag>
+		<Tag>TXT_KEY_TERRAIN_PLAGUED_WATER</Tag>
 		<English>Plagued Water</English>
 		<French>Eau contaminée</French>
 		<German>Verseuchtes Wasser</German>
@@ -987,7 +1020,7 @@
 		<Polish>Zarażona Woda</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_SLIMY_OCEAN_PEDIA</Tag>
+		<Tag>TXT_KEY_TERRAIN_PLAGUED_WATER_PEDIA</Tag>
 		<English>This water plot has been infected by a top-of-the-line biological 'nuke'.</English>
 		<French>Cette eau a été contaminée par une bombe biologique de pointe.</French>
 		<German>Dieses Wasserfeld wurde durch einen starken biologischen Kampfstoff verseucht.</German>
@@ -1031,16 +1064,19 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_TRENCH_POLAR</Tag>
 		<English>Polar Trench</English>
+		<French>Fosse Polaire</French>
 		<German>Polargraben</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_TRENCH_TROPICAL</Tag>
 		<English>Tropical Trench</English>
+		<French>Fosse Tropicale</French>
 		<German>Tropengraben</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_TAIGA</Tag>
 		<English>Taiga</English>
+		<French>Taïga</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_TAIGA_PEDIA</Tag>

@@ -19,7 +19,7 @@
 				<BonusType>BONUS_WHEAT</BonusType>
 				<BonusType>BONUS_CORN</BonusType>
 				<BonusType>BONUS_RICE</BonusType>
-				<BonusType>BONUS_POTATO</BonusType>
+				<BonusType>BONUS_POTATOES</BonusType>
 			</PrereqBonuses>
 			<HeadquarterCommerces>
 				<iHeadquarterCommerce>4</iHeadquarterCommerce>
@@ -92,14 +92,14 @@
 				<BonusType>BONUS_CORN</BonusType>
 				<BonusType>BONUS_SUGAR</BonusType>
 				<BonusType>BONUS_RICE</BonusType>
-				<BonusType>BONUS_POTATO</BonusType>
+				<BonusType>BONUS_POTATOES</BonusType>
 			</PrereqBonuses>
 			<HeadquarterCommerces>
 				<iHeadquarterCommerce>4</iHeadquarterCommerce>
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 			</HeadquarterCommerces>
-			<BonusProduced>BONUS_DIESEL</BonusProduced>
+			<BonusProduced>BONUS_OIL_PRODUCTS</BonusProduced>
 			<CommercesProduced>
 				<iCommerceProduced>0</iCommerceProduced>
 				<iCommerceProduced>200</iCommerceProduced>
@@ -124,11 +124,11 @@
 			<iMaintenance>100</iMaintenance>
 			<iTGAIndex>3</iTGAIndex>
 			<PrereqBonuses>
-				<BonusType>BONUS_IRON</BonusType>
-				<BonusType>BONUS_COPPER</BonusType>
+				<BonusType>BONUS_IRON_ORE</BonusType>
+				<BonusType>BONUS_COPPER_ORE</BonusType>
 				<BonusType>BONUS_MARBLE</BonusType>
 				<BonusType>BONUS_STONE</BonusType>
-				<BonusType>BONUS_BAUXITE</BonusType>
+				<BonusType>BONUS_BAUXITE_ORE</BonusType>
 			</PrereqBonuses>
 			<HeadquarterCommerces>
 				<iHeadquarterCommerce>4</iHeadquarterCommerce>
@@ -164,11 +164,11 @@
 			<iTGAIndex>4</iTGAIndex>
 			<PrereqBonuses>
 				<BonusType>BONUS_COAL</BonusType>
-				<BonusType>BONUS_IRON</BonusType>
-				<BonusType>BONUS_COPPER</BonusType>
-				<BonusType>BONUS_GOLD</BonusType>
-				<BonusType>BONUS_SILVER</BonusType>
-				<BonusType>BONUS_LEAD</BonusType>
+				<BonusType>BONUS_IRON_ORE</BonusType>
+				<BonusType>BONUS_COPPER_ORE</BonusType>
+				<BonusType>BONUS_GOLD_ORE</BonusType>
+				<BonusType>BONUS_SILVER_ORE</BonusType>
+				<BonusType>BONUS_LEAD_ORE</BonusType>
 			</PrereqBonuses>
 			<HeadquarterCommerces>
 				<iHeadquarterCommerce>4</iHeadquarterCommerce>
@@ -204,14 +204,14 @@
 			<iTGAIndex>5</iTGAIndex>
 			<PrereqBonuses>
 				<BonusType>BONUS_COAL</BonusType>
-				<BonusType>BONUS_BAUXITE</BonusType>
+				<BonusType>BONUS_BAUXITE_ORE</BonusType>
 			</PrereqBonuses>
 			<HeadquarterCommerces>
 				<iHeadquarterCommerce>4</iHeadquarterCommerce>
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 			</HeadquarterCommerces>
-			<BonusProduced>BONUS_ALUMINUM</BonusProduced>
+			<BonusProduced>BONUS_ALUMINUM_INGOTS</BonusProduced>
 			<CommercesProduced>
 				<iCommerceProduced>0</iCommerceProduced>
 				<iCommerceProduced>300</iCommerceProduced>
@@ -238,8 +238,8 @@
 			<iMaintenance>100</iMaintenance>
 			<iTGAIndex>6</iTGAIndex>
 			<PrereqBonuses>
-				<BonusType>BONUS_GOLD</BonusType>
-				<BonusType>BONUS_SILVER</BonusType>
+				<BonusType>BONUS_GOLD_ORE</BonusType>
+				<BonusType>BONUS_SILVER_ORE</BonusType>
 				<BonusType>BONUS_GEMS</BonusType>
 				<BonusType>BONUS_PEARLS</BonusType>
 			</PrereqBonuses>
@@ -276,7 +276,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_COTTON</BonusType>
 				<BonusType>BONUS_DYE</BonusType>
-				<BonusType>BONUS_FUR</BonusType>
+				<BonusType>BONUS_BEAVERS</BonusType>
 				<BonusType>BONUS_SHEEP</BonusType>
 				<BonusType>BONUS_SILK</BonusType>
 			</PrereqBonuses>
@@ -343,7 +343,7 @@
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 			</HeadquarterCommerces>
-			<BonusProduced>BONUS_CANNABIS</BonusProduced>
+			<BonusProduced>BONUS_HEMP</BonusProduced>
 			<CommercesProduced>
 				<iCommerceProduced>0</iCommerceProduced>
 				<iCommerceProduced>0</iCommerceProduced>
@@ -397,7 +397,7 @@
 				<BonusType>BONUS_PIG</BonusType>
 				<BonusType>BONUS_COW</BonusType>
 				<BonusType>BONUS_SALT</BonusType>
-				<BonusType>BONUS_POTATO</BonusType>
+				<BonusType>BONUS_POTATOES</BonusType>
 				<BonusType>BONUS_WHEAT</BonusType>
 			</PrereqBonuses>
 			<HeadquarterCommerces>
@@ -452,11 +452,11 @@
 			<iMaintenance>100</iMaintenance>
 			<iTGAIndex>10</iTGAIndex>
 			<PrereqBonuses>
-				<BonusType>BONUS_ELEPHANT</BonusType>
+				<BonusType>BONUS_ELEPHANTS</BonusType>
 				<BonusType>BONUS_WHALE</BonusType>
 				<BonusType>BONUS_CLAM</BonusType>
 				<BonusType>BONUS_HORSE</BonusType>
-				<BonusType>BONUS_ANCIENTTEMPLE</BonusType>
+				<BonusType>BONUS_ANCIENT_RELICS</BonusType>
 			</PrereqBonuses>
 			<HeadquarterCommerces>
 				<iHeadquarterCommerce>4</iHeadquarterCommerce>
@@ -533,9 +533,9 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_APPLE</BonusType>
 				<BonusType>BONUS_BANANA</BonusType>
-				<BonusType>BONUS_LEMON</BonusType>
+				<BonusType>BONUS_LEMONS</BonusType>
 				<BonusType>BONUS_OLIVES</BonusType>
-				<BonusType>BONUS_POTATO</BonusType>
+				<BonusType>BONUS_POTATOES</BonusType>
 			</PrereqBonuses>
 			<HeadquarterCommerces>
 				<iHeadquarterCommerce>4</iHeadquarterCommerce>
@@ -571,7 +571,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_SILK</BonusType>
 				<BonusType>BONUS_DYE</BonusType>
-				<BonusType>BONUS_FUR</BonusType>
+				<BonusType>BONUS_BEAVERS</BonusType>
 				<BonusType>BONUS_COW</BonusType>
 				<BonusType>BONUS_COTTON</BonusType>
 			</PrereqBonuses>
@@ -605,9 +605,9 @@
 			<iMaintenance>50</iMaintenance>
 			<iTGAIndex>14</iTGAIndex>
 			<PrereqBonuses>
-				<BonusType>BONUS_MOVIES</BonusType>
-				<BonusType>BONUS_MUSIC</BonusType>
-				<BonusType>BONUS_DRAMA</BonusType>
+				<BonusType>BONUS_HIT_MOVIES</BonusType>
+				<BonusType>BONUS_HIT_SINGLES</BonusType>
+				<BonusType>BONUS_HIT_MUSICALS</BonusType>
 			</PrereqBonuses>
 			<HeadquarterCommerces>
 				<iHeadquarterCommerce>4</iHeadquarterCommerce>
@@ -666,7 +666,7 @@
 				<BonusType>BONUS_PIG</BonusType>
 				<BonusType>BONUS_COW</BonusType>
 				<BonusType>BONUS_COFFEE</BonusType>
-				<BonusType>BONUS_POTATO</BonusType>
+				<BonusType>BONUS_POTATOES</BonusType>
 				<BonusType>BONUS_WHEAT</BonusType>
 			</PrereqBonuses>
 			<HeadquarterCommerces>
@@ -821,9 +821,9 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_APPLE</BonusType>
 				<BonusType>BONUS_BANANA</BonusType>
-				<BonusType>BONUS_LEMON</BonusType>
+				<BonusType>BONUS_LEMONS</BonusType>
 				<BonusType>BONUS_OLIVES</BonusType>
-				<BonusType>BONUS_POTATO</BonusType>
+				<BonusType>BONUS_POTATOES</BonusType>
 			</PrereqBonuses>
 			<HeadquarterCommerces>
 				<iHeadquarterCommerce>4</iHeadquarterCommerce>
@@ -856,11 +856,11 @@
 			<iMaintenance>100</iMaintenance>
 			<iTGAIndex>19</iTGAIndex>
 			<PrereqBonuses>
-				<BonusType>BONUS_ELEPHANT</BonusType>
+				<BonusType>BONUS_ELEPHANTS</BonusType>
 				<BonusType>BONUS_WHALE</BonusType>
 				<BonusType>BONUS_CLAM</BonusType>
 				<BonusType>BONUS_HORSE</BonusType>
-				<BonusType>BONUS_ANCIENTTEMPLE</BonusType>
+				<BonusType>BONUS_ANCIENT_RELICS</BonusType>
 			</PrereqBonuses>
 			<HeadquarterCommerces>
 				<iHeadquarterCommerce>4</iHeadquarterCommerce>
@@ -918,10 +918,10 @@
 			<iMaintenance>100</iMaintenance>
 			<iTGAIndex>20</iTGAIndex>
 			<PrereqBonuses>
-				<BonusType>BONUS_ELEPHANT</BonusType>
+				<BonusType>BONUS_ELEPHANTS</BonusType>
 				<BonusType>BONUS_WHALE</BonusType>
 				<BonusType>BONUS_DEER</BonusType>
-				<BonusType>BONUS_FUR</BonusType>
+				<BonusType>BONUS_BEAVERS</BonusType>
 			</PrereqBonuses>
 			<HeadquarterCommerces>
 				<iHeadquarterCommerce>4</iHeadquarterCommerce>
@@ -979,9 +979,9 @@
 			<iMaintenance>100</iMaintenance>
 			<iTGAIndex>21</iTGAIndex>
 			<PrereqBonuses>
-				<BonusType>BONUS_MOVIES</BonusType>
-				<BonusType>BONUS_MUSIC</BonusType>
-				<BonusType>BONUS_DRAMA</BonusType>
+				<BonusType>BONUS_HIT_MOVIES</BonusType>
+				<BonusType>BONUS_HIT_SINGLES</BonusType>
+				<BonusType>BONUS_HIT_MUSICALS</BonusType>
 			</PrereqBonuses>
 			<HeadquarterCommerces>
 				<iHeadquarterCommerce>4</iHeadquarterCommerce>
@@ -1039,8 +1039,8 @@
 			<iMaintenance>100</iMaintenance>
 			<iTGAIndex>22</iTGAIndex>
 			<PrereqBonuses>
-				<BonusType>BONUS_AMMO</BonusType>
-				<BonusType>BONUS_STEEL</BonusType>
+				<BonusType>BONUS_AMMUNITION</BonusType>
+				<BonusType>BONUS_STEEL_INGOTS</BonusType>
 				<BonusType>BONUS_SULPHUR</BonusType>
 				<BonusType>BONUS_RUBBER</BonusType>
 			</PrereqBonuses>

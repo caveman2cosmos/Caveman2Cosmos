@@ -245,8 +245,8 @@
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<BonusType>BONUS_COAL</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
-				<BonusType>BONUS_WARE_STEEL</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
+				<BonusType>BONUS_STEEL_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>885</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
@@ -346,8 +346,8 @@
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<BonusType>BONUS_COAL</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_STEEL</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_STEEL_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>555</iCost>
 			<iMoves>4</iMoves>
@@ -452,8 +452,8 @@
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<BonusType>BONUS_COAL</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_STEEL</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_STEEL_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>720</iCost>
 			<iMoves>1</iMoves>
@@ -533,11 +533,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PAVED</BuildType>
+					<BuildType>BUILD_PAVED_ROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERN_ROAD</BuildType>
+					<BuildType>BUILD_HIGHWAY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -545,11 +545,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_RAILROAD_ELECTRIC</BuildType>
+					<BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GRAVTUBE</BuildType>
+					<BuildType>BUILD_MAGLEV</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -581,7 +581,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GEOTHERMAL_BOREHOLE</BuildType>
+					<BuildType>BUILD_GEOTHERMAL_FACTORY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -589,11 +589,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_3FACTORY</BuildType>
+					<BuildType>BUILD_FACTORY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_LUMBER_JACK</BuildType>
+					<BuildType>BUILD_LUMBERJACK</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -613,7 +613,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_HYDRO_PLANT</BuildType>
+					<BuildType>BUILD_HYDRO_DAM</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -637,7 +637,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_CAMP</BuildType>
+					<BuildType>BUILD_HUNTING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -645,7 +645,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SAFARI</BuildType>
+					<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -653,11 +653,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TAR_GATHERER2</BuildType>
+					<BuildType>BUILD_TAR_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WELL</BuildType>
+					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -669,7 +669,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERNWINDMILL</BuildType>
+					<BuildType>BUILD_MODERN_WINDMILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -689,7 +689,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SUBURB</BuildType>
+					<BuildType>BUILD_SUBURBS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -717,11 +717,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
+					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_EXPLORETEMPLE</BuildType>
+					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -737,11 +737,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FUTURE_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_CENTER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -749,11 +749,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_SWAMP</BuildType>
+					<BuildType>BUILD_DRAIN_SWAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORM</BuildType>
+					<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -761,15 +761,15 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MAKE_JUNGLE</BuildType>
+					<BuildType>BUILD_PLANT_JUNGLE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_FOREST</BuildType>
+					<BuildType>BUILD_YOUNG_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
+					<BuildType>BUILD_PLANT_BAMBOO_GROVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -820,10 +820,10 @@
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<BonusType>BONUS_STEAMPUNK</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
-				<BonusType>BONUS_WARE_STEEL</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
+				<BonusType>BONUS_STEEL_WARES</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>
@@ -844,19 +844,19 @@
 			<iWorkRate>400</iWorkRate>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_STEEL</BonusType>
+					<BonusType>BONUS_STEEL_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>

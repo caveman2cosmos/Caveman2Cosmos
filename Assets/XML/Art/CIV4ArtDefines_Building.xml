@@ -17350,16 +17350,6 @@
 			<Button>art/Electricity/art/windhighway.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CULTURE_NATIVE</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF/>
-			<KFM/>
-			<Button>art/Embassy/art/culturehuman.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CULTURE_AFRICAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
@@ -17370,7 +17360,7 @@
 			<Button>art/Embassy/art/cultureafrican.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CULTURE_NAMERICAN</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_NORTH_AMERICAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -17380,7 +17370,7 @@
 			<Button>art/Embassy/art/culturenamerican.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CULTURE_SAMERICAN</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_SOUTH_AMERICAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -17420,87 +17410,7 @@
 			<Button>art/Embassy/art/cultureeuropean.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CULTURE_MIDDLEEASTERN</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF/>
-			<KFM/>
-			<Button>art/Embassy/art/culturemiddleeastern.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CULTURE_BARBARIAN</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF/>
-			<KFM/>
-			<Button>,Art/Interface/Buttons/Civilizations/Barbarian.dds,Art/Interface/Buttons/Civics_Civilizations_Religions_Atlas.dds,4,5</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GOOD_AFRICAN</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF/>
-			<KFM/>
-			<Button>art/Embassy/art/cultureafrican.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GOOD_NAMERICAN</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF/>
-			<KFM/>
-			<Button>art/Embassy/art/culturenamerican.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GOOD_SAMERICAN</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF/>
-			<KFM/>
-			<Button>art/Embassy/art/culturesamerican.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GOOD_ASIAN</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF/>
-			<KFM/>
-			<Button>art/Embassy/art/cultureasian.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GOOD_OCEANIAN</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF/>
-			<KFM/>
-			<Button>art/Embassy/art/cultureoceanian.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GOOD_EUROPEAN</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF/>
-			<KFM/>
-			<Button>art/Embassy/art/cultureeuropean.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GOOD_MIDDLEEASTERN</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_MIDDLE_EASTERN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27880,7 +27790,6 @@
 			<NIF/>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/totem_fish.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_totem_fish.dds</Button-->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WEASEL_MYTH</Type>

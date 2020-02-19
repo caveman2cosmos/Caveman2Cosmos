@@ -10,19 +10,13 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_BEARRIDER</Type>
 			<Description>TXT_KEY_UNIT_BEAR_RIDER</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BEARRIDER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_BEARKNIGHT</Type>
 			<Description>TXT_KEY_UNIT_BEAR_KNIGHT</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BEARKNIGHT</DefaultUnit>
 		</UnitClassInfo>
 	</UnitClassInfos>

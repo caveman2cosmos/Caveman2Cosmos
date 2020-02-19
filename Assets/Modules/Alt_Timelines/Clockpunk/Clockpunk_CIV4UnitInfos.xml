@@ -64,8 +64,8 @@
 			<PrereqTech>TECH_CLOCKPUNK</PrereqTech>
 			<BonusType>BONUS_CLOCKPUNK</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>350</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -260,7 +260,7 @@
 			<PrereqTech>TECH_CLOCKPUNK</PrereqTech>
 			<BonusType>BONUS_CLOCKPUNK</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_TIMBER</BonusType>
+				<BonusType>BONUS_PRIME_TIMBER</BonusType>
 			</PrereqBonuses>
 			<iCost>380</iCost>
 			<iMoves>1</iMoves>
@@ -454,7 +454,7 @@
 			</TechTypes>
 			<BonusType>BONUS_CLOCKPUNK</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>

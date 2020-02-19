@@ -9,8 +9,6 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_NOMAD_CAMP</Type>
 			<Description>TXT_KEY_UNIT_NOMAD_CAMP</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_NOMAD_CAMP</DefaultUnit>
 		</UnitClassInfo>

@@ -2519,7 +2519,7 @@
 				<BuildingType>BUILDING_MODERN_STABLE</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<BonusType>BONUS_ELEPHANT</BonusType>
+			<BonusType>BONUS_ELEPHANTS</BonusType>
 			<iCost>140</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>

@@ -362,7 +362,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MITHRIL_FOUNDRY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MITHRIL_FOUNDRY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_ELECTROWEAK_MATTER</PrereqTech>
+			<PrereqTech>TECH_FANTASY_MATERIALS</PrereqTech>
 			<iCost>28868</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -433,20 +433,6 @@
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
-			<PrereqOrTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_LUNAR_PLAINS</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_LUNAR_BARREN</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_LUNAR_DESERT</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-			</PrereqOrTerrain>
 			<FreeBonus>BONUS_MOON_ROCKS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>-1</iCost>
@@ -611,7 +597,7 @@
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
-			<FreeBonus>BONUS_GLASS</FreeBonus>
+			<FreeBonus>BONUS_GLASSWARE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>160</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -644,7 +630,7 @@
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
-			<Bonus>BONUS_GLASS</Bonus>
+			<Bonus>BONUS_GLASSWARE</Bonus>
 			<iCost>160</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
@@ -681,7 +667,7 @@
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
-			<Bonus>BONUS_GLASS</Bonus>
+			<Bonus>BONUS_GLASSWARE</Bonus>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -733,8 +719,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
-			<Bonus>BONUS_GLASS</Bonus>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
+			<Bonus>BONUS_GLASSWARE</Bonus>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -839,8 +825,8 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<Bonus>BONUS_CEMENT</Bonus>
-			<VicinityBonus>BONUS_BAUXITE</VicinityBonus>
-			<FreeBonus>BONUS_WARE_ALUMINUM</FreeBonus>
+			<VicinityBonus>BONUS_BAUXITE_ORE</VicinityBonus>
+			<FreeBonus>BONUS_ALUMINUM_WARES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>225</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -898,8 +884,8 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_ALGAE</Bonus>
 			</PrereqBonuses>
-			<VicinityBonus>BONUS_IRON</VicinityBonus>
-			<FreeBonus>BONUS_WARE_STEEL</FreeBonus>
+			<VicinityBonus>BONUS_IRON_ORE</VicinityBonus>
+			<FreeBonus>BONUS_STEEL_WARES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>225</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -954,8 +940,8 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<Bonus>BONUS_CEMENT</Bonus>
-			<VicinityBonus>BONUS_TITANIUM</VicinityBonus>
-			<FreeBonus>BONUS_WARE_TITANIUM</FreeBonus>
+			<VicinityBonus>BONUS_TITANIUM_ORE</VicinityBonus>
+			<FreeBonus>BONUS_TITANIUM_WARES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>225</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -1065,7 +1051,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<Bonus>BONUS_CEMENT</Bonus>
-			<FreeBonus>BONUS_MAGNESIUM</FreeBonus>
+			<FreeBonus>BONUS_MAGNESIUM_ORE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>225</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -1118,7 +1104,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<Bonus>BONUS_CHEMICALS</Bonus>
 			<ConstructCondition>
 				<And>
@@ -1140,7 +1126,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WATERBOTTLE</FreeBonus>
+					<FreeBonus>BONUS_WATER_BOTTLES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -1195,7 +1181,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<Bonus>BONUS_CHEMICALS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_CEMENT</Bonus>
@@ -1211,7 +1197,7 @@
 			</CommerceChanges>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_WARE_STEEL</BonusType>
+					<BonusType>BONUS_STEEL_WARES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>5</iCommerce>
@@ -1225,14 +1211,14 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_WARE_ALUMINUM</BonusType>
+					<BonusType>BONUS_ALUMINUM_WARES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>5</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_WARE_TITANIUM</BonusType>
+					<BonusType>BONUS_TITANIUM_WARES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>5</iCommerce>
@@ -1246,7 +1232,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_MAGNESIUM</BonusType>
+					<BonusType>BONUS_MAGNESIUM_ORE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>5</iCommerce>
@@ -1267,7 +1253,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_ROCKETFUEL</BonusType>
+					<BonusType>BONUS_ROCKET_FUEL</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>5</iCommerce>
@@ -1315,8 +1301,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
-			<Bonus>BONUS_GLASS</Bonus>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
+			<Bonus>BONUS_GLASSWARE</Bonus>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -1326,9 +1312,9 @@
 				</And>
 			</ConstructCondition>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_STEEL</Bonus>
-				<Bonus>BONUS_WARE_TITANIUM</Bonus>
-				<Bonus>BONUS_WARE_ALUMINUM</Bonus>
+				<Bonus>BONUS_STEEL_WARES</Bonus>
+				<Bonus>BONUS_TITANIUM_WARES</Bonus>
+				<Bonus>BONUS_ALUMINUM_WARES</Bonus>
 			</PrereqBonuses>
 			<iCost>1950</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -1366,7 +1352,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<Bonus>BONUS_SYNTHETIC_RUBBER</Bonus>
 			<ConstructCondition>
 				<And>
@@ -1381,9 +1367,9 @@
 				</And>
 			</ConstructCondition>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_STEEL</Bonus>
-				<Bonus>BONUS_WARE_TITANIUM</Bonus>
-				<Bonus>BONUS_WARE_ALUMINUM</Bonus>
+				<Bonus>BONUS_STEEL_WARES</Bonus>
+				<Bonus>BONUS_TITANIUM_WARES</Bonus>
+				<Bonus>BONUS_ALUMINUM_WARES</Bonus>
 			</PrereqBonuses>
 			<FreeBonus>BONUS_PARTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -1401,21 +1387,21 @@
 			</CommerceChanges>
 			<BonusYieldChanges>
 				<BonusYieldChange>
-					<BonusType>BONUS_WARE_ALUMINUM</BonusType>
+					<BonusType>BONUS_ALUMINUM_WARES</BonusType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>5</iYield>
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_WARE_TITANIUM</BonusType>
+					<BonusType>BONUS_TITANIUM_WARES</BonusType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>5</iYield>
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_WARE_STEEL</BonusType>
+					<BonusType>BONUS_STEEL_WARES</BonusType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>5</iYield>
@@ -1471,14 +1457,14 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_ROCKETFUEL</ID>
+						<ID>BONUS_ROCKET_FUEL</ID>
 					</Has>
 				</And>
 			</ConstructCondition>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_STEEL</Bonus>
-				<Bonus>BONUS_WARE_TITANIUM</Bonus>
-				<Bonus>BONUS_WARE_ALUMINUM</Bonus>
+				<Bonus>BONUS_STEEL_WARES</Bonus>
+				<Bonus>BONUS_TITANIUM_WARES</Bonus>
+				<Bonus>BONUS_ALUMINUM_WARES</Bonus>
 			</PrereqBonuses>
 			<iCost>1300</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -1556,7 +1542,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<Bonus>BONUS_PARTS</Bonus>
 			<ConstructCondition>
 				<And>
@@ -1617,12 +1603,12 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_PARTS</Bonus>
 			</PrereqBonuses>
-			<FreeBonus>BONUS_SEMICONDUCTORS</FreeBonus>
+			<FreeBonus>BONUS_MICROCHIPS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>1300</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -1677,18 +1663,18 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PLASTIC_ELECTRONICS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+				<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			</TechTypes>
-			<Bonus>BONUS_SEMICONDUCTORS</Bonus>
+			<Bonus>BONUS_MICROCHIPS</Bonus>
 			<ConstructCondition>
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_GLASS</ID>
+						<ID>BONUS_GLASSWARE</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_ROCKETFUEL</ID>
+						<ID>BONUS_ROCKET_FUEL</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -1771,9 +1757,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PLASTIC_ELECTRONICS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+				<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			</TechTypes>
-			<Bonus>BONUS_SEMICONDUCTORS</Bonus>
+			<Bonus>BONUS_MICROCHIPS</Bonus>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -1836,10 +1822,10 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<Bonus>BONUS_PLASTIC</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_SEMICONDUCTORS</Bonus>
+				<Bonus>BONUS_MICROCHIPS</Bonus>
 			</PrereqBonuses>
 			<FreeBuilding>BUILDINGCLASS_LUNAR_SOLAR_PANELS</FreeBuilding>
 			<bPower>1</bPower>
@@ -1877,7 +1863,7 @@
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-			<Bonus>BONUS_GLASS</Bonus>
+			<Bonus>BONUS_GLASSWARE</Bonus>
 			<iCost>2500</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
@@ -1934,8 +1920,8 @@
 				<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
 			</TechTypes>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_TITANIUM</Bonus>
-				<Bonus>BONUS_WARE_STEEL</Bonus>
+				<Bonus>BONUS_TITANIUM_WARES</Bonus>
+				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<iCost>2500</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -1979,8 +1965,8 @@
 				<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
 			</TechTypes>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_TITANIUM</Bonus>
-				<Bonus>BONUS_WARE_STEEL</Bonus>
+				<Bonus>BONUS_TITANIUM_WARES</Bonus>
+				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<iCost>2000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -2021,22 +2007,22 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
-			<Bonus>BONUS_GLASS</Bonus>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
+			<Bonus>BONUS_GLASSWARE</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_CEMENT</Bonus>
 			</PrereqBonuses>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_LUNAR_CRATER1</FeatureType>
+					<FeatureType>FEATURE_CRATER_MEDIUM</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_LUNAR_CRATER2</FeatureType>
+					<FeatureType>FEATURE_CRATER_LARGE</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_LUNAR_CRATER3</FeatureType>
+					<FeatureType>FEATURE_CRATER_SMALL</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -2198,9 +2184,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<Bonus>BONUS_CEMENT</Bonus>
-			<FreeBonus>BONUS_BUG</FreeBonus>
+			<FreeBonus>BONUS_BUGS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>800</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -2239,13 +2225,13 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<ConstructCondition>
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_GLASS</ID>
+						<ID>BONUS_GLASSWARE</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -2253,7 +2239,7 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<FreeBonus>BONUS_RAWFISH</FreeBonus>
+			<FreeBonus>BONUS_RAW_FISH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>800</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -2293,9 +2279,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<Bonus>BONUS_CEMENT</Bonus>
-			<FreeBonus>BONUS_ROCKETFUEL</FreeBonus>
+			<FreeBonus>BONUS_ROCKET_FUEL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>

@@ -29,11 +29,11 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_ANDEAN</ReligionType>
+					<ReligionType>RELIGION_ANDEANISM</ReligionType>
 					<iReligionSpread>80</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
-			<PrereqReligion>RELIGION_ANDEAN</PrereqReligion>
+			<PrereqReligion>RELIGION_ANDEANISM</PrereqReligion>
 			<PrereqBuilding>BUILDING_ANDEAN_MONASTERY</PrereqBuilding>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -59,7 +59,7 @@
 			</Buildings>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_ANDEAN</ReligionType>
+					<ReligionType>RELIGION_ANDEANISM</ReligionType>
 					<iReligionSpread>100</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>

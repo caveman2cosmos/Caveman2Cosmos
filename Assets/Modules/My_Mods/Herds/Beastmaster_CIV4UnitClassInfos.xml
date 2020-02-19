@@ -7,28 +7,19 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_TAMED_HORSE_PAIR</Type>
 			<Description>TXT_KEY_UNIT_TAMED_HORSE_PAIR</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TAMED_HORSE_PAIR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TAMED_DONKEY_PAIR</Type>
 			<Description>TXT_KEY_UNIT_TAMED_DONKEY_PAIR</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TAMED_DONKEY_PAIR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TAMED_WOLF_PAIR</Type>
 			<Description>TXT_KEY_UNIT_TAMED_WOLF_PAIR</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_TAMED_WOLF_PAIR</DefaultUnit>
 		</UnitClassInfo>
 	</UnitClassInfos>

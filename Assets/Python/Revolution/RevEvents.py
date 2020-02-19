@@ -77,7 +77,6 @@ def init(newCustomEM, RevOptHandle):
 
 	# Register events
 	customEM.addEventHandler( 'EndGameTurn', onEndGameTurn )
-	customEM.addEventHandler( 'BeginPlayerTurn', onBeginPlayerTurn )
 	customEM.addEventHandler( 'EndPlayerTurn', onEndPlayerTurn )
 	customEM.addEventHandler( "setPlayerAlive", onSetPlayerAlive )
 	customEM.addEventHandler( "changeWar", onChangeWar )
@@ -97,7 +96,6 @@ def removeEventHandlers():
 	print "Removing event handlers from RevEvents"
 
 	customEM.removeEventHandler( 'EndGameTurn', onEndGameTurn )
-	customEM.removeEventHandler( 'BeginPlayerTurn', onBeginPlayerTurn )
 	customEM.removeEventHandler( 'EndPlayerTurn', onEndPlayerTurn )
 	customEM.removeEventHandler( "setPlayerAlive", onSetPlayerAlive )
 	customEM.removeEventHandler( "changeWar", onChangeWar )
@@ -116,7 +114,7 @@ def blankHandler(playerID, netUserData, popupReturn): return
 
 ########################## Turn-based events ###############################
 
-def onEndGameTurn(argsList) :
+def onEndGameTurn(argsList):
 
 	## Fix to stop modulo by zero DH 5th July 2012 ##
 	if GAME.getGameTurn()%int(max(1,RevUtils.getGameSpeedMod())*10) == 0:
@@ -149,46 +147,39 @@ def onEndGameTurn(argsList) :
 						teamString += "%d, "%(j)
 				CvUtil.pyPrint("Rev - %s (%d) is a rebel against teams %s"%(playerI.getCivilizationDescription(0),i,teamString))
 
-def onBeginPlayerTurn( argsList ) :
-	iGameTurn, iPlayer = argsList
-
-	#if( iPlayer == GAME.getActivePlayer() ) :
-	#	CvUtil.pyPrint("Rev - Recording civics for active player")
-	iNextPlayer = iPlayer + 1
-	while( iNextPlayer <= GC.getMAX_CIV_PLAYERS() and not GC.getPlayer(iNextPlayer).isAlive() ) :
-		iNextPlayer += 1
-
-	if( iNextPlayer > GC.getMAX_CIV_PLAYERS() ) :
-		iNextPlayer = 0
-		while( iNextPlayer < iPlayer and not GC.getPlayer(iNextPlayer).isAlive() ) :
-			iNextPlayer += 1
-
 
 def onEndPlayerTurn(argsList):
-
 	iGameTurn, iPlayer = argsList
 
-	iNextPlayer = iPlayer + 1
-	while iNextPlayer <= GC.getMAX_CIV_PLAYERS():
-		if not GC.getPlayer(iNextPlayer).isAlive():
-			iNextPlayer += 1
-		else: break
+	iMax = GC.getMAX_PC_PLAYERS()
+	iBarb = GC.getBARBARIAN_PLAYER()
+	if iPlayer >= iMax:
+		if iPlayer == iBarb:
+			iNextPlayer = 0
+		else:
+			iNextPlayer = iPlayer
+	elif iPlayer + 1 == iMax:
+		iNextPlayer = iBarb
+	else:
+		iNextPlayer = iPlayer + 1
 
-	if iNextPlayer > GC.getMAX_CIV_PLAYERS():
-		iGameTurn += 1
-		iNextPlayer = 0
-		while iNextPlayer < iPlayer:
-			if not GC.getPlayer(iNextPlayer).isAlive():
-				iNextPlayer += 1
-			else: break
+	while iNextPlayer != iPlayer:
+		CyPlayer = GC.getPlayer(iNextPlayer)
+		if CyPlayer.isAlive():
+			recordCivics(CyPlayer)
+			if bSmallRevolts:
+				doSmallRevolts(iNextPlayer, CyPlayer)
+			break
+		iNextPlayer += 1
+		if iNextPlayer == iMax:
+			# iPlayer 40-44 does not exist in C2C currently
+			# Therefore we check the last NPC, rather than the first, next.
+			# If there is only one player vs NPC's, then there should still be 1 rev check per game turn.
+			iNextPlayer = iBarb
+		elif iNextPlayer > iMax:
+			iGameTurn += 1
+			iNextPlayer = 0
 
-	# Stuff before next players turn
-	#CvUtil.pyPrint("Rev - Recording civics for player %d"%(iNextPlayer))
-	recordCivics(iNextPlayer)
-
-	CyPlayer = GC.getPlayer(iNextPlayer)
-	if bSmallRevolts and CyPlayer.isAlive():
-		doSmallRevolts(iNextPlayer, CyPlayer)
 
 ########################## Diplomatic events ###############################
 
@@ -484,7 +475,7 @@ def checkRebelBonuses(argsList):
 			ix = pCity.getX()
 			iy = pCity.getY()
 
-			[iWorker, iBestDefender, iCounter, iAttack] = RevUtils.getHandoverUnitTypes(pCity, newOwner, newOwner)
+			[iWorker, iBestDefender, iCounter, iAttack] = RevUtils.getHandoverUnitTypes(pCity)
 
 			newUnitList = []
 
@@ -794,18 +785,12 @@ def onReligionFounded(argsList):
 
 
 
-def recordCivics( iPlayer ) :
-
-	pPlayer = GC.getPlayer( iPlayer )
-
-	if( not pPlayer.isAlive() or pPlayer.isNPC() ) :
-		return
-
-	curCivics = list()
+def recordCivics(CyPlayer):
+	curCivics = []
 	for i in xrange(0,GC.getNumCivicOptionInfos()):
-		curCivics.append( pPlayer.getCivics(i) )
+		curCivics.append(CyPlayer.getCivics(i))
 
-	RevData.revObjectSetVal( pPlayer, "CivicList", curCivics )
+	RevData.revObjectSetVal(CyPlayer, "CivicList", curCivics)
 
 
 def updateAttitudeExtras( bVerbose = False ) :

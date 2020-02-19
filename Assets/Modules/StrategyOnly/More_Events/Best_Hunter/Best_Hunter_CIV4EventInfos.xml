@@ -54,7 +54,7 @@
 			<WorldNewsTexts>
 				<Text>TXT_KEY_NEWS_EVENT_BEST_HUNTERS_3</Text>
 			</WorldNewsTexts>
-			<PrereqTech>TECH_FINE_EDGED_TOOLS</PrereqTech>
+			<PrereqTech>TECH_SHARPENING</PrereqTech>
 			<UnitClassPromotions>
 				<UnitClassPromotion>
 					<UnitClass>UNITCLASS_CHASER</UnitClass>

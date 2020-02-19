@@ -29,8 +29,8 @@ def init():
 									GC.getInfoTypeForString("UNITCOMBAT_WORKER"),
 									GC.getInfoTypeForString("UNITCOMBAT_SEA_WORKER")]
 
-	giMilInstCivic = GC.getInfoTypeForString("CIVIC_MILITARY_TRADITION")
-	giVolArmyCivic = GC.getInfoTypeForString("CIVIC_VOLUNTEER_ARMY")
+	giMilInstCivic = GC.getInfoTypeForString("CIVIC_MARTIAL")
+	giVolArmyCivic = GC.getInfoTypeForString("CIVIC_VOLUNTARY")
 
 def onUnitBuilt( argsList):
 	'Unit Completed'
@@ -49,8 +49,7 @@ def onUnitBuilt( argsList):
 	if pPlayer.isCivic(giVolArmyCivic):
 		iMilitaryCivic = iMilitaryCivic + 1
 	if iMilitaryCivic > 0:
-		#~ if not (unit.getUnitType() in gaiSettlerWorkerList) and isWorldUnitClass(unit.getUnitClassType()) == False:
-		if not (unit.getUnitCombatType() in gaiSettlerWorkerCombatList) and isWorldUnitClass(unit.getUnitClassType()) == False:
+		if not (unit.getUnitCombatType() in gaiSettlerWorkerCombatList) and isWorldUnitClass(unit.getUnitType()) == False:
 			iX = city.getX()
 			iY = city.getY()
 
