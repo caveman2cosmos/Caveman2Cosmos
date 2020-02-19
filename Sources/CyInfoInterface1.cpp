@@ -325,6 +325,7 @@ void CyInfoPythonInterface1()
 
 		.def("getMaxGlobalInstances", &CvUnitInfo::getMaxGlobalInstances, "int ()")
 		.def("getMaxPlayerInstances", &CvUnitInfo::getMaxPlayerInstances, "int ()")
+		.def("isUnlimitedException", &CvUnitInfo::isUnlimitedException, "bool ()")
 		.def("getAIWeight", &CvUnitInfo::getAIWeight, "int ()")
 		.def("getProductionCost", &CvUnitInfo::getProductionCost, "int ()")
 		.def("getHurryCostModifier", &CvUnitInfo::getHurryCostModifier, "int ()")
@@ -727,7 +728,6 @@ void CyInfoPythonInterface1()
 		;
 
 	python::class_<CvUnitClassInfo, python::bases<CvInfoBase> >("CvUnitClassInfo")
-		.def("getUnlimitedException", &CvUnitClassInfo::isUnlimitedException, "bool ()")
 		.def("getInstanceCostModifier", &CvUnitClassInfo::getInstanceCostModifier, "int ()")
 		.def("getDefaultUnitIndex", &CvUnitClassInfo::getDefaultUnitIndex, "int ()")
 		;

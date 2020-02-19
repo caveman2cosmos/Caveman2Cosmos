@@ -5,6 +5,7 @@
 			<Class>UNITCLASS_RA_FIST</Class>
 			<Type>UNIT_RA_FIST</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -119,6 +120,7 @@
 			<Class>UNITCLASS_RA_KNIGHT</Class>
 			<Type>UNIT_RA_KNIGHT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>

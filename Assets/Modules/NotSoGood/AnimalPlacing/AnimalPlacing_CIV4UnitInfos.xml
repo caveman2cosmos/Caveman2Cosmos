@@ -5,6 +5,7 @@
 			<Class>UNITCLASS_GREAT_FARMER</Class>
 			<Type>UNIT_GREAT_FARMER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Combat>UNITCOMBAT_PRODIGY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORKER</SubCombatType>

@@ -1179,7 +1179,6 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_007</Type>
 			<Description>TXT_KEY_UNIT_007</Description>
-			<bUnlimitedException>1</bUnlimitedException>
 			<DefaultUnit>UNIT_007</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -1330,7 +1329,6 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_BAND</Type>
 			<Description>TXT_KEY_UNIT_BAND</Description>
-			<bUnlimitedException>1</bUnlimitedException>
 			<DefaultUnit>UNIT_BAND</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -1346,7 +1344,6 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_TRIBE</Type>
 			<Description>TXT_KEY_UNIT_TRIBE</Description>
-			<bUnlimitedException>1</bUnlimitedException>
 			<DefaultUnit>UNIT_TRIBE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -2740,25 +2737,21 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_EARLY_IMP_GUARD</Type>
 			<Description>TXT_KEY_UNIT_EARLY_IMP_GUARD</Description>
-			<bUnlimitedException>1</bUnlimitedException>
 			<DefaultUnit>UNIT_EARLY_IMP_GUARD</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_REN_IMP_GUARD</Type>
 			<Description>TXT_KEY_UNIT_REN_IMP_GUARD</Description>
-			<bUnlimitedException>1</bUnlimitedException>
 			<DefaultUnit>UNIT_REN_IMP_GUARD</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MODERN_IMP_GUARD</Type>
 			<Description>TXT_KEY_UNIT_MODERN_IMP_GUARD</Description>
-			<bUnlimitedException>1</bUnlimitedException>
 			<DefaultUnit>UNIT_MODERN_IMP_GUARD</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_ROBOT_IMP_GUARD</Type>
 			<Description>TXT_KEY_UNIT_ROBOT_IMP_GUARD</Description>
-			<bUnlimitedException>1</bUnlimitedException>
 			<DefaultUnit>UNIT_ROBOT_IMP_GUARD</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -2819,25 +2812,21 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_NOBLE</Type>
 			<Description>TXT_KEY_UNIT_NOBLE</Description>
-			<bUnlimitedException>1</bUnlimitedException>
 			<DefaultUnit>UNIT_NOBLE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_LORD</Type>
 			<Description>TXT_KEY_UNIT_LORD</Description>
-			<bUnlimitedException>1</bUnlimitedException>
 			<DefaultUnit>UNIT_LORD</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_WARLORD_VASSAL</Type>
 			<Description>TXT_KEY_UNIT_WARLORD_VASSAL</Description>
-			<bUnlimitedException>1</bUnlimitedException>
 			<DefaultUnit>UNIT_WARLORD_VASSAL</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_VICEROY</Type>
 			<Description>TXT_KEY_UNIT_VICEROY</Description>
-			<bUnlimitedException>1</bUnlimitedException>
 			<DefaultUnit>UNIT_VICEROY</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -2863,66 +2852,56 @@ Assyria, Hungary, Minoa, Armenia
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_WARLORDIS</Type>
-			<Description>Warlord Chief Single</Description>
-			<bUnlimitedException>1</bUnlimitedException>
+			<Description>TXT_KEY_UNIT_WARLORDIS</Description>
 			<DefaultUnit>UNIT_WARLORDIS</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_WARLORDIIS</Type>
-			<Description>Warlord Captain Single</Description>
-			<bUnlimitedException>1</bUnlimitedException>
+			<Description>TXT_KEY_UNIT_WARLORDIIS</Description>
 			<DefaultUnit>UNIT_WARLORDIIS</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_WARLORDIIIS</Type>
-			<Description>Warlord Privateer Single</Description>
-			<bUnlimitedException>1</bUnlimitedException>
+			<Description>TXT_KEY_UNIT_WARLORDIIIS</Description>
 			<DefaultUnit>UNIT_WARLORDIIIS</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_WARLORDIVS</Type>
-			<Description>Warlord Commander Single</Description>
-			<bUnlimitedException>1</bUnlimitedException>
+			<Description>TXT_KEY_UNIT_WARLORDIVS</Description>
 			<DefaultUnit>UNIT_WARLORDIVS</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_WARLORDVS</Type>
-			<Description>Warlord General Single</Description>
-			<bUnlimitedException>1</bUnlimitedException>
+			<Description>TXT_KEY_UNIT_WARLORDVS</Description>
 			<DefaultUnit>UNIT_WARLORDVS</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_WARLORDI</Type>
 			<Description>TXT_KEY_UNIT_GREAT_GENERAL</Description>
-			<bUnlimitedException>1</bUnlimitedException>
 			<iInstanceCostModifier>25</iInstanceCostModifier>
 			<DefaultUnit>UNIT_WARLORDI</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_WARLORDII</Type>
 			<Description>TXT_KEY_UNIT_GREAT_GENERAL</Description>
-			<bUnlimitedException>1</bUnlimitedException>
 			<iInstanceCostModifier>25</iInstanceCostModifier>
 			<DefaultUnit>UNIT_WARLORDII</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_WARLORDIII</Type>
 			<Description>TXT_KEY_UNIT_GREAT_GENERAL</Description>
-			<bUnlimitedException>1</bUnlimitedException>
 			<iInstanceCostModifier>25</iInstanceCostModifier>
 			<DefaultUnit>UNIT_WARLORDIII</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_WARLORDIV</Type>
 			<Description>TXT_KEY_UNIT_GREAT_GENERAL</Description>
-			<bUnlimitedException>1</bUnlimitedException>
 			<iInstanceCostModifier>25</iInstanceCostModifier>
 			<DefaultUnit>UNIT_WARLORDIV</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_WARLORDV</Type>
 			<Description>TXT_KEY_UNIT_GREAT_GENERAL</Description>
-			<bUnlimitedException>1</bUnlimitedException>
 			<iInstanceCostModifier>25</iInstanceCostModifier>
 			<DefaultUnit>UNIT_WARLORDV</DefaultUnit>
 		</UnitClassInfo>

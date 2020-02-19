@@ -1814,6 +1814,7 @@ public:
 
 	int getMaxGlobalInstances() const;			// Exposed to Python
 	int getMaxPlayerInstances() const;			// Exposed to Python
+	bool isUnlimitedException() const;			// Exposed to Python
 	int getAIWeight() const;					// Exposed to Python
 	int getProductionCost() const;				// Exposed to Python
 	int getHurryCostModifier() const;			// Exposed to Python
@@ -1884,21 +1885,11 @@ public:
 	int getSeeInvisibleType(int i) const;			// Exposed to Python
 	int getNumSeeInvisibleTypes() const;			// Exposed to Python
 	int getAdvisorType() const;						// Exposed to Python
-
-/********************************************************************************/
-/**		REVDCM									2/16/10				phungus420	*/
-/**																				*/
-/**		CanTrain 																*/
-/********************************************************************************/
 	int getMaxStartEra() const;						// Exposed to Python
 	int getForceObsoleteTech() const;				// Exposed to Python
 	bool isStateReligion() const;					// Exposed to Python
 	int getPrereqGameOption() const;				// Exposed to Python
 	int getNotGameOption() const;					// Exposed to Python
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
-
 	int getHolyCity() const;						// Exposed to Python
 	int getReligionType() const;					// Exposed to Python
 	int getStateReligion() const;					// Exposed to Python
@@ -1959,28 +1950,9 @@ public:
 	bool isLineOfSight() const;					// Exposed to Python
 	bool isHiddenNationality() const;			// Exposed to Python
 	bool isAlwaysHostile() const;				// Exposed to Python
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre																		  **/
-/**  Date: 21.09.2009																			   **/
-/**  ModComp: TLOTags																			   **/
-/**  Reason Added: New Tag Definition															   **/
-/**  Notes:																						 **/
-/*****************************************************************************************************/
 	bool isFreeDrop() const;					// Exposed to Python
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 21.09.2009; TLOTags															 **/
-/*****************************************************************************************************/
 	bool isNoRevealMap() const;					// Exposed to Python
-
-/********************************************************************************/
-/**		REVDCM_OC							2/16/10				phungus420		*/
-/**																				*/
-/**		 																		*/
-/********************************************************************************/
 	bool isInquisitor() const;					// Exposed to Python
-/********************************************************************************/
-/**		REVDCM_OC									END							*/
-/********************************************************************************/
 	//ls612: Can't enter non-Owned cities
 	bool isNoNonOwnedEntry() const;
 
@@ -2347,6 +2319,7 @@ public:
 protected:
 	int m_iMaxGlobalInstances;
 	int m_iMaxPlayerInstances;
+	bool m_bUnlimitedException;
 	std::vector<int> m_aiUpgradeUnitClassTypes;
 	bool* m_pbPassableRouteNeeded;
 	int* m_piPrereqOrVicinityBonuses;
@@ -3570,9 +3543,6 @@ public:
 	CvUnitClassInfo();
 	virtual ~CvUnitClassInfo();
 
-	//TB Unlimited National Units Mod
-	bool isUnlimitedException() const;				// Exposed to Python
-	//TB Unlimited National Units End
 	int getInstanceCostModifier() const;			// Exposed to Python
 	int getDefaultUnitIndex() const;				// Exposed to Python
 	void setDefaultUnitIndex(int i);
@@ -3592,10 +3562,6 @@ public:
 
 //----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
-
-	//TB Unlimited National Units Mod
-	bool m_bUnlimitedException;
-	//TB Unlimited National Units End
 	int m_iInstanceCostModifier;
 	int m_iDefaultUnitIndex;
 	bool m_bUnique;

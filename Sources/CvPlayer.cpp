@@ -17156,22 +17156,20 @@ bool CvPlayer::isUnitClassMaxedOut(UnitClassTypes eIndex, int iExtra) const
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < GC.getNumUnitClassInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
-	if (!isNationalUnit((UnitTypes)GC.getUnitClassInfo(eIndex).getDefaultUnitIndex()))
-	{
-		return false;
-	}
+	const UnitTypes eUnit = (UnitTypes)GC.getUnitClassInfo(eIndex).getDefaultUnitIndex();
 
-	if (GC.getGame().isOption(GAMEOPTION_UNLIMITED_NATIONAL_UNITS) && !GC.getUnitClassInfo(eIndex).isUnlimitedException())
+	if (!isNationalUnit(eUnit))
 	{
 		return false;
 	}
 
 	if (GC.getGame().isOption(GAMEOPTION_UNLIMITED_NATIONAL_UNITS))
 	{
-		FAssertMsg(getUnitClassCount(eIndex) <= GC.getUnitInfo((UnitTypes)GC.getUnitClassInfo(eIndex).getDefaultUnitIndex()).getMaxPlayerInstances(), "getUnitClassCount is expected to be less than maximum bound of MaxPlayerInstances (invalid index)");
-	}
+		if (!GC.getUnitInfo(eUnit).isUnlimitedException()) return false;
 
-	return ((getUnitClassCount(eIndex) + iExtra) >= GC.getUnitInfo((UnitTypes)GC.getUnitClassInfo(eIndex).getDefaultUnitIndex()).getMaxPlayerInstances());
+		FAssertMsg(getUnitClassCount(eIndex) <= GC.getUnitInfo(eUnit).getMaxPlayerInstances(), "getUnitClassCount is expected to be less than maximum bound of MaxPlayerInstances (invalid index)");
+	}
+	return (getUnitClassCount(eIndex) + iExtra) >= GC.getUnitInfo(eUnit).getMaxPlayerInstances();
 }
 
 

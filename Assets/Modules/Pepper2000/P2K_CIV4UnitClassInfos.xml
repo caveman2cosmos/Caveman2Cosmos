@@ -444,40 +444,34 @@
         <UnitClassInfo>
 			<Type>UNITCLASS_WARLORDVI</Type>
 			<Description>TXT_KEY_UNIT_WARLORDVI</Description>
-            <bUnlimitedException>1</bUnlimitedException>
             <iInstanceCostModifier>25</iInstanceCostModifier>
 			<DefaultUnit>UNIT_WARLORDVI</DefaultUnit>
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_WARLORDVIS</Type>
 			<Description>TXT_KEY_UNIT_WARLORDVIS</Description>
-            <bUnlimitedException>1</bUnlimitedException>
 			<DefaultUnit>UNIT_WARLORDVIS</DefaultUnit>
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_WARLORDVII</Type>
 			<Description>TXT_KEY_UNIT_WARLORDVII</Description>
-            <bUnlimitedException>1</bUnlimitedException>
             <iInstanceCostModifier>25</iInstanceCostModifier>
 			<DefaultUnit>UNIT_WARLORDVII</DefaultUnit>
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_WARLORDVIIS</Type>
 			<Description>TXT_KEY_UNIT_WARLORDVIIS</Description>
-            <bUnlimitedException>1</bUnlimitedException>
 			<DefaultUnit>UNIT_WARLORDVIIS</DefaultUnit>
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_WARLORDVIII</Type>
 			<Description>TXT_KEY_UNIT_WARLORDVIII</Description>
-            <bUnlimitedException>1</bUnlimitedException>
             <iInstanceCostModifier>25</iInstanceCostModifier>
 			<DefaultUnit>UNIT_WARLORDVIII</DefaultUnit>
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_WARLORDVIIIS</Type>
 			<Description>TXT_KEY_UNIT_WARLORDVIIIS</Description>
-            <bUnlimitedException>1</bUnlimitedException>
 			<DefaultUnit>UNIT_WARLORDVIIIS</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>

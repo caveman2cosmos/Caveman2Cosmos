@@ -12,6 +12,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_BAND</Class>
 			<Type>UNIT_BAND</Type>
 			<iMaxPlayerInstances>0</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Description>TXT_KEY_UNIT_BAND</Description>
 			<Civilopedia>TXT_KEY_UNIT_BAND_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_BAND_STRATEGY</Strategy>
@@ -70,6 +71,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_TRIBE</Class>
 			<Type>UNIT_TRIBE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Capture>UNITCLASS_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
@@ -6216,6 +6218,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_007</Class>
 			<Type>UNIT_007</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_SPY</Combat>
 			<SubCombatTypes>
@@ -44557,6 +44560,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_EARLY_IMP_GUARD</Class>
 			<Type>UNIT_EARLY_IMP_GUARD</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -44657,6 +44661,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_REN_IMP_GUARD</Class>
 			<Type>UNIT_REN_IMP_GUARD</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -44767,6 +44772,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_MODERN_IMP_GUARD</Class>
 			<Type>UNIT_MODERN_IMP_GUARD</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -44871,6 +44877,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_ROBOT_IMP_GUARD</Class>
 			<Type>UNIT_ROBOT_IMP_GUARD</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Combat>UNITCOMBAT_ROBOT</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_LAW_ENFORCEMENT</SubCombatType>
@@ -53513,6 +53520,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_NOBLE</Class>
 			<Type>UNIT_NOBLE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CAPTAIN</Combat>
 			<SubCombatTypes>
@@ -53569,6 +53577,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_LORD</Class>
 			<Type>UNIT_LORD</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CAPTAIN</Combat>
 			<SubCombatTypes>
@@ -53625,6 +53634,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_WARLORD_VASSAL</Class>
 			<Type>UNIT_WARLORD_VASSAL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CAPTAIN</Combat>
 			<SubCombatTypes>
@@ -53681,6 +53691,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_VICEROY</Class>
 			<Type>UNIT_VICEROY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CAPTAIN</Combat>
 			<SubCombatTypes>
@@ -54067,6 +54078,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_WARLORDI</Class>
 			<Type>UNIT_WARLORDI</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Capture>UNITCLASS_WARLORDIS</Capture>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -54191,6 +54203,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_WARLORDII</Class>
 			<Type>UNIT_WARLORDII</Type>
 			<iMaxPlayerInstances>2</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Capture>UNITCLASS_WARLORDIIS</Capture>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -54319,6 +54332,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_WARLORDIII</Class>
 			<Type>UNIT_WARLORDIII</Type>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Capture>UNITCLASS_WARLORDIIIS</Capture>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
@@ -54461,6 +54475,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_WARLORDIV</Class>
 			<Type>UNIT_WARLORDIV</Type>
 			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Capture>UNITCLASS_WARLORDIVS</Capture>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
@@ -54599,6 +54614,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_WARLORDV</Class>
 			<Type>UNIT_WARLORDV</Type>
 			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Capture>UNITCLASS_WARLORDVS</Capture>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>

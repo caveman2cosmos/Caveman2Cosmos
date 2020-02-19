@@ -4,13 +4,11 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_RA_FIST</Type>
 			<Description>TXT_KEY_UNIT_RA_FIST</Description>
-			<bUnlimitedException>1</bUnlimitedException>
 			<DefaultUnit>UNIT_RA_FIST</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_RA_KNIGHT</Type>
 			<Description>TXT_KEY_UNIT_RA_KNIGHT</Description>
-			<bUnlimitedException>1</bUnlimitedException>
 			<DefaultUnit>UNIT_RA_KNIGHT</DefaultUnit>
 		</UnitClassInfo>
 	</UnitClassInfos>
