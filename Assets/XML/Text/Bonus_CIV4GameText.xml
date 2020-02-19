@@ -7830,28 +7830,6 @@
 		<Polish>Teksańska</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_TEXTILES</Tag>
-		<English>Textiles</English>
-		<French>
-			<Text>Textiles</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Textilien</German>
-		<Italian>Prodotti tessili</Italian>
-		<Spanish>
-			<Text>Productos textiles</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Polish>Tekstylia</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_TEXTILES_PEDIA</Tag>
-		<English>TBD</English>
-		<Polish>Tekstylia jest to ogół wyrobów (tkanin, dzianin itp.) otrzymywanych z przerobionych na przędzę surowców włókienniczych roślinnych, zwierzęcych lub chemicznych.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_THAI</Tag>
 		<English>Thai</English>
 		<Polish>Tajska</Polish>
