@@ -9446,6 +9446,7 @@
 			<Type>UNIT_WARLORDVI</Type>
 			<iMaxPlayerInstances>6</iMaxPlayerInstances>
             <bUnlimitedException>1</bUnlimitedException>
+            <iInstanceCostModifier>25</iInstanceCostModifier>
 			<Capture>UNITCLASS_WARLORDVIS</Capture>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
@@ -9569,6 +9570,7 @@
 			<Type>UNIT_WARLORDVII</Type>
 			<iMaxPlayerInstances>7</iMaxPlayerInstances>
             <bUnlimitedException>1</bUnlimitedException>
+            <iInstanceCostModifier>25</iInstanceCostModifier>
 			<Capture>UNITCLASS_WARLORDVIIS</Capture>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
@@ -9692,6 +9694,7 @@
 			<Type>UNIT_WARLORDVIII</Type>
 			<iMaxPlayerInstances>8</iMaxPlayerInstances>
             <bUnlimitedException>1</bUnlimitedException>
+            <iInstanceCostModifier>25</iInstanceCostModifier>
 			<Capture>UNITCLASS_WARLORDVIIIS</Capture>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>

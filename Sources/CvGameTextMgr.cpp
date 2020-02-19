@@ -21905,10 +21905,10 @@ iMaxTeamInstances was unused in CvUnitClassInfo and removed as part of us sheddi
 			}
 		}
 
-		if (0 != GC.getUnitClassInfo(eUnitClass).getInstanceCostModifier())
+		if (0 != GC.getUnitInfo(eUnit).getInstanceCostModifier())
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_UNIT_INSTANCE_COST_MOD", GC.getUnitClassInfo(eUnitClass).getInstanceCostModifier()));
+			szBuffer.append(gDLL->getText("TXT_KEY_UNIT_INSTANCE_COST_MOD", GC.getUnitInfo(eUnit).getInstanceCostModifier()));
 		}
 
 

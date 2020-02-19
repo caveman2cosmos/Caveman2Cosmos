@@ -444,7 +444,6 @@
         <UnitClassInfo>
 			<Type>UNITCLASS_WARLORDVI</Type>
 			<Description>TXT_KEY_UNIT_WARLORDVI</Description>
-            <iInstanceCostModifier>25</iInstanceCostModifier>
 			<DefaultUnit>UNIT_WARLORDVI</DefaultUnit>
 		</UnitClassInfo>
         <UnitClassInfo>
@@ -455,7 +454,6 @@
         <UnitClassInfo>
 			<Type>UNITCLASS_WARLORDVII</Type>
 			<Description>TXT_KEY_UNIT_WARLORDVII</Description>
-            <iInstanceCostModifier>25</iInstanceCostModifier>
 			<DefaultUnit>UNIT_WARLORDVII</DefaultUnit>
 		</UnitClassInfo>
         <UnitClassInfo>
@@ -466,7 +464,6 @@
         <UnitClassInfo>
 			<Type>UNITCLASS_WARLORDVIII</Type>
 			<Description>TXT_KEY_UNIT_WARLORDVIII</Description>
-            <iInstanceCostModifier>25</iInstanceCostModifier>
 			<DefaultUnit>UNIT_WARLORDVIII</DefaultUnit>
 		</UnitClassInfo>
         <UnitClassInfo>

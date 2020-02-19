@@ -30971,7 +30971,6 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_DROMON_FIRE_SHIP</Class>
 			<Type>UNIT_DROMON_FIRE_SHIP</Type>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
@@ -50169,6 +50168,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_BANDIT_FOOTPAD</Class>
 			<Type>UNIT_BANDIT_FOOTPAD</Type>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_RUFFIAN</Combat>
 			<SubCombatTypes>
@@ -50497,6 +50497,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_BANDIT_RIDER</Class>
 			<Type>UNIT_BANDIT_RIDER</Type>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_RUFFIAN</Combat>
 			<SubCombatTypes>
@@ -50665,6 +50666,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_HIGHWAYMAN</Class>
 			<Type>UNIT_HIGHWAYMAN</Type>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_RUFFIAN</Combat>
 			<SubCombatTypes>
@@ -54079,6 +54081,7 @@ Base XP gained when defending
 			<Type>UNIT_WARLORDI</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bUnlimitedException>1</bUnlimitedException>
+			<iInstanceCostModifier>25</iInstanceCostModifier>
 			<Capture>UNITCLASS_WARLORDIS</Capture>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -54204,6 +54207,7 @@ Base XP gained when defending
 			<Type>UNIT_WARLORDII</Type>
 			<iMaxPlayerInstances>2</iMaxPlayerInstances>
 			<bUnlimitedException>1</bUnlimitedException>
+			<iInstanceCostModifier>25</iInstanceCostModifier>
 			<Capture>UNITCLASS_WARLORDIIS</Capture>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -54333,6 +54337,7 @@ Base XP gained when defending
 			<Type>UNIT_WARLORDIII</Type>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<bUnlimitedException>1</bUnlimitedException>
+			<iInstanceCostModifier>25</iInstanceCostModifier>
 			<Capture>UNITCLASS_WARLORDIIIS</Capture>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
@@ -54476,6 +54481,7 @@ Base XP gained when defending
 			<Type>UNIT_WARLORDIV</Type>
 			<iMaxPlayerInstances>4</iMaxPlayerInstances>
 			<bUnlimitedException>1</bUnlimitedException>
+			<iInstanceCostModifier>25</iInstanceCostModifier>
 			<Capture>UNITCLASS_WARLORDIVS</Capture>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
@@ -54615,6 +54621,7 @@ Base XP gained when defending
 			<Type>UNIT_WARLORDV</Type>
 			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<bUnlimitedException>1</bUnlimitedException>
+			<iInstanceCostModifier>25</iInstanceCostModifier>
 			<Capture>UNITCLASS_WARLORDVS</Capture>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>

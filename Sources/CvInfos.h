@@ -1815,6 +1815,7 @@ public:
 	int getMaxGlobalInstances() const;			// Exposed to Python
 	int getMaxPlayerInstances() const;			// Exposed to Python
 	bool isUnlimitedException() const;			// Exposed to Python
+	int getInstanceCostModifier() const;		// Exposed to Python
 	int getAIWeight() const;					// Exposed to Python
 	int getProductionCost() const;				// Exposed to Python
 	int getHurryCostModifier() const;			// Exposed to Python
@@ -2320,6 +2321,7 @@ protected:
 	int m_iMaxGlobalInstances;
 	int m_iMaxPlayerInstances;
 	bool m_bUnlimitedException;
+	int m_iInstanceCostModifier;
 	std::vector<int> m_aiUpgradeUnitClassTypes;
 	bool* m_pbPassableRouteNeeded;
 	int* m_piPrereqOrVicinityBonuses;
@@ -3543,7 +3545,6 @@ public:
 	CvUnitClassInfo();
 	virtual ~CvUnitClassInfo();
 
-	int getInstanceCostModifier() const;			// Exposed to Python
 	int getDefaultUnitIndex() const;				// Exposed to Python
 	void setDefaultUnitIndex(int i);
 
@@ -3562,7 +3563,6 @@ public:
 
 //----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
-	int m_iInstanceCostModifier;
 	int m_iDefaultUnitIndex;
 	bool m_bUnique;
 };

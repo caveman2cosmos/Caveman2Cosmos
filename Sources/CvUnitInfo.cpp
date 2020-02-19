@@ -25,6 +25,7 @@ CvUnitInfo::CvUnitInfo() :
 m_iMaxGlobalInstances(-1),
 m_iMaxPlayerInstances(-1),
 m_bUnlimitedException(false),
+m_iInstanceCostModifier(0),
 m_iDCMBombRange(0),
 m_iDCMBombAccuracy(0),
 m_bDCMAirBomb1(0),
@@ -441,6 +442,11 @@ bool CvUnitInfo::isUnlimitedException() const
 	return m_bUnlimitedException;
 }
 
+
+int CvUnitInfo::getInstanceCostModifier() const
+{
+	return m_iInstanceCostModifier;
+}
 
 // Dale - RB: Field Bombard START
 int CvUnitInfo::getDCMBombRange() const
@@ -3812,6 +3818,7 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum)
 	CheckSum(iSum, m_iMaxGlobalInstances);
 	CheckSum(iSum, m_iMaxPlayerInstances);
 	CheckSum(iSum, m_bUnlimitedException);
+	CheckSum(iSum, m_iInstanceCostModifier);
 	CheckSum(iSum, m_iDCMBombRange);
 	CheckSum(iSum, m_iDCMBombAccuracy);
 	CheckSum(iSum, m_bDCMAirBomb1);
@@ -4335,6 +4342,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iMaxGlobalInstances, L"iMaxGlobalInstances", -1);
 	pXML->GetOptionalChildXmlValByName(&m_iMaxPlayerInstances, L"iMaxPlayerInstances", -1);
 	pXML->GetOptionalChildXmlValByName(&m_bUnlimitedException, L"bUnlimitedException", false);
+	pXML->GetOptionalChildXmlValByName(&m_iInstanceCostModifier, L"iInstanceCostModifier", 0);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Special");
 	m_iSpecialUnitType = pXML->GetInfoClass(szTextVal);
@@ -5477,6 +5485,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 	if ( m_iMaxGlobalInstances == -1) m_iMaxGlobalInstances = pClassInfo->getMaxGlobalInstances();
 	if ( m_iMaxPlayerInstances == -1) m_iMaxPlayerInstances = pClassInfo->getMaxPlayerInstances();
 	if ( m_bUnlimitedException == false) m_bUnlimitedException = pClassInfo->isUnlimitedException();
+	if ( m_iInstanceCostModifier == 0) m_iInstanceCostModifier = pClassInfo->getInstanceCostModifier();
 	if ( m_iSpecialUnitType == iTextDefault )	m_iSpecialUnitType = pClassInfo->getSpecialUnitType();
 	if ( m_iUnitCaptureClassType == iTextDefault )	m_iUnitCaptureClassType = pClassInfo->getUnitCaptureClassType();
 	if ( m_iUnitCombatType == iTextDefault )	m_iUnitCombatType = pClassInfo->getUnitCombatType();

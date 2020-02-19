@@ -9255,7 +9255,7 @@ int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 
 	iProductionNeeded *= 100;
 
-	int iModifier = 100 + getUnitClassCount(eUnitClass) * GC.getUnitClassInfo(eUnitClass).getInstanceCostModifier();
+	int iModifier = 100 + getUnitClassCount(eUnitClass) * GC.getUnitInfo(eUnit).getInstanceCostModifier();
 	iProductionNeeded *= iModifier;
 	iProductionNeeded /= 100;
 
