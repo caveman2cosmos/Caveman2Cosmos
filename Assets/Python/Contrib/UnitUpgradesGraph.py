@@ -68,18 +68,15 @@ class UnitUpgradesGraph:
 		self.BuildingSplitOutgoing = []
 		self.bBuilding = False
 
-	def getNumberOfUnits(self):
-		return GC.getNumUnitInfos()
-
 	def getPromotionType(self, e):
 		return GC.getPromotionInfo(e).getType()
 
 	def getGraphEdges(self, graph):
-		for unitA in graph.iterkeys():
-			for iUnitClass in xrange(GC.getNumUnitClassInfos()):
-				unitB = GC.getUnitClassInfo(iUnitClass).getDefaultUnitIndex()
-				if GC.getUnitInfo(unitA).getUpgradeUnitClass(iUnitClass):
-					self.addUpgradePath(graph, unitA, unitB)
+		for iUnitA in graph.iterkeys():
+			CvUnitInfoA = GC.getUnitInfo(iUnitA)
+			for iUnitB in xrange(GC.getNumUnitInfos()):
+				if CvUnitInfoA.getUpgradeUnitClass(GC.getUnitInfo(iUnitB).getUnitClassType()):
+					self.addUpgradePath(graph, iUnitA, iUnitB)
 
 	def placeOnScreen(self, screen, unit, xPos, yPos):
 		screen.setImageButtonAt(self.pediaScreen.getNextWidgetName(), self.upgradesList, GC.getUnitInfo(unit).getButton(), xPos, yPos, self.buttonSize, self.buttonSize, WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT, unit, 1)
@@ -129,7 +126,7 @@ class UnitUpgradesGraph:
 		graph = self.mGraphs[0].graph
 
 		BONUSCLASS_CULTURE = GC.getInfoTypeForString("BONUSCLASS_CULTURE")
-		for iUnit in xrange(self.getNumberOfUnits()):
+		for iUnit in xrange(GC.getNumUnitInfos()):
 			if self.bUnit:
 				CvUnitInfo = GC.getUnitInfo(iUnit)
 				# Ignore Corporation units
@@ -529,9 +526,6 @@ class PromotionsGraph(UnitUpgradesGraph):
 		self.bUnit = False
 		self.bBuilding = False
 
-	def getNumberOfUnits(self):
-		return GC.getNumPromotionInfos()
-
 	def getPromotionType(self, e):
 		return GC.getPromotionInfo(e).getType()
 
@@ -568,9 +562,6 @@ class BuildingsGraph(UnitUpgradesGraph):
 		self.BuildingSplitOutgoing = []
 		self.bUnit = False
 		self.bBuilding = True
-
-	def getNumberOfUnits(self):
-		return GC.getNumBuildingInfos()
 
 	def getGraphEdges(self, graph):
 		import copy
