@@ -10,8 +10,6 @@ from CvPythonExtensions import *
 sXMLBarbarian = 'CIVILIZATION_BARBARIAN'
 
 # Units
-sXMLWarrior = 'UNITCLASS_CLUBMAN'
-sXMLWorker = 'UNITCLASS_WORKER'
 sXMLGeneral = 'UNIT_GREAT_GENERAL'
 
 # Buildings

@@ -11135,7 +11135,6 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 	CvWString szTempBuffer;
 	CvWString szImprovement;
 	BuildingTypes eLoopBuilding;
-	UnitTypes eLoopUnit;
 	bool bHasBegun = false;
 	TraitTypes eLoopTrait;
 	int iLast;
@@ -12053,22 +12052,13 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 
 		// Unit Class Production Mods
 		iLast = 0;
-		for (iI = 0; iI < GC.getNumUnitClassInfos(); ++iI)
+		for (iI = 0; iI < GC.getNumUnitInfos(); ++iI)
 		{
-			if (eCivilization == NO_CIVILIZATION)
-			{
-				eLoopUnit = ((UnitTypes)(GC.getUnitClassInfo((UnitClassTypes)iI).getDefaultUnitIndex()));
-			}
-			else
-			{
-				eLoopUnit = ((UnitTypes)(GC.getCivilizationInfo(eCivilization).getCivilizationUnits(iI)));
-			}
-
-			if (eLoopUnit != NO_UNIT && !isWorldUnitClass((UnitClassTypes)iI))
+			if (!isWorldUnitClass((UnitTypes)iI))
 			{
 				for (int j = 0; j < GC.getTraitInfo(eTrait).getNumUnitProductionModifiers(); j++)
 				{
-					if ((UnitTypes)GC.getTraitInfo(eTrait).getUnitProductionModifier(j).eUnit == eLoopUnit)
+					if ((UnitTypes)GC.getTraitInfo(eTrait).getUnitProductionModifier(j).eUnit == (UnitTypes)iI)
 					{
 						if (GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier != 0)
 						{
@@ -12076,7 +12066,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 
 							CvWString szUnit;
 
-							szUnit.Format(L"<link=%s>%s</link>", CvWString(GC.getUnitInfo(eLoopUnit).getType()).GetCString(), GC.getUnitInfo(eLoopUnit).getDescription());
+							szUnit.Format(L"<link=%s>%s</link>", CvWString(GC.getUnitInfo((UnitTypes)iI).getType()).GetCString(), GC.getUnitInfo((UnitTypes)iI).getDescription());
 							setListHelp(szHelpString, szText.GetCString(), szUnit, L", ", (GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier != iLast));
 							iLast = GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier;
 						}
@@ -21867,49 +21857,19 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 
 	// test for unique unit
 	UnitClassTypes eUnitClass = (UnitClassTypes)GC.getUnitInfo(eUnit).getUnitClassType();
-	UnitTypes eDefaultUnit = (UnitTypes)GC.getUnitClassInfo(eUnitClass).getDefaultUnitIndex();
 
 	if (bNormalView)
 	{
-		if (eDefaultUnit != eUnit)
-		{
-			bool bFound = false;
-			for (iI  = 0; iI < GC.getNumCivilizationInfos(); ++iI)
-			{
-				UnitTypes eUniqueUnit = (UnitTypes)GC.getCivilizationInfo((CivilizationTypes)iI).getCivilizationUnits((int)eUnitClass);
-				if (eUniqueUnit == eUnit)
-				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_UNIQUE_UNIT", CvWString(GC.getCivilizationInfo((CivilizationTypes)iI).getType()).GetCString(), GC.getCivilizationInfo((CivilizationTypes)iI).getTextKeyWide()));
-					bFound = true;
-				}
-			}
-
-			if (bFound)
-			{
-				if (NO_UNIT != eDefaultUnit && eDefaultUnit != eUnit)
-				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_REPLACES_UNIT", CvWString(GC.getUnitInfo(eDefaultUnit).getType()).GetCString(), GC.getUnitInfo(eDefaultUnit).getTextKeyWide()));
-				}
-			}
-			else
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_RESTRICTED_UNIT"));
-			}
-		}
-
-		if (isWorldUnitClass(eUnitClass))
+		if (isWorldUnitClass(eUnit))
 		{
 			if (pCity == NULL)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_WORLD_UNIT_ALLOWED", GC.getUnitClassInfo(eUnitClass).getMaxGlobalInstances()));
+				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_WORLD_UNIT_ALLOWED", GC.getUnitInfo(eUnit).getMaxGlobalInstances()));
 			}
 			else
 			{
-				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_WORLD_UNIT_LEFT", (GC.getUnitClassInfo(eUnitClass).getMaxGlobalInstances() - (ePlayer != NO_PLAYER ? GC.getGame().getUnitClassCreatedCount(eUnitClass) + GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getUnitClassMaking(eUnitClass) : 0))));
+				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_WORLD_UNIT_LEFT", (GC.getUnitInfo(eUnit).getMaxGlobalInstances() - (ePlayer != NO_PLAYER ? GC.getGame().getUnitClassCreatedCount(eUnitClass) + GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getUnitClassMaking(eUnitClass) : 0))));
 			}
 		}
 
@@ -22391,7 +22351,6 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 
 	if (bTBUnitView1)
 	{
-
 		if (bStrategyText)
 		{
 			if (!CvWString(GC.getUnitInfo(eUnit).getStrategy()).empty())
@@ -22407,25 +22366,6 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 				}
 			}
 		}
-
-		if (bCivilopediaText)
-		{
-			if (eDefaultUnit == eUnit)
-			{
-				for (iI = 0; iI < GC.getNumUnitInfos(); ++iI)
-				{
-					if (iI != eUnit)
-					{
-						if (eUnitClass == GC.getUnitInfo((UnitTypes)iI).getUnitClassType())
-						{
-							szBuffer.append(NEWLINE);
-							szBuffer.append(gDLL->getText("TXT_KEY_REPLACED_BY_UNIT", CvWString(GC.getUnitInfo((UnitTypes)iI).getType()).GetCString(), GC.getUnitInfo((UnitTypes)iI).getTextKeyWide()));
-						}
-					}
-				}
-			}
-		}
-
 	}
 
 	if (pCity != NULL && bNormalView)

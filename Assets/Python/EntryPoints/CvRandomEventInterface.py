@@ -3336,12 +3336,10 @@ def getGreedUnit(CyPlayer, CyPlot):
 	iBonus = CyPlot.getBonusType(CyPlayer.getTeam())
 	iBestValue = 0
 	iBestUnit = -1
-	for iUnitClass in xrange(GC.getNumUnitClassInfos()):
-		CvUnitClassInfo = GC.getUnitClassInfo(iUnitClass)
-		if CvUnitClassInfo.getMaxGlobalInstances() + 1 or CvUnitClassInfo.getMaxPlayerInstances() + 1:
-			continue
-		iUnit = CvUnitClassInfo.getDefaultUnitIndex()
+	for iUnit in xrange(GC.getNumUnitInfos()):
 		CvUnitInfo = GC.getUnitInfo(iUnit)
+		if CvUnitInfo.getMaxGlobalInstances() + 1 or GC.getUnitClassInfo(CvUnitInfo.getUnitClassType()).getMaxPlayerInstances() + 1:
+			continue
 		if iUnit != -1 and CvUnitInfo.getDomainType() == DomainTypes.DOMAIN_LAND and CyPlayer.canTrain(iUnit, False, False):
 			iValue = 0
 			if CvUnitInfo.getPrereqAndBonus() == iBonus:

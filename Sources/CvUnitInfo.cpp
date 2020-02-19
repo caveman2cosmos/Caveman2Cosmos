@@ -22,6 +22,7 @@
 //
 //------------------------------------------------------------------------------------------------------
 CvUnitInfo::CvUnitInfo() :
+m_iMaxGlobalInstances(-1),
 m_iDCMBombRange(0),
 m_iDCMBombAccuracy(0),
 m_bDCMAirBomb1(0),
@@ -243,11 +244,6 @@ m_paszEarlyArtDefineTags(NULL),
 m_paszLateArtDefineTags(NULL),
 m_paszMiddleArtDefineTags(NULL),
 m_paszUnitNames(NULL)
-/************************************************************************************************/
-/* Afforess					  Start		 Last Update: 3/8/10									*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 ,m_iPrereqVicinityBonus(NO_BONUS)
 ,m_iBaseFoodChange(0)
 ,m_iControlPoints(0)
@@ -266,9 +262,6 @@ m_paszUnitNames(NULL)
 ,m_paszIndustrialArtDefineTags(NULL)
 ,m_paszFutureArtDefineTags(NULL)
 ,m_paszCivilizationNames(NULL)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 ,m_PropertyManipulators()
 ,m_pExprTrainCondition(NULL)
 
@@ -444,11 +437,6 @@ CvUnitInfo::~CvUnitInfo()
 	SAFE_DELETE_ARRAY(m_paszLateArtDefineTags);
 	SAFE_DELETE_ARRAY(m_paszMiddleArtDefineTags);
 	SAFE_DELETE_ARRAY(m_paszUnitNames);
-/************************************************************************************************/
-/* Afforess					  Start		 Last Update: 3/8/10									*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	SAFE_DELETE_ARRAY(m_pbPrereqBuildingClass);
 	SAFE_DELETE_ARRAY(m_piPrereqOrVicinityBonuses);
 	SAFE_DELETE_ARRAY(m_pbPassableRouteNeeded);
@@ -457,9 +445,6 @@ CvUnitInfo::~CvUnitInfo()
 	SAFE_DELETE_ARRAY(m_paszIndustrialArtDefineTags);
 	SAFE_DELETE_ARRAY(m_paszFutureArtDefineTags);
 	SAFE_DELETE_ARRAY(m_paszCivilizationNames);
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 	SAFE_DELETE(m_pExprTrainCondition);
 
 	for (int i=0; i<(int)m_aOutcomeMissions.size(); i++)
@@ -488,6 +473,10 @@ const wchar* CvUnitInfo::getExtraHoverText() const
 	}
 }
 
+int CvUnitInfo::getMaxGlobalInstances() const
+{
+	return m_iMaxGlobalInstances;
+}
 /************************************************************************************************/
 /* DCM									 04/19/09								Johny Smith  */
 /************************************************************************************************/
@@ -3860,6 +3849,7 @@ bool CvUnitInfo::isAidChange(int iProperty) const
 
 void CvUnitInfo::getCheckSum(unsigned int &iSum)
 {
+	CheckSum(iSum, m_iMaxGlobalInstances);
 	CheckSum(iSum, m_iDCMBombRange);
 	CheckSum(iSum, m_iDCMBombAccuracy);
 	CheckSum(iSum, m_bDCMAirBomb1);
@@ -4379,6 +4369,8 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Class");
 	m_iUnitClassType = pXML->GetInfoClass(szTextVal);
+
+	pXML->GetOptionalChildXmlValByName(&m_iMaxGlobalInstances, L"iMaxGlobalInstances", -1);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Special");
 	m_iSpecialUnitType = pXML->GetInfoClass(szTextVal);
@@ -5518,6 +5510,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 	CvString cDefault = CvString::format("").GetCString();
 
 	if ( m_iUnitClassType == iTextDefault )	m_iUnitClassType = pClassInfo->getUnitClassType();
+	if ( m_iMaxGlobalInstances == -1) m_iMaxGlobalInstances = pClassInfo->getMaxGlobalInstances();
 	if ( m_iSpecialUnitType == iTextDefault )	m_iSpecialUnitType = pClassInfo->getSpecialUnitType();
 	if ( m_iUnitCaptureClassType == iTextDefault )	m_iUnitCaptureClassType = pClassInfo->getUnitCaptureClassType();
 	if ( m_iUnitCombatType == iTextDefault )	m_iUnitCombatType = pClassInfo->getUnitCombatType();

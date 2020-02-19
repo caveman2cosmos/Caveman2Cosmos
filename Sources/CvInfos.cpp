@@ -12671,7 +12671,6 @@ bool CvDiplomacyInfo::FindResponseIndex(const CvDiplomacyResponse* pNewResponse,
 //
 //------------------------------------------------------------------------------------------------------
 CvUnitClassInfo::CvUnitClassInfo() :
-	m_iMaxGlobalInstances(-1),
 	m_iMaxPlayerInstances(-1),
 	//TB Unlimited National Units Mod
 	m_bUnlimitedException(false),
@@ -12687,14 +12686,7 @@ CvUnitClassInfo::CvUnitClassInfo() :
 //  PURPOSE :   Default destructor
 //
 //------------------------------------------------------------------------------------------------------
-CvUnitClassInfo::~CvUnitClassInfo()
-{
-}
-
-int CvUnitClassInfo::getMaxGlobalInstances() const
-{
-	return m_iMaxGlobalInstances;
-}
+CvUnitClassInfo::~CvUnitClassInfo() {}
 
 int CvUnitClassInfo::getMaxPlayerInstances() const
 {
@@ -12741,7 +12733,6 @@ bool CvUnitClassInfo::read(CvXMLLoadUtility* pXML)
 		return false;
 	}
 
-	pXML->GetOptionalChildXmlValByName(&m_iMaxGlobalInstances, L"iMaxGlobalInstances", -1);
 	pXML->GetOptionalChildXmlValByName(&m_iMaxPlayerInstances, L"iMaxPlayerInstances", -1);
 	pXML->GetOptionalChildXmlValByName(&m_bUnlimitedException, L"bUnlimitedException", false);
 	pXML->GetOptionalChildXmlValByName(&m_iInstanceCostModifier, L"iInstanceCostModifier", 0);
@@ -12757,7 +12748,6 @@ void CvUnitClassInfo::copyNonDefaults(CvUnitClassInfo* pClassInfo, CvXMLLoadUtil
 {
 	CvInfoBase::copyNonDefaults(pClassInfo, pXML);
 
-	if (getMaxGlobalInstances() == -1) m_iMaxGlobalInstances = pClassInfo->getMaxGlobalInstances();
 	if (getMaxPlayerInstances() == -1) m_iMaxPlayerInstances = pClassInfo->getMaxPlayerInstances();
 	if (isUnlimitedException() == false) m_bUnlimitedException = pClassInfo->isUnlimitedException();
 	if (getInstanceCostModifier() == 0) m_iInstanceCostModifier = pClassInfo->getInstanceCostModifier();
@@ -12802,7 +12792,6 @@ bool CvUnitClassInfo::readPass3()
 
 void CvUnitClassInfo::getCheckSum(unsigned int& iSum)
 {
-	CheckSum(iSum, m_iMaxGlobalInstances);
 	CheckSum(iSum, m_iMaxPlayerInstances);
 	CheckSum(iSum, m_bUnlimitedException);
 	CheckSum(iSum, m_iInstanceCostModifier);

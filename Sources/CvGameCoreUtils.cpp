@@ -569,9 +569,9 @@ bool isTechRequiredForProject(TechTypes eTech, ProjectTypes eProject)
 	return false;
 }
 
-bool isWorldUnitClass(UnitClassTypes eUnitClass)
+bool isWorldUnitClass(UnitTypes eUnit)
 {
-	return (GC.getUnitClassInfo(eUnitClass).getMaxGlobalInstances() != -1);
+	return GC.getUnitInfo(eUnit).getMaxGlobalInstances() != -1;
 }
 
 bool isNationalUnitClass(UnitClassTypes eUnitClass)
@@ -581,7 +581,7 @@ bool isNationalUnitClass(UnitClassTypes eUnitClass)
 
 bool isLimitedUnitClass(UnitClassTypes eUnitClass)
 {
-	return (isWorldUnitClass(eUnitClass) || isNationalUnitClass(eUnitClass));
+	return (isWorldUnitClass((UnitTypes)GC.getUnitClassInfo(eUnitClass).getDefaultUnitIndex()) || isNationalUnitClass(eUnitClass));
 }
 
 bool isWorldWonderClass(BuildingClassTypes eBuildingClass)

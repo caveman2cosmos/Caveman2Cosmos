@@ -7430,7 +7430,7 @@ int CvPlayerAI::AI_techUnitValue( TechTypes eTech, int iPathLength, bool &bEnabl
 	MEMORY_TRACK()
 
 	bool bWarPlan = (GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0);
-	if( !bWarPlan )
+	if (!bWarPlan)
 	{
 		// Aggressive players will stick with war civics
 		if( GET_TEAM(getTeam()).AI_getTotalWarOddsTimes100() > 400 )
@@ -7451,550 +7451,516 @@ int CvPlayerAI::AI_techUnitValue( TechTypes eTech, int iPathLength, bool &bEnabl
 	CvCivilizationInfo& kCivilizationInfo = GC.getCivilizationInfo(getCivilizationType());
 
 	bEnablesUnitWonder = false;
-	for (int iJ = 0; iJ < GC.getNumUnitClassInfos(); iJ++)
+	for (int iJ = 0; iJ < GC.getNumUnitInfos(); iJ++)
 	{
-		eLoopUnit = ((UnitTypes)(kCivilizationInfo.getCivilizationUnits(iJ)));
+		eLoopUnit = (UnitTypes)iJ;
 
-/************************************************************************************************/
-/* Afforess	                  Start		 07/27/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/*
-		if (eLoopUnit != NO_UNIT)
-*/
-		if (GC.getGame().canEverTrain(eLoopUnit))
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+		if (GC.getGame().canEverTrain(eLoopUnit) && isTechRequiredForUnit((eTech), eLoopUnit))
 		{
-			if (isTechRequiredForUnit((eTech), eLoopUnit))
+			CvUnitInfo& kLoopUnit = GC.getUnitInfo(eLoopUnit);
+			iValue += 200;
+			int iUnitValue = 0;
+			int iNavalValue = 0;
+
+			if (kLoopUnit.getPrereqAndTech() == eTech)
 			{
-				CvUnitInfo& kLoopUnit = GC.getUnitInfo(eLoopUnit);
-				iValue += 200;
-				int iUnitValue = 0;
-				int iNavalValue = 0;
+				iMilitaryValue = 0;
 
-				if ((GC.getUnitClassInfo((UnitClassTypes)iJ).getDefaultUnitIndex()) != (kCivilizationInfo.getCivilizationUnits(iJ)))
-                {
-                    //UU
-                    iUnitValue += 600;
-                }
-
-				if (kLoopUnit.getPrereqAndTech() == eTech)
+				// BBAI TODO: Change this to evaluating all unitai types defined in XML for unit?
+				// Without this change many unit types are hard to evaluate, like offensive value of rifles
+				// or defensive value of collateral siege
+				switch (kLoopUnit.getDefaultUnitAIType())
 				{
-					iMilitaryValue = 0;
+				case UNITAI_UNKNOWN:
+				case UNITAI_ANIMAL:
+				case UNITAI_SUBDUED_ANIMAL:
+				case UNITAI_BARB_CRIMINAL:
+					break;
 
-					// BBAI TODO: Change this to evaluating all unitai types defined in XML for unit?
-					// Without this change many unit types are hard to evaluate, like offensive value of rifles
-					// or defensive value of collateral siege
-					switch (kLoopUnit.getDefaultUnitAIType())
+				case UNITAI_HUNTER:
+				case UNITAI_HUNTER_ESCORT:
+					iUnitValue += 200;
+					break;
+
+				case UNITAI_SETTLE:
 					{
-					case UNITAI_UNKNOWN:
-					case UNITAI_ANIMAL:
-					case UNITAI_SUBDUED_ANIMAL:
-					case UNITAI_BARB_CRIMINAL:
-						break;
+						//	Special case - if this would be our FIRST settler unit it has
+						//	a much higher weighting
+						bool bHasSettler = false;
 
-					case UNITAI_HUNTER:
-					case UNITAI_HUNTER_ESCORT:
-						iUnitValue += 200;
-						break;
-
-					case UNITAI_SETTLE:
+						for (int iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
 						{
-							//	Special case - if this would be our FIRST settler unit it has
-							//	a much higher weighting
-							bool bHasSettler = false;
+							UnitTypes eLoopUnit = ((UnitTypes)(kCivilizationInfo.getCivilizationUnits(iI)));
 
-							for (int iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
+							if (eLoopUnit != NO_UNIT)
 							{
-								UnitTypes eLoopUnit = ((UnitTypes)(kCivilizationInfo.getCivilizationUnits(iI)));
-
-								if (eLoopUnit != NO_UNIT)
+								if (GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType() == UNITAI_SETTLE)
 								{
-									if (GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType() == UNITAI_SETTLE)
+									if ( canTrain(eLoopUnit) )
 									{
-										if ( canTrain(eLoopUnit) )
-										{
-											bHasSettler = true;
-											break;
-										}
-									}
-								}
-							}
-
-							if ( bHasSettler )
-							{
-								iUnitValue += 1200;
-							}
-							else
-							{
-								iUnitValue += 10000;
-							}
-						}
-						break;
-
-					case UNITAI_WORKER:
-						iUnitValue += 800;
-						break;
-
-					case UNITAI_HEALER:
-						iUnitValue += 200;
-						iMilitaryValue += 200;
-
-					case UNITAI_HEALER_SEA:
-						iUnitValue += 200;
-						iMilitaryValue += 200;
-
-					case UNITAI_PROPERTY_CONTROL:
-						iUnitValue += 400;
-						iMilitaryValue += 50;
-
-					case UNITAI_PROPERTY_CONTROL_SEA:
-						iUnitValue += 350;
-						iMilitaryValue += 50;
-
-					case UNITAI_INVESTIGATOR:
-						iUnitValue += 400;
-
-					case UNITAI_INFILTRATOR:
-						iUnitValue += 200;
-						iMilitaryValue += 75;
-
-					case UNITAI_ESCORT:
-						iUnitValue += 100;
-						iMilitaryValue += 400;
-
-					case UNITAI_SEE_INVISIBLE:
-						iUnitValue += 400;
-						iMilitaryValue += 100;
-
-					case UNITAI_ATTACK:
-						iMilitaryValue += ((bWarPlan) ? 600 : 300);
-						iMilitaryValue += (AI_isDoStrategy(AI_STRATEGY_DAGGER ) ? 800 : 0);
-						iUnitValue += 100;
-						break;
-
-					case UNITAI_ATTACK_CITY:
-						iMilitaryValue += ((bWarPlan) ? 800 : 400);
-						iMilitaryValue += (AI_isDoStrategy(AI_STRATEGY_DAGGER ) ? 800 : 0);
-						if (kLoopUnit.getBombardRate() > 0)
-						{
-							iMilitaryValue += 200;
-
-							if (AI_calculateTotalBombard(DOMAIN_LAND) == 0)
-							{
-								iMilitaryValue += 800;
-								if (AI_isDoStrategy(AI_STRATEGY_DAGGER))
-								{
-									iMilitaryValue += 1000;
-								}
-							}
-						}
-						iUnitValue += 100;
-						break;
-
-					case UNITAI_COLLATERAL:
-						iMilitaryValue += ((bWarPlan) ? 600 : 300);
-						break;
-
-					case UNITAI_PILLAGE:
-						iMilitaryValue += ((bWarPlan) ? 200 : 100);
-						break;
-
-					case UNITAI_PILLAGE_COUNTER:
-						iMilitaryValue += ((bWarPlan) ? 300 : 200);
-						break;
-
-					case UNITAI_RESERVE:
-						iMilitaryValue += ((bWarPlan) ? 200 : 100);
-						break;
-
-					case UNITAI_COUNTER:
-						iMilitaryValue += ((bWarPlan) ? 600 : 300);
-						iMilitaryValue += (AI_isDoStrategy(AI_STRATEGY_DAGGER ) ? 600 : 0);
-						break;
-
-					case UNITAI_PARADROP:
-						iMilitaryValue += ((bWarPlan) ? 600 : 300);
-						break;
-
-					case UNITAI_CITY_DEFENSE:
-						iMilitaryValue += ((bWarPlan) ? 800 : 400);
-						iMilitaryValue += ((!bCapitalAlone) ? 400 : 200);
-						iUnitValue += ((iHasMetCount > 0) ? 800 : 200);
-						break;
-
-					case UNITAI_CITY_COUNTER:
-						iMilitaryValue += ((bWarPlan) ? 800 : 400);
-						break;
-
-					case UNITAI_CITY_SPECIAL:
-						iMilitaryValue += ((bWarPlan) ? 800 : 400);
-						break;
-
-					case UNITAI_EXPLORE:
-						iUnitValue += ((bCapitalAlone) ? 100 : 200);
-						break;
-
-					case UNITAI_MISSIONARY:
-						iUnitValue += ((getStateReligion() != NO_RELIGION) ? 600 : 300);
-						break;
-
-					case UNITAI_PROPHET:
-					case UNITAI_ARTIST:
-					case UNITAI_SCIENTIST:
-					case UNITAI_GENERAL:
-					case UNITAI_GREAT_HUNTER:
-					case UNITAI_GREAT_ADMIRAL:
-					case UNITAI_MERCHANT:
-					case UNITAI_ENGINEER:
-						break;
-
-					case UNITAI_SPY:
-						iMilitaryValue += ((bWarPlan) ? 100 : 50);
-						break;
-
-					case UNITAI_ICBM:
-						iMilitaryValue += ((bWarPlan) ? 200 : 100);
-						break;
-
-					case UNITAI_WORKER_SEA:
-						if (iCoastalCities > 0)
-						{
-							// note, workboat improvements are already counted in the improvement section
-						}
-						break;
-
-					case UNITAI_SEE_INVISIBLE_SEA:
-						// BBAI TODO: Boost value for maps where Barb ships are pestering us
-						if (iCoastalCities > 0)
-						{
-							iMilitaryValue += 400;
-						}
-						iNavalValue += 100;
-						break;
-
-					case UNITAI_ATTACK_SEA:
-						// BBAI TODO: Boost value for maps where Barb ships are pestering us
-						if (iCoastalCities > 0)
-						{
-							iMilitaryValue += ((bWarPlan) ? 200 : 100);
-						}
-						iNavalValue += 100;
-						break;
-
-					case UNITAI_RESERVE_SEA:
-						if (iCoastalCities > 0)
-						{
-							iMilitaryValue += ((bWarPlan) ? 100 : 50);
-						}
-						iNavalValue += 100;
-						break;
-
-					case UNITAI_ESCORT_SEA:
-						if (iCoastalCities > 0)
-						{
-							iMilitaryValue += ((bWarPlan) ? 100 : 50);
-						}
-						iNavalValue += 100;
-						break;
-
-					case UNITAI_EXPLORE_SEA:
-						if (iCoastalCities > 0)
-						{
-							iUnitValue += ((bCapitalAlone) ? 1800 : 600);
-						}
-						break;
-
-					case UNITAI_ASSAULT_SEA:
-						if (iCoastalCities > 0)
-						{
-							iMilitaryValue += ((bWarPlan || bCapitalAlone) ? 400 : 200);
-						}
-						iNavalValue += 200;
-						break;
-
-					case UNITAI_SETTLER_SEA:
-						if (iCoastalCities > 0)
-						{
-							iUnitValue += ((bWarPlan || bCapitalAlone) ? 100 : 200);
-						}
-						iNavalValue += 200;
-						break;
-
-					case UNITAI_MISSIONARY_SEA:
-						if (iCoastalCities > 0)
-						{
-							iUnitValue += 100;
-						}
-						break;
-
-					case UNITAI_SPY_SEA:
-						if (iCoastalCities > 0)
-						{
-							iMilitaryValue += 100;
-						}
-						break;
-
-					case UNITAI_CARRIER_SEA:
-						if (iCoastalCities > 0)
-						{
-							iMilitaryValue += ((bWarPlan) ? 100 : 50);
-						}
-						break;
-
-					case UNITAI_MISSILE_CARRIER_SEA:
-						if (iCoastalCities > 0)
-						{
-							iMilitaryValue += ((bWarPlan) ? 100 : 50);
-						}
-						break;
-
-					case UNITAI_PIRATE_SEA:
-						if (iCoastalCities > 0)
-						{
-							iMilitaryValue += 100;
-						}
-						iNavalValue += 100;
-						break;
-
-					case UNITAI_ATTACK_AIR:
-						iMilitaryValue += ((bWarPlan) ? 1200 : 800);
-						break;
-
-					case UNITAI_DEFENSE_AIR:
-						iMilitaryValue += ((bWarPlan) ? 1200 : 800);
-						break;
-
-					case UNITAI_CARRIER_AIR:
-						if (iCoastalCities > 0)
-						{
-							iMilitaryValue += ((bWarPlan) ? 200 : 100);
-						}
-						iNavalValue += 400;
-						break;
-
-					case UNITAI_MISSILE_AIR:
-						iMilitaryValue += ((bWarPlan) ? 200 : 100);
-						break;
-
-					default:
-						FAssert(false);
-						break;
-					}
-
-					if( AI_isDoStrategy(AI_STRATEGY_ALERT1) )
-					{
-						if( kLoopUnit.getUnitAIType(UNITAI_COLLATERAL) )
-						{
-							iUnitValue += 500;
-						}
-
-						if( kLoopUnit.getUnitAIType(UNITAI_CITY_DEFENSE) )
-						{
-							iUnitValue += (1000 * GC.getGame().AI_combatValue(eLoopUnit))/100;
-						}
-					}
-
-					if( AI_isDoStrategy(AI_STRATEGY_TURTLE) && iPathLength <= 1)
-					{
-						if( kLoopUnit.getUnitAIType(UNITAI_COLLATERAL) )
-						{
-							iUnitValue += 1000;
-						}
-
-						if( kLoopUnit.getUnitAIType(UNITAI_CITY_DEFENSE) )
-						{
-							iUnitValue += (2000 * GC.getGame().AI_combatValue(eLoopUnit))/100;
-						}
-					}
-
-					if( AI_isDoVictoryStrategy(AI_VICTORY_CONQUEST3) )
-					{
-						if( kLoopUnit.getUnitAIType(UNITAI_ATTACK_CITY) )
-						{
-							iUnitValue += (1500 * GC.getGame().AI_combatValue(eLoopUnit))/100;
-						}
-					}
-					else if( AI_isDoVictoryStrategy(AI_VICTORY_CONQUEST1) )
-					{
-						if( kLoopUnit.getUnitAIType(UNITAI_ATTACK_CITY) )
-						{
-							iUnitValue += (500 * GC.getGame().AI_combatValue(eLoopUnit))/100;
-						}
-					}
-
-					if (kLoopUnit.getUnitAIType(UNITAI_ASSAULT_SEA) && iCoastalCities > 0)
-					{
-						int iAssaultValue = 0;
-						UnitTypes eExistingUnit = NO_UNIT;
-						if (AI_bestAreaUnitAIValue(UNITAI_ASSAULT_SEA, NULL, &eExistingUnit) == 0)
-						{
-							iAssaultValue += 250;
-						}
-						else if( eExistingUnit != NO_UNIT )
-						{
-							iAssaultValue += 1000 * std::max(0, AI_unitImpassableCount(eLoopUnit) - AI_unitImpassableCount(eExistingUnit));
-
-							int iNewCapacity = kLoopUnit.getMoves() * kLoopUnit.getCargoSpace();
-							int iOldCapacity = GC.getUnitInfo(eExistingUnit).getMoves() * GC.getUnitInfo(eExistingUnit).getCargoSpace();
-
-							iAssaultValue += (800 * (iNewCapacity - iOldCapacity)) / std::max(1, iOldCapacity);
-						}
-
-						if (iAssaultValue > 0)
-						{
-							bool bIsAnyAssault = false;
-							foreach_(CvArea* pLoopArea, GC.getMap().areas())
-							{
-								if (AI_isPrimaryArea(pLoopArea))
-								{
-									if (pLoopArea->getAreaAIType(getTeam()) == AREAAI_ASSAULT)
-									{
-										bIsAnyAssault = true;
+										bHasSettler = true;
 										break;
 									}
 								}
 							}
-							if (bIsAnyAssault)
-							{
-								iUnitValue += iAssaultValue * 4;
-							}
-							else
-							{
-								iUnitValue += iAssaultValue;
-							}
+						}
+
+						if ( bHasSettler )
+						{
+							iUnitValue += 1200;
+						}
+						else
+						{
+							iUnitValue += 10000;
 						}
 					}
+					break;
 
-					if (iNavalValue > 0)
+				case UNITAI_WORKER:
+					iUnitValue += 800;
+					break;
+
+				case UNITAI_HEALER:
+					iUnitValue += 200;
+					iMilitaryValue += 200;
+
+				case UNITAI_HEALER_SEA:
+					iUnitValue += 200;
+					iMilitaryValue += 200;
+
+				case UNITAI_PROPERTY_CONTROL:
+					iUnitValue += 400;
+					iMilitaryValue += 50;
+
+				case UNITAI_PROPERTY_CONTROL_SEA:
+					iUnitValue += 350;
+					iMilitaryValue += 50;
+
+				case UNITAI_INVESTIGATOR:
+					iUnitValue += 400;
+
+				case UNITAI_INFILTRATOR:
+					iUnitValue += 200;
+					iMilitaryValue += 75;
+
+				case UNITAI_ESCORT:
+					iUnitValue += 100;
+					iMilitaryValue += 400;
+
+				case UNITAI_SEE_INVISIBLE:
+					iUnitValue += 400;
+					iMilitaryValue += 100;
+
+				case UNITAI_ATTACK:
+					iMilitaryValue += ((bWarPlan) ? 600 : 300);
+					iMilitaryValue += (AI_isDoStrategy(AI_STRATEGY_DAGGER ) ? 800 : 0);
+					iUnitValue += 100;
+					break;
+
+				case UNITAI_ATTACK_CITY:
+					iMilitaryValue += ((bWarPlan) ? 800 : 400);
+					iMilitaryValue += (AI_isDoStrategy(AI_STRATEGY_DAGGER ) ? 800 : 0);
+					if (kLoopUnit.getBombardRate() > 0)
 					{
-						if (getCapitalCity() != NULL)
-						{
-							// BBAI TODO: A little odd ... naval value is 0 if have no colonies.
-							iNavalValue *= 2 * (getNumCities() - getCapitalCity()->area()->getCitiesPerPlayer(getID()));
-							iNavalValue /= getNumCities();
+						iMilitaryValue += 200;
 
-							iUnitValue += iNavalValue;
-						}
-					}
-
-					if (AI_totalUnitAIs((UnitAITypes)(kLoopUnit.getDefaultUnitAIType())) == 0)
-					{
-						// do not give bonus to seagoing units if they are worthless
-						if (iUnitValue > 0)
+						if (AI_calculateTotalBombard(DOMAIN_LAND) == 0)
 						{
-							iUnitValue *= 2;
-						}
-
-						if (kLoopUnit.getDefaultUnitAIType() == UNITAI_EXPLORE)
-						{
-							if (pCapitalCity != NULL)
+							iMilitaryValue += 800;
+							if (AI_isDoStrategy(AI_STRATEGY_DAGGER))
 							{
-								iUnitValue += (AI_neededExplorers(pCapitalCity->area()) * 400);
-							}
-						}
-
-						if (kLoopUnit.getDefaultUnitAIType() == UNITAI_EXPLORE_SEA)
-						{
-							iUnitValue += 400;
-							iUnitValue += ((GC.getGame().countCivTeamsAlive() - iHasMetCount) * 200);
-						}
-					}
-
-					if (kLoopUnit.getUnitAIType(UNITAI_SETTLER_SEA))
-					{
-						if (getCapitalCity() != NULL)
-						{
-							UnitTypes eExistingUnit = NO_UNIT;
-							int iBestAreaValue = 0;
-							AI_getNumAreaCitySites(getCapitalCity()->getArea(), iBestAreaValue);
-
-							//Early Expansion by sea
-							if (AI_bestAreaUnitAIValue(UNITAI_SETTLER_SEA, NULL, &eExistingUnit) == 0)
-							{
-								CvArea* pWaterArea = getCapitalCity()->waterArea();
-								if (pWaterArea != NULL)
-								{
-									int iBestOtherValue = 0;
-									AI_getNumAdjacentAreaCitySites(pWaterArea->getID(), getCapitalCity()->getArea(), iBestOtherValue);
-
-									if (iBestAreaValue == 0)
-									{
-										iUnitValue += 2000;
-									}
-									else if (iBestAreaValue < iBestOtherValue)
-									{
-										iUnitValue += 1000;
-									}
-									else if (iBestOtherValue > 0)
-									{
-										iUnitValue += 500;
-									}
-								}
-							}
-							// Landlocked expansion over ocean
-							else if( eExistingUnit != NO_UNIT )
-							{
-								if( AI_unitImpassableCount(eLoopUnit) < AI_unitImpassableCount(eExistingUnit) )
-								{
-									if( iBestAreaValue < AI_getMinFoundValue() )
-									{
-										iUnitValue += (AI_isDoVictoryStrategy(AI_VICTORY_DOMINATION2) ? 2000 : 500);
-									}
-								}
+								iMilitaryValue += 1000;
 							}
 						}
 					}
+					iUnitValue += 100;
+					break;
 
-					if( iMilitaryValue > 0 )
+				case UNITAI_COLLATERAL:
+					iMilitaryValue += ((bWarPlan) ? 600 : 300);
+					break;
+
+				case UNITAI_PILLAGE:
+					iMilitaryValue += ((bWarPlan) ? 200 : 100);
+					break;
+
+				case UNITAI_PILLAGE_COUNTER:
+					iMilitaryValue += ((bWarPlan) ? 300 : 200);
+					break;
+
+				case UNITAI_RESERVE:
+					iMilitaryValue += ((bWarPlan) ? 200 : 100);
+					break;
+
+				case UNITAI_COUNTER:
+					iMilitaryValue += ((bWarPlan) ? 600 : 300);
+					iMilitaryValue += (AI_isDoStrategy(AI_STRATEGY_DAGGER ) ? 600 : 0);
+					break;
+
+				case UNITAI_PARADROP:
+					iMilitaryValue += ((bWarPlan) ? 600 : 300);
+					break;
+
+				case UNITAI_CITY_DEFENSE:
+					iMilitaryValue += ((bWarPlan) ? 800 : 400);
+					iMilitaryValue += ((!bCapitalAlone) ? 400 : 200);
+					iUnitValue += ((iHasMetCount > 0) ? 800 : 200);
+					break;
+
+				case UNITAI_CITY_COUNTER:
+					iMilitaryValue += ((bWarPlan) ? 800 : 400);
+					break;
+
+				case UNITAI_CITY_SPECIAL:
+					iMilitaryValue += ((bWarPlan) ? 800 : 400);
+					break;
+
+				case UNITAI_EXPLORE:
+					iUnitValue += ((bCapitalAlone) ? 100 : 200);
+					break;
+
+				case UNITAI_MISSIONARY:
+					iUnitValue += ((getStateReligion() != NO_RELIGION) ? 600 : 300);
+					break;
+
+				case UNITAI_PROPHET:
+				case UNITAI_ARTIST:
+				case UNITAI_SCIENTIST:
+				case UNITAI_GENERAL:
+				case UNITAI_GREAT_HUNTER:
+				case UNITAI_GREAT_ADMIRAL:
+				case UNITAI_MERCHANT:
+				case UNITAI_ENGINEER:
+					break;
+
+				case UNITAI_SPY:
+					iMilitaryValue += ((bWarPlan) ? 100 : 50);
+					break;
+
+				case UNITAI_ICBM:
+					iMilitaryValue += ((bWarPlan) ? 200 : 100);
+					break;
+
+				case UNITAI_WORKER_SEA:
+					if (iCoastalCities > 0)
 					{
-						if (iHasMetCount == 0)
-						{
-							iMilitaryValue /= 2;
-						}
-
-						if (bCapitalAlone)
-						{
-							iMilitaryValue *= 2;
-							iMilitaryValue /= 3;
-						}
-
-						// K-Mod
-						if (AI_isDoStrategy(AI_STRATEGY_GET_BETTER_UNITS))
-						{
-							iMilitaryValue *= 3;
-							iMilitaryValue /= 2;
-						}
-
-						iUnitValue += iMilitaryValue;
+						// note, workboat improvements are already counted in the improvement section
 					}
+					break;
 
-					if (iPathLength <= 1)
+				case UNITAI_SEE_INVISIBLE_SEA:
+					// BBAI TODO: Boost value for maps where Barb ships are pestering us
+					if (iCoastalCities > 0)
 					{
-						if (getTotalPopulation() > 5)
-						{
-							if (isWorldUnitClass((UnitClassTypes)iJ))
-							{
-								if (!(GC.getGame().isUnitClassMaxedOut((UnitClassTypes)iJ)))
-								{
-									bEnablesUnitWonder = true;
-								}
-							}
-						}
+						iMilitaryValue += 400;
 					}
+					iNavalValue += 100;
+					break;
 
-					iValue += iUnitValue;
+				case UNITAI_ATTACK_SEA:
+					// BBAI TODO: Boost value for maps where Barb ships are pestering us
+					if (iCoastalCities > 0)
+					{
+						iMilitaryValue += ((bWarPlan) ? 200 : 100);
+					}
+					iNavalValue += 100;
+					break;
+
+				case UNITAI_RESERVE_SEA:
+					if (iCoastalCities > 0)
+					{
+						iMilitaryValue += ((bWarPlan) ? 100 : 50);
+					}
+					iNavalValue += 100;
+					break;
+
+				case UNITAI_ESCORT_SEA:
+					if (iCoastalCities > 0)
+					{
+						iMilitaryValue += ((bWarPlan) ? 100 : 50);
+					}
+					iNavalValue += 100;
+					break;
+
+				case UNITAI_EXPLORE_SEA:
+					if (iCoastalCities > 0)
+					{
+						iUnitValue += ((bCapitalAlone) ? 1800 : 600);
+					}
+					break;
+
+				case UNITAI_ASSAULT_SEA:
+					if (iCoastalCities > 0)
+					{
+						iMilitaryValue += ((bWarPlan || bCapitalAlone) ? 400 : 200);
+					}
+					iNavalValue += 200;
+					break;
+
+				case UNITAI_SETTLER_SEA:
+					if (iCoastalCities > 0)
+					{
+						iUnitValue += ((bWarPlan || bCapitalAlone) ? 100 : 200);
+					}
+					iNavalValue += 200;
+					break;
+
+				case UNITAI_MISSIONARY_SEA:
+					if (iCoastalCities > 0)
+					{
+						iUnitValue += 100;
+					}
+					break;
+
+				case UNITAI_SPY_SEA:
+					if (iCoastalCities > 0)
+					{
+						iMilitaryValue += 100;
+					}
+					break;
+
+				case UNITAI_CARRIER_SEA:
+					if (iCoastalCities > 0)
+					{
+						iMilitaryValue += ((bWarPlan) ? 100 : 50);
+					}
+					break;
+
+				case UNITAI_MISSILE_CARRIER_SEA:
+					if (iCoastalCities > 0)
+					{
+						iMilitaryValue += ((bWarPlan) ? 100 : 50);
+					}
+					break;
+
+				case UNITAI_PIRATE_SEA:
+					if (iCoastalCities > 0)
+					{
+						iMilitaryValue += 100;
+					}
+					iNavalValue += 100;
+					break;
+
+				case UNITAI_ATTACK_AIR:
+					iMilitaryValue += ((bWarPlan) ? 1200 : 800);
+					break;
+
+				case UNITAI_DEFENSE_AIR:
+					iMilitaryValue += ((bWarPlan) ? 1200 : 800);
+					break;
+
+				case UNITAI_CARRIER_AIR:
+					if (iCoastalCities > 0)
+					{
+						iMilitaryValue += ((bWarPlan) ? 200 : 100);
+					}
+					iNavalValue += 400;
+					break;
+
+				case UNITAI_MISSILE_AIR:
+					iMilitaryValue += ((bWarPlan) ? 200 : 100);
+					break;
+
+				default:
+					FAssert(false);
+					break;
 				}
+
+				if( AI_isDoStrategy(AI_STRATEGY_ALERT1) )
+				{
+					if( kLoopUnit.getUnitAIType(UNITAI_COLLATERAL) )
+					{
+						iUnitValue += 500;
+					}
+
+					if( kLoopUnit.getUnitAIType(UNITAI_CITY_DEFENSE) )
+					{
+						iUnitValue += (1000 * GC.getGame().AI_combatValue(eLoopUnit))/100;
+					}
+				}
+
+				if( AI_isDoStrategy(AI_STRATEGY_TURTLE) && iPathLength <= 1)
+				{
+					if( kLoopUnit.getUnitAIType(UNITAI_COLLATERAL) )
+					{
+						iUnitValue += 1000;
+					}
+
+					if( kLoopUnit.getUnitAIType(UNITAI_CITY_DEFENSE) )
+					{
+						iUnitValue += (2000 * GC.getGame().AI_combatValue(eLoopUnit))/100;
+					}
+				}
+
+				if( AI_isDoVictoryStrategy(AI_VICTORY_CONQUEST3) )
+				{
+					if( kLoopUnit.getUnitAIType(UNITAI_ATTACK_CITY) )
+					{
+						iUnitValue += (1500 * GC.getGame().AI_combatValue(eLoopUnit))/100;
+					}
+				}
+				else if( AI_isDoVictoryStrategy(AI_VICTORY_CONQUEST1) )
+				{
+					if( kLoopUnit.getUnitAIType(UNITAI_ATTACK_CITY) )
+					{
+						iUnitValue += (500 * GC.getGame().AI_combatValue(eLoopUnit))/100;
+					}
+				}
+
+				if (kLoopUnit.getUnitAIType(UNITAI_ASSAULT_SEA) && iCoastalCities > 0)
+				{
+					int iAssaultValue = 0;
+					UnitTypes eExistingUnit = NO_UNIT;
+					if (AI_bestAreaUnitAIValue(UNITAI_ASSAULT_SEA, NULL, &eExistingUnit) == 0)
+					{
+						iAssaultValue += 250;
+					}
+					else if( eExistingUnit != NO_UNIT )
+					{
+						iAssaultValue += 1000 * std::max(0, AI_unitImpassableCount(eLoopUnit) - AI_unitImpassableCount(eExistingUnit));
+
+						int iNewCapacity = kLoopUnit.getMoves() * kLoopUnit.getCargoSpace();
+						int iOldCapacity = GC.getUnitInfo(eExistingUnit).getMoves() * GC.getUnitInfo(eExistingUnit).getCargoSpace();
+
+						iAssaultValue += (800 * (iNewCapacity - iOldCapacity)) / std::max(1, iOldCapacity);
+					}
+
+					if (iAssaultValue > 0)
+					{
+						bool bIsAnyAssault = false;
+						foreach_(CvArea* pLoopArea, GC.getMap().areas())
+						{
+							if (AI_isPrimaryArea(pLoopArea))
+							{
+								if (pLoopArea->getAreaAIType(getTeam()) == AREAAI_ASSAULT)
+								{
+									bIsAnyAssault = true;
+									break;
+								}
+							}
+						}
+						if (bIsAnyAssault)
+						{
+							iUnitValue += iAssaultValue * 4;
+						}
+						else
+						{
+							iUnitValue += iAssaultValue;
+						}
+					}
+				}
+
+				if (iNavalValue > 0)
+				{
+					if (getCapitalCity() != NULL)
+					{
+						// BBAI TODO: A little odd ... naval value is 0 if have no colonies.
+						iNavalValue *= 2 * (getNumCities() - getCapitalCity()->area()->getCitiesPerPlayer(getID()));
+						iNavalValue /= getNumCities();
+
+						iUnitValue += iNavalValue;
+					}
+				}
+
+				if (AI_totalUnitAIs((UnitAITypes)(kLoopUnit.getDefaultUnitAIType())) == 0)
+				{
+					// do not give bonus to seagoing units if they are worthless
+					if (iUnitValue > 0)
+					{
+						iUnitValue *= 2;
+					}
+
+					if (kLoopUnit.getDefaultUnitAIType() == UNITAI_EXPLORE)
+					{
+						if (pCapitalCity != NULL)
+						{
+							iUnitValue += (AI_neededExplorers(pCapitalCity->area()) * 400);
+						}
+					}
+
+					if (kLoopUnit.getDefaultUnitAIType() == UNITAI_EXPLORE_SEA)
+					{
+						iUnitValue += 400;
+						iUnitValue += ((GC.getGame().countCivTeamsAlive() - iHasMetCount) * 200);
+					}
+				}
+
+				if (kLoopUnit.getUnitAIType(UNITAI_SETTLER_SEA))
+				{
+					if (getCapitalCity() != NULL)
+					{
+						UnitTypes eExistingUnit = NO_UNIT;
+						int iBestAreaValue = 0;
+						AI_getNumAreaCitySites(getCapitalCity()->getArea(), iBestAreaValue);
+
+						//Early Expansion by sea
+						if (AI_bestAreaUnitAIValue(UNITAI_SETTLER_SEA, NULL, &eExistingUnit) == 0)
+						{
+							CvArea* pWaterArea = getCapitalCity()->waterArea();
+							if (pWaterArea != NULL)
+							{
+								int iBestOtherValue = 0;
+								AI_getNumAdjacentAreaCitySites(pWaterArea->getID(), getCapitalCity()->getArea(), iBestOtherValue);
+
+								if (iBestAreaValue == 0)
+								{
+									iUnitValue += 2000;
+								}
+								else if (iBestAreaValue < iBestOtherValue)
+								{
+									iUnitValue += 1000;
+								}
+								else if (iBestOtherValue > 0)
+								{
+									iUnitValue += 500;
+								}
+							}
+						}
+						// Landlocked expansion over ocean
+						else if( eExistingUnit != NO_UNIT )
+						{
+							if( AI_unitImpassableCount(eLoopUnit) < AI_unitImpassableCount(eExistingUnit) )
+							{
+								if( iBestAreaValue < AI_getMinFoundValue() )
+								{
+									iUnitValue += (AI_isDoVictoryStrategy(AI_VICTORY_DOMINATION2) ? 2000 : 500);
+								}
+							}
+						}
+					}
+				}
+
+				if( iMilitaryValue > 0 )
+				{
+					if (iHasMetCount == 0)
+					{
+						iMilitaryValue /= 2;
+					}
+
+					if (bCapitalAlone)
+					{
+						iMilitaryValue *= 2;
+						iMilitaryValue /= 3;
+					}
+
+					// K-Mod
+					if (AI_isDoStrategy(AI_STRATEGY_GET_BETTER_UNITS))
+					{
+						iMilitaryValue *= 3;
+						iMilitaryValue /= 2;
+					}
+
+					iUnitValue += iMilitaryValue;
+				}
+
+				if (iPathLength <= 1 && getTotalPopulation() > 5 && isWorldUnitClass(eLoopUnit)
+				&& !GC.getGame().isUnitClassMaxedOut((UnitClassTypes)(kLoopUnit.getUnitClassType())))
+				{
+					bEnablesUnitWonder = true;
+				}
+				iValue += iUnitValue;
 			}
 		}
-/************************************************************************************************/
-/* Afforess	                  Start		 6/11/11                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 		if (GC.getTechInfo(eTech).getUnitClassStrengthChange(iJ) != 0)
 		{
 			int iUnitValue = GC.getTechInfo(eTech).getUnitClassStrengthChange(iJ) * getUnitClassCountPlusMaking((UnitClassTypes)iJ) * 20;
@@ -8006,13 +7972,10 @@ int CvPlayerAI::AI_techUnitValue( TechTypes eTech, int iPathLength, bool &bEnabl
 			}
 			iValue += iUnitValue;
 		}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	}
-
 	return iValue;
 }
+
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
@@ -8023,11 +7986,6 @@ void CvPlayerAI::AI_chooseFreeTech()
 
 	clearResearchQueue();
 
-/************************************************************************************************/
-/* Afforess	                  Start		 04/29/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	if (GC.getUSE_AI_BESTTECH_CALLBACK())
 	{
 		eBestTech = Cy::call<TechTypes>(PYGameModule, "AI_chooseTech", Cy::Args() << getID() << true);
@@ -8036,9 +7994,6 @@ void CvPlayerAI::AI_chooseFreeTech()
 	{
 		eBestTech = NO_TECH;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	if (eBestTech == NO_TECH)
 	{

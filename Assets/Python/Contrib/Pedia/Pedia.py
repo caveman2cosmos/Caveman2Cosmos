@@ -481,7 +481,7 @@ class Pedia:
 			elif (iDefaultUnitAIType in aListAI) or (CvUnitInfo.getSpecialUnitType() == GC.getInfoTypeForString("SPECIALUNIT_CAPTIVE")):
 				iCategory = self.PEDIA_UNITS_2
 				szSubCat = self.mapSubCat.get(iCategory)[3]
-			elif GC.getUnitClassInfo(CvUnitInfo.getUnitClassType()).getMaxGlobalInstances() == 1: ## World Unit
+			elif CvUnitInfo.getMaxGlobalInstances() == 1: ## World Unit
 				iCategory = self.PEDIA_UNITS_2
 				szSubCat = self.mapSubCat.get(iCategory)[0]
 			elif iBonusClassType == GC.getInfoTypeForString("BONUSCLASS_CULTURE"):
@@ -784,7 +784,7 @@ class Pedia:
 					bValid = True
 				else:
 					continue
-			elif GC.getUnitClassInfo(CvUnitInfo.getUnitClassType()).getMaxGlobalInstances() != -1:
+			elif CvUnitInfo.getMaxGlobalInstances() != -1:
 				if bWorld:
 					bValid = True
 				else:

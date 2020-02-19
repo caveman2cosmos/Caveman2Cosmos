@@ -5746,14 +5746,13 @@ bool CvGame::isUnitClassMaxedOut(UnitClassTypes eIndex, int iExtra) const
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < GC.getNumUnitClassInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
-	if (!isWorldUnitClass(eIndex))
+	if (!isWorldUnitClass((UnitTypes)GC.getUnitClassInfo(eIndex).getDefaultUnitIndex()))
 	{
 		return false;
 	}
+	FAssertMsg(getUnitClassCreatedCount(eIndex) <= GC.getUnitInfo((UnitTypes)GC.getUnitClassInfo(eIndex).getDefaultUnitIndex()).getMaxGlobalInstances(), "Index is expected to be within maximum bounds (invalid Index)");
 
-	FAssertMsg(getUnitClassCreatedCount(eIndex) <= GC.getUnitClassInfo(eIndex).getMaxGlobalInstances(), "Index is expected to be within maximum bounds (invalid Index)");
-
-	return ((getUnitClassCreatedCount(eIndex) + iExtra) >= GC.getUnitClassInfo(eIndex).getMaxGlobalInstances());
+	return ((getUnitClassCreatedCount(eIndex) + iExtra) >= GC.getUnitInfo((UnitTypes)GC.getUnitClassInfo(eIndex).getDefaultUnitIndex()).getMaxGlobalInstances());
 }
 
 
@@ -7966,7 +7965,7 @@ namespace {
 	{
 		const UnitCombatTypes eHero = (UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_HERO");
 		return unitInfo.hasUnitCombat(eHero)
-			|| GC.getUnitClassInfo(unitClassType).getMaxGlobalInstances() > 0
+			|| unitInfo.getMaxGlobalInstances() > 0
 			|| GC.getUnitClassInfo(unitClassType).getMaxPlayerInstances() > 0
 			/*|| unitInfo.getMaxTeamInstances() > 0*/;
 	}

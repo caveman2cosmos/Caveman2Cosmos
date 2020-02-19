@@ -659,8 +659,7 @@ class Revolution:
 
 		# Do reinforcement
 		if( self.LOG_DEBUG and not pRevPlayer.isBarbarian() ) : CvUtil.pyPrint("  Revolt - Reinforcing rebel %s outside %s (%d, %d, owned by %s)"%(pRevPlayer.getCivilizationDescription(0),pCity.getName(),revIdx,localRevIdx,owner.getCivilizationDescription(0)))
-		spawnableUnits = RevUtils.getUprisingUnitTypes( pCity, pRevPlayer, True )
-		#[iWorker,iBestDefender,iCounter,iAttack] = RevUtils.getHandoverUnitTypes( pCity, pRevPlayer )
+		spawnableUnits = RevUtils.getUprisingUnitTypes(pCity)
 
 		if( len(spawnableUnits) < 1 ) :
 			if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - ERROR!!! No rev units possible in %s"%(pCity.getName()))
@@ -5384,7 +5383,7 @@ class Revolution:
 							if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Moving owner's units")
 							RevUtils.clearOutCity( pCity, pPlayer, pRevPlayer )
 
-						[iWorker,iBestDefender,iCounter,iAttack] = RevUtils.getHandoverUnitTypes( pCity, pRevPlayer, pPlayer )
+						[iWorker, iBestDefender, iCounter, iAttack] = RevUtils.getHandoverUnitTypes(pCity)
 
 						RevData.updateCityVal(pCity, 'RevolutionCiv', -1 )
 
@@ -5576,7 +5575,7 @@ class Revolution:
 
 							if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Acquiring %s, pop %d"%(pCity.getName(),pCity.getPopulation()))
 
-							[iWorker,iBestDefender,iCounter,iAttack] = RevUtils.getHandoverUnitTypes( pCity, joinPlayer, joinPlayer )
+							[iWorker, iBestDefender, iCounter, iAttack] = RevUtils.getHandoverUnitTypes(pCity)
 
 							RevData.updateCityVal(pCity, 'RevolutionCiv', -1 )
 
@@ -5892,7 +5891,7 @@ class Revolution:
 
 				if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Acquiring %s"%(pCity.getName()))
 
-				[iWorker,iBestDefender,iCounter,iAttack] = RevUtils.getHandoverUnitTypes( pCity, joinPlayer, joinPlayer )
+				[iWorker, iBestDefender, iCounter, iAttack] = RevUtils.getHandoverUnitTypes(pCity)
 
 				RevData.updateCityVal(pCity, 'RevolutionCiv', -1 )
 
@@ -6306,8 +6305,8 @@ class Revolution:
 			if self.LOG_DEBUG:
 				CvUtil.pyPrint("  Revolt - In %s, with rev idx %d (%d local)"%(pCity.getName(),revIdx,localRevIdx))
 
-			spawnableUnits = RevUtils.getUprisingUnitTypes(pCity, pRevPlayer, bIsJoinWar)
-			[iWorker,iBestDefender,iCounter,iAttack] = RevUtils.getHandoverUnitTypes(pCity, pRevPlayer, pPlayer)
+			spawnableUnits = RevUtils.getUprisingUnitTypes(pCity)
+			[iWorker, iBestDefender, iCounter, iAttack] = RevUtils.getHandoverUnitTypes(pCity)
 
 			if not spawnableUnits:
 				print "[ERROR] No rev units possible in " + pCity.getName()

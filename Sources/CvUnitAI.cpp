@@ -17363,7 +17363,7 @@ namespace {
 	// Helper function to determine if a unit looks legendaryish
 	bool isLegendary(const CvUnit* unit)
 	{
-		const CvUnitClassInfo& unitInfo = GC.getUnitClassInfo(unit->getUnitClassType());
+		const CvUnitInfo& unitInfo = GC.getUnitInfo(unit->getUnitType());
 		return (unitInfo.getMaxGlobalInstances() > 0 && unitInfo.getMaxGlobalInstances() <= 3)
 			|| (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS) && unit->qualityRank() > 8);
 	}
@@ -17400,7 +17400,7 @@ bool CvUnitAI::AI_leadLegend()
 			iCombatStrength *= 10 + (pLoopUnit->getExperience() * 2);
 			iCombatStrength /= 15;
 
-			iCombatStrength *= 10 - GC.getUnitClassInfo(pLoopUnit->getUnitClassType()).getMaxGlobalInstances();
+			iCombatStrength *= 10 - GC.getUnitInfo(pLoopUnit->getUnitType()).getMaxGlobalInstances();
 			iCombatStrength /= 3;
 
 			if (iCombatStrength > iBestStrength)
@@ -17503,8 +17503,8 @@ bool CvUnitAI::AI_lead(std::vector<UnitAITypes>& aeUnitAITypes)
 				bValid = false;
 				bLegend = false;
 
-				if (GC.getUnitClassInfo(pLoopUnit->getUnitClassType()).getMaxGlobalInstances() > 0
-				&& GC.getUnitClassInfo(pLoopUnit->getUnitClassType()).getMaxGlobalInstances() < 7)
+				if (GC.getUnitInfo(pLoopUnit->getUnitType()).getMaxGlobalInstances() > 0
+				&& GC.getUnitInfo(pLoopUnit->getUnitType()).getMaxGlobalInstances() < 7)
 				{
 					if (canLead(pLoopUnit->plot(), pLoopUnit->getID()) > 0)
 					{
@@ -17545,7 +17545,7 @@ bool CvUnitAI::AI_lead(std::vector<UnitAITypes>& aeUnitAITypes)
 
 									if(bLegend)
 									{
-										iCombatStrength *= 10 - GC.getUnitClassInfo(pLoopUnit->getUnitClassType()).getMaxGlobalInstances();
+										iCombatStrength *= 10 - GC.getUnitInfo(pLoopUnit->getUnitType()).getMaxGlobalInstances();
 										iCombatStrength /= 3;
 									}
 

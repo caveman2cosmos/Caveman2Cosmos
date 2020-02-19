@@ -2120,7 +2120,7 @@ class CvEventManager:
 		'''
 		## Hero Movie (Not implemented yet)
 		iPlayer = CyUnit.getOwner()
-		if not self.bNetworkMP and iPlayer == GAME.getActivePlayer() and isWorldUnitClass(CyUnit.getUnitClassType()):
+		if not self.bNetworkMP and iPlayer == GAME.getActivePlayer() and isWorldUnitClass(iUnit):
 			popupInfo = CyPopupInfo()
 			popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
 			popupInfo.setData1(iUnit)

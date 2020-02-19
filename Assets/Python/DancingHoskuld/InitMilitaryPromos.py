@@ -49,8 +49,7 @@ def onUnitBuilt( argsList):
 	if pPlayer.isCivic(giVolArmyCivic):
 		iMilitaryCivic = iMilitaryCivic + 1
 	if iMilitaryCivic > 0:
-		#~ if not (unit.getUnitType() in gaiSettlerWorkerList) and isWorldUnitClass(unit.getUnitClassType()) == False:
-		if not (unit.getUnitCombatType() in gaiSettlerWorkerCombatList) and isWorldUnitClass(unit.getUnitClassType()) == False:
+		if not (unit.getUnitCombatType() in gaiSettlerWorkerCombatList) and isWorldUnitClass(unit.getUnitType()) == False:
 			iX = city.getX()
 			iY = city.getY()
 

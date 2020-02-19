@@ -1812,6 +1812,7 @@ public:
 	CvUnitInfo();
 	virtual ~CvUnitInfo();
 
+	int getMaxGlobalInstances() const;			// Exposed to Python
 	int getAIWeight() const;					// Exposed to Python
 	int getProductionCost() const;				// Exposed to Python
 	int getHurryCostModifier() const;			// Exposed to Python
@@ -1982,11 +1983,6 @@ public:
 	//ls612: Can't enter non-Owned cities
 	bool isNoNonOwnedEntry() const;
 
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	void setPowerValue(int iNewValue);
 	int getPrereqVicinityBonus() const;
 	bool isRequiresStateReligionInCity() const;
@@ -2348,6 +2344,7 @@ public:
 	BoolExpr* getTrainCondition();
 
 protected:
+	int m_iMaxGlobalInstances;
 	std::vector<int> m_aiUpgradeUnitClassTypes;
 	bool* m_pbPassableRouteNeeded;
 	int* m_piPrereqOrVicinityBonuses;
@@ -2374,11 +2371,6 @@ protected:
 	BoolExpr* m_pExprTrainCondition;
 
 public:
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-
-
 /************************************************************************************************/
 /* DCM									 04/19/09								Johny Smith  */
 /************************************************************************************************/
@@ -3576,7 +3568,6 @@ public:
 	CvUnitClassInfo();
 	virtual ~CvUnitClassInfo();
 
-	int getMaxGlobalInstances() const;				// Exposed to Python
 	int getMaxPlayerInstances() const;				// Exposed to Python
 	//TB Unlimited National Units Mod
 	bool isUnlimitedException() const;				// Exposed to Python
@@ -3601,22 +3592,13 @@ public:
 //----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
 
-	int m_iMaxGlobalInstances;
 	int m_iMaxPlayerInstances;
 	//TB Unlimited National Units Mod
 	bool m_bUnlimitedException;
 	//TB Unlimited National Units End
 	int m_iInstanceCostModifier;
 	int m_iDefaultUnitIndex;
-/************************************************************************************************/
-/* Afforess					  Start		 12/23/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	bool m_bUnique;
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

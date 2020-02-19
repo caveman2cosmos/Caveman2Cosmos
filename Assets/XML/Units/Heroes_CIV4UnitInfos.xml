@@ -10,6 +10,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_HUITZILOPOCHTLI</Class>
 			<Type>UNIT_HUITZILOPOCHTLI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -121,6 +122,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ITZCOATL</Class>
 			<Type>UNIT_ITZCOATL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -210,6 +212,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_MANCO_CAPAC</Class>
 			<Type>UNIT_MANCO_CAPAC</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -310,6 +313,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_TUPAC_YUPANQUI</Class>
 			<Type>UNIT_TUPAC_YUPANQUI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_THROWING</SubCombatType>
@@ -402,6 +406,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_THOMAS_JEFFERSON</Class>
 			<Type>UNIT_THOMAS_JEFFERSON</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DIPLOMAT</SubCombatType>
@@ -519,6 +524,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_PATTON</Class>
 			<Type>UNIT_PATTON</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TRACKED</SubCombatType>
@@ -607,6 +613,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ROMULUS</Class>
 			<Type>UNIT_ROMULUS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DIPLOMAT</SubCombatType>
@@ -710,6 +717,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SCIPIO_AFRICANUS</Class>
 			<Type>UNIT_SCIPIO_AFRICANUS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -834,6 +842,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ODYSSEUS</Class>
 			<Type>UNIT_ODYSSEUS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -974,6 +983,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_KHAEMWASET</Class>
 			<Type>UNIT_KHAEMWASET</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -1105,6 +1115,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_THUTMOSE_III</Class>
 			<Type>UNIT_THUTMOSE_III</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -1216,6 +1227,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_EL_CID</Class>
 			<Type>UNIT_EL_CID</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -1323,6 +1335,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_HERNAN_CORTES</Class>
 			<Type>UNIT_HERNAN_CORTES</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -1442,6 +1455,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_HENRI_IV</Class>
 			<Type>UNIT_HENRI_IV</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -1574,6 +1588,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_JOAN_OF_ARC</Class>
 			<Type>UNIT_JOAN_OF_ARC</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -1671,6 +1686,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_LORD_NELSON</Class>
 			<Type>UNIT_LORD_NELSON</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -1799,6 +1815,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ROBIN_HOOD</Class>
 			<Type>UNIT_ROBIN_HOOD</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -1912,6 +1929,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_FREDERICK_BARBAROSSA</Class>
 			<Type>UNIT_FREDERICK_BARBAROSSA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -2049,6 +2067,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ERWIN_ROMMEL</Class>
 			<Type>UNIT_ERWIN_ROMMEL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TRACKED</SubCombatType>
@@ -2143,6 +2162,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_TROTSKY</Class>
 			<Type>UNIT_TROTSKY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -2261,6 +2281,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_IVAN_IV</Class>
 			<Type>UNIT_IVAN_IV</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -2368,6 +2389,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_BAIBARS</Class>
 			<Type>UNIT_BAIBARS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -2498,6 +2520,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_KHALID</Class>
 			<Type>UNIT_KHALID</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -2593,6 +2616,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ROSTAM</Class>
 			<Type>UNIT_ROSTAM</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -2719,6 +2743,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SHAPUR</Class>
 			<Type>UNIT_SHAPUR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -2844,6 +2869,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_CHANDRAGUPTA_MAURYA</Class>
 			<Type>UNIT_CHANDRAGUPTA_MAURYA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -2966,6 +2992,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_AURANGZEB</Class>
 			<Type>UNIT_AURANGZEB</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -3099,6 +3126,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ZHENG_HE</Class>
 			<Type>UNIT_ZHENG_HE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -3226,6 +3254,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_GUAN_YU</Class>
 			<Type>UNIT_GUAN_YU</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -3359,6 +3388,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_HIDEYOSHI</Class>
 			<Type>UNIT_HIDEYOSHI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -3495,6 +3525,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_YAMAMOTO</Class>
 			<Type>UNIT_YAMAMOTO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -3624,6 +3655,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_OGODAI</Class>
 			<Type>UNIT_OGODAI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -3760,6 +3792,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SUBOTEI</Class>
 			<Type>UNIT_SUBOTEI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -3891,6 +3924,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SUNDIATA_KEITA</Class>
 			<Type>UNIT_SUNDIATA_KEITA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -4028,6 +4062,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_MANSA_SAKURA</Class>
 			<Type>UNIT_MANSA_SAKURA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -4156,6 +4191,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_DIDO</Class>
 			<Type>UNIT_DIDO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -4285,6 +4321,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_HAMILCAR</Class>
 			<Type>UNIT_HAMILCAR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -4391,6 +4428,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_MERLIN</Class>
 			<Type>UNIT_MERLIN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -4536,6 +4574,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ARTHUR</Class>
 			<Type>UNIT_ARTHUR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -4666,6 +4705,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_GUSTAVUS_ADOLPHUS</Class>
 			<Type>UNIT_GUSTAVUS_ADOLPHUS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -4789,6 +4829,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_CANUTE</Class>
 			<Type>UNIT_CANUTE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -4916,6 +4957,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_OSMAN</Class>
 			<Type>UNIT_OSMAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -5052,6 +5094,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_BARBAROSSA</Class>
 			<Type>UNIT_BARBAROSSA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -5179,6 +5222,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_GWANGGAETO</Class>
 			<Type>UNIT_GWANGGAETO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -5315,6 +5359,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_YI_SUN_SIN</Class>
 			<Type>UNIT_YI_SUN_SIN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -5440,6 +5485,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_NELSON_MANDELA</Class>
 			<Type>UNIT_NELSON_MANDELA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DIPLOMAT</SubCombatType>
@@ -5549,6 +5595,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_NDLELA</Class>
 			<Type>UNIT_NDLELA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -5675,6 +5722,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_POCAHONTAS</Class>
 			<Type>UNIT_POCAHONTAS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_RECON</SubCombatType>
@@ -5803,6 +5851,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_HIAWATHA</Class>
 			<Type>UNIT_HIAWATHA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -5926,6 +5975,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_KUKULCAN</Class>
 			<Type>UNIT_KUKULCAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -6065,6 +6115,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_TECUN_UMAN</Class>
 			<Type>UNIT_TECUN_UMAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -6189,6 +6240,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_BASIL_II</Class>
 			<Type>UNIT_BASIL_II</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -6326,6 +6378,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_CONSTANTINE_XI</Class>
 			<Type>UNIT_CONSTANTINE_XI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -6456,6 +6509,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_HENRY</Class>
 			<Type>UNIT_HENRY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -6595,6 +6649,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_AFONSO_HENRIQUES</Class>
 			<Type>UNIT_AFONSO_HENRIQUES</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -6724,6 +6779,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_MICHIEL_DE_RUYTER</Class>
 			<Type>UNIT_MICHIEL_DE_RUYTER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -6855,6 +6911,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_PIER</Class>
 			<Type>UNIT_PIER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -6982,6 +7039,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_NEDBUCHADNEZZAR</Class>
 			<Type>UNIT_NEDBUCHADNEZZAR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -7110,6 +7168,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_NABOPOLASSAR</Class>
 			<Type>UNIT_NABOPOLASSAR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -7237,6 +7296,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ENKIDU</Class>
 			<Type>UNIT_ENKIDU</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -7346,6 +7406,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SARGON</Class>
 			<Type>UNIT_SARGON</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -7450,6 +7511,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_JAYAVARMAN_II</Class>
 			<Type>UNIT_JAYAVARMAN_II</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -7560,6 +7622,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_JAYAVARMAN_VII</Class>
 			<Type>UNIT_JAYAVARMAN_VII</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -7665,6 +7728,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_EZANA</Class>
 			<Type>UNIT_EZANA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -7769,6 +7833,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_MENELIK</Class>
 			<Type>UNIT_MENELIK</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -7860,6 +7925,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_MAUI</Class>
 			<Type>UNIT_MAUI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -7980,6 +8046,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_TUITATUI</Class>
 			<Type>UNIT_TUITATUI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -8070,6 +8137,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_TIRADENTES</Class>
 			<Type>UNIT_TIRADENTES</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -8218,6 +8286,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_LUIS</Class>
 			<Type>UNIT_LUIS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -8354,6 +8423,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ANTONIO</Class>
 			<Type>UNIT_ANTONIO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -8454,6 +8524,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_FRANCISCO</Class>
 			<Type>UNIT_FRANCISCO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -8580,6 +8651,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SOLOMON</Class>
 			<Type>UNIT_SOLOMON</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DIPLOMAT</SubCombatType>
@@ -8729,6 +8801,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_MACCABEUS</Class>
 			<Type>UNIT_MACCABEUS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -8857,6 +8930,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_JADWIGA</Class>
 			<Type>UNIT_JADWIGA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -9002,6 +9076,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_CASIMIR</Class>
 			<Type>UNIT_CASIMIR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -9129,6 +9204,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ULUGH_BEG</Class>
 			<Type>UNIT_ULUGH_BEG</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -9277,6 +9353,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SHAH_RUKH</Class>
 			<Type>UNIT_SHAH_RUKH</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -9409,6 +9486,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_GESAR</Class>
 			<Type>UNIT_GESAR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -9556,6 +9634,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_TRISONG_DETSEN</Class>
 			<Type>UNIT_TRISONG_DETSEN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -9680,6 +9759,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_QUANG_TRUNG</Class>
 			<Type>UNIT_QUANG_TRUNG</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -9830,6 +9910,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_TRUNG_SISTERS</Class>
 			<Type>UNIT_TRUNG_SISTERS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -9964,6 +10045,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_AROK</Class>
 			<Type>UNIT_AROK</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -10107,6 +10189,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_DIPONEGORO</Class>
 			<Type>UNIT_DIPONEGORO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -10205,6 +10288,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_TAHARQA</Class>
 			<Type>UNIT_TAHARQA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -10332,6 +10416,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SHEHE_MVITA</Class>
 			<Type>UNIT_SHEHE_MVITA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -10472,6 +10557,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SINBAD</Class>
 			<Type>UNIT_SINBAD</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -10608,6 +10694,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_CHARLES_V</Class>
 			<Type>UNIT_CHARLES_V</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -10747,6 +10834,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_EUGENE</Class>
 			<Type>UNIT_EUGENE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -10882,6 +10970,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_LABARNA</Class>
 			<Type>UNIT_LABARNA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -11022,6 +11111,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_MURSILI</Class>
 			<Type>UNIT_MURSILI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -11157,6 +11247,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_IPARHAN</Class>
 			<Type>UNIT_IPARHAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -11297,6 +11388,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_BILGE_KHAN</Class>
 			<Type>UNIT_BILGE_KHAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -11431,6 +11523,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_BAAL_ESER</Class>
 			<Type>UNIT_BAAL_ESER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -11573,6 +11666,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ITHOBAAL</Class>
 			<Type>UNIT_ITHOBAAL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -11701,6 +11795,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ARTHUR_CURRIE</Class>
 			<Type>UNIT_ARTHUR_CURRIE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -11846,6 +11941,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ISAAC_BROCK</Class>
 			<Type>UNIT_ISAAC_BROCK</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_THROWING</SubCombatType>
@@ -11970,6 +12066,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_HENRY_PARKES</Class>
 			<Type>UNIT_HENRY_PARKES</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -12110,6 +12207,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_JOHN_MONASH</Class>
 			<Type>UNIT_JOHN_MONASH</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -12239,6 +12337,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_CHULALONGKORN</Class>
 			<Type>UNIT_CHULALONGKORN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -12379,6 +12478,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SURIYOTHAI</Class>
 			<Type>UNIT_SURIYOTHAI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -12510,6 +12610,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_KARIKALA_CHOLA</Class>
 			<Type>UNIT_KARIKALA_CHOLA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -12621,6 +12722,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_RAJARAJA_CHOLA</Class>
 			<Type>UNIT_RAJARAJA_CHOLA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -12748,6 +12850,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_BAYAJIDDA</Class>
 			<Type>UNIT_BAYAJIDDA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -12891,6 +12994,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_AMINA</Class>
 			<Type>UNIT_AMINA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -13015,6 +13119,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_NIMI</Class>
 			<Type>UNIT_NIMI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_THROWING</SubCombatType>
@@ -13157,6 +13262,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_PEDRO</Class>
 			<Type>UNIT_PEDRO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -13284,6 +13390,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_LORENZO_DE_MEDICI</Class>
 			<Type>UNIT_LORENZO_DE_MEDICI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -13424,6 +13531,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ENRICO_DANDOLO</Class>
 			<Type>UNIT_ENRICO_DANDOLO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -13547,6 +13655,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_YUSUF</Class>
 			<Type>UNIT_YUSUF</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -13696,6 +13805,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_KAHINA</Class>
 			<Type>UNIT_KAHINA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -13823,6 +13933,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ASHURBANIPAL</Class>
 			<Type>UNIT_ASHURBANIPAL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -13961,6 +14072,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SEMIRAMIS</Class>
 			<Type>UNIT_SEMIRAMIS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -14085,6 +14197,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_STEPHEN_I</Class>
 			<Type>UNIT_STEPHEN_I</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -14225,6 +14338,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ARPAD</Class>
 			<Type>UNIT_ARPAD</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -14360,6 +14474,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_DAEDALUS</Class>
 			<Type>UNIT_DAEDALUS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -14502,6 +14617,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_THESEUS</Class>
 			<Type>UNIT_THESEUS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -14630,6 +14746,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_HAYK</Class>
 			<Type>UNIT_HAYK</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -14774,6 +14891,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_LEO_I</Class>
 			<Type>UNIT_LEO_I</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -14902,6 +15020,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ALFRED</Class>
 			<Type>UNIT_ALFRED</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -15018,6 +15137,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ALP_ARSLAN</Class>
 			<Type>UNIT_ALP_ARSLAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -15163,6 +15283,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_AGUEYBANA</Class>
 			<Type>UNIT_AGUEYBANA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -15280,6 +15401,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ABAOJI</Class>
 			<Type>UNIT_ABAOJI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -15414,6 +15536,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SPARTACUS</Class>
 			<Type>UNIT_SPARTACUS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<UniqueNames>
 				<UniqueName>Spartacus</UniqueName>
 			</UniqueNames>
@@ -15515,6 +15638,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_LEGEND_SPARTAN</Class>
 			<Type>UNIT_LEGEND_SPARTAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -15630,6 +15754,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_AUGUSTINE_I</Class>
 			<Type>UNIT_AUGUSTINE_I</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -15830,6 +15955,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_BUFFALO_HUMP</Class>
 			<Type>UNIT_BUFFALO_HUMP</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -15950,6 +16076,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_FLORENCE_NIGHTINGALE</Class>
 			<Type>UNIT_FLORENCE_NIGHTINGALE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
@@ -16051,6 +16178,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_MANUELITO</Class>
 			<Type>UNIT_MANUELITO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -16188,6 +16316,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_MUNGO_MAN</Class>
 			<Type>UNIT_MUNGO_MAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -16296,6 +16425,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_NARBONA</Class>
 			<Type>UNIT_NARBONA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -16403,6 +16533,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_PANCHO_VILLA</Class>
 			<Type>UNIT_PANCHO_VILLA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -16530,6 +16661,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_PO_NGBE</Class>
 			<Type>UNIT_PO_NGBE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -16641,6 +16773,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_GERONIMO</Class>
 			<Type>UNIT_GERONIMO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -16790,6 +16923,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_COCHISE</Class>
 			<Type>UNIT_COCHISE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -16931,6 +17065,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_AGUEYBANA_II</Class>
 			<Type>UNIT_AGUEYBANA_II</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -17028,6 +17163,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ALOSKA</Class>
 			<Type>UNIT_ALOSKA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -17126,6 +17262,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_CROWFOOT</Class>
 			<Type>UNIT_CROWFOOT</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -17225,6 +17362,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_DHAR</Class>
 			<Type>UNIT_DHAR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -17323,6 +17461,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_FORKBEARD</Class>
 			<Type>UNIT_FORKBEARD</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -17425,6 +17564,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_FREDRICK_II</Class>
 			<Type>UNIT_FREDRICK_II</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -17529,6 +17669,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_GYGES</Class>
 			<Type>UNIT_GYGES</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -17626,6 +17767,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_IDRIS</Class>
 			<Type>UNIT_IDRIS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -17724,6 +17866,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_INIGO</Class>
 			<Type>UNIT_INIGO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -17821,6 +17964,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ITZKUMA</Class>
 			<Type>UNIT_ITZKUMA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -17917,6 +18061,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SAN_MARTIN</Class>
 			<Type>UNIT_SAN_MARTIN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -18023,6 +18168,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_JUAN_PERON</Class>
 			<Type>UNIT_JUAN_PERON</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TRACKED</SubCombatType>
@@ -18120,6 +18266,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_KHONVOUM</Class>
 			<Type>UNIT_KHONVOUM</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -18217,6 +18364,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_KAMUY</Class>
 			<Type>UNIT_KAMUY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -18313,6 +18461,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_KOLOKOTRONIS</Class>
 			<Type>UNIT_KOLOKOTRONIS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -18411,6 +18560,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_KRUM</Class>
 			<Type>UNIT_KRUM</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -18518,6 +18668,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_LEOPOLD</Class>
 			<Type>UNIT_LEOPOLD</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -18624,6 +18775,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_LEOPOLD_II</Class>
 			<Type>UNIT_LEOPOLD_II</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -18722,6 +18874,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_LUGALZAGESI</Class>
 			<Type>UNIT_LUGALZAGESI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -18820,6 +18973,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_MAHKAN</Class>
 			<Type>UNIT_MAHKAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -18920,6 +19074,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_NARAMSIN</Class>
 			<Type>UNIT_NARAMSIN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -19017,6 +19172,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_OSEI</Class>
 			<Type>UNIT_OSEI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -19115,6 +19271,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_OZOLUA</Class>
 			<Type>UNIT_OZOLUA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -19213,6 +19370,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_PERICLES</Class>
 			<Type>UNIT_PERICLES</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -19311,6 +19469,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_POMAREI</Class>
 			<Type>UNIT_POMAREI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -19410,6 +19569,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_PREMPEH</Class>
 			<Type>UNIT_PREMPEH</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -19508,6 +19668,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SANCHO</Class>
 			<Type>UNIT_SANCHO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -19612,6 +19773,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SATURDAY</Class>
 			<Type>UNIT_SATURDAY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -19708,6 +19870,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SHAK</Class>
 			<Type>UNIT_SHAK</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -19807,6 +19970,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SIMEON</Class>
 			<Type>UNIT_SIMEON</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -19911,6 +20075,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_KARRANI</Class>
 			<Type>UNIT_KARRANI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -20009,6 +20174,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_TASIUS</Class>
 			<Type>UNIT_TASIUS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -20107,6 +20273,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_THEMISTOCLES</Class>
 			<Type>UNIT_THEMISTOCLES</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -20203,6 +20370,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_TORE</Class>
 			<Type>UNIT_TORE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -20300,6 +20468,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_KATARI</Class>
 			<Type>UNIT_KATARI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -20406,6 +20575,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_VIRACOCHA</Class>
 			<Type>UNIT_VIRACOCHA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -20504,6 +20674,7 @@
 				<UnitInfo>
 			<Class>UNITCLASS_GOTH_ALARIC</Class>
 			<Type>UNIT_GOTH_ALARIC</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -20622,6 +20793,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_BENIN_EWUARE</Class>
 			<Type>UNIT_BENIN_EWUARE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -20745,6 +20917,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_MUGHAL_BABUR</Class>
 			<Type>UNIT_MUGHAL_BABUR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_THROWING</SubCombatType>
@@ -20864,6 +21037,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_TUPI_CUNHAMBEBE</Class>
 			<Type>UNIT_TUPI_CUNHAMBEBE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -20986,6 +21160,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_AL_MANSUR</Class>
 			<Type>UNIT_AL_MANSUR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -21111,6 +21286,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_KORA</Class>
 			<Type>UNIT_KORA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -21209,6 +21385,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_APU_TAMBO</Class>
 			<Type>UNIT_APU_TAMBO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -21358,6 +21535,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_RUHANGA</Class>
 			<Type>UNIT_RUHANGA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -21456,6 +21634,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_FARUK_IMAM</Class>
 			<Type>UNIT_FARUK_IMAM</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TRACKED</SubCombatType>
@@ -21544,6 +21723,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_AMON_BAZIRA</Class>
 			<Type>UNIT_AMON_BAZIRA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -21662,6 +21842,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_KARIM_KHAN</Class>
 			<Type>UNIT_KARIM_KHAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -21811,6 +21992,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_PIYE</Class>
 			<Type>UNIT_PIYE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -21922,6 +22104,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_KUJULA_KADPHISES</Class>
 			<Type>UNIT_KUJULA_KADPHISES</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -22049,6 +22232,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SABAH_AL_AHMAD</Class>
 			<Type>UNIT_SABAH_AL_AHMAD</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TRACKED</SubCombatType>
@@ -22137,6 +22321,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_DARDO_ROCHA</Class>
 			<Type>UNIT_DARDO_ROCHA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -22228,6 +22413,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_JACOB_KETTLER</Class>
 			<Type>UNIT_JACOB_KETTLER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -22351,6 +22537,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_DOS_SANTOS</Class>
 			<Type>UNIT_DOS_SANTOS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DIPLOMAT</SubCombatType>
@@ -22468,6 +22655,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_FAKHR_EL_DIN_II</Class>
 			<Type>UNIT_FAKHR_EL_DIN_II</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -22596,6 +22784,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SHOSHENQ_I</Class>
 			<Type>UNIT_SHOSHENQ_I</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -22727,6 +22916,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_MINDAUGAS</Class>
 			<Type>UNIT_MINDAUGAS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -22825,6 +23015,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_LIUTPRAND</Class>
 			<Type>UNIT_LIUTPRAND</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -22950,6 +23141,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_CACAN</Class>
 			<Type>UNIT_CACAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -23085,6 +23277,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_DAMBALLA</Class>
 			<Type>UNIT_DAMBALLA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -23230,6 +23423,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_TAUTALUS</Class>
 			<Type>UNIT_TAUTALUS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -23357,6 +23551,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_CROESUS</Class>
 			<Type>UNIT_CROESUS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -23468,6 +23663,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_PHILIBERT_TSIRANANA</Class>
 			<Type>UNIT_PHILIBERT_TSIRANANA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DIPLOMAT</SubCombatType>
@@ -23585,6 +23781,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ABDUL_RAZAK_HUSSEIN</Class>
 			<Type>UNIT_ABDUL_RAZAK_HUSSEIN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -23714,6 +23911,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_FERDINAND_II</Class>
 			<Type>UNIT_FERDINAND_II</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -23841,6 +24039,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_BARQUQ</Class>
 			<Type>UNIT_BARQUQ</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -23936,6 +24135,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_MATO_TOPE</Class>
 			<Type>UNIT_MATO_TOPE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -24081,6 +24281,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_MALGAQ</Class>
 			<Type>UNIT_MALGAQ</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -24208,6 +24409,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_MAUES</Class>
 			<Type>UNIT_MAUES</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -24304,6 +24506,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_CYAXARES</Class>
 			<Type>UNIT_CYAXARES</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -24408,6 +24611,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_QUAHE</Class>
 			<Type>UNIT_QUAHE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -24504,6 +24708,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_CHARLES_WILKES</Class>
 			<Type>UNIT_CHARLES_WILKES</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -24602,6 +24807,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_WANLI</Class>
 			<Type>UNIT_WANLI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -24730,6 +24936,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_BEAR_KNEE</Class>
 			<Type>UNIT_BEAR_KNEE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -24859,6 +25066,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SHUTTARNA_II</Class>
 			<Type>UNIT_SHUTTARNA_II</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -24976,6 +25184,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_LORD_OF_SIPAN</Class>
 			<Type>UNIT_LORD_OF_SIPAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -25101,6 +25310,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_QUADO</Class>
 			<Type>UNIT_QUADO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -25246,6 +25456,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_THAYENDANEGEA</Class>
 			<Type>UNIT_THAYENDANEGEA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -25395,6 +25606,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_KALYAGA</Class>
 			<Type>UNIT_KALYAGA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -25524,6 +25736,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_PEDRO_DE_AGUADO</Class>
 			<Type>UNIT_PEDRO_DE_AGUADO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -25672,6 +25885,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ROBERT_LUI</Class>
 			<Type>UNIT_ROBERT_LUI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DIPLOMAT</SubCombatType>
@@ -25781,6 +25995,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ARETAS_III</Class>
 			<Type>UNIT_ARETAS_III</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -25877,6 +26092,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ALTAMIRANO</Class>
 			<Type>UNIT_ALTAMIRANO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -25968,6 +26184,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_HENDRIK_WITBOOI</Class>
 			<Type>UNIT_HENDRIK_WITBOOI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -26120,6 +26337,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_AL_SAFFAR</Class>
 			<Type>UNIT_AL_SAFFAR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -26218,6 +26436,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_PACADEO</Class>
 			<Type>UNIT_PACADEO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -26346,6 +26565,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_OBAFEMI_AWOLOWO</Class>
 			<Type>UNIT_OBAFEMI_AWOLOWO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DIPLOMAT</SubCombatType>
@@ -26463,6 +26683,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_LAMBOGA</Class>
 			<Type>UNIT_LAMBOGA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -26574,6 +26795,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_PIBELMAN</Class>
 			<Type>UNIT_PIBELMAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -26672,6 +26894,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ROLLO</Class>
 			<Type>UNIT_ROLLO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -26770,6 +26993,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_MASINISSA</Class>
 			<Type>UNIT_MASINISSA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -26888,6 +27112,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_EGUSHAWA</Class>
 			<Type>UNIT_EGUSHAWA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -27019,6 +27244,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_QABOOS</Class>
 			<Type>UNIT_QABOOS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -27149,6 +27375,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_LOPHORON</Class>
 			<Type>UNIT_LOPHORON</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -27260,6 +27487,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_JAHAI</Class>
 			<Type>UNIT_JAHAI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -27366,6 +27594,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_WINNEMUCCA</Class>
 			<Type>UNIT_WINNEMUCCA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -27464,6 +27693,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_BENAZIR_BHUTTO</Class>
 			<Type>UNIT_BENAZIR_BHUTTO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DIPLOMAT</SubCombatType>
@@ -27581,6 +27811,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_JASIR_ARAFAT</Class>
 			<Type>UNIT_JASIR_ARAFAT</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -27711,6 +27942,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_VASCO_DE_BALBOA</Class>
 			<Type>UNIT_VASCO_DE_BALBOA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -27830,6 +28062,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_JOSE_DE_FRANCIA</Class>
 			<Type>UNIT_JOSE_DE_FRANCIA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -27961,6 +28194,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SHER_ALI_KHAN</Class>
 			<Type>UNIT_SHER_ALI_KHAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -28061,6 +28295,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_AUGUSTO_LEGUIA</Class>
 			<Type>UNIT_AUGUSTO_LEGUIA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -28159,6 +28394,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_LAPU_LAPU</Class>
 			<Type>UNIT_LAPU_LAPU</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -28257,6 +28493,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_GOLIATH</Class>
 			<Type>UNIT_GOLIATH</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -28396,6 +28633,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_MAHAQUE</Class>
 			<Type>UNIT_MAHAQUE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -28494,6 +28732,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_VERCINGETORIX</Class>
 			<Type>UNIT_VERCINGETORIX</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -28590,6 +28829,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_RED_SPEAR</Class>
 			<Type>UNIT_RED_SPEAR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -28688,6 +28928,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_NAHUAL</Class>
 			<Type>UNIT_NAHUAL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -28786,6 +29027,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_TEHUELCHE</Class>
 			<Type>UNIT_TEHUELCHE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -28883,6 +29125,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_YAO_CHANG</Class>
 			<Type>UNIT_YAO_CHANG</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -28984,6 +29227,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SHANG_YANG</Class>
 			<Type>UNIT_SHANG_YANG</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -29107,6 +29351,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_KANGXI</Class>
 			<Type>UNIT_KANGXI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -29233,6 +29478,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ADELARD_GODBOUT</Class>
 			<Type>UNIT_ADELARD_GODBOUT</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DIPLOMAT</SubCombatType>
@@ -29350,6 +29596,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_NANDUAPAQUE</Class>
 			<Type>UNIT_NANDUAPAQUE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -29448,6 +29695,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_KUBRAT</Class>
 			<Type>UNIT_KUBRAT</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -29552,6 +29800,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_NUSTA_HUILLAC</Class>
 			<Type>UNIT_NUSTA_HUILLAC</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -29658,6 +29907,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_RED_CHIEF</Class>
 			<Type>UNIT_RED_CHIEF</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -29769,6 +30019,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_IAN_SMITH</Class>
 			<Type>UNIT_IAN_SMITH</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -29899,6 +30150,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_STEFAN_RAZVAN</Class>
 			<Type>UNIT_STEFAN_RAZVAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -30048,6 +30300,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SHEBA</Class>
 			<Type>UNIT_SHEBA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -30180,6 +30433,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ISMAIL_I</Class>
 			<Type>UNIT_ISMAIL_I</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -30308,6 +30562,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_KANISHKA</Class>
 			<Type>UNIT_KANISHKA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -30455,6 +30710,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_AILI_KESKITALO</Class>
 			<Type>UNIT_AILI_KESKITALO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DIPLOMAT</SubCombatType>
@@ -30572,6 +30828,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_MATAAFA_IOSEFO</Class>
 			<Type>UNIT_MATAAFA_IOSEFO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -30672,6 +30929,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_BATRADZ</Class>
 			<Type>UNIT_BATRADZ</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -30819,6 +31077,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_KHANUNG</Class>
 			<Type>UNIT_KHANUNG</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TRACKED</SubCombatType>
@@ -30916,6 +31175,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_LEOPOLD_SENGHOR</Class>
 			<Type>UNIT_LEOPOLD_SENGHOR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DIPLOMAT</SubCombatType>
@@ -31033,6 +31293,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_BADI_VII</Class>
 			<Type>UNIT_BADI_VII</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -31124,6 +31385,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_STEPHEN_UROS_IV_DUSAN</Class>
 			<Type>UNIT_STEPHEN_UROS_IV_DUSAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -31234,6 +31496,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_NAYLAMP</Class>
 			<Type>UNIT_NAYLAMP</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -31332,6 +31595,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ARCHIMEDES</Class>
 			<Type>UNIT_ARCHIMEDES</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -31456,6 +31720,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_GANDR</Class>
 			<Type>UNIT_GANDR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -31563,6 +31828,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_LUDOVIT_STUR</Class>
 			<Type>UNIT_LUDOVIT_STUR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -31669,6 +31935,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_JOZE_PUCNIK</Class>
 			<Type>UNIT_JOZE_PUCNIK</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DIPLOMAT</SubCombatType>
@@ -31786,6 +32053,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SANDEH</Class>
 			<Type>UNIT_SANDEH</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -31909,6 +32177,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ASKIA</Class>
 			<Type>UNIT_ASKIA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -32007,6 +32276,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_MUHAMMAD_AHMAD</Class>
 			<Type>UNIT_MUHAMMAD_AHMAD</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -32113,6 +32383,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_DEWI_SARTIKA</Class>
 			<Type>UNIT_DEWI_SARTIKA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -32242,6 +32513,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_JULES_WIJDENBOSCH</Class>
 			<Type>UNIT_JULES_WIJDENBOSCH</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -32371,6 +32643,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_BURHANUDDIN_RABBANI</Class>
 			<Type>UNIT_BURHANUDDIN_RABBANI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -32511,6 +32784,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_JOSE_RIZAL</Class>
 			<Type>UNIT_JOSE_RIZAL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -32617,6 +32891,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_POMARE_IV</Class>
 			<Type>UNIT_POMARE_IV</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -32708,6 +32983,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_CANACUMACO</Class>
 			<Type>UNIT_CANACUMACO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -32857,6 +33133,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_GAOZONG</Class>
 			<Type>UNIT_GAOZONG</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -32961,6 +33238,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SAKAYENGA</Class>
 			<Type>UNIT_SAKAYENGA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -33085,6 +33363,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_AL_KHALIFA</Class>
 			<Type>UNIT_AL_KHALIFA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -33215,6 +33494,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_BENJAMIN_MKAPA</Class>
 			<Type>UNIT_BENJAMIN_MKAPA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DIPLOMAT</SubCombatType>
@@ -33332,6 +33612,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_TARIACURI</Class>
 			<Type>UNIT_TARIACURI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -33460,6 +33741,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_TRUGANINI</Class>
 			<Type>UNIT_TRUGANINI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -33605,6 +33887,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_TUGAY_BEY</Class>
 			<Type>UNIT_TUGAY_BEY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -33731,6 +34014,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_STEPHEN_AUSTIN</Class>
 			<Type>UNIT_STEPHEN_AUSTIN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -33831,6 +34115,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_TERES</Class>
 			<Type>UNIT_TERES</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -33954,6 +34239,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_CAO_CAO</Class>
 			<Type>UNIT_CAO_CAO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -34079,6 +34365,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_TIMUR</Class>
 			<Type>UNIT_TIMUR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -34189,6 +34476,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_AUSTIN_WONAEAMIRRI</Class>
 			<Type>UNIT_AUSTIN_WONAEAMIRRI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -34318,6 +34606,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_XICOTENCATL_II</Class>
 			<Type>UNIT_XICOTENCATL_II</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -34466,6 +34755,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_DEMETRIUS</Class>
 			<Type>UNIT_DEMETRIUS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -34600,6 +34890,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ARACAGUA</Class>
 			<Type>UNIT_ARACAGUA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -34749,6 +35040,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_WILLIAM_MARINER</Class>
 			<Type>UNIT_WILLIAM_MARINER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -34878,6 +35170,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_CENTEOTL</Class>
 			<Type>UNIT_CENTEOTL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -34975,6 +35268,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_CHAGATAI_KHAN</Class>
 			<Type>UNIT_CHAGATAI_KHAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -35072,6 +35366,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_WANANO</Class>
 			<Type>UNIT_WANANO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -35198,6 +35493,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_KUCHUM_KHAN</Class>
 			<Type>UNIT_KUCHUM_KHAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -35324,6 +35620,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_AL_AGHLAB</Class>
 			<Type>UNIT_AL_AGHLAB</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -35469,6 +35766,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ATATURK</Class>
 			<Type>UNIT_ATATURK</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -35575,6 +35873,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SVIATOSLAV_I</Class>
 			<Type>UNIT_SVIATOSLAV_I</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -35710,6 +36009,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_JOSE_MUJICA</Class>
 			<Type>UNIT_JOSE_MUJICA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -35828,6 +36128,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ORANG_KAYA</Class>
 			<Type>UNIT_ORANG_KAYA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -35962,6 +36263,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SHAYBANI</Class>
 			<Type>UNIT_SHAYBANI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -36102,6 +36404,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_PASTENE</Class>
 			<Type>UNIT_PASTENE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -36242,6 +36545,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_JOHN_FRUM</Class>
 			<Type>UNIT_JOHN_FRUM</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DIPLOMAT</SubCombatType>
@@ -36351,6 +36655,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_MUHAMMAD_BIN_SAUD</Class>
 			<Type>UNIT_MUHAMMAD_BIN_SAUD</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -36500,6 +36805,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_VLAD_III_DRACULA</Class>
 			<Type>UNIT_VLAD_III_DRACULA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -36598,6 +36904,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_GENSERIC</Class>
 			<Type>UNIT_GENSERIC</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -36702,6 +37009,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_NORBERTO_ROMUALDEZ</Class>
 			<Type>UNIT_NORBERTO_ROMUALDEZ</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -36802,6 +37110,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_PAAKA</Class>
 			<Type>UNIT_PAAKA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -36902,6 +37211,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_OJANA</Class>
 			<Type>UNIT_OJANA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -37020,6 +37330,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_RAM_MOHAN_ROY</Class>
 			<Type>UNIT_RAM_MOHAN_ROY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -37169,6 +37480,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_GUAJIRO</Class>
 			<Type>UNIT_GUAJIRO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -37318,6 +37630,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_YU_THE_GREAT</Class>
 			<Type>UNIT_YU_THE_GREAT</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -37416,6 +37729,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_TUOBA_LIWEI</Class>
 			<Type>UNIT_TUOBA_LIWEI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -37563,6 +37877,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_HUYAN_ZHUO</Class>
 			<Type>UNIT_HUYAN_ZHUO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -37692,6 +38007,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_CRISTINA_CALDERON</Class>
 			<Type>UNIT_CRISTINA_CALDERON</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -37810,6 +38126,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_YAWAR_RUNA</Class>
 			<Type>UNIT_YAWAR_RUNA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -37920,6 +38237,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_TUXAWA</Class>
 			<Type>UNIT_TUXAWA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -38068,6 +38386,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ARWA_AL_SULAYHI</Class>
 			<Type>UNIT_ARWA_AL_SULAYHI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -38213,6 +38532,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_MANDAWUY_YUNUPINGU</Class>
 			<Type>UNIT_MANDAWUY_YUNUPINGU</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DIPLOMAT</SubCombatType>
@@ -38322,6 +38642,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SAID_BIN_SULTAN</Class>
 			<Type>UNIT_SAID_BIN_SULTAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -38428,6 +38749,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SALAWAT_YULAYEV</Class>
 			<Type>UNIT_SALAWAT_YULAYEV</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -38534,6 +38856,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_PACHECO</Class>
 			<Type>UNIT_PACHECO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TRACKED</SubCombatType>
@@ -38622,6 +38945,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_MATOPE</Class>
 			<Type>UNIT_MATOPE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -38720,6 +39044,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_LUTAKAWI</Class>
 			<Type>UNIT_LUTAKAWI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DIPLOMAT</SubCombatType>
@@ -38829,6 +39154,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_JULIUS_CIVILIS</Class>
 			<Type>UNIT_JULIUS_CIVILIS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -38927,6 +39253,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_STAMAN</Class>
 			<Type>UNIT_STAMAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -39067,6 +39394,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_HENRY_THE_LION</Class>
 			<Type>UNIT_HENRY_THE_LION</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -39196,6 +39524,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_BADIS</Class>
 			<Type>UNIT_BADIS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -39345,6 +39674,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_GEORGE_CADLE_PRICE</Class>
 			<Type>UNIT_GEORGE_CADLE_PRICE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DIPLOMAT</SubCombatType>
@@ -39454,6 +39784,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_AHMAD_SHAH_DURRANI</Class>
 			<Type>UNIT_AHMAD_SHAH_DURRANI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -39585,6 +39916,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_EVO_MORALES</Class>
 			<Type>UNIT_EVO_MORALES</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TRACKED</SubCombatType>
@@ -39682,6 +40014,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_JOSE_BALLIVIAN</Class>
 			<Type>UNIT_JOSE_BALLIVIAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -39788,6 +40121,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_BOUDICA</Class>
 			<Type>UNIT_BOUDICA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -39915,6 +40249,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_PHILIP_THE_BOLD</Class>
 			<Type>UNIT_PHILIP_THE_BOLD</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -40010,6 +40345,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_EDUARDO_ANGELIM</Class>
 			<Type>UNIT_EDUARDO_ANGELIM</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -40101,6 +40437,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_YUPANQUI</Class>
 			<Type>UNIT_YUPANQUI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -40241,6 +40578,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_JACHAL</Class>
 			<Type>UNIT_JACHAL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -40336,6 +40674,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_AGAPARO</Class>
 			<Type>UNIT_AGAPARO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -40459,6 +40798,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_JAMES_I</Class>
 			<Type>UNIT_JAMES_I</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -40556,6 +40896,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ENDUBIS</Class>
 			<Type>UNIT_ENDUBIS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -40657,6 +40998,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_VIRIATHUS</Class>
 			<Type>UNIT_VIRIATHUS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -40791,6 +41133,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_MARANON</Class>
 			<Type>UNIT_MARANON</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -40895,6 +41238,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_HUANTAR</Class>
 			<Type>UNIT_HUANTAR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -41034,6 +41378,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_IMAM_SHAMIL</Class>
 			<Type>UNIT_IMAM_SHAMIL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -41179,6 +41524,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_OHIGGINS</Class>
 			<Type>UNIT_OHIGGINS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -41277,6 +41623,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ACALAPUA</Class>
 			<Type>UNIT_ACALAPUA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -41375,6 +41722,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SHA_CO_PAY</Class>
 			<Type>UNIT_SHA_CO_PAY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -41515,6 +41863,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_MINGBURNU</Class>
 			<Type>UNIT_MINGBURNU</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -41612,6 +41961,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_RAFAEL_SOLARES</Class>
 			<Type>UNIT_RAFAEL_SOLARES</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -41764,6 +42114,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_PETER_CLAVER</Class>
 			<Type>UNIT_PETER_CLAVER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -41894,6 +42245,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_HALAKWULUP</Class>
 			<Type>UNIT_HALAKWULUP</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -42042,6 +42394,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_TOMISLAV</Class>
 			<Type>UNIT_TOMISLAV</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -42140,6 +42493,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_TOMAS_MASARYK</Class>
 			<Type>UNIT_TOMAS_MASARYK</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DIPLOMAT</SubCombatType>
@@ -42257,6 +42611,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_DECEBALUS</Class>
 			<Type>UNIT_DECEBALUS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -42385,6 +42740,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_JAMES_BROOKE</Class>
 			<Type>UNIT_JAMES_BROOKE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -42530,6 +42886,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_KHARAVELA</Class>
 			<Type>UNIT_KHARAVELA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -42664,6 +43021,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_KHARKHUL</Class>
 			<Type>UNIT_KHARKHUL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -42790,6 +43148,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_JUAN_JOSE_FLORES</Class>
 			<Type>UNIT_JUAN_JOSE_FLORES</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -42890,6 +43249,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_JURI_ULUOTS</Class>
 			<Type>UNIT_JURI_ULUOTS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DIPLOMAT</SubCombatType>
@@ -42999,6 +43359,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_LARS_PORSENA</Class>
 			<Type>UNIT_LARS_PORSENA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -43122,6 +43483,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_AL_MAHDI_BILLAH</Class>
 			<Type>UNIT_AL_MAHDI_BILLAH</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -43257,6 +43619,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_CHROCUS</Class>
 			<Type>UNIT_CHROCUS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -43404,6 +43767,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SERU_EPENISA_CAKOBAU</Class>
 			<Type>UNIT_SERU_EPENISA_CAKOBAU</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -43502,6 +43866,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_URHO_KEKKONEN</Class>
 			<Type>UNIT_URHO_KEKKONEN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -43632,6 +43997,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_JAN_FRANS_WILLEMS</Class>
 			<Type>UNIT_JAN_FRANS_WILLEMS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -43784,6 +44150,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_TAIYIN</Class>
 			<Type>UNIT_TAIYIN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -43888,6 +44255,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_MOHAMMED_II_TAIRAB</Class>
 			<Type>UNIT_MOHAMMED_II_TAIRAB</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -43994,6 +44362,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_BRENNUS</Class>
 			<Type>UNIT_BRENNUS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -44118,6 +44487,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_JUAN_MANUEL_DE_ROSAS</Class>
 			<Type>UNIT_JUAN_MANUEL_DE_ROSAS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -44249,6 +44619,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_VAKHTANG_VI</Class>
 			<Type>UNIT_VAKHTANG_VI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -44372,6 +44743,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_KWAME_NKRUMAH</Class>
 			<Type>UNIT_KWAME_NKRUMAH</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DIPLOMAT</SubCombatType>
@@ -44481,6 +44853,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ALA_AL_DIN_HUSAYN</Class>
 			<Type>UNIT_ALA_AL_DIN_HUSAYN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -44610,6 +44983,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SKANDERBEG</Class>
 			<Type>UNIT_SKANDERBEG</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -44708,6 +45082,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_BATU_KHAN</Class>
 			<Type>UNIT_BATU_KHAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -44806,6 +45181,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ASHINA_JIESHESHUAI</Class>
 			<Type>UNIT_ASHINA_JIESHESHUAI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -44910,6 +45286,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_MATAPANG</Class>
 			<Type>UNIT_MATAPANG</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -45033,6 +45410,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_BENCOMO</Class>
 			<Type>UNIT_BENCOMO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -45152,6 +45530,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ANTONIO_RUIZ_DE_MONTOYA</Class>
 			<Type>UNIT_ANTONIO_RUIZ_DE_MONTOYA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -45271,6 +45650,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_PEDRO_DE_ALVARADO</Class>
 			<Type>UNIT_PEDRO_DE_ALVARADO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -45390,6 +45770,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ALFRED_A_THORNE</Class>
 			<Type>UNIT_ALFRED_A_THORNE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -45508,6 +45889,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_DIVICO</Class>
 			<Type>UNIT_DIVICO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -45632,6 +46014,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SHENGJUN</Class>
 			<Type>UNIT_SHENGJUN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -45729,6 +46112,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ABU_KARIBA</Class>
 			<Type>UNIT_ABU_KARIBA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -45833,6 +46217,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_HAYREDDIN</Class>
 			<Type>UNIT_HAYREDDIN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -45961,6 +46346,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_KAI_HO</Class>
 			<Type>UNIT_KAI_HO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -46106,6 +46492,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_BROKEN_ARROW</Class>
 			<Type>UNIT_BROKEN_ARROW</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -46207,6 +46594,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SEKAQUAPTEWA</Class>
 			<Type>UNIT_SEKAQUAPTEWA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -46337,6 +46725,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_KUCUMATZ</Class>
 			<Type>UNIT_KUCUMATZ</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -46447,6 +46836,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_TISH_ATAL</Class>
 			<Type>UNIT_TISH_ATAL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -46555,6 +46945,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_KHYAN</Class>
 			<Type>UNIT_KHYAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -46653,6 +47044,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_TEUTA</Class>
 			<Type>UNIT_TEUTA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -46787,6 +47179,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ELPIDIO_QUIRINO</Class>
 			<Type>UNIT_ELPIDIO_QUIRINO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -46887,6 +47280,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_PRIEST_KING</Class>
 			<Type>UNIT_PRIEST_KING</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -46995,6 +47389,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_KHOMEINI</Class>
 			<Type>UNIT_KHOMEINI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -47125,6 +47520,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_TERUO_NAKAMURA</Class>
 			<Type>UNIT_TERUO_NAKAMURA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DIPLOMAT</SubCombatType>
@@ -47234,6 +47630,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SADDAM_HUSSEIN</Class>
 			<Type>UNIT_SADDAM_HUSSEIN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TRACKED</SubCombatType>
@@ -47331,6 +47728,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_JIMMU</Class>
 			<Type>UNIT_JIMMU</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -47435,6 +47833,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ABDULLAH_II</Class>
 			<Type>UNIT_ABDULLAH_II</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -47565,6 +47964,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_TAEJO</Class>
 			<Type>UNIT_TAEJO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -47660,6 +48060,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_BEOWULF</Class>
 			<Type>UNIT_BEOWULF</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -47785,6 +48186,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_DEDAN_KIMATHI</Class>
 			<Type>UNIT_DEDAN_KIMATHI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DIPLOMAT</SubCombatType>
@@ -47902,6 +48304,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ABLAI_KHAN</Class>
 			<Type>UNIT_ABLAI_KHAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -48051,6 +48454,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_BULAN</Class>
 			<Type>UNIT_BULAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
@@ -48176,6 +48580,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_PERAHU</Class>
 			<Type>UNIT_PERAHU</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>

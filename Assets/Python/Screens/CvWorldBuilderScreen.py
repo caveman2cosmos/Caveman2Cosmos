@@ -976,7 +976,7 @@ class CvWorldBuilderScreen:
 						self.setCityEditInfo(True)
 						return 1
 					'''
-					if GC.getTeam(self.m_iCurrentTeam).getUnitClassCountPlusMaking(iUnitClass) == GC.getUnitClassInfo(iUnitClass).getMaxGlobalInstances():
+					if GC.getTeam(self.m_iCurrentTeam).getUnitClassCountPlusMaking(iUnitClass) == GC.getUnitInfo(iUnit).getMaxGlobalInstances():
 						self.setCityEditInfo(True)
 						return 1
 					pCity.pushOrder(OrderTypes.ORDER_TRAIN, iUnit , -1, False, True, False, True)

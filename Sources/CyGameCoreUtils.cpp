@@ -194,9 +194,9 @@ bool cyIsTechRequiredForProject(int /*TechTypes*/ eTech, int /*ProjectTypes*/ eP
 	return isTechRequiredForProject((TechTypes)eTech, (ProjectTypes)eProject);
 }
 
-bool cyIsWorldUnitClass(int /*UnitClassTypes*/ eUnitClass)
+bool cyIsWorldUnitClass(int /*UnitTypes*/ eUnit)
 {
-	return isWorldUnitClass((UnitClassTypes)eUnitClass);
+	return isWorldUnitClass((UnitTypes)eUnit);
 }
 
 bool cyIsNationalUnitClass(int /*UnitClassTypes*/ eUnitClass)

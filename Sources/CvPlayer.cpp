@@ -9299,7 +9299,7 @@ int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 
 	if (!isHuman() && !isNPC())
 	{
-		if (isWorldUnitClass(eUnitClass))
+		if (isWorldUnitClass(eUnit))
 		{
 			iModifier = GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIWorldTrainPercent();
 			iProductionNeeded *= iModifier;
