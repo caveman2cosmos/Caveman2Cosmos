@@ -1283,10 +1283,6 @@
 		<English>%d1_Change[ICON_UNHAPPY]: %s2_Name</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ANGER_CIVIC_PERCENT_BAD</Tag>
-		<English>+%d1_Change[ICON_UNHAPPY]: "We hate %s2_Name!"</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_ANGER_FEATURES</Tag>
 		<English>+%d1_Change[ICON_UNHAPPY]: "Some improvements are making us unhappy!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY]: "Des infrastructures nous rendent mécontents!"</French>
@@ -7246,33 +7242,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 		[NEWLINE]%s1[ICON_GOLD]: Distance to Capital</English>
 		<French>------------------------
 		[NEWLINE]%s1[ICON_GOLD]: Distance to Capital</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FINANCE_ADVISOR_CITY_MAINT_COST_DISTANCE</Tag>
-		<English>
-		[NEWLINE]%d2[ICON_GOLD]: Distance Maintenance
-		[NEWLINE]%d3[ICON_GOLD]: Number of Cities Maintenance
-		[NEWLINE]%d4[ICON_GOLD]: Colony Maintenance
-		[NEWLINE]%d5[ICON_GOLD]: Corporation Maintenance
-		[NEWLINE]%d6[ICON_GOLD]: Building Maintenance
-		[NEWLINE]------------------------
-		[NEWLINE]%d7[ICON_GOLD]: Sub-Total(includes decimals not shown)
-		[NEWLINE]------------------------
-		[NEWLINE]%D8%%[ICON_GOLD]: Gamespeed Modifier
-		[NEWLINE]------------------------
-		[NEWLINE]TOTAL CITY MAINTENANCE COST: %d9[ICON_GOLD]</English>
-		<French>
-		[NEWLINE]%d2[ICON_GOLD]: Distance Maintenance
-		[NEWLINE]%d3[ICON_GOLD]: Number of Cities Maintenance
-		[NEWLINE]%d4[ICON_GOLD]: Colony Maintenance
-		[NEWLINE]%d5[ICON_GOLD]: Corporation Maintenance
-		[NEWLINE]%d6[ICON_GOLD]: Building Maintenance
-		[NEWLINE]------------------------
-		[NEWLINE]%d7[ICON_GOLD]: Sub-Total(includes decimals not shown)
-		[NEWLINE]------------------------
-		[NEWLINE]%D8%%[ICON_GOLD]: Gamespeed Modifier
-		[NEWLINE]------------------------
-		[NEWLINE]TOTAL CITY MAINTENANCE COST: %d9[ICON_GOLD]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_CITY_MAINT_COST_MODIFIER</Tag>
@@ -25185,11 +25154,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Tag>TXT_KEY_UNIT_NUM_STEALTH_STRIKES_DEFENSE</Tag>
 		<English>[ICON_BULLET]STEALTH DEFENSE!: %d1_Num Stealth Strikes</English>
 		<French>[ICON_BULLET]DEFENSE FURTIVE!: %d1_Num assauts furtifs</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_REQUIRES</Tag>
-		<English>[COLOR_WARNING_TEXT]Unit Requires[SPACE]</English>
-		<French>[COLOR_WARNING_TEXT]l'Unité requiert[SPACE]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEALTH_COMBAT_ATTACK</Tag>
