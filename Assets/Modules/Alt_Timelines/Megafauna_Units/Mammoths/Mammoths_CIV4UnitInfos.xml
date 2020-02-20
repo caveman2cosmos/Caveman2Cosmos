@@ -121,7 +121,7 @@
 				</FreePromotion>
 			</FreePromotions>
 			<SupersedingUnits>
-				<SupersedingUnitType>UNIT_NEANDERTHAL_MAMMOTH_RIDER</SupersedingUnitType>
+				<UnitType>UNIT_NEANDERTHAL_MAMMOTH_RIDER</UnitType>
 			</SupersedingUnits>
 		</UnitInfo>
 		<UnitInfo>
