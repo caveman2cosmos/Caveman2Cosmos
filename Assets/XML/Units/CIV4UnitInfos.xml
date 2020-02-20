@@ -18,6 +18,14 @@ Base XP gained when defending
 			<Strategy>TXT_KEY_UNIT_BAND_STRATEGY</Strategy>
 			<Domain>DOMAIN_LAND</Domain>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_EPIC</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<UnitAIs>
 				<UnitAI>
@@ -478,12 +486,9 @@ Base XP gained when defending
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_GATHERER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
+			</SupersedingUnits>
 			<Builds>
 				<Build>
 					<BuildType>BUILD_TRAIL</BuildType>
@@ -4585,12 +4590,9 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<ForceObsoleteTech>TECH_PERSISTENCE_HUNTING</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_WANDERER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_WANDERER</UnitType>
+			</SupersedingUnits>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_SCOUT</Class>
@@ -4681,12 +4683,9 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<ForceObsoleteTech>TECH_WRITING</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_SCOUT</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_SCOUT</UnitType>
+			</SupersedingUnits>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_GUIDE</Class>
@@ -5361,12 +5360,9 @@ Base XP gained when defending
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_TRAILS</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_GATHERER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
+			</SupersedingUnits>
 			<FreePromotions>
 				<FreePromotion>
 					<PromotionType>PROMOTION_BY_THE_HORNS</PromotionType>
@@ -5464,12 +5460,9 @@ Base XP gained when defending
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_TRACKING</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_GATHERER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
+			</SupersedingUnits>
 			<iCost>38</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>2</iCombat>
@@ -5601,12 +5594,9 @@ Base XP gained when defending
 				</FreePromotion>
 			</FreePromotions>
 			<ForceObsoleteTech>TECH_BRONZE_WORKING</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_GATHERER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
+			</SupersedingUnits>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_RANGER</Class>
@@ -8275,12 +8265,9 @@ Base XP gained when defending
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_BRUTE</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_BRUTE</UnitType>
+			</SupersedingUnits>
 			<iCost>3</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>1</iCombat>
@@ -8373,12 +8360,9 @@ Base XP gained when defending
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL</UnitType>
+			</SupersedingUnits>
 			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
 			<iCost>17</iCost>
 			<iMoves>1</iMoves>
@@ -8482,12 +8466,9 @@ Base XP gained when defending
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_WARRIOR</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_WARRIOR</UnitType>
+			</SupersedingUnits>
 			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
 			<iCost>26</iCost>
 			<iMoves>1</iMoves>
@@ -8588,12 +8569,9 @@ Base XP gained when defending
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_STONE_MACEMAN</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_STONE_MACEMAN</UnitType>
+			</SupersedingUnits>
 			<iCost>38</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
@@ -8733,12 +8711,9 @@ Base XP gained when defending
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_NO_SIEGE</FormationType>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_OBSIDIAN_MACEMAN</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_OBSIDIAN_MACEMAN</UnitType>
+			</SupersedingUnits>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_EARLY_MACEMAN</Class>
@@ -9006,12 +8981,9 @@ Base XP gained when defending
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_STONE_AGE_AXEMAN</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_STONE_AGE_AXEMAN</UnitType>
+			</SupersedingUnits>
 			<iCost>42</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
@@ -9155,12 +9127,9 @@ Base XP gained when defending
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_OBSIDIAN_AXEMAN</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_OBSIDIAN_AXEMAN</UnitType>
+			</SupersedingUnits>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_AXEMAN</Class>
@@ -9462,12 +9431,9 @@ Base XP gained when defending
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_OBSIDIAN_SWORDSMAN</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_OBSIDIAN_SWORDSMAN</UnitType>
+			</SupersedingUnits>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_LIGHT_SWORDSMAN</Class>
@@ -9976,12 +9942,9 @@ Base XP gained when defending
 			</UnitAIs>
 			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
 			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_WOODEN_SPEARMAN</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_WOODEN_SPEARMAN</UnitType>
+			</SupersedingUnits>
 			<iCost>35</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>3</iCombat>
@@ -10077,12 +10040,9 @@ Base XP gained when defending
 			</UnitAIs>
 			<PrereqTech>TECH_SPEAR_MAKING</PrereqTech>
 			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_STONE_AGE_SPEARMAN</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_STONE_AGE_SPEARMAN</UnitType>
+			</SupersedingUnits>
 			<iCost>39</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
@@ -10223,12 +10183,9 @@ Base XP gained when defending
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_OBSIDIAN_SPEARMAN</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_OBSIDIAN_SPEARMAN</UnitType>
+			</SupersedingUnits>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_SPEARMAN</Class>
@@ -11271,12 +11228,9 @@ Base XP gained when defending
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_BINDING</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_STONE_THROWER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_STONE_THROWER</UnitType>
+			</SupersedingUnits>
 			<iCost>4</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>1</iCombat>
@@ -11380,12 +11334,9 @@ Base XP gained when defending
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_SLINGER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_SLINGER</UnitType>
+			</SupersedingUnits>
 			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
 			<iCost>23</iCost>
 			<iMoves>1</iMoves>
@@ -11489,12 +11440,9 @@ Base XP gained when defending
 			</UnitAIs>
 			<PrereqTech>TECH_ATLATL_MAKING</PrereqTech>
 			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_GATHERER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
+			</SupersedingUnits>
 			<iCost>50</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
@@ -17693,12 +17641,9 @@ Base XP gained when defending
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_ELEPHANT_RIDER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_ELEPHANT_RIDER</UnitType>
+			</SupersedingUnits>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_WAR_ELEPHANT</Class>
@@ -21311,12 +21256,9 @@ Base XP gained when defending
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_LOG_RAM</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_LOG_RAM</UnitType>
+			</SupersedingUnits>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_BATTERING_RAM</Class>
@@ -29258,12 +29200,9 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_RAFT</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_RAFT</UnitType>
+			</SupersedingUnits>
 			<PrereqTech>TECH_RAFT_BUILDING</PrereqTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_PRIME_TIMBER</BonusType>
@@ -29383,12 +29322,9 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_CANOE</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_CANOE</UnitType>
+			</SupersedingUnits>
 			<PrereqBuilding>BUILDING_CANOEBUILDERS_HUT</PrereqBuilding>
 			<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
 			<iCost>67</iCost>
@@ -30452,12 +30388,9 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_WAR_CANOE</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_WAR_CANOE</UnitType>
+			</SupersedingUnits>
 			<PrereqBuilding>BUILDING_CANOEBUILDERS_HUT</PrereqBuilding>
 			<PrereqTech>TECH_HARPOON_MAKING</PrereqTech>
 			<iCost>77</iCost>
@@ -33298,12 +33231,9 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_KAYAK</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_KAYAK</UnitType>
+			</SupersedingUnits>
 			<PrereqBuilding>BUILDING_CANOEBUILDERS_HUT</PrereqBuilding>
 			<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
 			<PrereqBonuses>
@@ -44053,12 +43983,9 @@ Base XP gained when defending
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_TRAINEDDOG</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_TRAINEDDOG</UnitType>
+			</SupersedingUnits>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_WARDOG</Class>
@@ -45104,12 +45031,9 @@ Base XP gained when defending
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_WATCHER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_WATCHER</UnitType>
+			</SupersedingUnits>
 			<bNoCapture>1</bNoCapture>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -45241,12 +45165,9 @@ Base XP gained when defending
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_ENFORCER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_ENFORCER</UnitType>
+			</SupersedingUnits>
 			<VisibilityIntensityTypes>
 				<VisibilityIntensityType>
 					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
@@ -47327,12 +47248,9 @@ Base XP gained when defending
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_GATHERER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
+			</SupersedingUnits>
 			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<Invisible>INVISIBLE_CAMOUFLAGE</Invisible>
 			<InvisibilityIntensityTypes>
@@ -47510,12 +47428,9 @@ Base XP gained when defending
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_GATHERER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
+			</SupersedingUnits>
 			<iCost>43</iCost>
 			<iMoves>1</iMoves>
 			<Invisible>INVISIBLE_CAMOUFLAGE</Invisible>
@@ -47699,12 +47614,9 @@ Base XP gained when defending
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_GATHERER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
+			</SupersedingUnits>
 			<ForceObsoleteTech>TECH_MATCHLOCK</ForceObsoleteTech>
 			<iCost>68</iCost>
 			<iMoves>2</iMoves>
@@ -58133,12 +58045,9 @@ Base XP gained when defending
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_HEALER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_HEALER</UnitType>
+			</SupersedingUnits>
 			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<iCost>36</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
@@ -60991,12 +60900,9 @@ Base XP gained when defending
 					<iAmountPerTurn>-1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_SHEPHERD</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_SHEPHERD</UnitType>
+			</SupersedingUnits>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_CARTWRIGHT</Class>
@@ -63388,16 +63294,10 @@ Base XP gained when defending
 					<iAmountPerTurn>-1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_WISE_WOMAN</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_HEALER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_WISE_WOMAN</UnitType>
+				<UnitType>UNIT_HEALER</UnitType>
+			</SupersedingUnits>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_HEALER</Class>
@@ -63456,12 +63356,9 @@ Base XP gained when defending
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_HEALER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_HEALER</UnitType>
+			</SupersedingUnits>
 			<iCost>45</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iMoves>1</iMoves>

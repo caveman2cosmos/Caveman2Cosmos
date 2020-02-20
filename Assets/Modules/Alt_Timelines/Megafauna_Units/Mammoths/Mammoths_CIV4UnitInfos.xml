@@ -120,12 +120,9 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_MAMMOTH_RIDER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<SupersedingUnitType>UNIT_NEANDERTHAL_MAMMOTH_RIDER</SupersedingUnitType>
+			</SupersedingUnits>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_TAMED_MAMMOTH</Class>
