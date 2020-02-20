@@ -1181,7 +1181,7 @@ public:
 	void changeUnitClassMaking(UnitClassTypes eIndex, int iChange);
 	int getUnitClassCountPlusMaking(UnitClassTypes eIndex) const; // Exposed to Python
 
-	int getBuildingClassCount(BuildingClassTypes eIndex) const;
+	int getBuildingCount(BuildingTypes eIndex) const;
 	int getBuildingGroupCount(SpecialBuildingTypes eIndex) const; // Exposed to Python
 	bool isBuildingMaxedOut(BuildingTypes eIndex, int iExtra = 0) const; // Exposed to Python
 	bool isBuildingGroupMaxedOut(SpecialBuildingTypes eIndex, int iExtra = 0) const; // Exposed to Python
@@ -1620,7 +1620,7 @@ public:
 	void changeUnitCombatFreeExperience(UnitCombatTypes eIndex, int iChange);
 
 	int getBuildingProductionModifier(BuildingTypes eIndex) const;
-	void changeBuildingClassProductionModifier(BuildingTypes eIndex, int iChange);
+	void changeBuildingProductionModifier(BuildingTypes eIndex, int iChange);
 
 	int getUnitClassProductionModifier(UnitClassTypes eIndex) const;
 	void changeUnitClassProductionModifier(UnitClassTypes eIndex, int iChange);
@@ -1665,8 +1665,8 @@ public:
 	int getBuildingCommerceModifier(BuildingTypes eIndex1, CommerceTypes eIndex2) const;
 	void changeBuildingCommerceModifier(BuildingTypes eIndex1, CommerceTypes eIndex2, int iChange);
 
-	int getBuildingClassCommerceChange(BuildingClassTypes eIndex1, CommerceTypes eIndex2) const;
-	void changeBuildingClassCommerceChange(BuildingClassTypes eIndex1, CommerceTypes eIndex2, int iChange);
+	int getBuildingCommerceChange(BuildingTypes building, CommerceTypes CommerceType) const;
+	void changeBuildingCommerceChange(BuildingTypes building, CommerceTypes CommerceType, int iChange);
 
 	int getBonusCommerceModifier(BonusTypes eIndex1, CommerceTypes eIndex2) const; //Exposed to Python
 	void changeBonusCommerceModifier(BonusTypes eIndex1, CommerceTypes eIndex2, int iChange);
@@ -1708,7 +1708,7 @@ public:
 
 	bool m_bChoosingReligion;
 
-	int getBuildingClassCount(BuildingClassTypes eBuildingClass, bool bUpgrades) const;
+	int getBuildingCount(BuildingTypes eBuilding, bool bUpgrades) const;
 
 	int getScoreComponent(int iRawScore, int iInitial, int iMax, int iFactor, bool bExponential, bool bFinal, bool bVictory) const;
 
@@ -1781,10 +1781,10 @@ protected:
 	int** m_ppiSpecialistCommercePercentChanges;
 	int** m_ppaaiTerrainYieldChange;
 	int** m_ppiBuildingCommerceModifier;
-	int** m_ppiBuildingClassCommerceChange;
+	int** m_ppiBuildingCommerceChange;
 	int** m_ppiBonusCommerceModifier;
 	int* m_paiUnitCombatProductionModifier;
-	int* m_paiBuildingClassProductionModifier;
+	int* m_paiBuildingProductionModifier;
 	int* m_paiUnitClassProductionModifier;
 	int* m_paiBonusMintedPercent;
 	int* m_paiPlayerWideAfflictionCount;
@@ -2738,7 +2738,7 @@ private:
 
 protected:
 	void constructTechPathSet(TechTypes eTech, std::vector<techPath*>& pathSet, techPath& rootPath) const;
-	void clearCanConstructCacheForClass(BuildingClassTypes eBuildingClass, bool bIncludeCities = false) const;
+	void clearCanConstructCache(BuildingTypes building, bool bIncludeCities = false) const;
 	void clearCanConstructCacheForGroup(SpecialBuildingTypes eSpecialBuilding, bool bIncludeCities = false) const;
 
 public:
@@ -2747,7 +2747,6 @@ public:
 	void setPlayerWideAfflictionCount(PromotionLineTypes ePromotionLineType, int iChange);
 	int countAfflictedUnits(PromotionLineTypes eAfflictionLine);
 	void recalculateAfflictedUnitCount();
-
 };
 
 #endif

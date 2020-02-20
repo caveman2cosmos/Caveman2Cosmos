@@ -601,50 +601,46 @@ bool isNationalWonderGroupSpecialBuilding(SpecialBuildingTypes eSpecialBuilding)
 	return (GC.getSpecialBuildingInfo(eSpecialBuilding).getMaxPlayerInstances() != -1);
 }
 
-bool isLimitedWonderClass(BuildingTypes eBuildingClass)
+bool isLimitedWonder(BuildingTypes eBuilding)
 {
 	return (isWorldWonder(eBuilding) || isTeamWonder(eBuilding) || isNationalWonder(eBuilding));
 }
 
-int limitedWonderClassLimit(BuildingClassTypes eBuildingClass)
+int limitedWonderLimit(BuildingTypes eBuilding)
 {
-	int iMax;
 	int iCount = 0;
 	bool bIsLimited = false;
-	const CvBuildingClassInfo& kBuildingClass = GC.getBuildingClassInfo(eBuildingClass);
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
-	iMax = kBuildingClass.getMaxGlobalInstances();
+	int iMax = kBuilding.getMaxGlobalInstances();
 	if (iMax != -1)
 	{
 		iCount += iMax;
 		bIsLimited = true;
 	}
 
-	iMax = kBuildingClass.getMaxTeamInstances();
+	iMax = kBuilding.getMaxTeamInstances();
 	if (iMax != -1)
 	{
 		iCount += iMax;
 		bIsLimited = true;
 	}
 
-	iMax = kBuildingClass.getMaxPlayerInstances();
+	iMax = kBuilding.getMaxPlayerInstances();
 	if (iMax != -1)
 	{
 		iCount += iMax;
 		bIsLimited = true;
 	}
 
-	if (kBuildingClass.getDefaultBuildingIndex() != NO_BUILDING)
+	const SpecialBuildingTypes eSpecialBuilding = static_cast<SpecialBuildingTypes>(kBuilding.getSpecialBuildingType());
+	if (eSpecialBuilding != NO_SPECIALBUILDING)
 	{
-		const SpecialBuildingTypes eSpecialBuilding = (SpecialBuildingTypes)GC.getBuildingInfo((BuildingTypes)kBuildingClass.getDefaultBuildingIndex()).getSpecialBuildingType();
-		if (eSpecialBuilding != NO_SPECIALBUILDING)
+		iMax = GC.getSpecialBuildingInfo(eSpecialBuilding).getMaxPlayerInstances();
+		if (iMax != -1)
 		{
-			iMax = GC.getSpecialBuildingInfo(eSpecialBuilding).getMaxPlayerInstances();
-			if (iMax != -1)
-			{
-				iCount += iMax;
-				bIsLimited = true;
-			}
+			iCount += iMax;
+			bIsLimited = true;
 		}
 	}
 

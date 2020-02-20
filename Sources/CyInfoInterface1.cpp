@@ -733,8 +733,6 @@ void CyInfoPythonInterface1()
 		;
 
 	python::class_<CvBuildingInfo, python::bases<CvInfoBase, CvScalableInfo> >("CvBuildingInfo")
-
-		.def("getBuildingClassType", &CvBuildingInfo::getBuildingClassType, "int ()")
 		.def("getVictoryPrereq", &CvBuildingInfo::getVictoryPrereq, "int ()")
 		.def("getFreeStartEra", &CvBuildingInfo::getFreeStartEra, "int ()")
 		.def("getMaxStartEra", &CvBuildingInfo::getMaxStartEra, "int ()")

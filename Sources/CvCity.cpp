@@ -1881,13 +1881,13 @@ void CvCity::doAutobuild()
 					AddDLLMessage(getOwner(), true, 10, szBuffer, NULL, MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"));
 				}
 			}
-			else if (kBuilding.getPrereqNumOfBuildingClass(NO_BUILDINGCLASS) > 0)
+			else if (kBuilding.getPrereqNumOfBuilding(NO_BUILDING) > 0)
 			{
 				// Speciasl rule meant for adopted cultures, hopefully it won't affect other autobuilds in an irrational way.
-				for (int iJ = 0; iJ < GC.getNumBuildingClassInfos(); iJ++)
+				for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 				{
-					if (kBuilding.getPrereqNumOfBuildingClass((BuildingClassTypes)iJ) > 0
-					&& GET_PLAYER(getOwner()).getBuildingClassCount((BuildingClassTypes)iJ) < GET_PLAYER(getOwner()).getBuildingClassPrereqBuilding((BuildingTypes)iI, (BuildingClassTypes)iJ, 0))
+					if (kBuilding.getPrereqNumOfBuilding((BuildingTypes)iJ) > 0
+					&& GET_PLAYER(getOwner()).getBuildingCount((BuildingTypes)iJ) < GET_PLAYER(getOwner()).getBuildingPrereqBuilding((BuildingTypes)iI, (BuildingTypes)iJ, 0))
 					{
 						setNumRealBuilding((BuildingTypes)iI, 0);
 						CvWString szBuffer = gDLL->getText("TXT_KEY_COMPLETED_AUTO_BUILD_NOT", kBuilding.getTextKeyWide(), getName().GetCString());
@@ -6295,10 +6295,10 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 			PROFILE("CvCity::processBuilding.UniClasses");
 			changeUnitClassProductionModifier(((UnitClassTypes)iI), kBuilding.getUnitClassProductionModifier(iI) * iChange);
 		}
-		for (int iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
 			PROFILE("CvCity::processBuilding.BuildingClasses");
-			changeBuildingClassProductionModifier(((BuildingClassTypes)iI), kBuilding.getBuildingClassProductionModifier(iI) * iChange);
+			changeBuildingProductionModifier((BuildingTypes)iI, kBuilding.getBuildingProductionModifier(iI) * iChange);
 
 			for (int iCommerce = 0; iCommerce < NUM_COMMERCE_TYPES; iCommerce++)
 			{
@@ -6306,7 +6306,7 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 
 				if (iCommerceChange != 0)
 				{
-					GET_PLAYER(getOwner()).changeBuildingClassCommerceChange((BuildingClassTypes)iI, (CommerceTypes)iCommerce, iCommerceChange * iChange);
+					GET_PLAYER(getOwner()).changeBuildingCommerceChange((BuildingTypes)iI, (CommerceTypes)iCommerce, iCommerceChange * iChange);
 				}
 			}
 		}

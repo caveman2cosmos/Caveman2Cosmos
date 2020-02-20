@@ -2032,28 +2032,6 @@ int CvTechInfo::getPrereqOrBuildingClassMinimumRequired(int iIndex) const
 	return (int)m_aPrereqOrBuildingClass[iIndex].iMinimumRequired;
 }
 
-//int CvTechInfo::getPrereqBuildingClass(int i) const
-//{
-//	FAssertMsg(i < GC.getNumBuildingClassInfos(), "Index out of bounds");
-//	FAssertMsg(i > -1, "Index out of bounds");
-//	return m_paiPrereqBuildingClass ? m_paiPrereqBuildingClass[i] : false;
-//}
-//
-//int CvTechInfo::getPrereqBuildingVectorSize()					{return m_aszPrereqBuildingClassforPass3.size();}
-//CvString CvTechInfo::getPrereqBuildingNamesVectorElement(int i)	{return m_aszPrereqBuildingClassforPass3[i];}
-//int CvTechInfo::getPrereqBuildingClassValuesVectorElement(int i)		{return m_aiPrereqBuildingClassforPass3[i];}
-//
-//int CvTechInfo::getPrereqOrBuildingClass(int i) const
-//{
-//	FAssertMsg(i < GC.getNumBuildingClassInfos(), "Index out of bounds");
-//	FAssertMsg(i > -1, "Index out of bounds");
-//	return m_paiPrereqOrBuildingClass ? m_paiPrereqOrBuildingClass[i] : false;
-//}
-//
-//int CvTechInfo::getPrereqOrBuildingVectorSize()					{return m_aszPrereqOrBuildingClassforPass3.size();}
-//CvString CvTechInfo::getPrereqOrBuildingNamesVectorElement(int i)	{return m_aszPrereqOrBuildingClassforPass3[i];}
-//int CvTechInfo::getPrereqOrBuildingClassValuesVectorElement(int i)		{return m_aiPrereqOrBuildingClassforPass3[i];}
-
 void CvTechInfo::setPrereqOrTech(int i, int iTech)
 {
 	if ( getPrereqOrTechs(i) != iTech )

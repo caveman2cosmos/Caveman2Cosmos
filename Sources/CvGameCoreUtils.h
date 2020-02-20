@@ -262,8 +262,8 @@ bool isTeamWonder(BuildingTypes eBuilding);						// Exposed to Python
 bool isNationalWonder(BuildingTypes eBuilding);				// Exposed to Python
 bool isNationalWonderGroup(BuildingTypes eBuilding);
 bool isNationalWonderGroupSpecialBuilding(SpecialBuildingTypes eSpecialBuilding);
-bool isLimitedWonderClass(BuildingClassTypes eBuildingClass);					// Exposed to Python
-int limitedWonderClassLimit(BuildingClassTypes eBuildingClass);
+bool isLimitedWonder(BuildingTypes eBuilding);					// Exposed to Python
+int limitedWonderLimit(BuildingTypes eBuilding);
 
 bool isWorldProject(ProjectTypes eProject);														// Exposed to Python
 bool isTeamProject(ProjectTypes eProject);														// Exposed to Python

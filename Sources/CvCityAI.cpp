@@ -5117,7 +5117,6 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 	}
 
 	// A couple of shortcuts to make the code more legible (probably the optimier inlines them all but better safe than sorry)
-	CvCivilizationInfo& civInfo = GC.getCivilizationInfo(getCivilizationType());
 	CvPlayerAI& player = GET_PLAYER(getOwner());
 
 	bool bAreaAlone = player.AI_isAreaAlone(area());
@@ -5129,7 +5128,6 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 		FAssertMsg(building != NO_BUILDING, "AI_scoreBuildingsFromListThreshold isn't given a valid possibleBuildings list");
 
 		CvBuildingInfo& buildingInfo = GC.getBuildingInfo(building);
-		BuildingClassTypes buildingClassType = (BuildingClassTypes)buildingInfo.getBuildingClassType();
 
 		if (
 			// We are not exceeding max buildings
@@ -5152,7 +5150,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 			&&
 			(
 				// Automated production doesn't look at buildings with prerequisites?
-				!isProductionAutomated() || buildingInfo.getPrereqNumOfBuildingClass(NO_BUILDINGCLASS) <= 0
+				!isProductionAutomated() || buildingInfo.getPrereqNumOfBuilding(NO_BUILDING) <= 0
 			)
 		)
 		{
@@ -5189,12 +5187,10 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 
 					// Look for building it replaces
 					// TODO OPT: change replace building to vector instead of mask
-					for (int iJ = 0; iJ < GC.getNumBuildingClassInfos(); iJ++)
+					for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 					{
-						BuildingTypes eJLoopBuilding = ((BuildingTypes)(GC.getBuildingClassInfo((BuildingClassTypes)iJ).getDefaultBuildingIndex()));
-						if (eJLoopBuilding != NO_BUILDING
-							&&
-							GC.getBuildingInfo(eJLoopBuilding).isReplaceBuildingClass(buildingClassType)
+						const BuildingTypes eJLoopBuilding = static_cast<BuildingTypes>(iJ);
+						if (GC.getBuildingInfo(eJLoopBuilding).isReplaceBuilding(building)
 							&&
 							// Only care if we actually have the building
 							getNumBuilding(eJLoopBuilding) > 0
@@ -5221,9 +5217,9 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 				// TODO OPT: convert the masks to vectors so this look is faster
 				for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 				{
-					if ((GC.getBuildingInfo((BuildingTypes)iJ).isBuildingClassNeededInCity(buildingClassType) || GC.getBuildingInfo((BuildingTypes)iJ).isPrereqOrBuildingClass(buildingClassType)) &&
+					if ((GC.getBuildingInfo((BuildingTypes)iJ).isBuildingNeededInCity(building) || GC.getBuildingInfo((BuildingTypes)iJ).isPrereqOrBuilding(building)) &&
 						getNumBuilding((BuildingTypes)iJ) == 0 &&
-						canConstructInternal((BuildingTypes)iJ, false, false, false, true, buildingClassType))
+						canConstructInternal((BuildingTypes)iJ, false, false, false, true, building))
 					{
 						PROFILE("AI_bestBuildingThreshold.Enablement");
 
@@ -5239,23 +5235,20 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 			}
 
 			// If the buildings provides a free area building as well then adjust the score up
-			if (buildingInfo.getFreeAreaBuildingClass() != NO_BUILDINGCLASS)
+			const BuildingTypes eFreeAreaBuilding = (BuildingTypes)buildingInfo.getFreeAreaBuilding();
+			if (eFreeAreaBuilding != NO_BUILDING)
 			{
-				const BuildingTypes eFreeAreaBuilding = (BuildingTypes)civInfo.getCivilizationBuildings(buildingInfo.getFreeAreaBuilding());
-				if (eFreeAreaBuilding != NO_BUILDING)
+				// Score is weighted by the number of cities that don't have the free building
+				int weighting = player.getNumCities() - player.getBuildingCountPlusMaking((BuildingTypes)buildingInfo.getFreeAreaBuilding());
+				// Scaled by the ratio of cities in the area / total, giving a guess as to how important this area is in general
+				weighting = (100 * weighting * area()->getCitiesPerPlayer(getOwner())) / player.getNumCities();
+				// If we have none of the free buildings at all then also increase the score weighting
+				if (getNumBuilding(eFreeAreaBuilding) == 0)
 				{
-					// Score is weighted by the number of cities that don't have the free building
-					int weighting = player.getNumCities() - player.getBuildingCountPlusMaking((BuildingTypes)buildingInfo.getFreeAreaBuilding());
-					// Scaled by the ratio of cities in the area / total, giving a guess as to how important this area is in general
-					weighting = (100 * weighting * area()->getCitiesPerPlayer(getOwner())) / player.getNumCities();
-					// If we have none of the free buildings at all then also increase the score weighting
-					if (getNumBuilding(eFreeAreaBuilding) == 0)
-					{
-						weighting++;
-					}
-					// Finally scale by the actual value of the free building based on our focus
-					iValue += (AI_buildingValue(eFreeAreaBuilding, iFocusFlags) * weighting) / 100;
+					weighting++;
 				}
+				// Finally scale by the actual value of the free building based on our focus
+				iValue += (AI_buildingValue(eFreeAreaBuilding, iFocusFlags) * weighting) / 100;
 			}
 
 			if (gCityLogLevel > 3)
@@ -5409,8 +5402,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 	CvPlayerAI& kOwner = GET_PLAYER(getOwner());
 	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
-	BuildingClassTypes eBuildingClass = (BuildingClassTypes) kBuilding.getBuildingClassType();
-	int iLimitedWonderLimit = limitedWonderClassLimit(eBuildingClass);
+	int iLimitedWonderLimit = limitedWonderLimit(eBuilding);
 	bool bIsLimitedWonder = (iLimitedWonderLimit >= 0);
 
 	ReligionTypes eStateReligion = kOwner.getStateReligion();
@@ -5659,18 +5651,11 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 		{
 			PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.Replacements");
 
-			for (int iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
+			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 			{
-				BuildingTypes eLoopBuilding = (BuildingTypes)kCivilization.getCivilizationBuildings(iI);
-				if (kBuilding.isReplaceBuildingClass((BuildingClassTypes)iI))
+				if (kBuilding.isReplaceBuilding((BuildingTypes)iI) && canConstruct((BuildingTypes)iI))
 				{
-					if (eLoopBuilding != NO_BUILDING)
-					{
-						if(canConstruct(eLoopBuilding))
-						{
-							return 0;
-						}
-					}
+					return 0;
 				}
 			}
 		}
@@ -6926,31 +6911,28 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						}
 					}
 
-					if (kBuilding.getBuildingClassProductionModifier(NO_BUILDINGCLASS) != 0)
+					if (kBuilding.getBuildingProductionModifier(NO_BUILDING) != 0)
 					{
 						int buildingProductionModifierValue = 0;
-						for (int iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
+						for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 						{
-							PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.BuildingClass1");
+							PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.Building1");
 
-							if (kBuilding.getBuildingClassProductionModifier(iI) != 0)
+							if (kBuilding.getBuildingProductionModifier(iI) != 0)
 							{
-								BuildingTypes eLoopBuilding = ((BuildingTypes)(kCivilization.getCivilizationBuildings(iI)));
-								if (eLoopBuilding != NO_BUILDING)
+								const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
+								if (canConstruct(eLoopBuilding))
 								{
-									if (canConstruct(eLoopBuilding))
+									const int iModifier = kBuilding.getBuildingProductionModifier(iI);
+									const int iOriginalCost = getHurryCost(true, eLoopBuilding, false);
+									if (iModifier > -100)
 									{
-										int iModifier = kBuilding.getBuildingClassProductionModifier(iI);
-										int iOriginalCost = getHurryCost(true, eLoopBuilding, false);
-										if (iModifier > -100)
-										{
-											int	iNewCost = (iOriginalCost * (100 / (100 + iModifier)));
-											buildingProductionModifierValue +=  (iOriginalCost - iNewCost) / 10;
-										}
-										else
-										{//If the modifier is less than -100, avoid it like the plague
-											buildingProductionModifierValue -= 100;
-										}
+										const int iNewCost = (iOriginalCost * (100 / (100 + iModifier)));
+										buildingProductionModifierValue +=  (iOriginalCost - iNewCost) / 10;
+									}
+									else
+									{//If the modifier is less than -100, avoid it like the plague
+										buildingProductionModifierValue -= 100;
 									}
 								}
 							}
@@ -6958,44 +6940,40 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						iValue += buildingProductionModifierValue;
 					}
 
-					if (kBuilding.getGlobalBuildingClassProductionModifier(NO_BUILDINGCLASS) != 0)
+					if (kBuilding.getGlobalBuildingProductionModifier(NO_BUILDING) != 0)
 					{
 						int globalBuildingProductionModifierValue = 0;
-						for (int iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
+						for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 						{
-							PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.BuildingClass2");
+							PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.Building2");
 
-							if (kBuilding.getGlobalBuildingClassProductionModifier(iI) != 0)
+							if (kBuilding.getGlobalBuildingProductionModifier(iI) != 0)
 							{
-								BuildingTypes eLoopBuilding = ((BuildingTypes)(kCivilization.getCivilizationBuildings(iI)));
-								if (eLoopBuilding != NO_BUILDING)
+								const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
+								if (canConstruct(eLoopBuilding))
 								{
+									const int iModifier = kBuilding.getGlobalBuildingProductionModifier(iI);
+									const int iOriginalCost = getHurryCost(true, eLoopBuilding, false);
 
-									if (canConstruct(eLoopBuilding))
+									if (iModifier > -100)
 									{
-										int iModifier = kBuilding.getGlobalBuildingClassProductionModifier(iI);
-										int iOriginalCost = getHurryCost(true, eLoopBuilding, false);
+										int iLoop;
+										int iCount = 0;
 
-										if (iModifier > -100)
+										for (CvCity* pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
 										{
-											int iLoop;
-											int iCount = 0;
-
-											for (CvCity* pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+											if ( pLoopCity->getNumBuilding(eLoopBuilding) == 0 )
 											{
-												if ( pLoopCity->getNumBuilding(eLoopBuilding) == 0 )
-												{
-													iCount++;
-												}
+												iCount++;
 											}
+										}
 
-											int iNewCost = (iOriginalCost * (100 / (100 + iModifier)));
-											globalBuildingProductionModifierValue += ((iOriginalCost - iNewCost)*iCount) / 10;
-										}
-										else
-										{//If the modifier is less than -100, avoid it like the plague
-											globalBuildingProductionModifierValue -= 100;
-										}
+										const int iNewCost = (iOriginalCost * (100 / (100 + iModifier)));
+										globalBuildingProductionModifierValue += ((iOriginalCost - iNewCost)*iCount) / 10;
+									}
+									else
+									{//If the modifier is less than -100, avoid it like the plague
+										globalBuildingProductionModifierValue -= 100;
 									}
 								}
 							}
@@ -7414,88 +7392,6 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 				}
 			}
 		}
-	//
-	//	// obsolete checks
-	//	bool bCanResearchObsoleteTech = false;
-	//	int iErasUntilObsolete = MAX_INT;
-	//	if (kBuilding.getObsoleteTech() != NO_TECH)
-	//	{
-	//		TechTypes eObsoleteTech = (TechTypes) kBuilding.getObsoleteTech();
-	//		FAssertMsg(eObsoleteTech == NO_TECH || !(GET_TEAM(getTeam()).isHasTech(eObsoleteTech)), "Team expected to not have the tech that obsoletes eBuilding");
-	//		iErasUntilObsolete = GC.getTechInfo(eObsoleteTech).getEra() - kOwner.getCurrentEra();
-	//		bCanResearchObsoleteTech = kOwner.canResearch(eObsoleteTech);
-	//	}
-	//
-	//	if (kBuilding.getSpecialBuildingType() != NO_SPECIALBUILDING)
-	//	{
-	//		TechTypes eSpecialBldgObsoleteTech = (TechTypes) GC.getSpecialBuildingInfo((SpecialBuildingTypes)(kBuilding.getSpecialBuildingType())).getObsoleteTech();
-	//		FAssertMsg(eSpecialBldgObsoleteTech == NO_TECH || !(GET_TEAM(getTeam()).isHasTech(eSpecialBldgObsoleteTech)), "Team expected to not have the tech that obsoletes eBuilding");
-	//		if (eSpecialBldgObsoleteTech != NO_TECH)
-	//		{
-	//			int iSpecialBldgErasUntilObsolete = GC.getTechInfo(eSpecialBldgObsoleteTech).getEra() - kOwner.getCurrentEra();
-	//
-	//			if (iSpecialBldgErasUntilObsolete < iErasUntilObsolete)
-	//			{
-	//				iErasUntilObsolete = iSpecialBldgErasUntilObsolete;
-	//			}
-	//
-	//			if (!bCanResearchObsoleteTech)
-	//			{
-	//				bCanResearchObsoleteTech = kOwner.canResearch(eSpecialBldgObsoleteTech);
-	//			}
-	//		}
-	//	}
-	//
-	//	// tech path method commented out, it would be more accurate if we want to be so.
-	//	//int iObsoleteTechPathLength = 0;
-	//	//if (kBuilding.getObsoleteTech() != NO_TECH)
-	//	//{
-	//	//	iObsoleteTechPathLength = findPathLength(kBuilding.getObsoleteTech(), false);
-	//	//}
-	//
-	//	//if (kBuilding.getSpecialBuildingType() != NO_SPECIALBUILDING)
-	//	//{
-	//	//	TechTypes eSpecialBldgObsoleteTech = GC.getSpecialBuildingInfo((SpecialBuildingTypes)(kBuilding.getSpecialBuildingType())).getObsoleteTech();
-	//	//	int iSpecialBldgObsoleteTechPathLength = findPathLength(eSpecialBldgObsoleteTech, false);
-	//
-	//	//	if (iSpecialBldgObsoleteTechPathLength < iObsoleteTechPathLength)
-	//	//	{
-	//	//		iObsoleteTechPathLength = iSpecialBldgObsoleteTechPathLength;
-	//	//	}
-	//	//}
-	//
-	//	// if we can research obsolete tech, then this almost no value
-	//	if (bCanResearchObsoleteTech)
-	//	{
-	//		iValue = std::min(16, (iValue + 31) / 32);
-	//	}
-	//	// if we are going obsolete in the next era, the current era, or even previous eras...
-	//	else if (iErasUntilObsolete < 2)
-	//	{
-	//		// do not care about obsolete if we are going cultural and there is a culture benefit post obsolesence
-	//		if (!bCulturalVictory1 || (kBuilding.getObsoleteSafeCommerceChange(COMMERCE_CULTURE) <= 0))
-	//		{
-	//			iValue++;
-	//			iValue /= 2;
-	//		}
-	//	}
-
-	//	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-	//	{
-	//		if (!GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getBuildingInfo((BuildingTypes)iI).getObsoleteTech())))
-	//		{
-	//			if (GC.getBuildingInfo((BuildingTypes)iI).isBuildingClassNeededInCity(kBuilding.getBuildingClassType()))
-	//			{
-	//				iValue += AI_buildingValue((BuildingTypes)iI, iFocusFlags);
-	//			}
-	//
-	//			int iNumPrereqs = kOwner.getBuildingClassPrereqBuilding((BuildingTypes)iI, (BuildingClassTypes)kBuilding.getBuildingClassType()) - kOwner.getBuildingClassCount((BuildingClassTypes)kBuilding.getBuildingClassType());
-	//			if (iNumPrereqs > 0)
-	//			{
-	//				iValue += AI_buildingValue((BuildingTypes)iI, iFocusFlags) / iNumPrereqs;
-	//			}
-	//		}
-	//	}
 
 		//	If we are really seeking an answer specifically on the values from the specific flags
 		//	then the rest is just a tie-breaker so dramatically boost the value of the flag-specific
@@ -17327,51 +17223,47 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 	cachedBuildingValues->m_iCachedFlags |= iFocusFlags;
 
 	std::set<BuildingTypes> buildingsToCalculate;
-	int numNumBuildingClassInfos = GC.getNumBuildingClassInfos();
+	const int numBuildingInfos = GC.getNumBuildingInfos();
 
 	{
 		PROFILE("CvCityAI::CalculateAllBuildingValues.PreLoop");
-		for (int iBuilding = 0; iBuilding < numNumBuildingClassInfos; iBuilding++)
+		for (int iBuilding = 0; iBuilding < numBuildingInfos; iBuilding++)
 		{
-			BuildingTypes eBuilding = ((BuildingTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuildings(iBuilding)));
-
-			if (NO_BUILDING != eBuilding)
+			const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
+			if ( !canConstruct(eBuilding) )
 			{
-				if ( !canConstruct(eBuilding) )
-				{
-					continue;
-				}
+				continue;
+			}
 
-				buildingsToCalculate.insert(eBuilding);
+			buildingsToCalculate.insert(eBuilding);
 
-				for (int iJ = 0; iJ < numNumBuildingClassInfos; iJ++)
+			for (int iJ = 0; iJ < numNumBuildingInfos; iJ++)
+			{
+				const BuildingTypes eJLoopBuilding = static_cast<BuildingTypes>(iI);
+				if (buildingsToCalculate.find(eJLoopBuilding) == buildingsToCalculate.end())
 				{
-					BuildingTypes eJLoopBuilding = ((BuildingTypes)(GC.getBuildingClassInfo((BuildingClassTypes)iJ).getDefaultBuildingIndex()));
-					if (eJLoopBuilding != NO_BUILDING && buildingsToCalculate.find(eJLoopBuilding) == buildingsToCalculate.end())
+					if (GC.getBuildingInfo(eJLoopBuilding).isReplaceBuilding(iBuilding))
 					{
-						if (GC.getBuildingInfo(eJLoopBuilding).isReplaceBuildingClass(iBuilding))
+						if (getNumBuilding(eJLoopBuilding) > 0)
 						{
-							if (getNumBuilding(eJLoopBuilding) > 0)
-							{
-								buildingsToCalculate.insert(eJLoopBuilding);
-							}
+							buildingsToCalculate.insert(eJLoopBuilding);
 						}
 					}
 				}
+			}
 
-				if ( GC.getBuildingInfo(eBuilding).EnablesOtherBuildings() )
+			if ( GC.getBuildingInfo(eBuilding).EnablesOtherBuildings() )
+			{
+				for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 				{
-					for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
+					if (buildingsToCalculate.find((BuildingTypes)iJ) == buildingsToCalculate.end() &&
+						(GC.getBuildingInfo((BuildingTypes)iJ).isBuildingNeededInCity(iBuilding) ||
+						 GC.getBuildingInfo((BuildingTypes)iJ).isPrereqOrBuilding(iBuilding)))
 					{
-						if (buildingsToCalculate.find((BuildingTypes)iJ) == buildingsToCalculate.end() &&
-							(GC.getBuildingInfo((BuildingTypes)iJ).isBuildingClassNeededInCity(iBuilding) ||
-							 GC.getBuildingInfo((BuildingTypes)iJ).isPrereqOrBuildingClass(iBuilding)))
+						if ( getNumBuilding((BuildingTypes)iJ) == 0 &&
+							 canConstructInternal((BuildingTypes)iJ, false, false, false, true, eBuilding))
 						{
-							if ( getNumBuilding((BuildingTypes)iJ) == 0 &&
-								 canConstructInternal((BuildingTypes)iJ, false, false, false, true, (BuildingClassTypes)iBuilding) )
-							{
-								buildingsToCalculate.insert((BuildingTypes)iJ);
-							}
+							buildingsToCalculate.insert((BuildingTypes)iJ);
 						}
 					}
 				}
@@ -17385,11 +17277,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 		for(std::set<BuildingTypes>::const_iterator itr = buildingsToCalculate.begin(); itr != buildingsToCalculate.end(); ++itr )
 		{
 			BuildingTypes eBuilding = *itr;
-	#if 0
-		for (iBuilding = 0; iBuilding < GC.getNumBuildingClassInfos(); iBuilding++)
-		{
-			BuildingTypes eBuilding = ((BuildingTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuildings(iBuilding)));
-	#endif
+
 			if (NO_BUILDING != eBuilding)
 			{
 				if ( cachedBuildingValues->HasValues(eBuilding) || !buildingMayHaveAnyValue(eBuilding, iFocusFlags))
@@ -17405,8 +17293,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				PROFILE("CvCityAI::CalculateAllBuildingValues.building");
 
 				CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
-				BuildingClassTypes eBuildingClass = (BuildingClassTypes) kBuilding.getBuildingClassType();
-				int iLimitedWonderLimit = limitedWonderClassLimit(eBuildingClass);
+				int iLimitedWonderLimit = limitedWonderLimit(eBuilding);
 				bool bIsLimitedWonder = (iLimitedWonderLimit >= 0);
 
 				logBBAI("          Calc value for %S", kBuilding.getDescription());
@@ -17551,18 +17438,11 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				/************************************************************************************************/
 				bool bSkipThisBuilding = false;
 
-				for (int iI = 0; iI < numNumBuildingClassInfos; iI++)
+				for (int iI = 0; iI < numNumBuildingInfos; iI++)
 				{
-					BuildingTypes eLoopBuilding = (BuildingTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuildings(iI);
-					if (kBuilding.isReplaceBuildingClass((BuildingClassTypes)iI))
+					if (kBuilding.isReplaceBuilding((BuildingTypes)iI) && canConstruct((BuildingTypes)iI))
 					{
-						if (eLoopBuilding != NO_BUILDING)
-						{
-							if(canConstruct(eLoopBuilding))
-							{
-								bSkipThisBuilding = true;
-							}
-						}
+						bSkipThisBuilding = true;
 					}
 				}
 
@@ -17878,7 +17758,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 								const int iBuildingHappinessChanges = kBuilding.getBuildingHappinessChanges(iI);
 								if (iBuildingHappinessChanges != 0)
 								{
-									iValue += (iBuildingHappinessChanges * (kOwner.getBuildingClassCount((BuildingTypes)iI) - getNumBuilding((BuildingTypes)iI)) * 8);
+									iValue += (iBuildingHappinessChanges * (kOwner.getBuildingCount((BuildingTypes)iI) - getNumBuilding((BuildingTypes)iI)) * 8);
 								}
 							}
 			/************************************************************************************************/
@@ -18855,9 +18735,6 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 										iValue -= (kBuilding.getPopulationgrowthratepercentage()*popGrowthValue) / 100;
 									}
 								}
-
-
-
 							}
 							if (kBuilding.getGlobalPopulationgrowthratepercentage() != 0)
 							{
@@ -18887,29 +18764,26 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 								}
 							}
 
-							if (kBuilding.getBuildingClassProductionModifier(NO_BUILDINGCLASS) != 0)
+							if (kBuilding.getBuildingProductionModifier(NO_BUILDING) != 0)
 							{
 								int buildingProductionModifierValue = 0;
-								for (int iI = 0; iI < numNumBuildingClassInfos; iI++)
+								for (int iI = 0; iI < numBuildingInfos; iI++)
 								{
-									if (kBuilding.getBuildingClassProductionModifier(iI) != 0)
+									if (kBuilding.getBuildingProductionModifier(iI) != 0)
 									{
-										BuildingTypes eLoopBuilding = ((BuildingTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuildings(iI)));
-										if (eLoopBuilding != NO_BUILDING)
+										const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
+										if (canConstruct(eLoopBuilding))
 										{
-											if (canConstruct(eLoopBuilding))
+											const int iModifier = kBuilding.getBuildingProductionModifier(iI);
+											const int iOriginalCost = getHurryCost(true, eLoopBuilding, false);
+											if (iModifier > -100)
 											{
-												int iModifier = kBuilding.getBuildingClassProductionModifier(iI);
-												int iOriginalCost = getHurryCost(true, eLoopBuilding, false);
-												if (iModifier > -100)
-												{
-													int iNewCost = (iOriginalCost * (100 / (100 + iModifier)));
-													buildingProductionModifierValue +=  (iOriginalCost - iNewCost) / 10;
-												}
-												else
-												{//If the modifier is less than -100, avoid it like the plague
-													buildingProductionModifierValue -= 100;
-												}
+												const int iNewCost = (iOriginalCost * (100 / (100 + iModifier)));
+												buildingProductionModifierValue +=  (iOriginalCost - iNewCost) / 10;
+											}
+											else
+											{//If the modifier is less than -100, avoid it like the plague
+												buildingProductionModifierValue -= 100;
 											}
 										}
 									}
@@ -18917,41 +18791,38 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 								iValue += buildingProductionModifierValue;
 							}
 
-							if (kBuilding.getGlobalBuildingClassProductionModifier(NO_BUILDINGCLASS) != 0)
+							if (kBuilding.getGlobalBuildingProductionModifier(NO_BUILDING) != 0)
 							{
 								int globalBuildingProductionModifierValue = 0;
-								for (int iI = 0; iI < numNumBuildingClassInfos; iI++)
+								for (int iI = 0; iI < numBuildingInfos; iI++)
 								{
-									if (kBuilding.getGlobalBuildingClassProductionModifier(iI) != 0)
+									if (kBuilding.getGlobalBuildingProductionModifier(iI) != 0)
 									{
-										BuildingTypes eLoopBuilding = ((BuildingTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuildings(iI)));
-										if (eLoopBuilding != NO_BUILDING)
+										const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
+										if (canConstruct(eLoopBuilding))
 										{
-											if (canConstruct(eLoopBuilding))
+											const int iModifier = kBuilding.getGlobalBuildingProductionModifier(iI);
+											const int iOriginalCost = getHurryCost(true, eLoopBuilding, false);
+
+											if (iModifier > -100)
 											{
-												int iModifier = kBuilding.getGlobalBuildingClassProductionModifier(iI);
-												int iOriginalCost = getHurryCost(true, eLoopBuilding, false);
+												int iLoop;
+												int iCount = 0;
 
-												if (iModifier > -100)
+												for (CvCity* pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
 												{
-													int iLoop;
-													int iCount = 0;
-
-													for (CvCity* pLoopCity = GET_PLAYER(getOwner()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwner()).nextCity(&iLoop))
+													if ( pLoopCity->getNumBuilding(eLoopBuilding) == 0 )
 													{
-														if ( pLoopCity->getNumBuilding(eLoopBuilding) == 0 )
-														{
-															iCount++;
-														}
+														iCount++;
 													}
+												}
 
-													int iNewCost = (iOriginalCost * (100 / (100 + iModifier)));
-													globalBuildingProductionModifierValue += ((iOriginalCost - iNewCost)*iCount) / 10;
-												}
-												else
-												{//If the modifier is less than -100, avoid it like the plague
-													globalBuildingProductionModifierValue -= 100;
-												}
+												const int iNewCost = (iOriginalCost * (100 / (100 + iModifier)));
+												globalBuildingProductionModifierValue += ((iOriginalCost - iNewCost)*iCount) / 10;
+											}
+											else
+											{//If the modifier is less than -100, avoid it like the plague
+												globalBuildingProductionModifierValue -= 100;
 											}
 										}
 									}
@@ -19356,7 +19227,7 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 {
 	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 	CvPlayerAI& kOwner = GET_PLAYER(getOwner());
-	int iLimitedWonderLimit = limitedWonderClassLimit((BuildingClassTypes)kBuilding.getBuildingClassType());
+	int iLimitedWonderLimit = limitedWonderLimit(eBuilding);
 	bool bCulturalVictory1 = kOwner.AI_isDoVictoryStrategy(AI_VICTORY_CULTURE1);
 	// unused: bool bCulturalVictory2 = kOwner.AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2);
 	bool bCulturalVictory3 = kOwner.AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3);
@@ -19520,7 +19391,7 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 			}
 			else
 			{
-				int iCountBuilt = kOwner.getBuildingClassCountPlusMaking((BuildingClassTypes)kBuilding.getBuildingClassType());
+				int iCountBuilt = kOwner.getBuildingCountPlusMaking(eBuilding);
 
 				// do we have enough buildings to build extras?
 				bool bHaveEnough = true;
