@@ -3840,7 +3840,7 @@
 			<Type>UNIT_KOREAN_HWACHA</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
-			<Capture>UNITCLASS_KOREAN_HWACHA</Capture>
+			<Capture>UNIT_KOREAN_HWACHA</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -15293,7 +15293,7 @@
 			<Type>UNIT_RAPANUIWORKER</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
-			<Capture>UNITCLASS_RAPANUIWORKER</Capture>
+			<Capture>UNIT_RAPANUIWORKER</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -17731,7 +17731,7 @@
 			<Type>UNIT_FORTY_NINER</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
-			<Capture>UNITCLASS_FORTY_NINER</Capture>
+			<Capture>UNIT_FORTY_NINER</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -21325,7 +21325,7 @@
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_ENTERTAINER</Capture>
+			<Capture>UNIT_ENTERTAINER</Capture>
 			<Combat>UNITCOMBAT_ENTERTAINER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -23119,7 +23119,7 @@
 			<Type>UNIT_LULE_NOMADS</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
-			<Capture>UNITCLASS_WORKANIMAL</Capture>
+			<Capture>UNIT_WORKANIMAL</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -23696,7 +23696,7 @@
 			<Type>UNIT_MEIONE_CARAVAN</Type>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
-			<Capture>UNITCLASS_TRADE_CARAVAN</Capture>
+			<Capture>UNIT_TRADE_CARAVAN</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -25175,7 +25175,7 @@
 			<Type>UNIT_RIVER_WORKER</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
-			<Capture>UNITCLASS_WORKANIMAL</Capture>
+			<Capture>UNIT_WORKANIMAL</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -27246,7 +27246,7 @@
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_BARD</Capture>
+			<Capture>UNIT_BARD</Capture>
 			<Combat>UNITCOMBAT_ENTERTAINER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -27698,7 +27698,7 @@
 			<Type>UNIT_NOK_MERCHANTS</Type>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
-			<Capture>UNITCLASS_TRADE_CARAVAN</Capture>
+			<Capture>UNIT_TRADE_CARAVAN</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -28132,7 +28132,7 @@
 			<Type>UNIT_ODAWA_TRADERS</Type>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
-			<Capture>UNITCLASS_SUPPLY_TRAIN</Capture>
+			<Capture>UNIT_SUPPLY_TRAIN</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WHEELED</SubCombatType>
@@ -30355,7 +30355,7 @@
 			<Type>UNIT_ARJOS</Type>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
-			<Capture>UNITCLASS_TRADE_CARAVAN</Capture>
+			<Capture>UNIT_TRADE_CARAVAN</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -30781,7 +30781,7 @@
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_ENTERTAINER</Capture>
+			<Capture>UNIT_ENTERTAINER</Capture>
 			<Combat>UNITCOMBAT_ENTERTAINER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -30890,7 +30890,7 @@
 			<Type>UNIT_RESIN_CARAVAN</Type>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
-			<Capture>UNITCLASS_TRADE_CARAVAN</Capture>
+			<Capture>UNIT_TRADE_CARAVAN</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -31222,7 +31222,7 @@
 			<Type>UNIT_UJEN_CHOOHA</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
-			<Capture>UNITCLASS_CULVERIN</Capture>
+			<Capture>UNIT_CULVERIN</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -32308,7 +32308,7 @@
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_BARD</Capture>
+			<Capture>UNIT_BARD</Capture>
 			<Combat>UNITCOMBAT_ENTERTAINER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -33434,7 +33434,7 @@
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_ENTERTAINER</Capture>
+			<Capture>UNIT_ENTERTAINER</Capture>
 			<Combat>UNITCOMBAT_ENTERTAINER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -35094,7 +35094,7 @@
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_ENTERTAINER</Capture>
+			<Capture>UNIT_ENTERTAINER</Capture>
 			<Combat>UNITCOMBAT_ENTERTAINER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -38539,7 +38539,7 @@
 			<Type>UNIT_TUCANO_MERCHANT</Type>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
-			<Capture>UNITCLASS_EARLY_MERCHANT_C2C</Capture>
+			<Capture>UNIT_EARLY_MERCHANT_C2C</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -39663,7 +39663,7 @@
 			<Type>UNIT_FIGURINE_POTTER</Type>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
-			<Capture>UNITCLASS_EARLY_MERCHANT_C2C</Capture>
+			<Capture>UNIT_EARLY_MERCHANT_C2C</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -42204,7 +42204,7 @@
 			<Type>UNIT_YOLNGU_MESSENGER</Type>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
-			<Capture>UNITCLASS_EARLY_MERCHANT_C2C</Capture>
+			<Capture>UNIT_EARLY_MERCHANT_C2C</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -42438,7 +42438,7 @@
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_BARD</Capture>
+			<Capture>UNIT_BARD</Capture>
 			<Combat>UNITCOMBAT_ENTERTAINER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -42553,7 +42553,7 @@
 			<Type>UNIT_ZENU_GOLDSMITHS</Type>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
-			<Capture>UNITCLASS_SUPPLY_TRAIN</Capture>
+			<Capture>UNIT_SUPPLY_TRAIN</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WHEELED</SubCombatType>
@@ -42757,7 +42757,7 @@
 			<Type>UNIT_CIBOLA_PEASANT</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
-			<Capture>UNITCLASS_WORKANIMAL</Capture>
+			<Capture>UNIT_WORKANIMAL</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -43715,7 +43715,7 @@
 			<Type>UNIT_MAHOGANY_WOODCUTTER</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
-			<Capture>UNITCLASS_WORKANIMAL</Capture>
+			<Capture>UNIT_WORKANIMAL</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -45508,7 +45508,7 @@
 			<Type>UNIT_AKSUM_MERCHANTS</Type>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
-			<Capture>UNITCLASS_AKSUM_MERCHANTS</Capture>
+			<Capture>UNIT_AKSUM_MERCHANTS</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WHEELED</SubCombatType>
@@ -46614,7 +46614,7 @@
 			<Type>UNIT_BEAD_HUCKSTER</Type>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
-			<Capture>UNITCLASS_TRADE_CARAVAN</Capture>
+			<Capture>UNIT_TRADE_CARAVAN</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -48195,7 +48195,7 @@
 			<Type>UNIT_GONE_DAU</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
-			<Capture>UNITCLASS_MIDDLE_WORKBOAT</Capture>
+			<Capture>UNIT_MIDDLE_WORKBOAT</Capture>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -49452,7 +49452,7 @@
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_ENTERTAINER</Capture>
+			<Capture>UNIT_ENTERTAINER</Capture>
 			<Combat>UNITCOMBAT_ENTERTAINER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -50923,7 +50923,7 @@
 			<Type>UNIT_MYRH_CARAVAN</Type>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
-			<Capture>UNITCLASS_TRADE_CARAVAN</Capture>
+			<Capture>UNIT_TRADE_CARAVAN</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -51308,7 +51308,7 @@
 			<Type>UNIT_COPENA_MERCHANT</Type>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
-			<Capture>UNITCLASS_TRADE_CARAVAN</Capture>
+			<Capture>UNIT_TRADE_CARAVAN</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -51703,7 +51703,7 @@
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_BARD</Capture>
+			<Capture>UNIT_BARD</Capture>
 			<Combat>UNITCOMBAT_ENTERTAINER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -53441,7 +53441,7 @@
 			<Type>UNIT_MOBILE_TREBUCHET</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
-			<Capture>UNITCLASS_TREBUCHET</Capture>
+			<Capture>UNIT_TREBUCHET</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -53650,7 +53650,7 @@
 			<Type>UNIT_MAIZE_CARAVAN</Type>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>2</iInstanceCostModifier>
-			<Capture>UNITCLASS_FOOD_CARAVAN</Capture>
+			<Capture>UNIT_FOOD_CARAVAN</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>

@@ -10,7 +10,7 @@
 			<Class>UNITCLASS_RODNOVERY_MISSIONARY</Class>
 			<Type>UNIT_RODNOVERY_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_RODNOVERY_MISSIONARY</Capture>
+			<Capture>UNIT_RODNOVERY_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>

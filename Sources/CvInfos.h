@@ -1849,14 +1849,14 @@ public:
 	int getCargoSpace() const;					// Exposed to Python
 	int getSMCargoSpace() const;
 	int getSMCargoVolume() const;
-	int getConscriptionValue() const;			// Exposed to Python
-	int getCultureGarrisonValue() const;		// Exposed to Python
-	int getExtraCost() const;					// Exposed to Python
+	int getConscriptionValue() const;				// Exposed to Python
+	int getCultureGarrisonValue() const;			// Exposed to Python
+	int getExtraCost() const;						// Exposed to Python
 	int getAssetValue(bool bForLoad = false) const;	// Exposed to Python
 	int getPowerValue(bool bForLoad = false) const;	// Exposed to Python
 	int getUnitClassType() const;					// Exposed to Python
 	int getSpecialUnitType() const;					// Exposed to Python
-	int getUnitCaptureClassType() const;			// Exposed to Python
+	int getUnitCaptureType() const;					// Exposed to Python
 	int getUnitCombatType() const;					// Exposed to Python
 	int getDomainType() const;						// Exposed to Python
 	int getDefaultUnitAIType() const;				// Exposed to Python
@@ -2523,27 +2523,17 @@ protected:
 	int m_iPowerValue;
 	int m_iUnitClassType;
 	int m_iSpecialUnitType;
-	int m_iUnitCaptureClassType;
+	int m_iUnitCaptureType;
 	int m_iUnitCombatType;
 	int m_iDomainType;
 	int m_iDefaultUnitAIType;
 	int m_iInvisibleType;
 	int m_iAdvisorType;
-
-/********************************************************************************/
-/**		REVDCM									2/16/10				phungus420	*/
-/**																				*/
-/**		CanTrain 																*/
-/********************************************************************************/
 	int m_iMaxStartEra;
 	int m_iForceObsoleteTech;
 	bool m_bStateReligion;
 	int m_iPrereqGameOption;
 	int m_iNotGameOption;
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
-
 	int m_iHolyCity;
 	int m_iReligionType;
 	int m_iStateReligion;
@@ -2598,31 +2588,13 @@ protected:
 	bool m_bLineOfSight;
 	bool m_bHiddenNationality;
 	bool m_bAlwaysHostile;
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre																		  **/
-/**  Date: 21.09.2009																			   **/
-/**  ModComp: TLOTags																			   **/
-/**  Reason Added: New Tag Definition															   **/
-/**  Notes:																						 **/
-/*****************************************************************************************************/
 	bool m_bFreeDrop;
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 21.09.2009; TLOTags															 **/
-/*****************************************************************************************************/
 	bool m_bNoRevealMap;
-/************************************************************************************************/
-/* REVOLUTION_MOD								 01/01/08						DPII		  */
-/*																							  */
-/* CoreComponent																				*/
-/************************************************************************************************/
 	bool m_bInquisitor;
 	bool m_bCanBeRebel;
 	bool m_bCanRebelCapture;
 	bool m_bCannotDefect;
 	bool m_bCanQuellRebellion;
-/************************************************************************************************/
-/* REVOLUTION_MOD						  END												  */
-/************************************************************************************************/
 
 	//ls612: Can't enter non-Owned cities
 	bool m_bNoNonOwnedEntry;

@@ -216,7 +216,7 @@
 			<Class>UNITCLASS_RAILROAD_ARTILLERY</Class>
 			<Type>UNIT_RAILROAD_ARTILLERY</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Capture>UNITCLASS_RAILROAD_ARTILLERY</Capture>
+			<Capture>UNIT_RAILROAD_ARTILLERY</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -332,7 +332,7 @@
 			<Class>UNITCLASS_BIG_BERTHA</Class>
 			<Type>UNIT_BIG_BERTHA</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Capture>UNITCLASS_BIG_BERTHA</Capture>
+			<Capture>UNIT_BIG_BERTHA</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>

@@ -171,7 +171,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_CONSTRUCTION_SHIP</Class>
 			<Type>UNIT_CONSTRUCTION_SHIP</Type>
-			<Capture>UNITCLASS_GATHERER</Capture>
+			<Capture>UNIT_GATHERER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -298,7 +298,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SUPPLY_SHIP</Class>
 			<Type>UNIT_SUPPLY_SHIP</Type>
-			<Capture>UNITCLASS_GATHERER</Capture>
+			<Capture>UNIT_GATHERER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -493,7 +493,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_CISLUNARSETTLER</Class>
 			<Type>UNIT_CISLUNARSETTLER</Type>
-			<Capture>UNITCLASS_CAPTIVE_CIVILIAN</Capture>
+			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -585,7 +585,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_LUNARSETTLER</Class>
 			<Type>UNIT_LUNARSETTLER</Type>
-			<Capture>UNITCLASS_CAPTIVE_CIVILIAN</Capture>
+			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -683,7 +683,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_PLANETARYSETTLER</Class>
 			<Type>UNIT_PLANETARYSETTLER</Type>
-			<Capture>UNITCLASS_CAPTIVE_CIVILIAN</Capture>
+			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -783,7 +783,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_ONEILLSETTLER</Class>
 			<Type>UNIT_ONEILLSETTLER</Type>
-			<Capture>UNITCLASS_CAPTIVE_CIVILIAN</Capture>
+			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
@@ -904,7 +904,7 @@
             <UnitInfo>
 			<Class>UNITCLASS_WORLDSHIP</Class>
 			<Type>UNIT_WORLDSHIP</Type>
-			<Capture>UNITCLASS_CAPTIVE_CIVILIAN</Capture>
+			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NUCLEAR_SPACESHIP</SubCombatType>
@@ -999,7 +999,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_WORLDSHIP2</Class>
 			<Type>UNIT_WORLDSHIP2</Type>
-			<Capture>UNITCLASS_CAPTIVE_CIVILIAN</Capture>
+			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ANTIMATTER_SPACESHIP</SubCombatType>
@@ -1105,7 +1105,7 @@
             <UnitInfo>
 			<Class>UNITCLASS_WORLDSHIP3</Class>
 			<Type>UNIT_WORLDSHIP3</Type>
-			<Capture>UNITCLASS_CAPTIVE_CIVILIAN</Capture>
+			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
@@ -1229,7 +1229,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_WORLDSHIP4</Class>
 			<Type>UNIT_WORLDSHIP4</Type>
-			<Capture>UNITCLASS_CAPTIVE_CIVILIAN</Capture>
+			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
@@ -1335,7 +1335,7 @@
 			<Class>UNITCLASS_HYPERSHIP</Class>
 			<Type>UNIT_HYPERSHIP</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<Capture>UNITCLASS_CAPTIVE_CIVILIAN</Capture>
+			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
@@ -2419,7 +2419,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_MARTIAN_WORKER</Class>
 			<Type>UNIT_MARTIAN_WORKER</Type>
-			<Capture>UNITCLASS_MARTIAN_WORKER</Capture>
+			<Capture>UNIT_MARTIAN_WORKER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -2519,7 +2519,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_VENUS_WORKER</Class>
 			<Type>UNIT_VENUS_WORKER</Type>
-			<Capture>UNITCLASS_VENUS_WORKER</Capture>
+			<Capture>UNIT_VENUS_WORKER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -2591,7 +2591,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_CISLUNAR_WORKER</Class>
 			<Type>UNIT_CISLUNAR_WORKER</Type>
-			<Capture>UNITCLASS_CISLUNAR_WORKER</Capture>
+			<Capture>UNIT_CISLUNAR_WORKER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
@@ -2652,7 +2652,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_SOLAR_WORKER</Class>
 			<Type>UNIT_SOLAR_WORKER</Type>
-			<Capture>UNITCLASS_SOLAR_WORKER</Capture>
+			<Capture>UNIT_SOLAR_WORKER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
@@ -2714,7 +2714,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_MARSSETTLER</Class>
 			<Type>UNIT_MARSSETTLER</Type>
-			<Capture>UNITCLASS_CAPTIVE_CIVILIAN</Capture>
+			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -2768,7 +2768,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_VENUS_SETTLER</Class>
 			<Type>UNIT_VENUS_SETTLER</Type>
-			<Capture>UNITCLASS_CAPTIVE_CIVILIAN</Capture>
+			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -2825,7 +2825,7 @@
 			<Class>UNITCLASS_SOLARSAIL_WORKER</Class>
 			<Type>UNIT_SOLARSAIL_WORKER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<Capture>UNITCLASS_SOLARSAIL_WORKER</Capture>
+			<Capture>UNIT_SOLARSAIL_WORKER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
@@ -2948,7 +2948,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_MAGSAIL_WORKER</Class>
 			<Type>UNIT_MAGSAIL_WORKER</Type>
-			<Capture>UNITCLASS_MAGSAIL_WORKER</Capture>
+			<Capture>UNIT_MAGSAIL_WORKER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
@@ -3124,7 +3124,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_NANOWORKER</Class>
 			<Type>UNIT_NANOWORKER</Type>
-			<Capture>UNITCLASS_NANOWORKER</Capture>
+			<Capture>UNIT_NANOWORKER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
@@ -3299,7 +3299,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_COSMIC_WORKER</Class>
 			<Type>UNIT_COSMIC_WORKER</Type>
-			<Capture>UNITCLASS_COSMIC_WORKER</Capture>
+			<Capture>UNIT_COSMIC_WORKER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
@@ -3594,7 +3594,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_CHRONOFORM_SHIP</Class>
 			<Type>UNIT_CHRONOFORM_SHIP</Type>
-			<Capture>UNITCLASS_CHRONOFORM_SHIP</Capture>
+			<Capture>UNIT_CHRONOFORM_SHIP</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
@@ -3736,7 +3736,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_SPACE_WORK_CREW</Class>
 			<Type>UNIT_SPACE_WORK_CREW</Type>
-			<Capture>UNITCLASS_SPACE_WORK_CREW</Capture>
+			<Capture>UNIT_SPACE_WORK_CREW</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -3796,7 +3796,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_CYBERNETIC_WORK_CREW</Class>
 			<Type>UNIT_CYBERNETIC_WORK_CREW</Type>
-			<Capture>UNITCLASS_CYBERNETIC_WORK_CREW</Capture>
+			<Capture>UNIT_CYBERNETIC_WORK_CREW</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
@@ -3860,7 +3860,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_TRANSHUMAN_WORK_CREW</Class>
 			<Type>UNIT_TRANSHUMAN_WORK_CREW</Type>
-			<Capture>UNITCLASS_TRANSHUMAN_WORK_CREW</Capture>
+			<Capture>UNIT_TRANSHUMAN_WORK_CREW</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
@@ -3926,7 +3926,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_POSTHUMAN_WORK_CREW</Class>
 			<Type>UNIT_POSTHUMAN_WORK_CREW</Type>
-			<Capture>UNITCLASS_POSTHUMAN_WORK_CREW</Capture>
+			<Capture>UNIT_POSTHUMAN_WORK_CREW</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_NUCLEAR_SPACESHIP</SubCombatType>
@@ -3994,7 +3994,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_COSMIC_WORK_CREW</Class>
 			<Type>UNIT_COSMIC_WORK_CREW</Type>
-			<Capture>UNITCLASS_COSMIC_WORK_CREW</Capture>
+			<Capture>UNIT_COSMIC_WORK_CREW</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_ANTIMATTER_SPACESHIP</SubCombatType>
@@ -4063,7 +4063,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_SHAPESHIFTING_WORK_CREW</Class>
 			<Type>UNIT_SHAPESHIFTING_WORK_CREW</Type>
-			<Capture>UNITCLASS_SHAPESHIFTING_WORK_CREW</Capture>
+			<Capture>UNIT_SHAPESHIFTING_WORK_CREW</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
@@ -4133,7 +4133,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_HYPERINTELLIGENT_WORK_CREW</Class>
 			<Type>UNIT_HYPERINTELLIGENT_WORK_CREW</Type>
-			<Capture>UNITCLASS_HYPERINTELLIGENT_WORK_CREW</Capture>
+			<Capture>UNIT_HYPERINTELLIGENT_WORK_CREW</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
@@ -4189,7 +4189,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_BACTERIA_SWARM</Class>
 			<Type>UNIT_BACTERIA_SWARM</Type>
-			<Capture>UNITCLASS_BACTERIA_SWARM</Capture>
+			<Capture>UNIT_BACTERIA_SWARM</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
@@ -4273,7 +4273,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_LIFE_SWARM</Class>
 			<Type>UNIT_LIFE_SWARM</Type>
-			<Capture>UNITCLASS_LIFE_SWARM</Capture>
+			<Capture>UNIT_LIFE_SWARM</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
@@ -4364,7 +4364,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_ENERGY_ENTITY</Class>
 			<Type>UNIT_ENERGY_ENTITY</Type>
-			<Capture>UNITCLASS_ENERGY_ENTITY</Capture>
+			<Capture>UNIT_ENERGY_ENTITY</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
@@ -4420,7 +4420,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_SATELLITE</Class>
 			<Type>UNIT_SATELLITE</Type>
-			<Capture>UNITCLASS_SATELLITE</Capture>
+			<Capture>UNIT_SATELLITE</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -4557,7 +4557,7 @@
 			<Class>UNITCLASS_SPACE_SHUTTLE</Class>
 			<Type>UNIT_SPACE_SHUTTLE</Type>
 			<iMaxPlayerInstances>2</iMaxPlayerInstances>
-			<Capture>UNITCLASS_SPACE_SHUTTLE</Capture>
+			<Capture>UNIT_SPACE_SHUTTLE</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -4795,7 +4795,7 @@
 			<Class>UNITCLASS_PLANET_PROBE</Class>
 			<Type>UNIT_PLANET_PROBE</Type>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
-			<Capture>UNITCLASS_PLANET_PROBE</Capture>
+			<Capture>UNIT_PLANET_PROBE</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -5422,7 +5422,7 @@
 			<Class>UNITCLASS_INTERSTELLAR_PROBE</Class>
 			<Type>UNIT_INTERSTELLAR_PROBE</Type>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
-			<Capture>UNITCLASS_INTERSTELLAR_PROBE</Capture>
+			<Capture>UNIT_INTERSTELLAR_PROBE</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -5625,7 +5625,7 @@
 			<Class>UNITCLASS_BRACEWELL_PROBE</Class>
 			<Type>UNIT_BRACEWELL_PROBE</Type>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
-			<Capture>UNITCLASS_BRACEWELL_PROBE</Capture>
+			<Capture>UNIT_BRACEWELL_PROBE</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -5783,7 +5783,7 @@
 			<Class>UNITCLASS_VON_NEUMANN_PROBE</Class>
 			<Type>UNIT_VON_NEUMANN_PROBE</Type>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
-			<Capture>UNITCLASS_VON_NEUMANN_PROBE</Capture>
+			<Capture>UNIT_VON_NEUMANN_PROBE</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -5909,7 +5909,7 @@
 			<Class>UNITCLASS_QUANTUM_PROBE</Class>
 			<Type>UNIT_QUANTUM_PROBE</Type>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
-			<Capture>UNITCLASS_QUANTUM_PROBE</Capture>
+			<Capture>UNIT_QUANTUM_PROBE</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
@@ -6002,7 +6002,7 @@
 			<Class>UNITCLASS_INTERDIMENSIONAL_PROBE</Class>
 			<Type>UNIT_INTERDIMENSIONAL_PROBE</Type>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
-			<Capture>UNITCLASS_INTERDIMENSIONAL_PROBE</Capture>
+			<Capture>UNIT_INTERDIMENSIONAL_PROBE</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
@@ -6128,7 +6128,7 @@
 			<Class>UNITCLASS_HEAVY_ROCKET</Class>
 			<Type>UNIT_HEAVY_ROCKET</Type>
 			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<Capture>UNITCLASS_HEAVY_ROCKET</Capture>
+			<Capture>UNIT_HEAVY_ROCKET</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -6452,7 +6452,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_CAPTURED_ASTEROID</Class>
 			<Type>UNIT_CAPTURED_ASTEROID</Type>
-			<Capture>UNITCLASS_CAPTURED_ASTEROID</Capture>
+			<Capture>UNIT_CAPTURED_ASTEROID</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -6529,7 +6529,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_CAPTURED_COMET</Class>
 			<Type>UNIT_CAPTURED_COMET</Type>
-			<Capture>UNITCLASS_CAPTURED_COMET</Capture>
+			<Capture>UNIT_CAPTURED_COMET</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -6606,7 +6606,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_INTERSTELLAR_WORKER</Class>
 			<Type>UNIT_INTERSTELLAR_WORKER</Type>
-			<Capture>UNITCLASS_INTERSTELLAR_WORKER</Capture>
+			<Capture>UNIT_INTERSTELLAR_WORKER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_NUCLEAR_SPACESHIP</SubCombatType>
@@ -6742,7 +6742,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_LOE_REWARD</Class>
 			<Type>UNIT_LOE_REWARD</Type>
-			<Capture>UNITCLASS_LOE_REWARD</Capture>
+			<Capture>UNIT_LOE_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -6820,7 +6820,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_SS1_REWARD</Class>
 			<Type>UNIT_SS1_REWARD</Type>
-			<Capture>UNITCLASS_SS1_REWARD</Capture>
+			<Capture>UNIT_SS1_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -6895,7 +6895,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_SS2_REWARD</Class>
 			<Type>UNIT_SS2_REWARD</Type>
-			<Capture>UNITCLASS_SS2_REWARD</Capture>
+			<Capture>UNIT_SS2_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -6972,7 +6972,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_SS3_REWARD</Class>
 			<Type>UNIT_SS3_REWARD</Type>
-			<Capture>UNITCLASS_SS3_REWARD</Capture>
+			<Capture>UNIT_SS3_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -7051,7 +7051,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_CISLUNAR_REWARD</Class>
 			<Type>UNIT_CISLUNAR_REWARD</Type>
-			<Capture>UNITCLASS_CISLUNAR_REWARD</Capture>
+			<Capture>UNIT_CISLUNAR_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -7130,7 +7130,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_LUNAR_REWARD</Class>
 			<Type>UNIT_LUNAR_REWARD</Type>
-			<Capture>UNITCLASS_LUNAR_REWARD</Capture>
+			<Capture>UNIT_LUNAR_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -7208,7 +7208,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_INNER_SOLAR_SYSTEM_REWARD</Class>
 			<Type>UNIT_INNER_SOLAR_SYSTEM_REWARD</Type>
-			<Capture>UNITCLASS_INNER_SOLAR_SYSTEM_REWARD</Capture>
+			<Capture>UNIT_INNER_SOLAR_SYSTEM_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -7288,7 +7288,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_OUTER_SOLAR_SYSTEM_REWARD</Class>
 			<Type>UNIT_OUTER_SOLAR_SYSTEM_REWARD</Type>
-			<Capture>UNITCLASS_OUTER_SOLAR_SYSTEM_REWARD</Capture>
+			<Capture>UNIT_OUTER_SOLAR_SYSTEM_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -7363,7 +7363,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_TRANSNEPTUNIAN_REWARD</Class>
 			<Type>UNIT_TRANSNEPTUNIAN_REWARD</Type>
-			<Capture>UNITCLASS_TRANSNEPTUNIAN_REWARD</Capture>
+			<Capture>UNIT_TRANSNEPTUNIAN_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -7435,7 +7435,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_INTERSTELLAR_REWARD</Class>
 			<Type>UNIT_INTERSTELLAR_REWARD</Type>
-			<Capture>UNITCLASS_INTERSTELLAR_REWARD</Capture>
+			<Capture>UNIT_INTERSTELLAR_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -7516,7 +7516,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_GALACTIC_REWARD</Class>
 			<Type>UNIT_GALACTIC_REWARD</Type>
-			<Capture>UNITCLASS_GALACTIC_REWARD</Capture>
+			<Capture>UNIT_GALACTIC_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -7598,7 +7598,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_INTERGALACTIC_REWARD</Class>
 			<Type>UNIT_INTERGALACTIC_REWARD</Type>
-			<Capture>UNITCLASS_INTERGALACTIC_REWARD</Capture>
+			<Capture>UNIT_INTERGALACTIC_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -7680,7 +7680,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_MERCURY_REWARD</Class>
 			<Type>UNIT_MERCURY_REWARD</Type>
-			<Capture>UNITCLASS_MERCURY_REWARD</Capture>
+			<Capture>UNIT_MERCURY_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -7754,7 +7754,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_VENUS_REWARD</Class>
 			<Type>UNIT_VENUS_REWARD</Type>
-			<Capture>UNITCLASS_VENUS_REWARD</Capture>
+			<Capture>UNIT_VENUS_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -7828,7 +7828,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_MARS_REWARD</Class>
 			<Type>UNIT_MARS_REWARD</Type>
-			<Capture>UNITCLASS_MARS_REWARD</Capture>
+			<Capture>UNIT_MARS_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -7903,7 +7903,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_ASTEROID_REWARD</Class>
 			<Type>UNIT_ASTEROID_REWARD</Type>
-			<Capture>UNITCLASS_ASTEROID_REWARD</Capture>
+			<Capture>UNIT_ASTEROID_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -7977,7 +7977,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_JUPITER_REWARD</Class>
 			<Type>UNIT_JUPITER_REWARD</Type>
-			<Capture>UNITCLASS_JUPITER_REWARD</Capture>
+			<Capture>UNIT_JUPITER_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -8051,7 +8051,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_EUROPA_REWARD</Class>
 			<Type>UNIT_EUROPA_REWARD</Type>
-			<Capture>UNITCLASS_EUROPA_REWARD</Capture>
+			<Capture>UNIT_EUROPA_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -8126,7 +8126,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_SATURN_REWARD</Class>
 			<Type>UNIT_SATURN_REWARD</Type>
-			<Capture>UNITCLASS_SATURN_REWARD</Capture>
+			<Capture>UNIT_SATURN_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -8200,7 +8200,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_TITAN_REWARD</Class>
 			<Type>UNIT_TITAN_REWARD</Type>
-			<Capture>UNITCLASS_TITAN_REWARD</Capture>
+			<Capture>UNIT_TITAN_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -8274,7 +8274,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_URANUS_REWARD</Class>
 			<Type>UNIT_URANUS_REWARD</Type>
-			<Capture>UNITCLASS_URANUS_REWARD</Capture>
+			<Capture>UNIT_URANUS_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -8349,7 +8349,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_NEPTUNE_REWARD</Class>
 			<Type>UNIT_NEPTUNE_REWARD</Type>
-			<Capture>UNITCLASS_NEPTUNE_REWARD</Capture>
+			<Capture>UNIT_NEPTUNE_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -8424,7 +8424,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_KBO_REWARD</Class>
 			<Type>UNIT_KBO_REWARD</Type>
-			<Capture>UNITCLASS_KBO_REWARD</Capture>
+			<Capture>UNIT_KBO_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -8500,7 +8500,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_SEDNOID_REWARD</Class>
 			<Type>UNIT_SEDNOID_REWARD</Type>
-			<Capture>UNITCLASS_SEDNOID_REWARD</Capture>
+			<Capture>UNIT_SEDNOID_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -8576,7 +8576,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_EXOPLANET_REWARD</Class>
 			<Type>UNIT_EXOPLANET_REWARD</Type>
-			<Capture>UNITCLASS_EXOPLANET_REWARD</Capture>
+			<Capture>UNIT_EXOPLANET_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -8648,7 +8648,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_OORT_CLOUD_REWARD</Class>
 			<Type>UNIT_OORT_CLOUD_REWARD</Type>
-			<Capture>UNITCLASS_OORT_CLOUD_REWARD</Capture>
+			<Capture>UNIT_OORT_CLOUD_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -8720,7 +8720,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_DISTANT_COSMOS_REWARD</Class>
 			<Type>UNIT_DISTANT_COSMOS_REWARD</Type>
-			<Capture>UNITCLASS_DISTANT_COSMOS_REWARD</Capture>
+			<Capture>UNIT_DISTANT_COSMOS_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -8792,7 +8792,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_HYPERSPACE_REWARD</Class>
 			<Type>UNIT_HYPERSPACE_REWARD</Type>
-			<Capture>UNITCLASS_HYPERSPACE_REWARD</Capture>
+			<Capture>UNIT_HYPERSPACE_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -8864,7 +8864,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_MULTIVERSE_REWARD</Class>
 			<Type>UNIT_MULTIVERSE_REWARD</Type>
-			<Capture>UNITCLASS_MULTIVERSE_REWARD</Capture>
+			<Capture>UNIT_MULTIVERSE_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -8936,7 +8936,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_ANCIENT_CIVILIZATION_REWARD</Class>
 			<Type>UNIT_ANCIENT_CIVILIZATION_REWARD</Type>
-			<Capture>UNITCLASS_ANCIENT_CIVILIZATION_REWARD</Capture>
+			<Capture>UNIT_ANCIENT_CIVILIZATION_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -9008,7 +9008,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_SOLAR_SYSTEM_LIFE_REWARD</Class>
 			<Type>UNIT_SOLAR_SYSTEM_LIFE_REWARD</Type>
-			<Capture>UNITCLASS_SOLAR_SYSTEM_LIFE_REWARD</Capture>
+			<Capture>UNIT_SOLAR_SYSTEM_LIFE_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -9080,7 +9080,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_INTERSTELLAR_LIFE_REWARD</Class>
 			<Type>UNIT_INTERSTELLAR_LIFE_REWARD</Type>
-			<Capture>UNITCLASS_INTERSTELLAR_LIFE_REWARD</Capture>
+			<Capture>UNIT_INTERSTELLAR_LIFE_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -9152,7 +9152,7 @@
         <UnitInfo>
 			<Class>UNITCLASS_GALACTIC_CORE_REWARD</Class>
 			<Type>UNIT_GALACTIC_CORE_REWARD</Type>
-			<Capture>UNITCLASS_GALACTIC_CORE_REWARD</Capture>
+			<Capture>UNIT_GALACTIC_CORE_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
                 <SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
@@ -9254,7 +9254,7 @@
 			<Class>UNITCLASS_WARLORDVIS</Class>
 			<Type>UNIT_WARLORDVIS</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_WARLORDVIS</Capture>
+			<Capture>UNIT_WARLORDVIS</Capture>
 			<Combat>UNITCOMBAT_CAPTAIN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ATTACHE</SubCombatType>
@@ -9320,7 +9320,7 @@
 			<Class>UNITCLASS_WARLORDVIIS</Class>
 			<Type>UNIT_WARLORDVIIS</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_WARLORDVIIS</Capture>
+			<Capture>UNIT_WARLORDVIIS</Capture>
 			<Combat>UNITCOMBAT_CAPTAIN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ATTACHE</SubCombatType>
@@ -9386,7 +9386,7 @@
 			<Class>UNITCLASS_WARLORDVIIIS</Class>
 			<Type>UNIT_WARLORDVIIIS</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_WARLORDVIIIS</Capture>
+			<Capture>UNIT_WARLORDVIIIS</Capture>
 			<Combat>UNITCOMBAT_CAPTAIN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ATTACHE</SubCombatType>
@@ -9447,7 +9447,7 @@
 			<iMaxPlayerInstances>6</iMaxPlayerInstances>
             <bUnlimitedException>1</bUnlimitedException>
             <iInstanceCostModifier>25</iInstanceCostModifier>
-			<Capture>UNITCLASS_WARLORDVIS</Capture>
+			<Capture>UNIT_WARLORDVIS</Capture>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -9571,7 +9571,7 @@
 			<iMaxPlayerInstances>7</iMaxPlayerInstances>
             <bUnlimitedException>1</bUnlimitedException>
             <iInstanceCostModifier>25</iInstanceCostModifier>
-			<Capture>UNITCLASS_WARLORDVIIS</Capture>
+			<Capture>UNIT_WARLORDVIIS</Capture>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -9695,7 +9695,7 @@
 			<iMaxPlayerInstances>8</iMaxPlayerInstances>
             <bUnlimitedException>1</bUnlimitedException>
             <iInstanceCostModifier>25</iInstanceCostModifier>
-			<Capture>UNITCLASS_WARLORDVIIIS</Capture>
+			<Capture>UNIT_WARLORDVIIIS</Capture>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -9881,7 +9881,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_LUNAR_BULLDOZER</Class>
 			<Type>UNIT_LUNAR_BULLDOZER</Type>
-			<Capture>UNITCLASS_LUNAR_BULLDOZER</Capture>
+			<Capture>UNIT_LUNAR_BULLDOZER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TRACKED</SubCombatType>
@@ -9959,7 +9959,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_LUNAR_WORKER</Class>
 			<Type>UNIT_LUNAR_WORKER</Type>
-			<Capture>UNITCLASS_LUNAR_WORKER</Capture>
+			<Capture>UNIT_LUNAR_WORKER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>

@@ -10,7 +10,7 @@
 			<Class>UNITCLASS_MORMON_MISSIONARY</Class>
 			<Type>UNIT_MORMON_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_MORMON_MISSIONARY</Capture>
+			<Capture>UNIT_MORMON_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>

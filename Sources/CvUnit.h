@@ -846,7 +846,7 @@ public:
 	CivilizationTypes getCivilizationType() const; // Exposed to Python
 	const wchar* getVisualCivAdjective(TeamTypes eForTeam) const;
 	SpecialUnitTypes getSpecialUnitType() const; // Exposed to Python								
-	UnitTypes getCaptureUnitType(CivilizationTypes eCivilization) const; // Exposed to Python
+	UnitTypes getCaptureUnitType() const; // Exposed to Python
 	UnitCombatTypes getUnitCombatType() const; // Exposed to Python
 	DllExport DomainTypes getDomainType() const; // Exposed to Python
 	InvisibleTypes getInvisibleType() const; // Exposed to Python

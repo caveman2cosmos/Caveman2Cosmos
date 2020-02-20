@@ -490,7 +490,7 @@
 			<Class>UNITCLASS_STEAMPUNK_WORKER</Class>
 			<Type>UNIT_STEAMPUNK_WORKER</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Capture>UNITCLASS_STEAMPUNK_WORKER</Capture>
+			<Capture>UNIT_STEAMPUNK_WORKER</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ROBOT</SubCombatType>
