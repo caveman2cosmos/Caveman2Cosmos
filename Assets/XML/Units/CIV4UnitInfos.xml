@@ -58596,6 +58596,16 @@ Base XP gained when defending
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_ENFORCERS</UnitClassUpgradeType>

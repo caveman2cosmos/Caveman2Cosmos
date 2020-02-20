@@ -18,7 +18,7 @@
 				<PrereqTech>TECH_AGRICULTURAL_ENGINEERING</PrereqTech>
 			</OrPreReqs>
 			<!-- Special effects -->
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<!-- System -->
 			<iAsset>8</iAsset>
 			<iGridX>67</iGridX>

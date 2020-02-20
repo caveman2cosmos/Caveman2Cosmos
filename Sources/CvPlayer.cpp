@@ -29434,23 +29434,9 @@ UnitTypes CvPlayer::getTechFreeProphet(TechTypes eTech) const
 {
 	if (GC.getGame().isOption(GAMEOPTION_DIVINE_PROPHETS))
 	{
-		UnitClassTypes eUnitClass = (UnitClassTypes) GC.getTechInfo(eTech).getFirstFreeProphet();
-		if (eUnitClass == NO_UNITCLASS)
-		{
-			return NO_UNIT;
-		}
-
-		UnitTypes eUnit = ((UnitTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(eUnitClass)));
-
-		if (eUnit == NO_UNIT)
-		{
-		return NO_UNIT;
-		}
-
-	return eUnit;
-
+		return (UnitTypes) GC.getTechInfo(eTech).getFirstFreeProphet();
 	}
-return NO_UNIT;
+	return NO_UNIT;
 }
 //TB Prophet Mod end
 #endif

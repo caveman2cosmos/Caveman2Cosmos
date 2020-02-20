@@ -18799,32 +18799,17 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 	}
 	else if (!GC.getGame().isOption(GAMEOPTION_LIMITED_RELIGIONS))
 	{
-		UnitClassTypes eFreeProphet = (UnitClassTypes) GC.getTechInfo(eTech).getFirstFreeProphet();
-		if (eFreeProphet != NO_UNITCLASS)
+		if (GC.getTechInfo(eTech).getFirstFreeProphet() > -1 && GC.getGame().countKnownTechNumTeams(eTech) == 0)
 		{
-			if (GC.getGame().countKnownTechNumTeams(eTech) == 0)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_TECH_FIRST_FREE_PROPHET"));
-				bFirst = false;
-			}
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_KEY_TECH_FIRST_FREE_PROPHET"));
+			bFirst = false;
 		}
 	}
 
 	bFirst = true;
 	for (iI = 0; iI < GC.getNumCorporationInfos(); ++iI)
 	{
-/************************************************************************************************/
-/* Afforess	                  Start		 07/22/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/*
-		if (!bPlayerContext || !(GC.getGame().isCorporationFounded((CorporationTypes)iI)))
-		{
-			bFirst = buildFoundCorporationString(szBuffer, eTech, iI, bFirst, true, bPlayerContext);
-		}
-*/
 		if (GC.getGame().canEverSpread((CorporationTypes)iI))
 		{
 			if (!bPlayerContext || !(GC.getGame().isCorporationFounded((CorporationTypes)iI)))
@@ -18832,9 +18817,6 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 				bFirst = buildFoundCorporationString(szBuffer, eTech, iI, bFirst, true, bPlayerContext);
 			}
 		}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	}
 
 	bFirst = true;

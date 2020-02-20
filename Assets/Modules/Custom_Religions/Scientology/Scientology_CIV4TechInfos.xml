@@ -15,7 +15,7 @@
 			<iGridY>7</iGridY>
 			<bGlobal>1</bGlobal>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<iAsset>8</iAsset>
 			<Flavors>
 				<Flavor>

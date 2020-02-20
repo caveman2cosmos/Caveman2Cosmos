@@ -6837,7 +6837,7 @@ Current techs which are not in this file:-
 			<Quote>TXT_KEY_TECH_ZOROASTRIANISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_ZOROASTRIANISM</Sound>
 			<SoundMP>AS2D_TECH_ZOROASTRIANISM</SoundMP>
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<Button>Art/Interface/Buttons/TechTree/Zoroastrianism.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -6926,7 +6926,7 @@ Current techs which are not in this file:-
 			<Quote>TXT_KEY_TECH_KEMETISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_KEMETISM</Sound>
 			<SoundMP>AS2D_TECH_KEMETISM</SoundMP>
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<Button>Art/Interface/Buttons/TechTree/Kemetism.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -7064,7 +7064,7 @@ Current techs which are not in this file:-
 			<Quote>TXT_KEY_TECH_HINDUISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_REINCARNATION</Sound>
 			<SoundMP>AS2D_TECH_REINCARNATION</SoundMP>
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<Button>Art/Interface/Buttons/TechTree/Hinduism.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -7103,7 +7103,7 @@ Current techs which are not in this file:-
 			<Quote>TXT_KEY_TECH_JUDAISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_JUDAISM</Sound>
 			<SoundMP>AS2D_TECH_JUDAISM</SoundMP>
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<Button>Art/Interface/Buttons/TechTree/judaism.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -7958,7 +7958,7 @@ Current techs which are not in this file:-
 			<Quote>TXT_KEY_TECH_BUDDHISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_BUDDHISM</Sound>
 			<SoundMP>AS2D_TECH_BUDDHISM</SoundMP>
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<Button>Art/Interface/Buttons/TechTree/Buddhism.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -8108,7 +8108,7 @@ Current techs which are not in this file:-
 			<Quote>TXT_KEY_TECH_HELLENISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_HELLENISM</Sound>
 			<SoundMP>AS2D_TECH_HELLENISM</SoundMP>
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<Button>Art/Interface/Buttons/TechTree/Hellenism.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -8410,7 +8410,7 @@ Current techs which are not in this file:-
 			<Quote>TXT_KEY_TECH_NAGHUALISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_NAGHUALISM</Sound>
 			<SoundMP>AS2D_TECH_NAGHUALISM</SoundMP>
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<Button>Art/Interface/Buttons/TechTree/naghualism.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -8969,7 +8969,7 @@ Current techs which are not in this file:-
 			<Quote>TXT_KEY_TECH_CONFUCIANISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_CONFUCIANISM</Sound>
 			<SoundMP>AS2D_TECH_CONFUCIANISM</SoundMP>
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<Button>Art/Interface/Buttons/TechTree/Confucianism.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -9081,7 +9081,7 @@ Current techs which are not in this file:-
 			<Quote>TXT_KEY_TECH_TAOISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_TAOISM</Sound>
 			<SoundMP>AS2D_TECH_TAOISM</SoundMP>
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<Button>Art/Interface/Buttons/TechTree/Taoism.dds</Button>
 		</TechInfo>
 <!--	(039, 03) TECH_JAINISM	-->
@@ -9972,7 +9972,7 @@ Current techs which are not in this file:-
 			<Quote>TXT_KEY_TECH_CHRISTIANITY_QUOTE</Quote>
 			<Sound>AS2D_TECH_CHRISTIANITY</Sound>
 			<SoundMP>AS2D_TECH_CHRISTIANITY</SoundMP>
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<Button>Art/Interface/Buttons/TechTree/christianity.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -10180,7 +10180,7 @@ Current techs which are not in this file:-
 			<Quote>TXT_KEY_TECH_ISLAM_QUOTE</Quote>
 			<Sound>AS2D_TECH_ISLAM</Sound>
 			<SoundMP>AS2D_TECH_ISLAM</SoundMP>
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<Button>Art/Interface/Buttons/TechTree/Islam.dds</Button>
 		</TechInfo>
 <!--	(044, 03) TECH_VOODOO	-->
@@ -36039,7 +36039,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_DEITIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<Era>C2C_ERA_TRANSCENDENT</Era>
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iCost>601234</iCost>

@@ -1469,7 +1469,7 @@ m_iNumCitiesMaintenanceModifier(0),
 m_iCoastalDistanceMaintenanceModifier(0),
 //DPII < Maintenance Modifier >
 m_iFirstFreeUnit(NO_UNIT),
-m_iFirstFreeProphet(NO_UNITCLASS),
+m_iFirstFreeProphet(NO_UNIT),
 m_iHealth(0),
 m_iHappiness(0),
 m_iFirstFreeTechs(0),
@@ -2165,7 +2165,7 @@ bool CvTechInfo::read(CvXMLLoadUtility* pXML)
 
 #ifdef C2C_BUILD
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"FirstFreeProphet");
-	m_iFirstFreeProphet = pXML->GetInfoClass(szTextVal);
+	m_aszExtraXMLforPass3.push_back(szTextVal);
 #endif
 
 	pXML->GetOptionalChildXmlValByName(&m_iFeatureProductionModifier, L"iFeatureProductionModifier");
@@ -2529,7 +2529,7 @@ void CvTechInfo::copyNonDefaults(CvTechInfo* pClassInfo, CvXMLLoadUtility* pXML)
 
 	if (m_iEra == NO_ERA) m_iEra = pClassInfo->getEra();
 	if (m_iFirstFreeUnit == NO_UNIT) m_iFirstFreeUnit = pClassInfo->getFirstFreeUnit();
-	if (m_iFirstFreeProphet == NO_UNITCLASS) m_iFirstFreeProphet = pClassInfo->getFirstFreeProphet();
+	if (m_iFirstFreeProphet == NO_UNIT) m_iFirstFreeProphet = pClassInfo->getFirstFreeProphet();
 
 	if (getFeatureProductionModifier() == iDefault) m_iFeatureProductionModifier = pClassInfo->getFeatureProductionModifier();
 	if (getWorkerSpeedModifier() == iDefault) m_iWorkerSpeedModifier = pClassInfo->getWorkerSpeedModifier();
@@ -2800,6 +2800,9 @@ bool CvTechInfo::readPass3()
 		return false;
 	}
 	m_iFirstFreeUnit = GC.getInfoTypeForString(m_aszExtraXMLforPass3[0]);
+#ifdef C2C_BUILD
+	m_iFirstFreeProphet = GC.getInfoTypeForString(m_aszExtraXMLforPass3[1]);
+#endif
 	m_aszExtraXMLforPass3.clear();
 	return true;
 }

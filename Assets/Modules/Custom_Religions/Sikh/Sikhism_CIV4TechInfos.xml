@@ -18,7 +18,7 @@
 			<iGridY>11</iGridY>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<iCost>2528</iCost>
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<iAsset>8</iAsset>
 			<Flavors>
 				<Flavor>

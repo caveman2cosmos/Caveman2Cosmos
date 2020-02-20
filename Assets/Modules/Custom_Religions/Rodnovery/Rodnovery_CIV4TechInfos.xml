@@ -43,7 +43,7 @@
 			<Quote>TXT_KEY_TECH_RODNOVERA_QUOTE</Quote>
 			<Sound>AS2D_TECH_RODNOVERA</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<Button>Art/Interface/Buttons/techtree/Rodnovery.dds</Button>
 		</TechInfo>
 	</TechInfos>
