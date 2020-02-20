@@ -2409,7 +2409,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_GOLD_OREEN_HORDE</Type>
+			<Type>ART_DEF_BONUS_GOLDEN_HORDE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>

@@ -481,7 +481,7 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 			gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
 		}
 
-		if (isWorldUnitClass(eUnit))
+		if (isWorldUnit(eUnit))
 		{
 			for (iI = 0; iI < MAX_PLAYERS; iI++)
 			{
@@ -1532,7 +1532,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		eOwner = getOwner();
 		eCapturingPlayer = getCapturingPlayer();
 		pCapturingUnit = getCapturingUnit();
-		eCaptureUnitType = ((eCapturingPlayer != NO_PLAYER) ? getCaptureUnitType(GET_PLAYER(eCapturingPlayer).getCivilizationType()) : NO_UNIT);
+		eCaptureUnitType = getCaptureUnitType();
 	// BUG - Unit Captured Event - start
 		PlayerTypes eFromPlayer = getOwner();
 		UnitTypes eCapturedUnitType = getUnitType();
@@ -5426,7 +5426,7 @@ int CvUnit::defenderValue(const CvUnit* pAttacker) const
 	}
 
 	iValue += currCombatStr(plot(), pAttacker);
-	if (::isWorldUnitClass(getUnitType()))
+	if (::isWorldUnit(getUnitType()))
 	{
 		iValue /= 2;
 	}
@@ -5552,7 +5552,7 @@ bool CvUnit::isBetterDefenderThan(const CvUnit* pDefender, const CvUnit* pAttack
 	}
 
 	iOurDefense = currCombatStr(plot(), pAttacker);
-	if (::isWorldUnitClass(getUnitType()))
+	if (::isWorldUnit(getUnitType()))
 	{
 		iOurDefense /= 2;
 	}
@@ -5607,7 +5607,7 @@ bool CvUnit::isBetterDefenderThan(const CvUnit* pDefender, const CvUnit* pAttack
 	iOurDefense = iOurDefense * iAssetValue / std::max(1, iAssetValue + iCargoAssetValue);
 
 	iTheirDefense = pDefender->currCombatStr(plot(), pAttacker);
-	if (::isWorldUnitClass(pDefender->getUnitType()))
+	if (::isWorldUnit(pDefender->getUnitType()))
 	{
 		iTheirDefense /= 2;
 	}
@@ -11078,7 +11078,7 @@ int CvUnit::destroyCost(const CvPlot* pPlot) const
 
 	if (pCity->isProductionUnit())
 	{
-		bLimited = isLimitedUnitClass((UnitClassTypes)(GC.getUnitInfo(pCity->getProductionUnit()).getUnitClassType()));
+		bLimited = isLimitedUnit(pCity->getProductionUnit());
 	}
 	else if (pCity->isProductionBuilding())
 	{
@@ -14213,10 +14213,9 @@ SpecialUnitTypes CvUnit::getSpecialUnitType() const
 }
 
 
-UnitTypes CvUnit::getCaptureUnitType(CivilizationTypes eCivilization) const
+UnitTypes CvUnit::getCaptureUnitType() const
 {
-	FAssert(eCivilization != NO_CIVILIZATION);
-	return ((m_pUnitInfo->getUnitCaptureClassType() == NO_UNITCLASS) ? NO_UNIT : (UnitTypes)GC.getCivilizationInfo(eCivilization).getCivilizationUnits(m_pUnitInfo->getUnitCaptureClassType()));
+	return (UnitTypes) m_pUnitInfo->getUnitCaptureType();
 }
 
 
@@ -18358,7 +18357,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 									else
 									{
 										//TB NOTE: This is where units that can't defend themselves are auto-captured IF the unit has a defined capture tag and cannot defend.
-										if (!isNoCapture() && NO_UNITCLASS != pLoopUnit->getUnitInfo().getUnitCaptureClassType())
+										if (!isNoCapture() && NO_UNIT != pLoopUnit->getUnitInfo().getUnitCaptureType())
 										{
 											if (isHiddenNationality() || pLoopUnit->isHiddenNationality())
 											{
@@ -46026,12 +46025,7 @@ void CvUnit::doTrapTrigger(CvUnit* pUnit, bool bImmune)
 
 bool CvUnit::doTrapDisable(CvUnit* pUnit)
 {
-	bool bCapturable = !pUnit->isNoCapture();
-	if (bCapturable)
-	{
-		bCapturable = (m_pUnitInfo->getUnitCaptureClassType() != NO_UNITCLASS);
-	}
-	if (bCapturable)
+	if (!pUnit->isNoCapture() && m_pUnitInfo->getUnitCaptureType() != NO_UNIT)
 	{
 		setCapturingPlayer(pUnit->getOwner());
 		setCapturingUnit(pUnit);

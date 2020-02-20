@@ -1,22 +1,14 @@
 <?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- -->
-<!-- UnitClass Schema -->
 <Civ4UnitClassInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitClassInfos>
 		<UnitClassInfo>
 			<Type>UNITCLASS_DIPLOMAT_MESSENGER</Type>
 			<Description>TXT_KEY_UNIT_DIPLOMAT_MESSENGER</Description>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_DIPLOMAT_MESSENGER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_DIPLOMAT_EARLY</Type>
 			<Description>TXT_KEY_UNIT_DIPLOMAT_EARLY</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_DIPLOMAT_EARLY</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -28,11 +20,6 @@
 			<Type>UNITCLASS_DIPLOMAT_MODERN</Type>
 			<Description>TXT_KEY_UNIT_DIPLOMAT_MODERN</Description>
 			<DefaultUnit>UNIT_DIPLOMAT_MODERN</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
-			<Type>UNITCLASS_DIPLOMAT_GALACTIC</Type>
-			<Description>TXT_KEY_UNIT_DIPLOMAT_GALACTIC</Description>
-			<DefaultUnit>UNIT_DIPLOMAT_GALACTIC</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_GREAT_STATESMAN</Type>

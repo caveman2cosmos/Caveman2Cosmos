@@ -171,7 +171,7 @@ public:
 	int /*HandicapTypes*/ getHandicapType();
 	int /*CivilizationTypes*/ getCivilizationType();
 	int /*SpecialUnitTypes*/ getSpecialUnitType();
-	int /*UnitTypes*/ getCaptureUnitType(int /*CivilizationTypes*/ eCivilization);
+	int /*UnitTypes*/ getCaptureUnitType();
 	int /*UnitCombatTypes*/ getUnitCombatType();
 	int /*DomainTypes*/ getDomainType();
 	int /*InvisibleTypes*/ getInvisibleType();

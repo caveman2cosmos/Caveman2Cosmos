@@ -952,7 +952,7 @@
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_MERCURY_SOLAR_ARRAY</Type>
 			<Description>TXT_KEY_IMPROVEMENT_MERCURY_SOLAR_ARRAY</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_SOLAR_PANEL_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_MERCURY_SOLAR_ARRAY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_MERCURY_SOLAR_ARRAY</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>

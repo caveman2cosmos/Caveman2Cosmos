@@ -175,7 +175,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<iCost>4</iCost>
 			<Era>C2C_ERA_PREHISTORIC</Era>
-			<FirstFreeUnitClass>UNITCLASS_GATHERER</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_GATHERER</FirstFreeUnit>
 			<iAsset>2</iAsset>
 			<iPower>1</iPower>
 			<bTrade>1</bTrade>
@@ -6837,7 +6837,7 @@ Current techs which are not in this file:-
 			<Quote>TXT_KEY_TECH_ZOROASTRIANISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_ZOROASTRIANISM</Sound>
 			<SoundMP>AS2D_TECH_ZOROASTRIANISM</SoundMP>
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<Button>Art/Interface/Buttons/TechTree/Zoroastrianism.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -6926,7 +6926,7 @@ Current techs which are not in this file:-
 			<Quote>TXT_KEY_TECH_KEMETISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_KEMETISM</Sound>
 			<SoundMP>AS2D_TECH_KEMETISM</SoundMP>
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<Button>Art/Interface/Buttons/TechTree/Kemetism.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -7064,7 +7064,7 @@ Current techs which are not in this file:-
 			<Quote>TXT_KEY_TECH_HINDUISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_REINCARNATION</Sound>
 			<SoundMP>AS2D_TECH_REINCARNATION</SoundMP>
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<Button>Art/Interface/Buttons/TechTree/Hinduism.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -7103,7 +7103,7 @@ Current techs which are not in this file:-
 			<Quote>TXT_KEY_TECH_JUDAISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_JUDAISM</Sound>
 			<SoundMP>AS2D_TECH_JUDAISM</SoundMP>
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<Button>Art/Interface/Buttons/TechTree/judaism.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -7795,7 +7795,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>499</iCost>
 			<Era>C2C_ERA_CLASSICAL</Era>
-			<FirstFreeUnitClass>UNITCLASS_GREAT_SPY</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_GREAT_SPY</FirstFreeUnit>
 			<iAsset>20</iAsset>
 			<iPower>2</iPower>
 			<bTrade>1</bTrade>
@@ -7958,7 +7958,7 @@ Current techs which are not in this file:-
 			<Quote>TXT_KEY_TECH_BUDDHISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_BUDDHISM</Sound>
 			<SoundMP>AS2D_TECH_BUDDHISM</SoundMP>
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<Button>Art/Interface/Buttons/TechTree/Buddhism.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -8108,7 +8108,7 @@ Current techs which are not in this file:-
 			<Quote>TXT_KEY_TECH_HELLENISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_HELLENISM</Sound>
 			<SoundMP>AS2D_TECH_HELLENISM</SoundMP>
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<Button>Art/Interface/Buttons/TechTree/Hellenism.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -8314,7 +8314,7 @@ Current techs which are not in this file:-
 			<bGoodyTech>1</bGoodyTech>
 			<iGridX>35</iGridX>
 			<iGridY>17</iGridY>
-			<FirstFreeUnitClass>UNITCLASS_MERCHANT</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_MERCHANT</FirstFreeUnit>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
@@ -8410,7 +8410,7 @@ Current techs which are not in this file:-
 			<Quote>TXT_KEY_TECH_NAGHUALISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_NAGHUALISM</Sound>
 			<SoundMP>AS2D_TECH_NAGHUALISM</SoundMP>
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<Button>Art/Interface/Buttons/TechTree/naghualism.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -8969,7 +8969,7 @@ Current techs which are not in this file:-
 			<Quote>TXT_KEY_TECH_CONFUCIANISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_CONFUCIANISM</Sound>
 			<SoundMP>AS2D_TECH_CONFUCIANISM</SoundMP>
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<Button>Art/Interface/Buttons/TechTree/Confucianism.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -9081,7 +9081,7 @@ Current techs which are not in this file:-
 			<Quote>TXT_KEY_TECH_TAOISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_TAOISM</Sound>
 			<SoundMP>AS2D_TECH_TAOISM</SoundMP>
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<Button>Art/Interface/Buttons/TechTree/Taoism.dds</Button>
 		</TechInfo>
 <!--	(039, 03) TECH_JAINISM	-->
@@ -9335,7 +9335,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<iCost>904</iCost>
 			<Era>C2C_ERA_CLASSICAL</Era>
-			<FirstFreeUnitClass>UNITCLASS_ARTIST</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_ARTIST</FirstFreeUnit>
 			<iAsset>24</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>40</iGridX>
@@ -9377,7 +9377,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<iCost>904</iCost>
 			<Era>C2C_ERA_CLASSICAL</Era>
-			<FirstFreeUnitClass>UNITCLASS_ARTIST</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_ARTIST</FirstFreeUnit>
 			<iAsset>24</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>40</iGridX>
@@ -9972,7 +9972,7 @@ Current techs which are not in this file:-
 			<Quote>TXT_KEY_TECH_CHRISTIANITY_QUOTE</Quote>
 			<Sound>AS2D_TECH_CHRISTIANITY</Sound>
 			<SoundMP>AS2D_TECH_CHRISTIANITY</SoundMP>
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<Button>Art/Interface/Buttons/TechTree/christianity.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -10180,7 +10180,7 @@ Current techs which are not in this file:-
 			<Quote>TXT_KEY_TECH_ISLAM_QUOTE</Quote>
 			<Sound>AS2D_TECH_ISLAM</Sound>
 			<SoundMP>AS2D_TECH_ISLAM</SoundMP>
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<Button>Art/Interface/Buttons/TechTree/Islam.dds</Button>
 		</TechInfo>
 <!--	(044, 03) TECH_VOODOO	-->
@@ -11962,7 +11962,7 @@ Current techs which are not in this file:-
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>2528</iCost>
 			<Era>C2C_ERA_RENAISSANCE</Era>
-			<FirstFreeUnitClass>UNITCLASS_GREAT_GENERAL</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_GREAT_GENERAL</FirstFreeUnit>
 			<iAsset>32</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>52</iGridX>
@@ -12758,7 +12758,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<iCost>2883</iCost>
 			<Era>C2C_ERA_RENAISSANCE</Era>
-			<FirstFreeUnitClass>UNITCLASS_GREAT_ADMIRAL</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_GREAT_ADMIRAL</FirstFreeUnit>
 			<iAsset>20</iAsset>
 			<iPower>2</iPower>
 			<bTrade>1</bTrade>
@@ -13474,7 +13474,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>3484</iCost>
 			<Era>C2C_ERA_RENAISSANCE</Era>
-			<FirstFreeUnitClass>UNITCLASS_SCIENTIST</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_SCIENTIST</FirstFreeUnit>
 			<iAsset>40</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>57</iGridX>
@@ -13637,7 +13637,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iCost>3704</iCost>
 			<Era>C2C_ERA_RENAISSANCE</Era>
-			<FirstFreeUnitClass>UNITCLASS_MERCHANT</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_MERCHANT</FirstFreeUnit>
 			<iAsset>32</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>58</iGridX>
@@ -14623,7 +14623,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>5460</iCost>
 			<Era>C2C_ERA_INDUSTRIAL</Era>
-			<FirstFreeUnitClass>UNITCLASS_SCIENTIST</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_SCIENTIST</FirstFreeUnit>
 			<iAsset>20</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>63</iGridX>
@@ -16420,7 +16420,7 @@ Current techs which are not in this file:-
 			<bTrade>1</bTrade>
 			<iGridX>69</iGridX>
 			<iGridY>17</iGridY>
-			<FirstFreeUnitClass>UNITCLASS_GREAT_STATESMAN</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_GREAT_STATESMAN</FirstFreeUnit>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
@@ -17043,7 +17043,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<iCost>9889</iCost>
 			<Era>C2C_ERA_ATOMIC</Era>
-			<FirstFreeUnitClass>UNITCLASS_GREAT_SPY</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_GREAT_SPY</FirstFreeUnit>
 			<iAsset>40</iAsset>
 			<bTrade>1</bTrade>
 			<bPermanentAllianceTrading>1</bPermanentAllianceTrading>
@@ -17094,7 +17094,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iCost>9889</iCost>
 			<Era>C2C_ERA_ATOMIC</Era>
-			<FirstFreeUnitClass>UNITCLASS_GREAT_GENERAL</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_GREAT_GENERAL</FirstFreeUnit>
 			<iAsset>40</iAsset>
 			<bTrade>1</bTrade>
 			<bPermanentAllianceTrading>1</bPermanentAllianceTrading>
@@ -17779,7 +17779,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iCost>10744</iCost>
 			<Era>C2C_ERA_ATOMIC</Era>
-			<FirstFreeUnitClass>UNITCLASS_MERCHANT</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_MERCHANT</FirstFreeUnit>
 			<iAsset>50</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>75</iGridX>
@@ -18025,7 +18025,7 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>11196</iCost>
 			<Era>C2C_ERA_ATOMIC</Era>
-			<FirstFreeUnitClass>UNITCLASS_SCIENTIST</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_SCIENTIST</FirstFreeUnit>
 			<iAsset>40</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>76</iGridX>
@@ -21486,7 +21486,7 @@ Current techs which are not in this file:-
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>21329</iCost>
 			<Era>C2C_ERA_INFORMATION</Era>
-			<FirstFreeUnitClass>UNITCLASS_ENGINEER</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_ENGINEER</FirstFreeUnit>
 			<iHappiness>1</iHappiness>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
@@ -21691,7 +21691,7 @@ Current techs which are not in this file:-
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>21329</iCost>
 			<Era>C2C_ERA_INFORMATION</Era>
-			<FirstFreeUnitClass>UNITCLASS_SCIENTIST</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_SCIENTIST</FirstFreeUnit>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>89</iGridX>
@@ -24235,7 +24235,7 @@ Current techs which are not in this file:-
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>36429</iCost>
 			<Era>C2C_ERA_NANOTECH</Era>
-			<FirstFreeUnitClass>UNITCLASS_ENGINEER</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_ENGINEER</FirstFreeUnit>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>100</iGridX>
@@ -27083,7 +27083,7 @@ Current techs which are not in this file:-
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>49574</iCost>
 			<Era>C2C_ERA_NANOTECH</Era>
-			<FirstFreeUnitClass>UNITCLASS_GREAT_SPY</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_GREAT_SPY</FirstFreeUnit>
 			<iAsset>48</iAsset>
 			<iPower>5</iPower>
 			<bTrade>1</bTrade>
@@ -27838,7 +27838,7 @@ Current techs which are not in this file:-
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>63426</iCost>
 			<Era>C2C_ERA_TRANSHUMAN</Era>
-			<FirstFreeUnitClass>UNITCLASS_SCIENTIST</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_SCIENTIST</FirstFreeUnit>
 			<iAsset>48</iAsset>
 			<iPower>4</iPower>
 			<bTrade>1</bTrade>
@@ -29301,7 +29301,7 @@ Current techs which are not in this file:-
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>72474</iCost>
 			<Era>C2C_ERA_TRANSHUMAN</Era>
-			<FirstFreeUnitClass>UNITCLASS_SCIENTIST</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_SCIENTIST</FirstFreeUnit>
 			<iAsset>50</iAsset>
 			<iPower>10</iPower>
 			<bTrade>1</bTrade>
@@ -31229,7 +31229,7 @@ Current techs which are not in this file:-
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>134744</iCost>
 			<Era>C2C_ERA_GALACTIC</Era>
-			<FirstFreeUnitClass>UNITCLASS_ENGINEER</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_ENGINEER</FirstFreeUnit>
 			<iAsset>48</iAsset>
 			<iPower>4</iPower>
 			<bTrade>1</bTrade>
@@ -32201,7 +32201,7 @@ Current techs which are not in this file:-
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>166029</iCost>
 			<Era>C2C_ERA_GALACTIC</Era>
-			<FirstFreeUnitClass>UNITCLASS_ENGINEER</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_ENGINEER</FirstFreeUnit>
 			<iAsset>48</iAsset>
 			<iPower>4</iPower>
 			<bTrade>1</bTrade>
@@ -32320,7 +32320,7 @@ Current techs which are not in this file:-
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>166029</iCost>
 			<Era>C2C_ERA_GALACTIC</Era>
-			<FirstFreeUnitClass>UNITCLASS_ENGINEER</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_ENGINEER</FirstFreeUnit>
 			<iAsset>48</iAsset>
 			<iPower>4</iPower>
 			<bTrade>1</bTrade>
@@ -32675,7 +32675,7 @@ Current techs which are not in this file:-
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>172549</iCost>
 			<Era>C2C_ERA_GALACTIC</Era>
-			<FirstFreeUnitClass>UNITCLASS_SCIENTIST</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_SCIENTIST</FirstFreeUnit>
 			<iAsset>48</iAsset>
 			<iPower>4</iPower>
 			<bTrade>1</bTrade>
@@ -33343,7 +33343,7 @@ Current techs which are not in this file:-
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>262044</iCost>
 			<Era>C2C_ERA_COSMIC</Era>
-			<FirstFreeUnitClass>UNITCLASS_SCIENTIST</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_SCIENTIST</FirstFreeUnit>
 			<iAsset>48</iAsset>
 			<iPower>4</iPower>
 			<bTrade>1</bTrade>
@@ -33420,7 +33420,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_GALACTIC_WARFARE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<Era>C2C_ERA_COSMIC</Era>
-			<FirstFreeUnitClass>UNITCLASS_GREAT_GENERAL</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_GREAT_GENERAL</FirstFreeUnit>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iCost>262044</iCost>
@@ -34832,7 +34832,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_SHAPESHIFTING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<Era>C2C_ERA_COSMIC</Era>
-			<FirstFreeUnitClass>UNITCLASS_GREAT_SPY</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_GREAT_SPY</FirstFreeUnit>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iCost>366008</iCost>
@@ -35273,7 +35273,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_TRANSDIMENSIONAL_COMMERCE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<Era>C2C_ERA_TRANSCENDENT</Era>
-			<FirstFreeUnitClass>UNITCLASS_MERCHANT</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_MERCHANT</FirstFreeUnit>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iCost>511504</iCost>
@@ -35935,7 +35935,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_BRANE_CONSTRUCTION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<Era>C2C_ERA_TRANSCENDENT</Era>
-			<FirstFreeUnitClass>UNITCLASS_ENGINEER</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_ENGINEER</FirstFreeUnit>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iCost>581814</iCost>
@@ -36039,7 +36039,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_DEITIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<Era>C2C_ERA_TRANSCENDENT</Era>
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iCost>601234</iCost>
@@ -36106,7 +36106,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_PARAMETER_TUNING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<Era>C2C_ERA_TRANSCENDENT</Era>
-			<FirstFreeUnitClass>UNITCLASS_SCIENTIST</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_SCIENTIST</FirstFreeUnit>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iCost>601234</iCost>
@@ -36269,7 +36269,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_ALTERNATE_HISTORY_EXPLORATION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<Era>C2C_ERA_TRANSCENDENT</Era>
-			<FirstFreeUnitClass>UNITCLASS_ARTIST</FirstFreeUnitClass>
+			<FirstFreeUnit>UNIT_ARTIST</FirstFreeUnit>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iCost>621429</iCost>

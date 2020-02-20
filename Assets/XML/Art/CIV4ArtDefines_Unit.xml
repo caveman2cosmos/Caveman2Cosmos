@@ -15368,6 +15368,7 @@
 			<fRangedDeathTime>0.31</fRangedDeathTime>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
+<!--
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_LEGEND_SPARTAN</Type>
 			<Button>Art/Interface/Buttons/Units/The_300.dds</Button>
@@ -15385,6 +15386,7 @@
 			<fRangedDeathTime>0.31</fRangedDeathTime>
 			<TrainSound>AS2D_UNIT_BUILD_UNIQUE_UNIT</TrainSound>
 		</UnitArtInfo>
+-->
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_LEO_I</Type>
 			<Button>Art/Interface/Buttons/Units/Heroes/Leo_I.dds</Button>
@@ -77275,7 +77277,7 @@
 			<ActionSound>AS3D_UN_OCEAN_END1</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_TALESOF_SHARK</Type>
+			<Type>ART_DEF_UNIT_TALESOF_REEF_SHARK</Type>
 			<Button>Art/Interface/Buttons/Units/TalesOf_ReefShark.dds</Button>
 			<fScale>0.8</fScale>
 			<fInterfaceScale>0.75</fInterfaceScale>

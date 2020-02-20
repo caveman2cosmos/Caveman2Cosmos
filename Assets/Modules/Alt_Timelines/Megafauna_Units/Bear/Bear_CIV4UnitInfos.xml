@@ -1,12 +1,10 @@
 <?xml version="1.0"?>
-	<!-- Created with Notepad by strategyonly -->
-	<!-- Assets\Modules\Alt_Timelines\MegaFauna\Bear_Rider\bearrider_CIV4UnitInfos.xml -->
-	<!-- ###################################################################################### -->
 <Civ4UnitInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
 			<Class>UNITCLASS_BEARRIDER</Class>
 			<Type>UNIT_BEARRIDER</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -110,6 +108,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_BEARKNIGHT</Class>
 			<Type>UNIT_BEARKNIGHT</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>

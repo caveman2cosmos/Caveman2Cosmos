@@ -2618,23 +2618,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>B2 Spirit</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_B52</Tag>
-		<English>Strategic Bomber</English>
-		<French>
-			<Text>Bombardier Stratégique</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Strategischer Bomber</German>
-		<Italian>Bombardiere strategico</Italian>
-		<Spanish>
-			<Text>Bombardero estratégico</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Bombowiec Strategiczny</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_B52_BOMBER</Tag>
 		<English>Jet Bomber</English>
 		<French>Bombardier à réaction</French>
@@ -3408,23 +3391,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_bf109_PEDIA</Tag>
 		<English>The Messerschmitt Bf 109 was a German World War II fighter aircraft designed by Willy Messerschmitt in the early 1930s. It was one of the first true modern fighters of the era, including such features as an all-metal monocoque construction, a closed canopy, and retractable landing gear. The Bf 109 was produced in greater quantities than any other fighter aircraft in history, with a total of 33,984 units produced up to April 1945.[PARAGRAPH:2]The Bf 109 was the backbone of the Luftwaffe fighter force in World War II, although it began to be partially replaced by the Focke-Wulf Fw 190 from 1941. Originally conceived as an interceptor, it was later developed to fulfill multiple tasks, serving as bomber escort, fighter bomber, day-, night- all-weather fighter, bomber destroyer, ground-attack aircraft, and as reconnaissance aircraft. The Bf 109 had its faults. Like the Spitfire, it had a short range.  Its cockpit was cramped and the track of its undercarriage very narrow indeed so that it had challenging takeoff and landing characteristics.  Nevertheless, it remained competitive with Allied fighter aircraft until the end of the war.[PARAGRAPH:2]The aircraft served with several countries during the war, and with some for many years after. The Bf 109 was flown by the three top-scoring fighter aces of World War II who claimed 928 victories between them while flying with Jagdgeschwader 52, chiefly on the Eastern Front, as well as by the highest scoring German ace in the North African Campaign.  "The 109 was a dream, the non plus ultra," recalled Gunther Rall the Luftwaffe ace with 275 kills. "Of course, everyone wanted to fly it as soon as possible."  It was also flown by high-scoring non-German aces, notably from Finland, Romania, Croatia and Hungary.</English>
 		<Polish>Messerschmitt Bf 109, Me 109 to niemiecki samolot myśliwski, podstawowy myśliwiec Luftwaffe podczas II wojny światowej. Pierwowzorem myśliwskiego Bf 109 był samolot opracowywany dla Rumunii pod nazwą M37. Podczas dalszych prac samolot nazwano Bf 108 i pod tą nazwą był produkowany. Bf 108 Taifun był dwumiejscowym samolotem komunikacyjnym. Ministerstwo Lotnictwa Rzeszy (Reichluftfahrtministerium) w 1933 złożyło zamówienie na nowy samolot myśliwski. Do prac projektowych, w których uczestniczyli Willy Messerschmitt, Robert Lusser oraz Hubert i Richard Bauerowie, przystąpiono wiosną 1934 roku. Budowę pierwszego prototypu nowego samolotu oznaczonego V1 (V jak Versuchsmuster: egzemplarz doświadczalny) zapoczątkowano jesienią 1934 roku. Próby w locie z zablokowanym podwoziem chowanym rozpoczęto w maju 1935 roku. W pierwszym prototypie zastosowano angielski silnik Rolls-RoyceKestrel V12 o mocy startowej 695 KM (511 kW), napędzający dwułopatowe, drewniane śmigło o stałym skoku. Do ogłoszonego w tym czasie konkursu na samolot myśliwski stanęły cztery największe niemieckie biura projektowe zakładów lotniczych: Arado, Focke-Wulf, Heinkel i Bayerische Flugzeugwerke. Do dalszego rozwoju zakwalifikowały się konstrukcje biur dwóch ostatnich zakładów: He 112 i Bf 109. W czasie prób porównawczych obu prototypów Bf 109 osiągnął większą o 22 kilometry prędkość maksymalną oraz większą prędkość wznoszenia. He 112 zyskał jednak bardzo pochlebne opinie pilotów, chwalących wygodną kabinę o bardzo dobrej widoczności, dobre prowadzenie tego samolotu podczas kołowania oraz lepszą zwrotność i właściwości pilotażowe. Pierwotnie przetarg rozstrzygnięto więc na korzyść zespołu Heinkla, lecz intrygi i przebiegłość prof. Willy'ego Messerschmitta przesądziły o kontynuowaniu prac nad prototypem Bf 109. W późniejszym czasie zakłady Messerschmitt AG połączyły się z Bayerische Flugzeugwerke. Ogółem wyprodukowano ok. 33 000 Bf 109 różnych wersji. Bf 109 był samolotem bardzo trudnym do pilotażu w fazie startu, i lądowania. Po oderwaniu kółka ogonowego od nawierzchni lotniska w czasie startu, lub po dotknięciu podwoziem głównym podłoża w czasie lądowania skrzydło samolotu wykazywało natychmiastową, stałą tendencję do opadania. Także kołowanie po płycie lotniska odbywało się na oślep, gdyż osłona silnika zasłaniała pilotowi widok na wprost. Najlepsze właściwości pilotażowe, i manewrowe Bf 109 osiągał w zakresie prędkości 350-420 km/g, przewyższając pod tym względem nawet swojego najgroźniejszego konkurenta Supermarine Spitfire. Powyżej prędkości 400 km/g w wersji B,C,D, oraz powyżej 485 km/g w wersji E wraz ze wzrostem prędkości opór sterów stopniowo zwiększał się, zmuszając pilota do użycia coraz większej siły przy zmianie kierunku, lub wysokości lotu. Tym samym reakcje samolotu następowały z wyraźnym opóźnieniem. Identyczna sytuacja następowała w czasie lotu nurkowego, gdzie w górnych zakresach prędkości użycie steru kierunku przez pilota było mocno problematyczne. Należy podkreślić bardzo mały zasięg samolotu Bf 109 (15 minut lotu na Anglią i pilot musiał zawracać).</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_BGMASTER</Tag>
-		<English>Crafts Master</English>
-		<French>
-			<Text>Maître Artisan</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Handwerksmeister</German>
-		<Italian>Mastro artigiano</Italian>
-		<Spanish>
-			<Text>Maestro artesano</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Mistrz Rzemieślniczy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BILGE_KHAN</Tag>
@@ -7770,173 +7736,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Przedstawiciel Cywilizowanych Jubilerów</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_EXECUTIVE_ARTISTGUILD</Tag>
-		<English>Master Artist</English>
-		<French>
-			<Text>Maître Artiste</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Meisterkünstler</German>
-		<Italian>Maestro artista</Italian>
-		<Spanish>
-			<Text>Maestro artista</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Mistrz Artystów</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_EXECUTIVE_BLACKSMGUILD</Tag>
-		<English>Master Blacksmith</English>
-		<French>
-			<Text>Maître Forgeron</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Hufschmiedemeister</German>
-		<Italian>Mastro fabbro</Italian>
-		<Spanish>
-			<Text>Maestro herrero</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Mistrz Kowalski</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_EXECUTIVE_BUTCHERGUILD</Tag>
-		<English>Master Butcher</English>
-		<French>Maître Boucher</French>
-		<German>Metzgermeister</German>
-		<Italian>Mastro macellaio</Italian>
-		<Spanish>Maestro carnicero</Spanish>
-		<Polish>Mistrz Rzeźników</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_EXECUTIVE_CARPENTERGUILD</Tag>
-		<English>Master Carpenter</English>
-		<French>Maître Charpentier</French>
-		<German>Zimmermeister</German>
-		<Italian>Mastro carpentiere</Italian>
-		<Spanish>
-			<Text>Maestro carpintero</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Mistrz Stolarski</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_EXECUTIVE_CLERKSGUILD</Tag>
-		<English>Master Clerk</English>
-		<French>Maître Clerc</French>
-		<German>Meisterschreiber</German>
-		<Italian>Mastro scrivano</Italian>
-		<Spanish>
-			<Text>Maestro escriba</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Mistrz Klerów</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_EXECUTIVE_DRAPERSGUILD</Tag>
-		<English>Master Draper</English>
-		<French>Maître Tailleur</French>
-		<German>Meistertuchhändler</German>
-		<Italian>Mastro drappiere</Italian>
-		<Spanish>
-			<Text>Maestro sastre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Mistrz Krawiecki</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_EXECUTIVE_EQUESTGUILD</Tag>
-		<English>Master Equestrian</English>
-		<French>Maître écuyer</French>
-		<German>Meisterreiter</German>
-		<Italian>Mastro cavaliere</Italian>
-		<Spanish>
-			<Text>Maestro escudero</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Mistrz Konny</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_EXECUTIVE_FISHMONGUILD</Tag>
-		<English>Master Fishmonger</English>
-		<French>Maître Poissonnier</French>
-		<German>Meisterfischhändler</German>
-		<Spanish>
-			<Text>Maestro pescadero</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Mistrz Rybacki</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_EXECUTIVE_GLASSGUILD</Tag>
-		<English>Master Glassblower</English>
-		<French>Maître Souffleur de Verre</French>
-		<German>Glasbläsermeister</German>
-		<Spanish>
-			<Text>Maestro vidriero</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Mistrz Szklarzy</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_EXECUTIVE_GOLDSMGUILD</Tag>
-		<English>Master Goldsmith</English>
-		<French>Maître Orfèvre</French>
-		<German>Goldschmiedemeister</German>
-		<Spanish>
-			<Text>Maestro orfebre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Mistrz Złotników</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_EXECUTIVE_GROCERGUILD</Tag>
-		<English>Master Grocer</English>
-		<French>Maître Epicier</French>
-		<German>Meisterkrämer</German>
-		<Spanish>
-			<Text>Maestro droguero</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Mistrz Sprzedawców</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_EXECUTIVE_MASONGUILD</Tag>
-		<English>Master Masoner</English>
-		<French>Maître Maçon</French>
-		<German>Maurermeister</German>
-		<Spanish>
-			<Text>Maestro albañil</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Mistrz Masoński</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_EXECUTIVE_MERCERGUILD</Tag>
-		<English>Master Mercer</English>
-		<French>Maître Marchand</French>
-		<German>Meisterstoffhändler</German>
-		<Spanish>
-			<Text>Maestro mercero</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Mistrz Marcerów</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_STRATEGY_ONE</Tag>
@@ -14347,35 +14146,8 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LANDING_SHIP_STRATEGY</Tag>
 		<English>The Landing Ship Tank is a cargo ship. It can carry up to 5 units but is vulnerable to planes and modern warships.</English>
-		<French>The Landing Ship Tank is a cargo ship. It can carry up to 5 units but is vulnerable to planes and modern warships.</French>
 		<Spanish>El Buque-blindado de desembarco es un navío de transporte. Puede llevar hasta a 5 unidades, pero es vulnerable a los aviones y buques de guerra modernos.</Spanish>
 		<Polish>Transportowiec Desantowy to jednostka desantowa mogąca pomieścic do 5 jednostek lądowych na swoim pokładzie.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_LEGEND_SPARTAN</Tag>
-		<English>Leonidas - The 300 Spartans</English>
-		<French>Léonidas - Les 300 Spartes</French>
-		<Italian>I 300 Spartani</Italian>
-		<Spanish>
-			<Text>Leónidas y los 300 espartanos</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Polish>Leonidas</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_LEGEND_SPARTAN_PEDIA</Tag>
-		<English>Enshrined in legend forever after the Battle of Thermopylae, 300 Spartans, along with a few various greek allies, numbering no more then a 5000 soldiers stood to block the might of the main Persian Army under Emperor Xerxes.  While defeated these soldiers defended the pass for 3 days, stopping a force of 150,000 to 1 Million persian soldiers (depending on the source, most historians place the Persian army at 250 thousand troops) for days, stalling the attack, and allowing the greek city states to organize a resistance.  The tale of the 300, their heroism, bravery, and outright defiant resistance of the defenders has lived on for thousands of years, earning the 300 Spartans, under King Leonidas, a place as one of history's most well known legends.</English>
-		<Italian>Entrati nella leggenda dopo la Battaglia delle Termopili, 300 spartani e pochi altri alleati greci, in totale meno di 5000 uomini, si opposero al potente sercito persiano sotto il comando dell'Imperatore Serse. Anche se vennero sconfitti questi soldati difesero il passo per 3 giorni, fermando una forza d'invasione composta da 150000 a 1 milione di soldati persiani (a seconda della fonte, molti storici ritengono plausibile il numero di 250000 uomini) per giorni, respingendo l'attacco e permettendo alle città stato greche di organizzare una resitenza. La storia dei 300, il loro eroismo, coraggio e resistenza sono sopravvissuti per migliaia di anni, facendo guadagnare ai 300 Spartani, comandati da Re Leonida, un posto nella leggenda.</Italian>
-		<Polish>Leonidas - od około 490 p.n.e. król Sparty, syn Anaksandridasa II i jego pierwszej żony. Postać Leonidasa jest symbolem bohaterstwa i mężnego poświęcenia, nawet w sytuacji bez wyjścia. W miejscu śmierci jego i jego oddziałów postawiono obelisk w kształcie lwa (tropaion) z wyrytym epigramatem autorstwa Symonidesa: Przechodniu, powiedz Sparcie, że leżymy tutaj posłuszni jej prawom.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_LEGEND_SPARTAN_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]The 300 Spartans[COLOR_REVERT] is a [COLOR_ALT_HIGHLIGHT_TEXT]World Unit[COLOR_REVERT], and can only be built once per game. It starts with the [COLOR_HIGHLIGHT_TEXT]Leader and Heroic[COLOR_REVERT] and [COLOR_HIGHLIGHT_TEXT]Formation[COLOR_REVERT] promotions</English>
-		<French>[COLOR_UNIT_TEXT]The 300 Spartans[COLOR_REVERT] est une unité [COLOR_ALT_HIGHLIGHT_TEXT]World Unit[COLOR_REVERT], and can only be built once per game. It starts with the [COLOR_HIGHLIGHT_TEXT]Leader and Heroic[COLOR_REVERT] and [COLOR_HIGHLIGHT_TEXT]Formation[COLOR_REVERT] promotions</French>
-		<Italian>I [COLOR_UNIT_TEXT]300 Spartani[COLOR_REVERT] sono un'[COLOR_ALT_HIGHLIGHT_TEXT]Unità mondiale[COLOR_REVERT] e possono essere costruiti una sola volta per ogni partita. Comincia con le promozioni [COLOR_HIGHLIGHT_TEXT]Leader eroico[COLOR_REVERT] e [COLOR_HIGHLIGHT_TEXT]Formazione I[COLOR_REVERT].</Italian>
-		<Spanish>[COLOR_UNIT_TEXT]Leónidas y los 300 espartanos[COLOR_REVERT] son una [COLOR_ALT_HIGHLIGHT_TEXT]unidad mundial[COLOR_REVERT]; solo se puede entrenar una en cada partida. Comienza con los ascensos [COLOR_HIGHLIGHT_TEXT]Líder[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Heroico[COLOR_REVERT] y [COLOR_HIGHLIGHT_TEXT]Formación I[COLOR_REVERT].</Spanish>
-		<Polish>[COLOR_UNIT_TEXT]Leonidas[COLOR_REVERT] był "Bohaterem".</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LEO_I</Tag>
@@ -14396,7 +14168,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LEO_I_STRATEGY</Tag>
 		<English>The Armenian military hero is [COLOR_UNIT_TEXT]Leo I[COLOR_REVERT]. Available in the medieval era, he starts off with a [COLOR_HIGHLIGHT_TEXT]Bard[COLOR_REVERT] in his retinue. He can be built once [COLOR_TECH_TEXT]Literature[COLOR_REVERT] and [COLOR_TECH_TEXT]Trade Networks[COLOR_REVERT] are researched.</English>
-		<French>The Armenian military hero is [COLOR_UNIT_TEXT]Leo I[COLOR_REVERT]. Available in the medieval era, he starts off with a [COLOR_HIGHLIGHT_TEXT]Bard[COLOR_REVERT] in his retinue. He can be built once [COLOR_TECH_TEXT]Literature[COLOR_REVERT] and [COLOR_TECH_TEXT]Trade Networks[COLOR_REVERT] are researched.</French>
 		<Spanish>El héroe militar armenio es [COLOR_UNIT_TEXT]León I[COLOR_REVERT]. Disponible a partir de la Edad Media, comienza con el ascenso [COLOR_HIGHLIGHT_TEXT]Bardo[COLOR_REVERT] en su séquito. Puede ser entrenado una vez investigadas la [COLOR_TECH_TEXT]Literatura[COLOR_REVERT] y la [COLOR_TECH_TEXT]Red comercial[COLOR_REVERT].</Spanish>
 		<Polish>Bohater Wojskowy Ormian to [COLOR_UNIT_TEXT]Leon II[COLOR_REVERT]. Rozpoczyna w towarzystwie [COLOR_HIGHLIGHT_TEXT]Barda[COLOR_REVERT]. Może zostać wyszkolony wraz z odkryciem [COLOR_TECH_TEXT]Literatury[COLOR_REVERT] i [COLOR_TECH_TEXT]Handlu[COLOR_REVERT].</Polish>
 	</TEXT>
@@ -14419,7 +14190,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LEONIDAS_STRATEGY</Tag>
 		<English>The Greek military hero is [COLOR_UNIT_TEXT]Leonidas[COLOR_REVERT]. Available in the ancient/classical era, he starts off with a [COLOR_HIGHLIGHT_TEXT]Bodyguard[COLOR_REVERT] in his retinue. He can be built once [COLOR_TECH_TEXT]Writing[COLOR_REVERT] and [COLOR_TECH_TEXT]Monarchy[COLOR_REVERT] are researched.</English>
-		<French>The Greek military hero is [COLOR_UNIT_TEXT]Leonidas[COLOR_REVERT]. Available in the ancient/classical era, he starts off with a [COLOR_HIGHLIGHT_TEXT]Bodyguard[COLOR_REVERT] in his retinue. He can be built once [COLOR_TECH_TEXT]Writing[COLOR_REVERT] and [COLOR_TECH_TEXT]Monarchy[COLOR_REVERT] are researched.</French>
 		<Spanish>El héroe militar griego es [COLOR_UNIT_TEXT]Leónidas[COLOR_REVERT]. Disponible a partir de la Antigüedad/Época clásica, comienza con el ascenso [COLOR_HIGHLIGHT_TEXT]Guardia real[COLOR_REVERT] en su séquito. Puede ser entrenado una vez investigadas la [COLOR_TECH_TEXT]Escritura[COLOR_REVERT] y la [COLOR_TECH_TEXT]Monarquía[COLOR_REVERT].</Spanish>
 		<Polish>Bohater Wojskowy Greków to [COLOR_UNIT_TEXT]Leonidas[COLOR_REVERT]. Rozpoczyna w towarzystwie [COLOR_HIGHLIGHT_TEXT]Ochroniarza[COLOR_REVERT]. Może zostać wyszkolony wraz z odkryciem [COLOR_TECH_TEXT]Pisma[COLOR_REVERT] i [COLOR_TECH_TEXT]Monarchii[COLOR_REVERT].</Polish>
 	</TEXT>
@@ -30492,6 +30262,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>The [COLOR_UNIT_TEXT]Beggar[COLOR_REVERT] is a Romani unique unit.</English>
 		<French>The [COLOR_UNIT_TEXT]Beggar[COLOR_REVERT] est une unité Romani unique.</French>
 	</TEXT>
+<!--
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHEBA</Tag>
 		<English>Sheba</English>
@@ -30520,6 +30291,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>The [COLOR_UNIT_TEXT]Magos[COLOR_REVERT] is a Sabbatean unique unit.</English>
 		<French>The [COLOR_UNIT_TEXT]Magos[COLOR_REVERT] est une unité Sabbatean unique.</French>
 	</TEXT>
+-->
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ISMAIL_I</Tag>
 		<English>Ismail I</English>
@@ -30561,20 +30333,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_KANISHKA_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Kanishka[COLOR_REVERT] is hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Kanishka[COLOR_REVERT] est une unité héroïque.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SAKA_CATAPRHACT</Tag>
-		<English>Saka Cataprhact</English>
-		<French>Saka Cataprhact</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SAKA_CATAPRHACT_PEDIA</Tag>
-		<English>A cataphract was a form of armored heavy cavalry used in ancient warfare by a number of peoples in Western Eurasia and the Eurasian Steppe. The word in English is derived from the Greek:Kataphraktos, literally meaning "armored" or "completely enclosed". Historically, the cataphract was a very heavily armored horseman, with both the rider and steed draped from head to toe in scale armor, while typically wielding a kontos or lance as their weapon. Cataphracts served as either the elite cavalry or assault force for most empires and nations that fielded them, primarily used for impetuous charges to break through infantry formations. Chronicled by many historians from the earliest days of Antiquity up until the High Middle Ages, they are believed to have influenced the later European knights, via contact with the Byzantine Empire. Notable peoples and states deploying cataphracts at some point in their history include: the Scythians, Sarmatians, Parthian army, Achaemenid army, Sakas, Armenian army, Seleucids, Pergamenes, the Sassanid army, the Roman army, the Goths and the Byzantine army. In several cases the term is used to denote a Parthian chariot.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SAKA_CATAPRHACT_STRATEGY</Tag>
-		<English>The [COLOR_UNIT_TEXT]Saka Cataprhact[COLOR_REVERT] is a Saka unique unit.</English>
-		<French>The [COLOR_UNIT_TEXT]Saka Cataprhact[COLOR_REVERT] est une unité Saka unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AILI_KESKITALO</Tag>

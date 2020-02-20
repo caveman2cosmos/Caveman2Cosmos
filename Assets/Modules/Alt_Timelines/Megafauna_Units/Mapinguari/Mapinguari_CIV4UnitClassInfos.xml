@@ -4,32 +4,27 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_MAPINGUARI_WOODEN</Type>
 			<Description>TXT_KEY_UNIT_MAPINGUARI_WOODEN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
- 		        <DefaultUnit>UNIT_MAPINGUARI_WOODEN</DefaultUnit>
+			<DefaultUnit>UNIT_MAPINGUARI_WOODEN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MAPINGUARI_STONE</Type>
 			<Description>TXT_KEY_UNIT_MAPINGUARI_STONE</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
- 		        <DefaultUnit>UNIT_MAPINGUARI_STONE</DefaultUnit>
+			<DefaultUnit>UNIT_MAPINGUARI_STONE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MAPINGUARI_OBSIDIAN</Type>
 			<Description>TXT_KEY_UNIT_MAPINGUARI_OBSIDIAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
- 		        <DefaultUnit>UNIT_MAPINGUARI_OBSIDIAN</DefaultUnit>
+			<DefaultUnit>UNIT_MAPINGUARI_OBSIDIAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MAPINGUARI</Type>
 			<Description>TXT_KEY_UNIT_MAPINGUARI</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
- 		        <DefaultUnit>UNIT_MAPINGUARI</DefaultUnit>
+			<DefaultUnit>UNIT_MAPINGUARI</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MAPINGUARI_PIKE</Type>
 			<Description>TXT_KEY_UNIT_MAPINGUARI_PIKE</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
- 		        <DefaultUnit>UNIT_MAPINGUARI_PIKE</DefaultUnit>
+			<DefaultUnit>UNIT_MAPINGUARI_PIKE</DefaultUnit>
 		</UnitClassInfo>
    	</UnitClassInfos>
 </Civ4UnitClassInfos>

@@ -520,9 +520,9 @@ int /*SpecialUnitTypes*/ CyUnit::getSpecialUnitType()
 	return m_pUnit ? (int) m_pUnit->getSpecialUnitType() : (int) NO_SPECIALUNIT;
 }
 
-int /*UnitTypes*/ CyUnit::getCaptureUnitType(int /*CivilizationTypes*/ eCivilization)
+int /*UnitTypes*/ CyUnit::getCaptureUnitType()
 {
-	return m_pUnit ? m_pUnit->getCaptureUnitType((CivilizationTypes)eCivilization) : -1;
+	return m_pUnit ? m_pUnit->getCaptureUnitType() : -1;
 }
 
 int /*UnitCombatTypes*/ CyUnit::getUnitCombatType()

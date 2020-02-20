@@ -22,7 +22,7 @@
 				<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
 			</OrPreReqs>
 			<!-- Special effects -->
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<!-- System -->
 			<iAsset>8</iAsset>
 			<iGridX>44</iGridX>

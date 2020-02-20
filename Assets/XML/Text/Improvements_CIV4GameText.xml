@@ -282,23 +282,6 @@
 		<Polish>Chaty często składały się z trzech izb: środkowej - sieni i dwóch bocznych - czarnej i białej. Izba czarna była głównym pomieszczeniem, stał w niej piec. Pełniła rolę kuchni a czasem sypialni. Izba biała była pomieszczeniem bardziej reprezentacyjnym. Służyła tylko celom mieszkaniowym. Obok białej izby budowano często dodatkowe pomieszczenie - komorę, służącą jako magazyn. Jeszcze innym pomieszczeniem był służący jako sypialnia alkierz.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_COTTON_FARM</Tag>
-		<English>Cotton Farm</English>
-		<French>
-			<Text>Plantation de Coton</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Baumwollfarm</German>
-		<Italian>Piantagione di cotone</Italian>
-		<Spanish>
-			<Text>Plantación de algodón</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Plantacja Bawełny</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_CRASHED_PROBE</Tag>
 		<English>Crashed Probe</English>
 		<French>
@@ -812,21 +795,6 @@
 		<Polish>Obóz Zbieraczy Winogron</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_GREENHOUSE</Tag>
-		<English>Greenhouse</English>
-		<French>
-			<Text>Serre</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Spanish>
-			<Text>Invernadero</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Szklarnia</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_GROUNDWATER_WELL</Tag>
 		<English>Groundwater Well</English>
 		<French>Puits Souterrain</French>
@@ -1000,10 +968,6 @@
 		<Italian>Diga Idroelettrica</Italian>
 		<Spanish>Central hidroeléctrica</Spanish>
 		<Polish>Hydroelektrownia</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_ICON_BULLET</Tag>
-		<English>[NEWLINE][ICON_BULLET]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_INDIGENOUS_COMMUNITY</Tag>
@@ -1203,15 +1167,6 @@
 		<English>A [COLOR_BUILDING_TEXT]Lumberyard[COLOR_REVERT] is a retail location for lumber and wood related products used in construction and/or home improvement projects. Lumber yards can also provide services such as the use of a planer and other large machines.</English>
 		<Polish>[COLOR_BUILDING_TEXT]Prymitywny tartak[COLOR_REVERT] to miejsce pozyskiwania drewna na potrzeby konstrukcji szałasów, domów czy innych budowli.</Polish>
 	</TEXT>
-    <TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_MAKES_VALID</Tag> <!-- There are no references to this tag in the Source files, probably dead code. - KaTiON -->
-		<English>[ICON_BULLET]Can be Upgraded to [COLOR_HIGHLIGHT_TEXT][LINK=%s1_ImpType]%s2_ImpName[\LINK][COLOR_REVERT]</English>
-		<French>[ICON_BULLET]peut être amélioré en: [COLOR_HIGHLIGHT_TEXT][LINK=%s1_ImpType]%s2_ImpName[\LINK][COLOR_REVERT]</French>
-		<German>[ICON_BULLET]Kann modernisiert werden zu [COLOR_HIGHLIGHT_TEXT][LINK=%s1_ImpType]%s2_ImpName[\LINK][COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Diventa [NUM1:un:una] [COLOR_HIGHLIGHT_TEXT][LINK=%s1_ImpType]%s2_ImpName[\LINK][COLOR_REVERT]</Italian>
-		<Spanish>[ICON_BULLET]Puede mejorar a [COLOR_HIGHLIGHT_TEXT][LINK=%s1_ImpType]%s2_ImpName[\LINK][COLOR_REVERT]</Spanish>
-		<Polish>[ICON_BULLET]Modernizacja do [COLOR_HIGHLIGHT_TEXT][LINK=%s1_ImpType]%s2_ImpName[\LINK][COLOR_REVERT]</Polish>
-	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_MARINE_PRESERVE</Tag>
 		<English>Marine Preserve</English>
@@ -1383,27 +1338,6 @@
 		<English>A nature reserve is a protected area of importance for wildlife, flora, fauna or features of geological or other special interest, which is reserved and managed for conservation and to provide special opportunities for study or research. Nature reserves may be designated by government institutions in some countries, or by private landowners, such as charities and research institutions, regardless of nationality. Nature reserves fall into different IUCN categories depending on the level of protection afforded by local laws.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_FOREST_NEW</Tag>
-		<English>Cultivate new forest</English>
-		<French>
-			<Text>Planter une nouvelle Forêt</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Neuen Wald anpflanzen</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Foresta vergine</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>Plantar un nuevo bosque</Spanish>
-		<Polish>Plantacja Leśna</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_NOMADIC_HERD</Tag>
 		<English>Nomadic Herd</English>
 		<French>
@@ -1475,28 +1409,6 @@
 		<Tag>TXT_KEY_IMPROVEMENT_OFFSHORE_PLATFORM_PEDIA</Tag>
 		<English>An offshore platform, also referred to as an oil platform or oil rig, is a large structure with facilities to drill wells and extract and process oil and natural gas and export the products to shore. Wikipedia</English>
 		<Polish>Platforma wiertnicza - najczęściej konstrukcja pływająca wyposażona w urządzenie wiertnicze, przeznaczona do wykonywania odwiertów pod dnem akwenu. Sporadycznie bywają wykorzystywane do eksploatacji podmorskich złóż węglowodorów (gaz ziemny, ropa naftowa) - w odróżnieniu od platform wydobywczych.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_OLIVE_GATHERER</Tag>
-		<English>Olive Gatherer</English>
-		<French>Récolteur d'Olives</French>
-		<Spanish>
-			<Text>Recolector de aceitunas</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Szałas Zbieraczy Oliwek</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_OLIVE_PICKER</Tag>
-		<English>Olive Picker</English>
-		<French>Oliveraie</French>
-		<Spanish>
-			<Text>Olivar</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Obóz Zbieraczy Oliwek</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_ORCHARD</Tag>
@@ -1736,15 +1648,6 @@
 		<French>Les villes sont les moyens primaire de localiser les populations</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_REQUIRES</Tag> <!-- There are no references to this tag in the Source files, probably dead code. - KaTiON -->
-		<English>[ICON_BULLET]Requires [COLOR_HIGHLIGHT_TEXT][LINK=%s1_ImpType]%s2_ImpName[\LINK][COLOR_REVERT]</English>
-		<French>[ICON_BULLET]a besoin de: [COLOR_HIGHLIGHT_TEXT][LINK=%s1_ImpType]%s2_ImpName[\LINK][COLOR_REVERT]</French>
-		<German>[ICON_BULLET]Benötigt [COLOR_HIGHLIGHT_TEXT][LINK=%s1_ImpType]%s2_ImpName[\LINK][COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Diventa [NUM1:un:una] [COLOR_HIGHLIGHT_TEXT][LINK=%s1_ImpType]%s2_ImpName[\LINK][COLOR_REVERT]</Italian>
-		<Spanish>[ICON_BULLET]Requiere [COLOR_HIGHLIGHT_TEXT][LINK=%s1_ImpType]%s2_ImpName[\LINK][COLOR_REVERT]</Spanish>
-		<Polish>[ICON_BULLET]Wymaga [COLOR_HIGHLIGHT_TEXT][LINK=%s1_ImpType]%s2_ImpName[\LINK][COLOR_REVERT]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_REQUIRES_PEAK</Tag>
 		<English>[ICON_BULLET]Requires peak</English>
 		<French>[ICON_BULLET]Requiert Montagnes</French>
@@ -1771,30 +1674,6 @@
 		<English>[COLOR_BUILDING_TEXT]Stone Workshops[COLOR_REVERT] first appeared in the Stone Ages. Prehistoric humans used stone to fashion tools.</English>
 		<Spanish>Los primeros [COLOR_BUILDING_TEXT]Talleres de herramientas de piedra[COLOR_REVERT] aparecieron en la Edad de Piedra. Los hombres de la Prehistoria los usaron para amoldar herramientas a partir de las piedras.</Spanish>
 		<Polish>[COLOR_BUILDING_TEXT]Warsztat Kamiennych Narzędzi[COLOR_REVERT] pojawił się w epoce kamienia. Prehistoryczni ludzie wytwarzali w nim narzędzia z kamienia.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_STONE_TOOLS_WORKSHOP2</Tag>
-		<English>Special Stone Workshop</English>
-		<French>
-			<Text>Atelier de Pierres taillées</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Spezialsteinwerkstatt</German>
-		<Italian>Raccoglitore di pietre speciali</Italian>
-		<Spanish>
-			<Text>Taller de piedra tallada</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Warsztat Wyjątkowych Kamieni</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_STONE_TOOLS_WORKSHOP2_PEDIA</Tag>
-		<English>If built on a resource ([COLOR_HIGHLIGHT_TEXT]stone[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]marble[COLOR_REVERT] or [COLOR_HIGHLIGHT_TEXT]obsidian[COLOR_REVERT]) Special Stone Workshop provides that resource.</English>
-		<German>Eine Spezialsteinwerkstatt kann eine Ressource wie [COLOR_HIGHLIGHT_TEXT]Stein[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Marmor[COLOR_REVERT] oder [COLOR_HIGHLIGHT_TEXT]Obsidian[COLOR_REVERT] abbauen. Nach der Entwicklung der [COLOR_TECH_TEXT]Steinmetzkunst[COLOR_REVERT] entwickelt sie sich zu einem Steinbruch weiter, wenn sie bearbeitet wird.</German>
-		<Italian>Se costruito su una risorsa di [COLOR_HIGHLIGHT_TEXT]pietra[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]marmo[COLOR_REVERT] o [COLOR_HIGHLIGHT_TEXT]ossidiana[COLOR_REVERT], fornisce quella risorsa.  Diveta una cava, se la casella viene lavorata, quando viene ricercata la tecnologia [COLOR_TECH_TEXT]Muratura[COLOR_REVERT].</Italian>
-		<Spanish>Si se construye sobre un recurso (siempre que sea [COLOR_HIGHLIGHT_TEXT]Piedra[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Mármol[COLOR_REVERT] u [COLOR_HIGHLIGHT_TEXT]Obsidiana[COLOR_REVERT]), el Taller de piedra tallada proporcionará dicho recurso. Mejora a Cantera si se trabaja la casilla tras obtener la tecnología de la [COLOR_TECH_TEXT]Mampostería[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SACRED_SITE_PEDIA</Tag>
@@ -1825,11 +1704,6 @@
 		<Polish>Zbieracz Soli</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_SALT_GATHERER_STRATEGY</Tag>
-		<English>Improve commerce from plot. Does not provide [LINK=BONUS_SALT]salt[\LINK] from [LINK=TERRAIN_SALT_FLATS]salt flat[\LINK].</English>
-		<Polish>Podnosi wpływy bogactwa z pola. Nie dostarcza [LINK=BONUS_SALT]Soli[\LINK] z [LINK=TERRAIN_SALT_FLATS]Solniska[\LINK].</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SALT_MINE_PEDIA</Tag>
 		<English>New ideas from the Shire book "The Salt Industry" by Andrew and Annelise Fielding.</English>
 		<Polish>Kopalnia soli - kopalnia eksploatująca złoże solne typowymi wyrobiskami górniczymi (głębinowymi) w odróżnieniu od kopalni solankowej.</Polish>
@@ -1844,7 +1718,7 @@
 		<Polish>Wyczyść wodę</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_SANITIZE_WATER_PEDIA</Tag>
+		<Tag>TXT_KEY_IMPROVEMENT_SANITIZE_PEDIA</Tag>
 		<English>Sanitizes an ocean or coast plot of its infection, restoring it to perfect health.</English>
 		<French>Assainit une case d'océan ou de côtes de ces infections, lui restaurant des conditions sanitaires parfaites.</French>
 		<German>Dadurch werden alle Viren und Keime aus dem Wasser entfernt.</German>
@@ -2261,12 +2135,6 @@
 		<Polish>[COLOR_HIGHLIGHT_TEXT]%s1_Feature bezpiecznie pozostanie na tym polu.[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_UPGRADING</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]An Improvement has earned an Upgrade[COLOR_REVERT]</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Un Aménagement a été amélioré[COLOR_REVERT]</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Infrastruktura zdobyła ulepszenie[COLOR_REVERT]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_VILLAGE</Tag>
 		<English>Village</English>
 		<French>
@@ -2468,19 +2336,6 @@
 		<Tag>TXT_KEY_IMPROVEMENT_WINDMILL_PEDIA</Tag>
 		<English>A windmill is a machine which converts the energy of wind into rotational motion by means of adjustable vanes called sails or blades. The main use was originally for a grinding mill powered by the wind, reducing a solid or coarse substance into pulp or minute grains, by crushing, grinding, or pressing. Windmills have also been used to power sawmills and other industrial processes and as windpumps for obtaining fresh water from underground or for drainage of land. Wikipedia</English>
 		<Polish>Wiatrak - budowla drewniana, niekiedy murowana, wyposażona w skrzydła poruszane siłą wiatru i napędzające urządzenia. Jest najstarszym silnikiem wiatrowym - przetwarza energię wiatru na energię kinetyczną wruchu obrotowym. Jest poprzednikiem turbiny wiatrowej, którą czasami również nazywa się wiatrakiem.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_WINDTRAP</Tag>
-		<English>Windtrap</English>
-		<French>Piège à Vent</French>
-		<German>Windfalle</German>
-		<Italian>Trappola per vento</Italian>
-		<Spanish>
-			<Text>Trampa de viento</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Elektrownia Wiatrowa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_WINERY</Tag>

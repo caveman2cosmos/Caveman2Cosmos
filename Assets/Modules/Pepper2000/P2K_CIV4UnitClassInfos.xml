@@ -1,8 +1,4 @@
 <?xml version="1.0"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- UnitClass Schema -->
 <Civ4UnitClassInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitClassInfos>
 		<UnitClassInfo>
@@ -48,7 +44,6 @@
         <UnitClassInfo>
 			<Type>UNITCLASS_HYPERSHIP</Type>
 			<Description>TXT_KEY_UNIT_HYPERSHIP</Description>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_HYPERSHIP</DefaultUnit>
 		</UnitClassInfo>
         <UnitClassInfo>
@@ -137,11 +132,6 @@
 			<DefaultUnit>UNIT_SOLAR_WORKER</DefaultUnit>
 		</UnitClassInfo>
         <UnitClassInfo>
-			<Type>UNITCLASS_WORMHOLE_WORKER</Type>
-			<Description>TXT_KEY_UNIT_WORMHOLE_WORKER</Description>
-			<DefaultUnit>UNIT_WORMHOLE_WORKER</DefaultUnit>
-		</UnitClassInfo>
-        <UnitClassInfo>
 			<Type>UNITCLASS_MARSSETTLER</Type>
 			<Description>TXT_KEY_UNIT_MARSSETTLER</Description>
 			<DefaultUnit>UNIT_MARSSETTLER</DefaultUnit>
@@ -154,7 +144,6 @@
         <UnitClassInfo>
 			<Type>UNITCLASS_SOLARSAIL_WORKER</Type>
 			<Description>TXT_KEY_UNIT_SOLARSAIL_WORKER</Description>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_SOLARSAIL_WORKER</DefaultUnit>
 		</UnitClassInfo>
         <UnitClassInfo>
@@ -205,49 +194,41 @@
         <UnitClassInfo>
 			<Type>UNITCLASS_SPACE_SHUTTLE</Type>
 			<Description>TXT_KEY_UNIT_SPACE_SHUTTLE</Description>
-			<iMaxPlayerInstances>2</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_SPACE_SHUTTLE</DefaultUnit>
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_PLANET_PROBE</Type>
 			<Description>TXT_KEY_UNIT_PLANET_PROBE</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_PLANET_PROBE</DefaultUnit>
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_INTERSTELLAR_PROBE</Type>
 			<Description>TXT_KEY_UNIT_INTERSTELLAR_PROBE</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_INTERSTELLAR_PROBE</DefaultUnit>
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_BRACEWELL_PROBE</Type>
 			<Description>TXT_KEY_UNIT_BRACEWELL_PROBE</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_BRACEWELL_PROBE</DefaultUnit>
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_VON_NEUMANN_PROBE</Type>
 			<Description>TXT_KEY_UNIT_VON_NEUMANN_PROBE</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_VON_NEUMANN_PROBE</DefaultUnit>
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_QUANTUM_PROBE</Type>
 			<Description>TXT_KEY_UNIT_QUANTUM_PROBE</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_QUANTUM_PROBE</DefaultUnit>
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_INTERDIMENSIONAL_PROBE</Type>
 			<Description>TXT_KEY_UNIT_INTERDIMENSIONAL_PROBE</Description>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_INTERDIMENSIONAL_PROBE</DefaultUnit>
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_HEAVY_ROCKET</Type>
 			<Description>TXT_KEY_UNIT_HEAVY_ROCKET</Description>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_HEAVY_ROCKET</DefaultUnit>
 		</UnitClassInfo>
         <UnitClassInfo>
@@ -463,43 +444,31 @@
         <UnitClassInfo>
 			<Type>UNITCLASS_WARLORDVI</Type>
 			<Description>TXT_KEY_UNIT_WARLORDVI</Description>
-			<iMaxPlayerInstances>6</iMaxPlayerInstances>
-            <bUnlimitedException>1</bUnlimitedException>
-            <iInstanceCostModifier>25</iInstanceCostModifier>
 			<DefaultUnit>UNIT_WARLORDVI</DefaultUnit>
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_WARLORDVIS</Type>
 			<Description>TXT_KEY_UNIT_WARLORDVIS</Description>
-            <bUnlimitedException>1</bUnlimitedException>
 			<DefaultUnit>UNIT_WARLORDVIS</DefaultUnit>
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_WARLORDVII</Type>
 			<Description>TXT_KEY_UNIT_WARLORDVII</Description>
-			<iMaxPlayerInstances>7</iMaxPlayerInstances>
-            <bUnlimitedException>1</bUnlimitedException>
-            <iInstanceCostModifier>25</iInstanceCostModifier>
 			<DefaultUnit>UNIT_WARLORDVII</DefaultUnit>
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_WARLORDVIIS</Type>
 			<Description>TXT_KEY_UNIT_WARLORDVIIS</Description>
-            <bUnlimitedException>1</bUnlimitedException>
 			<DefaultUnit>UNIT_WARLORDVIIS</DefaultUnit>
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_WARLORDVIII</Type>
 			<Description>TXT_KEY_UNIT_WARLORDVIII</Description>
-			<iMaxPlayerInstances>8</iMaxPlayerInstances>
-            <bUnlimitedException>1</bUnlimitedException>
-            <iInstanceCostModifier>25</iInstanceCostModifier>
 			<DefaultUnit>UNIT_WARLORDVIII</DefaultUnit>
 		</UnitClassInfo>
         <UnitClassInfo>
 			<Type>UNITCLASS_WARLORDVIIIS</Type>
 			<Description>TXT_KEY_UNIT_WARLORDVIIIS</Description>
-            <bUnlimitedException>1</bUnlimitedException>
 			<DefaultUnit>UNIT_WARLORDVIIIS</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>

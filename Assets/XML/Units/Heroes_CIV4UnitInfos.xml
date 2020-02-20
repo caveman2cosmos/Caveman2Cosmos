@@ -15636,8 +15636,8 @@
 			<LeaderPromotion>PROMOTION_LEADER</LeaderPromotion>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_LEGEND_SPARTAN</Class>
-			<Type>UNIT_LEGEND_SPARTAN</Type>
+			<Class>UNITCLASS_LEONIDAS</Class>
+			<Type>UNIT_LEONIDAS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
@@ -45149,7 +45149,7 @@
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
-			<BonusType>BONUS_GOLD_OREEN_HORDE</BonusType>
+			<BonusType>BONUS_GOLDEN_HORDE</BonusType>
 			<iCost>1750</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>

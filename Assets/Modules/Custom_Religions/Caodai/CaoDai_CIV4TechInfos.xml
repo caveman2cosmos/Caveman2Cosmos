@@ -22,7 +22,7 @@
 				<PrereqTech>TECH_ATOMIC_LIFESTYLE</PrereqTech>
 			</OrPreReqs>
 			<!-- Special effects -->
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<!-- System -->
 			<iAsset>8</iAsset>
 			<iGridX>72</iGridX>

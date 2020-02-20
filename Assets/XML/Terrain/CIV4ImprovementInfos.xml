@@ -7288,13 +7288,13 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_CORAL_REEF_REEF_BEACON</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_BEACON</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
 			<ImprovementUpgrade>IMPROVEMENT_LIGHTHOUSE_CORAL</ImprovementUpgrade>
 			<FeatureChangeTypes>
-				<FeatureType>FEATURE_CORAL_REEF_REEF_BEACON</FeatureType>
+				<FeatureType>FEATURE_CORAL_REEF_BEACON</FeatureType>
 			</FeatureChangeTypes>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -7469,17 +7469,17 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_CORAL_REEF_REEF_BEACON</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_BEACON</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_CORAL_REEF_REEF_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_LIGHTHOUSE</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
 			<ImprovementPillage>IMPROVEMENT_BEACON_CORAL</ImprovementPillage>
 			<FeatureChangeTypes>
-				<FeatureType>FEATURE_CORAL_REEF_REEF_LIGHTHOUSE</FeatureType>
+				<FeatureType>FEATURE_CORAL_REEF_LIGHTHOUSE</FeatureType>
 			</FeatureChangeTypes>
 		</ImprovementInfo>
 		<ImprovementInfo>
@@ -10501,7 +10501,7 @@
 			<iUpgradeTime>32</iUpgradeTime>
 			<FeatureMakesValids>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_CORAL_REEF_REEF_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_LIGHTHOUSE</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
@@ -11451,7 +11451,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_STONE_TOOLS_WORKSHOP</Type>
 			<Description>TXT_KEY_IMPROVEMENT_STONE_TOOLS_WORKSHOP</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_MINE_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_STONE_TOOLS_WORKSHOP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_STONE_TOOLS_WORKSHOP</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>

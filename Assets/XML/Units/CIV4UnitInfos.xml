@@ -11,11 +11,21 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_BAND</Class>
 			<Type>UNIT_BAND</Type>
+			<iMaxPlayerInstances>0</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Description>TXT_KEY_UNIT_BAND</Description>
 			<Civilopedia>TXT_KEY_UNIT_BAND_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_BAND_STRATEGY</Strategy>
 			<Domain>DOMAIN_LAND</Domain>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_EPIC</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<UnitAIs>
 				<UnitAI>
@@ -68,7 +78,9 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_TRIBE</Class>
 			<Type>UNIT_TRIBE</Type>
-			<Capture>UNITCLASS_CAPTIVE_CIVILIAN</Capture>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
+			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -138,7 +150,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_SETTLER</Class>
 			<Type>UNIT_SETTLER</Type>
-			<Capture>UNITCLASS_CAPTIVE_CIVILIAN</Capture>
+			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -215,7 +227,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_COLONIST</Class>
 			<Type>UNIT_COLONIST</Type>
-			<Capture>UNITCLASS_CAPTIVE_CIVILIAN</Capture>
+			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -294,7 +306,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_PIONEER</Class>
 			<Type>UNIT_PIONEER</Type>
-			<Capture>UNITCLASS_CAPTIVE_CIVILIAN</Capture>
+			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -373,7 +385,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_AIRSETTLER</Class>
 			<Type>UNIT_AIRSETTLER</Type>
-			<Capture>UNITCLASS_CAPTIVE_CIVILIAN</Capture>
+			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -438,7 +450,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_GATHERER</Class>
 			<Type>UNIT_GATHERER</Type>
-			<Capture>UNITCLASS_GATHERER</Capture>
+			<Capture>UNIT_GATHERER</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -474,12 +486,9 @@ Base XP gained when defending
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_GATHERER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
+			</SupersedingUnits>
 			<Builds>
 				<Build>
 					<BuildType>BUILD_TRAIL</BuildType>
@@ -614,7 +623,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_WORKER</Class>
 			<Type>UNIT_WORKER</Type>
-			<Capture>UNITCLASS_WORKER</Capture>
+			<Capture>UNIT_WORKER</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -919,7 +928,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_WORKANIMAL</Class>
 			<Type>UNIT_WORKANIMAL</Type>
-			<Capture>UNITCLASS_WORKANIMAL</Capture>
+			<Capture>UNIT_WORKANIMAL</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -1249,7 +1258,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_WORKBUFFALO</Class>
 			<Type>UNIT_WORKBUFFALO</Type>
-			<Capture>UNITCLASS_WORKBUFFALO</Capture>
+			<Capture>UNIT_WORKBUFFALO</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -1573,7 +1582,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_WORKMULE</Class>
 			<Type>UNIT_WORKMULE</Type>
-			<Capture>UNITCLASS_WORKMULE</Capture>
+			<Capture>UNIT_WORKMULE</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -1902,7 +1911,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_WORKELEPHANT</Class>
 			<Type>UNIT_WORKELEPHANT</Type>
-			<Capture>UNITCLASS_WORKELEPHANT</Capture>
+			<Capture>UNIT_WORKELEPHANT</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -2216,7 +2225,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_WORKLLAMA</Class>
 			<Type>UNIT_WORKLLAMA</Type>
-			<Capture>UNITCLASS_WORKLLAMA</Capture>
+			<Capture>UNIT_WORKLLAMA</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -2544,7 +2553,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_WORKCAMEL</Class>
 			<Type>UNIT_WORKCAMEL</Type>
-			<Capture>UNITCLASS_WORKCAMEL</Capture>
+			<Capture>UNIT_WORKCAMEL</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -2868,7 +2877,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_WORKER_INDUSTRIAL</Class>
 			<Type>UNIT_WORKER_INDUSTRIAL</Type>
-			<Capture>UNITCLASS_WORKER_INDUSTRIAL</Capture>
+			<Capture>UNIT_WORKER_INDUSTRIAL</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -3249,7 +3258,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_WORKER_MODERN</Class>
 			<Type>UNIT_WORKER_MODERN</Type>
-			<Capture>UNITCLASS_WORKER_MODERN</Capture>
+			<Capture>UNIT_WORKER_MODERN</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WHEELED</SubCombatType>
@@ -4026,7 +4035,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_WORKER_ANDROID</Class>
 			<Type>UNIT_WORKER_ANDROID</Type>
-			<Capture>UNITCLASS_WORKER_ANDROID</Capture>
+			<Capture>UNIT_WORKER_ANDROID</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -4413,7 +4422,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_BULLDOZER</Class>
 			<Type>UNIT_BULLDOZER</Type>
-			<Capture>UNITCLASS_BULLDOZER</Capture>
+			<Capture>UNIT_BULLDOZER</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TRACKED</SubCombatType>
@@ -4581,12 +4590,9 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<ForceObsoleteTech>TECH_PERSISTENCE_HUNTING</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_WANDERER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_WANDERER</UnitType>
+			</SupersedingUnits>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_SCOUT</Class>
@@ -4677,12 +4683,9 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<ForceObsoleteTech>TECH_WRITING</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_SCOUT</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_SCOUT</UnitType>
+			</SupersedingUnits>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_GUIDE</Class>
@@ -5305,6 +5308,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_CHASER</Class>
 			<Type>UNIT_CHASER</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -5356,12 +5360,9 @@ Base XP gained when defending
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_TRAILS</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_GATHERER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
+			</SupersedingUnits>
 			<FreePromotions>
 				<FreePromotion>
 					<PromotionType>PROMOTION_BY_THE_HORNS</PromotionType>
@@ -5394,6 +5395,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_TRACKER</Class>
 			<Type>UNIT_TRACKER</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -5458,12 +5460,9 @@ Base XP gained when defending
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_TRACKING</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_GATHERER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
+			</SupersedingUnits>
 			<iCost>38</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>2</iCombat>
@@ -5496,6 +5495,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_HUNTER</Class>
 			<Type>UNIT_HUNTER</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -5594,16 +5594,14 @@ Base XP gained when defending
 				</FreePromotion>
 			</FreePromotions>
 			<ForceObsoleteTech>TECH_BRONZE_WORKING</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_GATHERER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
+			</SupersedingUnits>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_RANGER</Class>
 			<Type>UNIT_RANGER</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -5703,6 +5701,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_WARDEN</Class>
 			<Type>UNIT_WARDEN</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -5795,6 +5794,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_GAME_HUNTER</Class>
 			<Type>UNIT_GAME_HUNTER</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -5893,6 +5893,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_BIG_GAME_HUNTER</Class>
 			<Type>UNIT_BIG_GAME_HUNTER</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -6126,6 +6127,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_SPECIAL_AGENT</Class>
 			<Type>UNIT_SPECIAL_AGENT</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_SPY</Combat>
 			<SubCombatTypes>
@@ -6205,6 +6207,8 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_007</Class>
 			<Type>UNIT_007</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_SPY</Combat>
 			<SubCombatTypes>
@@ -6401,6 +6405,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_SLEEPER</Class>
 			<Type>UNIT_SLEEPER</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<NotGameOption>GAMEOPTION_NO_ESPIONAGE</NotGameOption>
 			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_SPY</DefaultUnitAI>
@@ -6460,6 +6465,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_EXECUTIVE_1</Class>
 			<Type>UNIT_EXECUTIVE_1</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -6508,6 +6514,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_EXECUTIVE_2</Class>
 			<Type>UNIT_EXECUTIVE_2</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -6556,6 +6563,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_EXECUTIVE_3</Class>
 			<Type>UNIT_EXECUTIVE_3</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -6604,6 +6612,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_EXECUTIVE_4</Class>
 			<Type>UNIT_EXECUTIVE_4</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -6652,6 +6661,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_EXECUTIVE_5</Class>
 			<Type>UNIT_EXECUTIVE_5</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -6700,6 +6710,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_EXECUTIVE_6</Class>
 			<Type>UNIT_EXECUTIVE_6</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -6748,6 +6759,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_EXECUTIVE_7</Class>
 			<Type>UNIT_EXECUTIVE_7</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -6796,6 +6808,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_EXECUTIVE_ADVENTURE</Class>
 			<Type>UNIT_EXECUTIVE_ADVENTURE</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -6844,6 +6857,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_EXECUTIVE_BULLSEYE</Class>
 			<Type>UNIT_EXECUTIVE_BULLSEYE</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -6892,6 +6906,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_EXECUTIVE_BURGERWORLD</Class>
 			<Type>UNIT_EXECUTIVE_BURGERWORLD</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -6940,6 +6955,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_EXECUTIVE_EMPCLOTH</Class>
 			<Type>UNIT_EXECUTIVE_EMPCLOTH</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -6988,6 +7004,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_EXECUTIVE_EWTRADE</Class>
 			<Type>UNIT_EXECUTIVE_EWTRADE</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -7036,6 +7053,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_EXECUTIVE_FASHION</Class>
 			<Type>UNIT_EXECUTIVE_FASHION</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -7084,6 +7102,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_EXECUTIVE_MALLWART</Class>
 			<Type>UNIT_EXECUTIVE_MALLWART</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -7132,6 +7151,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_EXECUTIVE_MAPSTER</Class>
 			<Type>UNIT_EXECUTIVE_MAPSTER</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -7180,6 +7200,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_EXECUTIVE_MCDOWELLS</Class>
 			<Type>UNIT_EXECUTIVE_MCDOWELLS</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -7228,6 +7249,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_EXECUTIVE_MILEHIGH</Class>
 			<Type>UNIT_EXECUTIVE_MILEHIGH</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -7276,6 +7298,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_EXECUTIVE_MOBBY</Class>
 			<Type>UNIT_EXECUTIVE_MOBBY</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -7324,6 +7347,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_MOONBEAN_EXECUTIVE</Class>
 			<Type>UNIT_MOONBEAN_EXECUTIVE</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -7372,6 +7396,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_EXECUTIVE_RED</Class>
 			<Type>UNIT_EXECUTIVE_RED</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -7420,6 +7445,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_EXECUTIVE_SAFARI</Class>
 			<Type>UNIT_EXECUTIVE_SAFARI</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -7468,6 +7494,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_EXECUTIVE_ULTSOLDIER</Class>
 			<Type>UNIT_EXECUTIVE_ULTSOLDIER</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -7516,6 +7543,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_EXECUTIVE_WONKA</Class>
 			<Type>UNIT_EXECUTIVE_WONKA</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -7565,7 +7593,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_JEWISH_MISSIONARY</Class>
 			<Type>UNIT_JEWISH_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_JEWISH_MISSIONARY</Capture>
+			<Capture>UNIT_JEWISH_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -7614,7 +7642,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_CHRISTIAN_MISSIONARY</Class>
 			<Type>UNIT_CHRISTIAN_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_CHRISTIAN_MISSIONARY</Capture>
+			<Capture>UNIT_CHRISTIAN_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -7663,7 +7691,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_ISLAMIC_MISSIONARY</Class>
 			<Type>UNIT_ISLAMIC_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_ISLAMIC_MISSIONARY</Capture>
+			<Capture>UNIT_ISLAMIC_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -7712,7 +7740,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_HINDU_MISSIONARY</Class>
 			<Type>UNIT_HINDU_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_HINDU_MISSIONARY</Capture>
+			<Capture>UNIT_HINDU_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -7761,7 +7789,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_BUDDHIST_MISSIONARY</Class>
 			<Type>UNIT_BUDDHIST_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_BUDDHIST_MISSIONARY</Capture>
+			<Capture>UNIT_BUDDHIST_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -7810,7 +7838,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_CONFUCIAN_MISSIONARY</Class>
 			<Type>UNIT_CONFUCIAN_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_CONFUCIAN_MISSIONARY</Capture>
+			<Capture>UNIT_CONFUCIAN_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -7859,7 +7887,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_TAOIST_MISSIONARY</Class>
 			<Type>UNIT_TAOIST_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_TAOIST_MISSIONARY</Capture>
+			<Capture>UNIT_TAOIST_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -7908,7 +7936,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_HELLENIC_MISSIONARY</Class>
 			<Type>UNIT_HELLENIC_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_HELLENIC_MISSIONARY</Capture>
+			<Capture>UNIT_HELLENIC_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -7957,7 +7985,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_ZOROASTRIAN_MISSIONARY</Class>
 			<Type>UNIT_ZOROASTRIAN_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_ZOROASTRIAN_MISSIONARY</Capture>
+			<Capture>UNIT_ZOROASTRIAN_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -8021,7 +8049,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_EGYPT_MYTH_MISSIONARY</Class>
 			<Type>UNIT_EGYPT_MYTH_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_EGYPT_MYTH_MISSIONARY</Capture>
+			<Capture>UNIT_EGYPT_MYTH_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -8070,7 +8098,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_NAGUALISM_MISSIONARY</Class>
 			<Type>UNIT_NAGUALISM_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_NAGUALISM_MISSIONARY</Capture>
+			<Capture>UNIT_NAGUALISM_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -8118,6 +8146,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_INQUISITOR</Class>
 			<Type>UNIT_INQUISITOR</Type>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
@@ -8236,12 +8265,9 @@ Base XP gained when defending
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_BRUTE</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_BRUTE</UnitType>
+			</SupersedingUnits>
 			<iCost>3</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>1</iCombat>
@@ -8334,12 +8360,9 @@ Base XP gained when defending
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL</UnitType>
+			</SupersedingUnits>
 			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
 			<iCost>17</iCost>
 			<iMoves>1</iMoves>
@@ -8443,12 +8466,9 @@ Base XP gained when defending
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_WARRIOR</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_WARRIOR</UnitType>
+			</SupersedingUnits>
 			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
 			<iCost>26</iCost>
 			<iMoves>1</iMoves>
@@ -8549,12 +8569,9 @@ Base XP gained when defending
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_STONE_MACEMAN</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_STONE_MACEMAN</UnitType>
+			</SupersedingUnits>
 			<iCost>38</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
@@ -8694,12 +8711,9 @@ Base XP gained when defending
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_NO_SIEGE</FormationType>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_OBSIDIAN_MACEMAN</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_OBSIDIAN_MACEMAN</UnitType>
+			</SupersedingUnits>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_EARLY_MACEMAN</Class>
@@ -8967,12 +8981,9 @@ Base XP gained when defending
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_STONE_AGE_AXEMAN</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_STONE_AGE_AXEMAN</UnitType>
+			</SupersedingUnits>
 			<iCost>42</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
@@ -9116,12 +9127,9 @@ Base XP gained when defending
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_OBSIDIAN_AXEMAN</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_OBSIDIAN_AXEMAN</UnitType>
+			</SupersedingUnits>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_AXEMAN</Class>
@@ -9423,12 +9431,9 @@ Base XP gained when defending
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_OBSIDIAN_SWORDSMAN</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_OBSIDIAN_SWORDSMAN</UnitType>
+			</SupersedingUnits>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_LIGHT_SWORDSMAN</Class>
@@ -9937,12 +9942,9 @@ Base XP gained when defending
 			</UnitAIs>
 			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
 			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_WOODEN_SPEARMAN</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_WOODEN_SPEARMAN</UnitType>
+			</SupersedingUnits>
 			<iCost>35</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>3</iCombat>
@@ -10038,12 +10040,9 @@ Base XP gained when defending
 			</UnitAIs>
 			<PrereqTech>TECH_SPEAR_MAKING</PrereqTech>
 			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_STONE_AGE_SPEARMAN</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_STONE_AGE_SPEARMAN</UnitType>
+			</SupersedingUnits>
 			<iCost>39</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
@@ -10184,12 +10183,9 @@ Base XP gained when defending
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_OBSIDIAN_SPEARMAN</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_OBSIDIAN_SPEARMAN</UnitType>
+			</SupersedingUnits>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_SPEARMAN</Class>
@@ -11232,12 +11228,9 @@ Base XP gained when defending
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<ForceObsoleteTech>TECH_BINDING</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_STONE_THROWER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_STONE_THROWER</UnitType>
+			</SupersedingUnits>
 			<iCost>4</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>1</iCombat>
@@ -11341,12 +11334,9 @@ Base XP gained when defending
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_SLINGER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_SLINGER</UnitType>
+			</SupersedingUnits>
 			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
 			<iCost>23</iCost>
 			<iMoves>1</iMoves>
@@ -11450,12 +11440,9 @@ Base XP gained when defending
 			</UnitAIs>
 			<PrereqTech>TECH_ATLATL_MAKING</PrereqTech>
 			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_GATHERER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
+			</SupersedingUnits>
 			<iCost>50</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
@@ -17654,12 +17641,9 @@ Base XP gained when defending
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_ELEPHANT_RIDER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_ELEPHANT_RIDER</UnitType>
+			</SupersedingUnits>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_WAR_ELEPHANT</Class>
@@ -21170,7 +21154,8 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_LOG_RAM</Class>
 			<Type>UNIT_LOG_RAM</Type>
-			<Capture>UNITCLASS_LOG_RAM</Capture>
+			<iMaxPlayerInstances>40</iMaxPlayerInstances>
+			<Capture>UNIT_LOG_RAM</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -21271,17 +21256,15 @@ Base XP gained when defending
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_LOG_RAM</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_LOG_RAM</UnitType>
+			</SupersedingUnits>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_BATTERING_RAM</Class>
 			<Type>UNIT_BATTERING_RAM</Type>
-			<Capture>UNITCLASS_BATTERING_RAM</Capture>
+			<iMaxPlayerInstances>40</iMaxPlayerInstances>
+			<Capture>UNIT_BATTERING_RAM</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -21382,7 +21365,8 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_SIEGE_RAM</Class>
 			<Type>UNIT_SIEGE_RAM</Type>
-			<Capture>UNITCLASS_SIEGE_RAM</Capture>
+			<iMaxPlayerInstances>40</iMaxPlayerInstances>
+			<Capture>UNIT_SIEGE_RAM</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -21486,7 +21470,8 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_SIEGE_TOWER</Class>
 			<Type>UNIT_SIEGE_TOWER</Type>
-			<Capture>UNITCLASS_SIEGE_TOWER</Capture>
+			<iMaxPlayerInstances>40</iMaxPlayerInstances>
+			<Capture>UNIT_SIEGE_TOWER</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -21596,7 +21581,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_OXYBELES</Class>
 			<Type>UNIT_OXYBELES</Type>
-			<Capture>UNITCLASS_OXYBELES</Capture>
+			<Capture>UNIT_OXYBELES</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -21713,7 +21698,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_SCORPION</Class>
 			<Type>UNIT_SCORPION</Type>
-			<Capture>UNITCLASS_SCORPION</Capture>
+			<Capture>UNIT_SCORPION</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -21827,7 +21812,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_BALLISTA</Class>
 			<Type>UNIT_BALLISTA</Type>
-			<Capture>UNITCLASS_BALLISTA</Capture>
+			<Capture>UNIT_BALLISTA</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -21941,7 +21926,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_HEAVY_BALLISTA</Class>
 			<Type>UNIT_HEAVY_BALLISTA</Type>
-			<Capture>UNITCLASS_HEAVY_BALLISTA</Capture>
+			<Capture>UNIT_HEAVY_BALLISTA</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -22055,7 +22040,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_FLAMING_ARROW</Class>
 			<Type>UNIT_FLAMING_ARROW</Type>
-			<Capture>UNITCLASS_FLAMING_ARROW</Capture>
+			<Capture>UNIT_FLAMING_ARROW</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -22161,7 +22146,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_LITHOBOLOS</Class>
 			<Type>UNIT_LITHOBOLOS</Type>
-			<Capture>UNITCLASS_LITHOBOLOS</Capture>
+			<Capture>UNIT_LITHOBOLOS</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -22267,7 +22252,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_CATAPULT</Class>
 			<Type>UNIT_CATAPULT</Type>
-			<Capture>UNITCLASS_CATAPULT</Capture>
+			<Capture>UNIT_CATAPULT</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -22370,7 +22355,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_SIEGE_ONAGER</Class>
 			<Type>UNIT_SIEGE_ONAGER</Type>
-			<Capture>UNITCLASS_CATAPULT</Capture>
+			<Capture>UNIT_CATAPULT</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -22588,7 +22573,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_TREBUCHET</Class>
 			<Type>UNIT_TREBUCHET</Type>
-			<Capture>UNITCLASS_TREBUCHET</Capture>
+			<Capture>UNIT_TREBUCHET</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -22695,7 +22680,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_BOMBARD</Class>
 			<Type>UNIT_BOMBARD</Type>
-			<Capture>UNITCLASS_BOMBARD</Capture>
+			<Capture>UNIT_BOMBARD</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -22807,7 +22792,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_GREAT_BOMBARD</Class>
 			<Type>UNIT_GREAT_BOMBARD</Type>
-			<Capture>UNITCLASS_GREAT_BOMBARD</Capture>
+			<Capture>UNIT_GREAT_BOMBARD</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -22917,7 +22902,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_MOTAR</Class>
 			<Type>UNIT_MOTAR</Type>
-			<Capture>UNITCLASS_MOTAR</Capture>
+			<Capture>UNIT_MOTAR</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -23027,7 +23012,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_ORGAN_GUN</Class>
 			<Type>UNIT_ORGAN_GUN</Type>
-			<Capture>UNITCLASS_ORGAN_GUN</Capture>
+			<Capture>UNIT_ORGAN_GUN</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -23139,7 +23124,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_RIBAULDEQUIN</Class>
 			<Type>UNIT_RIBAULDEQUIN</Type>
-			<Capture>UNITCLASS_RIBAULDEQUIN</Capture>
+			<Capture>UNIT_RIBAULDEQUIN</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -23249,7 +23234,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_CULVERIN</Class>
 			<Type>UNIT_CULVERIN</Type>
-			<Capture>UNITCLASS_CULVERIN</Capture>
+			<Capture>UNIT_CULVERIN</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -23357,7 +23342,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_FALCONET</Class>
 			<Type>UNIT_FALCONET</Type>
-			<Capture>UNITCLASS_FALCONET</Capture>
+			<Capture>UNIT_FALCONET</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -23473,7 +23458,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_CANNON</Class>
 			<Type>UNIT_CANNON</Type>
-			<Capture>UNITCLASS_CANNON</Capture>
+			<Capture>UNIT_CANNON</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -23575,7 +23560,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_GATLING_GUN</Class>
 			<Type>UNIT_GATLING_GUN</Type>
-			<Capture>UNITCLASS_GATLING_GUN</Capture>
+			<Capture>UNIT_GATLING_GUN</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -23692,7 +23677,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_LIGHT_ARTILLERY</Class>
 			<Type>UNIT_LIGHT_ARTILLERY</Type>
-			<Capture>UNITCLASS_LIGHT_ARTILLERY</Capture>
+			<Capture>UNIT_LIGHT_ARTILLERY</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -23810,7 +23795,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_ARTILLERY</Class>
 			<Type>UNIT_ARTILLERY</Type>
-			<Capture>UNITCLASS_ARTILLERY</Capture>
+			<Capture>UNIT_ARTILLERY</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -24598,7 +24583,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_LIGHT_AA</Class>
 			<Type>UNIT_LIGHT_AA</Type>
-			<Capture>UNITCLASS_LIGHT_AA</Capture>
+			<Capture>UNIT_LIGHT_AA</Capture>
 			<Combat>UNITCOMBAT_WHEELED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -28059,6 +28044,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_NANITE_SWARM</Class>
 			<Type>UNIT_NANITE_SWARM</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_NANITE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SWARM</SubCombatType>
@@ -28156,6 +28142,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_NANITE_CLOUD</Class>
 			<Type>UNIT_NANITE_CLOUD</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_NANITE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SWARM</SubCombatType>
@@ -28247,7 +28234,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_WORKBOAT</Class>
 			<Type>UNIT_WORKBOAT</Type>
-			<Capture>UNITCLASS_WORKBOAT</Capture>
+			<Capture>UNIT_WORKBOAT</Capture>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -28375,7 +28362,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_CLASSIC_WORKBOAT</Class>
 			<Type>UNIT_CLASSIC_WORKBOAT</Type>
-			<Capture>UNITCLASS_CLASSIC_WORKBOAT</Capture>
+			<Capture>UNIT_CLASSIC_WORKBOAT</Capture>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -28530,7 +28517,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_MIDDLE_WORKBOAT</Class>
 			<Type>UNIT_MIDDLE_WORKBOAT</Type>
-			<Capture>UNITCLASS_MIDDLE_WORKBOAT</Capture>
+			<Capture>UNIT_MIDDLE_WORKBOAT</Capture>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -28685,7 +28672,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_MODERN_WORKBOAT</Class>
 			<Type>UNIT_MODERN_WORKBOAT</Type>
-			<Capture>UNITCLASS_MODERN_WORKBOAT</Capture>
+			<Capture>UNIT_MODERN_WORKBOAT</Capture>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -28822,7 +28809,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_CONSTRUCT_SHIP</Class>
 			<Type>UNIT_CONSTRUCT_SHIP</Type>
-			<Capture>UNITCLASS_CONSTRUCT_SHIP</Capture>
+			<Capture>UNIT_CONSTRUCT_SHIP</Capture>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -29145,6 +29132,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_RAFT</Class>
 			<Type>UNIT_RAFT</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
@@ -29212,12 +29200,9 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_RAFT</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_RAFT</UnitType>
+			</SupersedingUnits>
 			<PrereqTech>TECH_RAFT_BUILDING</PrereqTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_PRIME_TIMBER</BonusType>
@@ -29273,6 +29258,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_CANOE</Class>
 			<Type>UNIT_CANOE</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TRANSPORT</SubCombatType>
@@ -29336,12 +29322,9 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_CANOE</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_CANOE</UnitType>
+			</SupersedingUnits>
 			<PrereqBuilding>BUILDING_CANOEBUILDERS_HUT</PrereqBuilding>
 			<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
 			<iCost>67</iCost>
@@ -30343,6 +30326,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_WAR_CANOE</Class>
 			<Type>UNIT_WAR_CANOE</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
@@ -30404,12 +30388,9 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_WAR_CANOE</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_WAR_CANOE</UnitType>
+			</SupersedingUnits>
 			<PrereqBuilding>BUILDING_CANOEBUILDERS_HUT</PrereqBuilding>
 			<PrereqTech>TECH_HARPOON_MAKING</PrereqTech>
 			<iCost>77</iCost>
@@ -33189,6 +33170,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_KAYAK</Class>
 			<Type>UNIT_KAYAK</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_RECON</SubCombatType>
@@ -33249,12 +33231,9 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_KAYAK</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_KAYAK</UnitType>
+			</SupersedingUnits>
 			<PrereqBuilding>BUILDING_CANOEBUILDERS_HUT</PrereqBuilding>
 			<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
 			<PrereqBonuses>
@@ -36569,6 +36548,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_DRAGON_SHIP_PIRATE</Class>
 			<Type>UNIT_DRAGON_SHIP_PIRATE</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_PIRATE</SubCombatType>
@@ -36779,6 +36759,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_BARBARY_CORSAIR</Class>
 			<Type>UNIT_BARBARY_CORSAIR</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_PIRATE</SubCombatType>
@@ -36927,6 +36908,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_PRIVATEER</Class>
 			<Type>UNIT_PRIVATEER</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_PIRATE</SubCombatType>
@@ -37374,6 +37356,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_ASSAULT_SHIP</Class>
 			<Type>UNIT_ASSAULT_SHIP</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_DIESEL_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_PIRATE</SubCombatType>
@@ -37786,6 +37769,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_COG_MERCHANT</Class>
 			<Type>UNIT_COG_MERCHANT</Type>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WOODEN_SHIPS</SubCombatType>
@@ -37917,6 +37901,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_CARRACK_MERCHANT</Class>
 			<Type>UNIT_CARRACK_MERCHANT</Type>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WOODEN_SHIPS</SubCombatType>
@@ -38006,6 +37991,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_CLIPPER_MERCHANT</Class>
 			<Type>UNIT_CLIPPER_MERCHANT</Type>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_STEAM_SHIPS</SubCombatType>
@@ -38097,6 +38083,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_LIBERTY_MERCHANT</Class>
 			<Type>UNIT_LIBERTY_MERCHANT</Type>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DIESEL_SHIPS</SubCombatType>
@@ -38187,6 +38174,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_CARGO_SHIP</Class>
 			<Type>UNIT_CARGO_SHIP</Type>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DIESEL_SHIPS</SubCombatType>
@@ -42661,6 +42649,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_SR71</Class>
 			<Type>UNIT_SR71</Type>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_AIR_RECON</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -43236,7 +43225,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_BIOLOGICAL_WARFARE_MISSILE</Class>
 			<Type>UNIT_BIOLOGICAL_WARFARE_MISSILE</Type>
 			<Special>SPECIALUNIT_MISSILE</Special>
-			<Capture>UNITCLASS_BIOLOGICAL_WARFARE_MISSILE</Capture>
+			<Capture>UNIT_BIOLOGICAL_WARFARE_MISSILE</Capture>
 			<Combat>UNITCOMBAT_MISSILE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>
@@ -43367,6 +43356,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_POISON_NOVA</Class>
 			<Type>UNIT_POISON_NOVA</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_DOOM</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>
@@ -43428,6 +43418,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_FUSION_NUKE</Class>
 			<Type>UNIT_FUSION_NUKE</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_DOOM</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>
@@ -43488,6 +43479,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_FUSION_NOVA</Class>
 			<Type>UNIT_FUSION_NOVA</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_DOOM</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>
@@ -43548,6 +43540,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_EXPERIMENTAL</Class>
 			<Type>UNIT_EXPERIMENTAL</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_DOOM</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>
@@ -43608,6 +43601,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_TURN</Class>
 			<Type>UNIT_TURN</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_DOOM</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>
@@ -43668,7 +43662,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_V1</Class>
 			<Type>UNIT_V1</Type>
 			<Special>SPECIALUNIT_MISSILE</Special>
-			<Capture>UNITCLASS_V1</Capture>
+			<Capture>UNIT_V1</Capture>
 			<Combat>UNITCOMBAT_MISSILE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>
@@ -43741,7 +43735,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_GUIDED_MISSILE</Class>
 			<Type>UNIT_GUIDED_MISSILE</Type>
 			<Special>SPECIALUNIT_MISSILE</Special>
-			<Capture>UNITCLASS_GUIDED_MISSILE</Capture>
+			<Capture>UNIT_GUIDED_MISSILE</Capture>
 			<Combat>UNITCOMBAT_MISSILE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>
@@ -43817,7 +43811,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_PRECISION_ATTACK_MISSILE</Class>
 			<Type>UNIT_PRECISION_ATTACK_MISSILE</Type>
 			<Special>SPECIALUNIT_MISSILE</Special>
-			<Capture>UNITCLASS_PRECISION_ATTACK_MISSILE</Capture>
+			<Capture>UNIT_PRECISION_ATTACK_MISSILE</Capture>
 			<Combat>UNITCOMBAT_MISSILE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>
@@ -43989,12 +43983,9 @@ Base XP gained when defending
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_TRAINEDDOG</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_TRAINEDDOG</UnitType>
+			</SupersedingUnits>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_WARDOG</Class>
@@ -44494,6 +44485,8 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_EARLY_IMP_GUARD</Class>
 			<Type>UNIT_EARLY_IMP_GUARD</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -44593,6 +44586,8 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_REN_IMP_GUARD</Class>
 			<Type>UNIT_REN_IMP_GUARD</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -44702,6 +44697,8 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_MODERN_IMP_GUARD</Class>
 			<Type>UNIT_MODERN_IMP_GUARD</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -44805,6 +44802,8 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_ROBOT_IMP_GUARD</Class>
 			<Type>UNIT_ROBOT_IMP_GUARD</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Combat>UNITCOMBAT_ROBOT</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_LAW_ENFORCEMENT</SubCombatType>
@@ -44907,6 +44906,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_TRIBAL_GUARDIAN</Class>
 			<Type>UNIT_TRIBAL_GUARDIAN</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -45031,12 +45031,9 @@ Base XP gained when defending
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_WATCHER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_WATCHER</UnitType>
+			</SupersedingUnits>
 			<bNoCapture>1</bNoCapture>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -45168,12 +45165,9 @@ Base XP gained when defending
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_ENFORCER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_ENFORCER</UnitType>
+			</SupersedingUnits>
 			<VisibilityIntensityTypes>
 				<VisibilityIntensityType>
 					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
@@ -47177,6 +47171,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_EXILE</Class>
 			<Type>UNIT_EXILE</Type>
+			<iMaxPlayerInstances>2</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CRIMINAL</Combat>
 			<SubCombatTypes>
@@ -47253,12 +47248,9 @@ Base XP gained when defending
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_GATHERER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
+			</SupersedingUnits>
 			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<Invisible>INVISIBLE_CAMOUFLAGE</Invisible>
 			<InvisibilityIntensityTypes>
@@ -47350,6 +47342,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_THIEF</Class>
 			<Type>UNIT_THIEF</Type>
+			<iMaxPlayerInstances>2</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CRIMINAL</Combat>
 			<SubCombatTypes>
@@ -47435,12 +47428,9 @@ Base XP gained when defending
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_GATHERER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
+			</SupersedingUnits>
 			<iCost>43</iCost>
 			<iMoves>1</iMoves>
 			<Invisible>INVISIBLE_CAMOUFLAGE</Invisible>
@@ -47538,6 +47528,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_ROGUE</Class>
 			<Type>UNIT_ROGUE</Type>
+			<iMaxPlayerInstances>2</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CRIMINAL</Combat>
 			<SubCombatTypes>
@@ -47623,12 +47614,9 @@ Base XP gained when defending
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_GATHERER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
+			</SupersedingUnits>
 			<ForceObsoleteTech>TECH_MATCHLOCK</ForceObsoleteTech>
 			<iCost>68</iCost>
 			<iMoves>2</iMoves>
@@ -47728,6 +47716,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_BURGLAR</Class>
 			<Type>UNIT_BURGLAR</Type>
+			<iMaxPlayerInstances>2</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CRIMINAL</Combat>
 			<SubCombatTypes>
@@ -47924,6 +47913,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_CUTTHROAT</Class>
 			<Type>UNIT_CUTTHROAT</Type>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_CRIMINAL</Combat>
 			<SubCombatTypes>
@@ -48149,6 +48139,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_SCOUNDREL</Class>
 			<Type>UNIT_SCOUNDREL</Type>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CRIMINAL</Combat>
 			<SubCombatTypes>
@@ -48379,6 +48370,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_GUNFIGHTER</Class>
 			<Type>UNIT_GUNFIGHTER</Type>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CRIMINAL</Combat>
 			<SubCombatTypes>
@@ -48604,6 +48596,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_THUG</Class>
 			<Type>UNIT_THUG</Type>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CRIMINAL</Combat>
 			<SubCombatTypes>
@@ -49047,6 +49040,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_ROBBER</Class>
 			<Type>UNIT_ROBBER</Type>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_CRIMINAL</Combat>
 			<SubCombatTypes>
@@ -49252,6 +49246,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_BIKER_GANG</Class>
 			<Type>UNIT_BIKER_GANG</Type>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_CRIMINAL</Combat>
 			<SubCombatTypes>
@@ -49460,6 +49455,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_STREET_GANG</Class>
 			<Type>UNIT_STREET_GANG</Type>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_CRIMINAL</Combat>
 			<SubCombatTypes>
@@ -49661,6 +49657,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_HACKER</Class>
 			<Type>UNIT_HACKER</Type>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CRIMINAL</Combat>
 			<SubCombatTypes>
@@ -49885,6 +49882,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_TECHNARCHIST</Class>
 			<Type>UNIT_TECHNARCHIST</Type>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CRIMINAL</Combat>
 			<SubCombatTypes>
@@ -50082,6 +50080,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_BANDIT_FOOTPAD</Class>
 			<Type>UNIT_BANDIT_FOOTPAD</Type>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_RUFFIAN</Combat>
 			<SubCombatTypes>
@@ -50410,6 +50409,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_BANDIT_RIDER</Class>
 			<Type>UNIT_BANDIT_RIDER</Type>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_RUFFIAN</Combat>
 			<SubCombatTypes>
@@ -50578,6 +50578,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_HIGHWAYMAN</Class>
 			<Type>UNIT_HIGHWAYMAN</Type>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_RUFFIAN</Combat>
 			<SubCombatTypes>
@@ -51001,6 +51002,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_AMBUSHER</Class>
 			<Type>UNIT_AMBUSHER</Type>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_STRIKE_TEAM</Combat>
 			<SubCombatTypes>
@@ -51153,6 +51155,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_STALKERS</Class>
 			<Type>UNIT_STALKERS</Type>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_STRIKE_TEAM</Combat>
 			<SubCombatTypes>
@@ -51309,6 +51312,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_ASSASSIN</Class>
 			<Type>UNIT_ASSASSIN</Type>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_STRIKE_TEAM</Combat>
 			<SubCombatTypes>
@@ -51529,6 +51533,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_SHARPSHOOTER</Class>
 			<Type>UNIT_SHARPSHOOTER</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_STRIKE_TEAM</Combat>
 			<SubCombatTypes>
@@ -51711,6 +51716,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_SNIPER</Class>
 			<Type>UNIT_SNIPER</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_STRIKE_TEAM</Combat>
 			<SubCombatTypes>
@@ -52097,6 +52103,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_MSNIPER</Class>
 			<Type>UNIT_MSNIPER</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_STRIKE_TEAM</Combat>
 			<SubCombatTypes>
@@ -52269,6 +52276,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_SPECIAL_FORCES</Class>
 			<Type>UNIT_SPECIAL_FORCES</Type>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_STRIKE_TEAM</Combat>
 			<SubCombatTypes>
@@ -52477,6 +52485,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_HTSNIPER</Class>
 			<Type>UNIT_HTSNIPER</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_STRIKE_TEAM</Combat>
 			<SubCombatTypes>
@@ -52640,6 +52649,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_LAWYER</Class>
 			<Type>UNIT_LAWYER</Type>
+			<iMaxPlayerInstances>2</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ADMINISTRATOR</Combat>
 			<SubCombatTypes>
@@ -52765,6 +52775,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_JUDGE</Class>
 			<Type>UNIT_JUDGE</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<UniqueNames>
 				<UniqueName>TXT_KEY_GREAT_PERSON_JUDGE_ROY_BEAN</UniqueName>
 				<UniqueName>TXT_KEY_GREAT_PERSON_LORD_DENNING</UniqueName>
@@ -53352,7 +53363,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_TREASURE</Class>
 			<Type>UNIT_TREASURE</Type>
-			<Capture>UNITCLASS_TREASURE</Capture>
+			<Capture>UNIT_TREASURE</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WHEELED</SubCombatType>
@@ -53422,6 +53433,8 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_NOBLE</Class>
 			<Type>UNIT_NOBLE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CAPTAIN</Combat>
 			<SubCombatTypes>
@@ -53477,6 +53490,8 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_LORD</Class>
 			<Type>UNIT_LORD</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CAPTAIN</Combat>
 			<SubCombatTypes>
@@ -53532,6 +53547,8 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_WARLORD_VASSAL</Class>
 			<Type>UNIT_WARLORD_VASSAL</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CAPTAIN</Combat>
 			<SubCombatTypes>
@@ -53587,6 +53604,8 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_VICEROY</Class>
 			<Type>UNIT_VICEROY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CAPTAIN</Combat>
 			<SubCombatTypes>
@@ -53636,7 +53655,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_WARLORDIS</Class>
 			<Type>UNIT_WARLORDIS</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_WARLORDIS</Capture>
+			<Capture>UNIT_WARLORDIS</Capture>
 			<Combat>UNITCOMBAT_CAPTAIN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ATTACHE</SubCombatType>
@@ -53704,7 +53723,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_WARLORDIIS</Class>
 			<Type>UNIT_WARLORDIIS</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_WARLORDIIS</Capture>
+			<Capture>UNIT_WARLORDIIS</Capture>
 			<Combat>UNITCOMBAT_CAPTAIN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ATTACHE</SubCombatType>
@@ -53772,7 +53791,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_WARLORDIIIS</Class>
 			<Type>UNIT_WARLORDIIIS</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_WARLORDIIIS</Capture>
+			<Capture>UNIT_WARLORDIIIS</Capture>
 			<Combat>UNITCOMBAT_CAPTAIN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ATTACHE</SubCombatType>
@@ -53842,7 +53861,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_WARLORDIVS</Class>
 			<Type>UNIT_WARLORDIVS</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_WARLORDIVS</Capture>
+			<Capture>UNIT_WARLORDIVS</Capture>
 			<Combat>UNITCOMBAT_CAPTAIN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ATTACHE</SubCombatType>
@@ -53909,7 +53928,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_WARLORDVS</Class>
 			<Type>UNIT_WARLORDVS</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_WARLORDVS</Capture>
+			<Capture>UNIT_WARLORDVS</Capture>
 			<Combat>UNITCOMBAT_CAPTAIN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ATTACHE</SubCombatType>
@@ -53972,7 +53991,10 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_WARLORDI</Class>
 			<Type>UNIT_WARLORDI</Type>
-			<Capture>UNITCLASS_WARLORDIS</Capture>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
+			<iInstanceCostModifier>25</iInstanceCostModifier>
+			<Capture>UNIT_WARLORDIS</Capture>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -54095,7 +54117,10 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_WARLORDII</Class>
 			<Type>UNIT_WARLORDII</Type>
-			<Capture>UNITCLASS_WARLORDIIS</Capture>
+			<iMaxPlayerInstances>2</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
+			<iInstanceCostModifier>25</iInstanceCostModifier>
+			<Capture>UNIT_WARLORDIIS</Capture>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -54222,7 +54247,10 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_WARLORDIII</Class>
 			<Type>UNIT_WARLORDIII</Type>
-			<Capture>UNITCLASS_WARLORDIIIS</Capture>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
+			<iInstanceCostModifier>25</iInstanceCostModifier>
+			<Capture>UNIT_WARLORDIIIS</Capture>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -54363,7 +54391,10 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_WARLORDIV</Class>
 			<Type>UNIT_WARLORDIV</Type>
-			<Capture>UNITCLASS_WARLORDIVS</Capture>
+			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
+			<iInstanceCostModifier>25</iInstanceCostModifier>
+			<Capture>UNIT_WARLORDIVS</Capture>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -54500,7 +54531,10 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_WARLORDV</Class>
 			<Type>UNIT_WARLORDV</Type>
-			<Capture>UNITCLASS_WARLORDVS</Capture>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
+			<iInstanceCostModifier>25</iInstanceCostModifier>
+			<Capture>UNIT_WARLORDVS</Capture>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -56946,6 +56980,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_NEANDERTHAL_WARRIOR</Class>
 			<Type>UNIT_NEANDERTHAL_WARRIOR</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -57756,7 +57791,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_NEANDERTHAL_GATHERER</Class>
 			<Type>UNIT_NEANDERTHAL_GATHERER</Type>
-			<Capture>UNITCLASS_NEANDERTHAL_GATHERER</Capture>
+			<Capture>UNIT_NEANDERTHAL_GATHERER</Capture>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -58010,12 +58045,9 @@ Base XP gained when defending
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_HEALER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_HEALER</UnitType>
+			</SupersedingUnits>
 			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<iCost>36</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
@@ -58436,6 +58468,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_NEANDERTHAL_TRIBAL_GUARDIAN</Class>
 			<Type>UNIT_NEANDERTHAL_TRIBAL_GUARDIAN</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -58472,6 +58505,16 @@ Base XP gained when defending
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bPrereq>1</bPrereq>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_ENFORCERS</UnitClassUpgradeType>
@@ -58502,6 +58545,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_NEANDERTHAL_KAYAK</Class>
 			<Type>UNIT_NEANDERTHAL_KAYAK</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -58631,6 +58675,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_NEANDERTHAL_WAR_CANOE</Class>
 			<Type>UNIT_NEANDERTHAL_WAR_CANOE</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -58749,6 +58794,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_NEANDERTHAL_CANOE</Class>
 			<Type>UNIT_NEANDERTHAL_CANOE</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -58871,6 +58917,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_NEANDERTHAL_RAFT</Class>
 			<Type>UNIT_NEANDERTHAL_RAFT</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -59004,7 +59051,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_NEANDERTHAL_WORKBOAT</Class>
 			<Type>UNIT_NEANDERTHAL_WORKBOAT</Type>
-			<Capture>UNITCLASS_WORKBOAT</Capture>
+			<Capture>UNIT_WORKBOAT</Capture>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -59152,7 +59199,8 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_NEANDERTHAL_LOG_RAM</Class>
 			<Type>UNIT_NEANDERTHAL_LOG_RAM</Type>
-			<Capture>UNITCLASS_LOG_RAM</Capture>
+			<iMaxPlayerInstances>40</iMaxPlayerInstances>
+			<Capture>UNIT_LOG_RAM</Capture>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -60311,6 +60359,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_NEANDERTHAL_HUNTER</Class>
 			<Type>UNIT_NEANDERTHAL_HUNTER</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -60424,6 +60473,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_NEANDERTHAL_TRACKER</Class>
 			<Type>UNIT_NEANDERTHAL_TRACKER</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -60531,6 +60581,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_NEANDERTHAL_CHASER</Class>
 			<Type>UNIT_NEANDERTHAL_CHASER</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -60849,12 +60900,9 @@ Base XP gained when defending
 					<iAmountPerTurn>-1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_SHEPHERD</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_SHEPHERD</UnitType>
+			</SupersedingUnits>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_CARTWRIGHT</Class>
@@ -63246,16 +63294,10 @@ Base XP gained when defending
 					<iAmountPerTurn>-1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_WISE_WOMAN</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_HEALER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_WISE_WOMAN</UnitType>
+				<UnitType>UNIT_HEALER</UnitType>
+			</SupersedingUnits>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_HEALER</Class>
@@ -63314,12 +63356,9 @@ Base XP gained when defending
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_HEALER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_HEALER</UnitType>
+			</SupersedingUnits>
 			<iCost>45</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iMoves>1</iMoves>
@@ -65144,7 +65183,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Class>UNITCLASS_IMMIGRANT</Class>
 			<Type>UNIT_IMMIGRANT</Type>
-			<Capture>UNITCLASS_WORKER</Capture>
+			<Capture>UNIT_WORKER</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -66618,7 +66657,7 @@ Base XP gained when defending
 			<Class>UNITCLASS_STORY_TELLER</Class>
 			<Type>UNIT_STORY_TELLER</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_STORY_TELLER</Capture>
+			<Capture>UNIT_STORY_TELLER</Capture>
 			<Combat>UNITCOMBAT_ENTERTAINER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -66735,7 +66774,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 			<Class>UNITCLASS_BARD</Class>
 			<Type>UNIT_BARD</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_BARD</Capture>
+			<Capture>UNIT_BARD</Capture>
 			<Combat>UNITCOMBAT_ENTERTAINER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -66848,7 +66887,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 			<Class>UNITCLASS_ENTERTAINER</Class>
 			<Type>UNIT_ENTERTAINER</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_ENTERTAINER</Capture>
+			<Capture>UNIT_ENTERTAINER</Capture>
 			<Combat>UNITCOMBAT_ENTERTAINER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -66953,7 +66992,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 			<Class>UNITCLASS_CELEBRITY</Class>
 			<Type>UNIT_CELEBRITY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_CELEBRITY</Capture>
+			<Capture>UNIT_CELEBRITY</Capture>
 			<Combat>UNITCOMBAT_ENTERTAINER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -67051,7 +67090,8 @@ iTradeMultiplier>3</iTradeMultiplier>
 		<UnitInfo>
 			<Class>UNITCLASS_EARLY_FOOD_MERCHANT_C2C</Class>
 			<Type>UNIT_EARLY_FOOD_MERCHANT_C2C</Type>
-			<Capture>UNITCLASS_EARLY_FOOD_MERCHANT_C2C</Capture>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<Capture>UNIT_EARLY_FOOD_MERCHANT_C2C</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -67134,7 +67174,8 @@ iTradeMultiplier>3</iTradeMultiplier>
 		<UnitInfo>
 			<Class>UNITCLASS_FOOD_CARAVAN</Class>
 			<Type>UNIT_FOOD_CARAVAN</Type>
-			<Capture>UNITCLASS_FOOD_CARAVAN</Capture>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<Capture>UNIT_FOOD_CARAVAN</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -67220,6 +67261,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 		<UnitInfo>
 			<Class>UNITCLASS_FOOD_SUPPLY_TRAIN</Class>
 			<Type>UNIT_FOOD_SUPPLY_TRAIN</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -67302,7 +67344,8 @@ iTradeMultiplier>3</iTradeMultiplier>
 		<UnitInfo>
 			<Class>UNITCLASS_FOOD_FREIGHT</Class>
 			<Type>UNIT_FOOD_FREIGHT</Type>
-			<Capture>UNITCLASS_FOOD_FREIGHT</Capture>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<Capture>UNIT_FOOD_FREIGHT</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -67381,7 +67424,8 @@ iTradeMultiplier>3</iTradeMultiplier>
 		<UnitInfo>
 			<Class>UNITCLASS_EARLY_MERCHANT_C2C</Class>
 			<Type>UNIT_EARLY_MERCHANT_C2C</Type>
-			<Capture>UNITCLASS_EARLY_MERCHANT_C2C</Capture>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<Capture>UNIT_EARLY_MERCHANT_C2C</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -67481,7 +67525,8 @@ iTradeMultiplier>3</iTradeMultiplier>
 		<UnitInfo>
 			<Class>UNITCLASS_TRADE_CARAVAN</Class>
 			<Type>UNIT_TRADE_CARAVAN</Type>
-			<Capture>UNITCLASS_TRADE_CARAVAN</Capture>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<Capture>UNIT_TRADE_CARAVAN</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -67587,7 +67632,8 @@ iTradeMultiplier>3</iTradeMultiplier>
 		<UnitInfo>
 			<Class>UNITCLASS_SUPPLY_TRAIN</Class>
 			<Type>UNIT_SUPPLY_TRAIN</Type>
-			<Capture>UNITCLASS_SUPPLY_TRAIN</Capture>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<Capture>UNIT_SUPPLY_TRAIN</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WHEELED</SubCombatType>
@@ -67689,7 +67735,8 @@ iTradeMultiplier>3</iTradeMultiplier>
 		<UnitInfo>
 			<Class>UNITCLASS_FREIGHT</Class>
 			<Type>UNIT_FREIGHT</Type>
-			<Capture>UNITCLASS_FREIGHT</Capture>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<Capture>UNIT_FREIGHT</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WHEELED</SubCombatType>
@@ -67789,6 +67836,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 		<UnitInfo>
 			<Class>UNITCLASS_MASTER_TRACKER</Class>
 			<Type>UNIT_MASTER_TRACKER</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
@@ -67887,6 +67935,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 		<UnitInfo>
 			<Class>UNITCLASS_MASTER_HUNTER</Class>
 			<Type>UNIT_MASTER_HUNTER</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
@@ -67989,6 +68038,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 		<UnitInfo>
 			<Class>UNITCLASS_MASTER_RANGER</Class>
 			<Type>UNIT_MASTER_RANGER</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
@@ -68098,6 +68148,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 		<UnitInfo>
 			<Class>UNITCLASS_MASTER_WARDEN</Class>
 			<Type>UNIT_MASTER_WARDEN</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
@@ -68210,6 +68261,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 		<UnitInfo>
 			<Class>UNITCLASS_MASTER_GAME_HUNTER</Class>
 			<Type>UNIT_MASTER_GAME_HUNTER</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
@@ -68322,6 +68374,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 		<UnitInfo>
 			<Class>UNITCLASS_MASTER_BIG_GAME_HUNTER</Class>
 			<Type>UNIT_MASTER_BIG_GAME_HUNTER</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
@@ -68431,7 +68484,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 			<Class>UNITCLASS_CAPTIVE_MILITARY</Class>
 			<Type>UNIT_CAPTIVE_MILITARY</Type>
 			<Special>SPECIALUNIT_CAPTIVE</Special>
-			<Capture>UNITCLASS_CAPTIVE_MILITARY</Capture>
+			<Capture>UNIT_CAPTIVE_MILITARY</Capture>
 			<Combat>UNITCOMBAT_CAPTIVE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -69282,7 +69335,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 			<Class>UNITCLASS_CAPTIVE_CIVILIAN</Class>
 			<Type>UNIT_CAPTIVE_CIVILIAN</Type>
 			<Special>SPECIALUNIT_CAPTIVE</Special>
-			<Capture>UNITCLASS_CAPTIVE_CIVILIAN</Capture>
+			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_CAPTIVE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -69472,7 +69525,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 		<UnitInfo>
 			<Class>UNITCLASS_CAPTIVE_IMMIGRANT</Class>
 			<Type>UNIT_CAPTIVE_IMMIGRANT</Type>
-			<Capture>UNITCLASS_CAPTIVE_CIVILIAN</Capture>
+			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -69539,7 +69592,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 			<Class>UNITCLASS_CAPTIVE_NEANDERTHAL</Class>
 			<Type>UNIT_CAPTIVE_NEANDERTHAL</Type>
 			<Special>SPECIALUNIT_CAPTIVE</Special>
-			<Capture>UNITCLASS_CAPTIVE_NEANDERTHAL</Capture>
+			<Capture>UNIT_CAPTIVE_NEANDERTHAL</Capture>
 			<Combat>UNITCOMBAT_CAPTIVE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -69889,7 +69942,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 		<UnitInfo>
 			<Class>UNITCLASS_FREED_SLAVE</Class>
 			<Type>UNIT_FREED_SLAVE</Type>
-			<Capture>UNITCLASS_FREED_SLAVE</Capture>
+			<Capture>UNIT_FREED_SLAVE</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -69954,6 +70007,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 		<UnitInfo>
 			<Class>UNITCLASS_HASHISHIN</Class>
 			<Type>UNIT_HASHISHIN</Type>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_STRIKE_TEAM</Combat>
 			<SubCombatTypes>

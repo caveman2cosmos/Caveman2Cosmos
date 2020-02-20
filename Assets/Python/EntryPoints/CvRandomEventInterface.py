@@ -3338,7 +3338,7 @@ def getGreedUnit(CyPlayer, CyPlot):
 	iBestUnit = -1
 	for iUnit in xrange(GC.getNumUnitInfos()):
 		CvUnitInfo = GC.getUnitInfo(iUnit)
-		if CvUnitInfo.getMaxGlobalInstances() + 1 or GC.getUnitClassInfo(CvUnitInfo.getUnitClassType()).getMaxPlayerInstances() + 1:
+		if CvUnitInfo.getMaxGlobalInstances() + 1 or CvUnitInfo.getMaxPlayerInstances() + 1:
 			continue
 		if iUnit != -1 and CvUnitInfo.getDomainType() == DomainTypes.DOMAIN_LAND and CyPlayer.canTrain(iUnit, False, False):
 			iValue = 0
@@ -7643,96 +7643,96 @@ def canDoNewWorldTrigger(argsList):
 
 
 def triggerNewWorldCities(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	CyPlayer = GC.getPlayer(iPlayer)
 
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
+	if iEvent == GC.getInfoTypeForString("EVENT_NEW_WORLD_2"):
+		iNeededCities = 1
+	else:
+		iNeededCities = 3
 
-  iNeededCities = 0
-  if (iEvent == GC.getInfoTypeForString("EVENT_NEW_WORLD_2")):
-    iNeededCities = 1
-  else:
-    iNeededCities = 3
+	CyCity, i = CyPlayer.firstCity(False)
+	while CyCity:
+		if iEvent == GC.getInfoTypeForString("EVENT_NEW_WORLD_2"):
+			if CyCity.getPopulation() > 4:
+				CyCity.changePopulation(-1)
+		else:
+			if CyCity.getPopulation() > 9:
+				CyCity.changePopulation(-2)
+			elif CyCity.getPopulation() > 4:
+				CyCity.changePopulation(-1)
+		CyCity, i = CyPlayer.nextCity(i, False)
 
-  (loopCity, iter) = player.firstCity(False)
+	iNumUnits = GC.getNumUnitInfos()
+	MAP = GC.getMap()
+	iNumPlots = MAP.numPlots()
+	while iNeededCities > 0:
+		iBestValue = 0
+		pBestPlot = None
+		for i in xrange(iNumPlots):
+			pLoopPlot = MAP.plotByIndex(i)
+			if pLoopPlot.isCoastalLand():
+				if CyPlayer.canFound(pLoopPlot.getX(), pLoopPlot.getY()):
+					if pLoopPlot.getFoundValue(iPlayer) > iBestValue:
+						pBestPlot = pLoopPlot
+						iBestValue = pLoopPlot.getFoundValue(iPlayer)
 
-  while(loopCity):
-    if (iEvent == GC.getInfoTypeForString("EVENT_NEW_WORLD_2")):
-      if (loopCity.getPopulation() > 4):
-        loopCity.changePopulation(-1)
-    else:
-      if (loopCity.getPopulation() > 9):
-        loopCity.changePopulation(-2)
-      elif (loopCity.getPopulation() > 4):
-        loopCity.changePopulation(-1)
+		CyPlayer.found(pBestPlot.getX(), pBestPlot.getY())
 
-    (loopCity, iter) = player.nextCity(iter, False)
+		CyCity = pBestPlot.getPlotCity()
+		if not CyCity:
+			raise "Error in TriggerNewWorldCities - No City Created!"
+			return
 
-  while (iNeededCities > 0):
-    map = GC.getMap()
-    iBestValue = 0
-    pBestPlot = None
-    for i in xrange(map.numPlots()):
-      pLoopPlot = map.plotByIndex(i)
-      if (pLoopPlot.isCoastalLand()):
-        if (player.canFound(pLoopPlot.getX(), pLoopPlot.getY())):
-          if (pLoopPlot.getFoundValue(kTriggeredData.ePlayer) > iBestValue):
-            pBestPlot = pLoopPlot
-            iBestValue = pLoopPlot.getFoundValue(kTriggeredData.ePlayer)
+		if iEvent == GC.getInfoTypeForString("EVENT_NEW_WORLD_2"):
+			CyCity.changePopulation(1)
+		else:
+			CyCity.changePopulation(3)
 
-    player.found(pBestPlot.getX(), pBestPlot.getY())
+		eStateReligion = CyPlayer.getStateReligion()
+		if eStateReligion > -1:
+			CyCity.setHasReligion(eStateReligion, True, True, True)
 
-    pNewCity = pBestPlot.getPlotCity()
-    if pNewCity == None:
-      print "Error in TriggerNewWorldCities - No City Created!"
-      return
+		if iEvent == GC.getInfoTypeForString("EVENT_NEW_WORLD_2"):
+			iNumNeededDefenders = 2
+		else:
+			iNumNeededDefenders = 5
 
-    if (iEvent == GC.getInfoTypeForString("EVENT_NEW_WORLD_2")):
-      pNewCity.changePopulation(1)
-    else:
-      pNewCity.changePopulation(3)
+		eBestUnit = -1
+		iBestStrength = 0
+		for iUnit in xrange(iNumUnits):
+			CvUnitInfo = GC.getUnitInfo(iUnit)
+			if CvUnitInfo.getDomainType() != DomainTypes.DOMAIN_LAND or CvUnitInfo.getCombat() <= iBestStrength:
+				continue
+			if CyCity.canTrain(iUnit, False, False, False, False):
+				eBestUnit = iUnit
+				iBestStrength = CvUnitInfo.getCombat()
 
-    eStateReligion = player.getStateReligion()
-    if (eStateReligion > -1):
-      pNewCity.setHasReligion(eStateReligion, True, True, True)
+		if eBestUnit > -1:
+			x = CyCity.getX()
+			y = CyCity.getY()
+			while iNumNeededDefenders > 0:
+				CyPlayer.initUnit(eBestUnit, x, y, UnitAITypes.UNITAI_CITY_DEFENSE, DirectionTypes.DIRECTION_NORTH)
+				iNumNeededDefenders -= 1
 
-    iNumNeededDefenders = 0
-    if (iEvent == GC.getInfoTypeForString("EVENT_NEW_WORLD_2")):
-      iNumNeededDefenders = 1
-    else:
-      iNumNeededDefenders = 2
-    eBestUnit = -1
-    iBestStrength = 0
-    for iI in xrange(GC.getNumUnitClassInfos()):
-      eLoopUnit = GC.getCivilizationInfo(pNewCity.getCivilizationType()).getCivilizationUnits(iI)
-      if (eLoopUnit > 0):
-        if (GC.getUnitInfo(eLoopUnit).getDomainType() == DomainTypes.DOMAIN_LAND):
-          if (pNewCity.canTrain(eLoopUnit, False, False, False, False)):
-            if (GC.getUnitInfo(eLoopUnit).getCombat() > iBestStrength):
-              eBestUnit = eLoopUnit
-              iBestStrength = GC.getUnitInfo(eLoopUnit).getCombat()
+		if iEvent == GC.getInfoTypeForString("EVENT_NEW_WORLD_2"):
+			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_WALLS"), 1)
+			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_GRANARY"), 1)
+			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_FORGE"), 1)
+		else:
+			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_WALLS"), 1)
+			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_BARRACKS"), 1)
+			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_GRANARY"), 1)
+			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_FORGE"), 1)
+			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_MARKET"), 1)
+			if CyCity.plot().isCoastalLand():
+				CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_HARBOR"), 1)
+				CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_LIGHTHOUSE"), 1)
+				CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_FISHERMAN_HUT"), 1)
+		iNeededCities -= 1
 
-    if (eBestUnit > 0):
-      while (iNumNeededDefenders > 0):
-        player.initUnit(eBestUnit, pNewCity.getX(), pNewCity.getY(), UnitAITypes.UNITAI_CITY_DEFENSE, DirectionTypes.DIRECTION_NORTH)
-        iNumNeededDefenders -= 1
-
-    if (iEvent == GC.getInfoTypeForString("EVENT_NEW_WORLD_2")):
-      pNewCity.setNumRealBuilding(GC.getCivilizationInfo(pNewCity.getCivilizationType()).getCivilizationBuildings(GC.getInfoTypeForString("BUILDINGCLASS_WALLS")), 1)
-      pNewCity.setNumRealBuilding(GC.getCivilizationInfo(pNewCity.getCivilizationType()).getCivilizationBuildings(GC.getInfoTypeForString("BUILDINGCLASS_GRANARY")), 1)
-      pNewCity.setNumRealBuilding(GC.getCivilizationInfo(pNewCity.getCivilizationType()).getCivilizationBuildings(GC.getInfoTypeForString("BUILDINGCLASS_FORGE")), 1)
-    else:
-      pNewCity.setNumRealBuilding(GC.getCivilizationInfo(pNewCity.getCivilizationType()).getCivilizationBuildings(GC.getInfoTypeForString("BUILDINGCLASS_WALLS")), 1)
-      pNewCity.setNumRealBuilding(GC.getCivilizationInfo(pNewCity.getCivilizationType()).getCivilizationBuildings(GC.getInfoTypeForString("BUILDINGCLASS_BARRACKS")), 1)
-      pNewCity.setNumRealBuilding(GC.getCivilizationInfo(pNewCity.getCivilizationType()).getCivilizationBuildings(GC.getInfoTypeForString("BUILDINGCLASS_GRANARY")), 1)
-      pNewCity.setNumRealBuilding(GC.getCivilizationInfo(pNewCity.getCivilizationType()).getCivilizationBuildings(GC.getInfoTypeForString("BUILDINGCLASS_FORGE")), 1)
-      pNewCity.setNumRealBuilding(GC.getCivilizationInfo(pNewCity.getCivilizationType()).getCivilizationBuildings(GC.getInfoTypeForString("BUILDINGCLASS_MARKET")), 1)
-      if pNewCity.plot().isCoastalLand():
-        pNewCity.setNumRealBuilding(GC.getCivilizationInfo(pNewCity.getCivilizationType()).getCivilizationBuildings(GC.getInfoTypeForString("BUILDINGCLASS_HARBOR")), 1)
-        pNewCity.setNumRealBuilding(GC.getCivilizationInfo(pNewCity.getCivilizationType()).getCivilizationBuildings(GC.getInfoTypeForString("BUILDINGCLASS_LIGHTHOUSE")), 1)
-        pNewCity.setNumRealBuilding(GC.getCivilizationInfo(pNewCity.getCivilizationType()).getCivilizationBuildings(GC.getInfoTypeForString("BUILDINGCLASS_FISHERMAN_HUT")), 1)
-
-    iNeededCities -= 1
 
 def canTriggerNewWorldCities3(argsList):
 
@@ -8546,42 +8546,40 @@ def canApplyNativegood2(argsList):
           return 0
 
 def helpNativegood2(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_NATIVEGOOD2_1HELP",())
-
-  return szHelp
+	return TRNSLTR.getText("TXT_KEY_EVENT_NATIVEGOOD2_1HELP",())
 
 def ApplyNativegood2(argsList):
-        iEvent = argsList[0]
-        kTriggeredData = argsList[1]
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
 
-        player = GC.getPlayer(kTriggeredData.ePlayer)
-        iRelationship = player.getNativeRelationship()
-        iRelationship += 40
-        player.setNativeRelationship(iRelationship)
+	CyPlayer = GC.getPlayer(kTriggeredData.ePlayer)
+	iRelationship = CyPlayer.getNativeRelationship()
+	iRelationship += 40
+	CyPlayer.setNativeRelationship(iRelationship)
 
-        iHighest = 0
-        eBestUnit = 0
-        (pLoopCity, iter) = player.firstCity(False)
-        while(pLoopCity):
-                if pLoopCity.isCapital():
-                        for i in xrange( GC.getNumUnitClassInfos()):
-                                eLoopUnit = GC.getCivilizationInfo(pLoopCity.getCivilizationType()).getCivilizationUnits(i)
+	CyCity = CyPlayer.getCapitalCity()
+	if CyCity.isNone:
+		return
+	aList = (UnitAITypes.UNITAI_ATTACK, UnitAITypes.UNITAI_CITY_DEFENSE)
+	iHighest = 0
+	eBestUnit = -1
+	for iUnit in xrange(GC.getNumUnitInfos()):
+		CvUnitInfo = GC.getUnitInfo(iUnit)
+		if CvUnitInfo.getDomainType() != DomainTypes.DOMAIN_LAND or CvUnitInfo.getDefaultUnitAIType() not in aList:
+			continue
+		if CyCity.canTrain(iUnit, False, True):
+			iValue = CvUnitInfo.getProductionCost()
+			if iValue >= iHighest:
+				iHighest = iValue
+				eBestUnit = iUnit
 
-                                if (pLoopCity.canTrain(eLoopUnit, False, True)):
-                                        if ((GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType() == UnitAITypes.UNITAI_ATTACK) or (GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType() == UnitAITypes.UNITAI_CITY_DEFENSE)):
-                                                if (GC.getUnitInfo(eLoopUnit).getDomainType() == DomainTypes.DOMAIN_LAND):
-                                                        iValue = GC.getUnitInfo(eLoopUnit).getProductionCost()
-                                                        if (iValue >= iHighest):
-                                                                iHighest = iValue
-                                                                eBestUnit = eLoopUnit
-
-                for i in xrange(3):
-                        player.initUnit(eBestUnit, pLoopCity.getX(), pLoopCity.getY(), UnitAITypes.UNITAI_CITY_DEFENSE, DirectionTypes.NO_DIRECTION)
-
-                (pLoopCity, iter) = GC.getPlayer(self.iActiveLeader).nextCity(iter, False)
+	CyCity, i = CyPlayer.firstCity(False)
+	while CyCity:
+		x = CyCity.getX()
+		y = CyCity.getY()
+		for j in xrange(3):
+			CyPlayer.initUnit(eBestUnit, x, y, UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
+		CyCity, i = GC.getPlayer(self.iActiveLeader).nextCity(i, False)
 
 ######## Native Good 3 -- gold ###########
 

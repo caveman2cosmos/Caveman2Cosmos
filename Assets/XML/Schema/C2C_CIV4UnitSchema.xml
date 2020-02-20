@@ -1299,14 +1299,7 @@
 	<ElementType name="InvisibleType" content="textOnly"/>
 	<ElementType name="UnitClassInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-<!-- 		don't use dependencies on this file please!		-->
-<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
-		<element type="iMaxPlayerInstances" minOccurs="0"/>
-		<!--TB Unlimited Mod begin-->
-		<element type="bUnlimitedException" minOccurs="0"/>
-		<!--TB Unlimited Mod end-->
 		<element type="iInstanceCostModifier" minOccurs="0"/>
 		<element type="DefaultUnit" minOccurs="0"/>
 	</ElementType>
@@ -1518,14 +1511,8 @@
 	<ElementType name="PrereqBuildingClasses" content="eltOnly">
 		<element type="PrereqBuildingClass" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="bForceObsoleteUnitClass" content="textOnly" dt:type="boolean"/>
-	<ElementType name="ForceObsoleteUnitClassType" content="textOnly"/>
-	<ElementType name="ForceObsoleteUnitClass" content="eltOnly">
-		<element type="ForceObsoleteUnitClassType"/>
-		<element type="bForceObsoleteUnitClass"/>
-	</ElementType>
-	<ElementType name="ForceObsoleteUnitClasses" content="eltOnly">
-		<element type="ForceObsoleteUnitClass" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="SupersedingUnits" content="eltOnly">
+		<element type="UnitType"/>
 	</ElementType>
 	<!-- RevDCM end -->
 	<ElementType name="HolyCity" content="textOnly"/>
@@ -1905,6 +1892,8 @@
 		<element type="Class" minOccurs="0"/>
 		<element type="Type" minOccurs="0"/>
 		<element type="iMaxGlobalInstances" minOccurs="0"/>
+		<element type="iMaxPlayerInstances" minOccurs="0"/>
+		<element type="bUnlimitedException" minOccurs="0"/>
 		<element type="Description" minOccurs="0"/>
 		<element type="Civilopedia" minOccurs="0"/>
 		<element type="Strategy" minOccurs="0"/>
@@ -2027,7 +2016,7 @@
 		<element type="NotGameOption" minOccurs="0"/>
 		<element type="PrereqOrCivics" minOccurs="0"/>
 		<element type="PrereqBuildingClasses" minOccurs="0"/>
-		<element type="ForceObsoleteUnitClasses" minOccurs="0"/>
+		<element type="SupersedingUnits" minOccurs="0"/>
 		<!-- RevDCM end -->
 		<element type="HolyCity" minOccurs="0"/>
 		<element type="ReligionType" minOccurs="0"/>

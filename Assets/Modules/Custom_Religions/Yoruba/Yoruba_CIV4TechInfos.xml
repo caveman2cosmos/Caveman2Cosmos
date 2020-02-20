@@ -27,7 +27,7 @@
 				<PrereqTech>TECH_FOLK_DANCE</PrereqTech>
 			</AndPreReqs>
 			<!-- Special effects -->
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<!-- System -->
 			<iAsset>8</iAsset>
 			<iGridX>26</iGridX>

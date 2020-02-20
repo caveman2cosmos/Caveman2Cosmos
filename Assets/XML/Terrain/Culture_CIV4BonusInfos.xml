@@ -3098,11 +3098,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_GOLD_OREEN_HORDE</Type>
-			<Description>TXT_KEY_BONUS_GOLD_OREEN_HORDE</Description>
+			<Type>BONUS_GOLDEN_HORDE</Type>
+			<Description>TXT_KEY_BONUS_GOLDEN_HORDE</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_GOLD_OREEN_HORDE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_GOLDEN_HORDE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>

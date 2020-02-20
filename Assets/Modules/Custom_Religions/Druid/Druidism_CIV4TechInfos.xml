@@ -17,7 +17,7 @@
 			<iGridX>14</iGridX>
 			<iGridY>19</iGridY>
 			<!-- Effects -->
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<!-- System -->
 			<iAsset>8</iAsset>
 			<Flavors>

@@ -21,7 +21,7 @@
 				<PrereqTech>TECH_MEDITATION</PrereqTech>
 			</AndPreReqs>
 			<!-- Special effects -->
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<!-- System -->
 			<iAsset>8</iAsset>
 			<iGridX>39</iGridX>

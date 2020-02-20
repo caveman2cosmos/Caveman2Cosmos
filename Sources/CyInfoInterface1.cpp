@@ -65,7 +65,7 @@ void CyInfoPythonInterface1()
 		.def("getTradeRoutes", &CvTechInfo::getTradeRoutes, "int ()")
 		.def("getFeatureProductionModifier", &CvTechInfo::getFeatureProductionModifier, "int ()")
 		.def("getWorkerSpeedModifier", &CvTechInfo::getWorkerSpeedModifier, "int ()")
-		.def("getFirstFreeUnitClass", &CvTechInfo::getFirstFreeUnitClass, "int ()")
+		.def("getFirstFreeUnit", &CvTechInfo::getFirstFreeUnit, "int ()")
 		.def("getHealth", &CvTechInfo::getHealth, "int ()")
 		.def("getHappiness", &CvTechInfo::getHappiness, "int ()")
 		.def("getFirstFreeTechs", &CvTechInfo::getFirstFreeTechs, "int ()")
@@ -324,7 +324,9 @@ void CyInfoPythonInterface1()
 	python::class_<CvUnitInfo, python::bases<CvInfoBase, CvScalableInfo> >("CvUnitInfo")
 
 		.def("getMaxGlobalInstances", &CvUnitInfo::getMaxGlobalInstances, "int ()")
-//		.def("getMaxTeamInstances", &CvUnitInfo::getMaxTeamInstances, "int ()")
+		.def("getMaxPlayerInstances", &CvUnitInfo::getMaxPlayerInstances, "int ()")
+		.def("isUnlimitedException", &CvUnitInfo::isUnlimitedException, "bool ()")
+		.def("getInstanceCostModifier", &CvUnitInfo::getInstanceCostModifier, "int ()")
 		.def("getAIWeight", &CvUnitInfo::getAIWeight, "int ()")
 		.def("getProductionCost", &CvUnitInfo::getProductionCost, "int ()")
 		.def("getHurryCostModifier", &CvUnitInfo::getHurryCostModifier, "int ()")
@@ -376,7 +378,7 @@ void CyInfoPythonInterface1()
 		.def("getPowerValue", &CvUnitInfo::getPowerValue, "int ()")
 		.def("getUnitClassType", &CvUnitInfo::getUnitClassType, "int ()")
 		.def("getSpecialUnitType", &CvUnitInfo::getSpecialUnitType, "int ()")
-		.def("getUnitCaptureClassType", &CvUnitInfo::getUnitCaptureClassType, "int ()")
+		.def("getUnitCaptureType", &CvUnitInfo::getUnitCaptureType, "int ()")
 		.def("getUnitCombatType", &CvUnitInfo::getUnitCombatType, "int ()")
 		.def("getDomainType", &CvUnitInfo::getDomainType, "int ()")
 		.def("getDefaultUnitAIType", &CvUnitInfo::getDefaultUnitAIType, "int ()")
@@ -499,7 +501,6 @@ void CyInfoPythonInterface1()
 // BUG - Unit Experience - end
 
 		// Arrays
-
 		.def("getPrereqAndTechs", &CvUnitInfo::getPrereqAndTechs, "int (int i)")
 		.def("getPrereqOrBonuses", &CvUnitInfo::getPrereqOrBonuses, "int (int i)")
 		.def("getFlavorValue", &CvUnitInfo::getFlavorValue, "int (int i)")
@@ -513,19 +514,13 @@ void CyInfoPythonInterface1()
 		.def("getDomainModifier", &CvUnitInfo::getDomainModifier, "int (int i)")
 		.def("getBonusProductionModifier", &CvUnitInfo::getBonusProductionModifier, "int (int i)")
 		.def("getUnitGroupRequired", &CvUnitInfo::getUnitGroupRequired, "int (int i)")
-/************************************************************************************************/
-/* REVDCM                                 02/16/10                                phungus420    */
-/*                                                                                              */
-/* CanTrain                                                                                     */
-/************************************************************************************************/
+
 		.def("isPrereqOrCivics", &CvUnitInfo::isPrereqOrCivics, "bool (int i)")
 		.def("isPrereqBuildingClass", &CvUnitInfo::isPrereqBuildingClass, "bool (int i)")
 		.def("getPrereqBuildingClassOverrideTech", &CvUnitInfo::getPrereqBuildingClassOverrideTech, "int (int i)")
 		.def("getPrereqBuildingClassOverrideEra", &CvUnitInfo::getPrereqBuildingClassOverrideEra, "int (int i)")
-		.def("getForceObsoleteUnitClass", &CvUnitInfo::getForceObsoleteUnitClass, "bool (int i)")
-/************************************************************************************************/
-/* REVDCM                                  END                                                  */
-/************************************************************************************************/
+		.def("isSupersedingUnit", &CvUnitInfo::isSupersedingUnit, "bool (int i)")
+
 		.def("getUpgradeUnitClass", &CvUnitInfo::getUpgradeUnitClass, "bool (int i)")
 		.def("getTargetUnitClass", &CvUnitInfo::getTargetUnitClass, "bool (int i)")
 		.def("getTargetUnitCombat", &CvUnitInfo::getTargetUnitCombat, "bool (int i)")
@@ -727,9 +722,6 @@ void CyInfoPythonInterface1()
 		;
 
 	python::class_<CvUnitClassInfo, python::bases<CvInfoBase> >("CvUnitClassInfo")
-		.def("getMaxPlayerInstances", &CvUnitClassInfo::getMaxPlayerInstances, "int ()")
-		.def("getUnlimitedException", &CvUnitClassInfo::isUnlimitedException, "bool ()")
-		.def("getInstanceCostModifier", &CvUnitClassInfo::getInstanceCostModifier, "int ()")
 		.def("getDefaultUnitIndex", &CvUnitClassInfo::getDefaultUnitIndex, "int ()")
 		;
 

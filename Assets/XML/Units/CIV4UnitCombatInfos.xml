@@ -3767,11 +3767,11 @@
 					<iWithdrawChange>25</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_CORAL_REEF_REEF_BEACON</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_BEACON</FeatureType>
 					<iWithdrawChange>25</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
-					<FeatureType>FEATURE_CORAL_REEF_REEF_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_LIGHTHOUSE</FeatureType>
 					<iWithdrawChange>25</iWithdrawChange>
 				</WithdrawModifierOnFeatureTypeChange>
 				<WithdrawModifierOnFeatureTypeChange>
@@ -3923,12 +3923,12 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_CORAL_REEF_REEF_BEACON</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_BEACON</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_CORAL_REEF_REEF_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_LIGHTHOUSE</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -8489,7 +8489,7 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_CULTURE_GOLDEN_HORDE</Type>
 			<Description>TXT_KEY_UNITCOMBAT_CULTURE_GOLDEN_HORDE</Description>
-			<CultureType>BONUS_GOLD_OREEN_HORDE</CultureType>
+			<CultureType>BONUS_GOLDEN_HORDE</CultureType>
 			<Button>Art/categories/culture_newcultures.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>

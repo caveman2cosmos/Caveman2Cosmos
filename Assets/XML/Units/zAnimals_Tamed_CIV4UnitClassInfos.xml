@@ -1,85 +1,69 @@
 <?xml version="1.0"?>
-<!-- Sid Meier's Civilization 4 Beyond the Sword -->
-<!-- Modified by the Civ Gold Team -->
-<!-- -->
 <Civ4UnitClassInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<UnitClassInfos>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TAMED_LION</Type>
 			<Description>TXT_KEY_UNIT_TAMED_LION</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_TAMED_LION</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TAMED_PANTHER</Type>
 			<Description>TXT_KEY_UNIT_TAMED_PANTHER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_TAMED_PANTHER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TAMED_HORSE</Type>
 			<Description>TXT_KEY_UNIT_TAMED_HORSE</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_TAMED_HORSE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TAMED_DONKEY</Type>
 			<Description>TXT_KEY_UNIT_TAMED_DONKEY</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_TAMED_DONKEY</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TAMED_LLAMA</Type>
 			<Description>TXT_KEY_UNIT_TAMED_LLAMA</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_TAMED_LLAMA</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TAMED_CAMEL</Type>
 			<Description>TXT_KEY_UNIT_TAMED_CAMEL</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_TAMED_CAMEL</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TAMED_BISON</Type>
 			<Description>TXT_KEY_UNIT_TAMED_BISON</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_TAMED_BISON</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TAMED_BUFFALO</Type>
 			<Description>TXT_KEY_UNIT_TAMED_BUFFALO</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_TAMED_BUFFALO</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TAMED_CATTLE</Type>
 			<Description>TXT_KEY_UNIT_TAMED_CATTLE</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_TAMED_CATTLE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TAMED_MUSKOX</Type>
 			<Description>TXT_KEY_UNIT_TAMED_MUSKOX</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_TAMED_MUSKOX</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TAMED_AARDVARK</Type>
 			<Description>TXT_KEY_UNIT_TAMED_AARDVARK</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_TAMED_AARDVARK</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TAMED_MAMMOTH</Type>
 			<Description>TXT_KEY_UNIT_TAMED_MAMMOTH</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_TAMED_MAMMOTH</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TAMED_BOAR</Type>
 			<Description>TXT_KEY_UNIT_TAMED_BOAR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_TAMED_BOAR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -140,31 +124,26 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_TAMED_WOLF</Type>
 			<Description>TXT_KEY_UNIT_TAMED_WOLF</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_TAMED_WOLF</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TAMED_HIPPO</Type>
 			<Description>TXT_KEY_UNIT_TAMED_HIPPO</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_TAMED_HIPPO</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TAMED_ELEPHANT</Type>
 			<Description>TXT_KEY_UNIT_TAMED_ELEPHANT</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_TAMED_ELEPHANT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TAMED_GIRAFFE</Type>
 			<Description>TXT_KEY_UNIT_TAMED_GIRAFFE</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_TAMED_GIRAFFE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TAMED_AMPHIBIAN</Type>
 			<Description>TXT_KEY_UNIT_TAMED_AMPHIBIAN</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_TAMED_AMPHIBIAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -190,25 +169,21 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_TAMED_BAIRDS_TAPIR</Type>
 			<Description>TXT_KEY_UNIT_TAMED_BAIRDS_TAPIR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_TAMED_BAIRDS_TAPIR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TAMED_BRAZILIAN_TAPIR</Type>
 			<Description>TXT_KEY_UNIT_TAMED_BRAZILIAN_TAPIR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_TAMED_BRAZILIAN_TAPIR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TAMED_MALAYAN_TAPIR</Type>
 			<Description>TXT_KEY_UNIT_TAMED_MALAYAN_TAPIR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_TAMED_MALAYAN_TAPIR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TAMED_MOUNTAIN_TAPIR</Type>
 			<Description>TXT_KEY_UNIT_TAMED_MOUNTAIN_TAPIR</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_TAMED_MOUNTAIN_TAPIR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>

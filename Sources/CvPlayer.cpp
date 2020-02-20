@@ -2356,7 +2356,7 @@ bool CvPlayer::addStartUnitAI(const UnitAITypes eUnitAI, const int iCount)
 	{
 		const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes) iI);
 
-		if (eUnitAI != UNITAI_SETTLE && isLimitedUnitClass((UnitClassTypes)kUnit.getUnitClassType()))
+		if (eUnitAI != UNITAI_SETTLE && isLimitedUnit((UnitTypes) iI))
 		{
 			continue;
 		}
@@ -9255,7 +9255,7 @@ int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 
 	iProductionNeeded *= 100;
 
-	int iModifier = 100 + getUnitClassCount(eUnitClass) * GC.getUnitClassInfo(eUnitClass).getInstanceCostModifier();
+	int iModifier = 100 + getUnitClassCount(eUnitClass) * GC.getUnitInfo(eUnit).getInstanceCostModifier();
 	iProductionNeeded *= iModifier;
 	iProductionNeeded /= 100;
 
@@ -9299,7 +9299,7 @@ int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 
 	if (!isHuman() && !isNPC())
 	{
-		if (isWorldUnitClass(eUnit))
+		if (isWorldUnit(eUnit))
 		{
 			iModifier = GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIWorldTrainPercent();
 			iProductionNeeded *= iModifier;
@@ -17156,22 +17156,20 @@ bool CvPlayer::isUnitClassMaxedOut(UnitClassTypes eIndex, int iExtra) const
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < GC.getNumUnitClassInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
-	if (!isNationalUnitClass(eIndex))
-	{
-		return false;
-	}
+	const UnitTypes eUnit = (UnitTypes)GC.getUnitClassInfo(eIndex).getDefaultUnitIndex();
 
-	if (GC.getGame().isOption(GAMEOPTION_UNLIMITED_NATIONAL_UNITS) && !GC.getUnitClassInfo(eIndex).isUnlimitedException())
+	if (!isNationalUnit(eUnit))
 	{
 		return false;
 	}
 
 	if (GC.getGame().isOption(GAMEOPTION_UNLIMITED_NATIONAL_UNITS))
 	{
-		FAssertMsg(getUnitClassCount(eIndex) <= GC.getUnitClassInfo(eIndex).getMaxPlayerInstances(), "getUnitClassCount is expected to be less than maximum bound of MaxPlayerInstances (invalid index)");
-	}
+		if (!GC.getUnitInfo(eUnit).isUnlimitedException()) return false;
 
-	return ((getUnitClassCount(eIndex) + iExtra) >= GC.getUnitClassInfo(eIndex).getMaxPlayerInstances());
+		FAssertMsg(getUnitClassCount(eIndex) <= GC.getUnitInfo(eUnit).getMaxPlayerInstances(), "getUnitClassCount is expected to be less than maximum bound of MaxPlayerInstances (invalid index)");
+	}
+	return (getUnitClassCount(eIndex) + iExtra) >= GC.getUnitInfo(eUnit).getMaxPlayerInstances();
 }
 
 
@@ -29387,24 +29385,12 @@ int CvPlayer::getNewCityProductionValue() const
 
 int CvPlayer::getGrowthThreshold(int iPopulation) const
 {
-	int iThreshold;
-	iThreshold = (GC.getDefineINT("BASE_CITY_GROWTH_THRESHOLD") + (iPopulation * GC.getDefineINT("CITY_GROWTH_MULTIPLIER")));
+	int iThreshold = GC.getDefineINT("BASE_CITY_GROWTH_THRESHOLD") + iPopulation * GC.getDefineINT("CITY_GROWTH_MULTIPLIER");
 
 	iThreshold *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getGrowthPercent();
 	iThreshold /= 100;
 
-/************************************************************************************************/
-/* Afforess	                  Start		 06/14/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/*
-	iThreshold *= GC.getEraInfo(GC.getGame().getStartEra()).getGrowthPercent();
-*/
 	iThreshold *= GC.getEraInfo(getCurrentEra()).getGrowthPercent();
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	iThreshold /= 100;
 
 	if (!isHuman() && !isNPC())
@@ -29415,21 +29401,11 @@ int CvPlayer::getGrowthThreshold(int iPopulation) const
 		iThreshold *= std::max(0, ((GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * getCurrentEra()) + 100));
 		iThreshold /= 100;
 	}
-
-/************************************************************************************************/
-/* Afforess	                  Start		 02/02/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	if (isGoldenAge())
 	{
 		iThreshold *= (100 + GC.getDefineINT("GOlDEN_AGE_PERCENT_LESS_FOOD_FOR_GROWTH"));
 		iThreshold /= 100;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
 	return std::max(1, iThreshold);
 }
 
@@ -29444,23 +29420,11 @@ void CvPlayer::verifyUnitStacksValid()
 
 UnitTypes CvPlayer::getTechFreeUnit(TechTypes eTech) const
 {
-	UnitClassTypes eUnitClass = (UnitClassTypes) GC.getTechInfo(eTech).getFirstFreeUnitClass();
-	if (eUnitClass == NO_UNITCLASS)
+	UnitTypes eUnit = (UnitTypes) GC.getTechInfo(eTech).getFirstFreeUnit();
+	if (eUnit != NO_UNIT && GC.getUnitInfo(eUnit).getEspionagePoints() > 0 && GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE))
 	{
 		return NO_UNIT;
 	}
-
-	UnitTypes eUnit = ((UnitTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(eUnitClass)));
-	if (eUnit == NO_UNIT)
-	{
-		return NO_UNIT;
-	}
-
-	if (GC.getUnitInfo(eUnit).getEspionagePoints() > 0 && GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE))
-	{
-		return NO_UNIT;
-	}
-
 	return eUnit;
 }
 
@@ -29470,23 +29434,9 @@ UnitTypes CvPlayer::getTechFreeProphet(TechTypes eTech) const
 {
 	if (GC.getGame().isOption(GAMEOPTION_DIVINE_PROPHETS))
 	{
-		UnitClassTypes eUnitClass = (UnitClassTypes) GC.getTechInfo(eTech).getFirstFreeProphet();
-		if (eUnitClass == NO_UNITCLASS)
-		{
-			return NO_UNIT;
-		}
-
-		UnitTypes eUnit = ((UnitTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(eUnitClass)));
-
-		if (eUnit == NO_UNIT)
-		{
-		return NO_UNIT;
-		}
-
-	return eUnit;
-
+		return (UnitTypes) GC.getTechInfo(eTech).getFirstFreeProphet();
 	}
-return NO_UNIT;
+	return NO_UNIT;
 }
 //TB Prophet Mod end
 #endif

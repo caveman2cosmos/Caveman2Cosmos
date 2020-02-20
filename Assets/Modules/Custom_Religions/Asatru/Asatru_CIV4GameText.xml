@@ -238,12 +238,6 @@
 		<English>[COLOR_BUILDING_TEXT]Thor Sanctuary[COLOR_REVERT] </English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_ASATRU_QUOTE</Tag>
-		<English>"No man lives till eve whom the Norns doom at dawning."[NEWLINE][NEWLINE]-Anglo Saxon Poem (found at cauldronborn.blogspot.com.au)</English>
-		<French>"Aucun Homme de vivra tant que le cauchemar des Nornes est présent."[NEWLINE][NEWLINE]-Poème Anglo Saxon (trouvé sur  cauldronborn.blogspot.com.au)</French>
-		<Spanish>"Ningún hombre sobrevive a la condena de los nórdicos al amanecer."[NEWLINE][NEWLINE]-Poema anglosajón (encontrado en cauldronborn.blogspot.com.au)</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_RELIGION_ASATRU</Tag>
 		<English>Religion(Asatru)</English>
 		<French>

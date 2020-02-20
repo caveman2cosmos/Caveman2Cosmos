@@ -9,8 +9,8 @@
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_CLOUD_DESTROYER</Type>
 			<Button>art/interface/buttons/units/sparth/culture/cloud_destroyer.dds</Button>
-			<fScale>0.50</fScale>
-			<fInterfaceScale>0.7</fInterfaceScale>
+			<fScale>0.4</fScale>
+			<fInterfaceScale>0.4</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>1</bActAsAir>
 			<NIF>art/units/CloudDestroyer/Leonora.nif</NIF>
@@ -19,7 +19,7 @@
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/FighterShadow.nif</ShadowNIF>
 				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
-				<fShadowScale>0.75</fShadowScale>
+				<fShadowScale>0.6</fShadowScale>
 			</ShadowDef>
 			<iDamageStates>4</iDamageStates>
 			<fBattleDistance>0.35</fBattleDistance>

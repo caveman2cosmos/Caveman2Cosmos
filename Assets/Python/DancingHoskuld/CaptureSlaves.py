@@ -26,9 +26,8 @@ def onCombatResult(argsList):
 
 	# Captives
 	# Check that the losing unit is not an animal and the unit does not have a capture type defined in the XML
-	if (CyUnitW.isMadeAttack() and not CyUnitL.isAnimal() \
-	and CyUnitL.getDomainType() == giDomainLand and CyUnitW.getDomainType() == giDomainLand \
-	and CyUnitL.getCaptureUnitType((GC.getPlayer(CyUnitL.getOwner())).getCivilizationType()) == -1
+	if (CyUnitW.isMadeAttack() and not CyUnitL.isAnimal() and CyUnitL.getDomainType() == giDomainLand
+	and CyUnitW.getDomainType() == giDomainLand and CyUnitL.getCaptureUnitType() == -1
 	):
 		iCaptureProbability = CyUnitW.captureProbabilityTotal()
 		iCaptureResistance = CyUnitL.captureResistanceTotal()

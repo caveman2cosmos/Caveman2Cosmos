@@ -1,22 +1,14 @@
 <?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- -->
-<!-- UnitClass Schema -->
 <Civ4UnitClassInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitClassInfos>
 		<UnitClassInfo>
 			<Type>UNITCLASS_BEARRIDER</Type>
 			<Description>TXT_KEY_UNIT_BEAR_RIDER</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_BEARRIDER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_BEARKNIGHT</Type>
 			<Description>TXT_KEY_UNIT_BEAR_KNIGHT</Description>
-			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_BEARKNIGHT</DefaultUnit>
 		</UnitClassInfo>
 	</UnitClassInfos>

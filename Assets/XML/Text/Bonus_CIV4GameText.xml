@@ -765,11 +765,6 @@
 		<Polish>Biopaliwo</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_BIOFUEL_PEDIA</Tag>
-		<English>TBD</English>
-		<Polish>Biopaliwo - paliwo powstałe z przetwórstwa biomasy - produktów organizmów żywych np. roślinnych, zwierzęcych czy mikroorganizmów.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_BIONIC_SUITS</Tag>
 		<English>Bionic Suits</English>
 		<French>Costumes Bioniques</French>
@@ -950,19 +945,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BULK_DIAMOND_PEDIA</Tag>
 		<English>A synthetic diamond (also known as an artificial diamond, cultured diamond, or cultivated diamond) is diamond produced in an artificial process, as opposed to natural diamonds, which are created by geological processes. Synthetic diamond is also widely known as HPHT diamond or CVD diamond after the two common production methods (referring to the high-pressure high-temperature and chemical vapor deposition crystal formation methods, respectively). While the term synthetic is associated by consumers with imitation products, artificial diamonds are made of the same material (pure carbon, crystallized in isotropic 3D form).[PARAGRAPH:2]Wikipedia</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_BULLION</Tag>
-		<English>Bullion</English>
-		<French>Lingots</French>
-		<Italian>Barre</Italian>
-		<Polish>Samorodki</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_BULLION_PEDIA</Tag>
-		<English>A metal is deemed to be precious if it is rare. The discovery of new sources of ore or improvements in mining or refining processes may cause the value of a precious metal to diminish. The status of a "precious" metal can also be determined by high demand or market value. Precious metals in bulk form are known as bullion, and are traded on commodity markets. Bullion metals may be cast into ingots, or minted into coins. The defining attribute of bullion is that it is valued by its mass and purity rather than by a face value as money.</English>
-		<Italian>Un metallo è definito prezioso se è raro. La scoperta di nuove fonti di metallo o miglioramenti nei procedimenti di estrazione e raffinatura possono causare un crollo del valore del metallo prezioso. Lo status di "prezioso" può essere anche determinato da un'alta domanda del mercato. I metalli preziosi vengono fusi in barre; queste barre possono essere usate per fondere nuovi lingotti o coniare le monete. I lingotti vengono valutati in base alla loro massa e alla loro purezzza e non hanno un valore nominale come la carta moneta.</Italian>
-		<Polish>W postaci samorodków występuje w przyrodzie tylko 30 pierwiastków. Dzielą się one na metale, np. miedź, złoto i srebro, oraz niemetale i półmetale, np. siarka, krzem i węgiel (ten ostatni występuje pod postacią grafitu i diamentu). Pierwiastki te mają znikomy udział w budowie skorupy ziemskiej.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BURGUNDI</Tag>
@@ -3048,10 +3030,6 @@
 		<Polish>Ghany</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_GHANIAN</Tag>
-		<English>Ghanian</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_GHEE_OIL</Tag>
 		<English>Ghee Oil</English>
 		<French>Huile de Ghî</French>
@@ -3099,7 +3077,7 @@
 		<English>Gokturk</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_GOLD_OREEN_HORDE</Tag>
+		<Tag>TXT_KEY_BONUS_GOLDEN_HORDE</Tag>
 		<English>Golden Horde</English>
 	</TEXT>
 	<TEXT>
@@ -3260,27 +3238,6 @@
 		<Tag>TXT_KEY_BONUS_GUAVAS_PEDIA</Tag>
 		<English>The term "guava" appears to derive from Arawak guayabo "guava tree", via the Spanish guayaba. Guavas are native to Mexico, Central America, and northern South America. Guavas are now cultivated and naturalized throughout the tropics and subtropics in Africa, Southeast Asia, the Caribbean, Florida, California, and Hawaii. The fruit is not only relished by humans, but by many mammals and birds as well. The spread of introduced guavas owes much to this fact, since animals eat the fruit and disperse the seeds in their droppings.</English>
 		<German>Die (Echte) [COLOR_HIGHLIGHT_TEXT]Guave[COLOR_REVERT] (Psidium guajava) aus der Familie der Myrtengewächse ist gleichermaßen Obst und Heilpflanze. Die Früchte wachsen an einem bis zu 13 m hohen Baum mit glatter, grauer Borke, die durch sich ablösende Streifen auffällt. Die ursprünglich aus Südamerika stammende Pflanze hat sich unter Einfluss des Menschen auf die gesamten Tropen ausgebreitet. An einigen Standorten verdrängt sie inzwischen sogar die heimischen Spezies und wird zum Problem, so zum Beispiel auf dem Hawaii-Archipel, wo sie vor knapp 200 Jahren eingeführt wurde. Viele der Regenwälder dieser Inseln bestehen heute buchstäblich nur noch aus Guavenbäumen. Dies ist zum großen Teil auch verwilderten Hausschweinen geschuldet, die die Früchte gern verzehren und die Samen mit ihrem Kot in weitem Umkreis verteilen.</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_GUILDPAPER</Tag>
-		<English>Crafts Guild Charter</English>
-		<French>Charte de la Guilde des Artisans</French>
-		<German>Satzung der Handwerkergilde</German>
-		<Italian>Carta della gilda degli artigiani</Italian>
-		<Spanish>
-			<Text>Título del Gremio de artesanos</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Glejt Rzemieślniczy</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_GUILDPAPER_PEDIA</Tag>
-		<English>Crafts Guild Charter</English>
-		<French>Charte de la Guilde des Artisans</French>
-		<Italian>Carta della gilda degli artigiani</Italian>
-		<Spanish>Título del Gremio de artesanos</Spanish>
-		<Polish>Glejt Rzemieślniczy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GUINEA_PIGS</Tag>
@@ -5340,11 +5297,6 @@
 		<English>Nigerian</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_NIVKH</Tag>
-		<English>Nivkh</English>
-		<Polish>Niwchowie</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_NOK</Tag>
 		<English>Nok</English>
 	</TEXT>
@@ -5719,10 +5671,6 @@
 		<French>Païute</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_PAKISTAN</Tag>
-		<English>Pakistan</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_PAKISTANI</Tag>
 		<English>Pakistani</English>
 		<French>Pakistanais</French>
@@ -5998,15 +5946,6 @@
 			<Plural>1</Plural>
 		</Spanish>
 		<Polish>Replikatory</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_REPLICATORS_HELP</Tag>
-		<English>Reduces the cost of unit upgrades by 50%</English>
-		<French>Réduit le coût des améliorations d'unités de 50%</French>
-		<German>Reduziert die Kosten von Einheitenmodernisierungen um 50%</German>
-		<Italian>Riduce i costi di miglioramento delle unità del 50%</Italian>
-		<Spanish>[ICON_BULLET]Reduce el coste de actualizar unidades un 50%</Spanish>
-		<Polish>Zmniejsza koszt ulepszania jednostek o 50%</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_REPLICATORS_PEDIA</Tag>
@@ -7073,14 +7012,6 @@
 		<Polish>Fokowate, foki (Phocidae) - rodzina drapieżnych ssaków morskich zaliczana do płetwonogich (Pinnipedia), obejmująca 19 gatunków.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_SEA_LION_AND_SEAL_STRATEGY</Tag>
-		<English>Cities with this worked resource in their work radius can build buildings that provide furs, oil and ivory. Art by SaibotLieh.</English>
-		<French>Les Villes bénéficiant de cette ressource peuvent construire des bâtiments procurant de la fourrure, de l'huile et de l'ivoire. Art: SaibotLieh.</French>
-		<Italian>Le città con questa risorsa lavorata all'interno del raggio di lavoro possono costruire edifici che forniscono pellicce, olio e avorio. Art by SaibotLieh.</Italian>
-		<Spanish>Las ciudades que obtienen este recurso en su radio de acción pueden construir edificios que proporcionan pieles, aceites y marfil. Gráficos por SaibotLieh.</Spanish>
-		<Polish>Miasta z tego zasobu w ich pracował promieniu pracy może budować budynki, które zapewniają futra, olej i kości słoniowej. Sztuka przez SaibotLieh.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_SELJUKS</Tag>
 		<English>Seljuks</English>
 	</TEXT>
@@ -7130,27 +7061,6 @@
 		<Tag>TXT_KEY_BONUS_SERVICE_BOTS_PEDIA</Tag>
 		<English>Service robots assist human beings, typically by performing a job that is dirty, dull, distant, dangerous or repetitive, including household chores. They typically are autonomous and/or operated by a build in control system, with manual override options. The term "service robot" is less well-defined. The International Federation of Robotics (IFR) has proposed a tentative definition, "A service robot is a robot which operates semi- or fully autonomously to perform services useful to the well-being of humans and equipment, excluding manufacturing operations."</English>
 		<Polish>Robot - mechaniczne urządzenie wykonujące automatycznie pewne zadania. Działanie robota może być sterowane przez człowieka, przez wprowadzony wcześniej program, bądź przez zbiór ogólnych reguł, które zostają przełożone na działanie robota przy pomocy technik sztucznej inteligencji. Roboty często zastępują człowieka przy monotonnych, złożonych z powtarzających się kroków czynnościach, które mogą wykonywać znacznie szybciej od ludzi. Domeną ich zastosowań są też te zadania, które są niebezpieczne dla człowieka, na przykład związane z manipulacją szkodliwymi dla zdrowia substancjami lub przebywaniem w nieprzyjaznym środowisku.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_SGUILDPAPER</Tag>
-		<English>Servants Guild Charter</English>
-		<French>Charte de la Guilde des Serviteurs</French>
-		<German>Satzung der Dienergilde</German>
-		<Italian>Carta della gilda dei servitori</Italian>
-		<Spanish>
-			<Text>Título del Gremio de sirvientes</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Glejt Służby</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_SGUILDPAPER_PEDIA</Tag>
-		<English>Servants Guild Charter</English>
-		<French>Charte de la Guilde des Serviteurs</French>
-		<Italian>Carta della gilda deri servitori</Italian>
-		<Spanish>Título del Gremio de sirvientes</Spanish>
-		<Polish>Glejt Służby</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SHANG</Tag>
@@ -7503,31 +7413,6 @@
 		<Polish>Gąbki są to zwierzęta z gromady Porifera (czyli "porów nośnika"). Są to organizmy wielokomórkowe, które mają pełne ciał kanałów umożliwiających porów i cyrkulację wody w nich, składający się z galaretowatej mesohyl umieszczonej pomiędzy dwoma cienkimi warstwami komórek. Gąbki niewyspecjalizowanych komórek, które można przekształcić do innych typów i które często migrują pomiędzy głównymi warstw komórek i mesohyl procesu. Gąbki nie mają nerwowego, pokarmowego lub układu krążenia. Zamiast tego, w większości opierają się na utrzymanie stałego przepływu wody przez ich ciała, aby zdobyć żywność i tlen i usunięcia odpadów.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_SPORTS</Tag>
-		<English>Sports</English>
-		<French>
-			<Text>Sports</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Sport:Sports:Sport:Sport</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Sport</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Deportes</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Polish>Sporty</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_SQUASH</Tag>
 		<English>Squash</English>
 		<French>Courge</French>
@@ -7737,35 +7622,6 @@
 		<English>Swahili</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_SWAMP</Tag>
-		<English>Swamp</English>
-		<French>
-			<Text>Tourbe</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Moor</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Acquitrino</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Turba</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Moczary</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_SWAMP_PEDIA</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_SWAZI</Tag>
 		<English>Swazi</English>
 	</TEXT>
@@ -7972,28 +7828,6 @@
 		<Tag>TXT_KEY_BONUS_TEXAN</Tag>
 		<English>Texan</English>
 		<Polish>Teksańska</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_TEXTILES</Tag>
-		<English>Textiles</English>
-		<French>
-			<Text>Textiles</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Textilien</German>
-		<Italian>Prodotti tessili</Italian>
-		<Spanish>
-			<Text>Productos textiles</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Polish>Tekstylia</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_TEXTILES_PEDIA</Tag>
-		<English>TBD</English>
-		<Polish>Tekstylia jest to ogół wyrobów (tkanin, dzianin itp.) otrzymywanych z przerobionych na przędzę surowców włókienniczych roślinnych, zwierzęcych lub chemicznych.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_THAI</Tag>
@@ -8465,49 +8299,6 @@ Türkis zählt zu den ältesten Schmucksteinen und hat mit seinen zarten Pastell
 		<Polish>Wanilia (Vanilla Mill.) - rodzaj roślin jednoliściennych z rodziny storczykowatych (Orchidaceae), liczący 109 gatunków rosnących dziko w strefach tropikalnych. Owoce wanilii płaskolistnej są źródłem przyprawy zwanej laskami wanilii.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_VCARPENTRY</Tag>
-		<English>Carpentry</English>
-		<French>Charpenterie</French>
-		<German>Zimmerei</German>
-		<Italian>Carpenteria</Italian>
-		<Spanish>
-			<Text>Carpintería</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Stolarka</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_VCARPENTRY_PEDIA</Tag>
-		<English>Carpentry</English>
-		<French>Charpenterie</French>
-		<Italian>Carpenteria</Italian>
-		<Spanish>Carpintería</Spanish>
-		<Polish>Stolarka</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_VCLOTH</Tag>
-		<English>Cloth</English>
-		<French>Vêtement</French>
-		<German>Tuch</German>
-		<Italian>Vestiti</Italian>
-		<Spanish>
-			<Text>Telas</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Polish>Tkanina</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_VCLOTH_PEDIA</Tag>
-		<English>Cloth</English>
-		<French>Vêtement</French>
-		<German>Tuch</German>
-		<Italian>Vestiti</Italian>
-		<Spanish>Telas</Spanish>
-		<Polish>Tkanina</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_VEGETABLES</Tag>
 		<English>Vegetables</English>
 		<French>Légumes</French>
@@ -8532,49 +8323,6 @@ Türkis zählt zu den ältesten Schmucksteinen und hat mit seinen zarten Pastell
 		<English>Venetian</English>
 		<French>Vénicien</French>
 		<Polish>Wenecka</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_VFAIR</Tag>
-		<English>Annual Fair</English>
-		<French>
-			<Text>Foire Annuelle</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Jährliche Messe</German>
-		<Spanish>
-			<Text>Feria anual</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Doroczne Targi</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_VFAIR_PEDIA</Tag>
-		<English>Annual Fair</English>
-		<French>Foire Annuelle</French>
-		<Italian>Fiera annuale</Italian>
-		<Spanish>Feria anual</Spanish>
-		<Polish>Doroczne Targi</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_VGUILDPAPER</Tag>
-		<English>Victuallers Guild Charter</English>
-		<French>Charte de la Guilde des Ravitailleurs</French>
-		<German>Satzung der Lebensmittelhändlergilde</German>
-		<Spanish>
-			<Text>Título del Gremio de tenderos</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Glejt Kapłański</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_VGUILDPAPER_PEDIA</Tag>
-		<English>Victuallers Guild Charter</English>
-		<French>Charte de la Guilde des Ravitailleurs</French>
-		<Spanish>Título del Gremio de tenderos</Spanish>
-		<Polish>Glejt Kapłański</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_VIBRANIUM</Tag>
@@ -8673,14 +8421,6 @@ Türkis zählt zu den ältesten Schmucksteinen und hat mit seinen zarten Pastell
 		<Tag>TXT_KEY_BONUS_WALRUS_PEDIA</Tag>
 		<English>Currently representing seal, sea lion and walrus colonies.  Unfortunately the Civ IV resource placement system does not allow them to be limited to coastal plots.</English>
 		<Polish>Mors (łac. Odobenus rosmarus) - gatunek dużego drapieżnego ssaka morskiego, jedyny współcześnie żyjący przedstawiciel dawniej licznej w gatunki rodziny morsowatych (Odobenidae) i jedyny gatunek z rodzaju Odobenus. Mors pełnił ważną rolę w życiu mieszkańców Arktyki, którzy polowali na niego dla mięsa, skór, tłuszczu, kłów i kości.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_WALRUS_STRATEGY</Tag>
-		<English>Cities with this worked resource in their work radius can build buildings that provide furs, oil and ivory. Art by SaibotLieh.</English>
-		<French>Les Villes bénéficiant de cette ressource peuvent construire des bâtiments procurant de la fourrure, de l'huile et de l'ivoire. Art: SaibotLieh.</French>
-		<Italian>Le città con questa risorsa lavorata all'interno del raggio di lavoro possono costruire edifici che forniscono pellicce, olio e avorio. Art by SaibotLieh.</Italian>
-		<Spanish>Las ciudades que obtienen este recurso en su radio de acción pueden construir edificios que proporcionan pieles, aceites y marfil. Gráficos por SaibotLieh.</Spanish>
-		<Polish>Morsy dostarczają skór, oleju i mięsa.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WARAY</Tag>
@@ -8881,24 +8621,6 @@ Türkis zählt zu den ältesten Schmucksteinen und hat mit seinen zarten Pastell
 		<Polish>Akratopega - woda podziemna, której mineralizacja wynosi 500-1000 mg/dm, a temperatura nie przekracza 20 C. W klasyfikacji wód ze względu na zawartość związków mineralnych znajduje się pomiędzy wodą słodką a mineralną. Produkowana jest w kilku rodzajach: silnie gazowana, gazowana, niegazowana, lekko gazowana oraz jako musująca Perlage.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_WATER_ICE</Tag>
-		<English>Water Ice</English>
-		<French>Eau Gelée</French>
-		<Italian>Ghiaccio d'acqua</Italian>
-		<Spanish>
-			<Text>Hielo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Lód</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_WATER_ICE_PEDIA</Tag>
-		<English>Water Ice - Buried deep beneath the surface this life giver was an unexpected discovery.</English>
-		<Spanish>Hielo - Enterrado en una zona profunda bajo la superficie, este "dotante de vida" fue un descubrimiento inesperado.</Spanish>
-		<Polish>Lód - minerał z gromady tlenków o wzorze chemicznym H2O. Jest to stan stały wody.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_WAX</Tag>
 		<English>Wax</English>
 		<French>Cire</French>
@@ -9074,10 +8796,6 @@ Türkis zählt zu den ältesten Schmucksteinen und hat mit seinen zarten Pastell
 		<English>Xianbei</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_XIONGNU</Tag>
-		<English>Xiongnu</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_XIONGU</Tag>
 		<English>Xiongnu</English>
 	</TEXT>
@@ -9096,10 +8814,6 @@ Türkis zählt zu den ältesten Schmucksteinen und hat mit seinen zarten Pastell
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_YANOMAMI</Tag>
 		<English>Yanomami</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_YANOMANI</Tag>
-		<English>Yanomani</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_YEMENESE</Tag>

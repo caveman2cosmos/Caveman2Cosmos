@@ -4346,8 +4346,8 @@
 		</FeatureInfo>
 		<!-- Coral with Beacon -->
 		<FeatureInfo>
-			<Type>FEATURE_CORAL_REEF_REEF_BEACON</Type>
-			<Description>TXT_KEY_FEATURE_CORAL_REEF_REEF_BEACON</Description>
+			<Type>FEATURE_CORAL_REEF_BEACON</Type>
+			<Description>TXT_KEY_FEATURE_CORAL_REEF_BEACON</Description>
 			<Civilopedia>TXT_KEY_FEATURE_CORAL_REEF_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_CORAL_REEF</ArtDefineTag>
 			<YieldChanges>
@@ -4392,8 +4392,8 @@
 		</FeatureInfo>
 		<!-- Coral with Lighthouse -->
 		<FeatureInfo>
-			<Type>FEATURE_CORAL_REEF_REEF_LIGHTHOUSE</Type>
-			<Description>TXT_KEY_FEATURE_CORAL_REEF_REEF_LIGHTHOUSE</Description>
+			<Type>FEATURE_CORAL_REEF_LIGHTHOUSE</Type>
+			<Description>TXT_KEY_FEATURE_CORAL_REEF_LIGHTHOUSE</Description>
 			<Civilopedia>TXT_KEY_FEATURE_CORAL_REEF_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_CORAL_REEF</ArtDefineTag>
 			<YieldChanges>

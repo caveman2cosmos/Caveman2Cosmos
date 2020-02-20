@@ -1,10 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- Assets\Modules\Alt_Timelines\MegaFauna\Mammoths\Mammoth_CIV4UnitInfos.xml -->
-<!-- Unit Infos -->
 <Civ4UnitInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
@@ -16,6 +10,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_TRAINED_MAMMOTH</Class>
 			<Type>UNIT_TRAINED_MAMMOTH</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -125,16 +120,14 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<ForceObsoleteUnitClasses>
-				<ForceObsoleteUnitClass>
-					<ForceObsoleteUnitClassType>UNITCLASS_NEANDERTHAL_MAMMOTH_RIDER</ForceObsoleteUnitClassType>
-					<bForceObsoleteUnitClass>1</bForceObsoleteUnitClass>
-				</ForceObsoleteUnitClass>
-			</ForceObsoleteUnitClasses>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_MAMMOTH_RIDER</UnitType>
+			</SupersedingUnits>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_TAMED_MAMMOTH</Class>
 			<Type>UNIT_TAMED_MAMMOTH</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -249,6 +242,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_NEANDERTHAL_MAMMOTH_RIDER</Class>
 			<Type>UNIT_NEANDERTHAL_MAMMOTH_RIDER</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -393,6 +387,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_WAR_MAMMOTH</Class>
 			<Type>UNIT_WAR_MAMMOTH</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -509,6 +504,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_BALLISTA_MAMMOTH</Class>
 			<Type>UNIT_BALLISTA_MAMMOTH</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SIEGE</SubCombatType>
@@ -642,6 +638,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_BOMBARD_MAMMOTH</Class>
 			<Type>UNIT_BOMBARD_MAMMOTH</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SIEGE</SubCombatType>
@@ -785,7 +782,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_WORKMAMMOTH</Class>
 			<Type>UNIT_WORKMAMMOTH</Type>
-			<Capture>UNITCLASS_WORKMAMMOTH</Capture>
+			<Capture>UNIT_WORKMAMMOTH</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
