@@ -4,7 +4,7 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_RELIGION_ANDEANISM</Type>
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_ANDEANISM</Description>
-			<ReligionType>RELIGION_ANDEAN</ReligionType>
+			<ReligionType>RELIGION_ANDEANISM</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_andeanism.dds</Button>
 		</UnitCombatInfo>
 	</UnitCombatInfos>

@@ -3601,7 +3601,7 @@ bool CvTeam::isNPC() const
 
 bool CvTeam::isHominid() const
 {
-	return (getID() == BARBARIAN_TEAM || getID() == NPC7_TEAM);
+	return (getID() == BARBARIAN_TEAM || getID() == NEANDERTHAL_TEAM);
 }
 
 
@@ -5821,22 +5821,25 @@ int CvTeam::getUnitClassCount(UnitClassTypes eIndex) const
 
 bool CvTeam::isUnitClassMaxedOut(UnitClassTypes eIndex, int iExtra) const
 {
+	return false;
+
+/* Toffer:
+iMaxTeamInstances was unused in CvUnitClassInfo and removed as part of us shedding the unitclass object, maybe we want to add it back in for CvUnitInfo?
+
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < GC.getNumUnitClassInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
-	if (!isTeamUnitClass(eIndex))
+	if (!isTeamUnit((UnitTypes)GC.getUnitClassInfo(eIndex).getDefaultUnitIndex()))
 	{
 		return false;
 	}
 
-	if (GC.getGame().isOption(GAMEOPTION_UNLIMITED_NATIONAL_UNITS) && !GC.getUnitClassInfo(eIndex).isUnlimitedException())
+	if (GC.getGame().isOption(GAMEOPTION_UNLIMITED_NATIONAL_UNITS) && !GC.getUnitInfo((UnitTypes)GC.getUnitClassInfo(eIndex).getDefaultUnitIndex()).isUnlimitedException())
 	{
 		return false;
 	}
-
-	FAssertMsg(getUnitClassCount(eIndex) <= GC.getUnitClassInfo(eIndex).getMaxTeamInstances(), "The current unit class count is expected not to exceed the maximum number of instances allowed for this team");
-
-	return ((getUnitClassCount(eIndex) + iExtra) >= GC.getUnitClassInfo(eIndex).getMaxTeamInstances());
+	return ((getUnitClassCount(eIndex) + iExtra) >= GC.getUnitInfo((UnitTypes)GC.getUnitClassInfo(eIndex).getDefaultUnitIndex()).getMaxTeamInstances());
+*/
 }
 
 
@@ -7113,28 +7116,21 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 	{
 		changeMapTradingCount(iChange);
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 03/8/10                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	CvTechInfo& kTech = GC.getTechInfo(eTech);
-	if (GC.getGame().isOption(GAMEOPTION_MOUNTAINS))
+	if (kTech.isCanPassPeaks())
 	{
-		if (kTech.isCanPassPeaks())
-		{
-			changeCanPassPeaksCount(iChange);
-			//	Koshling - makes peaks workable which chnages the yield calculation
-			updateYield();
-		}
-		if (kTech.isMoveFastPeaks())
-		{
-			changeMoveFastPeaksCount(iChange);
-		}
-		if (kTech.isCanFoundOnPeaks())
-		{
-			changeCanFoundOnPeaksCount(iChange);
-		}
+		changeCanPassPeaksCount(iChange);
+		//	Koshling - makes peaks workable which chnages the yield calculation
+		updateYield();
+	}
+	if (kTech.isMoveFastPeaks())
+	{
+		changeMoveFastPeaksCount(iChange);
+	}
+	if (kTech.isCanFoundOnPeaks())
+	{
+		changeCanFoundOnPeaksCount(iChange);
 	}
 
 	if (iChange > 0)
@@ -7184,9 +7180,7 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 		changeCanFarmDesertCount(iChange);
 		setLastRoundOfValidImprovementCacheUpdate();
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	if (GC.getTechInfo(eTech).isTechTrading())
 	{
 		changeTechTradingCount(iChange);
@@ -7200,15 +7194,7 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 	if (GC.getTechInfo(eTech).isOpenBordersTrading())
 	{
 		changeOpenBordersTradingCount(iChange);
-/************************************************************************************************/
-/* Afforess	                  Start		 05/22/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 		changeLimitedBordersTradingCount(iChange);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	}
 
 	if (GC.getTechInfo(eTech).isDefensivePactTrading())
@@ -8124,14 +8110,6 @@ void CvTeam::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
 
-//void CvTeam::write2(FDataStreamBase* pStream)
-//{
-//	write(pStream);
-//}
-//void CvTeam::read2(FDataStreamBase* pStream)
-//{
-//	read(pStream);
-//}
 
 // CACHE: cache frequently used values
 ///////////////////////////////////////

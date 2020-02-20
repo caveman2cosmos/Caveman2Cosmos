@@ -3893,7 +3893,7 @@ void CvUnitAI::AI_attackCityMove()
 	bool bReadyToAttack = false;
 	if( isHominid() )
 	{
-		bLandWar = (area()->getNumCities() - area()->getCitiesPerPlayer(BARBARIAN_PLAYER) - area()->getCitiesPerPlayer(NPC7_PLAYER) > 0);
+		bLandWar = (area()->getNumCities() - area()->getCitiesPerPlayer(BARBARIAN_PLAYER) - area()->getCitiesPerPlayer(NEANDERTHAL_PLAYER) > 0);
 		bReadyToAttack = (getGroup()->getNumUnits() >= 3);
 	}
 	else if( !bTurtle )
@@ -15659,7 +15659,7 @@ bool CvUnitAI::AI_guardSpy(int iRandomPercent)
 
 				if (pLoopCity->isProductionUnit())
 				{
-					if (isLimitedUnitClass((UnitClassTypes)(GC.getUnitInfo(pLoopCity->getProductionUnit()).getUnitClassType())))
+					if (isLimitedUnit(pLoopCity->getProductionUnit()))
 					{
 						iValue += 4;
 					}
@@ -15799,7 +15799,7 @@ bool CvUnitAI::AI_destroySpy()
 				{
 					if (pBestCity->isProductionUnit())
 					{
-						if (isLimitedUnitClass((UnitClassTypes)(GC.getUnitInfo(pBestCity->getProductionUnit()).getUnitClassType())))
+						if (isLimitedUnit(pBestCity->getProductionUnit()))
 						{
 							getGroup()->pushMission(MISSION_DESTROY);
 							return true;
@@ -17363,7 +17363,7 @@ namespace {
 	// Helper function to determine if a unit looks legendaryish
 	bool isLegendary(const CvUnit* unit)
 	{
-		const CvUnitClassInfo& unitInfo = GC.getUnitClassInfo(unit->getUnitClassType());
+		const CvUnitInfo& unitInfo = GC.getUnitInfo(unit->getUnitType());
 		return (unitInfo.getMaxGlobalInstances() > 0 && unitInfo.getMaxGlobalInstances() <= 3)
 			|| (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS) && unit->qualityRank() > 8);
 	}
@@ -17400,7 +17400,7 @@ bool CvUnitAI::AI_leadLegend()
 			iCombatStrength *= 10 + (pLoopUnit->getExperience() * 2);
 			iCombatStrength /= 15;
 
-			iCombatStrength *= 10 - GC.getUnitClassInfo(pLoopUnit->getUnitClassType()).getMaxGlobalInstances();
+			iCombatStrength *= 10 - GC.getUnitInfo(pLoopUnit->getUnitType()).getMaxGlobalInstances();
 			iCombatStrength /= 3;
 
 			if (iCombatStrength > iBestStrength)
@@ -17503,8 +17503,8 @@ bool CvUnitAI::AI_lead(std::vector<UnitAITypes>& aeUnitAITypes)
 				bValid = false;
 				bLegend = false;
 
-				if (GC.getUnitClassInfo(pLoopUnit->getUnitClassType()).getMaxGlobalInstances() > 0
-				&& GC.getUnitClassInfo(pLoopUnit->getUnitClassType()).getMaxGlobalInstances() < 7)
+				if (GC.getUnitInfo(pLoopUnit->getUnitType()).getMaxGlobalInstances() > 0
+				&& GC.getUnitInfo(pLoopUnit->getUnitType()).getMaxGlobalInstances() < 7)
 				{
 					if (canLead(pLoopUnit->plot(), pLoopUnit->getID()) > 0)
 					{
@@ -17545,7 +17545,7 @@ bool CvUnitAI::AI_lead(std::vector<UnitAITypes>& aeUnitAITypes)
 
 									if(bLegend)
 									{
-										iCombatStrength *= 10 - GC.getUnitClassInfo(pLoopUnit->getUnitClassType()).getMaxGlobalInstances();
+										iCombatStrength *= 10 - GC.getUnitInfo(pLoopUnit->getUnitType()).getMaxGlobalInstances();
 										iCombatStrength /= 3;
 									}
 
@@ -24194,7 +24194,7 @@ bool CvUnitAI::AI_assaultSeaReinforce(bool bBarbarian)
 					{
 						iValue = 1;
 					}
-					else if( bBarbarian && (pLoopCity->area()->getCitiesPerPlayer(NPC7_PLAYER) > 0) )
+					else if( bBarbarian && (pLoopCity->area()->getCitiesPerPlayer(NEANDERTHAL_PLAYER) > 0) )
 					{
 						iValue = 1;
 					}

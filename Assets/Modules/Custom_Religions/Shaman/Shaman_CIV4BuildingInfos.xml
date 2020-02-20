@@ -15,10 +15,10 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_CATHEDRAL2_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_CATHEDRAL2</ArtDefineTag>
-			<ReligionType>RELIGION_SHAMAN</ReligionType>
-			<StateReligion>RELIGION_SHAMAN</StateReligion>
+			<ReligionType>RELIGION_SHAMANISM</ReligionType>
+			<StateReligion>RELIGION_SHAMANISM</StateReligion>
 			<bStateReligion>1</bStateReligion>
-			<PrereqReligion>RELIGION_SHAMAN</PrereqReligion>
+			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
 			<FreePromotion>PROMOTION_WOODSMAN1</FreePromotion>
 			<bNeverCapture>1</bNeverCapture>
@@ -77,10 +77,10 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_CATHEDRAL</ArtDefineTag>
-			<ReligionType>RELIGION_SHAMAN</ReligionType>
-			<StateReligion>RELIGION_SHAMAN</StateReligion>
+			<ReligionType>RELIGION_SHAMANISM</ReligionType>
+			<StateReligion>RELIGION_SHAMANISM</StateReligion>
 			<bStateReligion>1</bStateReligion>
-			<PrereqReligion>RELIGION_SHAMAN</PrereqReligion>
+			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
 			<FreePromotion>PROMOTION_GUERILLA1</FreePromotion>
 			<bNeverCapture>1</bNeverCapture>
@@ -145,9 +145,9 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_MONASTERY</ArtDefineTag>
-			<ReligionType>RELIGION_SHAMAN</ReligionType>
-			<PrereqReligion>RELIGION_SHAMAN</PrereqReligion>
-			<!--ObsoleteTech>TECH_MODERNPHYSICS</ObsoleteTech-->
+			<ReligionType>RELIGION_SHAMANISM</ReligionType>
+			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
+			<!--ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>74</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -210,9 +210,9 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_MONASTERY_BISON</ArtDefineTag>
-			<ReligionType>RELIGION_SHAMAN</ReligionType>
-			<StateReligion>RELIGION_SHAMAN</StateReligion>
-			<PrereqReligion>RELIGION_SHAMAN</PrereqReligion>
+			<ReligionType>RELIGION_SHAMANISM</ReligionType>
+			<StateReligion>RELIGION_SHAMANISM</StateReligion>
+			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_AGRICULTURAL_TOOLS</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>37</iCost>
@@ -252,9 +252,9 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_MONASTERY_COW</ArtDefineTag>
-			<ReligionType>RELIGION_SHAMAN</ReligionType>
-			<StateReligion>RELIGION_SHAMAN</StateReligion>
-			<PrereqReligion>RELIGION_SHAMAN</PrereqReligion>
+			<ReligionType>RELIGION_SHAMANISM</ReligionType>
+			<StateReligion>RELIGION_SHAMANISM</StateReligion>
+			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_AGRICULTURAL_TOOLS</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>37</iCost>
@@ -294,9 +294,9 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_MONASTERY_DEER</ArtDefineTag>
-			<ReligionType>RELIGION_SHAMAN</ReligionType>
-			<StateReligion>RELIGION_SHAMAN</StateReligion>
-			<PrereqReligion>RELIGION_SHAMAN</PrereqReligion>
+			<ReligionType>RELIGION_SHAMANISM</ReligionType>
+			<StateReligion>RELIGION_SHAMANISM</StateReligion>
+			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_AGRICULTURAL_TOOLS</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>37</iCost>
@@ -336,9 +336,9 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_MONASTERY_PIG</ArtDefineTag>
-			<ReligionType>RELIGION_SHAMAN</ReligionType>
-			<StateReligion>RELIGION_SHAMAN</StateReligion>
-			<PrereqReligion>RELIGION_SHAMAN</PrereqReligion>
+			<ReligionType>RELIGION_SHAMANISM</ReligionType>
+			<StateReligion>RELIGION_SHAMANISM</StateReligion>
+			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_AGRICULTURAL_TOOLS</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>37</iCost>
@@ -378,9 +378,9 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_MONASTERY_SHEEP</ArtDefineTag>
-			<ReligionType>RELIGION_SHAMAN</ReligionType>
-			<StateReligion>RELIGION_SHAMAN</StateReligion>
-			<PrereqReligion>RELIGION_SHAMAN</PrereqReligion>
+			<ReligionType>RELIGION_SHAMANISM</ReligionType>
+			<StateReligion>RELIGION_SHAMANISM</StateReligion>
+			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_AGRICULTURAL_TOOLS</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>37</iCost>
@@ -421,9 +421,9 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_SHRINE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_SHAMAN</MovieDefineTag>
-			<HolyCity>RELIGION_SHAMAN</HolyCity>
-			<ReligionType>RELIGION_SHAMAN</ReligionType>
-			<GlobalReligionCommerce>RELIGION_SHAMAN</GlobalReligionCommerce>
+			<HolyCity>RELIGION_SHAMANISM</HolyCity>
+			<ReligionType>RELIGION_SHAMANISM</ReligionType>
+			<GlobalReligionCommerce>RELIGION_SHAMANISM</GlobalReligionCommerce>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
@@ -444,7 +444,7 @@
 			</CommerceChangeDoubleTimes>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_SHAMAN</ReligionType>
+					<ReligionType>RELIGION_SHAMANISM</ReligionType>
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -475,8 +475,8 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_TEMPLE</ArtDefineTag>
-			<ReligionType>RELIGION_SHAMAN</ReligionType>
-			<PrereqReligion>RELIGION_SHAMAN</PrereqReligion>
+			<ReligionType>RELIGION_SHAMANISM</ReligionType>
+			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>55</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -529,7 +529,7 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_TEMPLE_BISON</ArtDefineTag>
-			<PrereqReligion>RELIGION_SHAMAN</PrereqReligion>
+			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech-->
 			<iCost>28</iCost>
 			<iAsset>4</iAsset>
@@ -568,7 +568,7 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_TEMPLE_COW</ArtDefineTag>
-			<PrereqReligion>RELIGION_SHAMAN</PrereqReligion>
+			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech-->
 			<iCost>28</iCost>
 			<iAsset>4</iAsset>
@@ -607,7 +607,7 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_TEMPLE_DEER</ArtDefineTag>
-			<PrereqReligion>RELIGION_SHAMAN</PrereqReligion>
+			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech-->
 			<iCost>28</iCost>
 			<iAsset>4</iAsset>
@@ -646,7 +646,7 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_TEMPLE_PIG</ArtDefineTag>
-			<PrereqReligion>RELIGION_SHAMAN</PrereqReligion>
+			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech-->
 			<iCost>28</iCost>
 			<iAsset>4</iAsset>
@@ -685,7 +685,7 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_TEMPLE_SHEEP</ArtDefineTag>
-			<PrereqReligion>RELIGION_SHAMAN</PrereqReligion>
+			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech-->
 			<iCost>28</iCost>
 			<iAsset>4</iAsset>
@@ -724,9 +724,9 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_MONASTERY_RABBIT</ArtDefineTag>
-			<ReligionType>RELIGION_SHAMAN</ReligionType>
-			<StateReligion>RELIGION_SHAMAN</StateReligion>
-			<PrereqReligion>RELIGION_SHAMAN</PrereqReligion>
+			<ReligionType>RELIGION_SHAMANISM</ReligionType>
+			<StateReligion>RELIGION_SHAMANISM</StateReligion>
+			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_AGRICULTURAL_TOOLS</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>37</iCost>
@@ -766,16 +766,16 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_MONASTERY_SEA_LIONS</ArtDefineTag>
-			<ReligionType>RELIGION_SHAMAN</ReligionType>
-			<StateReligion>RELIGION_SHAMAN</StateReligion>
-			<PrereqReligion>RELIGION_SHAMAN</PrereqReligion>
-			<!--ObsoleteTech>TECH_MODERNPHYSICS</ObsoleteTech-->
+			<ReligionType>RELIGION_SHAMANISM</ReligionType>
+			<StateReligion>RELIGION_SHAMANISM</StateReligion>
+			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
+			<!--ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>37</iCost>
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqVicinityBonuses>
-				<VicinityBonus>BONUS_SEA_LIONS</VicinityBonus>
+				<VicinityBonus>BONUS_SEA_LION_AND_SEAL</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -785,7 +785,7 @@
 			</BuildingClassNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
-					<BonusType>BONUS_SEA_LIONS</BonusType>
+					<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
 					<YieldModifiers>
 						<iYield>5</iYield>
 						<iYield>0</iYield>
@@ -808,10 +808,10 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_MONASTERY_WALRUS</ArtDefineTag>
-			<ReligionType>RELIGION_SHAMAN</ReligionType>
-			<StateReligion>RELIGION_SHAMAN</StateReligion>
-			<PrereqReligion>RELIGION_SHAMAN</PrereqReligion>
-			<!--ObsoleteTech>TECH_MODERNPHYSICS</ObsoleteTech-->
+			<ReligionType>RELIGION_SHAMANISM</ReligionType>
+			<StateReligion>RELIGION_SHAMANISM</StateReligion>
+			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
+			<!--ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech-->
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>37</iCost>
 			<iAsset>3</iAsset>
@@ -850,8 +850,8 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_TEMPLE_RABBIT</ArtDefineTag>
-			<PrereqReligion>RELIGION_SHAMAN</PrereqReligion>
-			<!--ObsoleteTech>TECH_MODERNPHYSICS</ObsoleteTech-->
+			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
+			<!--ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech-->
 			<iCost>28</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
@@ -889,13 +889,13 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_TEMPLE_SEA_LIONS</ArtDefineTag>
-			<PrereqReligion>RELIGION_SHAMAN</PrereqReligion>
-			<!--ObsoleteTech>TECH_MODERNPHYSICS</ObsoleteTech-->
+			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
+			<!--ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech-->
 			<iCost>28</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
 			<PrereqVicinityBonuses>
-				<VicinityBonus>BONUS_SEA_LIONS</VicinityBonus>
+				<VicinityBonus>BONUS_SEA_LION_AND_SEAL</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -905,7 +905,7 @@
 			</BuildingClassNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
-					<BonusType>BONUS_SEA_LIONS</BonusType>
+					<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
 					<YieldModifiers>
 						<iYield>5</iYield>
 						<iYield>0</iYield>
@@ -928,8 +928,8 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_TEMPLE_WALRUS</ArtDefineTag>
-			<PrereqReligion>RELIGION_SHAMAN</PrereqReligion>
-			<!--ObsoleteTech>TECH_MODERNPHYSICS</ObsoleteTech-->
+			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
+			<!--ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech-->
 			<iCost>28</iCost>
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>

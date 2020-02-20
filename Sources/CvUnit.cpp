@@ -481,7 +481,7 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 			gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
 		}
 
-		if (isWorldUnitClass((UnitClassTypes)(m_pUnitInfo->getUnitClassType())))
+		if (isWorldUnit(eUnit))
 		{
 			for (iI = 0; iI < MAX_PLAYERS; iI++)
 			{
@@ -1271,11 +1271,6 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 						pLoopUnit->setCapturingPlayer(NO_PLAYER);
 						pLoopUnit->setCapturingUnit(this);
 					}
-	/************************************************************************************************/
-	/* Afforess	                  Start		 09/08/10                                               */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
 					bool bSurvived = false;
 					CvPlot* pRescuePlot = NULL;
 					if (GC.getDefineINT("WAR_PRIZES"))
@@ -1325,9 +1320,6 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 					}
 					else
 					{
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
 						MEMORY_TRACK_EXEMPT();
 
 						szBuffer = gDLL->getText("TXT_KEY_MISC_UNIT_DROWNED", pLoopUnit->getNameKey());
@@ -1346,7 +1338,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 			CvEventReporter::getInstance().unitKilled(this, ePlayer);
 
 			if ( (NO_UNIT != getLeaderUnitType())
-			|| (GC.getUnitClassInfo(getUnitClassType()).getMaxGlobalInstances() == 1) )
+			|| (GC.getUnitInfo(getUnitType()).getMaxGlobalInstances() == 1) )
 			{
 				for (int iI = 0; iI < MAX_PLAYERS; iI++)
 				{
@@ -1468,18 +1460,20 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		setReconPlot(NULL);
 		setBlockading(false);
 
-		if ( isZoneOfControl() )
+/*
+		if (isZoneOfControl())
 		{
-			//for (int iJ = 0; iJ < NUM_DIRECTION_TYPES; iJ++)
-			//{
-			//	CvPlot* pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iJ));
+			for (int iJ = 0; iJ < NUM_DIRECTION_TYPES; iJ++)
+			{
+				CvPlot* pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iJ));
 
-			//	if (pAdjacentPlot != NULL)
-			//	{
-			//		pAdjacentPlot->clearZoneOfControlCache();
-			//	}
-			//}
+				if (pAdjacentPlot != NULL)
+				{
+					pAdjacentPlot->clearZoneOfControlCache();
+				}
+			}
 		}
+*/
 
 		FAssertMsg(getAttackPlot() == NULL, "The current unit instance's attack plot is expected to be NULL");
 		FAssertMsg(getCombatUnit() == NULL, "The current unit instance's combat unit is expected to be NULL");
@@ -5432,7 +5426,7 @@ int CvUnit::defenderValue(const CvUnit* pAttacker) const
 	}
 
 	iValue += currCombatStr(plot(), pAttacker);
-	if (::isWorldUnitClass(getUnitClassType()))
+	if (::isWorldUnit(getUnitType()))
 	{
 		iValue /= 2;
 	}
@@ -5558,7 +5552,7 @@ bool CvUnit::isBetterDefenderThan(const CvUnit* pDefender, const CvUnit* pAttack
 	}
 
 	iOurDefense = currCombatStr(plot(), pAttacker);
-	if (::isWorldUnitClass(getUnitClassType()))
+	if (::isWorldUnit(getUnitType()))
 	{
 		iOurDefense /= 2;
 	}
@@ -5613,7 +5607,7 @@ bool CvUnit::isBetterDefenderThan(const CvUnit* pDefender, const CvUnit* pAttack
 	iOurDefense = iOurDefense * iAssetValue / std::max(1, iAssetValue + iCargoAssetValue);
 
 	iTheirDefense = pDefender->currCombatStr(plot(), pAttacker);
-	if (::isWorldUnitClass(pDefender->getUnitClassType()))
+	if (::isWorldUnit(pDefender->getUnitType()))
 	{
 		iTheirDefense /= 2;
 	}
@@ -11084,7 +11078,7 @@ int CvUnit::destroyCost(const CvPlot* pPlot) const
 
 	if (pCity->isProductionUnit())
 	{
-		bLimited = isLimitedUnitClass((UnitClassTypes)(GC.getUnitInfo(pCity->getProductionUnit()).getUnitClassType()));
+		bLimited = isLimitedUnit(pCity->getProductionUnit());
 	}
 	else if (pCity->isProductionBuilding())
 	{
@@ -13965,23 +13959,7 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 		return NULL;
 	}
 
-	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 	CvUnitInfo& kUnitInfo = GC.getUnitInfo(eUnit);
-/************************************************************************************************/
-/* Afforess	                  Start		 02/17/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	if (!GC.getGame().isOption(GAMEOPTION_ASSIMILATION))
-	{
-		if (GC.getCivilizationInfo(kPlayer.getCivilizationType()).getCivilizationUnits(kUnitInfo.getUnitClassType()) != eUnit)
-		{
-			return NULL;
-		}
-	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	if (!upgradeAvailable(getUnitType(), ((UnitClassTypes)(kUnitInfo.getUnitClassType()))))
 	{
@@ -14024,12 +14002,10 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 				}
 			}
 
-			if (kUnitInfo.getDomainCargo() != NO_DOMAIN)
+			if (kUnitInfo.getDomainCargo() != NO_DOMAIN
+			&& kUnitInfo.getDomainCargo() != pLoopUnit->getDomainType())
 			{
-				if (kUnitInfo.getDomainCargo() != pLoopUnit->getDomainType())
-				{
-					return NULL;
-				}
+				return NULL;
 			}
 		}
 	}
@@ -16153,7 +16129,7 @@ bool CvUnit::canSiege(TeamTypes eTeam) const
 		return false;
 	}
 
-	if (GET_PLAYER(getOwner()).getID() == PASSIVE_ANIMAL_PLAYER)
+	if (GET_PLAYER(getOwner()).getID() == PREY_PLAYER)
 	{
 		return false;
 	}

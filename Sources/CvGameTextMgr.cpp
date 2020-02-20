@@ -11135,7 +11135,6 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 	CvWString szTempBuffer;
 	CvWString szImprovement;
 	BuildingTypes eLoopBuilding;
-	UnitTypes eLoopUnit;
 	bool bHasBegun = false;
 	TraitTypes eLoopTrait;
 	int iLast;
@@ -12053,22 +12052,13 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 
 		// Unit Class Production Mods
 		iLast = 0;
-		for (iI = 0; iI < GC.getNumUnitClassInfos(); ++iI)
+		for (iI = 0; iI < GC.getNumUnitInfos(); ++iI)
 		{
-			if (eCivilization == NO_CIVILIZATION)
-			{
-				eLoopUnit = ((UnitTypes)(GC.getUnitClassInfo((UnitClassTypes)iI).getDefaultUnitIndex()));
-			}
-			else
-			{
-				eLoopUnit = ((UnitTypes)(GC.getCivilizationInfo(eCivilization).getCivilizationUnits(iI)));
-			}
-
-			if (eLoopUnit != NO_UNIT && !isWorldUnitClass((UnitClassTypes)iI))
+			if (!isWorldUnit((UnitTypes)iI))
 			{
 				for (int j = 0; j < GC.getTraitInfo(eTrait).getNumUnitProductionModifiers(); j++)
 				{
-					if ((UnitTypes)GC.getTraitInfo(eTrait).getUnitProductionModifier(j).eUnit == eLoopUnit)
+					if ((UnitTypes)GC.getTraitInfo(eTrait).getUnitProductionModifier(j).eUnit == (UnitTypes)iI)
 					{
 						if (GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier != 0)
 						{
@@ -12076,7 +12066,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 
 							CvWString szUnit;
 
-							szUnit.Format(L"<link=%s>%s</link>", CvWString(GC.getUnitInfo(eLoopUnit).getType()).GetCString(), GC.getUnitInfo(eLoopUnit).getDescription());
+							szUnit.Format(L"<link=%s>%s</link>", CvWString(GC.getUnitInfo((UnitTypes)iI).getType()).GetCString(), GC.getUnitInfo((UnitTypes)iI).getDescription());
 							setListHelp(szHelpString, szText.GetCString(), szUnit, L", ", (GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier != iLast));
 							iLast = GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier;
 						}
@@ -18809,32 +18799,17 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 	}
 	else if (!GC.getGame().isOption(GAMEOPTION_LIMITED_RELIGIONS))
 	{
-		UnitClassTypes eFreeProphet = (UnitClassTypes) GC.getTechInfo(eTech).getFirstFreeProphet();
-		if (eFreeProphet != NO_UNITCLASS)
+		if (GC.getTechInfo(eTech).getFirstFreeProphet() > -1 && GC.getGame().countKnownTechNumTeams(eTech) == 0)
 		{
-			if (GC.getGame().countKnownTechNumTeams(eTech) == 0)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_TECH_FIRST_FREE_PROPHET"));
-				bFirst = false;
-			}
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_KEY_TECH_FIRST_FREE_PROPHET"));
+			bFirst = false;
 		}
 	}
 
 	bFirst = true;
 	for (iI = 0; iI < GC.getNumCorporationInfos(); ++iI)
 	{
-/************************************************************************************************/
-/* Afforess	                  Start		 07/22/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/*
-		if (!bPlayerContext || !(GC.getGame().isCorporationFounded((CorporationTypes)iI)))
-		{
-			bFirst = buildFoundCorporationString(szBuffer, eTech, iI, bFirst, true, bPlayerContext);
-		}
-*/
 		if (GC.getGame().canEverSpread((CorporationTypes)iI))
 		{
 			if (!bPlayerContext || !(GC.getGame().isCorporationFounded((CorporationTypes)iI)))
@@ -18842,9 +18817,6 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 				bFirst = buildFoundCorporationString(szBuffer, eTech, iI, bFirst, true, bPlayerContext);
 			}
 		}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	}
 
 	bFirst = true;
@@ -21867,101 +21839,58 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 
 	// test for unique unit
 	UnitClassTypes eUnitClass = (UnitClassTypes)GC.getUnitInfo(eUnit).getUnitClassType();
-	UnitTypes eDefaultUnit = (UnitTypes)GC.getUnitClassInfo(eUnitClass).getDefaultUnitIndex();
 
-/************************************************************************************************/
-/* Afforess	                  Start		 12/23/09                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	if (bNormalView)
 	{
-		if (GC.getUnitClassInfo(eUnitClass).isUnique() || eDefaultUnit != eUnit)
-		{
-			bool bFound = false;
-			for (iI  = 0; iI < GC.getNumCivilizationInfos(); ++iI)
-			{
-				UnitTypes eUniqueUnit = (UnitTypes)GC.getCivilizationInfo((CivilizationTypes)iI).getCivilizationUnits((int)eUnitClass);
-				if (eUniqueUnit == eUnit)
-				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_UNIQUE_UNIT", CvWString(GC.getCivilizationInfo((CivilizationTypes)iI).getType()).GetCString(), GC.getCivilizationInfo((CivilizationTypes)iI).getTextKeyWide()));
-					bFound = true;
-				}
-			}
-
-			if (bFound)
-			{
-				if (NO_UNIT != eDefaultUnit && eDefaultUnit != eUnit && !GC.getUnitClassInfo(eUnitClass).isUnique())
-				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_REPLACES_UNIT", CvWString(GC.getUnitInfo(eDefaultUnit).getType()).GetCString(), GC.getUnitInfo(eDefaultUnit).getTextKeyWide()));
-				}
-			}
-			else
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_RESTRICTED_UNIT"));
-			}
-		}
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
-
-
-		if (isWorldUnitClass(eUnitClass))
+		if (isWorldUnit(eUnit))
 		{
 			if (pCity == NULL)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_WORLD_UNIT_ALLOWED", GC.getUnitClassInfo(eUnitClass).getMaxGlobalInstances()));
+				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_WORLD_UNIT_ALLOWED", GC.getUnitInfo(eUnit).getMaxGlobalInstances()));
 			}
 			else
 			{
-				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_WORLD_UNIT_LEFT", (GC.getUnitClassInfo(eUnitClass).getMaxGlobalInstances() - (ePlayer != NO_PLAYER ? GC.getGame().getUnitClassCreatedCount(eUnitClass) + GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getUnitClassMaking(eUnitClass) : 0))));
+				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_WORLD_UNIT_LEFT", (GC.getUnitInfo(eUnit).getMaxGlobalInstances() - (ePlayer != NO_PLAYER ? GC.getGame().getUnitClassCreatedCount(eUnitClass) + GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getUnitClassMaking(eUnitClass) : 0))));
 			}
 		}
 
-		if (isTeamUnitClass(eUnitClass))
+/* Toffer:
+iMaxTeamInstances was unused in CvUnitClassInfo and removed as part of us shedding the unitclass object, maybe we want to add it back in for CvUnitInfo?
+
+		if (isTeamUnit(eUnit)
+		&& (!GC.getGame().isOption(GAMEOPTION_UNLIMITED_NATIONAL_UNITS) || GC.getUnitInfo(eUnit).isUnlimitedException()))
 		{
-			//TB Unlimited National Units Mod
-			if (!GC.getGame().isOption(GAMEOPTION_UNLIMITED_NATIONAL_UNITS) || GC.getUnitClassInfo(eUnitClass).isUnlimitedException())
+			if (pCity == NULL)
 			{
-				if (pCity == NULL)
-				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_UNIT_TEAM_UNIT_ALLOWED", GC.getUnitClassInfo(eUnitClass).getMaxTeamInstances()));
-				}
-				else
-				{
-					szBuffer.append(gDLL->getText("TXT_KEY_UNIT_TEAM_UNIT_LEFT", (GC.getUnitClassInfo(eUnitClass).getMaxTeamInstances() - (ePlayer != NO_PLAYER ? GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getUnitClassCountPlusMaking(eUnitClass) : 0))));
-				}
+				szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_TEAM_UNIT_ALLOWED", GC.getUnitInfo(eUnit).getMaxTeamInstances()));
 			}
-			//TB Unlimied National Units End
+			else
+			{
+				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_TEAM_UNIT_LEFT", (GC.getUnitInfo(eUnit).getMaxTeamInstances() - (ePlayer != NO_PLAYER ? GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getUnitClassCountPlusMaking(eUnitClass) : 0))));
+			}
 		}
+*/
 
-		if (isNationalUnitClass(eUnitClass))
+		if (isNationalUnit(eUnit)
+		&& (!GC.getGame().isOption(GAMEOPTION_UNLIMITED_NATIONAL_UNITS) || GC.getUnitInfo(eUnit).isUnlimitedException()))
 		{
-			//TB Unlimited National Units Mod
-			if (!GC.getGame().isOption(GAMEOPTION_UNLIMITED_NATIONAL_UNITS) || GC.getUnitClassInfo(eUnitClass).isUnlimitedException())
+			if (pCity == NULL)
 			{
-				if (pCity == NULL)
-				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_UNIT_NATIONAL_UNIT_ALLOWED", GC.getUnitClassInfo(eUnitClass).getMaxPlayerInstances()));
-				}
-				else
-				{
-					szBuffer.append(gDLL->getText("TXT_KEY_UNIT_NATIONAL_UNIT_LEFT", (GC.getUnitClassInfo(eUnitClass).getMaxPlayerInstances() - (ePlayer != NO_PLAYER ? GET_PLAYER(ePlayer).getUnitClassCountPlusMaking(eUnitClass) : 0))));
-				}
+				szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_NATIONAL_UNIT_ALLOWED", GC.getUnitInfo(eUnit).getMaxPlayerInstances()));
 			}
-			//TB Unlimied National Units End
+			else
+			{
+				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_NATIONAL_UNIT_LEFT", (GC.getUnitInfo(eUnit).getMaxPlayerInstances() - (ePlayer != NO_PLAYER ? GET_PLAYER(ePlayer).getUnitClassCountPlusMaking(eUnitClass) : 0))));
+			}
 		}
 
-		if (0 != GC.getUnitClassInfo(eUnitClass).getInstanceCostModifier())
+		if (0 != GC.getUnitInfo(eUnit).getInstanceCostModifier())
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_UNIT_INSTANCE_COST_MOD", GC.getUnitClassInfo(eUnitClass).getInstanceCostModifier()));
+			szBuffer.append(gDLL->getText("TXT_KEY_UNIT_INSTANCE_COST_MOD", GC.getUnitInfo(eUnit).getInstanceCostModifier()));
 		}
 
 
@@ -21983,10 +21912,8 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 			}
 		}
 	}
-
-// BUG - Starting Experience - start
+	// Starting Experience
 	setBasicUnitHelpWithCity(szBuffer, eUnit, bCivilopediaText, pCity, false, bTBUnitView1, bTBUnitView2, bTBUnitView3);
-// BUG - Starting Experience - end
 
 	if (bNormalView)
 	{
@@ -22074,11 +22001,8 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 			{
 				szBuffer.append(ENDCOLR);
 			}
-	/************************************************************************************************/
-	/* Afforess	Vicinity Bonus Start		 07/29/09                                            */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
+
+			// Afforess	Vicinity Bonus 07/29/09
 			if (GC.getUnitInfo(eUnit).getPrereqVicinityBonus() != NO_BONUS)
 			{
 				if ((pCity == NULL) || !(pCity->canTrain(eUnit)))
@@ -22107,9 +22031,8 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 			{
 				szBuffer.append(ENDCOLR);
 			}
-	/************************************************************************************************/
-	/* Afforess	Vicinity Bonus End       END                                                     */
-	/************************************************************************************************/
+			// Afforess	Vicinity Bonus END
+
 			if (!bCivilopediaText)
 			{
 				if (GC.getUnitInfo(eUnit).getPrereqBuilding() != NO_BUILDING)
@@ -22397,7 +22320,6 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 
 	if (bTBUnitView1)
 	{
-
 		if (bStrategyText)
 		{
 			if (!CvWString(GC.getUnitInfo(eUnit).getStrategy()).empty())
@@ -22413,25 +22335,6 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 				}
 			}
 		}
-
-		if (bCivilopediaText)
-		{
-			if (eDefaultUnit == eUnit)
-			{
-				for (iI = 0; iI < GC.getNumUnitInfos(); ++iI)
-				{
-					if (iI != eUnit)
-					{
-						if (eUnitClass == GC.getUnitInfo((UnitTypes)iI).getUnitClassType())
-						{
-							szBuffer.append(NEWLINE);
-							szBuffer.append(gDLL->getText("TXT_KEY_REPLACED_BY_UNIT", CvWString(GC.getUnitInfo((UnitTypes)iI).getType()).GetCString(), GC.getUnitInfo((UnitTypes)iI).getTextKeyWide()));
-						}
-					}
-				}
-			}
-		}
-
 	}
 
 	if (pCity != NULL && bNormalView)
@@ -25662,7 +25565,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 		}
 // BUG - Building Double Commerce - end
 
-		if (!(GC.getBuildingClassInfo((BuildingClassTypes)(kBuilding.getBuildingClassType())).isNoLimit()))
+		if (!kBuilding.isNoLimit())
 		{
 			if (isWorldWonderClass((BuildingClassTypes)(kBuilding.getBuildingClassType())))
 			{
@@ -29592,24 +29495,17 @@ void CvGameTextMgr::buildFreeUnitString(CvWStringBuffer &szBuffer, TechTypes eTe
 	{
 		eFreeUnit = GET_PLAYER(GC.getGame().getActivePlayer()).getTechFreeUnit(eTech);
 	}
-	else
+	else if (GC.getTechInfo(eTech).getFirstFreeUnit() != NO_UNIT)
 	{
-		if (GC.getTechInfo(eTech).getFirstFreeUnitClass() != NO_UNITCLASS)
-		{
-			eFreeUnit = (UnitTypes)GC.getUnitClassInfo((UnitClassTypes)GC.getTechInfo(eTech).getFirstFreeUnitClass()).getDefaultUnitIndex();
-		}
+		eFreeUnit = (UnitTypes)GC.getTechInfo(eTech).getFirstFreeUnit();
 	}
-
-	if (eFreeUnit != NO_UNIT)
+	if (eFreeUnit != NO_UNIT && (!bPlayerContext || GC.getGame().countKnownTechNumTeams(eTech) == 0))
 	{
-		if (!bPlayerContext || (GC.getGame().countKnownTechNumTeams(eTech) == 0))
+		if (bList)
 		{
-			if (bList)
-			{
-				szBuffer.append(NEWLINE);
-			}
-			szBuffer.append(gDLL->getText("TXT_KEY_TECH_FIRST_RECEIVES", CvWString(GC.getUnitInfo(eFreeUnit).getType()).GetCString(), GC.getUnitInfo(eFreeUnit).getTextKeyWide()));
+			szBuffer.append(NEWLINE);
 		}
+		szBuffer.append(gDLL->getText("TXT_KEY_TECH_FIRST_RECEIVES", CvWString(GC.getUnitInfo(eFreeUnit).getType()).GetCString(), GC.getUnitInfo(eFreeUnit).getTextKeyWide()));
 	}
 }
 
@@ -40608,46 +40504,37 @@ void CvGameTextMgr::getCorporationDataForWB(bool bHeadquarters, std::vector<CvWB
 /************************************************************************************************/
 void CvGameTextMgr::buildCanPassPeaksString(CvWStringBuffer &szBuffer, TechTypes eTech, bool bList, bool bPlayerContext)
 {
-	if (GC.getGame().isOption(GAMEOPTION_MOUNTAINS))
+	if (GC.getTechInfo(eTech).isCanPassPeaks() && (!bPlayerContext || !(GET_TEAM(GC.getGame().getActiveTeam()).isCanPassPeaks())))
 	{
-		if (GC.getTechInfo(eTech).isCanPassPeaks() && (!bPlayerContext || !(GET_TEAM(GC.getGame().getActiveTeam()).isCanPassPeaks())))
+		if (bList)
 		{
-			if (bList)
-			{
-				szBuffer.append(NEWLINE);
-			}
-			szBuffer.append(gDLL->getText("TXT_KEY_CAN_PASS_PEAKS"));
+			szBuffer.append(NEWLINE);
 		}
+		szBuffer.append(gDLL->getText("TXT_KEY_CAN_PASS_PEAKS"));
 	}
 }
 
 void CvGameTextMgr::buildMoveFastPeaksString(CvWStringBuffer &szBuffer, TechTypes eTech, bool bList, bool bPlayerContext)
 {
-	if (GC.getGame().isOption(GAMEOPTION_MOUNTAINS))
+	if (GC.getTechInfo(eTech).isMoveFastPeaks() && (!bPlayerContext || !(GET_TEAM(GC.getGame().getActiveTeam()).isMoveFastPeaks())))
 	{
-		if (GC.getTechInfo(eTech).isMoveFastPeaks() && (!bPlayerContext || !(GET_TEAM(GC.getGame().getActiveTeam()).isMoveFastPeaks())))
+		if (bList)
 		{
-			if (bList)
-			{
-				szBuffer.append(NEWLINE);
-			}
-			szBuffer.append(gDLL->getText("TXT_KEY_MOVE_FAST_PEAKS"));
+			szBuffer.append(NEWLINE);
 		}
+		szBuffer.append(gDLL->getText("TXT_KEY_MOVE_FAST_PEAKS"));
 	}
 }
 
 void CvGameTextMgr::buildCanFoundOnPeaksString(CvWStringBuffer &szBuffer, TechTypes eTech, bool bList, bool bPlayerContext)
 {
-	if (GC.getGame().isOption(GAMEOPTION_MOUNTAINS))
+	if (GC.getTechInfo(eTech).isCanFoundOnPeaks() && (!bPlayerContext || !(GET_TEAM(GC.getGame().getActiveTeam()).isCanFoundOnPeaks())))
 	{
-		if (GC.getTechInfo(eTech).isCanFoundOnPeaks() && (!bPlayerContext || !(GET_TEAM(GC.getGame().getActiveTeam()).isCanFoundOnPeaks())))
+		if (bList)
 		{
-			if (bList)
-			{
-				szBuffer.append(NEWLINE);
-			}
-			szBuffer.append(gDLL->getText("TXT_KEY_CAN_FOUND_ON_PEAKS"));
+			szBuffer.append(NEWLINE);
 		}
+		szBuffer.append(gDLL->getText("TXT_KEY_CAN_FOUND_ON_PEAKS"));
 	}
 }
 

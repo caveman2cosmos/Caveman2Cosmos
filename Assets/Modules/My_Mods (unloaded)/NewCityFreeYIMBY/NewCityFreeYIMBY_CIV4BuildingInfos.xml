@@ -175,7 +175,7 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_MUSIC_HUT</BuildingClass>
 			<Type>BUILDING_MUSIC_HUT</Type>
-			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_MUSIC</ID></Has></NewCityFree>
+			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_MUSICAL_NOTATION</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_TORCHES</BuildingClass>
@@ -195,7 +195,7 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_GRANARY</BuildingClass>
 			<Type>BUILDING_GRANARY</Type>
-			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_PESTICIDES</ID></Has></NewCityFree>
+			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_AGRICULTURAL_ENGINEERING</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_PORTRAIT_PAINTER</BuildingClass>

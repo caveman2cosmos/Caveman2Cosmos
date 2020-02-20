@@ -10,11 +10,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_STATION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iCost>-1</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>-20</iCommerce>
@@ -33,7 +33,7 @@
 			</TechHealthChanges>
 			<TechYieldChanges>
 				<TechYieldChange>
-					<PrereqTech>TECH_AUGMENT_CONSUMABLES</PrereqTech>
+					<PrereqTech>TECH_AUGMENTED_CONSUMABLES</PrereqTech>
 					<TechYield>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -59,11 +59,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_STORM_SHELTER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iCost>528</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -86,11 +86,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_TELESCOPE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iCost>528</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
@@ -106,11 +106,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_AGRICULTURAL_LAB</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_AUGMENT_CONSUMABLES</PrereqTech>
+			<PrereqTech>TECH_AUGMENTED_CONSUMABLES</PrereqTech>
 			<iCost>702</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
@@ -129,7 +129,7 @@
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_AGERMINATION</PrereqTech>
+					<PrereqTech>TECH_ACCELERATED_GERMINATION</PrereqTech>
 					<TechYield>
 						<iYield>1</iYield>
 					</TechYield>
@@ -141,7 +141,7 @@
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_APHOTOSYNTHESIS</PrereqTech>
+					<PrereqTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -158,11 +158,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_MATERIALS_LAB</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_LIQUIDMETAL</PrereqTech>
+			<PrereqTech>TECH_LIQUID_METALS</PrereqTech>
 			<iCost>528</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
@@ -182,14 +182,14 @@
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_SUPERCHARGED_CRYSTALS</PrereqTech>
+					<PrereqTech>TECH_SUPERCHARGED_CRYSTALLOGRAPHY</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_NANOBOTICS</PrereqTech>
+					<PrereqTech>TECH_NANOROBOTICS</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -210,7 +210,7 @@
 			<iCost>612</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>200</iCommerce>
@@ -233,10 +233,10 @@
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<PrereqTech>TECH_MASS_DRIVER</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+				<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			</TechTypes>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
@@ -289,7 +289,7 @@
 			<iCost>1421</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -313,11 +313,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_GOV</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_BINARYLEGISLATION</PrereqTech>
+			<PrereqTech>TECH_BINARY_LEGISLATION</PrereqTech>
 			<iCost>1921</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>-3</iCommerce>
@@ -333,7 +333,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_ELDER_COUNCIL</PrereqTech>
+					<PrereqTech>TECH_GERONTOCRACY</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -397,7 +397,7 @@
 			<iCost>2110</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>-1</iYield>
@@ -433,7 +433,7 @@
 			<iCost>1279</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>800</iCommerce>
@@ -458,7 +458,7 @@
 			<iCost>800</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>400</iCommerce>
@@ -487,7 +487,7 @@
 			<iCost>528</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<iHealth>1</iHealth>
 			<TechYieldChanges>
@@ -517,10 +517,10 @@
 			<Type>BUILDING_ORBITAL_DRYDOCK</Type>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ORBITAL_DRYDOCK</Description>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<Strategy>TXT_KEY_BUILDING_ORBITAL_DRYDOCK_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_DRYDOCK</ArtDefineTag>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -558,10 +558,10 @@
 			<Type>BUILDING_ORBITAL_LABS</Type>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ORBITAL_LABS</Description>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<Strategy>TXT_KEY_BUILDING_ORBITAL_LABS_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_LABS</ArtDefineTag>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -584,10 +584,10 @@
 			<Type>BUILDING_ORBITAL_FACTORY</Type>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ORBITAL_FACTORY</Description>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<Strategy>TXT_KEY_BUILDING_ORBITAL_FACTORY_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_FACTORY</ArtDefineTag>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -601,7 +601,7 @@
 			</YieldChanges>
 			<TechYieldChanges>
 				<TechYieldChange>
-					<PrereqTech>TECH_ANIMA_MATERIALS</PrereqTech>
+					<PrereqTech>TECH_ANIMAMATERIALS</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>10</iYield>
@@ -610,7 +610,7 @@
 			</TechYieldChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_SUPERCHARGED_CRYSTALS</PrereqTech>
+					<PrereqTech>TECH_SUPERCHARGED_CRYSTALLOGRAPHY</PrereqTech>
 					<TechCommerce>
 						<iCommerce>10</iCommerce>
 					</TechCommerce>
@@ -623,10 +623,10 @@
 			<Type>BUILDING_ZERO_G_SPORTS_ARENA</Type>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ZERO_G_SPORTS_ARENA</Description>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<Strategy>TXT_KEY_BUILDING_ZERO_G_SPORTS_ARENA_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_ZERO_G_SPORTS_ARENA</ArtDefineTag>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -643,10 +643,10 @@
 			<Type>BUILDING_ZEROG_MEDICAL_LAB</Type>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ZEROG_MEDICAL_LAB</Description>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<Strategy>TXT_KEY_BUILDING_ZEROG_MEDICAL_LAB_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_ZEROG_MEDICAL_LAB</ArtDefineTag>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -663,10 +663,10 @@
 			<Type>BUILDING_MICROSATELLITE_CONSTELLATION</Type>
 			<iCost>528</iCost>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_MICROSATELLITE_CONSTELLATION</Description>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<Strategy>TXT_KEY_BUILDING_MICROSATELLITE_CONSTELLATION_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_MICROSATELLITE_CONSTELLATION</ArtDefineTag>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -694,11 +694,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DOCKING_BAY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iCost>528</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>5</iYield>
@@ -717,7 +717,7 @@
 			</TechYieldChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_KUIPER_BELT</PrereqTech>
+					<PrereqTech>TECH_KUIPER_BELT_EXPLORATION</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>5</iCommerce>
@@ -734,11 +734,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AEROGEL_SHIELDING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iCost>528</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>5</iYield>
@@ -770,11 +770,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INFLATABLE_HABITAT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iCost>528</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>4</iYield>
@@ -790,11 +790,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_SOLAR_ARRAY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iCost>528</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -815,7 +815,7 @@
 			<iCost>1279</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<iAdjacentDamagePercent>10</iAdjacentDamagePercent>
 			<iDefense>30</iDefense>
@@ -835,11 +835,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TURBOLIFT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SRAILS</PrereqTech>
+			<PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
 			<iCost>1144</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -862,11 +862,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_REFUELING_STATION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<iCost>702</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>200</iCommerce>
@@ -888,7 +888,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<FreeBonus>BONUS_ROCKETFUEL</FreeBonus>
+			<FreeBonus>BONUS_ROCKET_FUEL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -900,11 +900,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_ASTEROID_MINE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iCost>528</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -934,7 +934,7 @@
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
@@ -955,7 +955,7 @@
 			<iCost>1577</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>40</iCommerce>
@@ -991,7 +991,7 @@
 			<iCost>905</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<iDefense>50</iDefense>
 			<iBombardDefense>20</iBombardDefense>
@@ -1013,7 +1013,7 @@
 			<iCost>1577</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<iDefense>50</iDefense>
 			<CommerceChanges>
@@ -1057,7 +1057,7 @@
 			<iCost>1144</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>200</iCommerce>
@@ -1090,7 +1090,7 @@
 			<iCost>800</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>1000</iCommerce>
@@ -1138,7 +1138,7 @@
 			<iCost>1144</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
@@ -1172,7 +1172,7 @@
 			<iCost>1577</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>200</iCommerce>
@@ -1218,7 +1218,7 @@
 			<iCost>1577</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>800</iCommerce>
@@ -1252,7 +1252,7 @@
 			<iCost>2110</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>10</iYield>
@@ -1282,7 +1282,7 @@
 			<iCost>2544</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>5</iYield>
@@ -1330,7 +1330,7 @@
 			<iCost>1921</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>-8</iCommerce>
@@ -1356,7 +1356,7 @@
 			<iCost>2317</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>-20</iCommerce>
@@ -1397,7 +1397,7 @@
 			<Type>BUILDING_NANOSATELLITE_CONSTELLATION</Type>
 			<iCost>1500</iCost>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NANOSATELLITE_CONSTELLATION</Description>
 			<PrereqTech>TECH_ASTROGATION_CONSTELLATION</PrereqTech>
@@ -1432,11 +1432,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CRYONIC_BODY_STORAGE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_CRYOGENICS</PrereqTech>
+			<PrereqTech>TECH_CRYONICS</PrereqTech>
 			<iCost>2317</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>120</iCommerce>
@@ -1473,7 +1473,7 @@
 			<iCost>2544</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>400</iCommerce>
@@ -1511,7 +1511,7 @@
 			<iCost>2793</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>10</iYield>
@@ -1551,7 +1551,7 @@
 			<iCost>10158</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<iAdjacentDamagePercent>20</iAdjacentDamagePercent>
 			<iDefense>50</iDefense>
@@ -1581,7 +1581,7 @@
 			<iCost>4408</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>-30</iCommerce>
@@ -1620,7 +1620,7 @@
 			<iCost>25157</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>400</iCommerce>
@@ -1650,7 +1650,7 @@
 			<iCost>4032</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>-30</iCommerce>
@@ -1680,7 +1680,7 @@
 			<iCost>3362</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -1707,11 +1707,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_CLAYTRONIC</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_ATTOMETER_NANOMORPHISM</PrereqTech>
+			<PrereqTech>TECH_NANOMORPHIC_TROIDS</PrereqTech>
 			<iCost>9246</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -1742,7 +1742,7 @@
 			<iCost>9246</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
@@ -1768,11 +1768,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WORMHOLE_TO_EARTH</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_MICROWORMHOLES</PrereqTech>
+			<PrereqTech>TECH_COMPACT_WORMHOLES</PrereqTech>
 			<iCost>24466</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>200</iCommerce>
@@ -1802,7 +1802,7 @@
 			<iCost>14852</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -1829,7 +1829,7 @@
 			<iCost>14852</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
@@ -1863,7 +1863,7 @@
 			<iCost>11410</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
@@ -1902,7 +1902,7 @@
 			<iCost>25857</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>20</iCommerce>
@@ -1932,7 +1932,7 @@
 			<iCost>10158</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>400</iCommerce>
@@ -1955,7 +1955,7 @@
 			<iCost>27966</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>10</iYield>
@@ -1992,10 +1992,10 @@
 			<Type>BUILDING_ORBITAL_PRISON</Type>
 			<iCost>1056</iCost>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ORBITAL_PRISON</Description>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<Strategy>TXT_KEY_BUILDING_ORBITAL_PRISON_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_PRISON</ArtDefineTag>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -2026,7 +2026,7 @@
 			<iCost>13448</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>800</iCommerce>
@@ -2057,7 +2057,7 @@
 			<iCost>44556</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>1200</iCommerce>
@@ -2080,11 +2080,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_SOLAR_SATELLITES</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_LUNAR_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<iCost>2106</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>2000</iCommerce>
@@ -2121,7 +2121,7 @@
 			<iCost>6311</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>4000</iCommerce>
@@ -2160,7 +2160,7 @@
 			<iCost>11175</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>400</iCommerce>
@@ -2200,7 +2200,7 @@
 			<iCost>10179</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -2235,7 +2235,7 @@
 			<iCost>27966</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>2000</iCommerce>
@@ -2257,11 +2257,11 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_FASCIST</CivicOption>
+					<CivicOption>CIVIC_TOTALITARIANISM</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -2285,7 +2285,7 @@
 			<iCost>5116</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<FreeBuilding>BUILDINGCLASS_CISLUNAR_ION_CANNON</FreeBuilding>
 			<BuildingClassNeededs>

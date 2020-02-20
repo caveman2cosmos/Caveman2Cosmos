@@ -285,9 +285,7 @@ protected:
 	int m_iLimitedWarPowerRatio;
 	int m_iDogpileWarRand;
 	int m_iMakePeaceRand;
-	
-	void read2(FDataStreamBase* pStream);
-	void write2(FDataStreamBase* pStream);
+
 	//edited functions
 	int AI_noTechTradeThreshold(bool bRecalculate = false) const;
 	int AI_techTradeKnownPercent(bool bRecalculate = false) const;

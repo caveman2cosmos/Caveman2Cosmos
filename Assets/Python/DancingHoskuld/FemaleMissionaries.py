@@ -45,7 +45,7 @@ def onUnitBuilt(argsList):
 		iFemaleUnitType = GC.getInfoTypeForString(sFemaleUnitType)
 
 		if iFemaleUnitType > -1:
-			if CyPlayer.isCivic(GC.getInfoTypeForString('CIVIC_LIBERAL')):
+			if CyPlayer.isCivic(GC.getInfoTypeForString('CIVIC_EGALITARIAN')):
 				iFemaleChance = 50
 			else:
 				iFemaleChance = 15

@@ -138,7 +138,6 @@ class CvMainInterface:
 			self.iNumEmphasizeInfos 	= GC.getNumEmphasizeInfos()
 			self.iNumHurryInfos			= GC.getNumHurryInfos()
 			self.iNumProjectInfos		= GC.getNumProjectInfos()
-			self.iNumUnitClassInfos		= GC.getNumUnitClassInfos()
 			self.iNumProcessInfos		= GC.getNumProcessInfos()
 			self.iNumSpecialistInfos	= iNumSpecialistInfos = GC.getNumSpecialistInfos()
 			self.aSpecialistIconList = aSpecialistIconList = []
@@ -3661,11 +3660,12 @@ class CvMainInterface:
 					continue
 				for i in xrange(iNumInGroup):
 					iType = CyCity.getBuildingListType(iGroup, i)
-					iBuildingClass = GC.getBuildingInfo(iType).getBuildingClassType()
+					CvBuildingInfo = GC.getBuildingInfo(iType)
+					iBuildingClass = CvBuildingInfo.getBuildingClassType()
 					if not isLimitedWonderClass(iBuildingClass):
 						break
 
-					if GC.getBuildingClassInfo(iBuildingClass).isNoLimit():
+					if CvBuildingInfo.isNoLimit():
 						aList0.append(iType)
 
 					elif isNationalWonderClass(iBuildingClass):

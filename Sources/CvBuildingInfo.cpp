@@ -33,6 +33,7 @@ m_iDCMAirbombMission(0),
 /************************************************************************************************/
 
 m_iBuildingClassType(NO_BUILDINGCLASS),
+m_bNoLimit(false),
 m_iVictoryPrereq(NO_VICTORY),
 m_iFreeStartEra(NO_ERA),
 m_iMaxStartEra(NO_ERA),
@@ -486,6 +487,11 @@ CvBuildingInfo::~CvBuildingInfo()
 int CvBuildingInfo::getBuildingClassType() const
 {
 	return m_iBuildingClassType;
+}
+
+bool CvBuildingInfo::isNoLimit() const
+{
+	return m_bNoLimit;
 }
 
 int CvBuildingInfo::getVictoryPrereq() const
@@ -3138,6 +3144,7 @@ bool CvBuildingInfo::EnablesUnits() const
 void CvBuildingInfo::getCheckSum(unsigned int& iSum)
 {
 	CheckSum(iSum, m_iBuildingClassType);
+	CheckSum(iSum, m_bNoLimit);
 	CheckSum(iSum, m_iVictoryPrereq);
 	CheckSum(iSum, m_iFreeStartEra);
 	CheckSum(iSum, m_iMaxStartEra);
@@ -3643,6 +3650,8 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Advisor");
 	m_iAdvisorType = pXML->GetInfoClass(szTextVal);
+
+	pXML->GetOptionalChildXmlValByName(&m_bNoLimit, L"bNoLimit");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"ArtDefineTag");
 	setArtDefineTag(szTextVal);
@@ -5443,6 +5452,8 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 	if (getBuildingClassType() == iTextDefault) m_iBuildingClassType = pClassInfo->getBuildingClassType();
 	if (getSpecialBuildingType() == iTextDefault) m_iSpecialBuildingType = pClassInfo->getSpecialBuildingType();
 	if (getAdvisorType() == iTextDefault) m_iAdvisorType = pClassInfo->getAdvisorType();
+
+	if (isNoLimit() == bDefault) m_bNoLimit = pClassInfo->isNoLimit();
 
 /********************************************************************************/
 /**		REVDCM									2/16/10				phungus420	*/

@@ -6,7 +6,7 @@
 <!-- Game Text - New -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_CULTURE_DIESELPUNK</Tag>
+		<Tag>TXT_KEY_TECH_DIESELPUNK</Tag>
 		<English>Dieselpunk</English>
 		<French>Diesel-punk</French>
 		<Spanish>
@@ -16,16 +16,16 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CULTURE_DIESELPUNK_PEDIA</Tag>
+		<Tag>TXT_KEY_TECH_DIESELPUNK_PEDIA</Tag>
 		<English>[BOLD]Dieselpunk[\BOLD], A manipulation on an alternate version of a future 1950s from the developed technology and society of the 1930's, where the Great Depression never arrived and World War II is still being fought as a prolonged Cold War. In turn, Japan continues its progress towards technological modernization, developing the earliest computers and terminals. Nazi scientists continue experimenting by taking the route of biotechnology, sparking off a genetic revolution of bio-mods, clones, and organ harvesting. Whilst the Americans and British take both of these technologies to develop mind-control devices, spawning man-machine interfaces and sparking the atomic-powered machine age.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CULTURE_DIESELPUNK_QUOTE</Tag>
+		<Tag>TXT_KEY_TECH_DIESELPUNK_QUOTE</Tag>
 		<English>"Progress has not followed a straight ascending line, but a spiral with rhythms of progress and retrogression, of evolution and dissolution." - Johann Wolfgang von Goethe</English>
 		<French>"Le Progrès n'évolue pas comme une ligne droite ascendante, mais plutôt comme une spirale, avec des périodes de progrès, d'autres de régression. De l'évolution et de la dissolution." - Johann Wolfgang von Goethe</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CULTURE_DIESELPUNK_STRATEGY</Tag>
+		<Tag>TXT_KEY_TECH_DIESELPUNK_STRATEGY</Tag>
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>

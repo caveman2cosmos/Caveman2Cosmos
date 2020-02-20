@@ -5,11 +5,11 @@
 		<TechInfo>
 			<!-- Ngaiism -->
 			<Type>TECH_NGAIISM</Type>
-			<Description>TXT_KEY_RELIGION_NGAI</Description>
-			<Civilopedia>TXT_KEY_RELIGION_NGAI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_RELIGION_NGAI_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_NGAIISM</Description>
+			<Civilopedia>TXT_KEY_TECH_NGAIISM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_NGAIISM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<Quote>TXT_KEY_RELIGION_NGAI_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_NGAIISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_NGAIISM</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Ngai.dds</Button>
@@ -17,7 +17,7 @@
 			<iCost>242</iCost>
 			<bGlobal>1</bGlobal>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<Era>ERA_SEDENTARY</Era>
+			<Era>C2C_ERA_ANCIENT</Era>
 			<OrPreReqs>
 				<PrereqTech>TECH_DUALISM</PrereqTech>
 			</OrPreReqs>
@@ -25,7 +25,7 @@
 				<PrereqTech>TECH_STARGAZING</PrereqTech>
 			</AndPreReqs>
 			<!-- Special effects -->
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<!-- System -->
 			<iAsset>8</iAsset>
 			<iGridX>28</iGridX>

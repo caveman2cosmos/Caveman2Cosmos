@@ -8,7 +8,7 @@
 	<CivicInfos>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_GOVERNMENT</CivicOptionType>
-			<Type>CIVIC_NOOCRACY</Type>
+			<Type>CIVIC_GESTALT_MIND</Type>
             <BuildingClassProductionModifiers>
 				<BuildingClassProductionModifier>
 					<BuildingClassType>BUILDINGCLASS_NETWORK_NODE</BuildingClassType>
@@ -28,7 +28,7 @@
 		</CivicInfo>
         <CivicInfo>
 			<CivicOptionType>CIVICOPTION_RULE</CivicOptionType>
-			<Type>CIVIC_MACHINERULE</Type>
+			<Type>CIVIC_MACHINE_RULE</Type>
 			<BuildingClassProductionModifiers>
 				<BuildingClassProductionModifier>
 					<BuildingClassType>BUILDINGCLASS_AI_INVESTMENT</BuildingClassType>
@@ -50,7 +50,7 @@
 		</CivicInfo>
         <CivicInfo>
 			<CivicOptionType>CIVICOPTION_EDUCATION</CivicOptionType>
-			<Type>CIVIC_UNIVERSAL_KNOWLEDGE</Type>
+			<Type>CIVIC_OMNISCIENCE</Type>
             <BuildingClassProductionModifiers>
 				<BuildingClassProductionModifier>
 					<BuildingClassType>BUILDINGCLASS_UNIVERSAL_LIBRARY</BuildingClassType>
@@ -64,7 +64,7 @@
 		</CivicInfo>
         <CivicInfo>
 			<CivicOptionType>CIVICOPTION_AGICULTURE</CivicOptionType>
-			<Type>CIVIC_FARM_ALGAE</Type>
+			<Type>CIVIC_LAB_GROWN_FOOD</Type>
             <BuildingClassProductionModifiers>
                 <BuildingClassProductionModifier>
 					<BuildingClassType>BUILDINGCLASS_SYNTHETIC_MEAT_BIOREACTOR</BuildingClassType>

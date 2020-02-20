@@ -7,10 +7,10 @@
 <Civ4TerrainInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4TerrainSchema.xml">
 	<TerrainInfos>
         <TerrainInfo>
-			<Type>TERRAIN_SLIMY_COAST</Type>
-			<Description>TXT_KEY_TERRAIN_SLIMY_COAST</Description>
-			<Civilopedia>TXT_KEY_TERRAIN_SLIMY_COAST_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_TERRAIN_SLIMY_COAST</ArtDefineTag>
+			<Type>TERRAIN_INFECTED_WATER</Type>
+			<Description>TXT_KEY_TERRAIN_INFECTED_WATER</Description>
+			<Civilopedia>TXT_KEY_TERRAIN_INFECTED_WATER_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_TERRAIN_INFECTED_WATER</ArtDefineTag>
 			<bWater>1</bWater>
 			<iMovement>6</iMovement>
 			<Yields>
@@ -148,10 +148,10 @@
 			<WorldSoundscapeAudioScript>ASSS_COAST_SELECT_AMB</WorldSoundscapeAudioScript>
 		</TerrainInfo>
 		<TerrainInfo>
-			<Type>TERRAIN_SLIMY_OCEAN</Type>
-			<Description>TXT_KEY_TERRAIN_SLIMY_OCEAN</Description>
-			<Civilopedia>TXT_KEY_TERRAIN_SLIMY_OCEAN_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_TERRAIN_SLIMY_OCEAN</ArtDefineTag>
+			<Type>TERRAIN_PLAGUED_WATER</Type>
+			<Description>TXT_KEY_TERRAIN_PLAGUED_WATER</Description>
+			<Civilopedia>TXT_KEY_TERRAIN_PLAGUED_WATER_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_TERRAIN_PLAGUED_WATER</ArtDefineTag>
 			<bWater>1</bWater>
 			<iMovement>20</iMovement>
 			<Yields>

@@ -10,7 +10,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_COLONY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_PLANET_COLONIZATION</PrereqTech>
+			<PrereqTech>TECH_PLANETARY_COLONIZATION</PrereqTech>
 			<iCost>-1</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -33,7 +33,7 @@
 			</TechHealthChanges>
 			<TechYieldChanges>
 				<TechYieldChange>
-					<PrereqTech>TECH_AUGMENT_CONSUMABLES</PrereqTech>
+					<PrereqTech>TECH_AUGMENTED_CONSUMABLES</PrereqTech>
 					<TechYield>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -59,7 +59,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_CITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_APHOTOSYNTHESIS</PrereqTech>
+			<PrereqTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</PrereqTech>
 			<iCost>1921</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -215,7 +215,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_SOLAR_ARRAY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_PLANET_COLONIZATION</PrereqTech>
+			<PrereqTech>TECH_PLANETARY_COLONIZATION</PrereqTech>
 			<iCost>702</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -243,7 +243,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_VERTICAL_WIND_FARM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_PLANET_EXTRACTION</PrereqTech>
+			<PrereqTech>TECH_PLANETARY_EXTRACTION</PrereqTech>
 			<iCost>800</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -274,7 +274,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_OXYGEN_GENERATOR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SUPERFLUOUS_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
 			<iCost>905</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -291,7 +291,7 @@
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 			<bPrereqPower>1</bPrereqPower>
-			<FreeBonus>BONUS_ROCKETFUEL</FreeBonus>
+			<FreeBonus>BONUS_ROCKET_FUEL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -303,7 +303,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_HYDROGEN_GENERATOR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SUPERFLUOUS_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
 			<iCost>905</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -330,7 +330,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_CARBONWORKS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SUPERFLUOUS_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
 			<iCost>905</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -358,7 +358,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WARE_COPPER</FreeBonus>
+					<FreeBonus>BONUS_COPPER_WARES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -372,7 +372,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_MAGLEV</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SRAILS</PrereqTech>
+			<PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
 			<iCost>1144</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -400,7 +400,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_ECOSYSTEM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_QUADRUPLEHELIX</PrereqTech>
+			<PrereqTech>TECH_QUADRUPLE_HELIX</PrereqTech>
 			<iCost>2110</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -457,7 +457,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_GOVERNING_COUNCIL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_BINARYLEGISLATION</PrereqTech>
+			<PrereqTech>TECH_BINARY_LEGISLATION</PrereqTech>
 			<iCost>1921</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -525,7 +525,7 @@
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
-			<Bonus>BONUS_ROCKETFUEL</Bonus>
+			<Bonus>BONUS_ROCKET_FUEL</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_VENUS_DEUTERIUM_EXPORTER</BuildingClass>
@@ -795,7 +795,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_HOTEL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_VASIMR_PROPULSION</PrereqTech>
+			<PrereqTech>TECH_FUSION_SPACECRAFT</PrereqTech>
 			<iCost>7666</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -949,7 +949,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_MEGAFACTORY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_ASTROINDUSTRIALISM</PrereqTech>
+			<PrereqTech>TECH_FORGE_WORLDS</PrereqTech>
 			<iCost>12267</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -979,7 +979,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VENUS_CLAYTRONIC_CITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_ATTOMETER_NANOMORPHISM</PrereqTech>
+			<PrereqTech>TECH_NANOMORPHIC_TROIDS</PrereqTech>
 			<iCost>9246</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>

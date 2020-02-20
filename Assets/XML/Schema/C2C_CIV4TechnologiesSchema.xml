@@ -57,7 +57,7 @@
 	<ElementType name="iAdvancedStartCost" content="textOnly" dt:type="int"/>
 	<ElementType name="iAdvancedStartCostIncrease" content="textOnly" dt:type="int"/>
 	<ElementType name="Era" content="textOnly"/>
-	<ElementType name="FirstFreeUnitClass" content="textOnly"/>
+	<ElementType name="FirstFreeUnit" content="textOnly"/>
 	<ElementType name="FirstFreeProphet" content="textOnly"/>
 	<ElementType name="iFeatureProductionModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iWorkerSpeedModifier" content="textOnly" dt:type="int"/>
@@ -186,7 +186,7 @@
 		<element type="iAdvancedStartCost" minOccurs="0"/>
 		<element type="iAdvancedStartCostIncrease" minOccurs="0"/>
 		<element type="Era" minOccurs="0"/>
-		<element type="FirstFreeUnitClass" minOccurs="0"/>
+		<element type="FirstFreeUnit" minOccurs="0"/>
 		<element type="FirstFreeProphet" minOccurs="0"/>
 		<element type="iFeatureProductionModifier" minOccurs="0"/>
 		<element type="iWorkerSpeedModifier" minOccurs="0"/>

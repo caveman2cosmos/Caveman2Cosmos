@@ -175,11 +175,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PAVED</BuildType>
+					<BuildType>BUILD_PAVED_ROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERN_ROAD</BuildType>
+					<BuildType>BUILD_HIGHWAY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -187,11 +187,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_RAILROAD_ELECTRIC</BuildType>
+					<BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GRAIN_GATHERER_2</BuildType>
+					<BuildType>BUILD_SEED_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -199,7 +199,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_ROCK_GATHERER_2</BuildType>
+					<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -227,7 +227,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_LUMBER_JACK</BuildType>
+					<BuildType>BUILD_LUMBERJACK</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -259,7 +259,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_CAMP</BuildType>
+					<BuildType>BUILD_HUNTING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -267,11 +267,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TAR_GATHERER2</BuildType>
+					<BuildType>BUILD_TAR_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WELL</BuildType>
+					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -299,7 +299,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SUBURB</BuildType>
+					<BuildType>BUILD_SUBURBS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -323,7 +323,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_FOREST</BuildType>
+					<BuildType>BUILD_YOUNG_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -331,15 +331,15 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WOODEN_TOWER</BuildType>
+					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE_CACHE</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PALISADE</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -347,7 +347,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -359,11 +359,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_SWAMP</BuildType>
+					<BuildType>BUILD_DRAIN_SWAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORM</BuildType>
+					<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>

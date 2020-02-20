@@ -25,7 +25,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_HIGH_GOLD</Type>
@@ -46,7 +46,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_ANCIENT_LOW_GOLD</Type>
@@ -67,7 +67,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_ANCIENT_HIGH_GOLD</Type>
@@ -88,7 +88,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_CLASSICAL_LOW_GOLD</Type>
@@ -109,7 +109,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_CLASSICAL_HIGH_GOLD</Type>
@@ -130,7 +130,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MEDIEVAL_LOW_GOLD</Type>
@@ -151,7 +151,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MEDIEVAL_HIGH_GOLD</Type>
@@ -172,7 +172,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_RENAISSANCE_LOW_GOLD</Type>
@@ -193,7 +193,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_RENAISSANCE</EraType>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_RENAISSANCE_HIGH_GOLD</Type>
@@ -214,7 +214,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_RENAISSANCE</EraType>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_INDUSTRIAL_LOW_GOLD</Type>
@@ -235,7 +235,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_INDUSTRIAL</EraType>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_INDUSTRIAL_HIGH_GOLD</Type>
@@ -256,7 +256,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_INDUSTRIAL</EraType>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MODERN_LOW_GOLD</Type>
@@ -277,7 +277,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MODERN_HIGH_GOLD</Type>
@@ -298,7 +298,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_INFORMATION_LOW_GOLD</Type>
@@ -319,7 +319,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_INFORMATION</EraType>
+			<EraType>C2C_ERA_INFORMATION</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_INFORMATION_HIGH_GOLD</Type>
@@ -340,7 +340,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_INFORMATION</EraType>
+			<EraType>C2C_ERA_INFORMATION</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NANOTECH_LOW_GOLD</Type>
@@ -361,7 +361,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_NANOTECH</EraType>
+			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NANOTECH_HIGH_GOLD</Type>
@@ -382,7 +382,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_NANOTECH</EraType>
+			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_LOW_RESEARCH</Type>
@@ -463,7 +463,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_SETTLER</Type>
@@ -484,7 +484,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_SETTLER2</Type>
@@ -505,7 +505,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_SETTLER3</Type>
@@ -526,7 +526,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_COLONIST</Type>
@@ -547,7 +547,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_RENAISSANCE</EraType>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_PIONEER</Type>
@@ -568,7 +568,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_INDUSTRIAL</EraType>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_AIRSETTLER</Type>
@@ -589,7 +589,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_EXPERIENCE</Type>
@@ -610,7 +610,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_ANCIENT_EXPERIENCE</Type>
@@ -631,7 +631,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_CLASSICAL_EXPERIENCE</Type>
@@ -652,7 +652,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MEDIEVAL_EXPERIENCE</Type>
@@ -673,7 +673,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_RENAISSANCE_EXPERIENCE</Type>
@@ -694,7 +694,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_RENAISSANCE</EraType>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_INDUSTRIAL_EXPERIENCE</Type>
@@ -715,7 +715,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_INDUSTRIAL</EraType>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MODERN_EXPERIENCE</Type>
@@ -736,7 +736,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_INFORMATION_EXPERIENCE</Type>
@@ -757,7 +757,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_INFORMATION</EraType>
+			<EraType>C2C_ERA_INFORMATION</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NANOTECH_EXPERIENCE</Type>
@@ -778,7 +778,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_NANOTECH</EraType>
+			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_HEALING</Type>
@@ -839,7 +839,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_STONE_AGE_SPEARMAN</Type>
@@ -860,7 +860,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_STONE_AGE_AXEMAN</Type>
@@ -881,7 +881,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_SPEARMAN</Type>
@@ -902,7 +902,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_AXEMAN</Type>
@@ -923,7 +923,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_SWORDSMAN</Type>
@@ -944,7 +944,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_PIKEMAN</Type>
@@ -965,7 +965,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MACEMAN</Type>
@@ -986,7 +986,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_HEAVY_SWORDSMAN</Type>
@@ -1007,7 +1007,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_HEAVY_PIKEMAN</Type>
@@ -1028,7 +1028,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_ARQUEBUSIER</Type>
@@ -1049,7 +1049,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_RENAISSANCE</EraType>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_RIFLEMAN</Type>
@@ -1070,7 +1070,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_INDUSTRIAL</EraType>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_INFANTRY</Type>
@@ -1091,7 +1091,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MODERN_INFANTRY</Type>
@@ -1112,7 +1112,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_INFORMATION</EraType>
+			<EraType>C2C_ERA_INFORMATION</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_TESLA_INFANTRY</Type>
@@ -1133,7 +1133,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_NANOTECH</EraType>
+			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_STONE_THROWER</Type>
@@ -1174,7 +1174,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_COMPOSITE_BOWMAN</Type>
@@ -1195,7 +1195,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_LONGBOWMAN</Type>
@@ -1216,7 +1216,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_SCOUT</Type>
@@ -1237,7 +1237,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_GUIDE</Type>
@@ -1258,7 +1258,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_EXPLORER</Type>
@@ -1279,7 +1279,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_ADVENTURER</Type>
@@ -1300,7 +1300,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MOTORCYCLE</Type>
@@ -1321,7 +1321,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_UNMANNED_TRIKE</Type>
@@ -1342,7 +1342,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_INFORMATION</EraType>
+			<EraType>C2C_ERA_INFORMATION</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_HUNTER</Type>
@@ -1363,7 +1363,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_RANGER</Type>
@@ -1384,7 +1384,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_WARDEN</Type>
@@ -1405,7 +1405,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_WARDEN2</Type>
@@ -1426,7 +1426,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_GAME_HUNTER</Type>
@@ -1447,7 +1447,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_RENAISSANCE</EraType>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BIG_GAME_HUNTER</Type>
@@ -1468,7 +1468,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_INDUSTRIAL</EraType>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_WISE_WOMAN</Type>
@@ -1489,7 +1489,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_HEALER</Type>
@@ -1510,7 +1510,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_APOTHECARY</Type>
@@ -1531,7 +1531,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_SURGEON</Type>
@@ -1552,7 +1552,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_INDUSTRIAL</EraType>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MEDIC</Type>
@@ -1573,7 +1573,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_AMBULANCE_II</Type>
@@ -1594,7 +1594,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_INFORMATION</EraType>
+			<EraType>C2C_ERA_INFORMATION</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MEDEVAC_DROPSHIP</Type>
@@ -1615,7 +1615,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_NANOTECH</EraType>
+			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_GATHERER</Type>
@@ -1636,7 +1636,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_WORKER</Type>
@@ -1657,7 +1657,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_DOG_WORKER</Type>
@@ -1678,7 +1678,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_ELEPHANT_WORKER</Type>
@@ -1699,7 +1699,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MULE_WORKER</Type>
@@ -1720,7 +1720,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_RENAISSANCE</EraType>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_INDUSTRIAL_WORKER</Type>
@@ -1741,7 +1741,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_INDUSTRIAL</EraType>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MODERN_WORKER</Type>
@@ -1762,7 +1762,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MODERN_WORKER</Type>
@@ -1783,7 +1783,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_INFORMATION</EraType>
+			<EraType>C2C_ERA_INFORMATION</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_CLONES</Type>
@@ -1804,7 +1804,7 @@
 			<BarbarianClass>NONE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>0</iMinBarbarians>
-			<EraType>ERA_NANOTECH</EraType>
+			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_WEAK</Type>
@@ -1825,7 +1825,7 @@
 			<BarbarianClass>UNITCLASS_STONE_THROWER</BarbarianClass>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_STRONG</Type>
@@ -1846,7 +1846,7 @@
 			<BarbarianClass>UNITCLASS_CLUBMAN</BarbarianClass>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_CRIMINAL</Type>
@@ -1867,7 +1867,7 @@
 			<BarbarianClass>UNITCLASS_THIEF</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_ANCIENT_WEAK</Type>
@@ -1888,7 +1888,7 @@
 			<BarbarianClass>UNITCLASS_JAVELINEER</BarbarianClass>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_ANCIENT_STRONG</Type>
@@ -1909,7 +1909,7 @@
 			<BarbarianClass>UNITCLASS_AXEMAN</BarbarianClass>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_ANCIENT_CRIMINAL</Type>
@@ -1930,7 +1930,7 @@
 			<BarbarianClass>UNITCLASS_ROGUE</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_CLASSICAL_WEAK</Type>
@@ -1951,7 +1951,7 @@
 			<BarbarianClass>UNITCLASS_SKIRMISHER</BarbarianClass>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_CLASSICAL_STRONG</Type>
@@ -1972,7 +1972,7 @@
 			<BarbarianClass>UNITCLASS_SWORDSMAN</BarbarianClass>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_CLASSICAL_CRIMINAL</Type>
@@ -1993,7 +1993,7 @@
 			<BarbarianClass>UNITCLASS_ASSASSIN</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_MEDIEVAL_WEAK</Type>
@@ -2014,7 +2014,7 @@
 			<BarbarianClass>UNITCLASS_LONGBOWMAN</BarbarianClass>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_MEDIEVAL_STRONG</Type>
@@ -2035,7 +2035,7 @@
 			<BarbarianClass>UNITCLASS_HEAVY_SWORDSMAN</BarbarianClass>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MEDIEVAL_CRIMINAL</Type>
@@ -2056,7 +2056,7 @@
 			<BarbarianClass>UNITCLASS_ASSASSIN</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_RENAISSANCE_WEAK</Type>
@@ -2077,7 +2077,7 @@
 			<BarbarianClass>UNITCLASS_ARQUEBUSIER</BarbarianClass>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_RENAISSANCE</EraType>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_RENAISSANCE_STRONG</Type>
@@ -2098,7 +2098,7 @@
 			<BarbarianClass>UNITCLASS_MUSKETMAN</BarbarianClass>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_RENAISSANCE</EraType>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_RENAISSANCE_CRIMINAL</Type>
@@ -2119,7 +2119,7 @@
 			<BarbarianClass>UNITCLASS_HIGHWAYMAN</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_RENAISSANCE</EraType>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_INDUSTRIAL_WEAK</Type>
@@ -2140,7 +2140,7 @@
 			<BarbarianClass>UNITCLASS_GRENADIER</BarbarianClass>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_INDUSTRIAL</EraType>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_INDUSTRIAL_STRONG</Type>
@@ -2161,7 +2161,7 @@
 			<BarbarianClass>UNITCLASS_RIFLEMAN</BarbarianClass>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_INDUSTRIAL</EraType>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_INDUSTRIAL_CRIMINAL</Type>
@@ -2182,7 +2182,7 @@
 			<BarbarianClass>UNITCLASS_OUTLAW</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_INDUSTRIAL</EraType>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_MODERN_WEAK</Type>
@@ -2203,7 +2203,7 @@
 			<BarbarianClass>UNITCLASS_INFANTRY</BarbarianClass>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_MODERN_STRONG</Type>
@@ -2224,7 +2224,7 @@
 			<BarbarianClass>UNITCLASS_MODERN_INFANTRY</BarbarianClass>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MODERN_CRIMINAL</Type>
@@ -2245,7 +2245,7 @@
 			<BarbarianClass>UNITCLASS_MOBSTER_CAR</BarbarianClass>
 			<iBarbarianUnitProb>0</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_INFORMATION_WEAK</Type>
@@ -2266,7 +2266,7 @@
 			<BarbarianClass>UNITCLASS_MODERN_INFANTRY</BarbarianClass>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_INFORMATION</EraType>
+			<EraType>C2C_ERA_INFORMATION</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_INFORMATION_STRONG</Type>
@@ -2287,7 +2287,7 @@
 			<BarbarianClass>UNITCLASS_EXOARMORED_INFANTRY</BarbarianClass>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_INFORMATION</EraType>
+			<EraType>C2C_ERA_INFORMATION</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_NANOTECH_WEAK</Type>
@@ -2308,7 +2308,7 @@
 			<BarbarianClass>UNITCLASS_EXOARMORED_INFANTRY</BarbarianClass>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_NANOTECH</EraType>
+			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_NANOTECH_STRONG</Type>
@@ -2329,7 +2329,7 @@
 			<BarbarianClass>UNITCLASS_TESLA_INFANTRY</BarbarianClass>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_NANOTECH</EraType>
+			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_WEAK</Type>
@@ -2351,7 +2351,7 @@
 			<BarbarianClass>UNITCLASS_CANOE</BarbarianClass>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_STRONG</Type>
@@ -2373,7 +2373,7 @@
 			<BarbarianClass>UNITCLASS_WAR_CANOE</BarbarianClass>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_ANCIENT</EraType>
+			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_ANCIENT_WEAK</Type>
@@ -2395,7 +2395,7 @@
 			<BarbarianClass>UNITCLASS_WARGALLEY</BarbarianClass>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_ANCIENT_STRONG</Type>
@@ -2417,7 +2417,7 @@
 			<BarbarianClass>UNITCLASS_TRIREME</BarbarianClass>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_SEDENTARY</EraType>
+			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_CLASSICAL_WEAK</Type>
@@ -2439,7 +2439,7 @@
 			<BarbarianClass>UNITCLASS_QUINQUEREME</BarbarianClass>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</Type>
@@ -2461,7 +2461,7 @@
 			<BarbarianClass>UNITCLASS_DECAREME</BarbarianClass>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_CLASSICAL</EraType>
+			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_MEDIEVAL_WEAK</Type>
@@ -2483,7 +2483,7 @@
 			<BarbarianClass>UNITCLASS_GALLEASS</BarbarianClass>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</Type>
@@ -2505,7 +2505,7 @@
 			<BarbarianClass>UNITCLASS_SLOOP_OF_WAR</BarbarianClass>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_MEDIEVAL</EraType>
+			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_RENAISSANCE_WEAK</Type>
@@ -2527,7 +2527,7 @@
 			<BarbarianClass>UNITCLASS_FRIGATE</BarbarianClass>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_RENAISSANCE</EraType>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</Type>
@@ -2549,7 +2549,7 @@
 			<BarbarianClass>UNITCLASS_MANOWAR</BarbarianClass>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_RENAISSANCE</EraType>
+			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_WEAK</Type>
@@ -2571,7 +2571,7 @@
 			<BarbarianClass>UNITCLASS_IRONCLAD</BarbarianClass>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_INDUSTRIAL</EraType>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</Type>
@@ -2593,7 +2593,7 @@
 			<BarbarianClass>UNITCLASS_IRON_FRIGATE</BarbarianClass>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_INDUSTRIAL</EraType>
+			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_MODERN_WEAK</Type>
@@ -2615,7 +2615,7 @@
 			<BarbarianClass>UNITCLASS_DESTROYER</BarbarianClass>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</Type>
@@ -2637,7 +2637,7 @@
 			<BarbarianClass>UNITCLASS_BATTLESHIP</BarbarianClass>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_MODERN</EraType>
+			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_INFORMATION_WEAK</Type>
@@ -2659,7 +2659,7 @@
 			<BarbarianClass>UNITCLASS_MODERN_FRIGATE</BarbarianClass>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_INFORMATION</EraType>
+			<EraType>C2C_ERA_INFORMATION</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</Type>
@@ -2681,7 +2681,7 @@
 			<BarbarianClass>UNITCLASS_STEALTH_DESTROYER</BarbarianClass>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_INFORMATION</EraType>
+			<EraType>C2C_ERA_INFORMATION</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_NANOTECH_WEAK</Type>
@@ -2703,7 +2703,7 @@
 			<BarbarianClass>UNITCLASS_STEALTH_DESTROYER</BarbarianClass>
 			<iBarbarianUnitProb>20</iBarbarianUnitProb>
 			<iMinBarbarians>1</iMinBarbarians>
-			<EraType>ERA_NANOTECH</EraType>
+			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</Type>
@@ -2725,7 +2725,7 @@
 			<BarbarianClass>UNITCLASS_FF_DESTROYER_I</BarbarianClass>
 			<iBarbarianUnitProb>40</iBarbarianUnitProb>
 			<iMinBarbarians>2</iMinBarbarians>
-			<EraType>ERA_NANOTECH</EraType>
+			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
 	</GoodyInfos>
 </Civ4GoodyInfo>

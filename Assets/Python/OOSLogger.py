@@ -119,8 +119,10 @@ def writeLog():
 
 			pFile.write("\n\nUnit Class Info:\n--------------------\n")
 
-			for iUnitClass in xrange(GC.getNumUnitClassInfos()):
-				pFile.write("Player %d, %s, Unit class count plus training: %d\n" % (iPlayer, CvUtil.convertToStr(GC.getUnitClassInfo(iUnitClass).getDescription()), pPlayer.getUnitClassCountPlusMaking(iUnitClass)))
+			'''
+			for iUnit in xrange(GC.getNumUnitInfos()):
+				pFile.write("Player %d, %s, Unit class count plus training: %d\n" % (iPlayer, CvUtil.convertToStr(GC.getUnitInfo(iUnit).getDescription()), pPlayer.getUnitClassCountPlusMaking(iUnitClass)))
+			'''
 
 			pFile.write("\n\nUnitAI Types Info:\n------------------\n")
 

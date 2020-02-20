@@ -124,7 +124,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HYPERCITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_EUCLIDEAN_FIVESPACE_GEOMETRY</PrereqTech>
+			<PrereqTech>TECH_EUCLIDEAN_5D_SPACE_GEOMETRY</PrereqTech>
 			<iCost>1713</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -409,7 +409,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_5D_ARTIFICIAL_GRAVITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_EUCLIDEAN_FIVESPACE_GEOMETRY</PrereqTech>
+			<PrereqTech>TECH_EUCLIDEAN_5D_SPACE_GEOMETRY</PrereqTech>
 			<iCost>1713</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -527,7 +527,7 @@
 			</YieldChanges>
 			<TechYieldChanges>
 				<TechYieldChange>
-					<PrereqTech>TECH_EUCLIDEAN_FIVESPACE_GEOMETRY</PrereqTech>
+					<PrereqTech>TECH_EUCLIDEAN_5D_SPACE_GEOMETRY</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>20</iYield>
@@ -578,7 +578,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<FreeBonus>BONUS_TESSERACT_BONUS</FreeBonus>
+			<FreeBonus>BONUS_TESSERACT</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -675,7 +675,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HYPERPLANET</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_EUCLIDEAN_FIVESPACE_GEOMETRY</PrereqTech>
+			<PrereqTech>TECH_EUCLIDEAN_5D_SPACE_GEOMETRY</PrereqTech>
 			<iCost>1713</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -875,7 +875,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_SELF_CREATION</PrereqTech>
+					<PrereqTech>TECH_ALPHA_POINT</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -1019,7 +1019,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LANDSCAPE_MULTIVERSE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SELF_CREATION</PrereqTech>
+			<PrereqTech>TECH_ALPHA_POINT</PrereqTech>
 			<iCost>3683</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1263,7 +1263,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ALTERNATE_HISTORY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_ALTERNATE_HISTORY</PrereqTech>
+			<PrereqTech>TECH_ALTERNATE_HISTORY_EXPLORATION</PrereqTech>
 			<iCost>2914</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1349,7 +1349,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NEW_BIG_BANG</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_TRUTH_MANIPULATION</PrereqTech>
+			<PrereqTech>TECH_REALITY_REPROGRAMMING</PrereqTech>
 			<iCost>3423</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1484,7 +1484,7 @@
 				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
@@ -1522,7 +1522,7 @@
 				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
@@ -1553,7 +1553,7 @@
 				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
@@ -1627,7 +1627,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SEP_FIELD</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_TRUTH_MANIPULATION</PrereqTech>
+			<PrereqTech>TECH_REALITY_REPROGRAMMING</PrereqTech>
 			<iCost>3423</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1680,7 +1680,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_FAIRYLAND</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_FAIRYLAND</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_NON_TEMPORAL_ENTITIES</PrereqTech>
+			<PrereqTech>TECH_ATEMPORAL_BEINGS</PrereqTech>
 			<iCost>11658</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1715,7 +1715,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_COSMIC_AC</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_COSMIC_AC</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_NON_TEMPORAL_ENTITIES</PrereqTech>
+			<PrereqTech>TECH_ATEMPORAL_BEINGS</PrereqTech>
 			<iCost>11658</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1775,7 +1775,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SELF_CREATION</PrereqTech>
+			<PrereqTech>TECH_ALPHA_POINT</PrereqTech>
 			<iCost>14732</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
