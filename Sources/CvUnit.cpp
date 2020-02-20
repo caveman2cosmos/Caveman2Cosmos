@@ -11088,7 +11088,7 @@ int CvUnit::destroyCost(const CvPlot* pPlot) const
 	}
 	else if (pCity->isProductionBuilding())
 	{
-		bLimited = isLimitedWonderClass((BuildingClassTypes)(GC.getBuildingInfo(pCity->getProductionBuilding()).getBuildingClassType()));
+		bLimited = isLimitedWonder(pCity->getProductionBuilding());
 	}
 	else if (pCity->isProductionProject())
 	{
@@ -12075,7 +12075,7 @@ bool CvUnit::canConstruct(const CvPlot* pPlot, BuildingTypes eBuilding, bool bTe
 	{
 		if (GC.getBuildingInfo(eBuilding).getProductionCost() == -1)
 		{
-			if (GC.getGame().getBuildingClassCreatedCount((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType()) > 0)
+			if (GC.getGame().getBuildingCreatedCount(eBuilding) > 0)
 			{
 				return false;
 			}

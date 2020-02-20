@@ -438,16 +438,9 @@ int getTechScore(TechTypes eTech)
 	return (GC.getTechInfo(eTech).getEra() + 1);
 }
 
-int getWonderScore(BuildingClassTypes eWonderClass)
+int getWonderScore(BuildingTypes eWonder)
 {
-	if (isLimitedWonderClass(eWonderClass))
-	{
-		return 5;
-	}
-	else
-	{
-		return 0;
-	}
+	return isLimitedWonder(eWonder) ? 5 : 0;
 }
 
 ImprovementTypes finalImprovementUpgrade(ImprovementTypes eImprovement, int iCount)
@@ -589,58 +582,22 @@ bool isLimitedUnitClass(UnitClassTypes eUnitClass)
 	return (isWorldUnitClass(eUnitClass) || isTeamUnitClass(eUnitClass) || isNationalUnitClass(eUnitClass));
 }
 
-bool isWorldWonderClass(BuildingClassTypes eBuildingClass)
-{
-	return (GC.getBuildingClassInfo(eBuildingClass).getMaxGlobalInstances() != -1);
-}
-#ifdef INCLUDE_BUILDING_CLASS
-bool isWorldWonderClass(BuildingTypes building)
-{
-	return GC.getBuildingClassInfo(GC.getBuildingInfo(building).getBuildingClass()).getMaxGlobalInstances() != -1;
-#else
-bool isWorldWonderClass(BuildingTypes building)
+bool isWorldWonder(BuildingTypes building)
 {
 	return GC.getBuildingInfo(building).getMaxGlobalInstances() != -1;
-#endif
 }
 
-bool isTeamWonderClass(BuildingClassTypes eBuildingClass)
-{
-	return (GC.getBuildingClassInfo(eBuildingClass).getMaxTeamInstances() != -1);
-}
-#ifdef INCLUDE_BUILDING_CLASS
-bool isTeamWonderClass(BuildingTypes building)
-{
-	return GC.getBuildingClassInfo(GC.getBuildingInfo(building).getBuildingClassType()).getMaxTeamInstances() != -1;
-#else
-bool isTeamWonderClass(BuildingTypes building)
+bool isTeamWonder(BuildingTypes building)
 {
 	return GC.getBuildingInfo(building).getMaxTeamInstances() != -1;
-#endif
 }
 
-bool isNationalWonderClass(BuildingClassTypes eBuildingClass)
-{
-	return (GC.getBuildingClassInfo(eBuildingClass).getMaxPlayerInstances() != -1);
-}
-#ifdef INCLUDE_BUILDING_CLASS
-bool isNationalWonderClass(BuildingTypes building)
-{
-	return GC.getBuildingClassInfo(GC.getBuildingInfo(building).getBuildingClassType()).getMaxPlayerInstances() != -1;
-#else
-bool isNationalWonderClass(BuildingTypes building)
+bool isNationalWonder(BuildingTypes building)
 {
 	return GC.getBuildingInfo(building).getMaxPlayerInstances() != -1;
-#endif
 }
 
-bool isNationalWonderGroupClass(BuildingClassTypes eBuildingClass)
-{
-	const SpecialBuildingTypes eSpecialBuilding = (SpecialBuildingTypes)GC.getBuildingInfo((BuildingTypes)GC.getBuildingClassInfo(eBuildingClass).getDefaultBuildingIndex()).getSpecialBuildingType();
-	return eSpecialBuilding != NO_SPECIALBUILDING && GC.getSpecialBuildingInfo(eSpecialBuilding).getMaxPlayerInstances() != -1;
-}
-
-bool isNationalWonderGroupClass(BuildingTypes building)
+bool isNationalWonderGroup(BuildingTypes building)
 {
 	const SpecialBuildingTypes eSpecialBuilding = static_cast<SpecialBuildingTypes>(GC.getBuildingInfo(building).getSpecialBuildingType());
 	return eSpecialBuilding != NO_SPECIALBUILDING && GC.getSpecialBuildingInfo(eSpecialBuilding).getMaxPlayerInstances() != -1;
@@ -651,9 +608,9 @@ bool isNationalWonderGroupSpecialBuilding(SpecialBuildingTypes eSpecialBuilding)
 	return (GC.getSpecialBuildingInfo(eSpecialBuilding).getMaxPlayerInstances() != -1);
 }
 
-bool isLimitedWonderClass(BuildingClassTypes eBuildingClass)
+bool isLimitedWonderClass(BuildingTypes eBuildingClass)
 {
-	return (isWorldWonderClass(eBuildingClass) || isTeamWonderClass(eBuildingClass) || isNationalWonderClass(eBuildingClass));
+	return (isWorldWonder(eBuilding) || isTeamWonder(eBuilding) || isNationalWonder(eBuilding));
 }
 
 int limitedWonderClassLimit(BuildingClassTypes eBuildingClass)

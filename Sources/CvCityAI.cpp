@@ -1061,17 +1061,15 @@ void CvCityAI::AI_chooseProduction()
 			}
 
 			// if we are building a wonder, do not cancel, keep building it (if no danger)
-			BuildingTypes eProductionBuilding = getProductionBuilding();
-			if (!bDanger && eProductionBuilding != NO_BUILDING &&
-				isLimitedWonderClass((BuildingClassTypes) GC.getBuildingInfo(eProductionBuilding).getBuildingClassType()))
+			const BuildingTypes eProductionBuilding = getProductionBuilding();
+			if (!bDanger && eProductionBuilding != NO_BUILDING && isLimitedWonder(eProductionBuilding))
 			{
 				return;
 			}
 		}
 
 		clearOrderQueue();
-}
-
+	}
 
 	if (kPlayer.isAnarchy())
 	{
@@ -5059,15 +5057,13 @@ std::vector<CvCity::ScoredBuilding> CvCityAI::AI_bestBuildingsThreshold(int iFoc
 
 	std::vector<BuildingTypes> possibles;
 
-	CvCivilizationInfo& civ = GC.getCivilizationInfo(getCivilizationType());
-	for (int idx = 0; idx < GC.getNumBuildingClassInfos(); ++idx)
+	for (int idx = 0; idx < GC.getNumBuildingInfos(); ++idx)
 	{
-		if (!(GET_PLAYER(getOwner()).isBuildingClassMaxedOut(((BuildingClassTypes)idx), GC.getBuildingClassInfo((BuildingClassTypes)idx).getExtraPlayerInstances())))
+		if (!GET_PLAYER(getOwner()).isBuildingMaxedOut((BuildingTypes)idx, GC.getBuildingInfo((BuildingTypes)idx).getExtraPlayerInstances()))
 		{
-			BuildingTypes building = ((BuildingTypes)(civ.getCivilizationBuildings(idx)));
-			if (NO_BUILDING != building && canConstruct(building))
+			if (canConstruct((BuildingTypes)idx))
 			{
-				possibles.push_back(building);
+				possibles.push_back((BuildingTypes)idx);
 			}
 		}
 	}
@@ -5141,7 +5137,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 			&&
 			(
 				// Building is not a wonder
-				!isLimitedWonderClass(buildingClassType)
+				!isLimitedWonder(building)
 				||
 				// Or we are allowed to build a wonder
 				// i.e. Production isn't automated or we aren't considering a wonder (we don't want automated production producing wonders)
@@ -5173,15 +5169,12 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 				iValue = AI_buildingValueThreshold(building, iFocusFlags, iMinThreshold, bMaximizeFlaggedValue);
 
 				// If the building also gives a free building then factor that in as well
-				if (buildingInfo.getFreeBuildingClass() != NO_BUILDINGCLASS)
+				const BuildingTypes eFreeBuilding = static_cast<BuildingTypes>(buildingInfo.getFreeBuilding());
+				if (eFreeBuilding != NO_BUILDING && eFreeBuilding != NO_BUILDING)
 				{
-					BuildingTypes eFreeBuilding = (BuildingTypes)civInfo.getCivilizationBuildings(buildingInfo.getFreeBuildingClass());
-					if (eFreeBuilding != NO_BUILDING)
-					{
-						// Add value of the free building taking into account our focus, and scale it by the number of cities that don't
-						// yet have the building.
-						iValue += (AI_buildingValue(eFreeBuilding, iFocusFlags) * (player.getNumCities() - player.getBuildingClassCountPlusMaking((BuildingClassTypes)buildingInfo.getFreeBuildingClass())));
-					}
+					// Add value of the free building taking into account our focus, and scale it by the number of cities that don't
+					// yet have the building.
+					iValue += (AI_buildingValue(eFreeBuilding, iFocusFlags) * (player.getNumCities() - player.getBuildingCountPlusMaking(building)));
 				}
 
 				if (gCityLogLevel > 3)
@@ -5248,11 +5241,11 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 			// If the buildings provides a free area building as well then adjust the score up
 			if (buildingInfo.getFreeAreaBuildingClass() != NO_BUILDINGCLASS)
 			{
-				BuildingTypes eFreeAreaBuilding = (BuildingTypes)civInfo.getCivilizationBuildings(buildingInfo.getFreeAreaBuildingClass());
+				const BuildingTypes eFreeAreaBuilding = (BuildingTypes)civInfo.getCivilizationBuildings(buildingInfo.getFreeAreaBuilding());
 				if (eFreeAreaBuilding != NO_BUILDING)
 				{
 					// Score is weighted by the number of cities that don't have the free building
-					int weighting = player.getNumCities() - player.getBuildingClassCountPlusMaking((BuildingClassTypes)buildingInfo.getFreeAreaBuildingClass());
+					int weighting = player.getNumCities() - player.getBuildingCountPlusMaking((BuildingTypes)buildingInfo.getFreeAreaBuilding());
 					// Scaled by the ratio of cities in the area / total, giving a guess as to how important this area is in general
 					weighting = (100 * weighting * area()->getCitiesPerPlayer(getOwner())) / player.getNumCities();
 					// If we have none of the free buildings at all then also increase the score weighting
@@ -5275,7 +5268,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 			if (iValue > 0)
 			{
 				// If its a wonder and this city is rated high for production relative to our other cities, then we will bump up the score
-				if (isWorldWonderClass(buildingClassType) &&
+				if (isWorldWonder(building) &&
 					iProductionRank <= std::min(3, ((player.getNumCities() + 2) / 3)))
 				{
 					int wonderScore = bAsync ?
@@ -5712,7 +5705,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 				if ((iFocusFlags & BUILDINGFOCUS_WORLDWONDER) || (iPass > 0))
 				{
-					if (isWorldWonderClass(eBuildingClass))
+					if (isWorldWonder(eBuilding))
 					{
 						if (aiYieldRank[YIELD_PRODUCTION] <= 3)
 						{
@@ -5913,7 +5906,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						aiYieldRank[YIELD_COMMERCE] = findBaseYieldRateRank(YIELD_COMMERCE);
 						if (aiYieldRank[YIELD_FOOD] <= (2 + iLimitedWonderLimit))
 						{
-							if (!(isNationalWonderClass(eBuildingClass)) ||
+							if (!isNationalWonder(eBuilding) ||
 								((aiYieldRank[YIELD_PRODUCTION] > (2 + iLimitedWonderLimit))
 								&& (aiYieldRank[YIELD_COMMERCE] > (2 + iLimitedWonderLimit))))
 							{
@@ -5958,21 +5951,12 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						iValue += (-iGlobalWarWearinessModifer * iHappyModifier) / 16;
 					}
 
-
-					for (int iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
+					for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 					{
-						int iBuildingHappinessChanges = kBuilding.getBuildingHappinessChanges(iI);
+						const int iBuildingHappinessChanges = kBuilding.getBuildingHappinessChanges(iI);
 						if (iBuildingHappinessChanges != 0)
 						{
-							BuildingTypes eLoopBuilding = (BuildingTypes)kCivilization.getCivilizationBuildings(iI);
-							if (eLoopBuilding != NO_BUILDING)
-							{
-								iValue += (iBuildingHappinessChanges * (kOwner.getBuildingClassCount((BuildingClassTypes)iI) - getNumBuilding(eLoopBuilding)) * 8);
-							}
-							else
-							{
-								iValue += (iBuildingHappinessChanges * kOwner.getBuildingClassCount((BuildingClassTypes)iI) * 8);
-							}
+							iValue += (iBuildingHappinessChanges * (kOwner.getBuildingCount((BuildingTypes)iI) - getNumBuilding((BuildingTypes)iI)) * 8);
 						}
 					}
 	/************************************************************************************************/
@@ -7101,24 +7085,23 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					{
 						PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.Buildings");
 
-						int iPrereqBuildings = kOwner.getBuildingClassPrereqBuilding(((BuildingTypes) iI), eBuildingClass);
+						const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
+						const int iPrereqBuildings = kOwner.getBuildingPrereqBuilding(eLoopBuilding, eBuilding);
 
 						// if we need some of us to build iI building, and we dont need more than we have cities
 						if (iPrereqBuildings > 0 && iPrereqBuildings <= iNumCities)
 						{
 							// do we need more than what we are currently building?
-							if (iPrereqBuildings > kOwner.getBuildingClassCountPlusMaking(eBuildingClass))
+							if (iPrereqBuildings > kOwner.getBuildingCountPlusMaking(eBuilding))
 							{
 								iValue += (iNumCities * 3);
 
 								if (bCulturalVictory1)
 								{
-									BuildingTypes eLoopBuilding = (BuildingTypes) iI;
-									CvBuildingInfo& kLoopBuilding = GC.getBuildingInfo(eLoopBuilding);
-									int iLoopBuildingCultureModifier = kLoopBuilding.getCommerceModifier(COMMERCE_CULTURE);
+									const int iLoopBuildingCultureModifier = GC.getBuildingInfo(eLoopBuilding).getCommerceModifier(COMMERCE_CULTURE);
 									if (iLoopBuildingCultureModifier > 0)
 									{
-										int iLoopBuildingsBuilt = kOwner.getBuildingClassCount((BuildingClassTypes) kLoopBuilding.getBuildingClassType());
+										const int iLoopBuildingsBuilt = kOwner.getBuildingCount(eLoopBuilding);
 
 										// if we have less than the number needed in culture cities
 										//		OR we are one of the top cities and we do not have the building
@@ -10359,7 +10342,7 @@ void CvCityAI::AI_updateBestBuild()
 	if (!bChop)
 	{
 		BuildingTypes eProductionBuilding = getProductionBuilding();
-		bChop = (eProductionBuilding != NO_BUILDING && isWorldWonderClass((BuildingClassTypes)(GC.getBuildingInfo(eProductionBuilding).getBuildingClassType())));
+		bChop = (eProductionBuilding != NO_BUILDING && isWorldWonder(eProductionBuilding));
 		if (!bChop)
 		{
 			UnitTypes eProductionUnit = getProductionUnit();
@@ -10888,7 +10871,7 @@ void CvCityAI::AI_doHurry(bool bForce)
 			//Perhaps the most disturbing part of this is how it doesn't scale for longer games.
 			if (eProductionBuilding != NO_BUILDING)
 			{
-				if (isWorldWonderClass((BuildingClassTypes)(GC.getBuildingInfo(eProductionBuilding).getBuildingClassType())))
+				if (isWorldWonder(eProductionBuilding))
 				{
 					iMinTurns = std::min(iMinTurns, 10);
 					bEssential = true;
@@ -15090,8 +15073,7 @@ void CvCityAI::AI_updateSpecialYieldMultiplier()
 	BuildingTypes eProductionBuilding = getProductionBuilding();
 	if (eProductionBuilding != NO_BUILDING)
 	{
-		if (isWorldWonderClass((BuildingClassTypes)(GC.getBuildingInfo(eProductionBuilding).getBuildingClassType()))
-			|| isProductionProject())
+		if (isWorldWonder(eProductionBuilding) || isProductionProject())
 		{
 			m_aiSpecialYieldMultiplier[YIELD_PRODUCTION] += 50;
 			m_aiSpecialYieldMultiplier[YIELD_COMMERCE] -= 25;
@@ -16746,10 +16728,10 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 		return true;
 	}
 
-	bool bIsWonder = isWorldWonderClass((BuildingClassTypes)kBuilding.getBuildingClassType()) ||
-					 isTeamWonderClass((BuildingClassTypes)kBuilding.getBuildingClassType()) ||
-					  isNationalWonderClass((BuildingClassTypes)kBuilding.getBuildingClassType()) ||
-					   isLimitedWonderClass((BuildingClassTypes)kBuilding.getBuildingClassType());
+	bool bIsWonder = isWorldWonder(eBuilding) ||
+					 isTeamWonder(eBuilding) ||
+					  isNationalWonder(eBuilding) ||
+					   isLimitedWonder(eBuilding);
 
 	if ( (iFocusFlags & ~BUILDINGFOCUS_WONDEROK) == BUILDINGFOCUS_WORLDWONDER )
 	{
@@ -17620,7 +17602,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					{
 						//if ((iFocusFlags & BUILDINGFOCUS_WORLDWONDER) || (iPass > 0))
 						{
-							if (isWorldWonderClass(eBuildingClass))
+							if (isWorldWonder(eBuilding))
 							{
 								if (aiYieldRank[YIELD_PRODUCTION] <= 3)
 								{
@@ -17846,7 +17828,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 								aiYieldRank[YIELD_COMMERCE] = findBaseYieldRateRank(YIELD_COMMERCE);
 								if (aiYieldRank[YIELD_FOOD] <= (2 + iLimitedWonderLimit))
 								{
-									if (!(isNationalWonderClass(eBuildingClass)) ||
+									if (!isNationalWonder(eBuilding) ||
 										((aiYieldRank[YIELD_PRODUCTION] > (2 + iLimitedWonderLimit))
 										&& (aiYieldRank[YIELD_COMMERCE] > (2 + iLimitedWonderLimit))))
 									{
@@ -17891,21 +17873,12 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 								iValue += (-iGlobalWarWearinessModifer * iHappyModifier) / 16;
 							}
 
-							CvCivilizationInfo& kCivilization = GC.getCivilizationInfo(getCivilizationType());
-							for (int iI = 0; iI < numNumBuildingClassInfos; iI++)
+							for (int iI = 0; iI < numNumBuildingInfos; iI++)
 							{
-								int iBuildingHappinessChanges = kBuilding.getBuildingHappinessChanges(iI);
+								const int iBuildingHappinessChanges = kBuilding.getBuildingHappinessChanges(iI);
 								if (iBuildingHappinessChanges != 0)
 								{
-									BuildingTypes eLoopBuilding = (BuildingTypes)kCivilization.getCivilizationBuildings(iI);
-									if (eLoopBuilding != NO_BUILDING)
-									{
-										iValue += (iBuildingHappinessChanges * (kOwner.getBuildingClassCount((BuildingClassTypes)iI) - getNumBuilding(eLoopBuilding)) * 8);
-									}
-									else
-									{
-										iValue += (iBuildingHappinessChanges * kOwner.getBuildingClassCount((BuildingClassTypes)iI) * 8);
-									}
+									iValue += (iBuildingHappinessChanges * (kOwner.getBuildingClassCount((BuildingTypes)iI) - getNumBuilding((BuildingTypes)iI)) * 8);
 								}
 							}
 			/************************************************************************************************/
@@ -17959,9 +17932,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 			/* Afforess	                     END                                                            */
 			/************************************************************************************************/
 
-
-							valuesCache->Accumulate(BUILDINGFOCUSINDEX_HAPPY,
-													iValue);
+							valuesCache->Accumulate(BUILDINGFOCUSINDEX_HAPPY, iValue);
 						}
 
 						//if (((iFocusFlags & BUILDINGFOCUS_HEALTHY) || (iPass > 0)) && !isNoUnhealthyPopulation())
@@ -19066,24 +19037,23 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 							// is this building needed to build other buildings?
 							for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 							{
-								int iPrereqBuildings = kOwner.getBuildingClassPrereqBuilding(((BuildingTypes) iI), eBuildingClass);
+								const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
+								const int iPrereqBuildings = kOwner.getBuildingPrereqBuilding(eLoopBuilding, eBuilding);
 
 								// if we need some of us to build iI building, and we dont need more than we have cities
 								if (iPrereqBuildings > 0 && iPrereqBuildings <= iNumCities)
 								{
 									// do we need more than what we are currently building?
-									if (iPrereqBuildings > kOwner.getBuildingClassCountPlusMaking(eBuildingClass))
+									if (iPrereqBuildings > kOwner.getBuildingCountPlusMaking(eBuilding))
 									{
 										iValue += (iNumCities * 3);
 
 										if (bCulturalVictory1)
 										{
-											BuildingTypes eLoopBuilding = (BuildingTypes) iI;
-											CvBuildingInfo& kLoopBuilding = GC.getBuildingInfo(eLoopBuilding);
-											int iLoopBuildingCultureModifier = kLoopBuilding.getCommerceModifier(COMMERCE_CULTURE);
+											const int iLoopBuildingCultureModifier = GC.getBuildingInfo(eLoopBuilding).getCommerceModifier(COMMERCE_CULTURE);
 											if (iLoopBuildingCultureModifier > 0)
 											{
-												int iLoopBuildingsBuilt = kOwner.getBuildingClassCount((BuildingClassTypes) kLoopBuilding.getBuildingClassType());
+												const int iLoopBuildingsBuilt = kOwner.getBuildingCount(eLoopBuilding);
 
 												// if we have less than the number needed in culture cities
 												//		OR we are one of the top cities and we do not have the building
@@ -19561,13 +19531,13 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 					bHaveEnough = false;
 				}
 
-				for (int iJ = 0; bHaveEnough && iJ < GC.getNumBuildingClassInfos(); iJ++)
+				for (int iJ = 0; bHaveEnough && iJ < GC.getNumBuildingInfos(); iJ++)
 				{
 					// count excess the number of prereq buildings which do not have this building built for yet
-					int iPrereqBuildings = kOwner.getBuildingClassPrereqBuilding(eBuilding, (BuildingClassTypes) iJ, -iCountBuilt);
+					const int iPrereqBuildings = kOwner.getBuildingPrereqBuilding(eBuilding, (BuildingTypes)iJ, -iCountBuilt);
 
 					// do we not have enough built (do not count ones in progress)
-					if (iPrereqBuildings > 0 && kOwner.getBuildingClassCount((BuildingClassTypes) iJ) <  iPrereqBuildings)
+					if (iPrereqBuildings > 0 && kOwner.getBuildingCount((BuildingTypes)iJ) <  iPrereqBuildings)
 					{
 						bHaveEnough = false;
 					}

@@ -91,7 +91,7 @@ CvCity::CvCity()
 	m_aiBonusCommercePercentChanges = new int[NUM_COMMERCE_TYPES];
 	m_aiCommerceAttacks = new int[NUM_COMMERCE_TYPES];
 	m_aiMaxCommerceAttacks = new int[NUM_COMMERCE_TYPES];
-	m_paiBuildingClassProductionModifier = NULL;
+	m_paiBuildingProductionModifier = NULL;
 	m_paiBonusDefenseChanges = NULL;
 	m_cachedPropertyNeeds = NULL;
 	m_pabHadVicinityBonus = NULL;
@@ -507,7 +507,7 @@ void CvCity::uninit()
 	SAFE_DELETE_ARRAY(m_paiNumFreeAreaBuilding);
 	SAFE_DELETE_ARRAY(m_paiBuildingReplaced);
 	SAFE_DELETE_ARRAY(m_paiUnitClassProductionModifier);
-	SAFE_DELETE_ARRAY(m_paiBuildingClassProductionModifier);
+	SAFE_DELETE_ARRAY(m_paiBuildingProductionModifier);
 	SAFE_DELETE_ARRAY(m_paiBonusDefenseChanges);
 	SAFE_DELETE_ARRAY(m_cachedPropertyNeeds);
 	SAFE_DELETE_ARRAY(m_pabHadVicinityBonus);
@@ -1171,10 +1171,10 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		{
 			m_paiUnitClassProductionModifier[iI] = 0;
 		}
-		m_paiBuildingClassProductionModifier = new int[GC.getNumBuildingClassInfos()];
-		for (int iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
+		m_paiBuildingProductionModifier = new int[GC.getNumBuildingInfos()];
+		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
-			m_paiBuildingClassProductionModifier[iI] = 0;
+			m_paiBuildingProductionModifier[iI] = 0;
 		}
 		m_paiBonusDefenseChanges = new int[GC.getNumBonusInfos()];
 		m_pabHadVicinityBonus = new bool[GC.getNumBonusInfos()];
@@ -2628,18 +2628,17 @@ bool CvCity::isPlotTrainable(UnitTypes eUnit, bool bContinue, bool bTestVisible)
 			}
 		}
 
-		if (kUnit.isPrereqBuildingClass(NO_BUILDINGCLASS))
+		if (kUnit.isPrereqBuilding(NO_BUILDING))
 		{
-			CvCivilizationInfo& kCivilizationInfo = GC.getCivilizationInfo(getCivilizationType());
-			int const numNumBuildingClassInfos = GC.getNumBuildingClassInfos();
+			int const numBuildingInfos = GC.getNumBuildingInfos();
 
-			for (int iI = 0; iI < numNumBuildingClassInfos; iI++)
+			for (int iI = 0; iI < numBuildingInfos; iI++)
 			{
-				if (kUnit.isPrereqBuildingClass(iI))
+				if (kUnit.isPrereqBuilding(iI))
 				{
-					if (pPlayer.isBuildingClassRequiredToTrain(BuildingClassTypes(iI), eUnit))
+					if (pPlayer.isBuildingRequiredToTrain((BuildingTypes)iI, eUnit))
 					{
-						if (!(getNumBuilding((BuildingTypes)kCivilizationInfo.getCivilizationBuildings(iI))))
+						if (!getNumBuilding((BuildingTypes)iI))
 						{
 							return false;
 						}
@@ -3540,37 +3539,37 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 
 			if (isNPC())
 			{
-				if (isWorldWonderClass((BuildingClassTypes)(kBuilding.getBuildingClassType())))
+				if (isWorldWonder(eBuilding))
 				{
 					return false;
 				}
-				else if (isTeamWonderClass((BuildingClassTypes)(kBuilding.getBuildingClassType())))
+				else if (isTeamWonder(eBuilding))
 				{
 					return false;
 				}
-				else if (isNationalWonderClass((BuildingClassTypes)(kBuilding.getBuildingClassType())))
+				else if (isNationalWonder(eBuilding))
 				{
 					return false;
 				}
 			}
 
-			if (!(GC.getBuildingClassInfo((BuildingClassTypes)(kBuilding.getBuildingClassType())).isNoLimit()))
+			if (!kBuilding.isNoLimit())
 			{
-				if (isWorldWonderClass((BuildingClassTypes)(kBuilding.getBuildingClassType())))
+				if (isWorldWonder(eBuilding))
 				{
 					if (isWorldWondersMaxed())
 					{
 						return false;
 					}
 				}
-				else if (isTeamWonderClass((BuildingClassTypes)(kBuilding.getBuildingClassType())))
+				else if (isTeamWonder(eBuilding))
 				{
 					if (isTeamWondersMaxed())
 					{
 						return false;
 					}
 				}
-				else if (isNationalWonderClass((BuildingClassTypes)(kBuilding.getBuildingClassType())))
+				else if (isNationalWonder(eBuilding))
 				{
 					if (isNationalWondersMaxed())
 					{
@@ -3705,13 +3704,10 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 			}
 		}
 
-		if (kBuilding.getPrereqAnyoneBuildingClass() != NO_BUILDINGCLASS)
+		const BuildingTypes ePrereqBuilding = static_cast<BuildingTypes>(kBuilding.getPrereqAnyoneBuilding());
+		if (ePrereqBuilding != NO_BUILDING && GC.getGame().getBuildingCreatedCount(ePrereqBuilding) == 0)
 		{
-			BuildingClassTypes ePrereqBuildingClass = (BuildingClassTypes)kBuilding.getPrereqAnyoneBuildingClass();
-			if (GC.getGame().getBuildingClassCreatedCount(ePrereqBuildingClass) == 0)
-			{
-				return false;
-			}
+			return false;
 		}
 
 		bool bRequiresBonus = false;
@@ -4152,7 +4148,7 @@ bool CvCity::isProductionLimited() const
 			break;
 
 		case ORDER_CONSTRUCT:
-			return isLimitedWonderClass((BuildingClassTypes)(GC.getBuildingInfo((BuildingTypes)(order->iData1)).getBuildingClassType()));
+			return isLimitedWonder(static_cast<BuildingTypes>(order->iData1));
 			break;
 
 		case ORDER_CREATE:
@@ -5032,18 +5028,10 @@ int CvCity::getProductionModifier(BuildingTypes eBuilding) const
 {
 	int iMultiplier = GET_PLAYER(getOwner()).getProductionModifier(eBuilding);
 
-	/************************************************************************************************/
-	/* Afforess	                  Start		 12/7/09                                                */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
 	iMultiplier += getBuildingClassProductionModifier((BuildingClassTypes)(GC.getBuildingInfo(eBuilding).getBuildingClassType()));
 
-	iMultiplier += GET_PLAYER(getOwner()).getBuildingClassProductionModifier((BuildingClassTypes)(GC.getBuildingInfo(eBuilding).getBuildingClassType()));
+	iMultiplier += GET_PLAYER(getOwner()).getBuildingProductionModifier(eBuilding);
 
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
 	for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 	{
 		if (hasBonus((BonusTypes)iI))
@@ -5837,8 +5825,8 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 	//TB: Makes it possible to use old built buildings to qualify for x building class built anywhere prerequisites so as to get around
 	//Obsoletion and replacement issues.  However, this does still mean that the building needed to have BEEN built previously.
 	//Moving here also fixes from other prereqs that may be eliminating or upsetting the count.
-	GET_TEAM(getTeam()).changeBuildingClassCount((BuildingClassTypes)kBuilding.getBuildingClassType(), iChange);
-	GET_PLAYER(getOwner()).changeBuildingClassCount((BuildingClassTypes)kBuilding.getBuildingClassType(), iChange);
+	GET_TEAM(getTeam()).changeBuildingCount(eBuilding, iChange);
+	GET_PLAYER(getOwner()).changeBuildingCount(eBuilding, iChange);
 
 	//	We don't need to process the building effects in or out if it is
 	//		* obsolete (unless GOING obsolete explicitly now)
@@ -6580,13 +6568,13 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 				}
 			}
 
-			SpecialBuildingTypes eSpecialBuilding = (SpecialBuildingTypes)kBuilding.getSpecialBuildingType();
+			const SpecialBuildingTypes eSpecialBuilding = (SpecialBuildingTypes)kBuilding.getSpecialBuildingType();
 			if (eSpecialBuilding != NO_SPECIALBUILDING)
 			{
 				GET_PLAYER(getOwner()).changeBuildingGroupCount(eSpecialBuilding, iChange);
 			}
 
-			GET_PLAYER(getOwner()).changeWondersScore(getWonderScore((BuildingClassTypes)(kBuilding.getBuildingClassType())) * iChange);
+			GET_PLAYER(getOwner()).changeWondersScore(getWonderScore(eBuilding) * iChange);
 
 			for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 			{
@@ -8355,7 +8343,7 @@ bool CvCity::hasActiveWorldWonder() const
 {
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		if (isWorldWonderClass((BuildingClassTypes)(GC.getBuildingInfo((BuildingTypes)iI).getBuildingClassType())))
+		if (isWorldWonder((BuildingTypes)iI))
 		{
 			if (getNumRealBuilding((BuildingTypes)iI) > 0 && !(GET_TEAM(getTeam()).isObsoleteBuilding((BuildingTypes)iI)))
 			{
@@ -8379,7 +8367,7 @@ int CvCity::getNumActiveWorldWonders() const
 
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		if (isWorldWonderClass((BuildingClassTypes)(GC.getBuildingInfo((BuildingTypes)iI).getBuildingClassType())))
+		if (isWorldWonder((BuildingTypes)iI))
 		{
 			if (getNumRealBuilding((BuildingTypes)iI) > 0 && !(GET_TEAM(getTeam()).isObsoleteBuilding((BuildingTypes)iI)))
 			{
@@ -17036,17 +17024,17 @@ void CvCity::setNumRealBuildingTimed(BuildingTypes eIndex, int iNewValue, bool b
 		/* Afforess	                     END                                                            */
 		/************************************************************************************************/
 
-		if (!(GC.getBuildingClassInfo((BuildingClassTypes)(GC.getBuildingInfo(eIndex).getBuildingClassType())).isNoLimit()))
+		if (!GC.getBuildingInfo(eIndex).isNoLimit())
 		{
-			if (isWorldWonderClass((BuildingClassTypes)(GC.getBuildingInfo(eIndex).getBuildingClassType())))
+			if (isWorldWonder(eIndex))
 			{
 				changeNumWorldWonders(iChangeNumRealBuilding);
 			}
-			else if (isTeamWonderClass((BuildingClassTypes)(GC.getBuildingInfo(eIndex).getBuildingClassType())))
+			else if (isTeamWonder(eIndex))
 			{
 				changeNumTeamWonders(iChangeNumRealBuilding);
 			}
-			else if (isNationalWonderClass((BuildingClassTypes)(GC.getBuildingInfo(eIndex).getBuildingClassType())))
+			else if (isNationalWonder(eIndex))
 			{
 				changeNumNationalWonders(iChangeNumRealBuilding);
 			}
@@ -17120,7 +17108,7 @@ void CvCity::setNumRealBuildingTimed(BuildingTypes eIndex, int iNewValue, bool b
 						}
 					}
 
-					if (isWorldWonderClass((BuildingClassTypes)(GC.getBuildingInfo(eIndex).getBuildingClassType())))
+					if (isWorldWonder(eIndex))
 					{
 						{
 							CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_COMPLETES_WONDER", GET_PLAYER(getOwner()).getNameKey(), GC.getBuildingInfo(eIndex).getTextKeyWide());
@@ -17148,7 +17136,7 @@ void CvCity::setNumRealBuildingTimed(BuildingTypes eIndex, int iNewValue, bool b
 					}
 				}
 
-				GC.getGame().incrementBuildingClassCreatedCount((BuildingClassTypes)(GC.getBuildingInfo(eIndex).getBuildingClassType()));
+				GC.getGame().incrementBuildingCreatedCount(eIndex);
 			}
 
 			if (GC.getBuildingInfo(eIndex).isAllowsNukes())
@@ -18184,7 +18172,7 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 			order = OrderData::createBuildingOrder(buildingType, bSave);
 			NoteBuildingNoLongerConstructable(buildingType);
 
-			GET_PLAYER(getOwner()).changeBuildingClassMaking(((BuildingClassTypes)(GC.getBuildingInfo(buildingType).getBuildingClassType())), 1);
+			GET_PLAYER(getOwner()).changeBuildingMaking(buildingType, 1);
 
 			const SpecialBuildingTypes eSpecialBuilding = (SpecialBuildingTypes)GC.getBuildingInfo(buildingType).getSpecialBuildingType();
 			if (eSpecialBuilding != NO_SPECIALBUILDING)
@@ -18515,14 +18503,12 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 	break;
 
 	case ORDER_CONSTRUCT:
-
 	{
-
 		eConstructBuilding = order.getBuildingType();
 
-		GET_PLAYER(getOwner()).changeBuildingClassMaking(((BuildingClassTypes)(GC.getBuildingInfo(eConstructBuilding).getBuildingClassType())), -1);
+		GET_PLAYER(getOwner()).changeBuildingMaking(eConstructBuilding, -1);
 
-		SpecialBuildingTypes eSpecialBuilding = (SpecialBuildingTypes)GC.getBuildingInfo(eConstructBuilding).getSpecialBuildingType();
+		const SpecialBuildingTypes eSpecialBuilding = (SpecialBuildingTypes)GC.getBuildingInfo(eConstructBuilding).getSpecialBuildingType();
 		if (eSpecialBuilding != NO_SPECIALBUILDING)
 		{
 			GET_PLAYER(getOwner()).changeBuildingGroupMaking(eSpecialBuilding, -1);
@@ -18530,10 +18516,9 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 
 		if (bFinish)
 		{
-			BuildingClassTypes eBuildingClass = (BuildingClassTypes)GC.getBuildingInfo(eConstructBuilding).getBuildingClassType();
-			if (GET_PLAYER(getOwner()).isBuildingClassMaxedOut(eBuildingClass))
+			if (GET_PLAYER(getOwner()).isBuildingMaxedOut(eConstructBuilding))
 			{
-				GET_PLAYER(getOwner()).removeBuildingClass((BuildingClassTypes)(GC.getBuildingInfo(eConstructBuilding).getBuildingClassType()));
+				GET_PLAYER(getOwner()).removeBuilding(eConstructBuilding);
 			}
 
 			setNumRealBuilding(eConstructBuilding, getNumRealBuilding(eConstructBuilding) + 1);
@@ -18777,7 +18762,7 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 		}
 		else if (eConstructBuilding != NO_BUILDING)
 		{
-			swprintf(szBuffer, gDLL->getText(((isLimitedWonderClass((BuildingClassTypes)(GC.getBuildingInfo(eConstructBuilding).getBuildingClassType()))) ? "TXT_KEY_MISC_CONSTRUCTED_BUILD_IN_LIMITED" : "TXT_KEY_MISC_CONSTRUCTED_BUILD_IN"), GC.getBuildingInfo(eConstructBuilding).getTextKeyWide(), getNameKey()).GetCString());
+			swprintf(szBuffer, gDLL->getText(isLimitedWonder(eConstructBuilding) ? "TXT_KEY_MISC_CONSTRUCTED_BUILD_IN_LIMITED" : "TXT_KEY_MISC_CONSTRUCTED_BUILD_IN"), GC.getBuildingInfo(eConstructBuilding).getTextKeyWide(), getNameKey()).GetCString());
 			strcpy(szSound, GC.getBuildingInfo(eConstructBuilding).getConstructSound());
 			szIcon = GC.getBuildingInfo(eConstructBuilding).getButton();
 		}
@@ -19079,7 +19064,7 @@ bool CvCity::doCheckProduction()
 	{
 		if (getBuildingProduction((BuildingTypes)iI) > 0)
 		{
-			if (player.isProductionMaxedBuildingClass((BuildingClassTypes)(GC.getBuildingInfo((BuildingTypes)iI).getBuildingClassType())))
+			if (player.isProductionMaxedBuilding((BuildingTypes)iI))
 			{
 
 				int iProductionGold = ((getBuildingProduction((BuildingTypes)iI) * GC.getDefineINT("MAXED_BUILDING_GOLD_PERCENT")) / 100);
@@ -19956,7 +19941,7 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_aiCommerceAttacks);
 	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_aiMaxCommerceAttacks);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_UNIT_CLASSES, GC.getNumUnitClassInfos(), m_paiUnitClassProductionModifier);
-	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, GC.getNumBuildingClassInfos(), m_paiBuildingClassProductionModifier);
+	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingProductionModifier);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiBonusDefenseChanges);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_pabHadVicinityBonus);
 	WRAPPER_READ_CLASS_ENUM(wrapper, "CvCity", REMAPPED_CLASS_TYPE_CIVILIZATIONS, &m_iCiv);
@@ -20609,7 +20594,7 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_aiCommerceAttacks);
 	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_aiMaxCommerceAttacks);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_UNIT_CLASSES, GC.getNumUnitClassInfos(), m_paiUnitClassProductionModifier);
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, GC.getNumBuildingClassInfos(), m_paiBuildingClassProductionModifier);
+	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingProductionModifier);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiBonusDefenseChanges);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_pabHadVicinityBonus);
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvCity", REMAPPED_CLASS_TYPE_CIVILIZATIONS, m_iCiv);
@@ -20854,13 +20839,13 @@ void CvCity::getVisibleBuildings(std::list<BuildingTypes>& kChosenVisible, int& 
 		BuildingTypes eCurType = (BuildingTypes)i;
 		if (getNumBuilding(eCurType) > 0)
 		{
-			bool	bValid = false;
+			bool bValid = false;
 			CvBuildingInfo& kBuilding = GC.getBuildingInfo(eCurType);
 
 			if (kBuilding.getNotShowInCity()) continue;
 
-			bool	bIsWonder = isLimitedWonderClass((BuildingClassTypes)kBuilding.getBuildingClassType());
-			bool	bIsDefense = (kBuilding.getDefenseModifier() > 0);
+			bool bIsWonder = isLimitedWonder(eCurType);
+			bool bIsDefense = (kBuilding.getDefenseModifier() > 0);
 
 			if ((iShowFlags & SHOW_BUILDINGS_WONDERS) != 0)
 			{
@@ -23026,10 +23011,9 @@ bool CvCity::isProductionWonder() const
 	if (headOrder && headOrder->eOrderType == ORDER_CONSTRUCT)
 	{
 		const BuildingTypes eBuilding = headOrder->getBuildingType();
-		const BuildingClassTypes eBuildingClass = (BuildingClassTypes)(GC.getBuildingInfo(eBuilding).getBuildingClassType());
-		return isWorldWonderClass(eBuildingClass) 
-			|| isTeamWonderClass(eBuildingClass) 
-			|| isNationalWonderClass(eBuildingClass);
+		return isWorldWonder(eBuilding) 
+			|| isTeamWonder(eBuilding) 
+			|| isNationalWonder(eBuilding);
 	}
 
 	return false;
@@ -23454,14 +23438,14 @@ int CvCity::getBuildingClassProductionModifier(BuildingClassTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
 	FAssertMsg(eIndex < GC.getNumBuildingClassInfos(), "eIndex expected to be < GC.getNumBuildingClassInfos()");
-	return m_paiBuildingClassProductionModifier[eIndex];
+	return m_paiBuildingProductionModifier[eIndex];
 }
 
 void CvCity::changeBuildingClassProductionModifier(BuildingClassTypes eIndex, int iChange)
 {
 	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
 	FAssertMsg(eIndex < GC.getNumBuildingClassInfos(), "eIndex expected to be < GC.getNumBuildingClassInfos()");
-	m_paiBuildingClassProductionModifier[eIndex] = (m_paiBuildingClassProductionModifier[eIndex] + iChange);
+	m_paiBuildingProductionModifier[eIndex] = (m_paiBuildingProductionModifier[eIndex] + iChange);
 }
 
 int CvCity::getBonusDefenseChanges(BonusTypes eIndex) const
@@ -25961,9 +25945,9 @@ void CvCity::clearModifierTotals()
 		m_paiUnitClassProductionModifier[iI] = 0;
 	}
 
-	for (int iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		m_paiBuildingClassProductionModifier[iI] = 0;
+		m_paiBuildingProductionModifier[iI] = 0;
 	}
 
 	for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)

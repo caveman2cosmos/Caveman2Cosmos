@@ -10862,8 +10862,7 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 		bFirst = true;
 		for (iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 		{
-			CvBuildingInfo& kInfo = GC.getBuildingInfo((BuildingTypes)iI);
-			if (isWorldWonderClass((BuildingClassTypes)kInfo.getBuildingClassType()) || isNationalWonderClass((BuildingClassTypes)kInfo.getBuildingClassType()))
+			if (isWorldWonder((BuildingTypes)iI) || isNationalWonder((BuildingTypes)iI))
 			{
 				if (pCity->getNumRealBuilding((BuildingTypes)iI) > 0)
 				{
@@ -10872,7 +10871,7 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 						szString.append(NEWLINE);
 						bFirst = false;
 					}
-					szTempBuffer.Format(L"<img=%S size=24></img>", kInfo.getButton());
+					szTempBuffer.Format(L"<img=%S size=24></img>", GC.getBuildingInfo((BuildingTypes)iI).getButton());
 					szString.append(szTempBuffer);
 				}
 			}
@@ -10884,8 +10883,7 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 		bFirst = true;
 		for (iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 		{
-			CvBuildingInfo& kInfo = GC.getBuildingInfo((BuildingTypes)iI);
-			if (isWorldWonderClass((BuildingClassTypes)kInfo.getBuildingClassType()) || isNationalWonderClass((BuildingClassTypes)kInfo.getBuildingClassType()))
+			if (isWorldWonder((BuildingTypes)iI) || isNationalWonder((BuildingTypes)iI))
 			{
 				if (pCity->getNumRealBuilding((BuildingTypes)iI) > 0)
 				{
@@ -12802,18 +12800,11 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 
 		// Buildings
 		iLast = 0;
-		for (iI = 0; iI < GC.getNumBuildingClassInfos(); ++iI)
+		for (iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 		{
-			if (eCivilization == NO_CIVILIZATION)
-			{
-				eLoopBuilding = ((BuildingTypes)(GC.getBuildingClassInfo((BuildingClassTypes)iI).getDefaultBuildingIndex()));
-			}
-			else
-			{
-				eLoopBuilding = ((BuildingTypes)(GC.getCivilizationInfo(eCivilization).getCivilizationBuildings(iI)));
-			}
+			const BuildingTypes eLoopBuilding = static_cast<BuidingTypes>(iI);
 
-			if (eLoopBuilding != NO_BUILDING && !isWorldWonderClass((BuildingClassTypes)iI))
+			if (!isWorldWonder(eLoopBuilding))
 			{
 				for (int j = 0; j < GC.getTraitInfo(eTrait).getNumBuildingProductionModifiers(); j++)
 				{
@@ -12842,25 +12833,17 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 
 		// Buildings
 		iLast = 0;
-		for (iI = 0; iI < GC.getNumBuildingClassInfos(); ++iI)
+		for (iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 		{
-			BuildingClassTypes eBuildingClass = ((BuildingClassTypes)iI);
-			if (eCivilization == NO_CIVILIZATION)
-			{
-				eLoopBuilding = ((BuildingTypes)(GC.getBuildingClassInfo(eBuildingClass).getDefaultBuildingIndex()));
-			}
-			else
-			{
-				eLoopBuilding = ((BuildingTypes)(GC.getCivilizationInfo(eCivilization).getCivilizationBuildings(iI)));
-			}
+			const BuildingTypes eLoopBuilding = static_cast<BuidingTypes>(iI);
 
-			if (eLoopBuilding != NO_BUILDING && !isWorldWonderClass(eBuildingClass))
+			if (!isWorldWonder(eLoopBuilding))
 			{
 				for (int j = 0; j < GC.getTraitInfo(eTrait).getNumBuildingHappinessModifiers(); j++)
 				{
 					if ((BuildingTypes)GC.getTraitInfo(eTrait).getBuildingHappinessModifier(j).eBuilding == eLoopBuilding)
 					{
-						int iHappiness = GC.getTraitInfo(eTrait).getBuildingHappinessModifier(j).iModifier;
+						const int iHappiness = GC.getTraitInfo(eTrait).getBuildingHappinessModifier(j).iModifier;
 						if (iHappiness != 0)
 						{
 							if (iHappiness > 0)
@@ -18707,30 +18690,12 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 
 		bFirst = true;
 
-		for (iI = 0; iI < GC.getNumBuildingClassInfos(); ++iI)
+		for (iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 		{
-			if (!bPlayerContext || !(GET_PLAYER(GC.getGame().getActivePlayer()).isProductionMaxedBuildingClass((BuildingClassTypes)iI)))
+			const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
+			if (!bPlayerContext || !GET_PLAYER(GC.getGame().getActivePlayer()).isProductionMaxedBuilding(eLoopBuilding))
 			{
-				if (GC.getGame().getActivePlayer() != NO_PLAYER)
-				{
-					eLoopBuilding = (BuildingTypes)GC.getCivilizationInfo(GC.getGame().getActiveCivilizationType()).getCivilizationBuildings(iI);
-				}
-				else
-				{
-					eLoopBuilding = (BuildingTypes)GC.getBuildingClassInfo((BuildingClassTypes)iI).getDefaultBuildingIndex();
-				}
-/************************************************************************************************/
-/* Afforess	                  Start		 07/22/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/*
-				if (eLoopBuilding != NO_BUILDING)
-*/
 				if (GC.getGame().canEverConstruct(eLoopBuilding))
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 				{
 					if (!bPlayerContext || !(GET_PLAYER(GC.getGame().getActivePlayer()).canConstruct(eLoopBuilding, false, true)))
 					{
@@ -22249,36 +22214,32 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 					}
 				}
 
-				for (iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
+				for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 				{
-					if (GC.getUnitInfo(eUnit).isPrereqBuildingClass(iI))
+					if (GC.getUnitInfo(eUnit).isPrereqBuilding(iI))
 					{
 						BuildingTypes eRequiredBuilding = NO_BUILDING;
 						if (!pCity)
 						{
 							if (ePlayer != NO_PLAYER)
 							{
-								if (GET_PLAYER(ePlayer).isBuildingClassRequiredToTrain(BuildingClassTypes(iI), eUnit))
+								if (GET_PLAYER(ePlayer).isBuildingRequiredToTrain(BuildingTypes(iI), eUnit))
 								{
-									eRequiredBuilding = (BuildingTypes)GC.getCivilizationInfo(GET_PLAYER(ePlayer).getCivilizationType()).getCivilizationBuildings(iI);
+									eRequiredBuilding = (BuildingTypes)iI;
 								}
 							}
 							else
 							{
 								// show default building
-								eRequiredBuilding = (BuildingTypes)GC.getBuildingClassInfo((BuildingClassTypes)iI).getDefaultBuildingIndex();
+								eRequiredBuilding = (BuildingTypes)iI;
 							}
 						}
-						else
+						// show unique building for city's owner if city doesn't have any
+						else if (GET_PLAYER(ePlayer).isBuildingRequiredToTrain(BuildingTypes(iI), eUnit))
 						{
-							// show unique building for city's owner if city doesn't have any
-							if (GET_PLAYER(ePlayer).isBuildingClassRequiredToTrain(BuildingClassTypes(iI), eUnit))
+							if (pCity->getNumBuilding((BuildingTypes)iI))
 							{
-								eRequiredBuilding = (BuildingTypes)GC.getCivilizationInfo(pCity->getCivilizationType()).getCivilizationBuildings(iI);
-								if (pCity->getNumBuilding(eRequiredBuilding))
-								{
-									eRequiredBuilding = NO_BUILDING;
-								}
+								eRequiredBuilding = NO_BUILDING;
 							}
 						}
 						if (eRequiredBuilding != NO_BUILDING)
@@ -23002,46 +22963,46 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 	}
 	else
 	{
-		if (isWorldWonderClass((BuildingClassTypes)(kBuilding.getBuildingClassType())))
+		if (isWorldWonder(eBuilding))
 		{
 			if (pCity == NULL || ePlayer == NO_PLAYER)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_WORLD_WONDER_ALLOWED", GC.getBuildingClassInfo((BuildingClassTypes) kBuilding.getBuildingClassType()).getMaxGlobalInstances()));
+				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_WORLD_WONDER_ALLOWED", kBuilding.getMaxGlobalInstances()));
 			}
 			else
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_WORLD_WONDER_LEFT", (GC.getBuildingClassInfo((BuildingClassTypes) kBuilding.getBuildingClassType()).getMaxGlobalInstances() - GC.getGame().getBuildingClassCreatedCount((BuildingClassTypes)(kBuilding.getBuildingClassType())) - GET_TEAM(eTeam).getBuildingClassMaking((BuildingClassTypes)(kBuilding.getBuildingClassType())))));
+				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_WORLD_WONDER_LEFT", kBuilding.getMaxGlobalInstances() - GC.getGame().getBuildingCreatedCount(eBuilding) - GET_TEAM(eTeam).getBuildingMaking(eBuilding)));
 			}
 		}
 
-		if (isTeamWonderClass((BuildingClassTypes)(kBuilding.getBuildingClassType())))
+		if (isTeamWonder(eBuilding))
 		{
 			if (pCity == NULL || ePlayer == NO_PLAYER)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_TEAM_WONDER_ALLOWED", GC.getBuildingClassInfo((BuildingClassTypes) kBuilding.getBuildingClassType()).getMaxTeamInstances()));
+				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_TEAM_WONDER_ALLOWED", kBuilding.getMaxTeamInstances()));
 			}
 			else
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_TEAM_WONDER_LEFT", (GC.getBuildingClassInfo((BuildingClassTypes) kBuilding.getBuildingClassType()).getMaxTeamInstances() - GET_TEAM(eTeam).getBuildingClassCountPlusMaking((BuildingClassTypes)(kBuilding.getBuildingClassType())))));
+				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_TEAM_WONDER_LEFT", kBuilding.getMaxTeamInstances() - GET_TEAM(eTeam).getBuildingCountPlusMaking(eBuilding)));
 			}
 		}
 
-		if (isNationalWonderClass((BuildingClassTypes)(kBuilding.getBuildingClassType())))
+		if (isNationalWonder(eBuilding))
 		{
 
 			if (pCity == NULL || ePlayer == NO_PLAYER)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_NATIONAL_WONDER_ALLOWED", GC.getBuildingClassInfo((BuildingClassTypes) kBuilding.getBuildingClassType()).getMaxPlayerInstances()));
+				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_NATIONAL_WONDER_ALLOWED", kBuilding.getMaxPlayerInstances()));
 			}
 			else
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_NATIONAL_WONDER_LEFT", (GC.getBuildingClassInfo((BuildingClassTypes) kBuilding.getBuildingClassType()).getMaxPlayerInstances() - GET_PLAYER(ePlayer).getBuildingClassCountPlusMaking((BuildingClassTypes)(kBuilding.getBuildingClassType())))));
+				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_NATIONAL_WONDER_LEFT", kBuilding.getMaxPlayerInstances() - GET_PLAYER(ePlayer).getBuildingCountPlusMaking(eBuilding)));
 			}
 		}
 
@@ -23198,42 +23159,18 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 		}
 	}
 
-	if (kBuilding.getFreeBuildingClass() != NO_BUILDINGCLASS)
+	const BuildingTypes eFreeBuilding = static_cast<BuildingTypes>(kBuilding.getFreeBuilding());
+	if (eFreeBuilding != NO_BUILDING)
 	{
-		BuildingTypes eFreeBuilding;
-		if (ePlayer != NO_PLAYER)
-		{
-			eFreeBuilding = ((BuildingTypes)(GC.getCivilizationInfo(GET_PLAYER(ePlayer).getCivilizationType()).getCivilizationBuildings(kBuilding.getFreeBuildingClass())));
-		}
-		else
-		{
-			eFreeBuilding = (BuildingTypes)GC.getBuildingClassInfo((BuildingClassTypes)kBuilding.getFreeBuildingClass()).getDefaultBuildingIndex();
-		}
-
-		if (NO_BUILDING != eFreeBuilding)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_FREE_IN_CITY", CvWString(GC.getBuildingInfo(eFreeBuilding).getType()).GetCString(), GC.getBuildingInfo(eFreeBuilding).getTextKeyWide()));
-		}
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_FREE_IN_CITY", CvWString(GC.getBuildingInfo(eFreeBuilding).getType()).GetCString(), GC.getBuildingInfo(eFreeBuilding).getTextKeyWide()));
 	}
 
-	if (kBuilding.getFreeAreaBuildingClass() != NO_BUILDINGCLASS)
+	const BuildingTypes eFreeAreaBuilding = static_cast<BuildingTypes>(kBuilding.eFreeAreaBuilding());
+	if (eFreeAreaBuilding != NO_BUILDING)
 	{
-		BuildingTypes eFreeBuilding;
-		if (ePlayer != NO_PLAYER)
-		{
-			eFreeBuilding = ((BuildingTypes)(GC.getCivilizationInfo(GET_PLAYER(ePlayer).getCivilizationType()).getCivilizationBuildings(kBuilding.getFreeAreaBuildingClass())));
-		}
-		else
-		{
-			eFreeBuilding = (BuildingTypes)GC.getBuildingClassInfo((BuildingClassTypes)kBuilding.getFreeAreaBuildingClass()).getDefaultBuildingIndex();
-		}
-
-		if (NO_BUILDING != eFreeBuilding)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_FREE_IN_AREA", CvWString(GC.getBuildingInfo(eFreeBuilding).getType()).GetCString(), GC.getBuildingInfo(eFreeBuilding).getTextKeyWide()));
-		}
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_FREE_IN_AREA", CvWString(GC.getBuildingInfo(eFreeAreaBuilding).getType()).GetCString(), GC.getBuildingInfo(eFreeAreaBuilding).getTextKeyWide()));
 	}
 
 	if (!bRelDisabled)
@@ -25664,7 +25601,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 
 		if (!(GC.getBuildingClassInfo((BuildingClassTypes)(kBuilding.getBuildingClassType())).isNoLimit()))
 		{
-			if (isWorldWonderClass((BuildingClassTypes)(kBuilding.getBuildingClassType())))
+			if (isWorldWonder(eBuilding))
 			{
 				if (pCity->isWorldWondersMaxed())
 				{
@@ -25672,7 +25609,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 					szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_WORLD_WONDERS_PER_CITY", GC.getCultureLevelInfo(pCity->getCultureLevel()).getMaxWorldWonders()));
 				}
 			}
-			else if (isTeamWonderClass((BuildingClassTypes)(kBuilding.getBuildingClassType())))
+			else if (isTeamWonder(eBuilding))
 			{
 				if (pCity->isTeamWondersMaxed())
 				{
@@ -25680,22 +25617,19 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 					szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_TEAM_WONDERS_PER_CITY", GC.getCultureLevelInfo(pCity->getCultureLevel()).getMaxTeamWonders()));
 				}
 			}
-			else if (isNationalWonderClass((BuildingClassTypes)(kBuilding.getBuildingClassType())))
+			else if (isNationalWonder(eBuilding))
 			{
 				if (pCity->isNationalWondersMaxed())
 				{
-					int iMaxNumWonders = (GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) && GET_PLAYER(pCity->getOwner()).isHuman()) ? GC.getCultureLevelInfo(pCity->getCultureLevel()).getMaxNationalWondersOCC() : GC.getCultureLevelInfo(pCity->getCultureLevel()).getMaxNationalWonders();
+					const int iMaxNumWonders = (GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) && GET_PLAYER(pCity->getOwner()).isHuman()) ? GC.getCultureLevelInfo(pCity->getCultureLevel()).getMaxNationalWondersOCC() : GC.getCultureLevelInfo(pCity->getCultureLevel()).getMaxNationalWonders();
 					szBuffer.append(NEWLINE);
 					szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_NATIONAL_WONDERS_PER_CITY", iMaxNumWonders));
 				}
 			}
-			else
+			else if (pCity->isBuildingsMaxed())
 			{
-				if (pCity->isBuildingsMaxed())
-				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_NUM_PER_CITY", GC.getDefineINT("MAX_BUILDINGS_PER_CITY")));
-				}
+				szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_NUM_PER_CITY", GC.getDefineINT("MAX_BUILDINGS_PER_CITY")));
 			}
 		}
 	}
@@ -26312,25 +26246,13 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 			}
 		}
 
-		if (kBuilding.getPrereqAnyoneBuildingClass() != NO_BUILDINGCLASS)
+		const BuildingTypes ePrereqBuilding = static_cast<BuildingClassTypes>(GC.getBuildingInfo(eBuilding).getPrereqAnyoneBuilding());
+		if (ePrereqBuilding != NO_BUILDING)
 		{
-			BuildingClassTypes ePrereqBuildingClass = (BuildingClassTypes)GC.getBuildingInfo(eBuilding).getPrereqAnyoneBuildingClass();
-			if (pCity == NULL || GC.getGame().getBuildingClassCreatedCount(ePrereqBuildingClass) == 0)
+			if (pCity == NULL || GC.getGame().getBuildingCreatedCount(ePrereqBuilding) == 0)
 			{
-				BuildingTypes ePrereqBuilding;
-				if (pCity != NULL)
-				{
-					ePrereqBuilding = (BuildingTypes)(GC.getCivilizationInfo(pCity->getCivilizationType()).getCivilizationBuildings(ePrereqBuildingClass));
-				}
-				else
-				{
-					ePrereqBuilding = (BuildingTypes)GC.getBuildingClassInfo(ePrereqBuildingClass).getDefaultBuildingIndex();
-				}
-				if (ePrereqBuilding != NO_BUILDING)
-				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_ANY_BUILDINGCLASS", GC.getBuildingInfo(ePrereqBuilding).getDescription()));
-				}
+				szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_ANY_BUILDINGCLASS", GC.getBuildingInfo(ePrereqBuilding).getDescription()));
 			}
 		}
 
@@ -26338,78 +26260,37 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 		bool bValid = false;
 		if (pCity != NULL)
 		{
-			for (iI = 0; iI < GC.getNumBuildingClassInfos(); ++iI)
+			for (iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 			{
-				if (kBuilding.isPrereqOrBuildingClass(iI))
+				if (kBuilding.isPrereqOrBuilding(iI) && pCity->getNumBuilding((BuildingTypes)iI) > 0)
 				{
-					if (NO_PLAYER != ePlayer)
-					{
-						eLoopBuilding = ((BuildingTypes)(GC.getCivilizationInfo(GET_PLAYER(ePlayer).getCivilizationType()).getCivilizationBuildings(iI)));
-					}
-					else
-					{
-						eLoopBuilding = (BuildingTypes)GC.getBuildingClassInfo((BuildingClassTypes)iI).getDefaultBuildingIndex();
-					}
-					if (eLoopBuilding != NO_BUILDING)
-					{
-						if (pCity->getNumBuilding(eLoopBuilding) > 0)
-						{
-							bValid = true;
-							break;
-						}
-					}
+					bValid = true;
+					break;
 				}
 			}
 		}
 		if (!bValid)
 		{
-			for (iI = 0; iI < GC.getNumBuildingClassInfos(); ++iI)
+			for (iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 			{
-				if (kBuilding.isPrereqOrBuildingClass(iI))
+				if (kBuilding.isPrereqOrBuilding(iI))
 				{
-					if (NO_PLAYER != ePlayer)
-					{
-						eLoopBuilding = ((BuildingTypes)(GC.getCivilizationInfo(GET_PLAYER(ePlayer).getCivilizationType()).getCivilizationBuildings(iI)));
-					}
-					else
-					{
-						eLoopBuilding = (BuildingTypes)GC.getBuildingClassInfo((BuildingClassTypes)iI).getDefaultBuildingIndex();
-					}
-					if (eLoopBuilding != NO_BUILDING)
-					{
-						{
-							szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES").c_str());
-							setListHelp(szBuffer, szTempBuffer, GC.getBuildingInfo(eLoopBuilding).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
-							bFirst = false;
-						}
-					}
+					szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES").c_str());
+					setListHelp(szBuffer, szTempBuffer, GC.getBuildingInfo((BuildingTypes)iI).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+					bFirst = false;
 				}
 			}
 		}
 
 		bFirst = true;
-		for (iI = 0; iI < GC.getNumBuildingClassInfos(); ++iI)
+		for (iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 		{
-			if (kBuilding.isPrereqNotBuildingClass(iI))
+			if (kBuilding.isPrereqNotBuilding(iI) && (pCity == NULL || pCity->getNumActiveBuilding((BuildingTypes)iI) > 0))
 			{
-				if (ePlayer != NO_PLAYER)
-				{
-					eLoopBuilding = ((BuildingTypes)(GC.getCivilizationInfo(GET_PLAYER(ePlayer).getCivilizationType()).getCivilizationBuildings(iI)));
-				}
-				else
-				{
-					eLoopBuilding = (BuildingTypes)GC.getBuildingClassInfo((BuildingClassTypes)iI).getDefaultBuildingIndex();
-				}
-				if (eLoopBuilding != NO_BUILDING)
-				{
-					if ((pCity == NULL) || (pCity->getNumActiveBuilding(eLoopBuilding) > 0))
-					{
-						szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDING_NOT_REQUIRED_TO_BUILD").c_str());
-						szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_BUILDING_TEXT"), CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
-						setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
-						bFirst = false;
-					}
-				}
+				szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDING_NOT_REQUIRED_TO_BUILD").c_str());
+				szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_BUILDING_TEXT"), CvWString(GC.getBuildingInfo((BuildingTypes)iI).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iI).getDescription());
+				setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
+				bFirst = false;
 			}
 		}
 		bFirst = true;
@@ -35932,7 +35813,7 @@ void CvGameTextMgr::setProductionHelp(CvWStringBuffer &szBuffer, CvCity& city)
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-		int iBuildingClassMod = city.getBuildingClassProductionModifier((BuildingClassTypes)building.getBuildingClassType()) + GET_PLAYER(city.getOwner()).getBuildingClassProductionModifier((BuildingClassTypes)building.getBuildingClassType());
+		int iBuildingClassMod = city.getBuildingClassProductionModifier((BuildingClassTypes)building.getBuildingClassType()) + GET_PLAYER(city.getOwner()).getBuildingProductionModifier(eBuilding);
 		if (0 != iBuildingClassMod)
 		{
 			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_UNITCLASS", iBuildingClassMod, building.getTextKeyWide()));
@@ -35978,9 +35859,9 @@ void CvGameTextMgr::setProductionHelp(CvWStringBuffer &szBuffer, CvCity& city)
 		}
 
 		// Wonder
-		if (isWorldWonderClass((BuildingClassTypes)(GC.getBuildingInfo(eBuilding).getBuildingClassType())) && NO_PLAYER != city.getOwner())
+		if (isWorldWonder(eBuilding) && NO_PLAYER != city.getOwner())
 		{
-			int iWonderMod = GET_PLAYER(city.getOwner()).getMaxGlobalBuildingProductionModifier();
+			const int iWonderMod = GET_PLAYER(city.getOwner()).getMaxGlobalBuildingProductionModifier();
 			if (0 != iWonderMod)
 			{
 				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_WONDER", iWonderMod));
@@ -35990,9 +35871,9 @@ void CvGameTextMgr::setProductionHelp(CvWStringBuffer &szBuffer, CvCity& city)
 		}
 
 		// Team Wonder
-		if (isTeamWonderClass((BuildingClassTypes)(GC.getBuildingInfo(eBuilding).getBuildingClassType())) && NO_PLAYER != city.getOwner())
+		if (isTeamWonder(eBuilding) && NO_PLAYER != city.getOwner())
 		{
-			int iWonderMod = GET_PLAYER(city.getOwner()).getMaxTeamBuildingProductionModifier();
+			const int iWonderMod = GET_PLAYER(city.getOwner()).getMaxTeamBuildingProductionModifier();
 			if (0 != iWonderMod)
 			{
 				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_TEAM_WONDER", iWonderMod));
@@ -36002,9 +35883,9 @@ void CvGameTextMgr::setProductionHelp(CvWStringBuffer &szBuffer, CvCity& city)
 		}
 
 		// National Wonder
-		if (isNationalWonderClass((BuildingClassTypes)(GC.getBuildingInfo(eBuilding).getBuildingClassType())) && NO_PLAYER != city.getOwner())
+		if (isNationalWonder(eBuilding) && NO_PLAYER != city.getOwner())
 		{
-			int iWonderMod = GET_PLAYER(city.getOwner()).getMaxPlayerBuildingProductionModifier();
+			const int iWonderMod = GET_PLAYER(city.getOwner()).getMaxPlayerBuildingProductionModifier();
 			if (0 != iWonderMod)
 			{
 				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_NATIONAL_WONDER", iWonderMod));
@@ -36018,7 +35899,7 @@ void CvGameTextMgr::setProductionHelp(CvWStringBuffer &szBuffer, CvCity& city)
 		{
 			if (city.isHasReligion(GET_PLAYER(city.getOwner()).getStateReligion()))
 			{
-				int iReligionMod = GET_PLAYER(city.getOwner()).getStateReligionBuildingProductionModifier();
+				const int iReligionMod = GET_PLAYER(city.getOwner()).getStateReligionBuildingProductionModifier();
 				if (0 != iReligionMod)
 				{
 					szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_RELIGION", iReligionMod, GC.getReligionInfo(GET_PLAYER(city.getOwner()).getStateReligion()).getTextKeyWide()));
@@ -40702,15 +40583,15 @@ void CvGameTextMgr::setDefenseHelp(CvWStringBuffer &szBuffer, CvCity& city)
 	bool bWonder = false;
 	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		int iCount = city.getNumActiveBuilding((BuildingTypes)iI);
-		if (isWorldWonderClass((BuildingClassTypes)(GC.getBuildingInfo((BuildingTypes)iI).getBuildingClassType())))
+		const int iCount = city.getNumActiveBuilding((BuildingTypes)iI);
+		if (isWorldWonder((BuildingTypes)iI))
 			bWonder = true;
-		else if (isTeamWonderClass((BuildingClassTypes)(GC.getBuildingInfo((BuildingTypes)iI).getBuildingClassType())))
+		else if (isTeamWonder((BuildingTypes)iI))
 			bWonder = true;
-		else if (isNationalWonderClass((BuildingClassTypes)(GC.getBuildingInfo((BuildingTypes)iI).getBuildingClassType())))
+		else if (isNationalWonder((BuildingTypes)iI))
 			bWonder = true;
 
-		CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
+		const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
 		if (iCount > 0 && !bWonder)
 		{
 			iBuildingDefense += iCount * (kBuilding.getDefenseModifier());

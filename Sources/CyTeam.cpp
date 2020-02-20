@@ -179,14 +179,14 @@ int CyTeam::getUnitClassCountPlusMaking(int /*UnitClassTypes*/ eUnitClass)
 	return m_pTeam ? m_pTeam->getUnitClassCountPlusMaking((UnitClassTypes)eUnitClass) : -1;
 }
 
-int CyTeam::getBuildingClassMaking(int /*BuildingClassTypes*/ eBuildingClass)
+int CyTeam::getBuildingMaking(int /*BuildingTypes*/ eBuilding) const
 {
-	return m_pTeam ? m_pTeam->getBuildingClassMaking((BuildingClassTypes)eBuildingClass) : -1;
+	return m_pTeam ? m_pTeam->getBuildingMaking((BuildingTypes)eBuilding) : -1;
 }
 
-int CyTeam::getBuildingClassCountPlusMaking(int /*BuildingClassTypes*/ eBuildingClass)
+int CyTeam::getBuildingCountPlusMaking(int /*BuildingTypes*/ eBuilding) const
 {
-	return m_pTeam ? m_pTeam->getBuildingClassCountPlusMaking((BuildingClassTypes)eBuildingClass) : -1;
+	return m_pTeam ? m_pTeam->getBuildingCountPlusMaking((BuildingTypes)eBuilding) : -1;
 }
 
 int CyTeam::getHasReligionCount(int /*ReligionTypes*/ eReligion)
@@ -855,14 +855,14 @@ bool CyTeam::isUnitClassMaxedOut(int /*UnitClassTypes*/ eIndex, int iExtra)
 	return m_pTeam ? m_pTeam->isUnitClassMaxedOut((UnitClassTypes)eIndex, iExtra) : false;
 }
 
-int CyTeam::getBuildingClassCount(int /*BuildingClassTypes*/ eIndex)
+int CyTeam::getBuildingCount(int /*BuildingTypes*/ eIndex)
 {
-	return m_pTeam ? m_pTeam->getBuildingClassCount((BuildingClassTypes)eIndex) : -1;
+	return m_pTeam ? m_pTeam->getBuildingCount((BuildingTypes)eIndex) : -1;
 }
 
-bool CyTeam::isBuildingClassMaxedOut(int /*BuildingClassTypes*/ eIndex, int iExtra)
+bool CyTeam::isBuildingMaxedOut(int /*BuildingTypes*/ eIndex, int iExtra)
 {
-	return m_pTeam ? m_pTeam->isBuildingClassMaxedOut((BuildingClassTypes)eIndex, iExtra) : false;
+	return m_pTeam ? m_pTeam->isBuildingMaxedOut((BuildingTypes)eIndex, iExtra) : false;
 }
 
 int CyTeam::getObsoleteBuildingCount(int /*BuildingTypes*/ eIndex)

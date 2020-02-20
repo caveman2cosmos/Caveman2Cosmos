@@ -241,7 +241,7 @@ int getPopulationPower(int iPopulation);								// Exposed to Python
 int getPopulationScore(int iPopulation);								// Exposed to Python
 int getLandPlotsScore(int iLandPlots);									// Exposed to Python
 int getTechScore(TechTypes eTech);											// Exposed to Python
-int getWonderScore(BuildingClassTypes eWonderClass);		// Exposed to Python
+int getWonderScore(BuildingTypes eWonder);		// Exposed to Python
 
 ImprovementTypes finalImprovementUpgrade(ImprovementTypes eImprovement, int iCount = 0);		// Exposed to Python
 
@@ -258,10 +258,10 @@ bool isTeamUnitClass(UnitClassTypes eUnitClass);											// Exposed to Python
 bool isNationalUnitClass(UnitClassTypes eUnitClass);									// Exposed to Python
 bool isLimitedUnitClass(UnitClassTypes eUnitClass);										// Exposed to Python
 
-bool isWorldWonderClass(BuildingClassTypes eBuildingClass);						// Exposed to Python
-bool isTeamWonderClass(BuildingClassTypes eBuildingClass);						// Exposed to Python
-bool isNationalWonderClass(BuildingClassTypes eBuildingClass);				// Exposed to Python
-bool isNationalWonderGroupClass(BuildingClassTypes eBuildingClass);
+bool isWorldWonder(BuildingTypes eBuilding);						// Exposed to Python
+bool isTeamWonder(BuildingTypes eBuilding);						// Exposed to Python
+bool isNationalWonder(BuildingTypes eBuilding);				// Exposed to Python
+bool isNationalWonderGroup(BuildingTypes eBuilding);
 bool isNationalWonderGroupSpecialBuilding(SpecialBuildingTypes eSpecialBuilding);
 bool isLimitedWonderClass(BuildingClassTypes eBuildingClass);					// Exposed to Python
 int limitedWonderClassLimit(BuildingClassTypes eBuildingClass);

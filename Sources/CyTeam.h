@@ -63,8 +63,8 @@ public:
 
 	int getUnitClassMaking(int /*UnitClassTypes*/ eUnitClass);
 	int getUnitClassCountPlusMaking(int /*UnitClassTypes*/ eUnitClass);
-	int getBuildingClassMaking(int /*BuildingClassTypes*/ eBuildingClass);
-	int getBuildingClassCountPlusMaking(int /*BuildingClassTypes*/ eBuildingClass);
+	int getBuildingMaking(int /*BuildingTypes*/ eBuilding) const;
+	int getBuildingCountPlusMaking(int /*BuildingTypes*/ eBuilding) const;
 	int getHasReligionCount(int /*ReligionTypes*/ eReligion);
 	int getHasCorporationCount(int /*CorporationTypes*/ eCorporation);
 
@@ -205,8 +205,8 @@ public:
 	int getProjectMaking(int /*ProjectTypes*/ eIndex);
 	int getUnitClassCount(int /*UnitClassTypes*/ eIndex);
 	bool isUnitClassMaxedOut(int /*UnitClassTypes*/ eIndex, int iExtra);
-	int getBuildingClassCount(int /*BuildingClassTypes*/ eIndex);
-	bool isBuildingClassMaxedOut(int /*BuildingClassTypes*/ eIndex, int iExtra);
+	int getBuildingCount(int /*BuildingTypes*/ eIndex);
+	bool isBuildingMaxedOut(int /*BuildingTypes*/ eIndex, int iExtra);
 	int getObsoleteBuildingCount(int /*BuildingTypes*/ eIndex);
 	bool isObsoleteBuilding(int /*BuildingTypes*/ eIndex);
 

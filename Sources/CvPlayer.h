@@ -355,7 +355,7 @@ public:
 	bool canCreate(ProjectTypes eProject, bool bContinue = false, bool bTestVisible = false) const; // Exposed to Python
 	bool canMaintain(ProcessTypes eProcess, bool bContinue = false) const; // Exposed to Python
 	bool isProductionMaxedUnitClass(UnitClassTypes eUnitClass) const; // Exposed to Python
-	bool isProductionMaxedBuildingClass(BuildingClassTypes eBuildingClass, bool bAcquireCity = false) const; // Exposed to Python
+	bool isProductionMaxedBuilding(BuildingTypes building, bool bAcquireCity = false) const; // Exposed to Python
 	bool isProductionMaxedProject(ProjectTypes eProject) const; // Exposed to Python
 	int getProductionNeeded(UnitTypes eUnit) const; // Exposed to Python
 	int getProductionNeeded(BuildingTypes eBuilding) const; // Exposed to Python
@@ -364,8 +364,8 @@ public:
 	int getProductionModifier(BuildingTypes eBuilding) const;
 	int getProductionModifier(ProjectTypes eProject) const;
 
-	int getBuildingClassPrereqBuilding(BuildingTypes eBuilding, BuildingClassTypes ePrereqBuildingClass, int iExtra = 0) const; // Exposed to Python
-	void removeBuildingClass(BuildingClassTypes eBuildingClass);
+	int getBuildingPrereqBuilding(BuildingTypes eBuilding, BuildingTypes ePrereqBuilding, int iExtra = 0) const; // Exposed to Python
+	void removeBuilding(BuildingTypes building);
 	//Team Project (5)
 	void processBuilding(BuildingTypes eBuilding, int iChange, CvArea* pArea, bool bReligiouslyDisabling = false);
 
@@ -675,7 +675,7 @@ public:
 
 	bool canFoundReligion() const; // Exposed to Python
 
-	bool isBuildingClassRequiredToTrain(BuildingClassTypes eBuildingClass, UnitTypes eUnit) const; // Exposed to Python
+	bool isBuildingRequiredToTrain(BuildingTypes eBuilding, UnitTypes eUnit) const; // Exposed to Python
 /************************************************************************************************/
 /* REVDCM                                  END                                                  */
 /************************************************************************************************/
@@ -1183,15 +1183,15 @@ public:
 
 	int getBuildingClassCount(BuildingClassTypes eIndex) const;
 	int getBuildingGroupCount(SpecialBuildingTypes eIndex) const; // Exposed to Python
-	bool isBuildingClassMaxedOut(BuildingClassTypes eIndex, int iExtra = 0) const; // Exposed to Python
+	bool isBuildingMaxedOut(BuildingTypes eIndex, int iExtra = 0) const; // Exposed to Python
 	bool isBuildingGroupMaxedOut(SpecialBuildingTypes eIndex, int iExtra = 0) const; // Exposed to Python
-	void changeBuildingClassCount(BuildingClassTypes eIndex, int iChange); // Exposed to Python
+	void changeBuildingCount(BuildingTypes eIndex, int iChange); // Exposed to Python
 	void changeBuildingGroupCount(SpecialBuildingTypes eIndex, int iChange);
-	int getBuildingClassMaking(BuildingClassTypes eIndex) const;
+	int getBuildingMaking(BuildingTypes eIndex) const;
 	int getBuildingGroupMaking(SpecialBuildingTypes eIndex) const; // Exposed to Python
-	void changeBuildingClassMaking(BuildingClassTypes eIndex, int iChange); // Exposed to Python
+	void changeBuildingMaking(BuildingTypes eIndex, int iChange); // Exposed to Python
 	void changeBuildingGroupMaking(SpecialBuildingTypes eIndex, int iChange);
-	int getBuildingClassCountPlusMaking(BuildingClassTypes eIndex) const;
+	int getBuildingCountPlusMaking(BuildingTypes eIndex) const;
 	int getBuildingGroupCountPlusMaking(SpecialBuildingTypes eIndex) const; // Exposed to Python
 
 	int getHurryCount(HurryTypes eIndex) const; // Exposed to Python
@@ -1619,8 +1619,8 @@ public:
 	int getUnitCombatFreeExperience(UnitCombatTypes eIndex) const;
 	void changeUnitCombatFreeExperience(UnitCombatTypes eIndex, int iChange);
 
-	int getBuildingClassProductionModifier(BuildingClassTypes eIndex) const;
-	void changeBuildingClassProductionModifier(BuildingClassTypes eIndex, int iChange);
+	int getBuildingProductionModifier(BuildingTypes eIndex) const;
+	void changeBuildingClassProductionModifier(BuildingTypes eIndex, int iChange);
 
 	int getUnitClassProductionModifier(UnitClassTypes eIndex) const;
 	void changeUnitClassProductionModifier(UnitClassTypes eIndex, int iChange);
@@ -1681,7 +1681,7 @@ public:
 	int getLandmarkHappiness() const;
 	void changeLandmarkHappiness(int iChange);
 
-	int getBuildingClassCountWithUpgrades(BuildingClassTypes eBuildingClass) const;
+	int getBuildingCountWithUpgrades(BuildingTypes eBuilding) const;
 
 	void setColor(PlayerColorTypes eColor);
 
@@ -2277,9 +2277,9 @@ protected:
 	int* m_paiFeatureHappiness;
 	int* m_paiUnitClassCount;
 	int* m_paiUnitClassMaking;
-	int* m_paiBuildingClassCount;
+	int* m_paiBuildingCount;
 	int* m_paiBuildingGroupCount;
-	int* m_paiBuildingClassMaking;
+	int* m_paiBuildingMaking;
 	int* m_paiBuildingGroupMaking;
 	int* m_paiHurryCount;
 	int* m_paiSpecialBuildingNotRequiredCount;

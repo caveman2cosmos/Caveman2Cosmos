@@ -3192,7 +3192,7 @@ public:
 	CvCivicInfo();
 	virtual ~CvCivicInfo();
 
-	std::wstring pyGetWeLoveTheKing() { return getWeLoveTheKing(); }// Exposed to Python
+	std::wstring pyGetWeLoveTheKing() const { return getWeLoveTheKing(); } // Exposed to Python
 	const wchar* getWeLoveTheKing() const;
 	void setWeLoveTheKingKey(const TCHAR* szVal);
 	const wchar* getWeLoveTheKingKey() const;
@@ -3637,6 +3637,7 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+class CvBuildingClassInfo;
 class CvArtInfoBuilding;
 class CvArtInfoMovie;
 class CvBuildingInfo : public CvHotkeyInfo
@@ -3661,8 +3662,13 @@ public:
 	BonusTypes getExtraFreeBonus(int i) const;
 	int getExtraFreeBonusNum(int i) const;
 	bool hasExtraFreeBonus(BonusTypes eBonus) const;
+
 	int getFreeBuildingClass() const;			// Exposed to Python
+	int getFreeBuilding() const { return GC.getBuildingClassInfo((BuildingClassTypes)getFreeBuildingClass()).getDefaultBuildingIndex(); }
+
 	int getFreeAreaBuildingClass() const;
+	int getFreeAreaBuilding() const { return GC.getBuildingClassInfo((BuildingClassTypes)getFreeAreaBuildingClass()).getDefaultBuildingIndex(); }
+
 	int getFreePromotion() const;				// Exposed to Python
 	int getCivicOption() const;					// Exposed to Python
 	int getAIWeight() const;					// Exposed to Python
@@ -3856,13 +3862,18 @@ public:
 	int getDomainProductionModifier(int i) const;	// Exposed to Python
 	int getPrereqAndTechs(int i) const;				// Exposed to Python
 	int getBuildingHappinessChanges(int i) const;	// Exposed to Python
+
 	int getPrereqNumOfBuildingClass(int i) const;	// Exposed to Python
+	int getPrereqNumOfBuilding(int i) const { return GC.getBuildingClassInfo((BuildingClassTypes)getPrereqNumOfBuildingClass(i)).getDefaultBuildingIndex(); }
+
 	int getFlavorValue(int i) const;				// Exposed to Python
 	int getImprovementFreeSpecialist(int i) const;	// Exposed to Python
 
 	bool isCommerceFlexible(int i) const;				// Exposed to Python
 	bool isCommerceChangeOriginalOwner(int i) const;	// Exposed to Python
+
 	bool isBuildingClassNeededInCity(int i) const;		// Exposed to Python
+	bool isBuildingNeededInCity(int i) const { return GC.getBuildingClassInfo((BuildingClassTypes)isBuildingClassNeededInCity(i)).getDefaultBuildingIndex(); }
 
 	int getSpecialistYieldChange(int i, int j) const;	// Exposed to Python
 	int* getSpecialistYieldChangeArray(int i) const;
@@ -3916,7 +3927,10 @@ public:
 	int getProductionContinueBuildingClass() const;
 	int getPrereqCultureLevel() const;
 	int getWorkableRadius() const;
+
 	int getPrereqAnyoneBuildingClass() const;
+	int getPrereqAnyoneBuilding() const { return GC.getBuildingClassInfo((BuildingClassTypes)getPrereqAnyoneBuildingClass()).getDefaultBuildingIndex(); }
+
 	int getExtendsBuildingClass() const;
 	int getOccupationTimeModifier() const;
 	int getNoEntryDefenseLevel(bool bForLoad = false) const;
@@ -4151,6 +4165,21 @@ public:
 
 	BoolExpr* getConstructCondition() const;
 
+	bool getNotShowInCity() const;
+
+	// BuildingClass ==========================================================
+	int getMaxGlobalInstances() const    { return GC.getBuildingClassInfo((BuildingClassTypes)getBuildingClassType()).getMaxGlobalInstances(); }
+	int getMaxTeamInstances() const      { return GC.getBuildingClassInfo((BuildingClassTypes)getBuildingClassType()).getMaxTeamInstances(); }
+	int getMaxPlayerInstances() const    { return GC.getBuildingClassInfo((BuildingClassTypes)getBuildingClassType()).getMaxPlayerInstances(); }
+	int getExtraPlayerInstances() const  { return GC.getBuildingClassInfo((BuildingClassTypes)getBuildingClassType()).getExtraPlayerInstances(); }
+
+	bool isNoLimit() const               { return GC.getBuildingClassInfo((BuildingClassTypes)getBuildingClassType()).isNoLimit(); }
+	bool isMonument() const              { return GC.getBuildingClassInfo((BuildingClassTypes)getBuildingClassType()).isMonument(); }
+
+	int getVictoryThreshold(int i) const { return GC.getBuildingClassInfo((BuildingClassTypes)getBuildingClassType()).getVictoryThreshold(i); }
+	//=========================================================================
+
+protected:
 	bool m_bAnySpecialistYieldChanges;
 	bool m_bAnySpecialistCommerceChanges;
 	bool m_bAnyBonusYieldModifiers;
@@ -4164,9 +4193,6 @@ public:
 	bool m_bAnyVicinityBonusYieldChanges;
 	bool m_bAnyBonusCommercePercentChanges;
 
-	bool getNotShowInCity() const;
-
-protected:
 	bool m_bNotShowInCity;
 	void setNotShowInCity();
 	int m_iFreePromotion_2;

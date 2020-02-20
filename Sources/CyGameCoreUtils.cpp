@@ -159,9 +159,9 @@ int cyGetTechScore(int /*TechTypes*/ eTech)
 	return getTechScore((TechTypes)eTech);
 }
 
-int cyGetWonderScore(int /*BuildingClassTypes*/ eWonderClass)
+int cyGetWonderScore(int /*BuildingTypes*/ eWonder)
 {
-	return getWonderScore((BuildingClassTypes)eWonderClass);
+	return getWonderScore((BuildingTypes)eWonder);
 }
 
 int /*ImprovementTypes*/ cyFinalImprovementUpgrade(int /*ImprovementTypes*/ eImprovement, int iCount)
@@ -214,24 +214,24 @@ bool cyIsLimitedUnitClass(int /*UnitClassTypes*/ eUnitClass)
 	return isLimitedUnitClass((UnitClassTypes)eUnitClass);
 }
 
-bool cyIsWorldWonderClass(int /*BuildingClassTypes*/ eBuildingClass)
+bool cyIsWorldWonder(int /*BuildingTypes*/ eBuilding)
 {
-	return isWorldWonderClass((BuildingClassTypes)eBuildingClass);
+	return isWorldWonder((BuildingTypes)eBuilding);
 }
 
-bool cyIsTeamWonderClass(int /*BuildingClassTypes*/ eBuildingClass)
+bool cyIsTeamWonder(int /*BuildingTypes*/ eBuilding)
 {
-	return isTeamWonderClass((BuildingClassTypes)eBuildingClass);
+	return isTeamWonder((BuildingTypes)eBuilding);
 }
 
-bool cyIsNationalWonderClass(int /*BuildingClassTypes*/ eBuildingClass)
+bool cyIsNationalWonder(int /*BuildingTypes*/ eBuilding)
 {
-	return isNationalWonderClass((BuildingClassTypes)eBuildingClass);
+	return isNationalWonder((BuildingTypes)eBuilding);
 }
 
-bool cyIsLimitedWonderClass(int /*BuildingClassTypes*/ eBuildingClass)
+bool cyIsLimitedWonder(int /*BuildingTypes*/ eBuilding)
 {
-	return isLimitedWonderClass((BuildingClassTypes)eBuildingClass);
+	return isLimitedWonder((BuildingTypes)eBuilding);
 }
 
 bool cyIsWorldProject(int /*ProjectTypes*/ eProject)

@@ -18065,7 +18065,7 @@ int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, 
 		{
 			const BuildingTypes buildingType = itr->first;
 
-			if (player.getBuildingClassCount((BuildingClassTypes)GC.getBuildingInfo(buildingType).getBuildingClassType()) >= iMaxSingleBuildingCount)
+			if (player.getBuildingCount(buildingType) >= iMaxSingleBuildingCount)
 				continue;
 
 			// Check some other unit hasn't already got this city targeted to construct this building
@@ -18316,44 +18316,34 @@ bool CvUnitAI::AI_switchHurry()
 {
 	PROFILE_FUNC();
 
-	CvCity* pCity;
-	BuildingTypes eBestBuilding;
-	int iValue;
-	int iBestValue;
-	int iI;
-
-	pCity = plot()->getPlotCity();
+	CvCity* pCity = plot()->getPlotCity();
 
 	if ((pCity == NULL) || (pCity->getOwner() != getOwner()))
 	{
 		return false;
 	}
 
-	iBestValue = 0;
-	eBestBuilding = NO_BUILDING;
-	CvCivilizationInfo& kCivilizationInfo = GC.getCivilizationInfo(getCivilizationType());
+	int iBestValue = 0;
+	BuildingTypes eBestBuilding = NO_BUILDING;
 
-	for (iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		if (isWorldWonderClass((BuildingClassTypes)iI))
+		const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
+
+		if (isWorldWonder(eBuilding))
 		{
-			BuildingTypes eBuilding = (BuildingTypes)kCivilizationInfo.getCivilizationBuildings(iI);
-
-			if (NO_BUILDING != eBuilding)
+			if (pCity->canConstruct(eBuilding))
 			{
-				if (pCity->canConstruct(eBuilding))
+				if (pCity->getBuildingProduction(eBuilding) == 0)
 				{
-					if (pCity->getBuildingProduction(eBuilding) == 0)
+					if (getMaxHurryProduction(pCity) >= pCity->getProductionNeeded(eBuilding))
 					{
-						if (getMaxHurryProduction(pCity) >= pCity->getProductionNeeded(eBuilding))
-						{
-							iValue = pCity->AI_buildingValue(eBuilding);
+						const int iValue = pCity->AI_buildingValue(eBuilding);
 
-							if (iValue > iBestValue)
-							{
-								iBestValue = iValue;
-								eBestBuilding = eBuilding;
-							}
+						if (iValue > iBestValue)
+						{
+							iBestValue = iValue;
+							eBestBuilding = eBuilding;
 						}
 					}
 				}
@@ -18424,7 +18414,7 @@ bool CvUnitAI::AI_hurry(bool bAny)
 
 						if (pLoopCity->isProductionBuilding())
 						{
-							if (bAny || isWorldWonderClass((BuildingClassTypes)(GC.getBuildingInfo(pLoopCity->getProductionBuilding()).getBuildingClassType())))
+							if (bAny || isWorldWonder(pLoopCity->getProductionBuilding()))
 							{
 								bHurry = true;
 							}
