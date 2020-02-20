@@ -8,17 +8,11 @@
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BIRD_DANCE</Type>
 			<Description>TXT_KEY_BUILDING_BIRD_DANCE</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_BIRD_DANCE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FOX_DANCE</Type>
 			<Description>TXT_KEY_BUILDING_FOX_DANCE</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_FOX_DANCE</DefaultBuilding>
 		</BuildingClassInfo>
 	</BuildingClassInfos>

@@ -9,10 +9,6 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_ANDEAN_MISSIONARY</Type>
 			<Description>TXT_KEY_UNIT_ANDEAN_MISSIONARY</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ANDEAN_MISSIONARY</DefaultUnit>
 		</UnitClassInfo>
 	</UnitClassInfos>

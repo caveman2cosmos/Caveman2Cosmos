@@ -194,7 +194,7 @@ def onCityAcquired(argsList):
 
 							if CyTeamOld.isHasTech(GC.getInfoTypeForString("TECH_FASCISM")):
 								bHasFascism = True
-							if CyTeamOld.isHasTech(GC.getInfoTypeForString("TECH_COMPUTERS")):
+							if CyTeamOld.isHasTech(GC.getInfoTypeForString("TECH_PERSONAL_COMPUTERS")):
 								combatpromotiontech += 1
 							if CyTeamOld.isHasTech(GC.getInfoTypeForString("TECH_ROBOTICS")):
 								combatpromotiontech += 1

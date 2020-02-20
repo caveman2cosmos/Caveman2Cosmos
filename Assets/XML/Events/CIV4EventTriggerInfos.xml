@@ -71,27 +71,27 @@
 			<TriggerTexts>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_ANCIENT_1</Text>
-					<Era>ERA_SEDENTARY</Era>
+					<Era>C2C_ERA_ANCIENT</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_ANCIENT_1</Text>
-					<Era>ERA_CLASSICAL</Era>
+					<Era>C2C_ERA_CLASSICAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_ANCIENT_1</Text>
-					<Era>ERA_MEDIEVAL</Era>
+					<Era>C2C_ERA_MEDIEVAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_ANCIENT_1</Text>
-					<Era>ERA_RENAISSANCE</Era>
+					<Era>C2C_ERA_RENAISSANCE</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_INDUSTRIAL_1</Text>
-					<Era>ERA_INDUSTRIAL</Era>
+					<Era>C2C_ERA_INDUSTRIAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_INDUSTRIAL_1</Text>
-					<Era>ERA_MODERN</Era>
+					<Era>C2C_ERA_ATOMIC</Era>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/CityRuinsEvent.dds</EventArt>
@@ -173,16 +173,16 @@
 				<ImprovementType>IMPROVEMENT_MODERN_MINE</ImprovementType>
 			</ImprovementsRequired>
 			<BonusesRequired>
-				<BonusType>BONUS_GOLD</BonusType>
+				<BonusType>BONUS_GOLD_ORE</BonusType>
 			</BonusesRequired>
 			<RoutesRequired>
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
-				<RouteType>ROUTE_GRAVTUBE</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+				<RouteType>ROUTE_MAGLEV</RouteType>
 				<RouteType>ROUTE_JUMPLANE</RouteType>
 			</RoutesRequired>
 			<Events>
@@ -211,10 +211,10 @@
 			<RoutesRequired>
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			</RoutesRequired>
 			<Events>
 				<Event>EVENT_WASHED_OUT_1</Event>
@@ -603,9 +603,9 @@
 				<BonusType>BONUS_WHEAT</BonusType>
 				<BonusType>BONUS_RICE</BonusType>
 				<BonusType>BONUS_CORN</BonusType>
-				<BonusType>BONUS_POTATO</BonusType>
+				<BonusType>BONUS_POTATOES</BonusType>
 				<BonusType>BONUS_BARLEY</BonusType>
-				<BonusType>BONUS_MELON</BonusType>
+				<BonusType>BONUS_MELONS</BonusType>
 				<BonusType>BONUS_PUMPKIN</BonusType>
 				<BonusType>BONUS_SQUASH</BonusType>
 			</BonusesRequired>
@@ -613,10 +613,10 @@
 				<RouteType>ROUTE_TRAIL</RouteType>
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			</RoutesRequired>
 			<Events>
 				<Event>EVENT_FARM_BANDITS_1</Event>
@@ -653,15 +653,15 @@
 				<BonusType>BONUS_WHEAT</BonusType>
 				<BonusType>BONUS_RICE</BonusType>
 				<BonusType>BONUS_CORN</BonusType>
-				<BonusType>BONUS_POTATO</BonusType>
+				<BonusType>BONUS_POTATOES</BonusType>
 			</BonusesRequired>
 			<RoutesRequired>
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			</RoutesRequired>
 			<Events>
 				<Event>EVENT_FARM_BANDITS_1</Event>
@@ -927,55 +927,55 @@
 			<TriggerTexts>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_1</Text>
-					<Era>ERA_SEDENTARY</Era>
+					<Era>C2C_ERA_ANCIENT</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_1</Text>
-					<Era>ERA_CLASSICAL</Era>
+					<Era>C2C_ERA_CLASSICAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_2</Text>
-					<Era>ERA_MEDIEVAL</Era>
+					<Era>C2C_ERA_MEDIEVAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_2</Text>
-					<Era>ERA_RENAISSANCE</Era>
+					<Era>C2C_ERA_RENAISSANCE</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_3</Text>
-					<Era>ERA_INDUSTRIAL</Era>
+					<Era>C2C_ERA_INDUSTRIAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_3</Text>
-					<Era>ERA_MODERN</Era>
+					<Era>C2C_ERA_ATOMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_3</Text>
-					<Era>ERA_INFORMATION</Era>
+					<Era>C2C_ERA_INFORMATION</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_3</Text>
-					<Era>ERA_NANOTECH</Era>
+					<Era>C2C_ERA_NANOTECH</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_3</Text>
-					<Era>ERA_TRANSHUMAN</Era>
+					<Era>C2C_ERA_TRANSHUMAN</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_3</Text>
-					<Era>ERA_GALACTIC</Era>
+					<Era>C2C_ERA_GALACTIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_3</Text>
-					<Era>ERA_COSMIC</Era>
+					<Era>C2C_ERA_COSMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_3</Text>
-					<Era>ERA_TRANSCENDENT</Era>
+					<Era>C2C_ERA_TRANSCENDENT</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_3</Text>
-					<Era>ERA_FUTURE</Era>
+					<Era>C2C_ERA_FUTURE</Era>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/JoyousWeddingEvent.dds</EventArt>
@@ -1003,55 +1003,55 @@
 			<TriggerTexts>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_1</Text>
-					<Era>ERA_SEDENTARY</Era>
+					<Era>C2C_ERA_ANCIENT</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_1</Text>
-					<Era>ERA_CLASSICAL</Era>
+					<Era>C2C_ERA_CLASSICAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_2</Text>
-					<Era>ERA_MEDIEVAL</Era>
+					<Era>C2C_ERA_MEDIEVAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_2</Text>
-					<Era>ERA_RENAISSANCE</Era>
+					<Era>C2C_ERA_RENAISSANCE</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_3</Text>
-					<Era>ERA_INDUSTRIAL</Era>
+					<Era>C2C_ERA_INDUSTRIAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_3</Text>
-					<Era>ERA_MODERN</Era>
+					<Era>C2C_ERA_ATOMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_3</Text>
-					<Era>ERA_INFORMATION</Era>
+					<Era>C2C_ERA_INFORMATION</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_3</Text>
-					<Era>ERA_NANOTECH</Era>
+					<Era>C2C_ERA_NANOTECH</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_3</Text>
-					<Era>ERA_TRANSHUMAN</Era>
+					<Era>C2C_ERA_TRANSHUMAN</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_3</Text>
-					<Era>ERA_GALACTIC</Era>
+					<Era>C2C_ERA_GALACTIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_3</Text>
-					<Era>ERA_COSMIC</Era>
+					<Era>C2C_ERA_COSMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_3</Text>
-					<Era>ERA_TRANSCENDENT</Era>
+					<Era>C2C_ERA_TRANSCENDENT</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_3</Text>
-					<Era>ERA_FUTURE</Era>
+					<Era>C2C_ERA_FUTURE</Era>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/WeddingFeudEvent.dds</EventArt>
@@ -1079,55 +1079,55 @@
 			<TriggerTexts>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_1</Text>
-					<Era>ERA_SEDENTARY</Era>
+					<Era>C2C_ERA_ANCIENT</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_1</Text>
-					<Era>ERA_CLASSICAL</Era>
+					<Era>C2C_ERA_CLASSICAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_2</Text>
-					<Era>ERA_MEDIEVAL</Era>
+					<Era>C2C_ERA_MEDIEVAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_2</Text>
-					<Era>ERA_RENAISSANCE</Era>
+					<Era>C2C_ERA_RENAISSANCE</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_3</Text>
-					<Era>ERA_INDUSTRIAL</Era>
+					<Era>C2C_ERA_INDUSTRIAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_3</Text>
-					<Era>ERA_MODERN</Era>
+					<Era>C2C_ERA_ATOMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_3</Text>
-					<Era>ERA_INFORMATION</Era>
+					<Era>C2C_ERA_INFORMATION</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_3</Text>
-					<Era>ERA_NANOTECH</Era>
+					<Era>C2C_ERA_NANOTECH</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_3</Text>
-					<Era>ERA_TRANSHUMAN</Era>
+					<Era>C2C_ERA_TRANSHUMAN</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_3</Text>
-					<Era>ERA_GALACTIC</Era>
+					<Era>C2C_ERA_GALACTIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_3</Text>
-					<Era>ERA_COSMIC</Era>
+					<Era>C2C_ERA_COSMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_3</Text>
-					<Era>ERA_TRANSCENDENT</Era>
+					<Era>C2C_ERA_TRANSCENDENT</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_3</Text>
-					<Era>ERA_FUTURE</Era>
+					<Era>C2C_ERA_FUTURE</Era>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/LeftAtTheAltarEvent.dds</EventArt>
@@ -1182,39 +1182,39 @@
 			<TriggerTexts>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_1</Text>
-					<Era>ERA_SEDENTARY</Era>
+					<Era>C2C_ERA_ANCIENT</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_1</Text>
-					<Era>ERA_CLASSICAL</Era>
+					<Era>C2C_ERA_CLASSICAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_1</Text>
-					<Era>ERA_MEDIEVAL</Era>
+					<Era>C2C_ERA_MEDIEVAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_2</Text>
-					<Era>ERA_RENAISSANCE</Era>
+					<Era>C2C_ERA_RENAISSANCE</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_2</Text>
-					<Era>ERA_INDUSTRIAL</Era>
+					<Era>C2C_ERA_INDUSTRIAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_3</Text>
-					<Era>ERA_MODERN</Era>
+					<Era>C2C_ERA_ATOMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_3</Text>
-					<Era>ERA_INFORMATION</Era>
+					<Era>C2C_ERA_INFORMATION</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_3</Text>
-					<Era>ERA_NANOTECH</Era>
+					<Era>C2C_ERA_NANOTECH</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_3</Text>
-					<Era>ERA_TRANSHUMAN</Era>
+					<Era>C2C_ERA_TRANSHUMAN</Era>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/TornadoEvent.dds</EventArt>
@@ -1278,7 +1278,7 @@
 				<Event>EVENT_BARDS_TALE_3</Event>
 			</Events>
 			<OrPreReqs>
-				<PrereqTech>TECH_MUSIC</PrereqTech>
+				<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 			</OrPreReqs>
 			<bPickCity>1</bPickCity>
 		</EventTriggerInfo>
@@ -1290,55 +1290,55 @@
 			<TriggerTexts>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_1</Text>
-					<Era>ERA_SEDENTARY</Era>
+					<Era>C2C_ERA_ANCIENT</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_1</Text>
-					<Era>ERA_CLASSICAL</Era>
+					<Era>C2C_ERA_CLASSICAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_1</Text>
-					<Era>ERA_MEDIEVAL</Era>
+					<Era>C2C_ERA_MEDIEVAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_1</Text>
-					<Era>ERA_RENAISSANCE</Era>
+					<Era>C2C_ERA_RENAISSANCE</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_1</Text>
-					<Era>ERA_INDUSTRIAL</Era>
+					<Era>C2C_ERA_INDUSTRIAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_2</Text>
-					<Era>ERA_MODERN</Era>
+					<Era>C2C_ERA_ATOMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_2</Text>
-					<Era>ERA_INFORMATION</Era>
+					<Era>C2C_ERA_INFORMATION</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_2</Text>
-					<Era>ERA_NANOTECH</Era>
+					<Era>C2C_ERA_NANOTECH</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_2</Text>
-					<Era>ERA_TRANSHUMAN</Era>
+					<Era>C2C_ERA_TRANSHUMAN</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_2</Text>
-					<Era>ERA_GALACTIC</Era>
+					<Era>C2C_ERA_GALACTIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_2</Text>
-					<Era>ERA_COSMIC</Era>
+					<Era>C2C_ERA_COSMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_2</Text>
-					<Era>ERA_TRANSCENDENT</Era>
+					<Era>C2C_ERA_TRANSCENDENT</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_LOOTERS_2</Text>
-					<Era>ERA_FUTURE</Era>
+					<Era>C2C_ERA_FUTURE</Era>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/LootersEvent.dds</EventArt>
@@ -1530,7 +1530,7 @@
 				<ImprovementType>IMPROVEMENT_PASTURE</ImprovementType>
 				<ImprovementType>IMPROVEMENT_WORKSHOP</ImprovementType>
 				<ImprovementType>IMPROVEMENT_QUARRY</ImprovementType>
-				<ImprovementType>IMPROVEMENT_WELL</ImprovementType>
+				<ImprovementType>IMPROVEMENT_HYDROCARBON_WELL</ImprovementType>
 				<ImprovementType>IMPROVEMENT_WINERY</ImprovementType>
 				<ImprovementType>IMPROVEMENT_MINE</ImprovementType>
 				<ImprovementType>IMPROVEMENT_CORE_MINE</ImprovementType>
@@ -1538,7 +1538,7 @@
 				<ImprovementType>IMPROVEMENT_MODERN_MINE</ImprovementType>
 				<ImprovementType>IMPROVEMENT_WATERMILL</ImprovementType>
 				<ImprovementType>IMPROVEMENT_PLANTATION</ImprovementType>
-				<ImprovementType>IMPROVEMENT_CAMP</ImprovementType>
+				<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 				<ImprovementType>IMPROVEMENT_FORT</ImprovementType>
 				<ImprovementType>IMPROVEMENT_ORCHARD</ImprovementType>
 				<ImprovementType>IMPROVEMENT_SILK_FARM</ImprovementType>
@@ -1546,21 +1546,21 @@
 				<ImprovementType>IMPROVEMENT_TREEFARM</ImprovementType>
 				<ImprovementType>IMPROVEMENT_GROUNDWATER_WELL</ImprovementType>
 				<ImprovementType>IMPROVEMENT_FOREST_PRESERVE</ImprovementType>
-				<ImprovementType>IMPROVEMENT_3FACTORY</ImprovementType>
-				<ImprovementType>IMPROVEMENT_5FACTORY</ImprovementType>
+				<ImprovementType>IMPROVEMENT_FACTORY</ImprovementType>
+				<ImprovementType>IMPROVEMENT_MANUFACTURING_COMPLEX</ImprovementType>
 				<ImprovementType>IMPROVEMENT_LUMBERMILL</ImprovementType>
 				<ImprovementType>IMPROVEMENT_WINDMILL</ImprovementType>
-				<ImprovementType>IMPROVEMENT_HYDRO_PLANT</ImprovementType>
-				<ImprovementType>IMPROVEMENT_SAFARI</ImprovementType>
-				<ImprovementType>IMPROVEMENT_EXPLORETEMPLE</ImprovementType>
-				<ImprovementType>IMPROVEMENT_DESERTWINDMILL</ImprovementType>
-				<ImprovementType>IMPROVEMENT_BUNKER</ImprovementType>
-				<ImprovementType>IMPROVEMENT_FUTURE_BUNKER</ImprovementType>
+				<ImprovementType>IMPROVEMENT_HYDRO_DAM</ImprovementType>
+				<ImprovementType>IMPROVEMENT_WILDLIFE_SANCTUARY</ImprovementType>
+				<ImprovementType>IMPROVEMENT_ARCHEOLOGICAL_SITE</ImprovementType>
+				<ImprovementType>IMPROVEMENT_MODERN_WINDMILL</ImprovementType>
+				<ImprovementType>IMPROVEMENT_COMMAND_BUNKER</ImprovementType>
+				<ImprovementType>IMPROVEMENT_COMMAND_CENTER</ImprovementType>
 				<ImprovementType>IMPROVEMENT_JUNGLE_CAMP</ImprovementType>
 				<ImprovementType>IMPROVEMENT_DESERT_CAMP</ImprovementType>
 				<ImprovementType>IMPROVEMENT_WETLANDS_CAMP</ImprovementType>
-				<ImprovementType>IMPROVEMENT_FOSSIL_DIGSITE</ImprovementType>
-				<ImprovementType>IMPROVEMENT_FARMSCRAPER</ImprovementType>
+				<ImprovementType>IMPROVEMENT_FOSSIL_DIG_SITE</ImprovementType>
+				<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
 				<ImprovementType>IMPROVEMENT_GEOGLYPH</ImprovementType>
 				<ImprovementType>IMPROVEMENT_MOAI</ImprovementType>
 			</ImprovementsRequired>
@@ -1568,11 +1568,11 @@
 				<RouteType>ROUTE_TRAIL</RouteType>
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
-				<RouteType>ROUTE_GRAVTUBE</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+				<RouteType>ROUTE_MAGLEV</RouteType>
 				<RouteType>ROUTE_JUMPLANE</RouteType>
 			</RoutesRequired>
 			<Events>
@@ -1732,11 +1732,11 @@
 				<RouteType>ROUTE_TRAIL</RouteType>
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
-				<RouteType>ROUTE_GRAVTUBE</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+				<RouteType>ROUTE_MAGLEV</RouteType>
 				<RouteType>ROUTE_JUMPLANE</RouteType>
 			</RoutesRequired>
 			<Events>
@@ -1829,11 +1829,11 @@
 			<RoutesRequired>
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
-				<RouteType>ROUTE_GRAVTUBE</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+				<RouteType>ROUTE_MAGLEV</RouteType>
 				<RouteType>ROUTE_JUMPLANE</RouteType>
 			</RoutesRequired>
 			<Events>
@@ -1857,7 +1857,7 @@
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
-				<ImprovementType>IMPROVEMENT_WELL</ImprovementType>
+				<ImprovementType>IMPROVEMENT_HYDROCARBON_WELL</ImprovementType>
 				<ImprovementType>IMPROVEMENT_OFFSHORE_PLATFORM</ImprovementType>
 			</ImprovementsRequired>
 			<BonusesRequired>
@@ -1884,9 +1884,9 @@
 			<iNumPlotsRequired>2</iNumPlotsRequired>
 			<FeaturesRequired>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
-				<FeatureType>FEATURE_CAVE</FeatureType>
+				<FeatureType>FEATURE_CAVES</FeatureType>
 			</FeaturesRequired>
 			<ImprovementsRequired>
 				<ImprovementType>NONE</ImprovementType>
@@ -2201,11 +2201,11 @@
 				<RouteType>ROUTE_TRAIL</RouteType>
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
-				<RouteType>ROUTE_GRAVTUBE</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+				<RouteType>ROUTE_MAGLEV</RouteType>
 				<RouteType>ROUTE_JUMPLANE</RouteType>
 			</RoutesRequired>
 			<Events>
@@ -2428,11 +2428,11 @@
 				<RouteType>ROUTE_TRAIL</RouteType>
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
-				<RouteType>ROUTE_GRAVTUBE</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+				<RouteType>ROUTE_MAGLEV</RouteType>
 				<RouteType>ROUTE_JUMPLANE</RouteType>
 			</RoutesRequired>
 			<Events>
@@ -2484,7 +2484,7 @@
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
-				<ImprovementType>IMPROVEMENT_WELL</ImprovementType>
+				<ImprovementType>IMPROVEMENT_HYDROCARBON_WELL</ImprovementType>
 				<ImprovementType>IMPROVEMENT_OFFSHORE_PLATFORM</ImprovementType>
 			</ImprovementsRequired>
 			<BonusesRequired>
@@ -2510,7 +2510,7 @@
 			<EventArt>Art/Event_Images/FederalReserveEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>200</iWeight>
-			<Civic>CIVIC_LAISSEZ_FAIRE</Civic>
+			<Civic>CIVIC_FREE_MARKET</Civic>
 			<iMinTreasury>1000</iMinTreasury>
 			<bOwnPlot>1</bOwnPlot>
 			<Events>
@@ -2537,7 +2537,7 @@
 			<EventArt>Art/Event_Images/ElectricCompanyEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>200</iWeight>
-			<Civic>CIVIC_LIBERAL</Civic>
+			<Civic>CIVIC_EGALITARIAN</Civic>
 			<iAngry>-1</iAngry>
 			<bOwnPlot>1</bOwnPlot>
 			<Events>
@@ -2731,7 +2731,7 @@
 			<bOwnPlot>1</bOwnPlot>
 			<FeaturesRequired>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeaturesRequired>
 			<ImprovementsRequired>
 				<ImprovementType>NONE</ImprovementType>
@@ -2744,7 +2744,7 @@
 				<Event>EVENT_ANTELOPE_2</Event>
 			</Events>
 			<OrPreReqs>
-				<PrereqTech>TECH_HUNTING_TACTICS</PrereqTech>
+				<PrereqTech>TECH_HUNTING</PrereqTech>
 			</OrPreReqs>
 			<bRecurring>1</bRecurring>
 			<PythonCanDo>canTriggerAntelope</PythonCanDo>
@@ -2859,7 +2859,7 @@
 				<FeatureType>NONE</FeatureType>
 			</FeaturesRequired>
 			<TerrainsRequired>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 			</TerrainsRequired>
 			<ImprovementsRequired>
@@ -2977,7 +2977,7 @@
 			<EventArt>Art/Event_Images/InterstateEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>100</iWeight>
-			<Civic>CIVIC_KEYNESIAN</Civic>
+			<Civic>CIVIC_REGULATED</Civic>
 			<Events>
 				<Event>EVENT_INTERSTATE_1</Event>
 			</Events>
@@ -3002,7 +3002,7 @@
 			<bSinglePlayer>1</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>100</iWeight>
-			<Civic>CIVIC_ENVIRONMENTALISM</Civic>
+			<Civic>CIVIC_GREEN</Civic>
 			<Events>
 				<Event>EVENT_EARTHDAY_1</Event>
 				<Event>EVENT_EARTHDAY_2</Event>
@@ -3026,7 +3026,7 @@
 			<EventArt>Art/Event_Images/FreedomConcert.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>100</iWeight>
-			<Civic>CIVIC_SECULAR</Civic>
+			<Civic>CIVIC_SECULARISM</Civic>
 			<iNumReligions>3</iNumReligions>
 			<Events>
 				<Event>EVENT_FREEDOMCONCERT_1</Event>
@@ -3238,7 +3238,7 @@
 				<Event>EVENT_METAL_DECKS_1</Event>
 			</Events>
 			<AndPreReqs>
-				<PrereqTech>TECH_NAVAL_AVIATION</PrereqTech>
+				<PrereqTech>TECH_NAVAL_FLIGHT</PrereqTech>
 			</AndPreReqs>
 			<ObsoleteTechs>
 				<ObsoleteTech>TECH_COMPOSITES</ObsoleteTech>
@@ -3429,7 +3429,7 @@
 			<TerrainsRequired>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
@@ -3525,7 +3525,7 @@
 			<TerrainsRequired>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
@@ -3705,11 +3705,11 @@
 				<RouteType>ROUTE_TRAIL</RouteType>
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
-				<RouteType>ROUTE_GRAVTUBE</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+				<RouteType>ROUTE_MAGLEV</RouteType>
 				<RouteType>ROUTE_JUMPLANE</RouteType>
 			</RoutesRequired>
 			<Events>
@@ -3786,7 +3786,7 @@
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<BonusesRequired>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</BonusesRequired>
 			<Events>
 				<Event>EVENT_FARM_PLOWS_1</Event>
@@ -3830,7 +3830,7 @@
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<BonusesRequired>
-				<BonusType>BONUS_GLASS</BonusType>
+				<BonusType>BONUS_GLASSWARE</BonusType>
 			</BonusesRequired>
 			<Events>
 				<Event>EVENT_STAINED_GLASS_1</Event>
@@ -3870,11 +3870,11 @@
 				<RouteType>ROUTE_TRAIL</RouteType>
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
-				<RouteType>ROUTE_GRAVTUBE</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+				<RouteType>ROUTE_MAGLEV</RouteType>
 				<RouteType>ROUTE_JUMPLANE</RouteType>
 			</RoutesRequired>
 			<Events>
@@ -3967,7 +3967,7 @@
 				<Event>EVENT_PERSONAL_COMPUTERS_1</Event>
 			</Events>
 			<OrPreReqs>
-				<PrereqTech>TECH_MICROCHIP</PrereqTech>
+				<PrereqTech>TECH_SEMICONDUCTORS</PrereqTech>
 			</OrPreReqs>
 			<bGlobal>1</bGlobal>
 			<bPickCity>1</bPickCity>
@@ -4023,11 +4023,11 @@
 			<RoutesRequired>
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
-				<RouteType>ROUTE_GRAVTUBE</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+				<RouteType>ROUTE_MAGLEV</RouteType>
 				<RouteType>ROUTE_JUMPLANE</RouteType>
 			</RoutesRequired>
 			<Events>
@@ -4068,11 +4068,11 @@
 			<RoutesRequired>
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
-				<RouteType>ROUTE_GRAVTUBE</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+				<RouteType>ROUTE_MAGLEV</RouteType>
 				<RouteType>ROUTE_JUMPLANE</RouteType>
 			</RoutesRequired>
 			<Events>
@@ -4115,11 +4115,11 @@
 			</BonusesRequired>
 			<RoutesRequired>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
-				<RouteType>ROUTE_GRAVTUBE</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+				<RouteType>ROUTE_MAGLEV</RouteType>
 				<RouteType>ROUTE_JUMPLANE</RouteType>
 			</RoutesRequired>
 			<Events>
@@ -4162,11 +4162,11 @@
 				<RouteType>ROUTE_TRAIL</RouteType>
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
-				<RouteType>ROUTE_GRAVTUBE</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+				<RouteType>ROUTE_MAGLEV</RouteType>
 				<RouteType>ROUTE_JUMPLANE</RouteType>
 			</RoutesRequired>
 			<Events>
@@ -4229,11 +4229,11 @@
 				<RouteType>ROUTE_TRAIL</RouteType>
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
-				<RouteType>ROUTE_GRAVTUBE</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+				<RouteType>ROUTE_MAGLEV</RouteType>
 				<RouteType>ROUTE_JUMPLANE</RouteType>
 			</RoutesRequired>
 			<Events>
@@ -5011,7 +5011,7 @@
 			<EventArt>Art/Event_Images/Heresy.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>200</iWeight>
-			<Civic>CIVIC_DIVINE_RULE</Civic>
+			<Civic>CIVIC_DIVINE_CULT</Civic>
 			<bPickReligion>1</bPickReligion>
 			<bStateReligion>1</bStateReligion>
 			<Events>
@@ -5034,7 +5034,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/Partisans.dds</EventArt>
 			<iWeight>-2</iWeight>
-			<Civic>CIVIC_LIBERAL</Civic>
+			<Civic>CIVIC_EGALITARIAN</Civic>
 			<Events>
 				<Event>EVENT_PARTISANS_1</Event>
 				<Event>EVENT_PARTISANS_2</Event>
@@ -5055,7 +5055,7 @@
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
-			<Civic>CIVIC_HEREDITARY_RULE</Civic>
+			<Civic>CIVIC_MONARCHY</Civic>
 			<BuildingsRequired>
 				<BuildingClass>BUILDINGCLASS_PALACE</BuildingClass>
 			</BuildingsRequired>
@@ -5069,7 +5069,7 @@
 			</Events>
 			<OrPreReqs>
 				<PrereqTech>TECH_MACHINERY</PrereqTech>
-				<PrereqTech>TECH_MUSIC</PrereqTech>
+				<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 				<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
 			</OrPreReqs>
 			<bPickCity>1</bPickCity>
@@ -5087,7 +5087,7 @@
 			<EventArt>Art/Event_Images/CrisisInTheSenate.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>100</iWeight>
-			<Civic>CIVIC_SENATE</Civic>
+			<Civic>CIVIC_LEGISLATURE</Civic>
 			<Events>
 				<Event>EVENT_CRISIS_IN_THE_SENATE_1</Event>
 				<Event>EVENT_CRISIS_IN_THE_SENATE_2</Event>
@@ -5132,7 +5132,7 @@
 			<EventArt>Art/Event_Images/Charismatic.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>100</iWeight>
-			<Civic>CIVIC_FASCIST</Civic>
+			<Civic>CIVIC_TOTALITARIANISM</Civic>
 			<Events>
 				<Event>EVENT_CHARISMATIC_1</Event>
 				<Event>EVENT_CHARISMATIC_2</Event>
@@ -5482,7 +5482,7 @@
 				<Event>EVENT_OVERWHELM_1</Event>
 			</Events>
 			<AndPreReqs>
-				<PrereqTech>TECH_NAVAL_AVIATION</PrereqTech>
+				<PrereqTech>TECH_NAVAL_FLIGHT</PrereqTech>
 			</AndPreReqs>
 			<ObsoleteTechs>
 				<ObsoleteTech>TECH_ROBOTICS</ObsoleteTech>
@@ -5616,7 +5616,7 @@
 				<Event>EVENT_CIV_GAME_3</Event>
 			</Events>
 			<OrPreReqs>
-				<PrereqTech>TECH_COMPUTERS</PrereqTech>
+				<PrereqTech>TECH_PERSONAL_COMPUTERS</PrereqTech>
 			</OrPreReqs>
 			<bShowPlot>0</bShowPlot>
 		</EventTriggerInfo>
@@ -5686,7 +5686,7 @@
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
-				<ImprovementType>IMPROVEMENT_CAMP</ImprovementType>
+				<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 			</ImprovementsRequired>
 			<bPickReligion>1</bPickReligion>
 			<bStateReligion>1</bStateReligion>
@@ -5715,7 +5715,7 @@
 			<EventArt>Art/Event_Images/ControversialPhilosopher.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>200</iWeight>
-			<Civic>CIVIC_DIVINE_RULE</Civic>
+			<Civic>CIVIC_DIVINE_CULT</Civic>
 			<Events>
 				<Event>EVENT_CONTROVERSIAL_PHILOSOPHER_1</Event>
 				<Event>EVENT_CONTROVERSIAL_PHILOSOPHER_2</Event>
@@ -5827,7 +5827,7 @@
 			<EventArt>Art/Event_Images/NuclearProtest.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>120</iWeight>
-			<Civic>CIVIC_LIBERAL</Civic>
+			<Civic>CIVIC_EGALITARIAN</Civic>
 			<bOwnPlot>1</bOwnPlot>
 			<Events>
 				<Event>EVENT_NUCLEAR_PROTEST_1</Event>
@@ -5991,7 +5991,7 @@
 				<Event>EVENT_PREACHING_RESEARCHER_2</Event>
 			</Events>
 			<ObsoleteTechs>
-				<ObsoleteTech>TECH_MODERNPHYSICS</ObsoleteTech>
+				<ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech>
 			</ObsoleteTechs>
 			<bPickCity>1</bPickCity>
 			<PythonCanDoCity>canTriggerPreachingResearcherCity</PythonCanDoCity>
@@ -6135,7 +6135,7 @@
 			<EventArt>Art/Event_Images/AntiMonarchists.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>100</iWeight>
-			<Civic>CIVIC_HEREDITARY_RULE</Civic>
+			<Civic>CIVIC_MONARCHY</Civic>
 			<Events>
 				<Event>EVENT_ANTIMONARCHISTS_1</Event>
 				<Event>EVENT_ANTIMONARCHISTS_2</Event>
@@ -6249,17 +6249,17 @@
 			<iWeight>175</iWeight>
 			<iMinTreasury>300</iMinTreasury>
 			<BonusesRequired>
-				<BonusType>BONUS_DIESEL</BonusType>
+				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
 			</BonusesRequired>
 			<Events>
 				<Event>EVENT_NAPALM_1</Event>
 				<Event>EVENT_NAPALM_2</Event>
 			</Events>
 			<AndPreReqs>
-				<PrereqTech>TECH_ADVANCED_FLIGHT</PrereqTech>
+				<PrereqTech>TECH_ADVANCED_AVIATION</PrereqTech>
 			</AndPreReqs>
 			<ObsoleteTechs>
-				<ObsoleteTech>TECH_MILITARY_ROBOTS</ObsoleteTech>
+				<ObsoleteTech>TECH_MILITARY_ROBOTICS</ObsoleteTech>
 			</ObsoleteTechs>
 			<bShowPlot>0</bShowPlot>
 			<PythonCanDo>canTriggerNapalm</PythonCanDo>
@@ -6310,7 +6310,7 @@
 			</UnitsRequired>
 			<iNumUnits>1</iNumUnits>
 			<BonusesRequired>
-				<BonusType>BONUS_DIESEL</BonusType>
+				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
 			</BonusesRequired>
 			<Events>
 				<Event>EVENT_REACTIVE_ARMOR_1</Event>
@@ -6381,7 +6381,7 @@
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>220</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
-			<Civic>CIVIC_FIAT_CURRENCY</Civic>
+			<Civic>CIVIC_FIAT_MONEY</Civic>
 			<BuildingsRequired>
 				<BuildingClass>BUILDINGCLASS_BANK</BuildingClass>
 			</BuildingsRequired>
@@ -6477,7 +6477,7 @@
 				<Event>EVENT_CURE_FOR_CANCER_1</Event>
 			</Events>
 			<OrPreReqs>
-				<PrereqTech>TECH_TISSUE</PrereqTech>
+				<PrereqTech>TECH_MOLECULAR_MEDICINE</PrereqTech>
 			</OrPreReqs>
 			<bGlobal>1</bGlobal>
 			<bPickCity>1</bPickCity>
@@ -6509,7 +6509,7 @@
 				<Event>EVENT_CARNATION_REVOLUTION_2</Event>
 			</Events>
 			<OrPreReqs>
-				<PrereqTech>TECH_UTOPIA</PrereqTech>
+				<PrereqTech>TECH_COMMUNISM</PrereqTech>
 			</OrPreReqs>
 			<bGlobal>1</bGlobal>
 			<bPickPlayer>1</bPickPlayer>
@@ -6598,7 +6598,7 @@
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>200</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
-			<Civic>CIVIC_FIAT_CURRENCY</Civic>
+			<Civic>CIVIC_FIAT_MONEY</Civic>
 			<BuildingsRequired>
 				<BuildingClass>BUILDINGCLASS_BANK</BuildingClass>
 			</BuildingsRequired>
@@ -6638,7 +6638,7 @@
 				<Event>EVENT_INDUSTRIAL_ACTION_3</Event>
 			</Events>
 			<OrPreReqs>
-				<PrereqTech>TECH_UTOPIA</PrereqTech>
+				<PrereqTech>TECH_COMMUNISM</PrereqTech>
 			</OrPreReqs>
 			<bPickCity>1</bPickCity>
 			<PythonCanDo>canTriggerIndustrialAction</PythonCanDo>
@@ -6919,7 +6919,7 @@
 			</BuildingsRequired>
 			<iNumBuildings>2</iNumBuildings>
 			<BonusesRequired>
-				<BonusType>BONUS_IRON</BonusType>
+				<BonusType>BONUS_IRON_ORE</BonusType>
 			</BonusesRequired>
 			<Events>
 				<Event>EVENT_CRUCIBLE_STEEL_1</Event>
@@ -6981,11 +6981,11 @@
 				<RouteType>ROUTE_PATH</RouteType>
 				<RouteType>ROUTE_TRAIL</RouteType>
 				<RouteType>ROUTE_ROAD</RouteType>
-				<RouteType>ROUTE_PAVED</RouteType>
-				<RouteType>ROUTE_MODERN_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
 				<RouteType>ROUTE_RAILROAD</RouteType>
-				<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
-				<RouteType>ROUTE_GRAVTUBE</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+				<RouteType>ROUTE_MAGLEV</RouteType>
 				<RouteType>ROUTE_JUMPLANE</RouteType>
 			</RoutesRequired>
 			<Events>
@@ -7240,35 +7240,35 @@
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_EARTHQUAKE_2</Text>
-					<Era>ERA_MODERN</Era>
+					<Era>C2C_ERA_ATOMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_EARTHQUAKE_2</Text>
-					<Era>ERA_INFORMATION</Era>
+					<Era>C2C_ERA_INFORMATION</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_EARTHQUAKE_2</Text>
-					<Era>ERA_NANOTECH</Era>
+					<Era>C2C_ERA_NANOTECH</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_EARTHQUAKE_2</Text>
-					<Era>ERA_TRANSHUMAN</Era>
+					<Era>C2C_ERA_TRANSHUMAN</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_EARTHQUAKE_2</Text>
-					<Era>ERA_GALACTIC</Era>
+					<Era>C2C_ERA_GALACTIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_EARTHQUAKE_2</Text>
-					<Era>ERA_COSMIC</Era>
+					<Era>C2C_ERA_COSMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_EARTHQUAKE_2</Text>
-					<Era>ERA_TRANSCENDENT</Era>
+					<Era>C2C_ERA_TRANSCENDENT</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_EARTHQUAKE_2</Text>
-					<Era>ERA_FUTURE</Era>
+					<Era>C2C_ERA_FUTURE</Era>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/Earthquake.dds</EventArt>
@@ -7449,7 +7449,7 @@
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
 			<BonusesRequired>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
 			</BonusesRequired>
 			<Events>
 				<Event>EVENT_COPPER_PLATING_1</Event>
@@ -7664,7 +7664,7 @@
 				<Event>EVENT_FULLERENES_1</Event>
 			</Events>
 			<AndPreReqs>
-				<PrereqTech>TECH_MODERNPHYSICS</PrereqTech>
+				<PrereqTech>TECH_MODERN_PHYSICS</PrereqTech>
 			</AndPreReqs>
 			<bGlobal>1</bGlobal>
 			<bPickCity>1</bPickCity>
@@ -7871,9 +7871,9 @@
 				<BonusType>BONUS_CORN</BonusType>
 				<BonusType>BONUS_RICE</BonusType>
 				<BonusType>BONUS_WHEAT</BonusType>
-				<BonusType>BONUS_POTATO</BonusType>
+				<BonusType>BONUS_POTATOES</BonusType>
 				<BonusType>BONUS_BARLEY</BonusType>
-				<BonusType>BONUS_MELON</BonusType>
+				<BonusType>BONUS_MELONS</BonusType>
 				<BonusType>BONUS_PUMPKIN</BonusType>
 				<BonusType>BONUS_SQUASH</BonusType>
 			</BonusesRequired>
@@ -8026,7 +8026,7 @@
 			<EventArt>Art/Event_Images/Tolerance.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>200</iWeight>
-			<Civic>CIVIC_SECULAR</Civic>
+			<Civic>CIVIC_SECULARISM</Civic>
 			<Events>
 				<Event>EVENT_TOLERANCE_1</Event>
 			</Events>
@@ -8235,7 +8235,7 @@
 			<EventArt>Art/Event_Images/HereticalResearch.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>200</iWeight>
-			<Civic>CIVIC_INTOLERANT</Civic>
+			<Civic>CIVIC_INQUISITORIAL</Civic>
 			<bOwnPlot>1</bOwnPlot>
 			<Events>
 				<Event>EVENT_HERETICAL_RESEARCH2_1</Event>
@@ -8323,7 +8323,7 @@
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>300</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
-			<Civic>CIVIC_FASCIST</Civic>
+			<Civic>CIVIC_TOTALITARIANISM</Civic>
 			<BuildingsRequired>
 				<BuildingClass>BUILDINGCLASS_PALACE</BuildingClass>
 			</BuildingsRequired>
@@ -8351,7 +8351,7 @@
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
-			<Civic>CIVIC_HEREDITARY_RULE</Civic>
+			<Civic>CIVIC_MONARCHY</Civic>
 			<iMinTreasury>50</iMinTreasury>
 			<BuildingsRequired>
 				<BuildingClass>BUILDINGCLASS_PALACE</BuildingClass>
@@ -8379,7 +8379,7 @@
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>140</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
-			<Civic>CIVIC_LAISSEZ_FAIRE</Civic>
+			<Civic>CIVIC_FREE_MARKET</Civic>
 			<BuildingsRequired>
 				<BuildingClass>BUILDINGCLASS_ACADEMY</BuildingClass>
 			</BuildingsRequired>
@@ -8404,7 +8404,7 @@
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
-			<Civic>CIVIC_LIBERAL</Civic>
+			<Civic>CIVIC_EGALITARIAN</Civic>
 			<BuildingsRequired>
 				<BuildingClass>BUILDINGCLASS_UNIVERSITY</BuildingClass>
 			</BuildingsRequired>
@@ -8448,7 +8448,7 @@
 			<EventArt>Art/Event_Images/LargeRecession.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>200</iWeight>
-			<Civic>CIVIC_LAISSEZ_FAIRE</Civic>
+			<Civic>CIVIC_FREE_MARKET</Civic>
 			<iMinTreasury>100</iMinTreasury>
 			<Events>
 				<Event>EVENT_LARGE_RECESSION_1</Event>
@@ -8535,7 +8535,7 @@
 			<bOwnPlot>1</bOwnPlot>
 			<TerrainsRequired>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 			</TerrainsRequired>
 			<ImprovementsRequired>
 				<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
@@ -8616,7 +8616,7 @@
 			<EventArt>Art/Event_Images/LaborUnions.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>200</iWeight>
-			<Civic>CIVIC_LIBERAL</Civic>
+			<Civic>CIVIC_EGALITARIAN</Civic>
 			<Events>
 				<Event>EVENT_LABOR_UNIONS_1</Event>
 				<Event>EVENT_LABOR_UNIONS_2</Event>
@@ -8639,7 +8639,7 @@
 			<EventArt>Art/Event_Images/NoJustice.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>200</iWeight>
-			<Civic>CIVIC_OLIGARCHY</Civic>
+			<Civic>CIVIC_JUNTA</Civic>
 			<Events>
 				<Event>EVENT_NO_JUSTICE_1</Event>
 			</Events>
@@ -8693,7 +8693,7 @@
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>200</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
-			<Civic>CIVIC_LIBERAL</Civic>
+			<Civic>CIVIC_EGALITARIAN</Civic>
 			<BuildingsRequired>
 				<BuildingClass>BUILDINGCLASS_BROADCAST_TOWER</BuildingClass>
 			</BuildingsRequired>
@@ -8720,7 +8720,7 @@
 			<EventArt>Art/Event_Images/HeirAssassinated.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>150</iWeight>
-			<Civic>CIVIC_HEREDITARY_RULE</Civic>
+			<Civic>CIVIC_MONARCHY</Civic>
 			<Events>
 				<Event>EVENT_HEIR_ASSASSINATED_1</Event>
 			</Events>
@@ -8888,7 +8888,7 @@
 				<FeatureType>NONE</FeatureType>
 			</FeaturesRequired>
 			<TerrainsRequired>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
@@ -9013,7 +9013,7 @@
 			</FeaturesRequired>
 			<TerrainsRequired>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -9055,13 +9055,13 @@
 				<FeatureType>FEATURE_FOREST</FeatureType>
 			</FeaturesRequired>
 			<TerrainsRequired>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 			</TerrainsRequired>
 			<ImprovementsRequired>
 				<ImprovementType>NONE</ImprovementType>
@@ -9098,7 +9098,7 @@
 			</FeaturesRequired>
 			<TerrainsRequired>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 			</TerrainsRequired>
 			<ImprovementsRequired>
@@ -9138,12 +9138,12 @@
 				<FeatureType>NONE</FeatureType>
 			</FeaturesRequired>
 			<TerrainsRequired>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 			</TerrainsRequired>
 			<ImprovementsRequired>
@@ -9498,7 +9498,7 @@
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>100</iWeight>
-			<Civic>CIVIC_SENATE</Civic>
+			<Civic>CIVIC_LEGISLATURE</Civic>
 			<Events>
 				<Event>EVENT_CORRUPT_SENATE_1</Event>
 				<Event>EVENT_CORRUPT_SENATE_2</Event>
@@ -9516,27 +9516,27 @@
 			<TriggerTexts>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_TREASURE_ANCIENT_1</Text>
-					<Era>ERA_SEDENTARY</Era>
+					<Era>C2C_ERA_ANCIENT</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_TREASURE_ANCIENT_1</Text>
-					<Era>ERA_CLASSICAL</Era>
+					<Era>C2C_ERA_CLASSICAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_TREASURE_ANCIENT_1</Text>
-					<Era>ERA_MEDIEVAL</Era>
+					<Era>C2C_ERA_MEDIEVAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_TREASURE_ANCIENT_1</Text>
-					<Era>ERA_RENAISSANCE</Era>
+					<Era>C2C_ERA_RENAISSANCE</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_TREASURE_INDUSTRIAL_1</Text>
-					<Era>ERA_INDUSTRIAL</Era>
+					<Era>C2C_ERA_INDUSTRIAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_CITY_RUINS_TREASURE_INDUSTRIAL_1</Text>
-					<Era>ERA_MODERN</Era>
+					<Era>C2C_ERA_ATOMIC</Era>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -10077,7 +10077,7 @@
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
-				<ImprovementType>IMPROVEMENT_ABATIS</ImprovementType>
+				<ImprovementType>IMPROVEMENT_ABATIS_THORN_HEDGE</ImprovementType>
 			</ImprovementsRequired>
 			<Events>
 				<Event>EVENT_ABATIS_IN_DISREPAIR_1</Event>
@@ -10102,7 +10102,7 @@
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
-				<ImprovementType>IMPROVEMENT_PALISADE</ImprovementType>
+				<ImprovementType>IMPROVEMENT_WOODEN_PALISADE</ImprovementType>
 			</ImprovementsRequired>
 			<Events>
 				<Event>EVENT_PALISADE_IN_DISREPAIR_1</Event>
@@ -10126,7 +10126,7 @@
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
-				<ImprovementType>IMPROVEMENT_BUNKER</ImprovementType>
+				<ImprovementType>IMPROVEMENT_COMMAND_BUNKER</ImprovementType>
 			</ImprovementsRequired>
 			<Events>
 				<Event>EVENT_BUNKER_IN_DISREPAIR_1</Event>
@@ -10150,7 +10150,7 @@
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
-				<ImprovementType>IMPROVEMENT_FUTURE_BUNKER</ImprovementType>
+				<ImprovementType>IMPROVEMENT_COMMAND_CENTER</ImprovementType>
 			</ImprovementsRequired>
 			<Events>
 				<Event>EVENT_FUTURE_BUNKER_IN_DISREPAIR_1</Event>
@@ -10310,8 +10310,8 @@
            <iNumPlotsRequired>1</iNumPlotsRequired>
            <TerrainsRequired>
                <TerrainType>TERRAIN_ROCKY</TerrainType>
-               <TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-               <TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+               <TerrainType>TERRAIN_BADLAND</TerrainType>
+               <TerrainType>TERRAIN_JAGGED</TerrainType>
            </TerrainsRequired>
            <BonusesRequired>
                <BonusType>BONUS_OBSIDIAN</BonusType>
@@ -10353,7 +10353,7 @@
 			<iWeight>40</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<FeaturesRequired>
-				<FeatureType>FEATURE_VOLCANO2</FeatureType>
+				<FeatureType>FEATURE_VOLCANO_DORMANT</FeatureType>
 			</FeaturesRequired>
 			<Events>
 				<Event>EVENT_VOLCANO_EXTINCTION</Event>
@@ -10374,7 +10374,7 @@
 			<iWeight>100</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<FeaturesRequired>
-				<FeatureType>FEATURE_VOLCANO2</FeatureType>
+				<FeatureType>FEATURE_VOLCANO_DORMANT</FeatureType>
 			</FeaturesRequired>
 			<Events>
 				<Event>EVENT_VOLCANO_ERUPTION_1</Event>
@@ -10395,7 +10395,7 @@
 			<iWeight>200</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<FeaturesRequired>
-				<FeatureType>FEATURE_VOLCANO</FeatureType>
+				<FeatureType>FEATURE_VOLCANO_ACTIVE</FeatureType>
 			</FeaturesRequired>
 			<Events>
 				<Event>EVENT_VOLCANO_ERUPTION_1</Event>
@@ -10416,7 +10416,7 @@
 			<iWeight>140</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<FeaturesRequired>
-				<FeatureType>FEATURE_VOLCANO</FeatureType>
+				<FeatureType>FEATURE_VOLCANO_ACTIVE</FeatureType>
 			</FeaturesRequired>
 			<Events>
 				<Event>EVENT_VOLCANO_SLEEP</Event>
@@ -10670,43 +10670,43 @@
 			<TriggerTexts>
 				<TriggerText>
 					<Text>A fisherman from the city of %s2_city has found a pirate map.</Text>
-					<Era>ERA_RENAISSANCE</Era>
+					<Era>C2C_ERA_RENAISSANCE</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>A fisherman from the city of %s2_city has found a old pirate map.</Text>
-					<Era>ERA_INDUSTRIAL</Era>
+					<Era>C2C_ERA_INDUSTRIAL</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>A fisherman from the city of %s2_city has found a old pirate map.</Text>
-					<Era>ERA_MODERN</Era>
+					<Era>C2C_ERA_ATOMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>A fisherman from the city of %s2_city has found a old pirate map.</Text>
-					<Era>ERA_INFORMATION</Era>
+					<Era>C2C_ERA_INFORMATION</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>A fisherman from the city of %s2_city has found a old pirate map.</Text>
-					<Era>ERA_NANOTECH</Era>
+					<Era>C2C_ERA_NANOTECH</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>A fisherman from the city of %s2_city has found a old pirate map.</Text>
-					<Era>ERA_TRANSHUMAN</Era>
+					<Era>C2C_ERA_TRANSHUMAN</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>A fisherman from the city of %s2_city has found a old pirate map.</Text>
-					<Era>ERA_GALACTIC</Era>
+					<Era>C2C_ERA_GALACTIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>A fisherman from the city of %s2_city has found a old pirate map.</Text>
-					<Era>ERA_COSMIC</Era>
+					<Era>C2C_ERA_COSMIC</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>A fisherman from the city of %s2_city has found a old pirate map.</Text>
-					<Era>ERA_TRANSCENDENT</Era>
+					<Era>C2C_ERA_TRANSCENDENT</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>A fisherman from the city of %s2_city has found a old pirate map.</Text>
-					<Era>ERA_FUTURE</Era>
+					<Era>C2C_ERA_FUTURE</Era>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -10730,11 +10730,11 @@
 			<TriggerTexts>
 				<TriggerText>
 					<Text>A famous pirate has offered to join our navy.</Text>
-					<Era>ERA_RENAISSANCE</Era>
+					<Era>C2C_ERA_RENAISSANCE</Era>
 				</TriggerText>
 				<TriggerText>
 					<Text>A renowned pirate decided to work for our sea forces.</Text>
-					<Era>ERA_INDUSTRIAL</Era>
+					<Era>C2C_ERA_INDUSTRIAL</Era>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
@@ -10781,7 +10781,7 @@
 			<bUnitsOnPlot>1</bUnitsOnPlot>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<FeaturesRequired>
-				<FeatureType>FEATURE_TARPIT</FeatureType>
+				<FeatureType>FEATURE_TAR_PIT</FeatureType>
 			</FeaturesRequired>
 			<RoutesRequired>
 				<RouteType>ROUTE_TRAIL</RouteType>

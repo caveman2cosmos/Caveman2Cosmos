@@ -351,7 +351,7 @@
 			<Class>UNITCLASS_ANDEAN_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_ANDEAN_MISSIONARY</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_ANDEAN</DependencyType>
+				<DependencyType>RELIGION_ANDEANISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNITCLASS_ANDEAN_MISSIONARY</Capture>
@@ -373,11 +373,11 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_ANDEAN</ReligionType>
+					<ReligionType>RELIGION_ANDEANISM</ReligionType>
 					<iReligionSpread>40</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
-			<PrereqReligion>RELIGION_ANDEAN</PrereqReligion>
+			<PrereqReligion>RELIGION_ANDEANISM</PrereqReligion>
 			<PrereqBuilding>BUILDING_ANDEAN_MONASTERY</PrereqBuilding>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -449,7 +449,7 @@
 			<Class>UNITCLASS_DRUID_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_DRUID_MISSIONARY</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_DRUID</DependencyType>
+				<DependencyType>RELIGION_DRUIDIC_TRADITIONS</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNITCLASS_DRUID_MISSIONARY</Capture>
@@ -471,11 +471,11 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_DRUID</ReligionType>
+					<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 					<iReligionSpread>40</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
-			<PrereqReligion>RELIGION_DRUID</PrereqReligion>
+			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<PrereqBuilding>BUILDING_DRUID_MONASTERY</PrereqBuilding>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -547,7 +547,7 @@
 			<Class>UNITCLASS_EGYPT_MYTH_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_KEMETISM_MISSIONARY</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_EGYPT_MYTHOLOGY</DependencyType>
+				<DependencyType>RELIGION_KEMETISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNITCLASS_EGYPT_MYTH_MISSIONARY</Capture>
@@ -569,11 +569,11 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_EGYPT_MYTHOLOGY</ReligionType>
+					<ReligionType>RELIGION_KEMETISM</ReligionType>
 					<iReligionSpread>40</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
-			<PrereqReligion>RELIGION_EGYPT_MYTHOLOGY</PrereqReligion>
+			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<PrereqBuilding>BUILDING_EGYPT_MYTH_MONASTERY</PrereqBuilding>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -596,7 +596,7 @@
 			<Class>UNITCLASS_MESO_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_MESOPOTAMIEN_MISSIONARY</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_MESO</DependencyType>
+				<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNITCLASS_MESO_MISSIONARY</Capture>
@@ -618,11 +618,11 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_MESO</ReligionType>
+					<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 					<iReligionSpread>40</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
-			<PrereqReligion>RELIGION_MESO</PrereqReligion>
+			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<PrereqBuilding>BUILDING_AN</PrereqBuilding>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -645,7 +645,7 @@
 			<Class>UNITCLASS_SHAMAN_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_SHAMAN_MISSIONARY</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_SHAMAN</DependencyType>
+				<DependencyType>RELIGION_SHAMANISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNITCLASS_SHAMAN_MISSIONARY</Capture>
@@ -667,11 +667,11 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_SHAMAN</ReligionType>
+					<ReligionType>RELIGION_SHAMANISM</ReligionType>
 					<iReligionSpread>40</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
-			<PrereqReligion>RELIGION_SHAMAN</PrereqReligion>
+			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<PrereqBuilding>BUILDING_SHAMAN_MONASTERY</PrereqBuilding>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -1086,7 +1086,7 @@
 			<Class>UNITCLASS_CANAANITE_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_CANAANITE_MISSIONARY</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_CANAANITE</DependencyType>
+				<DependencyType>RELIGION_CANAANISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNITCLASS_CANAANITE_MISSIONARY</Capture>
@@ -1108,11 +1108,11 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_CANAANITE</ReligionType>
+					<ReligionType>RELIGION_CANAANISM</ReligionType>
 					<iReligionSpread>40</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
-			<PrereqReligion>RELIGION_CANAANITE</PrereqReligion>
+			<PrereqReligion>RELIGION_CANAANISM</PrereqReligion>
 			<PrereqBuilding>BUILDING_CANAANISM_MONASTERY</PrereqBuilding>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>

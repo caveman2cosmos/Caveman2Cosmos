@@ -347,19 +347,6 @@ void CvXMLLoadUtility::InitUnitDefaults(int **ppiDefaults)
 	// loop through all the pointers and set their default values
 	for (i=0;i<GC.getNumUnitClassInfos();i++)
 	{
-	/*************************************************************************************************/
-/**	Streamline							10/18/08									Xienwolf	**/
-/**																								**/
-/**			Initializes the BuildingClass to default as NONE if flagged to be Unique			**/
-/*************************************************************************************************/
-        if (GC.getUnitClassInfo((UnitClassTypes)i).isUnique())
-        {
-            piDefaults[i] = -1;
-        }
-        else
-/*************************************************************************************************/
-/**	Streamline									END												**/
-/*************************************************************************************************/
 		piDefaults[i] = GC.getUnitClassInfo((UnitClassTypes) i).getDefaultUnitIndex();
 	}
 }

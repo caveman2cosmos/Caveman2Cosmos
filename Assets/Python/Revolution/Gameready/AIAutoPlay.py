@@ -174,6 +174,21 @@ class AIAutoPlay :
 		CyPlayer = GC.getActivePlayer()
 
 		if CyPlayer and not CyPlayer.isAlive():
+			if GAME.getAIAutoPlay(iPlayer) > 0:
+				try:
+					bCanCancelAuto = SdToolKit.sdObjectGetVal("AIAutoPlay", GAME, "bCanCancelAuto")
+					if bCanCancelAuto is None:
+						bCanCancelAuto = True
+						SdToolKit.sdObjectSetVal("AIAutoPlay", GAME, "bCanCancelAuto", True)
+				except:
+					print "Error! AIAutoPlay: Can't find bCanCancelAuto, assuming it would be True"
+					bCanCancelAuto = True
+
+				if bCanCancelAuto:
+					if self.refortify:
+						RevUtils.doRefortify(iPlayer)
+						self.disableMultiCheck(iPlayer)
+					self.checkPlayer()
 			popup = PyPopup.PyPopup(RevDefs.pickHumanPopup, contextType=EventContextTypes.EVENTCONTEXT_ALL, bDynamic=False)
 			popup.setHeaderString(TRNSLTR.getText("TXT_KEY_AIAUTOPLAY_PICK_CIV", ()))
 			popup.setBodyString(TRNSLTR.getText("TXT_KEY_AIAUTOPLAY_CIV_DIED", ()))
@@ -184,7 +199,7 @@ class AIAutoPlay :
 				if iPlayerX == iPlayer: continue
 				CyPlayerX = GC.getPlayer(iPlayerX)
 				if CyPlayerX.isAlive():
-					popup.addPullDownString(TRNSLTR.getText("TXT_KEY_AIAUTOPLAY_OF_THE", ()) %(CyPlayerX.getName(), CyPlayerX.getCivilizationName()), iPlayerX, 1)
+					popup.addPullDownString(TRNSLTR.getText("TXT_KEY_AIAUTOPLAY_OF_THE", ()) %(CyPlayerX.getName(), CyPlayerX.getCivilizationDescription(0)), iPlayerX, 1)
 
 			popup.popup.setSelectedPulldownID(iPlayer, 1)
 

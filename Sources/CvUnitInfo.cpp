@@ -22,6 +22,10 @@
 //
 //------------------------------------------------------------------------------------------------------
 CvUnitInfo::CvUnitInfo() :
+m_iMaxGlobalInstances(-1),
+m_iMaxPlayerInstances(-1),
+m_bUnlimitedException(false),
+m_iInstanceCostModifier(0),
 m_iDCMBombRange(0),
 m_iDCMBombAccuracy(0),
 m_bDCMAirBomb1(0),
@@ -94,21 +98,11 @@ m_iDomainType(NO_DOMAIN),
 m_iDefaultUnitAIType(NO_UNITAI),
 m_iInvisibleType(NO_INVISIBLE),
 m_iAdvisorType(NO_ADVISOR),
-
-/********************************************************************************/
-/**		REVDCM									2/16/10				phungus420	*/
-/**																				*/
-/**		CanTrain																*/
-/********************************************************************************/
 m_iMaxStartEra(NO_ERA),
 m_iForceObsoleteTech(NO_TECH),
 m_bStateReligion(false),
 m_iPrereqGameOption(NO_GAMEOPTION),
 m_iNotGameOption(NO_GAMEOPTION),
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
-
 m_iHolyCity(NO_RELIGION),
 m_iReligionType(NO_RELIGION),
 m_iStateReligion(NO_RELIGION),
@@ -160,52 +154,22 @@ m_bSuicide(false),
 m_bLineOfSight(false),
 m_bHiddenNationality(false),
 m_bAlwaysHostile(false),
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre																		  **/
-/**  Date: 21.09.2009																			   **/
-/**  ModComp: TLOTags																			   **/
-/**  Reason Added: New Tag Definition															   **/
-/**  Notes:																						 **/
-/*****************************************************************************************************/
 m_bFreeDrop(false),
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 21.09.2009; TLOTags															 **/
-/*****************************************************************************************************/
 m_bNoRevealMap(false),
-/************************************************************************************************/
-/* REVOLUTION_MOD								 01/01/08						DPII		  */
-/*																							  */
-/* CoreComponent																				*/
-/************************************************************************************************/
 m_bInquisitor(false),
 m_bCanBeRebel(false),
 m_bCanRebelCapture(false),
 m_bCannotDefect(false),
 m_bCanQuellRebellion(false),
-/************************************************************************************************/
-/* REVOLUTION_MOD						  END												  */
-/************************************************************************************************/
-
-//ls612: Can't Enter non-Owned cities
 m_bNoNonOwnedEntry(false),
 m_iLeaderPromotion(NO_PROMOTION),
 m_fUnitMaxSpeed(0.0f),
 m_fUnitPadTime(0.0f),
-
-/********************************************************************************/
-/**		REVDCM									2/16/10				phungus420	*/
-/**																				*/
-/**		CanTrain																*/
-/********************************************************************************/
 m_pbPrereqOrCivics(NULL),
 m_pbPrereqBuildingClass(NULL),
 m_piPrereqBuildingClassOverrideTech(NULL),
 m_piPrereqBuildingClassOverrideEra(NULL),
 m_pbForceObsoleteUnitClass(NULL),
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
-
 m_pbUpgradeUnitClass(NULL),
 m_pbTargetUnitClass(NULL),
 m_pbTargetUnitCombat(NULL),
@@ -242,39 +206,28 @@ m_pbFreePromotions(NULL),
 m_paszEarlyArtDefineTags(NULL),
 m_paszLateArtDefineTags(NULL),
 m_paszMiddleArtDefineTags(NULL),
-m_paszUnitNames(NULL)
-/************************************************************************************************/
-/* Afforess					  Start		 Last Update: 3/8/10									*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-,m_iPrereqVicinityBonus(NO_BONUS)
-,m_iBaseFoodChange(0)
-,m_iControlPoints(0)
-,m_iCommandRange(0)
-,m_bWorkerTrade(false)
-,m_bMilitaryTrade(false)
-,m_bForceUpgrade(false)
-,m_bGreatGeneral(false)
-,m_bSlave(false)
-,m_bRequiresStateReligionInCity(false)
-,m_abHasCombatType(NULL)
-,m_piPrereqOrVicinityBonuses(NULL)
-,m_pbPassableRouteNeeded(NULL)
-,m_paszClassicalArtDefineTags(NULL)
-,m_paszRennArtDefineTags(NULL)
-,m_paszIndustrialArtDefineTags(NULL)
-,m_paszFutureArtDefineTags(NULL)
-,m_paszCivilizationNames(NULL)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-,m_PropertyManipulators()
-,m_pExprTrainCondition(NULL)
-
-//TB Combat Mods begin
-//integers
-,m_iAttackCombatModifier(0),
+m_paszUnitNames(NULL),
+m_iPrereqVicinityBonus(NO_BONUS),
+m_iBaseFoodChange(0),
+m_iControlPoints(0),
+m_iCommandRange(0),
+m_bWorkerTrade(false),
+m_bMilitaryTrade(false),
+m_bForceUpgrade(false),
+m_bGreatGeneral(false),
+m_bSlave(false),
+m_bRequiresStateReligionInCity(false),
+m_abHasCombatType(NULL),
+m_piPrereqOrVicinityBonuses(NULL),
+m_pbPassableRouteNeeded(NULL),
+m_paszClassicalArtDefineTags(NULL),
+m_paszRennArtDefineTags(NULL),
+m_paszIndustrialArtDefineTags(NULL),
+m_paszFutureArtDefineTags(NULL),
+m_paszCivilizationNames(NULL),
+m_PropertyManipulators(),
+m_pExprTrainCondition(NULL),
+m_iAttackCombatModifier(0),
 m_iDefenseCombatModifier(0),
 m_iPursuit(0),
 m_iEarlyWithdraw(0),
@@ -313,11 +266,8 @@ m_iCriticalModifier(0),
 m_iEndurance(0),
 m_iRoundStunProb(0),
 m_iPoisonProbabilityModifier(0),
-//Team Project (3)
 m_iCaptureProbabilityModifier(0),
 m_iCaptureResistanceModifier(0),
-//Team Project (4)
-//WorkRateMod
 m_iHillsWorkModifier(0),
 m_iPeaksWorkModifier(0),
 m_iBreakdownChance(0),
@@ -352,7 +302,6 @@ m_iNumTriggers(0),
 m_iAnimalIgnoresBorders(0),
 m_iAggression(5),
 m_iReligiousCombatModifier(0),
-//booleans
 m_bStampede(false),
 m_bOnslaught(false),
 m_bDealsColdDamage(false),
@@ -378,7 +327,6 @@ m_bCanAnimalIgnoresImprovements(false),
 m_bCanAnimalIgnoresCities(false),
 m_bNoNonTypeProdMods(false),
 m_bGatherHerd(false)
-//TB Combat Mods end
 {
 	m_zobristValue = GC.getGame().getSorenRand().getInt();
 }
@@ -444,11 +392,6 @@ CvUnitInfo::~CvUnitInfo()
 	SAFE_DELETE_ARRAY(m_paszLateArtDefineTags);
 	SAFE_DELETE_ARRAY(m_paszMiddleArtDefineTags);
 	SAFE_DELETE_ARRAY(m_paszUnitNames);
-/************************************************************************************************/
-/* Afforess					  Start		 Last Update: 3/8/10									*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	SAFE_DELETE_ARRAY(m_pbPrereqBuildingClass);
 	SAFE_DELETE_ARRAY(m_piPrereqOrVicinityBonuses);
 	SAFE_DELETE_ARRAY(m_pbPassableRouteNeeded);
@@ -457,9 +400,6 @@ CvUnitInfo::~CvUnitInfo()
 	SAFE_DELETE_ARRAY(m_paszIndustrialArtDefineTags);
 	SAFE_DELETE_ARRAY(m_paszFutureArtDefineTags);
 	SAFE_DELETE_ARRAY(m_paszCivilizationNames);
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 	SAFE_DELETE(m_pExprTrainCondition);
 
 	for (int i=0; i<(int)m_aOutcomeMissions.size(); i++)
@@ -488,9 +428,26 @@ const wchar* CvUnitInfo::getExtraHoverText() const
 	}
 }
 
-/************************************************************************************************/
-/* DCM									 04/19/09								Johny Smith  */
-/************************************************************************************************/
+
+int CvUnitInfo::getMaxGlobalInstances() const
+{
+	return m_iMaxGlobalInstances;
+}
+int CvUnitInfo::getMaxPlayerInstances() const
+{
+	return m_iMaxPlayerInstances;
+}
+bool CvUnitInfo::isUnlimitedException() const
+{
+	return m_bUnlimitedException;
+}
+
+
+int CvUnitInfo::getInstanceCostModifier() const
+{
+	return m_iInstanceCostModifier;
+}
+
 // Dale - RB: Field Bombard START
 int CvUnitInfo::getDCMBombRange() const
 {
@@ -535,9 +492,7 @@ bool CvUnitInfo::getDCMFighterEngage() const
 	return m_bDCMFighterEngage;
 }
 // Dale - FE: Fighters END
-/************************************************************************************************/
-/* DCM									 END												  */
-/************************************************************************************************/
+
 
 int CvUnitInfo::getAIWeight() const
 {
@@ -3860,6 +3815,10 @@ bool CvUnitInfo::isAidChange(int iProperty) const
 
 void CvUnitInfo::getCheckSum(unsigned int &iSum)
 {
+	CheckSum(iSum, m_iMaxGlobalInstances);
+	CheckSum(iSum, m_iMaxPlayerInstances);
+	CheckSum(iSum, m_bUnlimitedException);
+	CheckSum(iSum, m_iInstanceCostModifier);
 	CheckSum(iSum, m_iDCMBombRange);
 	CheckSum(iSum, m_iDCMBombAccuracy);
 	CheckSum(iSum, m_bDCMAirBomb1);
@@ -4379,6 +4338,11 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Class");
 	m_iUnitClassType = pXML->GetInfoClass(szTextVal);
+
+	pXML->GetOptionalChildXmlValByName(&m_iMaxGlobalInstances, L"iMaxGlobalInstances", -1);
+	pXML->GetOptionalChildXmlValByName(&m_iMaxPlayerInstances, L"iMaxPlayerInstances", -1);
+	pXML->GetOptionalChildXmlValByName(&m_bUnlimitedException, L"bUnlimitedException", false);
+	pXML->GetOptionalChildXmlValByName(&m_iInstanceCostModifier, L"iInstanceCostModifier", 0);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Special");
 	m_iSpecialUnitType = pXML->GetInfoClass(szTextVal);
@@ -5518,6 +5482,10 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 	CvString cDefault = CvString::format("").GetCString();
 
 	if ( m_iUnitClassType == iTextDefault )	m_iUnitClassType = pClassInfo->getUnitClassType();
+	if ( m_iMaxGlobalInstances == -1) m_iMaxGlobalInstances = pClassInfo->getMaxGlobalInstances();
+	if ( m_iMaxPlayerInstances == -1) m_iMaxPlayerInstances = pClassInfo->getMaxPlayerInstances();
+	if ( m_bUnlimitedException == false) m_bUnlimitedException = pClassInfo->isUnlimitedException();
+	if ( m_iInstanceCostModifier == 0) m_iInstanceCostModifier = pClassInfo->getInstanceCostModifier();
 	if ( m_iSpecialUnitType == iTextDefault )	m_iSpecialUnitType = pClassInfo->getSpecialUnitType();
 	if ( m_iUnitCaptureClassType == iTextDefault )	m_iUnitCaptureClassType = pClassInfo->getUnitCaptureClassType();
 	if ( m_iUnitCombatType == iTextDefault )	m_iUnitCombatType = pClassInfo->getUnitCombatType();

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_JAINISM</Tag>
+		<Tag>TXT_KEY_TECH_JAINISM</Tag>
 		<English>Jainism</English>
 		<French>Jainisme</French>
 		<Italian>Jainismo</Italian>
 		<Polish>Dźinizm</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_JAINISM_PEDIA</Tag>
+		<Tag>TXT_KEY_TECH_JAINISM_PEDIA</Tag>
 		<English>Jainism has many similarities to Hinduism and Buddhism which developed in the same part of the world. They believe in karma and reincarnation as do Hindus but they believe that enlightenment and liberation from this cycle can only be achieved through asceticism. Jains follow fruititarianism. This is the practice of only eating that which will not kill the plant or animal from which it is taken. They also practice ahimsa, non-violence, because any act of violence against a living thing creates negative karma which will adversely affect one's next life.</English>
 		<French>Jainisme has many similarities to Hinduism and Buddhism which developed in the same part of the world. They believe in karma and reincarnation as do Hindus but they believe that enlightenment and liberation from this cycle can only be achieved through asceticism. Jains follow fruititarianism. This is the practice of only eating that which will not kill the plant or animal from which it is taken. They also practice ahimsa, non-violence, because any act of violence against a living thing creates negative karma which will adversely affect one's next life.</French>
 		<German>Jainism has many similarities to Hinduism and Buddhism which developed in the same part of the world. They believe in karma and reincarnation as do Hindus but they believe that enlightenment and liberation from this cycle can only be achieved through asceticism. Jains follow fruititarianism. This is the practice of only eating that which will not kill the plant or animal from which it is taken. They also practice ahimsa, non-violence, because any act of violence against a living thing creates negative karma which will adversely affect one's next life.</German>
@@ -17,13 +17,13 @@
 		<Polish>Dźinizm - nonteistyczny system filozoficzny i religijny który powstał w Indiach około VI wieku p.n.e. w reakcji na silnie zrytualizowany braminizm. Za twórcę tej religii uważany jest Parśwa żyjący w VIII w. p.n.e., znacząco zreformował ją jednak Wardhamana Mahawira, który stworzył zbiór zasad regulujących życie wyznawców dźinizmu. Zbiór religijnych ksiąg dźinizmu - Agama (Siddhanta) składa się z ok. 45 tekstów dotyczących doktryny, rytuału, biografii świętych oraz różnorodnych dziedzin wiedzy świeckiej. Każda ze szkół posiada własny kanon pism i komentarzy. W V wieku n.e. na synodzie w Walabhi pod przewodnictwem śwetambarów ustalono nowy (większość starych pism zaginęła), ostateczny kanon pism dźinijskich.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_JAINISM_QUOTE</Tag>
+		<Tag>TXT_KEY_TECH_JAINISM_QUOTE</Tag>
 		<English>"This is the quintessence of wisdom; not to kill anything. This is the pure unchangeable Law. Therefore, cease to injure living things." - Yogashastra (Jain Scripture), c. 500 BC</English>
 		<Spanish>"Esto es la quintaesencia del saber; no hay que matar a todo. Esta es una ley pura e inmutable. Por tanto, deja de hacer daño a los seres vivos." - Yogashastra (escritura jainista), Aprox. 500 a.C.</Spanish>
 		<Polish>"Dźinizm - nonteistyczny system filozoficzny i religijny który powstał w Indiach około VI wieku p.n.e. w reakcji na silnie zrytualizowany braminizm. Za twórcę tej religii uważany jest Parśwa żyjący w VIII w. p.n.e., znacząco zreformował ją jednak Wardhamana Mahawira, który stworzył zbiór zasad regulujących życie wyznawców dźinizmu. Liczbę wyznawców dźinizmu ocenia się na ok. 4,5-5 mln (z czego 97-98% w Indiach)."</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_JAINISM_STRATEGY</Tag>
+		<Tag>TXT_KEY_TECH_JAINISM_STRATEGY</Tag>
 		<English>Research Jainism to found a Religion</English>
 		<French>Recherchez Jainisme pour fonder une religion</French>
 		<Spanish>Investiga el Jainismo para fundar una religión.</Spanish>

@@ -569,24 +569,17 @@ bool isTechRequiredForProject(TechTypes eTech, ProjectTypes eProject)
 	return false;
 }
 
-bool isWorldUnitClass(UnitClassTypes eUnitClass)
+bool isWorldUnit(UnitTypes eUnit)
 {
-	return (GC.getUnitClassInfo(eUnitClass).getMaxGlobalInstances() != -1);
+	return GC.getUnitInfo(eUnit).getMaxGlobalInstances() != -1;
 }
-
-bool isTeamUnitClass(UnitClassTypes eUnitClass)
+bool isNationalUnit(UnitTypes eUnit)
 {
-	return (GC.getUnitClassInfo(eUnitClass).getMaxTeamInstances() != -1);
+	return GC.getUnitInfo(eUnit).getMaxPlayerInstances() != -1;
 }
-
-bool isNationalUnitClass(UnitClassTypes eUnitClass)
+bool isLimitedUnit(UnitTypes eUnit)
 {
-	return (GC.getUnitClassInfo(eUnitClass).getMaxPlayerInstances() != -1);
-}
-
-bool isLimitedUnitClass(UnitClassTypes eUnitClass)
-{
-	return (isWorldUnitClass(eUnitClass) || isTeamUnitClass(eUnitClass) || isNationalUnitClass(eUnitClass));
+	return (isWorldUnit(eUnit) || isNationalUnit(eUnit));
 }
 
 bool isWorldWonderClass(BuildingClassTypes eBuildingClass)

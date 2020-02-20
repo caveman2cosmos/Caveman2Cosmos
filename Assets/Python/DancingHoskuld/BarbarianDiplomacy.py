@@ -19,7 +19,7 @@ def init():
 	gb_NoGoodyHuts = CyGame().isOption(GameOptionTypes.GAMEOPTION_NO_GOODY_HUTS)
 
 	global giIndigenousPeopleImprovement
-	giIndigenousPeopleImprovement = gc.getInfoTypeForString("IMPROVEMENT_INDIGENOUS_PEOPLE")
+	giIndigenousPeopleImprovement = gc.getInfoTypeForString("IMPROVEMENT_INDIGENOUS_COMMUNITY")
 
 	global gaIPattitude2Player
 	gaIPattitude2Player = []

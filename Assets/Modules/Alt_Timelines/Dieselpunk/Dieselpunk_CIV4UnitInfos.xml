@@ -1,13 +1,10 @@
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- Assets\Modules\Alt_Timelines\Dieselpunk\Units\Dieselpunk_CIV4UnitInfos.xml-->
-<!-- Unit Infos -->
+<?xml version="1.0" encoding="UTF-8"?>
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
 			<Class>UNITCLASS_GOLIATH_AIRSHIP</Class>
 			<Type>UNIT_GOLIATH_AIRSHIP</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_BALLOON</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TRANSPORT</SubCombatType>
@@ -105,6 +102,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_DRACHE_HELICOPTER</Class>
 			<Type>UNIT_DRACHE_HELICOPTER</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_HELICOPTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -161,7 +159,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_ZEPPELINS</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_DIESEL</BonusType>
+			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_DIESELPUNK</BonusType>
 			</PrereqBonuses>
@@ -217,6 +215,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_RAILROAD_ARTILLERY</Class>
 			<Type>UNIT_RAILROAD_ARTILLERY</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Capture>UNITCLASS_RAILROAD_ARTILLERY</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
@@ -279,7 +278,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_ARTILLERY</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_AMMO</BonusType>
+			<BonusType>BONUS_AMMUNITION</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_DIESELPUNK</BonusType>
 			</PrereqBonuses>
@@ -332,6 +331,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_BIG_BERTHA</Class>
 			<Type>UNIT_BIG_BERTHA</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Capture>UNITCLASS_BIG_BERTHA</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
@@ -399,7 +399,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_ARTILLERY</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_AMMO</BonusType>
+			<BonusType>BONUS_AMMUNITION</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_DIESELPUNK</BonusType>
 			</PrereqBonuses>
@@ -452,6 +452,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_TZAR_TANK</Class>
 			<Type>UNIT_TZAR_TANK</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WHEELED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -508,7 +509,7 @@
 			<PrereqTech>TECH_DIESELPUNK</PrereqTech>
 			<BonusType>BONUS_DIESELPUNK</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_STEEL</BonusType>
+				<BonusType>BONUS_STEEL_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>1080</iCost>
 			<iMoves>1</iMoves>
@@ -566,6 +567,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_DOUBLE_BIPLANE</Class>
 			<Type>UNIT_DOUBLE_BIPLANE</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_EARLY_FIGHTERS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -615,7 +617,7 @@
 			<PrereqTech>TECH_DIESELPUNK</PrereqTech>
 			<BonusType>BONUS_DIESELPUNK</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_AMMO</BonusType>
+				<BonusType>BONUS_AMMUNITION</BonusType>
 			</PrereqBonuses>
 			<iCost>970</iCost>
 			<iMoves>1</iMoves>
@@ -651,6 +653,7 @@
  		<UnitInfo>
 			<Class>UNITCLASS_VERY_HEAVY_ARMOR</Class>
 			<Type>UNIT_VERY_HEAVY_ARMOR</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_TRACKED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -709,14 +712,14 @@
 			<PrereqTech>TECH_DIESELPUNK</PrereqTech>
 			<BonusType>BONUS_DIESELPUNK</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_DIESEL</BonusType>
+				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_WARE_ALUMINUM</ID>
+						<ID>BONUS_ALUMINUM_WARES</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -777,6 +780,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_CHROMIUM_GUNMAN</Class>
 			<Type>UNIT_CHROMIUM_GUNMAN</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ROBOT</SubCombatType>
@@ -834,18 +838,18 @@
 			</TechTypes>
 			<BonusType>BONUS_DIESELPUNK</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_STEEL</BonusType>
-				<BonusType>BONUS_WARE_TITANIUM</BonusType>
+				<BonusType>BONUS_STEEL_WARES</BonusType>
+				<BonusType>BONUS_TITANIUM_WARES</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_DIESEL</ID>
+						<ID>BONUS_OIL_PRODUCTS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMO</ID>
+						<ID>BONUS_AMMUNITION</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -867,11 +871,11 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_TITANIUM</BonusType>
+					<BonusType>BONUS_TITANIUM_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_STEEL</BonusType>
+					<BonusType>BONUS_STEEL_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>

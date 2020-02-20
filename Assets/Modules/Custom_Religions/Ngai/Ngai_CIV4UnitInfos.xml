@@ -29,11 +29,11 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_NGAI</ReligionType>
+					<ReligionType>RELIGION_NGAIISM</ReligionType>
 					<iReligionSpread>80</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
-			<PrereqReligion>RELIGION_NGAI</PrereqReligion>
+			<PrereqReligion>RELIGION_NGAIISM</PrereqReligion>
 			<PrereqBuilding>BUILDING_NGAI</PrereqBuilding>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -59,7 +59,7 @@
 			</Buildings>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_NGAI</ReligionType>
+					<ReligionType>RELIGION_NGAIISM</ReligionType>
 					<iReligionSpread>100</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>

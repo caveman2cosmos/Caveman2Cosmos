@@ -5,14 +5,14 @@
 <!-- -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_CANAANISM</Tag>
+		<Tag>TXT_KEY_TECH_CANAANISM</Tag>
 		<English>Canaanism</English>
 		<French>Canaanéisme</French>
 		<Italian>Canaanismo</Italian>
 		<Polish>Kananeizm</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_CANAANISM_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_TECH_CANAANISM_ADJECTIVE</Tag>
 		<English>Canaanite</English>
 		<French>Canaanéen</French>
 		<Italian>
@@ -23,7 +23,7 @@
 		<Polish>Kananejska</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_CANAANISM_PEDIA</Tag>
+		<Tag>TXT_KEY_TECH_CANAANISM_PEDIA</Tag>
 		<English>Canaanite religion is the name for the group of Ancient Semitic religions practiced by the Canaanites living in the ancient Levant from at least the early Bronze Age through the first centuries of the Common Era.[PARAGRAPH:2]Canaanite religion was polytheistic, and in some cases monolatristic.[PARAGRAPH:2]Source: Wikipedia</English>
 		<Italian>Religione cananea è il nome delle antiche religioni semitiche praticate dai Cananei che abitavano in Medioriente dall'inizio dell'età del bronzo fino ai primi secoli dell'era comune.[PARAGRAPH:2]La religione cananea era politeista, e in qualche casi monoteista.[PARAGRAPH:2]Fonte: Wikipedia</Italian>
 		<Polish>Religia kananejska - system wierzeń ludów zamieszkałych w drugim i pierwszym
@@ -39,7 +39,7 @@ więc Ela, Panią i Adonisa. W Sydonie - Baala, Asztarte i Eszmuna, w Tyrze - Me
 i Eszmuna, Filistyni zaś czcili Dagana, Asztarte i Baala.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_CANAANISM_QUOTE</Tag>
+		<Tag>TXT_KEY_TECH_CANAANISM_QUOTE</Tag>
 		<English>"Yet the children of Manasseh could not drive out the inhabitants of those cities; but the Canaanites would dwell in that land." - Bible</English>
 		<French>"Pourtant, les enfants de Manassé ne purent pas chasser les habitants de ces villes, et les Cananéens voulurent rester dans ce pays." - Bible</French>
 		<Polish>"I dzieci Manaseha nie mogły przegonić mieszkańców tych miast, ale Kaananejczycy i tak zamieszkali na tym terenie." - Bible</Polish>

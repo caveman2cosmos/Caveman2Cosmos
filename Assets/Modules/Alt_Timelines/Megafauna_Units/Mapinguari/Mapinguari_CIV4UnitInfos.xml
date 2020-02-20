@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-	<!-- ###################################################################################### -->
 <Civ4UnitInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
 			<Class>UNITCLASS_MAPINGUARI_WOODEN</Class>
 			<Type>UNIT_MAPINGUARI_WOODEN</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -91,6 +91,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_MAPINGUARI_STONE</Class>
 			<Type>UNIT_MAPINGUARI_STONE</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -176,6 +177,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_MAPINGUARI_OBSIDIAN</Class>
 			<Type>UNIT_MAPINGUARI_OBSIDIAN</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -263,6 +265,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_MAPINGUARI</Class>
 			<Type>UNIT_MAPINGUARI</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -308,9 +311,9 @@
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<PrereqBuilding>BUILDING_MAPINGUARI_COMPOUND</PrereqBuilding>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
@@ -354,6 +357,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_MAPINGUARI_PIKE</Class>
 			<Type>UNIT_MAPINGUARI_PIKE</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -399,8 +403,8 @@
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<PrereqBuilding>BUILDING_MAPINGUARI_COMPOUND</PrereqBuilding>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<ForceObsoleteTech>TECH_GUNPOWDER</ForceObsoleteTech>
 			<iCost>480</iCost>

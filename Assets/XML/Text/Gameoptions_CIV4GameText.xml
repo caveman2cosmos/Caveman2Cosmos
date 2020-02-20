@@ -132,23 +132,6 @@
 		<German>Wilde Tiere können niemals die kulturellen Grenzen einer Nation überschreiten.</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_ASSIMILATION</Tag>
-		<English>Assimilation</English>
-		<German>Assimilierung</German>
-		<Italian>Assimilazione</Italian>
-		<Spanish>Asimilación</Spanish>
-		<Polish>Asymilacja</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_ASSIMILATION_HELP</Tag>
-		<English>Captured cities retain their original civilization, so they can build that Civ's UU's and Unique Buildings.</English>
-		<French>Les Villes Capturées gardent leur civilisation d'origine, et peuvent ainsi toujours construire les bâtiments et unités uniques.</French>
-		<German>Eroberte Städte behalten ihre ursprüngliche Zivilisation, so dass sie Spezialeinheiten und -gebäude dieser Zivilisation errichten können.</German>
-		<Italian>Le città catturate mantengono la propria etnia, così possono costruire unità ed edifici unici di quella civiltà.</Italian>
-		<Spanish>Las ciudades capturadas retienen su cultura original, por tanto podrán construir los edificios y unidades únicas de esa civilización.</Spanish>
-		<Polish>Przejęte miasta będą chciały zatrzymać swoją oryginalną cywilizację, będziesz mógł budować w tym mieście unikalne budynki i jednostki od tej cywilizacji.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_ALWAYS_RAZE</Tag>
 		<English>Barbarians Always Raze</English>
 		<French>Barbares Rasent les Villes</French>
@@ -165,24 +148,6 @@
 		<Italian>I barbari non catturano città, le razziano sempre.</Italian>
 		<Spanish>Los bárbaros no se podrán quedar con las ciudades capturadas, y siempre las destruirán.</Spanish>
 		<Polish>Barbarzyńcy nie mogą przejąć miasta więc za każdym razem je burzą.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_GENERALS</Tag>
-		<English>Barbarian Generals</English>
-		<French>Généraux Barbares</French>
-		<German>Barbarengeneräle</German>
-		<Italian>Generali barbari</Italian>
-		<Spanish>Generales bárbaros</Spanish>
-		<Polish>Barbarzyńscy Generałowie</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_GENERALS_HELP</Tag>
-		<English>Enables XP and Great Generals from Barbarian Combat, but be warned, the Barbarians can receive Great Generals now too!</English>
-		<French>Permet de l'expérience et des Grands Généraux lors des combat contre les Barbares. Mais attention, les Barbares pourront avoir des Généraux également!</French>
-		<German>Erfahrungspunkte und Große Generäle gibt es auch für Kämpfe mit Barbaren. Eine Warnung aber vorweg: Die Barbaren können nun ebenfalls Große Generäle erhalten!</German>
-		<Italian>Permette XP e grandi generali dai combattimenti con i barbari, ma fa attenzione: anche i barbari possono ora ricevere i grandi generali!</Italian>
-		<Spanish>Activa la obtención de experiencia y Grandes generales del combate con bárbaros, pero atención, ¡los bárbaros también podrán recibir Grandes Generales!</Spanish>
-		<Polish>Umożliwia otrzymywanie doświadczenia oraz wielkich generałów od walk z barbarzyńcami, ale uważaj barbarzyńcy również mogą otrzymać Wielkich Generałów.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_WORLD</Tag>
@@ -366,16 +331,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_DOWNSIZING_IS_PROFITABLE_HELP</Tag>
 		<English>Get gold from disbanding units.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_ECOLOGICAL_ANIMALS</Tag>
-		<English>Ecological Animals</English>
-		<German>Ökologische Tiere</German>
-		<French>Animaux écologiques</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_ECOLOGICAL_ANIMALS_HELP</Tag>
-		<English>UNUSED</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_EQUIPMENT</Tag>
@@ -649,24 +604,6 @@
 		<Polish>Jednostki potrzebują dwa razy więcej XP na poziom.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_MOUNTAINS</Tag>
-		<English>Usable Mountains</English>
-		<French>Utilisation des Montagnes</French>
-		<German>Nutzbare Gebirge</German>
-		<Italian>Montagne lavorabili</Italian>
-		<Spanish>Montañas utilizables</Spanish>
-		<Polish>Eksploatacja gór</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_MOUNTAINS_HELP</Tag>
-		<English>The Mountains Mod makes it so that mountains are no longer impassable, can have some resources, and can be worked by a city, like all other tiles.</English>
-		<French>Le Mod 'Montagnes' rend les montagnes franchissables, elle peuvent également abriter des ressources, être exploitées dans la ville, comme les autres cases.</French>
-		<German>Die Gebirge-Modifikation bewirkt, dass Gebirge nicht mehr unpassierbar sind, einige Ressourcen besitzen können und von einer Stadt wie alle anderen Geländefelder bewirtschaftet werden können.</German>
-		<Italian>Il Mountains Mod fa alcune modifiche: le montagne possono essere attraversate, possono avere delle risorse e possono essere lavorate dalle città, allo stesso modo delle altre caselle.</Italian>
-		<Spanish>El mod de Montañas (Mountains) hace que los Picos dejen de ser infranqueables, puedan tener ciertos recursos, y puedan ser trabajados por una ciudad, al igual que las demás casillas.</Spanish>
-		<Polish>Mountains Mod powoduje że góry nie są już niedostępne, mogą posiadać pewne surowce, może na nich znajdować się miasto - tak jak na innych polach.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NEANDERTHAL_CITIES</Tag>
 		<English>Neanderthal Cities</English>
 		<French>Villes Néanderthal</French>
@@ -693,20 +630,6 @@
 		<German>Jedes Mal, wenn das Spiel neu geladen wird, wird ein neuer Startwert für den Zufallszahlengenerator erstellt, was zum Beispiel zu unterschiedlichen Kampfausgängen führen kann.</German>
 		<Italian>Ogni volta che ricaricherai il gioco verrà generata una nuova estrazione casuale, portando, per esempio, a diversi risultati di combattimento.</Italian>
 		<Spanish>En cada partida se genera una nueva "seed" al azar que, por ejemplo, arrojará resultados diferentes en el combate.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NIGHTMARE_MODE</Tag>
-		<English>Nightmare Mode (Deity Only)</English>
-		<French>Mode Cauchemard</French>
-		<German>Albtraummodus</German>
-		<Polish>Tryb Koszmaru</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NIGHTMARE_MODE_HELP</Tag>
-		<English>More difficult handicap setting. Requires Deity difficulty to have an effect.</English>
-		<French>Ajoute des paramètres et handicaps supplémentaires pour rendre le jeu plus difficile</French>
-		<German>Erhöht den Schwierigkeitsgrad des Spiels durch neue Handicaps (etwa um 2 weitere Schwierigkeitsstufen). Nicht auf Schwierigkeitsgrad Adliger oder niedriger verwenden!</German>
-		<Polish>Rozgrywka staje się jeszcze trudniejsza.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_BARBARIAN_CIV</Tag>

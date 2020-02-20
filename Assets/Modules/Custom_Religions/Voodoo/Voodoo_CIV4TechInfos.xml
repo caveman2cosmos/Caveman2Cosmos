@@ -5,11 +5,11 @@
 		<TechInfo>
 			<!-- Voodoo -->
 			<Type>TECH_VOODOO</Type>
-			<Description>TXT_KEY_RELIGION_VOODOO</Description>
-			<Civilopedia>TXT_KEY_RELIGION_VOODOO_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_RELIGION_VOODOO_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_VOODOO</Description>
+			<Civilopedia>TXT_KEY_TECH_VOODOO_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_VOODOO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<Quote>TXT_KEY_RELIGION_VOODOO_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_VOODOO_QUOTE</Quote>
 			<Sound>AS2D_TECH_VOODOO</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Voodoo.dds</Button>
@@ -17,12 +17,12 @@
 			<iCost>1334</iCost>
 			<bGlobal>1</bGlobal>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<Era>ERA_MEDIEVAL</Era>
+			<Era>C2C_ERA_MEDIEVAL</Era>
 			<OrPreReqs>
 				<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
 			</OrPreReqs>
 			<!-- Special effects -->
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<!-- System -->
 			<iAsset>8</iAsset>
 			<iGridX>44</iGridX>
