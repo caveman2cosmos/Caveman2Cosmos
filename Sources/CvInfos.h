@@ -2402,19 +2402,13 @@ public:
 	int getFeaturePassableTech(int i) const;		// Exposed to Python
 	int getFlankingStrikeUnitClass(int i) const;	// Exposed to Python
 
-/********************************************************************************/
-/**		REVDCM									2/16/10				phungus420	*/
-/**																				*/
-/**		CanTrain 																*/
-/********************************************************************************/
 	bool isPrereqOrCivics(int i) const;				// Exposed to Python
 	bool isPrereqBuildingClass(int i) const; 		// Exposed to Python
 	int getPrereqBuildingClassOverrideTech(int i) const;	//Exposed to Python
 	int getPrereqBuildingClassOverrideEra(int i) const; 	//Exposed to Python
-	bool getForceObsoleteUnitClass(int i) const; 			//Exposed to Python
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
+	int getSupersedingUnit(int i) const;
+	int getNumSupersedingUnits() const;
+	bool isSupersedingUnit(int i) const; 			//Exposed to Python
 
 	bool getUpgradeUnitClass(int i) const;			// Exposed to Python
 	bool getTargetUnitClass(int i) const;			// Exposed to Python
@@ -2559,6 +2553,7 @@ protected:
 	int m_iPrereqAndTech;
 	int m_iPrereqAndBonus;
 	std::vector<int> m_aePrereqOrBuildings;
+	std::vector<int> m_aiSupersedingUnits;
 	int m_iGroupSize;
 	int m_iGroupDefinitions;
 	int m_iUnitMeleeWaveSize;
@@ -2659,19 +2654,10 @@ protected:
 	int* m_piFeaturePassableTech;
 	int* m_piFlankingStrikeUnitClass;
 
-/********************************************************************************/
-/**		REVDCM									2/16/10				phungus420	*/
-/**																				*/
-/**		CanTrain 																*/
-/********************************************************************************/
 	bool* m_pbPrereqOrCivics;
 	bool* m_pbPrereqBuildingClass;
 	int* m_piPrereqBuildingClassOverrideTech;
 	int* m_piPrereqBuildingClassOverrideEra;
-	bool* m_pbForceObsoleteUnitClass;
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
 
 	bool* m_pbUpgradeUnitClass;
 	bool* m_pbTargetUnitClass;

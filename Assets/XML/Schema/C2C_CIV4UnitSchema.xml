@@ -1511,14 +1511,8 @@
 	<ElementType name="PrereqBuildingClasses" content="eltOnly">
 		<element type="PrereqBuildingClass" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="bForceObsoleteUnitClass" content="textOnly" dt:type="boolean"/>
-	<ElementType name="ForceObsoleteUnitClassType" content="textOnly"/>
-	<ElementType name="ForceObsoleteUnitClass" content="eltOnly">
-		<element type="ForceObsoleteUnitClassType"/>
-		<element type="bForceObsoleteUnitClass"/>
-	</ElementType>
-	<ElementType name="ForceObsoleteUnitClasses" content="eltOnly">
-		<element type="ForceObsoleteUnitClass" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="SupersedingUnits" content="eltOnly">
+		<element type="UnitType"/>
 	</ElementType>
 	<!-- RevDCM end -->
 	<ElementType name="HolyCity" content="textOnly"/>
@@ -2022,7 +2016,7 @@
 		<element type="NotGameOption" minOccurs="0"/>
 		<element type="PrereqOrCivics" minOccurs="0"/>
 		<element type="PrereqBuildingClasses" minOccurs="0"/>
-		<element type="ForceObsoleteUnitClasses" minOccurs="0"/>
+		<element type="SupersedingUnits" minOccurs="0"/>
 		<!-- RevDCM end -->
 		<element type="HolyCity" minOccurs="0"/>
 		<element type="ReligionType" minOccurs="0"/>

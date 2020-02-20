@@ -2505,36 +2505,18 @@ bool CvCity::isPlotTrainable(UnitTypes eUnit, bool bContinue, bool bTestVisible)
 }
 
 //Returns true if the city can train a unit, or any upgrade for that unit that forces it obsolete
-bool CvCity::isForceObsoleteUnitClassAvailable(UnitTypes eUnit) const
+bool CvCity::isSupersedingUnitAvailable(UnitTypes eUnit) const
 {
 	PROFILE_FUNC();
-
-	CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
-	CvCivilizationInfo& kCivilization = GC.getCivilizationInfo(getCivilizationType());
-
 	FAssertMsg(eUnit != NO_UNIT, "eUnit is expected to be assigned (not NO_UNIT)");
 
-	if (kUnit.getForceObsoleteUnitClass(NO_UNITCLASS))
+	for (int iI = 0; iI < GC.getUnitInfo(eUnit).getNumSupersedingUnits(); ++iI)
 	{
-		const int numUnitClassInfos = GC.getNumUnitClassInfos();
-
-		for (int iI = 0; iI < numUnitClassInfos; iI++)
+		if (canTrain((UnitTypes) GC.getUnitInfo(eUnit).getSupersedingUnit(iI), false, false, false, true, true))
 		{
-			if (kUnit.getForceObsoleteUnitClass(iI))
-			{
-				UnitTypes eLoopUnit = (UnitTypes)kCivilization.getCivilizationUnits(iI);
-				if (eLoopUnit == NO_UNIT)
-				{
-					continue;
-				}
-				if (canTrain(eLoopUnit, false, false, false, true, true))
-				{
-					return true;
-				}
-			}
+			return true;
 		}
 	}
-
 	return false;
 }
 /************************************************************************************************/
@@ -2764,7 +2746,7 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 		return false;
 	}
 
-	if (!bIgnoreUpgrades && isForceObsoleteUnitClassAvailable(eUnit))
+	if (!bIgnoreUpgrades && isSupersedingUnitAvailable(eUnit))
 	{
 		return false;
 	}

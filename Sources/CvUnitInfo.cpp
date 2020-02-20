@@ -169,7 +169,6 @@ m_pbPrereqOrCivics(NULL),
 m_pbPrereqBuildingClass(NULL),
 m_piPrereqBuildingClassOverrideTech(NULL),
 m_piPrereqBuildingClassOverrideEra(NULL),
-m_pbForceObsoleteUnitClass(NULL),
 m_pbUpgradeUnitClass(NULL),
 m_pbTargetUnitClass(NULL),
 m_pbTargetUnitCombat(NULL),
@@ -340,20 +339,10 @@ m_bGatherHerd(false)
 //------------------------------------------------------------------------------------------------------
 CvUnitInfo::~CvUnitInfo()
 {
-
-/********************************************************************************/
-/**		REVDCM									2/16/10				phungus420	*/
-/**																				*/
-/**		CanTrain																*/
-/********************************************************************************/
 	SAFE_DELETE_ARRAY(m_pbPrereqOrCivics);
 	SAFE_DELETE_ARRAY(m_pbPrereqBuildingClass);
 	SAFE_DELETE_ARRAY(m_piPrereqBuildingClassOverrideTech);
 	SAFE_DELETE_ARRAY(m_piPrereqBuildingClassOverrideEra);
-	SAFE_DELETE_ARRAY(m_pbForceObsoleteUnitClass);
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
 
 	SAFE_DELETE_ARRAY(m_pbUpgradeUnitClass);
 	SAFE_DELETE_ARRAY(m_pbTargetUnitClass);
@@ -406,14 +395,17 @@ CvUnitInfo::~CvUnitInfo()
 	{
 		SAFE_DELETE(m_aOutcomeMissions[i]);
 	}
-//TB Combat Mod begin
 
 	//Struct Vector
 	for (int i=0; i<(int)m_aEnabledCivilizationTypes.size(); i++)
 	{
 		GC.removeDelayedResolution((int*)&(m_aEnabledCivilizationTypes[i]));
 	}
-	//TB Combat Mod end
+
+	for (int i=0; i<(int)m_aiSupersedingUnits.size(); i++)
+	{
+		GC.removeDelayedResolution((int*)&(m_aiSupersedingUnits[i]));
+	}
 }
 
 const wchar* CvUnitInfo::getExtraHoverText() const
@@ -1253,11 +1245,6 @@ bool CvUnitInfo::canAcquireExperience() const
 
 // Arrays
 
-/********************************************************************************/
-/**		REVDCM									2/16/10				phungus420	*/
-/**																				*/
-/**		CanTrain																*/
-/********************************************************************************/
 bool CvUnitInfo::isPrereqOrCivics(int i) const
 {
 	FAssertMsg(i < GC.getNumCivicInfos(), "Index out of bounds");
@@ -1294,19 +1281,23 @@ int CvUnitInfo::getPrereqBuildingClassOverrideEra(int i) const
 	return m_piPrereqBuildingClassOverrideEra ? m_piPrereqBuildingClassOverrideEra[i] : -1;
 }
 
-bool CvUnitInfo::getForceObsoleteUnitClass(int i) const
+int CvUnitInfo::getSupersedingUnit(int i) const
 {
-	FAssertMsg(i < GC.getNumUnitClassInfos(), "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
-	if (i == NO_UNITCLASS)
-	{
-		return m_pbForceObsoleteUnitClass != NULL;
-	}
-	return m_pbForceObsoleteUnitClass ? m_pbForceObsoleteUnitClass[i] : false;
+	return m_aiSupersedingUnits[i];
 }
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
+int CvUnitInfo::getNumSupersedingUnits() const
+{
+	return (int)m_aiSupersedingUnits.size();
+}
+bool CvUnitInfo::isSupersedingUnit(int i) const
+{
+	if (find(m_aiSupersedingUnits.begin(), m_aiSupersedingUnits.end(), i) == m_aiSupersedingUnits.end())
+	{
+		return false;
+	}
+	return true;
+}
+
 
 int CvUnitInfo::getPrereqAndTechs(int i) const
 {
@@ -1725,11 +1716,6 @@ void CvUnitInfo::updateArtDefineButton()
 	m_szArtDefineButton = getArtInfo(0, NO_ERA, NO_UNIT_ARTSTYLE)->getButton();
 }
 
-/************************************************************************************************/
-/* Afforess					  Start		 Last Update: 3/10/10								   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 const TCHAR* CvUnitInfo::getClassicalArtDefineTag(int i, UnitArtStyleTypes eStyle) const
 {
 	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
@@ -1988,13 +1974,10 @@ bool CvUnitInfo::isUpgradeUnitClassTypes(int i) const
 	return true;
 }
 // Sanguo Mod Performance, end
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 
 //TB Combat Mods Start  TB SubCombat Mod begin
 //Functions
-
 void CvUnitInfo::setReligionSubCombat()
 {
 	int iI;
@@ -3956,19 +3939,8 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum)
 	CheckSum(iSum, m_bLineOfSight);
 	CheckSum(iSum, m_bHiddenNationality);
 	CheckSum(iSum, m_bAlwaysHostile);
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre																		  **/
-/**  Date: 21.09.2009																			   **/
-/**  ModComp: TLOTags																			   **/
-/**  Reason Added: New Tag Definition															   **/
-/**  Notes:																						 **/
-/*****************************************************************************************************/
 	CheckSum(iSum, m_bFreeDrop);
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 21.09.2009; TLOTags															 **/
-/*****************************************************************************************************/
 	CheckSum(iSum, m_bNoRevealMap);
-
 	CheckSum(iSum, m_bInquisitor);
 	CheckSum(iSum, m_bCanBeRebel);
 	CheckSum(iSum, m_bCanRebelCapture);
@@ -4000,7 +3972,7 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum)
 	CheckSumI(iSum, GC.getNumBuildingClassInfos(), m_pbPrereqBuildingClass);
 	CheckSumI(iSum, GC.getNumBuildingClassInfos(), m_piPrereqBuildingClassOverrideTech);
 	CheckSumI(iSum, GC.getNumBuildingClassInfos(), m_piPrereqBuildingClassOverrideEra);
-	CheckSumI(iSum, GC.getNumUnitClassInfos(), m_pbForceObsoleteUnitClass);
+	CheckSumC(iSum, m_aiSupersedingUnits);
 	CheckSumI(iSum, GC.getNumUnitClassInfos(), m_pbUpgradeUnitClass);
 	CheckSumI(iSum, GC.getNumUnitClassInfos(), m_pbTargetUnitClass);
 	CheckSumI(iSum, GC.getNumUnitCombatInfos(), m_pbTargetUnitCombat);
@@ -4416,31 +4388,14 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bLineOfSight, L"bLineOfSight");
 	pXML->GetOptionalChildXmlValByName(&m_bHiddenNationality, L"bHiddenNationality");
 	pXML->GetOptionalChildXmlValByName(&m_bAlwaysHostile, L"bAlwaysHostile");
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre																		  **/
-/**  Date: 21.09.2009																			   **/
-/**  ModComp: TLOTags																			   **/
-/**  Reason Added: New Tag Definition															   **/
-/**  Notes:																						 **/
-/*****************************************************************************************************/
 	pXML->GetOptionalChildXmlValByName(&m_bFreeDrop, L"bFreeDrop");
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 21.09.2009; TLOTags															 **/
-/*****************************************************************************************************/
 	pXML->GetOptionalChildXmlValByName(&m_bNoRevealMap, L"bNoRevealMap");
-/************************************************************************************************/
-/* REVOLUTION_MOD								 01/01/08						DPII		  */
-/*																							  */
-/* CoreComponent																				*/
-/************************************************************************************************/
 	pXML->GetOptionalChildXmlValByName(&m_bInquisitor, L"bInquisitor");
 	pXML->GetOptionalChildXmlValByName(&m_bCanBeRebel, L"bCanBeRebel");
 	pXML->GetOptionalChildXmlValByName(&m_bCanRebelCapture, L"bCanRebelCapture");
 	pXML->GetOptionalChildXmlValByName(&m_bCannotDefect, L"bCannotDefect");
 	pXML->GetOptionalChildXmlValByName(&m_bCanQuellRebellion, L"bCanQuellRebellion");
-/************************************************************************************************/
-/* REVOLUTION_MOD						  END												  */
-/************************************************************************************************/
+
 	//ls612: Can't enter non-Owned cities
 	pXML->GetOptionalChildXmlValByName(&m_bNoNonOwnedEntry, L"bOnlyFriendlyEntry");
 
@@ -4492,11 +4447,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetVariableListTagPair(&m_pbGreatPeoples, L"GreatPeoples", GC.getNumSpecialistInfos());
 
 	pXML->SetOptionalIntVector(&m_pbBuildings, L"Buildings");
-/********************************************************************************/
-/**		REVDCM									2/16/10				phungus420	*/
-/**																				*/
-/**		CanTrain																*/
-/********************************************************************************/
+
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"MaxStartEra");
 	m_iMaxStartEra = pXML->GetInfoClass(szTextVal);
 
@@ -4519,10 +4470,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->SetVariableListTagPair(&m_piPrereqBuildingClassOverrideEra, L"PrereqBuildingClasses", GC.getNumBuildingClassInfos(), L"EraOverride", GC.getNumEraInfos());
 
-	pXML->SetVariableListTagPair(&m_pbForceObsoleteUnitClass, L"ForceObsoleteUnitClasses", GC.getNumUnitClassInfos());
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
+	pXML->SetOptionalIntVectorWithDelayedResolution(m_aiSupersedingUnits, L"SupersedingUnits");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"HolyCity");
 	m_iHolyCity = pXML->GetInfoClass(szTextVal);
@@ -4720,11 +4668,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 		pXML->GetChildXmlValByName( &m_iUnitRangedWaveSize, L"iRangedWaveSize" );
 		pXML->GetChildXmlValByName( &m_fUnitMaxSpeed, L"fMaxSpeed");
 		pXML->GetChildXmlValByName( &m_fUnitPadTime, L"fPadTime");
-/************************************************************************************************/
-/* Afforess					  Start		 03/10/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 		m_paszEarlyArtDefineTags = new CvString[ iIndexVal ];
 		m_paszClassicalArtDefineTags = new CvString[ iIndexVal ];
 		m_paszMiddleArtDefineTags = new CvString[ iIndexVal ];
@@ -4732,19 +4676,11 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 		m_paszIndustrialArtDefineTags = new CvString[ iIndexVal ];
 		m_paszLateArtDefineTags = new CvString[ iIndexVal ];
 		m_paszFutureArtDefineTags = new CvString[ iIndexVal ];
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 		if (pXML->TryMoveToXmlFirstChild(L"UnitMeshGroup"))
 		{
 			for ( k = 0; k < iIndexVal; k++ )
 			{
-/************************************************************************************************/
-/* Afforess					  Start		 03/10/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 				pXML->GetChildXmlValByName( &m_piUnitGroupRequired[k], L"iRequired");
 				if (pXML->GetOptionalChildXmlValByName(szTextVal, L"EarlyArtDefineTag"))
 					GC.hasInfoTypeForString(szTextVal);
@@ -4768,9 +4704,6 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 					GC.hasInfoTypeForString(szTextVal);
 				setFutureArtDefineTag(k, szTextVal);
 				pXML->TryMoveToXmlNextSibling();
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 			}
 			pXML->MoveToXmlParent();
 		}
@@ -4807,11 +4740,6 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bDCMFighterEngage, L"bDCMFighterEngage");
 	// Dale - FE: Fighters END
 
-/************************************************************************************************/
-/* Afforess					  Start		 Last Update: 3/8/10									*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	pXML->GetOptionalChildXmlValByName(&m_bWorkerTrade, L"bWorkerTrade");
 	pXML->GetOptionalChildXmlValByName(&m_bMilitaryTrade, L"bMilitaryTrade");
 	pXML->GetOptionalChildXmlValByName(&m_bForceUpgrade, L"bForceUpgrade");
@@ -4827,7 +4755,6 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iCommandRange, L"iCommandRange");
 
 //	pXML->SetVariableListTagPair(&m_paszCivilizationNames, L"", sizeof(GC.getCivilizationInfo((CivilizationTypes)0)), GC.getNumCivilizationInfos(), L"");
-
 
 	if (pXML->TryMoveToXmlFirstChild(L"CivilizationNames"))
 	{
@@ -4895,10 +4822,6 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	{
 		SAFE_DELETE_ARRAY(m_piPrereqOrVicinityBonuses);
 	}
-
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 	m_PropertyManipulators.read(pXML);
 
@@ -5543,16 +5466,8 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 	if ( m_bHiddenNationality == bDefault )	m_bHiddenNationality = pClassInfo->isHiddenNationality();
 	if ( m_bAlwaysHostile == bDefault )	m_bAlwaysHostile = pClassInfo->isAlwaysHostile();
 	if ( m_bNoRevealMap == bDefault )	m_bNoRevealMap = pClassInfo->isNoRevealMap();
-
-/********************************************************************************/
-/**		REVDCM_OC								2/16/10				phungus420	*/
-/**																				*/
-/**		 																		*/
-/********************************************************************************/
 	if ( m_bInquisitor == bDefault )	m_bInquisitor = pClassInfo->isInquisitor();
-/********************************************************************************/
-/**		REVDCM_OC								END								*/
-/********************************************************************************/
+
 	//ls612: Can't enter non-Owned cities
 	if ( m_bNoNonOwnedEntry == bDefault ) m_bNoNonOwnedEntry = pClassInfo->isNoNonOwnedEntry();
 
@@ -5851,11 +5766,6 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 		}
 	}
 
-/********************************************************************************/
-/**		REVDCM									2/16/10				phungus420	*/
-/**																				*/
-/**		CanTrain																*/
-/********************************************************************************/
 	for ( int i = 0; i < GC.getNumCivicInfos(); i++)
 	{
 		if ( isPrereqOrCivics(i) == bDefault && pClassInfo->isPrereqOrCivics(i) != bDefault)
@@ -5904,20 +5814,15 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 		}
 	}
 
-	for ( int i = 0; i < GC.getNumUnitClassInfos(); i++)
+	if (getNumSupersedingUnits() == 0)
 	{
-		if ( getForceObsoleteUnitClass(i) == bDefault && pClassInfo->getForceObsoleteUnitClass(i) != bDefault)
+		int iNum = pClassInfo->getNumSupersedingUnits();
+		m_aiSupersedingUnits.resize(iNum);
+		for (int i = 0; i < iNum; i++)
 		{
-			if ( NULL == m_pbForceObsoleteUnitClass )
-			{
-				CvXMLLoadUtility::InitList(&m_pbForceObsoleteUnitClass,GC.getNumUnitClassInfos(),bDefault);
-			}
-			m_pbForceObsoleteUnitClass[i] = pClassInfo->getForceObsoleteUnitClass(i);
+			GC.copyNonDefaultDelayedResolution((int*)&(m_aiSupersedingUnits[i]), (int*)&(pClassInfo->m_aiSupersedingUnits[i]));
 		}
 	}
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
 
 	for ( int i = 0; i < GC.getNUM_UNIT_AND_TECH_PREREQS(); i++)
 	{
@@ -5942,11 +5847,6 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 			m_piPrereqOrBonuses[i] = pClassInfo->getPrereqOrBonuses(i);
 		}
 	}
-	/********************************************************************************/
-	/*		REVOLUTION_MOD							2/12/09				Afforess	*/
-	/*																				*/
-	/*		 																		*/
-	/********************************************************************************/
 	if ( m_iDCMBombRange == iDefault ) m_iDCMBombRange = pClassInfo->getDCMBombRange();
 	if ( m_iDCMBombAccuracy == iDefault ) m_iDCMBombAccuracy = pClassInfo->getDCMBombAccuracy();
 
@@ -5957,23 +5857,12 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 	if ( m_bDCMAirBomb5 == bDefault ) m_bDCMAirBomb5 = pClassInfo->getDCMAirBomb5();
 
 	if ( m_bDCMFighterEngage == bDefault ) m_bDCMFighterEngage = pClassInfo->getDCMFighterEngage();
-	/********************************************************************************/
-	/*		REVOLUTION_MOD							END								*/
-	/********************************************************************************/
 
-/********************************************************************************/
-/**		REVDCM									2/16/10				phungus420	*/
-/**																				*/
-/**		CanTrain																*/
-/********************************************************************************/
 	if ( m_iMaxStartEra == iTextDefault) m_iMaxStartEra = pClassInfo->getMaxStartEra();
 	if ( m_iForceObsoleteTech == iTextDefault ) m_iForceObsoleteTech = pClassInfo->getForceObsoleteTech();
 	if ( m_bStateReligion == bDefault )	m_bStateReligion = pClassInfo->isStateReligion();
 	if ( m_iPrereqGameOption == iTextDefault ) m_iPrereqGameOption = pClassInfo->getPrereqGameOption();
 	if ( m_iNotGameOption == iTextDefault ) m_iNotGameOption = pClassInfo->getNotGameOption();
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
 
 	if ( m_iHolyCity == iTextDefault ) m_iHolyCity = pClassInfo->getHolyCity();
 	if ( m_iReligionType == iTextDefault ) m_iReligionType = pClassInfo->getReligionType();
@@ -6048,11 +5937,6 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 	if ( m_iLeaderPromotion == iTextDefault ) m_iLeaderPromotion = pClassInfo->getLeaderPromotion();
 	if ( m_iLeaderExperience == iDefault ) m_iLeaderExperience = pClassInfo->getLeaderExperience();
 
-/************************************************************************************************/
-/* Afforess					  Start		 02/03/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	if (getPrereqVicinityBonus() == iTextDefault) m_iPrereqVicinityBonus = pClassInfo->getPrereqVicinityBonus();
 	if ( m_bRequiresStateReligionInCity == bDefault )	m_bRequiresStateReligionInCity = pClassInfo->isRequiresStateReligionInCity();
 	if ( m_bWorkerTrade == bDefault )	m_bWorkerTrade = pClassInfo->isWorkerTrade();
@@ -6625,9 +6509,6 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 			setFutureArtDefineTag(i, pClassInfo->getFutureArtDefineTag(i, NO_UNIT_ARTSTYLE));
 		}
 	}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 	if ( m_szFormationType == "FORMATION_TYPE_DEFAULT" ) m_szFormationType = pClassInfo->getFormationType();
 
