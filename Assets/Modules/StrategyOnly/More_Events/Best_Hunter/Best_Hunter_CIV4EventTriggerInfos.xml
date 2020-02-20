@@ -30,7 +30,7 @@
 				<Event>EVENT_BEST_HUNTERS_3</Event>
 			</Events>
 			<OrPreReqs>
-				<PrereqTech>TECH_HUNTING</PrereqTech>
+				<PrereqTech>TECH_TRACKING</PrereqTech>
 			</OrPreReqs>
 			<ObsoleteTechs>
 				<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>

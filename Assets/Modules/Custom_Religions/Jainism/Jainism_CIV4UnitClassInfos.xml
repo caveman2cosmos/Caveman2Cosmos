@@ -9,9 +9,6 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_JAINISM_MISSIONARY</Type>
 			<Description>TXT_KEY_UNIT_JAINISM_MISSIONARY</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_JAINISM_MISSIONARY</DefaultUnit>
 		</UnitClassInfo>
 	</UnitClassInfos>

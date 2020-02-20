@@ -9,6 +9,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_DIPLOMAT_MESSENGER</Class>
 			<Type>UNIT_DIPLOMAT_MESSENGER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_DIPLOMAT</Combat>
 			<SubCombatTypes>
@@ -84,7 +85,7 @@
 							<PlotCondition>
 								<Has>
 									<GOMType>GOM_IMPROVEMENT</GOMType>
-									<ID>IMPROVEMENT_INDIGENOUS_PEOPLE</ID>
+									<ID>IMPROVEMENT_INDIGENOUS_COMMUNITY</ID>
 								</Has>
 							</PlotCondition>
 						</Outcome>
@@ -101,7 +102,7 @@
 							<PlotCondition>
 								<Has>
 									<GOMType>GOM_IMPROVEMENT</GOMType>
-									<ID>IMPROVEMENT_INDIGENOUS_PEOPLE</ID>
+									<ID>IMPROVEMENT_INDIGENOUS_COMMUNITY</ID>
 								</Has>
 							</PlotCondition>
 						</Outcome>
@@ -173,6 +174,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_DIPLOMAT_EARLY</Class>
 			<Type>UNIT_DIPLOMAT_EARLY</Type>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_DIPLOMAT</Combat>
 			<SubCombatTypes>

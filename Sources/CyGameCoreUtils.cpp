@@ -194,24 +194,19 @@ bool cyIsTechRequiredForProject(int /*TechTypes*/ eTech, int /*ProjectTypes*/ eP
 	return isTechRequiredForProject((TechTypes)eTech, (ProjectTypes)eProject);
 }
 
-bool cyIsWorldUnitClass(int /*UnitClassTypes*/ eUnitClass)
+bool cyIsWorldUnit(int /*UnitTypes*/ eUnit)
 {
-	return isWorldUnitClass((UnitClassTypes)eUnitClass);
+	return isWorldUnit((UnitTypes)eUnit);
 }
 
-bool cyIsTeamUnitClass(int /*UnitClassTypes*/ eUnitClass)
+bool cyIsNationalUnit(int /*UnitTypes*/ eUnit)
 {
-	return isTeamUnitClass((UnitClassTypes)eUnitClass);
+	return isNationalUnit((UnitTypes)eUnit);
 }
 
-bool cyIsNationalUnitClass(int /*UnitClassTypes*/ eUnitClass)
+bool cyIsLimitedUnit(int /*UnitTypes*/ eUnit)
 {
-	return isNationalUnitClass((UnitClassTypes)eUnitClass);
-}
-
-bool cyIsLimitedUnitClass(int /*UnitClassTypes*/ eUnitClass)
-{
-	return isLimitedUnitClass((UnitClassTypes)eUnitClass);
+	return isLimitedUnit((UnitTypes)eUnit);
 }
 
 bool cyIsWorldWonder(int /*BuildingTypes*/ eBuilding)

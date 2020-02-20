@@ -171,12 +171,6 @@ civilizationNameHash =	{
 								"MID" : (),
 								"END" : ()
 							},
-							"CIVILIZATION_MINOR" :
-							{
-								"PRE" : ("A","Ab","c","Ad","Af","Agr","st","As","Al","Adw","Adr","Ar","r","h","ad","D","r","w","d","th","Et","Er","El","ow","F","r","r","w","wyd","l","l","a","b","er","ed","th","r","eg","r","d","l","c","n","r","h","ev","k","a","r","h","h","b","ic"),
-								"MID" : ("a","e","u","o","re","ale","li","ay","rdo","e","i","i","ra","la","li","nda","erra","i","e","ra","la","li","o","ra","go","i","e","re","y"),
-								"END" : ("a","and","b","bwyn","baen","bard","c","ctred","cred","ch","can","con","d","dan","don","der","dric","dfrid","dus","f","g","gord","gan","l","ld","li","lgrin","lin","lith","lath","loth","ld","ldric","ldan","m","mas","mma","mos","mar","mond","n","nydd","nidd","nnon","nwan","nyth","nad","nn","nnor","nd","p","r","ran","ron","rd","s","sh","seth","sean","t","th","th","tha","tlan","trem","tram","v","vudd","w","wan","win","win","wyn","wyn","wyr","wyr","wyth")
-							},
 							"CIVILIZATION_BARBARIAN" :
 							{
 								"PRE" : ("A","Ab","c","Ad","Af","Agr","st","As","Al","Adw","Adr","Ar","r","h","ad","D","r","w","d","th","Et","Er","El","ow","F","r","r","w","wyd","l","l","a","b","er","ed","th","r","eg","r","d","l","c","n","r","h","ev","k","a","r","h","h","b","ic"),

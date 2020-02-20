@@ -255,7 +255,7 @@
 			</MapCategoryTypes>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_TRANSNEPTUNIAN</TerrainType>
+					<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -386,7 +386,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_BASE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_KUIPER_BELT</PrereqTech>
+			<PrereqTech>TECH_KUIPER_BELT_EXPLORATION</PrereqTech>
 			<iCost>959</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -725,7 +725,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CONSCIOUS_SPACE_STATION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SINGULARITY</PrereqTech>
+			<PrereqTech>TECH_TECHNOLOGICAL_SINGULARITY</PrereqTech>
 			<iCost>1452</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -880,7 +880,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_FACTORY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_ANIMA_MATERIALS</PrereqTech>
+			<PrereqTech>TECH_ANIMAMATERIALS</PrereqTech>
 			<iCost>1650</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -931,7 +931,7 @@
 			</YieldChanges>
 			<TechYieldChanges>
 				<TechYieldChange>
-					<PrereqTech>TECH_SOLAR_MINING</PrereqTech>
+					<PrereqTech>TECH_STAR_LIFTING</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>10</iYield>
@@ -1272,7 +1272,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_ATTOMETER_NANOMORPHISM</PrereqTech>
+					<PrereqTech>TECH_NANOMORPHIC_TROIDS</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -1281,7 +1281,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_NANODISASSEMBLY</PrereqTech>
+					<PrereqTech>TECH_NANO_DISASSEMBLY</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -1481,7 +1481,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_MEGAFACTORY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_ASTROINDUSTRIALISM</PrereqTech>
+			<PrereqTech>TECH_FORGE_WORLDS</PrereqTech>
 			<iCost>8676</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1569,7 +1569,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CLAYTRONIC_DEEP_SPACE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_ATTOMETER_NANOMORPHISM</PrereqTech>
+			<PrereqTech>TECH_NANOMORPHIC_TROIDS</PrereqTech>
 			<iCost>6326</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1598,7 +1598,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SUN_SCOOP</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SOLAR_MINING</PrereqTech>
+			<PrereqTech>TECH_STAR_LIFTING</PrereqTech>
 			<iCost>9636</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1637,7 +1637,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SUN_SCOOP_POWER_PLANT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SOLAR_MINING</PrereqTech>
+			<PrereqTech>TECH_STAR_LIFTING</PrereqTech>
 			<iCost>9636</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -1669,7 +1669,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_HOTEL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_VASIMR_PROPULSION</PrereqTech>
+			<PrereqTech>TECH_FUSION_SPACECRAFT</PrereqTech>
 			<iCost>5111</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -2383,7 +2383,7 @@
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
@@ -2602,7 +2602,7 @@
 			<FreeBuilding>BUILDINGCLASS_ANTIMATTER_HARVESTER</FreeBuilding>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_EXOMINING</PrereqTech>
+					<PrereqTech>TECH_PLANET_CRACKING</PrereqTech>
 					<TechCommerce>
 						<iCommerce>5</iCommerce>
 					</TechCommerce>
@@ -2841,7 +2841,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ASTEROID_PIRATE_BASE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_VASIMR_PROPULSION</PrereqTech>
+			<PrereqTech>TECH_FUSION_SPACECRAFT</PrereqTech>
 			<iCost>5111</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -3005,7 +3005,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ASTEROID_EPITAXY_FACTORY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_SUPERCHARGED_CRYSTALS</PrereqTech>
+			<PrereqTech>TECH_SUPERCHARGED_CRYSTALLOGRAPHY</PrereqTech>
 			<iCost>581</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -3043,7 +3043,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_EXOMINING</PrereqTech>
+					<PrereqTech>TECH_PLANET_CRACKING</PrereqTech>
 					<TechCommerce>
 						<iCommerce>5</iCommerce>
 					</TechCommerce>
@@ -3331,7 +3331,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CALLISTO_RESUPPLY_BASE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_KUIPER_BELT</PrereqTech>
+			<PrereqTech>TECH_KUIPER_BELT_EXPLORATION</PrereqTech>
 			<iCost>959</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -3802,7 +3802,7 @@
 			</YieldChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_EXOMINING</PrereqTech>
+					<PrereqTech>TECH_PLANET_CRACKING</PrereqTech>
 					<TechCommerce>
 						<iCommerce>5</iCommerce>
 					</TechCommerce>
@@ -4058,7 +4058,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SATURN_RING_ICE_MINE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_KUIPER_BELT</PrereqTech>
+			<PrereqTech>TECH_KUIPER_BELT_EXPLORATION</PrereqTech>
 			<iCost>959</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -4087,7 +4087,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RING_OF_SATURN_HOTEL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_VASIMR_PROPULSION</PrereqTech>
+			<PrereqTech>TECH_FUSION_SPACECRAFT</PrereqTech>
 			<iCost>5111</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -4123,7 +4123,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ENCELADUS_BASE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_KUIPER_BELT</PrereqTech>
+			<PrereqTech>TECH_KUIPER_BELT_EXPLORATION</PrereqTech>
 			<iCost>959</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -4269,7 +4269,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LOW_G_SPORTS_ARENA</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_VASIMR_PROPULSION</PrereqTech>
+			<PrereqTech>TECH_FUSION_SPACECRAFT</PrereqTech>
 			<iCost>5111</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -4298,7 +4298,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_UMBRIEL_BASE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_KUIPER_BELT</PrereqTech>
+			<PrereqTech>TECH_KUIPER_BELT_EXPLORATION</PrereqTech>
 			<iCost>959</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -4561,7 +4561,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TRITON_BASE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_KUIPER_BELT</PrereqTech>
+			<PrereqTech>TECH_KUIPER_BELT_EXPLORATION</PrereqTech>
 			<iCost>959</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -4776,7 +4776,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NEPTUNE_VOLATILE_MINE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_EXOMINING</PrereqTech>
+			<PrereqTech>TECH_PLANET_CRACKING</PrereqTech>
 			<iCost>7810</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -4862,7 +4862,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NEPTUNE_ORBITAL_RING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_EXOMINING</PrereqTech>
+			<PrereqTech>TECH_PLANET_CRACKING</PrereqTech>
 			<iCost>23432</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -5101,7 +5101,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PLUTO_BASE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<PrereqTech>TECH_KUIPER_BELT</PrereqTech>
+			<PrereqTech>TECH_KUIPER_BELT_EXPLORATION</PrereqTech>
 			<iCost>2877</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
@@ -5220,11 +5220,11 @@
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<FreeBonus>BONUS_ROCKETFUEL</FreeBonus>
+			<FreeBonus>BONUS_ROCKET_FUEL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CO2_ICE</FreeBonus>
+					<FreeBonus>BONUS_CARBON_DIOXIDE_ICE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -5397,7 +5397,7 @@
 			</YieldChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_EXOMINING</PrereqTech>
+					<PrereqTech>TECH_PLANET_CRACKING</PrereqTech>
 					<TechCommerce>
 						<iCommerce>5</iCommerce>
 					</TechCommerce>
@@ -5427,7 +5427,7 @@
 			</MapCategoryTypes>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_TRANSNEPTUNIAN</TerrainType>
+					<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 			</PrereqOrTerrain>

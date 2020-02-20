@@ -967,14 +967,12 @@ class CvWorldBuilderScreen:
 		for iUnit in xrange(GC.getNumUnitInfos()):
 			if pCity.canTrain(iUnit, True, False, False, False):
 				if iCount == iIndex:
-					iUnitClass = GC.getUnitInfo(iUnit).getUnitClassType()
-					if GC.getPlayer(self.m_iCurrentPlayer).getUnitClassCountPlusMaking(iUnitClass) == GC.getUnitClassInfo(iUnitClass).getMaxPlayerInstances():
+					CvUnitInfo = GC.getUnitInfo(iUnit)
+					if GC.getPlayer(self.m_iCurrentPlayer).getUnitClassCountPlusMaking(CvUnitInfo.getUnitClassType()) == CvUnitInfo.getMaxPlayerInstances():
 						self.setCityEditInfo(True)
 						return 1
-					if GC.getTeam(self.m_iCurrentTeam).getUnitClassCountPlusMaking(iUnitClass) == GC.getUnitClassInfo(iUnitClass).getMaxTeamInstances():
-						self.setCityEditInfo(True)
-						return 1
-					if GC.getTeam(self.m_iCurrentTeam).getUnitClassCountPlusMaking(iUnitClass) == GC.getUnitClassInfo(iUnitClass).getMaxGlobalInstances():
+					# ToDo: This one should consider all teams, all instances of the unit in the game.
+					if GC.getTeam(self.m_iCurrentTeam).getUnitClassCountPlusMaking(CvUnitInfo.getUnitClassType()) == CvUnitInfo.getMaxGlobalInstances():
 						self.setCityEditInfo(True)
 						return 1
 					pCity.pushOrder(OrderTypes.ORDER_TRAIN, iUnit , -1, False, True, False, True)

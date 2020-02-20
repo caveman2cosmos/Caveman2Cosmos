@@ -8,9 +8,9 @@
 	<ReligionInfos>
 		<ReligionInfo>
 			<Type>RELIGION_JUDAISM</Type>
-			<Description>TXT_KEY_RELIGION_JUDAISM</Description>
-			<Adjective>TXT_KEY_RELIGION_JUDAISM_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_RELIGION_JUDAISM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_TECH_JUDAISM</Description>
+			<Adjective>TXT_KEY_TECH_JUDAISM_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_TECH_JUDAISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_JUDAISM</TechPrereq>
 			<FreeUnitClass>UNITCLASS_JEWISH_MISSIONARY</FreeUnitClass>
 			<iFreeUnits>0</iFreeUnits>
@@ -74,9 +74,9 @@
 		</ReligionInfo>
 		<ReligionInfo>
 			<Type>RELIGION_CHRISTIANITY</Type>
-			<Description>TXT_KEY_RELIGION_CHRISTIANITY</Description>
-			<Adjective>TXT_KEY_RELIGION_CHRISTIANITY_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_RELIGION_CHRISTIANITY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_TECH_CHRISTIANITY</Description>
+			<Adjective>TXT_KEY_TECH_CHRISTIANITY_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_TECH_CHRISTIANITY_PEDIA</Civilopedia>
 			<TechPrereq>TECH_CHRISTIANITY</TechPrereq>
 			<FreeUnitClass>UNITCLASS_CHRISTIAN_MISSIONARY</FreeUnitClass>
 			<iFreeUnits>1</iFreeUnits>
@@ -140,9 +140,9 @@
 		</ReligionInfo>
 		<ReligionInfo>
 			<Type>RELIGION_ISLAM</Type>
-			<Description>TXT_KEY_RELIGION_ISLAM</Description>
-			<Adjective>TXT_KEY_RELIGION_ISLAM_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_RELIGION_ISLAM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_TECH_ISLAM</Description>
+			<Adjective>TXT_KEY_TECH_ISLAM_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_TECH_ISLAM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_ISLAM</TechPrereq>
 			<FreeUnitClass>UNITCLASS_ISLAMIC_MISSIONARY</FreeUnitClass>
 			<iFreeUnits>1</iFreeUnits>
@@ -206,9 +206,9 @@
 		</ReligionInfo>
 		<ReligionInfo>
 			<Type>RELIGION_HINDUISM</Type>
-			<Description>TXT_KEY_RELIGION_HINDUISM</Description>
-			<Adjective>TXT_KEY_RELIGION_HINDUISM_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_RELIGION_HINDUISM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_TECH_HINDUISM</Description>
+			<Adjective>TXT_KEY_TECH_HINDUISM_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_TECH_HINDUISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_HINDUISM</TechPrereq>
 			<FreeUnitClass>UNITCLASS_HINDU_MISSIONARY</FreeUnitClass>
 			<iFreeUnits>0</iFreeUnits>
@@ -272,9 +272,9 @@
 		</ReligionInfo>
 		<ReligionInfo>
 			<Type>RELIGION_BUDDHISM</Type>
-			<Description>TXT_KEY_RELIGION_BUDDHISM</Description>
-			<Adjective>TXT_KEY_RELIGION_BUDDHISM_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_RELIGION_BUDDHISM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_TECH_BUDDHISM</Description>
+			<Adjective>TXT_KEY_TECH_BUDDHISM_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_TECH_BUDDHISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_BUDDHISM</TechPrereq>
 			<FreeUnitClass>UNITCLASS_BUDDHIST_MISSIONARY</FreeUnitClass>
 			<iFreeUnits>0</iFreeUnits>
@@ -338,9 +338,9 @@
 		</ReligionInfo>
 		<ReligionInfo>
 			<Type>RELIGION_CONFUCIANISM</Type>
-			<Description>TXT_KEY_RELIGION_CONFUCIANISM</Description>
-			<Adjective>TXT_KEY_RELIGION_CONFUCIANISM_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_RELIGION_CONFUCIANISM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_TECH_CONFUCIANISM</Description>
+			<Adjective>TXT_KEY_TECH_CONFUCIANISM_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_TECH_CONFUCIANISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_CONFUCIANISM</TechPrereq>
 			<FreeUnitClass>UNITCLASS_CONFUCIAN_MISSIONARY</FreeUnitClass>
 			<iFreeUnits>1</iFreeUnits>
@@ -404,9 +404,9 @@
 		</ReligionInfo>
 		<ReligionInfo>
 			<Type>RELIGION_TAOISM</Type>
-			<Description>TXT_KEY_RELIGION_TAOISM</Description>
-			<Adjective>TXT_KEY_RELIGION_TAOISM_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_RELIGION_TAOISM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_TECH_TAOISM</Description>
+			<Adjective>TXT_KEY_TECH_TAOISM_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_TECH_TAOISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_TAOISM</TechPrereq>
 			<FreeUnitClass>UNITCLASS_TAOIST_MISSIONARY</FreeUnitClass>
 			<iFreeUnits>1</iFreeUnits>
@@ -470,9 +470,9 @@
 		</ReligionInfo>
 		<ReligionInfo>
 			<Type>RELIGION_ZOROASTRIANISM</Type>
-			<Description>TXT_KEY_RELIGION_ZOROASTRIANISM</Description>
-			<Adjective>TXT_KEY_RELIGION_ZOROASTRIANISM_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_RELIGION_ZOROASTRIANISM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_TECH_ZOROASTRIANISM</Description>
+			<Adjective>TXT_KEY_TECH_ZOROASTRIANISM_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_TECH_ZOROASTRIANISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_ZOROASTRIANISM</TechPrereq>
 			<FreeUnitClass>UNITCLASS_ZOROASTRIAN_MISSIONARY</FreeUnitClass>
 			<iFreeUnits>0</iFreeUnits>
@@ -537,9 +537,9 @@
 		</ReligionInfo>
 		<ReligionInfo>
 			<Type>RELIGION_HELLENISM</Type>
-			<Description>TXT_KEY_RELIGION_HELLENISM</Description>
-			<Adjective>TXT_KEY_RELIGION_HELLENISM_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_RELIGION_HELLENISM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_TECH_HELLENISM</Description>
+			<Adjective>TXT_KEY_TECH_HELLENISM_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_TECH_HELLENISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_HELLENISM</TechPrereq>
 			<FreeUnitClass>UNITCLASS_HELLENIC_MISSIONARY</FreeUnitClass>
 			<iFreeUnits>1</iFreeUnits>
@@ -602,10 +602,10 @@
 			</Flavors>
 		</ReligionInfo>
 		<ReligionInfo>
-			<Type>RELIGION_EGYPT_MYTHOLOGY</Type>
-			<Description>TXT_KEY_RELIGION_EGYPT_MYTHOLOGY</Description>
+			<Type>RELIGION_KEMETISM</Type>
+			<Description>TXT_KEY_TECH_KEMETISM</Description>
 			<Adjective/>
-			<Civilopedia>TXT_KEY_RELIGION_EGYPT_MYTH_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_TECH_KEMETISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_KEMETISM</TechPrereq>
 			<FreeUnitClass>UNITCLASS_EGYPT_MYTH_MISSIONARY</FreeUnitClass>
 			<iFreeUnits>0</iFreeUnits>
@@ -668,10 +668,10 @@
 			</Flavors>
 		</ReligionInfo>
 		<ReligionInfo>
-			<Type>RELIGION_MESOAMERICANISM</Type>
-			<Description>TXT_KEY_RELIGION_MESOAMERICANISM</Description>
+			<Type>RELIGION_NAGHUALISM</Type>
+			<Description>TXT_KEY_TECH_NAGHUALISM</Description>
 			<Adjective/>
-			<Civilopedia>TXT_KEY_RELIGION_MESOAMERICANISM_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_TECH_NAGHUALISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_NAGHUALISM</TechPrereq>
 			<FreeUnitClass>UNITCLASS_NAGUALISM_MISSIONARY</FreeUnitClass>
 			<iFreeUnits>0</iFreeUnits>

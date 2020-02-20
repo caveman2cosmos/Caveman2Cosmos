@@ -111,7 +111,7 @@
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -161,7 +161,7 @@
 			<ReligionType>RELIGION_VOODOO</ReligionType>
 			<PrereqReligion>RELIGION_VOODOO</PrereqReligion>
 			<PrereqBonuses>
-				<Bonus>BONUS_TIMBER</Bonus>
+				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
 			<bNeverCapture>1</bNeverCapture>
@@ -266,7 +266,7 @@
 			<ReligionType>RELIGION_VOODOO</ReligionType>
 			<PrereqReligion>RELIGION_VOODOO</PrereqReligion>
 			<PrereqBonuses>
-				<Bonus>BONUS_TIMBER</Bonus>
+				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
 			<iHurryAngerModifier>-10</iHurryAngerModifier>

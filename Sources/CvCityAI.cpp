@@ -2906,7 +2906,7 @@ void CvCityAI::AI_chooseProduction()
 		}
 
 		int iStartAttackStackRand = 0;
-		if (pArea->getCitiesPerPlayer(BARBARIAN_PLAYER) > 0 || pArea->getCitiesPerPlayer(NPC7_PLAYER) > 0)
+		if (pArea->getCitiesPerPlayer(BARBARIAN_PLAYER) > 0 || pArea->getCitiesPerPlayer(NEANDERTHAL_PLAYER) > 0)
 		{
 			iStartAttackStackRand += 15;
 		}

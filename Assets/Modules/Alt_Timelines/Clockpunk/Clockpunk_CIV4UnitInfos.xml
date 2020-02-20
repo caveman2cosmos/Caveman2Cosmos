@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by DancingHoskuld -->
-<!-- Assets\Modules\Alt_Timelines\Clockpunk\Units\ClockWorkGolem\ClockWorkGolem_CIV4UnitInfos.xml-->
-<!-- Unit Infos -->
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
 			<Class>UNITCLASS_CLOCKWORK_GOLEM</Class>
 			<Type>UNIT_CLOCKWORK_GOLEM</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -64,8 +59,8 @@
 			<PrereqTech>TECH_CLOCKPUNK</PrereqTech>
 			<BonusType>BONUS_CLOCKPUNK</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>350</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -116,6 +111,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_DAVINCI_TANK</Class>
 			<Type>UNIT_DAVINCI_TANK</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WHEELED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -214,6 +210,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ORNITHOPTER</Class>
 			<Type>UNIT_ORNITHOPTER</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_EARLY_FIGHTERS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -260,7 +257,7 @@
 			<PrereqTech>TECH_CLOCKPUNK</PrereqTech>
 			<BonusType>BONUS_CLOCKPUNK</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_TIMBER</BonusType>
+				<BonusType>BONUS_PRIME_TIMBER</BonusType>
 			</PrereqBonuses>
 			<iCost>380</iCost>
 			<iMoves>1</iMoves>
@@ -296,6 +293,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_REPEATING_CROSSBOWMAN</Class>
 			<Type>UNIT_REPEATING_CROSSBOWMAN</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -397,6 +395,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_ZEPHYR</Class>
 			<Type>UNIT_ZEPHYR</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_BALLOON</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -454,7 +453,7 @@
 			</TechTypes>
 			<BonusType>BONUS_CLOCKPUNK</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>
