@@ -204,23 +204,15 @@ int CyCity::findCommerceRateRank(int /*CommerceTypes*/ eCommerce)
 	return m_pCity ? m_pCity->findCommerceRateRank((CommerceTypes) eCommerce) : -1;
 }
 
-/************************************************************************************************/
-/* REVDCM                                 02/16/10                                phungus420    */
-/*                                                                                              */
-/* CanTrain                                                                                     */
-/************************************************************************************************/
-bool CyCity::isForceObsoleteUnitClassAvailable(int /*UnitTypes*/ eUnitType)
+bool CyCity::isSupersedingUnitAvailable(int /*UnitTypes*/ eUnitType)
 {
-	return m_pCity ? m_pCity->isForceObsoleteUnitClassAvailable((UnitTypes) eUnitType) : false;
+	return m_pCity ? m_pCity->isSupersedingUnitAvailable((UnitTypes) eUnitType) : false;
 }
 
-bool CyCity::isPlotTrainable( int /*UnitTypes*/ eUnit, bool bContinue, bool bTestVisible )
+bool CyCity::isPlotTrainable(int /*UnitTypes*/ eUnit, bool bContinue, bool bTestVisible)
 {
 	return m_pCity ? m_pCity->isPlotTrainable((UnitTypes)eUnit, bContinue, bTestVisible) : false;
 }
-/************************************************************************************************/
-/* REVDCM                                  END                                                  */
-/************************************************************************************************/
 
 int /*UnitTypes*/ CyCity::allUpgradesAvailable(int /*UnitTypes*/ eUnitType, int iUpgradeCount)
 {
