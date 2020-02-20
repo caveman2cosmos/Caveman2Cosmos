@@ -2797,11 +2797,6 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 		}
 	}
 
-	if (GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits((UnitClassTypes)(kUnit.getUnitClassType())) != eUnit)
-	{
-		return false;
-	}
-
 	if (kUnit.getPrereqVicinityBonus() != NO_BONUS && !hasVicinityBonus((BonusTypes)kUnit.getPrereqVicinityBonus()))
 	{
 		return false;
@@ -3021,21 +3016,15 @@ void CvCity::invalidateCachedCanTrainForUnit(UnitTypes eUnit) const
 bool CvCity::canTrain(UnitCombatTypes eUnitCombat) const
 {
 	PROFILE_FUNC();
-	//TB SubCombat Mod Begin
-	const int num = GC.getNumUnitClassInfos();
-	CvCivilizationInfo& kCivilizationInfo = GC.getCivilizationInfo(getCivilizationType());
+	const int num = GC.getNumUnitInfos();
 
-	for (int iI = 0; iI < num; iI++)
+	for (int i = 0; i < num; i++)
 	{
-		const UnitTypes eUnit = (UnitTypes)kCivilizationInfo.getCivilizationUnits(iI);
-
-		if (NO_UNIT != eUnit && GC.getUnitInfo(eUnit).hasUnitCombat(eUnitCombat) && canTrain(eUnit))
+		if (GC.getUnitInfo((UnitTypes) i).hasUnitCombat(eUnitCombat) && canTrain((UnitTypes) i))
 		{
 			return true;
 		}
 	}
-	//TB SubCombat Mod end
-
 	return false;
 }
 
@@ -4060,7 +4049,7 @@ int CvCity::getProductionExperience(UnitTypes eUnit) const
 			return 0;
 		}
 
-		if ((UnitTypes)kCivilization.getCivilizationUnits((UnitClassTypes)kUnit.getUnitClassType()) == eUnit && kUnit.canAcquireExperience())
+		if (kUnit.canAcquireExperience())
 		{
 			iExperience += getSpecialistFreeExperience();
 
@@ -5188,35 +5177,31 @@ bool CvCity::hurryOverflow(HurryTypes eHurry, int* iProduction, int* iGold, bool
 
 UnitTypes CvCity::getConscriptUnit() const
 {
-	int iBestValue = 0;
 	UnitTypes eBestUnit = NO_UNIT;
 
-	for (int iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
-	{
-		UnitTypes eLoopUnit = (UnitTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(iI);
-
-		if (eLoopUnit != NO_UNIT)
-		{
-			if (canTrain(eLoopUnit))
-			{
-				int iValue = GC.getUnitInfo(eLoopUnit).getConscriptionValue();
-
-				if (iValue > iBestValue)
-				{
-					iBestValue = iValue;
-					eBestUnit = eLoopUnit;
-				}
-			}
-		}
-	}
-
 	// Allow the player to determine the conscripted unit type
-	long lConscriptUnit = Cy::call<long>(PYGameModule, "getConscriptUnitType", Cy::Args() << getOwner());
+	// Toffer - ToDo: Write python UI popup selection menu.
+	int lConscriptUnit = Cy::call<int>(PYGameModule, "getConscriptUnitType", Cy::Args() << getOwner());
 	if (lConscriptUnit != -1)
 	{
 		eBestUnit = ((UnitTypes)lConscriptUnit);
 	}
-
+	if (eBestUnit == NO_UNIT)
+	{
+		int iBestValue = 0;
+		for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
+		{
+			if (canTrain((UnitTypes) iI))
+			{
+				int iValue = GC.getUnitInfo((UnitTypes) iI).getConscriptionValue();
+				if (iValue > iBestValue)
+				{
+					iBestValue = iValue;
+					eBestUnit = (UnitTypes) iI;
+				}
+			}
+		}
+	}
 	return eBestUnit;
 }
 
