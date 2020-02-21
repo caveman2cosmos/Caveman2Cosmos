@@ -469,7 +469,7 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_HEAVY_TANK</Type>
 			<Description>TXT_KEY_UNIT_HEAVY_TANK</Description>
-			<DefaultUnit>UNIT_HEAVY_TANK_M26</DefaultUnit>
+			<DefaultUnit>UNIT_HEAVY_TANK</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_ARMOR_M60</Type>
@@ -884,7 +884,7 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_STEALTH_FIGHTER</Type>
 			<Description>TXT_KEY_UNIT_STEALTH_FIGHTER</Description>
-			<DefaultUnit>UNIT_F117</DefaultUnit>
+			<DefaultUnit>UNIT_STEALTH_FIGHTER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SCRAMJET</Type>
@@ -4129,7 +4129,7 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_DOCTOR</Type>
 			<Description>TXT_KEY_UNIT_GREAT_DOCTOR</Description>
-			<DefaultUnit>UNIT_GREAT_DOCTOR</DefaultUnit>
+			<DefaultUnit>UNIT_DOCTOR</DefaultUnit>
 		</UnitClassInfo>
 		<!-- Health Care Mod -->
 		<UnitClassInfo>
@@ -4488,12 +4488,12 @@ Assyria, Hungary, Minoa, Armenia
 		<UnitClassInfo>
 			<Type>UNITCLASS_ELEPHANT_AFRICAN</Type>
 			<Description>TXT_KEY_UNIT_ELEPHANT_AFRICAN</Description>
-			<DefaultUnit>UNIT_AFRICANELEPHANT</DefaultUnit>
+			<DefaultUnit>UNIT_ELEPHANT_AFRICAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_ELEPHANT_ASIAN</Type>
 			<Description>TXT_KEY_UNIT_ELEPHANT_ASIAN</Description>
-			<DefaultUnit>UNIT_ELEPHANT</DefaultUnit>
+			<DefaultUnit>UNIT_ELEPHANT_ASIAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_GAZELLE</Type>

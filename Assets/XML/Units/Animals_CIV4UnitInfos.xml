@@ -6661,7 +6661,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_ELEPHANT_AFRICAN</Class>
-			<Type>UNIT_AFRICANELEPHANT</Type>
+			<Type>UNIT_ELEPHANT_AFRICAN</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WILD</SubCombatType>
@@ -6802,7 +6802,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_ELEPHANT_ASIAN</Class>
-			<Type>UNIT_ELEPHANT</Type>
+			<Type>UNIT_ELEPHANT_ASIAN</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WILD</SubCombatType>

@@ -18528,7 +18528,7 @@ Base XP gained when defending
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_HEAVY_TANK</Class>
-			<Type>UNIT_HEAVY_TANK_M26</Type>
+			<Type>UNIT_HEAVY_TANK</Type>
 			<Combat>UNITCOMBAT_TRACKED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -39926,7 +39926,7 @@ Base XP gained when defending
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_STEALTH_FIGHTER</Class>
-			<Type>UNIT_F117</Type>
+			<Type>UNIT_STEALTH_FIGHTER</Type>
 			<Special>SPECIALUNIT_FIGHTER</Special>
 			<Combat>UNITCOMBAT_STEALTH</Combat>
 			<SubCombatTypes>
@@ -63211,7 +63211,7 @@ Base XP gained when defending
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_DOCTOR</Class>
-			<Type>UNIT_GREAT_DOCTOR</Type>
+			<Type>UNIT_DOCTOR</Type>
 			<UniqueNames>
 				<UniqueName>TXT_KEY_GREAT_PERSON_ALLEN_WHIPPLE</UniqueName>
 				<UniqueName>TXT_KEY_GREAT_PERSON_AMATO_LUSITANO</UniqueName>
