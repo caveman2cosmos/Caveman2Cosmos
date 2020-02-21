@@ -526,18 +526,22 @@ def checkRebelBonuses(argsList):
 
 				# Give a boat to island rebels
 				if pCity.isCoastal(10) and pCity.area().getNumCities() < 3 and pCity.area().getNumTiles() < 25:
-					iAssaultShip = UnitTypes.NO_UNIT
-					for unitID in xrange(GC.getNumUnitInfos()):
-						unitClass = GC.getUnitInfo(unitID).getUnitClassType()
-						if unitID == GC.getCivilizationInfo(newOwner.getCivilizationType()).getCivilizationUnits(unitClass):
-							if GC.getUnitInfo(unitID).getDomainType() == DomainTypes.DOMAIN_SEA and newOwner.canTrain(unitID,False,False):
-								# Military unit transport ship
-								if GC.getUnitInfo(unitID).getUnitAIType(UnitAITypes.UNITAI_ASSAULT_SEA):
-									if iAssaultShip == UnitTypes.NO_UNIT or GC.getUnitInfo(unitID).getCombat() >= GC.getUnitInfo(iAssaultShip).getCombat():
-										iAssaultShip = unitID
-					if not iAssaultShip == UnitTypes.NO_UNIT:
-						newOwner.initUnit(iAssaultShip, ix, iy, UnitAITypes.UNITAI_ASSAULT_SEA, DirectionTypes.DIRECTION_SOUTH)
-						print "Rev - Rebels get a %s to raid motherland" % GC.getUnitInfo(iAssaultShip).getDescription()
+					iBestCombat = -1
+					for iUnitX in xrange(GC.getNumUnitInfos()):
+						info = GC.getUnitInfo(iUnitX)
+						if (info.getDomainType() == DomainTypes.DOMAIN_SEA
+						and info.getUnitAIType(UnitAITypes.UNITAI_ASSAULT_SEA)
+						and newOwner.canTrain(iUnitX,False,False)
+						):
+							iCombat = info.getCombat()
+							if iBestCombat < iCombat:
+								bestUnit = info
+								iBestUnit = iUnitX
+								iBestCombat = iCombat
+
+					if iBestCombat > -1:
+						newOwner.initUnit(iBestUnit, ix, iy, UnitAITypes.UNITAI_ASSAULT_SEA, DirectionTypes.DIRECTION_SOUTH)
+						print "Rev - Rebels get a %s to raid motherland" % bestUnit.getDescription()
 
 				# Change city disorder timer to favor new player
 				iTurns = pCity.getOccupationTimer()
