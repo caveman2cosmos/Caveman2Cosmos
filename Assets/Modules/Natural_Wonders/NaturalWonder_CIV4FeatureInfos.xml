@@ -15,7 +15,7 @@
 			<bCountsAsPeak>1</bCountsAsPeak>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -26,7 +26,7 @@
 			<Description>TXT_KEY_FEATURE_GREAT_BARRIER</Description>
 			<Civilopedia>TXT_KEY_FEATURE_GREAT_BARRIER_PEDIA</Civilopedia>
 			<!--ArtDefineTag>ART_DEF_FEATURE_GREAT_BARRIER</ArtDefineTag-->
-			<ArtDefineTag>ART_DEF_FEATURE_CORAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_CORAL_REEF</ArtDefineTag>
 			<iMovement>5</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<iTurnDamage>15</iTurnDamage>
@@ -51,11 +51,11 @@
 			</PropertyManipulators>
 		</FeatureInfo>
 		<FeatureInfo>
-			<Type>FEATURE_GREAT_BARRIER_WITH_BEACON</Type>
-			<Description>TXT_KEY_FEATURE_GREAT_BARRIER_WITH_BEACON</Description>
+			<Type>FEATURE_GREAT_BARRIER_REEF_BEACON</Type>
+			<Description>TXT_KEY_FEATURE_GREAT_BARRIER_REEF_BEACON</Description>
 			<Civilopedia>TXT_KEY_FEATURE_GREAT_BARRIER_PEDIA</Civilopedia>
 			<!--ArtDefineTag>ART_DEF_FEATURE_GREAT_BARRIER</ArtDefineTag-->
-			<ArtDefineTag>ART_DEF_FEATURE_CORAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_CORAL_REEF</ArtDefineTag>
 			<iMovement>2</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<iTurnDamage>5</iTurnDamage>
@@ -81,10 +81,10 @@
 			</PropertyManipulators>
 		</FeatureInfo>
 	       <FeatureInfo>
-			<Type>FEATURE_GREAT_BARRIER_WITH_LIGHTHOUSE</Type>
-			<Description>TXT_KEY_FEATURE_GREAT_BARRIER_WITH_LIGHTHOUSE</Description>
+			<Type>FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE</Type>
+			<Description>TXT_KEY_FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE</Description>
 			<Civilopedia>TXT_KEY_FEATURE_GREAT_BARRIER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_CORAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_CORAL_REEF</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<bNoCity>1</bNoCity>
@@ -129,7 +129,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -160,7 +160,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -220,7 +220,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -337,7 +337,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -414,7 +414,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>

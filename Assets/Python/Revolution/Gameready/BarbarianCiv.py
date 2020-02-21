@@ -52,7 +52,7 @@ class BarbarianCiv:
 		if not fMod:
 			return
 		maxCivs = self.RevOpt.getBarbCivMaxCivs()
-		if maxCivs < 1:
+		if maxCivs < 1 or maxCivs > MAX_PC_PLAYERS:
 			maxCivs = MAX_PC_PLAYERS
 		if GAME.countCivPlayersAlive() >= maxCivs: return
 
@@ -398,14 +398,13 @@ class BarbarianCiv:
 		iAttackStr = 0
 		iAttackCityStr = 0
 		iMobileVal = 0
-		for i in xrange(GC.getNumUnitClassInfos()):
+		for iUnit in xrange(GC.getNumUnitInfos()):
 
-			if GC.getUnitClassInfo(i).getMaxGlobalInstances() > 0 or GC.getUnitClassInfo(i).getMaxPlayerInstances() > 0 or GC.getUnitClassInfo(i).getMaxTeamInstances() > 0:
-				continue
-			iUnit = GC.getUnitClassInfo(i).getDefaultUnitIndex()
-			if iUnit < 0 or not CyPlayer.canTrain(iUnit, False, False): continue
 			CvUnitInfo = GC.getUnitInfo(iUnit)
-			if CvUnitInfo.getDomainType() != DomainTypes.DOMAIN_LAND: continue
+			if CvUnitInfo.getDomainType() != DomainTypes.DOMAIN_LAND or CvUnitInfo.getMaxGlobalInstances() > 0 or CvUnitInfo.getMaxPlayerInstances() > 0:
+				continue
+
+			if not CyPlayer.canTrain(iUnit, False, False): continue
 
 			iStr = CvUnitInfo.getCombat()
 			if CvUnitInfo.getUnitAIType(UnitAITypes.UNITAI_CITY_DEFENSE):

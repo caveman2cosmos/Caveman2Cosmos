@@ -75,11 +75,11 @@ class UnitUpgradesGraph:
 		return GC.getPromotionInfo(e).getType()
 
 	def getGraphEdges(self, graph):
-		for unitA in graph.iterkeys():
-			for iUnitClass in xrange(GC.getNumUnitClassInfos()):
-				unitB = GC.getUnitClassInfo(iUnitClass).getDefaultUnitIndex()
-				if GC.getUnitInfo(unitA).getUpgradeUnitClass(iUnitClass):
-					self.addUpgradePath(graph, unitA, unitB)
+		for iUnitA in graph.iterkeys():
+			CvUnitInfoA = GC.getUnitInfo(iUnitA)
+			for i in range(CvUnitInfoA.getNumUnitUpgrades()):
+				iUnitB = CvUnitInfoA.getUnitUpgrade(i)
+				self.addUpgradePath(graph, iUnitA, iUnitB)
 
 	def placeOnScreen(self, screen, unit, xPos, yPos):
 		screen.setImageButtonAt(self.pediaScreen.getNextWidgetName(), self.upgradesList, GC.getUnitInfo(unit).getButton(), xPos, yPos, self.buttonSize, self.buttonSize, WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT, unit, 1)

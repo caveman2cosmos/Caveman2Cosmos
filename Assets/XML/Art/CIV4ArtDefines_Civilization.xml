@@ -242,12 +242,6 @@
 			<bWhiteFlag>1</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
-			<Type>ART_DEF_CIVILIZATION_MINOR</Type>
-			<Button>,Art/Interface/Buttons/Civilizations/Minor.dds,Art/Interface/Buttons/Civics_Civilizations_Religions_Atlas.dds,8,6</Button>
-			<Path>Art/Interface/TeamColor/FlagDECAL_X.dds</Path>
-			<bWhiteFlag>0</bWhiteFlag>
-		</CivilizationArtInfo>
-		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_HITTITES</Type>
 			<Button>Art/Interface/Buttons/Civilizations/Hittites2.dds</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Hittites2.dds</Path>

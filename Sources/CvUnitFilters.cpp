@@ -53,7 +53,7 @@ bool UnitFilterCanBuild::isFilteredUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTy
 
 bool UnitFilterIsLimited::isFilteredUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit)
 {
-	return isLimitedUnitClass((UnitClassTypes)GC.getUnitInfo(eUnit).getUnitClassType());
+	return isLimitedUnit(eUnit);
 }
 
 bool UnitFilterIsCombat::isFilteredUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit)

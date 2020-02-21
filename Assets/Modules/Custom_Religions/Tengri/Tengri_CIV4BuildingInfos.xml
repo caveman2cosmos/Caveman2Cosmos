@@ -45,7 +45,7 @@
 			<ConstructSound>AS2D_BUILD_SIBERIAN</ConstructSound>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
-					<BonusType>BONUS_FUR</BonusType>
+					<BonusType>BONUS_BEAVERS</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
@@ -82,7 +82,7 @@
 			<PrereqReligion>RELIGION_TENGRIISM</PrereqReligion>
 			<Bonus>BONUS_LEATHER</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_TIMBER</Bonus>
+				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
 			<bNeverCapture>1</bNeverCapture>

@@ -11,7 +11,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_MERCURY</Tag>
-		<English>Hot Rocky Planet</English>
+		<English>Mercury</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_MERCURY_PEDIA</Tag>
@@ -22,11 +22,11 @@
 		<English>Venus</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_VENUS_LOWLAND</Tag>
+		<Tag>TXT_KEY_TERRAIN_VENUS_LOWLANDS</Tag>
 		<English>Venus Lowlands</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_VENUS_HIGHLAND</Tag>
+		<Tag>TXT_KEY_TERRAIN_VENUS_HIGHLANDS</Tag>
 		<English>Venus Highlands</English>
 	</TEXT>
 	<TEXT>
@@ -43,7 +43,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_JUPITER</Tag>
-		<English>Gas Supergiant</English>
+		<English>Jupiter</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_JUPITER_PEDIA</Tag>
@@ -51,7 +51,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_IO</Tag>
-		<English>Volcanic Moon</English>
+		<English>Io</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_IO_PEDIA</Tag>
@@ -59,7 +59,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_GANYMEDE</Tag>
-		<English>Large Moon</English>
+		<English>Ganymede</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_GANYMEDE_PEDIA</Tag>
@@ -67,7 +67,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_EUROPA</Tag>
-		<English>Oceanic Moon</English>
+		<English>Europa</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_EUROPA_PEDIA</Tag>
@@ -75,7 +75,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_CALLISTO</Tag>
-		<English>Rock and Ice Moon</English>
+		<English>Callisto</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_CALLISTO_PEDIA</Tag>
@@ -83,7 +83,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_SATURN</Tag>
-		<English>Ringed Gas Giant</English>
+		<English>Saturn</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_SATURN_PEDIA</Tag>
@@ -91,7 +91,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_TITAN</Tag>
-		<English>Methane Moon</English>
+		<English>Titan</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_TITAN_PEDIA</Tag>
@@ -99,7 +99,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_ENCELADUS</Tag>
-		<English>Geyser Moon</English>
+		<English>Enceladus</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_ENCELADUS_PEDIA</Tag>
@@ -131,7 +131,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_URANUS</Tag>
-		<English>Ice Giant</English>
+		<English>Uranus</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_URANUS_PEDIA</Tag>
@@ -139,7 +139,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_UMBRIEL</Tag>
-		<English>Cold Moon</English>
+		<English>Umbriel</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_UMBRIEL_PEDIA</Tag>
@@ -147,7 +147,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_NEPTUNE</Tag>
-		<English>Cold Ice Giant</English>
+		<English>Neptune</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_NEPTUNE_PEDIA</Tag>
@@ -155,7 +155,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_TRITON</Tag>
-		<English>Very Cold Moon</English>
+		<English>Triton</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_TRITON_PEDIA</Tag>
@@ -168,14 +168,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_KUIPER_BELT_OBJECT_PEDIA</Tag>
 		<English>The surface of a Kuiper Belt Object, such as Pluto</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_SOLAR_SYSTEM</Tag>
-		<English>Solar System</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_SOLAR_SYSTEM_PEDIA</Tag>
-		<English>The Solar System, but not on or in orbit around any planet.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_SUN</Tag>
@@ -202,27 +194,19 @@
 		<English>The Outer Solar System, from the Asteroid Belt to the inner Kuiper Belt Objects such as Pluto.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_TRANSNEPTUNIAN</Tag>
+		<Tag>TXT_KEY_TERRAIN_TRANSNEPTUNIAN_SPACE</Tag>
 		<English>Transneptunian Space</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_TRANSNEPTUNIAN_PEDIA</Tag>
+		<Tag>TXT_KEY_TERRAIN_TRANSNEPTUNIAN_SPACE_PEDIA</Tag>
 		<English>The Solar System, beyond the orbit of Neptune.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_OORT_CLOUD</Tag>
-		<English>Oort Cloud</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_OORT_CLOUD_PEDIA</Tag>
-		<English>The Oort Cloud</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_TRANSTELLAR</Tag>
+		<Tag>TXT_KEY_TERRAIN_TRANSTELLAR_SPACE</Tag>
 		<English>Transtellar Space</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_TRANSTELLAR_PEDIA</Tag>
+		<Tag>TXT_KEY_TERRAIN_TRANSTELLAR_SPACE_PEDIA</Tag>
 		<English>The space between stars, up to about 100 light years from the Sun.  This tile doesn't contain stars, but there are rogue planets and brown dwarfs.</English>
 	</TEXT>
 	<TEXT>
@@ -234,11 +218,11 @@
 		<English>Red Dwarfs are the smallest, coolest, and most common type of star in the Solar neighborhood.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_G_TYPE</Tag>
+		<Tag>TXT_KEY_TERRAIN_SUN_LIKE_STAR</Tag>
 		<English>Sun-Like Star</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_G_TYPE_PEDIA</Tag>
+		<Tag>TXT_KEY_TERRAIN_SUN_LIKE_STAR_PEDIA</Tag>
 		<English>A G-type main-sequence star, similar to the sun.</English>
 	</TEXT>
 	<TEXT>
@@ -314,19 +298,19 @@
 		<English>The Virgo Supercluster.  Now it's getting ridiculous.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_COSMOS</Tag>
+		<Tag>TXT_KEY_TERRAIN_OBSERVABLE_UNIVERSE</Tag>
 		<English>Observable Universe</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_COSMOS_PEDIA</Tag>
+		<Tag>TXT_KEY_TERRAIN_OBSERVABLE_UNIVERSE_PEDIA</Tag>
 		<English>The observable universe outside of Virgo Supercluster, hundreds of millions of light years away.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_GALACTIC_VOID</Tag>
+		<Tag>TXT_KEY_TERRAIN_INTERGALACTIC_VOID</Tag>
 		<English>Intergalactic Void</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_GALACTIC_VOID_PEDIA</Tag>
+		<Tag>TXT_KEY_TERRAIN_INTERGALACTIC_VOID_PEDIA</Tag>
 		<English>A massive void between galactic superclusters.</English>
 	</TEXT>
 	<TEXT>
@@ -531,11 +515,11 @@
 		<English>A white dwarf.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_WATER_PLANET</Tag>
+		<Tag>TXT_KEY_FEATURE_OCEAN_PLANET</Tag>
 		<English>Ocean Planet</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_WATER_PLANET_PEDIA</Tag>
+		<Tag>TXT_KEY_FEATURE_OCEAN_PLANET_PEDIA</Tag>
 		<English>A rocky planet whose surface is covered entirely by ocean.</English>
 	</TEXT>
 	<TEXT>

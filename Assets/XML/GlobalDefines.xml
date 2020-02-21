@@ -88,7 +88,7 @@
 	</Define>
 	<Define>
 		<DefineName>LAND_TERRAIN</DefineName>
-		<DefineTextVal>TERRAIN_GRASS</DefineTextVal>
+		<DefineTextVal>TERRAIN_GRASSLAND</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>DEEP_WATER_TERRAIN</DefineName>
@@ -116,11 +116,11 @@
 	</Define>
 	<Define>
 		<DefineName>GLOBAL_WARMING_TERRAIN</DefineName>
-		<DefineTextVal>TERRAIN_GRASS</DefineTextVal>
+		<DefineTextVal>TERRAIN_GRASSLAND</DefineTextVal>
 	</Define>
 	<Define>
-		<DefineName>CAPITAL_BUILDINGCLASS</DefineName>
-		<DefineTextVal>BUILDINGCLASS_PALACE</DefineTextVal>
+		<DefineName>CAPITAL_BUILDING</DefineName><!-- Currently unused, consider replacing buildingtag bCaptial with this global define; we only have one capital building anyhow.-->
+		<DefineTextVal>BUILDING_PALACE</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>DEFAULT_SPECIALIST</DefineName>
@@ -156,7 +156,7 @@
 	</Define>
 	<Define>
 		<DefineName>STANDARD_ERA</DefineName>
-		<DefineTextVal>ERA_ANCIENT</DefineTextVal>
+		<DefineTextVal>C2C_ERA_PREHISTORIC</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>STANDARD_CALENDAR</DefineName>
@@ -179,67 +179,35 @@
 		<DefineTextVal>LEADER_BARBARIAN</DefineTextVal>
 	</Define>
 	<Define>
-		<DefineName>AGGRESSIVE_ANIMAL_CIVILIZATION</DefineName>
-		<DefineTextVal>CIVILIZATION_ANIMAL_PREDATOR</DefineTextVal>
-	</Define>
-	<Define>
-		<DefineName>AGGRESSIVE_ANIMAL_LEADER</DefineName>
-		<DefineTextVal>LEADER_GREEN_MAN</DefineTextVal>
-	</Define>
-	<Define>
-		<DefineName>PASSIVE_ANIMAL_CIVILIZATION</DefineName>
-		<DefineTextVal>CIVILIZATION_ANIMAL_PREY</DefineTextVal>
-	</Define>
-	<Define>
-		<DefineName>PASSIVE_ANIMAL_LEADER</DefineName>
-		<DefineTextVal>LEADER_GREEN_MAN</DefineTextVal>
-	</Define>
-	<Define>
-		<DefineName>NPC8_CIVILIZATION</DefineName>
-		<DefineTextVal>CIVILIZATION_ANIMAL_BEAST</DefineTextVal>
-	</Define>
-	<Define>
-		<DefineName>NPC8_LEADER</DefineName>
-		<DefineTextVal>LEADER_GREEN_MAN</DefineTextVal>
-	</Define>
-	<Define>
-		<DefineName>NPC7_CIVILIZATION</DefineName>
+		<DefineName>NEANDERTHAL_CIVILIZATION</DefineName>
 		<DefineTextVal>CIVILIZATION_NPC_NEANDERTHAL</DefineTextVal>
 	</Define>
 	<Define>
-		<DefineName>NPC7_LEADER</DefineName>
+		<DefineName>NEANDERTHAL_LEADER</DefineName>
 		<DefineTextVal>LEADER_NEANDERTHAL</DefineTextVal>
 	</Define>
 	<Define>
-		<DefineName>NPC6_CIVILIZATION</DefineName>
+		<DefineName>BEAST_CIVILIZATION</DefineName>
+		<DefineTextVal>CIVILIZATION_ANIMAL_BEAST</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>PREDATOR_CIVILIZATION</DefineName>
+		<DefineTextVal>CIVILIZATION_ANIMAL_PREDATOR</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>PREY_CIVILIZATION</DefineName>
+		<DefineTextVal>CIVILIZATION_ANIMAL_PREY</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>ANIMAL_LEADER</DefineName>
+		<DefineTextVal>LEADER_GREEN_MAN</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>INSECT_CIVILIZATION</DefineName>
 		<DefineTextVal>CIVILIZATION_INSECTOID</DefineTextVal>
 	</Define>
 	<Define>
-		<DefineName>NPC6_LEADER</DefineName>
-		<DefineTextVal>LEADER_BARBARIAN</DefineTextVal>
-	</Define>
-	<Define>
-		<DefineName>NPC1_CIVILIZATION</DefineName>
-		<DefineTextVal>CIVILIZATION_BARBARIAN</DefineTextVal>
-	</Define>
-	<Define>
-		<DefineName>NPC1_LEADER</DefineName>
-		<DefineTextVal>LEADER_BARBARIAN</DefineTextVal>
-	</Define>
-	<Define>
-		<DefineName>NPC2_CIVILIZATION</DefineName>
-		<DefineTextVal>CIVILIZATION_BARBARIAN</DefineTextVal>
-	</Define>
-	<Define>
-		<DefineName>NPC2_LEADER</DefineName>
-		<DefineTextVal>LEADER_BARBARIAN</DefineTextVal>
-	</Define>
-	<Define>
-		<DefineName>NPC3_CIVILIZATION</DefineName>
-		<DefineTextVal>CIVILIZATION_BARBARIAN</DefineTextVal>
-	</Define>
-	<Define>
-		<DefineName>NPC3_LEADER</DefineName>
+		<DefineName>INSECT_LEADER</DefineName>
 		<DefineTextVal>LEADER_BARBARIAN</DefineTextVal>
 	</Define>
 	<Define>
@@ -251,11 +219,35 @@
 		<DefineTextVal>LEADER_BARBARIAN</DefineTextVal>
 	</Define>
 	<Define>
-		<DefineName>NPC5_CIVILIZATION</DefineName>
+		<DefineName>NPC3_CIVILIZATION</DefineName>
 		<DefineTextVal>CIVILIZATION_BARBARIAN</DefineTextVal>
 	</Define>
 	<Define>
-		<DefineName>NPC5_LEADER</DefineName>
+		<DefineName>NPC3_LEADER</DefineName>
+		<DefineTextVal>LEADER_BARBARIAN</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>NPC2_CIVILIZATION</DefineName>
+		<DefineTextVal>CIVILIZATION_BARBARIAN</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>NPC2_LEADER</DefineName>
+		<DefineTextVal>LEADER_BARBARIAN</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>NPC1_CIVILIZATION</DefineName>
+		<DefineTextVal>CIVILIZATION_BARBARIAN</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>NPC1_LEADER</DefineName>
+		<DefineTextVal>LEADER_BARBARIAN</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>NPC0_CIVILIZATION</DefineName>
+		<DefineTextVal>CIVILIZATION_BARBARIAN</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>NPC0_LEADER</DefineName>
 		<DefineTextVal>LEADER_BARBARIAN</DefineTextVal>
 	</Define>
 	<Define>

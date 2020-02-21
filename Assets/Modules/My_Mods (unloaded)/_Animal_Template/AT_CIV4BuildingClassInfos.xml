@@ -8,41 +8,26 @@
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CROW_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_CROW_MYTH</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_CROW_MYTH</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CROW_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_CROW_MYTH_EFFECT</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_CROW_MYTH_EFFECT</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CROW_STORY</Type>
 			<Description>TXT_KEY_BUILDING_CROW_STORY</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_CROW_STORY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CROW_STORIES</Type>
 			<Description>TXT_KEY_BUILDING_CROW_STORIES</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_CROW_STORIES</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CROW_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_CROW_STORIES_EFFECT</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_CROW_STORIES_EFFECT</DefaultBuilding>
 		</BuildingClassInfo>
 	</BuildingClassInfos>

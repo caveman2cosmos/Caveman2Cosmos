@@ -105,10 +105,10 @@ public:
 	PropertyTypes	m_eProperty;
 	InvisibleTypes	m_eVisibility;
 	bool			m_bIgnoreNotUnitAIs;
-	bool			m_bIgnoreGrowth;	
+	bool			m_bIgnoreGrowth;
 	bool			m_bPropertyBeneficial;
 	bool			m_bNoNegativeProperties;
-	bool			m_bIsHealer;	
+	bool			m_bIsHealer;
 	bool			m_bIsCommander;
 
 	CvUnitSelectionCriteria& UnitAI(UnitAITypes UnitAI) { m_eUnitAI = UnitAI; return *this; }
@@ -191,7 +191,7 @@ public:
 /* REVOLUTION_MOD                          END                                                  */
 /************************************************************************************************/
 
-	void kill(bool bUpdatePlotGroups, bool bUpdateCulture = true);																								// Exposed to Python
+	void kill(bool bUpdatePlotGroups, bool bUpdateCulture = true); // Exposed to Python
 	void killTestCheap(); // For testing, do not call in a game situation
 
 	void doTurn();
@@ -206,11 +206,11 @@ public:
 	void updateVisibility();
 	bool isVisibilitySetup() const;
 
-	void createGreatPeople(UnitTypes eGreatPersonUnit, bool bIncrementThreshold, bool bIncrementExperience);		// Exposed to Python
+	void createGreatPeople(UnitTypes eGreatPersonUnit, bool bIncrementThreshold, bool bIncrementExperience); // Exposed to Python
 
-	void doTask(TaskTypes eTask, int iData1 = -1, int iData2 = -1, bool bOption = false, bool bAlt = false, bool bShift = false, bool bCtrl = false);		// Exposed to Python
+	void doTask(TaskTypes eTask, int iData1 = -1, int iData2 = -1, bool bOption = false, bool bAlt = false, bool bShift = false, bool bCtrl = false); // Exposed to Python
 
-	void chooseProduction(UnitTypes eTrainUnit = NO_UNIT, BuildingTypes eConstructBuilding = NO_BUILDING, ProjectTypes eCreateProject = NO_PROJECT, bool bFinish = false, bool bFront = false);		// Exposed to Python
+	void chooseProduction(UnitTypes eTrainUnit = NO_UNIT, BuildingTypes eConstructBuilding = NO_BUILDING, ProjectTypes eCreateProject = NO_PROJECT, bool bFinish = false, bool bFront = false); // Exposed to Python
 
 	// Base iterator type for iterating over city plots, returning valid ones only
 	template < class Value_ >
@@ -256,85 +256,71 @@ public:
 	typedef bst::iterator_range<city_plot_iterator> city_plot_range;
 	city_plot_range plots() const { return city_plot_range(beginPlots(), endPlots()); }
 
-	int getCityPlotIndex(const CvPlot* pPlot) const;				// Exposed to Python 
+	int getCityPlotIndex(const CvPlot* pPlot) const; // Exposed to Python
 	// Prefer to use plots() range instead of this for loops, searching etc.
-	CvPlot* getCityIndexPlot(int iIndex) const;															// Exposed to Python
+	CvPlot* getCityIndexPlot(int iIndex) const; // Exposed to Python
 
-	bool canWork(CvPlot* pPlot) const;																			// Exposed to Python
+	bool canWork(CvPlot* pPlot) const; // Exposed to Python
 	void verifyWorkingPlot(int iIndex);
 	void verifyWorkingPlots();
-	void clearWorkingOverride(int iIndex);														// Exposed to Python
-	int countNumImprovedPlots(ImprovementTypes eImprovement = NO_IMPROVEMENT, bool bPotential = false) const;																			// Exposed to Python
-	int countNumWaterPlots() const;																					// Exposed to Python
-	int countNumRiverPlots() const;																					// Exposed to Python
+	void clearWorkingOverride(int iIndex); // Exposed to Python
+	int countNumImprovedPlots(ImprovementTypes eImprovement = NO_IMPROVEMENT, bool bPotential = false) const; // Exposed to Python
+	int countNumWaterPlots() const; // Exposed to Python
+	int countNumRiverPlots() const; // Exposed to Python
 
-	int findPopulationRank() const;																					// Exposed to Python
-	int findBaseYieldRateRank(YieldTypes eYield) const;											// Exposed to Python
-	int findYieldRateRank(YieldTypes eYield) const;								// Exposed to Python					
-	int findCommerceRateRank(CommerceTypes eCommerce) const;			// Exposed to Python
+	int findPopulationRank() const; // Exposed to Python
+	int findBaseYieldRateRank(YieldTypes eYield) const; // Exposed to Python
+	int findYieldRateRank(YieldTypes eYield) const; // Exposed to Python
+	int findCommerceRateRank(CommerceTypes eCommerce) const; // Exposed to Python
 
-/************************************************************************************************/
-/* REVDCM                                 05/05/10                                phungus420    */
-/*                                                                                              */
-/* CanTrain                                                                                     */
-/************************************************************************************************/
-	bool isForceObsoleteUnitClassAvailable(UnitTypes eUnit) const;						// Exposed to Python
-	bool isPlotTrainable(UnitTypes eUnit, bool bContinue, bool bTestVisible) const;						// Exposed to Python
-/************************************************************************************************/
-/* REVDCM                                  END                                                  */
-/************************************************************************************************/
+	bool isSupersedingUnitAvailable(UnitTypes eUnit) const; // Exposed to Python
+	bool isPlotTrainable(UnitTypes eUnit, bool bContinue, bool bTestVisible) const; // Exposed to Python
 
-	UnitTypes allUpgradesAvailable(UnitTypes eUnit, int iUpgradeCount = 0) const;						// Exposed to Python
-	bool isWorldWondersMaxed() const;																							// Exposed to Python
-	bool isTeamWondersMaxed() const;																							// Exposed to Python
-	bool isNationalWondersMaxed() const;																					// Exposed to Python
-	bool isBuildingsMaxed() const;																								// Exposed to Python
-	int getMaxNumWorldWonders() const;																							// Exposed to Python
-	int getMaxNumTeamWonders() const;																							// Exposed to Python
-	int getMaxNumNationalWonders() const;																					// Exposed to Python
+	UnitTypes allUpgradesAvailable(UnitTypes eUnit, int iUpgradeCount = 0) const; // Exposed to Python
+	bool isWorldWondersMaxed() const; // Exposed to Python
+	bool isTeamWondersMaxed() const; // Exposed to Python
+	bool isNationalWondersMaxed() const; // Exposed to Python
+	bool isBuildingsMaxed() const; // Exposed to Python
+	int getMaxNumWorldWonders() const; // Exposed to Python
+	int getMaxNumTeamWonders() const; // Exposed to Python
+	int getMaxNumNationalWonders() const; // Exposed to Python
 
-	bool canTrain(UnitTypes eUnit, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, bool bIgnoreUpgrades = false, bool bPropertySpawn = false) const;					// Exposed to Python 
-	bool canTrainInternal(UnitTypes eUnit, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, bool bIgnoreUpgrades = false) const;					// Exposed to Python 
+	bool canTrain(UnitTypes eUnit, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, bool bIgnoreUpgrades = false, bool bPropertySpawn = false) const; // Exposed to Python
+	bool canTrainInternal(UnitTypes eUnit, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, bool bIgnoreUpgrades = false) const; // Exposed to Python
 	bool canTrain(UnitCombatTypes eUnitCombat) const;
-/************************************************************************************************/
-/* Afforess	                  Start		 05/20/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	bool canConstruct(BuildingTypes eBuilding, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, bool bIgnoreAmount = false, bool bIgnoreBuildings = false, TechTypes eIgnoreTechReq = NO_TECH, int* probabilityEverConstructable = NULL, bool bAffliction = false, bool bExposed = false) const;	// Exposed to Python  
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
+	bool canConstruct(BuildingTypes eBuilding, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, bool bIgnoreAmount = false, bool bIgnoreBuildings = false, TechTypes eIgnoreTechReq = NO_TECH, int* probabilityEverConstructable = NULL, bool bAffliction = false, bool bExposed = false) const; // Exposed to Python
+
 	//	KOSHLING - cache can build results
 	void FlushCanConstructCache(BuildingTypes eBuilding = NO_BUILDING);
 	bool canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool bTestVisible, bool bIgnoreCost, bool bIgnoreAmount, BuildingClassTypes withExtraBuildingClass = NO_BUILDINGCLASS, bool bIgnoreBuildings = false, TechTypes eIgnoreTechReq = NO_TECH, int* probabilityEverConstructable = NULL, bool bAffliction = false, bool bExposed = false) const;
 	void NoteBuildingNoLongerConstructable(BuildingTypes eBuilding) const;
 
-	bool canCreate(ProjectTypes eProject, bool bContinue = false, bool bTestVisible = false) const;		// Exposed to Python 
-	bool canMaintain(ProcessTypes eProcess, bool bContinue = false) const;														// Exposed to Python  
-	bool canJoin() const;																													// Exposed to Python
+	bool canCreate(ProjectTypes eProject, bool bContinue = false, bool bTestVisible = false) const; // Exposed to Python
+	bool canMaintain(ProcessTypes eProcess, bool bContinue = false) const; // Exposed to Python
+	bool canJoin() const; // Exposed to Python
 
-	int getFoodTurnsLeft() const;																				// Exposed to Python
-	bool isProduction() const;																					// Exposed to Python
+	int getFoodTurnsLeft() const; // Exposed to Python
+	bool isProduction() const; // Exposed to Python
 	bool isProductionLimited() const;
 	bool isProductionUnitCombat(int iIndex) const;
-	bool isProductionUnit() const;																								// Exposed to Python
-	bool isProductionBuilding() const;																						// Exposed to Python
-	bool isProductionProject() const;																							// Exposed to Python
-	bool isProductionProcess() const;																		// Exposed to Python
+	bool isProductionUnit() const; // Exposed to Python
+	bool isProductionBuilding() const; // Exposed to Python
+	bool isProductionProject() const; // Exposed to Python
+	bool isProductionProcess() const; // Exposed to Python
 
-	bool canContinueProduction(const OrderData& order) const;														// Exposed to Python
-	int getProductionExperience(UnitTypes eUnit = NO_UNIT) const;									// Exposed to Python
-	void addProductionExperience(CvUnit* pUnit, bool bConscript = false);		// Exposed to Python
+	bool canContinueProduction(const OrderData& order) const; // Exposed to Python
+	int getProductionExperience(UnitTypes eUnit = NO_UNIT) const; // Exposed to Python
+	void addProductionExperience(CvUnit* pUnit, bool bConscript = false); // Exposed to Python
 
-	UnitTypes getProductionUnit() const;																// Exposed to Python
-	UnitAITypes getProductionUnitAI() const;																			// Exposed to Python
-	BuildingTypes getProductionBuilding() const;												// Exposed to Python
-	ProjectTypes getProductionProject() const;													// Exposed to Python
-	ProcessTypes getProductionProcess() const;													// Exposed to Python
-	const wchar* getProductionName() const;															// Exposed to Python
-	const wchar* getProductionNameKey() const;													// Exposed to Python
-	int getGeneralProductionTurnsLeft() const;										// Exposed to Python
+	UnitTypes getProductionUnit() const; // Exposed to Python
+	UnitAITypes getProductionUnitAI() const; // Exposed to Python
+	BuildingTypes getProductionBuilding() const; // Exposed to Python
+	ProjectTypes getProductionProject() const; // Exposed to Python
+	ProcessTypes getProductionProcess() const; // Exposed to Python
+	const wchar* getProductionName() const; // Exposed to Python
+	const wchar* getProductionNameKey() const; // Exposed to Python
+	int getGeneralProductionTurnsLeft() const; // Exposed to Python
 
 	bool isFoodProduction() const; // Exposed to Python
 	bool isFoodProduction(const OrderData& order) const;
@@ -350,19 +336,19 @@ public:
 	int getProductionNeeded(const OrderData& order) const;
 	int getProductionNeeded(UnitTypes eUnit) const;
 	int getProductionNeeded(BuildingTypes eBuilding) const;
-	int getProductionNeeded(ProjectTypes eProject) const;		
+	int getProductionNeeded(ProjectTypes eProject) const;
 	int getOrderProductionTurnsLeft(const OrderData& order, int iIndex = 0) const;
 
 	// For fractional production calculations:
 	int getTotalProductionQueueTurnsLeft() const;
-	int getProductionTurnsLeft() const; // Exposed to Python 
+	int getProductionTurnsLeft() const; // Exposed to Python
 	int getProductionTurnsLeft(UnitTypes eUnit, int iNum) const; // Exposed to Python
 	int getProductionTurnsLeft(BuildingTypes eBuilding, int iNum) const; // Exposed to Python
 	int getProductionTurnsLeft(ProjectTypes eProject, int iNum) const; // Exposed to Python
 	int getProductionTurnsLeft(int iProductionNeeded, int iProduction, int iFirstProductionDifference, int iProductionDifference) const;
 
-	void setProduction(int iNewValue);																			// Exposed to Python
-	void changeProduction(int iChange);																			// Exposed to Python
+	void setProduction(int iNewValue); // Exposed to Python
+	void changeProduction(int iChange); // Exposed to Python
 	int numQueuedUnits(UnitAITypes contractedAIType, const CvPlot* contractedPlot) const;
 
 	int getProductionModifier(const OrderData& order) const;
@@ -383,20 +369,20 @@ public:
 	int getCurrentProductionDifference(ProductionCalc::flags flags) const; // Exposed to Python
 	int getExtraProductionDifference(int iExtra) const; // Exposed to Python
 
-	bool canHurry(HurryTypes eHurry, bool bTestVisible = false) const;		// Exposed to Python
-	void hurry(HurryTypes eHurry);																						// Exposed to Python
+	bool canHurry(HurryTypes eHurry, bool bTestVisible = false) const; // Exposed to Python
+	void hurry(HurryTypes eHurry); // Exposed to Python
 // BUG - Hurry Assist - start
 	bool hurryOverflow(HurryTypes eHurry, int* iProduction, int* iGold, bool bCountThisTurn = false) const;
 // BUG - Hurry Assist - end
 
-	UnitTypes getConscriptUnit() const;																// Exposed to Python
+	UnitTypes getConscriptUnit() const; // Exposed to Python
 	CvUnit* initConscriptedUnit();
-	int getConscriptPopulation() const;																// Exposed to Python
-	int conscriptMinCityPopulation() const;																			// Exposed to Python
-	int flatConscriptAngerLength() const;	
+	int getConscriptPopulation() const; // Exposed to Python
+	int conscriptMinCityPopulation() const; // Exposed to Python
+	int flatConscriptAngerLength() const;
 //Team Project (6)																			// Exposed to Python
-	bool canConscript(bool bOnCapture = false) const;																				// Exposed to Python
-	void conscript(bool bOnCapture = false);																											// Exposed to Python
+	bool canConscript(bool bOnCapture = false) const; // Exposed to Python
+	void conscript(bool bOnCapture = false); // Exposed to Python
 /************************************************************************************************/
 /* INFLUENCE_DRIVEN_WAR                   04/16/09                                johnysmith    */
 /*                                                                                              */
@@ -411,63 +397,63 @@ public:
 /* Original Author Moctezuma              End                                                   */
 /************************************************************************************************/
 
-	int getBonusHealth(BonusTypes eBonus) const;																// Exposed to Python - getBonusHealth
-	int getBonusHappiness(BonusTypes eBonus) const;															// Exposed to Python - getBonusHappiness
-	int getBonusPower(BonusTypes eBonus, bool bDirty) const;										// Exposed to Python 
-	int getBonusYieldRateModifier(YieldTypes eIndex, BonusTypes eBonus) const;	// Exposed to Python 
+	int getBonusHealth(BonusTypes eBonus) const; // Exposed to Python - getBonusHealth
+	int getBonusHappiness(BonusTypes eBonus) const; // Exposed to Python - getBonusHappiness
+	int getBonusPower(BonusTypes eBonus, bool bDirty) const; // Exposed to Python
+	int getBonusYieldRateModifier(YieldTypes eIndex, BonusTypes eBonus) const; // Exposed to Python
 	void processBonus(BonusTypes eBonus, int iChange);
 
-//Team Project (5)		
+//Team Project (5)
 	void processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolete = false, bool bReplacingNow = false, bool bReligiouslyDisabling = false);
 	void processProcess(ProcessTypes eProcess, int iChange);
 	void processSpecialist(SpecialistTypes eSpecialist, int iChange);
 
-	HandicapTypes getHandicapType() const;												// Exposed to Python
-	CivilizationTypes getCivilizationType() const;								// Exposed to Python
-	LeaderHeadTypes getPersonalityType() const;															// Exposed to Python
-	DllExport ArtStyleTypes getArtStyleType() const;														// Exposed to Python
-	CitySizeTypes getCitySizeType() const;												// Exposed to Python
+	HandicapTypes getHandicapType() const; // Exposed to Python
+	CivilizationTypes getCivilizationType() const; // Exposed to Python
+	LeaderHeadTypes getPersonalityType() const; // Exposed to Python
+	DllExport ArtStyleTypes getArtStyleType() const; // Exposed to Python
+	CitySizeTypes getCitySizeType() const; // Exposed to Python
 	DllExport const CvArtInfoBuilding* getBuildingArtInfo(BuildingTypes eBuilding) const;
 	DllExport float getBuildingVisibilityPriority(BuildingTypes eBuilding) const;
 
-	bool hasTrait(TraitTypes eTrait) const;																	// Exposed to Python
-	bool isBarbarian() const;																								// Exposed to Python
-	bool isNPC() const;																								// Exposed to Python
-	bool isHominid() const;																								// Exposed to Python
-	bool isHuman() const;																										// Exposed to Python
-	DllExport bool isVisible(TeamTypes eTeam, bool bDebug) const;						// Exposed to Python
+	bool hasTrait(TraitTypes eTrait) const; // Exposed to Python
+	bool isBarbarian() const; // Exposed to Python
+	bool isNPC() const; // Exposed to Python
+	bool isHominid() const; // Exposed to Python
+	bool isHuman() const; // Exposed to Python
+	DllExport bool isVisible(TeamTypes eTeam, bool bDebug) const; // Exposed to Python
 
-	bool isCapital() const;																				// Exposed to Python
-	bool isCoastal(int iMinWaterSize) const;																									// Exposed to Python
-	bool isDisorder() const;																			// Exposed to Python				 
-	bool isHolyCity(ReligionTypes eIndex) const;									// Exposed to Python				
-	bool isHolyCity() const;																			// Exposed to Python				
-	bool isHeadquarters(CorporationTypes eIndex) const;									// Exposed to Python				
-	bool isHeadquarters() const;																			// Exposed to Python				
+	bool isCapital() const; // Exposed to Python
+	bool isCoastal(int iMinWaterSize) const; // Exposed to Python
+	bool isDisorder() const; // Exposed to Python
+	bool isHolyCity(ReligionTypes eIndex) const; // Exposed to Python
+	bool isHolyCity() const; // Exposed to Python
+	bool isHeadquarters(CorporationTypes eIndex) const; // Exposed to Python
+	bool isHeadquarters() const; // Exposed to Python
 	void setHeadquarters(CorporationTypes eIndex);
 
-	int getOvercrowdingPercentAnger(int iExtra = 0) const;									// Exposed to Python
-	int getNoMilitaryPercentAnger() const;																	// Exposed to Python 
-	int getCulturePercentAnger() const;																			// Exposed to Python
-	int getReligionPercentAnger() const;																		// Exposed to Python
-	int getHurryPercentAnger(int iExtra = 0) const;																				// Exposed to Python
-	int getConscriptPercentAnger(int iExtra = 0) const;																		// Exposed to Python
+	int getOvercrowdingPercentAnger(int iExtra = 0) const; // Exposed to Python
+	int getNoMilitaryPercentAnger() const; // Exposed to Python
+	int getCulturePercentAnger() const; // Exposed to Python
+	int getReligionPercentAnger() const; // Exposed to Python
+	int getHurryPercentAnger(int iExtra = 0) const; // Exposed to Python
+	int getConscriptPercentAnger(int iExtra = 0) const; // Exposed to Python
 	int getDefyResolutionPercentAnger(int iExtra = 0) const;
-	int getWarWearinessPercentAnger() const;																// Exposed to Python
+	int getWarWearinessPercentAnger() const; // Exposed to Python
 /************************************************************************************************/
 /* REVOLUTION_MOD                         04/19/08                                jdog5000      */
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	int getRevRequestPercentAnger(int iExtra = 0) const;																// Exposed to Python
-	int getRevIndexPercentAnger(int iExtra = 0) const;																// Exposed to Python
-	int getRevSuccessHappiness() const;																// Exposed to Python
+	int getRevRequestPercentAnger(int iExtra = 0) const; // Exposed to Python
+	int getRevIndexPercentAnger(int iExtra = 0) const; // Exposed to Python
+	int getRevSuccessHappiness() const; // Exposed to Python
 /************************************************************************************************/
 /* REVOLUTION_MOD                          END                                                  */
 /************************************************************************************************/
-	int getLargestCityHappiness() const;																		// Exposed to Python
-	int getVassalHappiness() const;																		// Exposed to Python
-	int getVassalUnhappiness() const;																		// Exposed to Python
+	int getLargestCityHappiness() const; // Exposed to Python
+	int getVassalHappiness() const; // Exposed to Python
+	int getVassalUnhappiness() const; // Exposed to Python
 /*****************************************************************************************************/
 /**  Author: TheLadiesOgre                                                                          **/
 /**  Date: 20.10.2009                                                                               **/
@@ -475,53 +461,53 @@ public:
 /**  Reason Added: Implement iCelebrityHappy                                                        **/
 /**  Notes:                                                                                         **/
 /*****************************************************************************************************/
-	int getCelebrityHappiness() const;																					// Exposed to Python
+	int getCelebrityHappiness() const; // Exposed to Python
 /*****************************************************************************************************/
 /**  TheLadiesOgre; 20.10.2009; TLOTags                                                             **/
 /*****************************************************************************************************/
-	int unhappyLevel(int iExtra = 0) const;																	// Exposed to Python 
-	int happyLevel() const;																				// Exposed to Python				
-	int angryPopulation(int iExtra = 0) const;										// Exposed to Python
+	int unhappyLevel(int iExtra = 0) const; // Exposed to Python
+	int happyLevel() const; // Exposed to Python
+	int angryPopulation(int iExtra = 0) const; // Exposed to Python
 
 	int visiblePopulation() const;
-	int totalFreeSpecialists() const;															// Exposed to Python				 
-	int extraPopulation() const;																						// Exposed to Python
-	int extraSpecialists() const;																						// Exposed to Python
-	int extraFreeSpecialists() const;																				// Exposed to Python
+	int totalFreeSpecialists() const; // Exposed to Python
+	int extraPopulation() const; // Exposed to Python
+	int extraSpecialists() const; // Exposed to Python
+	int extraFreeSpecialists() const; // Exposed to Python
 
-	int unhealthyPopulation(bool bNoAngry = false, int iExtra = 0) const;	// Exposed to Python
-	int totalGoodBuildingHealth() const;																		// Exposed to Python
-	int totalBadBuildingHealth() const;														// Exposed to Python
-	int goodHealth() const;																				// Exposed to Python
-	int badHealth(bool bNoAngry = false, int iExtra = 0) const;		// Exposed to Python
-	int healthRate(bool bNoAngry = false, int iExtra = 0) const;	// Exposed to Python
-	int foodConsumption(bool bNoAngry = false, int iExtra = 0, bool bIncludeWastage = true) const;				// Exposed to Python
-	int foodDifference(bool bBottom = true, bool bIncludeWastage = true, bool bIgnoreFoodBuildOrRev = false) const;								// Exposed to Python
+	int unhealthyPopulation(bool bNoAngry = false, int iExtra = 0) const; // Exposed to Python
+	int totalGoodBuildingHealth() const; // Exposed to Python
+	int totalBadBuildingHealth() const; // Exposed to Python
+	int goodHealth() const; // Exposed to Python
+	int badHealth(bool bNoAngry = false, int iExtra = 0) const; // Exposed to Python
+	int healthRate(bool bNoAngry = false, int iExtra = 0) const; // Exposed to Python
+	int foodConsumption(bool bNoAngry = false, int iExtra = 0, bool bIncludeWastage = true) const; // Exposed to Python
+	int foodDifference(bool bBottom = true, bool bIncludeWastage = true, bool bIgnoreFoodBuildOrRev = false) const; // Exposed to Python
 	float foodWastage(int surplass = -1) const;
-	int growthThreshold() const;																	// Exposed to Python
+	int growthThreshold() const; // Exposed to Python
 
-	int productionLeft() const;																							// Exposed to Python
-	int hurryCost(bool bExtra) const;																				// Exposed to Python
+	int productionLeft() const; // Exposed to Python
+	int hurryCost(bool bExtra) const; // Exposed to Python
 	int getHurryCostModifier(bool bIgnoreNew = false) const;
-	int hurryGold(HurryTypes eHurry) const;												// Exposed to Python
-	int hurryPopulation(HurryTypes eHurry) const;									// Exposed to Python
-	int hurryProduction(HurryTypes eHurry) const;														// Exposed to Python
-	int flatHurryAngerLength() const;																				// Exposed to Python
-	int hurryAngerLength(HurryTypes eHurry) const;													// Exposed to Python
-	int maxHurryPopulation() const;																					// Exposed to Python
+	int hurryGold(HurryTypes eHurry) const; // Exposed to Python
+	int hurryPopulation(HurryTypes eHurry) const; // Exposed to Python
+	int hurryProduction(HurryTypes eHurry) const; // Exposed to Python
+	int flatHurryAngerLength() const; // Exposed to Python
+	int hurryAngerLength(HurryTypes eHurry) const; // Exposed to Python
+	int maxHurryPopulation() const; // Exposed to Python
 
-//	int cultureDistance(int iDX, int iDY) const;														// Exposed to Python
-	int cultureStrength(PlayerTypes ePlayer, int &iOriginal) const;								// Exposed to Python					 
-	int cultureGarrison(PlayerTypes ePlayer) const;								// Exposed to Python					 
-	
+//	int cultureDistance(int iDX, int iDY) const; // Exposed to Python
+	int cultureStrength(PlayerTypes ePlayer, int &iOriginal) const; // Exposed to Python
+	int cultureGarrison(PlayerTypes ePlayer) const; // Exposed to Python
+
 	//	Note arrival or leaving of a unit
 	void noteUnitMoved(CvUnit* pUnit) const;
 	int getGlobalSourcedProperty(PropertyTypes eProperty) const;
 	int getTotalBuildingSourcedProperty(PropertyTypes eProperty) const;
 	int getTotalUnitSourcedProperty(PropertyTypes eProperty) const;
-	int getNumBuilding(BuildingTypes eIndex) const;									// Exposed to Python					
-	int getNumActiveBuilding(BuildingTypes eIndex) const;						// Exposed to Python
-	bool hasActiveWorldWonder() const;																			// Exposed to Python
+	int getNumBuilding(BuildingTypes eIndex) const; // Exposed to Python
+	int getNumActiveBuilding(BuildingTypes eIndex) const; // Exposed to Python
+	bool hasActiveWorldWonder() const; // Exposed to Python
 /************************************************************************************************/
 /* UNOFFICIAL_PATCH                       03/04/10                     Mongoose & jdog5000      */
 /*                                                                                              */
@@ -534,8 +520,8 @@ public:
 
 	bool processGreatWall(bool bIn, bool bForce = false, bool bSeeded = true);
 
-	int getReligionCount() const;																						// Exposed to Python  
-	int getCorporationCount() const;	
+	int getReligionCount() const; // Exposed to Python
+	int getCorporationCount() const;
 	//TB Combat Mods (Buildings) begin
 	int getUnitAidPresent(PropertyTypes eProperty) const;
 	int getCityAidTotal(PromotionLineTypes ePromotionLineType) const;
@@ -543,24 +529,24 @@ public:
 	void changeAidRate(PropertyTypes ePropertyType, int iChange);
 	void setAidRate(PropertyTypes ePropertyType, int iChange);
 
-	bool hasAfflictionType(PromotionLineTypes ePromotionLineType) const;																											
-	void changeAfflictionTypeCount(PromotionLineTypes ePromotionLineType, int iChange);																									// Exposed to Python					
+	bool hasAfflictionType(PromotionLineTypes ePromotionLineType) const;
+	void changeAfflictionTypeCount(PromotionLineTypes ePromotionLineType, int iChange); // Exposed to Python
 	void setAfflictionTypeCount(PromotionLineTypes ePromotionLineType, int iChange);
 
-	int getExtraBonusAidModifier(BonusTypes eBonusType, PropertyTypes ePropertyType) const;																											
-	void changeExtraBonusAidModifier(BonusTypes eBonusType, PropertyTypes ePropertyType, int iChange);																									// Exposed to Python					
+	int getExtraBonusAidModifier(BonusTypes eBonusType, PropertyTypes ePropertyType) const;
+	void changeExtraBonusAidModifier(BonusTypes eBonusType, PropertyTypes ePropertyType, int iChange); // Exposed to Python
 	void setExtraBonusAidModifier(BonusTypes eBonusType, PropertyTypes ePropertyType, int iChange);
 
-	int getExtraAfflictionOutbreakLevelChange(PromotionLineTypes ePromotionLine) const;																											
-	void changeExtraAfflictionOutbreakLevelChange(PromotionLineTypes ePromotionLine, int iChange);																									// Exposed to Python					
+	int getExtraAfflictionOutbreakLevelChange(PromotionLineTypes ePromotionLine) const;
+	void changeExtraAfflictionOutbreakLevelChange(PromotionLineTypes ePromotionLine, int iChange); // Exposed to Python
 	void setExtraAfflictionOutbreakLevelChange(PromotionLineTypes ePromotionLine, int iChange);
 
-	int getAfflictionToleranceChange(PromotionLineTypes ePromotionLine) const;																											
-	void changeAfflictionToleranceChange(PromotionLineTypes ePromotionLine, int iChange);																									// Exposed to Python					
+	int getAfflictionToleranceChange(PromotionLineTypes ePromotionLine) const;
+	void changeAfflictionToleranceChange(PromotionLineTypes ePromotionLine, int iChange); // Exposed to Python
 	void setAfflictionToleranceChange(PromotionLineTypes ePromotionLine, int iChange);
 
-	int getCurrentOvercomeChange(PromotionLineTypes ePromotionLine) const;																											
-	void changeCurrentOvercomeChange(PromotionLineTypes ePromotionLine, int iChange);																									// Exposed to Python					
+	int getCurrentOvercomeChange(PromotionLineTypes ePromotionLine) const;
+	void changeCurrentOvercomeChange(PromotionLineTypes ePromotionLine, int iChange); // Exposed to Python
 	void setCurrentOvercomeChange(PromotionLineTypes ePromotionLine, int iChange);
 
 	int getTotalTechOutbreakLevelChange(BuildingTypes eBuilding) const;
@@ -596,7 +582,7 @@ public:
 	void changeTotalLongRangeSupportPercentModifier(int iChange);
 	int getTotalFlankSupportPercentModifier() const;
 	void changeTotalFlankSupportPercentModifier(int iChange);
-	
+
 	int getUnitCombatOngoingTrainingTimeCount(UnitCombatTypes eIndex) const;
 	void changeUnitCombatOngoingTrainingTimeCount(UnitCombatTypes eIndex, int iChange);
 	int getUnitCombatOngoingTrainingTimeIncrement(UnitCombatTypes eIndex) const;
@@ -622,31 +608,31 @@ public:
 	UnitTypes getCachedBestSeeInvisibleUnit(InvisibleTypes eInvisible, bool bSea = false) const;
 	bool isCachedBestSeeInvisibleUnit(InvisibleTypes eInvisible, bool bSea = false) const;
 
-	DllExport int getID() const;																			// Exposed to Python
+	DllExport int getID() const; // Exposed to Python
 	int getIndex() const;
 	DllExport IDInfo getIDInfo() const;
 	void setID(int iID);
 
-	DllExport int getViewportX() const;																			// Exposed to Python
+	DllExport int getViewportX() const; // Exposed to Python
 	inline int getX() const { return m_iX; } // Exposed to Python
-	DllExport int getViewportY() const;																			// Exposed to Python
+	DllExport int getViewportY() const; // Exposed to Python
 	inline int getY() const { return m_iY; } // Exposed to Python
 	bool isInViewport() const;
-	bool at(int iX, int iY) const;																				// Exposed to Python
-	bool at(const CvPlot* pPlot) const;																					// Exposed to Python - atPlot
-	CvPlot* plot() const;																	// Exposed to Python
-	DllExport CvPlot* plotExternal() const;																	// Exposed to Python
+	bool at(int iX, int iY) const; // Exposed to Python
+	bool at(const CvPlot* pPlot) const; // Exposed to Python - atPlot
+	CvPlot* plot() const; // Exposed to Python
+	DllExport CvPlot* plotExternal() const; // Exposed to Python
 	CvPlotGroup* plotGroup(const PlayerTypes ePlayer) const;
-	bool isConnectedTo(const CvCity* pCity) const;															// Exposed to Python
-	bool isConnectedToCapital(const PlayerTypes ePlayer = NO_PLAYER) const;			// Exposed to Python
+	bool isConnectedTo(const CvCity* pCity) const; // Exposed to Python
+	bool isConnectedToCapital(const PlayerTypes ePlayer = NO_PLAYER) const; // Exposed to Python
 	int getArea() const;
-	CvArea* area() const;																						// Exposed to Python
+	CvArea* area() const; // Exposed to Python
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      01/02/09                                jdog5000      */
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	CvArea* waterArea(const bool bNoImpassable = false) const;																			// Exposed to Python
+	CvArea* waterArea(const bool bNoImpassable = false) const; // Exposed to Python
 	CvArea* secondWaterArea() const;
 	CvArea* sharedWaterArea(const CvCity* pCity) const;
 	bool isBlockaded() const;
@@ -654,137 +640,137 @@ public:
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
-	CvPlot* getRallyPlot() const;																// Exposed to Python
+	CvPlot* getRallyPlot() const; // Exposed to Python
 	void setRallyPlot(CvPlot* pPlot);
 
-	int getGameTurnFounded() const;																				// Exposed to Python
+	int getGameTurnFounded() const; // Exposed to Python
 	void setGameTurnFounded(int iNewValue);
 
-	int getGameTurnAcquired() const;																			// Exposed to Python
+	int getGameTurnAcquired() const; // Exposed to Python
 	void setGameTurnAcquired(int iNewValue);
 
-	int getPopulation() const;														// Exposed to Python
-	void setPopulation(int iNewValue);										// Exposed to Python
-	void changePopulation(int iChange);										// Exposed to Python
+	int getPopulation() const; // Exposed to Python
+	void setPopulation(int iNewValue); // Exposed to Python
+	void changePopulation(int iChange); // Exposed to Python
 
-	long getRealPopulation() const;																	// Exposed to Python
+	long getRealPopulation() const; // Exposed to Python
 
-	int getHighestPopulation() const;																			// Exposed to Python 
+	int getHighestPopulation() const; // Exposed to Python
 	void setHighestPopulation(int iNewValue);
 
-	int getWorkingPopulation() const;																			// Exposed to Python
-	void changeWorkingPopulation(int iChange);														
+	int getWorkingPopulation() const; // Exposed to Python
+	void changeWorkingPopulation(int iChange);
 
-	int getSpecialistPopulation() const;																	// Exposed to Python
-	void changeSpecialistPopulation(int iChange);													
+	int getSpecialistPopulation() const; // Exposed to Python
+	void changeSpecialistPopulation(int iChange);
 
-	int getNumGreatPeople() const;																				// Exposed to Python
-	void changeNumGreatPeople(int iChange);															
+	int getNumGreatPeople() const; // Exposed to Python
+	void changeNumGreatPeople(int iChange);
 
-	int getBaseGreatPeopleRate() const;																		// Exposed to Python
-	int getGreatPeopleRate() const;																				// Exposed to Python
-	int getTotalGreatPeopleRateModifier() const;													// Exposed to Python
-	void changeBaseGreatPeopleRate(int iChange);										// Exposed to Python
+	int getBaseGreatPeopleRate() const; // Exposed to Python
+	int getGreatPeopleRate() const; // Exposed to Python
+	int getTotalGreatPeopleRateModifier() const; // Exposed to Python
+	void changeBaseGreatPeopleRate(int iChange); // Exposed to Python
 
-	int getGreatPeopleRateModifier() const;																// Exposed to Python
+	int getGreatPeopleRateModifier() const; // Exposed to Python
 	void changeGreatPeopleRateModifier(int iChange);
 
 	CvProperties* getProperties();
 	const CvProperties* getPropertiesConst() const;
 
 // BUG - Building Additional Great People - start
-	int getAdditionalGreatPeopleRateByBuilding(BuildingTypes eBuilding);								// Exposed to Python
-	int getAdditionalBaseGreatPeopleRateByBuilding(BuildingTypes eBuilding);							// Exposed to Python
-	int getAdditionalGreatPeopleRateModifierByBuilding(BuildingTypes eBuilding);						// Exposed to Python
+	int getAdditionalGreatPeopleRateByBuilding(BuildingTypes eBuilding); // Exposed to Python
+	int getAdditionalBaseGreatPeopleRateByBuilding(BuildingTypes eBuilding); // Exposed to Python
+	int getAdditionalGreatPeopleRateModifierByBuilding(BuildingTypes eBuilding); // Exposed to Python
 // BUG - Building Additional Great People - end
 
 // BUG - Specialist Additional Great People - start
-	int getAdditionalGreatPeopleRateBySpecialist(SpecialistTypes eSpecialist, int iChange) const;			// Exposed to Python
-	int getAdditionalBaseGreatPeopleRateBySpecialist(SpecialistTypes eSpecialist, int iChange) const;		// Exposed to Python
+	int getAdditionalGreatPeopleRateBySpecialist(SpecialistTypes eSpecialist, int iChange) const; // Exposed to Python
+	int getAdditionalBaseGreatPeopleRateBySpecialist(SpecialistTypes eSpecialist, int iChange) const; // Exposed to Python
 // BUG - Specialist Additional Great People - end
 
-	int getGreatPeopleProgress() const;													// Exposed to Python
-	void changeGreatPeopleProgress(int iChange);										// Exposed to Python
+	int getGreatPeopleProgress() const; // Exposed to Python
+	void changeGreatPeopleProgress(int iChange); // Exposed to Python
 
-	int getNumWorldWonders() const;																				// Exposed to Python
+	int getNumWorldWonders() const; // Exposed to Python
 	void changeNumWorldWonders(int iChange);
 
-	int getNumTeamWonders() const;																				// Exposed to Python
+	int getNumTeamWonders() const; // Exposed to Python
 	void changeNumTeamWonders(int iChange);
 
-	int getNumNationalWonders() const;																		// Exposed to Python
+	int getNumNationalWonders() const; // Exposed to Python
 	void changeNumNationalWonders(int iChange);
 
-	int getNumBuildings() const;																					// Exposed to Python
+	int getNumBuildings() const; // Exposed to Python
 	void changeNumBuildings(int iChange);
 
-	int getGovernmentCenterCount() const;																	
-	bool isGovernmentCenter() const;														// Exposed to Python
-	void changeGovernmentCenterCount(int iChange);													
+	int getGovernmentCenterCount() const;
+	bool isGovernmentCenter() const; // Exposed to Python
+	void changeGovernmentCenterCount(int iChange);
 
 // BUG - Building Saved Maintenance - start
-	int getSavedMaintenanceByBuilding(BuildingTypes eBuilding) const;										// Exposed to Python
-	int getSavedMaintenanceTimes100ByBuilding(BuildingTypes eBuilding) const;								// Exposed to Python
+	int getSavedMaintenanceByBuilding(BuildingTypes eBuilding) const; // Exposed to Python
+	int getSavedMaintenanceTimes100ByBuilding(BuildingTypes eBuilding) const; // Exposed to Python
 // BUG - Building Saved Maintenance - end
 
-	int getMaintenance() const;																	// Exposed to Python
-	int getMaintenanceTimes100() const;																	// Exposed to Python
+	int getMaintenance() const; // Exposed to Python
+	int getMaintenanceTimes100() const; // Exposed to Python
 	int getEffectiveMaintenanceModifier() const;
 	void updateMaintenance() const;
 	void setMaintenanceDirty(bool bDirty) const;
-	int calculateDistanceMaintenance() const;										// Exposed to Python
-	int calculateNumCitiesMaintenance() const;									// Exposed to Python
-	int calculateColonyMaintenance() const;									// Exposed to Python
-	int calculateCorporationMaintenance() const;									// Exposed to Python
+	int calculateDistanceMaintenance() const; // Exposed to Python
+	int calculateNumCitiesMaintenance() const; // Exposed to Python
+	int calculateColonyMaintenance() const; // Exposed to Python
+	int calculateCorporationMaintenance() const; // Exposed to Python
 /************************************************************************************************/
 /* Afforess	                  Start		 09/08/10                                               */
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	int calculateDistanceMaintenanceTimes100(int iExtraDistanceModifier = 0, int iExtraCoastalDistanceModifier = 0) const;										// Exposed to Python
+	int calculateDistanceMaintenanceTimes100(int iExtraDistanceModifier = 0, int iExtraCoastalDistanceModifier = 0) const; // Exposed to Python
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 	//Afforess: added iExtraModifier
-	int calculateNumCitiesMaintenanceTimes100(int iExtraModifier = 0) const;									// Exposed to Python
-	int calculateColonyMaintenanceTimes100() const;									// Exposed to Python
-	int calculateCorporationMaintenanceTimes100(CorporationTypes eCorporation) const;									// Exposed to Python
-	int calculateCorporationMaintenanceTimes100() const;									// Exposed to Python
+	int calculateNumCitiesMaintenanceTimes100(int iExtraModifier = 0) const; // Exposed to Python
+	int calculateColonyMaintenanceTimes100() const; // Exposed to Python
+	int calculateCorporationMaintenanceTimes100(CorporationTypes eCorporation) const; // Exposed to Python
+	int calculateCorporationMaintenanceTimes100() const; // Exposed to Python
 	int calculateBaseMaintenanceTimes100() const;
 	int calculateBuildingMaintenanceTimes100() const;
-	int getMaintenanceModifier() const;													// Exposed to Python
-	void changeMaintenanceModifier(int iChange);													
+	int getMaintenanceModifier() const; // Exposed to Python
+	void changeMaintenanceModifier(int iChange);
 
-	int getWarWearinessModifier() const;																	// Exposed to Python
-	void changeWarWearinessModifier(int iChange);													
+	int getWarWearinessModifier() const; // Exposed to Python
+	void changeWarWearinessModifier(int iChange);
 
-	int getHurryAngerModifier() const;																	// Exposed to Python
-	void changeHurryAngerModifier(int iChange);													
+	int getHurryAngerModifier() const; // Exposed to Python
+	void changeHurryAngerModifier(int iChange);
 
-	int getHealRate() const;																							// Exposed to Python
+	int getHealRate() const; // Exposed to Python
 	void changeHealRate(int iChange);
 
 	int getHealUnitCombatTypeTotal(UnitCombatTypes eUnitCombat) const;
 	void changeHealUnitCombatTypeVolume(UnitCombatTypes eUnitCombat, int iChange);
 	void setHealUnitCombatTypeVolume(UnitCombatTypes eUnitCombat, int iChange);
 
-	int getEspionageHealthCounter() const;														// Exposed to Python
-	void changeEspionageHealthCounter(int iChange);													// Exposed to Python
+	int getEspionageHealthCounter() const; // Exposed to Python
+	void changeEspionageHealthCounter(int iChange); // Exposed to Python
 
-	int getEspionageHappinessCounter() const;														// Exposed to Python
-	void changeEspionageHappinessCounter(int iChange);													// Exposed to Python
+	int getEspionageHappinessCounter() const; // Exposed to Python
+	void changeEspionageHappinessCounter(int iChange); // Exposed to Python
 
-	int getFreshWaterGoodHealth() const;																	// Exposed to Python
-	int getFreshWaterBadHealth() const;													// Exposed to Python
+	int getFreshWaterGoodHealth() const; // Exposed to Python
+	int getFreshWaterBadHealth() const; // Exposed to Python
 	void updateFreshWaterHealth();
 
-	int getFeatureGoodHealth() const;																			// Exposed to Python
-	int getFeatureBadHealth() const;														// Exposed to Python
+	int getFeatureGoodHealth() const; // Exposed to Python
+	int getFeatureBadHealth() const; // Exposed to Python
 	void updateFeatureHealth();
 // BUG - Feature Health - start
 	void calculateFeatureHealthPercent(int& iGood, int& iBad) const;
 	void calculateFeatureHealthPercentChange(int& iGood, int& iBad, CvPlot* pIgnorePlot = NULL) const;
-	int getAdditionalHealthByFeature(FeatureTypes eFeature, int iChange) const;									// Exposed to Python
+	int getAdditionalHealthByFeature(FeatureTypes eFeature, int iChange) const; // Exposed to Python
 	int getAdditionalHealthByFeature(FeatureTypes eFeature, int iChange, int& iGood, int& iBad) const;
 	int getAdditionalHealth(int iGoodPercent, int iBadPercent, int& iGood, int& iBad) const;
 // BUG - Feature Health - end
@@ -795,35 +781,35 @@ public:
 	int getAdditionalStarvation(int iSpoiledFood, int iFoodAdjust = 0) const;
 // BUG - Actual Effects - end
 
-	int getBuildingGoodHealth() const;																		// Exposed to Python
-	int getBuildingBadHealth() const;																			// Exposed to Python
-	int getBuildingHealth(BuildingTypes eBuilding) const;									// Exposed to Python
+	int getBuildingGoodHealth() const; // Exposed to Python
+	int getBuildingBadHealth() const; // Exposed to Python
+	int getBuildingHealth(BuildingTypes eBuilding) const; // Exposed to Python
 	int getBuildingGoodHealth(BuildingTypes eBuilding) const;
 	int getBuildingBadHealth(BuildingTypes eBuilding) const;
 	void changeBuildingGoodHealth(int iChange);
 	void changeBuildingBadHealth(int iChange);
 
-	int getPowerGoodHealth() const;																				// Exposed to Python 
-	int getPowerBadHealth() const;															// Exposed to Python 
+	int getPowerGoodHealth() const; // Exposed to Python
+	int getPowerBadHealth() const; // Exposed to Python
 	void updatePowerHealth();
 
-	int getBonusGoodHealth() const;																				// Exposed to Python  
-	int getBonusBadHealth() const;															// Exposed to Python 
+	int getBonusGoodHealth() const; // Exposed to Python
+	int getBonusBadHealth() const; // Exposed to Python
 	void changeBonusGoodHealth(int iChange);
 	void changeBonusBadHealth(int iChange);
 
-	int getMilitaryHappiness() const;																			// Exposed to Python
-	int getMilitaryHappinessUnits() const;																// Exposed to Python
+	int getMilitaryHappiness() const; // Exposed to Python
+	int getMilitaryHappinessUnits() const; // Exposed to Python
 	void changeMilitaryHappinessUnits(int iChange);
 
-	int getBuildingGoodHappiness() const;																	// Exposed to Python 
-	int getBuildingBadHappiness() const;																	// Exposed to Python 
-	int getBuildingHappiness(BuildingTypes eBuilding) const;							// Exposed to Python
+	int getBuildingGoodHappiness() const; // Exposed to Python
+	int getBuildingBadHappiness() const; // Exposed to Python
+	int getBuildingHappiness(BuildingTypes eBuilding) const; // Exposed to Python
 	void changeBuildingGoodHappiness(int iChange);
 	void changeBuildingBadHappiness(int iChange);
 
-	int getExtraBuildingGoodHappiness() const;														// Exposed to Python
-	int getExtraBuildingBadHappiness() const;															// Exposed to Python
+	int getExtraBuildingGoodHappiness() const; // Exposed to Python
+	int getExtraBuildingBadHappiness() const; // Exposed to Python
 /********************************************************************************/
 /* 	New Civic AI						19.08.2010				Fuyu			*/
 /********************************************************************************/
@@ -837,209 +823,209 @@ public:
 	int getAdditionalHealthByPlayerBuildingOnlyHealthy(int iIgnoreBuildingOnlyHealthyCount = 0) const;
 
 // BUG - Building Additional Happiness - start
-	int getAdditionalHappinessByBuilding(BuildingTypes eBuilding);									// Exposed to Python
+	int getAdditionalHappinessByBuilding(BuildingTypes eBuilding); // Exposed to Python
 	int getAdditionalHappinessByBuilding(BuildingTypes eBuilding, int& iGood, int& iBad, int& iAngryPop);
 // BUG - Building Additional Happiness - end
 
-	int getExtraBuildingGoodHealth() const;														// Exposed to Python
-	int getExtraBuildingBadHealth() const;															// Exposed to Python
+	int getExtraBuildingGoodHealth() const; // Exposed to Python
+	int getExtraBuildingBadHealth() const; // Exposed to Python
 //Fuyu bLimited
 	void updateExtraBuildingHealth(bool bLimited = false);
 
 // BUG - Building Additional Health - start
-	int getAdditionalHealthByBuilding(BuildingTypes eBuilding);										// Exposed to Python
+	int getAdditionalHealthByBuilding(BuildingTypes eBuilding); // Exposed to Python
 	int getAdditionalHealthByBuilding(BuildingTypes eBuilding, int& iGood, int& iBad, int& iSpoiledFood, int& iStarvation);
 // BUG - Building Additional Health - end
 
-	int getFeatureGoodHappiness() const;																	// Exposed to Python
-	int getFeatureBadHappiness() const;																		// Exposed to Python
+	int getFeatureGoodHappiness() const; // Exposed to Python
+	int getFeatureBadHappiness() const; // Exposed to Python
 //Fuyu bLimited
 	void updateFeatureHappiness(bool bLimited = false);
 
-	int getBonusGoodHappiness() const;																		// Exposed to Python  
-	int getBonusBadHappiness() const;																			// Exposed to Python  
+	int getBonusGoodHappiness() const; // Exposed to Python
+	int getBonusBadHappiness() const; // Exposed to Python
 	void changeBonusGoodHappiness(int iChange);
 	void changeBonusBadHappiness(int iChange);
 
-	int getReligionGoodHappiness() const;																	// Exposed to Python
-	int getReligionBadHappiness() const;																	// Exposed to Python
-	int getReligionHappiness(ReligionTypes eReligion) const;							// Exposed to Python
+	int getReligionGoodHappiness() const; // Exposed to Python
+	int getReligionBadHappiness() const; // Exposed to Python
+	int getReligionHappiness(ReligionTypes eReligion) const; // Exposed to Python
 //Fuyu bLimited
 	void updateReligionHappiness(bool bLimited = false);
 /********************************************************************************/
 /* 	New Civic AI												END 			*/
 /********************************************************************************/
 
-	int getExtraHappiness() const;																				// Exposed to Python
-	void changeExtraHappiness(int iChange);													// Exposed to Python
+	int getExtraHappiness() const; // Exposed to Python
+	void changeExtraHappiness(int iChange); // Exposed to Python
 
-	int getExtraHealth() const;																				// Exposed to Python
-	void changeExtraHealth(int iChange);													// Exposed to Python
+	int getExtraHealth() const; // Exposed to Python
+	void changeExtraHealth(int iChange); // Exposed to Python
 
-	int getHurryAngerTimer() const;																				// Exposed to Python
-	void changeHurryAngerTimer(int iChange);												// Exposed to Python
+	int getHurryAngerTimer() const; // Exposed to Python
+	void changeHurryAngerTimer(int iChange); // Exposed to Python
 
 /************************************************************************************************/
 /* REVOLUTION_MOD                         04/28/08                                jdog5000      */
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	int getRevRequestAngerTimer() const;															// Exposed to Python
-	void changeRevRequestAngerTimer(int iChange);												// Exposed to Python
-	
-	int getRevSuccessTimer() const;															// Exposed to Python
-	void changeRevSuccessTimer(int iChange);												// Exposed to Python
+	int getRevRequestAngerTimer() const; // Exposed to Python
+	void changeRevRequestAngerTimer(int iChange); // Exposed to Python
+
+	int getRevSuccessTimer() const; // Exposed to Python
+	void changeRevSuccessTimer(int iChange); // Exposed to Python
 /************************************************************************************************/
 /* REVOLUTION_MOD                          END                                                  */
 /************************************************************************************************/
-	int getConscriptAngerTimer() const;																		// Exposed to Python
-	void changeConscriptAngerTimer(int iChange);										// Exposed to Python
+	int getConscriptAngerTimer() const; // Exposed to Python
+	void changeConscriptAngerTimer(int iChange); // Exposed to Python
 
-	int getDefyResolutionAngerTimer() const;																		// Exposed to Python
-	void changeDefyResolutionAngerTimer(int iChange);										// Exposed to Python
-	int flatDefyResolutionAngerLength() const;																				// Exposed to Python
+	int getDefyResolutionAngerTimer() const; // Exposed to Python
+	void changeDefyResolutionAngerTimer(int iChange); // Exposed to Python
+	int flatDefyResolutionAngerLength() const; // Exposed to Python
 
-	int getHappinessTimer() const;																				// Exposed to Python
-	void changeHappinessTimer(int iChange);												// Exposed to Python
+	int getHappinessTimer() const; // Exposed to Python
+	void changeHappinessTimer(int iChange); // Exposed to Python
 
 	int getNoUnhappinessCount() const;
-	bool isNoUnhappiness() const;																					// Exposed to Python
+	bool isNoUnhappiness() const; // Exposed to Python
 	void changeNoUnhappinessCount(int iChange);
 
 	int getNoUnhealthyPopulationCount() const;
-	bool isNoUnhealthyPopulation() const;																	// Exposed to Python
+	bool isNoUnhealthyPopulation() const; // Exposed to Python
 	void changeNoUnhealthyPopulationCount(int iChange);
 
 	int getBuildingOnlyHealthyCount() const;
-	bool isBuildingOnlyHealthy() const;																		// Exposed to Python
+	bool isBuildingOnlyHealthy() const; // Exposed to Python
 	void changeBuildingOnlyHealthyCount(int iChange);
 
-	int getFood() const;																				// Exposed to Python
-	void setFood(int iNewValue);																		// Exposed to Python
-	void changeFood(int iChange);																		// Exposed to Python
+	int getFood() const; // Exposed to Python
+	void setFood(int iNewValue); // Exposed to Python
+	void changeFood(int iChange); // Exposed to Python
 
-	int getFoodKept() const;																							// Exposed to Python
+	int getFoodKept() const; // Exposed to Python
 	void setFoodKept(int iNewValue);
 	void changeFoodKept(int iChange);
 
-	int getMaxFoodKeptPercent() const;																		// Exposed to Python
+	int getMaxFoodKeptPercent() const; // Exposed to Python
 	void changeMaxFoodKeptPercent(int iChange, bool bAdd);
 
-	int getOverflowProduction() const;																		// Exposed to Python
-	void setOverflowProduction(int iNewValue);											// Exposed to Python
+	int getOverflowProduction() const; // Exposed to Python
+	void setOverflowProduction(int iNewValue); // Exposed to Python
 	void changeOverflowProduction(int iChange, int iProductionModifier);
 
-	int getFeatureProduction()const;																		// Exposed to Python
-	void setFeatureProduction(int iNewValue);											// Exposed to Python
+	int getFeatureProduction()const; // Exposed to Python
+	void setFeatureProduction(int iNewValue); // Exposed to Python
 	void changeFeatureProduction(int iChange);
 
-	int getMilitaryProductionModifier() const;														// Exposed to Python
-	void changeMilitaryProductionModifier(int iChange);												
+	int getMilitaryProductionModifier() const; // Exposed to Python
+	void changeMilitaryProductionModifier(int iChange);
 
-	int getSpaceProductionModifier() const;																// Exposed to Python
+	int getSpaceProductionModifier() const; // Exposed to Python
 	void changeSpaceProductionModifier(int iChange);
 
-	int getExtraTradeRoutes() const;																			// Exposed to Python
-	void changeExtraTradeRoutes(int iChange);															// Exposed to Python
+	int getExtraTradeRoutes() const; // Exposed to Python
+	void changeExtraTradeRoutes(int iChange); // Exposed to Python
 
-	int getTradeRouteModifier() const;																		// Exposed to Python
+	int getTradeRouteModifier() const; // Exposed to Python
 	void changeTradeRouteModifier(int iChange);
 
-	int getForeignTradeRouteModifier() const;																		// Exposed to Python
+	int getForeignTradeRouteModifier() const; // Exposed to Python
 	void changeForeignTradeRouteModifier(int iChange);
 
-	int getBuildingDefense() const;																				// Exposed to Python
+	int getBuildingDefense() const; // Exposed to Python
 	void changeBuildingDefense(int iChange);
 
-	int getBuildingBombardDefense() const;																				// Exposed to Python
+	int getBuildingBombardDefense() const; // Exposed to Python
 	void changeBuildingBombardDefense(int iChange);
 // BUG - Building Additional Bombard Defense - start
-	int getAdditionalBombardDefenseByBuilding(BuildingTypes eBuilding) const;									// Exposed to Python
+	int getAdditionalBombardDefenseByBuilding(BuildingTypes eBuilding) const; // Exposed to Python
 // BUG - Building Additional Bombard Defense - start
 
-	int getFreeExperience() const;																				// Exposed to Python
-	void changeFreeExperience(int iChange);															
+	int getFreeExperience() const; // Exposed to Python
+	void changeFreeExperience(int iChange);
 
-	int getCurrAirlift() const;																						// Exposed to Python
+	int getCurrAirlift() const; // Exposed to Python
 	void setCurrAirlift(int iNewValue);
 	void changeCurrAirlift(int iChange);
 
-	int getMaxAirlift() const;																						// Exposed to Python
+	int getMaxAirlift() const; // Exposed to Python
 	void changeMaxAirlift(int iChange);
 
-	int getAirModifier() const;																						// Exposed to Python
+	int getAirModifier() const; // Exposed to Python
 	void changeAirModifier(int iChange);
 
 	int getSMAirUnitCapacity(TeamTypes eTeam) const;
-	int getAirUnitCapacity(TeamTypes eTeam) const;										// Exposed to Python
-	void changeAirUnitCapacity(int iChange);										// Exposed to Python
+	int getAirUnitCapacity(TeamTypes eTeam) const; // Exposed to Python
+	void changeAirUnitCapacity(int iChange); // Exposed to Python
 
-	int getNukeModifier() const;																					// Exposed to Python
+	int getNukeModifier() const; // Exposed to Python
 	void changeNukeModifier(int iChange);
 
-	int getFreeSpecialist() const;																				// Exposed to Python  
+	int getFreeSpecialist() const; // Exposed to Python
 	void changeFreeSpecialist(int iChange);
 
 	int getPowerCount() const;
-	bool isPower() const;																									// Exposed to Python
-	bool isAreaCleanPower() const;																				// Exposed to Python
+	bool isPower() const; // Exposed to Python
+	bool isAreaCleanPower() const; // Exposed to Python
 	int getDirtyPowerCount() const;
-	bool isDirtyPower() const;																						// Exposed to Python
+	bool isDirtyPower() const; // Exposed to Python
 	void changePowerCount(int iChange, bool bDirty);
 
-	int getDefenseDamage() const;																					// Exposed to Python
-	void changeDefenseDamage(int iChange);													// Exposed to Python
-	void changeDefenseModifier(int iChange);													// Exposed to Python
+	int getDefenseDamage() const; // Exposed to Python
+	void changeDefenseDamage(int iChange); // Exposed to Python
+	void changeDefenseModifier(int iChange); // Exposed to Python
 
-	int getLastDefenseDamage() const;																			// Exposed to Python
+	int getLastDefenseDamage() const; // Exposed to Python
 	void setLastDefenseDamage(int iNewValue);
 
-	bool isBombardable(const CvUnit* pUnit) const;														// Exposed to Python
-	int getNaturalDefense() const;																				// Exposed to Python
-	int getTotalDefense(bool bIgnoreBuilding) const;											// Exposed to Python
-	int getDefenseModifier(bool bIgnoreBuilding) const;										// Exposed to Python
+	bool isBombardable(const CvUnit* pUnit) const; // Exposed to Python
+	int getNaturalDefense() const; // Exposed to Python
+	int getTotalDefense(bool bIgnoreBuilding) const; // Exposed to Python
+	int getDefenseModifier(bool bIgnoreBuilding) const; // Exposed to Python
 
-	int getOccupationTimer() const;															// Exposed to Python
-	bool isOccupation() const;																	// Exposed to Python 
-	void setOccupationTimer(int iNewValue);													// Exposed to Python
-	void changeOccupationTimer(int iChange);												// Exposed to Python
+	int getOccupationTimer() const; // Exposed to Python
+	bool isOccupation() const; // Exposed to Python
+	void setOccupationTimer(int iNewValue); // Exposed to Python
+	void changeOccupationTimer(int iChange); // Exposed to Python
 
-	int getCultureUpdateTimer() const;															// Exposed to Python
+	int getCultureUpdateTimer() const; // Exposed to Python
 	void setCultureUpdateTimer(int iNewValue);
-	void changeCultureUpdateTimer(int iChange);												// Exposed to Python
+	void changeCultureUpdateTimer(int iChange); // Exposed to Python
 
 	int getCitySizeBoost() const;
 	void setCitySizeBoost(int iBoost);
 
 	// < M.A.D. Nukes Start >
-	int getMADIncoming() const;											// Exposed to Python
-	void setMADIncoming(int iValue);								// Exposed to Python
-	void changeMADIncoming(int iValue);							// Exposed to Python
+	int getMADIncoming() const; // Exposed to Python
+	void setMADIncoming(int iValue); // Exposed to Python
+	void changeMADIncoming(int iValue); // Exposed to Python
 	// < M.A.D. Nukes End   >
 
-	bool isNeverLost() const;																							// Exposed to Python
-	void setNeverLost(bool bNewValue);															// Exposed to Python
+	bool isNeverLost() const; // Exposed to Python
+	void setNeverLost(bool bNewValue); // Exposed to Python
 
-	bool isBombarded() const;																							// Exposed to Python
-	void setBombarded(bool bNewValue);															// Exposed to Python
+	bool isBombarded() const; // Exposed to Python
+	void setBombarded(bool bNewValue); // Exposed to Python
 
-	bool isDrafted() const;																								// Exposed to Python
-	void setDrafted(bool bNewValue);																// Exposed to Python
+	bool isDrafted() const; // Exposed to Python
+	void setDrafted(bool bNewValue); // Exposed to Python
 
-	bool isAirliftTargeted() const;																				// Exposed to Python
-	void setAirliftTargeted(bool bNewValue);												// Exposed to Python
+	bool isAirliftTargeted() const; // Exposed to Python
+	void setAirliftTargeted(bool bNewValue); // Exposed to Python
 
-	bool isWeLoveTheKingDay() const;														// Exposed to Python 
+	bool isWeLoveTheKingDay() const; // Exposed to Python
 	void setWeLoveTheKingDay(bool bNewValue);
 
-	bool isCitizensAutomated() const;														// Exposed to Python 
-	void setCitizensAutomated(bool bNewValue);											// Exposed to Python 
+	bool isCitizensAutomated() const; // Exposed to Python
+	void setCitizensAutomated(bool bNewValue); // Exposed to Python
 
-	bool isProductionAutomated() const;													// Exposed to Python
-	void setProductionAutomated(bool bNewValue, bool bClear);										// Exposed to Python 
+	bool isProductionAutomated() const; // Exposed to Python
+	void setProductionAutomated(bool bNewValue, bool bClear); // Exposed to Python
 
 	/* allows you to programatically specify a cities walls rather than having them be generated automagically */
-	DllExport bool isWallOverride() const; 
+	DllExport bool isWallOverride() const;
 	void setWallOverride(bool bOverride);
 
 	DllExport bool isInfoDirty() const;
@@ -1048,201 +1034,201 @@ public:
 	DllExport bool isLayoutDirty() const;
 	DllExport void setLayoutDirty(bool bNewValue);
 
-	bool isPlundered() const;																		// Exposed to Python
-	void setPlundered(bool bNewValue);																// Exposed to Python
+	bool isPlundered() const; // Exposed to Python
+	void setPlundered(bool bNewValue); // Exposed to Python
 
 	DllExport inline PlayerTypes getOwner() const { return m_eOwner; } // Exposed to Python
-	DllExport TeamTypes getTeam() const;																	// Exposed to Python
+	DllExport TeamTypes getTeam() const; // Exposed to Python
 
-	PlayerTypes getPreviousOwner() const;																	// Exposed to Python
+	PlayerTypes getPreviousOwner() const; // Exposed to Python
 	void setPreviousOwner(PlayerTypes eNewValue);
 
-	PlayerTypes getOriginalOwner() const;																	// Exposed to Python
+	PlayerTypes getOriginalOwner() const; // Exposed to Python
 	void setOriginalOwner(PlayerTypes eNewValue);
 
-	CultureLevelTypes getCultureLevel() const;														// Exposed to Python
-	int getCultureThreshold() const;																	// Exposed to Python
+	CultureLevelTypes getCultureLevel() const; // Exposed to Python
+	int getCultureThreshold() const; // Exposed to Python
 	int getCultureThreshold(CultureLevelTypes eLevel) const;
 	void setCultureLevel(CultureLevelTypes eNewValue, bool bUpdatePlotGroups);
 	void updateCultureLevel(bool bUpdatePlotGroups);
 
-	int getSeaPlotYield(YieldTypes eIndex) const;																// Exposed to Python
+	int getSeaPlotYield(YieldTypes eIndex) const; // Exposed to Python
 	void changeSeaPlotYield(YieldTypes eIndex, int iChange);
 
-	int getRiverPlotYield(YieldTypes eIndex) const;																// Exposed to Python
+	int getRiverPlotYield(YieldTypes eIndex) const; // Exposed to Python
 	void changeRiverPlotYield(YieldTypes eIndex, int iChange);
 
 // BUG - Building Additional Yield - start
-	int getAdditionalYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuilding, bool bFilter = false);						// Exposed to Python
-	int getAdditionalBaseYieldRateByBuilding(YieldTypes eIndex, BuildingTypes eBuilding);			// Exposed to Python
-	int getAdditionalYieldRateModifierByBuilding(YieldTypes eIndex, BuildingTypes eBuilding, bool bFilter = false) const;			// Exposed to Python
+	int getAdditionalYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuilding, bool bFilter = false); // Exposed to Python
+	int getAdditionalBaseYieldRateByBuilding(YieldTypes eIndex, BuildingTypes eBuilding); // Exposed to Python
+	int getAdditionalYieldRateModifierByBuilding(YieldTypes eIndex, BuildingTypes eBuilding, bool bFilter = false) const; // Exposed to Python
 // BUG - Building Additional Yield - end
 
 // BUG - Specialist Additional Yield - start
-	int getAdditionalYieldBySpecialist(YieldTypes eIndex, SpecialistTypes eSpecialist, int iChange) const;				// Exposed to Python
-	int getAdditionalBaseYieldRateBySpecialist(YieldTypes eIndex, SpecialistTypes eSpecialist, int iChange) const;		// Exposed to Python
+	int getAdditionalYieldBySpecialist(YieldTypes eIndex, SpecialistTypes eSpecialist, int iChange) const; // Exposed to Python
+	int getAdditionalBaseYieldRateBySpecialist(YieldTypes eIndex, SpecialistTypes eSpecialist, int iChange) const; // Exposed to Python
 // BUG - Specialist Additional Yield - end
 
-	int getBaseYieldRate(YieldTypes eIndex) const;															// Exposed to Python
-	int getBaseYieldRateModifier(YieldTypes eIndex, int iExtra = 0) const;			// Exposed to Python
-	int getYieldRate(YieldTypes eIndex) const;												// Exposed to Python
-	void setBaseYieldRate(YieldTypes eIndex, int iNewValue);												// Exposed to Python
-	void changeBaseYieldRate(YieldTypes eIndex, int iChange);												// Exposed to Python
+	int getBaseYieldRate(YieldTypes eIndex) const; // Exposed to Python
+	int getBaseYieldRateModifier(YieldTypes eIndex, int iExtra = 0) const; // Exposed to Python
+	int getYieldRate(YieldTypes eIndex) const; // Exposed to Python
+	void setBaseYieldRate(YieldTypes eIndex, int iNewValue); // Exposed to Python
+	void changeBaseYieldRate(YieldTypes eIndex, int iChange); // Exposed to Python
 
 	int popYield(YieldTypes eIndex) const;
 	int getBaseYieldPerPopRate(YieldTypes eIndex) const;
 	void setBaseYieldPerPopRate(YieldTypes eIndex, int iNewValue);
-	void changeBaseYieldPerPopRate(YieldTypes eIndex, int iChange);	
+	void changeBaseYieldPerPopRate(YieldTypes eIndex, int iChange);
 
-	int getYieldRateModifier(YieldTypes eIndex) const;													// Exposed to Python
+	int getYieldRateModifier(YieldTypes eIndex) const; // Exposed to Python
 	void changeYieldRateModifier(YieldTypes eIndex, int iChange);
 
-	int getPowerYieldRateModifier(YieldTypes eIndex) const;											// Exposed to Python 
+	int getPowerYieldRateModifier(YieldTypes eIndex) const; // Exposed to Python
 	void changePowerYieldRateModifier(YieldTypes eIndex, int iChange);
 
-	int getBonusYieldRateModifier(YieldTypes eIndex) const;											// Exposed to Python 
+	int getBonusYieldRateModifier(YieldTypes eIndex) const; // Exposed to Python
 	void changeBonusYieldRateModifier(YieldTypes eIndex, int iChange);
 
-	int getTradeYield(YieldTypes eIndex) const;																	// Exposed to Python
-	int totalTradeModifier(CvCity* pOtherCity = NULL) const;																							// Exposed to Python
+	int getTradeYield(YieldTypes eIndex) const; // Exposed to Python
+	int totalTradeModifier(CvCity* pOtherCity = NULL) const; // Exposed to Python
 	int getPopulationTradeModifier() const;
 	int getPeaceTradeModifier(TeamTypes eTeam) const;
 	int getBaseTradeProfit(CvCity* pCity) const;
 // BUG - Fractional Trade Routes - start
 #ifdef _MOD_FRACTRADE
-	int calculateTradeProfitTimes100(CvCity* pCity) const;															// Exposed to Python
+	int calculateTradeProfitTimes100(CvCity* pCity) const; // Exposed to Python
 #endif
 // BUG - Fractional Trade Routes - end
-	int calculateTradeProfit(CvCity* pCity) const;															// Exposed to Python
-	int calculateTradeYield(YieldTypes eIndex, int iTradeProfit) const;					// Exposed to Python
+	int calculateTradeProfit(CvCity* pCity) const; // Exposed to Python
+	int calculateTradeYield(YieldTypes eIndex, int iTradeProfit) const; // Exposed to Python
 // BUG - Trade Totals - start
 	void calculateTradeTotals(YieldTypes eIndex, int& iDomesticYield, int& iDomesticRoutes, int& iForeignYield, int& iForeignRoutes, PlayerTypes eWithPlayer = NO_PLAYER, bool bRound = false, bool bBase = false) const;
 	int calculateTotalTradeYield(YieldTypes eIndex, PlayerTypes eWithPlayer = NO_PLAYER, bool bRound = false, bool bBase = false) const;
 // BUG - Trade Totals - end
 	void setTradeYield(YieldTypes eIndex, int iNewValue);
 
-	int getExtraSpecialistYield(YieldTypes eIndex) const;																				// Exposed to Python
-	int getExtraSpecialistYield(YieldTypes eIndex, SpecialistTypes eSpecialist) const;					// Exposed to Python
+	int getExtraSpecialistYield(YieldTypes eIndex) const; // Exposed to Python
+	int getExtraSpecialistYield(YieldTypes eIndex, SpecialistTypes eSpecialist) const; // Exposed to Python
 	void updateExtraSpecialistYield(YieldTypes eYield);
 	void updateExtraSpecialistYield();
 
-	int getExtraSpecialistCommerceTotal(CommerceTypes eIndex) const;																				// Exposed to Python
-	int getExtraSpecialistCommerce(CommerceTypes eIndex, SpecialistTypes eSpecialist) const;					// Exposed to Python
+	int getExtraSpecialistCommerceTotal(CommerceTypes eIndex) const; // Exposed to Python
+	int getExtraSpecialistCommerce(CommerceTypes eIndex, SpecialistTypes eSpecialist) const; // Exposed to Python
 	void updateExtraSpecialistCommerce(CommerceTypes eCommerce);
 	void updateExtraSpecialistCommerce();
 
-	int getCommerceRate(CommerceTypes eIndex) const;									// Exposed to Python
-	int getCommerceRateTimes100(CommerceTypes eIndex) const;									// Exposed to Python
-	int getCommerceFromPercent(CommerceTypes eIndex, int iYieldRate) const;			// Exposed to Python
-	int getBaseCommerceRate(CommerceTypes eIndex) const;												// Exposed to Python
-	int getBaseCommerceRateTimes100(CommerceTypes eIndex) const;												// Exposed to Python
-	int getTotalCommerceRateModifier(CommerceTypes eIndex) const;								// Exposed to Python
+	int getCommerceRate(CommerceTypes eIndex) const; // Exposed to Python
+	int getCommerceRateTimes100(CommerceTypes eIndex) const; // Exposed to Python
+	int getCommerceFromPercent(CommerceTypes eIndex, int iYieldRate) const; // Exposed to Python
+	int getBaseCommerceRate(CommerceTypes eIndex) const; // Exposed to Python
+	int getBaseCommerceRateTimes100(CommerceTypes eIndex) const; // Exposed to Python
+	int getTotalCommerceRateModifier(CommerceTypes eIndex) const; // Exposed to Python
 	void setCommerceModifierDirty(CommerceTypes eCommerce);
 	void setCommerceDirty(CommerceTypes eCommerce = NO_COMMERCE);
 	void updateCommerce(CommerceTypes eIndex = NO_COMMERCE, bool bForce = true) const;
 
-	int getProductionToCommerceModifier(CommerceTypes eIndex) const;						// Exposed to Python
+	int getProductionToCommerceModifier(CommerceTypes eIndex) const; // Exposed to Python
 	void changeProductionToCommerceModifier(CommerceTypes eIndex, int iChange);
 
-	int getBuildingCommerce(CommerceTypes eIndex) const;																				// Exposed to Python
-	int getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding) const;			// Exposed to Python
+	int getBuildingCommerce(CommerceTypes eIndex) const; // Exposed to Python
+	int getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding) const; // Exposed to Python
 	int getOrbitalBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding) const;
 // BUG - Building Additional Commerce - start
-	int getAdditionalCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding);						// Exposed to Python
-	int getAdditionalCommerceTimes100ByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding);				// Exposed to Python
-	int getAdditionalBaseCommerceRateByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding);				// Exposed to Python
+	int getAdditionalCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding); // Exposed to Python
+	int getAdditionalCommerceTimes100ByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding); // Exposed to Python
+	int getAdditionalBaseCommerceRateByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding); // Exposed to Python
 	int getAdditionalBaseCommerceRateByBuildingImpl(CommerceTypes eIndex, BuildingTypes eBuilding);
-	int getAdditionalCommerceRateModifierByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding);			// Exposed to Python
+	int getAdditionalCommerceRateModifierByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding); // Exposed to Python
 	int getAdditionalCommerceRateModifierByBuildingImpl(CommerceTypes eIndex, BuildingTypes eBuilding);
 // BUG - Building Additional Commerce - end
 	void updateBuildingCommerce();
 
-	int getSpecialistCommerce(CommerceTypes eIndex) const;											// Exposed to Python
+	int getSpecialistCommerce(CommerceTypes eIndex) const; // Exposed to Python
 	void changeSpecialistCommerceTimes100(CommerceTypes eIndex, int iChange);
 // BUG - Specialist Additional Commerce - start
-	int getAdditionalCommerceBySpecialist(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const;				// Exposed to Python
-	int getAdditionalCommerceTimes100BySpecialist(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const;		// Exposed to Python
-	int getAdditionalBaseCommerceRateBySpecialist(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const;		// Exposed to Python
+	int getAdditionalCommerceBySpecialist(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const; // Exposed to Python
+	int getAdditionalCommerceTimes100BySpecialist(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const; // Exposed to Python
+	int getAdditionalBaseCommerceRateBySpecialist(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const; // Exposed to Python
 	int getAdditionalBaseCommerceRateBySpecialistImpl(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const;
 // BUG - Specialist Additional Commerce - end
 
 
-	int getReligionCommerce(CommerceTypes eIndex) const;																				// Exposed to Python
-	int getReligionCommerceByReligion(CommerceTypes eIndex, ReligionTypes eReligion) const;			// Exposed to Python
+	int getReligionCommerce(CommerceTypes eIndex) const; // Exposed to Python
+	int getReligionCommerceByReligion(CommerceTypes eIndex, ReligionTypes eReligion) const; // Exposed to Python
 	void updateReligionCommerce(CommerceTypes eIndex);
 	void updateReligionCommerce();
 
 	void setCorporationYield(YieldTypes eIndex, int iNewValue);
-	int getCorporationCommerce(CommerceTypes eIndex) const;																				// Exposed to Python
-	int getCorporationCommerceByCorporation(CommerceTypes eIndex, CorporationTypes eCorporation) const;			// Exposed to Python
-	int getCorporationYield(YieldTypes eIndex) const;																				// Exposed to Python
-	int getCorporationYieldByCorporation(YieldTypes eIndex, CorporationTypes eCorporation) const;			// Exposed to Python
+	int getCorporationCommerce(CommerceTypes eIndex) const; // Exposed to Python
+	int getCorporationCommerceByCorporation(CommerceTypes eIndex, CorporationTypes eCorporation) const; // Exposed to Python
+	int getCorporationYield(YieldTypes eIndex) const; // Exposed to Python
+	int getCorporationYieldByCorporation(YieldTypes eIndex, CorporationTypes eCorporation) const; // Exposed to Python
 	void updateCorporation();
 	void updateCorporationCommerce(CommerceTypes eIndex);
 	void updateCorporationYield(YieldTypes eIndex);
 	void updateCorporationBonus();
 
-	int getCommerceRateModifier(CommerceTypes eIndex) const;										// Exposed to Python
+	int getCommerceRateModifier(CommerceTypes eIndex) const; // Exposed to Python
 	void changeCommerceRateModifier(CommerceTypes eIndex, int iChange);
 
-	int getCommerceHappinessPer(CommerceTypes eIndex) const;										// Exposed to Python
-	int getCommerceHappinessByType(CommerceTypes eIndex) const;									// Exposed to Python
-	int getCommerceHappiness() const;																						// Exposed to Python
+	int getCommerceHappinessPer(CommerceTypes eIndex) const; // Exposed to Python
+	int getCommerceHappinessByType(CommerceTypes eIndex) const; // Exposed to Python
+	int getCommerceHappiness() const; // Exposed to Python
 	void changeCommerceHappinessPer(CommerceTypes eIndex, int iChange);
 
-	int getDomainFreeExperience(DomainTypes eIndex) const;											// Exposed to Python
+	int getDomainFreeExperience(DomainTypes eIndex) const; // Exposed to Python
 	void changeDomainFreeExperience(DomainTypes eIndex, int iChange);
 
-	int getDomainProductionModifier(DomainTypes eIndex) const;									// Exposed to Python
+	int getDomainProductionModifier(DomainTypes eIndex) const; // Exposed to Python
 	void changeDomainProductionModifier(DomainTypes eIndex, int iChange);
 
-	int getCulture(PlayerTypes eIndex) const;													// Exposed to Python
-	int getCultureTimes100(PlayerTypes eIndex) const;													// Exposed to Python
-	int countTotalCultureTimes100() const;																							// Exposed to Python
-	PlayerTypes findHighestCulture() const;																			// Exposed to Python
-	int calculateCulturePercent(PlayerTypes eIndex) const;											// Exposed to Python
-	int calculateTeamCulturePercent(TeamTypes eIndex) const;										// Exposed to Python
-	void setCulture(PlayerTypes eIndex, int iNewValue, bool bPlots, bool bUpdatePlotGroups, bool bNationalSet = false);			// Exposed to Python
-	void setCultureTimes100(PlayerTypes eIndex, int iNewValue, bool bPlots, bool bUpdatePlotGroups, bool bNationalSet = false);			// Exposed to Python
-	void changeCulture(PlayerTypes eIndex, int iChange, bool bPlots, bool bUpdatePlotGroups);		// Exposed to Python
-	void changeCultureTimes100(PlayerTypes eIndex, int iChange, bool bPlots, bool bUpdatePlotGroups);		// Exposed to Python
+	int getCulture(PlayerTypes eIndex) const; // Exposed to Python
+	int getCultureTimes100(PlayerTypes eIndex) const; // Exposed to Python
+	int countTotalCultureTimes100() const; // Exposed to Python
+	PlayerTypes findHighestCulture() const; // Exposed to Python
+	int calculateCulturePercent(PlayerTypes eIndex) const; // Exposed to Python
+	int calculateTeamCulturePercent(TeamTypes eIndex) const; // Exposed to Python
+	void setCulture(PlayerTypes eIndex, int iNewValue, bool bPlots, bool bUpdatePlotGroups, bool bNationalSet = false); // Exposed to Python
+	void setCultureTimes100(PlayerTypes eIndex, int iNewValue, bool bPlots, bool bUpdatePlotGroups, bool bNationalSet = false); // Exposed to Python
+	void changeCulture(PlayerTypes eIndex, int iChange, bool bPlots, bool bUpdatePlotGroups); // Exposed to Python
+	void changeCultureTimes100(PlayerTypes eIndex, int iChange, bool bPlots, bool bUpdatePlotGroups); // Exposed to Python
 
 	int getNumRevolts(PlayerTypes eIndex) const;
 	void changeNumRevolts(PlayerTypes eIndex, int iChange);
 	int getRevoltTestProbability() const;
 
-	bool isTradeRoute(PlayerTypes eIndex) const;																	// Exposed to Python
+	bool isTradeRoute(PlayerTypes eIndex) const; // Exposed to Python
 	void setTradeRoute(PlayerTypes eIndex, bool bNewValue);
 
-	bool isEverOwned(PlayerTypes eIndex) const;																		// Exposed to Python
+	bool isEverOwned(PlayerTypes eIndex) const; // Exposed to Python
 	void setEverOwned(PlayerTypes eIndex, bool bNewValue);
 
-	DllExport bool isRevealed(TeamTypes eIndex, bool bDebug) const;								// Exposed to Python
-	void setRevealed(TeamTypes eIndex, bool bNewValue);											// Exposed to Python
+	DllExport bool isRevealed(TeamTypes eIndex, bool bDebug) const; // Exposed to Python
+	void setRevealed(TeamTypes eIndex, bool bNewValue); // Exposed to Python
 
-	bool getEspionageVisibility(TeamTypes eTeam) const;								// Exposed to Python
+	bool getEspionageVisibility(TeamTypes eTeam) const; // Exposed to Python
 	void setEspionageVisibility(TeamTypes eTeam, bool bVisible, bool bUpdatePlotGroups);
 	void updateEspionageVisibility(bool bUpdatePlotGroups);
 
-	DllExport const CvWString getName(uint uiForm = 0) const;								// Exposed to Python
-	DllExport const wchar* getNameKey() const;															// Exposed to Python
-	void setName(const wchar* szNewValue, bool bFound = false);		// Exposed to Python
+	DllExport const CvWString getName(uint uiForm = 0) const; // Exposed to Python
+	DllExport const wchar* getNameKey() const; // Exposed to Python
+	void setName(const wchar* szNewValue, bool bFound = false); // Exposed to Python
 	void doFoundMessage();
 
 	// Script data needs to be a narrow string for pickling in Python
-	std::string getScriptData() const;																						// Exposed to Python
-	void setScriptData(std::string szNewValue);															// Exposed to Python
+	std::string getScriptData() const; // Exposed to Python
+	void setScriptData(std::string szNewValue); // Exposed to Python
 
-	int getFreeBonus(BonusTypes eIndex) const;																		// Exposed to Python
-	void changeFreeBonus(BonusTypes eIndex, int iChange);																		// Exposed to Python
+	int getFreeBonus(BonusTypes eIndex) const; // Exposed to Python
+	void changeFreeBonus(BonusTypes eIndex, int iChange); // Exposed to Python
 
 	void processNumBonusChange(BonusTypes eIndex, int iOldValue, int iNewValue);
 	void endDeferredBonusProcessing();
 	void startDeferredBonusProcessing();
 	int getNumBonusesFromBase(BonusTypes eIndex, int iBaseNum) const;
 
-	int getNumBonuses(BonusTypes eIndex) const;																		// Exposed to Python
-	bool hasBonus(BonusTypes eIndex) const;															// Exposed to Python
+	int getNumBonuses(BonusTypes eIndex) const; // Exposed to Python
+	bool hasBonus(BonusTypes eIndex) const; // Exposed to Python
 	void changeNumBonuses(BonusTypes eIndex, int iChange);
 
 	int getNumCorpProducedBonuses(BonusTypes eIndex) const;
@@ -1250,104 +1236,104 @@ public:
 	bool isActiveCorporation(CorporationTypes eCorporation) const;
 
 	// How many hammers already put into production of the building
-	int getBuildingProduction(BuildingTypes eIndex) const;							// Exposed to Python
-	void setBuildingProduction(BuildingTypes eIndex, int iNewValue);				// Exposed to Python
-	void changeBuildingProduction(BuildingTypes eIndex, int iChange);				// Exposed to Python
+	int getBuildingProduction(BuildingTypes eIndex) const; // Exposed to Python
+	void setBuildingProduction(BuildingTypes eIndex, int iNewValue); // Exposed to Python
+	void changeBuildingProduction(BuildingTypes eIndex, int iChange); // Exposed to Python
 
-	int getBuildingProductionTime(BuildingTypes eIndex) const;										// Exposed to Python
-	void setBuildingProductionTime(BuildingTypes eIndex, int iNewValue);		// Exposed to Python
-	void changeBuildingProductionTime(BuildingTypes eIndex, int iChange);		// Exposed to Python
+	int getBuildingProductionTime(BuildingTypes eIndex) const; // Exposed to Python
+	void setBuildingProductionTime(BuildingTypes eIndex, int iNewValue); // Exposed to Python
+	void changeBuildingProductionTime(BuildingTypes eIndex, int iChange); // Exposed to Python
 // BUG - Production Decay - start
-	bool isBuildingProductionDecay(BuildingTypes eIndex) const;														// Exposed to Python
-	int getBuildingProductionDecay(BuildingTypes eIndex) const;														// Exposed to Python
-	int getBuildingProductionDecayTurns(BuildingTypes eIndex) const;												// Exposed to Python
+	bool isBuildingProductionDecay(BuildingTypes eIndex) const; // Exposed to Python
+	int getBuildingProductionDecay(BuildingTypes eIndex) const; // Exposed to Python
+	int getBuildingProductionDecayTurns(BuildingTypes eIndex) const; // Exposed to Python
 // BUG - Production Decay - end
 
-	int getProjectProduction(ProjectTypes eIndex) const;								// Exposed to Python
-	void setProjectProduction(ProjectTypes eIndex, int iNewValue);					// Exposed to Python
-	void changeProjectProduction(ProjectTypes eIndex, int iChange);					// Exposed to Python
+	int getProjectProduction(ProjectTypes eIndex) const; // Exposed to Python
+	void setProjectProduction(ProjectTypes eIndex, int iNewValue); // Exposed to Python
+	void changeProjectProduction(ProjectTypes eIndex, int iChange); // Exposed to Python
 
-	int getBuildingOriginalOwner(BuildingTypes eIndex) const;											// Exposed to Python
-	int getBuildingOriginalTime(BuildingTypes eIndex) const;											// Exposed to Python
+	int getBuildingOriginalOwner(BuildingTypes eIndex) const; // Exposed to Python
+	int getBuildingOriginalTime(BuildingTypes eIndex) const; // Exposed to Python
 
-	int getUnitProduction(UnitTypes eIndex) const;											// Exposed to Python
-	void setUnitProduction(UnitTypes eIndex, int iNewValue);								// Exposed to Python
-	void changeUnitProduction(UnitTypes eIndex, int iChange);								// Exposed to Python
+	int getUnitProduction(UnitTypes eIndex) const; // Exposed to Python
+	void setUnitProduction(UnitTypes eIndex, int iNewValue); // Exposed to Python
+	void changeUnitProduction(UnitTypes eIndex, int iChange); // Exposed to Python
 
-	int getUnitProductionTime(UnitTypes eIndex) const;														// Exposed to Python
-	void setUnitProductionTime(UnitTypes eIndex, int iNewValue);						// Exposed to Python
-	void changeUnitProductionTime(UnitTypes eIndex, int iChange);						// Exposed to Python
+	int getUnitProductionTime(UnitTypes eIndex) const; // Exposed to Python
+	void setUnitProductionTime(UnitTypes eIndex, int iNewValue); // Exposed to Python
+	void changeUnitProductionTime(UnitTypes eIndex, int iChange); // Exposed to Python
 // BUG - Production Decay - start
-	bool isUnitProductionDecay(UnitTypes eIndex) const;														// Exposed to Python
-	int getUnitProductionDecay(UnitTypes eIndex) const;														// Exposed to Python
-	int getUnitProductionDecayTurns(UnitTypes eIndex) const;												// Exposed to Python
+	bool isUnitProductionDecay(UnitTypes eIndex) const; // Exposed to Python
+	int getUnitProductionDecay(UnitTypes eIndex) const; // Exposed to Python
+	int getUnitProductionDecayTurns(UnitTypes eIndex) const; // Exposed to Python
 // BUG - Production Decay - end
 
-	int getGreatPeopleUnitRate(UnitTypes eIndex) const;														// Exposed to Python
+	int getGreatPeopleUnitRate(UnitTypes eIndex) const; // Exposed to Python
 	void setGreatPeopleUnitRate(UnitTypes eIndex, int iNewValue);
 	void changeGreatPeopleUnitRate(UnitTypes eIndex, int iChange);
 
-	int getGreatPeopleUnitProgress(UnitTypes eIndex) const;							// Exposed to Python
-	void setGreatPeopleUnitProgress(UnitTypes eIndex, int iNewValue);				// Exposed to Python
-	void changeGreatPeopleUnitProgress(UnitTypes eIndex, int iChange);			// Exposed to Python
+	int getGreatPeopleUnitProgress(UnitTypes eIndex) const; // Exposed to Python
+	void setGreatPeopleUnitProgress(UnitTypes eIndex, int iNewValue); // Exposed to Python
+	void changeGreatPeopleUnitProgress(UnitTypes eIndex, int iChange); // Exposed to Python
 
-	int getSpecialistCount(SpecialistTypes eIndex) const;								// Exposed to Python
+	int getSpecialistCount(SpecialistTypes eIndex) const; // Exposed to Python
 	void setSpecialistCount(SpecialistTypes eIndex, int iNewValue);
 	void changeSpecialistCount(SpecialistTypes eIndex, int iChange);
-	void alterSpecialistCount(SpecialistTypes eIndex, int iChange);					// Exposed to Python
+	void alterSpecialistCount(SpecialistTypes eIndex, int iChange); // Exposed to Python
 
-	int getMaxSpecialistCount(SpecialistTypes eIndex) const;						// Exposed to Python
-	bool isSpecialistValid(SpecialistTypes eIndex, int iExtra = 0) const;					// Exposed to Python
+	int getMaxSpecialistCount(SpecialistTypes eIndex) const; // Exposed to Python
+	bool isSpecialistValid(SpecialistTypes eIndex, int iExtra = 0) const; // Exposed to Python
 	void changeMaxSpecialistCount(SpecialistTypes eIndex, int iChange);
 
-	int getForceSpecialistCount(SpecialistTypes eIndex) const;					// Exposed to Python
-	bool isSpecialistForced() const;																							// Exposed to Python
-	void setForceSpecialistCount(SpecialistTypes eIndex, int iNewValue);		// Exposed to Python
-	void changeForceSpecialistCount(SpecialistTypes eIndex, int iChange);		// Exposed to Python
+	int getForceSpecialistCount(SpecialistTypes eIndex) const; // Exposed to Python
+	bool isSpecialistForced() const; // Exposed to Python
+	void setForceSpecialistCount(SpecialistTypes eIndex, int iNewValue); // Exposed to Python
+	void changeForceSpecialistCount(SpecialistTypes eIndex, int iChange); // Exposed to Python
 
-	int getFreeSpecialistCount(SpecialistTypes eIndex) const;					// Exposed to Python
-	void setFreeSpecialistCount(SpecialistTypes eIndex, int iNewValue);			// Exposed to Python
-	void changeFreeSpecialistCount(SpecialistTypes eIndex, int iChange, bool bUnattributed = false);		// Exposed to Python
-	int getAddedFreeSpecialistCount(SpecialistTypes eIndex) const;		// Exposed to Python
+	int getFreeSpecialistCount(SpecialistTypes eIndex) const; // Exposed to Python
+	void setFreeSpecialistCount(SpecialistTypes eIndex, int iNewValue); // Exposed to Python
+	void changeFreeSpecialistCount(SpecialistTypes eIndex, int iChange, bool bUnattributed = false); // Exposed to Python
+	int getAddedFreeSpecialistCount(SpecialistTypes eIndex) const; // Exposed to Python
 
-	int getImprovementFreeSpecialists(ImprovementTypes eIndex) const;			// Exposed to Python
-	void changeImprovementFreeSpecialists(ImprovementTypes eIndex, int iChange);		// Exposed to Python
+	int getImprovementFreeSpecialists(ImprovementTypes eIndex) const; // Exposed to Python
+	void changeImprovementFreeSpecialists(ImprovementTypes eIndex, int iChange); // Exposed to Python
 
-	int getReligionInfluence(ReligionTypes eIndex) const;													// Exposed to Python
-	void changeReligionInfluence(ReligionTypes eIndex, int iChange);				// Exposed to Python
+	int getReligionInfluence(ReligionTypes eIndex) const; // Exposed to Python
+	void changeReligionInfluence(ReligionTypes eIndex, int iChange); // Exposed to Python
 
-	int getCurrentStateReligionHappiness() const;																	// Exposed to Python
-	int getStateReligionHappiness(ReligionTypes eIndex) const;										// Exposed to Python
-	void changeStateReligionHappiness(ReligionTypes eIndex, int iChange);		// Exposed to Python
+	int getCurrentStateReligionHappiness() const; // Exposed to Python
+	int getStateReligionHappiness(ReligionTypes eIndex) const; // Exposed to Python
+	void changeStateReligionHappiness(ReligionTypes eIndex, int iChange); // Exposed to Python
 
-	int getUnitCombatFreeExperience(UnitCombatTypes eIndex) const;								// Exposed to Python
+	int getUnitCombatFreeExperience(UnitCombatTypes eIndex) const; // Exposed to Python
 	void changeUnitCombatFreeExperience(UnitCombatTypes eIndex, int iChange);
 
-	int getFreePromotionCount(PromotionTypes eIndex) const;												// Exposed to Python
-	bool isFreePromotion(PromotionTypes eIndex) const;														// Exposed to Python
+	int getFreePromotionCount(PromotionTypes eIndex) const; // Exposed to Python
+	bool isFreePromotion(PromotionTypes eIndex) const; // Exposed to Python
 	void changeFreePromotionCount(PromotionTypes eIndex, int iChange);
 
-	int getSpecialistFreeExperience() const;								// Exposed to Python
+	int getSpecialistFreeExperience() const; // Exposed to Python
 	void changeSpecialistFreeExperience(int iChange);
 
-	int getEspionageDefenseModifier() const;										// Exposed to Python
+	int getEspionageDefenseModifier() const; // Exposed to Python
 	void changeEspionageDefenseModifier(int iChange);
 
-	bool isWorkingPlot(int iIndex) const;													// Exposed to Python
-	bool isWorkingPlot(const CvPlot* pPlot) const;													// Exposed to Python
+	bool isWorkingPlot(int iIndex) const; // Exposed to Python
+	bool isWorkingPlot(const CvPlot* pPlot) const; // Exposed to Python
 	void setWorkingPlot(int iIndex, bool bNewValue);
 	void setWorkingPlot(CvPlot* pPlot, bool bNewValue);
-	void alterWorkingPlot(int iIndex);																			// Exposed to Python
+	void alterWorkingPlot(int iIndex); // Exposed to Python
 	void processWorkingPlot(int iPlot, int iChange, bool yieldsOnly = false);
 
-	int getNumRealBuilding(BuildingTypes eIndex) const;														// Exposed to Python
-	void setNumRealBuilding(BuildingTypes eIndex, int iNewValue);		// Exposed to Python
+	int getNumRealBuilding(BuildingTypes eIndex) const; // Exposed to Python
+	void setNumRealBuilding(BuildingTypes eIndex, int iNewValue); // Exposed to Python
 	void setNumRealBuildingTimed(BuildingTypes eIndex, int iNewValue, bool bFirst, PlayerTypes eOriginalOwner, int iOriginalTime);
 
 	bool isValidBuildingLocation(BuildingTypes eIndex) const;
 
-	int getNumFreeBuilding(BuildingTypes eIndex) const;															// Exposed to Python
-	int getNumFreeAreaBuilding(BuildingTypes eIndex) const;															// Exposed to Python
+	int getNumFreeBuilding(BuildingTypes eIndex) const; // Exposed to Python
+	int getNumFreeAreaBuilding(BuildingTypes eIndex) const; // Exposed to Python
 	void setNumFreeBuilding(BuildingTypes eIndex, int iNewValue);
 	void setNumFreeAreaBuilding(BuildingTypes eIndex, int iNewValue);
 
@@ -1362,14 +1348,14 @@ public:
 	void setHasCorporation(CorporationTypes eIndex, bool bNewValue, bool bAnnounce, bool bArrows = true);
 	void applyCorporationModifiers(CorporationTypes eIndex, bool bValue);
 
-	CvCity* getTradeCity(int iIndex) const;																				// Exposed to Python
-	int getTradeRoutes() const;																										// Exposed to Python
+	CvCity* getTradeCity(int iIndex) const; // Exposed to Python
+	int getTradeRoutes() const; // Exposed to Python
 	void clearTradeRoutes();
 	void updateTradeRoutes();
 
-	void clearOrderQueue();																														// Exposed to Python
-	void pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bool bPop, bool bAppend, bool bForce = false, CvPlot* deliveryDestination = NULL, UnitAITypes contractedAIType = NO_UNITAI, byte contractFlags = 0);		// Exposed to Python
-	void popOrder(int iNum, bool bFinish = false, bool bChoose = false, bool bResolveList = true);		// Exposed to Python
+	void clearOrderQueue(); // Exposed to Python
+	void pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bool bPop, bool bAppend, bool bForce = false, CvPlot* deliveryDestination = NULL, UnitAITypes contractedAIType = NO_UNITAI, byte contractFlags = 0); // Exposed to Python
+	void popOrder(int iNum, bool bFinish = false, bool bChoose = false, bool bResolveList = true); // Exposed to Python
 	void startHeadOrder();
 	void stopHeadOrder();
 
@@ -1387,7 +1373,7 @@ public:
 	// fill the kVisible array with buildings that you want shown in city, as well as the number of generics
 	// This function is called whenever CvCity::setLayoutDirty() is called
 	DllExport void getVisibleBuildings(std::list<BuildingTypes>& kVisible, int& iNumGenerics);
-	
+
 	// Fill the kEffectNames array with references to effects in the CIV4EffectInfos.xml to have a
 	// city play a given set of effects. This is called whenever the interface updates the city billboard
 	// or when the zoom level changes
@@ -1401,7 +1387,7 @@ public:
 	DllExport bool getProductionBarPercentages(std::vector<float>& afPercentages) const;
 	DllExport NiColorA getBarBackgroundColor() const;
 	DllExport bool isStarCity() const;
-	
+
 	// Exposed to Python
 	void setWallOverridePoints(const std::vector< std::pair<float, float> >& kPoints); /* points are given in world space ... i.e. PlotXToPointX, etc */
 	DllExport const std::vector< std::pair<float, float> >& getWallOverridePoints() const;
@@ -1413,23 +1399,23 @@ public:
 	bool isEventOccured(EventTypes eEvent) const;
 	void setEventOccured(EventTypes eEvent, bool bOccured);
 
-	int getBuildingYieldChange(BuildingClassTypes eBuildingClass, YieldTypes eYield) const;           // Exposed to Python
-	void setBuildingYieldChange(BuildingClassTypes eBuildingClass, YieldTypes eYield, int iChange);          // Exposed to Python
+	int getBuildingYieldChange(BuildingClassTypes eBuildingClass, YieldTypes eYield) const; // Exposed to Python
+	void setBuildingYieldChange(BuildingClassTypes eBuildingClass, YieldTypes eYield, int iChange); // Exposed to Python
 	void changeBuildingYieldChange(BuildingClassTypes eBuildingClass, YieldTypes eYield, int iChange);
-	int getBuildingCommerceChange(BuildingClassTypes eBuildingClass, CommerceTypes eCommerce) const;           // Exposed to Python
-	void setBuildingCommerceChange(BuildingClassTypes eBuildingClass, CommerceTypes eCommerce, int iChange);          // Exposed to Python
+	int getBuildingCommerceChange(BuildingClassTypes eBuildingClass, CommerceTypes eCommerce) const; // Exposed to Python
+	void setBuildingCommerceChange(BuildingClassTypes eBuildingClass, CommerceTypes eCommerce, int iChange); // Exposed to Python
 	void changeBuildingCommerceChange(BuildingClassTypes eBuildingClass, CommerceTypes eCommerce, int iChange);
-	int getBuildingHappyChange(BuildingClassTypes eBuildingClass) const;           // Exposed to Python
-	void setBuildingHappyChange(BuildingClassTypes eBuildingClass, int iChange);          // Exposed to Python
-	int getBuildingHealthChange(BuildingClassTypes eBuildingClass) const;           // Exposed to Python
-	void setBuildingHealthChange(BuildingClassTypes eBuildingClass, int iChange);          // Exposed to Python
+	int getBuildingHappyChange(BuildingClassTypes eBuildingClass) const; // Exposed to Python
+	void setBuildingHappyChange(BuildingClassTypes eBuildingClass, int iChange); // Exposed to Python
+	int getBuildingHealthChange(BuildingClassTypes eBuildingClass) const; // Exposed to Python
+	void setBuildingHealthChange(BuildingClassTypes eBuildingClass, int iChange); // Exposed to Python
 
-	PlayerTypes getLiberationPlayer(bool bConquest) const;   // Exposed to Python
-	void liberate(bool bConquest);    // Exposed to Python
+	PlayerTypes getLiberationPlayer(bool bConquest) const; // Exposed to Python
+	void liberate(bool bConquest); // Exposed to Python
 
-	void changeNoBonusCount(BonusTypes eBonus, int iChange);   // Exposed to Python
+	void changeNoBonusCount(BonusTypes eBonus, int iChange); // Exposed to Python
 	int getNoBonusCount(BonusTypes eBonus) const;
-	bool isNoBonus(BonusTypes eBonus) const;   // Exposed to Python
+	bool isNoBonus(BonusTypes eBonus) const; // Exposed to Python
 
 	bool isAutoRaze() const;
 
@@ -1450,10 +1436,10 @@ public:
 	int getPopulationgrowthratepercentage() const;
 	void changePopulationgrowthratepercentage(int iChange, bool bAdd);
 	bool isValidTerrainForBuildings(BuildingTypes eIndex) const;
-	
+
 	void changeFreshWater(int iChange);
 	bool hasFreshWater() const;
-	
+
 	bool canUpgradeUnit(UnitTypes eUnit) const;
 	int getUnitClassProductionModifier(UnitClassTypes eIndex) const;				 //Exposed to Python
 	void changeUnitClassProductionModifier(UnitClassTypes eIndex, int iChange);
@@ -1467,18 +1453,18 @@ public:
 	void changeBonusCommerceRateModifier(CommerceTypes eIndex, int iChange);
 	bool isBuiltFoodProducedUnit() const;
 	void setBuiltFoodProducedUnit(bool bNewValue);
-	int getSpecialistGoodHealth() const;																			// Exposed to Python
-	int getSpecialistBadHealth() const;														// Exposed to Python
-	int getSpecialistHappiness() const;																			// Exposed to Python
-	int getSpecialistUnhappiness() const;														// Exposed to Python
+	int getSpecialistGoodHealth() const; // Exposed to Python
+	int getSpecialistBadHealth() const; // Exposed to Python
+	int getSpecialistHappiness() const; // Exposed to Python
+	int getSpecialistUnhappiness() const; // Exposed to Python
 	void changeSpecialistGoodHealth(int iChange);
 	void changeSpecialistBadHealth(int iChange);
 	void changeSpecialistHappiness(int iChange);
 	void changeSpecialistUnhappiness(int iChange);
-	int getImprovementGoodHealth() const;																			// Exposed to Python
-	int getImprovementBadHealth() const;														// Exposed to Python
+	int getImprovementGoodHealth() const; // Exposed to Python
+	int getImprovementBadHealth() const; // Exposed to Python
 	void updateImprovementHealth();
-	int getBonusCommerceRateModifier(CommerceTypes eIndex, BonusTypes eBonus) const;	// Exposed to Python 
+	int getBonusCommerceRateModifier(CommerceTypes eIndex, BonusTypes eBonus) const; // Exposed to Python
 	void clearLostProduction();
 	bool isProductionWonder() const;
 	void updateYieldRate(BuildingTypes eBuilding, YieldTypes eYield, int iChange);
@@ -1489,12 +1475,12 @@ public:
 	//int getImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2) const;
 	//void changeImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2, int iChange);
 	int calculateBonusDefense() const;
-	
+
 	void setCivilizationType(int iCiv);
-	
+
 	int getBuildingCommerceModifier(BuildingClassTypes eBuildingClass, CommerceTypes eCommerce) const;
 	int getBuildingYieldModifier(BuildingClassTypes eBuildingClass, YieldTypes eYield) const;
-	
+
 	int calculateBuildingCommerceModifier(CommerceTypes eCommerce) const;
 	int calculateBuildingYieldModifier(YieldTypes eYield) const;
 	int getRevTrend() const;
@@ -1525,101 +1511,101 @@ public:
 	void checkBuildings(bool bBonus = true, bool bCivics = true, bool bWar = true, bool bPower = true, bool bPopulation = true, bool bAlertOwner = true);
 	void doVicinityBonus();
 	bool isDevelopingCity() const;
-	
+
 	int getMintedCommerceTimes100() const;
 
 	int getUnitCombatExtraStrength(UnitCombatTypes eIndex) const;
 	void changeUnitCombatExtraStrength(UnitCombatTypes eIndex, int iChange);
-	
+
 	int getInvasionChance() const;
 	void changeInvasionChance(int iChange);
-	
+
 	int getInvasionTimer() const;
 	void changeInvasionTimer(int iChange);
 	bool isInvaded() const;
-	
+
 	void doInvasion();
 
 	void setDisabledBuilding(BuildingTypes eIndex, bool bNewValue);
 	bool isDisabledBuilding(BuildingTypes eIndex) const;
 
-//Team Project (5)		
+//Team Project (5)
 	void setReligiouslyDisabledBuilding(BuildingTypes eIndex, bool bNewValue);
 	bool isReligiouslyDisabledBuilding(BuildingTypes eIndex) const;
 
 	bool isZoneOfControl() const;
-	
+
 	int getAdjacentDamagePercent() const;
 	void changeAdjacentDamagePercent(int iChange);
-	
+
 	int getWorkableRadiusOverride() const;
 	void setWorkableRadiusOverride(int iNewVal);
-	
+
 	int getProtectedCultureCount() const;
 	bool isProtectedCulture() const;
 	void changeProtectedCultureCount(int iChange);
-	
+
 	int getNumUnitFullHeal() const;
 	void changeNumUnitFullHeal(int iChange);
-	
+
 	int getCommerceAttacks(CommerceTypes eIndex) const;
 	void changeCommerceAttacks(CommerceTypes eIndex, int iChange);
 	int getMaxCommerceAttacks(CommerceTypes eIndex) const;
 	void changeMaxCommerceAttacks(CommerceTypes eIndex, int iChange);
-	
+
 	void doAttack();
 	void doHeal();
 	void decayCommerce();
-	
+
 	void doCorporation();
 	int getCorporationInfluence(CorporationTypes eCorporation) const;
 	int calculateCorporateTaxes() const;
-	
+
 	int getDisabledPowerTimer() const;
 	void changeDisabledPowerTimer(int iChange);
 	void doDisabledPower();
-	
+
 	int getWarWearinessTimer() const;
 	void changeWarWearinessTimer(int iChange);
 	void doWarWeariness();
-	
+
 	int getEventAnger() const;
 	void changeEventAnger(int iChange);
-	
+
 	int getNonHolyReligionCount() const;
-	
+
 	void calculateExtraTradeRouteProfit(int iExtra, int* &aiTradeYields) const;
-	
+
 	int getMinimumDefenseLevel() const;
 	void setMinimumDefenseLevel(int iNewValue);
-	
+
 	SpecialistTypes getBestSpecialist(int iExtra);
-	
+
 	int getNumPopulationEmployed() const;
 	void setNumPopulationEmployed(int iNewValue);
 	void changeNumPopulationEmployed(int iNewValue);
-	
+
 	void removeWorstCitizenActualEffects(int iNumCitizens, int& iGreatPeopleRate, int& iHappiness, int& iHealthiness, int*& aiYields, int*& aiCommerces);
 	virtual int AI_plotValue(const CvPlot* pPlot, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood = false, bool bIgnoreGrowth = false, bool bIgnoreStarvation = false) = 0;
-	
+
 	void changeHealthPercentPerPopulation(int iChange);
 	int calculatePopulationHealth() const;
 	void changeHappinessPercentPerPopulation(int iChange);
 	int calculatePopulationHappiness() const;
 
 	int getAssignedSpecialistCount() const;
-	
+
 	int getBonusCommercePercentChanges(CommerceTypes eIndex) const;
 	int getBonusCommercePercentChanges(CommerceTypes eIndex, BonusTypes eBonus) const;
 	int getBonusCommercePercentChanges(CommerceTypes eIndex, BuildingTypes eBuilding) const;
 	void changeBonusCommercePercentChanges(CommerceTypes eIndex, int iChange);
-	
+
 	int getAdditionalBaseCommerceRateByBuildingTimes100(CommerceTypes eIndex, BuildingTypes eBuilding);
-	
-		
+
+
 	bool isAutomatedCanBuild(BuildTypes eBuild) const; //Exposed to Python
 	void setAutomatedCanBuild(BuildTypes eBuild, bool bNewValue); //Exposed to Python
-	
+
 	virtual int AI_getMilitaryProductionRateRank() const = 0;
 	virtual int AI_getNavalMilitaryProductionRateRank() const = 0;
 
@@ -1627,15 +1613,15 @@ public:
 	virtual void AI_setMilitaryProductionCity(bool bNewVal) = 0;
 	virtual bool AI_isNavalMilitaryProductionCity() const = 0;
 	virtual void AI_setNavalMilitaryProductionCity(bool bNewVal) = 0;
-	
+
 	int getDistanceMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const;
 	int getNumCitiesMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const;
 	int getHomeAreaMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const;
 	int getOtherAreaMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const;
-	
+
 /************************************************************************************************/
 /* Afforess	                         END                                                        */
-/************************************************************************************************/	
+/************************************************************************************************/
 
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
@@ -1645,7 +1631,7 @@ public:
 	virtual void AI_doTurn() = 0;
 	virtual void AI_assignWorkingPlots() = 0;
 	virtual void AI_updateAssignWork() = 0;
-	virtual bool AI_avoidGrowth() = 0;											// Exposed to Python
+	virtual bool AI_avoidGrowth() = 0; // Exposed to Python
 	virtual int AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth, bool bRemove) = 0;
 	virtual void AI_chooseProduction() = 0;
 	//	KOSHLING - initialisation called on every city prior to performing unit mission allocation logic
@@ -1712,7 +1698,7 @@ public:
 	virtual void AI_setAssignWorkDirty(bool bNewValue) = 0;
 	virtual bool AI_isChooseProductionDirty() = 0;
 	virtual void AI_setChooseProductionDirty(bool bNewValue) = 0;
-	virtual bool AI_isEmphasize(EmphasizeTypes eIndex) = 0;											// Exposed to Python
+	virtual bool AI_isEmphasize(EmphasizeTypes eIndex) = 0; // Exposed to Python
 	virtual void AI_setEmphasize(EmphasizeTypes eIndex, bool bNewValue) = 0;
 	virtual bool AI_isEmphasizeSpecialist(SpecialistTypes eIndex) = 0;
 	virtual void AI_setEmphasizeSpecialist(SpecialistTypes eIndex, bool bNewValue) = 0;
@@ -1732,7 +1718,7 @@ public:
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 	virtual int AI_totalBestBuildValue(CvArea* pArea) = 0;
-	virtual int AI_countBestBuilds(CvArea* pArea) = 0;													// Exposed to Python
+	virtual int AI_countBestBuilds(CvArea* pArea) = 0; // Exposed to Python
 	virtual BuildTypes AI_getBestBuild(int iIndex) = 0;
 	virtual void AI_updateBestBuild() = 0;
 	virtual int AI_cityValue() const = 0;
@@ -1745,7 +1731,7 @@ public:
 	virtual int AI_playerCloseness(PlayerTypes eIndex, int iMaxDistance = 7) = 0;
 	virtual int AI_cityThreat(TeamTypes eTargetTeam = NO_TEAM, int* piThreatModifier = NULL) = 0;
 	virtual BuildingTypes AI_bestAdvancedStartBuilding(int iPass) = 0;
-	
+
 	virtual int AI_getWorkersHave() = 0;
 	virtual int AI_getWorkersNeeded() = 0;
 	virtual void AI_changeWorkersHave(int iChange) = 0;
@@ -1777,7 +1763,7 @@ public:
 	void recalculateCultureDistances(int iMaxDistance) const;
 	int calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const;
 	void clearCultureDistanceCache();
-	int cultureDistance(int iDX, int iDY, bool bForce = false) const;														// Exposed to Python
+	int cultureDistance(int iDX, int iDY, bool bForce = false) const; // Exposed to Python
 /************************************************************************************************/
 /* phunny_pharmer                End		 05/03/10                                           */
 /************************************************************************************************/
@@ -1929,10 +1915,10 @@ protected:
 	int m_iNumPopulationEmployed;
 	int m_iHappinessPercentPerPopulation;
 	int m_iHealthPercentPerPopulation;
-	
+
 	int m_iLostProduction;
 	int m_iEventAnger;
-	
+
 	int m_iFreshWater;
 
 	int* m_aiBonusCommerceRateModifier;
@@ -1948,7 +1934,7 @@ protected:
 	mutable bool* m_pabHasVicinityBonus;
 	mutable bool* m_pabHasRawVicinityBonus;
 	bool* m_pabDisabledBuilding;
-//Team Project (5)		
+//Team Project (5)
 	bool* m_pabReligiouslyDisabledBuilding;
 	int* m_paiUnitCombatExtraStrength;
 	int* m_aiCommerceAttacks;
@@ -1959,7 +1945,7 @@ protected:
 	std::vector<BuildingYieldModifier> m_aBuildingYieldModifier;
 
 	std::vector<PropertySpawns> m_aPropertySpawns;
-	
+
 	CultureLevelTypes m_eOccupationCultureLevel;
 /************************************************************************************************/
 /* Afforess	                          END                                                       */
@@ -2215,7 +2201,7 @@ protected:
 
 /************************************************************************************************/
 /* Afforess	                               END                                                  */
-/************************************************************************************************/	
+/************************************************************************************************/
 
 	int getExtraProductionDifference(int iExtra, UnitTypes eUnit) const;
 	int getExtraProductionDifference(int iExtra, BuildingTypes eBuilding) const;
@@ -2326,41 +2312,41 @@ public:
 	int getExtraLocalCaptureResistanceModifier() const;
 //Team Project (1)
 	void updateTechHappinessandHealth();
-	
+
 	int getExtraLocalDynamicDefense() const;
 	void setExtraLocalDynamicDefense(int iValue);
 	void changeExtraLocalDynamicDefense(int iChange);
-	
+
 	int getExtraRiverDefensePenalty() const;
 	void setExtraRiverDefensePenalty(int iValue);
 	void changeExtraRiverDefensePenalty(int iChange);
-	
+
 	int getExtraLocalRepel() const;
 	void setExtraLocalRepel(int iValue);
 	void changeExtraLocalRepel(int iChange);
-	
+
 	int getExtraMinDefense() const;
 	void setExtraMinDefense(int iValue);
 	void changeExtraMinDefense(int iChange);
-	
+
 	int getExtraBuildingDefenseRecoverySpeedModifier() const;
 	void setExtraBuildingDefenseRecoverySpeedModifier(int iValue);
 	void changeExtraBuildingDefenseRecoverySpeedModifier(int iChange);
-	
+
 	int getModifiedBuildingDefenseRecoverySpeedCap() const;
 	void setModifiedBuildingDefenseRecoverySpeedCap(int iValue);
 	void changeModifiedBuildingDefenseRecoverySpeedCap(int iChange);
-	
+
 	int getExtraCityDefenseRecoverySpeedModifier() const;
 	void setExtraCityDefenseRecoverySpeedModifier(int iValue);
 	void changeExtraCityDefenseRecoverySpeedModifier(int iChange);
-	
-	bool canDamageAttackingUnitCombat(UnitCombatTypes eUnitCombat) const;	
+
+	bool canDamageAttackingUnitCombat(UnitCombatTypes eUnitCombat) const;
 	int getDamageAttackingUnitCombatCount(UnitCombatTypes eUnitCombat) const;
 	void setDamageAttackingUnitCombatCount(UnitCombatTypes eUnitCombat, int iValue);
 	void changeDamageAttackingUnitCombatCount(UnitCombatTypes eUnitCombat, int iChange);
-	
-	bool canBuildingCostPopulation(BuildingTypes eBuilding) const;	
+
+	bool canBuildingCostPopulation(BuildingTypes eBuilding) const;
 	int getBuildingCostPopulation(BuildingTypes eBuilding) const;
 	void setBuildingCostPopulation(BuildingTypes eBuilding, int iValue);
 	void changeBuildingCostPopulationCount(BuildingTypes eBuilding, int iChange);

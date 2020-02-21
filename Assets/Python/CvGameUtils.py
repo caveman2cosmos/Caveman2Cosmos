@@ -34,7 +34,7 @@ class CvGameUtils:
 		self.iHimejiCastle = GC.getInfoTypeForString("BUILDING_HIMEJI_CASTLE")
 		self.iHimejiCastleObsoleteTech = GC.getBuildingInfo(self.iHimejiCastle).getObsoleteTech()
 
-		self.iReplicators = GC.getInfoTypeForString("BONUS_PERSONAL_REPLICATORS")
+		self.iReplicators = GC.getInfoTypeForString("BONUS_REPLICATORS")
 		self.iRapidPrototyping = GC.getInfoTypeForString("TECH_RAPID_PROTOTYPING")
 
 	def isVictoryTest(self):

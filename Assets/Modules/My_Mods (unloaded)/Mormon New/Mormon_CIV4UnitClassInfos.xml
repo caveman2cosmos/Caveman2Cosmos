@@ -9,19 +9,11 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_MORMON_MISSIONARY</Type>
 			<Description>TXT_KEY_UNIT_MORMON_MISSIONARY</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MORMON_MISSIONARY</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_RETURNED_MISSIONARY</Type>
 			<Description>TXT_KEY_UNIT_RETURNED_MISSIONARY</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_RETURNED_MISSIONARY</DefaultUnit>
 		</UnitClassInfo>
 	</UnitClassInfos>

@@ -35,7 +35,7 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_BOOBY_TRAPS</BuildingClass>
 			<Type>BUILDING_BOOBY_TRAPS</Type>
-			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_MILITARY_ROBOTS</ID></Has></NewCityFree>
+			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_MILITARY_ROBOTICS</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_TAVERN</BuildingClass>

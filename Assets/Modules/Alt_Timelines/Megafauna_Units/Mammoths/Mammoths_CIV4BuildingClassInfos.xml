@@ -9,33 +9,22 @@
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_MAMMOTH_HERD</Type>
 			<Description>TXT_KEY_BUILDING_MAMMOTH_HERD</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_MAMMOTH_HERD</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_MAMMOTH_TRAINER</Type>
 			<Description>TXT_KEY_BUILDING_MAMMOTH_TRAINER</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_MAMMOTH_TRAINER</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_MAMMOTH_TRAINER_HERITAGE</Type>
 			<Description>TXT_KEY_BUILDING_MAMMOTH_TRAINER_HERITAGE</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_MAMMOTH_TRAINER_HERITAGE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_MAMMOTH_TRAINER_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_MAMMOTH_TRAINER_EFFECT</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_MAMMOTH_TRAINER_EFFECT</DefaultBuilding>
 		</BuildingClassInfo>
 	</BuildingClassInfos>

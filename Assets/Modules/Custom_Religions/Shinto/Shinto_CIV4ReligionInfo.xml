@@ -8,10 +8,10 @@
 	<ReligionInfos>
 		<ReligionInfo>
 			<Type>RELIGION_SHINTO</Type>
-			<Description>TXT_KEY_RELIGION_SHINTO</Description>
-			<Adjective>TXT_KEY_RELIGION_SHINTO_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_RELIGION_SHINTO_PEDIA</Civilopedia>
-			<TechPrereq>TECH_SHINTOISM</TechPrereq>
+			<Description>TXT_KEY_TECH_SHINTO</Description>
+			<Adjective>TXT_KEY_TECH_SHINTO_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_TECH_SHINTO_PEDIA</Civilopedia>
+			<TechPrereq>TECH_SHINTO</TechPrereq>
 			<FreeUnitClass>UNITCLASS_SHINTO_MISSIONARY</FreeUnitClass>
 			<iFreeUnits>1</iFreeUnits>
 			<iSpreadFactor>20</iSpreadFactor>

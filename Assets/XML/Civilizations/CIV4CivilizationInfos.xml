@@ -82,15 +82,13 @@
 				<City>TXT_KEY_CITY_NAME_COLUMBUS</City>
 				<City>TXT_KEY_CITY_NAME_LE_BAM</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_NAMERICAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_NORTH_AMERICAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -103,12 +101,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -194,15 +192,13 @@
 				<City>TXT_KEY_CITY_NAME_AD_DAR_AL_BAIDAA</City><!-- 1068–1200 -->
 				<City>TXT_KEY_CITY_NAME_EL_MANSURA</City><!-- 1219 -->
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_MIDDLEEASTERN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -215,12 +211,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -295,15 +291,13 @@
 				<City>TXT_KEY_CITY_NAME_GASUR</City>
 				<City>TXT_KEY_CITY_NAME_CALAH</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_MIDDLEEASTERN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -316,12 +310,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -393,15 +387,13 @@
 				<City>Xitla</City>
 				<City>Taxco</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_NAMERICAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_NORTH_AMERICAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -414,12 +406,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -493,15 +485,13 @@
 				<City>TXT_KEY_CITY_NAME_AWAN</City>
 				<City>TXT_KEY_CITY_NAME_RIBLAH</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_MIDDLEEASTERN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -514,12 +504,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -593,15 +583,13 @@
 				<City>TXT_KEY_CITY_NAME_CHERSON</City>
 				<City>TXT_KEY_CITY_NAME_IUSTINIANA_NOVA</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_MIDDLEEASTERN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -614,12 +602,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -698,15 +686,13 @@
 				<City>TXT_KEY_CITY_NAME_OLBIA</City>
 				<City>TXT_KEY_CITY_NAME_ZAMA</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_AFRICAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_AFRICAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -719,12 +705,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -810,15 +796,13 @@
 				<City>TXT_KEY_CITY_NAME_DIVONA</City><!-- Named after a celtic godess, today Cahors (France) -->
 				<City>TXT_KEY_CITY_NAME_CATUMAGOS</City><!-- Means battlefield -->
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_EUROPEAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_EUROPEAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -831,12 +815,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -912,15 +896,13 @@
 				<City>TXT_KEY_CITY_NAME_XIKANG</City>
 				<City>Paikang</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_ASIAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_ASIAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -933,12 +915,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -1022,15 +1004,13 @@
 				<City>TXT_KEY_CITY_NAME_SEMNA</City>
 				<City>TXT_KEY_CITY_NAME_AMARA</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_AFRICAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_AFRICAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -1043,12 +1023,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -1128,15 +1108,13 @@
 				<City>TXT_KEY_CITY_NAME_LANCASTER</City>
 				<City>TXT_KEY_CITY_NAME_BLACKPOOL</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_EUROPEAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_EUROPEAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -1149,12 +1127,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -1234,15 +1212,13 @@
 				<City>Bishoftu</City>
 				<City>Finote Selam</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_AFRICAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_AFRICAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -1255,12 +1231,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -1340,15 +1316,13 @@
 				<City>Saint Denis</City>
 				<City>Meaux</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_EUROPEAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_EUROPEAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -1361,12 +1335,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -1453,15 +1427,13 @@
 				<City>TXT_KEY_CITY_NAME_HILDESHEIM</City>
 				<City>TXT_KEY_CITY_NAME_ERLANGEN</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_EUROPEAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_EUROPEAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -1474,12 +1446,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -1568,15 +1540,13 @@
 				<City>TXT_KEY_CITY_NAME_KIOS</City>
 				<City>TXT_KEY_CITY_NAME_DEMETRIAS</City><!-- 294 BC -->
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_EUROPEAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_EUROPEAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -1589,12 +1559,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -1704,15 +1674,13 @@
 				<City>Til Barsip</City>
 				<City>Sam'al</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_MIDDLEEASTERN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -1725,12 +1693,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -1802,15 +1770,13 @@
 				<City>TXT_KEY_CITY_NAME_PASSAU</City>
 				<City>TXT_KEY_CITY_NAME_HAGENAU</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_EUROPEAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_EUROPEAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -1823,12 +1789,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -1910,15 +1876,13 @@
 				<City>TXT_KEY_CITY_NAME_TITIQAQA</City>
 				<City>TXT_KEY_CITY_NAME_WILLKAPAMPA</City><!-- 1539 -->
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_SAMERICAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_SOUTH_AMERICAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -1931,12 +1895,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -2056,15 +2020,13 @@
 				<City>TXT_KEY_CITY_NAME_NAINITAL</City><!-- 1841 -->
 				<City>TXT_KEY_CITY_NAME_KALYANI</City><!-- 1950 -->
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_ASIAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_ASIAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -2077,12 +2039,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -2161,15 +2123,13 @@
 				<City>Echigo</City>
 				<City>TXT_KEY_CITY_NAME_SUO</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_ASIAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_ASIAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -2182,12 +2142,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -2259,15 +2219,13 @@
 				<City>Khum Sare</City>
 				<City>Kaoh Nheaek</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_ASIAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_ASIAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -2280,12 +2238,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -2356,15 +2314,13 @@
 				<City>Ulijin</City>
 				<City>Sacheon</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_ASIAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_ASIAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -2377,12 +2333,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -2459,15 +2415,13 @@
 				<City>TXT_KEY_CITY_NAME_NIORO</City>
 				<City>TXT_KEY_CITY_NAME_SEGOU_KOURA</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_AFRICAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_AFRICAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -2480,12 +2434,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -2556,15 +2510,13 @@
 				<City>TXT_KEY_CITY_NAME_MANI</City>
 				<City>Belise</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_NAMERICAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_NORTH_AMERICAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -2577,12 +2529,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -2658,15 +2610,13 @@
 				<City>TXT_KEY_CITY_NAME_BAYANHONGOR</City>
 				<City>TXT_KEY_CITY_NAME_ALTAI</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_ASIAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_ASIAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -2679,12 +2629,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -2778,15 +2728,13 @@
 				<City>TXT_KEY_CITY_NAME_AYUHWASI</City><!-- 1700-1745 -->
 				<City>TXT_KEY_CITY_NAME_KYKOTSMOVI</City><!-- 1890 -->
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_NAMERICAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_NORTH_AMERICAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -2799,12 +2747,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -2880,15 +2828,13 @@
 				<City>TXT_KEY_CITY_NAME_LELYSTAD</City>
 				<City>TXT_KEY_CITY_NAME_ALMERE</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_EUROPEAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_EUROPEAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -2901,12 +2847,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -2980,15 +2926,13 @@
 				<City>Eleskirt</City>
 				<City>Ahlat</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_MIDDLEEASTERN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -3001,12 +2945,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -3096,15 +3040,13 @@
 				<City>TXT_KEY_CITY_NAME_HECATOMPYLOS</City>
 				<City>TXT_KEY_CITY_NAME_GANDUTAVA</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_MIDDLEEASTERN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -3117,12 +3059,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -3202,15 +3144,13 @@
 				<City>TXT_KEY_CITY_NAME_ALMADA</City>
 				<City>TXT_KEY_CITY_NAME_LEIXOES</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_EUROPEAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_EUROPEAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -3223,12 +3163,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -3318,15 +3258,13 @@
 				<City>TXT_KEY_CITY_NAME_ADRIA</City>
 				<City>TXT_KEY_CITY_NAME_ARTAXATA</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_EUROPEAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_EUROPEAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -3339,12 +3277,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -3420,15 +3358,13 @@
 				<City>Petrozavodsk</City>
 				<City>Kaliningrad</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_EUROPEAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_EUROPEAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -3441,12 +3377,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -3530,15 +3466,13 @@
 				<City>TXT_KEY_CITY_NAME_KANCHANABURI</City>
 				<City>TXT_KEY_CITY_NAME_PRACHUAP_KHIRI_KHAN</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_ASIAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_ASIAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -3551,12 +3485,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -3631,15 +3565,13 @@
 				<City>Puertollano</City>
 				<City>Oliva</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_EUROPEAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_EUROPEAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -3652,12 +3584,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -3731,15 +3663,13 @@
 				<City>Erumma</City>
 				<City>Parasu</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_MIDDLEEASTERN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -3752,12 +3682,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -3836,15 +3766,13 @@
 				<City>TXT_KEY_CITY_NAME_SKARA</City><!-- 1100 -->
 				<City>TXT_KEY_CITY_NAME_THRAELLBORG</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_EUROPEAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_EUROPEAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -3857,12 +3785,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -3937,15 +3865,13 @@
 				<City>TXT_KEY_CITY_NAME_MPONGOZA</City>
 				<City>TXT_KEY_CITY_NAME_INANDA</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_AFRICAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_AFRICAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -3958,12 +3884,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -4034,15 +3960,13 @@
 				<City>Collie</City>
 				<City>Northam</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_OCEANIAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_OCEANIAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -4055,12 +3979,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -4136,15 +4060,13 @@
 				<City>Storvorde</City>
 				<City>Nibe</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_EUROPEAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_EUROPEAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -4157,12 +4079,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -4255,15 +4177,13 @@
 				<City>TXT_KEY_CITY_NAME_TINAWATAWA</City><!-- 1665-1670 -->
 				<City>TXT_KEY_CITY_NAME_GANNEIOUS</City><!-- 1665-1670 -->
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_NAMERICAN</BuildingType>
-				</Building>
-			</Buildings>
 			<FreeBuildingClasses>
 				<FreeBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_NORTH_AMERICAN</BuildingClassType>
 					<bFreeBuildingClass>1</bFreeBuildingClass>
 				</FreeBuildingClass>
 			</FreeBuildingClasses>
@@ -4276,12 +4196,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -4299,139 +4219,6 @@
 			</Leaders>
 			<CivilizationSelectionSound>AS3D_NATIVE_AMERICA_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_NATIVE_AMERICA_ORDER</CivilizationActionSound>
-		</CivilizationInfo>
-		<CivilizationInfo>
-			<Type>CIVILIZATION_MINOR</Type>
-			<Description>TXT_KEY_CIV_MINOR_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_MINOR_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_MINOR_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_MINOR_PEDIA</Civilopedia>
-			<DefaultPlayerColor>PLAYERCOLOR_WHITE</DefaultPlayerColor>
-			<ArtDefineTag>ART_DEF_CIVILIZATION_MINOR</ArtDefineTag>
-			<ArtStyleType>ARTSTYLE_BARBARIAN</ArtStyleType>
-			<UnitArtStyleType>UNIT_ARTSTYLE_BARBARIAN</UnitArtStyleType>
-			<Cities>
-				<City>TXT_KEY_CITY_NAME_ELLASAR</City>
-				<City>TXT_KEY_CITY_NAME_NERADI</City>
-				<City>TXT_KEY_CITY_NAME_CABACE</City>
-				<City>TXT_KEY_CITY_NAME_NASHART</City>
-				<City>TXT_KEY_CITY_NAME_CARACARA</City>
-				<City>TXT_KEY_CITY_NAME_TYRE</City>
-				<City>TXT_KEY_CITY_NAME_KALIN</City>
-				<City>TXT_KEY_CITY_NAME_LUBARDA</City>
-				<City>TXT_KEY_CITY_NAME_KANTARI</City>
-				<City>TXT_KEY_CITY_NAME_JABLANICA</City>
-				<City>TXT_KEY_CITY_NAME_STUBLOVI</City>
-				<City>TXT_KEY_CITY_NAME_KOSTROVO</City>
-				<City>TXT_KEY_CITY_NAME_BATAGI</City>
-				<City>TXT_KEY_CITY_NAME_NANDWAI</City>
-				<City>TXT_KEY_CITY_NAME_NAGARIA</City>
-				<City>TXT_KEY_CITY_NAME_BHATHA</City>
-				<City>TXT_KEY_CITY_NAME_SARKHADI</City>
-				<City>TXT_KEY_CITY_NAME_TOPOLIK</City>
-				<City>TXT_KEY_CITY_NAME_SHABAS</City>
-				<City>TXT_KEY_CITY_NAME_SURANDA</City>
-				<City>TXT_KEY_CITY_NAME_MARIONA</City>
-				<City>TXT_KEY_CITY_NAME_KUROL</City>
-				<City>TXT_KEY_CITY_NAME_SITIO</City>
-				<City>TXT_KEY_CITY_NAME_KUTASHUAH</City>
-				<City>TXT_KEY_CITY_NAME_BANOGA</City>
-				<City>TXT_KEY_CITY_NAME_KRACINAN</City>
-				<City>TXT_KEY_CITY_NAME_LENGARU</City>
-				<City>TXT_KEY_CITY_NAME_CHEROKEE</City>
-				<City>TXT_KEY_CITY_NAME_ANASAZI</City>
-				<City>TXT_KEY_CITY_NAME_TEOIHUACAN</City>
-				<City>TXT_KEY_CITY_NAME_OLMEC</City>
-				<City>TXT_KEY_CITY_NAME_ZAPOTEC</City>
-				<City>TXT_KEY_CITY_NAME_CHINOOK</City>
-				<City>TXT_KEY_CITY_NAME_APACHE</City>
-				<City>TXT_KEY_CITY_NAME_CHEHALIS</City>
-				<City>TXT_KEY_CITY_NAME_ILLINOIS</City>
-				<City>TXT_KEY_CITY_NAME_NAVAJO</City>
-				<City>TXT_KEY_CITY_NAME_ELLASAR</City>
-				<City>TXT_KEY_CITY_NAME_CARIB</City>
-				<City>TXT_KEY_CITY_NAME_SAXON</City>
-				<City>TXT_KEY_CITY_NAME_VANDAL</City>
-				<City>TXT_KEY_CITY_NAME_GOTH</City>
-				<City>TXT_KEY_CITY_NAME_ANGLE</City>
-				<City>TXT_KEY_CITY_NAME_MAGYAR</City>
-				<City>TXT_KEY_CITY_NAME_KHAZAK</City>
-				<City>TXT_KEY_CITY_NAME_BULGAR</City>
-				<City>TXT_KEY_CITY_NAME_ALEMANNI</City>
-				<City>TXT_KEY_CITY_NAME_BURGUNDIAN</City>
-				<City>TXT_KEY_CITY_NAME_GEPID</City>
-				<City>TXT_KEY_CITY_NAME_HUN</City>
-				<City>TXT_KEY_CITY_NAME_JUTE</City>
-				<City>TXT_KEY_CITY_NAME_PHOENICIAN</City>
-				<City>TXT_KEY_CITY_NAME_ETRUSCAN</City>
-				<City>TXT_KEY_CITY_NAME_THRACIAN</City>
-				<City>TXT_KEY_CITY_NAME_PHRYGIAN</City>
-				<City>TXT_KEY_CITY_NAME_GAUL</City>
-				<City>TXT_KEY_CITY_NAME_MINOAN</City>
-				<City>TXT_KEY_CITY_NAME_CIMMERIAN</City>
-				<City>TXT_KEY_CITY_NAME_LIGURIAN</City>
-				<City>TXT_KEY_CITY_NAME_NUMIDIAN</City>
-				<City>TXT_KEY_CITY_NAME_SARMATIAN</City>
-				<City>TXT_KEY_CITY_NAME_SCYTHIAN</City>
-				<City>TXT_KEY_CITY_NAME_VISIGOTH</City>
-				<City>TXT_KEY_CITY_NAME_ASSYRIAN</City>
-				<City>TXT_KEY_CITY_NAME_HITTITE</City>
-				<City>TXT_KEY_CITY_NAME_HARAPPA</City>
-				<City>TXT_KEY_CITY_NAME_MAURYAN</City>
-				<City>TXT_KEY_CITY_NAME_PARTHIAN</City>
-				<City>TXT_KEY_CITY_NAME_NUBIAN</City>
-				<City>TXT_KEY_CITY_NAME_BACTRIAN</City>
-				<City>TXT_KEY_CITY_NAME_CIRCASSIAN</City>
-				<City>TXT_KEY_CITY_NAME_CUMAN</City>
-				<City>TXT_KEY_CITY_NAME_HURRIAN</City>
-				<City>TXT_KEY_CITY_NAME_KASSITE</City>
-				<City>TXT_KEY_CITY_NAME_BANTU</City>
-				<City>TXT_KEY_CITY_NAME_KHOISAN</City>
-				<City>TXT_KEY_CITY_NAME_LIBYAN</City>
-				<City>TXT_KEY_CITY_NAME_SHANGIAN</City>
-				<City>TXT_KEY_CITY_NAME_YAYOI</City>
-				<City>TXT_KEY_CITY_NAME_ZHOU</City>
-				<City>TXT_KEY_CITY_NAME_AINU</City>
-				<City>TXT_KEY_CITY_NAME_POLYNESIAN</City>
-				<City>TXT_KEY_CITY_NAME_ARYAN</City>
-				<City>TXT_KEY_CITY_NAME_AVAR</City>
-				<City>TXT_KEY_CITY_NAME_OGHUZ</City>
-				<City>TXT_KEY_CITY_NAME_XIONGNU</City>
-				<City>TXT_KEY_CITY_NAME_KUSHAN</City>
-				<City>TXT_KEY_CITY_NAME_YUEZHI</City>
-				<City>TXT_KEY_CITY_NAME_SAKAE</City>
-				<City>TXT_KEY_CITY_NAME_UZBEK</City>
-				<City>TXT_KEY_CITY_NAME_TATARS</City>
-			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
-			<InitialCivics>
-				<CivicType>CIVIC_ANARCHISM</CivicType>
-				<CivicType>CIVIC_OBEDIENCE</CivicType>
-				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
-				<CivicType>CIVIC_MILITIA</CivicType>
-				<CivicType>CIVIC_IRRELIGION</CivicType>
-				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
-				<CivicType>CIVIC_UNORGANIZED</CivicType>
-			</InitialCivics>
-			<Leaders>
-				<Leader>
-					<LeaderName>LEADER_BARBARIAN</LeaderName>
-					<bLeaderAvailability>1</bLeaderAvailability>
-				</Leader>
-			</Leaders>
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_ANIMAL_PREDATOR</Type>
@@ -4452,12 +4239,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -4488,12 +4275,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -4524,12 +4311,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -4599,17 +4386,17 @@
 				<City>Ord</City>
 				<City>Zga</City>
 			</Cities>
-			<Buildings>
-				<Building>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE</BuildingClassType>
-					<BuildingType>BUILDING_CULTURE_NEANDERTHAL</BuildingType>
-				</Building>
-			</Buildings>
+			<FreeBuildingClasses>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_NEANDERTHAL</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+			</FreeBuildingClasses>
 			<FreeTechs>
-				<FreeTech>
-					<TechType>TECH_DUMMY_NEANDERTHAL</TechType>
-					<bFreeTech>1</bFreeTech>
-				</FreeTech>
 				<FreeTech>
 					<TechType>TECH_CAVE_DWELLING</TechType>
 					<bFreeTech>1</bFreeTech>
@@ -4619,7 +4406,7 @@
 					<bFreeTech>1</bFreeTech>
 				</FreeTech>
 				<FreeTech>
-					<TechType>TECH_NOMADIC_LIFESTYLE</TechType>
+					<TechType>TECH_NOMADISM</TechType>
 					<bFreeTech>1</bFreeTech>
 				</FreeTech>
 				<FreeTech>
@@ -4646,12 +4433,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -4682,12 +4469,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -4809,12 +4596,12 @@
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_NOTRASH</CivicType>
-				<CivicType>CIVIC_NOBORDERS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NO_SPEAK</CivicType>
-				<CivicType>CIVIC_NOFARM</CivicType>
-				<CivicType>CIVIC_NO_CURRENCY</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
 			</InitialCivics>
 			<Leaders>

@@ -7,12 +7,9 @@ from CvPythonExtensions import *
 # If your mod changes some of these XML variables, you'll need to find an appropriate replacement
 
 # Civs
-sXMLMinor = 'CIVILIZATION_MINOR'
 sXMLBarbarian = 'CIVILIZATION_BARBARIAN'
 
 # Units
-sXMLWarrior = 'UNITCLASS_CLUBMAN'
-sXMLWorker = 'UNITCLASS_WORKER'
 sXMLGeneral = 'UNIT_GREAT_GENERAL'
 
 # Buildings

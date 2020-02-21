@@ -9,10 +9,6 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_CANAANITE_MISSIONARY</Type>
 			<Description>TXT_KEY_UNIT_CANAANITE_MISSIONARY</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_CANAANITE_MISSIONARY</DefaultUnit>
 		</UnitClassInfo>
 	</UnitClassInfos>

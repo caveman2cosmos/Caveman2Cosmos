@@ -475,7 +475,7 @@ def checkRebelBonuses(argsList):
 			ix = pCity.getX()
 			iy = pCity.getY()
 
-			[iWorker, iBestDefender, iCounter, iAttack] = RevUtils.getHandoverUnitTypes(pCity, newOwner, newOwner)
+			[iWorker, iBestDefender, iCounter, iAttack] = RevUtils.getHandoverUnitTypes(pCity)
 
 			newUnitList = []
 

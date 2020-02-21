@@ -122,7 +122,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_SUBDUED_CROW</Class>
 			<Type>UNIT_SUBDUED_CROW</Type>
-			<Capture>UNITCLASS_SUBDUED_CROW</Capture>
+			<Capture>UNIT_SUBDUED_CROW</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>

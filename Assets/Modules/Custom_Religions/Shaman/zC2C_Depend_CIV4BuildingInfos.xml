@@ -33,7 +33,7 @@
 			<Type>BUILDING_DEER_MYTH</Type>
 			<AndDependencyTypes>
              	<DependencyType>BUILDINGCLASS_DEER_MYTH</DependencyType>
-             	<DependencyType>RELIGION_SHAMAN</DependencyType>
+             	<DependencyType>RELIGION_SHAMANISM</DependencyType>
  			</AndDependencyTypes>
 			<GlobalBuildingClassProductionModifiers>
 				<BuildingClassProductionModifier>

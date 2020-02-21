@@ -11,8 +11,16 @@ def init(dir):
 	global x, y
 	print "ScreenResolution.init\nSet custom resolution from CivilizationIV.ini if found."
 	import ConfigParser
+	path = dir + "\CivilizationIV.ini"
 	Config = ConfigParser.ConfigParser()
-	Config.read(dir + "\CivilizationIV.ini")
+	Config.read(path)
+	# Set correct default era if current is invalid.
+	szEra = Config.get("GAME", "Era")
+	if szEra[:3] != "C2C":
+		Config.set("GAME", "Era", "C2C_ERA_PREHISTORIC")
+		file = open(path, 'wb')
+		Config.write(file)
+		file.close()
 	#Config.sections()
 	X0 = Config.get("DEBUG", "ScreenWidth")
 	Y0 = Config.get("DEBUG", "ScreenHeight")

@@ -11,16 +11,12 @@
 			<Type>BUILDINGCLASS_CAVES</Type>
 			<Description>TXT_KEY_BUILDING_CAVES</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_CAVES</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NARA</Type>
 			<Description>TXT_KEY_BUILDING_NARA</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_NARA</DefaultBuilding>
 		</BuildingClassInfo>
 <!-- Christian -->
@@ -28,16 +24,12 @@
 			<Type>BUILDINGCLASS_SAN_MARCOS_CATHEDRAL</Type>
 			<Description>TXT_KEY_BUILDING_SAN_MARCOS_CATHEDRAL</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_SAN_MARCOS_CATHEDRAL</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_VATICAN_LIBRARY</Type>
 			<Description>TXT_KEY_BUILDING_VATICAN_LIBRARY</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_VATICAN_LIBRARY</DefaultBuilding>
 		</BuildingClassInfo>
 <!-- Confucian -->
@@ -45,8 +37,6 @@
 			<Type>BUILDINGCLASS_CONFUCIAN_SCHOOL</Type>
 			<Description>TXT_KEY_BUILDING_CONFUCIAN_SCHOOL</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_CONFUCIAN_SCHOOL</DefaultBuilding>
 		</BuildingClassInfo>
 <!-- Judaism -->
@@ -54,8 +44,6 @@
 			<Type>BUILDINGCLASS_SOLOMON</Type>
 			<Description>TXT_KEY_BUILDING_SOLOMON</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_SOLOMON</DefaultBuilding>
 		</BuildingClassInfo>
 <!-- Hindu -->
@@ -63,16 +51,12 @@
 			<Type>BUILDINGCLASS_AKSHARDHAM</Type>
 			<Description>TXT_KEY_BUILDING_AKSHARDHAM</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_AKSHARDHAM</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_MEENAKSHI</Type>
 			<Description>TXT_KEY_BUILDING_MEENAKSHI</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_MEENAKSHI</DefaultBuilding>
 		</BuildingClassInfo>
 <!-- Islam -->
@@ -80,24 +64,18 @@
 			<Type>BUILDINGCLASS_BLUE_MOSQUE</Type>
 			<Description>TXT_KEY_BUILDING_BLUE_MOSQUE</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_BLUE_MOSQUE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DESERT</Type>
 			<Description>TXT_KEY_BUILDING_DESERT</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_DESERT</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_SULTAN</Type>
 			<Description>TXT_KEY_BUILDING_SULTAN</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_SULTAN</DefaultBuilding>
 		</BuildingClassInfo>
 <!-- Taoist -->
@@ -105,16 +83,12 @@
 			<Type>BUILDINGCLASS_QUANZHEN</Type>
 			<Description>TXT_KEY_BUILDING_QUANZHEN</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_QUANZHEN</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_WUDANG</Type>
 			<Description>TXT_KEY_BUILDING_WUDANG</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_WUDANG</DefaultBuilding>
 		</BuildingClassInfo>
 	</BuildingClassInfos>

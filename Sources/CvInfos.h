@@ -409,7 +409,7 @@ public:
 	int getNumCitiesMaintenanceModifier() const;
 	int getCoastalDistanceMaintenanceModifier() const;
 	//DPII < Maintenance Modifier >
-	int getFirstFreeUnitClass() const;			// Exposed to Python
+	int getFirstFreeUnit() const;				// Exposed to Python
 	int getFirstFreeProphet() const;			// Exposed to Python
 	int getHealth() const;						// Exposed to Python
 	int getHappiness() const;					// Exposed to Python
@@ -440,11 +440,6 @@ public:
 	bool isWaterWork() const;					// Exposed to Python
 	bool isRiverTrade() const;					// Exposed to Python
 
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	bool isCanPassPeaks() const;
 	bool isMoveFastPeaks() const;
 	bool isCanFoundOnPeaks() const;
@@ -492,17 +487,10 @@ public:
 	int getOriginalPrereqOrTechs(int i) const;
 	int getOriginalPrereqAndTechs(int i) const;
 	int getUnitClassStrengthChange(int iUnit, bool bForLoad = false) const;
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 	//TB Tech Tags
 	bool isGlobal() const;
 	//TB Tech Tags end
 
-
-/************************************************************************************************/
-/* DCM									 04/19/09								Johny Smith  */
-/************************************************************************************************/
 	// Dale - AB: Bombing START
 	bool getDCMAirBombTech1() const;
 	bool getDCMAirBombTech2() const;
@@ -511,9 +499,7 @@ protected:
 	bool m_bDCMAirBombTech2;
 public:
 	// Dale - AB: Bombing END
-/************************************************************************************************/
-/* DCM									 END												  */
-/************************************************************************************************/
+
 	std::wstring getQuote() const;				// Exposed to Python
 	void setQuoteKey(const TCHAR* szVal);
 	const TCHAR* getQuoteKey() const;
@@ -566,7 +552,7 @@ protected:
 	int m_iNumCitiesMaintenanceModifier;
 	int m_iCoastalDistanceMaintenanceModifier;
 	//DPII < Maintenance Modifier >
-	int m_iFirstFreeUnitClass;
+	int m_iFirstFreeUnit;
 	int m_iFirstFreeProphet;
 	int m_iHealth;
 	int m_iHappiness;
@@ -614,11 +600,6 @@ protected:
 	//ls612: Tech Commerce Modifiers
 	int* m_piCommerceModifier;
 
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	//TB Tech Tags
 	bool m_bGlobal;
 	//TB Tech Tags end
@@ -654,9 +635,6 @@ protected:
 	//int* m_paiPrereqOrBuildingClass;
 	//std::vector<CvString> m_aszPrereqOrBuildingClassforPass3;
 	//std::vector<int> m_aiPrereqOrBuildingClassforPass3;
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1812,6 +1790,10 @@ public:
 	CvUnitInfo();
 	virtual ~CvUnitInfo();
 
+	int getMaxGlobalInstances() const;			// Exposed to Python
+	int getMaxPlayerInstances() const;			// Exposed to Python
+	bool isUnlimitedException() const;			// Exposed to Python
+	int getInstanceCostModifier() const;		// Exposed to Python
 	int getAIWeight() const;					// Exposed to Python
 	int getProductionCost() const;				// Exposed to Python
 	int getHurryCostModifier() const;			// Exposed to Python
@@ -1867,14 +1849,14 @@ public:
 	int getCargoSpace() const;					// Exposed to Python
 	int getSMCargoSpace() const;
 	int getSMCargoVolume() const;
-	int getConscriptionValue() const;			// Exposed to Python
-	int getCultureGarrisonValue() const;		// Exposed to Python
-	int getExtraCost() const;					// Exposed to Python
+	int getConscriptionValue() const;				// Exposed to Python
+	int getCultureGarrisonValue() const;			// Exposed to Python
+	int getExtraCost() const;						// Exposed to Python
 	int getAssetValue(bool bForLoad = false) const;	// Exposed to Python
 	int getPowerValue(bool bForLoad = false) const;	// Exposed to Python
 	int getUnitClassType() const;					// Exposed to Python
 	int getSpecialUnitType() const;					// Exposed to Python
-	int getUnitCaptureClassType() const;			// Exposed to Python
+	int getUnitCaptureType() const;					// Exposed to Python
 	int getUnitCombatType() const;					// Exposed to Python
 	int getDomainType() const;						// Exposed to Python
 	int getDefaultUnitAIType() const;				// Exposed to Python
@@ -1882,21 +1864,11 @@ public:
 	int getSeeInvisibleType(int i) const;			// Exposed to Python
 	int getNumSeeInvisibleTypes() const;			// Exposed to Python
 	int getAdvisorType() const;						// Exposed to Python
-
-/********************************************************************************/
-/**		REVDCM									2/16/10				phungus420	*/
-/**																				*/
-/**		CanTrain 																*/
-/********************************************************************************/
 	int getMaxStartEra() const;						// Exposed to Python
 	int getForceObsoleteTech() const;				// Exposed to Python
 	bool isStateReligion() const;					// Exposed to Python
 	int getPrereqGameOption() const;				// Exposed to Python
 	int getNotGameOption() const;					// Exposed to Python
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
-
 	int getHolyCity() const;						// Exposed to Python
 	int getReligionType() const;					// Exposed to Python
 	int getStateReligion() const;					// Exposed to Python
@@ -1957,36 +1929,12 @@ public:
 	bool isLineOfSight() const;					// Exposed to Python
 	bool isHiddenNationality() const;			// Exposed to Python
 	bool isAlwaysHostile() const;				// Exposed to Python
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre																		  **/
-/**  Date: 21.09.2009																			   **/
-/**  ModComp: TLOTags																			   **/
-/**  Reason Added: New Tag Definition															   **/
-/**  Notes:																						 **/
-/*****************************************************************************************************/
 	bool isFreeDrop() const;					// Exposed to Python
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 21.09.2009; TLOTags															 **/
-/*****************************************************************************************************/
 	bool isNoRevealMap() const;					// Exposed to Python
-
-/********************************************************************************/
-/**		REVDCM_OC							2/16/10				phungus420		*/
-/**																				*/
-/**		 																		*/
-/********************************************************************************/
 	bool isInquisitor() const;					// Exposed to Python
-/********************************************************************************/
-/**		REVDCM_OC									END							*/
-/********************************************************************************/
 	//ls612: Can't enter non-Owned cities
 	bool isNoNonOwnedEntry() const;
 
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	void setPowerValue(int iNewValue);
 	int getPrereqVicinityBonus() const;
 	bool isRequiresStateReligionInCity() const;
@@ -1997,9 +1945,6 @@ public:
 	bool isSlave() const;
 	int getPrereqOrVicinityBonuses(int i) const;
 	bool getPassableRouteNeeded(int i) const;
-	std::vector<int> getUpgradeUnitClassTypes() const;
-	void addUpgradeUnitClassTypes(int);
-	bool isUpgradeUnitClassTypes(int) const;
 	int getBaseFoodChange() const;
 	int getControlPoints() const;
 	int getCommandRange() const;
@@ -2348,7 +2293,10 @@ public:
 	BoolExpr* getTrainCondition();
 
 protected:
-	std::vector<int> m_aiUpgradeUnitClassTypes;
+	int m_iMaxGlobalInstances;
+	int m_iMaxPlayerInstances;
+	bool m_bUnlimitedException;
+	int m_iInstanceCostModifier;
 	bool* m_pbPassableRouteNeeded;
 	int* m_piPrereqOrVicinityBonuses;
 	bool m_bWorkerTrade;
@@ -2374,11 +2322,6 @@ protected:
 	BoolExpr* m_pExprTrainCondition;
 
 public:
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-
-
 /************************************************************************************************/
 /* DCM									 04/19/09								Johny Smith  */
 /************************************************************************************************/
@@ -2455,21 +2398,22 @@ public:
 	int getFeaturePassableTech(int i) const;		// Exposed to Python
 	int getFlankingStrikeUnitClass(int i) const;	// Exposed to Python
 
-/********************************************************************************/
-/**		REVDCM									2/16/10				phungus420	*/
-/**																				*/
-/**		CanTrain 																*/
-/********************************************************************************/
 	bool isPrereqOrCivics(int i) const;				// Exposed to Python
 	bool isPrereqBuildingClass(int i) const; 		// Exposed to Python
 	int getPrereqBuildingClassOverrideTech(int i) const;	//Exposed to Python
 	int getPrereqBuildingClassOverrideEra(int i) const; 	//Exposed to Python
-	bool getForceObsoleteUnitClass(int i) const; 			//Exposed to Python
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
 
-	bool getUpgradeUnitClass(int i) const;			// Exposed to Python
+	int getSupersedingUnit(int i) const;
+	int getNumSupersedingUnits() const;
+	bool isSupersedingUnit(int i) const;		//Exposed to Python
+
+	int getUnitUpgrade(int i) const;			//Exposed to Python
+	int getNumUnitUpgrades() const;				//Exposed to Python
+	bool isUnitUpgrade(int i) const;			//Exposed to Python
+
+	std::vector<int> getUnitUpgradeChain() const;
+	void CvUnitInfo::addUnitToUpgradeChain(int i);
+
 	bool getTargetUnitClass(int i) const;			// Exposed to Python
 	bool getTargetUnitCombat(int i) const;			// Exposed to Python
 	bool getDefenderUnitClass(int i) const;			// Exposed to Python
@@ -2582,27 +2526,17 @@ protected:
 	int m_iPowerValue;
 	int m_iUnitClassType;
 	int m_iSpecialUnitType;
-	int m_iUnitCaptureClassType;
+	int m_iUnitCaptureType;
 	int m_iUnitCombatType;
 	int m_iDomainType;
 	int m_iDefaultUnitAIType;
 	int m_iInvisibleType;
 	int m_iAdvisorType;
-
-/********************************************************************************/
-/**		REVDCM									2/16/10				phungus420	*/
-/**																				*/
-/**		CanTrain 																*/
-/********************************************************************************/
 	int m_iMaxStartEra;
 	int m_iForceObsoleteTech;
 	bool m_bStateReligion;
 	int m_iPrereqGameOption;
 	int m_iNotGameOption;
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
-
 	int m_iHolyCity;
 	int m_iReligionType;
 	int m_iStateReligion;
@@ -2612,6 +2546,9 @@ protected:
 	int m_iPrereqAndTech;
 	int m_iPrereqAndBonus;
 	std::vector<int> m_aePrereqOrBuildings;
+	std::vector<int> m_aiSupersedingUnits;
+	std::vector<int> m_aiUnitUpgrades;
+	std::vector<int> m_aiUnitUpgradeChain;
 	int m_iGroupSize;
 	int m_iGroupDefinitions;
 	int m_iUnitMeleeWaveSize;
@@ -2656,31 +2593,13 @@ protected:
 	bool m_bLineOfSight;
 	bool m_bHiddenNationality;
 	bool m_bAlwaysHostile;
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre																		  **/
-/**  Date: 21.09.2009																			   **/
-/**  ModComp: TLOTags																			   **/
-/**  Reason Added: New Tag Definition															   **/
-/**  Notes:																						 **/
-/*****************************************************************************************************/
 	bool m_bFreeDrop;
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 21.09.2009; TLOTags															 **/
-/*****************************************************************************************************/
 	bool m_bNoRevealMap;
-/************************************************************************************************/
-/* REVOLUTION_MOD								 01/01/08						DPII		  */
-/*																							  */
-/* CoreComponent																				*/
-/************************************************************************************************/
 	bool m_bInquisitor;
 	bool m_bCanBeRebel;
 	bool m_bCanRebelCapture;
 	bool m_bCannotDefect;
 	bool m_bCanQuellRebellion;
-/************************************************************************************************/
-/* REVOLUTION_MOD						  END												  */
-/************************************************************************************************/
 
 	//ls612: Can't enter non-Owned cities
 	bool m_bNoNonOwnedEntry;
@@ -2712,21 +2631,11 @@ protected:
 	int* m_piFeaturePassableTech;
 	int* m_piFlankingStrikeUnitClass;
 
-/********************************************************************************/
-/**		REVDCM									2/16/10				phungus420	*/
-/**																				*/
-/**		CanTrain 																*/
-/********************************************************************************/
 	bool* m_pbPrereqOrCivics;
 	bool* m_pbPrereqBuildingClass;
 	int* m_piPrereqBuildingClassOverrideTech;
 	int* m_piPrereqBuildingClassOverrideEra;
-	bool* m_pbForceObsoleteUnitClass;
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
 
-	bool* m_pbUpgradeUnitClass;
 	bool* m_pbTargetUnitClass;
 	bool* m_pbTargetUnitCombat;
 	bool* m_pbDefenderUnitClass;
@@ -3576,24 +3485,8 @@ public:
 	CvUnitClassInfo();
 	virtual ~CvUnitClassInfo();
 
-	int getMaxGlobalInstances() const;				// Exposed to Python
-	int getMaxTeamInstances() const;				// Exposed to Python
-	int getMaxPlayerInstances() const;				// Exposed to Python
-	//TB Unlimited National Units Mod
-	bool isUnlimitedException() const;				// Exposed to Python
-	//TB Unlimited National Units End
-	int getInstanceCostModifier() const;			// Exposed to Python
 	int getDefaultUnitIndex() const;				// Exposed to Python
 	void setDefaultUnitIndex(int i);
-/************************************************************************************************/
-/* Afforess					  Start		 12/23/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	bool isUnique() const;
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 	int getDefaultUnitIndexVector() const;
 	CvString getDefaultUnitIndexVectorElement(const int i) const;
@@ -3610,24 +3503,8 @@ public:
 
 //----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
-
-	int m_iMaxGlobalInstances;
-	int m_iMaxTeamInstances;
-	int m_iMaxPlayerInstances;
-	//TB Unlimited National Units Mod
-	bool m_bUnlimitedException;
-	//TB Unlimited National Units End
-	int m_iInstanceCostModifier;
 	int m_iDefaultUnitIndex;
-/************************************************************************************************/
-/* Afforess					  Start		 12/23/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	bool m_bUnique;
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3647,6 +3524,7 @@ public:
 	CvBuildingInfo();
 	virtual ~CvBuildingInfo();
 
+	bool isNoLimit() const;						// Exposed to Python
 	int getBuildingClassType() const;			// Exposed to Python
 	int getVictoryPrereq() const;				// Exposed to Python
 	int getFreeStartEra() const;				// Exposed to Python
@@ -4167,6 +4045,7 @@ public:
 	bool getNotShowInCity() const;
 
 protected:
+	bool m_bNoLimit;
 	bool m_bNotShowInCity;
 	void setNotShowInCity();
 	int m_iFreePromotion_2;
@@ -4627,9 +4506,6 @@ public:
 	int getDefaultBuildingIndex() const;				// Exposed to Python
 	void setDefaultBuildingIndex(int i);
 
-	bool isNoLimit() const;				// Exposed to Python
-	bool isMonument() const;				// Exposed to Python
-
 	// Arrays
 	int getVictoryThreshold(int i) const;				// Exposed to Python
 
@@ -4651,11 +4527,7 @@ protected:
 	int m_iExtraPlayerInstances;
 	int m_iDefaultBuildingIndex;
 
-	bool m_bNoLimit;
-	bool m_bMonument;
-
 	// Arrays
-
 	int* m_piVictoryThreshold;
 
 };
@@ -7189,11 +7061,6 @@ public:
 	void copyNonDefaults(CvProjectInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
 	void getCheckSum(unsigned int& iSum);
 
-/************************************************************************************************/
-/* Afforess					  Start		 07/30/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	int getWorldHappiness() const;
 	int getGlobalHappiness() const;
 	int getWorldHealth() const;
@@ -7219,9 +7086,6 @@ protected:
 	int* m_piCommerceModifier;
 	std::vector<CvString> m_aszProjectsNeededforPass3;
 	std::vector<int> m_aiProjectsNeededforPass3;
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------

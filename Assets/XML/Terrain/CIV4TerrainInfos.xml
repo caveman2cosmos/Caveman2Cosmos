@@ -7,10 +7,10 @@
 <Civ4TerrainInfos xmlns="x-schema:../Schema/C2C_CIV4TerrainSchema.xml">
 	<TerrainInfos>
 		<TerrainInfo>
-			<Type>TERRAIN_GRASS</Type>
-			<Description>TXT_KEY_TERRAIN_GRASS</Description>
-			<Civilopedia>TXT_KEY_TERRAIN_GRASS_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_TERRAIN_GRASS</ArtDefineTag>
+			<Type>TERRAIN_GRASSLAND</Type>
+			<Description>TXT_KEY_TERRAIN_GRASSLAND</Description>
+			<Civilopedia>TXT_KEY_TERRAIN_GRASSLAND_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_TERRAIN_GRASSLAND</ArtDefineTag>
 			<bFound>1</bFound>
 			<iMovement>1</iMovement>
 			<iSeeFrom>1</iSeeFrom>
@@ -754,10 +754,10 @@
 			</MapCategoryTypes>
 		</TerrainInfo>
 		<TerrainInfo>
-			<Type>TERRAIN_ROCKY_ARID</Type>
-			<Description>TXT_KEY_TERRAIN_ROCKY_ARID</Description>
+			<Type>TERRAIN_BADLAND</Type>
+			<Description>TXT_KEY_TERRAIN_BADLAND</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_ROCKY_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_TERRAIN_ROCKY_ARID</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_TERRAIN_BADLAND</ArtDefineTag>
 			<bFound>1</bFound>
 			<iBuildModifier>25</iBuildModifier>
 			<iDefense>25</iDefense>
@@ -907,10 +907,10 @@
 			</MapCategoryTypes>
 		</TerrainInfo>
 		<TerrainInfo>
-			<Type>TERRAIN_ROCKY_COLD</Type>
-			<Description>TXT_KEY_TERRAIN_ROCKY_COLD</Description>
+			<Type>TERRAIN_JAGGED</Type>
+			<Description>TXT_KEY_TERRAIN_JAGGED</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_ROCKY_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_TERRAIN_ROCKY_COLD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_TERRAIN_JAGGED</ArtDefineTag>
 			<bFound>1</bFound>
 			<iBuildModifier>25</iBuildModifier>
 			<iDefense>25</iDefense>
@@ -5504,7 +5504,7 @@
 			<iMovement>1</iMovement>
 			<Button>Art/Interface/Buttons/WorldBuilder/Space.dds</Button>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 		</TerrainInfo>
 		<TerrainInfo>
@@ -5517,14 +5517,14 @@
 			<iMovement>1</iMovement>
 			<Button>Art/Interface/Buttons/WorldBuilder/Space.dds</Button>
 			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 		</TerrainInfo>
 		<TerrainInfo>
-			<Type>TERRAIN_LUNAR_BASALT</Type>
-			<Description>TXT_KEY_TERRAIN_LUNAR_BASALT</Description>
-			<Civilopedia>TXT_KEY_TERRAIN_LUNAR_BASALT_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_TERRAIN_LUNAR_BASALT</ArtDefineTag>
+			<Type>TERRAIN_LUNAR_DOME</Type>
+			<Description>TXT_KEY_TERRAIN_LUNAR_DOME</Description>
+			<Civilopedia>TXT_KEY_TERRAIN_LUNAR_DOME_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_TERRAIN_LUNAR_DOME</ArtDefineTag>
 			<bFound>1</bFound>
 			<iHealthPercent>-15</iHealthPercent>
 			<iCultureDistance>3</iCultureDistance>
@@ -5640,10 +5640,10 @@
 			</MapCategoryTypes>
 		</TerrainInfo>
 		<TerrainInfo>
-			<Type>TERRAIN_LUNAR_PLAINS</Type>
-			<Description>TXT_KEY_TERRAIN_LUNAR_PLAINS</Description>
-			<Civilopedia>TXT_KEY_TERRAIN_LUNAR_PLAINS_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_TERRAIN_LUNAR_PLAINS</ArtDefineTag>
+			<Type>TERRAIN_LUNAR_MARE</Type>
+			<Description>TXT_KEY_TERRAIN_LUNAR_MARE</Description>
+			<Civilopedia>TXT_KEY_TERRAIN_LUNAR_MARE_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_TERRAIN_LUNAR_MARE</ArtDefineTag>
 			<bFound>1</bFound>
 			<iDefense>25</iDefense>
 			<iHealthPercent>-15</iHealthPercent>
@@ -5756,10 +5756,10 @@
 			</MapCategoryTypes>
 		</TerrainInfo>
 		<TerrainInfo>
-			<Type>TERRAIN_LUNAR_ROCKY</Type>
-			<Description>TXT_KEY_TERRAIN_LUNAR_ROCKY</Description>
-			<Civilopedia>TXT_KEY_TERRAIN_LUNAR_ROCKY_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_TERRAIN_LUNAR_ROCKY</ArtDefineTag>
+			<Type>TERRAIN_LUNAR_HIGHLAND</Type>
+			<Description>TXT_KEY_TERRAIN_LUNAR_HIGHLAND</Description>
+			<Civilopedia>TXT_KEY_TERRAIN_LUNAR_HIGHLAND_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_TERRAIN_LUNAR_HIGHLAND</ArtDefineTag>
 			<bFound>1</bFound>
 			<iBuildModifier>25</iBuildModifier>
 			<iHealthPercent>-15</iHealthPercent>
@@ -5868,10 +5868,10 @@
 			</MapCategoryTypes>
 		</TerrainInfo>
 		<TerrainInfo>
-			<Type>TERRAIN_LUNAR_BARREN</Type>
-			<Description>TXT_KEY_TERRAIN_LUNAR_BARREN</Description>
-			<Civilopedia>TXT_KEY_TERRAIN_LUNAR_BARREN_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_TERRAIN_LUNAR_BARREN</ArtDefineTag>
+			<Type>TERRAIN_LUNAR_REGOLITH</Type>
+			<Description>TXT_KEY_TERRAIN_LUNAR_REGOLITH</Description>
+			<Civilopedia>TXT_KEY_TERRAIN_LUNAR_REGOLITH_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_TERRAIN_LUNAR_REGOLITH</ArtDefineTag>
 			<bFound>1</bFound>
 			<iBuildModifier>25</iBuildModifier>
 			<iHealthPercent>-15</iHealthPercent>
@@ -5980,10 +5980,10 @@
 			</MapCategoryTypes>
 		</TerrainInfo>
 		<TerrainInfo>
-			<Type>TERRAIN_LUNAR_DESERT</Type>
-			<Description>TXT_KEY_TERRAIN_LUNAR_DESERT</Description>
-			<Civilopedia>TXT_KEY_TERRAIN_LUNAR_DESERT_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_TERRAIN_LUNAR_DESERT</ArtDefineTag>
+			<Type>TERRAIN_LUNAR_RILLE</Type>
+			<Description>TXT_KEY_TERRAIN_LUNAR_RILLE</Description>
+			<Civilopedia>TXT_KEY_TERRAIN_LUNAR_RILLE_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_TERRAIN_LUNAR_RILLE</ArtDefineTag>
 			<bFound>1</bFound>
 			<iBuildModifier>25</iBuildModifier>
 			<iDefense>-25</iDefense>

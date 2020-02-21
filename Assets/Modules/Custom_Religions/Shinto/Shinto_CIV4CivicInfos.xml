@@ -56,7 +56,7 @@
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_EDUCATION</CivicOptionType>
-			<Type>CIVIC_RELIGIOUS_TRAINING</Type>
+			<Type>CIVIC_RELIGIOUS</Type>
 			<BuildingClassProductionModifiers>
 				<BuildingClassProductionModifier>
 					<BuildingClassType>BUILDINGCLASS_SHINTO_MONASTERY</BuildingClassType>
