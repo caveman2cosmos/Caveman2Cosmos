@@ -574,9 +574,6 @@ def WorldBuilderHandleCityEditBuildingClassCB( argsList ):
 def WorldBuilderHandleCityEditModiferCB( argsList ):
 	worldBuilderScreen.handleCityEditModiferCB(argsList)
 
-def WorldBuilderHandleCityEditModifyBuildingClassCB( argsList ):
-	worldBuilderScreen.handleCityEditModifyBuildingClassCB(argsList)
-
 def WorldBuilderHandleCityEditChooseProductionCB( argsList ):
 	worldBuilderScreen.handleCityEditChooseProductionCB(argsList)
 

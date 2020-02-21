@@ -820,16 +820,16 @@ class CvWorldBuilderScreen:
 		iIndex = int(argsList[0])
 		if iIndex == 1:
 			for i in xrange(GC.getNumBuildingInfos()):
-				if isNationalWonderClass(GC.getBuildingInfo(i).getBuildingClassType()) or isWorldWonderClass(GC.getBuildingInfo(i).getBuildingClassType()): continue
+				if isNationalWonder(i) or isWorldWonder(i): continue
 				if self.m_pActivePlot.getPlotCity().canConstruct(i, True, True, True):
 					self.m_pActivePlot.getPlotCity().setNumRealBuilding(i, 1)
 		elif iIndex == 2:
 			for i in xrange(GC.getNumBuildingInfos()):
-				if isNationalWonderClass(GC.getBuildingInfo(i).getBuildingClassType()) or isWorldWonderClass(GC.getBuildingInfo(i).getBuildingClassType()): continue
+				if isNationalWonder(i) or isWorldWonder(i): continue
 				self.m_pActivePlot.getPlotCity().setNumRealBuilding(i, 0)
 		elif iIndex == 3:
 			for i in xrange(GC.getNumBuildingInfos()):
-				if isNationalWonderClass(GC.getBuildingInfo(i).getBuildingClassType()) or isWorldWonderClass(GC.getBuildingInfo(i).getBuildingClassType()): continue
+				if isNationalWonder(i) or isWorldWonder(i): continue
 				(loopCity, iter) = GC.getPlayer(self.m_iCurrentPlayer).firstCity(False)
 				while(loopCity):
 					if self.m_pActivePlot.getPlotCity().isHasBuilding(i):
@@ -2875,9 +2875,8 @@ class CvWorldBuilderScreen:
 
 		lBuildings = []
 		for i in xrange(GC.getNumBuildingInfos()):
-			BuildingInfo = GC.getBuildingInfo(i)
-			if isNationalWonderClass(BuildingInfo.getBuildingClassType()) or isTeamWonderClass(BuildingInfo.getBuildingClassType()) or isWorldWonderClass(BuildingInfo.getBuildingClassType()): continue
-			lBuildings.append(BuildingInfo.getDescription() + "_Platy_" + str(i))
+			if isNationalWonder(i) or isTeamWonder(i) or isWorldWonder(i): continue
+			lBuildings.append(GC.getBuildingInfo(i).getDescription() + "_Platy_" + str(i))
 		lBuildings.sort()
 
 		iColumnLength = (len(lBuildings) +2) /iNumColumns
@@ -2916,13 +2915,12 @@ class CvWorldBuilderScreen:
 		lTeamWonders = []
 		lWorldWonders = []
 		for i in xrange(GC.getNumBuildingInfos()):
-			BuildingInfo = GC.getBuildingInfo(i)
-			if isNationalWonderClass(BuildingInfo.getBuildingClassType()):
-				lNationalWonders.append(BuildingInfo.getDescription() + "_Platy_" + str(i))
-			elif isTeamWonderClass(BuildingInfo.getBuildingClassType()):
-				lNationalWonders.append(BuildingInfo.getDescription() + "_Platy_" + str(i))
-			elif isWorldWonderClass(BuildingInfo.getBuildingClassType()):
-				lWorldWonders.append(BuildingInfo.getDescription() + "_Platy_" + str(i))
+			if isNationalWonder(i):
+				lNationalWonders.append(GC.getBuildingInfo(i).getDescription() + "_Platy_" + str(i))
+			elif isTeamWonder(i):
+				lNationalWonders.append(GC.getBuildingInfo(i).getDescription() + "_Platy_" + str(i))
+			elif isWorldWonder(i):
+				lWorldWonders.append(GC.getBuildingInfo(i).getDescription() + "_Platy_" + str(i))
 		lNationalWonders.sort()
 		lTeamWonders.sort()
 		lWorldWonders.sort()

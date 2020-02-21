@@ -275,13 +275,11 @@ class CvTechSplashScreen:
 		screen.setText(szBuildingsTitleWidget, "", szBuildingsTitleDesc, CvUtil.FONT_LEFT_JUSTIFY,
 			       self.X_ALLOWS_PANEL + self.iMarginSpace, self.Y_ALLOWS_PANEL2 - 20, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
-		for j in range(GC.getNumBuildingClassInfos()):
+		for eLoopBuilding in range(GC.getNumBuildingInfos()):
 			bTechFound = 0
-			eLoopBuilding = GC.getCivilizationInfo(GC.getGame().getActiveCivilizationType()).getCivilizationBuildings(j)
-			if (eLoopBuilding != -1):
-				if (isTechRequiredForBuilding(self.iTech, eLoopBuilding)):
-	        			screen.attachImageButton( panelName2, "", GC.getBuildingInfo(eLoopBuilding).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM,
-								  WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, eLoopBuilding, 1, False )
+			if (isTechRequiredForBuilding(self.iTech, eLoopBuilding)):
+				screen.attachImageButton( panelName2, "", GC.getBuildingInfo(eLoopBuilding).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM,
+						WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, eLoopBuilding, 1, False )
 
 		# Improvements
 		szImprovesTitleDesc = u"<font=3b>" + TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_IMPROVEMENT", ()) + ":" + u"</font>"

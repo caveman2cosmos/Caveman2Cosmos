@@ -738,9 +738,8 @@ def onBuildingBuilt(argsList):
 	pCity, iBuildingType = argsList
 
 	buildingInfo = GC.getBuildingInfo(iBuildingType)
-	buildingClassInfo = GC.getBuildingClassInfo(buildingInfo.getBuildingClassType())
 
-	if( buildingClassInfo.getMaxGlobalInstances() == 1 and buildingInfo.getPrereqReligion() < 0 and buildingInfo.getProductionCost() > 10 ) :
+	if( buildingInfo.getMaxGlobalInstances() == 1 and buildingInfo.getPrereqReligion() < 0 and buildingInfo.getProductionCost() > 10 ) :
 		if( LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - World wonder %s build in %s"%(buildingInfo.getDescription(),pCity.getName()))
 		curRevIdx = pCity.getRevolutionIndex()
 		pCity.changeRevolutionIndex( -max([150,int(0.25*curRevIdx)]) )

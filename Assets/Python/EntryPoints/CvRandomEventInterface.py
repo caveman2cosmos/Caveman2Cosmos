@@ -495,11 +495,10 @@ def canApplyLooters3(argsList):
 		if CyTeam.isObsoleteBuilding(i) or CyCity.getNumRealBuilding(i) < 1: continue
 		CvBuilding = GC.getBuildingInfo(i)
 		iCost = CvBuilding.getProductionCost()
-		if iCost <= 100 and iCost > 0 and not isLimitedWonderClass(CvBuilding.getBuildingClassType()) and not CvBuilding.isAutoBuild():
+		if iCost <= 100 and iCost > 0 and not isLimitedWonder(i) and not CvBuilding.isAutoBuild():
 
-			for k in xrange(GC.getNumBuildingClassInfos()):
-				iBuilding = GC.getBuildingClassInfo(k).getDefaultBuildingIndex()
-				if iBuilding > -1 and CyCity.getNumRealBuilding(iBuilding) and CvBuilding.isReplaceBuildingClass(k):
+			for k in xrange(GC.getNumBuildingInfos()):
+				if CyCity.getNumRealBuilding(k) and CvBuilding.isReplaceBuilding(k):
 					break
 			else: return True
 	return False
@@ -518,11 +517,10 @@ def applyLooters3(argsList):
 		if CyTeam.isObsoleteBuilding(i) or CyCity.getNumRealBuilding(i) < 1: continue
 		CvBuilding = GC.getBuildingInfo(i)
 		iCost = CvBuilding.getProductionCost()
-		if iCost <= 100 and iCost > 0 and not isLimitedWonderClass(CvBuilding.getBuildingClassType()) and not CvBuilding.isAutoBuild():
+		if iCost <= 100 and iCost > 0 and not isLimitedWonder(i) and not CvBuilding.isAutoBuild():
 
-			for k in xrange(GC.getNumBuildingClassInfos()):
-				iBuilding = GC.getBuildingClassInfo(k).getDefaultBuildingIndex()
-				if iBuilding > -1 and CyCity.getNumRealBuilding(iBuilding) > 0 and CvBuilding.isReplaceBuildingClass(k):
+			for k in xrange(GC.getNumBuildingInfos()):
+				if CyCity.getNumRealBuilding(k) > 0 and CvBuilding.isReplaceBuilding(k):
 					break
 			else: aList.append(i)
 
@@ -610,12 +608,11 @@ def canApplyHurricane1(argsList):
 	for i in xrange(GC.getNumBuildingInfos()):
 		if CyTeam.isObsoleteBuilding(i) or CyCity.getNumRealBuilding(i) < 1: continue
 		CvBuilding = GC.getBuildingInfo(i)
-		if CvBuilding.isNukeImmune() or CvBuilding.isAutoBuild() or CvBuilding.getProductionCost() < 1 or isLimitedWonderClass(CvBuilding.getBuildingClassType()):
+		if CvBuilding.isNukeImmune() or CvBuilding.isAutoBuild() or CvBuilding.getProductionCost() < 1 or isLimitedWonder(i):
 			continue
 
-		for k in xrange(GC.getNumBuildingClassInfos()):
-			iBuilding = GC.getBuildingClassInfo(k).getDefaultBuildingIndex()
-			if iBuilding > -1 and CyCity.getNumRealBuilding(iBuilding) > 0 and CvBuilding.isReplaceBuildingClass(k):
+		for k in xrange(GC.getNumBuildingInfos()):
+			if CyCity.getNumRealBuilding(k) > 0 and CvBuilding.isReplaceBuilding(k):
 				break
 		else: return True
 	return False
@@ -635,12 +632,11 @@ def applyHurricane1(argsList):
 	for i in xrange(GC.getNumBuildingInfos()):
 		if CyTeam.isObsoleteBuilding(i) or CyCity.getNumRealBuilding(i) < 1: continue
 		CvBuilding = GC.getBuildingInfo(i)
-		if CvBuilding.isNukeImmune() or CvBuilding.isAutoBuild() or CvBuilding.getProductionCost() < 1 or isLimitedWonderClass(CvBuilding.getBuildingClassType()):
+		if CvBuilding.isNukeImmune() or CvBuilding.isAutoBuild() or CvBuilding.getProductionCost() < 1 or isLimitedWonder(i):
 			continue
 
-		for k in xrange(GC.getNumBuildingClassInfos()):
-			iBuilding = GC.getBuildingClassInfo(k).getDefaultBuildingIndex()
-			if iBuilding > -1 and CyCity.getNumRealBuilding(iBuilding) > 0 and CvBuilding.isReplaceBuildingClass(k):
+		for k in xrange(GC.getNumBuildingInfos()):
+			if CyCity.getNumRealBuilding(k) > 0 and CvBuilding.isReplaceBuilding(k):
 				break
 		else: aList.append(i)
 
@@ -718,11 +714,10 @@ def applyTsunami2(argsList):
 	for j in xrange(GC.getNumBuildingInfos()):
 		if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1: continue
 		CvBuilding = GC.getBuildingInfo(j)
-		if CvBuilding.getProductionCost() > 0  and not isLimitedWonderClass(CvBuilding.getBuildingClassType()) and not CvBuilding.isAutoBuild():
+		if CvBuilding.getProductionCost() > 0  and not isLimitedWonder(j) and not CvBuilding.isAutoBuild():
 
-			for k in xrange(GC.getNumBuildingClassInfos()):
-				iBuilding = GC.getBuildingClassInfo(k).getDefaultBuildingIndex()
-				if iBuilding > -1 and CyCity.getNumRealBuilding(iBuilding) > 0 and CvBuilding.isReplaceBuildingClass(k):
+			for k in xrange(GC.getNumBuildingInfos()):
+				if CyCity.getNumRealBuilding(k) > 0 and CvBuilding.isReplaceBuilding(k):
 					break
 			else: listBuildings.append(j)
 
@@ -2370,8 +2365,8 @@ def canTriggerSecurityTax(argsList):
   kTriggeredData = argsList[0]
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iWalls = GC.getInfoTypeForString("BUILDINGCLASS_WALLS")
-  if player.getNumCities() > player.getBuildingClassCountWithUpgrades(iWalls):
+  iWalls = GC.getInfoTypeForString("BUILDING_WALLS")
+  if player.getNumCities() > player.getBuildingCountWithUpgrades(iWalls):
     return False
 
   return True
@@ -2384,8 +2379,8 @@ def canTriggerLiteracy(argsList):
   kTriggeredData = argsList[0]
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iLibrary = GC.getInfoTypeForString("BUILDINGCLASS_LIBRARY")
-  if player.getNumCities() > player.getBuildingClassCountWithUpgrades(iLibrary):
+  iLibrary = GC.getInfoTypeForString("BUILDING_LIBRARY")
+  if player.getNumCities() > player.getBuildingCountWithUpgrades(iLibrary):
     return False
 
   return True
@@ -2431,8 +2426,8 @@ def canTriggerHorseWhisperingDone(argsList):
   trigger = GC.getEventTriggerInfo(kTriggeredData.eTrigger)
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iStable = GC.getInfoTypeForString("BUILDINGCLASS_STABLE")
-  if GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers() > player.getBuildingClassCountWithUpgrades(iStable):
+  iStable = GC.getInfoTypeForString("BUILDING_STABLE")
+  if GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers() > player.getBuildingCountWithUpgrades(iStable):
     return False
 
   return True
@@ -2505,9 +2500,9 @@ def canTriggerHarbormasterDone(argsList):
   trigger = GC.getEventTriggerInfo(kTriggeredData.eTrigger)
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iHarbor = GC.getInfoTypeForString("BUILDINGCLASS_PORT")
+  iHarbor = GC.getInfoTypeForString("BUILDING_PORT")
   iHarborsRequired = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()
-  if iHarborsRequired > player.getBuildingClassCountWithUpgrades(iHarbor):
+  if iHarborsRequired > player.getBuildingCountWithUpgrades(iHarbor):
     return False
 
   iCaravel = GC.getInfoTypeForString("UNITCLASS_CARAVEL")
@@ -2543,9 +2538,9 @@ def canTriggerClassicLiteratureDone(argsList):
   trigger = GC.getEventTriggerInfo(kTriggeredData.eTrigger)
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iLibrary = GC.getInfoTypeForString("BUILDINGCLASS_LIBRARY")
+  iLibrary = GC.getInfoTypeForString("BUILDING_LIBRARY")
   iBuildingsRequired = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()
-  if iBuildingsRequired > player.getBuildingClassCountWithUpgrades(iLibrary):
+  if iBuildingsRequired > player.getBuildingCountWithUpgrades(iLibrary):
     return False
 
   return True
@@ -2668,9 +2663,9 @@ def canTriggerMasterBlacksmithDone(argsList):
   trigger = GC.getEventTriggerInfo(kTriggeredData.eTrigger)
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iForge = GC.getInfoTypeForString("BUILDINGCLASS_FORGE");
+  iForge = GC.getInfoTypeForString("BUILDING_FORGE");
   iBuildingsRequired = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()
-  if iBuildingsRequired > player.getBuildingClassCountWithUpgrades(iForge):
+  if iBuildingsRequired > player.getBuildingCountWithUpgrades(iForge):
     return False
 
   kOrigTriggeredData = player.getEventOccured(trigger.getPrereqEvent(0))
@@ -2765,9 +2760,9 @@ def canTriggerBestDefenseDone(argsList):
   trigger = GC.getEventTriggerInfo(kTriggeredData.eTrigger)
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iCastle = GC.getInfoTypeForString("BUILDINGCLASS_CASTLE")
+  iCastle = GC.getInfoTypeForString("BUILDING_CASTLE")
   iBuildingsRequired = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()
-  if iBuildingsRequired > player.getBuildingClassCountWithUpgrades(iCastle):
+  if iBuildingsRequired > player.getBuildingCountWithUpgrades(iCastle):
     return False
 
   return True
@@ -2834,9 +2829,9 @@ def canTriggerSportsLeagueDone(argsList):
   trigger = GC.getEventTriggerInfo(kTriggeredData.eTrigger)
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iColosseum = GC.getInfoTypeForString("BUILDINGCLASS_COLOSSEUM")
+  iColosseum = GC.getInfoTypeForString("BUILDING_COLOSSEUM")
   iBuildingsRequired = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()
-  if iBuildingsRequired > player.getBuildingClassCountWithUpgrades(iColosseum):
+  if iBuildingsRequired > player.getBuildingCountWithUpgrades(iColosseum):
     return False
 
   return True
@@ -3080,7 +3075,7 @@ def applySecretKnowledge2(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
   city = player.getCity(kTriggeredData.iCityId)
-  city.setBuildingCommerceChange(GC.getBuildingInfo(kTriggeredData.eBuilding).getBuildingClassType(), CommerceTypes.COMMERCE_CULTURE, 4)
+  city.setBuildingCommerceChange(GC.getBuildingInfo(kTriggeredData.eBuilding), CommerceTypes.COMMERCE_CULTURE, 4)
 
 ######## HIGH_WARLORD ###########
 
@@ -3503,7 +3498,7 @@ def canApplyWarshipsDone2(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
   iBuilding = GC.getInfoTypeForString("BUILDING_GREAT_LIGHTHOUSE")
-  if player.getBuildingClassCountWithUpgrades(GC.getBuildingInfo(iBuilding).getBuildingClassType()) == 0:
+  if player.getBuildingCountWithUpgrades(iBuilding) == 0:
     return False
 
   return True
@@ -3552,7 +3547,7 @@ def canApplyGunsButterDone3(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
   iBuilding = GC.getInfoTypeForString("BUILDING_TAJ_MAHAL")
-  if player.getBuildingClassCountWithUpgrades(GC.getBuildingInfo(iBuilding).getBuildingClassType()) == 0:
+  if player.getBuildingCountWithUpgrades(iBuilding) == 0:
     return False
 
   return True
@@ -3706,7 +3701,7 @@ def canApplyOverwhelmDone3(argsList):
   iBuilding = GC.getInfoTypeForString("BUILDING_MANHATTAN")
 
 # if GC.getTeam(player.getTeam()).getProjectCount(iProject) == 0:
-  if player.getBuildingClassCountWithUpgrades(GC.getBuildingInfo(iBuilding).getBuildingClassType()) == 0:
+  if player.getBuildingCountWithUpgrades(iBuilding) == 0:
     return False
 # Rise of Mankind 2.9 end
 
@@ -3804,7 +3799,7 @@ def applyCorporateExpansionDone1(argsList):
 
   city = player.getCity(kTriggeredData.iCityId)
   if None != city and not city.isNone():
-    city.setBuildingCommerceChange(GC.getBuildingInfo(kTriggeredData.eBuilding).getBuildingClassType(), CommerceTypes.COMMERCE_GOLD, 50)
+    city.setBuildingCommerceChange(kTriggeredData.eBuilding, CommerceTypes.COMMERCE_GOLD, 50)
 
 ######## HOSTILE TAKEOVER ###########
 
@@ -3924,7 +3919,7 @@ def applyHostileTakeoverDone1(argsList):
 
   city = player.getCity(kTriggeredData.iCityId)
   if None != city and not city.isNone():
-    city.setBuildingCommerceChange(GC.getBuildingInfo(kTriggeredData.eBuilding).getBuildingClassType(), CommerceTypes.COMMERCE_GOLD, 100)
+    city.setBuildingCommerceChange(kTriggeredData.eBuilding, CommerceTypes.COMMERCE_GOLD, 100)
 
 
 ######## Great Beast ########
@@ -4198,7 +4193,7 @@ def canApplyBillionsandBillions2(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
   iBuilding = GC.getInfoTypeForString("BUILDING_HOLLYWOOD")
-  if player.getBuildingClassCountWithUpgrades(GC.getBuildingInfo(iBuilding).getBuildingClassType()) == 0:
+  if player.getBuildingCountWithUpgrades(iBuilding) == 0:
     return False
 
   return True
@@ -4410,8 +4405,8 @@ def canDoGeneralsPutsch1(argsList):
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
   iEiffel = GC.getInfoTypeForString("BUILDING_EIFFEL_TOWER")
   iBroadcast = GC.getInfoTypeForString("BUILDING_BROADCAST_TOWER")
-  EifCnt = pPlayer.getBuildingClassCountWithUpgrades(GC.getBuildingInfo(iEiffel).getBuildingClassType())
-  BrodCnt = pPlayer.getBuildingClassCountWithUpgrades(GC.getBuildingInfo(iBroadcast).getBuildingClassType())
+  EifCnt = pPlayer.getBuildingCountWithUpgrades(iEiffel)
+  BrodCnt = pPlayer.getBuildingCountWithUpgrades(iBroadcast)
   bAggregate = EifCnt + BrodCnt
 
   if bAggregate < 1:
@@ -4436,11 +4431,11 @@ def canTriggerCureforCancer(argsList):
 
   kTriggeredData = argsList[0]
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
-  iOxford = GC.getInfoTypeForString("BUILDING_MEDICAL_DATABASE")
 
   if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_DIVINE_CULT")):
     return False
-  if pPlayer.getBuildingClassCountWithUpgrades(GC.getBuildingInfo(iOxford).getBuildingClassType()) == 0:
+  iOxford = GC.getInfoTypeForString("BUILDING_MEDICAL_DATABASE")
+  if pPlayer.getBuildingCountWithUpgrades(iOxford) == 0:
     return False
 
   return True
@@ -4588,14 +4583,14 @@ def getHelpCarnation2(argsList):
 def canTriggerSyntheticFuels(argsList):
   kTriggeredData = argsList[0]
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
-  iEthanol = GC.getInfoTypeForString("BUILDING_CORPORATION_3")
-  bOil = GC.getInfoTypeForString("BONUS_OIL")
-  bCoal = GC.getInfoTypeForString("BONUS_COAL")
 
-  if pPlayer.getBuildingClassCountWithUpgrades(GC.getBuildingInfo(iEthanol).getBuildingClassType()) > 0:
+  iEthanol = GC.getInfoTypeForString("BUILDING_CORPORATION_3")
+  if pPlayer.getBuildingCountWithUpgrades(iEthanol) > 0:
     return False
+  bOil = GC.getInfoTypeForString("BONUS_OIL")
   if pPlayer.hasBonus(bOil) > 0:
     return False
+  bCoal = GC.getInfoTypeForString("BONUS_COAL")
   if pPlayer.hasBonus(bCoal) < 1:
     return False
   for i in xrange(GC.getNumBuildingInfos()):
@@ -4681,9 +4676,9 @@ def doSyntheticFuels4(argsList):
 
 def canTriggerAlternativeEnergy(argsList):
 	CyPlayer = GC.getPlayer(argsList[0].ePlayer)
-	if CyPlayer.getBuildingClassCountWithUpgrades(GC.getBuildingInfo(GC.getInfoTypeForString("BUILDING_GREAT_DAM")).getBuildingClassType()):
+	if CyPlayer.getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_GREAT_DAM")):
 		return False
-	if not CyPlayer.getBuildingClassCountWithUpgrades(GC.getInfoTypeForString("BUILDINGCLASS_COAL_PLANT")):
+	if not CyPlayer.getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_COAL_PLANT")):
 		return False
 	return True
 
@@ -4692,7 +4687,7 @@ def getHelpAlternativeEnergy1(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_ALTERNATIVE_ENERGY_HELP_1", (GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers(), ))
 
 def expireAlternativeEnergy1(argsList):
-	if GC.getPlayer(argsList[1].ePlayer).getBuildingClassCountWithUpgrades(GC.getBuildingInfo(GC.getInfoTypeForString("BUILDING_GREAT_DAM")).getBuildingClassType()):
+	if GC.getPlayer(argsList[1].ePlayer).getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_GREAT_DAM")):
 		return True
 	return False
 
@@ -4703,12 +4698,12 @@ def canTriggerAlternativeEnergyDone(argsList):
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
   i3Gorges = GC.getInfoTypeForString("BUILDING_GREAT_DAM")
 
-  iNuke = GC.getInfoTypeForString("BUILDINGCLASS_NUCLEAR_PLANT")
-  iHydro = GC.getInfoTypeForString("BUILDINGCLASS_HYDRO_PLANT")
+  iNuke = GC.getInfoTypeForString("BUILDING_NUCLEAR_PLANT")
+  iHydro = GC.getInfoTypeForString("BUILDING_HYDRO_PLANT")
   iTotal = iNuke+iHydro
   iBuildingsRequired = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()
 
-  if iBuildingsRequired > (pPlayer.getBuildingClassCountWithUpgrades(iHydro) + pPlayer.getBuildingClassCountWithUpgrades(iNuke)):
+  if iBuildingsRequired > (pPlayer.getBuildingCountWithUpgrades(iHydro) + pPlayer.getBuildingCountWithUpgrades(iNuke)):
     return False
 
   return True
@@ -6170,9 +6165,9 @@ def canTriggerV_Ger(argsList):
 
   kTriggeredData = argsList[0]
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
-  iObsrvty = GC.getInfoTypeForString("BUILDINGCLASS_OBSERVATORY")
+  iObsrvty = GC.getInfoTypeForString("BUILDING_OBSERVATORY")
 
-  if pPlayer.getBuildingClassCountWithUpgrades(iObsrvty) < 1:
+  if pPlayer.getBuildingCountWithUpgrades(iObsrvty) < 1:
     return False
 
   if GAME.isVictoryValid(GC.getInfoTypeForString("VICTORY_SPACE_RACE")):
@@ -8162,11 +8157,10 @@ def doMinorFire(argsList):
 	for j in xrange(GC.getNumBuildingInfos()):
 		if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1: continue
 		CvBuilding = GC.getBuildingInfo(j)
-		if CvBuilding.getProductionCost() > 0 and not isLimitedWonderClass(CvBuilding.getBuildingClassType()) and not CvBuilding.isAutoBuild():
+		if CvBuilding.getProductionCost() > 0 and not isLimitedWonder(j) and not CvBuilding.isAutoBuild():
 
-			for k in xrange(GC.getNumBuildingClassInfos()):
-				iBuilding = GC.getBuildingClassInfo(k).getDefaultBuildingIndex()
-				if iBuilding > -1 and CyCity.getNumRealBuilding(iBuilding) > 0 and CvBuilding.isReplaceBuildingClass(k):
+			for k in xrange(GC.getNumBuildingInfos()):
+				if CyCity.getNumRealBuilding(k) > 0 and CvBuilding.isReplaceBuilding(k):
 					break
 			else:
 				randNum = GAME.getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
@@ -8203,11 +8197,10 @@ def doMajorFire(argsList):
 		for j in xrange(GC.getNumBuildingInfos()):
 			if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1: continue
 			CvBuilding = GC.getBuildingInfo(j)
-			if CvBuilding.getProductionCost() > 0 and not CvBuilding.isAutoBuild() and not isLimitedWonderClass(CvBuilding.getBuildingClassType()):
+			if CvBuilding.getProductionCost() > 0 and not CvBuilding.isAutoBuild() and not isLimitedWonder(j)):
 
-				for k in xrange(GC.getNumBuildingClassInfos()):
-					iBuilding = GC.getBuildingClassInfo(k).getDefaultBuildingIndex()
-					if iBuilding > -1 and CyCity.getNumRealBuilding(iBuilding) > 0 and CvBuilding.isReplaceBuildingClass(k):
+				for k in xrange(GC.getNumBuildingInfos()):
+					if CyCity.getNumRealBuilding(k) > 0 and CvBuilding.isReplaceBuilding(k):
 						break
 				else:
 					randNum = GAME.getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
@@ -8254,11 +8247,10 @@ def doCatastrophicFire(argsList):
 		for j in xrange(GC.getNumBuildingInfos()):
 			if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1: continue
 			CvBuilding = GC.getBuildingInfo(j)
-			if CvBuilding.getProductionCost() > 0 and not isLimitedWonderClass(CvBuilding.getBuildingClassType()) and not CvBuilding.isAutoBuild():
+			if CvBuilding.getProductionCost() > 0 and not isLimitedWonder(j) and not CvBuilding.isAutoBuild():
 
-				for k in xrange(GC.getNumBuildingClassInfos()):
-					iBuilding = GC.getBuildingClassInfo(k).getDefaultBuildingIndex()
-					if iBuilding > -1 and CyCity.getNumRealBuilding(iBuilding) > 0 and CvBuilding.isReplaceBuildingClass(k):
+				for k in xrange(GC.getNumBuildingInfos()):
+					if CyCity.getNumRealBuilding(k) > 0 and CvBuilding.isReplaceBuilding(k):
 						break
 				else:
 					randNum = GAME.getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
@@ -8367,9 +8359,9 @@ def doGlobalWarming(argsList):
       iGW += 8
     if jPlot.isCity():
       icityGW = jPlot.getPlotCity()
-      iGW += (icityGW.getNumBuilding(GC.getInfoTypeForString("BUILDINGCLASS_POLLUTION_GLOBALWARMING1")) * 100)
-      iGW += (icityGW.getNumBuilding(GC.getInfoTypeForString("BUILDINGCLASS_POLLUTION_GLOBALWARMING2")) * 10000)
-      iGW += (icityGW.getNumBuilding(GC.getInfoTypeForString("BUILDINGCLASS_POLLUTION_GLOBALWARMING3")) * 1000000)
+      iGW += (icityGW.getNumBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_GLOBALWARMING1")) * 100)
+      iGW += (icityGW.getNumBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_GLOBALWARMING2")) * 10000)
+      iGW += (icityGW.getNumBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_GLOBALWARMING3")) * 1000000)
 
   iIce = (2* GC.getMap().numPlots()) / countIce
 
@@ -8938,8 +8930,7 @@ def doRemoveWVHumanSacrifice(argsList):
 			# Remove the main slavery building
 			if loopCity.getNumActiveBuilding(iWVSacrifice) > 0:
 
-				iType = civ.getCivilizationBuildings(GC.getBuildingInfo(iWVSacrifice).getBuildingClassType())
-				loopCity.setNumRealBuilding(iType, 0)
+				loopCity.setNumRealBuilding(iWVSacrifice, 0)
 				CyAudioGame().Play2DSound("AS2D_DISCOVERBONUS")
 
 				CyInterface().addMessage(iPlayer,False,25,TRNSLTR.getText("TXT_KEY_MESSAGE_NO_HUMAN_SACRIFICE",(loopCity.getName(),)),"AS2D_BUILD_BANK",InterfaceMessageTypes.MESSAGE_TYPE_INFO,pUnit.getButton(),ColorTypes(8),loopCity.getX(),loopCity.getY(),True,True)
@@ -8947,8 +8938,7 @@ def doRemoveWVHumanSacrifice(argsList):
 			# Sell the Alter if one exists
 			if loopCity.getNumActiveBuilding(iAltar) > 0:
 
-				iType = civ.getCivilizationBuildings(GC.getBuildingInfo(iAltar).getBuildingClassType())
-				loopCity.setNumRealBuilding(iType, 0)
+				loopCity.setNumRealBuilding(iAltar, 0)
 				CyAudioGame().Play2DSound("AS2D_DISCOVERBONUS")
 
 				CyInterface().addMessage(iPlayer,False,25,TRNSLTR.getText("TXT_KEY_MESSAGE_ALTAR_SOLD",(loopCity.getName(),)),"AS2D_BUILD_BANK",InterfaceMessageTypes.MESSAGE_TYPE_INFO,pUnit.getButton(),ColorTypes(8),loopCity.getX(),loopCity.getY(),True,True)

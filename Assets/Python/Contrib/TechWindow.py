@@ -265,7 +265,7 @@ class CvTechSplashScreen:
 		screen.setText(szBuildingsTitleWidget, "", szBuildingsTitleDesc, CvUtil.FONT_LEFT_JUSTIFY,
 			       self.X_ALLOWS_PANEL + self.iMarginSpace, self.Y_ALLOWS_PANEL2 - 20, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
-		for eLoopBuilding in range(GC.getNumBuildingClassInfos()):
+		for eLoopBuilding in range(GC.getNumBuildingInfos()):
 			bTechFound = 0
 			if (isTechRequiredForBuilding(self.iTech, eLoopBuilding)):
 	        	screen.attachImageButton( panelName2, "", GC.getBuildingInfo(eLoopBuilding).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM,
