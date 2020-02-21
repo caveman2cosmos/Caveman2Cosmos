@@ -4733,15 +4733,15 @@
 		<English>This spaceport at the top of a very tall tower allows spacecraft to launch and land with minimal atmospheric interference.  This saves fuel and allows for more efficient spacecraft design.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MEMBRANE</Tag>
+		<Tag>TXT_KEY_BUILDING_BUILDING_MEMBRANE</Tag>
 		<English>Building Membranes</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MEMBRANE_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_BUILDING_MEMBRANE_STRATEGY</Tag>
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MEMBRANE_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_BUILDING_MEMBRANE_PEDIA</Tag>
 		<English>These advanced membranes are very effective in regulating temperature, moisture, and light within the building. This saves energy and maintainence costs.[PARAGRAPH:2]http://www.designingbuildings.co.uk/wiki/Breather_membranes_for_buildings</English>
 	</TEXT>
 	<TEXT>
