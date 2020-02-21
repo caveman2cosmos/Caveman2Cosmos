@@ -1736,7 +1736,7 @@ public:
 	void changeBonusMintedPercent(BonusTypes eIndex, int iChange);
 
 	//	Moved from unit to player to allow for caching
-	bool upgradeAvailable(UnitTypes eFromUnit, UnitClassTypes eToUnitClass) const;
+	bool upgradeAvailable(UnitTypes eFromUnit, UnitTypes eToUnit) const;
 
 	// Building list for filtering, grouping and sorting
 	void setBuildingListInvalid();

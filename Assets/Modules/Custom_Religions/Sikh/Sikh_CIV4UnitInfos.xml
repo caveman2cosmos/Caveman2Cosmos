@@ -10,7 +10,7 @@
 			<Class>UNITCLASS_SIKH_MISSIONARY</Class>
 			<Type>UNIT_SIKH_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_SIKH_MISSIONARY</Capture>
+			<Capture>UNIT_SIKH_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>

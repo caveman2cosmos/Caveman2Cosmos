@@ -635,33 +635,25 @@ namespace {
 	};
 	typedef scoring::item_score< bst::optional< UnitAndUpgrade > > UnitUpgradeScore;
 
-	UnitUpgradeScore scoreUpgradePrice(const CvCivilizationInfo& kCivilization, CvUnit* unit, int upgradeUnitClass)
+	UnitUpgradeScore scoreUpgradePrice(CvUnit* unit, int upgradeUnit)
 	{
-		UnitTypes upgradeType = (UnitTypes)kCivilization.getCivilizationUnits((UnitClassTypes)upgradeUnitClass);
-
-		if (upgradeType != NO_UNIT && unit->canUpgrade(upgradeType))
+		if (unit->canUpgrade((UnitTypes) upgradeUnit))
 		{
-			return UnitUpgradeScore(UnitAndUpgrade(unit, upgradeType), unit->upgradePrice(upgradeType));
+			return UnitUpgradeScore(UnitAndUpgrade(unit, (UnitTypes) upgradeUnit), unit->upgradePrice((UnitTypes) upgradeUnit));
 		}
-
 		return UnitUpgradeScore();
 	}
 
 	struct MostExpensiveUpgrade : std::unary_function<CvUnit *, UnitUpgradeScore>
 	{
 		MostExpensiveUpgrade() {}
-		MostExpensiveUpgrade(const CvCivilizationInfo& kCivilization) : kCivilization(kCivilization) {}
 
 		UnitUpgradeScore operator()(CvUnit* unit) const
 		{
-			const std::vector<int>& upgradeUnitClassTypes = GC.getUnitInfo(unit->getUnitType()).getUpgradeUnitClassTypes();
-			bst::function<UnitUpgradeScore(int upgradeUnitClass)> sdsd = bst::bind(scoreUpgradePrice, bst::ref(*kCivilization), unit, _1);
-			return algo::max_element(
-				upgradeUnitClassTypes | transformed(sdsd)
-			).get_value_or(UnitUpgradeScore());
+			const std::vector<int>& upgradeChain = GC.getUnitInfo(unit->getUnitType()).getUnitUpgradeChain();
+			bst::function<UnitUpgradeScore(int upgradeUnit)> sdsd = bst::bind(scoreUpgradePrice, unit, _1);
+			return algo::max_element(upgradeChain | transformed(sdsd)).get_value_or(UnitUpgradeScore());
 		}
-
-		bst::optional<const CvCivilizationInfo&> kCivilization;
 	};
 }
 
@@ -696,7 +688,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 				// Find unit with the highest cost upgrade available
 				bst::optional<UnitUpgradeScore> bestUpgrade = algo::max_element(
 					units() | filtered(CvUnit::fn::isAutoUpgrading() && CvUnit::fn::isReadyForUpgrade())
-							| transformed(MostExpensiveUpgrade(kCivilization))
+							| transformed(MostExpensiveUpgrade())
 				);
 
 				if (bestUpgrade && bestUpgrade->item)
@@ -731,10 +723,9 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 					if (iExperience > unit->getExperience100())
 						continue;
 
-					foreach_ (int upgradeUnitClass, GC.getUnitInfo(unit->getUnitType()).getUpgradeUnitClassTypes())
+					for (int iI = 0; iI < GC.getUnitInfo(unit->getUnitType()).getNumUnitUpgrades(); iI++)
 					{
-						UnitTypes upgradeClass = (UnitTypes)kCivilization.getCivilizationUnits((UnitClassTypes)upgradeUnitClass);
-						if (upgradeClass != NO_UNIT && unit->canUpgrade(upgradeClass))
+						if (unit->canUpgrade((UnitTypes)GC.getUnitInfo(unit->getUnitType()).getUnitUpgrade(iI)))
 						{
 							iExperience = unit->getExperience100();
 							pBestUnit = unit;
@@ -27572,8 +27563,6 @@ int CvPlayerAI::AI_goldToUpgradeAllUnits(int iExpThreshold) const
 
 	int iTotalGold = 0;
 
-	CvCivilizationInfo& kCivilizationInfo = GC.getCivilizationInfo(getCivilizationType());
-
 	// cache the value for each unit type
 	std::vector<int> aiUnitUpgradePrice(GC.getNumUnitInfos(), 0);	// initializes to zeros
 
@@ -27609,41 +27598,35 @@ int CvPlayerAI::AI_goldToUpgradeAllUnits(int iExpThreshold) const
 		CvArea* pUnitArea = pLoopUnit->area();
 		int iUnitValue = AI_unitValue(eUnitType, eUnitAIType, pUnitArea);
 
-		for (int iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 		{
-			UnitClassTypes eUpgradeUnitClassType = (UnitClassTypes) iI;
-			UnitTypes eUpgradeUnitType = (UnitTypes)(kCivilizationInfo.getCivilizationUnits(iI));
-
-			if (NO_UNIT != eUpgradeUnitType)
+			// is this a valid upgrade?
+			if (pLoopUnit->upgradeAvailable(eUnitType, (UnitTypes) iI))
 			{
-				// is this a valid upgrade?
-				if (pLoopUnit->upgradeAvailable(eUnitType, eUpgradeUnitClassType))
+				// is it better?
+				int iUpgradeValue = AI_unitValue((UnitTypes) iI, eUnitAIType, pUnitArea);
+				if (iUpgradeValue > iUnitValue)
 				{
-					// is it better?
-					int iUpgradeValue = AI_unitValue(eUpgradeUnitType, eUnitAIType, pUnitArea);
-					if (iUpgradeValue > iUnitValue)
+					// can we actually make this upgrade?
+					bool bCanUpgrade = false;
+					CvCity* pCapitalCity = getCapitalCity();
+					if (pCapitalCity != NULL && pCapitalCity->canTrain((UnitTypes) iI))
 					{
-						// can we actually make this upgrade?
-						bool bCanUpgrade = false;
-						CvCity* pCapitalCity = getCapitalCity();
-						if (pCapitalCity != NULL && pCapitalCity->canTrain(eUpgradeUnitType))
+						bCanUpgrade = true;
+					}
+					else
+					{
+						CvCity* pCloseCity = GC.getMap().findCity(pLoopUnit->getX(), pLoopUnit->getY(), getID(), NO_TEAM, true, (pLoopUnit->getDomainType() == DOMAIN_SEA));
+						if (pCloseCity != NULL && pCloseCity->canTrain((UnitTypes) iI))
 						{
 							bCanUpgrade = true;
 						}
-						else
-						{
-							CvCity* pCloseCity = GC.getMap().findCity(pLoopUnit->getX(), pLoopUnit->getY(), getID(), NO_TEAM, true, (pLoopUnit->getDomainType() == DOMAIN_SEA));
-							if (pCloseCity != NULL && pCloseCity->canTrain(eUpgradeUnitType))
-							{
-								bCanUpgrade = true;
-							}
-						}
+					}
 
-						if (bCanUpgrade)
-						{
-							iUnitGold += pLoopUnit->upgradePrice(eUpgradeUnitType);
-							iUnitUpgradePossibilities++;
-						}
+					if (bCanUpgrade)
+					{
+						iUnitGold += pLoopUnit->upgradePrice((UnitTypes) iI);
+						iUnitUpgradePossibilities++;
 					}
 				}
 			}

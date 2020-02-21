@@ -1496,16 +1496,10 @@ m_bIrrigation(false),
 m_bIgnoreIrrigation(false),
 m_bWaterWork(false),
 m_bRiverTrade(false),
-/************************************************************************************************/
-/* DCM									 04/19/09								Johny Smith  */
-/************************************************************************************************/
 // Dale - AB: Bombing START
 m_bDCMAirBombTech1(0),
 m_bDCMAirBombTech2(0),
 // Dale - AB: Bombing END
-/************************************************************************************************/
-/* DCM									 END												  */
-/************************************************************************************************/
 m_piDomainExtraMoves(NULL),
 m_piFlavorValue(NULL),
 m_piPrereqOrTechs(NULL),
@@ -1514,11 +1508,6 @@ m_pbCommerceFlexible(NULL),
 m_pbTerrainTrade(NULL),
 //ls612: Tech Commerce Modifiers
 m_piCommerceModifier(NULL)
-/************************************************************************************************/
-/* Afforess					  Start		 Last Update: 3/8/10									*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 ,m_bEmbassyTrading(false)
 ,m_bCanPassPeaks(false)
 ,m_bMoveFastPeaks(false)
@@ -1537,9 +1526,7 @@ m_piCommerceModifier(NULL)
 ,m_piOriginalPrereqOrTechs(NULL)
 ,m_piOriginalPrereqAndTechs(NULL)
 ,m_piUnitClassStrengthChange(NULL)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 //TB Tech Tags
 ,m_bGlobal(false)
 //TB Tech Tags end
@@ -1909,11 +1896,7 @@ int* CvTechInfo::getCommerceModifierArray() const
 {
 	return m_piCommerceModifier;
 }
-/************************************************************************************************/
-/* Afforess					  Start		 Last Update: 3/8/10									*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 bool CvTechInfo::isEmbassyTrading() const
 {
 	return m_bEmbassyTrading;
@@ -2092,11 +2075,8 @@ int CvTechInfo::getUnitClassStrengthChange(int iUnit, bool bForLoad) const
 	//}
 	return m_piUnitClassStrengthChange ? m_piUnitClassStrengthChange[iUnit] : 0;
 }
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-//TB Tech Tags
 
+//TB Tech Tags
 bool CvTechInfo::isGlobal() const
 {
 	return m_bGlobal;
@@ -2219,11 +2199,7 @@ bool CvTechInfo::read(CvXMLLoadUtility* pXML)
 /************************************************************************************************/
 	//pXML->CvXMLLoadUtility::InitList(&m_piPrereqOrTechs, GC.getNUM_OR_TECH_PREREQS(), -1);
 	//pXML->CvXMLLoadUtility::InitList(&m_piPrereqAndTechs, GC.getNUM_AND_TECH_PREREQS(), -1);
-/************************************************************************************************/
-/* Afforess					  Start		 Last Update: 3/8/10									*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 	pXML->GetOptionalChildXmlValByName(&m_bEmbassyTrading, L"bEmbassyTrading");
 	pXML->GetOptionalChildXmlValByName(&m_bCanPassPeaks, L"bCanPassPeaks");
 	pXML->GetOptionalChildXmlValByName(&m_bMoveFastPeaks, L"bMoveFastPeaks");
@@ -2550,11 +2526,7 @@ void CvTechInfo::copyNonDefaults(CvTechInfo* pClassInfo, CvXMLLoadUtility* pXML)
 			m_piPrereqAndTechs[j] = pClassInfo->getPrereqAndTechs(j);
 		}
 	}
-/************************************************************************************************/
-/* Afforess					  Start		 Last Update: 3/8/10									*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 	if (!isEmbassyTrading()) m_bEmbassyTrading = pClassInfo->isEmbassyTrading();
 	if (!isCanPassPeaks()) m_bCanPassPeaks = pClassInfo->isCanPassPeaks();
 	if (!isMoveFastPeaks()) m_bMoveFastPeaks = pClassInfo->isMoveFastPeaks();

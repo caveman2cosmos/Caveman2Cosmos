@@ -1040,12 +1040,8 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 	{
 		AI_reset();
 	}
-/************************************************************************************************/
-/* Afforess/RevDCM                                     12/7/09                                  */
-/*                                                                                              */
-/* Advanced Automations                                                                         */
-/************************************************************************************************/
-		// Sanguo Mod Performance start, added by poyuzhe 07.27.09
+
+	// Sanguo Mod Performance start, added by poyuzhe 07.27.09
 	UnitTypes eUnit;
 	std::vector<UnitTypes> aUpgradeUnits;
 
@@ -1061,45 +1057,39 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 	for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
 		eUnit = (UnitTypes)iI;
+		CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
 		aUpgradeUnits.clear();
 		//set post mod-load unitinfo details
-		GC.getUnitInfo(eUnit).setReligionSubCombat();
-		GC.getUnitInfo(eUnit).setCultureSubCombat();
-		GC.getUnitInfo(eUnit).setEraSubCombat();
-		GC.getUnitInfo(eUnit).setSM();
-		GC.getUnitInfo(eUnit).setHealAsTypes();
+		kUnit.setReligionSubCombat();
+		kUnit.setCultureSubCombat();
+		kUnit.setEraSubCombat();
+		kUnit.setSM();
+		kUnit.setHealAsTypes();
 
 		do
 		{
-			for (int iJ = 0; iJ < GC.getNumUnitClassInfos(); iJ++)
+			if (eUnit != NO_UNIT)
 			{
-				if (eUnit != NO_UNIT)
+				for (int iJ = 0; iJ < GC.getUnitInfo(eUnit).getNumUnitUpgrades(); iJ++)
 				{
-					if (GC.getUnitInfo(eUnit).getUpgradeUnitClass(iJ))
-					{
-						GC.getUnitInfo((UnitTypes)iI).addUpgradeUnitClassTypes(iJ);
-						aUpgradeUnits.push_back((UnitTypes)GC.getUnitClassInfo((UnitClassTypes)iJ).getDefaultUnitIndex());
-					}
+					kUnit.addUnitToUpgradeChain(GC.getUnitInfo(eUnit).getUnitUpgrade(iJ));
+					aUpgradeUnits.push_back((UnitTypes) GC.getUnitInfo(eUnit).getUnitUpgrade(iJ));
 				}
 			}
-			if (!aUpgradeUnits.empty())
-			{
-				if (eUnit != NO_UNIT)
-				{
-					eUnit = aUpgradeUnits.front();
-					aUpgradeUnits.erase(aUpgradeUnits.begin());
-				}
-			}
-			else
+			if (aUpgradeUnits.empty())
 			{
 				break;
 			}
-		}while(true);
+			else
+			{
+				eUnit = aUpgradeUnits.front();
+				aUpgradeUnits.erase(aUpgradeUnits.begin());
+			}
+		}
+		while (true);
 	}
 	// Sanguo Mod Performance, end
-/************************************************************************************************/
-/* Afforess	                         END                                                        */
-/************************************************************************************************/
+
 	m_Properties.clear();
 
 	// Alberts2: Recalculate which info class replacements are currently active
@@ -8083,16 +8073,11 @@ void CvGame::createBarbarianUnits()
 			UnitTypes eBestUnit = NO_UNIT;
 			int iBestValue = 0;
 
-			for (int iJ = 0; iJ < GC.getNumUnitClassInfos(); iJ++)
+			for (int iJ = 0; iJ < GC.getNumUnitInfos(); iJ++)
 			{
-				bool bValid = false;
-				const UnitTypes eLoopUnit = ((UnitTypes)(GC.getCivilizationInfo(GET_PLAYER(BARBARIAN_PLAYER).getCivilizationType()).getCivilizationUnits(iJ)));
+				const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes) iJ);
 
-				if (eLoopUnit == NO_UNIT)
-					continue;
-
-				const CvUnitInfo& kUnit = GC.getUnitInfo(eLoopUnit);
-				if (isValidBarbarianSpawnUnit(pLoopArea, kUnit, eLoopUnit, static_cast<UnitClassTypes>(iJ)))
+				if (isValidBarbarianSpawnUnit(pLoopArea, kUnit, (UnitTypes) iJ, static_cast<UnitClassTypes>(kUnit.getUnitClassType())))
 				{
 					int iValue = 500 + getSorenRandNum(500, "Barb Unit Selection");
 
@@ -8104,7 +8089,7 @@ void CvGame::createBarbarianUnits()
 
 					if (iValue > iBestValue)
 					{
-						eBestUnit = eLoopUnit;
+						eBestUnit = (UnitTypes) iJ;
 						iBestValue = iValue;
 					}
 				}
@@ -13257,34 +13242,24 @@ void CvGame::loadPirateShip(CvUnit* pUnit)
 	{
 		UnitTypes eBestUnit = NO_UNIT;
 		int iBestValue = 0;
-
-		for (int iJ = 0; iJ < GC.getNumUnitClassInfos(); iJ++)
+		for (int iJ = 0; iJ < GC.getNumUnitInfos(); iJ++)
 		{
-			bool bValid = false;
-			const UnitTypes eLoopUnit = ((UnitTypes)(GC.getCivilizationInfo(GET_PLAYER(BARBARIAN_PLAYER).getCivilizationType()).getCivilizationUnits(iJ)));
-
-			if (eLoopUnit != NO_UNIT)
+			if (validBarbarianShipUnit(GC.getUnitInfo((UnitTypes) iJ), (UnitTypes) iJ))
 			{
-				const CvUnitInfo& kUnit = GC.getUnitInfo(eLoopUnit);
+				int iValue = (1 + getSorenRandNum(1000, "Barb Unit Selection"));
 
-				if (validBarbarianShipUnit(kUnit, eLoopUnit))
+				if (GC.getUnitInfo((UnitTypes) iJ).getUnitAIType(UNITAI_ATTACK))
 				{
-					int iValue = (1 + getSorenRandNum(1000, "Barb Unit Selection"));
+					iValue += 250;
+				}
 
-					if (kUnit.getUnitAIType(UNITAI_ATTACK))
-					{
-						iValue += 250;
-					}
-
-					if (iValue > iBestValue)
-					{
-						eBestUnit = eLoopUnit;
-						iBestValue = iValue;
-					}
+				if (iValue > iBestValue)
+				{
+					eBestUnit = (UnitTypes) iJ;
+					iBestValue = iValue;
 				}
 			}
 		}
-
 		if (eBestUnit != NO_UNIT)
 		{
 			CvUnit* pPirate = GET_PLAYER(BARBARIAN_PLAYER).initUnit(eBestUnit, pUnit->plot()->getX(), pUnit->plot()->getY(), UNITAI_ATTACK, NO_DIRECTION, getSorenRandNum(10000, "AI Unit Birthmark"));

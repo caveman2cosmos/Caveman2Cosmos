@@ -92,7 +92,7 @@ m_iAssetValue(0),
 m_iPowerValue(0),
 m_iUnitClassType(NO_UNITCLASS),
 m_iSpecialUnitType(NO_SPECIALUNIT),
-m_iUnitCaptureClassType(NO_UNITCLASS),
+m_iUnitCaptureType(NO_UNIT),
 m_iUnitCombatType(NO_UNITCOMBAT),
 m_iDomainType(NO_DOMAIN),
 m_iDefaultUnitAIType(NO_UNITAI),
@@ -169,7 +169,6 @@ m_pbPrereqOrCivics(NULL),
 m_pbPrereqBuilding(NULL),
 m_piPrereqBuildingOverrideTech(NULL),
 m_piPrereqBuildingOverrideEra(NULL),
-m_pbUpgradeUnitClass(NULL),
 m_pbTargetUnitClass(NULL),
 m_pbTargetUnitCombat(NULL),
 m_pbDefenderUnitClass(NULL),
@@ -343,8 +342,6 @@ CvUnitInfo::~CvUnitInfo()
 	SAFE_DELETE_ARRAY(m_pbPrereqBuilding);
 	SAFE_DELETE_ARRAY(m_piPrereqBuildingOverrideTech);
 	SAFE_DELETE_ARRAY(m_piPrereqBuildingOverrideEra);
-
-	SAFE_DELETE_ARRAY(m_pbUpgradeUnitClass);
 	SAFE_DELETE_ARRAY(m_pbTargetUnitClass);
 	SAFE_DELETE_ARRAY(m_pbTargetUnitCombat);
 	SAFE_DELETE_ARRAY(m_pbDefenderUnitClass);
@@ -405,6 +402,11 @@ CvUnitInfo::~CvUnitInfo()
 	for (int i=0; i<(int)m_aiSupersedingUnits.size(); i++)
 	{
 		GC.removeDelayedResolution((int*)&(m_aiSupersedingUnits[i]));
+	}
+
+	for (int i=0; i<(int)m_aiUnitUpgrades.size(); i++)
+	{
+		GC.removeDelayedResolution((int*)&(m_aiUnitUpgrades[i]));
 	}
 }
 
@@ -799,9 +801,9 @@ int CvUnitInfo::getSpecialUnitType() const
 	return m_iSpecialUnitType;
 }
 
-int CvUnitInfo::getUnitCaptureClassType() const
+int CvUnitInfo::getUnitCaptureType() const
 {
-	return m_iUnitCaptureClassType;
+	return m_iUnitCaptureType;
 }
 
 int CvUnitInfo::getUnitCombatType() const
@@ -1281,6 +1283,7 @@ int CvUnitInfo::getPrereqBuildingOverrideEra(int i) const
 	return m_piPrereqBuildingOverrideEra ? m_piPrereqBuildingOverrideEra[i] : -1;
 }
 
+
 int CvUnitInfo::getSupersedingUnit(int i) const
 {
 	return m_aiSupersedingUnits[i];
@@ -1296,6 +1299,38 @@ bool CvUnitInfo::isSupersedingUnit(int i) const
 		return false;
 	}
 	return true;
+}
+
+
+int CvUnitInfo::getUnitUpgrade(int i) const
+{
+	return m_aiUnitUpgrades[i];
+}
+int CvUnitInfo::getNumUnitUpgrades() const
+{
+	return (int)m_aiUnitUpgrades.size();
+}
+bool CvUnitInfo::isUnitUpgrade(int i) const
+{
+	if (find(m_aiUnitUpgrades.begin(), m_aiUnitUpgrades.end(), i) == m_aiUnitUpgrades.end())
+	{
+		return false;
+	}
+	return true;
+}
+
+
+std::vector<int> CvUnitInfo::getUnitUpgradeChain() const
+{
+	return m_aiUnitUpgradeChain;
+}
+void CvUnitInfo::addUnitToUpgradeChain(int i)
+{
+	FAssert (i > -1 && i < GC.getNumUnitInfos());
+	if (find(m_aiUnitUpgradeChain.begin(), m_aiUnitUpgradeChain.end(), i) == m_aiUnitUpgradeChain.end())
+	{
+		m_aiUnitUpgradeChain.push_back(i);
+	}
 }
 
 
@@ -1395,13 +1430,6 @@ int CvUnitInfo::getUnitGroupRequired(int i) const
 	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 	return m_piUnitGroupRequired ? m_piUnitGroupRequired[i] : NULL;
-}
-
-bool CvUnitInfo::getUpgradeUnitClass(int i) const
-{
-	FAssertMsg(i < GC.getNumUnitClassInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
-	return m_pbUpgradeUnitClass ? m_pbUpgradeUnitClass[i] : false;
 }
 
 bool CvUnitInfo::getTargetUnitClass(int i) const
@@ -1948,32 +1976,6 @@ CvWString CvUnitInfo::getCivilizationName(int i) const
 int CvUnitInfo::getCivilizationNamesVectorSize() const					{return m_aszCivilizationNamesforPass3.size();}
 CvWString CvUnitInfo::getCivilizationNamesNamesVectorElement(const int i) const	{return m_aszCivilizationNamesforPass3[i];}
 CvWString CvUnitInfo::getCivilizationNamesValuesVectorElement(const int i) const		{return m_aszCivilizationNamesValueforPass3[i];}
-
-// Sanguo Mod Performance start, added by poyuzhe 07.27.09
-std::vector<int> CvUnitInfo::getUpgradeUnitClassTypes() const
-{
-	return m_aiUpgradeUnitClassTypes;
-}
-
-void CvUnitInfo::addUpgradeUnitClassTypes(int i)
-{
-	FAssert (i > -1 && i < GC.getNumUnitClassInfos());
-	if (find(m_aiUpgradeUnitClassTypes.begin(), m_aiUpgradeUnitClassTypes.end(), i) == m_aiUpgradeUnitClassTypes.end())
-	{
-		m_aiUpgradeUnitClassTypes.push_back(i);
-	}
-}
-
-bool CvUnitInfo::isUpgradeUnitClassTypes(int i) const
-{
-	FAssert (i > -1 && i < GC.getNumUnitClassInfos());
-	if (find(m_aiUpgradeUnitClassTypes.begin(), m_aiUpgradeUnitClassTypes.end(), i) == m_aiUpgradeUnitClassTypes.end())
-	{
-		return false;
-	}
-	return true;
-}
-// Sanguo Mod Performance, end
 
 
 //TB Combat Mods Start  TB SubCombat Mod begin
@@ -3869,7 +3871,7 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum)
 	CheckSum(iSum, m_iPowerValue);
 	CheckSum(iSum, m_iUnitClassType);
 	CheckSum(iSum, m_iSpecialUnitType);
-	CheckSum(iSum, m_iUnitCaptureClassType);
+	CheckSum(iSum, m_iUnitCaptureType);
 	CheckSum(iSum, m_iUnitCombatType);
 	CheckSum(iSum, m_iDomainType);
 	CheckSum(iSum, m_iDefaultUnitAIType);
@@ -3972,8 +3974,11 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum)
 	CheckSumI(iSum, GC.getNumBuildingInfos(), m_pbPrereqBuilding);
 	CheckSumI(iSum, GC.getNumBuildingInfos(), m_piPrereqBuildingOverrideTech);
 	CheckSumI(iSum, GC.getNumBuildingInfos(), m_piPrereqBuildingOverrideEra);
+
 	CheckSumC(iSum, m_aiSupersedingUnits);
-	CheckSumI(iSum, GC.getNumUnitClassInfos(), m_pbUpgradeUnitClass);
+	CheckSumC(iSum, m_aiUnitUpgrades);
+	CheckSumC(iSum, m_aiUnitUpgradeChain);
+
 	CheckSumI(iSum, GC.getNumUnitClassInfos(), m_pbTargetUnitClass);
 	CheckSumI(iSum, GC.getNumUnitCombatInfos(), m_pbTargetUnitCombat);
 	CheckSumI(iSum, GC.getNumUnitClassInfos(), m_pbDefenderUnitClass);
@@ -4011,8 +4016,6 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum)
 	CheckSumI(iSum, GC.getNUM_UNIT_PREREQ_OR_BONUSES(), m_piPrereqOrVicinityBonuses);
 	CheckSumI(iSum, GC.getNumBuildingInfos(), m_pbPrereqBuilding);
 	CheckSumI(iSum, GC.getNumRouteInfos(), m_pbPassableRouteNeeded);
-
-	CheckSumC(iSum, m_aiUpgradeUnitClassTypes);
 
 	getKillOutcomeList()->getCheckSum(iSum);
 
@@ -4323,7 +4326,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(m_szExtraHoverTextKey, L"ExtraHoverText");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Capture");
-	m_iUnitCaptureClassType = pXML->GetInfoClass(szTextVal);
+	m_aszExtraXMLforPass3.push_back(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Combat");
 	m_iUnitCombatType = pXML->GetInfoClass(szTextVal);
@@ -4399,7 +4402,6 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	//ls612: Can't enter non-Owned cities
 	pXML->GetOptionalChildXmlValByName(&m_bNoNonOwnedEntry, L"bOnlyFriendlyEntry");
 
-	pXML->SetVariableListTagPair(&m_pbUpgradeUnitClass, L"UnitClassUpgrades", GC.getNumUnitClassInfos());
 	pXML->SetVariableListTagPair(&m_pbTargetUnitClass, L"UnitClassTargets", GC.getNumUnitClassInfos());
 	pXML->SetVariableListTagPair(&m_pbTargetUnitCombat, L"UnitCombatTargets", GC.getNumUnitCombatInfos());
 	pXML->SetVariableListTagPair(&m_pbDefenderUnitClass, L"UnitClassDefenders", GC.getNumUnitClassInfos());
@@ -4471,6 +4473,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetVariableListTagPair(&m_piPrereqBuildingOverrideEra, L"PrereqBuildings", GC.getNumBuildingInfos(), L"EraOverride", GC.getNumEraInfos());
 
 	pXML->SetOptionalIntVectorWithDelayedResolution(m_aiSupersedingUnits, L"SupersedingUnits");
+	pXML->SetOptionalIntVectorWithDelayedResolution(m_aiUnitUpgrades, L"UnitUpgrades");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"HolyCity");
 	m_iHolyCity = pXML->GetInfoClass(szTextVal);
@@ -5410,7 +5413,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 	if ( m_bUnlimitedException == false) m_bUnlimitedException = pClassInfo->isUnlimitedException();
 	if ( m_iInstanceCostModifier == 0) m_iInstanceCostModifier = pClassInfo->getInstanceCostModifier();
 	if ( m_iSpecialUnitType == iTextDefault )	m_iSpecialUnitType = pClassInfo->getSpecialUnitType();
-	if ( m_iUnitCaptureClassType == iTextDefault )	m_iUnitCaptureClassType = pClassInfo->getUnitCaptureClassType();
+	if ( m_iUnitCaptureType == iTextDefault )	m_iUnitCaptureType = pClassInfo->getUnitCaptureType();
 	if ( m_iUnitCombatType == iTextDefault )	m_iUnitCombatType = pClassInfo->getUnitCombatType();
 	if ( m_iDomainType == iTextDefault )	m_iDomainType = pClassInfo->getDomainType();
 	if ( m_iDefaultUnitAIType == UNITAI_UNKNOWN )	m_iDefaultUnitAIType = pClassInfo->getDefaultUnitAIType();
@@ -5473,14 +5476,6 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 
 	for ( int i = 0; i < GC.getNumUnitClassInfos(); i++)
 	{
-		if ( getUpgradeUnitClass(i) == bDefault && pClassInfo->getUpgradeUnitClass(i) != bDefault)
-		{
-			if ( m_pbUpgradeUnitClass == NULL )
-			{
-				CvXMLLoadUtility::InitList(&m_pbUpgradeUnitClass,GC.getNumUnitClassInfos(),bDefault);
-			}
-			m_pbUpgradeUnitClass[i] = pClassInfo->getUpgradeUnitClass(i);
-		}
 		if ( getTargetUnitClass(i) == bDefault && pClassInfo->getTargetUnitClass(i) != bDefault)
 		{
 			if ( m_pbTargetUnitClass == NULL )
@@ -5821,6 +5816,15 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 		for (int i = 0; i < iNum; i++)
 		{
 			GC.copyNonDefaultDelayedResolution((int*)&(m_aiSupersedingUnits[i]), (int*)&(pClassInfo->m_aiSupersedingUnits[i]));
+		}
+	}
+	if (getNumUnitUpgrades() == 0)
+	{
+		int iNum = pClassInfo->getNumUnitUpgrades();
+		m_aiUnitUpgrades.resize(iNum);
+		for (int i = 0; i < iNum; i++)
+		{
+			GC.copyNonDefaultDelayedResolution((int*)&(m_aiUnitUpgrades[i]), (int*)&(pClassInfo->m_aiUnitUpgrades[i]));
 		}
 	}
 
@@ -6555,6 +6559,14 @@ bool CvUnitInfo::readPass3()
 		m_aszCivilizationNamesforPass3.clear();
 		m_aszCivilizationNamesValueforPass3.clear();
 	}
+	if (m_aszExtraXMLforPass3.size() < 1)
+	{
+		FAssert(false);
+		return false;
+	}
+	m_iUnitCaptureType = GC.getInfoTypeForString(m_aszExtraXMLforPass3[0]);
+
+	m_aszExtraXMLforPass3.clear();
 
 	return true;
 }

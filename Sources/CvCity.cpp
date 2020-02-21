@@ -2557,12 +2557,11 @@ UnitTypes CvCity::allUpgradesAvailable(UnitTypes eUnit, int iUpgradeCount) const
 		/* CanTrain Performance                                                                         */
 		/************************************************************************************************/
 		CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
-		CvCivilizationInfo& kCivilization = GC.getCivilizationInfo(getCivilizationType());
-		const int numNumUnitClassInfos = GC.getNumUnitClassInfos();
+		const int iNumUnitInfos = GC.getNumUnitInfos();
 
 		FAssertMsg(eUnit != NO_UNIT, "eUnit is expected to be assigned (not NO_UNIT)");
 
-		if (iUpgradeCount <= numNumUnitClassInfos)
+		if (iUpgradeCount <= iNumUnitInfos)
 		{
 			UnitTypes eUpgradeUnit = NO_UNIT;
 
@@ -2570,31 +2569,27 @@ UnitTypes CvCity::allUpgradesAvailable(UnitTypes eUnit, int iUpgradeCount) const
 			bool bUpgradeAvailable = false;
 			bool bUpgradeUnavailable = false;
 
-			for (int iI = 0; iI < numNumUnitClassInfos; iI++)
+			for (int iI = 0; iI < kUnit.getNumUnitUpgrades(); iI++)
 			{
-				if (kUnit.getUpgradeUnitClass(iI))
+				bUpgradeFound = true;
+
+				UnitTypes eTempUnit = (UnitTypes) kUnit.getUnitUpgrade(iI);
+				if (kUnit.isSupersedingUnit(eTempUnit))
 				{
-					UnitTypes eLoopUnit = (UnitTypes)kCivilization.getCivilizationUnits(iI);
-					/************************************************************************************************/
-					/* REVDCM                                  END Performance                                      */
-					/************************************************************************************************/
+					// if this is avaliable then the unit won't be buildable anyhow, so it makes little sense to consider it here.
+					continue;
+				}
 
-					if (eLoopUnit != NO_UNIT)
-					{
-						bUpgradeFound = true;
+				eTempUnit = allUpgradesAvailable(eTempUnit, (iUpgradeCount + 1));
 
-						UnitTypes eTempUnit = allUpgradesAvailable(eLoopUnit, (iUpgradeCount + 1));
-
-						if (eTempUnit != NO_UNIT)
-						{
-							eUpgradeUnit = eTempUnit;
-							bUpgradeAvailable = true;
-						}
-						else
-						{
-							bUpgradeUnavailable = true;
-						}
-					}
+				if (eTempUnit != NO_UNIT)
+				{
+					eUpgradeUnit = eTempUnit;
+					bUpgradeAvailable = true;
+				}
+				else
+				{
+					bUpgradeUnavailable = true;
 				}
 			}
 
@@ -2757,9 +2752,8 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 		return false;
 	}
 
-	CvCivilizationInfo& kCivilization = GC.getCivilizationInfo(getCivilizationType());
 	bool bQual = false;
-	if (kCivilization.isStronglyRestricted() && isNPC())
+	if (isNPC() && GC.getCivilizationInfo(getCivilizationType()).isStronglyRestricted())
 	{
 		for (int iI = 0; iI < kUnit.getNumEnabledCivilizationTypes(); iI++)
 		{
@@ -2789,11 +2783,6 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 				return false;
 			}
 		}
-	}
-
-	if (GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits((UnitClassTypes)(kUnit.getUnitClassType())) != eUnit)
-	{
-		return false;
 	}
 
 	if (kUnit.getPrereqVicinityBonus() != NO_BONUS && !hasVicinityBonus((BonusTypes)kUnit.getPrereqVicinityBonus()))
@@ -3015,21 +3004,15 @@ void CvCity::invalidateCachedCanTrainForUnit(UnitTypes eUnit) const
 bool CvCity::canTrain(UnitCombatTypes eUnitCombat) const
 {
 	PROFILE_FUNC();
-	//TB SubCombat Mod Begin
-	const int num = GC.getNumUnitClassInfos();
-	CvCivilizationInfo& kCivilizationInfo = GC.getCivilizationInfo(getCivilizationType());
+	const int num = GC.getNumUnitInfos();
 
-	for (int iI = 0; iI < num; iI++)
+	for (int i = 0; i < num; i++)
 	{
-		const UnitTypes eUnit = (UnitTypes)kCivilizationInfo.getCivilizationUnits(iI);
-
-		if (NO_UNIT != eUnit && GC.getUnitInfo(eUnit).hasUnitCombat(eUnitCombat) && canTrain(eUnit))
+		if (GC.getUnitInfo((UnitTypes) i).hasUnitCombat(eUnitCombat) && canTrain((UnitTypes) i))
 		{
 			return true;
 		}
 	}
-	//TB SubCombat Mod end
-
 	return false;
 }
 
@@ -4009,7 +3992,7 @@ int CvCity::getProductionExperience(UnitTypes eUnit) const
 			return 0;
 		}
 
-		if ((UnitTypes)kCivilization.getCivilizationUnits((UnitClassTypes)kUnit.getUnitClassType()) == eUnit && kUnit.canAcquireExperience())
+		if (kUnit.canAcquireExperience())
 		{
 			iExperience += getSpecialistFreeExperience();
 
@@ -5129,35 +5112,31 @@ bool CvCity::hurryOverflow(HurryTypes eHurry, int* iProduction, int* iGold, bool
 
 UnitTypes CvCity::getConscriptUnit() const
 {
-	int iBestValue = 0;
 	UnitTypes eBestUnit = NO_UNIT;
 
-	for (int iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
-	{
-		UnitTypes eLoopUnit = (UnitTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(iI);
-
-		if (eLoopUnit != NO_UNIT)
-		{
-			if (canTrain(eLoopUnit))
-			{
-				int iValue = GC.getUnitInfo(eLoopUnit).getConscriptionValue();
-
-				if (iValue > iBestValue)
-				{
-					iBestValue = iValue;
-					eBestUnit = eLoopUnit;
-				}
-			}
-		}
-	}
-
 	// Allow the player to determine the conscripted unit type
-	long lConscriptUnit = Cy::call<long>(PYGameModule, "getConscriptUnitType", Cy::Args() << getOwner());
+	// Toffer - ToDo: Write python UI popup selection menu.
+	int lConscriptUnit = Cy::call<int>(PYGameModule, "getConscriptUnitType", Cy::Args() << getOwner());
 	if (lConscriptUnit != -1)
 	{
 		eBestUnit = ((UnitTypes)lConscriptUnit);
 	}
-
+	if (eBestUnit == NO_UNIT)
+	{
+		int iBestValue = 0;
+		for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
+		{
+			if (canTrain((UnitTypes) iI))
+			{
+				int iValue = GC.getUnitInfo((UnitTypes) iI).getConscriptionValue();
+				if (iValue > iBestValue)
+				{
+					iBestValue = iValue;
+					eBestUnit = (UnitTypes) iI;
+				}
+			}
+		}
+	}
 	return eBestUnit;
 }
 
@@ -23040,29 +23019,24 @@ bool CvCity::hasFreshWater() const
 {
 	return (m_iFreshWater > 0);
 }
-/*
 
-*/
+
 bool CvCity::canUpgradeUnit(UnitTypes eUnit) const
 {
 	PROFILE_FUNC();
 
-	for (int iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
+	for (int iI = 0; iI < GC.getUnitInfo(eUnit).getNumUnitUpgrades(); iI++)
 	{
-		if (GC.getUnitInfo(eUnit).getUpgradeUnitClass((UnitClassTypes)iI))
-		{
-			UnitClassTypes eUpgradeUnitClass = ((UnitClassTypes)iI);
-			if ((GC.getGame().isUnitClassMaxedOut(eUpgradeUnitClass)) || (GET_TEAM(GET_PLAYER(getOwner()).getTeam()).isUnitClassMaxedOut(eUpgradeUnitClass)) || GET_PLAYER(getOwner()).isUnitClassMaxedOut(eUpgradeUnitClass))
-			{//if the upgrade unitclass is maxed out, I assume you can construct them, and already have construct the max
-				return true;
-			}
+		UnitClassTypes eUpgradeUnitClass = (UnitClassTypes)GC.getUnitInfo((UnitTypes)GC.getUnitInfo(eUnit).getUnitUpgrade(iI)).getUnitClassType();
+		if ((GC.getGame().isUnitClassMaxedOut(eUpgradeUnitClass)) || (GET_TEAM(GET_PLAYER(getOwner()).getTeam()).isUnitClassMaxedOut(eUpgradeUnitClass)) || GET_PLAYER(getOwner()).isUnitClassMaxedOut(eUpgradeUnitClass))
+		{//if the upgrade unitclass is maxed out, I assume you can construct them, and already have construct the max
+			return true;
 		}
 	}
 	return false;
 }
-/*
 
-*/
+
 int CvCity::calculateBonusDefense() const
 {
 	int iBonusDefense = 0;

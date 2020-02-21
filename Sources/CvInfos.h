@@ -1831,14 +1831,14 @@ public:
 	int getCargoSpace() const;					// Exposed to Python
 	int getSMCargoSpace() const;
 	int getSMCargoVolume() const;
-	int getConscriptionValue() const;			// Exposed to Python
-	int getCultureGarrisonValue() const;		// Exposed to Python
-	int getExtraCost() const;					// Exposed to Python
+	int getConscriptionValue() const;				// Exposed to Python
+	int getCultureGarrisonValue() const;			// Exposed to Python
+	int getExtraCost() const;						// Exposed to Python
 	int getAssetValue(bool bForLoad = false) const;	// Exposed to Python
 	int getPowerValue(bool bForLoad = false) const;	// Exposed to Python
 	int getUnitClassType() const;					// Exposed to Python
 	int getSpecialUnitType() const;					// Exposed to Python
-	int getUnitCaptureClassType() const;			// Exposed to Python
+	int getUnitCaptureType() const;					// Exposed to Python
 	int getUnitCombatType() const;					// Exposed to Python
 	int getDomainType() const;						// Exposed to Python
 	int getDefaultUnitAIType() const;				// Exposed to Python
@@ -1927,9 +1927,6 @@ public:
 	bool isSlave() const;
 	int getPrereqOrVicinityBonuses(int i) const;
 	bool getPassableRouteNeeded(int i) const;
-	std::vector<int> getUpgradeUnitClassTypes() const;
-	void addUpgradeUnitClassTypes(int);
-	bool isUpgradeUnitClassTypes(int) const;
 	int getBaseFoodChange() const;
 	int getControlPoints() const;
 	int getCommandRange() const;
@@ -2282,7 +2279,6 @@ protected:
 	int m_iMaxPlayerInstances;
 	bool m_bUnlimitedException;
 	int m_iInstanceCostModifier;
-	std::vector<int> m_aiUpgradeUnitClassTypes;
 	bool* m_pbPassableRouteNeeded;
 	int* m_piPrereqOrVicinityBonuses;
 	bool m_bWorkerTrade;
@@ -2388,11 +2384,18 @@ public:
 	bool isPrereqBuilding(int i) const; 		// Exposed to Python
 	int getPrereqBuildingOverrideTech(int i) const;	//Exposed to Python
 	int getPrereqBuildingOverrideEra(int i) const; 	//Exposed to Python
+
 	int getSupersedingUnit(int i) const;
 	int getNumSupersedingUnits() const;
-	bool isSupersedingUnit(int i) const; 			//Exposed to Python
+	bool isSupersedingUnit(int i) const;		//Exposed to Python
 
-	bool getUpgradeUnitClass(int i) const;			// Exposed to Python
+	int getUnitUpgrade(int i) const;			//Exposed to Python
+	int getNumUnitUpgrades() const;				//Exposed to Python
+	bool isUnitUpgrade(int i) const;			//Exposed to Python
+
+	std::vector<int> getUnitUpgradeChain() const;
+	void CvUnitInfo::addUnitToUpgradeChain(int i);
+
 	bool getTargetUnitClass(int i) const;			// Exposed to Python
 	bool getTargetUnitCombat(int i) const;			// Exposed to Python
 	bool getDefenderUnitClass(int i) const;			// Exposed to Python
@@ -2505,27 +2508,17 @@ protected:
 	int m_iPowerValue;
 	int m_iUnitClassType;
 	int m_iSpecialUnitType;
-	int m_iUnitCaptureClassType;
+	int m_iUnitCaptureType;
 	int m_iUnitCombatType;
 	int m_iDomainType;
 	int m_iDefaultUnitAIType;
 	int m_iInvisibleType;
 	int m_iAdvisorType;
-
-/********************************************************************************/
-/**		REVDCM									2/16/10				phungus420	*/
-/**																				*/
-/**		CanTrain 																*/
-/********************************************************************************/
 	int m_iMaxStartEra;
 	int m_iForceObsoleteTech;
 	bool m_bStateReligion;
 	int m_iPrereqGameOption;
 	int m_iNotGameOption;
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
-
 	int m_iHolyCity;
 	int m_iReligionType;
 	int m_iStateReligion;
@@ -2536,6 +2529,8 @@ protected:
 	int m_iPrereqAndBonus;
 	std::vector<int> m_aePrereqOrBuildings;
 	std::vector<int> m_aiSupersedingUnits;
+	std::vector<int> m_aiUnitUpgrades;
+	std::vector<int> m_aiUnitUpgradeChain;
 	int m_iGroupSize;
 	int m_iGroupDefinitions;
 	int m_iUnitMeleeWaveSize;
@@ -2580,31 +2575,13 @@ protected:
 	bool m_bLineOfSight;
 	bool m_bHiddenNationality;
 	bool m_bAlwaysHostile;
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre																		  **/
-/**  Date: 21.09.2009																			   **/
-/**  ModComp: TLOTags																			   **/
-/**  Reason Added: New Tag Definition															   **/
-/**  Notes:																						 **/
-/*****************************************************************************************************/
 	bool m_bFreeDrop;
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 21.09.2009; TLOTags															 **/
-/*****************************************************************************************************/
 	bool m_bNoRevealMap;
-/************************************************************************************************/
-/* REVOLUTION_MOD								 01/01/08						DPII		  */
-/*																							  */
-/* CoreComponent																				*/
-/************************************************************************************************/
 	bool m_bInquisitor;
 	bool m_bCanBeRebel;
 	bool m_bCanRebelCapture;
 	bool m_bCannotDefect;
 	bool m_bCanQuellRebellion;
-/************************************************************************************************/
-/* REVOLUTION_MOD						  END												  */
-/************************************************************************************************/
 
 	//ls612: Can't enter non-Owned cities
 	bool m_bNoNonOwnedEntry;
@@ -2641,7 +2618,6 @@ protected:
 	int* m_piPrereqBuildingOverrideTech;
 	int* m_piPrereqBuildingOverrideEra;
 
-	bool* m_pbUpgradeUnitClass;
 	bool* m_pbTargetUnitClass;
 	bool* m_pbTargetUnitCombat;
 	bool* m_pbDefenderUnitClass;

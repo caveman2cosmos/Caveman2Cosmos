@@ -16121,12 +16121,9 @@
 					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_AMBULANCE</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_AMBULANCE</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_HEALER</UnitAIType>

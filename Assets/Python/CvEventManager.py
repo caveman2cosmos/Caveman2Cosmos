@@ -90,6 +90,7 @@ class CvEventManager:
 			'unitKilled'				: self.onUnitKilled,
 #			'unitLost'					: self.onUnitLost,
 			'unitPromoted'				: self.onUnitPromoted,
+			'unitUpgraded'				: self.onUnitUpgraded,
 #			'unitSelected'				: self.onUnitSelected,
 			'UnitRename'				: self.onUnitRename,
 #			'unitPillage'				: self.onUnitPillage,
@@ -2114,6 +2115,8 @@ class CvEventManager:
 
 	def onUnitBuilt(self, argsList):
 		CyCity, CyUnit = argsList
+		if DebugUtils.bDebugMode:
+			print "%s Built %s in %s" %(GC.getPlayer(CyCity.getOwner()).getCivilizationDescription(0), CyUnit.getName(), CyCity.getName())
 		CvAdvisorUtils.unitBuiltFeats(CyCity, CyUnit)
 		CyPlayer = GC.getPlayer(CyUnit.getOwner())
 		iUnit = CyUnit.getUnitType()
@@ -2244,7 +2247,10 @@ class CvEventManager:
 					CyUnit.setHasPromotion(iPromo, True)
 					break
 
-
+	def onUnitUpgraded(self, argsList):
+		if DebugUtils.bDebugMode:
+			CyUnitOld, CyUnitNew, iPrice = argsList
+			print "%s Upgraded %s to %s" %(GC.getPlayer(CyUnitOld.getOwner()).getCivilizationDescription(0), CyUnitOld.getName(), CyUnitNew.getName())
 
 	''' Disabled in PythonCallbackDefines.xml (USE_ON_UNIT_SELECTED_CALLBACK = False)
 	def onUnitSelected(self, argsList):
