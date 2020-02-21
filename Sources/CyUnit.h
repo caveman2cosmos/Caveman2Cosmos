@@ -164,14 +164,14 @@ public:
 	void promote(int /*PromotionTypes*/ ePromotion, int iLeaderUnitId);
 
 	int upgradePrice(int /*UnitTypes*/ eUnit);
-	bool upgradeAvailable(int /*UnitTypes*/ eFromUnit, int /*UnitClassTypes*/ eToUnitClass, int iCount);
+	bool upgradeAvailable(int /*UnitTypes*/ eFromUnit, int /*UnitTypes*/ eToUnit, int iCount);
 	bool canUpgrade(int /*UnitTypes*/ eUnit, bool bTestVisible);
 	bool hasUpgrade(bool bSearch);
 
 	int /*HandicapTypes*/ getHandicapType();
 	int /*CivilizationTypes*/ getCivilizationType();
 	int /*SpecialUnitTypes*/ getSpecialUnitType();
-	int /*UnitTypes*/ getCaptureUnitType(int /*CivilizationTypes*/ eCivilization);
+	int /*UnitTypes*/ getCaptureUnitType();
 	int /*UnitCombatTypes*/ getUnitCombatType();
 	int /*DomainTypes*/ getDomainType();
 	int /*InvisibleTypes*/ getInvisibleType();

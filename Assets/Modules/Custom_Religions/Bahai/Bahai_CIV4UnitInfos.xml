@@ -9,7 +9,7 @@
 			<Class>UNITCLASS_BAHAI_MISSIONARY</Class>
 			<Type>UNIT_BAHAI_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_BAHAI_MISSIONARY</Capture>
+			<Capture>UNIT_BAHAI_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>

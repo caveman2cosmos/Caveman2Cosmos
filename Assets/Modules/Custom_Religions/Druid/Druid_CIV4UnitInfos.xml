@@ -10,7 +10,7 @@
 			<Class>UNITCLASS_DRUID_MISSIONARY</Class>
 			<Type>UNIT_DRUID_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_DRUID_MISSIONARY</Capture>
+			<Capture>UNIT_DRUID_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>

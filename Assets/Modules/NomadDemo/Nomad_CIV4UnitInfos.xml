@@ -5,7 +5,7 @@
 			<Class>UNITCLASS_NOMAD_CAMP</Class>
 			<Type>UNIT_NOMAD_CAMP</Type>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
-			<Capture>UNITCLASS_NOMAD_CAMP</Capture>
+			<Capture>UNIT_NOMAD_CAMP</Capture>
 			<Combat>UNITCOMBAT_NOMAD</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>

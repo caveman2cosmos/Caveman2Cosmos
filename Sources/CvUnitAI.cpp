@@ -806,11 +806,9 @@ bool CvUnitAI::AI_upgrade()
 	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 	UnitAITypes eUnitAI = AI_getUnitAIType();
 	CvArea* pArea = area();
-	CvCivilizationInfo& kCivilization = GC.getCivilizationInfo(kPlayer.getCivilizationType());
 
 	int iCurrentValue = kPlayer.AI_unitValue(getUnitType(), eUnitAI, pArea);
 
-	std::vector<int> aPotentialUnitClassTypes = GC.getUnitInfo(getUnitType()).getUpgradeUnitClassTypes();
 	//TB Note: New game theory being introduced here - a unitAI should NEVER change its AI when upgrading!
 	//This was causing an infinite spam of units that the game couldn't get enough of a count of because
 	//the AI kept upgrading their best pick for something and then upgrading it to another unit that couldn't be that AI type.
@@ -820,25 +818,20 @@ bool CvUnitAI::AI_upgrade()
 	//{
 	UnitTypes eBestUnit = NO_UNIT;
 	int iBestValue = 0;
+	int iNumUpgrades = GC.getUnitInfo(getUnitType()).getNumUnitUpgrades();
 
-	for (int iI = 0; iI < (int)aPotentialUnitClassTypes.size(); iI++)
+	for (int iI = 0; iI < iNumUpgrades; iI++)
 	{
-		UnitTypes eLoopUnit = (UnitTypes)kCivilization.getCivilizationUnits((UnitClassTypes)aPotentialUnitClassTypes[iI]);
-		if (eLoopUnit != NO_UNIT && ((/*iPass > 0 &&*/ !GC.getUnitInfo(eLoopUnit).getNotUnitAIType(eUnitAI)) /*||*/&& GC.getUnitInfo(eLoopUnit).getUnitAIType(eUnitAI)))
+		UnitTypes eLoopUnit = (UnitTypes)GC.getUnitInfo(getUnitType()).getUnitUpgrade(iI);
+		if (!GC.getUnitInfo(eLoopUnit).getNotUnitAIType(eUnitAI) && GC.getUnitInfo(eLoopUnit).getUnitAIType(eUnitAI)
+		&& canUpgrade(eLoopUnit) && kPlayer.AI_unitValue(eLoopUnit, eUnitAI, pArea) > iCurrentValue)
 		{
-			int iNewValue = kPlayer.AI_unitValue(eLoopUnit, /*(iPass == 0 ?*/ eUnitAI /*: (UnitAITypes)GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType())*/, pArea);
-			if ((/*iPass == 0 || */iNewValue > 0) && iNewValue > iCurrentValue)
-			{
-				if (canUpgrade(eLoopUnit))
-				{
-					int iValue = (1 + GC.getGame().getSorenRandNum(10000, "AI Upgrade"));
+			int iValue = (1 + GC.getGame().getSorenRandNum(10000, "AI Upgrade"));
 
-					if (iValue > iBestValue)
-					{
-						iBestValue = iValue;
-						eBestUnit = eLoopUnit;
-					}
-				}
+			if (iValue > iBestValue)
+			{
+				iBestValue = iValue;
+				eBestUnit = eLoopUnit;
 			}
 		}
 	}
@@ -10467,60 +10460,58 @@ void CvUnitAI::AI_settlerSeaMove()
 			GET_PLAYER(getOwner()).AI_bestCityUnitAIValue(AI_getUnitAIType(), NULL, &eBestSettlerTransport);
 			if( eBestSettlerTransport != NO_UNIT )
 			{
-				if( eBestSettlerTransport != getUnitType() && GET_PLAYER(getOwner()).AI_unitImpassableCount(eBestSettlerTransport) == 0 )
+				if (eBestSettlerTransport != getUnitType()
+				&& GET_PLAYER(getOwner()).AI_unitImpassableCount(eBestSettlerTransport) == 0
+				&& !upgradeAvailable(getUnitType(), eBestSettlerTransport))
 				{
-					UnitClassTypes ePotentialUpgradeClass = (UnitClassTypes)GC.getUnitInfo(eBestSettlerTransport).getUnitClassType();
-					if( !upgradeAvailable(getUnitType(), ePotentialUpgradeClass) )
+					getGroup()->unloadAll();
+
+					if( GET_PLAYER(getOwner()).AI_unitImpassableCount(getUnitType()) > 0 )
 					{
-						getGroup()->unloadAll();
-
-						if( GET_PLAYER(getOwner()).AI_unitImpassableCount(getUnitType()) > 0 )
+						scrap();
+						return;
+					}
+					else
+					{
+						CvArea* pWaterArea = plot()->waterArea();
+						FAssert(pWaterArea != NULL);
+						if (pWaterArea != NULL)
 						{
-							scrap();
-							return;
-						}
-						else
-						{
-							CvArea* pWaterArea = plot()->waterArea();
-							FAssert(pWaterArea != NULL);
-							if (pWaterArea != NULL)
+							if( GET_PLAYER(getOwner()).AI_totalUnitAIs(UNITAI_EXPLORE_SEA) == 0 )
 							{
-								if( GET_PLAYER(getOwner()).AI_totalUnitAIs(UNITAI_EXPLORE_SEA) == 0 )
+								if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_EXPLORE_SEA, pWaterArea) > 0)
 								{
-									if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_EXPLORE_SEA, pWaterArea) > 0)
-									{
-										AI_setUnitAIType(UNITAI_EXPLORE_SEA);
-										AI_exploreSeaMove();
-										return;
-									}
-								}
-
-								if( GET_PLAYER(getOwner()).AI_totalUnitAIs(UNITAI_SPY_SEA) == 0 )
-								{
-									if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_SPY_SEA, area()) > 0)
-									{
-										AI_setUnitAIType(UNITAI_SPY_SEA);
-										AI_spySeaMove();
-										return;
-									}
-								}
-
-								if( GET_PLAYER(getOwner()).AI_totalUnitAIs(UNITAI_MISSIONARY_SEA) == 0 )
-								{
-									if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_MISSIONARY_SEA, area()) > 0)
-									{
-										AI_setUnitAIType(UNITAI_MISSIONARY_SEA);
-										AI_missionarySeaMove();
-										return;
-									}
-								}
-
-								if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_ATTACK_SEA, pWaterArea) > 0)
-								{
-									AI_setUnitAIType(UNITAI_ATTACK_SEA);
-									AI_attackSeaMove();
+									AI_setUnitAIType(UNITAI_EXPLORE_SEA);
+									AI_exploreSeaMove();
 									return;
 								}
+							}
+
+							if( GET_PLAYER(getOwner()).AI_totalUnitAIs(UNITAI_SPY_SEA) == 0 )
+							{
+								if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_SPY_SEA, area()) > 0)
+								{
+									AI_setUnitAIType(UNITAI_SPY_SEA);
+									AI_spySeaMove();
+									return;
+								}
+							}
+
+							if( GET_PLAYER(getOwner()).AI_totalUnitAIs(UNITAI_MISSIONARY_SEA) == 0 )
+							{
+								if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_MISSIONARY_SEA, area()) > 0)
+								{
+									AI_setUnitAIType(UNITAI_MISSIONARY_SEA);
+									AI_missionarySeaMove();
+									return;
+								}
+							}
+
+							if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_ATTACK_SEA, pWaterArea) > 0)
+							{
+								AI_setUnitAIType(UNITAI_ATTACK_SEA);
+								AI_attackSeaMove();
+								return;
 							}
 						}
 					}

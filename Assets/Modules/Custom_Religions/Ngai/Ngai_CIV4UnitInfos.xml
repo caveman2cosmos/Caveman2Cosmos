@@ -10,7 +10,7 @@
 			<Class>UNITCLASS_NGAI_MISSIONARY</Class>
 			<Type>UNIT_NGAI_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_NGAI_MISSIONARY</Capture>
+			<Capture>UNIT_NGAI_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>

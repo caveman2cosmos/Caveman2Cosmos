@@ -10,7 +10,7 @@
 			<Class>UNITCLASS_TENGRI_MISSIONARY</Class>
 			<Type>UNIT_TENGRI_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_TENGRI_MISSIONARY</Capture>
+			<Capture>UNIT_TENGRI_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>

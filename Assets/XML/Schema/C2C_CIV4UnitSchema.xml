@@ -1376,14 +1376,8 @@
 	<ElementType name="bMilitaryTrade" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bGreatGeneral" content="textOnly" dt:type="boolean"/>
 	<!-- DIPLOMACYMOD END -->
-	<ElementType name="UnitClassUpgradeType" content="textOnly"/>
-	<ElementType name="bUnitClassUpgrade" content="textOnly" dt:type="boolean"/>
-	<ElementType name="UnitClassUpgrade" content="eltOnly">
-		<element type="UnitClassUpgradeType"/>
-		<element type="bUnitClassUpgrade"/>
-	</ElementType>
-	<ElementType name="UnitClassUpgrades" content="eltOnly">
-		<element type="UnitClassUpgrade" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="UnitUpgrades" content="eltOnly">
+		<element type="UnitType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="UnitClassTargetType" content="textOnly"/>
 	<ElementType name="bUnitClassTarget" content="textOnly" dt:type="boolean"/>
@@ -1994,7 +1988,7 @@
 		<element type="iSelfHealModifier" minOccurs="0"/>
 		<element type="iNumHealSupport" minOccurs="0"/>
 		<element type="HealUnitCombatTypes" minOccurs="0"/>
-		<element type="UnitClassUpgrades" minOccurs="0"/>
+		<element type="UnitUpgrades" minOccurs="0"/>
 		<element type="UnitClassTargets" minOccurs="0"/>
 		<element type="UnitCombatTargets" minOccurs="0"/>
 		<element type="UnitClassDefenders" minOccurs="0"/>

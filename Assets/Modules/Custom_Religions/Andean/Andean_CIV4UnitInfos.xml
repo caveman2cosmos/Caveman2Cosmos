@@ -10,7 +10,7 @@
 			<Class>UNITCLASS_ANDEAN_MISSIONARY</Class>
 			<Type>UNIT_ANDEAN_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_ANDEAN_MISSIONARY</Capture>
+			<Capture>UNIT_ANDEAN_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
