@@ -39331,8 +39331,8 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_UNIT_MODERN_FIGHTER</Description>
-			<Civilopedia>TXT_KEY_UNIT_UNIT_MODERN_FIGHTER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_UNIT_MODERN_FIGHTER</Description>
+			<Civilopedia>TXT_KEY_UNIT_MODERN_FIGHTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_MODERN_FIGHTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
