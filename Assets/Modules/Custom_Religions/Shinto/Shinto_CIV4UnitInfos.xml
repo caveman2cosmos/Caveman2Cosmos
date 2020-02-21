@@ -10,7 +10,7 @@
 			<Class>UNITCLASS_SHINTO_MISSIONARY</Class>
 			<Type>UNIT_SHINTO_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_SHINTO_MISSIONARY</Capture>
+			<Capture>UNIT_SHINTO_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>

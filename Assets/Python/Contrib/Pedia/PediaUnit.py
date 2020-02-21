@@ -293,10 +293,9 @@ class PediaUnit:
 		# Upgrades To
 		aUpgList = []
 		szChild = PF + "UNIT"
-		for iUnit in range(GC.getNumUnitInfos()):
-			CvUnitInfo = GC.getUnitInfo(iUnit)
-			if CvTheUnitInfo.getUpgradeUnitClass(CvUnitInfo.getUnitClassType()):
-				aUpgList.append([szChild + str(iUnit), CvUnitInfo.getButton()])
+		for i in range(CvTheUnitInfo.getNumUnitUpgrades()):
+			iUnit = CvTheUnitInfo.getUnitUpgrade(i)
+			aUpgList.append([szChild + str(iUnit),  GC.getUnitInfo(iUnit).getButton()])
 
 		iType = CvTheUnitInfo.getForceObsoleteTech()
 		if aReqList or aUpgList or iType != -1:
@@ -402,7 +401,7 @@ class PediaUnit:
 			szSpecial += TRNSLTR.getText("TXT_KEY_PEDIA_UNIT_IGNORES_BUILDING_DEFENSE", ())
 		if CvTheUnitInfo.getConscriptionValue() > 0:
 			szSpecial += TRNSLTR.getText("TXT_KEY_PEDIA_UNIT_DRAFTABLE", ()) + "\n"
-		if CvTheUnitInfo.getUnitCaptureClassType() > 0:
+		if CvTheUnitInfo.getUnitCaptureType() > 0:
 			szSpecial += TRNSLTR.getText("TXT_KEY_PEDIA_UNIT_CAN_BE_CAPTURED", ()) + "\n"
 		szSpecial += CyGameTextMgr().getUnitHelp(iTheUnit, True, False, False, None)[1:]
 		# History

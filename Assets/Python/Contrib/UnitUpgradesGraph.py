@@ -77,9 +77,9 @@ class UnitUpgradesGraph:
 	def getGraphEdges(self, graph):
 		for iUnitA in graph.iterkeys():
 			CvUnitInfoA = GC.getUnitInfo(iUnitA)
-			for iUnitB in xrange(GC.getNumUnitInfos()):
-				if CvUnitInfoA.getUpgradeUnitClass(GC.getUnitInfo(iUnitB).getUnitClassType()):
-					self.addUpgradePath(graph, iUnitA, iUnitB)
+			for i in range(CvUnitInfoA.getNumUnitUpgrades()):
+				iUnitB = CvUnitInfoA.getUnitUpgrade(i)
+				self.addUpgradePath(graph, iUnitA, iUnitB)
 
 	def placeOnScreen(self, screen, unit, xPos, yPos):
 		screen.setImageButtonAt(self.pediaScreen.getNextWidgetName(), self.upgradesList, GC.getUnitInfo(unit).getButton(), xPos, yPos, self.buttonSize, self.buttonSize, WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT, unit, 1)

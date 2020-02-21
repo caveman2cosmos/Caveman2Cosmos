@@ -833,7 +833,7 @@ public:
 	int getStackExperienceToGive(int iNumUnits) const;
 
 	int upgradePrice(UnitTypes eUnit) const; // Exposed to Python
-	bool upgradeAvailable(UnitTypes eFromUnit, UnitClassTypes eToUnitClass) const; // Exposed to Python
+	bool upgradeAvailable(UnitTypes eFromUnit, UnitTypes eToUnit) const; // Exposed to Python
 	bool canUpgrade(UnitTypes eUnit, bool bTestVisible = false) const; // Exposed to Python
 	bool isReadyForUpgrade() const;
 	bool hasUpgrade(bool bSearch = false) const; // Exposed to Python
@@ -846,7 +846,7 @@ public:
 	CivilizationTypes getCivilizationType() const; // Exposed to Python
 	const wchar* getVisualCivAdjective(TeamTypes eForTeam) const;
 	SpecialUnitTypes getSpecialUnitType() const; // Exposed to Python								
-	UnitTypes getCaptureUnitType(CivilizationTypes eCivilization) const; // Exposed to Python
+	UnitTypes getCaptureUnitType() const; // Exposed to Python
 	UnitCombatTypes getUnitCombatType() const; // Exposed to Python
 	DllExport DomainTypes getDomainType() const; // Exposed to Python
 	InvisibleTypes getInvisibleType() const; // Exposed to Python

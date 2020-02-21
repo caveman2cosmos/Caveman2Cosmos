@@ -11,7 +11,7 @@
 			<Class>UNITCLASS_SHAMAN_MISSIONARY</Class>
 			<Type>UNIT_SHAMAN_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_SHAMAN_MISSIONARY</Capture>
+			<Capture>UNIT_SHAMAN_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
