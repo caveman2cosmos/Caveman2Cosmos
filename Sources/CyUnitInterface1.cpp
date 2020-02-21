@@ -134,7 +134,7 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 		.def("promote", &CyUnit::promote, "bool (ePromotion)")
 
 		.def("upgradePrice", &CyUnit::upgradePrice, "int (UnitTypes eUnit)")
-		.def("upgradeAvailable", &CyUnit::upgradeAvailable, "bool (int /*UnitTypes*/ eFromUnit, int /*UnitClassTypes*/ eToUnitClass, int iCount)")
+		.def("upgradeAvailable", &CyUnit::upgradeAvailable, "bool (int /*UnitTypes*/ eFromUnit, int /*UnitTypes*/ eToUnit, int iCount)")
 		.def("canUpgrade", &CyUnit::canUpgrade, "bool (int /*UnitTypes*/ eUnit, bool bTestVisible)")
 		.def("hasUpgrade", &CyUnit::hasUpgrade, "bool (bool bSearch)")
 

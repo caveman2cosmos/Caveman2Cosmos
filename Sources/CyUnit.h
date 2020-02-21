@@ -164,7 +164,7 @@ public:
 	void promote(int /*PromotionTypes*/ ePromotion, int iLeaderUnitId);
 
 	int upgradePrice(int /*UnitTypes*/ eUnit);
-	bool upgradeAvailable(int /*UnitTypes*/ eFromUnit, int /*UnitClassTypes*/ eToUnitClass, int iCount);
+	bool upgradeAvailable(int /*UnitTypes*/ eFromUnit, int /*UnitTypes*/ eToUnit, int iCount);
 	bool canUpgrade(int /*UnitTypes*/ eUnit, bool bTestVisible);
 	bool hasUpgrade(bool bSearch);
 

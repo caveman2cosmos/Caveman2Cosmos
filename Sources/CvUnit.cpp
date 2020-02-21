@@ -7458,7 +7458,7 @@ bool CvUnit::canAutomate(AutomateTypes eAutomate) const
 		}
 		break;
 	case AUTOMATE_UPGRADING:
-		if (m_pUnitInfo->getUpgradeUnitClassTypes().size() == 0)
+		if (m_pUnitInfo->getNumUnitUpgrades() == 0)
 		{
 			return false;
 		}
@@ -7472,7 +7472,7 @@ bool CvUnit::canAutomate(AutomateTypes eAutomate) const
 		}
 		break;
 	case AUTOMATE_CANCEL_UPGRADING:
-		if (m_pUnitInfo->getUpgradeUnitClassTypes().size() == 0)
+		if (m_pUnitInfo->getNumUnitUpgrades() == 0)
 		{
 			return false;
 		}
@@ -13816,9 +13816,9 @@ int CvUnit::upgradePrice(UnitTypes eUnit) const
 }
 
 
-bool CvUnit::upgradeAvailable(UnitTypes eFromUnit, UnitClassTypes eToUnitClass) const
+bool CvUnit::upgradeAvailable(UnitTypes eFromUnit, UnitTypes eToUnit) const
 {
-	return GET_PLAYER(getOwner()).upgradeAvailable(eFromUnit, eToUnitClass);
+	return GET_PLAYER(getOwner()).upgradeAvailable(eFromUnit, eToUnit);
 }
 
 
@@ -13829,17 +13829,14 @@ bool CvUnit::canUpgrade(UnitTypes eUnit, bool bTestVisible) const
 		return false;
 	}
 
-	if(!isReadyForUpgrade())
+	if (!isReadyForUpgrade())
 	{
 		return false;
 	}
 
-	if (!bTestVisible)
+	if (!bTestVisible && GET_PLAYER(getOwner()).getEffectiveGold() < upgradePrice(eUnit))
 	{
-		if (GET_PLAYER(getOwner()).getEffectiveGold() < upgradePrice(eUnit))
-		{
-			return false;
-		}
+		return false;
 	}
 
 	if (GET_PLAYER(getOwner()).getUpgradeRoundCount() == GC.getUPGRADE_ROUND_LIMIT())
@@ -13959,12 +13956,12 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 		return NULL;
 	}
 
-	CvUnitInfo& kUnitInfo = GC.getUnitInfo(eUnit);
-
-	if (!upgradeAvailable(getUnitType(), ((UnitClassTypes)(kUnitInfo.getUnitClassType()))))
+	if (!upgradeAvailable(getUnitType(), eUnit))
 	{
 		return NULL;
 	}
+	CvUnitInfo& kUnitInfo = GC.getUnitInfo(eUnit);
+
 	//The following checks to make sure that the upgrade won't make it impossible for a ship to hold
 	//the cargo it already does.
 	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))

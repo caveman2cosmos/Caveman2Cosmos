@@ -2563,12 +2563,11 @@ UnitTypes CvCity::allUpgradesAvailable(UnitTypes eUnit, int iUpgradeCount) const
 		/* CanTrain Performance                                                                         */
 		/************************************************************************************************/
 		CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
-		CvCivilizationInfo& kCivilization = GC.getCivilizationInfo(getCivilizationType());
-		const int numNumUnitClassInfos = GC.getNumUnitClassInfos();
+		const int iNumUnitInfos = GC.getNumUnitInfos();
 
 		FAssertMsg(eUnit != NO_UNIT, "eUnit is expected to be assigned (not NO_UNIT)");
 
-		if (iUpgradeCount <= numNumUnitClassInfos)
+		if (iUpgradeCount <= iNumUnitInfos)
 		{
 			UnitTypes eUpgradeUnit = NO_UNIT;
 
@@ -2576,31 +2575,27 @@ UnitTypes CvCity::allUpgradesAvailable(UnitTypes eUnit, int iUpgradeCount) const
 			bool bUpgradeAvailable = false;
 			bool bUpgradeUnavailable = false;
 
-			for (int iI = 0; iI < numNumUnitClassInfos; iI++)
+			for (int iI = 0; iI < kUnit.getNumUnitUpgrades(); iI++)
 			{
-				if (kUnit.getUpgradeUnitClass(iI))
+				bUpgradeFound = true;
+
+				UnitTypes eTempUnit = (UnitTypes) kUnit.getUnitUpgrade(iI);
+				if (kUnit.isSupersedingUnit(eTempUnit))
 				{
-					UnitTypes eLoopUnit = (UnitTypes)kCivilization.getCivilizationUnits(iI);
-					/************************************************************************************************/
-					/* REVDCM                                  END Performance                                      */
-					/************************************************************************************************/
+					// if this is avaliable then the unit won't be buildable anyhow, so it makes little sense to consider it here.
+					continue;
+				}
 
-					if (eLoopUnit != NO_UNIT)
-					{
-						bUpgradeFound = true;
+				eTempUnit = allUpgradesAvailable(eTempUnit, (iUpgradeCount + 1));
 
-						UnitTypes eTempUnit = allUpgradesAvailable(eLoopUnit, (iUpgradeCount + 1));
-
-						if (eTempUnit != NO_UNIT)
-						{
-							eUpgradeUnit = eTempUnit;
-							bUpgradeAvailable = true;
-						}
-						else
-						{
-							bUpgradeUnavailable = true;
-						}
-					}
+				if (eTempUnit != NO_UNIT)
+				{
+					eUpgradeUnit = eTempUnit;
+					bUpgradeAvailable = true;
+				}
+				else
+				{
+					bUpgradeUnavailable = true;
 				}
 			}
 
@@ -2763,9 +2758,8 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 		return false;
 	}
 
-	CvCivilizationInfo& kCivilization = GC.getCivilizationInfo(getCivilizationType());
 	bool bQual = false;
-	if (kCivilization.isStronglyRestricted() && isNPC())
+	if (isNPC() && GC.getCivilizationInfo(getCivilizationType()).isStronglyRestricted())
 	{
 		for (int iI = 0; iI < kUnit.getNumEnabledCivilizationTypes(); iI++)
 		{
@@ -23411,29 +23405,24 @@ bool CvCity::hasFreshWater() const
 {
 	return (m_iFreshWater > 0);
 }
-/*
 
-*/
+
 bool CvCity::canUpgradeUnit(UnitTypes eUnit) const
 {
 	PROFILE_FUNC();
 
-	for (int iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
+	for (int iI = 0; iI < GC.getUnitInfo(eUnit).getNumUnitUpgrades(); iI++)
 	{
-		if (GC.getUnitInfo(eUnit).getUpgradeUnitClass((UnitClassTypes)iI))
-		{
-			UnitClassTypes eUpgradeUnitClass = ((UnitClassTypes)iI);
-			if ((GC.getGame().isUnitClassMaxedOut(eUpgradeUnitClass)) || (GET_TEAM(GET_PLAYER(getOwner()).getTeam()).isUnitClassMaxedOut(eUpgradeUnitClass)) || GET_PLAYER(getOwner()).isUnitClassMaxedOut(eUpgradeUnitClass))
-			{//if the upgrade unitclass is maxed out, I assume you can construct them, and already have construct the max
-				return true;
-			}
+		UnitClassTypes eUpgradeUnitClass = (UnitClassTypes)GC.getUnitInfo((UnitTypes)GC.getUnitInfo(eUnit).getUnitUpgrade(iI)).getUnitClassType();
+		if ((GC.getGame().isUnitClassMaxedOut(eUpgradeUnitClass)) || (GET_TEAM(GET_PLAYER(getOwner()).getTeam()).isUnitClassMaxedOut(eUpgradeUnitClass)) || GET_PLAYER(getOwner()).isUnitClassMaxedOut(eUpgradeUnitClass))
+		{//if the upgrade unitclass is maxed out, I assume you can construct them, and already have construct the max
+			return true;
 		}
 	}
 	return false;
 }
-/*
 
-*/
+
 int CvCity::calculateBonusDefense() const
 {
 	int iBonusDefense = 0;

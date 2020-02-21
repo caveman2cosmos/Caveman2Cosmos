@@ -48,12 +48,9 @@
 			<bFirstStrikeImmune>1</bFirstStrikeImmune>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_DEER_ARCHER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_DEER_ARCHER</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -185,12 +182,9 @@
 			<bPillage>1</bPillage>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_DEER_LIGHT</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_DEER_LIGHT</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -326,12 +320,9 @@
 			<bFirstStrikeImmune>1</bFirstStrikeImmune>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_LIGHT_TANK</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_LIGHT_TANK</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>

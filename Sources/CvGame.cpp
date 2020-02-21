@@ -1040,12 +1040,8 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 	{
 		AI_reset();
 	}
-/************************************************************************************************/
-/* Afforess/RevDCM                                     12/7/09                                  */
-/*                                                                                              */
-/* Advanced Automations                                                                         */
-/************************************************************************************************/
-		// Sanguo Mod Performance start, added by poyuzhe 07.27.09
+
+	// Sanguo Mod Performance start, added by poyuzhe 07.27.09
 	UnitTypes eUnit;
 	std::vector<UnitTypes> aUpgradeUnits;
 
@@ -1061,45 +1057,39 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 	for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
 		eUnit = (UnitTypes)iI;
+		CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
 		aUpgradeUnits.clear();
 		//set post mod-load unitinfo details
-		GC.getUnitInfo(eUnit).setReligionSubCombat();
-		GC.getUnitInfo(eUnit).setCultureSubCombat();
-		GC.getUnitInfo(eUnit).setEraSubCombat();
-		GC.getUnitInfo(eUnit).setSM();
-		GC.getUnitInfo(eUnit).setHealAsTypes();
+		kUnit.setReligionSubCombat();
+		kUnit.setCultureSubCombat();
+		kUnit.setEraSubCombat();
+		kUnit.setSM();
+		kUnit.setHealAsTypes();
 
 		do
 		{
-			for (int iJ = 0; iJ < GC.getNumUnitClassInfos(); iJ++)
+			if (eUnit != NO_UNIT)
 			{
-				if (eUnit != NO_UNIT)
+				for (int iJ = 0; iJ < GC.getUnitInfo(eUnit).getNumUnitUpgrades(); iJ++)
 				{
-					if (GC.getUnitInfo(eUnit).getUpgradeUnitClass(iJ))
-					{
-						GC.getUnitInfo((UnitTypes)iI).addUpgradeUnitClassTypes(iJ);
-						aUpgradeUnits.push_back((UnitTypes)GC.getUnitClassInfo((UnitClassTypes)iJ).getDefaultUnitIndex());
-					}
+					kUnit.addUnitToUpgradeChain(GC.getUnitInfo(eUnit).getUnitUpgrade(iJ));
+					aUpgradeUnits.push_back((UnitTypes) GC.getUnitInfo(eUnit).getUnitUpgrade(iJ));
 				}
 			}
-			if (!aUpgradeUnits.empty())
-			{
-				if (eUnit != NO_UNIT)
-				{
-					eUnit = aUpgradeUnits.front();
-					aUpgradeUnits.erase(aUpgradeUnits.begin());
-				}
-			}
-			else
+			if (aUpgradeUnits.empty())
 			{
 				break;
 			}
-		}while(true);
+			else
+			{
+				eUnit = aUpgradeUnits.front();
+				aUpgradeUnits.erase(aUpgradeUnits.begin());
+			}
+		}
+		while (true);
 	}
 	// Sanguo Mod Performance, end
-/************************************************************************************************/
-/* Afforess	                         END                                                        */
-/************************************************************************************************/
+
 	m_Properties.clear();
 
 	// Alberts2: Recalculate which info class replacements are currently active

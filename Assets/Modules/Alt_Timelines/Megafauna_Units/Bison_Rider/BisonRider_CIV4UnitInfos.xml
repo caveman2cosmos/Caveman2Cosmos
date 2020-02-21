@@ -45,12 +45,9 @@
 			<bPillage>1</bPillage>
 			<bFirstStrikeImmune>1</bFirstStrikeImmune>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_CUIRASSIER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_CUIRASSIER</UnitType>
+			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
 					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>

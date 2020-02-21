@@ -833,7 +833,7 @@ public:
 	int getStackExperienceToGive(int iNumUnits) const;
 
 	int upgradePrice(UnitTypes eUnit) const; // Exposed to Python
-	bool upgradeAvailable(UnitTypes eFromUnit, UnitClassTypes eToUnitClass) const; // Exposed to Python
+	bool upgradeAvailable(UnitTypes eFromUnit, UnitTypes eToUnit) const; // Exposed to Python
 	bool canUpgrade(UnitTypes eUnit, bool bTestVisible = false) const; // Exposed to Python
 	bool isReadyForUpgrade() const;
 	bool hasUpgrade(bool bSearch = false) const; // Exposed to Python

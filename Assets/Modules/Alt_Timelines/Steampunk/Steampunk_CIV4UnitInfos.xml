@@ -40,12 +40,9 @@
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<bMechanized>1</bMechanized>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_GUNSHIP</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_GUNSHIP</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -173,12 +170,9 @@
 			<bMechanized>1</bMechanized>
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_ATTACK_SUBMARINE</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_ATTACK_SUBMARINE</UnitType>
+			</UnitUpgrades>
 			<UnitClassTargets>
 				<UnitClassTarget>
 					<UnitClassTargetType>UNITCLASS_FLUYT</UnitClassTargetType>
@@ -323,12 +317,9 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_UNMANNED_TRIKE</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_UNMANNED_TRIKE</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
@@ -422,16 +413,10 @@
 			<bIgnoreBuildingDefense>1</bIgnoreBuildingDefense>
 			<bMechanized>1</bMechanized>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_LIGHT_TANK</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_TANK</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_LIGHT_TANK</UnitType>
+				<UnitType>UNIT_TANK</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -832,12 +817,9 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_WORKER_ANDROID</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_WORKER_ANDROID</UnitType>
+			</UnitUpgrades>
 			<iCost>590</iCost>
 			<iMoves>3</iMoves>
 			<iWorkRate>400</iWorkRate>

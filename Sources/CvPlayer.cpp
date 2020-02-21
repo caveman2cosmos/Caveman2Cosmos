@@ -16,9 +16,9 @@ class CvUpgradeCache
 	struct UpgradePair
 	{
 		UnitTypes eFrom;
-		UnitClassTypes eTo;
+		UnitTypes eTo;
 
-		UpgradePair(UnitTypes eFrom = NO_UNIT, UnitClassTypes eTo = NO_UNITCLASS) : eFrom(eFrom), eTo(eTo) {}
+		UpgradePair(UnitTypes eFrom = NO_UNIT, UnitTypes eTo = NO_UNIT) : eFrom(eFrom), eTo(eTo) {}
 
 		// hash function
 		operator size_t() const
@@ -34,9 +34,9 @@ class CvUpgradeCache
 	};
 
 public:
-	CvUpgradeCache(PlayerTypes eOwner) : m_init(false), m_eOwner(eOwner) {}
+	CvUpgradeCache() : m_init(false) {}
 
-	bool upgradeAvailable(UnitTypes eFromUnit, UnitClassTypes eToUnitClass)
+	bool upgradeAvailable(UnitTypes eFromUnit, UnitTypes eToUnit)
 	{
 		PROFILE_FUNC();
 
@@ -45,7 +45,7 @@ public:
 			init();
 		}
 
-		return m_validUpgrades.find(UpgradePair(eFromUnit, eToUnitClass)) != m_validUpgrades.end();
+		return m_validUpgrades.find(UpgradePair(eFromUnit, eToUnit)) != m_validUpgrades.end();
 	}
 
 private:
@@ -56,78 +56,59 @@ private:
 		std::vector<UpgradePair> directUpgrades;
 
 		// First populate the direct upgrades
-		for(int unitTypeIdx = 0; unitTypeIdx < GC.getNumUnitInfos(); unitTypeIdx++)
+		for(int iUnit = 0; iUnit < GC.getNumUnitInfos(); iUnit++)
 		{
-			const UnitTypes unitType = static_cast<UnitTypes>(unitTypeIdx);
+			const UnitTypes unitType = static_cast<UnitTypes>(iUnit);
 			const CvUnitInfo& unitInfo = GC.getUnitInfo(unitType);
-			for(int unitClassTypeIdx = 0; unitClassTypeIdx < GC.getNumUnitClassInfos(); unitClassTypeIdx++)
+			for(int i = 0; i < unitInfo.getNumUnitUpgrades(); i++)
 			{
-				const UnitClassTypes unitClassType = static_cast<UnitClassTypes>(unitClassTypeIdx);
-				if (unitInfo.getUpgradeUnitClass(unitClassType))
-				{
-					directUpgrades.push_back(UpgradePair(unitType, unitClassType));
-				}
+				directUpgrades.push_back(UpgradePair(unitType, static_cast<UnitTypes>(unitInfo.getUnitUpgrade(i))));
 			}
 		}
 
-		for(int unitTypeIdx = 0; unitTypeIdx < GC.getNumUnitInfos(); unitTypeIdx++)
+		for(int iUnit = 0; iUnit < GC.getNumUnitInfos(); iUnit++)
 		{
-			const UnitTypes unitType = static_cast<UnitTypes>(unitTypeIdx);
+			const UnitTypes unitType = static_cast<UnitTypes>(iUnit);
 			populateUpgradeChain(unitType, unitType, directUpgrades, m_validUpgrades);
 		}
-
 		m_init = true;
 	}
 
 	template < class DirectUpgradeCont_, class ValidUpgradeCont_ >
 	void populateUpgradeChain(UnitTypes eBaseType, UnitTypes eType, const DirectUpgradeCont_& directUpgrades, ValidUpgradeCont_& validUpgrades)
 	{
-		for(DirectUpgradeCont_::const_iterator itr = directUpgrades.begin(); itr != directUpgrades.end(); ++itr)
+		for (DirectUpgradeCont_::const_iterator itr = directUpgrades.begin(); itr != directUpgrades.end(); ++itr)
 		{
-			if ( itr->eFrom == eType )
+			if (itr->eFrom == eType)
 			{
 				validUpgrades.insert(UpgradePair(eBaseType, itr->eTo));
-				populateUpgradeChain(eBaseType, (UnitTypes)(GC.getCivilizationInfo(GET_PLAYER(m_eOwner).getCivilizationType()).getCivilizationUnits(itr->eTo)), directUpgrades, validUpgrades);
+				populateUpgradeChain(eBaseType, itr->eTo, directUpgrades, validUpgrades);
 			}
 		}
 	}
 
 #if 0
-	bool upgradeAvailable(UnitTypes eFromUnit, UnitClassTypes eToUnitClass, int iCount)
+	bool upgradeAvailable(UnitTypes eFromUnit, UnitTypes eToUnit, int iCount)
 	{
-		UnitTypes eLoopUnit;
-		int iI;
-		int numUnitClassInfos = GC.getNumUnitClassInfos();
-
-		if (iCount > numUnitClassInfos)
+		if (iCount > GC.getNumUnitInfos())
 		{
 			return false;
 		}
 
 		CvUnitInfo &fromUnitInfo = GC.getUnitInfo(eFromUnit);
-		CvCivilizationInfo& civilizationInfo = GC.getCivilizationInfo(GET_PLAYER(m_eOwner).getCivilizationType());
 
-		if (fromUnitInfo.getUpgradeUnitClass(eToUnitClass))
+		if (fromUnitInfo.isUnitUpgrade(eToUnit))
 		{
 			return true;
 		}
 
-		for (iI = 0; iI < numUnitClassInfos; iI++)
+		for (int iI = 0; iI < fromUnitInfo.getNumUnitUpgrades(); iI++)
 		{
-			if (fromUnitInfo.getUpgradeUnitClass(iI))
+			if (upgradeAvailable((UnitTypes) fromUnitInfo.getUnitUpgrade(iI), eToUnit, (iCount + 1)))
 			{
-				eLoopUnit = ((UnitTypes)(civilizationInfo.getCivilizationUnits(iI)));
-
-				if (eLoopUnit != NO_UNIT)
-				{
-					if (upgradeAvailable(eLoopUnit, eToUnitClass, (iCount + 1)))
-					{
-						return true;
-					}
-				}
+				return true;
 			}
 		}
-
 		return false;
 	}
 #endif
@@ -135,7 +116,6 @@ private:
 private:
 	bool m_init;
 	stdext::hash_set<UpgradePair> m_validUpgrades;
-	PlayerTypes m_eOwner;
 };
 
 // Public Functions...
@@ -8594,8 +8574,7 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 	int iI;
 
 	//Another way to create a barrier for barbarians to spawn heroes - apparently this is called when determining what units to add to a newly spawned barb city.
-	if (isNPC() && (GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(eUnitClass) != eUnit
-		|| GC.getUnitInfo(eUnit).hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_HERO"))))
+	if (isNPC() && GC.getUnitInfo(eUnit).hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_HERO")))
 	{
 		return false;
 	}
@@ -34224,13 +34203,13 @@ void CvPlayer::recalculateModifiers()
 	resetCivTypeEffects();
 }
 
-bool CvPlayer::upgradeAvailable(UnitTypes eFromUnit, UnitClassTypes eToUnitClass) const
+bool CvPlayer::upgradeAvailable(UnitTypes eFromUnit, UnitTypes eToUnit) const
 {
 	if ( !m_upgradeCache )
 	{
-		m_upgradeCache.reset(new CvUpgradeCache(getID()));
+		m_upgradeCache.reset(new CvUpgradeCache());
 	}
-	return m_upgradeCache->upgradeAvailable(eFromUnit, eToUnitClass);
+	return m_upgradeCache->upgradeAvailable(eFromUnit, eToUnit);
 }
 
 CvProperties* CvPlayer::getProperties()

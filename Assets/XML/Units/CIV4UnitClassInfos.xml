@@ -472,8 +472,8 @@
 			<DefaultUnit>UNIT_HEAVY_TANK_M26</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
-			<Type>UNITCLASS_ARMOR</Type>
-			<Description>TXT_KEY_UNIT_ARMOR</Description>
+			<Type>UNITCLASS_ARMOR_M60</Type>
+			<Description>TXT_KEY_UNIT_ARMOR_M60</Description>
 			<DefaultUnit>UNIT_ARMOR_M60</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -484,7 +484,7 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_HEAVY_ARMOR</Type>
 			<Description>TXT_KEY_UNIT_HEAVY_ARMOR</Description>
-			<DefaultUnit>UNIT_T95</DefaultUnit>
+			<DefaultUnit>UNIT_HEAVY_ARMOR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_STEALTH_ARMOR</Type>
@@ -754,7 +754,7 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_DREADNOUGHT_SHIP</Type>
 			<Description>TXT_KEY_UNIT_DREADNOUGHT_SHIP</Description>
-			<DefaultUnit>UNIT_DREADNOUGHT_HELGOLAND</DefaultUnit>
+			<DefaultUnit>UNIT_DREADNOUGHT_SHIP</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_WW2_BATTLESHIP</Type>
@@ -849,7 +849,7 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_EARLY_FIGHTER</Type>
 			<Description>TXT_KEY_UNIT_EARLY_FIGHTER</Description>
-			<DefaultUnit>UNIT_FOKKERDR1</DefaultUnit>
+			<DefaultUnit>UNIT_EARLY_FIGHTER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_FIGHTER</Type>
@@ -859,7 +859,7 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_EARLYJET</Type>
 			<Description>TXT_KEY_UNIT_EARLYJET</Description>
-			<DefaultUnit>UNIT_P59</DefaultUnit>
+			<DefaultUnit>UNIT_EARLYJET</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_JET_FIGHTER</Type>
@@ -869,12 +869,12 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_STRIKE_FIGHTER</Type>
 			<Description>TXT_KEY_UNIT_STRIKE_FIGHTER</Description>
-			<DefaultUnit>UNIT_F15</DefaultUnit>
+			<DefaultUnit>UNIT_STRIKE_FIGHTER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MODERN_FIGHTER</Type>
 			<Description>TXT_KEY_UNIT_MODERN_FIGHTER</Description>
-			<DefaultUnit>UNIT_f35</DefaultUnit>
+			<DefaultUnit>UNIT_MODERN_FIGHTER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SR71</Type>
@@ -904,7 +904,7 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_FIGHTER_BOMBER</Type>
 			<Description>TXT_KEY_UNIT_FIGHTER_BOMBER</Description>
-			<DefaultUnit>UNIT_IL2</DefaultUnit>
+			<DefaultUnit>UNIT_FIGHTER_BOMBER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_BOMBER</Type>

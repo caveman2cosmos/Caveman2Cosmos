@@ -293,10 +293,9 @@ class PediaUnit:
 		# Upgrades To
 		aUpgList = []
 		szChild = PF + "UNIT"
-		for iUnit in range(GC.getNumUnitInfos()):
-			CvUnitInfo = GC.getUnitInfo(iUnit)
-			if CvTheUnitInfo.getUpgradeUnitClass(CvUnitInfo.getUnitClassType()):
-				aUpgList.append([szChild + str(iUnit), CvUnitInfo.getButton()])
+		for i in range(CvTheUnitInfo.getNumUnitUpgrades()):
+			iUnit = CvTheUnitInfo.getUnitUpgrade(i)
+			aUpgList.append([szChild + str(iUnit),  GC.getUnitInfo(iUnit).getButton()])
 
 		iType = CvTheUnitInfo.getForceObsoleteTech()
 		if aReqList or aUpgList or iType != -1:

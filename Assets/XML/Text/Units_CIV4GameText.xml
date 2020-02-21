@@ -1631,19 +1631,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Łucznik</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ARMOR</Tag>
-		<English>Armor</English>
-		<French>Char Blindé</French>
-		<German>Panzer</German>
-		<Italian>Carro armato</Italian>
-		<Spanish>
-			<Text>Carro blindado</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Czołg</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARMOR_BASE</Tag>
 		<English>[ICON_BULLET]Reduces combat damaged suffered by %d1_Amount%% per round.</English>
 		<French>[ICON_BULLET]réduit les dégâts reçus au combat de %d1_Amount%% par coup.</French>
@@ -7059,6 +7046,18 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Wczesny Rydwan to jedna z pierwszych jednostek konnicy. Jak wszystkie rydwany świetnie sprawdza się przeciwko podstawowym jednostkom piechoty.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_EARLYJET</Tag>
+		<English>Early Jet Fighter</English>
+		<French>Chasseur à réaction basique</French>
+		<Italian>Caccia a reazione base</Italian>
+		<Spanish>
+			<Text>Caza a reacción antiguo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Myśliwiec P-59</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_EARLYJET_PEDIA</Tag>
 		<English>The first aircraft to incorporate the principles of the jet engine was the Coanda-1910. Its engine, unlike modern jet engines, used a piston engine rather than a turbine to drive its compressor. The aircraft crashed during its first and only demonstration but remained intact. The first true turbine-equipped jetplane was the Heinkel He 178 (Germany), piloted by Erich Warsitz on August 27, 1939. The first operational jet fighter was the Messerschmitt Me 262, piloted by Fritz Wendel. It was the fastest conventional aircraft of World War II - only the rocket-powered Messerschmitt Me 163 Komet was faster. Mass production started in 1944, too late for a decisive impact on the outcome of the war. About the same time, the United Kingdom's Gloster Meteor made up the first operational jet fighter squadron in 1944. It was used to defend the UK against the V1 flying bomb and in ground-attack operations over Europe towards the end of the war. The Imperial Japanese Navy also developed jet aircraft in 1945, including the Nakajima J9Y Kikka, partially inspired by German designs.</English>
 		<Polish>Coanda 1910 (znany także jako Coanda 1)? pierwszy na świecie samolot z silnikiem odrzutowym (powszechnie uważany za pierwszy samolot odrzutowy Heinkel He 178 był pierwszym samolotem ze współcześnie używanym silnikiem turboodrzutowym) zbudowany przez rumuńskiego konstruktora Henriego Coandę w 1910. Samolot ten używał opracowany przez Coandę prymitywny silnik odrzutowy.</Polish>
@@ -7998,30 +7997,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>F14 Tomcat to jednostka specjalizująca sie w bombardowaniu wrogich celów i przechwytywaniu wrogich myśliwców i bombowców.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_F15</Tag>
-		<English>Modern Interceptor</English>
-		<French>Intercepteur F15</French>
-		<German>Kampfjäger F15</German>
-		<Italian>Intercettore moderno</Italian>
-		<Spanish>
-			<Text>Interceptor moderno</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Współczesny Myśliwiec Przechwytujący</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_F15_PEDIA</Tag>
-		<English>The Modern Interceptor is an all-weather tactical fighter designed to gain and maintain air superiority in aerial combat. The F-15's maneuverability is derived from low wing loading (weight to wing area ratio) with a high thrust-to-weight ratio enabling the aircraft to turn tightly without losing airspeed. The F-15 can climb to 30,000 feet (10,000 m) in around 60 seconds. The thrust output of the dual engines is greater than the aircraft's weight, thus giving it the ability to accelerate in a vertical climb. The weapons and flight control systems are designed so that one person can safely and effectively perform air-to-air combat. [PARAGRAPH:1]The F-15's versatile APG-63/70 Pulse-Doppler radar system can look up at high-flying targets and down at low-flying targets without being confused by ground clutter. It can detect and track aircraft and small high-speed targets at distances beyond visual range (the maximum being 120 nautical miles (220 km) away) down to close range, and at altitudes down to treetop level. The radar feeds target information into the central computer for effective weapons delivery. The capability of locking onto targets as far as 50 nautical miles (90 km) with an AIM-120 AMRAAM enables true beyond visual range (BVR) engagement of targets. For close-in dogfights, the radar automatically acquires enemy aircraft, and this information is projected on the head-up display. The F-15's electronic warfare system provides both threat warning and automatic countermeasures against selected threats. [PARAGRAPH:1]The Eagle can be armed with combinations of four different air-to-air weapons: AIM-7F/M Sparrow missiles or AIM-120 AMRAAM advanced medium range air-to-air missiles on its lower fuselage corners, AIM-9L/M Sidewinder or AIM-120 missiles on two pylons under the wings, and an internal M61A-1 20 mm Gatling gun in the right wing root.</English>
-		<Polish>McDonnell Douglas F-15 Eagle - amerykański ciężki myśliwiec przewagi powietrznej przeznaczony do działań w każdych warunkach atmosferycznych.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_F15_STRATEGY</Tag>
-		<English>Strike Fighters have greater range than Jet Fighters, and they are better at intercepting and destroying enemy aircraft.</English>
-		<French>Strike Fighters have greater range than Jet Fighters, and they are better at intercepting and destroying enemy aircraft.</French>
-		<Spanish>Los Cazas de ataque poseen un alcance mayor que los Cazas a reacción, y son más efectivos a la hora de interceptar y destruir aeronaves enemigas.</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_F16_FALCON</Tag>
 		<English>Modern Fighter</English>
 		<French>Chasseur moderne</French>
@@ -8064,28 +8039,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Use the F22 Raptor to control the skies over your empire by gaining air superiority.</English>
 		<French>Use the F22 Raptor to control the skies over your empire by gaining air superiority.</French>
 		<Polish>Niewykrywalny Myśliwiec Przechwytujący to współczesna jednostka myśliwsko-przechwytująca.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_f35</Tag>
-		<English>Stealth Fighter</English>
-		<French>
-			<Text>Chasseur à réaction F35</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Moderner Jäger F35</German>
-		<Italian>Caccia moderno F35</Italian>
-		<Spanish>
-			<Text>Caza furtivo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Niewykrywalny Myśliwiec</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_f35_PEDIA</Tag>
-		<English>The Lockheed Martin F-35 Lightning II is a single-seat, single-engine, stealth-capable military strike fighter, a multi-role aircraft that can perform close air support, tactical bombing, and air-to-air combat. The F-35 has three different models; one is the conventional takeoff and landing variant, the second is short-takeoff and vertical-landing variant, and the third is a carrier-based variant.</English>
-		<Polish>Lockheed F-35 Lightning II to amerykański jednomiejscowy, jednosilnikowy myśliwiec wielozadaniowy zbudowany przez korporację Lockheed Martin w ramach projektu Joint Strike Fighter, który miał na celu zbudowanie maszyny spełniającej wymagania wszystkich rodzajów amerykańskich sił zbrojnych. Wersja prototypowa samolotu była znana pod nazwą X-35 JSF, ale 7 lipca 2006 roku maszyna dostała nową oficjalną nazwę Lightning II. F-35 Lightning II jest zdolny do wykonywania misji bliskiego wsparcia, bombardowań, oraz typowo myśliwskich zadań walki powietrznej. Projekt samolotu jest finansowany wspólnie przez rządy Stanów Zjednoczonych, Wielkiej Brytanii i innych krajów zainteresowanych zakupem tej maszyny. F-35 Lightning II został zbudowany pod kierownictwem firmy Lockheed Martin, przy współpracy z BAE Systems i Northrop Grumman</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_F4_PHANTOM</Tag>
@@ -8338,6 +8291,32 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Myśliwiec Pokładowy</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_FIGHTER_BOMBER</Tag>
+		<English>Propeller Tactical Bomber</English>
+		<French>
+			<Text>Bombardier Tactique à Hélices</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>Bombardiere tattico ad elica</Italian>
+		<Spanish>
+			<Text>Bombardero táctico a hélice</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Samolot Szturmowy Ił-2 Sturmovik</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_FIGHTER_BOMBER_PEDIA</Tag>
+		<English>The Ilyushin Il-2 Shturmovik was a ground attack aircraft in the Second World War, produced by the Soviet Union in huge numbers. In combination with its successor, the Ilyushin Il-10, a total of 36,163 were built, making it the single most produced military aircraft design in all of aviation history as well as the third most produced aircraft in history behind the Cessna 172 and the Polikarpov Po-2. It was the leading aircraft for tank kills with its accuracy in diving bombing.</English>
+		<Polish>Ił-2 to dwumiejscowy samolot szturmowy produkcji ZSRR z czasów II wojny światowej. Zbudowany w większych ilościach (36 150 egzemplarzy) i w krótszym okresie niż jakikolwiek inny samolot bojowy w historii, Ił-2 walnie przyczynił się do radzieckiego zwycięstwa nad Niemcami w roku 1945.Istnieje teoria, jakoby maszyna została zaprojektowana jako dwumiejscowa (pilot i strzelec osłaniający tylną półsferę), jednak w wyniku działań politycznych (gł. Ludowego Komisarza Obrony ZSRR Klimenta Woroszyłowa) został przerobiony na maszynę jednomiejscową - czemu miał przeciwstawiać się Siergiej Iljuszyn. W rzeczywistości chociaż faktycznie pierwszy projekt pod oznaczeniem BSz-2 przewidywał dwuosobową załogę, jego osiągi nie spełniały wymagań sił powietrznych i to sam Iliuszyn zrezygnował z tylnego strzelca. Skrócenie pancernej części kadłuba i dodatkowy zbiornik paliwa na tyle poprawiły osiągi, że jednomiejscowa wersja wygrała rywalizację z projektem Suchoja Su-6 i weszła do służby na trzy miesiące przed niemieckim atakiem w czerwcu 1941 roku. Początkowo samolot był wyposażony w silnik AM-38 o zbyt niskiej mocy 1660 KM, uzbrojoną w dwa działka SzWAK kalibru 20 mm i dwa karabiny maszynowe SzKAS kalibru 7,62 mm oraz bomby i rakiety kalibru 82 mm. Pierwotna wersja była niezbyt udaną konstrukcją, charakteryzującą się małą statecznością, a brak osłony tylnej półsfery powodował bardzo duże straty. Po zastosowaniu innego płata ze skosem (dla poprawienia stateczności) i mocniejszego silnika, oraz powrocie do załogi 2 osobowej (strzelec ochraniający tylną półsferę) samolot dojrzał jako niezwykle groźna maszyna szturmowa, budząca postrach wśród niemieckich sił lądowych. Po Ile-2 wyprodukowano Iła-2M z silnikiem AM-38F i działkiem WJa-23 kal. 23 mm, Iła-2M3, dwumiejscową wersję Iła-2M ze stanowiskiem tylnego strzelca oraz Iła-2M z działkiem NS-37 kal. 37 mm w miejsce działka 23 mm w celu zwiększenia skuteczności zwalczania czołgów. Jednak mimo mocniejszych silników nie powrócono do pierwotnego projektu opancerzenia i znajdujący się poza pancerną częścią kadłuba tylny strzelec wciąż miał o wiele słabszą osłonę (na jednego straconego pilota przypadało kilku strzelców). Obaj członkowie załogi uzyskali pełną ochronę dopiero w następującym po Ile-2 samolocie Ił-10. Samolot ten nie atakował celów z lotu nurkowego (nie był bombowcem nurkującym z uwagi na brak hamulców aerodynamicznych i niezbyt dużą odporność na przeciążenia). Atak odbywał się z płytkiego nurkowania po prostej, często w formacji kilku maszyn jako atak po kręgu, dzięki czemu nieprzyjaciel był pod nieustannym ostrzałem</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_FIGHTER_BOMBER_STRATEGY</Tag>
+		<English>IL2 is the first aircraft type designed specifically for bombing missions. It can peform attacks up to 6 squares away from home city and causes collateral damage.</English>
+		<Spanish>El IL2 es el primer tipo de aeronave diseñada específicamente para misiones de bombardeo. Puede realizar ataques hasta a 6 casillas de distancia de su base, y causa daños colaterales.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FIGHTER_MIG3</Tag>
@@ -8641,24 +8620,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Latające</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_FOKKERDR1</Tag>
-		<English>Early Fighter</English>
-		<French>Avion de Chasse basique</French>
-		<German>Früher Jäger</German>
-		<Italian>Caccia base</Italian>
-		<Spanish>
-			<Text>Caza antiguo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Wczesny Myśliwiec</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_FOKKERDR1_PEDIA</Tag>
-		<English>The word "fighter" was first used to describe a two seater aircraft, with sufficient lift to carry a machine gun and its operator as well as the pilot. The first such "fighters" belonged to the "gunbus" series of experimental gun carriers of the British Vickers company which culminated in the Vickers F.B.5 Gunbus of 1914. The main drawback of this type of aircraft was its lack of speed. It was quickly realised that an aircraft intended to destroy its kind in the air needed at least to be fast enough to catch its quarry. [PARAGRAPH:1]Fortunately another type of military aircraft already existed, which was to form the basis for an effective "fighter" in the modern sense of the word. It was based on the small fast aircraft developed before the war for such air races as the Gordon Bennett and Schneider trophies. The military scout aeroplane was not initially expected to be able to carry serious armament, but to rely on its speed to be able to reach the location it was required to "scout" or reconnoitre and return quickly to report all the time making a difficult target for AA artillery or enemy gun-carrying aircraft. British "scout" aircraft in this sense included the Sopwith Tabloid and Bristol Scout French equivalents included the light, fast Morane-Saulnier N. [PARAGRAPH:1]Hanz Schneider had patented a device before the war to interrupt the machine gun's stream of bullets (by preventing it from firing when the propeller's blade was in the way) before the war and Anthony Fokker developed this into the Interrupter gear that would make the Fokker Eindecker such a feared name over the Western Front despite it being an adaptation of an obsolete pre-war French Morane-Saulnier racing monoplane. Simultaneously, Roland Garros (the first French 'Flying ace') was also working on a Interrupter gear, which attempted to time the firing of the individual rounds similarly when the propellor wasn't in the way. Unfortunately his choice of machine gun was poor - the gas operated Hotchkiss wasn't predictable enough to be able to time the firing and as a desperation measure he fitted metal wedges to protect the propeller's blades. At the same time the RNAS was taping up the blades on its scouts so that any rounds that damaged the prop wouldn't cause it to fail before the aircraft could be landed, with the fabric from the tape hopefully holding the blade together.</English>
-		<Polish>Samolot myśliwski, myśliwiec samolot bojowy przeznaczony przede wszystkim do zwalczania innych statków powietrznych i uzyskania przewagi powietrznej, jak i obrony własnych samolotów o innym przeznaczeniu, czym różni się od bombowców, służących do atakowania celów naziemnych, głównie przy użyciu bomb. Myśliwce z założenia są względnie małe, przeważnie jednomiejscowe, a przy tym silnie uzbrojone, szybkie i bardzo zwrotne.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FORKBEARD</Tag>
@@ -11069,6 +11030,18 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Bombowiec Heinkel He-111</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_HEAVY_ARMOR</Tag>
+		<English>Thermobaric Tank</English>
+		<French>Char Thermobarique</French>
+		<Italian>Carro armato termobarico</Italian>
+		<Spanish>
+			<Text>Blindado termobárico</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Czołg Termobaryczny</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_AXEMAN</Tag>
 		<English>Heavy Axeman</English>
 		<French>
@@ -12349,33 +12322,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_IL2</Tag>
-		<English>Propeller Tactical Bomber</English>
-		<French>
-			<Text>Bombardier Tactique à Hélices</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>Bombardiere tattico ad elica</Italian>
-		<Spanish>
-			<Text>Bombardero táctico a hélice</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Samolot Szturmowy Ił-2 Sturmovik</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_IL2_PEDIA</Tag>
-		<English>The Ilyushin Il-2 Shturmovik was a ground attack aircraft in the Second World War, produced by the Soviet Union in huge numbers. In combination with its successor, the Ilyushin Il-10, a total of 36,163 were built, making it the single most produced military aircraft design in all of aviation history as well as the third most produced aircraft in history behind the Cessna 172 and the Polikarpov Po-2. It was the leading aircraft for tank kills with its accuracy in diving bombing.</English>
-		<Polish>Ił-2 to dwumiejscowy samolot szturmowy produkcji ZSRR z czasów II wojny światowej. Zbudowany w większych ilościach (36 150 egzemplarzy) i w krótszym okresie niż jakikolwiek inny samolot bojowy w historii, Ił-2 walnie przyczynił się do radzieckiego zwycięstwa nad Niemcami w roku 1945.Istnieje teoria, jakoby maszyna została zaprojektowana jako dwumiejscowa (pilot i strzelec osłaniający tylną półsferę), jednak w wyniku działań politycznych (gł. Ludowego Komisarza Obrony ZSRR Klimenta Woroszyłowa) został przerobiony na maszynę jednomiejscową - czemu miał przeciwstawiać się Siergiej Iljuszyn. W rzeczywistości chociaż faktycznie pierwszy projekt pod oznaczeniem BSz-2 przewidywał dwuosobową załogę, jego osiągi nie spełniały wymagań sił powietrznych i to sam Iliuszyn zrezygnował z tylnego strzelca. Skrócenie pancernej części kadłuba i dodatkowy zbiornik paliwa na tyle poprawiły osiągi, że jednomiejscowa wersja wygrała rywalizację z projektem Suchoja Su-6 i weszła do służby na trzy miesiące przed niemieckim atakiem w czerwcu 1941 roku. Początkowo samolot był wyposażony w silnik AM-38 o zbyt niskiej mocy 1660 KM, uzbrojoną w dwa działka SzWAK kalibru 20 mm i dwa karabiny maszynowe SzKAS kalibru 7,62 mm oraz bomby i rakiety kalibru 82 mm. Pierwotna wersja była niezbyt udaną konstrukcją, charakteryzującą się małą statecznością, a brak osłony tylnej półsfery powodował bardzo duże straty. Po zastosowaniu innego płata ze skosem (dla poprawienia stateczności) i mocniejszego silnika, oraz powrocie do załogi 2 osobowej (strzelec ochraniający tylną półsferę) samolot dojrzał jako niezwykle groźna maszyna szturmowa, budząca postrach wśród niemieckich sił lądowych. Po Ile-2 wyprodukowano Iła-2M z silnikiem AM-38F i działkiem WJa-23 kal. 23 mm, Iła-2M3, dwumiejscową wersję Iła-2M ze stanowiskiem tylnego strzelca oraz Iła-2M z działkiem NS-37 kal. 37 mm w miejsce działka 23 mm w celu zwiększenia skuteczności zwalczania czołgów. Jednak mimo mocniejszych silników nie powrócono do pierwotnego projektu opancerzenia i znajdujący się poza pancerną częścią kadłuba tylny strzelec wciąż miał o wiele słabszą osłonę (na jednego straconego pilota przypadało kilku strzelców). Obaj członkowie załogi uzyskali pełną ochronę dopiero w następującym po Ile-2 samolocie Ił-10. Samolot ten nie atakował celów z lotu nurkowego (nie był bombowcem nurkującym z uwagi na brak hamulców aerodynamicznych i niezbyt dużą odporność na przeciążenia). Atak odbywał się z płytkiego nurkowania po prostej, często w formacji kilku maszyn jako atak po kręgu, dzięki czemu nieprzyjaciel był pod nieustannym ostrzałem</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_IL2_STRATEGY</Tag>
-		<English>IL2 is the first aircraft type designed specifically for bombing missions. It can peform attacks up to 6 squares away from home city and causes collateral damage.</English>
-		<French>IL2 is the first aircraft type designed specifically for bombing missions. It can peform attacks up to 6 squares away from home city and causes collateral damage.</French>
-		<Spanish>El IL2 es el primer tipo de aeronave diseñada específicamente para misiones de bombardeo. Puede realizar ataques hasta a 6 casillas de distancia de su base, y causa daños colaterales.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IMMUNITY_TO_COLD_DAMAGE</Tag>
@@ -16382,13 +16328,30 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Czołg Type 99</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_MODERN_FIGHTER</Tag>
+		<English>Stealth Fighter</English>
+		<French>
+			<Text>Chasseur à réaction F35</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Moderner Jäger F35</German>
+		<Italian>Caccia moderno F35</Italian>
+		<Spanish>
+			<Text>Caza furtivo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Niewykrywalny Myśliwiec</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_MODERN_FIGHTER_PEDIA</Tag>
-		<English>TBD</English>
+		<English>The Lockheed Martin F-35 Lightning II is a single-seat, single-engine, stealth-capable military strike fighter, a multi-role aircraft that can perform close air support, tactical bombing, and air-to-air combat. The F-35 has three different models; one is the conventional takeoff and landing variant, the second is short-takeoff and vertical-landing variant, and the third is a carrier-based variant.</English>
+		<Polish>Lockheed F-35 Lightning II to amerykański jednomiejscowy, jednosilnikowy myśliwiec wielozadaniowy zbudowany przez korporację Lockheed Martin w ramach projektu Joint Strike Fighter, który miał na celu zbudowanie maszyny spełniającej wymagania wszystkich rodzajów amerykańskich sił zbrojnych. Wersja prototypowa samolotu była znana pod nazwą X-35 JSF, ale 7 lipca 2006 roku maszyna dostała nową oficjalną nazwę Lightning II. F-35 Lightning II jest zdolny do wykonywania misji bliskiego wsparcia, bombardowań, oraz typowo myśliwskich zadań walki powietrznej. Projekt samolotu jest finansowany wspólnie przez rządy Stanów Zjednoczonych, Wielkiej Brytanii i innych krajów zainteresowanych zakupem tej maszyny. F-35 Lightning II został zbudowany pod kierownictwem firmy Lockheed Martin, przy współpracy z BAE Systems i Northrop Grumman</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MODERN_FIGHTER_STRATEGY</Tag>
 		<English>Modern Fighter has a very good chance of intercepting enemy aircraft and with good range it's capable of striking enemy cities farther than Jet Fighters or Strike Fighters.</English>
-		<French>Modern Fighter has a very good chance of intercepting enemy aircraft and with good range it's capable of striking enemy cities farther than Jet Fighters or Strike Fighters.</French>
 		<Spanish>El Caza moderno posee una alta probabilidad de interceptar aeronaves enemigas, y, gracias a su gran alcance, es capaz de atacar ciudades enemigas a una mayor distancia que los Cazas a reacción o los Cazas de ataque.</Spanish>
 		<Polish>Nowoczesny myśliwiec może przechwycać wrogie samoloty oraz sam może uniknąć przechwycenia. Ma dość duży zasięg, przez to może znaczniej odległości atakować miasto w porównaniu do innych myśliwców.</Polish>
 	</TEXT>
@@ -18474,18 +18437,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Fighter units can attack enemy air units and can scout terrain.  The P51 is very useful for intercepting enemy aircraft.</English>
 		<French>Fighter units can attack enemy air units and can scout terrain.  The P51 is very useful for intercepting enemy aircraft.</French>
 		<Polish>[TABMyśiwce mogą atakować inne jednostki powietrzne i dokonywać zwiadu.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_P59</Tag>
-		<English>Early Jet Fighter</English>
-		<French>Chasseur à réaction basique</French>
-		<Italian>Caccia a reazione base</Italian>
-		<Spanish>
-			<Text>Caza a reacción antiguo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Myśliwiec P-59</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PACK_LLAMA</Tag>
@@ -23431,6 +23382,19 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Brygada Stonewall to konfederacka odmiana strzelców. Posiada wysokie morale i wyszkolenie.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_STRIKE_FIGHTER</Tag>
+		<English>Modern Interceptor</English>
+		<French>Intercepteur F15</French>
+		<German>Kampfjäger F15</German>
+		<Italian>Intercettore moderno</Italian>
+		<Spanish>
+			<Text>Interceptor moderno</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Współczesny Myśliwiec Przechwytujący</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_STRIKE_FIGHTER_PEDIA</Tag>
 		<English>A strike fighter is a fighter aircraft which is also capable of attacking surface targets, including ships. It differs from an attack aircraft in that the aircraft remains a capable fighter. Previously, an airstrike on a ground target would usually involve bombers, defended by fighters. Strike-fighters can attack targets unaided, while remaining maneuverable and well-equipped enough to defend themselves.</English>
 		<Polish>Samolot myśliwsko-bombowy (myśliwiec bombardujący lub myśliwsko-szturmowy) to rodzaj samolotu wojskowego łączący cechy samolotów myśliwskich i bombowych. Obecnie są częściowo wypierane są przez myśliwce wielozadaniowe. Samoloty myśliwsko-bombowe różniły się konstrukcyjnie tylko w niewielkim stopniu, lub nie różniły się w ogóle od standardowych myśliwców wyposażonych w zaczepy bombowe, natomiast ich podział był oparty w głównej mierze na przeznaczeniu. Pod tym kątem też szkolono ich załogi. Na ogół były to jednosilnikowe jednomiejscowe samoloty napędzane silnikiem śmigłowym, uzbrojone w karabiny maszynowe lub działka lotnicze, rzadziej dwusilnikowe wielomiejscowe. Po zrzuceniu bomb, samolot myśliwsko-bombowy stawał się "czystym" myśliwcem, mogącym skutecznie odpierać ataki innych samolotów. Przez to, że standardowe myśliwce, zwłaszcza końcowego okresu wojny, często korzystały z możliwości zabierania bomb, nawet o stosunkowo sporym ładunku (jak np. P-47 Thunderbolt i Supermarine Spitfire), rozgraniczenie między myśliwcami i myśliwco-bombowcami jest nieprecyzyjne i w dużym stopniu zatarte. Od lat 80. i 90. XX wieku osobne kategorie samolotów myśliwsko-bombowych, bombowców taktycznych i samolotów myśliwskich zaczęły być ponownie zastępowane przez jedną kategorię myśliwców wielozadaniowych, posiadających na skutek rozwoju techniki rozbudowane elektroniczne systemy kierowania uzbrojeniem zarówno przeciw celom powietrznym, jak i naziemnym oraz odpowiednio duży udźwig i gamę uzbrojenia. Przeznaczenie myśliwców wielozadaniowych obecnie zależne jest głównie od zestawu podwieszonego uzbrojenia, ewentualnie podwieszonej specjalistycznej aparatury kierowania uzbrojeniem. Z drugiej strony, wyodrębiła się kategoria wysoce wyspecjalizowanych samolotów myśliwsko-bombowych przeznaczonych do dokonywania precyzyjnych uderzeń na obiekty na tyłach wroga (ang. interdictor), zwykle dwumiejscowych, posiadających bogate wyposażenie elektroniczne i pilotażowe oraz wysokie osiągi, jak F-15E Strike Eagle czy Tornado IDS. Niektóre myśliwco-bombowce okresu po II wojnie światowej: Su-7, Su-17 (Su-20, Su-22), MiG-23 (wersje MiG-23B/BN), MiG-27</Polish>
@@ -24278,18 +24242,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>These particular 'field' Systems Analysts are primarily used in military application to aid in the rapid recovery of Tech units.  However, they also greatly enhance the Education levels of the cities they are in with new ways to enhance the uploading of information for human brains and the expansion of information technology architecture for AI reference sources.</English>
 		<French>These particular 'field' Systems Analysts are primarily used in military application to aid in the rapid recovery of Tech units.  However, they also greatly enhance the Education levels of the cities they are in with new ways to enhance the uploading of information for human brains and the expansion of information technology architecture for AI reference sources.</French>
 		<Polish>Analityk Systemów naprawia i leczy skomplikowane jednostki bojowe, w tym te sterowane przez Sztuczną Inteligencję.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_T95</Tag>
-		<English>Thermobaric Tank</English>
-		<French>Char Thermobarique</French>
-		<Italian>Carro armato termobarico</Italian>
-		<Spanish>
-			<Text>Blindado termobárico</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Czołg Termobaryczny</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TACTICAL_NUKE</Tag>
@@ -27937,6 +27889,24 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_TRAP_TRIGGER_BEFORE_ATTACK</Tag>
 		<English>[ICON_BULLET]If this trap can trigger against an attacking foe, it will do so before combat begins, weakening the attacker before combat.</English>
 		<French>[ICON_BULLET]If this trap can trigger against an attacking foe, it will do so before combat begins, weakening the attacker before combat.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_EARLY_FIGHTER</Tag>
+		<English>Early Fighter</English>
+		<French>Avion de Chasse basique</French>
+		<German>Früher Jäger</German>
+		<Italian>Caccia base</Italian>
+		<Spanish>
+			<Text>Caza antiguo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Wczesny Myśliwiec</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_EARLY_FIGHTER_PEDIA</Tag>
+		<English>The word "fighter" was first used to describe a two seater aircraft, with sufficient lift to carry a machine gun and its operator as well as the pilot. The first such "fighters" belonged to the "gunbus" series of experimental gun carriers of the British Vickers company which culminated in the Vickers F.B.5 Gunbus of 1914. The main drawback of this type of aircraft was its lack of speed. It was quickly realised that an aircraft intended to destroy its kind in the air needed at least to be fast enough to catch its quarry. [PARAGRAPH:1]Fortunately another type of military aircraft already existed, which was to form the basis for an effective "fighter" in the modern sense of the word. It was based on the small fast aircraft developed before the war for such air races as the Gordon Bennett and Schneider trophies. The military scout aeroplane was not initially expected to be able to carry serious armament, but to rely on its speed to be able to reach the location it was required to "scout" or reconnoitre and return quickly to report all the time making a difficult target for AA artillery or enemy gun-carrying aircraft. British "scout" aircraft in this sense included the Sopwith Tabloid and Bristol Scout French equivalents included the light, fast Morane-Saulnier N. [PARAGRAPH:1]Hanz Schneider had patented a device before the war to interrupt the machine gun's stream of bullets (by preventing it from firing when the propeller's blade was in the way) before the war and Anthony Fokker developed this into the Interrupter gear that would make the Fokker Eindecker such a feared name over the Western Front despite it being an adaptation of an obsolete pre-war French Morane-Saulnier racing monoplane. Simultaneously, Roland Garros (the first French 'Flying ace') was also working on a Interrupter gear, which attempted to time the firing of the individual rounds similarly when the propellor wasn't in the way. Unfortunately his choice of machine gun was poor - the gas operated Hotchkiss wasn't predictable enough to be able to time the firing and as a desperation measure he fitted metal wedges to protect the propeller's blades. At the same time the RNAS was taping up the blades on its scouts so that any rounds that damaged the prop wouldn't cause it to fail before the aircraft could be landed, with the fabric from the tape hopefully holding the blade together.</English>
+		<Polish>Samolot myśliwski, myśliwiec samolot bojowy przeznaczony przede wszystkim do zwalczania innych statków powietrznych i uzyskania przewagi powietrznej, jak i obrony własnych samolotów o innym przeznaczeniu, czym różni się od bombowców, służących do atakowania celów naziemnych, głównie przy użyciu bomb. Myśliwce z założenia są względnie małe, przeważnie jednomiejscowe, a przy tym silnie uzbrojone, szybkie i bardzo zwrotne.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EARLY_FOOD_MERCHANT_C2C</Tag>

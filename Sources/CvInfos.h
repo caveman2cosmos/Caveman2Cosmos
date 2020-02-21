@@ -1945,9 +1945,6 @@ public:
 	bool isSlave() const;
 	int getPrereqOrVicinityBonuses(int i) const;
 	bool getPassableRouteNeeded(int i) const;
-	std::vector<int> getUpgradeUnitClassTypes() const;
-	void addUpgradeUnitClassTypes(int);
-	bool isUpgradeUnitClassTypes(int) const;
 	int getBaseFoodChange() const;
 	int getControlPoints() const;
 	int getCommandRange() const;
@@ -2300,7 +2297,6 @@ protected:
 	int m_iMaxPlayerInstances;
 	bool m_bUnlimitedException;
 	int m_iInstanceCostModifier;
-	std::vector<int> m_aiUpgradeUnitClassTypes;
 	bool* m_pbPassableRouteNeeded;
 	int* m_piPrereqOrVicinityBonuses;
 	bool m_bWorkerTrade;
@@ -2406,11 +2402,18 @@ public:
 	bool isPrereqBuildingClass(int i) const; 		// Exposed to Python
 	int getPrereqBuildingClassOverrideTech(int i) const;	//Exposed to Python
 	int getPrereqBuildingClassOverrideEra(int i) const; 	//Exposed to Python
+
 	int getSupersedingUnit(int i) const;
 	int getNumSupersedingUnits() const;
-	bool isSupersedingUnit(int i) const; 			//Exposed to Python
+	bool isSupersedingUnit(int i) const;		//Exposed to Python
 
-	bool getUpgradeUnitClass(int i) const;			// Exposed to Python
+	int getUnitUpgrade(int i) const;			//Exposed to Python
+	int getNumUnitUpgrades() const;				//Exposed to Python
+	bool isUnitUpgrade(int i) const;			//Exposed to Python
+
+	std::vector<int> getUnitUpgradeChain() const;
+	void CvUnitInfo::addUnitToUpgradeChain(int i);
+
 	bool getTargetUnitClass(int i) const;			// Exposed to Python
 	bool getTargetUnitCombat(int i) const;			// Exposed to Python
 	bool getDefenderUnitClass(int i) const;			// Exposed to Python
@@ -2544,6 +2547,8 @@ protected:
 	int m_iPrereqAndBonus;
 	std::vector<int> m_aePrereqOrBuildings;
 	std::vector<int> m_aiSupersedingUnits;
+	std::vector<int> m_aiUnitUpgrades;
+	std::vector<int> m_aiUnitUpgradeChain;
 	int m_iGroupSize;
 	int m_iGroupDefinitions;
 	int m_iUnitMeleeWaveSize;
@@ -2631,7 +2636,6 @@ protected:
 	int* m_piPrereqBuildingClassOverrideTech;
 	int* m_piPrereqBuildingClassOverrideEra;
 
-	bool* m_pbUpgradeUnitClass;
 	bool* m_pbTargetUnitClass;
 	bool* m_pbTargetUnitCombat;
 	bool* m_pbDefenderUnitClass;
