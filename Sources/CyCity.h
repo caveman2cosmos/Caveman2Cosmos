@@ -129,7 +129,6 @@ public:
 	int getProductionModifier();
 	int getCurrentProductionDifference(bool bIgnoreFood, bool bOverflow);
 	int getUnitProductionModifier(int /*UnitTypes*/ iUnit);
-	int getBuildingProductionModifier(int /*BuildingTypes*/ iBuilding);
 	int getProjectProductionModifier(int /*ProjectTypes*/ eProject);
 
 	int getExtraProductionDifference(int iExtra);

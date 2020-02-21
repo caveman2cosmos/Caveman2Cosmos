@@ -234,13 +234,13 @@ class PediaTech:
 		for i in range(CvTheTechInfo.getNumPrereqBuildings()):
 			iAmount = CvTheTechInfo.getPrereqBuildingMinimumRequired(i)
 			if iAmount > 0:
-				iType = GC.getInfoTypeFromString(GC.getBuildingInfo(CvTheTechInfo.getPrereqBuildingClassType(i)).getType())
+				iType = GC.getInfoTypeForString(GC.getBuildingInfo(CvTheTechInfo.getPrereqBuildingClassType(i)).getType())
 				aList2.append((iType, iAmount))
 		nOr = 0
 		for i in range(CvTheTechInfo.getNumPrereqOrBuildings()):
 			iAmount = CvTheTechInfo.getPrereqOrBuildingMinimumRequired(i)
 			if iAmount > 0:
-				iType = GC.getInfoTypeFromString(GC.getBuildingInfo(CvTheTechInfo.getPrereqOrBuildingType(i)).getType())
+				iType = GC.getInfoTypeForString(GC.getBuildingInfo(CvTheTechInfo.getPrereqOrBuildingType(i)).getType())
 				aList3.append((iType, iAmount))
 				nOr += 1
 		if aList2 or aList3:

@@ -2857,7 +2857,7 @@ void CvGame::loadBuildQueue(const CvString& strItem) const
 
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		const BuildingTypes eBuilding = static_cast<eLoopBuilding>(iI);
+		const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
 
 		if (strItem == GC.getBuildingInfo(eBuilding).getType())
 		{

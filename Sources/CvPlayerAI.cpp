@@ -10988,7 +10988,6 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 	{
 		PROFILE("CvPlayerAI::AI_baseBonusVal::recalculate");
 
-		BuildingTypes eLoopBuilding;
 		int iDiff;
 		int iValue = 0;
 		int iTradeValue = 0;
@@ -16781,7 +16780,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	iTempValue = 0;
 	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
+		const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
 
 		for (iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 		{
@@ -17261,9 +17260,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 				// Nationalism
 				if (!isLimitedWonder((BuildingTypes)iI))
 				{
-					const CvBuildingInfo& buildingInfo = GC.getBuildingInfo((BuildingTypes)iI)
+					const CvBuildingInfo& buildingInfo = GC.getBuildingInfo((BuildingTypes)iI);
 					if (buildingInfo.getPrereqAndTech() == NO_TECH ||
-						  GC.getTechInfo((TechTypes)buildingInfo.getPrereqAndTech()).getEra() <= getCurrentEra()) &&
+						  GC.getTechInfo((TechTypes)buildingInfo.getPrereqAndTech()).getEra() <= getCurrentEra() &&
 						 (buildingInfo.getObsoleteTech() == NO_TECH ||
 							pTeam.isHasTech((TechTypes)buildingInfo.getObsoleteTech())))
 					{
@@ -24456,7 +24455,7 @@ int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTrig
 		}
 	}
 
-	const BuildingTypes eBuilding = kEvent.getBuilding();
+	const BuildingTypes eBuilding = static_cast<BuildingTypes>(kEvent.getBuilding());
 	if (eBuilding != NO_BUILDING && pCity)
 	{
 		int iBuildingValue = GC.getBuildingInfo(eBuilding).getProductionCost();
@@ -25406,7 +25405,7 @@ int CvPlayerAI::AI_cultureVictoryTechValue(TechTypes eTech) const
 	//cultural things
 	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
+		const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
 
 		if (isTechRequiredForBuilding(eTech, eLoopBuilding))
 		{

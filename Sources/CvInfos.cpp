@@ -13465,7 +13465,7 @@ bool CvCivilizationInfo::read(CvXMLLoadUtility* pXML)
 		pXML->InitBuildingDefaults(&m_piCivilizationBuildings);
 		for ( j = 0; j < GC.getNumBuildingInfos(); j++)
 		{
-			m_piCivilizationBuildings[j] = GC.getBuildingInfo((BuildingTypes) j).getDefaultBuildingIndex();
+			m_piCivilizationBuildings[j] = (BuildingTypes)j;
 		}
 	}
 
@@ -13691,7 +13691,7 @@ void CvCivilizationInfo::copyNonDefaults(CvCivilizationInfo* pClassInfo, CvXMLLo
 
 	for ( int i = 0; i < GC.getNumBuildingInfos(); i++)
 	{
-		if ( getCivilizationBuildings(i) == GC.getBuildingInfo((BuildingTypes) i).getDefaultBuildingIndex())	// "Buildings"
+		if ( getCivilizationBuildings(i) == (BuildingTypes)i)	// "Buildings"
 		{
 			m_piCivilizationBuildings[i] = pClassInfo->getCivilizationBuildings(i);
 		}

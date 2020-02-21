@@ -318,7 +318,7 @@ void CvXMLLoadUtility::InitBuildingDefaults(int **ppiDefaults)
 	// loop through all the pointers and set their default values
 	for (i=0;i<GC.getNumBuildingInfos();i++)
 	{
-		piDefaults[i] = (BuildingClassTypes)i;
+		piDefaults[i] = (BuildingTypes)i;
 	}
 }
 

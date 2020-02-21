@@ -10887,7 +10887,7 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 			{
 				if (pCity->getNumRealBuilding((BuildingTypes)iI) > 0)
 				{
-					setListHelp(szString, NEWLINE, kInfo.getDescription(), L", ", bFirst);
+					setListHelp(szString, NEWLINE, GC.getBuildingInfo((BuildingTypes)iI).getDescription(), L", ", bFirst);
 					bFirst = false;
 				}
 			}
@@ -11132,7 +11132,6 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 	CvWString szFirstBuffer;
 	CvWString szTempBuffer;
 	CvWString szImprovement;
-	BuildingTypes eLoopBuilding;
 	bool bHasBegun = false;
 	TraitTypes eLoopTrait;
 	int iLast;
@@ -12792,7 +12791,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 		iLast = 0;
 		for (iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 		{
-			const BuildingTypes eLoopBuilding = static_cast<BuidingTypes>(iI);
+			const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
 
 			if (!isWorldWonder(eLoopBuilding))
 			{
@@ -12825,7 +12824,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 		iLast = 0;
 		for (iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 		{
-			const BuildingTypes eLoopBuilding = static_cast<BuidingTypes>(iI);
+			const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
 
 			if (!isWorldWonder(eLoopBuilding))
 			{
@@ -12980,8 +12979,6 @@ void CvGameTextMgr::parseCivInfos(CvWStringBuffer &szInfoText, CivilizationTypes
 	CvWString szText;
 	UnitTypes eDefaultUnit;
 	UnitTypes eUniqueUnit;
-	BuildingTypes eDefaultBuilding;
-	BuildingTypes eUniqueBuilding;
 
 	if (eCivilization != NO_CIVILIZATION)
 	{
@@ -13070,7 +13067,6 @@ void CvGameTextMgr::parseCivInfos(CvWStringBuffer &szInfoText, CivilizationTypes
 			bFound = true;
 		}
 
-
 		// Free Buildings
 		szText = gDLL->getText("TXT_KEY_UNIQUE_BUILDINGS");
 		if (bDawnOfMan)
@@ -13086,43 +13082,6 @@ void CvGameTextMgr::parseCivInfos(CvWStringBuffer &szInfoText, CivilizationTypes
 			szTempString.Format(NEWLINE SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_ALT_HIGHLIGHT_TEXT"), szText.GetCString());
 		}
 		szInfoText.append(szTempString);
-
-		bFound = false;
-		for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
-		{
-			eUniqueBuilding = ((BuildingTypes)(GC.getCivilizationInfo(eCivilization).getCivilizationBuildings(iI)));
-			if ((BuildingTypes)iI != eUniqueBuilding)
-			{
-				// Add Building
-				if (bDawnOfMan)
-				{
-					if (bFound)
-					{
-						szInfoText.append(L", ");
-					}
-					szBuffer.Format((bLinks ? L"<link=%s>%s</link> - (<link=%s>%s</link>)" : L"%s - (%s)"), CvWString(GC.getBuildingInfo(eDefaultBuilding).getType()).GetCString(), GC.getBuildingInfo(eDefaultBuilding).getDescription(), CvWString(GC.getBuildingInfo(eUniqueBuilding).getType()).GetCString(), GC.getBuildingInfo(eUniqueBuilding).getDescription());
-				}
-				else
-				{
-					szBuffer.Format(L"\n  %c%s - (%s)", gDLL->getSymbolID(BULLET_CHAR), GC.getBuildingInfo(eDefaultBuilding).getDescription(), GC.getBuildingInfo(eUniqueBuilding).getDescription());
-				}
-				szInfoText.append(szBuffer);
-				bFound = true;
-			}
-		}
-		if (!bFound)
-		{
-			szText = gDLL->getText("TXT_KEY_UNIQUE_BUILDINGS_NO");
-			if (bDawnOfMan)
-			{
-				szTempString.Format(L"%s", szText.GetCString());
-			}
-			else
-			{
-				szTempString.Format(L"%s  %s", NEWLINE, szText.GetCString());
-			}
-			szInfoText.append(szTempString);
-		}
 	}
 	else
 	{
@@ -18084,7 +18043,7 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 	bFirst = true;
 	for (iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 	{
-		const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
+		const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
 
 		if (GC.getGame().canEverConstruct(eLoopBuilding))
 		{
@@ -18105,7 +18064,7 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 		{
 			for (iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 			{
-				const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
+				const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
 
 				if (GC.getGame().canEverConstruct(eLoopBuilding))
 				{
@@ -18784,7 +18743,6 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 	}
 	if (bCivilopediaText || GC.getGame().getActivePlayer() == NO_PLAYER || !GET_PLAYER(GC.getGame().getActivePlayer()).canResearch(eTech))
 	{
-		BuildingTypes eLoopBuilding;
 		for (iI = 0; iI < GC.getTechInfo(eTech).getNumPrereqOrBuildings(); iI++)
 		{
 			int iPrereq = GC.getTechInfo(eTech).getPrereqOrBuilding(iI).iMinimumRequired;
@@ -22475,7 +22433,6 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 
 	CvWString szFirstBuffer;
 	CvWString szTempBuffer;
-	BuildingTypes eLoopBuilding;
 	UnitTypes eGreatPeopleUnit;
 	PlayerTypes ePlayer;
 	TeamTypes eTeam = NO_TEAM;
@@ -22923,7 +22880,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 		szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_FREE_IN_CITY", CvWString(GC.getBuildingInfo(eFreeBuilding).getType()).GetCString(), GC.getBuildingInfo(eFreeBuilding).getTextKeyWide()));
 	}
 
-	const BuildingTypes eFreeAreaBuilding = static_cast<BuildingTypes>(kBuilding.eFreeAreaBuilding());
+	const BuildingTypes eFreeAreaBuilding = static_cast<BuildingTypes>(kBuilding.getFreeAreaBuilding());
 	if (eFreeAreaBuilding != NO_BUILDING)
 	{
 		szBuffer.append(NEWLINE);
@@ -25494,7 +25451,6 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 	CvWString szTempBuffer;
 	CvWString szFirstBuffer;
 	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
-	BuildingTypes eLoopBuilding;
 	int iI;
 	int iTerrainCount;
 
@@ -27080,7 +27036,7 @@ bool CvGameTextMgr::setBuildingAdditionalHealthHelp(CvWStringBuffer &szBuffer, C
 
 		if (city.canConstruct(eBuilding, false, false, false))
 		{
-			const int iGood = 0, iBad = 0, iSpoiledFood = 0, iStarvation = 0;
+			int iGood = 0, iBad = 0, iSpoiledFood = 0, iStarvation = 0;
 			const int iChange = city.getAdditionalHealthByBuilding(eBuilding, iGood, iBad, iSpoiledFood, iStarvation);
 
 			if (iGood != 0 || iBad != 0)
@@ -27677,11 +27633,11 @@ bool CvGameTextMgr::setBuildingAdditionalHappinessHelp(CvWStringBuffer &szBuffer
 {
 	for (int i = 0; i < GC.getNumBuildingInfos(); i++)
 	{
-		const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
+		const BuildingTypes eBuilding = static_cast<BuildingTypes>(i);
 
 		if (city.canConstruct(eBuilding, false, false, false))
 		{
-			const int iGood = 0, iBad = 0, iAngryPop = 0;
+			int iGood = 0, iBad = 0, iAngryPop = 0;
 			const int iChange = city.getAdditionalHappinessByBuilding(eBuilding, iGood, iBad, iAngryPop);
 
 			if (iGood != 0 || iBad != 0)
@@ -35077,7 +35033,7 @@ bool CvGameTextMgr::setBuildingAdditionalYieldHelp(CvWStringBuffer &szBuffer, Cv
 
 	for (int i = 0; i < GC.getNumBuildingInfos(); i++)
 	{
-		const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
+		const BuildingTypes eBuilding = static_cast<BuildingTypes>(i);
 
 		if (city.canConstruct(eBuilding, false, false, false))
 		{
@@ -35109,11 +35065,11 @@ bool CvGameTextMgr::setBuildingAdditionalCommerceHelp(CvWStringBuffer &szBuffer,
 
 	for (int i = 0; i < GC.getNumBuildingInfos(); i++)
 	{
-		const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
+		const BuildingTypes eBuilding = static_cast<BuildingTypes>(i);
 
 		if (city.canConstruct(eBuilding, false, false, false))
 		{
-			const int iChange = city.getAdditionalCommerceTimes100ByBuilding(eIndex, eBuilding);
+			int iChange = city.getAdditionalCommerceTimes100ByBuilding(eIndex, eBuilding);
 			const int iCommerce = city.getAdditionalYieldByBuilding(YIELD_COMMERCE, eBuilding);
 			iChange += iCommerce * GET_PLAYER(city.getOwner()).getCommercePercent(eIndex);
 
@@ -35144,7 +35100,7 @@ bool CvGameTextMgr::setBuildingSavedMaintenanceHelp(CvWStringBuffer &szBuffer, c
 
 	for (int i = 0; i < GC.getNumBuildingInfos(); i++)
 	{
-		const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
+		const BuildingTypes eBuilding = static_cast<BuildingTypes>(i);
 
 		if (city.canConstruct(eBuilding, false, false, false))
 		{
@@ -35503,7 +35459,7 @@ void CvGameTextMgr::setProductionHelp(CvWStringBuffer &szBuffer, CvCity& city)
 		// Spaceship
 		if (project.isSpaceship())
 		{
-			const int iSpaceshipMod = city.getSpaceProductionModifier();
+			int iSpaceshipMod = city.getSpaceProductionModifier();
 			if (NO_PLAYER != city.getOwner())
 			{
 				iSpaceshipMod += GET_PLAYER(city.getOwner()).getSpaceProductionModifier();
@@ -36808,7 +36764,7 @@ bool CvGameTextMgr::setBuildingAdditionalGreatPeopleHelp(CvWStringBuffer &szBuff
 
 	for (int i = 0; i < GC.getNumBuildingInfos(); i++)
 	{
-		const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
+		const BuildingTypes eBuilding = static_cast<BuildingTypes>(i);
 
 		if (city.canConstruct(eBuilding, false, false, false))
 		{
@@ -37550,49 +37506,41 @@ void CvGameTextMgr::setEventHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, i
 		}
 	}
 
-	const BuildingTypes eBuilding = kEvent.getBuilding();
+	const BuildingTypes eBuilding = static_cast<BuildingTypes>(kEvent.getBuilding());
 	if (eBuilding != NO_BUILDING)
 	{
-		CivilizationTypes eCiv = kActivePlayer.getCivilizationType();
-		if (NO_CIVILIZATION != eCiv)
+		if (kEvent.getBuildingChange() > 0)
 		{
-			if (kEvent.getBuildingChange() > 0)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_EVENT_BONUS_BUILDING", GC.getBuildingInfo(eBuilding).getTextKeyWide()));
-			}
-			else if (kEvent.getBuildingChange() < 0)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_EVENT_REMOVE_BUILDING", GC.getBuildingInfo(eBuilding).getTextKeyWide()));
-			}
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_KEY_EVENT_BONUS_BUILDING", GC.getBuildingInfo(eBuilding).getTextKeyWide()));
+		}
+		else if (kEvent.getBuildingChange() < 0)
+		{
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_KEY_EVENT_REMOVE_BUILDING", GC.getBuildingInfo(eBuilding).getTextKeyWide()));
 		}
 	}
 
 	if (kEvent.getNumBuildingYieldChanges() > 0)
 	{
-		CvWStringBuffer szYield;
 		for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); ++iBuilding)
 		{
-			const CivilizationTypes eCiv = kActivePlayer.getCivilizationType();
-			if (NO_CIVILIZATION != eCiv)
+			const BuildingTypes eBuilding = static_cast<BuildingTypes>(iBuilding);
+			if (pCity == NULL || pCity->getNumBuilding(eBuilding) > 0)
 			{
-				const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
-				if (pCity == NULL || pCity->getNumBuilding(eBuilding) > 0)
+				int aiYields[NUM_YIELD_TYPES];
+				for (int iYield = 0; iYield < NUM_YIELD_TYPES; ++iYield)
 				{
-					int aiYields[NUM_YIELD_TYPES];
-					for (int iYield = 0; iYield < NUM_YIELD_TYPES; ++iYield)
-					{
-						aiYields[iYield] = kEvent.getBuildingYieldChange(iBuilding, iYield);
-					}
+					aiYields[iYield] = kEvent.getBuildingYieldChange(iBuilding, iYield);
+				}
 
-					szYield.clear();
-					setYieldChangeHelp(szYield, L"", L"", L"", aiYields, false, false);
-					if (!szYield.isEmpty())
-					{
-						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_EVENT_YIELD_CHANGE_BUILDING", GC.getBuildingInfo(eBuilding).getTextKeyWide(), szYield.getCString()));
-					}
+				CvWStringBuffer szYield;
+				szYield.clear();
+				setYieldChangeHelp(szYield, L"", L"", L"", aiYields, false, false);
+				if (!szYield.isEmpty())
+				{
+					szBuffer.append(NEWLINE);
+					szBuffer.append(gDLL->getText("TXT_KEY_EVENT_YIELD_CHANGE_BUILDING", GC.getBuildingInfo(eBuilding).getTextKeyWide(), szYield.getCString()));
 				}
 			}
 		}
@@ -37600,28 +37548,24 @@ void CvGameTextMgr::setEventHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, i
 
 	if (kEvent.getNumBuildingCommerceChanges() > 0)
 	{
-		CvWStringBuffer szCommerce;
 		for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); ++iBuilding)
 		{
-			const CivilizationTypes eCiv = kActivePlayer.getCivilizationType();
-			if (NO_CIVILIZATION != eCiv)
+			const BuildingTypes eBuilding = static_cast<BuildingTypes>(iBuilding);
+			if (pCity == NULL || pCity->getNumBuilding(eBuilding) > 0)
 			{
-				const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
-				if (pCity == NULL || pCity->getNumBuilding(eBuilding) > 0)
+				int aiCommerces[NUM_COMMERCE_TYPES];
+				for (int iCommerce = 0; iCommerce < NUM_COMMERCE_TYPES; ++iCommerce)
 				{
-					int aiCommerces[NUM_COMMERCE_TYPES];
-					for (int iCommerce = 0; iCommerce < NUM_COMMERCE_TYPES; ++iCommerce)
-					{
-						aiCommerces[iCommerce] = kEvent.getBuildingCommerceChange(iBuilding, iCommerce);
-					}
+					aiCommerces[iCommerce] = kEvent.getBuildingCommerceChange(iBuilding, iCommerce);
+				}
 
-					szCommerce.clear();
-					setCommerceChangeHelp(szCommerce, L"", L"", L"", aiCommerces, false, false);
-					if (!szCommerce.isEmpty())
-					{
-						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_EVENT_YIELD_CHANGE_BUILDING", GC.getBuildingInfo(eBuilding).getTextKeyWide(), szCommerce.getCString()));
-					}
+				CvWStringBuffer szCommerce;
+				szCommerce.clear();
+				setCommerceChangeHelp(szCommerce, L"", L"", L"", aiCommerces, false, false);
+				if (!szCommerce.isEmpty())
+				{
+					szBuffer.append(NEWLINE);
+					szBuffer.append(gDLL->getText("TXT_KEY_EVENT_YIELD_CHANGE_BUILDING", GC.getBuildingInfo(eBuilding).getTextKeyWide(), szCommerce.getCString()));
 				}
 			}
 		}
@@ -37631,23 +37575,19 @@ void CvGameTextMgr::setEventHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, i
 	{
 		for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); ++iBuilding)
 		{
-			const CivilizationTypes eCiv = kActivePlayer.getCivilizationType();
-			if (NO_CIVILIZATION != eCiv)
+			const BuildingTypes eBuilding = static_cast<BuildingTypes>(iBuilding);
+			if (pCity == NULL || pCity->getNumBuilding(eBuilding) > 0)
 			{
-				const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
-				if (pCity == NULL || pCity->getNumBuilding(eBuilding) > 0)
+				const int iHappy = kEvent.getBuildingHappyChange(iBuilding);
+				if (iHappy > 0)
 				{
-					const int iHappy = kEvent.getBuildingHappyChange(iBuilding);
-					if (iHappy > 0)
-					{
-						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_EVENT_HAPPY_BUILDING", GC.getBuildingInfo(eBuilding).getTextKeyWide(), iHappy, gDLL->getSymbolID(HAPPY_CHAR)));
-					}
-					else if (iHappy < 0)
-					{
-						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_EVENT_HAPPY_BUILDING", GC.getBuildingInfo(eBuilding).getTextKeyWide(), -iHappy, gDLL->getSymbolID(UNHAPPY_CHAR)));
-					}
+					szBuffer.append(NEWLINE);
+					szBuffer.append(gDLL->getText("TXT_KEY_EVENT_HAPPY_BUILDING", GC.getBuildingInfo(eBuilding).getTextKeyWide(), iHappy, gDLL->getSymbolID(HAPPY_CHAR)));
+				}
+				else if (iHappy < 0)
+				{
+					szBuffer.append(NEWLINE);
+					szBuffer.append(gDLL->getText("TXT_KEY_EVENT_HAPPY_BUILDING", GC.getBuildingInfo(eBuilding).getTextKeyWide(), -iHappy, gDLL->getSymbolID(UNHAPPY_CHAR)));
 				}
 			}
 		}
@@ -37657,23 +37597,19 @@ void CvGameTextMgr::setEventHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, i
 	{
 		for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); ++iBuilding)
 		{
-			const CivilizationTypes eCiv = kActivePlayer.getCivilizationType();
-			if (NO_CIVILIZATION != eCiv)
+			const BuildingTypes eBuilding = static_cast<BuildingTypes>(iBuilding);
+			if (pCity == NULL || pCity->getNumBuilding(eBuilding) > 0)
 			{
-				const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
-				if (pCity == NULL || pCity->getNumBuilding(eBuilding) > 0)
+				const int iHealth = kEvent.getBuildingHealthChange(iBuilding);
+				if (iHealth > 0)
 				{
-					const int iHealth = kEvent.getBuildingHealthChange(iBuilding);
-					if (iHealth > 0)
-					{
-						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_EVENT_HAPPY_BUILDING", GC.getBuildingInfo(eBuilding).getTextKeyWide(), iHealth, gDLL->getSymbolID(HEALTHY_CHAR)));
-					}
-					else if (iHealth < 0)
-					{
-						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_EVENT_HAPPY_BUILDING", GC.getBuildingInfo(eBuilding).getTextKeyWide(), -iHealth, gDLL->getSymbolID(UNHEALTHY_CHAR)));
-					}
+					szBuffer.append(NEWLINE);
+					szBuffer.append(gDLL->getText("TXT_KEY_EVENT_HAPPY_BUILDING", GC.getBuildingInfo(eBuilding).getTextKeyWide(), iHealth, gDLL->getSymbolID(HEALTHY_CHAR)));
+				}
+				else if (iHealth < 0)
+				{
+					szBuffer.append(NEWLINE);
+					szBuffer.append(gDLL->getText("TXT_KEY_EVENT_HAPPY_BUILDING", GC.getBuildingInfo(eBuilding).getTextKeyWide(), -iHealth, gDLL->getSymbolID(UNHEALTHY_CHAR)));
 				}
 			}
 		}
@@ -39717,7 +39653,7 @@ void CvGameTextMgr::getCityDataForAS(std::vector<CvWBData>& mapCityList, std::ve
 	CvWStringBuffer szBuffer;
 	for (int i = 0; i < GC.getNumBuildingInfos(); i++)
 	{
-		const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
+		const BuildingTypes eBuilding = static_cast<BuildingTypes>(i);
 		if (GC.getBuildingInfo(eBuilding).getFreeStartEra() == NO_ERA || GC.getGame().getStartEra() < GC.getBuildingInfo(eBuilding).getFreeStartEra())
 		{
 			// Building cost -1 denotes unit which may not be purchased
@@ -40504,7 +40440,7 @@ bool CvGameTextMgr::setBuildingAdditionalDefenseHelp(CvWStringBuffer &szBuffer, 
 
 	for (int i = 0; i < GC.getNumBuildingInfos(); i++)
 	{
-		const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
+		const BuildingTypes eBuilding = static_cast<BuildingTypes>(i);
 		if (city.canConstruct(eBuilding, false, false, false))
 		{
 			const int iChange = city.getAdditionalDefenseByBuilding(eBuilding);

@@ -17237,7 +17237,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 			buildingsToCalculate.insert(eBuilding);
 
-			for (int iJ = 0; iJ < numNumBuildingInfos; iJ++)
+			for (int iJ = 0; iJ < numBuildingInfos; iJ++)
 			{
 				const BuildingTypes eJLoopBuilding = static_cast<BuildingTypes>(iI);
 				if (buildingsToCalculate.find(eJLoopBuilding) == buildingsToCalculate.end())
@@ -17438,7 +17438,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				/************************************************************************************************/
 				bool bSkipThisBuilding = false;
 
-				for (int iI = 0; iI < numNumBuildingInfos; iI++)
+				for (int iI = 0; iI < numBuildingInfos; iI++)
 				{
 					if (kBuilding.isReplaceBuilding((BuildingTypes)iI) && canConstruct((BuildingTypes)iI))
 					{
@@ -17753,7 +17753,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 								iValue += (-iGlobalWarWearinessModifer * iHappyModifier) / 16;
 							}
 
-							for (int iI = 0; iI < numNumBuildingInfos; iI++)
+							for (int iI = 0; iI < numBuildingInfos; iI++)
 							{
 								const int iBuildingHappinessChanges = kBuilding.getBuildingHappinessChanges(iI);
 								if (iBuildingHappinessChanges != 0)

@@ -445,11 +445,6 @@ int CyCity::getUnitProductionModifier(int /*UnitTypes*/ iUnit)
 	return m_pCity ? m_pCity->getProductionModifier((UnitTypes)iUnit) : -1;
 }
 
-int CyCity::getBuildingProductionModifier(int /*BuildingTypes*/ iBuilding)
-{
-	return m_pCity ? m_pCity->getProductionModifier((BuildingTypes)iBuilding) : -1;
-}
-
 int CyCity::getProjectProductionModifier(int /*ProjectTypes*/ eProject)											
 {
 	return m_pCity ? m_pCity->getProductionModifier((ProjectTypes)eProject) : -1;

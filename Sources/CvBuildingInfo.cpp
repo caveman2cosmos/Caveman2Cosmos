@@ -3020,7 +3020,7 @@ bool CvBuildingInfo::EnablesOtherBuildings() const
 {
 	if ( !m_bEnablesOtherBuildingsCalculated )
 	{
-		const int iId = GC.getInfoTypeFromString(getType());
+		const int iId = GC.getInfoTypeForString(getType());
 
 		m_bEnablesOtherBuildingsCalculated = true;
 		m_bEnablesOtherBuildingsValue = false;

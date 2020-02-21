@@ -4047,9 +4047,6 @@ public:
 
 	bool getNotShowInCity() const;
 
-protected:
-	void setNotShowInCity();
-
 	bool m_bNoLimit;
 	bool m_bNotShowInCity;
 	bool m_bAnySpecialistYieldChanges;
@@ -4064,6 +4061,9 @@ protected:
 	bool m_bAnyBonusYieldChanges;
 	bool m_bAnyVicinityBonusYieldChanges;
 	bool m_bAnyBonusCommercePercentChanges;
+
+protected:
+	void setNotShowInCity();
 
 	int m_iFreePromotion_2;
 	int m_iFreePromotion_3;

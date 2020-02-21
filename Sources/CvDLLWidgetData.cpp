@@ -1353,8 +1353,9 @@ void CvDLLWidgetData::doTrain(CvWidgetDataStruct &widgetDataStruct)
 
 void CvDLLWidgetData::doConstruct(CvWidgetDataStruct &widgetDataStruct)
 {
-	const BuildingTypes eBuilding = (BuildingTypes)GC.getCivilizationInfo(pCity->getCivilizationType()).getCivilizationBuildings(widgetDataStruct.m_iData1);
+	const BuildingTypes eBuilding = static_cast<BuildingTypes>(widgetDataStruct.m_iData1);
 	CvCity* pCity;
+
 	if (widgetDataStruct.m_iData2 != FFreeList::INVALID_INDEX)
 	{
 		pCity = GET_PLAYER(GC.getGame().getActivePlayer()).getCity(widgetDataStruct.m_iData2);

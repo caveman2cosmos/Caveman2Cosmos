@@ -10500,7 +10500,7 @@ int CvCity::getAdditionalHealthByCivic(CivicTypes eCivic, int& iGood, int& iBad,
 	{
 		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
-			const int iTempHealth = kCivic.getBuildingHealthChanges(iI);
+			int iTempHealth = kCivic.getBuildingHealthChanges(iI);
 
 			if (iTempHealth > 0)
 			{
@@ -12813,7 +12813,7 @@ int CvCity::getAdditionalBaseYieldRateByBuilding(YieldTypes eIndex, BuildingType
 		}
 		iExtraRate += kBuilding.getYieldChange(eIndex);
 		iExtraRate += ((kBuilding.getYieldPerPopChange(eIndex) * getPopulation()) / 100);
-		iExtraRate += getBuildingYieldChange(eBuildin, eIndex);
+		iExtraRate += getBuildingYieldChange(eBuilding, eIndex);
 
 		// Trade
 		int iPlayerTradeYieldModifier = GET_PLAYER(getOwner()).getTradeYieldModifier(eIndex);
@@ -18382,19 +18382,19 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 		TCHAR szSound[1024];
 		if (eTrainUnit != NO_UNIT)
 		{
-			swprintf(szBuffer, gDLL->getText((isLimitedUnit(eTrainUnit) ? "TXT_KEY_MISC_TRAINED_UNIT_IN_LIMITED" : "TXT_KEY_MISC_TRAINED_UNIT_IN"), GC.getUnitInfo(eTrainUnit).getTextKeyWide(), getNameKey()).GetCString());
+			swprintf(szBuffer, gDLL->getText(isLimitedUnit(eTrainUnit) ? "TXT_KEY_MISC_TRAINED_UNIT_IN_LIMITED" : "TXT_KEY_MISC_TRAINED_UNIT_IN", GC.getUnitInfo(eTrainUnit).getTextKeyWide(), getNameKey()).GetCString());
 			strcpy(szSound, GC.getUnitInfo(eTrainUnit).getArtInfo(0, GET_PLAYER(getOwner()).getCurrentEra(), NO_UNIT_ARTSTYLE)->getTrainSound());
 			szIcon = GET_PLAYER(getOwner()).getUnitButton(eTrainUnit);
 		}
 		else if (eConstructBuilding != NO_BUILDING)
 		{
-			swprintf(szBuffer, gDLL->getText(isLimitedWonder(eConstructBuilding) ? "TXT_KEY_MISC_CONSTRUCTED_BUILD_IN_LIMITED" : "TXT_KEY_MISC_CONSTRUCTED_BUILD_IN"), GC.getBuildingInfo(eConstructBuilding).getTextKeyWide(), getNameKey()).GetCString());
+			swprintf(szBuffer, gDLL->getText(isLimitedWonder(eConstructBuilding) ? "TXT_KEY_MISC_CONSTRUCTED_BUILD_IN_LIMITED" : "TXT_KEY_MISC_CONSTRUCTED_BUILD_IN", GC.getBuildingInfo(eConstructBuilding).getTextKeyWide(), getNameKey()).GetCString());
 			strcpy(szSound, GC.getBuildingInfo(eConstructBuilding).getConstructSound());
 			szIcon = GC.getBuildingInfo(eConstructBuilding).getButton();
 		}
 		else if (eCreateProject != NO_PROJECT)
 		{
-			swprintf(szBuffer, gDLL->getText(((isLimitedProject(eCreateProject)) ? "TXT_KEY_MISC_CREATED_PROJECT_IN_LIMITED" : "TXT_KEY_MISC_CREATED_PROJECT_IN"), GC.getProjectInfo(eCreateProject).getTextKeyWide(), getNameKey()).GetCString());
+			swprintf(szBuffer, gDLL->getText(isLimitedProject(eCreateProject) ? "TXT_KEY_MISC_CREATED_PROJECT_IN_LIMITED" : "TXT_KEY_MISC_CREATED_PROJECT_IN", GC.getProjectInfo(eCreateProject).getTextKeyWide(), getNameKey()).GetCString());
 			strcpy(szSound, GC.getProjectInfo(eCreateProject).getCreateSound());
 			szIcon = GC.getProjectInfo(eCreateProject).getButton();
 		}
@@ -20930,14 +20930,14 @@ bool CvCity::canApplyEvent(EventTypes eEvent, const EventTriggeredData& kTrigger
 	{
 		if (kEvent.getBuildingChange() > 0)
 		{
-			if (getNumBuilding(kEvent.getBuilding()) >= GC.getCITY_MAX_NUM_BUILDINGS())
+			if (getNumBuilding((BuildingTypes)kEvent.getBuilding()) >= GC.getCITY_MAX_NUM_BUILDINGS())
 			{
 				return false;
 			}
 		}
 		else if (kEvent.getBuildingChange() < 0)
 		{
-			if (getNumRealBuilding(kEvent.getBuilding()) + kEvent.getBuildingChange() < 0)
+			if (getNumRealBuilding((BuildingTypes)kEvent.getBuilding()) + kEvent.getBuildingChange() < 0)
 			{
 				return false;
 			}
@@ -23951,8 +23951,8 @@ void CvCity::doVicinityBonus()
 		clearRawVicinityBonusCache((BonusTypes)iI);
 
 		int iChange = 0;
-		bool bHadVicinityBonus = hadVicinityBonus((BonusTypes)iI);
-		bool bHasVicinityBonus = hasVicinityBonus((BonusTypes)iI);
+		const bool bHadVicinityBonus = hadVicinityBonus((BonusTypes)iI);
+		const bool bHasVicinityBonus = hasVicinityBonus((BonusTypes)iI);
 		if (bHadVicinityBonus && !bHasVicinityBonus)
 		{
 			iChange = -1;
@@ -23975,7 +23975,7 @@ void CvCity::doVicinityBonus()
 
 						if (iYieldChange != 0)
 						{
-							updateYieldRate((BuildingTypes)iJ, (YieldTypes)iK, (getBuildingYieldChange(eBuilding, (YieldTypes)iK) + (iYieldChange * iChange)));
+							updateYieldRate((BuildingTypes)iJ, (YieldTypes)iK, (getBuildingYieldChange((BuildingTypes)iJ, (YieldTypes)iK) + (iYieldChange * iChange)));
 						}
 					}
 				}

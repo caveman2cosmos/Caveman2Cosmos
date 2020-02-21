@@ -8435,10 +8435,7 @@ bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 
 void CvPlayer::found(int iX, int iY, CvUnit *pUnit)
 {
-	CvCity* pCity;
-	BuildingTypes eLoopBuilding;
 	UnitTypes eDefenderUnit;
-	int iI;
 
 	//	This is checked by the caller on the main AI call path, but it is also usable (and used) form a few other paths, so best to leave it in
 	if (!canFound(iX, iY))
@@ -8446,10 +8443,10 @@ void CvPlayer::found(int iX, int iY, CvUnit *pUnit)
 		return;
 	}
 
-	pCity = initCity(iX, iY, true, true);
+	CvCity* pCity = initCity(iX, iY, true, true);
 	FAssertMsg(pCity != NULL, "City is not assigned a valid value");
 
-	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
 		if (GC.getBuildingInfo((BuildingTypes)iI).isNewCityFree(pCity->getGameObject()))
 		{
@@ -9152,7 +9149,7 @@ bool CvPlayer::isProductionMaxedUnitClass(UnitClassTypes eUnitClass) const
 
 bool CvPlayer::isProductionMaxedBuilding(BuildingTypes building, bool bAcquireCity) const
 {
-	if (eBuilding == NO_BUILDING)
+	if (building == NO_BUILDING)
 	{
 		return false;
 	}
@@ -25557,7 +25554,7 @@ EventTriggeredData* CvPlayer::initTriggeredData(EventTriggerTypes eEventTrigger,
 			std::vector<BuildingTypes> aeBuildings;
 			for (int i = 0; i < kTrigger.getNumBuildingsRequired(); ++i)
 			{
-				const BuildingTypes eTestBuilding = kTrigger.getBuildingRequired(i);
+				const BuildingTypes eTestBuilding = static_cast<BuildingTypes>(kTrigger.getBuildingRequired(i));
 				if (eTestBuilding != NO_BUILDING && pCity->getNumRealBuilding(eTestBuilding) > 0)
 				{
 					aeBuildings.push_back(eTestBuilding);
@@ -31487,7 +31484,7 @@ int CvPlayer::getSevoWondersScore(int mode)
 				numWondersPossible = 0;
 				for (iLoopBuilding = 0; iLoopBuilding < GC.getNumBuildingInfos(); iLoopBuilding++)
 				{
-					if (::isWorldWonder((BuildingTypes)iLoopBuilding)
+					if (isWorldWonder((BuildingTypes)iLoopBuilding))
 					{
 						numWondersPossible++;
 						//This building is a world wonder
