@@ -664,8 +664,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 	if (!isHuman() || isOption(PLAYEROPTION_AUTO_PROMOTION))
 	{
 		// Copy units as we will be removing and adding some now.
-		foreach_(CvUnit* unit, units_safe()
-			| filtered(CvUnit::fn::isPromotionReady()))
+		foreach_(CvUnit* unit, units_safe() | filtered(CvUnit::fn::isPromotionReady()))
 		{
 			unit->AI_promote();
 			// Upgrade replaces the original unit with a new one, so old unit must be killed
@@ -675,7 +674,6 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 
 	if (isHuman())
 	{
-		CvCivilizationInfo& kCivilization = GC.getCivilizationInfo(getCivilizationType());
 		int iMinGoldToUpgrade = getModderOption(MODDEROPTION_UPGRADE_MIN_GOLD);
 
 		if (isModderOption(MODDEROPTION_UPGRADE_MOST_EXPENSIVE))
@@ -723,9 +721,9 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 					if (iExperience > unit->getExperience100())
 						continue;
 
-					for (int iI = 0; iI < GC.getUnitInfo(unit->getUnitType()).getNumUnitUpgrades(); iI++)
+					foreach_ (int iUpgrade, GC.getUnitInfo(unit->getUnitType()).getUnitUpgradeChain())
 					{
-						if (unit->canUpgrade((UnitTypes)GC.getUnitInfo(unit->getUnitType()).getUnitUpgrade(iI)))
+						if (unit->canUpgrade((UnitTypes) iUpgrade))
 						{
 							iExperience = unit->getExperience100();
 							pBestUnit = unit;
@@ -759,29 +757,24 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 			}
 		}
 	}
-
 	if (isHuman())
 	{
 		return;
 	}
-
 	bool bAnyWar = (GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0);
 	int iStartingGold = getEffectiveGold();
 	int iTargetGold = AI_goldTarget();
 	int iUpgradeBudget = (AI_goldToUpgradeAllUnits() / (bAnyWar ? 1 : 2));
 
 	iUpgradeBudget = std::min(iUpgradeBudget, (iStartingGold - iTargetGold < iUpgradeBudget) ? (iStartingGold - iTargetGold) : iStartingGold/2);
-	if ( iUpgradeBudget < 0 )
-	{
-		iUpgradeBudget = 0;
-	}
+	iUpgradeBudget = std::max(0, iUpgradeBudget);
 
-	if( gPlayerLogLevel > 2 )
+	if (gPlayerLogLevel > 2)
 	{
 		logBBAI("    %S calculates upgrade budget of %d from %d current gold, %d target", getCivilizationDescription(0), iUpgradeBudget, iStartingGold, iTargetGold);
 	}
 
-	if( AI_isFinancialTrouble() )
+	if (AI_isFinancialTrouble())
 	{
 		iUpgradeBudget /= 3;
 	}
@@ -820,8 +813,8 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 			switch (iPass)
 			{
 			case 0:
-				// BBAI note:  Effectively only for galleys, triremes, and ironclads ... unit types which are limited in
-				// what terrain they can operate in
+				// BBAI note:  Effectively only for galleys, triremes, and ironclads.
+				// Unit types which are limited in what terrain they can operate in.
 				if (AI_unitImpassableCount(pLoopUnit->getUnitType()) > 0)
 				{
 					bValid = true;
@@ -842,16 +835,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 					}
 
 					// try to upgrade units which are in danger... but don't get obsessed
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      08/20/09                                jdog5000      */
-/*                                                                                              */
-/* Unit AI, Efficiency                                                                          */
-/************************************************************************************************/
-					//if (!bValid && (pLastUpgradePlot != pUnitPlot) && ((AI_getPlotDanger(pUnitPlot, 1, false)) > 0))
 					if (!bValid && (pLastUpgradePlot != pUnitPlot) && ((AI_getAnyPlotDanger(pUnitPlot, 1, false))))
-						/************************************************************************************************/
-						/* BETTER_BTS_AI_MOD                       END                                                  */
-						/************************************************************************************************/
 					{
 						bNoDisband = true;
 						bValid = true;
@@ -861,17 +845,6 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 				break;
 			}
 			case 2:
-				/********************************************************************************/
-				/* 	BETTER_BTS_AI_MOD						9/15/08			jdog5000		*/
-				/* 																			*/
-				/* 	Gold AI																	*/
-				/********************************************************************************/
-				/* original BTS code
-				if (pLoopUnit->cargoSpace() > 0)
-				{
-					bValid = true;
-				}
-				*/
 				bUnderBudget = (iStartingGold - getEffectiveGold()) < iUpgradeBudget;
 
 				// Only normal transports
@@ -884,27 +857,11 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 				{
 					bValid = (bAnyWar || bUnderBudget);
 				}
-				/********************************************************************************/
-				/* 	BETTER_BTS_AI_MOD						END								*/
-				/********************************************************************************/
-
 				break;
 			case 3:
-				/********************************************************************************/
-				/* 	BETTER_BTS_AI_MOD						9/15/08			jdog5000		*/
-				/* 																			*/
-				/* 	Gold AI																	*/
-				/********************************************************************************/
-				/* original BTS code
-				bValid = true;
-				*/
 				bUnderBudget = (iStartingGold - getEffectiveGold()) < iUpgradeBudget;
 
 				bValid = (bAnyWar || bUnderBudget);
-				/********************************************************************************/
-				/* 	BETTER_BTS_AI_MOD						END								*/
-				/********************************************************************************/
-
 				break;
 			default:
 				FAssert(false);
@@ -945,35 +902,16 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 							iCityExp += pPlotCity->getSpecialistFreeExperience(); //great generals
 							iCityExp += getFreeExperience(); //civics & wonders
 
-							// Afforess - don't check this, iExp == 0 should be good enough!
-							//if (iCityExp > 0)
-							if (iExp == 0 || iExp < iCityExp)
+							if (iExp <= std::max(0, iCityExp) && calculateUnitCost() > 0
+							&& (pLoopUnit->getDomainType() != DOMAIN_LAND || pLoopUnit->plot()->plotCount(PUF_isMilitaryHappiness, -1, -1, NULL, getID()) > 1)
+							&& pPlotCity->canTrain(pLoopUnit->getUnitType())
+							&& pPlotCity->plot()->getNumDefenders(getID()) > pPlotCity->AI_neededDefenders()
+							&& (!pLoopUnit->canDefend() || !AI_getAnyPlotDanger(pLoopUnit->plot(), 2, false)))
 							{
-								//if ((iExp == 0) || (iExp < (iCityExp + 1) / 2))
-								if (pPlotCity->plot()->getNumDefenders(getID()) > pPlotCity->AI_neededDefenders())
-								{
-								// Afforess - end
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      08/20/09                                jdog5000      */
-/*                                                                                              */
-/* Unit AI, Efficiency                                                                          */
-/************************************************************************************************/
-									if ((pLoopUnit->getDomainType() != DOMAIN_LAND) || pLoopUnit->plot()->plotCount(PUF_isMilitaryHappiness, -1, -1, NULL, getID()) > 1)
-									{
-										if ((calculateUnitCost() > 0) &&
-											(!AI_getAnyPlotDanger( pLoopUnit->plot(), 2, false) || !pLoopUnit->canDefend()) &&
-											pPlotCity->canTrain(pLoopUnit->getUnitType()))
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-										{
-											pLoopUnit->getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
-											pLoopUnit->kill(false);
-											bKilled = true;
-											pLastUpgradePlot = NULL;
-										}
-									}
-								}
+								pLoopUnit->getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
+								pLoopUnit->kill(false);
+								bKilled = true;
+								pLastUpgradePlot = NULL;
 							}
 						}
 					}
@@ -985,39 +923,18 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 			}
 		}
 	}
-
 	if (isNPC())
 	{
 		return;
 	}
-
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      02/24/10                                jdog5000      */
-/*                                                                                              */
-/* AI Logging                                                                                   */
-/************************************************************************************************/
-	if( gPlayerLogLevel > 2 )
+	if (gPlayerLogLevel > 2)
 	{
-		if( iStartingGold - getEffectiveGold() > 0 )
+		if (iStartingGold - getEffectiveGold() > 0)
 		{
 			logBBAI("    %S spends %d on unit upgrades out of budget of %d, %d effective gold remaining", getCivilizationDescription(0), iStartingGold - getEffectiveGold(), iUpgradeBudget, getEffectiveGold());
 		}
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       06/16/09                                jdog5000      */
-/*                                                                                              */
-/* Bugfix                                                                                       */
-/************************************************************************************************/
-	// Moved here per alexman's suggestion
 	AI_doSplit();
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
-
 }
 
 
