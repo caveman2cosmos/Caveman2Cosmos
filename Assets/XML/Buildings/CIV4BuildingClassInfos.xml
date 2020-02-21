@@ -2547,7 +2547,7 @@
 			<DefaultBuilding>BUILDING_ROMAN_FORUM</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_MADRASSA</Type>
+			<Type>BUILDINGCLASS_ARABIAN_MADRASSA</Type>
 			<Description>TXT_KEY_BUILDING_MADRASSA</Description>
 			<DefaultBuilding>BUILDING_ARABIAN_MADRASSA</DefaultBuilding>
 		</BuildingClassInfo>
@@ -13800,7 +13800,7 @@
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_SCARECROWS</Type>
 			<Description>TXT_KEY_BUILDING_SCARECROWS</Description>
-			<DefaultBuilding>BUILDING_SCARESCROWS</DefaultBuilding>
+			<DefaultBuilding>BUILDING_SCARECROWS</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_RAT_CATCHER</Type>

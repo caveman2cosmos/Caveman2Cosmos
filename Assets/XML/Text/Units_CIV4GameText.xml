@@ -11258,7 +11258,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Ciężki Czołg IS-2</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_HEAVY_TANK_M26</Tag>
+		<Tag>TXT_KEY_UNIT_HEAVY_TANK</Tag>
 		<English>Heavy Tank</English>
 		<French>Char Lourd</French>
 		<German>Schwerer Panzer</German>

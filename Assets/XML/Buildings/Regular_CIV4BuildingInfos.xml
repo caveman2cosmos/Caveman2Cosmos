@@ -60149,7 +60149,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Madrassa -->
-			<BuildingClass>BUILDINGCLASS_MADRASSA</BuildingClass>
+			<BuildingClass>BUILDINGCLASS_ARABIAN_MADRASSA</BuildingClass>
 			<Type>BUILDING_ARABIAN_MADRASSA</Type>
 			<Description>TXT_KEY_BUILDING_ARABIAN_MADRASSA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ARABIAN_MADRASSA_PEDIA</Civilopedia>
@@ -112655,7 +112655,7 @@
 		<BuildingInfo>
 			<!-- Scarecrows -->
 			<BuildingClass>BUILDINGCLASS_SCARECROWS</BuildingClass>
-			<Type>BUILDING_SCARESCROWS</Type>
+			<Type>BUILDING_SCARECROWS</Type>
 			<Description>TXT_KEY_BUILDING_SCARECROWS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SCARECROWS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SCARECROWS_STRATEGY</Strategy>

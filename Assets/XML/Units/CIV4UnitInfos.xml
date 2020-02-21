@@ -18551,7 +18551,7 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_HEAVY_TANK_M26</Description>
+			<Description>TXT_KEY_UNIT_HEAVY_TANK</Description>
 			<Civilopedia>TXT_KEY_UNIT_TANK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_TANK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
