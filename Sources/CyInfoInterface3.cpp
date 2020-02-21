@@ -329,19 +329,7 @@ void CyInfoPythonInterface3()
 		.def("getTradeYieldModifier", &CvTraitInfo::getTradeYieldModifier, "int (int i)")
 		.def("getCommerceChange", &CvTraitInfo::getCommerceChange, "int (int i)")
 		.def("getCommerceModifier", &CvTraitInfo::getCommerceModifier, "int (int i)")
-/************************************************************************************************/
-/* Afforess	                  Start		 08/26/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-		//.def("isFreePromotion", &CvTraitInfo::isFreePromotion, "int (int i)")
 		.def("isFreePromotionUnitCombats", &CvTraitInfo::isFreePromotionUnitCombats, "bool (int i, int j)")
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
-
-
 		;
 
 	// CvWorldInfo
@@ -350,7 +338,7 @@ void CyInfoPythonInterface3()
 		.def("getUnitNameModifier", &CvWorldInfo::getUnitNameModifier, "int ()")
 		.def("getTargetNumCities", &CvWorldInfo::getTargetNumCities, "int ()")
 		.def("getNumFreeBuildingBonuses", &CvWorldInfo::getNumFreeBuildingBonuses, "int ()")
-		.def("getBuildingClassPrereqModifier", &CvWorldInfo::getBuildingClassPrereqModifier, "int ()")
+		.def("getBuildingPrereqModifier", &CvWorldInfo::getBuildingPrereqModifier, "int ()")
 		.def("getMaxConscriptModifier", &CvWorldInfo::getMaxConscriptModifier, "int ()")
 		.def("getWarWearinessModifier", &CvWorldInfo::getWarWearinessModifier, "int ()")
 		.def("getGridWidth", &CvWorldInfo::getGridWidth, "int ()")

@@ -9565,7 +9565,7 @@ int CvPlayer::getBuildingPrereqBuilding(BuildingTypes eBuilding, BuildingTypes e
 	if (kBuilding.isForceNoPrereqScaling() || isLimitedWonder(ePrereqBuilding))
 		return iPrereqs;
 
-	iPrereqs *= std::max(0, (GC.getWorldInfo(GC.getMap().getWorldSize()).getBuildingClassPrereqModifier() + 100));
+	iPrereqs *= std::max(0, (GC.getWorldInfo(GC.getMap().getWorldSize()).getBuildingPrereqModifier() + 100));
 	iPrereqs /= 100;
 
 	if (!isLimitedWonder(eBuilding))
@@ -32245,26 +32245,26 @@ bool CvPlayer::hasValidBuildings(TechTypes eTech) const
 	bool bRequiresOrBuilding = false;
 	bool bHasOneOrBuilding = false;
 
-	for (int iI = 0; iI < GC.getTechInfo(eTech).getNumPrereqBuildingClasses(); iI++)
+	for (int iI = 0; iI < GC.getTechInfo(eTech).getNumPrereqBuildings(); iI++)
 	{
-		const int iRequired = GC.getTechInfo(eTech).getPrereqBuildingClass(iI).iMinimumRequired;
+		const int iRequired = GC.getTechInfo(eTech).getPrereqBuilding(iI).iMinimumRequired;
 		if (iRequired > 0)
 		{
-			if (getBuildingClassCount((BuildingClassTypes)GC.getTechInfo(eTech).getPrereqBuildingClass(iI).eBuildingClass) < iRequired)
+			if (getBuildingCount(GC.getTechInfo(eTech).getPrereqBuilding(iI).eBuilding) < iRequired)
 			{
 				return false;
 			}
 		}
 	}
-	for (iI = 0; iI < GC.getTechInfo(eTech).getNumPrereqOrBuildingClasses(); iI++)
+	for (iI = 0; iI < GC.getTechInfo(eTech).getNumPrereqOrBuildings(); iI++)
 	{
 		if (!bHasOneOrBuilding)
 		{
-			const int iRequiredOr = GC.getTechInfo(eTech).getPrereqOrBuildingClass(iI).iMinimumRequired;
+			const int iRequiredOr = GC.getTechInfo(eTech).getPrereqOrBuilding(iI).iMinimumRequired;
 			if (iRequiredOr > 0)
 			{
 				bRequiresOrBuilding = true;
-				if (getBuildingClassCount((BuildingClassTypes)GC.getTechInfo(eTech).getPrereqOrBuildingClass(iI).eBuildingClass) >= iRequiredOr)
+				if (getBuildingCount(GC.getTechInfo(eTech).getPrereqOrBuilding(iI).eBuilding) >= iRequiredOr)
 				{
 					bHasOneOrBuilding = true;
 				}

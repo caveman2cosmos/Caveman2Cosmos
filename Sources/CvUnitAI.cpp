@@ -15666,7 +15666,7 @@ bool CvUnitAI::AI_guardSpy(int iRandomPercent)
 				}
 				else if (pLoopCity->isProductionBuilding())
 				{
-					if (isLimitedWonderClass((BuildingClassTypes)(GC.getBuildingInfo(pLoopCity->getProductionBuilding()).getBuildingClassType())))
+					if (isLimitedWonder(pLoopCity->getProductionBuilding()))
 					{
 						iValue += 5;
 					}
@@ -15807,7 +15807,7 @@ bool CvUnitAI::AI_destroySpy()
 					}
 					else if (pBestCity->isProductionBuilding())
 					{
-						if (isLimitedWonderClass((BuildingClassTypes)(GC.getBuildingInfo(pBestCity->getProductionBuilding()).getBuildingClassType())))
+						if (isLimitedWonder(pBestCity->getProductionBuilding()))
 						{
 							getGroup()->pushMission(MISSION_DESTROY);
 							return true;

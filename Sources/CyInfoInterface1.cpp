@@ -119,12 +119,12 @@ void CyInfoPythonInterface1()
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
-		.def("getNumPrereqBuildingClasses", &CvTechInfo::getNumPrereqBuildingClasses, "int ()")
-		.def("getPrereqBuildingClassType", &CvTechInfo::getPrereqBuildingClassType, "int (int i)")
-		.def("getPrereqBuildingClassMinimumRequired", &CvTechInfo::getPrereqBuildingClassMinimumRequired, "int (int i)")
-		.def("getNumPrereqOrBuildingClasses", &CvTechInfo::getNumPrereqOrBuildingClasses, "int ()")
-		.def("getPrereqOrBuildingClassType", &CvTechInfo::getPrereqOrBuildingClassType, "int (int i)")
-		.def("getPrereqOrBuildingClassMinimumRequired", &CvTechInfo::getPrereqOrBuildingClassMinimumRequired, "int (int i)")
+		.def("getNumPrereqBuildings", &CvTechInfo::getNumPrereqBuildings, "int ()")
+		.def("getPrereqBuildingType", &CvTechInfo::getPrereqBuildingType, "int (int i)")
+		.def("getPrereqBuildingMinimumRequired", &CvTechInfo::getPrereqBuildingMinimumRequired, "int (int i)")
+		.def("getNumPrereqOrBuildings", &CvTechInfo::getNumPrereqOrBuildings, "int ()")
+		.def("getPrereqOrBuildingType", &CvTechInfo::getPrereqOrBuildingType, "int (int i)")
+		.def("getPrereqOrBuildingMinimumRequired", &CvTechInfo::getPrereqOrBuildingMinimumRequired, "int (int i)")
 		;
 
 	python::class_<CvPromotionInfo, python::bases<CvInfoBase> >("CvPromotionInfo")
@@ -516,9 +516,9 @@ void CyInfoPythonInterface1()
 		.def("getUnitGroupRequired", &CvUnitInfo::getUnitGroupRequired, "int (int i)")
 
 		.def("isPrereqOrCivics", &CvUnitInfo::isPrereqOrCivics, "bool (int i)")
-		.def("isPrereqBuildingClass", &CvUnitInfo::isPrereqBuildingClass, "bool (int i)")
-		.def("getPrereqBuildingClassOverrideTech", &CvUnitInfo::getPrereqBuildingClassOverrideTech, "int (int i)")
-		.def("getPrereqBuildingClassOverrideEra", &CvUnitInfo::getPrereqBuildingClassOverrideEra, "int (int i)")
+		.def("isPrereqBuilding", &CvUnitInfo::isPrereqBuilding, "bool (int i)")
+		.def("getPrereqBuildingOverrideTech", &CvUnitInfo::getPrereqBuildingOverrideTech, "int (int i)")
+		.def("getPrereqBuildingOverrideEra", &CvUnitInfo::getPrereqBuildingOverrideEra, "int (int i)")
 		.def("isSupersedingUnit", &CvUnitInfo::isSupersedingUnit, "bool (int i)")
 
 		.def("getUpgradeUnitClass", &CvUnitInfo::getUpgradeUnitClass, "bool (int i)")
@@ -890,7 +890,7 @@ void CyInfoPythonInterface1()
 		.def("getPrereqOrBonuses", &CvBuildingInfo::getPrereqOrBonuses, "int (int i)")
 		.def("getNumPrereqOrBonuses", &CvBuildingInfo::getNumPrereqOrBonuses, "int ()")
 		.def("getBuildingHappinessChanges", &CvBuildingInfo::getBuildingHappinessChanges, "int (int i)")
-		.def("getPrereqNumOfBuildingClass", &CvBuildingInfo::getPrereqNumOfBuildingClass, "int (int i)")
+		.def("getPrereqNumOfBuilding", &CvBuildingInfo::getPrereqNumOfBuilding, "int (int i)")
 		.def("getFlavorValue", &CvBuildingInfo::getFlavorValue, "int (int i)")
 		.def("getImprovementFreeSpecialist", &CvBuildingInfo::getImprovementFreeSpecialist, "int (int i)")
 		
@@ -910,9 +910,9 @@ void CyInfoPythonInterface1()
 		
 		.def("getTechHealthChanges", &CvBuildingInfo::getTechHealthChanges, "int (int i)") 
 		
-		.def("isReplaceBuildingClass", &CvBuildingInfo::isReplaceBuildingClass, "bool (int i)")
+		.def("isReplaceBuilding", &CvBuildingInfo::isReplaceBuilding, "bool (int i)")
 		
-		.def("isPrereqOrBuildingClass", &CvBuildingInfo::isPrereqOrBuildingClass, "bool (int i)")
+		.def("isPrereqOrBuilding", &CvBuildingInfo::isPrereqOrBuilding, "bool (int i)")
 		
 		.def("getNumPopulationEmployed", &CvBuildingInfo::getNumPopulationEmployed, "int")
 /************************************************************************************************/
@@ -920,7 +920,7 @@ void CyInfoPythonInterface1()
 /************************************************************************************************/
 		.def("isCommerceFlexible", &CvBuildingInfo::isCommerceFlexible, "bool (int i)")
 		.def("isCommerceChangeOriginalOwner", &CvBuildingInfo::isCommerceChangeOriginalOwner, "bool (int i)")
-		.def("isBuildingClassNeededInCity", &CvBuildingInfo::isBuildingClassNeededInCity, "bool (int i)")
+		.def("isBuildingNeededInCity", &CvBuildingInfo::isBuildingNeededInCity, "bool (int i)")
 
 		.def("getSpecialistYieldChange", &CvBuildingInfo::getSpecialistYieldChange, "int (int i, int j)")
 		.def("getBonusYieldModifier", &CvBuildingInfo::getBonusYieldModifier, "int (int i, int j)")

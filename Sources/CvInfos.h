@@ -456,25 +456,15 @@ public:
 	int getFreeSpecialistCount(int i) const;
 	int getPrereqGameOption() const;
 
-	int getNumPrereqBuildingClasses() const;
-	PrereqBuildingClass& getPrereqBuildingClass(int iIndex);
-	int getPrereqBuildingClassType(int iIndex) const;
-	int getPrereqBuildingClassMinimumRequired(int iIndex) const;
+	int getNumPrereqBuildings() const;
+	PrereqBuilding& getPrereqBuilding(int iIndex);
+	int getPrereqBuildingType(int iIndex) const;
+	int getPrereqBuildingMinimumRequired(int iIndex) const;
 
-	int getNumPrereqOrBuildingClasses() const;
-	PrereqBuildingClass& getPrereqOrBuildingClass(int iIndex);
-	int getPrereqOrBuildingClassType(int iIndex) const;
-	int getPrereqOrBuildingClassMinimumRequired(int iIndex) const;
-
-	//int getPrereqBuildingClass(int i) const;
-	//int getPrereqBuildingVectorSize();
-	//CvString getPrereqBuildingNamesVectorElement(int i);
-	//int getPrereqBuildingClassValuesVectorElement(int i);
-	//
-	//int getPrereqOrBuildingClass(int i) const;
-	//int getPrereqOrBuildingVectorSize();
-	//CvString getPrereqOrBuildingNamesVectorElement(int i);
-	//int getPrereqOrBuildingClassValuesVectorElement(int i);
+	int getNumPrereqOrBuildings() const;
+	PrereqBuilding& getPrereqOrBuilding(int iIndex);
+	int getPrereqOrBuildingType(int iIndex) const;
+	int getPrereqOrBuildingMinimumRequired(int iIndex) const;
 
 	bool readPass3();
 
@@ -625,16 +615,8 @@ protected:
 
 	int* m_piUnitClassStrengthChange;
 
-	std::vector<PrereqBuildingClass> m_aPrereqBuildingClass;
-	std::vector<PrereqBuildingClass> m_aPrereqOrBuildingClass;
-
-	//int* m_paiPrereqBuildingClass;
-	//std::vector<CvString> m_aszPrereqBuildingClassforPass3;
-	//std::vector<int> m_aiPrereqBuildingClassforPass3;
-	//
-	//int* m_paiPrereqOrBuildingClass;
-	//std::vector<CvString> m_aszPrereqOrBuildingClassforPass3;
-	//std::vector<int> m_aiPrereqOrBuildingClassforPass3;
+	std::vector<PrereqBuilding> m_aPrereqBuilding;
+	std::vector<PrereqBuilding> m_aPrereqOrBuilding;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1033,9 +1015,9 @@ public:
 	int getNumPrereqPlotBonusTypes() const;
 	bool isPrereqPlotBonusType(int i) const;
 
-	int getPrereqLocalBuildingClassType(int i) const;
-	int getNumPrereqLocalBuildingClassTypes() const;
-	bool isPrereqLocalBuildingClassType(int i) const;
+	int getPrereqLocalBuildingType(int i) const;
+	int getNumPrereqLocalBuildingTypes() const;
+	bool isPrereqLocalBuildingType(int i) const;
 
 	int getTrapSetWithPromotionType(int i) const;
 	int getNumTrapSetWithPromotionTypes() const;
@@ -1503,7 +1485,7 @@ protected:
 	std::vector<int> m_aiPrereqFeatureTypes;
 	std::vector<int> m_aiPrereqImprovementTypes;
 	std::vector<int> m_aiPrereqPlotBonusTypes;
-	std::vector<int> m_aiPrereqLocalBuildingClassTypes;
+	std::vector<int> m_aiPrereqLocalBuildingTypes;
 	std::vector<int> m_aiTrapSetWithPromotionTypes;
 	std::vector<int> m_aiTrapImmunityUnitCombatTypes;
 	std::vector<int> m_aiTargetUnitCombatTypes;
@@ -2403,9 +2385,9 @@ public:
 	int getFlankingStrikeUnitClass(int i) const;	// Exposed to Python
 
 	bool isPrereqOrCivics(int i) const;				// Exposed to Python
-	bool isPrereqBuildingClass(int i) const; 		// Exposed to Python
-	int getPrereqBuildingClassOverrideTech(int i) const;	//Exposed to Python
-	int getPrereqBuildingClassOverrideEra(int i) const; 	//Exposed to Python
+	bool isPrereqBuilding(int i) const; 		// Exposed to Python
+	int getPrereqBuildingOverrideTech(int i) const;	//Exposed to Python
+	int getPrereqBuildingOverrideEra(int i) const; 	//Exposed to Python
 	int getSupersedingUnit(int i) const;
 	int getNumSupersedingUnits() const;
 	bool isSupersedingUnit(int i) const; 			//Exposed to Python
@@ -2655,9 +2637,9 @@ protected:
 	int* m_piFlankingStrikeUnitClass;
 
 	bool* m_pbPrereqOrCivics;
-	bool* m_pbPrereqBuildingClass;
-	int* m_piPrereqBuildingClassOverrideTech;
-	int* m_piPrereqBuildingClassOverrideEra;
+	bool* m_pbPrereqBuilding;
+	int* m_piPrereqBuildingOverrideTech;
+	int* m_piPrereqBuildingOverrideEra;
 
 	bool* m_pbUpgradeUnitClass;
 	bool* m_pbTargetUnitClass;
@@ -3259,7 +3241,7 @@ public:
 	int getFlavorValue(int i) const;
 	int getUnitCombatProductionModifier(int i) const;
 	int getUnitClassProductionModifier(int i) const;
-	int getBuildingClassProductionModifier(int i) const;
+	int getBuildingProductionModifier(int i) const;
 	int getImprovementHappinessChanges(int i) const;
 	int getImprovementHealthPercentChanges(int i) const;
 
@@ -3270,7 +3252,7 @@ public:
 	int getImprovementYieldChanges(int i, int j) const;	// Exposed to Python
 	int getTerrainYieldChanges(int i, int j) const;
 	int getBuildingCommerceModifier(int i, int j) const;
-	int getBuildingClassCommerceChange(int i, int j) const;
+	int getBuildingCommerceChange(int i, int j) const;
 	int getSpecialistYieldPercentChanges(int i, int j) const;
 	int getSpecialistCommercePercentChanges(int i, int j) const;
 
@@ -3425,7 +3407,7 @@ protected:
 	int* m_piSpecialistExtraCommerce;
 
 	int* m_paiUnitCombatProductionModifier;
-	int* m_paiBuildingClassProductionModifier;
+	int* m_paiBuildingProductionModifier;
 	int* m_paiBuildingHappinessChanges;
 	int* m_paiBuildingHealthChanges;
 	int* m_paiFeatureHappinessChanges;
@@ -3437,7 +3419,7 @@ protected:
 	int** m_ppiSpecialistYieldPercentChanges;
 	int** m_ppiSpecialistCommercePercentChanges;
 	int** m_ppiTerrainYieldChanges;
-	int** m_ppiBuildingClassCommerceChange;
+	int** m_ppiBuildingCommerceChange;
 	int** m_ppiBuildingCommerceModifier;
 	int** m_ppiBonusCommerceModifier;
 	int** m_ppiImprovementYieldChanges;
@@ -3549,7 +3531,6 @@ public:
 	virtual ~CvBuildingInfo();
 
 	bool isNoLimit() const;						// Exposed to Python
-	int getBuildingClassType() const;			// Exposed to Python
 	int getVictoryPrereq() const;				// Exposed to Python
 	int getFreeStartEra() const;				// Exposed to Python
 	int getMaxStartEra() const;					// Exposed to Python
@@ -3777,7 +3758,7 @@ public:
 	int getBonusYieldModifier(int i, int j) const;		// Exposed to Python
 	int* getBonusYieldModifierArray(int i) const;
 
-	int getGlobalBuildingCommerceChange(int iBuildingClass, int iCommerce) const;
+	int getGlobalBuildingCommerceChange(int iBuilding, int iCommerce) const;
 	int getNumGlobalBuildingCommerceChanges() const;
 
 	// Other
@@ -3821,7 +3802,7 @@ public:
 	int getPrereqCultureLevel() const;
 	int getWorkableRadius() const;
 	int getPrereqAnyoneBuilding() const;
-	int getExtendsBuildingClass() const;
+	int getExtendsBuilding() const;
 	int getOccupationTimeModifier() const;
 	int getNoEntryDefenseLevel(bool bForLoad = false) const;
 	int getNumUnitFullHeal() const;
@@ -3833,7 +3814,7 @@ public:
 	int getPrereqOrVicinityBonuses(int i) const;
 	int getPrereqOrRawVicinityBonuses(int i) const;
 
-	bool isPrereqOrBuildingClass(int i) const;
+	bool isPrereqOrBuilding(int i) const;
 
 	bool isPrereqOrGameSpeed(int i) const;
 
@@ -3844,7 +3825,7 @@ public:
 	bool isPrereqAndTerrain(int i) const;		//Exposed to Python
 	bool isPrereqOrImprovement(int i) const;	//Exposed to Python
 	bool isPrereqOrFeature(int i) const;		//Exposed to Python
-	bool isPrereqNotBuildingClass(int i) const;
+	bool isPrereqNotBuilding(int i) const;
 	int  getBuildingProductionModifier(int i) const;
 	int  getGlobalBuildingProductionModifier(int i) const;
 
@@ -3864,7 +3845,7 @@ public:
 	std::vector<CvString> m_aszPrereqAndCivicsforPass3;
 	std::vector<bool> m_abPrereqAndCivicsforPass3;
 
-	bool isReplaceBuildingClass(int i) const;
+	bool isReplaceBuilding(int i) const;
 
 	int getImprovementYieldChanges(int i, int j) const;
 
@@ -4055,16 +4036,14 @@ public:
 
 	BoolExpr* getConstructCondition() const;
 
-	// BuildingClass ==========================================================
-	int getMaxGlobalInstances() const;
-	int getMaxTeamInstances() const;
-	int getMaxPlayerInstances() const;
-	int getExtraPlayerInstances() const;
+	int getMaxGlobalInstances() const   { return m_iMaxGlobalInstances; }
+	int getMaxTeamInstances() const     { return m_iMaxTeamInstances; }
+	int getMaxPlayerInstances() const   { return m_iMaxPlayerInstances; }
+	int getExtraPlayerInstances() const { return m_iExtraPlayerInstances; }
 
 	bool isMonument() const;
 
 	int getVictoryThreshold(int i) const;
-	//=========================================================================
 
 	bool getNotShowInCity() const;
 
@@ -4101,12 +4080,12 @@ protected:
 	int m_iPrereqPopulation;
 	int m_iPrereqCultureLevel;
 	int m_iWorkableRadius;
-	int m_iPrereqAnyoneBuildingClass;
-	int m_iExtendsBuildingClass;
+	int m_iPrereqAnyoneBuilding;
+	int m_iExtendsBuilding;
 	int m_iOccupationTimeModifier;
 	int m_iNoEntryDefenseLevel;
 	int m_iNumUnitFullHeal;
-	int m_iProductionContinueBuildingClass;
+	int m_iProductionContinueBuilding;
 	int m_iNumPopulationEmployed;
 	int m_iHappinessPercentPerPopulation;
 	int m_iHealthPercentPerPopulation;
@@ -4130,17 +4109,17 @@ protected:
 
 	int* m_piCommerceAttacks;
 
-	bool* m_pbPrereqOrBuildingClass;
+	bool* m_pbPrereqOrBuilding;
 	bool* m_pbPrereqOrGameSpeed;
 	bool* m_pbPrereqOrTerrain;
 	bool* m_pbPrereqAndTerrain;
 	bool* m_pbPrereqOrImprovement;
 	bool* m_pbPrereqOrFeature;
-	int* m_piBuildingClassProductionModifier;
-	int* m_piGlobalBuildingClassProductionModifier;
+	int* m_piBuildingProductionModifier;
+	int* m_piGlobalBuildingProductionModifier;
 	int* m_piBonusDefenseChanges;
-	bool* m_pbPrereqNotBuildingClass;
-	bool* m_pbReplaceBuildingClass;
+	bool* m_pbPrereqNotBuilding;
+	bool* m_pbReplaceBuilding;
 	int** m_ppaiBonusCommerceModifier;
 	int* m_piUnitCombatExtraStrength;
 	int** m_ppaiTechCommerceChange;
@@ -4164,8 +4143,6 @@ public:
 
 	//---------------------------------------PUBLIC MEMBER VARIABLES---------------------------------
 protected:
-
-	int m_iBuildingClassType;
 	int m_iVictoryPrereq;
 	int m_iFreeStartEra;
 	int m_iMaxStartEra;
@@ -4177,8 +4154,8 @@ protected:
 	int m_iNumFreeBonuses;
 	std::vector<std::pair<BonusTypes,int> > m_aExtraFreeBonuses;
 
-	int m_iFreeBuildingClass;
-	int m_iFreeAreaBuildingClass;
+	int m_iFreeBuilding;
+	int m_iFreeAreaBuilding;
 	int m_iFreePromotion;
 	int m_iCivicOption;
 	int m_iAIWeight;
@@ -4292,6 +4269,11 @@ protected:
 	int m_iMissionType;
 	int m_iVoteSourceType;
 	int m_iDCMAirbombMission;
+	int m_iMaxGlobalInstances;
+	int m_iMaxTeamInstances;
+	int m_iMaxPlayerInstances;
+	int m_iExtraPlayerInstances;
+	int m_iDefaultBuildingIndex;
 
 	float m_fVisibilityPriority;
 
@@ -4358,13 +4340,14 @@ protected:
 	bool m_bAnyDomainFreeExperience;
 	int* m_piDomainProductionModifier;
 	int* m_piBuildingHappinessChanges;
-	int* m_piPrereqNumOfBuildingClass;
+	int* m_piPrereqNumOfBuilding;
 	int* m_piFlavorValue;
 	int* m_piImprovementFreeSpecialist;
+	int* m_piVictoryThreshold;
 
 	bool* m_pbCommerceFlexible;
 	bool* m_pbCommerceChangeOriginalOwner;
-	bool* m_pbBuildingClassNeededInCity;
+	bool* m_pbBuildingNeededInCity;
 
 	int** m_ppaiSpecialistYieldChange;
 	int** m_ppaiSpecialistCommerceChange;
@@ -4520,56 +4503,6 @@ protected:
 
 	bool m_bValid;
 };
-
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//
-//  class : CvBuildingClassInfo
-//
-//  DESC:
-//
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvBuildingClassInfo :
-	public CvInfoBase
-{
-	//---------------------------PUBLIC INTERFACE---------------------------------
-public:
-
-	CvBuildingClassInfo();
-	virtual ~CvBuildingClassInfo();
-
-	int getMaxGlobalInstances() const;				// Exposed to Python
-	int getMaxTeamInstances() const;				// Exposed to Python
-	int getMaxPlayerInstances() const;				// Exposed to Python
-	int getExtraPlayerInstances() const;				// Exposed to Python
-	int getDefaultBuildingIndex() const;				// Exposed to Python
-	void setDefaultBuildingIndex(int i);
-
-	// Arrays
-	int getVictoryThreshold(int i) const;				// Exposed to Python
-
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvBuildingClassInfo* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL);
-	bool readPass3();
-	void getCheckSum(unsigned int& iSum);
-
-	// serialization
-	void read(FDataStreamBase* pStream) {}
-	void write(FDataStreamBase* pStream) {}
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-protected:
-
-	int m_iMaxGlobalInstances;
-	int m_iMaxTeamInstances;
-	int m_iMaxPlayerInstances;
-	int m_iExtraPlayerInstances;
-	int m_iDefaultBuildingIndex;
-
-	// Arrays
-	int* m_piVictoryThreshold;
-
-};
-
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //
@@ -4737,7 +4670,7 @@ public:
 	void setCivilizationInitialCivics(int iCivicOption, int iCivic);
 
 	DllExport bool isLeaders(int i) const;				// Exposed to Python
-	bool isCivilizationFreeBuildingClass(int i) const;	// Exposed to Python
+	bool isCivilizationFreeBuilding(int i) const;	// Exposed to Python
 	bool isCivilizationFreeTechs(int i) const;			// Exposed to Python
 	bool isCivilizationDisableTechs(int i) const;		// Exposed to Python
 
@@ -4795,7 +4728,7 @@ protected:
 	int* m_piCivilizationInitialCivics;
 
 	bool* m_pbLeaders;
-	bool* m_pbCivilizationFreeBuildingClass;
+	bool* m_pbCivilizationFreeBuilding;
 	bool* m_pbCivilizationFreeTechs;
 	bool* m_pbCivilizationDisableTechs;
 
@@ -6757,7 +6690,7 @@ public:
 	int getUnitNameModifier() const;				// Exposed to Python
 	int getTargetNumCities() const;					// Exposed to Python
 	int getNumFreeBuildingBonuses() const;			// Exposed to Python
-	int getBuildingClassPrereqModifier() const;		// Exposed to Python
+	int getBuildingPrereqModifier() const;		// Exposed to Python
 	int getMaxConscriptModifier() const;			// Exposed to Python
 	int getWarWearinessModifier() const;			// Exposed to Python
 	int getGridWidth() const;						// Exposed to Python
@@ -6790,7 +6723,7 @@ protected:
 	int m_iUnitNameModifier;
 	int m_iTargetNumCities;
 	int m_iNumFreeBuildingBonuses;
-	int m_iBuildingClassPrereqModifier;
+	int m_iBuildingPrereqModifier;
 	int m_iMaxConscriptModifier;
 	int m_iWarWearinessModifier;
 	int m_iGridWidth;
@@ -7329,10 +7262,10 @@ public:
 	int getFreeXP() const;
 	int getPrereqGameOption() const;
 
-	int getPrereqBuildingClass(int i) const;
+	int getPrereqBuilding(int i) const;
 	int getPrereqBuildingVectorSize() const;
 	CvString getPrereqBuildingNamesVectorElement(const int i) const;
-	int getPrereqBuildingClassValuesVectorElement(const int i) const;
+	int getPrereqBuildingValuesVectorElement(const int i) const;
 
 	bool isCompetingCorporation(int i) const;
 	int getCompetingCorporationVectorSize() const;
@@ -7385,9 +7318,9 @@ protected:
 	int m_iMilitaryProductionModifier;
 	int m_iPrereqGameOption;
 
-	int* m_paiPrereqBuildingClass;
-	std::vector<CvString> m_aszPrereqBuildingClassforPass3;
-	std::vector<int> m_aiPrereqBuildingClassforPass3;
+	int* m_paiPrereqBuilding;
+	std::vector<CvString> m_aszPrereqBuildingforPass3;
+	std::vector<int> m_aiPrereqBuildingforPass3;
 
 	bool* m_pabCompetingCorporation;
 	std::vector<CvString> m_aszCompetingCorporationforPass3;
@@ -9934,7 +9867,7 @@ public:
 	int getPrereqTech() const;					// Exposed to Python
 	int getUnitClass() const;					// Exposed to Python
 	int getNumUnits() const;					// Exposed to Python
-	int getBuildingClass() const;				// Exposed to Python
+	int getBuilding() const;				// Exposed to Python
 	int getBuildingChange() const;				// Exposed to Python
 	int getHappy() const;						// Exposed to Python
 	int getHealth() const;						// Exposed to Python
@@ -9983,17 +9916,17 @@ public:
 	const CvWString& getWorldNews(int i) const;
 	int getNumWorldNews() const;
 
-	int getBuildingYieldChange(int iBuildingClass, int iYield) const;
+	int getBuildingYieldChange(int iBuilding, int iYield) const;
 	int getNumBuildingYieldChanges() const;
-	int getBuildingCommerceChange(int iBuildingClass, int iCommerce) const;
+	int getBuildingCommerceChange(int iBuilding, int iCommerce) const;
 	int getNumBuildingCommerceChanges() const;
-	int getBuildingYieldModifier(int iBuildingClass, int iYield) const;
+	int getBuildingYieldModifier(int iBuilding, int iYield) const;
 	int getNumBuildingYieldModifiers() const;
-	int getBuildingCommerceModifier(int iBuildingClass, int iCommerce) const;
+	int getBuildingCommerceModifier(int iBuilding, int iCommerce) const;
 	int getNumBuildingCommerceModifiers() const;
-	int getBuildingHappyChange(int iBuildingClass) const;
+	int getBuildingHappyChange(int iBuilding) const;
 	int getNumBuildingHappyChanges() const;
-	int getBuildingHealthChange(int iBuildingClass) const;
+	int getBuildingHealthChange(int iBuilding) const;
 	int getNumBuildingHealthChanges() const;
 
 	CvProperties* getProperties();
@@ -10076,7 +10009,7 @@ private:
 	int m_iPrereqTech;
 	int m_iUnitClass;
 	int m_iNumUnits;
-	int m_iBuildingClass;
+	int m_iBuilding;
 	int m_iBuildingChange;
 	int m_iHappy;
 	int m_iHealth;

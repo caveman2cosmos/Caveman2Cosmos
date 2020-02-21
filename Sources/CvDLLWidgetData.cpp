@@ -2710,29 +2710,14 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 							szBuffer.append(gDLL->getText("TXT_KEY_ACTION_CORPORATION_NO_RESOURCES", pMissionCity->getNameKey(), szBonusList.getCString()));
 						}
 						
-						/************************************************************************************************/
-						/* Afforess	                  Start		 02/05/10                                               */
-						/*                                                                                              */
-						/*                                                                                              */
-						/************************************************************************************************/
-						BuildingTypes ePrereqBuilding;
 						CvCorporationInfo& kCorporation = GC.getCorporationInfo(eCorporation);
-						for (int iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
+						for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 						{
-							if (kCorporation.getPrereqBuildingClass(iI) > 0)
+							if (kCorporation.getPrereqBuilding(iI) > 0)
 							{
-								ePrereqBuilding = ((BuildingTypes)(GC.getCivilizationInfo(GET_PLAYER(pMissionCity->getOwner()).getCivilizationType()).getCivilizationBuildings((BuildingClassTypes)iI)));
-
-								if (ePrereqBuilding != NO_BUILDING)
-								{
-									szBuffer.append(CvWString::format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDING_REQUIRES_NUM_SPECIAL_BUILDINGS_NO_CITY", GC.getBuildingInfo(ePrereqBuilding).getTextKeyWide(), kCorporation.getPrereqBuildingClass(iI)).c_str()));
-								}
+								szBuffer.append(CvWString::format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDING_REQUIRES_NUM_SPECIAL_BUILDINGS_NO_CITY", GC.getBuildingInfo((BuildingTypes)iI).getTextKeyWide(), kCorporation.getPrereqBuilding(iI)).c_str()));
 							}
 						}
-						/************************************************************************************************/
-						/* Afforess	                     END                                                            */
-						/************************************************************************************************/
-
 					}
 				}
 			}

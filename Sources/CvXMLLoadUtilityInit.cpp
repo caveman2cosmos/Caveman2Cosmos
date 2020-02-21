@@ -311,16 +311,15 @@ void CvXMLLoadUtility::InitBuildingDefaults(int **ppiDefaults)
 
 	FAssertMsg(*ppiDefaults == NULL,"memory leak?");
 	// allocate memory based on the number of building classes
-	*ppiDefaults = new int[GC.getNumBuildingClassInfos()];
+	*ppiDefaults = new int[GC.getNumBuildingInfos()];
 	// set the local pointer to the new memory
 	piDefaults = *ppiDefaults;
 
 	// loop through all the pointers and set their default values
-	for (i=0;i<GC.getNumBuildingClassInfos();i++)
+	for (i=0;i<GC.getNumBuildingInfos();i++)
 	{
-		piDefaults[i] = GC.getBuildingClassInfo((BuildingClassTypes) i).getDefaultBuildingIndex();
+		piDefaults[i] = (BuildingClassTypes)i;
 	}
-
 }
 
 //------------------------------------------------------------------------------------------------------

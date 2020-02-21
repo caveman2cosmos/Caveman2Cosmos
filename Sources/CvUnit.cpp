@@ -11809,11 +11809,11 @@ bool CvUnit::canSpreadCorporation(const CvPlot* pPlot, CorporationTypes eCorpora
 	}
 	if (!bTestVisible)
 	{
-		for (int iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
-			if (GC.getCorporationInfo(eCorporation).getPrereqBuildingClass(iI) > 0)
+			if (GC.getCorporationInfo(eCorporation).getPrereqBuilding(iI) > 0)
 			{
-				if (GET_PLAYER(pCity->getOwner()).getBuildingClassCount((BuildingClassTypes)iI) < GC.getCorporationInfo(eCorporation).getPrereqBuildingClass(iI))
+				if (GET_PLAYER(pCity->getOwner()).getBuildingCount((BuildingTypes)iI) < GC.getCorporationInfo(eCorporation).getPrereqBuilding(iI))
 				{
 					return false;
 				}
@@ -23721,7 +23721,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 				}
 			}
 		}
-		int iNumPrereqLocalBuilding = kPromotion.getNumPrereqLocalBuildingClassTypes();
+		int iNumPrereqLocalBuilding = kPromotion.getNumPrereqLocalBuildingTypes();
 		if (iNumPrereqLocalBuilding > 0)
 		{
 			bNeedForBypass = true;
@@ -23730,7 +23730,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 				if (plot()->isCity(false))
 				{
 					pCity = pPlot->getPlotCity();
-					if (pCity->getNumActiveBuilding((BuildingTypes)kPromotion.getPrereqLocalBuildingClassType(iI)) > 0)
+					if (pCity->getNumActiveBuilding((BuildingTypes)kPromotion.getPrereqLocalBuildingType(iI)) > 0)
 					{
 						bBypass = true;
 					}
@@ -38490,16 +38490,14 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 	//	}
 	//}
 
-
-
 	bool bNeedForBypass = false;
 	bool bBypass = false;
 	if (plot() != NULL && !kPromotion.isPlotPrereqsKeepAfter())
 	{
-		TerrainTypes eTerrain = plot()->getTerrainType();
+		const TerrainTypes eTerrain = plot()->getTerrainType();
 		for (iI = 0; iI < kPromotion.getNumPrereqTerrainTypes(); iI++)
 		{
-			TerrainTypes ePrereqTerrain = (TerrainTypes)kPromotion.getPrereqTerrainType(iI);
+			const TerrainTypes ePrereqTerrain = (TerrainTypes)kPromotion.getPrereqTerrainType(iI);
 			if (ePrereqTerrain != NO_TERRAIN)
 			{
 				bNeedForBypass = true;
@@ -38550,10 +38548,10 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 
 		bNeedForBypass = false;
 		bBypass = false;
-		FeatureTypes eFeature = plot()->getFeatureType();
+		const FeatureTypes eFeature = plot()->getFeatureType();
 		for (iI = 0; iI < kPromotion.getNumPrereqFeatureTypes(); iI++)
 		{
-			FeatureTypes ePrereqFeature = (FeatureTypes)kPromotion.getPrereqFeatureType(iI);
+			const FeatureTypes ePrereqFeature = (FeatureTypes)kPromotion.getPrereqFeatureType(iI);
 			if (ePrereqFeature != NO_FEATURE)
 			{
 				bNeedForBypass = true;
@@ -38590,10 +38588,10 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 
 		bNeedForBypass = false;
 		bBypass = false;
-		ImprovementTypes eImprovement = plot()->getImprovementType();
+		const ImprovementTypes eImprovement = plot()->getImprovementType();
 		for (iI = 0; iI < kPromotion.getNumPrereqImprovementTypes(); iI++)
 		{
-			ImprovementTypes ePrereqImprovement = (ImprovementTypes)kPromotion.getPrereqImprovementType(iI);
+			const ImprovementTypes ePrereqImprovement = (ImprovementTypes)kPromotion.getPrereqImprovementType(iI);
 			if (ePrereqImprovement != NO_IMPROVEMENT)
 			{
 				bNeedForBypass = true;
@@ -38610,7 +38608,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				}
 			}
 		}
-		int iNumPrereqLocalBuilding = kPromotion.getNumPrereqLocalBuildingClassTypes();
+		const int iNumPrereqLocalBuilding = kPromotion.getNumPrereqLocalBuildingTypes();
 		if (iNumPrereqLocalBuilding > 0)
 		{
 			bNeedForBypass = true;
@@ -38618,8 +38616,8 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 			{
 				if (plot()->isCity(false))
 				{
-					CvCity* pCity = plot()->getPlotCity();
-					if (pCity->getNumActiveBuilding((BuildingTypes)kPromotion.getPrereqLocalBuildingClassType(iI)) > 0)
+					const CvCity* pCity = plot()->getPlotCity();
+					if (pCity->getNumActiveBuilding((BuildingTypes)kPromotion.getPrereqLocalBuildingType(iI)) > 0)
 					{
 						bBypass = true;
 					}
@@ -38654,10 +38652,10 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 
 		bNeedForBypass = false;
 		bBypass = false;
-		BonusTypes eBonus = plot()->getBonusType(getTeam());
+		const BonusTypes eBonus = plot()->getBonusType(getTeam());
 		for (iI = 0; iI < kPromotion.getNumPrereqPlotBonusTypes(); iI++)
 		{
-			BonusTypes ePrereqBonus = (BonusTypes)kPromotion.getPrereqPlotBonusType(iI);
+			const BonusTypes ePrereqBonus = (BonusTypes)kPromotion.getPrereqPlotBonusType(iI);
 			if (ePrereqBonus != NO_BONUS)
 			{
 				bNeedForBypass = true;

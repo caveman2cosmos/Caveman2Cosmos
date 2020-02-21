@@ -166,9 +166,9 @@ m_iLeaderPromotion(NO_PROMOTION),
 m_fUnitMaxSpeed(0.0f),
 m_fUnitPadTime(0.0f),
 m_pbPrereqOrCivics(NULL),
-m_pbPrereqBuildingClass(NULL),
-m_piPrereqBuildingClassOverrideTech(NULL),
-m_piPrereqBuildingClassOverrideEra(NULL),
+m_pbPrereqBuilding(NULL),
+m_piPrereqBuildingOverrideTech(NULL),
+m_piPrereqBuildingOverrideEra(NULL),
 m_pbUpgradeUnitClass(NULL),
 m_pbTargetUnitClass(NULL),
 m_pbTargetUnitCombat(NULL),
@@ -340,9 +340,9 @@ m_bGatherHerd(false)
 CvUnitInfo::~CvUnitInfo()
 {
 	SAFE_DELETE_ARRAY(m_pbPrereqOrCivics);
-	SAFE_DELETE_ARRAY(m_pbPrereqBuildingClass);
-	SAFE_DELETE_ARRAY(m_piPrereqBuildingClassOverrideTech);
-	SAFE_DELETE_ARRAY(m_piPrereqBuildingClassOverrideEra);
+	SAFE_DELETE_ARRAY(m_pbPrereqBuilding);
+	SAFE_DELETE_ARRAY(m_piPrereqBuildingOverrideTech);
+	SAFE_DELETE_ARRAY(m_piPrereqBuildingOverrideEra);
 
 	SAFE_DELETE_ARRAY(m_pbUpgradeUnitClass);
 	SAFE_DELETE_ARRAY(m_pbTargetUnitClass);
@@ -381,7 +381,7 @@ CvUnitInfo::~CvUnitInfo()
 	SAFE_DELETE_ARRAY(m_paszLateArtDefineTags);
 	SAFE_DELETE_ARRAY(m_paszMiddleArtDefineTags);
 	SAFE_DELETE_ARRAY(m_paszUnitNames);
-	SAFE_DELETE_ARRAY(m_pbPrereqBuildingClass);
+	SAFE_DELETE_ARRAY(m_pbPrereqBuilding);
 	SAFE_DELETE_ARRAY(m_piPrereqOrVicinityBonuses);
 	SAFE_DELETE_ARRAY(m_pbPassableRouteNeeded);
 	SAFE_DELETE_ARRAY(m_paszClassicalArtDefineTags);
@@ -1256,29 +1256,29 @@ bool CvUnitInfo::isPrereqOrCivics(int i) const
 	return m_pbPrereqOrCivics ? m_pbPrereqOrCivics[i] : false;
 }
 
-bool CvUnitInfo::isPrereqBuildingClass(int i) const
+bool CvUnitInfo::isPrereqBuilding(int i) const
 {
-	FAssertMsg(i < GC.getNumBuildingClassInfos(), "Index out of bounds");
+	FAssertMsg(i < GC.getNumBuildingInfos(), "Index out of bounds");
 	FAssertMsg(i >= -1, "Index out of bounds");
-	if(i == NO_BUILDINGCLASS)
+	if (i == NO_BUILDING)
 	{
-		return m_pbPrereqBuildingClass != NULL;
+		return m_pbPrereqBuilding != NULL;
 	}
-	return m_pbPrereqBuildingClass ? m_pbPrereqBuildingClass[i] : false;
+	return m_pbPrereqBuilding ? m_pbPrereqBuilding[i] : false;
 }
 
-int CvUnitInfo::getPrereqBuildingClassOverrideTech(int i) const
+int CvUnitInfo::getPrereqBuildingOverrideTech(int i) const
 {
-	FAssertMsg(i < GC.getNumBuildingClassInfos(), "Index out of bounds");
+	FAssertMsg(i < GC.getNumBuildingInfos(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
-	return m_piPrereqBuildingClassOverrideTech ? m_piPrereqBuildingClassOverrideTech[i] : -1;
+	return m_piPrereqBuildingOverrideTech ? m_piPrereqBuildingOverrideTech[i] : -1;
 }
 
-int CvUnitInfo::getPrereqBuildingClassOverrideEra(int i) const
+int CvUnitInfo::getPrereqBuildingOverrideEra(int i) const
 {
-	FAssertMsg(i < GC.getNumBuildingClassInfos(), "Index out of bounds");
+	FAssertMsg(i < GC.getNumBuildingInfos(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
-	return m_piPrereqBuildingClassOverrideEra ? m_piPrereqBuildingClassOverrideEra[i] : -1;
+	return m_piPrereqBuildingOverrideEra ? m_piPrereqBuildingOverrideEra[i] : -1;
 }
 
 int CvUnitInfo::getSupersedingUnit(int i) const
@@ -3969,9 +3969,9 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum)
 	//CheckSumI(iSum, m_iGroupDefinitions, m_piUnitGroupRequired);
 
 	CheckSumI(iSum, GC.getNumCivicInfos(), m_pbPrereqOrCivics);
-	CheckSumI(iSum, GC.getNumBuildingClassInfos(), m_pbPrereqBuildingClass);
-	CheckSumI(iSum, GC.getNumBuildingClassInfos(), m_piPrereqBuildingClassOverrideTech);
-	CheckSumI(iSum, GC.getNumBuildingClassInfos(), m_piPrereqBuildingClassOverrideEra);
+	CheckSumI(iSum, GC.getNumBuildingInfos(), m_pbPrereqBuilding);
+	CheckSumI(iSum, GC.getNumBuildingInfos(), m_piPrereqBuildingOverrideTech);
+	CheckSumI(iSum, GC.getNumBuildingInfos(), m_piPrereqBuildingOverrideEra);
 	CheckSumC(iSum, m_aiSupersedingUnits);
 	CheckSumI(iSum, GC.getNumUnitClassInfos(), m_pbUpgradeUnitClass);
 	CheckSumI(iSum, GC.getNumUnitClassInfos(), m_pbTargetUnitClass);
@@ -4009,7 +4009,7 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum)
 	CheckSum(iSum, m_iCommandRange);
 
 	CheckSumI(iSum, GC.getNUM_UNIT_PREREQ_OR_BONUSES(), m_piPrereqOrVicinityBonuses);
-	CheckSumI(iSum, GC.getNumBuildingClassInfos(), m_pbPrereqBuildingClass);
+	CheckSumI(iSum, GC.getNumBuildingInfos(), m_pbPrereqBuilding);
 	CheckSumI(iSum, GC.getNumRouteInfos(), m_pbPassableRouteNeeded);
 
 	CheckSumC(iSum, m_aiUpgradeUnitClassTypes);
@@ -4464,11 +4464,11 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->SetVariableListTagPair(&m_pbPrereqOrCivics, L"PrereqOrCivics", GC.getNumCivicInfos());
 
-	pXML->SetVariableListTagPair(&m_pbPrereqBuildingClass, L"PrereqBuildingClasses", GC.getNumBuildingClassInfos());
+	pXML->SetVariableListTagPair(&m_pbPrereqBuilding, L"PrereqBuildings", GC.getNumBuildingInfos());
 
-	pXML->SetVariableListTagPair(&m_piPrereqBuildingClassOverrideTech, L"PrereqBuildingClasses", GC.getNumBuildingClassInfos(), L"TechOverride", GC.getNumTechInfos());
+	pXML->SetVariableListTagPair(&m_piPrereqBuildingOverrideTech, L"PrereqBuildings", GC.getNumBuildingInfos(), L"TechOverride", GC.getNumTechInfos());
 
-	pXML->SetVariableListTagPair(&m_piPrereqBuildingClassOverrideEra, L"PrereqBuildingClasses", GC.getNumBuildingClassInfos(), L"EraOverride", GC.getNumEraInfos());
+	pXML->SetVariableListTagPair(&m_piPrereqBuildingOverrideEra, L"PrereqBuildings", GC.getNumBuildingInfos(), L"EraOverride", GC.getNumEraInfos());
 
 	pXML->SetOptionalIntVectorWithDelayedResolution(m_aiSupersedingUnits, L"SupersedingUnits");
 
@@ -4749,7 +4749,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"VicinityBonusType");
 	m_iPrereqVicinityBonus = pXML->GetInfoClass(szTextVal);
 	pXML->SetVariableListTagPair(&m_pbPassableRouteNeeded, L"PassableRouteNeededs", GC.getNumRouteInfos(), false);
-	pXML->SetVariableListTagPair(&m_pbPrereqBuildingClass, L"PrereqBuildingClasses", GC.getNumBuildingClassInfos());
+	pXML->SetVariableListTagPair(&m_pbPrereqBuilding, L"PrereqBuildings", GC.getNumBuildingInfos());
 	pXML->GetOptionalChildXmlValByName(&m_iBaseFoodChange, L"iBaseFoodChange");
 	pXML->GetOptionalChildXmlValByName(&m_iControlPoints, L"iControlPoints");
 	pXML->GetOptionalChildXmlValByName(&m_iCommandRange, L"iCommandRange");
@@ -5778,39 +5778,39 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 		}
 	}
 
-	for ( int i = 0; i < GC.getNumBuildingClassInfos(); i++)
+	for ( int i = 0; i < GC.getNumBuildingInfos(); i++)
 	{
-		if ( isPrereqBuildingClass(i) == bDefault && pClassInfo->isPrereqBuildingClass(i) != bDefault)
+		if ( isPrereqBuilding(i) == bDefault && pClassInfo->isPrereqBuilding(i) != bDefault)
 		{
-			if ( NULL == m_pbPrereqBuildingClass )
+			if ( NULL == m_pbPrereqBuilding )
 			{
-				CvXMLLoadUtility::InitList(&m_pbPrereqBuildingClass,GC.getNumBuildingClassInfos(),bDefault);
+				CvXMLLoadUtility::InitList(&m_pbPrereqBuilding,GC.getNumBuildingInfos(),bDefault);
 			}
-			m_pbPrereqBuildingClass[i] = pClassInfo->isPrereqBuildingClass(i);
+			m_pbPrereqBuilding[i] = pClassInfo->isPrereqBuilding(i);
 		}
 	}
 
-	for ( int i = 0; i < GC.getNumBuildingClassInfos(); i++)
+	for ( int i = 0; i < GC.getNumBuildingInfos(); i++)
 	{
-		if ( getPrereqBuildingClassOverrideTech(i) == -1 && pClassInfo->getPrereqBuildingClassOverrideTech(i) != -1 )
+		if ( getPrereqBuildingOverrideTech(i) == -1 && pClassInfo->getPrereqBuildingOverrideTech(i) != -1 )
 		{
-			if ( NULL == m_piPrereqBuildingClassOverrideTech )
+			if ( NULL == m_piPrereqBuildingOverrideTech )
 			{
-				CvXMLLoadUtility::InitList(&m_piPrereqBuildingClassOverrideTech,GC.getNumBuildingClassInfos(),-1);
+				CvXMLLoadUtility::InitList(&m_piPrereqBuildingOverrideTech,GC.getNumBuildingInfos(),-1);
 			}
-			m_piPrereqBuildingClassOverrideTech[i] = pClassInfo->getPrereqBuildingClassOverrideTech(i);
+			m_piPrereqBuildingOverrideTech[i] = pClassInfo->getPrereqBuildingOverrideTech(i);
 		}
 	}
 
-	for ( int i = 0; i < GC.getNumBuildingClassInfos(); i++)
+	for ( int i = 0; i < GC.getNumBuildingInfos(); i++)
 	{
-		if ( getPrereqBuildingClassOverrideEra(i) == -1 && pClassInfo->getPrereqBuildingClassOverrideEra(i) != -1 )
+		if ( getPrereqBuildingOverrideEra(i) == -1 && pClassInfo->getPrereqBuildingOverrideEra(i) != -1 )
 		{
-			if ( NULL == m_piPrereqBuildingClassOverrideEra )
+			if ( NULL == m_piPrereqBuildingOverrideEra )
 			{
-				CvXMLLoadUtility::InitList(&m_piPrereqBuildingClassOverrideEra,GC.getNumBuildingClassInfos(),-1);
+				CvXMLLoadUtility::InitList(&m_piPrereqBuildingOverrideEra,GC.getNumBuildingInfos(),-1);
 			}
-			m_piPrereqBuildingClassOverrideEra[i] = pClassInfo->getPrereqBuildingClassOverrideEra(i);
+			m_piPrereqBuildingOverrideEra[i] = pClassInfo->getPrereqBuildingOverrideEra(i);
 		}
 	}
 

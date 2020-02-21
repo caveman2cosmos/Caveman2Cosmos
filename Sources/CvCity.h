@@ -299,7 +299,7 @@ public:
 /************************************************************************************************/
 	//	KOSHLING - cache can build results
 	void FlushCanConstructCache(BuildingTypes eBuilding = NO_BUILDING);
-	bool canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool bTestVisible, bool bIgnoreCost, bool bIgnoreAmount, BuildingClassTypes withExtraBuildingClass = NO_BUILDINGCLASS, bool bIgnoreBuildings = false, TechTypes eIgnoreTechReq = NO_TECH, int* probabilityEverConstructable = NULL, bool bAffliction = false, bool bExposed = false) const;
+	bool canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool bTestVisible, bool bIgnoreCost, bool bIgnoreAmount, BuildingTypes withExtraBuilding = NO_BUILDING, bool bIgnoreBuildings = false, TechTypes eIgnoreTechReq = NO_TECH, int* probabilityEverConstructable = NULL, bool bAffliction = false, bool bExposed = false) const;
 	void NoteBuildingNoLongerConstructable(BuildingTypes eBuilding) const;
 
 	bool canCreate(ProjectTypes eProject, bool bContinue = false, bool bTestVisible = false) const; // Exposed to Python
@@ -1405,16 +1405,16 @@ public:
 	bool isEventOccured(EventTypes eEvent) const;
 	void setEventOccured(EventTypes eEvent, bool bOccured);
 
-	int getBuildingYieldChange(BuildingClassTypes eBuildingClass, YieldTypes eYield) const; // Exposed to Python
-	void setBuildingYieldChange(BuildingClassTypes eBuildingClass, YieldTypes eYield, int iChange); // Exposed to Python
-	void changeBuildingYieldChange(BuildingClassTypes eBuildingClass, YieldTypes eYield, int iChange);
-	int getBuildingCommerceChange(BuildingClassTypes eBuildingClass, CommerceTypes eCommerce) const; // Exposed to Python
-	void setBuildingCommerceChange(BuildingClassTypes eBuildingClass, CommerceTypes eCommerce, int iChange); // Exposed to Python
-	void changeBuildingCommerceChange(BuildingClassTypes eBuildingClass, CommerceTypes eCommerce, int iChange);
-	int getBuildingHappyChange(BuildingClassTypes eBuildingClass) const; // Exposed to Python
-	void setBuildingHappyChange(BuildingClassTypes eBuildingClass, int iChange); // Exposed to Python
-	int getBuildingHealthChange(BuildingClassTypes eBuildingClass) const; // Exposed to Python
-	void setBuildingHealthChange(BuildingClassTypes eBuildingClass, int iChange); // Exposed to Python
+	int getBuildingYieldChange(BuildingTypes eBuilding, YieldTypes eYield) const; // Exposed to Python
+	void setBuildingYieldChange(BuildingTypes eBuilding, YieldTypes eYield, int iChange); // Exposed to Python
+	void changeBuildingYieldChange(BuildingTypes eBuilding, YieldTypes eYield, int iChange);
+	int getBuildingCommerceChange(BuildingTypes eBuilding, CommerceTypes eCommerce) const; // Exposed to Python
+	void setBuildingCommerceChange(BuildingTypes eBuilding, CommerceTypes eCommerce, int iChange); // Exposed to Python
+	void changeBuildingCommerceChange(BuildingTypes eBuilding, CommerceTypes eCommerce, int iChange);
+	int getBuildingHappyChange(BuildingTypes eBuilding) const; // Exposed to Python
+	void setBuildingHappyChange(BuildingTypes eBuilding, int iChange); // Exposed to Python
+	int getBuildingHealthChange(BuildingTypes eBuilding) const; // Exposed to Python
+	void setBuildingHealthChange(BuildingTypes eBuilding, int iChange); // Exposed to Python
 
 	PlayerTypes getLiberationPlayer(bool bConquest) const; // Exposed to Python
 	void liberate(bool bConquest); // Exposed to Python
@@ -1449,8 +1449,8 @@ public:
 	bool canUpgradeUnit(UnitTypes eUnit) const;
 	int getUnitClassProductionModifier(UnitClassTypes eIndex) const;				 //Exposed to Python
 	void changeUnitClassProductionModifier(UnitClassTypes eIndex, int iChange);
-	int getBuildingClassProductionModifier(BuildingClassTypes eIndex) const;
-	void changeBuildingClassProductionModifier(BuildingClassTypes eIndex, int iChange);
+	int getBuildingProductionModifier(BuildingTypes eIndex) const;
+	void changeBuildingProductionModifier(BuildingTypes eIndex, int iChange);
 	bool hadVicinityBonus(BonusTypes eIndex) const;
 	bool hadRawVicinityBonus(BonusTypes eIndex) const;
 	int getBonusDefenseChanges(BonusTypes eIndex) const;
@@ -1484,8 +1484,8 @@ public:
 
 	void setCivilizationType(int iCiv);
 
-	int getBuildingCommerceModifier(BuildingClassTypes eBuildingClass, CommerceTypes eCommerce) const;
-	int getBuildingYieldModifier(BuildingClassTypes eBuildingClass, YieldTypes eYield) const;
+	int getBuildingCommerceModifier(BuildingTypes eBuilding, CommerceTypes eCommerce) const;
+	int getBuildingYieldModifier(BuildingTypes eBuilding, YieldTypes eYield) const;
 
 	int calculateBuildingCommerceModifier(CommerceTypes eCommerce) const;
 	int calculateBuildingYieldModifier(YieldTypes eYield) const;

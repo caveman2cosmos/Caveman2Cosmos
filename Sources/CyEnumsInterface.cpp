@@ -944,10 +944,6 @@ void CyEnumsPythonInterface()
 		.value("NUM_TASK_TYPES", NUM_TASK_TYPES)
 		;
 
-	python::enum_<BuildingClassTypes>("BuildingClassTypes")
-		.value("NO_BUILDINGCLASS", NO_BUILDINGCLASS)
-		;
-
 	python::enum_<BuildingTypes>("BuildingTypes")
 		.value("NO_BUILDING", NO_BUILDING)
 		;

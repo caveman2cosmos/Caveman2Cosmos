@@ -1331,8 +1331,6 @@ void cvInternalGlobals::updateReplacements()
 	m_BonusClassInfoReplacements.updateReplacements(getBonusClassInfos());
 	m_BonusInfoReplacements.updateReplacements(getBonusInfos());
 	m_ImprovementInfoReplacements.updateReplacements(getImprovementInfos());
-	m_BuildingClassInfoReplacements.updateReplacements(getBuildingClassInfos());
-
 	m_BuildingInfoReplacements.updateReplacements(getBuildingInfos());
 	m_CivicInfoReplacements.updateReplacements(getCivicInfos());
 	m_LeaderHeadInfoReplacements.updateReplacements(getLeaderHeadInfos());
@@ -2991,28 +2989,6 @@ CvProjectInfo& cvInternalGlobals::getProjectInfo(ProjectTypes e) const
 CvInfoReplacements<CvProjectInfo>* cvInternalGlobals::getProjectInfoReplacements()
 {
 	return &m_ProjectInfoReplacements;
-}
-
-int cvInternalGlobals::getNumBuildingClassInfos() const
-{
-	return m_paBuildingClassInfo.size();
-}
-
-std::vector<CvBuildingClassInfo*>& cvInternalGlobals::getBuildingClassInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paBuildingClassInfo;
-}
-
-CvBuildingClassInfo& cvInternalGlobals::getBuildingClassInfo(BuildingClassTypes eBuildingClassNum) const
-{
-	FAssert(eBuildingClassNum > -1);
-	FAssert(eBuildingClassNum < GC.getNumBuildingClassInfos());
-	return *(m_paBuildingClassInfo[eBuildingClassNum]);
-}
-
-CvInfoReplacements<CvBuildingClassInfo>* cvInternalGlobals::getBuildingClassInfoReplacements()
-{
-	return &m_BuildingClassInfoReplacements;
 }
 
 int cvInternalGlobals::getNumBuildingInfos() const
@@ -5074,7 +5050,6 @@ int cvInternalGlobals::getNUM_LEADERANIM_TYPES() const
 
 void cvInternalGlobals::deleteInfoArrays()
 {
-	deleteInfoArray(m_paBuildingClassInfo);
 	deleteInfoArray(m_paBuildingInfo);
 	deleteInfoArray(m_paSpecialBuildingInfo);
 
