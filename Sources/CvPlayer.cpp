@@ -2281,18 +2281,13 @@ void CvPlayer::initFreeUnits()
 Consider removing freeUnitClass from civilization info as this is the only place that would have used it.
 
 		CvCivilizationInfo& kCivilizationInfo = GC.getCivilizationInfo(getCivilizationType());
-		for (int iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 		{
-			eLoopUnit = (UnitTypes)kCivilizationInfo.getCivilizationUnits(iI);
+			int iFreeCount = kCivilizationInfo.getCivilizationFreeUnitsClass(GC.getUnitInfo((UnitTypes)iI).getUnitClassType) * iMult;
 
-			if (eLoopUnit != NO_UNIT)
+			for (int iJ = 0; iJ < iFreeCount; iJ++)
 			{
-				int iFreeCount = kCivilizationInfo.getCivilizationFreeUnitsClass(iI) * iMult;
-
-				for (int iJ = 0; iJ < iFreeCount; iJ++)
-				{
-					addFreeUnit(eLoopUnit);
-				}
+				addFreeUnit((UnitTypes)iI);
 			}
 		}
 */
@@ -2436,28 +2431,15 @@ UnitTypes CvPlayer::getBestUnitType(UnitAITypes eUnitAI) const
 
 	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
-		if (GC.getUnitInfo((UnitTypes) iI).getPrereqAndBonus() != NO_BONUS)
-		{
+		if (algo::none_of(cities(), CvCity::fn::canTrain((UnitTypes) iI)))
 			continue;
-		}
-		bool bValid = true;
-		for (int iJ = 0; iJ < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); iJ++)
-		{
-			if (GC.getUnitInfo((UnitTypes) iI).getPrereqOrBonuses(iJ) != NO_BONUS)
-			{
-				bValid = false;
-				break;
-			}
-		}
-		if (bValid && canTrain((UnitTypes) iI))
-		{
-			const int iValue = AI_unitValue((UnitTypes) iI, eUnitAI, NULL);
 
-			if (iValue > iBestValue)
-			{
-				eBestUnit = (UnitTypes) iI;
-				iBestValue = iValue;
-			}
+		const int iValue = AI_unitValue((UnitTypes) iI, eUnitAI, NULL);
+
+		if (iValue > iBestValue)
+		{
+			eBestUnit = (UnitTypes) iI;
+			iBestValue = iValue;
 		}
 	}
 	return eBestUnit;
@@ -8573,8 +8555,7 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 	const UnitClassTypes eUnitClass = (UnitClassTypes)kUnit.getUnitClassType();
 	int iI;
 
-	//Another way to create a barrier for barbarians to spawn heroes - apparently this is called when determining what units to add to a newly spawned barb city.
-	if (isNPC() && GC.getUnitInfo(eUnit).hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_HERO")))
+	if (isNPC() && isWorldUnit(eUnit))
 	{
 		return false;
 	}
@@ -12753,41 +12734,33 @@ int CvPlayer::getWorkRate(BuildTypes eBuild) const
 {
 	int iRate = 0;
 	int iBestScore = 0;
-	CvCivilizationInfo& kCiv = GC.getCivilizationInfo(getCivilizationType());
 
-	for (int iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
-		UnitTypes eUnit = (UnitTypes)kCiv.getCivilizationUnits(iI);
-		if ( NO_UNIT != eUnit )
+		const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes)iI);
+
+		if (kUnit.getBuilds(eBuild))
 		{
-			CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
+			const int iUnitRate = kUnit.getWorkRate();
+			int iScore = 0;
 
-			if (kUnit.getBuilds(eBuild))
+			if (getUnitClassCount((UnitClassTypes)kUnit.getUnitClassType()) > 0)
 			{
-				bool	bHas = (getUnitClassCount((UnitClassTypes)iI) > 0);
-				int iUnitRate = kUnit.getWorkRate();
-				int iScore = 0;
+				iScore = iUnitRate*10;
+			}
+			else if (canTrain((UnitTypes)iI))
+			{
+				iScore = iUnitRate;
+			}
 
-				if ( bHas )
-				{
-					iScore = iUnitRate*10;
-				}
-				else if ( canTrain(eUnit) )
-				{
-					iScore = iUnitRate;
-				}
-
-				if ( iScore > iBestScore )
-				{
-					iBestScore = iScore;
-					iRate = iUnitRate;
-				}
+			if (iScore > iBestScore)
+			{
+				iBestScore = iScore;
+				iRate = iUnitRate;
 			}
 		}
 	}
-	int iRateModifier = getWorkerSpeedModifier();
-	iRateModifier += getBuildWorkerSpeedModifierSpecific(eBuild);
-	iRate *= std::max(0, iRateModifier + 100);
+	iRate *= std::max(0, getWorkerSpeedModifier() + getBuildWorkerSpeedModifierSpecific(eBuild) + 100);
 	iRate /= 100;
 
 	if (!isHuman() && !isNPC())
@@ -12795,7 +12768,6 @@ int CvPlayer::getWorkRate(BuildTypes eBuild) const
 		iRate *= std::max(0, (GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIWorkRateModifier() + 100));
 		iRate /= 100;
 	}
-
 	return iRate;
 }
 // BUG - Partial Builds - end

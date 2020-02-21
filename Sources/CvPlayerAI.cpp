@@ -801,25 +801,27 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 			//	Koshling - never upgrade workers or subdued animals here as they typically have outcome
 			//	missions and construction capabilities that must be evaluated comparatively.  The UnitAI
 			//	processing for these AI types handles upgrade explicitly
-			switch( pLoopUnit->AI_getUnitAIType() )
+			switch (pLoopUnit->AI_getUnitAIType())
 			{
-			case UNITAI_SUBDUED_ANIMAL:
-			case UNITAI_WORKER:
-				continue;
-			default:
-				break;
+				case UNITAI_SUBDUED_ANIMAL:
+				case UNITAI_WORKER:
+					continue;
+				default:
+					break;
 			}
 
 			switch (iPass)
 			{
 			case 0:
-				// BBAI note:  Effectively only for galleys, triremes, and ironclads.
-				// Unit types which are limited in what terrain they can operate in.
+			{
+				// BBAI note:  Effectively only for galleys, triremes, and ironclads -
+				//		Unit types which are limited in what terrain they can operate.
 				if (AI_unitImpassableCount(pLoopUnit->getUnitType()) > 0)
 				{
 					bValid = true;
 				}
 				break;
+			}
 			case 1:
 			{
 				CvPlot* pUnitPlot = pLoopUnit->plot();
@@ -845,6 +847,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 				break;
 			}
 			case 2:
+			{
 				bUnderBudget = (iStartingGold - getEffectiveGold()) < iUpgradeBudget;
 
 				// Only normal transports
@@ -858,11 +861,14 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 					bValid = (bAnyWar || bUnderBudget);
 				}
 				break;
+			}
 			case 3:
+			{
 				bUnderBudget = (iStartingGold - getEffectiveGold()) < iUpgradeBudget;
 
 				bValid = (bAnyWar || bUnderBudget);
 				break;
+			}
 			default:
 				FAssert(false);
 				break;

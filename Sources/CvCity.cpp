@@ -2779,15 +2779,12 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 		return false;
 	}
 
-	if (!bTestVisible)
+	if (!bTestVisible && kUnit.isRequiresStateReligionInCity())
 	{
-		ReligionTypes eStateReligion = GET_PLAYER(getOwner()).getStateReligion();
-		if (kUnit.isRequiresStateReligionInCity())
+		const ReligionTypes eStateReligion = GET_PLAYER(getOwner()).getStateReligion();
+		if (NO_RELIGION == eStateReligion || !isHasReligion(eStateReligion))
 		{
-			if (NO_RELIGION == eStateReligion || !isHasReligion(eStateReligion))
-			{
-				return false;
-			}
+			return false;
 		}
 	}
 
