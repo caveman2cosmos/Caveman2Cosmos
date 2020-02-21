@@ -31053,182 +31053,182 @@
 		<Polish>Edukacja (Błoga Ignorancja 13)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_ANCIENT</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_ANCIENT</Tag>
 		<English>Education Knowledge Base (Ancient)</English>
 		<French>Education Knowledge Base (Ancient)</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_CLASSICAL</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_CLASSICAL</Tag>
 		<English>Education Knowledge Base (Classical)</English>
 		<French>Education Knowledge Base (Classical)</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_MEDIEVAL</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MEDIEVAL</Tag>
 		<English>Education Knowledge Base (Medieval)</English>
 		<French>Education Knowledge Base (Medieval)</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_RENAISSANCE</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_RENAISSANCE</Tag>
 		<English>Education Knowledge Base (Renaissance)</English>
 		<French>Education Knowledge Base (Renaissance)</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_INDUSTRIAL</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</Tag>
 		<English>Education Knowledge Base (Industrial)</English>
 		<French>Education Knowledge Base (Industrial)</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_MODERN</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MODERN</Tag>
 		<English>Education Knowledge Base (Modern)</English>
 		<French>Education Knowledge Base (Modern)</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_INFORMATION</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INFORMATION</Tag>
 		<English>Education Knowledge Base (Information)</English>
 		<French>Education Knowledge Base (Information)</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_NANOTECH</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_NANOTECH</Tag>
 		<English>Education Knowledge Base (Nanotech)</English>
 		<French>Education Knowledge Base (Nanotech)</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_TRANSHUMAN</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</Tag>
 		<English>Education Knowledge Base (Transhuman)</English>
 		<French>Education Knowledge Base (Transhuman)</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_GALACTIC</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_GALACTIC</Tag>
 		<English>Education Knowledge Base (Galactic)</English>
 		<French>Education Knowledge Base (Galactic)</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_COSMIC</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_COSMIC</Tag>
 		<English>Education Knowledge Base (Cosmic)</English>
 		<French>Education Knowledge Base (Cosmic)</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_TRANSCENDENT</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</Tag>
 		<English>Education Knowledge Base (Transcendent)</English>
 		<French>Education Knowledge Base (Transcendent)</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_ANCIENT_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_ANCIENT_PEDIA</Tag>
 		<English>TBD</English>
 		<French>TBD</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_CLASSICAL_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_CLASSICAL_PEDIA</Tag>
 		<English>TBD</English>
 		<French>TBD</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_MEDIEVAL_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MEDIEVAL_PEDIA</Tag>
 		<English>TBD</English>
 		<French>TBD</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_RENAISSANCE_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_RENAISSANCE_PEDIA</Tag>
 		<English>TBD</English>
 		<French>TBD</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_INDUSTRIAL_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INDUSTRIAL_PEDIA</Tag>
 		<English>TBD</English>
 		<French>TBD</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_MODERN_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MODERN_PEDIA</Tag>
 		<English>TBD</English>
 		<French>TBD</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_INFORMATION_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INFORMATION_PEDIA</Tag>
 		<English>TBD</English>
 		<French>TBD</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_NANOTECH_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_NANOTECH_PEDIA</Tag>
 		<English>TBD</English>
 		<French>TBD</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_TRANSHUMAN_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSHUMAN_PEDIA</Tag>
 		<English>TBD</English>
 		<French>TBD</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_GALACTIC_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_GALACTIC_PEDIA</Tag>
 		<English>TBD</English>
 		<French>TBD</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_COSMIC_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_COSMIC_PEDIA</Tag>
 		<English>TBD</English>
 		<French>TBD</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_TRANSCENDENT_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSCENDENT_PEDIA</Tag>
 		<English>TBD</English>
 		<French>TBD</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_ANCIENT_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_ANCIENT_STRATEGY</Tag>
 		<English>TBD</English>
 		<French>TBD</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_CLASSICAL_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_CLASSICAL_STRATEGY</Tag>
 		<English>TBD</English>
 		<French>TBD</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_MEDIEVAL_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MEDIEVAL_STRATEGY</Tag>
 		<English>TBD</English>
 		<French>TBD</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_RENAISSANCE_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_RENAISSANCE_STRATEGY</Tag>
 		<English>TBD</English>
 		<French>TBD</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_INDUSTRIAL_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INDUSTRIAL_STRATEGY</Tag>
 		<English>TBD</English>
 		<French>TBD</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_MODERN_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MODERN_STRATEGY</Tag>
 		<English>TBD</English>
 		<French>TBD</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_INFORMATION_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INFORMATION_STRATEGY</Tag>
 		<English>TBD</English>
 		<French>TBD</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_NANOTECH_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_NANOTECH_STRATEGY</Tag>
 		<English>TBD</English>
 		<French>TBD</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_TRANSHUMAN_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSHUMAN_STRATEGY</Tag>
 		<English>TBD</English>
 		<French>TBD</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_GALACTIC_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_GALACTIC_STRATEGY</Tag>
 		<English>TBD</English>
 		<French>TBD</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_COSMIC_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_COSMIC_STRATEGY</Tag>
 		<English>TBD</English>
 		<French>TBD</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNOWLEDGE_BASE_TRANSCENDENT_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSCENDENT_STRATEGY</Tag>
 		<English>TBD</English>
 		<French>TBD</French>
 	</TEXT>
@@ -32213,7 +32213,7 @@
 		<Polish>Bramin -  w hinduizmie członek najwyższej warny: klasy kapłańskiej. Przynależność do warny bramińskiej, jak i pozostałych jest dziedziczna. Według mitologii indyjskiej bramini powstali przy stworzeniu świata z ust Puruszy. Bramin powinien być natchniony duchowo, charakteryzować się umysłem sattwicznym (czystym od złych myśli i emocji), dążyć przede wszystkim do mokszy i służyć społeczeństwu duchowo.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WONDER_SACRIFICIAL_ALTAR</Tag>
+		<Tag>TXT_KEY_BUILDING_AZTEC_SACRIFICIAL_ALTAR</Tag>
 		<English>Tlaloc's Altar</English>
 		<French>
 			<Text>Autel de Tlaloc</Text>
@@ -32224,14 +32224,14 @@
 		<Polish>Ołtarz Tlaloca</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WONDER_SACRIFICIAL_ALTAR_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_AZTEC_SACRIFICIAL_ALTAR_STRATEGY</Tag>
 		<English>Build Tlaloc's Altar to get a free Sacrificial Alter in EVERY city.</English>
 		<French>Permet un Autel de sacrifice dans Chaque Ville.</French>
 		<Italian>Costruisci l'Altare di Tlaoc per ottenere un altare dei sacrifici gratuito in ogni città.</Italian>
 		<Polish>Zbuduj Tlaloc's Altar to get a free Sacrifical Alter in EVERY city.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WONDER_SACRIFICIAL_ALTAR_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_AZTEC_SACRIFICIAL_ALTAR_PEDIA</Tag>
 		<English>Tlaloc was an important deity in Aztec religion, a god of rain, fertility, and water. He was a beneficent god who gave life and sustenance, but he was also feared for his ability to send hail, thunder and lightning, and for being the lord of the powerful element of water. In Aztec iconography he is normally depicted with goggle eyes and fangs. He was associated with caves, springs and mountains. He is known for having demanded child sacrifices.</English>
 		<French>Tlaloc was an important deity in Aztec religion, a god of rain, fertility, and water. He was a beneficent god who gave life and sustenance, but he was also feared for his ability to send hail, thunder and lightning, and for being the lord of the powerful element of water. In Aztec iconography he is normally depicted with goggle eyes and fangs. He was associated with caves, springs and mountains. He is known for having demanded child sacrifices.</French>
 		<Italian>Tlaloc era una divinità azteca molto importante, dio della pioggia, della fertilità e dell'acqua. Era un dio benevolo che dava vita e sostentamento, ma era anche temuto per la sua capacità di inviare grandine, tuoni e fulmini, e per essere il signore del potente elemento dell'acqua. Nell'iconografia azteca egli è normalmente raffigurato con occhi sporgenti e zanne; è stato associato con grotte, sorgenti e montagne; è noto per aver richiesto sacrifici di bambini.</Italian>

@@ -2037,8 +2037,8 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BUILDING_MEMBRANE</Type>
-			<Description>TXT_KEY_BUILDING_BUILDING_MEMBRANE</Description>
-			<DefaultBuilding>BUILDING_BUILDING_MEMBRANE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_MEMBRANE</Description>
+			<DefaultBuilding>BUILDING_MEMBRANE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CLAYTRONIC_TOWER</Type>

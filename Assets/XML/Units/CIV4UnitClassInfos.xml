@@ -593,22 +593,22 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_WORKBOAT</Type>
-			<Description>TXT_KEY_UNIT_WORK_BOAT</Description>
+			<Description>TXT_KEY_UNIT_WORKBOAT</Description>
 			<DefaultUnit>UNIT_WORKBOAT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_CLASSIC_WORKBOAT</Type>
-			<Description>TXT_KEY_UNIT_CLASSIC_WORK_BOAT</Description>
+			<Description>TXT_KEY_UNIT_CLASSIC_WORKBOAT</Description>
 			<DefaultUnit>UNIT_CLASSIC_WORKBOAT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MIDDLE_WORKBOAT</Type>
-			<Description>TXT_KEY_UNIT_MIDDLE_WORK_BOAT</Description>
+			<Description>TXT_KEY_UNIT_MIDDLE_WORKBOAT</Description>
 			<DefaultUnit>UNIT_MIDDLE_WORKBOAT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MODERN_WORKBOAT</Type>
-			<Description>TXT_KEY_UNIT_MODERN_WORK_BOAT</Description>
+			<Description>TXT_KEY_UNIT_MODERN_WORKBOAT</Description>
 			<DefaultUnit>UNIT_MODERN_WORKBOAT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -773,7 +773,7 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_AEGIS</Type>
-			<Description>TXT_KEY_UNIT_AEGIS_CRUISER</Description>
+			<Description>TXT_KEY_UNIT_AEGIS</Description>
 			<DefaultUnit>UNIT_AEGIS</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -958,27 +958,27 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_PROPHET</Type>
-			<Description>TXT_KEY_UNIT_GREAT_PROPHET</Description>
+			<Description>TXT_KEY_UNIT_PROPHET</Description>
 			<DefaultUnit>UNIT_PROPHET</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_ARTIST</Type>
-			<Description>TXT_KEY_UNIT_GREAT_ARTIST</Description>
+			<Description>TXT_KEY_UNIT_ARTIST</Description>
 			<DefaultUnit>UNIT_ARTIST</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SCIENTIST</Type>
-			<Description>TXT_KEY_UNIT_GREAT_SCIENTIST</Description>
+			<Description>TXT_KEY_UNIT_SCIENTIST</Description>
 			<DefaultUnit>UNIT_SCIENTIST</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MERCHANT</Type>
-			<Description>TXT_KEY_UNIT_GREAT_TYCOON</Description>
+			<Description>TXT_KEY_UNIT_MERCHANT</Description>
 			<DefaultUnit>UNIT_MERCHANT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_ENGINEER</Type>
-			<Description>TXT_KEY_UNIT_GREAT_ENGINEER</Description>
+			<Description>TXT_KEY_UNIT_ENGINEER</Description>
 			<DefaultUnit>UNIT_ENGINEER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -993,7 +993,7 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_GREAT_SPY</Type>
-			<Description>TXT_KEY_SPECIALIST_GREAT_SPY</Description>
+			<Description>TXT_KEY_UNIT_GREAT_SPY</Description>
 			<DefaultUnit>UNIT_GREAT_SPY</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -1118,7 +1118,7 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_INQUISITOR</Type>
-			<Description>TXT_KEY_GODS_UNIT_INQUISITOR</Description>
+			<Description>TXT_KEY_UNIT_INQUISITOR</Description>
 			<DefaultUnit>UNIT_INQUISITOR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -1193,57 +1193,57 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_ADVENTURE</Type>
-			<Description>TXT_KEY_UNIT_ADVENTURE_EXECUTIVE</Description>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_ADVENTURE</Description>
 			<DefaultUnit>UNIT_EXECUTIVE_ADVENTURE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_BULLSEYE</Type>
-			<Description>TXT_KEY_UNIT_BULLSEYE_EXECUTIVE</Description>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_BULLSEYE</Description>
 			<DefaultUnit>UNIT_EXECUTIVE_BULLSEYE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_BURGERWORLD</Type>
-			<Description>TXT_KEY_UNIT_BURGERWORLD_EXECUTIVE</Description>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_BURGERWORLD</Description>
 			<DefaultUnit>UNIT_EXECUTIVE_BURGERWORLD</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_EMPCLOTH</Type>
-			<Description>TXT_KEY_UNIT_EMPCLOTH_EXECUTIVE</Description>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_EMPCLOTH</Description>
 			<DefaultUnit>UNIT_EXECUTIVE_EMPCLOTH</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_EWTRADE</Type>
-			<Description>TXT_KEY_UNIT_EWTRADE_EXECUTIVE</Description>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_EWTRADE</Description>
 			<DefaultUnit>UNIT_EXECUTIVE_EWTRADE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_FASHION</Type>
-			<Description>TXT_KEY_UNIT_FASHION_EXECUTIVE</Description>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_FASHION</Description>
 			<DefaultUnit>UNIT_EXECUTIVE_FASHION</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_MALLWART</Type>
-			<Description>TXT_KEY_UNIT_MALLWART_EXECUTIVE</Description>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_MALLWART</Description>
 			<DefaultUnit>UNIT_EXECUTIVE_MALLWART</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_MAPSTER</Type>
-			<Description>TXT_KEY_UNIT_MAPSTER_EXECUTIVE</Description>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_MAPSTER</Description>
 			<DefaultUnit>UNIT_EXECUTIVE_MAPSTER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_MCDOWELLS</Type>
-			<Description>TXT_KEY_UNIT_MCDOWELLS_EXECUTIVE</Description>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_MCDOWELLS</Description>
 			<DefaultUnit>UNIT_EXECUTIVE_MCDOWELLS</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_MILEHIGH</Type>
-			<Description>TXT_KEY_UNIT_MILEHIGH_EXECUTIVE</Description>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_MILEHIGH</Description>
 			<DefaultUnit>UNIT_EXECUTIVE_MILEHIGH</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_MOBBY</Type>
-			<Description>TXT_KEY_UNIT_MOBBY_EXECUTIVE</Description>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_MOBBY</Description>
 			<DefaultUnit>UNIT_EXECUTIVE_MOBBY</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -1253,22 +1253,22 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_RED</Type>
-			<Description>TXT_KEY_UNIT_RED_EXECUTIVE</Description>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_RED</Description>
 			<DefaultUnit>UNIT_EXECUTIVE_RED</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_SAFARI</Type>
-			<Description>TXT_KEY_UNIT_SAFARI_EXECUTIVE</Description>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_SAFARI</Description>
 			<DefaultUnit>UNIT_EXECUTIVE_SAFARI</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_ULTSOLDIER</Type>
-			<Description>TXT_KEY_UNIT_ULTSOLDIER_EXECUTIVE</Description>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_ULTSOLDIER</Description>
 			<DefaultUnit>UNIT_EXECUTIVE_ULTSOLDIER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_WONKA</Type>
-			<Description>TXT_KEY_UNIT_WONKA_EXECUTIVE</Description>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_WONKA</Description>
 			<DefaultUnit>UNIT_EXECUTIVE_WONKA</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -1743,7 +1743,7 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_OLMEC_EAGLE_WARRIOR</Type>
-			<Description>Olmec Eagle Warrior</Description>
+			<Description>TXT_KEY_UNIT_OLMEC_EAGLE_WARRIOR</Description>
 			<DefaultUnit>UNIT_OLMEC_EAGLE_WARRIOR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -1758,7 +1758,7 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_ASSYRIAN_REDU</Type>
-			<Description>TXT_KEY_UNIT_REDU</Description>
+			<Description>TXT_KEY_UNIT_ASSYRIAN_REDU</Description>
 			<DefaultUnit>UNIT_ASSYRIAN_REDU</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -1908,7 +1908,7 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SUPPLY_TRAIN</Type>
-			<Description>TXT_KEY_CHARL_UNIT_SUPPLY_TRAIN</Description>
+			<Description>TXT_KEY_UNIT_SUPPLY_TRAIN</Description>
 			<DefaultUnit>UNIT_SUPPLY_TRAIN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -1928,12 +1928,12 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_WORKER_INDUSTRIAL</Type>
-			<Description>TXT_KEY_WORKER_INDUSTRIAL</Description>
+			<Description>TXT_KEY_UNIT_WORKER_INDUSTRIAL</Description>
 			<DefaultUnit>UNIT_WORKER_INDUSTRIAL</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_WORKER_MODERN</Type>
-			<Description>TXT_KEY_WORKER_MODERN</Description>
+			<Description>TXT_KEY_UNIT_WORKER_MODERN</Description>
 			<DefaultUnit>UNIT_WORKER_MODERN</DefaultUnit>
 		</UnitClassInfo>
 		<!-- HEROES -->
@@ -2690,22 +2690,22 @@ Assyria, Hungary, Minoa, Armenia
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_GOTH_ALARIC</Type>
-			<Description>TXT_KEY_UNIT_ALARIC</Description>
+			<Description>TXT_KEY_UNIT_GOTH_ALARIC</Description>
 			<DefaultUnit>UNIT_GOTH_ALARIC</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_BENIN_EWUARE</Type>
-			<Description>TXT_KEY_UNIT_EWUARE</Description>
+			<Description>TXT_KEY_UNIT_BENIN_EWUARE</Description>
 			<DefaultUnit>UNIT_BENIN_EWUARE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MUGHAL_BABUR</Type>
-			<Description>TXT_KEY_UNIT_BABUR</Description>
+			<Description>TXT_KEY_UNIT_MUGHAL_BABUR</Description>
 			<DefaultUnit>UNIT_MUGHAL_BABUR</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TUPI_CUNHAMBEBE</Type>
-			<Description>TXT_KEY_UNIT_CUNHAMBEBE</Description>
+			<Description>TXT_KEY_UNIT_TUPI_CUNHAMBEBE</Description>
 			<DefaultUnit>UNIT_TUPI_CUNHAMBEBE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -2810,32 +2810,32 @@ Assyria, Hungary, Minoa, Armenia
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_WARLORDI</Type>
-			<Description>TXT_KEY_UNIT_GREAT_GENERAL</Description>
+			<Description>TXT_KEY_UNIT_WARLORDI</Description>
 			<DefaultUnit>UNIT_WARLORDI</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_WARLORDII</Type>
-			<Description>TXT_KEY_UNIT_GREAT_GENERAL</Description>
+			<Description>TXT_KEY_UNIT_WARLORDII</Description>
 			<DefaultUnit>UNIT_WARLORDII</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_WARLORDIII</Type>
-			<Description>TXT_KEY_UNIT_GREAT_GENERAL</Description>
+			<Description>TXT_KEY_UNIT_WARLORDIII</Description>
 			<DefaultUnit>UNIT_WARLORDIII</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_WARLORDIV</Type>
-			<Description>TXT_KEY_UNIT_GREAT_GENERAL</Description>
+			<Description>TXT_KEY_UNIT_WARLORDIV</Description>
 			<DefaultUnit>UNIT_WARLORDIV</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_WARLORDV</Type>
-			<Description>TXT_KEY_UNIT_GREAT_GENERAL</Description>
+			<Description>TXT_KEY_UNIT_WARLORDV</Description>
 			<DefaultUnit>UNIT_WARLORDV</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_LAWYER</Type>
-			<Description>TXT_KEY_LAWYER_INQUISITOR_TWO</Description>
+			<Description>TXT_KEY_UNIT_LAWYER</Description>
 			<DefaultUnit>UNIT_LAWYER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -3155,22 +3155,22 @@ Assyria, Hungary, Minoa, Armenia
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MILITIA_MEDIEVAL</Type>
-			<Description>TXT_KEY_MILITIA_MEDIEVAL</Description>
+			<Description>TXT_KEY_UNIT_MILITIA_MEDIEVAL</Description>
 			<DefaultUnit>UNIT_MILITIA_MEDIEVAL</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MILITIA_RENAISSANCE</Type>
-			<Description>TXT_KEY_MILITIA_RENAISSANCE</Description>
+			<Description>TXT_KEY_UNIT_MILITIA_RENAISSANCE</Description>
 			<DefaultUnit>UNIT_MILITIA_RENAISSANCE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MILITIA_INDUSTRIAL</Type>
-			<Description>TXT_KEY_MILITIA_INDUSTRIAL</Description>
+			<Description>TXT_KEY_UNIT_MILITIA_INDUSTRIAL</Description>
 			<DefaultUnit>UNIT_MILITIA_INDUSTRIAL</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_MILITIA_MODERN</Type>
-			<Description>TXT_KEY_MILITIA_MODERN</Description>
+			<Description>TXT_KEY_UNIT_MILITIA_MODERN</Description>
 			<DefaultUnit>UNIT_MILITIA_MODERN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -4128,7 +4128,7 @@ Assyria, Hungary, Minoa, Armenia
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_DOCTOR</Type>
-			<Description>TXT_KEY_UNIT_GREAT_DOCTOR</Description>
+			<Description>TXT_KEY_UNIT_DOCTOR</Description>
 			<DefaultUnit>UNIT_DOCTOR</DefaultUnit>
 		</UnitClassInfo>
 		<!-- Health Care Mod -->
@@ -4442,7 +4442,7 @@ Assyria, Hungary, Minoa, Armenia
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_BUFFALO</Type>
-			<Description>TXT_KEY_UNIT_BUFFALO_CAPE</Description>
+			<Description>TXT_KEY_UNIT_BUFFALO</Description>
 			<DefaultUnit>UNIT_BUFFALO</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -4657,7 +4657,7 @@ Assyria, Hungary, Minoa, Armenia
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SEALION_LAND</Type>
-			<Description>TXT_KEY_UNIT_SEALION</Description>
+			<Description>TXT_KEY_UNIT_SEALION_LAND</Description>
 			<DefaultUnit>UNIT_SEALION_LAND</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -4875,7 +4875,7 @@ Assyria, Hungary, Minoa, Armenia
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_CAIMAN</Type>
-			<Description>TXT_KEY_UNIT_CAIMAN_BLACK</Description>
+			<Description>TXT_KEY_UNIT_CAIMAN</Description>
  		    <DefaultUnit>UNIT_CAIMAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -4940,12 +4940,12 @@ Assyria, Hungary, Minoa, Armenia
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_DESERT_TORTOISE</Type>
-			<Description>TXT_KEY_UNIT_TORTOISE</Description>
+			<Description>TXT_KEY_UNIT_DESERT_TORTOISE</Description>
 			<DefaultUnit>UNIT_DESERT_TORTOISE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_GALAPOGOS_TORTOISE</Type>
-			<Description>TXT_KEY_UNIT_TORTOISE2</Description>
+			<Description>TXT_KEY_UNIT_GALAPOGOS_TORTOISE</Description>
 			<DefaultUnit>UNIT_GALAPOGOS_TORTOISE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -5178,7 +5178,7 @@ Assyria, Hungary, Minoa, Armenia
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_DUGONG</Type>
-			<Description>TXT_KEY_UNIT_DOGONG</Description>
+			<Description>TXT_KEY_UNIT_DUGONG</Description>
 			<DefaultUnit>UNIT_DUGONG</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -5203,7 +5203,7 @@ Assyria, Hungary, Minoa, Armenia
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SEALION_SEA</Type>
-			<Description>TXT_KEY_UNIT_SEALION</Description>
+			<Description>TXT_KEY_UNIT_SEALION_SEA</Description>
 			<DefaultUnit>UNIT_SEALION_SEA</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -5690,7 +5690,7 @@ Assyria, Hungary, Minoa, Armenia
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SUBDUED_DUGONG</Type>
-			<Description>TXT_KEY_UNIT_SUBDUED_DOGONG</Description>
+			<Description>TXT_KEY_UNIT_SUBDUED_DUGONG</Description>
  	        <DefaultUnit>UNIT_SUBDUED_DUGONG</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -5825,12 +5825,12 @@ Assyria, Hungary, Minoa, Armenia
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SUBDUED_GALAPOGOS_TORTOISE</Type>
-			<Description>TXT_KEY_UNIT_SUBDUED_TORTOISE2</Description>
+			<Description>TXT_KEY_UNIT_SUBDUED_GALAPOGOS_TORTOISE</Description>
  		    <DefaultUnit>UNIT_SUBDUED_GALAPOGOS_TORTOISE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SUBDUED_DESERT_TORTOISE</Type>
-			<Description>TXT_KEY_UNIT_SUBDUED_TORTOISE</Description>
+			<Description>TXT_KEY_UNIT_SUBDUED_DESERT_TORTOISE</Description>
  		    <DefaultUnit>UNIT_SUBDUED_DESERT_TORTOISE</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -5955,7 +5955,7 @@ Assyria, Hungary, Minoa, Armenia
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TALESOF_DUGONG</Type>
-			<Description>TXT_KEY_UNIT_TALESOF_DOGONG</Description>
+			<Description>TXT_KEY_UNIT_TALESOF_DUGONG</Description>
  	        <DefaultUnit>UNIT_TALESOF_DUGONG</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
@@ -6125,17 +6125,17 @@ Assyria, Hungary, Minoa, Armenia
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SUBDUED_SEALION_LAND</Type>
-			<Description>TXT_KEY_UNIT_SUBDUED_SEALION</Description>
+			<Description>TXT_KEY_UNIT_SUBDUED_SEALION_LAND</Description>
  		    <DefaultUnit>UNIT_SUBDUED_SEALION_LAND</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SUBDUED_SEALION_SEA</Type>
-			<Description>TXT_KEY_UNIT_SUBDUED_SEALION</Description>
+			<Description>TXT_KEY_UNIT_SUBDUED_SEALION_SEA</Description>
  		    <DefaultUnit>UNIT_SUBDUED_SEALION_SEA</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_TALESOF_SEALION_SEA</Type>
-			<Description>TXT_KEY_UNIT_TALESOF_SEALION</Description>
+			<Description>TXT_KEY_UNIT_TALESOF_SEALION_SEA</Description>
  		    <DefaultUnit>UNIT_TALESOF_SEALION_SEA</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>

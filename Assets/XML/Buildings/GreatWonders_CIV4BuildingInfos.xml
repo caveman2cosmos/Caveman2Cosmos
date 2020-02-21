@@ -13,9 +13,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ABU_SIMBEL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ABU_SIMBEL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ABU_SIMBEL_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_ABU</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ABU_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ABU_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<PrereqOrTerrain>
@@ -5163,8 +5163,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HADRIAN_WALL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HADRIAN_WALL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ADRIANOS_WALL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ADRIANOS_WALL_PEDIA</Civilopedia>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
@@ -13774,9 +13774,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_WONDER_SACRIFICIAL_ALTAR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WONDER_SACRIFICIAL_ALTAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_WONDER_SACRIFICIAL_ALTAR_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_AZTEC_SACRIFICIAL_ALTAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AZTEC_SACRIFICIAL_ALTAR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_AZTEC_SACRIFICIAL_ALTAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AZTEC_SACRIFICIAL_ALTAR</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_CEREMONIAL_ALTAR</ConstructSound>

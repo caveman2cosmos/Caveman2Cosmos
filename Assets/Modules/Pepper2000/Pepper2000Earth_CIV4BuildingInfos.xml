@@ -23762,12 +23762,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_BUILDING_MEMBRANE</BuildingClass>
-			<Type>BUILDING_BUILDING_MEMBRANE</Type>
-			<Description>TXT_KEY_BUILDING_BUILDING_MEMBRANE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BUILDING_MEMBRANE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BUILDING_MEMBRANE_STRATEGY</Strategy>
+			<Type>BUILDING_MEMBRANE</Type>
+			<Description>TXT_KEY_BUILDING_MEMBRANE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MEMBRANE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_MEMBRANE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BUILDING_MEMBRANE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MEMBRANE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
