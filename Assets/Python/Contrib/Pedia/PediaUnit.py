@@ -259,9 +259,9 @@ class PediaUnit:
 		iType = CvTheUnitInfo.getPrereqBuilding()
 		if iType != -1:
 			aList0.append(iType)
-		for i in range(GC.getNumBuildingClassInfos()):
-			if CvTheUnitInfo.isPrereqBuildingClass(i):
-				aList0.append(GC.getBuildingClassInfo(i).getDefaultBuildingIndex())
+		for i in range(GC.getNumBuildingInfos()):
+			if CvTheUnitInfo.isPrereqBuilding(i):
+				aList0.append(i)
 		for i in range(CvTheUnitInfo.getPrereqOrBuildingsNum()):
 			iType = CvTheUnitInfo.getPrereqOrBuilding(i)
 			if iType == -1:
