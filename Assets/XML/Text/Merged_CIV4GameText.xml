@@ -4767,7 +4767,7 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_NATHAN_HALE_PEDIA</Tag>
-		<English>[BOLD][H1]Nathan Hale[\H1][\BOLD][NEWLINE][BOLD](June 6, 1755 - September 22, 1776)[\BOLD][NEWLINE] Was a soldier and spy for the Continental Army during the American Revolutionary War.[NEWLINE] "I only regret that I have but one life to give for my country.</English>
+		<English>[BOLD][H1]Nathan Hale[\H1][\BOLD][NEWLINE][BOLD](June 6, 1755 - September 22, 1776)[\BOLD][NEWLINE] Was a soldier and spy for the Continental Army during the American Revolutionary War.[NEWLINE] "I only regret that I have but one life to give for my country".</English>
 		<French>[BOLD][H1]Nathan Hale[\H1][\BOLD][NEWLINE][BOLD](June 6, 1755 - Septembre 22, 1776)[\BOLD][NEWLINE]C'est un philosophe, théologien et poète ismaélien de langue perse né en 1004 à Qobadiyan (près de Balkh, dans le Khorassan) et mort à Yomgan vers 1074.</French>
 		<Polish>[BOLD][H1]Nathan Hale[\H1][\BOLD][NEWLINE][BOLD](6 Czerwca 1755 - 22 Września 1776)[\BOLD][NEWLINE]Kapitan w Armii Kontynentalnej podczas Wojny o niepodległość Stanów Zjednoczonych, jeden z oficerów Patriotów. Bohater narodowy USA. Zgłosił się na ochotnika do przeprowadzenia misji szpiegowskiej na liniach oddziałów angielskiej armii. Podczas przeszpiegów został schwytany przez Anglików i powieszony. Przed śmiercią wyrzekł znane słowa: Żałuję jedynie, że mam tylko jedno życie, które mogę poświęcić dla mojego kraju.</Polish>
 	</TEXT>
@@ -9098,44 +9098,6 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<French>The [COLOR_BUILDING_TEXT]Ark du Covenant[COLOR_REVERT] has no unhappiness in the city in which it is built and provides +1 happines in all cities.  It also provides +1 gold from ALL state religious buildings and it increases it's city's odds of generating a Great Prophet.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_BARBARIAN_HUNTER</Tag>
-		<English>Barbarian Hunter</English>
-		<French>Chasseur de Barbares</French>
-		<German>Barbaren-Jaeger</German>
-		<Italian>Cacciatore di barbari</Italian>
-		<Polish>Łowca Barbarzyńców</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_BARBARIAN_HUNTER_HELP</Tag>
-		<English>[ICON_BULLET]Fights against barbarians after the normal experience limit will still give XP points.</English>
-		<French>[ICON_BULLET]Les Combats contre les barbares continuent d'ajouter de l'EXP à l'unité.</French>
-		<German>[ICON_BULLET]Kaempfe gegen Barbaren geben auch nach dem Erfahrungslimit noch Erfahrungs-Punkte.</German>
-		<Italian>[ICON_BULLET]I combattimenti contro i barbari dopo il normale limite di XP daranno ancora punti XP.</Italian>
-		<Polish>[ICON_BULLET]Pozwala zdobywać XP w walce z barbarzyńcami, nawet po osiągnięciu limitu.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ANIMAL_HUNTER</Tag>
-		<English>Animal Hunter</English>
-		<French>Chasseur d'Animaux</French>
-		<German>Animal Jaeger</German>
-		<Italian>Cacciatore di animali</Italian>
-		<Polish>Łowca Zwierząt</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SEA_ANIMAL_HUNTER</Tag>
-		<English>Sea Animal Hunter</English>
-		<French>Chasseur d'Animaux  des Mers</French>
-		<Polish>Łowca Zwierząt Morskich</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ANIMAL_HUNTER_HELP</Tag>
-		<English>[ICON_BULLET]Fights against animals after the normal experience limit will still give XP points.</English>
-		<French>[ICON_BULLET]Les Combats contre les animaux continuent d'ajouter de l'EXP à l'unité.</French>
-		<German>[ICON_BULLET]Kaempfe gegen Tiere geben auch nach dem Erfahrungslimit noch Erfahrungs-Punkte.</German>
-		<Italian>[ICON_BULLET]I combattimenti contro gli animali dopo il normale limite di XP daranno ancora punti XP.</Italian>
-		<Polish>[ICON_BULLET]Pozwala zdobywać XP w walce ze zwierzętami, nawet po osiągnięciu limitu.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INDUSTRYESPIONAGE</Tag>
 		<English>Industry Espionage</English>
 		<French>Espionnage Industriel</French>
@@ -9165,7 +9127,7 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_EARLY_QUARRY</Tag>
-		<English>Build an Early Quarry</English>
+		<English>Build [LINK=IMPROVEMENT_EARLY_QUARRY]Early Quarry[\LINK]</English>
 		<French>Construire une [COLOR_BUILDING_TEXT]carrière antique[COLOR_REVERT]</French>
 		<Polish>Zbuduj Wczesny Kamieniołom</Polish>
 	</TEXT>
@@ -9174,5 +9136,29 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<English>Early Quarry</English>
 		<French>Carrière antique</French>
 		<Polish>Wczesny Kamieniołom</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPECIALIST_GREAT_MILITARY_INSTRUCTOR</Tag>
+		<English>Great Military Instructor</English>
+		<French>
+			<Text>Instructeur militaire illustre</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Großer Militärausbilder</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
+		<Italian>
+			<Text>Grande istruttore militare:Grandi istruttori militari</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gran instructor militar:Grandes instructores militares</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
 	</TEXT>
 </Civ4GameText>

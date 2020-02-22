@@ -5,7 +5,7 @@
 <!-- -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_BAHAI</Tag>
+		<Tag>TXT_KEY_TECH_BAHAI</Tag>
 		<English>Baha'i</English>
 		<French>Bahaïsme</French>
 		<German>Bahai</German>
@@ -14,7 +14,7 @@
 		<Polish>Bahaizm</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_BAHAI_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_TECH_BAHAI_ADJECTIVE</Tag>
 		<English>Baha'i</English>
 		<French>Bahaïsme</French>
 		<German>Bahai</German>
@@ -22,7 +22,7 @@
 		<Spanish>Bahaísmo</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_BAHAI_PEDIA</Tag>
+		<Tag>TXT_KEY_TECH_BAHAI_PEDIA</Tag>
 		<English>The Baha'i Faith is a monotheistic religion founded by Baha'u'llah in nineteenth-century Persia, emphasizing the spiritual unity of all humankind. There are an estimated five to six million Baha'i's around the world in more than 200 countries and territories. Baha'i teachings emphasize the underlying unity of the major world religions. Religious history is seen to have unfolded through a series of divine messengers, each of whom established a religion that was suited to the needs of the time and the capacity of the people. These messengers have included Abraham, Krishna, Buddha, Jesus, Muhammad and others, including most recently Baha'u'lah. In Baha'i belief, each messenger taught of the next, and Baha'u'lah's life and teachings fulfill the end-time promises of previous scriptures. Humanity is understood to be involved in a process of collective evolution, and the need of the present time is for the gradual establishment of peace, justice and unity on a global scale.</English>
 		<French>Le Bahaïsme i la foi est une religion monotheistic fondée par Baha' u' llah en dix-neuvième-siècle Perse, soulignant l'unité spirituelle de toute l'humanité. Il y a cinq à six millions de Bahaïsme environ i' s autour du monde dans plus de 200 pays et territoires. Bahaïsme les enseignements i soulignent l'unité fondamentale des religions principales du monde. L'histoire religieuse est vue pour avoir dévoilé par une série de messagers divins, chacune de qui a établi une religion qui a été adaptée aux besoins du temps et à la capacité des personnes. Ces messagers ont inclus Abraham, Krishna, Bouddha, Jésus, Muhammad et d'autres, incluant récemment Bahaïsme u' lah. Dans Bahaïsme croyance i, chaque messager enseigné du prochain, et Bahaïsme u' lah' la vie et les enseignements de s accomplissent les promesses d'extrémité-temps des écritures saintes précédentes. On comprend que l'humanité est impliquée dans un processus d'évolution collective, et le besoin de l'époque actuelle est pour l'établissement progressif de la paix, de la justice et de l'unité sur une échelle globale.</French>
 		<German>Das Bahai I ist Glaube eine monotheistic Religion, die durch Baha' gegründet wird u' llah im 19.-Jahrhundert Persien, die geistige Einheit aller Menschheit hervorhebend. Es gibt geschätzten fünf bis sechs Million Bahai i' s um die Welt in mehr als 200 Ländern und in Gegenden. Bahai Unterricht I hebt die zugrunde liegende Einheit der Hauptweltreligionen hervor. Fromme Geschichte wird gesehen, durch eine Reihe Boten Gottes, jede von ausgebreitet zu haben, stellte wem eine Religion her, die zu den Notwendigkeiten der Zeit und zur Kapazität der Leute entsprochen wurde. Diese Kuriere haben Abraham, Krishna, Buddha, Jesus, Muhammad und andere miteingeschlossen und Bahai kürzlich mit eingeschlossen u' lah. In Bahai Glaube I, jeder Kurier unterrichtet vom folgenden und Bahai u' lah' das s-Leben und der Unterricht erfüllt die Endezeit Versprechungen der vorhergehenden Schriften. Menschlichkeit wird verstanden, in einen Prozess der Kollektiventwicklung mit einbezogen zu werden, und die Notwendigkeit der Gegenwart ist für die stufenweise Einrichtung des Friedens, der Gerechtigkeit und der Einheit auf einer globalen Skala.</German>
@@ -31,14 +31,14 @@
 		<Polish>Bahaizm - religia monoteistyczna, założona w Persji w XIX wieku przez Bahá'u'lláha, podkreślająca duchową jedność całej ludzkości. Szacuje się, że obecnie na świecie jest około pięciu do sześciu milionów bahaitów w ponad 200 krajach i terytoriach. Jako ruch religijny, bahaizm wyłonił się z babizmu. W trakcie rozwoju z bahaizmu wyodrębniło się kilka wyznań. Obecnie kilkanaście wyznań uznaje się za wywodzące się z pierwotnej nauki Bahá'u'lláha. Znaczna część poniższego hasła dotyczy zdecydowanie największego, pod względem liczebności wyznawców, wyznania bahaickiego z centrum administracyjnym i duchowym w Hajfie.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_BAHAI_QUOTE</Tag>
+		<Tag>TXT_KEY_TECH_BAHAI_QUOTE</Tag>
 		<English>"O God! Grant Thy favour, and bestow Thy blessing. Vouchsafe Thy grace, and give a portion of Thy bounty. Send down Thy heavenly rain, and provide Thy plenteousness and abundance." - Abdul-Bah?</English>
 		<French>"Oh mon dieu! Accorde ta faveur, et donner ta bénédiction. Accorde ta grâce, et de donner une partie de ta générosité? Envoyer bas ta pluie céleste, et de fournir la multitude et l'abondance." - Abdul-Bahá</French>
 		<Spanish>"¡Oh Dios! Dame tu favor, y otórgame tu bendición. Concédeme tu gracia, y entrégame una porción de tu belleza. Envíame hacia aquí tu lluvia celestial, y proporcióname tu abundancia y plenitud." - Abdul-Bahá</Spanish>
 		<Polish>"Boże! Ześlij na mnie łaskę i pobłogosław mnie. Ześlij na mnie łaskę, pobłogosław deszczem i obfitościom i dostatkiem." - ‘Abdu’l-Baha</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_BAHAI_STRATEGY</Tag>
+		<Tag>TXT_KEY_TECH_BAHAI_STRATEGY</Tag>
 		<English>Research Baha'i to found a Religion</English>
 		<French>Recherchez Baha'i pour fonder une religion</French>
 		<Spanish>Investiga el Bahaísmo para fundar una religión.</Spanish>

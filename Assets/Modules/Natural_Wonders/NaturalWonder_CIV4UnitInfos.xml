@@ -11,11 +11,11 @@
 			<Type>UNIT_WORKBOAT</Type>
 			<Builds>
 				<Build>
-					<BuildType>BUILD_BEACON_GREAT_BARRIER</BuildType>
+					<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_LIGHTHOUSE_GREAT_BARRIER</BuildType>
+					<BuildType>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -24,11 +24,11 @@
 			<Type>UNIT_CLASSIC_WORKBOAT</Type>
 			<Builds>
 				<Build>
-					<BuildType>BUILD_BEACON_GREAT_BARRIER</BuildType>
+					<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_LIGHTHOUSE_GREAT_BARRIER</BuildType>
+					<BuildType>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -37,11 +37,11 @@
 			<Type>UNIT_MIDDLE_WORKBOAT</Type>
 			<Builds>
 				<Build>
-					<BuildType>BUILD_BEACON_GREAT_BARRIER</BuildType>
+					<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_LIGHTHOUSE_GREAT_BARRIER</BuildType>
+					<BuildType>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -50,11 +50,11 @@
 			<Type>UNIT_MODERN_WORKBOAT</Type>
 			<Builds>
 				<Build>
-					<BuildType>BUILD_BEACON_GREAT_BARRIER</BuildType>
+					<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_LIGHTHOUSE_GREAT_BARRIER</BuildType>
+					<BuildType>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -67,11 +67,11 @@
 			<Type>UNIT_CONSTRUCT_SHIP</Type>
 			<Builds>
 				<Build>
-					<BuildType>BUILD_BEACON_GREAT_BARRIER</BuildType>
+					<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_LIGHTHOUSE_GREAT_BARRIER</BuildType>
+					<BuildType>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>

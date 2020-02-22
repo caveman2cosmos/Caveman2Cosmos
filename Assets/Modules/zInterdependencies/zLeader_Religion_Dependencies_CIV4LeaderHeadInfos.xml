@@ -38,9 +38,9 @@
 		<Type>LEADER_ASHUR</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_ASHUR</DependencyType>
-			<DependencyType>RELIGION_MESO</DependencyType>
+			<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_MESO</FavoriteReligion>
+		<FavoriteReligion>RELIGION_MESOPOTAMISM</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_ASOKA</Type>
@@ -54,9 +54,9 @@
 		<Type>LEADER_ATOTOZTLI</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_ATOTOZTLI</DependencyType>
-			<DependencyType>RELIGION_MESOAMERICANISM</DependencyType>
+			<DependencyType>RELIGION_NAGHUALISM</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_MESOAMERICANISM</FavoriteReligion>
+		<FavoriteReligion>RELIGION_NAGHUALISM</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_AUGUSTUS</Type>
@@ -86,17 +86,17 @@
 		<Type>LEADER_BOUDICA</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_BOUDICA</DependencyType>
-			<DependencyType>RELIGION_DRUID</DependencyType>
+			<DependencyType>RELIGION_DRUIDIC_TRADITIONS</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_DRUID</FavoriteReligion>
+		<FavoriteReligion>RELIGION_DRUIDIC_TRADITIONS</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_BRENNUS</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_BRENNUS</DependencyType>
-			<DependencyType>RELIGION_DRUID</DependencyType>
+			<DependencyType>RELIGION_DRUIDIC_TRADITIONS</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_DRUID</FavoriteReligion>
+		<FavoriteReligion>RELIGION_DRUIDIC_TRADITIONS</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_CALIGULA</Type>
@@ -118,9 +118,9 @@
 		<Type>LEADER_HUAYNA_CAPAC</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_HUAYNA_CAPAC</DependencyType>
-			<DependencyType>RELIGION_ANDEAN</DependencyType>
+			<DependencyType>RELIGION_ANDEANISM</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_ANDEAN</FavoriteReligion>
+		<FavoriteReligion>RELIGION_ANDEANISM</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_CATHERINE</Type>
@@ -174,9 +174,9 @@
 		<Type>LEADER_CLEOPATRA</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_CLEOPATRA</DependencyType>
-			<DependencyType>RELIGION_EGYPT_MYTHOLOGY</DependencyType>
+			<DependencyType>RELIGION_KEMETISM</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_EGYPT_MYTHOLOGY</FavoriteReligion>
+		<FavoriteReligion>RELIGION_KEMETISM</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_CURTIN</Type>
@@ -214,9 +214,9 @@
 		<Type>LEADER_DEGANAWIDA</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_DEGANAWIDA</DependencyType>
-			<DependencyType>RELIGION_SHAMAN</DependencyType>
+			<DependencyType>RELIGION_SHAMANISM</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_SHAMAN</FavoriteReligion>
+		<FavoriteReligion>RELIGION_SHAMANISM</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_DE_GAULLE</Type>
@@ -230,17 +230,17 @@
 		<Type>LEADER_DIDO</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_DIDO</DependencyType>
-			<DependencyType>RELIGION_MESO</DependencyType>
+			<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_MESO</FavoriteReligion>
+		<FavoriteReligion>RELIGION_MESOPOTAMISM</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_EARP</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_EARP</DependencyType>
-			<DependencyType>RELIGION_SHAMAN</DependencyType>
+			<DependencyType>RELIGION_SHAMANISM</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_SHAMAN</FavoriteReligion>
+		<FavoriteReligion>RELIGION_SHAMANISM</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_ELIZABETH</Type>
@@ -294,9 +294,9 @@
 		<Type>LEADER_GILGAMESH</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_GILGAMESH</DependencyType>
-			<DependencyType>RELIGION_MESO</DependencyType>
+			<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_MESO</FavoriteReligion>
+		<FavoriteReligion>RELIGION_MESOPOTAMISM</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_HADRIAN</Type>
@@ -318,9 +318,9 @@
 		<Type>LEADER_HANNIBAL</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_HANNIBAL</DependencyType>
-			<DependencyType>RELIGION_MESO</DependencyType>
+			<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_MESO</FavoriteReligion>
+		<FavoriteReligion>RELIGION_MESOPOTAMISM</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_HARUN</Type>
@@ -334,9 +334,9 @@
 		<Type>LEADER_HATSHEPSUT</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_HATSHEPSUT</DependencyType>
-			<DependencyType>RELIGION_EGYPT_MYTHOLOGY</DependencyType>
+			<DependencyType>RELIGION_KEMETISM</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_EGYPT_MYTHOLOGY</FavoriteReligion>
+		<FavoriteReligion>RELIGION_KEMETISM</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_HENRY_VIII</Type>
@@ -350,9 +350,9 @@
 		<Type>LEADER_HIAWATHA</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_HIAWATHA</DependencyType>
-			<DependencyType>RELIGION_SHAMAN</DependencyType>
+			<DependencyType>RELIGION_SHAMANISM</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_SHAMAN</FavoriteReligion>
+		<FavoriteReligion>RELIGION_SHAMANISM</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_HIROHITO</Type>
@@ -366,9 +366,9 @@
 		<Type>LEADER_HOLLIDAY</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_HOLLIDAY</DependencyType>
-			<DependencyType>RELIGION_SHAMAN</DependencyType>
+			<DependencyType>RELIGION_SHAMANISM</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_SHAMAN</FavoriteReligion>
+		<FavoriteReligion>RELIGION_SHAMANISM</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_ISABELLA</Type>
@@ -382,17 +382,17 @@
 		<Type>LEADER_ITZCOATL</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_ITZCOATL</DependencyType>
-			<DependencyType>RELIGION_MESOAMERICANISM</DependencyType>
+			<DependencyType>RELIGION_NAGHUALISM</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_MESOAMERICANISM</FavoriteReligion>
+		<FavoriteReligion>RELIGION_NAGHUALISM</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_JAMES</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_JAMES</DependencyType>
-			<DependencyType>RELIGION_SHAMAN</DependencyType>
+			<DependencyType>RELIGION_SHAMANISM</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_SHAMAN</FavoriteReligion>
+		<FavoriteReligion>RELIGION_SHAMANISM</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_JAYAVARMAN</Type>
@@ -446,17 +446,17 @@
 		<Type>LEADER_KAMEHAMEHA</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_KAMEHAMEHA</DependencyType>
-			<DependencyType>RELIGION_SHAMAN</DependencyType>
+			<DependencyType>RELIGION_SHAMANISM</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_SHAMAN</FavoriteReligion>
+		<FavoriteReligion>RELIGION_SHAMANISM</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_KELLY</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_KELLY</DependencyType>
-			<DependencyType>RELIGION_SHAMAN</DependencyType>
+			<DependencyType>RELIGION_SHAMANISM</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_SHAMAN</FavoriteReligion>
+		<FavoriteReligion>RELIGION_SHAMANISM</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_KUBLAI_KHAN</Type>
@@ -486,17 +486,17 @@
 		<Type>LEADER_LOGAN</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_LOGAN</DependencyType>
-			<DependencyType>RELIGION_SHAMAN</DependencyType>
+			<DependencyType>RELIGION_SHAMANISM</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_SHAMAN</FavoriteReligion>
+		<FavoriteReligion>RELIGION_SHAMANISM</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_LOPEZ</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_LOPEZ</DependencyType>
-			<DependencyType>RELIGION_SHAMAN</DependencyType>
+			<DependencyType>RELIGION_SHAMANISM</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_SHAMAN</FavoriteReligion>
+		<FavoriteReligion>RELIGION_SHAMANISM</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_LOUIS_XIV</Type>
@@ -566,9 +566,9 @@
 		<Type>LEADER_MONTEZUMA</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_MONTEZUMA</DependencyType>
-			<DependencyType>RELIGION_MESOAMERICANISM</DependencyType>
+			<DependencyType>RELIGION_NAGHUALISM</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_MESOAMERICANISM</FavoriteReligion>
+		<FavoriteReligion>RELIGION_NAGHUALISM</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_NAPOLEON</Type>
@@ -582,33 +582,33 @@
 		<Type>LEADER_NEBUCHADREZZAR</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_NEBUCHADREZZAR</DependencyType>
-			<DependencyType>RELIGION_MESO</DependencyType>
+			<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_MESO</FavoriteReligion>
+		<FavoriteReligion>RELIGION_MESOPOTAMISM</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_NEFERTITI</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_NEFERTITI</DependencyType>
-			<DependencyType>RELIGION_EGYPT_MYTHOLOGY</DependencyType>
+			<DependencyType>RELIGION_KEMETISM</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_EGYPT_MYTHOLOGY</FavoriteReligion>
+		<FavoriteReligion>RELIGION_KEMETISM</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_PACAL</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_PACAL</DependencyType>
-			<DependencyType>RELIGION_MESOAMERICANISM</DependencyType>
+			<DependencyType>RELIGION_NAGHUALISM</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_MESOAMERICANISM</FavoriteReligion>
+		<FavoriteReligion>RELIGION_NAGHUALISM</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_PACHACUTI</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_PACHACUTI</DependencyType>
-			<DependencyType>RELIGION_ANDEAN</DependencyType>
+			<DependencyType>RELIGION_ANDEANISM</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_ANDEAN</FavoriteReligion>
+		<FavoriteReligion>RELIGION_ANDEANISM</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_PERICLES</Type>
@@ -646,9 +646,9 @@
 		<Type>LEADER_RAGNAR</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_RAGNAR</DependencyType>
-			<DependencyType>RELIGION_DRUID</DependencyType>
+			<DependencyType>RELIGION_DRUIDIC_TRADITIONS</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_DRUID</FavoriteReligion>
+		<FavoriteReligion>RELIGION_DRUIDIC_TRADITIONS</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_RAGNAR</Type>
@@ -662,9 +662,9 @@
 		<Type>LEADER_RAMESSES</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_RAMESSES</DependencyType>
-			<DependencyType>RELIGION_EGYPT_MYTHOLOGY</DependencyType>
+			<DependencyType>RELIGION_KEMETISM</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_EGYPT_MYTHOLOGY</FavoriteReligion>
+		<FavoriteReligion>RELIGION_KEMETISM</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_RAMKHAM</Type>
@@ -678,9 +678,9 @@
 		<Type>LEADER_RED_CLOUD</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_RED_CLOUD</DependencyType>
-			<DependencyType>RELIGION_SHAMAN</DependencyType>
+			<DependencyType>RELIGION_SHAMANISM</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_SHAMAN</FavoriteReligion>
+		<FavoriteReligion>RELIGION_SHAMANISM</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_RICHELIEU</Type>
@@ -718,9 +718,9 @@
 		<Type>LEADER_SALAMASINA</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_SALAMASINA</DependencyType>
-			<DependencyType>RELIGION_SHAMAN</DependencyType>
+			<DependencyType>RELIGION_SHAMANISM</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_SHAMAN</FavoriteReligion>
+		<FavoriteReligion>RELIGION_SHAMANISM</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_SEJONG</Type>
@@ -749,26 +749,26 @@
 	<LeaderHeadInfo>
 		<Type>LEADER_SITTING_BULL</Type>
 		<AndDependencyTypes>
-			<DependencyType>RELIGION_SHAMAN</DependencyType>
+			<DependencyType>RELIGION_SHAMANISM</DependencyType>
 			<DependencyType>LEADER_SITTING_BULL</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_SHAMAN</FavoriteReligion>
+		<FavoriteReligion>RELIGION_SHAMANISM</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_SMOKE_JAGUAR</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_SMOKE_JAGUAR</DependencyType>
-			<DependencyType>RELIGION_SHAMAN</DependencyType>
+			<DependencyType>RELIGION_SHAMANISM</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_SHAMAN</FavoriteReligion>
+		<FavoriteReligion>RELIGION_SHAMANISM</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_SMOKE_JAGUAR</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_SMOKE_JAGUAR</DependencyType>
-			<DependencyType>RELIGION_MESOAMERICANISM</DependencyType>
+			<DependencyType>RELIGION_NAGHUALISM</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_MESOAMERICANISM</FavoriteReligion>
+		<FavoriteReligion>RELIGION_NAGHUALISM</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_SULEIMAN</Type>
@@ -782,9 +782,9 @@
 		<Type>LEADER_SUPPI</Type>
 		<AndDependencyTypes>
 			<DependencyType>LEADER_SUPPI</DependencyType>
-			<DependencyType>RELIGION_EGYPT_MYTHOLOGY</DependencyType>
+			<DependencyType>RELIGION_KEMETISM</DependencyType>
 		</AndDependencyTypes>
-		<FavoriteReligion>RELIGION_EGYPT_MYTHOLOGY</FavoriteReligion>
+		<FavoriteReligion>RELIGION_KEMETISM</FavoriteReligion>
 	</LeaderHeadInfo>
 	<LeaderHeadInfo>
 		<Type>LEADER_SURYAVARMAN</Type>

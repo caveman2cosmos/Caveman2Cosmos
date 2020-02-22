@@ -551,10 +551,10 @@ def canTriggerBrothersInNeed(argsList):
     return False
 
   listResources = []
-  listResources.append(GC.getInfoTypeForString("BONUS_COPPER"))
-  listResources.append(GC.getInfoTypeForString("BONUS_IRON"))
+  listResources.append(GC.getInfoTypeForString("BONUS_COPPER_ORE"))
+  listResources.append(GC.getInfoTypeForString("BONUS_IRON_ORE"))
   listResources.append(GC.getInfoTypeForString("BONUS_HORSE"))
-  listResources.append(GC.getInfoTypeForString("BONUS_ELEPHANT"))
+  listResources.append(GC.getInfoTypeForString("BONUS_ELEPHANTS"))
   listResources.append(GC.getInfoTypeForString("BONUS_OIL"))
   listResources.append(GC.getInfoTypeForString("BONUS_URANIUM"))
 
@@ -1072,7 +1072,7 @@ def canTriggerGoldRush(argsList):
 
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iIndustrial = GC.getInfoTypeForString("ERA_INDUSTRIAL")
+  iIndustrial = GC.getInfoTypeForString("C2C_ERA_INDUSTRIAL")
 
   if player.getCurrentEra() != iIndustrial:
     return False
@@ -1088,7 +1088,7 @@ def canTriggerInfluenza(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
   team = GC.getTeam(player.getTeam())
 
-  iIndustrial = GC.getInfoTypeForString("ERA_INDUSTRIAL")
+  iIndustrial = GC.getInfoTypeForString("C2C_ERA_INDUSTRIAL")
 
   if player.getCurrentEra() <= iIndustrial:
     return False
@@ -1221,7 +1221,7 @@ def doAntelope2(argsList):
   plot = GC.getMap().plot(kTriggeredData.iPlotX, kTriggeredData.iPlotY)
 
   if not plot.isNone():
-    plot.setImprovementType(GC.getInfoTypeForString("IMPROVEMENT_CAMP"))
+    plot.setImprovementType(GC.getInfoTypeForString("IMPROVEMENT_HUNTING_CAMP"))
 
   return 1
 
@@ -1229,7 +1229,7 @@ def getHelpAntelope2(argsList):
   iEvent = argsList[0]
   kTriggeredData = argsList[1]
 
-  iCamp = GC.getInfoTypeForString("IMPROVEMENT_CAMP")
+  iCamp = GC.getInfoTypeForString("IMPROVEMENT_HUNTING_CAMP")
   szHelp = TRNSLTR.getText("TXT_KEY_EVENT_IMPROVEMENT_GROWTH", ( GC.getImprovementInfo(iCamp).getTextKey(), ))
 
   return szHelp
@@ -1260,7 +1260,7 @@ def canTriggerHiyoSilver(argsList):
   kTriggeredData = argsList[0]
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iSilver = GC.getInfoTypeForString("BONUS_SILVER")
+  iSilver = GC.getInfoTypeForString("BONUS_SILVER_ORE")
   iHappyBonuses = 0
   bSilver = False
   for i in xrange(GC.getNumBonusInfos()):
@@ -1287,7 +1287,7 @@ def canTriggerWiningMonks(argsList):
   kTriggeredData = argsList[0]
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  if player.getNumAvailableBonuses(GC.getInfoTypeForString("BONUS_WINE")) > 0:
+  if player.getNumAvailableBonuses(GC.getInfoTypeForString("BONUS_GRAPES")) > 0:
     return False
 
   return True
@@ -1323,7 +1323,7 @@ def canTriggerIndependentFilms(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
   for i in xrange(GC.getNumBuildingInfos()):
-    if GC.getBuildingInfo(i).getFreeBonus() == GC.getInfoTypeForString("BONUS_MOVIES"):
+    if GC.getBuildingInfo(i).getFreeBonus() == GC.getInfoTypeForString("BONUS_HIT_MOVIES"):
       if player.countNumBuildings(i) > 0:
         return False
 
@@ -1336,7 +1336,7 @@ def doIndependentFilms(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
   city = player.getCity(kTriggeredData.iCityId)
 
-  iBonus = GC.getInfoTypeForString("BONUS_MOVIES")
+  iBonus = GC.getInfoTypeForString("BONUS_HIT_MOVIES")
 
   city.changeFreeBonus(iBonus, 1)
 
@@ -1349,7 +1349,7 @@ def getHelpIndependentFilms(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
   city = player.getCity(kTriggeredData.iCityId)
 
-  iBonus = GC.getInfoTypeForString("BONUS_MOVIES")
+  iBonus = GC.getInfoTypeForString("BONUS_HIT_MOVIES")
 
   szHelp = TRNSLTR.getText("TXT_KEY_EVENT_INDEPENDENTFILMS_HELP_1", ( 1, GC.getBonusInfo(iBonus).getChar(), city.getNameKey()))
 
@@ -1450,7 +1450,7 @@ def canTriggerInterstate(argsList):
   trigger = GC.getEventTriggerInfo(kTriggeredData.eTrigger)
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  if not player.isCivic(GC.getInfoTypeForString("CIVIC_LIBERAL")):
+  if not player.isCivic(GC.getInfoTypeForString("CIVIC_EGALITARIAN")):
     return False
 
   return True
@@ -1459,7 +1459,7 @@ def getHelpInterstate(argsList):
   iEvent = argsList[0]
   kTriggeredData = argsList[1]
 
-  szHelp = TRNSLTR.getText("TXT_KEY_UNIT_MOVEMENT", (1, GC.getRouteInfo(GC.getInfoTypeForString("ROUTE_MODERN_ROAD")).getTextKey()))
+  szHelp = TRNSLTR.getText("TXT_KEY_UNIT_MOVEMENT", (1, GC.getRouteInfo(GC.getInfoTypeForString("ROUTE_HIGHWAY")).getTextKey()))
 
   return szHelp
 
@@ -1469,7 +1469,7 @@ def applyInterstate(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
   team = GC.getTeam(player.getTeam())
 
-  iRoad = GC.getInfoTypeForString("ROUTE_MODERN_ROAD")
+  iRoad = GC.getInfoTypeForString("ROUTE_HIGHWAY")
 
   team.changeRouteChange(iRoad, -5)
 
@@ -1489,7 +1489,7 @@ def canApplyEarthDay2(argsList):
 
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iCivic = GC.getInfoTypeForString("CIVIC_ENVIRONMENTALISM")
+  iCivic = GC.getInfoTypeForString("CIVIC_GREEN")
 
   for iPlayer in xrange(GC.getMAX_PC_PLAYERS()):
     loopPlayer = GC.getPlayer(iPlayer)
@@ -1510,7 +1510,7 @@ def applyEarthDay2(argsList):
   kTriggeredData = argsList[1]
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iCivic = GC.getInfoTypeForString("CIVIC_ENVIRONMENTALISM")
+  iCivic = GC.getInfoTypeForString("CIVIC_GREEN")
   iCivicOption = GC.getInfoTypeForString("CIVICOPTION_ECONOMY")
 
   listPlayers = []
@@ -2563,7 +2563,7 @@ def canApplyClassicLiteratureDone2(argsList):
   kTriggeredData = argsList[1]
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iEraAncient = GC.getInfoTypeForString("ERA_SEDENTARY")
+  iEraAncient = GC.getInfoTypeForString("C2C_ERA_ANCIENT")
 
   for iTech in xrange(GC.getNumTechInfos()):
     if GC.getTechInfo(iTech).getEra() == iEraAncient and player.canResearch(iTech, False):
@@ -2576,7 +2576,7 @@ def applyClassicLiteratureDone2(argsList):
   kTriggeredData = argsList[1]
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iEraAncient = GC.getInfoTypeForString("ERA_SEDENTARY")
+  iEraAncient = GC.getInfoTypeForString("C2C_ERA_ANCIENT")
 
   listTechs = []
   for iTech in xrange(GC.getNumTechInfos()):
@@ -2689,7 +2689,7 @@ def canApplyMasterBlacksmithDone1(argsList):
   kTriggeredData = argsList[1]
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iBonus = GC.getInfoTypeForString("BONUS_COPPER")
+  iBonus = GC.getInfoTypeForString("BONUS_COPPER_ORE")
   city = player.getCity(kTriggeredData.iCityId)
 
   if city == None:
@@ -2723,7 +2723,7 @@ def applyMasterBlacksmithDone1(argsList):
   plot = GC.getMap().plot(kTriggeredData.iPlotX, kTriggeredData.iPlotY)
   city = player.getCity(kTriggeredData.iCityId)
 
-  iBonus = GC.getInfoTypeForString("BONUS_COPPER")
+  iBonus = GC.getInfoTypeForString("BONUS_COPPER_ORE")
   plot.setBonusType(iBonus)
 
   szBuffer = TRNSLTR.getText("TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE", (GC.getBonusInfo(iBonus).getTextKey(), city.getNameKey()))
@@ -3089,7 +3089,7 @@ def canTriggerHighWarlord(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
   # If source civ is operating this Civic, disallow the event to trigger.
-  if player.isCivic(GC.getInfoTypeForString("CIVIC_LIBERAL")):
+  if player.isCivic(GC.getInfoTypeForString("CIVIC_EGALITARIAN")):
     return False
 
   return True
@@ -3229,7 +3229,7 @@ def canTriggerGreed(argsList):
 	if not CyPlayer.getNumAvailableBonuses(iOil):
 		bonuses.append(iOil)
 		iCount += 1
-	iIron = GC.getInfoTypeForString("BONUS_IRON")
+	iIron = GC.getInfoTypeForString("BONUS_IRON_ORE")
 	if not CyPlayer.getNumAvailableBonuses(iIron):
 		bonuses.append(iIron)
 		iCount += 1
@@ -3237,7 +3237,7 @@ def canTriggerGreed(argsList):
 	if not CyPlayer.getNumAvailableBonuses(iHorse):
 		bonuses.append(iHorse)
 		iCount += 1
-	iCopper = GC.getInfoTypeForString("BONUS_COPPER")
+	iCopper = GC.getInfoTypeForString("BONUS_COPPER_ORE")
 	if not CyPlayer.getNumAvailableBonuses(iCopper):
 		bonuses.append(iCopper)
 		iCount += 1
@@ -3245,7 +3245,7 @@ def canTriggerGreed(argsList):
 	if not CyPlayer.getNumAvailableBonuses(iSulphur):
 		bonuses.append(iSulphur)
 		iCount += 1
-	iElephant = GC.getInfoTypeForString("BONUS_ELEPHANT")
+	iElephant = GC.getInfoTypeForString("BONUS_ELEPHANTS")
 	if not CyPlayer.getNumAvailableBonuses(iElephant):
 		bonuses.append(iElephant)
 		iCount += 1
@@ -3336,12 +3336,10 @@ def getGreedUnit(CyPlayer, CyPlot):
 	iBonus = CyPlot.getBonusType(CyPlayer.getTeam())
 	iBestValue = 0
 	iBestUnit = -1
-	for iUnitClass in xrange(GC.getNumUnitClassInfos()):
-		CvUnitClassInfo = GC.getUnitClassInfo(iUnitClass)
-		if CvUnitClassInfo.getMaxGlobalInstances() + 1 or CvUnitClassInfo.getMaxTeamInstances() + 1 or CvUnitClassInfo.getMaxPlayerInstances() + 1:
-			continue
-		iUnit = CvUnitClassInfo.getDefaultUnitIndex()
+	for iUnit in xrange(GC.getNumUnitInfos()):
 		CvUnitInfo = GC.getUnitInfo(iUnit)
+		if CvUnitInfo.getMaxGlobalInstances() + 1 or CvUnitInfo.getMaxPlayerInstances() + 1:
+			continue
 		if iUnit != -1 and CvUnitInfo.getDomainType() == DomainTypes.DOMAIN_LAND and CyPlayer.canTrain(iUnit, False, False):
 			iValue = 0
 			if CvUnitInfo.getPrereqAndBonus() == iBonus:
@@ -3449,7 +3447,7 @@ def canApplyEliteSwordsDone2(argsList):
   kTriggeredData = argsList[1]
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iCivic = GC.getInfoTypeForString("CIVIC_HEREDITARY_RULE")
+  iCivic = GC.getInfoTypeForString("CIVIC_MONARCHY")
 
   if not player.isCivic(iCivic):
     return False
@@ -4179,9 +4177,9 @@ def canTriggerBillionsandBillions(argsList):
   kTriggeredData = argsList[0]
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
 
-  if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_DIVINE_RULE")) or pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_INTOLERANT")):
+  if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_DIVINE_CULT")) or pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_INQUISITORIAL")):
     return False
-  if ( pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_DEMOCRACY")) or pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_FEDERAL"))) and pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_LIBERAL")):
+  if ( pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_DEMOCRACY")) or pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_FEDERALISM"))) and pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_EGALITARIAN")):
     return True
 
   return False
@@ -4213,7 +4211,7 @@ def canTriggerFreeEnterprise(argsList):
   kTriggeredData = argsList[0]
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
 
-  if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_LAISSEZ_FAIRE")):
+  if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_FREE_MARKET")):
     return True
 
   return False
@@ -4259,7 +4257,7 @@ def canTriggerRubicon(argsList):
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
   R = pPlayer.getRevolutionTimer()
   A = pPlayer.isAnarchy()
-  HerdRule = GC.getInfoTypeForString("CIVIC_HEREDITARY_RULE")
+  HerdRule = GC.getInfoTypeForString("CIVIC_MONARCHY")
 
   if R>0:
     return False
@@ -4269,9 +4267,9 @@ def canTriggerRubicon(argsList):
     return False
   if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_DESPOTISM")):
     return False
-  if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_HEREDITARY_RULE")):
+  if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_MONARCHY")):
     return False
-  if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_FASCIST")):
+  if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_TOTALITARIANISM")):
     return False
 
   return True
@@ -4344,7 +4342,7 @@ def applyRubicon3(argsList):
   kTriggeredData = argsList[1]
   pPlayer3 = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iCivicType = GC.getInfoTypeForString("CIVIC_HEREDITARY_RULE")
+  iCivicType = GC.getInfoTypeForString("CIVIC_MONARCHY")
   iCivicOptionType = GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT")
 
   pPlayer3.setCivics(iCivicOptionType, iCivicType)
@@ -4362,9 +4360,9 @@ def canTriggerGeneralsPutsch(argsList):
   otherPlayer = GC.getPlayer(kTriggeredData.eOtherPlayer)
   R = pPlayer.getRevolutionTimer()
   A = pPlayer.isAnarchy()
-  PolState = GC.getInfoTypeForString("CIVIC_FASCIST")
+  PolState = GC.getInfoTypeForString("CIVIC_TOTALITARIANISM")
   Despot = GC.getInfoTypeForString("CIVIC_DESPOTISM")
-  HerdRule = GC.getInfoTypeForString("CIVIC_HEREDITARY_RULE")
+  HerdRule = GC.getInfoTypeForString("CIVIC_MONARCHY")
 
 
   if R>0:
@@ -4430,7 +4428,7 @@ def getHelpGeneralsPutsch3(argsList):
   return szHelp
 
 def applyGeneralsPutsch3(argsList):
-  GC.getPlayer(argsList[1].ePlayer).setCivics(GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT"), GC.getInfoTypeForString("CIVIC_FASCIST"))
+  GC.getPlayer(argsList[1].ePlayer).setCivics(GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT"), GC.getInfoTypeForString("CIVIC_TOTALITARIANISM"))
 
 ######  CURE_FOR_CANCER ########
 
@@ -4440,7 +4438,7 @@ def canTriggerCureforCancer(argsList):
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
   iOxford = GC.getInfoTypeForString("BUILDING_MEDICAL_DATABASE")
 
-  if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_DIVINE_RULE")):
+  if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_DIVINE_CULT")):
     return False
   if pPlayer.getBuildingClassCountWithUpgrades(GC.getBuildingInfo(iOxford).getBuildingClassType()) == 0:
     return False
@@ -4491,7 +4489,7 @@ def canTriggerCarnation(argsList):
     return False
   if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_REPUBLIC")):
     return False
-  if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_FEDERAL")):
+  if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_FEDERALISM")):
     return False
   if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_PLANNED")):
     return False
@@ -4659,7 +4657,7 @@ def getHelpSyntheticFuels4(argsList):
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
   pCity = pPlayer.getCity(kTriggeredData.iCityId)
 
-  oBonus = GC.getInfoTypeForString("BONUS_DIESEL")
+  oBonus = GC.getInfoTypeForString("BONUS_OIL_PRODUCTS")
 
   szHelp = TRNSLTR.getText("TXT_KEY_EVENT_SYNTHETIC_FUELS_HELP_4", (1, GC.getBonusInfo(oBonus).getChar(), pCity.getNameKey()))
 
@@ -4672,7 +4670,7 @@ def doSyntheticFuels4(argsList):
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
   pCity = pPlayer.getCity(kTriggeredData.iCityId)
 
-  iBonus = GC.getInfoTypeForString("BONUS_DIESEL")
+  iBonus = GC.getInfoTypeForString("BONUS_OIL_PRODUCTS")
 
   pCity.changeFreeBonus(iBonus, 1)
 
@@ -4720,7 +4718,7 @@ def canDoAlternativeEnergy4(argsList):
   kTriggeredData = argsList[1]
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
 
-  if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_ENVIRONMENTALISM")):
+  if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_GREEN")):
     return True
 
   return False
@@ -4845,7 +4843,7 @@ def canTriggerDarwinsVoyage(argsList):
 
 
 
-  if not pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_SECULAR")):
+  if not pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_SECULARISM")):
     return False
   if pTransports < 1:
     return False
@@ -6807,7 +6805,7 @@ def canTriggerBlackDeath(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
   team = GC.getTeam(player.getTeam())
 
-  iClassical = GC.getInfoTypeForString("ERA_CLASSICAL")
+  iClassical = GC.getInfoTypeForString("C2C_ERA_CLASSICAL")
 
   if player.getCurrentEra() <= iClassical:
     return False
@@ -6865,7 +6863,7 @@ def canTriggerSmallpox(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
   team = GC.getTeam(player.getTeam())
 
-  iClassical = GC.getInfoTypeForString("ERA_CLASSICAL")
+  iClassical = GC.getInfoTypeForString("C2C_ERA_CLASSICAL")
 
   if player.getCurrentEra() <= iClassical:
     return False
@@ -7130,7 +7128,7 @@ def canTriggerCompulsoryDem(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
   eCivic = player.getCivics(GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT"))
-  iFederal = GC.getInfoTypeForString("CIVIC_FEDERAL")
+  iFederal = GC.getInfoTypeForString("CIVIC_FEDERALISM")
   iDemocracy = GC.getInfoTypeForString("CIVIC_DEMOCRACY")
   iRepublic = GC.getInfoTypeForString("CIVIC_REPUBLIC")
   if eCivic == iFederal or eCivic == iDemocracy or eCivic == iRepublic:
@@ -7146,15 +7144,15 @@ def canEventTriggerCompulsoryDem(argsList):
     return False
 
   eCivic = player.getCivics(GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT"))
-  iFederal = GC.getInfoTypeForString("CIVIC_FEDERAL")
+  iFederal = GC.getInfoTypeForString("CIVIC_FEDERALISM")
   iDemocracy = GC.getInfoTypeForString("CIVIC_DEMOCRACY")
   iRepublic = GC.getInfoTypeForString("CIVIC_REPUBLIC")
   if eCivic == iFederal or eCivic == iDemocracy or eCivic == iRepublic:
-    bFederal = player.canDoCivics(GC.getInfoTypeForString("CIVIC_FEDERAL"))
+    bFederal = player.canDoCivics(GC.getInfoTypeForString("CIVIC_FEDERALISM"))
     bDemocracy = player.canDoCivics(GC.getInfoTypeForString("CIVIC_DEMOCRACY"))
     bRepublic = player.canDoCivics(GC.getInfoTypeForString("CIVIC_REPUBLIC"))
-    bMonarchy = player.canDoCivics(GC.getInfoTypeForString("CIVIC_HEREDITARY_RULE"))
-    bFacist = player.canDoCivics(GC.getInfoTypeForString("CIVIC_FASCIST"))
+    bMonarchy = player.canDoCivics(GC.getInfoTypeForString("CIVIC_MONARCHY"))
+    bFacist = player.canDoCivics(GC.getInfoTypeForString("CIVIC_TOTALITARIANISM"))
     bDespotism = player.canDoCivics(GC.getInfoTypeForString("CIVIC_DESPOTISM"))
     if (bFederal or bDemocracy or bRepublic):
       if (bMonarchy or bFacist or bDespotism):
@@ -7168,9 +7166,9 @@ def TriggerCompulsoryDem2(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
   eCivic = player.getCivics(GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT"))
-  iFederal = GC.getInfoTypeForString("CIVIC_FEDERAL")
+  iFederal = GC.getInfoTypeForString("CIVIC_FEDERALISM")
 
-  bFederal = player.canDoCivics(GC.getInfoTypeForString("CIVIC_FEDERAL"))
+  bFederal = player.canDoCivics(GC.getInfoTypeForString("CIVIC_FEDERALISM"))
   bDemocracy = player.canDoCivics(GC.getInfoTypeForString("CIVIC_DEMOCRACY"))
   bRepublic = player.canDoCivics(GC.getInfoTypeForString("CIVIC_REPUBLIC"))
 
@@ -7195,11 +7193,11 @@ def TriggerCompulsoryDem3(argsList):
 
   eCivic = player.getCivics(GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT"))
 
-  # bFederal = player.canDoCivics(GC.getInfoTypeForString("CIVIC_FEDERAL"))
+  # bFederal = player.canDoCivics(GC.getInfoTypeForString("CIVIC_FEDERALISM"))
   # bDemocracy = player.canDoCivics(GC.getInfoTypeForString("CIVIC_DEMOCRACY"))
   # bRepublic = player.canDoCivics(GC.getInfoTypeForString("CIVIC_REPUBLIC"))
-  bMonarchy = player.canDoCivics(GC.getInfoTypeForString("CIVIC_HEREDITARY_RULE"))
-  bFacist = player.canDoCivics(GC.getInfoTypeForString("CIVIC_FASCIST"))
+  bMonarchy = player.canDoCivics(GC.getInfoTypeForString("CIVIC_MONARCHY"))
+  bFacist = player.canDoCivics(GC.getInfoTypeForString("CIVIC_TOTALITARIANISM"))
   bDespotism = player.canDoCivics(GC.getInfoTypeForString("CIVIC_DESPOTISM"))
 
   curCivics = []
@@ -7208,9 +7206,9 @@ def TriggerCompulsoryDem3(argsList):
     curCivics.append(player.getCivics(i))
 
   if bFacist:
-    curCivics[GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT")] = GC.getInfoTypeForString("CIVIC_FASCIST")
+    curCivics[GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT")] = GC.getInfoTypeForString("CIVIC_TOTALITARIANISM")
   elif bMonarchy:
-    curCivics[GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT")] = GC.getInfoTypeForString("CIVIC_HEREDITARY_RULE")
+    curCivics[GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT")] = GC.getInfoTypeForString("CIVIC_MONARCHY")
   elif bDespotism:
     curCivics[GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT")] = GC.getInfoTypeForString("CIVIC_DESPOTISM")
   player.doRevolution(curCivics, False)
@@ -7230,7 +7228,7 @@ def getHelpCompulsoryDem2(argsList):
 	if iEvent == GC.getInfoTypeForString("EVENT_COMPULSORY_DEM_2"):
 		print "Event #2"
 		eCivic = CyPlayer.getCivics(GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT"))
-		iFederal = GC.getInfoTypeForString("CIVIC_FEDERAL")
+		iFederal = GC.getInfoTypeForString("CIVIC_FEDERALISM")
 		iDemocracy = GC.getInfoTypeForString("CIVIC_DEMOCRACY")
 		iRepublic = GC.getInfoTypeForString("CIVIC_REPUBLIC")
 
@@ -7247,11 +7245,11 @@ def getHelpCompulsoryDem2(argsList):
 			print "Can Switch to Republic"
 	else:
 		print "Event #3"
-		if CyPlayer.canDoCivics(GC.getInfoTypeForString("CIVIC_FASCIST")):
-			szType = GC.getCivicInfo(GC.getInfoTypeForString("CIVIC_FASCIST")).getTextKey()
+		if CyPlayer.canDoCivics(GC.getInfoTypeForString("CIVIC_TOTALITARIANISM")):
+			szType = GC.getCivicInfo(GC.getInfoTypeForString("CIVIC_TOTALITARIANISM")).getTextKey()
 			print "Can Switch to Fascist"
-		elif CyPlayer.canDoCivics(GC.getInfoTypeForString("CIVIC_HEREDITARY_RULE")):
-			szType = GC.getCivicInfo(GC.getInfoTypeForString("CIVIC_HEREDITARY_RULE")).getTextKey()
+		elif CyPlayer.canDoCivics(GC.getInfoTypeForString("CIVIC_MONARCHY")):
+			szType = GC.getCivicInfo(GC.getInfoTypeForString("CIVIC_MONARCHY")).getTextKey()
 			print "Can Switch to Monarchy"
 		elif CyPlayer.canDoCivics(GC.getInfoTypeForString("CIVIC_DESPOTISM")):
 			szType = GC.getCivicInfo(GC.getInfoTypeForString("CIVIC_DESPOTISM")).getTextKey()
@@ -7279,11 +7277,10 @@ def TriggerHarryPotter2(argsList):
 		CyCity, i = CyPlayer.nextCity(i, False)
 
 	CyTeam = GC.getTeam(CyPlayer.getTeam())
-	for iPlayerX in xrange(GC.getMAX_PLAYERS()):
+	for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
 		CyPlayerX = GC.getPlayer(iPlayerX)
-		if CyPlayerX.isAlive() and CyTeam.isHasMet(CyPlayerX.getTeam()):
-			if CyPlayerX.getStateReligion() == iStateReligion:
-				CyPlayerX.AI_changeMemoryCount(iPlayer, MemoryTypes.MEMORY_EVENT_BAD_TO_US, 1)
+		if CyPlayerX.isAlive() and CyPlayerX.getStateReligion() == iStateReligion and CyTeam.isHasMet(CyPlayerX.getTeam()) :
+			CyPlayerX.AI_changeMemoryCount(iPlayer, MemoryTypes.MEMORY_EVENT_BAD_TO_US, 1)
 
 def getHelpHarryPotter2(argsList):
 	szHelp = TRNSLTR.getText("TXT_KEY_EVENT_FREE_BUILDING_GLOBAL", (GC.getBuildingInfo(GC.getInfoTypeForString("BUILDING_LIBRARY")).getTextKey(),))
@@ -7299,8 +7296,8 @@ def canEventTriggerLessDictator(argsList):
     return False
 
   eCivic = player.getCivics(GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT"))
-  iMonarch = GC.getInfoTypeForString("CIVIC_HEREDITARY_RULE")
-  iFascist = GC.getInfoTypeForString("CIVIC_FASCIST")
+  iMonarch = GC.getInfoTypeForString("CIVIC_MONARCHY")
+  iFascist = GC.getInfoTypeForString("CIVIC_TOTALITARIANISM")
   iDespot = GC.getInfoTypeForString("CIVIC_DESPOTISM")
   if eCivic == iMonarch or eCivic == iFascist or eCivic == iDespot:
     return True
@@ -7326,7 +7323,7 @@ def TriggerLessDictator2(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
   eCivic = player.getCivics(GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT"))
-  iFederal = GC.getInfoTypeForString("CIVIC_FEDERAL")
+  iFederal = GC.getInfoTypeForString("CIVIC_FEDERALISM")
   iRepublic = GC.getInfoTypeForString("CIVIC_REPUBLIC")
   iDemocracy = GC.getInfoTypeForString("CIVIC_DEMOCRACY")
 
@@ -7353,7 +7350,7 @@ def getHelpLessDictator2(argsList):
 	kTriggeredData = argsList[1]
 	CyPlayer = GC.getPlayer(kTriggeredData.ePlayer)
 
-	iFederal = GC.getInfoTypeForString("CIVIC_FEDERAL")
+	iFederal = GC.getInfoTypeForString("CIVIC_FEDERALISM")
 	if CyPlayer.canDoCivics(iFederal):
 		return TRNSLTR.getText("TXT_KEY_EVENT_CHANGE_CIVICS", (GC.getCivicInfo(iFederal).getTextKey(),))
 
@@ -7595,7 +7592,7 @@ def TriggerSuperVirus4(argsList):
   szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_SUPER_VIRUS_HIT_CITY", (iChangePopulation, eventCity.getNameKey()))
   CyInterface().addMessage(kTriggeredData.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", InterfaceMessageTypes.MESSAGE_TYPE_INFO, None, GC.getInfoTypeForString("COLOR_RED"), eventCity.getX(), eventCity.getY(), True, True)
 
-  eventCity.changeFreeSpecialistCount(GC.getInfoTypeForString("SPECIALIST_GREAT_GENERAL"), 1)
+  eventCity.changeFreeSpecialistCount(GC.getInfoTypeForString("SPECIALIST_GREAT_MILITARY_INSTRUCTOR"), 1)
 
 def getHelpSuperVirus4(argsList):
 
@@ -7607,7 +7604,7 @@ def getHelpSuperVirus4(argsList):
   iChangePopulation = eventCity.getPopulation() * 75
   iChangePopulation /= 100
 
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_FREE_SPECIALISTS", (1, GC.getSpecialistInfo(GC.getInfoTypeForString("SPECIALIST_GREAT_GENERAL")).getTextKey(), eventCity.getNameKey() , ))
+  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_FREE_SPECIALISTS", (1, GC.getSpecialistInfo(GC.getInfoTypeForString("SPECIALIST_GREAT_MILITARY_INSTRUCTOR")).getTextKey(), eventCity.getNameKey() , ))
   szHelp += u"\n"
   szHelp += TRNSLTR.getText("TXT_KEY_EVENT_LOSE_POPULATION", (iChangePopulation, eventCity.getNameKey() , ))
   szHelp += u"\n"
@@ -7646,96 +7643,96 @@ def canDoNewWorldTrigger(argsList):
 
 
 def triggerNewWorldCities(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	CyPlayer = GC.getPlayer(iPlayer)
 
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
+	if iEvent == GC.getInfoTypeForString("EVENT_NEW_WORLD_2"):
+		iNeededCities = 1
+	else:
+		iNeededCities = 3
 
-  iNeededCities = 0
-  if (iEvent == GC.getInfoTypeForString("EVENT_NEW_WORLD_2")):
-    iNeededCities = 1
-  else:
-    iNeededCities = 3
+	CyCity, i = CyPlayer.firstCity(False)
+	while CyCity:
+		if iEvent == GC.getInfoTypeForString("EVENT_NEW_WORLD_2"):
+			if CyCity.getPopulation() > 4:
+				CyCity.changePopulation(-1)
+		else:
+			if CyCity.getPopulation() > 9:
+				CyCity.changePopulation(-2)
+			elif CyCity.getPopulation() > 4:
+				CyCity.changePopulation(-1)
+		CyCity, i = CyPlayer.nextCity(i, False)
 
-  (loopCity, iter) = player.firstCity(False)
+	iNumUnits = GC.getNumUnitInfos()
+	MAP = GC.getMap()
+	iNumPlots = MAP.numPlots()
+	while iNeededCities > 0:
+		iBestValue = 0
+		pBestPlot = None
+		for i in xrange(iNumPlots):
+			pLoopPlot = MAP.plotByIndex(i)
+			if pLoopPlot.isCoastalLand():
+				if CyPlayer.canFound(pLoopPlot.getX(), pLoopPlot.getY()):
+					if pLoopPlot.getFoundValue(iPlayer) > iBestValue:
+						pBestPlot = pLoopPlot
+						iBestValue = pLoopPlot.getFoundValue(iPlayer)
 
-  while(loopCity):
-    if (iEvent == GC.getInfoTypeForString("EVENT_NEW_WORLD_2")):
-      if (loopCity.getPopulation() > 4):
-        loopCity.changePopulation(-1)
-    else:
-      if (loopCity.getPopulation() > 9):
-        loopCity.changePopulation(-2)
-      elif (loopCity.getPopulation() > 4):
-        loopCity.changePopulation(-1)
+		CyPlayer.found(pBestPlot.getX(), pBestPlot.getY())
 
-    (loopCity, iter) = player.nextCity(iter, False)
+		CyCity = pBestPlot.getPlotCity()
+		if not CyCity:
+			raise "Error in TriggerNewWorldCities - No City Created!"
+			return
 
-  while (iNeededCities > 0):
-    map = GC.getMap()
-    iBestValue = 0
-    pBestPlot = None
-    for i in xrange(map.numPlots()):
-      pLoopPlot = map.plotByIndex(i)
-      if (pLoopPlot.isCoastalLand()):
-        if (player.canFound(pLoopPlot.getX(), pLoopPlot.getY())):
-          if (pLoopPlot.getFoundValue(kTriggeredData.ePlayer) > iBestValue):
-            pBestPlot = pLoopPlot
-            iBestValue = pLoopPlot.getFoundValue(kTriggeredData.ePlayer)
+		if iEvent == GC.getInfoTypeForString("EVENT_NEW_WORLD_2"):
+			CyCity.changePopulation(1)
+		else:
+			CyCity.changePopulation(3)
 
-    player.found(pBestPlot.getX(), pBestPlot.getY())
+		eStateReligion = CyPlayer.getStateReligion()
+		if eStateReligion > -1:
+			CyCity.setHasReligion(eStateReligion, True, True, True)
 
-    pNewCity = pBestPlot.getPlotCity()
-    if pNewCity == None:
-      print "Error in TriggerNewWorldCities - No City Created!"
-      return
+		if iEvent == GC.getInfoTypeForString("EVENT_NEW_WORLD_2"):
+			iNumNeededDefenders = 2
+		else:
+			iNumNeededDefenders = 5
 
-    if (iEvent == GC.getInfoTypeForString("EVENT_NEW_WORLD_2")):
-      pNewCity.changePopulation(1)
-    else:
-      pNewCity.changePopulation(3)
+		eBestUnit = -1
+		iBestStrength = 0
+		for iUnit in xrange(iNumUnits):
+			CvUnitInfo = GC.getUnitInfo(iUnit)
+			if CvUnitInfo.getDomainType() != DomainTypes.DOMAIN_LAND or CvUnitInfo.getCombat() <= iBestStrength:
+				continue
+			if CyCity.canTrain(iUnit, False, False, False, False):
+				eBestUnit = iUnit
+				iBestStrength = CvUnitInfo.getCombat()
 
-    eStateReligion = player.getStateReligion()
-    if (eStateReligion > -1):
-      pNewCity.setHasReligion(eStateReligion, True, True, True)
+		if eBestUnit > -1:
+			x = CyCity.getX()
+			y = CyCity.getY()
+			while iNumNeededDefenders > 0:
+				CyPlayer.initUnit(eBestUnit, x, y, UnitAITypes.UNITAI_CITY_DEFENSE, DirectionTypes.DIRECTION_NORTH)
+				iNumNeededDefenders -= 1
 
-    iNumNeededDefenders = 0
-    if (iEvent == GC.getInfoTypeForString("EVENT_NEW_WORLD_2")):
-      iNumNeededDefenders = 1
-    else:
-      iNumNeededDefenders = 2
-    eBestUnit = -1
-    iBestStrength = 0
-    for iI in xrange(GC.getNumUnitClassInfos()):
-      eLoopUnit = GC.getCivilizationInfo(pNewCity.getCivilizationType()).getCivilizationUnits(iI)
-      if (eLoopUnit > 0):
-        if (GC.getUnitInfo(eLoopUnit).getDomainType() == DomainTypes.DOMAIN_LAND):
-          if (pNewCity.canTrain(eLoopUnit, False, False, False, False)):
-            if (GC.getUnitInfo(eLoopUnit).getCombat() > iBestStrength):
-              eBestUnit = eLoopUnit
-              iBestStrength = GC.getUnitInfo(eLoopUnit).getCombat()
+		if iEvent == GC.getInfoTypeForString("EVENT_NEW_WORLD_2"):
+			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_WALLS"), 1)
+			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_GRANARY"), 1)
+			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_FORGE"), 1)
+		else:
+			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_WALLS"), 1)
+			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_BARRACKS"), 1)
+			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_GRANARY"), 1)
+			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_FORGE"), 1)
+			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_MARKET"), 1)
+			if CyCity.plot().isCoastalLand():
+				CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_HARBOR"), 1)
+				CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_LIGHTHOUSE"), 1)
+				CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_FISHERMAN_HUT"), 1)
+		iNeededCities -= 1
 
-    if (eBestUnit > 0):
-      while (iNumNeededDefenders > 0):
-        player.initUnit(eBestUnit, pNewCity.getX(), pNewCity.getY(), UnitAITypes.UNITAI_CITY_DEFENSE, DirectionTypes.DIRECTION_NORTH)
-        iNumNeededDefenders -= 1
-
-    if (iEvent == GC.getInfoTypeForString("EVENT_NEW_WORLD_2")):
-      pNewCity.setNumRealBuilding(GC.getCivilizationInfo(pNewCity.getCivilizationType()).getCivilizationBuildings(GC.getInfoTypeForString("BUILDINGCLASS_WALLS")), 1)
-      pNewCity.setNumRealBuilding(GC.getCivilizationInfo(pNewCity.getCivilizationType()).getCivilizationBuildings(GC.getInfoTypeForString("BUILDINGCLASS_GRANARY")), 1)
-      pNewCity.setNumRealBuilding(GC.getCivilizationInfo(pNewCity.getCivilizationType()).getCivilizationBuildings(GC.getInfoTypeForString("BUILDINGCLASS_FORGE")), 1)
-    else:
-      pNewCity.setNumRealBuilding(GC.getCivilizationInfo(pNewCity.getCivilizationType()).getCivilizationBuildings(GC.getInfoTypeForString("BUILDINGCLASS_WALLS")), 1)
-      pNewCity.setNumRealBuilding(GC.getCivilizationInfo(pNewCity.getCivilizationType()).getCivilizationBuildings(GC.getInfoTypeForString("BUILDINGCLASS_BARRACKS")), 1)
-      pNewCity.setNumRealBuilding(GC.getCivilizationInfo(pNewCity.getCivilizationType()).getCivilizationBuildings(GC.getInfoTypeForString("BUILDINGCLASS_GRANARY")), 1)
-      pNewCity.setNumRealBuilding(GC.getCivilizationInfo(pNewCity.getCivilizationType()).getCivilizationBuildings(GC.getInfoTypeForString("BUILDINGCLASS_FORGE")), 1)
-      pNewCity.setNumRealBuilding(GC.getCivilizationInfo(pNewCity.getCivilizationType()).getCivilizationBuildings(GC.getInfoTypeForString("BUILDINGCLASS_MARKET")), 1)
-      if pNewCity.plot().isCoastalLand():
-        pNewCity.setNumRealBuilding(GC.getCivilizationInfo(pNewCity.getCivilizationType()).getCivilizationBuildings(GC.getInfoTypeForString("BUILDINGCLASS_HARBOR")), 1)
-        pNewCity.setNumRealBuilding(GC.getCivilizationInfo(pNewCity.getCivilizationType()).getCivilizationBuildings(GC.getInfoTypeForString("BUILDINGCLASS_LIGHTHOUSE")), 1)
-        pNewCity.setNumRealBuilding(GC.getCivilizationInfo(pNewCity.getCivilizationType()).getCivilizationBuildings(GC.getInfoTypeForString("BUILDINGCLASS_FISHERMAN_HUT")), 1)
-
-    iNeededCities -= 1
 
 def canTriggerNewWorldCities3(argsList):
 
@@ -7769,8 +7766,8 @@ def canDoNewVolcano(argsList):
   # List of features that block new volcanoes
   listFeatures = [GC.getInfoTypeForString('FEATURE_PLATY_AUYANTEPUI'),
                   GC.getInfoTypeForString('FEATURE_PLATY_GREAT_BARRIER'),
-                  GC.getInfoTypeForString('FEATURE_GREAT_BARRIER_WITH_BEACON'),
-                  GC.getInfoTypeForString('FEATURE_GREAT_BARRIER_WITH_LIGHTHOUSE'),
+                  GC.getInfoTypeForString('FEATURE_GREAT_BARRIER_REEF_BEACON'),
+                  GC.getInfoTypeForString('FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE'),
                   GC.getInfoTypeForString('FEATURE_PLATY_EVEREST'),
                   GC.getInfoTypeForString('FEATURE_PLATY_FUJI'),
                   GC.getInfoTypeForString('FEATURE_PLATY_AURORA'),
@@ -7791,8 +7788,8 @@ def canDoNewVolcano(argsList):
                   GC.getInfoTypeForString('FEATURE_PLATY_VICTORIA_FALLS'),
                   GC.getInfoTypeForString('FEATURE_PLATY_KILIMANJARO'),
                   GC.getInfoTypeForString('FEATURE_PLATY_DEAD_SEA'),
-                  GC.getInfoTypeForString('FEATURE_VOLCANO'),
-                  GC.getInfoTypeForString('FEATURE_VOLCANO2')]
+                  GC.getInfoTypeForString('FEATURE_VOLCANO_ACTIVE'),
+                  GC.getInfoTypeForString('FEATURE_VOLCANO_DORMANT')]
 
   # List of resources that count as volcanic, and thus do not block volcanoes.
   listVolcanicResources = [GC.getInfoTypeForString('BONUS_OBSIDIAN'),
@@ -7821,8 +7818,8 @@ def canDoOldVolcano(argsList):
                   GC.getInfoTypeForString('FEATURE_PLATY_SOPKA'),
                   GC.getInfoTypeForString('FEATURE_PLATY_KRAKATOA'),
                   GC.getInfoTypeForString('FEATURE_PLATY_KILIMANJARO'),
-                  GC.getInfoTypeForString('FEATURE_VOLCANO'),
-                  GC.getInfoTypeForString('FEATURE_VOLCANO2')]
+                  GC.getInfoTypeForString('FEATURE_VOLCANO_ACTIVE'),
+                  GC.getInfoTypeForString('FEATURE_VOLCANO_DORMANT')]
 
   if pPlot.isCity():
     return False
@@ -7884,16 +7881,16 @@ def doVolcanoNeighbouringPlots(pPlot):
                GC.getInfoTypeForString("IMPROVEMENT_HAMLET"),
                GC.getInfoTypeForString("IMPROVEMENT_VILLAGE"),
                GC.getInfoTypeForString("IMPROVEMENT_TOWN"),
-               GC.getInfoTypeForString("IMPROVEMENT_SUBURB")]
+               GC.getInfoTypeForString("IMPROVEMENT_SUBURBS")]
   iRuins = GC.getInfoTypeForString("IMPROVEMENT_CITY_RUINS")
 
   # List of improvements that are unaffected by eruption
-  immuneImprovements = [GC.getInfoTypeForString("IMPROVEMENT_GRAIN_GATHERER"),
-               GC.getInfoTypeForString("IMPROVEMENT_PINE_GATHERER"),
-               GC.getInfoTypeForString("IMPROVEMENT_ROCK_GATHERER"),
+  immuneImprovements = [GC.getInfoTypeForString("IMPROVEMENT_SEED_CAMP"),
+               GC.getInfoTypeForString("IMPROVEMENT_WOOD_GATHERER"),
+               GC.getInfoTypeForString("IMPROVEMENT_STONE_TOOLS_WORKSHOP"),
                GC.getInfoTypeForString("IMPROVEMENT_SCAVENGING_CAMP"),
-               GC.getInfoTypeForString("IMPROVEMENT_FRUIT_GATHERER"),
-               GC.getInfoTypeForString("IMPROVEMENT_PLANT_GATHERER"),
+               GC.getInfoTypeForString("IMPROVEMENT_FRUIT_GATHERING_CAMP"),
+               GC.getInfoTypeForString("IMPROVEMENT_PLANT_GATHERING_CAMP"),
                GC.getInfoTypeForString("IMPROVEMENT_FISHING_BOATS"),
                GC.getInfoTypeForString("IMPROVEMENT_WHALING_BOATS"),
                GC.getInfoTypeForString("IMPROVEMENT_WHALING_SHIPS"),
@@ -7984,10 +7981,10 @@ def doVolcanoPlot(pPlot):
                   GC.getInfoTypeForString('FEATURE_PLATY_SOPKA'),
                   GC.getInfoTypeForString('FEATURE_PLATY_KRAKATOA'),
                   GC.getInfoTypeForString('FEATURE_PLATY_KILIMANJARO'),
-                  GC.getInfoTypeForString('FEATURE_VOLCANO'),
-                  GC.getInfoTypeForString('FEATURE_VOLCANO2')]
-  ft_volcano_dormant = GC.getInfoTypeForString('FEATURE_VOLCANO2')
-  ft_volcano_active = GC.getInfoTypeForString('FEATURE_VOLCANO')
+                  GC.getInfoTypeForString('FEATURE_VOLCANO_ACTIVE'),
+                  GC.getInfoTypeForString('FEATURE_VOLCANO_DORMANT')]
+  ft_volcano_dormant = GC.getInfoTypeForString('FEATURE_VOLCANO_DORMANT')
+  ft_volcano_active = GC.getInfoTypeForString('FEATURE_VOLCANO_ACTIVE')
 
   # if terrain is a hill or peak, level it by changing it to rocky flatland.
   if pPlot.isHills() or pPlot.isPeak():
@@ -8028,8 +8025,8 @@ def doVolcanoPlot(pPlot):
 def doVolcanoReport(argsList):
   pPlot = argsList[0]
   szBuffer = argsList[1]
-  ft_volcano_dormant = GC.getInfoTypeForString('FEATURE_VOLCANO2')
-  ft_volcano_active = GC.getInfoTypeForString('FEATURE_VOLCANO')
+  ft_volcano_dormant = GC.getInfoTypeForString('FEATURE_VOLCANO_DORMANT')
+  ft_volcano_active = GC.getInfoTypeForString('FEATURE_VOLCANO_ACTIVE')
 
   # report message to any one who can see this plot
   iMaxPlayer = GC.getMAX_PC_PLAYERS()
@@ -8116,7 +8113,7 @@ def doVolcanoExtinction(argsList):
 def doVolcanoSleep(argsList):
   kTriggeredData = argsList[0]
   pPlot = GC.getMap().plot(kTriggeredData.iPlotX, kTriggeredData.iPlotY)
-  pPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_VOLCANO2'), 0)
+  pPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_VOLCANO_DORMANT'), 0)
   player = GC.getPlayer(kTriggeredData.ePlayer)
   team = player.getTeam()
   doVolcanoAdjustFertility((pPlot, -1, team))
@@ -8325,7 +8322,7 @@ def doGlobalWarming(argsList):
       iGW += -2
     if jPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_SAVANNA"):
       iGW += -1
-    if jPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_VOLCANO"):
+    if jPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_VOLCANO_ACTIVE"):
       iGW += -5
     if jPlot.getTerrainType() == GC.getInfoTypeForString("TERRAIN_TUNDRA"):
       iGW += -5
@@ -8366,7 +8363,7 @@ def doGlobalWarming(argsList):
       iGW += 2
     if jPlot.getImprovementType() == GC.getInfoTypeForString("IMPROVEMENT_MODERN_MINE"):
       iGW += 4
-    if jPlot.getImprovementType() == GC.getInfoTypeForString("IMPROVEMENT_WELL"):
+    if jPlot.getImprovementType() == GC.getInfoTypeForString("IMPROVEMENT_HYDROCARBON_WELL"):
       iGW += 8
     if jPlot.isCity():
       icityGW = jPlot.getPlotCity()
@@ -8393,8 +8390,8 @@ def doGlobalWarming(argsList):
       elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_MUDDY"):
         iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_LUSH"), True, True)
       elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_LUSH"):
-        iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_GRASS"), True, True)
-      elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_GRASS"):
+        iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_GRASSLAND"), True, True)
+      elif (iPlot.getTerrainType()) == GC.getInfoTypeForString("TERRAIN_GRASSLAND"):
         iPlot.setTerrainType(GC.getInfoTypeForString("TERRAIN_PLAINS"), True, True)
         if iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_SWAMP") or iPlot.getFeatureType() == GC.getInfoTypeForString("FEATURE_BOG"):
           iPlot.setFeatureType(FeatureTypes.NO_FEATURE,-1)
@@ -8549,42 +8546,40 @@ def canApplyNativegood2(argsList):
           return 0
 
 def helpNativegood2(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_NATIVEGOOD2_1HELP",())
-
-  return szHelp
+	return TRNSLTR.getText("TXT_KEY_EVENT_NATIVEGOOD2_1HELP",())
 
 def ApplyNativegood2(argsList):
-        iEvent = argsList[0]
-        kTriggeredData = argsList[1]
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
 
-        player = GC.getPlayer(kTriggeredData.ePlayer)
-        iRelationship = player.getNativeRelationship()
-        iRelationship += 40
-        player.setNativeRelationship(iRelationship)
+	CyPlayer = GC.getPlayer(kTriggeredData.ePlayer)
+	iRelationship = CyPlayer.getNativeRelationship()
+	iRelationship += 40
+	CyPlayer.setNativeRelationship(iRelationship)
 
-        iHighest = 0
-        eBestUnit = 0
-        (pLoopCity, iter) = player.firstCity(False)
-        while(pLoopCity):
-                if pLoopCity.isCapital():
-                        for i in xrange( GC.getNumUnitClassInfos()):
-                                eLoopUnit = GC.getCivilizationInfo(pLoopCity.getCivilizationType()).getCivilizationUnits(i)
+	CyCity = CyPlayer.getCapitalCity()
+	if CyCity.isNone:
+		return
+	aList = (UnitAITypes.UNITAI_ATTACK, UnitAITypes.UNITAI_CITY_DEFENSE)
+	iHighest = 0
+	eBestUnit = -1
+	for iUnit in xrange(GC.getNumUnitInfos()):
+		CvUnitInfo = GC.getUnitInfo(iUnit)
+		if CvUnitInfo.getDomainType() != DomainTypes.DOMAIN_LAND or CvUnitInfo.getDefaultUnitAIType() not in aList:
+			continue
+		if CyCity.canTrain(iUnit, False, True):
+			iValue = CvUnitInfo.getProductionCost()
+			if iValue >= iHighest:
+				iHighest = iValue
+				eBestUnit = iUnit
 
-                                if (pLoopCity.canTrain(eLoopUnit, False, True)):
-                                        if ((GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType() == UnitAITypes.UNITAI_ATTACK) or (GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType() == UnitAITypes.UNITAI_CITY_DEFENSE)):
-                                                if (GC.getUnitInfo(eLoopUnit).getDomainType() == DomainTypes.DOMAIN_LAND):
-                                                        iValue = GC.getUnitInfo(eLoopUnit).getProductionCost()
-                                                        if (iValue >= iHighest):
-                                                                iHighest = iValue
-                                                                eBestUnit = eLoopUnit
-
-                for i in xrange(3):
-                        player.initUnit(eBestUnit, pLoopCity.getX(), pLoopCity.getY(), UnitAITypes.UNITAI_CITY_DEFENSE, DirectionTypes.NO_DIRECTION)
-
-                (pLoopCity, iter) = GC.getPlayer(self.iActiveLeader).nextCity(iter, False)
+	CyCity, i = CyPlayer.firstCity(False)
+	while CyCity:
+		x = CyCity.getX()
+		y = CyCity.getY()
+		for j in xrange(3):
+			CyPlayer.initUnit(eBestUnit, x, y, UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
+		CyCity, i = GC.getPlayer(self.iActiveLeader).nextCity(i, False)
 
 ######## Native Good 3 -- gold ###########
 
@@ -9268,8 +9263,8 @@ def doSacrificeCaptive(argsList):
 	elif pCity.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_HUMAN_SACRIFICE_ALTAR")) > 0:
 		iGoldenAgeLength = iGoldenAgeLength + 1
 
-	iDruid = GC.getInfoTypeForString("RELIGION_DRUID")
-	iMeasoamerican = GC.getInfoTypeForString("RELIGION_MESOAMERICANISM")
+	iDruid = GC.getInfoTypeForString("RELIGION_DRUIDIC_TRADITIONS")
+	iMeasoamerican = GC.getInfoTypeForString("RELIGION_NAGHUALISM")
 	iStateReligion = pUnit.getStateReligion()
 
 	if iStateReligion == iDruid :
@@ -9318,7 +9313,7 @@ def canBuildHorseBonus(argsList):
 	if not pPlot.isFlatlands() or pPlot.isCity() or pPlot.getBonusType(-1) > -1: return 0
 	# Check if Feature or Terrain makes invalid.
 	if pPlot.getFeatureType() not in (GC.getInfoTypeForString("FEATURE_FLOOD_PLAINS"), GC.getInfoTypeForString("FEATURE_SAVANNA"), -1): return 0
-	if pPlot.getTerrainType() not in (GC.getInfoTypeForString("TERRAIN_GRASS"), GC.getInfoTypeForString("TERRAIN_PLAINS")): return 0
+	if pPlot.getTerrainType() not in (GC.getInfoTypeForString("TERRAIN_GRASSLAND"), GC.getInfoTypeForString("TERRAIN_PLAINS")): return 0
 	return 1
 
 def doBuildHorseBonus(argsList):
@@ -9343,7 +9338,7 @@ def canBuildHorseBonusAndPasture(argsList):
 	if pPlot.getTerrainType() in (
 		GC.getInfoTypeForString("TERRAIN_SALT_FLATS"),	GC.getInfoTypeForString("TERRAIN_DUNES"),		GC.getInfoTypeForString("TERRAIN_DESERT"),
 		GC.getInfoTypeForString("TERRAIN_TAIGA"),		GC.getInfoTypeForString("TERRAIN_ICE"),			GC.getInfoTypeForString("TERRAIN_TUNDRA"),
-		GC.getInfoTypeForString("TERRAIN_PERMAFROST"),	GC.getInfoTypeForString("TERRAIN_ROCKY_COLD"),	GC.getInfoTypeForString("TERRAIN_ROCKY_ARID"),
+		GC.getInfoTypeForString("TERRAIN_PERMAFROST"),	GC.getInfoTypeForString("TERRAIN_JAGGED"),	GC.getInfoTypeForString("TERRAIN_BADLAND"),
 		GC.getInfoTypeForString("TERRAIN_BARREN"), 		GC.getInfoTypeForString("TERRAIN_MARSH")
 		): return 0
 	return 1
@@ -9367,7 +9362,7 @@ def canBuildCowBonus(argsList):
 	if not pPlot.isFlatlands() or pPlot.isCity() or pPlot.getBonusType(-1) > -1: return 0
 	# Check if Feature or Terrain makes invalid.
 	if pPlot.getFeatureType() not in (GC.getInfoTypeForString("FEATURE_FLOOD_PLAINS"), GC.getInfoTypeForString("FEATURE_SAVANNA"), -1): return 0
-	if pPlot.getTerrainType() not in (GC.getInfoTypeForString("TERRAIN_GRASS"), GC.getInfoTypeForString("TERRAIN_PLAINS")): return 0
+	if pPlot.getTerrainType() not in (GC.getInfoTypeForString("TERRAIN_GRASSLAND"), GC.getInfoTypeForString("TERRAIN_PLAINS")): return 0
 	return 1
 
 def doBuildCowBonus(argsList):
@@ -9392,7 +9387,7 @@ def canBuildCowBonusAndPasture(argsList):
 	if pPlot.getTerrainType() in (
 		GC.getInfoTypeForString("TERRAIN_SALT_FLATS"),	GC.getInfoTypeForString("TERRAIN_DUNES"),		GC.getInfoTypeForString("TERRAIN_DESERT"),
 		GC.getInfoTypeForString("TERRAIN_TAIGA"),		GC.getInfoTypeForString("TERRAIN_ICE"),			GC.getInfoTypeForString("TERRAIN_TUNDRA"),
-		GC.getInfoTypeForString("TERRAIN_PERMAFROST"),	GC.getInfoTypeForString("TERRAIN_ROCKY_COLD"),	GC.getInfoTypeForString("TERRAIN_ROCKY_ARID"),
+		GC.getInfoTypeForString("TERRAIN_PERMAFROST"),	GC.getInfoTypeForString("TERRAIN_JAGGED"),	GC.getInfoTypeForString("TERRAIN_BADLAND"),
 		GC.getInfoTypeForString("TERRAIN_BARREN"), 		GC.getInfoTypeForString("TERRAIN_MARSH")
 		): return 0
 	return 1
@@ -9415,7 +9410,7 @@ def canBuildSheepBonus(argsList):
 	if not pPlot.isHills() or pPlot.isCity() or pPlot.getBonusType(-1) > -1: return 0
 	# Check if Feature or Terrain makes invalid.
 	if pPlot.getFeatureType() not in (GC.getInfoTypeForString("FEATURE_FLOOD_PLAINS"), GC.getInfoTypeForString("FEATURE_SAVANNA"), -1): return 0
-	if pPlot.getTerrainType() not in (GC.getInfoTypeForString("TERRAIN_GRASS"), GC.getInfoTypeForString("TERRAIN_PLAINS")): return 0
+	if pPlot.getTerrainType() not in (GC.getInfoTypeForString("TERRAIN_GRASSLAND"), GC.getInfoTypeForString("TERRAIN_PLAINS")): return 0
 	return 1
 
 def doBuildSheepBonus(argsList):
@@ -9440,7 +9435,7 @@ def canBuildSheepBonusAndPasture(argsList):
 	if pPlot.getTerrainType() in (
 		GC.getInfoTypeForString("TERRAIN_SALT_FLATS"),	GC.getInfoTypeForString("TERRAIN_DUNES"),		GC.getInfoTypeForString("TERRAIN_DESERT"),
 		GC.getInfoTypeForString("TERRAIN_TAIGA"),		GC.getInfoTypeForString("TERRAIN_ICE"),			GC.getInfoTypeForString("TERRAIN_TUNDRA"),
-		GC.getInfoTypeForString("TERRAIN_PERMAFROST"),	GC.getInfoTypeForString("TERRAIN_ROCKY_COLD"),	GC.getInfoTypeForString("TERRAIN_ROCKY_ARID"),
+		GC.getInfoTypeForString("TERRAIN_PERMAFROST"),	GC.getInfoTypeForString("TERRAIN_JAGGED"),	GC.getInfoTypeForString("TERRAIN_BADLAND"),
 		GC.getInfoTypeForString("TERRAIN_BARREN"), 		GC.getInfoTypeForString("TERRAIN_MARSH")
 		): return 0
 	return 1
@@ -9464,7 +9459,7 @@ def canBuildDonkeyBonus(argsList):
 	if pPlot.isCity() or pPlot.getBonusType(-1) > -1: return 0
 	# Check if Feature or Terrain makes invalid.
 	if pPlot.getFeatureType() not in (GC.getInfoTypeForString("FEATURE_FLOOD_PLAINS"), GC.getInfoTypeForString("FEATURE_SAVANNA"), -1): return 0
-	if pPlot.getTerrainType() not in (GC.getInfoTypeForString("TERRAIN_GRASS"), GC.getInfoTypeForString("TERRAIN_PLAINS"), GC.getInfoTypeForString("TERRAIN_SCRUB")): return 0
+	if pPlot.getTerrainType() not in (GC.getInfoTypeForString("TERRAIN_GRASSLAND"), GC.getInfoTypeForString("TERRAIN_PLAINS"), GC.getInfoTypeForString("TERRAIN_SCRUB")): return 0
 	return 1
 
 def doBuildDonkeyBonus(argsList):
@@ -9489,7 +9484,7 @@ def canBuildDonkeyBonusAndPasture(argsList):
 	if pPlot.getTerrainType() in (
 		GC.getInfoTypeForString("TERRAIN_SALT_FLATS"),	GC.getInfoTypeForString("TERRAIN_DUNES"),		GC.getInfoTypeForString("TERRAIN_DESERT"),
 		GC.getInfoTypeForString("TERRAIN_TAIGA"),		GC.getInfoTypeForString("TERRAIN_ICE"),			GC.getInfoTypeForString("TERRAIN_TUNDRA"),
-		GC.getInfoTypeForString("TERRAIN_PERMAFROST"),	GC.getInfoTypeForString("TERRAIN_ROCKY_COLD"),	GC.getInfoTypeForString("TERRAIN_ROCKY_ARID"),
+		GC.getInfoTypeForString("TERRAIN_PERMAFROST"),	GC.getInfoTypeForString("TERRAIN_JAGGED"),	GC.getInfoTypeForString("TERRAIN_BADLAND"),
 		GC.getInfoTypeForString("TERRAIN_BARREN"), 		GC.getInfoTypeForString("TERRAIN_MARSH")
 		): return 0
 	return 1
@@ -9556,7 +9551,7 @@ def canBuildLlamaBonus(argsList):
 	# Check if Feature or Terrain makes invalid.
 	if pPlot.getTerrainType() not in (
 		GC.getInfoTypeForString("TERRAIN_BARREN"),	GC.getInfoTypeForString("TERRAIN_DESERT"),	GC.getInfoTypeForString("TERRAIN_SCRUB"),
-		GC.getInfoTypeForString("TERRAIN_ROCKEY"),	GC.getInfoTypeForString("TERRAIN_ROCKY_ARID")
+		GC.getInfoTypeForString("TERRAIN_ROCKEY"),	GC.getInfoTypeForString("TERRAIN_BADLAND")
 		): return 0
 	return 1
 
@@ -9580,7 +9575,7 @@ def canBuildLlamaBonusAndPasture(argsList):
 	# Check if Feature or Terrain makes invalid.
 	if pPlot.getTerrainType() not in (
 		GC.getInfoTypeForString("TERRAIN_BARREN"),	GC.getInfoTypeForString("TERRAIN_DESERT"),	GC.getInfoTypeForString("TERRAIN_SCRUB"),
-		GC.getInfoTypeForString("TERRAIN_ROCKEY"),	GC.getInfoTypeForString("TERRAIN_ROCKY_ARID")
+		GC.getInfoTypeForString("TERRAIN_ROCKEY"),	GC.getInfoTypeForString("TERRAIN_BADLAND")
 		): return 0
 	return 1
 
@@ -9603,11 +9598,11 @@ def canBuildPigBonus(argsList):
 	if pPlot.isCity() or pPlot.getBonusType(-1) > -1: return 0
 	# Check if Feature or Terrain makes invalid.
 	if pPlot.getFeatureType() not in (
-		GC.getInfoTypeForString("FEATURE_FOREST"), GC.getInfoTypeForString("FEATURE_FOREST_OLD"),
+		GC.getInfoTypeForString("FEATURE_FOREST"), GC.getInfoTypeForString("FEATURE_FOREST_ANCIENT"),
 		GC.getInfoTypeForString("FEATURE_JUNGLE"), GC.getInfoTypeForString("FEATURE_FLOOD_PLAINS")
 		): return 0
 	if pPlot.getTerrainType() not in (
-		GC.getInfoTypeForString("TERRAIN_SCRUB"), GC.getInfoTypeForString("TERRAIN_GRASS"), GC.getInfoTypeForString("TERRAIN_PLAINS"),
+		GC.getInfoTypeForString("TERRAIN_SCRUB"), GC.getInfoTypeForString("TERRAIN_GRASSLAND"), GC.getInfoTypeForString("TERRAIN_PLAINS"),
 		GC.getInfoTypeForString("TERRAIN_LUSH"), GC.getInfoTypeForString("TERRAIN_MUDDY"), GC.getInfoTypeForString("TERRAIN_MARSH")
 		): return 0
 	return 1
@@ -9632,7 +9627,7 @@ def canBuildPigBonusAndPasture(argsList):
 	# Check if Feature or Terrain makes invalid.
 	if pPlot.getFeatureType() in (GC.getInfoTypeForString("FEATURE_MANGROVE"), GC.getInfoTypeForString("FEATURE_PEAT_BOG")): return 0
 	if pPlot.getTerrainType() not in (
-		GC.getInfoTypeForString("TERRAIN_SCRUB"), GC.getInfoTypeForString("TERRAIN_GRASS"), GC.getInfoTypeForString("TERRAIN_PLAINS"),
+		GC.getInfoTypeForString("TERRAIN_SCRUB"), GC.getInfoTypeForString("TERRAIN_GRASSLAND"), GC.getInfoTypeForString("TERRAIN_PLAINS"),
 		GC.getInfoTypeForString("TERRAIN_LUSH"), GC.getInfoTypeForString("TERRAIN_MUDDY"), GC.getInfoTypeForString("TERRAIN_MARSH")
 		): return 0
 	return 1

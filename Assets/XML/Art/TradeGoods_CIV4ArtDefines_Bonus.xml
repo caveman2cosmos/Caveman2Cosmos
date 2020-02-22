@@ -8,7 +8,7 @@
 <BonusArtInfos>
 <!-- Wine - Champagne -->
 	<BonusArtInfo>
-		<Type>ART_DEF_BONUS_CHAMPAGNE</Type>
+		<Type>ART_DEF_BONUS_WINE_CHAMPAGNE</Type>
 		<fScale>1.0</fScale>
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Empty.nif</NIF>
@@ -18,7 +18,7 @@
 	</BonusArtInfo>
 <!-- Hit Musicals -->
 	<BonusArtInfo>
-		<Type>ART_DEF_BONUS_DRAMA</Type>
+		<Type>ART_DEF_BONUS_HIT_MUSICALS</Type>
 		<fScale>1.0</fScale>
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Terrain/Resources/Wheat/Wheat.nif</NIF>
@@ -28,7 +28,7 @@
 	</BonusArtInfo>
 <!-- Carved Emu Eggs -->
 	<BonusArtInfo>
-		<Type>ART_DEF_BONUS_EMU_EGG</Type>
+		<Type>ART_DEF_BONUS_CARVED_EMU_EGGS</Type>
 		<fScale>1.0</fScale>
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Empty.nif</NIF>
@@ -38,7 +38,7 @@
 	</BonusArtInfo>
 <!-- Fine Leather -->
 	<BonusArtInfo>
-		<Type>ART_DEF_BONUS_FINE_LEATHER</Type>
+		<Type>ART_DEF_BONUS_OSTRICH_LEATHER</Type>
 		<fScale>1.0</fScale>
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Empty.nif</NIF>
@@ -58,7 +58,7 @@
 	</BonusArtInfo>
 <!-- Hawaiian Surfboards -->
 	<BonusArtInfo>
-		<Type>ART_DEF_BONUS_H_SURFBOARD</Type>
+		<Type>ART_DEF_BONUS_HAWAIIAN_SURFBOARDS</Type>
 		<fScale>1.0</fScale>
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Empty.nif</NIF>
@@ -68,7 +68,7 @@
 	</BonusArtInfo>
 <!-- Jade Death Masks -->
 	<BonusArtInfo>
-		<Type>ART_DEF_BONUS_JADE_MASK</Type>
+		<Type>ART_DEF_BONUS_JADE_DEATH_MASKS</Type>
 		<fScale>1.0</fScale>
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Empty.nif</NIF>
@@ -78,7 +78,7 @@
 	</BonusArtInfo>
 <!-- Hit Movies -->
 	<BonusArtInfo>
-		<Type>ART_DEF_BONUS_MOVIES</Type>
+		<Type>ART_DEF_BONUS_HIT_MOVIES</Type>
 		<fScale>1.0</fScale>
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Terrain/Resources/Wheat/Wheat.nif</NIF>
@@ -88,7 +88,7 @@
 	</BonusArtInfo>
 <!-- Hit Singles -->
 	<BonusArtInfo>
-		<Type>ART_DEF_BONUS_MUSIC</Type>
+		<Type>ART_DEF_BONUS_HIT_SINGLES</Type>
 		<fScale>1.0</fScale>
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Terrain/Resources/Wheat/Wheat.nif</NIF>
@@ -98,7 +98,7 @@
 	</BonusArtInfo>
 <!-- Ostrich Feathers -->
 	<BonusArtInfo>
-		<Type>ART_DEF_BONUS_O_FEATHERS</Type>
+		<Type>ART_DEF_BONUS_OSTRICH_FEATHERS</Type>
 		<fScale>1.0</fScale>
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Empty.nif</NIF>
@@ -108,7 +108,7 @@
 	</BonusArtInfo>
 <!-- Red and Black Ware -->
 	<BonusArtInfo>
-		<Type>ART_DEF_BONUS_RED_AND_BLACK</Type>
+		<Type>ART_DEF_BONUS_RED_AND_BLACK_WARE</Type>
 		<fScale>1.0</fScale>
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Empty.nif</NIF>
@@ -118,7 +118,7 @@
 	</BonusArtInfo>
 <!-- Wine - Vintage Red -->
 	<BonusArtInfo>
-		<Type>ART_DEF_BONUS_VINTAGE_RED_WINE</Type>
+		<Type>ART_DEF_BONUS_WINE_VINTAGE_RED</Type>
 		<fScale>1.0</fScale>
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Empty.nif</NIF>
@@ -128,7 +128,7 @@
 	</BonusArtInfo>
 <!-- Wine - Vintage White -->
 	<BonusArtInfo>
-		<Type>ART_DEF_BONUS_VINTAGE_WHITE_WINE</Type>
+		<Type>ART_DEF_BONUS_WINE_VINTAGE_WHITE</Type>
 		<fScale>1.0</fScale>
 		<fInterfaceScale>1.0</fInterfaceScale>
 		<NIF>Art/Empty.nif</NIF>

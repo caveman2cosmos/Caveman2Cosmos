@@ -7,6 +7,7 @@
 		<UnitInfo>
 			<Class>UNITCLASS_LARA_CROFT</Class>
 			<Type>UNIT_LARA_CROFT</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HERO</Combat>
 			<SubCombatTypes>
@@ -59,7 +60,7 @@
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_MUSEUM</PrereqBuilding>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
-			<BonusType>BONUS_MOVIES</BonusType>
+			<BonusType>BONUS_HIT_MOVIES</BonusType>
 			<iCost>4720</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>51</iCombat>

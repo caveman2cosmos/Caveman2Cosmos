@@ -19,7 +19,7 @@
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_RELIGION</CivicOptionType>
-			<Type>CIVIC_DIVINE_RULE</Type>
+			<Type>CIVIC_DIVINE_CULT</Type>
 			<bNoNonStateReligionSpread>1</bNoNonStateReligionSpread>
 		</CivicInfo>
 		<CivicInfo>

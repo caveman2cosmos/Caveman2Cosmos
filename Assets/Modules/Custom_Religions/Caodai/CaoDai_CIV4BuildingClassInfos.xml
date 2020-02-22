@@ -9,33 +9,22 @@
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CAODAI_CATHEDRAL</Type>
 			<Description>TXT_KEY_BUILDING_CAODAI_CATHEDRAL</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_CAODAI_CATHEDRAL</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CAODAI_MONASTERY</Type>
 			<Description>TXT_KEY_BUILDING_CAODAI_MONASTERY</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_CAODAI_MONASTERY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CAODAI_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_CAODAI_SHRINE</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_CAODAI_SHRINE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CAODAI_TEMPLE</Type>
 			<Description>TXT_KEY_BUILDING_CAODAI_TEMPLE</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_CAODAI_TEMPLE</DefaultBuilding>
 		</BuildingClassInfo>
 	</BuildingClassInfos>

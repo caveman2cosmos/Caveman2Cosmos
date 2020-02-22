@@ -6,8 +6,8 @@
 	<ReligionInfos>
 		<ReligionInfo>
 			<Type>RELIGION_MORMON</Type>
-			<Description>TXT_KEY_RELIGION_MORMON</Description>
-			<Civilopedia>TXT_KEY_RELIGION_MORMON_PEDIA</Civilopedia>
+			<Description>TXT_KEY_TECH_MORMON</Description>
+			<Civilopedia>TXT_KEY_TECH_MORMON_PEDIA</Civilopedia>
 			<TechPrereq>TECH_MORMON</TechPrereq>
 			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>15</iSpreadFactor>

@@ -164,8 +164,8 @@ class DebugUtils:
 		popup = PyPopup.PyPopup(5003, EventContextTypes.EVENTCONTEXT_ALL)
 		popup.setHeaderString("Tech & Gold Cheat!")
 		popup.createPullDown()
-		popup.addPullDownString("All", GC.getMAX_CIV_PLAYERS())
-		for i in xrange(GC.getMAX_CIV_PLAYERS()):
+		popup.addPullDownString("All", GC.getMAX_PLAYERS())
+		for i in xrange(GC.getMAX_PLAYERS()):
 			if (GC.getPlayer(i).isAlive()):
 				popup.addPullDownString(GC.getPlayer(i).getName(), i)
 		popup.setBodyString("Modify Player " + unichr(8500))

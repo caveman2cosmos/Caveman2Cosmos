@@ -43,21 +43,21 @@ public:
 /* 																			    */
 /* 																			    */
 /********************************************************************************/
-	int AI_getOurPlotStrength(CvPlot* pPlot, int iRange, bool bDefensiveBonuses, bool bTestMoves, bool bIncludeVassals = false);
+	int AI_getOurPlotStrength(const CvPlot* pPlot, const int iRange, const bool bDefensiveBonuses, const bool bTestMoves, const bool bIncludeVassals = false) const;
 /********************************************************************************/
 /* 	BETTER_BTS_AI_MOD						END								    */
 /********************************************************************************/
 
-	void AI_updateAreaStragies(bool bTargets = true);
+	void AI_updateAreaStragies(const bool bTargets = true);
 	void AI_updateAreaTargets();
 
 	int AI_countFinancialTrouble() const;
-	int AI_countMilitaryWeight(CvArea* pArea) const;
+	int AI_countMilitaryWeight(const CvArea* pArea) const;
 
 	bool AI_isAnyCapitalAreaAlone() const;
-	bool AI_isPrimaryArea(CvArea* pArea) const;
-	bool AI_hasCitiesInPrimaryArea(TeamTypes eTeam) const;
-	AreaAITypes AI_calculateAreaAIType(CvArea* pArea, bool bPreparingTotal = false) const;
+	bool AI_isPrimaryArea(const CvArea* pArea) const;
+	bool AI_hasCitiesInPrimaryArea(const TeamTypes eTeam) const;
+	AreaAITypes AI_calculateAreaAIType(const CvArea* pArea, const bool bPreparingTotal = false) const;
 
 	int AI_calculateAdjacentLandPlots(TeamTypes eTeam) const;
 	int AI_calculateCapitalProximity(TeamTypes eTeam) const;
@@ -135,8 +135,8 @@ public:
 	int AI_getWarSuccessCapitulationRatio() const;
 	int AI_getEnemyPowerPercent( bool bConsiderOthers = false ) const;
 	int AI_getRivalAirPower( ) const;
-	bool AI_acceptSurrender( TeamTypes eSurrenderTeam );
-	bool AI_isOkayVassalTarget( TeamTypes eTeam );
+	bool AI_acceptSurrender(const TeamTypes eSurrenderTeam) const;
+	bool AI_isOkayVassalTarget(const TeamTypes eTeam) const;
 
 	void AI_getWarRands( int &iMaxWarRand, int &iLimitedWarRand, int &iDogpileWarRand ) const;
 	void AI_getWarThresholds( int &iMaxWarThreshold, int &iLimitedWarThreshold, int &iDogpileWarThreshold ) const;
@@ -212,13 +212,13 @@ public:
 	
 	bool AI_performNoWarRolls(TeamTypes eTeam);
 	
-	int AI_getAttitudeWeight(TeamTypes eTeam);
+	int AI_getAttitudeWeight(const TeamTypes eTeam) const;
 	
 	int AI_getLowestVictoryCountdown() const;
 
 	int AI_getTechMonopolyValue(TechTypes eTech, TeamTypes eTeam) const;
 	
-	bool AI_isWaterAreaRelevant(CvArea* pArea);
+	bool AI_isWaterAreaRelevant(const CvArea* pArea) const;
 	
 	virtual void read(FDataStreamBase* pStream);
 	virtual void write(FDataStreamBase* pStream);
@@ -285,9 +285,7 @@ protected:
 	int m_iLimitedWarPowerRatio;
 	int m_iDogpileWarRand;
 	int m_iMakePeaceRand;
-	
-	void read2(FDataStreamBase* pStream);
-	void write2(FDataStreamBase* pStream);
+
 	//edited functions
 	int AI_noTechTradeThreshold(bool bRecalculate = false) const;
 	int AI_techTradeKnownPercent(bool bRecalculate = false) const;

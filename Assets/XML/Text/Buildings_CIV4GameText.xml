@@ -3509,6 +3509,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BONEMARROWER_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]Bonemarrower[COLOR_REVERT] is a prehistoric era building that increases a city's [COLOR_GREEN]Food[COLOR_REVERT] production and provides [COLOR_GREEN]Healthiness[COLOR_REVERT] while also lowering [COLOR_GREEN]Disease[COLOR_REVERT] generation.</English>
+		<French>The [COLOR_BUILDING_TEXT]Bonemarrower[COLOR_REVERT] est un bâtiment de l'ère préhistorique qui augmente la production de  [COLOR_GREEN]Food[COLOR_REVERT] production and provides [COLOR_GREEN]Healthiness[COLOR_REVERT] while also lowering [COLOR_GREEN]Disease[COLOR_REVERT] generation.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BONNEVILE</Tag>
@@ -5646,6 +5647,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHILDBIRTH_HUT_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Enables Fertility Dance</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet la Danse de la Fertilité</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHILDCAREHUT</Tag>
@@ -6684,6 +6686,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COMMUNITY_DISCUSSIONS_PEDIA</Tag>
 		<English>Humans have always been social creatures. Once language was really developed, regular community discussions were instrumental in rapidly expanding mankind's knowledge base. Those tribes that quickly figured out they could benefit from sharing and understanding the experiences of other people were far more capable of surviving and thriving in the early Prehistoric Era. This building represents the growing custom of having regular discussions rather than simply taking place at intermittent intervals and only as needs demand. It may have taken some surprising degree of effort to get this to happen, at some sacrifice to other potential efforts.</English>
+		<French>Humans have always been social creatures. Once language was really developed, regular community discussions were instrumental in rapidly expanding mankind's knowledge base. Those tribes that quickly figured out they could benefit from sharing and understanding the experiences of other people were far more capable of surviving and thriving in the early Prehistoric Era. This building represents the growing custom of having regular discussions rather than simply taking place at intermittent intervals and only as needs demand. It may have taken some surprising degree of effort to get this to happen, at some sacrifice to other potential efforts.</French>
 		<German>Öffentliche Diskussionen und Gedankenaustausch waren für den Wissenserwerb des Menschen schon in Urzeiten von entscheidender Bedeutung. Zunächst traf man sich einfach an markanten Orten in der Siedlung oder in der näheren Umgebung. Später wurden spezielle Versammlungsplätze angelegt, die dann immer weiter ausgebaut werden mussten, um der steigenden Anzahl an Individuen genug Platz zu bieten.</German>
 		<Polish>Dyskusja (od łac. discussio, aby to omówić) - jeden ze sposobów wymianypoglądów na określony temat, popartych argumentami, prowadzona w gronie dwóch lub więcej osób. Dyskusja może mieć formę ustną (komunikacja werbalna) lub pisemną. W wyniku dyskusji dochodzi do ścierania się różnych poglądów związanych z różnymi punktami widzenia osób prowadzących dyskusję. Określenie zbieżnego (wspólnego) stanowiska, o ile do tego dojdzie, może mieć formę kompromisu lub konsensu.</Polish>
 	</TEXT>
@@ -7423,6 +7426,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRUSADE_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Free [COLOR_UNIT_TEXT]Crusader[COLOR_REVERT] Every Few Turns</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Un [COLOR_UNIT_TEXT]Croisé[COLOR_REVERT] gratuit à chaque tour</French>
 		<German>[ICON_BULLET]Kostenloser [COLOR_UNIT_TEXT]Kreuzritter[COLOR_REVERT] alle paar Runden</German>
 		<Spanish>[ICON_BULLET]Un [COLOR_UNIT_TEXT]Cruzado[COLOR_REVERT] gratis cada cierto número de turnos</Spanish>
 		<Polish>[ICON_BULLET]Darmowy [COLOR_UNIT_TEXT]Krzyżowiec[COLOR_REVERT] co kilka tur</Polish>
@@ -7506,6 +7510,131 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LIANGZHU_STRATEGY</Tag>
 		<English>Flavour culture for the Chinese culture. Allows special Jade buildings and trade goods.</English>
+		<French>Flavour culture for the Chinese culture. Allows special Jade buildings and trade goods.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE</Tag>
+		<English>Active Culture</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_AFRICAN</Tag>
+		<English>C.Ac. African</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_ASIAN</Tag>
+		<English>C.Ac. Asian</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_EUROPEAN</Tag>
+		<English>C.Ac. European</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</Tag>
+		<English>C.Ac. Middle Eastern</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_NEANDERTHAL</Tag>
+		<English>C.Ac. Neanderthal</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</Tag>
+		<English>C.Ac. North American</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_OCEANIAN</Tag>
+		<English>C.Ac. Oceanian</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Tag>
+		<English>C.Ac. = Culture Active[NEWLINE] This building shows that the culture is an integrated and recognized part of your nation's culture.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</Tag>
+		<English>C.Ac. South American</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED</Tag>
+		<English>Adopted Culture</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_AFRICAN</Tag>
+		<English>C.Ad. African</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_ASIAN</Tag>
+		<English>C.Ad. Asian</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_EUROPEAN</Tag>
+		<English>C.Ad. European</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_MIDDLE_EASTERN</Tag>
+		<English>C.Ad. Middle Eastern</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_NEANDERTHAL</Tag>
+		<English>C.Ad. Neanderthal</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_NORTH_AMERICAN</Tag>
+		<English>C.Ad. North American</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_OCEANIAN</Tag>
+		<English>C.Ad. Oceanian</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Tag>
+		<English>C.Ad. = Culture Adopted[NEWLINE]By owning 3 cities with the same foreign (Not your native culture) "Local Culture" you will get that foreign culture as an "Adopted Culture".</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_SOUTH_AMERICAN</Tag>
+		<English>C.Ad. South American</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_BARBARIAN</Tag>
+		<English>Barbarian Culture</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL</Tag>
+		<English>Local Culture</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_AFRICAN</Tag>
+		<English>C.L. African</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_ASIAN</Tag>
+		<English>C.L. Asian</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_EUROPEAN</Tag>
+		<English>C.L. European</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</Tag>
+		<English>C.L. Middle Eastern</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_NEANDERTHAL</Tag>
+		<English>C.L. Neanderthal</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</Tag>
+		<English>C.L. North American</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_OCEANIAN</Tag>
+		<English>C.L. Oceanian</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Tag>
+		<English>C.L. = Culture Local[NEWLINE]Each city has one or more local cultures, settlers bring these local cultures from the city they originate from to the new city they found. When the culture is made active, either by being your native culture or by becoming an adopted culture, it will be possible to build these local cultures.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</Tag>
+		<English>C.L. South American</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE</Tag>
@@ -7528,7 +7657,47 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 		<Polish>Tubylcza Kultura</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_AFRICAN</Tag>
+		<English>C.N. African</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_ASIAN</Tag>
+		<English>C.N. Asian</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_EUROPEAN</Tag>
+		<English>C.N. European</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</Tag>
+		<English>C.N. Middle Eastern</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_NEANDERTHAL</Tag>
+		<English>C.N. Neanderthal</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</Tag>
+		<English>C.N. North American</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_OCEANIAN</Tag>
+		<English>C.N. Oceanian</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Tag>
+		<English>C.N. = Culture Native[NEWLINE]Every civilization have one explicit native culture.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</Tag>
+		<English>C.N. South American</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_NEANDERTHAL</Tag>
+		<English>C.N. Neanderthal Culture</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_PEDIA</Tag>
 		<English>Culture - a particular form or stage of civilization, as that of a certain nation or period.</English>
 		<French>Culture - une forme ou état de la civilisation, correspondant à une nation ou période.</French>
 		<German>Im weitesten Sinn ist [COLOR_BUILDING_TEXT]Kultur[COLOR_REVERT] im Gegensatz zur Natur all das, was der Mensch selbst erschaffen hat. Im engeren Sinn werden als Kulturen Gruppen von Menschen bezeichnet, die sich durch jeweils bestimmte Wertvorstellungen, soziale Normen, Sitten und Gebräuche auszeichnen und vor allem voneinander unterscheiden.</German>
@@ -8918,6 +9087,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EARTHWORM_PEDIA</Tag>
 		<English>Known to be high in protein and iron, eaten by various peoples such as the native Yekuana of Venezuela.</English>
+		<French>Known to be high in protein and iron, eaten by various peoples such as the native Yekuana of Venezuela.</French>
 		<Polish>Dżdżownicowate, dżdżownice (Lumbricidae) - rodzina skąposzczetówprzystosowanych do życia w glebie. Obejmuje ponad 670 gatunków, w tym większość glebowych skąposzczetów. Dżdżownicowate są jednym z ważniejszych czynników wpływających na przewietrzanie i nawożenie gleby. Są hermafrodytami (obojnakami), ale występuje u nich zapłodnienie krzyżowe. Nieliczne rozmnażają się partenogenetycznie.</Polish>
 	</TEXT>
 	<TEXT>
@@ -10124,6 +10294,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FIREPIT_PEDIA</Tag>
 		<English>Fire pits have been in existence for a very long time and despite many technological advancements since the advent of man's use of fire, they have remained a popular item because of their versatility. A fire pit can physically vary from a pit dug into the ground to an elaborate gas burning compilation of stone, brick, and metal. The common feature of fire pits is that they are designed to contain a fire and prevent it from spreading.</English>
+		<French>Fire pits have been in existence for a very long time and despite many technological advancements since the advent of man's use of fire, they have remained a popular item because of their versatility. A fire pit can physically vary from a pit dug into the ground to an elaborate gas burning compilation of stone, brick, and metal. The common feature of fire pits is that they are designed to contain a fire and prevent it from spreading.</French>
 		<Polish>Palenisko - to część pieca lub kotła, w którym odbywa się spalanie paliwa.</Polish>
 	</TEXT>
 	<TEXT>
@@ -10645,7 +10816,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FROM_ATTACKS</Tag>
-		<English>[ICON_BULLET]1 %F1 per turn, per unit that dies attacking this city., Maximum of %d2 %F3 per turn, 1 %F4 Fades away after %d5 turns.</English>
+		<English>[ICON_BULLET]1 %F1 per turn, per unit that dies attacking this city. Maximum of %d2 %F3 per turn, 1 %F4 Fades away after %d5 turns.</English>
 		<French>[ICON_BULLET]1 %F1 par tour, par unité qui meurt en attaquant la ville.[NEWLINE][ICON_BULLET]Maximum de %d2 %F3 par tour[NEWLINE][ICON_BULLET]1 %F4 s'estompe après %d5 tours.</French>
 		<German>[ICON_BULLET]1 %F1 pro Runde für jede Einheit, die beim Angriff auf die Stadt stirbt.[NEWLINE][ICON_BULLET]Maximum von %d2 %F3 pro Runde[NEWLINE][ICON_BULLET]Wird nach %d5 Runden um 1 %F4 reduziert</German>
 		<Italian>[ICON_BULLET]1 %F1 ogni turno, per ogni unità che muore attaccando questa città.[NEWLINE][ICON_BULLET]Massimo di %d2 %F3 per turno[NEWLINE][ICON_BULLET]1 %F4 Svanisce dopo %d5 turni.</Italian>
@@ -13172,6 +13343,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOUSE_OF_PARLIMENT_PEDIA</Tag>
 		<English>A parliament is a legislature, especially in those countries whose system of government is based on the Westminster system modeled after that of the United Kingdom. The name is derived from the French parlement, the action of parler (to speak): a parlement is a discussion. The term came to mean a meeting at which such a discussion took place. It acquired its modern meaning as it came to be used for the body of people (in an institutional sense) who would meet to discuss matters of state. [PARAGRAPH:2]The origins of the modern concept of prime ministerial government go back to the Kingdom of Great Britain (1707 - 1800) and The Parliamentary System in Sweden 1721 - 1772, that coincided with each other. [PARAGRAPH:2]In theory, power resided in the monarch, who chaired cabinet and chose ministers. In reality, King George I's inability to speak English led the responsibility for chairing cabinet to go to the leading minister, literally the prime or first minister. The gradual democratisation of parliament with the broadening of the voting franchise increased parliament's role in controlling government, and in deciding who the king could ask to form a government. By the nineteenth century, the Great Reform Act of 1832 led to parliamentary dominance, with its choice invariably deciding who was prime minister and the complexion of the government.[PARAGRAPH:2]Other countries gradually adopted what came to be called the Westminster Model of government, with an executive answerable to parliament, but exercising powers nominally vested in the head of state, in the name of the head of state. Hence, the use of phrases like Her Majesty's government or His Excellency's government. Such a system became particularly prevalent in older British dominions, many of whom had their constitutions enacted by the British parliament. Examples include Australia, New Zealand, Canada, the Irish Free State and the Union of South Africa, though these parliaments themselves have often evolved or were reformed from their British model: the Australian Senate, for instance, more closely reflects the US Senate than the British House of Lords; whereas there is no upper house in New Zealand.[PARAGRAPH:2]In very ancient India, during the Vedic civilization, there are mentions of two Parliament-like gatherings of the Indo-Aryan kingdoms called the Sabha and the Samiti. During the time of the Buddha, many states were even tribal republics, called the Sanghas. The Sabha has been interpreted by the historians as a representative assembly of the elect-the important men of the clan, which ran day-to-day business with the king. The Samiti seems to be a gathering of all the male members of the kingdom, and probably convened only for the ratification/election of a new king. The two largely democratic institutions, which kept a check on the absolutism of the king, were given a sacred position, and have been called the daughters of the deity Prajapati in the Vedas, the holiest of all Hindu scriptures and the earliest Indo-European literature. However, these democratic institutions became weaker as republics became larger and elected chieftainship moved towards hereditary and absolute monarchy. The Sabha and the Samiti bear almost no mention in later literature. After this, India would not have any democratic legislature till the British times, culminating in its modern democratic Parliament (whose two Houses still bear the name of Sabha).</English>
+		<French>A parliament is a legislature, especially in those countries whose system of government is based on the Westminster system modeled after that of the United Kingdom. The name is derived from the French parlement, the action of parler (to speak): a parlement is a discussion. The term came to mean a meeting at which such a discussion took place. It acquired its modern meaning as it came to be used for the body of people (in an institutional sense) who would meet to discuss matters of state. [PARAGRAPH:2]The origins of the modern concept of prime ministerial government go back to the Kingdom of Great Britain (1707 - 1800) and The Parliamentary System in Sweden 1721 - 1772, that coincided with each other. [PARAGRAPH:2]In theory, power resided in the monarch, who chaired cabinet and chose ministers. In reality, King George I's inability to speak English led the responsibility for chairing cabinet to go to the leading minister, literally the prime or first minister. The gradual democratisation of parliament with the broadening of the voting franchise increased parliament's role in controlling government, and in deciding who the king could ask to form a government. By the nineteenth century, the Great Reform Act of 1832 led to parliamentary dominance, with its choice invariably deciding who was prime minister and the complexion of the government.[PARAGRAPH:2]Other countries gradually adopted what came to be called the Westminster Model of government, with an executive answerable to parliament, but exercising powers nominally vested in the head of state, in the name of the head of state. Hence, the use of phrases like Her Majesty's government or His Excellency's government. Such a system became particularly prevalent in older British dominions, many of whom had their constitutions enacted by the British parliament. Examples include Australia, New Zealand, Canada, the Irish Free State and the Union of South Africa, though these parliaments themselves have often evolved or were reformed from their British model: the Australian Senate, for instance, more closely reflects the US Senate than the British House of Lords; whereas there is no upper house in New Zealand.[PARAGRAPH:2]In very ancient India, during the Vedic civilization, there are mentions of two Parliament-like gatherings of the Indo-Aryan kingdoms called the Sabha and the Samiti. During the time of the Buddha, many states were even tribal republics, called the Sanghas. The Sabha has been interpreted by the historians as a representative assembly of the elect-the important men of the clan, which ran day-to-day business with the king. The Samiti seems to be a gathering of all the male members of the kingdom, and probably convened only for the ratification/election of a new king. The two largely democratic institutions, which kept a check on the absolutism of the king, were given a sacred position, and have been called the daughters of the deity Prajapati in the Vedas, the holiest of all Hindu scriptures and the earliest Indo-European literature. However, these democratic institutions became weaker as republics became larger and elected chieftainship moved towards hereditary and absolute monarchy. The Sabha and the Samiti bear almost no mention in later literature. After this, India would not have any democratic legislature till the British times, culminating in its modern democratic Parliament (whose two Houses still bear the name of Sabha).</French>
 		<Polish>Parlament - w państwach o demokratycznych systemach władzy, jest to najwyższy organ przedstawicielski, a jednocześnie zasadniczy organ władzy ustawodawczej. Parlament - w myśl Monteskiuszowskiej teorii podziału władzy - jest jednym z trzech pionów władzy państwowej i w żaden sposób nie jest ważniejszy od dwóch pozostałych. W systemach parlamentarno-gabinetowych (np. Polska) parlament jest najwyższym organem władzy państwowej. Z kolei w państwach realnego socjalizmu, parlamenty w mniejszym lub większym zakresie były kontrolowane przez partie komunistyczne. Pozycja parlamentu na przestrzeni dziejów zmieniała się. Wraz z przechodzeniem z monarchii przez monarchię konstytucyjną do parlamentarnej zauważany był wzrost roli parlamentu. Jednak w pierwszej połowie XX wieku dostrzegane jest osłabianie organu przedstawicielskiego na rzecz władzy wykonawczej.</Polish>
 	</TEXT>
 	<TEXT>
@@ -13200,10 +13372,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOVERCRAFT_FACTORY_PEDIA</Tag>
 		<English>A hovercraft, also known as an air-cushion vehicle or ACV, is a craft capable of travelling over land, water, mud or ice and other surfaces both at speed and when stationary. Hovercraft are hybrid vessels operated by a pilot as an aircraft rather than a captain as a marine vessel. They operate by creating a cushion of low-pressure, high volume air between the hull of the vessel and the surface below. Typically, this cushion is contained within a flexible "skirt". They typically hover at heights between 200 mm (7.9 in) and 600 mm (24 in) above any surface and operate above 20 knots (23 mph) and can clear gradients up to 20 degrees. The first practical design for hovercraft derived from a British invention in the 1950s to 1960s. They are now used throughout the world as specialised transports in disaster relief, coastguard, military and survey applications as well as for sport or passenger service. Very large versions have been used to transport hundreds of people and vehicles across the English Channel whilst others have military applications used to transport tanks, soldiers and large equipment in hostile environments and terrain.</English>
-		<French>A hovercraft, also known as an air-cushion vehicle or ACV, is a craft capable of travelling over land, water, mud or ice and other surfaces both at speed and when stationary. Hovercraft are hybrid vessels operated by a pilot as an aircraft rather than a captain as a marine vessel.They operate by creating a cushion of low-pressure, high volume air between the hull of the vessel and the surface below. Typically this cushion is contained within a flexible "skirt". They typically hover at heights between 200 mm (7.9 in) and 600 mm (24 in) above any surface and operate above 20 knots (23 mph) and can clear gradients up to 20 degrees.The first practical design for hovercraft derived from a British invention in the 1950s to 1960s. They are now used throughout the world as specialised transports in disaster relief, coastguard, military and survey applications ainsi que for sport or passenger service. Very large versions have been used to transport hundreds of people and vehicles across the English Channel whilst others have military applications used to transport tanks, soldiers and large equipment in hostile environments and terrain</French>
 		<German>Ein Luftkissenfahrzeug ist ein Amphibienfahrzeug, das durch Luft getragen wird, die eine Art Kissen bildet. Es wird meist auf dem Wasser eingesetzt und dient dem Güter- und Personentransport, als Expeditionsfahrzeug oder als Hilfsfahrzeug bei Rettungsdiensten und Feuerwehren</German>
-		<Italian>A hovercraft, also known as an air-cushion vehicle or ACV, is a craft capable of travelling over land, water, mud or ice and other surfaces both at speed and when stationary. Hovercraft are hybrid vessels operated by a pilot as an aircraft rather than a captain as a marine vessel.They operate by creating a cushion of low-pressure, high volume air between the hull of the vessel and the surface below. Typically this cushion is contained within a flexible "skirt". They typically hover at heights between 200 mm (7.9 in) and 600 mm (24 in) above any surface and operate above 20 knots (23 mph) and can clear gradients up to 20 degrees.The first practical design for hovercraft derived from a British invention in the 1950s to 1960s. They are now used throughout the world as specialised transports in disaster relief, coastguard, military and survey applications as well as for sport or passenger service. Very large versions have been used to transport hundreds of people and vehicles across the English Channel whilst others have military applications used to transport tanks, soldiers and large equipment in hostile environments and terrain</Italian>
-		<Spanish>A hovercraft, also known as an air-cushion vehicle or ACV, is a craft capable of travelling over land, water, mud or ice and other surfaces both at speed and when stationary. Hovercraft are hybrid vessels operated by a pilot as an aircraft rather than a captain as a marine vessel.They operate by creating a cushion of low-pressure, high volume air between the hull of the vessel and the surface below. Typically this cushion is contained within a flexible "skirt". They typically hover at heights between 200 mm (7.9 in) and 600 mm (24 in) above any surface and operate above 20 knots (23 mph) and can clear gradients up to 20 degrees.The first practical design for hovercraft derived from a British invention in the 1950s to 1960s. They are now used throughout the world as specialised transports in disaster relief, coastguard, military and survey applications as well as for sport or passenger service. Very large versions have been used to transport hundreds of people and vehicles across the English Channel whilst others have military applications used to transport tanks, soldiers and large equipment in hostile environments and terrain</Spanish>
 		<Polish>Poduszkowiec (ang. hovercraft) - pojazd poruszający się na poduszce powietrznej. Poduszka ta powstaje gdy wentylator zasysa powietrze z otoczenia i wtłacza je pod spód pojazdu. Powietrze sprężane jest wewnątrz komory powstałej pomiędzy dnem maszyny, gruntem i elastycznym fartuchem. Gdy komora wypełni się powietrzem i poduszkowiec uniesie się na odpowiednią wysokość, nadmiar powietrza wydostaje się na zewnątrz. Wentylator musi mieć wystarczającą wydajność aby uzupełniał ubytek powietrza. Dzięki temu wysokość poduszki powietrznej pozostaje stała.</Polish>
 	</TEXT>
 	<TEXT>
@@ -15364,6 +15533,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LICHEN_BURNER_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]Lichen Burner[COLOR_REVERT] is a prehistoric era building that increases a city's [COLOR_GREEN]Culture[COLOR_REVERT] production and provides [COLOR_GREEN]Healthiness[COLOR_REVERT] at the cost of raising [COLOR_RED]Flammability[COLOR_REVERT].</English>
+		<French>The [COLOR_BUILDING_TEXT]Lichen Burner[COLOR_REVERT] est un bâtiment de l'ère préhistorique qui augmente la production de  [COLOR_GREEN]Culture[COLOR_REVERT] production and provides [COLOR_GREEN]Healthiness[COLOR_REVERT] at the cost of raising [COLOR_RED]Flammability[COLOR_REVERT].</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LICHEN_GATHERER</Tag>
@@ -17557,7 +17727,6 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MINING_NANOBOT_CONTROL_CENTER_PEDIA</Tag>
 		<English>Called the Terranova Nanite, a colony of these mining nanites are primarily used to mine asteroids, but can be used on terrestrial surfaces with high caution. The Control Center has a kill switch that can shut down or self-destruct the nanites if they pose a significant threat.</English>
-		<French>Called the Terranova Nanite, a colony of these mining nanites are primarily used to mine asteroids, but can be used on terrestrial surfaces with high caution. The un Centre de Contrôle has a kill switch that can shut down or self destruct the nanites if they pose a significant threat.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MINING_NANOBOT_CONTROL_CENTER_STRATEGY</Tag>
@@ -20149,7 +20318,6 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PAINTBALL_ARENA_PEDIA</Tag>
 		<English>Paintball is a sport in which players compete; in teams or individually, to eliminate opponents by tagging them with capsules containing water-soluble dye and gelatin shell outside (referred to as paintballs) propelled from a device called a paintball marker (commonly referred to as a paintball gun). Paintballs are composed of a non-toxic, biodegradable, water-soluble polymer. The game is regularly played at a sporting level with organized competition involving worldwide leagues, tournaments, professional teams, and players. Paintball technology is also used by military forces, law enforcement, para-military and security organizations to supplement military training, as well as playing a role in riot response, and non-lethal suppression of dangerous suspects.</English>
-		<French>Paintball is a sport in which players compete; in teams or individually, to eliminate opponents by tagging them with capsules containing water soluble dye and gelatin shell outside (referred to as paintballs) propelled from a device called a paintball marker (commonly referred to as a paintball gun). Paintballs are composed of a non-toxic, biodegradable, water soluble polymer. The game is regularly played at a sporting level with organized competition involving worldwide leagues, tournaments, professional teams, and players. Paintball technology is also used by military forces, law enforcement, para-military and security organizations to supplement military training, ainsi que playing a role in riot response, and non-lethal suppression of dangerous suspects.</French>
 		<Polish>Paintball - rodzaj gry zespołowej, polegającej na prowadzeniu pozorowanej walki przy użyciu markerów, urządzeń zbliżonych kształtem i zasadą działania do broni pneumatycznej, które za pomocą sprężonego powietrza lubdwutlenku węgla wyrzucają kulki wypełnione farbą na bazie żelatynyspożywczej. Trafienie przeciwnika, podczas którego kulka rozbija się, pozostawiając kolorowy ślad (nazywany przez graczy splatem) na ciele, masce bądź markerze zawodnika, powoduje jego eliminację z gry.</Polish>
 	</TEXT>
 	<TEXT>
@@ -24440,7 +24608,6 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SINGULARITY_BRAIN_LAB_PEDIA</Tag>
 		<English>Replaces the Human brain completely with a 12th generation Artificial Intelligence Core, and can download knowledge from exocortex networks. Can be stacked together in 64 and 128 "brains" to run a small or large city. Required for mind uploading and memory replication.</English>
-		<French>Replaces the Human brain completely with a 12th generation un Coeur d'intelligence artificielle, and can download knowledge from exocortex networks. Can be stacked together in 64 and 128 "brains" to run a small or large city. required for mind uploading and memory replication.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SINGULARITY_BRAIN_LAB_STRATEGY</Tag>
@@ -24728,6 +24895,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNAIL_PEDIA</Tag>
 		<English>Snail is a common name that is applied most often to land snails, terrestrial pulmonate gastropod molluscs. However, the common name "snail" is also applied to most of the members of the molluscan class Gastropoda that have a coiled shell that is large enough for the animal to retract completely into. When the word "snail" is used in this most general sense, it includes not just land snails but also thousands of species of sea snails and freshwater snails. Occasionally a few other molluscs that are not actually gastropods, such as the Monoplacophora, which superficially resemble small limpets, may also informally be referred to as "snails".</English>
+		<French>Snail is a common name that is applied most often to land snails, terrestrial pulmonate gastropod molluscs. However, the common name "snail" is also applied to most of the members of the molluscan class Gastropoda that have a coiled shell that is large enough for the animal to retract completely into. When the word "snail" is used in this most general sense, it includes not just land snails but also thousands of species of sea snails and freshwater snails. Occasionally a few other molluscs that are not actually gastropods, such as the Monoplacophora, which superficially resemble small limpets, may also informally be referred to as "snails".</French>
 		<Polish>Ślimaki lądowe w kuchni - ślimaki lądowe stanowią od tysięcy lat formę pożywienia dla ludzi, świadczą o tym wykopaliska archeologiczne związane zkulturą mezolityczną dokonane na terenie dzisiejszej Algierii i Tunezji. Dowody kulinarnego zastosowania ślimaków, czyli osmolone skorupy odnaleziono także w innych stanowiskach archeologicznych regionu śródziemnomorskiego sprzed od 12000 do 6000 lat.</Polish>
 	</TEXT>
 	<TEXT>
@@ -26862,7 +27030,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOURISM_ACHIEVEMENT_EFFECT</Tag>
-		<English>Effect - Achievement (Touristic)</English>
+		<English>Effect - Achievement (Tourism)</English>
 		<French>Effet - Accomplissement (Tourisme)</French>
 		<Polish>Efekt - Osiągnięcie (Turystyka)</Polish>
 	</TEXT>
@@ -27087,7 +27255,6 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRANCE_HUT_PEDIA</Tag>
 		<English>Trance denotes a variety of processes, ecstasy, techniques, modalities and states of mind, awareness and consciousness. Trance states may occur involuntarily and unbidden. A Trance Hut is a hut where people take various drugs to get in trance.</English>
-		<French>Trance denotes a variety of processes, ecstasy, techniques, modalities and states of mind, awareness and consciousness. Trance states may occur involuntarily and unbidden. A une Hutte de Transe is a hut were people take various drugs to get in trance.</French>
 		<Polish>Trans - jeden z rodzajów odmiennych stanów świadomości. Stan umysłu charakteryzujący się zmienioną świadomością, co oznacza również zmienioną wrażliwość na bodźce. Trans może wywoływać stan obniżonej lub podwyższonej świadomości. Osoby pogrążone w transie mogą wykonywać określone czynności podświadomie, w sposób niekontrolowany przez świadomość.</Polish>
 	</TEXT>
 	<TEXT>
@@ -29083,26 +29250,32 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXILE_PRACTICES</Tag>
 		<English>Exile Practices</English>
+		<French>Pratiques de l'Exil</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXILE_PRACTICES_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]Exile Practices[COLOR_REVERT] is a prehistoric era building that lowers a city's [COLOR_GREEN]Crime[COLOR_REVERT] generation but decreases [COLOR_RED]Espionage[COLOR_REVERT] production. Once built a city can then train [COLOR_UNIT_TEXT]Exile[COLOR_REVERT] units that have hidden nationality, meaning that they can go inside other civilizations without the need for signing open borders or declaring war, making them a useful early-game unit for exploration and harming rivals. It can (albeit rarely) spawn a hidden barbarian [COLOR_UNIT_TEXT]Exile[COLOR_REVERT] unit that can further worsen a city's [COLOR_RED]Crime[COLOR_REVERT] situation if not caught.</English>
+		<French>Les [COLOR_BUILDING_TEXT]Pratiques de l'Exil[COLOR_REVERT] est un bâtiment de l'ère préhistorique qui réduit la génération de [COLOR_GREEN]Crime[COLOR_REVERT] d'une ville mais diminue la production [COLOR_RED]d'espionnage[COLOR_REVERT]. Une fois construite, une ville peut alors former des[COLOR_UNIT_TEXT]Exilés[COLOR_REVERT], des unités qui ont une nationalité cachée, ce qui signifie qu'elles peuvent pénétrer dans d'autres civilisations sans avoir besoin de signer un traité de frontières ouvertes ou de déclarer la guerre, ce qui en fait une unité de début de jeu utile pour l'exploration et qui peut nuire à ses rivaux. Il peut (quoique rarement) engendrer une unité barbare cachée [COLOR_UNIT_TEXT]Exilé[COLOR_REVERT] qui peut aggraver encore la situation au niveau [COLOR_RED]Crime[COLOR_REVERT] d'une ville si elle n'est pas capturée.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXILE_PRACTICES_PEDIA</Tag>
 		<English>To be in exile means to be away from one's home while either being explicitly refused permission to return or being threatened with imprisonment or death upon return. It can be a form of punishment and solitude. Exile is an early motif in ancient Greek tragedy. In the ancient Greek world, this was seen as a fate worse than death as sometimes being in exile meant being against the elements or wild beasts that could leave a person critically injured and consequently suffer for a long time before finally succumbing to their wounds.</English>
+		<French>Être en exil signifie s'éloigner de son domicile tout en se voyant explicitement refuser l'autorisation de rentrer ou être menacé d'emprisonnement ou de mort à son retour. Cela peut être une forme de punition et de solitude. L'exil est un des premiers motifs de la tragédie grecque antique. Dans le monde grec ancien, cela était considéré comme un sort pire que la mort car parfois en exil signifiait être contre les éléments ou les bêtes sauvages qui pouvaient laisser une personne gravement blessée et par conséquent souffrir longtemps avant de finalement succomber à leurs blessures.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SURGICAL_OFFICE</Tag>
 		<English>Surgeon's Office</English>
+		<French>Cabinet de chirurgien</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SURGICAL_OFFICE_PEDIA</Tag>
 		<English>A surgeon's is where a surgeon resides while he works.</English>
+		<French>Un cabinet de chirurgien est l'endroit où réside un chirurgien pendant qu'il travaille.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SURGICAL_OFFICE_STRATEGY</Tag>
 		<English>Surgeon's Office provides health to the city and helps units recover health.  It replaces the Doctor's Office and unlocks a new Surgeon Unit.  But it does not get replaced by a Hospital and as an Outpatient Surgical center, it remains valid until proper Medical Clinics emerge in the Modern Era.</English>
+		<French>Le cabinet du chirurgien fournit de la santé à la ville et aide les unités à retrouver la santé. Il remplace le bureau du médecin et déverrouille une nouvelle unité de chirurgien. Mais il n'est pas remplacé par un hôpital et en tant que centre de chirurgie ambulatoire, il reste valable jusqu'à ce que des cliniques médicales appropriées émergent à l'ère moderne.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNAKE_OIL</Tag>
@@ -29119,6 +29292,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CONSPIRATORS_HIDEOUT</Tag>
 		<English>Conspirators' Hideout</English>
+		<French>Repaire de Conspirateurs</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CONSPIRATORS_HIDEOUT_STRATEGY</Tag>
@@ -29167,6 +29341,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOTORCYCLE_CLUB</Tag>
 		<English>Motorcycle Club</English>
+		<French>Club de Bikers</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOTORCYCLE_CLUB_STRATEGY</Tag>
@@ -29203,6 +29378,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BLACK_HAT_HIDEOUT</Tag>
 		<English>Black Hat Hideout</English>
+		<French>Repaire de "Chapeaux noirs"</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BLACK_HAT_HIDEOUT_STRATEGY</Tag>
@@ -29215,22 +29391,27 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORBITAL_TARGETS</Tag>
 		<English>Orbital Targets</English>
+		<French>Cibles Orbitales</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORBITAL_TARGETS_STRATEGY</Tag>
 		<English>Replaces the Automated Firing Range with satellites placed in orbit to provide target practice for extremely long range targeting.  Includes the ground version of the Firing Range in its definition but adds this extra layer of skill training now that hand held targeting systems have become so advanced and laser weaponry has become the mainstay.  Unlocks the High Tech Sniper unit.</English>
+		<French>Remplace le champ de tir automatisé par des satellites placés en orbite pour fournir une pratique ciblée pour un ciblage à très longue portée. Inclut la version au sol du champ de tir dans sa définition, mais ajoute cette couche supplémentaire de formation des compétences maintenant que les systèmes de ciblage portatifs sont devenus si avancés et que les armes laser sont devenues le pilier. Déverrouille l'unité High Tech Sniper.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORBITAL_TARGETS_PEDIA</Tag>
 		<English>Satellites for Target practice from a standard Firing Range facility.</English>
+		<French>Satellites pour la pratique des cibles depuis une installation de tir standard.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROPERTY_SPAWN_BARB</Tag>
 		<English>[ICON_BULLET]Can spawn a barbarian %s1_Unit.</English>
+		<French>[ICON_BULLET]Peut faire appaître un %s1_Unit barbare.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROPERTY_SPAWN_FRIENDLY</Tag>
 		<English>[ICON_BULLET]Can spawn a friendly %s1_Unit.</English>
+		<French>[ICON_BULLET]Peut faire apparaître un %s1_Unit amical.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPY_NETWORK</Tag>
@@ -29275,7 +29456,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPY_HIDEOUT</Tag>
 		<English>Spy Hideout</English>
-		<French>Repaire d'espion</French>
+		<French>Repaire d'Espions</French>
 		<German>Spion-Versteck</German>
 		<Polish>Kryjówka Szpiegów</Polish>
 	</TEXT>
@@ -29288,6 +29469,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPY_HIDEOUT_PEDIA</Tag>
 		<English>In the game these are used to help train better spies and improve your defense against foreign espionage.</English>
+		<French>Dans le jeu, ceux-ci sont utilisés pour aider à former de meilleurs espions et à améliorer votre défense contre l'espionnage étranger.</French>
 		<Polish>W grze tego typu placówki są wykorzystywane do trenowania szpiegów i zwikszania twoich możliwości kontrwywiadowczych.</Polish>
 	</TEXT>
 	<TEXT>
@@ -29578,60 +29760,74 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNSANCTIONED_ASSASSINS_DEN</Tag>
 		<English>Assassin's Den (Unsanctioned)</English>
+		<French>Assassin's Den (Impuni)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNSANCTIONED_BANDITS_HIDEOUT1</Tag>
 		<English>Thieves' Hideout (Unsanctioned)</English>
+		<French>Repaire de Bandits (Impuni)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNSANCTIONED_BANDITS_HIDEOUT2</Tag>
 		<English>Rogues' Hideout (Unsanctioned)</English>
+		<French>Repaire de Maraudeurs (Impuni)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNSANCTIONED_BANDITS_HIDEOUT3</Tag>
 		<English>Burglars' Hideout (Unsanctioned)</English>
+		<French>Repaire de Contrebandiers (Impuni)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNSANCTIONED_BLACK_HAT_HIDEOUT</Tag>
 		<English>Black Hat Hideout (Unsanctioned)</English>
+		<French>Repaire de "Chapeaux Noirs" (Impuni)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNSANCTIONED_CONSPIRATORS_HIDEOUT</Tag>
 		<English>Conspirators' Hideout (Unsanctioned)</English>
+		<French>Repaire de Conspirateurs (Impuni)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNSANCTIONED_LOANSHARK</Tag>
 		<English>Loan Shark (Unsanctioned)</English>
+		<French>Usuriers (Impuni)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNSANCTIONED_MOB_STOREFRONT</Tag>
 		<English>Mob Storefront (Unsanctioned)</English>
+		<French>Vitrine de Motos (Impuni)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNSANCTIONED_MOTORCYCLE_CLUB</Tag>
 		<English>Motorcycle Club (Unsanctioned)</English>
+		<French>Club de Bikers (Impuni)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALBUILDING_GROUP_PREHISTORIC_CAVES</Tag>
 		<English>Prehistoric Caves</English>
+		<French>Cavernes Préhistoriques</French>
 		<German>Prähistorische Höhlen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALBUILDING_GROUP_LEGENDARY_LANDSCAPES</Tag>
 		<English>Legendary Landscapes</English>
+		<French>Paysages Légendaires</French>
 		<German>Legendäre Landschaften</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALBUILDING_GROUP_DELUXE_WINERIES</Tag>
 		<English>Deluxe Wineries</English>
+		<French>Vignes De Luxe</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DISNEYLAND_EFFECT</Tag>
 		<English>Effect - Disneyland</English>
+		<French>Effet - Disneyland</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DISNEYLAND_EFFECT_PEDIA</Tag>
 		<English>Disneyland influence</English>
+		<French>Influence de Disneyland</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DISNEYLAND_EFFECT_STRATEGY</Tag>
@@ -29640,10 +29836,12 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VALLEY_KINGS_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Build Sphinx and Pyramids in the same city to get Valley of the Kings wonder.</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Construisez Sphinx et Pyramides dans la même ville pour obtenir la merveille de la Vallée des Rois.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LASVEGASSTRIP_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Build Circus Circus Casino and Luxor Casino, and avoid building Monte Carlo Casino in the same city, if you want to build Las Vegas Strip wonder.</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Construisez le Circus Circus Casino et le Luxor Casino, et évitez de construire le Monte Carlo Casino dans la même ville, si vous voulez construire le Las Vegas Strip wonder.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AIRPORT_PEDIA</Tag>
@@ -30624,14 +30822,17 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_EFFECT</Tag>
 		<English>Cave exists near a city</English>
+		<French>Cave exists near a city</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_EFFECT_PEDIA</Tag>
 		<English>This building is a game system building. It identifies when your nation has teh correct terrain feature near to one of your cities needed for a line of normal buildings.</English>
+		<French>This building is a game system building. It identifies when your nation has teh correct terrain feature near to one of your cities needed for a line of normal buildings.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LASCAUX_EFFECT</Tag>
 		<English>Lascaux Caves Effect</English>
+		<French>Lascaux Caves Effect</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIODOME</Tag>
@@ -30940,7 +31141,6 @@ e.g. The chance per rival is 1 in 75 turns with "smallest/fastest", and 1 in 790
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_NPT_STRATEGY</Tag>
 		<English>N/a</English>
-		<Polish>,</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_NPT_PEDIA</Tag>
@@ -30954,7 +31154,6 @@ e.g. The chance per rival is 1 in 75 turns with "smallest/fastest", and 1 in 790
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_IVY_MIKE_STRATEGY</Tag>
 		<English>N/a</English>
-		<Polish>.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_IVY_MIKE_PEDIA</Tag>
@@ -31055,6 +31254,7 @@ e.g. The chance per rival is 1 in 75 turns with "smallest/fastest", and 1 in 790
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREAT_ZIMBABWE_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Cities Grow when Building With [ICON_FOOD]</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Les villes grandissent en construisant avec [ICON_FOOD]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THE_MOTHERLAND_CALLS</Tag>
@@ -31074,6 +31274,7 @@ e.g. The chance per rival is 1 in 75 turns with "smallest/fastest", and 1 in 790
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THE_MOTHERLAND_CALLS_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Conscripts One Unit Per City When A Rival Declares War On You , +1[ICON_HAPPY] for 10 turns in All Cities When A Rival Declares War On You</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Conscrit une unité par ville lorsqu'un rival vous déclare la guerre, +1[ICON_HAPPY] pendant 10 tours dans toutes les villes lorsqu'un rival vous déclare la guerre</French>
 		<Polish>[ICON_BULLET]Werbuje jedna jednoste na miasto w momencie wypowiedzenia wojny Tobie przez obce Imperium/ [NEWLINE][ICON_BULLET]+1[ICON_HAPPY] na kazde 10 tur we wszystkich miastach w czasie wojny z wrogim Imperium.</Polish>
 	</TEXT>
 	<TEXT>
@@ -31115,6 +31316,7 @@ e.g. The chance per rival is 1 in 75 turns with "smallest/fastest", and 1 in 790
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REICHSTAG_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Starts a Golden Age when another civilization becomes your vassal</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Commence un âge d'or lorsqu'une autre civilisation devient votre vassal</French>
 		<Polish>[ICON_BULLET]Kiedy inna cywilizacja zostaje Twoim wasalem w Twoim Imperium oglaszana jest Zlota Era</Polish>
 	</TEXT>
 	<TEXT>
@@ -32234,6 +32436,7 @@ e.g. The chance per rival is 1 in 75 turns with "smallest/fastest", and 1 in 790
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROUTE_66_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Places Route 66 Terminus in your largest city on the same continent, Builds Highway Between This City and Route 66 Terminus</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Place le Terminus de la Route 66 dans votre plus grande ville du même continent, construit une autoroute entre cette ville et le Terminus de la Route 66</French>
 		<Italian>[ICON_BULLET]Piazza un Termine della Route 66 nella città più grande dello stesso continente[NEWLINE][ICON_BULLET]Costruisce un'autostrada tra questa città e il termine della Route 66</Italian>
 	</TEXT>
 	<TEXT>

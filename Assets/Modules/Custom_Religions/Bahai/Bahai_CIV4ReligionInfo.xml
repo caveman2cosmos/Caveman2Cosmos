@@ -7,9 +7,9 @@
 	<ReligionInfos>
 		<ReligionInfo>
 			<Type>RELIGION_BAHAI</Type>
-			<Description>TXT_KEY_RELIGION_BAHAI</Description>
-            <Adjective>TXT_KEY_RELIGION_BAHAI_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_RELIGION_BAHAI_PEDIA</Civilopedia>
+			<Description>TXT_KEY_TECH_BAHAI</Description>
+            <Adjective>TXT_KEY_TECH_BAHAI_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_TECH_BAHAI_PEDIA</Civilopedia>
 			<TechPrereq>TECH_BAHAI</TechPrereq>
 			<FreeUnitClass>UNITCLASS_BAHAI_MISSIONARY</FreeUnitClass>
 			<iFreeUnits>1</iFreeUnits>

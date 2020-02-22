@@ -7,8 +7,8 @@
 	<ReligionInfos>
 		<ReligionInfo>
 			<Type>RELIGION_SIKHISM</Type>
-			<Description>TXT_KEY_RELIGION_SIKHISM</Description>
-  			<Civilopedia>TXT_KEY_RELIGION_SIKHISM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_TECH_SIKHISM</Description>
+  			<Civilopedia>TXT_KEY_TECH_SIKHISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_SIKHISM</TechPrereq>
 			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>16</iSpreadFactor>

@@ -6,13 +6,13 @@
 <!-- GameText Civilopedia Techs -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_SCIENTOLOGY</Tag>
+		<Tag>TXT_KEY_TECH_SCIENTOLOGY</Tag>
 		<English>Scientology</English>
 		<French>Scientologie</French>
 		<Polish>Scjentologia</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_SCIENTOLOGY_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_TECH_SCIENTOLOGY_ADJECTIVE</Tag>
 		<English>Scientologist</English>
 		<French>
 			<Text>Scientologue</Text>
@@ -37,19 +37,19 @@
 		<Polish>Scjentologiczny</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_SCIENTOLOGY_PEDIA</Tag>
+		<Tag>TXT_KEY_TECH_SCIENTOLOGY_PEDIA</Tag>
 		<English>Scientology is a body of beliefs and related practices created by L. Ron Hubbard in 1952. Scientology teaches that people are immortal spiritual beings who have forgotten their true nature. Scientology promotes spiritual rehabilitation through a type of counseling referred to as "auditing".Study materials and auditing courses are made available to members in return for specified donations.Scientology includes the belief that souls ("thetans") reincarnate and have lived on other planets before living on Earth. Former members say that portions of Hubbard's writings on this remote extraterrestrial past are included in confidential Upper Levels and are not revealed until thousands of dollars have been paid to the Church of Scientology.</English>
 		<Italian>Scientology è un corpo di credenze e pratiche creati da L. Ron Hubbard nel 1952. Scientology insegna che le persone sono esseri spirituali immortali che hanno dimenticato la loro vera natura. Scientology promuove la riabilitazione spirituale attraverso un tipo di consulenza denominato "auditing". I materiali di studio e i corsi di auditing vengono resi disponibili ai membri in cambio di donazioni specifiche.Scientology include la credenza che le anime ("thetan") si reincarnano e hanno vissuto su altri pianeti prima di vivere sulla Terra. Ex membri dicono che porzioni degli scritti di Hubbard su questi passati remoti extraterrestri sono incluse nei livelli superiori confidenziali, e non vengono rivelate fino a quando migliaia di dollari non sono stati versati alla Chiesa di Scientology.</Italian>
 		<Polish>Scjentologia (ang. Scientology) - organizacja założona w 1951 roku przez pisarza science fiction L. Rona Hubbarda jako alternatywa dla psychologii. W roku 1953 została ona określona przez niego jako "stosowana filozofia religijna". Scjentolodzy określają się jako religijna organizacja non-profit, poświęcona propagowaniu rozwoju ducha ludzkiego oraz programom doradztwa i rehabilitacji. Wielu członków tej organizacji twierdzi, że nauki Hubbarda (zwane w terminologii scjentologicznej "technologią") uwolniły ich od uzależnień, depresji, problemów w nauce, chorób psychicznych i innych kłopotów.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_SCIENTOLOGY_QUOTE</Tag>
+		<Tag>TXT_KEY_TECH_SCIENTOLOGY_QUOTE</Tag>
 		<English>"Writing for a penny a word is ridiculous. If a man really wanted to make a million dollars, the best way would be to start his own religion." - L. Ron Hubbard, founder of Scientology</English>
 		<French>"Ecrire une lettre pour un sou est ridicule. Si un homme veut vraiment se faire un million de dollars, le meilleur moyen est de lancer sa propre religion." - L. Ron Hubbard, fondateur de la Scientologie</French>
 		<Polish>"Pisanie za grosze jest żałosne. Jeśli człowiek chce zarobić prawdziwe pieniądze to musi założyć własną religię." - L. Ron Hubbard, założyciel Scjentologii</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_SCIENTOLOGY_STRATEGY</Tag>
+		<Tag>TXT_KEY_TECH_SCIENTOLOGY_STRATEGY</Tag>
 		<English>Research Scientology to found a Religion</English>
 		<French>Recherchez Scientology pour fonder une religion</French>
 		<Spanish>Investiga la Cienciología para fundar una religión.</Spanish>

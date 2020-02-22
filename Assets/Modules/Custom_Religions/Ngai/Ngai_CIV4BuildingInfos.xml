@@ -15,10 +15,10 @@
 			<Strategy>TXT_KEY_BUILDING_NAITERUKOB_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NAITERUKOB</ArtDefineTag>
-			<ReligionType>RELIGION_NGAI</ReligionType>
-			<StateReligion>RELIGION_NGAI</StateReligion>
+			<ReligionType>RELIGION_NGAIISM</ReligionType>
+			<StateReligion>RELIGION_NGAIISM</StateReligion>
 			<bStateReligion>1</bStateReligion>
-			<PrereqReligion>RELIGION_NGAI</PrereqReligion>
+			<PrereqReligion>RELIGION_NGAIISM</PrereqReligion>
 			<FreePromotion>PROMOTION_GUARDIAN</FreePromotion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
@@ -44,7 +44,7 @@
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_NGAI</ReligionType>
+					<ReligionType>RELIGION_NGAIISM</ReligionType>
 					<iReligionChange>2</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -84,8 +84,8 @@
 			<Strategy>TXT_KEY_BUILDING_NGAI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NGAI</ArtDefineTag>
-			<ReligionType>RELIGION_NGAI</ReligionType>
-			<PrereqReligion>RELIGION_NGAI</PrereqReligion>
+			<ReligionType>RELIGION_NGAIISM</ReligionType>
+			<PrereqReligion>RELIGION_NGAIISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>176</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -110,7 +110,7 @@
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_NGAI</ReligionType>
+					<ReligionType>RELIGION_NGAIISM</ReligionType>
 					<iReligionChange>2</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -144,10 +144,10 @@
 			<Strategy>TXT_KEY_BUILDING_NGAINANYOKE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NGAINANYOKE</ArtDefineTag>
-			<ReligionType>RELIGION_NGAI</ReligionType>
-			<StateReligion>RELIGION_NGAI</StateReligion>
+			<ReligionType>RELIGION_NGAIISM</ReligionType>
+			<StateReligion>RELIGION_NGAIISM</StateReligion>
 			<bStateReligion>1</bStateReligion>
-			<PrereqReligion>RELIGION_NGAI</PrereqReligion>
+			<PrereqReligion>RELIGION_NGAIISM</PrereqReligion>
 			<FreePromotion>PROMOTION_VENGEANCE</FreePromotion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
@@ -173,7 +173,7 @@
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_NGAI</ReligionType>
+					<ReligionType>RELIGION_NGAIISM</ReligionType>
 					<iReligionChange>2</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -213,10 +213,10 @@
 			<Strategy>TXT_KEY_BUILDING_NGAINAROK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NGAINAROK</ArtDefineTag>
-			<ReligionType>RELIGION_NGAI</ReligionType>
-			<StateReligion>RELIGION_NGAI</StateReligion>
+			<ReligionType>RELIGION_NGAIISM</ReligionType>
+			<StateReligion>RELIGION_NGAIISM</StateReligion>
 			<bStateReligion>1</bStateReligion>
-			<PrereqReligion>RELIGION_NGAI</PrereqReligion>
+			<PrereqReligion>RELIGION_NGAIISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -247,7 +247,7 @@
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_NGAI</ReligionType>
+					<ReligionType>RELIGION_NGAIISM</ReligionType>
 					<iReligionChange>2</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -287,10 +287,10 @@
 			<Strategy>TXT_KEY_BUILDING_NGAINAROK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NGAINAROK_COW</ArtDefineTag>
-			<ReligionType>RELIGION_NGAI</ReligionType>
-			<StateReligion>RELIGION_NGAI</StateReligion>
+			<ReligionType>RELIGION_NGAIISM</ReligionType>
+			<StateReligion>RELIGION_NGAIISM</StateReligion>
 			<bStateReligion>1</bStateReligion>
-			<PrereqReligion>RELIGION_NGAI</PrereqReligion>
+			<PrereqReligion>RELIGION_NGAIISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
 			<ConstructSound>AS2D_BUILD_CONFUCIAN</ConstructSound>
@@ -329,10 +329,10 @@
 			<Strategy>TXT_KEY_BUILDING_NGAINAROK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NGAINAROK_PIG</ArtDefineTag>
-			<ReligionType>RELIGION_NGAI</ReligionType>
-			<StateReligion>RELIGION_NGAI</StateReligion>
+			<ReligionType>RELIGION_NGAIISM</ReligionType>
+			<StateReligion>RELIGION_NGAIISM</StateReligion>
 			<bStateReligion>1</bStateReligion>
-			<PrereqReligion>RELIGION_NGAI</PrereqReligion>
+			<PrereqReligion>RELIGION_NGAIISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
 			<ConstructSound>AS2D_BUILD_CONFUCIAN</ConstructSound>
@@ -371,10 +371,10 @@
 			<Strategy>TXT_KEY_BUILDING_NGAINAROK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NGAINAROK_SHEEP</ArtDefineTag>
-			<ReligionType>RELIGION_NGAI</ReligionType>
-			<StateReligion>RELIGION_NGAI</StateReligion>
+			<ReligionType>RELIGION_NGAIISM</ReligionType>
+			<StateReligion>RELIGION_NGAIISM</StateReligion>
 			<bStateReligion>1</bStateReligion>
-			<PrereqReligion>RELIGION_NGAI</PrereqReligion>
+			<PrereqReligion>RELIGION_NGAIISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
 			<ConstructSound>AS2D_BUILD_CONFUCIAN</ConstructSound>
@@ -413,9 +413,9 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OLDOINYO</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_OLDOINYO</MovieDefineTag>
-			<HolyCity>RELIGION_NGAI</HolyCity>
-			<ReligionType>RELIGION_NGAI</ReligionType>
-			<GlobalReligionCommerce>RELIGION_NGAI</GlobalReligionCommerce>
+			<HolyCity>RELIGION_NGAIISM</HolyCity>
+			<ReligionType>RELIGION_NGAIISM</ReligionType>
+			<GlobalReligionCommerce>RELIGION_NGAIISM</GlobalReligionCommerce>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
@@ -436,7 +436,7 @@
 			</CommerceChangeDoubleTimes>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_NGAI</ReligionType>
+					<ReligionType>RELIGION_NGAIISM</ReligionType>
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
