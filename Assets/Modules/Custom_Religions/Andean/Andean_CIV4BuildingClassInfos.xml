@@ -23,7 +23,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_ANDEAN_TEMPLE</Type>
-			<Description>TXT_KEY_BUILDING_ANDEAN_TEMPLEY</Description>
+			<Description>TXT_KEY_BUILDING_ANDEAN_TEMPLE</Description>
 			<DefaultBuilding>BUILDING_ANDEAN_TEMPLE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>

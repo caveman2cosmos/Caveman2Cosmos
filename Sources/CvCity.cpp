@@ -2779,15 +2779,12 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 		return false;
 	}
 
-	if (!bTestVisible)
+	if (!bTestVisible && kUnit.isRequiresStateReligionInCity())
 	{
-		ReligionTypes eStateReligion = GET_PLAYER(getOwner()).getStateReligion();
-		if (kUnit.isRequiresStateReligionInCity())
+		const ReligionTypes eStateReligion = GET_PLAYER(getOwner()).getStateReligion();
+		if (NO_RELIGION == eStateReligion || !isHasReligion(eStateReligion))
 		{
-			if (NO_RELIGION == eStateReligion || !isHasReligion(eStateReligion))
-			{
-				return false;
-			}
+			return false;
 		}
 	}
 
@@ -17914,7 +17911,7 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 
 			order = OrderData::createUnitOrder(unitType, AIType, plotIndex, contractFlags, contractedAIType, bSave);
 
-			GET_PLAYER(getOwner()).changeUnitClassMaking(((UnitClassTypes)(GC.getUnitInfo(unitType).getUnitClassType())), 1);
+			GET_PLAYER(getOwner()).changeUnitMaking(unitType, 1);
 
 			area()->changeNumTrainAIUnits(getOwner(), order.getUnitAIType(), 1);
 			GET_PLAYER(getOwner()).AI_changeNumTrainAIUnits(order.getUnitAIType(), 1);
@@ -18095,7 +18092,7 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 		FAssertMsg(eTrainUnit != NO_UNIT, "eTrainUnit is expected to be assigned a valid unit type");
 		FAssertMsg(eTrainAIUnit != NO_UNITAI, "eTrainAIUnit is expected to be assigned a valid unit AI type");
 
-		GET_PLAYER(getOwner()).changeUnitClassMaking(((UnitClassTypes)(GC.getUnitInfo(eTrainUnit).getUnitClassType())), -1);
+		GET_PLAYER(getOwner()).changeUnitMaking(eTrainUnit, -1);
 
 		area()->changeNumTrainAIUnits(getOwner(), eTrainAIUnit, -1);
 		GET_PLAYER(getOwner()).AI_changeNumTrainAIUnits(eTrainAIUnit, -1);
@@ -18810,7 +18807,7 @@ bool CvCity::doCheckProduction()
 	{
 		if (getUnitProduction((UnitTypes)iI) > 0)
 		{
-			if (player.isProductionMaxedUnitClass((UnitClassTypes)(GC.getUnitInfo((UnitTypes)iI).getUnitClassType())))
+			if (player.isProductionMaxedUnit((UnitTypes)iI))
 			{
 				int iProductionGold = ((getUnitProduction((UnitTypes)iI) * GC.getDefineINT("MAXED_UNIT_GOLD_PERCENT")) / 100);
 
@@ -18924,7 +18921,7 @@ bool CvCity::doCheckProduction()
 				// Change the unit types in the queue
 				foreach_(OrderData& order, m_orderQueue | filtered(bind(matchUnitOrder, _1, unitType)))
 				{
-					player.changeUnitClassMaking((UnitClassTypes)GC.getUnitInfo(order.getUnitType()).getUnitClassType(), -1);
+					player.changeUnitMaking(order.getUnitType(), -1);
 					order.setUnitType(eUpgradeUnit);
 					if (player.AI_unitValue(eUpgradeUnit, order.getUnitAIType(), area()) == 0)
 					{
@@ -18934,7 +18931,7 @@ bool CvCity::doCheckProduction()
 						area()->changeNumTrainAIUnits(getOwner(), order.getUnitAIType(), 1);
 						player.AI_changeNumTrainAIUnits(order.getUnitAIType(), 1);
 					}
-					player.changeUnitClassMaking((UnitClassTypes)GC.getUnitInfo(order.getUnitType()).getUnitClassType(), 1);
+					player.changeUnitMaking(order.getUnitType(), 1);
 				}
 			}
 		}
@@ -23413,8 +23410,8 @@ bool CvCity::canUpgradeUnit(UnitTypes eUnit) const
 
 	for (int iI = 0; iI < GC.getUnitInfo(eUnit).getNumUnitUpgrades(); iI++)
 	{
-		UnitClassTypes eUpgradeUnitClass = (UnitClassTypes)GC.getUnitInfo((UnitTypes)GC.getUnitInfo(eUnit).getUnitUpgrade(iI)).getUnitClassType();
-		if ((GC.getGame().isUnitClassMaxedOut(eUpgradeUnitClass)) || (GET_TEAM(GET_PLAYER(getOwner()).getTeam()).isUnitClassMaxedOut(eUpgradeUnitClass)) || GET_PLAYER(getOwner()).isUnitClassMaxedOut(eUpgradeUnitClass))
+		UnitTypes eUpgradeUnit = (UnitTypes)GC.getUnitInfo(eUnit).getUnitUpgrade(iI);
+		if ((GC.getGame().isUnitMaxedOut(eUpgradeUnit)) || (GET_TEAM(GET_PLAYER(getOwner()).getTeam()).isUnitMaxedOut(eUpgradeUnit)) || GET_PLAYER(getOwner()).isUnitMaxedOut(eUpgradeUnit))
 		{//if the upgrade unitclass is maxed out, I assume you can construct them, and already have construct the max
 			return true;
 		}
