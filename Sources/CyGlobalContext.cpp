@@ -44,6 +44,10 @@ CyMap* CyGlobalContext::getCyMap() const
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
+void CyGlobalContext::enableMultiMaps(const bool enable)
+{
+	GC.enableMultiMaps(enable);
+}
 
 bool CyGlobalContext::multiMapsEnabled() const
 {
@@ -70,6 +74,11 @@ CyMap* CyGlobalContext::getMapByIndex(int iIndex)
 	static CyMap cyMap;
 	cyMap = GC.getMapByIndex((MapTypes)iIndex);
 	return &cyMap;
+}
+
+const int CyGlobalContext::getNumMaps() const
+{
+	return GC.getNumMaps();
 }
 
 void CyGlobalContext::updateMaps()

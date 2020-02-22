@@ -1092,6 +1092,10 @@ DirectionTypes cvInternalGlobals::getXYDirection(int i, int j)
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
+void cvInternalGlobals::enableMultiMaps(const bool enable)
+{
+	m_bMultimapsEnabled = enable;
+}
 
 bool cvInternalGlobals::multiMapsEnabled() const
 {
@@ -5588,6 +5592,11 @@ CvMap& cvInternalGlobals::getMapByIndex(MapTypes eIndex)
 	FAssert(eIndex > NO_MAP);
 	FAssert(eIndex < GC.getNumMapInfos());
 	return *m_maps[eIndex];
+}
+
+const int cvInternalGlobals::getNumMaps() const
+{
+	return m_maps.size();
 }
 
 void cvInternalGlobals::clearSigns()

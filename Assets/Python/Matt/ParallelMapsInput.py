@@ -20,7 +20,7 @@ class ParallelMapsInput:
 
 	def enableMultiMaps(self, argsList):
 		self.pEventManager.removeEventHandler("kbdEvent", self.enableMultiMaps)
-		GC.setDefineINT("ENABLE_MULTIMAPS", 1)
+		GC.enableMultiMaps(True)
 		GC.updateMaps()
 		self.pEventManager.addEventHandler("kbdEvent", self.filterInput)
 		self.updatePlayerContainers()
