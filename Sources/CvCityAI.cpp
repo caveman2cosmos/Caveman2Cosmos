@@ -4947,7 +4947,7 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 						//}
 
 						//iValue *= (GET_PLAYER(getOwner()).getNumCities() * 2);
-						//iValue /= std::max(1,GET_PLAYER(getOwner()).getUnitCountPlusMaking((UnitTypes)iI) + GET_PLAYER(getOwner()).getNumCities()+1);
+						//iValue /= std::max(1,GET_PLAYER(getOwner()).getUnitClassCountPlusMaking((UnitClassTypes)iI) + GET_PLAYER(getOwner()).getNumCities()+1);
 
 						bool bIsSuicide = GC.getUnitInfo(eLoopUnit).isSuicide();
 

@@ -3132,8 +3132,8 @@
 					<Title>TXT_KEY_GROUPTITLE_OBSTINANCY</Title>
 				</GroupSpawnUnitCombatType>
 			</GroupSpawnUnitCombatTypes>
-			<Description>TXT_KEY_UNIT_BUFFALO</Description>
-			<Civilopedia>TXT_KEY_UNIT_BUFFALO_PEDIA</Civilopedia>
+			<Description>TXT_KEY_UNIT_BUFFALO_CAPE</Description>
+			<Civilopedia>TXT_KEY_UNIT_BUFFALO_CAPE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -3270,8 +3270,8 @@
 					<Title>TXT_KEY_GROUPTITLE_CONGREGATION</Title>
 				</GroupSpawnUnitCombatType>
 			</GroupSpawnUnitCombatTypes>
-			<Description>TXT_KEY_UNIT_CAIMAN</Description>
-			<Civilopedia>TXT_KEY_UNIT_CAIMAN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_UNIT_CAIMAN_BLACK</Description>
+			<Civilopedia>TXT_KEY_UNIT_CAIMAN_BLACK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -5458,8 +5458,8 @@
 				<SubCombatType>UNITCOMBAT_SIZE_TINY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
-			<Description>TXT_KEY_UNIT_DESERT_TORTOISE</Description>
-			<Civilopedia>TXT_KEY_UNIT_DESERT_TORTOISE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_UNIT_TORTOISE</Description>
+			<Civilopedia>TXT_KEY_UNIT_TORTOISE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -6661,7 +6661,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_ELEPHANT_AFRICAN</Class>
-			<Type>UNIT_ELEPHANT_AFRICAN</Type>
+			<Type>UNIT_AFRICANELEPHANT</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WILD</SubCombatType>
@@ -6802,7 +6802,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_ELEPHANT_ASIAN</Class>
-			<Type>UNIT_ELEPHANT_ASIAN</Type>
+			<Type>UNIT_ELEPHANT</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WILD</SubCombatType>
@@ -7572,8 +7572,8 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
-			<Description>TXT_KEY_UNIT_GALAPOGOS_TORTOISE</Description>
-			<Civilopedia>TXT_KEY_UNIT_GALAPOGOS_TORTOISE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_UNIT_TORTOISE2</Description>
+			<Civilopedia>TXT_KEY_UNIT_TORTOISE2_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -19359,7 +19359,7 @@
 					<Title>TXT_KEY_GROUPTITLE_ROOKERY</Title>
 				</GroupSpawnUnitCombatType>
 			</GroupSpawnUnitCombatTypes>
-			<Description>TXT_KEY_UNIT_SEALION_LAND</Description>
+			<Description>TXT_KEY_UNIT_SEALION</Description>
 			<Civilopedia>TXT_KEY_UNIT_SEALION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
@@ -19488,7 +19488,7 @@
 					<Title>TXT_KEY_GROUPTITLE_HERD</Title>
 				</GroupSpawnUnitCombatType>
 			</GroupSpawnUnitCombatTypes>
-			<Description>TXT_KEY_UNIT_SEALION_SEA</Description>
+			<Description>TXT_KEY_UNIT_SEALION</Description>
 			<Civilopedia>TXT_KEY_UNIT_SEALION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>

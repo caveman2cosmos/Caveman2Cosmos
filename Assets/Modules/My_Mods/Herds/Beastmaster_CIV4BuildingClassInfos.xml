@@ -7,12 +7,12 @@
 	<BuildingClassInfos>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DONKEY_BREEDER</Type>
-			<Description>TXT_KEY_BUILDING_DONKEY_BREEDER</Description>
+			<Description>TXT_KEY_BUILDING_ANIMAL_DONKEY_BREEDER</Description>
 			<DefaultBuilding>BUILDING_DONKEY_BREEDER</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_HORSE_BREEDER</Type>
-			<Description>TXT_KEY_BUILDING_HORSE_BREEDER</Description>
+			<Description>TXT_KEY_BUILDING_ANIMAL_HORSE_BREEDER</Description>
 			<DefaultBuilding>BUILDING_HORSE_BREEDER</DefaultBuilding>
 		</BuildingClassInfo>
 	</BuildingClassInfos>

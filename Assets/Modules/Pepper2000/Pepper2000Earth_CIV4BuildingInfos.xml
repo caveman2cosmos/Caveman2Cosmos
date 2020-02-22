@@ -18744,7 +18744,7 @@
 			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ARABIAN_MADRASSA</BuildingClass>
+			<BuildingClass>BUILDINGCLASS_MADRASSA</BuildingClass>
 			<Type>BUILDING_ARABIAN_MADRASSA</Type>
 			<ObsoleteTech>TECH_COMPULSORY_EDUCATION</ObsoleteTech>
 		</BuildingInfo>
@@ -23761,7 +23761,7 @@
 			</BuildingClassNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_BUILDING_BUILDING_MEMBRANE</BuildingClass>
+			<BuildingClass>BUILDINGCLASS_BUILDING_MEMBRANE</BuildingClass>
 			<Type>BUILDING_BUILDING_MEMBRANE</Type>
 			<Description>TXT_KEY_BUILDING_BUILDING_MEMBRANE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BUILDING_MEMBRANE_PEDIA</Civilopedia>

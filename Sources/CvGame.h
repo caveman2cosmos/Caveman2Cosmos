@@ -537,7 +537,10 @@ public:
 
 	int getUnitCreatedCount(UnitTypes eIndex) const;																	// Exposed to Python
 	void incrementUnitCreatedCount(UnitTypes eIndex);
-	bool isUnitMaxedOut(UnitTypes eIndex, int iExtra = 0) const;						// Exposed to Python
+
+	int getUnitClassCreatedCount(UnitClassTypes eIndex) const;												// Exposed to Python
+	bool isUnitClassMaxedOut(UnitClassTypes eIndex, int iExtra = 0) const;						// Exposed to Python
+	void incrementUnitClassCreatedCount(UnitClassTypes eIndex);
 
 	int getBuildingClassCreatedCount(BuildingClassTypes eIndex) const;								// Exposed to Python
 	bool isBuildingClassMaxedOut(BuildingClassTypes eIndex, int iExtra = 0) const;		// Exposed to Python
@@ -892,6 +895,7 @@ protected:
 
 	int* m_paiImprovementCount;
 	int* m_paiUnitCreatedCount;
+	int* m_paiUnitClassCreatedCount;
 	int* m_paiBuildingClassCreatedCount;
 	int* m_paiProjectCreatedCount;
 	int* m_paiForceCivicCount;

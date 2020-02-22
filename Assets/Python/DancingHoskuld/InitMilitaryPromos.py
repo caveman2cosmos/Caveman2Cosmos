@@ -4,16 +4,31 @@
 ##=========================##
 from CvPythonExtensions import *
 
+# globals
 GC = CyGlobalContext()
 
-def init():
-	global giMilInstCivic, giVolArmyCivic, gaiSettlerWorkerCombatList
+#~ gaiSettlerWorkerList = None
+gaiSettlerWorkerCombatList = None
+giMilInstCivic = -1
 
-	gaiSettlerWorkerCombatList = [
-		GC.getInfoTypeForString("UNITCOMBAT_SETTLER"),
-		GC.getInfoTypeForString("UNITCOMBAT_WORKER"),
-		GC.getInfoTypeForString("UNITCOMBAT_SEA_WORKER")
-	]
+def init():
+	#~ global gaiSettlerWorkerList, giMilInstCivic, giVolArmyCivic
+	global giMilInstCivic, giVolArmyCivic, gaiSettlerWorkerCombatList
+	#~ gaiSettlerWorkerList = [gc.getInfoTypeForString("UNITCLASS_GATHERER"), gc.getInfoTypeForString("UNITCLASS_TRIBE"),
+					#~ gc.getInfoTypeForString("UNITCLASS_WORKER"), gc.getInfoTypeForString("UNITCLASS_SETTLER"),
+					#~ gc.getInfoTypeForString("UNIT_INDIAN_FAST_WORKER"), gc.getInfoTypeForString("UNITCLASS_WORKBUFFALO"),
+					#~ gc.getInfoTypeForString("UNITCLASS_WORKMULE"), gc.getInfoTypeForString("UNITCLASS_WORKELEPHANT"),
+					#~ gc.getInfoTypeForString("UNIT_WORKER_INDUSTRIAL"), gc.getInfoTypeForString("UNIT_WORKER_MODERN"),
+					#~ gc.getInfoTypeForString("UNIT_CLONES"), gc.getInfoTypeForString("UNIT_WORKER_ANDROID"),
+					#~ gc.getInfoTypeForString("UNIT_WORKBOAT"), gc.getInfoTypeForString("UNIT_CLASSIC_WORKBOAT"),
+					#~ gc.getInfoTypeForString("UNIT_MIDDLE_WORKBOAT"), gc.getInfoTypeForString("UNIT_MODERN_WORKBOAT"),
+					#~ gc.getInfoTypeForString("UNIT_CONSTRUCT_SHIP")
+					#~ ]
+
+	gaiSettlerWorkerCombatList =  [	GC.getInfoTypeForString("UNITCOMBAT_SETTLER"),
+									GC.getInfoTypeForString("UNITCOMBAT_WORKER"),
+									GC.getInfoTypeForString("UNITCOMBAT_SEA_WORKER")]
+
 	giMilInstCivic = GC.getInfoTypeForString("CIVIC_MARTIAL")
 	giVolArmyCivic = GC.getInfoTypeForString("CIVIC_VOLUNTARY")
 
@@ -111,3 +126,6 @@ def attemptPromotion(pUnit, iChance, szProposedPromotion):
 		ePromotion = GC.getInfoTypeForString(szProposedPromotion)
 		if pUnit.canAcquirePromotion(ePromotion):
 			pUnit.setHasPromotion(ePromotion, True)
+
+
+#END MILITIA PROMOTIONS CODE

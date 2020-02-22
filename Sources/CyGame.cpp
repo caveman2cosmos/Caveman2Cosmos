@@ -848,9 +848,14 @@ int CyGame::getUnitCreatedCount(int /*UnitTypes*/ eIndex)
 	return m_pGame ? m_pGame->getUnitCreatedCount((UnitTypes)eIndex) : -1;
 }
 
-bool CyGame::isUnitMaxedOut(int /*UnitTypes*/ eIndex, int iExtra)
+int CyGame::getUnitClassCreatedCount(int /*UnitClassTypes*/ eIndex)
 {
-	return m_pGame ? m_pGame->isUnitMaxedOut((UnitTypes)eIndex, iExtra) : -1;
+	return m_pGame ? m_pGame->getUnitClassCreatedCount((UnitClassTypes)eIndex) : -1;
+}
+
+bool CyGame::isUnitClassMaxedOut(int /*UnitClassTypes*/ eIndex, int iExtra)
+{
+	return m_pGame ? m_pGame->isUnitClassMaxedOut((UnitClassTypes)eIndex, iExtra) : -1;
 }
 
 int CyGame::getBuildingClassCreatedCount(int /*BuildingClassTypes*/ eIndex) 

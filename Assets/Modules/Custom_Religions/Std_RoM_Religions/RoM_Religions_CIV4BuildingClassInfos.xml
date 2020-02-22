@@ -22,7 +22,7 @@
 <!-- Hellenism -->
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_ERECTION</Type>
-			<Description>TXT_KEY_BUILDING_ERECTION</Description>
+			<Description>TXT_KEY_BUILDING_ERECHTHEUM</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_ERECTION</DefaultBuilding>
 		</BuildingClassInfo>

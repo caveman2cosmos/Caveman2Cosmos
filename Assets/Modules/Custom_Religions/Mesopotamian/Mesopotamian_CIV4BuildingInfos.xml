@@ -10,9 +10,9 @@
 			<BuildingClass>BUILDINGCLASS_AN</BuildingClass>
 			<Type>BUILDING_AN</Type>
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY_II</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_AN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_AN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_AN_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_TEMPLE_OF_AN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_AN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_TEMPLE_OF_AN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AN</ArtDefineTag>
 			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
@@ -76,9 +76,9 @@
 			<BuildingClass>BUILDINGCLASS_ENKI</BuildingClass>
 			<Type>BUILDING_ENKI</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_ENKI</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ENKI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ENKI_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_TEMPLE_OF_ENKI</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_ENKI_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_TEMPLE_OF_ENKI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ENKI</ArtDefineTag>
 			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
@@ -159,9 +159,9 @@
 			<BuildingClass>BUILDINGCLASS_ENLIL</BuildingClass>
 			<Type>BUILDING_ENLIL</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_ENLIL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ENLIL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ENLIL_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_TEMPLE_OF_ENLIL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_ENLIL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_TEMPLE_OF_ENLIL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ENLIL</ArtDefineTag>
 			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
@@ -235,9 +235,9 @@
 			<BuildingClass>BUILDINGCLASS_INANNA</BuildingClass>
 			<Type>BUILDING_INANNA</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_INANNA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_INANNA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_INANNA_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_TEMPLE_OF_INANNA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_INANNA_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_TEMPLE_OF_INANNA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INANNA</ArtDefineTag>
 			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
@@ -304,9 +304,9 @@
 			<BuildingClass>BUILDINGCLASS_KI</BuildingClass>
 			<Type>BUILDING_KI</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_KI</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_KI_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_TEMPLE_OF_KI</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_KI_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_TEMPLE_OF_KI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KI</ArtDefineTag>
 			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
@@ -373,9 +373,9 @@
 			<BuildingClass>BUILDINGCLASS_KI_WHEAT</BuildingClass>
 			<Type>BUILDING_KI_WHEAT</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_KI_WHEAT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_KI_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_TEMPLE_OF_KI_WHEAT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_KI_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_TEMPLE_OF_KI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KI_WHEAT</ArtDefineTag>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
@@ -414,9 +414,9 @@
 			<BuildingClass>BUILDINGCLASS_KI_CORN</BuildingClass>
 			<Type>BUILDING_KI_CORN</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_KI_CORN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_KI_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_TEMPLE_OF_KI_CORN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_KI_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_TEMPLE_OF_KI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KI_CORN</ArtDefineTag>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
@@ -455,9 +455,9 @@
 			<BuildingClass>BUILDINGCLASS_KI_RICE</BuildingClass>
 			<Type>BUILDING_KI_RICE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_KI_RICE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_KI_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_TEMPLE_OF_KI_RICE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_KI_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_TEMPLE_OF_KI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KI_RICE</ArtDefineTag>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
@@ -496,9 +496,9 @@
 			<BuildingClass>BUILDINGCLASS_KI_POTATO</BuildingClass>
 			<Type>BUILDING_KI_POTATO</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_KI_POTATO</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_KI_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_TEMPLE_OF_KI_POTATO</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_KI_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_TEMPLE_OF_KI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KI_POTATO</ArtDefineTag>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>

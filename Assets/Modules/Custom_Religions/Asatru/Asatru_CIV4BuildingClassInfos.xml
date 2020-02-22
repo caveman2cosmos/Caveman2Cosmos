@@ -8,50 +8,50 @@
 	<BuildingClassInfos>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_ASATRU_CATHEDRAL</Type>
-			<Description>BUILDING_ASATRU_CATHEDRAL</Description>
+			<Description>Asatru shrine</Description>
 			<DefaultBuilding>BUILDING_ASATRU_CATHEDRAL</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_ASATRU_MONASTERY</Type>
-			<Description>TXT_KEY_BUILDING_ASATRU_MONASTERY</Description>
+			<Description>Asatru monastery</Description>
 			<DefaultBuilding>BUILDING_ASATRU_MONASTERY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_ASATRU_SHRINE</Type>
-			<Description>TXT_KEY_BUILDING_ASATRU_SHRINE</Description>
+			<Description>The Odin's sanctuary</Description>
 			<DefaultBuilding>BUILDING_ASATRU_SHRINE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_ASATRU_TEMPLE</Type>
-			<Description>TXT_KEY_BUILDING_ASATRU_TEMPLE</Description>
+			<Description>Asatru temple</Description>
 			<DefaultBuilding>BUILDING_ASATRU_TEMPLE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FREYA_SANCTUARY</Type>
-			<Description>TXT_KEY_BUILDING_FREYA_SANCTUARY</Description>
+			<Description>Freya sanctuary</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_FREYA_SANCTUARY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_HEIMDALL_SANCTUARY</Type>
-			<Description>TXT_KEY_BUILDING_HEIMDALL_SANCTUARY</Description>
+			<Description>Heimdall sanctuary</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_HEIMDALL_SANCTUARY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_LOKI_SANCTUARY</Type>
-			<Description>TXT_KEY_BUILDING_LOKI_SANCTUARY</Description>
+			<Description>Loki sanctuary</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_LOKI_SANCTUARY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_THOR_ALTAR</Type>
-			<Description>TXT_KEY_BUILDING_THOR_ALTAR</Description>
+			<Description>Thor altar</Description>
 			<DefaultBuilding>BUILDING_THOR_ALTAR</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_THOR_SANCTUARY</Type>
-			<Description>TXT_KEY_BUILDING_THOR_SANCTUARY</Description>
+			<Description>Thor sanctuary</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_THOR_SANCTUARY</DefaultBuilding>
 		</BuildingClassInfo>

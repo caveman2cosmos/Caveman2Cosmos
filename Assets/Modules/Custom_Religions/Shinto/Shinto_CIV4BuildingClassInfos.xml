@@ -28,7 +28,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_MATSUMOTO_CASTLE</Type>
-			<Description>TXT_KEY_BUILDING_MATSUMOTO_CASTLE</Description>
+			<Description>Matsumoto Castle</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_MATSUMOTO_CASTLE</DefaultBuilding>
 		</BuildingClassInfo>

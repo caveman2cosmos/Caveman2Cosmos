@@ -43,7 +43,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DRUID_CATHEDRAL2</Type>
-			<Description>TXT_KEY_BUILDING_DRUID_CATHEDRAL2</Description>
+			<Description>Nature legacy</Description>
 			<DefaultBuilding>BUILDING_DRUID_CATHEDRAL2</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>

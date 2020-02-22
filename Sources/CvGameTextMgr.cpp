@@ -18470,12 +18470,13 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 
 		for (iI = 0; iI < GC.getNumUnitInfos(); ++iI)
 		{
+			const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes) iI);
+
 			if (GC.getGame().canEverTrain((UnitTypes) iI)
 			&& (!bPlayerContext ||
-					!GET_PLAYER(GC.getGame().getActivePlayer()).isProductionMaxedUnit((UnitTypes) iI)
+					!GET_PLAYER(GC.getGame().getActivePlayer()).isProductionMaxedUnitClass((UnitClassTypes)kUnit.getUnitClassType())
 				&&	!GET_PLAYER(GC.getGame().getActivePlayer()).canTrain((UnitTypes) iI)))
 			{
-				const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes) iI);
 				if (kUnit.getPrereqAndTech() == eTech)
 				{
 					szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_TECH_CAN_TRAIN").c_str());
@@ -21614,6 +21615,8 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 	}
 
 	// test for unique unit
+	UnitClassTypes eUnitClass = (UnitClassTypes)GC.getUnitInfo(eUnit).getUnitClassType();
+
 	if (bNormalView)
 	{
 		if (isWorldUnit(eUnit))
@@ -21625,8 +21628,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 			}
 			else
 			{
-				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_WORLD_UNIT_LEFT",
-					(GC.getUnitInfo(eUnit).getMaxGlobalInstances() - (ePlayer != NO_PLAYER ? GC.getGame().getUnitCreatedCount(eUnit) + GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getUnitMaking(eUnit) : 0))));
+				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_WORLD_UNIT_LEFT", (GC.getUnitInfo(eUnit).getMaxGlobalInstances() - (ePlayer != NO_PLAYER ? GC.getGame().getUnitClassCreatedCount(eUnitClass) + GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getUnitClassMaking(eUnitClass) : 0))));
 			}
 		}
 
@@ -21643,8 +21645,7 @@ iMaxTeamInstances was unused in CvUnitClassInfo and removed as part of us sheddi
 			}
 			else
 			{
-				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_TEAM_UNIT_LEFT",
-					(GC.getUnitInfo(eUnit).getMaxTeamInstances() - (ePlayer != NO_PLAYER ? GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getUnitCountPlusMaking(eUnit) : 0))));
+				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_TEAM_UNIT_LEFT", (GC.getUnitInfo(eUnit).getMaxTeamInstances() - (ePlayer != NO_PLAYER ? GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getUnitClassCountPlusMaking(eUnitClass) : 0))));
 			}
 		}
 */
@@ -21659,8 +21660,7 @@ iMaxTeamInstances was unused in CvUnitClassInfo and removed as part of us sheddi
 			}
 			else
 			{
-				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_NATIONAL_UNIT_LEFT",
-					(GC.getUnitInfo(eUnit).getMaxPlayerInstances() - (ePlayer != NO_PLAYER ? GET_PLAYER(ePlayer).getUnitCountPlusMaking(eUnit) : 0))));
+				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_NATIONAL_UNIT_LEFT", (GC.getUnitInfo(eUnit).getMaxPlayerInstances() - (ePlayer != NO_PLAYER ? GET_PLAYER(ePlayer).getUnitClassCountPlusMaking(eUnitClass) : 0))));
 			}
 		}
 
@@ -21914,6 +21914,12 @@ iMaxTeamInstances was unused in CvUnitClassInfo and removed as part of us sheddi
 						}
 					}
 				}
+
+	/************************************************************************************************/
+	/* REVDCM                                 02/16/10                                phungus420    */
+	/*                                                                                              */
+	/* CanTrain                                                                                     */
+	/************************************************************************************************/
 				bFirst = true;
 				for (iI = 0; iI < GC.getNumCivicInfos(); ++iI)
 				{
@@ -22000,6 +22006,10 @@ iMaxTeamInstances was unused in CvUnitClassInfo and removed as part of us sheddi
 						szBuffer.append(gDLL->getText("TXT_KEY_NOT_INQUISITION_CONDITIONS"));
 					}
 				}
+	/************************************************************************************************/
+	/* REVDCM                                  END                                                  */
+	/************************************************************************************************/
+
 				if (!bFirst)
 				{
 					szBuffer.append(ENDCOLR);
@@ -22026,10 +22036,12 @@ iMaxTeamInstances was unused in CvUnitClassInfo and removed as part of us sheddi
 					szTempBuffer.Format(L" - %d/%d%c", iProduction, pCity->getProductionNeeded(eUnit), GC.getYieldInfo(YIELD_PRODUCTION).getChar());
 					szBuffer.append(szTempBuffer);
 
+	// BUG - Production Decay - start
 					if (getBugOptionBOOL("CityScreen__ProductionDecayHover", true, "BUG_PRODUCTION_DECAY_HOVER"))
 					{
 						setProductionDecayHelp(szBuffer, pCity->getUnitProductionDecayTurns(eUnit), getBugOptionINT("CityScreen__ProductionDecayHoverUnitThreshold", 5, "BUG_PRODUCTION_DECAY_HOVER_UNIT_THRESHOLD"), pCity->getUnitProductionDecay(eUnit), pCity->getProductionUnit() == eUnit);
 					}
+	// BUG - Production Decay - end
 				}
 				else
 				{

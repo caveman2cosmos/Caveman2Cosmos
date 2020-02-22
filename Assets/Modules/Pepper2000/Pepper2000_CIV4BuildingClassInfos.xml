@@ -2036,7 +2036,7 @@
 			<DefaultBuilding>BUILDING_SPACE_CITY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_BUILDING_BUILDING_MEMBRANE</Type>
+			<Type>BUILDINGCLASS_BUILDING_MEMBRANE</Type>
 			<Description>TXT_KEY_BUILDING_BUILDING_MEMBRANE</Description>
 			<DefaultBuilding>BUILDING_BUILDING_MEMBRANE</DefaultBuilding>
 		</BuildingClassInfo>

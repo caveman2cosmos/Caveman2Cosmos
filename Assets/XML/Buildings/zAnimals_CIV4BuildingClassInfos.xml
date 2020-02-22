@@ -2197,12 +2197,12 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BEAR_CAGE</Type>
-			<Description>TXT_KEY_BUILDING_BEAR_CAGE</Description>
+			<Description>Bear Cage</Description>
 			<DefaultBuilding>BUILDING_BEAR_CAGE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BIG_CAT_CAGE</Type>
-			<Description>TXT_KEY_BUILDING_BIG_CAT_CAGE</Description>
+			<Description>Big Cat Cage</Description>
 			<DefaultBuilding>BUILDING_BIG_CAT_CAGE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2442,7 +2442,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_WOLF_CAGE</Type>
-			<Description>TXT_KEY_BUILDING_WOLF_CAGE</Description>
+			<Description>Wolf Cage</Description>
 			<DefaultBuilding>BUILDING_WOLF_CAGE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>

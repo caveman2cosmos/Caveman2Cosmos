@@ -126,8 +126,8 @@ public:
 	bool isAVassal() const;																							// Exposed to Python
 	bool canVassalRevolt(TeamTypes eMaster) const;
 
-	int getUnitMaking(UnitTypes eIndex) const;														// Exposed to Python
-	int getUnitCountPlusMaking(UnitTypes eIndex) const;												// Exposed to Python
+	int getUnitClassMaking(UnitClassTypes eUnitClass) const;														// Exposed to Python
+	int getUnitClassCountPlusMaking(UnitClassTypes eIndex) const;												// Exposed to Python
 	int getBuildingClassMaking(BuildingClassTypes eBuildingClass) const;								// Exposed to Python
 	int getBuildingClassCountPlusMaking(BuildingClassTypes eIndex) const;								// Exposed to Python
 	int getHasReligionCount(ReligionTypes eReligion) const;															// Exposed to Python
@@ -454,9 +454,9 @@ public:
 	int getProjectMaking(ProjectTypes eIndex) const;																		// Exposed to Python
 	void changeProjectMaking(ProjectTypes eIndex, int iChange);
 
-	int getUnitCount(UnitTypes eIndex) const;																	// Exposed to Python
-	bool isUnitMaxedOut(UnitTypes eIndex, int iExtra = 0) const;							// Exposed to Python
-	void changeUnitCount(UnitTypes eIndex, int iChange);
+	int getUnitClassCount(UnitClassTypes eIndex) const;																	// Exposed to Python
+	bool isUnitClassMaxedOut(UnitClassTypes eIndex, int iExtra = 0) const;							// Exposed to Python
+	void changeUnitClassCount(UnitClassTypes eIndex, int iChange);
 
 	int getBuildingClassCount(BuildingClassTypes eIndex) const;													// Exposed to Python
 	bool isBuildingClassMaxedOut(BuildingClassTypes eIndex, int iExtra = 0) const;			// Exposed to Python
@@ -691,7 +691,7 @@ protected:
 	int* m_paiProjectDefaultArtTypes;
 	std::vector<int> *m_pavProjectArtTypes;
 	int* m_paiProjectMaking;
-	int* m_paiUnitCount;
+	int* m_paiUnitClassCount;
 	int* m_paiBuildingClassCount;
 	int* m_paiObsoleteBuildingCount;
 	int* m_paiResearchProgress;

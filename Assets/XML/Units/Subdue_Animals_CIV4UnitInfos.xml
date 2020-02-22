@@ -1715,7 +1715,7 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_BUFFALO</Description>
-			<Civilopedia>TXT_KEY_UNIT_BUFFALO_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_UNIT_BUFFALO_CAPE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_SUBDUED_ANIMAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_SUBDUED_BUFFALO_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -1816,7 +1816,7 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_CAIMAN</Description>
-			<Civilopedia>TXT_KEY_UNIT_CAIMAN_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_UNIT_CAIMAN_BLACK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_SUBDUED_CAIMAN_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -3220,8 +3220,8 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_SUBDUED_DESERT_TORTOISE</Description>
-			<Civilopedia>TXT_KEY_UNIT_DESERT_TORTOISE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_UNIT_SUBDUED_TORTOISE</Description>
+			<Civilopedia>TXT_KEY_UNIT_TORTOISE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_SUBDUED_ANIMAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_SUBDUED_DESERT_TORTOISE_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -4633,8 +4633,8 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_SUBDUED_GALAPOGOS_TORTOISE</Description>
-			<Civilopedia>TXT_KEY_UNIT_GALAPOGOS_TORTOISE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_UNIT_SUBDUED_TORTOISE2</Description>
+			<Civilopedia>TXT_KEY_UNIT_TORTOISE2_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_SUBDUED_ANIMAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_SUBDUED_GALAPOGOS_TORTOISE_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -12830,7 +12830,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_SUBDUED_SEALION_LAND</Description>
+			<Description>TXT_KEY_UNIT_SUBDUED_SEALION</Description>
 			<Civilopedia>TXT_KEY_UNIT_SEALION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_SUBDUED_ANIMAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_SUBDUED_SEALION_LAND_HELP</Help>
@@ -12893,7 +12893,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_SUBDUED_SEALION_SEA</Description>
+			<Description>TXT_KEY_UNIT_SUBDUED_SEALION</Description>
 			<Civilopedia>TXT_KEY_UNIT_SEALION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_SUBDUED_SEALION_SEA_HELP</Help>
@@ -15815,7 +15815,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_TALESOF_SEALION_SEA</Description>
+			<Description>TXT_KEY_UNIT_TALESOF_SEALION</Description>
 			<Civilopedia>TXT_KEY_UNIT_SEALION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_TALESOF_HELP</Help>

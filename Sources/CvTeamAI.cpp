@@ -2017,10 +2017,15 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam) const
 
 	for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
-		if (isWorldUnit((UnitTypes)iI) && getUnitMaking((UnitTypes)iI) > 0
-		&& isTechRequiredForUnit(eTech, (UnitTypes)iI))
+		if (isTechRequiredForUnit(eTech, ((UnitTypes)iI)))
 		{
-			return DENIAL_MYSTERY;
+			if (isWorldUnit((UnitTypes)iI))
+			{
+				if (getUnitClassMaking((UnitClassTypes)(GC.getUnitInfo((UnitTypes)iI).getUnitClassType())) > 0)
+				{
+					return DENIAL_MYSTERY;
+				}
+			}
 		}
 	}
 
@@ -2810,36 +2815,43 @@ int CvTeamAI::AI_getRivalAirPower( ) const
 	// Count enemy air units, not just those visible to us
 	int iRivalAirPower = 0;
 	int iEnemyAirPower = 0;
-	const int iTeam = getID();
 
 	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
-		const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes)iI);
+		CvUnitInfo& kUnitInfo = GC.getUnitInfo((UnitTypes)iI);
 
-		if (kUnit.getDomainType() == DOMAIN_AIR && kUnit.getAirCombat() > 0)
+		if( kUnitInfo.getDomainType() == DOMAIN_AIR )
 		{
-			for(int iTeamX = 0; iTeamX < MAX_PC_TEAMS; iTeamX++)
+			if( kUnitInfo.getAirCombat() > 0 )
 			{
-				if (iTeamX != iTeam && GET_TEAM((TeamTypes)iTeamX).isAlive() && isHasMet((TeamTypes)iTeamX))
+				for( int iTeam = 0; iTeam < MAX_PC_TEAMS; iTeam++ )
 				{
-					int iUnitPower = GET_TEAM((TeamTypes)iTeamX).getUnitCount((UnitTypes)iI);
-					if (iUnitPower > 0)
+					if( iTeam != getID() )
 					{
-						iUnitPower *= kUnit.getPowerValue();
+						if( GET_TEAM((TeamTypes)iTeam).isAlive() && isHasMet((TeamTypes)iTeam) )
+						{
+							int iUnitPower = GET_TEAM((TeamTypes)iTeam).getUnitClassCount((UnitClassTypes)kUnitInfo.getUnitClassType());
 
-						if (AI_getWarPlan((TeamTypes)iTeamX) == NO_WARPLAN)
-						{
-							iRivalAirPower += iUnitPower;
-						}
-						else
-						{
-							iEnemyAirPower += iUnitPower;
+							if( iUnitPower > 0 )
+							{
+								iUnitPower *= kUnitInfo.getPowerValue();
+
+								if( AI_getWarPlan((TeamTypes)iTeam) == NO_WARPLAN )
+								{
+									iRivalAirPower += iUnitPower;
+								}
+								else
+								{
+									iEnemyAirPower += iUnitPower;
+								}
+							}
 						}
 					}
 				}
 			}
 		}
 	}
+
 	return (iEnemyAirPower + (iRivalAirPower / std::max(1,getHasMetCivCount(true))));
 }
 

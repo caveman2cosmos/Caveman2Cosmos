@@ -11,9 +11,12 @@
 
 from CvPythonExtensions import *
 import BugUtil
+import PlayerUtil
 import re
 
 GC = CyGlobalContext()
+ArtFileMgr = CyArtFileMgr()
+localText = CyTranslator()
 GAME = GC.getGame()
 
 # These two must be the same length
@@ -302,10 +305,44 @@ class Attitude:
 		return ""
 
 
-def isWorstEnemy(player, enemy):
-	worstEnemyName = player.getWorstEnemyName()
-	return worstEnemyName and worstEnemyName == GC.getTeam(enemy.getTeam()).getName()
+## Worst Enemy
+##
+## Each non-human team has a worst enemy team.
+## CyPlayer.getWorstEnemyName() returns the names of everyone on their hated team separated by slashes(/).
 
+def isWorstEnemy(playerOrID, enemyOrID):
+	"""
+	Returns True if <enemy> is one of the worst enemies of <player>'s team.
+	"""
+	player, team = PlayerUtil.getPlayerAndTeam(playerOrID)
+	enemy, enemyTeam = PlayerUtil.getPlayerAndTeam(enemyOrID)
+	return not team.isHuman() and team.getID() != enemyTeam.getID() and getWorstEnemyTeam(player) == enemyTeam.getID()
+
+def getWorstEnemies(playerOrID):
+	"""
+	Returns a list containing the player IDs that are worst enemies of <player>'s team.
+	"""
+	eTeam = getWorstEnemyTeam(playerOrID)
+	enemies = []
+	if eTeam != -1:
+		for player in PlayerUtil.teamPlayers(eTeam, alive=True, barbarian=False):
+			enemies.append(player.getID())
+	return enemies
+
+def getWorstEnemyTeam(playerOrID):
+	"""
+	Returns the team ID that is the worst enemy of <player>'s team.
+
+	If <player>'s team has no worst enemy, returns -1.
+	"""
+	player, team = PlayerUtil.getPlayerAndTeam(playerOrID)
+	if not team.isHuman():
+		worstEnemyName = player.getWorstEnemyName()
+		if worstEnemyName:
+			for team in PlayerUtil.teams(alive=True, barbarian=False):
+				if team.getName() == worstEnemyName:
+					return team.getID()
+	return -1
 
 def getWorstEnemyTeams():
 	"""
@@ -318,20 +355,21 @@ def getWorstEnemyTeams():
 	Loops over players because CyTeam does not have getWorstEnemyName().
 	"""
 	namesToID = {}
-	for iTeam in xrange(GC.getMAX_PC_TEAMS()):
-		CyTeam = GC.getTeam(iTeam)
-		if CyTeam.isAlive() and not CyTeam.isMinorCiv():
-			namesToID[CyTeam.getName()] = iTeam
-
+	for team in PlayerUtil.teams(alive=True, barbarian=False, minor=False):
+		namesToID[team.getName()] = team.getID()
 	enemies = {}
-	for name, iTeam in namesToID.items():
-		worstEnemyName = GC.getPlayer(GC.getTeam(iTeam).getLeaderID()).getWorstEnemyName()
-		if worstEnemyName:
-			if worstEnemyName in namesToID:
-				enemies[iTeam] = namesToID[worstEnemyName]
+	for team in PlayerUtil.teams(alive=True, human=False, barbarian=False, minor=False):
+		eTeam = team.getID()
+		eLeader = team.getLeaderID()
+		if eLeader != -1:
+			player = PlayerUtil.getPlayer(eLeader)
+			worstEnemyName = player.getWorstEnemyName()
+			if worstEnemyName:
+				try:
+					enemies[eTeam] = namesToID[worstEnemyName]
+				except KeyError:
+					BugUtil.debug("Cannot find team \"%s\"", worstEnemyName)
+					enemies[eTeam] = -1
 			else:
-				BugUtil.debug("[INFO] Cannot find worst enemy of %s; worst enemy is %s", name, worstEnemyName)
-				enemies[iTeam] = -1
-		else:
-			enemies[iTeam] = -1
+				enemies[eTeam] = -1
 	return enemies

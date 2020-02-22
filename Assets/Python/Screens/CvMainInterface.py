@@ -5444,10 +5444,11 @@ class CvMainInterface:
 							szTxt += GC.getUnitInfo(iType).getDescription()
 							CyPlayer = InCity.CyPlayer
 							CyTeam = InCity.CyTeam
-							iTeamMaking = CyTeam.getUnitMaking(iType) + 1
-							if (GAME.isUnitMaxedOut(iType, iTeamMaking) or
-								CyTeam.isUnitMaxedOut(iType, iTeamMaking) or
-								CyPlayer.isUnitMaxedOut(iType, CyPlayer.getUnitMaking(iType) + 1)
+							iUnitClass = GC.getUnitInfo(iType).getUnitClassType()
+							iTeamMaking = CyTeam.getUnitClassMaking(iUnitClass) + 1
+							if (GAME.isUnitClassMaxedOut(iUnitClass, iTeamMaking) or
+								CyTeam.isUnitClassMaxedOut(iUnitClass, iTeamMaking) or
+								CyPlayer.isUnitClassMaxedOut(iUnitClass, CyPlayer.getUnitClassMaking(iUnitClass) + 1)
 							):
 								screen.enable(NAME + str(iType), False)
 
@@ -5524,12 +5525,13 @@ class CvMainInterface:
 							if not iTab:
 								CyPlayer = InCity.CyPlayer
 								CyTeam = InCity.CyTeam
-								iTeamMaking = CyTeam.getUnitMaking(iType)
-								if GAME.isUnitMaxedOut(iType, iTeamMaking):
+								iUnitClass = GC.getUnitInfo(iType).getUnitClassType()
+								iTeamMaking = CyTeam.getUnitClassMaking(iUnitClass)
+								if GAME.isUnitClassMaxedOut(iUnitClass, iTeamMaking):
 									self.bUpdateCityTab = True
-								elif CyTeam.isUnitMaxedOut(iType, iTeamMaking):
+								elif CyTeam.isUnitClassMaxedOut(iUnitClass, iTeamMaking):
 									self.bUpdateCityTab = True
-								elif CyPlayer.isUnitMaxedOut(iType, CyPlayer.getUnitMaking(iType)):
+								elif CyPlayer.isUnitClassMaxedOut(iUnitClass, CyPlayer.getUnitClassMaking(iUnitClass)):
 									self.bUpdateCityTab = True
 						elif TYPE == "BUILDING":
 							if iTab in (1, 2):

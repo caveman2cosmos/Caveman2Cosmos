@@ -2477,7 +2477,7 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_HEAVY_TANK</UnitType>
+					<UnitType>UNIT_HEAVY_TANK_M26</UnitType>
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_HEAVY_TANK_RUSSIAN</EarlyArtDefineTag>
 						<LateArtDefineTag>ART_DEF_UNIT_HEAVY_TANK_RUSSIAN</LateArtDefineTag>
@@ -3478,7 +3478,7 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_HEAVY_TANK</UnitType>
+					<UnitType>UNIT_HEAVY_TANK_M26</UnitType>
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_HEAVY_TANK_GERMAN</EarlyArtDefineTag>
 						<LateArtDefineTag>ART_DEF_UNIT_HEAVY_TANK_GERMAN</LateArtDefineTag>
@@ -52764,7 +52764,7 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_HEAVY_TANK</UnitType>
+					<UnitType>UNIT_HEAVY_TANK_M26</UnitType>
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_HEAVY_TANK_RUSSIAN</EarlyArtDefineTag>
 						<LateArtDefineTag>ART_DEF_UNIT_HEAVY_TANK_RUSSIAN</LateArtDefineTag>
@@ -55335,7 +55335,7 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_HEAVY_TANK</UnitType>
+					<UnitType>UNIT_HEAVY_TANK_M26</UnitType>
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_HEAVY_TANK_GERMAN</EarlyArtDefineTag>
 						<LateArtDefineTag>ART_DEF_UNIT_HEAVY_TANK_GERMAN</LateArtDefineTag>

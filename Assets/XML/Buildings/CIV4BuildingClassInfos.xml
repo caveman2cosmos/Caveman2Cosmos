@@ -343,7 +343,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_STEEL_MILL</Type>
-			<Description>TXT_KEY_BUILDING_STEEL_MILL</Description>
+			<Description>TXT_KEY_BUILDING_SMELTER_STEEL</Description>
 			<DefaultBuilding>BUILDING_STEEL_MILL</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -368,7 +368,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_ALUMINUM_FACTORY</Type>
-			<Description>TXT_KEY_BUILDING_ALUMINUM_FACTORY</Description>
+			<Description>TXT_KEY_BUILDING_SMELTER_ALUMINUM</Description>
 			<DefaultBuilding>BUILDING_ALUMINUM_FACTORY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -448,7 +448,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_OBELISK</Type>
-			<Description>TXT_KEY_BUILDING_OBELISK</Description>
+			<Description>TXT_KEY_BUILDING_MONUMENT</Description>
 			<DefaultBuilding>BUILDING_OBELISK</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -498,7 +498,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PUBLIC_SCHOOL</Type>
-			<Description>TXT_KEY_BUILDING_PUBLIC_SCHOOL</Description>
+			<Description>TXT_KEY_BUILDING_ELEMENTARY_SCHOOL</Description>
 			<DefaultBuilding>BUILDING_PUBLIC_SCHOOL</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -518,7 +518,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_ARTIST_GUILD</Type>
-			<Description>TXT_KEY_BUILDING_ARTIST_GUILD</Description>
+			<Description>TXT_KEY_BUILDING_ARTIST_COLONY</Description>
 			<DefaultBuilding>BUILDING_ARTIST_GUILD</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -603,7 +603,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_JEWELLERY</Type>
-			<Description>TXT_KEY_BUILDING_JEWELLERY</Description>
+			<Description>TXT_KEY_BUILDING_JEWELRY_STORE</Description>
 			<DefaultBuilding>BUILDING_JEWELLERY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -1044,7 +1044,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_IRON_WORKS</Type>
-			<Description>TXT_KEY_BUILDING_IRON_WORKS</Description>
+			<Description>TXT_KEY_BUILDING_IRONWORKS</Description>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_IRON_WORKS</DefaultBuilding>
 		</BuildingClassInfo>
@@ -1346,46 +1346,46 @@
 			<DefaultBuilding>BUILDING_MOAI_STATUES</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_CORPORATION_1_HQ</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_1_HQ</Description>
+			<Type>BUILDINGCLASS_CORPORATION_1</Type>
+			<Description>TXT_KEY_CORPORATION_1</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<DefaultBuilding>BUILDING_CORPORATION_1_HQ</DefaultBuilding>
+			<DefaultBuilding>BUILDING_CORPORATION_1</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_CORPORATION_2_HQ</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_2_HQ</Description>
+			<Type>BUILDINGCLASS_CORPORATION_2</Type>
+			<Description>TXT_KEY_CORPORATION_2</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<DefaultBuilding>BUILDING_CORPORATION_2_HQ</DefaultBuilding>
+			<DefaultBuilding>BUILDING_CORPORATION_2</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_CORPORATION_3_HQ</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_3_HQ</Description>
+			<Type>BUILDINGCLASS_CORPORATION_3</Type>
+			<Description>TXT_KEY_CORPORATION_3</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<DefaultBuilding>BUILDING_CORPORATION_3_HQ</DefaultBuilding>
+			<DefaultBuilding>BUILDING_CORPORATION_3</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_CORPORATION_4_HQ</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_4_HQ</Description>
+			<Type>BUILDINGCLASS_CORPORATION_4</Type>
+			<Description>TXT_KEY_CORPORATION_4</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<DefaultBuilding>BUILDING_CORPORATION_4_HQ</DefaultBuilding>
+			<DefaultBuilding>BUILDING_CORPORATION_4</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_CORPORATION_5_HQ</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_5_HQ</Description>
+			<Type>BUILDINGCLASS_CORPORATION_5</Type>
+			<Description>TXT_KEY_CORPORATION_5</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<DefaultBuilding>BUILDING_CORPORATION_5_HQ</DefaultBuilding>
+			<DefaultBuilding>BUILDING_CORPORATION_5</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_CORPORATION_6_HQ</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_6_HQ</Description>
+			<Type>BUILDINGCLASS_CORPORATION_6</Type>
+			<Description>TXT_KEY_CORPORATION_6</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<DefaultBuilding>BUILDING_CORPORATION_6_HQ</DefaultBuilding>
+			<DefaultBuilding>BUILDING_CORPORATION_6</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_CORPORATION_7_HQ</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_7_HQ</Description>
+			<Type>BUILDINGCLASS_CORPORATION_7</Type>
+			<Description>TXT_KEY_CORPORATION_7</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<DefaultBuilding>BUILDING_CORPORATION_7_HQ</DefaultBuilding>
+			<DefaultBuilding>BUILDING_CORPORATION_7</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_APOSTOLIC_PALACE</Type>
@@ -1616,7 +1616,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NHL</Type>
-			<Description>TXT_KEY_BUILDING_NHL</Description>
+			<Description>TXT_KEY_BUILDING_NATIONAL_SPORTS_LEAGUE</Description>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_NHL</DefaultBuilding>
 		</BuildingClassInfo>
@@ -1930,7 +1930,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NWS</Type>
-			<Description>TXT_KEY_BUILDING_NWS</Description>
+			<Description>TXT_KEY_BUILDING_NATIONAL_WEATHER_SERVICE</Description>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_NWS</DefaultBuilding>
 		</BuildingClassInfo>
@@ -2061,173 +2061,173 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_ADVENTURE_HQ</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_ADVENTURE_HQ</Description>
+			<Description>TXT_KEY_CORPORATION_ADVENTURE_HQ</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_CORPORATION_ADVENTURE_HQ</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_ADVENTURE_FRANCHISE</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_ADVENTURE_FRANCHISE</Description>
+			<Description>TXT_KEY_CORPORATION_ADVENTURE_FRANCHISE</Description>
 			<DefaultBuilding>BUILDING_CORPORATION_ADVENTURE_FRANCHISE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_BULLSEYE_HQ</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_BULLSEYE_HQ</Description>
+			<Description>TXT_KEY_CORPORATION_BULLSEYE_HQ</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_CORPORATION_BULLSEYE_HQ</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_BULLSEYE_STORE</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_BULLSEYE_STORE</Description>
+			<Description>TXT_KEY_CORPORATION_BULLSEYE_STORE</Description>
 			<DefaultBuilding>BUILDING_CORPORATION_BULLSEYE_STORE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_BURGERWORLD_HQ</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD_HQ</Description>
+			<Description>TXT_KEY_CORPORATION_BURGERWORLD_HQ</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_CORPORATION_BURGERWORLD_HQ</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_BURGERWORLD_RESTAURANT</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD_RESTAURANT</Description>
+			<Description>TXT_KEY_CORPORATION_BURGERWORLD_RESTAURANT</Description>
 			<DefaultBuilding>BUILDING_CORPORATION_BURGERWORLD_RESTAURANT</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_EMPCLOTH_HQ</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH_HQ</Description>
+			<Description>TXT_KEY_CORPORATION_EMPCLOTH_HQ</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_CORPORATION_EMPCLOTH_HQ</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_CORPORATION_EMPCLOTH_STORE</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH_STORE</Description>
-			<DefaultBuilding>BUILDING_CORPORATION_EMPCLOTH_STORE</DefaultBuilding>
+			<Type>BUILDINGCLASS_EMPCLOTH_STORE</Type>
+			<Description>TXT_KEY_CORPORATION_EMPCLOTH_STORE</Description>
+			<DefaultBuilding>BUILDING_EMPCLOTH_STORE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_EWTRADE_HQ</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_EWTRADE_HQ</Description>
+			<Description>TXT_KEY_CORPORATION_EWTRADE_HQ</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_CORPORATION_EWTRADE_HQ</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_EWTRADE_STORE</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_EWTRADE_STORE</Description>
+			<Description>TXT_KEY_CORPORATION_EWTRADE_STORE</Description>
 			<DefaultBuilding>BUILDING_CORPORATION_EWTRADE_STORE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_BUILDING_CORPORATION_FASHION_HQ</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_FASHION_HQ</Description>
+			<Type>BUILDINGCLASS_CORPORATION_FASHION_HQ</Type>
+			<Description>TXT_KEY_CORPORATION_FASHION_HQ</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_CORPORATION_FASHION_HQ</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_CORPORATION_FASHION_STORE</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_FASHION_STORE</Description>
-			<DefaultBuilding>BUILDING_CORPORATION_FASHION_STORE</DefaultBuilding>
+			<Type>BUILDINGCLASS_FASHION_STORE</Type>
+			<Description>TXT_KEY_CORPORATION_FASHION_STORE</Description>
+			<DefaultBuilding>BUILDING_FASHION_STORE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_MALLWART_HQ</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_MALLWART_HQ</Description>
+			<Description>TXT_KEY_CORPORATION_MALLWART_HQ</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_CORPORATION_MALLWART_HQ</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_MALLWART_STORE</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_MALLWART_STORE</Description>
+			<Description>TXT_KEY_CORPORATION_MALLWART_STORE</Description>
 			<DefaultBuilding>BUILDING_CORPORATION_MALLWART_STORE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_MAPSTER_HQ</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_MAPSTER_HQ</Description>
+			<Description>TXT_KEY_CORPORATION_MAPSTER_HQ</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_CORPORATION_MAPSTER_HQ</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_MCDOWELLS_HQ</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS_HQ</Description>
+			<Description>TXT_KEY_CORPORATION_MCDOWELLS_HQ</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_CORPORATION_MCDOWELLS_HQ</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_MCDOWELLS_RESTAURANT</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS_RESTAURANT</Description>
+			<Description>TXT_KEY_CORPORATION_MCDOWELLS_RESTAURANT</Description>
 			<DefaultBuilding>BUILDING_CORPORATION_MCDOWELLS_RESTAURANT</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_MILEHIGH_HQ</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_MILEHIGH_HQ</Description>
+			<Description>TXT_KEY_CORPORATION_MILEHIGH_HQ</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_CORPORATION_MILEHIGH_HQ</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_MILEHIGH_FRANCHISE</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_MILEHIGH_FRANCHISE</Description>
+			<Description>TXT_KEY_CORPORATION_MILEHIGH_FRANCHISE</Description>
 			<DefaultBuilding>BUILDING_CORPORATION_MILEHIGH_FRANCHISE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_MOBBY_HQ</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_MOBBY_HQ</Description>
+			<Description>TXT_KEY_CORPORATION_MOBBY_HQ</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_CORPORATION_MOBBY_HQ</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_MOBBY_STORE</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_MOBBY_STORE</Description>
+			<Description>TXT_KEY_CORPORATION_MOBBY_STORE</Description>
 			<DefaultBuilding>BUILDING_CORPORATION_MOBBY_STORE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_MOONBEAN_HQ</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_MOONBEAN_HQ</Description>
+			<Description>TXT_KEY_CORPORATION_MOONBEAN_HQ</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_CORPORATION_MOONBEAN_HQ</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_MOONBEAN_SHOP</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_MOONBEAN_SHOP</Description>
+			<Description>TXT_KEY_CORPORATION_MOONBEAN_SHOP</Description>
 			<DefaultBuilding>BUILDING_CORPORATION_MOONBEAN_SHOP</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_RED_HQ</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_RED_HQ</Description>
+			<Description>TXT_KEY_CORPORATION_RED_HQ</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_CORPORATION_RED_HQ</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_RED_THEATER</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_RED_THEATER</Description>
+			<Description>TXT_KEY_CORPORATION_RED_THEATER</Description>
 			<DefaultBuilding>BUILDING_CORPORATION_RED_THEATER</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_SAFARI_HQ</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_SAFARI_HQ</Description>
+			<Description>TXT_KEY_CORPORATION_SAFARI_HQ</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_CORPORATION_SAFARI_HQ</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_SAFARI_GUIDE</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_SAFARI_GUIDE</Description>
+			<Description>TXT_KEY_CORPORATION_SAFARI_GUIDE</Description>
 			<DefaultBuilding>BUILDING_CORPORATION_SAFARI_GUIDE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_ULTSOLDIER_HQ</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_ULTSOLDIER_HQ</Description>
+			<Description>TXT_KEY_CORPORATION_ULTSOLDIER_HQ</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_CORPORATION_ULTSOLDIER_HQ</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_ULTSOLDIER_TRAINER</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_ULTSOLDIER_TRAINER</Description>
+			<Description>TXT_KEY_CORPORATION_ULTSOLDIER_TRAINER</Description>
 			<DefaultBuilding>BUILDING_CORPORATION_ULTSOLDIER_TRAINER</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_WONKA_HQ</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_WONKA_HQ</Description>
+			<Description>TXT_KEY_CORPORATION_WONKA_HQ</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_CORPORATION_WONKA_HQ</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_WONKA_SHOP</Type>
-			<Description>TXT_KEY_BUILDING_CORPORATION_WONKA_SHOP</Description>
+			<Description>TXT_KEY_CORPORATION_WONKA_SHOP</Description>
 			<DefaultBuilding>BUILDING_CORPORATION_WONKA_SHOP</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2533,7 +2533,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_ABYSSINIA_STELE</Type>
-			<Description>TXT_KEY_BUILDING_ABYSSINIA_STELE</Description>
+			<Description>TXT_KEY_BUILDING_STELE</Description>
 			<DefaultBuilding>BUILDING_ABYSSINIA_STELE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2547,8 +2547,8 @@
 			<DefaultBuilding>BUILDING_ROMAN_FORUM</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_ARABIAN_MADRASSA</Type>
-			<Description>TXT_KEY_BUILDING_ARABIAN_MADRASSA</Description>
+			<Type>BUILDINGCLASS_MADRASSA</Type>
+			<Description>TXT_KEY_BUILDING_MADRASSA</Description>
 			<DefaultBuilding>BUILDING_ARABIAN_MADRASSA</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2608,7 +2608,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BYZANTINE_HIPPODROME</Type>
-			<Description>TXT_KEY_BUILDING_BYZANTINE_HIPPODROME</Description>
+			<Description>TXT_KEY_BUILDING_HIPPODROME</Description>
 			<DefaultBuilding>BUILDING_BYZANTINE_HIPPODROME</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2676,7 +2676,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NETHERLANDS_DIKE</Type>
-			<Description>TXT_KEY_BUILDING_NETHERLANDS_DIKE</Description>
+			<Description>TXT_KEY_BUILDING_DUTCH_DIKE</Description>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_NETHERLANDS_DIKE</DefaultBuilding>
 		</BuildingClassInfo>
@@ -2731,7 +2731,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BALLOON_RIDES</Type>
-			<Description>TXT_KEY_BUILDING_BALLOON_RIDES</Description>
+			<Description>TXT_KEY_BALLOON_RIDES</Description>
 			<DefaultBuilding>BUILDING_BALLOON_RIDES</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -2746,7 +2746,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_ABU</Type>
-			<Description>TXT_KEY_BUILDING_ABU</Description>
+			<Description>TXT_KEY_BUILDING_ABU_SIMBEL</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_ABU</DefaultBuilding>
 		</BuildingClassInfo>
@@ -2794,7 +2794,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_ADRIANOS_WALL</Type>
-			<Description>TXT_KEY_BUILDING_ADRIANOS_WALL</Description>
+			<Description>TXT_KEY_BUILDING_HADRIAN_WALL</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_ADRIANOS_WALL</DefaultBuilding>
 		</BuildingClassInfo>
@@ -5004,7 +5004,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_APPRENTICE_WORKSHOP</Type>
-			<Description>TXT_KEY_BUILDING_APPRENTICE_WORKSHOP</Description>
+			<Description>Apprentice workshop</Description>
 			<DefaultBuilding>BUILDING_APPRENTICE_WORKSHOP</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -5054,12 +5054,12 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_GOLD_VAULT</Type>
-			<Description>TXT_KEY_BUILDING_GOLD_VAULT</Description>
+			<Description>Gold Vault</Description>
 			<DefaultBuilding>BUILDING_GOLD_VAULT</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_MONEY_PRESS</Type>
-			<Description>TXT_KEY_BUILDING_MONEY_PRESS</Description>
+			<Description>Money Press</Description>
 			<DefaultBuilding>BUILDING_MONEY_PRESS</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -5069,27 +5069,27 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_MERCANTILISMSILVER</Type>
-			<Description>TXT_KEY_BUILDING_MERCANTILISMSILVER</Description>
+			<Description>Mercantilism Bonus(Silver)</Description>
 			<DefaultBuilding>BUILDING_MERCANTILISMSILVER</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_MERCANTILISMGOLD</Type>
-			<Description>TXT_KEY_BUILDING_MERCANTILISMGOLD</Description>
+			<Description>Mercantilism Bonus (Gold)</Description>
 			<DefaultBuilding>BUILDING_MERCANTILISMGOLD</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CIVICMILITIA</Type>
-			<Description>TXT_KEY_BUILDING_CIVICMILITIA</Description>
+			<Description>Civic: Militia</Description>
 			<DefaultBuilding>BUILDING_CIVICMILITIA</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CIVICBANDITRY</Type>
-			<Description>TXT_KEY_BUILDING_CIVICBANDITRY</Description>
+			<Description>Civic: Banditry</Description>
 			<DefaultBuilding>BUILDING_CIVICBANDITRY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CIVICMERCENARIES</Type>
-			<Description>TXT_KEY_BUILDING_CIVICMERCENARIES</Description>
+			<Description>Civic: Mercenaries</Description>
 			<DefaultBuilding>BUILDING_CIVICMERCENARIES</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -5313,7 +5313,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_LIZARD_CATCHER</Type>
-			<Description>TXT_KEY_BUILDING_LIZARD_CATCHER</Description>
+			<Description>TXT_KEY_LIZARD_CATCHER</Description>
 			<DefaultBuilding>BUILDING_LIZARD_CATCHER</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -6246,57 +6246,57 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_SAIL_WEAVER</Type>
-			<Description>TXT_KEY_BUILDING_SAIL_WEAVER</Description>
+			<Description>TXT_KEY_SAIL_WEAVER</Description>
 			<DefaultBuilding>BUILDING_SAIL_WEAVER</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_SHIPWRIGHT</Type>
-			<Description>TXT_KEY_BUILDING_SHIPWRIGHT</Description>
+			<Description>TXT_KEY_SHIPWRIGHT</Description>
 			<DefaultBuilding>BUILDING_SHIPWRIGHT</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_WILD_MUSHROOMS</Type>
-			<Description>TXT_KEY_BUILDING_WILD_MUSHROOMS</Description>
+			<Description>TXT_KEY_WILD_MUSHROOMS</Description>
 			<DefaultBuilding>BUILDING_WILD_MUSHROOMS</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_TIRE_FACTORY</Type>
-			<Description>TXT_KEY_BUILDING_TIRE_FACTORY</Description>
+			<Description>TXT_KEY_TIRE_FACTORY</Description>
 			<DefaultBuilding>BUILDING_TIRE_FACTORY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BRICK_MASON</Type>
-			<Description>TXT_KEY_BUILDING_BRICK_MASON</Description>
+			<Description>TXT_KEY_BRICK_MASON</Description>
 			<DefaultBuilding>BUILDING_BRICK_MASON</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CHEESE_SHOP</Type>
-			<Description>TXT_KEY_BUILDING_CHEESE_SHOP</Description>
+			<Description>TXT_KEY_CHEESE_SHOP</Description>
 			<DefaultBuilding>BUILDING_CHEESE_SHOP</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_SEMICONDUCTOR_FACTORY</Type>
-			<Description>TXT_KEY_BUILDING_SEMICONDUCTOR_FACTORY</Description>
+			<Description>TXT_KEY_SEMICONDUCTOR_FACTORY</Description>
 			<DefaultBuilding>BUILDING_SEMICONDUCTOR_FACTORY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FIBEROPTICS_FACTORY</Type>
-			<Description>TXT_KEY_BUILDING_FIBEROPTICS_FACTORY</Description>
+			<Description>TXT_KEY_FIBEROPTICS_FACTORY</Description>
 			<DefaultBuilding>BUILDING_FIBEROPTICS_FACTORY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_COPPERWIRING_FACTORY</Type>
-			<Description>TXT_KEY_BUILDING_COPPERWIRING_FACTORY</Description>
+			<Description>TXT_KEY_COPPERWIRING_FACTORY</Description>
 			<DefaultBuilding>BUILDING_COPPERWIRING_FACTORY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_HYDROGEN_FACTORY</Type>
-			<Description>TXT_KEY_BUILDING_HYDROGEN_FACTORY</Description>
+			<Description>TXT_KEY_HYDROGEN_FACTORY</Description>
 			<DefaultBuilding>BUILDING_HYDROGEN_FACTORY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_TOY_MAKER</Type>
-			<Description>TXT_KEY_BUILDING_TOY_MAKER</Description>
+			<Description>TXT_KEY_TOY_MAKER</Description>
 			<DefaultBuilding>BUILDING_TOY_MAKER</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -6311,27 +6311,27 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_LIQUORSTORE</Type>
-			<Description>TXT_KEY_BUILDING_LIQUORSTORE</Description>
+			<Description>TXT_KEY_LIQUORSTORE</Description>
 			<DefaultBuilding>BUILDING_LIQUORSTORE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_GEMCUTTER</Type>
-			<Description>TXT_KEY_BUILDING_GEMCUTTER</Description>
+			<Description>TXT_KEY_GEMCUTTER</Description>
 			<DefaultBuilding>BUILDING_GEMCUTTER</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_TAR_REFINERY</Type>
-			<Description>TXT_KEY_BUILDING_TAR_REFINERY</Description>
+			<Description>TXT_KEY_TAR_REFINERY</Description>
 			<DefaultBuilding>BUILDING_TAR_REFINERY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PERFUME_MAKER</Type>
-			<Description>TXT_KEY_BUILDING_PERFUME_MAKER</Description>
+			<Description>TXT_KEY_PERFUME_MAKER</Description>
 			<DefaultBuilding>BUILDING_PERFUME_MAKER</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DYE_MAKER</Type>
-			<Description>TXT_KEY_BUILDING_DYE_MAKER</Description>
+			<Description>TXT_KEY_DYE_MAKER</Description>
 			<DefaultBuilding>BUILDING_DYE_MAKER</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -6952,55 +6952,55 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NATIONAL_SMELTER_COPPER</Type>
-			<Description>TXT_KEY_BUILDING_NATIONAL_SMELTER_COPPER</Description>
+			<Description>TXT_KEY_NATIONAL_SMELTER_COPPER</Description>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_NATIONAL_SMELTER_COPPER</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NATIONAL_SMELTER_IRON</Type>
-			<Description>TXT_KEY_BUILDING_NATIONAL_SMELTER_IRON</Description>
+			<Description>TXT_KEY_NATIONAL_SMELTER_IRON</Description>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_NATIONAL_SMELTER_IRON</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NATIONAL_SMELTER_SILVER</Type>
-			<Description>TXT_KEY_BUILDING_NATIONAL_SMELTER_SILVER</Description>
+			<Description>TXT_KEY_NATIONAL_SMELTER_SILVER</Description>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_NATIONAL_SMELTER_SILVER</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NATIONAL_SMELTER_GOLD</Type>
-			<Description>TXT_KEY_BUILDING_NATIONAL_SMELTER_GOLD</Description>
+			<Description>TXT_KEY_NATIONAL_SMELTER_GOLD</Description>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_NATIONAL_SMELTER_GOLD</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NATIONAL_SMELTER_LEAD</Type>
-			<Description>TXT_KEY_BUILDING_NATIONAL_SMELTER_LEAD</Description>
+			<Description>TXT_KEY_NATIONAL_SMELTER_LEAD</Description>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_NATIONAL_SMELTER_LEAD</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NATIONAL_SMELTER_TIN</Type>
-			<Description>TXT_KEY_BUILDING_NATIONAL_SMELTER_TIN</Description>
+			<Description>TXT_KEY_NATIONAL_SMELTER_TIN</Description>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_NATIONAL_SMELTER_TIN</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NATIONAL_SMELTER_PLATINUM</Type>
-			<Description>TXT_KEY_BUILDING_NATIONAL_SMELTER_PLATINUM</Description>
+			<Description>TXT_KEY_NATIONAL_SMELTER_PLATINUM</Description>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_NATIONAL_SMELTER_PLATINUM</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NATIONAL_SMELTER_TITANIUM</Type>
-			<Description>TXT_KEY_BUILDING_NATIONAL_SMELTER_TITANIUM</Description>
+			<Description>TXT_KEY_NATIONAL_SMELTER_TITANIUM</Description>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_NATIONAL_SMELTER_TITANIUM</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NATIONAL_SMELTER_ALUMINUM</Type>
-			<Description>TXT_KEY_BUILDING_NATIONAL_SMELTER_ALUMINUM</Description>
+			<Description>TXT_KEY_NATIONAL_SMELTER_ALUMINUM</Description>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_NATIONAL_SMELTER_ALUMINUM</DefaultBuilding>
 		</BuildingClassInfo>
@@ -7541,7 +7541,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CRIME_TRUANCY</Type>
-			<Description>TXT_KEY_BUILDING_CRIME_TRUANCY</Description>
+			<Description>TXT_KEY_BUILDING_CRIME_SCHOOLSHOOTING</Description>
 			<DefaultBuilding>BUILDING_CRIME_TRUANCY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -8812,7 +8812,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DOE</Type>
-			<Description>TXT_KEY_BUILDING_DOE</Description>
+			<Description>TXT_KEY_BUILDING_DEPARTMENT_ENERGY</Description>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_DOE</DefaultBuilding>
 		</BuildingClassInfo>
@@ -8954,12 +8954,12 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_LOCAL_RADIO_STATION</Type>
-			<Description>TXT_KEY_BUILDING_LOCAL_RADIO_STATION</Description>
+			<Description>TXT_KEY_LOCAL_RADIO_STATION</Description>
 			<DefaultBuilding>BUILDING_LOCAL_RADIO_STATION</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_RECORDING_STUDIO</Type>
-			<Description>TXT_KEY_BUILDING_RECORDING_STUDIO</Description>
+			<Description>TXT_KEY_RECORDING_STUDIO</Description>
 			<DefaultBuilding>BUILDING_RECORDING_STUDIO</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -9252,7 +9252,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NFS</Type>
-			<Description>TXT_KEY_BUILDING_NFS</Description>
+			<Description>TXT_KEY_BUILDING_NATIONAL_FIRE_SERVICE</Description>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_NFS</DefaultBuilding>
 		</BuildingClassInfo>
@@ -9400,32 +9400,32 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_GOOD_GORGE</Type>
-			<Description>TXT_KEY_BUILDING_GOOD_GORGE</Description>
+			<Description>TXT_KEY_GOOD_GORGE</Description>
 			<DefaultBuilding>BUILDING_GOOD_GORGE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_GOOD_FUSION</Type>
-			<Description>TXT_KEY_BUILDING_GOOD_FUSION</Description>
+			<Description>TXT_KEY_GOOD_FUSION</Description>
 			<DefaultBuilding>BUILDING_GOOD_FUSION</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_GOOD_POLICE_ACADEMY</Type>
-			<Description>TXT_KEY_BUILDING_GOOD_POLICE_ACADEMY</Description>
+			<Description>TXT_KEY_GOOD_POLICE_ACADEMY</Description>
 			<DefaultBuilding>BUILDING_GOOD_POLICE_ACADEMY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_GOOD_NEIGHBORHOOD_WATCH</Type>
-			<Description>TXT_KEY_BUILDING_GOOD_NEIGHBORHOOD_WATCH</Description>
+			<Description>TXT_KEY_GOOD_NEIGHBORHOOD_WATCH</Description>
 			<DefaultBuilding>BUILDING_GOOD_NEIGHBORHOOD_WATCH</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_GOOD_YOUTH_CURFEW</Type>
-			<Description>TXT_KEY_BUILDING_GOOD_YOUTH_CURFEW</Description>
+			<Description>TXT_KEY_GOOD_YOUTH_CURFEW</Description>
 			<DefaultBuilding>BUILDING_GOOD_YOUTH_CURFEW</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_GOOD_FEDERAL_PRISON</Type>
-			<Description>TXT_KEY_BUILDING_GOOD_FEDERAL_PRISON</Description>
+			<Description>TXT_KEY_GOOD_FEDERAL_PRISON</Description>
 			<DefaultBuilding>BUILDING_GOOD_FEDERAL_PRISON</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -9862,7 +9862,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_HOUSE_ERA4_HDHW</Type>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_HDHW</Description>
+			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_HDHW</Description>
 			<DefaultBuilding>BUILDING_HOUSE_ERA4_HDHW</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -9877,7 +9877,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_HOUSE_ERA4_SDHW</Type>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_SDHW</Description>
+			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_SDHW</Description>
 			<DefaultBuilding>BUILDING_HOUSE_ERA4_SDHW</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -10240,27 +10240,27 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CHANCELLORS_OFFICE</Type>
-			<Description>TXT_KEY_BUILDING_CHANCELLORS_OFFICE</Description>
+			<Description>TXT_KEY_CHANCELLORS_OFFICE</Description>
 			<DefaultBuilding>BUILDING_CHANCELLORS_OFFICE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_MARSHALS_OFFICE</Type>
-			<Description>TXT_KEY_BUILDING_MARSHALS_OFFICE</Description>
+			<Description>TXT_KEY_MARSHALS_OFFICE</Description>
 			<DefaultBuilding>BUILDING_MARSHALS_OFFICE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_STEWARDS_OFFICE</Type>
-			<Description>TXT_KEY_BUILDING_STEWARDS_OFFICE</Description>
+			<Description>TXT_KEY_STEWARDS_OFFICE</Description>
 			<DefaultBuilding>BUILDING_STEWARDS_OFFICE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_SPYMASTERS_OFFICE</Type>
-			<Description>TXT_KEY_BUILDING_SPYMASTERS_OFFICE</Description>
+			<Description>TXT_KEY_SPYMASTERS_OFFICE</Description>
 			<DefaultBuilding>BUILDING_SPYMASTERS_OFFICE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CHAPLINS_OFFICE</Type>
-			<Description>TXT_KEY_BUILDING_CHAPLINS_OFFICE</Description>
+			<Description>TXT_KEY_CHAPLINS_OFFICE</Description>
 			<DefaultBuilding>BUILDING_CHAPLINS_OFFICE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -10456,7 +10456,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BORAX_MINE</Type>
-			<Description>TXT_KEY_BUILDING_BORAX_MINE</Description>
+			<Description>TXT_KEY_BUILDING_CHARIOT_WORKSHOP</Description>
 			<DefaultBuilding>BUILDING_BORAX_MINE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -10551,7 +10551,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PLATINUM_MINE</Type>
-			<Description>TXT_KEY_BUILDING_PLATINUM_MINE</Description>
+			<Description>TXT_KEY_PLATINUM_MINE</Description>
 			<DefaultBuilding>BUILDING_PLATINUM_MINE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -10576,17 +10576,17 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_TUNGSTEN_MINE</Type>
-			<Description>TXT_KEY_BUILDING_TUNGSTEN_MINE</Description>
+			<Description>TXT_KEY_TUNGSTEN_MINE</Description>
 			<DefaultBuilding>BUILDING_TUNGSTEN_MINE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_MAGNESIUM_MINE</Type>
-			<Description>TXT_KEY_BUILDING_MAGNESIUM_MINE</Description>
+			<Description>TXT_KEY_MAGNESIUM_MINE</Description>
 			<DefaultBuilding>BUILDING_MAGNESIUM_MINE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_GEODE_MINE</Type>
-			<Description>TXT_KEY_BUILDING_GEODE_MINE</Description>
+			<Description>TXT_KEY_GEODE_MINE</Description>
 			<DefaultBuilding>BUILDING_GEODE_MINE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -11088,19 +11088,19 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_HORSE_NATIONAL</Type>
-			<Description>TXT_KEY_BUILDING_HORSE_NATIONAL</Description>
+			<Description>TXT_KEY_BUILDING_NATIONAL_BREEDER_HORSE</Description>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_HORSE_NATIONAL</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_ELEPHANT_NATIONAL</Type>
-			<Description>TXT_KEY_BUILDING_ELEPHANT_NATIONAL</Description>
+			<Description>TXT_KEY_BUILDING_NATIONAL_BREEDER_ELEPHANT</Description>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_ELEPHANT_NATIONAL</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CAMEL_NATIONAL</Type>
-			<Description>TXT_KEY_BUILDING_CAMEL_NATIONAL</Description>
+			<Description>TXT_KEY_BUILDING_NATIONAL_BREEDER_CAMEL</Description>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_CAMEL_NATIONAL</DefaultBuilding>
 		</BuildingClassInfo>
@@ -11346,7 +11346,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_NSF</Type>
-			<Description>TXT_KEY_BUILDING_NSF</Description>
+			<Description>TXT_KEY_BUILDING_NATIONAL_SCIENCE_FOUNDATION</Description>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_NSF</DefaultBuilding>
 		</BuildingClassInfo>
@@ -11802,62 +11802,62 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_KNOWLEDGE_BASE_ANCIENT</Type>
-			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_ANCIENT</Description>
+			<Description>TXT_KEY_KNOWLEDGE_BASE_ANCIENT</Description>
 			<DefaultBuilding>BUILDING_KNOWLEDGE_BASE_ANCIENT</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_KNOWLEDGE_BASE_CLASSICAL</Type>
-			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_CLASSICAL</Description>
+			<Description>TXT_KEY_KNOWLEDGE_BASE_CLASSICAL</Description>
 			<DefaultBuilding>BUILDING_KNOWLEDGE_BASE_CLASSICAL</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_KNOWLEDGE_BASE_MEDIEVAL</Type>
-			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MEDIEVAL</Description>
+			<Description>TXT_KEY_KNOWLEDGE_BASE_MEDIEVAL</Description>
 			<DefaultBuilding>BUILDING_KNOWLEDGE_BASE_MEDIEVAL</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_KNOWLEDGE_BASE_RENAISSANCE</Type>
-			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_RENAISSANCE</Description>
+			<Description>TXT_KEY_KNOWLEDGE_BASE_RENAISSANCE</Description>
 			<DefaultBuilding>BUILDING_KNOWLEDGE_BASE_RENAISSANCE</DefaultBuilding>
 		</BuildingClassInfo>
 		<!--<BuildingClassInfo>
 			<Type>BUILDINGCLASS_KNOWLEDGE_BASE_INDUSTRIAL</Type>
-			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</Description>
+			<Description>TXT_KEY_KNOWLEDGE_BASE_INDUSTRIAL</Description>
 			<DefaultBuilding>BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_KNOWLEDGE_BASE_MODERN</Type>
-			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MODERN</Description>
+			<Description>TXT_KEY_KNOWLEDGE_BASE_MODERN</Description>
 			<DefaultBuilding>BUILDING_KNOWLEDGE_BASE_MODERN</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_KNOWLEDGE_BASE_INFORMATION</Type>
-			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INFORMATION</Description>
+			<Description>TXT_KEY_KNOWLEDGE_BASE_INFORMATION</Description>
 			<DefaultBuilding>BUILDING_KNOWLEDGE_BASE_INFORMATION</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_KNOWLEDGE_BASE_NANOTECH</Type>
-			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_NANOTECH</Description>
+			<Description>TXT_KEY_KNOWLEDGE_BASE_NANOTECH</Description>
 			<DefaultBuilding>BUILDING_KNOWLEDGE_BASE_NANOTECH</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_KNOWLEDGE_BASE_TRANSHUMAN</Type>
-			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</Description>
+			<Description>TXT_KEY_KNOWLEDGE_BASE_TRANSHUMAN</Description>
 			<DefaultBuilding>BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_KNOWLEDGE_BASE_GALACTIC</Type>
-			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_GALACTIC</Description>
+			<Description>TXT_KEY_KNOWLEDGE_BASE_GALACTIC</Description>
 			<DefaultBuilding>BUILDING_KNOWLEDGE_BASE_GALACTIC</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_KNOWLEDGE_BASE_COSMIC</Type>
-			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_COSMIC</Description>
+			<Description>TXT_KEY_KNOWLEDGE_BASE_COSMIC</Description>
 			<DefaultBuilding>BUILDING_KNOWLEDGE_BASE_COSMIC</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_KNOWLEDGE_BASE_TRANSCENDENT</Type>
-			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</Description>
+			<Description>TXT_KEY_KNOWLEDGE_BASE_TRANSCENDENT</Description>
 			<DefaultBuilding>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</DefaultBuilding>
 		</BuildingClassInfo>-->
 		<BuildingClassInfo>
@@ -12017,7 +12017,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_AZTEC_SACRIFICIAL_ALTAR</Type>
-			<Description>TXT_KEY_BUILDING_AZTEC_SACRIFICIAL_ALTAR</Description>
+			<Description>TXT_KEY_BUILDING_WONDER_SACRIFICIAL_ALTAR</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_AZTEC_SACRIFICIAL_ALTAR</DefaultBuilding>
 		</BuildingClassInfo>
@@ -12502,7 +12502,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DMV</Type>
-			<Description>TXT_KEY_BUILDING_DMV</Description>
+			<Description>TXT_KEY_BUILDING_DEPARTMENT_VEHICLES</Description>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_DMV</DefaultBuilding>
 		</BuildingClassInfo>
@@ -12831,7 +12831,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_ESTATE</Type>
-			<Description>TXT_KEY_BUILDING_ESTATE</Description>
+			<Description>TXT_KEY_BUILDING_GRAND_ESTATE</Description>
 			<DefaultBuilding>BUILDING_ESTATE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -12846,73 +12846,73 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_RANGER_STATION</Type>
-			<Description>TXT_KEY_BUILDING_RANGER_STATION</Description>
+			<Description>TXT_KEY_RANGER_STATION</Description>
 			<DefaultBuilding>BUILDING_RANGER_STATION</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_STATE_PARK</Type>
-			<Description>TXT_KEY_BUILDING_STATE_PARK</Description>
+			<Description>TXT_KEY_STATE_PARK</Description>
 			<DefaultBuilding>BUILDING_STATE_PARK</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CRUISE_PORT</Type>
-			<Description>TXT_KEY_BUILDING_CRUISE_PORT</Description>
+			<Description>TXT_KEY_CRUISE_PORT</Description>
 			<DefaultBuilding>BUILDING_CRUISE_PORT</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_TRAVEL_AGENCY</Type>
-			<Description>TXT_KEY_BUILDING_TRAVEL_AGENCY</Description>
+			<Description>TXT_KEY_TRAVEL_AGENCY</Description>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_TRAVEL_AGENCY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_UNESCO_SITE</Type>
-			<Description>TXT_KEY_BUILDING_UNESCO_SITE</Description>
+			<Description>TXT_KEY_UNESCO_SITE</Description>
 			<DefaultBuilding>BUILDING_UNESCO_SITE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_MOTEL</Type>
-			<Description>TXT_KEY_BUILDING_MOTEL</Description>
+			<Description>TXT_KEY_MOTEL</Description>
 			<DefaultBuilding>BUILDING_MOTEL</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_WATER_PARK</Type>
-			<Description>TXT_KEY_BUILDING_WATER_PARK</Description>
+			<Description>TXT_KEY_WATER_PARK</Description>
 			<DefaultBuilding>BUILDING_WATER_PARK</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PUBLIC_BEACH</Type>
-			<Description>TXT_KEY_BUILDING_PUBLIC_BEACH</Description>
+			<Description>TXT_KEY_PUBLIC_BEACH</Description>
 			<DefaultBuilding>BUILDING_PUBLIC_BEACH</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_TOURIST_TRAP</Type>
-			<Description>TXT_KEY_BUILDING_TOURIST_TRAP</Description>
+			<Description>TXT_KEY_TOURIST_TRAP</Description>
 			<DefaultBuilding>BUILDING_TOURIST_TRAP</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CAMP_GROUNDS</Type>
-			<Description>TXT_KEY_BUILDING_CAMP_GROUNDS</Description>
+			<Description>TXT_KEY_CAMP_GROUNDS</Description>
 			<DefaultBuilding>BUILDING_CAMP_GROUNDS</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_HIKING_TRAIL</Type>
-			<Description>TXT_KEY_BUILDING_HIKING_TRAIL</Description>
+			<Description>TXT_KEY_HIKING_TRAIL</Description>
 			<DefaultBuilding>BUILDING_HIKING_TRAIL</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_MOUNTAIN_CLIMBING</Type>
-			<Description>TXT_KEY_BUILDING_MOUNTAIN_CLIMBING</Description>
+			<Description>TXT_KEY_MOUNTAIN_CLIMBING</Description>
 			<DefaultBuilding>BUILDING_MOUNTAIN_CLIMBING</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_SCUBA_DIVING</Type>
-			<Description>TXT_KEY_BUILDING_SCUBA_DIVING</Description>
+			<Description>TXT_KEY_SCUBA_DIVING</Description>
 			<DefaultBuilding>BUILDING_SCUBA_DIVING</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_SPELUNKING_CAVE</Type>
-			<Description>TXT_KEY_BUILDING_SPELUNKING_CAVE</Description>
+			<Description>TXT_KEY_SPELUNKING_CAVE</Description>
 			<DefaultBuilding>BUILDING_SPELUNKING_CAVE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -12927,7 +12927,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_WATER_DEPARTMENT</Type>
-			<Description>TXT_KEY_BUILDING_WATER_DEPARTMENT</Description>
+			<Description>TXT_KEY_BUILDING_DEPARTMENT_WATER</Description>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_WATER_DEPARTMENT</DefaultBuilding>
 		</BuildingClassInfo>
@@ -13146,7 +13146,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_UN_MISSION</Type>
-			<Description>TXT_KEY_BUILDING_UN_MISSION</Description>
+			<Description>TXT_KEY_UN_MISSION</Description>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_UN_MISSION</DefaultBuilding>
 		</BuildingClassInfo>
@@ -13500,13 +13500,13 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DEPT_FOREIGN_POLICY</Type>
-			<Description>TXT_KEY_BUILDING_DEPT_FOREIGN_POLICY</Description>
+			<Description>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN</Description>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_DEPT_FOREIGN_POLICY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_DEPT_FOREIGN_POLICY_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_DEPT_FOREIGN_POLICY_EFFECT</Description>
+			<Description>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN_EFFECT</Description>
 			<DefaultBuilding>BUILDING_DEPT_FOREIGN_POLICY_EFFECT</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -13694,62 +13694,62 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_AUTOBUILD_ALUMINUM_NEAR</Type>
-			<Description>TXT_KEY_BUILDING_AUTOBUILD_ALUMINUM_NEAR</Description>
+			<Description>TXT_KEY_AUTOBUILD_ALUMINUM_NEAR</Description>
 			<DefaultBuilding>BUILDING_AUTOBUILD_ALUMINUM_NEAR</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_AUTOBUILD_COPPER_NEAR</Type>
-			<Description>TXT_KEY_BUILDING_AUTOBUILD_COPPER_NEAR</Description>
+			<Description>TXT_KEY_AUTOBUILD_COPPER_NEAR</Description>
 			<DefaultBuilding>BUILDING_AUTOBUILD_COPPER_NEAR</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_AUTOBUILD_IRON_NEAR</Type>
-			<Description>TXT_KEY_BUILDING_AUTOBUILD_IRON_NEAR</Description>
+			<Description>TXT_KEY_AUTOBUILD_IRON_NEAR</Description>
 			<DefaultBuilding>BUILDING_AUTOBUILD_IRON_NEAR</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_AUTOBUILD_SILVER_NEAR</Type>
-			<Description>TXT_KEY_BUILDING_AUTOBUILD_SILVER_NEAR</Description>
+			<Description>TXT_KEY_AUTOBUILD_SILVER_NEAR</Description>
 			<DefaultBuilding>BUILDING_AUTOBUILD_SILVER_NEAR</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_AUTOBUILD_GOLD_NEAR</Type>
-			<Description>TXT_KEY_BUILDING_AUTOBUILD_GOLD_NEAR</Description>
+			<Description>TXT_KEY_AUTOBUILD_GOLD_NEAR</Description>
 			<DefaultBuilding>BUILDING_AUTOBUILD_GOLD_NEAR</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_AUTOBUILD_LEAD_NEAR</Type>
-			<Description>TXT_KEY_BUILDING_AUTOBUILD_LEAD_NEAR</Description>
+			<Description>TXT_KEY_AUTOBUILD_LEAD_NEAR</Description>
 			<DefaultBuilding>BUILDING_AUTOBUILD_LEAD_NEAR</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_AUTOBUILD_TIN_NEAR</Type>
-			<Description>TXT_KEY_BUILDING_AUTOBUILD_TIN_NEAR</Description>
+			<Description>TXT_KEY_AUTOBUILD_TIN_NEAR</Description>
 			<DefaultBuilding>BUILDING_AUTOBUILD_TIN_NEAR</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_AUTOBUILD_PLATINUM_NEAR</Type>
-			<Description>TXT_KEY_BUILDING_AUTOBUILD_PLATINUM_NEAR</Description>
+			<Description>TXT_KEY_AUTOBUILD_PLATINUM_NEAR</Description>
 			<DefaultBuilding>BUILDING_AUTOBUILD_PLATINUM_NEAR</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_AUTOBUILD_TITANIUM_NEAR</Type>
-			<Description>TXT_KEY_BUILDING_AUTOBUILD_TITANIUM_NEAR</Description>
+			<Description>TXT_KEY_AUTOBUILD_TITANIUM_NEAR</Description>
 			<DefaultBuilding>BUILDING_AUTOBUILD_TITANIUM_NEAR</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_AUTOBUILD_CAMEL_NEAR</Type>
-			<Description>TXT_KEY_BUILDING_AUTOBUILD_CAMEL_NEAR</Description>
+			<Description>TXT_KEY_AUTOBUILD_CAMEL_NEAR</Description>
 			<DefaultBuilding>BUILDING_AUTOBUILD_CAMEL_NEAR</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_AUTOBUILD_ELEPHANT_NEAR</Type>
-			<Description>TXT_KEY_BUILDING_AUTOBUILD_ELEPHANT_NEAR</Description>
+			<Description>TXT_KEY_AUTOBUILD_ELEPHANT_NEAR</Description>
 			<DefaultBuilding>BUILDING_AUTOBUILD_ELEPHANT_NEAR</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_AUTOBUILD_HORSE_NEAR</Type>
-			<Description>TXT_KEY_BUILDING_AUTOBUILD_HORSE_NEAR</Description>
+			<Description>TXT_KEY_AUTOBUILD_HORSE_NEAR</Description>
 			<DefaultBuilding>BUILDING_AUTOBUILD_HORSE_NEAR</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -13759,48 +13759,48 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BURIAL_TRADITION_CAVE</Type>
-			<Description>TXT_KEY_BUILDING_BURIAL_TRADITION_CAVE</Description>
+			<Description>TXT_KEY_BURIAL_TRADITION_CAVE</Description>
 			<DefaultBuilding>BUILDING_BURIAL_TRADITION_CAVE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BURIAL_TRADITION_EARTH</Type>
-			<Description>TXT_KEY_BUILDING_BURIAL_TRADITION_EARTH</Description>
+			<Description>TXT_KEY_BURIAL_TRADITION_EARTH</Description>
 			<DefaultBuilding>BUILDING_BURIAL_TRADITION_EARTH</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BURIAL_TRADITION_FIRE</Type>
-			<Description>TXT_KEY_BUILDING_BURIAL_TRADITION_FIRE</Description>
+			<Description>TXT_KEY_BURIAL_TRADITION_FIRE</Description>
 			<DefaultBuilding>BUILDING_BURIAL_TRADITION_FIRE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BURIAL_TRADITION_SKY</Type>
-			<Description>TXT_KEY_BUILDING_BURIAL_TRADITION_SKY</Description>
+			<Description>TXT_KEY_BURIAL_TRADITION_SKY</Description>
 			<DefaultBuilding>BUILDING_BURIAL_TRADITION_SKY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BURIAL_TRADITION_BONE</Type>
-			<Description>TXT_KEY_BUILDING_BURIAL_TRADITION_BONE</Description>
+			<Description>TXT_KEY_BURIAL_TRADITION_BONE</Description>
 			<DefaultBuilding>BUILDING_BURIAL_TRADITION_BONE</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BURIAL_TRADITION_MUMMY</Type>
-			<Description>TXT_KEY_BUILDING_BURIAL_TRADITION_MUMMY</Description>
+			<Description>TXT_KEY_BURIAL_TRADITION_MUMMY</Description>
 			<DefaultBuilding>BUILDING_BURIAL_TRADITION_MUMMY</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_BURIAL_PLATFORMS</Type>
-			<Description>TXT_KEY_BUILDING_BURIAL_PLATFORMS</Description>
+			<Description>TXT_KEY_BURIAL_PLATFORMS</Description>
 			<DefaultBuilding>BUILDING_BURIAL_PLATFORMS</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_FUNERARY_SERVICES</Type>
-			<Description>TXT_KEY_BUILDING_FUNERARY_SERVICES</Description>
+			<Description>TXT_KEY_FUNERARY_SERVICES</Description>
 			<DefaultBuilding>BUILDING_FUNERARY_SERVICES</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_SCARECROWS</Type>
 			<Description>TXT_KEY_BUILDING_SCARECROWS</Description>
-			<DefaultBuilding>BUILDING_SCARECROWS</DefaultBuilding>
+			<DefaultBuilding>BUILDING_SCARESCROWS</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_RAT_CATCHER</Type>
@@ -13820,7 +13820,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CATACOMBS</Type>
-			<Description>TXT_KEY_BUILDING_CATACOMBS</Description>
+			<Description>TXT_KEY_CATACOMBS</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_CATACOMBS</DefaultBuilding>
 		</BuildingClassInfo>
@@ -13856,7 +13856,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_PERGAMON</Type>
-			<Description>TXT_KEY_BUILDING_PERGAMON</Description>
+			<Description>TXT_KEY_PERGAMON</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_PERGAMON</DefaultBuilding>
 		</BuildingClassInfo>
@@ -13880,7 +13880,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_ZIZKOV</Type>
-			<Description>TXT_KEY_BUILDING_ZIZKOV</Description>
+			<Description>TXT_KEY_ZIZKOV</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_ZIZKOV</DefaultBuilding>
 		</BuildingClassInfo>

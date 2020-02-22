@@ -21655,7 +21655,7 @@
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDINGCLASS_CORPORATION_FASHION_STORE</BuildingType>
+					<BuildingType>BUILDINGCLASS_FASHION_STORE</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -21663,7 +21663,7 @@
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDINGCLASS_CORPORATION_EMPCLOTH_STORE</BuildingType>
+					<BuildingType>BUILDINGCLASS_EMPCLOTH_STORE</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>

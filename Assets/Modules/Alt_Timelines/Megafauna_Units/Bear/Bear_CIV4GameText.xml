@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_BEARRIDER</Tag>
+		<Tag>TXT_KEY_UNIT_BEAR_RIDER</Tag>
 		<English>Bear Rider</English>
 		<French>
 			<Text>Monteur d'Ours</Text>
@@ -12,12 +12,12 @@
 		<Polish>Jeździec (Niedźwiedź)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_BEARRIDER_PEDIA</Tag>
+		<Tag>TXT_KEY_UNIT_BEAR_RIDER_PEDIA</Tag>
 		<English>There is no evidence this unit was ever used.  It is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT].  Technologies that might have been.</English>
 		<Italian>Non c'è alcuna prova che quest'unità sia mai stata usata in battaglia. Fa parte delle [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_BEARRIDER_STRATEGY</Tag>
+		<Tag>TXT_KEY_UNIT_BEAR_RIDER_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Bear Riders[COLOR_REVERT] are early-game mounted units. This particular rider is using [COLOR_HIGHLIGHT_TEXT]Bears[COLOR_REVERT] instead [COLOR_HIGHLIGHT_TEXT]Horses[COLOR_REVERT] and is slower than the rest of the Riders.</English>
 		<Italian>I [COLOR_UNIT_TEXT]Cavalcatori di orsi[COLOR_REVERT] sono</Italian>
 	</TEXT>
@@ -43,7 +43,7 @@
 		<Italian>L'[COLOR_BUILDING_TEXT]Allevatore di rosi[COLOR_REVERT] è necessario per addestrare [LINK=UNIT_BEARRIDER]Cavalcatori di orsi[\LINK].</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_BEARKNIGHT</Tag>
+		<Tag>TXT_KEY_UNIT_BEAR_KNIGHT</Tag>
 		<English>Bear Knight</English>
 		<French>
 			<Text>Chevalier Monteur d'Ours</Text>
@@ -54,12 +54,12 @@
 		<Polish>Rycerz (Niedźwiedź)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_BEARKNIGHT_PEDIA</Tag>
+		<Tag>TXT_KEY_UNIT_BEAR_KNIGHT_PEDIA</Tag>
 		<English>There is no evidence this unit was ever used.  It is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT].  Technologies that might have been.</English>
 		<Italian>Non c'è alcuna prova che quest'unità sia mai stata usata in battaglia. Fa parte delle [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_BEARKNIGHT_STRATEGY</Tag>
+		<Tag>TXT_KEY_UNIT_BEAR_KNIGHT_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Bear Knights[COLOR_REVERT] are slower but stronger version of normal Knight. This mounted unit is using [COLOR_HIGHLIGHT_TEXT]Bears[COLOR_REVERT] instead of [COLOR_HIGHLIGHT_TEXT]Horses[COLOR_REVERT] and has national limit (15).</English>
 		<Italian>I [COLOR_UNIT_TEXT]Cavalieri du orso[COLOR_REVERT] sono</Italian>
 	</TEXT>

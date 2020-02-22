@@ -238,7 +238,7 @@ Valid NPC players for spawns:
 		</SpawnInfo>
 		<SpawnInfo>
 			<Type>SPAWN_ELEPHANT_NATIVE</Type>
-			<UnitType>UNIT_ELEPHANT_ASIAN</UnitType>
+			<UnitType>UNIT_ELEPHANT</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>25</iTurns>
@@ -2888,7 +2888,7 @@ Valid NPC players for spawns:
 		</SpawnInfo>
 		<SpawnInfo>
 			<Type>SPAWN_AFRICANELEPHANT_NATIVE</Type>
-			<UnitType>UNIT_ELEPHANT_AFRICAN</UnitType>
+			<UnitType>UNIT_AFRICANELEPHANT</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>40</iTurns>

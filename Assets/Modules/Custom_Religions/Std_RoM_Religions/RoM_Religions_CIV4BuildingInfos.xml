@@ -177,9 +177,9 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_ERECTION</BuildingClass>
 			<Type>BUILDING_ERECTION</Type>
-			<Description>TXT_KEY_BUILDING_ERECTION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ERECTION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ERECTION_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_ERECHTHEUM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ERECHTHEUM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ERECHTHEUM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ERECTION</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ERECTION</MovieDefineTag>

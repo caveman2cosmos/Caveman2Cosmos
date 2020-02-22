@@ -169,14 +169,14 @@ bool CyTeam::isAVassal() const
 	return m_pTeam ? m_pTeam->isAVassal() : false;
 }
 
-int CyTeam::getUnitMaking(int /*UnitTypes*/ eUnit)
+int CyTeam::getUnitClassMaking(int /*UnitClassTypes*/ eUnitClass)
 {
-	return m_pTeam ? m_pTeam->getUnitMaking((UnitTypes)eUnit) : -1;
+	return m_pTeam ? m_pTeam->getUnitClassMaking((UnitClassTypes)eUnitClass) : -1;
 }
 
-int CyTeam::getUnitCountPlusMaking(int /*UnitTypes*/ eUnit)
+int CyTeam::getUnitClassCountPlusMaking(int /*UnitClassTypes*/ eUnitClass)
 {
-	return m_pTeam ? m_pTeam->getUnitCountPlusMaking((UnitTypes)eUnit) : -1;
+	return m_pTeam ? m_pTeam->getUnitClassCountPlusMaking((UnitClassTypes)eUnitClass) : -1;
 }
 
 int CyTeam::getBuildingClassMaking(int /*BuildingClassTypes*/ eBuildingClass)
@@ -845,14 +845,14 @@ int CyTeam::getProjectMaking(int /*ProjectTypes*/ eIndex)
 	return m_pTeam ? m_pTeam->getProjectMaking((ProjectTypes)eIndex) : -1;
 }
 
-int CyTeam::getUnitCount(int /*UnitTypes*/ eIndex)
+int CyTeam::getUnitClassCount(int /*UnitClassTypes*/ eIndex)
 {
-	return m_pTeam ? m_pTeam->getUnitCount((UnitTypes)eIndex) : -1;
+	return m_pTeam ? m_pTeam->getUnitClassCount((UnitClassTypes)eIndex) : -1;
 }
 
-bool CyTeam::isUnitMaxedOut(int /*UnitTypes*/ eIndex, int iExtra)
+bool CyTeam::isUnitClassMaxedOut(int /*UnitClassTypes*/ eIndex, int iExtra)
 {
-	return m_pTeam ? m_pTeam->isUnitMaxedOut((UnitTypes)eIndex, iExtra) : false;
+	return m_pTeam ? m_pTeam->isUnitClassMaxedOut((UnitClassTypes)eIndex, iExtra) : false;
 }
 
 int CyTeam::getBuildingClassCount(int /*BuildingClassTypes*/ eIndex)
