@@ -558,9 +558,9 @@ bool CyPlayer::canMaintain(int /*ProcessTypes*/ eProcess, bool bContinue)
 	return m_pPlayer ? m_pPlayer->canMaintain((ProcessTypes)eProcess, bContinue) : false;
 }
 
-bool CyPlayer::isProductionMaxedUnitClass(int /*UnitClassTypes*/ eUnitClass)
+bool CyPlayer::isProductionMaxedUnit(int /*UnitTypes*/ eUnit)
 {
-	return m_pPlayer ? m_pPlayer->isProductionMaxedUnitClass((UnitClassTypes) eUnitClass) : false;
+	return m_pPlayer ? m_pPlayer->isProductionMaxedUnit((UnitTypes) eUnit) : false;
 }
 
 bool CyPlayer::isProductionMaxedBuildingClass(int /*BuildingClassTypes*/ eBuildingClass, bool bAcquireCity)
@@ -2093,24 +2093,24 @@ int CyPlayer::getFeatureHappiness(int /*FeatureTypes*/ iIndex)
 	return m_pPlayer ? m_pPlayer->getFeatureHappiness((FeatureTypes)iIndex) : -1;
 }
 
-int CyPlayer::getUnitClassCount(int /*UnitClassTypes*/ eIndex)
+int CyPlayer::getUnitCount(int /*UnitTypes*/ eIndex)
 {
-	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->getUnitClassCount((UnitClassTypes) eIndex) : 0;
+	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->getUnitCount((UnitTypes) eIndex) : 0;
 }
 
-bool CyPlayer::isUnitClassMaxedOut(int /*UnitClassTypes*/ eIndex, int iExtra)
+bool CyPlayer::isUnitMaxedOut(int /*UnitTypes*/ eIndex, int iExtra)
 {
-	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->isUnitClassMaxedOut((UnitClassTypes) eIndex, iExtra) : false;
+	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->isUnitMaxedOut((UnitTypes) eIndex, iExtra) : false;
 }
 
-int CyPlayer::getUnitClassMaking(int /*UnitClassTypes*/ eIndex)
+int CyPlayer::getUnitMaking(int /*UnitTypes*/ eIndex)
 {
-	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->getUnitClassMaking((UnitClassTypes) eIndex) : 0;
+	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->getUnitMaking((UnitTypes) eIndex) : 0;
 }
 
-int CyPlayer::getUnitClassCountPlusMaking(int /*UnitClassTypes*/ eIndex)
+int CyPlayer::getUnitCountPlusMaking(int /*UnitTypes*/ eIndex)
 {
-	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->getUnitClassCountPlusMaking((UnitClassTypes) eIndex) : 0;
+	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->getUnitCountPlusMaking((UnitTypes) eIndex) : 0;
 }
 
 int CyPlayer::getBuildingClassCount(int /*BuildingClassTypes*/ iIndex)

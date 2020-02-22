@@ -28,37 +28,36 @@ def getHelpBlessedSea1(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_BLESSED_SEA_HELP", (iOurMinLandmass, ))
 
 def canTriggerBlessedSea(argsList):
-  kTriggeredData = argsList[0]
-  map = GC.getMap()
+	kTriggeredData = argsList[0]
+	MAP = GC.getMap()
 
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(kTriggeredData.ePlayer).isHuman():
-    return False
+	if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(kTriggeredData.ePlayer).isHuman():
+		return False
 
-  iMapMinLandmass = 2 * GC.getWorldInfo(map.getWorldSize()).getDefaultPlayers()
-  iOurMaxLandmass = GC.getWorldInfo(map.getWorldSize()).getDefaultPlayers() / 2
+	iMapMinLandmass = 2 * GC.getWorldInfo(MAP.getWorldSize()).getDefaultPlayers()
+	iOurMaxLandmass = iMapMinLandmass / 4
 
-  if (map.getNumLandAreas() < iMapMinLandmass):
-    return False
+	if (MAP.getNumLandAreas() < iMapMinLandmass):
+		return False
 
-  iOurLandmasses = 0
-  for i in xrange(map.getIndexAfterLastArea()):
-    area = map.getArea(i)
-    if not area.isNone() and not area.isWater() and area.getCitiesPerPlayer(kTriggeredData.ePlayer) > 0:
-      iOurLandmasses += 1
+	iOurLandmasses = 0
+	for i in xrange(MAP.getIndexAfterLastArea()):
+		area = MAP.getArea(i)
+		if not area.isNone() and not area.isWater() and area.getCitiesPerPlayer(kTriggeredData.ePlayer) > 0:
+			iOurLandmasses += 1
 
-  if (iOurLandmasses > iOurMaxLandmass):
-    return False
+	if (iOurLandmasses > iOurMaxLandmass):
+		return False
 
-  player = GC.getPlayer(kTriggeredData.ePlayer)
-  if player.getUnitClassCount(GC.getInfoTypeForString("UNITCLASS_GALLEY")) == 0:
-    if player.getUnitClassCount(GC.getInfoTypeForString("UNITCLASS_CARAVEL")) == 0:
-      if player.getUnitClassCount(GC.getInfoTypeForString("UNITCLASS_GALLEON")) == 0:
-        if player.getUnitClassCount(GC.getInfoTypeForString("UNITCLASS_WARGALLEY")) == 0:
-          if player.getUnitClassCount(GC.getInfoTypeForString("UNITCLASS_FLUYT")) == 0:
-            if player.getUnitClassCount(GC.getInfoTypeForString("UNITCLASS_BRIGANTINE")) == 0:
-              return False
-
-  return True
+	player = GC.getPlayer(kTriggeredData.ePlayer)
+	if not(player.getUnitCount(GC.getInfoTypeForString("UNIT_GALLEY"))
+		or player.getUnitCount(GC.getInfoTypeForString("UNIT_CARAVEL"))
+		or player.getUnitCount(GC.getInfoTypeForString("UNIT_GALLEON"))
+		or player.getUnitCount(GC.getInfoTypeForString("UNIT_WARGALLEY"))
+		or player.getUnitCount(GC.getInfoTypeForString("UNIT_FLUYT"))
+		or player.getUnitCount(GC.getInfoTypeForString("UNIT_BRIGANTINE"))
+	): return False
+	return True
 
 def canTriggerBlessedSea2(argsList):
 
@@ -2412,9 +2411,8 @@ def canTriggerHarbormasterDone(argsList):
   if iHarborsRequired > player.getBuildingClassCountWithUpgrades(iHarbor):
     return False
 
-  iCaravel = GC.getInfoTypeForString("UNITCLASS_CARAVEL")
   iCaravelsRequired = iHarborsRequired / 2 + 1
-  if iCaravelsRequired > player.getUnitClassCount(iCaravel):
+  if iCaravelsRequired > player.getUnitCount(GC.getInfoTypeForString("UNIT_CARAVEL")):
     return False
 
   return True
@@ -3309,8 +3307,8 @@ def canTriggerWarChariotsDone(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
   iNumUnits = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers() + 1
-  iUnitClassType = GC.getInfoTypeForString("UNITCLASS_CHARIOT")
-  if player.getUnitClassCount(iUnitClassType) < iNumUnits:
+
+  if player.getUnitCount(GC.getInfoTypeForString("UNIT_CHARIOT")) < iNumUnits:
     return False
 
   kOrigTriggeredData = player.getEventOccured(trigger.getPrereqEvent(0))
@@ -3335,10 +3333,10 @@ def canTriggerEliteSwordsDone(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
   iNumUnits = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers() + 5
-  iUnitClassType = GC.getInfoTypeForString("UNITCLASS_LIGHT_SWORDSMAN")
-  iUnitClassType2 = GC.getInfoTypeForString("UNITCLASS_SWORDSMAN")
-  iUnitClassType3 = GC.getInfoTypeForString("UNITCLASS_HEAVY_SWORDSMAN")
-  if player.getUnitClassCount(iUnitClassType) + player.getUnitClassCount(iUnitClassType2) + player.getUnitClassCount(iUnitClassType3) < iNumUnits:
+  iUnit1 = GC.getInfoTypeForString("UNIT_LIGHT_SWORDSMAN")
+  iUnit2 = GC.getInfoTypeForString("UNIT_SWORDSMAN")
+  iUnit3 = GC.getInfoTypeForString("UNIT_HEAVY_SWORDSMAN")
+  if player.getUnitCount(iUnit1) + player.getUnitCount(iUnit2) + player.getUnitCount(iUnit3) < iNumUnits:
     return False
 
   return True
@@ -3391,9 +3389,8 @@ def canTriggerWarshipsDone(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
   iNumUnits = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()
-  iUnitClassType = GC.getInfoTypeForString("UNITCLASS_TRIREME")
 
-  if player.getUnitClassCount(iUnitClassType) < iNumUnits:
+  if player.getUnitCount(GC.getInfoTypeForString("UNIT_TRIREME")) < iNumUnits:
     return False
 
   return True
@@ -3428,9 +3425,8 @@ def canTriggerGunsButterDone(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
   iNumUnits = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers() + 1
-  iUnitClassType = GC.getInfoTypeForString("UNITCLASS_MUSKETMAN")
 
-  if player.getUnitClassCount(iUnitClassType) < iNumUnits:
+  if player.getUnitCount(GC.getInfoTypeForString("UNIT_MUSKETMAN")) < iNumUnits:
     return False
 
   return True
@@ -3486,9 +3482,8 @@ def canTriggerNobleKnightsDone(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
   iNumUnits = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers() + 1
-  iUnitClassType = GC.getInfoTypeForString("UNITCLASS_KNIGHT")
 
-  if player.getUnitClassCount(iUnitClassType) < iNumUnits:
+  if player.getUnitCount(GC.getInfoTypeForString("UNIT_KNIGHT")) < iNumUnits:
     return False
 
   trigger = GC.getEventTriggerInfo(kTriggeredData.eTrigger)
@@ -3562,19 +3557,16 @@ def canTriggerOverwhelmDone(argsList):
   kTriggeredData = argsList[0]
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iDestroyer = GC.getInfoTypeForString("UNITCLASS_DESTROYER")
   iNumDestroyers = 4
-  if player.getUnitClassCount(iDestroyer) < iNumDestroyers:
+  if player.getUnitCount(GC.getInfoTypeForString("UNIT_DESTROYER")) < iNumDestroyers:
     return False
 
-  iBattleship = GC.getInfoTypeForString("UNITCLASS_BATTLESHIP")
   iNumBattleships = 2
-  if player.getUnitClassCount(iBattleship) < iNumBattleships:
+  if player.getUnitCount(GC.getInfoTypeForString("UNIT_BATTLESHIP")) < iNumBattleships:
     return False
 
-  iCarrier = GC.getInfoTypeForString("UNITCLASS_CARRIER")
   iNumCarriers = 3
-  if player.getUnitClassCount(iCarrier) < iNumCarriers:
+  if player.getUnitCount(GC.getInfoTypeForString("UNIT_CARRIER")) < iNumCarriers:
     return False
 
   iFighter = GC.getInfoTypeForString("SPECIALUNIT_FIGHTER")
@@ -3928,9 +3920,7 @@ def canTriggerNuclearProtest(argsList):
   kTriggeredData = argsList[0]
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iICBMClass = GC.getInfoTypeForString("UNITCLASS_ICBM")
-  iTacNukeClass = GC.getInfoTypeForString("UNITCLASS_TACTICAL_NUKE")
-  if player.getUnitClassCount(iICBMClass) + player.getUnitClassCount(iTacNukeClass) < 10:
+  if player.getUnitCount(GC.getInfoTypeForString("UNIT_ICBM")) + player.getUnitCount(GC.getInfoTypeForString("UNIT_TACTICAL_NUKE")) < 10:
     return False
 
   return True
@@ -3939,12 +3929,12 @@ def doNuclearProtest1(argsList):
   kTriggeredData = argsList[1]
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iICBMClass = GC.getInfoTypeForString("UNITCLASS_ICBM")
-  iTacNukeClass = GC.getInfoTypeForString("UNITCLASS_TACTICAL_NUKE")
+  iICBM = GC.getInfoTypeForString("UNIT_ICBM")
+  iTacNuke = GC.getInfoTypeForString("UNIT_TACTICAL_NUKE")
 
   (loopUnit, iter) = player.firstUnit(False)
   while (loopUnit):
-    if loopUnit.getUnitClassType() == iICBMClass or loopUnit.getUnitClassType() == iTacNukeClass:
+    if loopUnit.getUnitType() == iICBM or loopUnit.getUnitType() == iTacNuke:
       loopUnit.kill(False, -1)
     (loopUnit, iter) = player.nextUnit(iter, False)
 
@@ -4698,35 +4688,20 @@ def canTriggerDarwinsVoyage(argsList):
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
   map = GC.getMap()
 
-  iDestroyer = GC.getInfoTypeForString("UNITCLASS_DESTROYER")
-  iBattleship = GC.getInfoTypeForString("UNITCLASS_BATTLESHIP")
-  iCarrier = GC.getInfoTypeForString("UNITCLASS_CARRIER")
-  iFrigate = GC.getInfoTypeForString("UNITCLASS_FRIGATE")
-  iSoL = GC.getInfoTypeForString("UNITCLASS_SHIP_OF_THE_LINE")
-  iIronclad = GC.getInfoTypeForString("UNITCLASS_IRONCLAD")
-  iStealth = GC.getInfoTypeForString("UNITCLASS_STEALTH_DESTROYER")
-  iMissile = GC.getInfoTypeForString("UNITCLASS_MISSILE_CRUISER")
-  iBoomer = GC.getInfoTypeForString("UNITCLASS_SUBMARINE")
-  iSeawolf = GC.getInfoTypeForString("UNITCLASS_ATTACK_SUBMARINE")
-  iPrivateer = GC.getInfoTypeForString("UNITCLASS_PRIVATEER")
-  iTransport = GC.getInfoTypeForString("UNITCLASS_TRANSPORT")
-  iGalleon = GC.getInfoTypeForString("UNITCLASS_GALLEON")
-  iCaravel = GC.getInfoTypeForString("UNITCLASS_CARAVEL")
-
-  pPlayerDD = pPlayer.getUnitClassCount(iDestroyer)
-  pPlayerBB = pPlayer.getUnitClassCount(iBattleship)
-  pPlayerCV = pPlayer.getUnitClassCount(iCarrier)
-  pPlayerFF = pPlayer.getUnitClassCount(iFrigate)
-  pPlayerSoL = pPlayer.getUnitClassCount(iSoL)
-  pPlayerIC = pPlayer.getUnitClassCount(iIronclad)
-  pPlayerSDD = pPlayer.getUnitClassCount(iStealth)
-  pPlayerMC = pPlayer.getUnitClassCount(iMissile)
-  pPlayerSSN = pPlayer.getUnitClassCount(iSeawolf)
-  pPlayerSSBN = pPlayer.getUnitClassCount(iBoomer)
-  pPlayerPT = pPlayer.getUnitClassCount(iPrivateer)
-  pPlayerTT = pPlayer.getUnitClassCount(iTransport)
-  pPlayerGL = pPlayer.getUnitClassCount(iGalleon)
-  pPlayerCY = pPlayer.getUnitClassCount(iCaravel)
+  pPlayerDD = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_DESTROYER"))
+  pPlayerBB = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_BATTLESHIP"))
+  pPlayerCV = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_CARRIER"))
+  pPlayerFF = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_FRIGATE"))
+  pPlayerSoL = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_SHIP_OF_THE_LINE"))
+  pPlayerIC = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_IRONCLAD"))
+  pPlayerSDD = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_STEALTH_DESTROYER"))
+  pPlayerMC = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_MISSILE_CRUISER"))
+  pPlayerSSN = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_ATTACK_SUBMARINE"))
+  pPlayerSSBN = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_SUBMARINE"))
+  pPlayerPT = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_PRIVATEER"))
+  pPlayerTT = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_TRANSPORT"))
+  pPlayerGL = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_GALLEON"))
+  pPlayerCY = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_CARAVEL"))
   pAggregate = pPlayerPT + pPlayerDD + pPlayerBB + pPlayerCV + pPlayerFF + pPlayerSoL + pPlayerIC + pPlayerSDD + pPlayerMC + pPlayerSSN + pPlayerSSBN
   pTransports = pPlayerTT + pPlayerGL + pPlayerCY
 
@@ -4868,29 +4843,17 @@ def canTriggerBlackbeard(argsList):
 ###     Triremes, Galleys, Caravels/Carracks, Galleons/East Indiamen, Transports don't count.
 ###     I've included the modern ships just to prevent anomalous triggering.
 
-  iPrivateer = GC.getInfoTypeForString("UNITCLASS_PRIVATEER")
-  iDestroyer = GC.getInfoTypeForString("UNITCLASS_DESTROYER")
-  iBattleship = GC.getInfoTypeForString("UNITCLASS_BATTLESHIP")
-  iCarrier = GC.getInfoTypeForString("UNITCLASS_CARRIER")
-  iFrigate = GC.getInfoTypeForString("UNITCLASS_FRIGATE")
-  iSoL = GC.getInfoTypeForString("UNITCLASS_SHIP_OF_THE_LINE")
-  iIronclad = GC.getInfoTypeForString("UNITCLASS_IRONCLAD")
-  iStealth = GC.getInfoTypeForString("UNITCLASS_STEALTH_DESTROYER")
-  iMissile = GC.getInfoTypeForString("UNITCLASS_MISSILE_CRUISER")
-  iBoomer = GC.getInfoTypeForString("UNITCLASS_SUBMARINE")
-  iSeawolf = GC.getInfoTypeForString("UNITCLASS_ATTACK_SUBMARINE")
-
-  pPlayerPT = pPlayer.getUnitClassCount(iPrivateer)
-  pPlayerDD = pPlayer.getUnitClassCount(iDestroyer)
-  pPlayerBB = pPlayer.getUnitClassCount(iBattleship)
-  pPlayerCV = pPlayer.getUnitClassCount(iCarrier)
-  pPlayerFF = pPlayer.getUnitClassCount(iFrigate)
-  pPlayerSoL = pPlayer.getUnitClassCount(iSoL)
-  pPlayerIC = pPlayer.getUnitClassCount(iIronclad)
-  pPlayerSDD = pPlayer.getUnitClassCount(iStealth)
-  pPlayerMC = pPlayer.getUnitClassCount(iMissile)
-  pPlayerSSN = pPlayer.getUnitClassCount(iSeawolf)
-  pPlayerSSBN = pPlayer.getUnitClassCount(iBoomer)
+  pPlayerPT = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_PRIVATEER"))
+  pPlayerDD = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_DESTROYER"))
+  pPlayerBB = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_BATTLESHIP"))
+  pPlayerCV = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_CARRIER"))
+  pPlayerFF = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_FRIGATE"))
+  pPlayerSoL = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_SHIP_OF_THE_LINE"))
+  pPlayerIC = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_IRONCLAD"))
+  pPlayerSDD = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_STEALTH_DESTROYER"))
+  pPlayerMC = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_MISSILE_CRUISER"))
+  pPlayerSSN = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_ATTACK_SUBMARINE"))
+  pPlayerSSBN = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_SUBMARINE"))
   pAggregate = pPlayerPT + pPlayerDD + pPlayerBB + pPlayerCV + pPlayerFF + pPlayerSoL + pPlayerIC + pPlayerSDD + pPlayerMC + pPlayerSSN + pPlayerSSBN
 
   if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
@@ -5093,24 +5056,14 @@ def canTriggerMalaccanPirates(argsList):
 ###     Galleys & Triremes & Galleons/East Indiamen & Caravels/Carracks & Transports & privateers & frigates & ships of the line don't count.
 ###     I've included the modern ships just to prevent anomalous triggering.
 
-  iDestroyer = GC.getInfoTypeForString("UNITCLASS_DESTROYER")
-  iBattleship = GC.getInfoTypeForString("UNITCLASS_BATTLESHIP")
-  iCarrier = GC.getInfoTypeForString("UNITCLASS_CARRIER")
-  iIronclad = GC.getInfoTypeForString("UNITCLASS_IRONCLAD")
-  iStealth = GC.getInfoTypeForString("UNITCLASS_STEALTH_DESTROYER")
-  iMissile = GC.getInfoTypeForString("UNITCLASS_MISSILE_CRUISER")
-  iBoomer = GC.getInfoTypeForString("UNITCLASS_SUBMARINE")
-  iSeawolf = GC.getInfoTypeForString("UNITCLASS_ATTACK_SUBMARINE")
-
-
-  pPlayerDD = pPlayer.getUnitClassCount(iDestroyer)
-  pPlayerBB = pPlayer.getUnitClassCount(iBattleship)
-  pPlayerCV = pPlayer.getUnitClassCount(iCarrier)
-  pPlayerIC = pPlayer.getUnitClassCount(iIronclad)
-  pPlayerSDD = pPlayer.getUnitClassCount(iStealth)
-  pPlayerMC = pPlayer.getUnitClassCount(iMissile)
-  pPlayerSSN = pPlayer.getUnitClassCount(iSeawolf)
-  pPlayerSSBN = pPlayer.getUnitClassCount(iBoomer)
+  pPlayerDD = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_DESTROYER"))
+  pPlayerBB = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_BATTLESHIP"))
+  pPlayerCV = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_CARRIER"))
+  pPlayerIC = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_IRONCLAD"))
+  pPlayerSDD = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_STEALTH_DESTROYER"))
+  pPlayerMC = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_MISSILE_CRUISER"))
+  pPlayerSSN = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_ATTACK_SUBMARINE"))
+  pPlayerSSBN = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_SUBMARINE"))
   pAggregate =  pPlayerDD + pPlayerBB + pPlayerCV + pPlayerIC + pPlayerSDD + pPlayerMC + pPlayerSSN + pPlayerSSBN
 
   if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
@@ -5243,30 +5196,17 @@ def canTriggerHenryMorgan(argsList):
 ###     Galleys & Triremes & Galleons/East Indiamen & Caravels/Carracks & Transports don't count.
 ###     I've included the modern ships just to prevent anomalous triggering.
 
-  iPrivateer = GC.getInfoTypeForString("UNITCLASS_PRIVATEER")
-  iDestroyer = GC.getInfoTypeForString("UNITCLASS_DESTROYER")
-  iBattleship = GC.getInfoTypeForString("UNITCLASS_BATTLESHIP")
-  iCarrier = GC.getInfoTypeForString("UNITCLASS_CARRIER")
-  iFrigate = GC.getInfoTypeForString("UNITCLASS_FRIGATE")
-  iSoL = GC.getInfoTypeForString("UNITCLASS_SHIP_OF_THE_LINE")
-  iIronclad = GC.getInfoTypeForString("UNITCLASS_IRONCLAD")
-  iStealth = GC.getInfoTypeForString("UNITCLASS_STEALTH_DESTROYER")
-  iMissile = GC.getInfoTypeForString("UNITCLASS_MISSILE_CRUISER")
-  iBoomer = GC.getInfoTypeForString("UNITCLASS_SUBMARINE")
-  iSeawolf = GC.getInfoTypeForString("UNITCLASS_ATTACK_SUBMARINE")
-
-
-  pPlayerPT = pPlayer.getUnitClassCount(iPrivateer)
-  pPlayerDD = pPlayer.getUnitClassCount(iDestroyer)
-  pPlayerBB = pPlayer.getUnitClassCount(iBattleship)
-  pPlayerCV = pPlayer.getUnitClassCount(iCarrier)
-  pPlayerFF = pPlayer.getUnitClassCount(iFrigate)
-  pPlayerSoL = pPlayer.getUnitClassCount(iSoL)
-  pPlayerIC = pPlayer.getUnitClassCount(iIronclad)
-  pPlayerSDD = pPlayer.getUnitClassCount(iStealth)
-  pPlayerMC = pPlayer.getUnitClassCount(iMissile)
-  pPlayerSSN = pPlayer.getUnitClassCount(iSeawolf)
-  pPlayerSSBN = pPlayer.getUnitClassCount(iBoomer)
+  pPlayerPT = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_PRIVATEER"))
+  pPlayerDD = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_DESTROYER"))
+  pPlayerBB = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_BATTLESHIP"))
+  pPlayerCV = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_CARRIER"))
+  pPlayerFF = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_FRIGATE"))
+  pPlayerSoL = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_SHIP_OF_THE_LINE"))
+  pPlayerIC = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_IRONCLAD"))
+  pPlayerSDD = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_STEALTH_DESTROYER"))
+  pPlayerMC = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_MISSILE_CRUISER"))
+  pPlayerSSN = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_ATTACK_SUBMARINE"))
+  pPlayerSSBN = pPlayer.getUnitCount(GC.getInfoTypeForString("UNIT_SUBMARINE"))
   pAggregate =  pPlayerPT + pPlayerDD + pPlayerBB + pPlayerCV + pPlayerFF + pPlayerSoL + pPlayerIC + pPlayerSDD + pPlayerMC + pPlayerSSN + pPlayerSSBN
 
   if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
@@ -5410,36 +5350,36 @@ def canTriggerStedeBonnet(argsList):
 ###     Galleys & Triremes don't count.
 ###     I've included the modern ships just to prevent anomalous triggering.
 
-  iCaravel = GC.getInfoTypeForString("UNITCLASS_CARAVEL")
-  iGalleon = GC.getInfoTypeForString("UNITCLASS_GALLEON")
-  iTransport = GC.getInfoTypeForString("UNITCLASS_TRANSPORT")
-  iPrivateer = GC.getInfoTypeForString("UNITCLASS_PRIVATEER")
-  iDestroyer = GC.getInfoTypeForString("UNITCLASS_DESTROYER")
-  iBattleship = GC.getInfoTypeForString("UNITCLASS_BATTLESHIP")
-  iCarrier = GC.getInfoTypeForString("UNITCLASS_CARRIER")
-  iFrigate = GC.getInfoTypeForString("UNITCLASS_FRIGATE")
-  iSoL = GC.getInfoTypeForString("UNITCLASS_SHIP_OF_THE_LINE")
-  iIronclad = GC.getInfoTypeForString("UNITCLASS_IRONCLAD")
-  iStealth = GC.getInfoTypeForString("UNITCLASS_STEALTH_DESTROYER")
-  iMissile = GC.getInfoTypeForString("UNITCLASS_MISSILE_CRUISER")
-  iBoomer = GC.getInfoTypeForString("UNITCLASS_SUBMARINE")
-  iSeawolf = GC.getInfoTypeForString("UNITCLASS_ATTACK_SUBMARINE")
+  iCaravel = GC.getInfoTypeForString("UNIT_CARAVEL")
+  iGalleon = GC.getInfoTypeForString("UNIT_GALLEON")
+  iTransport = GC.getInfoTypeForString("UNIT_TRANSPORT")
+  iPrivateer = GC.getInfoTypeForString("UNIT_PRIVATEER")
+  iDestroyer = GC.getInfoTypeForString("UNIT_DESTROYER")
+  iBattleship = GC.getInfoTypeForString("UNIT_BATTLESHIP")
+  iCarrier = GC.getInfoTypeForString("UNIT_CARRIER")
+  iFrigate = GC.getInfoTypeForString("UNIT_FRIGATE")
+  iSoL = GC.getInfoTypeForString("UNIT_SHIP_OF_THE_LINE")
+  iIronclad = GC.getInfoTypeForString("UNIT_IRONCLAD")
+  iStealth = GC.getInfoTypeForString("UNIT_STEALTH_DESTROYER")
+  iMissile = GC.getInfoTypeForString("UNIT_MISSILE_CRUISER")
+  iBoomer = GC.getInfoTypeForString("UNIT_SUBMARINE")
+  iSeawolf = GC.getInfoTypeForString("UNIT_ATTACK_SUBMARINE")
 
 
-  pPlayerCL = pPlayer.getUnitClassCount(iCaravel)
-  pPlayerGN = pPlayer.getUnitClassCount(iGalleon)
-  pPlayerTP = pPlayer.getUnitClassCount(iTransport)
-  pPlayerPT = pPlayer.getUnitClassCount(iPrivateer)
-  pPlayerDD = pPlayer.getUnitClassCount(iDestroyer)
-  pPlayerBB = pPlayer.getUnitClassCount(iBattleship)
-  pPlayerCV = pPlayer.getUnitClassCount(iCarrier)
-  pPlayerFF = pPlayer.getUnitClassCount(iFrigate)
-  pPlayerSoL = pPlayer.getUnitClassCount(iSoL)
-  pPlayerIC = pPlayer.getUnitClassCount(iIronclad)
-  pPlayerSDD = pPlayer.getUnitClassCount(iStealth)
-  pPlayerMC = pPlayer.getUnitClassCount(iMissile)
-  pPlayerSSN = pPlayer.getUnitClassCount(iSeawolf)
-  pPlayerSSBN = pPlayer.getUnitClassCount(iBoomer)
+  pPlayerCL = pPlayer.getUnitCount(iCaravel)
+  pPlayerGN = pPlayer.getUnitCount(iGalleon)
+  pPlayerTP = pPlayer.getUnitCount(iTransport)
+  pPlayerPT = pPlayer.getUnitCount(iPrivateer)
+  pPlayerDD = pPlayer.getUnitCount(iDestroyer)
+  pPlayerBB = pPlayer.getUnitCount(iBattleship)
+  pPlayerCV = pPlayer.getUnitCount(iCarrier)
+  pPlayerFF = pPlayer.getUnitCount(iFrigate)
+  pPlayerSoL = pPlayer.getUnitCount(iSoL)
+  pPlayerIC = pPlayer.getUnitCount(iIronclad)
+  pPlayerSDD = pPlayer.getUnitCount(iStealth)
+  pPlayerMC = pPlayer.getUnitCount(iMissile)
+  pPlayerSSN = pPlayer.getUnitCount(iSeawolf)
+  pPlayerSSBN = pPlayer.getUnitCount(iBoomer)
   pAggregate = pPlayerCL + pPlayerGN + pPlayerTP + pPlayerPT + pPlayerDD + pPlayerBB + pPlayerCV + pPlayerFF + pPlayerSoL + pPlayerIC + pPlayerSDD + pPlayerMC + pPlayerSSN + pPlayerSSBN
 
   if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
@@ -5576,35 +5516,35 @@ def canTriggerTheCorsairs(argsList):
 ###     Galleys & Triremes don't count.
 ###     I've included the modern ships just to prevent anomalous triggering.
 
-  iCaravel = GC.getInfoTypeForString("UNITCLASS_CARAVEL")
-  iGalleon = GC.getInfoTypeForString("UNITCLASS_GALLEON")
-  iTransport = GC.getInfoTypeForString("UNITCLASS_TRANSPORT")
-  iPrivateer = GC.getInfoTypeForString("UNITCLASS_PRIVATEER")
-  iDestroyer = GC.getInfoTypeForString("UNITCLASS_DESTROYER")
-  iBattleship = GC.getInfoTypeForString("UNITCLASS_BATTLESHIP")
-  iCarrier = GC.getInfoTypeForString("UNITCLASS_CARRIER")
-  iFrigate = GC.getInfoTypeForString("UNITCLASS_FRIGATE")
-  iSoL = GC.getInfoTypeForString("UNITCLASS_SHIP_OF_THE_LINE")
-  iIronclad = GC.getInfoTypeForString("UNITCLASS_IRONCLAD")
-  iStealth = GC.getInfoTypeForString("UNITCLASS_STEALTH_DESTROYER")
-  iMissile = GC.getInfoTypeForString("UNITCLASS_MISSILE_CRUISER")
-  iBoomer = GC.getInfoTypeForString("UNITCLASS_SUBMARINE")
-  iSeawolf = GC.getInfoTypeForString("UNITCLASS_ATTACK_SUBMARINE")
+  iCaravel = GC.getInfoTypeForString("UNIT_CARAVEL")
+  iGalleon = GC.getInfoTypeForString("UNIT_GALLEON")
+  iTransport = GC.getInfoTypeForString("UNIT_TRANSPORT")
+  iPrivateer = GC.getInfoTypeForString("UNIT_PRIVATEER")
+  iDestroyer = GC.getInfoTypeForString("UNIT_DESTROYER")
+  iBattleship = GC.getInfoTypeForString("UNIT_BATTLESHIP")
+  iCarrier = GC.getInfoTypeForString("UNIT_CARRIER")
+  iFrigate = GC.getInfoTypeForString("UNIT_FRIGATE")
+  iSoL = GC.getInfoTypeForString("UNIT_SHIP_OF_THE_LINE")
+  iIronclad = GC.getInfoTypeForString("UNIT_IRONCLAD")
+  iStealth = GC.getInfoTypeForString("UNIT_STEALTH_DESTROYER")
+  iMissile = GC.getInfoTypeForString("UNIT_MISSILE_CRUISER")
+  iBoomer = GC.getInfoTypeForString("UNIT_SUBMARINE")
+  iSeawolf = GC.getInfoTypeForString("UNIT_ATTACK_SUBMARINE")
 
-  pPlayerCL = pPlayer.getUnitClassCount(iCaravel)
-  pPlayerGN = pPlayer.getUnitClassCount(iGalleon)
-  pPlayerTP = pPlayer.getUnitClassCount(iTransport)
-  pPlayerPT = pPlayer.getUnitClassCount(iPrivateer)
-  pPlayerDD = pPlayer.getUnitClassCount(iDestroyer)
-  pPlayerBB = pPlayer.getUnitClassCount(iBattleship)
-  pPlayerCV = pPlayer.getUnitClassCount(iCarrier)
-  pPlayerFF = pPlayer.getUnitClassCount(iFrigate)
-  pPlayerSoL = pPlayer.getUnitClassCount(iSoL)
-  pPlayerIC = pPlayer.getUnitClassCount(iIronclad)
-  pPlayerSDD = pPlayer.getUnitClassCount(iStealth)
-  pPlayerMC = pPlayer.getUnitClassCount(iMissile)
-  pPlayerSSN = pPlayer.getUnitClassCount(iSeawolf)
-  pPlayerSSBN = pPlayer.getUnitClassCount(iBoomer)
+  pPlayerCL = pPlayer.getUnitCount(iCaravel)
+  pPlayerGN = pPlayer.getUnitCount(iGalleon)
+  pPlayerTP = pPlayer.getUnitCount(iTransport)
+  pPlayerPT = pPlayer.getUnitCount(iPrivateer)
+  pPlayerDD = pPlayer.getUnitCount(iDestroyer)
+  pPlayerBB = pPlayer.getUnitCount(iBattleship)
+  pPlayerCV = pPlayer.getUnitCount(iCarrier)
+  pPlayerFF = pPlayer.getUnitCount(iFrigate)
+  pPlayerSoL = pPlayer.getUnitCount(iSoL)
+  pPlayerIC = pPlayer.getUnitCount(iIronclad)
+  pPlayerSDD = pPlayer.getUnitCount(iStealth)
+  pPlayerMC = pPlayer.getUnitCount(iMissile)
+  pPlayerSSN = pPlayer.getUnitCount(iSeawolf)
+  pPlayerSSBN = pPlayer.getUnitCount(iBoomer)
   pAggregate = pPlayerCL + pPlayerGN + pPlayerTP + pPlayerPT + pPlayerDD + pPlayerBB + pPlayerCV + pPlayerFF + pPlayerSoL + pPlayerIC + pPlayerSDD + pPlayerMC + pPlayerSSN + pPlayerSSBN
 
   if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
@@ -5720,38 +5660,38 @@ def canTriggerIllyrianPirates(argsList):
 ###     I've included the modern ships just to prevent anomalous triggering.
 
   iWarGalley = GC.getInfoTypeForString("UNIT_WARGALLEY")
-  iTrireme = GC.getInfoTypeForString("UNITCLASS_TRIREME")
-  iCaravel = GC.getInfoTypeForString("UNITCLASS_CARAVEL")
-  iGalleon = GC.getInfoTypeForString("UNITCLASS_GALLEON")
-  iTransport = GC.getInfoTypeForString("UNITCLASS_TRANSPORT")
-  iPrivateer = GC.getInfoTypeForString("UNITCLASS_PRIVATEER")
-  iDestroyer = GC.getInfoTypeForString("UNITCLASS_DESTROYER")
-  iBattleship = GC.getInfoTypeForString("UNITCLASS_BATTLESHIP")
-  iCarrier = GC.getInfoTypeForString("UNITCLASS_CARRIER")
-  iFrigate = GC.getInfoTypeForString("UNITCLASS_FRIGATE")
-  iSoL = GC.getInfoTypeForString("UNITCLASS_SHIP_OF_THE_LINE")
-  iIronclad = GC.getInfoTypeForString("UNITCLASS_IRONCLAD")
-  iStealth = GC.getInfoTypeForString("UNITCLASS_STEALTH_DESTROYER")
-  iMissile = GC.getInfoTypeForString("UNITCLASS_MISSILE_CRUISER")
-  iBoomer = GC.getInfoTypeForString("UNITCLASS_SUBMARINE")
-  iSeawolf = GC.getInfoTypeForString("UNITCLASS_ATTACK_SUBMARINE")
+  iTrireme = GC.getInfoTypeForString("UNIT_TRIREME")
+  iCaravel = GC.getInfoTypeForString("UNIT_CARAVEL")
+  iGalleon = GC.getInfoTypeForString("UNIT_GALLEON")
+  iTransport = GC.getInfoTypeForString("UNIT_TRANSPORT")
+  iPrivateer = GC.getInfoTypeForString("UNIT_PRIVATEER")
+  iDestroyer = GC.getInfoTypeForString("UNIT_DESTROYER")
+  iBattleship = GC.getInfoTypeForString("UNIT_BATTLESHIP")
+  iCarrier = GC.getInfoTypeForString("UNIT_CARRIER")
+  iFrigate = GC.getInfoTypeForString("UNIT_FRIGATE")
+  iSoL = GC.getInfoTypeForString("UNIT_SHIP_OF_THE_LINE")
+  iIronclad = GC.getInfoTypeForString("UNIT_IRONCLAD")
+  iStealth = GC.getInfoTypeForString("UNIT_STEALTH_DESTROYER")
+  iMissile = GC.getInfoTypeForString("UNIT_MISSILE_CRUISER")
+  iBoomer = GC.getInfoTypeForString("UNIT_SUBMARINE")
+  iSeawolf = GC.getInfoTypeForString("UNIT_ATTACK_SUBMARINE")
 
-  pPlayerWG = pPlayer.getUnitClassCount(iWarGalley)
-  pPlayerTE = pPlayer.getUnitClassCount(iTrireme)
-  pPlayerCL = pPlayer.getUnitClassCount(iCaravel)
-  pPlayerGN = pPlayer.getUnitClassCount(iGalleon)
-  pPlayerTP = pPlayer.getUnitClassCount(iTransport)
-  pPlayerPT = pPlayer.getUnitClassCount(iPrivateer)
-  pPlayerDD = pPlayer.getUnitClassCount(iDestroyer)
-  pPlayerBB = pPlayer.getUnitClassCount(iBattleship)
-  pPlayerCV = pPlayer.getUnitClassCount(iCarrier)
-  pPlayerFF = pPlayer.getUnitClassCount(iFrigate)
-  pPlayerSoL = pPlayer.getUnitClassCount(iSoL)
-  pPlayerIC = pPlayer.getUnitClassCount(iIronclad)
-  pPlayerSDD = pPlayer.getUnitClassCount(iStealth)
-  pPlayerMC = pPlayer.getUnitClassCount(iMissile)
-  pPlayerSSN = pPlayer.getUnitClassCount(iSeawolf)
-  pPlayerSSBN = pPlayer.getUnitClassCount(iBoomer)
+  pPlayerWG = pPlayer.getUnitCount(iWarGalley)
+  pPlayerTE = pPlayer.getUnitCount(iTrireme)
+  pPlayerCL = pPlayer.getUnitCount(iCaravel)
+  pPlayerGN = pPlayer.getUnitCount(iGalleon)
+  pPlayerTP = pPlayer.getUnitCount(iTransport)
+  pPlayerPT = pPlayer.getUnitCount(iPrivateer)
+  pPlayerDD = pPlayer.getUnitCount(iDestroyer)
+  pPlayerBB = pPlayer.getUnitCount(iBattleship)
+  pPlayerCV = pPlayer.getUnitCount(iCarrier)
+  pPlayerFF = pPlayer.getUnitCount(iFrigate)
+  pPlayerSoL = pPlayer.getUnitCount(iSoL)
+  pPlayerIC = pPlayer.getUnitCount(iIronclad)
+  pPlayerSDD = pPlayer.getUnitCount(iStealth)
+  pPlayerMC = pPlayer.getUnitCount(iMissile)
+  pPlayerSSN = pPlayer.getUnitCount(iSeawolf)
+  pPlayerSSBN = pPlayer.getUnitCount(iBoomer)
   pAggregate = pPlayerWG + pPlayerTE + pPlayerCL + pPlayerGN + pPlayerTP + pPlayerPT + pPlayerDD + pPlayerBB + pPlayerCV + pPlayerFF + pPlayerSoL + pPlayerIC + pPlayerSDD + pPlayerMC + pPlayerSSN + pPlayerSSBN
 
   if map.getWorldSize() == GC.getInfoTypeForString("WORLDSIZE_DUEL"):
@@ -8899,12 +8839,12 @@ def doSacrificeCaptive(argsList):
 	iGoldenAgeLength = 0
 	iGoldenAgeLengthModifier = 1
 
-	iUnitType = pUnit.getUnitCombatType()
-	if iUnitType == GC.getInfoTypeForString("UNITCLASS_CAPTIVE_NEANDERTHAL"):
+	iUnitType = pUnit.getUnitType()
+	if iUnitType == GC.getInfoTypeForString("UNIT_CAPTIVE_NEANDERTHAL"):
 		iGoldenAgeLengthModifier = 0
-	elif iUnitType == GC.getInfoTypeForString("UNITCLASS_CAPTIVE_MILITARY"):
+	elif iUnitType == GC.getInfoTypeForString("UNIT_CAPTIVE_MILITARY"):
 		iGoldenAgeLengthModifier = 1
-	elif iUnitType == GC.getInfoTypeForString("UNITCLASS_CAPTIVE_CIVILIAN"):
+	elif iUnitType == GC.getInfoTypeForString("UNIT_CAPTIVE_CIVILIAN"):
 		iGoldenAgeLengthModifier = 2
 	else:
 		return # bad call
