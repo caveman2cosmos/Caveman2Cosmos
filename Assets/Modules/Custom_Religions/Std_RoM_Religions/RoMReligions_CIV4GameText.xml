@@ -50,7 +50,7 @@
 		<Italian>Costruisci il tempio di Toth per ottenere un bonus alla ricerca in tutte le tue città.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ERECHTHEUM</Tag>
+		<Tag>TXT_KEY_BUILDING_ERECTION</Tag>
 		<English>The Erechtheum</English>
 		<French>L'Erechtheum</French>
 		<Italian>
@@ -61,13 +61,13 @@
 		<Polish>Erechtejon</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ERECHTHEUM_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_ERECTION_PEDIA</Tag>
 		<English>The Erechtheum is an ancient Greek temple on the north side of the Acropolis of Athens in Greece.The Erectheum was associated with some of the most ancient and holy relics of the Athenians: the Palladion, which was a xoanon (defined as a wooden effigy fallen from heaven - not man-made) of Athena Polias (Protectress of the City); the marks of Poseidon's trident and the salt water well (the "salt sea") that resulted from Poseidon's strike; the sacred olive tree that sprouted when Athena struck the rock with her spear in her successful rivalry with Poseidon for the city; the supposed burial places of the mythical kings Cecrops and Erechtheus; the sacred precincts of Cecrops' three daughters, Herse, Pandrosus and Aglaurus; and those of the tribal heroes Pandion and Boutes.</English>
 		<Italian>L'Eretteo è un antico tempio greco sul lato nord dell'Acropoli di Atene, in Grecia. L'Eretteo è stato associato con alcuni dei reperti più antichi e santi degli Ateniesi: il Palladio, che era un xoanon (definita come una effigie di legno caduta dal cielo - non umana) di Atena Polia (protettrice della città); i segni del tridente di Poseidone e il pozzo di acqua salata (il "mare di sale"), il risultato del colpo di Poseidone; l'olivo sacro che spuntò quando Atena colpì la roccia con la sua lancia nella sua rivalità con Poseidone per la città; il presunto luogo di sepoltura del mitico re Cecrope ed Eretteo; i recinti sacri delle tre figlie di Cecrope, ovveri Erse, Pandrosus e Aglauro; e quelli degli eroi tribali Pandion e Boutes.</Italian>
 		<Polish>Erechtejon - czteropoziomowa świątynia zbudowana na ateńskim Akropolu, poświęcona Posejdonowi i Atenie. Swiątynię wzniesiono na cześć Erechteusza, jednego z pierwszych władców ateńskich. Wybudowana na miejscu wcześniejszych kultów m.in. Zeusa Hypatosa, herosa Butesa. Pierwsza świątynia została zniszczona podczas wojen perskich (480 p.n.e.), odbudowana jako prostylos w porządku jońskim w latach 421 p.n.e.-406 p.n.e. W VI wieku świątynię zamieniono na kościół chrześcijański, a następnie używany był przez Turków jako harem. W XVII-XIX wieku popadł w ruinę, a w latach 1902-1909 poddano go rekonstrukcji.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ERECHTHEUM_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_ERECTION_STRATEGY</Tag>
 		<English>Build the Erechtheum to give a bonus to naval units built in this city.</English>
 		<Italian>Costruisci l'Eretteo per fornire un bonus alle unità navali addestrate in questa città.</Italian>
 	</TEXT>

@@ -6586,37 +6586,27 @@ void CvUnitAI::AI_prophetMove()
 
 	if (((iGoldenAgeValue * 100) / iDiscoverValue) > 60)
 	{
-        if (AI_goldenAge())
-        {
-            return;
-        }
+		if (AI_goldenAge())
+		{
+			return;
+		}
 
-        if (iDiscoverValue > iGoldenAgeValue)
-        {
-            if (AI_discover())
-            {
-                return;
-            }
-            if (GET_PLAYER(getOwner()).getUnitClassCount(getUnitClassType()) > 1)
-            {
-                if (AI_join())
-                {
-                    return;
-                }
-            }
-        }
+		if (iDiscoverValue > iGoldenAgeValue)
+		{
+			if (AI_discover())
+			{
+				return;
+			}
+			if (GET_PLAYER(getOwner()).getUnitCount(getUnitType()) > 1
+			&& AI_join())
+			{
+				return;
+			}
+		}
 	}
-	else
+	else if (AI_discover() || AI_join())
 	{
-		if (AI_discover())
-		{
-			return;
-		}
-
-		if (AI_join())
-		{
-			return;
-		}
+		return;
 	}
 
 /************************************************************************************************/
@@ -6702,37 +6692,27 @@ void CvUnitAI::AI_artistMove()
 
 	if (((iGoldenAgeValue * 100) / iDiscoverValue) > 60)
 	{
-        if (AI_goldenAge())
-        {
-            return;
-        }
+		if (AI_goldenAge())
+		{
+			return;
+		}
 
-        if (iDiscoverValue > iGoldenAgeValue)
-        {
-            if (AI_discover())
-            {
-                return;
-            }
-            if (GET_PLAYER(getOwner()).getUnitClassCount(getUnitClassType()) > 1)
-            {
-                if (AI_join())
-                {
-                    return;
-                }
-            }
-        }
+		if (iDiscoverValue > iGoldenAgeValue)
+		{
+			if (AI_discover())
+			{
+				return;
+			}
+			if (GET_PLAYER(getOwner()).getUnitCount(getUnitType()) > 1
+			&& AI_join())
+			{
+				return;
+			}
+		}
 	}
-	else
+	else if (AI_discover() || AI_join())
 	{
-		if (AI_discover())
-		{
-			return;
-		}
-
-		if (AI_join())
-		{
-			return;
-		}
+		return;
 	}
 
 /************************************************************************************************/
@@ -6823,37 +6803,27 @@ void CvUnitAI::AI_scientistMove()
 
 	if (((iGoldenAgeValue * 100) / iDiscoverValue) > 60)
 	{
-        if (AI_goldenAge())
-        {
-            return;
-        }
+		if (AI_goldenAge())
+		{
+			return;
+		}
 
-        if (iDiscoverValue > iGoldenAgeValue)
-        {
-            if (AI_discover())
-            {
-                return;
-            }
-            if (GET_PLAYER(getOwner()).getUnitClassCount(getUnitClassType()) > 1)
-            {
-                if (AI_join())
-                {
-                    return;
-                }
-            }
-        }
+		if (iDiscoverValue > iGoldenAgeValue)
+		{
+			if (AI_discover())
+			{
+				return;
+			}
+			if (GET_PLAYER(getOwner()).getUnitCount(getUnitType()) > 1
+			&& AI_join())
+			{
+				return;
+			}
+		}
 	}
-	else
+	else if (AI_discover() || AI_join())
 	{
-		if (AI_discover())
-		{
-			return;
-		}
-
-		if (AI_join())
-		{
-			return;
-		}
+		return;
 	}
 
 /************************************************************************************************/
@@ -7453,47 +7423,37 @@ void CvUnitAI::AI_merchantMove()
 
 	if (AI_trade(iGoldenAgeValue * 2))
 	{
-	    return;
+		return;
 	}
 
 	if (((iGoldenAgeValue * 100) / iDiscoverValue) > 60)
 	{
-        if (AI_goldenAge())
-        {
-            return;
-        }
+		if (AI_goldenAge())
+		{
+			return;
+		}
 
-        if (AI_trade(iGoldenAgeValue))
-        {
-            return;
-        }
+		if (AI_trade(iGoldenAgeValue))
+		{
+			return;
+		}
 
-        if (iDiscoverValue > iGoldenAgeValue)
-        {
-            if (AI_discover())
-            {
-                return;
-            }
-            if (GET_PLAYER(getOwner()).getUnitClassCount(getUnitClassType()) > 1)
-            {
-                if (AI_join())
-                {
-                    return;
-                }
-            }
-        }
+		if (iDiscoverValue > iGoldenAgeValue)
+		{
+			if (AI_discover())
+			{
+				return;
+			}
+			if (GET_PLAYER(getOwner()).getUnitCount(getUnitType()) > 1
+			&& AI_join())
+			{
+				return;
+			}
+		}
 	}
-	else
+	else if (AI_discover() || AI_join())
 	{
-		if (AI_discover())
-		{
-			return;
-		}
-
-		if (AI_join())
-		{
-			return;
-		}
+		return;
 	}
 
 /************************************************************************************************/
@@ -7701,37 +7661,27 @@ void CvUnitAI::AI_engineerMove()
 
 	if (((iGoldenAgeValue * 100) / iDiscoverValue) > 60)
 	{
-        if (AI_goldenAge())
-        {
-            return;
-        }
+		if (AI_goldenAge())
+		{
+			return;
+		}
 
-        if (iDiscoverValue > iGoldenAgeValue)
-        {
-            if (AI_discover())
-            {
-                return;
-            }
-            if (GET_PLAYER(getOwner()).getUnitClassCount(getUnitClassType()) > 1)
-            {
-                if (AI_join())
-                {
-                    return;
-                }
-            }
-        }
+		if (iDiscoverValue > iGoldenAgeValue)
+		{
+			if (AI_discover())
+			{
+				return;
+			}
+			if (GET_PLAYER(getOwner()).getUnitCount(getUnitType()) > 1
+			&& AI_join())
+			{
+				return;
+			}
+		}
 	}
-	else
+	else if (AI_discover() || AI_join())
 	{
-		if (AI_discover())
-		{
-			return;
-		}
-
-		if (AI_join())
-		{
-			return;
-		}
+		return;
 	}
 
 /************************************************************************************************/

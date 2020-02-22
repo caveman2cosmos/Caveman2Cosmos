@@ -8,7 +8,7 @@
 	<UnitClassInfos>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SHINTO_MISSIONARY</Type>
-			<Description>Shinto missionary</Description>
+			<Description>TXT_KEY_UNIT_SHINTO_MISSIONARY</Description>
 			<DefaultUnit>UNIT_SHINTO_MISSIONARY</DefaultUnit>
 		</UnitClassInfo>
 	</UnitClassInfos>

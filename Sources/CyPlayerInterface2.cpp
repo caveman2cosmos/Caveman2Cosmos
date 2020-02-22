@@ -118,7 +118,7 @@ void CyPlayerPythonInterface2(python::class_<CyPlayer>& x)
 		.def("isAutomatedCanBuild", &CyPlayer::isAutomatedCanBuild, "bool ()")
 		.def("setAutomatedCanBuild", &CyPlayer::setAutomatedCanBuild, "void ()")
 		.def("setTeam", &CyPlayer::setTeam, "void ()")
-		.def("getBestUnitType", &CyPlayer::getBestUnitType, "void ()")
+		.def("getBestUnitType", &CyPlayer::getBestUnitType, "int (int /*UnitAITypes*/ eUnitAI)")
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/

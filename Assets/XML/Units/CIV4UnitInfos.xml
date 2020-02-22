@@ -6367,7 +6367,7 @@ Base XP gained when defending
 				</CorporationSpread>
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_1</PrereqCorporation>
-			<PrereqBuilding>BUILDING_CORPORATION_1</PrereqBuilding>
+			<PrereqBuilding>BUILDING_CORPORATION_1_HQ</PrereqBuilding>
 			<iCost>275</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
@@ -6416,7 +6416,7 @@ Base XP gained when defending
 				</CorporationSpread>
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_2</PrereqCorporation>
-			<PrereqBuilding>BUILDING_CORPORATION_2</PrereqBuilding>
+			<PrereqBuilding>BUILDING_CORPORATION_2_HQ</PrereqBuilding>
 			<iCost>275</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
@@ -6465,7 +6465,7 @@ Base XP gained when defending
 				</CorporationSpread>
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_3</PrereqCorporation>
-			<PrereqBuilding>BUILDING_CORPORATION_3</PrereqBuilding>
+			<PrereqBuilding>BUILDING_CORPORATION_3_HQ</PrereqBuilding>
 			<iCost>275</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
@@ -6514,7 +6514,7 @@ Base XP gained when defending
 				</CorporationSpread>
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_4</PrereqCorporation>
-			<PrereqBuilding>BUILDING_CORPORATION_4</PrereqBuilding>
+			<PrereqBuilding>BUILDING_CORPORATION_4_HQ</PrereqBuilding>
 			<iCost>275</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
@@ -6563,7 +6563,7 @@ Base XP gained when defending
 				</CorporationSpread>
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_5</PrereqCorporation>
-			<PrereqBuilding>BUILDING_CORPORATION_5</PrereqBuilding>
+			<PrereqBuilding>BUILDING_CORPORATION_5_HQ</PrereqBuilding>
 			<iCost>275</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
@@ -6612,7 +6612,7 @@ Base XP gained when defending
 				</CorporationSpread>
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_6</PrereqCorporation>
-			<PrereqBuilding>BUILDING_CORPORATION_6</PrereqBuilding>
+			<PrereqBuilding>BUILDING_CORPORATION_6_HQ</PrereqBuilding>
 			<iCost>275</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
@@ -6661,7 +6661,7 @@ Base XP gained when defending
 				</CorporationSpread>
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_7</PrereqCorporation>
-			<PrereqBuilding>BUILDING_CORPORATION_7</PrereqBuilding>
+			<PrereqBuilding>BUILDING_CORPORATION_7_HQ</PrereqBuilding>
 			<iCost>275</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
@@ -6699,7 +6699,7 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_ADVENTURE_EXECUTIVE</Description>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_ADVENTURE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_CORPORATIONS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_EXECUTIVE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -6748,7 +6748,7 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_BULLSEYE_EXECUTIVE</Description>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_BULLSEYE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_CORPORATIONS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_EXECUTIVE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -6797,7 +6797,7 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_BURGERWORLD_EXECUTIVE</Description>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_BURGERWORLD</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_CORPORATIONS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_EXECUTIVE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -6846,7 +6846,7 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_EMPCLOTH_EXECUTIVE</Description>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_EMPCLOTH</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_CORPORATIONS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_EXECUTIVE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -6895,7 +6895,7 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_EWTRADE_EXECUTIVE</Description>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_EWTRADE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_CORPORATIONS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_EXECUTIVE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -6944,7 +6944,7 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FASHION_EXECUTIVE</Description>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_FASHION</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_CORPORATIONS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_EXECUTIVE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -6993,7 +6993,7 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_MALLWART_EXECUTIVE</Description>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_MALLWART</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_CORPORATIONS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_EXECUTIVE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -7042,8 +7042,8 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_MAPSTER_EXECUTIVE</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_MAPSTER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_MAPSTER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MAPSTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_EXECUTIVE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<CorporationSpreads>
@@ -7091,7 +7091,7 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_MCDOWELLS_EXECUTIVE</Description>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_MCDOWELLS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_CORPORATIONS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_EXECUTIVE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -7140,7 +7140,7 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_MILEHIGH_EXECUTIVE</Description>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_MILEHIGH</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_CORPORATIONS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_EXECUTIVE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -7189,7 +7189,7 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_MOBBY_EXECUTIVE</Description>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_MOBBY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_CORPORATIONS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_EXECUTIVE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -7287,7 +7287,7 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_RED_EXECUTIVE</Description>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_RED</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_CORPORATIONS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_EXECUTIVE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -7336,7 +7336,7 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_SAFARI_EXECUTIVE</Description>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_SAFARI</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_CORPORATIONS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_EXECUTIVE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -7385,7 +7385,7 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_ULTSOLDIER_EXECUTIVE</Description>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_ULTSOLDIER</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_CORPORATIONS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_EXECUTIVE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -7434,7 +7434,7 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_WONKA_EXECUTIVE</Description>
+			<Description>TXT_KEY_UNIT_EXECUTIVE_WONKA</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_CORPORATIONS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_EXECUTIVE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -8038,9 +8038,9 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MERCHANT</DefaultUnitAI>
-			<Description>TXT_KEY_GODS_UNIT_INQUISITOR</Description>
-			<Civilopedia>TXT_KEY_GODS_UNIT_INQUISITOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_GODS_UNIT_INQUISITOR_STRATEGY</Strategy>
+			<Description>TXT_KEY_UNIT_INQUISITOR</Description>
+			<Civilopedia>TXT_KEY_UNIT_INQUISITOR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_INQUISITOR_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_INQUISITOR_HELP</Help>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bInquisitor>1</bInquisitor>
@@ -18528,7 +18528,7 @@ Base XP gained when defending
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_HEAVY_TANK</Class>
-			<Type>UNIT_HEAVY_TANK_M26</Type>
+			<Type>UNIT_HEAVY_TANK</Type>
 			<Combat>UNITCOMBAT_TRACKED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -18551,7 +18551,7 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_HEAVY_TANK_M26</Description>
+			<Description>TXT_KEY_UNIT_HEAVY_TANK</Description>
 			<Civilopedia>TXT_KEY_UNIT_TANK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_TANK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
@@ -27504,9 +27504,9 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_WORKER_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_WORK_BOAT</Description>
-			<Civilopedia>TXT_KEY_UNIT_WORK_BOAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORK_BOAT_ANCIENT_STRATEGY</Strategy>
+			<Description>TXT_KEY_UNIT_WORKBOAT</Description>
+			<Civilopedia>TXT_KEY_UNIT_WORKBOAT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_WORKBOAT_ANCIENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -27629,9 +27629,9 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_WORKER_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_CLASSIC_WORK_BOAT</Description>
-			<Civilopedia>TXT_KEY_UNIT_WORK_BOAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CLASSIC_WORK_BOAT_STRATEGY</Strategy>
+			<Description>TXT_KEY_UNIT_CLASSIC_WORKBOAT</Description>
+			<Civilopedia>TXT_KEY_UNIT_WORKBOAT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_CLASSIC_WORKBOAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -27781,9 +27781,9 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_WORKER_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_MIDDLE_WORK_BOAT</Description>
-			<Civilopedia>TXT_KEY_UNIT_WORK_BOAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MIDDLE_WORK_BOAT_STRATEGY</Strategy>
+			<Description>TXT_KEY_UNIT_MIDDLE_WORKBOAT</Description>
+			<Civilopedia>TXT_KEY_UNIT_WORKBOAT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_MIDDLE_WORKBOAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -27933,9 +27933,9 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_WORKER_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_MODERN_WORK_BOAT</Description>
-			<Civilopedia>TXT_KEY_UNIT_WORK_BOAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MODERN_WORK_BOAT_STRATEGY</Strategy>
+			<Description>TXT_KEY_UNIT_MODERN_WORKBOAT</Description>
+			<Civilopedia>TXT_KEY_UNIT_WORKBOAT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_MODERN_WORKBOAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -31701,9 +31701,9 @@ Base XP gained when defending
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_RESERVE_SEA</DefaultUnitAI>
 			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
-			<Description>TXT_KEY_UNIT_AEGIS_CRUISER</Description>
-			<Civilopedia>TXT_KEY_UNIT_AEGIS_CRUISER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_AEGIS_CRUISER_STRATEGY</Strategy>
+			<Description>TXT_KEY_UNIT_AEGIS</Description>
+			<Civilopedia>TXT_KEY_UNIT_AEGIS_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_AEGIS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -39331,8 +39331,8 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_UNIT_MODERN_FIGHTER</Description>
-			<Civilopedia>TXT_KEY_UNIT_UNIT_MODERN_FIGHTER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_UNIT_MODERN_FIGHTER</Description>
+			<Civilopedia>TXT_KEY_UNIT_MODERN_FIGHTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_MODERN_FIGHTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -39926,7 +39926,7 @@ Base XP gained when defending
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_STEALTH_FIGHTER</Class>
-			<Type>UNIT_F117</Type>
+			<Type>UNIT_STEALTH_FIGHTER</Type>
 			<Special>SPECIALUNIT_FIGHTER</Special>
 			<Combat>UNITCOMBAT_STEALTH</Combat>
 			<SubCombatTypes>
@@ -51400,7 +51400,7 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MERCHANT</DefaultUnitAI>
-			<Description>TXT_KEY_LAWYER_INQUISITOR_TWO</Description>
+			<Description>TXT_KEY_UNIT_LAWYER</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_CORPORATIONS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_EXECUTIVE_STRATEGY_ONE</Strategy>
 			<Help>TXT_KEY_MISSION_LAWYER_REMOVE_CORPORATIONS_HELP</Help>
@@ -53493,9 +53493,9 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_PROPHET</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_GREAT_PROPHET</Description>
+			<Description>TXT_KEY_UNIT_PROPHET</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_PEOPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GREAT_PROPHET_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_UNIT_PROPHET_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGoldenAge>1</bGoldenAge>
 			<UnitAIs>
@@ -53872,9 +53872,9 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ARTIST</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_GREAT_ARTIST</Description>
+			<Description>TXT_KEY_UNIT_ARTIST</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_PEOPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GREAT_ARTIST_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_UNIT_ARTIST_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<bGoldenAge>1</bGoldenAge>
 			<UnitAIs>
@@ -53892,7 +53892,7 @@ Base XP gained when defending
 			<Buildings>
 				<BuildingType>BUILDING_HEROIC_EPIC</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_EPIC</BuildingType>
-				<BuildingType>BUILDING_CORPORATION_7</BuildingType>
+				<BuildingType>BUILDING_CORPORATION_7_HQ</BuildingType>
 				<BuildingType>BUILDING_CORPORATION_EMPCLOTH_HQ</BuildingType>
 				<BuildingType>BUILDING_CORPORATION_RED_HQ</BuildingType>
 				<BuildingType>BUILDING_TRADITION_ASTHETIC_APPRECIATION</BuildingType>
@@ -54139,9 +54139,9 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SCIENTIST</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_GREAT_SCIENTIST</Description>
+			<Description>TXT_KEY_UNIT_SCIENTIST</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_PEOPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GREAT_SCIENTIST_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_UNIT_SCIENTIST_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<bGoldenAge>1</bGoldenAge>
 			<UnitAIs>
@@ -54157,8 +54157,8 @@ Base XP gained when defending
 				</GreatPeople>
 			</GreatPeoples>
 			<Buildings>
-				<BuildingType>BUILDING_CORPORATION_3</BuildingType>
-				<BuildingType>BUILDING_CORPORATION_6</BuildingType>
+				<BuildingType>BUILDING_CORPORATION_3_HQ</BuildingType>
+				<BuildingType>BUILDING_CORPORATION_6_HQ</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_STANDARD_OF_MEASUREMENT</BuildingType>
 				<BuildingType>BUILDING_ACADEMY</BuildingType>
 			</Buildings>
@@ -54352,9 +54352,9 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MERCHANT</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_GREAT_MERCHANT</Description>
+			<Description>TXT_KEY_UNIT_MERCHANT</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_PEOPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GREAT_MERCHANT_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_UNIT_MERCHANT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bGoldenAge>1</bGoldenAge>
@@ -54373,8 +54373,8 @@ Base XP gained when defending
 			<Buildings>
 				<BuildingType>BUILDING_CENTRAL_BANK</BuildingType>
 				<BuildingType>BUILDING_WALL_STREET</BuildingType>
-				<BuildingType>BUILDING_CORPORATION_1</BuildingType>
-				<BuildingType>BUILDING_CORPORATION_2</BuildingType>
+				<BuildingType>BUILDING_CORPORATION_1_HQ</BuildingType>
+				<BuildingType>BUILDING_CORPORATION_2_HQ</BuildingType>
 				<BuildingType>BUILDING_CORPORATION_ADVENTURE_HQ</BuildingType>
 				<BuildingType>BUILDING_CORPORATION_BURGERWORLD_HQ</BuildingType>
 				<BuildingType>BUILDING_CORPORATION_EWTRADE_HQ</BuildingType>
@@ -54584,9 +54584,9 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ENGINEER</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_GREAT_ENGINEER</Description>
+			<Description>TXT_KEY_UNIT_ENGINEER</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_PEOPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GREAT_ENGINEER_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_UNIT_ENGINEER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bGoldenAge>1</bGoldenAge>
 			<UnitAIs>
@@ -54605,8 +54605,8 @@ Base XP gained when defending
 				<BuildingType>BUILDING_TRADITION_WORK_ETHIC</BuildingType>
 				<BuildingType>BUILDING_IRON_WORKS</BuildingType>
 				<BuildingType>BUILDING_PONT_DU_GARD_AQUEDUCT</BuildingType>
-				<BuildingType>BUILDING_CORPORATION_4</BuildingType>
-				<BuildingType>BUILDING_CORPORATION_5</BuildingType>
+				<BuildingType>BUILDING_CORPORATION_4_HQ</BuildingType>
+				<BuildingType>BUILDING_CORPORATION_5_HQ</BuildingType>
 				<BuildingType>BUILDING_CORPORATION_BULLSEYE_HQ</BuildingType>
 				<BuildingType>BUILDING_CORPORATION_MILEHIGH_HQ</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_STANDARD_OF_MEASUREMENT</BuildingType>
@@ -55493,7 +55493,7 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MERCHANT</DefaultUnitAI>
-			<Description>TXT_KEY_SPECIALIST_GREAT_SPY</Description>
+			<Description>TXT_KEY_UNIT_GREAT_SPY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_SPY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_GREAT_SPY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
@@ -57687,8 +57687,8 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_WORK_BOAT</Description>
-			<Civilopedia>TXT_KEY_UNIT_WORK_BOAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORK_BOAT_ANCIENT_STRATEGY</Strategy>
+			<Civilopedia>TXT_KEY_UNIT_WORKBOAT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_WORKBOAT_ANCIENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
@@ -63211,7 +63211,7 @@ Base XP gained when defending
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_DOCTOR</Class>
-			<Type>UNIT_GREAT_DOCTOR</Type>
+			<Type>UNIT_DOCTOR</Type>
 			<UniqueNames>
 				<UniqueName>TXT_KEY_GREAT_PERSON_ALLEN_WHIPPLE</UniqueName>
 				<UniqueName>TXT_KEY_GREAT_PERSON_AMATO_LUSITANO</UniqueName>
@@ -63291,7 +63291,7 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_PROPHET</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_GREAT_DOCTOR</Description>
+			<Description>TXT_KEY_UNIT_DOCTOR</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_DOCTOR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_GREAT_DOCTOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
@@ -66083,7 +66083,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MERCHANT</DefaultUnitAI>
-			<Description>TXT_KEY_CHARL_UNIT_SUPPLY_TRAIN</Description>
+			<Description>TXT_KEY_UNIT_SUPPLY_TRAIN</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_TRADE_CARAVAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_CARAVAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>

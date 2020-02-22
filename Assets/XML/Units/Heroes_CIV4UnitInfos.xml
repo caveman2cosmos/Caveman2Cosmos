@@ -20942,7 +20942,7 @@
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MUGHAL_BABUR</Description>
-			<Civilopedia>TXT_KEY_UNIT_BABUR_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_UNIT_MUGHAL_BABUR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_SPAWN_HERO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
@@ -21057,7 +21057,7 @@
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TUPI_CUNHAMBEBE</Description>
-			<Civilopedia>TXT_KEY_UNIT_CUNHAMBEBE_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_UNIT_TUPI_CUNHAMBEBE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_SPAWN_HERO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>

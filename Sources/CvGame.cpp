@@ -39,7 +39,6 @@ CvGame::CvGame()
 
 	m_paiImprovementCount = NULL;
 	m_paiUnitCreatedCount = NULL;
-	m_paiUnitClassCreatedCount = NULL;
 	m_paiBuildingCreatedCount = NULL;
 	m_paiProjectCreatedCount = NULL;
 	m_paiForceCivicCount = NULL;
@@ -673,7 +672,6 @@ void CvGame::uninit()
 	SAFE_DELETE_ARRAY(m_aiShrineReligion);
 	SAFE_DELETE_ARRAY(m_paiImprovementCount);
 	SAFE_DELETE_ARRAY(m_paiUnitCreatedCount);
-	SAFE_DELETE_ARRAY(m_paiUnitClassCreatedCount);
 	SAFE_DELETE_ARRAY(m_paiBuildingCreatedCount);
 	SAFE_DELETE_ARRAY(m_paiProjectCreatedCount);
 	SAFE_DELETE_ARRAY(m_paiForceCivicCount);
@@ -900,12 +898,6 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 		for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
 		{
 			m_paiUnitCreatedCount[iI] = 0;
-		}
-		FAssertMsg(m_paiUnitClassCreatedCount==NULL, "about to leak memory, CvGame::m_paiUnitClassCreatedCount");
-		m_paiUnitClassCreatedCount = new int[GC.getNumUnitClassInfos()];
-		for (iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
-		{
-			m_paiUnitClassCreatedCount[iI] = 0;
 		}
 		FAssertMsg(m_paiBuildingCreatedCount==NULL, "about to leak memory, CvGame::m_paiBuildingCreatedCount");
 		m_paiBuildingCreatedCount = new int[GC.getNumBuildingInfos()];
@@ -5723,34 +5715,18 @@ void CvGame::incrementUnitCreatedCount(UnitTypes eIndex)
 }
 
 
-int CvGame::getUnitClassCreatedCount(UnitClassTypes eIndex) const
+bool CvGame::isUnitMaxedOut(UnitTypes eIndex, int iExtra) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitClassInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
-	return m_paiUnitClassCreatedCount[eIndex];
-}
+	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
-
-bool CvGame::isUnitClassMaxedOut(UnitClassTypes eIndex, int iExtra) const
-{
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitClassInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
-
-	if (!isWorldUnit((UnitTypes)GC.getUnitClassInfo(eIndex).getDefaultUnitIndex()))
+	if (!isWorldUnit(eIndex))
 	{
 		return false;
 	}
-	FAssertMsg(getUnitClassCreatedCount(eIndex) <= GC.getUnitInfo((UnitTypes)GC.getUnitClassInfo(eIndex).getDefaultUnitIndex()).getMaxGlobalInstances(), "Index is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(getUnitCreatedCount(eIndex) <= GC.getUnitInfo(eIndex).getMaxGlobalInstances(), "Index is expected to be within maximum bounds (invalid Index)");
 
-	return ((getUnitClassCreatedCount(eIndex) + iExtra) >= GC.getUnitInfo((UnitTypes)GC.getUnitClassInfo(eIndex).getDefaultUnitIndex()).getMaxGlobalInstances());
-}
-
-
-void CvGame::incrementUnitClassCreatedCount(UnitClassTypes eIndex)
-{
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitClassInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_paiUnitClassCreatedCount[eIndex]++;
+	return getUnitCreatedCount(eIndex) + iExtra >= GC.getUnitInfo(eIndex).getMaxGlobalInstances();
 }
 
 
@@ -9319,9 +9295,9 @@ int CvGame::calculateSyncChecksum()
 					iMultiplier += (GET_PLAYER((PlayerTypes)iI).getBuildingCountPlusMaking((BuildingTypes)iJ) * 95);
 				}
 
-				for (iJ = 0; iJ < GC.getNumUnitClassInfos(); iJ++)
+				for (iJ = 0; iJ < GC.getNumUnitInfos(); iJ++)
 				{
-					iMultiplier += (GET_PLAYER((PlayerTypes)iI).getUnitClassCountPlusMaking((UnitClassTypes)iJ) * 75);
+					iMultiplier += (GET_PLAYER((PlayerTypes)iI).getUnitCountPlusMaking((UnitTypes)iJ) * 75);
 				}
 
 				for (iJ = 0; iJ < NUM_UNITAI_TYPES; iJ++)
@@ -9667,7 +9643,6 @@ void CvGame::read(FDataStreamBase* pStream)
 /************************************************************************************************/
 
 	WRAPPER_READ_CLASS_ARRAY(wrapper,"CvGame", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitCreatedCount);
-	WRAPPER_READ_CLASS_ARRAY(wrapper,"CvGame", REMAPPED_CLASS_TYPE_UNIT_CLASSES, GC.getNumUnitClassInfos(), m_paiUnitClassCreatedCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper,"CvGame", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingCreatedCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper,"CvGame", REMAPPED_CLASS_TYPE_PROJECTS, GC.getNumProjectInfos(), m_paiProjectCreatedCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper,"CvGame", REMAPPED_CLASS_TYPE_CIVICS, GC.getNumCivicInfos(), m_paiForceCivicCount);
@@ -10037,7 +10012,6 @@ void CvGame::write(FDataStreamBase* pStream)
 /************************************************************************************************/
 
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvGame", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitCreatedCount);
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvGame", REMAPPED_CLASS_TYPE_UNIT_CLASSES, GC.getNumUnitClassInfos(), m_paiUnitClassCreatedCount);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvGame", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingCreatedCount);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvGame", REMAPPED_CLASS_TYPE_PROJECTS, GC.getNumProjectInfos(), m_paiProjectCreatedCount);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvGame", REMAPPED_CLASS_TYPE_CIVICS, GC.getNumCivicInfos(), m_paiForceCivicCount);
