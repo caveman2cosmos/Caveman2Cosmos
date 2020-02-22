@@ -4338,14 +4338,14 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	m_iDefaultUnitAIType = pXML->GetInfoClass(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Invisible");
-		m_iInvisibleType = pXML->GetInfoClass(szTextVal);
+	m_iInvisibleType = pXML->GetInfoClass(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"SeeInvisible");
 	std::vector<CvString> tokens;
 	szTextVal.getTokens(",", tokens);
 	for(int i=0;i<(int)tokens.size();i++)
 	{
-		int iInvisibleType = pXML->GetInfoClass(tokens[i]);
+		const int iInvisibleType = pXML->GetInfoClass(tokens[i]);
 		if(iInvisibleType != NO_INVISIBLE)
 		{
 			m_aiSeeInvisibleTypes.push_back(iInvisibleType);
@@ -4500,7 +4500,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 
 	if (pXML->TryMoveToXmlFirstChild(L"TechTypes"))
 	{
-		iNumSibs = pXML->GetXmlChildrenNumber();
+		const int iNumSibs = pXML->GetXmlChildrenNumber();
 		FAssertMsg((0 < GC.getNUM_UNIT_AND_TECH_PREREQS()) ,"Allocating zero or less memory in SetGlobalUnitInfo");
 
 		if (0 < iNumSibs)
@@ -4538,7 +4538,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 
 	if (pXML->TryMoveToXmlFirstChild(L"PrereqBonuses"))
 	{
-		iNumChildren = pXML->GetXmlChildrenNumber();
+		const int iNumChildren = pXML->GetXmlChildrenNumber();
 		FAssertMsg((0 < GC.getNUM_UNIT_PREREQ_OR_BONUSES()),"Allocating zero or less memory in SetGlobalUnitInfo");
 
 		if (0 < iNumChildren)
@@ -4762,7 +4762,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	if (pXML->TryMoveToXmlFirstChild(L"CivilizationNames"))
 	{
 		CvString szTemp;
-		int iNumSibs = pXML->GetXmlChildrenNumber();
+		const int iNumSibs = pXML->GetXmlChildrenNumber();
 		if (pXML->TryMoveToXmlFirstChild())
 		{
 			if (iNumSibs > 0)
@@ -4793,7 +4793,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 
 	if (pXML->TryMoveToXmlFirstChild(L"PrereqVicinityBonuses"))
 	{
-		iNumSibs = pXML->GetXmlChildrenNumber();
+		const int iNumSibs = pXML->GetXmlChildrenNumber();
 		FAssertMsg((0 < GC.getNUM_UNIT_PREREQ_OR_BONUSES()),"Allocating zero or less memory in SetGlobalUnitInfo");
 
 		if (0 < iNumSibs)
